@@ -7,7 +7,7 @@ description: 'Helping improve scientific knowledge. Improving the day to day of 
 url: 'web-for-phd-researcher'
 ---
 
-It all started when a friend discovered some parts to improve withing this library:
+It all started when a friend discovered some parts to improve withing this library.
 
 An image analysis library for **medical physics**
 
@@ -20,7 +20,7 @@ An image analysis library for **medical physics**
 I suggested to start by cloning this very same repository.
 
 
-
+* https://imfing.github.io/hextra/docs/guide/shortcodes/tabs/
 
 
 ---

@@ -582,12 +582,14 @@ La TAE te permite comparar diferentes préstamos de manera más precisa, ya que 
 
 ### Real Estate Tech
 
+A quick streamlit app is always a great way to get started.
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Web" image="/blog_img/GenAI/ai-real-estate.jpeg" subtitle="AI Ready Website" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Data Chat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Real Estate Agent with LLamaIndex and Mem0" >}}
 {{< /cards >}}
 
-
+This is how I have built a Streamlit web app with the real estate logic explained:
 
 {{< details title="Quick Streamlit App for French Amortization 📌" closed="true" >}}
 
@@ -609,25 +611,80 @@ pip install -r requirements.txt
 streamlit run mortage_v4.py #streamlit app
 ```
 
-```sh
-docker image build -t py_mortage:v4 .
+Or...with **containers**:
 
+```sh
+docker image build -t py_mortage:v6 .
+```
+
+```dockerfile
+FROM python:3.12.3
+
+WORKDIR /app
+
+# Copy requirements first for caching - this is a best practice
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# Copy only the necessary application files.  List them explicitly!
+COPY mortage_v6a.py .
+COPY mortage_plots.py .
+COPY UDF.py .
+
+EXPOSE 8501
+
+CMD ["streamlit", "run", "mortage_v6a.py"]
+```
+
+```sh
 docker run -d \
     --name py_mortage \
     -p 8509:8501 \
     -w /app \
     --restart always \
-    py_mortage:v4 \
+    py_mortage:v6 \
     streamlit run py_mortage_v4.py
 
 #ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LOCAL IP
 ```
 
+```yml
+services:
+  py_mortage_streamlit_app:
+    image: py_mortage:v6a
+    container_name: py_mortage
+    ports:
+      - "8509:8501"
+    working_dir: /app
+    restart: always
+    networks: 
+      - cloudflare_tunnel
+    # command: streamlit run py_mortage_v6a.py  <-- Remove this line
+
+networks:
+   cloudflare_tunnel: #https://www.youtube.com/watch?v=k75PviBQeA0
+     external: true    
+```
+
+```sh
+#docker image build -t py_mortage:v4 .
+#docker image build -t py_mortage:v4 -f ./Docker/Dockerfile .
+#podman image build -t py_mortage:v4 -f ./Docker/Dockerfile .
+docker exec -it py_mortage /bin/bash
+```
+
 {{< /details >}}
 
+> https://realestate.jalcocertech.com/
 
+
+
+![Streamlit Real Estate App](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
 
 ### Useful Concepts
+
+1. Compund anual interest rate - Or how much something as grown or decreased YoY.
+2. The rule of 72 - Or how many years for something to duplicate.
 
 #### CAGR
 
@@ -761,7 +818,7 @@ And with those rates, the yield of that stock you are buying today, catch up in 
 
 <!-- https://github.com/JAlcocerT/R_is_Great/tree/main/ShinyApps -->
 
-### What if the interest change?
+### What if the Interest Change?
 
 Maybe, you will get a fixed interest for the first 5Y, then, an **estimation** of what you will have to pay.
 
@@ -773,9 +830,9 @@ But...what would that *virtual, future* interest be **potentially**?
 
 {{< details title="Given Monthly Payment - Know i with Py 📌" closed="true" >}}
 
-Again - POTENTIALLY BE. 
+Again - POTENTIALLY BE.
 
-Not for sure.
+**Not for sure**.
 
 ```py
 # #cd EDA_Mortage
@@ -842,7 +899,7 @@ if monthly_payment is not None:
 
 ## Thanks To
 
-Thanks to airbnb and idealista for the historical data figures!
+**Thanks** to airbnb and idealista for the historical data figures!
 
 * Interesting Financial realted **Posts**:
   * https://estudinero.substack.com/
