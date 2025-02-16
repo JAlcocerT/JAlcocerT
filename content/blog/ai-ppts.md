@@ -1,19 +1,26 @@
 ---
 title: "How to create awsome Presentations with AI" 
-date: 2025-01-01
+date: 2025-01-02
 draft: false
 tags: ["AI"]
-description: 'Creating AI Driven Presentations'
+description: 'Creating AI Driven Presentations - PPT as code with SliDev, MarpJS, RemarkJS'
 summary: 'Using LLMs to create PPTs'
 url: 'creating-presentations-with-ai'
 ---
 
-It all started with the [AIssistant post](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent).
+It all started with the [**AIssistant** post](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent).
 
 But the **AI powered PPT creator** deserves a separate post.
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent" title="AIssistant Post" image="/blog_img/apps/ai-assistant.png" subtitle="Tinkering with Streamlit to create a multi AI assistant" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service" title="AI Driven PPTs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="AIssistant to create Presentation" >}}
+{{< /cards >}}
+
 
 ## Understanding PPT as a Code Frameworks
+
+[![Star History Chart](https://api.star-history.com/svg?repos=marp-team/marpit,slidevjs/slidev,remarkjs/remark&,type=Date)](https://star-history.com/#marp-team/marpit&slidevjs/slidev&remarkjs/remark&Date)
 
 ### SliDev
 
@@ -34,7 +41,6 @@ You can also create **PPTs from markdown** with [Marp](https://github.com/marp-t
 With [RemarkJS](https://fossengineer.com/create-ppt-with-code/#remark)
 
 ## AI Powered SliDev
-
 
 First **SliDev with AI scheleton**, pretty much an [OpenAI API call](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service):
 

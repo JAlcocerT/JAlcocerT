@@ -20,7 +20,9 @@ url: 'web-domain-basics'
 * https://github.com/cloudflare/cloudflare-python
     * https://developers.cloudflare.com/api
 
-To point a subdomain to an IPv4 or IPv6 address, you need to create specific DNS records. Here’s what you need to do:
+To point a subdomain to an IPv4 or IPv6 address, you need to create specific DNS records.
+
+Here’s what you need to do:
 
 ### 1. **Pointing to an IPv4 Address**
 
@@ -60,3 +62,9 @@ Make sure to replace `subdomain.yourdomain.com` with your actual subdomain, and 
 
 NGINX
 DuckDNS
+
+## DNS Review
+
+1. https://dnsmap.io/
+
+> Provides free dns lookup service for checking domain name server records against a randomly selected list of DNS servers in different corners of the world.

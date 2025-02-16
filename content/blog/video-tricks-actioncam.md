@@ -3,7 +3,7 @@ title: "More video Tricks."
 date: 2025-02-12
 draft: false
 tags: ["Dev"]
-description: 'Quick videos with action cameras.'
+description: 'Quick videos with action cameras. Testing Python GPX overlay to MP4.'
 url: 'my-action-cam-video-workflow'
 ---
 
@@ -45,6 +45,124 @@ With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-fir
 
 > This happened while recording at room temperature ~20C
 
+### 4K/60
+
+Three files with a total size of 35.5GB and draining battery to 67% (-33%).
+
+Recording at 4K/60fps RS+ and standard (no UW, h.265) and **high bitrate**.
+
+<!-- https://www.youtube.com/watch?v=Ke-8yhgC_uU&t=775s -->
+
+{{< youtube "Ke-8yhgC_uU" >}}
+
+> All of this at -2C 
+
+
+## Data Overlay with Python
+
+
+{{< details title="Gemini Overlay explanation 📌" closed="true" >}}
+
+Building a Python tool to overlay GPX data onto MP4 videos is a challenging but rewarding project. Here's a breakdown of the steps and libraries you'll need:
+
+**1. Libraries:**
+
+* **`gpxpy`:** For parsing and working with GPX files.  `pip install gpxpy`
+* **`moviepy`:** For video editing and overlaying. `pip install moviepy`
+* **`opencv-python` (cv2):** For image and video processing. `pip install opencv-python`
+* **`matplotlib` (optional):** For creating graphs or custom visualizations. `pip install matplotlib`
+* **Potentially others:** Depending on your specific visualization needs (e.g., for map tiles if you want a map background).
+
+**2. Core Logic:**
+
+* **GPX Parsing:** Use `gpxpy` to load and parse the GPX file. Extract the latitude, longitude, time, and optionally speed data points.
+* **Video Handling:** Use `moviepy` to load the MP4 video.
+* **Synchronization:** This is the trickiest part. You'll need to establish a correspondence between the timestamps in your GPX data and the frames in your video.  Here are a couple of approaches:
+    * **Manual Synchronization:**  Allow the user to specify a start time offset or identify a specific event in both the video and the GPX data to align them.  This is often the most practical.
+    * **Automated Synchronization (Advanced):**  This could involve analyzing audio or video features to find matching points, but it's significantly more complex.
+* **Visualization:**
+    * **Position Overlay:** Use `opencv-python` to draw the GPS track on each frame of the video. You can convert latitude/longitude to pixel coordinates. Consider using a map image as a background for better visualization.
+    * **Speed Graph:** Use `matplotlib` to create a graph of speed over time. Then, use `moviepy` to add this graph as an overlay on the video.
+    * **Other Data:** You can overlay any data from your GPX file (heart rate, altitude, etc.) using similar techniques.
+* **Video Composition:** Use `moviepy` to combine the original video with the overlays you've created.
+
+**3. Code Structure (Conceptual):**
+
+```python
+import gpxpy
+import gpxpy.gpx
+from moviepy.editor import VideoFileClip, ImageClip, CompositeVideoClip
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+
+def overlay_gpx_on_video(video_path, gpx_path, output_path):
+    # 1. Load video and GPX data
+    video = VideoFileClip(video_path)
+    with open(gpx_path, 'r') as gpx_file:
+        gpx = gpxpy.parse(gpx_file)
+
+    # 2. Synchronization (Manual example)
+    time_offset = float(input("Enter time offset (seconds) between video and GPX: "))  # User input
+
+    # 3. Visualization (Position Overlay Example)
+    frames = []
+    for i, track in enumerate(gpx.tracks):
+        for j, segment in enumerate(track.segments):
+            for k, point in enumerate(segment.points):
+                timestamp = point.time + timedelta(seconds=time_offset)
+                frame_time = timestamp.timestamp() - video.start # Time relative to video start
+                if frame_time >= 0 and frame_time <= video.duration:
+                    frame = video.get_frame(frame_time)
+                    # Convert lat/lon to pixel coordinates (You'll need a mapping function)
+                    x, y = lat_lon_to_pixels(point.latitude, point.longitude)  # Implement this
+                    cv2.circle(frame, (x, y), 5, (0, 0, 255), -1)  # Draw a circle
+                    frames.append(ImageClip(frame).set_duration(1/video.fps)) #add frame to the list of frames
+
+    final_clip = concatenate_videoclips(frames)
+    final_clip.write_videofile(output_path, fps=video.fps)
+
+
+def lat_lon_to_pixels(lat, lon):  # Example (You'll need a proper projection)
+    # This is a VERY simplified example and won't be accurate for real-world use.
+    # You'll need to use a proper map projection library (e.g., pyproj) for accurate conversion.
+    # Assume a simple linear mapping for demonstration:
+    map_width = 1000  # Example
+    map_height = 500  # Example
+    min_lat = 0       # Example (Get from your map data)
+    max_lat = 90      # Example
+    min_lon = 0       # Example
+    max_lon = 180     # Example
+
+    x = int((lon - min_lon) / (max_lon - min_lon) * map_width)
+    y = int((lat - min_lat) / (max_lat - min_lat) * map_height)
+    return x, y
+
+# Example usage:
+video_path = "your_video.mp4"
+gpx_path = "your_gpx.gpx"
+output_path = "output_video.mp4"
+overlay_gpx_on_video(video_path, gpx_path, output_path)
+
+```
+
+**4. Key Challenges and Improvements:**
+
+* **Accurate Synchronization:**  This is the most crucial and often the most difficult part.
+* **Map Projection:**  For accurate position overlays, you'll need to use a proper map projection library (like `pyproj`) to convert latitude/longitude to pixel coordinates on a map image.  You'll likely want to use a tile server or download map tiles.
+* **Performance:** Processing video frame by frame can be slow. Consider optimizing your code for performance.
+* **User Interface:** For a more user-friendly tool, you could create a graphical user interface (GUI) using libraries like `Tkinter`, `PyQt`, or `Kivy`.
+* **Error Handling:** Add robust error handling to your code.
+
+This detailed breakdown should give you a solid starting point for building your Python GPX overlay tool. Remember that this is a complex project, so break it down into smaller, manageable steps.  Start with the basics (loading video and GPX, basic visualization) and then gradually add more features (synchronization, map integration, speed graphs, etc.).  Good luck!
+
+
+
+{{< /details >}}
+
+
+## Conclusions
+
 ---
 
 ## FAQ
@@ -83,9 +201,9 @@ exiftool -ee ./DJI_20241008163958_0031_D.MP4 #no GPS - no party
 
 #### FFMPEG
 
-Some tricks with ffmpeg package.
+Some tricks with **ffmpeg package**.
 
-No reencoding = Quick 
+> No reencoding = Quick 
 
 1. **Simply Join**
 
