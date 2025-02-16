@@ -518,7 +518,7 @@ Well, on the same period, the inflation level has been ~8% a year.
 
 So now you now that in real value, flats are as expensive or as cheap as they were in 2020 compared with the rest of prices.
 
-Was it a good decision? a bad one?
+Was it a good decision? A bad one?
 
 As always, **depends how you look at it**.
 
@@ -589,7 +589,7 @@ A quick streamlit app is always a great way to get started.
   {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Data Chat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Real Estate Agent with LLamaIndex and Mem0" >}}
 {{< /cards >}}
 
-This is how I have built a Streamlit web app with the real estate logic explained:
+This is how I have built a **Streamlit web app** with the real estate logic explained:
 
 {{< details title="Quick Streamlit App for French Amortization 📌" closed="true" >}}
 
@@ -675,11 +675,20 @@ docker exec -it py_mortage /bin/bash
 
 {{< /details >}}
 
+![Streamlit Real Estate Cloudflare Setup](/blog_img/data-experiments/buy_mortage_streamlitcloudflareUI.png) 
+
+
+```sh
+docker run -p 8509:8501 py_mortage:v6a
+```
+
+![Streamlit Real Estate App](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
+
+
 > https://realestate.jalcocertech.com/
 
 
 
-![Streamlit Real Estate App](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
 
 ### Useful Concepts
 

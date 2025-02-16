@@ -60,6 +60,25 @@ Recording at 4K/60fps RS+ and standard (no UW, h.265) and **high bitrate**.
 
 ## Data Overlay with Python
 
+I was already analyzing GoPro Metadata.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Web" image="/blog_img/GenAI/ai-real-estate.jpeg" subtitle="AI Ready Website" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro" title="Go Pro" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
+{{< /cards >}}
+
+
+
+But how about adding **telemtry overlays to MP4**?
+
+
+### GoPro Python Metadata Overlay
+
+### DJI and GPX Overlay
+
+And for action cams without GPS.
+
+How about recording the route on another app and just syncing it?
 
 {{< details title="Gemini Overlay explanation 📌" closed="true" >}}
 

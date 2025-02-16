@@ -4,7 +4,7 @@ date: 2025-01-01T00:20:21+01:00
 draft: false
 tags: ["Tinkering"]
 summary: Learning how to edit videos with the OA5Pro
-description: Updating OA5 Pro Firmware. Compared with another action cam (go pro hero 9).New video edition learnings for youtube.
+description: Updating OA5 Pro Firmware. Compared with Go Pro hero 9 action cam (GPS & Metadata). Video edition learnings for youtube.
 url: 'dji-oa5pro-firmware-updates'
 ---
 
@@ -38,7 +38,7 @@ For example, in video or audio, the **bit rate** determines the **quality** and 
 ### About OA5Pro Videos
 
 
-**Before** firmware update (only one default bit rate):
+**Before** firmware update (only one, default bit rate):
 
 |**Image Quality**|**Space (per second)**|**Space (30min)**|**Bit Rate**|**Battery**|
 |:---|:---|:---|:---|:---|
@@ -51,8 +51,6 @@ For example, in video or audio, the **bit rate** determines the **quality** and 
 |4k@100/RS+/UW|—|—|To be filled|10% for 10min|
 
 
-
-
 ---
 
 ## Video Workflow
@@ -62,6 +60,8 @@ For example, in video or audio, the **bit rate** determines the **quality** and 
 {{< /callout >}}
 
 But there is live beyond the CLI.
+
+And I have been getting pretty confortable with KDEnlive for basic usage.
 
 ### KDEnLive
 
@@ -224,8 +224,7 @@ Rendering 3 files 4k60fps@60,2Mbit/s (3840x2160) 9.1GB video from the GoPro took
 
 ![Streamlit with Cloudflare Tunnels Port](/blog_img/outro/kdenlive-render.png)
 
-
-It was rendering at ~6fps, so be patience, depending on your CPU.
+> It was **rendering at ~6fps**, so be patience, depending on your CPU.
 
 
 ### ShotCut
@@ -315,7 +314,59 @@ At OA5Pro settings, **after the firmware update**, I have:
 * Firmware Version `01.03.02.10`
 * And Camera Firmware Version `10.00.11.62`
 
-When recording at 1080p60 RS UW I got now
+<!-- When recording at 1080p60 RS UW I got now. -->
+
+
+
+### OA5Pro vs GoProHero9
+
+I was testing together with a friend our action cams.
+
+We both recorded at 4k60
+
+1. GoPro cuts the files at ~3.7GB (the OA5Pro at ~17GB)
+
+Files has an interesting naming with the GoPro: `GX010389`, then it would go the `GX020389`...
+
+2. The bit rate when recording at 4K60 is **~60.2Mbit/s with a GPH9**.
+
+The OA5Pro now is **~100Mbit/s** (when bit rate is selected **as high**.)
+
+3. The **GoPro has GPS** - Which allow us to do [cool analysis with python](https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro)
+
+The OA5Pro does NOT have GPS unfortunately!
+
+#### Extracting Telemetry Data from GPH9
+
+Extracting data from action camera `.MP4` files.
+
+> It all started with [PhyPhox](https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/) and [PyRouteTracker](https://jalcocert.github.io/JAlcocerT/polar-data-python-analysis/)
+
+```sh
+sudo apt-get install libimage-exiftool-perl
+exiftool -ee ./GX030390.MP4
+#exiftool -ee ./GX030390.MP4 > output.txt
+```
+
+If you do similarly with a OA5Pro video, the output is **much more reduced**
+
+```sh
+exiftool -ee ./DJI_20241008163958_0031_D.MP4 #no GPS - no party
+```
+
+You can play with the `output.txt` with Python and Plotly, to get such graphs:
+
+![GoPro Metadata Map](/blog_img/karting/gopro-speed-sample.png)
+
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds.ipynb)
+
+![GoPro Max Speed Metadata extraction](/blog_img/karting/gopro-maxspeed-metadata.png)
+
+
+<!-- 
+https://github.com/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds.ipynb -->
+
 
 ### Thanks to
 
@@ -330,6 +381,12 @@ For explaining the **firmware update** process:
 ---
 
 ## FAQ
+
+Out of Space?
+
+```sh
+df -h | awk '$5 > "5G" {print $0}' #list the partitions greater than 5GB
+```
 
 ### Transfer Speeds
 
@@ -375,47 +432,3 @@ Keep in mind that other factors like card capacity and read speed also play a ro
 {{< /details >}}
 
 The **limitant is the internal memory** / the SD card im using with the osmo camera.
-
-
-### OA5Pro vs GoProHero9
-
-I was testing together with a friend our action cams.
-
-We both recorded at 4k60
-
-1. GoPro cuts the files at ~3.7GB (the OA5Pro at ~17GB)
-
-Files has an interesting naming with the GoPro: `GX010389`, then it would go the `GX020389`...
-
-2. The bit rate when recording at 4K60 is **~60.2Mbit/s with a GPH9**.
-
-The OA5Pro now is **~100Mbit/s** (when bit rate is selected **as high**.)
-
-3. The **GoPro has GPS** - Which allow us to do [cool analysis with python](https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro)
-
-The OA5Pro does NOT have GPS unfortunately!
-
-#### Extracting Telemetry Data from GPH9
-
-Extracting data from action camera `.MP4` files.
-
-> It all started with [PhyPhox](https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/) and [PyRouteTracker](https://jalcocert.github.io/JAlcocerT/polar-data-python-analysis/)
-
-```sh
-sudo apt-get install libimage-exiftool-perl
-exiftool -ee ./GX030390.MP4
-#exiftool -ee ./GX030390.MP4 > output.txt
-```
-
-If you do similarly with a OA5Pro video, the output is **much more reduced**
-
-```sh
-exiftool -ee ./DJI_20241008163958_0031_D.MP4 #no GPS - no party
-```
-
-
-### Out of Space?
-
-```sh
-df -h | awk '$5 > "5G" {print $0}' #list the partitions greater than 5GB
-```
