@@ -35,7 +35,7 @@ Proper **[DNS](https://jalcocert.github.io/Linux/docs/debian/linux_vpn_setup/#dn
 ##### Wireguard
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard (wg-easy) Server" image="/blog_img/hardware/wifi_eth.jpg" subtitle="VPS" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard (wg-easy) Server" image="/blog_img/hardware/wifi_eth.jpg" subtitle="VPS and Wiregaurd VPN" >}}
 {{< /cards >}}
 
 ##### Tailscale
@@ -83,6 +83,12 @@ Which you can combine with [Mullvad](https://jalcocert.github.io/Linux/docs/debi
 {{< /callout >}}
 
 #### Trip Planner
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Trip Planner Post" image="https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png" subtitle="Weather Trends with Python" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
+{{< /cards >}}
 
 
 {{< cards >}}
