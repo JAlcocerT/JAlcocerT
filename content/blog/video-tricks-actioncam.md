@@ -47,7 +47,7 @@ With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-fir
 
 ### 4K/60
 
-Three files with a total size of 35.5GB and draining battery to 67% (-33%).
+Three files with a total size of 35.5GB and draining battery to 67% (-33%) for 42min and 50s video.
 
 Recording at 4K/60fps RS+ and standard (no UW, h.265) and **high bitrate**.
 
@@ -60,11 +60,11 @@ Recording at 4K/60fps RS+ and standard (no UW, h.265) and **high bitrate**.
 
 ## Data Overlay with Python
 
-I was already analyzing GoPro Metadata.
+I was already analyzing GoPro Metadata:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Go Pro Post" image="/blog_img/karting/gopro-speed-sample.png" subtitle="Karting and MetaData 101" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro" title="Go Pro" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
 {{< /cards >}}
 
 
@@ -73,6 +73,10 @@ But how about adding **telemtry overlays to MP4's**?
 
 
 ### GoPro Python Metadata Overlay
+
+Python MoviePy...
+
+...actually uses FFMPEG, but makes it more scriptable, in theory.
 
 ### DJI and GPX Overlay
 
@@ -230,15 +234,16 @@ Some tricks with **ffmpeg package**.
 
 > No reencoding = Quick 
 
-1. **Simply Join**
+1. **Simply Join**: Keeping original audio and no reencoding.
 
 ```sh
-ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
-
+ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .MP4 of current folder to a list
 #du -sh ./* #check their size
 
-#generate a video with them (IT PRESERVES THE ORIGINAL BITRATE)
+#Generate a video with the mentioned files (IT PRESERVES THE ORIGINAL FORMATS, BITRATE...)
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy /home/jalcocert/Desktop/output_video.mp4 #different folder
+
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an output_video.mp4 #silenced video
 #ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #
 ```
