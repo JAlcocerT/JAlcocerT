@@ -31,7 +31,9 @@ These are just my notes on how Python can be used to create a calculator app.
 
 There are out there cool calculators - https://tecalculo.com/en/mortgage-calculator
 
-and this one for salaries - https://tecalculo.com/en/spanish-net-salary-calculator
+> And this one for salaries - https://tecalculo.com/en/spanish-net-salary-calculator
+
+But how about creating something to understand the underlying logic?
 
 ## Understanding Loans
 

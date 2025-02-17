@@ -75,7 +75,7 @@ reflex init
 reflex run #this compiles and execute the sample app
 ```
 
-The front end UI will be at `localhost:3000`
+The **front end UI** will be at `localhost:3000`
 
 
 {{< callout type="info" >}}

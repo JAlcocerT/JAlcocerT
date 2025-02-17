@@ -63,13 +63,13 @@ Recording at 4K/60fps RS+ and standard (no UW, h.265) and **high bitrate**.
 I was already analyzing GoPro Metadata.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Web" image="/blog_img/GenAI/ai-real-estate.jpeg" subtitle="AI Ready Website" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Go Pro Post" image="/blog_img/karting/gopro-speed-sample.png" subtitle="Karting and MetaData 101" >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro" title="Go Pro" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
 {{< /cards >}}
 
 
 
-But how about adding **telemtry overlays to MP4**?
+But how about adding **telemtry overlays to MP4's**?
 
 
 ### GoPro Python Metadata Overlay
@@ -173,7 +173,11 @@ overlay_gpx_on_video(video_path, gpx_path, output_path)
 * **User Interface:** For a more user-friendly tool, you could create a graphical user interface (GUI) using libraries like `Tkinter`, `PyQt`, or `Kivy`.
 * **Error Handling:** Add robust error handling to your code.
 
-This detailed breakdown should give you a solid starting point for building your Python GPX overlay tool. Remember that this is a complex project, so break it down into smaller, manageable steps.  Start with the basics (loading video and GPX, basic visualization) and then gradually add more features (synchronization, map integration, speed graphs, etc.).  Good luck!
+This detailed breakdown should give you a solid starting point for building your Python GPX overlay tool.
+
+Remember that this is a complex project, so break it down into smaller, manageable steps.
+
+Start with the basics (loading video and GPX, basic visualization) and then gradually add more features (synchronization, map integration, speed graphs, etc.).  Good luck!
 
 
 
@@ -217,6 +221,8 @@ If you do similarly with a OA5Pro video and **see the metadata**, the output is 
 ```sh
 exiftool -ee ./DJI_20241008163958_0031_D.MP4 #no GPS - no party
 ```
+
+https://zulko.github.io/moviepy/getting_started/updating_to_v2.html
 
 #### FFMPEG
 
@@ -277,6 +283,8 @@ ffmpeg -i thumbnail.png -qscale:v 2 compressed_thumbnail.jpg
 ```
 
 **Space what?**
+
+You might need some after playing around with action cams.
 
 
 ```sh

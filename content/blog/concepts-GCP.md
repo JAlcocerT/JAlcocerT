@@ -38,7 +38,7 @@ File storage:  Tables are often stored as files on a file system. These files ca
 Block storage:  File systems themselves are built on top of block storage. Block storage is the most basic level, where data is stored in raw blocks on physical storage devices (hard drives, SSDs, etc.).
 
 {{< callout type="warning" >}}
-Tables are a structured view of data, which are typically stored as files, and those files reside on block storage.
+**Tables are a structured view of data**, which are typically stored as files, and those files reside on block storage.
 {{< /callout >}}
 
 #### Big Query

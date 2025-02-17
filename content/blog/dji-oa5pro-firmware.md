@@ -354,9 +354,23 @@ If you do similarly with a OA5Pro video, the output is **much more reduced**
 exiftool -ee ./DJI_20241008163958_0031_D.MP4 #no GPS - no party
 ```
 
-You can play with the `output.txt` with Python and Plotly, to get such graphs:
+You can play with the `output.txt` with Python and Plotly, to get such graphs from the GoPro:
 
 ![GoPro Metadata Map](/blog_img/karting/gopro-speed-sample.png)
+
+Having a look to the metadata extracted as txt, you will find:
+
+1. Time Stamp: 1064.147904 (GPS Date Time: 2024:12:27 15:27:07.070)
+2. GPS Latitude                    : 37 deg 33' 29.53" N
+GPS Longitude                   : 5 deg 55' 58.86" W
+GPS Altitude                    : 0.707 m
+GPS Speed                       : 13.204
+GPS Speed 3D                    : 13.14
+Camera Temperature
+
+Time Stamp                      : 1066.12768
+
+> Between each timestamp, there are ~13 on avg records of GPS speed.
 
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds.ipynb)

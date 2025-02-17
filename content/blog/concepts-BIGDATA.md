@@ -1,6 +1,6 @@
 ---
 title: "Big Data Tools [Recap]"
-date: 2025-01-14T03:20:21+01:00
+date: 2025-01-18
 #Lastmod: 2022-11-17
 draft: false
 tags: ["Dev"]
@@ -8,8 +8,6 @@ description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssis
 summary: 'A recap on SQL, PySpark and visualizations tools.'
 url: 'big-data-tools-for-data-analytics'
 ---
-
-
 
 
 Long ago, I was covering [the analytical stack](https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/#the-analytical-stack) and the most popular [concepts for a data analytics journey](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/).
@@ -497,15 +495,16 @@ https://openfaas.com/
 #### ADF
 
 
-Talend is like Azure data factory.
+Talend is like Azure Data Factory.
 
-I mean, a data integration tool.not a big data tool
+I mean, a data integration tool. Not a big data processing tool.
 
-You can plug input sources from places like APIs or SAP and direct it towards your DWH, like snowflake
+You can plug input sources from places like APIs or SAP and direct it towards your DWH (like snowflake).
 
-
+{{< callout type="info" >}}
 **Azure Data Factory (ADF)** is a **data engineering tool** within the Azure ecosystem, designed for **orchestrating workflows** and **managing ETL/ELT processes**.
- 
+{{< /callout >}}
+
 It shares similarities with **Airflow** for workflow orchestration and **dbt** for transformations, but with key differences:  
 
 - **Compared to Airflow**:  ADF is a fully managed service that focuses on data pipelines, whereas Airflow is a general-purpose workflow orchestrator with more flexibility and customization but requires setup and maintenance.  
@@ -756,178 +755,9 @@ graph TD
   C5 --> C1
 ```
 
+### How to use the AIssistant for Tech?
 
-
-## FAQ
-
-<!-- ### How to make better EDA?
-
-If you are using PySpark, you are probably interested in making better **Exploratory Data Analysis**
-
-#noise
-#predictably irrational
-#black swans -->
-
-
-{{< details title="MTG Notes Template 📌" closed="true" >}}
-
-Initially, I had this one for Telecom
-
-
-{{< /details >}}
-
-
-{{< details title="Weekly Work Template... 📌" closed="true" >}}
-
-
-{{< /details >}}
-
-
-### BI Tools Data Analytic Projects
-
-Specially if you like SelfHosting: Superset, metabase and redash.
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="Bayes and Streamlit?" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc" >}}
-  {{< card link="https://github.com/JAlcocerT/Python_is_awesome" title="Awsome Python" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Bayes and Streamlit" >}}
-{{< /cards >}}
-
-#### SuperSet
-
-* https://jalcocert.github.io/RPi/posts/rpi-gps-superset/
-
-> Superset works perfectly with Trino SQL!
-
-#### MetaBase
-
-#### Redash
-
-
-For the IoT Fans out there: Grafana, Kibana and Chronogaph
-
-#### Grafana
-
-There are many Grafana stacks, like LGTM: **L**oki, **G**rafana, **T**empo and Pro**m**etheus
-
-
-{{< youtube "1X3dV3D5EJg" >}}
-<!--
- https://www.youtube.com/watch?v=1X3dV3D5EJg
- -->
-
-{{< details title="What can I do with LGTM? 📌" closed="true" >}}
-
-Ever wondered how programmers build software? If builders built houses the way programmers build software, the first woodpecker to come along would destroy civilization.
-
-In this video, Fireship, a popular YouTube creator, takes us on a journey to instrument, collect, and visualize telemetry data from our server using open telemetry and the **LGTM stack**.
-
-
-The **LGTM stack** consists of five technologies: 
-- **Open Telemetry**: An industry-standard framework that collects telemetry data from software.
-- **Grafana**: The frontend UI for visualizing data.
-- **Prometheus**: A time-series database for storing metrics.
-- **Tempo**: A database for storing traces.
-- **Loki**: A database for storing logs.
-
-Setting Up the LGTM Stack
-
-To get started:
-1. **Server Setup**: Fireship recommends using Hostinger, which offers a variety of hosting services, including a Linux virtual private server (VPS) suitable for this project.
-2. **Deploying LGTM Backend**: The LGTM backend can be deployed using a Docker image provided by Graphon.
-3. **Server Access**: After setting up your server on Hostinger, you can access the management dashboard and connect via SSH.
-
-Running Grafana
-
-1. **Verify Docker**: Use a Docker command to confirm the Docker daemon is running.
-2. **Run Docker Image**: Pull the Docker image for OTel LGTM from the cloud, which may take a minute.
-3. **Access Grafana**: Open the browser and navigate to the IP address on port 3000 to log into Grafana as admin.
-
-Connecting to a Data Source
-
-Grafana alone is not useful unless connected to a data source. Fireship demonstrates how to connect **Loki**, **Prometheus**, and **Tempo**, and then populate them with data using a sample application built with **Dino**, a framework with built-in telemetry support.
-
-Analyzing Data with Grafana
-
-With the LGTM stack up and running:
-- Use Grafana to explore logs, metrics, and traces.
-- Use **Prometheus' query language** to analyze and dive deeper into your data to identify errors and anomalies.
-
-Takeaways
-
-- The **LGTM stack** provides a holistic approach to software observability, enabling you to instrument, collect, and visualize telemetry data from your server.
-- With the right tools, you can identify errors and anomalies in your application, allowing for data-driven decisions to improve your software.
-- **Security** is crucial when deploying a telemetry backend. Services like Hostinger offer built-in protections against harmful traffic and threats.
-
-
-{{< /details >}}
-
-
-
-#### Kibana
-
-#### Chronograph
-
-Works together with InfluxDB!
-
-Chronograf allows you to quickly see the data that you have stored in InfluxDB so you can build robust queries and alerts. 
-
-It is simple to use and includes templates and libraries to allow you to rapidly build dashboards with real-time visualizations of your data.
-
-
-#### Node-Red
-
-### Custom BI Tools
-
-**For the Devs out there**
-
-#### Python DASH
-
-#### Python STREAMLIT
-    
-* https://ploomber.io/blog/streamlit_exe/
-
-
-##### Streamlit + AI
-
-{{< youtube id="MgLlEMteQqg" autoplay="false" >}}
-
-* https://github.com/dataprofessor/builder
-
-##### Dynamic Maps with Streamlit
-
-* Streamlit **+ LeafMap**:
-
-https://github.com/opengeos/streamlit-map-template
-https://github.com/opengeos/streamlit-geospatial -->> https://huggingface.co/spaces/giswqs/Streamlit
-
-* What it is based on? https://github.com/opengeos/leafmap
-    * https://pypi.org/project/leafmap/
-
-> A Python package for interactive mapping and geospatial analysis with minimal coding in a Jupyter environment
-
-{{< youtube id="hn2WqRX75DI" autoplay="false" >}}
-
-With a Very Interesting Marker cluster Page and a Page to upload your Vector Data (.geojson) and be able to visualize it.
-
-* Streamlit **+ Folium**
-
-{{< youtube id="OsGq4LJHOUI" autoplay="false" >}}
-
-* Streamlit **Reacting to clicks on a Leaflet Map** - Also with Folium
-
-https://github.com/clint-kristopher-morris/Tutorials/tree/main/streamlit-part-1
-
-{{< youtube id="gWV1gbeB-IM" autoplay="false" >}}
-
-#### Python Shiny
-
-#### FlexDashboards with R
-
-
----
-
-
-### How to use the AIssistant?
+So you want to use the AI assistant to get help on **tech questions**?
 
 SSH into your server and...
 
@@ -1032,3 +862,38 @@ services:
 #   cloudflare_tunnel:
 #     external: true
 ```
+
+
+## FAQ
+
+<!-- ### How to make better EDA?
+
+If you are using PySpark, you are probably interested in making better **Exploratory Data Analysis**
+
+#noise
+#predictably irrational
+#black swans -->
+
+
+{{< details title="MTG Notes Template 📌" closed="true" >}}
+
+Initially, I had this one for Telecom
+
+
+{{< /details >}}
+
+
+{{< details title="Weekly Work Template... 📌" closed="true" >}}
+
+
+{{< /details >}}
+
+
+### BI Tools Data Analytic Projects
+
+Specially if you like SelfHosting: Superset, metabase and redash.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="Bayes and Streamlit?" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc" >}}
+  {{< card link="https://github.com/JAlcocerT/Python_is_awesome" title="Awsome Python" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Bayes and Streamlit" >}}
+{{< /cards >}}
