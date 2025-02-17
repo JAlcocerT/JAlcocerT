@@ -201,16 +201,10 @@ I'd recommend trying out Penpot and Excalidraw to see which one best fits your w
 {{< /details >}}
 
 
-{{< cards >}}
-  {{< card link="https://fossengineer.com/selfhosting-excalidraw/" title="Setup Excalidraw" image="https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png" subtitle="With Docker" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
-{{< /cards >}}
-
-
 
 {{< cards >}}
-  {{< card link="https://fossengineer.com/selfhosting-excalidraw/" title="Setup Excalidraw" image="https://socialify.git.ci/johanohly/AirTrail/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto" subtitle="With Docker" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
+  {{< card link="https://fossengineer.com/selfhosting-excalidraw/" title="Setup Excalidraw" image="https://socialify.git.ci/excalidraw/excalidraw/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto" subtitle="With Docker" >}}
+  {{< card link="https://github.com/excalidraw/excalidraw" title="Excalidraw" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Virtual whiteboard for sketching hand-drawn like diagrams" >}}
 {{< /cards >}}
 
 

@@ -49,7 +49,7 @@ sudo apt install sysbench
 sysbench memory run
 ```
 
-> The x13 got ~8164 MiB/sec and the Pi 4 4GB ~175MiB/sec (x46)
+> The **[x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)** got ~8164 MiB/sec and the Pi 4 4GB ~175MiB/sec (x46)
 
 Your server *most likely* will be in between.
 
@@ -59,6 +59,15 @@ Your server *most likely* will be in between.
 
 At the time of writing, my **energy costs** are ~0.28$/Kwh
 
+```sh
+ifconfig
+#ip a show wlp3s0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
+##ip a show eth0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
+```
+
+1. Pi4 192.168.0.155 and 192.168.0.232 both via ethernet
+2. x300 Ethernet:
+3. x13 wifi 192.168.0.124
 
 ### Better PKG management in Debian
 

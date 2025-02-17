@@ -89,7 +89,8 @@ Which you can combine with [Mullvad](https://jalcocert.github.io/Linux/docs/debi
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Trip Planner Post" image="https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png" subtitle="Weather Trends with Python" >}}
   {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
 {{< /cards >}}
-
+  
+<!-- 
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Trip Planner Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Weather Trends with Python" >}}
@@ -97,7 +98,8 @@ Which you can combine with [Mullvad](https://jalcocert.github.io/Linux/docs/debi
 {{< /cards >}}
 
 
-![Trip Planner Graph](https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png)
+![Trip Planner Graph](https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png) 
+-->
 
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/selfhosting-adventurelog/" title="How to Setuo AdventureLog with Containers" >}}
@@ -275,7 +277,7 @@ I am very happy with the [**Android** Pixel 8 Pro](https://jalcocert.github.io/J
 #### Router
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="TPLink MR200" image="/blog_img/hardware/portable-4g-router.jpg" subtitle="4G Home Router Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="TPLink MR200" image="/blog_img/hardware/TPLink4G-OpenSpeedTest.png" subtitle="4G Home Router Review" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router Setup" image="/blog_img/hardware/GL-MT3000-pwd.png" subtitle="GL-MT3000 review and VPN Setup" >}}
 {{< /cards >}}
 
