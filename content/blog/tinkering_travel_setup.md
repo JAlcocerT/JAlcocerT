@@ -254,7 +254,7 @@ To bring with you, a [compact laptop](https://jalcocert.github.io/JAlcocerT/lapt
 -->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="About DJi Oa5 Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="About DJi Oa5 Pro" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="About DJi Oa5 Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Learning more about this action camera" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#video-editing-101/" title="Video Workflow" image="/blog_img/hardware/x300.jpg" subtitle="With the Asrock x300" >}}
 {{< /cards >}}
 

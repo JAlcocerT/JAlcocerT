@@ -202,3 +202,25 @@ Before we start writing Python scripts in GIMP, we need to install the Python-Fu
 
 * [Micro Racer Car](https://github.com/StuckAtPrototype/Racer)
   * https://www.youtube.com/watch?v=6jzG-BMannc
+
+
+ESP32 - https://www.cnx-software.com/2024/07/25/tinywatch-s3-is-an-open-source-customizable-smartwatch-powered-by-esp32-s3-soc/
+
+<!-- https://github.com/hominoids/SBC_Case_Builder
+
+https://www.cnx-software.com/2024/04/30/sbc-case-builder-v3-0-can-create-thousands-of-cases-for-popular-sbcs-and-standard-motherboards-mini-itx-pico-itx-nuc/ -->
+
+<!-- 
+https://github.com/dune3d/dune3d -->
+
+
+https://mariushosting.com/synology-best-docker-containers-for-3d-printers/
+
+## Conclusions
+
+Blender
+
+---
+
+## FAQ
+

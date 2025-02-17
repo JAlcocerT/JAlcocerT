@@ -38,6 +38,8 @@ Android App -> Monitoring -->
 
 ![Karting Adventure](/blog_img/dev/databricks-mongo.JPG)
 
+1. https://a1karting.pl/cennik/
+2. https://sklep.drive-position.pl/kategoria-produktu/quady-i-adv/
 
 ### Python picoW
 

@@ -78,3 +78,31 @@ Here's what you should know about Mark5 frames:
 * **Purpose:**  Mark5 frames are versatile and can be used for freestyle flying, racing, or even cinematic FPV.
 
 So, when someone says "Mark5 drone," they are likely referring to an FPV drone built using a frame that follows the Mark5 design principles.  It's not a complete, ready-to-fly drone itself, but rather a frame onto which you would add all the other components (motors, ESCs, flight controller, receiver, camera, etc.).
+
+
+
+* https://ardupilot.org/
+
+* https://www.youtube.com/@thedronedojo/videos
+
+* https://www.xda-developers.com/diy-drone-arduino-pro-mini/
+
+* Ardupilot / navio2 +rpi
+
+
+* https://www.youtube.com/@MichaelKlements/videos
+
+>  I enjoy tinkering with electronics projects and fixing things, so I've put together this channel to share with you a mix of tech repairs, DIY projects, Arduino & Raspberry Pi projects, and tech reviews.
+
+
+https://github.com/geerlingguy/sbc-reviews
+
+
+---
+
+## FAQ
+
+
+CANBUS VS ETHERLOOP
+
+https://www.youtube.com/watch?v=38H_8asDUfY
