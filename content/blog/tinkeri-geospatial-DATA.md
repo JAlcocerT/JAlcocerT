@@ -85,6 +85,9 @@ exiftool -ee ./GX030390.MP4 > output-GX030390.txt #saves it
 
 #### Extracting Location Data from GoPro MP4
 
+{{< youtube "BTJS-2hD2qk" >}}
+
+<!-- https://www.youtube.com/watch?v=BTJS-2hD2qk -->
 
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore.ipynb)

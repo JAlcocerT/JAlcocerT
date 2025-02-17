@@ -3,7 +3,7 @@ title: "Which OS for a NAS?"
 date: 2025-03-17
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Testing Operative System for a NAS'
+description: 'Testing Operative System for a NAS. Improving the homelab.'
 url: 'os-for-nas'
 ---
 
@@ -59,6 +59,20 @@ Your server *most likely* will be in between.
 
 At the time of writing, my **energy costs** are ~0.28$/Kwh
 
+**Space for Home Lab**
+
+
+```sh
+df -h | awk '$2 ~ /G/'
+#df -h | awk '$2 ~ /G/' | sort -rh -k 2 #sorted
+df -h | awk '$5 > "5G" {print $0}' #list the partitions greater than 5GB
+
+#gio trash --empty
+#du -sh ~/.local/share/Trash/files
+```
+
+**Networking for Home Lab**
+
 ```sh
 ifconfig
 #ip a show wlp3s0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
@@ -68,6 +82,13 @@ ifconfig
 1. Pi4 192.168.0.155 and 192.168.0.232 both via ethernet
 2. x300 Ethernet:
 3. x13 wifi 192.168.0.124
+
+**Containers**
+<!-- 
+https://www.youtube.com/watch?v=Z5uBcczJxUY -->
+
+{{< youtube "Z5uBcczJxUY" >}}
+
 
 ### Better PKG management in Debian
 

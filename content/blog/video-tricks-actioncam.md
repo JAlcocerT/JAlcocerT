@@ -15,7 +15,7 @@ So far, ive been doing couple of things with the **action cam**.
 {{< /cards >}}
 
 
-Even apply data analytics for action cams and for karting!
+Even apply **data analytics for action cams** andfor karting!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/" title="Geospatial Analysis (with action cams)" >}}
@@ -49,7 +49,7 @@ With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-fir
 
 Three files with a total size of 35.5GB and draining battery to 67% (-33%) for 42min and 50s video.
 
-Recording at 4K/60fps RS+ and standard (no UW, h.265) and **high bitrate**.
+Recording at **4K/60fps RS+** and standard (no UW, h.265) and **high bitrate**.
 
 <!-- https://www.youtube.com/watch?v=Ke-8yhgC_uU&t=775s -->
 
