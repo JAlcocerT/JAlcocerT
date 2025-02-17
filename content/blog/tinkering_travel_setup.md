@@ -35,7 +35,7 @@ Proper **[DNS](https://jalcocert.github.io/Linux/docs/debian/linux_vpn_setup/#dn
 ##### Wireguard
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard Server" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Setup a VPS with wg-easy" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard (wg-easy) Server" image="/blog_img/hardware/wifi_eth.jpg" subtitle="VPS" >}}
 {{< /cards >}}
 
 ##### Tailscale
@@ -83,6 +83,12 @@ Which you can combine with [Mullvad](https://jalcocert.github.io/Linux/docs/debi
 {{< /callout >}}
 
 #### Trip Planner
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Trip Planner Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Weather Trends with Python" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
+{{< /cards >}}
 
 
 ![Trip Planner Graph](https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png)
@@ -256,45 +262,41 @@ But [my DJI Tello dron](https://jalcocert.github.io/JAlcocerT/dji-tello-python-p
 
 #### SmartPhone
 
-I am very happy with the [Android Pixel 8 Pro](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/)
+I am very happy with the [**Android** Pixel 8 Pro](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/)
 
-#### 4G Router
+> Maybe some backup?
+
+#### Router
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="TPLink MR200" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Router review" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router Setup" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000 review and VPN Setup" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="TPLink MR200" image="/blog_img/hardware/portable-4g-router.jpg" subtitle="4G Home Router Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router Setup" image="/blog_img/hardware/GL-MT3000-pwd.png" subtitle="GL-MT3000 review and VPN Setup" >}}
 {{< /cards >}}
 
 
 You can also get one of these **portable 4G usb router** (and bring a **sim adapter**):
 
-![4g router](/blog_img/hardware/portable-4g-router-usb.jpg)
+![4g router](/blog_img/hardware/portable-4g-router.jpg)
 
 {{< callout type="warning" >}}
 Not all esims on your phone allow you to use them as Hotspot 
 {{< /callout >}}
 
 
-#### Travel Router
-
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="TailScale Setup" >}}
-{{< /cards >}}
-
+> Ive been experimenting with the travel router around and...
 
 If you need to **login to a hotel network**, where credentials (**user/pass**) are required, this will prompt:
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="TailScale Setup with the MT3000" >}}
+{{< /cards >}}
 
 
 {{< callout type="warning" >}}
 Can’t access the internet via the repeated hotspot. Try to enter **Login Mode for Public Hotspots** to fix the issue. Note this mode **will pause VPNs and custom DNS** until it leave, which may cause data leaks to the provider of the hotspot (e.g., hotel/mall). 
 {{< /callout >}}
 
-![4g router](/blog_img/hardware/travel-router-loginwifi.png)
-
-<!--  
-![4g router](/blog_img/hardware/travel-router.jpg) 
--->
+![Wifi Login UI on MT3000](/blog_img/hardware/travel-router-loginwifi.png)
 
 
 ---
@@ -346,7 +348,9 @@ Its an fantastic project to have a look to.
 
 In my opinion its *just missing* the possibility to add different currencies.
 
-The good thing? You can get a [`.json` report to analyze](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/#faq) later what has been going during the trip.
+The good thing?
+
+You can get a [`.json` report to analyze](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/#faq) later what has been going during the trip.
 
 
 {{< callout type="info" >}}

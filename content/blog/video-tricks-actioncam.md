@@ -190,6 +190,14 @@ Start with the basics (loading video and GPX, basic visualization) and then grad
 
 ## Conclusions
 
+
+Its great to look back and see how far ive gone (at least compared from how I started):
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/" title="YT AI Workflow" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/" title="Video edition at x300" >}}  
+{{< /cards >}}
+
 ---
 
 ## FAQ

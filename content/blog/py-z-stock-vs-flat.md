@@ -20,7 +20,7 @@ After thinking about it for a while, we can see the following pattern:
 
 This arise the question: *what it is the **return** on the money that ive given **from my pocket**?*
 
-Apparently, finance people call that the **ROIC** (without leverage on a loan, ROI=ROIC)
+Apparently, finance people call that the **ROIC** (without leverage on a loan: ROI=ROIC)
 
 But its all about few mathematical ways to represent very logical financial concepts.
 
@@ -576,8 +576,6 @@ La TAE te permite comparar diferentes préstamos de manera más precisa, ya que 
 *   **Santander:** Explica la diferencia entre TIN y TAE: [https://www.bbva.com/es/salud-financiera/tin-que-es-diferencias-tae/](https://www.bbva.com/es/salud-financiera/tin-que-es-diferencias-tae/)
 *   **BBVA:** Define qué es el TIN y sus diferencias con la TAE: [https://www.bbva.com/es/salud-financiera/tin-que-es-diferencias-tae/](https://www.bbva.com/es/salud-financiera/tin-que-es-diferencias-tae/)
 *   **MicroBank:** Ofrece una visión más profunda del coste total de un producto financiero: [https://www.bbva.com/es/salud-financiera/tin-que-es-diferencias-tae/](https://www.bbva.com/es/salud-financiera/tin-que-es-diferencias-tae/).
-
-
 
 {{< /details >}}
 

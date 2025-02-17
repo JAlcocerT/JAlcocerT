@@ -289,8 +289,11 @@ sudo systemctl status wg-quick@wg0.service
 
 And now, you can just **connect some device to the Pi Ethernet Port** and get VPN connection right away:
 
-![Wifi 2 Ethernet Bridge with Wireguard Easy and a Pi 4](/blog_img/hardware/wifi_eth.jpg)
-
+<!-- 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-wifi-ethernet-bridge/" title="Wifi 2 Ethernet Bridge" image="/blog_img/hardware/wifi_eth.jpg" subtitle="with Wireguard Easy and a Pi 4" >}}
+{{< /cards >}}
+ -->
 
 ---
 

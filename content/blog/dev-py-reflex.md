@@ -83,6 +83,11 @@ You will also need `localhost:8000` for the BE (which can conflict with Portaine
 {{< /callout >}}
 
 
+
+```bash
+sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+```
+
 {{< youtube "ITOZkzjtjUA" >}}
 
 > Learn to code by building [series from Coding Entrepreneur](https://www.youtube.com/watch?v=ITOZkzjtjUA&list=PLEsfXFp6DpzRDEA6ElMF_NuLu9cvoK49v) is great (and not only for Reflex)
@@ -332,11 +337,22 @@ And with Reflex and some tricks with Gemini...
 
 {{< /details >}}
 
+#### RE Questions
+
+1. In which month does interest and payments are 50/50?
+2. When does the rent cover the interest costs?
+3. The interest/principal split just depends on: years and %interest
+
+#### RE Resources
+
+1. https://tradingeconomics.com/poland/consumer-price-index-cpi (see the change %)
+2. https://tradingeconomics.com/poland/interest-rate
+
 ## Conclusions
 
 I find it easier to iterate with streamlit, as there is no waiting time for compiling.
 
-But definitely, Reflex apps can look really cool.
+But definitely, Reflex apps can look really cool, also on smartphones!
 
 
 ---

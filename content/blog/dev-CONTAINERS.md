@@ -148,9 +148,9 @@ While Docker and Podman are command-line tools, there are several **UI tools** t
 - **Platform**: Linux, Windows, macOS
 - Portainer is a popular open-source web-based UI for managing Docker and Podman containers.
 - **Installation Command**:
-  ```bash
-  sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
-  ```
+```bash
+sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+```
   Access Portainer at: `http://localhost:9000`.
 
 ![Portainer Docker UI](path_to_image)
