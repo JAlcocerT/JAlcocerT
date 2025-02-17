@@ -51,11 +51,11 @@ sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run
 It feels much faster than the i7-1185G7+32Gb Ram that im using at work (specially with Linux)
 {{< /callout >}}
 
-And the ssd looks also quite snappy:
+And the **ssd** looks also quite snappy:
 
-![Lenovo Thinkpad x13 SSD](/blog_img/hardware/Lenovo_x13-micron-ssd.png)
+![Lenovo Thinkpad x13 SSD](/blog_img/hardware/Lenovo-x13-micron-ssd.png)
 
-> benchmarked with the `disk` utility within ubuntu
+> Benchmarked with the `disk` utility within ubuntu
 
 ## My Setup for a Laptop
 

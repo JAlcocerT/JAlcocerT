@@ -22,6 +22,8 @@ I went crazy and build it with **64GB RAM**.
 * Companion for the [SBC's](https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers), and the [ThinkPad](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)
 {{< /callout >}}
 
+The idle consumptions of the x300 are decent (12/13w with 2 ssd's) and max power drawn during the tests of 53W.
+
 
 ## Asrock x300 How to
 

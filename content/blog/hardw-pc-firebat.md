@@ -61,7 +61,7 @@ Lets find out!
 
 Running some **synthetic tests on the Firebat MiniPC** and comparing it with SBC's and more:
 
-| Device             | Sysbench (4 threads) | Tot (4 threads) 7 zip  |
+| Device             | **Sysbench** (4 threads) | Tot (4 threads) 7 zip  |
 |--------------------|---------------------------|------------------------|
 | Raspberry Pi 4 2GB | ~1.7k events              | 1622/6311              |
 | Raspberry Pi 4 4GB | ~28k events               | 1442/5508              |

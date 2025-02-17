@@ -49,7 +49,7 @@ sudo apt install sysbench
 sysbench memory run
 ```
 
-> The **[x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)** got ~8164 MiB/sec and the Pi 4 4GB ~175MiB/sec (x46)
+> The **[x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)** got ~8164 MiB/sec and the Pi 4 4GB ~175MiB/sec (x86)
 
 Your server *most likely* will be in between.
 
@@ -77,6 +77,7 @@ df -h | awk '$5 > "5G" {print $0}' #list the partitions greater than 5GB
 ifconfig
 #ip a show wlp3s0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
 ##ip a show eth0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
+###ip a show enp2s0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
 ```
 
 1. Pi4 192.168.0.155 and 192.168.0.232 both via ethernet

@@ -3,9 +3,11 @@ title: "Buying a car being in Data Analytics"
 date: 2021-10-03T23:20:21+01:00
 draft: false
 tags: ["Outro"]
-summary: 'What to keep in mind - what not to do and the data behind...When buying a car.'
+description: 'What to keep in mind, what NOT to do...When buying a second hand car. The data behind a Civic 6.'
 url: 'buying-car-data-analytics'
 ---
+
+It was a **Honda Civic 6**, born on 1997 (1995-2000).
 
 > NA / In Line 4 cilinders / 1.4L
 
@@ -30,15 +32,24 @@ pie title Car Expenses Breakdown
 
 ## How to buy a Car...
 
-I mean an used car.
+I mean an **used car**.
 
-### What to Look
+### What to Look when buying a second hand car
 
 1. No water in the space where there should be oil (and biceversa)
 2. Tires Equally used across the contact patch
+
+<!-- 
+https://www.youtube.com/watch?v=UINEmTO0LCY
+ -->
+
+{{< youtube "UINEmTO0LCY" >}}
+
 
 ### In Germany
 
 Steps...
 
 ### In Netherlands
+
+### In Spain
