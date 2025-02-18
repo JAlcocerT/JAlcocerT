@@ -76,6 +76,21 @@ This post explores how to use **LangChain with Python** to chat with your databa
 The complete, working code is available in my [data-chat repository](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB).
 {{< /callout >}}
 
+There is first a SQL chain, to see if the LLM makes proper work building the queries:
+
+```py
+user_question = 'what are the top 5 artists with more albums published?'
+sql_chain.invoke({"question": user_question})
+```
+
+The magic of the full chain happens when we use that SQL output against the DB:
+
+```py
+full_chain.invoke({"question":"what are the top 5 artists with more albums published?"})
+```
+
+![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png)
+
 You can also open it with **Google Colab**: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Data-Chat/blob/main/LangChain/ChatWithDB/LangChain_MySQL_DB_Chat.ipynb)
 
 ## Setting Up The Database
@@ -83,7 +98,6 @@ You can also open it with **Google Colab**: [![Open in Google Colab](https://col
 This example uses **MySQL**.
 
 > You can also try, similarly, with SQLite.
-
 
 ### MySQL Installation
 
