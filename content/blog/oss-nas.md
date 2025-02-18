@@ -103,14 +103,30 @@ services:
     ports:
       - 8080:80
     volumes:
-      - /mnt/Docker/FileBrowser/config:/config
-      - /home/Docker/FileBrowser/data:/srv #same as Syncthing!
+      - /mnt/crucial500/Docker/FileBrowser/config:/config
+      - /mnt/crucial500/Docker/FileBrowser/data:/srv #same as Syncthing!
     restart: unless-stopped    
 
 # networks:
 #   nginx_nginx_default:
 #     external: true
 ```
+To use Cloudflare tunnels, you will need:
+
+```yml
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    command: tunnel --no-autoupdate run --token yourtokenhere
+    networks:
+      - tunnel
+    restart: always
+
+networks:
+  tunnel:
+```
+
 
 
 {{< youtube "Z5uBcczJxUY" >}}

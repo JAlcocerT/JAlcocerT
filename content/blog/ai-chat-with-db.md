@@ -1,6 +1,6 @@
 ---
 title: "Chat with a Database via LLMs"
-date: 2025-02-17T23:20:21+01:00
+date: 2025-02-18T01:20:21+01:00
 draft: false
 cover:
   image: "https://socialify.git.ci/jalcocert/data-chat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"

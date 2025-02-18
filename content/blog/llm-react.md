@@ -116,22 +116,5 @@ services:
 #     external: true        
 ```
 
-To use Cloudflare tunnels, you will need:
-
-```yml
-version: '3.8'
-
-services:
-  cloudflared:
-    image: cloudflare/cloudflared:latest
-    container_name: cloudflared
-    command: tunnel --no-autoupdate run --token your_cloudflare_token
-    networks:
-      - tunnel
-    restart: unless-stopped
-
-networks:
-  tunnel:
-```
 
 {{% /details %}}

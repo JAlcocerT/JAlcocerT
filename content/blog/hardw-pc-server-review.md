@@ -85,7 +85,7 @@ sudo apt install ntfs-3g
 ```sh
 lsblk #list them again
 lsblk -f /dev/sda1 /dev/sdb2 #see the format and the UUID of a couple of blocks
-df -h /dev/sda1 #you will see if its mounted
+df -h /dev/sda1 #you will see if its mounted (it always starts with /dev)
 #df -h | awk '$2 ~ /G/'
 #df -h | awk '$2 ~ /T/'
 df -h | grep '[GT]' #see both
@@ -137,6 +137,21 @@ df -h #check its mounted
 
 {{< /details >}}
 
+Format a drive (CT1000MX):
+
+```sh
+# sudo apt install gparted  # If you don't have it
+# gparted
+lsblk
+#sudo fdisk /dev/sda1 #partition to be created, sda1
+sudo mkfs.ext4 /dev/sda1 #make sure its sda1 the partition you need to erase to EXt4!!
+
+#then mount it
+sudo nano /etc/fstab #save
+###UUID="8674c809-fb02-4e46-948d-4bac1a219374" /mnt/crucial1000gb ext4 defaults 0 2
+sudo mount -a  # Test the /etc/fstab entry
+df -h #see it mounted
+```
 
 
 
