@@ -239,7 +239,7 @@ https://www.youtube.com/watch?v=qlcVx-k-02E
 
 {{< youtube "qlcVx-k-02E" >}}
 
-{{< callout type="info" >}}
+{{< callout type="warning" >}}
 Dont forget that you will need both, **A and CNAME DNS** records!
 {{< /callout >}}
 

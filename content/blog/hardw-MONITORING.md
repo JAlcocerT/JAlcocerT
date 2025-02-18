@@ -53,16 +53,27 @@ services:
       KEY: 'UPDATE WITH YOUR PUBLIC KEY (copy from "Add system" dialog)' #you will take it from the UI when adding a new monitor, copy the compose for the agent, and there it is
 ```
 
-> Then, you will create the admin user at first login
+Then, you will **create the admin user** at first login.
+
+And you will be at this point:
 
 ![Beszel](/blog_img/Monitoring/beszel.png)
 
+From where you can add the first PC to monitor
 
+![Beszel](/blog_img/Monitoring/beszel-addmonitor.png)
+
+
+See how DBTech does the full process:
 <!-- https://www.youtube.com/watch?v=Bz7gPYBH0AU -->
 {{< youtube "Bz7gPYBH0AU" >}}
 
+And you can add the agent as CLI (instead of a docker service):
+
+![Beszel](/blog_img/Monitoring/beszel-agent-cli.png)
+
 {{< callout type="info" >}}
-Remember to add the Public server IP as host.
+Remember to add the Public server IP as host (or the private IP of your home network like `192.168.0.12`)
 {{< /callout >}}
 
 ![Beszel](/blog_img/Monitoring/beszel-hetzner.png)
@@ -77,7 +88,7 @@ Remember to add the Public server IP as host.
 ### Tianji
 
 
-Its not just a web analytics tool!
+Its not just a **web analytics** tool!
 
 ![Tianji Server Monitoring](/blog_img/Monitoring/tianji-server-monit.png)
 
