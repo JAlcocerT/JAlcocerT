@@ -75,6 +75,7 @@ fast
 ```sh
 sudo lshw -C disk  # You'll need sudo and to filter for disks
 sudo hdparm -I /dev/sda  # Example for /dev/sda (detailed info of the disk)
+sudo apt install ntfs-3g
 ```
 
 
@@ -108,7 +109,7 @@ sudo mkdir -p /mnt/data_ext_2tb
 sudo mount -t ext4 /dev/sdb2 /mnt/data_ext_2tb/ #example with ext4
 ```
 
-Mounting the Crucial 500gb (CT500MX5) - **Example 2**
+Mounting the Crucial 500gb (CT500MX5) - **Example 1**
 
 ```sh
 sudo mkdir /mnt/crucial500
@@ -116,6 +117,23 @@ lsblk -f
 sudo mount /dev/sdb1 /mnt/crucial500
 ```
 
+Systematically mount 
+
+```sh
+lsblk #its sdc1
+sudo blkid /dev/sdc1 # Replace /dev/sdb1 with your actual partition
+
+#get UUID="f....."
+#UUID="your-uuid-here" /mnt/crucial500 ext4 defaults 0 2
+##UUID="your-uuid-here" /mnt/crucial500 ext4 defaults 0 2
+##UUID="your-uuid-here" /media/jalcocert/Backup2TB ntfs-3g defaults 0 2
+
+sudo nano /etc/fstab #save
+sudo mount -a  # Test the /etc/fstab entry
+df -h #check its mounted
+```
+
+> This one will be there, even after rebot!
 
 {{< /details >}}
 
