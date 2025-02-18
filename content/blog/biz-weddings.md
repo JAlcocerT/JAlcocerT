@@ -239,6 +239,10 @@ https://www.youtube.com/watch?v=qlcVx-k-02E
 
 {{< youtube "qlcVx-k-02E" >}}
 
+{{< callout type="info" >}}
+Dont forget that you will need both, **A and CNAME DNS** records!
+{{< /callout >}}
+
 Do you need a powerfull VPS?
 
 Not really, see how much im using a CX22: Portainer + NGINX + Wedding share **~500mb RAM**
