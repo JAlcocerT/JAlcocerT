@@ -71,11 +71,11 @@ pip install langchain #==0.3.18
 **Source Code** - RAG libraries to **[Chat over Data](https://github.com/JAlcocerT/Data-Chat)** 💻 
 {{< /callout >}}
 
-This post explores how to use **LangChain with Python** to chat with your database.
+<!-- This post explores how to use **LangChain with Python** to chat with your database.
 
 {{< callout type="info" >}}
 The complete, working code is available in my [data-chat repository](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB).
-{{< /callout >}}
+{{< /callout >}} -->
 
 There is first a SQL chain, to see if the LLM makes proper work building the queries:
 
@@ -404,6 +404,17 @@ See, for example, the artist table of our sample DB:
 {{< /cards >}}
 
 
+```bash
+# Example commands for interacting with the MySQL container:
+docker exec -it mysql_db bash
+# docker exec -it mysql_db mysql -u myuser -p chinook
+```
+
+{{< callout type="info" >}}
+For containerization, you'll need to have [Docker installed](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers).  This also prepares you for [self-hosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
+{{< /callout >}}
+
+
 
 
 ## LangChain Setup
@@ -478,34 +489,20 @@ Be creative, you can apply it to other DB's!
 {{< callout type="info" >}}
 Like the IoT Related DB of [this project](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/) 
 {{< /callout >}}
-
+<!-- 
 {{% jupyter "https://raw.githubusercontent.com/jupyter/notebook/main/docs/source/examples/Notebook/What%20is%20the%20Jupyter%20Notebook.ipynb" %}}
 
-{{% jupyter "https://raw.githubusercontent.com/JAlcocerT/Data-Chat/refs/heads/main/LangChain/ChatWithDB/LangChain_MySQL_DB_Chat.ipynb" %}}
+{{% jupyter "https://raw.githubusercontent.com/JAlcocerT/Data-Chat/refs/heads/main/LangChain/ChatWithDB/LangChain_MySQL_DB_Chat.ipynb" %}} -->
 
 
 [You can also try **PandasAI as RAG** →](/how-to-use-pandasAI)
 
 
-I've successfully replicated the code, using:
+I've successfully setup the code, using:
 
 *  Chinook database version 1.4.5
 *  Python 3.12.3 (x86) and virtual environments
 *  MySQL 8.0 and LangChain 0.3.18
-
-For easier setup and deployment, you can use Docker.
-
-Here's a sample `docker-compose.yml` file (available in the repository):
-
-```bash
-# Example commands for interacting with the MySQL container:
-docker exec -it mysql_db bash
-# docker exec -it mysql_db mysql -u myuser -p chinook
-```
-
-{{< callout type="info" >}}
-For containerization, you'll need to have [Docker installed](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers).  This also prepares you for [self-hosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
-{{< /callout >}}
 
 
 ### FAQ
