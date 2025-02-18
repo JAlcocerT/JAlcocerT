@@ -19,7 +19,7 @@ By tinkering with AI, I discoverd that it is possible to:
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/" title="Chat with CSVs ↗" icon="book-open" >}}  
 {{< /cards >}}
 
-And today, its the time to Chat with a Database with LLM driven queries:
+And today, its the time to **Chat with a Database with LLM driven queries**:
 
 ```mermaid
 graph LR
@@ -44,6 +44,7 @@ What we will be using?
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
+That's all you need! Let's get started.
 
 ## Chat with Your Database Using LangChain
 
@@ -83,11 +84,13 @@ user_question = 'what are the top 5 artists with more albums published?'
 sql_chain.invoke({"question": user_question})
 ```
 
-The magic of the full chain happens when we use that SQL output against the DB:
+The magic of the full chain happens when **Langchain uses that SQL output against the DB**:
 
 ```py
 full_chain.invoke({"question":"what are the top 5 artists with more albums published?"})
 ```
+
+See it in action:
 
 ![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png)
 
@@ -394,7 +397,7 @@ If you are familiar with Dbeaver, you can also have a look to the tables we are 
 
 See, for example, the artist table of our sample DB:
 
-![MySQL Dbeaver Chinook](/blog_img/GenAI/llangchain-chinook-artiststable.png)
+![MySQL Dbeaver Chinook](/blog_img/GenAI/langchain-chinook-artiststable.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/" title="Create such Diagrams with Code ↗" icon="book-open" >}}
@@ -465,28 +468,6 @@ You might see this message the first time you run the Jupyter Notebook:
 
 Install the `ipykernel` and proceed with the workflow.
 
-## Integrating LangChain with the Database
-
-I've successfully replicated the code, using:
-
-*  Chinook database version 1.4.5
-*  Python 3.12.3 (x86) and virtual environments
-*  MySQL 8.0
-
-For easier setup and deployment, you can use Docker.
-
-Here's a sample `docker-compose.yml` file (available in the repository):
-
-
-```bash
-# Example commands for interacting with the MySQL container:
-# docker exec -it mysql_db bash
-# docker exec -it mysql_db mysql -u myuser -p chinook
-```
-
-{{< callout type="info" >}}
-For containerization, you'll need to have [Docker installed](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers).  This also prepares you for [self-hosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
-{{< /callout >}}
 
 ---
 
@@ -498,13 +479,36 @@ Be creative, you can apply it to other DB's!
 Like the IoT Related DB of [this project](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/) 
 {{< /callout >}}
 
+{{% jupyter "https://raw.githubusercontent.com/jupyter/notebook/main/docs/source/examples/Notebook/What%20is%20the%20Jupyter%20Notebook.ipynb" %}}
+
+{{% jupyter "https://raw.githubusercontent.com/JAlcocerT/Data-Chat/refs/heads/main/LangChain/ChatWithDB/LangChain_MySQL_DB_Chat.ipynb" %}}
+
 
 [You can also try **PandasAI as RAG** →](/how-to-use-pandasAI)
 
 
----
+I've successfully replicated the code, using:
 
-## FAQ
+*  Chinook database version 1.4.5
+*  Python 3.12.3 (x86) and virtual environments
+*  MySQL 8.0 and LangChain 0.3.18
+
+For easier setup and deployment, you can use Docker.
+
+Here's a sample `docker-compose.yml` file (available in the repository):
+
+```bash
+# Example commands for interacting with the MySQL container:
+docker exec -it mysql_db bash
+# docker exec -it mysql_db mysql -u myuser -p chinook
+```
+
+{{< callout type="info" >}}
+For containerization, you'll need to have [Docker installed](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers).  This also prepares you for [self-hosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
+{{< /callout >}}
+
+
+### FAQ
 
 {{< details title="More Useful Database Tools" closed="true" >}}
 
@@ -519,7 +523,7 @@ See **other popular RAG frameworks**, alternatives to Langchain:
 
 [![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,run-llama/llama_index,deepset-ai/haystack,Sinaptik-AI/pandas-ai&type=Date)](https://star-history.com/#langchain-ai/langchain&run-llama/llama_index&deepset-ai/haystack&Sinaptik-AI/pandas-ai&type=Date)
 
-### Preparing a Tech Talk with AI
+#### Preparing a Tech Talk with AI
 
 1. [Diagrams](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/) as a Code
 2. PPT with LLMs
@@ -532,7 +536,7 @@ See **other popular RAG frameworks**, alternatives to Langchain:
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos" title="Docker Repo ↗" >}}
 {{< /cards >}}
 
-### Other Cool LangChain Features
+#### Other Cool LangChain Features
 
 <!-- https://www.youtube.com/watch?v=KerHlb8nuVc -->
 {{< youtube "KerHlb8nuVc" >}}
@@ -544,26 +548,16 @@ You do not need an API key to perform basic web searches with DuckDuckGo using P
 
 DuckDuckGo's search functionality is generally accessible without authentication for standard queries.
 
-https://pypi.org/project/duckduckgo-search/#history
-https://github.com/deedy5/duckduckgo_search
+* https://pypi.org/project/duckduckgo-search/#history
+* https://github.com/deedy5/duckduckgo_search
 
 > AI chat and search for text, news, images and videos using the DuckDuckGo.com search engine.
-
-
-
-```sh
-
-```
-
 
 {{< /details >}}
 
 <!-- https://www.youtube.com/watch?v=Xi9Ui-9qcPw -->
 {{< youtube "Xi9Ui-9qcPw" >}}
 
-{{< details title="LangChain Agents 📌" closed="true" >}}
-
-{{< /details >}}
 
 ### LangChain vs LLamaIndex
 
@@ -594,7 +588,6 @@ To explore vector DBs we have Vector Admin, but for **regular DB's** we have:
 
 2. To explore SQlite, we have the CLI:
 
-
 And as seen [here](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#faq), we also have...
 
 {{< details title="More Useful Tools for DBs 📌" closed="true" >}}
@@ -609,10 +602,9 @@ Instead of dragging and dropping elements in a graphical interface, you describe
 
 {{< /details >}}
 
-
+It's not just MySQL or MariaDB...
 
 {{< details title="Exploring Other DBs 📌" closed="true" >}}
-
 
 * **DuckDB:** [DuckDB](https://github.com/duckdb/duckdb) is an embedded analytical database.  It's designed to be fast and efficient for Online Analytical Processing (OLAP) workloads.  DuckDB can be used directly from various programming languages (Python, R, etc.) and is often used for data analysis and exploration.  It's similar to SQLite in that it's file-based and embedded, but it's optimized for analytical queries.
 
@@ -621,6 +613,5 @@ Instead of dragging and dropping elements in a graphical interface, you describe
 * **Hue (SQL Assistant):** [Hue](https://github.com/cloudera/hue) is a broader open-source SQL assistant for databases and data warehouses. While it *can* be used with DuckDB (as you noted with the Docker image), it's not DuckDB-specific.
 
 Hue supports a wide variety of database systems and provides a rich interface for working with SQL, including query editors, data browsers, and visualization tools.  It's a more comprehensive tool than Huey (the DuckDB UI) and can be used with many different database backends.
-
 
 {{< /details >}}

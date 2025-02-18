@@ -31,6 +31,11 @@ And working on the symbolic one: https://github.com/JAlcocerT/MultiBodySystemDyn
 
 * Optimum Gears - https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
 
+## Singer
+
+15cm on the bottom
+35cm la biela
+4cm (x2) crank
 
 ---
 
