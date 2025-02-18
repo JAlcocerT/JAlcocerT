@@ -19,7 +19,7 @@ By tinkering with AI, I discoverd that it is possible to:
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/" title="Chat with CSVs ↗" icon="book-open" >}}  
 {{< /cards >}}
 
-[You can also try **PandasAI as RAG** →](/how-to-use-pandasAI)
+And today, its the time to Chat with a Database with LLM driven queries:
 
 ```mermaid
 graph LR
@@ -33,10 +33,15 @@ graph LR
     G --> H[User]
 ```
 
+What we will be using?
+
+1. LangChain
+2. MySQL Database
+3. OpenAI API as LLM!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
 
@@ -49,6 +54,17 @@ But what if you could use **AI to simplify data analysis tasks**?
 That's where **LangChain comes in**.
 
 Bridging the gap between natural language and your database.
+
+We will use the PyPi repository to install the latest version of LangChain: https://pypi.org/project/langchain/
+
+```py
+python3 -m venv datachat_venv #create the venv Linux
+source datachat_venv/bin/activate #(linux)
+
+cd ./LangChain/ChatWithDB
+#pip install -r requirements.txt
+pip install langchain #==0.3.18
+```
 
 {{< callout type="info" >}}
 **Source Code** - RAG libraries to **[Chat over Data](https://github.com/JAlcocerT/Data-Chat)** 💻 
@@ -71,7 +87,12 @@ This example uses **MySQL**.
 
 ### MySQL Installation
 
-Install **MySQL RDBMS** in your computer.
+Install **MySQL RDBMS** in your computer. 
+
+There are 2 ways to get MSQL ready:
+
+1. Baremetal install
+2. Use a MySQL container
 
 
 {{< details title="MySQL Installation CLI 👇" closed="true" >}}
@@ -100,7 +121,10 @@ lsof -i :3306 #this will be cleared
 
 {{< /details >}}
 
-I would recommend to go with the **container way of installing the DB**:
+![MySQL CLI Install](/blog_img/GenAI/langchain-mysql.png)
+
+
+> For production, I would recommend to go with the **container way of installing the DB**:
 
 {{< details title="Get Ready for Containers 🐋👇 📌" closed="true" >}}
 
@@ -117,7 +141,7 @@ sudo systemctl enable docker
 
 {{< /details >}}
 
-{{< details title="MySQL with Docker | Recommended 👇" closed="true" >}}
+{{< details title="MySQL with Docker | Containers 👇" closed="true" >}}
 
 Once, **Docker/Podman** are installed, just spin a mysql instance:
 
@@ -132,6 +156,8 @@ Now, you can see that **MySQL is installed**, just inside the container:
 ```
 
 {{< /details >}}
+
+Once the RDBMS is ready, we need to make our sample DB ready.
 
 We will download the `Chinook_MySQL.sql` file.
 
@@ -241,7 +267,7 @@ ORDER BY
     TABLE_NAME, ORDINAL_POSITION;
 ```
 
-Here's a [MermaidJS Entity-Relationship](https://mermaid.live/edit#pako:eNrVVk1v2zAM_SuGgd7aP5BbkzRb0W7Iluwy5MLYSiJMlgyJKual-e-TbMkfspxmx_lkkY_P1CNF-ZxmIifpLCVySeEoodjxxDyPbK-L5Nws7EM5NsbnPFm_dPY3kNkJZLKlyEgAl0gVGvzK4S-Ou7aPyD06xv4VCjLgWGiFoiAyZPH2CZ4VlQo7sr7rFaY8C1GUwKux4zHPJVEqEkExAt8gYJRec5QR_FooBLYw9Yn4ToJHzCv4PTY-FUDZUKaNLksh8Tspx-V5KkomKkJCab19Qtpp_a6IHukak5PJTG1Fm5d9ciMd0oIkcyrxtBwI2fo-U0mWUY3_v0q5YnwiXI4qURtvPSnP_E3QbMThzAFLcISiFXCRcaHnlDHKj5N6O39cduecUN-HThXB-WO1yElGC2DJVhhXTJ1XyqcUsq6ISp1-q8CzlZD9CsVzCfzgFNfSxA1Dvmng2EriUvtCcgrbqhwl1jpubYE1g4pFRq63_ytPvcMbyfqKrIeDJkoTYuMJhTdSWIO-RKHPn57VS3zUC0VkwGY7S5FM8FwNPfMKifqwzGa_zcvdnRlvDJAKrk60VP279v394UGc_eU4S3bpnjDBjypBsUv7inlkHXYDsGskC9bKZByDNaPGQjJz_o5C0j8kT6AFD6vvgtrWquMER6D8ekSziMH9pHLA9oq3WKqUNtl0O-wfXBfg4y2-BImJOFxBd3mgfWuzaD_rcO11aKGglNmPSWRfeXzrj-Flc5nVeaf3qaE1Ez43v1t115tPn4hp6dRCc3IAzdDSXgwUNIpNxbN0hlKT-1QKfTylswMwZVa6tOPY_bF5iPlJ-SmEW17-AiJABTs) **(ER) diagram** visualizing the **Chinook database schema**:
+Here's a [MermaidJS Entity-Relationship](https://mermaid.live/edit#pako:eNrVVk1v2zAM_SuGgd7aP5BbkzRb0W7Iluwy5MLYSiJMlgyJKual-e-TbMkfspxmx_lkkY_P1CNF-ZxmIifpLCVySeEoodjxxDyPbK-L5Nws7EM5NsbnPFm_dPY3kNkJZLKlyEgAl0gVGvzK4S-Ou7aPyD06xv4VCjLgWGiFoiAyZPH2CZ4VlQo7sr7rFaY8C1GUwKux4zHPJVEqEkExAt8gYJRec5QR_FooBLYw9Yn4ToJHzCv4PTY-FUDZUKaNLksh8Tspx-V5KkomKkJCab19Qtpp_a6IHukak5PJTG1Fm5d9ciMd0oIkcyrxtBwI2fo-U0mWUY3_v0q5YnwiXI4qURtvPSnP_E3QbMThzAFLcISiFXCRcaHnlDHKj5N6O39cduecUN-HThXB-WO1yElGC2DJVhhXTJ1XyqcUsq6ISp1-q8CzlZD9CsVzCfzgFNfSxA1Dvmng2EriUvtCcgrbqhwl1jpubYE1g4pFRq63_ytPvcMbyfqKrIeDJkoTYuMJhTdSWIO-RKHPn57VS3zUC0VkwGY7S5FM8FwNPfMKifqwzGa_zcvdnRlvDJAKrk60VP279v394UGc_eU4S3bpnjDBjypBsUv7inlkHXYDsGskC9bKZByDNaPGQjJz_o5C0j8kT6AFD6vvgtrWquMER6D8ekSziMH9pHLA9oq3WKqUNtl0O-wfXBfg4y2-BImJOFxBd3mgfWuzaD_rcO11aKGglNmPSWRfeXzrj-Flc5nVeaf3qaE1Ez43v1t115tPn4hp6dRCc3IAzdDSXgwUNIpNxbN0hlKT-1QKfTylswMwZVa6tOPY_bF5iPlJ-SmEW17-AiJABTs), **(ER) diagram** visualizing the **Chinook database schema**:
 
 ```mermaid
 erDiagram
@@ -369,10 +395,8 @@ source datachat_venv/bin/activate  # Activate the virtual environment (Linux)
 pip install -r requirements.txt
 ```
 
-{{< details title="You need these python packages 👇" closed="true" >}}
+> You need these [python packages](https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/ChatWithDB/requirements.txt)
 
-
-{{< /details >}}
 
 3. Now, install the database engine
 
@@ -389,26 +413,31 @@ You just need the [docker compose](https://github.com/JAlcocerT/Docker/blob/main
 
 4. Prepare your AI API Keys
 
-We will need OpenAI Keys to interact with the DB: https://platform.openai.com/api-keys
+We will need **OpenAI** Keys to interact with the DB: https://platform.openai.com/api-keys
 
+```sh
+source .env  # If you're using a .env file
+#echo $OPENAI_API_KEY  # Verify the key
+```
 
-{{< details title="Loading Your OpenAI API Key" closed="true" >}}
+{{< details title="Loading Your OpenAI API Key for Python 👇" closed="true" >}}
 
 ```bash
-source .env  # If you're using a .env file
+#source .env  # If you're using a .env file
 
-# export OPENAI_API_KEY="your-api-key-here"  # Linux/macOS
+export OPENAI_API_KEY="your-api-key-here"  # Linux/macOS
 # set OPENAI_API_KEY=your-api-key-here  # Windows
 # $env:OPENAI_API_KEY="your-api-key-here" #Powershell
-
 # echo $OPENAI_API_KEY  # Verify the key
 ```
 
 {{< /details >}}
 
+You might see this message the first time you run the Jupyter Notebook:
 
 ![LangChain Jupyter NB](/blog_img/GenAI/langchain-jupyter.png)
 
+Install the `ipykernel` and proceed with the workflow.
 
 ## Integrating LangChain with the Database
 
@@ -420,7 +449,7 @@ I've successfully replicated the code, using:
 
 For easier setup and deployment, you can use Docker.
 
- Here's a sample `docker-compose.yml` file (available in the repository):
+Here's a sample `docker-compose.yml` file (available in the repository):
 
 
 ```bash
@@ -437,11 +466,14 @@ For containerization, you'll need to have [Docker installed](https://jalcocert.g
 
 ## Conclusions
 
-{{< callout type="info" >}}
 Be creative, you can apply it to other DB's!
 
-Like the one of [this project](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/) 
+{{< callout type="info" >}}
+Like the IoT Related DB of [this project](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/) 
 {{< /callout >}}
+
+
+[You can also try **PandasAI as RAG** →](/how-to-use-pandasAI)
 
 
 ---
@@ -463,9 +495,9 @@ See **other popular RAG frameworks**, alternatives to Langchain:
 
 ### Preparing a Tech Talk with AI
 
-1. Diagrams as a Code
+1. [Diagrams](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/) as a Code
 2. PPT with LLMs
-3. **Gemini** was great to create catchy images! (2048x2048!)
+3. **Gemini** was great to create catchy images! (Impresive 2048x2048 resolution)
 
 #### PPT as a Code
 
