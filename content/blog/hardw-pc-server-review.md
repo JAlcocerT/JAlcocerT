@@ -27,6 +27,8 @@ and a max power from the wall seen of 53 with the Tapo P110
 
 > For now, the x300 with the 5600G is the most powerful CPU I ever had (a little bit more than the x13 and )
 
+cpx11 (Hetzner amd epyc x86): 12.3k events and  4.5/9k
+
 ## Memory Benchmarks
 
 

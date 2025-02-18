@@ -71,6 +71,9 @@ Default credentials to `localhost:8080/Admin` are...`admin/admin`
 
 ![Wedding Share](/blog_img/apps/weddingshare.png)
 
+{{< callout type="warning" >}}
+Make sure you setup the `BASE_URL` env variable [as per readme](https://github.com/Cirx08/WeddingShare?tab=readme-ov-file#basic)
+{{< /callout >}}
 
 ## Making Deployments Easy
 
@@ -160,9 +163,7 @@ As seen on [this post](https://jalcocert.github.io/JAlcocerT/selfhosting-python-
 {{< /callout >}}
 
 
-{{< callout type="warning" >}}
-Make sure you setup the `BASE_URL` env variable [as per readme](https://github.com/Cirx08/WeddingShare?tab=readme-ov-file#basic)
-{{< /callout >}}
+
 
 
 
@@ -332,10 +333,88 @@ Which I will cover on a future post.
 
 ## Conclusions
 
+Using cloudflared for a sub.sub.domain.com is problematic with the https SSL.
+
+So I restarted everything (with a CPX11, AMD x86).
+
+```sh
+curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Selfhosting_101.sh
+#nano Selfhosting_101.sh #MAKE SURE YOU UNDERSTAND WHAT YOU WILL BE RUNNING
+
+chmod +x Selfhosting_101.sh
+sudo ./Selfhosting_101.sh
+```
+
+This took ~42s.
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Software for Vacations" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard with Hetzner as VPS" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Vacations after a wedding? VPN Setup" >}}
 {{< /cards >}}
+
+
+```yml
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest' #admin@example.com / changeme
+    restart: always
+    container_name: nginx    
+    ports:
+      - '80:80' # Public HTTP Port
+      - '443:443' # Public HTTPS Port
+      - '81:81' # Admin Web Port - UI
+    volumes:
+      - nginx_data:/data #  - ~/Docker/Nginx/data:/data
+      - nginx_letsencrypt:/etc/letsencrypt #  - ~/Docker/Nginx/letsencrypt:/etc/letsencrypt    
+
+volumes:
+  nginx_data:
+  nginx_letsencrypt:      
+
+networks:
+  nginx_default:
+    name: nginx_default      
+```
+
+```yml
+services:
+  filebrowser:
+    image: filebrowser/filebrowser
+    container_name: filebrowser
+    ports:
+      - 8080:80
+    volumes:
+      - /root/Docker/FileBrowser/config:/config
+      - /root/Docker/FileBrowser/data:/srv
+    restart: unless-stopped    
+    networks:
+      - nginx_default #this will allow communication between chevereto service and the existing nginx service  
+  
+networks:
+  nginx_default:
+    external: true
+```
+
+This requires ~309/1.87GB.
+
+And for DNS Challenge with Cloudflare:
+
+You will need their [API Token from here](https://dash.cloudflare.com/profile/api-tokens)
+
+* Go to Create token: **Edit zone DNS**. `Zone Resources` -> `Include all zones` (or a specific domain only) and create it. Add it as `dns_cloudflare_api_token=`
+* In NginX UI, you will add the: **container name and port** of the services
+
+![CName and A Record DNS CLoudflare with NGINX](/blog_img/selfh/duckdns-hetzner-nginx2.png)
+
+
+{{< callout type="warning" >}}
+Dont forget: Point the DNS records **BEFORE** adding the SSL certificates in NGINX.
+{{< /callout >}}
+
+Then you will be done in under a minute:
+
+![CName and A Record DNS CLoudflare with NGINX](/blog_img/selfh/nginx-cloudflare-filebrowser.png)
+
 
 ---
 
