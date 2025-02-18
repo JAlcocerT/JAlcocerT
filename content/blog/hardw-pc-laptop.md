@@ -281,5 +281,7 @@ Connecting your laptop to your server **with https**:
 
 ### How to Check dead Pixels
 
+If you got any, you can return the laptop or ask for a 5-10% discount.
+
 * https://lcdtech.info/en/tests/dead.pixel.htm
 * https://deadpixeltest.org/colors/black

@@ -3,7 +3,7 @@ title: "Which OS for a NAS?"
 date: 2025-03-17
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Testing Operative System for a NAS. Improving the homelab.'
+description: 'Testing Operative System for a NAS. Improving a Homelab.'
 url: 'os-for-nas'
 ---
 
@@ -84,7 +84,7 @@ ifconfig
 ```
 
 1. Pi4 192.168.0.155 and 192.168.0.232 both via ethernet
-2. x300 Ethernet:
+2. x300 Ethernet: 192.168.0.12
 3. x13 wifi 192.168.0.124
 
 **Containers**
@@ -92,6 +92,29 @@ ifconfig
 https://www.youtube.com/watch?v=Z5uBcczJxUY -->
 
 {{< youtube "Z5uBcczJxUY" >}}
+
+One of my favourite containers, are **Cloudflared** and FileBrowser
+
+```yml
+services:
+  filebrowser:
+    image: filebrowser/filebrowser
+    container_name: filebrowser
+    ports:
+      - 8080:80
+    volumes:
+      - /mnt/Docker/FileBrowser/config:/config
+      - /home/Docker/FileBrowser/data:/srv #same as Syncthing!
+    restart: unless-stopped    
+
+# networks:
+#   nginx_nginx_default:
+#     external: true
+```
+
+
+{{< youtube "Z5uBcczJxUY" >}}
+
 
 
 ### Better PKG management in Debian

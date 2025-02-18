@@ -76,7 +76,7 @@ Let's break down the full KaTeX formula for calculating the heat dissipation, st
     
 {{< /details >}}
 
-$$
+
 ṁ_a = V \times ρ_a
 ṁ_w = ṁ_a \times h
 Q_a = ṁ_a \times c_a \times ΔT
@@ -85,8 +85,11 @@ Q = Q_a + Q_w
 Q = (V \times ρ_a \times c_a \times ΔT) + ((V \times ρ_a \times h) \times c_w \times ΔT)
 
 Q = V \times ρ_a \times ΔT \times (c_a + h \times c_w)
+
+$$
 Q = 0.0139 \times 1.2 \times 7 \times (1006 + 0.01 \times 1840) \approx 120 \, \text{W} 
 $$
+
 
 ## Asrock x300 How to
 
