@@ -37,7 +37,6 @@ For a quick Windows setup, I used [Chocolatey](https://jalcocert.github.io/JAlco
 
 > I am really **impressed with the CPU performance**, almost the most powerful CPU I ever tried
 
-<!-- The first CPU was an Intel and then a AMD Athlon 64 3200+ (both 1 core!) -->
 
 ```sh
 #lscpu

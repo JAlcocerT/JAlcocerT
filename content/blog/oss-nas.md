@@ -37,7 +37,10 @@ TBD
 
 ```sh
 sudo apt install hardinfo
+lscpu
 ```
+
+
 
 **Testing the Memory**
 

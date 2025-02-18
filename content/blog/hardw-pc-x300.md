@@ -24,6 +24,69 @@ I went crazy and build it with **64GB RAM**.
 
 The idle consumptions of the x300 are decent (12/13w with 2 ssd's) and max power drawn during the tests of 53W.
 
+With a room temperature of 21C, in idle the air was getting out of the computer at ~28C.
+
+Those **W are heating the air** as it passes to ~+7C
+
+
+
+{{< details title="How is that heating going? 📌" closed="true" >}}
+
+1. **Smaller Airflow:**
+   * Original airflow: 50 m³/h
+   * New airflow: 50 m³/h / 6 = 8.33 m³/h
+
+2. **Convert to Mass Flow Rate:**
+   * Convert to m³/s: 8.33 m³/h / 3600 s/h = 0.002314 m³/s
+   * Mass flow rate of dry air: 0.002314 m³/s * 1.2 kg/m³ = 0.002777 kg/s
+
+3. **Mass Flow Rate of Water Vapor (using the same humidity ratio of 0.01):**
+    * Mass flow rate of water vapor: 0.002777 kg/s * 0.01 = 0.00002777 kg/s
+
+4. **Specific Heat Capacities (same as before):**
+   * Dry air: 1006 J/kg°C
+   * Water vapor: 1840 J/kg°C
+
+5. **Power Calculation:**
+
+   * **Power to heat dry air:**
+      * Power = 0.002777 kg/s * 1006 J/kg°C * 7°C = 19.5 W
+
+   * **Power to heat water vapor:**
+      * Power = 0.00002777 kg/s * 1840 J/kg°C * 7°C = 0.36 W
+
+   * **Total Power:**
+      * Total Power = 19.5 W + 0.36 W = 19.86 W
+
+**Therefore, the heat dissipation is approximately 20 watts.**
+
+Let's break down the full KaTeX formula for calculating the heat dissipation, step by step.
+
+**Variables:**
+
+*   `Q`: Heat dissipation (power) in watts (W)
+*   `ṁ_a`: Mass flow rate of dry air in kilograms per second (kg/s)
+*   `c_a`: Specific heat capacity of dry air, approximately 1006 J/kg°C
+*   `ṁ_w`: Mass flow rate of water vapor in kilograms per second (kg/s)
+*   `c_w`: Specific heat capacity of water vapor, approximately 1840 J/kg°C
+*   `ΔT`: Change in temperature in degrees Celsius (°C)
+*   `V`: Volumetric airflow rate in cubic meters per second (m³/s)
+*   `ρ_a`: Density of air, approximately 1.2 kg/m³
+*   `h`: Humidity ratio (kg of water vapor per kg of dry air)
+    
+{{< /details >}}
+
+$$
+ṁ_a = V \times ρ_a
+ṁ_w = ṁ_a \times h
+Q_a = ṁ_a \times c_a \times ΔT
+Q_w = ṁ_w \times c_w \times ΔT
+Q = Q_a + Q_w
+Q = (V \times ρ_a \times c_a \times ΔT) + ((V \times ρ_a \times h) \times c_w \times ΔT)
+
+Q = V \times ρ_a \times ΔT \times (c_a + h \times c_w)
+Q = 0.0139 \times 1.2 \times 7 \times (1006 + 0.01 \times 1840) \approx 120 \, \text{W} 
+$$
 
 ## Asrock x300 How to
 
