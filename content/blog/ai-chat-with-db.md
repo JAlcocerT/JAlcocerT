@@ -489,10 +489,6 @@ Be creative, you can apply it to other DB's!
 {{< callout type="info" >}}
 Like the IoT Related DB of [this project](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/) 
 {{< /callout >}}
-<!-- 
-{{% jupyter "https://raw.githubusercontent.com/jupyter/notebook/main/docs/source/examples/Notebook/What%20is%20the%20Jupyter%20Notebook.ipynb" %}}
-
-{{% jupyter "https://raw.githubusercontent.com/JAlcocerT/Data-Chat/refs/heads/main/LangChain/ChatWithDB/LangChain_MySQL_DB_Chat.ipynb" %}} -->
 
 
 [You can also try **PandasAI as RAG** →](/how-to-use-pandasAI)
