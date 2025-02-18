@@ -42,6 +42,17 @@ With that, you will know: the **weight ~12g**
 
 We just need to sum areas...of the designed completed.
 
+## The Linen Knit
+
+[Punto de lino](https://www.youtube.com/watch?v=ejKCGqQXC8o) (o tela) in spanish
+
+<!--
+https://www.youtube.com/watch?v=ejKCGqQXC8o
+-->
+
+{{< youtube "ejKCGqQXC8o" >}}
+
+
 ---
 
 ## Learnt with This!

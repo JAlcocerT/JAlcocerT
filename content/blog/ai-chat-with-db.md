@@ -217,6 +217,8 @@ While being inside the container, access the **DB root user**:
 sudo docker exec -it mysql-db /bin/bash
 rootpassword
 
+### This is how you setup the DATABASE PASSWORD: its required for the URI
+
 #sudo mysql -u root
 #USE mysql;
 #ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
@@ -372,9 +374,17 @@ erDiagram
     Employee ||--o{ Employee : "reports to"
 ```
 
+If you are familiar with Dbeaver, you can also have a look to the tables we are going to use with a UI, just load our sample Chinook DB as a connection like so:
+
+![MySQL Dbeaver Chinook](/blog_img/GenAI/langchain-chinook-dbeaver.png)
+
+
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/" title="Create such Diagrams with Code ↗" icon="book-open" >}}
 {{< /cards >}}
+
+
 
 
 ## LangChain Setup
