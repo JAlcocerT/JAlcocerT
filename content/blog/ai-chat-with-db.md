@@ -378,7 +378,9 @@ If you are familiar with Dbeaver, you can also have a look to the tables we are 
 
 ![MySQL Dbeaver Chinook](/blog_img/GenAI/langchain-chinook-dbeaver.png)
 
+See, for example, the artist table of our sample DB:
 
+![MySQL Dbeaver Chinook](/blog_img/GenAI/llangchain-chinook-artiststable.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/" title="Create such Diagrams with Code ↗" icon="book-open" >}}
