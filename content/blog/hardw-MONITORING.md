@@ -108,6 +108,28 @@ systemctl --type=service --state=running
 ```
 
 
+{{< details title="If you just need web analytics - See Medama 📌" closed="true" >}}
+
+
+```yml
+version: '3.9'
+services:
+  medama:
+    image: ghcr.io/medama-io/medama:latest
+    container_name: medama
+    restart: unless-stopped
+    environment:
+      - LOGGER=pretty
+    ports:
+      - "8085:8080"
+    volumes:
+      - ./data:/app/data
+```
+
+{{< /details >}}
+
+
+
 
 ### Netdata and Grafana
 

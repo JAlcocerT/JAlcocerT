@@ -1,6 +1,6 @@
 ---
 title: "Financial Data for Python - Trying YahooFinancial and YFinance packages"
-date: 2025-01-26
+date: 2025-03-06
 draft: false
 tags: ["Python"]
 description: "Initial Yield vs Growth EDA and its math. How to analyze stock and dividend data with Python. Together with Data animations."
@@ -101,7 +101,7 @@ What does the **data and math** tell us about it?
 ![Div Yield vs Growth](/blog_img/data-experiments/div-growth-vs-yield-3d.png) 
 
 
-As seen on the real estate post, the catch up its all about: $t = \frac{\ln(A/B)}{\ln(1 + (r))}$
+As seen on [the real estate post](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/), the catch up its all about: $t = \frac{\ln(A/B)}{\ln(1 + (r))}$
 
 * Where A and B are the initial yield of each stock
 * And r the difference in growth between them
@@ -128,6 +128,8 @@ Assuming that the price of the stock and the initial yield is the same, we would
 <!-- 
 ![Div Re-Investment](/blog_img/data-experiments/div_reinvestment.png)  
 -->
+
+#### Compared with Real Estate
 
 ## Stock Value Data
 

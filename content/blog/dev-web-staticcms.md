@@ -1,6 +1,6 @@
 ---
 title: "Having a look to Static CMS"
-date: 2025-02-07
+date: 2025-03-10
 draft: false
 tags: ["dev"]
 description: 'KeyStatic. Creating a website for a moto blogger.'
@@ -10,11 +10,11 @@ url: 'understanding-static-cms'
 
 ## KeyStatic
 
-I got to know about Keystatic CMS thanks to:
+I got to know about **Keystatic CMS** thanks to:
 
 * https://github.com/Boston343/landingpad
-* https://landingpad.cosmicthemes.com/
-* https://cosmicthemes.com/themes/landing-pad/
+  * https://landingpad.cosmicthemes.com/
+  * https://cosmicthemes.com/themes/landing-pad/
 
 > Made by https://webreaper.dev/ | GPL3.0 | A free and open source template to host your links and socials. Built with Astro, Tailwind CSS, and Keystatic CMS by Cosmic Themes.
 
@@ -301,7 +301,7 @@ docker build -t astrokeystatic:landingpad .
 
 > The built took ~2min 25s on a CX22 Hetzner VPS
 
-Now, you just have to get into the container and run it:
+Now, you just have to **get inside the container and run it:**
 
 ```sh
 sudo docker run -d -p 4321:4321 --name astrokeystaticvps astrokeystatic:landingpad tail -f /dev/null

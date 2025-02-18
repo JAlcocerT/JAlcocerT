@@ -1,6 +1,6 @@
 ---
 title: "How to setup TinyAuth"
-date: 2025-02-08
+date: 2025-02-19T23:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'TinyAuth Setup, together with Traefik Reverse Proxy.'
@@ -18,9 +18,47 @@ https://github.com/steveiliop56/tinyauth
 
 https://tinyauth.doesmycode.work/docs/getting-started.html
 
-```yml
 
+
+{{< details title="TinyAuth Compose with traefik and nginx 📌" closed="true" >}}
+
+```yml
+services:
+  traefik:
+    container_name: traefik
+    image: traefik:v3.3
+    command: --api.insecure=true --providers.docker
+    ports:
+      - 80:80
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      traefik.http.middlewares.tinyauth.forwardauth.address: http://tinyauth:3000/api/auth
+
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    labels:
+      traefik.enable: true
+      traefik.http.routers.nginx.rule: Host(`nginx.example.com`)
+      traefik.http.services.nginx.loadbalancer.server.port: 80
+      traefik.http.routers.nginx.middlewares: tinyauth
+
+  tinyauth:
+    container_name: tinyauth
+    image: ghcr.io/steveiliop56/tinyauth:latest
+    environment:
+      - SECRET=some-random-32-chars-string
+      - APP_URL=https://tinyauth.example.com
+      - USERS=# user:password
+    labels:
+      traefik.enable: true
+      traefik.http.routers.tinyauth.rule: Host(`tinyauth.example.com`)
+      traefik.http.services.tinyauth.loadbalancer.server.port: 3000
 ```
+
+
+{{< /details >}}
 
 This `docker-compose.yml` file defines a setup using Traefik as a reverse proxy, Nginx as a web server, and TinyAuth for authentication.
 

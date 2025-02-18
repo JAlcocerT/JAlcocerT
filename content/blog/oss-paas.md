@@ -46,8 +46,6 @@ docker run -p 80:80 -p 443:443 -p 3000:3000 -e ACCEPTED_TERMS=true -v /var/run/d
 ```
 
 ```yml
-version: "3.8"  # Or a suitable version
-
 services:
   caprover:
     image: caprover/caprover
@@ -146,7 +144,23 @@ https://www.reddit.com/r/selfhosted/comments/1dbmv4d/alternatives_to_vercel_cool
 > MIT | A docker-powered PaaS that helps you build and manage the lifecycle of applications
 
 ```yml
-
+services:
+  dokku:
+    image: dokku/dokku:0.35.15
+    container_name: dokku
+    network_mode: bridge
+    ports:
+      - "3022:22"
+      - "8060:80"
+      - "8443:443"
+    volumes:
+      - "/var/lib/dokku:/mnt/dokku"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      DOKKU_HOSTNAME: dokku.me
+      DOKKU_HOST_ROOT: /var/lib/dokku/home/dokku
+      DOKKU_LIB_HOST_ROOT: /var/lib/dokku/var/lib/dokku
+    restart: unless-stopped
 ```
 
 ```sh
