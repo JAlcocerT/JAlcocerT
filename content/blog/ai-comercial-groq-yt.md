@@ -7,10 +7,13 @@ cover:
     alt: "Summarize Youtube Videos with AI" # alt text
     caption: "Using Groq to Summarize Youtube Videos." # display caption under cover
 tags: ["Docker","Gen-AI","Python","Dev","Self-Hosting"]
-description: 'Groq Video Summaries with LLMs'
-summary: 'How to avoid falling into click baits with Generative AI. Use Groq and Streamlit to summarize and video and to know if its worth your time!'
+description: 'Groq Video Summaries with LLMs, Streamlit (and the streamlit-authenticator auth package).'
 url: 'summarize-yt-videos'
 ---
+
+How to avoid falling into click baits with Generative AI.
+
+Use Groq and Streamlit to summarize and video and to know if its worth your time!
 
 <!-- 
 * How to chat with websites(Streamlit) =>>> https://github.com/alejandro-ao/chat-with-websites
@@ -448,7 +451,7 @@ We can use this simple package: https://pypi.org/project/streamlit-authenticator
 * https://github.com/mkhorasani/Streamlit-Authenticator
   * https://github.com/mkhorasani/Streamlit-Authenticator?tab=Apache-2.0-1-ov-file#readme ✅
 
->  A secure authentication module to validate user credentials in a Streamlit application. 
+>  A secure authentication module to **validate user credentials in a Streamlit application**. 
 
 ```py
 import streamlit as st
@@ -463,7 +466,7 @@ if __name__ == "__main__":
     main()        
 ```
 
-It is a referencing a `Auth_functions.py` in another file:
+It is a referencing a `Auth_functions.py` in another file: where the sample users are created
 
 {{< dropdown title="Define Auth_functions.py in a separate file with ⏬" closed="true" >}}
 

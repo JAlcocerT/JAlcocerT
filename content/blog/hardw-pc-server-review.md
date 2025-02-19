@@ -43,7 +43,7 @@ the x13 8164 Mib/sec
 
 and the Pi 4 4GB ~175MiB/sec (x86)
 
-cpx22 hetzner:
+cpx11 hetzner: ~5245Mib/sec
 
 
 ## Internet Benchmark

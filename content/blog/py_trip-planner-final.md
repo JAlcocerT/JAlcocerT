@@ -47,6 +47,9 @@ Well, it's not.
     * [MeteoStat](https://jalcocert.github.io/JAlcocerT/python-historical-weather-api-with-meteostat)
     * [Docker for SelfHosting](#how-can-i-try-the-python-trip-planner-app)
 
+![LangChain Jupyter NB](/blog_img/apps/TripPlanner/TripPlanner.JPG)
+
+
 ## How A Python App can be a Weather Compass
 
 The open landscapes ahead, and the rhythmic turning of the pedals beneath me. Last year, I embarked on a cycling journey that took me [from the historic landscapes of Poland to the picturesque terrains of Hungary](https://fossengineer.com/trip-bike-poland-hungary/). 
@@ -101,7 +104,9 @@ Rain on Tuesday? Pack that raincoat. Sunny on Wednesday? Don't forget the sunscr
 
 The user interface is now more intuitive, user-friendly, and pleasing to the eyes. Planning your trip is not just efficient but also [a delightful experience](https://fossengineer.com/improving-ui-python-dash-apps/).
 
-With streamlined processes and easy-to-understand features, even your grandma can plan her trip without breaking a sweat.
+![LangChain Jupyter NB](/blog_img/apps/TripPlanner/TripPlanner-UI.gif)
+
+With streamlined processes and **easy-to-understand features**, more people can plan her trip without breaking a sweat.
 
 ### Open Source Magic
 

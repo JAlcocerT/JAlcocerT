@@ -2,12 +2,12 @@
 title: "Using LangchAIn/LLamaIndex with Pandas - Enhancing Trip Planner"
 date: 2024-11-19
 draft: false
-# cover:
-#     image: "https://socialify.git.ci/alejandro-ao/ask-multiple-pdfs/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-#     alt: "ChatPDF" # alt text
-#     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
+cover:
+    image: "https://socialify.git.ci/JAlcocerT/Py_Trip_Planner/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
+    alt: "Trip Planner with AI" # alt text
+    caption: "Trip Planner with AI" # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
-description: 'How to use LangChain to chat with a Pandas DF. Compared with LlamaIndex Pandas Query Engine'
+description: 'Use LangChain to chat with a Pandas DF. Compared with LlamaIndex Pandas Query Engine.'
 url: 'using-langchain-with-pandas-df'
 ---
 
@@ -20,6 +20,11 @@ The weather information?
 Thats covered on the Python **[Trip Planner](https://github.com/JAlcocerT/Py_Trip_Planner/) Project**.
 
 With MeteoStat and OpenMeteo APIs.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="Trip Planner Story" image="/blog_img/apps/TripPlanner/TripPlanner.JPG" subtitle="Blog Post with my use case for this python app" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner/" title="Trip Planner Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code the Python Trip Planner DASH App" >}}
+{{< /cards >}}
 
 ## Intro to LangChain with PandasDF
 

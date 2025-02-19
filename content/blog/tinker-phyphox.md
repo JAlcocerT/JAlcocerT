@@ -23,7 +23,7 @@ Related **Project Source Code** is here: <https://github.com/JAlcocerT/Py_RouteT
 {{< /cards >}}
 
 
-![PhyPhox Karting](/blog_img/data-experiments/phyphox-karting.jpg) 
+<!-- ![PhyPhox Karting](/blog_img/data-experiments/phyphox-karting.jpg)  -->
 
 
 {{< youtube "Ku3y3NJJURw" >}}

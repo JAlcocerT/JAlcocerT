@@ -55,7 +55,12 @@ See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit
 
 ### Streamlit Chat with OpenAI
 
-I first had a look to this existing project: https://jalcocert.github.io/JAlcocerT/create-chatgpt-clone-streamlit/
+I first had a look to this existing project: 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-chatgpt-clone-streamlit/" title="MultiChat UI" image="blog_img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://github.com/JAlcocerT/openai-chatbot" title="OpenAI Chatbot" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code fork on Github" >}}
+{{< /cards >}}
 
 {{< callout type="info" >}}
 - The project is available on **GitHub** ✅
@@ -202,7 +207,9 @@ While enjoying the speed of querying models via Groq!
 * https://console.groq.com/keys
 * https://platform.openai.com/api-keys
 
-Now, here is the complete project, which you can **selfhost with containers**.
+Now, here is the complete project, which you can **selfhost with containers**:
+
+![Streamlit MultiChat Image](https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png)
 
 ### The Streamlit MultiChat Project
 
