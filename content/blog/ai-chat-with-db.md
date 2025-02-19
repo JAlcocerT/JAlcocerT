@@ -39,6 +39,16 @@ What we will be using?
 2. MySQL Database
 3. OpenAI API as LLM!
 
+
+
+This post was created as a complement to this **tech talk**: https://wearecommunity.io/events/winter-data-meetup2025/talks/84337
+
+<!--
+ https://www.youtube.com/watch?v=KXamTdJA-uc 
+-->
+
+{{< youtube "KXamTdJA-uc" >}}
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
