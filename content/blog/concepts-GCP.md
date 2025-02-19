@@ -9,6 +9,15 @@ url: 'understanding-google-cloud-platform'
 
 ## Google Cloud Platform
 
+Google has one of the important cloud out there!
+
+![Cloud Comparison](/blog_img/DA/cloud-ecosystem.jpg)
+
+If you understand these, you need to know that there are similar alternatives in other clouds.
+
+Just with the service having a different name.
+
+
 ### Data Analytics with GCP
 
 Bigtable: While Bigtable is a distributed NoSQL database good for very high volumes of data, it's not a relational database and doesn't offer the same level of transactional consistency as Cloud Spanner.

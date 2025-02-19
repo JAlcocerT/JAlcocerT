@@ -497,9 +497,7 @@ Kudos to [awsome-docker-compose](https://awesome-docker-compose.com/apps/photo-s
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
-3. Make sure to secure your Hetzner Server
-
-
+3. Make sure to **secure your Hetzner Server**
 
 {{< details title="Some Ports might be Open and you can receive a BSI mail 📌" closed="true" >}}
 
@@ -519,3 +517,5 @@ sudo ufw status
 ```
 
 {{< /details >}}
+
+4. For https, cloudflared tunnels are tricky for sub.sub.domain.com (ok for sub.domain.com). With the NGINX setup and proper DNS records (A and CNAME) before creating the certificates, it works.

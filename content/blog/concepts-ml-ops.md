@@ -1,9 +1,10 @@
 ---
-title: MLOps
-type: docs
-prev: /docs/gcp/
-next: docs/ansible/
+title: "MLOps"
+date: 2025-12-16
 draft: true
+tags: ["dev"]
+description: 'Learning more about GCP. Compared with other Clouds and OnPrem.'
+url: ''
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "BI Tools for the AI era"
-date: 2025-02-17T00:20:21+01:00
-#Lastmod: 2022-11-17
+date: 2025-03-10T00:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Setting up Data Analytics Visualization (BI) tools with containers.'
@@ -36,6 +35,10 @@ Real-Time Analytics with ClickHouse
 > Superset works perfectly with Trino SQL!
 
 #### MetaBase
+
+
+* <https://www.opensourcealternative.to/project/LightDashs>
+* <https://www.opensourcealternative.to/project/Metabase>
 
 #### Redash
 
@@ -167,12 +170,77 @@ https://github.com/clint-kristopher-morris/Tutorials/tree/main/streamlit-part-1
 
 ### Metabase
 
+
+### Metabase
+
+
+Get Metabase running locally with [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/IoT/Metabase)
+
+
+<!-- 
+
+{{< gist "JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-metabase" >}} -->
+<!-- 
+<script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-metabase"></script> -->
+
+
+<script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-metabase.js"></script>
+
+{{< callout type="info" >}}
+IoT Project example with Metabase: <https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/#metabase>
+{{< /callout >}}
+
+> IoT Projec tith [Metabase](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/)
+
+
 * https://github.com/JAlcocerT/Docker/tree/main/IoT/Metabase
 
 
 {{< callout type="info" >}}
 IoT Project with [Metabase+MongoDB+DHT Sensor](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/)
 {{< /callout >}}
+
+
+### SelfHost These Tools with Docker
+
+<script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0.js"></script>
+
+
+
+
+Compare with Apache Superset - https://superset.apache.org/
+
+You can use serverless version of it at - https://preset.io/
+
+https://github.com/jmlcas/metabase
+
+```yml
+version: '3'
+services:
+  metabase:
+    image: metabase/metabase
+    container_name: metabase
+    ports:
+      - "3000:3000"
+    volumes:
+      - metabase-data:/metabase-data
+    restart: always
+
+volumes:
+  metabase-data:
+```
+
+## Metabase Embedded Analytics
+
+https://www.metabase.com/product/embedded-analytics
+
+node.js
+ruby
+python...
+
+### Static Embedding
+
+### FlexDashboards
 
 #### Metabase with MariaDB
 
@@ -229,7 +297,7 @@ https://github.com/JAlcocerT/Docker/tree/main/IoT/Superset
 
 https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash
 
-#### Redash with
+#### Redash with Containers
 
 ```yml
 

@@ -402,7 +402,7 @@ A data lake house is a concept that combines the best features of data lakes and
 By combining the flexibility and scalability of data lakes with the structure and performance optimizations of data warehouses, data lake houses provide a middle ground that addresses the challenges of managing and deriving insights from large-scale data sets. They enable organizations to store and process raw data while maintaining the ability to apply structure, governance, and efficient querying for analytics purposes.
 
 * The term "data lake house" is not commonly used by Google, Microsoft, or AWS to describe their specific offerings, and yet each cloud provider has services and platforms that can be used to **build a data lake house architecture**:
-    * Google Cloud Platform (GCP):
+    * Google Cloud Platform:
         * *Google Cloud Storage*: GCS provides scalable and durable object storage that can serve as the foundation for a data lake. It allows you to store and organize diverse data types and formats.
         * *BigQuery*: BigQuery is a serverless data warehouse and analytics platform that can be used to analyze and query structured and semi-structured data stored in Google Cloud Storage. It supports high-performance querying using SQL-like queries.
     * Microsoft Azure:

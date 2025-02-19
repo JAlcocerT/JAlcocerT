@@ -1,6 +1,6 @@
 ---
 title: "Big Data Tools [Recap]"
-date: 2025-01-18
+date: 2025-01-17
 #Lastmod: 2022-11-17
 draft: false
 tags: ["Dev"]
@@ -25,8 +25,16 @@ This Post is **WIP**
 
 ## Concepts for Data Analytics
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="Looking for Cloud concepts?" image="/blog_img/DA/cloud-ecosystem.jpg" subtitle="Post where I made GCP concepts understandable" >}}
+{{< /cards >}}
+
 
 {{< details title="DWH vs DataLake 📌" closed="true" >}}
+
+Dont be scared. 
+
+Both are places where data is stored.
 
 
 {{< /details >}}
@@ -897,3 +905,7 @@ Specially if you like SelfHosting: Superset, metabase and redash.
   {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="Bayes and Streamlit?" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc" >}}
   {{< card link="https://github.com/JAlcocerT/Python_is_awesome" title="Awsome Python" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Bayes and Streamlit" >}}
 {{< /cards >}}
+
+<!-- https://www.youtube.com/watch?v=_0_Qk0Oleeo -->
+
+{{< youtube "_0_Qk0Oleeo" >}}

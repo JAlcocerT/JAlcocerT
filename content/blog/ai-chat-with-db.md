@@ -49,6 +49,12 @@ This post was created as a complement to this **tech talk**: https://wearecommun
 
 {{< youtube "KXamTdJA-uc" >}}
 
+
+
+{{< details title="AI Generated Summary of the Tech Talk 📌" closed="true" >}}
+
+{{< /details >}}
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
@@ -510,6 +516,9 @@ I've successfully setup the code, using:
 *  Python 3.12.3 (x86) and virtual environments
 *  MySQL 8.0 and LangChain 0.3.18
 
+{{< callout type="warning" >}}
+For production setup, provide the agent with a MySQL user that can ONLY READ.
+{{< /callout >}}
 
 ### FAQ
 

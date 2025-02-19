@@ -90,7 +90,7 @@ cd rpi-mjpg-streamer
 I [forked it](https://github.com/JAlcocerT/rpi-mjpg-streamer) 💻 just in case!
 {{< /callout >}}
 
-**Build the image** (use the user/pass that you'd like!)
+**Build the image**: use the user/pass that you'd like on this steps!
 
 ```sh
 sudo docker build --no-cache -t streamer:latest \
@@ -166,7 +166,7 @@ git clone https://github.com/tensorflow/examples --depth 1 #https://github.com/J
 cd examples
 ```
 
-Create a Py venv:
+Create a **Py venv**:
 
 ```sh
 python3 -m pip install virtualenv
@@ -179,7 +179,7 @@ cd ./lite/examples/object_detection/raspberry_pi
 sh setup.sh
 ```
 
-Or a Conda one if you prefer:
+**Or a Conda** environment if you prefer:
 
 ```sh
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh
@@ -268,9 +268,12 @@ A complete and local NVR designed for Home Assistant with AI object detection. U
 
 ### Other Options for CV with RPi
 
+See other ways of doing computer vision with a raspberry Pi:
+
 * https://github.com/silvanmelchior/RPi_Cam_Web_Interface
 * <https://www.youtube.com/watch?v=tT5gHNDBHXo>
 
+{{< youtube "tT5gHNDBHXo" >}}
 
 
 
@@ -289,8 +292,10 @@ It is the successor of uvc-streamer, a Linux-UVC streaming application with Pan/
 
 ### AI
 
+We can tinker with AI with the Pi!
 
-## Best Performing LLMs for a RPi
+
+#### Best Performing LLMs for a RPi
 
 * For code: https://ollama.com/library/deepseek-coder
     * https://ollama.com/library/phind-codellama
@@ -300,7 +305,7 @@ It is the successor of uvc-streamer, a Linux-UVC streaming application with Pan/
   * https://ollama.com/library/tinyllama
 
 
-### How to use Ollama with a Raspberry Pi
+#### How to use Ollama with a Raspberry Pi
 
 You can [**SelfHost Ollama** with Docker](https://fossengineer.com/selfhosting-llms-ollama/) and choose a small enough model that it will fit in the RAM.
 
@@ -310,16 +315,9 @@ Build multimodal AI applications with cloud-native stack:
 
 * https://github.com/antimatter15/alpaca.cpp
 
-### BI Tools for EDA
-
-* <https://www.opensourcealternative.to/project/LightDashs>
-* <https://www.opensourcealternative.to/project/Metabase>
-
-### More
+### More Things with the Pi
 
 [How to Install Raspberri Pi camera and Troubleshoot errors | Upgrade Bios Firmware on Raspberry Pi](https://www.youtube.com/watch?v=Z8cs1cRrc5A)
-
-
 
 
 {{< youtube "tT5gHNDBHXo" >}}

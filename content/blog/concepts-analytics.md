@@ -1,36 +1,18 @@
 ---
 title: "Data Analytics Concepts [Recap]"
-date: 2025-02-14T03:20:21+01:00
+date: 2025-03-14T03:20:21+01:00
 #Lastmod: 2022-11-17
-draft: true
+draft: false
 tags: ["Dev"]
 description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssistant for Tech.'
 summary: 'A recap on SQL, PySpark and visualizations tools.'
 url: 'data-analytics-concepts'
 ---
 
+
 ## BI Tools
 
-### Metabase
-
-
-Get Metabase running locally with [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/IoT/Metabase)
-
-
-<!-- 
-
-{{< gist "JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-metabase" >}} -->
-<!-- 
-<script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-metabase"></script> -->
-
-
-<script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-metabase.js"></script>
-
-{{< callout type="info" >}}
-IoT Project example with Metabase: <https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/#metabase>
-{{< /callout >}}
-
-> IoT Projec tith [Metabase](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/)
+https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/
 
 
 ### Redash
@@ -222,46 +204,6 @@ docker build -t quadratic --platform=linux/amd64 . -->
 
 https://fossengineer.com/airflow-docker/
 
-### SelfHost These Tools with Docker
-
-<script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0.js"></script>
-
-
-
-
-Compare with Apache Superset - https://superset.apache.org/
-
-You can use serverless version of it at - https://preset.io/
-
-https://github.com/jmlcas/metabase
-
-```yml
-version: '3'
-services:
-  metabase:
-    image: metabase/metabase
-    container_name: metabase
-    ports:
-      - "3000:3000"
-    volumes:
-      - metabase-data:/metabase-data
-    restart: always
-
-volumes:
-  metabase-data:
-```
-
-## Metabase Embedded Analytics
-
-https://www.metabase.com/product/embedded-analytics
-
-node.js
-ruby
-python...
-
-### Static Embedding
-
-### FlexDashboards
 
 ---
 

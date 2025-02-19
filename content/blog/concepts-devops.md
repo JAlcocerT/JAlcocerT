@@ -1,9 +1,10 @@
 ---
-title: DevOps Tools
-type: docs
-prev: /docs/gcp/
-next: docs/ansible/
+title: "DevOps Tools"
+date: 2025-12-10T00:20:21+01:00
 draft: true
+tags: ["Dev"]
+description: 'Setting up containers.'
+url: ''
 ---
 
 Crontab for Docker - https://github.com/mcuadros/ofelia
