@@ -11,7 +11,6 @@ url: 'understanding-google-cloud-platform'
 
 Google has one of the important cloud out there!
 
-![Cloud Comparison](/blog_img/DA/cloud-ecosystem.jpg)
 
 If you understand these, you need to know that there are similar alternatives in other clouds.
 
@@ -117,11 +116,15 @@ Google Compute Engine charges are based on Network use: Network egress (data lea
 {{< /details >}}
 
 
-## Other Clouds vs GCP
+
 
 ---
 
 ## Conclusions
+
+### Other Clouds vs GCP
+
+![Cloud Comparison](/blog_img/DA/cloud-ecosystem.jpg)
 
 
 ### GCP CE vs SBCs

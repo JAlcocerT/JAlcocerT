@@ -3,11 +3,11 @@ title: "Chat with different models with Streamlit [Multichat]"
 date: 2024-06-21T23:20:21+01:00
 draft: false
 cover:
-  image: "https://socialify.git.ci/dataprofessor/openai-chatbot/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
+  image: "https://socialify.git.ci/JAlcocerT/Streamlit-MultiChat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
   alt: "ChatGPT Clone" # alt text
   caption: "Build a ChatGPT Clone with Streamlit." # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
-description: 'ChatGPT Clone with Streamlit, but supporting multiple LLMs. Streamlit-MultiChat Project'
+description: 'More than a ChatGPT Clone with Streamlit. Creating the Streamlit-MultiChat Project. Supporting multiple LLMs Ollama, Anthropic, Groq...'
 url: 'create-streamlit-chatgpt'
 ---
 
@@ -41,15 +41,20 @@ If you want, you can try these projects, first:
 * We will be using venv first and later create a Docker [Container version with GH Ci/CD](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat) for SelfHosting the GenAI App. 
 
 
+{{< cards >}}
+  {{< card link="#Conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multichat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Streamlit Multichat" >}}
+{{< /cards >}}
+
 {{< callout type="info" >}}
 See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit-MultiChat) 💻 and the [SliDev PPT about the App](https://jalcocert.github.io/Streamlit-MultiChat/1)
 {{< /callout >}}
 
-Lets have a look to **the projects that have made this possible**.
+> Lets have a look to **the projects that have made this possible**.
 
 ### Streamlit Chat with OpenAI
 
-I first had a look to this existing project.
+I first had a look to this existing project: https://jalcocert.github.io/JAlcocerT/create-chatgpt-clone-streamlit/
 
 {{< callout type="info" >}}
 - The project is available on **GitHub** ✅
@@ -160,6 +165,8 @@ volumes:
   ai_openaichatbot:
 ```
 
+![Streamlit Chat GPT Clone](/img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png)
+
 ### Streamlit Chat with Groq
 
 * https://github.com/tonykipkemboi/groq_streamlit_demo -> Groq + Streamlit Chat
@@ -172,7 +179,27 @@ volumes:
 
 * https://github.com/AIDevBytes/Streamlit-Ollama-Chatbot
 
-## The Streamlit MultiChat Project
+
+<!-- https://www.youtube.com/watch?v=vukAQPCv7Tw&t=309s -->
+
+You can setup Ollama locally like so:
+
+{{< youtube id="vukAQPCv7Tw" autoplay="false" >}}
+
+
+---
+
+## Conclusions
+
+It's been great to put together all the mentioned projects in one streamlit UI.
+
+Ive learnt a lot regarding the different API calls and local required setup (for ollama).
+
+While enjoying the speed of querying models via Groq!
+
+Now, here is the complete project, which you can **selfhost with containers**.
+
+### The Streamlit MultiChat Project
 
 {{< callout type="info" >}}
 The project's magic is publically available on **[GitHub](https://github.com/JAlcocerT/Streamlit-MultiChat)** ✅

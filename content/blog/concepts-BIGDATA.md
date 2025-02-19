@@ -25,9 +25,6 @@ This Post is **WIP**
 
 ## Concepts for Data Analytics
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="Looking for Cloud concepts?" image="/blog_img/DA/cloud-ecosystem.jpg" subtitle="Post where I made GCP concepts understandable" >}}
-{{< /cards >}}
 
 
 {{< details title="DWH vs DataLake 📌" closed="true" >}}
@@ -199,6 +196,7 @@ You can (or not) design it to have a **bronze/silver/gold** architecture (aka **
 
 #### Big Query
 
+Big Query is GCP data warehouse, which has a SQL UI for us to make queries!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL 101 ↗" icon="book-open" >}}
@@ -716,6 +714,11 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 Tools are great.
 
 But we need to keep improving the way we use them as well.
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="Looking for Cloud concepts?" image="/blog_img/DA/cloud-ecosystem.jpg" subtitle="Post where I made GCP concepts understandable" >}}
+{{< /cards >}}
 
 
 {{< callout type="info" >}}

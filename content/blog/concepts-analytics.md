@@ -1,7 +1,6 @@
 ---
 title: "Data Analytics Concepts [Recap]"
 date: 2025-03-14T03:20:21+01:00
-#Lastmod: 2022-11-17
 draft: false
 tags: ["Dev"]
 description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssistant for Tech.'
