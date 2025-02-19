@@ -34,6 +34,8 @@ To generate [**QR's with logo** thanks to Python](https://github.com/JAlcocerT/J
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
+
+
 ### Infographics
 
 * https://towardsdatascience.com/from-default-python-line-chart-to-journal-quality-infographics-80e3949eacc3
@@ -42,3 +44,4 @@ To generate [**QR's with logo** thanks to Python](https://github.com/JAlcocerT/J
 
 ### Animations
 
+## OOP

@@ -3,8 +3,7 @@ title: "The most popular Mechanism in Python - Slider-Crank"
 date: 2025-12-31
 draft: true
 tags: ["Python","Mechanics"]
-description: ""
-summary: ''
+description: "What does a Singer machine has in common with a car engine?"
 url: 'python-mechanism'
 ---
 
@@ -28,6 +27,12 @@ Created this simple version with python
 And working on the symbolic one: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
 
 * https://github.com/JAlcocerT/Slider-Crank
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
 
 * Optimum Gears - https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
 

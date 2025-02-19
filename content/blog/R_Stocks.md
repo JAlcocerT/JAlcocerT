@@ -141,6 +141,9 @@ Thanks to **yfR** and this view, we can see the evolution in the  relation of an
 
 ## Conclusions for RStocks
 
+This is been an interesting ride: EDA, Flexdashboards, Shiny, Containers...
+
+But with a lot of learnings and food for thought.
 
 {{< details title="Ive also added a FlexDashboard to the Repo! 👇📌" closed="true" >}}
 
@@ -187,13 +190,15 @@ install.packages("plotly")
 
 **Key Points:**
 
-* The code performs data analysis on the S&P 500 data, classifying periods as "Boom" or "Bust" based on consecutive decreases in the index.
+* The code performs data analysis on the S&P 500 data, classifying periods as "Boom" or "Burst" based on consecutive decreases in the index.
 * It then generates visualizations (line graph, histograms) to show the trends and characteristics of these economic cycles.
 * The setwd() command is commented out. If you have issues with the file path, you can uncomment that line, and change the directory within the parenthesis to the absolute path of the directory that contains your .Rmd file, and your data folder.
 * The render commands are also commented out. These are commands that can be run from the R console to create the html output. The knit button in R studio is the easiest way to create the html output.
 
 
 {{< /details >}}
+
+> See it in action: https://jalcocert.github.io/R_Stocks/
 
 
 

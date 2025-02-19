@@ -91,6 +91,15 @@ Ideally something that give us both, but, there is always a trade off.
 
 And some people call high yield investments as **divs traps**.
 
+Are then worth to invest the slow and well known stocks?
+
+{{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks -DividendEvolution.JPG">}}
+
+{{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks -DividendGrowthDistribution.JPG">}}
+
+{{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks - HistoricalYieldEvolution.JPG">}}
+
+
 {{< callout type="info" >}}
 [Investing in Real Estate](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/) can be seen as a **leveraged high initial yield**
 {{< /callout >}}

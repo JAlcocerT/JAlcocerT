@@ -235,7 +235,11 @@ First div of 2025 has been 0.264 and first of 2024 was 0.2565, or a **~2.92% gro
 
 But some years are better than others, right?
 
-Lets see the **CAGR for dividend growth**
+Also, not all companies, sectors, do similarly:
+
+{{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks -DividendEvolution.JPG">}}
+
+Lets see the **CAGR applied for dividend growth.**
 
 ## Dividend Growth
 

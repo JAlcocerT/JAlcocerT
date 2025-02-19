@@ -456,5 +456,17 @@ As implemented in the RPI Project - https://github.com/JAlcocerT/RPi/
 
 ### Actions CI/CD for Shiny
 
+See [this GH Actions config file](https://github.com/JAlcocerT/R_Stocks/blob/main/.github/workflows/build_shiny.yml)
+
 ### Github CI/CD for Flexdashboards
 
+Use static deploy, as seen on the `static.yml` [GH Actions workflow at the RStocks Project](https://github.com/JAlcocerT/R_Stocks).
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/R_Stocks/" title="FlexDashboard RStocks" image="https://github.com/JAlcocerT/R_Stocks/blob/main/Z_Sample_Data/FlexDash-BoomBurst.png" subtitle="Deployed to GH Pages" >}}
+  {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Rstocks and its Flexdashboard" >}}
+{{< /cards >}}
+
+https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png
+
+https://github.com/JAlcocerT/R_Stocks/blob/main/Z_Sample_Data/FlexDash-BoomBurst.png
