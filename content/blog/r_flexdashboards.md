@@ -7,7 +7,7 @@ cover:
     image: "https://socialify.git.ci/JAlcocerT/R_is_Great/image?description=1&descriptionEditable=Flexdashboards%20with%20R.&language=1&name=1&owner=1&theme=Auto" # image path/url 
     alt: "R Flexdashboards" # alt text
     caption: "How to create Flexdashboards and deploy them for free." 
-description: 'Step-by-step guide to using Flexdashboards on GitHub Pages. Perfect for data enthusiasts seeking dynamic visual storytelling.'
+description: 'Step-by-step guide to using Flexdashboards on GitHub Pages Static Deploy. Perfect for data enthusiasts seeking dynamic visual storytelling.'
 summary: 'Integrating R Flexdashboards with GitHub Pages. Learn how to create interactive data visualizations, host them on GitHub, and share your insights effectively for free.'    
 url: 'guide-r-flexdashboards-in-github-pages'
 ---
@@ -204,9 +204,14 @@ They have separated tabs to showcase different **use-cases examples**:
 
 ### Deploying Flexdashboards to Github Pages
 
-You can generate the flexdashboard to html ([knit](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/) it), by pressing `CTRL+SHIFT+K`
+You can generate the flexdashboard to html ([knit](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/) it), by pressing `CTRL+SHIFT+K`.
 
 When it finishes, you can see a `.html` file with the same name of your `.Rmd`
+
+Rename it to `index.html`, place it on `/root` and activate the github actions **static deploy**
+
+
+![Actions static deploy](/blog_img/web/flexdash-static-github.png) 
 
 ---
 
