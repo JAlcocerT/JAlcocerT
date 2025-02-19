@@ -53,6 +53,28 @@ This post was created as a complement to this **tech talk**: https://wearecommun
 
 {{< details title="AI Generated Summary of the Tech Talk 📌" closed="true" >}}
 
+**Learn how to use Large Language Models (LLMs) and LangChain to [interact with your databases using natural language](https://wearecommunity.io/events/winter-data-meetup2025/talks/84337).**
+
+**What you'll discover:**
+
+* **Simplified Database Queries:** Understand how LLMs make querying databases easier through natural language.
+* **Conversational AI with LangChain:** Explore LangChain's role in building conversational AI for database interaction.
+* **Real-World Applications:** See practical use cases and examples to inspire your own projects.
+
+**Who should attend:**
+
+* Data enthusiasts
+* AI researchers
+* Anyone curious about the future of data and AI
+
+**Key takeaways:**
+
+* Accessible and actionable insights for beginners and experienced professionals.
+* Explore the exciting intersection of natural language processing and data engineering.
+
+**Presented by:** Jesus Alcocer, Senior Consultant in Data Engineering.
+
+
 {{< /details >}}
 
 {{< cards >}}

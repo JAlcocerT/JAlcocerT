@@ -139,9 +139,7 @@ sudo usermod -aG podman $USER
 
 {{< details title="UI Tools for Managing Containers 📌" closed="true" >}}
 
-
-
-While Docker and Podman are command-line tools, there are several **UI tools** that make managing containers easier and more intuitive. Here are some popular options:
+While **Docker and Podman** are command-line tools, there are several **UI tools** that make managing containers easier and more intuitive. Here are some popular options:
 
 1. **Portainer**
 
@@ -159,15 +157,16 @@ sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -
 
 - **Platform**: Docker-based UI for container management.
 - **Installation Command**:
-  ```bash
-  docker run -d \
-    --name dockge \
-    --restart unless-stopped \
-    -p 5001:5001 \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v /home/your_user/Desktop/Dockge/data:/app/data \
-    louislam/dockge:1
-  ```
+
+```bash
+docker run louislam/dockge:1 -d \
+   --name dockge \
+   --restart unless-stopped \
+   -p 5001:5001 \
+   -v /var/run/docker.sock:/var/run/docker.sock \
+   -v /home/jalcocert/Documents/Dockge/data:/app/data \
+   # -v /home/your_user/Desktop/Dockge/data:/app/data \
+```
   Access Dockge at: `http://localhost:5001`.
 
 3. **Cockpit**
@@ -175,10 +174,11 @@ sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -
 - **Platform**: Linux (CentOS, Fedora, Ubuntu)
 - Cockpit is a server management tool with a web-based UI for container management.
 - **Installation Command**:
-  ```bash
-  sudo apt install cockpit
-  sudo systemctl enable --now cockpit.socket
-  ```
+
+```bash
+sudo apt install cockpit
+sudo systemctl enable --now cockpit.socket
+```
 
 4. **Kitematic (for Docker)**
 

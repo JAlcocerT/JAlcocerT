@@ -20,11 +20,14 @@ Time to try something new, getting ready for a **network attached storage**:
 
 * OpenMediaVault (OMV)
 * Synology
+* CasaOS
 
 ### Tailscale
 
 ```sh
 tailscale status
+#tailscale up --exit-node=jalcocert-x300
+#tailscale down
 ```
 
 {{< details title="How to Setup Tailscale DNS 📌" closed="true" >}}
@@ -39,8 +42,6 @@ TBD
 sudo apt install hardinfo
 lscpu
 ```
-
-
 
 **Testing the Memory**
 
@@ -156,6 +157,16 @@ Then, just...
 You can check from time to time https://haveibeenpwned.com/.
 
 They also provide an [API](https://haveibeenpwned.com/API/Key), which you would have to pay for.
+
+### Photo Video Management
+
+1. https://github.com/KDE/digikam
+
+```sh
+flatpak install flathub org.kde.digikam
+```
+
+2. PhotoQT
 
 ### Cool Blogs Ive found recently
 

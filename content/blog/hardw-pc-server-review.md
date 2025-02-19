@@ -1,10 +1,10 @@
 ---
 title: "[Comparison] Performance of different Computers"
-date: 2025-12-30
-draft: true
+date: 2025-03-03
+draft: false
 tags: ["Dev"]
 description: 'CPU, Memory, Disks, Internet speed...'
-url: ''
+url: 'benchmarking-computers'
 ---
 
 
@@ -14,7 +14,6 @@ The first CPU at home was an Intel and then a AMD Athlon 64 3200+ (both 1 core!)
 
 And look at them now...
 
-
 ```sh
 sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run #4 cores
 7z b -mmt4
@@ -23,14 +22,13 @@ sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run #4 cores
 x300 7960 events/s, total 79.6k events
 x300 7zip 6.2k/24.7k
 
-and a max power from the wall seen of 53 with the Tapo P110
+And a max power from the wall seen of 61W with the Tapo P110
 
 > For now, the x300 with the 5600G is the most powerful CPU I ever had (a little bit more than the x13 and )
 
-cpx11 (Hetzner amd epyc x86): 12.3k events and  4.5/9k
+cpx11 (Hetzner amd epyc x86): 12.3k events and 4.5/9k
 
 ## Memory Benchmarks
-
 
 ```sh
 sudo apt install sysbench
@@ -63,7 +61,7 @@ ping -c 4 192.168.0.117 #ping the orange pi which is connected to same device
 ping 9.9.9.9 #ping quad9 dns server
 ```
 
-Ideally, do this with ethernet connection.
+Ideally, do this with ethernet connection:
 
 ```sh
 sudo apt-get install speedtest-cli
@@ -84,7 +82,6 @@ sudo apt install ntfs-3g
 
 
 {{< details title="Mount Drives Properly 📌" closed="true" >}}
-
 
 ```sh
 lsblk #list them again
@@ -121,7 +118,7 @@ lsblk -f
 sudo mount /dev/sdb1 /mnt/crucial500
 ```
 
-Systematically mount 
+Systematically mount:
 
 ```sh
 lsblk #its sdc1
@@ -156,10 +153,3 @@ sudo nano /etc/fstab #save
 sudo mount -a  # Test the /etc/fstab entry
 df -h #see it mounted
 ```
-
-
-
-{{< details title=" 📌" closed="true" >}}
-
-
-{{< /details >}}
