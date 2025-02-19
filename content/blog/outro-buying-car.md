@@ -27,6 +27,9 @@ pie title Car Expenses Breakdown
 ### New Car vs Used Car
 
 
+![Streamlit Chat GPT Clone](/blog_img/data-experiments/Car_initial.JPG)
+
+![Streamlit Chat GPT Clone](/blog_img/data-experiments/Car_after.JPG)
 
 ---
 

@@ -3,10 +3,10 @@ title: "Improving Python DASH UI's: Python Trip Planner with Weather"
 date: 2023-06-24T08:20:21+01:00
 draft: false
 tags: ["Python","Dashboards","DASH","Trip-Planner"]
-cover:
-    image: "/img/TripPlanner-UI.gif" # image path/url 
-    alt: "Trip Planner with Weather - Improving the Default Python DASH UI." # alt text
-    caption: "" # display caption under cover
+# cover:
+#     image: "/img/TripPlanner-UI.gif" # image path/url 
+#     alt: "Trip Planner with Weather - Improving the Default Python DASH UI." # alt text
+#     caption: "" # display caption under cover
 description: "Creating synergy in Python Dash App - Modifying DASH & Plotly Graphs default colors."
 summary: 'Improving the UI of The Python Trip Planner Dash App. The layouts importance and how to tweak colors of our charts.'
 url: 'improving-ui-python-dash-apps'

@@ -3,7 +3,7 @@ title: "DevOps Tools"
 date: 2025-12-10T00:20:21+01:00
 draft: true
 tags: ["Dev"]
-description: 'Setting up containers.'
+description: 'Setting up devops tools - Grafana...'
 url: ''
 ---
 
@@ -58,6 +58,8 @@ ansible --version
 ## Monitoring
 
 ### Grafana
+
+GrafanaPrometheusNodeExp.JPG
 
 ### NetData
 

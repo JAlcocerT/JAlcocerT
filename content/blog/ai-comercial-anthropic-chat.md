@@ -47,7 +47,7 @@ streamlit run claude.py
 
 <!-- fopaturo -->
 
-![Streamlit Chat with PDF with OpenAI](/img/GenAI/Anthropic/Claude_vs_OpenAI.jpeg)
+![Streamlit Chat with PDF with OpenAI](/blog_img/GenAI/Anthropic/Claude_vs_OpenAI.jpeg)
 
 ### Getting Access to Anthropic API
 

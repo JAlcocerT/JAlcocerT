@@ -70,7 +70,7 @@ bundle exec jekyll s #local server - http://127.0.0.1:4000
 #bundle exec jekyll serve --host 192.168.1.100 --port 4000
 ```
 
-The page logo (favicon) can be changed thanks to the folder `assets/img`.
+The page logo (favicon) can be changed thanks to the folder `/assets/img`.
 
 Another **important files** are `_data/authors.yml` and `_config.yml`
 

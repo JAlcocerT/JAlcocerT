@@ -46,7 +46,7 @@ https://www.youtube.com/watch?v=9AXP7tCI9PI -->
 
 This is what we will get: A Web UI to use Gpt3.5, GPT4 and the latest GPT4-o:
 
-![Streamlit Chat GPT Clone](/img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png)
+![Streamlit Chat GPT Clone](/blog_img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png)
 
 ### A GPT Clone with Streamlit
 

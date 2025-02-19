@@ -2,13 +2,6 @@
 title: "Vision Models: LLaVa, Pixtral and LLaMa 3.2 "
 date: 2025-12-31
 draft: true
-# cover:
-#    image: "/img/GenAI/LLMs_Locally_LLamas.png" # image path/url 
-#    Width: 360
-#    Height: 200
-#    sizes: 360
-#    alt: "From Fiction to Function: A Hands-On Guide to Open Source LLM Models.." # alt text
-#    caption: "From Fiction to Function: A Hands-On Guide to Open Source LLM Models." # display caption
 tags: ["Gen-AI"]
 description: 'From Computer Vision to AI with Vision'
 summary: ''

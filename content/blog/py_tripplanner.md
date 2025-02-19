@@ -29,7 +29,7 @@ Spring has arrived, and with it comes the desire to explore new countries and em
 
 By understanding the typical weather patterns of your destination, you can **plan and pack accordingly**, minimizing disruptions due to sudden changes in temperature or precipitation.
 
-![Unexpected Rain](/img/TripPlanner-Mud.jpeg)
+![Unexpected Rain](/blog_img/apps/TripPlanner/TripPlanner-Mud.jpeg)
 
 I have been caught up by cold weather conditions and rain few times while exploring.
 
@@ -46,13 +46,13 @@ That's where this Python-based weather app comes in! Built using open-source lib
 **How does it looks like?** As default you will find one example pre-selected in one of my favourite islands - Crete.
 
 * The map:
-![The Map](/img/TripPlanner-map.JPG)
+![The Map](/blog_img/apps/TripPlanner/TripPlanner-map.JPG)
 
 * A lineplot with historical Max and Min temperatures for the selected location (when available):
-![The Map](/img/TripPlanner-LinePlot.JPG)
+![The Map](/blog_img/apps/TripPlannerTripPlanner-LinePlot.JPG)
 
 * A boxplot, that consolidates for the time range selected, what are the expected Temperature/Wind/Precipitation ranges for each month:
-![The Map](/img/TripPlanner-Boxplot.JPG)
+![The Map](/blog_img/apps/TripPlannerTripPlanner-Boxplot.JPG)
 
 
 ## What is the App based on?

@@ -22,9 +22,9 @@ Related **Project Source Code** is here: <https://github.com/JAlcocerT/Py_RouteT
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python" >}}
 {{< /cards >}}
 
-<!--
-![PhyPhox Karting](/blog_img/iot/phyphox-android.jpg) 
--->
+
+![PhyPhox Karting](/blog_img/data-experiments/phyphox-karting.jpg) 
+
 
 {{< youtube "Ku3y3NJJURw" >}}
 

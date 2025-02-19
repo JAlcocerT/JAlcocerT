@@ -40,9 +40,10 @@ If you want, you can try these projects, first:
 3. And [install Python dependencies](/guide-python/#how-to-install-python-dependencies)
 * We will be using venv first and later create a Docker [Container version with GH Ci/CD](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat) for SelfHosting the GenAI App. 
 
+See the related repository and streamlit app:
 
 {{< cards >}}
-  {{< card link="#Conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multichat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Streamlit Multichat" >}}
 {{< /cards >}}
 
@@ -165,7 +166,7 @@ volumes:
   ai_openaichatbot:
 ```
 
-![Streamlit Chat GPT Clone](/img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png)
+![Streamlit Chat GPT Clone](/blog_img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png)
 
 ### Streamlit Chat with Groq
 
@@ -182,10 +183,10 @@ volumes:
 
 <!-- https://www.youtube.com/watch?v=vukAQPCv7Tw&t=309s -->
 
-You can setup Ollama locally like so:
+You can setup **Ollama locally** like so:
 
 {{< youtube id="vukAQPCv7Tw" autoplay="false" >}}
-
+<!-- {{< youtube "vukAQPCv7Tw" >}} -->
 
 ---
 
@@ -196,6 +197,10 @@ It's been great to put together all the mentioned projects in one streamlit UI.
 Ive learnt a lot regarding the different API calls and local required setup (for ollama).
 
 While enjoying the speed of querying models via Groq!
+
+* https://console.anthropic.com/workbench/
+* https://console.groq.com/keys
+* https://platform.openai.com/api-keys
 
 Now, here is the complete project, which you can **selfhost with containers**.
 
@@ -401,7 +406,7 @@ And feel free to use any of these:
 
 Remember to link the **GHCR Package** with your repository Readme:
 
-![GHCR Connecting Package to Repository](/blog_img/GH_package_to_repo.png)
+![GHCR Connecting Package to Repository](/blog_img/dev/GH_package_to_repo.png)
 
 
 {{< dropdown title="Using buildx with Github Actions to create x86 and ARM64 images ⏬" closed="true" >}}

@@ -160,6 +160,11 @@ Denormalization combines normalized tables to improve **read performance**, ofte
 
 {{< /details >}}
 
+{{< cards >}}
+  {{< card link="#conclusions" title="MultiChat UI" image="/blog_img/DA/sql_cheatsheet.jpeg" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multichat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Streamlit Multichat" >}}
+{{< /cards >}}
+
 
 {{< callout type="info" >}}
 Talk [with a DB via LLMs as described **here**](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#chat-with-a-db-with-langchain) with **LangChain**

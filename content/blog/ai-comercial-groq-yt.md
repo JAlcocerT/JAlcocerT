@@ -381,11 +381,11 @@ graph TD
 2. Hit Tunnels (Network section)
 3. Create a new Tunnel
 
-![Streamlit with Cloudflare Tunnels](/img/GenAI/yt-summaries/streamlit-cloudflare.png)
+![Streamlit with Cloudflare Tunnels](/blog_img/GenAI/yt-summaries/streamlit-cloudflare.png)
 
 And make sure to place the name of the container and its internal port:
 
-![Streamlit with Cloudflare Tunnels Port](/img/GenAI/yt-summaries/cloudflare_streamlit_port.png)
+![Streamlit with Cloudflare Tunnels Port](/blog_img/GenAI/yt-summaries/cloudflare_streamlit_port.png)
 
 {{< /dropdown >}}
 
@@ -400,7 +400,7 @@ Now we have our Streamlit UI at: `localhost:8501`
 
 Feel free to ask for **Summaries about Youtube Videos with Groq**:
 
-![Groq Youtube Summaries Example](/img/GenAI/yt-summaries/yt-summaries-groq_example.png)
+![Groq Youtube Summaries Example](/blog_img/GenAI/yt-summaries/yt-summaries-groq_example.png)
 
 {{< dropdown title="Similar AI Projects 👇" closed="true" >}}
 
@@ -453,7 +453,6 @@ We can use this simple package: https://pypi.org/project/streamlit-authenticator
 ```py
 import streamlit as st
 from Z_Functions import Auth_functions as af
-
 
 def main():
     if af.login():
