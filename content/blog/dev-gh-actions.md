@@ -3,8 +3,7 @@ title: "How ive used Github Actions CI/CD"
 date: 2024-11-17
 draft: false
 tags: ["Dev"]
-description: 'How to use Github Actions CI/CD in your workflow. From Pages to Container Creation.'
-summary: 'Setup GH Actions'
+description: 'Use Github Actions CI/CD in your workflow. From Static Pages to Container Creation.'
 url: 'github-actions-use-cases'
 ---
 
@@ -463,10 +462,6 @@ See [this GH Actions config file](https://github.com/JAlcocerT/R_Stocks/blob/mai
 Use static deploy, as seen on the `static.yml` [GH Actions workflow at the RStocks Project](https://github.com/JAlcocerT/R_Stocks).
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/R_Stocks/" title="FlexDashboard RStocks" image="https://github.com/JAlcocerT/R_Stocks/blob/main/Z_Sample_Data/FlexDash-BoomBurst.png" subtitle="Deployed to GH Pages" >}}
+  {{< card link="https://jalcocert.github.io/R_Stocks/" title="FlexDashboard RStocks" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/FlexDash-BoomBurst.png" subtitle="Deployed to GH Pages as a Static index" >}}
   {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Rstocks and its Flexdashboard" >}}
 {{< /cards >}}
-
-https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png
-
-https://github.com/JAlcocerT/R_Stocks/blob/main/Z_Sample_Data/FlexDash-BoomBurst.png

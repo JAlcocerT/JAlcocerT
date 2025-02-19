@@ -1,10 +1,9 @@
 ---
-title: "A recap on R Language."
+title: "A Recap on R Language."
 date: 2025-01-10T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'All I wish someone had told me about R when I first had to use it'
-summary: 'R language recap'
+description: 'All I wish someone had told me about R when I started.'
 url: 'r-language-101'
 ---
 
@@ -122,6 +121,11 @@ Generally plots in R got me in love: <https://r-graph-gallery.com/>
 
 The cool thing? 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/R_Stocks/" title="FlexDashboard RStocks" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/FlexDash-BoomBurst.png" subtitle="Deployed to GH Pages as a Static index" >}}
+  {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Rstocks and its Flexdashboard" >}}
+{{< /cards >}}
+
 We can have leaflet maps, HTML widgets, even animations inside of them.
 
 They can be enhanced with:
@@ -178,6 +182,12 @@ More **GHA uses cases**, [here](https://jalcocert.github.io/JAlcocerT/github-act
 ### Shiny
 
 Shiny I created my very first web app.
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/R_Stocks/" title="RStocks" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/DividendGrowth.jpeg" subtitle="Shiny Web App" >}}
+  {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Rstocks and its Flexdashboard" >}}
+{{< /cards >}}
 
 In the meantime, there is now Shiny for Python.
 
