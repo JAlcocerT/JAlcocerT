@@ -43,6 +43,15 @@ and the Pi 4 4GB ~175MiB/sec (x86)
 
 cpx11 hetzner: ~5245Mib/sec
 
+the Firebat got me 4077Mib/sec
+
+## GPU Benchmark
+
+Forget about 4k playback with the Pi 4's
+
+But with 
+
+
 
 ## Internet Benchmark
 

@@ -25,7 +25,7 @@ The strength of Flexdashboards lies in their **simplicity and ease of deployment
 
 They use a **simple markdown syntax**, which makes it easy to layout and design the dashboard. They can be rendered as standalone HTML documents, which can be easily hosted on a variety of platforms, including GitHub Pages.
 
-This makes Flexdashboards an excellent choice for static reporting and when sharing insights with an audience that does not require real-time interaction with the underlying data.
+This makes Flexdashboards an excellent choice for **static reporting** and when sharing insights with an audience that does not require real-time interaction with the underlying data.
 
 Flexdashboards are **static dashboards** - this means that they can be hosted like a **static web page** on Github pages, Gitlab pages...
 
@@ -59,11 +59,11 @@ install.packages("flexdashboard")
 
 To author a flexdashboard you create an **R Markdown document with the flexdashboard::flex_dashboard output** format: its all about the`.Rmd`
 
-You can do this from within RStudio using the New R Markdown dialog.
+You can do this from within **RStudio** using the New R Markdown dialog.
 
 But you can also get started with vscode.
 
-1. Example one - Just getting started:
+1. Example one - Just getting started with Flexdashboards:
 
 ```Rmd
 ---
@@ -107,8 +107,6 @@ Just remember to include the file a `/public/my_dashboard.html` and then just ca
   Your browser does not support iframes.
 </iframe>
 ```
-
-
 
 2. Let's create another Markdown file (I like to call it `index.Rmd`), that will be the one containing the **logic of our flexdashboard**:
 
@@ -187,9 +185,11 @@ There are great sources for ideas, I would start with:
 * <https://r-graph-gallery.com/>
 
 
-## Flexdashboard Example - Open Data Analysis
+### Flexdashboard Example - Open Data Analysis
 
-You can explore **one example that I created**. That one is a litle bit more advanced.
+You can explore **one example that I created**.
+
+That one is a litle bit more advanced.
 
 They have separated tabs to showcase different **use-cases examples**:
 
@@ -200,10 +200,19 @@ They have separated tabs to showcase different **use-cases examples**:
 * You can use it in the Github Page link: <https://jalcocert.github.io/R_is_Great/>
   * And check the code to get ideas at: <https://github.com/JAlcocerT/R_is_Great/tree/main/Flexdashboards>
 
+> See how to organize flexdash - https://rstudio.github.io/flexdashboard/articles/using.html
+
+### Deploying Flexdashboards to Github Pages
+
+You can generate the flexdashboard to html ([knit](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/) it), by pressing `CTRL+SHIFT+K`
+
+When it finishes, you can see a `.html` file with the same name of your `.Rmd`
+
 ---
 
 ## FAQ
 
+Ive been playing with `~/Documents/cyclingthere/z_my_dashboardv2.Rmd` or `R_Flexdashboards_Cycles.Rmd`.
 
 ### Other Ways to Present Data with R
 

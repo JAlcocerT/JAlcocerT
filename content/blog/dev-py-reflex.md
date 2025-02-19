@@ -332,7 +332,7 @@ And with Reflex and some tricks with Gemini...
 ![Reflex using Components](/blog_img/apps/reflex/reflex-composedchart-datatable.png)
 
 
-{{< details title=" 📌" closed="true" >}}
+{{< details title="More 📌" closed="true" >}}
 
 
 {{< /details >}}
@@ -342,6 +342,112 @@ And with Reflex and some tricks with Gemini...
 1. In which month does interest and payments are 50/50?
 2. When does the rent cover the interest costs?
 3. The interest/principal split just depends on: years and %interest
+4. The PER of the flats depends on the city/neighbourhood you look:
+
+{{< details title="Examples of PER for RE 📌" closed="true" >}}
+
+* https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/andalucia/sevilla-provincia/dos-hermanas/
+* https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/andalucia/sevilla-provincia/dos-hermanas/
+
+
+> 1451 eur/m2 versus 9.3 eur/m2 - **PER** = 1451/(12*9.3) ~**13** or **7.6% yield**
+
+* https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/andalucia/sevilla-provincia/utrera/
+* https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/andalucia/sevilla-provincia/utrera/
+
+> 1186 vs 7.5 **~PER 13.17 or 7.5% yield**
+
+* https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/andalucia/cadiz-provincia/jerez-de-la-frontera/
+* https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/andalucia/cadiz-provincia/jerez-de-la-frontera/
+
+> 1475 vs 9.2 **~PER 13.36 or 7.4%**
+
+* https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/andalucia/cadiz-provincia/tarifa/
+* https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/andalucia/cadiz-provincia/tarifa/
+
+> 3879 vs 12.5 **~PER 12.52 or 7.9%**
+
+{{< /details >}}
+
+Those are gross yields, remember that there are many costs and amortizations related
+
+
+
+{{< details title="Price of the painting 📌" closed="true" >}}
+
+Lets say that it cost ~65eur afor 15kg of paint
+
+With that one, you can paint 100m2.
+
+Absolutely! Let's break down how to estimate the wall size in your flat based on the floor plan and the total area.
+
+**Understanding the Challenge**
+
+We only have the area of each room, not the exact dimensions (length and width). To estimate wall length, we'll need to make some assumptions about the shape of the rooms.
+
+**Assumptions**
+
+1. **Rectangular Rooms:** We'll assume all rooms are roughly rectangular. This is a common assumption for floor plans.
+2. **Simplified Shapes:** We'll treat the overall shape of the flat as a rectangle for easier calculation.
+
+**Estimation Process**
+
+1. **Calculate the Perimeter of Each Room:**
+   * For a rectangle, the perimeter is 2 * (length + width).
+   * Since we only have the area, we'll need to estimate the length and width. We can do this by assuming the rooms are close to square for an initial estimate.
+   * For example, for a room with 26.4 m², assuming it's square, each side would be approximately √26.4 ≈ 5.14 meters. The perimeter would be roughly 4 * 5.14 ≈ 20.56 meters.
+
+2. **Sum the Perimeters:** Add up the estimated perimeters of all the rooms.
+
+3. **Adjust for Shared Walls:** The sum of the perimeters will overcount the walls because it counts each wall twice (once for each room it borders). We need to subtract the length of the shared walls.
+
+4. **Estimate Shared Walls:**
+   * Look at the floor plan and estimate which walls are shared between rooms.
+   * Make reasonable estimations of the length of these shared walls.
+
+5. **Subtract Shared Wall Lengths:** Subtract the estimated total length of shared walls from the sum of the perimeters.
+
+**Let's Do the Calculations (Rough Estimate)**
+
+1. **Room Perimeters (Approximations):**
+   * Pokój dzienny (26.4 m²): ≈ 20.56 m
+   * Pokój (9.2 m²): ≈ 12.12 m
+   * Łazienka (4.4 m²): ≈ 8.37 m
+   * Kuchnia (6.4 m²): ≈ 10.12 m
+   * Przedpokój (7 m²): ≈ 10.58 m
+   * Loggia (2.6 m²): ≈ 6.44 m
+
+2. **Sum of Perimeters:** 20.56 + 12.12 + 8.37 + 10.12 + 10.58 + 6.44 ≈ 68.19 meters
+
+3. **Estimate Shared Walls:**
+   * Looking at the floor plan, there are several shared walls. We need to estimate their lengths.
+   * This is where it gets tricky without exact dimensions. Let's make a rough guess that the total length of shared walls is about 20 meters (this is just an estimation).
+
+4. **Subtract Shared Walls:** 68.19 - 20 ≈ 48.19 meters
+
+**Important Note:** This is a rough estimation. Without precise dimensions, it's impossible to get an exact wall length.
+
+**Refining the Estimate**
+
+To improve the estimate, you would need:
+
+* **More Detailed Dimensions:** If you have the length and width of each room, the calculations would be much more accurate.
+* **Wall Thickness:** We haven't accounted for wall thickness, which would add to the overall length.
+
+---
+
+Be knowing the area (55m2 for example), you already know the ceiling paint.
+
+Or you can just estimate the internal walls with sqrt(area=55) = 7.7
+
+So that would be 15m, times the height of the walls (say 2m), which would be 30 m2.
+
+But you are missing all internal walls which make the rooms, say thats 100% more.
+
+> First estimation ~ 55+30*2 = 115m2, which for 2 layers would be ~30kg
+
+{{< /details >}}
+
 
 #### RE Resources
 
@@ -352,8 +458,9 @@ And with Reflex and some tricks with Gemini...
 
 I find it easier to iterate with streamlit, as there is no waiting time for compiling.
 
-But definitely, Reflex apps can look really cool, also on smartphones!
+That makes it easier to iterate.
 
+But definitely, Reflex apps can look really cool, **also on smartphones**!
 
 ---
 
@@ -391,9 +498,9 @@ But definitely, Reflex apps can look really cool, also on smartphones!
 * **Strengths:** Very beginner-friendly.  Great for quickly creating simple desktop utilities or tools.
 * **Weaknesses:**  Limited in terms of UI customization and modern look and feel.  Not designed for web applications.  While there is a project called NiceGUI which is a separate project from PySimpleGUI that allows you to create web UIs, it's not a direct web equivalent of PySimpleGUI. NiceGUI is more comparable to Streamlit, but with a different syntax and approach.
 
-**Here's a table summarizing the key differences:**
+**Let's summarize the key differences:**
 
-| Feature         | Reflex                 | Flet                    | Streamlit              | PySimpleGUI/NiceGUI        |
+| **Feature**         | Reflex                 | Flet                    | Streamlit              | PySimpleGUI/NiceGUI        |
 |-----------------|-------------------------|--------------------------|-----------------------|-----------------------------|
 | Primary Focus   | Complex web apps       | Cross-platform (desktop & web) | Data-driven web apps | Simple desktop GUIs / web |
 | Technology      | Python/React             | Python/Flutter           | Pure Python           | Python/Various GUI toolkits |

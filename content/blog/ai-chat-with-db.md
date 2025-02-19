@@ -50,6 +50,24 @@ This post was created as a complement to this **tech talk**: https://wearecommun
 {{< youtube "KXamTdJA-uc" >}}
 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+That's all you need!
+
+Let's get started.
+
+## Chat with Your Database Using LangChain
+
+[Learning **SQL**](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/) can be challenging. 
+
+But what if you could use **AI to simplify data analysis tasks**?
+
+That's where **LangChain comes in**.
+
+
 
 {{< details title="AI Generated Summary of the Tech Talk 📌" closed="true" >}}
 
@@ -74,23 +92,8 @@ This post was created as a complement to this **tech talk**: https://wearecommun
 
 **Presented by:** Jesus Alcocer, Senior Consultant in Data Engineering.
 
-
 {{< /details >}}
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
-
-That's all you need! Let's get started.
-
-## Chat with Your Database Using LangChain
-
-[Learning **SQL**](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/) can be challenging. 
-
-But what if you could use **AI to simplify data analysis tasks**?
-
-That's where **LangChain comes in**.
 
 Bridging the gap between natural language and your database.
 

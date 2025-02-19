@@ -1,11 +1,9 @@
 ---
 title: "Big Data Tools [Recap]"
 date: 2025-01-17
-#Lastmod: 2022-11-17
 draft: false
 tags: ["Dev"]
 description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssistant for Tech.'
-summary: 'A recap on SQL, PySpark and visualizations tools.'
 url: 'big-data-tools-for-data-analytics'
 ---
 
@@ -13,6 +11,8 @@ url: 'big-data-tools-for-data-analytics'
 Long ago, I was covering [the analytical stack](https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/#the-analytical-stack) and the most popular [concepts for a data analytics journey](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/).
 
 It is time to make **a recap**.
+
+A recap on SQL, PySpark and visualizations tools.
 
 {{< cards >}}
   {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
@@ -26,7 +26,6 @@ This Post is **WIP**
 ## Concepts for Data Analytics
 
 
-
 {{< details title="DWH vs DataLake 📌" closed="true" >}}
 
 Dont be scared. 
@@ -35,6 +34,10 @@ Both are places where data is stored.
 
 
 {{< /details >}}
+
+Thats was were can store.
+
+But how to process the data?
 
 {{< details title="Data Processing Engines 📌" closed="true" >}}
 
