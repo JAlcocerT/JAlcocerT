@@ -85,10 +85,12 @@ Also, during retirement, the effect will be present as well, so **the savings wi
 
 ![No Inflation](/blog_img/data-experiments/Inflation_Mild.JPG)
 
+---
 
 ## Conclusions
 
 I invite you to:
+
 * Play with the App, it is **deployed** at <https://jalcocert.shinyapps.io/retirement_facts/>
 * **Inspect the code** <https://github.com/JAlcocerT/R_is_Great/tree/main/ShinyApps>
 * Take a few minutes to think about this, as the example represented show that a 5% inflation rate make that person life savings last up to 75 years instead of 97 - Help needed afterwards.

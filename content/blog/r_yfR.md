@@ -8,7 +8,7 @@ summary: 'You might be curious about getting historical stock price on companies
 url: 'r-yfR-package-guide'
 ---
 
-The yfR Package - Data from Yahoo Finance for your Projects in R.
+The **yfR Package** - Data from Yahoo Finance for your Projects in R.
 
 ## What is yfR?
 
@@ -68,4 +68,3 @@ Then, just get some help from plotly to create one interactive visualization:
        plot_ly(hist_price, type = 'scatter', mode = 'lines') %>%
                           add_trace(x = ~ym, y = ~price_close, name = ~ticker)
 ```
-

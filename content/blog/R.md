@@ -1,5 +1,5 @@
 ---
-title: "A Recap on R Language."
+title: "A [Recap] on R Language."
 date: 2025-01-10T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
@@ -7,7 +7,7 @@ description: 'All I wish someone had told me about R when I started.'
 url: 'r-language-101'
 ---
 
-Its been a while since I have done some project/tasks with R.
+Its been a while since I have done some project/tasks **with R**.
 
 But recently, I had an idea to put a Flexdashboard inside a mdx post for Astro websites.
 
@@ -204,4 +204,30 @@ https://jalcocert.github.io/JAlcocerT/building-r-shiny-apps-container-image-with
 
 
 ---
+<!-- 
+https://github.com/RamiKrispin/shinylive
+https://www.dataquest.io/blog/install-package-r/ -->
 
+
+<!-- ### How can I contribute?
+
+The code is accesible from [my Github Repository of R/Stocks](https://github.com/JAlcocerT/R_Stocks "R Stocks Github {rel='nofollow'}")
+
+Please feel free to fork the repository and experiment with the code. -->
+
+<!-- fossengineer/rstocks_shiny:latest
+ docker run --name stocksubuntu -p 3836:3838 --detach fossengineer/rstocks_rbase2:latest
+# you may need log out first `docker logout` ref. https://stackoverflow.com/a/53835882/248616 docker login
+
+docker tag firstimage YOUR_DOCKERHUB_NAME/firstimage
+
+docker push YOUR_DOCKERHUB_NAME/firstimage
+docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach py_trip_planner
+
+docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach fossengineer/trip_planner:arm64
+MANIFEST: to detect that is arm64 directly -> multi-image (?)
+https://hub.docker.com/r/fossengineer/trip_planner:arm64
+
+To label docker images
+To Private
+ -->

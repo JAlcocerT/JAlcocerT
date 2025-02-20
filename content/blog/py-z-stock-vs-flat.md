@@ -239,6 +239,8 @@ Also, not all companies, sectors, do similarly:
 
 {{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks -DividendEvolution.JPG">}}
 
+> I Created this chart thanks to the [**R/Stocks** Project](https://github.com/JAlcocerT/R_Stocks), which I talked about [here](https://jalcocert.github.io/JAlcocerT/R-Stocks/).
+
 Lets see the **CAGR applied for dividend growth.**
 
 ## Dividend Growth

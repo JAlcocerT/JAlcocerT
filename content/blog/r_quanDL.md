@@ -61,7 +61,6 @@ df_quandl <- Quandl.datatable('SHARADAR/SF1',
                                ticker = Your_Ticker,
                                calendardate.gte='2000-12-31',
                                )
-
 ```
 
 Now enhance the dataframe with a plotly graph:

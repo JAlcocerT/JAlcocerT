@@ -11,9 +11,7 @@ description: 'Deploying a R Shiny Dashboard to shinyapps.io'
 summary: 'Providing that we have a working Shiny Dashboard, we can be interested to expose it to a wider audience instead of just locally. One simple option is to use ShinyApps.io as I cover in this post.'
 url: 'guide-deploy-shinyapps'
 ---
-<!-- 
-https://github.com/RamiKrispin/shinylive
-https://www.dataquest.io/blog/install-package-r/ -->
+
 
 # Shiny to ShinyApps.io
 

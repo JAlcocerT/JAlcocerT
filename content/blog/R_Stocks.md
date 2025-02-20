@@ -11,11 +11,14 @@ editPost:
     URL: "https://github.com/JAlcocerT/R_Stocks"
     Text: "Suggest Changes" # edit text
     appendFilePath: false # to append file path to Edit link
-description: "R Stocks - R Shiny Interactive Dashboard that displays free available financial information."
-summary: 'An interactive R Shiny App that revolutionizes the way public financial information is displayed. Built on top of well-known R packages for financial analysis: yfR, QuantMod, PriceR and Quandl.'
+description: "R Stocks - R Shiny Interactive Dashboard (Web App) that displays free available financial information."
 url: 'R-Stocks'
 isPinned: false
 ---
+
+An interactive R Shiny App that revolutionizes the way public financial information is displayed.
+
+Built on top of well-known R packages for financial analysis: yfR, QuantMod, PriceR and Quandl
 
 ## R Stocks
 
@@ -25,16 +28,16 @@ Since I found nothing on Github, I decided to start it myself - *This is how the
 
 
 {{< callout type="info" >}}
-R/Stocks [Source Code](https://github.com/JAlcocerT/R_Stocks). Deploy with [GHCR image](https://github.com/JAlcocerT/R_Stocks/pkgs/container/r-stocks) or [build it DIY version](https://github.com/JAlcocerT/R_Stocks/tree/main/Z_Deploy_Me)
+R/Stocks [Source Code](https://github.com/JAlcocerT/R_Stocks). Deploy with [GHCR image](https://github.com/JAlcocerT/R_Stocks/pkgs/container/r-stocks) or [build a **container DIY** version](https://github.com/JAlcocerT/R_Stocks/tree/main/Z_Deploy_Me)
 {{< /callout >}}
 
 With such a project, you not only get the chance to create something cool but also to learn and discover great tools.
 
 * Libraries that are used to fetch the main financial data: 
-    * YfR - [My guide on yfR](/r-yfR-package-guide/)
-    * Quantmod - [My guide on quantmod](/r-Quantmod-package-guide/)
-    * PriceR - [My guide on priceR](/r-priceR-package-guide/)
-    * Quandl - [My guide on quandl](/r-quandl-package-guide/)
+    * YfR - [My guide on yfR](/JAlcocert/r-yfR-package-guide/)
+    * Quantmod - [My guide on quantmod](/JAlcocert/r-Quantmod-package-guide/)
+    * PriceR - [My guide on priceR](/JAlcocert/r-priceR-package-guide/)
+    * Quandl - [My guide on quandl](/JAlcocert/r-quandl-package-guide/)
 
 
 And of course I am also using **Plotly and Shiny** for the visualization and interactive dashboard building.
@@ -83,7 +86,7 @@ The R Stock App has right now **six tabs**:
 
 In the first tab, you will have available general information of the selected tickers:
 
-The first panel is just using the **yfR** library to get the data displayed:
+The first panel is just using the **yfR** library to get the data on **historical value trends** displayed:
 
 {{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks - StocksPriceEvolution.JPG">}}
 
@@ -108,7 +111,7 @@ The panels below, are using **QuanDL**, so remember to have your API_key availab
 
 In the second tab of the dashboards, you can find information related to the historical dividends per selected ticker.
 
-This panels have been possible thanks to **QuantMod**, where we can get access to historical dividen data and then create the following:
+This panels have been possible thanks to **QuantMod**, where we can get access to **historical dividend data** and then create the following:
 
 {{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks -DividendEvolution.JPG">}}
 
@@ -198,29 +201,31 @@ install.packages("plotly")
 
 {{< /details >}}
 
-> See it in action: https://jalcocert.github.io/R_Stocks/
-
+> See the RStocks FlexDashboard in action: https://jalcocert.github.io/R_Stocks/
 
 
 ---
 
 ## FAQ
 
-Try the R Stocks Shiny App baremetal:
+
+### How Can I try the R Stocks Shiny App?
+
+**Ready to Try?**: If you've read this far, you're probably eager to give the app a try.
+
+Try the R Stocks Shiny App (baremetal):
+
+1. Install R Language
+2. Install the required Packages:
 
 ```sh
 RUN R -e 'install.packages(c("shiny", "plotly", "viridis","dplyr", "tidyr","lubridate","shinythemes","shinyWidgets","DT","bslib","priceR","quantmod"))'
 
 RUN R -e 'install.packages("yfR", dependencies = TRUE)' #this one will work when you install its deps
 ```
+**Docker Image**: The Docker image I'm using is available on DockerHub: [fossengineer/r_stocks](https://hub.docker.com/repository/docker/fossengineer/r_stocks)
 
-
-### How Can I try the R Stocks Shiny App?
-
-* **Ready to Try?**: If you've read this far, you're probably eager to give the app a try. I've deployed it using the latest Docker image.
-    * **Access my instance**:  I am making an effort to self-host at home at a Raspberry Pi
-        * You can access it for free from any browser {{< newtab url="https://r_stocks.fossengineer.com/" text="here" >}}
-    * **Docker Image**: The Docker image I'm using is available on DockerHub: [fossengineer/r_stocks](https://hub.docker.com/repository/docker/fossengineer/r_stocks)
+> I've recommend to do it using the latest Docker image.
 
 **What if the site can't be reached?**
 
@@ -259,26 +264,3 @@ services:
 ### How to deploy R Stocks with Docker and a GUI?
 
 You can [install **Portainer with Docker**](https://jalcocert.github.io/JAlcocerT/why-i-love-containers/#container-tech-is-cool) and use the configuration above to self-host your own instance of **RStocks** with a GUI to manage the container.
-
-<!-- ### How can I contribute?
-
-The code is accesible from [my Github Repository of R/Stocks](https://github.com/JAlcocerT/R_Stocks "R Stocks Github {rel='nofollow'}")
-
-Please feel free to fork the repository and experiment with the code. -->
-
-<!-- fossengineer/rstocks_shiny:latest
- docker run --name stocksubuntu -p 3836:3838 --detach fossengineer/rstocks_rbase2:latest
-# you may need log out first `docker logout` ref. https://stackoverflow.com/a/53835882/248616 docker login
-
-docker tag firstimage YOUR_DOCKERHUB_NAME/firstimage
-
-docker push YOUR_DOCKERHUB_NAME/firstimage
-docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach py_trip_planner
-
-docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach fossengineer/trip_planner:arm64
-MANIFEST: to detect that is arm64 directly -> multi-image (?)
-https://hub.docker.com/r/fossengineer/trip_planner:arm64
-
-To label docker images
-To Private
- -->
