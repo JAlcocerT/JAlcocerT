@@ -34,10 +34,10 @@ R/Stocks [Source Code](https://github.com/JAlcocerT/R_Stocks). Deploy with [GHCR
 With such a project, you not only get the chance to create something cool but also to learn and discover great tools.
 
 * Libraries that are used to fetch the main financial data: 
-    * YfR - [My guide on yfR](/JAlcocert/r-yfR-package-guide/)
-    * Quantmod - [My guide on quantmod](/JAlcocert/r-Quantmod-package-guide/)
-    * PriceR - [My guide on priceR](/JAlcocert/r-priceR-package-guide/)
-    * Quandl - [My guide on quandl](/JAlcocert/r-quandl-package-guide/)
+    * YfR - [My guide on yfR](/JAlcocerT/r-yfR-package-guide/)
+    * Quantmod - [My guide on quantmod](/JAlcocerT/r-Quantmod-package-guide/)
+    * PriceR - [My guide on priceR](/JAlcocerT/r-priceR-package-guide/)
+    * Quandl - [My guide on quandl](/JAlcocerT/r-quandl-package-guide/)
 
 
 And of course I am also using **Plotly and Shiny** for the visualization and interactive dashboard building.

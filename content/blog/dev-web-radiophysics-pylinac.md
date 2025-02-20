@@ -1,6 +1,6 @@
 ---
 title: "A Website for a Phd"
-date: 2025-02-20T10:20:21+01:00
+date: 2025-02-22T13:20:21+01:00
 draft: false
 tags: ["dev"]
 description: 'Helping improve scientific knowledge. Improving the day to day of a researcher.'
@@ -15,10 +15,16 @@ An image analysis library for **medical physics**
 
 > MIT | An image analysis library for medical physics
 
+---
+
+Then I proposed to start documenting his learning process.
+
 ## HUGO HEXTRA with Github Pages
 
 I suggested to start by cloning this very same repository.
 
+
+As the HUGO Hextra theme is just ready to roll:
 
 * https://imfing.github.io/hextra/docs/guide/shortcodes/tabs/
 

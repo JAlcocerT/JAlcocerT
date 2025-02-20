@@ -8,9 +8,7 @@ url: 'making-soap-at-home'
 math: true
 ---
 
-
-> What I tried was with: 3L water + 3L used Oil + 0.5Kg NaOH (90%)
-
+## The Chemistry of Lye
 
 {{< callout type="warning" >}}
 Soap making with **lye can be dangerous**. Proceed with extreme caution and **at your own risk**.
@@ -170,3 +168,22 @@ You should give it enought time, **at least 1 month!**
 
 * There are many soap-making recipes available online and in books. It's crucial to use reliable recipes that provide accurate measurements.
 * Using a lye calculator is also very important, these calculators allow you to insert the types and amounts of oil you want to use, and it calculates the precise ammount of lye that is needed.
+
+
+## My Experience
+
+> What I tried was with: 3L water + 3L used Oil + 0.5Kg NaOH (90%)
+
+The costs?
+
+**1kg of NaOH is ~2$** and thats all you need to get those 3kg + 3*0.91 + 0.5 ~~ 6.23kg
+
+What can you do with this?
+
+For every 100g you are **saving 1$ in soap**, thats a x30 return on the money you placed on the project.
+
+Or...mix it with more water and **make gel**?
+
+With 200g you can make 1.5L of gel confortably (just adding more water).
+
+In this case, you are **saving 3$ in gel** for every piece, thats a x90 return!

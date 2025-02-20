@@ -1,6 +1,6 @@
 ---
 title: "Trying a Nuxt Theme [and a SSG Recap]"
-date: 2025-02-23
+date: 2025-02-22T10:20:21+01:00
 draft: false
 tags: ["dev"]
 description: 'Testing NUXT Themes. Looking back to the learnings with other SSGs like HUGO and Astro. Creating a website for a moto blogger.'

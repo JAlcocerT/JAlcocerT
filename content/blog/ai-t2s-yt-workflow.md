@@ -81,12 +81,13 @@ The initial scripts I used are at [YT_Audios](https://github.com/JAlcocerT/JAlco
 * OBSStudio to record + I record myself commenting the video
 * Then, that `.mp4` gets a transcript, which is passed to the OpenAI API to generate an AI voice
 
-![Karting Adventure](/blog_img/memes/ezoeazin.JPG)
+![FC Meme](/blog_img/memes/ezoeazin.JPG)
 
+> You can be really Pro on a AI Powered YT Channel
 
 {{< details title="A friend gave me this cool idea [AI & Audio Transcription] 📌" closed="true" >}}
 
-It uses the **Whisper** model to make the audio2text conversion/transcription:
+It uses the **Whisper** model to make the **audio2text** conversion/transcription:
 
 ```py
 ##1 abre archivo de audio transcribe y guarda como texto

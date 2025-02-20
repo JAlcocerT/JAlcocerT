@@ -371,15 +371,14 @@ And with Reflex and some tricks with Gemini...
 
 Those are gross yields, remember that there are many costs and amortizations related
 
+Lets say that it cost **~65eur afor 15kg of paint.**
+
+With that one, you can paint 100m2.
 
 
 {{< details title="Price of the painting 📌" closed="true" >}}
 
-Lets say that it cost ~65eur afor 15kg of paint
-
-With that one, you can paint 100m2.
-
-Absolutely! Let's break down how to estimate the wall size in your flat based on the floor plan and the total area.
+How to estimate the wall size in your flat based on the floor plan and the total area.
 
 **Understanding the Challenge**
 
@@ -436,7 +435,7 @@ To improve the estimate, you would need:
 
 ---
 
-Be knowing the area (55m2 for example), you already know the ceiling paint.
+Be knowing the area (55m2 for example), you already know the **ceiling paint**.
 
 Or you can just estimate the internal walls with sqrt(area=55) = 7.7
 
@@ -444,9 +443,9 @@ So that would be 15m, times the height of the walls (say 2m), which would be 30 
 
 But you are missing all internal walls which make the rooms, say thats 100% more.
 
-> First estimation ~ 55+30*2 = 115m2, which for 2 layers would be ~30kg
-
 {{< /details >}}
+
+> First estimation ~ 55+30*2 = 115m2, which for **2 layers** would be ~30kg
 
 
 #### RE Resources
