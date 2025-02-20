@@ -245,6 +245,7 @@ Some tricks with **ffmpeg package**.
 1. **Simply Join**: Keeping original audio and no reencoding.
 
 ```sh
+###ffmpeg -i "concat:$(ls *.mp4 | tr '\n' '|')" -c copy output_video.mp4 #all from a folder
 ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .MP4 of current folder to a list
 #du -sh ./* #check their size
 

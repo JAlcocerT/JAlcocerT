@@ -305,6 +305,76 @@ It depends on what you prioritize:
 * Interesting Github Repository with Resources - https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code
 * https://github.com/NirantK/awesome-project-ideas
 * You can check the [latest trends at Gartner](https://www.gartner.com/reviews/market/multipersona-data-science-and-machine-learning-platforms "Book {rel='nofollow'}")
+
+## How to get Started with ML via Free Resources
+
+Claro, aquí tienes un resumen en Markdown de los recursos de IA proporcionados, organizado por categorías para facilitar la navegación:
+
+Presentación en Video
+
+* [Charla sobre recursos de IA](https://youtu.be/iFGgq6btits)
+
+⚠️ Artículo Relevante
+
+* [Covid-19, su comunidad y usted: una perspectiva de ciencia de datos](https://www.fast.ai/2020/03/09/coronavirus/)
+
+Lecturas Online
+
+* **Distill.pub:** [https://distill.pub/](https://distill.pub/)
+* **The Gradient:** [https://thegradient.pub/](https://thegradient.pub/)
+* **QuantaMagazine:** [https://www.quantamagazine.org/](https://www.quantamagazine.org/)
+* **Blogs de Deep Learning:** [https://getpocket.com/explore/deep-learning](https://getpocket.com/explore/deep-learning)
+* **Papers de Investigación:** [https://paperswithcode.com/](https://paperswithcode.com/)
+
+Cursos y MOOCs
+
+* **(Básico) Elements of AI:** [https://www.elementsofai.com/](https://www.elementsofai.com/)
+* **(Básico) Cursos en Kaggle:** [https://www.kaggle.com/learn/overview](https://www.kaggle.com/learn/overview)
+* **(Medio) Curso de FastAI v3:** [https://course.fast.ai/](https://course.fast.ai/)
+* **(Básico-Medio) Curso de Tensorflow:** [https://www.tensorflow.org/resources/learn-ml](https://www.tensorflow.org/resources/learn-ml)
+* **(Básico) Machine Learning con R:** [https://bradleyboehmke.github.io/HOML/intro.html](https://bradleyboehmke.github.io/HOML/intro.html)
+* **(Medio) Stanford CS221: Artificial Intelligence:** [https://www.youtube.com/playlist?list=PLoROMvodv4rO1NB9TD4iUZ3qghGEGtqNX](https://www.youtube.com/playlist?list=PLoROMvodv4rO1NB9TD4iUZ3qghGEGtqNX)
+* **(Medio) Stanford CS229 - Machine Learning:** [https://see.stanford.edu/Course/CS229](https://see.stanford.edu/Course/CS229)
+* **(Medio) Stanford CS230 - Deep Learning:** [https://cs230.stanford.edu/lecture/](https://cs230.stanford.edu/lecture/)
+* **(Medio) CS231n: Convolutional Neural Networks:** [https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
+* **Buscador de Cursos Online:** [https://www.classcentral.com/search?q=machine+learning](https://www.classcentral.com/search?q=machine+learning)
+* **(Avanzado) Cursos Avanzados de ML/DL:** [https://www.reddit.com/r/MachineLearning/comments/fdw0ax/d_advanced_courses_update/](https://www.reddit.com/r/MachineLearning/comments/fdw0ax/d_advanced_courses_update/)
+* **(NEW) (Medio) S191 : Introduction to Deep Learning:** [http://introtodeeplearning.com/](http://introtodeeplearning.com/)
+
+Comunidades Online
+
+* **Machine Learning Hispano (Slack):** [https://join.slack.com/t/ml-hispano/shared_invite/zt-b7cuy15e-4Gt7Dk5Tcz8Z3c_jxX_IjQ](https://join.slack.com/t/ml-hispano/shared_invite/zt-b7cuy15e-4Gt7Dk5Tcz8Z3c_jxX_IjQ)
+* **Reddit r/MachineLearning/:** [https://www.reddit.com/r/MachineLearning](https://www.reddit.com/r/MachineLearning)
+* **Kaggle:** [https://www.kaggle.com/](https://www.kaggle.com/)
+* **Foros de FastAI:** [https://forums.fast.ai/](https://forums.fast.ai/)
+
+Canales de YouTube
+
+* **Arxiv Insights:** [https://www.youtube.com/channel/UCNIkB2IeJ-6AmZv7bQ1oBYg](https://www.youtube.com/channel/UCNIkB2IeJ-6AmZv7bQ1oBYg)
+* **Two Minute Papers:** [https://www.youtube.com/user/keeroyz](https://www.youtube.com/user/keeroyz)
+* **3Blue1Brown:** [https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
+* **Code Bullet:** [https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q](https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q)
+* **Carykh:** [https://www.youtube.com/user/carykh](https://www.youtube.com/user/carykh)
+* **DotCSV:** [https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg](https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg)
+* **NotCSV:** [https://www.youtube.com/channel/UCOTko-zmnQTcOxSRdg5_uOQ/](https://www.youtube.com/channel/UCOTko-zmnQTcOxSRdg5_uOQ/)
+
+Libros
+
+* **(Medio) Deep Learning for Coders with fastai and PyTorch:** [https://github.com/fastai/fastbook](https://github.com/fastai/fastbook)
+* **(Avanzado) Pattern Recognition and Machine Learning:** [https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)
+* **(Medio) Deep Learning Book:** [https://www.deeplearningbook.org/](https://www.deeplearningbook.org/)
+* **(Medio) The Elements of Statistical Learning:** [https://web.stanford.edu/~hastie/ElemStatLearn/](https://web.stanford.edu/~hastie/ElemStatLearn/)
+* **(Básico-Medio) Hands-On Machine Learning:** [https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/) (Truco: Trial de 10 días en O'Reilly)
+* **(NEW) (Básico-Medio) Dive Into Deep Learning:** [http://d2l.ai/](http://d2l.ai/)
+* **(NEW) (Medio) Mathematics for Machine Learning:** [se quitó una URL no válida]
+
+Podcasts
+
+* **This Week in ML & AI:** [https://open.spotify.com/show/2sp5EL7s7EqxttxwwoJ3i7](https://open.spotify.com/show/2sp5EL7s7EqxttxwwoJ3i7)
+* **Lex Fridman:** [https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL](https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL)
+* **Data Skeptic:** [[https://open.spotify.com/show/1B](https://www.google.com/search?q=https://open.spotify.com/show/1B)
+
+
 <!-- * My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) -->
 
 

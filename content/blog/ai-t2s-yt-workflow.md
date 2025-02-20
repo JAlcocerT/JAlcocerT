@@ -1,5 +1,5 @@
 ---
-title: "My [AI] Youtube Workflow"
+title: "My [AI] Youtube Workflow with Whisper"
 date: 2024-11-07
 draft: false
 tags: ["Tinkering"]
@@ -304,7 +304,7 @@ whisper audio.flac audio.mp3 audio.wav --model medium #--model large
 #whisper japanese.wav --language Japanese --task translate #speach to English
 ```
 
-## bigwav
+**bigwav**
 
 https://github.com/ggerganov/whisper.cpp/discussions/604
 
@@ -325,9 +325,7 @@ source meepervenv/bin/activate
 git clone git@github.com:serg-plusplus/meeper.git && cd meeper
 
 python -m pip install -r requirements.txt
-
 chmod +x cygwin_cibuildwheel_build.sh
-
 ./cygwin_cibuildwheel_build.sh
 
 #deactivate

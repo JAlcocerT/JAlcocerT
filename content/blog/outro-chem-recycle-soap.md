@@ -35,7 +35,10 @@ Not a typical chemical reaction (where new covalent bonds are formed).
 
 Yes, the dissolution of NaOH in water is **highly exothermic**.
 
-This means it releases a significant amount of heat, causing the water to become very hot.
+This means it releases a significant amount of heat, causing the **water to become very hot**.
+
+{{< youtube "Ke-8yhgC_uU" >}}
+
 
 > I could see the water (3L) to get up to ~46C from ~19C
 
