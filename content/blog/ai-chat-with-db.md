@@ -51,7 +51,7 @@ This post was created as a complement to this **tech talk**: https://wearecommun
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
@@ -490,7 +490,7 @@ You just need the [docker compose](https://github.com/JAlcocerT/Docker/blob/main
 
 > Use Portainer for easier MySQL container management
 
-![MySQL Portainer](/blog_img/GenAI/mysql-portainer.png)
+![MySQL Portainer](/blog_img/GenAI/dbchat/mysql-portainer.png)
 
 4. Prepare your AI API Keys
 

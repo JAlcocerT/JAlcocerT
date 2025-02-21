@@ -13,9 +13,15 @@ url: 'improving-ui-python-dash-apps'
 isPinned: false
 ---
 
-# Tweaking Python Dash Apps'UI
+## Tweaking Python Dash Apps'UI
 
-This post is about synergy, UI's and Python. All in one.
+This post is about **synergy, UI's and Python**.
+
+* https://github.com/JAlcocerT/Py_Trip_Planner
+
+>  Interactive Trip Planning with Weather information (Historical and Forecasted) as per the selected location. Powered by Python and DASH. 
+
+All in one.
 
 Let's explore the impact of UI color and layout. We'll embark on this exploration through the lens of the [Python DASH App Trip Planner with weather patterns](https://fossengineer.com/python-trip-planner/) that I have developed during this year to help anyone have better chances with weather on their adventures.
 

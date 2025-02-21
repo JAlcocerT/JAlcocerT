@@ -16,7 +16,7 @@ And I can understand why now.
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 

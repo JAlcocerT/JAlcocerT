@@ -23,7 +23,7 @@ url: 'web-apps-with-python'
 ### Streamlit
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
@@ -154,15 +154,16 @@ npm i --save @kanaries/graphic-walker
 ### Flask
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Tinkering with Flask" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Flask Apps with VPS and HTTPs" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Tinkering with Flask" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Flask Apps with VPS and HTTPs" >}}
 {{< /cards >}}
 
 
 
 ### Reflex
 
+
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Tinkering with Reflex" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Python Web apps with Reflex" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Tinkering with Reflex" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Python Web apps with Reflex" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
@@ -176,12 +177,13 @@ npm i --save @kanaries/graphic-walker
 
 ## Python DASH
 
+https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/
 
 ## Shiny with R
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="Tinkering with R Shiny" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Python Web apps with Reflex" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="Tinkering with R Shiny" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Python Web apps with Reflex" >}}
   {{< card link="https://github.com/JAlcocerT/R-Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of the RStock Shiny Web app" >}}
 {{< /cards >}}
 
