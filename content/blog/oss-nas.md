@@ -53,7 +53,7 @@ sudo apt install sysbench
 sysbench memory run
 ```
 
-> The **[x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)** got ~8164 MiB/sec and the Pi 4 4GB ~175MiB/sec (x86)
+> The **[x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)** got **~8164 MiB/sec** and the Pi 4 4GB ~175MiB/sec (x86)
 
 Your server *most likely* will be in between.
 
@@ -74,6 +74,14 @@ df -h | awk '$5 > "5G" {print $0}' #list the partitions greater than 5GB
 #gio trash --empty
 #du -sh ~/.local/share/Trash/files
 ```
+
+![Graphic Walker UI](/blog_img/hardware/sd-samsung.png)
+
+
+![Graphic Walker UI](/blog_img/hardware/sd-kingston.png)
+
+
+
 
 **Networking for Home Lab**
 

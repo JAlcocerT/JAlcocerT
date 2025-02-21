@@ -9,6 +9,11 @@ summary: 'Using LangChain with OpenAI API to get information about Temperature a
 url: 'langchain-chat-with-sensor-data'
 ---
 
+
+![Graphic Walker UI](/blog_img/hardware/asrockx300-air-temp.jpg)
+
+
+
 It all started with the RPi projects I published here about a [Pi working together with a **DHT22 sensor**.](https://jalcocert.github.io/RPi/posts/rpi-iot-dht11-influxdb/).
 
 Then, I learnt how to use [LangChain to chat with a DB](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#chat-with-a-db-with-langchain).

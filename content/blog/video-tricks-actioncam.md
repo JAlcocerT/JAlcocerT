@@ -213,6 +213,13 @@ rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #it creates the folder if its n
 #rm *.LRF #clean if needed LRF
 ```
 
+<!-- 
+![alt text](rsync.png) 
+-->
+
+![Graphic Walker UI](/blog_img/selfh/rsync.png)
+
+
 ### Quick Videos - CLI
 
 
@@ -251,7 +258,7 @@ ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .MP4 of current folder
 
 #Generate a video with the mentioned files (IT PRESERVES THE ORIGINAL FORMATS, BITRATE...)
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
-ffmpeg -f concat -safe 0 -i file_list.txt -c copy /home/jalcocert/Desktop/output_video.mp4 #different folder
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy /home/jalcocert/Desktop/output_video.mp4 #different folder (if you do it from OA5 to desktop you will be limited by transfer speed)
 
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an output_video.mp4 #silenced video
 #ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #

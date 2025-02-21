@@ -45,6 +45,70 @@ url: 'web-apps-with-python'
 
 See a sample notebook: https://colab.research.google.com/drive/171QUQeq-uTLgSj1u-P9DQig7Md1kpXQ2
 
+
+
+{{< details title="PyGWalker with Streamlit Render | Example 📌" closed="true" >}}
+
+Following the docs: https://docs.kanaries.net/pygwalker/use-pygwalker-with-streamlit
+
+```py
+from pygwalker.api.streamlit import StreamlitRenderer
+
+
+import streamlit as st
+import pandas as pd
+import pygwalker as pyg
+import requests
+from io import StringIO
+
+# GitHub raw URL of your CSV file
+csv_url = "https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/data_sp500.csv"
+
+@st.cache_data
+def load_data(url):
+    """Loads CSV data from a URL and returns a Pandas DataFrame."""
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        csv_content = StringIO(response.content.decode('utf-8'))
+        df = pd.read_csv(csv_content)
+        return df
+    except requests.exceptions.RequestException as e:
+        st.error(f"Error fetching URL: {e}")
+        return None
+    except pd.errors.ParserError as e:
+        st.error(f"Error parsing CSV: {e}")
+        return None
+    except Exception as e:
+        st.error(f"An unexpected error occurred: {e}")
+        return None
+
+# Load the data
+df = load_data(csv_url)
+
+if df is not None:
+    st.title("S&P 500 Historical Data Exploration")
+
+    # Display the DataFrame
+    st.write("### Raw Data")
+    st.dataframe(df)
+
+    # Add PyGWalker
+    st.write("### Interactive Exploration with PyGWalker")
+    pyg_app = StreamlitRenderer(df)
+    
+    pyg_app.explorer()
+
+
+    # Add some descriptive text
+    st.write("Data source: [Your GitHub Repository](https://github.com/JAlcocerT/R_Stocks/blob/main/Z_Sample_Data/data_sp500.csv)")
+else:
+    st.write("Data loading failed. Please check the URL or your internet connection.")
+```
+
+{{< /details >}}
+
+
 I really enjoy using **PyGWalker together with Streamlit**!
 
 And there is more...

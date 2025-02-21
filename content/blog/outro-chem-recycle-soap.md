@@ -37,8 +37,9 @@ Yes, the dissolution of NaOH in water is **highly exothermic**.
 
 This means it releases a significant amount of heat, causing the **water to become very hot**.
 
-{{< youtube "Ke-8yhgC_uU" >}}
+{{< youtube "ScU5qGbH6fE" >}}
 
+<!-- https://youtu.be/ScU5qGbH6fE -->
 
 > I could see the water (3L) to get up to ~46C from ~19C
 
