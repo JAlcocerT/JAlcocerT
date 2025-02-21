@@ -352,6 +352,8 @@ While a local cluster might seem cheaper initially, the long-term costs and comp
 
 
 
+![Mongo and Databricks](/blog_img/dev/databricks-mongo.JPG)
+
 
 {{< callout type="info" >}}
 I made a project with a **Raspberry Pi with [Mongo & DataBricks CE](https://jalcocert.github.io/RPi/posts/rpi-iot-mongodatabricks/)**. [Data Modelling](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#databricks) is always an important part!

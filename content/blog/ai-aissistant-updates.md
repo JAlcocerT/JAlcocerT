@@ -1,9 +1,9 @@
 ---
-title: "Streamlit Assistant Updates"
-date: 2025-02-21
+title: "Streamlit and Assistant Updates"
+date: 2025-03-10
 draft: false
 tags: ["dev"]
-summary: 'More AI with the AIssistant: DBChat, SliDev (PPT) Generator, Speech Rater...'
+summary: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT) Generator, Speech Rater...'
 url: 'ai-assistant-streamlit'
 ---
 
@@ -41,6 +41,13 @@ https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/
 
 ![AIssistant](/blog_img/apps/whisper.png)
 
+### CV CreAItor
+
+https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/
+
+![AIssistant](/blog_img/memes/oldnewjob.jpg)
+
+
 
 ### Youtube SummarAIzer
 
@@ -49,3 +56,4 @@ https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/
 With Whisper
 
 ### Multichat
+

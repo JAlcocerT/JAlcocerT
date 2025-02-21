@@ -1,6 +1,6 @@
 ---
 title: "Tech for Creating a Podcast"
-date: 2025-02-21
+date: 2025-03-21
 draft: false
 tags: ["Web"]
 description: "How to create podcasts and a related astro website for them. Also a look to GitPodcast.."

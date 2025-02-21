@@ -1,6 +1,6 @@
 ---
 title: "Github Copilot, Gitlab Duo and more Code assistants"
-date: 2025-02-21
+date: 2025-04-21
 draft: false
 tags: ["Dev"] 
 summary: "Using AI to write better code."

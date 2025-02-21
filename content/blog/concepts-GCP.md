@@ -9,13 +9,11 @@ url: 'understanding-google-cloud-platform'
 
 ## Google Cloud Platform
 
-Google has one of the important cloud out there!
-
+Google has one of the **important cloud** out there!
 
 If you understand these, you need to know that there are similar alternatives in other clouds.
 
 Just with the service having a different name.
-
 
 ### Data Analytics with GCP
 

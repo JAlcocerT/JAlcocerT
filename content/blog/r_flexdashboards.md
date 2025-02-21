@@ -238,7 +238,12 @@ Shiny apps can be hosted using Shiny Server or RStudio's hosting service, `Shiny
 
 ### How to create animations in R
 
-![Karting Adventure](/blog_img/dev/503.gif)
+
+Would not be cool to do such things?
+
+![Sample animation Gif](/blog_img/dev/503.gif)
+
+Or these ones?
 
 ![Dashboard Map Example](/blog_img/data-experiments/unemployment-evolution.gif)
 

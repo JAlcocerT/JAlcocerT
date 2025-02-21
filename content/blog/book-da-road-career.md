@@ -517,7 +517,6 @@ It's all about bringing data together from different places and making it work t
     * One example of a data integration service is **[Azure Data Factory (ADF)](/JAlcocertdata-basics-for-data-analytics/#azure-data-factory)**. ADF allows you to create data pipelines that connect to different data sources, such as databases, cloud storage, or web services, and bring the data into a central location.
     * Google Cloud and Amazon Web Services (AWS) offer their own equivalents to Azure Data Factory for data integration services: *Google Cloud Data Fusion and AWS Glue.*
 
-<!-- ### Big Data -->
 
 ### Visualizations
 

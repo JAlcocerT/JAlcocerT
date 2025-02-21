@@ -27,6 +27,66 @@ url: 'web-apps-with-python'
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
+
+
+{{< details title="PyGWalker: Turn your pandas dataframe into an interactive UI for visual analysis 📌" closed="true" >}}
+
+* https://kanaries.net/pygwalker
+* https://github.com/Kanaries/pygwalker
+
+* https://docs.kanaries.net/pygwalker/use-pygwalker-with-streamlit
+* https://github.com/Kanaries/pygwalker-in-streamlit
+* https://docs.kanaries.net/pygwalker/use-pygwalker-with-streamlit.en
+  * https://github.com/Kanaries/pygwalker?tab=readme-ov-file#tested-environments
+
+> It can be integrated with Streamlit!
+
+{{< /details >}}
+
+See a sample notebook: https://colab.research.google.com/drive/171QUQeq-uTLgSj1u-P9DQig7Md1kpXQ2
+
+I really enjoy using **PyGWalker together with Streamlit**!
+
+And there is more...
+
+**Graphic Walker** is a different open-source alternative to Tableau.
+
+It allows data scientists to analyze data and visualize patterns with simple drag-and-drop / natural language query operations.
+
+It is extremely easy to embed in your apps just **as a React component** 🎉!
+
+The original purpose of graphic-walker is **not to be a heavy BI platform**, but a easy to embed, lite, plugin.
+
+
+* https://github.com/Kanaries/graphic-walker
+  * https://docs.kanaries.net/graphic-walker
+
+> Apache v2 | An open source alternative to Tableau. **Embeddable visual analytic**
+
+You can try it here: https://graphic-walker.kanaries.net/ with some csv:
+
+![Graphic Walker UI](/blog_img/dev/graphic-walker.png)
+
+
+It allows you to import/export an already configured dashboard as `.json`!
+
+![Meme - Fantastic](/blog_img/memes/bertin-osborne-incredible.gif)
+
+```sh
+npm i --save @kanaries/graphic-walker
+```
+
+
+
+
+
+1. Cool Streamlit Apps I found: https://github.com/AIAnytime/Document-Buddy-App
+
+> Built using Open Source Stack (Llama 3.2 Model, BGE Embeddings, and Qdrant running locally within a Docker Container)
+
+2. 
+
+
 ### Flask
 
 {{< cards >}}

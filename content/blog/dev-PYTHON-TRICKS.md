@@ -44,4 +44,13 @@ To generate [**QR's with logo** thanks to Python](https://github.com/JAlcocerT/J
 
 ### Animations
 
+![Sample animation Gif](/blog_img/dev/503.gif)
+
+
 ## OOP
+
+Object oriented programming!
+
+I was trying for long to avoid such concept.
+
+But not any more.

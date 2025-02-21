@@ -10,7 +10,11 @@ url: 'get-started-with-flask'
 
 A friend asked me recently to help him to [setup Python](https://jalcocert.github.io/JAlcocerT/guide-python/#installing-python-) and **he alredy made his first Web App!**
 
-I had to get a little bit familiar with this Python Framework.
+
+![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
+
+
+I had to get a little bit familiar with this Python Framework before writing this though.
 
 And we got his [Flask App with https and custom domain](https://jalcocert.github.io/JAlcocerT/get-started-with-flask/#deploying-a-flask-app-like-a-pro).
 
@@ -744,29 +748,6 @@ For now I just used [Shiny with R](https://jalcocert.github.io/JAlcocerT/R-Stock
 {{< /callout >}}
 
 
-
-
-{{< details title="PyGWalker: Turn your pandas dataframe into an interactive UI for visual analysis 📌" closed="true" >}}
-
-* https://kanaries.net/pygwalker
-* https://github.com/Kanaries/pygwalker
-
-* https://docs.kanaries.net/pygwalker/use-pygwalker-with-streamlit
-* https://github.com/Kanaries/pygwalker-in-streamlit
-* https://docs.kanaries.net/pygwalker/use-pygwalker-with-streamlit.en
-  * https://github.com/Kanaries/pygwalker?tab=readme-ov-file#tested-environments
-
-> It can be integrated with Streamlit!
-
-{{< /details >}}
-
-
-
-
-
-
-<!-- https://github.com/AIAnytime/Document-Buddy-App -->
-
 ---
 
 ## Off-Topics 
@@ -777,11 +758,11 @@ Unlike HTTP connections, a **WebSocket connection is a permanent, bi-directional
 
 Once established, the connection remains available until one of the parties disconnects from it.
 
-WebSocket connections are useful for games or web sites that need to display live information with very low latency.
+WebSocket connections are useful for games or web sites that need to **display live information with very low latency.**
 
 | Framework  | WebSocket Support                       |
 |------------|-----------------------------------------|
-| **Flask**      | [Supported via Flask-SocketIO](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)            |
+| **Flask**      | [Supported via **Flask-SocketIO**](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)            |
 | Django     | Supported via Django Channels            |
 | FastAPI    | Built-in support                        |
 | Tornado    | Built-in support                        |
@@ -813,10 +794,10 @@ WebSocket connections are useful for games or web sites that need to display liv
 * MQTT excels in low-bandwidth environments and is optimized for IoT applications.
 * RabbitMQ is suitable for scenarios requiring reliable message delivery and complex routing logic.
 
-There is also Web RTC (Real Time Communication).
+> There is also Web RTC (Real Time Communication).
 
 ### Interesting stuff I learnt recently
 
-* https://github.com/Scale3-Labs/langtrace - Langtrace 🔍 is an open-source, Open Telemetry based end-to-end observability tool for LLM applications, providing real-time tracing, evaluations and metrics for popular LLMs, LLM frameworks, vectorDBs and more.. Integrate using Typescript, Python.
+* https://github.com/Scale3-Labs/langtrace - Langtrace 🔍 is an open-source, Open Telemetry based end-to-end **observability tool for LLM applications**, providing real-time tracing, evaluations and metrics for popular LLMs, LLM frameworks, vectorDBs and more.. Integrate using Typescript, Python.
 
 * Model Garden, Vertex AI - https://cloud.google.com/model-garden?hl=es

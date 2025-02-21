@@ -3,7 +3,7 @@ title: "A [Recap] on R Language."
 date: 2025-01-10T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'All I wish someone had told me about R when I started.'
+description: 'All I wish someone had told me about R when I started - Shiny, Flexdashboards,...'
 url: 'r-language-101'
 ---
 
@@ -114,10 +114,13 @@ You will also hear about **GeoJSON format**, KML, TopoJSON
 Generally plots in R got me in love: <https://r-graph-gallery.com/> 
 
 
+![Sample animation Gif](/blog_img/dev/503.gif)
+
 
 
 ### FlexDashboards
 
+One of my favourite tools with R language: flexdashboards.
 
 The cool thing? 
 
@@ -126,7 +129,7 @@ The cool thing?
   {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Rstocks and its Flexdashboard" >}}
 {{< /cards >}}
 
-We can have leaflet maps, HTML widgets, even animations inside of them.
+We can have leaflet maps, HTML widgets, even animations inside of these cool static dashboards!
 
 They can be enhanced with:
 
