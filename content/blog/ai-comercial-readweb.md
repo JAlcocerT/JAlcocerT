@@ -1,5 +1,5 @@
 ---
-title: "Ask the Web with Streamlit and AI"
+title: "Ask the Web with Streamlit and AI - Looking for a Job?"
 date: 2024-10-17
 draft: false
 tags: ["Gen-AI","Python","Dev"]

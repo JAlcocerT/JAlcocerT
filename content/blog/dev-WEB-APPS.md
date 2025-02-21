@@ -174,6 +174,8 @@ npm i --save @kanaries/graphic-walker
 
 {{< /details >}}
 
+## Python DASH
+
 
 ## Shiny with R
 
@@ -194,3 +196,5 @@ npm i --save @kanaries/graphic-walker
 ---
 
 ## Conclusions
+
+For some PoC, Id stay with streamlit as my go to.

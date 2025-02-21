@@ -1,6 +1,6 @@
 ---
 title: "Chemistry at home - Making soap while recycling"
-date: 2025-02-20
+date: 2025-04-21
 draft: false
 tags: ["Outro"]
 description: 'Chem is open source! Learn how to make soap at home with lye, while avoiding waste.'
