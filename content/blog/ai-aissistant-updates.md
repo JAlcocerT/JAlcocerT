@@ -23,7 +23,7 @@ And I could not resist to combine it:
 
 ![AIssistant](/blog_img/apps/ai-assistant-dbchat.png)
 
-
+{{< youtube "KXamTdJA-uc" >}}
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Streamlit Speech Rater PoC" >}}

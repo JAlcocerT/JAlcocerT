@@ -1,14 +1,13 @@
 ---
 title: "AI Multi Agents"
-date: 2025-12-31
+date: 2025-03-01
 draft: true
 # cover:
 #     image: "https://socialify.git.ci/jw782cn/Claude-Streamlit/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #     alt: "" # alt text
 #     caption: "" # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
-description: 'Reviewing the most Popular AI Agents frameworks'
-summary: '.'
+description: 'Reviewing the most Popular AI Agents frameworks: AG2AI (AutoGen), LangChain, LlamaIndex,'
 url: 'ai-multi-agents-frameworks'
 ---
 
@@ -32,10 +31,64 @@ Actually, this is great tool to have when doing **research** of some new topic.
 
 {{< /details >}}
 
+
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&Date)
+
 {{< callout type="info" >}}
 Im testing these tools at the [**MultiAgents** Repo](https://github.com/JAlcocerT/multiagents) 💻 
 {{< /callout >}}
 
+
+### Agents with AutoGen - AG2AI
+
+We have several agent concepts in AG2 to help you build your AI agents.
+
+We introduce the most common ones here:
+
+* Conversable Agent: Agents that are able to send messages, receive messages and generate replies using GenAI models, non-GenAI tools, or human inputs.
+* Human in the loop: Add human input to the conversation
+* Orchestrating multiple agents: Users can orchestrate multiple agents with built-in conversation patterns such as swarms, group chats, nested chats, sequential chats or customize the orchestration by registering custom reply methods.
+
+* Tools: Programs that can be registered, invoked and executed by agents - Agents gain significant utility through tools as they provide access to external data, APIs, and functionality.
+
+
+Advanced Concepts: AG2 supports more concepts such as structured outputs, rag, code execution, etc.
+
+* https://pypi.org/project/pyautogen/
+* https://github.com/ag2ai/ag2
+
+```sh
+pip install ag2
+#or with the alias!
+```
+
+
+I got started with PyAutoGen thanks to this `.ipynb`:
+
+https://colab.research.google.com/drive/1xee3xdatViM4pespvLVVOrHJ8sB1MgO5?usp=drive_link
+
+
+```py
+from autogen import AssistantAgent, UserProxyAgent, config_list_from_json
+
+llm_config = {
+    "config_list": config_list_from_json(env_or_file="OAI_CONFIG_LIST")
+}
+
+assistant = AssistantAgent("assistant", llm_config=llm_config)
+user_proxy = UserProxyAgent("user_proxy", code_execution_config={"work_dir": "coding", "use_docker": False})
+user_proxy.initiate_chat(assistant, message="Plot a chart of NVDA and TESLA stock price change YTD.")
+# This initiates an automated chat between the two agents to solve the task
+```
+
+Advanced agentic design patterns
+AG2 supports more advanced concepts to help you build your AI agent workflows. You can find more information in the documentation.
+
+Structured Output
+Ending a conversation
+Retrieval Augmented Generation (RAG)
+Code Execution
+Tools with Secrets
 
 ### Agents with LangChain
 
@@ -45,8 +98,10 @@ You guessed it.
 
 * https://www.langchain.com/stateofaiagents
 
+You might know Langchain because of its useful **Chains**.
+
 {{< callout type="info" >}}
-With **LangChain as RAG** we can [chat with CSV & DBs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/). Also [with PDFs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/)
+**LangChain as RAG** can [chat with CSV](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/)& [**DBs**](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/). Also [with PDFs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/)
 {{< /callout >}}
 
 
@@ -90,7 +145,6 @@ Example - https://github.com/langroid/langroid/blob/main/examples/basic/chat-sea
 
 > Harness LLMs with Multi-Agent Programming - **MIT LICENSED!**
 
-### Auto-Gen
 
 ### Auto-GPT
 

@@ -166,6 +166,43 @@ It seems that the [embedchain project](https://fossengineer.com/embedchain-ai/) 
 
 Im talking about the **mem0 framework**.
 
+```sh
+#!pip install embedchain==0.1.0
+```
+
+Try embedchain and see how it gets a website content as reference:
+
+```py
+import os
+os.environ['OPENAI_API_KEY'] = 'sk-youropenaikey'
+
+from embedchain.store.assistants import OpenAIAssistant
+
+assistant = OpenAIAssistant(name="OpenAI DevDay Assistant", instructions="You are an organizer of the OpenAI DevDay Conference")
+
+# Option 2: You can also configure more things by instantiating like this
+# assistant = OpenAIAssistant(
+#     name="OpenAI DevDay Assistant",
+#     instructions="You are an organizer of the OpenAI DevDay Conference",
+#     tools=[],
+#     data_sources=[{"source": "https://www.youtube.com/watch?v=U9mJuUkhUzk", "data_type": "youtube_video"}]
+# )
+
+# Option 3: You can load an existing assistant by using assistant id
+# assistant = OpenAIAssistant(assistant_id="xxxx")
+
+assistant.add("https://openai.com/blog/new-models-and-developer-products-announced-at-devday")
+
+while(True):
+  question = input("❓ Enter question: ")
+  if question in ["exit", "quit", "q"]:
+    print("Exiting....")
+    break
+  answer = assistant.chat(question)
+  print("💡 Assistant: ", answer)
+  print()
+```
+
 
 ### PydanticAI
 

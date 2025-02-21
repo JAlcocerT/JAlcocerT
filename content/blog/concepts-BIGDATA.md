@@ -1,6 +1,6 @@
 ---
 title: "Big Data Tools [Recap]"
-date: 2025-01-17
+date: 2025-02-21
 draft: false
 tags: ["Dev"]
 description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssistant for Tech.'
@@ -18,6 +18,8 @@ A recap on SQL, PySpark and visualizations tools.
   {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs..." >}}
 {{< /cards >}}
+
+![Data Related Jobs](/blog_img/DA/trabajos_data.jpg)
 
 {{< callout type="warning" >}}
 This Post is **WIP**

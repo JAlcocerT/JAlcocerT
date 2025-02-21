@@ -1,9 +1,9 @@
 ---
-title: "Using DJI Tello Drone with Python"
+title: ""
 date: 2025-12-30T23:20:21+01:00
 draft: true
 tags: ["Tinkering"]
-summary: Learning drone programming with Python and a DJI Tello drone.
+description:  drone.
 url: 'fpv-programming'
 ---
 
