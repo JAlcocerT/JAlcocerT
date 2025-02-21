@@ -1,5 +1,5 @@
 ---
-title: "AI Multi Agents"
+title: "AI Multi Agents: PyAutogen"
 date: 2025-03-01
 draft: true
 # cover:
@@ -107,11 +107,15 @@ You might know Langchain because of its useful **Chains**.
 
 ### Agents with Llama-Index
 
-* https://docs.llamaindex.ai/en/stable/
-
 LlamaIndex, as described, is designed to work with various tools, data sources, and workflows. 
 
+* https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#llamaindex-and-pandas-dataframes
+* https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/#llama-index
+
+
 It helps to augment LLMs with context from different data sources such as APIs, SQL databases, PDFs, etc., without being tied to a specific framework.
+
+* https://docs.llamaindex.ai/en/stable/
 
 The ability to integrate multiple agents, tools, and data sources makes it adaptable to various development environments and workflows.
 
@@ -126,6 +130,25 @@ Workflows combine multiple agents, tools, and data connectors to create complex,
 <!-- https://www.youtube.com/watch?v=1lBpIbRafvI -->
 
 {{< youtube "1lBpIbRafvI" >}}
+
+I was using **Pydantic** this year.
+
+We can say it is a data validation framework, that now it has an **AI version**
+
+* https://github.com/pydantic/pydantic-ai
+  * https://ai.pydantic.dev/
+  * https://pypi.org/project/pydantic-ai/
+
+> Agent Framework / shim to use Pydantic with LLMs - **MIT Licensed!**
+
+
+{{< details title="What it is Pydantic? 📌" closed="true" >}}
+
+Pydantic is a **data validation** and settings management library in Python. 
+
+It’s widely used for validating data and ensuring that inputs conform to the **expected types and formats**.
+
+{{< /details >}}
 
 
 ### Chat-DEV
@@ -149,7 +172,7 @@ Example - https://github.com/langroid/langroid/blob/main/examples/basic/chat-sea
 ### Auto-GPT
 
 * https://github.com/Significant-Gravitas/AutoGPT
-* https://agpt.co/
+    * https://agpt.co/
 
 > AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.
 
@@ -157,7 +180,7 @@ Example - https://github.com/langroid/langroid/blob/main/examples/basic/chat-sea
 
 ### CrewAI
 
-https://github.com/streamlit/cookbook/tree/main/recipes/crewai
+You can use [Streamlit with CrewAI](https://github.com/streamlit/cookbook/tree/main/recipes/crewai)
 
 Example - https://github.com/tonykipkemboi/trip_planner_agent
 
@@ -173,11 +196,17 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 * https://medium.com/pythoneers/building-a-multi-agent-system-using-crewai-a7305450253e
 
 ### MetaGPT
+
+* https://github.com/geekan/MetaGPT
+
+> MIT | 🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming
  
+[MetaGPT](https://fossengineer.com/selfhosting-metagpt/)
+
 ###  SuperAGI
 
-https://github.com/TransformerOptimus/SuperAGI
-https://github.com/TransformerOptimus/SuperAGI?tab=MIT-1-ov-file#readme
+*  https://github.com/TransformerOptimus/SuperAGI
+    * https://github.com/TransformerOptimus/SuperAGI?tab=MIT-1-ov-file#readme
 
 >  <⚡️> SuperAGI - A dev-first open source autonomous AI agent framework. Enabling developers to build, manage & run useful autonomous agents quickly and reliably. 
 
@@ -213,7 +242,7 @@ Build a Python WebApp in 3 minutes with [Solara (Streamlit Alternative)](https:/
 
 #### Via Web Search
 
-For example, with duckduckgo:
+For example, with **duckduckgo**:
 
 ```sh
 pip install duckduckgo-search

@@ -181,6 +181,9 @@ https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/
 
 With Whisper
 
+![AIssistant](/blog_img/apps/whisper.png)
+
+
 ### Multichat
 
 

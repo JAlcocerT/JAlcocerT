@@ -591,15 +591,6 @@ Perplexity? Or **Perplexica**?
 {{< /details >}}
 
 
-{{< details title="What about MultiAgents? 📌" closed="true" >}}
-
-[CrewAI + Groq Tutorial: Crash Course for Beginners](https://www.youtube.com/watch?v=8bAv5FQBD2M&t=56s)
-
-* https://github.com/ag2ai/ag2 - AG2 (formerly AutoGen) is a programming framework for agentic AI. Join the community at:
-
-* CrewAI Agent Orchestration - https://www.youtube.com/watch?v=3Uxdggt88pY
-
-{{< /details >}}
 
 ---
 

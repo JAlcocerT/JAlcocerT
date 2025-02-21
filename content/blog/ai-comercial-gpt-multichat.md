@@ -560,6 +560,17 @@ Create LLM derived knowledge Graph which serve as the LLM memory representation.
 * AutoGen
 * ChatDev - https://github.com/OpenBMB/ChatDev
 
+
+{{< details title="What about MultiAgents? Autogen, CrewAI... 📌" closed="true" >}}
+
+[CrewAI + Groq Tutorial: Crash Course for Beginners](https://www.youtube.com/watch?v=8bAv5FQBD2M&t=56s)
+
+* https://github.com/ag2ai/ag2 - AG2 (formerly AutoGen) is a programming framework for agentic AI. Join the community at:
+
+* CrewAI Agent Orchestration - https://www.youtube.com/watch?v=3Uxdggt88pY
+
+{{< /details >}}
+
 > Try them together with LLMOps Tools like [Pezzo AI](/pezzo-ai-with-docker/) or [Agenta](https://github.com/Agenta-AI/agenta)
 
 ### F/OSS Conversational AI
