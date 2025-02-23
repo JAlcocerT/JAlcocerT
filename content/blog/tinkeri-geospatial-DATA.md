@@ -3,7 +3,7 @@ title: "Geospatial Data Tricks and a GoPro"
 date: 2025-01-05T23:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'What Ive learnt so far about GeoSpatial Data Analysis. Applied to GoPro MetaData Extraction. And karting.'
+description: 'What Ive learnt so far about GeoSpatial Data Analysis. Applied to GoPro MetaData and Telemetry Extraction. And karting!.'
 url: 'geospatial-data'
 math: true
 ---
@@ -94,6 +94,14 @@ exiftool -ee ./GX030390.MP4 > output-GX030390.txt #saves it
 
 #### Extracting Speed Data from GoPro MP4
 
+You can just do:
+
+```sh
+sudo apt-get install libimage-exiftool-perl
+exiftool -ee ./GX030390.MP4 #adapt as per your GoPro file name
+#exiftool -ee ./GX030390.MP4 > output.txt
+```
+
 ---
 
 ## PhyPhox Data Extraction
@@ -136,7 +144,7 @@ You can also open it with: [![Open in Google Colab](https://colab.research.googl
 
 ### DJi Metadata Extraction
 
-The DJi OA5Pro does NOT have a GPS.
+The DJi OA5Pro does **NOT** have a **GPS**.
 
 Videos can look like:
 

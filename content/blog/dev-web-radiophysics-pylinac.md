@@ -52,7 +52,7 @@ hugo #to render, if you want, aka to build it locally
 
 But...changes were pushed to the repo, and nothing happened.
 
-And its all about that when you are forking a repo with Github Actions workflows, you need to enable them (understandable, security reasons):
+And its all about that when you are forking a repo with **Github Actions workflows**, you need to enable them (understandable, security reasons):
 
 ![KeyStatic CMS with LandingPad Theme](/blog_img/dev/gha-workflows-fork-repo.png)
 

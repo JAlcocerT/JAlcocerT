@@ -60,6 +60,10 @@ VitePress is a Vue-powered static site generator and a spiritual successor to Vu
 
 ## A SSG Recap
 
+So...those are 2 more SSGs to the list!
+
+
+
 {{< callout type="info" >}}
 Im assuming that you are already aware [about CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-css/) and [JS tricks](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites)
 {{< /callout >}}

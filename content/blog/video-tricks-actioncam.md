@@ -63,10 +63,9 @@ Recording at **4K/60fps RS+** and standard (no UW, h.265) and **high bitrate**.
 I was already analyzing GoPro Metadata:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Go Pro Post" image="/blog_img/karting/gopro-speed-sample.png" subtitle="Karting and MetaData 101" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/" title="Go Pro Telemetry Post" image="/blog_img/karting/gopro-speed-sample.png" subtitle="Karting and MetaData 101" >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
 {{< /cards >}}
-
 
 
 But how about adding **telemtry overlays to MP4's**?
@@ -76,11 +75,11 @@ But how about adding **telemtry overlays to MP4's**?
 
 Python MoviePy...
 
-...actually uses FFMPEG, but makes it more scriptable, in theory.
+...actually uses **FFMPEG**, but makes it more scriptable, in theory.
 
 ### DJI and GPX Overlay
 
-And for action cams without GPS.
+And for action cams without GPS... like my DJI OA5Pro.
 
 How about recording the route on another app and just syncing it?
 
