@@ -1,6 +1,6 @@
 ---
 title: "Trying a Nuxt Theme [and a SSG Recap]"
-date: 2025-02-22T10:20:21+01:00
+date: 2025-02-23
 draft: false
 tags: ["dev"]
 description: 'Testing NUXT Themes. Looking back to the learnings with other SSGs like HUGO and Astro. Creating a website for a moto blogger.'
@@ -43,6 +43,24 @@ Now you can spin a server and make **ASTRO [Remote Development](https://jalcocer
 ## Moto Blogger Setup
 
 The **theme** - https://github.com/JAlcocerT/horizon
+
+There was a Windows setup in between, so...
+
+
+1. Install node and npm (nodejs.org and docs.npmjs.org)
+2. Install git and vscode
+3. Install firebase CLI - in windows that means pasting the .exe to the repo folder and adding it as gitignore
+4. .\firebase init
+
+**In a nutshell:**
+
+```sh
+npm run dev #to see locally the changes
+npm run build #to render the site to /dist
+firebase deploy #to push dist to proyectorutasmoto.web.app
+```
+
+Next steps - To link a custom domain
 
 Which original (and fantastic) job was done by https://github.com/Boston343/horizon and released under GPL3.0
 
