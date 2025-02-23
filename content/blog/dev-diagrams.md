@@ -11,6 +11,8 @@ url: 'how-to-use-mermaid-diagrams'
 
 ## MermaidJS
 
+A game changer for documenting processes and architecture diagrams:
+
 * https://mermaid.live/
 
 **Example** A top down flow chart:
@@ -24,11 +26,17 @@ graph TD;
     Terminal-->APT/NALA;
 ```
 
+Dont be afraid, the **MermaidJS docs are just amazing** to follow: https://mermaid.js.org/intro/
+
 
 ## Other Diagram Tools
 
-1. Python Diagrams
-2. DrawIO
+How could it not be a possibility with Python?
+1. [Python Diagrams](https://fossengineer.com/free-diagram-tools/#python-diagrams)
+
+And if you want, you have a SelfHosted option:
+
+2. [DrawIO](https://fossengineer.com/selfhosting-drawio-with-docker/)
 
 {{< callout type="info" >}}
 These tools play great with **PPTs as a code**: SliDev, Remark, MARP

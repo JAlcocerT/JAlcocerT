@@ -8,6 +8,8 @@ draft: false
 
 An **overview of a workflow** is worth...a lot.
 
+It just summarizes a lot of information.
+
 ## Diagrams for All
 
 You can make AI make these diagrams for you.
@@ -22,7 +24,7 @@ I discovered mermaidJS diagrams thanks to [HUGO SSG](https://jalcocert.github.io
 
 Thanks to mermaidJs, we can make cool **diagrams as a code**
 
-And you can use it for free at: <mermaid.live>
+And you can use it for free at: https://mermaid.live/edit
 
 ### Python Diagrams
 

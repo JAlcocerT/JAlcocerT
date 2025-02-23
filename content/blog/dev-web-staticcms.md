@@ -1,9 +1,9 @@
 ---
 title: "Having a look to Static CMS"
-date: 2025-03-10
+date: 2025-03-20
 draft: false
 tags: ["dev"]
-description: 'KeyStatic. Creating a website for a moto blogger.'
+description: 'KeyStatic. Creating a website for a moto blogger. Now with a cool user interface.'
 url: 'understanding-static-cms'
 ---
 

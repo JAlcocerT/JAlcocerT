@@ -1,9 +1,9 @@
 ---
-title: "Trying a Nuxt Theme [and a SSG Recap]"
-date: 2025-02-23
+title: "Trying new SSGS Nuxt & VitePress [and a SSG Recap]"
+date: 2025-03-23
 draft: false
 tags: ["dev"]
-description: 'Testing NUXT Themes. Looking back to the learnings with other SSGs like HUGO and Astro. Creating a website for a moto blogger.'
+description: 'Testing NUXT & VitePress Themes. Looking back to the learnings with other SSGs like HUGO and Astro.'
 url: 'trying-nuxt-themes'
 ---
 
@@ -39,34 +39,22 @@ npm -v    # Should show npm version - 10.8.2
 
 Now you can spin a server and make **ASTRO [Remote Development](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker)** in it.
 
+## Nuxt SSG
 
-## Moto Blogger Setup
+Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.
 
-The **theme** - https://github.com/JAlcocerT/horizon
+* https://github.com/nuxt/nuxt
 
-There was a Windows setup in between, so...
+> MIT | The Intuitive Vue Framework.
 
 
-1. Install node and npm (nodejs.org and docs.npmjs.org)
-2. Install git and vscode
-3. Install firebase CLI - in windows that means pasting the .exe to the repo folder and adding it as gitignore
-4. Install npm firebase package
-4. .\firebase init
+## VitePress SSG
 
-**In a nutshell:**
+VitePress is a Vue-powered static site generator and a spiritual successor to VuePress, built on top of Vite.
 
-```sh
-npm run dev #to see locally the changes
-npm run build #to render the site to /dist
-firebase deploy #to push dist to proyectorutasmoto.web.app
-```
+* https://github.com/vuejs/vitepress
 
-> There you go: `proyectorutasmoto.web.app`
-
-Next steps - To link a custom domain
-
-Which original (and fantastic) job was done by https://github.com/Boston343/horizon and released under GPL3.0
-
+> MIT | Vite & Vue powered static site generator.
 
 ---
 
