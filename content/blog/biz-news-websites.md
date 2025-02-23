@@ -1,6 +1,6 @@
 ---
 title: "Features for a Professional News Website"
-date: 2025-02-22
+date: 2025-04-22
 draft: false
 tags: ["Web"]
 description: "Creating a News focused Website with app directory (with Astro SSG)."

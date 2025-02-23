@@ -126,6 +126,8 @@ Hey, but why would you want to...
 <!-- 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Py_RoutePolar.ipynb) -->
 
+You can try the Polar Devices Metadata extractions:
+
 You can also open it with: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Py_RoutePolar.ipynb)
 
 <!-- ![PhyPhox Karting](/blog_img/iot/phyphox-android.jpg) -->
