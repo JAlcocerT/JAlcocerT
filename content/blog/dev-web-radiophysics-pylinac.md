@@ -1,6 +1,6 @@
 ---
-title: "A Website for a Phd"
-date: 2025-02-22T13:20:21+01:00
+title: "A Website for a Phd: Pylinac and QaTrack+"
+date: 2025-02-23T13:20:21+01:00
 draft: false
 tags: ["dev"]
 description: 'Helping improve scientific knowledge. Improving the day to day of a researcher.'
@@ -14,6 +14,13 @@ An image analysis library for **medical physics**
 * https://github.com/jrkerns/pylinac
 
 > MIT | An image analysis library for medical physics
+
+And also...
+
+* https://github.com/qatrackplus/qatrackplus
+
+> QATrack+ is an open source program for managing the quality control program of radiotherapy and diagnostic imaging clinics.
+
 
 ---
 
@@ -29,6 +36,17 @@ As the HUGO Hextra theme is just ready to roll:
 * https://imfing.github.io/hextra/docs/guide/shortcodes/tabs/
 
 
+1. Download Go: from `go.dev`
+2. Download HUGO from github releases: 0.117 as its the ones that works on Github Actions
+3. Get in love with Hextra Hugo Theme
+4. Discover mermaid.js (with preview at mermaid.live) and get in love with Katex
+
+
+Commands to know
+
+```sh
+hugo server #.\hugo server if you are on windows
+hugo #to render if you want to build it locally
 ---
 
 ## Cool stuff for Researchers

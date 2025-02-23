@@ -50,6 +50,7 @@ There was a Windows setup in between, so...
 1. Install node and npm (nodejs.org and docs.npmjs.org)
 2. Install git and vscode
 3. Install firebase CLI - in windows that means pasting the .exe to the repo folder and adding it as gitignore
+4. Install npm firebase package
 4. .\firebase init
 
 **In a nutshell:**
@@ -59,6 +60,8 @@ npm run dev #to see locally the changes
 npm run build #to render the site to /dist
 firebase deploy #to push dist to proyectorutasmoto.web.app
 ```
+
+> There you go: `proyectorutasmoto.web.app`
 
 Next steps - To link a custom domain
 
