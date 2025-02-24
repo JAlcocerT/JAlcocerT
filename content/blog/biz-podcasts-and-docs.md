@@ -15,7 +15,7 @@ url: 'tech-for-podcast'
 
 > MIT | 🌟 Build beautiful, accessible, high-performance documentation websites with Astro
 
-What I like about this theme?
+**What I like about this Starlight theme?**
 
 1. Doc like interface
 2. Internationalization (different languages with `i18n`)
@@ -31,6 +31,12 @@ npm run dev
 
 > And...thats all: `localhost:4321`
 
+**Whats missing (imo)?**
+
+1. Blog Interface
+2. Pages Interface
+3. Tag system
+4. Some kind of directory Template to search
 
 ### PodCast Website
 

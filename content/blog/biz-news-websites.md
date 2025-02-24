@@ -1,10 +1,9 @@
 ---
 title: "Features for a Professional News Website"
-date: 2025-04-22
+date: 2025-03-22
 draft: false
 tags: ["Web"]
 description: "Creating a News focused Website with app directory (with Astro SSG)."
-summary: 'Astro news website creation'
 url: 'creating-news-website'
 ---
 
@@ -29,3 +28,6 @@ For something more personal, id have a look to: https://github.com/saicaca/fuwar
 Maybe writing and selling a book?
 
 This theme could be interesting - https://github.com/candidosales/landing-page-book-astro-svelte-tailwind
+
+
+---

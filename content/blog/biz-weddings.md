@@ -433,9 +433,14 @@ With an API...
 
 ### Alternatives to Weddingshare
 
-The good thing about Weddingshare, is that it creates a QR to point to the url.
+The good thing about Weddingshare, is that it creates a **QR** to point to the url.
 
-But, it does not support HEIC files.
+
+{{< callout type="info" >}}
+You can also make [QR's with Python](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt)!
+{{< /callout >}}
+
+But, it does NOT support `.HEIC` files.
 
 And having the https was a headache.
 

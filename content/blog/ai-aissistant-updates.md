@@ -184,6 +184,28 @@ With Whisper
 ![AIssistant](/blog_img/apps/whisper.png)
 
 
+---
+
+## Conclusions
+
+If that was not enough...
+
+How about adding a **QR tool**?
+
+Like the one I used for [this wedding](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt).
+
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+Because the [PIL package](https://pypi.org/project/pillow/) counts as AI, doesnt it?
+
+
+
+---
+
+
+## FAQ
+
 ### Multichat
 
 
@@ -191,3 +213,4 @@ With Whisper
   {{< card link="https://jalcocert.github.io/JAlcocerT/MultiChat/" title="MultiChat" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
   {{< card link="https://github.com/JAlcocerT/MultiChat" title="MultiChat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the MultiChat" >}}
 {{< /cards >}}
+
