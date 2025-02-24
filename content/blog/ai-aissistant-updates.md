@@ -183,7 +183,6 @@ With Whisper
 
 ![AIssistant](/blog_img/apps/whisper.png)
 
-
 ---
 
 ## Conclusions
@@ -200,6 +199,9 @@ Like the one I used for [this wedding](https://jalcocert.github.io/JAlcocerT/sof
 Because the [PIL package](https://pypi.org/project/pillow/) counts as AI, doesnt it?
 
 
+<!-- {{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/Portfolio/" title="Portfolio Links ↗" icon="user" >}}
+{{< /cards >}} -->
 
 ---
 
@@ -213,4 +215,3 @@ Because the [PIL package](https://pypi.org/project/pillow/) counts as AI, doesnt
   {{< card link="https://jalcocert.github.io/JAlcocerT/MultiChat/" title="MultiChat" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
   {{< card link="https://github.com/JAlcocerT/MultiChat" title="MultiChat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the MultiChat" >}}
 {{< /cards >}}
-

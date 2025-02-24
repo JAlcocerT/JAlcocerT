@@ -1,6 +1,6 @@
 ---
 title: "Understanding Algebra"
-date: 2025-04-27T23:20:21+01:00
+date: 2025-12-27T23:20:21+01:00
 draft: true
 tags: ["DSc"]
 description: ''

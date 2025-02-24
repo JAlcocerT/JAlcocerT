@@ -4,7 +4,6 @@ date: 2024-08-03T23:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'How to use SpaCy with Python as NER. Compared with LLMs and Detoxify.'
-summary: 'Spacy Python Ner'
 url: 'nlp-tools'
 ---
 
@@ -28,11 +27,13 @@ Soacy can be used to detect **PII information**!
 
 * https://pypi.org/project/spacy/
 
+You need to download the model first:
+
 ```sh
 python -m spacy download en_core_web_sm
 ```
 
-Example:
+Example to use SPacy for PII:
 
 ```py
 import spacy
@@ -74,6 +75,44 @@ Nowadays you can also **use LLMs** for this kind of tasks.
 
 But...it is always great to keep handy this kind of tools.
 
+## FAQ
+
 ### Interesting Offline Tools - Translations
 
 * https://github.com/LibreTranslate/LibreTranslate
+
+### What about n-Grams?
+
+In Natural Language Processing (NLP), an n-gram is a contiguous sequence of *n* items from a given sample of text or speech. The items can be characters, words, or even syllables.
+
+{{% details title="A breakdown of what n-grams are? 🚀" closed="true" %}}
+
+
+* **"n" represents the number of items:**
+    * A 1-gram (or unigram) is a single item.
+    * A 2-gram (or bigram) is a sequence of two items.
+    * A 3-gram (or trigram) is a sequence of three items.
+    * And so on...
+
+* **Items can be:**
+    * **Words:** "The cat sat" would have the following word-based bigrams: "The cat", "cat sat".
+    * **Characters:** "hello" would have the following character-based trigrams: "hel", "ell", "llo".
+
+* **Purpose:**
+    * N-grams are used for various NLP tasks, including:
+        * **Language modeling:** Predicting the next word in a sequence.
+        * **Text classification:** Categorizing text into different topics.
+        * **Spell checking:** Identifying and correcting spelling errors.
+        * **Machine translation:** Translating text from one language to another.
+        * **Sentiment analysis:** Determining the emotional tone of text.
+        * **Information retrieval:** Searching for relevant documents.
+
+* **How they work:**
+    * N-grams capture the statistical properties of a text.
+    * By analyzing the frequency of n-grams, models can learn patterns and relationships between words or characters.
+    * For example, in language modeling, a model might learn that the bigram "New York" occurs frequently, and therefore, when it sees "New", it's likely to predict "York".
+
+
+{{% /details %}}
+
+In essence, n-grams provide a simple yet powerful way to analyze and understand the structure of language.

@@ -1,6 +1,6 @@
 ---
 title: "Images with AI"
-date: 2025-04-26
+date: 2025-05-26
 draft: false
 tags: ["AI"]
 description: ""
