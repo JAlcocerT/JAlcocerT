@@ -12,7 +12,7 @@ url: firebat-ak2-plus-minipc-review
 
 A very interesting **Small Factor PC** with
 
-* Intel N100 (4 cores) 8GB@2600mhz 256GB (M.2 2280 SSD)
+* Intel N100 (4 cores, 4 threads) 8GB@2600mhz 256GB (M.2 2280 SSD)
 * Dimensions: 13x13x4,5cm = **0,76L**
 * Cost: ~75$
 
@@ -479,35 +479,21 @@ Explore more apps:
 
 The Firebat is a very compact MiniPC, which brings enough power for a home server.
 
-It allows for decent quality Video reproduction
+It allows for decent quality Video reproduction, upgradable RAM and allows for 2.5 drive (great for an extra 2TB HDD).
 
-Dont forget to keep your server updated frequently!
+I would say that at the price I got it, its awsome **value for money**.
 
-```sh
-sudo apt update && sudo apt upgrade -y
-```
 
 ---
 
 ## FAQ
 
-* Enter the FireBat AK2 Plus MiniPC **bios by pressing ESC**.
+1. Enter the FireBat AK2 Plus MiniPC **bios by pressing ESC**.
+2. Dont forget to keep your server updated frequently!
 
-
-{{< details title="Other Intersting Linux 📌" closed="true" >}}
-
-* Whonix / Tails  - Debian based
-* Qubes - Fedora based
-
-{{< /details >}}
-
-
-{{< details title="Customize Linux Visuals 📌" closed="true" >}}
-
-I love to start with the **Garuda default wallpaper**.
-
-
-{{< /details >}}
+```sh
+sudo apt update && sudo apt upgrade -y
+```
 
 {{< details title="Gaming on the Firebat with Linux 📌" closed="true" >}}
 

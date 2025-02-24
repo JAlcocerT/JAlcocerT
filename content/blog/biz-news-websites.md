@@ -8,7 +8,7 @@ url: 'creating-news-website'
 ---
 
 
-https://github.com/oxygenna-themes/foxi-astro-theme/
+* https://github.com/oxygenna-themes/foxi-astro-theme/
 
 > MIT |  Foxi is an Astro theme crafted with Tailwind CSS, designed for blazing-fast performance and seamless user experience. Perfect for creating modern, responsive SaaS websites with minimal effort. 
 

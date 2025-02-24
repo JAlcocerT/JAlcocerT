@@ -17,15 +17,16 @@ Lately, I have been giving [a try to cloud providers](https://jalcocert.github.i
 
 Particularly, to Hetzner.
 
-Is it really worth to SelfHost?
+Is it really worth to SelfHost on our own hardware?
 
 Or can we just use **a Cloud Server for similar performance/price?**
 
-This is what we will be looking at today.
+This is what we will be looking at today:
 
 * BMax B4
 * Raspberry Pi 4's (2GB and 4GB)
- And make [some conclusions](#conclusions)
+
+And make [some conclusions](#conclusions)
 
 
 <!-- 
@@ -55,7 +56,7 @@ You can have a reference a very popular referece, a pen:
 The **RAM is not soldered** in the BMAX B4, and also you can **add an additional 2,5 drive** (screws not included).
 
 {{< callout type="warning" >}}
-The SSD drive it comes with **is not 2280** (I got surprised with that)
+The SSD drive it comes with **is NOT 2280** (I got surprised with that)
 {{< /callout >}}
 
 ![Bmax B4](/blog_img/mini_pc/bmax.jpg)

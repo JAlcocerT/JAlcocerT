@@ -248,7 +248,7 @@ Do you need a powerfull VPS?
 
 Not really, see how much im using a CX22: Portainer + NGINX + Wedding share **~500mb RAM**
 
-![FireBat NGINX Example](/blog_img/selfh/weddingshare-hetzner.png)
+![NGINX Example](/blog_img/selfh/weddingshare-hetzner.png)
 
 
 
@@ -267,7 +267,7 @@ Not really, see how much im using a CX22: Portainer + NGINX + Wedding share **~5
 
 * In the SSL tab, you will need to Add a **DNS Challenge**, for Cloudflare would be:
 
-![FireBat NGINX Example](/blog_img/mini_pc/DNS_Challenge_Cloudflare.png)
+![DNS Challenge CF](/blog_img/mini_pc/DNS_Challenge_Cloudflare.png)
 
 * With Cloudflare, you will need their [API Token from here](https://dash.cloudflare.com/profile/api-tokens)
   * Go to **Edit zone DNS**. Zone Resources -> Include all zones (or a specific domain only) and create it. Add it as `dns_cloudflare_api_token=`
@@ -465,7 +465,7 @@ networks:
 
 Not like this:
 
-![FireBat NGINX Example](/blog_img/selfh/cloudflare-hetzner-nginx.png)
+![CF Hetzner NGINX](/blog_img/selfh/cloudflare-hetzner-nginx.png)
 
 But like this, **also with the CNAME record for CF** if using CF:
 

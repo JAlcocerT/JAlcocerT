@@ -45,6 +45,11 @@ cpx11 hetzner: ~5245Mib/sec
 
 the Firebat got me 4077Mib/sec
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4c/4t - The Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
+{{< /cards >}}
+
 ## GPU Benchmark
 
 Forget about 4k playback with the Pi 4's
@@ -162,3 +167,23 @@ sudo nano /etc/fstab #save
 sudo mount -a  # Test the /etc/fstab entry
 df -h #see it mounted
 ```
+
+
+---
+
+## FAQ
+
+
+{{< details title="Other Intersting Linux 📌" closed="true" >}}
+
+* Whonix / Tails  - Debian based
+* Qubes - Fedora based
+
+{{< /details >}}
+
+
+{{< details title="Customize Linux Visuals 📌" closed="true" >}}
+
+I love to start with the **Garuda default wallpaper**.
+
+{{< /details >}}
