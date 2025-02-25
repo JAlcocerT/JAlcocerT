@@ -56,7 +56,7 @@ Everything is covered at my [Forked Repository **phiData**](https://github.com/J
 | **LLMs**            | The LLMs that we will run are open sourced  ✅                                                                               |
 
 
-This is what we will get:
+This is what we will get as our Youtube Summarizer Web App UI:
 
 ![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png)
 

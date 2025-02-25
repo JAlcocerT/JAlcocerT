@@ -1,5 +1,5 @@
 ---
-title: "How to use LangChain to chat with your PDFs - Streamlit RAG"
+title: "Use LangChain to Chat with your PDFs - Streamlit RAG"
 date: 2024-03-07T23:20:21+01:00
 draft: false
 cover:
@@ -7,7 +7,7 @@ cover:
     alt: "ChatPDF" # alt text
     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
 tags: ["Docker","Gen-AI","Python","Dev","Self-Hosting"]
-description: 'How to create a Streamlit App to chat with your docs by using OpenAI API + FAISS Vector Store.'
+description: 'How to create a Streamlit Web App to chat with your docs by using OpenAI API + FAISS Vector Store.'
 url: 'how-to-chat-with-pdfs'
 ---
 
@@ -186,14 +186,20 @@ volumes:
   ai_chat_multiple_pdf:  
 ```
 
-If you followed along, the PDF chat it is available at `localhost:8501` and looks like:
+If you followed along, the **PDF chat UI** it is available at `localhost:8501` and looks like:
 
-![Streamlit Chat with PDF with OpenAI](/img/Dev/streamlit-pdf-chat.png)
+![Streamlit Chat with PDF with OpenAI](/blog_img/Dev/streamlit-pdf-chat.png)
 
 https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png
 
 
 ![Streamlit MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png)
+
+
+![Streamlit MultiChat](https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png)
+
+
+
 ---
 
 ## FAQ

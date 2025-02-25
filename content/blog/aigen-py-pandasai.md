@@ -88,8 +88,13 @@ pip install pandasai==2.2.12
 ```sh
 export OPENAI_API_KEY="sk-..." #linux
 ```
+<!-- 
+[![OpenInColab](/img/OpenInColab.svg#center)](https://colab.research.google.com/github/TirendazAcademy/PandasAI-Tutorials/blob/main/Intro-to-PandasAI.ipynb) 
+-->
 
-[![OpenInColab](/img/OpenInColab.svg#center)](https://colab.research.google.com/github/TirendazAcademy/PandasAI-Tutorials/blob/main/Intro-to-PandasAI.ipynb)
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TirendazAcademy/PandasAI-Tutorials/blob/main/Intro-to-PandasAI.ipynb)
+
 
 [![PandasAI](https://img.shields.io/badge/PandasAI-1.2.0-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white#center)](https://pandas-ai.com/)
 

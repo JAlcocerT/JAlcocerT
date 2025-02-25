@@ -651,3 +651,7 @@ It's not just MySQL or MariaDB...
 Hue supports a wide variety of database systems and provides a rich interface for working with SQL, including query editors, data browsers, and visualization tools.  It's a more comprehensive tool than Huey (the DuckDB UI) and can be used with many different database backends.
 
 {{< /details >}}
+
+### Other Tech Talks
+
+{{< youtube id="vukAQPCv7Tw" autoplay="false" >}}

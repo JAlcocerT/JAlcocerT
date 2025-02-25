@@ -177,6 +177,10 @@ https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web
 
 https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/
 
+
+![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png)
+
+
 /blog_img/GenAI/yt-summaries/yt-summaries-groq_example.png
 
 ![Groq Youtube Summaries Example](/blog_img/GenAI/yt-summaries/yt-summaries-groq_example.png)
@@ -218,6 +222,12 @@ Probably more NoCode stuff: https://www.youtube.com/@AI-GPTWorkshop/videos
 ## FAQ
 
 ### Multichat
+
+
+{{< cards >}}
+  {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multichat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Streamlit Multichat" >}}
+{{< /cards >}}
 
 
 {{< cards >}}

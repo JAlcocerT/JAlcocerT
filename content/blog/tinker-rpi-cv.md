@@ -14,6 +14,10 @@ It is time to have **a companion for my Raspberry Pi 4**.
 
 Yes, a camera!
 
+![Pi Camera](/blog_img/hardware/RPi4_2gb_cam.jpg)
+
+
+
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Get Started with a RPi" >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/pi-vs-orange/#the-raspberry-pi-4" title="A Raspberry Pi? A SBC?" >}}

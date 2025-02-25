@@ -40,7 +40,7 @@ If you want, you can try these projects, first:
 3. And [install Python dependencies](/guide-python/#how-to-install-python-dependencies)
 * We will be using venv first and later create a Docker [Container version with GH Ci/CD](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat) for SelfHosting the GenAI App. 
 
-See the related repository and streamlit app:
+See the related MultiChat repository and streamlit web app:
 
 {{< cards >}}
   {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
@@ -55,10 +55,10 @@ See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit
 
 ### Streamlit Chat with OpenAI
 
-I first had a look to this existing project: 
+I first had a look to this existing project that used OpenAI API Key:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/create-chatgpt-clone-streamlit/" title="MultiChat UI" image="blog_img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-chatgpt-clone-streamlit/" title="MultiChat UI" image="/blog_img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png" subtitle="How the final multichat UI looks like" >}}
   {{< card link="https://github.com/JAlcocerT/openai-chatbot" title="OpenAI Chatbot" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code fork on Github" >}}
 {{< /cards >}}
 

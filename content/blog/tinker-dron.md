@@ -50,7 +50,7 @@ Credits to [Murtaza's YT Video](https://www.youtube.com/watch?v=LmEcyQnfpDA&t=12
 
 Curious about CV, but dont have this kind of dron yet?
 
-A Pi camera its about ~5$, much more affordable way to enter that world!
+A **Pi camera** its about ~5$, much more affordable way to enter the computer vision world!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/" title="Pi Camera" image="/blog_img/hardware/RPi4_2gb_cam.jpg" subtitle="Try `OpenCV` and `yolov8` with the Pi!" >}}
