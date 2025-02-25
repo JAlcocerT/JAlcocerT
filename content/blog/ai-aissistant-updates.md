@@ -3,7 +3,7 @@ title: "Streamlit and Assistant Updates"
 date: 2025-03-10
 draft: false
 tags: ["dev"]
-summary: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT) Generator, Speech Rater...'
+description: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT) Generator, Speech Rater...'
 url: 'ai-assistant-streamlit'
 ---
 

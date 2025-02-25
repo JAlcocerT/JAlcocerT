@@ -40,7 +40,7 @@ They are executed on push on certain branches / manually - All as per your GHA W
 And if you need 101 on those SSGs:
 
 1. [HUGO 101](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)
-2. [Astro 101](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) and https://jalcocert.github.io/JAlcocerT/using-astro-templates/
+2. [Astro 101](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) and https://jalcocert.github.io/JAlcocerT/using-astro-templates/ and also https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/
 
 ---
 

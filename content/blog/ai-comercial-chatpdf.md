@@ -188,15 +188,21 @@ volumes:
 
 If you followed along, the **PDF chat UI** it is available at `localhost:8501` and looks like:
 
-![Streamlit Chat with PDF with OpenAI](/blog_img/Dev/streamlit-pdf-chat.png)
+<!-- ![Streamlit Chat with PDF with OpenAI](/blog_img/Dev/streamlit-pdf-chat.png)
 
 https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png
 
 
-![Streamlit MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png)
+![Streamlit MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/streamlit-multichat.png) -->
 
-
+<!-- 
 ![Streamlit MultiChat](https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png)
+
+ -->
+
+![Streamlit Chat PDF Diagram - AlejandroAO](https://raw.githubusercontent.com/JAlcocerT/ask-multiple-pdfs/blob/main/docs/PDF-LangChain.jpg)
+<!-- 
+https://github.com/JAlcocerT/ask-multiple-pdfs/blob/main/docs/PDF-LangChain.jpg -->
 
 
 
