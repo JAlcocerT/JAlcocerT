@@ -1,7 +1,7 @@
 ---
 title: "Success at Data Analytics Team Management"
 date: 2022-05-20T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Outro"]
 description: 'The art of fostering collaboration, driving performance, and leading successful data analytics teams'
 summary: 'Enhance your leadership capabilities and drive team success in the complex field of data analytics. The essential management skills, fostering collaboration, strategic communication, continuous team development, and productive meeting facilitation. Unlock the full potential of your team, and set the stage for innovation and excellence in your data-driven career.'
@@ -35,7 +35,7 @@ This topic alone, can cover tons of books, [but there are some basic concepts th
     * Share what you learn with the rest of the team
 
 * Focus on the result:
-    * Keep in mind the desired outcome when planning tasks, [organizing meetings](https://fossengineer.com/effective-meetings-data-analytics/) or coordinating activities.
+    * Keep in mind the desired outcome when planning tasks, [organizing meetings](/JAlcocerT/effective-meetings-data-analytics/) or coordinating activities.
 
 * Review your knowledge about [time management techniques](https://fossengineer.com/time-management-data-analytics):
     * Pomodoro:
@@ -163,7 +163,7 @@ Moreover, open questions signal to others that their opinions are valued and the
 ### Meeting Facilitation
 
 * Cultivate the ability to initiate discussions effectively, establishing the purpose and significance of a meeting with either an internal team or client's team clearly and succinctly.
-* Prioritize the creation and maintenance of a [well-defined meeting agenda](https://fossengineer.com/effective-meetings-data-analytics/#as-a-meeting-owner), ensuring it is adhered to within the specified timeframe. **Build agreements on specific outcomes and actions**.
+* Prioritize the creation and maintenance of a [well-defined meeting agenda](/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner), ensuring it is adhered to within the specified timeframe. **Build agreements on specific outcomes and actions**.
 * Actively seek out clarifications, provide insights, and consistently summarize key points throughout the discussion to keep the conversation focused and productive.
 * Maintain a keen attentiveness to others' inputs, accurately interpreting their messages and responding appropriately to maintain effective communication.
 * Be prepared to create [simple](https://fossengineer.com/business-analytics-skills/#diagrams) yet structured and [visually engaging materials](https://fossengineer.com/business-intelligence-data-analytics/) that aid in conveying your points clearly and effectively.

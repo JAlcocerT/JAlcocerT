@@ -36,7 +36,7 @@ npm run dev
 1. Blog Interface
 2. Pages Interface
 3. Tag system
-4. Some kind of directory Template to search
+4. Some kind of "directory Template" to search
 
 ### PodCast Website
 
@@ -62,7 +62,7 @@ I was (one more time) amazed on what people is able to create:
 
 Its crazy how it summarizes the streamlit repo...
 
-https://www.gitpodcast.com/streamlit/streamlit
+See it yourself: https://www.gitpodcast.com/streamlit/streamlit
 
 
 

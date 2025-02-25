@@ -4,7 +4,6 @@ date: 2025-03-14T03:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssistant for Tech.'
-summary: 'A recap on SQL, PySpark and visualizations tools.'
 url: 'data-analytics-concepts'
 ---
 

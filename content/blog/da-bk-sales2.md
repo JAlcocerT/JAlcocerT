@@ -1,7 +1,7 @@
 ---
 title: "Data Analytics Branding: The Ultimate Guide to Stand Out in a Data-Driven World"
 date: 2021-07-24T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Outro"]
 description: 'Building a strong data analytics brand with a targeted niche, compelling UVP, and strategic partnerships'
 summary: 'Learn to build a powerful data analytics brand by defining your niche, understanding your audience, crafting a unique value proposition, creating valuable content, and forming strategic partnerships. Establish your expertise and stand out in the competitive world of data-driven decision-making.'

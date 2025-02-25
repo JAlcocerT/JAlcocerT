@@ -8,7 +8,6 @@ cover:
   caption: "Using LLMs to chat with databases" # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
 description: 'How to use Langchain to chat with a DB. How I prepared for a Tech Talk with AI.'
-summary: 'Chat with DB Tech Talk'
 url: 'langchain-chat-with-database'
 ---
 

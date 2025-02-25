@@ -1,5 +1,5 @@
 ---
-title: "How to use LangChain to chat with your PDFs"
+title: "How to use LangChain to chat with your PDFs - Streamlit RAG"
 date: 2024-03-07T23:20:21+01:00
 draft: false
 cover:
@@ -7,8 +7,7 @@ cover:
     alt: "ChatPDF" # alt text
     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
 tags: ["Docker","Gen-AI","Python","Dev","Self-Hosting"]
-description: 'A Streamlit RAG to Chat with PDFs'
-summary: 'How to create a Streamlit App to chat with your docs by using OpenAI API + FAISS Vector Store.'
+description: 'How to create a Streamlit App to chat with your docs by using OpenAI API + FAISS Vector Store.'
 url: 'how-to-chat-with-pdfs'
 ---
 

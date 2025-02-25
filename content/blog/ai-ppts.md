@@ -4,7 +4,6 @@ date: 2025-01-02
 draft: false
 tags: ["AI"]
 description: 'Creating AI Driven Presentations - PPT as code with SliDev, MarpJS, RemarkJS'
-summary: 'Using LLMs to create PPTs'
 url: 'creating-presentations-with-ai'
 ---
 
@@ -16,6 +15,8 @@ But the **AI powered PPT creator** deserves a separate post.
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent" title="AIssistant Post" image="/blog_img/apps/ai-assistant.png" subtitle="Tinkering with Streamlit to create a multi AI assistant" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service" title="AI Driven PPTs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="AIssistant to create Presentation" >}}
 {{< /cards >}}
+
+Lets use LLMs to create PPTs!
 
 
 ## Understanding PPT as a Code Frameworks

@@ -3,8 +3,7 @@ title: "Generating Images with AI - Stable Diffusion updates"
 date: 2025-10-26
 draft: false
 tags: ["AI"]
-description: ""
-summary: 'Using Stable Difussion with DreamBooth'
+description: "Using Stable Difussion with DreamBooth"
 url: 'stable-difussion-free-generation'
 ---
 

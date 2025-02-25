@@ -3,7 +3,7 @@ title: "Can [AI] be the all in one Assistant?"
 date: 2024-10-21
 draft: false
 tags: ["dev"]
-summary: 'Make AI be helpful with an AIssistant: Neuromarketer, PPT Creator... While learning to make Streamlit better.'
+description: 'Make AI be helpful with an AIssistant: Neuromarketer, PPT Creator... While learning to make Streamlit better.'
 url: 'ai-useful-yet-simple'
 ---
 

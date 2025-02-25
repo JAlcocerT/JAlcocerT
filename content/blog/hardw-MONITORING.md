@@ -21,7 +21,7 @@ So I went back to https://console.hetzner.cloud/projects to try the setup.
     * https://hub.docker.com/r/henrygd/beszel
     * https://beszel.dev/
 
-> MIT | Lightweight server monitoring hub with historical data, docker stats, and alerts.
+> MIT | Lightweight **server monitoring hub** with historical data, docker stats, and alerts.
 
 
 

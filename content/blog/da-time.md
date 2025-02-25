@@ -8,7 +8,7 @@ summary: 'Been commited to dive into Data Analytics will require that you excel 
 url: 'time-management-data-analytics'
 ---
 
-Time, it's all about Time.
+Time, it's all **about Time**.
 
 {{< callout type="info" >}}
 Be aware of the **Optimism Bias** when commiting with others (and with yourself)

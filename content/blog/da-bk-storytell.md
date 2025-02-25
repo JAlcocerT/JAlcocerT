@@ -1,7 +1,7 @@
 ---
 title: "Building Data Narratives: Storytelling in Data Analytics"
 date: 2021-07-17T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Career"]
 description: 'Techniques to improve your Story Telling and in Data Analytics'
 summary: 'How to transform complex Data into engaging narratives. Explore techniques like data visualization, context, and emotion to captivate your audience and drive decision-making. Learn how to create impactful data-driven stories that resonate with your audience.'

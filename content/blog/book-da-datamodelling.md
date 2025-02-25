@@ -292,13 +292,13 @@ A snowflake schema is a more complex design that extends the star schema by **br
 
 ### SCD (Slowly Changing Dimensions)
 
-Slow Changing Dimensions (SCDs) are a data warehousing technique used to capture, track, and manage changes to dimension data over time, ensuring accurate historical analysis and reporting.
+**Slow Changing Dimensions** (SCDs) are a data warehousing technique used to capture, track, and manage changes to dimension data over time, ensuring accurate historical analysis and reporting.
 
 In a data warehouse, dimensions are the descriptive attributes used to analyze and categorize data. However, these dimensions can change over time, and it is important to capture and preserve historical information accurately.
 
 SCDs are used to handle different types of changes to dimension data, such as updates, inserts, and deletions, while maintaining historical context. This allows analysts and decision-makers to perform trend analysis, generate reports, and gain insights into how dimension attributes evolve over time.
 
-By utilizing SCD techniques, data warehouses can effectively manage and track changes in dimension data, ensuring the accuracy and consistency of historical analysis and reporting.
+By utilizing SCD techniques, **data warehouses can effectively manage and track changes in dimension data**, ensuring the accuracy and consistency of historical analysis and reporting.
 
 * The types:
     * Type 0: date - new come, but old unchanged.

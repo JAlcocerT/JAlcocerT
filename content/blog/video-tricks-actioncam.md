@@ -1,5 +1,5 @@
 ---
-title: "More video Tricks."
+title: "More video Tricks"
 date: 2025-02-12
 draft: false
 tags: ["Dev"]

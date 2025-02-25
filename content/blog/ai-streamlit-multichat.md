@@ -8,9 +8,11 @@ cover:
   caption: "Improving a ChatGPT Clone with Streamlit." # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
 description: 'Enhancing LLM support for Streamlit-MultiChat: Grok, DeepSeep and more.'
-summary: 'Avoid LLM lock-in and the recurring subscription bills. Simply use APIs.'
 url: 'streamlit-multichat'
 ---
+
+Avoid LLM lock-in and the recurring subscription bills. **Simply use APIs**.
+
 
 {{< callout type="info" >}}
 See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit-MultiChat) 💻

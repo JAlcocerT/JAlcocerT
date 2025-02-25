@@ -1,7 +1,7 @@
 ---
 title: "Concepts to get started in Business Analytics"
 date: 2021-10-23T16:20:21+01:00
-draft: true
+draft: false
 tags: ["Career"]
 description: 'Summary - Business Analysis skills for your career in Analytics.'
 summary: 'In this post I am summarizing the must know points to level up your career in analytics. Excel at this Business Analytics skills and you will improve your workflow.'
@@ -42,11 +42,11 @@ In order to identify underlying problems and causes, the business analyst is in 
 
 Business analysts play a role in **aligning the designed and delivered solutions with the needs of stakeholders**. The activities that business analysts perform include:
 
-* [Understanding enterprise problems and goals](https://fossengineer.com/requirements-data-analytics/)
-* [Analyzing needs and solutions](https://fossengineer.com/solutions-data-analytics/)
-* [Devising strategies](https://fossengineer.com/strategies-data-analytics/)
-* [Driving change](https://fossengineer.com/planning-data-analytics)
-* [Facilitating stakeholder collaboration](https://fossengineer.com/elicitation-data-analytics/)
+* [Understanding enterprise problems and goals](/JAlcocerT/requirements-data-analytics/)
+* [Analyzing needs and solutions](/JAlcocerT/solutions-data-analytics/)
+* [Devising strategies](/JAlcocerT/strategies-data-analytics/)
+* [Driving change](/JAlcocerT/planning-data-analytics)
+* [Facilitating stakeholder collaboration](/JAlcocerT/elicitation-data-analytics/)
 
 The important thing here is, that even if your title is not estrictly BA, is it in your interest to perform such activities to deliver the best **(most meaningful) work**, I would recommend you to continue reading, no matter which job title your linkedin shows.
 

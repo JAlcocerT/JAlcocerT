@@ -12,7 +12,9 @@ url: 'systems-engineering-and-infraestructure'
 
 System engineering is a process used to design, build, and manage complex systems.
 
-It involves the use of interdisciplinary approaches to ensure that a system is built and operates as intended. System engineering is an important skill for developers to know because it helps them to design and build software that is reliable, scalable, and efficient.
+It involves the use of interdisciplinary approaches to ensure that a system is built and operates as intended.
+
+System engineering is an important skill for developers to know because it helps them to design and build software that is reliable, scalable, and efficient.
 
 **In this blog post**, we'll take a closer look at system engineering, why it matters for developers, and how it relates to CI/CD tools and processes.
 

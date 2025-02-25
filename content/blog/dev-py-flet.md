@@ -9,4 +9,4 @@ url: 'flet-apps'
 
 * https://flet.dev/
 
-> Build multi-platform apps in Python powered by Flutter
+> Build **multi-platform apps in Python** powered by Flutter

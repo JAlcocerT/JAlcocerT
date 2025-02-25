@@ -366,13 +366,16 @@ Again, notes are important, but even more important is that there is a knowledge
 
 Do you have any analysis that you would like to see but havent found it on the internet?
 
-Chances are that you can find data to do it yourself. Use the tools that you are learning to discover insights that you are curious about, that will boost your motivation to keep learning.
+Chances are that you can find data to **do it yourself**.
 
-* *For example*:
-    * I wanted to have a bigger picture on my bike routes, that led me to learn about leaflet and finally create a repository with the code to **[analyze routes.](/trip-bike-poland-hungary/)**
+Use the tools that you are learning to discover insights that you are curious about, that will boost your motivation to keep learning.
+
+*For example*:
+
+I wanted to have a bigger picture on my bike routes, that led me to learn about leaflet and finally create a repository with the code to **[analyze routes.](/trip-bike-poland-hungary/)**
 
 
-> When we share what we've learned, we equip others with new tools for exploration and understanding. As we pass on our insights, we invite fresh perspectives, sparking creativity and collaboration. 
+> When we share what we've learned, we equip others with new tools for exploration and understanding. As we pass on our insights, we invite **fresh perspectives**, sparking creativity and collaboration. 
 
 ### Broaden yours *and others* Perspectives
 

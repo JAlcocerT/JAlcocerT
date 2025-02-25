@@ -1,14 +1,10 @@
 ---
-title: "Negotiation Skills for Data Analytics"
+title: "Negotiation Skills for DAs. Ensure that requirements are met."
 date: 2023-01-29T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Outro"]
 ShowCodeCopyButtons: false
-description: 'The key negotiation skills to work in Data Analytics.'
-summary: 'Negotiation is a process of discovery, uncovering information. We need such skills to perform a superb job in analytics. Learn techniques to consider while working with others. Ensure that your requirements are met.'
-# cover:
-#     image: "https://og-playground.vercel.app/?share=XZLBcoIwEIZfJROn48Vqqog1gx5qO2MPPdUZL1yQBIgNCQNBRYZ37waKYz1l8_3Z_Nnd1DjUjGOKPSZOvkKoMJXkq7q2MUIJF3FiKBq-EPI0HHXwLJhJHhgTRSaDCmgk-aWnNn4XOQ-N0Aq0UMsyVb0aSBGrT8PTwkpcGZ730rEsjIiqjQaorP9_-RCEP3GuS8U2Wuoc9EEURTdXyPoWV07RbHqH9n-1uIS0tGl8tbaBV5ziu8pWPl7MfdyRk-DnN30BRhBBizlyb1IkpAQ-IIT0qG8eSoM8FrZim5Ndhq0ZQq0dGGaBSRCD5K_ZYjxfjqdzOXPHS7jd2Y5dp9s8u87Vx2tvYk93D53AS7sIpvXottMZRQ4Bq_WWS6lHaK9zybwJnIWkbsUjrDM7jQLTGrf1YvoKHcHdqDF17IbxQxljGgWy4CPMU30Uuyqz_0Rpo-ES29CP9MAZpiYvedP8Ag" # image path/url 
-#     caption: "Summary of ." # display caption under cover
+description: 'Negotiation is a process of discovery, uncovering information. We need such skills to perform a superb job in analytics. Learn techniques to consider while working with others.'
 url: 'negotiation-skills-data-analytics'
 ---
 

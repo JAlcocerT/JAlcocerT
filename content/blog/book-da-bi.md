@@ -8,7 +8,6 @@ summary: 'Consolidating the MUST know for your career as a Business Intelligence
 url: 'business-intelligence-data-analytics'
 ---
 
-# Business Intelligence
 
 ## Designing an Analytical Flow
 

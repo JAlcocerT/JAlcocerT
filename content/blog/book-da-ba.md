@@ -1,16 +1,15 @@
 ---
 title: "Business Skills for DA's"
 date: 2022-02-07T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Career"]
 description: 'The must have Business skills as a Data Analyst.'
 summary: 'A Quick guide for Data Analytics who want to get better on Business Analysis Skills.'
 url: 'business-skills-data-analytics'
 ---
 
-# BA Skills
 
-A Quick guide for Data Analytics who want to get better on [Business Analysis Skills](https://fossengineer.com/business-analytics-skills/).
+A Quick guide for Data Analytics who want to get better on [Business Analysis Skills](/JAlcocerT/business-analytics-skills/).
 
 <!-- ### Elicitation Techniques
 
@@ -39,7 +38,11 @@ Gathering" assumes that the requirements already exist and are ready for documen
 
 ### Estimations
 
-Effort estimation is a crucial aspect of project management, as it helps determine the resources, time, and budget required for a project. There are several methods for effort estimation, and selecting the right one depends on the project's complexity, available data, and specific requirements. Here are some common estimation techniques and when to use them:
+Effort estimation is a crucial aspect of project management, as it helps determine the resources, time, and budget required for a project.
+
+There are several methods for effort estimation, and selecting the right one depends on the project's complexity, available data, and specific requirements. 
+
+Here are some common estimation techniques and when to use them:
 
 * Expert Judgement: Leveraging the knowledge and experience of experts to estimate project efforts. This method is suitable for smaller projects or when there is limited data available for more formal estimation techniques.
 
@@ -129,7 +132,7 @@ the power of now-->
 
 ### Communication Flow
 
-* Effective Meetings - [How to conduct better meetings guide](https://fossengineer.com/effective-meetings-data-analytics/).
+* Effective Meetings - [How to conduct better meetings guide](/JAlcocerT/effective-meetings-data-analytics/).
 * Keep in mind the RACI Matrix
 
 <!-- 

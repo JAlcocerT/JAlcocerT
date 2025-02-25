@@ -25,6 +25,22 @@ https://github.com/sorrycc/awesome-javascript
 
 {{% /details %}}
 
+
+3. https://github.com/denoland/deno
+
+> A modern runtime for JavaScript and TypeScript.
+
+
+
+And now we can **run js on jupyter notebooks**!
+
+
+<!-- 
+https://www.youtube.com/watch?v=pcC4Dr6Wj2Q -->
+
+
+{{< youtube "pcC4Dr6Wj2Q" >}}
+
 ### Managing Packages for SSGs
 
 For SSGs that are using Node (like Astro), you can get to know the Docs of any **npm package** that uses typescript: <https://tsdocs.dev/>

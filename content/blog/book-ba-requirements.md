@@ -98,7 +98,7 @@ A RACI matrix helps to clearly define who is responsible for each task or decisi
 The matrix is typically displayed as a table, with each task or decision listed along the top and the stakeholders listed along the left side. Each cell in the matrix then indicates which of the four different roles applies to that particular task or decision.
 
 * **R**esponsible, **A**ccountable, **C**onsulted and **I**nformed.
-* Keep it in mind when [creating meetings](https://fossengineer.com/effective-meetings-data-analytics/).
+* Keep it in mind when [creating meetings](/JAlcocerT/effective-meetings-data-analytics/).
 
 
 > Diagrams are also useful, see `Draw.io`

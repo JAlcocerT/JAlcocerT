@@ -78,6 +78,9 @@ I mean, we can provide images as prompts!
 ## Conclusions
 
 
+### Using Blender with AI for Home Design
+
+Can Blender be some kind of homestyler, but F/OSS?
 
 ---
 

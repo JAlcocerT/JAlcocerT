@@ -8,10 +8,10 @@ cover:
     caption: "Creating a custom data chat with Python." # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
 description: 'Exploring RAGs and creating a Data Chat using LLMs via APIs. LangChain, LLamaIndex, PandasAI and HayStack compared.'
-summary: 'How to create a Python Apps to chat with your data.'
 url: 'how-to-use-rags-with-python'
 ---
 
+How to create a Python Apps to chat with your data?
 
 {{< callout type="info" >}}
 The **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** 💻 

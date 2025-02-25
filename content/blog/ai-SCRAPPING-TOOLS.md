@@ -3,8 +3,7 @@ title: "Testing AI Scrapping projects: GPT-Crawler"
 date: 2025-12-31
 draft: true
 tags: ["Dev","Python"]
-description: 'How to use '
-summary: 'How I Test AI Projects'
+description: 'How to use . Compared with BS4, ...'
 url: 'ai-projects-scrapping'
 ---
 
@@ -79,7 +78,7 @@ Because of its simplicity and permissiveness, the ISC license is favored for pro
 
 ## Browserless
 
-https://github.com/browserless/browserless
+* https://github.com/browserless/browserless
 
 >  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
 

@@ -93,4 +93,4 @@ Several techniques can aid in planning and monitoring:
 
 For project planning and monitoring, consider using tools like:
 
-* Leantime: An open-source project management tool.
+* [Leantime](https://fossengineer.com/selfhosting-Leantime-docker/): An open-source project management tool.

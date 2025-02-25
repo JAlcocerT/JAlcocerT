@@ -12,30 +12,36 @@ url: 'lean'
 
 Lean is a management philosophy that originated at Toyota and is now used by organizations (and not only) around the world.
 
-At its core, Lean is focused on creating value for customers by eliminating waste and continuously improving processes.
+At its core, Lean is focused on creating value for customers by eliminating waste and **continuously improving processes**.
 
 ### The Lean improvement cycle
 
-The Lean improvement cycle, also known as the **PDCA** (Plan-Do-Check-Act) cycle, is a continuous improvement process used in Lean management. The cycle consists of four steps. Here's a brief overview of each step:
+The Lean improvement cycle, also known as the **PDCA** (Plan-Do-Check-Act) cycle, is a continuous improvement process used in Lean management.
 
-* {{< dropdown title="Plan" closed="true" >}}
+The cycle consists of four steps:
+
+{{< dropdown title="Plan" closed="true" >}}
+
 The Plan step involves identifying the problem or opportunity for improvement, and developing a plan to address it. This can involve defining the scope of the problem, setting goals and objectives, and determining the resources and activities required to achieve them. The goal of the Plan step is to develop a clear and actionable plan that addresses the problem or opportunity for improvement.
+
 {{< /dropdown >}}
 
-* {{< dropdown title="Do" closed="true" >}}
+{{< dropdown title="Do" closed="true" >}}
 The Do step involves implementing the plan developed in the previous step. This can involve testing the plan on a small scale, and making any necessary adjustments before implementing it more broadly. The goal of the Do step is to put the plan into action and test its effectiveness.
 {{< /dropdown >}}
 
 
-* {{< dropdown title="Check" closed="true" >}}
+{{< dropdown title="Check" closed="true" >}}
 The Check step involves evaluating the results of the implementation to determine whether the plan was effective in addressing the problem or opportunity for improvement. This can involve collecting and analyzing data, and comparing the results to the goals and objectives established in the Plan step. The goal of the Check step is to determine whether the plan was effective, and identify any areas for improvement.
 {{< /dropdown >}}
 
-* {{< dropdown title="Act" closed="true" >}}
+{{< dropdown title="Act" closed="true" >}}
 The Act step involves making any necessary adjustments to the plan or the implementation based on the results of the Check step. This can involve modifying the plan to address any issues or problems identified during the implementation, and implementing the revised plan on a larger scale. The goal of the Act step is to incorporate the lessons learned from the Check step into the plan, and continually improve the process.
 {{< /dropdown >}}
 
-The Lean improvement cycle is a continuous process, and once the Act step is completed, the cycle begins again with the Plan step. The goal is to continually identify areas for improvement, develop and implement plans to address them, and evaluate the results to ensure that the improvements are effective and sustainable.
+The Lean improvement cycle is a continuous process, and once the Act step is completed, the cycle begins again with the Plan step.
+
+The goal is to continually identify areas for improvement, develop and implement plans to address them, and evaluate the results to ensure that the improvements are effective and sustainable.
 
 ### The 5 Lean Principles
 
@@ -60,6 +66,7 @@ The fourth Lean principle is to strive for perfection by [continuously improving
 
 An example of applying this principle to software development would be to implement a continuous improvement process, such as the PDCA (Plan-Do-Check-Act) cycle, to identify areas for improvement and make iterative changes to the development process.
 {{< /dropdown >}}
+
 
 * {{< dropdown title="Respect" closed="true" >}}
 The fifth Lean principle is to **respect the people doing the work and empower them** to make improvements to the development process.
