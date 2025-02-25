@@ -397,7 +397,7 @@ networks:
 
 This requires ~309/1.87GB.
 
-And for DNS Challenge with Cloudflare:
+And for **DNS Challenge** with Cloudflare:
 
 You will need their [API Token from here](https://dash.cloudflare.com/profile/api-tokens)
 
@@ -498,6 +498,7 @@ Kudos to [awsome-docker-compose](https://awesome-docker-compose.com/apps/photo-s
 ### What I learnt
 
 1. Another HUGO cool theme! https://tmuguet.gitlab.io/hugo-split-gallery/
+
 2. To generate [**QR's with logo** thanks to Python](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb) (it can be done as well with Inkscape)
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
@@ -523,4 +524,17 @@ sudo ufw status
 
 {{< /details >}}
 
-4. For https, cloudflared tunnels are tricky for sub.sub.domain.com (ok for sub.domain.com). With the NGINX setup and proper DNS records (A and CNAME) before creating the certificates, it works.
+4. For https, cloudflared tunnels are tricky for `sub.sub.domain.com` (ok for `sub.domain.com` ). With the NGINX setup and proper DNS records (A and CNAME) before creating the certificates, it works.
+
+Creating a tunnel is fine:
+
+![CF Tunnel creation](/blog_img/selfh/https/cloudflared-tunnel1.png)
+
+
+But this will not create SSLs:
+
+![CF Tunnel creation](/blog_img/selfh/https/cloudflared-tunnel2.png)
+
+Fortunately, we can get that SSL for the sub sub domain with NGINX and these records set:
+
+![DNS Records for NGINX https on sub sub domain](/blog_img/selfh/https/cloudflare-vs-nginx-subdomains.png)
