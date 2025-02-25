@@ -446,7 +446,7 @@ And now use CLoudflare Pages (with the private Github repo) to deploy the Hugo T
 
 ## Results
 
-The result?
+The result for this client?
 
 A Theme that it is not only cool, but **eco friendly**:
 

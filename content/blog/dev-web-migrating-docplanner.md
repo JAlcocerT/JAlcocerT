@@ -3,9 +3,11 @@ title: "Customizing a Web for Health Care"
 date: 2024-09-29
 draft: false
 tags: ["dev"]
-summary: 'From docplanner to owning a responsive Website'
+description: 'From docplanner to owning a responsive Website with Astro'
 url: 'docplanner-web-migration'
 ---
+
+
 
 * Competitors / The initial site:
     * https://www.docplanner.com/

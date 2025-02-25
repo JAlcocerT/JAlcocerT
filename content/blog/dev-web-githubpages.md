@@ -36,3 +36,15 @@ These are example of **CI/CD depending on your desired SSG**:
 3. [Astro + Github Pages](https://github.com/JAlcocerT/web3/blob/main/.github/workflows/deploy_astro.yml)
 
 They are executed on push on certain branches / manually - All as per your GHA WF `.yml` configuration.
+
+And if you need 101 on those SSGs:
+
+1. [HUGO 101](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)
+2. [Astro 101](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) and https://jalcocert.github.io/JAlcocerT/using-astro-templates/
+
+---
+
+Alternatively, you can have a look to:
+
+1. [Firebase](https://fossengineer.com/hosting-with-firebase/)
+2. [Cloudflare pages](https://fossengineer.com/hosting-with-cloudflare-pages/)

@@ -1,6 +1,6 @@
 ---
 title: "Tools for better Photo Management"
-date: 2025-01-15
+date: 2025-04-15
 draft: false
 tags: ["OSS"]
 summary: 'Testing tools for photo management and better backup techniques.'

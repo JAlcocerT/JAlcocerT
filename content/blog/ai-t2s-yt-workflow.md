@@ -81,7 +81,7 @@ The initial scripts I used are at [YT_Audios](https://github.com/JAlcocerT/JAlco
 * OBSStudio to record + I record myself commenting the video
 * Then, that `.mp4` gets a transcript, which is passed to the OpenAI API to generate an AI voice
 
-![FC Meme](/blog_img/memes/ezoeazin.JPG)
+![FC Meme](/blog_img/memes/ezoeazin.jpg)
 
 > You can be really Pro on a AI Powered YT Channel
 

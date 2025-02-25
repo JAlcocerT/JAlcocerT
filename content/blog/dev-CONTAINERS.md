@@ -3,10 +3,11 @@ title: "Reasons why I love Containers. With Cloudflared and AI Apps."
 date: 2025-01-04
 draft: false
 tags: ["Dev"]
-description: 'Reasons to use containers: selfhosting with Cloudflare tunnels, App bunddle, dev environments, CI/CD...'
-summary: 'A Container and related tools recap'
+description: 'Reasons to use containers (Docker 🐋 Podman): selfhosting with Cloudflare tunnels, App bunddle, dev environments, CI/CD...'
 url: 'why-i-love-containers'
 ---
+
+A Container and related tools recap
 
 <!-- https://fossengineer.com/understanding-containers-for-selfhosting/ -->
 
@@ -221,7 +222,7 @@ Dreams of Code, a Senior NYT Reporter, explains their preference for Docker Stac
     *   Docker Stack improves upon Docker Compose for seamless and secure VPS application deployments.
     *   Docker Context simplifies managing and deploying to multiple VPS instances from a workstation.
     *   Docker Stack's secrets management, rollback capabilities, and built-in load balancing enhance production services and developer experience.
-    *   Combining Docker Stack with GitHub Actions streamlines CI/CD, ensuring fast, secure deployments with minimal manual effort.
+    *   Combining [Docker Stack with GitHub Actions](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/) streamlines CI/CD, ensuring fast, secure deployments with minimal manual effort.
 
 {{< /details >}}
 
@@ -369,7 +370,7 @@ How Argo CD works?
  choice depends on your specific requirements, team expertise, and the complexity of your CI/CD pipelines.
 
 * **Jenkins** is a versatile platform suitable for various CI/CD needs, offering extensive customization options.
-* **GitHub Actions** provides a user-friendly, integrated solution for CI/CD workflows within the GitHub ecosystem.
+* **GitHub Actions** provides a user-friendly, integrated solution for [CI/CD workflows within the GitHub ecosystem](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/).
 
 
 

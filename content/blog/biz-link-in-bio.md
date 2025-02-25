@@ -149,7 +149,7 @@ And **like this**:
 
 {{< cards >}}
   {{< card link="https://financeinmotion.fyi/" title="LinkinBio" image="/blog_img/web/WebsSnapshots/Web_IoTechCrafts.png" subtitle="Links with astro-link-in-bio-theme" >}}
-  {{< card link="https://jalcocert.github.io/Portfolio/" title="Links with HUGO LYNX" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links" >}}             
+  {{< card link="https://jalcocert.github.io/Portfolio/" title="Links with HUGO LYNX" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links on Github Pages" >}}             
 {{< /cards >}}
 
 While [performing](https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well) like [this](https://web-check.xyz/check/https%3A%2F%2Ffinanceinmotion.fyi%2F)
@@ -215,8 +215,11 @@ Get a domain name and setup **Cloudflare as its Name Server**, this will proove 
 
 ![CF Custom Domain1 ](/blog_img/web/Cloudflare/CF-CustomDomain-DNSManagement.png)
 
+Copy the new name servers:
+
 ![CF Custom Domain2 ](/blog_img/web/Cloudflare/CF-NameServers.png)
 
+And plug them to your domain registrar (in here, porkbun)
 ![CF Custom Domain3 ](/blog_img/web/Cloudflare/CF-Porkbun-NS.png)
 
 
@@ -246,3 +249,5 @@ This will grant that whenever you push, the workers are doing the **right steps 
 {{% /steps %}}
 
 Go to the [Cloudflare UI](https://dash.cloudflare.com), and...
+
+you will see under the WnP section that the site is already published.

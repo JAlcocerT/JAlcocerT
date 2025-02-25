@@ -10,18 +10,18 @@ url: 'my-action-cam-video-workflow'
 So far, ive been doing couple of things with the **action cam**.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5 Pro 101"  >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/" title="OA5Pro Firmware Update" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5 Pro 101 ↗"  >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/" title="OA5Pro Firmware Update ↗" >}}
 {{< /cards >}}
 
 
 Even apply **data analytics for action cams** andfor karting!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/" title="Geospatial Analysis (with action cams)" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/" title="Geospatial Analysis (with action cams) ↗" >}}
 {{< /cards >}}
 
-Now its time for a recap on my latest video tricks.
+Now its time for a recap on my **latest video tricks**.
 
 
 ## High vs Low Bit Rate
@@ -60,7 +60,7 @@ Recording at **4K/60fps RS+** and standard (no UW, h.265) and **high bitrate**.
 
 ## Data Overlay with Python
 
-I was already analyzing GoPro Metadata:
+I was already **analyzing GoPro Metadata**:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/" title="Go Pro Telemetry Post" image="/blog_img/karting/gopro-speed-sample.png" subtitle="Karting and MetaData 101" >}}
@@ -68,7 +68,7 @@ I was already analyzing GoPro Metadata:
 {{< /cards >}}
 
 
-But how about adding **telemtry overlays to MP4's**?
+But how about adding **telemetry overlays to MP4's**?
 
 
 ### GoPro Python Metadata Overlay
@@ -193,8 +193,8 @@ Start with the basics (loading video and GPX, basic visualization) and then grad
 Its great to look back and see how far ive gone (at least compared from how I started):
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/" title="YT AI Workflow" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/" title="Video edition at x300" >}}  
+  {{< card link="https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/" title="YT AI Workflow ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/" title="Video edition at x300 ↗" >}}  
 {{< /cards >}}
 
 ---
@@ -212,9 +212,6 @@ rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #it creates the folder if its n
 #rm *.LRF #clean if needed LRF
 ```
 
-<!-- 
-![alt text](rsync.png) 
--->
 
 ![Graphic Walker UI](/blog_img/selfh/rsync.png)
 
@@ -240,7 +237,7 @@ If you do similarly with a OA5Pro video and **see the metadata**, the output is 
 exiftool -ee ./DJI_20241008163958_0031_D.MP4 #no GPS - no party
 ```
 
-https://zulko.github.io/moviepy/getting_started/updating_to_v2.html
+* Make the magic happen with moviepy: https://zulko.github.io/moviepy/getting_started/updating_to_v2.html
 
 #### FFMPEG
 

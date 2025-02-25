@@ -184,16 +184,18 @@ More **GHA uses cases**, [here](https://jalcocert.github.io/JAlcocerT/github-act
 
 ### Shiny
 
-Shiny I created my very first web app.
+With Shiny, I created my very first web app.
 
+And it was a really interesting learning!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/R_Stocks/" title="RStocks" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/DividendGrowth.jpeg" subtitle="Shiny Web App" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="RStocks" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/DividendGrowth.jpeg" subtitle="Shiny Web App - Final Post" >}}
   {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Rstocks and its Flexdashboard" >}}
 {{< /cards >}}
 
 In the meantime, there is now Shiny for Python.
 
+Which can be something to try in the future and compare with streamlit or [flask](https://jalcocert.github.io/JAlcocerT/get-started-with-flask/).
 
 {{< callout type="info" >}}
 See [RStocks Project repo](https://github.com/JAlcocerT/R_Stocks) for ideas  ðŸ’» 
@@ -201,8 +203,15 @@ See [RStocks Project repo](https://github.com/JAlcocerT/R_Stocks) for ideas  ðŸ’
 
 #### Containers for Shiny Apps
 
+It was a ride to get the **Shiny app working inside a container.**
+
+Moslty because of some dependency that my app needed.
+
 https://jalcocert.github.io/JAlcocerT/building-r-shiny-apps-container-image-with-docker/
 
+what happened in the end?
+
+That it worked and also, there are 3 ways on doing that (depending on the base image you choose).
 
 
 

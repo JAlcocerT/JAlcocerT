@@ -35,6 +35,11 @@ There are out there cool calculators - https://tecalculo.com/en/mortgage-calcula
 
 But how about creating something to understand the underlying logic?
 
+{{< callout type="info" >}}
+See the [source code magic](https://github.com/JAlcocerT/Python_is_awesome) 🔥💻
+{{< /callout >}}
+
+
 ## Understanding Loans
 
 When we get a mortage, our **net total assets today are reduced**, as we have some interests to pay (liabilities):
@@ -591,7 +596,7 @@ La TAE te permite comparar diferentes préstamos de manera más precisa, ya que 
 A quick streamlit app is always a great way to get started.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Web" image="/blog_img/GenAI/ai-real-estate.jpeg" subtitle="AI Ready Website" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Web" image="/blog_img/GenAI/ai-real-estate.jpeg" subtitle="AI Ready Website for a RE Agency" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Data Chat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Real Estate Agent with LLamaIndex and Mem0" >}}
 {{< /cards >}}
 

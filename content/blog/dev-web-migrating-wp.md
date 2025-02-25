@@ -11,7 +11,11 @@ I was talking with my father about websites the other day and...
 
 I realized how much **more we can do with SSG's than with wordpress**.
 
-It all started [trying to add Web Analytics](https://fossengineer.com/selfhosting-umami-with-docker/) to the site.
+It all started [trying to add **Web Analytics**](https://fossengineer.com/selfhosting-umami-with-docker/) to the site.
+
+{{< callout type="info" >}}
+You can still SelfHost your own WordPress with a VPS
+{{< /callout >}}
 
 {{< details title="How to know if a website uses GAnalytics 📌" closed="true" >}}
 

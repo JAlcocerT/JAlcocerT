@@ -1,6 +1,6 @@
 ---
-title: "A website for a Moto Blogger."
-date: 2025-02-23
+title: "A website for a Moto Blogger"
+date: 2025-02-23T19:20:21+01:00
 draft: false
 tags: ["dev"]
 description: 'Creating a website for a moto blogger. Or how to make two websites during a morning.'
@@ -48,3 +48,12 @@ firebase deploy #to push dist to proyectorutasmoto.web.app
 
 
 Next steps - To link a custom domain and to not forget to sync it to github for a free code backup!
+
+<!-- 
+https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/
+
+![HUGO Theme Gallery Carbon](/blog_img/web/success5-aga/photogallery-hugo-whilecyclingthere-carbon.png) -->
+
+{{< cards >}}
+  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="SSGs are Crazy Efficient" image="/blog_img/web/success5-aga/photogallery-hugo-whilecyclingthere-carbon.png" subtitle="See how this other HUGO Gallery Project was delivered" method="Resize" options="600x q80 webp" >}}
+{{< /cards >}}

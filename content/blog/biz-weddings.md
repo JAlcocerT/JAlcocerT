@@ -79,8 +79,8 @@ Make sure you setup the `BASE_URL` env variable [as per readme](https://github.c
 
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="With a Raspberry/SBC/MiniPC" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Or with a Server" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="With a Raspberry/SBC/MiniPC ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Or with a Server ↗" >}}
 {{< /cards >}}
 
 Once you are **connected** to the device/server:
@@ -290,8 +290,8 @@ Not really, see how much im using a CX22: Portainer + NGINX + Wedding share **~5
 
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/" title="Astro Github + Cloudflare Pages" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/" title="Gitlab + Cloudflare Pages" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/" title="Astro Github + Cloudflare Pages ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/" title="Gitlab + Cloudflare Pages ↗" >}}
 {{< /cards >}}
 
 ### DokPloy

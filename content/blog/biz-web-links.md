@@ -13,7 +13,7 @@ But the amount of close people that its trying to build something on social medi
 
 Why not giving a try to linktree, many.link... pricing?
 
-Then, lets have a look to solutions that will just require your time:
+Then, lets have a look to solutions that will **just require your time**.
 
 ## SSG Solutions for LinkInBios
 
@@ -34,8 +34,6 @@ You dont really need anything to get started, as we can make this work [with Git
 
 1. https://github.com/nevthereal/linktree-template
 2. https://astro.build/themes/details/ltree/
-
-
 
 
 ### SSG LinkinBio with CMS

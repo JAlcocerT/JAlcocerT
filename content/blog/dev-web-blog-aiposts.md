@@ -7,9 +7,9 @@ description: 'Creating Landing Web pages with Astro'
 url: 'creating-hugo-blog'
 ---
 
-As AI content will grow over time, a fast build time is appreciated.
+As AI content will grow over time, a **fast build time** is appreciated.
 
-Hence using HUGO.
+Hence using **HUGO**.
 
 * Hextra
 * Blowfish

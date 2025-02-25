@@ -142,7 +142,15 @@ Dont forget to go to the Tailscale admin UI and select: `Route settings` -> `use
 
 Then, other devices will be able to route their traffic through that device you leave at home.
 
-Like what? Any laptop, miniPC or SBC will do the trick.
+Like what? 
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
+{{< /cards >}}
+
+Any old laptop, miniPC, SBC... will do the trick.
 
 And ofc this can also be applied to any [VPS, same as wireguard](https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/).
 
@@ -167,6 +175,7 @@ Imagine your home network is like a neighborhood with many houses (devices). Eac
 - **Subnet Route**: A map that says, "To reach houses on this street (subnet), take this specific path."
 
 ---
+
  **What Are Subnet Routes in Networking?**
 1. **Subnets**:
    - Subnets group IP addresses to organize devices in a network (e.g., your home Wi-Fi or office network).
@@ -180,17 +189,22 @@ Imagine your home network is like a neighborhood with many houses (devices). Eac
    - These are instructions added to a device or network (like Tailscale) to enable it to connect to devices in a specific subnet.
 
 ---
+
  **Why Are Subnet Routes Important?**
 Without subnet routes:
+
 - Devices wouldn't know how to reach other devices in different subnets.
 - For example, your phone (connected to a VPN) couldn’t access your printer or IoT devices in your home network.
 
 With subnet routes:
+
 - Traffic destined for a specific subnet (e.g., your home devices) knows where to go.
 - A router or VPN (like Tailscale) can act as a "bridge" between networks, enabling access to those devices.
 
 ---
+
  **Tailscale Example:**
+
 - **Advertise Routes**: A device (like a travel router) tells Tailscale about its subnets (e.g., `192.168.8.0/24`).
 - **Accept Routes**: Another device (e.g., your laptop) accepts these routes and knows how to reach the subnet through the travel router.
 
@@ -243,13 +257,12 @@ On your travel router (the Gl-MT3000):
 
 1. Advertise the local subnets that the router controls (e.g., `192.168.8.0/24` and `10.0.0.0/24`) to the Tailscale network.
 
-   Run the following command on the travel router:
+Run the following **command on the travel router**:
 
 ```bash
 sudo tailscale set --advertise-routes=192.168.8.0/24,10.0.0.0/24
 # sudo tailscale down
 # sudo tailscale up --advertise-routes=192.168.8.0/24
-
 ```
 
 - This tells Tailscale that your travel router can route traffic to these subnets.
@@ -270,20 +283,21 @@ ssh root@192.168.8.1 #the password es the same you set to login to the router AD
 ---
 
 **Desktop Configuration**
+
 On your desktop (the device acting as the exit node):
 
 1. Configure it to:
-   - Accept routes advertised by other devices (like your travel router).
-   - Advertise itself as an **exit node** to handle internet traffic for other devices in the Tailscale network.
+- Accept routes advertised by other devices (like your travel router).
+- Advertise itself as an **exit node** to handle internet traffic for other devices in the Tailscale network.
 
    Run the following command on the desktop (the device you will user as exit node at home):
 
-   ```bash
-   sudo tailscale up --reset --accept-routes --advertise-exit-node
-   ```
+```bash
+sudo tailscale up --reset --accept-routes --advertise-exit-node
+```
 
-   - **`--accept-routes`**: Allows the desktop to accept routes advertised by the travel router.
-   - **`--advertise-exit-node`**: Makes the desktop an exit node for internet-bound traffic from other Tailscale devices.
+- **`--accept-routes`**: Allows the desktop to accept routes advertised by the travel router.
+- **`--advertise-exit-node`**: Makes the desktop an exit node for internet-bound traffic from other Tailscale devices.
 
 {{< callout type="info" >}}
 Once you do this at make sure that in the Tailscale Admin UI the home device is **selected as exit node**.
@@ -310,8 +324,6 @@ Once you do this at make sure that in the Tailscale Admin UI the home device is 
 - Verify your public IP address (e.g., by visiting [https://whatismyipaddress.com/](https://whatismyipaddress.com/)) to confirm internet traffic is routed through the desktop.
 
 
-
-
 ```mermaid
 graph TD
     A[Travel Router] -- Advertises 192.168.8.0/24, 10.0.0.0/24 --> B[Tailscale Network]
@@ -327,12 +339,15 @@ graph TD
 We can also use [Wireguard and OpenVPN](#interesting-vpns-solutions) with the ML3000.
 
 {{< callout type="info" >}}
-Thanks to people on reddit and the gl-inet community to provide guidance on the subnet routes!
+**Thanks** to people on reddit and the gl-inet community to provide guidance on the subnet routes!
 {{< /callout >}}
 
 ---
 
 ## FAQ
+
+1. How to get Wireguard details from NordVPN - https://gist.github.com/bluewalk/7b3db071c488c82c604baf76a42eaad3
+
 
 ### Interesting VPNs Solutions
 

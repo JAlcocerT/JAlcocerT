@@ -3,10 +3,11 @@ title: "LLMs Function Calling"
 date: 2024-08-18T23:20:21+01:00
 draft: false
 tags: ["Dev"] 
-summary: "Testing function calling with OpenAI Models. OpenAI Functions"
+description: "Testing function calling with OpenAI Models. OpenAI Functions"
 url: "how-to-use-openai-function-calling"
 ---
 
+How to make so that LLMs are using our already built tools?
 
 ## OpenAI
 

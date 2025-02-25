@@ -7,9 +7,11 @@ summary: How to share Raspberry Pi OS (Bullseye) as Torrent with Qbitrorrent/Tra
 url: how-to-torrent-with-a-raspberry
 ---
 
-First of all: Why sharing Raspberry Pi OS?
+First of all: **Why sharing Raspberry Pi OS**?
 
 I got some incompatibility issues with [some **IoT Projects**](https://jalcocert.github.io/RPi/categories/iot-data-analytics/) and the latest Pi Images (bookworm, DEBIAN12).
+
+![Two RPI's 4](/blog_img/hardware/RPi4_2_vs4gb.jpg)
 
 So want to make sure that the projects that I place effort on will continue to work.
 

@@ -47,6 +47,10 @@ Thanks to the investigations during
 
 **Let it be leverage**
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AI Assistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Streamlit-AIssistant" >}}
+{{< /cards >}}
+
 <!-- <iframe src="https://giphy.com/embed/Fpp3zIRlFgqf7pL0DW" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/kruk-jordankruk-jordan-Fpp3zIRlFgqf7pL0DW">via GIPHY</a></p> -->
 
 

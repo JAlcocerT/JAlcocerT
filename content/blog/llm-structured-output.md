@@ -7,7 +7,11 @@ summary: "How to use the Structured Output Feature with OpenAI"
 url: "how-to-use-structured-outputs-LLM"
 ---
 
+Lately, I heard about structure outputs for LLMs:
+
 * https://openai.com/index/introducing-structured-outputs-in-the-api/
+
+And I could not just but to think on the possibilities for projects...
 
 ---
 
@@ -19,7 +23,7 @@ url: "how-to-use-structured-outputs-LLM"
 
 ### How to use LLMs to create a CV
 
-{{< details title="Use a CV Builder Framework: OpenResume or " closed="true" >}}
+{{< details title="Use a CV Builder Framework: OpenResume or Reactive Resume" closed="true" >}}
 
 * With [Reactive-Resume](https://fossengineer.com/open-source-curriculum/#the-reactive-resume-project)
 

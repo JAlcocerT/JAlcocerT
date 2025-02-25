@@ -15,6 +15,11 @@ url: 'ai-assistant-streamlit'
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat" >}}
 {{< /cards >}}
 
+Do you prefer the box? the plastic? or the expensive toy I bought you?
+
+![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+
+
 ### DBChat Assistant
 
 We come from [here](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/).

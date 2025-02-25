@@ -135,7 +135,7 @@ But there are other single board computers out there, so far I tried:
 2. Orange pi 5 8GB 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/minipc-vs-pi/" title="Orange vs Raspberry" image="/blog_img/hardware/sbcs-x13.jpg" subtitle="Battle of Pi SBCs" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/minipc-vs-pi/" title="Orange vs Raspberry Pi 4" image="/blog_img/hardware/sbcs-x13.jpg" subtitle="Battle of SBCs Benchmarks" >}}
 {{< /cards >}}
 
 If you are wondering if you need a Pi or a MiniPC, you can have a look to [this](https://jalcocert.github.io/RPi/posts/minipc-vs-pi/).

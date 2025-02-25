@@ -7,7 +7,9 @@ summary: Checking my new Laptop - The Lenovo ThinkPad x13
 url: laptop-lenovo-thinkpad-x13-benchmark
 ---
 
-As simple as it gets: it has a 8C/16T CPU, 16GB Ram and 500GB SSD.
+As simple as it gets.
+
+This **x13 has a 8C/16T** CPU, 16GB Ram and 500GB SSD.
 
 ![Lenovo Thinkpad x13](/blog_img/hardware/Lenovo_x13.jpg)
 
@@ -274,7 +276,6 @@ curl -6 ifconfig.me #ipv6 info
 Connecting your laptop to your server **with https**:
 
 {{< cards >}}
-  {{< card link="/" title="NGINX Setup" image="/blog_img/mini_pc/nginx_posteio.png" subtitle="HTTPs everywhere." >}}
   {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="HTTPS Everywhere" image="/blog_img/mini_pc/nginx_posteio.png" subtitle="Setup NGINX with DuckDNS to have https certificates." method="Resize" options="600x q80 webp" >}}
 {{< /cards >}}
 

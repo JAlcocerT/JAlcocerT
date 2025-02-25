@@ -66,7 +66,7 @@ serve -s dist #http://localhost:3000
 ![Speed astro landing](/blog_img/web/success4-ira/ira_demo_carbon_aplus.png)
 
 
-https://github.com/JAlcocerT/ira-web
+* Project source code: https://github.com/JAlcocerT/ira-web
   * <https://ira-english.pages.dev/>
 
 ---
@@ -74,17 +74,18 @@ https://github.com/JAlcocerT/ira-web
 
 ## Some Goodies for the Website
 
-### How to add Calendars
+1. How to add Calendars
 
-* I like to use **Cal.com** (you can also try calendly or [acuityscheduling](https://es.acuityscheduling.com/))
+I like to use **Cal.com** (you can also try calendly or [acuityscheduling](https://es.acuityscheduling.com/))
 
-### Adding Newsletter with MailerLite
+2. Adding Newsletter with MailerLite
 
 ---
 
 ## Other things I learnt recently
 
-* **Business Cards**
-    * On reddit I Saw: [moo](https://www.moo.com/us/), Vistaprint...
-        * https://barcik.pl/en/business-cards/
-        * https://www.bizay.pl/en/business-cards
+**Business Cards**
+
+* On reddit I Saw: [moo](https://www.moo.com/us/), Vistaprint...
+    * https://barcik.pl/en/business-cards/
+    * https://www.bizay.pl/en/business-cards

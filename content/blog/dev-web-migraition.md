@@ -1,19 +1,19 @@
 ---
-title: "Streamlit MigrAItion - Making cool Webs from old ones "
+title: "Streamlit MigrAItion - Making cool Webs from old ones"
 date: 2024-11-14
 draft: false
 tags: ["AI"]
-description: "Using AI to migrate websites to SSG. Faster, Cooler and Cleaner."
-summary: 'Using AI to migrate websites to SSG. For Real Estate and Wordpress projects.'
+description: "Using AI to migrate websites to SSG by Scrapping. Faster, Cooler and Cleaner."
 url: 'how-to-migrate-a-website'
 ---
 
+> For the Real Estate and few Wordpress projects, my clients asked me to migrate their existing content.
 
 It's always great to having a look to the initial pages to know what to expect from them.
 
 Is it everything working?
 
-Hows the initial Performance of the Site?
+Hows the **initial Performance** of the Site?
 
 {{< details title="Checking that a Website works - or in this case, what we will have to Migrate 📌" closed="true" >}}
 
@@ -65,8 +65,8 @@ Lets have a look.
 
 You can do the following:
 
-1. explore the website content
-2. find the html section where all the photo links are stored
+1. Explore the website content
+2. Find the html section where all the photo links are stored
 3. Use LLMs so that they give you a Python Code to: Find the photo links + Download them in a folder
 4. Repeat for every link you have (leverage the previous functions)
 5. [Optional] Include the folder to the `.gitignore`
@@ -107,7 +107,7 @@ Always good to check if there are broken links referenced in each original posts
 
 For Scrapping, there are few options [as we saw: Crawl4AI, ScrapeGraph, FireCrawlAI...](https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/)
 
-But we can have a custom tool with BS4.
+But we can have a **custom tool with BS4**.
 
 
 ### Leverage Time - Get info...of ALL Links
@@ -148,10 +148,3 @@ curl -s https://jmodels.net/robots.txt | grep -i sitemap #look for sitemap direc
 4) Plug the scrapped content to an LLM to **get the markdown**, while preserving the initial structure
 * This script takes the [info from the given div, and feeds it to OpenAI API to get `.md`](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/WebMigrAItion/Fetch_Post_Info/get_postwithcontent_openai_v2a.py)
 5) If you already have a theme selected, you ar every close to have one post migrated
-
-
-
----
-
-## FAQ
-

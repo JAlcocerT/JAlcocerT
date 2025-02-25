@@ -16,10 +16,9 @@ A recap on SQL, PySpark and visualizations tools.
 
 {{< cards >}}
   {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs..." >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs...Source Code" >}}
 {{< /cards >}}
 
-![Data Related Jobs](/blog_img/DA/trabajos_data.jpg)
 
 {{< callout type="warning" >}}
 This Post is **WIP**
@@ -166,7 +165,7 @@ Denormalization combines normalized tables to improve **read performance**, ofte
 {{< /details >}}
 
 {{< cards >}}
-  {{< card link="#conclusions" title="MultiChat UI" image="/blog_img/DA/sql_cheatsheet.jpeg" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL 101" image="/blog_img/DA/sql_cheatsheet.jpeg" subtitle="More SQL Commands" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multichat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Streamlit Multichat" >}}
 {{< /cards >}}
 
@@ -638,7 +637,7 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="Bayes and Streamlit?" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="Bayes and Streamlit?" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc, but Bayes is for life" >}}
   {{< card link="https://github.com/JAlcocerT/Python_is_awesome" title="Awsome Python" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Bayes and Streamlit" >}}
 {{< /cards >}}
 
@@ -888,6 +887,9 @@ services:
 
 
 ## FAQ
+
+
+![Data Related Jobs](/blog_img/DA/trabajos_data.jpg)
 
 <!-- ### How to make better EDA?
 

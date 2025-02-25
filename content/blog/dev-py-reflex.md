@@ -10,6 +10,11 @@ url: 'tinkering-with-reflex'
 * https://reflex.dev/templates/dashboard/
 
 
+{{< callout type="info" >}}
+See the [source code magic](https://github.com/JAlcocerT/Python_is_awesome) 🔥💻
+{{< /callout >}}
+
+
 ## The Reflex Package
 
 * https://github.com/reflex-dev/reflex
@@ -22,10 +27,13 @@ What I want to use it for?
 How about enhancing this streamlit projects?
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="RE Calculator - Post"  >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="Job Offers and CV Creation" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="RE Calculator - Post ↗"  >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="Job Offers and CV Creation ↗" >}}
 {{< /cards >}}
 
+Enhancing in a way...that they are also good looking and providing UI/UX for mobile users?
+
+Lets have a look.
 
 {{< details title="Compile Python on a Pi 📌" closed="true" >}}
 
@@ -95,6 +103,8 @@ sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -
 <!-- 
 https://imfing.github.io/hextra/docs/guide/shortcodes/filetree/
 -->
+
+These are the main files and structure of a Reflex Project:
 
 {{< filetree/container >}}
   {{< filetree/folder name="content" >}}
@@ -303,9 +313,12 @@ You will find also useful:
 
 ## Building with Reflex
 
-
+Now its time to rebuild with Reflex some Streamlit apps I made!
 
 ### Historical Job Market Data with Reflex
+
+For this one
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/videos/job_offers.png" subtitle="Post where I tinkered with scrapping tools." >}}
@@ -313,14 +326,14 @@ You will find also useful:
 {{< /cards >}}
 
 
-{{< details title=" 📌" closed="true" >}}
+{{< details title="See the details 📌" closed="true" >}}
 
 
 {{< /details >}}
 
 ### Real Estate with Reflex
 
-Lately Ive been playing with RE data driven apps.
+Lately Ive been playing with **RE data** driven apps.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Understanding Real Estate" image="/blog_img/data-experiments/buyr_mortage_NAV_norent.png" subtitle="Post where I tinkered with Math for Real Estate." >}}
@@ -369,12 +382,14 @@ And with Reflex and some tricks with Gemini...
 
 {{< /details >}}
 
-Those are gross yields, remember that there are many costs and amortizations related
+
+#### More RE Costs
+
+Those are **gross yields**, remember that there are many costs, amortizations,... related that you will have to plug for your specific case.
 
 Lets say that it cost **~65eur afor 15kg of paint.**
 
-With that one, you can paint 100m2.
-
+With that one, you can paint ~100m2.
 
 {{< details title="Price of the painting 📌" closed="true" >}}
 

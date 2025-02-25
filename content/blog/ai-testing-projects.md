@@ -69,6 +69,11 @@ Poetry aims to simplify and streamline the process of managing Python projects b
 
 ### With Containers
 
+Imo, A project dev phase is not completed until at least non dev people can use it.
+
+Thats the magic of containers.
+
+Also...a project is not PROD ready if at least 3 non tech users agree that is simple to use.
 
 {{< callout type="info" >}}
 Example of **Artifacts to containerize a Python Project** with the [MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat)
@@ -88,6 +93,8 @@ Example of **Artifacts to containerize a Python Project** with the [MultiChat](h
 
 {{< /details >}}
 
+The good thing with containers, is that you can build them locally, and make someone do it for you, like [github actions CICD](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/)
+
 ## Setup 2 AI Projects
 
 ### ChatDev
@@ -100,7 +107,7 @@ Example of **Artifacts to containerize a Python Project** with the [MultiChat](h
 
 
 
-{{< details title="ChatDev Setup 📌" closed="true" >}}
+{{< details title="ChatDev - Setup AI with Containers 📌" closed="true" >}}
 
 
 ```yml

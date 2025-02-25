@@ -58,7 +58,8 @@ People do this kind of **cool stuff**:
 
 ### Garmin VIRB Edit
 
-[Garmin VIRB Edit](https://www8.garmin.com/support/download_details.jsp?id=6591), which works for Windows
+[Garmin **VIRB** Edit](https://www8.garmin.com/support/download_details.jsp?id=6591), which works for Windows
+ and does not work out of the box for Linux:
 
 <!-- https://www.youtube.com/watch?v=s5v9ZCwcung -->
 
@@ -73,9 +74,13 @@ There is a possibility to use paid Programs to create these kind of videos:
 
 {{< youtube "3Y-lh6hbp14" >}}
 
-> Very interesting how those 390cc and 15cv (77) differ from the 390cc 18 cv (80) and 460cc 22cv (88km/h topspeed)
+{{< callout type="info" >}}
+Veeeery interesting how those 390cc and 15cv (77) differ from the 390cc 18 cv (80) and 460cc 22cv (88km/h topspeed)
+{{< /callout >}}
 
 ### Exif and Python with GoPro
+
+We can extract Go Pro Metadata with this simple CLI tool in Linux:
 
 ```sh
 sudo apt-get install libimage-exiftool-perl #install exif
@@ -83,12 +88,23 @@ sudo apt-get install libimage-exiftool-perl #install exif
 exiftool -ee ./GX030390.MP4 > output-GX030390.txt #saves it
 ```
 
+And now you got a `.txt` with all the information, ready to get it analyzed with python.
+
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro MetaData Magic 101 " image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 Firmware and comparison with GoPro" >}}
+{{< /cards >}}
+
 #### Extracting Location Data from GoPro MP4
+
+For this kind of videos, can be done as per the notebook.
 
 {{< youtube "BTJS-2hD2qk" >}}
 
 <!-- https://www.youtube.com/watch?v=BTJS-2hD2qk -->
 
+The GoPro provides ~10Hz GPS information.
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore.ipynb)
 
@@ -102,6 +118,10 @@ exiftool -ee ./GX030390.MP4 #adapt as per your GoPro file name
 #exiftool -ee ./GX030390.MP4 > output.txt
 ```
 
+ and Plotly, to get such graphs from the GoPro:
+![GoPro Metadata Map](/blog_img/karting/gopro-speed-sample.png)
+
+
 ---
 
 ## PhyPhox Data Extraction
@@ -111,7 +131,7 @@ Hey, but why would you want to...
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/" title="PhyPhox" image="/blog_img/iot/phyphox-android.jpg" subtitle="Physical Experiments with an Android Phone" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker on Github" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes,karting Data...with Python" >}}
 {{< /cards >}}
 
 <!-- 
@@ -148,7 +168,7 @@ You can also open it with: [![Open in Google Colab](https://colab.research.googl
 
 The DJi OA5Pro does **NOT** have a **GPS**.
 
-Videos can look like:
+Videos can look like this one, really interesting image quality!
 
 <!--
 https://studio.youtube.com/video/2ZSDeD3HzHg/edit
@@ -171,7 +191,7 @@ rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #speeds of ~32mb/s from interna
 
 ### Video to Image to GIF
 
-How about: extracting images from a video...and making a gif with them?
+How about: **extracting images** from a video...and **making a gif** with them?
 
 
 The choice between PNG and JPG depends on the trade-off between **image quality** and **file size**:  

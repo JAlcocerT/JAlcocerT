@@ -7,6 +7,10 @@ description: 'Is it a good moment to change jobs? And to become a LLM Engineer?.
 url: 'when-to-apply-for-a-job'
 ---
 
+New year, new opportunities.
+
+Or so some say.
+
 ## Data for Job Market
 
 {{< cards >}}
@@ -262,6 +266,18 @@ Its all about **[Scrapping Tools](https://github.com/JAlcocerT/Scrap_Tools)** ðŸ
 ![Job Market Trend](/blog_img/data-experiments/job-market.png)
 
 
+
+---
+
+## FAQ
+
+* https://github.com/microsoft/prompty
+    * https://prompty.ai/
+    * https://github.com/microsoft/prompty?tab=MIT-1-ov-file#readme
+
+> Prompty makes it easy to create, manage, debug, and **evaluate LLM prompts** for your AI applications. Prompty is an asset class and format for LLM prompts designed to enhance observability, understandability, and portability for developers.
+
+
 <!-- 
 ## What it is a LLM Engineer?
 
@@ -282,11 +298,11 @@ experience with machine learning frameworks such as TensorFlow, PyTorch or Huggi
 knowledge of vector databases and their applications
 good knowledge of natural language processing techniques: sentiment analysis, text classification and language generation -->
 
-## New Jobs Out There
+### New Jobs Out There
 
-### What is an LLM Engineer?
+#### What is an LLM Engineer?
 
-An LLM Engineer is a specialized software engineer who focuses on building, deploying, and maintaining applications powered by Large Language Models (LLMs).
+An LLM Engineer is a specialized software engineer who focuses on **building, deploying, and maintaining applications powered by Large Language Models** (LLMs).
 
 They bridge the gap between cutting-edge AI research and practical, real-world applications.  Think of them as the architects and builders of the next generation of intelligent software.
 
@@ -326,14 +342,3 @@ Here's a breakdown of the key aspects of an LLM Engineer's role, based on your r
 
 
 **In essence, an LLM Engineer is a specialized software engineer who combines expertise in LLMs, NLP, programming, and DevOps to create innovative and intelligent applications.  They are at the forefront of the AI revolution, building the next generation of software that can understand and generate human language.**
-
-
----
-
-## FAQ
-
-https://prompty.ai/
-https://github.com/microsoft/prompty
-https://github.com/microsoft/prompty?tab=MIT-1-ov-file#readme
-
-> Prompty makes it easy to create, manage, debug, and **evaluate LLM prompts** for your AI applications. Prompty is an asset class and format for LLM prompts designed to enhance observability, understandability, and portability for developers.

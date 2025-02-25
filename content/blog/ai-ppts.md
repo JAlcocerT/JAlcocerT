@@ -13,7 +13,7 @@ But the **AI powered PPT creator** deserves a separate post.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent" title="AIssistant Post" image="/blog_img/apps/ai-assistant.png" subtitle="Tinkering with Streamlit to create a multi AI assistant" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service" title="AI Driven PPTs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="AIssistant to create Presentation" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service" title="AI Driven PPTs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="AIssistant to create Presentations powered by LLMs" >}}
 {{< /cards >}}
 
 Lets use LLMs to create PPTs!
@@ -30,8 +30,11 @@ Lets use LLMs to create PPTs!
 > I love the SliDev project so much, that [I forked it](https://github.com/JAlcocerT/slidev).
 
 {{< callout type="info" >}}
-**SliDev** can be deployed as static sites to [GH Pages with GH Actions CI/CD](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/.github/workflows/SliDev_CICD.yml)
+**SliDev** can be deployed as static sites to [**GH Pages** with GH Actions CI/CD](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/.github/workflows/SliDev_CICD.yml)
 {{< /callout >}}
+
+https://jalcocert.github.io/Streamlit-MultiChat/1
+I 
 
 ### Marp
 

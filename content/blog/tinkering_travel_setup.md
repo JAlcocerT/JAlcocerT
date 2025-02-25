@@ -34,6 +34,8 @@ Proper **[DNS](https://jalcocert.github.io/Linux/docs/debian/linux_vpn_setup/#dn
 
 ##### Wireguard
 
+You can call Wireguard the VPN client for PROS and not for "Pacos".
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard (wg-easy) Server" image="/blog_img/hardware/wifi_eth.jpg" subtitle="VPS and Wiregaurd VPN" >}}
 {{< /cards >}}
@@ -42,8 +44,8 @@ Proper **[DNS](https://jalcocert.github.io/Linux/docs/debian/linux_vpn_setup/#dn
 
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/Linux/docs/debian/linux_vpn_setup/#tailscale" title="TailScale Setup" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-networking/" title="Wifi2Eth with Wireguard" >}}
+  {{< card link="https://jalcocert.github.io/Linux/docs/debian/linux_vpn_setup/#tailscale" title="TailScale Setup ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-networking/" title="Wifi2Eth with Wireguard ↗" >}}
 {{< /cards >}}
 
 
@@ -167,7 +169,13 @@ Here it comes **Nextcloud as a backup solution**, as it has clients for desktop/
 Get one of these connected to your SBCs at home and you are ready:
 
 
-![DockerHub Multi-Arch Image](/blog_img/hardware/crucial-1tb-ssd.jpg)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="Crucial SSD" image="/blog_img/hardware/crucial-1tb-ssd.jpg" subtitle="Ready to Plug to MiniPC or SBc" >}}
+{{< /cards >}}
+
+<!-- 
+![Crucial ssd](/blog_img/hardware/crucial-1tb-ssd.jpg)
+ -->
 
 
 {{< details title="Quick NextCloud Server Container Deployment 📌" closed="true" >}}

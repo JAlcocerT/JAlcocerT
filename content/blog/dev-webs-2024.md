@@ -167,6 +167,7 @@ npx wrangler pages deploy public #<BUILD_OUTPUT_DIRECTORY>
 
 #npx wrangler pages project list #this are the ones you uploaded already
 #npx wrangler pages deployment list
+#npx wrangler pages project delete your_project_name
 ```
 
 ![CF Wrangler CLI](/blog_img/web/Cloudflare/CF-WnP-CLI.png)

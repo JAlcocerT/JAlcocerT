@@ -14,7 +14,7 @@ math: true
 
 **What is Bayes' Theorem?**
 
-Bayes' Theorem is a fundamental concept in probability theory that describes how to update the probability of a hypothesis as new evidence becomes available.
+**Bayes'** Theorem is a fundamental concept in probability theory that describes how to update the probability of a hypothesis as new evidence becomes available.
 
 {{< callout type="info" >}}
 It's a way to **revise our beliefs in light of new information**.
@@ -32,6 +32,10 @@ It's widely used in fields like medicine, **machine learning**, and many others 
 
 
 Let's break down Bayes' Theorem and its components.
+
+{{< callout type="info" >}}
+See the [source code magic](https://github.com/JAlcocerT/Python_is_awesome) 🔥💻
+{{< /callout >}}
 
 **The Formula:** The mathematical expression of Bayes' Theorem is
 

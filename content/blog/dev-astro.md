@@ -89,13 +89,14 @@ If you're not sure how to build dApps, don’t worry! Join us to learn more and 
 With **Astro**, you will have a similar **project structure** to:
 
 {{< filetree/container >}}
-  {{< filetree/folder name="content" >}}
+  {{< filetree/folder name="src" >}}
     {{< filetree/file name="_index.md" >}}
-    {{< filetree/folder name="docs" state="closed" >}}
+    {{< filetree/folder name="assets" state="closed" >}}
       {{< filetree/file name="_index.md" >}}
       {{< filetree/file name="introduction.md" >}}
       {{< filetree/file name="introduction.fr.md" >}}
     {{< /filetree/folder >}}
   {{< /filetree/folder >}}
-  {{< filetree/file name="hugo.toml" >}}
+  {{< filetree/file name="astro.config.mjs" >}}
+  {{< filetree/file name="package.json" >}}
 {{< /filetree/container >}}

@@ -11,9 +11,6 @@ url: 'get-started-with-flask'
 A friend asked me recently to help him to [setup Python](https://jalcocert.github.io/JAlcocerT/guide-python/#installing-python-) and **he alredy made his first Web App!**
 
 
-![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
-
-
 I had to get a little bit familiar with this Python Framework before writing this though.
 
 And we got his [Flask App with https and custom domain](https://jalcocert.github.io/JAlcocerT/get-started-with-flask/#deploying-a-flask-app-like-a-pro).
@@ -245,7 +242,12 @@ Dash utilizes Flask as its underlying web server and integrates several other li
 
 ## Deploying a Flask App like a Pro
 
-Let'serve the Flask App with a Cloud Server. **With https and custom domain.**
+Let'serve the Flask App with a Cloud Server. 
+
+**With https and custom domain.**
+
+![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
+
 
 1. Get a server, for example [with Hetzner](https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers)
 2. Setup the server with [docker and all goodies](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)

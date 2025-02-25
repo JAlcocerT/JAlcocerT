@@ -7,9 +7,20 @@ summary: GPU passthrough
 url: 'geming-setup'
 ---
 
-People told me to have a look to Chiaki.
+People told me to have a look to **Chiaki**.
 
 And to thrones of liberty.
 
 
-Also to Battle City, the NES game.
+Also to **Battle City**, the NES game.
+
+
+
+
+---
+
+## FAQ
+
+### Interesting Software for Gaming
+
+https://github.com/flightlessmango/MangoHud

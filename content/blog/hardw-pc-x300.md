@@ -5,6 +5,7 @@ draft: false
 tags: ["Dev"]
 description: Checking my new small factor computer - Asrock x300 with AMD 5600G. AI, video edition and more.
 url: asrock-x300-home-server
+math: true
 ---
 
 It is about **time to put everything together**.
@@ -611,10 +612,12 @@ Setup a regular Wireguard Client in Windows / Linux.
 
 Also on [Android](https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en-US).
 
-Or use Gluetun as Client.
-* https://fossengineer.com/using-bard-selfhosting-firefox-with-vpn-and-docker/#vpn---via-docker-gluetun
+Or use [Gluetun as Client with Docker](https://fossengineer.com/using-bard-selfhosting-firefox-with-vpn-and-docker/#vpn---via-docker-gluetun):
+
 * https://github.com/qdm12/gluetun-wiki/blob/main/setup/wireguard.md
 * https://github.com/qdm12/gluetun-wiki/blob/main/setup/providers/custom.md
+
+Gluetun help us connects to some VPN providers when we cant install the official client.
 
 {{< details title="Check the Desktop IP 📌" closed="true" >}}
 

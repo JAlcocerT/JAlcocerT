@@ -36,6 +36,7 @@ Lets do this.
 
 ![A quick project - meme](/blog_img/memes/zinedine-zidane-materazzi.gif#center)
 
+But in a way that the client will love it!
 
 {{< callout type="info" >}}
 I created a [**Private repo with Github**](https://github.com/JAlcocerT/ScrewFastMoiRealEstate) with the **Real Estate Web** Project
@@ -150,7 +151,6 @@ You can have a look to the **crafted Website**:
 {{< cards >}}
   {{< card link="../callout" title="Callout" icon="warning" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/" title="CF WnP Setup" tag= "YT Channel" >}}
-  {{< card link="../callout" title="Card with blue tag" tag="tag text sample" tagType="info" >}}
   {{< card link="https://dm-real-estate.com/" title="Real Estate Demo" >}}
 {{< /cards >}}
 

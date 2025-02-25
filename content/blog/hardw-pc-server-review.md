@@ -46,7 +46,7 @@ cpx11 hetzner: ~5245Mib/sec
 the Firebat got me 4077Mib/sec
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4c/4t - The Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
 {{< /cards >}}
 

@@ -65,4 +65,8 @@ I got the ig profile shared via email, and they are...making you go back to the 
 
 Unless... :)
 
-Im now using https://github.com/Litlyx/litlyx for the web analytics of this project
+Im now using https://github.com/Litlyx/litlyx for the **web analytics** of this project
+
+![Cookies Meme](/blog_img/web/COOKIES.jpg)
+
+With no cookie monster involved!

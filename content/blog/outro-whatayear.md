@@ -135,12 +135,18 @@ Maybe will need to [migrate from Jekyll](https://simplyexplained.com/blog/migrat
 
 A new Windows setup is easy [with **Chocolatey**](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/)
 
+I played with the Pi's a little bit: 
+
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/rpi-mjpg-streamer" title="RPi Streamer" >}}
+  {{< card link="https://github.com/JAlcocerT/rpi-mjpg-streamer" title="RPi Streamer Forked Repo" >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/pi-vs-orange/#the-raspberry-pi-4" title="A Raspberry Pi? A SBC?" >}}
 {{< /cards >}}
 
+And the 'family' got bigger:
+
 ![SBCs vs Laptop](/blog_img/hardware/sbcs-x13.jpg)
+
+There was also time to improve how I do SelfHosting.
 
 {{% steps %}}
 
@@ -464,11 +470,23 @@ For Photos I am using [this kind of Hugo Gallery](https://jalcocert.github.io/JA
 
 ### Closing Thoughts for 2024
 
+It's been a year of a lot of trial and errors.
 
+And not only on the TECH side.
+
+![Karting Adventure](/blog_img/memes/Accidente_karting-min.gif)
+
+But also with a lot of learnings.
 
 ---
 
 ### Next Year 
+
+For 2025?
+
+1. Get few more websites going for close people.
+2. Leveraging on AI
+3. Doing less in total and more of what has a real impact
 
 Use [LiteLLM](https://github.com/BerriAI/litellm) to unify the LLMs API calls across providers..and use [screenshot2code](https://github.com/abi/screenshot-to-code) to make cooler website designs
 
