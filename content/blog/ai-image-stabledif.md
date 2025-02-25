@@ -7,7 +7,7 @@ description: "Using Stable Difussion with DreamBooth"
 url: 'stable-difussion-free-generation'
 ---
 
-Exactly Three years ago from this moment I was able to generate the following:
+Exactly **Three years ago** from this moment I was able to generate the following:
 
 ![Stable Difussion Sample](/blog_img/GenAI/jalcocert-author.png)
 
@@ -26,11 +26,28 @@ Well...lets find that out.
 I tested **Dalle3 Model via OpenAI API** (while dev [StreamlitMultichat](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main)), at [this script](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/Pict_for_SliDev-DaLLe/Dalle3SliDev.py)
 {{< /callout >}}
 
-### Other Interesting APIs
+### Other Interesting APIs for Image Generation
 
 https://mammouth.ai/pricing
 
 > Get access to multiple AI models for the price of one.
+
+
+1. https://leonardo.ai/api/
+
+2. I was impressed with **Gemini** image generation!
+
+> Used it recently for [a tech talk](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/)
+
+3. **Replicate** - You can fine tune the paid model with your images, then get access to their API
+
+<!--
+https://www.youtube.com/watch?v=lV82LDKT16A 
+-->
+
+{{< youtube "lV82LDKT16A" >}}
+
+> Example with FastAPI to do a GenAI App
 
 ---
 

@@ -19,6 +19,17 @@ This year I saw a very cool video about **design patterns**.
 
 {{< youtube "8UAsN9wvePE" >}}
 
+
+![Porsche design](/blog_img/outro/porsche.png)
+
+
+
+{{< details title="📌" closed="true" >}}
+
+
+{{< /details >}}
+
+
 {{< callout type="info" >}}
 By using the [Phi Data YT Summarizer](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/)... 💻
 {{< /callout >}}
@@ -85,6 +96,11 @@ Can Blender be some kind of homestyler, but F/OSS?
 ---
 
 ## FAQ
+
+Other Design Resources
+
+* Great video comparing [western vs eastern design](https://www.youtube.com/watch?v=8UAsN9wvePE&t=645s)
+
 
 https://blendermarket.com/
 

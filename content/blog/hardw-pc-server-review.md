@@ -168,6 +168,9 @@ sudo mount -a  # Test the /etc/fstab entry
 df -h #see it mounted
 ```
 
+## Consumption
+
+As per this [Tapo Smart Plug](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/)
 
 ---
 

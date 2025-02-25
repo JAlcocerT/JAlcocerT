@@ -83,7 +83,9 @@ But...it is always great to keep handy this kind of tools.
 
 ### What about n-Grams?
 
-In Natural Language Processing (NLP), an n-gram is a contiguous sequence of *n* items from a given sample of text or speech. The items can be characters, words, or even syllables.
+In Natural Language Processing (NLP), an **n-gram** is a contiguous sequence of *n* items from a given sample of text or speech.
+
+The items can be characters, words, or even syllables.
 
 {{% details title="A breakdown of what n-grams are? 🚀" closed="true" %}}
 

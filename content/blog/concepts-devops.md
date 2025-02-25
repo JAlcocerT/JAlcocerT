@@ -2,9 +2,8 @@
 title: "DevOps Tools"
 date: 2025-12-10T00:20:21+01:00
 draft: true
-tags: ["Dev"]
 description: 'Setting up devops tools - Grafana...'
-url: ''
+url: 'dev-ops-for-non-devops'
 ---
 
 Crontab for Docker - https://github.com/mcuadros/ofelia
@@ -13,15 +12,25 @@ Crontab for Docker - https://github.com/mcuadros/ofelia
 
 ### Github CI/CD
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
 ### How to Self-Host Jenkins?
 
 We have all been new to CI/CD at some point.
 
-If you want to tinker with Jenkins, a great way is to [Self-Host Jenkins with Docker](https://fossengineer.com/selfhosting-jenkins-ci-cd/).
+If you want to **tinker with Jenkins**, a great way is to [**Self-Host** Jenkins with Docker](https://fossengineer.com/selfhosting-jenkins-ci-cd/).
 
 ## Ansible
 
-> It's all about the playbook
+It's all about the **playbook**!
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
 
 <!-- UI: ansible semaphore
 <https://www.youtube.com/watch?v=NyOSoLn5T5U>
@@ -56,6 +65,12 @@ ansible --version
 ## Kubernetes
 
 ## Monitoring
+
+YOu can try with Beszel
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+{{< /cards >}}
 
 ### Grafana
 
