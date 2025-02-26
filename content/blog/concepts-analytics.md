@@ -1,9 +1,9 @@
 ---
 title: "Data Analytics Concepts [Recap]"
-date: 2025-02-25T03:20:21+01:00
+date: 2025-02-25
 draft: false
 tags: ["Dev"]
-description: 'Data Management (Validation, Profiling, Modelling,...)'
+description: "Data Management (Validation, Profiling, Modelling,...)"
 url: 'data-analytics-concepts'
 ---
 
@@ -205,7 +205,7 @@ flatpak install flathub io.dbeaver.DBeaverCommunity
     * cursor.sh - use it with your own OpenAI/Anthropic/Azure keys
 
 
-{{% details title="Rivet Release Setup closed="true" %}}
+{{% details title="Rivet Release Setup" closed="true" %}}
 
 
 ```sh

@@ -38,7 +38,19 @@ I almost forgot...the **GenAI Real estate Chat part**!
 ## Real Estate Web UI Enhancements
 
 
+{{% details title="Themes Considered: ScrewFast, Nebulix,  🚀" closed="true" %}}
 
+1. https://github.com/mearashadowfax/ScrewFast
+
+> MIT | Open-source Astro website template with sleek, customizable TailwindCSS components.
+
+2. https://github.com/unfolding-io/nebulix
+3. https://github.com/themefisher/astrofront-astro
+
+> MIT | AstroJS-Powered Shopify Storefront Boilerplate with TailwindCSS and Nanostores.
+
+
+{{% /details %}}
 
 ## Conclusions
 
