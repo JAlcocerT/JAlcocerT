@@ -135,6 +135,23 @@ npm install
 npm run dev #you will need shopify credentials for the .env
 ```
 
+4. https://github.com/oxygenna-themes/foxi-astro-theme Which has an interesting /blog section with tags
+
+> MIT | Foxi is an Astro theme crafted with Tailwind CSS, designed for blazing-fast performance and seamless user experience. Perfect for creating modern, responsive SaaS websites with minimal effort.
+
+You can see the blogs at `/src/pages/blog` folder, after:
+
+```sh
+git clone https://github.com/oxygenna-themes/foxi-astro-theme
+
+npm install & npm audit fix
+npm run dev #localhost:4321
+#npx astro add mdx
+#npm install vue @panzoom/panzoom @vueuse/core @nanostores/vue @vueuse/components @vueuse/integrations vue3-toastify body-scroll-lock vue3-popper
+```
+
+Remember that you need to migrate also the content collection for `/src/pages/blog` and to update `/src/content/config.ts` to define what are the fields expected on the new collection (for example we can call it properties instead of blog).
+
 {{% /details %}}
 
 
