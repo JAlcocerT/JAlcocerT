@@ -202,3 +202,20 @@ flatpak install flathub org.kde.digikam
 > 🏔 Love Freedom - ❌ Block Mass Surveillance
 
 You can also have a look to: ModSecurity, Naxsi, Open AppSec, SafeLine,...
+
+---
+
+## FAQ
+
+{{% details title="How to check for duplicate images - dupeGuru" closed="true" %}}
+
+```sh
+
+```
+
+{{% /details %}} 
+
+### What do I look in a MiniPC?
+
+1. Removable RAM
+2. Removable nmve 2280 drive and 2.5 expandable bay

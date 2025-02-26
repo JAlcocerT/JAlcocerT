@@ -428,3 +428,15 @@ IoT Project example with Superset: <>
 #### Kibana
 
 #### Grafana
+
+---
+
+## FAQ
+
+### BI with AI?
+
+* https://github.com/microsoft/data-formulator
+
+> MIT | 🪄 Create rich visualizations with AI
+
+* You can also make Python scripts to write for you tedious and repetitive Grafana dashboards (like x400 pannel creation)

@@ -8,12 +8,9 @@ url: 'object-oriented-programming-101'
 ---
 
 
-Someone told me once that for mechanisms I would need to learn OOP.
+Someone told me once that for **mechanisms I would need to learn OOP**.
 
 And I can understand why now.
-
-
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
@@ -21,7 +18,7 @@ And I can understand why now.
 {{< /cards >}}
 
 
-https://github.com/JAlcocerT/mechanism
+* https://github.com/JAlcocerT/mechanism
 
 
 <!-- 

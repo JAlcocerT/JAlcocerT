@@ -16,6 +16,7 @@ How to make a **cool website for Real Estate?**
   * https://casaensol.pl/
   * https://syrenare.com/
   * All are **performing slooow** at up to ~1 second initial for a simple http request!
+  
 * **Result**: <https://dm-real-estate.com/>
 
 ![Competitor 1](/blog_img/web/success3-realestate/uptime-realestate-demo.png)

@@ -8,9 +8,7 @@ url: 'real-estate-website'
 math: true
 ---
 
-{{< callout type="info" >}}
-See
-{{< /callout >}}
+
 
 For the current web UI status:
 
@@ -18,6 +16,26 @@ For the current web UI status:
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Project 1st Iteration ↗" icon="book-open" >}}
   {{< card link="https://github.com/JAlcocerT/ScrewFastMoiRealEstate" title="The Source Code, using Screw Fast MIT Theme ↗" icon="book-open" >}}
 {{< /cards >}}
+
+Improvements:
+
+1. [DaisyUI CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#daisyui) for Carousels, FAQ,...
+
+
+{{< details title="Adding DaisyUI to Astro Themes 📌" closed="true" >}}
+
+
+
+As always, I got amazed with other themes, like:
+
+* https://github.com/codexcodethemes/cybernetic-free
+  * https://cybernetic-free-version.netlify.app/
+
+```sh
+npm install 
+```
+
+{{< /details >}}
 
 For the real estate calculator app part...
 
@@ -47,10 +65,23 @@ I almost forgot...the **GenAI Real estate Chat part**!
 2. https://github.com/unfolding-io/nebulix
 3. https://github.com/themefisher/astrofront-astro
 
-> MIT | AstroJS-Powered Shopify Storefront Boilerplate with TailwindCSS and Nanostores.
+> MIT | AstroJS-Powered Shopify Storefront Boilerplate with TailwindCSS and Nanostores. With **Shopify ecommerce integration**
 
+```sh
+git clone https://github.com/themefisher/astrofront-astro
+
+npm install
+#npm audit fix
+npm run dev #you will need shopify credentials for the .env
+```
 
 {{% /details %}}
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/" title="CSS 101 ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/" title="JS 101 ↗" icon="book-open" >}}
+{{< /cards >}}
 
 ## Conclusions
 
@@ -59,6 +90,14 @@ This is kind of a **three in one project**:
 1. Responsive Web UI
 2. Real Estate Calculator to engage users and potential clients
 3. Gen AI App to provide recommendations based on the available houses
+
+**Result**: <https://dm-real-estate.com/> or https://moises-era.pages.dev
+
+{{< callout type="info" >}}
+And with an interesting tool to get the photo properties automated
+{{< /callout >}}
+
+> Still, would you keep your Wordpress, Ghost, Wix?
 
 ---
 

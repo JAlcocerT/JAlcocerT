@@ -1,9 +1,9 @@
 ---
 title: "Creating an e-Commerce"
-date: 2025-02-23
+date: 2025-12-23
 draft: true
 tags: ["dev"]
-summary: 'Creating an eCommerce'
+description: 'Creating an eCommerce'
 url: 'creating-ecommerce'
 ---
 
@@ -11,7 +11,7 @@ url: 'creating-ecommerce'
 
 1. https://github.com/unfolding-io/nebulix
 
-> Nebulix, a Fast & Green Theme Based on Astro + [Static CMS](https://www.staticcms.org/docs/backends-overview) + Snipcart
+> CC | Nebulix, a Fast & Green Theme Based on Astro + [Static CMS](https://www.staticcms.org/docs/backends-overview) + Snipcart
 
 2. https://github.com/CrystallizeAPI/dounut-astro
 
@@ -26,6 +26,7 @@ url: 'creating-ecommerce'
 ### Competitors
 
 * zezam.io
+* https://sklepmakunki.pl/
 
 
 ## Streamlit as eCommerce
