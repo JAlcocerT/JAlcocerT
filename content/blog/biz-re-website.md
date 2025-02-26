@@ -146,11 +146,26 @@ git clone https://github.com/oxygenna-themes/foxi-astro-theme
 
 npm install & npm audit fix
 npm run dev #localhost:4321
-#npx astro add mdx
+#npx astro add mdx #npm install @astrojs/mdx
+
 #npm install vue @panzoom/panzoom @vueuse/core @nanostores/vue @vueuse/components @vueuse/integrations vue3-toastify body-scroll-lock vue3-popper
 ```
 
+```js
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+
+export default defineConfig({
+  integrations: [mdx()],
+});
+```
+
 Remember that you need to migrate also the content collection for `/src/pages/blog` and to update `/src/content/config.ts` to define what are the fields expected on the new collection (for example we can call it properties instead of blog).
+
+```sh
+npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+```
 
 {{% /details %}}
 
