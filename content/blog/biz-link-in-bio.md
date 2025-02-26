@@ -4,7 +4,6 @@ date: 2025-01-22
 draft: false
 tags: ["Web"]
 description: "Have a cool LinkInBio website with HUGO and Astro. Alternative to linktree with Gitlab and Cloudflare WnP Setup."
-summary: 'HUGO and Astro as linkinbio websites'
 url: 'cool-link-in-bios'
 ---
 

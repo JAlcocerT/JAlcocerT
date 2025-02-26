@@ -4,9 +4,12 @@ date: 2025-12-16
 draft: true
 tags: ["dev"]
 description: 'What it is MLOps?.'
-url: ''
+url: 'ml-ops-101'
 ---
 
+* Open-source tools for prompt testing and experimentation, with support for both LLMs (e.g. OpenAI, LLaMA) and vector databases (e.g. Chroma, Weaviate, LanceDB).
+
+* https://github.com/hegelai/prompttools
 
 ## Visualizing NNs
 

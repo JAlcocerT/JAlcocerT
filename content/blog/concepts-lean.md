@@ -10,9 +10,9 @@ url: 'lean'
 
 ## What is Lean?
 
-Lean is a management philosophy that originated at Toyota and is now used by organizations (and not only) around the world.
+Lean is a **management philosophy** that originated at Toyota and is now used by organizations (and not only) around the world.
 
-At its core, Lean is focused on creating value for customers by eliminating waste and **continuously improving processes**.
+At its core, Lean is **focused on creating value for customers** by eliminating waste and **continuously improving processes**.
 
 ### The Lean improvement cycle
 

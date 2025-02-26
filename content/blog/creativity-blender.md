@@ -20,9 +20,18 @@ This year I saw a very cool video about **design patterns**.
 {{< youtube "8UAsN9wvePE" >}}
 
 
+And there is something about designs that have always captivate me.
+
+Whats does make something so good, that it lasts the beats of time?
+
+How can we create someting that is valued by people, even from different generations?
+
+
 ![Porsche design](/blog_img/outro/porsche.png)
 
+I belive you would agree that the 911 design is one of those.
 
+But...I want to create stuff.
 
 {{< details title="📌" closed="true" >}}
 
@@ -45,9 +54,9 @@ By using the [Phi Data YT Summarizer](https://jalcocert.github.io/JAlcocerT/summ
 
 ### Installing Blender
 
-I was consolidating [here](https://jalcocert.github.io/Linux/docs/debian/foss_engineering/#blender) some OSS Tools for engineering.
+I was consolidating [here](https://jalcocert.github.io/Linux/docs/debian/foss_engineering/#blender) some OSS Tools for engineering and how ti install them with Ubuntu.
 
-Among them, Blender:
+Among them, Blender, we just need:
 
 ```sh
 #https://www.blender.org/download/release/Blender4.3/blender-4.3.1-linux-x64.tar.xz/
@@ -56,11 +65,18 @@ sudo snap install blender --classic #right now it is 4.3.1
 #sudo snap install blender --channel=4.3/stable --classic
 ```
 
-You can always download the versions from: <https://www.blender.org/download/>
+You can always download your desired blender versions from: <https://www.blender.org/download/>
 
 ### Blender as a Code
 
-Blender with Python Scripting.
+
+I know i might sound lazy.
+
+BUT
+
+Drag and drop on an interface...is something that id like to have automated for me.
+
+And I heard about **Blender with Python Scripting**.
 
 {{< youtube "mJU7owctel4" >}}
 
@@ -85,13 +101,14 @@ I mean, we can provide images as prompts!
 
 {{< youtube "o7N6Fbtg84E" >}}
 
+---
 
 ## Conclusions
 
 
 ### Using Blender with AI for Home Design
 
-Can Blender be some kind of homestyler, but F/OSS?
+Can Blender be some kind of **homestyler, but F/OSS**?
 
 ---
 

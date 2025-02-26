@@ -327,13 +327,11 @@ There are other **PaaS alternatives** like:
 
 > MIT | 🚀 Hackable & Self-hosted Open-Source alternative to Vercel, Heroku, Netlify, etc. All your applications, just in one place. Develop and deploy with your favorite tools, and enjoy continuous deployment with GitHub.
 
-
-
-Which I will cover on a future post.
+Tools Which I will (probably) cover on a future post.
 
 ## Conclusions
 
-Using cloudflared for a sub.sub.domain.com is problematic with the https SSL.
+Using cloudflared for a sub.sub.domain.com is **problematic with the https/SSL**.
 
 So I restarted everything (with a CPX11, AMD x86).
 
@@ -395,7 +393,7 @@ networks:
     external: true
 ```
 
-This requires ~309/1.87GB.
+This requires ~309mb/1.87GB of RAM.
 
 And for **DNS Challenge** with Cloudflare:
 

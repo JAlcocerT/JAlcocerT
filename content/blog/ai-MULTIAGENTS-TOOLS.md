@@ -2,10 +2,6 @@
 title: "AI Multi Agents: PyAutogen"
 date: 2025-03-10
 draft: false
-# cover:
-#     image: "https://socialify.git.ci/jw782cn/Claude-Streamlit/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-#     alt: "" # alt text
-#     caption: "" # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
 description: 'Reviewing the most Popular AI Agents frameworks: AG2AI (AutoGen), LangChain, LlamaIndex,'
 url: 'ai-multi-agents-frameworks'
@@ -142,7 +138,7 @@ We can say it is a data validation framework, that now it has an **AI version**
 > Agent Framework / shim to use Pydantic with LLMs - **MIT Licensed!**
 
 
-{{< details title="What it is Pydantic? 📌" closed="true" >}}
+{{< details title="What it is Pydantic? Data Validation? 📌" closed="true" >}}
 
 Pydantic is a **data validation** and settings management library in Python. 
 

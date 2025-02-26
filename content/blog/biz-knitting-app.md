@@ -5,6 +5,7 @@ draft: false
 tags: ["Dev"]
 description: 'Creating a clothing size calculator'
 url: 'knitting-pattern-calculator'
+math: true
 ---
 
 {{< callout type="info" >}}

@@ -3,14 +3,12 @@ title: "My [AI] Youtube Workflow with Whisper"
 date: 2024-11-07
 draft: false
 tags: ["Tinkering"]
-description: 'How to use AI to share more (and hopefully better video content) with others'
+description: 'How to use AI to share more (and hopefully better) video content with others'
 summary: 'How Im slowly getting better at publishing to Youtube and creating content.'
 url: 'my-youtube-ai-workflow'
 ---
 
-It all started with the [DJI OA5 Pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/)
-
-It takes ~1h48min/41.5GB of video at 2.7k/RS/Standard/60fps to fill the internal memory.
+It all started with the [DJI **OA5 Pro**](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/)
 
 ...And continued with the [**x300** *as a video creation center...*](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#video-editing-101)
 
@@ -78,8 +76,8 @@ The initial scripts I used are at [YT_Audios](https://github.com/JAlcocerT/JAlco
 
 #### Updating My YT Video WF [AI Powered]
 
-* OBSStudio to record + I record myself commenting the video
-* Then, that `.mp4` gets a transcript, which is passed to the OpenAI API to generate an AI voice
+* **OBSStudio** to record + I record myself commenting the video
+* Then, that `.mp4` gets a transcript, which is passed to the **OpenAI API to generate an AI voice**
 
 ![FC Meme](/blog_img/memes/ezoeazin.jpg)
 
@@ -196,10 +194,11 @@ And maybe a future...**podcast creator** with AI and [the AstroPod Theme](https:
 
 ### Quick Vlogs as a Code
 
-2) Using ffmpeg or Python MoviePy
+2) Using **ffmpeg** or Python MoviePy
+
+Rencoding? save time not doing it. If the parts have similar resolution/fps/codecs and other features, you dont need to.
 
 {{< callout type="info" >}}
-Rencoding? save time not doing it. If the parts have similar resolution/fps/codecs and other features, you dont need to.
 With [this Script you can **bundle together videos** with MoviePy on W11/Linux](https://github.com/JAlcocerT/YT-Video-Edition/blob/main/With_Python/joinALLvideosFolderNoRencod2.py)
 {{< /callout >}}
 
@@ -227,16 +226,12 @@ See [the VideoEditingWF repo](https://github.com/JAlcocerT/VideoEditingRemotion)
 
 ## Other interesting AI Audio stuff
 
+* https://github.com/pluja/whishper
+
 
 {{< details title="WhiSHper 📌" closed="true" >}}
 
-
-
-Whishper is an open-source, 100% local audio transcription and subtitling suite with a full-featured web UI.
-
-https://github.com/pluja/whishper
-
-
+Whishper is an **open-source, 100% local audio transcription** and subtitling suite with a full-featured web UI.
 
 https://whishper.net/guides/install/
 
@@ -250,10 +245,10 @@ bash get-whishper.sh
 {{< /details >}}
 
 
-{{< details title="Whisper 📌" closed="true" >}}
+### Whisper
 
+{{< details title="Whisper - Speech recognition system developed by OpenAI 📌" closed="true" >}}
 
-## Whisper
 
 * <https://github.com/sindresorhus/awesome-whisper> : Awesome list for Whisper — an open-source AI-powered speech recognition system developed by OpenAI
     * <https://openai.com/research/whisper>
@@ -267,8 +262,6 @@ bash get-whishper.sh
 
 
 ```yml
-version: '3'
-
 services:
   whisper:
     image: python:3.11-slim
@@ -313,14 +306,13 @@ https://github.com/ggerganov/whisper.cpp/discussions/604
 
 
 {{< details title="Meeper is your secretary for any in-browser conference.📌" closed="true" >}}
-https://chromewebstore.google.com/detail/meeper-transcribe-summari/pollmehpbdljnolojdajljeoejeglcfi
-https://github.com/serg-plusplus/meeper
+
+* https://chromewebstore.google.com/detail/meeper-transcribe-summari/pollmehpbdljnolojdajljeoejeglcfi
+* https://github.com/serg-plusplus/meeper
 
 ```sh
 python3 -m venv meepervenv
 source meepervenv/bin/activate
-
-
 
 git clone git@github.com:serg-plusplus/meeper.git && cd meeper
 
@@ -346,10 +338,13 @@ flatpak install flathub com.cuperino.qprompt
 flatpak run com.cuperino.qprompt
 ```
 
-* Or a specific Qprompt-teleprompter version:
-   * https://github.com/Cuperino/QPrompt-Teleprompter/releases/tag/v1.0.0-beta-005
-      * https://github.com/Cuperino/QPrompt-Teleprompter/blob/main/build.md#android-build-instructions
-   * https://github.com/Cuperino/QPrompt-Teleprompter/releases/tag/v1.1.6
+Or a **specific** Qprompt-teleprompter version:
+
+* https://github.com/Cuperino/QPrompt-Teleprompter/releases/tag/v1.0.0-beta-005
+    * https://github.com/Cuperino/QPrompt-Teleprompter/blob/main/build.md#android-build-instructions
+* https://github.com/Cuperino/QPrompt-Teleprompter/releases/tag/v1.1.6
+
+You just need these commands:
 
 ```sh
 wget https://github.com/Cuperino/QPrompt-Teleprompter/releases/download/v1.1.6/qprompt-v1.1.6-51788eb-linux-gcc-x86_64.AppImage

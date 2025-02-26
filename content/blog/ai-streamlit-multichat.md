@@ -11,7 +11,15 @@ description: 'Enhancing LLM support for Streamlit-MultiChat: Grok, DeepSeep and 
 url: 'streamlit-multichat'
 ---
 
-Avoid LLM lock-in and the recurring subscription bills. **Simply use APIs**.
+Avoid LLM lock-in and the recurring subscription bills.
+
+**Simply use APIs**.
+
+Together with Streamlit!
+
+
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.32.2-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white#center)](https://pypi.org/project/streamlit/)
+
 
 
 {{< callout type="info" >}}

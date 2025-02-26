@@ -157,7 +157,7 @@ https://github.com/one-aalam/awesome-astro?tab=readme-ov-file#%E2%84%B9%EF%B8%8F
   {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="Job Offers and CV Creation" >}}
 {{< /cards >}}
 
-{{< details title="What it is Pydantic? 📌" closed="true" >}}
+{{< details title="What it is ? 📌" closed="true" >}}
 
 
 1. Find the Theme Source Code
@@ -271,7 +271,7 @@ https://github.com/riteshk-007/nextjs-store?ref=statichunt.com -->
 https://github.com/subhamBharadwaz/scribbly -->
 
 
-{{< details title="What it is Pydantic? 📌" closed="true" >}}
+{{< details title="What it is ? 📌" closed="true" >}}
 
 {{< /details >}}
 

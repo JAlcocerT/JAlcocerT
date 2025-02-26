@@ -7,8 +7,7 @@ cover:
   alt: "How to use PandasAI" # alt text
   caption: "PandasAI 101 - Step by Step" # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
-description: 'RAG with PandasAI'
-summary: 'How to chat with your data with PandasAI (Together with OpenAI API or with Ollama)'
+description: 'RAG with PandasAI. How to chat with your data with PandasAI (with OpenAI API or with Ollama)'
 url: 'how-to-use-pandasAI'
 ---
 
@@ -96,7 +95,7 @@ export OPENAI_API_KEY="sk-..." #linux
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TirendazAcademy/PandasAI-Tutorials/blob/main/Intro-to-PandasAI.ipynb)
 
 
-[![PandasAI](https://img.shields.io/badge/PandasAI-1.2.0-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white#center)](https://pandas-ai.com/)
+[![PandasAI](https://img.shields.io/badge/PandasAI-1.2.0-FF4B4B.svg?style=flat&logo=pandas-ai&logoColor=white#center)](https://pandas-ai.com/)
 
 
 ### PandasAI with Ollama and Streamlit

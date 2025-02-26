@@ -10,7 +10,9 @@ url: 'elicitation-data-analytics'
 
 ## Business Analysis: Mastering Elicitation and Collaboration
 
-This guide clarifies the difference between elicitation and requirements gathering, emphasizing the importance of both for successful business analysis.  It outlines effective techniques and best practices for eliciting information from stakeholders and collaborating effectively.
+This guide clarifies the difference between elicitation and requirements gathering, emphasizing the importance of both for successful business analysis.
+
+It outlines effective techniques and best practices for eliciting information from stakeholders and collaborating effectively.
 
 ### Elicitation vs. Requirements Gathering
 
@@ -23,7 +25,9 @@ Think of it this way: requirements gathering is the entire toolbox, while elicit
 
 ### The Importance of Elicitation and Collaboration
 
-Elicitation and collaboration are ongoing, iterative processes throughout the business analysis lifecycle. They are not phases, but rather continuous activities that adapt as the project evolves.  Effective elicitation ensures you're building the *right* thing, while strong collaboration ensures everyone is on board and understands *why*.
+Elicitation and collaboration are ongoing, iterative processes throughout the business analysis lifecycle. They are not phases, but rather continuous activities that adapt as the project evolves. 
+
+Effective elicitation ensures you're building the *right* thing, while strong collaboration ensures everyone is on board and understands *why*.
 
 Collaboration can be planned (workshops, surveys) or unplanned (ad-hoc discussions).  The key is to foster open communication and ensure all stakeholders feel heard and valued.
 

@@ -7,6 +7,15 @@ url: 'calculus-101'
 math: true
 ---
 
+The first time I got to know calculus, was with derivatives and integrals.
+
+I kind of like derivatives...but hated integrals.
+
+Probably because of the lack of purpose that I was given.
+
+I could not be more wrong at that point, as calculus its both: beautiful and useful...
+
+...if you get it explained right.
 
 The essence of calculus.
 
@@ -18,9 +27,24 @@ Laws of physics are explained with differential equations.
 The series that **3Blue1Brown** has made on the topic, are simply **magestic**: https://www.youtube.com/watch?v=p_di4Zn4wz4 and https://www.youtube.com/playlist?list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6
 
 
+## Calculus Applications
+
+The classic: the area under a curve!
+
+Why do we want that?
+
+Well, I can think already about few examples:
+
+1. /JAlcocerT/machine-learning-the-roc-curve-in-detail
+2. 
+
 ## ODE - 
 
-https://www.youtube.com/watch?v=ly4S0oi3Yz8
+Ordinary Differential Equations!
+
+<!-- https://www.youtube.com/watch?v=ly4S0oi3Yz8 -->
+
+
 {{< youtube "ly4S0oi3Yz8" >}}
 
 ### The Double Pendulum

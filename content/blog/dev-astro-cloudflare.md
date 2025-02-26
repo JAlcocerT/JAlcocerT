@@ -8,7 +8,7 @@ summary: 'Astro Websites Automatic deployment with Cloudflare Pages and CICD'
 url: 'astro-web-cloudflare-pages'
 ---
 
-We can upload the manually generated static astro content to [Cloudflare Pages via CLI as explained here](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/#faq).
+We can upload the manually generated static astro content to [**Cloudflare Pages via CLI** as explained here](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/#faq).
 
 But how about just pushing the changes to a **Github Repository and let the CI/CD** magic happen?
 

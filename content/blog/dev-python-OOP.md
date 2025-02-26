@@ -22,3 +22,9 @@ And I can understand why now.
 
 
 https://github.com/JAlcocerT/mechanism
+
+
+<!-- 
+declarative programming language (not procedural! - you dont have to tell it (the procedure) how to do it, the query engine worries about the how for you)
+great for data management, manipulation and analytics
+relational data model -->

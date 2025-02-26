@@ -1,10 +1,10 @@
 ---
 title: "Git & Development Tricks: Github, Gitlab and more"
-date: 2025-12-15T23:20:21+01:00
-draft: true
+date: 2025-03-17T23:20:21+01:00
+draft: false
 tags: ["Dev"]
 url: 'git-recap'
-summary: 'Git and useful extensions while developing.'
+description: 'Git and useful extensions while developing.'
 ---
 
 * Name: **Dev Containers**
@@ -17,7 +17,6 @@ https://jalcocert.github.io/JAlcocerT/github-gists/
 
 #### Creating Releases
 
-
 And given a project, you can **get the latest Github release** as per:
 
 <!-- https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8 -->
@@ -26,11 +25,16 @@ And given a project, you can **get the latest Github release** as per:
 
 #### Github Actions
 
-https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/" title="GHA 101 Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="How to get the most out of Github Actions" >}}
+{{< /cards >}}
 
 Post - Github Actions MultiArch Images.
 
-But since this year we can also build ARM64 images natively with GHActions!
+But since this year, 2025, we can also build ARM64 images natively with GHActions!
 
 #### Github Pages
 

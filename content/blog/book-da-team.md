@@ -10,13 +10,16 @@ url: 'team-management-data-analytics'
 
 <!-- # Managing a Team -->
 
-* Managing a team in data analytics involves coordinating a group of data professionals to extract meaningful insights from data to drive strategic decisions. 
-    * It requires a strong understanding of data analysis methods, software tools, and the ability to translate complex findings into actionable strategies.
+Managing a team in data analytics involves coordinating a group of data professionals to extract meaningful insights from data to drive strategic decisions. 
+
+It requires a strong understanding of data analysis methods, software tools, and the ability to translate complex findings into actionable strategies.
 
 * To become a successful manager, you must foster a collaborative environment that encourages innovation, critical thinking, and continuous learning. 
     * Clearly communicate project goals, delegate tasks based on individual strengths, and guide their team in using various data analysis techniques.
 
-Dont forget to ensure data integrity and quality control, handle resource allocation, and oversee project timelines, while regularly providing constructive feedback and encouraging professional development. Equally important is their role in bridging the gap between technical data findings and non-technical stakeholders, enabling informed decision-making across the organization.
+Dont forget to ensure data integrity and quality control, handle resource allocation, and oversee project timelines, while regularly providing constructive feedback and encouraging professional development.
+
+Equally important is their role in bridging the gap between technical data findings and non-technical stakeholders, enabling informed decision-making across the organization.
 
 
 ## Know Yourself First

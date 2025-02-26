@@ -177,7 +177,7 @@ Lets go with the AI part.
 
 
 
-{{< details title="What it is Pydantic? 📌" closed="true" >}}
+{{< details title="What it is ? 📌" closed="true" >}}
 
 
 {{< /details >}}

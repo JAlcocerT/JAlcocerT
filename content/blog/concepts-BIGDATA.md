@@ -1,6 +1,6 @@
 ---
 title: "Big Data Tools [Recap]"
-date: 2025-02-21
+date: 2025-02-26
 draft: false
 tags: ["Dev"]
 description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssistant for Tech.'
@@ -64,6 +64,13 @@ But how to process the data?
 
 
 {{< details title="Data Profiling 📌" closed="true" >}}
+
+<!-- 
+ https://greatexpectations.io/expectations/
+ https://greatexpectations.io/blog/what-is-data-profiling
+  -->
+
+<!-- pydantic -->
 
 
 {{< /details >}}
@@ -481,12 +488,7 @@ The test are configured with a `.yml` file
 
 > Does it remind to **python [great expectations](https://docs.greatexpectations.io/docs/core/introduction/try_gx/)**? data profiling/validation, anybody? :)
 
-<!-- 
- https://greatexpectations.io/expectations/
- https://greatexpectations.io/blog/what-is-data-profiling
-  -->
 
-<!-- pydantic -->
 
 {{< cards >}}
   {{< card link="https://wetrustindata.com/how_to_test_data_solutions/" title="Test Data Pipelines with SQL & DBT" icon="book-open" >}}

@@ -5,14 +5,13 @@ Lastmod: 2022-11-17
 draft: false
 tags: ["Dev"]
 description: 'SQL starting guide that will make your road to Data Analytics easier.'
-summary: 'I have been compiling the most recurrent SQL queries that you will require in your first job as a data analyst. Master these and you will make a great progress with your analytical skills.'
 url: 'sql-data-analytics'
 ---
 
-<!-- 
-declarative programming language (not procedural! - you dont have to tell it (the procedure) how to do it, the query engine worries about the how for you)
-great for data management, manipulation and analytics
-relational data model -->
+I have been compiling the **most recurrent SQL queries** that you will require in your first job as a data analyst. 
+
+Master these and you will make a great progress with your analytical skills!
+
 
 ## The SQL Guide
 
@@ -132,7 +131,9 @@ UNION combines the results of two or more SELECT queries vertically (appending r
 
 The UNION operation is used to combine the results of two or more SELECT queries into a single result set. It eliminates duplicate rows from the results.
 
+{{< callout type="info" >}}
 Each SELECT query within the UNION must have the same number of columns and those columns must have similar data types.
+{{< /callout >}}
 
 The columns in each SELECT statement must also be in the same order. The UNION operator is used when you want to combine rows from similar tables or datasets, essentially stacking the results vertically.
 

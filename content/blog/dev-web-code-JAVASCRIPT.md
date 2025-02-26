@@ -121,7 +121,7 @@ JavaScript **image gallery** and lightbox
 > JavaScript image gallery for mobile and desktop, modular, **framework independent**
 
 
-{{< details title="What it is Pydantic? 📌" closed="true" >}}
+{{< details title="What it is ? 📌" closed="true" >}}
 
 {{< /details >}}
 

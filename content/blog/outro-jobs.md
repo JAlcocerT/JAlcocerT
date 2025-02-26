@@ -3,11 +3,11 @@ title: "About Jobs. And LLM Engineers."
 date: 2025-02-10
 draft: false
 tags: ["Dev"]
-description: 'Is it a good moment to change jobs? And to become a LLM Engineer?. Definitely time to recap with scrap and firecrawl API.'
+description: 'Is it a good moment to change jobs? And to become a LLM/ML Engineer?. Definitely time to recap with scrap and firecrawl API.'
 url: 'when-to-apply-for-a-job'
 ---
 
-New year, new opportunities.
+New year, new **opportunities**.
 
 Or so some say.
 
@@ -329,16 +329,53 @@ Here's a breakdown of the key aspects of an LLM Engineer's role, based on your r
 
 {{< details title="Desirable Skills (Advantages)  📌" closed="true" >}}
 
-
-
-
 * **Machine Learning Frameworks:** Experience with TensorFlow, PyTorch, or Hugging Face Transformers is a significant advantage.  These frameworks are often used for fine-tuning LLMs or building related machine learning components.
 * **Vector Databases:** Knowledge of vector databases (e.g., Pinecone, Weaviate) is highly valuable.  These databases are designed to store and efficiently retrieve vector embeddings, which are crucial for many LLM applications, like semantic search and retrieval augmented generation (RAG).
 * **Advanced NLP Techniques:**  A deeper understanding of advanced NLP techniques, such as named entity recognition, text summarization, and machine translation, allows LLM Engineers to build more sophisticated applications.
 
-
 {{< /details >}}
 
+In essence, an LLM Engineer is a **specialized software engineer who combines expertise in LLMs, NLP, programming, and DevOps to create innovative and intelligent applications.**  
+
+They are at the forefront of the AI revolution, building the next generation of software that can understand and generate human language.
+
+#### What it is a ML Engineer?
+
+**ML Engineer?**
+
+A Machine Learning (ML) Engineer is a software developer who specializes in building, deploying, and maintaining machine learning systems. They **bridge the gap between data science and software engineering**, taking models developed by data scientists and turning them into scalable, production-ready applications.
 
 
-**In essence, an LLM Engineer is a specialized software engineer who combines expertise in LLMs, NLP, programming, and DevOps to create innovative and intelligent applications.  They are at the forefront of the AI revolution, building the next generation of software that can understand and generate human language.**
+
+
+{{< details title="Key responsibilities of an ML Engineer 📌" closed="true" >}}
+
+
+* **Model Deployment:** Implementing and deploying machine learning models into production environments.
+* **MLOps:** Building and maintaining infrastructure for machine learning pipelines (data ingestion, model training, deployment, monitoring).
+* **Scalability and Performance:** Optimizing models and infrastructure for performance and scalability.
+* **Data Engineering:** Working with data pipelines to ensure data quality and availability.
+* **Software Development:** Writing production-level code for ML applications.
+* **Monitoring and Maintenance:** Monitoring model performance and maintaining ML systems.
+* **Collaboration:** Working closely with data scientists, software engineers, and other stakeholders.
+
+**Analyzing the Requirements:**
+
+**Strengths:**
+
+* **Comprehensive Skill Set:** The requirements cover a broad range of essential ML engineering skills, including Python, SQL, ML algorithms, GenAI, and cloud technologies.
+* **Emphasis on GenAI:** The focus on GenAI, especially prompt engineering and language modeling, reflects the growing importance of these technologies.
+* **Production Focus:** The requirement for experience owning a feature from concept to production highlights the emphasis on building production-ready systems.
+* **Cloud Proficiency:** The "Nice to Have" section emphasizes AWS skills, which are highly valuable in modern ML engineering.
+* **Clear Communication:** The emphasis on written and verbal communication is crucial for a remote and asynchronous work environment.
+* **Good mixture of data science, and data engineering skills.**
+
+**Potential Challenges/Considerations:**
+
+* **High Expectations:** The "Advanced knowledge" and "Expertise" requirements suggest a senior-level role.
+* **Broad Tech Stack:** The range of technologies (TensorFlow, PyTorch, AWS services) might require a significant learning curve.
+* **GenAI Specialization:** The strong focus on GenAI might limit the scope of work to specific types of projects.
+* **Healthcare/Insurance Background:** While a "Nice to Have," a background in these industries might be preferred, potentially narrowing the candidate pool.
+* **Asyncronous work environment:** Asyncronous work environments require very strong communication skills.
+
+{{< /details >}}

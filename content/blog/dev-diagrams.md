@@ -4,10 +4,15 @@ date: 2023-12-29T23:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'How to use Mermaid Diagrams for Quick diagrams. Compared with Python Diagrams, DrawIO'
-summary: 'How to use Mermaid Diagrams.'
 url: 'how-to-use-mermaid-diagrams'
 ---
 
+An image is worth a 1000 words.
+
+I cant disagree with that sentece since I discovered these tools:
+
+1. [MermaidJS](#mermaidjs)
+2. [Python Diagrams and DrawIO](#other-diagram-tools)
 
 ## MermaidJS
 

@@ -2,15 +2,12 @@
 title: "[AI] Using LiteLLM to unify LLMs calls"
 date: 2025-03-01
 draft: false
-# cover:
-#     image: "https://socialify.git.ci/alejandro-ao/ask-multiple-pdfs/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-#     alt: "ChatPDF" # alt text
-#     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
 tags: ["Gen-AI","Python"]
 description: 'How to use LiteLLM with different APIs - From OpenAI to Mistral APIs'
-summary: 'Setup LiteLLM to make LLMs API calls.'
 url: 'how-to-use-lite-llm'
 ---
+
+Setup LiteLLM to make LLMs API calls!
 
 Its time to discover **LiteLLM**
 

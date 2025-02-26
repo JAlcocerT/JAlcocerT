@@ -1,5 +1,5 @@
 ---
-title: "Features for a Professional News Website"
+title: "Features for a Professional Looking News Website"
 date: 2025-03-22
 draft: false
 tags: ["Web"]

@@ -1,12 +1,16 @@
 ---
-title: "Machine Learning for Data Analytics"
+title: "Machine Learning and Data Science for Data Analytics"
 date: 2020-11-25T23:20:21+01:00
 draft: false
 tags: ["Python","Dev"]
-description: 'The starting point for anyone interested in learning AI/ML from the basics.'
-summary: 'I wanted to summarize the most important ML concepts to work as a data analyst.Even if you will not be performing Data Science tasks, this knowledge will be of great help when collaborating with them. Understand their language.'
+description: 'The starting point for anyone interested in learning AI/ML from the basics. Understand DSc language.'
+summary: ' .'
 url: 'machine-learning-data-analytics'
 ---
+
+For some time I wanted to summarize the most important **ML concepts to work at data analytics.
+
+Even if you will not be performing Data Science tasks, this knowledge will be of great help when collaborating with them.
 
 <!-- # The ML Guide -->
 <!-- 

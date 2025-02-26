@@ -245,8 +245,8 @@ Static web search with low bandwitdh
 
 ### Interesting Post Slider with React
 
-https://github.com/gio-del/Astro-Theme-Astroway
-https://github.com/gio-del/Astro-Theme-Astroway?tab=MIT-1-ov-file#readme
+* https://github.com/gio-del/Astro-Theme-Astroway
+  * https://github.com/gio-del/Astro-Theme-Astroway?tab=MIT-1-ov-file#readme
 
 ---
 

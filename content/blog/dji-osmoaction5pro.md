@@ -43,9 +43,14 @@ This is a 2.7K Video example, meaning **2688x1512 at 50FPS**, during the day:
 {{< youtube "cqs4MkJ_4M4" >}}
 
 {{< callout type="info" >}}
-A regular TV can be **4K UHD, meaning 3840x2160**.
-Be aware when recording that it can do x2160 or other, depending if you choose W/UW and so on
+Be aware when recording that it can do x2160 or other (x1512), depending if you choose W/UW and so on
 {{< /callout >}}
+
+
+A regular TV can be **4K UHD, meaning 3840x2160**.
+
+It takes ~1h48min/41.5GB of video at 2.7k/RS/Standard/60fps to fill the internal memory.
+
 
 <!-- 
 but also x3840x1600? UW??? -->

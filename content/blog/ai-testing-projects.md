@@ -4,7 +4,6 @@ date: 2024-12-25
 draft: false
 tags: ["Dev","Python"]
 description: 'How to use the latest AI Project. With Code and Systematically. Example with PrivateGPT and ChatDev'
-summary: 'How I Test AI Projects with Python'
 url: 'ai-projects-python-dependencies'
 ---
 

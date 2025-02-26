@@ -7,7 +7,7 @@ description: 'Use Github Actions CI/CD in your workflow. From Static Pages to Co
 url: 'github-actions-use-cases'
 ---
 
-If you are familiar with container technology, you might wonder if there is a way for containers to get built by themselves.
+If you are familiar with container technology, you might wonder if there is **a way for containers to get built by themselves**.
 
 Thats were CI/CD comes into play, and in particular **Github Actions**.
 

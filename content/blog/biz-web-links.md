@@ -3,7 +3,7 @@ title: "One link for Social Bios: LinkinBios vs Bento like websites"
 date: 2025-01-24
 draft: false
 tags: ["OSS"]
-summary: 'Simple Link Hosting Services, for all. With a website, of course.'
+description: 'Simple Link Hosting Services, for all. With a website, of course.'
 url: 'linktree-web-alternative'
 ---
 
