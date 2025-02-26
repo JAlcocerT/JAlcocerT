@@ -8,7 +8,9 @@ url: 'real-estate-website'
 math: true
 ---
 
-
+<!-- 
+https://github.com/JAlcocerT/cybernetik-realestate-moises 
+-->
 
 For the current web UI status:
 
@@ -32,8 +34,28 @@ As always, I got amazed with other themes, like:
   * https://cybernetic-free-version.netlify.app/
 
 ```sh
+git clone https://github.com/codexcodethemes/cybernetic-free
 npm install 
+npm audit fix
+
+npm run dev #localhost:4321
+#rm -rf .git
 ```
+
+Install **firebase CLI** as [static deployment](https://fossengineer.com/alternatives-for-hosting-static-websites/):
+
+```sh
+npm install -g firebase-tools
+
+firebase login
+firebase init
+#firebase deploy
+
+#firebase hosting:channel:list
+#firebase hosting:channel:delete <channelId>
+```
+
+> It will be under `someprojectname.web.app` and you can revoke permissions at https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
 
 {{< /details >}}
 
@@ -87,11 +109,12 @@ npm run dev #you will need shopify credentials for the .env
 
 This is kind of a **three in one project**:
 
-1. Responsive Web UI
-2. Real Estate Calculator to engage users and potential clients
-3. Gen AI App to provide recommendations based on the available houses
+1. Responsive **Web** UI
+2. **Real Estate Calculator** to engage users and potential clients
+3. **Gen AI App** to provide recommendations based on the available houses
+4. **Scrapping Tool** to get Photos automatically
 
-**Result**: <https://dm-real-estate.com/> or https://moises-era.pages.dev
+**Result**: <https://dm-real-estate.com/> or https://moises-era.pages.dev (vs) https://dm-realestate.web.app/
 
 {{< callout type="info" >}}
 And with an interesting tool to get the photo properties automated

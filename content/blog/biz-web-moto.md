@@ -47,7 +47,7 @@ firebase deploy #to push dist to proyectorutasmoto.web.app
 > There you go: https://proyectorutasmoto.web.app/
 
 
-Next steps - To link a custom domain and to not forget to sync it to github for a free code backup!
+**Next steps** - To link a custom domain and to not forget to sync it to github for a free code backup!
 
 <!-- 
 https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/
@@ -55,5 +55,5 @@ https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/
 ![HUGO Theme Gallery Carbon](/blog_img/web/success5-aga/photogallery-hugo-whilecyclingthere-carbon.png) -->
 
 {{< cards >}}
-  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="SSGs are Crazy Efficient" image="/blog_img/web/success5-aga/photogallery-hugo-whilecyclingthere-carbon.png" subtitle="See how this other HUGO Gallery Project was delivered" method="Resize" options="600x q80 webp" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/" title="SSGs are Crazy Efficient" image="/blog_img/web/success5-aga/photogallery-hugo-whilecyclingthere-carbon.png" subtitle="See how this other HUGO Gallery Project was delivered" method="Resize" options="600x q80 webp" >}}
 {{< /cards >}}

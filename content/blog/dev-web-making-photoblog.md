@@ -1,9 +1,9 @@
 ---
-title: "Creating a Photo Centered Web"
+title: "Creating a Photo Centered Web - Hugo Theme Gallery"
 date: 2024-09-29T23:50:59+01:00
 draft: false
 tags: ["dev"]
-summary: 'How I used HUGO to create a Photo Gallery / Blog, for a Digital Creator'
+description: 'How I used HUGO to create a Photo Gallery / Blog, for a Digital Creator'
 url: 'creating-photo-centric-blog-with-hugo'
 ---
 
