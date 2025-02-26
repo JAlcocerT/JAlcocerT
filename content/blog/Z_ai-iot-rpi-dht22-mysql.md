@@ -10,8 +10,27 @@ url: 'langchain-chat-with-sensor-data'
 ---
 
 
+You can also try [PandasAI](https://pypi.org/project/pandasai/) and [Sketch](https://pypi.org/project/sketch/) with Python.
+
+* https://pypi.org/project/sketch/
+* https://github.com/approximatelabs/sketch
+
+> MIT | AI code-writing assistant that understands data content. Sketch is usable in seconds and doesn't require adding a plugin to your IDE.
+
 ![Graphic Walker UI](/blog_img/hardware/asrockx300-air-temp.jpg)
 
+> Sketch is an AI code-writing assistant for pandas users that understands the context of your data, greatly improving the relevance of suggestions. Sketch is usable in seconds and doesn't require adding a plugin to your IDE.
+
+<!-- 
+https://www.quadratichq.com/
+
+> Source Open | Infinite spreadsheet with Python, SQL, and AI.
+
+https://github.com/quadratichq/quadratic/tree/main
+https://github.com/quadratichq/quadratic/issues/416
+docker build -t quadratic --platform=linux/amd64 .
+
+ -->
 
 
 It all started with the RPi projects I published here about a [Pi working together with a **DHT22 sensor**.](https://jalcocert.github.io/RPi/posts/rpi-iot-dht11-influxdb/).

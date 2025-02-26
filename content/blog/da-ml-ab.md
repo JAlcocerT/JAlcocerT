@@ -75,7 +75,7 @@ Some areas where A/B testing can be beneficial include:
 Which Free Software can I use to do AB Testing?
 
 {{< callout type="info" >}}
- You can have a look to **PostHog**, a Product Analytic software. Or simply use Python.
+ You can have a look to **PostHog**, a Product Analytic software. Or simply use Python!
 {{< /callout >}}
 
 

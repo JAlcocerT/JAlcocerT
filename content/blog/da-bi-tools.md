@@ -43,9 +43,72 @@ Real-Time Analytics with ClickHouse
 #### Redash
 
 
-For the IoT Fans out there: Grafana, Kibana and Chronogaph
+### Redash
+
+[Redash is an open-source]() data visualization and dashboarding tool that is commonly used in the field of data analytics and business intelligence. It helps organizations and individuals query, visualize, and share data from various data sources to gain insights and make data-driven decisions.
+
+
+https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash
+
+
+<!-- https://www.youtube.com/watch?v=_0_Qk0Oleeo -->
+
+{{< youtube "_0_Qk0Oleeo" >}}
+
+
+{{% details title="More About Redash" closed="true" %}}
+
+1. Data Connection: Redash allows users to connect to a wide range of data sources, including relational databases (e.g., PostgreSQL, MySQL), NoSQL databases (e.g., MongoDB), data warehouses (e.g., Amazon Redshift, Google BigQuery), REST APIs, and more. This versatility enables data analysts to work with data from multiple sources in a unified platform.
+
+2. Querying: Users can create SQL queries and run them within Redash to extract and transform data. The tool provides a user-friendly query builder interface, making it accessible to users with varying levels of SQL expertise.
+
+3. Visualization: Redash offers a variety of visualization options, including charts, graphs, and pivot tables, to help users explore and understand their data. It supports popular charting libraries like Chart.js, Plotly, and more, allowing for customizable and interactive visualizations.
+
+4. Dashboards: Users can combine multiple visualizations and queries into interactive dashboards. These dashboards can be customized and shared with others, making it easy to communicate insights and monitor key performance indicators (KPIs).
+
+5. Collaboration: Redash supports collaboration among team members by allowing them to share queries, dashboards, and insights. This promotes knowledge sharing and facilitates data-driven decision-making within organizations.
+
+6. Scheduled Reports: Redash enables users to schedule and automate the generation of reports and dashboards, which can be sent via email or other channels. This feature is useful for regularly distributing updated data and insights to stakeholders.
+
+7. Embedding: Redash provides options for embedding visualizations and dashboards into other applications or websites, allowing for seamless integration of data analytics capabilities into existing workflows.
+
+8. Data Governance: Redash provides role-based access control and data source integration, helping organizations maintain data security and governance standards.
+
+Redash is a versatile data analytics tool that simplifies the process of querying, visualizing, and sharing data from various sources.
+
+{{% /details %}}
+
+> You can use this [Docker-Compose to SelfHost Redash](https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash).
+
+Get Redash running locally with [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash)
+
+{{< callout type="info" >}}
+IoT Project example [with Redash]()
+{{< /callout >}}
+
+
+
+<!-- 
+<script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-redash"></script> -->
+<!-- 
+{{< gist "JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-redash" >}} -->
+
+<!-- ```sh
+git clone https://github.com/getredash/setup
+cd setup
+rm -rf .git
+
+
+chmod +x ./setup.sh
+./setup.sh
+``` -->
+
+
 
 #### Grafana
+
+For the IoT Fans out there: Grafana, Kibana and Chronogaph
+
 
 There are many Grafana stacks, like LGTM: **L**oki, **G**rafana, **T**empo and Pro**m**etheus
 
@@ -168,8 +231,6 @@ https://github.com/clint-kristopher-morris/Tutorials/tree/main/streamlit-part-1
 
 
 
-### Metabase
-
 
 ### Metabase
 
@@ -291,21 +352,47 @@ volumes:
 
 https://github.com/JAlcocerT/Docker/tree/main/IoT/Superset
 
-#### Superset with
+### Apache Superset
 
-### Redash
+Get Superset running locally with [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/IoT/Superset).
 
-https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash
+<!-- > IoT Project example [with Superset](). -->
 
-#### Redash with Containers
+<!-- 
+<script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-superset"></script> -->
 
-```yml
 
-```
+<!-- 
+<script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-superset"></script>
 
-<!-- https://www.youtube.com/watch?v=_0_Qk0Oleeo -->
+{{< gist "JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-superset" >}} -->
 
-{{< youtube "_0_Qk0Oleeo" >}}
+<!-- ```sh
+git clone https://github.com/apache/superset.git
+cd Superset
+rm -rf .git
+
+
+docker compose up -d
+
+git checkout 3.0.0
+TAG=3.0.0 docker compose -f docker-compose-non-dev.yml pull
+TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up
+``` -->
+
+<!-- {{< callout type="info" >}}
+IoT Project example with Superset: <>
+{{< /callout >}} -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-gps-superset/#apache-superset-setup" title="Superset Setup" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="IoT Pi Project with Superset" >}}
+{{< /cards >}}
+
+<!-- 
+![SBC Raspberry Pi 4](/blog_img/iot/Rpi4_4gb_size.jpg) 
+-->
+
+
 
 
 ---
@@ -333,3 +420,11 @@ https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash
 - **InfluxDB**
 - **Graphite**
 - **OPENFoam**
+
+
+
+### Other F/OSS BI Tools
+
+#### Kibana
+
+#### Grafana

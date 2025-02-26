@@ -21,6 +21,8 @@ With **~1.005L in volume** its even smaller than the AsrockX300
 
 It comes with W11 already installed, which I kept together with an Ubuntu installation (you need to desable Windows bitlocker first to be able to tweak the SDD space distribution).
 
+The battery life with its **57Wh** is much better with Linux imo, doing ~8h for my typical use.
+
 For a quick Windows setup, I used [Chocolatey](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/)
 
 ## Benchmarks ThinkPad x13-G2

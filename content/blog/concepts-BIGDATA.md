@@ -38,7 +38,7 @@ Both are places where data is stored.
 
 Thats was were can store.
 
-But how to process the data?
+But how to **process the data**?
 
 {{< details title="Data Processing Engines 📌" closed="true" >}}
 
@@ -60,6 +60,9 @@ But how to process the data?
 
 
 {{< /details >}}
+
+https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/
+https://greatexpectations.io/blog/what-is-data-profiling
 
 
 
@@ -231,6 +234,7 @@ This is great for IoT Stuff, like we might have in [Telecom](https://jalcocert.g
 {{< details title="Explore PySpark FAQ 📌" closed="true" >}}
 
 **Why is PySpark called lazy?**  
+
 PySpark is considered "lazy" because it does not execute any code until it absolutely has to.  
 - When you call a transformation on a PySpark DataFrame or RDD, it does not compute the result until you call an action.  
 - This allows Spark to **optimize the execution plan** by analyzing all transformations and determining the most efficient way to execute them.  
@@ -240,6 +244,7 @@ PySpark is considered "lazy" because it does not execute any code until it absol
 ---
 
 **What to use, Spark or Pandas? What's the difference?**  
+
 The choice depends on the type and size of your data:  
 - **Pandas**: Better for small datasets, with an intuitive and user-friendly interface.  
 - **Spark**: Superior for large datasets due to better performance and scalability.  
@@ -250,6 +255,7 @@ Spark also offers features like **distributed processing, in-memory computing, s
 ---
 
 **What is data redistributable?**  
+
 Data redistribution is the **process of transferring data** between systems or locations to:  
 - Improve performance  
 - Enhance scalability  
@@ -260,6 +266,7 @@ It’s often used for tasks like moving data between production and test systems
 ---
 
 **What is a partition?**  
+
 Partitions in Spark are **logical divisions of data** stored on a cluster node.  
 - They split large datasets into smaller, manageable chunks for parallel processing.  
 - Default: **Hash Partitioning**, using a hash function to assign data to partitions.  
@@ -268,12 +275,14 @@ Partitions in Spark are **logical divisions of data** stored on a cluster node.
 ---
 
 **What does GroupBy before partitioning do?**  
+
 Grouping data before partitioning organizes it for more efficient processing.  
 - Example: Summing values in a column can be optimized by grouping by that column first, ensuring each group’s sum is calculated only once.
 
 ---
 
 - **Comprehending the 5V's of Big Data**
+
 - Grasping various Big Data use cases (e.g., IoT, social media analysis, machine learning models, log analytics, etc.)
 - Understanding the concept of a Data Lake
 - Recognizing the key architectural layers and their roles:
@@ -290,6 +299,7 @@ Grouping data before partitioning organizes it for more efficient processing.
 - Understanding the Ingestion and Processing layers:
   - Concepts: batch vs streaming, ETL vs ELT
   - Core tools: Hive, Spark, Kafka, Sqoop, MapReduce
+
 - Understanding Storage layer concepts:
   - Bronze/Silver/Gold
   - Columnar vs row file formats
@@ -309,24 +319,30 @@ Grouping data before partitioning organizes it for more efficient processing.
   {{< card link="https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/" title="PySpark 101 ↗" icon="book-open" >}}
 {{< /cards >}}
 
-It offers a managed Spark environment along with a collaborative workspace and various integrated tools.
+It offers a **managed Spark environment** along with a collaborative workspace and various integrated tools.
 
 Think of databricks essentially like a very cool jupyter notebooks `.ipynb` which can use pyspark, sql, R...
 
 {{< details title="Databricks over a local PySpark cluster with Jupyter notebooks? 📌" closed="true" >}}
 
-
-
 **Advantages of Databricks:**
 
 * **Managed Spark Environment:** Databricks handles the complexities of setting up, configuring, and managing a Spark cluster.  You don't have to worry about installing Spark, configuring memory, or dealing with cluster failures.  This significantly reduces the operational overhead.
+
 * **Scalability and Elasticity:**  Scaling your Spark cluster up or down is incredibly easy in Databricks. You can quickly provision more resources when needed for large jobs and then scale back down to save costs when the job is finished.  This elasticity is much harder to achieve with a local cluster.
+
 * **Collaboration:** Databricks provides a collaborative workspace where multiple users can work on the same notebooks, share data, and collaborate on projects.  This is a major advantage for teams working on data science or machine learning projects.
+
 * **Integrated Tools and Services:** Databricks integrates with various cloud storage services (AWS S3, Azure Blob Storage, Google Cloud Storage), data lakes, and other data sources.  It also provides built-in tools for data visualization, machine learning (MLflow), and job scheduling.  This streamlined integration simplifies the data workflow.
+
 * **Performance Optimization:** Databricks optimizes the performance of Spark jobs through various techniques, such as caching, query optimization, and intelligent task scheduling.  This can lead to faster execution times compared to a locally managed cluster.
+
 * **Serverless Options:** Databricks offers serverless compute options (like Photon) that further simplify cluster management and optimize cost by automatically scaling resources based on workload demands.
+
 * **Security:** Databricks provides robust security features, including access control, data encryption, and compliance certifications.  Managing security on a local cluster can be more challenging.
+
 * **Auto-termination:** You can configure clusters to automatically terminate after a period of inactivity, saving you money on compute costs.
+
 * **Support:** Databricks provides support for its platform, which can be invaluable when you encounter issues.
 
 **Advantages of a Local PySpark Cluster:**
@@ -357,13 +373,13 @@ For most data science and data engineering teams working with Spark, Databricks 
 While a local cluster might seem cheaper initially, the long-term costs and complexities of management often make Databricks a more cost-effective and productive solution.
 
 
+<!-- ![Mongo and Databricks](/blog_img/dev/databricks-mongo.JPG) -->
 
-![Mongo and Databricks](/blog_img/dev/databricks-mongo.JPG)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-mongodatabricks/" title="Databricks with a Pi" image="/blog_img/dev/databricks-mongo.JPG" subtitle="Mongo and Databricks IoT Project" >}}
+{{< /cards >}}
 
 
-{{< callout type="info" >}}
-I made a project with a **Raspberry Pi with [Mongo & DataBricks CE](https://jalcocert.github.io/RPi/posts/rpi-iot-mongodatabricks/)**. [Data Modelling](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#databricks) is always an important part!
-{{< /callout >}}
 
 
 {{< details title="Databricks vs Google Big Query and Other Clouds 📌" closed="true" >}}
@@ -457,23 +473,61 @@ This allows Databricks to focus on its core strengths: providing a **unified ana
 
 ### Data Engineering Tools
 
-{{< callout type="info" >}}
-If you are preparing a Data Engineering Interview, make sure to check [this](https://wetrustindata.com/ace_your_technical_interview_practical/) and [this post](https://wetrustindata.com/ace_your_technical_interview_theory/)
-{{< /callout >}}
+You will get to know: Airflow, Jenkins and similar cloud managed services, like Google Cloud Composer.
 
-#### Airflow
+{{< callout type="info" >}}
+If you are preparing a **Data Engineering Interview**, make sure to check [this](https://wetrustindata.com/ace_your_technical_interview_practical/) and [this post](https://wetrustindata.com/ace_your_technical_interview_theory/)
+{{< /callout >}}
 
 {{< cards >}}
   {{< card link="https://fossengineer.com/selfhosting-jenkins-ci-cd/" title="SelfHost Jenkins ↗" icon="book-open" >}}
   {{< card link="https://fossengineer.com/airflow-docker/" title="SelfHost Airflow ↗" icon="user" >}}
 {{< /cards >}}
 
+**Similarities:**
 
+* All three are automation tools.
+* They can be used to automate complex tasks.
+* They can be used to create pipelines.
 
-{{< details title="Airflow and GC Composer 📌" closed="true" >}}
+{{< details title="Airflow vs Jenkins vs GC Composer 📌" closed="true" >}}
 
+**Airflow:**
+
+* **Purpose:** Workflow orchestration.
+* **Focus:** Scheduling and monitoring data pipelines (ETL, machine learning workflows).
+* **Key Feature:** Directed Acyclic Graphs (DAGs) for defining dependencies.
+* **Environment:** Typically self-managed or managed cloud offerings like Cloud Composer.
+* **Open Source:** Apache project.
+
+**Jenkins:**
+
+* **Purpose:** CI/CD automation.
+* **Focus:** Automating software builds, tests, and deployments.
+* **Key Feature:** Extensive plugin ecosystem for various automation tasks.
+* **Environment:** Typically self-managed.
+* **Open Source:** Community-driven.
+
+**Google Cloud Composer:**
+
+* **Purpose:** Managed workflow orchestration.
+* **Focus:** A managed Apache Airflow service on Google Cloud Platform (GCP).
+* **Key Feature:** Simplifies Airflow setup and management, integrates with other GCP services.
+* **Environment:** Google Cloud Platform.
+* **Based on Open Source:** Managed service based on Apache Airflow.
 
 {{< /details >}}
+
+**Differences:**
+
+* **Primary Use:** Airflow and Composer are for data workflows; Jenkins is for software workflows.
+* **Management:** Airflow is self-managed (or managed by other cloud providers), Jenkins is self-managed, and Composer is a fully managed service.
+* **Cloud Integration:** Composer is tightly integrated with GCP; Airflow and Jenkins require manual integration with cloud services.
+* **Scope:** airflow and composer are more data focused, jenkins is more code focused.
+
+{{< cards >}}
+  {{< card link="https://fossengineer.com/selfhosting-jenkins-ci-cd/" title="SelfHost Jenkins ↗" icon="book-open" >}}
+{{< /cards >}}
 
 
 #### DBT
@@ -494,29 +548,19 @@ The test are configured with a `.yml` file
   {{< card link="https://wetrustindata.com/how_to_test_data_solutions/" title="Test Data Pipelines with SQL & DBT" icon="book-open" >}}
 {{< /cards >}}
 
-{{< details title="DBT 📌" closed="true" >}}
+{{< details title="More about DBT! 📌" closed="true" >}}
 
 
 {{< /details >}}
 
 
-<!-- 
-Airflow?? -->
-
-<!-- 
-Elastic Search and kibana -->
-
-<!-- 
-Apache Kafka 
-https://openfaas.com/
--->
-
 #### ADF
 
+**Talend is like Azure Data Factory.**
 
-Talend is like Azure Data Factory.
+I mean, a **data integration tool**.
 
-I mean, a data integration tool. Not a big data processing tool.
+NOT a big data processing tool.
 
 You can plug input sources from places like APIs or SAP and direct it towards your DWH (like snowflake).
 
@@ -543,18 +587,16 @@ A escalable, low-code solution for **integrating and preparing data** for analyt
 There wont be any good data science work if the **data modelling** part is not done right.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/" title="ML 101" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/" title="ML 101 ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-the-roc-curve-in-detail/" title="ROC Post ↗" icon="user" >}}
 {{< /cards >}}
 
 With AI/ML you can do very cool stuff, from **AB Testing** to test new strategies, to sentiment analysis or PII detection:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="AB Testing" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="AB Testing ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/nlp-tools/" title="PII / Sentiment Analysis ↗" icon="user" >}}
 {{< /cards >}}
-
-
 
 
 {{< details title="Some examples of tasks and skills in machine learning/data science, along with how you could demonstrate them using Python and popular libraries 📌" closed="true" >}}
@@ -636,6 +678,11 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 
 
 {{< /details >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/fuzzy-matching-python/" title="Text Processing Post ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/nlp-tools/" title="NLP - PII / Sentiment Analysis ↗" icon="user" >}}
+{{< /cards >}}
 
 
 {{< cards >}}

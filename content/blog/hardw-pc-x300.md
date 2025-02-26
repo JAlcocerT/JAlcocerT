@@ -25,11 +25,11 @@ I went crazy and build it with **64GB RAM**.
 
 The idle consumptions of the x300 are decent (12/13w with 2 ssd's) and max power drawn during the tests of 53W.
 
-With a room temperature of 21C, in idle the air was getting out of the computer at ~28C.
+With a room air temperature of 21C, in idle the air was getting out of the computer at ~28C:
 
-Those **W are heating the air** as it passes to ~+7C
+![x300 air temperature](/blog_img/hardware/asrockx300-air-temp.jpg)
 
-
+Those **W are heating the air** as it passes to ~+7C when in ~idle
 
 {{< details title="How is that heating going? 📌" closed="true" >}}
 

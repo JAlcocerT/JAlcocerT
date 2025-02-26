@@ -531,9 +531,9 @@ MDM maturity models outline the stages of MDM implementation within an organizat
 
 ### Data Protection Regulations
 
-Be aware that these exists:
+Be aware that these **regulations exists**:
 
-* GDPR (General Data Protection Regulation): A European Union regulation that governs the processing and handling of personal data, giving individuals greater control over their data and imposing strict requirements on organizations that process personal data.
+* **GDPR** (General Data Protection Regulation): A European Union regulation that governs the processing and handling of personal data, giving individuals greater control over their data and imposing strict requirements on organizations that process personal data.
 
 * HIPAA (Health Insurance Portability and Accountability Act): A US regulation that sets standards for the protection of individuals' medical records and personal health information, applicable to healthcare providers, health plans, and other entities.
 

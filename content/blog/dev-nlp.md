@@ -69,11 +69,23 @@ for string in strings_to_check:
     print(f"String: '{string}' -> PII Detected: {result}")
 ```
 
+--
+
 ## Conclusions
 
-Nowadays you can also **use LLMs** for this kind of tasks.
+Nowadays you can also **use LLMs** for this kind of PII detectiontasks.
 
-But...it is always great to keep handy this kind of tools.
+But...it is always great to keep handy this kind of more traditional NLP tools.
+
+You can also have a look to **Sketch**, as it can make data cataloguing, like PII identification.
+
+* https://pypi.org/project/sketch/
+* https://github.com/approximatelabs/sketch
+
+> MIT | AI code-writing assistant that understands data content. Sketch is usable in seconds and doesn't require adding a plugin to your IDE.
+
+
+---
 
 ## FAQ
 

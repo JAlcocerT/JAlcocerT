@@ -216,6 +216,13 @@ Whats next?
 
 Probably more NoCode stuff: https://www.youtube.com/@AI-GPTWorkshop/videos
 
+### The Market Test
+
+**Product Analytics Tools**
+
+* [Umami](https://fossengineer.com/selfhosting-umami-with-docker/)
+* PostHog - https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics
+
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "People out there are really creative. Trackdays and Telemetry"
-date: 2025-02-26
+date: 2025-02-24
 draft: false
 description: 'What I learnt after exchanging few words about car racing, canbus and telemetry.'
 url: 'tinkering-telemetry-trackdays'
