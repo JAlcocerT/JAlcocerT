@@ -193,16 +193,24 @@ flatpak install flathub io.dbeaver.DBeaverCommunity
 
 ## AI Assisted Analytics
 
- * Github Copilot
- * 
- * Codeium
- * Tabby - https://fossengineer.com/selfhosting-Tabby-coding-assistant/
- * [Bito AI](https://docs.bito.ai/feature-guides/ai-that-understands-your-code/how-it-works)
+* Github Copilot
+
+* [Google Code Assist](https://codeassist.google/#available-in-your-favorite-ides-and-platforms) with this [vscode extension](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist)
+
+```sh
+ext install Google.geminicodeassist
+```
+
+When authorized you will see [this](https://developers.google.com/gemini-code-assist/auth/auth_success_gemini) and Gemini Code Assistant will be ready!
+
+* Codeium
+* Tabby - https://fossengineer.com/selfhosting-Tabby-coding-assistant/
+* [Bito AI](https://docs.bito.ai/feature-guides/ai-that-understands-your-code/how-it-works)
 
 * IDE's:
-    * Zed - https://zed.dev/download
-    * Rivet - https://github.com/Ironclad/rivet/releases - Integrate it with Ollama/Claude/GPT4...
-    * cursor.sh - use it with your own OpenAI/Anthropic/Azure keys
+* Zed - https://zed.dev/download
+* Rivet - https://github.com/Ironclad/rivet/releases - Integrate it with Ollama/Claude/GPT4...
+* cursor.sh - use it with your own OpenAI/Anthropic/Azure keys
 
 
 {{% details title="Rivet Release Setup" closed="true" %}}

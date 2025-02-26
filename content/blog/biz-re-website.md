@@ -10,6 +10,7 @@ math: true
 
 <!-- 
 https://github.com/JAlcocerT/cybernetik-realestate-moises 
+https://dm-realestate.web.app/
 -->
 
 For the current web UI status:
@@ -24,8 +25,7 @@ Improvements:
 1. [DaisyUI CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#daisyui) for Carousels, FAQ,...
 
 
-{{< details title="Adding DaisyUI to Astro Themes 📌" closed="true" >}}
-
+{{< details title="Adding DaisyUI to Astro Themes | Cybernetic 📌" closed="true" >}}
 
 
 As always, I got amazed with other themes, like:
@@ -40,6 +40,21 @@ npm audit fix
 
 npm run dev #localhost:4321
 #rm -rf .git
+```
+
+Apparently, at `/src/static/images/index.tsx` you can choose the **Hero images**.
+
+Create the `tailwind.config.js` and **add**:
+
+```js
+/** @type {import('tailwindcss').Config} */
+    module.exports = {
+      content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+      theme: {
+        extend: {},
+      },
+      plugins: [require("daisyui")],
+    };
 ```
 
 Install **firebase CLI** as [static deployment](https://fossengineer.com/alternatives-for-hosting-static-websites/):
@@ -57,9 +72,11 @@ firebase init
 
 > It will be under `someprojectname.web.app` and you can revoke permissions at https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
 
+**And 2 `.yml` files** with a [GHA Workflow for the Firebase deployment](https://github.com/JAlcocerT/cybernetik-realestate-moises/tree/main/.github/workflows) are already configured
+
 {{< /details >}}
 
-For the real estate calculator app part...
+For the real estate **calculator** app part...
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="DBs for DA ↗" icon="book-open" >}}
@@ -78,16 +95,37 @@ I almost forgot...the **GenAI Real estate Chat part**!
 ## Real Estate Web UI Enhancements
 
 
-{{% details title="Themes Considered: ScrewFast, Nebulix,  🚀" closed="true" %}}
+{{% details title="Themes Considered: ScrewFast, Nebulix, AstroFront...  🚀" closed="true" %}}
 
 1. https://github.com/mearashadowfax/ScrewFast
 
 > MIT | Open-source Astro website template with sleek, customizable TailwindCSS components.
 
 2. https://github.com/unfolding-io/nebulix
+
+> Nebulix, a Fast & Green Theme Based on Astro + Static CMS + Snipcart
+
+
+```sh
+git clone https://github.com/unfolding-io/nebulix
+#.env
+```
+
+With very interesting components at `/src/content/project/crafting-the-perfect-cosmic-mojito.mdx`
+
+```sh
+#/src/content/project
+
+#mogrify -format jpg *.avif #the images have to be jpeg or jpg to be zoomable
+```
+
+> http://localhost:4321/work/crafting-the-perfect-cosmic-mojito/
+
+
+
 3. https://github.com/themefisher/astrofront-astro
 
-> MIT | AstroJS-Powered Shopify Storefront Boilerplate with TailwindCSS and Nanostores. With **Shopify ecommerce integration**
+> MIT | AstroJS-Powered Shopify Storefront Boilerplate with TailwindCSS and Nanostores. With **Shopify ecommerce integration.**
 
 ```sh
 git clone https://github.com/themefisher/astrofront-astro
