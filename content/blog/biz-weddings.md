@@ -3,7 +3,7 @@ title: "Weddings are expensive. Be smart with the right software."
 date: 2025-02-03
 draft: false
 tags: ["OSS"]
-summary: "Interesting software for Weddings (WeddingShare). Including how to deploy it with Dokploy (to Pi / VPS)"
+summary: "Interesting software for Weddings (WeddingShare). Including how to deploy it with Dokploy (to Pi / VPS)."
 url: "software-for-weddings"
 ---
 
@@ -413,6 +413,7 @@ Then you will be done in under a minute:
 
 ![CName and A Record DNS CLoudflare with NGINX](/blog_img/selfh/nginx-cloudflare-filebrowser.png)
 
+And...if you are looking for a Theme for a Wedding landing page, you can have a look to **Astro Theme Horizon**.
 
 ---
 

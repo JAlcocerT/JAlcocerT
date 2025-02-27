@@ -85,12 +85,12 @@ For the real estate **calculator** app part...
 
 I almost forgot...the **GenAI Real estate Chat part**!
 
+
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Source Code using OpenAI+ Anthropic with LlamaIndex and Mem0 ↗" icon="book-open" >}}
 {{< /cards >}}
 
-![Like this pattern](/blog_img/apps/knitting/pattern.png)
 
 ## Real Estate Web UI Enhancements
 
@@ -183,6 +183,7 @@ This is kind of a **three in one project**:
 2. **Real Estate Calculator** to engage users and potential clients
 3. **Gen AI App** to provide recommendations based on the available houses
 4. **Scrapping Tool** to get Photos automatically
+5. Bonus: Newsletter (with mailerlite) + GDPR Compliant Web Analytics: [Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
 
 **Result**: <https://dm-real-estate.com/> or https://moises-era.pages.dev (vs) https://dm-realestate.web.app/
 
@@ -198,3 +199,11 @@ And with an interesting tool to get the photo properties automated
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+![Like this pattern](/blog_img/apps/knitting/pattern.png)
