@@ -134,7 +134,11 @@ result.show()
 
 While the approach varies across formats, the core principle remains the same. **Snapshots stored in logs** enable time-traveling capabilities.
 
-To achieve time-traveling, every state of data must be stored at a given time using snapshots. Parallel computing engines are then utilized to retrieve the desired snapshots from logs. Different technologies may use varying terminology for this mechanism.
+To achieve time-traveling, every state of data must be stored at a given time using **snapshots**.
+
+Parallel computing engines are then utilized to retrieve the desired snapshots from logs. 
+
+Different technologies may use varying terminology for this mechanism.
 
 Now that we have a brief idea about **time-traveling**.
 

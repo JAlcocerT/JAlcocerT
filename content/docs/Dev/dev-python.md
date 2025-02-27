@@ -66,7 +66,6 @@ sudo apt install python3.10-venv
 #python -m venv solvingerror_venv #create the venv
 python3 -m venv solvingerror_venv #create the venv
 
-
 #solvingerror_venv\Scripts\activate #activate venv (windows)
 source solvingerror_venv/bin/activate #(linux)
 ```
