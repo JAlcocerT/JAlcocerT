@@ -74,22 +74,33 @@ firebase init
 
 **And 2 `.yml` files** with a [GHA Workflow for the Firebase deployment](https://github.com/JAlcocerT/cybernetik-realestate-moises/tree/main/.github/workflows) are already configured
 
+To add the **OpenGraph Image** so that it will be visible when sharing:
+
+
 {{< /details >}}
 
 For the real estate **calculator** app part...
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="DBs for DA ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="BI Tools for DA ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="RE Calculator with Reflex ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Post to understand how French Amortization works ↗" icon="book-open" >}}
 {{< /cards >}}
 
 I almost forgot...the **GenAI Real estate Chat part**!
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Source Code using OpenAI+ Anthropic with LlamaIndex and Mem0 ↗" icon="book-open" >}}
 {{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Source Code using OpenAI+ Anthropic with LlamaIndex and Mem0 ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+
 
 
 ## Real Estate Web UI Enhancements
@@ -184,6 +195,11 @@ This is kind of a **four in one project**:
 3. **Gen AI App** to provide recommendations based on the available houses
 4. **Scrapping Tool** to get Photos automatically
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="Real Estate Scrapping Photos - Post ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/WebMigrAItion/" title="MigrAItion Photos Script Source Code ↗" icon="book-open" >}}
+{{< /cards >}}
+
 5. Bonus: Newsletter (with mailerlite) + GDPR Compliant Web Analytics: [Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
 
 **Result**: <https://dm-real-estate.com/> or https://moises-era.pages.dev (vs) https://dm-realestate.web.app/
@@ -231,7 +247,10 @@ And with an interesting tool to get the photo properties adquisition automated
   {{< card link="https://iotechcrafts.com/" title="Business Website" image="/blog_img/web/WebsSnapshots/Web_IoTechCrafts.png" subtitle="A Website for Agency - AI & IoT Consulting Services" >}}      
 {{< /cards >}}
 
-
+<!-- 
+* Weddings...
+* bodas.net
+http://divephiphiisland.com/ -->
 
 <!-- * Proposed: bogusiabachata.pro -->
 <!-- 

@@ -50,19 +50,26 @@ Nuxt is a free and open-source framework with an intuitive and extendable way to
 
 ## VitePress SSG
 
-VitePress is a Vue-powered static site generator and a spiritual successor to VuePress, built on top of Vite.
+VitePress is a **Vue-powered static site generator** and a spiritual successor to VuePress, built on top of Vite.
 
 * https://github.com/vuejs/vitepress
 
 > MIT | Vite & Vue powered static site generator.
+
+Effortlessly create beautiful documentation sites with just markdown.
+
+```sh
+npx vitepress dev docs
+```
+
+https://vitepress.dev/guide/routing
+
 
 ---
 
 ## A SSG Recap
 
 So...those are 2 more SSGs to the list!
-
-
 
 {{< callout type="info" >}}
 Im assuming that you are already aware [about CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-css/) and [JS tricks](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites)

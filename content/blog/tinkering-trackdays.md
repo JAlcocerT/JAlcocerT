@@ -6,7 +6,7 @@ description: 'What I learnt after exchanging few words about car racing, canbus 
 url: 'tinkering-telemetry-trackdays'
 ---
 
-ELM32 vs ESP32
+
 
 ## Trackday and GoPro MetaData
 
@@ -67,6 +67,58 @@ We can, with a MLX Sensor!
 {{< /cards >}}
 
 
+{{< details title="ELM32 vs ESP32 📌" closed="true" >}}
+
+It's important to clarify that the ELM327 and ESP32 are fundamentally different types of electronic components, although they can be used together in automotive and other applications. 
+
+**ELM327:**
+
+* **Purpose:**
+    * The ELM327 is a microcontroller chip (or, more commonly, a device based on that chip) designed to interface with a vehicle's On-Board Diagnostics II (OBD-II) system.
+    * It translates the complex OBD-II protocols into simpler serial data that can be read by other devices, such as smartphones, laptops, or other microcontrollers.
+    * Essentially, it's a bridge between your car's diagnostic system and other electronic devices.
+* **Functionality:**
+    * It reads diagnostic trouble codes (DTCs), displays sensor data (like engine temperature, RPM, etc.), and allows for some basic vehicle parameter monitoring.
+    * It handles various OBD-II protocols (CAN, ISO, etc.).
+* **Common Use:**
+    * Used in OBD-II scanners and diagnostic tools.
+
+**ESP32:**
+
+* **Purpose:**
+    * The ESP32 is a low-cost, low-power system-on-a-chip (SoC) microcontroller with integrated Wi-Fi and Bluetooth capabilities.
+    * It's a general-purpose microcontroller that can be programmed to perform a wide range of tasks.
+* **Functionality:**
+    * It can process data, control other devices, and communicate wirelessly.
+    * It's used in IoT (Internet of Things) devices, home automation, and many other applications.
+* **Common Use:**
+    * Used in various projects needing wifi or bluetooth connectivity, and general purpose microcontroller functions.
+
+**Similarities:**
+
+* Both are **microcontrollers** or devices containing microcontrollers.
+* Both can be used in automotive-related projects. For example, an ESP32 can be used to receive and display data from an ELM327.
+
+**Differences:**
+
+* **Primary Function:**
+    * ELM327: Specifically designed for OBD-II communication.
+    * ESP32: A general-purpose microcontroller with wireless capabilities.
+* **Connectivity:**
+    * ELM327: Primarily communicates via serial protocols (often through Bluetooth or Wi-Fi adapters that are bundled with ELM327 based devices).
+    * ESP32: Has built-in Wi-Fi and Bluetooth.
+* **Application:**
+    * ELM327: Primarily used for vehicle diagnostics.
+    * ESP32: Used in a wide range of applications.
+
+{{< /details >}}
+
+**In essence:**
+
+* An ELM327 helps you "talk" to your car's computer.
+* An ESP32 is a versatile computer that can do many things, including receiving and processing the information from an ELM327.
+
+Therefore, they are often used in conjunction with each other. For example, an ESP32 could be used to receive data from an ELM327, then send that data to a smartphone or a cloud server via Wi-Fi.
 
 
 ---

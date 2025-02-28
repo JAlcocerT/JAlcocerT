@@ -3,22 +3,17 @@ title: "Weddings are expensive. Be smart with the right software."
 date: 2025-02-03
 draft: false
 tags: ["OSS"]
-summary: "Interesting software for Weddings (WeddingShare). Including how to deploy it with Dokploy (to Pi / VPS)."
+description: "Interesting software for Weddings (WeddingShare)."
 url: "software-for-weddings"
 ---
-
-<!-- 
-* Weddings...
-* bodas.net
-http://divephiphiisland.com/ -->
 
 
 ## Website for Weddings
 
-With astro, you can build pretty cool weddings ssgs:
+With astro, you can build pretty cool **weddings ssgs themes**:
 
 1. https://github.com/Boston343/horizon
-* Ive forked it to https://github.com/JAlcocerT/horizon
+Ive forked it to https://github.com/JAlcocerT/horizon (could not resist!)
 
 ## Selfhostable Software for Weddings
 
@@ -287,47 +282,10 @@ Not really, see how much im using a CX22: Portainer + NGINX + Wedding share **~5
 
 {{< /details >}}
 
-
-
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/" title="Astro Github + Cloudflare Pages ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/" title="Gitlab + Cloudflare Pages ↗" >}}
 {{< /cards >}}
-
-### DokPloy
-
-Dokploy Cloud is a platform that enables users to **deploy containerized applications** and databases with ease. 
-
-The platform provides all the necessary tools for building, deploying, and managing applications, making it an attractive option for developers.
-
-* https://github.com/Dokploy/dokploy
-  * https://dokploy.com/
-  * https://docs.dokploy.com/docs/core
-  * https://docs.dokploy.com/docs/core/docker-compose/example
-
-> Apache v2 | Open Source **Alternative to Vercel, Netlify and Heroku**.
-
-```sh
-curl -sSL https://dokploy.com/install.sh | sh
-```
-
-There are other **PaaS alternatives** like:
-
-1. [CapRover](https://github.com/caprover/caprover)
-
-> Apache v2 | Scalable PaaS (automated Docker+nginx) - aka Heroku on Steroids
-
-2. Coolify
-3. QuickStack
-4. [Dokku](https://github.com/dokku/dokku)
-
-> MIT | A docker-powered PaaS that helps you build and manage the lifecycle of applications
-
-5. [Quantum](https://github.com/rodyherrera/Quantum)
-
-> MIT | 🚀 Hackable & Self-hosted Open-Source alternative to Vercel, Heroku, Netlify, etc. All your applications, just in one place. Develop and deploy with your favorite tools, and enjoy continuous deployment with GitHub.
-
-Tools Which I will (probably) cover on a future post.
 
 ## Conclusions
 

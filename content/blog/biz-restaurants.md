@@ -17,12 +17,13 @@ AstroPie is a free restaurant theme for Astro sites
 
 ## Conclusions
 
-A set of sites that will take a while to get outdated:
+A set of **sites themes** that will take a while to get outdated:
 
 1. Restaurants / Reservations
-2. Real Estate Sites
+2. [Real Estate](https://jalcocert.github.io/JAlcocerT/real-estate-website/) Sites
 3. Portfolio Links / Bento
 4. Photo Galleries / "Pretending Sites"
+5. [Wedding Sites](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) (and related [software for weddings](https://jalcocert.github.io/JAlcocerT/software-for-weddings/))
 
 ---
 
