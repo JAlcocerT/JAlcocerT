@@ -186,6 +186,27 @@ npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
   {{< card link="https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/" title="JS 101 ↗" icon="book-open" >}}
 {{< /cards >}}
 
+## Real Estate Ad-ons
+
+### Real Estate Calculator Web App
+
+### Automated Photo Adquisition Tool
+
+As this agency is having collaborations with couple of well known agents in the area, it was required to create a tool to automate the photo adquisition from their sites.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="" icon="book-open" >}}
+{{< /cards >}}
+
+The client is responsible to ask for permissions first to his collaborators before using it, as it involves using BS4 for scrapping:
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="Real Estate Scrapping Photos - Post ↗" image="/blog_img/biz/RE/RE-Scrap-Tools.png" subtitle="First iteration of the tool" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/WebMigrAItion/OpenAI_MigrateWebInfo_v3st.py" title="Web Photo MigrAItion Source" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Using bs4 and streamlit to download Photos as zip" >}}
+{{< /cards >}}
+
+
 ## Conclusions
 
 This is kind of a **four in one project**:
@@ -195,10 +216,7 @@ This is kind of a **four in one project**:
 3. **Gen AI App** to provide recommendations based on the available houses
 4. **Scrapping Tool** to get Photos automatically
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="Real Estate Scrapping Photos - Post ↗" icon="book-open" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/WebMigrAItion/" title="MigrAItion Photos Script Source Code ↗" icon="book-open" >}}
-{{< /cards >}}
+
 
 5. Bonus: Newsletter (with mailerlite) + GDPR Compliant Web Analytics: [Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
 

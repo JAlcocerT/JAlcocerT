@@ -1,6 +1,6 @@
 ---
-title: "Web Apps with Python"
-date: 2025-02-28T05:20:21+01:00
+title: "Web Apps with Python Explained"
+date: 2025-03-28T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
 description: 'My favourite ways to build web apps with Python.'
@@ -23,7 +23,7 @@ url: 'web-apps-with-python'
 ### Streamlit
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Chat with Data" image="/blog_img/GenAI/dbchat/" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
