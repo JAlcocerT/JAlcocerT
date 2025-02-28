@@ -12,6 +12,7 @@ Ive been pretty much **comfortable with these OS's**:
 1. Ubuntu
 2. Zorin OS
 3. Garuda Linux 
+4. If you miss XP, see https://xpq4.sourceforge.io/
 
 > With Garuda, you unlock the superpower of saying: *I use Arch, btw*
 

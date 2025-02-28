@@ -177,21 +177,22 @@ npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 
 ## Conclusions
 
-This is kind of a **three in one project**:
+This is kind of a **four in one project**:
 
 1. Responsive **Web** UI
 2. **Real Estate Calculator** to engage users and potential clients
 3. **Gen AI App** to provide recommendations based on the available houses
 4. **Scrapping Tool** to get Photos automatically
+
 5. Bonus: Newsletter (with mailerlite) + GDPR Compliant Web Analytics: [Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
 
 **Result**: <https://dm-real-estate.com/> or https://moises-era.pages.dev (vs) https://dm-realestate.web.app/
 
 {{< callout type="info" >}}
-And with an interesting tool to get the photo properties automated
+And with an interesting tool to get the photo properties adquisition automated
 {{< /callout >}}
 
-> Still, would you keep your Wordpress, Ghost, Wix?
+> Still, would you keep your [Wordpress](https://fossengineer.com/selfhosting-wordpress-docker/), [Ghost](https://fossengineer.com/selfhosting-ghost-docker/), Wix?
 
 ---
 
@@ -247,7 +248,9 @@ https://polkabikes.pl/ -->
 https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
 
 Registry Expiry Date - 26 April 2025
-  
+
+https://quadscadiz.com/
+
 * Sofia - zofienkagram
   * https://wnba.pl/ - another wordpress (good looking)
   * monika ciolkowska - monikacio

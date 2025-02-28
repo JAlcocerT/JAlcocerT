@@ -385,7 +385,7 @@ Aquí tienes una recopilación de librerías de R, APIs, sitios web y otros recu
 * **Dividend Champions, Contenders, and Challengers (CCC List):**
     * [https://dailytradealert.com/dividend-champions-contenders-and-challengers/](https://dailytradealert.com/dividend-champions-contenders-and-challengers/)
     * Lista de empresas con historial de crecimiento de dividendos.
-* **Dave Van Knapp's Dividend Growth Portfolio:**
+* **[Dave Van Knapp](https://dividendsandincome.com/author/dave-van-knapp/)'s Dividend Growth Portfolio:**
     * [https://dividendsandincome.com/dave-van-knapps-dividend-growth-portfolio/](https://dividendsandincome.com/dave-van-knapps-dividend-growth-portfolio/)
     * Ejemplo de un portafolio de crecimiento de dividendos.
 

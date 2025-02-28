@@ -1,6 +1,6 @@
 ---
 title: "How to setup TinyAuth"
-date: 2025-02-27T23:20:21+01:00
+date: 2025-03-27T23:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'TinyAuth Setup, together with Traefik Reverse Proxy.'

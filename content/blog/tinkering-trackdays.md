@@ -6,6 +6,7 @@ description: 'What I learnt after exchanging few words about car racing, canbus 
 url: 'tinkering-telemetry-trackdays'
 ---
 
+ELM32 vs ESP32
 
 ## Trackday and GoPro MetaData
 
@@ -58,7 +59,14 @@ This project ESP32 based and json configurable sounds just amazing:
 
 For the future...maybe a contactless brake temperature system?
 
-https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/
+We can, with a MLX Sensor!
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/" title="MLX90614 with a Pi" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Infrared Temperature Sensor" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+
 
 
 ---
@@ -66,7 +74,40 @@ https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/
 ## More Software for Track
 
 1. Harris Lap Timer
-2. Gauge 5S for BMW
+2. [Gauge 5S](https://shop.sorek.uk/) for BMW
 3. [Dashware](https://dashware.software.informer.com/)
 
 > Synchronizes data from applications with a camera recording
+
+### What about PhyPhox
+
+{{< callout type="info" >}}
+Sometime ago, I was **tinkering with [PhyPhox](https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/)**
+{{< /callout >}}
+
+And lately...I recorded how it feels (the data behind) an **airplane take-off**:
+
+<!-- 
+https://youtube.com/shorts/Z9xNMP3nW0A?feature=share 
+-->
+
+{{< youtube "Z9xNMP3nW0A" >}}
+
+```sh
+ffmpeg -i IMG_5294.MOV -ss 00:03:35 -to 00:05:25 -c copy output.MOV
+```
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="More Video Tricks ↗" >}}
+{{< /cards >}}
+
+How does it look the data?
+
+You guessed it, you can process PhyPhox Data with Python:
+
+You can also open it with **Google Colab**: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds_TrackDay.ipynb)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/" title="PhyPhox Post" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Physical experiments with a Phone" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Data_PhyPhox" title="Route Tracker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code PhyPhox Airplane EDA" >}}
+{{< /cards >}}

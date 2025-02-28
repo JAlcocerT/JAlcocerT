@@ -316,6 +316,11 @@ Bitcoin, Ethereum, Solana, and Polkadot: A Comparative Overview
 **Open-Source Wallets**
 
 * **Bitcoin:** Electrum, Bitcoin Core, Mycelium
+
+```sh
+#flatpak install flathub org.electrum.electrum
+```
+
 * **Ethereum:** MetaMask, MyEtherWallet, Trust Wallet
 * **Solana:** Phantom, Sollet, Solflare
 * **Polkadot:** Polkadot.js, Talisman
