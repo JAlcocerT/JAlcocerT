@@ -266,3 +266,194 @@ services:
 ### How to deploy R Stocks with Docker and a GUI?
 
 You can [install **Portainer with Docker**](https://jalcocert.github.io/JAlcocerT/why-i-love-containers/#container-tech-is-cool) and use the configuration above to self-host your own instance of **RStocks** with a GUI to manage the container.
+
+
+### Similar Apps to RStocks
+
+https://www.dividendcompass.com/pricing
+39 eur/MES
+https://stockevents.app/en/portfolio-tracker
+40 euros/a
+
+
+
+Open source competition
+https://www.privacytools.io/guides/open-source-portfolio-manager-privacy
+
+
+https://github.com/rotki/rotki
+https://github.com/ghostfolio/ghostfolio
+
+
+APP BUILDING
+
+Dart & flutter (google)
+https://blog.back4app.com/flutter-vs-dart/
+
+
+### Roadmap for RStocks
+
+| **Owner** | **Action**                                                                                   | **Due Date** | **Comentarios** |
+|-----------|----------------------------------------------------------------------------------------------|--------------|-----------------|
+| Jesus     | Shinyapp working & published                                                                  |              | DONE            |
+| JL        | Dividend Lib & linear and log plots separados                                                  | 13 Feb       | [Stack Overflow](https://stackoverflow.com/questions/10321103/r-is-there-a-package-to-calculate-daily-dividend-yield) |
+|           | c=c('uno', 'dos', 'tres', 'cuatro', 'cinco')                                                  |              |                 |
+| Jesus     | Check if dividends are growing or not per company (last X years & one joker) - JL            | 27 Feb       | DONE            |
+| JL        | Check historical yield                                                                        | 27 Feb       | DONE            |
+| Jesus     | PriceR working & shares correction                                                           | 13 Feb       | DONE            |
+| Jesus     | Historical combined value of the portfolio - stacked area chart                              | 27 Feb       |                 |
+| JL        | Dividendos Plot + Regresion/alternativa                                                       | 27 Feb       |                 |
+|           | Alquiler vs stock analysis                                                                    | Apr          |                 |
+|           | Dividend retirement analysis (current dividend, growth avg per company)                      | Mar          |                 |
+|           | DCA - dollar cost average (avg buying price -> given the list of transactions per ticket)    |              |                 |
+|           | Total yield on cost                                                                           |              | DONE            |
+|           | Total yield actual                                                                             |              | DONE            |
+|           | Animated pyramid (% win / loose) per year animated                                           |              | [Flowing Data](https://flowingdata.com/2015/11/03/animated-pyramid-chart-in-r/) |
+|           | Given S&P 500 tickers, classify them in king aristocrats etc based on a simple UI (years missed etc) |              |                 |
+|           | Check % decrease stock during crisis compared to the sector/S&P 500 index                    |              |                 |
+|           | Check ‘’linearity’’ R2 cerca de 1 para menos volatilidad                                       |              |                 |
+| Jesus     | Historical % yield                                                                             |              | tu no zave como hera hante jejeje |
+| Jesus     | Historical % dividend payout                                                                   |              |                 |
+| Jesus     | Historical PE                                                                                 |              |                 |
+| Jesus     | Volatilidad Portfolio DGI vs Indice Seleccionado                                              |              | ezo he perde her dinero, meho en er banco jeje |
+|           | Evolución índice vs oro                                                                       |              | DONE            |
+|           | Evolución índice/portfolio vs monedas FIAT                                                    |              | DONE            |
+
+
+### Other Resources
+
+Aquí tienes una recopilación de librerías de R, APIs, sitios web y otros recursos útiles para el análisis financiero y estrategias de dividendos:
+
+**Librerías de R:**
+
+* **quantmod:**
+    * [https://www.quantmod.com/](https://www.quantmod.com/)
+    * [https://stackoverflow.com/questions/70793315/getquote-what-possible-fields-in-quantmod-r](https://stackoverflow.com/questions/70793315/getquote-what-possible-fields-in-quantmod-r)
+    * Utilizada para obtener y analizar datos financieros.
+* **yfR:**
+    * [https://docs.ropensci.org/yfR/](https://docs.ropensci.org/yfR/)
+    * Librería para acceder a datos de Yahoo Finance.
+* **quantdl:**
+    * Requiere una API.
+* **R Tables de Nasdaq:**
+    * [https://docs.data.nasdaq.com/docs/r-tables](https://docs.data.nasdaq.com/docs/r-tables)
+    * Para obtener datos directamente de Nasdaq.
+
+**Repositorios y Recursos de Código:**
+
+* **R_Stocks (GitHub):**
+    * [https://github.com/JAlcocerT/R_Stocks](https://github.com/JAlcocerT/R_Stocks)
+    * Repositorio con código R para análisis de acciones.
+
+**Visualización de Datos:**
+
+* **data-to-viz:**
+    * [https://www.data-to-viz.com/index.html](https://www.data-to-viz.com/index.html)
+    * Guía para la visualización efectiva de datos.
+* **Dash Yield Curve:**
+    * [https://dash.gallery/dash-yield-curve/](https://dash.gallery/dash-yield-curve/)
+    * Ejemplo de visualización interactiva de la curva de rendimiento con Dash.
+    * *The yield curve shows how much it costs the federal government to borrow money for a given amount of time, revealing the relationship between long- and short-term interest rates.*
+
+
+
+**Información sobre ETFs y Componentes:**
+
+* **SCHD (Schwab U.S. Dividend Equity ETF):**
+    * [https://www.schwabassetmanagement.com/products/schd](https://www.schwabassetmanagement.com/products/schd)
+    * Consulta los componentes de este ETF.
+    * Also, check the components via the dash yield curve link.
+
+**APIs Públicas:**
+
+* **Datos de Estados Nación:**
+    * [https://github.com/public-apis/public-apis#government](https://github.com/public-apis/public-apis#government)
+* **APIs Financieras:**
+    * [https://github.com/public-apis/public-apis#finance](https://github.com/public-apis/public-apis#finance)
+
+**Mapas de Dividendos:**
+
+* **Finviz Dividend Map:**
+    * [https://finviz.com/map.ashx?t=sec_all&st=div](https://finviz.com/map.ashx?t=sec_all&st=div)
+    * Mapa visual de dividendos.
+
+**Estrategias de Dividendos:**
+
+* **20 Lessons Dividend Strategy (Dave Van Knapp):**
+    * [https://dailytradealert.com/dave-van-knapps-dividend-growth-investing-lessons/](https://dailytradealert.com/dave-van-knapps-dividend-growth-investing-lessons/)
+    * Lecciones sobre inversión en crecimiento de dividendos.
+* **Dividend Champions, Contenders, and Challengers (CCC List):**
+    * [https://dailytradealert.com/dividend-champions-contenders-and-challengers/](https://dailytradealert.com/dividend-champions-contenders-and-challengers/)
+    * Lista de empresas con historial de crecimiento de dividendos.
+* **Dave Van Knapp's Dividend Growth Portfolio:**
+    * [https://dividendsandincome.com/dave-van-knapps-dividend-growth-portfolio/](https://dividendsandincome.com/dave-van-knapps-dividend-growth-portfolio/)
+    * Ejemplo de un portafolio de crecimiento de dividendos.
+
+
+**Gráfico de Precios (Sparkline):**
+
+```excel
+=SPARKLINE(GoogleFinance(N15; "price"; HOY()-60; HOY()))
+```
+
+* Muestra un gráfico de línea del precio de la acción especificada en la celda N15, durante los últimos 60 días.
+
+**Suma Condicional (QUERY):**
+
+```excel
+=INDICE(QUERY(A$20:L;"SELECT sum(G) where (F='"&N15&"' and A<>'Yes')");2;0)
+```
+
+* Suma los valores de la columna G donde la columna F coincide con el valor de la celda N15 y la columna A no es "Yes".
+
+**Extracción de Datos de Yahoo Finance (IMPORTHTML, SPLIT):**
+
+```excel
+=SPLIT(INDICE(IMPORTHTML(CONCATENAR("[https://finance.yahoo.com/quote/](https://finance.yahoo.com/quote/)";"PG");"table";2);6;2);" ")
+```
+
+* Extrae datos de la tabla 2 de la página de Yahoo Finance para la acción "PG", específicamente la sexta fila y segunda columna, y luego divide el resultado en palabras.
+
+**Reemplazo de Punto por Coma (SUSTITUIR):**
+
+```excel
+=SUSTITUIR((INDICE(SPLIT(INDICE(IMPORTHTML(CONCATENAR("[https://finance.yahoo.com/quote/](https://finance.yahoo.com/quote/)";"PG");"table";2);6;2);" ");0;1));".";",")
+```
+
+* Toma el primer elemento del resultado de la fórmula anterior y reemplaza los puntos por comas.
+
+**Extracción de Texto Después de Dos Puntos (REGEXEXTRACT):**
+
+```excel
+=REGEXEXTRACT(N33;"\:(.*)")
+```
+
+* Extrae todo el texto que sigue a los dos puntos en la celda N33.
+
+**Búsqueda de Datos en Google Sheets Externo (IMPORTRANGE, QUERY, IFERROR):**
+
+```excel
+=IFERROR(INDEX(QUERY(IMPORTRANGE("[https://docs.google.com/spreadsheets/d/1yClKDQLFcZjjoWdv9oLZyTSqxGwRqjYbMgjmVaUK1HY/edit#gid=0](https://docs.google.com/spreadsheets/d/1yClKDQLFcZjjoWdv9oLZyTSqxGwRqjYbMgjmVaUK1HY/edit#gid=0)";"USA_DGI!C1:AT228");"SELECT * where (Col1='"&C7&"')");2;32);0)
+```
+
+* Busca en una hoja de cálculo externa (especificada por la URL) la fila donde la primera columna coincide con el valor de la celda C7, y devuelve el valor de la columna 32. Si hay un error, devuelve 0.
+
+**Suma de Celdas en Múltiples Hojas (MAP, SEQUENCE, INDIRECT, IFERROR):**
+
+```excel
+SUM(IFERROR(MAP(SEQUENCE(1000;1;21);LAMBDA(x;INDIRECT("20"&(x)&"!K8")));0))
+```
+
+* Suma el valor de la celda K8 en las hojas "2021", "2022", ..., "201020". Si hay un error, lo trata como 0.
+
+**Suma Condicional y Multiplicación en Múltiples Hojas (MAP, SEQUENCE, INDIRECT, QUERY, SUMPRODUCT, IFERROR):**
+
+```excel
+=SUM(IFERROR(MAP(SEQUENCE(1000;1;21);LAMBDA(x;SUMPRODUCT(INDEX(QUERY(INDIRECT("20"&(x)&"!B2"):INDIRECT("20"&(x)&"!G1000");"Select* where (B='Buy' and C='"&C13&"')";0);0;4);INDEX(QUERY(INDIRECT("20"&(x)&"!B2"):INDIRECT("20"&(x)&"!G1000");"Select* where (B='Buy' and C='"&C13&"')";0);0;6))));0))/SUM(IFERROR(MAP(SEQUENCE(1000;1;21);LAMBDA(x;SUM(INDEX(QUERY(INDIRECT("20"&(x)&"!B2"):INDIRECT("20"&(x)&"!G1000");"Select* where (B='Buy' and C='"&C13&"')";0);0;4))));0))
+```
+
+* Calcula un promedio ponderado de un valor (calculado a partir de la multiplicación de dos columnas) en múltiples hojas, donde se cumplen ciertas condiciones.
+
+**Sitio Web para Datos de Mercado:**
+
+* markets.ft.com

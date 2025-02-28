@@ -9,6 +9,10 @@ url: 'object-oriented-programming-101'
 
 gabemorris12-mechanism-project-setup
 
+{{< callout type="info" >}}
+And with an interesting tool to get the photo properties automated
+{{< /callout >}}
+
 Someone told me once that for **mechanisms I would need to learn OOP**.
 
 And I can understand why now.

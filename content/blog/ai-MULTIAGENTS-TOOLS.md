@@ -3,7 +3,7 @@ title: "AI Multi Agents: PyAutogen"
 date: 2025-03-10
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Reviewing the most Popular AI Agents frameworks: AG2AI (AutoGen), LangChain, LlamaIndex,'
+description: 'Reviewing the most Popular AI Agents frameworks: AG2AI (AutoGen), CrewAI, LangChain, LlamaIndex,'
 url: 'ai-multi-agents-frameworks'
 ---
 

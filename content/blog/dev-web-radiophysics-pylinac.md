@@ -69,6 +69,11 @@ A journey where the rest of the world can benefit from his amazing effort and di
 
 No wonder, he already knows that Im there to help with any Python that could make the world a better place!
 
+{{< callout type="info" >}}
+JLL was involved in the crearion of [RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/)
+{{< /callout >}}
+
+
 ---
 
 ## Cool stuff for Researchers
