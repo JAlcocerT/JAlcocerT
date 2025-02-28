@@ -26,7 +26,7 @@ Maybe...Clarify with [an **AI Powered** Presentation](https://fc9dafcc.creaitive
 
 ## Custom Websites
 
-Then...started customizing websites:
+Then...started customizing some websites:
 
 {{< cards >}}
   {{< card link="https://cozyknittingclub.com/" title="Content Creator Blog" image="/blog_img/web/WebsSnapshots/Web_CKC.png" subtitle="For an instagramer who loves knitting" >}}
@@ -146,68 +146,3 @@ You can print to pdf, add your logo, taxes, CSS...
 * Or use their Saas: https://app.mokuapp.io/login
 
 {{% /details %}}
-
-
-* **Menu websites at ~500 eur/year**
-  * http://cartalia.org/
-    * http://ukelele.cartalia.org/
-  * https://www.upmenu.com/pricing/
-* https://www.covermanager.com/en
-* https://www.mojstolik.pl/dla-restauracji
-
-* Hosting Costs:
-  * https://banahosting.com/web-hosting ~5eur/month
-  * https://webtolearn.pl/cennik ~20eur/month
-
-* Customer management systems
-  * https://wakems.com/index.php
-  * https://clubspeed.com/pricing/
-
-* Custom websites
-  * https://zeon.studio/estimate-project
-  * https://hormigasenlanube.com/
-  * https://lyk-website.pl/brief/
-
-* More competitors
-  * Taplink
-  * bento.me
-  * https://getallmylinks.com/
-  * https://subscribepage.io/listy#
-
-<!-- * Proposed: bogusiabachata.pro -->
-<!-- 
-ecommerce
-https://polkabikes.pl/ -->
-
-<!-- More ppl to help - future CLIENTS
-
-* you dont need to pay for wordpress themes, its already there and it works
-  * https://generatepress.com/pricing/
-
-* Pablo Couto - https://www.buildingfuturecapital.com/
-
-https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
-
-Registry Expiry Date - 26 April 2025
-
-* Miguel alcocer photo blog
-
-* JoseLuis Github
-
-* Sofia - zofienkagram
-  * https://wnba.pl/ - another wordpress (good looking)
-  * monika ciolkowska - monikacio
-    * https://monikaciolkowska.portfoliobox.net/
-    * Using the low tier without domain of https://www.portfoliobox.net/pricing (46$/y)
-      * Interesting section with a table comparing services and faq (go below)
-
-* Gym Trainer - https://trenujswiadomie.pl/kokpit/
-
-* ecommerce - https://outficik.pl/
-
----
-
-To try Astro+Ghost headlessCMS as described 
-https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/#gatsby
-
--->

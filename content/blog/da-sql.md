@@ -547,15 +547,15 @@ https://www.youtube.com/watch?v=SnvSBYhRZLg
 https://trino.io/docs/current/connector.html
 https://trino.io/ecosystem/index.html
 
-    User-Defined Functions (UDFs): You can create custom UDFs in Trino using Java or other supported languages, and then you can use these functions within your SQL queries. UDFs allow you to encapsulate custom logic and apply it to your data.
+User-Defined Functions (UDFs): You can create custom UDFs in Trino using Java or other supported languages, and then you can use these functions within your SQL queries. UDFs allow you to encapsulate custom logic and apply it to your data.
 
-    Conditional Logic: Trino supports various conditional statements like CASE WHEN, IF, and COALESCE, which allow you to implement branching and conditional logic within your queries.
+Conditional Logic: Trino supports various conditional statements like CASE WHEN, IF, and COALESCE, which allow you to implement branching and conditional logic within your queries.
 
-    Loops and Iterations: While Trino does not have traditional loop constructs, you can use recursive queries and recursive common table expressions (CTEs) to achieve some level of iteration and recursion in your SQL queries.
+Loops and Iterations: While Trino does not have traditional loop constructs, you can use recursive queries and recursive common table expressions (CTEs) to achieve some level of iteration and recursion in your SQL queries.
 
-    Expression Evaluation: Trino provides a wide range of built-in functions and expressions, allowing you to perform calculations, string manipulation, and other operations within your SQL queries.
-    
-    -->
+Expression Evaluation: Trino provides a wide range of built-in functions and expressions, allowing you to perform calculations, string manipulation, and other operations within your SQL queries.
+
+-->
 
 * https://github.com/trinodb/trino
 
@@ -612,12 +612,6 @@ SHOW FUNCTIONS like 'concat%'
 * Grafana
 
 * Python or R... https://github.com/trinodb/trino-python-client
-
-
-<!-- 
-https://github.com/dbeaver/dbeaver
-https://github.com/pgadmin-org/pgadmin4 -->
-
 
 ### Other Interesting F/OSS DBMS's
 

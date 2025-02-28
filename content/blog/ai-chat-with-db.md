@@ -622,6 +622,12 @@ To explore vector DBs we have Vector Admin, but for **regular DB's** we have:
 
 > A lightweight next-gen **database explorer** - Postgres, MySQL, SQLite, MongoDB, Redis, MariaDB & Elastic Search
 
+ 
+{{< callout type="info" >}}
+See also [Dbeaver](https://github.com/dbeaver/dbeaver) and [PGAdmin4](https://github.com/pgadmin-org/pgadmin4)
+{{< /callout >}}
+
+
 2. To explore SQlite, we have the CLI:
 
 And as seen [here](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#faq), we also have...
@@ -640,7 +646,7 @@ Instead of dragging and dropping elements in a graphical interface, you describe
 
 It's not just MySQL or MariaDB...
 
-{{< details title="Exploring Other DBs 📌" closed="true" >}}
+{{< details title="Exploring Other DBs - DuckDB and More 📌" closed="true" >}}
 
 * **DuckDB:** [DuckDB](https://github.com/duckdb/duckdb) is an embedded analytical database.  It's designed to be fast and efficient for Online Analytical Processing (OLAP) workloads.  DuckDB can be used directly from various programming languages (Python, R, etc.) and is often used for data analysis and exploration.  It's similar to SQLite in that it's file-based and embedded, but it's optimized for analytical queries.
 
@@ -648,7 +654,9 @@ It's not just MySQL or MariaDB...
 
 * **Hue (SQL Assistant):** [Hue](https://github.com/cloudera/hue) is a broader open-source SQL assistant for databases and data warehouses. While it *can* be used with DuckDB (as you noted with the Docker image), it's not DuckDB-specific.
 
-Hue supports a wide variety of database systems and provides a rich interface for working with SQL, including query editors, data browsers, and visualization tools.  It's a more comprehensive tool than Huey (the DuckDB UI) and can be used with many different database backends.
+Hue supports a wide variety of database systems and provides a rich interface for working with SQL, including query editors, data browsers, and visualization tools.
+
+It's a more comprehensive tool than Huey (the DuckDB UI) and can be used with many different database backends.
 
 {{< /details >}}
 

@@ -40,13 +40,17 @@ Real-Time Analytics with ClickHouse
 * <https://www.opensourcealternative.to/project/LightDashs>
 * <https://www.opensourcealternative.to/project/Metabase>
 
-#### Redash
 
 
 ### Redash
 
-[Redash is an open-source]() data visualization and dashboarding tool that is commonly used in the field of data analytics and business intelligence. It helps organizations and individuals query, visualize, and share data from various data sources to gain insights and make data-driven decisions.
+[Redash is an open-source](https://github.com/getredash/redash) data visualization and dashboarding tool that is commonly used in the field of data analytics and business intelligence.
 
+It helps organizations and individuals query, visualize, and share data from **various data sources (35+)** to gain insights and make data-driven decisions.
+
+* https://github.com/getredash/redash
+
+> Make Your Company Data Driven. Connect to any data source, easily visualize, dashboard and share your data.
 
 https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash
 
@@ -110,6 +114,48 @@ chmod +x ./setup.sh
 For the IoT Fans out there: Grafana, Kibana and Chronogaph
 
 
+{{< callout type="info" >}}
+Grafana dashboards and Panels have an asociated **JSON** file that defines them!
+{{< /callout >}}
+
+
+{{< details title="Designing Graphana Panels...with Python? 📌" closed="true" >}}
+
+If you have ever recorded a VBA macro to see the general structure and then tweak it, this is going to be familiar.
+
+When you will find the use case that several similar pannels have to be created: for example for anomaly detection on 100 servers, or 50 different apps you have to monitor...
+
+...you can define the first panel via Grafana UI, see how one panel look and then make Python do the rest for you.
+
+**IMPORTANT**: you need to keep different panel id and positions across the dashboard
+
+```py
+# Main Execution
+file_path = "Grafana-Initial.json"  # Replace with your file path
+
+iterate_data = extract_site_info_from_file(file_path)
+
+# if iterate_data:
+#     panels = []
+#     for site, panel_id, grid_x, grid_y in iterate_data:
+#         panel_json = create_elasticsearch_stat_panel_with_filter(site, grid_x, grid_y, panel_id)
+#         panels.append(json.dumps(panel_json))
+
+#     output_json = "[" + ",".join(panels) + "]"
+#     print(output_json)
+# else:
+#     print("Failed to extract site information.")
+```
+
+Then, you will take the JSON and carefully add it respecting other dashboard areas you might have (this includes the very end of it, where you have the dashboard uid and so on)
+
+
+{{< /details >}}
+
+
+
+
+
 There are many Grafana stacks, like LGTM: **L**oki, **G**rafana, **T**empo and Pro**m**etheus
 
 
@@ -145,9 +191,11 @@ Running Grafana
 2. **Run Docker Image**: Pull the Docker image for OTel LGTM from the cloud, which may take a minute.
 3. **Access Grafana**: Open the browser and navigate to the IP address on port 3000 to log into Grafana as admin.
 
-Connecting to a Data Source
+**Connecting to a Data Source**
 
-Grafana alone is not useful unless connected to a data source. Fireship demonstrates how to connect **Loki**, **Prometheus**, and **Tempo**, and then populate them with data using a sample application built with **Dino**, a framework with built-in telemetry support.
+Grafana alone is not useful unless connected to a data source.
+
+Fireship demonstrates how to connect **Loki**, **Prometheus**, and **Tempo**, and then populate them with data using a sample application built with **Dino**, a framework with built-in telemetry support.
 
 Analyzing Data with Grafana
 

@@ -3,7 +3,7 @@ title: "How to setup Gabe's project, Mechanism"
 date: 2025-02-03
 draft: false
 tags: ["Python","Mechanics"]
-description: "Mechanisms in Python. What does a Singer machine has in common with a car engine?"
+description: "Mechanisms Animations in Python. From Singer machines to car engines."
 url: 'gabemorris12-mechanism-project-setup'
 ---
 
@@ -42,9 +42,10 @@ pip install -e .
 I tried with `./examples/engine.py` and worked perfectly! 
 {{< /callout >}}
 
-I just added this line at the script:
+I just added this line at the script to get a `.gif` rendered:
 
 ```py
+#ani.save('../animations/engine.mp4', dpi=300)
 ani.save('../animations/engine.gif', writer='pillow', fps=30)
 ```
 
