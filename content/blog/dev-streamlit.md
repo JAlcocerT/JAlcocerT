@@ -17,6 +17,16 @@ https://docs.streamlit.io/develop/api-reference/user/st.login
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/WebMigrAItion/" title="MigrAItion Photos Script Source Code ↗" icon="book-open" >}}
 {{< /cards >}}
 
+
+By using the `streamlit-authenticator` library, only my client can access it:
+
+![Streamlit User Auth](/blog_img/biz/RE/re-tool-userauth.png)
+
+{{< details title="There is a sample of this authentication at MultiChat or RE Photo Tool 📌" closed="true" >}}
+
+
+{{< /details >}}
+
 ### Provided Users and Pass
 
 {{< cards >}}

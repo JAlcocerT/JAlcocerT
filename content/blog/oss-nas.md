@@ -81,7 +81,54 @@ df -h | awk '$5 > "5G" {print $0}' #list the partitions greater than 5GB
 
 ![Graphic Walker UI](/blog_img/hardware/sd-kingston.png)
 
+### My Home Lab Setup
 
+As of today, this is my homelab setup.
+
+Which is connected to my family servers as well:
+
+```mermaid
+graph LR
+    A[Raspberry Pi 4] --> B(128GB);
+    A --> C(512GB);
+    A --> D(0.5 external);
+    E[Pexd & Poo] --> F(128GB);
+    G[OA5Pro] --> H(128GB);
+    I[ThinkPad X300] --> J(2TB ext);
+    I --> K(2TB);
+    L[ThinkPad] --> M( ~476GB Total);
+    L --> N(Linux 106 EB);
+    L --> O(25-);
+    P[SSD USB-C] --> Q(2TB);
+    P --> R(650mb/s);
+    P --> S(NTFS);
+    T[HDD USB] --> U(2TB);
+    T --> V(0.5);
+    W[HDD] --> X(4TB);
+    Y[music server] --> I;
+    Z[tailsete VPN] --> I;
+    AA[edrive] --> I;
+    AB[ProtonDrive!] --> I;
+    AC[onedrive] --> L;
+    AD[customize KPE/Gorder] --> L;
+    
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#f9f,stroke:#333,stroke-width:2px
+    style F fill:#f9f,stroke:#333,stroke-width:2px
+    style H fill:#f9f,stroke:#333,stroke-width:2px
+    style J fill:#f9f,stroke:#333,stroke-width:2px
+    style K fill:#f9f,stroke:#333,stroke-width:2px
+    style M fill:#f9f,stroke:#333,stroke-width:2px
+    style N fill:#f9f,stroke:#333,stroke-width:2px
+    style O fill:#f9f,stroke:#333,stroke-width:2px
+    style Q fill:#f9f,stroke:#333,stroke-width:2px
+    style R fill:#f9f,stroke:#333,stroke-width:2px
+    style S fill:#f9f,stroke:#333,stroke-width:2px
+    style U fill:#f9f,stroke:#333,stroke-width:2px
+    style V fill:#f9f,stroke:#333,stroke-width:2px
+    style X fill:#f9f,stroke:#333,stroke-width:2px
+```
 
 
 **Networking for Home Lab**

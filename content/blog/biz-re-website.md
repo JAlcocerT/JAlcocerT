@@ -197,13 +197,49 @@ npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 
 ### Automated Photo Adquisition Tool
 
-As this agency is having collaborations with couple of well known agents in the area, it was required to create a tool to automate the photo adquisition from their sites.
+As this agency is having collaborations with couple of well known agents in the area, it was required to create a tool to **automate the photo adquisition** from their sites.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="See the post about the first iteration of the tool" icon="book-open" >}}
 {{< /cards >}}
 
-The client is responsible to ask for permissions first to his collaborators before using it, as it involves using BS4 for scrapping:
+The client is responsible to ask for permissions first to his collaborators before using it, as it involves using **BS4 for scrapping**.
+
+
+{{< details title="Migration Photo WebApp 📌" closed="true" >}}
+
+Deployed at: <https://realestate_tool.jalcocertech.com/>
+
+```sh
+docker build -t realestate_tool_v4 . #1m16s at x13 and 3m12s at pi4gb
+#docker exec -it realestate_tool_v4 /bin/bash
+```
+
+```yml
+services:
+  realestate_photo_tool:
+    image: realestate_tool_v4
+    container_name: realestate_tool_v4
+    ports:
+      - "8506:8501"
+    working_dir: /app
+    restart: always
+    networks:
+      - cloudflaretunnel_tunnel
+    command: streamlit run OpenAI_MigrateWebInfo_v4st.py
+    #command: tail -f /dev/null
+
+networks:
+   cloudflaretunnel_tunnel:
+     external: true
+```
+
+{{< /details >}}
+
+
+By using the `streamlit-authenticator` library, only my client can access it:
+
+![Streamlit User Auth](/blog_img/biz/RE/re-tool-userauth.png)
 
 
 {{< cards >}}
@@ -246,7 +282,6 @@ And with an interesting tool to get the photo properties adquisition automated
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
-![Like this pattern](/blog_img/apps/knitting/pattern.png)
 
 
 ---
