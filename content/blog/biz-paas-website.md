@@ -33,6 +33,10 @@ The platform provides all the necessary tools for building, deploying, and manag
 curl -sSL https://dokploy.com/install.sh | sh
 ```
 
+With Dokplot, we can for example, **serve an Astro site, or any other containerized app**
+
+* DokPloy Astro Example from their docs:
+
 There are other **PaaS alternatives** like:
 
 1. [CapRover](https://github.com/caprover/caprover)

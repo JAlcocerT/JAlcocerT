@@ -391,3 +391,49 @@ You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/a
 ## Thanks to
 
 * Hugo Hextra [Latex/Katex Syntax](https://imfing.github.io/hextra/docs/guide/latex/)
+
+
+### VBA vs OpenPyxl
+
+Okay, let's break down what openpyxl is and how it relates to Excel macros:
+
+**What is openpyxl?**
+
+* **Python Library:**
+    * openpyxl is a Python library used to read and write Excel .xlsx files. This means you can use Python code to interact with Excel spreadsheets.
+    * It allows you to automate tasks like:
+        * Reading data from Excel files.
+        * Writing data to Excel files.
+        * Modifying existing Excel files (formatting, adding/removing sheets, etc.).
+* **Purpose:**
+    * It's designed to work with the Office Open XML format, which is the underlying structure of modern Excel files (.xlsx).
+
+**openpyxl vs. Excel Macros (VBA)**
+
+* **Macros (VBA):**
+    * Excel macros are created using Visual Basic for Applications (VBA), a programming language built into Excel.
+    * They are used to automate tasks within Excel itself.
+    * Macros are stored within the Excel file.
+* **openpyxl (Python):**
+    * openpyxl is a Python library that operates externally to Excel.
+    * It allows you to manipulate Excel files from your Python scripts.
+    * Python code is separate from the Excel file.
+* **Key Differences:**
+    * **Location:** Macros live inside the Excel file; openpyxl scripts are external.
+    * **Language:** Macros use VBA; openpyxl uses Python.
+    * **Functionality:**
+        * openpyxl excels at data manipulation, formatting, and file structure changes.
+        * Macros are often used for automating repetitive tasks within the Excel user interface (e.g., button clicks, custom functions).
+    * **Macros and openpyxl interaction:**
+        * openpyxl itself does not execute VBA macros.
+        * It also does not fully preserve all aspects of macro enabled excel files(.xlsm). There are limitations when attempting to save .xlsm files after they have been worked on by openpyxl.
+        * However, you can use Python libraries like `win32com` to interact with Excel's application object and potentially run macros. But this is a different method than openpyxl's native functionality.
+* **Can you do similar things?**
+    * In many cases, yes, you can achieve similar automation results with openpyxl as you would with macros.
+    * For data-centric tasks, openpyxl is often more powerful and flexible due to Python's extensive libraries.
+    * For tasks that require direct interaction with the Excel user interface, macros might be more suitable.
+
+**In summary:**
+
+* openpyxl is a powerful tool for working with Excel files programmatically.
+* While it doesn't directly replace VBA macros, it provides a robust alternative for many automation needs.

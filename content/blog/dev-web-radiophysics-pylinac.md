@@ -58,12 +58,16 @@ And its all about that when you are forking a repo with **Github Actions workflo
 
 After you have accepted that (one time), all will flow.
 
-And...here it is: https://jlleongarcia.github.io/jlleongarcia/
+And...here it is **the result**: https://jlleongarcia.github.io/jlleongarcia/
+
+> Thanks to: HUGO + Hextra + Github Actions and Pages!
 
 
 ## Conclusions
 
 I hope that this is the beginning of a new journey for jlleongarcia.
+
+
 
 A journey where the rest of the world can benefit from his amazing effort and discoveries in the radiophysics area of expertise.
 
@@ -75,8 +79,8 @@ JLL was involved in the crearion of [RStocks](https://jalcocert.github.io/JAlcoc
 
 ### Next Steps
 
-1. Learn to use containers
-2. Setup wsl within Windows
+1. Learn to use **containers**
+2. Setup **wsl** within Windows
 
 Right-click on "Windows PowerShell" and select "Run as administrator."
 
@@ -94,6 +98,56 @@ sudo apt upgrade -y
   {{< card link="https://jalcocert.github.io/JAlcocerT/why-i-love-containers/" title="Reasons to love containers" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="See the post about the first iteration of the tool" icon="book-open" >}}
 {{< /cards >}}
+
+3. To understand better Python Web Frameworks, specially **Django**, as its the one that QaTrack uses
+
+You've touched on the core strengths of Django. Let's dive deeper into its features and why they make it a popular choice for web development.
+
+**Django's Core Philosophy and Strengths:**
+
+* **"Batteries Included":**
+    * This phrase perfectly captures Django's philosophy. It means that Django provides a comprehensive set of tools and libraries out of the box. You don't have to hunt for third-party packages for common tasks.
+* **Convention Over Configuration:**
+    * Django promotes a set of conventions for how web applications should be structured. This reduces the amount of configuration you need to do, allowing you to focus on writing code.
+* **ORM (Object-Relational Mapper):**
+    * Django's ORM is a powerful tool that allows you to interact with databases using Python code. You define your data models in Python, and Django handles the database interactions for you. This makes database operations much easier and more secure.
+
+**Detailed Breakdown of Django's Features:**
+
+* **DRY (Don't Repeat Yourself):**
+    * This is a fundamental principle of good software development. Django enforces DRY by encouraging you to reuse code whenever possible. For example, you can define your data models once and reuse them throughout your application. Django's template system also promotes code reuse.
+* **Fast:**
+    * Django is designed for speed. Its efficient architecture and built-in caching mechanisms allow it to handle a large number of requests quickly.
+* **Components:**
+    * Django provides a wide range of built-in components, including:
+        * **Authentication and Authorization:** Handles user logins, permissions, and security.
+        * **URL Routing:** Maps URLs to Python functions (views).
+        * **Template System:** Allows you to create dynamic HTML pages.
+        * **Form Handling:** Simplifies the process of creating and processing forms.
+        * **Admin Interface:** Provides a ready-to-use interface for managing your application's data.
+* **Security:**
+    * Django has built-in security features that help protect your application from common vulnerabilities, such as:
+        * **SQL Injection Protection:** Django's ORM automatically escapes user input, preventing SQL injection attacks.
+        * **Cross-Site Scripting (XSS) Protection:** Django's template system automatically escapes HTML, preventing XSS attacks.
+        * **Cross-Site Request Forgery (CSRF) Protection:** Django provides built-in CSRF protection.
+* **Scalability:**
+    * Django is designed to be scalable. Its architecture allows you to easily scale your application to handle increasing traffic and data.
+    * Django can work well with load balancers, and database scaling solutions.
+* **Community:**
+    * Django has a large and active community. This means that you can easily find help and resources when you need them.
+
+**Use Cases:**
+
+* E-commerce websites
+* Content management systems (CMS)
+* Social networking platforms
+* Data analysis and visualization applications
+* API development
+
+**In essence:**
+
+Django is a powerful and versatile framework that's well-suited for building complex web applications. Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
+
 
 ---
 
