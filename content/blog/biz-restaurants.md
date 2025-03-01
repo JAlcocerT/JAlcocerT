@@ -12,7 +12,9 @@ url: "webs-for-restaurants"
 https://astropie.netlify.app/
 
 
-AstroPie is a free restaurant theme for Astro sites
+**AstroPie** is a free restaurant theme for Astro sites
+
+![Streamlit User Auth](/blog_img/webs/restaurant-astro-speed.png)
 
 
 ## Conclusions

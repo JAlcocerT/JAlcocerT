@@ -1,6 +1,6 @@
 ---
 title: "Reflex. Cooler Web Apps?"
-date: 2025-02-12
+date: 2025-03-01T10:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Using (Python) Reflex to display Real Estate and Job Market Trends as Web Apps.'
@@ -95,6 +95,8 @@ You will also need `localhost:8000` for the BE (which can conflict with Portaine
 ```bash
 sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
+
+With reflex, we can do full stack web apps with just Python, for example [this chat](https://www.youtube.com/watch?v=NuNaI__4xiU&list=PLEsfXFp6DpzRDEA6ElMF_NuLu9cvoK49v&index=13)
 
 {{< youtube "ITOZkzjtjUA" >}}
 

@@ -3,7 +3,7 @@ title: "A Website for a Phd: Pylinac and QaTrack+"
 date: 2025-02-23T13:20:21+01:00
 draft: false
 tags: ["dev"]
-description: 'Helping to improve scientific knowledge. Improving the day to day of a radiotherapy researcher.'
+description: 'Helping to improve scientific knowledge. Improving the day to day of a radiotherapy researcher. Containers with WSL.'
 url: 'web-for-phd-researcher'
 ---
 
@@ -73,6 +73,27 @@ No wonder, he already knows that Im there to help with any Python that could mak
 JLL was involved in the crearion of [RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/)
 {{< /callout >}}
 
+### Next Steps
+
+1. Learn to use containers
+2. Setup wsl within Windows
+
+Right-click on "Windows PowerShell" and select "Run as administrator."
+
+```sh
+wsl --install #this install linux
+
+sudo apt update #this is ubuntu already!
+sudo apt upgrade -y
+
+#to access it at another moment, just write:
+#wsl
+```
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/why-i-love-containers/" title="Reasons to love containers" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="See the post about the first iteration of the tool" icon="book-open" >}}
+{{< /cards >}}
 
 ---
 

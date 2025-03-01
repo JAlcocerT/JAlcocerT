@@ -85,6 +85,9 @@ And working on the symbolic one: https://github.com/JAlcocerT/MultiBodySystemDyn
 
 ## Conclusions
 
+Its been very helpful to use this:
+
+![Firebase Custom Domain](/blog_img/dev/GeminiCodeAssist.png)
 
 {{< callout type="info" >}}
 **Kudos again to Gabe!** The project is release under MIT for anyone to use and modify. 
@@ -100,7 +103,7 @@ Why am I so excited about get this project working on my computer?
 
 Well, I dedicated an important part of my life to Mechanical engineering...
 
-...and mechanisms are everywhere.
+...and **mechanisms are everywhere**.
 
 Making our lifes better thanks to their smart designs and leverage.
 
