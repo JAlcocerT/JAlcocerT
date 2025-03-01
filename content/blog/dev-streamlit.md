@@ -27,6 +27,8 @@ So far, Ive come across few ways (x4) to place **authentication on top of Stream
 
 ![Streamlit User Auth](/blog_img/biz/RE/re-tool-userauth.png)
 
+Its all about: https://pypi.org/project/streamlit-authenticator/
+
 {{< details title="There is a sample of this PoC authentication at MultiChat or RE Photo Tool 📌" closed="true" >}}
 
 * https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py

@@ -98,6 +98,10 @@ sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -
 
 With reflex, we can do full stack web apps with just Python, for example [this chat](https://www.youtube.com/watch?v=NuNaI__4xiU&list=PLEsfXFp6DpzRDEA6ElMF_NuLu9cvoK49v&index=13)
 
+```sh
+git clone https://github.com/codingforentrepreneurs/reflex-gpt
+```
+
 {{< youtube "ITOZkzjtjUA" >}}
 
 > Learn to code by building [series from Coding Entrepreneur](https://www.youtube.com/watch?v=ITOZkzjtjUA&list=PLEsfXFp6DpzRDEA6ElMF_NuLu9cvoK49v) is great (and not only for Reflex)
