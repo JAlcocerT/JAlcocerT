@@ -206,7 +206,7 @@ As this agency is having collaborations with couple of well known agents in the 
 The client is responsible to ask for permissions first to his collaborators before using it, as it involves using **BS4 for scrapping**.
 
 
-{{< details title="Migration Photo WebApp 📌" closed="true" >}}
+{{< details title="Migration Photo WebApp | Deployed with Cloudflared 📌" closed="true" >}}
 
 Deployed at: <https://realestate_tool.jalcocertech.com/>
 
