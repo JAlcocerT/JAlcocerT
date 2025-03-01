@@ -139,6 +139,8 @@ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT | awk 'NR==1 || $2 ~ /[GT]/'
 
 Using an **TP-Link Archer T3U (AC1300)**, which I upgraded to the **AC1300 T4U Plus** version.
 
+* The AC1300 is a dualband usb adapter (5ghz up to 867Mbps and 400Mbps on 2.4)
+
 
 ```sh
 ip addr show
@@ -217,7 +219,9 @@ But I decided to manage everything via the **BIOS**.
 
 So now the fan is at 30% up to 60 Celsius.
 
-> For Windows you can use [FanControl](https://github.com/Rem0o/FanControl.Releases) and AMD Adrenaline Software. You also have `thinkfan` for [Thinkpads](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)
+> For Windows you can use [**FanControl**](https://github.com/Rem0o/FanControl.Releases) or AMD Adrenaline Software.
+
+> You also have `thinkfan` for [Thinkpads](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)
 
 {{< details title="Changing Power Profiles 📌" closed="true" >}}
 
@@ -235,11 +239,12 @@ powerprofilesctl list
 
 {{< details title="Benchmarks of Asrock x300 with Ryzen 5600G 📌" closed="true" >}}
 
+Released on Jan 2021, with 7nm, its related GPU has 8 ROPs and 28 TMUs as per GPU-Z from TechPowerUp Software.
 
 
 {{< /details >}}
 
-The X300 supports 2.5-inch drives with a thickness of 7mm or 9.5mm.
+> The X300 supports 2.5-inch drives with a thickness of **7mm or 9.5mm** (which normally go up to 2TB).
 
 
 ### What am I using it for right now?
@@ -677,11 +682,9 @@ RunPod, Linode, Paper Space, Lambda Cloud, vast.ai, Google Colab TPU…
 
 2. Thanks to the [Dockur Project](https://github.com/dockur/windows) and by using the [Image](https://hub.docker.com/r/dockurr/windows#!)
 
-Use Windows inside Docker with:
+Use **Windows inside Docker** with:
 
 ```yml
-version: '3.3'
-
 services:
   windows:
     image: dockurr/windows
@@ -705,8 +708,11 @@ services:
       VERSION: "win10"
 ```
 
-
 {{< /details >}}
+
+For Windows I like to try these kind of PCs with: EA, Epic Games launcher, Steam and WoT, LoL...
+
+The BMax B4 could handle Wot and LoL. And the x300
 
 {{< details title="Keeping GIT tidy 📌" closed="true" >}}
 
@@ -749,3 +755,16 @@ https://www.youtube.com/watch?v=h1kyncK--vQ
 -->
 
 <!-- {% include embed/{youtube}.html id='{h1kyncK--vQ}' %} -->
+
+#### What it is the x300 superseeding?
+
+Up til now, I was very happy with my Ryzen 2200G, 16GB RAM DDR4.
+
+The MB was a B450M S2H, that potentially can also accept this new 5600G and with NVMe PCIe Gen3 x4 m.2 2280 (the first one I tried!)
+
+And as per the tower, a [Aerocool CS-105](https://aerocool.io/product/cs-105/): microATX or miniITX
+with support for up to 320cm GPUs.
+
+The Thermaltake Litepower 450W behaved properly with a RX580 back en the days (even allowed tinkering with crypto mining!)
+
+> And de volume? 187 mm x 361 mm x 355 mm = 23,960,885 mm³ or ~23.96L (**x12** compared to the x300!)

@@ -130,3 +130,9 @@ I also enjoy the night mode (but make sure to have a tripod).
 ### Other Android Stuff
 
 You can also **emulate Linux inside Android**, like I did [with Termux, here](https://jalcocert.github.io/Linux/docs/privacy/android/#how-to-use-linux-on-android-with-termux).
+
+### Other Phones I Tried
+
+I was very happy with both, the Huawei P30 Pro and the PocoPhone F1 (probably the best value for money I ever had til now).
+
+The F1 was quite an interesting one and also the first phone I changed its battery (13Wh, 3.85V, called BM4E, 3900mAh)

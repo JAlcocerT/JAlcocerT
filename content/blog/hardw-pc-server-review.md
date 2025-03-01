@@ -54,8 +54,9 @@ the Firebat got me 4077Mib/sec
 
 Forget about 4k playback with the Pi 4's
 
-But with 
+But with x86 MiniPCs/old laptop you are good to go.
 
+Also the Orange Pi 5 can handdle it (with proper configuration).
 
 
 ## Internet Benchmark
@@ -88,6 +89,8 @@ fast
 
 ## Disk Benchmarks
 
+Another very important part that affects the performance, **the drives**:
+
 ```sh
 sudo lshw -C disk  # You'll need sudo and to filter for disks
 sudo hdparm -I /dev/sda  # Example for /dev/sda (detailed info of the disk)
@@ -95,7 +98,7 @@ sudo apt install ntfs-3g
 ```
 
 
-{{< details title="Mount Drives Properly 📌" closed="true" >}}
+{{< details title="MOUNT Drives Properly! 📌" closed="true" >}}
 
 ```sh
 lsblk #list them again
@@ -124,7 +127,7 @@ sudo mkdir -p /mnt/data_ext_2tb
 sudo mount -t ext4 /dev/sdb2 /mnt/data_ext_2tb/ #example with ext4
 ```
 
-Mounting the Crucial 500gb (CT500MX5) - **Example 1**
+**Mounting** the Crucial 500gb (CT500MX5) - **Example 1**
 
 ```sh
 sudo mkdir /mnt/crucial500

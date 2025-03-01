@@ -24,6 +24,8 @@ Today, Im showing you **how to run AI faster**, thanks to iGPUs, aka AMD APUs.
 
 ## Activating iGPUs for AI
 
+This is I have done it with a friend's x300 (also worked for my Gigabyte B450M-S2H):
+
 <!-- https://youtube.com/shorts/xsvTEzTirlQ -->
 
 {{< youtube "xsvTEzTirlQ" >}}
@@ -98,16 +100,15 @@ qemu-img create -f qcow2 mydisk.img 10G
 qemu-system-x86_64 -boot d -cdrom path/to/your/minimal.iso -m 512 -hda mydisk.img
 
 
-Follow the prompts to install the OS. Since you are using a minimal ISO, the installation process will be CLI-based.
+Follow the prompts to install the OS. 
+
+Since you are using a minimal ISO, the installation process will be CLI-based.
 
 Once the OS is installed, boot the VM from the virtual disk image:
 
 ```sh
 qemu-system-x86_64 -boot c -m 512 -hda mydisk.img
-
 ```
-
-
 
 ### AI on Servers
 

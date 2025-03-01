@@ -473,13 +473,13 @@ Polars is a DataFrame library implemented in Rust and Python that is designed to
 
 * LocalAI - Drop-in replacement for OpenAI running on consumer-grade hardware. No GPU required.
 
-{{< dropdown title="How to get Started with LocalAI ⏬" closed="true" >}}
+{{< dropdown title="How to get Started with the LocalAI project ⏬" closed="true" >}}
 
 * https://github.com/mudler/LocalAI/
-* https://github.com/mudler/LocalAI/blob/master/docker-compose.yaml
+  * https://github.com/mudler/LocalAI/blob/master/docker-compose.yaml
 
 
-Runs gguf, transformers, diffusers and many more models architectures. It allows to generate Text, Audio, Video, Images. Also with voice cloning capabilities.
+> Runs gguf, transformers, diffusers and many more models architectures. It allows to generate Text, Audio, Video, Images. **Also with voice cloning capabilities.**
 
 * https://localai.io/models/
 
@@ -527,9 +527,7 @@ services:
 
 {{< /dropdown >}}
 
-> 🤖 The free, Open Source OpenAI alternative. **Self-hosted, community-driven and local-first**.
-
-* AnythingLLM
+> 🤖 The free, Open Source OpenAI alternative. **Self-hosted, community-driven and local-first**, AnythingLLM!
 
 {{< dropdown title="AnythingLLM ⏬" closed="true" >}}
 
@@ -547,8 +545,8 @@ services:
 
 If one LLM can be helpful, how about combining them to work together?
 
-* [MetaGPT](/selfhosting-metagpt/)
-* [CrewAI](/ai-agents-crewai/) - CrewAI is designed to enable AI agents to assume roles, share goals, and operate in a cohesive unit
+* [MetaGPT](https://fossengineer.com/selfhosting-metagpt/)
+* [CrewAI](https://fossengineer.com/ai-agents-crewai/) - CrewAI is designed to enable AI agents to assume roles, share goals, and operate in a cohesive unit
 * AutoGen
 * ChatDev - https://github.com/OpenBMB/ChatDev
 

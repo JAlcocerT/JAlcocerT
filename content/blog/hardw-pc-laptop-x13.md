@@ -23,6 +23,8 @@ It comes with W11 already installed, which I kept together with an Ubuntu instal
 
 The battery life with its **57Wh** is much better with Linux imo, doing ~8h for my typical use.
 
+<!-- > How big is that battery? x -->
+
 For a quick Windows setup, I used [Chocolatey](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/)
 
 ## Benchmarks ThinkPad x13-G2

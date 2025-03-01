@@ -190,12 +190,17 @@ npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 
 ### Real Estate Calculator Web App
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="See the post about the first iteration of the tool" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="See the post about the first iteration of the tool" icon="book-open" >}}
+{{< /cards >}}
+
 ### Automated Photo Adquisition Tool
 
 As this agency is having collaborations with couple of well known agents in the area, it was required to create a tool to automate the photo adquisition from their sites.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="See the post about the first iteration of the tool" icon="book-open" >}}
 {{< /cards >}}
 
 The client is responsible to ask for permissions first to his collaborators before using it, as it involves using BS4 for scrapping:

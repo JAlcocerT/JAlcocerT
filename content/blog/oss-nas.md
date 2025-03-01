@@ -93,7 +93,7 @@ ifconfig
 ###ip a show enp2s0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
 ```
 
-1. Pi4 192.168.0.155 and 192.168.0.232 both via ethernet
+1. Pi4 192.168.0.155 (4GB) and 192.168.0.232 (2GB) both via ethernet
 2. x300 Ethernet: 192.168.0.12
 3. x13 wifi 192.168.0.124
 

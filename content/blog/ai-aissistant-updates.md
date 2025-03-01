@@ -246,18 +246,17 @@ Probably more NoCode stuff: https://www.youtube.com/@AI-GPTWorkshop/videos
 ### Audio Generation
 
 
-https://github.com/SevaSk/ecoute
-https://pypi.org/project/PyAudioWPatch/#description
 
-**TRY IT IN WINDOWS**
+1. https://github.com/SevaSk/ecoute
+2. https://pypi.org/project/PyAudioWPatch/#description
+
+**TRY Ecoute IN WINDOWS**
 
 ```sh
 python3 -m venv ecoutevenv
 source ecoutevenv/bin/activate
 
-
 apt install ffmpeg
-
 
 git clone https://github.com/SevaSk/ecoute ./ecoute_repo
 cd ecoute_repo
@@ -269,6 +268,14 @@ chmod +x cygwin_cibuildwheel_build.sh
 
 #deactivate
 ```
+
+3. LocalAI - With voice cloning! The reason why I dont like to put my voice over the internet :)
+
+* https://github.com/mudler/LocalAI/
+  * https://github.com/mudler/LocalAI/blob/master/docker-compose.yaml
+
+
+> Runs gguf, transformers, diffusers and many more models architectures. It allows to generate Text, Audio, Video, Images. **Also with voice cloning capabilities.**
 
 ### Books
 
