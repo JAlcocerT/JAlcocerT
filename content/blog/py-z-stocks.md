@@ -366,6 +366,10 @@ You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/a
 
 * https://www.nasdaq.com/market-activity/stocks/mcd/price-earnings-peg-ratios
 
+* https://observationsandnotes.blogspot.com/2009/01/impact-of-price-to-earnings-ratios.html
+* https://observationsandnotes.blogspot.com/2013/03/what-will-my-bond-cd-be-worth-in-years.html
+* PE vs 1year returns, very interesting thought which reminds us about regression to the mean https://observationsandnotes.blogspot.com/2012/03/scatter-diagram-pe-stock-market-return.html
+* https://observationsandnotes.blogspot.com/2011/03/stock-market-100-year-inflation-history.html
 
 * https://www.cazadividendos.com/
 
@@ -378,6 +382,8 @@ You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/a
   * https://ycharts.com/companies/INTC/profit_margin
   
 * https://www.investopedia.com/terms/p/pegyratio.asp
+
+* https://es.tradingeconomics.com/poland/interest-rate
 
 #### Financial Data Apps
 

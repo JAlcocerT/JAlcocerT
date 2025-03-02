@@ -1,5 +1,5 @@
 ---
-title: Tools for Tinkers 
+title: Tools for Tinkers and SelfHosters
 type: docs
 prev: docs/debian
 next: docs/arch
@@ -7,48 +7,23 @@ sidebar:
   open: false
 ---
 
+Whatever you plan to Selfhost, there will be a moment that you will be looking for:
 
-## Cloudflare Tunnels
+1. HTTPs and SSL Setup
+2. Monitoring
+3. Benchmarking
 
-How to expose Apps safely, through your domain, with https and **without exposing your home public IP**.
+## SelfHosted Email
 
-https://jalcocert.github.io/JAlcocerT/why-i-love-containers/
+Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101ee05cc64a59b46e4d299f?ref=selfh.st)
 
-```sh
-sudo docker network tunnel
-```
-
-
-```yml
-version: '3.8'
-
-services:
-  cloudflared:
-    image: cloudflare/cloudflared:latest
-    container_name: cloudflared
-    command: tunnel --no-autoupdate run --token yourfantastictoken
-    networks:
-      - tunnel #Cloudflare Network
-    restart: always
-
-networks:
-  tunnel: #Cloudflare Network
-```
-
-{{< callout type="info" >}}
-Remember to use the `tunnel` network on the containers you want to expose!
-{{< /callout >}}
-
-```sh
-docker network connect tunnel portainer #your_docker_container_to_expose  #network (tunnel) - service
-```
 
 ---
 
 ## FAQ
 
 
-{{% details title="Hot to mount external drives consistently" closed="true" %}}
+{{% details title="Hot to mount external drives consistently?" closed="true" %}}
 
 ```sh
 lsblk #list them again

@@ -168,3 +168,11 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
 #ffmpeg -stream_loop -1 -i "TRAVELATOR - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp 
 ```
+
+HEVC (High Efficiency Video Coding), also known as **H.265**, is a video compression standard. 
+
+To play HEVC videos, your system needs the appropriate codecs in Windows.
+
+{{< callout type="info" >}}
+Still, it will perform better in Linux!
+{{< /callout >}}

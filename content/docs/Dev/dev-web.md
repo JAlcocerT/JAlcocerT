@@ -398,7 +398,7 @@ Then, Try with:
 
 * Instant land
 * [Wordpress](https://fossengineer.com/selfhosting-wordpress-docker/) or [Ghost](https://fossengineer.com/selfhosting-ghost-docker/)
-* Writefreely
+* Writefreely (but does not provide a docker container for a quick spin)
 
 ### Choosing Colors for a Web
 

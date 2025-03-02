@@ -15,7 +15,6 @@ It was a **Honda Civic 6**, born on 1997 (1995-2000).
 
 ## Car Costs Analytics
 
-
 ```mermaid
 pie title Car Expenses Breakdown
          "Gas" : 537
@@ -53,6 +52,19 @@ https://www.youtube.com/watch?v=UINEmTO0LCY
 
 Steps...
 
+* [Importar coche de alemania a nivel particular](https://forocoches.com/foro/showthread.php?t=7264922).
+
+
 ### In Netherlands
 
+* [IMPORTACION Vehículos HOLANDA](https://forocoches.com/foro//showthread.php?p=439130711)
+* [Camper Contact](https://www.campercontact.com/en/search?name=Amsterdam&lat=52.37403&lon=4.88969&zoom=12.5&names=AMS,Aemstelredamme,Aemsterdam,Amestelledamme,Amesterda,Amesterdam,Amesterdao,Amesterd%C3%A3,Amesterd%C3%A3o,Amistardam)
+* [Park4Night](https://park4night.com/en/search?lat=52.372756486328726&lng=4.893615245819092&z=15)
+* [MarktPlaats](https://www.marktplaats.nl/l/auto-s/#q:vito)
+* [IMPORTACION Vehículos HOLANDA](https://forocoches.com/foro/showthread.php?t=4950996)
+* https://forocoches.com/foro/showthread.php?t=3791337
+* https://forocoches.com/foro/showthread.php?t=1098678
+
 ### In Spain
+
+

@@ -62,6 +62,13 @@ npm i -D playwright-chromium
 
 [Two other options](https://fossengineer.com/create-ppt-with-code/#marp) to create PPTs as a Code.
 
+### RevalJS and Astro
+
+* https://github.com/jsulpis/slides-template
+    * https://jsulpis.github.io/slides-template/#/
+
+> Minimalist template for creating slides with Reveal.js and Astro
+
 ### Animotion
 
 * https://github.com/animotionjs/animotion

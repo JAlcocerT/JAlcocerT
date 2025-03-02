@@ -109,6 +109,8 @@ It highlights key aspects of each static site generator or framework.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=gohugoio/hugo,withastro/astro,vercel/next.js,jekyll/jekyll,gatsbyjs/gatsby,nuxt/nuxt.js&type=Date)](https://star-history.com/#gohugoio/hugo&withastro/astro&vercel/next.js&jekyll/jekyll&gatsbyjs/gatsby&nuxt/nuxt.js&Date)
 
+* https://github.com/benben-miao/Awesome-StaticSiteGenerators
+* https://github.com/staystatic/awesome-static
 
 <!-- [![Star History Chart](https://api.star-history.com/svg?repos=gohugoio/hugo&type=Date)](https://star-history.com/#gohugoio/hugo&Date) -->
 
@@ -151,6 +153,16 @@ https://github.com/JAlcocerT/JAlcocerT/blob/main/.github/workflows/pages.yaml
 https://github.com/theNewDynamic/awesome-hugo
 {{< /callout >}}
 
+#### My Favourite HUGO Themes
+
+1. Hextra
+2. PaperMod
+3. Lynx
+
+#### More HUGO Resources
+
+* https://awesome-hugo.github.io/
+
 
 
 ### Jekyll
@@ -170,6 +182,14 @@ If you plan to use [Github Pages with these SSGs](https://jalcocert.github.io/JA
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="RE Calculator - Post"  >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="Job Offers and CV Creation" >}}
 {{< /cards >}}
+
+#### More Jekyll Resources
+
+* https://github.com/mattvh/jekyllthemes
+
+> A directory of the best-looking themes for Jekyll blogs
+
+
 
 ### Astro       
 
@@ -311,6 +331,16 @@ Whether you’re building a blog, a corporate website, or an e-commerce platform
 
 ### Gatsby
 
+
+## Other SSGs
+
+* https://github.com/getpelican/pelican
+
+> Static site generator that supports Markdown and reST syntax. Powered by Python.
+
+* https://github.com/hexojs/hexo
+
+> MIT | A fast, simple & powerful blog framework, powered by Node.js.
 
 
 --- 

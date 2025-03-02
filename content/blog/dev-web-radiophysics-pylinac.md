@@ -62,12 +62,9 @@ And...here it is **the result**: https://jlleongarcia.github.io/jlleongarcia/
 
 > Thanks to: HUGO + Hextra + Github Actions and Pages!
 
-
 ## Conclusions
 
 I hope that this is the beginning of a new journey for jlleongarcia.
-
-
 
 A journey where the rest of the world can benefit from his amazing effort and discoveries in the radiophysics area of expertise.
 
@@ -86,18 +83,38 @@ Right-click on "Windows PowerShell" and select "Run as administrator."
 
 ```sh
 wsl --install #this install linux
+```
 
+Windows will ask you to **restart**.
+
+Then, you can creeate a user and pass for Linux. 
+
+Thats really it!
+
+```sh
 sudo apt update #this is ubuntu already!
 sudo apt upgrade -y
+
+#sudo snap install htop
+#htop #see how much resources is taking
 
 #to access it at another moment, just write:
 #wsl
 ```
 
-{{< cards >}}
+{{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/why-i-love-containers/" title="Reasons to love containers" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/" title="Containers are even better combined CICD - Github Actions Post" icon="book-open" >}}
 {{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="SelfHosting with Docker Containers 101" >}}
+  {{< card link="https://github.com/JAlcocerT/Linux/blob/main/Z_Linux_Installations_101/Selfhosting_101.sh" title="SelfHosting Script" >}}
+{{< /cards >}}
+
+{{< callout type="info" >}}
+Once containers are installed, you can bundle your apps!
+{{< /callout >}}
 
 3. To understand better Python Web Frameworks, specially **Django**, as its the one that QaTrack uses
 
@@ -146,7 +163,9 @@ You've touched on the core strengths of Django. Let's dive deeper into its featu
 
 **In essence:**
 
-Django is a powerful and versatile framework that's well-suited for building complex web applications. Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
+Django is a powerful and versatile framework that's well-suited for building complex web applications. 
+
+Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
 
 
 ---

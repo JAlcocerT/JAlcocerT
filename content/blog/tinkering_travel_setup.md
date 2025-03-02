@@ -1,13 +1,13 @@
 ---
-title: "Technology Setup for a Trip"
+title: "Technology Setup for a Trip."
 date: 2025-02-11
 draft: false
 tags: ["AI"]
-description: "Software and Hardware setup before trips or vacations. Tech Travel Setup."
-summary: 'Software and Hardware setup before trips or vacations'
+description: "Software and Hardware setup before trips or vacations. Tech Travel Setup. With Cost of Living."
 url: 'tech-for-a-trip'
 ---
 
+Software and Hardware setup before trips or vacations.
 
 ### Software Setup
 
@@ -319,6 +319,19 @@ Can’t access the internet via the repeated hotspot. Try to enter **Login Mode 
 
 ![Wifi Login UI on MT3000](/blog_img/hardware/travel-router-loginwifi.png)
 
+
+## Cost of Living
+
+Sometime ago I got to know this site.
+
+A pure reflection of the knowledge of crowds, applied for cost of living.
+
+* https://www.numbeo.com/cost-of-living/in/Warsaw
+* https://www.numbeo.com/cost-of-living/in/Amsterdam
+
+> At the time of writing, these are separeted by x1.4 without rent
+
+If you are planning a trip and want to make a guess on the costs, its worth to have a look!
 
 ---
 

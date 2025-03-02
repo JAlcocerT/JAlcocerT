@@ -217,7 +217,7 @@ How much into the deep could this operation make me be?
 
 Well, that depends ofc of:
 
-1. Interest rates
+1. Interest rates. See [Historical ones for PL](https://es.tradingeconomics.com/poland/interest-rate)
 2. Years to Pay
 3. LTV - How much you ask, versus how much you got initially
 

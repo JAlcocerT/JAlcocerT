@@ -168,6 +168,11 @@ You might know Langchain because of its useful **Chains**.
 {{< callout type="info" >}}
 **LangChain as RAG** can [chat with CSV](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/)& [**DBs**](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/). Also [with PDFs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/)
 {{< /callout >}}
+<!-- 
+https://www.youtube.com/watch?v=rFQ5Kmkd4jc -->
+
+{{< youtube "rFQ5Kmkd4jc" >}}
+
 
 
 ### Agents with Llama-Index

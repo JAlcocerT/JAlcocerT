@@ -369,7 +369,7 @@ npx wrangler pages deploy dist # normally will be dist, but whatever <BUILD_OUTP
 {{< cards >}}
   {{< card link="https://iotechcrafts.web.app/" title="Business Website" image="/blog_img/web/WebsSnapshots/Web_IoTechCrafts.png" subtitle="A Website for Agency - AI & IoT Consulting Services">}}   
   {{< card link="https://iotiotechcrafts.web.app/" title="IoT SaaS Site" image="/blog_img/web/WebsSnapshots/web_iotiotech.png" subtitle="One Pager with FAQ and Pricing" >}} 
-      {{< card link="https://iodoctor.iotechcrafts.com/" title="Doctor Consultation" image="/blog_img/web/WebsSnapshots/Web_IoDoctor.png" subtitle="Landing for Scheduling Doctor Appointments" >}}           
+  {{< card link="https://iodoctor.iotechcrafts.com/" title="Doctor Consultation" image="/blog_img/web/WebsSnapshots/Web_IoDoctor.png" subtitle="Landing for Scheduling Doctor Appointments" >}}           
   {{< card link="https://iodoctor-iotechcrafts.web.app/" title="Web for Doctor Consultation" image="/blog_img/web/WebsSnapshots/web_iodoctors.png" subtitle="With Astro mdx blogs filtrable by tags and docs sections" >}}  
   {{< card link="https://ioracing-iotechcrafts.web.app/" title="IoT SaaS Site" image="/blog_img/web/WebsSnapshots/web_ioracing.png" subtitle="One Pager with FAQ, Pricing and MultiLang" >}}            
 {{< /cards >}}
@@ -436,7 +436,7 @@ You can also try:
 
 2. https://github.com/writefreely/writefreely
 
-> aGPL3 | A clean, Markdown-based publishing platform made for writers. Write together and build a community.
+> aGPL3 | A clean, Markdown-based publishing platform made for writers. Write together and build a community. Does NOT provide a clear container for SelfHost.
 
 3. https://github.com/getnikola/nikola
 
@@ -446,6 +446,21 @@ You can also try:
 > MIT | A static website and blog generator
 
 4. Zola https://www.getzola.org/themes/zola-grayscale/
+
+* https://www.getzola.org/themes/
+* https://www.getzola.org/documentation/getting-started/installation/
+
+
+```yml
+services:
+  zola:
+    image: ghcr.io/getzola/zola:v0.17.2  # Specify the latest version
+    volumes:
+      - .:/app
+    ports:
+      - "1111:1111"
+    command: "serve --interface 0.0.0.0"
+```
 
 {{< details title="Ghost Docker Compose for VPS 📌" closed="true" >}}
 
@@ -500,7 +515,7 @@ networks:
 
 {{< /details >}}
 
-> Site will be ready at `subdomain.jalcocertech.com` and for the user `subdomain.jalcocertech.com/ghost` 
+> Site will be ready at `subdomain.jalcocertech.com` and for the creator `subdomain.jalcocertech.com/ghost` 
 
 <!-- 
 https://www.youtube.com/watch?v=gJxhx5wEAzA
