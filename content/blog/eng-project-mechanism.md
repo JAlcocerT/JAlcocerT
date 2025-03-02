@@ -94,6 +94,10 @@ git clone https://github.com/HYP3R00T/CelestialDocs
 
 ![Streamlit User Auth](/blog_img/web/GHAnPages/gha&pages-celestialdocs-mechanism.png)
 
+After couple of adjustment to the `basepath`...
+
+We are good to go: https://jalcocert.github.io/mechanism/
+
 ## Conclusions
 
 Its been very helpful to use this:

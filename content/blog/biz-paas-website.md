@@ -1,11 +1,20 @@
 ---
 title: "Scaling Services with SelfHosted PAAS"
-date: 2025-02-27T10:20:21+01:00
+date: 2025-03-17T10:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Deploy with Dokploy or ZaneOPS (to Pi / VPS) and make ideas scalable.'
+description: 'Deploy with Dokploy or ZaneOPS (to Pi / VPS) and make ideas scalable. Wordpress and Ghost Examples.'
 url: 'selfhosted-paas'
 ---
+
+Recently I was doing some setup for weddings.
+
+And couple of Wordpress.
+
+Its not taking much if you have the know how already...
+but still, there is a manual process to spin containers, add https with NGINX...
+
+Then I found **these F/OSS PaaS software**.
 
 ## Selfhostable PaaS
 
@@ -54,3 +63,6 @@ There are other **PaaS alternatives** like:
 > MIT | 🚀 Hackable & Self-hosted Open-Source alternative to Vercel, Heroku, Netlify, etc. All your applications, just in one place. Develop and deploy with your favorite tools, and enjoy continuous deployment with GitHub.
 
 Tools Which I will (probably) cover on a future post.
+
+## Scaling Wordpress and Ghost
+

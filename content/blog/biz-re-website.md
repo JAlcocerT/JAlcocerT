@@ -13,10 +13,9 @@ https://github.com/JAlcocerT/cybernetik-realestate-moises
 https://dm-realestate.web.app/
 -->
 
-For the current web UI status:
+For the initial web UI status, we come from:
 
-![Streamlit User Auth](/blog_img/biz/RE/re-tool-userauth.png)
-
+![Streamlit User Auth](/blog_img/web/WebsSnapshots/Web_realestate.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Project 1st Iteration ↗" icon="book-open" >}}
@@ -81,10 +80,9 @@ To add the **OpenGraph Image** so that it will be visible when sharing:
 
 {{< /details >}}
 
-The slider implementation is really cool:
+The **slide implementation** is really cool:
 
-![RE Web - Option 2](/blog_img/web/WebSnapshots/web_re.png)
-
+![RE Web - Option 2](/blog_img/web/WebsSnapshots/web_re.png)
 
 For the real estate **calculator** app part...
 
