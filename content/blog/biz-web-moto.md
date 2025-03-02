@@ -1,5 +1,5 @@
 ---
-title: "A website for a Moto Blogger"
+title: "A website for a Moto Blogger. With SSG,  FFMpeg and Chocolatey"
 date: 2025-02-23T19:20:21+01:00
 draft: false
 tags: ["dev"]
@@ -103,9 +103,68 @@ https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/
 
 ## Outro
 
-I encouraged this person to also do somethign with his awsome action camera content.
+I encouraged this client to also do somethign with his **awsome action camera video content**.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="Some video tricks" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#video-workflow" title="Video Edition Post" icon="book-open" >}}
 {{< /cards >}}
+
+### Chocolatey and FFMPeg
+
+You can install ffmpeg without chocolatey.
+
+But thats *'en plan pringao'*.
+
+With **Chocolatey as package manager** you just need to do:
+
+```sh
+# Install Chocolatey (Run as Administrator)
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest -UseBasicParsing 'https://community.chocolatey.org/install.ps1' | Invoke-Expression
+
+# Verify Chocolatey Installation
+choco --version
+
+# Install FFmpeg (Run as Administrator)
+choco install ffmpeg -y
+
+# Verify FFmpeg Installation
+ffmpeg -version# 7.1-essentials_build
+```
+
+### FFmpeg Video Workflow for Windows
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
+{{< /cards >}}
+
+
+**Copy the files**
+
+```sh
+Copy-Item -Path "E:\DCIM\DJI_001\*.MP4" -Destination "C:\Users\j--e-\OneDrive\Escritorio\cadiz" -Force
+#Robocopy "E:\DCIM\DJI_001" "C:\Users\j--e-\OneDrive\Escritorio\cadiz" *.MP4 /MT:8 /R:3 /W:2 /ETA /TEE /LOG+:copy_log.txt
+```
+
+Create the **txt list**: all withing POWERSHELL
+
+```sh
+Get-ChildItem -Filter "*.MP4" | ForEach-Object { "file '$($_.Name)'" } | Set-Content file_list.txt
+```
+
+And just **use ffmpeg** to join all the files accordingly:
+
+1. Just join them (keeping audio)
+2. Join them but silence the audio
+3. Place music on top of the silenced combined video
+
+```sh
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
+#ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an output_video.mp4 #silenced video
+
+### 🎵 Music by
+#silence & music
+#ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
+#ffmpeg -stream_loop -1 -i "TRAVELATOR - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp 
+```

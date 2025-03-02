@@ -378,24 +378,27 @@ npx wrangler pages deploy dist # normally will be dist, but whatever <BUILD_OUTP
 
 No time for tinkering with web dev stuff?
 
-Just get a wordpress going.
+Just get a **wordpress going**.
 
 {{< details title="Wordpress Docker Compose for VPS 📌" closed="true" >}}
 
 ```yml
-services:
+services: ##for ubuntu
   wordpress:
-    image: wordpress:php7.4-apache
+    image: wordpress:php7.4-apache #wordpress:php7.1-apache
     container_name: wordpress
     ports:
-      - 8085:80
+      - 8082:80
     environment:
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_USER: root
       WORDPRESS_DB_PASSWORD: root
       WORDPRESS_DB_NAME: wordpress
+    links:
+      - mysql:mysql
     restart: always
     networks:
+      - nginx_default #allow communication with the nginx service  
       - wp
 
   mysql:
@@ -406,19 +409,104 @@ services:
       MYSQL_DATABASE: wordpress
       MYSQL_ROOT_PASSWORD: root
     volumes:
-      - mysql-data:/var/lib/mysql # Use the named volume
+      - ~/Docker/wordpress/mysql-data:/var/lib/mysql
+      #- mysql-data:/var/lib/mysql # Use the named volume
     restart: always
     networks:
-      - wp
-
+      - wp #allow communication with the nginx service  
+    
 networks:
   wp:
+  nginx_default:
+    external: true
 
 volumes:
   mysql-data: # Define the named volume
 ```
 
 {{< /details >}}
+
+> Site will be ready at `subdomain.jalcocertech.com` and for the user `subdomain.jalcocertech.com/wp-admin` 
+
+### Wordpress Alternatives
+
+You can also try:
+
+1. [Ghost](https://fossengineer.com/selfhosting-ghost-docker/) with this [dockerhub image](https://hub.docker.com/_/ghost/tags)
+
+2. https://github.com/writefreely/writefreely
+
+> aGPL3 | A clean, Markdown-based publishing platform made for writers. Write together and build a community.
+
+3. https://github.com/getnikola/nikola
+
+* https://themes.getnikola.com/
+* https://themes.getnikola.com/v8/canterville/ Which is based on [Casper for HUGO](https://github.com/vjeantet/hugo-theme-casper/)!
+
+> MIT | A static website and blog generator
+
+4. Zola https://www.getzola.org/themes/zola-grayscale/
+
+{{< details title="Ghost Docker Compose for VPS 📌" closed="true" >}}
+
+```yml
+services:
+  ghost:
+    image: ghost:5-alpine
+    container_name: ghostcontainer
+    environment:
+      database__client: mysql
+      database__connection__host: dbghost
+      database__connection__user: ghostuser
+      database__connection__password: ghost_db_pass
+      database__connection__database: ghost_database
+      url: http://ghostcontainer:2368
+    restart: always
+    ports:
+      - 2368:2368
+    networks:
+      - ghost_network
+      - nginx_default
+    volumes:
+      - ghost_data:/var/lib/ghost/content
+    depends_on:
+      - dbghost
+
+  dbghost:
+    container_name: ghostcontainerdb
+    image: mariadb:10.5 #mysql (but MariaDB is open source)
+    restart: always
+    environment:
+      MYSQL_DATABASE: ghost_database
+      MYSQL_USER: ghostuser
+      MYSQL_PASSWORD: ghost_db_pass
+      MYSQL_ROOT_PASSWORD: ubabuuuHaGba6nhX #Change this one!
+    ports:
+      - 3306:3306
+    networks:
+      - ghost_network
+    volumes:
+      - db_ghost_data:/var/lib/mysql
+
+volumes:
+  ghost_data:
+  db_ghost_data:
+
+networks:
+  ghost_network:
+  nginx_default:
+    external: true  
+```
+
+{{< /details >}}
+
+> Site will be ready at `subdomain.jalcocertech.com` and for the user `subdomain.jalcocertech.com/ghost` 
+
+<!-- 
+https://www.youtube.com/watch?v=gJxhx5wEAzA
+ -->
+
+{{< youtube "gJxhx5wEAzA" >}}
 
 <!-- 
 * Weddings...

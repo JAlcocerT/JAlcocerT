@@ -7,7 +7,12 @@ url: 'backend-alternatives'
 summary: 'How to use gist as free image hosting'
 ---
 
-You're absolutely right! Laravel is primarily a backend framework, just like Django and Flask. They all focus on handling the server-side logic, data management, and API creation for web applications.
+
+## Laravel 101
+
+Laravel is primarily a backend framework, just like Django and Flask in Python.
+
+They all focus on handling the server-side logic, data management, and API creation for web applications.
 
 Here's a quick comparison to highlight their similarities and differences:
 

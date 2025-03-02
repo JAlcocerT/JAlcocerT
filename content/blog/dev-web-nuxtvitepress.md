@@ -155,6 +155,10 @@ https://github.com/theNewDynamic/awesome-hugo
 
 ### Jekyll
 
+
+> How to self-host a simple, static blog on a Raspberry Pi with Jekyll, Docker and Cloudflare
+ https://myzopotamia.dev/selfhost-your-blog-on-raspberry-pi Kudos to [Radoslaw](https://github.com/rskupnik) on the post
+
 For **Jekyll**, you will need Ruby.
 
 Example [Jekyll GHA WF](https://github.com/JAlcocerT/RPi/blob/main/.github/workflows/pages-deploy.yml)
@@ -398,8 +402,6 @@ add this to your css
 ```
 
 > Handpicked collection of premium & light-wighted icons as font
-
-
 
 
 

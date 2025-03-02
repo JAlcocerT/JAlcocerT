@@ -32,7 +32,7 @@ Replacing the to-do list for a *scheduled To-Do*.
 
 We can do more than one thing at a time.
 
-But our brains can't focus in more than one thing at a time.
+But our brains **can't focus in more than one thing** at a time.
 
 * Understand **the switching cost** - when changing tasks, it will require time to get the background variables in place before actually making progress in the task
 * **Background tasking** - your focus is somewhere else
