@@ -299,6 +299,8 @@ jobs:
 
 With [Slidev we can do PPTs as a Code](https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/#slidev), which pretty much resonates with [AI assistants](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/)
 
+![SliDev PPTs as Code for MultiChat](/blog_img/apps/streamlit/slidev-ghpages.png)
+
 {{< callout type="info" >}}
 [Sample repo - slidev+multichat](https://github.com/JAlcocerT/JAlcocerT) 
 {{< /callout >}}

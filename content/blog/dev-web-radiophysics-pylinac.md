@@ -96,7 +96,7 @@ sudo apt upgrade -y
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/why-i-love-containers/" title="Reasons to love containers" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="See the post about the first iteration of the tool" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/" title="Containers are even better combined CICD - Github Actions Post" icon="book-open" >}}
 {{< /cards >}}
 
 3. To understand better Python Web Frameworks, specially **Django**, as its the one that QaTrack uses

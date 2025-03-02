@@ -56,13 +56,27 @@ VitePress is a **Vue-powered static site generator** and a spiritual successor t
 
 > MIT | Vite & Vue powered static site generator.
 
-Effortlessly create beautiful documentation sites with just markdown.
+Effortlessly create **beautiful documentation sites with just markdown**.
 
 ```sh
-npx vitepress dev docs
+#npx vitepress init
+npm install vitepress --save-dev
+
+#npm run docs:dev
+npx vitepress dev docs #go to localhost:5173 and there you go!
+```
+
+```sh
+git clone https://github.com/vuejs/vitepress
+cd vitepress/docs
+npm install
+npm run dev
 ```
 
 https://vitepress.dev/guide/routing
+
+> VitePress is a **Vue-powered** static site generator and a spiritual **successor to VuePress**, built on top of Vite.
+
 
 
 ---
@@ -75,9 +89,13 @@ So...those are 2 more SSGs to the list!
 Im assuming that you are already aware [about CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-css/) and [JS tricks](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites)
 {{< /callout >}}
 
-Most SSGs will be powered by node.
+**Most SSGs** will be powered by node.
 
-Certainly! Below is an improved version of the table that provides a comparison of **Hugo**, **Astro**, **Next.js**, **Jekyll**, **Gatsby**, and **Nuxt**. It highlights key aspects of each static site generator or framework.
+But not all.
+
+A comparison of **Hugo**, **Astro**, **Next.js**, **Jekyll**, **Gatsby**, and **Nuxt**. 
+
+It highlights key aspects of each static site generator or framework.
 
 | About | Hugo | Astro | Next.js | Jekyll | Gatsby | Nuxt |
 |-------|------|-------|---------|--------|--------|------|
@@ -94,13 +112,9 @@ Certainly! Below is an improved version of the table that provides a comparison 
 
 <!-- [![Star History Chart](https://api.star-history.com/svg?repos=gohugoio/hugo&type=Date)](https://star-history.com/#gohugoio/hugo&Date) -->
 
+### HUGO
 
 For **HUGO** you will need to use GO, as explained [here](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/).
-
-
-For **Jekyll**, you will need Ruby.
-
-If you plan to use [Github Pages with these SSGs](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/), create the proper **[Github Actions](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases) workflow**.
 
 
 {{< details title="To use HUGO, you just need to Setup GO & HUGO  📌" closed="true" >}}
@@ -131,14 +145,21 @@ rm hugo_specific_version.deb
 ```
 {{< /details >}}
 
-
-### HUGO
-
 https://github.com/JAlcocerT/JAlcocerT/blob/main/.github/workflows/pages.yaml
 
 {{< callout type="info" >}}
 https://github.com/theNewDynamic/awesome-hugo
 {{< /callout >}}
+
+
+
+### Jekyll
+
+For **Jekyll**, you will need Ruby.
+
+Example [Jekyll GHA WF](https://github.com/JAlcocerT/RPi/blob/main/.github/workflows/pages-deploy.yml)
+
+If you plan to use [Github Pages with these SSGs](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/), create the proper **[Github Actions](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases) workflow**.
 
 
 {{< cards >}}
@@ -286,9 +307,7 @@ Whether you’re building a blog, a corporate website, or an e-commerce platform
 
 ### Gatsby
 
-### Jekyll
 
-Example [Jekyll GHA WF](https://github.com/JAlcocerT/RPi/blob/main/.github/workflows/pages-deploy.yml)
 
 --- 
 

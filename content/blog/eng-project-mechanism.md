@@ -1,6 +1,6 @@
 ---
 title: "How to setup Gabe's project, Mechanism"
-date: 2025-02-03
+date: 2025-03-02T10:20:21+01:00
 draft: false
 tags: ["Python","Mechanics"]
 description: "Mechanisms Animations in Python. From Singer machines to car engines."
@@ -21,6 +21,7 @@ Lately, I just saw that Gabe placed some interesting video about it:
 https://www.youtube.com/watch?v=usY-oBifcM4&list=PLghzFAspn1-eGjPOTT0D_6LXWqMBFRVIW 
 -->
 
+## The Mechanism Project with Python
 
 ```sh
 #python -m venv gabe_mechanism_venv #create the venv
@@ -69,19 +70,29 @@ I exchanged some email with its creator, [GabeMorris12](https://github.com/gabem
 {{< /callout >}}
 
 
-Created this simple version with python:
+### Creating Docs for the Mechanism Project
 
-And working on the symbolic one: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
+For more people to be able to use the fantastic mechanism project...
 
-* https://github.com/JAlcocerT/Slider-Crank
+...I had a look to these projects:
 
+1. https://github.com/mickasmt/astro-nomy
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
+> MIT | Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Open Source.
 
-* Optimum Gears - https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
+```sh
+git clone https://github.com/mickasmt/astro-nomy
+```
+
+2. https://github.com/HYP3R00T/CelestialDocs Which has Search capability implemented!
+
+> MIT | Documentation template using Astro and Shadcn
+
+```sh
+git clone https://github.com/HYP3R00T/CelestialDocs
+```
+
+![Streamlit User Auth](/blog_img/web/GHAnPages/gha&pages-celestialdocs-mechanism.png)
 
 ## Conclusions
 
@@ -135,3 +146,20 @@ https://www.youtube.com/watch?v=PFDu9oVAE-g
 
 <!-- https://www.youtube.com/watch?v=MwIBTbumd1Q -->
 {{< youtube "MwIBTbumd1Q" >}}
+
+## Outro
+
+Created this simple version with python:
+
+And working on the symbolic one: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
+
+* https://github.com/JAlcocerT/Slider-Crank
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+* Optimum Gears - https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
+
+* Car power curve with Python
