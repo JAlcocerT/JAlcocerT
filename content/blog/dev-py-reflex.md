@@ -1,6 +1,6 @@
 ---
 title: "Reflex. Cooler Web Apps?"
-date: 2025-03-01T10:20:21+01:00
+date: 2025-03-08T10:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Using (Python) Reflex to display Real Estate and Job Market Trends as Web Apps.'
