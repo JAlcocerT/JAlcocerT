@@ -11,7 +11,7 @@ Some time ago I got to know this **awsome project**: <https://github.com/gabemor
 
 > MIT | A visual tool to aid engineers with the design process for mechanisms, cams, and gears.
 
-Lately, I just saw that Gabe placed some interesting video about it:
+Lately, I just saw that Gabe placed some **interesting video** about it:
 
 <!-- https://www.youtube.com/watch?v=kMmYv8u8824 -->
 
@@ -106,6 +106,9 @@ It requires a couple of adjustment to the `basepath`...
 
 I followed the installation guide https://composedocs.netlify.app/docs/compose/install-theme/
 
+You have to install vercel and tinacloud app into your github 
+
+https://github.com/tinacms/tina-barebones-starter
 
 > We are good to go: https://jalcocert.github.io/mechanism/
 
@@ -178,3 +181,17 @@ And working on the symbolic one: https://github.com/JAlcocerT/MultiBodySystemDyn
 * Optimum Gears - https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
 
 * Car power curve with Python
+
+### What Ive learnt with this one
+
+#### TinaCMS
+
+A **headless CMS setup**, finally!
+
+All thanks to the HUGO Theme, Compose.
+
+Its great to see that:
+
+1. There is a UI to modify post
+2. Changes in the UI are captured in the github repository (working both ways!)
+3. There is CI/CD with Vercel, which is the configured deployment option for the static files
