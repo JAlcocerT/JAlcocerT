@@ -30,7 +30,17 @@ Then I proposed to start documenting his learning process.
 
 I suggested to start by cloning this very same repository.
 
-As the HUGO Hextra theme is just ready to roll:
+As the HUGO Hextra theme is just ready to roll.
+
+```sh
+git clone
+```
+
+You will need to accept to run github actions workflows in the forked repository and activate Github Pages:
+
+![GHA WF Activation](/blog_img/dev/gha-workflows-activation.png)
+
+> That's it, you are already publishing a blog/docs into Github Pages!
 
 * https://imfing.github.io/hextra/docs/guide/shortcodes/tabs/
 

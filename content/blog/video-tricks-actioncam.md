@@ -183,14 +183,15 @@ Remember that this is a complex project, so break it down into smaller, manageab
 Start with the basics (loading video and GPX, basic visualization) and then gradually add more features (synchronization, map integration, speed graphs, etc.).  Good luck!
 
 
-
 {{< /details >}}
 
 
 ## Conclusions
 
 
-Its great to look back and see how far ive gone (at least compared from how I started):
+Its great to look back and see **how far ive gone regarding videos**.
+
+At least compared from where I started!
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/" title="YT AI Workflow ↗" >}}
@@ -216,8 +217,68 @@ rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #it creates the folder if its n
 ![Graphic Walker UI](/blog_img/selfh/rsync.png)
 
 
-### Quick Videos - CLI
+### Quick Videos - FFMPEG CLI
 
+
+{{< details title="FFMPEG CLI Tricks within Linux 📌" closed="true" >}}
+
+
+1. **Simply Join**: Keeping original audio and no reencoding.
+
+```sh
+###ffmpeg -i "concat:$(ls *.mp4 | tr '\n' '|')" -c copy output_video.mp4 #all from a folder
+ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .MP4 of current folder to a list
+#du -sh ./* #check their size
+
+#Generate a video with the mentioned files (IT PRESERVES THE ORIGINAL FORMATS, BITRATE...)
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy /home/jalcocert/Desktop/output_video.mp4 #different folder (if you do it from OA5 to desktop you will be limited by transfer speed)
+
+#ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an output_video.mp4 #silenced video
+#ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #
+```
+
+2. **Join (Silenced) + Song**
+
+```sh
+ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
+
+#du -sh ./* #check their size
+
+#generate a video from few parts
+#ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
+ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
+#ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #
+
+#ffmpeg -stream_loop -1 -i "AETHER - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
+ffmpeg -stream_loop -1 -i "TRAVELATOR - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
+
+### 🎵 Music by: 
+```
+
+3. Extract images from video:
+
+```sh
+4ffmpeg -i input_video.mp4 -vf "select='gte(t\,120)',fps=1" -vsync vfr frame_%03d.png
+ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.png
+#ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.jpg
+
+
+#between 2 seconds, 1fps extracts and creates a folder
+#ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -vsync vfr frame_%03d.png
+mkdir -p "./$(basename DJI_20250215215547_0006_D.MP4 .MP4)" && ffmpeg -i DJI_20250215215547_0006_D.MP4 -vf "select='between(t,260,262)',fps=1" -vsync vfr "./$(basename DJI_20250215215547_0006_D.MP4 .MP4)/frame_%03d.png"
+```
+
+4. How to reduce image quality in Linux to upload as **youtube thumbnail**:
+
+```sh
+#ffmpeg -i thumbnail.png -c:v libwebp -quality 80 compressed_thumbnail.webp
+#ffmpeg -i PXL_20241030_115355466.jpg -q:v 3 compressed_PXL_20241030_115355466.jpg
+ffmpeg -i thumbnail.png -qscale:v 2 compressed_thumbnail.jpg
+```
+
+
+{{< /details >}}
 
 #### Telemetry Data
 

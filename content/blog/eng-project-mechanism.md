@@ -94,15 +94,26 @@ git clone https://github.com/HYP3R00T/CelestialDocs
 
 ![Streamlit User Auth](/blog_img/web/GHAnPages/gha&pages-celestialdocs-mechanism.png)
 
-After couple of adjustment to the `basepath`...
+It requires a couple of adjustment to the `basepath`...
 
-We are good to go: https://jalcocert.github.io/mechanism/
+3. HUGO Theme (with MermaidJS, ChartJS TinaCMS support) https://github.com/onweru/compose
+
+> MIT | A Hugo theme for documentation sites.
+
+{{< callout type="info" >}}
+**Add ChartJS to HUGO** Themes with this [shortcode](https://github.com/shen-yu/hugo-chart) 
+{{< /callout >}}
+
+I followed the installation guide https://composedocs.netlify.app/docs/compose/install-theme/
+
+
+> We are good to go: https://jalcocert.github.io/mechanism/
 
 ## Conclusions
 
 Its been very helpful to use this:
 
-![Firebase Custom Domain](/blog_img/dev/GeminiCodeAssist.png)
+![Gemini Code Assistant](/blog_img/dev/GeminiCodeAssist.png)
 
 {{< callout type="info" >}}
 **Kudos again to Gabe!** The project is release under MIT for anyone to use and modify. 
@@ -110,7 +121,7 @@ Its been very helpful to use this:
 
 I created a small slider crank app for motor sport lovers (and with much smaller scope than Gabe's project)
 
-https://github.com/JAlcocerT/Slider-Crank
+* https://github.com/JAlcocerT/Slider-Crank
 
 > Simulation of a Slider-Crank mechanism. Powered by Python and DASH.
 
