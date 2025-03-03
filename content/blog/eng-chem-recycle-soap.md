@@ -12,20 +12,47 @@ Normally I like to write here about *code recipes*.
 
 But today I thought to bring a *chemichal recipe*, that can help us saving waste and learn some chemistry on the way!
 
+And if somebody told you that its too complicated...
+
+...dont worry.
+
+The **proportions** I tried were:
+
+are 6:6:1 with water,oil and NaOH.
+
+The good thing?
+
+You can also play around with the proportions, even adding perfume to it!
+
+[Jump to **The result**](#my-experience)
+
+![Soap from lye](/blog_img/outro/soap.png)
+
+{{< callout type="warning" >}}
+You will need an **open space** to mix the input materials and be patient
+{{< /callout >}}
+
 ## The Chemistry of Lye
+
+Before we get started, lets **understand what we are doing**.
 
 {{< callout type="warning" >}}
 Soap making with **lye can be dangerous**. Proceed with extreme caution and **at your own risk**.
 {{< /callout >}}
 
+This beauty right here, is the one doing the job:
+
 $$
 NaOH(s) \xrightarrow{H_2O} Na^+(aq) + OH^-(aq) + \text{heat}
 $$
 
+
+
+{{< details title="More details about the chemistry behind Lye 📌" closed="true" >}}
+
 The chemical reaction of NaOH (sodium hydroxide) with water is a **dissolution process**.
 
 Not a typical chemical reaction (where new covalent bonds are formed).
-
 
 **Explanation:**
 
@@ -35,17 +62,21 @@ Not a typical chemical reaction (where new covalent bonds are formed).
 * `OH^-(aq)`: Hydroxide ions dissolved in water (aqueous solution).
 * `\text{heat}`: Represents the release of heat.
 
+{{< /details >}}
+
 **Is it exothermic?**
 
 Yes, the dissolution of NaOH in water is **highly exothermic**.
 
 This means it releases a significant amount of heat, causing the **water to become very hot**.
 
+See how Ive done lye (the temperature rises when mixing adding the water!)
+
 {{< youtube "ScU5qGbH6fE" >}}
 
 <!-- https://youtu.be/ScU5qGbH6fE -->
 
-> I could see the water (3L) to get up to ~46C from ~19C
+> I could see the water (3L) to get up to **~46C from ~19C**
 
 
 {{< details title="How much energy is released to heat water that way? 📌" closed="true" >}}
@@ -96,7 +127,7 @@ Let's calculate the energy required to heat water from 19°C to 46°C.
 
 That was 113J/g * 3000 g = ~339KJ or 0.3MJ
 
-> One liter of gasoline contains approximately 32-34 megajoules (MJ) of energy (x100 times more).
+> For reference: One liter of gasoline contains approximately 32-34 megajoules (MJ) of energy (x100 times more).
 
 
 
