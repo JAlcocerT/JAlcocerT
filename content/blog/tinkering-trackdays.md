@@ -59,10 +59,10 @@ This project ESP32 based and json configurable sounds just amazing:
 
 For the future...maybe a contactless brake temperature system?
 
-We can, with a MLX Sensor!
+We can, with a **MLX Sensor**!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/" title="MLX90614 with a Pi" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Infrared Temperature Sensor" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/" title="MLX90614 with a Pi" image="/blog_img/hardware/iot/sensor-mlx.jpg" subtitle="Infrared Temperature Sensor Project" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 

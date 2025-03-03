@@ -3,14 +3,14 @@ title: "[Comparison] Performance of different Computers"
 date: 2025-03-03
 draft: false
 tags: ["Dev"]
-description: 'CPU, Memory, Disks, Internet speed...'
+description: 'Benchmarks for CPU, Memory, Disks, Internet speed... Whats enough for a HomeLab?'
 url: 'benchmarking-computers'
 ---
 
 
 ## CPU Benchmarks
 
-The first CPU at home was an Intel and then a AMD Athlon 64 3200+ (both 1 core!).
+The first CPU at home was an Intel P3, then an AMD Athlon 64 3200+ (both 1 core!).
 
 And look at them now...
 
@@ -19,14 +19,14 @@ sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run #4 cores
 7z b -mmt4
 ```
 
-x300 7960 events/s, total 79.6k events
-x300 7zip 6.2k/24.7k
+* x300 7960 events/s, total 79.6k events
+* x300 7zip 6.2k/24.7k
 
-And a max power from the wall seen of 61W with the Tapo P110
+And a max power from the wall seen of [61W with the Tapo P110](#consumption)
 
 > For now, the x300 with the 5600G is the most powerful CPU I ever had (a little bit more than the x13 and )
 
-cpx11 (Hetzner amd epyc x86): 12.3k events and 4.5/9k
+* cpx11 (Hetzner amd epyc x86): 12.3k events and 4.5/9k
 
 ## Memory Benchmarks
 
@@ -52,7 +52,11 @@ the Firebat got me 4077Mib/sec
 
 ## GPU Benchmark
 
-Forget about 4k playback with the Pi 4's
+Forget about 4k playback with the Pi 4's.
+
+![alt text](/blog_img/iot/pis-esp-mlx.jpg)
+
+> Get a Pi if you want to do IoT Projects instead, they have great I/O for sensors.
 
 But with x86 MiniPCs/old laptop you are good to go.
 
@@ -174,6 +178,18 @@ df -h #see it mounted
 ## Consumption
 
 As per this [Tapo Smart Plug](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/)
+
+The x13 when in idle:
+
+
+![x13 consumption](/blog_img/hardware/x13-consumption.jpg)
+
+The Pi4 (4GB), is around ~8C above air temperature:
+
+![Pi Home Server](/blog_img/hardware/pi-homeserver.jpg)
+
+Due to the typical ~4W that consumes (together with the external SSD).
+
 
 ---
 

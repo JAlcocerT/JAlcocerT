@@ -11,7 +11,7 @@ In Spain you could expect:
 
 * 6% taxes + 3-5k notario + 0.5/1k/m2 repairs/setup
 
-![Honda Civic 6](/blog_img/outro/honda-road.jpg)
+![a](/blog_img/outro/honda-road.jpg)
 
 ## Car Costs Analytics
 

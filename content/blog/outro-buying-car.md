@@ -47,6 +47,7 @@ https://www.youtube.com/watch?v=UINEmTO0LCY
 
 {{< youtube "UINEmTO0LCY" >}}
 
+![Honda Civic 6](/blog_img/outro/hondacivic-sparkplugs.jpg)
 
 ### In Germany
 

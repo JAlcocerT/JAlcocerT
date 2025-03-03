@@ -50,36 +50,65 @@ See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻
 
 {{< /tabs >}}
 
+Whatever option you choose, see how the **Streamlit App is done modular**:
 
+```sh
+import streamlit as st
+import os
+from UDF_st_logic import re_calculator_ui #the magic happens here
+from UDF_GenAI import st_openai_md_genai #and here :)
+
+import UDF_Auth_functions as af
+
+def main():
+    if af.login(): #Simple Auth Layer
+        genai_mode = os.getenv("GenAI_MODE", False)
+
+        if genai_mode and genai_mode.lower() == "true":  # Check if env var exists and is "true"
+            re_calculator_ui()
+            st_openai_md_genai()
+        else:
+            re_calculator_ui()
+
+if __name__ == "__main__":
+    main()
+```
 
 > About each of those pieces, I was writing a little bit already
 
+Once you have the app ready, we go to the containers part:
+
+```sh
+sudo docker image build -t re_calc_genai:v6b . > build.log 2>&1
+```
+
+You will need to provide **valid SSL certificates** after that:
+
 {{< cards cols="1" >}}
-  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos" title="Docker Repo ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/" title="Ways to get Https ↗" >}}
 {{< /cards >}}
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Source Code using OpenAI+ Anthropic with LlamaIndex and Mem0 ↗" icon="book-open" >}}
+  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX ↗" icon="book-open" >}}
+  {{< card link="https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/" title="Cloudflared ↗" icon="book-open" >}}
 {{< /cards >}}
 
-I have also been tinkering with a Web App framework alternative, Reflex:
 
-{{< cards cols="1" >}}
-    {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
-{{< /cards >}}
 
 ---
 
-# Streamlit Features for PoC
+## Streamlit Features for PoC
 
 You will need **https** to have credibility that you build something solid.
 
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos" title="Docker Repo ↗" >}}
 {{< /cards >}}
+
+{{< callout type="info" >}}
+Remember that the visible Streamlit App name in the **browser tab**, will match the name of the **Python streamlit main file**! 
+{{< /callout >}}
+
 
 ### Features under a Wall
 
@@ -205,3 +234,14 @@ Here are some strong contenders, keeping in mind that "self-hostable" implies yo
 * **If you have very specific requirements or want complete control, building your own backend is an option, but it's the most time-consuming.**
 
 Remember that even with these self-hostable options, you'll still need to choose a frontend framework (React, Vue, etc.) to build the user interface of your application.  These solutions primarily handle the backend aspects of user management.
+
+---
+
+## Conclusions
+
+
+I have also been tinkering with a Web App framework alternative, Reflex:
+
+{{< cards cols="1" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
+{{< /cards >}}

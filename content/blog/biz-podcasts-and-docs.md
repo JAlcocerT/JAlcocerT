@@ -1,6 +1,6 @@
 ---
 title: "Tech for Creating Documentation and Podcast"
-date: 2025-03-21
+date: 2025-04-10
 draft: false
 tags: ["Web"]
 description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. Also a look to GitPodcast."

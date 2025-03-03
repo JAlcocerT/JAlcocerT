@@ -3,7 +3,7 @@ title: "Using DJI Tello Drone with Python"
 date: 2024-07-30T23:20:21+01:00
 draft: false
 tags: ["Tinkering"]
-summary: Learning drone programming with Python and a DJI Tello drone.
+description: Learning drone programming with Python and a DJI Tello drone.
 url: 'dji-tello-python-programming'
 ---
 
@@ -40,7 +40,7 @@ So far it can do the following:
 3. Camera (Photo/Video) Control
 4. Computer Vision with DJI Tello
 
-Credits to [Murtaza's YT Video](https://www.youtube.com/watch?v=LmEcyQnfpDA&t=1286s) that helped to get started.
+Credits to [Murtaza's **YT Video**](https://www.youtube.com/watch?v=LmEcyQnfpDA&t=1286s) that helped me a lot to get started.
 
 <!-- {{< youtube id="v=LmEcyQnfpDA" autoplay="false" >}} -->
 {{< youtube "LmEcyQnfpDA" >}}
@@ -53,7 +53,7 @@ Curious about CV, but dont have this kind of dron yet?
 A **Pi camera** its about ~5$, much more affordable way to enter the computer vision world!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/" title="Pi Camera" image="/blog_img/hardware/RPi4_2gb_cam.jpg" subtitle="Try `OpenCV` and `yolov8` with the Pi!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/" title="Pi Camera" image="/blog_img/hardware/iot/pi-cam.jpg" subtitle="Try OpenCV and yolov8 with the Pi!" >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Raspberry 101" image="/blog_img/hardware/wifi_eth.jpg" subtitle="Get started with a RPi" >}}
 {{< /cards >}}
 

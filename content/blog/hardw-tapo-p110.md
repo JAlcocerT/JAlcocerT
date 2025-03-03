@@ -18,3 +18,17 @@ It costed me ~20$.
  -->
 
 {{< youtube "Mbzdlxxn3cw" >}}
+
+## Tapo P110 Features
+
+1. Connectivity: 2.4GHz Wifi Only
+2. Allowed power: up to 3680W (16A max)
+3. Android App: [TP-Link Tapo](https://play.google.com/store/apps/details?id=com.tplink.iot&pcampaignid=web_share)
+
+### Tapo P110 and Home Assistant
+
+* https://community.home-assistant.io/t/is-a-tapo-p110m-from-tp-link-compatible-with-home-assistant/738579/5
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/#home-assistant-os" title="HA with a Pi | Post ↗" >}}
+{{< /cards >}}

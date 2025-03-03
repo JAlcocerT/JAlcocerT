@@ -14,6 +14,8 @@ Last year I bough a couple of **companions for my Raspberry Pi 4 2GB**:
 
 And Recently, this new release got my attention:
 
+![alt text](/blog_img/iot/pis-esp32.jpg)
+
 3. Raspberry Pi Pico 2 -  A brand new model, with both **ARM and RISC-V cores**
 
 
@@ -36,7 +38,7 @@ They are great companions for SBC's like a RPi:
 
 
 <!-- I know this is supposed to be a RPi centered repo and web, but couldn't resist to add some small project that uses the ESP32. -->
-
+![alt text](../../static/blog_img/iot/pis-esp-mlx_proto.jpg)
 
 {{< hextra/feature-grid >}}
  

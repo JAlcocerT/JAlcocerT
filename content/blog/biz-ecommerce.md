@@ -72,7 +72,7 @@ volumes:
   drupal_themes_data:
 ```
 
-![Honda Civic 6](/blog_img/biz/ecommerce/drupal.png)
+![Drupal Ecommerce Setup](/blog_img/biz/ecommerce/drupal.png)
 
 
 ---
