@@ -26,14 +26,31 @@ See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻
 
 ### The AI Tech Stack
 
-1. **RAGs**: LlamaIndex, Mem0 together with HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
+{{< tabs items="Full-Fledge,PoC Gen AI,Market Test" >}}
 
-2. **LLMs**: OpenAI, [Anthropic](https://docs.anthropic.com/en/docs/about-claude/models/all-models)
+  {{< tab >}}
+  Complex and full fledge setup: with RAG, embeddings and 2 LLMs
 
-```sh
-OPENAI_API_KEY=sk-proj-yourapikey #https://platform.openai.com/api-keys
-ANTHROPIC_API_KEY=sk-ant-api03-yourapi #https://console.anthropic.com/settings/keys
-```
+  1. **RAGs**: LlamaIndex, Mem0 together with HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
+
+  2. **LLMs**: OpenAI, [Anthropic](https://docs.anthropic.com/en/docs/about-claude/models/all-models)
+
+  ```sh
+  OPENAI_API_KEY=sk-proj-yourapikey #https://platform.openai.com/api-keys
+  ANTHROPIC_API_KEY=sk-ant-api03-yourapi #https://console.anthropic.com/settings/keys
+  ```
+  {{< /tab >}}
+
+  {{< tab >}}
+  How about keeping it simple with just OpenAI?
+  {{< /tab >}}
+
+  {{< tab >}}![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+  {{< /tab >}}
+
+{{< /tabs >}}
+
+
 
 > About each of those pieces, I was writing a little bit already
 
