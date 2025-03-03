@@ -11,15 +11,15 @@ description: 'Exploring RAGs and creating a Data Chat using LLMs via APIs. LangC
 url: 'how-to-use-rags-with-python'
 ---
 
-How to create a Python Apps to chat with your data?
+How to create a Python Apps to **chat with your data as context**?
 
 {{< callout type="info" >}}
-The **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** 💻 
+See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻 
 {{< /callout >}}
 
 ## How to use RAGs
 
-Previously this year, I got lucky enough to find these open source projects:
+Previously this year, I got lucky enough to find these **open source projects**:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/ask-multiple-pdfs/" title="My Fork in GH for Ask Multiple PDFs ↗" icon="book-open" >}}
@@ -27,6 +27,8 @@ Previously this year, I got lucky enough to find these open source projects:
 {{< /cards >}}
 
 They both use [**LangChain** as RAG framework](#exploring-langchain)
+
+And they were great to give me an understanding oon what a RAG is and how to build one.
 
 We can build very interesting **QnA** over knowledge apps: https://github.com/langchain-ai/chat-langchain
 
@@ -68,13 +70,16 @@ Normally, you will see that [RAG frameworks relate](#interesting-rag-resoures) w
 
 ## RAG Frameworks
 
+As you can imagine, there are few frameworks available to implement a **RAG with Python**:
+
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,run-llama/llama_index,deepset-ai/haystack,Sinaptik-AI/pandas-ai&type=Date)](https://star-history.com/#langchain-ai/langchain&run-llama/llama_index&deepset-ai/haystack&Sinaptik-AI/pandas-ai&type=Date)
 
 ### Llama-Index
 
 You might Know Llama-Index because of its **RAG capabilities**.
 
 * https://github.com/run-llama/llama_index
-* https://docs.llamaindex.ai/en/stable/
+  * https://docs.llamaindex.ai/en/stable/
 
 > LlamaIndex is a framework for building **context-augmented generative AI** applications with LLMs including agents and workflows.
 
@@ -93,6 +98,11 @@ You will need [OpenAI & Anthropic APIs](#interesting-api-keys-for-llms)
 {{< callout type="info" >}}
 For the [**Real Estate Web** Project](https://github.com/JAlcocerT/ScrewFastMoiRealEstate) commented in [this post](https://jalcocert.github.io/JAlcocerT/astro-web-setup/) I was asked to provide a **QnA Bot**
 {{< /callout >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/blob/main/LLamaIndex/With_Mem0/Chat_with_md.py" title="Source Code using OpenAI + Anthropic with LlamaIndex and Mem0 to chat over properties markdown context ↗" icon="book-open" >}}
+{{< /cards >}}
+
 
 #### LLamaIndex Use Cases
 

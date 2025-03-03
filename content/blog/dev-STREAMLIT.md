@@ -10,10 +10,30 @@ url: 'streamlit-is-cool'
 
 ## Streamlit Calculator and GenAI RE Agent
 
+I was building a simple web app RE calculator with Streamlit here:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
+  {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage" title="RE Streamlit App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the RE Calculator" >}}
+{{< /cards >}}
+
+Its time to put few pieces together, and add Generative ai capabilities:
+
+{{< callout type="info" >}}
+See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻 
+{{< /callout >}}
+
+
 ### The AI Tech Stack
 
-1. LlamaIndex, Mem0
-2. LLMs: OpenAI, Anthropic
+1. **RAGs**: LlamaIndex, Mem0 together with HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
+
+2. **LLMs**: OpenAI, [Anthropic](https://docs.anthropic.com/en/docs/about-claude/models/all-models)
+
+```sh
+OPENAI_API_KEY=sk-proj-yourapikey #https://platform.openai.com/api-keys
+ANTHROPIC_API_KEY=sk-ant-api03-yourapi #https://console.anthropic.com/settings/keys
+```
 
 > About each of those pieces, I was writing a little bit already
 
@@ -23,8 +43,14 @@ url: 'streamlit-is-cool'
 {{< /cards >}}
 
 {{< cards cols="2" >}}
-  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos" title="Docker Repo ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Source Code using OpenAI+ Anthropic with LlamaIndex and Mem0 ↗" icon="book-open" >}}
+{{< /cards >}}
+
+I have also been tinkering with a Web App framework alternative, Reflex:
+
+{{< cards cols="1" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
 {{< /cards >}}
 
 ---

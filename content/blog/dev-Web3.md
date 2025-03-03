@@ -4,10 +4,15 @@ date: 2021-12-19T23:20:21+01:00
 draft: false
 tags: ["Web"]
 description: 'Building your first Web3 from scratch.'
-summary: 'Everyone talks about Web3. I was wondering if I could use some knowledge that I got while creating static sites with HUGO and its actually pretty simple.'    
 url: 'guide-web3'
 ---
 
+
+*Everyone* talks about Web3. 
+
+I was wondering if I could use some knowledge that I got while creating static sites with HUGO and its actually pretty simple
+
+---
 
 **The Web3 Revolution!** > wait, what?
 

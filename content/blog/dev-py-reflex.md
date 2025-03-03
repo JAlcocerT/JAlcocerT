@@ -11,7 +11,7 @@ url: 'tinkering-with-reflex'
 
 
 {{< callout type="info" >}}
-See the [source code magic](https://github.com/JAlcocerT/Python_is_awesome) 🔥💻
+See the [source code magic](https://github.com/JAlcocerT/Python_is_awesome). Applied to [RE here](https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage_Reflex) 🔥💻
 {{< /callout >}}
 
 

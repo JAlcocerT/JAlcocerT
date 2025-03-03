@@ -22,7 +22,7 @@ Lets have a look to `Anthropic API` and its models.
 * Get your API keys: <https://console.anthropic.com/settings/keys>
     * https://docs.anthropic.com/en/docs/about-claude/models
 
-* https://platform.openai.com/api-keys
+* Get OpenAI Keys: https://platform.openai.com/api-keys
 
 Thanks to this project for inspiration: https://github.com/jw782cn/Claude-Streamlit
 
@@ -65,6 +65,7 @@ in their web: https://docs.anthropic.com/en/docs/about-claude/models
 * claude-3-opus-20240229
 * claude-3-sonnet-20240229 
 * claude-3.5-sonnet-20240620
+* Claude Haiku is Anthropic's fastest and most compact model.Optimized for speed and responsiveness, making it ideal for real-time applications and tasks where latency is critical.
 
 ---
 
