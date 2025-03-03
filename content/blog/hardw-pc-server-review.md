@@ -7,8 +7,9 @@ description: 'Benchmarks for CPU, Memory, Disks, Internet speed... Whats enough 
 url: 'benchmarking-computers'
 ---
 
+## Benchmarks
 
-## CPU Benchmarks
+### CPU Benchmarks
 
 The first CPU at home was an Intel P3, then an AMD Athlon 64 3200+ (both 1 core!).
 
@@ -28,7 +29,7 @@ And a max power from the wall seen of [61W with the Tapo P110](#consumption)
 
 * cpx11 (Hetzner amd epyc x86): 12.3k events and 4.5/9k
 
-## Memory Benchmarks
+### Memory Benchmarks
 
 ```sh
 sudo apt install sysbench
@@ -50,7 +51,7 @@ the Firebat got me 4077Mib/sec
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
 {{< /cards >}}
 
-## GPU Benchmark
+### GPU Benchmark
 
 Forget about 4k playback with the Pi 4's.
 
@@ -63,7 +64,7 @@ But with x86 MiniPCs/old laptop you are good to go.
 Also the Orange Pi 5 can handdle it (with proper configuration).
 
 
-## Internet Benchmark
+### Internet Benchmark
 
 ```sh
 ip addr show
@@ -91,7 +92,7 @@ fast
 #npm install --global fast-cli && fast
 ```
 
-## Disk Benchmarks
+### Disk Benchmarks
 
 Another very important part that affects the performance, **the drives**:
 
@@ -190,6 +191,11 @@ The Pi4 (4GB), is around ~8C above air temperature:
 
 Due to the typical ~4W that consumes (together with the external SSD).
 
+## Conclusions
+
+{{< callout type="info" >}}
+To make the most out of your new homelab, check [the SelfHosting docs](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/)
+{{< /callout >}}
 
 ---
 

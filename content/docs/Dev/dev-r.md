@@ -8,33 +8,41 @@ url: 'useful-r-stuff'
 ---
 
 {{< callout type="info" >}}
-https://github.com/qinwf/awesome-R
+This repository has a lot https://github.com/qinwf/awesome-R and I have done an [R Recap on this one](https://jalcocert.github.io/JAlcocerT/r-language-101/)
 {{< /callout >}}
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/" title="Asrockx300Review" image="/blog_img/hardware/x300.jpg" subtitle="The x300 is here!" >}}
-{{< /cards >}}
 
 
 ## Data Driven R
 
-> R can do many things, from [simple Websites with Knit pkg](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/), to Data Apps
+What I enjoy about R, is that it can do very cool data stuff.
+
+> R can do many things, from [simple **Websites** with Knit pkg](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/), to Data Apps
 
 ### FlexDashboards
 
-https://jalcocert.github.io/R_Stocks/
+With R, you can also have *'static dashboard'*, which dont need a server, like Shiny or Streamlit.
+
+They can be hosted, for example, on Github Pages:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/" title="Asrockx300Review" image="/blog_img/hardware/x300.jpg" subtitle="The x300 is here!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/" title="R Flexdashboards 101" image="/blog_img/web/flexdash-static-github.png" subtitle="Deploy to Github Pages" >}}
+{{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/R_Stocks/" title="RStocks Associated FlexDashboard" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/" title="Github Pages" >}}
 {{< /cards >}}
 
 ### Shiny Apps
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for RStocks" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="The RStocks App" image="/blog_img/hardware/x300.jpg" subtitle="Creating and Deploying a ShinyAPP with R" >}}
+{{< /cards >}}
 
-https://github.com/JAlcocerT/R_Stocks
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="Asrockx300Review" image="/blog_img/hardware/x300.jpg" subtitle="The x300 is here!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="The RStocks App" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="Creating and Deploying a ShinyAPP with R" >}}
 {{< /cards >}}
 
 ## Containers for R Apps

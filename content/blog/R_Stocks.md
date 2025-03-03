@@ -272,17 +272,17 @@ You can [install **Portainer with Docker**](https://jalcocert.github.io/JAlcocer
 
 https://www.dividendcompass.com/pricing
 39 eur/MES
+
 https://stockevents.app/en/portfolio-tracker
 40 euros/a
 
 
 
-Open source competition
-https://www.privacytools.io/guides/open-source-portfolio-manager-privacy
+**Open source competition for RStocks**
 
-
-https://github.com/rotki/rotki
-https://github.com/ghostfolio/ghostfolio
+1. https://www.privacytools.io/guides/open-source-portfolio-manager-privacy
+2. https://github.com/rotki/rotki
+3. https://github.com/ghostfolio/ghostfolio
 
 
 APP BUILDING
