@@ -44,22 +44,41 @@ npm install astro-pagefind pagefind
 **What could be better**?
 
 * The header could follow the users when its scrolling
-* 
+
 {{< /details >}}
 
-> For something more personal site, id have a look to: https://github.com/saicaca/fuwari
+
+3. https://github.com/danielcgilibert/blog-template
+
+
+{{< details title="What I like about Astro Blog-Template / OpenBlog Theme 📌" closed="true" >}}
+
+* Post are writen with `.mdx`
+* **Search** working in prod
+* Cool post index that follows you when in a PC (not at a phone)
+
+**What could be better**?
+
+* The header could follow the users when its scrolling
+
+{{< /details >}}
+
+> GPL 3.0 | 📚 Openblog is an elegant, simple, and user-friendly blog. Focused on accessibility, SEO and performance.
+
+For a more personal site, id have a look to: https://github.com/saicaca/fuwari
+
 
 ### Directory Astro Themes
 
 Very useful to create **app directories**:
 
-3. https://github.com/lukenguyen-me/astro-template-directory-website
+1. https://github.com/lukenguyen-me/astro-template-directory-website
 
 > Unlicensed | Astro template for a directory website in minimal theme, with reactjs + tailwind + shadcn
 
 {{< details title="What I like about Astro Template Directory Theme 📌" closed="true" >}}
 
-* **Search** working in prod and also in Dev! Using lucide-react:
+* **Search** working in prod and also in Dev! Using `lucide-react`:
 
 ```sh
 npm install lucide-react
@@ -67,13 +86,11 @@ npm install lucide-react
 
 {{< /details >}}
 
-4. https://github.com/NewDesignFile/template-directory
+2. https://github.com/NewDesignFile/template-directory
 
 > Unlicensed | A directory theme for Astro.
 
-
-
-5. https://github.com/mickasmt/next-mobbin-clone
+3. https://github.com/mickasmt/next-mobbin-clone
 
 > MIT | Replicate the design of mobbin.com to test the news components of shadcn-ui. #builtinpublic
 

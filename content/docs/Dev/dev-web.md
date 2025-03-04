@@ -7,7 +7,9 @@ summary: 'Interesting stuff Ive learn along the way when trying to make better W
 url: 'create-your-website'
 ---
 
-You can create **cool static websites** with these frameworks, and also with [Remix](https://github.com/jacob-ebey/remix-ssg).
+You can create **cool static websites** with these SSG frameworks.
+
+And also with [Remix](https://github.com/jacob-ebey/remix-ssg).
 
 Which frameworks? 
 
@@ -23,22 +25,15 @@ I discovered static sites thanks to using first [Flexdashboards in R language](h
 
 These dashboards are consolidated into **"just" html information**, like static sites.
 
-And you bet they are cool and functional.
-
-{{< details title="Important Files for all Webs 📌" closed="true" >}}
+And you bet, they are **cool and functional**.
 
 
-Look always for the `<head>` - It will guide you to a `Base.astro`, `BaseLayout.astro`, `head.html`...
-
-In there you can do interesting things, like adding **web analytics**.
-
-{{< /details >}}
 
 **Features** that most likely you will want to add to a Website:
 
 0. **Pre-Requisites**: Fast and Secure (SSL, https)
 1. Search: Pagefind, FuseJS,...
-2. Scheduled Posts:
+2. Scheduled Posts
 3. Internationalization?
 4. A CDN?
 5. APIs: [Forms, Newsletters](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/), email marketing
@@ -50,6 +45,11 @@ In there you can do interesting things, like adding **web analytics**.
 * For HUGO, [HUGO Theme Gallery](https://github.com/nicokaiser/hugo-theme-gallery) has OG done right
 {{< /details >}}
 
+{{< callout type="info" >}}
+
+{{< /callout >}}
+
+
 
 ## What Ive Learnt about Astro
 
@@ -59,59 +59,7 @@ In there you can do interesting things, like adding **web analytics**.
 {{< /callout >}}
 
 
-{{< details title="How to Install Dependencies 📌" closed="true" >}}
 
-checking dependencies
-
-```sh
-npm list @astrojs/starlight
-npm install @astrojs/starlight
-npm install @astrojs/starlight --legacy-peer-deps #if you have some dep issues
-```
-
-
-{{< /details >}}
-
-
-
-
-{{< details title="Better SEO for Astro 📌" closed="true" >}}
-
-* Seo Package for astro:
-
-```astro
-import { AstroSeo } from '@astrolib/seo';
-```
-
-as in the [Minimal Studio Theme by michael-andreuzza ](https://github.com/IoTechCrafts/minimalstudio-ssg)
-
-{{< /details >}}
-
-{{< details title="WebSearch in Astro 📌" closed="true" >}}
-
-
-as in the [withastro/starlight Theme](https://github.com/IoTechCrafts/starlight-SSG)
-
-one of the most complete Astro themes ive seen - also supporting several languages
-* https://starlight.astro.build/guides/i18n/
-{{< /details >}}
-
-{{< details title="Optimized images in Astro 📌" closed="true" >}}
-
-You will **need astrojs/mdx installed** first and use it within .mdx files:
-
-```astro
-import { Image } from 'astro:assets'
-
-import photopost1b from '../../assets/image.jpg';
-
-<figure>
-  <Image src={photopost1b} width={500} height={200} alt="Exploring Astro Images" />
-  <figcaption class="caption">Say hi to Astro</figcaption>
-</figure>
-```
-
-{{< /details >}}
 
 ---
 
@@ -235,7 +183,7 @@ http-server -p 8000
 
 ### Select the Deployment Method
 
-There are few [alternatives to host a static website](https://fossengineer.com/alternatives-for-hosting-static-websites/):
+There are few [alternatives to **host a static website**](https://fossengineer.com/alternatives-for-hosting-static-websites/):
 
 * [Firebase](https://fossengineer.com/hosting-with-firebase/)
 * [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) or Gitlab Pages

@@ -1,0 +1,223 @@
+---
+title: "Astro Websites"
+draft: false
+url: 'create-your-website-astro-ssg'
+type: docs
+prev: docs/debian
+next: docs/arch
+sidebar:
+  open: false
+---
+
+
+## Astro Themes
+
+Find astro themes at: https://astro.build/themes/
+
+* [Astrothemes.club](https://astrothemes.club/free-astro-themes)
+* https://statichunt.com/ or https://github.com/statichunt
+
+### Photo Gallery Themes
+
+1. https://github.com/obviyus/musee?ref=astrothemes.club
+
+
+{{< details title="What I like about Musee Astro Theme 📌" closed="true" >}}
+
+* Simplicity: place your folder under `/src/assets/images/original/` and you are good to go
+* Images are optimized to `.webp` at build time
+
+```bash
+#npm install
+npm install astro-purgecss@latest
+```
+
+2. Start development server
+
+```bash
+npm run dev
+#npm run build
+```
+
+{{< /details >}}
+
+> GPL3.0 | Fast, responsive , self-hosted image gallery. Ships minimal JS to the client.
+
+2. https://github.com/AREA44/astro-multiverse?ref=statichunt.com
+
+> One-page gallery design with a fully functional lightbox, designed by HTML5 UP
+
+
+
+{{< callout type="info" >}}
+See also HUGO Theme Gallery
+{{< /callout >}}
+
+### Blogs
+
+1. https://github.com/saicaca/fuwari
+
+2. https://github.com/godruoyi/gblog
+
+> MIT 🎈gblog, an open-source, simple and beautiful blog built with Astro
+
+3. https://github.com/statichunt/geeky-astro
+
+> MIT
+
+4. https://github.com/danielcgilibert/blog-template
+
+> GPL3.0 | 📚 Openblog is an elegant, simple, and user-friendly blog. Focused on accessibility, SEO and performance.
+
+5. https://github.com/palmiak/pacamara-astro
+
+> MIT Pacamara is a simple blog theme for Astro that uses md and mdx files to store your content.
+
+
+6. https://github.com/web3templates/stablo-astro?ref=statichunt.com
+
+
+
+### Services
+
+#### Restaurants
+
+1. https://github.com/moonbe77/fresh_bite
+
+> Unlicensed | Restaurant website template
+
+2. https://github.com/unfolding-io/Astrorante?ref=astrothemes.club
+
+* Very interesting video as soon as you enter
+* MultiLang (i18n)
+
+> AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, Storyblok CMS, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
+
+
+
+#### Weddings
+
+
+#### Modelling
+
+1. https://github.com/iamnyasha/minimma
+
+> MIT
+
+
+### CV Themes
+
+If you are looking to impress with a new curriculum, why not doing it as a web?
+
+1. https://github.com/KonradSzwarc/devscard
+
+> MIT | A fully customizable template to create your online (and paper) resume without writing a single line of code.
+
+2. https://github.com/mmouzo/astro-cv-esquelete
+
+> 
+
+### Links / Bento
+
+1. https://github.com/DBozhinovski/astro-theme-ltree?ref=statichunt.com
+
+> An Astro theme that replicates Linktree _and_ Linkinbio rolled in one. Optional TinaCMS on top.
+
+
+
+### Presentations with Astro
+
+
+### Product
+
+1. https://github.com/midudev/landing-tesla?ref=statichunt.com
+
+* With very interesting video sections!
+
+> Ejemplo de landing de Tesla con HTML, CSS, JavaScript, Astro y Tailwind
+
+
+### Docs
+
+1. https://github.com/withastro/starlight?ref=statichunt.com
+
+
+* Supports `.mdx` and i18n
+
+> 🌟 Build beautiful, accessible, high-performance documentation websites with Astro
+
+### Startup
+
+1. https://github.com/matt765/Tailcast?ref=statichunt.com
+
+> MIT
+
+
+
+---
+
+## FAQ Astro
+
+{{< details title="Important Files for all Astro Webs 📌" closed="true" >}}
+
+Look always for the `<head>` - It will guide you to a `Base.astro`, `BaseLayout.astro`, `head.html`...
+
+In there you can do interesting things, like adding **web analytics**.
+
+{{< /details >}}
+
+{{< details title="How to Install Dependencies 📌" closed="true" >}}
+
+checking dependencies
+
+```sh
+npm list @astrojs/starlight
+npm install @astrojs/starlight
+npm install @astrojs/starlight --legacy-peer-deps #if you have some dep issues
+```
+
+{{< /details >}}
+
+
+
+
+{{< details title="Better SEO for Astro 📌" closed="true" >}}
+
+* Seo Package for astro:
+
+```astro
+import { AstroSeo } from '@astrolib/seo';
+```
+
+as in the [Minimal Studio Theme by michael-andreuzza ](https://github.com/IoTechCrafts/minimalstudio-ssg)
+
+{{< /details >}}
+
+
+
+{{< details title="WebSearch in Astro 📌" closed="true" >}}
+
+As in the [withastro/starlight Theme](https://github.com/IoTechCrafts/starlight-SSG)
+
+One of the most complete Astro themes ive seen - also supporting several languages
+
+* https://starlight.astro.build/guides/i18n/
+
+{{< /details >}}
+
+{{< details title="Optimized images in Astro mdx Posts 📌" closed="true" >}}
+
+You will **need astrojs/mdx installed** first and use it within `.mdx` files:
+
+```astro
+import { Image } from 'astro:assets'
+
+import photopost1b from '/src/assets/img_folder/image.jpg';
+
+<figure>
+  <Image src={photopost1b} width={500} height={200} alt="Exploring Astro Images" />
+  <figcaption class="caption">Say hi to Astro</figcaption>
+</figure>
+```
+
+{{< /details >}}
