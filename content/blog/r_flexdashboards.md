@@ -63,7 +63,7 @@ You can do this from within **RStudio** using the New R Markdown dialog.
 
 But you can also get started with vscode.
 
-1. Example one - Just getting started with Flexdashboards:
+1. Example one - Just getting started with **Flexdashboards**:
 
 ```Rmd
 ---

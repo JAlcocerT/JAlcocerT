@@ -3,11 +3,15 @@ title: "Creating a Blog with AI Powered content"
 date: 2024-09-25
 draft: false
 tags: ["dev"]
-description: 'Creating Landing Web pages with Astro'
+description: 'Creating Landing Web pages with Astro. Automated Website Posts with HUGO and OpenAI.'
 url: 'creating-hugo-blog'
 ---
 
 As AI content will grow over time, a **fast build time** is appreciated.
+
+{{< callout type="info" >}}
+Hopefully also growing in quality, with agents or human double-check supervision
+{{< /callout >}}
 
 Hence using **HUGO**.
 

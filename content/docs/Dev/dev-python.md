@@ -12,24 +12,9 @@ If you have [Python Installed](https://jalcocert.github.io/JAlcocerT/guide-pytho
 You can do very cool things with it.
 
 {{< callout type="info" >}}
-https://github.com/vinta/awesome-python
+Python can do maaany things... https://github.com/vinta/awesome-python
 {{< /callout >}}
 
-
-{{< details title="Why I love Streamlit for Quick UI's 📌" closed="true" >}}
-
-Streamlit uses a combination of front-end technologies to create its user interface, primarily leveraging React.js, a popular JavaScript library for building user interfaces.
-
-- **React.js**: Used for building dynamic and responsive user interfaces.
-- **WebSockets**: Maintains a real-time connection between the client and server for instant updates.
-- **Tornado**: A Python framework that handles long-lived connections and supports the server's real-time operations.
-- **Custom Components**: Allows integration of additional web technologies like JavaScript, enhancing functionality.
-- **Bootstrap**: Provides styling and theming capabilities to customize the appearance of applications (CSS Framework).
-- **Widgets and Markdown**: Supports a variety of interactive widgets and Markdown for easy UI development.
-
-This setup enables you to **quickly create interactive web apps using Python**, without needing extensive frontend development skills.
-
-{{< /details >}}
 
 ## Python Apps Reliability
 
@@ -119,6 +104,8 @@ You can use tools like: Jenkins, or Github Actions CI/CD Workflows
 
 Executing Python code step by step is great for exploratory purposes.
 
-We can do it with the `.ipynb`, Python notebooks:
+We can do it with the `.ipynb`, Python notebooks, executed in **Google Colaboratory**:
 
 [![Python Notebook - RoutePolar](/img/OpenInColab.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Py_RoutePolar.ipynb)
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)

@@ -427,6 +427,21 @@ Flask is a versatile and powerful microframework that's ideal for developers who
 
 ### Streamlit
 
+{{< details title="Why I love Streamlit for Quick UI's 📌" closed="true" >}}
+
+Streamlit uses a combination of front-end technologies to create its user interface, primarily leveraging React.js, a popular JavaScript library for building user interfaces.
+
+- **React.js**: Used for building dynamic and responsive user interfaces.
+- **WebSockets**: Maintains a real-time connection between the client and server for instant updates.
+- **Tornado**: A Python framework that handles long-lived connections and supports the server's real-time operations.
+- **Custom Components**: Allows integration of additional web technologies like JavaScript, enhancing functionality.
+- **Bootstrap**: Provides styling and theming capabilities to customize the appearance of applications (CSS Framework).
+- **Widgets and Markdown**: Supports a variety of interactive widgets and Markdown for easy UI development.
+
+This setup enables you to **quickly create interactive web apps using Python**, without needing extensive frontend development skills.
+
+{{< /details >}}
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Chat with Data" image="/blog_img/GenAI/dbchat/" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}

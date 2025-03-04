@@ -27,7 +27,7 @@ Whats also great?
 
 To forget about building your site.
 
-Commit your changes. Push. And let Github Actions CI/CD Workflows do the rest.
+Commit your changes. Push. And let **Github Actions CI/CD Workflows** do the rest.
 
 These are example of **CI/CD depending on your desired SSG**:
 
@@ -37,14 +37,16 @@ These are example of **CI/CD depending on your desired SSG**:
 
 They are executed on push on certain branches / manually - All as per your GHA WF `.yml` configuration.
 
-And if you need 101 on those SSGs:
+And if you need **101 on those SSGs:**
 
 1. [HUGO 101](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)
-2. [Astro 101](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) and https://jalcocert.github.io/JAlcocerT/using-astro-templates/ and also https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/
+2. [Astro 101](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) and https://jalcocert.github.io/JAlcocerT/using-astro-templates/ 
+3. See also https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/
 
 ---
 
-Alternatively, you can have a look to:
+Alternatively, you can have a look to **other static hostings**:
 
 1. [Firebase](https://fossengineer.com/hosting-with-firebase/)
 2. [Cloudflare pages](https://fossengineer.com/hosting-with-cloudflare-pages/)
+3. Netlify, Vercel, AWS s3...
