@@ -13,6 +13,12 @@ It will work with a dualband capable network as well (2.4 and 5G on the same SSI
 
 It costed me ~20$.
 
+And it help me monitor such things:
+
+![alt text](/blog_img/hardware/energy/tapo-p110-1.jpg)
+
+![alt text](/blog_img/hardware/energy/tapo-p110-2.jpg)
+
 <!--
  https://www.youtube.com/watch?v=Mbzdlxxn3cw
  -->

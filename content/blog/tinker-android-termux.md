@@ -16,6 +16,8 @@ url: setup-termux-android
 
 I was tinkering some time ago with [Termux](https://jalcocert.github.io/Linux/docs/privacy/android/#how-to-use-linux-on-android-with-termux)
 
+![Termux S6 Lite](/blog_img/outro/termux-s6lite.png)
+
 ## More
 
 {{< callout type="info" >}}

@@ -26,9 +26,11 @@ You can also play around with the proportions, even adding perfume to it!
 
 [Jump to **The result**](#my-experience)
 
+This is what we are going to create:
+
 ![Soap from lye](/blog_img/outro/soap.png)
 
-{{< callout type="warning" >}}
+{{< callout type="info" >}}
 You will need an **open space** to mix the input materials and be patient
 {{< /callout >}}
 

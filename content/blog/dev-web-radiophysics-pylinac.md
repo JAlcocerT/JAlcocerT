@@ -177,6 +177,11 @@ Django is a powerful and versatile framework that's well-suited for building com
 
 Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
 
+5. Write, Write, write! Markdown is all you need and Practice makes perfection!
+
+{{< callout type="info" >}}
+See https://github.com/joemccann/dillinger as The last Markdown editor, ever.
+{{< /callout >}}
 
 ---
 

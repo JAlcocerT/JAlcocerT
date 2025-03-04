@@ -99,6 +99,10 @@ Use the [Exodus App](https://github.com/Exodus-Privacy/exodus-android-app)
 
 You can have an emulated [Debian](https://jalcocert.github.io/Linux/docs/debian/) inside Android with [**Termux**](https://termux.dev/en/).
 
+
+![Termux S6 Lite](/blog_img/outro/termux-s6lite.png)
+
+
 {{% details title="Start using Termux with [Alpine Linux](https://alpinelinux.org/downloads/)! 🚀" closed="true" %}}
 
 * https://github.com/termux/termux-app

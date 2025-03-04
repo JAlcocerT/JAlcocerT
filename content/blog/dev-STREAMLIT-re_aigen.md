@@ -79,7 +79,8 @@ if __name__ == "__main__":
 Once you have the app ready, we go to the containers part:
 
 ```sh
-sudo docker image build -t re_calc_genai:v6b . > build.log 2>&1
+#sudo docker image build -t re_calc_genai:v6b . > build.log 2>&1
+sudo docker image build --progress=plain -t re_calc_genai:v6b . 2>&1 | tee build.log
 ```
 
 You will need to provide **valid SSL certificates** after that:
@@ -93,6 +94,17 @@ You will need to provide **valid SSL certificates** after that:
   {{< card link="https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/" title="Cloudflared ↗" icon="book-open" >}}
 {{< /cards >}}
 
+You can have now a **real estate aigent** that provides 24/7 recommendations about properties:
+
+![alt text](/blog_img/biz/RE/properties-md.png)
+
+The data? Pure markdown or `.mdx` from the site itself: 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-website/" title="Latest updates for a Real Estate Website" image="/blog_img/biz/RE/dmproperties.png" subtitle="Customizing Astro Themes for RE Agency " >}}
+{{< /cards >}}
+
+You can use a live editor to get around markdown: https://dillinger.io/
 
 
 ---

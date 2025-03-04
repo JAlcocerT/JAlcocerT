@@ -191,6 +191,14 @@ npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 
 {{% /details %}}
 
+5. And...Astronomy! https://github.com/mickasmt/astro-nomy
+
+> MIT |  Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Open Source. 
+
+![alt text](/blog_img/biz/RE/dmproperties.png)
+
+> See it live https://dmproperties.web.app/
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/" title="CSS 101 ↗" icon="book-open" >}}

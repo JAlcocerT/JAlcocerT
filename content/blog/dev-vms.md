@@ -72,3 +72,6 @@ It’s primarily used to virtualize full operating systems on Linux PCs using te
 * **Termux**, on the other hand, is a **terminal emulator and Linux environment app for Android devices**.
     * It allows users to run a lightweight Linux environment on their Android phone or tablet, providing access to a wide range of command-line utilities and programming environments without rooting the device.
     * A native terminal [might come sooner or later](https://www.androidpolice.com/android-linux-terminal/)
+
+
+![Termux S6 Lite](/blog_img/outro/termux-s6lite.png)

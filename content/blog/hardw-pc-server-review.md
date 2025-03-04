@@ -10,9 +10,11 @@ url: 'benchmarking-computers'
 
 ## CPU Benchmarks
 
-The first CPU at home was an Intel P3, then an AMD Athlon 64 3200+ (both 1 core!).
+The first CPU at home was an Intel P3, then an AMD Athlon 64 3200+ came (both 1 core!).
 
 And look at them now...
+
+Any miniPC or SBC, will bring us ~4C/4T CPU:
 
 ```sh
 sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run #4 cores
@@ -181,7 +183,6 @@ As per this [Tapo Smart Plug](https://jalcocert.github.io/JAlcocerT/tapo-p110-re
 
 The x13 when in idle:
 
-
 ![x13 consumption](/blog_img/hardware/x13-consumption.jpg)
 
 The Pi4 (4GB), is around ~8C above air temperature:
@@ -190,22 +191,16 @@ The Pi4 (4GB), is around ~8C above air temperature:
 
 Due to the typical ~4W that consumes (together with the external SSD).
 
+An additional SSD to the Pi accounts for ~1W, as I observed when adding an extra drive.
+
+The x300 during ~idle, will do ~14w when using linux, or...>25w when in windows 11:
+
+![alt text](../../static/blog_img/hardware/energy/power-linux-w11-pi.jpg)
+
+> Mr. Doors, pleaze
 
 ---
 
 ## FAQ
 
 
-{{< details title="Other Intersting Linux 📌" closed="true" >}}
-
-* Whonix / Tails  - Debian based
-* Qubes - Fedora based
-
-{{< /details >}}
-
-
-{{< details title="Customize Linux Visuals 📌" closed="true" >}}
-
-I love to start with the **Garuda default wallpaper**.
-
-{{< /details >}}

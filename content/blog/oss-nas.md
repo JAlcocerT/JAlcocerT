@@ -13,6 +13,22 @@ Ive been pretty much **comfortable with these OS's**:
 2. Zorin OS
 3. Garuda Linux 
 4. If you miss XP, see https://xpq4.sourceforge.io/
+5. For apple users: ElementaryOS or [PearOS](https://pearos.xyz/)
+
+{{< details title="Other Intersting Linux 📌" closed="true" >}}
+
+* Whonix / Tails  - Debian based
+* Qubes - Fedora based
+
+{{< /details >}}
+
+
+{{< details title="Customize Linux Visuals 📌" closed="true" >}}
+
+I love to start with the **Garuda default wallpaper**.
+
+{{< /details >}}
+
 
 > With Garuda, you unlock the superpower of saying: *I use Arch, btw*
 

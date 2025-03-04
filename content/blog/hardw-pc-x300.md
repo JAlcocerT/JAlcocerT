@@ -244,8 +244,11 @@ Released on Jan 2021, with 7nm, its related GPU has 8 ROPs and 28 TMUs as per GP
 
 {{< /details >}}
 
-> The X300 supports 2.5-inch drives with a thickness of **7mm or 9.5mm** (which normally go up to 2TB).
+> The X300 supports **2.5-inch** drives with a thickness of **7mm or 9.5mm** (which normally go up to 2TB).
 
+The energy consumption is reasonable, at **~15w with Linux**, Windows goes ++66%:
+
+![alt text](/blog_img/hardware/energy/x300-linux-w11-energy.jpg)
 
 ### What am I using it for right now?
 
