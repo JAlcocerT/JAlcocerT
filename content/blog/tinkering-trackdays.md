@@ -57,12 +57,12 @@ This project ESP32 based and json configurable sounds just amazing:
 
 
 
-For the future...maybe a contactless brake temperature system?
+For the future...maybe a **contactless brake temperature system**?
 
 We can, with a **MLX Sensor**!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/" title="MLX90614 with a Pi" image="/blog_img/hardware/iot/sensor-mlx.jpg" subtitle="Infrared Temperature Sensor Project" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/" title="MLX90614 with a Pi" image="/blog_img/iot/sensor-mlx.jpg" subtitle="Infrared Temperature Sensor Project" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
@@ -155,7 +155,7 @@ ffmpeg -i IMG_5294.MOV -ss 00:03:35 -to 00:05:25 -c copy output.MOV
 
 How does it look the data?
 
-You guessed it, you can process PhyPhox Data with Python:
+You guessed it, you can process **PhyPhox Data with Python:**
 
 You can also open it with **Google Colab**: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds_TrackDay.ipynb)
 

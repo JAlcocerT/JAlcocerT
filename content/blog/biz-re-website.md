@@ -193,6 +193,15 @@ npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 
 5. And...Astronomy! https://github.com/mickasmt/astro-nomy
 
+{{< details title="What I like about Astro astro-nomy Theme 📌" closed="true" >}}
+
+* Post are writen with `.mdx`
+* **OpenGraph** is included (als when sharing posts, but not the post image)
+* Responsive blog section (kind of directory) where **posts get filtered by tags**
+* Interesting **header** section (which follows you on laptop or mobile)
+
+{{< /details >}}
+
 > MIT |  Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Open Source. 
 
 ![alt text](/blog_img/biz/RE/dmproperties.png)
@@ -355,7 +364,6 @@ npx wrangler pages deploy dist # normally will be dist, but whatever <BUILD_OUTP
   {{< card link="https://cozyknittingclub.com/" title="Content Creator Blog" image="/blog_img/web/WebsSnapshots/Web_CKC.png" subtitle="For an instagramer who loves knitting" >}}
   {{< card link="https://morita-web.pages.dev//" title="Health Care Site" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Because the brain is as important as the body" >}}
     {{< card link="https://dm-real-estate.com/" title="Real Estate Official Site" image="/blog_img/web/WebsSnapshots/Web_realestate.png" subtitle="A Real Estate Business Site for Spain" >}}
-    {{< card link="https://jmodels.net/" title="Scale Modelling Blog" image="/blog_img/web/WebsSnapshots/Web-jmodels.png" subtitle="Fantastic Blog with ~1K Posts about Modelling" >}}
     {{< card link="https://ira-english.pages.dev/" title="Personal Business Landing" image="/blog_img/web/WebsSnapshots/Web_EnglishIra.png" subtitle="Landing Page for a well Known English Teacher" >}}
     {{< card link="https://jalcocert.github.io/Portfolio/" title="All your Links" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Sleek collection of important Links" >}} 
   {{< card link="https://cyclingthere.com" title="My Travel Adventures" image="/blog_img/web/WebsSnapshots/Web_CyclingThere.png" subtitle="I can write and also create interesting photo galleries about my travel experiences" >}}

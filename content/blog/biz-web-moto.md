@@ -112,11 +112,21 @@ I encouraged this client to also do somethign with his **awsome action camera vi
 
 ### Chocolatey and FFMPeg
 
-You can install ffmpeg without chocolatey.
+You can **install ffmpeg** without chocolatey.
 
 But thats *'en plan pringao'*.
 
-With **Chocolatey as package manager** you just need to do:
+I prefer to leverage chocolatey: https://community.chocolatey.org/packages
+
+So that programs will get installed programatically (instead of downloading `.exe`, executing and clicking next few times).
+
+{{< callout type="info" >}}
+If you have ffmpeg installed already, jump [here](#ffmpeg-video-workflow-for-windows)
+{{< /callout >}}
+
+With **Chocolatey as package manager** you just need to use these 4 commands to get **ffmpeg ready**.
+
+Open powershel as administrator and copy paste these (one by one):
 
 ```sh
 # Install Chocolatey (Run as Administrator)
@@ -127,49 +137,61 @@ choco --version
 
 # Install FFmpeg (Run as Administrator)
 choco install ffmpeg -y
+#choco install chocolateygui #optionally, install a UI to install other packages with GUI
 
 # Verify FFmpeg Installation
-ffmpeg -version# 7.1-essentials_build
+ffmpeg -version #I got the version 7.1-essentials_build
 ```
+
+If you are here already, you are ready to join videos!
 
 ### FFmpeg Video Workflow for Windows
 
+This is how I prepare simple videos avoiding repetitive edition.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
 {{< /cards >}}
 
+Within *POWERSHELL as admin*, do:
 
-**Copy the files**
+**Copy the files** with CLI (optional) - I like to use such command to do it with CLI, but you can drag and drop:
 
 ```sh
-Copy-Item -Path "E:\DCIM\DJI_001\*.MP4" -Destination "C:\Users\j--e-\OneDrive\Escritorio\cadiz" -Force
+Copy-Item -Path "E:\DCIM\DJI_001\*.MP4" -Destination "C:\Users\Escritorio\cadiz" -Force
 #Robocopy "E:\DCIM\DJI_001" "C:\Users\j--e-\OneDrive\Escritorio\cadiz" *.MP4 /MT:8 /R:3 /W:2 /ETA /TEE /LOG+:copy_log.txt
 ```
+1. Place all the videos you want to join into a folder, and place the powershell session on that folder:
 
-Create the **txt list**: all withing POWERSHELL
+```sh
+cd C:\Users\Escritorio\cadiz #this is a sample folder on my desktop
+```
+
+2. Create the **`.txt` list**: this will create a file with all the mp4 that will be joined
 
 ```sh
 Get-ChildItem -Filter "*.MP4" | ForEach-Object { "file '$($_.Name)'" } | Set-Content file_list.txt
 ```
 
-And just **use ffmpeg** to join all the files accordingly:
+> You can review that all the mp4 are considered once generated
 
-1. Just join them (keeping audio)
-2. Join them but silence the audio
-3. Place music on top of the silenced combined video
+3. Last step: Just **use ffmpeg** to join all the files accordingly. You have few alternatives:
+
+* Just join them (keeping the original audio) - *This is the one uncommented* 
+* Join them but silence the audio
+* Place music on top of the silenced combined video
 
 ```sh
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
+
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an output_video.mp4 #silenced video
 
 ### 🎵 Music by
-#silence & music
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
 #ffmpeg -stream_loop -1 -i "TRAVELATOR - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp 
 ```
 
-HEVC (High Efficiency Video Coding), also known as **H.265**, is a video compression standard. 
+**HEVC** (High Efficiency Video Coding), also known as **H.265**, is a video compression standard. 
 
 To play HEVC videos, your system needs the appropriate codecs in Windows.
 

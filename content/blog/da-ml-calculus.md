@@ -7,6 +7,8 @@ url: 'calculus-101'
 math: true
 ---
 
+https://www.youtube.com/shorts/ha2_x5eJ1OY
+
 The first time I got to know calculus, was with derivatives and integrals.
 
 I kind of like derivatives...but hated integrals.
