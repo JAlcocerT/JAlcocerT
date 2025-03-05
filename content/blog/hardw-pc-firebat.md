@@ -543,6 +543,11 @@ A list of applications and tools, organized into categories
 
 - Tailscale
 - RustDesk
+
+```sh
+flatpak install flathub com.rustdesk.RustDesk
+```
+
 - Oracle Virtual Box
 - VMware (Freemium)
 

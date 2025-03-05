@@ -13,6 +13,7 @@ url: 'web-for-moto-blogger'
 My friend wanted to have the following **Astro theme**:
 
 The **theme** - https://github.com/Boston343/horizon
+
 <!-- 
 https://github.com/JAlcocerT/horizon
 https://github.com/JAlcocerT/ProyectoYosu
@@ -20,15 +21,22 @@ https://github.com/Boston343/horizon -->
 
 > Original (and fantastic) job was done by https://github.com/Boston343/horizon and released under GPL3.0
 
-There was a Windows setup in between, so...
+There was a **Windows Web-Dev setup** in between, so...
 
 ...the setup took just a little bit more clicks than in linux:
 
-1. Install node and npm (nodejs.org and docs.npmjs.org)
+1. Install node and npm ([nodejs.org](https://nodejs.org/en) and [docs.npmjs.org](https://docs.npmjs.org/))
+
+```sh
+node --version
+npm --v
+```
+
 2. Install git and vscode
 
 3. Install **firebase CLI** - in windows that means pasting the `.exe` to the repo folder and adding it as gitignore to avoid pushing it to the repo
-4. Install npm firebase package
+
+4. Install npm firebase package to configure the hosting
 
 
 {{< details title="Google Firebase Setup 📌" closed="true" >}}
@@ -47,7 +55,7 @@ firebase init
 
 ![Firebase Free Tier Limits](/blog_img/web/success5-aga/FirebaseHosting-FreeTier-Limits.png)
 
-And to have the my domain linked...
+And to have the a **custom domain linked**...
 
 Went to [firebase UI](https://console.firebase.google.com/) -> Compilation -> hosting.
 
@@ -60,6 +68,10 @@ Select my subdomain, and added a **CName + TXT record to the DNS**.
 For that domain, Im using cloudflare - so made sure that its **DNS only and not proxied records**
 
 {{< /details >}}
+
+{{< callout type="info" >}}
+Alternatively, do the [Web-Dev setup for Astro at Windows with Chocolatey](#chocolatey-setup-for-astro)
+{{< /callout >}}
 
 
 5. Do the one time Firebase Project setup: `.\firebase init`
@@ -102,6 +114,7 @@ https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/
 {{< /cards >}}
 
 ## Outro
+
 
 I encouraged this client to also do somethign with his **awsome action camera video content**.
 
@@ -147,7 +160,7 @@ If you are here already, you are ready to join videos!
 
 ### FFmpeg Video Workflow for Windows
 
-This is how I prepare simple videos avoiding repetitive edition.
+This is how I prepare simple videos **avoiding repetitive edition**.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
@@ -200,3 +213,40 @@ To play HEVC videos, your system needs the appropriate codecs in Windows.
 {{< callout type="info" >}}
 Still, it will perform better in Linux!
 {{< /callout >}}
+
+### Chocolatey Setup for Astro
+
+Astro [QUICK] web development setup for windows
+
+{{< details title="Node NPM and VSCode with Chocolatey 📌" closed="true" >}}
+
+
+1. Open **Powershel as administrator**
+
+2. Copy paste these (one by one):
+
+```sh
+# Install Chocolatey (Run as Administrator)
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-WebRequest -UseBasicParsing 'https://community.chocolatey.org/install.ps1' | Invoke-Expression
+
+# Verify Chocolatey Installation
+choco --version
+
+choco install nodejs-lts -y
+#choco install nodejs -y
+```
+
+3. See that both, npm and node are installed:
+
+```sh
+node -v
+npm -v
+```
+
+4. Optionally, install vscode:
+
+```sh
+choco install vscode -y
+```
+
+{{< /details >}}
