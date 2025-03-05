@@ -191,6 +191,8 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
 #ffmpeg -stream_loop -1 -i "TRAVELATOR - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp 
 ```
 
+> Every time you do this for ~20min GOPro 4K videos, you are saving 3h and 65W *as of today ~0.05$*
+
 **HEVC** (High Efficiency Video Coding), also known as **H.265**, is a video compression standard. 
 
 To play HEVC videos, your system needs the appropriate codecs in Windows.

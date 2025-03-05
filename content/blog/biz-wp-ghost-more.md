@@ -1,11 +1,14 @@
 ---
 title: "Spinning Webs - WPs, Ghost,..."
-date: 2025-03-05
+date: 2025-03-04
 draft: false
-description: 'A website for all.'
-url: ''
+description: 'Websites for all. Without the code.'
+url: 'no-code-websites'
 ---
 
+Enough Code.
+
+Lets see some *no code* websites that you can use at a Home Server/VPS.
 
 ### Just Get Wordpress
 

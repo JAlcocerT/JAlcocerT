@@ -97,12 +97,50 @@ integrations:[sitemap(), robots()],
 
 {{< details title="OpenGraph Photo, Tittle and Description for Main Site and Posts 📌" closed="true" >}}
 
+The `og-image.jpg` image (or whatever you name your image file) should be placed directly in the `./public` directory at the root of your Astro project.
 
+**Why the public directory?**
+
+Static Assets: The public directory in Astro (and many other web frameworks) is specifically designated for static assets. These are files that are served directly to the browser without any processing by Astro.
+
+Examples include:
+Images (like your Open Graph image)
+Favicons
+robots.txt
+sitemap.xml
+Fonts
+
+Direct URL Access: Files in the public directory are accessible directly via their path relative to the root of your website.
+
+So, if you place og-image.jpg in public, it will be accessible at yourdomain.com/og-image.jpg (or localhost:3000/og-image.jpg during development).
+
+This is precisely what we want for an Open Graph image, as social media platforms need to be able to fetch it directly.
+
+Build process: during the build process, files located on the public folder are copied to the dist folder (output folder).
 
 {{< /details >}}
 
 {{< details title="MDX Blog Posts 📌" closed="true" >}}
 
+At `astro.config.mjs` you will need:
+
+```js
+import mdx from "@astrojs/mdx";
+
+//...
+
+  integrations: [
+    mdx({
+      syntaxHighlight: "shiki",
+      shikiConfig: {
+        theme: "github-dark-dimmed",
+      },
+      gfm: true,
+    })
+  ],
+
+//...
+```
 
 
 {{< /details >}}

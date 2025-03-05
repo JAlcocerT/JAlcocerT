@@ -327,7 +327,24 @@ And with an interesting tool to get the **photo properties adquisition automated
 
 {{< details title="Website Checks before delivery 📌" closed="true" >}}
 
-As per the [general webs checks docs](https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well):
+Once deployed:
+
+```sh
+npm install
+npm run dev
+#npm run build
+```
+
+```sh
+npm install -g http-server
+http-server dist #http-server .vercel/output/static
+
+# npm install -g serve #serve the built files with npm
+# serve -s dist #http://localhost:3000
+```
+
+As per the [general webs checks docs](https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well).
+
 
 1. Sitemap and Robots:
 
@@ -348,6 +365,7 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 3. [WebCheck.xyz](https://web-check.xyz/check/https%3A%2F%2Fdm-real-estate.com%2F)
 
+4. The site is accesible from the base domain name as well as the `www.` subdomain
 
 {{< /details >}}
 

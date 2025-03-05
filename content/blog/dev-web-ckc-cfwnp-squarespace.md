@@ -23,8 +23,15 @@ The CKC website is completed and visible at Cloudflare Pages: https://cozyknitti
 
 ![Change the NameServer to Cloudflare Ones](/blog_img/web/success2-ckc/Cloudflare-SquareSpace-DNSChangeUpdate.png)
 
+![alt text](/blog_img/web/success2-ckc/CKC-CFWnP-Github.png)
+
+![alt text](/blog_img/web/success2-ckc/CKC-Deployed.png)
 
 Once updated, we can **connect** the real domains with the build.
+
+> You will need to point a **CNAME** DNS Record from @ to `cozyknittingclub-web.pages.dev` (They worked proxied and non proxied).
+
+![alt text](/blog_img/web/success2-ckc/CF-WnP-DNS-CKC.png)
 
 {{< callout type="info" >}}
 Once connected, **the final result**: https://cozyknittingclub.com as per [repo](https://github.com/JAlcocerT/cozyknittingclub-web) 💻
