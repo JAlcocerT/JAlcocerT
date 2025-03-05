@@ -15,7 +15,12 @@ Which frameworks?
 
 https://bestofjs.org/rankings/monthly/2025/1
 
-I mean, with HUGO, Astro, NodeJS, jekyll...
+I mean, with: HUGO, Astro, NodeJS, jekyll...
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101" >}}
+{{< /cards >}}
 
 And if you are new to Websites, do it (The Web [Deployment](#select-the-deployment-method)) with [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) to get a free subdomain with it.
 

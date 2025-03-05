@@ -30,7 +30,4 @@ sidebar:
 
 1. https://github.com/jpanther/lynx
 
-> MIT } A simple links theme for Hugo built with Tailwind CSS.
-
-
-
+> MIT | A simple links theme for Hugo built with Tailwind CSS.

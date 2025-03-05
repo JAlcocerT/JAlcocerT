@@ -10,6 +10,19 @@ sidebar:
 ---
 
 
+## Astro CLIs
+
+```sh
+npm install
+npm run dev
+#npm run build
+```
+
+```sh
+npm install -g http-server
+http-server dist
+```
+
 ## Astro Themes
 
 Find astro themes at: https://astro.build/themes/
@@ -25,7 +38,8 @@ Find astro themes at: https://astro.build/themes/
 {{< details title="What I like about Musee Astro Theme 📌" closed="true" >}}
 
 * Simplicity: place your folder under `/src/assets/images/original/` and you are good to go
-* Images are optimized to `.webp` at build time
+* Images are optimized to `.webp` at build time 
+    * They go from ~1.92GB to 508mb (~75% reduction)
 
 ```bash
 #npm install
@@ -63,7 +77,7 @@ See also HUGO Theme Gallery
 
 3. https://github.com/statichunt/geeky-astro
 
-> MIT
+> MIT | Very cool site with search and mdx
 
 4. https://github.com/danielcgilibert/blog-template
 
@@ -74,7 +88,36 @@ See also HUGO Theme Gallery
 > MIT Pacamara is a simple blog theme for Astro that uses md and mdx files to store your content.
 
 
-6. https://github.com/web3templates/stablo-astro?ref=statichunt.com
+6. https://github.com/web3templates/stablo-astro
+
+### App Directory
+
+
+1. https://github.com/lukenguyen-me/astro-template-directory-website
+
+> Unlicensed | Astro template for a directory website in minimal theme, with reactjs + tailwind + shadcn
+
+{{< details title="What I like about Astro Template Directory Theme 📌" closed="true" >}}
+
+* **Search** working in prod and also in Dev! Using `lucide-react`:
+
+```sh
+npm install lucide-react
+```
+
+{{< /details >}}
+
+2. https://github.com/NewDesignFile/template-directory
+
+> Unlicensed | A directory theme for Astro.
+
+3. https://github.com/mickasmt/next-mobbin-clone
+
+> MIT | Replicate the design of mobbin.com to test the news components of shadcn-ui. #builtinpublic
+
+4. https://github.com/mickasmt/astro-nomy
+
+> MIT | Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Open Source.
 
 
 
@@ -88,10 +131,10 @@ See also HUGO Theme Gallery
 
 2. https://github.com/unfolding-io/Astrorante?ref=astrothemes.club
 
-* Very interesting video as soon as you enter
+* Very interesting **video**, as soon as you enter
 * MultiLang (i18n)
 
-> AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, Storyblok CMS, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
+> AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, **Storyblok CMS**, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
 
 
 
@@ -143,6 +186,9 @@ If you are looking to impress with a new curriculum, why not doing it as a web?
 
 
 * Supports `.mdx` and i18n
+* Search built in (with PageFind)
+* When scrolling, you see in which section you are
+* Blog section can be done with https://github.com/HiDeoo/starlight-blog
 
 > 🌟 Build beautiful, accessible, high-performance documentation websites with Astro
 

@@ -7,10 +7,17 @@ description: "Creating a News focused Website with app directory (with Astro SSG
 url: 'creating-news-website'
 ---
 
+{{< cards >}}
+  <!-- {{< card link="blog" title="Blog" icon="book-open" >}} -->
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/" title="See Astro 101 Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 
 1. https://github.com/oxygenna-themes/foxi-astro-theme/
 
 > MIT |  Foxi is an Astro theme crafted with Tailwind CSS, designed for blazing-fast performance and seamless user experience. Perfect for creating modern, responsive SaaS websites with minimal effort. 
+
+If you are new to SSGs, have a look to:
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101" >}}
@@ -19,8 +26,7 @@ url: 'creating-news-website'
 
 2. https://github.com/Mrahmani71/astro-news
 
-> MIT | 
-
+> **MIT** | A news website built with Astro
 
 {{< details title="What I like about Astro News Theme 📌" closed="true" >}}
 
@@ -46,6 +52,10 @@ npm install astro-pagefind pagefind
 * The header could follow the users when its scrolling
 
 {{< /details >}}
+
+This one is **fantastic** for blogging/news!
+
+Definitely worth to have a look at it, maybe even enhance it with a photo gallery or a subscription / book selling page.
 
 
 3. https://github.com/danielcgilibert/blog-template

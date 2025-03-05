@@ -13,6 +13,12 @@ https://github.com/JAlcocerT/cybernetik-realestate-moises
 https://dm-realestate.web.app/
 -->
 
+Not long ago, I was working on a website for a real estate client, based on Astro SSG.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/" title="See Astro 101 Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 For the initial web UI status, we come from:
 
 ![Streamlit User Auth](/blog_img/web/WebsSnapshots/Web_realestate.png)
