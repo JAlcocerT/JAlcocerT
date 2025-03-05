@@ -423,7 +423,7 @@ services:
 
 * You can use [NC as WebDav like so](https://jalcocert.github.io/RPi/posts/selfhosting-nextcloud/#faq): `dav://opi5.abcdef..ts.net:8080/remote.php/dav/files/YOUR_USERNAME/`
 
-And if you havent done it in a while, make some clean up:
+And if you havent done it in a while, make some **clean up**:
 
 ```sh
 docker builder prune

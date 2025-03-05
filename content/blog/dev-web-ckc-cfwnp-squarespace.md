@@ -31,7 +31,53 @@ Once updated, we can **connect** the real domains with the build.
 
 > You will need to point a **CNAME** DNS Record from @ to `cozyknittingclub-web.pages.dev` (They worked proxied and non proxied).
 
-![alt text](/blog_img/web/success2-ckc/CF-WnP-DNS-CKC.png)
+![Custom Domain CKC - DNS Records Working](/blog_img/web/success2-ckc/CF-WnP-DNS-CKC.png)
+
+## CKC Conclusions
+
+{{< details title="Website Checks before delivery 📌" closed="true" >}}
+
+Once deployed:
+
+```sh
+npm install
+npm run dev
+#npm run build
+```
+
+```sh
+npm install -g http-server
+http-server dist #http-server .vercel/output/static
+
+# npm install -g serve #serve the built files with npm
+# serve -s dist #http://localhost:3000
+```
+
+As per the [general webs checks docs](https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well).
+
+
+1. Sitemap and Robots:
+
+```sh
+curl -s https://cozyknittingclub.com/sitemap.xml -o /dev/null -w "%{http_code}\n" #200, OK!
+```
+
+```sh
+curl -s https://cozyknittingclub.com/robots.txt | head -n 10 #see the first 10 lines
+```
+
+2. Notify Search engines:
+
+```sh
+#curl "https://www.google.com/ping?sitemap=https://cozyknittingclub.com/sitemap.xml"
+curl "https://www.bing.com/ping?sitemap=https://cozyknittingclub.com/sitemap.xml"
+```
+
+3. [WebCheck.xyz](https://web-check.xyz/check/https%3A%2F%2Fdm-real-estate.com%2F)
+
+4. **DNS Config**: The site is accesible from the base domain name as well as the `www.` subdomain
+
+{{< /details >}}
 
 {{< callout type="info" >}}
 Once connected, **the final result**: https://cozyknittingclub.com as per [repo](https://github.com/JAlcocerT/cozyknittingclub-web) 💻
@@ -44,11 +90,15 @@ For this knitting site, I proposed to go with:
 
 1. Astro Stablo
 
-2. https://github.com/ouranoshong/astro-melody-starter
+2. [Astro Foxi](https://github.com/alexadark/foxi-astro)
+  
+* https://github.com/oxygenna-themes/foxi-astro-theme
+
+3. Others
+* [Pacamara](https://github.com/palmiak/pacamara-headless)
+* [AllMyLinks](https://github.com/SofiDevO/allmylinks)
+* https://github.com/ouranoshong/astro-melody-starter
 
 Which its similar to Visvrs ([AstroVerse](https://github.com/penboxlab/astroverse))
 
-* [Astro Foxi](https://github.com/alexadark/foxi-astro)
-    * https://github.com/oxygenna-themes/foxi-astro-theme
-* [Pacamara](https://github.com/palmiak/pacamara-headless)
-* [AllMyLinks](https://github.com/SofiDevO/allmylinks)
+4. **The winner**: [Astro Minimma](https://github.com/iamnyasha/minimma)

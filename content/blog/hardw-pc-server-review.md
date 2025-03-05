@@ -162,7 +162,7 @@ df -h #check its mounted
 
 {{< /details >}}
 
-Format a drive (CT1000MX):
+**Format** a drive (CT1000MX):
 
 ```sh
 # sudo apt install gparted  # If you don't have it
@@ -176,6 +176,15 @@ sudo nano /etc/fstab #save
 ###UUID="8674c809-fb02-4e46-948d-4bac1a219374" /mnt/crucial1000gb ext4 defaults 0 2
 sudo mount -a  # Test the /etc/fstab entry
 df -h #see it mounted
+```
+
+If you havent done it in a while, make some **clean up**:
+
+```sh
+docker builder prune
+#docker system prune -a
+docker volume prune
+docker image prune -a
 ```
 
 ## Consumption

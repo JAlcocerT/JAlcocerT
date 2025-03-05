@@ -365,7 +365,7 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 3. [WebCheck.xyz](https://web-check.xyz/check/https%3A%2F%2Fdm-real-estate.com%2F)
 
-4. The site is accesible from the base domain name as well as the `www.` subdomain
+4. **DNS Config**: The site is accesible from the base domain name as well as the `www.` subdomain
 
 {{< /details >}}
 

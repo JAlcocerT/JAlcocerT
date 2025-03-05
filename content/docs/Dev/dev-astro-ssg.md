@@ -145,7 +145,10 @@ npm install lucide-react
 
 #### Weddings
 
-
+{{< cards >}}
+  <!-- {{< card link="blog" title="Blog" icon="book-open" >}} -->
+  {{< card link="https://jalcocertech.xyz/" title="Applied for MotoVlog ↗" icon="book-open" >}}
+{{< /cards >}}
 #### Modelling
 
 1. https://github.com/iamnyasha/minimma
