@@ -4,17 +4,17 @@ date: 2024-08-23T10:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'IT Concepts for Projects: CI/CD, webhooks, API calls...'
-summary: 'Github Actions'
 url: 'IT-concepts'
 ---
 
-1. CI/CD and Github Actions
-2. How to Code on the go
-3. More: Microservices, WebHooks, API Calls...
+0. [Containers!](#containers)
+1. CI/CD and [Github Actions](#what-it-is-cicd)
+2. How to [Code on the go](#coding-on-the-go)
+3. [More](#other-concepts): Microservices, WebHooks, API Calls...
 
 ## Containers
 
-I love to use [containers for SelfHosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
+I love to use [containers for **SelfHosting**](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
 
 {{< details title="How to Setup Docker? 📌" closed="true" >}}
 
@@ -209,7 +209,7 @@ gh auth login #you can use HTTPs
 
 ## Other Concepts
 
-### What are microservices?
+### What are Microservices?
 
 ### What are Web-Hooks?
 
@@ -219,19 +219,28 @@ When certain events happen in one system (like a new post on a blog or a new com
 
 It's a way for apps to provide other applications with real-time information.
 
+{{< details title="More about WebHooks 📌" closed="true" >}}
+
 * How It Works: A webhook delivers data to other applications as it happens, meaning you get data immediately. You set up a webhook by providing a URL to the system you want to receive the notifications. When an event occurs, the system makes an HTTP request (usually POST) to the URL you provided.
 
 * Use Case Example: A common use of webhooks is in Continuous Integration/Continuous Deployment (CI/CD) pipelines. For example, GitHub can use a webhook to notify a CI server like Jenkins to start a new build whenever code is pushed to a repository.
+
+{{< /details >}}
 
 ### What are API calls?
 
 An API call is like making a phone call to a specific service. You request the information or service you need, and the system responds back. It's a way for applications to interact and request data from each other.
 
+{{< details title="More about APIs 📌" closed="true" >}}
+
 * How It Works: An API call is a manual process; you have to make the request to get the data. It’s like asking, "Do you have any new data?" The request is usually made via HTTP (GET, POST, PUT, DELETE), and the server processes the request and sends back a response.
 
 * Use Case Example: If you have an application that needs to get the latest weather data, it can make an API call to a weather service. The application sends a request, and the weather service responds with the latest weather information.
 
-### WebHooks vs API Calls
+{{< /details >}}
+
+
+{{< details title="WebHooks vs API Calls 📌" closed="true" >}}
 
 * Initiation:
   * Webhook: Automatically initiated by the source system when an event occurs.
@@ -242,3 +251,5 @@ An API call is like making a phone call to a specific service. You request the i
 * Direction:
   * Webhook: One-way from the source to the receiver.
   * API Call: Two-way communication between the requester and the server.
+
+{{< /details >}}

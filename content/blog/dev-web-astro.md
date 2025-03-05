@@ -150,3 +150,10 @@ import mdx from "@astrojs/mdx";
 
 
 {{< /details >}}
+
+
+{{< details title="Multilanguage Support - i18N 📌" closed="true" >}}
+
+
+
+{{< /details >}}

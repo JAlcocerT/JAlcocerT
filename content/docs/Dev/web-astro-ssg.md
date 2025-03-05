@@ -92,10 +92,21 @@ See also HUGO Theme Gallery implemented [here](https://jalcocert.github.io/JAlco
 
 > MIT Pacamara is a simple blog theme for Astro that uses md and mdx files to store your content.
 
-
 6. https://github.com/web3templates/stablo-astro
 
+#### Dev Blogs
+
+This one could also be used for CV thanks to its work section.
+
+7. https://github.com/larry-xue/apple-style-portfolio
+
+> Unlicensed | This is a template with a highly minimalist style, greatly inspired by Apple's design concept. It is built with Astro, TailwindCSS, GSAP, and Three.js.
+
+
+
 ### App Directory
+
+Looking for app directories or blog sections that you can filter interactively?
 
 
 1. https://github.com/lukenguyen-me/astro-template-directory-website
@@ -120,6 +131,8 @@ npm install lucide-react
 
 > MIT | Replicate the design of mobbin.com to test the news components of shadcn-ui. #builtinpublic
 
+This one has a blog which can be filtered per tags:
+  
 4. https://github.com/mickasmt/astro-nomy
 
 > MIT | Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Open Source.
@@ -149,6 +162,8 @@ npm install lucide-react
   <!-- {{< card link="blog" title="Blog" icon="book-open" >}} -->
   {{< card link="https://jalcocertech.xyz/" title="Applied for MotoVlog ↗" icon="book-open" >}}
 {{< /cards >}}
+
+
 #### Modelling
 
 1. https://github.com/iamnyasha/minimma
@@ -166,11 +181,12 @@ If you are looking to impress with a new curriculum, why not doing it as a web?
 
 2. https://github.com/mmouzo/astro-cv-esquelete
 
-> 
+> MIT | A free, easy-to-use CV template with a clean design. Just fill in your details and you're ready to go!
+
 
 ### Links / Bento
 
-1. https://github.com/DBozhinovski/astro-theme-ltree?ref=statichunt.com
+1. https://github.com/DBozhinovski/astro-theme-ltree
 
 > An Astro theme that replicates Linktree _and_ Linkinbio rolled in one. Optional TinaCMS on top.
 
@@ -246,7 +262,6 @@ import { AstroSeo } from '@astrolib/seo';
 as in the [Minimal Studio Theme by michael-andreuzza ](https://github.com/IoTechCrafts/minimalstudio-ssg)
 
 {{< /details >}}
-
 
 
 {{< details title="WebSearch in Astro 📌" closed="true" >}}
