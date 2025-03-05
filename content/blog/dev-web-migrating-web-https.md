@@ -28,7 +28,7 @@ valovych.iryna@gmail.com -->
 
 As per [webcheck](https://web-check.xyz/check/http%3A%2F%2Fenglishwithira.pl%2F) the servers are with [ehost](https://ehost.pl/) or [xip](https://www.xip.pl/cennik.php)
 * Domain at ~20 usd/y, server from 15 $/y, plus VAT. SSL seems to be extra 10 $/y, making ~50 $/y
-* For some reason there was a external link to a totally unrelated site - `https:// koloroweprojekty . pl/` 
+* For some reason there was a external link to a totally unrelated site - `https://koloroweprojekty.pl/`
 * Not only its not secured, but its also harming the planet with a [E Carbon Rating](https://www.websitecarbon.com/website/englishwithira-pl/)
 
 > This person **deserves a better website**, which also respect our environment

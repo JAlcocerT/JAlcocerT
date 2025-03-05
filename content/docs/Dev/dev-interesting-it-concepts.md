@@ -213,7 +213,11 @@ gh auth login #you can use HTTPs
 
 ### What are Web-Hooks?
 
-A webhook is like a doorbell. When certain events happen in one system (like a new post on a blog or a new commit in a repository), it automatically sends a notification to another system. It's a way for apps to provide other applications with real-time information.
+A webhook is like a doorbell.
+
+When certain events happen in one system (like a new post on a blog or a new commit in a repository), it automatically sends a notification to another system.
+
+It's a way for apps to provide other applications with real-time information.
 
 * How It Works: A webhook delivers data to other applications as it happens, meaning you get data immediately. You set up a webhook by providing a URL to the system you want to receive the notifications. When an event occurs, the system makes an HTTP request (usually POST) to the URL you provided.
 

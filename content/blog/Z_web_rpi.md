@@ -6,7 +6,7 @@ tags: ["Self-Hosting","Web"]
 cover:
     image: "https://socialify.git.ci/JAlcocerT/RPi/image?description=1&language=1&name=1&owner=1&pattern=Solid&theme=Light" # image path/url 
     alt: "My Github Pages with RPi setup information." # alt text
-description: 'A quick guide to Raspberry Pi 4. Shared via Github Pages with Jekyll.'
+description: 'A quick guide to Raspberry Pi 4. Shared via Github Pages with Jekyll [Chirpy Theme].'
 summary: 'I have just deployed on Github Pages content regarding Raspberry Pi'
 url: 'raspberrypi-starting-guide'
 ---
@@ -16,6 +16,8 @@ During this month, have decided to create a more **detailed guide on Github Page
 I will use this content as a **personal wiki**, so whenever I find some block that requires some effort to find out on the internet, will make a concise guide right here: <https://jalcocert.github.io/RPi/>
 
 So this is kind of website project + IoT and Linux with a Raspberry Pi kind of thing.
+
+## Raspberry Pi Blog with Jekyll Chirpy Theme
 
 Jekyll uses **Ruby language**.
 
@@ -81,7 +83,13 @@ url: "https://jalcocert.github.io"
 
 {{< /details >}}
 
+{{< callout type="info" >}}
+My Raspberry Pi related blog is publically available at: https://jalcocert.github.io/RPi/
+{{< /callout >}}
+
 ---
+
+### More about Jekyll
 
 * References
     * The Jekyll Theme I use - https://github.com/cotes2020/jekyll-theme-chirpy

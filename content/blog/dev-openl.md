@@ -3,11 +3,13 @@ title: "OpenL Tablets 101"
 date: 2024-09-03T23:20:21+01:00
 draft: false
 tags: ["Dev"]
-summary: 'How to get started with OpenL Tablets'
+description: 'How to get started with OpenL Tablets. Business rules, for excel users.'
 url: 'understanding-openl-tablets'
 ---
 
-**[OpenL Tablets](https://www.openl-tablets.org/)** is a powerful business rule management system (BRMS) that leverages Excel spreadsheets for defining and managing business rules. To effectively use this tool, it's essential to grasp the following:
+**[OpenL Tablets](https://www.openl-tablets.org/)** is a powerful business rule management system (BRMS) that leverages Excel spreadsheets for defining and managing business rules.
+
+To effectively use this tool, it's essential to grasp the following:
 
 * https://github.com/openl-tablets/openl-tablets - Easy Business Rules
 

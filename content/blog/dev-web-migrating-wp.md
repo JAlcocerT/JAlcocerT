@@ -398,7 +398,7 @@ firebase deploy #you will get something like -> https://jalcocertech.web.app/
 * https://github.com/Lissy93/web-check
     * https://web-check.xyz/
 
-* You will need proper favicons
+* You will need **proper favicons**
     * https://mariushosting.com/how-to-install-favicon-downloader-on-your-synology-nas/
     * https://github.com/seadfeng/favicon-downloader
 
@@ -424,7 +424,7 @@ You will get a report with what’s link working and what not when it comes to L
 ### How to have email with your Domain
 
 
-{{< details title="Get a Domain! 📌" closed="true" >}}
+{{< details title="1 - Get a Domain! 📌" closed="true" >}}
 
 - [Cloudflare Domains](https://www.cloudflare.com/products/registrar/)
 - [Porkbun](https://porkbun.com/)
@@ -436,7 +436,7 @@ You will get a report with what’s link working and what not when it comes to L
 
 {{< /details >}}
 
-{{< details title="Email with your domain with Google and Cloudflare 📌" closed="true" >}}
+{{< details title="2- Email with your domain with Google and Cloudflare 📌" closed="true" >}}
 
 1. Add your Domain to Cloudflare
 2. Go to Cloudflare UI and select a domain -> Email -> Email Routing
@@ -449,34 +449,14 @@ You will get a report with what’s link working and what not when it comes to L
 
 {{< /details >}}
 
-With porkbun works similarly, just replace `fwd1.porkbun.com` to `smtp.gmail.com` when adding it as per the guide above.
-
-
-### CDN and Videos for your Website
-
-* https://github.com/orthdron/subatic - Extremely simple video hosting Site that scales with you
-
-
-
-### Interesting Search Engines
-
-* Ecosia.org / qwant.com / Brave / DuckDuckGo
-* [Whoogle/SearXNG](https://jalcocert.github.io/RPi/posts/selfh-internet-better/)
-* Bing 
-
-It's worth to try few of them - not all the content is indexed in the same way across engines
-
-{{< callout type="info" >}}
-**Thanks to Ecosia** I could find how to add Web Analytics to the Jekyll Chirpy Theme!
-{{< /callout >}}
+> With porkbun works similarly, just replace `fwd1.porkbun.com` to `smtp.gmail.com` when adding it as per the guide above.
 
 ---
 
 ### Interesting web related stuff I got to know recently
 
-* Static Websites with python: Check Nikola, the SSG written in python
+* Static Websites with python: **Check Nikola**, the SSG written in python
 * [Coding For Entrepreneur Github](https://github.com/codingforentrepreneurs?tab=repositories)!
-
 
 * **Other ways to get a personal blog**
   * [btw](https://github.com/btw-so/btw)

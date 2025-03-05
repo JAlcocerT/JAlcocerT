@@ -15,8 +15,7 @@ Select `Use custom nameservers`, we will replace the `ns-cloud-b1.googledomains.
 
 There will be 2 records, like: `fattouche.ns.cloudflare.com`
 
-* https://cozyknittingclub-web.pages.dev/
-
+The CKC website is completed and visible at Cloudflare Pages: https://cozyknittingclub-web.pages.dev/
 
 ![Uptime Ira](/blog_img/web/success2-ckc/Cloudflare-SquareSpace-DNS.png)
 
@@ -25,12 +24,16 @@ There will be 2 records, like: `fattouche.ns.cloudflare.com`
 ![Change the NameServer to Cloudflare Ones](/blog_img/web/success2-ckc/Cloudflare-SquareSpace-DNSChangeUpdate.png)
 
 
-Once updated, we can **connect** the real domains with the build:
+Once updated, we can **connect** the real domains with the build.
 
-* https://cozyknittingclub.com
+{{< callout type="info" >}}
+Once connected, **the final result**: https://cozyknittingclub.com as per [repo](https://github.com/JAlcocerT/cozyknittingclub-web) 💻
+{{< /callout >}}
 
 
 ### Proposed Themes
+
+For this knitting site, I proposed to go with:
 
 1. Astro Stablo
 

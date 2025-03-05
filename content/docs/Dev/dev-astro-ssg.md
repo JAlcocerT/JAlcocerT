@@ -9,6 +9,10 @@ sidebar:
   open: false
 ---
 
+{{< callout type="info" >}}
+New to SSGs and ASTRO? See the [**101 Astro** Guide](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
+{{< /callout >}}
+
 
 ## Astro CLIs
 
@@ -22,6 +26,7 @@ npm run dev
 npm install -g http-server
 http-server dist
 ```
+
 
 ## Astro Themes
 
@@ -64,7 +69,7 @@ npm run dev
 
 
 {{< callout type="info" >}}
-See also HUGO Theme Gallery
+See also HUGO Theme Gallery implemented [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/) and [here](https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/)
 {{< /callout >}}
 
 ### Blogs
@@ -145,7 +150,7 @@ npm install lucide-react
 
 1. https://github.com/iamnyasha/minimma
 
-> MIT
+> MIT | Interesting and simple site
 
 
 ### CV Themes

@@ -220,11 +220,11 @@ And blur some area thanks to the **Obscure effect**
 `CTRL+Enter` to **render the video**.
 {{< /callout >}}
 
-Rendering 3 files 4k60fps@60,2Mbit/s (3840x2160) 9.1GB video from the GoPro took **~3h** with the X300. 
+**Rendering 3 files** 4K60fps@60,2Mbit/s (3840x2160) 9.1GB video (~20 min video) from the GoPro took **~3h** with the X300. 
 
 ![Streamlit with Cloudflare Tunnels Port](/blog_img/outro/kdenlive-render.png)
 
-> It was **rendering at ~6fps**, so be patience, depending on your CPU.
+> It was **rendering at ~6fps**, so be patience, these depeneds on your CPU.
 
 
 ### ShotCut

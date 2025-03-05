@@ -9,7 +9,9 @@ url: 'how-to-use-github-pages'
 
 It does not really matter if you want to use [HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/), [ASTRO](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) or [Jekyll](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/).
 
-With Gitub Pages we can host Static Files (like the outputs of a SSG), that creates a good looking website. You get a (sub)domain as well.
+With **Github Pages we can host** you Static Files (like the outputs of a SSG), that creates a good looking website.
+
+You get a (sub)domain as well.
 
 **And all for free.**
 
@@ -17,7 +19,7 @@ Actually, you could also have some markdown docs. With folders and readme's.
 
 That's how I started documenting my learning process.
 
-And since then it has bloomed.
+And since then it has bloomed and become this site.
 
 If you are into R language, you can also try with the [RKnit Package](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/).
 

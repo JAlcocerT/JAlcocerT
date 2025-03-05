@@ -307,7 +307,7 @@ This is kind of a **four in one project**:
 {{< /cards >}}
 
 {{< callout type="info" >}}
-And with an interesting tool to get the photo properties adquisition automated
+And with an interesting tool to get the **photo properties adquisition automated**
 {{< /callout >}}
 
 > Still, would you keep your [Wordpress](https://fossengineer.com/selfhosting-wordpress-docker/), [Ghost](https://fossengineer.com/selfhosting-ghost-docker/), Wix?
@@ -319,19 +319,42 @@ And with an interesting tool to get the photo properties adquisition automated
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
-
-
-
 ---
 
 ## Outro
 
+### Checks Ive Done
+
+{{< details title="Website Checks before delivery 📌" closed="true" >}}
+
+As per the [general webs checks docs](https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well):
+
+1. Sitemap and Robots:
+
+```sh
+curl -s https://dm-real-estate.com/sitemap.xml -o /dev/null -w "%{http_code}\n"
+```
+
+```sh
+curl -s https://dm-real-estate.com/robots.txt | head -n 10 #see the first 10 lines
+```
+
+2. Notify Search engines:
+
+```sh
+curl "https://www.google.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
+curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
+```
+
+3. [WebCheck.xyz](https://web-check.xyz/check/https%3A%2F%2Fdm-real-estate.com%2F)
+
+
+{{< /details >}}
+
+
 ### Other Sites ive worked on
+
+I like static sites to leverage [free static hosting services](https://jalcocert.github.io/JAlcocerT/create-your-website/#deployments).
 
 {{< details title="Deployed with Cloudflare Pages or Firebase Mostly 📌" closed="true" >}}
 
@@ -368,7 +391,7 @@ npx wrangler pages deploy dist # normally will be dist, but whatever <BUILD_OUTP
 
 {{< cards >}}
   {{< card link="https://cozyknittingclub.com/" title="Content Creator Blog" image="/blog_img/web/WebsSnapshots/Web_CKC.png" subtitle="For an instagramer who loves knitting" >}}
-  {{< card link="https://morita-web.pages.dev//" title="Health Care Site" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Because the brain is as important as the body" >}}
+  {{< card link="https://morita-web.pages.dev//" title="Mental Health Care Site" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Because the brain is as important as the body" >}}
     {{< card link="https://dm-real-estate.com/" title="Real Estate Official Site" image="/blog_img/web/WebsSnapshots/Web_realestate.png" subtitle="A Real Estate Business Site for Spain" >}}
     {{< card link="https://ira-english.pages.dev/" title="Personal Business Landing" image="/blog_img/web/WebsSnapshots/Web_EnglishIra.png" subtitle="Landing Page for a well Known English Teacher" >}}
     {{< card link="https://jalcocert.github.io/Portfolio/" title="All your Links" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Sleek collection of important Links" >}} 
@@ -395,222 +418,3 @@ npx wrangler pages deploy dist # normally will be dist, but whatever <BUILD_OUTP
   {{< card link="https://iodoctor-iotechcrafts.web.app/" title="Web for Doctor Consultation" image="/blog_img/web/WebsSnapshots/web_iodoctors.png" subtitle="With Astro mdx blogs filtrable by tags and docs sections" >}}  
   {{< card link="https://ioracing-iotechcrafts.web.app/" title="IoT SaaS Site" image="/blog_img/web/WebsSnapshots/web_ioracing.png" subtitle="One Pager with FAQ, Pricing and MultiLang" >}}            
 {{< /cards >}}
-
-### Just Get Wordpress
-
-No time for tinkering with web dev stuff?
-
-Just get a **wordpress going**.
-
-{{< details title="Wordpress Docker Compose for VPS 📌" closed="true" >}}
-
-```yml
-services: ##for ubuntu
-  wordpress:
-    image: wordpress:php7.4-apache #wordpress:php7.1-apache
-    container_name: wordpress
-    ports:
-      - 8082:80
-    environment:
-      WORDPRESS_DB_HOST: mysql
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: root
-      WORDPRESS_DB_NAME: wordpress
-    links:
-      - mysql:mysql
-    restart: always
-    networks:
-      - nginx_default #allow communication with the nginx service  
-      - wp
-
-  mysql:
-    image: mysql:8.0.13
-    container_name: wordpressdb
-    command: --default-authentication-plugin=mysql_native_password
-    environment:
-      MYSQL_DATABASE: wordpress
-      MYSQL_ROOT_PASSWORD: root
-    volumes:
-      - ~/Docker/wordpress/mysql-data:/var/lib/mysql
-      #- mysql-data:/var/lib/mysql # Use the named volume
-    restart: always
-    networks:
-      - wp #allow communication with the nginx service  
-    
-networks:
-  wp:
-  nginx_default:
-    external: true
-
-volumes:
-  mysql-data: # Define the named volume
-```
-
-{{< /details >}}
-
-> Site will be ready at `subdomain.jalcocertech.com` and for the user `subdomain.jalcocertech.com/wp-admin` 
-
-### Wordpress Alternatives
-
-You can also try:
-
-1. [Ghost](https://fossengineer.com/selfhosting-ghost-docker/) with this [dockerhub image](https://hub.docker.com/_/ghost/tags)
-
-2. https://github.com/writefreely/writefreely
-
-> aGPL3 | A clean, Markdown-based publishing platform made for writers. Write together and build a community. Does NOT provide a clear container for SelfHost.
-
-3. https://github.com/getnikola/nikola
-
-* https://themes.getnikola.com/
-* https://themes.getnikola.com/v8/canterville/ Which is based on [Casper for HUGO](https://github.com/vjeantet/hugo-theme-casper/)!
-
-> MIT | A static website and blog generator
-
-4. Zola https://www.getzola.org/themes/zola-grayscale/
-
-* https://www.getzola.org/themes/
-* https://www.getzola.org/documentation/getting-started/installation/
-
-
-```yml
-services:
-  zola:
-    image: ghcr.io/getzola/zola:v0.17.2  # Specify the latest version
-    volumes:
-      - .:/app
-    ports:
-      - "1111:1111"
-    command: "serve --interface 0.0.0.0"
-```
-
-{{< details title="Ghost Docker Compose for VPS 📌" closed="true" >}}
-
-```yml
-services:
-  ghost:
-    image: ghost:5-alpine
-    container_name: ghostcontainer
-    environment:
-      database__client: mysql
-      database__connection__host: dbghost
-      database__connection__user: ghostuser
-      database__connection__password: ghost_db_pass
-      database__connection__database: ghost_database
-      url: http://ghostcontainer:2368
-    restart: always
-    ports:
-      - 2368:2368
-    networks:
-      - ghost_network
-      - nginx_default
-    volumes:
-      - ghost_data:/var/lib/ghost/content
-    depends_on:
-      - dbghost
-
-  dbghost:
-    container_name: ghostcontainerdb
-    image: mariadb:10.5 #mysql (but MariaDB is open source)
-    restart: always
-    environment:
-      MYSQL_DATABASE: ghost_database
-      MYSQL_USER: ghostuser
-      MYSQL_PASSWORD: ghost_db_pass
-      MYSQL_ROOT_PASSWORD: ubabuuuHaGba6nhX #Change this one!
-    ports:
-      - 3306:3306
-    networks:
-      - ghost_network
-    volumes:
-      - db_ghost_data:/var/lib/mysql
-
-volumes:
-  ghost_data:
-  db_ghost_data:
-
-networks:
-  ghost_network:
-  nginx_default:
-    external: true  
-```
-
-{{< /details >}}
-
-> Site will be ready at `subdomain.jalcocertech.com` and for the creator `subdomain.jalcocertech.com/ghost` 
-
-<!-- 
-https://www.youtube.com/watch?v=gJxhx5wEAzA
- -->
-
-{{< youtube "gJxhx5wEAzA" >}}
-
-<!-- 
-* Weddings...
-* bodas.net
-
-http://divephiphiisland.com/ -->
-
-<!-- * Proposed: bogusiabachata.pro -->
-<!-- 
-ecommerce
-https://polkabikes.pl/ -->
-
-<!-- More ppl to help - future CLIENTS
-
-* you dont need to pay for wordpress themes, its already there and it works
-  * https://generatepress.com/pricing/
-
-* Pablo Couto - https://www.buildingfuturecapital.com/
-
-https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
-
-Registry Expiry Date - 26 April 2025
-
-https://quadscadiz.com/
-
-* Sofia - zofienkagram
-  * https://wnba.pl/ - another wordpress (good looking)
-  * monika ciolkowska - monikacio
-    * https://monikaciolkowska.portfoliobox.net/
-    * Using the low tier without domain of https://www.portfoliobox.net/pricing (46$/y)
-      * Interesting section with a table comparing services and faq (go below)
-
-* Gym Trainer - https://trenujswiadomie.pl/kokpit/
-
-* ecommerce - https://outficik.pl/
-
----
-
-To try Astro+Ghost headlessCMS as described 
-https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/#gatsby
-
--->
-
-### Competitors
-
-* **Menu websites at ~500 eur/year**
-  * http://cartalia.org/
-    * http://ukelele.cartalia.org/
-  * https://www.upmenu.com/pricing/
-* https://www.covermanager.com/en
-* https://www.mojstolik.pl/dla-restauracji
-
-* Hosting Costs:
-  * https://banahosting.com/web-hosting ~5eur/month
-  * https://webtolearn.pl/cennik ~20eur/month
-
-* Customer management systems
-  * https://wakems.com/index.php
-  * https://clubspeed.com/pricing/
-
-* Custom websites
-  * https://zeon.studio/estimate-project
-  * https://hormigasenlanube.com/
-  * https://lyk-website.pl/brief/
-
-* More competitors
-  * Taplink
-  * bento.me
-  * https://getallmylinks.com/
-  * https://subscribepage.io/listy#

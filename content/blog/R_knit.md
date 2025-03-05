@@ -36,4 +36,8 @@ rmarkdown::render('YourFile.Rmd',
                                       '.html', sep=''))
 ```
 
-After executing this, a new file `index.html` will be created - This is your new Static Site.
+After executing this, a new file `index.html` will be created - This is **your new Static Site**.
+
+{{< callout type="info" >}}
+With the [Knitr package and Rmarkdown](https://www.rdocumentation.org/packages/knitr/versions/1.45) - It is not a SSG, but it can render html from markdown, which can be seen as a Web in GithubPages
+{{< /callout >}}

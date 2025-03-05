@@ -4,9 +4,10 @@ date: 2024-09-24
 draft: false
 tags: ["Web","Dev"]
 description: 'Setup CI/CD for Astro website with Cloudflare Workers and Pages (Github + CF WnP)'
-summary: 'Astro Websites Automatic deployment with Cloudflare Pages and CICD'
 url: 'astro-web-cloudflare-pages'
 ---
+
+Lets see how to: *Astro Websites Automatic deployment with Cloudflare Pages and CICD, connected with Github Pages*
 
 We can upload the manually generated static astro content to [**Cloudflare Pages via CLI** as explained here](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/#faq).
 
@@ -23,9 +24,9 @@ Push your code to a [Github Repository](https://jalcocert.github.io/JAlcocerT/gi
 
 ### Setup Cloudflare to with with Github
 
-Go to [Cloudflare UI](https://dash.cloudflare.com/). **Worker & Pages** -> Overview. Create -> Pages -> Connect Git.
+Go to [Cloudflare UI](https://dash.cloudflare.com/). **Worker & Pages** -> Overview. Create -> Pages -> `Connect Git`.
 
-You will Need a Github Account Authentication
+> You will Need a Github Account Authentication
 
 ### Setup Cloudflare Workers and Pages
 
@@ -62,10 +63,9 @@ The only command needed is `hugo`, so that the static files are generated to `./
 
 {{< /details >}}
 
-This is how it will look in Cloudflare UI once setup:
+This is how it will look in **Cloudflare UI once setup**:
 
 ![Cloudflare Workers and Pages](/blog_img/web/Cloudflare/Github-Cloudflare-WorkersnPages.png)
-
 
 {{< details title="Detailed Process - Adding Cloudflare custom Domain 📌" closed="true" >}}
 
@@ -80,8 +80,6 @@ Lets add a domain we have at Cloudflare:
 ![Custom Domain CF Pages](/blog_img/web/Cloudflare/Cloudflare-Deployed-GHProject-customdomain.png)
 
 ![DNS CF Pages](/blog_img/web/Cloudflare/Cloudflare-Deployed-GHProject-customDNS.png)
-
-
 
 {{< /details >}}
 
@@ -110,12 +108,13 @@ Github Pages will allow for 25mb+ individual files, but not Cloudflare.
 
 ### Cloudflare Pages vs other Free Deployment Methods
 
-
 {{< callout type="warning" >}}
 See how to setup [Other SSG deployments methods here](https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method)
 {{< /callout >}}
 
-**Cloudflare wins** in the ping time:
+**Cloudflare wins** in:
+
+1. The ping time:
 
 ```sh
 ping jalcocert.github.io/JAlcocerT #~30ms
@@ -123,7 +122,7 @@ ping jalcocertblog.pages.dev #~10ms
 ping jalcocertech.web.app #~30ms
 ```
 
-And also the http request:
+2. And also the http request:
 
 ```sh
 curl -o /dev/null -s -w "Time: %{time_total}s\n" https://jalcocert.github.io/JAlcocerT #~0.28s

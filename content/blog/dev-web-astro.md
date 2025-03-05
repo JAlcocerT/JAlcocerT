@@ -1,9 +1,9 @@
 ---
-title: "How to use ASTRO and make Stunning Websites"
+title: "How to use ASTRO [101] and make Stunning Websites"
 date: 2024-09-07
 draft: false
 tags: ["Dev"]
-summary: 'How to get started with Astro to create Webs. NPM & Node Setup.'
+summary: 'How to get started with Astro as SSG to create Webs. NPM & Node Setup.'
 url: 'using-astro-as-website'
 ---
 
@@ -71,6 +71,44 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 You can use [Astro with Github Pages + GH Actions](https://github.com/JAlcocerT/web3/actions)
 {{< /callout >}}
 
-Interesting Astro Themes:
+See **Interesting Astro Themes**.
 
-* AstroWind (which uses [Tailwind CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-css/#competitors-to-tailwind-css))
+Like AstroWind (which uses [Tailwind CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-css/#competitors-to-tailwind-css))
+
+## Features for Astro Websites
+
+
+{{< details title="Sitemap and Robots for Astro Themes 📌" closed="true" >}}
+
+At `astro.config.mjs` you will need:
+
+```js
+import robots from "astro-robots";
+import sitemap from "@astrojs/sitemap";
+
+//....
+
+integrations:[sitemap(), robots()],
+```
+
+{{< /details >}}
+
+
+
+{{< details title="OpenGraph Photo, Tittle and Description for Main Site and Posts 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+{{< details title="MDX Blog Posts 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+{{< details title="Search Built in 📌" closed="true" >}}
+
+
+
+{{< /details >}}

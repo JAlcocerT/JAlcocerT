@@ -451,7 +451,7 @@ docker exec -it mysql_db bash
 ```
 
 {{< callout type="info" >}}
-For containerization, you'll need to have [Docker installed](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers).  This also prepares you for [self-hosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
+For containerization, you'll need to have [Docker installed](https://jalcocert.github.io/JAlcocerT/IT-concepts/#containers).  This also prepares you for [self-hosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
 {{< /callout >}}
 
 

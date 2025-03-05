@@ -336,7 +336,7 @@ We can put all of this into containers with [this `docker-compose`](https://gith
 ```
 
 {{< callout type="info" >}}
-To use containers you will need [Docker installed](https://jalcocert.github.io/JAlcocerT/docs/dev/dev-interesting-it-concepts/#containers). Or just be [ready for SelfHosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
+To use containers you will need [Docker installed](https://jalcocert.github.io/JAlcocerT/IT-concepts/#containers). Or just be [ready for SelfHosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
 {{< /callout >}}
 
 ---

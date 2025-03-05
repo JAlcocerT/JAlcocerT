@@ -332,6 +332,17 @@ Whether you’re building a blog, a corporate website, or an e-commerce platform
 ### Gatsby
 
 
+## Conclusions
+
+The good thing about SSGs is that they power content with markdown.
+
+Allowing you to plug easily these kind of LLMs:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
 ## Other SSGs
 
 * https://github.com/getpelican/pelican
