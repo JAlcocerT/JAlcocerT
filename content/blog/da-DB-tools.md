@@ -16,7 +16,10 @@ url: 'setup-databases-docker'
 
 ### MySQL
 
-You're on the right track! Here's a breakdown of what you need to connect to a MySQL database with Python:
+
+{{< details title="MySQL Python Connection 📌" closed="true" >}}
+
+Here's a breakdown of what you need to connect to a MySQL database with Python:
 
 **1. MySQL Connector/Python:**
 
@@ -87,22 +90,37 @@ finally:
 * **Closing Connections:** Always close your cursor and database connection when you're finished to release resources. The "finally" statement in the above code, is a good way to ensure this happens.
 * There are also other python mysql connection libraries, such as PyMySql, but the mysql-connector-python is the offical one provided by oracle.
 
+{{< /details >}}
+
+
+
 ### MariaDB
 
 ### PostgreSQL
 
+
+<!-- 
+https://www.youtube.com/watch?v=3JW732GrMdg
+ -->
+
+{{< youtube "3JW732GrMdg" >}}
+
+---
+
 ## NoSQL
 
 
-### MongoDB
+NoSQL databases have become incredibly important in modern data management.
 
-It's great you're exploring NoSQL databases! They've become incredibly important in modern data management. Here's a more detailed explanation:
 
 **What is NoSQL?**
 
-* **"Not Only SQL"**:
-    * This phrase highlights that NoSQL databases offer alternatives to the traditional relational database model (RDBMS) that relies heavily on SQL (Structured Query Language).
-    * It signifies that while some NoSQL databases might support SQL-like queries, their core design and data storage methods are fundamentally different.
+**"Not Only SQL"**:
+* This phrase highlights that NoSQL databases offer alternatives to the traditional relational database model (RDBMS) that relies heavily on SQL (Structured Query Language).
+* It signifies that while some NoSQL databases might support SQL-like queries, their core design and data storage methods are fundamentally different.
+
+{{< details title="What? Why NoSQL? 📌" closed="true" >}}
+
 * **Flexible Data Models**:
     * Unlike RDBMS, which enforce rigid, predefined schemas (table structures), NoSQL databases provide flexible schemas or are often schema-less.
     * This flexibility allows them to handle diverse data types, including:
@@ -140,13 +158,19 @@ It's great you're exploring NoSQL databases! They've become incredibly important
     * Store data as nodes and edges, making them ideal for managing highly connected data.
     * They are often used for social network analysis, recommendation engines, and fraud detection.
 
-**In essence:**
 
-NoSQL databases provide a powerful and flexible alternative to traditional relational databases, enabling organizations to handle the increasing volume, variety, and velocity of modern data.
-
+{{< /details >}}
 
 
-Yes, absolutely. If you're working with MongoDB and Python, `pymongo` is the standard and most commonly used library for connecting to it. Here's a breakdown:
+{{< callout type="info" >}}
+NoSQL databases provide a powerful and flexible **alternative to traditional relational databases**, enabling organizations to handle the increasing volume, variety, and velocity of modern data.
+{{< /callout >}}
+
+
+
+### MongoDB
+
+If you're working with MongoDB and Python, `pymongo` is the standard and most commonly used library for connecting to it. Here's a breakdown:
 
 **PyMongo: The Python Driver for MongoDB**
 
@@ -209,8 +233,6 @@ Yes, absolutely. If you're working with MongoDB and Python, `pymongo` is the sta
 Therefore, if your goal is to work with MongoDB in Python, using `pymongo` is the recommended and most efficient approach.
 
 
-<!-- 
-Airflow?? -->
 
 <!-- 
 Elastic Search and kibana -->
@@ -220,21 +242,12 @@ Apache Kafka
 https://openfaas.com/
 -->
 
-<!-- ### MariaDB
-
-### MongoDB
+<!-- ### 
 
 ### InfluxDB
 
 TimeScale
 
-
-Airtable alternatives:
-https://github.com/nocodb/nocodb
-https://noted.lol/nocodb-contact-form-gmail-smtp/
-
-
-https://github.com/bram2w/baserow
  -->
 
 
@@ -246,7 +259,7 @@ https://github.com/bram2w/baserow
 
 #### Graphite
 
-#### MariaDB / PostreSQL (?)
+
 
 #### DRUID
 
@@ -254,7 +267,10 @@ Druid is an open-source, high-performance, real-time analytics database system t
 
 It was developed by Metamarkets (now part of Salesforce) and is commonly used in **big data and real-time analytics** scenarios.
 
-Here are some key features and aspects of Druid in the context of data analytics:
+Here are :
+
+{{< details title="Some key features and aspects of Druid for data analytics 📌" closed="true" >}}
+
 
 1. **Real-Time Data Ingestion:** Druid is designed to ingest and process data in real-time, making it well-suited for applications that require up-to-the-minute insights and analytics. It can handle high-throughput data streams, such as event data and log files.
 
@@ -272,13 +288,21 @@ Here are some key features and aspects of Druid in the context of data analytics
 
 8. **Visualization:** To perform data analytics effectively, Druid is often used in conjunction with visualization tools like Apache Superset, Tableau, or other BI (Business Intelligence) platforms.
 
-Druid is commonly used in industries where real-time analytics and fast query performance are essential, such as online advertising, e-commerce, gaming, and monitoring applications. It provides a powerful platform for exploring and gaining insights from large and time-sensitive datasets.
+
+{{< /details >}}
+
+Druid is commonly used in industries where **real-time analytics** and fast query performance are essential, such as online advertising, **e-commerce**, gaming, and monitoring applications.
+
+It provides a powerful platform for exploring and gaining insights from large and time-sensitive datasets.
 
 #### Trino
 
-**Trino, formerly known as Presto SQL**, is an **open-source distributed SQL query engine** designed for high-performance and interactive querying of data across various data sources. Trino is particularly useful for querying data in a federated manner, where data resides in different storage systems or databases, and you want to query it as if it were in a single database.
+**Trino, formerly known as Presto SQL**, is an **open-source distributed SQL query engine** designed for high-performance and interactive querying of data across various data sources.
 
-Here's how Trino compares to Druid and Kafka in the context of data analytics:
+Trino is particularly useful for querying data in a federated manner, where data resides in different storage systems or databases, and you want to query it as if it were in a single database.
+
+{{< details title="how Trino compares to Druid and Kafka for data analytics 📌" closed="true" >}}
+
 
 1. **Trino:**
    - **SQL Query Engine:** Trino is primarily a SQL query engine, which means it allows you to write SQL queries to access and analyze data from multiple sources, including traditional relational databases, distributed data stores, data lakes, and more.
@@ -300,7 +324,9 @@ In some data analytics architectures, you might use Trino alongside Kafka and Dr
 
 For example, Kafka can be used for real-time data ingestion, Trino can provide SQL-based querying capabilities across various data sources, and Druid can be used for high-speed, interactive analytics on specific types of data, such as time-series data.
 
-The choice of which tools to use depends on your specific requirements and data architecture.
+> The choice of which tools to use depends on your specific requirements and data architecture.
+
+{{< /details >}}
 
 
 
@@ -568,9 +594,12 @@ One popular Python library for interacting with Kafka is `confluent-kafka-python
 
 > I got to know about Kafka for IoT during [this experience](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/).
 
-And Python can push data to Apache Kafka.
+And **Python can push data to Apache Kafka**.
 
-Here's an example of how to use `confluent-kafka-python` to produce data to a Kafka topic:
+Here's an example of how to use `confluent-kafka-python` to produce data to a Kafka topic.
+
+{{< details title="Python 2 Kafka Scheleton 📌" closed="true" >}}
+
 
 First, you need to install the library using pip:
 
@@ -633,3 +662,21 @@ Make sure to replace `'localhost:9092'` with the address of your Kafka broker an
 
 With this code, you can push data to Kafka from your Python application.
 
+{{< /details >}}
+
+
+
+---
+
+## FAQ
+
+### NoCode DBs
+
+
+**Airtable alternatives:**
+
+1. https://github.com/nocodb/nocodb
+* https://noted.lol/nocodb-contact-form-gmail-smtp/
+
+
+2. https://github.com/bram2w/baserow

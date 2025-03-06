@@ -8,6 +8,10 @@ url: 'dev-ops-for-non-devops'
 
 Crontab for Docker - https://github.com/mcuadros/ofelia
 
+<!-- https://www.youtube.com/shorts/551lh10g_go -->
+
+{{< youtube "551lh10g_go" >}}
+
 ## CI/CD
 
 ### Github CI/CD

@@ -1,5 +1,5 @@
 ---
-title: "Cool Link in Bios (with SSGs)"
+title: "Cool Link in Bios (with SSGs) with CF Workers and Pages"
 date: 2025-01-22
 draft: false
 tags: ["Web"]
@@ -13,7 +13,7 @@ Having a cool **website for you linkinbio** can be a good experience to get star
 And they will provide a **similar experience** to linktree, linkbio,...
 
 {{< callout type="info" >}}
-https://jalcocert.github.io/JAlcocerT/create-your-website/
+See my [general web docs](https://jalcocert.github.io/JAlcocerT/create-your-website/)
 {{< /callout >}}
 
 {{< cards cols="2" >}}
@@ -57,9 +57,10 @@ Thanks to Boston343, I got to know about **keystack CMS**
 {{< youtube "E65Fx9all04" >}}
 
 4. https://github.com/trevortylerlee/treelink
+
 * https://treelink.app/
-* https://example.treelink.app/
-* https://docs.treelink.app/guides/quick-start/
+  * https://example.treelink.app/
+  * https://docs.treelink.app/guides/quick-start/
 
 > **MIT** | Free, open source Linktree alternative built with Astro & Tailwind CSS
 
@@ -77,7 +78,7 @@ It worked and **I Forked it**! https://github.com/JAlcocerT/treelink
 
 * https://pagespeed.web.dev/analysis/https-example-treelink-app/l6prjspv4k?form_factor=mobile
 
-What I liked about this one?
+**What did I like about this theme?**
 
 It allows you to have a exposed static built site and also provides the capability to edit also online and export the `/src/siteConfig.json`
 
@@ -131,7 +132,7 @@ It has a very cool moving background
 
 Really cool ig like portfolio, [had to fork this one](https://github.com/JAlcocerT/simple-portfolio)!
 
-It looks amazing in phones
+It looks amazing in phones!
 
 > MIT | A simple but beautiful portfolio created with Astro
 
@@ -249,4 +250,4 @@ This will grant that whenever you push, the workers are doing the **right steps 
 
 Go to the [Cloudflare UI](https://dash.cloudflare.com), and...
 
-you will see under the WnP section that the site is already published.
+You will see under the **WnP section** that the site is already published.

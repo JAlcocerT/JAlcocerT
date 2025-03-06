@@ -1,8 +1,7 @@
 ---
 title: "Which OS for a NAS?"
-date: 2025-03-17
+date: 2025-03-17T21:20:21+01:00
 draft: false
-tags: ["Gen-AI","Python","Dev"]
 description: 'Testing Operative System for a NAS. Improving a Homelab.'
 url: 'os-for-nas'
 ---
@@ -10,7 +9,7 @@ url: 'os-for-nas'
 Ive been pretty much **comfortable with these OS's**:
 
 1. Ubuntu
-2. Zorin OS
+2. Zorin OS (Great if you come from Windows)
 3. Garuda Linux 
 4. If you miss XP, see https://xpq4.sourceforge.io/
 5. For apple users: ElementaryOS or [PearOS](https://pearos.xyz/)
@@ -74,78 +73,37 @@ sysbench memory run
 
 Your server *most likely* will be in between.
 
----
-
-## Conclusions
-
-At the time of writing, my **energy costs** are ~0.28$/Kwh
-
-**Space for Home Lab**
+{{< callout type="info" >}}
+See my [general web docs](https://jalcocert.github.io/JAlcocerT/create-your-website/)
+{{< /callout >}}
 
 
-```sh
-df -h | awk '$2 ~ /G/'
-#df -h | awk '$2 ~ /G/' | sort -rh -k 2 #sorted
-df -h | awk '$5 > "5G" {print $0}' #list the partitions greater than 5GB
-
-#gio trash --empty
-#du -sh ~/.local/share/Trash/files
-```
-
-![Graphic Walker UI](/blog_img/hardware/sd-samsung.png)
-
-
-![Graphic Walker UI](/blog_img/hardware/sd-kingston.png)
 
 ### My Home Lab Setup
 
-As of today, this is my homelab setup.
+[As of today](https://mermaid.live/edit#pako:eNqdklFvmzAUhf-K675kiKRgIIA7VQpJl6WNtmikUjfogwsmoACOjOnIovz3OZSkWZ-m-sG6vud859qSdzBiMYUYrjjZpGD-IyyBXKNAUb5zUq4oWGTAUhTw-Zlf3QAdOVPvCfT7D75nDDRZ3ACvpy-9T9cdeNIO0rhn6Wh6Em9l6iJraA4csODsXWpnmknTqOIsWoNHQ9PeTEsPdJOjQ_Zdz_cn4LYRrzqS8rflF79zDy2teL6qjpNn_1zrvvd1coaCA3t0zuX4ZZqV6wWJQaMbitJ6LE17u-KofffPoKirLAIV5S-Un7RRMI159kKfWtPs2PYC-WLByla7eCeOA1bSM2reCa97JbY5BR5IsjzHl4mbqJXgbE3xpWEYXd3_ncUixWjTnDPjDzB3H2Du_5uBKiwoL0gWyz-3O2SEUKS0oCHEsoxpQupchDAs99JKasH8bRlBLHhNVchZvUohTkheyVO9iYmgk4zIv1ucuhtS_mKsOCLyCPEONhDrJhpYLjId20IuMgzbUeEWYgsNnOHQRKbrGrZra_pehX_aAG1gI9u0ZV93HdO2bGf_F6Cr6wI), this is **my homelab setup**.
 
-Which is connected to my family servers as well:
 
 ```mermaid
 graph LR
-    A[Raspberry Pi 4] --> B(128GB);
-    A --> C(512GB);
-    A --> D(0.5 external);
-    E[Pexd & Poo] --> F(128GB);
-    G[OA5Pro] --> H(128GB);
-    I[ThinkPad X300] --> J(2TB ext);
-    I --> K(2TB);
-    L[ThinkPad] --> M( ~476GB Total);
-    L --> N(Linux 106 EB);
-    L --> O(25-);
-    P[SSD USB-C] --> Q(2TB);
-    P --> R(650mb/s);
-    P --> S(NTFS);
-    T[HDD USB] --> U(2TB);
-    T --> V(0.5);
-    W[HDD] --> X(4TB);
-    Y[music server] --> I;
-    Z[tailsete VPN] --> I;
-    AA[edrive] --> I;
-    AB[ProtonDrive!] --> I;
+    A[**Orange Pi 5** <br/> 128GB] --USB3.0 --> B(1TB);
+    A --USB3.0--> C(512GB);
+    E[**Pixel 8 Pro** <br/> 128GB];
+    I[**Asrock X300** <br/> 1TB ] --USBc--> J(SSD Ext <br/>2TB NTFS <br/> 650mb/s);
+    I --USB3.0--> K(HDD Ext <br/> 2TB );
+    L[**ThinkPad x13**<br/>500GB];
+    A --> Y[music server];
+    AA[Gdrive] --> I;
+    AB[Protondrive!] --> I;
     AC[onedrive] --> L;
-    AD[customize KPE/Gorder] --> L;
     
     style B fill:#f9f,stroke:#333,stroke-width:2px
     style C fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#f9f,stroke:#333,stroke-width:2px
-    style F fill:#f9f,stroke:#333,stroke-width:2px
-    style H fill:#f9f,stroke:#333,stroke-width:2px
     style J fill:#f9f,stroke:#333,stroke-width:2px
     style K fill:#f9f,stroke:#333,stroke-width:2px
-    style M fill:#f9f,stroke:#333,stroke-width:2px
-    style N fill:#f9f,stroke:#333,stroke-width:2px
-    style O fill:#f9f,stroke:#333,stroke-width:2px
-    style Q fill:#f9f,stroke:#333,stroke-width:2px
-    style R fill:#f9f,stroke:#333,stroke-width:2px
-    style S fill:#f9f,stroke:#333,stroke-width:2px
-    style U fill:#f9f,stroke:#333,stroke-width:2px
-    style V fill:#f9f,stroke:#333,stroke-width:2px
-    style X fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
+> Which is connected to my family servers as well with Tailscale or Rustdesk if required
 
 **Networking for Home Lab**
 
@@ -185,7 +143,7 @@ services:
 #     external: true
 ```
 
-To use Cloudflare tunnels, you will need:
+To use **Cloudflare tunnels**, you will need:
 
 ```yml
 services:
@@ -201,8 +159,6 @@ networks:
   tunnel:
 ```
 
-
-
 {{< youtube "Z5uBcczJxUY" >}}
 
 
@@ -215,7 +171,7 @@ Are you getting some error when doing `apt update`?
 
 Then, just...
 
-### Maintainance in Linux
+#### Maintainance in Linux
 
 1. https://github.com/oguzhaninan/Stacer
 
@@ -226,11 +182,11 @@ Then, just...
 
 ## Other 
 
-You can check from time to time https://haveibeenpwned.com/.
+You can check from time to time: https://haveibeenpwned.com/.
 
 They also provide an [API](https://haveibeenpwned.com/API/Key), which you would have to pay for.
 
-### Photo Video Management
+### Photo Video Management in a Server
 
 1. https://github.com/KDE/digikam
 
@@ -282,4 +238,13 @@ You can also have a look to: ModSecurity, Naxsi, Open AppSec, SafeLine,...
 ### What do I look in a MiniPC?
 
 1. Removable RAM
-2. Removable nmve 2280 drive and 2.5 expandable bay
+2. Removable SSD (nmve 2280 drive) and 2.5 expandable bay
+
+3. Low energy consumption, which can be measured [with a smart plug](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/)
+
+At the time of writing, my **energy costs** are ~0.28$/Kwh
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
+{{< /cards >}}

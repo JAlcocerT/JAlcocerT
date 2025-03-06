@@ -191,15 +191,19 @@ Get-ChildItem -Filter "*.MP4" | ForEach-Object { "file '$($_.Name)'" } | Set-Con
 3. Last step: Just **use ffmpeg** to join all the files accordingly. You have few alternatives:
 
 * Just join them (keeping the original audio) - *This is the one uncommented* 
+  * You can trim this output between two given time (in seconds)
 * Join them but silence the audio
 * Place music on top of the silenced combined video
 
 ```sh
+#1)
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
+#ffmpeg -ss 120 -to 900 -i output.mp4 -c copy trimmed_output.mp4 #trim and take only between 120s and 900s
 
+#2) Silenced video
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an output_video.mp4 #silenced video
 
-### 🎵 Music by
+#3) 🎵 Music by
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
 #ffmpeg -stream_loop -1 -i "TRAVELATOR - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp 
 ```

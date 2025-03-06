@@ -1,8 +1,7 @@
 ---
 title: "[Comparison] Performance of different Computers"
-date: 2025-03-03
+date: 2025-03-03T10:20:21+01:00
 draft: false
-tags: ["Dev"]
 description: 'Benchmarks for CPU, Memory, Disks, Internet speed... Whats enough for a HomeLab?'
 url: 'benchmarking-computers'
 ---
@@ -55,9 +54,13 @@ the Firebat got me 4077Mib/sec
 
 ### GPU Benchmark
 
+For other tasks, having a decent GPU is key, for example if you want to play a lot of media.
+
 Forget about 4k playback with the Pi 4's.
 
-![alt text](/blog_img/iot/pis-esp-mlx.jpg)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="Raspberry Pi and IoT 101" image="/blog_img/iot/pis-esp-mlx.jpg" subtitle="Single Board Computers can do many other things!" >}}
+{{< /cards >}}
 
 > Get a Pi if you want to do IoT Projects instead, they have great I/O for sensors.
 
@@ -97,8 +100,8 @@ fast
 PCs are great, but even better with proper internet connectivity
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="Asrockx300Review" image="/blog_img/hardware/x300.jpg" subtitle="TPLink MR200" >}}
-    {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Asrockx300Review" image="/blog_img/hardware/x300.jpg" subtitle="GL-MT3000" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="Home 4G Router Review" image="/blog_img/hardware/x300.jpg" subtitle="TPLink MR200" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router Review" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000" >}}
 {{< /cards >}}
 
 **Local Network**
@@ -116,6 +119,23 @@ sudo lshw -C disk  # You'll need sudo and to filter for disks
 sudo hdparm -I /dev/sda  # Example for /dev/sda (detailed info of the disk)
 sudo apt install ntfs-3g
 ```
+
+![Graphic Walker UI](/blog_img/hardware/sd-samsung.png)
+
+![Graphic Walker UI](/blog_img/hardware/sd-kingston.png)
+
+**Space for Home Lab**
+
+
+```sh
+df -h | awk '$2 ~ /G/'
+#df -h | awk '$2 ~ /G/' | sort -rh -k 2 #sorted
+df -h | awk '$5 > "5G" {print $0}' #list the partitions greater than 5GB
+
+#gio trash --empty
+#du -sh ~/.local/share/Trash/files
+```
+
 
 
 {{< details title="MOUNT Drives Properly! 📌" closed="true" >}}
@@ -202,9 +222,8 @@ docker image prune -a
 
 ## Consumption
 
-As per this [Tapo Smart Plug](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/)
 
-The x13 when in idle:
+The [x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/) when in idle is ~10W:
 
 ![x13 consumption](/blog_img/hardware/x13-consumption.jpg)
 
@@ -218,35 +237,45 @@ An additional SSD to the Pi accounts for ~1W, as I observed when adding an extra
 
 The x300 during ~idle, will do ~14w when using linux, or...>25w when in windows 11:
 
-![alt text](../../static/blog_img/hardware/energy/power-linux-w11-pi.jpg)
+![alt text](/blog_img/hardware/energy/power-linux-w11-pi.jpg)
 
-> Mr. Doors, pleaze
+As per this [Tapo Smart Plug](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/)
+
+> Mr. Doors, pleaze...
 
 ## Conclusions
 
 {{< callout type="info" >}}
-To make the most out of your new homelab, check [the SelfHosting docs](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/)
+To make the most out of your new homelab, check [the **SelfHosting docs**](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/)
 {{< /callout >}}
 
 
 
----
+{{< tabs items="x300,BMax B4" >}}
 
-## FAQ
+  {{< tab >}}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4qLgpJc2Ghs" frameborder="0" allowfullscreen></iframe>
+
+  {{< /tab >}}
+  {{< tab >}}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LgljPzqAARA" frameborder="0" allowfullscreen></iframe>
+  
+  {{< /tab >}}
+
+{{< /tabs >}}
 
 
-<!-- https://www.youtube.com/watch?v=4qLgpJc2Ghs -->
+<!-- https://www.youtube.com/watch?v=4qLgpJc2Ghs 
 {{< youtube "4qLgpJc2Ghs" >}}
 
-<!-- https://www.youtube.com/watch?v=LgljPzqAARA -->
-{{< youtube "LgljPzqAARA" >}}
+https://www.youtube.com/watch?v=LgljPzqAARA 
+{{< youtube "LgljPzqAARA" >}}-->
 
-**Powering Local AI**
-
-* https://jalcocert.github.io/JAlcocerT/ai-with-iGPU
+**Powering Local AI**: with [iGPUs](https://jalcocert.github.io/JAlcocerT/ai-with-iGPU)
 
 {{< youtube "xsvTEzTirlQ" >}}
-
 
 
 {{< tabs items="Ollama,PrivateGPT,TextGeneration Web UI" >}}
@@ -254,15 +283,12 @@ To make the most out of your new homelab, check [the SelfHosting docs](https://j
   {{< tab >}}
   Probably the **Ollama is the quickest way** to [get LLMs working locally](https://fossengineer.com/selfhosting-llms-ollama), specially if you already have Docker installed.
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4qLgpJc2Ghs" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jl9bfPsBBcM" frameborder="0" allowfullscreen></iframe>
   {{< /tab >}}
   {{< tab >}}
   Say Hi to your documents, locally, when you interact with them with [PrivateGPT Freely](https://fossengineer.com/selfhosting-local-llms-with-privateGPT)
 
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LgljPzqAARA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ib3nQu5bB_k" frameborder="0" allowfullscreen></iframe>
   
   {{< /tab >}}
   {{< tab >}}
@@ -270,7 +296,6 @@ To make the most out of your new homelab, check [the SelfHosting docs](https://j
   Yet another way to [get LLMs running locally, and with UI](https://fossengineer.com/Generative-AI-LLMs-locally-with-cpu/).
   
   <iframe width="560" height="315" src="https://www.youtube.com/embed/-zNWDTqKF1E" frameborder="0" allowfullscreen></iframe>
-
 
   {{< /tab >}}
 
