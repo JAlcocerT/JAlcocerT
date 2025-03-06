@@ -4,12 +4,10 @@ date: 2024-08-23T10:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Tinkering with a Raspberry Pi and Networking. Wifi2Ethernet with Wireguard as VPN.'
-summary: 'Raspberry Pi - Wifi2Ethernet Bridge (With Wireguard) and more'
 url: 'raspberry-pi-networking'
 ---
 
-
-
+*Raspberry Pi - Wifi2Ethernet Bridge (With Wireguard) and more*
 <!-- <https://www.youtube.com/watch?v=qhe6KUw3D78> -->
 
 

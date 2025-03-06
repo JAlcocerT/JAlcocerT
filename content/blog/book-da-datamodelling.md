@@ -177,7 +177,9 @@ Knowing SCD types.
 
 ## Databases
 
-A database is a collection of data that is organized in a way that makes it easy to access, manage, and update. Databases are used to store and manage information, and are a fundamental component of many software applications. 
+A database is a collection of data that is organized in a way that makes it easy to access, manage, and update.
+
+Databases are used to store and manage information, and are a fundamental component of many software applications. 
 
 * Examples of databases include MySQL, Oracle, and Microsoft SQL Server.
     * The traditional method of storing data in tables, columns and rows.
@@ -207,8 +209,8 @@ Data warehousing is the process of collecting, storing, and managing large volum
 Understanding the fundamentals of data warehousing is essential for effectively leveraging data for analytics and reporting. Here are some key concepts:
 
 * Information System Types: Operational vs Analytic
-    * Operational systems - OLTP: These systems support day-to-day business operations, such as transaction processing, record-keeping, and managing business processes. Operational systems focus on efficiency, data integrity, and real-time processing. Examples include CRM, ERP, and order management systems.
-    * Analytic systems - OLAP: These systems focus on analyzing data to support decision-making, identify patterns and trends, and gain insights for strategic planning. Analytic systems prioritize data organization, consolidation, and historical context. Examples include data warehouses, data marts, and OLAP systems.
+    * Operational systems - **OLTP**: These systems support day-to-day business operations, such as transaction processing, record-keeping, and managing business processes. Operational systems focus on efficiency, data integrity, and real-time processing. Examples include CRM, ERP, and order management systems.
+    * Analytic systems - **OLAP**: These systems focus on analyzing data to support decision-making, identify patterns and trends, and gain insights for strategic planning. Analytic systems prioritize data organization, consolidation, and historical context. Examples include data warehouses, data marts, and OLAP systems.
 
 Do it step by step, *one concept at a time* - Gaining practical experience in data warehousing involves working on real-world projects, learning various data warehousing tools and technologies, and understanding best practices for designing, implementing, and maintaining a data warehouse.
 

@@ -11,13 +11,19 @@ description: OBD Data
 
 **OBD-II (On-Board Diagnostics II):**
 
-OBD-II is a standardized system used in most cars since the mid-1990s.  Its primary purpose is to monitor the vehicle's emissions systems and report any faults.  When a problem is detected (like a misfiring engine or a faulty sensor), a Diagnostic Trouble Code (DTC) is stored, and the "check engine" light (or similar warning light) is illuminated on the dashboard.
+OBD-II is a standardized system used in most cars since the mid-1990s.  Its primary purpose is to monitor the vehicle's emissions systems and report any faults.
 
-OBD-II also provides access to a wealth of real-time data from the car's various sensors and systems, such as engine speed (RPM), vehicle speed, coolant temperature, and more.  This data can be very useful for diagnostics, performance monitoring, and even custom applications.
+When a problem is detected (like a misfiring engine or a faulty sensor), a Diagnostic Trouble Code (DTC) is stored, and the "check engine" light (or similar warning light) is illuminated on the dashboard.
+
+OBD-II also provides access to a wealth of real-time data from the car's various sensors and systems, such as engine speed (RPM), vehicle speed, coolant temperature, and more.  
+
+This data can be very useful for diagnostics, performance monitoring, and even custom applications.
 
 **CAN Bus (Controller Area Network):**
 
-CAN bus is a robust and efficient communication protocol widely used in vehicles.  It's a serial communication system that allows different electronic control units (ECUs) within the car to communicate with each other.  For example, the engine control unit (ECU), transmission control unit, anti-lock braking system (ABS), and airbag control unit can all communicate over the CAN bus.
+**CAN bus** is a robust and efficient communication protocol widely used in vehicles.
+
+It's a serial communication system that allows different electronic control units (ECUs) within the car to communicate with each other.  For example, the engine control unit (ECU), transmission control unit, anti-lock braking system (ABS), and airbag control unit can all communicate over the CAN bus.
 
 Think of CAN bus as the *nervous system* of the car, allowing different components to exchange information.  OBD-II typically uses CAN bus as its physical layer for communication.  So, when you access OBD-II data, you're usually doing so by reading data transmitted over the CAN bus.
 

@@ -18,7 +18,6 @@ url: 'tools-to-improve-focus'
     * https://github.com/notclickable-jordan/starbase-80
 > Tracking your tasks can improve your focus, planning, and provide actionable insights
 
-
 ### More
 
 1. https://nextbeats.vercel.app/

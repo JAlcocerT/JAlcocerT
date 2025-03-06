@@ -1,10 +1,9 @@
 ---
-title: "Server Monitoring. Beszel and more"
+title: "Server Monitoring [Recap]. Beszel and more"
 date: 2025-02-05
 draft: false
 tags: ["Dev"]
 description: 'Container Monitoring with Beszel. Compared with Netdata, Grafana...'
-summary: 'Monitoring tools recap'
 url: 'how-to-setup-beszel-monitoring'
 ---
 

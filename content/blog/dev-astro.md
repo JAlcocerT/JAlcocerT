@@ -9,7 +9,7 @@ url: 'using-astro-templates'
 
 ## Astro Websites 101
 
-Astro as an awsome SSG that you can use to create interesting looking websites.
+Astro as an **awsome SSG** that you can use to create interesting looking websites.
 
 How exactly?
 

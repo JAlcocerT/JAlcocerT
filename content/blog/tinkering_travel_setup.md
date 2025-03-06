@@ -1,5 +1,5 @@
 ---
-title: "Technology Setup for a Trip."
+title: "Technology Setup for a Trip"
 date: 2025-02-11
 draft: false
 tags: ["AI"]
@@ -322,9 +322,9 @@ Can’t access the internet via the repeated hotspot. Try to enter **Login Mode 
 
 ## Cost of Living
 
-Sometime ago I got to know this site.
+Sometime ago I got to know this site: https://www.numbeo.com
 
-A pure reflection of the knowledge of crowds, applied for cost of living.
+A pure reflection of the **knowledge of crowds**, applied for cost of living.
 
 * https://www.numbeo.com/cost-of-living/in/Warsaw
 * https://www.numbeo.com/cost-of-living/in/Amsterdam

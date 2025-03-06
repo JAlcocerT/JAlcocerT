@@ -1,6 +1,6 @@
 ---
 title: "BI Tools for the AI era"
-date: 2025-03-10T00:20:21+01:00
+date: 2025-02-26T00:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Setting up Data Analytics Visualization (BI) tools with containers.'
@@ -34,12 +34,23 @@ Real-Time Analytics with ClickHouse
 
 > Superset works perfectly with Trino SQL!
 
+
+{{< cards >}}
+  {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs...Source Code" >}}
+{{< /cards >}}
+
 #### MetaBase
 
 
 * <https://www.opensourcealternative.to/project/LightDashs>
 * <https://www.opensourcealternative.to/project/Metabase>
 
+
+{{< cards >}}
+  {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs...Source Code" >}}
+{{< /cards >}}
 
 
 ### Redash
@@ -52,7 +63,7 @@ It helps organizations and individuals query, visualize, and share data from **v
 
 > Make Your Company Data Driven. Connect to any data source, easily visualize, dashboard and share your data.
 
-https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash
+I have added Redash Compose logic to: https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash
 
 
 <!-- https://www.youtube.com/watch?v=_0_Qk0Oleeo -->
@@ -91,6 +102,10 @@ IoT Project example [with Redash]()
 {{< /callout >}}
 
 
+{{< cards >}}
+  {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs...Source Code" >}}
+{{< /cards >}}
 
 <!-- 
 <script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0#file-redash"></script> -->
@@ -215,6 +230,16 @@ Takeaways
 
 
 #### Kibana
+
+**Lucene Queries in Kibana & Grafana**
+- **KQL**: Kibana Query Language for data filtering.
+- **Lucene Queries**: Used in Grafana for more complex data analysis and machine learning.
+
+| Feature     | KQL (Kibana) | DSL (Grafana)           |
+|-------------|--------------|-------------------------|
+| Purpose     | Query language for Kibana | Query language for Elasticsearch |
+| Syntax      | Simple text-based | More complex and verbose |
+| Use Cases   | Filtering data in Kibana dashboards, visualizations, and Discover | Querying Elasticsearch for data analysis and machine learning |
 
 #### Chronograph
 

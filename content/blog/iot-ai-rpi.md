@@ -1,9 +1,9 @@
 ---
-title: "[IoT] Meets AI. With a Raspberry Pi"
+title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
 date: 2025-12-31
 draft: true
 tags: ["Tinkering"]
-summary: 'IoT Meets AI. Using MQTT and AI Together'
+description: 'IoT Meets AI. Using MQTT and AI Together'
 url: 'edge-ai-with-raspberry-pi'
 ---
 
@@ -11,9 +11,18 @@ Internet of the things.
 
 AI
 
-And now AI on the edge? AI-IOT?
+And now AI on the edge?
+
+AI-IOT?
 
 https://jalcocert.github.io/RPi/
+
+## IoT on Raspberry Pi
+
+- **MQTT**
+- **GCP IoT Core** vs [ThingsBoard](https://thingsboard.io/)
+  - [ThingsBoard on Open Source Alternative](https://www.opensourcealternative.to/project/ThingsBoard)
+- **Edge Computing**: Info collecting and processing closer to the source (IoT).
 
 <!-- 
 Expertise:

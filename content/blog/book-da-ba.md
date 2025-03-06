@@ -11,6 +11,7 @@ url: 'business-skills-data-analytics'
 
 A Quick guide for Data Analytics who want to get better on [Business Analysis Skills](/JAlcocerT/business-analytics-skills/).
 
+
 <!-- ### Elicitation Techniques
 
 Has theoretical knowledge of the elicitation process.
@@ -71,7 +72,7 @@ Follow this steps to enhance your estimations:
 * Proactively inform the customer about changes in estimates to **prevent any last-minute surprises**.
 * **Buffering** - getting ready for the unknown unknowns. Allocate funds in the budget for contingencies and risk mitigation efforts
 
-Remember about:
+> **Remember about:**
 
 | Undisciplined Pursuit of More | **Pursuit of Better** |
 |-------------------------------|-------------------|
@@ -118,6 +119,17 @@ Follows up with clients during/after delivery to ensure that their needs are met
 Addresses clients issues, maintains service in critical periods -->
 
 
+
+### Communication Flow
+
+* Effective Meetings - [How to conduct better meetings guide](/JAlcocerT/effective-meetings-data-analytics/).
+* Keep in mind the RACI Matrix
+
+<!-- 
+## BA Tools
+ -->
+
+
 <!--  Gettings things done
 7 Habits of highly effective 
 essentialism
@@ -129,12 +141,3 @@ the power of now-->
 
 * How to prepare for them?
 * Again, yes, listen -->
-
-### Communication Flow
-
-* Effective Meetings - [How to conduct better meetings guide](/JAlcocerT/effective-meetings-data-analytics/).
-* Keep in mind the RACI Matrix
-
-<!-- 
-## BA Tools
- -->

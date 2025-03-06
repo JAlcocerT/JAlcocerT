@@ -1,6 +1,6 @@
 ---
 title: "How to use Grok (X) API"
-date: 2025-03-15
+date: 2025-03-25
 draft: false
 tags: ["AI"]
 description: 'A Recap on AI APIs calls and learning how to use Grok API'
@@ -14,7 +14,7 @@ url: 'how-to-use-grok-api'
     * https://docs.x.ai/docs/overview
 
 {{< callout type="info" >}}
-You need to top up the account to use the API.
+**Paywalled**. You need to **top up** the account to use the API.
 {{< /callout >}}
 
 ## Using Grok API

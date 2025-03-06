@@ -25,6 +25,7 @@ Lets use LLMs to create PPTs!
 
 ### SliDev
 
+
 [SliDev is an awsome project](https://fossengineer.com/how-to-use-slidev/) to generate PPT as code - **leveraging VueJS framework**.
 
 > I love the SliDev project so much, that [I forked it](https://github.com/JAlcocerT/slidev).
@@ -33,12 +34,33 @@ Lets use LLMs to create PPTs!
 **SliDev** can be deployed as static sites to [**GH Pages** with GH Actions CI/CD](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/.github/workflows/SliDev_CICD.yml)
 {{< /callout >}}
 
-https://jalcocert.github.io/Streamlit-MultiChat/1
-I 
+> See the result: https://jalcocert.github.io/Streamlit-MultiChat/1
+
+
+[Setup a SliDev Project](https://fossengineer.com/how-to-use-slidev/#the-slidev-project), like any other SSG:
+
+1. Get Node and NPM
+2. Initialize the SliDev project
+
+```sh
+npm init slidev #yarn create slidev
+#npm run dev #if you want to restart where you left it
+```
+
+```sh
+npm install -g @slidev/cli #npm install --save-dev @slidev/cli
+npm i -D playwright-chromium
+```
+
+3. Modify the `slides.md` - Make changes to your ppt via markdown  
+
+> It can create a [PPT assistant](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent) as seen on [this post](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/)
 
 ### Marp
 
 You can also create **PPTs from markdown** with [Marp](https://github.com/marp-team/marpit)
+
+[Two other options](https://fossengineer.com/create-ppt-with-code/#marp) to create PPTs as a Code.
 
 ### RemarkJS
 
@@ -46,7 +68,11 @@ With [RemarkJS](https://fossengineer.com/create-ppt-with-code/#remark)
 
 ## AI Powered SliDev
 
-First **SliDev with AI scheleton**, pretty much an [OpenAI API call](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service):
+First **SliDev with AI scheleton**, pretty much an [OpenAI API call](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service).
+
+
+{{< details title="OpenAI API + SliDev 📌" closed="true" >}}
+
 
 ```py
 #https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/refs/heads/main/Z_Tests/OpenAI/openai_slidev.py
@@ -86,6 +112,9 @@ chat_completion = client.chat.completions.create(
 completed_message = chat_completion.choices[0].message.content
 print(completed_message)
 ```
+
+{{< /details >}}
+
 
 But thats too hard to maintain, **how about this?**
 

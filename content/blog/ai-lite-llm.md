@@ -1,5 +1,5 @@
 ---
-title: "[AI] Using LiteLLM to unify LLMs calls"
+title: "[AI] Using LiteLLM to unify LLMs calls. Applied to AIssistant."
 date: 2025-03-26
 draft: false
 tags: ["Gen-AI","Python"]
@@ -12,7 +12,7 @@ Setup LiteLLM to make LLMs API calls!
 Its time to discover **LiteLLM**
 
 * https://github.com/BerriAI/litellm
-* https://pypi.org/project/litellm/
+    * https://pypi.org/project/litellm/
 
 > Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format - [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]
 

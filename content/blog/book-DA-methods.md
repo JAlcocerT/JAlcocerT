@@ -1,7 +1,7 @@
 ---
 title: "Software Development Methodologies for DA's"
 date: 2021-01-23T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Career"]
 description: 'Software development methodologies in Analytics.'
 summary: 'Reviewing software development methodologies - Understanding them and choosing the right one will provide a systematic, efficient, and quality-oriented way of working on a software project.'
@@ -25,23 +25,41 @@ It is a structured approach that follows a design philosophy and a sequence of s
 
 **Well-managed projects are successful projects.**
 
-When working in a team, the management or development team must select the software development methodology that will be most effective for the project at hand if they are to manage the project effectively. Every methodology differs in its strengths and shortcomings as well as the motivations for its creation. The most popular software development techniques are described below, along with an explanation of why they exist.
+When working in a team, the management or development team must select the software development methodology that will be most effective for the project at hand if they are to manage the project effectively.
+
+Every methodology differs in its strengths and shortcomings as well as the motivations for its creation. 
+
+The most popular software development techniques are described below, along with an explanation of why they exist.
 
 ## Agile Development Methodology
 
 When implementing new features, teams employ the agile development technique to reduce risk (such as errors, budget overruns, and changing needs). Teams create software in iterations that include tiny increments of new functionality according to all agile development methodologies.
 
 There are many different forms of the agile development method:
+
 * Scrum
 * Crystal
 * Extreme programming (XP)
 * Feature-driven development (FDD)...
 
-* PROS: Agile software development's main advantage is that it enables iterative software releases. Iterative releases increase productivity by enabling teams to identify and correct flaws and set expectations early on. With regular incremental enhancements, they also enable consumers to enjoy the benefits of software earlier.
+**PROS:**
 
-* CONS: Agile development methodologies focus on in-the-moment communication, thus new users frequently lack the necessary background information to get started. They are time- and labor-intensive because developers must finish each feature inside each iteration before asking users for approval.
+* Agile software development's main advantage is that it enables iterative software releases.
+* Iterative releases increase productivity by enabling teams to identify and correct flaws and set expectations early on.
+* With regular incremental enhancements, they also enable consumers to enjoy the benefits of software earlier.
 
-* Features: Time is not constrained, Money is not constrained, Features are the constrain. Develop until features are enough for the use case.
+**CONS:**
+
+* Agile development methodologies focus on in-the-moment communication, thus new users frequently lack the necessary background information to get started.
+* They are time- and labor-intensive because developers must finish each feature inside each iteration before asking users for approval.
+
+**Features:**
+
+* Time is not constrained.
+* Money is not constrained.
+* Features are the constraint.
+* Develop until features are enough for the use case.
+
 
 ### Agile Values
 
@@ -52,13 +70,13 @@ There are many different forms of the agile development method:
 
 ### Agile Frameworks
 
-* Scrum: Scrum is a widely-used agile framework that emphasizes iterative development, frequent inspection and adaptation, and a collaborative approach. Scrum teams work in short sprints to deliver working software, and use ceremonies such as sprint planning, daily stand-ups, sprint reviews, and retrospectives to help manage the development process.
+* **Scrum**: Scrum is a widely-used **agile framework that emphasizes iterative development**, frequent inspection and adaptation, and a collaborative approach. Scrum teams work in short sprints to deliver working software, and use ceremonies such as sprint planning, daily stand-ups, sprint reviews, and retrospectives to help manage the development process.
 
-* Kanban: Kanban is an agile framework that focuses on visualizing the workflow, limiting work in progress, and managing flow. Kanban teams use a Kanban board to visualize the work, and use techniques such as WIP limits and pull systems to manage the flow of work through the development process.
+* **Kanban**: Kanban is an agile framework that focuses on visualizing the workflow, limiting work in progress, and managing flow. Kanban teams use a Kanban board to visualize the work, and use techniques such as WIP limits and pull systems to manage the flow of work through the development process.
 
 * Extreme Programming (XP): XP is an agile framework that emphasizes technical excellence, continuous testing, and continuous delivery. XP teams work in short iterations to deliver working software, and use practices such as pair programming, test-driven development, and continuous integration to ensure quality and maintainability.
 
-* Lean: Lean is an agile framework that emphasizes minimizing waste, optimizing flow, and maximizing value. Lean teams focus on delivering value to the customer, and use techniques such as value stream mapping, just-in-time delivery, and continuous improvement to optimize the development process.
+* **Lean**: Lean is an agile framework that emphasizes minimizing waste, optimizing flow, and maximizing value. Lean teams focus on delivering value to the customer, and use techniques such as value stream mapping, just-in-time delivery, and continuous improvement to optimize the development process.
 
 ### Agile Software Development
 
@@ -71,12 +89,17 @@ There are many different forms of the agile development method:
 
 ## Waterfall Development Methodology
 
-The waterfall method is frequently regarded as the oldest approach to software development. The requirements, design, implementation, verification, and maintenance phases of the waterfall technique each focus on a different objective. Before moving on to the following phase, each phase must be finished completely. In most cases, there is no procedure for going back and changing the project or direction.
+The waterfall method is frequently regarded as the oldest approach to software development.
 
-PROS: The waterfall development process is simple to comprehend and administer due to its linear character. The waterfall method works well for projects with precise goals and consistent criteria. The waterfall development process may be most advantageous for teams with less expertise, less stable team compositions, and project managers.
+The requirements, design, implementation, verification, and maintenance phases of the waterfall technique each focus on a different objective. Before moving on to the following phase, each phase must be finished completely.
 
-CONS: The rigorous structure and stringent constraints of the waterfall development process make it frequently expensive and slow. Users of the waterfall technique may look into alternative software development methodologies as a result of these drawbacks.
+In most cases, there is no procedure for going back and changing the project or direction.
 
+* PROS: The waterfall development process is simple to comprehend and administer due to its linear character. The waterfall method works well for projects with precise goals and consistent criteria. The waterfall development process may be most advantageous for teams with less expertise, less stable team compositions, and project managers.
+
+* CONS: The rigorous structure and stringent constraints of the waterfall development process make it frequently expensive and slow. Users of the waterfall technique may look into alternative software development methodologies as a result of these drawbacks.
+
+---
 
 ## FAQ
 
@@ -103,7 +126,9 @@ You can use SonarQube <https://hub.docker.com/_/sonarqube/tags>
 
 ### CI/CD
 
-Continuous Integration/Continuous Delivery (CI/CD) is a key part of agile software development. CI/CD is a set of practices that involves regularly integrating and testing code changes, and automating the process of deploying changes to production. 
+Continuous Integration/Continuous Delivery (CI/CD) is a key part of agile software development.
+
+CI/CD is a set of practices that involves regularly integrating and testing code changes, and automating the process of deploying changes to production. 
 
 CI/CD helps to ensure that the code is always in a releasable state, and allows teams to rapidly and reliably deliver changes to customers. 
 

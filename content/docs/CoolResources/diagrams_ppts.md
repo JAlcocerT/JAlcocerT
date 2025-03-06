@@ -8,28 +8,40 @@ draft: false
 
 An **overview of a workflow** is worth...a lot.
 
-It just summarizes a lot of information.
+>> A diagram simply summarizes a lot of information.
 
 ## Diagrams for All
 
-You can make AI make these diagrams for you.
+You can make **AI make these diagrams** for you.
 
 {{< callout type="info" >}}
 Checkout [AIssistant](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#diagrams-with-ai) and its [source code](https://github.com/JAlcocerT/Streamlit-AIssistant) 💻
 {{< /callout >}}
 
+{{< callout type="info" >}}
+Was testing it [here](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/diagrams_openai_v2.py)
+{{< /callout >}}
+
+
+## Diagrams Tools
+
+* https://app.diagrams.net/ - Draw.io
+    * https://github.com/jgraph/drawio
+
 ### Mermaid Live
 
-I discovered mermaidJS diagrams thanks to [HUGO SSG](https://jalcocert.github.io/JAlcocerT/create-your-website/)
+[MermaidJS Diagrams](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/) are just amazing.
 
 Thanks to mermaidJs, we can make cool **diagrams as a code**
 
 And you can use it for free at: https://mermaid.live/edit
 
+> I discovered **mermaidJS diagrams** thanks to [HUGO SSG Hextra Theme](https://jalcocert.github.io/JAlcocerT/create-your-website/)
+
 ### Python Diagrams
 
 
-### Python Plotly Graphs
+**Python Plotly Graphs**
 
 ---
 
@@ -37,32 +49,9 @@ And you can use it for free at: https://mermaid.live/edit
 
 [Presentations as a Code](https://fossengineer.com/create-ppt-with-code/)
 
-### SliDev
-
-[Setup a SliDev Project](https://fossengineer.com/how-to-use-slidev/#the-slidev-project), like any other SSG:
-
-1. Get Node and NPM
-2. Initialize the SliDev project
-
-```sh
-npm init slidev #yarn create slidev
-#npm run dev #if you want to restart where you left it
-```
-
-```sh
-npm install -g @slidev/cli #npm install --save-dev @slidev/cli
-npm i -D playwright-chromium
-```
-
-3. Modify the `slides.md` - Make changes to your ppt via markdown  
-
-> It can create a [PPT assistant](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent) as seen on [this post](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/)
-
-### MARP and RemarkJS
-
-[Two other options](https://fossengineer.com/create-ppt-with-code/#marp) to create PPTs as a Code.
-
-### RevalJS and Astro
+1. [SliDev](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev)
+2. [MARP and RemarkJS](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#marp)
+3. RevalJS and Astro
 
 * https://github.com/jsulpis/slides-template
     * https://jsulpis.github.io/slides-template/#/

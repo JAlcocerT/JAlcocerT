@@ -3,8 +3,7 @@ title: "Is note taking a waste of time?"
 date: 2025-12-31
 draft: true
 tags: ["Dev","Python"]
-description: 'How to use Flask'
-summary: 'How I Test AI Projects'
+description: 'The power of notes. Without bikeshedding.'
 url: 'note-taking'
 ---
 

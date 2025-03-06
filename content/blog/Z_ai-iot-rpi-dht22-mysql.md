@@ -232,3 +232,10 @@ python3 setup.py install --force-pi
 * Or just get ready for SelfHosting:
 
 {{< youtube "ox3IsWH-o7g" >}}
+
+
+https://www.youtube.com/watch?v=N0718RfpuWE
+
+https://github.com/tensorchord/Awesome-LLMOps
+https://github.com/tensorchord/Awesome-LLMOps?tab=readme-ov-file#llmops
+

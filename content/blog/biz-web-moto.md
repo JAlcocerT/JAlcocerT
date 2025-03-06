@@ -236,7 +236,7 @@ choco install nodejs-lts -y
 #choco install nodejs -y
 ```
 
-3. See that both, npm and node are installed:
+3. Close Powershell and Open it again. See that both, **npm and node are now installed**:
 
 ```sh
 node -v

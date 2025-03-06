@@ -1,9 +1,9 @@
 ---
-title: "Using a VPS as VPN with Wireguard (wgeasy)"
+title: "Using a VPS as VPN with Wireguard [wgeasy]"
 date: 2024-12-01
 draft: false
 tags: ["Dev"]
-summary: How to setup WG-easy in a VPS and use a Raspberry Pi as wireguard client. Bonus Wifi2eth.
+description: How to setup WG-easy in a VPS and use a Raspberry Pi as wireguard client. Bonus Wifi2eth.
 url: how-to-use-wg-easy-with-a-vps
 ---
 

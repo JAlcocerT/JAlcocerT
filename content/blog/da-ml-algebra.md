@@ -14,7 +14,7 @@ And its been a while since I have had the chance to do cool stuff with it.
 
 Until today.
 
-## The core of Lineal ALgebra
+## The core of Lineal Algebra
 
 https://www.youtube.com/watch?v=m3hxPxPgSIY
 

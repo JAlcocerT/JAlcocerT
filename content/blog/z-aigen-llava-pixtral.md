@@ -51,6 +51,7 @@ https://www.youtube.com/watch?v=4Jpltb9crPM
 {{< /dropdown >}}
 
 {{< dropdown title="Computer Vision with Yolov8 Models ⏬" closed="true" >}}
+
 https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection
 
 {{< /dropdown >}}

@@ -3,7 +3,7 @@ title: "Reviewing a Laptop: ThinkPad x13-G2"
 date: 2024-10-04T23:20:21+01:00
 draft: false
 tags: ["Dev"]
-summary: Checking my new Laptop - The Lenovo ThinkPad x13
+description: Checking my new Laptop - The Lenovo ThinkPad x13
 url: laptop-lenovo-thinkpad-x13-benchmark
 ---
 

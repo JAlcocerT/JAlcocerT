@@ -98,3 +98,40 @@ My Raspberry Pi related blog is publically available at: https://jalcocert.githu
 
 * Other Interesting jekyll Themes
     * https://github.com/wowthemesnet/jekyll-theme-memoirs
+
+### More About Raspberry Pi
+
+**Wi-Fi Setup on Raspberry Pi**
+- Configure network priority in `/etc/wpa_supplicant/wpa_supplicant.conf`
+  - [StackExchange Guide](https://raspberrypi.stackexchange.com/questions/58304/how-to-set-wifi-network-priority)
+
+**Privacy Tools with a Pi**
+- [AdguardHome](https://github.com/AdguardTeam/AdGuardHome#getting-started)
+- [Pi-hole](https://github.com/AdguardTeam/AdGuardHome#getting-started)
+- [Unbound](https://nlnetlabs.nl/projects/unbound/about/)
+- **No-IP**
+- [PostHog](https://posthog.com/)
+
+**Home Assistant** 
+- Be aware of the differences between HA OS and HA as Docker container!
+- [Open Source Alternative for Home Assistant Core](https://www.opensourcealternative.to/project/Core)
+
+
+**Interesting HA Integrations**
+
+- [Raspberry Pi Installation](https://www.home-assistant.io/installation/raspberrypi/)
+- [Raspberry Pi GPIO](https://www.home-assistant.io/integrations/remote_rpi_gpio)
+- [GPIO Zero Remote GPIO Documentation](https://gpiozero.readthedocs.io/en/stable/remote_gpio.html)
+- [Blockchain Integration](https://www.home-assistant.io/integrations/blockchain/)
+- [Bitcoin Integration](https://www.home-assistant.io/integrations/bitcoin/)
+- **AddGuardHome**
+- **Jellyfin**
+- **ESPHome**
+- **MQTT**
+- **MySensors**
+- **Plex**
+- **Raspberry Pi Power Supply Checker**
+- **Radarr**
+- **Sonarr**
+- **Tailscale**
+- **Transmission + TG**

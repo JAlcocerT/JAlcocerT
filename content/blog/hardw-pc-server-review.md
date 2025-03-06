@@ -94,6 +94,19 @@ fast
 #npm install --global fast-cli && fast
 ```
 
+PCs are great, but even better with proper internet connectivity
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="Asrockx300Review" image="/blog_img/hardware/x300.jpg" subtitle="TPLink MR200" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Asrockx300Review" image="/blog_img/hardware/x300.jpg" subtitle="GL-MT3000" >}}
+{{< /cards >}}
+
+**Local Network**
+
+* Pi4 4GB arm64 - `192.168.0.155`
+* Pi4 2GB arm43 - `192.168.0.232`
+* x13 `192.168.0.124`
+
 ### Disk Benchmarks
 
 Another very important part that affects the performance, **the drives**:
@@ -208,14 +221,57 @@ The x300 during ~idle, will do ~14w when using linux, or...>25w when in windows 
 ![alt text](../../static/blog_img/hardware/energy/power-linux-w11-pi.jpg)
 
 > Mr. Doors, pleaze
+
 ## Conclusions
 
 {{< callout type="info" >}}
 To make the most out of your new homelab, check [the SelfHosting docs](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/)
 {{< /callout >}}
 
+
+
 ---
 
 ## FAQ
 
 
+<!-- https://www.youtube.com/watch?v=4qLgpJc2Ghs -->
+{{< youtube "4qLgpJc2Ghs" >}}
+
+<!-- https://www.youtube.com/watch?v=LgljPzqAARA -->
+{{< youtube "LgljPzqAARA" >}}
+
+**Powering Local AI**
+
+* https://jalcocert.github.io/JAlcocerT/ai-with-iGPU
+
+{{< youtube "xsvTEzTirlQ" >}}
+
+
+
+{{< tabs items="Ollama,PrivateGPT,TextGeneration Web UI" >}}
+
+  {{< tab >}}
+  Probably the **Ollama is the quickest way** to [get LLMs working locally](https://fossengineer.com/selfhosting-llms-ollama), specially if you already have Docker installed.
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4qLgpJc2Ghs" frameborder="0" allowfullscreen></iframe>
+  {{< /tab >}}
+  {{< tab >}}
+  Say Hi to your documents, locally, when you interact with them with [PrivateGPT Freely](https://fossengineer.com/selfhosting-local-llms-with-privateGPT)
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LgljPzqAARA" frameborder="0" allowfullscreen></iframe>
+  
+  {{< /tab >}}
+  {{< tab >}}
+
+  Yet another way to [get LLMs running locally, and with UI](https://fossengineer.com/Generative-AI-LLMs-locally-with-cpu/).
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/-zNWDTqKF1E" frameborder="0" allowfullscreen></iframe>
+
+
+  {{< /tab >}}
+
+{{< /tabs >}}

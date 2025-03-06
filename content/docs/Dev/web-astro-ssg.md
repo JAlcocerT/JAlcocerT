@@ -17,6 +17,7 @@ New to SSGs and ASTRO? See the [**101 Astro** Guide](https://jalcocert.github.io
 ## Astro CLIs
 
 ```sh
+git clone #theme
 npm install
 npm run dev
 #npm run build

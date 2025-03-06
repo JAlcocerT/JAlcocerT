@@ -32,9 +32,15 @@ By understanding the underlying mechanisms that give rise to power laws, we can 
 
 Before we move on, let me get a little bit technical here.
 
-There are many  types of series that appear in mathematics, science, and engineering, each with their own unique properties and applications. Some examples that you will be familiar with after such studies include: **Fourier** series, **Taylor** series, and series expansions for special functions like the gamma function and Bessel functions.
+There are many  types of series that appear in mathematics, science, and engineering, each with their own unique properties and applications.
 
-These series are used in a variety of contexts, from physics and engineering to finance and economics. You have to remember that they are **an important tool for understanding and modeling complex systems**. Basically these ones deserve its own post.
+Some examples that you will be familiar with after such studies include: **Fourier** series, **Taylor** series, and series expansions for special functions like the gamma function and Bessel functions.
+
+These series are used in a variety of contexts, from physics and engineering to finance and economics. 
+
+You have to remember that they are **an important tool for understanding and modeling complex systems**. 
+
+Basically these ones deserve its own post.
 
 ### Non-Geometric Series
 
@@ -106,17 +112,20 @@ The relationship between power laws and geometric series arises because **both d
 
 ## Power Law & Pareto
 
-Recently I wrote a post on The Pareto Principle.
+Sometime ago I wrote a post about The Pareto Principle.
 
 ## Power Law & Data Analytics
 
-For a data analyst, understanding power laws and Pareto analysis can be extremely valuable for their career. By recognizing the presence of power laws in their data, they can better understand the underlying patterns and relationships that drive the behavior of the system they are analyzing. 
+For a data analyst, understanding power laws and Pareto analysis can be extremely valuable for their career. 
+
+By recognizing the presence of power laws in their data, they can better understand the underlying patterns and relationships that drive the behavior of the system they are analyzing. 
 
 Similarly, by applying Pareto analysis techniques, they can identify the most important factors that contribute to a given outcome, and prioritize their efforts accordingly.
 
 This can lead to more effective decision-making and resource allocation, and ultimately better outcomes for their organization.
 
 To make the most of these techniques, a data analyst should have:
+
 * A solid understanding of statistics and data analysis techniques
 * Tools for data visualization and analysis
 * Comfortable working with large datasets

@@ -1,14 +1,14 @@
 ---
 title: "[AI] Vacation Planning - Recommendations, Costs, Weather"
-date: 2025-03-23
+date: 2025-04-23
 draft: false
 tags: ["Dev","AI"]  
 description: "Python App to explore vacation destination. LLMs ❤️ Data. While exploring Agents."
-summary: 'Where to go. When to go. Can I go?' 
 url: 'vacation-planner-python'
 isPinned: false
 ---
 
+*Where to go. When to go. Can I go?*
 
 Some time ago, I made a [Trip Planner Web App](https://github.com/JAlcocerT/Py_Trip_Planner), based purely on weather patterns as [described here](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/).
 

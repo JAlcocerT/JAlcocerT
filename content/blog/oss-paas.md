@@ -4,7 +4,6 @@ date: 2025-03-07
 draft: false
 tags: ["Dev"]
 description: 'Coolify, Dokku, Caprover, Openfaas'
-summary: 'Testing Operative System for a NAS'
 url: 'deploying-software-with-paas-to-servers'
 ---
 

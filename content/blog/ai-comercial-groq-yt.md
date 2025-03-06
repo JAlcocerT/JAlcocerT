@@ -11,7 +11,7 @@ description: 'Groq Video Summaries with LLMs, Streamlit (and the streamlit-authe
 url: 'summarize-yt-videos'
 ---
 
-How to avoid falling into click baits with Generative AI.
+How to **avoid falling into click baits** with Generative AI.
 
 Use Groq and Streamlit to summarize and video and to know if its worth your time!
 

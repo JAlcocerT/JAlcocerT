@@ -3,7 +3,7 @@ title: "How to Share Pi OS via Torrent [with VPN]"
 date: 2024-12-02
 draft: false
 tags: ["Dev"]
-summary: How to share Raspberry Pi OS (Bullseye) as Torrent with Qbitrorrent/Transmission and VPN.
+description: How to share Raspberry Pi OS (Bullseye) as Torrent with Qbitrorrent/Transmission and VPN.
 url: how-to-torrent-with-a-raspberry
 ---
 

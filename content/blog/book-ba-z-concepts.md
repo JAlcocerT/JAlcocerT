@@ -8,17 +8,17 @@ summary: 'In this post I am summarizing the must know points to level up your ca
 url: 'business-analytics-concepts'
 ---
 
-# The Business Analytics Guide
+## The Business Analytics Guide
 
-To conclude de series of posts regarding Business Analysis skills required to work in analytics, I am creating this post to make a final summary.
+To conclude de series of posts regarding Business Analysis skills required to work in analytics, I am creating **this post to make a final summary**.
 
 Remember that there is deeper content on every of the topics if you need it:
 
-* [How to Plan and Monitor](/planning-data-analytics)
-* [How to create Momentum - Elicitation and collaboration](/elicitation-data-analytics/)
-* [How to Collect Requirements Effectively](/requirements-data-analytics/)
-* [What Strategies to follow](/strategies-data-analytics/)
-* [How to Propose Solutions](/solutions-data-analytics/)
+* [How to Plan and Monitor](/JAlcocerT/planning-data-analytics)
+* [How to create Momentum - Elicitation and collaboration](/JAlcocerT/elicitation-data-analytics/)
+* [How to Collect Requirements Effectively](/JAlcocerT/requirements-data-analytics/)
+* [What Strategies to follow](/JAlcocerT/strategies-data-analytics/)
+* [How to Propose Solutions](/JAlcocerT/solutions-data-analytics/)
 
  <!-- Has an understanding of the differences between requirements gathering and elicitation.
 Has proven facilitation and interviewing skills.
@@ -30,7 +30,7 @@ Business analysis is the process of enabling change inside an organization by id
 
 An organization can communicate needs and the case for change through business analysis, and to create and outline strategies that can produce value.
 
-It can be used to *comprehend the present situation, define the future state, and decide what steps need to be taken to get from the present state to the future state*.
+> It can be used to *comprehend the present situation, define the future state, and decide what steps need to be taken to get from the present state to the future state*.
 
 There are different perspectives, think about them like lens through which the business analysis views their work activities based on the current context.
 

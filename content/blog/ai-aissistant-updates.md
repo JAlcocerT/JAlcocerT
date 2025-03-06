@@ -269,13 +269,19 @@ chmod +x cygwin_cibuildwheel_build.sh
 #deactivate
 ```
 
-3. LocalAI - With voice cloning! The reason why I dont like to put my voice over the internet :)
+3. LocalAI - With **voice cloning**! The reason why I dont like to put my voice over the internet :)
 
 * https://github.com/mudler/LocalAI/
   * https://github.com/mudler/LocalAI/blob/master/docker-compose.yaml
 
 
 > Runs gguf, transformers, diffusers and many more models architectures. It allows to generate Text, Audio, Video, Images. **Also with voice cloning capabilities.**
+
+4. [Willow on GitHub](https://github.com/toverainc/willow). See [HeyWillow](https://heywillow.io/#)
+
+> Apache v2 | Open source, local, and self-hosted Amazon Echo/Google Home competitive Voice Assistant alternative
+
+
 
 ### Books
 

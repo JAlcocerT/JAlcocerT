@@ -3,7 +3,7 @@ title: "Learning about 3D Printing and more"
 date: 2025-12-31
 draft: true
 tags: ["Tinkering"]
-summary: abcd
+description: abcd
 url: 'starting-with-3dprinting'
 ---
 

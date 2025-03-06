@@ -1,7 +1,7 @@
 ---
 title: "How to Plan and Monitor the Status of your Project"
 date: 2021-10-03T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Career"]
 description: 'Planning and Monitoring the project status in Data Analytics.'
 summary: 'Techniques to better cooperate plan and monitor the status of a project.'
@@ -10,7 +10,7 @@ url: 'planning-data-analytics'
 
 ## Business Analysis: Planning and Monitoring for Success
 
-This guide outlines the essential aspects of planning and monitoring business analysis activities, emphasizing the importance of a structured approach for achieving project goals.
+This essential aspects of planning and monitoring business analysis activities, emphasizing the importance of a structured approach for achieving project goals.
 
 ### Planning the Business Analysis Approach
 
@@ -91,6 +91,6 @@ Several techniques can aid in planning and monitoring:
 
 ### Recommended Software
 
-For project planning and monitoring, consider using tools like:
+For **project planning and monitoring**, consider using tools like:
 
 * [Leantime](https://fossengineer.com/selfhosting-Leantime-docker/): An open-source project management tool.

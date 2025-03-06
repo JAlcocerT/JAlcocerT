@@ -8,13 +8,13 @@ summary: 'In this post I am summarizing the must know points to level up your ca
 url: 'business-analytics-skills'
 ---
 
-# The Business Analytics mindset
+# The Business Analytics Mindset
 
 ## Analytical Thinking and Problem Solving
 
 Analytical thinking and problem solving skills are required for business analysts to analyze problems and opportunities effectively, identify which changes may deliver the most value, and work with stakeholders to understand the impact of those changes.
 
-Business analysts use analytical thinking by rapidly assimilating various types of information (for example, diagrams, stakeholder concerns, customer feedback, schematics, user guides, and spreadsheets), and identifying which are relevant. 
+Business analysts use analytical thinking by rapidly assimilating various types of information (for example: *diagrams, stakeholder concerns, customer feedback, schematics, user guides, and spreadsheets*), and identifying which are relevant. 
 
 Business analysts should be able to quickly choose effective and adaptable methods to learn and analyze the media, audiences, problem types, and environments as each is encountered.
 
@@ -111,7 +111,9 @@ Move the stone in the way, for you and others.
 
 Determine, examine, and tackle issues or obstacles that emerge within a particular scope of responsibility. This may involve pinpointing the fundamental sources of difficulties, devising and executing resolutions, and tracking advancements to confirm that the issue has been entirely addressed.
 
-Problem-solving is a crucial ability for both owners and teams, as it enables them to actively confront concerns before they develop into more significant complications. Proficient problem-solving necessitates a blend of analytical and inventive thinking, alongside solid communication and teamwork skills.
+Problem-solving is a crucial ability for both owners and teams, as it enables them to actively confront concerns before they develop into more significant complications.
+
+Proficient problem-solving necessitates a blend of analytical and inventive thinking, alongside solid communication and teamwork skills.
 
 For this, you will need to:
 

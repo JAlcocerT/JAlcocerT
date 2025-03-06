@@ -3,7 +3,7 @@ title: "[Review] Firebat AK2 PLUS"
 date: 2024-09-30T19:20:21+01:00
 draft: false
 tags: ["Tinkering"]
-summary: Testing Firebat Mini PC and setting it as a Home Server
+description: Testing Firebat Mini PC and setting it as a Home Server
 url: firebat-ak2-plus-minipc-review
 ---
 

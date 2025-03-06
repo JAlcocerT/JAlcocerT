@@ -1,6 +1,6 @@
 ---
 title: "Scaling Services with SelfHosted PAAS"
-date: 2025-03-17T10:20:21+01:00
+date: 2025-04-17T10:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Deploy with Dokploy or ZaneOPS (to Pi / VPS) and make ideas scalable. Wordpress and Ghost Examples.'

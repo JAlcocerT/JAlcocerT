@@ -1,6 +1,6 @@
 ---
 title: "Webs for Restaurants."
-date: 2025-03-09
+date: 2025-03-19
 draft: false
 tags: ["OSS"]
 summary: "Astro Websites for Restaurants. Million dollar idea in the Mediterranean."

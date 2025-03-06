@@ -3,7 +3,7 @@ title: A Camera for the Raspberry Pi
 date: 2024-07-19T23:20:21+01:00
 draft: false
 tags: ["Tinkering"]
-summary: SimpleCV and OpenCV + Scrypted & HA. Computer Vision with a PI making the Pi camera work.
+description: SimpleCV and OpenCV + Scrypted & HA. Computer Vision with a PI making the Pi camera work.
 url: 'raspberry-pi-camera-setup'
 ---
 

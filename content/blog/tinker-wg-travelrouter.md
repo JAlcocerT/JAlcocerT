@@ -8,13 +8,14 @@ draft: false
 #     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
 description: 'Better Networking while Traveling with GL-MT3000 with Wireguard (and Tailscale) VPN.'
-summary: 'How to use a travel router to access home resources while abroad.'
 url: 'travel-router-gl-mt3000-review'
 ---
 
 The last years I have been interested to improve my **networking knowledge**.
 
 Being involved in [**Telecom** projects](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/) was a great motivation.
+
+*How to use a travel router to access home resources while abroad?*
 
 But its something that goes even behind in time with the [Raspberry Pi](https://jalcocert.github.io/RPi/posts/rpi-wifi-ethernet-bridge/).
 

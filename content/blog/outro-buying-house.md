@@ -9,7 +9,7 @@ url: 'buying-house-data-analytics'
 
 In Spain you could expect:
 
-* 6% taxes + 3-5k notario + 0.5/1k/m2 repairs/setup
+* 6% taxes + 3-5k notario + 0.5 to 1k/m2 repairs/setup
 
 ![a](/blog_img/outro/honda-road.jpg)
 
@@ -23,13 +23,3 @@ pie title Car Expenses Breakdown
          "Insurance" : 865
          "Car's Price" : 2180
 ```
-
-### New Car vs Used Car
-
-
-
----
-
-## How to buy a Car in Germany
-
-Steps...
