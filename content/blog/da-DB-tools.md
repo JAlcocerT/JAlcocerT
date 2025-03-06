@@ -170,7 +170,9 @@ NoSQL databases provide a powerful and flexible **alternative to traditional rel
 
 ### MongoDB
 
-If you're working with MongoDB and Python, `pymongo` is the standard and most commonly used library for connecting to it. Here's a breakdown:
+If you're working with MongoDB and Python, `pymongo` is the standard and most commonly used library for connecting to it.
+
+Here's a breakdown:
 
 **PyMongo: The Python Driver for MongoDB**
 
@@ -232,6 +234,11 @@ If you're working with MongoDB and Python, `pymongo` is the standard and most co
 
 Therefore, if your goal is to work with MongoDB in Python, using `pymongo` is the recommended and most efficient approach.
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/tags/mongodb/" title="MongoDB with a Pi ↗" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="IoT Project" >}}
+  {{< card link="https://jalcocert.github.io/RPi/tags/mongodb/" title="MongoDB with a Pi ↗" image="https://jalcocert.github.io/RPi/img/metabase.png" subtitle="IoT Project" >}}
+{{< /cards >}}
 
 
 <!-- 
