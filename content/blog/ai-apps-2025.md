@@ -7,6 +7,14 @@ description: '.'
 url: 'selfhosting-ai-apps'
 ---
 
+https://theresanaiforthat.com/most-saved/
+
+* **Others:** [LibreChat](https://www.youtube.com/watch?v=0BRnK5BGZHU), Autogen + AutogenStudio https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/ or [Quivir](https://github.com/StanGirard/quivr) with great [docs](https://docs.quivr.app/home/intro) or [LocalGPT](https://github.com/PromtEngineer/localGPT).
+  * Bindings:
+    * https://github.com/abetlen/llama-cpp-python
+* https://github.com/khoj-ai/khoj
+
+
 
 The goal of **this post** is:
 
@@ -22,3 +30,37 @@ The goal of **this post** is:
 
 
 {{< /details >}}
+
+### Voice to Text
+
+* [Piper](https://github.com/rhasspy/piper) - Also works [Text to Voice](https://www.youtube.com/watch?v=SzRF50UwzYk)
+  * [Voices at HF](https://huggingface.co/rhasspy/piper-voices/tree/main)
+
+
+---
+
+{{% details title="How to Secure my Services?" closed="true" %}}
+
+* [NGINX](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/)
+* [Cloudflare](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/)
+  * It allows
+* Authelia / Zitadel / Authentik
+
+{{% /details %}}
+### How to Back Up my Server?
+
+Duplicati to other location (HD / Mega, One drive, s3...)
+
+You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/):
+
+```sh
+python -m venv your-env #(create a virtual environment)
+source your-env/bin/activate #(or on Windows your-env\Scripts\activate) (activatea the venv)
+#deactivate
+```
+
+```sh
+conda create -n yourcondaenvironment python=3.11
+conda activate yourcondaenvironment
+conda deactivate
+```

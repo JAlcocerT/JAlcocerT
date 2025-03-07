@@ -19,7 +19,7 @@ https://jalcocert.github.io/RPi/
 
 ## IoT on Raspberry Pi
 
-- **MQTT**
+- **MQTT** https://jalcocert.github.io/RPi/posts/rpi-mqtt/
 - **GCP IoT Core** vs [ThingsBoard](https://thingsboard.io/)
   - [ThingsBoard on Open Source Alternative](https://www.opensourcealternative.to/project/ThingsBoard)
 - **Edge Computing**: Info collecting and processing closer to the source (IoT).

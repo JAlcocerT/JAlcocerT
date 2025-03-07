@@ -50,12 +50,16 @@ https://www.youtube.com/watch?v=FfrRiPhn-LA&t=343s
 {{< youtube "FfrRiPhn-LA" >}}
 
 
-Yes, there are other open-source flight controller firmware options besides Betaflight, although Betaflight is by far the most popular.  Here are a few notable alternatives:
+There are other open-source flight controller firmware options besides Betaflight, although Betaflight is by far the most popular.  Here are a few notable alternatives:
 
 * **ArduPilot:** This is a very powerful and versatile open-source autopilot software suite. It's often used on larger drones, autonomous vehicles, and even planes and rovers. ArduPilot is known for its advanced features, including GPS navigation, waypoint following, and support for a wide range of hardware.  It's more complex to configure than Betaflight, making it less common for smaller racing or freestyle drones.
+
 * **INAV:**  INAV is a fork of Betaflight that focuses on navigation and autonomous flight.  It's particularly well-suited for long-range flights and missions where GPS functionality is important.  While it can be used for acro, its strength lies in its navigation capabilities.
+
 * **EmuFlight:**  EmuFlight is another fork of Betaflight that aims to improve performance and stability. It's often used by pilots looking for a slightly different feel than Betaflight.
+
 * **Butterflight:** Similar to EmuFlight, Butterflight is a Betaflight fork focused on performance and handling.
+
 * **Quicksilver:**  A newer flight controller firmware written in Rust.  It's designed to be more efficient and safer than some of the older, C-based firmwares. It's gaining some traction but is still under development.
 
 It's worth noting that some of these are forks of Betaflight, meaning they share a common codebase but have diverged in their development and features.  Betaflight's large community and constant development make it a moving target, so some of the other options may have features or performance characteristics that are temporarily better, but Betaflight often catches up.
@@ -93,16 +97,3 @@ So, when someone says "Mark5 drone," they are likely referring to an FPV drone b
 * https://www.youtube.com/@MichaelKlements/videos
 
 >  I enjoy tinkering with electronics projects and fixing things, so I've put together this channel to share with you a mix of tech repairs, DIY projects, Arduino & Raspberry Pi projects, and tech reviews.
-
-
-https://github.com/geerlingguy/sbc-reviews
-
-
----
-
-## FAQ
-
-
-CANBUS VS ETHERLOOP
-
-https://www.youtube.com/watch?v=38H_8asDUfY

@@ -497,3 +497,11 @@ But this will not create SSLs:
 Fortunately, we can get that SSL for the sub sub domain with NGINX and these records set:
 
 ![DNS Records for NGINX https on sub sub domain](/blog_img/selfh/https/cloudflare-vs-nginx-subdomains.png)
+
+5. After the event has finished, you just have to copy the files to your own laptop. You can try with rSync:
+
+```sh
+rsync -avz root@157.678.45.123:/root/Docker/FileBrowser/ ./
+```
+
+6. [Optionally] You can use **[Selfhostable Photo Management tools](/JAlcocerT/photo-management-tools)** and see what have been uploaded to Filebrowser

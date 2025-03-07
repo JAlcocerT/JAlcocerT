@@ -1,5 +1,5 @@
 ---
-title: "More video Tricks"
+title: "More video Tricks [with FFMPEG]"
 date: 2025-02-12
 draft: false
 tags: ["Dev"]
@@ -57,6 +57,7 @@ Recording at **4K/60fps RS+** and standard (no UW, h.265) and **high bitrate**.
 
 > All of this at -2C 
 
+---
 
 ## Data Overlay with Python
 
@@ -185,9 +186,9 @@ Start with the basics (loading video and GPX, basic visualization) and then grad
 
 {{< /details >}}
 
+---
 
 ## Conclusions
-
 
 Its great to look back and see **how far ive gone regarding videos**.
 
@@ -213,7 +214,6 @@ rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #it creates the folder if its n
 #rm *.LRF #clean if needed LRF
 ```
 
-
 ![Graphic Walker UI](/blog_img/selfh/rsync.png)
 
 
@@ -222,8 +222,7 @@ rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #it creates the folder if its n
 
 {{< details title="FFMPEG CLI Tricks within Linux 📌" closed="true" >}}
 
-
-1. **Simply Join**: Keeping original audio and no reencoding.
+1. **Simply Join**: Keeping original audio and **no reencoding**.
 
 ```sh
 ###ffmpeg -i "concat:$(ls *.mp4 | tr '\n' '|')" -c copy output_video.mp4 #all from a folder
@@ -256,7 +255,7 @@ ffmpeg -stream_loop -1 -i "TRAVELATOR - Density & Time.mp3" -i silenced_output_v
 ### 🎵 Music by: 
 ```
 
-3. Extract images from video:
+3. **Extract images** from a video:
 
 ```sh
 4ffmpeg -i input_video.mp4 -vf "select='gte(t\,120)',fps=1" -vsync vfr frame_%03d.png

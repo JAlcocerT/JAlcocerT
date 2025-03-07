@@ -236,33 +236,48 @@ Therefore, if your goal is to work with MongoDB in Python, using `pymongo` is th
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/RPi/tags/mongodb/" title="MongoDB with a Pi ↗" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="IoT Project" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Pi 101" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Get Started with IoT Project" >}}
   {{< card link="https://jalcocert.github.io/RPi/tags/mongodb/" title="MongoDB with a Pi ↗" image="https://jalcocert.github.io/RPi/img/metabase.png" subtitle="IoT Project" >}}
 {{< /cards >}}
 
 
-<!-- 
-Elastic Search and kibana -->
+
 
 <!-- 
 Apache Kafka 
 https://openfaas.com/
 -->
 
-<!-- ### 
 
 ### InfluxDB
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Pi 101" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Get Started with IoT Project" >}}
+  {{< card link="https://jalcocert.github.io/RPi/tags/mongodb/" title="MongoDB with a Pi ↗" image="https://jalcocert.github.io/RPi/img/metabase.png" subtitle="IoT Project" >}}
+{{< /cards >}}
+
 TimeScale
 
- -->
+
 
 
 ### F/OSS Databases
 
-#### Elastic Search
+#### Elastic Search and Kibana
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Pi 101" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Get Started with IoT Project" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/" title="ES with a Pi ↗" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="IoT Project with Kibana and a DHT22" >}}
+{{< /cards >}}
 
 #### Prometheus
+
+
+![alt text](/blog_img/iot/grafana.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/selfh-grafana-monit/#grafana-with-prometheus-and-node-exporter" title="Prometheus with NodeExporter ↗" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="Grafana with Prometheus Project" >}}
+{{< /cards >}}
 
 #### Graphite
 
@@ -270,7 +285,7 @@ TimeScale
 
 #### DRUID
 
-Druid is an open-source, high-performance, real-time analytics database system that is designed to handle large volumes of data and provide fast querying capabilities for data analytics.
+**Druid is an open-source**, high-performance, real-time analytics database system that is designed to handle large volumes of data and provide fast querying capabilities for data analytics.
 
 It was developed by Metamarkets (now part of Salesforce) and is commonly used in **big data and real-time analytics** scenarios.
 
@@ -351,71 +366,71 @@ One popular driver for Cassandra is `cassandra-driver`.
 
 1. Install the `cassandra-driver` using pip:
 
-   ```bash
-   pip install cassandra-driver
-   ```
+```bash
+pip install cassandra-driver
+```
 
 2. Import the necessary modules and create a connection to your Cassandra cluster:
 
-   ```python
-   from cassandra.cluster import Cluster
+```python
+from cassandra.cluster import Cluster
 
-   # Connect to your Cassandra cluster (replace with your cluster's contact points)
-   cluster = Cluster(['127.0.0.1'])  # Use the IP addresses or hostnames of your Cassandra nodes
-   session = cluster.connect()
-   ```
+# Connect to your Cassandra cluster (replace with your cluster's contact points)
+cluster = Cluster(['127.0.0.1'])  # Use the IP addresses or hostnames of your Cassandra nodes
+session = cluster.connect()
+```
 
 3. Create a keyspace (database) and switch to it:
 
-   ```python
-   keyspace_name = 'your_keyspace_name'
+```python
+keyspace_name = 'your_keyspace_name'
 
-   # Create a keyspace (if it doesn't exist)
-   session.execute(f"CREATE KEYSPACE IF NOT EXISTS {keyspace_name} WITH replication = {{'class': 'SimpleStrategy', 'replication_factor': 1}}")
+# Create a keyspace (if it doesn't exist)
+session.execute(f"CREATE KEYSPACE IF NOT EXISTS {keyspace_name} WITH replication = {{'class': 'SimpleStrategy', 'replication_factor': 1}}")
 
-   # Switch to the keyspace
-   session.set_keyspace(keyspace_name)
-   ```
+# Switch to the keyspace
+session.set_keyspace(keyspace_name)
+```
 
 4. Define your Cassandra table schema (CQL) and create the table:
 
-   ```python
-   table_name = 'your_table_name'
+```python
+table_name = 'your_table_name'
 
-   # Define your table schema (CQL)
-   create_table_query = f"""
-   CREATE TABLE IF NOT EXISTS {table_name} (
-       id UUID PRIMARY KEY,
-       column1 text,
-       column2 int
-   )
-   """
+# Define your table schema (CQL)
+create_table_query = f"""
+CREATE TABLE IF NOT EXISTS {table_name} (
+    id UUID PRIMARY KEY,
+    column1 text,
+    column2 int
+)
+"""
 
-   # Create the table
-   session.execute(create_table_query)
-   ```
+# Create the table
+session.execute(create_table_query)
+```
 
 5. Insert data into the Cassandra table:
 
-   ```python
-   from cassandra.query import SimpleStatement
+```python
+from cassandra.query import SimpleStatement
 
-   # Define the insert query
-   insert_query = f"INSERT INTO {table_name} (id, column1, column2) VALUES (?, ?, ?)"
+# Define the insert query
+insert_query = f"INSERT INTO {table_name} (id, column1, column2) VALUES (?, ?, ?)"
 
-   # Prepare the insert statement
-   insert_statement = SimpleStatement(insert_query, consistency_level=1)
+# Prepare the insert statement
+insert_statement = SimpleStatement(insert_query, consistency_level=1)
 
-   # Insert data into the table
-   session.execute(insert_statement, (uuid.uuid4(), 'value1', 42))
-   ```
+# Insert data into the table
+session.execute(insert_statement, (uuid.uuid4(), 'value1', 42))
+```
 
 6. Close the Cassandra session and cluster when you're done:
 
-   ```python
-   session.shutdown()
-   cluster.shutdown()
-   ```
+```python
+session.shutdown()
+cluster.shutdown()
+```
 
 Make sure to replace `'your_keyspace_name'` and `'your_table_name'` with your desired keyspace and table names, and customize the table schema and data as needed.
 

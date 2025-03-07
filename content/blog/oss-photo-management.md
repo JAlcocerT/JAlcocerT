@@ -1,6 +1,6 @@
 ---
-title: "Tools for better Photo Management"
-date: 2025-04-15
+title: "Tools for better Photo Management and BackUps"
+date: 2025-01-17
 draft: false
 tags: ["OSS"]
 description: 'Testing tools for photo management and better backup techniques.'
@@ -8,7 +8,7 @@ url: 'photo-management-tools'
 ---
 
 
-## SelfHosted
+## SelfHosted Photo Tools
 
 
 1. Lychee
@@ -21,6 +21,22 @@ url: 'photo-management-tools'
 
 
 [Home Gallery](https://noted.lol/home-gallery-a-simple-self-hosted-photo-gallery/)
+
+
+{{< cards >}}
+  {{< card link="https://www.diamondback.com/" title="Diamond Bike" image="https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
+{{< /cards >}}
+
+
+## Interesting BackUp Software
+
+https://jalcocert.github.io/RPi/posts/selfhosting-with-docker/#several-apps---raspberry-pi-media-server
+
+### Nextcloud
+
+https://jalcocert.github.io/RPi/posts/selfhosting-nextcloud/
+
+
 
 ---
 

@@ -97,10 +97,10 @@ fast
 #npm install --global fast-cli && fast
 ```
 
-PCs are great, but even better with proper internet connectivity
+PCs are great, but even better with **proper internet connectivity**:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="Home 4G Router Review" image="/blog_img/hardware/x300.jpg" subtitle="TPLink MR200" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="Home 4G Router Review" image="/blog_img/hardware/TPLink4G-OpenSpeedTest.png" subtitle="TPLink MR200" >}}
     {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router Review" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000" >}}
 {{< /cards >}}
 
@@ -233,9 +233,9 @@ The Pi4 (4GB), is around ~8C above air temperature:
 
 Due to the typical ~4W that consumes (together with the external SSD).
 
-An additional SSD to the Pi accounts for ~1W, as I observed when adding an extra drive.
+> An additional SSD to the Pi accounts for ~1W, as observed when adding an extra drive.
 
-The x300 during ~idle, will do ~14w when using linux, or...>25w when in windows 11:
+The **x300** during ~idle, will do **~14w when using linux**, or...>25w when in windows 11:
 
 ![alt text](/blog_img/hardware/energy/power-linux-w11-pi.jpg)
 
@@ -300,3 +300,7 @@ https://www.youtube.com/watch?v=LgljPzqAARA
   {{< /tab >}}
 
 {{< /tabs >}}
+
+### References
+
+1. https://github.com/geerlingguy/sbc-reviews

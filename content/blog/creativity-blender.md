@@ -150,7 +150,6 @@ https://opendata.blender.org/
 
 #### Video as a Code
 
-
 {{< callout type="info" >}}
 With Python **MoviePy**, as covered on [this post](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#quick-vlogs-as-a-code)
 {{< /callout >}}

@@ -3,10 +3,11 @@ title: "DASH Apps with Docker and Google Cloud Run"
 date: 2023-03-12T23:20:21+01:00
 draft: false
 tags: ["Python","Docker","DASH"]
-description: 'Deploying DASH apps using Docker and Google Cloud run - GCR.'
-summary: 'Guide - How to use Google Cloud Run free tier to deploy your Python DASH apps.'
+description: 'Deploying DASH apps using Docker and Google Cloud run - GCR Serverless Functions.'
 url: 'dash-docker-gcr'
 ---
+
+*Guide - How to use Google Cloud Run free tier to deploy your Python DASH apps*
 
 <!-- # DASH on Google Cloud Run -->
 
@@ -91,7 +92,7 @@ This will vary according to the libraries that your app uses.
 
 Basically the idea is to include here ALL the packages, so that they will get included in the docker container with the version that you specified.
 
-A requirements.txt file looks like this:
+A `requirements.txt` file looks like this:
 
 ```yml
 dash==2.7.0 
@@ -126,7 +127,7 @@ By following this steps, the app will use one of your domains:
     * Select the service to map - the GCR instance that we just created
     * Specify domain
 3. Update the CNAME as GCR will indicate
-    * For example: connect.domains.google.com
+    * For example: `connect.domains.google.com`
 
 ---
 
@@ -142,3 +143,7 @@ You have examples of CI/CD on these projects:
 
 * <https://github.com/JAlcocerT/Py_Trip_Planner>
 * <https://github.com/JAlcocerT/Slider-Crank>
+
+### Other Serverless Functions Alternatives
+
+1. https://www.openfaas.com/

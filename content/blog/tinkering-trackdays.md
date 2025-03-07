@@ -163,3 +163,16 @@ You can also open it with **Google Colab**: [![Open in Google Colab](https://col
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/" title="PhyPhox Post" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Physical experiments with a Phone" >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Data_PhyPhox" title="Route Tracker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code PhyPhox Airplane EDA" >}}
 {{< /cards >}}
+
+---
+
+## FAQ
+
+
+**CANBUS VS ETHERLOOP**
+
+<!-- 
+https://www.youtube.com/watch?v=38H_8asDUfY
+ -->
+
+{{< youtube "38H_8asDUfY" >}}

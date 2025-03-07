@@ -2,7 +2,7 @@
 title: "Which OS for a NAS?"
 date: 2025-03-17T21:20:21+01:00
 draft: false
-description: 'Testing Operative System for a NAS. Improving a Homelab.'
+description: 'Testing Operative Systems for a NAS / MiniPCs. Improving a Homelab.'
 url: 'os-for-nas'
 ---
 
@@ -226,6 +226,24 @@ You can also have a look to: ModSecurity, Naxsi, Open AppSec, SafeLine,...
 ---
 
 ## FAQ
+
+1. https://gitlab.com/leinardi/gwe
+
+> System utility designed to provide information, control the fans and overclock your NVIDIA card
+
+2. https://github.com/libratbag/piper
+
+> GTK application to configure gaming devices (Like a logitech mouse!)
+
+3. https://gitlab.com/corectrl/corectrl
+
+> Profile based **system control utility**
+
+```sh
+sudo apt install corectrl
+```
+
+![alt text](/blog_img/hardware/energy/corectl.png)
 
 {{% details title="How to check for duplicate images - dupeGuru" closed="true" %}}
 
