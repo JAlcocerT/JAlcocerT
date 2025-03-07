@@ -173,10 +173,21 @@ It's designed as a portable compilation target for high-level languages like C, 
 * PyScript - Thanks to Pyodide, WASM and Moderm WEb Tech
 
 #### What it is Pyodide?
+
 Pyodide is a Python distribution for the browser and Node.js based on WebAssembly.
 
 Pyodide is a port of CPython to WebAssembly/Emscripten.
 
-Pyodide makes it possible to install and run Python packages in the browser with micropip. Any pure Python package with a wheel available on PyPI is supported. Many packages with C extensions have also been ported for use with Pyodide. 
+Pyodide makes it possible to install and run Python packages in the browser with micropip.
+
+Any pure Python package with a wheel available on PyPI is supported. Many packages with C extensions have also been ported for use with Pyodide. 
 
 https://pyodide.org/en/stable/index.html
+
+---
+
+APP BUILDING
+
+Dart & flutter (google)
+
+https://blog.back4app.com/flutter-vs-dart/

@@ -28,7 +28,7 @@ Now its time for a recap on my **latest video tricks**.
 
 ### FHD - 1080/30
 
-With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/) and **high bit rate**, `1080p30 UW RS` I got these files with `H.265` codec:
+1. With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/) and **high bit rate**, `1080p30 UW RS` I got these files with `H.265` codec:
 
 * 38.9GB total MP4 files (every 17.2gb or 1h 12min there is a file reset)
 * Bitrate 31168 kbps, with an average size of **~4.03MB/s**
@@ -37,7 +37,7 @@ With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-fir
 > This happened while recording at ~0C
 
 
-With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/) and **low bit rate**, `1080p30 UW RS` I got:
+2. With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/) and **low bit rate**, `1080p30 UW RS` I got:
 
 * 41.6GB total MP4 files (every 17.2gb or 1h 13min there is a file reset)
 * Bitrate 30739 kbps, with an average size of **~3.98MB/s**
@@ -45,7 +45,9 @@ With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-fir
 
 > This happened while recording at room temperature ~20C
 
-### 4K/60
+### 4K
+
+3. **At 60fps**
 
 Three files with a total size of 35.5GB and draining battery to 67% (-33%) for 42min and 50s video.
 
@@ -56,6 +58,12 @@ Recording at **4K/60fps RS+** and standard (no UW, h.265) and **high bitrate**.
 {{< youtube "Ke-8yhgC_uU" >}}
 
 > All of this at -2C 
+
+4. **With 4K/120 RS+**
+
+Recording with **high bitrate**, I got 4 different files with total size of 48GB (full internal memory) and battery drained from 100 to 37% (-63%)
+
+
 
 ---
 
@@ -205,16 +213,19 @@ At least compared from where I started!
 
 ### Transfering Files
 
-**Moving just MP4's** will save you ~23% of the transfer load (100gb instead of 120 for example)
+**Moving just MP4's** will save you ~23% of the transfer load:
 
 ```sh
 #cp *.MP4 /home/jalcocert/Desktop/oa5pro/
 rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #it creates the folder if its not there | no overwrite
+#rsync -avP *.MP4 /media/jalcocert/Backup2TB/DJI-OA5Pro #copy it to an external SSD
 
 #rm *.LRF #clean if needed LRF
 ```
 
 ![Graphic Walker UI](/blog_img/selfh/rsync.png)
+
+> When moving the full 48GB, it will take ~20min
 
 
 ### Quick Videos - FFMPEG CLI
@@ -231,10 +242,11 @@ ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .MP4 of current folder
 
 #Generate a video with the mentioned files (IT PRESERVES THE ORIGINAL FORMATS, BITRATE...)
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
-ffmpeg -f concat -safe 0 -i file_list.txt -c copy /home/jalcocert/Desktop/output_video.mp4 #different folder (if you do it from OA5 to desktop you will be limited by transfer speed)
+##different folder (if you do it from OA5 to desktop you will be limited by transfer speed)
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy /home/jalcocert/Desktop/output_video.mp4 
 
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an output_video.mp4 #silenced video
-#ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #
+#ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #fast output
 ```
 
 2. **Join (Silenced) + Song**
@@ -268,7 +280,7 @@ ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync v
 mkdir -p "./$(basename DJI_20250215215547_0006_D.MP4 .MP4)" && ffmpeg -i DJI_20250215215547_0006_D.MP4 -vf "select='between(t,260,262)',fps=1" -vsync vfr "./$(basename DJI_20250215215547_0006_D.MP4 .MP4)/frame_%03d.png"
 ```
 
-4. How to reduce image quality in Linux to upload as **youtube thumbnail**:
+4. How to **reduce image quality** in Linux - To upload as **youtube thumbnail**:
 
 ```sh
 #ffmpeg -i thumbnail.png -c:v libwebp -quality 80 compressed_thumbnail.webp
@@ -278,6 +290,33 @@ ffmpeg -i thumbnail.png -qscale:v 2 compressed_thumbnail.jpg
 
 
 {{< /details >}}
+
+
+{{< details title="Extracting images from a video...and making a gif 📌" closed="true" >}}
+
+
+1. From a timeframe until the end, 1 frame:
+
+```bash
+#from second 90 of the video, give me 1fps
+ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.png
+ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.jpg
+```
+
+2. And just **between 90s and 105s** timeframe, 1fps:
+
+```sh
+ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -vsync vfr frame_%03d.png
+```
+
+3. Make a gif with the pulled images
+
+{{< /details >}}
+
+**Linux script**
+
+**Windows script**
+
 
 #### Telemetry Data
 

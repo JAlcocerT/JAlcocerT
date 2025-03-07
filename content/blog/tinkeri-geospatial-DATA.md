@@ -183,6 +183,7 @@ Im now using **rsync** to move the **big video files**:
 ```sh
 #cp *.MP4 /home/jalcocert/Desktop/oa5pro/
 rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #speeds of ~32mb/s from internal card!
+#rsync -avP *.MP4 /media/jalcocert/Backup2TB/DJI-OA5Pro #copy it to an external SSD
 
 #rm *.LRF #clean if needed LRF
 ```
@@ -193,8 +194,9 @@ rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #speeds of ~32mb/s from interna
 
 How about: **extracting images** from a video...and **making a gif** with them?
 
-
 The choice between PNG and JPG depends on the trade-off between **image quality** and **file size**:  
+
+1. From a timeframe until the end, 1 frame:
 
 ```bash
 #from second 90 of the video, give me 1fps
@@ -210,7 +212,7 @@ ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync v
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/Images2Gif" title="Images2Gif ↗" >}}
 {{< /cards >}}
 
-And just between 90s and 105s timeframe:
+2. And just **between 90s and 105s** timeframe, 1fps:
 
 ```sh
 ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -vsync vfr frame_%03d.png
@@ -228,6 +230,8 @@ And if the image is too big, [you can reduce it](https://jalcocert.github.io/JAl
 But!
 
 Speed wont increase that quick.
+
+Its all about physics.
 
 Remember that the **kinetic energy** of a body goes as: $KE = \frac{1}{2}mv^2$
 
@@ -348,4 +352,6 @@ The smaller speed increase from 15 cv to 18 cv illustrates this point—even wit
 
 Also, these are top speed at different days, by different drivers.
 
-Lower temperatures can benefit lap times due to increased engine power, but it's crucial to consider tire temperature. The optimal temperature for the best lap times is a balance between these two factors and can vary depending on the track, kart setup, and driver skill.
+Lower temperatures can benefit lap times due to increased engine power, but it's crucial to consider tire temperature.
+
+The optimal temperature for the best lap times is a balance between these two factors and can vary depending on the track, kart setup, and driver skill.

@@ -101,6 +101,14 @@ Then, you can creeate a user and pass for Linux.
 
 Thats really it!
 
+Log in again to wsl via CMD:
+
+```sh
+wsl
+```
+
+Right now, you will see that you are using Linux:
+
 ```sh
 sudo apt update #this is ubuntu already!
 sudo apt upgrade -y
@@ -111,6 +119,10 @@ sudo apt upgrade -y
 #to access it at another moment, just write:
 #wsl
 ```
+
+{{< callout type="info" >}}
+This is a great moment to [get started with SelfHosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
+{{< /callout >}}
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/why-i-love-containers/" title="Reasons to love containers" icon="book-open" >}}
@@ -123,7 +135,7 @@ sudo apt upgrade -y
 {{< /cards >}}
 
 {{< callout type="info" >}}
-Once containers are installed, you can bundle your apps!
+Once containers are installed, **you can bundle your apps** or use the ones that other have created!
 {{< /callout >}}
 
 3. To understand better Python Web Frameworks, specially **Django**, as its the one that QaTrack uses

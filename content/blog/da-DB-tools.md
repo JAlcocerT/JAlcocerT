@@ -7,10 +7,7 @@ description: 'Setting up DataBases for Data Analytics and AI Projects'
 url: 'setup-databases-docker'
 ---
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
+
 
 ## SQL
 
@@ -96,6 +93,11 @@ finally:
 
 ### MariaDB
 
+I got to know MariaDB as a substitute for MySQL when I was trying to use its [ARM64 container for selfhosting projects](https://jalcocert.github.io/RPi/posts/selfhosting-with-docker/).
+
+
+
+
 ### PostgreSQL
 
 
@@ -104,6 +106,11 @@ https://www.youtube.com/watch?v=3JW732GrMdg
  -->
 
 {{< youtube "3JW732GrMdg" >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with a DB" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="MySQL With LangChain and OpenAI LLM" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
 
 ---
 

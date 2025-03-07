@@ -237,9 +237,12 @@ RUN R -e 'install.packages("yfR", dependencies = TRUE)' #this one will work when
 
 ### How can I self-host R-Stocks?
 
-See the `Z_Deploy_me` [folder of the repository](https://github.com/JAlcocerT/R_Stocks/tree/main/Z_Deploy_Me).
 
-{{< dropdown title="Option 1 - With Containers👇" closed="true" >}}
+{{< callout type="info" >}}
+See the `Z_Deploy_me` [folder of the RStocks repository](https://github.com/JAlcocerT/R_Stocks/tree/main/Z_Deploy_Me).
+{{< /callout >}}
+
+{{< dropdown title="Option 2 - With Containers from DockerHub👇" closed="true" >}}
 
 ```yml
 version: '3.8'
@@ -270,13 +273,8 @@ You can [install **Portainer with Docker**](https://jalcocert.github.io/JAlcocer
 
 ### Similar Apps to RStocks
 
-https://www.dividendcompass.com/pricing
-39 eur/MES
-
-https://stockevents.app/en/portfolio-tracker
-40 euros/a
-
-
+* https://www.dividendcompass.com/pricing ~39 eur/MES
+* https://stockevents.app/en/portfolio-tracker ~40 euros/a
 
 **Open source competition for RStocks**
 
@@ -285,10 +283,6 @@ https://stockevents.app/en/portfolio-tracker
 3. https://github.com/ghostfolio/ghostfolio
 
 
-APP BUILDING
-
-Dart & flutter (google)
-https://blog.back4app.com/flutter-vs-dart/
 
 
 ### Roadmap for RStocks
