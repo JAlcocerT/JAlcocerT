@@ -10,7 +10,6 @@ url: 'photo-management-tools'
 
 ## SelfHosted Photo Tools
 
-
 1. Lychee
 2. Piwigo
 3. [Photoview](https://fossengineer.com/selfhosting-Photoview-docker/)

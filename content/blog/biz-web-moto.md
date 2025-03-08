@@ -70,7 +70,7 @@ For that domain, Im using cloudflare - so made sure that its **DNS only and not 
 {{< /details >}}
 
 {{< callout type="info" >}}
-Alternatively, do the [Web-Dev setup for Astro at Windows with Chocolatey](#chocolatey-setup-for-astro)
+Alternatively, do the [**Web-Dev setup** for Astro at Windows with Chocolatey](#chocolatey-setup-for-astro)
 {{< /callout >}}
 
 
@@ -256,4 +256,4 @@ choco install vscode -y
 
 {{< /details >}}
 
-> For additional installs with Chocolatey, see [this gist](https://gist.github.com/JAlcocerT/76f22ddf886277ef2653f82898c634d8) and packages [here](https://community.chocolatey.org/packages/rpi-imager)
+> For additional installs with Chocolatey, see [this **gist**](https://gist.github.com/JAlcocerT/76f22ddf886277ef2653f82898c634d8) and packages [here](https://community.chocolatey.org/packages/rpi-imager)

@@ -8,7 +8,7 @@ url: 'os-for-nas'
 
 Ive been pretty much **comfortable with these OS's**:
 
-1. Ubuntu
+1. Ubuntu LTS
 2. Zorin OS (Great if you come from Windows)
 3. Garuda Linux 
 4. If you miss XP, see https://xpq4.sourceforge.io/
@@ -31,8 +31,13 @@ I love to start with the **Garuda default wallpaper**.
 
 > With Garuda, you unlock the superpower of saying: *I use Arch, btw*
 
+Time to try something new?
 
-Time to try something new, getting ready for a **network attached storage**:
+{{< callout type="info" >}}
+Too many OS's? Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create Multi-Boots
+{{< /callout >}}
+
+Getting ready for a **network attached storage**:
 
 * OpenMediaVault (OMV)
 * Synology

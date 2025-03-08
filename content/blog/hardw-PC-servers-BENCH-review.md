@@ -8,6 +8,8 @@ url: 'benchmarking-computers'
 
 ## Benchmarks
 
+How good is your PC?
+
 ```sh
 curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Benchmark101.sh
 chmod +x Benchmark101.sh & ./Benchmark101.sh
@@ -120,6 +122,8 @@ sudo apt install nast nmap
 sudo nast -m
 nmap -sP 192.168.0.1/24 | grep "scan"
 ```
+
+> https://lookup.icann.org/en
 
 ### Disk Benchmarks
 
