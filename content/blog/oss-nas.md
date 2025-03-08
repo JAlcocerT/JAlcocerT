@@ -266,3 +266,13 @@ At the time of writing, my **energy costs** are ~0.28$/Kwh
   {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
 {{< /cards >}}
+
+### Decentralized Storage
+
+* Centralization: Simplicity and Single Point of Failure
+
+* Some alternatives:
+  * [IPFS](https://ipfs.tech/) -  an open system to manage data without a central server
+  * [Filecoin](https://filecoin.io/) - an open-source cloud storage marketplace, protocol, and incentive layer.
+
+> Great intro video from [Naomi on Decentralized Storage](https://www.youtube.com/watch?v=rOtMGJVp2MU)

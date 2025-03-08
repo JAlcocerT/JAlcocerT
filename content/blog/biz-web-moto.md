@@ -156,7 +156,7 @@ choco install ffmpeg -y
 ffmpeg -version #I got the version 7.1-essentials_build
 ```
 
-If you are here already, you are ready to join videos!
+If you are here already, you are **ready to join videos** with ffmpeg!
 
 ### FFmpeg Video Workflow for Windows
 
@@ -215,15 +215,16 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
 To play HEVC videos, your system needs the appropriate codecs in Windows.
 
 {{< callout type="info" >}}
-Still, it will perform better in Linux!
+I have created a [**script** to automatically](https://github.com/JAlcocerT/Linux/blob/main/Z_Linux_Installations_101/FFMpeg/Video_ffmpeg_w.sh) copy `.mp4` from the Camera to the PC and prepare the output
 {{< /callout >}}
+
+> Still, imo it performs better in Linux! 
 
 ### Chocolatey Setup for Astro
 
 Astro [QUICK] web development setup for windows
 
 {{< details title="Node NPM and VSCode with Chocolatey 📌" closed="true" >}}
-
 
 1. Open **Powershel as administrator**
 
@@ -254,3 +255,5 @@ choco install vscode -y
 ```
 
 {{< /details >}}
+
+> For additional installs with Chocolatey, see [this gist](https://gist.github.com/JAlcocerT/76f22ddf886277ef2653f82898c634d8) and packages [here](https://community.chocolatey.org/packages/rpi-imager)

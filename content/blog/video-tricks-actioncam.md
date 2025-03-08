@@ -45,6 +45,8 @@ Now its time for a recap on my **latest video tricks**.
 
 > This happened while recording at room temperature ~20C
 
+3. How about 1080/60?
+
 ### 4K
 
 3. **At 60fps**
@@ -63,8 +65,15 @@ Recording at **4K/60fps RS+** and standard (no UW, h.265) and **high bitrate**.
 
 Recording with **high bitrate**, I got 4 different files with total size of 48GB (full internal memory) and battery drained from 100 to 37% (-63%)
 
+> In youtube will be as 2160p60 (4k)
 
+### 2.7K
 
+5. **2.7k/30 RS+** and high bit rate
+
+Te record ~ it consumed ~50% of the battery.
+
+> In youtube you will see those as 1440p
 ---
 
 ## Data Overlay with Python

@@ -363,7 +363,7 @@ chmod +x Benchmark101.sh
 ```
 
 {{< callout type="info" >}}
-Other Benchmarks: [SBC-Reviews](https://github.com/geerlingguy/sbc-reviews) / [RPi-benchmark](https://github.com/aikoncwd/rpi-benchmark)
+**Benchmarks Resources**: [SBC-Reviews](https://github.com/geerlingguy/sbc-reviews) / [RPi-benchmark](https://github.com/aikoncwd/rpi-benchmark)
 {{< /callout >}}
 
 

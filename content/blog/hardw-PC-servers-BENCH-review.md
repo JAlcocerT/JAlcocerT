@@ -8,6 +8,11 @@ url: 'benchmarking-computers'
 
 ## Benchmarks
 
+```sh
+curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Benchmark101.sh
+chmod +x Benchmark101.sh & ./Benchmark101.sh
+```
+
 ### CPU Benchmarks
 
 The first CPU at home was an Intel P3, then an AMD Athlon 64 3200+ came (both 1 core!).
@@ -37,15 +42,12 @@ sudo apt install sysbench
 sysbench memory run
 ```
 
-x300 got 8099Mib/sec
-
-the x13 8164 Mib/sec 
-
-and the Pi 4 4GB ~175MiB/sec (x86)
-
-cpx11 hetzner: ~5245Mib/sec
-
-the Firebat got me 4077Mib/sec
+* The x13 8164 Mib/sec 
+* The x300 got 8099Mib/sec
+* The Lenovo ThinkBook with 24GB got 6510 MiB/s
+* A VPS, the cpx11 *hetzner*: ~5245Mib/sec
+* The Firebat miniPC got me 4077Mib/sec
+* And the Pi 4 4GB ~175MiB/sec (x86)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
@@ -109,6 +111,15 @@ PCs are great, but even better with **proper internet connectivity**:
 * Pi4 4GB arm64 - `192.168.0.155`
 * Pi4 2GB arm43 - `192.168.0.232`
 * x13 `192.168.0.124`
+
+Check **devices in local network**:
+
+```sh
+sudo apt install nast nmap
+
+sudo nast -m
+nmap -sP 192.168.0.1/24 | grep "scan"
+```
 
 ### Disk Benchmarks
 
