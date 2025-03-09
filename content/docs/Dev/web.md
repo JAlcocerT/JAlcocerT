@@ -32,7 +32,9 @@ These dashboards are consolidated into **"just" html information**, like static 
 
 And you bet, they are **cool and functional**.
 
-**Features** that *most likely* you will want on your Website:
+## Features for Webs
+
+**Features** that *most likely*, you will want on your Website:
 
 0. **Pre-Requisites**: Fast and Secure (SSL, https)
 1. Search: Pagefind, FuseJS,...
@@ -40,6 +42,7 @@ And you bet, they are **cool and functional**.
 3. Internationalization (i18n)
 4. A CDN?
 5. APIs: [Forms, Newsletters](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/), email marketing...
+
 
 
 {{< details title="How to get OpenGraph - OGImage right 📌" closed="true" >}}
@@ -65,6 +68,15 @@ And you bet, they are **cool and functional**.
 
 {{< /details >}}
 
+And some **add-ons**:
+
+1. Calendar meetings: see [cal.com](https://cal.com/jalcocertech/consulting)
+2. Newsletters: see [mailerlite.com](https://www.mailerlite.com/invite/225babb421546)
+3. Payments? Try stripe *which links with paypal, bank accounts, CC's*
+4. Web Analytics - Id go for GDPR compliant and cookieless, like: umami, tianji
+5. Uptime Monitoring
+6. Chatbot with AI?
+7. *Optional:* Social Contacts,...
 
 ---
 

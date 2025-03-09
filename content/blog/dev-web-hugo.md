@@ -7,12 +7,16 @@ summary: 'How to get started with HUGO as SSG and create Webs. GO & HUGO Setup.'
 url: 'using-hugo-as-website'
 ---
 
-To use HUGO, you just need **2 things**: GO language and HUGO.
+To use HUGO, you just need **2 things**:
+
+*GO language and HUGO*:
 
 * https://github.com/gohugoio/hugo/releases
 * https://go.dev/dl/
 
 > Why HUGO? It builds sites **veeeery fast**
+
+## HUGO Setup
 
 {{< details title="Setup GO & HUGO - x86 📌" closed="true" >}}
 
@@ -166,9 +170,12 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 
 ---
 
-Talking from the experience.
 
-HUGO is great to have a quick blog going for free. Thats what ive done with my [Linux Repo](https://github.com/JAlcocerT/Linux)
+> Talking from the experience:
+
+HUGO is great to have a quick blog going for free.
+
+Thats what ive done with my [Linux Repo](https://github.com/JAlcocerT/Linux)
 
 {{< callout type="info" >}}
 You can use [HUGO with Github Pages + GH Actions](https://github.com/JAlcocerT/Linux/actions). Look at those **~5s build times** ~30/40s e2e!
@@ -177,3 +184,9 @@ You can use [HUGO with Github Pages + GH Actions](https://github.com/JAlcocerT/L
 This video can be helpful to get going (hugo blowfish theme)
 
 {{< youtube "-05mOdHmQVc" >}}
+
+---
+
+{{< callout type="info" >}}
+Looking for features to add for your website? See [some ideas **here**](https://jalcocert.github.io/JAlcocerT/create-your-website/)
+{{< /callout >}}
