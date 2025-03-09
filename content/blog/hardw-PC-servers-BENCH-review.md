@@ -125,6 +125,15 @@ nmap -sP 192.168.0.1/24 | grep "scan"
 
 > https://lookup.icann.org/en
 
+Test the connectivity between local devices with iperf3: *I got ~730Mbits/s*
+
+```sh
+sudo apt update
+sudo apt install iperf3
+#iperf3 -s #on the server
+iperf3 -c 192.168.0.12 #on the other device pointing to your server
+```
+
 ### Disk Benchmarks
 
 Another very important part that affects the performance, **the drives**:

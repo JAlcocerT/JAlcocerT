@@ -22,6 +22,7 @@ sudo apt update && sudo apt upgrade
 #install NodeJS https://deb.nodesource.com/
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
 sudo apt-get install -y nodejs
+#FOR MAC #brew install node
 
 # Verify installation
 node -v   # Should show Node.js version - 20.18.1

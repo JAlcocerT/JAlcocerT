@@ -9,15 +9,24 @@ url: 'os-for-nas'
 Ive been pretty much **comfortable with these OS's**:
 
 1. Ubuntu LTS
-2. Zorin OS (Great if you come from Windows)
+2. Zorin OS (Great if you come from Windows), Linux Mint,...
 3. Garuda Linux 
 4. If you miss XP, see https://xpq4.sourceforge.io/
-5. For apple users: ElementaryOS or [PearOS](https://pearos.xyz/)
+5. For apple users: ElementaryOS, Deepin or [PearOS](https://pearos.xyz/)
 
-{{< details title="Other Intersting Linux 📌" closed="true" >}}
+{{< details title="Other Intersting Linux | Flatpak for All 📌" closed="true" >}}
 
 * Whonix / Tails  - Debian based
 * Qubes - Fedora based
+
+```sh
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+#flatpak install flathub io.gitlab.librewolf-community
+#flatpak install flathub org.videolan.VLC
+#flatpak install flathub com.brave.Browser
+```
 
 {{< /details >}}
 
@@ -33,8 +42,10 @@ I love to start with the **Garuda default wallpaper**.
 
 Time to try something new?
 
+But...Too many OS's? 
+
 {{< callout type="info" >}}
-Too many OS's? Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create Multi-Boots
+Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-Boots**
 {{< /callout >}}
 
 Getting ready for a **network attached storage**:
@@ -51,13 +62,19 @@ tailscale status
 #tailscale down
 ```
 
-{{< details title="How to Setup Tailscale DNS 📌" closed="true" >}}
 
-TBD
+### Benchmarks
+
+{{< details title="How to Setup Quick Benchmarks 📌" closed="true" >}}
+
+```sh
+curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Benchmark101.sh
+chmod +x Benchmark101.sh & ./Benchmark101.sh
+```
+
 
 {{< /details >}}
 
-### Benchmarks
 
 ```sh
 sudo apt install hardinfo
@@ -248,12 +265,31 @@ You can also have a look to: ModSecurity, Naxsi, Open AppSec, SafeLine,...
 sudo apt install corectrl
 ```
 
-![alt text](/blog_img/hardware/energy/corectl.png)
+![CoreCTL](/blog_img/hardware/energy/corectl.png)
 
 {{% details title="How to check for duplicate images - dupeGuru" closed="true" %}}
 
 ```sh
+sudo apt install dupeguru
+```
 
+{{% /details %}} 
+
+{{% details title="Setup Nextcloud, Photo Tools" closed="true" %}}
+
+
+```sh
+curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Selfhosting_101.sh 
+chmod +x Selfhosting_101.sh & sudo ./Selfhosting_101.sh
+```
+
+1. [Nextcloud Docker Compose](https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/NextCloud_RPi_Stack.yaml)
+
+```sh
+sudo flatpak install flathub com.nextcloud.desktopclient.nextcloud -y
+#See how quick you are transfering data
+#sudo apt install nload
+#nlad
 ```
 
 {{% /details %}} 
