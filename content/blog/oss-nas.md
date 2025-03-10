@@ -13,6 +13,7 @@ Ive been pretty much **comfortable with these OS's**:
 3. Garuda Linux 
 4. If you miss XP, see https://xpq4.sourceforge.io/
 5. For apple users: ElementaryOS, Deepin or [PearOS](https://pearos.xyz/)
+6. SelfHosting Focused: CasaOS
 
 {{< details title="Other Intersting Linux | Flatpak for All 📌" closed="true" >}}
 
@@ -20,6 +21,7 @@ Ive been pretty much **comfortable with these OS's**:
 * Qubes - Fedora based
 
 ```sh
+#sudo apt update & sudo apt upgrade -y
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 

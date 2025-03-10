@@ -61,7 +61,7 @@ For example, in video or audio, the **bit rate** determines the **quality** and 
 
 But there is live beyond the CLI.
 
-And I have been getting pretty confortable with KDEnlive for basic usage.
+And I have been getting pretty confortable with **KDEnlive for *basic usage***.
 
 ### KDEnLive
 
@@ -84,7 +84,7 @@ Cutting a Video:
 * `CTRL + Shift + G` - to ungroup and being able to remove audio only from a video
     * Audio fade out is a good choice to finish the audios
 
-> Once muted, you can use [Youtube free licensed music](https://www.youtube.com/audiolibrary?feature=blog) for your videos - https://www.youtube.com/audiolibrary
+> Once muted, you can use [Youtube **free licensed music**](https://www.youtube.com/audiolibrary?feature=blog) for your videos - https://www.youtube.com/audiolibrary
 
 
 {{< details title="Rotate & Zoom in KDenLive 📌" closed="true" >}}

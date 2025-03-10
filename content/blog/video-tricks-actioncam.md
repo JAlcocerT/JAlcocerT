@@ -329,10 +329,32 @@ ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -
   After using this commands several times...
 
   I thought about creating the scripts.
+
+  See music for your videos, *from youtube*, [here](https://www.youtube.com/audiolibrary).
   {{< /tab >}}
 
   {{< tab >}}
-  **Linux script**
+  **[Linux script](https://github.com/JAlcocerT/Linux/blob/main/Z_Linux_Installations_101/FFMpeg/Video_ffmpeg.sh)**
+
+
+```sh
+sudo apt install ffmpeg
+#scp /home/jalcocert/Desktop/'Jungle Atmosphere Morning.mp3' jalcocert@192.168.0.12:/home/jalcocert/Desktop/CAM2/
+
+#rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #it creates the folder if its not there | no overwrite
+#rsync -avP *.MP4 /media/jalcocert/Backup2TB/DJI-OA5Pro #copy it to an external SSD
+rsync -avP --include='*.MP4' --exclude='*' /media/jalcocert/OsmoAction/DCIM/DJI_001/ ~/Desktop/CAM2/
+
+#rm *.LRF #clean just LRF files
+#ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
+#ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
+#ffmpeg -stream_loop -1 -i "Jungle Atmosphere Morning.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
+
+#wget https://raw.githubusercontent.com/JAlcocerT/Linux/refs/heads/main/Z_Linux_Installations_101/FFMpeg/Video_ffmpeg.sh
+chmod +x Video_ffmpeg.sh
+./Video_ffmpeg.sh
+```
+
   {{< /tab >}}
 
   {{< tab >}}**Windows script**
