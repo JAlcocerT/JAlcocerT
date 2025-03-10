@@ -460,7 +460,7 @@ Kudos to [awsome-docker-compose](https://awesome-docker-compose.com/apps/photo-s
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
-> QRs can also be done with Inkscape
+> QRs can also be done with [Inkscape](https://flathub.org/apps/org.inkscape.Inkscape) or with [IT-Tools as a container](https://github.com/JAlcocerT/Docker/tree/main/Z_Dockge/stacks/it-tools)
 
 3. Make sure to **secure your Hetzner Server**
 

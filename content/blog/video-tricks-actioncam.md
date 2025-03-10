@@ -1,6 +1,6 @@
 ---
 title: "More video Tricks [with FFMPEG]"
-date: 2025-02-12
+date: 2025-03-09
 draft: false
 tags: ["Dev"]
 description: 'Quick videos with action cameras. Testing Python GPX overlay to MP4.'
@@ -323,9 +323,25 @@ ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -
 
 {{< /details >}}
 
-**Linux script**
+{{< tabs items="FFMPEG Scripts,For Linux,For Windows" >}}
 
-**Windows script**
+  {{< tab >}}
+  After using this commands several times...
+
+  I thought about creating the scripts.
+  {{< /tab >}}
+
+  {{< tab >}}
+  **Linux script**
+  {{< /tab >}}
+
+  {{< tab >}}**Windows script**
+  {{< /tab >}}
+
+{{< /tabs >}}
+
+
+
 
 
 #### Telemetry Data

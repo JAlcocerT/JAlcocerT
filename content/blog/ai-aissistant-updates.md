@@ -1,6 +1,6 @@
 ---
 title: "Streamlit and Assistant Updates"
-date: 2025-03-10
+date: 2025-04-10
 draft: false
 tags: ["dev"]
 description: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT) Generator, Speech Rater...'
@@ -200,7 +200,7 @@ If that was not enough...
 
 How about adding a **QR tool**?
 
-Like the one I used for [this wedding](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt).
+Like the one I used for [this weddin](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt).
 
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)

@@ -371,6 +371,14 @@ jobs:
 
 ### Jekyll
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/" title="Jekyll with Github Pages" image="/blog_img/web/GHAnPages/jekyll-rpi-gha-cicd.png" subtitle="Github Actions pushing content to GH Pages with Jekyll" >}}
+{{< /cards >}}
+
+<!-- 
+![alt text](../../static/blog_img/web/GHAnPages/jekyll-rpi-gha-cicd.png)
+-->
+
 ```yml
 #https://github.com/JAlcocerT/RPi/blob/main/.github/workflows/pages-deploy.yml
 
@@ -449,7 +457,6 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-As implemented in the RPI Project - https://github.com/JAlcocerT/RPi/
 
 ---
 
