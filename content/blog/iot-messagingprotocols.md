@@ -72,6 +72,12 @@ MQTT is widely used in industries such as smart homes, industrial automation, an
 MQTT works as PUB/SUB - See a sample project with a Pi https://jalcocert.github.io/RPi/posts/rpi-mqtt/  💻 
 {{< /callout >}}
 
+#### MQTT Use Case
+
+**Monitor a Car Battery Remotely using ESP8266**
+
+https://www.youtube.com/watch?v=VnGRFwDrLHo
+
 
 ### RabbitMQ
 

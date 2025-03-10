@@ -289,10 +289,21 @@ chmod +x Selfhosting_101.sh & sudo ./Selfhosting_101.sh
 sudo flatpak install flathub com.nextcloud.desktopclient.nextcloud -y
 #See how quick you are transfering data
 #sudo apt install nload
-#nlad
+#nload
 ```
 
+2. [Photo Tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/)
+
+
 {{% /details %}} 
+
+See how each Docker Service is **consuming resources**:
+
+```sh
+#htop
+sudo docker stats nextcloud
+#sudo docker prune
+```
 
 ### What do I look in a MiniPC?
 

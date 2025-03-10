@@ -26,7 +26,7 @@ And Recently, this new release got my attention:
 
 Let me show you **how to get started with MicroControllers**
 
-What you need to know about microcontrollers:
+What you need to know **about microcontrollers**:
 
 * They dont need an OS
 * They run in loop whatever logic is loaded
@@ -233,7 +233,7 @@ View -> files
 The Pico will look for a **main.py** to execute in loop
 View -> plotter
 
-CTRL+D for soft reboot and load the program
+`CTRL+D` for soft reboot and load the program
 
 
 ```py

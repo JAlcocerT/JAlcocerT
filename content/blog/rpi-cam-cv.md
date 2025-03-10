@@ -264,22 +264,23 @@ Now, you will access MotionEye at `localhost:8765` with default user: `admin` an
 
 ### Frigate
 
+A complete and local NVR designed for **Home Assistant with AI object detection**.
+
+Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras.
+
 * https://docs.frigate.video/
 
-A complete and local NVR designed for Home Assistant with AI object detection. Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras.
 
-> NVR with realtime local object detection for IP cameras
+> NVR with **realtime local object detection** for IP cameras
 
 ### Other Options for CV with RPi
 
 See other ways of doing computer vision with a raspberry Pi:
 
 * https://github.com/silvanmelchior/RPi_Cam_Web_Interface
-* <https://www.youtube.com/watch?v=tT5gHNDBHXo>
+<!-- * <https://www.youtube.com/watch?v=tT5gHNDBHXo> -->
 
 {{< youtube "tT5gHNDBHXo" >}}
-
-
 
 ---
 
@@ -325,8 +326,6 @@ Build multimodal AI applications with cloud-native stack:
 
 
 {{< youtube "tT5gHNDBHXo" >}}
-
-
 
 * Node-RED with Raspberry Pi Camera (Take Photos) - https://randomnerdtutorials.com/node-red-with-raspberry-pi-camera-take-photos/
 

@@ -118,6 +118,12 @@ serve -s dist #http://localhost:3000
 ```
 {{< /details >}}
 
+## Selhostable Link Tools
+
+1. [LinkStack](https://linkstack.org/docker/) - Selfhostable with [this docker config](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/LinkStack_docker-compose.yml)
+
+>  A simple to set up [docker variant of LinkStack](https://github.com/linkstackorg/linkstack-docker). LinkStack is a highly customizable link sharing platform with an intuitive, easy to use user interface. 
+
 ---
 
 ## FAQ
@@ -147,7 +153,15 @@ You can use **Tina together with a Github Repository**
 
 ### Web Analytics - A Comparison
 
-Microsoft Dynamics 365 enhances marketing efforts by offering the capability to send emails directly from within the context of the records you are working on. 
+
+
+{{< callout type="info" >}}
+I have collected some [Selfhostable WebAn Tools config files **here**](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics)
+{{< /callout >}}
+
+You also have the closed sourced ones, like:
+
+**Microsoft Dynamics 365** enhances marketing efforts by offering the capability to send emails directly from within the context of the records you are working on. 
 
 This feature integrates seamlessly with its robust marketing automation capabilities.
 

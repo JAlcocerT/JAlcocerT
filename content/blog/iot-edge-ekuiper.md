@@ -5,7 +5,7 @@ date: 2025-12-31
 draft: true
 ---
 
-Stream Processing at the IoT Edge, or...AIoT?
+Stream Processing at the IoT Edge, or...**AIoT**?
 
 > Ekuiper works great when combined with [EMQx Broker](https://jalcocert.github.io/RPi/posts/rpi-mqtt/#install-mqtt-broker)
 

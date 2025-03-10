@@ -122,9 +122,9 @@ pip install -r requirements.txt
 
 #### Saving IoT Data
 
+Lets save all the sensor reads into a **SQL database**.
 
-
-{{< details title="Python | DHT Data to DB 📌" closed="true" >}}
+{{< details title="Python | DHT Data to SQL DB 📌" closed="true" >}}
 
 
 ```py
