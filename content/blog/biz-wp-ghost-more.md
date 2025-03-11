@@ -2,7 +2,7 @@
 title: "Spinning Webs - WPs, Ghost,..."
 date: 2025-03-04
 draft: false
-description: 'Websites for all. Without the code.'
+description: 'Websites for all. Without the code. But Selfhostable Containers.'
 url: 'no-code-websites'
 ---
 
@@ -213,6 +213,9 @@ To sell to the masses, **you need a cool UI** for the users to manage their stuf
 If you are looking for a [LinkTree Alternative, see LinkStack](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/)
 {{< /callout >}}
 
+What's next?
+
+Maybe place [some GDPR compliant Web Analytics](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics) or add some [other cool features](https://jalcocert.github.io/JAlcocerT/create-your-website/#features-for-webs)
 
 <!-- 
 * Weddings...

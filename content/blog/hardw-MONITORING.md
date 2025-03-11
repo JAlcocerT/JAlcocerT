@@ -92,7 +92,7 @@ Its not just a **web analytics** tool!
 ![Tianji Server Monitoring](/blog_img/Monitoring/tianji-server-monit.png)
 
 {{< cards cols="1" >}}
-  {{< card link="https://fossengineer.com/setup-tianji-with-docker/" title="Tianji Setup" >}}
+  {{< card link="https://fossengineer.com/setup-tianji-with-docker/" title="Tianji Setup 101" >}}
 {{< /cards >}}
 
 You just need to setup the given **script on your server** that pops up when you try to add it.

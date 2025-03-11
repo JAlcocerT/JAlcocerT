@@ -71,6 +71,7 @@ See the config file [here](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS
 * Each of them gets a different static path, like `url.com/@user123`
 * Built in Link Analytics
 * Cool themes working out of the box: https://linkstack.org/themes/
+  * Just download them as `.zip` and upload them as admin
 * Add also custom WebAn tools `http://192.168.0.155/admin/config#2`
 * Allows for instance backups via UI `http://192.168.0.155/admin/config#3`
 

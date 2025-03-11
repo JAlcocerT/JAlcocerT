@@ -154,7 +154,7 @@ Some [**CSS**](https://jalcocert.github.io/JAlcocerT/blog/dev-css/) will do the 
 
 https://stateofjs.com/en-US
 
-2. **Web Analytics**: you have several options, with [Umami](https://fossengineer.com/selfhosting-umami-with-docker/) or Tianji *as alternatives to Google Analytics.*
+2. **Web Analytics**: you have **several options**, like [Umami](https://fossengineer.com/selfhosting-umami-with-docker/) or Tianji *as alternatives to Google Analytics.*
 
 
 {{% /steps %}}

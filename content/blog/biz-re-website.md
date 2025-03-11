@@ -290,9 +290,11 @@ This is kind of a **four in one project**:
 2. **Real Estate Calculator** to engage users and potential clients
 3. **Gen AI App** to provide recommendations based on the available houses
 4. **Scrapping Tool** to get Photos automatically
+5. **Social Link Website**: with LinkStack, *as seen [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)*
+
+6. **Bonus**: Newsletter (with mailerlite) + GDPR Compliant Web Analytics: [Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
 
 
-5. **Bonus**: Newsletter (with mailerlite) + GDPR Compliant Web Analytics: [Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
 
 **Result**: after trying with few alternatives *https://moises-era.pages.dev (vs) https://dm-realestate.web.app/*
 

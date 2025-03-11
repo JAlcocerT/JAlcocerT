@@ -40,6 +40,20 @@ Well, I can think already about few examples:
 1. /JAlcocerT/machine-learning-the-roc-curve-in-detail
 2. 
 
+**The Jacobian**
+
+<!-- https://www.youtube.com/watch?v=wCZ1VEmVjVo
+ -->
+
+{{< youtube "wCZ1VEmVjVo" >}}
+
+**Gradients and Partial Derivatives**
+
+<!-- https://www.youtube.com/watch?v=GkB4vW16QHI -->
+
+{{< youtube "GkB4vW16QHI" >}}
+
+
 ## ODE - 
 
 Ordinary Differential Equations!
