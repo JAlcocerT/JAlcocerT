@@ -141,9 +141,6 @@ curl -s https://bachatafests.com/sitemap_index.xml -o /dev/null -w "%{http_code}
 {{< /details >}}
 
 
-
-
-
 ## Spinning World Map
 
 * Found it at theme: https://github.com/Ladvace/astro-bento-portfolio
@@ -213,7 +210,9 @@ export default defineConfig({
 {{< /dropdown >}}
 
 
-## FAQ with AlpineJS and TailwindCSS
+## FAQ for Astro
+
+**With AlpineJS and TailwindCSS**
 
 {{< dropdown title="Get a cool FAQ for Astro 👇" closed="true" >}}
 
@@ -354,11 +353,11 @@ Something like: `fattouche.ns.cloudflare.com, leanna.ns.cloudflare.com`
 
 * rss
 
-* Image Optimization - It's built in in astro, and you dont want huge images for performance.
+* Image Optimization - It's built in in astro: *you dont want huge images for performance*.
 
 ### Astro Cookies
 
-https://docs.astro.build/en/reference/api-reference/#astrocookies
+* https://docs.astro.build/en/reference/api-reference/#astrocookies
 
 ### Astro OpenGraph and SEO Metadata
 
@@ -368,7 +367,7 @@ https://docs.astro.build/en/reference/api-reference/#astrocookies
 
 #### Primitives
 
-https://github.com/radix-ui/primitives - Unstyled, accessible, open source React primitives for high-quality web apps and design systems.
+* https://github.com/radix-ui/primitives - Unstyled, accessible, open source React primitives for high-quality web apps and design systems.
 
 
 > Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos.
@@ -396,14 +395,14 @@ https://github.com/mermaid-js/mermaid-cli
 
 ### User Management / Authentication
 
-https://authjs.dev/
-https://github.com/nextauthjs/next-auth
-https://github.com/nextauthjs/next-auth?tab=ISC-1-ov-file#readme
+* https://authjs.dev/
+  * https://github.com/nextauthjs/next-auth
+  * https://github.com/nextauthjs/next-auth?tab=ISC-1-ov-file#readme
 
-https://authjs.dev/getting-started/integrations
+* https://authjs.dev/getting-started/integrations
 
 > Authentication for the Web.
 
-it works with Authentik! - https://authjs.dev/getting-started/providers/authentik
+It works with **Authentik**! - https://authjs.dev/getting-started/providers/authentik
 
-with wordpress, mastodon as well
+> ith wordpress, mastodon as well :)

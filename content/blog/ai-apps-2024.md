@@ -235,8 +235,8 @@ ssh ubuntu@57.128.public.ip
 
 ### Thanks To
 
-https://akashrajpurohit.com/blog/setup-caddy-with-automatic-ssl-certificates-with-cloudflare/
-https://akashrajpurohit.com/blog/setup-authelia-for-sso-authentication/
+* https://akashrajpurohit.com/blog/setup-caddy-with-automatic-ssl-certificates-with-cloudflare/
+* https://akashrajpurohit.com/blog/setup-authelia-for-sso-authentication/
 
 ---
 

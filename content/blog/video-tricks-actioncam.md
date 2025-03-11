@@ -59,21 +59,27 @@ Recording at **4K/60fps RS+** and standard (no UW, h.265) and **high bitrate**.
 
 {{< youtube "Ke-8yhgC_uU" >}}
 
-> All of this at -2C 
+To fill the internal memory, you get around ~57 min of video.
+
+> All of this at -2C. For YT these are `2160p60`.
 
 4. **With 4K/120 RS+**
 
 Recording with **high bitrate**, I got 4 different files with total size of 48GB (full internal memory) and battery drained from 100 to 37% (-63%)
 
-> In youtube will be as 2160p60 (4k)
+> In youtube will be as `2160p60` (4k), but 60 fps as well 
 
 ### 2.7K
 
 5. **2.7k/30 RS+** and high bit rate
 
-Te record ~ it consumed ~50% of the battery.
+> In youtube you will see those as `1440p`
 
-> In youtube you will see those as 1440p
+6. **2.7/60/RS+/high BR**
+
+> `1440p60
+
+`
 ---
 
 ## Data Overlay with Python
@@ -103,7 +109,9 @@ How about recording the route on another app and just syncing it?
 
 {{< details title="Gemini Overlay explanation 📌" closed="true" >}}
 
-Building a Python tool to overlay GPX data onto MP4 videos is a challenging but rewarding project. Here's a breakdown of the steps and libraries you'll need:
+Building a Python tool to overlay GPX data onto MP4 videos is a **challenging but rewarding project**. 
+
+Steps and libraries you'll need:
 
 **1. Libraries:**
 
@@ -222,7 +230,9 @@ At least compared from where I started!
 
 ### Transfering Files
 
-**Moving just MP4's** will save you ~23% of the transfer load:
+**Moving just MP4's** will save you ~23% of the transfer load.
+
+I prefer to do it with **rsync**:
 
 ```sh
 #cp *.MP4 /home/jalcocert/Desktop/oa5pro/
@@ -240,6 +250,7 @@ rsync -avP --include='*.MP4' --exclude='*' /media/jalcocert/OsmoAction/DCIM/DJI_
 
 ### Quick Videos - FFMPEG CLI
 
+Making things simpler with CLI.
 
 {{< details title="FFMPEG CLI Tricks within Linux 📌" closed="true" >}}
 

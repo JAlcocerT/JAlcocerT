@@ -7,13 +7,13 @@ cover:
     alt: "Summarize Youtube Videos with AI" # alt text
     caption: "Using Groq to Summarize Youtube Videos." # display caption under cover
 tags: ["Docker","Gen-AI","Python","Dev","Self-Hosting"]
-description: 'Groq Video Summaries with LLMs, Streamlit (and the streamlit-authenticator auth package).'
+description: 'Groq Video Summaries with LLMs, Streamlit (With streamlit-authenticator auth package). Compared with Logto IAM.'
 url: 'summarize-yt-videos'
 ---
 
 How to **avoid falling into click baits** with Generative AI.
 
-Use Groq and Streamlit to summarize and video and to know if its worth your time!
+Use **Groq and Streamlit** to summarize youtube videos *so that you know if its worth your time*!
 
 <!-- 
 * How to chat with websites(Streamlit) =>>> https://github.com/alejandro-ao/chat-with-websites
@@ -446,7 +446,7 @@ Feel free to ask for **Summaries about Youtube Videos with Groq**:
 
 ### Adding Simple Streamlit Auth
 
-We can use this simple package: https://pypi.org/project/streamlit-authenticator/
+We can use this **simple package**: https://pypi.org/project/streamlit-authenticator/
 
 * https://github.com/mkhorasani/Streamlit-Authenticator
   * https://github.com/mkhorasani/Streamlit-Authenticator?tab=Apache-2.0-1-ov-file#readme ✅
@@ -466,7 +466,7 @@ if __name__ == "__main__":
     main()        
 ```
 
-It is a referencing a `Auth_functions.py` in another file: where the sample users are created
+It is a referencing a `Auth_functions.py` in another file, *where the sample users are created*.
 
 {{< dropdown title="Define Auth_functions.py in a separate file with ⏬" closed="true" >}}
 
@@ -477,7 +477,7 @@ import streamlit_authenticator as stauth
 def login():
     names = ['User Nick 1 🐷', 'User Nick 2']
     usernames = ['User 1', 'User 2']
-    passwords = ['SomePassForUser1', 'anotherpassword']
+    passwords = ['SomePassForUser1', 'anotherpassworduser2']
 
     hashed_passwords = stauth.Hasher(passwords).generate()
     authenticator = stauth.Authenticate(names, usernames, hashed_passwords,
@@ -572,9 +572,17 @@ But what if we need something more robust?
 
 #### How to secure the Access for your AI Apps
 
-* F/OSS Apps to manage Application access Management:
+* F/OSS Apps to manage **Application access Management**:
   * Authentik
   * **LogTo:**
+
+> [Logto](https://github.com/logto-io/logto) is an open-source *Auth0, Cognito and Firebase auth alternative* for modern apps and SaaS products, supporting OIDC, OAuth 2.0 and SAML open standards for authentication and authorization.
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mkhorasani/Streamlit-Authenticator,logto-io/logto&,type=Date)](https://star-history.com/#mkhorasani/Streamlit-Authenticator&logto-io/logto&Date)
+
+
+
 <!-- 
 https://docs.logto.io/docs/recipes/protected-app/
 https://docs.logto.io/docs/recipes/manage-users/admin-console/

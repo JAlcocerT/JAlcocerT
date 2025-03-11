@@ -50,7 +50,9 @@ I have added a complete docker stack with these [Selfhostable photo tools **here
 ### PiGallery
 
 1. Web Based. Lightweight and **no DB required**
-2. Supports GPX (and photos are showing in a Map as well)
+2. Supports [GPX](https://jalcocert.github.io/JAlcocerT/geospatial-data/) (and photos are showing in a Map as well)
+
+> Pretty cool if you have tinkered with [video telemetry](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9)
 
 
 {{< callout type="info" >}}
@@ -64,6 +66,8 @@ See PiwiGo config file [here](https://github.com/JAlcocerT/Docker/blob/main/Back
 {{< callout type="info" >}}
 See PiwiGo config file [here](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Piwigo_Docker-compose.yml)
 {{< /callout >}}
+
+With pretty cool [features](https://piwigo.org/features):
 
 
 
