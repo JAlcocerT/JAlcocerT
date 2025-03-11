@@ -1,10 +1,9 @@
 ---
 title: "Web CMS Websites "
-date: 2025-11-14
+date: 2025-03-12
 draft: true
 tags: ["AI"]
-description: "Admin Panels."
-summary: '.'
+description: "UI for custom SSGs."
 url: 'cms-for-static-websites'
 ---
 
@@ -57,8 +56,6 @@ https://github.com/GetPublii/Publii
 #### Git Based
 
 
-
-
 {{< callout type="info" >}}
 https://blog.logrocket.com/9-best-git-based-cms-platforms/
 
@@ -70,19 +67,84 @@ https://blog.logrocket.com/9-best-git-based-cms-platforms/
 
 How many cool things can be done with those generous free tiers?
 
+##### KeyStatic CMS
+
+* https://github.com/Thinkmill/keystatic
+
+> MIT | First class CMS experience, TypeScript API, Markdown & YAML/JSON based, **no DB**
+
+Keystatic CMS is a modern, open-source, headless content management system designed to **work directly with your codebase**. 
+
+{{< details title="KeyStatic key features 📌" closed="true" >}}
+
+**Core Concepts:**
+
+* **Code-First CMS:**
+    * Keystatic is built to integrate tightly with your existing development workflow. It works directly with files in your repository, such as Markdown, YAML, and JSON.
+    * This approach allows developers to maintain control over their content structure and versioning.
+* **Git-Based:**
+    * It leverages Git for content storage and version control. This means your content is stored alongside your code, providing a robust history and collaborative workflow.
+* **Headless:**
+    * Keystatic is a headless CMS, meaning it focuses on providing **content through an API** rather than dictating how that content is displayed. This allows you to **use your preferred frontend framework** (like Astro, Next.js, or Remix) to build your website or application.
+* **Local and Cloud Editing:**
+    * It offers flexibility in how you edit content. You can edit content locally during development or use Keystatic Cloud for remote editing, especially when your site is deployed.
+* **Content Structuring:**
+    * Keystatic allows you to define content schemas, ensuring consistency and organization. This is done through configuration files that define content collections and singletons.
+* **User-Friendly Interface:**
+    * Despite its code-first approach, Keystatic provides a user-friendly admin UI for content editors, making it accessible to non-technical users.
+
+**Key Advantages:**
+
+* **Developer-Friendly:**
+    * Its integration with Git and codebase-centric approach makes it ideal for developers.
+* **Version Control:**
+    * Git integration provides robust version control and collaboration features.
+* **Flexibility:**
+    * Headless architecture allows for flexibility in frontend development.
+* **Performance:**
+    * Working directly with files can lead to fast performance.
+
+
+{{< /details >}}
+
+**In essence:**
+
+Keystatic is a CMS that bridges the gap between developers and content editors, providing a seamless workflow for managing content within a codebase
+
+* https://keystatic.com/docs/installation-astro
+
+```sh
+npm create @keystatic@latest
+```
+
+**What I like about KeyStatic**
+
+It has fully local mode, but also [Github Mode](https://keystatic.com/docs/github-mode)
 
 ##### Static CMS
-{{< callout type="warning" >}}
-Archived since SeptY24
-{{< /callout >}}
 
 https://github.com/StaticJsCMS/static-cms
+
+> A Git-based CMS for Static Site Generators
+
+{{< callout type="warning" >}}
+Archived since SeptY24!
+{{< /callout >}}
+
+
 
 ##### Decap CMS
 
 https://github.com/decaporg/decap-cms
 
 > MIT |  A Git-based CMS for Static Site Generators 
+
+##### TinaCMS
+
+* https://github.com/tinacms/tinacms
+
+> Apache v2 | A fully open-source headless CMS that supports Markdown and Visual Editing
+
 
 ---
 

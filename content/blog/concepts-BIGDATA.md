@@ -1,6 +1,6 @@
 ---
 title: "Big Data Tools [Data Analytics Recap]"
-date: 2025-02-26T19:20:21+01:00
+date: 2025-03-11T19:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssistant for Tech.'
@@ -30,10 +30,68 @@ This Post is **WIP**
 
 Dont be scared. 
 
-Both are places where data is stored.
+Both are **places where data is stored**.
+
+**Data Warehouse (DWH):**
+
+* **Purpose:**
+    * Primarily designed for **structured data and business intelligence (BI) reporting**.
+    * Focuses on providing clean, processed, and organized data for analytical queries.
+* **Data Structure:**
+    * Employs a "schema-on-write" approach, meaning data is transformed and structured before being loaded into the warehouse.
+    * Typically handles structured data from transactional systems.
+* **Use Cases:**
+    * Traditional BI reporting, dashboards, and analytical queries.
+    * Providing a single source of truth for business metrics.
+* **Limitations:**
+    * Limited flexibility in handling unstructured or semi-structured data.
+    * Can be costly and complex to scale.
+    * ETL (Extract, Transform, Load) processes can be time-consuming.
+
+**Data Lakehouse:**
+
+* **Purpose:**
+    * Aims to combine the best of data lakes and data warehouses.
+    * Enables both data science and BI workloads on a single platform.
+* **Data Structure:**
+    * Supports "schema-on-read" and "schema-on-write" approaches, allowing for flexibility in handling various data types.
+    * Can store **structured, semi-structured, and unstructured data**.
+* **Use Cases:**
+    * Advanced analytics, machine learning, and AI.
+    * BI reporting and dashboards.
+    * Real-time analytics and streaming data processing.
+* **Advantages:**
+    * Increased flexibility and scalability.
+    * Reduced data duplication and complexity.
+    * Ability to perform diverse analytics on a single platform.
+    * Supports ACID transactions.
+* **Key differentiators:**
+    * They enable data lakes to have the data management and transaction capabilities of a data warehouse.
+    * They add metadata layers to data lakes, to provide increased data governance.
+
+**Key Comparisons:**
+
+* **Data Types:**
+    * DWH: Primarily structured.
+    * Lakehouse: Structured, semi-structured, and unstructured.
+* **Schema:**
+    * DWH: Schema-on-write.
+    * Lakehouse: Schema-on-read and schema-on-write.
+* **Use Cases:**
+    * DWH: BI reporting.
+    * Lakehouse: BI, AI, machine learning, and advanced analytics.
+* **Flexibility:**
+    * Lakehouses are much more flexible.
+
+In essence, the **data lakehouse is a modern data architecture** that seeks to overcome the limitations of traditional data warehouses and data lakes.
+
+It provides a more versatile and efficient platform for organizations to manage and analyze their data.
+
 
 
 {{< /details >}}
+
+
 
 Thats was were can store.
 
@@ -41,16 +99,109 @@ But how to **process the data**?
 
 {{< details title="Data Processing Engines 📌" closed="true" >}}
 
-**What is Normalization?**  
+Data processing engines are software systems designed to execute data transformations and computations at scale. They form the core of many modern data architectures, enabling the handling of massive datasets for analytics, machine learning, and other data-intensive applications. Here's a breakdown of their key characteristics and types:
+
+**Core Functions:**
+
+* **Data Transformation:**
+    * They perform operations like filtering, sorting, aggregating, and joining data.
+* **Scalability:**
+    * They are designed to distribute workloads across multiple machines, allowing them to process large volumes of data.
+* **Fault Tolerance:**
+    * They often incorporate mechanisms to handle failures and ensure data processing continues even if some machines go offline.
+* **Data Storage Integration:**
+    * They can read data from and write data to various storage systems, such as data lakes, data warehouses, and databases.
+
+**Types of Data Processing Engines:**
+
+* **Batch Processing Engines:**
+    * These engines process data in large, discrete batches.
+    * They are well-suited for tasks that don't require real-time processing.
+    * Examples:
+        * **Apache Hadoop MapReduce:** A classic batch processing framework.
+        * **Apache Spark (Spark SQL):** While Spark can also do streaming, Spark SQL is very good at batch processing.
+* **Stream Processing Engines:**
+    * These engines process data in real-time as it arrives.
+    * They are used for applications that require low-latency processing of continuous data streams.
+    * Examples:
+        * **Apache Kafka Streams:** A stream processing library built on top of Apache Kafka.
+        * **Apache Flink:** A powerful stream processing framework.
+        * **Apache Spark Streaming/Structured Streaming:** Spark's stream processing capabilities.
+* **Interactive Query Engines:**
+    * These engines are designed for interactive data exploration and analysis.
+    * They provide fast query response times, enabling users to quickly explore and analyze data.
+    * Examples:
+        * **Apache Spark SQL:** Also used for interactive queries.
+        * **Apache Impala:** A massively parallel processing (MPP) SQL query engine.
+        * **Presto/Trino:** Distributed SQL query engines.
 
 {{< /details >}}
 
+In essence, data processing engines are the workhorses of modern data systems, enabling organizations to extract valuable insights from their vast data resources.
 
-{{< details title="The Data Catalogue📌" closed="true" >}}
+{{< details title="The Data Catalogue 📌" closed="true" >}}
+
+Looking into **open-source data catalog** tools?
+
+Some of the most prominent ones:
+
+* **Apache Atlas:**
+    * A powerful and extensible metadata management and governance framework.
+    * It provides capabilities for classifying, governing, and discovering data assets.
+    * It's widely used in Hadoop ecosystems.
+* **DataHub:**
+    * Originally developed at LinkedIn, DataHub is a modern metadata platform.
+    * It offers features for data discovery, data lineage, and data governance.
+    * It's designed to be highly scalable and adaptable to evolving data environments.
+* **OpenMetadata:**
+    * A unified metadata platform that aims to provide a single place for all metadata.
+    * it provides data discovery, data observability and data governance.
+    * it has a strong and growing community.
+
 
 {{< /details >}}
 
 {{< details title="Apache Iceberg, Nessie and Time Travel" closed="true" >}}
+
+
+* **Apache Iceberg:**
+    * Apache Iceberg is a table format for large analytic datasets. It focuses on providing a high-performance, reliable, and evolving table format for data lakes. While **Iceberg stores metadata about the tables** (schema, partitions, etc.), it's primarily a table format, not a full-fledged data catalogue.
+    
+> It provides some of the underpinnings that a data catalogue would use.
+
+* **Project Nessie:**
+    * Project Nessie is a **Git-like transaction layer for data lakes**. It allows you to create branches and tags of your data, enabling version control and collaborative data management. While Nessie manages metadata and provides a versioned view of data, it's more about data versioning and branching than a comprehensive data catalogue.
+    
+> Nessie helps to manage the metadata that a data catalogue would use.
+
+When discussing *Nessie namespaces* it's important to understand how they function within the context of Project Nessie and its relationship with data lake technologies like Apache Iceberg. Here's a breakdown:
+
+**Understanding Nessie and Namespaces:**
+
+* **Nessie's Role:**
+    * Project Nessie provides a Git-like version control layer for data lakes. This allows for branching, tagging, and committing changes to data in a way that's familiar to software developers.
+    * It primarily works with table formats like Apache Iceberg, enabling transactional capabilities and versioning.
+* **Namespaces in Data Catalogs:**
+    * In data catalogs, namespaces are used to organize and group tables and other data assets. They provide a hierarchical structure that makes it easier to manage large numbers of data objects.
+    * Think of them like folders in a file system.
+* **Nessie's Approach to Namespaces:**
+    * Nessie handles namespaces in a somewhat unique way. Notably, Nessie namespaces are often described as "implicit."
+    * This means that you don't necessarily have to explicitly create or delete namespaces in the same way you might in other systems.
+    * Instead, Nessie infers namespaces based on the structure of your table identifiers.
+    * Essentially, if you create a table with an identifier like `my_namespace.my_table`, Nessie will recognize `my_namespace` as a namespace.
+    * From the documentation of Apache iceberg, regarding the Nessie catalog:
+        * "Namespaces in Nessie are implicit and do not need to be explicitly created or deleted. The create and delete namespace methods are no-ops for the NessieCatalog."
+* **Practical Implications:**
+    * This implicit approach simplifies namespace management in Nessie.
+    * It aligns with Nessie's goal of providing a flexible and efficient way to version and manage data lake assets.
+
+**In essence:**
+
+* A Nessie namespace is a logical grouping of data assets, primarily tables, within a Nessie-managed data lake.
+* Nessie's handling of namespaces is often implicit, meaning they are inferred rather than always explicitly created.
+
+
+
 
 {{< /details >}}
 
@@ -103,6 +254,12 @@ MinIO - These are open s3 compatible buckets.
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/apps/ai-assistant.png" subtitle="For Data Analytics and SelfHosting." >}}
 {{< /cards >}}
+
+
+
+{{< callout type="warning" >}}
+Many of these tools are [SelfHostable with Docker Container **config files**](https://github.com/JAlcocerT/Docker/tree/main/Big_Data)
+{{< /callout >}}
 
 
 ### SQL

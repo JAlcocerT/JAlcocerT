@@ -3,7 +3,7 @@ title: "How to create a free Web (ASTRO/HUGO/Jekyll) with Github Pages"
 date: 2024-09-08
 draft: false
 tags: ["Dev"]
-summary: 'How to get a Free Webpage for your Projects with Github Pages.'
+description: 'How to get a Free Webpage for your Projects with Github Pages. Github Actions + Github Pages Setup.'
 url: 'how-to-use-github-pages'
 ---
 

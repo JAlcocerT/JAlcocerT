@@ -165,9 +165,11 @@ https://stateofjs.com/en-US
 
 ## Setup a Static CMS
 
-There are many alternatives! /blog/cms-for-static-websites
+There are [many CMS alternatives](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites)!
 
-1. https://github.com/payloadcms/payload
+1. Payload - https://github.com/payloadcms/payload
+2. KeyStatic CMS - *As seen with Mizar landing Theme*
+3. TinaCMS - 
 
 ---
 
