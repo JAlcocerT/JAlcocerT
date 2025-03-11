@@ -10,6 +10,8 @@ url: 'no-code-websites'
 
 Lets see some *no code* websites that you can use at a Home Server/VPS.
 
+> [One Stack deploy them all with Dockge **here**](https://github.com/JAlcocerT/Docker/blob/main/Z_Dockge/stacks/Webs/Compose.yaml)
+
 ### Just Get Wordpress
 
 No time for tinkering with web dev stuff?
@@ -208,7 +210,7 @@ services:
 To sell to the masses, **you need a cool UI** for the users to manage their stuff and make it scalable.
 
 {{< callout type="info" >}}
-If you are looking for a [LinkTree Alternative](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/)
+If you are looking for a [LinkTree Alternative, see LinkStack](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/)
 {{< /callout >}}
 
 

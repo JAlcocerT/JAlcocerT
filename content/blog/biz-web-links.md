@@ -67,8 +67,22 @@ See the config file [here](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS
 
 2. [**LinkStack**](https://linkstack.org/docker/) - Selfhostable with [this docker config](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/LinkStack_docker-compose.yml). I covered this one [here already](https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/).
 
+* It has a cool UI to manage users: `http://192.168.0.155/admin/config`
+* Each of them gets a different static path, like `url.com/@user123`
+* Built in Link Analytics
+* Cool themes working out of the box: https://linkstack.org/themes/
+* Add also custom WebAn tools `http://192.168.0.155/admin/config#2`
+* Allows for instance backups via UI `http://192.168.0.155/admin/config#3`
+
 >  A simple to set up [docker variant of LinkStack](https://github.com/linkstackorg/linkstack-docker). LinkStack is a highly customizable link sharing platform with an intuitive, easy to use user interface. 
 
+Both are really light weight to use even on Raspberry Pis:
+
+```sh
+#htop
+sudo docker stats linkstack
+#sudo docker prune
+```
 
 ## Bento Portfolio as LinkinBio Alternative
 
