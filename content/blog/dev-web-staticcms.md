@@ -161,7 +161,7 @@ So lets adjust `keystatic.config.tsx` and `content.config/ts`:
 			path: `prod/src/data/bio/`,
 ```
 
-and also the astro content collection file accordingly:
+and also the **astro content collection** file accordingly:
 
 ```ts
 const bioCollection = defineCollection({
@@ -204,13 +204,19 @@ This implies that the guide *doesn't* directly address how to use Keystatic with
 {{< details title="SSR vs SSG? 📌" closed="true" >}}
 
 
-* **SSR (Server-Side Rendering):**  In SSR, your Astro components are rendered on the server when a user requests a page.  This means the server generates the HTML and sends it to the client (the user's browser).  Keystatic, as a content management system (CMS), likely needs a server-side component to interact with its data and serve it to your Astro components.  The server can dynamically fetch content from Keystatic and incorporate it into the page before sending it to the user.
+* **SSR (Server-Side Rendering):**  In SSR, your Astro components are rendered on the server when a user requests a page.  This means the server generates the HTML and sends it to the client (the user's browser).  
 
-* **SSG (Static Site Generation):** In SSG, your Astro project is built into a set of static HTML files at build time.  This means there's no server involved when a user visits your site; the pre-generated HTML is simply served.  This presents a challenge for Keystatic because it typically requires a server to function.  If you're generating static pages, there's no server to dynamically fetch content from Keystatic *during runtime*.
+Keystatic, as a content management system (CMS), likely needs a server-side component to interact with its data and serve it to your Astro components.  The server can dynamically fetch content from Keystatic and incorporate it into the page before sending it to the user.
+
+* **SSG (Static Site Generation):** In SSG, your Astro project is built into a set of static HTML files at build time.  This means there's no server involved when a user visits your site; the pre-generated HTML is simply served.
+
+This presents a challenge for Keystatic because it typically requires a server to function.  If you're generating static pages, there's no server to dynamically fetch content from Keystatic *during runtime*.
 
 **Why the guide likely focuses on SSR:**
 
-The guide probably focuses on SSR because it's the more straightforward approach for integrating a CMS like Keystatic.  With SSR, you have a server that can:
+The guide probably focuses on SSR because it's the more straightforward approach for integrating a CMS like Keystatic.
+
+With SSR, you have a server that can:
 
 1. **Connect to Keystatic:**  The server can make requests to Keystatic's API to retrieve content.
 2. **Dynamically generate pages:** Based on the content from Keystatic, the server can render the appropriate Astro components and generate the HTML.
@@ -218,7 +224,9 @@ The guide probably focuses on SSR because it's the more straightforward approach
 
 **Can you use Keystatic with SSG?**
 
-It's *possible* to use Keystatic with SSG, but it usually requires a different approach.  Here are some potential strategies:
+It's *possible* to use Keystatic with SSG, but it usually requires a different approach.
+
+Here are some potential strategies:
 
 1. **Build-time fetching:** You could fetch the content from Keystatic *during the build process*.  This would involve using a build script or plugin that connects to Keystatic, retrieves the necessary data, and then uses that data to generate the static HTML files.  This means your content would be "baked into" the static site.  Any changes in Keystatic would require a rebuild of your site.
 

@@ -14,7 +14,24 @@ Astro Themes for inspiration on **Landing Pages**:
 2. Luna Landing - https://github.com/JimmyCamus/luna-landing
 
 * **Configurable** with a JSON!
+* **MIT** | Template of a business landing page to be configured by json file 
+
+{{< details title="Proposed for Ourika 📌" closed="true" >}}
+
 * PagesSpeed: 100/100/100/100
+* 
+
+> Compared with the competitor ~ping 30 vs ping ~300
+
+<!-- 
+https://thingstodoinourika.com/ 
+-->
+
+* With [Cal.com](https://refer.cal.com/jalcocertech)
+
+{{< /details >}}
+
+
 
 3. Minimal Studio
 
@@ -30,6 +47,13 @@ Astro Themes for inspiration on **Landing Pages**:
 ✅ Blog
 ✅ CMS for editing blog post (thanks to **Keystatic CMS**)
 ✅ PWA (thanks to vite-pwa)
+
+
+{{< details title="Im well aware that a Bachata-Cerdo uses it 📌" closed="true" >}}
+
+
+
+{{< /details >}}
 
 6. https://github.com/majesticooss/mintaka
 

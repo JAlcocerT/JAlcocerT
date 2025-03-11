@@ -75,7 +75,6 @@ You can also deploy [SSG with Containers](https://jalcocert.github.io/JAlcocerT/
 
 ```sh
 #hugo server --bind="0.0.0.0" --baseURL="http://192.168.0.117" --port=1313
-
 #npm run dev
 ```
 

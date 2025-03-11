@@ -77,9 +77,8 @@ Recording with **high bitrate**, I got 4 different files with total size of 48GB
 
 6. **2.7/60/RS+/high BR**
 
-> `1440p60
+> `1440p60`
 
-`
 ---
 
 ## Data Overlay with Python

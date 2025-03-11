@@ -179,7 +179,7 @@ npx wrangler pages deploy public #<BUILD_OUTPUT_DIRECTORY>
 
 Making a better [LinkTree](https://linktr.ee/s/pricing/) or [linkbio](https://www.linknbio.com/pricing)
 
-At the moment of writing, they are charging 5$/m for the first paid tier.
+At the moment of writing, they are charging **5$/m for the first paid tier**.
 
 It goes to 9$/m to have newsletter and web analytics...or customize the UI.
 
@@ -206,7 +206,7 @@ Marketing tech capabilities including SEO settings, Google Analytics, Zapier, an
 
 These are some ideas of whats coming next.
 
-Making websites 1 by 1 its kind of slow.
+Making websites 1 by 1...*its kind of slow*.
 
 But there are very well known services that provide interesting service without human interaction.
 
@@ -260,64 +260,6 @@ You can print to pdf, add your logo, taxes, CSS...
 
 {{% /details %}}
 
-
-* **Menu websites at ~500 eur/year**
-  * http://cartalia.org/
-    * http://ukelele.cartalia.org/
-  * https://www.upmenu.com/pricing/
-* https://www.covermanager.com/en
-* https://www.mojstolik.pl/dla-restauracji
-
-* Hosting Costs:
-  * https://banahosting.com/web-hosting ~5eur/month
-  * https://webtolearn.pl/cennik ~20eur/month
-
-* Customer management systems
-  * https://wakems.com/index.php
-  * https://clubspeed.com/pricing/
-
-* Custom websites
-  * https://zeon.studio/estimate-project
-  * https://hormigasenlanube.com/
-  * https://lyk-website.pl/brief/
-
-* More competitors
-  * Taplink
-  * bento.me
-  * https://getallmylinks.com/
-  * https://subscribepage.io/listy#
-
-<!-- * Proposed: bogusiabachata.pro -->
-
-<!-- More ppl to help - future CLIENTS
-
-* you dont need to pay for wordpress themes, its already there and it works
-  * https://generatepress.com/pricing/
-
-* Pablo Couto - https://www.buildingfuturecapital.com/
-
-https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
-
-Registry Expiry Date - 26 April 2025
-
-
-* Sofia - zofienkagram
-  * https://wnba.pl/ - another wordpress (good looking)
-  * monika ciolkowska - monikacio
-    * https://monikaciolkowska.portfoliobox.net/
-    * Using the low tier without domain of https://www.portfoliobox.net/pricing (46$/y)
-      * Interesting section with a table comparing services and faq (go below)
-
-* Gym Trainer - https://trenujswiadomie.pl/kokpit/
-
-* ecommerce - https://outficik.pl/
-
----
-
-To try Astro+Ghost headlessCMS as described 
-https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/#gatsby
-
--->
 
 ---
 

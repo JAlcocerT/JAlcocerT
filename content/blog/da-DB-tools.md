@@ -107,6 +107,8 @@ https://www.youtube.com/watch?v=3JW732GrMdg
 
 {{< youtube "3JW732GrMdg" >}}
 
+And just recently, I was showing you how to use AI to have *data driven conversations* with your SQL DBs:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with a DB" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="MySQL With LangChain and OpenAI LLM" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
@@ -701,10 +703,12 @@ With this code, you can push data to Kafka from your Python application.
 
 ### NoCode DBs
 
+And again, if you feel like its enough code...
 
 **Airtable alternatives:**
 
 1. https://github.com/nocodb/nocodb
+
 * https://noted.lol/nocodb-contact-form-gmail-smtp/
 
 
