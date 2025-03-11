@@ -282,6 +282,16 @@ chmod +x cygwin_cibuildwheel_build.sh
 > Apache v2 | Open source, local, and self-hosted Amazon Echo/Google Home competitive Voice Assistant alternative
 
 
+5. Zonos: eleven labs alternative
+
+* https://github.com/Zyphra/Zonos
+
+> Zonos-v0.1 is a leading **open-weight text-to-speech** model trained on more than 200k hours of varied multilingual speech, delivering expressiveness and quality on par with—or even surpassing—top TTS providers.
+
+
+
+Found out about it at https://noted.lol/zonos/
+
 
 ### Books
 

@@ -56,9 +56,15 @@ Everything is covered at my [Forked Repository **phiData**](https://github.com/J
 | **LLMs**            | The LLMs that we will run are open sourced  ✅                                                                               |
 
 
-This is what we will get as our Youtube Summarizer Web App UI:
+This is what we will get as our **Youtube Summarizer Web App UI**:
+<!-- 
+![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png) 
+-->
 
-![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="AI Youtube Summaries" image="/blog_img/GenAI/yt-summaries/yt-summaries-groq.png" subtitle="PhiData with Groq and Streamlit" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Forked Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code YT Summarizer" >}}
+{{< /cards >}}
 
 > And there are many more interesting projects in their repository!
 

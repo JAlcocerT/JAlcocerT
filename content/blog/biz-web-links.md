@@ -3,7 +3,7 @@ title: "One link for Social Bios: LinkinBios vs Bento like websites"
 date: 2025-01-24
 draft: false
 tags: ["OSS"]
-description: 'Simple Link Hosting Services, for all. With a website, of course.'
+description: 'Simple Link Website Hosting Services. SSGs vs Selfhostable LittleLink and LinkStack.'
 url: 'linktree-web-alternative'
 ---
 
@@ -11,24 +11,33 @@ I know we cant know about everything.
 
 But the amount of close people that its trying to build something on social media, yet does not have a website still amazes me.
 
-Why not giving a try to linktree, many.link... pricing?
+Why not giving a try to `linktree`, `many.link`... 
 
-Then, lets have a look to solutions that will **just require your time**.
+Is it all about pricing?
+
+Vendor lock up?
+
+Then, lets have a look to solutions that will **just require your time**:
+
+1. Using Static Site Generators, aka **SSG**'s (Advance)
+2. Keep it simple with containers and **[SelfHostable solutions](#selfhosted-solutions-for-linkinbio)**
 
 ## SSG Solutions for LinkInBios
-
-
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101" >}}
 {{< /cards >}}
 
-**Hugo example** and Lynx
+**Hugo example** and Lynx Theme!
 
 We can use [HUGO SSG](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) together with the [Lynx Theme](https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/) and have a quick Linktree alternative.
 
-You dont really need anything to get started, as we can make this work [with Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/).
+You dont really need anything to get started, as we can make this work [with **Github Pages**](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/).
+
+{{< callout type="info" >}}
+See my [HUGO Lynx deployed at GHPages](https://jalcocert.github.io/Portfolio/) and its [source code](https://github.com/JAlcocerT/Portfolio)
+{{< /callout >}}
 
 **Astro** Link examples
 
@@ -45,9 +54,21 @@ You dont really need anything to get started, as we can make this work [with Git
 ## SelfHosted Solutions for LinkinBio
 
 
-### Little Link
+1. **Little Link**: A lightweight DIY Linktree alternative.
 
-[Little Link](https://noted.lol/littlelink/)
+* Deployable as static: https://github.com/sethcottle/littlelink?ref=noted.lol
+* But also Selfhostable https://github.com/techno-tim/littlelink-server
+
+Thanks to [Noted.lol to cover Little Link](https://noted.lol/littlelink/)
+
+{{< callout type="info" >}}
+See the config file [here](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/LittleLink_docker-compose.yml)
+{{< /callout >}}
+
+2. [**LinkStack**](https://linkstack.org/docker/) - Selfhostable with [this docker config](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/LinkStack_docker-compose.yml). I covered this one [here already](https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/).
+
+>  A simple to set up [docker variant of LinkStack](https://github.com/linkstackorg/linkstack-docker). LinkStack is a highly customizable link sharing platform with an intuitive, easy to use user interface. 
+
 
 ## Bento Portfolio as LinkinBio Alternative
 

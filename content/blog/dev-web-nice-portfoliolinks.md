@@ -3,7 +3,7 @@ title: "All your web links for Social Media combined"
 date: 2024-09-29T10:20:21+01:00
 draft: false
 tags: ["dev"]
-description: 'Consolidating Social Media Links with a cool website. Show your work with Hugo and Lynx.'
+description: 'Consolidating Social Media Links with a cool website. Show your work with Hugo and Lynx. Compared with LinkStack.'
 url: 'portfolio-website-for-social-media'
 ---
 

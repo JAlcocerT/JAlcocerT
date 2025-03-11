@@ -75,6 +75,8 @@ Also the Orange Pi 5 can handdle it (with proper configuration).
 
 ### Internet Benchmark
 
+For a networking benchmark, you will probably need:
+
 ```sh
 ip addr show
 hostname -I
@@ -133,6 +135,10 @@ sudo apt install iperf3
 #iperf3 -s #on the server
 iperf3 -c 192.168.0.12 #on the other device pointing to your server
 ```
+
+See also [**Portchecker**](https://github.com/dsgnr/portchecker.io)
+
+>  portchecker.io is a free online utility to check the port status of a given hostname or IP address. 
 
 ### Disk Benchmarks
 

@@ -3,7 +3,7 @@ title: "Cool Link in Bios (with SSGs) with CF Workers and Pages"
 date: 2025-01-22
 draft: false
 tags: ["Web"]
-description: "Have a cool LinkInBio website with HUGO and Astro. Alternative to linktree with Gitlab and Cloudflare WnP Setup."
+description: "Have a cool LinkInBio website with HUGO and Astro SSGs. Alternative to linktree with Gitlab and Cloudflare WnP Setup."
 url: 'cool-link-in-bios'
 ---
 

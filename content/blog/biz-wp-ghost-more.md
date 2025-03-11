@@ -6,7 +6,7 @@ description: 'Websites for all. Without the code.'
 url: 'no-code-websites'
 ---
 
-Enough Code.
+**Enough Code.**
 
 Lets see some *no code* websites that you can use at a Home Server/VPS.
 
@@ -15,6 +15,10 @@ Lets see some *no code* websites that you can use at a Home Server/VPS.
 No time for tinkering with web dev stuff?
 
 Just get a **wordpress going**.
+
+{{< callout type="info" >}}
+See the docker container **config files [here](https://github.com/JAlcocerT/Docker/tree/main/Web)**
+{{< /callout >}}
 
 {{< details title="Wordpress Docker Compose for VPS 📌" closed="true" >}}
 
@@ -131,7 +135,7 @@ networks:
 {{< /details >}}
 
 {{< callout type="info" >}}
-See [Ghost Docker Compose](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Ghost_Docker-compose.yaml)
+See [Ghost Docker **Compose**](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Ghost_Docker-compose.yaml)
 {{< /callout >}}
 
 > The Site will be ready at `subdomain.jalcocertech.com` and for the creator `subdomain.jalcocertech.com/ghost` 
@@ -198,6 +202,14 @@ services:
       - "1111:1111"
     command: "serve --interface 0.0.0.0"
 ```
+
+## Conclusions
+
+To sell to the masses, **you need a cool UI** for the users to manage their stuff and make it scalable.
+
+{{< callout type="info" >}}
+If you are looking for a [LinkTree Alternative](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/)
+{{< /callout >}}
 
 
 <!-- 
