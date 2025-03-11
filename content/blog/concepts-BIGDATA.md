@@ -1,6 +1,6 @@
 ---
 title: "Big Data Tools [Data Analytics Recap]"
-date: 2025-03-11T19:20:21+01:00
+date: 2025-03-10T19:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssistant for Tech.'

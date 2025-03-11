@@ -1,9 +1,8 @@
 ---
-title: "Web CMS Websites "
-date: 2025-03-12
-draft: true
-tags: ["AI"]
-description: "UI for custom SSGs."
+title: "Websites with SSG + CMS - The missing piece."
+date: 2025-03-10T22:20:21+01:00
+draft: false
+description: "UI for customization SSGs. Focusing on Keystatic CMS with Astro"
 url: 'cms-for-static-websites'
 ---
 
@@ -121,6 +120,10 @@ npm create @keystatic@latest
 
 It has fully local mode, but also [Github Mode](https://keystatic.com/docs/github-mode)
 
+**How I learnt about KeystaticCMS?**
+
+https://github.com/Boston343/landingpad
+
 ##### Static CMS
 
 https://github.com/StaticJsCMS/static-cms
@@ -146,6 +149,16 @@ https://github.com/decaporg/decap-cms
 > Apache v2 | A fully open-source headless CMS that supports Markdown and Visual Editing
 
 
+## Conclusions
+
+### KeyStatic CMS with Astro
+
+When you deploy the static site, the `whateverdomain.com/keystatic` path will still be there:
+
+![KeyStatic statically deployed UI](/blog_img/web/staticcms/keystatic-ssg-deployed.png)
+
+But you wont be able to make any changes, as the server (API) is NOT running.
+
 ---
 
 ## FAQ
@@ -154,13 +167,13 @@ https://github.com/decaporg/decap-cms
 
 https://github.com/plentico/plenti
 
-> Apache v2 |  Static Site Generator with Go backend and Svelte frontend 
+> Apache v2 | Static Site Generator with Go backend and Svelte frontend 
 
 ## Icons
 
-https://github.com/akveo/eva-icons
+* https://github.com/akveo/eva-icons
 
-## Domains
+**Where to get Domains?**
 
 * https://developer.godaddy.com/getstarted
 * Hostingger

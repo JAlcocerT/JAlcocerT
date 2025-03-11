@@ -41,9 +41,10 @@ HUGO with one of my fav themes - [Lynx](https://jalcocert.github.io/JAlcocerT/po
 2. https://astro.build/themes/details/ltree/
 
 3. https://github.com/Boston343/landingpad
+
 * https://landingpad.cosmicthemes.com/
 
-> GPL 3.0 A free and open source template to host your links and socials. Built with Astro, Tailwind CSS, and Keystatic CMS by Cosmic Themes.
+> GPL 3.0 A free and open source template to host your links and socials. Built with Astro, Tailwind CSS, and **Keystatic CMS** by Cosmic Themes.
 
 Thanks to Boston343, I got to know about **keystack CMS**
 

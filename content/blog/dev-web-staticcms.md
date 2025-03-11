@@ -1,6 +1,6 @@
 ---
-title: "Having a look to Static CMS"
-date: 2025-03-20
+title: "Having a look to KeyStatic CMS"
+date: 2025-03-10T20:20:21+01:00
 draft: false
 tags: ["dev"]
 description: 'KeyStatic. Creating a website for a moto blogger. Now with a cool user interface.'
@@ -504,7 +504,8 @@ Recently I got to know about **TinyAuth**
 ### Other Static CMS
 
 1. https://github.com/keystonejs/keystone
-https://keystonejs.com/docs
+
+* https://keystonejs.com/docs
 
 ### Building Webs with AI
 

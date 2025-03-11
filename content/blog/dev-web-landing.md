@@ -41,7 +41,9 @@ Currently this theme only works with the **premium version of GSAP**, the steps 
 
 **What it is KeyStaticCMS?**
 
-A tool that makes Markdown, JSON and YAML content in your codebase editable by humans. Live edit content on GitHub or your local file system, without disrupting your existing code and workflows.
+A tool that makes Markdown, JSON and YAML content in your codebase editable by humans.
+
+Live edit content *on GitHub or your local file system*, without disrupting your existing code and workflows.
 
 https://keystatic.com/
 
