@@ -4,7 +4,7 @@ date: 2025-03-10T20:20:21+01:00
 draft: false
 tags: ["dev"]
 description: 'KeyStatic. Creating a website for a moto blogger. Now with a cool user interface.'
-url: 'understanding-static-cms'
+url: 'understanding-keystatic-cms'
 ---
 
 

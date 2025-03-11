@@ -53,11 +53,9 @@ npm install
 npm run dev
 ```
 
-3. [optional] - Use [Astro within a Container](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/#node)
+3. [Optional] - Use [Astro within a Container](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/#node)
 
 ---
-
-
 
 ```sh
 ifconfig
@@ -74,7 +72,7 @@ You can use [Astro with Github Pages + GH Actions](https://github.com/JAlcocerT/
 
 See **Interesting Astro Themes**.
 
-Like AstroWind (which uses [Tailwind CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-css/#competitors-to-tailwind-css))
+Like AstroWind, *which uses [Tailwind CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-css/#competitors-to-tailwind-css)*
 
 ## Features for Astro Websites
 

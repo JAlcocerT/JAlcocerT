@@ -25,8 +25,6 @@ And given a project, you can **get the latest Github release** as per:
 
 #### Github Actions
 
-
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/" title="GHA 101 Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="How to get the most out of Github Actions" >}}
@@ -56,3 +54,25 @@ https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/
 
 
 ---
+
+## Learnt with This one
+
+Thanks to [these devs tricks](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/), I could put [this landing theme](https://github.com/majesticooss/mizar) with KeyStatic into selfhosting with my Pi.
+
+1. [Installed Node](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
+
+```sh
+# Verify installation
+node -v   # Should show Node.js version - 20.18.1
+npm -v    # Should show npm version - 10.8.2
+```
+
+2. Clone the repo and run it:
+
+```sh
+npm run dev --host #as i was using the Opi
+npm run build
+#npm install -g serve #serve with npm
+#serve -s dist #http://localhost:3000
+npx serve -s dist #http://localhost:3000
+```

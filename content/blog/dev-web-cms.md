@@ -10,17 +10,15 @@ Some time ago I tried Ghost as CMS connected to Gatsby as **headless CMS**.
 
 It was a very interesting setup.
 
-But I was looking for a way to integrate **CMS with HUGO/Astro**.
+But I was looking for a way to integrate **CMS with HUGO/Astro**:
+
+* https://jamstack.org/generators/
 
 
 {{< callout type="info" >}}
-https://github.com/postlight/awesome-cms
-
+See more at [awsome CMS](https://github.com/postlight/awesome-cms) 
 {{< /callout >}}
 
-## JAMStack Sites
-
-https://jamstack.org/generators/
 
 ## CMS
 
@@ -40,9 +38,12 @@ Content Management Systems (CMS):
 https://github.com/MatthiesenXYZ/astro-ghostcms
 
 
-https://github.com/GetPublii/Publii
+* https://github.com/GetPublii/Publii
 
 > GPLv3 | The most intuitive Static Site CMS designed for SEO-optimized and privacy-focused websites. 
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Thinkmill/keystatic,tinacms/tinacms,decaporg/decap-cms&,type=Date)](https://star-history.com/#Thinkmill/keystatic&tinacms/tinacms&decaporg/decap-cms&Date)
+
 
 ### Headless CMS
 
@@ -52,12 +53,11 @@ https://github.com/GetPublii/Publii
 
 #### API Based
 
-#### Git Based
+#### GIT Based
 
 
 {{< callout type="info" >}}
 https://blog.logrocket.com/9-best-git-based-cms-platforms/
-
 {{< /callout >}}
 
 * Gitlab provides with [up to 10 GB for repository](https://forum.gitlab.com/t/max-size-per-repo/17403), artifacts and LFS
@@ -70,7 +70,7 @@ How many cool things can be done with those generous free tiers?
 
 * https://github.com/Thinkmill/keystatic
 
-> MIT | First class CMS experience, TypeScript API, Markdown & YAML/JSON based, **no DB**
+> **MIT** | First class CMS experience, TypeScript API, Markdown & YAML/JSON based, **no DB**
 
 Keystatic CMS is a modern, open-source, headless content management system designed to **work directly with your codebase**. 
 
@@ -108,7 +108,7 @@ Keystatic CMS is a modern, open-source, headless content management system desig
 
 **In essence:**
 
-Keystatic is a CMS that bridges the gap between developers and content editors, providing a seamless workflow for managing content within a codebase
+Keystatic is a CMS that bridges the gap between developers and content editors, providing a seamless workflow for managing content within a codebase:
 
 * https://keystatic.com/docs/installation-astro
 
@@ -122,11 +122,18 @@ It has fully local mode, but also [Github Mode](https://keystatic.com/docs/githu
 
 **How I learnt about KeystaticCMS?**
 
-https://github.com/Boston343/landingpad
+* https://github.com/Boston343/landingpad
+  * https://github.com/JAlcocerT/landingpad
+
+* And due to [Mizar landing Page](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/)
+
+{{< callout type="info" >}}
+Use [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH App config overhead
+{{< /callout >}}
 
 ##### Static CMS
 
-https://github.com/StaticJsCMS/static-cms
+* https://github.com/StaticJsCMS/static-cms
 
 > A Git-based CMS for Static Site Generators
 
@@ -140,7 +147,7 @@ Archived since SeptY24!
 
 https://github.com/decaporg/decap-cms
 
-> MIT |  A Git-based CMS for Static Site Generators 
+> MIT | A Git-based CMS for Static Site Generators 
 
 ##### TinaCMS
 
@@ -148,6 +155,7 @@ https://github.com/decaporg/decap-cms
 
 > Apache v2 | A fully open-source headless CMS that supports Markdown and Visual Editing
 
+---
 
 ## Conclusions
 
@@ -163,22 +171,24 @@ But you wont be able to make any changes, as the server (API) is NOT running.
 
 ## FAQ
 
-### What are Static Site Generators?
-
-https://github.com/plentico/plenti
-
-> Apache v2 | Static Site Generator with Go backend and Svelte frontend 
-
-## Icons
+**Icons?**
 
 * https://github.com/akveo/eva-icons
+
+> MIT | A pack of more than 480 beautifully crafted Open Source icons. SVG, Sketch, Web Font and Animations support.
 
 **Where to get Domains?**
 
 * https://developer.godaddy.com/getstarted
-* Hostingger
+* Hostinger
 * https://porkbun.com/api/json/v3/documentation#Domain%20Pricing
 * Cloudflare domains...
+
+### What are Static Site Generators?
+
+* https://github.com/plentico/plenti
+
+> Apache v2 | Static Site Generator with Go backend and Svelte frontend 
 
 ### What are NginX Static Routes?
 

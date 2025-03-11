@@ -45,7 +45,7 @@ A tool that makes Markdown, JSON and YAML content in your codebase editable by h
 
 Live edit content *on GitHub or your local file system*, without disrupting your existing code and workflows.
 
-https://keystatic.com/
+* https://keystatic.com/
 
 > MIT | Content Management for your Codebase - https://github.com/Thinkmill/keystatic
 
