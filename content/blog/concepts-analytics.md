@@ -180,10 +180,15 @@ flatpak install flathub io.dbeaver.DBeaverCommunity
 #flatpak install flathub io.conduktor.Conduktor #Kafka Desktop Client
 #https://flathub.org/apps/dev.k8slens.OpenLens #k8s IDE
 ```
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-databases-docker" title="DBs for DA ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="BI Tools for DA ↗" icon="book-open" >}}
 {{< /cards >}}
+
+If you are not so much [familiar with SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/), no need to worry.
+
+You can get help from LLMs to query directly your databases:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
@@ -193,9 +198,9 @@ flatpak install flathub io.dbeaver.DBeaverCommunity
 
 ## AI Assisted Analytics
 
-* Github Copilot
+1. Github Copilot
 
-* [Google Code Assist](https://codeassist.google/#available-in-your-favorite-ides-and-platforms) with this [vscode extension](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist)
+2. [Google Code Assist](https://codeassist.google/#available-in-your-favorite-ides-and-platforms) with this [vscode extension](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist)
 
 ```sh
 ext install Google.geminicodeassist
@@ -203,18 +208,20 @@ ext install Google.geminicodeassist
 
 When authorized you will see [this](https://developers.google.com/gemini-code-assist/auth/auth_success_gemini) and Gemini Code Assistant will be ready!
 
+3. OSS code assistants:
+
 * Codeium
 * Tabby - https://fossengineer.com/selfhosting-Tabby-coding-assistant/
 * [Bito AI](https://docs.bito.ai/feature-guides/ai-that-understands-your-code/how-it-works)
 
-* IDE's:
+4. IDE's with built in code assistant:
+
 * Zed - https://zed.dev/download
 * Rivet - https://github.com/Ironclad/rivet/releases - Integrate it with Ollama/Claude/GPT4...
 * cursor.sh - use it with your own OpenAI/Anthropic/Azure keys
 
 
-{{% details title="Rivet Release Setup" closed="true" %}}
-
+{{% details title="Rivet Release Setup 📌" closed="true" %}}
 
 ```sh
 wget https://github.com/Ironclad/rivet/releases/download/app-v1.7.8/rivet_1.7.8_amd64.AppImage
@@ -225,7 +232,7 @@ chmod +x rivet_1.7.8_amd64.AppImage
 {{% /details %}}
 
 
-{{% details title="VS Extensions - Bito, LLama-Coder, Codeium, Copilot..." closed="true" %}}
+{{% details title="VS Extensions - Bito, LLama-Coder, Codeium, Copilot...📌" closed="true" %}}
 
 ```sh
 code --list-extensions
@@ -250,7 +257,8 @@ You can also try [PandasAI](https://pypi.org/project/pandasai/) and [Sketch](htt
 
 ### Other Tools For Data Analytics
 
-#### Airflow and Jenkins
+
+{{% details title="Airflow vs Jenkins 📌" closed="true" %}}
 
 * **Airflow:**
     * **A workflow orchestration tool**.
@@ -261,11 +269,13 @@ You can also try [PandasAI](https://pypi.org/project/pandasai/) and [Sketch](htt
     * Used to automate software builds, tests, and deployments.
     * Ideal for automating the software development lifecycle, ensuring code quality, and enabling rapid releases.
 
-[Airflow, which you can use with docker](https://fossengineer.com/airflow-docker/), is awsome to schedule Python data Pipelines.
+> [Airflow, which you can use with docker](https://fossengineer.com/airflow-docker/), is awsome to schedule Python data Pipelines.
 
 * Alternatives:
     * Mage - https://www.youtube.com/watch?v=sNagAw91PW0
     * Prefect - https://www.youtube.com/watch?v=f_MPmRj7P_w
 
 
-You can also [SelfHost Jenkins](https://fossengineer.com/selfhosting-jenkins-ci-cd/)
+> You can also [SelfHost Jenkins](https://fossengineer.com/selfhosting-jenkins-ci-cd/)
+
+{{% /details %}}

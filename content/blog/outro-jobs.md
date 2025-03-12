@@ -3,13 +3,13 @@ title: "About Jobs. And LLM Engineers."
 date: 2025-02-10
 draft: false
 tags: ["Dev"]
-description: 'Is it a good moment to change jobs? And to become a LLM/ML Engineer?. Definitely time to recap with scrap and firecrawl API.'
+description: 'Is it a good moment to change jobs? A curriculum for LLM/ML Engineer?. Definitely time to recap with Scrap and firecrawl API.'
 url: 'when-to-apply-for-a-job'
 ---
 
 New year, new **opportunities**.
 
-Or so some say.
+> Or so some say.
 
 ## Data for Job Market
 
@@ -34,7 +34,7 @@ cd Scrap_Pracuj
 
 **Exploring SQLite**
 
-After you have been running the script for a few days...
+After you have been **running the script for a few days**...
 
 ```sh
 python3 -m venv scrap_remote_offers_venv
@@ -47,7 +47,7 @@ source scrap_remote_offers_venv/bin/activate
 python3 pracuj_v3.py
 ```
 
-You would see in the DB that...
+You would **see in the DB** that...
 
 ```sh
 sudo apt install sqlite3
@@ -56,7 +56,7 @@ sqlite3 --version
 
 {{< details title="See SQLiteDB Job History 📌" closed="true" >}}
 
-we will have records:
+We will have records:
 
 ```sh
 sqlite3 ./job_offers_v3.db
@@ -379,3 +379,17 @@ A Machine Learning (ML) Engineer is a software developer who specializes in buil
 * **Asyncronous work environment:** Asyncronous work environments require very strong communication skills.
 
 {{< /details >}}
+
+### Creating a Responsive CV
+
+I had some situations when I was using some cool curriculum design, yet the companies receiving it
+where applying some parsing and their AI systems getting confused.
+
+1. Then, a friend told me about **Overleaf**
+
+> Overleaf is a collaborative **cloud-based LaTeX editor** used for writing, editing and publishing scientific documents. It partners with a wide range of scientific publishers to provide official journal LaTeX templates, and direct submission links. 
+
+* https://www.overleaf.com/latex/templates/tagged/cv
+
+
+2. I was also exploring how to create a [CV with AI](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#cv-with-ai), based on [**open source CV as a Code**](https://fossengineer.com/open-source-curriculum)

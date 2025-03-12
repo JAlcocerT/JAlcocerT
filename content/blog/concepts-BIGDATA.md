@@ -811,11 +811,14 @@ graph TD
 
 ### How to use the AIssistant for Tech?
 
-So you want to use the AI assistant to get help on **tech questions**?
+So you want to use the AI assistant to get help on **Tech Questions**?
 
 SSH into your server and...
 
 ...if you need, generate **ssh keys** to authenticate to your repo:
+
+
+{{< details title="See SQLiteDB Job History 📌" closed="true" >}}
 
 ```sh
 ls -al ~/.ssh
@@ -835,10 +838,6 @@ ssh-add ~/.ssh/id_ed25519 # Add your private key (you'll be prompted for the pas
 git clone git@github.com:JAlcocerT/Streamlit-AIssistant.git
 ```
 
-
-{{< callout type="info" >}}
-Compatible with x86 and ARM64! Unfortunately, **not ARM32**
-{{< /callout >}}
 
 Now, do it with Python:
 
@@ -917,6 +916,14 @@ services:
 #     external: true
 ```
 
+
+{{< /details >}}
+
+{{< callout type="info" >}}
+Compatible with x86 and ARM64!
+{{< /callout >}}
+
+---
 
 ## FAQ
 

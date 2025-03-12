@@ -19,11 +19,11 @@ Astro Themes for inspiration on **Landing Pages**:
 {{< details title="Proposed for Ourika 📌" closed="true" >}}
 
 * PagesSpeed: 100/100/100/100
-* 
 
-> Compared with the competitor ~ping 30 vs ping ~300
+> Compared with the competitor (WP) ~ping 30 vs ping ~300
 
 <!-- 
+https://pagespeed.web.dev/analysis/https-thingstodoinourika-com/guzs0y62la?form_factor=mobile
 https://thingstodoinourika.com/ 
 -->
 

@@ -248,6 +248,12 @@ For **regular ICONS**:
 
 > ISC | Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons.
 
+4. https://github.com/tabler/tabler-icons
+
+> MIT | A set of over 5800 free MIT-licensed high-quality SVG icons for you to use in your web projects.
+
+
+
 4. Images for Web:
 - [Unsplash](https://unsplash.com/)
 - [Heroicons](https://heroicons.dev/)

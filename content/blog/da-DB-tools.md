@@ -281,10 +281,11 @@ TimeScale
 
 #### Prometheus
 
-
-![alt text](/blog_img/iot/grafana.png)
+<!-- 
+![alt text](/blog_img/iot/grafana.png) -->
 
 {{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/Grafana/Docker-compose.yml" title="Grafana Container Setup ↗" image="/blog_img/iot/grafana.png" subtitle="Grafana with Prometheus plays well with Grafana" >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/selfh-grafana-monit/#grafana-with-prometheus-and-node-exporter" title="Prometheus with NodeExporter ↗" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="Grafana with Prometheus Project" >}}
 {{< /cards >}}
 
@@ -297,8 +298,6 @@ TimeScale
 **Druid is an open-source**, high-performance, real-time analytics database system that is designed to handle large volumes of data and provide fast querying capabilities for data analytics.
 
 It was developed by Metamarkets (now part of Salesforce) and is commonly used in **big data and real-time analytics** scenarios.
-
-Here are :
 
 {{< details title="Some key features and aspects of Druid for data analytics 📌" closed="true" >}}
 
@@ -324,13 +323,13 @@ Here are :
 
 Druid is commonly used in industries where **real-time analytics** and fast query performance are essential, such as online advertising, **e-commerce**, gaming, and monitoring applications.
 
-It provides a powerful platform for exploring and gaining insights from large and time-sensitive datasets.
+> It provides a powerful platform for exploring and gaining insights from large and time-sensitive datasets.
 
 #### Trino
 
 **Trino, formerly known as Presto SQL**, is an **open-source distributed SQL query engine** designed for high-performance and interactive querying of data across various data sources.
 
-Trino is particularly useful for querying data in a federated manner, where data resides in different storage systems or databases, and you want to query it as if it were in a single database.
+[Trino](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/#trino-sql-ex-presto-sql) is particularly useful for querying data in a federated manner, where data resides in different storage systems or databases, and you want to query it as if it were in a single database.
 
 {{< details title="how Trino compares to Druid and Kafka for data analytics 📌" closed="true" >}}
 
