@@ -340,7 +340,7 @@ ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -
 
   I thought about creating the scripts.
 
-  See music for your videos, *from youtube*, [here](https://www.youtube.com/audiolibrary).
+  See **music for your videos**, *from youtube, [here](https://www.youtube.com/audiolibrary)*.
   {{< /tab >}}
 
   {{< tab >}}

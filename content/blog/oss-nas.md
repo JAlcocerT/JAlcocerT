@@ -315,7 +315,9 @@ sudo docker stats nextcloud
 
 3. Low energy consumption, which can be measured [with a smart plug](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/)
 
-At the time of writing, my **energy costs** are ~0.28$/Kwh
+> At the time of writing, my **energy costs** are ~0.28$/Kwh
+
+4. At least, 1 usb-c and >4 usb 3.0
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}

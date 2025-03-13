@@ -522,6 +522,14 @@ It is the one used at hugo theme gallery!
 
 > Fantastic post by JanKraus
 
+### Other photo Gallery Themes
+
+1. https://github.com/AREA44/astro-multiverse
+
+2. https://github.com/oli-laban/alpine-tailwind-lightbox
+
+3. https://tw-elements.com/docs/standard/components/lightbox/
+
 ---
 
 ## New Web Workflow
@@ -548,6 +556,7 @@ cd ./cyclingthere/pacamara
 ```
 
 With a regular SSH, I can just use **nano to develop**
+
 ```sh
 time npm install #~30s
 #npm audit fix --force
@@ -572,3 +581,5 @@ But its possible to use VSCode with SSH and **see all the dev environment files*
 
 
 {{< /details >}}
+
+Maybe...filebroswer + Automatic CI/CD?
