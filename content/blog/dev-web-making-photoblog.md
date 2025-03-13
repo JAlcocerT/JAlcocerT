@@ -502,11 +502,11 @@ And there are very cool Astro Themes waiting for her: https://github.com/PriscaT
 
 For creating cool **photo galleries**, see:
 
-[![Star History Chart](https://api.star-history.com/svg?repos=lucaslorentz/caddy-docker-proxy,NginxProxyManager/nginx-proxy-manager,dimsemenov/photoswipe&,type=Date)](https://star-history.com/#lucaslorentz/caddy-docker-proxy&NginxProxyManager/nginx-proxy-manager&dimsemenov/photoswipe&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=igordanchenko/react-photo-album,nolimits4web/swiper,dimsemenov/photoswipe&,type=Date)](https://star-history.com/#igordanchenko/react-photo-album&nolimits4web/swiper&dimsemenov/photoswipe&Date)
 
 1. https://swiperjs.com/
 
-> Swiper is the most modern free and open source mobile touch slider with hardware accelerated transitions and amazing native behavior. Use it on websites, web apps, and mobile native/hybrid apps.
+> MIT | [Swiper](https://github.com/nolimits4web/swiper) is the most modern free and open source mobile touch slider with hardware accelerated transitions and amazing native behavior. Use it on websites, web apps, and mobile native/hybrid apps.
 
 2. https://photoswipe.com/
 
@@ -516,9 +516,7 @@ It is the one used at hugo theme gallery!
 
 2. https://react-photo-album.com/
 
-https://github.com/igordanchenko/react-photo-album
-
-> MIT |  Responsive photo gallery component for React 
+> MIT | Responsive [photo gallery component](https://github.com/igordanchenko/react-photo-album) for React 
 
 3. https://jankraus.net/2024/04/05/how-to-build-a-simple-photo-gallery-with-astro/
 
