@@ -37,6 +37,20 @@ https://thingstodoinourika.com/
 
 4. Sendit
 
+5. [Energy Template](https://github.com/vbartalis/energy-template)
+
+
+
+{{< details title="For Taxies as well 📌" closed="true" >}}
+
+* https://taxiourika.pages.dev/
+
+* https://github.com/JAlcocerT/taxi-web
+
+
+{{< /details >}}
+
+
 ---
 
 **Update**
