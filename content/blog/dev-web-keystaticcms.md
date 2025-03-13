@@ -7,6 +7,7 @@ description: 'KeyStatic. Creating a website for a moto blogger. Now with a cool 
 url: 'understanding-keystatic-cms'
 ---
 
+> Thanks to [Jankraus](https://jankraus.net/2025/02/25/a-simple-guide-to-using-astro-with-keystatic/)
 
 ## KeyStatic
 

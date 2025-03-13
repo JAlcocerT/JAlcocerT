@@ -208,7 +208,7 @@ npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 
 {{< /details >}}
 
-> MIT |  Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Open Source. 
+> **MIT** |  Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Open Source. 
 
 ![alt text](/blog_img/biz/RE/dmproperties.png)
 

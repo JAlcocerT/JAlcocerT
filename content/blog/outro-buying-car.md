@@ -101,7 +101,13 @@ Steps for **buying a car in Germany**.
 * https://forocoches.com/foro/showthread.php?t=3791337
 * https://forocoches.com/foro/showthread.php?t=1098678
 
+> https://www.hypotheekrente.nl/
+
 ### In Spain
+
+* https://www.carfax.eu/es
+
+* [DGT Info about a car](https://sede.dgt.gob.es/es/vehiculos/informacion-de-vehiculos/informe-de-un-vehiculo/#:~:text=Para%20obtener%20el%20informe%20de,directamente%20desde%20la%20propia%20app.)
 
 
 ### How about Campers?
@@ -109,3 +115,5 @@ Steps for **buying a car in Germany**.
 * [Camper Contact](https://www.campercontact.com/en/search?name=Amsterdam&lat=52.37403&lon=4.88969&zoom=12.5&names=AMS,Aemstelredamme,Aemsterdam,Amestelledamme,Amesterda,Amesterdam,Amesterdao,Amesterd%C3%A3,Amesterd%C3%A3o,Amistardam)
 
 * [Park4Night](https://park4night.com/en/search?lat=52.372756486328726&lng=4.893615245819092&z=15)
+
+* [Trick1](https://www.kartamultisport.pl/en/multisport/search-for-facilities/#/@51.8283438,19.7351276,10z?cards=1&categories=3)

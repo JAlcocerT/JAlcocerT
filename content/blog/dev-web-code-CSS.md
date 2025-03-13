@@ -12,7 +12,7 @@ And you can make cool web stuff, easily.
 
 You just need some time to get CSS right:
 
-1. Tailwind
+1. [Tailwind](#tailwind)
 - [DaisyUI](#daisyui)
 - [Flowbite](#flowbite)
 2. Bootstrap
@@ -31,6 +31,7 @@ And after a while tinkering with websites I can now understand why.
 Its an awsome library with components, that it is also used to build more libraries on top of it.
 
 * *https://tailwindui.com/components*
+  * Example: https://v1.tailwindcss.com/components/cards
 
 
 I really like the **TW Image gallery**
@@ -48,7 +49,7 @@ I really like the **TW Image gallery**
   * https://tw-elements.com/docs/standard/components/carousel/#docsTabsOverview
 
 
-> 𝙃𝙪𝙜𝙚 collection of Tailwind MIT licensed (free) components, sections and templates 😎
+> MIT | 𝙃𝙪𝙜𝙚 collection of Tailwind MIT licensed (free) components, sections and templates 😎
 
 ### Libraries Built on Top of Tailwind CSS
 
@@ -63,6 +64,7 @@ I really like the **TW Image gallery**
 **Component based CSS** built on top of TailwindCSS utilities.
 
 * https://daisyui.com/components/diff/
+  * https://daisyui.com/components/card/
 
 When you **add Daisy UI** to your npm based project like so...
 
