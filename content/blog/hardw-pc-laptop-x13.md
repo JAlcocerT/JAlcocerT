@@ -217,6 +217,11 @@ sudo apt update
 sudo apt install gufw
 ```
 
+## Conclusions
+
+This laptop is crazy fast!
+
+Specially when compared with an old ideapad-100: https://openbenchmarking.org/result/2405251-NE-IDEAPAD1006 with Intel Core i3-5005U (2C/4T)
 
 ---
 

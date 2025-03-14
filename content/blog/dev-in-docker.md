@@ -16,7 +16,7 @@ First, you need to do the following:
 3. Follow [the instructions to connect](https://code.visualstudio.com/docs/remote/ssh)
 
 {{< callout type="info" >}}
-The [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh&ssr=false#version-history) do the trick as well. Go to Version History. Download .vsix pkg. Go to VS Code extensions -> 3 dots -> Install from vsix
+The [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh&ssr=false#version-history) do the trick as well. Go to Version History. Download the `.vsix` pkg. Go to VS Code extensions -> 3 dots -> Install from vsix
 {{< /callout >}}
 
 ### VSCode Dev via SSH

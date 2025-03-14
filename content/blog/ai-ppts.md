@@ -1,5 +1,5 @@
 ---
-title: "How to create awsome Presentations with AI" 
+title: "How to create awsome Presentations with AI"
 date: 2025-01-02
 draft: false
 tags: ["AI"]
@@ -263,7 +263,7 @@ print(completed_message)
 
 ### SelfHosting Cool PPT Software
 
-Any of these will be a replacement for powerpoint / mentimeter. You can upload the ppt/pdf created with the PPT as a code frameworks.
+Any of these will be a replacement for powerpoint / mentimeter/ slido. You can upload the ppt/pdf created with the PPT as a code frameworks.
 
 1. https://github.com/ClaperCo/Claper
 
@@ -274,7 +274,14 @@ Any of these will be a replacement for powerpoint / mentimeter. You can upload t
 
 Claper turns your presentations into an interactive, engaging and exciting experience.
 
-Claper has a two-sided mission:
+```sh
+https://github.com/JAlcocerT/Claper #I forked it!
+cd Claper
+#openssl rand -base64 48 #create one secret
+docker compose up -d
+```
 
-The first one is to help these people presenting an idea or a message by giving them the opportunity to make their presentation unique and to have real-time feedback from their audience.
-The second one is to help each participant to take their place, to be an actor in the presentation, in the meeting and to feel important and useful.
+
+{{< callout type="info" >}}
+Claper is a perfect example of how to deploy an app with **https thanks to Traefik**!
+{{< /callout >}}
