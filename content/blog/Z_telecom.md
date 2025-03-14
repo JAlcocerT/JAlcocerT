@@ -247,16 +247,18 @@ Both GPON and XGS-PON are types of **Passive Optical Networks (PON)** used for b
 
 - **Symmetry**: GPON is asymmetric, which was suitable for earlier internet usage patterns where downloading was predominant. XGS-PON, however, offers symmetric speeds, catering to modern internet activities that require substantial upstream bandwidth like video conferencing, online gaming, and uploading large files.
 
-- **Upgrade Path**: XGS-PON is considered an evolution of GPON, designed to meet the increasing demands for higher bandwidth and greater symmetry in network traffic. It uses the same infrastructure as GPON, making it a cost-effective upgrade for service providers to deliver multi-gigabit services.
+- **Upgrade Path**: XGS-PON is considered an evolution of GPON, designed to meet the increasing demands for higher bandwidth and greater symmetry in network traffic.
 
-XGSPOM is an acronym in the field of telecommunications. It stands for:
+It uses the same infrastructure as GPON, making it a cost-effective upgrade for service providers to deliver multi-gigabit services.
+
+XGSPOM is an acronym for telecommunications. It stands for:
 
 * X: 10 (Roman numeral X)
 * G: Gigabit
 * S: Symmetric
 * PON: Passive Optical Network
 
-XGS-PON refers to a type of **Passive Optical Network technology** that supports symmetric data rates of up to 10 Gigabits per second (Gbps) both downstream and upstream.
+**XGS-PON** refers to a type of **Passive Optical Network technology** that supports symmetric data rates of up to 10 Gigabits per second (Gbps) both downstream and upstream.
 
 This technology is a part of the broader category of fiber-optic access technologies used to deliver high-speed broadband services.
 
