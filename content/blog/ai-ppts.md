@@ -56,6 +56,12 @@ npm i -D playwright-chromium
 
 > It can create a [PPT assistant](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent) as seen on [this post](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/)
 
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slidev" title="My SliDevJS Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Presentations as a Code pushed to Github Pages" >}}
+{{< /cards >}}
+
 ### Marp
 
 You can also create **PPTs from markdown** with [Marp](https://github.com/marp-team/marpit)
