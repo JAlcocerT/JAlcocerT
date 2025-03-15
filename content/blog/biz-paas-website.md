@@ -40,12 +40,25 @@ The platform provides all the necessary tools for building, deploying, and manag
 > Apache v2 | Open Source **Alternative to Vercel, Netlify and Heroku**.
 
 ```sh
-curl -sSL https://dokploy.com/install.sh | sh
+curl -sSL https://dokploy.com/install.sh | sh #will need ~300mb to get started
 ```
+
+
+You will authorize dokploy as Github App: https://github.com/apps/dokploy-jesalctag
+
+<!-- 
+https://www.youtube.com/watch?v=2Q4-EgYS0u4
+ -->
+{{< youtube "2Q4-EgYS0u4" >}}
 
 With Dokploty we can for example, **serve an Astro site, or any other containerized app**
 
-* DokPloy Astro Example from their docs:
+* DokPloy Astro Example from their docs
+* Or...the Streamlt MultiChat: *we are just pointing to [this file](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_DeployMe/Docker-Compose.yml) `./Z_DeployMe/Docker-Compose.yml`*
+
+![Dokploy with MultiChat Repository](/blog_img/selfh/PaaS/dokploy-multichat.png)
+
+---
 
 There are other **PaaS alternatives** like:
 
