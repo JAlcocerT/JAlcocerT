@@ -1,9 +1,9 @@
 ---
 title: "Deploying with PaaS: Coolify, Dokku and more"
-date: 2025-03-07
+date: 2025-03-13
 draft: false
 tags: ["Dev"]
-description: 'Coolify, Dokku, Caprover, Openfaas'
+description: 'SelfHosted PaaS: Coolify, Dokku, Dokploy, Caprover, Openfaas'
 url: 'deploying-software-with-paas-to-servers'
 ---
 
