@@ -1,18 +1,19 @@
 ---
-title: "Scaling Services with SelfHosted PAAS"
-date: 2025-04-17T10:20:21+01:00
+title: "Scaling Services with SelfHosted PAAS - Netlify Vercel alternatives"
+date: 2025-03-14T21:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Deploy with Dokploy or ZaneOPS (to Pi / VPS) and make ideas scalable. Wordpress and Ghost Examples.'
+description: 'Deploy with Dokploy or ZaneOPS (to Pi / VPS). Make ideas scalable: Wordpress and Ghost Examples.'
 url: 'selfhosted-paas'
 ---
 
-Recently I was doing some setup for weddings.
+Recently I was doing some [IT setup for weddings](https://jalcocert.github.io/JAlcocerT/software-for-weddings/).
 
-And couple of Wordpress.
+And couple of [Wordpress](https://jalcocert.github.io/JAlcocerT/no-code-websites/).
 
 Its not taking much if you have the know how already...
-but still, there is a manual process to spin containers, add https with NGINX...
+
+but still, there is a manual process to spin containers, add https with the Proxy Manager...
 
 Then I found **these F/OSS PaaS software**.
 
@@ -42,7 +43,7 @@ The platform provides all the necessary tools for building, deploying, and manag
 curl -sSL https://dokploy.com/install.sh | sh
 ```
 
-With Dokplot, we can for example, **serve an Astro site, or any other containerized app**
+With Dokploty we can for example, **serve an Astro site, or any other containerized app**
 
 * DokPloy Astro Example from their docs:
 
@@ -50,7 +51,7 @@ There are other **PaaS alternatives** like:
 
 1. [CapRover](https://github.com/caprover/caprover)
 
-> Apache v2 | Scalable PaaS (automated Docker+nginx) - aka Heroku on Steroids
+> Apache v2 | Scalable PaaS (automated Docker+nginx) - *aka Heroku on Steroids*
 
 2. Coolify
 3. QuickStack

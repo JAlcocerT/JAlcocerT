@@ -20,6 +20,11 @@ Whatever you plan to **Selfhost**, there will be a moment that you will be looki
 
 ## SelfHosted Email
 
+
+{{< callout type="warning" >}}
+This is advance
+{{< /callout >}}
+
 Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101ee05cc64a59b46e4d299f?ref=selfh.st)
 
 [SMTP2Go](https://www.reddit.com/r/selfhosted/comments/1hr7bi5/smtp2go_free_plan_spam_score/)
@@ -80,3 +85,25 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 ```
 
 {{% /details %}}
+
+### What do I like to SelfHost?
+
+1. Container UI's 🐳: Portainer, 
+
+2. Syncthing 🐳
+
+3. Tools 🐳: IT-Tools, CosmosServer, OmniTools
+
+4. [Webs 🐳](https://github.com/JAlcocerT/Docker/tree/main/Web/CMS): Wordpress, Ghost, LinkInBio selfhosted alternatives...
+
+> Wrote a post about the most popular CMS [here](https://jalcocert.github.io/JAlcocerT/no-code-websites/) and about LinkStack [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)
+
+5. Productivity Tools 🐳: Get [proper focus](https://jalcocert.github.io/JAlcocerT/tools-to-improve-focus/)
+
+6. [GenAI Tools 🐳](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen) 
+
+7. HTTPs Tools
+
+8. PaaS Tools
+
+9. Photo Tools

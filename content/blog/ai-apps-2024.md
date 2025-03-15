@@ -233,10 +233,20 @@ I have tried Caddy with a OVH VPS Server with 2GB RAM.
 ssh ubuntu@57.128.public.ip
 ```
 
+### HTTPS Options for The MultiChat Project
+
+
+{{< callout type="info" >}}
+[Examples of Docker Config files](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat) for **Multichat**: with NGINX/Cloudflare, Traefik and Caddy.
+{{< /callout >}}
+
 ### Thanks To
 
 * https://akashrajpurohit.com/blog/setup-caddy-with-automatic-ssl-certificates-with-cloudflare/
 * https://akashrajpurohit.com/blog/setup-authelia-for-sso-authentication/
+
+
+
 
 ---
 

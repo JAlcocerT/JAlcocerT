@@ -110,12 +110,6 @@ PCs are great, but even better with **proper internet connectivity**:
     {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router Review" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000" >}}
 {{< /cards >}}
 
-**Local Network**
-
-* Pi4 4GB arm64 - `192.168.0.155`
-* Pi4 2GB arm43 - `192.168.0.232`
-* x13 `192.168.0.124`
-
 Check **devices in local network**:
 
 ```sh
@@ -124,6 +118,12 @@ sudo apt install nast nmap
 sudo nast -m
 nmap -sP 192.168.0.1/24 | grep "scan"
 ```
+
+**Local Network** examples:
+
+* Pi4 4GB arm64 - `192.168.0.155`
+* Pi4 2GB arm43 - `192.168.0.232`
+* x13 `192.168.0.124`
 
 > https://lookup.icann.org/en
 
@@ -134,6 +134,15 @@ sudo apt update
 sudo apt install iperf3
 #iperf3 -s #on the server
 iperf3 -c 192.168.0.12 #on the other device pointing to your server
+
+#nmcli connection show #check connection status
+```
+
+See with whom are you transferring data and how much:
+
+```sh
+sudo apt install iftop
+sudo iftop
 ```
 
 See also [**Portchecker**](https://github.com/dsgnr/portchecker.io)

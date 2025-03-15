@@ -2,7 +2,7 @@
 title: "Spinning Webs - WPs, Ghost,..."
 date: 2025-03-04
 draft: false
-description: 'Websites for all. Without the code. But Selfhostable Containers.'
+description: 'Websites for all. Without the code. But Selfhostable Containers: Wordpress, Ghost, LinkStack...'
 url: 'no-code-websites'
 ---
 
@@ -216,6 +216,14 @@ If you are looking for a [LinkTree Alternative, see LinkStack](https://jalcocert
 What's next?
 
 Maybe place [some GDPR compliant Web Analytics](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics) or add some [other cool features](https://jalcocert.github.io/JAlcocerT/create-your-website/#features-for-webs)
+
+### SelfHosted LinkTree Alternatives
+
+I already covered these on [this post](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio):
+
+1. Little Link
+2. LinkStack
+
 
 <!-- 
 * Weddings...
