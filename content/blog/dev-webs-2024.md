@@ -1,5 +1,5 @@
 ---
-title: "Websites 2024 consolidation"
+title: "Websites 2024 Consolidation"
 date: 2024-12-17
 draft: false
 tags: ["dev"]

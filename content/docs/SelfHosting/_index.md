@@ -107,3 +107,7 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 8. PaaS Tools
 
 9. [Photo Tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/)
+
+10. SSGs 🐳🐳
+
+Like Hugo Theme Gallery

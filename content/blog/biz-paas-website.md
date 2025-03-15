@@ -19,6 +19,8 @@ Then I found **[these F/OSS PaaS software](https://jalcocert.github.io/JAlcocerT
 
 ## Selfhostable PaaS
 
+As of the time of writing: Dokploy and Caprover are way ahead of the rest
+
 [![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#Dokploy/dokploy&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)
 
 
@@ -140,6 +142,64 @@ Thanks to Dokploy, you can invite some user and give the possibility to spin Wor
 
 > Just by using [this docker-compose](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Ghost_Docker-compose.yaml) as you see `./Web/CMS/Ghost_Docker-compose.yaml`
 
+2. Wordpress Deployment with Dokploy
 
----
 
+### Scaling SSG Deployment
+
+The awesome HUGO Theme Gallery: https://github.com/nicokaiser/hugo-theme-gallery
+
+> Which I have used for the [travel addict and costura](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/) photo blog
+
+{{< details title="Photo Gallery with Hugo inside a Container 📌" closed="true" >}}
+
+```sh
+git clone https://github.com/IoTechCrafts/hugo-theme-gallery-ssg
+cd ./hugo-theme-gallery-ssg/exampleSite
+```
+
+{{< callout type="info" >}}
+As per the `theme.toml` file, we need *at least* hugo 0.121.2 version
+{{< /callout >}}
+
+
+```sh
+sudo apt install golang-go
+```
+
+```sh
+go version #Go is updated!
+```
+
+And now, HUGO: https://github.com/gohugoio/hugo/releases/tag/v0.121.1
+
+```sh
+#CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest #The latest
+#wget https://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_0.127.0_linux-arm64.deb
+#wget https://github.com/gohugoio/hugo/releases/download/v0.121.2/hugo_0.121.2_linux-arm64.deb
+wget https://github.com/gohugoio/hugo/releases/download/v0.121.2/hugo_extended_0.121.2_linux-amd64.deb
+
+sudo dpkg -i hugo_*.deb
+
+hugo version #HUGO is ready and >=0.121.2!
+```
+
+As per the sampleSite's readme, we need to do:
+
+```sh
+hugo mod get # Install Hugo module
+
+./pull-images.sh #Pull example images from Unsplash
+```
+
+And just **enjoy** this awsome HUGO Theme:
+
+```sh
+#hugo server
+#hugo server --bind="0.0.0.0" --baseURL="http://192.168.0.117" 
+hugo server --bind="0.0.0.0" --baseURL="http://192.168.0.12" --port=1319
+```
+
+> And you will have the **amazing HUGO sample theme** at `http://192.168.0.12:1319`
+
+{{< /details >}}

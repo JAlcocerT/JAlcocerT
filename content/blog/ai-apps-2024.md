@@ -194,6 +194,10 @@ This is it
 
 ### SelfHosting AI Apps with HTTPs
 
+{{< callout type="info" >}}
+See how I have applied these for the Streamlit Multichat: https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat
+{{< /callout >}}
+
 
 ---
 
