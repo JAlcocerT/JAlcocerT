@@ -44,11 +44,35 @@ I have added a complete docker stack with these [Selfhostable photo tools **here
 
 ### PhotoView
 
-[Photoview](https://fossengineer.com/selfhosting-Photoview-docker/) can be configured with a [docker compose **configuration file**](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Photoview_docker-compose.yml)
+* https://github.com/photoview/photoview
+  * https://photoview.github.io/
 
+> aGPL3.0| Photo gallery for self-hosted personal servers 
+
+* Respect the folders and pictures as you have them - Read-Only Policy.
+  * You might need to play with the folder permissions `sudo chmod -R 777 /root/photoview2`
+* EXIF Metadata
+  * The metadata of images and videos is automatically extracted and shown in the sidebar. It's also used to present images on a map.
+* Video Support: *Ffmpeg is used under the hood to convert videos and optimize them for the web.*
+* In theory, these is [ios App](https://apps.apple.com/in/app/photoview-media-gallery/id1578380271) that I could not get to work. No Android App. So consider it as a Web based project.
+
+[Photoview](https://fossengineer.com/selfhosting-Photoview-docker/) can be configured with a [docker compose **configuration file 🐳**](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Photoview_docker-compose.yml)
+
+![alt text](/blog_img/selfh/Photo/photoview.png)
+
+> Create your user/pass + Your path is `/photos` as per the config file.
 
 1. It respects the original folder structure *reads only*
 2. Photoview requires a SQL DB, *like MariaDB* or MySQL.
+
+Dont forget to go to settings and scan:
+
+![alt text](/blog_img/selfh/Photo/PhotoView-Scan.png)
+
+```sh
+sudo docker stats 6f205c0dde8e #200mb for the UI
+sudo docker stats 8a13d19b5820 #another 170 for the DB
+```
 
 ### PiGallery
 
@@ -65,9 +89,15 @@ I have added a complete docker stack with these [Selfhostable photo tools **here
 **Why do I love PiGallery2**?
 
 * Simplicity: Works perfectly connected to Syncthing/Filebrowser.
+
+```sh
+sudo docker stats pigallery2 #~190mb for 66GB data
+#du -h --max-depth=1 #see folder size
+```
+
 * The MAP feature...
 
-![alt text](/blog_img/selfh/PiGallery-MAP.png)
+![alt text](/blog_img/selfh/Photo/PiGallery-MAP.png)
 
 > Pretty cool if you have tinkered with [video telemetry](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9)
 
@@ -78,7 +108,7 @@ See PiGalleryv2 config file [here 🐳](https://github.com/JAlcocerT/Docker/blob
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="PiGallery2 and Adventures" image="blog_img/selfh/PiGallery2-MapZoom.png" subtitle="PiGallery2 is perfect companion for Travellers!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="Adventures!" image="/blog_img/selfh/Photo/PiGallery2-MapZoom.png" subtitle="PiGallery2 is the perfect companion for Travellers!" >}}
   {{< card link="https://github.com/JAlcocerT/pigallery2" title="PiGallery2 Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Could not resist to fork this project!" >}}
 {{< /cards >}}
 
@@ -89,6 +119,8 @@ See PiGalleryv2 config file [here 🐳](https://github.com/JAlcocerT/Docker/blob
 {{< callout type="info" >}}
 See PiwiGo config file [here](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Piwigo_Docker-compose.yml)
 {{< /callout >}}
+
+![alt text](/blog_img/selfh/Photo/piwigo_setup.png)
 
 With pretty cool [features](https://piwigo.org/features):
 

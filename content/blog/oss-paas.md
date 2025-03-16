@@ -200,9 +200,9 @@ curl -sfL https://get.quickstack.dev/setup.sh | sh -
 #systemctl --type=service --state=running #see that its running
 ```
 
-![PaaS QuickStack](/blog_img/selfh/pass-quickstack.png)
+![PaaS QuickStack](/blog_img/selfh/PaaS/pass-quickstack.png)
 
-Go to `localhost:30000`
+> Go to `localhost:30000`
 
 * https://quickstack.dev/docs/getting-started/installation
     * https://quickstack.dev/docs/managing-apps/from-container-registry

@@ -475,13 +475,6 @@ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t yourDocke
 {{< /dropdown >}}
 
 
-<!-- ### Level Up Streamlit
-
-#### Adding Authelia Authentification
-
-#### Monitoring Streamlit Logs
- -->
-
 * Similar Tools - https://github.com/yvann-ba/Robby-chatbot
   * https://github.com/yvann-ba/Robby-chatbot?tab=MIT-1-ov-file#readme
 
@@ -669,9 +662,7 @@ python -m langflow run
 ```
 
 > Langflow is a no-code AI ecosystem, integrating seamlessly with the tools and stacks your team knows and loves.
-<!-- 
-you can embedd langflow in your websites with few lines of JS
-https://github.com/langflow-ai/langflow-embedded-chat -->
+
 
 ---
 

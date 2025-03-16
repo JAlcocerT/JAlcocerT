@@ -88,8 +88,18 @@ Also for the services:
 
 ![alt text](/blog_img/selfh/PaaS/dokploy-member.png)
 
+5. It enables **docker swarm mode**, making us ready to play with several servers for load balancing
 
+This is a mode for orchestrating containers across multiple Docker hosts.
 
+* Docker Compose vs. Swarm:
+  * Docker Compose is primarily designed for running multi-container applications on a single Docker host.
+  * Docker Swarm uses "stacks" for deploying applications across a cluster of hosts.
+  * In Portainer, you will see a new TAB called services
+
+```sh
+#docker swarm leave --force #to leave
+```
 ---
 
 ## FAQ

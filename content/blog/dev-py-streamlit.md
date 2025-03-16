@@ -57,3 +57,14 @@ https://www.youtube.com/watch?v=6AoSBpZqsRo
 #### Powerful Translator
 
 * https://www.deepl.com/en/translator
+
+<!-- ### Level Up Streamlit
+
+#### Adding Authelia Authentification
+
+#### Monitoring Streamlit Logs
+ -->
+
+ <!-- 
+you can embedd langflow in your websites with few lines of JS
+https://github.com/langflow-ai/langflow-embedded-chat -->

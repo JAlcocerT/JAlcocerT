@@ -244,7 +244,7 @@ Setup [Nextcloud as Docker container](https://github.com/JAlcocerT/Docker/tree/m
 4. Ente, PhotoPrism, Immich...
 5. And...**PiGallery2**!
 
-![PiGallery2 Map Zoom](/blog_img/selfh/PiGallery2-MapZoom.png)
+![PiGallery2 Map Zoom](/blog_img/selfh/Photo/PiGallery2-MapZoom.png)
 
 > ...You can see These tools covered at [this post](https://github.com/JAlcocerT/photo-management-tools)
 
