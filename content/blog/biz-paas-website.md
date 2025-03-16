@@ -107,7 +107,7 @@ This is a mode for orchestrating containers across multiple Docker hosts.
 ### PaaS Alternatives
 
 {{< callout type="info" >}}
-I covered them here
+I covered them [here](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/).
 {{< /callout >}}
 
 There are other **PaaS alternatives** like:
@@ -141,8 +141,11 @@ There are other **PaaS alternatives** like:
 
 ## Conclusions
 
-Tools Which I will *(probably)* cover on a future post.
+For some time Ive been looking for a way to leverage the way I can deliver websites to others.
 
+Definitely SelfHosted PaaS solutions, like DokPloy, resonates with *[no code websites](https://jalcocert.github.io/JAlcocerT/no-code-websites/)*.
+
+I mean with Wordpress and Ghost!
 
 ### Scaling Wordpress and Ghost
 
@@ -152,9 +155,11 @@ Thanks to Dokploy, you can invite some user and give the possibility to spin Wor
 
 ![alt text](/blog_img/selfh/PaaS/dokploy-ghost.png)
 
-> Just by using [this docker-compose](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Ghost_Docker-compose.yaml) as you see `./Web/CMS/Ghost_Docker-compose.yaml`
+> Just by using [this docker-compose 🐳](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Ghost_Docker-compose.yaml) as you see `./Web/CMS/Ghost_Docker-compose.yaml`
 
 2. Wordpress Deployment with Dokploy
+
+🐳
 
 
 ### Scaling SSG Deployment

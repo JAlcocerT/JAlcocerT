@@ -30,8 +30,9 @@ Examples of popular PaaS providers include:
 
 ## PaaS for your Servers
 
-[![Star History Chart](https://api.star-history.com/svg?repos=caprover/caprover,coollabsio/coolify,dokku/dokku&,type=Date)](https://star-history.com/#caprover/caprover&coollabsio/coolify&dokku/dokku&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=caprover/caprover,coollabsio/coolify,dokku/dokku&Dokploy/dokploy&biersoeckli/QuickStack&openfaas/faas&undernightcore/dockerizalo&,type=Date)](https://star-history.com/#caprover/caprover&coollabsio/coolify&dokku/dokku&Dokploy/dokploy&biersoeckli/QuickStack&openfaas/faas&undernightcore/dockerizalo&Date)
 
+> Tools Which I will *(probably)* cover on future posts.
 
 ### CapRover
 

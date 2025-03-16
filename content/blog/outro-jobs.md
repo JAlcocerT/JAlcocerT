@@ -270,6 +270,18 @@ Its all about **[Scrapping Tools](https://github.com/JAlcocerT/Scrap_Tools)** ðŸ
 
 ![Job Market Trend](/blog_img/data-experiments/job-market.png)
 
+## Conclusions
+
+There you have few ways to make scrapping.
+
+Or how to make it better.
+
+For more ideas, check also:
+
+* https://github.com/dgtlmoon/changedetection.io
+
+> Apache v2 | The best and simplest free open source web page change detection, website watcher, restock monitor and notification service. Restock Monitor, change detection. Designed for simplicity - Simply monitor which websites had a text change for free. Free Open source web page change detection, Website defacement monitoring, Price change notification
+
 
 
 ---

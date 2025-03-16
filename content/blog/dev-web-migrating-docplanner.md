@@ -1,9 +1,9 @@
 ---
-title: "Customizing a Web for Health Care"
+title: "Customizing a Web for Mental Health Care"
 date: 2024-09-29
 draft: false
 tags: ["dev"]
-description: 'From docplanner to owning a responsive Website with Astro'
+description: 'From DocPlanner to owning a responsive Website with Astro. The joruney of a psychologist'
 url: 'docplanner-web-migration'
 ---
 
@@ -17,8 +17,10 @@ url: 'docplanner-web-migration'
     * https://www.psikolojisaati.com/
 * Chosen Domain: `psikolognevinkeskin.info`
 
-
+{{< callout type="warning" >}}
 Currently paying **80 USD a MONTH** for that website (and...marketplace)
+{{< /callout >}}
+
 
 ![DocPlanner Costs](/blog_img/web/docplanner-costs.png)
 

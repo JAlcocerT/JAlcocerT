@@ -160,6 +160,8 @@ With pretty cool [features](https://piwigo.org/features):
   
 ### Immich
 
+🐳
+
 ---
 
 ## Interesting BackUp Software
@@ -189,7 +191,15 @@ You can give it a try to [PhotoQT](https://photoqt.org/) or [digiKam](https://ww
 sudo apt install photoqt
 ```
 
-## Lately...
+## Conclusions
+
+If you are looking for a **Photo Gallery** as a blog:
+
+![alt text](/blog_img/web/whilecycling2.png)
+
+https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/#other-photo-gallery-themes
+
+### Lately...
 
 I have learnt to **export photo frames** from a video ([with ffmpeg](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#quick-videos---ffmpeg-cli)).
 

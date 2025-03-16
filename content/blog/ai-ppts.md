@@ -72,8 +72,17 @@ You can also create **PPTs from markdown** with [Marp](https://github.com/marp-t
 
 With [RemarkJS](https://fossengineer.com/create-ppt-with-code/#remark)
 
+There are some astro Themes which are implementing RemarkJS:
+
+
+
 ## Conclusions
 
+There you go.
+
+Few powerpoint as a code f/oss alternatives.
+
+Which will also play [nice with LLMS](#ai-powered-slidev)
 
 Need additionally **mockup tools**?
 
@@ -124,8 +133,12 @@ I'd recommend trying out Penpot and Excalidraw to see which one best fits your w
   {{< card link="https://github.com/excalidraw/excalidraw" title="Excalidraw" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Virtual whiteboard for sketching hand-drawn like diagrams" >}}
 {{< /cards >}}
 
+### Containerized SliDevJS
 
-## AI Powered SliDev
+https://github.com/JAlcocerT/Docker/blob/main/Web/SSGs/Sli_dev_Docker-compose.yml
+
+
+### AI Powered SliDev
 
 First **SliDev with AI scheleton**, pretty much an [OpenAI API call](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service).
 
