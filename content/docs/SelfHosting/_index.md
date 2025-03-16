@@ -104,10 +104,12 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 
 7. HTTPs Tools
 
-8. PaaS Tools
+8. PaaS Tools, like [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)
 
 9. [Photo Tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/)
 
-10. SSGs 🐳🐳
+> The docker files are [here 🐳](https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos)
+
+10. SSGs 🐳
 
 Like Hugo Theme Gallery

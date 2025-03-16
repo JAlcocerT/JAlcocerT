@@ -214,3 +214,9 @@ Go to `localhost:30000`
     * https://www.openfaas.com/
 
 > CE for boddy only | OpenFaaS - Serverless Functions Made Simple
+
+### Dockerizalo
+
+* https://github.com/undernightcore/dockerizalo
+
+> The simplest deployment platform made for self-hosters.

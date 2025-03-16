@@ -11,6 +11,8 @@ Software and Hardware setup before trips or vacations.
 
 ### Software Setup
 
+If you are reading for some time already - You know that I really enjoy [SelfHosted Apps](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/).
+
 {{< callout type="info" >}}
 For easier setup (specially for servers), you can benefit of being familiar with [containers](#what-about-containers) 
 {{< /callout >}}
@@ -177,6 +179,7 @@ Get one of these connected to your SBCs at home and you are ready:
 ![Crucial ssd](/blog_img/hardware/crucial-1tb-ssd.jpg)
  -->
 
+Remember that Nextcloud is a full fledged selfhosted cloud.
 
 {{< details title="Quick NextCloud Server Container Deployment 📌" closed="true" >}}
 
@@ -239,8 +242,11 @@ Setup [Nextcloud as Docker container](https://github.com/JAlcocerT/Docker/tree/m
 2. Piwigo
 3. [Photoview](https://fossengineer.com/selfhosting-Photoview-docker/)
 4. Ente, PhotoPrism, Immich...
+5. And...**PiGallery2**!
 
-...you can see them covered at [this post](https://github.com/JAlcocerT/photo-management-tools)
+![PiGallery2 Map Zoom](/blog_img/selfh/PiGallery2-MapZoom.png)
+
+> ...You can see These tools covered at [this post](https://github.com/JAlcocerT/photo-management-tools)
 
 
 ### Hardware Setup

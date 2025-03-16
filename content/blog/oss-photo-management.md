@@ -21,7 +21,10 @@ After traveling and tinkering for a while with Photos and videos with [the Pixel
 1. Lychee
 2. Piwigo
 3. [Photoview](#photoview)
+4. PiGallery2: *a self-hosted directory-first photo gallery website*
 4. Ente, PhotoPrism, Immich...
+
+[![Star History Chart](https://api.star-history.com/svg?repos=bpatrik/pigallery2,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#bpatrik/pigallery2&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)
 
 
 {{< callout type="info" >}}
@@ -49,15 +52,35 @@ I have added a complete docker stack with these [Selfhostable photo tools **here
 
 ### PiGallery
 
+* https://github.com/bpatrik/pigallery2
+  * https://hub.docker.com/r/bpatrik/pigallery2/tags/
+
+> MIT | A fast directory-first photo gallery website, with rich UI, optimized for running on low resource servers (especially on raspberry pi)
+
+
 1. Web Based. Lightweight and **no DB required**
-2. Supports [GPX](https://jalcocert.github.io/JAlcocerT/geospatial-data/) (and photos are showing in a Map as well)
+2. Supports [GPX](https://jalcocert.github.io/JAlcocerT/geospatial-data/) - *See Photos on a Map!*
+3. Simple. Read-only. Shows what you have that's it. No gallery changes (photo delete, rotate, enhance, tag...)
+
+**Why do I love PiGallery2**?
+
+* Simplicity: Works perfectly connected to Syncthing/Filebrowser.
+* The MAP feature...
+
+![alt text](/blog_img/selfh/PiGallery-MAP.png)
 
 > Pretty cool if you have tinkered with [video telemetry](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9)
 
 
 {{< callout type="info" >}}
-See PiwiGo config file [here](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGallery_docker-compose.yml)
+See PiGalleryv2 config file [here 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGallery_docker-compose.yml)
 {{< /callout >}}
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="PiGallery2 and Adventures" image="blog_img/selfh/PiGallery2-MapZoom.png" subtitle="PiGallery2 is perfect companion for Travellers!" >}}
+  {{< card link="https://github.com/JAlcocerT/pigallery2" title="PiGallery2 Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Could not resist to fork this project!" >}}
+{{< /cards >}}
 
 
 
@@ -70,6 +93,7 @@ See PiwiGo config file [here](https://github.com/JAlcocerT/Docker/blob/main/Back
 With pretty cool [features](https://piwigo.org/features):
 
 
+---
 
 ## Interesting BackUp Software
 
@@ -77,10 +101,13 @@ https://jalcocert.github.io/RPi/posts/selfhosting-with-docker/#several-apps---ra
 
 ### Nextcloud
 
+Nextcloud can do much more than just photo management.
+
+And you can [selfhost NC with docker](https://github.com/JAlcocerT/Docker/tree/main/Backups/NextCloud)
+
 <!--
 ![alt text](/blog_img/selfh/homelab-nextcloud.png) 
 -->
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/selfhosting-nextcloud/" title="NextCloud also works for Photos" image="/blog_img/selfh/homelab-nextcloud.png" subtitle="NC as a container with a Raspberry Pi" >}}
@@ -95,12 +122,11 @@ You can give it a try to [PhotoQT](https://photoqt.org/) or [digiKam](https://ww
 sudo apt install photoqt
 ```
 
-
 ## Lately...
 
-I have learnt to **export photo frames** from a video (with ffmpeg).
+I have learnt to **export photo frames** from a video ([with ffmpeg](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#quick-videos---ffmpeg-cli)).
 
-Im still impress that with ffmpeg I dont need to re-render videos, which makes joining them really fast.
+Im still impressed that with ffmpeg I dont need to re-render videos, which makes joining them really fast.
 
 {{< callout type="info" >}}
 Everything **about videos**, is captured [here](https://github.com/JAlcocerT/YT-Video-Edition)
@@ -113,6 +139,8 @@ Everything **about videos**, is captured [here](https://github.com/JAlcocerT/YT-
 ## FAQ
 
 ### Proper Photo BackUps
+
+Im still in search of my peace of mind regarding backups:
 
 1. Home SSD
 2. Home HDD
@@ -146,4 +174,4 @@ Im exploring other options at this point.
 
 For example, [Amazon Glacier](https://www.geeksforgeeks.org/what-is-amazon-glacier/)
 
-https://aws.amazon.com/s3/storage-classes/glacier/
+* https://aws.amazon.com/s3/storage-classes/glacier/

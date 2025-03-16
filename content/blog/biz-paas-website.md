@@ -82,6 +82,8 @@ Also for the services:
 
 ![alt text](/blog_img/selfh/PaaS/dokploy-monitoring-multichat.png)
 
+*See how multichat needs <10mb of RAM*
+
 4. You can invite and manage what other users/members can do with your Dokploy server
 
 ![alt text](/blog_img/selfh/PaaS/dokploy-member.png)
