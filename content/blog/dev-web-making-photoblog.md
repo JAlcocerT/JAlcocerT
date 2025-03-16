@@ -347,7 +347,7 @@ cp -r themes/hugo-theme-gallery-ssg/exampleSite/* . #copy the sample one to the 
 
 Just need to do now:
 
-1. Edit the go.mod file from the main HUGO project folder from:
+1. Edit the `go.mod` file from the main HUGO project folder from:
 
 ```
 module github.com/nicokaiser/hugo-gallery-starter
@@ -360,7 +360,7 @@ replace github.com/nicokaiser/hugo-theme-gallery/v4 => ../
 
 ```
 
-To
+To:
 
 ```
 module github.com/nicokaiser/hugo-gallery-starter
@@ -371,6 +371,7 @@ require github.com/nicokaiser/hugo-theme-gallery/v4 v4.0.0 // indirect
 ```
 
 And then:
+
 ```sh
 hugo mod get # Install Hugo module
 ```
@@ -387,7 +388,7 @@ hugo server --bind="0.0.0.0" --baseURL="http://192.168.0.117" --port=1319
 {{< /details >}}
 
 
-See that everything builds with
+See that everything builds with:
 
 ```sh
 hugo
@@ -494,7 +495,7 @@ https://gitlab.com/fossengineer1/whilecyclingthere -->
 
 ### Whats next for this customer?
 
-My customer is also really into **interior design**.
+This customer is also really into **interior design**.
 
 And there are very cool Astro Themes waiting for her: https://github.com/PriscaTonia/interior-design-website
 
@@ -523,6 +524,20 @@ It is the one used at hugo theme gallery!
 > Fantastic post by JanKraus
 
 ### Other photo Gallery Themes
+
+Its not only that https://github.com/nicokaiser/hugo-theme-gallery theme is great.
+
+You also have other cool HUGO Theme if you are looking for **Photo + GPX based** blog:
+
+1. https://github.com/IoTechCrafts/hugo-theme-gallery-ssg
+
+2. Im talking about the **HUGO Split Gallery**: https://gitlab.com/tmuguet/hugo-split-gallery
+
+```sh
+git clone https://gitlab.com/FOSSEngineer/hugo-split-gallery
+```
+
+If you are willing to try something else than HUGO:
 
 1. https://github.com/AREA44/astro-multiverse
 

@@ -13,6 +13,11 @@ Whatever you plan to **Selfhost**, there will be a moment that you will be looki
 2. [Monitoring](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/)
 3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/)
 
+
+{{< callout type="info" >}}
+Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhosted
+{{< /callout >}}
+
 ## General OSS Resources
 - [Open Source Alternative - Add Project](https://www.opensourcealternative.to/add-project)
 - [Privacy Tools](https://www.privacytools.io/)

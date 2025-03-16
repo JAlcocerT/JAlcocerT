@@ -162,6 +162,14 @@ With pretty cool [features](https://piwigo.org/features):
 
 🐳
 
+> The key here is the *really cool* mobile App (Android/iOS)
+
+### Chevereto
+
+https://fossengineer.com/selfhosting-chevereto-docker/
+https://v4-docs.chevereto.com/guides/docker/
+https://hub.docker.com/r/linuxserver/chevereto
+
 ---
 
 ## Interesting BackUp Software
@@ -195,9 +203,17 @@ sudo apt install photoqt
 
 If you are looking for a **Photo Gallery** as a blog:
 
-![alt text](/blog_img/web/whilecycling2.png)
+{{< cards >}}
 
-https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/#other-photo-gallery-themes
+  {{< card link="https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/#other-photo-gallery-themes" title="Photo Gallery Project" image="/blog_img/web/whilecycling2.png" subtitle="Creating a Photo Gallery with HUGO" >}}
+{{< /cards >}}
+
+<!-- ![alt text](/blog_img/web/whilecycling2.png) -->
+
+Basically using:
+
+1. HUGO Theme Gallery
+2. Astro Musee: even simpler, just place the photos under `./src/assets/images/original`
 
 ### Lately...
 

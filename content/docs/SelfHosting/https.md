@@ -32,7 +32,7 @@ Selfhosted Apps with Traefik support out of the box:
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
 {{< /cards >}}
 
-
+NGINX Can be used together with Authelia, which provides a authentication layer.
 
 
 {{< callout type="info" >}}

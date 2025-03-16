@@ -52,7 +52,11 @@ npm install -g @slidev/cli #npm install --save-dev @slidev/cli
 npm i -D playwright-chromium
 ```
 
-3. Modify the `slides.md` - Make changes to your ppt via markdown  
+3. SliDev has [several Themes available](https://www.npmjs.com/search?q=keywords%3Aslidev-theme): like https://www.npmjs.com/package/@slidev/theme-seriph
+
+4. Modify the `slides.md` - Make changes to your ppt via markdown
+
+
 
 > It can create a [PPT assistant](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent) as seen on [this post](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/)
 

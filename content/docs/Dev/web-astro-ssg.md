@@ -40,6 +40,7 @@ Find astro themes at: https://astro.build/themes/
 
 1. https://github.com/obviyus/musee?ref=astrothemes.club
 
+> GPL3.0 | Fast, responsive , self-hosted image gallery. Ships minimal JS to the client.
 
 {{< details title="What I like about Musee Astro Theme 📌" closed="true" >}}
 
@@ -61,7 +62,7 @@ npm run dev
 
 {{< /details >}}
 
-> GPL3.0 | Fast, responsive , self-hosted image gallery. Ships minimal JS to the client.
+
 
 2. https://github.com/AREA44/astro-multiverse?ref=statichunt.com
 

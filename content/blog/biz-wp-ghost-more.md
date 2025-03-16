@@ -74,6 +74,14 @@ See [WP Docker Compose](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Wo
 
 > Site will be ready at `subdomain.jalcocertech.com` and for the user `subdomain.jalcocertech.com/wp-admin` 
 
+#### Wordpress Tweaks
+
+1. https://github.com/miziomon/awesome-wordpress
+
+> A curated list of amazingly awesome WordPress resources, themes, plugins and shiny things. Inspired by awesome-php.
+
+
+
 ### Wordpress Alternatives
 
 You can also try these.
@@ -147,6 +155,23 @@ https://www.youtube.com/watch?v=gJxhx5wEAzA
  -->
 
 {{< youtube "gJxhx5wEAzA" >}}
+
+##### Ghost Tweaks
+
+Its possible to use ghost as Headless CMS with Gatsby JS SSG.
+
+But also...you can see how cool Ghost Themes are: https://github.com/awesomelistsio/awesome-ghost?tab=readme-ov-file#themes
+
+1. https://github.com/TryGhost/Source
+
+2. https://github.com/TryGhost/Casper
+
+3. https://github.com/TryGhost/Dawn
+
+4. https://github.com/TryGhost/Ease
+
+> A minimal newsletter theme for Ghost
+
 
 #### InstantLand
 

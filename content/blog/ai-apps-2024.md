@@ -188,6 +188,12 @@ volumes:
 
 ### HTTPS with Caddy
 
+The caddyfile normally serves to create HTTPs with Let's Encrypt with DNS Challenge.
+
+<!-- https://www.youtube.com/watch?v=ZOtUco5EwoI -->
+
+{{< youtube "ZOtUco5EwoI" >}}
+
 {{< callout type="info" >}}
 This is it
 {{< /callout >}}
