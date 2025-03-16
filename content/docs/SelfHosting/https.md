@@ -12,6 +12,16 @@ draft: false
 
 ### Traefik
 
+Selfhosted Apps with Traefik support out of the box:
+* Dokploy
+* Claper PPT
+* The MultiChat!
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}  
+{{< /cards >}}
+
 > See https://myzopotamia.dev/traefik-reverse-proxy-with-containers
 
 ### Caddy
@@ -21,17 +31,19 @@ draft: false
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
 {{< /cards >}}
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
-  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}  
-{{< /cards >}}
+
+
 
 
 {{< callout type="info" >}}
 Thanks to for the video!
 {{< /callout >}}
 
-## Cloudflare Tunnels
+## Behind a NAT 
+
+### Pangolin
+
+### Cloudflare Tunnels
 
 How to expose Apps safely, through your domain, with https and **without exposing your home public IP**.
 

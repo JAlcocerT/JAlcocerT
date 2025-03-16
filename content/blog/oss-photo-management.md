@@ -95,7 +95,11 @@ sudo docker stats pigallery2 #~190mb for 66GB data
 #du -h --max-depth=1 #see folder size
 ```
 
-* The MAP feature...
+* Yet powerful Photo Details:
+
+![alt text](/blog_img/selfh/Photo/PiGallery-PhotoInfo.png)
+
+* The MAP feature is lovely...
 
 ![alt text](/blog_img/selfh/Photo/PiGallery-MAP.png)
 
@@ -116,13 +120,23 @@ See PiGalleryv2 config file [here 🐳](https://github.com/JAlcocerT/Docker/blob
 
 ### PiwiGo
 
+* https://github.com/Piwigo/Piwigo
+  * https://piwigo.org/
+
+> GPL2.0 | Manage your photos with Piwigo, a full featured open source photo gallery application for the web. Star us on Github! More than 200 plugins and themes available. Join us and contribute!
+
+
+
 {{< callout type="info" >}}
-See PiwiGo config file [here](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Piwigo_Docker-compose.yml)
+See PiwiGo config file [here 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Piwigo_Docker-compose.yml)
 {{< /callout >}}
 
 ![alt text](/blog_img/selfh/Photo/piwigo_setup.png)
 
 With pretty cool [features](https://piwigo.org/features):
+
+* Piwigo brings mobile apps for android and iOS - https://piwigo.org/mobile-applicationshttps://piwigo.org/mobile-applications
+  * Allows non-administrator users to also send photos to Piwigo.
 
 
 ---

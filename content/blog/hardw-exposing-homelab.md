@@ -1,9 +1,9 @@
 ---
 title: "A look to Reverse Proxy options. Pangolin"
-date: 2025-04-06
+date: 2025-03-20
 draft: false
 tags: ["Dev"]
-description: 'Pangolin. Compared with Cloudflared and NGINX.'
+description: 'Pangolin. Compared with other https tools like Cloudflared and NGINX.'
 url: 'how-to-expose-homelab-safely'
 ---
 
