@@ -102,7 +102,7 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 
 6. [GenAI Tools 🐳](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen) 
 
-7. HTTPs Tools
+7. HTTPs Tools: Like NGINX, Traefik, Cloudflare Tunnels or Pangolin.
 
 8. PaaS Tools, like [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)
 
@@ -113,3 +113,5 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 10. SSGs 🐳
 
 Like Hugo Theme Gallery
+
+Even SliDevJS PPTs!

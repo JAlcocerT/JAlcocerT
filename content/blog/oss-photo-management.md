@@ -19,12 +19,14 @@ After traveling and tinkering for a while with Photos and videos with [the Pixel
 ## SelfHosted Photo Tools
 
 1. Lychee
-2. Piwigo
+2. [Piwigo](#piwigo)
 3. [Photoview](#photoview)
-4. PiGallery2: *a self-hosted directory-first photo gallery website*
+4. [PiGallery2](#pigallery): *a self-hosted directory-first photo gallery website*
 4. Ente, PhotoPrism, Immich...
 
-[![Star History Chart](https://api.star-history.com/svg?repos=bpatrik/pigallery2,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#bpatrik/pigallery2&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)
+* https://geekflare.com/consumer-tech/self-hosted-photo-backup-alternatives/
+
+[![Star History Chart](https://api.star-history.com/svg?repos=bpatrik/pigallery2,xemle/home-gallery,photoview/photoview,bpatrik/pigallery2&,type=Date)](https://star-history.com/#bpatrik/pigallery2&xemle/home-gallery&photoview/photoview&bpatrik/pigallery2&Date)
 
 
 {{< callout type="info" >}}
@@ -33,6 +35,8 @@ I have added a complete docker stack with these [Selfhostable photo tools **here
 
 
 ### Home Gallery
+
+* https://github.com/xemle/home-gallery
 
 
 [Home Gallery](https://noted.lol/home-gallery-a-simple-self-hosted-photo-gallery/)
@@ -52,9 +56,10 @@ I have added a complete docker stack with these [Selfhostable photo tools **here
 * Respect the folders and pictures as you have them - Read-Only Policy.
   * You might need to play with the folder permissions `sudo chmod -R 777 /root/photoview2`
 * EXIF Metadata
-  * The metadata of images and videos is automatically extracted and shown in the sidebar. It's also used to present images on a map.
-* Video Support: *Ffmpeg is used under the hood to convert videos and optimize them for the web.*
-* In theory, these is [ios App](https://apps.apple.com/in/app/photoview-media-gallery/id1578380271) that I could not get to work. No Android App. So consider it as a Web based project.
+  * The metadata of images and videos is automatically extracted and shown in the sidebar.
+  * It's also used to present images on a map. *See the tab on the left called PLACES*
+* Video Support and Playback: *Ffmpeg is used under the hood to convert videos and optimize them for the web.*
+* In theory, there is [ios App](https://apps.apple.com/in/app/photoview-media-gallery/id1578380271) that I could not get to work. No Android App. So consider it as a Web based project.
 
 [Photoview](https://fossengineer.com/selfhosting-Photoview-docker/) can be configured with a [docker compose **configuration file 🐳**](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Photoview_docker-compose.yml)
 
@@ -83,6 +88,7 @@ sudo docker stats 8a13d19b5820 #another 170 for the DB
 
 
 1. Web Based. Lightweight and **no DB required**
+* See the pictures on its web UI. Videos in theory as well, but I could not get them running
 2. Supports [GPX](https://jalcocert.github.io/JAlcocerT/geospatial-data/) - *See Photos on a Map!*
 3. Simple. Read-only. Shows what you have that's it. No gallery changes (photo delete, rotate, enhance, tag...)
 
@@ -131,13 +137,28 @@ See PiGalleryv2 config file [here 🐳](https://github.com/JAlcocerT/Docker/blob
 See PiwiGo config file [here 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Piwigo_Docker-compose.yml)
 {{< /callout >}}
 
+Make this match your docker config:
+
+![alt text](/blog_img/selfh/Photo/Piwigo-setup.png)
+
+And we are ready:
+
 ![alt text](/blog_img/selfh/Photo/piwigo_setup.png)
+
+
+<!-- 
+https://www.youtube.com/watch?v=hIGibqdSo6c 
+-->
+
+{{< youtube "hIGibqdSo6c" >}}
+
 
 With pretty cool [features](https://piwigo.org/features):
 
-* Piwigo brings mobile apps for android and iOS - https://piwigo.org/mobile-applicationshttps://piwigo.org/mobile-applications
+* Piwigo brings mobile apps for [android](https://play.google.com/store/apps/details?id=com.piwigo.piwigo_ng) and iOS - https://piwigo.org/mobile-applicationshttps://piwigo.org/mobile-applications
   * Allows non-administrator users to also send photos to Piwigo.
-
+  
+### Immich
 
 ---
 
@@ -149,7 +170,7 @@ https://jalcocert.github.io/RPi/posts/selfhosting-with-docker/#several-apps---ra
 
 Nextcloud can do much more than just photo management.
 
-And you can [selfhost NC with docker](https://github.com/JAlcocerT/Docker/tree/main/Backups/NextCloud)
+And you can [selfhost NC with docker 🐳](https://github.com/JAlcocerT/Docker/tree/main/Backups/NextCloud)
 
 <!--
 ![alt text](/blog_img/selfh/homelab-nextcloud.png) 
