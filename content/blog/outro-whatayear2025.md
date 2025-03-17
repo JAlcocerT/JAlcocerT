@@ -16,4 +16,8 @@ One of the best decisions I ever had was to have a Photo Blog.
 
 > Now you can also tell your story.
 
-Check how, if you are passionate about Photography 
+Check how, *if you are passionate about Photography*
+
+##
+
+## Conclusions

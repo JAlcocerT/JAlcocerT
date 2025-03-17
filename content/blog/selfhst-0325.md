@@ -15,7 +15,12 @@ url: 'selfhosted-apps-spring-2025'
 
 **What I like about Homarr**
 
-1. Integrations with other apps: Nextcloud, qbitrorrent, 
+1. **Integrations** with other apps: Nextcloud, qbitrorrent, ...
+
+![alt text](/blog_img/selfh/media/homarr-nc.png)
+
+![alt text](/blog_img/selfh/media/homarr1.png)
+
 2. Weather for location (and forecast)
 3. Built in RSS Feed. [Example](https://feeds.feedburner.com/visualcapitalist)
 4. Plays well with Home assistant
@@ -62,16 +67,39 @@ It provides a very similar experience to Google Photos.
 
 ### Keep Using
 
-1. 
+1. Media server: Kodi, Jellyfin? 
 
-2. 
+If you have a smart tv, probably those are already installed or you can add them
+
+![alt text](/blog_img/selfh/media/jellyfin-smarttv.png)
+
+![alt text](/blog_img/selfh/media/jellyfin1.png)
+
+The main difference is that Kodi is a unified server+client application, Jellyfin has the server and the clients separated into different apps. 
+
+Jellyfin will use the CPU, unless you do this trick: https://jellyfin.org/docs/general/administration/hardware-acceleration/amd/
+
+![alt text](/blog_img/selfh/media/jellyfin-cpu.png)
+
+> See how the server (x300) was quite rev doing 1080p video
+
+LocalSend and NewPipe are also interesting Android Apps to consider
+
+2. Portainer vs Dockge
+
+{{< youtube "UCsYWXEuvms" >}}
+
+
+<!--
+ https://www.youtube.com/watch?v=UCsYWXEuvms 
+ -->
 
 
 #### PiHole
 
 This as been with my for a while.
 
-But nor *its reloaded*.
+But now *its reloaded* with its **v6**.
 
 If you are looking for other Selfhosted DNS, see: GoAdblock
 
@@ -82,7 +110,7 @@ If you are looking for other Selfhosted DNS, see: GoAdblock
 
 ## Thanks to 
 
-The TechHut, 
+The TechHut:
 
 {{< youtube "yUyxJr2xboI" >}}
 
