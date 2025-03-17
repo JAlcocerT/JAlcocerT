@@ -162,6 +162,8 @@ With pretty cool [features](https://piwigo.org/features):
 
 🐳
 
+Files are synced into with strange photo directory order.
+
 > The key here is the *really cool* mobile App (Android/iOS)
 
 ### Chevereto

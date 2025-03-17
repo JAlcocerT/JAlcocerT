@@ -40,6 +40,7 @@ Lets use LLMs to create PPTs!
 [Setup a SliDev Project](https://fossengineer.com/how-to-use-slidev/#the-slidev-project), like any other SSG:
 
 1. Get Node and NPM
+
 2. Initialize the SliDev project
 
 ```sh
@@ -70,6 +71,8 @@ npm i -D playwright-chromium
 
 You can also create **PPTs from markdown** with [Marp](https://github.com/marp-team/marpit)
 
+* https://github.com/marp-team/marpit
+
 [Two other options](https://fossengineer.com/create-ppt-with-code/#marp) to create PPTs as a Code.
 
 ### RemarkJS
@@ -79,12 +82,11 @@ With [RemarkJS](https://fossengineer.com/create-ppt-with-code/#remark)
 There are some astro Themes which are implementing RemarkJS:
 
 
+---
 
 ## Conclusions
 
-There you go.
-
-Few powerpoint as a code f/oss alternatives.
+There you go: Few powerpoint as a code f/oss alternatives.
 
 Which will also play [nice with LLMS](#ai-powered-slidev)
 
@@ -139,7 +141,7 @@ I'd recommend trying out Penpot and Excalidraw to see which one best fits your w
 
 ### Containerized SliDevJS
 
-https://github.com/JAlcocerT/Docker/blob/main/Web/SSGs/Sli_dev_Docker-compose.yml
+* https://github.com/JAlcocerT/Docker/blob/main/Web/SSGs/Sli_dev_Docker-compose.yml
 
 
 ### AI Powered SliDev

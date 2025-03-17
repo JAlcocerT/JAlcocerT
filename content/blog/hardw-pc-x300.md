@@ -139,8 +139,7 @@ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT | awk 'NR==1 || $2 ~ /[GT]/'
 
 Using an **TP-Link Archer T3U (AC1300)**, which I upgraded to the **AC1300 T4U Plus** version.
 
-* The AC1300 is a dualband usb adapter (5ghz up to 867Mbps and 400Mbps on 2.4)
-
+* The AC1300 is a dualband usb adapter: (5ghz up to 867Mbps and 400Mbps on 2.4)
 
 ```sh
 ip addr show
@@ -250,7 +249,17 @@ The energy consumption is reasonable, at **~15w with Linux**, Windows goes ++66%
 
 ![alt text](/blog_img/hardware/energy/x300-linux-w11-energy.jpg)
 
+
+> Regarding the BIOS: it can support AMD Ryzen 5xxx APUS with the right version.
+
+EDIT: some people commented in the youtube video that it is actually possible to plug the bigger AMD fan to the x300 with some small MOD.
+
+
 ### What am I using it for right now?
+
+It works really nice combined with a **Logitech k380** multi-device keyboard.
+
+For something more robust, I also enjoy the K120 version.
 
 
 #### Video Editing 101
