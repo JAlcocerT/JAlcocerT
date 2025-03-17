@@ -1,21 +1,30 @@
 ---
 title: "Streamlit Updates. Improving Data Apps"
-date: 2025-12-27T23:20:21+01:00
-draft: true
+date: 2025-03-17T23:50:21+01:00
+draft: false
 tags: ["Dev"]
 summary: 'More cool Streamlit Stuff'
 url: 'streamlit-apps'
 ---
 
-Streamlit is part of [Snowflake](https://www.snowflake.com/en/blog/snowflake-to-acquire-streamlit/). 
+Streamlit is part of [Snowflake](https://www.snowflake.com/en/blog/snowflake-to-acquire-streamlit/).
 
-https://github.com/kajarenc/stauthlib
-https://github.com/streamlit/streamlit/issues/8653
+Which you might have heard on the BigData context.
+
+
+
+* https://github.com/kajarenc/stauthlib
+    * https://github.com/streamlit/streamlit/issues/8653
 
 To learn streamlit with youtube: https://www.youtube.com/@andfanilo
 
 
 * https://github.com/pmbaumgartner/streamlitopedia
+
+## Streamlit Features I love
+
+https://roadmap.streamlit.app/
+
 
 
 ### Chat Elements
@@ -32,9 +41,33 @@ https://www.youtube.com/watch?v=CJ9E0Sm_hy4
 {{< youtube "CJ9E0Sm_hy4" >}}
 
 
-## Audio with Streamlit
+### Audio with Streamlit
 
-st.audio_input
+See `st.audio_input`
+
+### User Authentication
+
+1. https://docs.streamlit.io/develop/api-reference/user/st.user
+2. Using `streamlit-authenticator` as explained [here](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#provided-users-and-pass)
+3. 3rd Party *repurposed* APIs: Like mailerlite or Stripe
+4.  
+
+## Conclusions
+
+These have been enough so far to develop a couple of Apps:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+And to deliver interesting real estate solutions:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
 
 ---
 

@@ -160,17 +160,18 @@ With pretty cool [features](https://piwigo.org/features):
   
 ### Immich
 
-🐳
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Photo/Immich_Docker-Compose.yml" title="Config File 🐳 ↗"  >}}
+{{< /cards >}}
 
-Files are synced into with strange photo directory order.
 
 > The key here is the *really cool* mobile App (Android/iOS)
 
 ### Chevereto
 
-https://fossengineer.com/selfhosting-chevereto-docker/
-https://v4-docs.chevereto.com/guides/docker/
-https://hub.docker.com/r/linuxserver/chevereto
+* https://fossengineer.com/selfhosting-chevereto-docker/
+* https://v4-docs.chevereto.com/guides/docker/
+* https://hub.docker.com/r/linuxserver/chevereto
 
 ---
 

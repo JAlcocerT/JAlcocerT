@@ -188,7 +188,9 @@ volumes:
 
 ### HTTPS with Caddy
 
-The caddyfile normally serves to create HTTPs with Let's Encrypt with DNS Challenge.
+The `caddyfile` normally serves to create HTTPs with *Let's Encrypt* and DNS Challenge.
+
+> See *http* challenge method vs *DNS* Challenge method
 
 <!-- https://www.youtube.com/watch?v=ZOtUco5EwoI -->
 

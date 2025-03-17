@@ -1,6 +1,6 @@
 ---
 title: "SelfHosted Cloud vs Syncs vs WebDav"
-date: 2025-03-16
+date: 2025-03-15
 draft: false
 tags: ["OSS"]
 description: 'Alternatives to sync your files.'

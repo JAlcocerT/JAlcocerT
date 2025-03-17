@@ -15,6 +15,8 @@ Ive been pretty much **comfortable with these OS's**:
 5. For apple users: ElementaryOS, Deepin or [PearOS](https://pearos.xyz/)
 6. SelfHosting Focused: CasaOS
 
+> Remember that with **Ventoy**, you can have them all in one usb drive
+
 {{< details title="Other Intersting Linux | Flatpak for All 📌" closed="true" >}}
 
 * Whonix / Tails  - Debian based
@@ -74,9 +76,11 @@ curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installat
 chmod +x Benchmark101.sh & ./Benchmark101.sh
 ```
 
-
 {{< /details >}}
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Config File 🐳 ↗"  >}}
+{{< /cards >}}
 
 ```sh
 sudo apt install hardinfo
@@ -143,6 +147,12 @@ ifconfig
 3. x13 wifi 192.168.0.124
 
 **Containers**
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Containers are great! 🐳 ↗"  >}}
+{{< /cards >}}
+
+
 <!-- 
 https://www.youtube.com/watch?v=Z5uBcczJxUY -->
 
@@ -206,11 +216,15 @@ Then, just...
 
 ## Other 
 
-You can check from time to time: https://haveibeenpwned.com/.
+You can check from time to time: https://haveibeenpwned.com/
 
 They also provide an [API](https://haveibeenpwned.com/API/Key), which you would have to pay for.
 
 ### Photo Video Management in a Server
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Config File 🐳 ↗"  >}}
+{{< /cards >}}
 
 1. https://github.com/KDE/digikam
 
