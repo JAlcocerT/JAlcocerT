@@ -35,13 +35,33 @@ url: 'selfhosted-apps-spring-2025'
 
 2. Then I tried Caddy with some of my AI projects last year
 
-The good thing with Caddy, is that it will work as long as you have a good Caddyfile written and the DNS records set properly.
+The good thing with Caddy, is that it will work as long as you have a good `Caddyfile` written and the DNS records set properly.
+
+**What do I like about Caddy**
+
+The API its just amazing:
+
+```sh
+curl localhost:2019/config/ #you will see the current caddy config
+```
+
+And...you can do some automatic magic, and make new configurations to it via CLI.
+
+{{< details title="More about  📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+> Thats great if you are planning to spin services automatically without your supervision!
 
 3. Traefik has also been a great discovery lately
 
 ### Authentication
 
-https://www.youtube.com/watch?v=ywQVe9ikcVI
+<!--
+https://www.youtube.com/watch?v=ywQVe9ikcVI 
+-->
 
 {{< youtube "ywQVe9ikcVI" >}}
 

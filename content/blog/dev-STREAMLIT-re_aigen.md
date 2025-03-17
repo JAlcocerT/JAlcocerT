@@ -199,6 +199,10 @@ That narrows the options considerably, as most frontend frameworks rely on a sep
 
 Here are some strong contenders, keeping in mind that "self-hostable" implies you control the server:
 
+
+
+{{< details title="Keycloak, Supabase, Authentic, LogTo,... 📌" closed="true" >}}
+
 **1. Keycloak (Identity and Access Management):**
 
 * **Type:**  Full-fledged IAM solution.
@@ -239,13 +243,19 @@ Here are some strong contenders, keeping in mind that "self-hostable" implies yo
 * **Frontend Integration:**  Nhost provides SDKs for integrating with your frontend.
 * **Good for:**  Projects where you need a backend with GraphQL API and serverless functions.
 
+6. LogTo
+
+{{< /details >}}
+
 **Recommendation:**
 
 * **For most cases, especially if you're not already deeply invested in a specific backend technology, Supabase or Appwrite are excellent starting points.** They offer a good balance of ease of use and functionality.  They handle the complexities of user authentication and provide you with the tools to quickly integrate it into your frontend.
 * **If you need a very robust and flexible IAM solution and are comfortable with the complexity, Keycloak is a powerful choice.**
 * **If you have very specific requirements or want complete control, building your own backend is an option, but it's the most time-consuming.**
 
-Remember that even with these self-hostable options, you'll still need to choose a frontend framework (React, Vue, etc.) to build the user interface of your application.  These solutions primarily handle the backend aspects of user management.
+Remember that even with these self-hostable options, you'll still need to choose a frontend framework (React, Vue, etc.) to build the user interface of your application.
+
+
 
 ---
 
