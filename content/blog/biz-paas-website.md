@@ -164,6 +164,17 @@ Thanks to Dokploy, you can invite some user and give the possibility to spin Wor
 
 ### Scaling SSG Deployment
 
+The idea behind is it simple: 
+
+1. Put SSG Themes inside a docker container
+2. Let people choose which one they like
+3. Let them sign up and make the tweaks with a headless CMS UI
+4. When changes are done, build the SSG and push it to static hosting
+5. Get leads, scale it
+6. Get rich 
+
+> Sounds like a plan?
+
 The awesome HUGO Theme Gallery: https://github.com/nicokaiser/hugo-theme-gallery
 
 > Which I have used for the [travel addict and costura](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/) photo blog
