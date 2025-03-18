@@ -84,6 +84,11 @@ https://jalcocert.github.io/JAlcocerT/how-to-use-gitlab/
 
 https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/
 
+```sh
+ext install ms-vscode-remote.remote-containers
+#code --install-extension ms-vscode-remote.remote-containers
+```
+
 ### SSH Dev
 
 ### Container Dev

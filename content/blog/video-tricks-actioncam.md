@@ -539,6 +539,15 @@ sudo apt install libc++1
 wget https://github.com/gyroflow/gyroflow/releases/download/v1.6.0/Gyroflow-linux64.AppImage
 chmod +x Gyroflow-linux64.AppImage
 ./Gyroflow-linux64.AppImage
+
+
+#alternatively
+wget https://github.com/gyroflow/gyroflow/releases/download/v1.6.0/Gyroflow-linux64.tar.gz
+tar -xzvf Gyroflow-linux64.tar.gz
+cd Gyroflow
+chmod +x gyroflow
+./gyroflow
+
 ```
 
 {{< callout type="info" >}}

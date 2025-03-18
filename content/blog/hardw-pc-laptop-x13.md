@@ -173,12 +173,28 @@ Once you provide the user and pass, you will be able to see all the NC Files.
 Once you have https ready - you can connect to **Nextcloud WebDav** with:
 
 ```sh
-webdavs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
-webdav://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
+#davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
+dav://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
 ```
 
+
+![alt text](/blog_img/selfh/media/nc-dav-otherlocations.png)
+
 ```sh
-Debian/Ubuntu: sudo apt-get install davfs2
+#Debian/Ubuntu:
+sudo apt-get install davfs2
+```
+
+
+
+Or simply use the NC Client, or...Celeste:
+
+![alt text](/blog_img/selfh/media/celeste.png)
+
+
+```sh
+sudo apt install nextcloud-desktop
+flatpak install flathub com.hunterwittenborn.Celeste
 ```
 
 

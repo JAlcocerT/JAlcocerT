@@ -11,6 +11,8 @@ I Got a new phone recently.
 
 It promises years of updates. 
 
+And have good rating here: https://www.kimovil.com/en/compare-smartphones/
+
 Will it be better value for money than the Xiami PocoPhone F1 I got in 2019 for ~325$?
 
 With the poco, I had available:
@@ -87,7 +89,7 @@ I also enjoy the night mode (but make sure to have a tripod).
 
 2. For videos, its up to **3840x2160 (4k UHD) at 60 fps** and 63.6 Mbit/s bitrate.
 
-> Get ready for some serious backup setup!
+> Get ready for some serious **backup setup**!
 
 ---
 

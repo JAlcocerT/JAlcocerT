@@ -150,6 +150,18 @@ If you are looking for other Selfhosted DNS, see: GoAdblock
 
 {{< youtube "mnry95ay0Bk" >}}
 
+#### NextCloud
+
+Its a very intuitive way to backup your Smartphones:
+
+![alt text](/blog_img/selfh/media/nextcloud-pixel8-sync.png)
+
+> Respecting your folder order and avoiding the use of ML of immich
+
+And you can always see what you have / modify stuff without taking space on your laptop:
+
+![alt text](/blog_img/selfh/media/nc-dav-otherlocations.png)
+
 
 ---
 
