@@ -150,7 +150,7 @@ Its all about: https://pypi.org/project/streamlit-authenticator/
 {{< /details >}}
 
 {{< callout type="info" >}}
-With this method, you can have several hardcoded user/passwords created!
+With this method, you can have several hardcoded `user/password` created!
 {{< /callout >}}
 
 {{< cards >}}

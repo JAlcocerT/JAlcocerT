@@ -499,3 +499,48 @@ docker image prune -a
 * Use `docker builder prune` if you're only concerned about build cache.
 * Be *extremely* careful with `docker volume prune` as it can delete data.
 * Use `docker image prune` with the `-a` option if you want to remove all untagged images (including older versions that might be taking up space).  Be sure you don't need those older versions!
+
+### Night Video
+
+People keeps doing cool things and giving cool recommendations: https://www.youtube.com/watch?v=_mHT8RGDHos
+
+Example with OA4:
+
+
+<!-- https://www.youtube.com/watch?v=koD1RXSyR1c -->
+
+{{< youtube "koD1RXSyR1c" >}}
+
+2.7K and 4K in 4:3 aspect ratio at 24-60fps.
+2.7K and 4K in 16:9 aspect ratio at 100/120fps.
+Wide-angle mode.
+
+> They also add the important detail that the in camera stabilization must be turned off to record the gyro data.
+
+
+#### Gyroflow
+
+Gyroflow is an application that can stabilize your video by using motion data from a gyroscope and optionally an accelerometer. Modern cameras record that data internally (GoPro, Sony, Insta360 etc), and this application stabilizes the captured footage precisely by using them. 
+
+It can also use gyro data from an external source (eg. from Betaflight blackbox).
+
+
+* https://github.com/gyroflow/gyroflow
+
+> GPL v3.0 | **Video stabilization** using gyroscope data
+
+```sh
+sudo apt update
+sudo apt install fuse
+sudo apt install libc++1
+
+#https://github.com/gyroflow/gyroflow/releases
+
+wget https://github.com/gyroflow/gyroflow/releases/download/v1.6.0/Gyroflow-linux64.AppImage
+chmod +x Gyroflow-linux64.AppImage
+./Gyroflow-linux64.AppImage
+```
+
+{{< callout type="info" >}}
+Cross-platform - works on Windows/Linux/Mac/Android/iOS and it uses FFMPEG internally :)
+{{< /callout >}}

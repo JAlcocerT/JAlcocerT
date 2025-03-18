@@ -1,6 +1,6 @@
 ---
 title: "Git & Development Tricks: Github, Gitlab and more"
-date: 2025-03-17T23:20:21+01:00
+date: 2025-06-17T23:20:21+01:00
 draft: false
 tags: ["Dev"]
 url: 'git-recap'

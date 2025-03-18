@@ -3,7 +3,7 @@ title: "How to do practically everything with Python "
 date: 2025-12-15T23:20:21+01:00
 draft: true
 tags: ["Dev"]
-url: 'git-recap'
+url: 'py-recap'
 summary: 'How to use gist as free image hosting'
 ---
 
