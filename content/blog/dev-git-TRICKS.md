@@ -20,6 +20,14 @@ And that they can be installed programatically:
 codium --install-extension gitlab.gitlab-workflow
 #code --install-extension gitlab.gitlab-workflow
 ```
+
+You will also need:
+
+```sh
+git config --global user.name "JAlcocerT"
+git config --global user.email "youremail@example.com"
+```
+
 ### Github
 
 1. Use vscode on the cloud with: https://github.com/codespaces/
