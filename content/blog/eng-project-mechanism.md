@@ -144,6 +144,8 @@ The one of the engine I will reserve for another post.
 
 Today is the turn of a Singer Machine!
 
+> Recently I also discovered about https://www.divergent3d.com/ which seems to be a very cool application of Mechanical Engineering!
+
 ### Singer Mechanism
 
 15cm on the bottom

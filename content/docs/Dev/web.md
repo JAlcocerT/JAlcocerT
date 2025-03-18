@@ -47,6 +47,8 @@ And you bet, they are **cool and functional**.
 
 {{< details title="How to get OpenGraph - OGImage right 📌" closed="true" >}}
 
+See: https://blog.otterlord.dev/posts/dynamic-opengraph/
+
 * As seen in [Web3Templates - Stablo Theme](https://github.com/IoTechCrafts/stablo-astro-SSG) or in [AstroVerse/VisVRS](https://github.com/IoTechCrafts/astroverse)
 * For HUGO, [HUGO Theme Gallery](https://github.com/nicokaiser/hugo-theme-gallery) has OG done right
 {{< /details >}}

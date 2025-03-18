@@ -9,13 +9,12 @@ url: 'os-for-nas'
 Ive been pretty much **comfortable with these OS's**:
 
 1. Ubuntu LTS
-2. Zorin OS (Great if you come from Windows), Linux Mint,...
+2. if you come from Windows: **Zorin OS**, Linux Mint,...
 3. Garuda Linux 
 4. If you miss XP, see https://xpq4.sourceforge.io/
 5. For apple users: ElementaryOS, Deepin or [PearOS](https://pearos.xyz/)
-6. SelfHosting Focused: CasaOS
+6. SelfHosting / **network attached storage** Focused: CasaOS, OpenMediaVault (OMV), Synology,...
 
-> Remember that with **Ventoy**, you can have them all in one usb drive
 
 {{< details title="Other Intersting Linux | Flatpak for All 📌" closed="true" >}}
 
@@ -52,13 +51,9 @@ But...Too many OS's?
 Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-Boots**
 {{< /callout >}}
 
-Getting ready for a **network attached storage**:
+### VPN
 
-* OpenMediaVault (OMV)
-* Synology
-* CasaOS
-
-### Tailscale
+#### Tailscale
 
 ```sh
 tailscale status
@@ -108,6 +103,15 @@ See my [general web docs](https://jalcocert.github.io/JAlcocerT/create-your-webs
 
 
 ### My Home Lab Setup
+
+Whenever I start a fresh installation I make sure to follow my scripts:
+
+```sh
+git clone /Linux
+
+cd Z_Linux_Installations_101
+sudo bash Linux_Setup_101.sh #this will get you containers, browser and vscode
+```
 
 [As of today](https://mermaid.live/edit#pako:eNqdklFvmzAUhf-K675kiKRgIIA7VQpJl6WNtmikUjfogwsmoACOjOnIovz3OZSkWZ-m-sG6vud859qSdzBiMYUYrjjZpGD-IyyBXKNAUb5zUq4oWGTAUhTw-Zlf3QAdOVPvCfT7D75nDDRZ3ACvpy-9T9cdeNIO0rhn6Wh6Em9l6iJraA4csODsXWpnmknTqOIsWoNHQ9PeTEsPdJOjQ_Zdz_cn4LYRrzqS8rflF79zDy2teL6qjpNn_1zrvvd1coaCA3t0zuX4ZZqV6wWJQaMbitJ6LE17u-KofffPoKirLAIV5S-Un7RRMI159kKfWtPs2PYC-WLByla7eCeOA1bSM2reCa97JbY5BR5IsjzHl4mbqJXgbE3xpWEYXd3_ncUixWjTnDPjDzB3H2Du_5uBKiwoL0gWyz-3O2SEUKS0oCHEsoxpQupchDAs99JKasH8bRlBLHhNVchZvUohTkheyVO9iYmgk4zIv1ucuhtS_mKsOCLyCPEONhDrJhpYLjId20IuMgzbUeEWYgsNnOHQRKbrGrZra_pehX_aAG1gI9u0ZV93HdO2bGf_F6Cr6wI), this is **my homelab setup**.
 
@@ -197,7 +201,17 @@ networks:
 
 
 
-### Better PKG management in Debian
+### Maintainance in Linux
+
+1. https://github.com/oguzhaninan/Stacer
+
+> GPL 3.0 |  Linux System Optimizer and Monitoring - https://oguzhaninan.github.io/Stacer-Web 
+
+
+> Remember that with **Ventoy**, you can have them all in one usb drive
+
+
+#### Better PKG management in Debian
 
 From time to time you will need to make some clean up to keep things perfect.
 
@@ -205,11 +219,12 @@ Are you getting some error when doing `apt update`?
 
 Then, just...
 
-#### Maintainance in Linux
 
-1. https://github.com/oguzhaninan/Stacer
+#### Linux BackUps
 
-> GPL 3.0 |  Linux System Optimizer and Monitoring - https://oguzhaninan.github.io/Stacer-Web 
+Proton Drive is cool...but it does not work out of the box for Linux.
+
+Unless... https://blog.otterlord.dev/posts/proton-drive-rclone/
 
 
 ---
@@ -233,6 +248,10 @@ flatpak install flathub org.kde.digikam
 ```
 
 2. PhotoQT
+
+
+3. 
+
 
 ### Cool Blogs Ive found recently
 

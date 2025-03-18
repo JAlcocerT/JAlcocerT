@@ -170,6 +170,17 @@ Once you provide the user and pass, you will be able to see all the NC Files.
 
 {{< /details >}}
 
+Once you have https ready - you can connect to **Nextcloud WebDav** with:
+
+```sh
+webdavs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
+webdav://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
+```
+
+```sh
+Debian/Ubuntu: sudo apt-get install davfs2
+```
+
 
 
 
@@ -228,6 +239,8 @@ Specially when compared with an *old* Ideapad-100: https://openbenchmarking.org/
 ## FAQ
 
 Enter the **boot menu** of the Lenovo Thinkpad x13 g2 by **pressing F12**
+
+> Remember to go into BIOS -> Disable Secure Boot if you plan to install a new OS into the x13
 
 And use the **keyboard lights** by pressing **Fn+Space**
 

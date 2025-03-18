@@ -1,6 +1,6 @@
 ---
 title: "Git & Development Tricks: Github, Gitlab and more"
-date: 2025-06-17T23:20:21+01:00
+date: 2025-02-20T23:20:21+01:00
 draft: false
 tags: ["Dev"]
 url: 'git-recap'
@@ -11,9 +11,25 @@ description: 'Git and useful extensions while developing.'
     * Id: ms-vscode-remote.remote-containers
     * [VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
+
+Remember that there are many cool extensions: https://marketplace.visualstudio.com/VSCode
+
+And that they can be installed programatically:
+
+```sh
+codium --install-extension gitlab.gitlab-workflow
+#code --install-extension gitlab.gitlab-workflow
+```
 ### Github
 
-https://jalcocert.github.io/JAlcocerT/github-gists/
+1. Use vscode on the cloud with: https://github.com/codespaces/
+2. GISTS are a great way to share code: https://jalcocert.github.io/JAlcocerT/github-gists/
+
+```sh
+
+```
+
+![alt text](/blog_img/dev/github-auth.png)
 
 #### Creating Releases
 
@@ -40,11 +56,23 @@ https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/
 
 ### Gitlab
 
+Not everything is Github.
+
+There are very cool projects on Gitlab as well.
+
+```sh
+code --install-extension gitlab.gitlab-workflow
+```
+
+![alt text](/blog_img/dev/gitlab-extension.png)
+
 https://jalcocert.github.io/JAlcocerT/how-to-use-gitlab/
 
 > Definitely use the extension `GitLab Workflow VS Code Extension` and authenticate with OAuth.
 
-## Remote Development
+## VSCode
+
+### Remote Development
 
 https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/
 

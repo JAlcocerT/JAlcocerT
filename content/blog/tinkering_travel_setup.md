@@ -306,8 +306,10 @@ You can also get one of these **portable 4G usb router** (and bring a **sim adap
 ![4g router](/blog_img/hardware/portable-4g-router.jpg)
 
 {{< callout type="warning" >}}
-Not all esims on your phone allow you to use them as Hotspot 
+**Not all esims** on your phone allow you to use them as Hotspot 
 {{< /callout >}}
+
+See: https://www.simyo.es/preguntas-frecuentes/esim.html or airalo
 
 
 > Ive been experimenting with the travel router around and...
