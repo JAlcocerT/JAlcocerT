@@ -226,6 +226,16 @@ Proton Drive is cool...but it does not work out of the box for Linux.
 
 Unless... https://blog.otterlord.dev/posts/proton-drive-rclone/
 
+Recently when installing Gyroflow for better video edition the ubuntu on my x13 could not access the files.
+
+And after reboot i could not access the system at all.
+
+Thankfully, I got proper backup implemented! or at least, one that worked.
+
+You can try with: Syncthing, Nextcloud, WebDav...
+
+> But try something.
+
 
 ---
 
