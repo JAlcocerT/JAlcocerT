@@ -115,10 +115,10 @@ If you are using microsoft authenticator, make sure to have cloud backup enabled
 When adding a new account on the phone, make sure to hit **restore from backup** instead of just login.
 
 {{< callout type="warning" >}}
-Make sure to have **proper backup codes stored** to enter your critical applications: gmail/microsoft/2fas
+Make sure to have **proper backup codes stored** to enter your critical applications: gmail/microsoft/2fas/....
 {{< /callout >}}
 
-You could also make sure to be login on those services at your tablet, if you have one.
+> You could also make sure to be login on those services at your tablet, if you have one.
 
 ---
 

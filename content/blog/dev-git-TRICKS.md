@@ -54,9 +54,12 @@ And given a project, you can **get the latest Github release** as per:
   {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/" title="GHA 101 Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="How to get the most out of Github Actions" >}}
 {{< /cards >}}
 
-Post - Github Actions MultiArch Images.
+Github Actions **MultiArch Images**:
 
-But since this year, 2025, we can also build ARM64 images natively with GHActions!
+1. With QEMU: as explained here
+2. ARM86 native builds with GHA
+
+> Since this year, 2025, we can also build ARM64 images natively with GHActions!
 
 #### Github Pages
 
@@ -80,6 +83,8 @@ https://jalcocert.github.io/JAlcocerT/how-to-use-gitlab/
 
 ## VSCode
 
+There are some cool extensions to help you create.
+
 ### Remote Development
 
 https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/
@@ -98,7 +103,7 @@ ext install ms-vscode-remote.remote-containers
 
 ## Learnt with This one
 
-Thanks to [these devs tricks](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/), I could put [this landing theme](https://github.com/majesticooss/mizar) with KeyStatic into selfhosting with my Pi.
+Thanks to [these devs tricks](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/), I could put [this landing theme](https://github.com/majesticooss/mizar) with **KeyStatic** into selfhosting with my Pi.
 
 1. [Installed Node](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
 

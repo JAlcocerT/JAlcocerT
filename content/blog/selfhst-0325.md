@@ -162,7 +162,11 @@ And you can always see what you have / modify stuff without taking space on your
 
 ![alt text](/blog_img/selfh/media/nc-dav-otherlocations.png)
 
-See the bottom right, where you can add your NC web Dav path: `davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav` or `dav://your_nc_user@192.168.0.12:8080/remote.php/webdav`
+See the bottom right, where you can add your [NC web Dav](https://docs.nextcloud.com/server/31/user_manual/en/files/access_webdav.html) path: `davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav` or `dav://your_nc_user@192.168.0.12:8080/remote.php/webdav`
+
+{{< callout type="info" >}}
+You can install it on mobile devices via [F-Droid or also Obtanium](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#android-apps-i-love) by using `https://github.com/nextcloud/android`
+{{< /callout >}}
 
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Streamlit Updates. Improving Data Apps"
-date: 2025-03-17T23:50:21+01:00
+date: 2025-04-17T23:50:21+01:00
 draft: false
 tags: ["Dev"]
 summary: 'More cool Streamlit Stuff'
@@ -10,6 +10,8 @@ url: 'streamlit-apps'
 Streamlit is part of [Snowflake](https://www.snowflake.com/en/blog/snowflake-to-acquire-streamlit/).
 
 Which you might have heard on the BigData context.
+
+> Continuing from https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
 
 
 
