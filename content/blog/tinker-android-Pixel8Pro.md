@@ -91,6 +91,35 @@ I also enjoy the night mode (but make sure to have a tripod).
 
 > Get ready for some serious **backup setup**!
 
+3. The charging time is not the quickest. It can go up to ~25W.
+
+I like that it charges slow during the night, according to your alarm time.
+
+### Fav Apps for the Pixel
+
+> Hello from the future!
+
+1. The GCam works really nice with the phone. *They have included a cool astro mode*.
+
+2. Security
+
+* [2FAS](https://play.google.com/store/apps/details?id=com.twofasapp)
+* [Bitwarden](https://play.google.com/store/apps/details?id=com.x8bit.bitwarden)
+
+3. Nextcloud / Immich: to sync your photos or to have a full cloud
+
+**TIP**
+
+If you are using microsoft authenticator, make sure to have cloud backup enabled for your company stuff.
+
+When adding a new account on the phone, make sure to hit **restore from backup** instead of just login.
+
+{{< callout type="warning" >}}
+Make sure to have **proper backup codes stored** to enter your critical applications: gmail/microsoft/2fas
+{{< /callout >}}
+
+You could also make sure to be login on those services at your tablet, if you have one.
+
 ---
 
 ## FAQ
@@ -103,6 +132,8 @@ I also enjoy the night mode (but make sure to have a tripod).
 > Making [Android better](https://jalcocert.github.io/Linux/docs/privacy/android/#better-android-os)
 
 ### Android Apps I love!
+
+But get them...in a cool way:
 
 * [Obtanium](https://github.com/ImranR98/Obtainium) - Android Apps from its Source, [in FDroid](https://f-droid.org/es/packages/dev.imranr.obtainium.fdroid/)
 * [F-Droid](https://f-droid.org/es/)
@@ -120,8 +151,6 @@ I also enjoy the night mode (but make sure to have a tripod).
     * [RSS ReadDrops](https://f-droid.org/es/packages/com.readrops.app/)
     * NFC Tools
 
-* [2FAS](https://play.google.com/store/apps/details?id=com.twofasapp)
-* [Bitwarden](https://play.google.com/store/apps/details?id=com.x8bit.bitwarden)
 
 
 ### Running Windows on Android

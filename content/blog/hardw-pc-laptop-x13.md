@@ -162,7 +162,7 @@ With Syncthing, I sync my pixel at `/media/jalcocert/BackUp/Sync_Pixel`
 
 > Im assuming you have already a [NextCloud Server Setup](https://raw.githubusercontent.com/JAlcocerT/Docker/refs/heads/main/Backups/NextCloud/nc_mariadb.yml)
 
-You will need to go to folders, other locations and use: ``dav://nextcloudurl:8080/remote.php/dav/files/YOUR_USERNAME_HERE/``
+You will need to go to folders, other locations and use: `dav://nextcloudurl:8080/remote.php/dav/files/YOUR_USERNAME_HERE/`
 
 ![NextCloud WebDav](/blog_img/selfh/webdav-nc-tailscale.png)
 

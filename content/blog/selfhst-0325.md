@@ -162,6 +162,8 @@ And you can always see what you have / modify stuff without taking space on your
 
 ![alt text](/blog_img/selfh/media/nc-dav-otherlocations.png)
 
+See the bottom right, where you can add your NC web Dav path: `davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav` or `dav://your_nc_user@192.168.0.12:8080/remote.php/webdav`
+
 
 ---
 

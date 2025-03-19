@@ -3,14 +3,14 @@ title: "Everything I enjoy about Streamlit. With AI as RE Agent."
 date: 2025-03-01T10:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Quick PoC Web Apps with Python and Streamlit. Applied to a Real Estate Calculator with GenAI Powered recommentations.'
+description: 'Quick PoC Web Apps with Python and Streamlit. Applied to a Real Estate Calculator with GenAI Powered recommentations. SliDevJS Powered Tech Talk.'
 url: 'streamlit-is-cool'
 ---
 
 
 ## Streamlit Calculator and GenAI RE Agent
 
-I was building a simple web app RE calculator with Streamlit here:
+I was building a simple web app RE calculator with Streamlit to explore:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
@@ -20,7 +20,7 @@ I was building a simple web app RE calculator with Streamlit here:
 Its time to put few pieces together, and add Generative ai capabilities:
 
 {{< callout type="info" >}}
-See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻 
+See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻 and presentation!
 {{< /callout >}}
 
 
@@ -107,9 +107,22 @@ The data? Pure markdown or `.mdx` from the site itself:
 You can use a live editor to get around markdown: https://dillinger.io/
 
 
+
+
+## Conclusions
+
+
+I have also been tinkering with a Web App framework alternative, Reflex:
+
+{{< cards cols="1" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
+{{< /cards >}}
+
 ---
 
-## Streamlit Features for PoC
+## Outro
+
+### Streamlit Features for PoC
 
 You will need **https** to have credibility that you build something solid.
 
@@ -122,7 +135,7 @@ Remember that the visible Streamlit App name in the **browser tab**, will match 
 {{< /callout >}}
 
 
-### Features under a Wall
+#### Features under a Wall
 
 So far, Ive come across few ways (x4) to place **authentication on top of Streamlit Apps**:
 
@@ -133,7 +146,7 @@ So far, Ive come across few ways (x4) to place **authentication on top of Stream
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/WebMigrAItion/" title="MigrAItion Photos Script Source Code ↗" icon="book-open" >}}
 {{< /cards >}}
 
-#### Provided Users and Pass
+##### Provided Users and Pass
 
 2. By using the `streamlit-authenticator` library, only my client can access it:
 
@@ -158,7 +171,7 @@ With this method, you can have several hardcoded `user/password` created!
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py" title="Multichat with Auth Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Users and passwords configuration Script " >}}
 {{< /cards >}}
 
-#### Email Verification
+##### Email Verification
 
 Recently I got to know also about this project to verify emails:
 
@@ -191,7 +204,7 @@ Recently I got to know also about this project to verify emails:
   {{< card link="" title="SliDev PPTs as Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="I Wrote a small PPT with SliDev for MultiChat and Published it with GHA" >}}
 {{< /cards >}}
 
-#### With Other Containers
+##### With Other Containers
 
 You're asking for a self-hostable solution that combines frontend *and* user management (registration, login, access control). 
 
@@ -259,11 +272,13 @@ Remember that even with these self-hostable options, you'll still need to choose
 
 ---
 
-## Conclusions
+## FAQ
+
+### How to prepare a Tech Talk with SliDevJS
+
+https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
+
+https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#preparing-a-tech-talk-with-ai
 
 
-I have also been tinkering with a Web App framework alternative, Reflex:
-
-{{< cards cols="1" >}}
-    {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
-{{< /cards >}}
+> See the event [here](https://events.exadel.com/event/rag-powered-real-estate/)
