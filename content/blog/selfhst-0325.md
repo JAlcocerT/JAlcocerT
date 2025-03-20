@@ -38,6 +38,8 @@ source ~/.bashrc   # Or source ~/.zshrc
 podman run -d -p 8888:8000 -p 9999:9000 --name=portainerpodman --restart=always -v $XDG_RUNTIME_DIR/podman/podman.sock:/var/run/docker.sock -v portainerpodman_data:/data portainer/portainer-ce
 ```
 
+![alt text](/blog_img/selfh/podman-network.png)
+
 
 ### Homarr
 
@@ -59,7 +61,7 @@ podman run -d -p 8888:8000 -p 9999:9000 --name=portainerpodman --restart=always 
 
 ### Better HTTPs and SSL
 
-1. I Started to get https with NGINX
+1. I Started to get https with **NGINX**
 
 2. Then I tried **Caddy** with some of my AI projects last year
 
@@ -69,7 +71,7 @@ The good thing with Caddy, is that it will work as long as you have a good `Cadd
 
 **What do I like about Caddy**
 
-Easy setup as per JimsGarage Video
+Easy setup as per [JimsGarage Video](https://www.youtube.com/watch?v=ZOtUco5EwoI)
 
 ```sh
 git clone https://github.com/JAlcocerT/Docker #I have followed his guide and make minor tweaks
@@ -77,17 +79,21 @@ cd Security/Proxy/Caddy
 
 sudo docker network create caddy
 sudo docker compose up -d #dont use the OLD docker-compose up -d
+
+#docker network connect caddy portainer
 ```
 
 The API its just amazing:
 
 ```sh
+#sudo apt install jq
 curl localhost:2019/config/ #you will see the current caddy config
+#curl localhost:2019/config/ | jq .
 ```
 
 And...you can do some automatic magic, and make new configurations to it via CLI.
 
-{{< details title="More about  📌" closed="true" >}}
+{{< details title="More about Caddy 📌" closed="true" >}}
 
 
 
@@ -95,7 +101,7 @@ And...you can do some automatic magic, and make new configurations to it via CLI
 
 > Thats great if you are planning to spin services automatically without your supervision!
 
-3. Traefik has also been a great discovery lately
+3. **Traefik** has also been a great discovery lately
 
 ### Authentication
 
@@ -207,6 +213,12 @@ See the bottom right, where you can add your [NC web Dav](https://docs.nextcloud
 {{< callout type="info" >}}
 You can install it on mobile devices via [F-Droid or also Obtanium](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#android-apps-i-love) by using `https://github.com/nextcloud/android`
 {{< /callout >}}
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sync-file-tools/#webdavs" title="RE Streamlit App" image="/blog_img/selfh/media/sftpgo-webadmin.png" subtitle="SFTP-Go Setup" >}}
+{{< /cards >}}
+
 
 
 ---
