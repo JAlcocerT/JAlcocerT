@@ -115,6 +115,12 @@ ext install ms-vscode-remote.remote-containers #do this one inside VSCode with C
 
 > This can be very useful to do Jekyll web dev as seen [here](https://www.youtube.com/watch?v=X7guekGZM20)
 
+**More VSCode extensions**
+
+```sh
+ext install ms-azuretools.vscode-docker
+```
+
 ---
 
 ## Learnt with This one

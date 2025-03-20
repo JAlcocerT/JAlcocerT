@@ -3,7 +3,7 @@ title: "Scaling Services with SelfHosted PaaS - Netlify Vercel alternatives"
 date: 2025-03-14T21:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Deploying with Dokploy. Make ideas scalable: Wordpress and Ghost Examples.'
+description: 'Deploying with Dokploy. Make ideas scalable: Wordpress and Ghost with build in Traefik SSL.'
 url: 'selfhosted-paas'
 ---
 

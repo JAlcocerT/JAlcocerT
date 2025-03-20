@@ -11,6 +11,34 @@ url: 'selfhosted-apps-spring-2025'
 
 ## New SelfHosted Apps
 
+But first, new Selfhosting ways, wit PODMAN:
+
+```sh
+sudo apt-get install python3-pip
+pip3 install podman-compose
+pip3 show podman-compose
+```
+
+```sh
+nano ~/.bashrc  # Or nano ~/.zshrc
+#add this at the end
+export PATH="$PATH:$HOME/.local/bin"
+```
+Reload:
+```sh
+source ~/.bashrc   # Or source ~/.zshrc
+```
+
+
+```sh
+#docker network create caddy
+#podman network create caddy
+#podman-compose up -d
+
+podman run -d -p 8888:8000 -p 9999:9000 --name=portainerpodman --restart=always -v $XDG_RUNTIME_DIR/podman/podman.sock:/var/run/docker.sock -v portainerpodman_data:/data portainer/portainer-ce
+```
+
+
 ### Homarr
 
 {{< cards >}}
@@ -40,6 +68,16 @@ The good thing with Caddy, is that it will work as long as you have a good `Cadd
 > http challenge will require portforwarding if you are behind a NAT, but with DNS Challenge we are good to go
 
 **What do I like about Caddy**
+
+Easy setup as per JimsGarage Video
+
+```sh
+git clone https://github.com/JAlcocerT/Docker #I have followed his guide and make minor tweaks
+cd Security/Proxy/Caddy
+
+sudo docker network create caddy
+sudo docker compose up -d #dont use the OLD docker-compose up -d
+```
 
 The API its just amazing:
 

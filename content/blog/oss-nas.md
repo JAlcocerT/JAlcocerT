@@ -260,7 +260,12 @@ flatpak install flathub org.kde.digikam
 2. PhotoQT
 
 
-3. 
+3. dupeGuru
+
+```sh
+sudo add-apt-repository universe
+sudo apt install dupeguru-se
+```
 
 
 ### Cool Blogs Ive found recently
@@ -357,6 +362,10 @@ sudo docker stats nextcloud
 2. Removable SSD (nmve 2280 drive) and 2.5 expandable bay
 
 3. Low energy consumption, which can be measured [with a smart plug](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/)
+
+```sh
+dpkg --print-architecture #ARM will tend to be more power efficient than x86
+```
 
 > At the time of writing, my **energy costs** are ~0.28$/Kwh
 
