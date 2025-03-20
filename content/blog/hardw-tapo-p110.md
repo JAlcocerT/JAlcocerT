@@ -83,6 +83,17 @@ We need **HACS activated** (any of those will be add-ons, so we can use our HA w
 
 <https://github.com/RomRider/apexcharts-card>
 
+## Conclusions on the Smart Plug
+
+Imo it has very interesting features and integrations for a first smart plug at home.
+
+The energy/power monitoring can be used to optimied our home.
+
+Remembre about the 2.4G Wifi required and the 16A and 3680W max power limitation.
+
+
+> There are some other smartplugs like the Zigbee Forta IGZ-K20A which allow for 3600/16A or 4400w/20A, but...its not well integrated with the TUYA App neither it provides the energy monitoring.
+
 ---
 
 ## FAQ

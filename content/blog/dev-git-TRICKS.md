@@ -87,17 +87,33 @@ There are some cool extensions to help you create.
 
 ### Remote Development
 
-https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/
+I was discovering some vscode triks [here](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/).
+
+The most important steps?
+
+**SSH Dev**
+
+We need this extension: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
 
 ```sh
-ext install ms-vscode-remote.remote-containers
-#code --install-extension ms-vscode-remote.remote-containers
+ext install ms-vscode-remote.vscode-remote-extensionpack #do this one inside VSCode with CTRL+SHIFT+P
+#code --install-extension ms-vscode-remote.vscode-remote-extensionpack #or this one from the terminal
 ```
 
-### SSH Dev
+Then, do CTRL SHIFT P and write: `connect to host`
 
-### Container Dev
+![alt text](/blog_img/dev/remote-dev.png)
 
+> [This video](https://www.youtube.com/watch?v=cOopQQIL8JU) summarizes it very well
+
+**Container Dev**
+
+```sh
+ext install ms-vscode-remote.remote-containers #do this one inside VSCode with CTRL+SHIFT+P
+#code --install-extension ms-vscode-remote.remote-containers #or this one from the terminal
+```
+
+> This can be very useful to do Jekyll web dev as seen [here](https://www.youtube.com/watch?v=X7guekGZM20)
 
 ---
 

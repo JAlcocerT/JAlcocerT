@@ -33,9 +33,11 @@ url: 'selfhosted-apps-spring-2025'
 
 1. I Started to get https with NGINX
 
-2. Then I tried Caddy with some of my AI projects last year
+2. Then I tried **Caddy** with some of my AI projects last year
 
 The good thing with Caddy, is that it will work as long as you have a good `Caddyfile` written and the DNS records set properly.
+
+> http challenge will require portforwarding if you are behind a NAT, but with DNS Challenge we are good to go
 
 **What do I like about Caddy**
 
