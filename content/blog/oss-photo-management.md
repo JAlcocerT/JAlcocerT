@@ -14,6 +14,9 @@ After traveling and tinkering for a while with Photos and videos with [the Pixel
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#backups" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Hardware & Softw setup for traveling" >}}
 {{< /cards >}}
 
+...I soon required a lot of extra space.
+
+> Literally in ~1year of use I created >200GB of data. Not counting the [OA5Pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/) Videos.
 
 
 ## SelfHosted Photo Tools
@@ -26,7 +29,7 @@ After traveling and tinkering for a while with Photos and videos with [the Pixel
 
 * https://geekflare.com/consumer-tech/self-hosted-photo-backup-alternatives/
 
-[![Star History Chart](https://api.star-history.com/svg?repos=bpatrik/pigallery2,xemle/home-gallery,photoview/photoview,bpatrik/pigallery2&,type=Date)](https://star-history.com/#bpatrik/pigallery2&xemle/home-gallery&photoview/photoview&bpatrik/pigallery2&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=bpatrik/pigallery2,xemle/home-gallery,photoview/photoview,xemle/home-gallery&,type=Date)](https://star-history.com/#bpatrik/pigallery2&xemle/home-gallery&photoview/photoview&xemle/home-gallery&Date)
 
 
 {{< callout type="info" >}}
@@ -42,9 +45,6 @@ I have added a complete docker stack with these [Selfhostable photo tools **here
 [Home Gallery](https://noted.lol/home-gallery-a-simple-self-hosted-photo-gallery/)
 
 
-{{< cards >}}
-  {{< card link="https://www.diamondback.com/" title="Diamond Bike" image="https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
-{{< /cards >}}
 
 ### PhotoView
 
@@ -161,7 +161,7 @@ With pretty cool [features](https://piwigo.org/features):
 ### Immich
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Photo/Immich_Docker-Compose.yml" title="Config File 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Photo/Immich_Docker-Compose.yml" title="Immich Config File 🐳 ↗"  >}}
 {{< /cards >}}
 
 
@@ -202,6 +202,8 @@ You can give it a try to [PhotoQT](https://photoqt.org/) or [digiKam](https://ww
 sudo apt install photoqt
 ```
 
+---
+
 ## Conclusions
 
 If you are looking for a **Photo Gallery** as a blog:
@@ -217,6 +219,11 @@ Basically using:
 
 1. HUGO Theme Gallery
 2. Astro Musee: even simpler, just place the photos under `./src/assets/images/original`
+
+
+{{< cards >}}
+  {{< card link="https://www.beyondajourney.com/" title="Diamond Bike" image="https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
+{{< /cards >}}
 
 ### Lately...
 

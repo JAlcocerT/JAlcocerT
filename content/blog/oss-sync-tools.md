@@ -37,9 +37,6 @@ But there are specific apps if you just need a simple web dav.
 
 * https://docs.sftpgo.com/latest/
 
-
-
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/WebDav/sftpgo_docker-compose.yml" title="See STFP-Go Config File 🐳 ↗"  >}}
 {{< /cards >}}
@@ -72,7 +69,7 @@ And to connect with your Linux Files, you can add `sftp://jalcocert@192.168.0.12
 > aGPL 3.0 | Full-featured and highly configurable SFTP, HTTP/S, FTP/S and WebDAV server - S3, Google Cloud Storage, Azure Blob
 
 * http://192.168.0.12:8011/web/admin/users
-* 
+* http://192.168.0.12:8011/web/client/profile
 
 To add it to ubuntu:
 
@@ -90,4 +87,4 @@ sudo apt install davfs2
 
 ## Conclusions
 
-These tools can be used together with your Photo Management Tools.
+These tools can be used together with your [Photo Management Tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/).

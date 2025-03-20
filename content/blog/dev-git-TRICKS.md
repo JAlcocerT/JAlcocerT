@@ -69,7 +69,9 @@ https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/
 
 Not everything is Github.
 
-There are very cool projects on Gitlab as well.
+There are very cool projects on [Gitlab](https://jalcocert.github.io/JAlcocerT/how-to-use-gitlab/) as well.
+
+You can start by adding their extension to sync your repos:
 
 ```sh
 code --install-extension gitlab.gitlab-workflow
@@ -77,9 +79,8 @@ code --install-extension gitlab.gitlab-workflow
 
 ![alt text](/blog_img/dev/gitlab-extension.png)
 
-https://jalcocert.github.io/JAlcocerT/how-to-use-gitlab/
 
-> Definitely use the extension `GitLab Workflow VS Code Extension` and authenticate with OAuth.
+> Definitely use the extension `GitLab Workflow VS Code Extension`. Authenticate with OAuth.
 
 ## VSCode
 
@@ -115,6 +116,13 @@ ext install ms-vscode-remote.remote-containers #do this one inside VSCode with C
 
 > This can be very useful to do Jekyll web dev as seen [here](https://www.youtube.com/watch?v=X7guekGZM20)
 
+Generally, to develop inside a container: you will need one
+
+
+{{< callout type="info" >}}
+For a Python Dev Container, you can get one with this docker-compose.
+{{< /callout >}}
+
 **More VSCode extensions**
 
 ```sh
@@ -144,3 +152,13 @@ npm run build
 #serve -s dist #http://localhost:3000
 npx serve -s dist #http://localhost:3000
 ```
+
+### Outro
+
+Lately, a colleague mentioned to me about: https://lovable.dev/
+
+> Lovable is an **AI software engineer**, which enables anyone to build for the web. Simply chat to instantly build websites and web apps, with no technical knowledge needed.
+
+It requires a signup, yet they provide a free tier.
+
+Definitely have to take a look to suck tools and also to the open/local ones.

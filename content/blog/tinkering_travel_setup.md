@@ -386,7 +386,7 @@ Local Development:
 
 Spliit offers a robust solution for managing shared expenses and simplifies the process for users. 
 
-Its an fantastic project to have a look to.
+> Spliit an fantastic project to have a look to.
 
 In my opinion its *just missing* the possibility to add different currencies.
 
@@ -411,16 +411,18 @@ And you can see how simple is to get [up and running with **docker and Portainer
 
 <!-- https://www.youtube.com/shorts/ox3IsWH-o7g -->
 
-No wonder why Container is one of my favourite technologies to use for app reliability!
+No wonder [why **Containers**](https://jalcocert.github.io/JAlcocerT/why-i-love-containers/) are one of my favourite technologies to use for app reliability!
 
 ### More Cool Software
 
 Thanks to this sites, I get to know more cool apps:
 
 1. https://openalternative.co/self-hosted
+
 * https://github.com/piotrkulpinski/openalternative
 
 > Which can be seen also as an **awsome Astro project!**
 
 2. https://alternateoss.com/
+
 3. https://youmightnotneed.co/

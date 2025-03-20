@@ -3,7 +3,7 @@ title: "A closer look to Google Cloud Platform"
 date: 2025-02-16
 draft: false
 tags: ["dev"]
-description: 'Learning more about GCP. Compared with other Clouds and OnPrem.'
+description: 'Big Query, Dataform and more about GCP. Compared with other Clouds and OnPrem.'
 url: 'understanding-google-cloud-platform'
 ---
 
@@ -21,12 +21,148 @@ Bigtable: While Bigtable is a distributed NoSQL database good for very high volu
 
 Cloud SQL: Cloud SQL is a relational database service, but it's not globally distributed in the same way as Cloud Spanner, and it might not be the best choice for applications requiring very high scalability and availability across multiple regions.
 
-BigQuery: BigQuery is a data warehouse designed for analytics and business intelligence, not for transactional workloads or CRUD operations. It's used for analyzing large datasets, not for serving real-time application requests.
+**BigQuery**: BigQuery is a data warehouse designed for analytics and business intelligence, not for transactional workloads or CRUD operations. It's used for analyzing large datasets, not for serving real-time application requests.
 
 {{< cards cols="1" >}}
   {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
   {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
 {{< /cards >}}
+
+
+#### Google DataForm
+
+You're right, Google Dataform is indeed a data engineering tool. Here's a short explanation:
+
+**Google Dataform:**
+
+* **Purpose:**
+    * It's a service for developing, testing, and deploying data transformations within Google Cloud's BigQuery.
+    * It helps you manage complex SQL-based data pipelines.
+    * It enables version control, collaboration, and automated testing of your data transformations.
+* **Key Features:**
+    * **SQLX: A SQL extension for defining data transformations**.
+    * Dependency management: Automatically handles the order of execution of your SQL queries.
+    * Testing: Allows you to write tests to ensure the accuracy of your data.
+    * Version control: Integrates with Git for collaborative development.
+    * Scheduling: Allows for the scheduling of data pipeline executions.
+* **Use Cases:**
+    * Building data warehouses and data marts.
+    * Performing data transformations for analytics and reporting.
+    * Automating data pipelines.
+
+{{< details title="More about SQLX 📌" closed="true" >}}
+
+Yes, that's absolutely true! SQLX, the extension to SQL used by Google Dataform, allows you to embed JavaScript within your SQL files. This is a powerful feature that enables you to:
+
+* **Define variables and parameters:** You can use JavaScript to dynamically define values that are used in your SQL queries.
+* **Create reusable logic:** You can write JavaScript functions to encapsulate complex logic that can be reused across multiple SQLX files.
+* **Generate SQL dynamically:** You can use JavaScript to generate SQL code based on certain conditions or parameters.
+* **Perform data transformations:** While SQL is the primary language for transformations, you can use JavaScript for more complex data manipulation tasks.
+
+Here's a basic idea of how it works:
+
+* Within your SQLX files, you can use `{{ ... }}` to embed JavaScript expressions.
+* Dataform's compiler will evaluate these JavaScript expressions and replace them with their results before executing the SQL queries.
+
+**Example:**
+
+```sqlx
+/* my_table.sqlx */
+
+{{
+  let threshold = 100;
+}}
+
+SELECT
+  *
+FROM
+  my_data
+WHERE
+  value > {{ threshold }};
+```
+
+In this example:
+
+* A JavaScript variable `threshold` is defined.
+* The value of `threshold` is then used in the `WHERE` clause of the SQL query.
+
+**Key Benefits:**
+
+* **Flexibility:** JavaScript adds a lot of flexibility to SQL, allowing you to handle more complex data transformations.
+* **Reusability:** JavaScript functions can be reused across multiple SQLX files, reducing code duplication.
+* **Dynamic SQL Generation:** You can generate SQL queries dynamically based on parameters or conditions.
+
+This capability makes SQLX and Google Dataform very powerful tools for data engineering.
+
+
+{{< /details >}}
+
+**Open Source Equivalents:**
+
+Finding a single, perfect open-source equivalent to Dataform is tricky because Dataform combines several functionalities.
+
+However, here are some key open-source tools that provide similar capabilities:
+
+* **dbt (data build tool):**
+    * This is the closest open-source equivalent.
+    * It focuses on data transformations within data warehouses (like BigQuery, Snowflake, and Redshift).
+    * It uses **SQL and Jinja templating** for defining transformations.
+    * It also supports testing and documentation.
+* **Apache Airflow:**
+    * This is a workflow orchestration tool that can be used to build and manage complex data pipelines.
+    * It allows you to define dependencies between tasks and schedule their execution.
+    * While not focused exclusivly on SQL transformation, it is very good at orchestrating those transformations.
+* **SQLMesh:**
+    * SQLMesh is an open-source data transformation framework that enables collaborative development and simplified operation of data pipelines.
+    * It handles incremental data transformations, data quality testing, and environment promotions.
+* **Prefect:**
+    * Prefect is a modern workflow orchestration tool designed to make it easy to build, run, and monitor data pipelines. It has a focus on dynamic workflows.
+
+In essence, Dataform is a managed service that simplifies the process of building and managing data transformations in BigQuery. **dbt is the strongest open source competitor**, and airflow is the strongest open source competitor for the orchestration portion of dataform.
+
+
+
+{{< details title="More about Jinja for DBT 📌" closed="true" >}}
+
+You're right, Jinja templates are indeed used in Django, but they're not exclusive to it. 
+
+Jinja is a versatile **templating engine** that's used in various contexts, particularly in Python-based web development and data engineering.
+
+Here's a breakdown:
+
+**Jinja Templates:**
+
+* **Purpose:**
+    * Jinja is designed to separate presentation logic from application logic.
+    * It allows you to create dynamic text output (like HTML, XML, CSV, SQL, etc.) by embedding variables and logic within template files.
+* **Key Features:**
+    * **Variables:** You can insert dynamic values into templates using placeholders.
+    * **Control Structures:** Jinja provides `if` statements, `for` loops, and other control structures to control the flow of template rendering.
+    * **Filters:** Filters allow you to modify the output of variables (e.g., formatting dates, converting text to uppercase).
+    * **Template Inheritance:** You can create base templates and extend them to create more specific templates.
+    * **Macros:** Macros are like functions within templates, allowing you to define reusable chunks of code.
+* **Use Cases:**
+    * **Web Development:** Generating HTML pages in web frameworks like Django and Flask.
+    * **Configuration Management:** Creating dynamic configuration files.
+    * **Code Generation:** Generating code based on templates.
+    * **Data Engineering:** Generating dynamic SQL queries in tools like dbt.
+
+**dbt and Jinja:**
+
+* In dbt (data build tool), Jinja templates are used to:
+    * Create dynamic SQL queries.
+    * Define variables and parameters.
+    * Implement reusable SQL logic.
+    * Manage dependencies between SQL models.
+* dbt leverages Jinja's capabilities to make SQL more flexible and maintainable. This allows data engineers to write code that is more like traditional software development, with the ability to reuse portions of code, and to have dynamic variables within the sql.
+
+**In summary:**
+
+* Jinja is a general-purpose templating engine that's used in various applications.
+* While it's commonly associated with Django, it's also widely used in other areas, including data engineering with dbt.
+* It allows for the dynamic generation of text based files.
+
+{{< /details >}}
 
 
 #### GCS
