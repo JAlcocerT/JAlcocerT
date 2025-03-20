@@ -16,7 +16,7 @@ This **x13 has a 8C/16T** CPU, 16GB Ram and 500GB SSD.
 **It's 13'**, over 1kg of weight and 30.44x21,58x1,55cm. 
 
 {{< callout type="info" >}}
-With **~1.005L in volume** its even smaller than the AsrockX300
+With **~1.005L in volume** its even smaller than the [AsrockX300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/)
 {{< /callout >}}
 
 It comes with W11 already installed, which I kept together with an Ubuntu installation (you need to desable Windows bitlocker first to be able to tweak the SDD space distribution).

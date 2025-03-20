@@ -63,7 +63,7 @@ It helps organizations and individuals query, visualize, and share data from **v
 
 > Make Your Company Data Driven. Connect to any data source, easily visualize, dashboard and share your data.
 
-I have added Redash Compose logic to: https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash
+I have added the **Redash 🐳 Compose logic** to: https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash
 
 
 <!-- https://www.youtube.com/watch?v=_0_Qk0Oleeo -->

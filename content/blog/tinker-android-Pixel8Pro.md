@@ -135,21 +135,32 @@ Make sure to have **proper backup codes stored** to enter your critical applicat
 
 But get them...in a cool way:
 
-* [Obtanium](https://github.com/ImranR98/Obtainium) - Android Apps from its Source, [in FDroid](https://f-droid.org/es/packages/dev.imranr.obtainium.fdroid/)
-* [F-Droid](https://f-droid.org/es/)
-    * CAPod - It works for Airpods Pro and for Sony WF-1000XM3
-    * Weather
-    * [OrganicMaps](https://f-droid.org/es/packages/app.organicmaps/)
-    * Sound [Recorder](https://f-droid.org/es/packages/com.danielkim.soundrecorder/)
-    * [Ultrasonic](https://f-droid.org/es/packages/org.moire.ultrasonic/)
-    * [Aegis 2fa](https://f-droid.org/es/packages/com.beemdevelopment.aegis/)
-    * [Mullvad](https://f-droid.org/es/packages/net.mullvad.mullvadvpn/)
-    * [TailScale](https://f-droid.org/es/packages/com.tailscale.ipn/)
-    * [Syncthing](https://f-droid.org/es/packages/com.nutomic.syncthingandroid/)
-    * [Element](https://f-droid.org/es/packages/im.vector.app/)
-    * [RSS - Wallabag](https://f-droid.org/es/packages/fr.gaulupeau.apps.InThePoche/)
-    * [RSS ReadDrops](https://f-droid.org/es/packages/com.readrops.app/)
-    * NFC Tools
+1. [Obtanium](https://github.com/ImranR98/Obtainium) - Android Apps from its Source, [in FDroid](https://f-droid.org/es/packages/dev.imranr.obtainium.fdroid/)
+
+> Thanks to this one I could install Nextcloud App on an old Huawei Android. Add it with `https://github.com/nextcloud/android`
+
+2. [F-Droid](https://f-droid.org/es/)
+
+* Weather
+
+* [OrganicMaps](https://f-droid.org/es/packages/app.organicmaps/)
+
+* Sound [Recorder](https://f-droid.org/es/packages/com.danielkim.soundrecorder/)
+* [Ultrasonic](https://f-droid.org/es/packages/org.moire.ultrasonic/)
+* CAPod - It works for Airpods Pro and for Sony WF-1000XM3
+
+* [Aegis 2fa](https://f-droid.org/es/packages/com.beemdevelopment.aegis/)
+
+* [Mullvad](https://f-droid.org/es/packages/net.mullvad.mullvadvpn/)
+* [TailScale](https://f-droid.org/es/packages/com.tailscale.ipn/)
+
+* [Syncthing](https://f-droid.org/es/packages/com.nutomic.syncthingandroid/)
+
+* [Element](https://f-droid.org/es/packages/im.vector.app/)
+
+* [RSS - Wallabag](https://f-droid.org/es/packages/fr.gaulupeau.apps.InThePoche/)
+* [RSS ReadDrops](https://f-droid.org/es/packages/com.readrops.app/)
+* NFC Tools
 
 
 

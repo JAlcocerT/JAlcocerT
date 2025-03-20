@@ -125,11 +125,15 @@ Which you can combine with [Mullvad](https://jalcocert.github.io/Linux/docs/debi
 
 ### Maps
 
-You can install **Organic Maps** as Android app, but also in Linux:
+You can install **Organic Maps** as [Android](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#android-apps-i-love) app..
+
+..but also on Linux:
 
 ```sh
 flatpak install flathub app.organicmaps.desktop #https://flathub.org/apps/app.organicmaps.desktop
 ```
+
+> Before I was using maps.me, but it became so bloated lately.
 
 To record your **routes as GPX**
 
@@ -327,8 +331,17 @@ Can’t access the internet via the repeated hotspot. Try to enter **Login Mode 
 
 ![Wifi Login UI on MT3000](/blog_img/hardware/travel-router-loginwifi.png)
 
+---
 
-## Cost of Living
+## Conclusions
+
+After travelling and hopefully learning new perspectives, you can [create a website](https://jalcocert.github.io/JAlcocerT/create-your-website/) to tell your story.
+
+{{< cards >}}
+  {{< card link="https://www.beyondajourney.com/" title="My Story" image="https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
+{{< /cards >}}
+
+### Cost of Living
 
 Sometime ago I got to know this site: https://www.numbeo.com
 

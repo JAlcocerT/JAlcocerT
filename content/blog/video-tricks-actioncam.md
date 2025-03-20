@@ -3,7 +3,7 @@ title: "More video Tricks [with FFMPEG]"
 date: 2025-03-09
 draft: false
 tags: ["Dev"]
-description: 'Quick videos with action cameras. Testing Python GPX overlay to MP4.'
+description: 'Quick videos with action cameras. Testing Python GPX overlay to MP4 compared to Gyroflow.'
 url: 'my-action-cam-video-workflow'
 ---
 
