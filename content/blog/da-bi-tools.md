@@ -297,8 +297,21 @@ https://github.com/clint-kristopher-morris/Tutorials/tree/main/streamlit-part-1
 
 #### Python Shiny
 
+Shiny is now available for more than R.
+
+We can now use **[Shiny](https://pypi.org/project/shiny/) with Python** to create WebApps.
+
+* https://github.com/posit-dev/py-shiny
+
+> MIT | Effortless Python web applications 
+
 #### FlexDashboards with R
 
+If you need a recap on R language, focused on flexdashboards:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/r-language-101/#flexdashboards" title="R Recap" image="tps://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/FlexDash-BoomBurst.png" subtitle="Creating FlexDashboards" >}}
+{{< /cards >}}
 
 ---
 
@@ -465,12 +478,7 @@ IoT Project example with Superset: <>
 ![SBC Raspberry Pi 4](/blog_img/iot/Rpi4_4gb_size.jpg) 
 -->
 
-
-
-
 ---
-
-
 
 <!-- https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0 -->
 

@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - Spring 2025"
-date: 2025-03-17T23:20:21+01:00
+date: 2025-03-20T21:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich'
@@ -214,9 +214,10 @@ See the bottom right, where you can add your [NC web Dav](https://docs.nextcloud
 You can install it on mobile devices via [F-Droid or also Obtanium](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#android-apps-i-love) by using `https://github.com/nextcloud/android`
 {{< /callout >}}
 
+Or...use **SFTP-Go** as WebDav together with Syncthing: 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/sync-file-tools/#webdavs" title="RE Streamlit App" image="/blog_img/selfh/media/sftpgo-webadmin.png" subtitle="SFTP-Go Setup" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go" title="RE Streamlit App" image="/blog_img/selfh/media/sftpgo-webadmin.png" subtitle="SFTP-Go Setup" >}}
 {{< /cards >}}
 
 

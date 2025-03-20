@@ -7,26 +7,9 @@ url: 'git-recap'
 description: 'Git and useful extensions while developing.'
 ---
 
-* Name: **Dev Containers**
-    * Id: ms-vscode-remote.remote-containers
-    * [VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+When I started to use Git, I could actually start see my progress and build upon my previous effort.
 
-
-Remember that there are many cool extensions: https://marketplace.visualstudio.com/VSCode
-
-And that they can be installed programatically:
-
-```sh
-codium --install-extension gitlab.gitlab-workflow
-#code --install-extension gitlab.gitlab-workflow
-```
-
-You will also need:
-
-```sh
-git config --global user.name "JAlcocerT"
-git config --global user.email "youremail@example.com"
-```
+This is a recap of the best GIT related tricks I have so far.
 
 ### Github
 
@@ -34,10 +17,18 @@ git config --global user.email "youremail@example.com"
 2. GISTS are a great way to share code: https://jalcocert.github.io/JAlcocerT/github-gists/
 
 ```sh
-
+sudo apt install git #you need GIT first
 ```
 
 ![alt text](/blog_img/dev/github-auth.png)
+
+
+You will also need:
+
+```sh
+git config --global user.name "JAlcocerT"
+git config --global user.email "youremail@example.com"
+```
 
 #### Creating Releases
 
@@ -85,6 +76,22 @@ code --install-extension gitlab.gitlab-workflow
 ## VSCode
 
 There are some cool extensions to help you create.
+
+
+* Name: **Dev Containers**
+    * Id: ms-vscode-remote.remote-containers
+    * [VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+
+Remember that there are many cool extensions: https://marketplace.visualstudio.com/VSCode
+
+And that they can be installed programatically:
+
+```sh
+codium --install-extension gitlab.gitlab-workflow
+#code --install-extension gitlab.gitlab-workflow
+```
+
 
 ### Remote Development
 
