@@ -342,6 +342,8 @@ Extracting data from action camera `.MP4` files.
 
 > It all started with [PhyPhox](https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/) and [PyRouteTracker](https://jalcocert.github.io/JAlcocerT/polar-data-python-analysis/)
 
+1. **Telemetry With CLI**
+
 ```sh
 sudo apt-get install libimage-exiftool-perl
 exiftool -ee ./GX030390.MP4
@@ -377,6 +379,7 @@ Time Stamp                      : 1066.12768
 
 ![GoPro Max Speed Metadata extraction](/blog_img/karting/gopro-maxspeed-metadata.png)
 
+2. You can also try with GoPro's **VIRB editor** and with **GyroFlow**. Both Apps with GUI.
 
 <!-- 
 https://github.com/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds.ipynb -->
@@ -384,7 +387,7 @@ https://github.com/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_spe
 
 ### Thanks to
 
-For explaining the **firmware update** process:
+For explaining the OA5 Pro **firmware update** process:
 
 <!-- https://www.youtube.com/watch?v=1GTZzLX86u4 -->
 

@@ -212,6 +212,11 @@ Observability Platform for LLMs
   Or with LangSmith
 Also DataDog - https://docs.datadoghq.com/llm_observability/ -->
 
+<!-- 
+Observability Platform for LLMs
+    https://github.com/traceloop/openllmetry
+    https://github.com/langfuse/langfuse -->
+
 <!-- Goals:
   • AI Gen
     LangChain

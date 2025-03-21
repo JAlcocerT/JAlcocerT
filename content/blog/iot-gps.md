@@ -7,6 +7,8 @@ description: Checking my first Smart Plug Connecting it with Home Assistant [HA]
 url: tapo-p110-review
 ---
 
+
+
 # GPS RPi IoT Project - GPS Data (VK-162) with Apache Superset
 
 * <https://www.youtube.com/watch?v=Z7cJ59sixpk&t=197s>

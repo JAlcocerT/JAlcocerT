@@ -130,10 +130,16 @@ Generally, to develop inside a container: you will need one
 For a Python Dev Container, you can get one with this docker-compose.
 {{< /callout >}}
 
+{{< youtube "yUyxJr2xboI" >}}
+
 **More VSCode extensions**
 
 ```sh
 ext install ms-azuretools.vscode-docker
+
+#MDX #https://open-vsx.org/vscode/item?itemName=unifiedjs.vscode-mdx
+ext install unifiedjs.vscode-mdx
+
 ```
 
 ---

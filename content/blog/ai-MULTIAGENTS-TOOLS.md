@@ -18,6 +18,92 @@ But can we just have LLMs working together?
 
 Actually, this is great tool to have when doing **research** of some new topic.
 
+
+1. [Fabric](#the-fabric-project)
+2. [Autogen](#the-autogen-project)
+3. [CrewAI](#crewai)
+4. [MetaGPT](#metagpt)
+5. [Camel](#camel)
+
+
+
+https://github.com/camel-ai/camel
+
+> 🐫 CAMEL: Finding the Scaling Law of Agents. A multi-agent framework. https://www.camel-ai.org
+
+
+
+* {{< newtab url="" text="The  Site" >}}
+* {{< newtab url="https://github.com/daveshap/OpenAI_Agent_Swarm" text="The Agent_Swarm Code at Github" >}}
+    * License: {{< newtab url="https://github.com/daveshap/OpenAI_Agent_Swarm#MIT-1-ov-file" text="MIT" >}} ❤️
+
+
+## Open Source Agents Swarm Projects
+
+
+
+
+## The Fabric Project
+
+* {{< newtab url="https://github.com/danielmiessler/fabric" text="The Fabric Code at Github" >}}
+    * License: {{< newtab url="https://github.com/danielmiessler/fabric?tab=MIT-1-ov-file#readme" text="MIT" >}} ❤️
+
+
+> Fabric is an open-source framework for **augmenting humans using AI**.
+
+A collection of prompts (patterns) to interact effectively with AI:
+
+* Summarize a video
+* Create Prompts for Image Generation
+* Answer questions about your code...
+
+We can use Fabric together with Ollama and Groq - Both are OpenAI API Compatible.
+
+### Fabric with Ollama
+
+### Fabric with Groq
+
+## Other F/OSS MultiAAgent Projects
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lucaslorentz/caddy-docker-proxy,NginxProxyManager/nginx-proxy-manager,traefik/traefik&,type=Date)](https://star-history.com/#lucaslorentz/caddy-docker-proxy&NginxProxyManager/nginx-proxy-manager&traefik/traefik&Date)
+
+
+
+### The Autogen Project
+
+https://github.com/microsoft/autogen
+https://microsoft.github.io/autogen/
+
+
+
+### Camel
+
+https://github.com/camel-ai/camel
+
+> 🐫 CAMEL: Finding the Scaling Law of Agents. A multi-agent framework. https://www.camel-ai.org
+
+### MetaGPT
+
+[MetaGPT Project](https://fossengineer.com/selfhosting-metagpt/) Details:
+
+* {{< newtab url="https://docs.deepwisdom.ai/main/en/" text="The MetaGPT Docs Site" >}}
+* {{< newtab url="https://github.com/geekan/MetaGPT" text="The MetaGPT Code at Github" >}}
+    * License: {{< newtab url="https://github.com/geekan/MetaGPT?tab=MIT-1-ov-file#readme" text="MIT" >}} ❤️
+
+> MetaGPT - A F/OSS **Multi Agent Framework** that will power your next Projects
+
+### CrewAI
+
+[CrewAI Project](https://fossengineer.com/ai-agents-crewai/)
+
+* {{< newtab url="https://pypi.org/project/crewai/" text="The Project on PyPI" >}}
+* {{< newtab url="https://github.com/joaomdmoura/crewAI" text="The CrewAI Source Code at Github" >}}
+    * License: {{< newtab url="https://github.com/joaomdmoura/crewAI/blob/main/LICENSE" text="MIT" >}} ❤️
+
+> CrewAI is a Framework that will make easy for us to get Local AI Agents interacting between them.
+
+
+
 {{< details title="Interesting Research Tools 📌" closed="true" >}}
 
 **Research Agent**

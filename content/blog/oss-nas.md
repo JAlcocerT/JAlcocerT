@@ -53,6 +53,39 @@ Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-
 
 ### VPN
 
+* https://speed.cloudflare.com/
+* https://www.cloudflare.com/ssl/encrypted-sni/
+
+```sh
+ip addr show | grep inet6 | grep -v ::1
+```
+
+1. Pritunl - Enterprise Distributed OpenVPN and IPsec Server.
+
+2. Ex-gravitl: <https://github.com/netbirdio/netbird>
+
+> BSD-3
+
+based on wireguard
+
+<https://netbird.io/>
+
+<https://www.youtube.com/watch?v=_-vfSgqmOUI>
+
+
+Install a self-hosted VPN platform // Netbird with zitadel
+https://www.youtube.com/watch?v=_Fgwap-sl3A
+
+* Tailscale - wireguard based
+  * Headscale - for selfhosted server
+* NetBird - wireguard based
+* Netmaker  - https://www.netmaker.io
+
+#### Wireguard
+
+https://blog.frehi.be/2022/06/11/setting-up-wireguard-vpn-with-ipv6/
+https://www.reddit.com/r/WireGuard/comments/178uolr/guide_how_to_set_up_wireguard_with_ipv6_in_docker/
+
 #### Tailscale
 
 ```sh
@@ -241,7 +274,12 @@ You can try with: Syncthing, Nextcloud, WebDav...
 
 ---
 
-## Other 
+## Conclusions
+
+
+where to get a VPS - https://lowendstock.com/
+
+### Other 
 
 You can check from time to time: https://haveibeenpwned.com/
 

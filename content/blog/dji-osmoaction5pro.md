@@ -625,7 +625,11 @@ For adventures:
 
 * https://github.com/Flomp/wanderer - The trail catalogue that makes your GPS data searchable
 
-wanderer is a self-hosted trail database. You can upload your recorded tracks or create new ones and add various metadata to build an easily searchable catalogue.
+
+
+> Wanderer is a self-hosted trail database.
+
+You can upload your recorded tracks or create new ones and add various metadata to build an easily searchable catalogue.
 
 * [Spliit](https://github.com/spliit-app/spliit) - An alternative to Splitwise / Settleup where you dont have to register.
 

@@ -104,6 +104,15 @@ https://www.youtube.com/watch?v=r9BshEzz4bo
 
 ### HA OS vs HA Docker
 
+Use Home Assistant with your Linux Desktop, with Butler: https://flathub.org/apps/com.cassidyjames.butler
+
+```sh
+flatpak install flathub com.cassidyjames.butler
+```
+
+> Home Assistant interface Desktop
+
+
 * [Home Assistant add-ons](https://www.home-assistant.io/addons/) can be used just with [Home Assistant OS](https://jalcocert.github.io/RPi/posts/getting-started/#home-assistant-os) 📌
 * [Home Assistant Integrations](https://www.home-assistant.io/integrations/#all) are compatible with both options ☑️
 

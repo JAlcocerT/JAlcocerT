@@ -1,5 +1,5 @@
 ---
-title: "Tools that help me focus"
+title: "Tools that help me FOCUS"
 date: 2025-02-28
 draft: false
 tags: ["Dev"]
@@ -9,20 +9,23 @@ url: 'tools-to-improve-focus'
 
 ### Time Management
 
-* Pomodoro:
+1. Pomodoro:
     * Timelite [*and you can use it for free*](https://fossengineer.com/selfhosting-timelite-free-tracking-tool-with-docker/)
     * [The-Wise-Pomodoro](https://the-wise-pomodoro.firebaseapp.com/)
     * [Focus Tide](https://focustide.app/)
     * Focus-To-Do, ToDoIst
 
     * https://github.com/notclickable-jordan/starbase-80
+
 > Tracking your tasks can improve your focus, planning, and provide actionable insights
+
+2. [Timelite](https://fossengineer.com/selfhosting-timelite-with-docker/)
 
 ### More
 
 1. https://nextbeats.vercel.app/
 
-https://github.com/btahir/next-beats
+* https://github.com/btahir/next-beats
 
 > MIT | A modern, open-source lofi experience powered by Next.js
 
@@ -41,4 +44,24 @@ I mean, Selfhostable and **RSS Feeds**!
 
 ### Video
 
-Piped...
+1. Piped
+
+2. NewPipe
+
+### Productivity
+
+#### Super-Productivity
+
+* https://super-productivity.com/
+    * https://github.com/johannesjo/super-productivity
+
+>  MIT | Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, Gitlab, GitHub and Open Project. 
+
+* You can find it in FDroid: https://f-droid.org/en/packages/com.superproductivity.superproductivity/
+* And also in snapcraft: https://snapcraft.io/superproductivity
+
+#### Other Productivity Tools
+
+1. [Focalboard](https://fossengineer.com/focalboard-docker) 
+2. [DrawIO Diagrams](https://fossengineer.com//selfhosting-drawio-with-docker)
+3. [LeanTime](https://fossengineer.com/selfhosting-Leantime-docker)

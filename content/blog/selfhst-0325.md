@@ -71,7 +71,7 @@ The good thing with Caddy, is that it will work as long as you have a good `Cadd
 
 **What do I like about Caddy**
 
-Easy setup as per [JimsGarage Video](https://www.youtube.com/watch?v=ZOtUco5EwoI)
+Easy setup as per [JimsGarage Video](https://www.youtube.com/watch?v=ZOtUco5EwoI) and this post https://ugeek.github.io/blog/post/2023-10-05-caddy-certificado-https-autofirmado-red-local.html
 
 {{< callout type="warning" >}}
 Make sure to create the **A DNS Record** pointing to the Pi home address, like `pi-portainer.jalcocertech.xyz` before!
@@ -180,6 +180,12 @@ It provides a very similar experience to Google Photos.
 
 ## Conclusions
 
+Remember that it is possible to make business around open source.
+
+Always check the licenses.
+
+And remember to [create the proper invoice, also with F/OSS](https://fossengineer.com/open-source-invoice-creator/).
+
 ### Keep Using
 
 1. Media server: Kodi, Jellyfin? 
@@ -210,6 +216,15 @@ LocalSend and NewPipe are also interesting Android Apps to consider
 2. Portainer vs Dockge
 
 {{< youtube "UCsYWXEuvms" >}}
+
+3. https://github.com/CorentinTh/it-tools
+
+See it live: https://it-tools.tech/
+
+> Collection of handy [online tools](https://www.xda-developers.com/best-utilities-in-it-tools/) for developers, with great UX.
+
+4. [Fail2Ban](https://fossengineer.com/setup-fail2ban-with-docker/) Setup
+
 
 
 <!--
@@ -278,3 +293,14 @@ The TechHut:
 
 
 https://www.youtube.com/watch?v=yUyxJr2xboI
+
+### Outro
+
+**Is my home Wifi secure enough?**
+
+```sh
+sudo aptitude update
+sudo aptitude -y install wifite
+
+sudo apt-get -y install wifite
+```

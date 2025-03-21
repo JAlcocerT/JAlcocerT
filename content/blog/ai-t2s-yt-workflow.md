@@ -4,9 +4,10 @@ date: 2024-11-07
 draft: false
 tags: ["Tinkering"]
 description: 'How to use AI to share more (and hopefully better) video content with others'
-summary: 'How Im slowly getting better at publishing to Youtube and creating content.'
 url: 'my-youtube-ai-workflow'
 ---
+
+How Im slowly getting better at **publishing to Youtube** and creating content?
 
 It all started with the [DJI **OA5 Pro**](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/)
 
@@ -362,8 +363,9 @@ Social Media can be simplified
 ![Forocoches3kbmw](/blog_img/memes/ezoeazin.jpg)
 
 * Postiz-App - https://github.com/gitroomhq/postiz-app
-
-> 📨 The ultimate social media scheduling tool, with a bunch of AI 🤖 and Apache 2.0!
+    * https://docs.postiz.com/introduction
+    
+> 📨 The ultimate **social media scheduling tool**, with a bunch of AI 🤖 and Apache 2.0!
 
 * [Zapier](https://zapier.com/app/home)
 

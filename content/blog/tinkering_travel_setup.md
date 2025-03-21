@@ -345,6 +345,16 @@ After travelling and hopefully learning new perspectives, you can [create a webs
   {{< card link="https://www.beyondajourney.com/" title="My Story" image="https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
 {{< /cards >}}
 
+**Bonus**
+
+1. Movemouse
+
+* https://github.com/sw3103/movemouse?ref=fossengineer.com
+
+> GPL 3.0 |  Move Mouse is a simple piece of software that is designed to simulate user activity. 
+
+2. https://github.com/CHerSun/NoSleep
+
 ### Cost of Living
 
 Sometime ago I got to know this site: https://www.numbeo.com

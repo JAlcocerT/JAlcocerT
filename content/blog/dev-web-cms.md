@@ -23,6 +23,7 @@ See more at [awsome CMS](https://github.com/postlight/awesome-cms)
 ## CMS
 
 Content Management Systems (CMS):
+
 - [Tina](https://tina.io/)
 - [GHOST + GATSBY](https://ghost.org/docs/jamstack/)
 - [Strapi](https://jamstack.org/headless-cms/strapi/)
@@ -31,6 +32,39 @@ Content Management Systems (CMS):
   - [Add to Your Site](https://decapcms.org/docs/add-to-your-site/)
 - [Directus](https://jamstack.org/headless-cms/directus/)
   - Directus turns SQL databases into REST and GraphQL APIs with an intuitive no-code app.
+
+
+
+TinaCMS + Astro
+
+{{< youtube id="5Opvp6z1uSc" autoplay="false" >}}
+
+https://docs.astro.build/en/guides/cms/wordpress/
+
+## decapCMS
+
+https://astro.build/themes/details/astros/ -->> decap CMS
+https://astros.zank.studio/blog/introducing-decap-cms-your-go-to-solution-for-content-management/
+
+https://github.com/gxanshu/astro-decap-cms-starter
+https://astro-decapcms-starter.netlify.app/
+https://decapcms.org/docs/working-with-a-local-git-repository/
+
+
+### netlifyCMS === decapCMS
+Create a Custom Blog with Astro & NetlifyCMS in MINUTES!
+https://www.youtube.com/watch?v=3yip2wSRX_4
+
+## payloadCMS
+
+https://github.com/mooxl/astroad/tree/main
+
+
+
+## tinaCMS + astro
+
+https://www.youtube.com/watch?v=5Opvp6z1uSc
+https://github.com/tinacms/tina-self-hosted-demo
 
 
 ## Static CMS
