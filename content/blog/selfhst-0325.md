@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - Spring 2025"
-date: 2025-03-20T21:20:21+01:00
+date: 2025-03-21T01:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich'
@@ -73,6 +73,11 @@ The good thing with Caddy, is that it will work as long as you have a good `Cadd
 
 Easy setup as per [JimsGarage Video](https://www.youtube.com/watch?v=ZOtUco5EwoI)
 
+{{< callout type="warning" >}}
+Make sure to create the **A DNS Record** pointing to the Pi home address, like `pi-portainer.jalcocertech.xyz` before!
+{{< /callout >}}
+
+
 ```sh
 git clone https://github.com/JAlcocerT/Docker #I have followed his guide and make minor tweaks
 cd Security/Proxy/Caddy
@@ -83,7 +88,21 @@ sudo docker compose up -d #dont use the OLD docker-compose up -d
 #docker network connect caddy portainer
 ```
 
-The API its just amazing:
+The local addresses are treated specially, as *reserved IP*:
+
+![alt text](/blog_img/selfh/https/caddy-cloudflare-dns.png)
+
+Remember to configure this:
+
+```sh
+sudo nano /etc/hosts
+#add the following
+192.168.0.155 pi-portainer.jalcocertech.xyz
+```
+
+So that you are able to ping and communicate with your locally running service
+
+The Caddy API its just amazing:
 
 ```sh
 #sudo apt install jq
@@ -101,7 +120,7 @@ And...you can do some automatic magic, and make new configurations to it via CLI
 
 > Thats great if you are planning to spin services automatically without your supervision!
 
-3. **Traefik** has also been a great discovery lately
+3. **Traefik** has also been a great discovery lately, *thanks to Dokploy which brings it configured*
 
 ### Authentication
 
@@ -186,7 +205,7 @@ LocalSend and NewPipe are also interesting Android Apps to consider
 
 #### PiHole
 
-This as been with my for a while.
+This has been with my for a while.
 
 But now *its reloaded* with its **v6**.
 
@@ -219,6 +238,17 @@ Or...use **SFTP-Go** as WebDav together with Syncthing:
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go" title="RE Streamlit App" image="/blog_img/selfh/media/sftpgo-webadmin.png" subtitle="SFTP-Go Setup" >}}
 {{< /cards >}}
+
+
+#### Youtube FE
+
+There are more alternatives, like:
+
+* https://github.com/christian-fei/my-yt
+
+> Unlicensed | A clean and minimal youtube frontend, without all the ads and whistles
+
+
 
 
 

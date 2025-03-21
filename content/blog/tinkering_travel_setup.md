@@ -411,12 +411,13 @@ The good thing?
 
 You can get a [`.json` report to analyze](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/#faq) later what has been going during the trip.
 
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/spliit_analyzer.ipynb)
 
 {{< callout type="info" >}}
 A sample `ipynb` nb is waiting for you [here](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/spliit_analyzer.ipynb) 
 {{< /callout >}}
 
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/spliit_analyzer.ipynb)
+Alternatively, you can use [DollarDollar](https://github.com/harung1993/dollardollar?ref=selfh.st) with multicurrency expenses support!
 
 ### What about containers?
 

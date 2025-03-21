@@ -3,7 +3,7 @@ title: "SelfHosted Cloud vs Syncs vs WebDav"
 date: 2025-03-15
 draft: false
 tags: ["OSS"]
-description: 'Alternatives to sync your files. From nextcloud dav to SFTP Go'
+description: 'Alternatives to sync your files. From Nextcloud Web Dav to SFTP Go'
 url: 'sync-file-tools'
 ---
 
@@ -78,6 +78,19 @@ sudo apt install davfs2
 ```
 
 > Then use `http://192.168.0.12:8011/web/admin/folders`, `davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav` or `dav://your_nc_user@192.168.0.12:8080/remote.php/webdav`
+
+### GoMFT
+
+* https://github.com/StarFleetCPTN/GoMFT
+
+> MIT | Go Managed File Transfer
+
+### Personal Drive
+
+* https://github.com/gyaaniguy/personal-drive?ref=selfh.st
+
+> Apache v2 | Self Hosted Google drive alternative
+
 
 ## Just Sync
 

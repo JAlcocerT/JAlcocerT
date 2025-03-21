@@ -1,9 +1,8 @@
 ---
-title: "Crypto. Now with AI"
-date: 2025-04-21
+title: "Crypto. Now understandable with AI"
+date: 2025-04-13
 draft: false
-tags: ["Dev"]
-summary: 'Two buzz words in one. Understand crypto once and for all. This time thanks to AI'
+description: 'Two buzz words in one. Understand crypto once and for all. This time thanks to LLMs'
 url: 'understading-crypto-with-ai'
 ---
 
@@ -15,12 +14,12 @@ I was testing [Astro Bento Portfolio + Github Pages + Github CI/CD](https://gith
 This post is just describing the process to apply data analytics with crypto. **Not any recommendation or financial advice of any type.**
 {{< /callout >}}
 
-And some time ago I was having a look to this **amazing BlockChain/Solidity FreeCodeCamp course:**
+Some time ago I was having a look to this **amazing BlockChain/Solidity FreeCodeCamp course:**
 
 {{< youtube "gyMwXuJrbJQ" >}}
 
-Practical Blockchain:
-- Parties that do not know each other can exchange value without a central authority.
+**Practical Blockchain:**
+- Parties that do not know each other can **exchange value without a central authority**
 
 
 
@@ -284,10 +283,43 @@ Example stable coins are: USDT, USDC, DAI, USDS...
 
 #### ERC20
 
-For example, the aave token is ERC20:
+
+
+{{< details title="What cool things can be done with ERC20? USDC USDT DAI Transfers" closed="true" >}}
+
+It is possible to receive **USDT, USDC, and DAI** into an ERC-20 (Ethereum) wallet:
+
+* DAI Contract Address: https://eth.blockscout.com/token/0x6B175474E89094C44Da98b954EedeAC495271d0F
+* Tether (USDT): https://eth.blockscout.com/token/0xdAC17F958D2ee523a2206206994597C13D831ec7
+* USDC: https://eth.blockscout.com/token/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+
+All three of these are commonly **issued as ERC-20 tokens**, meaning they operate on the Ethereum blockchain and are compatible with Ethereum addresses.
+
+* **ERC-20 Compatibility:**
+    * USDT, USDC, and DAI are designed to adhere to the ERC-20 token standard. This standard defines a set of rules and functions that allow these tokens to interact with the Ethereum blockchain and other ERC-20-compatible wallets.
+    * Therefore, any Ethereum wallet that supports ERC-20 tokens can receive and hold these cryptocurrencies.
+
+* **Wallet Addresses:**
+    * Your Ethereum wallet address is the same address you'll use to receive all three tokens. You don't need separate addresses for each.
+
+* **Important Considerations:**
+    * **Network Fees (Gas):** When sending or receiving ERC-20 tokens, you'll need to pay Ethereum network fees (gas). These fees fluctuate depending on network congestion.
+    * **Wallet Support:** Ensure your wallet fully supports ERC-20 tokens. Most modern Ethereum wallets do, but it's always good to double-check.
+    * **Correct Network:** It is vital that the sender of the tokens, sends them on the Ethereum network. If they send them on another network, such as the Tron network, the funds will most likely be lost.
+    * **Contract Addresses:** While you use your regular Ethereum address to receive these tokens, each token has its own unique contract address on the Ethereum blockchain. This contract address is used by the blockchain to identify the token. You do not need to use the contract address to receive the tokens.
+
+> You can confidently use your Ethereum (ERC-20) wallet address to receive USDT, USDC, and DAI.
+
+
+{{< /details >}}
+
+For example, the **aave token is ERC20**:
 
 * https://eth.blockscout.com/token/0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9
 
+---
+
+## Conclusions
 
 ---
 

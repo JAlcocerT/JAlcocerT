@@ -230,6 +230,16 @@ services:
     command: "serve --interface 0.0.0.0"
 ```
 
+##### Publite
+
+6. https://github.com/MikeMather/publite.me
+
+> MIT | thoughtfully minimal, self hosted blogging
+
+* https://publite.me/themes
+
+---
+
 ## Conclusions
 
 To sell to the masses, **you need a cool UI** for the users to manage their stuff and make it scalable.

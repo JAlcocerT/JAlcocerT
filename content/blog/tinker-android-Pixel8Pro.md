@@ -97,6 +97,8 @@ I also enjoy the night mode (but make sure to have a tripod).
 
 I like that it charges slow during the night, according to your alarm time.
 
+4. Its possible not only to connect the Pixel to HDMI, but also to control it with a keyboard *like the k400+*
+
 ### Fav Apps for the Pixel
 
 > Hello from the future!
