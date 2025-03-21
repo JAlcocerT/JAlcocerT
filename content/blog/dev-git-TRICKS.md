@@ -75,7 +75,7 @@ code --install-extension gitlab.gitlab-workflow
 
 ## VSCode
 
-There are some cool extensions to help you create.
+There are some cool **extensions** to help you create.
 
 
 * Name: **Dev Containers**

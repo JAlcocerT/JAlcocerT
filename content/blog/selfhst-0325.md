@@ -102,6 +102,20 @@ sudo nano /etc/hosts
 
 So that you are able to ping and communicate with your locally running service
 
+```sh
+ping pi-portainer.jalcocertech.xyz
+# PING pi-portainer.jalcocertech.xyz (192.168.0.155) 56(84) bytes of data.
+# 64 bytes from pi-portainer.jalcocertech.xyz (192.168.0.155): icmp_seq=1 ttl=64 time=7.31 ms
+# 64 bytes from pi-portainer.jalcocertech.xyz (192.168.0.155): icmp_seq=2 ttl=64 time=11.1 ms
+# 64 bytes from pi-portainer.jalcocertech.xyz (192.168.0.155): icmp_seq=3 ttl=64 time=25.5 ms
+# ^C
+# --- pi-portainer.jalcocertech.xyz ping statistics ---
+# 3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+# rtt min/avg/max/mdev = 7.313/14.621/25.481/7.830 ms
+```
+
+![alt text](static/blog_img/selfh/https/caddy-https-cert.png)
+
 The Caddy API its just amazing:
 
 ```sh
