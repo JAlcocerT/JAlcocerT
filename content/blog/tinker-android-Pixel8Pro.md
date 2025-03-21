@@ -3,7 +3,7 @@ title: "Pixel8 Pro - Tricks with a New Android phone."
 date: 2024-04-27T23:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Tricks for Google Pixel 8 Pro. Together with Android Apps I enjoy.'
+description: 'Tricks for Google Pixel 8 Pro. Together with Android Apps I enjoy: Waydroid, Termux?'
 url: 'pixel-8-pro-tricks'
 ---
 
@@ -93,6 +93,8 @@ I also enjoy the night mode (but make sure to have a tripod).
 
 3. The charging time is not the quickest. It can go up to ~25W.
 
+> For comparison, a s6 lite tablet loads at 15w
+
 I like that it charges slow during the night, according to your alarm time.
 
 ### Fav Apps for the Pixel
@@ -112,7 +114,7 @@ I like that it charges slow during the night, according to your alarm time.
 
 If you are using microsoft authenticator, make sure to have cloud backup enabled for your company stuff.
 
-When adding a new account on the phone, make sure to hit **restore from backup** instead of just login.
+When adding a new account on the phone, make sure to hit **restore from backup** (the last option below) instead of just sign in with MCSFT.
 
 {{< callout type="warning" >}}
 Make sure to have **proper backup codes stored** to enter your critical applications: gmail/microsoft/2fas/....
@@ -164,14 +166,87 @@ But get them...in a cool way:
 
 
 
-### Running Windows on Android
+### Other Android Stuff
+
+#### Termux
+
+You can also **emulate Linux inside Android**, like I did [with Termux, here](https://jalcocert.github.io/Linux/docs/privacy/android/#how-to-use-linux-on-android-with-termux).
+
+
+#### Running Windows on Android
 
 * https://github.com/brunodev85/winlator
 
+#### Running Android on Linux
 
-### Other Android Stuff
+**Waydroid** is a software application that allows users to run Android operating systems within a Linux environment.
 
-You can also **emulate Linux inside Android**, like I did [with Termux, here](https://jalcocert.github.io/Linux/docs/privacy/android/#how-to-use-linux-on-android-with-termux).
+Here's a breakdown of what it is and its relationship to Wayland:
+
+* **What Waydroid is:**
+    * Waydroid uses Linux container **(LXC) technology** to run a full Android system. This allows Android applications to run on a Linux operating system.
+    * The goal is to provide a way to run Android apps on Linux with **near-native performance**.
+
+* **Waydroid and Wayland:**
+    * Wayland is a communication protocol that specifies the communication between a display server and its clients.
+    * Waydroid is designed to work within a Wayland environment. This means that it relies on Wayland to display the Android interface and applications.
+    * A key aspect of Waydroid's design is its integration with Wayland, which contributes to its performance. Instead of relying on older display server technologies like X11, it takes advantage of Wayland's modern architecture.
+    * Essentially Wayland is what Waydroid uses to display the android operating system graphical user interface.
+
+In summary, Waydroid leverages the Wayland display server protocol to provide a smooth and integrated Android experience on Linux systems.
+
+* https://github.com/waydroid/waydroid
+    * https://docs.waydro.id/
+
+> The Android runtime environment ships with a minimal customized Android system image **based on LineageOS**.
+
+* https://github.com/Aman9das/Waydroid_Setup_Guide
+
+
+
+```sh
+sudo apt install curl ca-certificates -y
+
+curl -s https://repo.waydro.id | sudo bash
+
+sudo apt install waydroid -y
+```
+
+This will download ~1gb of data.
+
+![alt text](/blog_img/Android/waydroid-vanilla.png)
+
+What can you do with it?
+
+You can install the mentioned FDroid and Obtanium as mentioned above with the Pixel.
+
+Also, you can tell friends to send you their developed Android apks, for example from telegram: `/home/jalcocert/.var/app/org.telegram.desktop/data/TelegramDesktop/tdata/temp_data`.
+
+```sh
+cp ~/.var/app/org.telegram.desktop/data/TelegramDesktop/tdata/temp_data/sampleandroidapp.apk ~/Desktop/
+```
+
+Then, you can install a browser on waydroid, like duckduckgo and get the file transfered thanks to your local filebrowser instance.
+
+```sh
+# Initialize Waydroid (choose either 'FULL' for GApps or 'VANILLA' for a basic install):
+sudo waydroid init #Follow the prompts.
+
+#To start waydroid:
+waydroid session
+waydroid container start
+
+#To open waydroid applications from your linux desktop:
+waydroid show-full-ui
+
+#Troubleshooting Play Store Device Certification:
+#To get the android ID:
+sudo waydroid prop get android_id
+
+#Then follow the instructions for registering the android ID on google's website.
+```
+
+You can choose between VANILLA or GAPPS (with google apps, but requires to certify your device as mentioned on [this video](https://www.youtube.com/watch?v=FKnkIf9jb7U))
 
 ### Other Phones I Tried
 

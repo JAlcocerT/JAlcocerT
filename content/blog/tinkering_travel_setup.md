@@ -145,7 +145,6 @@ To record your **routes as GPX**
 
 > A open source run tracker
 
-
 3. https://codeberg.org/jannis/FitoTrack
 
 > FitoTrack - A privacy oriented fitness tracker for Android
@@ -161,6 +160,11 @@ And they can be combined with **FitTrackee**
 
 >  Self-hostable travel tracker and trip planner. 
 
+5. If you are using a [car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/)/camper, this might be helpful:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#other-android-stuff" title="Android On Linux" image="/blog_img/Android/p4n.png" subtitle="Waydroid Setup" >}}
+{{< /cards >}}
 
 ### BackUps
 

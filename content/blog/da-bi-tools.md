@@ -3,7 +3,7 @@ title: "BI Tools for the AI era"
 date: 2025-02-26T00:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Setting up Data Analytics Visualization (BI) tools with containers.'
+description: 'Setting up Data Analytics Visualization (Business Intelligence) tools with containers.'
 url: 'setup-bi-tools-docker'
 ---
 
