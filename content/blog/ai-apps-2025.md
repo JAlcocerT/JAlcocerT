@@ -7,6 +7,8 @@ description: '.'
 url: 'selfhosting-ai-apps'
 ---
 
+https://pytorch.org/get-started/locally/
+
 https://theresanaiforthat.com/most-saved/
 
 * **Others:** [LibreChat](https://www.youtube.com/watch?v=0BRnK5BGZHU), Autogen + AutogenStudio https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/ or [Quivir](https://github.com/StanGirard/quivr) with great [docs](https://docs.quivr.app/home/intro) or [LocalGPT](https://github.com/PromtEngineer/localGPT).

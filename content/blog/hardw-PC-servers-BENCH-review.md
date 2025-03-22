@@ -38,8 +38,16 @@ And a max power from the wall seen of [61W with the Tapo P110](#consumption)
 * cpx11 (Hetzner amd epyc x86): 12.3k events and 4.5/9k
 
 {{< callout type="info" >}}
-Remember to setup auto-cpufreq and mission center
+Remember to setup htop, auto-cpufreq and **mission center**
 {{< /callout >}}
+
+```sh
+#sudo apt install htop
+#sudo auto-cpufreq --install #https://github.com/AdnanHodzic/auto-cpufreq
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub io.missioncenter.MissionCenter
+```
 
 
 ### Memory Benchmarks

@@ -18,6 +18,7 @@ This is a recap of the best GIT related tricks I have so far.
 
 ```sh
 sudo apt install git #you need GIT first
+#git remote -v
 ```
 
 ![alt text](/blog_img/dev/github-auth.png)
@@ -127,7 +128,7 @@ Generally, to develop inside a container: you will need one
 
 
 {{< callout type="info" >}}
-For a Python Dev Container, you can get one with this docker-compose.
+For a Python Dev Container, you can get one with **this docker-compose**.
 {{< /callout >}}
 
 {{< youtube "yUyxJr2xboI" >}}

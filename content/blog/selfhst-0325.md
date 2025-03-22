@@ -308,6 +308,11 @@ sudo apt-get -y install wifite
 #### Tools for SelfHosters
 
 1. Reminna - Remote desktop client to manage your SSH, VNC, RDP
+
+```sh
+sudo apt install remmina
+```
+
 2. RustDesk - To help others with their setup remotely
 
 3. Have everything synced properly?

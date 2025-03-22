@@ -1,6 +1,6 @@
 ---
 title: "Everything I enjoy about Streamlit. With AI as RE Agent."
-date: 2025-03-01T10:20:21+01:00
+date: 2025-03-21T19:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Quick PoC Web Apps with Python and Streamlit. Applied to a Real Estate Calculator with GenAI Powered recommentations. SliDevJS Powered Tech Talk.'
@@ -286,9 +286,18 @@ Remember that even with these self-hostable options, you'll still need to choose
 
 ### How to prepare a Tech Talk with SliDevJS
 
+```sh
+#git clone https://github.com/JAlcocerT/Data-Chat
+npm init slidev@latest
+```
+
 https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
 
 https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#preparing-a-tech-talk-with-ai
 
 
 > See the event [here](https://events.exadel.com/event/rag-powered-real-estate/)
+
+
+
+> And here it is the **result**: https://jalcocert.github.io/Data-Chat/
