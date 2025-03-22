@@ -281,12 +281,83 @@ Finally, do Text2Speech, also with OpenAI:
 
 #### Descriptions
 
-Youtube descriptions allow to use some kind of simplified markdown, like this:
+**Youtube descriptions** allow to use some kind of **simplified markdown**, like this:
 
 <!-- {{< gist jalcocert 1b799eb643647096b80ba0f63eccf334 "RStocks - IndexPriceEvolution.JPG">}}
 https://gist.github.com/JAlcocerT/1b799eb643647096b80ba0f63eccf334 -->
 
 {{< gist jalcocert 1b799eb643647096b80ba0f63eccf334>}}
+
+You can also get some diagram help from MermaidJS and include it in your video:
+
+
+{{< details title="YT Description Example 📌" closed="true" >}}
+
+timeline
+    title Local LLMs with Ollama
+    Pre-Requisites : Install VSCode
+                   : Install Docker 🐋
+                   : Install Portainer
+    Covered in This Video : Ollama Project Context
+         : Deploy Ollama with Docker
+         : Ollama with Orca LLM 🐬
+         : Extra Ideas - Ollama with Python
+    Enjoy!  : Chat with your fav LLMs  🐔 🦙 🐬 ...
+
+
+
+
+In this video I will show you how to use LLMs locally the way a DevOps would.
+
+We are going to use the Ollama project, and we are going to SelfHost it with Docker. Then, we will choose a Free Large Language Model (Orca mini) and see how to interact with it in different ways:
+
+* Through containers terminal
+* With http request
+* With Python with the help of LLama-Index
+
+Ollama Project Overview 0:00
+Important mentions 1:27 A summary without spoilers
+The video 2:20 The mystery
+The video 4:37 The end!
+Outro 5:00 Full summary
+
+The Ollama image is ready to work in bot x86 and ARM64 devices, so we can apply all what we learn today on regular laptops, servers or SBC.
+
+
+🔗 Gist with All Code and Commands used in the video: https://gist.github.com/JAlcocerT/5c406a4f1d18a57469815fa0ef9d6a07
+
+💻 The Project
+Official Web : https://ollama.ai/
+LLM used: https://ollama.ai/library/orca-mini
+
+Project Source Code: https://github.com/jmorganca/ollama
+Project Docker Image 🐋: https://hub.docker.com/r/ollama/ollama
+
+
+
+🌟 Resources you might be Interested 🌟
+
+* https://fossengineer.com/tags/gen-ai/
+* https://jalcocert.github.io/RPi/
+* https://www.youtube.com/channel/UCPPMA8ZEusAe5dVH6PbjZFA
+
+* SelfHost NGINX to provide https to Ollama: https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/
+
+* LLama-Index (Pypi): https://pypi.org/project/llama-index/
+* LogSec: https://github.com/logseq/logseq
+* Home Assistant: https://github.com/home-assistant
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+👉 What Software have I used during the video?
+
+It is all Free Software that you can install in Windows/Mac/Linux:
+
+Docker: https://docs.docker.com/get-docker/
+Portainer to manage the containers with UI: https://fossengineer.com/selfhosting-portainer-docker/
+VSCodium to create the Dockerfile: https://vscodium.com/
+
+{{< /details >}}
 
 #### Fixed Comment
 

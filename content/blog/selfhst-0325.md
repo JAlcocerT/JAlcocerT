@@ -304,3 +304,16 @@ sudo aptitude -y install wifite
 
 sudo apt-get -y install wifite
 ```
+
+#### Tools for SelfHosters
+
+1. Reminna - Remote desktop client to manage your SSH, VNC, RDP
+2. RustDesk - To help others with their setup remotely
+
+3. Have everything synced properly?
+
+```sh
+sudo apt install meld
+#sudo apt install kompare
+#https://freefilesync.org/download.php
+```
