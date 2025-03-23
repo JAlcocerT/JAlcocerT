@@ -304,7 +304,7 @@ A huge consolidation of knowledge in this area.
 
 ### Big Data & Cloud
 
-* Got the chance to work with Google Cloud/GCP
+* Got the chance to work with Google Cloud/GCP...
 * Could use interesting tools: Databricks, Trino (ex Presto-SQL), ...
 
 ### Python is Easy!

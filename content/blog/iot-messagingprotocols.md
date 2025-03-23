@@ -3,7 +3,7 @@ title: "Whats the right messaging protocol for me?"
 date: 2025-03-23T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'MQTT vs RMQ vs Kafka'
+description: 'MQTT vs RMQ vs Kafka. Great Tools for IoT Projects!'
 url: 'messaging-protocols'
 ---
 

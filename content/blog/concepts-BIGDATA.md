@@ -720,7 +720,16 @@ The test are configured with a `.yml` file
 
 I mean, a **data integration tool**.
 
-NOT a big data processing tool.
+
+<!--
+ https://www.youtube.com/watch?v=dFEzT-qfVIk
+ -->
+
+Here you have a fantastic introductory video to azure data factory:
+
+{{< youtube "dFEzT-qfVIk" >}}
+
+> NOT a big data processing tool, like pyspark/databricks are.
 
 You can plug input sources from places like APIs or SAP and direct it towards your DWH (like snowflake).
 
@@ -964,4 +973,8 @@ Specially if you like SelfHosting: Superset, metabase and redash.
 
 <!-- https://www.youtube.com/watch?v=_0_Qk0Oleeo -->
 
+If you want to get started with BI Tools, check how to **quickly setup REDASH**:
+
 {{< youtube "_0_Qk0Oleeo" >}}
+
+> It can be veeery helpful for IoT Projects!
