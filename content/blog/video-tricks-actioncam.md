@@ -73,9 +73,16 @@ Recording with **high bitrate**, I got 4 different files with total size of 48GB
 
 5. **2.7k/30 RS+** and high bit rate
 
+<!-- https://www.youtube.com/watch?v=-Pv-EKYv1vA -->
+
+{{< youtube "-Pv-EKYv1vA" >}}
+
 > In youtube you will see those as `1440p`
 
 6. **2.7/60/RS+/high BR**
+
+
+
 
 > `1440p60`
 

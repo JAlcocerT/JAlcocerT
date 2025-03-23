@@ -98,6 +98,14 @@ Some alternatives to FLET:
 * Taipy
     * https://github.com/avaiga/taipy
     * https://pypi.org/project/taipy/
+
+```sh
+#https://github.com/Avaiga/demo-realtime-pollution
+git clone https://github.com/JAlcocerT/demo-realtime-pollution #which i cloned
+```
+
+> Great example:  Taipy Demo of a Realtime Dashboard of Air Pollution around a Factory 
+
 * Gradio
     * https://www.gradio.app/guides/quickstart
     * https://pypi.org/project/gradio/

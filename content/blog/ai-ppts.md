@@ -310,3 +310,76 @@ docker compose up -d
 {{< callout type="info" >}}
 Claper is a perfect example of how to deploy an app with **https thanks to Traefik**!
 {{< /callout >}}
+
+### PPT with Astro
+
+* https://github.com/jsulpis/slides-template
+    * https://jsulpis.github.io/slides-template/#/
+
+>  Minimalist template for creating slides with Reveal.js and Astro 
+
+**RevealJS?**
+
+
+> The HTML Presentation Framework 
+
+
+* https://revealjs.com/?demo#/30
+* https://revealjs.com/markdown/
+
+* https://revealjs.com/themes/
+    * https://revealjs.com/jump-to-slide/ - **G**
+    * https://revealjs.com/overview/ **Esc**
+
+
+
+```sh
+git clone https://github.com/hakimel/reveal.js.git
+cd reveal.js && npm install
+
+npm start #localhost:8000
+#npm start -- --port=8001
+```
+
+```sh
+npm run build
+```
+
+```sh
+npx http-server dist/
+```
+
+**Or you could try with Marp**
+
+* <https://github.com/marp-team/marp>
+* <https://github.com/marp-team/marp-cli/releases>
+
+* BUILT ON TOP OF NODEJS.
+
+* https://rnd195.github.io/marp-community-themes/
+
+Starting
+
+```sh
+#marp-team.marp-vscode
+npm install -g @marp-team/marp-cli
+marp sample.md --pdf
+#marp static_sites_presentation.md --html
+#marp static_sites_presentation.md --pptx
+```
+
+```sh
+#marp sample-with-css.md --pdf
+marp sample-with-css.md --html
+```
+
+Another css with:
+
+https://github.com/rnd195/my-marp-themes
+
+* gradient
+
+```sh
+wget https://raw.githubusercontent.com/rnd195/marp-community-themes/live/themes/gradient.css
+marp sample-other-css.md --html
+```

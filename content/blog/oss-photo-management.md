@@ -274,6 +274,14 @@ Im exploring other options at this point.
 
 > I'd just need the space and Linux with containers!
 
+### Tools for Photos
+
+1. https://github.com/danielgatis/rembg
+
+> MIT | Rembg is a tool to remove images background
+
+
+
 
 #### Cold Storage
 

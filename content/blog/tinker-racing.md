@@ -172,6 +172,10 @@ This package provides command-line utilities for working with CAN buses.
 
    Replace `123` with the CAN ID and the data bytes with the information you want to send.
 
+5. https://github.com/Schildkroet/CANgaroo
+
+> An open source can bus analyzer with support for transmit/receive of standard and FD frames and DBC decoding of incoming frames
+
 **6. Other Useful Tools:**
 
 * **`can-config`:**  Used for configuring CAN interfaces.

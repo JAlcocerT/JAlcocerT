@@ -57,6 +57,10 @@ https://www.youtube.com/watch?v=3yip2wSRX_4
 
 ## payloadCMS
 
+https://github.com/payloadcms/payload
+
+> MIT |  Payload is the open-source, fullstack Next.js framework, giving you instant backend superpowers. Get a full TypeScript backend and admin panel instantly. Use Payload as a headless CMS or for building powerful applications. 
+
 https://github.com/mooxl/astroad/tree/main
 
 

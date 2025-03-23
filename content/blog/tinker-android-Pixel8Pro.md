@@ -250,6 +250,12 @@ sudo waydroid prop get android_id
 
 You can choose between VANILLA or GAPPS (with google apps, but requires to certify your device as mentioned on [this video](https://www.youtube.com/watch?v=FKnkIf9jb7U))
 
+### Running mac
+
+https://github.com/darlinghq/darling
+
+>  Darwin/macOS emulation layer for Linux 
+
 ### Other Phones I Tried
 
 I was very happy with both, the Huawei P30 Pro and the PocoPhone F1 (probably the best value for money I ever had til now).

@@ -47,6 +47,10 @@ TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up
 #TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up -d
 ```
 
+<!-- https://www.youtube.com/watch?v=4HUqYbknTOM -->
+{{< youtube "4HUqYbknTOM" >}}
+
+
 > Superset works perfectly with Trino SQL!
 
 

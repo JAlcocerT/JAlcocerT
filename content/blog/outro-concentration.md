@@ -21,6 +21,8 @@ url: 'tools-to-improve-focus'
 
 2. [Timelite](https://fossengineer.com/selfhosting-timelite-with-docker/)
 
+3. Pomatez
+
 ### More
 
 1. https://nextbeats.vercel.app/
