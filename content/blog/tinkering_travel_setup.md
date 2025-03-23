@@ -166,6 +166,13 @@ And they can be combined with **FitTrackee**
   {{< card link="https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#other-android-stuff" title="Android On Linux" image="/blog_img/Android/p4n.png" subtitle="Waydroid Setup" >}}
 {{< /cards >}}
 
+6. https://github.com/gpxstudio/gpx.studio
+
+* see the app: https://gpx.studio/app#3.98/41.91/19.39
+
+
+> MIT |  the online GPX file editor 
+
 ### BackUps
 
 #### Nextcloud

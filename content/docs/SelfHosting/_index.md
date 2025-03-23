@@ -99,6 +99,29 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 
 3. Tools 🐳: IT-Tools, CosmosServer, OmniTools
 
+```yml
+version: '3'
+services:
+  cosmos-server:
+    image: azukaar/cosmos-server:latest
+    container_name: cosmos-server
+    hostname: cosmos-server
+    privileged: true
+    restart: always
+    ports:
+      - "800:80"
+      - "4433:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /:/mnt/host
+      - /var/lib/cosmos:/config
+    networks:
+      - default
+
+networks:
+  default:
+```
+
 4. [Webs 🐳](https://github.com/JAlcocerT/Docker/tree/main/Web/CMS): Wordpress, Ghost, LinkInBio selfhosted alternatives...
 
 > Wrote a post about the most popular CMS [here](https://jalcocert.github.io/JAlcocerT/no-code-websites/) and about LinkStack [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)
@@ -120,3 +143,214 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 Like Hugo Theme Gallery
 
 Even SliDevJS PPTs!
+
+11. Change Detection
+
+```yml
+#https://docs.linuxserver.io/images/docker-changedetection.io/#application-setup
+#https://github.com/dgtlmoon/changedetection.io
+
+---
+version: "2.1"
+services:
+  changedetection:
+    image: lscr.io/linuxserver/changedetection.io:latest
+    container_name: changedetection
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - BASE_URL= #optional
+    volumes:
+      - /home/Docker/changedetection/config:/config
+    ports:
+      - 5000:5000
+    restart: unless-stopped
+```
+
+12. DUckDNS
+
+https://hub.docker.com/r/linuxserver/duckdns
+
+
+```yml
+docker run -d \
+  --name=duckdns \
+  --net=host `#optional` \
+  -e PUID=1000 `#optional` \
+  -e PGID=1000 `#optional` \
+  -e TZ=Etc/UTC `#optional` \
+  -e SUBDOMAINS=subdomain1,subdomain2 \
+  -e TOKEN=token \
+  -e UPDATE_IP=ipv4 `#optional` \
+  -e LOG_FILE=false `#optional` \
+  -v /path/to/appdata/config:/config `#optional` \
+  --restart unless-stopped \
+  lscr.io/linuxserver/duckdns:latest
+```
+
+
+
+#https://docs.nextcloud.com/server/latest/user_manual/en/files/file_drop.html#setting-up-your-own-file-drop
+
+If it is here -**YOU ARE LUCKY** - https://docs.linuxserver.io/images/docker-vscodium/#docker-cli-click-here-for-more-info
+
+
+=====================================
+
+WIRESHARK 
+
+https://docs.linuxserver.io/images/docker-wireshark/
+
+
+* <https://docs.linuxserver.io/images/docker-steamos/#supported-architectures>
+
+
+* <https://docs.linuxserver.io/images/docker-kdenlive/>
+* <https://docs.linuxserver.io/images/docker-cura/>
+FREE CAD
+
+
+*<https://docs.linuxserver.io/images/docker-faster-whisper/#supported-architectures>
+
+MEDIA SERVER
+
+* <https://docs.linuxserver.io/images/docker-emby/>
+
+**DATABASELESS KNOWLEDGE BASE**
+
+<https://docs.linuxserver.io/images/docker-raneto/#miscellaneous-options>
+<https://docs.linuxserver.io/images/docker-hedgedoc/>
+<https://js.wiki/>
+
+
+CRON JOBS UI
+
+<https://docs.linuxserver.io/images/docker-healthchecks/>
+
+FAIL2BAN
+
+<https://docs.linuxserver.io/images/docker-fail2ban/#docker-compose-recommended-click-here-for-more-info>
+
+
+---
+version: "2.1"
+services:
+  grav:
+    image: lscr.io/linuxserver/grav:latest
+    container_name: grav
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /home/Docker/grav/config:/config
+    ports:
+      - 80:80
+    restart: unless-stopped
+
+
+https://hub.docker.com/r/honeygain/honeygain
+
+
+docker run honeygain/honeygain -tou-accept -email ACCOUNT_EMAIL -pass ACCOUNT_PASSWORD -device DEVICE_NAME
+
+```yml
+version: '3'
+services:
+  honeygain:
+    image: honeygain/honeygain
+    command: -tou-accept -email ACCOUNT_EMAIL -pass ACCOUNT_PASSWORD -device DEVICE_NAME
+```
+
+#https://github.com/gristlabs/grist-core
+#https://github.com/gristlabs/grist-electron
+https://hub.docker.com/r/gristlabs/grist#!
+
+
+```yml
+docker pull gristlabs/grist
+docker run -p 8484:8484 -it gristlabs/grist
+```
+
+```yml
+#version: '3'
+services:
+  appflowy:
+    image: appflowyio/appflowy_client:main
+    volumes:
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/dri:/dev/dri
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
+      - appflowy-data:/home/appflowy
+    environment:
+      - DISPLAY=${DISPLAY}
+
+volumes:
+  appflowy-data:
+```
+
+#https://github.com/huginn/huginn/blob/master/doc/docker/install.md
+
+version: '3'
+services:
+  huginn:
+    image: ghcr.io/huginn/huginn
+    ports:
+      - "3000:3000"
+
+
+#Log in to your Huginn instance using the username admin and password password
+
+
+```yml
+##https://posthog.com/
+
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/posthog/posthog/HEAD/bin/deploy-hobby)"
+
+#version: '3'
+
+services:
+  posthog:
+    image: posthog/posthog
+    ports:
+      - "8010:8000"
+    environment:
+      - DATABASE_URL=postgresql://posthog:posthogpassword@db:5432/posthog
+      - CLICKHOUSE_HOST=clickhouse
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=albertoyhermosin123
+    depends_on:
+      - db
+      - clickhouse
+      - redis
+    networks:
+      - posthog-net
+
+  db:
+    image: postgres:12
+    environment:
+      - POSTGRES_DB=posthog
+      - POSTGRES_USER=posthog
+      - POSTGRES_PASSWORD=posthogpassword34567
+    networks:
+      - posthog-net
+
+  clickhouse:
+    image: yandex/clickhouse-server:latest
+    ports:
+      - "8123:8123"
+    networks:
+      - posthog-net
+
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+    networks:
+      - posthog-net
+
+networks:
+  posthog-net:
+```

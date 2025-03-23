@@ -377,6 +377,12 @@ Social Media can be simplified
 
 [N8N with ollama video](https://www.youtube.com/watch?v=VDuA5xbkEjo)
 
+* Active Pieces
+
+https://github.com/activepieces/activepieces
+
+> Your friendliest open source AI automation tool ✨ Workflow automation tool 200+ integration / Enterprise automation tool / Zapier Alternative
+
 
 #### Social Media Management Apps
 

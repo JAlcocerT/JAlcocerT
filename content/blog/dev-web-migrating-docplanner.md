@@ -169,3 +169,12 @@ serve -s dist #http://localhost:3000
 And I used [Cloudflare together with github](https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/), for the demo deployment.
 
 The result was available, after few minutes here: <https://morita-web.pages.dev/>
+
+## Conclusions
+
+
+Other THemes for Doctors:
+
+1. https://github.com/cssninjaStudio/dokto 
+2. https://github.com/mhyfritz/astro-landing-page
+3. https://github.com/withastro/astro/tree/main/examples/portfolio

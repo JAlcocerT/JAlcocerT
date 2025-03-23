@@ -176,3 +176,33 @@ Lately, a colleague mentioned to me about: https://lovable.dev/
 It requires a signup, yet they provide a free tier.
 
 Definitely have to take a look to suck tools and also to the open/local ones.
+
+
+Use **VSCodium via container**:
+
+```yml
+#https://docs.linuxserver.io/images/docker-vscodium/#lossless-mode
+#---
+#version: "2.1"
+services:
+  vscodium:
+    image: lscr.io/linuxserver/vscodium:latest
+    container_name: vscodium
+    cap_add:
+      - IPC_LOCK
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /home/Docker/vscodium/config:/config
+    ports:
+      - 3070:3000
+      - 3071:3001
+    shm_size: "1gb"
+    restart: unless-stopped
+
+##localhost:3070
+```

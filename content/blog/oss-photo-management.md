@@ -167,6 +167,8 @@ With pretty cool [features](https://piwigo.org/features):
 
 > The key here is the *really cool* mobile App (Android/iOS)
 
+### PhotoPrism
+
 ### Chevereto
 
 * https://fossengineer.com/selfhosting-chevereto-docker/

@@ -30,7 +30,22 @@ Real-Time Analytics with ClickHouse
 
 #### SuperSet
 
+* https://superset.apache.org/docs/installation/docker-compose
 * https://jalcocert.github.io/RPi/posts/rpi-gps-superset/
+
+```sh
+git clone https://github.com/apache/superset.git
+cd Superset
+#docker compose up
+
+git checkout 3.0.0
+#git status
+
+TAG=3.0.0 docker compose -f docker-compose-non-dev.yml pull
+TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up
+
+#TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up -d
+```
 
 > Superset works perfectly with Trino SQL!
 
@@ -39,6 +54,13 @@ Real-Time Analytics with ClickHouse
   {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs...Source Code" >}}
 {{< /cards >}}
+
+* <https://superset.apache.org/docs/installation/installing-superset-using-docker-compose/>
+* <https://github.com/apache/superset>
+    * <https://preset.io/blog/2021-4-1-why-echarts/>
+    * <https://echarts.apache.org/examples/en/index.html#chart-type-linesGL>
+    * <https://pypi.org/project/superset-api-client/>
+    * <https://pypi.org/project/apache-superset/>
 
 #### MetaBase
 

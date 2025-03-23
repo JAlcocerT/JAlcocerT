@@ -108,9 +108,11 @@ Some alternatives to FLET:
     * Can also create static sites: https://reflex.dev/docs/hosting/self-hosting/#exporting-a-static-build
 * Panel - https://github.com/holoviz/panel
 * Pynecone - ANOTHER ONE IN MY PRIVATE AT LENOVO!!!!!!!
-* NiceGUI - https://github.com/zauberzeug/nicegui
+
+* NiceGUI - Desktop Apps with Python https://github.com/zauberzeug/nicegui
     https://www.bitdoze.com/nicegui-pages/
     https://www.bitdoze.com/nicegui-get-started/
+
     * Under the hood, NiceGUI uses JustPy, which in turn is built on top of Starlette (an asynchronous ASGI framework) and other web technologies.
     *  library to write simple graphical user interfaces in Python we discovered JustPy. Although we liked the approach, it is too "low-level HTML" for our daily usage. But it inspired us to use **Vue and Quasar** for the frontend.
     * https://nicegui.io/#examples

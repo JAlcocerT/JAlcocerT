@@ -1,6 +1,6 @@
 ---
 title: "How to make a Media Home Server with OSS"
-date: 2024-11-31T23:20:21+01:00
+date: 2023-11-31T23:20:21+01:00
 draft: false
 description: 'Using the OrangePi as Media Server with Jellyfin'
 url: 'media-server-with-open-source'
@@ -9,6 +9,7 @@ url: 'media-server-with-open-source'
 1. [Jellyfin](#jellyfin)
 2. emby
 3. Plex
+4. Kodi
 
 
 You can use all these tools [together with ...](#faq)
@@ -225,3 +226,70 @@ Specifically, the standard resolution for 4K UHD is 3840 x 2160 pixels, which is
 
 * Calibre
 * https://gitlab.com/smoores/storyteller
+
+### Other Containers
+
+* https://github.com/IgnisDa/ryot
+
+> GPL 3.0 | Ryot is a versatile platform that helps you effortlessly track and manage your media, fitness, and more. Say goodbye to manual tracking methods like Notion, Google Notes, and Excel.
+
+
+1. Prowlarr 
+
+#https://docs.linuxserver.io/images/docker-prowlarr/
+#https://wiki.servarr.com/                                    # ---> SEEDBOX
+#https://docs.linuxserver.io/images/docker-prowlarr/#usage
+
+```yml
+---
+version: "2.1"
+services:
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /home/Docker/prowlarr/config:/config
+    ports:
+      - 9696:9696
+    restart: unless-stopped
+```
+
+2. amule
+
+```yml
+#https://github.com/ngosang/docker-amule
+
+---
+version: "2.1"
+services:
+  amule:
+    image: ngosang/amule
+    container_name: amule
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - GUI_PWD=<fill_password>
+      - WEBUI_PWD=<fill_password>
+      - MOD_AUTO_RESTART_ENABLED=true
+      - MOD_AUTO_RESTART_CRON=0 6 * * *
+      - MOD_AUTO_SHARE_ENABLED=false
+      - MOD_AUTO_SHARE_DIRECTORIES=/incoming;/my_movies
+      - MOD_FIX_KAD_GRAPH_ENABLED=true
+      - MOD_FIX_KAD_BOOTSTRAP_ENABLED=true
+    ports:
+      - "4711:4711" # web ui
+      - "4712:4712" # remote gui, webserver, cmd ...
+      - "4662:4662" # ed2k tcp
+      - "4665:4665/udp" # ed2k global search udp (tcp port +3)
+      - "4672:4672/udp" # ed2k udp
+    volumes:
+      - /home/Docker/aMule:/home/amule/.aMule
+      - /home/Downloads/amule:/incoming
+      - /home/Docker/temp/amule:/temp
+    restart: unless-stopped
+```
