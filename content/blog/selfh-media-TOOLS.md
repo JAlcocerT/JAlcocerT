@@ -1,6 +1,6 @@
 ---
 title: "How to make a Media Home Server with OSS"
-date: 2023-11-31T23:20:21+01:00
+date: 2023-11-29
 draft: false
 description: 'Using the OrangePi as Media Server with Jellyfin'
 url: 'media-server-with-open-source'
@@ -37,7 +37,7 @@ https://fleet.linuxserver.io/
 {{< dropdown title="How to setup Jellyfin with Docker ⏬" closed="true" >}}
 
 ```yml
-version: '3.8'
+#version: '3.8'
 
 services:
   jellyfin:

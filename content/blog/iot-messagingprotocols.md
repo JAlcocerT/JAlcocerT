@@ -1,6 +1,6 @@
 ---
 title: "Whats the right messaging protocol for me?"
-date: 2025-07-06T05:20:21+01:00
+date: 2025-03-23T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
 description: 'MQTT vs RMQ vs Kafka'
@@ -103,7 +103,41 @@ RabbitMQ is commonly used in systems that require guaranteed message delivery, s
 **RabbitMQ Hint**: Use "exchanges" to efficiently route messages based on routing rules. For example, a "topic exchange" allows routing messages based on patterns, ideal for complex message filtering.
 {{< /callout >}}
 
-Certainly! Here's a short chapter about **Apache Kafka**:
+
+#### Tools for MQTT
+
+1.  ThingBoards https://github.com/thingsboard/thingsboard
+
+```yml
+version: '3.0'
+services:
+  mytb:
+    restart: always
+    image: "thingsboard/tb-postgres"
+    ports:
+      - "8080:9090"
+      - "1889:1883"
+      - "7070:7070"
+      - "5683-5688:5683-5688/udp"
+    environment:
+      TB_QUEUE_TYPE: in-memory
+    volumes:
+      - /home/Docker/thingsboard/data:/data
+      - /home/Docker/thingsboard/var:/var/log/thingsboard
+```
+
+2. MQTTX
+
+```sh
+flatpak install flathub com.emqx.MQTTX
+```
+![alt text](blog_img/iot/mqttx-desktop.png)
+
+3. MQTT Explorer
+
+4. MQTT with Python: https://www.emqx.com/en/blog/how-to-use-mqtt-in-python
+
+
 
 ### Apache Kafka
 
@@ -129,3 +163,13 @@ Kafka is widely used in systems that require real-time data processing, such as 
 When designing a Kafka-based system, consider partitioning your topics for parallel processing and increased throughput. Properly choosing the number of partitions can significantly affect performance and scalability.
 {{< /callout >}}
 
+
+---
+
+## Outro
+
+If you want to get into electronics, see these:
+
+1. Arduino IDE
+
+2. LibrePCB

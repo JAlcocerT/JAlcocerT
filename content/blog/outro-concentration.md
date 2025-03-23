@@ -23,6 +23,10 @@ url: 'tools-to-improve-focus'
 
 3. Pomatez
 
+```sh
+ #https://github.com/zidoro/pomatez
+```
+
 ### More
 
 1. https://nextbeats.vercel.app/
@@ -67,3 +71,11 @@ I mean, Selfhostable and **RSS Feeds**!
 1. [Focalboard](https://fossengineer.com/focalboard-docker) 
 2. [DrawIO Diagrams](https://fossengineer.com//selfhosting-drawio-with-docker)
 3. [LeanTime](https://fossengineer.com/selfhosting-Leantime-docker)
+
+4. For note taking apps:
+
+```sh
+#joplin
+#logseq
+```
+
