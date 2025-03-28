@@ -286,6 +286,9 @@ Remember that even with these self-hostable options, you'll still need to choose
 
 ### How to prepare a Tech Talk with SliDevJS
 
+1. Its very important to instruct the LLM to provide you a clear, but concise agenda (work markdown icons as optional). Similar in lenght to the one provided by SliDev
+2. Add your mermaidJS diagrams for visual explanations of the flow
+
 ```sh
 #git clone https://github.com/JAlcocerT/Data-Chat
 npm init slidev@latest

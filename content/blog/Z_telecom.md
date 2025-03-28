@@ -81,6 +81,33 @@ The CMTS acts as a gateway between the cable network and the internet, enabling 
 
 - **Context**: Similar to the OLT, but used in cable networks rather than fiber networks.
 
+
+
+{{< details title="ServAssure (SANXT) vs SuperPoller... 📌" closed="true" >}}
+
+It's important to clarify the relationship between "superpollers" and ServAssure NXT.
+
+They are not alternatives to each other; rather, "superpollers" (or clustered pollers) are a component *within* the ServAssure NXT system. 
+
+* **ServAssure NXT:**
+    * This is a comprehensive network and customer experience management platform.
+    * It provides a suite of tools for monitoring, analyzing, and managing cable broadband networks.
+    * It encompasses various functions, including alarm management, proactive maintenance, and spectrum analysis.
+* **"Superpollers" (Clustered Pollers):**
+    * These are the data collection engines within ServAssure NXT.
+    * Their role is to gather information from network devices, such as CMTS equipment.
+    * Clustering these pollers enhances the system's reliability and efficiency.
+    * Therefore, they are a vital part of how ServAssure NXT functions.
+
+In essence:
+
+* ServAssure NXT is the overall management system.
+* "superpollers" are a sub system that gathers data that ServAssure NXT then uses.
+
+Therefore, "superpollers" are not an alternative to ServAssure NXT; they are a critical part of its architecture.
+
+{{< /details >}}
+
 ### ACS (Auto Configuration Server)
 
 **ACS (Auto Configuration Server)** is a crucial component in the management of network devices in telecommunications. It facilitates the **remote configuration and management of customer-premises equipment (CPE)** such as: modems, routers, gateways, and set-top boxes - STBs.

@@ -356,3 +356,34 @@ Bitcoin, Ethereum, Solana, and Polkadot: A Comparative Overview
 * **Ethereum:** MetaMask, MyEtherWallet, Trust Wallet
 * **Solana:** Phantom, Sollet, Solflare
 * **Polkadot:** Polkadot.js, Talisman
+
+### Crypto Concepts
+
+
+{{< callout type="warning" >}}
+Always think twice before doing. Consult with a professional.
+{{< /callout >}}
+
+
+1. Impermanent Loss (IL) 
+
+This can happen when the value of 2 assets deposited in a pool diverse: https://app.beefy.com/vault/nuri-cow-scroll-wbtc-weth-vault
+
+> beefy is a Multichain Yield Optimizer
+
+2. You can Stake using Smart Contract Protocols like Aave: https://app.aave.com/
+
+* https://etherscan.io/address/0xd01607c3c5ecaba394d8be377a08590149325722
+
+> And you receive some tokens while your assets are staked: https://etherscan.io/token/0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8
+
+3. Sample wallet
+
+https://portfolio.metamask.io/stake?tab=pooled
+
+> You can find your wallet address / transactions and so on at https://etherscan.io/address/
+
+4. DeFi space is huge and full of information
+
+* https://app.extrafi.io/farm
+* https://defillama.com/yields/stablecoins?token=USDT

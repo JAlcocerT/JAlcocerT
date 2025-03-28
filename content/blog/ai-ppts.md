@@ -3,7 +3,7 @@ title: "How to create awsome Presentations with AI"
 date: 2025-01-02
 draft: false
 tags: ["AI"]
-description: 'Creating AI Driven Presentations - PPT as code with SliDev, MarpJS, RemarkJS'
+description: 'AI Driven Presentations - PPT as code with SliDev, MarpJS, RemarkJS. With Diagrams and ULM.'
 url: 'creating-presentations-with-ai'
 ---
 
@@ -86,6 +86,13 @@ There are some astro Themes which are implementing RemarkJS:
 
 ## Conclusions
 
+You can also use the VSCOde extension: https://marketplace.visualstudio.com/items?itemName=antfu.slidev
+
+```sh
+ext install antfu.slidev
+#code --install-extension antfu.slidev #or this one from the terminal
+```
+
 There you go: Few powerpoint as a code f/oss alternatives.
 
 Which will also play [nice with LLMS](#ai-powered-slidev)
@@ -94,7 +101,9 @@ Need additionally **mockup tools**?
 
 {{< details title="There is a good range of Mock-up Tools... 📌" closed="true" >}}
 
-There are several open-source and self-hostable mockup and wireframing tools available. Here are some of the most popular and feature-rich options:
+There are several open-source and self-hostable mockup and wireframing tools available.
+
+Here are some of the most popular and feature-rich options:
 
 **Mockup and Prototyping Tools:**
 
@@ -139,9 +148,36 @@ I'd recommend trying out Penpot and Excalidraw to see which one best fits your w
   {{< card link="https://github.com/excalidraw/excalidraw" title="Excalidraw" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Virtual whiteboard for sketching hand-drawn like diagrams" >}}
 {{< /cards >}}
 
-### Containerized SliDevJS
+If you need some **UML Tool**, have a look to: **[plantUML](https://github.com/plantuml/plantuml)**
 
-* https://github.com/JAlcocerT/Docker/blob/main/Web/SSGs/Sli_dev_Docker-compose.yml
+* https://plantuml.com/mindmap-diagram
+
+> Like MermaidJS, it can also be used inside SliDev PPTs!
+
+
+{{< details title="More about PlantUML... 📌" closed="true" >}}
+
+PlantUML is a very useful tool, especially for those working in software development and related fields.
+
+* **Diagrams from Text:**
+    * PlantUML allows you to create various types of diagrams from plain text descriptions. This means you don't have to rely on graphical drawing tools. Instead, you write simple text code, and PlantUML generates the diagrams for you.
+* **Variety of Diagrams:**
+    * It supports a wide range of diagram types, including:
+        * UML diagrams (like class diagrams, sequence diagrams, use case diagrams)
+        * Non-UML diagrams (like flowcharts, mind maps, and more)
+* **Open Source:**
+    * Yes, PlantUML is indeed open-source. This is a significant advantage, as it means it's freely available for anyone to use, modify, and distribute.
+* **Key Benefits:**
+    * **Text-based:** This makes it easy to integrate with version control systems (like Git), allowing for collaborative diagram creation.
+    * **Efficiency:** It streamlines the process of creating and updating diagrams.
+    * **Versatility:** Its support for numerous diagram types makes it a flexible tool for various needs.
+
+
+{{< /details >}}
+
+In essence, PlantUML simplifies the creation of diagrams by using a text-based approach, and being open source, it is a very valuable tool.
+
+
 
 
 ### AI Powered SliDev
@@ -273,6 +309,10 @@ print(completed_message)
 ---
 
 ## FAQ
+
+### Containerized SliDevJS
+
+* https://github.com/JAlcocerT/Docker/blob/main/Web/SSGs/Sli_dev_Docker-compose.yml
 
 ### Cool Resources to Design PPTs
 
