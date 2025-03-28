@@ -430,7 +430,9 @@ You've hit on the key aspects of Flask. Let's expand on its characteristics and 
 
 **In summary:**
 
-Flask is a versatile and powerful microframework that's ideal for developers who want flexibility, control, and a lightweight approach to web development. Its extensibility and simplicity make it a popular choice for various web development tasks.
+Flask is a versatile and **powerful microframework** that's ideal for developers who want flexibility, control, and a lightweight approach to web development.
+
+Its extensibility and simplicity make it a popular choice for various web development tasks.
 
 
 
@@ -585,7 +587,7 @@ npm i --save @kanaries/graphic-walker
 
 ### Flask
 
-
+One of the most popular ways to create **python web apps is with Flask**.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Tinkering with Flask" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Flask Apps with VPS and HTTPs" >}}
@@ -646,3 +648,46 @@ For some PoC, Id stay with streamlit as my go to.
 1. https://github.com/stackblitz-labs/bolt.diy
 
 > MIT | Prompt, run, edit, and deploy full-stack web applications using any LLM you want! 
+
+### Desktop Apps with Python
+
+When it comes to building desktop applications with Python, there are several frameworks available, each with its own strengths and weaknesses. Here's a breakdown of some of the most popular options:
+
+**Key Python GUI Frameworks:**
+
+* **Tkinter:**
+    * This is Python's standard GUI toolkit.
+    * It's relatively easy to learn and is included with most Python installations, making it a good choice for beginners.
+    * However, its appearance can be somewhat dated.
+    * Good for simple applications.
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="Python Web apps with DASH" image="/blog_img/apps/TripPlanner/TripPlanner.JPG" subtitle="Python Trip Planner with DASh" >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Youtube Video Edition" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Quick Vlogs with ffmpeg and Tkinter" >}}
+{{< /cards >}}
+
+* **PyQt/PySide:**
+    * These frameworks provide Python bindings for the Qt library, a powerful cross-platform GUI toolkit.
+    * They offer a wide range of widgets and customization options, allowing you to create sophisticated and visually appealing applications.
+    * PyQt has licensing considerations, while PySide is LGPL-licensed.
+    * Excellent for complex applications.
+* **Kivy:**
+    * Kivy is designed for creating cross-platform applications with a focus on touch-enabled interfaces.
+    * It's suitable for developing applications that can run on desktop and mobile platforms.
+    * Good for multi-touch applications.
+* **wxPython:**
+    * wxPython provides Python bindings for the wxWidgets library, which allows you to create native-looking applications on various platforms.
+    * It offers a good balance of features and performance.
+    * Good for applications that need to have a native operating system look and feel.
+* **Flet:**
+    * As mentioned before, Flet is a framework that enables you to build cross platform applications, including desktop applications. It is based on flutter, and allows for very quick UI development.
+
+https://pypi.org/project/PyAutoGUI/
+
+**Key Considerations:**
+
+* **Cross-platform compatibility:** If you need your application to run on multiple operating systems, choose a framework that supports cross-platform development.
+* **Complexity:** Consider the complexity of your application and choose a framework that matches your needs. Tkinter is suitable for simple applications, while PyQt/PySide and wxPython are better for more complex ones.
+* **Appearance:** If you want your application to have a modern and visually appealing interface, PyQt/PySide or Kivy might be good choices.
+* **Licensing:** Be aware of the licensing terms of the framework you choose, especially if you plan to distribute your application commercially.

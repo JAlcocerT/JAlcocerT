@@ -149,6 +149,9 @@ ext install GitHub.vscode-github-actions
 #slidev
 ext install antfu.slidev
 #code --install-extension antfu.slidev #or this one from the terminal
+
+#python
+ext install ms-python.python #https://marketplace.visualstudio.com/items?itemName=ms-python.python
 ```
 
 ---
