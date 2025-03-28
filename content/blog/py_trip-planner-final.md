@@ -47,7 +47,7 @@ Well, it's not.
     * [MeteoStat](https://jalcocert.github.io/JAlcocerT/python-historical-weather-api-with-meteostat)
     * [Docker for SelfHosting](#how-can-i-try-the-python-trip-planner-app)
 
-![LangChain Jupyter NB](/blog_img/apps/TripPlanner/TripPlanner.JPG)
+![Trip Planner UI](/blog_img/apps/TripPlanner/TripPlanner.JPG)
 
 
 ## How A Python App can be a Weather Compass

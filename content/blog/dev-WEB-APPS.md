@@ -9,11 +9,13 @@ url: 'web-apps-with-python'
 
 ## WebApps
 
-Absolutely! Let's break down web programming and Python's role in it.
-
 **Understanding Web Programming**
 
-Web programming is the foundation for creating dynamic and interactive websites and web applications. It goes beyond simply designing a static webpage with HTML and CSS. Here's a more detailed look:
+Web programming is the foundation for creating dynamic and interactive websites and web applications.
+
+It goes beyond simply designing a static webpage with HTML and CSS. 
+
+Here's a more detailed look:
 
 * **Core Components:**
     * **Web Content (HTML, CSS, JavaScript):**
@@ -240,6 +242,8 @@ The best framework for you depends on your specific needs and preferences. Consi
 
 In general, Django is a great choice for large, complex applications, while Flask is ideal for smaller projects and APIs.
 
+[![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex&type=Date)](https://star-history.com/#pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex)
+
 
 
 * **Reflex:** If you need to build a complex, interactive web application with real-time updates and a **rich UI**.
@@ -358,6 +362,11 @@ Django's MVT architecture provides a clear separation of concerns, making it eas
 
 {{< /details >}}
 
+{{< callout type="info" >}}
+Im very aware that there are cool projects. Like [Pylinak](https://github.com/jrkerns/pylinac), which [this PhD](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/) is improving.
+{{< /callout >}}
+
+
 **In essence:**
 
 Django is a powerful and versatile framework that's well-suited for building complex web applications. Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
@@ -463,9 +472,12 @@ This setup enables you to **quickly create interactive web apps using Python**, 
 
 {{< /details >}}
 
-See a sample notebook: https://colab.research.google.com/drive/171QUQeq-uTLgSj1u-P9DQig7Md1kpXQ2
+> See a sample notebook: https://colab.research.google.com/drive/171QUQeq-uTLgSj1u-P9DQig7Md1kpXQ2
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Streamlit-AIssistant/blob/main/Z_Tests/Crypto/btc_explore.ipynb)
 
 
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/171QUQeq-uTLgSj1u-P9DQig7Md1kpXQ2)
 
 {{< details title="PyGWalker with Streamlit Render | Example 📌" closed="true" >}}
 
@@ -573,10 +585,13 @@ npm i --save @kanaries/graphic-walker
 
 ### Flask
 
+
+
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Tinkering with Flask" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Flask Apps with VPS and HTTPs" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Tinkering with Flask" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Flask Apps with VPS and HTTPs" >}}
 {{< /cards >}}
 
+<!-- ![Flask Https NginX Setup](/blog_img/apps/flask-nginx-duckdns.png) -->
 
 
 ### Reflex
@@ -590,33 +605,44 @@ npm i --save @kanaries/graphic-walker
 
 ### Flet
 
-{{< details title=" 📌" closed="true" >}}
+
+
+{{< details title="More about Flet 📌" closed="true" >}}
 
 
 {{< /details >}}
 
 ## Python DASH
 
-https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/
+* https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="Python Web apps with DASH" image="/blog_img/apps/TripPlanner/TripPlanner.JPG" subtitle="Python Trip Planner with DASh" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+
 
 ## Shiny with R
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="Tinkering with R Shiny" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Python Web apps with Reflex" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="Tinkering with R Shiny" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/FlexDash-BoomBurst.png" subtitle="Python is now Shiny Compatible!" >}}
   {{< card link="https://github.com/JAlcocerT/R-Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of the RStock Shiny Web app" >}}
 {{< /cards >}}
 
 > You can also see the flexdashboard: https://jalcocert.github.io/JAlcocerT/R-Stocks/
 
-## AI Building Web Apps
-
-1. https://github.com/stackblitz-labs/bolt.diy
-
-> MIT | Prompt, run, edit, and deploy full-stack web applications using any LLM you want! 
 
 ---
 
 ## Conclusions
 
 For some PoC, Id stay with streamlit as my go to.
+
+
+### AI Building Web Apps
+
+1. https://github.com/stackblitz-labs/bolt.diy
+
+> MIT | Prompt, run, edit, and deploy full-stack web applications using any LLM you want! 

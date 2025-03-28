@@ -1,6 +1,6 @@
 ---
 title: "How to use Grok (X) API"
-date: 2025-03-25
+date: 2025-05-10
 draft: false
 tags: ["AI"]
 description: 'A Recap on AI APIs calls and learning how to use Grok API'

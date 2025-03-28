@@ -1,6 +1,6 @@
 ---
 title: "Financial Data for Python - Trying YahooFinancial and YFinance packages"
-date: 2025-03-26
+date: 2025-04-26
 draft: false
 tags: ["Python"]
 description: "Initial Yield vs Growth EDA and its math. How to analyze stock and dividend data with Python. Together with Data animations."
