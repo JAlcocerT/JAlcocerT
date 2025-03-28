@@ -91,6 +91,9 @@ npm install @iconify-json/uim #https://icon-sets.iconify.design/uim/?icon-filter
 ```sh
 npm install @iconify-json/logos #https://github.com/gilbarbara/logos
 #<logos-vue />
+
+#<logos-claude />
+#<logos-openai />
 ```
 
 > Thanks to https://iconify.design/
@@ -123,7 +126,7 @@ There are some astro Themes which are implementing RemarkJS:
 
 ## Conclusions
 
-You can also use the VSCOde extension: https://marketplace.visualstudio.com/items?itemName=antfu.slidev
+You can also use the VSCode extension: https://marketplace.visualstudio.com/items?itemName=antfu.slidev
 
 ```sh
 ext install antfu.slidev

@@ -7,7 +7,7 @@ draft: false
 #     alt: "ChatPDF" # alt text
 #     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
-description: 'Why LangChain is great for AI Projects. How to RAG with LangChain: CSV and DB examples.'
+description: 'Why LangChain is great for AI Projects. How to RAG with LangChain: CSV, PDF and DB examples.'
 summary: 'How to create a Streamlit App that uses LangChain to chat with your data.'
 url: 'how-to-chat-with-your-data'
 ---
@@ -338,6 +338,20 @@ We can put all of this into containers with [this `docker-compose`](https://gith
 {{< callout type="info" >}}
 To use containers you will need [Docker installed](https://jalcocert.github.io/JAlcocerT/IT-concepts/#containers). Or just be [ready for SelfHosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
 {{< /callout >}}
+
+## Conclusions
+
+We have seen how to use LangChain to:
+
+1. RAG with CSV
+2. Query a DB and provide context to the LLM
+
+### Chat with PDF
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/" title="MultiChat Post" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="Post where I explained the creation of the streamlit chatbot" >}}
+  {{< card link="https://github.com/JAlcocerT/ask-multiple-pdfs/" title="Multichat with Auth Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Users and passwords configuration Script " >}}
+{{< /cards >}}
 
 ---
 

@@ -159,7 +159,7 @@ Thanks to Dokploy, you can invite some user and give the possibility to spin Wor
 
 2. Wordpress Deployment with Dokploy
 
-🐳
+> See the regular WP Docker deployment [here](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Wordpress%20RPi%20Docker%20compose.yml) 🐳
 
 
 ### Scaling SSG Deployment

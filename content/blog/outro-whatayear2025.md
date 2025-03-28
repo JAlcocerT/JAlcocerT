@@ -8,6 +8,10 @@ url: 'tech-recap-2025'
 ---
 
 
+https://github.com/OpenInterpreter/open-interpreter
+
+ A natural language interface for computers 
+
 ## Launching Webifyer
 
 One of the skills I enjoy learning more is about photography.
