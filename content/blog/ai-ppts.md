@@ -57,6 +57,12 @@ npm i -D playwright-chromium
 
 4. Modify the `slides.md` - Make changes to your ppt via markdown
 
+5. See it live and generate the ppt:
+
+```sh
+slidev build
+slidev build --base /talks/my-cool-talk/ #deploy under sub-route
+```
 
 
 > It can create a [PPT assistant](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent) as seen on [this post](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/)
@@ -66,6 +72,37 @@ npm i -D playwright-chromium
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slidev" title="My SliDevJS Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Presentations as a Code pushed to Github Pages" >}}
 {{< /cards >}}
+
+**Features I love from SliDev**: https://sli.dev/features/
+
+1. https://sli.dev/features/mermaid.html
+
+2. Import Slides as if they were components - https://sli.dev/features/importing-slides.html
+
+3. Custom [Icons](https://sli.dev/features/icons.html)
+
+```sh
+#npm install @iconify-json/[the-collection-you-want]
+npm install @iconify-json/uim #https://icon-sets.iconify.design/uim/?icon-filter=rocket&keyword=uim
+
+#<uim-rocket class="text-3xl text-orange-400 animate-ping" /> #uim:rocket #@iconify-json/uim
+```
+
+```sh
+npm install @iconify-json/logos #https://github.com/gilbarbara/logos
+#<logos-vue />
+```
+
+> Thanks to https://iconify.design/
+
+4. Google Fonts - https://fonts.google.com/
+
+> I like [Roboto](https://fonts.google.com/specimen/Roboto) for the text
+
+
+5. SliDev Themes! Not only the default ones, but the [community ones](https://sli.dev/resources/theme-gallery#community-themes) as well
+
+4. Downloadable PDF - https://sli.dev/features/build-with-pdf
 
 ### Marp
 

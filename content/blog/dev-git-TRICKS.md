@@ -136,11 +136,19 @@ For a Python Dev Container, you can get one with **this docker-compose**.
 **More VSCode extensions**
 
 ```sh
+#docker
 ext install ms-azuretools.vscode-docker
 
 #MDX #https://open-vsx.org/vscode/item?itemName=unifiedjs.vscode-mdx
 ext install unifiedjs.vscode-mdx
 
+#github actions
+ext install GitHub.vscode-github-actions
+#code --install-extension GitHub.vscode-github-actions
+
+#slidev
+ext install antfu.slidev
+#code --install-extension antfu.slidev #or this one from the terminal
 ```
 
 ---

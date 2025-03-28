@@ -452,7 +452,7 @@ This setup enables you to **quickly create interactive web apps using Python**, 
 {{< /details >}}
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Chat with Data" image="/blog_img/GenAI/dbchat/" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Chat with Data" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 

@@ -286,6 +286,7 @@ Remember that even with these self-hostable options, you'll still need to choose
 
 ### How to prepare a Tech Talk with SliDevJS
 
+0. Get ready your [web dev setup](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
 1. Its very important to instruct the LLM to provide you a clear, but concise agenda (work markdown icons as optional). Similar in lenght to the one provided by SliDev
 2. Add your mermaidJS diagrams for visual explanations of the flow
 
@@ -304,3 +305,23 @@ https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#preparing-a-
 
 
 > And here it is the **result**: https://jalcocert.github.io/Data-Chat/
+
+### Other Alternatives to RAG
+
+**KBLAM**
+
+https://www.microsoft.com/en-us/research/blog/introducing-kblam-bringing-plug-and-play-external-knowledge-to-llms/
+
+* https://github.com/microsoft/KBLAM
+
+>  Official Implementation of "KBLaM: Knowledge Base augmented Language Model" 
+
+**MCP**: Model Context Protocol
+
+https://www.youtube.com/watch?v=KHDMoQ2Sp2s
+
+{{< youtube "KHDMoQ2Sp2s" >}}
+
+Model Context Protocol (MCP) is an open standard designed to connect large language models (LLMs) with external data sources and tools, allowing these models to access and interact with real-world information more effectively.
+
+This protocol, introduced by Anthropic, simplifies the integration process for developers, making it easier to build context-aware applications without the need for custom coding for each combination of AI model and external system.

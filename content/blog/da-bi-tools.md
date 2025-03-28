@@ -51,7 +51,7 @@ TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up
 {{< youtube "4HUqYbknTOM" >}}
 
 
-> Superset works perfectly with Trino SQL!
+> Superset works perfectly with [Trino SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/#trino-sql-ex-presto-sql)!
 
 
 {{< cards >}}
