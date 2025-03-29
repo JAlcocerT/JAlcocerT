@@ -154,10 +154,17 @@ chmod +x ./setup.sh
 
 For the IoT Fans out there: Grafana, Kibana and Chronogaph
 
+![alt text](/blog_img/iot/grafana.png)
+
 
 {{< callout type="info" >}}
 Grafana dashboards and Panels have an asociated **JSON** file that defines them!
 {{< /callout >}}
+
+<!-- https://youtu.be/Uq5tZv6T3ko -->
+
+{{< youtube "Uq5tZv6T3ko" >}}
+
 
 
 {{< details title="Designing Graphana Panels...with Python? 📌" closed="true" >}}
@@ -193,7 +200,7 @@ Then, you will take the JSON and carefully add it respecting other dashboard are
 
 {{< /details >}}
 
-
+![alt text](/blog_img/iot/grafana-datasources.png)
 
 
 
@@ -256,6 +263,8 @@ Takeaways
 
 
 #### Kibana
+
+* https://github.com/elastic/kibana
 
 **Lucene Queries in Kibana & Grafana**
 - **KQL**: Kibana Query Language for data filtering.
@@ -385,7 +394,7 @@ Compare with Apache Superset - https://superset.apache.org/
 
 You can use serverless version of it at - https://preset.io/
 
-https://github.com/jmlcas/metabase
+* https://github.com/jmlcas/metabase
 
 ```yml
 version: '3'
@@ -410,6 +419,12 @@ https://www.metabase.com/product/embedded-analytics
 node.js
 ruby
 python...
+
+{{< youtube "eCplQYrvabk" >}}
+
+<!-- https://youtu.be/eCplQYrvabk -->
+
+![alt text](/blog_img/iot/metabase-setup.png)
 
 ### Static Embedding
 
@@ -547,3 +562,11 @@ IoT Project example with Superset: <>
 > MIT | 🪄 Create rich visualizations with AI
 
 * You can also make Python scripts to write for you tedious and repetitive Grafana dashboards (like x400 pannel creation)
+
+
+### Interesting SelfHostable DnA Tools
+
+
+#### MinIO
+
+{{< youtube "KzZ2zCvHhl0" >}}

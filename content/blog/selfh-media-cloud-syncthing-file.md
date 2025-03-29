@@ -410,6 +410,8 @@ find . -type f -name "*_20200519_*"
 flatpak install flathub org.kde.kdenlive
 ```
 
+> You can also do it with FFMPEG
+
 ### How to find duplicate files
 
 * https://github.com/arsenetar/dupeguru

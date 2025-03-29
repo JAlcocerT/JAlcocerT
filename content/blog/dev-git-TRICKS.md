@@ -41,6 +41,8 @@ And given a project, you can **get the latest Github release** as per:
 
 #### Github Actions
 
+Using github CI/CD can be very helpful:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/" title="GHA 101 Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="How to get the most out of Github Actions" >}}
@@ -75,6 +77,22 @@ code --install-extension gitlab.gitlab-workflow
 > Definitely use the extension `GitLab Workflow VS Code Extension`. Authenticate with OAuth.
 
 ## VSCode
+
+You can install it with flatpak:
+
+```sh
+flatpak install flathub com.visualstudio.code #https://flathub.org/apps/com.visualstudio.code
+flatpak list --app
+#flatpak list --columns=all
+
+#flatpak uninstall com.visualstudio.code
+```
+
+Or with snap:
+
+```sh
+sudo snap install code --classic
+```
 
 There are some cool **extensions** to help you create.
 
@@ -152,6 +170,11 @@ ext install antfu.slidev
 
 #python
 ext install ms-python.python #https://marketplace.visualstudio.com/items?itemName=ms-python.python
+
+#https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+ext install eamodio.gitlens
+#code --install-extension eamodio.gitlens #or this one from the terminal
+
 ```
 
 ---

@@ -560,3 +560,22 @@ chmod +x gyroflow
 {{< callout type="info" >}}
 Cross-platform - works on Windows/Linux/Mac/Android/iOS and it uses FFMPEG internally :)
 {{< /callout >}}
+
+#### KDEnLive
+
+> I was also using kdenlive as seen [here](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#kdenlive)
+
+
+```sh
+flatpak install flathub org.kde.kdenlive
+```
+
+<!-- ![alt text](/blog_img/outro/kdenlive.png) -->
+<!-- 
+![DJI Osmo Action 5 Pro](/blog_img/hardware/dji_oa5pro.jpg) -->
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Action Cam Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#kdenlive" title="KDenLive with OA5Pro" image="/blog_img/outro/kdenlive.png" subtitle="Editing video with kdenlive" >}}
+{{< /cards >}}

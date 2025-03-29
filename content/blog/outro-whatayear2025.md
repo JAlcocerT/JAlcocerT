@@ -28,10 +28,23 @@ Check how, *if you are passionate about Photography*
 
 Creating 24 tech videos to make AI, D&A more accesible: [x]
 
-1. 
-2. 
+1. Cloudflare Tunnels
+2. OpenAI API Tricks
 3. Redash (BI)
 4. Apache superset (BI)
+5. MinIO object storage
+6. [JHub](https://youtu.be/VEOyKhgat2Q)
+7. [Metabase](https://youtu.be/eCplQYrvabk) (BI)
+8. [Grafana](https://youtu.be/Uq5tZv6T3ko) (BI)
+9. Kibana (BI) and ES 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
 
 
 > Additionally, I participated in few tech Talks:
@@ -136,6 +149,10 @@ Here's a breakdown of **typical components** and how they fit together:
     * Budget constraints.
     * Whether the deployment is on-premises, cloud-based, or hybrid.
 
+
+{{< callout type="info" >}}
+You can plug to those stacks interesting tools like superset or ODH ([Open Data Hub](https://datahubproject.io/docs/docker/))
+{{< /callout >}}
 
 
 ### Outro

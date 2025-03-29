@@ -76,6 +76,10 @@ Cutting a Video:
 * `S` to select
 * `X` to activate the slicer to cut video when selected the timeframe
 
+![alt text](/blog_img/outro/kdenlive.png)
+
+And here you have few more tricks I found interesting.
+
 <!-- https://www.youtube.com/watch?v=oaqin5Nqe3A -->
 
 {{< youtube "oaqin5Nqe3A" >}}

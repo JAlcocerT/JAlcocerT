@@ -96,6 +96,9 @@ npm install @iconify-json/logos #https://github.com/gilbarbara/logos
 #<logos-openai />
 ```
 
+* https://icon-sets.iconify.design/vscode-icons/
+* https://icon-sets.iconify.design/devicon/page-15.html
+
 > Thanks to https://iconify.design/
 
 4. Google Fonts - https://fonts.google.com/

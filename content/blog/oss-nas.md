@@ -90,7 +90,10 @@ https://www.reddit.com/r/WireGuard/comments/178uolr/guide_how_to_set_up_wireguar
 
 ```sh
 tailscale status
+
 #tailscale up --exit-node=jalcocert-x300
+#tailscale up --exit-node=jalcocert-x300 --exit-node-allow-lan-access #--exit-node=<ip|name>
+
 #tailscale down
 ```
 

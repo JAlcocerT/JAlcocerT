@@ -358,7 +358,7 @@ In conclusion, while DBT is not a replacement for traditional data pipeline tool
 
 {{< dropdown title="What it is ODH - Open Data Hub? ⏬" closed="true" >}}
 
-Open Data Hub (ODH) is an open-source project that provides an **end-to-end AI/ML platform on top of OpenShift Container Platform** which can be used to build, deploy, and manage intelligent applications. It is a blueprint for building an AI-as-a-Service (AIaaS) platform using OpenShift and Kubernetes, Ceph, Apache Kafka, Seldon, Argo, Prometheus, Grafana, and JupyterHub, among other technologies.
+Open Data Hub ([ODH](https://datahubproject.io/docs/docker/)) is an open-source project that provides an **end-to-end AI/ML platform on top of OpenShift Container Platform** which can be used to build, deploy, and manage intelligent applications. It is a blueprint for building an AI-as-a-Service (AIaaS) platform using OpenShift and Kubernetes, Ceph, Apache Kafka, Seldon, Argo, Prometheus, Grafana, and JupyterHub, among other technologies.
 
 Open Data Hub is designed to be **a meta-project**, meaning it is a project of projects. It brings together several open-source projects, each of which has a specific role in the data and AI/ML ecosystem, and integrates them into a coherent AI/ML platform with easy-to-use interfaces.
 

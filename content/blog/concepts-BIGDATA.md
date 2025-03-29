@@ -237,7 +237,7 @@ https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#data-model
 
 {{< /details >}}
 
-{{< details title="Big Data Storage - s3 and more 📌" closed="true" >}}
+{{< details title="Big Data Object Storage - s3, minio and more 📌" closed="true" >}}
 
 **What is s3?**  
 
@@ -245,8 +245,61 @@ MinIO - These are open s3 compatible buckets.
 
 * https://github.com/jmlcas/minio
 
+MinIO is a powerful, high-performance object storage server, and it's important to position it correctly. Here's how I would sell MinIO, focusing on its strengths and addressing the "big data storage" question:
+
+**Key Selling Points:**
+
+* **High Performance:**
+    * Emphasize MinIO's speed and efficiency. It's designed for demanding workloads, capable of handling massive data volumes and high throughput.
+    * Highlight its use of SIMD instructions and other optimizations that make it exceptionally fast.
+* **Kubernetes-Native:**
+    * MinIO integrates seamlessly with Kubernetes, making it ideal for cloud-native applications and microservices architectures.
+    * This is a huge selling point for modern, containerized environments.
+* **S3-Compatible:**
+    * MinIO is fully compatible with the Amazon S3 API, which means you can use existing S3 tools and libraries without modification.
+    * This reduces vendor lock-in and simplifies migration.
+* **Scalability:**
+    * MinIO is designed to scale horizontally, allowing you to easily add storage capacity as your needs grow.
+    * This is critical for handling large datasets.
+* **Software-Defined:**
+    * MinIO is software-defined, giving you flexibility in choosing your hardware and deployment environment.
+    * This allows for deployment on commodity hardware.
+* **Edge-Ready:**
+    * MinIO's small footprint and resource efficiency make it suitable for edge computing deployments.
+* **Open Source:**
+    * MinIO is open source, which provides transparency, community support, and cost-effectiveness.
+
+**Addressing the "Big Data Storage" Question:**
+
+* MinIO is *absolutely* suitable for big data storage, but it's essential to clarify how it fits into the big data ecosystem.
+    * It's not a traditional distributed file system like HDFS. Instead, it's an object storage system.
+    * Object storage is excellent for storing unstructured data, which is a significant component of big data.
+    * MinIO is often used as the storage layer for big data analytics platforms like Apache Spark, Presto, and TensorFlow.
+    * Explain that minio is very good at storing the data that big data applications use.
+    * It is not the big data processing engine itself.
+* **Use Cases:**
+    * Highlight specific big data use cases where MinIO excels:
+        * Data lakes
+        * Machine learning datasets
+        * Log storage
+        * Media storage
+        * Backup and archival.
+* **Performance for Analytics:**
+    * Emphasize MinIO's high performance, which is crucial for real-time analytics and machine learning.
+
 
 {{< /details >}}
+
+<!-- https://studio.youtube.com/video/KzZ2zCvHhl0/edit -->
+
+{{< youtube "KzZ2zCvHhl0" >}}
+
+
+**In essence:**
+
+* Position MinIO as a high-performance, scalable, and cloud-native object storage solution that's ideal for modern data-intensive applications.
+* Clarify that it's a critical component of big data architectures, providing the storage layer for analytics and machine learning workloads.
+* Focus on its speed, S3 compatibility, and kubernetes nativeness.
 
 
 ## Tools
@@ -390,6 +443,17 @@ Or Python for the distributed computing/storage era.
 > https://github.com/vinta/awesome-python?tab=readme-ov-file#data-analysis
 
 This is great for IoT Stuff, like we might have in [Telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/).
+
+Actually, you can have your own PySpark cluster and use it within JupyterHub (JHub):
+
+{{< youtube "VEOyKhgat2Q" >}}
+
+
+**In essence:**
+
+* JupyterHub acts as a central hub for accessing and working with big data tools and resources.
+* It promotes collaboration, simplifies workflows, and enables scalable data analysis in big data environments.
+* It is a tool that helps to bridge the gap between big data infrastructure, and the data scientists that need to use it.
 
 {{< details title="Explore PySpark FAQ 📌" closed="true" >}}
 

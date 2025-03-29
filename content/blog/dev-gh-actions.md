@@ -305,6 +305,9 @@ With [Slidev we can do PPTs as a Code](https://jalcocert.github.io/JAlcocerT/doc
 [Sample repo - slidev+multichat](https://github.com/JAlcocerT/JAlcocerT) 
 {{< /callout >}}
 
+{{% details title="SliDev to Github Pages 🚀" closed="true" %}}
+
+
 ```yml
 #https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/.github/workflows/SliDev_CICD.yml
 
@@ -368,6 +371,11 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 ```
+
+{{% /details %}}
+
+> See the [workflow yml](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/.github/workflows/SliDev_CICD.yml)
+
 
 ### Jekyll
 
