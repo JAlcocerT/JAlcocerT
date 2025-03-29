@@ -131,6 +131,8 @@ Steps for **buying a car in Germany**.
 * Find one:
   * [Mobile.de](https://suchen.mobile.de/fahrzeuge/search.html?cn=DE&isSearchRequest=true&ms=9000%3B%3B39%3B&od=up&pageNumber=4&ref=srpNextPage&refId=f5035f63-2646-3531-69d5-c28f462839dd&s=Car&sb=p&vc=Car)
 
+* https://forocoches.com/foro/showthread.php?t=6139690&highlight=alemania
+
 
 ### In Netherlands
 
@@ -165,3 +167,10 @@ https://en.wikipedia.org/wiki/Fiat_Ducato
 * [Park4Night](https://park4night.com/en/search?lat=52.372756486328726&lng=4.893615245819092&z=15)
 
 * [Trick1](https://www.kartamultisport.pl/en/multisport/search-for-facilities/#/@51.8283438,19.7351276,10z?cards=1&categories=3)
+
+---
+
+## FAQ
+
+https://www.spritmonitor.de/de/suche.html
+

@@ -47,3 +47,9 @@ I can imagine DIY home owners have a sense of priorities like any other.
 Like...should you get those **adidas GN3530** you like?
 
 Or are you fine with the ones you were so excited to buy few months ago?
+
+## FAQ
+
+There are interesting pre-made solutions: zrobim,...
+
+* https://forocoches.com/foro/showthread.php?t=6810398&page=12

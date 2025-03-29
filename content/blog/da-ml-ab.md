@@ -11,6 +11,10 @@ math: true
 
 By combining the power of **data-driven experimentation** with advanced analytical techniques, you can revolutionize your **optimization strategy** and achieve impressive results.
 
+{{< callout type="info" >}}
+If you want to get started into CS check: https://github.com/ossu/computer-science and https://www.w3schools.com/
+{{< /callout >}}
+
 We'll leverage **the synergy between A/B testing and data analytics**, showcasing how these two disciplines can work hand in hand to help you make informed decisions.
 
 > The world of A/B testing — a simple yet powerful technique that can **transform products**
