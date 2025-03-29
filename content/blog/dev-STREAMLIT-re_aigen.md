@@ -86,6 +86,8 @@ if __name__ == "__main__":
     main()
 ```
 
+![alt text](/blog_img/biz/RE/re-ai-agent.png)
+
 > About each of those pieces, I was writing a little bit already
 
 Once you have the app ready, we go to the containers part:
@@ -110,7 +112,11 @@ You can have now a **real estate aigent** that provides 24/7 recommendations abo
 
 ![alt text](/blog_img/biz/RE/properties-md.png)
 
-The data? Pure markdown or `.mdx` from the site itself: 
+The data?
+
+Pure markdown or `.mdx` from the site itself: 
+
+![alt text](/blog_img/biz/RE/re-properties.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-website/" title="Latest updates for a Real Estate Website" image="/blog_img/biz/RE/dmproperties.png" subtitle="Customizing Astro Themes for RE Agency " >}}
