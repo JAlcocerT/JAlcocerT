@@ -37,20 +37,27 @@ Creating 24 tech videos to make AI, D&A more accesible: [x]
 7. [Metabase](https://youtu.be/eCplQYrvabk) (BI)
 8. [Grafana](https://youtu.be/Uq5tZv6T3ko) (BI)
 9. Kibana (BI) and ES 
-10. 
-11. 
-12. 
-13. 
-14. 
+10. Streamlit
+
+11. FileBrowser
+12. PiGallery
+13. Photoview
+14. Immich
 15. 
 16. 
 17. 
-
+18. 
+19. 
+20. 
+21. 
+22. 
+23. 
+24. 
 
 > Additionally, I participated in few tech Talks:
 
-1. 
-2. 
+1. Using LangChain to chat with a DB
+2. Real Estate RAG
 
 
 ### Dev Smart not Hard

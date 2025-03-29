@@ -88,7 +88,7 @@ flatpak list --app
 #flatpak uninstall com.visualstudio.code
 ```
 
-Or with snap:
+Or with snap (which I would recommend):
 
 ```sh
 sudo snap install code --classic

@@ -177,6 +177,11 @@ As you can see in this video, where Im just walking in the evening:
 
 {{< youtube id="TrhDGUzuxxc" autoplay="false" >}}
 
+{{< callout type="info" >}}
+Nigth video definitely require tinkering and going for manual setup.
+{{< /callout >}}
+
+
 
 ### My Workflow with the DJI OA5-Pro
 
