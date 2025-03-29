@@ -3,7 +3,7 @@ title: "How to create awsome Presentations with AI"
 date: 2025-01-02
 draft: false
 tags: ["AI"]
-description: 'AI Driven Presentations - PPT as code with SliDev, MarpJS, RemarkJS. With Diagrams and ULM.'
+description: 'AI Driven Presentations - PPT as code with SliDev, MarpJS, RemarkJS. Diagrams and ULM.'
 url: 'creating-presentations-with-ai'
 ---
 

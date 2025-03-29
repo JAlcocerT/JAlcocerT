@@ -36,6 +36,8 @@ See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻 
 
 ### The AI Tech Stack
 
+![alt text](/blog_img/biz/RE/RE-bot.jpeg)
+
 {{< tabs items="Full-Fledge,PoC Gen AI,Market Test" >}}
 
   {{< tab >}}
@@ -284,10 +286,28 @@ Remember that even with these self-hostable options, you'll still need to choose
 
 ## FAQ
 
+* https://platform.openai.com/api-keys
+* https://console.anthropic.com/
+
+![alt text](/blog_img/biz/RE/RE-bot-ppt.jpeg)
+
+![alt text](https://github.com/JAlcocerT/Data-Chat/blob/main/realestate/RE-bot-ppt.jpeg)
+
+https://github.com/JAlcocerT/Data-Chat/blob/main/realestate/RE-bot-ppt.jpeg
+
 ### How to prepare a Tech Talk with SliDevJS
 
+<!-- ![alt text](/blog_img/biz/RE/slidev-re.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Streamlit PPT Creator and more" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev" title="SliDev 101 App" image="/blog_img/biz/RE/slidev-re.png" subtitle="Presentations as a Code with SliDev" >}}
+{{< /cards >}}
+
 0. Get ready your [web dev setup](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
+
 1. Its very important to instruct the LLM to provide you a clear, but concise agenda (work markdown icons as optional). Similar in lenght to the one provided by SliDev
+
 2. Add your mermaidJS diagrams for visual explanations of the flow
 
 ```sh

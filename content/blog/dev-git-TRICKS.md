@@ -175,6 +175,9 @@ ext install ms-python.python #https://marketplace.visualstudio.com/items?itemNam
 ext install eamodio.gitlens
 #code --install-extension eamodio.gitlens #or this one from the terminal
 
+#yaml https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+
+
 ```
 
 ---
