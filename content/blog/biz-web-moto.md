@@ -241,6 +241,10 @@ choco install nodejs-lts -y
 #choco install nodejs -y
 ```
 
+{{< callout type="info" >}}
+Remember to restart vscode to see the new installation
+{{< /callout >}}
+
 3. Close Powershell and Open it again. See that both, **npm and node are now installed**:
 
 ```sh

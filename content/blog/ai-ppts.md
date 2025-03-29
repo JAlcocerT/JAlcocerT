@@ -40,7 +40,14 @@ Lets use LLMs to create PPTs!
 
 [Setup a SliDev Project](https://fossengineer.com/how-to-use-slidev/#the-slidev-project), like any other SSG:
 
-1. Get Node and NPM
+1. Get Node and NPM:
+
+```sh
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
+sudo apt-get install -y nodejs
+
+#choco install nodejs-lts -y
+```
 
 2. Initialize the SliDev project
 
@@ -48,6 +55,8 @@ Lets use LLMs to create PPTs!
 npm init slidev #yarn create slidev
 #npm run dev #if you want to restart where you left it
 ```
+
+Install SliDev CLI executable globally:
 
 ```sh
 npm install -g @slidev/cli #npm install --save-dev @slidev/cli
@@ -59,16 +68,53 @@ npm i -D playwright-chromium
 
 4. Modify the `slides.md` - Make changes to your ppt via markdown
 
-5. See it live and generate the ppt:
+5. See it live: `localhost:3030`
+
+See also the `localhost:3030/presenter` mode
+
+![alt text](/blog_img/biz/RE/slidev-re-presenter.png)
+
+6. Generate the export **pdf**:
 
 ```sh
-slidev export
+#npm i -D playwright-chromium
+slidev export #requires playwright to be installed
 ```
 
+> It goes to `slides-export.pdf`
+
 ```sh
-#npm run build
+npm run export #default as pdf!
+#npm run export:pdf
+
+slidev export --format png #npx slidev export --format png
+slidev export --format pptx #this will properly render mermaid diagrams and code snippts
+```
+
+> The pptx will be at `./slides-export.pptx`
+
+![alt text](/blog_img/biz/RE/slidev-export.png)
+
+7. Or generate the PDF via the UI at: `localhost:3030/export`
+
+![alt text](/blog_img/biz/RE/slidev-re.png)
+
+8. Build it ready to be hosted:
+
+```sh
+#npm run build #they go to ./dist
+
 slidev build
 slidev build --base /talks/my-cool-talk/ #deploy under sub-route
+
+#slidev build --base /data-chat/ #useful for github pages
+```
+
+![alt text](/blog_img/biz/RE/slidev-build.png)
+
+```sh
+#cd ./dist
+npx serve #serve the staticaly generated ppt
 ```
 
 
