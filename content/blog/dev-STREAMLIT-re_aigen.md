@@ -12,8 +12,6 @@ url: 'streamlit-is-cool'
 
 I was building a simple web app RE calculator with Streamlit to explore:
 
-
-
 * https://streamlit.io/
   * https://github.com/streamlit/streamlit
   * https://github.com/streamlit/streamlit?tab=Apache-2.0-1-ov-file#readme
@@ -21,20 +19,23 @@ I was building a simple web app RE calculator with Streamlit to explore:
 
 > Awsome Streamlit Public {{< newtab url="https://github.com/jrieke/best-of-streamlit" text="Resources" >}}
 
+And then I decided to combine with with a RAG, creating this whole project.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
   {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage" title="RE Streamlit App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the RE Calculator" >}}
 {{< /cards >}}
 
-Its time to put few pieces together, and add Generative ai capabilities:
+Its was time to put few pieces together, and add **Generative AI capabilities**:
 
 {{< callout type="info" >}}
-See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻 and presentation!
+See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻 and presentation *powered by SliDev*!
 {{< /callout >}}
 
 
 ### The AI Tech Stack
+
+What are we building exactly?
 
 ![alt text](/blog_img/biz/RE/RE-bot.jpeg)
 
@@ -62,7 +63,13 @@ See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻 
 
 {{< /tabs >}}
 
-Whatever option you choose, see how the **Streamlit App is done modular**:
+You will need **Keys:**
+
+* https://console.anthropic.com/workbench/
+* https://platform.openai.com/api-keys
+
+
+Whatever option you choose, see how the **Streamlit App is done [modular](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/RealEstate.py)**:
 
 ```sh
 import streamlit as st
@@ -114,7 +121,7 @@ You can have now a **real estate aigent** that provides 24/7 recommendations abo
 
 The data?
 
-Pure markdown or `.mdx` from the site itself: 
+Pure [markdown](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/properties.md) or `.mdx` from the site itself: 
 
 ![alt text](/blog_img/biz/RE/re-properties.png)
 
