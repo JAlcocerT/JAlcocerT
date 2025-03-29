@@ -25,6 +25,7 @@ Lets use LLMs to create PPTs!
 
 ### SliDev
 
+* https://github.com/slidevjs/slidev/releases
 
 [SliDev is an awsome project](https://fossengineer.com/how-to-use-slidev/) to generate PPT as code - **leveraging VueJS framework**.
 
@@ -51,6 +52,7 @@ npm init slidev #yarn create slidev
 ```sh
 npm install -g @slidev/cli #npm install --save-dev @slidev/cli
 npm i -D playwright-chromium
+#npm install
 ```
 
 3. SliDev has [several Themes available](https://www.npmjs.com/search?q=keywords%3Aslidev-theme): like https://www.npmjs.com/package/@slidev/theme-seriph
@@ -60,6 +62,11 @@ npm i -D playwright-chromium
 5. See it live and generate the ppt:
 
 ```sh
+slidev export
+```
+
+```sh
+#npm run build
 slidev build
 slidev build --base /talks/my-cool-talk/ #deploy under sub-route
 ```

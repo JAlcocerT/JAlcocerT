@@ -160,8 +160,8 @@ ext install ms-azuretools.vscode-docker
 #MDX #https://open-vsx.org/vscode/item?itemName=unifiedjs.vscode-mdx
 ext install unifiedjs.vscode-mdx
 
-#github actions
-ext install GitHub.vscode-github-actions
+#github actions https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions
+ext install GitHub.vscode-github-actions #
 #code --install-extension GitHub.vscode-github-actions
 
 #slidev
