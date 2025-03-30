@@ -92,7 +92,7 @@ There was even time to make **Data Analytics recaps**.
 * **MinIO + Apache Iceberg + Nessie:**
     * This stack focuses on open-source technologies. MinIO provides object storage, Iceberg enables efficient data lake management, and Nessie adds version control (and time travel)
 
-{{< details title="Nessie and iceberg 📌" closed="true" >}}
+{{< details title="Nessie and Apache Iceberg 📌" closed="true" >}}
 
 You're absolutely right. Project Nessie and Apache Iceberg are designed to work very well together, and Nessie can indeed be used on top of Iceberg. Here's a breakdown of their relationship:
 

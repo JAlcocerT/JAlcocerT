@@ -1,6 +1,6 @@
 ---
 title: "Everything I enjoy about Streamlit. With AI as RE Agent."
-date: 2025-03-21T19:20:21+01:00
+date: 2025-03-29T19:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Quick PoC Web Apps with Python and Streamlit. Applied to a Real Estate Calculator with GenAI Powered recommentations. SliDevJS Powered Tech Talk.'
@@ -39,7 +39,7 @@ What are we building exactly?
 
 ![alt text](/blog_img/biz/RE/RE-bot.jpeg)
 
-{{< tabs items="Full-Fledge,PoC Gen AI,Market Test" >}}
+{{< tabs items="Full-Fledge,PoC Gen AI" >}}
 
   {{< tab >}}
   Complex and full fledge setup: with RAG, embeddings and 2 LLMs
@@ -52,24 +52,30 @@ What are we building exactly?
   OPENAI_API_KEY=sk-proj-yourapikey #https://platform.openai.com/api-keys
   ANTHROPIC_API_KEY=sk-ant-api03-yourapi #https://console.anthropic.com/settings/keys
   ```
+
+* https://console.anthropic.com/workbench/
+* https://platform.openai.com/api-keys
+
+  ![alt text](/blog_img/biz/RE/re-embedding.png)
+  
   {{< /tab >}}
 
   {{< tab >}}
   How about keeping it simple with just OpenAI?
-  {{< /tab >}}
 
-  {{< tab >}}![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+  ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+
   {{< /tab >}}
 
 {{< /tabs >}}
 
 You will need **Keys:**
 
-* https://console.anthropic.com/workbench/
-* https://platform.openai.com/api-keys
-
 
 Whatever option you choose, see how the **Streamlit App is done [modular](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/RealEstate.py)**:
+
+
+{{< details title="Modular Streamlit Approach... 📌" closed="true" >}}
 
 ```sh
 import streamlit as st
@@ -92,6 +98,8 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+{{< /details >}}
 
 ![alt text](/blog_img/biz/RE/re-ai-agent.png)
 
@@ -129,10 +137,9 @@ Pure [markdown](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/prop
   {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-website/" title="Latest updates for a Real Estate Website" image="/blog_img/biz/RE/dmproperties.png" subtitle="Customizing Astro Themes for RE Agency " >}}
 {{< /cards >}}
 
-You can use a live editor to get around markdown: https://dillinger.io/
+> You can use a **live editor** to get around **markdown**: https://dillinger.io/
 
-
-
+---
 
 ## Conclusions
 
@@ -294,10 +301,15 @@ Here are some strong contenders, keeping in mind that "self-hostable" implies yo
 Remember that even with these self-hostable options, you'll still need to choose a frontend framework (React, Vue, etc.) to build the user interface of your application.
 
 
-
 ---
 
 ## FAQ
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#multiarch-containers---qemu" title="GHA Setup 101" image="/blog_img/dev/re-actions-secret-ready.png" subtitle="Creatin container for the Streamlit RE Data Chat" >}}
+{{< /cards >}}
+
 
 * https://platform.openai.com/api-keys
 * https://console.anthropic.com/

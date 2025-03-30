@@ -1,6 +1,6 @@
 ---
 title: "Knitting patterns are all about...math?"
-date: 2025-03-29
+date: 2025-04-29
 draft: false
 tags: ["Dev"]
 description: 'Creating a clothing size calculator'

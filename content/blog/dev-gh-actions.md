@@ -7,7 +7,7 @@ description: 'Use Github Actions CI/CD in your workflow. From Static Pages to Co
 url: 'github-actions-use-cases'
 ---
 
-If you are familiar with container technology, you might wonder if there is **a way for containers to get built by themselves**.
+If you are familiar with container technology, you might wonder if there is **a way for [containers to get built](https://fossengineer.com/building-docker-container-images/) by themselves**.
 
 Thats were CI/CD comes into play, and in particular **Github Actions**.
 
@@ -17,15 +17,31 @@ It can be helpful for [Python](#actions-cicd-for-python-projects) or [Web projec
 
 ## Actions CI/CD for Python Projects
 
-I was using GH Actions to **create x86 container** images and push them to **ghcr** like so:
+
+Personal access tokens (classic) function like ordinary OAuth access tokens. They can be used instead of a password for Git over HTTPS, or can be used to authenticate to the API over Basic Authentication.
+
+{{< callout type="info" >}}
+Whenever you want GHA to act in your name, you will require to provide a API Key (Generated at your profile dev settings and added to the repository settings as secret)
+{{< /callout >}}
+
+![alt text](/blog_img/dev/re-actions-secret.png)
+
+![alt text](/blog_img/dev/re-actions-pat.png)
+
+![alt text](/blog_img/dev/re-actions-secret-ready.png)
+
+I was using at first GH Actions to **create x86 container** images and **push** them to **ghcr** like so:
+
+{{< details title="Github Actions Build - Push to GHCR a x86 image 📌" closed="true" >}}
 
 ```yml
-name: CI/CD Pipeline x86 Container Image
-
-# on:
-#   push:
-#     branches:
-#       - main
+#https://github.com/JAlcocerT/Py_Trip_Planner/blob/main/.github/workflows/ci-cd-dockerhub.yml
+name: CI/CD Pipeline Build and Push to DockerHub
+on:
+  workflow_dispatch: #trigger button
+  # push:
+  #   branches:
+  #     - main
 
 jobs:
   build-and-push:
@@ -50,12 +66,19 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/jalcocert/streamlit-multichat:v1.0
+        tags: ghcr.io/jalcocert/streamlit-multichat:v1.0 #it will be pushed to this container registry as x86 image!
 ```
+
+{{< /details >}}
+
 
 ### MultiArch Containers - QEMU 
 
 But there is a better way - Create **MultiArch images thanks to QEMU** andpush them to ghcr:
+
+
+{{< details title="Github Actions - PYthon QEMU Container 📌" closed="true" >}}
+
 
 ```yml
 #https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/.github/workflows/Streamlit_GHA_MultiArch.yml
@@ -100,12 +123,18 @@ jobs:
           ghcr.io/jalcocert/streamlit-multichat:latest
 ```
 
+{{< /details >}}
+
+
 
 {{< callout type="info" >}}
 [Sample repo - multichat](https://github.com/JAlcocerT/Streamlit-MultiChat) 
 {{< /callout >}}
 
 You can also push **containers to Dockerhub from GHA**:
+
+
+{{< details title="Github Actions Build - Push to DockerHUB 📌" closed="true" >}}
 
 ```yml
 #https://github.com/JAlcocerT/Py_Trip_Planner/blob/main/.github/workflows/ci-cd-dockerhub.yml
@@ -135,6 +164,8 @@ jobs:
         docker push your_dockerhub_user/trip_planner:2-amd64
 ```
 
+{{< /details >}}
+
 ## Github Actions for Web Projects
 
 And [Github Actions combined with static websites](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) is pretty useful as well.
@@ -149,6 +180,10 @@ You can create really cool [WorkFlows with Github/Gitlab and **Cloudflare Worker
 
 With [Astro, you can make beautiful websites](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
 
+
+{{< details title="Github Actions Build and Push Astro Web to Github Pages 📌" closed="true" >}}
+
+
 ```yml
 #https://github.com/JAlcocerT/web3/blob/main/.github/workflows/deploy_astro.yml
 name: Deploy Astro to GitHub Pages
@@ -162,7 +197,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-
 
 jobs:
   build:
@@ -199,6 +233,11 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
 ```
+
+
+{{< /details >}}
+
+
 
 {{< callout type="info" >}}
 [Sample repo - web3](https://github.com/JAlcocerT/web3), particularly, [**here**](https://github.com/JAlcocerT/web3/blob/main/.github/workflows/deploy_astro.yml).

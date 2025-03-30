@@ -200,9 +200,9 @@ Then, you will take the JSON and carefully add it respecting other dashboard are
 
 {{< /details >}}
 
+The good thing about Grafana is how **many data sources** we can use it with:
+
 ![alt text](/blog_img/iot/grafana-datasources.png)
-
-
 
 There are many Grafana stacks, like LGTM: **L**oki, **G**rafana, **T**empo and Pro**m**etheus
 

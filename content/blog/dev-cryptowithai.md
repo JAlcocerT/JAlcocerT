@@ -238,6 +238,10 @@ https://de.fi/explore/borrow-lending/cat/stablecoin
 
 > As of now, some popular ones are [Compound](https://compound.finance/), AAve v3 or [Spark](https://app.spark.fi/)
 
+![alt text](/blog_img/crypto/sample-eth-wallet.png)
+
+![alt text](/blog_img/crypto/sample-eth-aave.png)
+
 * https://www.reddit.com/r/CryptoCurrency/comments/mnzv1c/defi_explained_lending_borrowing/
 * https://www.reddit.com/r/CryptoCurrency/comments/nletmi/defi_explained_the_full_guide/#:~:text=Decentralized%20Finance%20(DeFi)%20is%20a,protocols%20that%20work%20without%20intermediaries.
 
