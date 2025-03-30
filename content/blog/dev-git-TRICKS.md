@@ -135,6 +135,10 @@ Then, do CTRL SHIFT P and write: `connect to host`
 
 > [This video](https://www.youtube.com/watch?v=cOopQQIL8JU) summarizes it very well
 
+When you are done, you will get the possibility to connect confortably:
+
+![alt text](/blog_img/dev/dev-via-ssh.png)
+
 **Container Dev**
 
 ```sh

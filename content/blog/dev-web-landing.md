@@ -62,7 +62,7 @@ Creating such view:
 ![alt text](/blog_img/web/success10-ourika/landing-ourika.png)
 
 {{< callout type="info" >}}
-From Travel, to show your work, to helping others :)
+From [Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), to show your work, to helping others :)
 {{< /callout >}}
 
 
