@@ -305,6 +305,14 @@ Remember that even with these self-hostable options, you'll still need to choose
 
 ## FAQ
 
+You can run the app at a server / [other PC at home](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/#internet-benchmark):
+
+```sh
+ssh jalcocert@192.168.0.12 #or the tailscale address
+git clone https://github.com/JAlcocerT/Data-Chat
+cd ./Z_DeployMe
+```
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#multiarch-containers---qemu" title="GHA Setup 101" image="/blog_img/dev/re-actions-secret-ready.png" subtitle="Creatin container for the Streamlit RE Data Chat" >}}

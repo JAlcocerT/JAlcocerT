@@ -100,9 +100,12 @@ The `og-image.jpg` image (or whatever you name your image file) should be placed
 
 **Why the public directory?**
 
-Static Assets: The public directory in Astro (and many other web frameworks) is specifically designated for static assets. These are files that are served directly to the browser without any processing by Astro.
+Static Assets: The public directory in Astro (and many other web frameworks) is specifically designated for static assets. 
+
+These are files that are served directly to the browser without any processing by Astro.
 
 Examples include:
+
 Images (like your Open Graph image)
 Favicons
 robots.txt

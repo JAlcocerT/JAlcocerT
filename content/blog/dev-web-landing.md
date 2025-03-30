@@ -3,7 +3,7 @@ title: "Creating a Landing Website!"
 date: 2024-02-14
 draft: false
 tags: ["dev"]
-description: 'Creating Landing Web Pages with Astro SSG'
+description: 'Creating Landing Web Pages with Astro SSG - Ourika'
 url: 'creating-landing-pages-astro'
 ---
 
@@ -14,9 +14,15 @@ Astro Themes for inspiration on **Landing Pages**:
 2. Luna Landing - https://github.com/JimmyCamus/luna-landing
 
 * **Configurable** with a JSON!
-* **MIT** | Template of a business landing page to be configured by json file 
+* **MIT** | Template of a business landing page to be configured by json file `/src/data/landing.json`
 
 {{< details title="Proposed for Ourika 📌" closed="true" >}}
+
+* The fav icons works as configured with `"./public/favicon.svg"`
+
+Which I could change from png to svg thanks to [adobe](https://www.adobe.com/express/feature/image/convert/png-to-svg) and provided `guideventure-logo.svg`
+
+* The theme brings a OG Image, which equals to the first image of the landing.
 
 * PagesSpeed: 100/100/100/100
 
@@ -29,8 +35,35 @@ https://thingstodoinourika.com/
 
 * With [Cal.com](https://refer.cal.com/jalcocertech)
 
+
+I needed to make few tweaks for the images to work (when they are at `public`)
+
+```sh
+sudo apt install webp
+
+for file in *.jpg; do
+  cwebp "$file" -o "${file%.jpg}.webp"
+done
+```
+
+```sh
+sudo apt install graphicsmagick-imagemagick-compat
+convert tour1.webp -rotate 180 tour1_rotated.webp
+```
 {{< /details >}}
 
+
+It could be deployed quickly with CF Wrangler CLI:
+
+![alt text](/blog_img/web/Cloudflare/CF_WranglerCLI.png)
+
+Creating such view:
+
+![alt text](/blog_img/web/success10-ourika/landing-ourika.png)
+
+{{< callout type="info" >}}
+From Travel, to show your work, to helping others :)
+{{< /callout >}}
 
 
 3. Minimal Studio

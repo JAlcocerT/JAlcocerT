@@ -105,7 +105,7 @@ ping -c 4 192.168.0.117 #ping the orange pi which is connected to same device
 ping 9.9.9.9 #ping quad9 dns server
 ```
 
-Ideally, do this with ethernet connection:
+Ideally, do this with **ethernet connection**:
 
 ```sh
 sudo apt-get install speedtest-cli
@@ -126,10 +126,16 @@ PCs are great, but even better with **proper internet connectivity**:
 Check **devices in local network**:
 
 ```sh
-sudo apt install nast nmap
+#sudo apt install nast nmap
 
 sudo nast -m
 nmap -sP 192.168.0.1/24 | grep "scan"
+```
+
+Or simply check devices connect at the same router with:
+
+```sh
+arp -a
 ```
 
 **Local Network** examples:

@@ -41,12 +41,13 @@ And given a project, you can **get the latest Github release** as per:
 
 #### Github Actions
 
-Using github CI/CD can be very helpful:
+Using **github CI/CD** can be very helpful:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/" title="GHA 101 Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="How to get the most out of Github Actions" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/" title="GHA 101 Post" image="blog_img/dev/re-actions-container-repo.png" subtitle="How to get the most out of Github Actions" >}}
 {{< /cards >}}
+
 
 Github Actions **MultiArch Images**:
 

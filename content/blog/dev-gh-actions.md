@@ -125,11 +125,23 @@ jobs:
 
 {{< /details >}}
 
+When the workflow has finished, you will see:
 
+![alt text](/blog_img/dev/re-actions-container-built.png)
 
 {{< callout type="info" >}}
-[Sample repo - multichat](https://github.com/JAlcocerT/Streamlit-MultiChat) 
+Sample repo[ - multichat](https://github.com/JAlcocerT/Streamlit-MultiChat) or [DataChat](https://github.com/JAlcocerT/Data-Chat)
 {{< /callout >}}
+
+You can pull the image anytime from the [container registry](https://github.com/JAlcocerT/Data-Chat/pkgs/container/data-chat):
+
+```sh
+docker pull ghcr.io/jalcocert/data-chat:realestate
+```
+
+![alt text](/blog_img/dev/re-actions-container-repo.png)
+
+> And use it accordingly with your [docker-compose](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/docker-compose.yml)
 
 You can also push **containers to Dockerhub from GHA**:
 
@@ -175,6 +187,12 @@ You can create really cool [WorkFlows with Github/Gitlab and **Cloudflare Worker
 {{< /callout >}}
 
 > You can also see my [docs for websites](https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method)
+
+
+{{< callout type="info" >}}
+For this cases, you wont need a PAT as your wont be pushing any code to GHCR.
+{{< /callout >}}
+
 
 ### Astro
 
