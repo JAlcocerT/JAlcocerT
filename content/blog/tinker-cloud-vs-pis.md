@@ -65,7 +65,7 @@ The SSD drive it comes with **is NOT 2280** (I got surprised with that)
 
 And also, I got a **new Raspberry Pi 4** (this time 4GB - ARM64)
 
-Now that prices are reasonable:
+Now that prices are *reasonable*:
 
 ![Two RPI's 4](/blog_img/hardware/RPi4_2_vs4gb.jpg)
 

@@ -162,7 +162,7 @@ This one has a blog which can be filtered per tags:
 
 {{< cards >}}
   <!-- {{< card link="blog" title="Blog" icon="book-open" >}} -->
-  {{< card link="https://jalcocertech.xyz/" title="Applied for MotoVlog ↗" icon="book-open" >}}
+  {{< card link="https://jalcocertech.com/" title="Applied for MotoVlog ↗" icon="book-open" >}}
 {{< /cards >}}
 
 

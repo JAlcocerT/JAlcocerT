@@ -87,7 +87,7 @@ Lets add a domain we have at Cloudflare:
 **As Simple as that.**
 
 {{< callout type="info" >}}
-  Yep, I own the JAlcocerTech domain and [we can **collaborate**](https://jalcocertech.xyz/) 
+  Yep, I own the JAlcocerTech domain and [we can **collaborate**](https://jalcocertech.com/) 
 {{< /callout >}}
 
 Now whenever I push changes to this repository, they will be available at:

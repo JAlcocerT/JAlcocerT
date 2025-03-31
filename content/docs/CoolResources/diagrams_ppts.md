@@ -58,7 +58,7 @@ And you can use it for free at: https://mermaid.live/edit
 
 > Minimalist template for creating slides with Reveal.js and Astro
 
-### Animotion
+## Animotion
 
 * https://github.com/animotionjs/animotion
 

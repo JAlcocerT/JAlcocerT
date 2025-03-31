@@ -342,7 +342,7 @@ Reason being that I wanted an upgrade in computing power from my previous Deskto
     title="BMax-B4 Mini PC" 
     caption="BMaxB4 vs Asrock X300." 
     attr="Photo by JAlcocerT" 
-    attrlink="https://jalcocertech.xyz"
+    attrlink="https://jalcocertech.com"
     align="center"
 >}}
 

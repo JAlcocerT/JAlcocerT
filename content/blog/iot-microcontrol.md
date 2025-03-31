@@ -21,7 +21,7 @@ And Recently, this new release got my attention:
 
 {{< cards >}}
   {{< card link="https://www.youtube.com/watch?v=BS9IgyAp3I0" title="How to Connect Parts - Electronics" icon="book-open" >}}
-  {{< card link="https://jalcocertech.xyz" title="Collaborations ↗" icon="user" >}}
+  {{< card link="https://jalcocertech.com" title="Collaborations ↗" icon="user" >}}
 {{< /cards >}}
 
 Let me show you **how to get started with MicroControllers**

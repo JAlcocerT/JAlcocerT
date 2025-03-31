@@ -32,7 +32,7 @@ menu:
       pageRef: /blog
       weight: 2      
     - name: Cool Stuff ↗
-      url: "https://jalcocertech.xyz/"
+      url: "https://jalcocertech.com/"
       weight: 4
     - name: Search
       weight: 5
@@ -52,7 +52,7 @@ menu:
       weight: 2
     - identifier: Docker
       name: "Collaborations ↗"
-      url: "https://jalcocertech.xyz"
+      url: "https://jalcocertech.com"
       weight: 3      
     - identifier: RPi
       name: "Raspberry Pi Guide ↗"

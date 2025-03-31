@@ -43,7 +43,7 @@ These connections can lead to collaborations, mentorship, and friendships that e
 
 {{< cards >}}
   <!-- {{< card link="blog" title="Blog" icon="book-open" >}} -->
-  {{< card link="https://jalcocertech.xyz/" title="JAlcocerTech ↗" icon="book-open" >}}
+  {{< card link="https://jalcocertech.com/" title="JAlcocerTech ↗" icon="book-open" >}}
   {{< card link="https://cal.com/jalcocertech/consulting" title="Collaborations ↗" icon="user" >}}
 {{< /cards >}}
 

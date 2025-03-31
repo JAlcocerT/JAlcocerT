@@ -9,7 +9,7 @@
     *   **IoT & Edge Data Analytics** - several public projects with the [Raspberry Pi](https://jalcocert.github.io/RPi/)
 
  
-- 📝 I regularly update the content on *[my Tech Blog](https://jalcocertech.xyz/)* <a href="https://jalcocertech.xyz"><img src="https://raw.githubusercontent.com/JAlcocerT/JAlcocerT/main/jalcocertech2.svg" alt="Subscribe via RSS" height="25" style="vertical-align: bottom;"/></a>
+- 📝 I regularly update the content on *[my Tech Blog](https://jalcocertech.com/)* <a href="https://jalcocertech.com"><img src="https://raw.githubusercontent.com/JAlcocerT/JAlcocerT/main/jalcocertech2.svg" alt="Subscribe via RSS" height="25" style="vertical-align: bottom;"/></a>
     * I love sharing with others - I have created these public guides for [Linux](https://jalcocert.github.io/Linux) and [Docker](https://github.com/JAlcocerT/Docker).
 
 - ⚙️Simulations: *I also like to understand how machines work*
@@ -23,7 +23,7 @@
 <a href="https://linkedin.com/in/jalcocert" target="blank">
     <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="my_linkedin" height="30" width="40" style="vertical-align: middle;" />
 </a>
-<a href="https://jalcocertech.xyz">
+<a href="https://jalcocertech.com">
     <img src="https://raw.githubusercontent.com/JAlcocerT/JAlcocerT/main/JAT.svg" alt="Description of the image" height="30" style="vertical-align: middle;" />
 </a>
 

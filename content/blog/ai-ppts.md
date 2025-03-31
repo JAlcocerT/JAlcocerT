@@ -91,6 +91,10 @@ slidev export --format png #npx slidev export --format png
 slidev export --format pptx #this will properly render mermaid diagrams and code snippts
 ```
 
+{{< callout type="warning" >}}
+When exporting to pdf/png, some features wont be generated (like UML)
+{{< /callout >}}
+
 > The pptx will be at `./slides-export.pptx`
 
 ![alt text](/blog_img/biz/RE/slidev-export.png)
@@ -99,7 +103,7 @@ slidev export --format pptx #this will properly render mermaid diagrams and code
 
 ![alt text](/blog_img/biz/RE/slidev-re.png)
 
-8. Build it ready to be hosted:
+8. Build it ready to be hosted *as static page*:
 
 ```sh
 #npm run build #they go to ./dist
@@ -111,6 +115,8 @@ slidev build --base /talks/my-cool-talk/ #deploy under sub-route
 ```
 
 ![alt text](/blog_img/biz/RE/slidev-build.png)
+
+
 
 ```sh
 #cd ./dist

@@ -3,9 +3,13 @@ title: "Why not tinkering with a Dron?"
 date: 2024-09-04T10:20:21+01:00
 draft: false
 tags: ["dev"]
-summary: 'Interesting stuff Ive learn along the way when trying to use Python'
+summary: 'Interesting dron stuff'
 url: 'useful-dron-stuff'
 ---
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/" title="Budget Drone" image="/blog_img/hardware/dji-dron.png" subtitle="Tinkering with a DJI Ryze Tello" >}}
+{{< /cards >}}
 
 * https://www.diyfpv.com/
 

@@ -87,8 +87,8 @@ Before the </head> ends, add:
 That will make your sitemap be at: `https://yoursite.com/sitemap.xml`
 
 ```sh
-curl -s https://jalcocertech.xyz/sitemap.xml -o /dev/null -w "%{http_code}\n" #200 means its there!
-curl -s https://jalcocertech.xyz/sitemap-index.xml -o /dev/null -w "%{http_code}\n" #could be
+curl -s https://jalcocertech.com/sitemap.xml -o /dev/null -w "%{http_code}\n" #200 means its there!
+curl -s https://jalcocertech.com/sitemap-index.xml -o /dev/null -w "%{http_code}\n" #could be
 ```
 
 > Make sure to have a `robots.txt` in the `/public` directory specifying the path:
@@ -108,7 +108,7 @@ Also, you can do it for **bing search**:
 
 ```sh
 #curl "https://www.bing.com/ping?sitemap=https://yoursite.com/sitemap.xml"
-curl "https://www.bing.com/ping?sitemap=https://jalcocertech.xyz/sitemap-index.xml"
+curl "https://www.bing.com/ping?sitemap=https://jalcocertech.com/sitemap-index.xml"
 ```
 
 {{< /details >}}
@@ -118,7 +118,7 @@ curl "https://www.bing.com/ping?sitemap=https://jalcocertech.xyz/sitemap-index.x
 
 ```sh
 #curl -s https://example.com/sitemap.xml -o /dev/null -w "%{http_code}\n"
-curl -s https://jalcocertech.xyz/sitemap.xml -o /dev/null -w "%{http_code}\n" #200 means its there!
+curl -s https://jalcocertech.com/sitemap.xml -o /dev/null -w "%{http_code}\n" #200 means its there!
 curl -s https://cyclingthere.com/sitemap.xml -o /dev/null -w "%{http_code}\n"
 curl -s https://cyclingthere.com/sitemap-index.xml -o /dev/null -w "%{http_code}\n" #its here!
 curl -s https://iotechcrafts.com/sitemap.xml -o /dev/null -w "%{http_code}\n" 
@@ -126,7 +126,7 @@ curl -s https://iotechcrafts.com/sitemap.xml -o /dev/null -w "%{http_code}\n"
 curl -s https://fossengineer.com/sitemap.xml -o /dev/null -w "%{http_code}\n" #hugo paper mod has it
 
 #optional - check robots.txt
-curl -s https://jalcocertech.xyz/robots.txt | grep -i sitemap #look for sitemap direction
+curl -s https://jalcocertech.com/robots.txt | grep -i sitemap #look for sitemap direction
 curl -s https://iotechcrafts.com/robots.txt | head -n 10 #see the first 10 lines
 
 #example of path with robots
