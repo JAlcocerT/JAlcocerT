@@ -230,6 +230,16 @@ At least compared from where I started!
   {{< card link="https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/" title="Video edition at x300 ↗" >}}  
 {{< /cards >}}
 
+{{< callout type="info" >}}
+Watching **4k video on Linux** might not be **fluent** until you install these:
+{{< /callout >}}
+
+
+```sh
+sudo apt install vlc
+sudo apt install ubuntu-restricted-extras
+```
+
 ---
 
 ## FAQ
@@ -244,8 +254,11 @@ I prefer to do it with **rsync**:
 #cp *.MP4 /home/jalcocert/Desktop/oa5pro/
 #rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #it creates the folder if its not there | no overwrite
 #rsync -avP *.MP4 /media/jalcocert/Backup2TB/DJI-OA5Pro #copy it to an external SSD
+
 rsync -avP --include='*.MP4' --exclude='*' /media/jalcocert/OsmoAction/DCIM/DJI_001/ ~/Desktop/CAM/
 rsync -avP --include='*.MP4' --exclude='*' . ~/Desktop/CAM3/
+mkdir -p "$HOME/Desktop/CAM1-$(date +%m-%d)" && rsync -avP --include='*.MP4' --exclude='*' . "$HOME/Desktop/CAM1-$(date +%m-%d)"
+
 
 #rm *.LRF #clean if needed LRF
 ```
@@ -410,6 +423,11 @@ Some tricks with **ffmpeg package**.
 
 > No reencoding = Quick 
 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tricks for quick videos as a code from action cams" >}}
+{{< /cards >}}
+
 1. **Simply Join**: Keeping original audio and no reencoding.
 
 ```sh
@@ -464,10 +482,24 @@ mkdir -p "./$(basename DJI_20250215215547_0006_D.MP4 .MP4)" && ffmpeg -i DJI_202
 ffmpeg -i thumbnail.png -qscale:v 2 compressed_thumbnail.jpg
 ```
 
+5. If you record on a chest mount and sometimes take the cam in the regular position, you will have to use the **rotation variable for the joins** and you wont escape the **reencoding** this time.
+
+```sh
+#sudo apt install mediainfo
+
+for video in *.MP4; do
+    echo "File: $video"
+    mediainfo "$video" | grep -E 'Rotation|Width|Height|Format|Duration'
+    ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration,codec_name,r_frame_rate -show_entries stream_tags=rotate "$video" | grep -E "TAG:rotate|width|height|duration|codec_name|r_frame_rate"
+    echo "-----------------------"
+done
+```
+
+> Just record consistently in one orientation the videos you want to join later (maybe?)
+
 **Space what?**
 
-You might need some after playing around with action cams.
-
+You might need some space after playing around with action cams.
 
 ```sh
 df -h | awk '$2 ~ /G/'
@@ -527,7 +559,9 @@ Wide-angle mode.
 
 #### Gyroflow
 
-Gyroflow is an application that can stabilize your video by using motion data from a gyroscope and optionally an accelerometer. Modern cameras record that data internally (GoPro, Sony, Insta360 etc), and this application stabilizes the captured footage precisely by using them. 
+**Gyroflow** is an application that can **stabilize your video by using motion data** from a gyroscope and optionally an accelerometer.
+
+Modern cameras record that data internally (GoPro, Sony, Insta360 etc), and this application stabilizes the captured footage precisely by using them. 
 
 It can also use gyro data from an external source (eg. from Betaflight blackbox).
 

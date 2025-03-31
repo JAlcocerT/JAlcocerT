@@ -83,6 +83,11 @@ slidev export #requires playwright to be installed
 
 > It goes to `slides-export.pdf`
 
+
+{{< callout type="warning" >}}
+When exporting to pdf, some features wont be generated (like UML)
+{{< /callout >}}
+
 ```sh
 npm run export #default as pdf!
 #npm run export:pdf
@@ -91,11 +96,7 @@ slidev export --format png #npx slidev export --format png
 slidev export --format pptx #this will properly render mermaid diagrams and code snippts
 ```
 
-{{< callout type="warning" >}}
-When exporting to pdf/png, some features wont be generated (like UML)
-{{< /callout >}}
-
-> The pptx will be at `./slides-export.pptx`
+> The pptx will be at `./slides-export.pptx` and features like UML/slidevJs will be available
 
 ![alt text](/blog_img/biz/RE/slidev-export.png)
 

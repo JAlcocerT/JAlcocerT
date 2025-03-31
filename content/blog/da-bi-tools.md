@@ -276,6 +276,110 @@ Takeaways
 | Syntax      | Simple text-based | More complex and verbose |
 | Use Cases   | Filtering data in Kibana dashboards, visualizations, and Discover | Querying Elasticsearch for data analysis and machine learning |
 
+
+
+{{< details title="Kibana Queries - KQL, DSL, Lucene... 📌" closed="true" >}}
+
+Absolutely! Let's break down Kibana KQL, DSL, and their relationship to Lucene queries, then translate your KQL query into DSL.
+
+**Understanding Kibana Query Languages**
+
+* **Lucene Query Syntax:**
+    * Lucene is a powerful full-text search engine library. **Elasticsearch, which Kibana uses, is built on top of Lucene**.
+    * Lucene's query syntax is quite low-level and can be complex, involving boolean operators, field names, wildcards, and more.
+    * Directly writing Lucene queries can be cumbersome for many users.
+
+* **Kibana Query Language (KQL):**
+    * KQL is a user-friendly query language **designed specifically for Kibana**. It simplifies the process of searching and filtering data in Elasticsearch.
+    * It provides a more intuitive syntax compared to raw Lucene, making it easier for users to construct queries.
+    * **KQL is ultimately translated into Lucene queries behind the scenes**.
+    * KQL is designed to be very human readable.
+
+* **Elasticsearch Domain-Specific Language (DSL):**
+    * Elasticsearch **DSL is a JSON-based query language** that provides a more flexible and powerful way to interact with Elasticsearch.
+    * It allows for complex queries, aggregations, and other operations that might be difficult or impossible to express using KQL.
+    * DSL is the raw Json that is sent to elasticsearch.
+    * While KQL is converted to a Lucene query, that lucene query is then wrapped in a DSL Json object.
+
+**Relationship to Lucene Queries**
+
+* Both KQL and DSL are ultimately translated into Lucene queries.
+* KQL acts as a higher-level abstraction, simplifying the process for users.
+* DSL provides the most control, as it is the direct Json that is sent to elasticsearch.
+
+**Translating Your KQL Query to DSL**
+
+Your **KQL** query is:
+
+```py
+viewerID : * and site : "AD04" and (HttpPlayerPlaybackEndEvent_assetType : * or HttpPlayerStartEvent_assetType : * )
+```
+
+Here's how to translate it **into Elasticsearch DSL**:
+
+```json
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "wildcard": {
+            "viewerID": {
+              "value": "*"
+            }
+          }
+        },
+        {
+          "term": {
+            "site.keyword": {
+              "value": "AD04"
+            }
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "wildcard": {
+                  "HttpPlayerPlaybackEndEvent_assetType": {
+                    "value": "*"
+                  }
+                }
+              },
+              {
+                "wildcard": {
+                  "HttpPlayerStartEvent_assetType": {
+                    "value": "*"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+**Explanation of the DSL:**
+
+* `"query": {"bool": {"must": [...]}}`: This defines a boolean query, where all `must` clauses must match.
+* `"wildcard": {"viewerID": {"value": "*"}}`: This matches any value in the `viewerID` field.
+* `"term": {"site.keyword": {"value": "AD04"}}`: This matches the exact term "AD04" in the `site.keyword` field. Note that if the site field is not set as a keyword, then the term query would be "site" instead of "site.keyword".
+* `"bool": {"should": [...]}`: This defines a boolean query, where at least one `should` clause must match.
+* `"wildcard": {"HttpPlayerPlaybackEndEvent_assetType": {"value": "*"}}`: This matches any value in the `HttpPlayerPlaybackEndEvent_assetType` field.
+* `"wildcard": {"HttpPlayerStartEvent_assetType": {"value": "*"}}`: This matches any value in the `HttpPlayerStartEvent_assetType` field.
+
+**Key Points:**
+
+* When dealing with exact string matches in Elasticsearch, it's often best to use the `.keyword` sub-field if it exists. This ensures that the entire string is matched as a single term.
+* Wildcard queries can be expensive, so try to be as specific as possible.
+* DSL provides much more control, and is required for more complex queries.
+
+{{< /details >}}
+
+
 #### Chronograph
 
 Works together with InfluxDB!
@@ -547,9 +651,6 @@ IoT Project example with Superset: <>
 
 ### Other F/OSS BI Tools
 
-#### Kibana
-
-#### Grafana
 
 ---
 
