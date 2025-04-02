@@ -149,6 +149,43 @@ I have explored LangChain + Pandas DF at [this post](https://jalcocert.github.io
 Kind of [PandasAI](#exploring-pandasai), but with LangChain
 {{< /callout >}}
 
+#### LangChain Markdown Chat
+
+I have covered this one on [this repo folder](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/Markdown)
+
+```sh
+sudo apt install python3.12-venv
+sudo apt install python3.12-dev
+pip install -r requirements.txt
+```
+
+Load your API:
+
+```sh
+git clone https://github.com/pixegami/langchain-rag-tutorial
+source .env
+
+#export OPENAI_API_KEY="your-api-key-here"
+#set OPENAI_API_KEY=your-api-key-here
+#$env:OPENAI_API_KEY="your-api-key-here"
+echo $OPENAI_API_KEY
+```
+
+Then we can do:
+
+```sh
+python3 create_database.py
+python query_data.py "How does Alice meet the Mad Hatter?"
+```
+
+> Thanks to Pixegami YT Video and code https://github.com/pixegami/langchain-rag-tutorial
+
+{{< youtube "tcqEUSNCn8I" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=tcqEUSNCn8I
+ -->
+
 ### Exploring PandasAI
 
 I was using the [**PandasAI**](https://github.com/Sinaptik-AI/pandas-ai) project previously to `talk with dataframes` as covered on [this Post](https://jalcocert.github.io/JAlcocerT/how-to-use-pandasAI/)

@@ -37,6 +37,8 @@ There are several ways to install [Python Dependencies](https://fossengineer.com
 ```sh
 sudo apt install python3-pip
 sudo apt install python3.10-venv
+#apt install python3.12-venv
+#sudo apt install python3.12-dev
 ```
 
 {{< /details >}}
