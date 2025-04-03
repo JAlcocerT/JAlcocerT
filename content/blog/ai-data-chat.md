@@ -156,7 +156,9 @@ I have covered this one on [this repo folder](https://github.com/JAlcocerT/Data-
 ```sh
 sudo apt install python3.12-venv
 sudo apt install python3.12-dev
+
 pip install -r requirements.txt
+pip install "unstructured[md]"
 ```
 
 Load your API:

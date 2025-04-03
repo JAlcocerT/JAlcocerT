@@ -143,12 +143,22 @@ Pure [markdown](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/prop
 
 ## Conclusions
 
+See the RAG with [LlamaIndex and Mem0](https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0) in action:
+
+<!-- https://youtu.be/cEfqonasQ0M -->
+
+{{< youtube "cEfqonasQ0M" >}}
+
 
 I have also been tinkering with a Web App framework alternative, Reflex:
 
 {{< cards cols="1" >}}
     {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
 {{< /cards >}}
+
+You could be implementing similar RAG with any of these frameworks:
+
+[![Star History Chart](https://api.star-history.com/svg?repos=run-llama/llama_index,langchain-ai/langchain,Sinaptik-AI/pandas-ai&,type=Date)](https://star-history.com/#run-llama/llama_index/caddy-docker-proxy&langchain-ai/langchain&Sinaptik-AI/pandas-ai&Date)
 
 ---
 
@@ -371,7 +381,7 @@ https://www.microsoft.com/en-us/research/blog/introducing-kblam-bringing-plug-an
 
 **MCP**: Model Context Protocol
 
-https://www.youtube.com/watch?v=KHDMoQ2Sp2s
+<!-- https://www.youtube.com/watch?v=KHDMoQ2Sp2s -->
 
 {{< youtube "KHDMoQ2Sp2s" >}}
 
