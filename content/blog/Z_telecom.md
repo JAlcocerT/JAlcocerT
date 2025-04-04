@@ -8,7 +8,7 @@ summary: ''
 url: 'telecom-concepts-101'
 ---
 
-Building the data lakehouse by Bill Inmon. Helped me a lot. 
+*Building the data lakehouse* by Bill Inmon. Helped me a lot. 
 
 https://jalcocert.github.io/RPi/posts/self-internet-monit/
 
@@ -20,8 +20,25 @@ Measure your Home Internet Speed with: [WYL and OpenSpeedTest/SpeedTest Tracker]
 
 ## Telecom Concepts
 
+First things first.
+
+Which modem do I have?
+
+[text](/blog_img/outro/telecom/2cm.heic)
+
+**This is a fiber Cable Modem**
+
+[text](/blog_img/outro/telecom/coax.heic)
+
+This, instead, is a COAX cable:
+
+[text](/blog_img/outro/telecom/20250325_094807.heic)
+
 ### Linear TV (LTV)
-**Linear TV** refers to traditional television broadcasting where content is transmitted according to a scheduled lineup on predetermined channels. Viewers tune in at specific times to watch programs and commercials.
+
+**Linear TV** refers to traditional television broadcasting where content is transmitted according to a scheduled lineup on predetermined channels.
+
+Viewers tune in at specific times to watch programs and commercials.
 
 - Operates on fixed channels accessed via antenna or cable/satellite connections.
 - Requires a predetermined schedule set by the broadcaster.
@@ -165,7 +182,9 @@ Here’s a closer look at MoCA and its application in traffic transmission:
   - Ideal for homes and small offices where coaxial cables are already installed and where Wi-Fi signals may be weak or unreliable.
   - Used to connect data-intensive devices that require stable, high-speed internet connections.
 
-MoCA technology provides an effective way to enhance home network performance by leveraging existing coaxial cable infrastructure for high-speed data transmission. It offers a practical solution for improving connectivity and network reliability, especially in environments where Wi-Fi may face limitations due to distance, barriers, or interference.
+MoCA technology provides an effective way to enhance home network performance by leveraging existing coaxial cable infrastructure for high-speed data transmission.
+
+It offers a practical solution for improving connectivity and network reliability, especially in environments where Wi-Fi may face limitations due to distance, barriers, or interference.
 
 ### Optical Network Terminal (ONT)
 
@@ -179,7 +198,9 @@ It converts the optical signal from the carrier’s network into electronic sign
 
 ### Optical Line Terminal (OLT)
 
-**OLT (Optical Line Terminal)** is the counterpart to the ONT, located at the telecom provider's central office. It communicates with multiple ONTs to deliver internet services in a **Passive Optical Network (PON)**, sending signals over fiber without requiring powered equipment between the OLT and ONTs.
+**OLT (Optical Line Terminal)** is the counterpart to the ONT, located at the telecom provider's central office.
+
+It communicates with multiple ONTs to deliver internet services in a **Passive Optical Network (PON)**, sending signals over fiber without requiring powered equipment between the OLT and ONTs.
 
 - **Function**: Manages communication, bandwidth allocation, and error monitoring for ONTs.
 - **Placement**: Located at the provider's end.
@@ -199,7 +220,9 @@ It converts the optical signal from the carrier’s network into electronic sign
 
 {{< details title="More about DocSIS 📌" closed="true" >}}
 
-**DOCSIS** is an international telecommunications standard that allows the addition of high-speed data transfer to an existing cable TV (CATV) system. It is widely used by many cable television operators to provide internet access (over their existing hybrid fiber-coaxial infrastructure) in addition to television services. Here are key aspects of DOCSIS:
+**DOCSIS** is an international telecommunications standard that allows the addition of high-speed data transfer to an existing cable TV (CATV) system.
+
+It is widely used by many cable television operators to provide internet access (over their existing hybrid fiber-coaxial infrastructure) in addition to television services. Here are key aspects of DOCSIS:
 
 - **Purpose**: DOCSIS technology enables cable operators to efficiently utilize their existing coaxial cable infrastructure to deliver high-speed broadband internet access, along with voice and video services.
 
@@ -212,6 +235,7 @@ It converts the optical signal from the carrier’s network into electronic sign
 
 - **Components**:
   - **CMTS (Cable Modem Termination System)**: Located at the cable provider’s facility, this equipment routes data between the internet and local cable networks.
+
   - **Cable Modem**: Installed at the user’s premises, this device modulates and demodulates data signals to interface between the digital data network and the coaxial network used in homes and businesses.
 
 - **Advantages**:
