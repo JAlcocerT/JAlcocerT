@@ -281,4 +281,8 @@ And by using the chart.html shortcode:
 {{< /chart >}}
 ```
 
-2. 
+2. Or with a Bar chart:
+
+```md
+
+```

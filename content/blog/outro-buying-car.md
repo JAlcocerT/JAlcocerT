@@ -100,6 +100,11 @@ It of course depends, I have observed them to be from 0,38$/km to...1.54$/km.
 > On average, when renting **~0,68$/km**.
 
 
+## The costs of a Car
+
+As mentioned, from my experience, this is what I got:
+
+
 
 ---
 
@@ -121,6 +126,16 @@ https://www.youtube.com/watch?v=UINEmTO0LCY
 Having a look to the spark plugs after changing them can tell you a lot of the engine status:
 
 ![Honda Civic 6 Spark Plugs](/blog_img/outro/hondacivic-sparkplugs.jpg)
+
+
+---
+
+## FAQ
+
+https://www.spritmonitor.de/de/suche.html
+
+
+
 
 ### In Germany
 
@@ -167,10 +182,3 @@ https://en.wikipedia.org/wiki/Fiat_Ducato
 * [Park4Night](https://park4night.com/en/search?lat=52.372756486328726&lng=4.893615245819092&z=15)
 
 * [Trick1](https://www.kartamultisport.pl/en/multisport/search-for-facilities/#/@51.8283438,19.7351276,10z?cards=1&categories=3)
-
----
-
-## FAQ
-
-https://www.spritmonitor.de/de/suche.html
-

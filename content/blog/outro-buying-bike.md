@@ -46,6 +46,9 @@ https://youtu.be/cqs4MkJ_4M4
 
 {{< youtube "cqs4MkJ_4M4" >}}
 
+{{< callout type="info" >}}
+I recorded this one with the [Oa5Pro](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/)
+{{< /callout >}}
 
 ### Almost new MTB
 

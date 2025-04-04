@@ -1,7 +1,7 @@
 ---
 title: "Buying a house being in Data Analytics"
-date: 2025-12-03T23:20:21+01:00
-draft: true
+date: 2025-05-01T23:20:21+01:00
+draft: false
 tags: ["Outro"]
 description: 'What to keep in mind - what not to do and the data behind...When buying a house.'
 url: 'buying-house-data-analytics'
@@ -9,7 +9,12 @@ url: 'buying-house-data-analytics'
 
 If you are getting a credit...
 
-Before anything, understand how French Amortization works.
+Before anything, understand how [French Amortization](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/) works.
+
+And maybe have a look to the properties around with some [RE AIgent](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/).
+
+
+
 
 ## Property Costs Analytics
 
@@ -48,8 +53,10 @@ Like...should you get those **adidas GN3530** you like?
 
 Or are you fine with the ones you were so excited to buy few months ago?
 
+---
+
 ## FAQ
 
-There are interesting pre-made solutions: zrobim,...
+There are interesting **pre-made** solutions: zrobim,...
 
 * https://forocoches.com/foro/showthread.php?t=6810398&page=12
