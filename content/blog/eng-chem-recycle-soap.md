@@ -20,9 +20,39 @@ The **proportions** I tried were:
 
 are 6:6:1 with water,oil and NaOH.
 
-The good thing?
+<!-- https://www.chartjs.org/docs/latest/charts/doughnut.html#pie -->
 
-You can also play around with the proportions, even adding perfume to it!
+{{< chart 90 200 >}}
+{
+  type: 'pie',
+  data: {
+    labels: [
+      'Water',
+      'Oil',
+      'NaOH'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [6, 6, 1],
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+      ],
+      hoverOffset: 4
+    }]
+  },
+  options: {
+    maintainAspectRatio: false
+  }
+}
+{{< /chart >}}
+
+**The good thing?**
+
+You can also play around with the proportions
+
+Even adding perfume to it!
 
 [Jump to **The result**](#my-experience)
 

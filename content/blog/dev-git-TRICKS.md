@@ -184,7 +184,7 @@ ext install eamodio.gitlens
 #yaml https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 
-
+#gemini assistant https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist
 
 ```
 

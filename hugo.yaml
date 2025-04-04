@@ -1,8 +1,8 @@
 #baseURL: http://localhost/ #specified in pages.yml
 languageCode: en-us
 title: JAlcocerT Blog
-theme: hextra
-
+#theme: hextra
+theme: ["hugo-chart", "hextra"]
 
 # import hextra as module / specified in theme (above)
 # module:

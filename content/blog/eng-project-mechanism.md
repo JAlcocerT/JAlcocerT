@@ -112,11 +112,15 @@ https://github.com/tinacms/tina-barebones-starter
 
 > We are good to go: https://jalcocert.github.io/mechanism/
 
+---
+
 ## Conclusions
 
-Its been very helpful to use this:
+Its been very helpful to use [this](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist):
 
 ![Gemini Code Assistant](/blog_img/dev/GeminiCodeAssist.png)
+
+
 
 {{< callout type="info" >}}
 **Kudos again to Gabe!** The project is release under MIT for anyone to use and modify. 

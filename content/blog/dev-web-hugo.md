@@ -3,7 +3,7 @@ title: "How to use HUGO [101] and make quick Websites"
 date: 2024-09-06
 draft: false
 tags: ["Dev"]
-summary: 'How to get started with HUGO as SSG and create Webs. GO & HUGO Setup.'
+summary: 'How to get started with HUGO as SSG and create Webs. GO & HUGO Setup with ChartJS.'
 url: 'using-hugo-as-website'
 ---
 
@@ -64,6 +64,7 @@ But...you can also use **ARM SBCs with HUGO**
 
 ```sh
 ssh jalcocert@192.168.0.155
+ssh jalcocert@192.168.0.12
 ssh reisipi@192.168.0.117
 ```
 
@@ -190,3 +191,94 @@ This video can be helpful to get going (hugo blowfish theme)
 {{< callout type="info" >}}
 Looking for features to add for your website? See [some ideas **here**](https://jalcocert.github.io/JAlcocerT/create-your-website/)
 {{< /callout >}}
+
+---
+
+## Outro
+
+### Charts in HUGO
+
+Using **mermaidJS** is one option
+
+But you can also try with [**ChartJS**](https://www.chartjs.org/docs/latest/), like in: 
+
+* Thanks to https://github.com/shen-yu/hugo-chart
+
+> a Chart.js component for Hugo. 📈
+
+* https://github.com/MrCroxx/hugo-theme-monument
+    * https://github.com/hugo-theme-monument/hugo-theme-monument.github.io
+    * https://hugo-theme-monument.github.io/posts/demo-of-katex-chartjs/
+
+```sh
+hugo new site your-site-name
+cd your-site-name
+
+git init
+git submodule add https://github.com/mrcroxx/hugo-theme-monument.git themes/Monument
+git submodule add https://github.com/shen-yu/hugo-chart themes/hugo-chart #this is the one doing the trick
+```
+
+Add the theme in the `config.toml`
+
+```yml
+#theme = "Monument"
+theme= ["hugo-chart", "Monument"]
+```
+
+```sh
+#hugo server
+hugo server --bind="0.0.0.0" --baseURL="http://192.168.0.12" --port=1319
+
+#hugo
+```
+
+> Tested it with hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d linux/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio
+
+### More about ChartJS
+
+https://github.com/chartjs/Chart.js
+
+> MIT Simple HTML5 Charts using the <canvas> tag
+
+
+With ChartJS you can also do [Animations](https://www.chartjs.org/docs/latest/configuration/animations.html)!
+
+
+```sh
+npm install chart.js
+```
+
+And by using the chart.html shortcode:
+
+1. https://www.chartjs.org/docs/latest/charts/doughnut.html#pie
+
+```md
+{{< chart 90 200 >}}
+{
+  type: 'pie',
+  data: {
+    labels: [
+      'Water',
+      'Oil',
+      'NaOH'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [6, 6, 1],
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+      ],
+      hoverOffset: 4
+    }]
+  },
+  options: {
+    maintainAspectRatio: false
+  }
+}
+{{< /chart >}}
+```
+
+2. 
