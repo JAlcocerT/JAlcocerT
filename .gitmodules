@@ -1,3 +1,6 @@
 [submodule "linux-v3/themes/hextra"]
 	path = linux-v3/themes/hextra
 	url = https://github.com/imfing/hextra.git
+[submodule "themes/hugo-chart"]
+	path = themes/hugo-chart
+	url = https://github.com/shen-yu/hugo-chart
