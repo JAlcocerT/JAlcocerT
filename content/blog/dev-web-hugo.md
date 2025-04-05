@@ -206,6 +206,35 @@ But you can also try with [**ChartJS**](https://www.chartjs.org/docs/latest/), l
 
 > a Chart.js component for Hugo. 📈
 
+
+<!-- https://www.chartjs.org/docs/latest/charts/doughnut.html#pie -->
+
+{{< chart 90 200 >}}
+{
+  type: 'pie',
+  data: {
+    labels: [
+      'Water',
+      'Oil',
+      'NaOH'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [6, 6, 1],
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+      ],
+      hoverOffset: 4
+    }]
+  },
+  options: {
+    maintainAspectRatio: false
+  }
+}
+{{< /chart >}}
+
 * https://github.com/MrCroxx/hugo-theme-monument
     * https://github.com/hugo-theme-monument/hugo-theme-monument.github.io
     * https://hugo-theme-monument.github.io/posts/demo-of-katex-chartjs/

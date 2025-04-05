@@ -267,6 +267,19 @@ mkdir -p "$HOME/Desktop/CAM1-$(date +%m-%d)" && rsync -avP --include='*.MP4' --e
 
 > When moving the full 48GB, it will take ~20min
 
+If later on you want to **group them per record date**:
+
+```sh
+for file in *; do
+  if [[ -f "$file" ]]; then
+    date_str=$(stat -c %y "$file" | cut -d ' ' -f 1 | tr -d '-')
+    mkdir -p "$date_str"
+    mv "$file" "$date_str/"
+  fi
+done
+```
+
+> This will create directories like 20250318, 20250319, and 20250320 and move the respective files into them.
 
 ### Quick Videos - FFMPEG CLI
 

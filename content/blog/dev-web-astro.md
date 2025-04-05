@@ -159,3 +159,94 @@ import mdx from "@astrojs/mdx";
 
 
 {{< /details >}}
+
+
+---
+
+## FAQ
+
+### Astro for MAC Setup
+
+To install Homebrew on Ubuntu, follow these steps:
+
+**1. Install Prerequisites:**
+
+Before installing Homebrew, you need to ensure that some essential packages are installed on your Ubuntu system. Open your terminal and run the following command:
+
+```bash
+sudo apt update
+sudo apt install build-essential curl file git
+```
+
+This command will:
+
+* `sudo apt update`: Update the package lists.
+* `sudo apt install build-essential`: Install essential tools for compiling software.
+* `sudo apt install curl`: Install `curl`, a command-line tool for transferring data with URLs.
+* `sudo apt install file`: Install the `file` command, which determines file types.
+* `sudo apt install git`: Install `git`, a distributed version control system (Homebrew uses Git to manage its package repositories).
+
+**2. Download and Execute the Homebrew Installation Script:**
+
+The official Homebrew website provides an installation script that you can download and execute. Run the following command in your terminal:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+This command will:
+
+* `curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh`: Download the Homebrew installation script from GitHub.
+    * `-f`: Fail silently (no output on errors).
+    * `-s`: Silent mode (don't show progress bar or errors unless they occur).
+    * `-S`: Show errors if they occur.
+    * `-L`: Follow redirects.
+* `/bin/bash -c "..."`: Execute the downloaded script using Bash.
+
+The script will explain what it will do and then prompt you to confirm the installation by pressing Enter.
+
+**3. Follow the On-Screen Instructions:**
+
+The installation script will guide you through the process. It will likely ask for your password (as it might need to create directories) and will inform you about the installation location (usually under `/home/linuxbrew/.linuxbrew`).
+
+**4. Add Homebrew to Your System's PATH:**
+
+After the installation is complete, the script will usually provide you with commands to add Homebrew to your system's PATH environment variable. This allows you to run the `brew` command from any directory in your terminal. The commands will typically look something like this (the exact path might vary slightly):
+
+```bash
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+
+* The first command adds the necessary line to your `~/.bashrc` file, so the PATH is updated every time you start a new terminal session.
+* The second command updates the PATH in your current terminal session.
+
+If you are using a different shell (like Zsh), you might need to add the lines to `~/.zshrc` instead of `~/.bashrc`.
+
+**5. Verify the Installation:**
+
+To confirm that Homebrew has been installed correctly, run the following command in your terminal:
+
+```bash
+brew --version
+```
+
+This should display the installed version of Homebrew.
+
+You can also run the `brew doctor` command to check for any potential issues with your Homebrew installation:
+
+```bash
+brew doctor
+```
+
+Follow any instructions provided by `brew doctor` to resolve any warnings or errors.
+
+Now you should have Homebrew successfully installed on your Ubuntu system and can start using the `brew` command to install packages.
+
+**Then, you just install node and npm with brew**
+
+```sh
+brew install node
+node -v
+npm -v
+```

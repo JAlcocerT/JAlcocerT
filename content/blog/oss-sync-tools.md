@@ -206,19 +206,14 @@ This will depend on the router you are using:
   {{< card link="https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/" title="More Telecom Stuff" image="/blog_img/outro/telecom/2cm.png" subtitle="Concepts and Tools" >}}
 {{< /cards >}}
 
-For me, I followed the following to get to know the transfer speeds:
-
-
-
-
-
-
+I used iperf and iotop to check that I get ~730Mbits/sec on Wifi and ~916Mbits/sec on eth
 
 ### More Tools
 
 Sea also: 
 
 1. #https://github.com/maxime1907/docker-filegator
+
 2. Filerun
 
 ```yml
