@@ -213,6 +213,10 @@ SELECT * FROM `projectID-on-gcp.dataset_ID.table_ID` as qoe
 WHERE TIMESTAMP_TRUNC(qoe.ts, HOUR) = TIMESTAMP_SUB(TIMESTAMP_TRUNC('${dataform.projectConfig.vars.executionDate}', HOUR), INTERVAL 1 HOUR)
 ```
 
+{{< callout type="info" >}}
+Remember to always document your queries. For example with [MermaidJS](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/)! 
+{{< /callout >}}
+
 
 #### Big Table
 

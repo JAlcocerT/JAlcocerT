@@ -1,14 +1,24 @@
 ---
 title: "Whats the right Messaging Protocol for me?"
-date: 2025-03-25T05:20:21+01:00
+date: 2025-04-09T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
 description: 'MQTT vs RMQ vs Kafka. Great Tools for IoT Projects!'
 url: 'messaging-protocols'
 ---
 
-As seen here:
+You might be playing around with your Pi:
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-gps-superset/#apache-superset-setup" title="Superset Setup" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="IoT Pi Project with Superset" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/demo-realtime-pollution" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed with NGINX" >}}
+  {{< card link="https://github.com/JAlcocerT/demo-realtime-pollution" title="Taipy Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
+As seen here:
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/#flask-and-websockets" title="Flask and WebSockets" >}}
@@ -89,13 +99,16 @@ https://www.youtube.com/watch?v=VnGRFwDrLHo
 
 ### RabbitMQ
 
-**RabbitMQ** is an open-source message broker that facilitates communication between applications, services, or microservices in a distributed system. It supports multiple messaging protocols, including **AMQP** (Advanced Message Queuing Protocol), which is the default protocol used by RabbitMQ for managing and routing messages.
+**RabbitMQ** is an open-source message broker that facilitates communication between applications, services, or microservices in a distributed system.
 
-RabbitMQ operates on a **queue-based model**, where messages are placed in queues by producers and consumed by consumers. It ensures reliable delivery and helps decouple systems, allowing for asynchronous and scalable communication between different components.
-r.
+It supports multiple messaging protocols, including **AMQP** (Advanced Message Queuing Protocol), which is the default protocol used by RabbitMQ for managing and routing messages.
+
+RabbitMQ operates on a **queue-based model**, where messages are placed in queues by producers and consumed by consumers.
+
+It ensures reliable delivery and helps decouple systems, allowing for asynchronous and scalable communication between different components.
+
 
 {{% details title="More about - RabbitMQ 🌍" closed="true" %}}
-
 
 The main features of RabbitMQ include:
 - **Message Queuing**: It acts as an intermediary that stores messages until they can be processed by consumers.
@@ -103,7 +116,9 @@ The main features of RabbitMQ include:
 - **Routing**: RabbitMQ offers powerful routing capabilities, including direct, fanout, topic, and header exchanges, allowing messages to be routed to the right consumers efficiently.
 - **Scalability**: It can handle large amounts of messages and scale horizontally by adding more servers to form a cluste
 
-RabbitMQ is commonly used in systems that require guaranteed message delivery, such as e-commerce websites, financial services, and supply chain management systems. It can manage complex workflows, ensure data consistency, and improve system reliability.
+RabbitMQ is commonly used in systems that require guaranteed message delivery, such as e-commerce websites, financial services, and supply chain management systems.
+
+It can manage complex workflows, ensure data consistency, and improve system reliability.
 
 {{% /details %}}
 
@@ -145,13 +160,21 @@ flatpak install flathub com.emqx.MQTTX
 
 4. MQTT with Python: https://www.emqx.com/en/blog/how-to-use-mqtt-in-python
 
-
-
 ### Apache Kafka
 
-**Apache Kafka** is a distributed event streaming platform that is used for building real-time data pipelines and streaming applications. Kafka is designed to handle large volumes of high-throughput, fault-tolerant, and distributed data streams in a reliable and scalable manner.
+**Apache Kafka** is a distributed event streaming platform that is used for building real-time data pipelines and streaming applications.
 
-Kafka works on a **publish-subscribe** model, where producers write data (events) to topics, and consumers read from those topics. Kafka stores streams of records in **topics** and allows real-time processing of these records. It is particularly known for its ability to handle massive amounts of data with low latency.
+Kafka is designed to handle large volumes of high-throughput, fault-tolerant, and distributed data streams in a reliable and scalable manner.
+
+{{< callout type="info" >}}
+You might have heard about Kafka coupled with [PySpark](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/)!
+{{< /callout >}}
+
+Kafka works on a **publish-subscribe** model, where producers write data (events) to topics, and consumers read from those topics.
+
+Kafka stores streams of records in **topics** and allows real-time processing of these records. 
+
+It is particularly known for its ability to handle massive amounts of data with low latency.
 
 
 {{% details title="More about - Kafka 🌍" closed="true" %}}
@@ -182,3 +205,41 @@ If you want to get into electronics, see these:
 
 1. Arduino IDE
 2. LibrePCB
+
+### Redis as a message broker
+
+Redis can be used as a message broker, and in the context of publish/subscribe (Pub/Sub) functionality, it shares similarities with message brokers like MQTT and RabbitMQ. 
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/#real-time-data-with-flask" title="Flask SSE and Redis for RT Data" >}}
+{{< /cards >}}
+
+**Redis as a Message Broker:**
+
+* **Pub/Sub Mechanism:** Redis has built-in Pub/Sub capabilities. Clients can subscribe to channels, and when a message is published to a channel, all subscribed clients receive it. This allows for a decoupled communication model where publishers don't need to know about specific subscribers.
+
+* **Data Structures for Queuing:** Besides Pub/Sub, Redis's list data structure can also be used to implement basic message queues. Producers can `LPUSH` (left push) messages onto a list, and consumers can `BRPOP` (blocking right pop) to retrieve and process messages. Redis Streams, introduced later, offer more advanced features for message streaming, including persistence, consumer groups, and acknowledgments.
+
+* **Simplicity and Performance:** Redis is known for its speed and simplicity. Its in-memory nature allows for very low latency message delivery. Setting up and using Redis for basic messaging is generally straightforward.
+
+* **"At-Most-Once" Delivery (for basic Pub/Sub):** By default, Redis Pub/Sub offers "at-most-once" delivery semantics. This means that if a subscriber is disconnected when a message is published, it will not receive that message upon reconnection. There's no built-in mechanism for message persistence or guaranteed delivery in the basic Pub/Sub. Redis Streams offer more reliable delivery options.
+
+**MQTT (Message Queuing Telemetry Transport):**
+
+* **Specifically Designed for Messaging:** MQTT is a lightweight messaging protocol specifically designed for constrained devices and low-bandwidth, unreliable networks, often used in IoT (Internet of Things) scenarios.
+
+**RabbitMQ:**
+
+* **Full-Featured Message Broker:** RabbitMQ is a robust and feature-rich message broker that supports multiple messaging protocols (including AMQP, MQTT, STOMP).
+
+**In the context of a Flask SSE application:**
+
+Redis can be a good choice as a message broker to decouple your event producers from your Flask SSE endpoint, especially if you have multiple sources of real-time data or if you anticipate scaling your application.
+
+You would typically use Redis's Pub/Sub or Streams to distribute events to your Flask application, which then formats them as SSE events and sends them to connected browsers.
+
+While Redis offers messaging capabilities, it's not a direct replacement for all use cases of MQTT or RabbitMQ, especially those requiring strong delivery guarantees, complex routing, or protocol-specific features.
+
+The best choice depends on the specific requirements and complexity of your application.
+
+For simpler real-time updates and scenarios where some message loss is acceptable (or handled at the application level), Redis can be a performant and easy-to-manage option.

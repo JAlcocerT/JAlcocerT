@@ -21,6 +21,32 @@ Btw, this is how they fit in the AI Landscape:
 
 ## Name Entity Recognition
 
+A **NER (Named Entity Recognition)** system is like a smart highlighter that goes through this sentence and picks out the important "things" or "entities" and tells you what category they belong to.
+
+> Imagine you have a sentence like:
+
+**"Elon Musk visited Berlin on Monday to meet with Tesla executives."**
+
+In our example, the NER system would highlight:
+
+* **Elon Musk** and say "This is a **PERSON**"
+* **Berlin** and say "This is a **GPE**" (which stands for Geopolitical Entity, like a city or country)
+* **Monday** and say "This is a **DATE**"
+* **Tesla** and say "This is an **ORG**" (which stands for Organization)
+
+**So, in simple terms, NER is a way for computers to:**
+
+1.  **Identify** specific words or phrases in text.
+2.  **Categorize** those words or phrases into predefined groups like people, places, dates, organizations, etc.
+
+Think of it as teaching a computer to understand the key players, locations, and times mentioned in a piece of writing. This is really useful for things like:
+
+* **News analysis:** Quickly finding out who did what, where, and when.
+* **Customer service:** Understanding what products or issues a customer is talking about.
+* **Information extraction:** Automatically pulling out important details from documents.
+
+> Basically, NER helps computers make sense of text by recognizing the "who, what, when, and where" of it.
+
 ### SpaCy
 
 Soacy can be used to detect **PII information**!
@@ -33,7 +59,7 @@ You need to download the model first:
 python -m spacy download en_core_web_sm
 ```
 
-Example to use SPacy for PII:
+Example to use **SPacy for PII**:
 
 ```py
 import spacy
@@ -73,7 +99,7 @@ for string in strings_to_check:
 
 ## Conclusions
 
-Nowadays you can also **use LLMs** for this kind of PII detectiontasks.
+Nowadays you can also **use LLMs** for this kind of **PII detection tasks**.
 
 But...it is always great to keep handy this kind of more traditional NLP tools.
 
@@ -100,7 +126,6 @@ In Natural Language Processing (NLP), an **n-gram** is a contiguous sequence of 
 The items can be characters, words, or even syllables.
 
 {{% details title="A breakdown of what n-grams are? 🚀" closed="true" %}}
-
 
 * **"n" represents the number of items:**
     * A 1-gram (or unigram) is a single item.
@@ -129,4 +154,4 @@ The items can be characters, words, or even syllables.
 
 {{% /details %}}
 
-In essence, n-grams provide a simple yet powerful way to analyze and understand the structure of language.
+> In essence, n-grams provide a simple yet powerful way to analyze and understand the structure of language.

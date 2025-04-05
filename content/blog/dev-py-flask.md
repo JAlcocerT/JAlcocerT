@@ -283,7 +283,7 @@ And made public:
 
 If you are pushing the **container to GHCR**, remember to set your PAT:
 
-![alt text](static/blog_img/dev/gha-notoken.png)
+![alt text](/blog_img/dev/gha-notoken.png)
 
 ### BME280
 
@@ -366,6 +366,62 @@ The client-side JavaScript listens for these events and updates the page accordi
 
 {{< details title="More about SSE 📌" closed="true" >}}
 
+Let's break down how to set up Flask real-time updates in a browser using Server-Sent Events (SSE) and address the role of Redis in this context.
+
+### Setting up Flask Real-time Updates with SSE
+
+Server-Sent Events (SSE) is a simple, standards-based way for a web server to push updates to a web browser over a persistent HTTP connection. 
+
+Once the connection is established, the server can send data to the client whenever new information is available, without the client needing to make repeated requests.
+
+> Why Might You Need Redis for Real-time Updates?
+
+In the basic example above, the real-time updates are generated directly within the Flask process. This works fine for simple scenarios where the data source and the event generation are tightly coupled and the application runs on a single server.
+
+However, in more complex applications, you might consider using a message broker like Redis for several reasons:
+
+* **Decoupling of Producers and Consumers:** Imagine you have multiple parts of your application (or even separate services) that generate events that need to be pushed to clients. Using Redis as a central message broker allows these different parts (producers) to publish events to specific channels without needing to know about the clients (consumers) or the Flask application directly. The Flask application then subscribes to these channels and pushes the events to the connected browsers. This decoupling makes your architecture more modular and easier to maintain and scale.
+
+    * **Example:** You might have a separate process that monitors database changes, another that tracks user activity, and another that handles sensor data. Each of these can publish events to different Redis channels. Your Flask application can subscribe to the relevant channels and broadcast the updates to the appropriate users.
+
+* **Scalability:** If your application needs to handle a large number of concurrent users and generate a high volume of real-time events, a single Flask process might become overwhelmed. You can scale your application by running multiple Flask instances. With Redis as a message broker, each Flask instance can subscribe to the same channels and receive the events, ensuring that all connected clients receive the updates, regardless of which Flask instance they are connected to.
+
+    * **Without Redis:** You would need to implement a mechanism for different Flask processes to communicate and share the events, which can be complex.
+
+* **Reliability and Persistence (Optional):** Redis offers different levels of persistence. If your real-time updates are critical and you cannot afford to lose events if a server restarts, you can configure Redis to persist data to disk. While SSE itself doesn't guarantee delivery, using a persistent message broker can improve the overall reliability of your real-time update system.
+
+* **Fan-out:** Redis Pub/Sub (Publish/Subscribe) allows you to easily implement a fan-out pattern where a single event published to a channel is received by multiple subscribers (your Flask application instances). This is essential for broadcasting updates to many connected clients.
+
+* **Managing State:** In some real-time applications, you might need to maintain some state related to the real-time connections or the data being streamed. 
+
+Redis can be used as a fast and efficient in-memory data store for managing this state.
+
+You don't *strictly* need Redis for basic SSE with Flask, especially if your data source is directly accessible within your Flask application and you are running on a single server.
+
+However, Redis (or another message broker) becomes increasingly valuable as your application grows in complexity, scale, and the number of event producers.**
+
+```sh
+docker run --name my-redis -d -p 6379:6379 -v redis_data:/data redis
+```
+
+It provides a robust and scalable way to manage and distribute real-time events across different parts of your system.
+
+**When would you *not* necessarily need Redis for SSE?**
+
+* Small, single-server applications where the event source is directly integrated with the Flask application.
+* Simple dashboards or monitoring tools where the data updates are generated within the same Flask process.
+
+By using **Redis**, you shift the responsibility of managing and distributing events from your Flask application to a dedicated, highly **optimized message broker**, allowing your Flask application to focus on serving HTTP requests and handling the SSE connections.
+
+To use Redis with your Flask SSE application, you would typically:
+
+1.  Install the `redis` Python library (`pip install redis`).
+2.  Connect to your Redis server from your Flask application.
+3.  In your event-generating parts of the application, publish events to specific Redis channels.
+4.  In your Flask SSE route, subscribe to these Redis channels using a separate thread or an asynchronous mechanism.
+5.  When a new message is received from Redis, format it as an SSE event and yield it to the client.
+
+This setup provides a more scalable and maintainable architecture for real-time web applications with Flask and SSE.
 
 {{< /details >}}
 
