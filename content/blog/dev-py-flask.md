@@ -259,6 +259,24 @@ It is not a general Linux utility and therefore will not be available in or easi
 So to test this with a Pi, just run the code baremetal with a Python environment
 {{< /callout >}}
 
+With that taken into consideration, lets put this in GHA: https://github.com/JAlcocerT/flask_sensor_display/actions/runs/14283273534
+
+Which has run perfectly: https://github.com/users/JAlcocerT/packages/container/package/flask_sensor_display
+
+And created this container image:
+
+```sh
+docker pull ghcr.io/jalcocert/flask_sensor_display:latest
+```
+
+And made public:
+
+![alt text](/blog_img/iot/flask/flask-ghcr-public.png)
+
+If you are pushing the **container to GHCR**, remember to set your PAT:
+
+![alt text](static/blog_img/dev/gha-notoken.png)
+
 ### BME280
 
 This is the original feature from KarolPWr original version!
@@ -357,11 +375,38 @@ I have made couple of tweaks to it [here](https://github.com/JAlcocerT/flask_sen
 
 ### Deploying
 
+1. Make sure to get docker/container installed
+
+2. Pull the container image:
+
+```sh
+docker pull ghcr.io/jalcocert/flask_sensor_display:latest
+```
+
+3. Use the docker-compose
+
+```sh
+wget https://github.com/JAlcocerT/flask_sensor_display/blob/main/Z_DeployMe/docker-compose.yml
+sudo docker-compose up -d
+```
+
+Or, a quick CLI:
+
+```sh
+docker run --name flask_sensor_webapp \
+-v flask_webapp:/app \
+-w /app \
+-p 9999:9999 \
+--restart always \
+ghcr.io/jalcocert/flask_sensor_display \
+/bin/sh -c "python3 app.py"
+```
+
+See the logs at Portainer:
+
 ![alt text](/blog_img/iot/flask/flask-container-portainer.png)
 
-If you are pushing the **container to GHCR**, remember to set your PAT:
 
-![alt text](static/blog_img/dev/gha-notoken.png)
 
 ---
 
