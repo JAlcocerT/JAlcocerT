@@ -3,13 +3,14 @@ title: "Getting started with PySpark"
 date: 2022-10-17T23:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'How to use PySpark'
-summary: 'If you have been using SQL and Pandas with Python for a while, you might want to leverage that knowledge by learning PySpark - Using Python for Big Data Analytics with distributed computing.'
+description: 'How to use PySpark (Python) for Big Data Processing.'
 url: 'guide-python-PySpark'
 ---
 
 <!-- 
 https://hub.docker.com/layers/bitnami/spark/3.5-debian-11/images/sha256-70d7589cb07f24c09a28863e3fce5b9f0419042da2fff6505d0822e0ccbb7cde -->
+
+If you have been using SQL and Pandas with Python for a while, you might want to leverage that knowledge by learning PySpark - Using Python for Big Data Analytics with distributed computing.
 
 ## The PySpark Project
 

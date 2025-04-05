@@ -200,7 +200,7 @@ Looking for features to add for your website? See [some ideas **here**](https://
 
 Using **mermaidJS** is one option
 
-But you can also try with [**ChartJS**](https://www.chartjs.org/docs/latest/), like in: 
+But you can also try with [**ChartJS**](https://www.chartjs.org/docs/latest/), as discussed at [the HUGO forum](https://discourse.gohugo.io/t/a-chart-js-component-for-hugo/28581), like in
 
 * Thanks to https://github.com/shen-yu/hugo-chart
 

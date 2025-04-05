@@ -12,7 +12,9 @@ Develop inside a **Docker container / Server**, without worrying about dependenc
 First, you need to do the following:
 
 1. Install VSCode
+
 2. Install the [Remote Development Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
 3. Follow [the instructions to connect](https://code.visualstudio.com/docs/remote/ssh)
 
 {{< callout type="info" >}}

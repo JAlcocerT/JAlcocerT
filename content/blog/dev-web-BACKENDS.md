@@ -27,6 +27,12 @@ Here's a quick comparison to highlight their similarities and differences:
     * Large and active community with extensive resources.
 * **Use Cases:** Building complex web applications, APIs, and backend systems.
 
+**Now, two well known Python BE**
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
+{{< /cards >}}
+
 **Django:**
 
 * **Language:** Python

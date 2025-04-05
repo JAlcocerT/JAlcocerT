@@ -7,13 +7,15 @@ description: 'Flas webapps, IoT Sensors, ChartJS and Websockets.'
 url: 'web-apps-with-flask'
 ---
 
+* https://github.com/pallets/flask/
+* https://pypi.org/project/Flask/
+
+> The Python micro framework for building web applications.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed with NGINX" >}}
   {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
-
-
 
 
 {{< callout type="info" >}}
@@ -263,6 +265,12 @@ With that taken into consideration, lets put this in GHA: https://github.com/JAl
 
 Which has run perfectly: https://github.com/users/JAlcocerT/packages/container/package/flask_sensor_display
 
+
+
+{{< callout type="info" >}}
+And actually the build has happened faster than for streamlit Apps
+{{< /callout >}}
+
 And created this container image:
 
 ```sh
@@ -302,7 +310,7 @@ You need to employ specific techniques to achieve this "push" behavior from the 
 3. WebSockets
 
 
-{{< details title="Details about each Flask Refresh Approach 📌" closed="true" >}}
+{{< details title="More about each Flask Refresh Approach 📌" closed="true" >}}
 
 **1. Client-Side Polling (Simple but Less Efficient):**
 
@@ -318,7 +326,11 @@ You need to employ specific techniques to achieve this "push" behavior from the 
 
 **2. Server-Sent Events (SSE) (More Efficient for One-Way Updates):**
 
-* **How it works:** The server establishes a persistent, one-way connection with the client (browser). When new data is available on the server, it "pushes" that data to the client as a stream of events. The client-side JavaScript listens for these events and updates the page accordingly.
+* **How it works:** The server establishes a persistent, one-way connection with the client (browser). 
+
+When new data is available on the server, it "pushes" that data to the client as a stream of events. 
+
+The client-side JavaScript listens for these events and updates the page accordingly.
 
 * **Implementation:**
     * You'll need a Flask library that supports SSE (e.g., `flask-sse`).
@@ -342,7 +354,6 @@ You need to employ specific techniques to achieve this "push" behavior from the 
 * **Pros:** Highly efficient for real-time applications with potential for bi-directional communication.
 * **Cons:** More complex to implement than polling or SSE. Requires managing WebSocket connections.
 
-
 {{< /details >}}
 
 
@@ -352,7 +363,74 @@ You need to employ specific techniques to achieve this "push" behavior from the 
 
 * For a more efficient solution where you primarily need the server to push updates to the client, **Server-Sent Events (SSE)** is a good choice.
 
+
+{{< details title="More about SSE 📌" closed="true" >}}
+
+
+{{< /details >}}
+
 * If you anticipate needing more interactive features or bi-directional communication in the future, **WebSockets** offer the most flexibility.
+
+{{< callout type="info" >}}
+WebSockets are a **protocol**, and protocols are designed to be language-agnostic.
+{{< /callout >}}
+
+{{< details title="What are WS and Where are they supported? 📌" closed="true" >}}
+
+**What are WebSockets?**
+
+Imagine a traditional HTTP request. Your browser (the client) sends a request to a server, and the server sends back a response.
+ This is a one-way street, and each interaction requires a new connection. If the server has new information to share, the client has to keep asking (polling) or use other more complex techniques like long-polling.
+
+WebSockets offer a different paradigm. They establish a **full-duplex communication channel** over a single, long-lived connection between the client and the server.
+
+Think of it like a persistent phone call where both parties can talk and listen simultaneously without having to hang up and redial for each message.
+
+**Key Characteristics of WebSockets:**
+
+* **Full-Duplex:** Data can flow in both directions (client to server and server to client) at the same time.
+* **Persistent Connection:** Once established, the connection remains open until explicitly closed by either the client or the server. This eliminates the overhead of repeatedly establishing and tearing down connections for each message.
+* **Low Latency:** Because the connection is persistent, data can be exchanged with minimal delay, making it ideal for real-time applications.
+* **Event-Driven:** Communication happens through the exchange of messages (events) over the open connection.
+* **Standardized Protocol:** WebSockets are a standardized protocol (RFC 6455) that is supported by most modern web browsers and server-side technologies.
+
+* **Uses HTTP Handshake:** The WebSocket connection starts with an HTTP handshake. The client sends a special HTTP request to the server indicating its desire to upgrade the connection to WebSocket. If the server supports WebSockets, it sends back a specific HTTP response acknowledging the upgrade. After this handshake, the communication switches to the WebSocket protocol.
+
+* **Different Protocol:** After the initial HTTP handshake, WebSockets use a different, more lightweight protocol for data transmission, which reduces overhead compared to repeated HTTP requests.
+
+
+**Python and WebSockets:**
+
+Python has excellent support for WebSockets through various libraries, the most popular being:
+
+* **`websockets`:** A library focused on providing a clean and efficient implementation of the WebSocket protocol. It's often used for building both clients and servers.
+* **`asyncio` integration:** `websockets` is built on top of Python's `asyncio` library, making it well-suited for asynchronous programming and handling many concurrent WebSocket connections efficiently.
+* **Framework Integrations:** Many popular Python web frameworks like **Django (with `channels`)**, **Flask (with extensions like `Flask-Sockets` or `Flask-SocketIO`)**, and **FastAPI** offer convenient ways to integrate WebSocket functionality into your applications. These frameworks often handle the underlying WebSocket details and provide higher-level abstractions.
+
+**Other Languages:**
+
+WebSockets are also widely supported in many other programming languages, including:
+
+* **Node.js (JavaScript on the server-side):** Has built-in support and popular libraries like `ws`.
+* **Java:** Libraries like `javax.websocket` (part of the Java EE specification) and others like `Netty` provide WebSocket support.
+* **Go:** Libraries like `gorilla/websocket` are commonly used.
+* **Ruby:** Gems like `faye-websocket` and Action Cable (in Ruby on Rails) offer WebSocket capabilities.
+* **C# (.NET):** Has built-in support through the `System.Net.WebSockets` namespace and libraries like SignalR.
+* **And many more!**
+
+**In summary:**
+
+WebSockets are a powerful protocol for enabling real-time, bidirectional communication between clients and servers over a persistent connection. 
+
+{{< /details >}}
+
+As long as a programming language has libraries or built-in support for handling the WebSocket protocol, you can use WebSockets in that language.   
+
+{{< details title="More about WS implementation 📌" closed="true" >}}
+
+
+{{< /details >}}
+
 
 Remember to install any necessary libraries (like `flask-sse` or `Flask-SocketIO`) if you choose those approaches.
 
@@ -364,6 +442,8 @@ Starting from the awsome project: https://github.com/KarolPWr/flask_sensor_displ
 
 <!-- https://www.youtube.com/watch?v=fxbwHl-3WN0 -->
 
+Which **KarolPWr** explained at the video:
+
 {{< youtube "fxbwHl-3WN0" >}}
 
 
@@ -373,11 +453,15 @@ I have made couple of tweaks to it [here](https://github.com/JAlcocerT/flask_sen
 2. Select which sensor you want to pull from via `.env` or `docker-compose.yml`
 3. Added x300 and Pi4 Sensor support
 
+4. Tested the real time data refresh with SSE and WS, but found out that with Taipy seems more intuitive, as seen with [this project web dashboard](https://github.com/JAlcocerT/demo-realtime-pollution)
+
+
+
 ### Deploying
 
 1. Make sure to get docker/container installed
 
-2. Pull the container image:
+2. Pull the [container image](https://github.com/JAlcocerT/flask_sensor_display/pkgs/container/flask_sensor_display):
 
 ```sh
 docker pull ghcr.io/jalcocert/flask_sensor_display:latest

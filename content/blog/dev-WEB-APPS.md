@@ -1,6 +1,6 @@
 ---
 title: "Web Apps with Python Explained"
-date: 2025-04-05T10:20:21+01:00
+date: 2025-04-07T10:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
 description: 'My favourite ways to build web apps with Python.'
@@ -16,7 +16,7 @@ Web programming is the foundation for creating dynamic and interactive websites 
 It goes beyond simply designing a static webpage with HTML and CSS. 
 
 
-{{< details title="See a more detailed look 📌" closed="true" >}}
+{{< details title="See a more detailed look on these 📌" closed="true" >}}
 
 
 * **Core Components:**
@@ -36,6 +36,7 @@ It goes beyond simply designing a static webpage with HTML and CSS.
     * **Network Security:**
         * Protects the web application from security threats (e.g., SQL injection, cross-site scripting).
         * Involves implementing secure coding practices, authentication, and authorization.
+
 * **The Difference Between Web Programming and General Programming:**
     * **Web Programming:** Focuses on creating applications that are accessed through a web browser. It requires understanding client-server architecture, HTTP protocols, and web technologies.
     * **General Programming:** Encompasses a broader range of programming tasks, including desktop applications, mobile apps, and system software. While web programming is a subset of programming, it has very specific constraints and needs.
@@ -74,7 +75,7 @@ Python is a versatile language that's widely used for web development. Here's ho
 
 **In summary:**
 
-Web programming is a complex field that requires a wide range of skills.
+Web programming is a complex field that requires a wide range of skills!
 
 {{< callout type="info" >}}
 Python, with its frameworks, simplifies the process of building web applications, making it a popular choice for web developers.
@@ -678,6 +679,10 @@ For some PoC, Id stay with streamlit as my go to.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex&type=Date)](https://star-history.com/#pallets/flask&django/django&tiangolo/fastapi&tornadoweb/tornado&bottlepy/bottle&cherrypy/cherrypy&sanic-org/sanic&Pylons/pyramid&falconry/falcon&hugapi/hug&pgjones/quart&streamlit/streamlit&flet-dev/flet&reflex-dev/reflex&Date)
 
+
+#### Taipy
+
+* https://github.com/Avaiga/taipy
 
 #### Shiny with R
 

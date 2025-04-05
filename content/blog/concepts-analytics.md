@@ -17,7 +17,6 @@ Here's a breakdown of the differences between **data validation and data profili
 
 ### Data Validation
 
-
 <!-- 
  https://greatexpectations.io/expectations/
  https://greatexpectations.io/blog/what-is-data-profiling

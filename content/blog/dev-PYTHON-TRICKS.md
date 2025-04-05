@@ -17,7 +17,7 @@ https://www.geeksforgeeks.org/python-pillow-creating-a-watermark/
 ## WebApps
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/selfh-grafana-monit/" title="Streamlit 101 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
 {{< /cards >}}
 
 Flask

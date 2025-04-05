@@ -24,7 +24,12 @@ If that resonates with you, keep reading - I will show you how to **leverage Ans
 
 ## Ansible with Raspberry Pi
 
+0. Get a Pi :)
+
+![alt text](/blog_img/hardware/sbcs-x13.jpg)
+
 1. Get Raspbian Installed
+
 2. Install Ansible - Just like you would [in any other Debian](https://jalcocert.github.io/Linux/docs/linux__cloud.md/ansible/#installing-ansible).
 
 ```sh
