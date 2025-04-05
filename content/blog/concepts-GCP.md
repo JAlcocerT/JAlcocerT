@@ -276,6 +276,11 @@ Google Compute Engine charges are based on Network use: Network egress (data lea
 
 ## Conclusions
 
+If you are into DSC, you might be interested to explore Vertex AI:
+
+* Model Garden, Vertex AI - https://cloud.google.com/model-garden?hl=es
+
+
 ### Other Clouds vs GCP
 
 ![Cloud Comparison](/blog_img/DA/cloud-ecosystem.jpg)

@@ -104,9 +104,6 @@ Let's clarify how client/server architecture and three-tier architecture relate 
 
 {{< details title="Now, let's connect these architectures to SSR and SSG: 📌" closed="true" >}}
 
-
-
-
 * **Server-Side Rendering (SSR):**
     * In SSR, the server plays a crucial role in generating the HTML for each page request.
     * When a client requests a page, the server:
@@ -277,17 +274,12 @@ The best framework for you depends on your specific needs and preferences. Consi
 
 > In general, Django is a great choice for large, complex applications, while Flask is ideal for smaller projects and APIs.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex&type=Date)](https://star-history.com/#pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex)
-
+[![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,streamlit/streamlit,&type=Date)](https://star-history.com/#pallets/flask,django/django,tiangolo/fastapi,streamlit/streamlitreflex)
 
 
 * **Reflex:** If you need to build a complex, interactive web application with real-time updates and a **rich UI**.
 * **Flet:** If you want to create a **cross-platform** application that runs on both desktop and web from a single codebase.
 * **Streamlit:** If you're building a **data-driven web app** or dashboard quickly and easily, especially for data science projects.
-* **PySimpleGUI:** If you need to create a simple desktop utility or tool with a basic UI.
-* **NiceGUI:** If you want to create a simple web UI quickly and easily, with a focus on data visualization and interactivity.
-
-[![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex&type=Date)](https://star-history.com/#pallets/flask&django/django&tiangolo/fastapi&tornadoweb/tornado&bottlepy/bottle&cherrypy/cherrypy&sanic-org/sanic&Pylons/pyramid&falconry/falcon&hugapi/hug&pgjones/quart&streamlit/streamlit&flet-dev/flet&reflex-dev/reflex&Date)
 
 #### DJANGO
 
@@ -679,7 +671,13 @@ npm i --save @kanaries/graphic-walker
 
 For some PoC, Id stay with streamlit as my go to.
 
-### Other
+### Others
+
+* **PySimpleGUI:** If you need to create a simple desktop utility or tool with a basic UI.
+* **NiceGUI:** If you want to create a simple web UI quickly and easily, with a focus on data visualization and interactivity.
+
+[![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex&type=Date)](https://star-history.com/#pallets/flask&django/django&tiangolo/fastapi&tornadoweb/tornado&bottlepy/bottle&cherrypy/cherrypy&sanic-org/sanic&Pylons/pyramid&falconry/falcon&hugapi/hug&pgjones/quart&streamlit/streamlit&flet-dev/flet&reflex-dev/reflex&Date)
+
 
 #### Shiny with R
 

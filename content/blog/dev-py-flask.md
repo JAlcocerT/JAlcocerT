@@ -17,7 +17,7 @@ url: 'web-apps-with-flask'
 
 
 {{< callout type="info" >}}
-The initial app is using Flask in a really cool way with ChartJS, like [ChartJS HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo)!
+The initial app is using Flask in a really cool way with **ChartsJS**, like [ChartJS HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo)!
 {{< /callout >}}
 
 {{< chart 90 200 >}}
@@ -47,7 +47,6 @@ The initial app is using Flask in a really cool way with ChartJS, like [ChartJS 
 {{< /chart >}}
 
 ## Sensors Data
-
 
 {{< dropdown title="Ready with Python?" closed="true" >}}
 
@@ -186,6 +185,8 @@ SELECT * FROM sensor_data ORDER BY timestamp DESC LIMIT 5;
 
 ### Pi4
 
+The idea of this feature, is to get the Pi CPU Temperature as we go.
+
 As seen [here](https://forums.raspberrypi.com/viewtopic.php?t=309480), we can read Pi temps:
 
 ```sh
@@ -199,13 +200,143 @@ Or via script:
 python3 ./Sensors/RPi4/pi_loger.py
 ```
 
+See the data pushed to the DB:
+
+```sh
+sqlite3 ./pi_sensor_data.db
+#.tables
+#.schema pi_sensor_data
+SELECT * FROM pi_sensor_data ORDER BY DATE DESC LIMIT 5;
+#.exit
+```
+
+And when we have everything plugged on the Flask WebAPP:
+
+![alt text](/blog_img/iot/flask/flask-pi-cpu.png)
+
+
+{{< callout type="info" >}}
+This Pi4 is pasively cooled and its ~25C more than ambient temperature
+{{< /callout >}}
+
+
+**Deployment Testing**
+
+At this point, we can make a quick container:
+
+```sh
+docker build -t flask_sensor .
+
+docker run --name flask_sensor_webapp \
+-v flask_webapp:/app \
+-w /app \
+-p 9999:9999 \
+--restart always \
+flask_sensor \
+tail -f /dev/null
+#ghcr.io/jalcocert/flask_sensor_display \
+#/bin/sh -c "python3 app.py"
+```
+
+If we get inside the container:
+
+```sh
+sudo docker exec -it flask_sensor_webapp /bin/bash
+python3 app.py
+```
+
+We can see that the vcgencmd is not found.
+
+Actually, it cant be installed in the container...
+
+...trying to install vcgencmd inside a Docker image based on python:3.12.4-slim.
+
+This base image is a minimal Debian-based image with Python. vcgencmd is specific to Raspberry Pi hardware and its firmware.
+
+It is not a general Linux utility and therefore will not be available in or easily installable within a standard Debian-based Docker image like the one you are using.
+
+{{< callout type="warning" >}}
+So to test this with a Pi, just run the code baremetal with a Python environment
+{{< /callout >}}
+
 ### BME280
 
 This is the original feature from KarolPWr original version!
 
+
 ## Real Time Data with Flask
 
+For some time I wanted to try **this Flask Feature**:
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/#flask-and-websockets" title="Flask and WebSockets" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/messaging-protocols/" title="More Messaging Protocols" >}}
+{{< /cards >}}
+
+A Flask app can **refresh automatically in the browser** when new data is added to the database.
+
+But it doesn't happen magically with standard HTTP requests.
+
+You need to employ specific techniques to achieve this "push" behavior from the server to the client:
+
+1. Client Side Polling
+2. SSE
+3. WebSockets
+
+
+{{< details title="Details about each Flask Refresh Approach 📌" closed="true" >}}
+
+**1. Client-Side Polling (Simple but Less Efficient):**
+
+* **How it works:** Your web page (using JavaScript) periodically sends requests to the Flask server (e.g., every few seconds) to check if there's new data. If the server detects new data, it sends it back, and the JavaScript updates the page.
+
+* **Implementation:**
+    * In your `life_info.html` template, use JavaScript's `setInterval()` function to make an AJAX request to a Flask route (e.g., `/life/latest`).
+    * Create a new Flask route (`/life/latest`) that queries the database for the most recent data and returns it as JSON.
+    * The JavaScript on the page receives the JSON response and updates the displayed values.
+
+* **Pros:** Relatively simple to implement.
+* **Cons:** Inefficient. The client makes requests even when there's no new data, wasting bandwidth and server resources. The updates might not be perfectly real-time, depending on the polling interval.
+
+**2. Server-Sent Events (SSE) (More Efficient for One-Way Updates):**
+
+* **How it works:** The server establishes a persistent, one-way connection with the client (browser). When new data is available on the server, it "pushes" that data to the client as a stream of events. The client-side JavaScript listens for these events and updates the page accordingly.
+
+* **Implementation:**
+    * You'll need a Flask library that supports SSE (e.g., `flask-sse`).
+    * Create a Flask route that generates an event stream. This route will continuously check for new data in your database and, when found, format it as an SSE event and send it to the client.
+    * In your `life_info.html` template, use JavaScript's `EventSource` API to connect to the SSE endpoint and listen for incoming events.
+    * When an event is received, the JavaScript updates the page.
+
+* **Pros:** More efficient than polling as the server only sends data when there's an update. Near real-time updates.
+* **Cons:** Primarily for one-way communication (server to client). Can be slightly more complex to set up than simple polling. Flask's built-in development server has limitations with SSE; you might need a production-ready WSGI server.
+
+**3. WebSockets (Most Flexible for Real-Time Bi-Directional Communication):**
+
+* **How it works:** WebSockets provide a full-duplex (bi-directional) communication channel over a single, long-lived connection between the client and the server. Either side can send data at any time.
+
+* **Implementation:**
+    * You'll need a Flask extension for WebSockets (e.g., `Flask-SocketIO`).
+    * Set up WebSocket event handlers on both the server (Flask) and the client (JavaScript).
+    * When new data is added to the database (either by your background thread or any other process), the Flask server can emit a WebSocket event containing the new data.
+    * The client-side JavaScript listens for this event and updates the page.
+
+* **Pros:** Highly efficient for real-time applications with potential for bi-directional communication.
+* **Cons:** More complex to implement than polling or SSE. Requires managing WebSocket connections.
+
+
+{{< /details >}}
+
+
+**Which method should you choose?**
+
+* For a simple dashboard showing relatively infrequent updates, **client-side polling** might be sufficient to get started, but be aware of its inefficiency.
+
+* For a more efficient solution where you primarily need the server to push updates to the client, **Server-Sent Events (SSE)** is a good choice.
+
+* If you anticipate needing more interactive features or bi-directional communication in the future, **WebSockets** offer the most flexibility.
+
+Remember to install any necessary libraries (like `flask-sse` or `Flask-SocketIO`) if you choose those approaches.
 
 ---
 
@@ -228,6 +359,9 @@ I have made couple of tweaks to it [here](https://github.com/JAlcocerT/flask_sen
 
 ![alt text](/blog_img/iot/flask/flask-container-portainer.png)
 
+If you are pushing the **container to GHCR**, remember to set your PAT:
+
+![alt text](static/blog_img/dev/gha-notoken.png)
 
 ---
 

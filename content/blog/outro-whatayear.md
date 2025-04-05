@@ -571,7 +571,7 @@ SysLinuxOS provides a solid foundation for system administrators, but users shou
 {{< details title="Certainly next year...[Video Stuff] 📌" closed="true" >}}
 
 * Create and Publish 15 YT Videos of content I already have blog documentation
-* Explore further python animations
+* Explore further python/[chartJS](https://www.chartjs.org/docs/latest/configuration/animations.html) animations
 * Start exploring RemotionJS framework
 
 

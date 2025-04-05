@@ -1,11 +1,19 @@
 ---
-title: "Whats the right messaging protocol for me?"
+title: "Whats the right Messaging Protocol for me?"
 date: 2025-03-25T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
 description: 'MQTT vs RMQ vs Kafka. Great Tools for IoT Projects!'
 url: 'messaging-protocols'
 ---
+
+As seen here:
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/#flask-and-websockets" title="Flask and WebSockets" >}}
+{{< /cards >}}
+
 
 1. MQTT
 2. Kafka
@@ -166,10 +174,11 @@ When designing a Kafka-based system, consider partitioning your topics for paral
 
 ---
 
-## Outro
+## Conclusions
+
+### Outro
 
 If you want to get into electronics, see these:
 
 1. Arduino IDE
-
 2. LibrePCB

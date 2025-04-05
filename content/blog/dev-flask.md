@@ -800,6 +800,8 @@ WebSocket connections are useful for games or web sites that need to **display l
 
 ### Interesting stuff I learnt recently
 
-* https://github.com/Scale3-Labs/langtrace - Langtrace 🔍 is an open-source, Open Telemetry based end-to-end **observability tool for LLM applications**, providing real-time tracing, evaluations and metrics for popular LLMs, LLM frameworks, vectorDBs and more.. Integrate using Typescript, Python.
+* https://github.com/Scale3-Labs/langtrace - Langtrace 🔍 
+
+> An open-source, Open Telemetry based end-to-end **observability tool for LLM applications**, providing real-time tracing, evaluations and metrics for popular LLMs, LLM frameworks, vectorDBs and more.. Integrate using Typescript, Python.
 
 * Model Garden, Vertex AI - https://cloud.google.com/model-garden?hl=es
