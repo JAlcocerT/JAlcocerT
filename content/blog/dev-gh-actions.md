@@ -1,9 +1,9 @@
 ---
-title: "How ive used Github Actions CI/CD"
+title: "How Ive used Github Actions CI/CD"
 date: 2024-11-17
 draft: false
 tags: ["Dev"]
-description: 'Use Github Actions CI/CD in your workflow. From Static Pages to Container Creation.'
+description: 'Use Github Actions CI/CD in your workflow. From Static Pages to Apps Container Creation.'
 url: 'github-actions-use-cases'
 ---
 
@@ -18,15 +18,22 @@ It can be helpful for [Python](#actions-cicd-for-python-projects) or [Web projec
 ## Actions CI/CD for Python Projects
 
 
-Personal access tokens (classic) function like ordinary OAuth access tokens. They can be used instead of a password for Git over HTTPS, or can be used to authenticate to the API over Basic Authentication.
+Personal access tokens (classic) function like ordinary OAuth access tokens.
+
+They can be used instead of a password for Git over HTTPS, or can be used to authenticate to the API over Basic Authentication.
 
 {{< callout type="info" >}}
 Whenever you want GHA to act in your name, you will require to provide a API Key (Generated at your profile dev settings and added to the repository settings as secret)
 {{< /callout >}}
 
+1. Prepare the repository secret:
+
 ![alt text](/blog_img/dev/re-actions-secret.png)
 
+2. You can get it from the github profile, developer settings, PAT:
 ![alt text](/blog_img/dev/re-actions-pat.png)
+
+3. And place it as secret and variables:
 
 ![alt text](/blog_img/dev/re-actions-secret-ready.png)
 
@@ -179,6 +186,10 @@ jobs:
 {{< /details >}}
 
 ## Github Actions for Web Projects
+
+For pushing data to github pages you wont need to configure a PAT.
+
+So its a little bit simpler than what we just saw with Python Apps and containers with GHA.
 
 And [Github Actions combined with static websites](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) is pretty useful as well.
 

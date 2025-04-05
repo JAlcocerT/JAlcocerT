@@ -1,6 +1,6 @@
 ---
 title: "Web Apps with Python Explained"
-date: 2025-03-28T05:20:21+01:00
+date: 2025-04-05T10:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
 description: 'My favourite ways to build web apps with Python.'
@@ -74,7 +74,12 @@ Python is a versatile language that's widely used for web development. Here's ho
 
 **In summary:**
 
-Web programming is a complex field that requires a wide range of skills. Python, with its frameworks, simplifies the process of building web applications, making it a popular choice for web developers.
+Web programming is a complex field that requires a wide range of skills.
+
+{{< callout type="info" >}}
+Python, with its frameworks, simplifies the process of building web applications, making it a popular choice for web developers.
+{{< /callout >}}
+
 
 ### Client Server
 
@@ -475,79 +480,21 @@ Its extensibility and simplicity make it a popular choice for various web develo
 
 > When I think about flask, I cant avoid to think this [flask cloud deployment](https://jalcocert.github.io/JAlcocerT/get-started-with-flask/) or...
 
-{{< dropdown title="Ready with Python?" closed="true" >}}
-
-```sh
-sudo apt update
-sudo apt install build-essential software-properties-common -y
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update
-
-sudo apt install python3.11 -y
-```
-
-```sh
-sudo apt install python3-pip
-sudo apt install python3.10-venv
-#apt install python3.12-venv
-#sudo apt install python3.12-dev
-```
-
-```sh
-#python -m venv solvingerror_venv #create the venv
-python3 -m venv solvingerror_venv #create the venv
-
-#solvingerror_venv\Scripts\activate #activate venv (windows)
-source solvingerror_venv/bin/activate #(linux)
-```
-{{< /dropdown >}}
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Flask Sensors App" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed with NGINX" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
 
 
+One of the most popular ways to create **python web apps is with Flask**.
 
-```sh
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Tinkering with Flask" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Flask Apps with VPS and HTTPs" >}}
+{{< /cards >}}
 
-#git clone https://github.com/KarolPWr/flask_sensor_display.git
-#git checkout tags/v1.0.0
-pip3 install -r requirements.txt
-```
-
-
-See the temperature of a **[Raspberry Pi](https://jalcocert.github.io/RPi/archives/) CPU**:
-
-```sh
-vcgencmd measure_temp
-```
-
-With a script:
-
-```sh
-python3 ./Sensors/RPi4/pi_loger.py
-```
-
-And for the [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/) with ubuntu:
+<!-- ![Flask Https NginX Setup](/blog_img/apps/flask-nginx-duckdns.png) -->
 
 
-```sh
-sudo apt update
-sudo apt install lm-sensors
-
-sudo sensors-detect
-```
-
-```sh
-sudo modprobe nct6775
-sensors
-#sensors > sensor_output.txt
-```
-
-If we run some [benchmarks](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/), you can see how these CPU Temps, fan speeds...change:
-
-```sh
-sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run #4 cores
-#See the variables quickly
-sensors | grep "Tctl"
-sensors | grep -E "Tctl|fan2|PPT"
-```
 
 #### Streamlit
 
@@ -572,8 +519,7 @@ This setup enables you to **quickly create interactive web apps using Python**, 
 {{< /cards >}}
 
 
-
-{{< details title="PyGWalker: Turn your pandas dataframe into an interactive UI for visual analysis 📌" closed="true" >}}
+{{< details title="PyGWalker | Turn your pandas dataframe into an interactive UI for visual analysis 📌" closed="true" >}}
 
 * https://kanaries.net/pygwalker
 * https://github.com/Kanaries/pygwalker
@@ -698,18 +644,7 @@ npm i --save @kanaries/graphic-walker
 2. 
 
 
-### Flask
-
-One of the most popular ways to create **python web apps is with Flask**.
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Tinkering with Flask" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Flask Apps with VPS and HTTPs" >}}
-{{< /cards >}}
-
-<!-- ![Flask Https NginX Setup](/blog_img/apps/flask-nginx-duckdns.png) -->
-
-
-### Reflex
+#### Reflex
 
 
 {{< cards >}}
@@ -718,7 +653,7 @@ One of the most popular ways to create **python web apps is with Flask**.
 {{< /cards >}}
 
 
-### Flet
+#### Flet
 
 
 
@@ -727,7 +662,7 @@ One of the most popular ways to create **python web apps is with Flask**.
 
 {{< /details >}}
 
-## Python DASH
+#### Python DASH
 
 * https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/
 
@@ -738,7 +673,15 @@ One of the most popular ways to create **python web apps is with Flask**.
 
 
 
-## Shiny with R
+---
+
+## Conclusions
+
+For some PoC, Id stay with streamlit as my go to.
+
+### Other
+
+#### Shiny with R
 
 
 {{< cards >}}
@@ -749,22 +692,17 @@ One of the most popular ways to create **python web apps is with Flask**.
 > You can also see the flexdashboard: https://jalcocert.github.io/JAlcocerT/R-Stocks/
 
 
----
-
-## Conclusions
-
-For some PoC, Id stay with streamlit as my go to.
-
-
-### AI Building Web Apps
+#### AI Building Web Apps
 
 1. https://github.com/stackblitz-labs/bolt.diy
 
 > MIT | Prompt, run, edit, and deploy full-stack web applications using any LLM you want! 
 
-### Desktop Apps with Python
+#### Desktop Apps with Python
 
-When it comes to building desktop applications with Python, there are several frameworks available, each with its own strengths and weaknesses. Here's a breakdown of some of the most popular options:
+When it comes to building desktop applications with Python, there are several frameworks available, each with its own strengths and weaknesses.
+
+Here's a breakdown of some of the most popular options:
 
 **Key Python GUI Frameworks:**
 

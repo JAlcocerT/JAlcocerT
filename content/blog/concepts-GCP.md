@@ -187,18 +187,38 @@ Block storage:  File systems themselves are built on top of block storage. Block
 
 Simply speaking, BQ *is just [SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)*.
 
-But its actually much more than an interface to write your SQL queries.
-
+But its actually much more than an interface to write your **SQL queries**.
 
 {{< cards cols="1" >}}
-  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
-  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB" title="Chat with DB ↗" >}}
 {{< /cards >}}
+
+##### Big Query Tricks
+
+```sql
+SELECT * FROM `projectID-on-gcp.dataset_ID.table_ID`
+--WHERE TIMESTAMP_TRUNC(ts, HOUR) = TIMESTAMP("2024-04-01T12:00:00") 
+--LIMIT 100
+
+
+--This refers to the previous hour
+Select TIMESTAMP_SUB(TIMESTAMP_TRUNC('2024-04-01T12:00:00', HOUR), INTERVAL 1 HOUR)
+```
+
+When in production, with dataform, you might do it with:
+
+```sql
+SELECT * FROM `projectID-on-gcp.dataset_ID.table_ID` as qoe
+WHERE TIMESTAMP_TRUNC(qoe.ts, HOUR) = TIMESTAMP_SUB(TIMESTAMP_TRUNC('${dataform.projectConfig.vars.executionDate}', HOUR), INTERVAL 1 HOUR)
+```
 
 
 #### Big Table
 
-**Bigtable** is highly consistent for multi-row updates: TRUE. Bigtable is designed for low-latency, high-throughput operations and supports atomic row-level mutations, ensuring consistency even with multiple updates.
+**Bigtable** is highly consistent for multi-row updates: TRUE.
+
+Bigtable is designed for low-latency, high-throughput operations and supports atomic row-level mutations, ensuring consistency even with multiple updates.
 
 {{< callout type="info" >}}
 Retirements 

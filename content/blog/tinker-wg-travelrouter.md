@@ -31,7 +31,7 @@ And if for some reason you are no table to do **port forwarding** with your home
 
 > This is why I got a GL-MT3000 Router, to combine it with [Tailscale VPN](#tailscale-and-gl-mt3000)
 
-![DockerHub Multi-Arch Image](/blog_img/hardware/travel-router.jpg)
+![Travel Router GL MT3000](/blog_img/hardware/travel-router.jpg)
 
 
 ## GL-MT3000 Travel Router

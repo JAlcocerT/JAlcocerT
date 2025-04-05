@@ -3,20 +3,17 @@ title: "Interesting Telecom Concepts"
 date: 2023-12-31T23:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Web"]
-description: 'Interesting Telecom stuff I got to know while using Data lakehouse'
-summary: ''
+description: 'Interesting Telecom stuff I got to know while using a Data LakeHouse'
 url: 'telecom-concepts-101'
 ---
 
-*Building the data lakehouse* by Bill Inmon. Helped me a lot. 
+The book *Building the data lakehouse* by Bill Inmon. Helped me a lot. 
 
-https://jalcocert.github.io/RPi/posts/self-internet-monit/
+Also being curious and tinkering with the Pi:
 
 {{< callout type="info" >}}
 Measure your Home Internet Speed with: [WYL and OpenSpeedTest/SpeedTest Tracker](https://jalcocert.github.io/RPi/posts/self-internet-monit/)
 {{< /callout >}}
-
-
 
 ## Telecom Concepts
 
@@ -24,15 +21,19 @@ First things first.
 
 Which modem do I have?
 
-[text](/blog_img/outro/telecom/2cm.heic)
+[text](/blog_img/outro/telecom/2cm.png)
 
 **This is a fiber Cable Modem**
 
-[text](/blog_img/outro/telecom/coax.heic)
+[text](/blog_img/outro/telecom/fiber-cm.png)
 
 This, instead, is a COAX cable:
 
-[text](/blog_img/outro/telecom/20250325_094807.heic)
+[text](/blog_img/outro/telecom/coax.png)
+
+See how they compare:
+
+[text](/blog_img/outro/telecom/cm-fiber-coax.png)
 
 ### Linear TV (LTV)
 
@@ -44,6 +45,7 @@ Viewers tune in at specific times to watch programs and commercials.
 - Requires a predetermined schedule set by the broadcaster.
 
 #### Alternatives to Linear TV:
+
 1. **Streaming Services**  
    Platforms like Netflix, Hulu, Amazon Prime Video, offering on-demand content.
    
@@ -67,6 +69,7 @@ Viewers tune in at specific times to watch programs and commercials.
 An **ONT (Optical Network Terminal)** is a device used in fiber optic networks. It connects the optical fiber from the service provider to the customer's home equipment, such as a router or set-top box.
 
 ### Cable Modem Termination System (CMTS)
+
 A **CMTS (Cable Modem Termination System)** is a core component of cable internet networks, managing communication between cable modems (CM) and the internet.
 
 #### Key Functions of a CMTS:
@@ -83,7 +86,7 @@ A **CMTS (Cable Modem Termination System)** is a core component of cable interne
    Assigns unique IP addresses to each cable modem on the network.
    
 5. **Quality of Service (QoS)**  
-   Prioritizes traffic for smooth performance in applications like streaming or VoIP.
+   Prioritizes traffic for smooth performance in applications like **streaming or VoIP**.
    
 6. **Network Monitoring**  
    Monitors performance, identifies issues, and ensures optimal network operation.
@@ -606,6 +609,40 @@ While RDK-B is focused on software standardization for broadband devices, OFT (O
 
 {{< /tabs >}}
 
+### APHYRates
+
+In essence, "APHYRate" is a metric used in the analysis of **wireless network performance**, particularly when evaluating the **impact of interference on data transmission speeds**.
+
+
+{{< details title="More about aPHYrates 📌" closed="true" >}}
+
+Based on the search results, "APHYRate" appears in the context of analyzing wireless network performance, specifically within IEEE 802.11 networks (Wi-Fi).
+
+It relates to the change or difference in the PHY rate (physical layer rate) due to factors like interference. Here's a breakdown:
+
+* **PHY Rate:**
+    * This refers to the data transfer rate at the physical layer of a wireless network. It's the raw speed at which data is transmitted over the air.
+* **APHYRate:**
+    * From the provided scientific papers, it seems that "APHYRate" is used to describe the change in the PHY rate that occurs due to things like adjacent channel interference. So it is the result of a calculation that shows the difference in the PHY rate.
+    * In the context of the research papers, it is used in calculations to determine the effects of interference on network throughput.
+
+{{< /details >}}
+
+Since APHYRate represents a change in the PHY rate, it is measured in the same units as the PHY rate itself. Therefore, the units for APHYRate are:
+
+* **Mbps (Megabits per second)**: This is the most common unit for measuring data transfer rates in wireless networks.
+
+So, when you see APHYRate values, they will typically be expressed in Megabits per second (Mbps), indicating the change in the data transmission speed.
+
+
+### MTA
+
+* **Multimedia Terminal Adapter:**
+    * This is a piece of hardware used in cable telecommunications. It allows you to use traditional telephone services over a cable internet connection.
+    * This is very relevant to cable based phone services.
+* Cable-based phone services (Multimedia Terminal Adapter).
+
+
 ---
 
 ## FAQ
@@ -618,9 +655,9 @@ phase 1 (28 weeks) --- 90 min
 phase 2 = phase 1 + 12 weeks --- 20/40 min
  -->
 
-Typical Gateways (Routers) Models: remember the **differences between DSL<COAX<<<Fiber**.
+Typical Gateways (Routers) Models: 
 
-| GW Type       | GW Model  | Comment                                                                 |
+| GW Type       | **GW Model**  | Comment|
 |---------------|-----------|-------------------------------------------------------------------------|
 | TG2492LG(-xx) | Arris Mv1 | Arris/CommScope This has an issue and can have a case when              |
 | TG3492LG(-xx) | MV2       | This model has a fan and reports its speed                              |
@@ -629,14 +666,15 @@ Typical Gateways (Routers) Models: remember the **differences between DSL<COAX<<
 | F5685LGB      | MV3 Bosa  |                                                                         |
 | F5685LGE      | MV3 Eth   |                                                                         |
 
+> Remember the **differences between DSL < COAX <<< Fiber**
+
 {{< callout type="info" >}}
 To Analyze such data, [PySpark is highly beneficial](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/). As well as [D&A guidelines](https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/) and [DataModelling](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/)
 {{< /callout >}}
 
-{{< details title="PySpark Examples 📌" closed="true" >}}
+For big data processing in telecom, you might be using [Python](https://jalcocert.github.io/JAlcocerT/guide-python/), or some form of [SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/).
 
-* https://jalcocert.github.io/JAlcocerT/guide-python/
-* https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/
+{{< details title="PySpark Big Data | Examples 📌" closed="true" >}}
 
 ```py
 #Countdistinct one column when another a certain condition
@@ -658,6 +696,10 @@ streamparser_kafka \
     .show(30,truncate=False)
 ```
 {{< /details >}}
+
+{{< callout type="info" >}}
+More about [PySpark](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/)
+{{< /callout >}}
 
 
 
