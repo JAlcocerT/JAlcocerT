@@ -15,7 +15,9 @@ Web programming is the foundation for creating dynamic and interactive websites 
 
 It goes beyond simply designing a static webpage with HTML and CSS. 
 
-Here's a more detailed look:
+
+{{< details title="See a more detailed look 📌" closed="true" >}}
+
 
 * **Core Components:**
     * **Web Content (HTML, CSS, JavaScript):**
@@ -67,13 +69,14 @@ Python is a versatile language that's widely used for web development. Here's ho
         * Organized code structure.
     * **Asynchronous Web Frameworks:** FastApi, and others, take advantage of pythons async capabilities.
 
+
+{{< /details >}}
+
 **In summary:**
 
 Web programming is a complex field that requires a wide range of skills. Python, with its frameworks, simplifies the process of building web applications, making it a popular choice for web developers.
 
 ### Client Server
-
-You're touching on some very important concepts in web development!
 
 Let's clarify how client/server architecture and three-tier architecture relate to Server-Side Rendering (SSR) and Static Site Generation (SSG).
 
@@ -90,7 +93,14 @@ Let's clarify how client/server architecture and three-tier architecture relate 
 
 **How SSR and SSG Fit In**
 
-Now, let's connect these architectures to SSR and SSG:
+
+
+
+
+{{< details title="Now, let's connect these architectures to SSR and SSG: 📌" closed="true" >}}
+
+
+
 
 * **Server-Side Rendering (SSR):**
     * In SSR, the server plays a crucial role in generating the HTML for each page request.
@@ -112,23 +122,26 @@ Now, let's connect these architectures to SSR and SSG:
     * SSG also utilizes the 3 tier architecture, but the application layer is mostly used during the build process. Once built, the web server is mainly used to serve static files.
     * SSG greatly reduces the workload of the server during runtime.
 
+{{< /details >}}
+
+
+
 **Key Relationships**
 
 * Both SSR and SSG operate within the client/server model.
 * Both can utilize the three-tier architecture, but they do so in different ways and at different times.
 * SSR involves dynamic HTML generation on the server for each request, while SSG involves pre-generating static HTML files at build time.
 
-I hope this helps clarify the connections!
 
-### JamStack?
+### JamStack
 
-It's important to understand the core principles of Jamstack to answer this accurately. Here's a breakdown:
+It's important to understand the core principles of Jamstack:
 
 **Jamstack Fundamentals:**
 
 * **JavaScript, APIs, and Markup:**
-    * Jamstack stands for JavaScript, APIs, and Markup.
-    * It emphasizes pre-rendering markup (HTML) as much as possible.
+    * Jamstack stands for JavaScript, **APIs**, and Markup.
+    * It emphasizes **pre-rendering** markup (HTML) as much as possible.
     * Dynamic functionality is handled by JavaScript, and server-side processes are accessed through APIs.
 * **Decoupling:**
     * A key aspect of Jamstack is decoupling the front-end from the back-end.
@@ -136,7 +149,8 @@ It's important to understand the core principles of Jamstack to answer this accu
 * **Pre-rendering:**
     * Jamstack favors pre-rendering static HTML at build time (SSG). This results in extremely fast performance.
 
-**Jamstack and SSR:**
+
+{{% details title="Jamstack and SSR" closed="true" %}}
 
 * **Traditionally, Jamstack leans towards SSG:**
     * The core idea of Jamstack is to serve pre-built static files. This aligns with Static Site Generation (SSG).
@@ -150,10 +164,17 @@ It's important to understand the core principles of Jamstack to answer this accu
 * **Key takeaway:**
     * While the traditional Jamstack architecture emphasizes SSG, it's not strictly exclusive of SSR. Modern implementations may incorporate server-side rendering for specific purposes.
 
-In essence, while Jamstack's core philosophy is centered around pre-built static sites, the landscape is evolving, and hybrid approaches that include elements of SSR are becoming more common.
+{{% /details %}}
+
+
+In essence, while Jamstack's core philosophy is **centered around pre-built static sites**, the landscape is evolving, and hybrid approaches that include elements of SSR are becoming more common.
 
 
 ## Web Apps with Python
+
+
+{{% details title="Web Apps in Python w/o fwk" closed="true" %}}
+
 
 Yes, that Python code would work as a basic CGI script, and you're correct, it's essentially Python without a web framework. Here's a breakdown:
 
@@ -183,18 +204,29 @@ Yes, that Python code would work as a basic CGI script, and you're correct, it's
 
 **In essence:**
 
-Yes, this code will function as a simple CGI script. It's a demonstration of how Python can be used to generate dynamic web content without relying on a web framework.
+Yes, this code will function as a simple CGI script.
+
+It's a demonstration of how Python can be used to generate dynamic web content without relying on a web framework.entations may incorporate server-side rendering for specific purposes.
+
+{{% /details %}}
+
 
 
 ### Python WebApps Frameworks
 
-You've hit on a crucial aspect of modern web development: frameworks. Let's break down what they are and then discuss the Python frameworks you listed.
-
 **What are Web Frameworks?**
 
-Imagine building a house. You *could* start by making your own bricks, mixing your own cement, and crafting every single nail. But that would take an enormous amount of time and effort. Instead, you'd likely buy pre-made bricks, cement, and nails.
+Imagine building a house.
 
-Web frameworks are like those pre-made building materials for web applications. They are collections of pre-written code, libraries, and tools that provide a structure and foundation for building web applications.
+You *could* start by making your own bricks, mixing your own cement, and crafting every single nail.
+
+But that would take an enormous amount of time and effort.
+
+Instead, you'd likely buy pre-made bricks, cement, and nails.
+
+Web frameworks are like those pre-made building materials for web applications.
+
+They are collections of pre-written code, libraries, and tools that provide a structure and foundation for building web applications.
 
 **Key Benefits of Using Frameworks:**
 
@@ -206,8 +238,6 @@ Web frameworks are like those pre-made building materials for web applications. 
 * **Community Support:** Popular frameworks have large communities of developers who provide support and contribute to the framework's development.
 
 **Python Web Frameworks:**
-
-Here's a breakdown of the Python web frameworks you listed, with my thoughts on each:
 
 * **Django:**
     * **What it is:** A high-level, full-stack framework that follows the "batteries-included" philosophy.
@@ -240,7 +270,7 @@ The best framework for you depends on your specific needs and preferences. Consi
 * The features you need.
 * The level of control you want.
 
-In general, Django is a great choice for large, complex applications, while Flask is ideal for smaller projects and APIs.
+> In general, Django is a great choice for large, complex applications, while Flask is ideal for smaller projects and APIs.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex&type=Date)](https://star-history.com/#pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex)
 
@@ -254,6 +284,7 @@ In general, Django is a great choice for large, complex applications, while Flas
 
 [![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex&type=Date)](https://star-history.com/#pallets/flask&django/django&tiangolo/fastapi&tornadoweb/tornado&bottlepy/bottle&cherrypy/cherrypy&sanic-org/sanic&Pylons/pyramid&falconry/falcon&hugapi/hug&pgjones/quart&streamlit/streamlit&flet-dev/flet&reflex-dev/reflex&Date)
 
+#### DJANGO
 
 {{< details title="More Python Django 📌" closed="true" >}}
 
@@ -300,7 +331,9 @@ You've touched on the core strengths of Django. Let's dive deeper into its featu
 * Data analysis and visualization applications
 * API development
 
-You're right, understanding Django's architecture is crucial for effective development. Let's delve into it, comparing it to the traditional MVC pattern and highlighting the nuances of Django's MVT.
+Understanding Django's architecture is crucial for effective development.
+
+Let's delve into it, comparing it to the traditional MVC pattern and highlighting the nuances of Django's MVT.
 
 **MVC (Model-View-Controller) vs. MVT (Model-View-Template)**
 
@@ -356,20 +389,26 @@ You're right, understanding Django's architecture is crucial for effective devel
 
 **In essence:**
 
-Django's MVT architecture provides a clear separation of concerns, making it easier to develop and maintain web applications. While it differs slightly from traditional MVC, the underlying principles are similar. Django handles the "Controller" aspect, allowing you to focus on developing your models, views, and templates.
+Django's MVT architecture provides a clear separation of concerns, making it easier to develop and maintain web applications.
+
+While it differs slightly from traditional MVC, the underlying principles are similar. Django handles the "Controller" aspect, allowing you to focus on developing your models, views, and templates.
 
 
 
 {{< /details >}}
 
 {{< callout type="info" >}}
-Im very aware that there are cool projects. Like [Pylinak](https://github.com/jrkerns/pylinac), which [this PhD](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/) is improving.
+Im very aware that there are cool projects with Django. Like [Pylinak](https://github.com/jrkerns/pylinac), which [this PhD](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/) is improving.
 {{< /callout >}}
 
 
 **In essence:**
 
-Django is a powerful and versatile framework that's well-suited for building complex web applications. Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
+Django is a powerful and versatile framework that's well-suited for **building complex web applications**.
+
+Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
+
+#### FLASK
 
 {{< details title="More Python Flask 📌" closed="true" >}}
 
@@ -434,9 +473,83 @@ Flask is a versatile and **powerful microframework** that's ideal for developers
 
 Its extensibility and simplicity make it a popular choice for various web development tasks.
 
+> When I think about flask, I cant avoid to think this [flask cloud deployment](https://jalcocert.github.io/JAlcocerT/get-started-with-flask/) or...
+
+{{< dropdown title="Ready with Python?" closed="true" >}}
+
+```sh
+sudo apt update
+sudo apt install build-essential software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+
+sudo apt install python3.11 -y
+```
+
+```sh
+sudo apt install python3-pip
+sudo apt install python3.10-venv
+#apt install python3.12-venv
+#sudo apt install python3.12-dev
+```
+
+```sh
+#python -m venv solvingerror_venv #create the venv
+python3 -m venv solvingerror_venv #create the venv
+
+#solvingerror_venv\Scripts\activate #activate venv (windows)
+source solvingerror_venv/bin/activate #(linux)
+```
+{{< /dropdown >}}
 
 
-### Streamlit
+
+```sh
+
+#git clone https://github.com/KarolPWr/flask_sensor_display.git
+#git checkout tags/v1.0.0
+pip3 install -r requirements.txt
+```
+
+
+See the temperature of a **[Raspberry Pi](https://jalcocert.github.io/RPi/archives/) CPU**:
+
+```sh
+vcgencmd measure_temp
+```
+
+With a script:
+
+```sh
+python3 ./Sensors/RPi4/pi_loger.py
+```
+
+And for the [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/) with ubuntu:
+
+
+```sh
+sudo apt update
+sudo apt install lm-sensors
+
+sudo sensors-detect
+```
+
+```sh
+sudo modprobe nct6775
+sensors
+#sensors > sensor_output.txt
+```
+
+If we run some [benchmarks](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/), you can see how these CPU Temps, fan speeds...change:
+
+```sh
+sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run #4 cores
+#See the variables quickly
+sensors | grep "Tctl"
+sensors | grep -E "Tctl|fan2|PPT"
+```
+
+#### Streamlit
 
 {{< details title="Why I love Streamlit for Quick UI's 📌" closed="true" >}}
 

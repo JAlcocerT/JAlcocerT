@@ -8,8 +8,8 @@ tags: ["Dev","Python"]
 #     alt: "<alt text>" # alt text
 #     capt-ion: "<text>" # display caption under cover   
 description: 'The must know in Python to get started with your projects.'
-summary: 'As part of your Data Analytics journey, you will have to build knowledge of Python.
-In this post I am collecting some of the must know tricks to start your projects.'
+#summary: 'As part of your Data Analytics journey, you will have to build knowledge of Python.
+#In this post I am collecting some of the must know tricks to start your projects.'
 url: 'guide-python'
 ---
 
@@ -21,7 +21,7 @@ In this post I am collecting some of the must know tricks to start your projects
 * {{< newtab url="https://github.com/python/cpython" text="The Python Source Code at Github" >}}
     <!-- * License: {{< newtab url="https://github.com/flet-dev/flet?tab=Apache-2.0-1-ov-file#readme" text="Apache 2.0" >}} ❤️ -->
 
-Python has evolved into a go-to choice for programmers across various domains. Let's delve into Python's history, philosophy, syntax, features, applications, and ecosystem.
+Python has evolved into a go-to choice for programmers across various domains.
 
 ## About Python
 
@@ -33,15 +33,21 @@ Its guiding philosophy, encapsulated in "The Zen of Python," prioritizes readabi
 
 ### Syntax and Features
 
-Python's hallmark is its concise and readable syntax. It's strongly typed yet dynamic, eliminating the need for explicit type annotations. Indentation defines code blocks, promoting clean and consistent formatting. Python supports multiple programming paradigms, including functional and object-oriented programming, enhancing its versatility.
+Python's hallmark is its concise and readable syntax.
+
+It's strongly typed yet dynamic, eliminating the need for explicit type annotations.
+
+**Indentation defines code blocks**, promoting clean and consistent formatting.
+
+Python supports multiple programming paradigms, including functional and object-oriented programming, enhancing its versatility.
 
 ### Applications and Ecosystem
 
 Python finds application across diverse fields, including:
 
-* web development with frameworks like Django
-* data analysis
-* and machine learning
+* Web development with frameworks like Django
+* Data analysis
+* and... machine learning!
 
 Its extensive ecosystem boasts third-party libraries like TensorFlow and OpenCV, accessible via the pip package manager. Python's flexibility and ease of use make it an invaluable tool for tackling projects of all scales.    
 
@@ -49,7 +55,9 @@ Its extensive ecosystem boasts third-party libraries like TensorFlow and OpenCV,
 
 Python is prized for its simplicity and readability, making it an ideal language for beginners.
 Its versatility lends itself to a myriad of applications, from web development to machine learning.
+
 Python's dynamic syntax supports various programming paradigms, enhancing developer productivity.
+
 The extensive ecosystem of libraries and robust community support empowers developers to tackle complex challenges with confidence.
 
 ---

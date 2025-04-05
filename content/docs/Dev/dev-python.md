@@ -22,9 +22,6 @@ A good readme does the trick for any project.
 
 This is a [good Python Project Readme.](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/README.md)
 
-
-
-
 ### Python Virtual Envs
 
 

@@ -2,6 +2,8 @@ hugo.exe
 *venv/
 
 linkchecker_output.txt
+sensor_output.txt
+*_output.txt
 
 output.txt
 Spliit Export - 2025-02-01.json

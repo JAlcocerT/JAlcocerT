@@ -10,6 +10,10 @@ url: 'benchmarking-computers'
 
 How good is your PC?
 
+Do we really need something bigger, faster, newer?
+
+Lets see what we have:
+
 ```sh
 curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Benchmark101.sh
 chmod +x Benchmark101.sh & ./Benchmark101.sh
@@ -17,7 +21,7 @@ chmod +x Benchmark101.sh & ./Benchmark101.sh
 
 ### CPU Benchmarks
 
-The first CPU at home was an Intel P3, then an AMD Athlon 64 3200+ came (both 1 core!).
+The first CPU at home was an Intel P3, then an AMD Athlon 64 3200+ came (both 1 core!)
 
 And look at them now...
 
