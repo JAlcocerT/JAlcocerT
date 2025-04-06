@@ -3,7 +3,7 @@ title: "Web Apps with Flask and cool ChartJS"
 date: 2025-04-05T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'Flas webapps, IoT Sensors, ChartJS and Websockets.'
+description: 'Flask webapps, IoT Sensors, ChartJS and Websockets.'
 url: 'web-apps-with-flask'
 ---
 
@@ -13,10 +13,139 @@ url: 'web-apps-with-flask'
 > The Python micro framework for building web applications.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed with NGINX" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
+
+These are the main files and **structure of a Python Flask Project**:
+
+{{< filetree/container >}}
+  {{< filetree/folder name="FlaskProject" >}}
+    {{< filetree/file name="app.py" >}}
+    {{< filetree/folder name="templates" state="open" >}}
+      {{< filetree/file name="index.html" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
+As you can see, with Flaks we need to be creative with `html`.
+
+Within the html, the content of the variables processed via python are represented.
+
+
+{{< details title="Be aware about the routes! 📌" closed="true" >}}
+
+Imagine your web application as a house with different rooms, and each room serves a specific purpose. When someone (a user's web browser) comes to your house (your web application), they need a way to get to the room they want.
+
+**A Flask route is essentially a specific URL (a web address) that, when accessed, tells your Flask application which "room" (which piece of code or function) should handle the request and what to show to the user.**
+
+Here's a breakdown of the key concepts:
+
+* **URL (Uniform Resource Locator):** This is the web address you type into your browser (e.g., `http://yourwebsite.com/about`, `http://yourwebsite.com/products/123`).
+
+* **Endpoint:** In Flask terminology, a route is associated with a specific **endpoint**, which is the name of the Python function that will be executed when that URL is accessed.
+
+* **Mapping:** Flask uses a mechanism to **map** specific URLs to these endpoint functions. This mapping is what we call a **route**.
+
+* **HTTP Methods:** When you access a URL, your browser sends an HTTP request. Common HTTP methods include:
+    * **GET:** Used to retrieve data from the server (e.g., viewing a webpage).
+    * **POST:** Used to send data to the server (e.g., submitting a form).
+    * **PUT:** Used to update existing data on the server.
+    * **DELETE:** Used to remove data from the server.
+
+    Flask routes can be defined to handle specific HTTP methods for a given URL.
+
+**How Routes are Defined in Flask:**
+
+You typically define routes in your Flask application using the `@app.route()` decorator above a Python function.
+
+```python
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return "This is the about page."
+
+@app.route('/products/<int:product_id>')
+def product_detail(product_id):
+    return f"Details for product with ID: {product_id}"
+```
+
+**Explanation of the Examples:**
+
+* **`@app.route('/')`**: This creates a route for the root URL of your application (e.g., `http://yourwebsite.com/`). When a user accesses this URL using a **GET** request (which is the default), the `home()` function will be executed. The `home()` function then renders the `index.html` template.
+
+* **`@app.route('/about')`**: This creates a route for the `/about` URL (e.g., `http://yourwebsite.com/about`). When accessed with a **GET** request, the `about()` function will be executed, and it returns a simple string.
+
+* **`@app.route('/products/<int:product_id>')`**: This creates a route for URLs that start with `/products/` followed by an integer.
+    * `<int:product_id>` is a **dynamic route parameter**. Flask will capture the integer part of the URL and pass it as an argument to the `product_detail()` function.
+    * For example, if a user accesses `http://yourwebsite.com/products/123`, the `product_detail()` function will be called with `product_id` set to `123`.
+
+
+> For every route, i should be pointing to a certain index.html?
+
+No, **not necessarily**. While the root route (`/`) often points to your main `index.html` (or a similar homepage), **different routes in your Flask application can (and often do) point to different HTML templates, generate dynamic HTML directly, or even return other types of data like JSON.**
+
+Think back to the "house with rooms" analogy:
+
+* **`/` (the homepage)** might lead to your main living room, which is represented by `index.html`.
+
+* **`/about`** might lead to a different room, perhaps represented by an `about.html` template.
+
+* **`/products/123`** might dynamically generate information about a specific product and could use a `product_detail.html` template to display that information, but the content within that template would change based on the `product_id` in the URL.
+
+* **`/api/data`** might be a route that doesn't return any HTML at all. Instead, it might return data in JSON format, which could be used by JavaScript on your frontend or by other applications.
+
+**Here's a more detailed breakdown:**
+
+* **Serving Static HTML:** You can definitely have routes that directly render specific HTML files. This is common for static pages like "About Us," "Contact," or specific sections of your site.
+
+   ```python
+   @app.route('/about')
+   def about_page():
+       return render_template('about.html')
+
+   @app.route('/contact')
+   def contact_page():
+       return render_template('contact.html')
+   ```
+
+* **Generating Dynamic HTML:** Many routes will involve generating HTML dynamically based on data. This is where you use template engines like Jinja2 (which comes with Flask). The route function fetches data and passes it to a template, which then renders the final HTML. Different routes will likely fetch different data and might use different templates to display that data.
+
+   ```python
+   @app.route('/users/<username>')
+   def user_profile(username):
+       user = get_user_data(username)  # Fetch user data
+       return render_template('profile.html', user=user)
+   ```
+
+* **Returning Other Data Formats:** Flask routes aren't limited to returning HTML. They can return other data formats, which is common for building APIs (Application Programming Interfaces):
+
+   ```python
+   from flask import jsonify
+
+   @app.route('/api/users')
+   def get_all_users():
+       users = fetch_all_users()
+       return jsonify(users)  # Returns data as JSON
+   ```
+
+
+{{< /details >}}
+
+
+A Flask route acts as a **traffic controller** for your web application.
+
+It listens for specific URLs and, based on the URL and the HTTP method used, directs the request to the appropriate Python function to generate a response for the user's browser. It's the fundamental way you define the different "pages" and functionalities of your web application and how users can interact with them.
+
+Use routes to structure your web application and define how different URLs are handled.
 
 {{< callout type="info" >}}
 The initial app is using Flask in a really cool way with **ChartsJS**, like [ChartJS HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo)!
@@ -48,7 +177,38 @@ The initial app is using Flask in a really cool way with **ChartsJS**, like [Cha
 }
 {{< /chart >}}
 
+
+{{< chart 90 200 >}}
+{
+  type: 'line',
+  data: {
+    labels: Utils.months({count: 7}),
+    datasets: [{
+    label: 'Trend with ChartJS',
+    data: [65, 59, 80, 81, 56, 55, 40],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+  },
+  options: {
+    maintainAspectRatio: false
+  }
+}
+{{< /chart >}}
+
+
 ## Sensors Data
+
+How about using some sensor data to be displayed into a Flask Web app?
+
+We can use the data from IoT Sensors, or directly data from our own devices: laptops, server, sbc...
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/" title="x13 and SBCs" image="/blog_img/hardware/sbcs-x13.jpg" subtitle="CPU Temp" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/" title="X300" image="/blog_img/mini_pc/bmax_asrockx300.jpg" subtitle="Server CPU Temp" >}}
+{{< /cards >}}
+
 
 {{< dropdown title="Ready with Python?" closed="true" >}}
 
@@ -516,12 +676,12 @@ We can make this kind of quick Flask Web socket Web App:
 
 ![alt text](/blog_img/iot/flask/flask-x13-ws.png)
 
-<!-- 
-https://youtu.be/niEcLnabdpo -->
 
 ```sh
 python3 ./Z_Tests/app-x13-we-chartjs.py
 ```
+
+You can see how it works on [this video](https://youtu.be/niEcLnabdpo)
 
 {{< youtube "niEcLnabdpo" >}}
 
@@ -552,10 +712,12 @@ I have made couple of tweaks to it [here](https://github.com/JAlcocerT/flask_sen
 
 1. Added [Github Actions support](https://jalcocert.github.io/JAlcocerT/git-recap/#github-actions) with multiarch container
 2. Select which sensor you want to pull from via `.env` or `docker-compose.yml`
-3. Added x300 and Pi4 Sensor support
+3. Added x300, x13 and Pi4 Sensor support
 
-4. Tested the real time data refresh with SSE and WS, but found out that with Taipy seems more intuitive, as seen with [this project web dashboard](https://github.com/JAlcocerT/demo-realtime-pollution)
+4. Tested the **real time data refresh** with SSE and **WS**, but found out that with Taipy seems more intuitive, as seen with [this project web dashboard](https://github.com/JAlcocerT/demo-realtime-pollution)
 
+
+Definitely will come back to this technology with some bigger IoT project.
 
 
 ### Deploying
@@ -596,3 +758,10 @@ See the logs at Portainer:
 ---
 
 ## FAQ
+
+If you want **simpler Dashbards**, check:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Streamlit Web Apps" icon="warning">}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="BI Tools with Docker" >}}
+{{< /cards >}}
