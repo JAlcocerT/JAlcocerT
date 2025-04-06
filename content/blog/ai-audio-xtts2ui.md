@@ -1,16 +1,65 @@
 ---
-title: "Local Text to Speech with xTTS2 UI"
-date: 2025-12-15T23:20:21+01:00
+title: "Local Audio with AI"
+date: 2025-04-06T18:20:21+01:00
 draft: false
-tags: ["Gen-AI","Docker","Self-Hosting"]
-cover:
-  image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
-  alt: "SelfHosting xTTS2 with Docker." # alt text
-  caption: "Succesfull installation of xTTS2 with Docker." # display caption
+# cover:
+#   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
+#   alt: "SelfHosting xTTS2 with Docker." # alt text
+#   caption: "Succesfull installation of xTTS2 with Docker." # display caption
 description: 'Clone audio with xTTS2'
-summary: 'Installing xTTS2 with Docker. Clone audio locally.'    
 url: 'guide-xtts2-ui-docker'
 ---
+
+
+## Coqui TTS
+
+https://github.com/coqui-ai/TTS
+
+
+> MPL |  🐸💬 - a deep learning toolkit for Text-to-Speech, battle-tested in research and production 
+
+```sh
+docker exec -it coquitts /bin/bash
+
+docker run --rm -it -p 5002:5002 --entrypoint /bin/bash ghcr.io/coqui-ai/tts-cpu
+
+python3 TTS/server/server.py --list_models #To get the list of available models
+
+python3 TTS/server/server.py --model_name tts_models/en/vctk/vits # To start a server
+#python3 TTS/server/server.py --model_name tts_models/es/mai/tacotron2-DDC
+```
+
+The web ui will be at port `5002`:
+
+![alt text](/blog_img/GenAI/audio/coqui-tts.png)
+
+> And it works with more language than EN as well!
+
+
+```yml
+version: '3.8'
+
+services:
+  tts-cpu:
+    image: ghcr.io/coqui-ai/tts-cpu
+    container_name: coquitts
+    ports:
+      - "5002:5002"
+    entrypoint: /bin/bash
+    tty: true
+    stdin_open: true
+    # Optional: Mount a volume to persist data or access local files
+    # volumes:
+    #   - ./local_data:/data
+```
+
+## Bark
+
+https://github.com/suno-ai/bark
+
+## More
+
+Text to Speech with xTTS2 UI
 
 https://github.com/BoltzmannEntropy/xtts2-ui
 https://github.com/BoltzmannEntropy/xtts2-ui?tab=MIT-1-ov-file#readme
@@ -21,7 +70,7 @@ https://coqui.ai/cpml.txt
 
 Hardware needed: works with CPU ✅
 
-
+Installing xTTS2 with Docker. Clone audio locally.
 
 
 ```yml

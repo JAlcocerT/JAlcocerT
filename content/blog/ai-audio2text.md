@@ -4,9 +4,11 @@ date: 2025-12-06T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"] 
 description: 'Audio 2 Text Open Source'
-summary: 'An overview to the existing open source alternatives for audio to text conversion' 
 url: 'audio-to-text-open-source'    
 ---
+
+An overview to the existing open source alternatives for audio to text conversion
+
 
 ## WrireOut AI
 
