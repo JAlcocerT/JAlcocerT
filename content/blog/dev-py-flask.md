@@ -212,7 +212,7 @@ SELECT * FROM pi_sensor_data ORDER BY DATE DESC LIMIT 5;
 #.exit
 ```
 
-And when we have everything plugged on the Flask WebAPP:
+And when we have everything plugged on the **Flask WebAPP**:
 
 ![alt text](/blog_img/iot/flask/flask-pi-cpu.png)
 
@@ -288,6 +288,27 @@ If you are pushing the **container to GHCR**, remember to set your PAT:
 ### BME280
 
 This is the original feature from KarolPWr original version!
+
+
+### x13
+
+For the x13 laptop, I needed to use:
+
+```sh
+sudo apt update
+sudo apt install acpi
+acpi -t #41C !
+```
+
+
+```sh
+cat /sys/class/thermal/thermal_zone0/type
+#acpitz
+
+jalcocert@jalcocert-X13:~$ cat /sys/class/thermal/thermal_zone0/temp
+#41000
+```
+
 
 
 ## Real Time Data with Flask
@@ -368,9 +389,9 @@ The client-side JavaScript listens for these events and updates the page accordi
 
 Let's break down how to set up Flask real-time updates in a browser using Server-Sent Events (SSE) and address the role of Redis in this context.
 
-### Setting up Flask Real-time Updates with SSE
+**Setting up Flask Real-time Updates with SSE***
 
-Server-Sent Events (SSE) is a simple, standards-based way for a web server to push updates to a web browser over a persistent HTTP connection. 
+**Server-Sent Events** (SSE) is a simple, standards-based way for a web server to push updates to a web browser over a persistent HTTP connection. 
 
 Once the connection is established, the server can send data to the client whenever new information is available, without the client needing to make repeated requests.
 
@@ -436,7 +457,10 @@ WebSockets are a **protocol**, and protocols are designed to be language-agnosti
 **What are WebSockets?**
 
 Imagine a traditional HTTP request. Your browser (the client) sends a request to a server, and the server sends back a response.
- This is a one-way street, and each interaction requires a new connection. If the server has new information to share, the client has to keep asking (polling) or use other more complex techniques like long-polling.
+
+This is a one-way street, and each interaction requires a new connection.
+
+If the server has new information to share, the client has to keep asking (polling) or use other more complex techniques like long-polling.
 
 WebSockets offer a different paradigm. They establish a **full-duplex communication channel** over a single, long-lived connection between the client and the server.
 
@@ -488,7 +512,28 @@ As long as a programming language has libraries or built-in support for handling
 {{< /details >}}
 
 
-Remember to install any necessary libraries (like `flask-sse` or `Flask-SocketIO`) if you choose those approaches.
+We can make this kind of quick Flask Web socket Web App:
+
+![alt text](/blog_img/iot/flask/flask-x13-ws.png)
+
+<!-- 
+https://youtu.be/niEcLnabdpo -->
+
+```sh
+python3 ./Z_Tests/app-x13-we-chartjs.py
+```
+
+{{< youtube "niEcLnabdpo" >}}
+
+
+A trick to debug is with the browser console:
+
+![alt text](/blog_img/iot/flask/flask-ws-console.png)
+
+
+{{< callout type="info" >}}
+Remember to install any necessary libraries accordingly (like `flask-sse` or `Flask-SocketIO`) if you choose those approaches.
+{{< /callout >}}
 
 ---
 

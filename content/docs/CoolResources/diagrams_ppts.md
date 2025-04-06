@@ -43,6 +43,10 @@ And you can use it for free at: https://mermaid.live/edit
 
 **Python Plotly Graphs**
 
+### [ChartJS](https://www.chartjs.org/) Graphs
+
+
+
 ---
 
 ## PPTs as Code
