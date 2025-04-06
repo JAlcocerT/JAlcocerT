@@ -11,6 +11,11 @@ Its been a while since I have done some project/tasks **with R**.
 
 But recently, I had an idea to put a Flexdashboard inside a mdx post for Astro websites.
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/" title="FlexDashboards 101" >}}
+{{< /cards >}}
+
 And this thing worked perfectly...
 
 But how can explain to someone whats going on?

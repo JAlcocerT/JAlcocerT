@@ -58,6 +58,8 @@ prepare `.gitignore`
 
 {{< /details >}}
 
+> As covered [here](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/#python-virtual-envs)
+
 3. **Poetry** is a Python dependency management and packaging tool.
 
 It provides a way to manage Python project dependencies, create virtual environments, and package your Python projects for distribution.

@@ -10,6 +10,10 @@ url: 'web-apps-with-flask'
 * https://github.com/pallets/flask/
   * https://pypi.org/project/Flask/
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-projects-python-dependencies/" title="Python Deps 101" >}}
+{{< /cards >}}
+
 > The Python micro framework for building web applications.
 
 {{< cards >}}

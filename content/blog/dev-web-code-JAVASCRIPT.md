@@ -10,11 +10,16 @@ url: 'javascript-for-static-websites'
 Ive learnt all of this **about JS** thanks to tinkering with the [Astro](https://jalcocert.github.io/JAlcocerT/create-your-website/#what-ive-learnt-about-astro) and [NextJS](https://fossengineer.com/nextjs-ssg/) web frameworks.
 
 
-
 {{< callout type="info" >}}
-https://github.com/sorrycc/awesome-javascript
+See more at https://github.com/sorrycc/awesome-javascript
 {{< /callout >}}
 
+For me JS is a mean to make cooler websites:
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101" >}}
+{{< /cards >}}
 
 ### JS Dependency Management
 
@@ -148,8 +153,6 @@ I saw this one for the first time at this Astro Theme.
 
 ### Image Galleries
 
-
-
 * Photoswipe - https://github.com/dimsemenov/PhotoSwipe
   * https://www.launchfa.st/blog/photoswipe-astro
   * https://photoswipe.com/getting-started
@@ -179,7 +182,8 @@ It allows you to write Python code and execute it directly in a web browser with
 
 Skulpt achieves this by transpiling Python code into equivalent JavaScript code, which can then be executed by the browser's JavaScript engine.
 
-Here are some things you can do with Skulpt:
+{{< details title="Some things you can do with Skulpt 📌" closed="true" >}}
+
 
 1. **Interactive Python Console**: You can embed a Python console directly into your web application, allowing users to enter Python code and see the results immediately. This can be useful for educational purposes or for providing a sandbox environment for experimenting with Python code.
 
@@ -209,3 +213,5 @@ Yes, you can create a **fully static astro site with Plotly graphs using Skulpt 
 5. **Static hosting**: Host your static astro site on a web server or a static hosting platform. This can be done using services like GitHub Pages, Netlify, or Vercel, which allow you to deploy static websites easily.
 
 By following these steps, you can create a fully static astro site with Plotly graphs, where the Python code for generating the graphs is executed in the browser using Skulpt. Users can interact with the site without the need for a backend server, making it lightweight and easy to deploy.
+
+{{< /details >}}

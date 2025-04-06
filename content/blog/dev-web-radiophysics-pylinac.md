@@ -140,6 +140,10 @@ Once containers are installed, **you can bundle your apps** or use the ones that
 
 3. To understand better Python Web Frameworks, specially **Django**, as its the one that QaTrack uses
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-projects-python-dependencies/" title="Python Deps 101" >}}
+{{< /cards >}}
+
 
 {{< details title="Django's Core Philosophy and Strengths 📌" closed="true" >}}
 
@@ -186,9 +190,7 @@ Once containers are installed, **you can bundle your apps** or use the ones that
 {{< /details >}}
 
 
-**In essence:**
-
-Django is a powerful and versatile framework that's well-suited for building complex web applications. 
+**In essence:** Django is a powerful and versatile framework that's well-suited for building complex web applications. 
 
 Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
 

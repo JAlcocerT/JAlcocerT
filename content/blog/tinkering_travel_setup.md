@@ -7,7 +7,7 @@ description: "Software and Hardware setup before trips or vacations. Tech Travel
 url: 'tech-for-a-trip'
 ---
 
-Software and Hardware setup before trips or vacations.
+Software and Hardware setup **before trips or vacations**.
 
 ### Software Setup
 
@@ -257,7 +257,7 @@ Setup [Nextcloud as Docker container](https://github.com/JAlcocerT/Docker/tree/m
 2. Piwigo
 3. [Photoview](https://fossengineer.com/selfhosting-Photoview-docker/)
 4. Ente, PhotoPrism, Immich...
-5. And...**PiGallery2**!
+5. And...**PiGallery2**: which provides the following cool web UI!
 
 ![PiGallery2 Map Zoom](/blog_img/selfh/Photo/PiGallery2-MapZoom.png)
 
