@@ -183,7 +183,7 @@ docker pull ghcr.io/your_github_username/your_repo_name:v1.0
 
 ### Testing GH Actions Workflows locally
 
-* https://github.com/nektos/act
+* Check the project: https://github.com/nektos/act
 
 > Run your GitHub Actions locally 🚀
 

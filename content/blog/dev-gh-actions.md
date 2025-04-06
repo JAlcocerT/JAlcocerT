@@ -550,3 +550,9 @@ Use static deploy, as seen on the `static.yml` [GH Actions workflow at the RStoc
   {{< card link="https://jalcocert.github.io/R_Stocks/" title="FlexDashboard RStocks" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/FlexDash-BoomBurst.png" subtitle="Deployed to GH Pages as a Static index" >}}
   {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Rstocks and its Flexdashboard" >}}
 {{< /cards >}}
+
+## Conclusions
+
+To test your GHA workflows locally, try: https://github.com/nektos/act
+
+> Run your GitHub Actions locally 🚀

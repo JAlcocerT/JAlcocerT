@@ -1,6 +1,6 @@
 ---
 title: "How to Share Pi OS via Torrent [with VPN]"
-date: 2024-12-02
+date: 2025-12-02
 draft: false
 tags: ["Dev"]
 description: How to share Raspberry Pi OS (Bullseye) as Torrent with Qbitrorrent/Transmission and VPN.
@@ -171,7 +171,7 @@ curl -sS https://ipinfo.io/json #the command to use
 
 ---
 
-## Conclusiones
+## Conclusions
 
 So thats it for now.
 
