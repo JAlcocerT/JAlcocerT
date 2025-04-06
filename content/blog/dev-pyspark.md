@@ -158,7 +158,7 @@ Now that we have a brief idea about **time-traveling**.
 * Manifest File: A metadata file that lists a subset of data files in a snapshot. It includes partition tuple, column-level stats, and summary information for efficient scan planning.
 
 
-> This [blog post](https://billennium.com/time-traveling-in-data-lakes/) was very informative to get started!
+> This **[blog post](https://billennium.com/time-traveling-in-data-lakes/) was very informative** to get started!
 
 #### How to Apply Time Travel
 

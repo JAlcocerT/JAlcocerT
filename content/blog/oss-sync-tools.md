@@ -7,6 +7,9 @@ description: 'Alternatives to sync your files. From Nextcloud Web Dav to SFTP Go
 url: 'sync-file-tools'
 ---
 
+I was confortable so far thinking that it was all about Nextcloud and Syncthing.
+
+But lets have a closer look, as ftp and webdavs can also make the trick in some cases.
 
 ## SelfHosted Cloud
 
@@ -210,14 +213,16 @@ I used iperf and iotop to check that I get ~730Mbits/sec on Wifi and ~916Mbits/s
 
 ### More Tools
 
-Sea also: 
 
-1. #https://github.com/maxime1907/docker-filegator
+{{< details title="See 7 other tools to setup with Docker 📌" closed="true" >}}
+
+
+1. https://github.com/maxime1907/docker-filegator
 
 2. Filerun
 
 ```yml
-version: '2'
+#version: '2'
 
 services:
   db:
@@ -259,7 +264,7 @@ services:
 #https://filezilla-project.org
 
 ---
-version: "2.1"
+#version: "2.1"
 services:
   filezilla:
     image: lscr.io/linuxserver/filezilla:latest
@@ -281,7 +286,7 @@ services:
 4. Picoshare
 
 ```yml
-version: '2'
+#version: '2'
 services:
   picoshare:
     environment:
@@ -312,7 +317,7 @@ networks:
 #https://github.com/stonith404/pingvin-share/blob/main/docker-compose.yml
 
 
-version: '3.8'
+#version: '3.8'
 services:
   pingvin:
     image: stonith404/pingvin-share
@@ -400,3 +405,5 @@ services:
       - APP_CONTACT_EMAIL=changemecerdo
       - APP_DOWNLOAD_TIME=30
 ```
+
+{{< /details >}}

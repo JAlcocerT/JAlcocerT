@@ -248,6 +248,10 @@ To sell to the masses, **you need a cool UI** for the users to manage their stuf
 If you are looking for a [LinkTree Alternative, see LinkStack](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/)
 {{< /callout >}}
 
+See mine deployed: https://whois.jalcocertech.com/@me
+
+![alt text](/blog_img/web/web-linkstack.png)
+
 What's next?
 
 Maybe place [some GDPR compliant Web Analytics](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics) or add some [other cool features](https://jalcocert.github.io/JAlcocerT/create-your-website/#features-for-webs)

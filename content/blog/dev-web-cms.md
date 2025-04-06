@@ -1,6 +1,6 @@
 ---
 title: "Websites with SSG + CMS - The missing piece."
-date: 2025-03-22T22:20:21+01:00
+date: 2025-03-23T22:20:21+01:00
 draft: false
 description: "UI for customization SSGs. About Keystatic CMS with Astro."
 url: 'cms-for-static-websites'

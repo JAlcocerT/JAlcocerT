@@ -1,6 +1,6 @@
 ---
 title: "DBs (and Tools) for the AI era"
-date: 2025-02-26T11:20:21+01:00
+date: 2025-02-27T11:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Setting up DataBases for Data Analytics and AI Projects'

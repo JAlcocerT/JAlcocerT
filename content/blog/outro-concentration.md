@@ -1,6 +1,6 @@
 ---
 title: "Tools that help me FOCUS"
-date: 2025-02-28
+date: 2025-03-01
 draft: false
 tags: ["Dev"]
 description: 'Tools for concentrating in a noisy world.'

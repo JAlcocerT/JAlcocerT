@@ -1,6 +1,6 @@
 ---
 title: "Admin Panels for Websites "
-date: 2025-11-14
+date: 2025-12-14
 draft: true
 tags: ["AI"]
 description: "Admin Panels."

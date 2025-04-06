@@ -1,6 +1,6 @@
 ---
 title: "Real Estate Project Updates"
-date: 2025-02-27T10:20:21+01:00
+date: 2025-02-28T10:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'RE Gen AI App, RE Calculator and a RE Website (with Astro). Combo.'

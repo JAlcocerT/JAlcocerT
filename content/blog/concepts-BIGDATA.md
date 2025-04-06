@@ -139,20 +139,44 @@ Data processing engines are software systems designed to execute data transforma
 
 In essence, data processing engines are the workhorses of modern data systems, enabling organizations to extract valuable insights from their vast data resources.
 
-{{< details title="The Data Catalogue 📌" closed="true" >}}
+You might also hear about **The Data LakeHouse**
+
+A data lakehouse is built on top of a data lake. It uses the data lake as its foundation for scalable and cost-effective storage.
+
+The "house" part refers to the added layers of structure, governance, and transactional capabilities that transform the raw data lake into a more manageable and versatile platform.   
+
+<!-- {{< cards >}}
+  {{< card link="" title="Streamlit Web Apps">}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="BI Tools with Docker" >}}
+{{< /cards >}} -->
+
+Examples of Data Lakehouse Technologies and Implementations:
+
+* **Databricks** Lakehouse Platform: One of the pioneers of the data lakehouse concept, built around Apache Spark and Delta Lake.   
+* AWS Lake House: Offers services like S3 for storage and technologies like Apache Iceberg, AWS Glue, and Amazon Redshift Spectrum to build a lakehouse architecture.
+* Microsoft Fabric Lakehouse: A unified data analytics platform with a central data lakehouse.   
+* **Snowflake**: Evolving to support data lakehouse patterns with features for querying data in external object storage.
+* Google Cloud: Integrating BigQuery with data lake storage and governance tools like Dataplex to enable lakehouse capabilities.   
+* Open Table Formats (Apache Iceberg, Delta Lake, Apache Hudi): These provide the foundational layer for building reliable and performant data lakehouses on various storage systems. 
+
+> See The book *Building the data lakehouse* by Bill Inmon.
 
 Looking into **open-source data catalog** tools?
 
-Some of the most prominent ones:
+{{< details title="The Data Catalogue 📌" closed="true" >}}
 
 * **Apache Atlas:**
     * A powerful and extensible metadata management and governance framework.
     * It provides capabilities for classifying, governing, and discovering data assets.
     * It's widely used in Hadoop ecosystems.
+
 * **DataHub:**
     * Originally developed at LinkedIn, DataHub is a modern metadata platform.
     * It offers features for data discovery, data lineage, and data governance.
     * It's designed to be highly scalable and adaptable to evolving data environments.
+
+> Which can be SelfHosted with Docker!
+
 * **OpenMetadata:**
     * A unified metadata platform that aims to provide a single place for all metadata.
     * it provides data discovery, data observability and data governance.
@@ -160,6 +184,12 @@ Some of the most prominent ones:
 
 
 {{< /details >}}
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/#time-travel-with-spark-and-apache-iceberg" title="Time Travel with PySpark">}}
+  {{< card link="https://billennium.com/time-traveling-in-data-lakes/" title="Time Travel Billenium Post" >}}
+{{< /cards >}}
 
 {{< details title="Apache Iceberg, Nessie and Time Travel" closed="true" >}}
 
@@ -201,22 +231,61 @@ When discussing *Nessie namespaces* it's important to understand how they functi
 * Nessie's handling of namespaces is often implicit, meaning they are inferred rather than always explicitly created.
 
 
+{{< /details >}}
+
+
+{{< details title="Data Lineage - The Data Journey 📌" closed="true" >}}
+
+Imagine you're cooking a dish. Data lineage is like tracing the **ingredients** you used all the way back to their **origins** and knowing every **step** they went through to become part of your final meal.
+
+**In simple terms, data lineage is about understanding:**
+
+* **Where your data came from (its source).**
+* **What happened to it along the way (the transformations and processes it went through).**
+* **Where it ended up (its final destination).**
+
+**Think of it like a data's journey:**
+
+* **Source:** Maybe your customer data came from a website form, sales records, or a marketing email list. These are the "origins" or "ingredients."
+* **Transformation:** This raw data might have been cleaned up (removing errors), combined with other data (like purchase history), or analyzed to create new information (like customer segments). These are the "cooking steps."
+* **Destination:** Finally, this processed data might end up in a report, a dashboard, a machine learning model, or another database. This is the "final dish."
+
+**Why is data lineage important?**
+
+* **Trust:** It helps you trust your data because you know its history and can verify its quality.
+* **Troubleshooting:** If you find an error in a report, you can trace back the lineage to find the source of the problem.
+* **Compliance:** In some industries, knowing the origin and journey of data is required for regulatory compliance.
+* **Understanding:** It provides a clear picture of how data flows through your systems, which is crucial for understanding your business processes.
+* **Impact Analysis:** If you need to change something in your data systems, lineage helps you understand what other systems or reports might be affected.
+
+**Example:**
+
+Let's say a sales report shows a sudden drop in revenue. With data lineage, you could trace back:
+
+1.  **The report:** It pulls data from a specific data warehouse table.
+2.  **The data warehouse table:** This table is populated by a daily process that combines data from the CRM system and the order processing system.
+3.  **The CRM system:** You might find that there was a problem with data entry in the CRM yesterday.
+4.  **The order processing system:** This system was functioning correctly.
 
 
 {{< /details >}}
 
 
-{{< details title="Data Lineage 📌" closed="true" >}}
+By following the data lineage, you quickly identify that the issue likely originated in the CRM data entry, allowing you to investigate and fix the problem.
+
+So, data lineage is essentially the **history and the path** that your data takes from its birth to its current state, helping you understand, trust, and manage it effectively.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/" title="More D&A Concepts">}}
+  {{< card link="https://greatexpectations.io/blog/what-is-data-profiling" title="GX Data Profiling Post" >}}
+{{< /cards >}}
+
+<!-- https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/ -->
+<!-- https://greatexpectations.io/blog/what-is-data-profiling -->
 
 
-{{< /details >}}
 
-https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/
-https://greatexpectations.io/blog/what-is-data-profiling
-
-
-
-{{< details title="Data Profiling 📌" closed="true" >}}
+{{< details title="Data Profiling | EDA to know your Data 📌" closed="true" >}}
 
 <!-- 
  https://greatexpectations.io/expectations/
@@ -225,84 +294,143 @@ https://greatexpectations.io/blog/what-is-data-profiling
 
 <!-- pydantic -->
 
+Imagine you've just received a big box of assorted items, and you need to understand what's inside before you can use them effectively.
+
+**Data profiling is like taking inventory of that box.**
+
+**In simple terms, data profiling is the process of examining and analyzing your data to discover its characteristics, quality, and structure.** It's about getting a clear understanding of what your data actually looks like.
+
+**Think of it as creating a detailed "data report card" that answers questions like:**
+
+* **What kind of data is there?** (e.g., numbers, text, dates, categories)
+* **How many records are there?**
+* **What are the common values in each column?**
+* **What are the unique values?**
+* **Are there any missing values (blanks)?**
+* **Are there any invalid or inconsistent values?** (e.g., a date in the future for a past event, a negative value for age)
+* **What are the ranges and distributions of numerical data?** (e.g., minimum, maximum, average)
+* **What are the lengths and patterns of text data?** (e.g., average string length, common formats)
+* **Are there any potential data quality issues?** (e.g., duplicates, outliers)
+
+**Why is data profiling important?**
+
+* **Understanding Your Data:** It gives you a fundamental understanding of the data you're working with, which is crucial for any data-related project.
+* **Data Quality Assessment:** It helps identify data quality problems that need to be addressed before using the data for analysis, reporting, or machine learning.
+* **Data Cleaning and Preparation:** The insights gained from profiling inform data cleaning and preparation strategies. You know what kind of transformations or corrections are needed.
+* **Schema Discovery and Validation:** It can help you understand the actual structure of your data, which might differ from the expected schema.
+* **Building Trust in Data:** By understanding the characteristics and quality of your data, you can have more confidence in its reliability.
+* **Informing Data Governance:** Profiling provides valuable information for establishing data quality rules and governance policies.
+
+**Example:**
+
+Let's say you have a customer database. By profiling the "Email Address" column, you might discover:
+
+* The majority of entries look like valid email addresses.
+* Some entries are missing (null values).
+* Some entries have typos (e.g., ".con" instead of ".com").
+* Some entries are in an unexpected format.
+
+This information tells you that you need to implement data cleaning steps to handle missing values and correct the typos to ensure accurate communication with your customers.
 
 {{< /details >}}
+
+**In essence, data profiling is the essential first step in any data project. It's about getting to know your data intimately so you can work with it effectively and avoid making decisions based on flawed or incomplete information.** 
+
+> It's like inspecting your ingredients before you start cooking to ensure they are fresh and suitable for your recipe.
 
 
 {{< details title="Data Modelling 📌" closed="true" >}}
 
-**What is Normalization?**  
+Imagine you're planning to build something complex, like a house or a website. Before you start laying bricks or writing code, you need a **blueprint**.
 
-https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#data-modelling-techniques
+**Data modeling is like creating a blueprint for your data.**
 
-{{< /details >}}
+In simple terms, it's the process of:
 
-{{< details title="Big Data Object Storage - s3, minio and more 📌" closed="true" >}}
+* **Identifying the important things (entities) you want to keep track of.** For example, in a customer database, these might be "Customers," "Products," and "Orders."
+* **Figuring out the characteristics (attributes) of those things.** For a "Customer," these might be "Name," "Email," "Address," and "Phone Number." For a "Product," it could be "Name," "Price," and "Description."
+* **Defining how these things relate to each other (relationships).** For instance, a "Customer" can place many "Orders," and each "Order" contains one or more "Products."
 
-**What is s3?**  
+**Think of it like organizing your toys in a toy room:**
 
-MinIO - These are open s3 compatible buckets.
+* **Entities:** The different types of toys you have (e.g., cars, dolls, building blocks).
+* **Attributes:** The features of each toy (e.g., the color of a car, the size of a doll, the number of blocks).
+* **Relationships:** How the toys interact (e.g., you can build a garage for your cars using the building blocks, a doll can sit in a car).
 
-* https://github.com/jmlcas/minio
+**Why is data modeling important?**
 
-MinIO is a powerful, high-performance object storage server, and it's important to position it correctly. Here's how I would sell MinIO, focusing on its strengths and addressing the "big data storage" question:
-
-**Key Selling Points:**
-
-* **High Performance:**
-    * Emphasize MinIO's speed and efficiency. It's designed for demanding workloads, capable of handling massive data volumes and high throughput.
-    * Highlight its use of SIMD instructions and other optimizations that make it exceptionally fast.
-* **Kubernetes-Native:**
-    * MinIO integrates seamlessly with Kubernetes, making it ideal for cloud-native applications and microservices architectures.
-    * This is a huge selling point for modern, containerized environments.
-* **S3-Compatible:**
-    * MinIO is fully compatible with the Amazon S3 API, which means you can use existing S3 tools and libraries without modification.
-    * This reduces vendor lock-in and simplifies migration.
-* **Scalability:**
-    * MinIO is designed to scale horizontally, allowing you to easily add storage capacity as your needs grow.
-    * This is critical for handling large datasets.
-* **Software-Defined:**
-    * MinIO is software-defined, giving you flexibility in choosing your hardware and deployment environment.
-    * This allows for deployment on commodity hardware.
-* **Edge-Ready:**
-    * MinIO's small footprint and resource efficiency make it suitable for edge computing deployments.
-* **Open Source:**
-    * MinIO is open source, which provides transparency, community support, and cost-effectiveness.
-
-**Addressing the "Big Data Storage" Question:**
-
-* MinIO is *absolutely* suitable for big data storage, but it's essential to clarify how it fits into the big data ecosystem.
-    * It's not a traditional distributed file system like HDFS. Instead, it's an object storage system.
-    * Object storage is excellent for storing unstructured data, which is a significant component of big data.
-    * MinIO is often used as the storage layer for big data analytics platforms like Apache Spark, Presto, and TensorFlow.
-    * Explain that minio is very good at storing the data that big data applications use.
-    * It is not the big data processing engine itself.
-* **Use Cases:**
-    * Highlight specific big data use cases where MinIO excels:
-        * Data lakes
-        * Machine learning datasets
-        * Log storage
-        * Media storage
-        * Backup and archival.
-* **Performance for Analytics:**
-    * Emphasize MinIO's high performance, which is crucial for real-time analytics and machine learning.
-
+* **Organization:** It helps organize complex data in a clear and understandable way.
+* **Consistency:** It ensures that data is stored consistently across different parts of a system.
+* **Efficiency:** A good data model can make it easier and faster to retrieve and manage data.
+* **Communication:** It provides a common language and understanding of the data for everyone involved in a project (developers, analysts, business users).
+* **Foundation for Databases:** The data model serves as the blueprint for designing and building databases.
+* **Avoiding Problems:** A well-thought-out model can prevent data inconsistencies, redundancies, and other problems down the line.
 
 {{< /details >}}
 
-<!-- https://studio.youtube.com/video/KzZ2zCvHhl0/edit -->
+**Data modeling is about creating a structured and logical representation of the data you need, making it easier to work with and understand.**
 
-{{< youtube "KzZ2zCvHhl0" >}}
+It's the crucial first step in designing any system that stores and manages information. Just like a good blueprint is essential for a successful building, a good data model is essential for a successful data system.
+
+{{< callout type="info" >}}
+As per my experience, we should follow this kind of process. Including a [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md) is also a great idea.
+{{< /callout >}}
+
+```mermaid
+graph LR
+    A[Data Profiling, Understand As-Is] --> B(Data Modeling: Design To-Be);
+    B --> C{Prepare Design Documentation};
+    C --> D["Data Model (Entities, Attributes, Relationships)"];
+    C --> E["Data Lineage (Sources, Transformations, Destinations - Future)"];
+    C --> F[Data Profiling Summary & Quality Rules];
+```
+
+It's a very logical and common sequence of steps in a data-centric project, especially when building or significantly revising a data system.
+
+Imagine you're planning to build something complex, like a house or a website.
+
+Before you start laying bricks or writing code, you need a **blueprint**.
 
 
-**In essence:**
+{{< details title="See the contributions of each step 📌" closed="true" >}}
 
-* Position MinIO as a high-performance, scalable, and cloud-native object storage solution that's ideal for modern data-intensive applications.
-* Clarify that it's a critical component of big data architectures, providing the storage layer for analytics and machine learning workloads.
-* Focus on its speed, S3 compatibility, and kubernetes nativeness.
+**Data modeling is like creating a blueprint for your data.**
+
+In simple terms, it's the process of:
+
+* **Identifying the important things (entities) you want to keep track of.** For example, in a customer database, these might be "Customers," "Products," and "Orders."
+* **Figuring out the characteristics (attributes) of those things.** For a "Customer," these might be "Name," "Email," "Address," and "Phone Number." For a "Product," it could be "Name," "Price," and "Description."
+* **Defining how these things relate to each other (relationships).** For instance, a "Customer" can place many "Orders," and each "Order" contains one or more "Products."
+
+**Think of it like organizing your toys in a toy room:**
+
+* **Entities:** The different types of toys you have (e.g., cars, dolls, building blocks).
+* **Attributes:** The features of each toy (e.g., the color of a car, the size of a doll, the number of blocks).
+* **Relationships:** How the toys interact (e.g., you can build a garage for your cars using the building blocks, a doll can sit in a car).
+
+**Why is data modeling important?**
+
+* **Organization:** It helps organize complex data in a clear and understandable way.
+* **Consistency:** It ensures that data is stored consistently across different parts of a system.
+* **Efficiency:** A good data model can make it easier and faster to retrieve and manage data.
+* **Communication:** It provides a common language and understanding of the data for everyone involved in a project (developers, analysts, business users).
+* **Foundation for Databases:** The data model serves as the blueprint for designing and building databases.
+* **Avoiding Problems:** A well-thought-out model can prevent data inconsistencies, redundancies, and other problems down the line.
+
+{{< /details >}}
+
+**In summary, thebenefits are:**
+
+* **Profiling provides the necessary context and understanding of the existing data.**
+* **Modeling uses this understanding to create a well-informed and effective data structure.**
+* **Documentation captures the design, including the planned data lineage, to guide future implementation and maintenance.**
+
+> This systematic approach helps to ensure data quality, consistency, and traceability in your data systems.
 
 
 ## Tools
+
+For your D&A journey, you will need some help from diverse tools.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/apps/ai-assistant.png" subtitle="For Data Analytics and SelfHosting." >}}
@@ -324,6 +452,11 @@ TrinoSQL, MySQL,...
 Name it as you want it.
 
 Just control the basics and know that there will be some *ad-ons*.
+
+
+**What is Normalization?**  
+
+https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#data-modelling-techniques
 
 {{< details title="Explore SQL FAQ 📌" closed="true" >}}
 
@@ -418,9 +551,11 @@ Talk [with a DB via LLMs as described **here**](https://jalcocert.github.io/JAlc
 
 #### Snowflake
 
-It is a data warehouse.
+**It is a data warehouse.**
 
 You can (or not) design it to have a **bronze/silver/gold** architecture (aka **MEDALLION** architecture).
+
+> You might also hear it as: RAW/Staging/PROD.
 
 {{< cards >}}
   {{< card link="https://wetrustindata.com/data_vault_with_snowflake/" title="Data Vault w Snowflake ↗" icon="book-open" >}}
@@ -428,17 +563,18 @@ You can (or not) design it to have a **bronze/silver/gold** architecture (aka **
 
 #### Big Query
 
-Big Query is GCP data warehouse, which has a SQL UI for us to make queries!
+**Big Query is GCP's data warehouse**, which has a SQL UI for us to make queries!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL 101 ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="GCP BQ 101 ↗" icon="book-open" >}}
 {{< /cards >}}
 
 ### PySpark
 
 A wrapper in [Python](https://jalcocert.github.io/JAlcocerT/guide-python/) for Spark. [**PySpark**](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/).
 
-Or Python for the distributed computing/storage era.
+Or **Python for the distributed computing/storage era**.
 
 > https://github.com/vinta/awesome-python?tab=readme-ov-file#data-analysis
 
@@ -508,7 +644,9 @@ Grouping data before partitioning organizes it for more efficient processing.
 - **Comprehending the 5V's of Big Data**
 
 - Grasping various Big Data use cases (e.g., IoT, social media analysis, machine learning models, log analytics, etc.)
+
 - Understanding the concept of a Data Lake
+
 - Recognizing the key architectural layers and their roles:
   - Sources
   - Ingestion
@@ -541,6 +679,7 @@ Grouping data before partitioning organizes it for more efficient processing.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/" title="PySpark 101 ↗" icon="book-open" >}}
+    {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-mongodatabricks/" title="Databricks + RPi IoT Project ↗" icon="book-open" >}}
 {{< /cards >}}
 
 It offers a **managed Spark environment** along with a collaborative workspace and various integrated tools.
@@ -815,35 +954,50 @@ It shares similarities with **Airflow** for workflow orchestration and **dbt** f
 A escalable, low-code solution for **integrating and preparing data** for analytics.
 
 
-
-
-
 ---
 
 ## Conclusions
 
-Tools are great.
+Okay, here's a summary of the data analytics and engineering tools mentioned in the document, categorized for clarity:
 
-But we need to keep improving the way we use them as well.
+**Data Storage (Where to Store Data):**
+
+* **MinIO:** A high-performance, scalable, and cloud-native object storage solution. Ideal for modern data-intensive applications, big data architectures, analytics, and machine learning workloads. It's fast, S3 compatible, and Kubernetes-native.
+
+**Data Processing Engines (How to Process Data):**
+
+* **SQL (TrinoSQL, MySQL, etc.):** The fundamental language for querying and managing relational data. Essential for basic data manipulation and retrieval. Different versions (TrinoSQL, MySQL) exist with potential add-ons, but the core concepts remain crucial.
+* **PySpark:** A Python wrapper for Apache Spark. Enables distributed computing and storage using Python. Great for handling large datasets, IoT data, and building scalable data processing pipelines. Can be used within environments like JupyterHub for collaborative big data analysis.
+* **DataBricks:** A cloud-based unified analytics platform built around Apache Spark. Provides a managed Spark environment, collaborative workspaces (like enhanced Jupyter Notebooks), and integrated tools for data engineering, data science, and machine learning. Offers a more efficient and scalable environment compared to managing local Spark clusters.
+
+**Data Warehouses (For Structured Analytics):**
+
+* **Snowflake:** A cloud-based data warehouse service. Can be architected using a Medallion (bronze/silver/gold) approach for data organization and quality stages.
+* **BigQuery:** Google Cloud Platform's data warehouse. Offers a SQL user interface for querying large datasets.
+
+**Data Engineering Tools (Building and Automating Pipelines):**
+
+* **Airflow (and Google Cloud Composer):** Workflow orchestration tools used to automate complex tasks and create data pipelines. Airflow is self-managed (or managed by other cloud providers), while Composer is a fully managed service on GCP. Primarily focused on data workflows.
+* **Jenkins:** An automation tool primarily used for software workflows but can also be adapted for data pipelines. Self-managed and requires manual integration with cloud services.
+* **DBT (Data Build Tool):** A tool that helps automate the creation of data models and tables within a data warehouse using SQL. Enables modular table logic (using tags and separate files for CTEs) and facilitates data testing (schema, row, aggregation tests) using packages like `dbt_expectations`.
+* **ADF (Azure Data Factory):** A fully managed data integration tool within the Azure ecosystem. Designed for orchestrating workflows and managing ETL/ELT processes. Can connect to various data sources (APIs, SAP) and load data into data warehouses. Not a big data processing engine itself but can trigger tools like DBT.
+
+**BI & Visualization Tools (For Data Analysis and Self-Hosting):**
+
+* **Superset, Metabase, Redash:** Self-hostable Business Intelligence (BI) and data visualization tools (often deployable with Docker). Useful for creating dashboards and exploring data. Redash is highlighted for potentially being very helpful for IoT projects.
+
+**Key Concepts Mentioned:**
+
+* **MEDALLION Architecture (Bronze/Silver/Gold):** A data lakehouse architecture for organizing data in stages of increasing refinement and quality.
+* **Data Vault:** A data modeling methodology designed for data warehousing, emphasizing historical tracking and auditability.
+* **JupyterHub:** A central hub for accessing and working with big data tools and resources, promoting collaboration and simplifying workflows for data scientists.
+* **T-Shape Tools:** The idea of having deep expertise in one or two core tools while also having a broader understanding of other related technologies.
+* **Diagrams:** Emphasized as a crucial tool for understanding and communicating complex systems.
+* **Time Management, Effective Meetings, RACI Matrix & Project Charter, Pareto Principle:** Mentioned as valuable soft skills and project management concepts.
+* **Data Warehousing Concepts:** Table structures (Fact Tables, Dimension Tables), Schemas (Star Schema, Snowflake Schema), Granularity, Normalization vs. Denormalization, and their implications for OLTP (Write operations) and OLAP (Read operations).
+* **AI Assistants:** The author mentions their own AI assistants for technical help and job searching.
 
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="Looking for Cloud concepts?" image="/blog_img/DA/cloud-ecosystem.jpg" subtitle="Post where I made GCP concepts understandable" >}}
-{{< /cards >}}
-
-
-
-**T-Shape Tools**
-
-**[Diagrams](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/)**. I should write it in capital letters.
-
-> And you can do [diagrams with AI](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#diagrams-with-ai)
-
-{{< callout type="info" >}}
-[Time Management](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) is definitely one of the skills i find most valuable.
-{{< /callout >}}
-
-Together with [effective meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/), RACI Matrix & [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md)
 
 > Always keeping in mind [Pareto Principle](https://jalcocert.github.io/JAlcocerT/chaos-theory-and-the-double-pendulum-with-python/#the-pareto-principle-8020-and-chaos)
 
@@ -1001,6 +1155,94 @@ Compatible with x86 and ARM64!
 ## FAQ
 
 
+Tools are great.
+
+> But we need to keep improving the way we use them as well.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="Looking for Cloud concepts?" image="/blog_img/DA/cloud-ecosystem.jpg" subtitle="Post where I made GCP concepts understandable" >}}
+{{< /cards >}}
+
+
+**T-Shape Tools**
+
+**[Diagrams](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/)**. I should write it in capital letters.
+
+> And you can do [diagrams with AI](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#diagrams-with-ai)
+
+{{< callout type="info" >}}
+[Time Management](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) is definitely one of the skills i find most valuable.
+{{< /callout >}}
+
+Together with [effective meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/), RACI Matrix & [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md)
+
+
+
+{{< details title="Big Data Object Storage - s3, MINio and more 📌" closed="true" >}}
+
+**What is s3?**  
+
+MinIO - These are open s3 compatible buckets.
+
+* https://github.com/jmlcas/minio
+
+MinIO is a powerful, high-performance object storage server, and it's important to position it correctly. Here's how I would sell MinIO, focusing on its strengths and addressing the "big data storage" question:
+
+**Key Selling Points:**
+
+* **High Performance:**
+    * Emphasize MinIO's speed and efficiency. It's designed for demanding workloads, capable of handling massive data volumes and high throughput.
+    * Highlight its use of SIMD instructions and other optimizations that make it exceptionally fast.
+* **Kubernetes-Native:**
+    * MinIO integrates seamlessly with Kubernetes, making it ideal for cloud-native applications and microservices architectures.
+    * This is a huge selling point for modern, containerized environments.
+* **S3-Compatible:**
+    * MinIO is fully compatible with the Amazon S3 API, which means you can use existing S3 tools and libraries without modification.
+    * This reduces vendor lock-in and simplifies migration.
+* **Scalability:**
+    * MinIO is designed to scale horizontally, allowing you to easily add storage capacity as your needs grow.
+    * This is critical for handling large datasets.
+* **Software-Defined:**
+    * MinIO is software-defined, giving you flexibility in choosing your hardware and deployment environment.
+    * This allows for deployment on commodity hardware.
+* **Edge-Ready:**
+    * MinIO's small footprint and resource efficiency make it suitable for edge computing deployments.
+* **Open Source:**
+    * MinIO is open source, which provides transparency, community support, and cost-effectiveness.
+
+**Addressing the "Big Data Storage" Question:**
+
+* MinIO is *absolutely* suitable for big data storage, but it's essential to clarify how it fits into the big data ecosystem.
+    * **It's not a traditional distributed file system like HDFS. Instead, it's an object storage system**.
+    * Object storage is excellent for storing unstructured data, which is a significant component of big data.
+    * MinIO is often used as the storage layer for big data analytics platforms like Apache Spark, Presto, and TensorFlow.
+    * Explain that minio is very good at storing the data that big data applications use.
+    * It is not the big data processing engine itself.
+* **Use Cases:**
+    * Highlight specific big data use cases where MinIO excels:
+        * Data lakes
+        * Machine learning datasets
+        * Log storage
+        * Media storage
+        * Backup and archival.
+* **Performance for Analytics:**
+    * Emphasize MinIO's high performance, which is crucial for real-time analytics and machine learning.
+
+
+{{< /details >}}
+
+<!-- https://studio.youtube.com/video/KzZ2zCvHhl0/edit -->
+
+{{< youtube "KzZ2zCvHhl0" >}}
+
+
+**In essence:**
+
+* Position MinIO as a high-performance, scalable, and cloud-native object storage solution that's ideal for modern data-intensive applications.
+* Clarify that it's a critical component of big data architectures, providing the storage layer for analytics and machine learning workloads.
+* Focus on its speed, S3 compatibility, and kubernetes nativeness.
+
+
 ![Data Related Jobs](/blog_img/DA/trabajos_data.jpg)
 
 <!-- ### How to make better EDA?
@@ -1030,6 +1272,8 @@ Initially, I had this one for Telecom
 
 Specially if you like SelfHosting: Superset, metabase and redash.
 
+But if you are not afraid of some Python, you can also try with Streamlit.
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="Bayes and Streamlit?" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc" >}}
   {{< card link="https://github.com/JAlcocerT/Python_is_awesome" title="Awsome Python" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Bayes and Streamlit" >}}
@@ -1041,4 +1285,4 @@ If you want to get started with BI Tools, check how to **quickly setup REDASH**:
 
 {{< youtube "_0_Qk0Oleeo" >}}
 
-> It can be veeery helpful for IoT Projects!
+> It can be veeery helpful for [IoT Projects!](https://jalcocert.github.io/RPi/tags/iot/)

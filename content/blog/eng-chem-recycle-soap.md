@@ -32,7 +32,7 @@ are 6:6:1 with water,oil and NaOH.
       'NaOH'
     ],
     datasets: [{
-      label: 'My First Dataset',
+      label: 'Soap Raw Materials',
       data: [6, 6, 1],
       backgroundColor: [
         'rgb(255, 99, 132)',

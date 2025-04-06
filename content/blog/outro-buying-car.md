@@ -20,6 +20,49 @@ It was a **Honda Civic 6**, born on 1997 (1995-2000).
 {{< /cards >}}
 
 
+{{< chart 100 200 >}}
+{
+  "type": "bar",
+  "data": {
+    "labels": ["Category A", "Category B", "Category C", "Category D", "Category E"],
+    "datasets": [{
+      "label": "Sales Figures",
+      "data": [45, 62, 38, 75, 51],
+      "backgroundColor": [
+        "rgba(255, 99, 132, 0.8)",
+        "rgba(54, 162, 235, 0.8)",
+        "rgba(255, 206, 86, 0.8)",
+        "rgba(75, 192, 192, 0.8)",
+        "rgba(153, 102, 255, 0.8)"
+      ],
+      "borderColor": [
+        "rgba(255, 99, 132, 1)",
+        "rgba(54, 162, 235, 1)",
+        "rgba(255, 206, 86, 1)",
+        "rgba(75, 192, 192, 1)",
+        "rgba(153, 102, 255, 1)"
+      ],
+      "borderWidth": 1
+    }]
+  },
+  "options": {
+    "scales": {
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "Sample Bar Chart"
+      },
+      "legend": {
+        "display": true
+      }
+    }
+  }
+}
+{{< /chart >}}
 
 
 {{< details title="**Honda Civic EJ9 1996–2000 (Mercado Europeo)** 📌" closed="true" >}}

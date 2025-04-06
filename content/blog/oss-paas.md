@@ -7,7 +7,7 @@ description: 'SelfHosted PaaS: Coolify, Dokku, Dokploy, Caprover, Openfaas'
 url: 'deploying-software-with-paas-to-servers'
 ---
 
-## PaaS
+## PaaS What
 
 **Platform as a Service** (PaaS) is a cloud computing model that provides a platform for customers to develop, run, and manage applications without the complexity of building and maintaining the infrastructure typically associated with developing and launching an app.
 
@@ -17,7 +17,7 @@ url: 'deploying-software-with-paas-to-servers'
 *   **Scalability and flexibility:** PaaS solutions offer easy scalability, allowing applications to automatically adjust resources based on demand. This ensures optimal performance even during peak usage.
 *   **Managed services:** PaaS providers handle routine tasks such as updates, security patches, and backups, freeing up development teams to focus on strategic initiatives.
 
-Examples of popular PaaS providers include:
+Examples of **popular PaaS** providers include:
 
 * AWS Elastic Beanstalk: Amazon's PaaS offering.   
 * Google App Engine: Google's PaaS platform.
@@ -29,6 +29,8 @@ Examples of popular PaaS providers include:
 
 
 ## PaaS for your Servers
+
+But today, we are going to see some options to **SelfHost some cool PaaS Software** on our VPS / server:
 
 [![Star History Chart](https://api.star-history.com/svg?repos=caprover/caprover,coollabsio/coolify,dokku/dokku&Dokploy/dokploy&biersoeckli/QuickStack&openfaas/faas&undernightcore/dockerizalo&,type=Date)](https://star-history.com/#caprover/caprover&coollabsio/coolify&dokku/dokku&Dokploy/dokploy&biersoeckli/QuickStack&openfaas/faas&undernightcore/dockerizalo&Date)
 
@@ -221,3 +223,9 @@ curl -sfL https://get.quickstack.dev/setup.sh | sh -
 * https://github.com/undernightcore/dockerizalo
 
 > The simplest deployment platform made for self-hosters.
+
+---
+
+## Conclusions
+
+Definitely these SelfHosted PaaS are a cool way to provide value!

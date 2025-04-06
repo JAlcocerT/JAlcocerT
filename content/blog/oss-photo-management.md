@@ -21,6 +21,8 @@ After traveling and tinkering for a while with Photos and videos with [the Pixel
 
 ## SelfHosted Photo Tools
 
+Luckily, there are very cool tools to combine with our SBCs:
+
 1. Lychee
 2. [Piwigo](#piwigo)
 3. [Photoview](#photoview)
@@ -29,7 +31,7 @@ After traveling and tinkering for a while with Photos and videos with [the Pixel
 
 * https://geekflare.com/consumer-tech/self-hosted-photo-backup-alternatives/
 
-[![Star History Chart](https://api.star-history.com/svg?repos=bpatrik/pigallery2,xemle/home-gallery,photoview/photoview,xemle/home-gallery&,type=Date)](https://star-history.com/#bpatrik/pigallery2&xemle/home-gallery&photoview/photoview&xemle/home-gallery&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=bpatrik/pigallery2,xemle/home-gallery,photoview/photoview,Piwigo/Piwigo&,type=Date)](https://star-history.com/#bpatrik/pigallery2&xemle/home-gallery&photoview/photoview&Piwigo/Piwigo&Date)
 
 
 {{< callout type="info" >}}
@@ -281,7 +283,7 @@ Im exploring other options at this point.
 > MIT | Rembg is a tool to remove images background
 
 
-2. UpScayl
+2. [UpScayl](https://github.com/upscayl/upscayl)
 
 #### Cold Storage
 

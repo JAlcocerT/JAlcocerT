@@ -26,6 +26,16 @@ Now its time for a recap on my **latest video tricks**.
 
 ## High vs Low Bit Rate
 
+**Bit rate for video** simply refers to the **amount of data used per second** to store the video. It's usually measured in **bits per second (bps)**, often expressed as kilobits per second (kbps) or megabits per second (Mbps).
+
+**Higher bit rate = More data = Better video quality (more detail, less compression artifacts) = Larger file size.**
+
+**Lower bit rate = Less data = Lower video quality (more compression, potential for blurriness or blockiness) = Smaller file size.**
+
+Think of it like the "flow" of information for the video. 
+
+A higher bit rate means a richer, faster flow of visual data, resulting in a better picture.
+
 ### FHD - 1080/30
 
 1. With the [updated firmware](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/) and **high bit rate**, `1080p30 UW RS` I got these files with `H.265` codec:
