@@ -7,6 +7,16 @@ description: 'Tools for concentrating in a noisy world.'
 url: 'tools-to-improve-focus'
 ---
 
+As you know, I spent some time in D&A field already.
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/" title="D&A Concepts Recap" icon="book-open" >}}
+{{< /cards >}}
+
+A lot of what I have achieved, would not be possible w/o proper attention.
+
+
 ### Time Management
 
 1. Pomodoro:

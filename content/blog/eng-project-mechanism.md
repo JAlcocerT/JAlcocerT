@@ -13,7 +13,7 @@ Some time ago I got to know this **awsome project**: <https://github.com/gabemor
 
 Lately, I just saw that Gabe placed some **interesting video** about it:
 
-<!-- https://www.youtube.com/watch?v=kMmYv8u8824 -->
+<!-- https://www.youtube.com/watch?v=kMmYv8u8824 --> 
 
 {{< youtube "kMmYv8u8824" >}}
 
@@ -22,6 +22,14 @@ https://www.youtube.com/watch?v=usY-oBifcM4&list=PLghzFAspn1-eGjPOTT0D_6LXWqMBFR
 -->
 
 ## The Mechanism Project with Python
+
+
+{{< cards >}}
+  {{< card link="https://github.com/gabemorris12/mechanism" title="Gabe Mechanism Project" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code" >}}
+  {{< card link="https://github.com/JAlcocerT/mechanism" title="My Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
+To get started with this python project:
 
 ```sh
 #python -m venv gabe_mechanism_venv #create the venv
@@ -59,7 +67,6 @@ As you can guess:
 * Bars are represented by red lines
 * Acceleration is in orange
 * Speed in grey
-
 
 I exchanged some email with its creator, [GabeMorris12](https://github.com/gabemorris12).
 
@@ -160,9 +167,12 @@ Today is the turn of a Singer Machine!
 
 ## FAQ
 
-* What are eigenvectors?
+* What are eigenvectors? The math inside mechanisms.
 
-https://www.youtube.com/watch?v=PFDu9oVAE-g
+<!-- https://www.youtube.com/watch?v=PFDu9oVAE-g -->
+
+{{< youtube "PFDu9oVAE-g" >}}
+
 
 * https://www.goodreads.com/book/show/13237758-in-pursuit-of-the-unknown
 
@@ -194,7 +204,7 @@ And working on the symbolic one: https://github.com/JAlcocerT/MultiBodySystemDyn
 
 A **headless CMS setup**, finally!
 
-All thanks to the HUGO Theme, Compose.
+All thanks to the HUGO Theme, Compose: https://github.com/onweru/compose/
 
 Its great to see that:
 

@@ -58,7 +58,7 @@ Even adding perfume to it!
 
 This is what we are going to create:
 
-![Soap from lye](/blog_img/outro/soap.png)
+![alt text](/blog_img/outro/Soap.jpg)
 
 {{< callout type="info" >}}
 You will need an **open space** to mix the input materials and be patient
@@ -234,6 +234,12 @@ More specifically, a triglyceride (the main component of fats and oils) reacts w
 {{< callout type="warning" >}}
 You should give it enought time, **at least 1 month!**
 {{< /callout >}}
+
+
+In the meantime, grab it in a way that it does not touch your skin:
+
+![Soap from lye](/blog_img/outro/soap.png)
+
 
 **Finding Recipes:**
 

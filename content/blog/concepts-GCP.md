@@ -217,6 +217,13 @@ WHERE TIMESTAMP_TRUNC(qoe.ts, HOUR) = TIMESTAMP_SUB(TIMESTAMP_TRUNC('${dataform.
 Remember to always document your queries. For example with [MermaidJS](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/)! 
 {{< /callout >}}
 
+If you have a local DB...
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
 
 #### Big Table
 

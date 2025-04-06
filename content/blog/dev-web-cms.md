@@ -35,11 +35,7 @@ Content Management Systems (CMS):
 
 
 
-TinaCMS + Astro
 
-{{< youtube id="5Opvp6z1uSc" autoplay="false" >}}
-
-https://docs.astro.build/en/guides/cms/wordpress/
 
 ## decapCMS
 
@@ -67,8 +63,16 @@ https://github.com/mooxl/astroad/tree/main
 
 ## tinaCMS + astro
 
+TinaCMS + Astro
+
+{{< youtube id="5Opvp6z1uSc" autoplay="false" >}}
+
+https://docs.astro.build/en/guides/cms/wordpress/
+
 https://www.youtube.com/watch?v=5Opvp6z1uSc
 https://github.com/tinacms/tina-self-hosted-demo
+
+> It can also work with HUGO as seen during [the mechanism docs](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/#tinacms)
 
 
 ## Static CMS

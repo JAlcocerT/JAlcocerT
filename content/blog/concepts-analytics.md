@@ -1,6 +1,6 @@
 ---
 title: "Data Analytics Concepts [Recap]"
-date: 2025-02-25
+date: 2025-03-05
 draft: false
 tags: ["Dev"]
 description: "Data Management (Validation, Profiling, Modelling,...)"
@@ -14,6 +14,16 @@ url: 'data-analytics-concepts'
 A very important distinction in data management. 
 
 Here's a breakdown of the differences between **data validation and data profiling**.
+
+
+```mermaid
+graph LR
+    A[Data Profiling, Understand As-Is] --> B(Data Modeling: Design To-Be);
+    B --> C{Prepare Design Documentation};
+    C --> D["Data Model (Entities, Attributes, Relationships)"];
+    C --> E["Data Lineage (Sources, Transformations, Destinations - Future)"];
+    C --> F[Data Profiling Summary & Quality Rules];
+```
 
 ### Data Validation
 
@@ -168,7 +178,7 @@ I made a project with a **Raspberry Pi with [Mongo & DataBricks CE](https://jalc
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="The BI Tools" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Dashboards For DAs and IoT Projects" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="The BI Tools" image="/blog_img/iot/grafana-datasources.png" subtitle="Dashboards For DAs and IoT Projects" >}}
 {{< /cards >}}
 
 One of my favourite, is Dbeaver:
@@ -204,6 +214,8 @@ You can get help from LLMs to query directly your databases:
 ```sh
 ext install Google.geminicodeassist
 ```
+
+> You can add cool extensions [like so](https://jalcocert.github.io/JAlcocerT/git-recap/#vscode)
 
 When authorized you will see [this](https://developers.google.com/gemini-code-assist/auth/auth_success_gemini) and Gemini Code Assistant will be ready!
 

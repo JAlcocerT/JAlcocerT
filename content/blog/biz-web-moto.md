@@ -10,9 +10,11 @@ url: 'web-for-moto-blogger'
 
 ## Moto Blogger Setup
 
-My friend wanted to have the following **Astro theme**:
+A friend wanted to have the following **Astro theme**:
 
 The **theme** - https://github.com/Boston343/horizon
+
+Which initially seems oriented to weddings, but its fully photo centered.
 
 <!-- 
 https://github.com/JAlcocerT/horizon
@@ -24,6 +26,11 @@ https://github.com/Boston343/horizon -->
 There was a **Windows Web-Dev setup** in between, so...
 
 ...the setup took just a little bit more clicks than in linux:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101 Setup">}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101 Setup" >}}
+{{< /cards >}}
 
 1. Install node and npm ([nodejs.org](https://nodejs.org/en) and [docs.npmjs.org](https://docs.npmjs.org/))
 

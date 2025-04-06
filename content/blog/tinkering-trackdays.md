@@ -118,7 +118,9 @@ It's important to clarify that the ELM327 and ESP32 are fundamentally different 
 * An ELM327 helps you "talk" to your car's computer.
 * An ESP32 is a versatile computer that can do many things, including receiving and processing the information from an ELM327.
 
-Therefore, they are often used in conjunction with each other. For example, an ESP32 could be used to receive data from an ELM327, then send that data to a smartphone or a cloud server via Wi-Fi.
+Therefore, they are often used in conjunction with each other. 
+
+For example, an ESP32 could be used to receive data from an ELM327, then send that data to a smartphone or a cloud server via Wi-Fi.
 
 
 ---

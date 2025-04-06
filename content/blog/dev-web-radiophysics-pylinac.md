@@ -140,9 +140,8 @@ Once containers are installed, **you can bundle your apps** or use the ones that
 
 3. To understand better Python Web Frameworks, specially **Django**, as its the one that QaTrack uses
 
-You've touched on the core strengths of Django. Let's dive deeper into its features and why they make it a popular choice for web development.
 
-**Django's Core Philosophy and Strengths:**
+{{< details title="Django's Core Philosophy and Strengths 📌" closed="true" >}}
 
 * **"Batteries Included":**
     * This phrase perfectly captures Django's philosophy. It means that Django provides a comprehensive set of tools and libraries out of the box. You don't have to hunt for third-party packages for common tasks.
@@ -182,6 +181,10 @@ You've touched on the core strengths of Django. Let's dive deeper into its featu
 * Social networking platforms
 * Data analysis and visualization applications
 * API development
+
+
+{{< /details >}}
+
 
 **In essence:**
 

@@ -85,6 +85,10 @@ sudo docker stats linkstack
 #sudo docker prune
 ```
 
+See the results:
+
+![alt text](/blog_img/web/web-linkstack.png)
+
 ## Bento Portfolio as LinkinBio Alternative
 
 There is the possibility to use **Bento Themes with Astro**:
