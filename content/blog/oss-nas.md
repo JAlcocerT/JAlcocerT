@@ -8,7 +8,7 @@ url: 'os-for-nas'
 
 Ive been pretty much **comfortable with these OS's**:
 
-1. Ubuntu LTS
+1. **Ubuntu LTS**
 2. if you come from Windows: **Zorin OS**, Linux Mint,...
 3. Garuda Linux 
 4. If you miss XP, see https://xpq4.sourceforge.io/
@@ -52,6 +52,13 @@ Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-
 {{< /callout >}}
 
 ### VPN
+
+Its not the first time we talk about VPNs around here.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard (wg-easy) Server" image="/blog_img/hardware/wifi_eth.jpg" subtitle="VPS and Wiregaurd VPN" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router Review" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000" >}}
+{{< /cards >}}
 
 * https://speed.cloudflare.com/
 * https://www.cloudflare.com/ssl/encrypted-sni/
@@ -279,8 +286,16 @@ You can try with: Syncthing, Nextcloud, WebDav...
 
 ## Conclusions
 
+Its always great to take some time and make some *home cleaning*.
 
-where to get a VPS - https://lowendstock.com/
+Maybe time to cancel some subscription tat you are not really using after you got a proper backup in place?
+
+You can still use cloud VPS as complementary backup, or s3 buckets...
+
+Where to get a VPS?
+
+* Hetzner, ...
+* https://lowendstock.com/
 
 ### Other 
 

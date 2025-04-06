@@ -366,9 +366,9 @@ cd ./Z_DeployMe
 
 ![alt text](/blog_img/biz/RE/RE-bot-ppt.jpeg)
 
-![alt text](https://github.com/JAlcocerT/Data-Chat/blob/main/realestate/RE-bot-ppt.jpeg)
+<!-- ![alt text](https://github.com/JAlcocerT/Data-Chat/blob/main/realestate/RE-bot-ppt.jpeg) -->
 
-https://github.com/JAlcocerT/Data-Chat/blob/main/realestate/RE-bot-ppt.jpeg
+<!-- https://github.com/JAlcocerT/Data-Chat/blob/main/realestate/RE-bot-ppt.jpeg -->
 
 ### How to prepare a Tech Talk with SliDevJS
 

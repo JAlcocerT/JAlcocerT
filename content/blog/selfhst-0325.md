@@ -116,7 +116,7 @@ ping pi-portainer.jalcocertech.xyz
 
 ![alt text](static/blog_img/selfh/https/caddy-https-cert.png)
 
-The Caddy API its just amazing:
+The **Caddy API** its just amazing:
 
 ```sh
 #sudo apt install jq

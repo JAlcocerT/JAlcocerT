@@ -197,6 +197,54 @@ The initial app is using Flask in a really cool way with **ChartsJS**, like [Cha
 }
 {{< /chart >}}
 
+{{< chart 90 200 >}}
+{
+  type: 'line',
+  data: {
+    labels: Utils.months({count: 7}),
+    datasets: [{
+      label: 'Trend with ChartJS',
+      data: [65, 59, 80, 81, 56, 55, 40],
+      fill: false,
+      borderColor: 'rgb(75, 192, 192)',
+      tension: 0.1
+    }]
+  },
+  options: {
+    maintainAspectRatio: false
+  }
+}
+{{< /chart >}}
+
+{{< chart 100 200 >}}
+{
+  "type": "line",
+  "data": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "datasets": [{
+      "label": "Sample Data",
+      "data": [10, 25, 15, 30, 22, 40],
+      "fill": false,
+      "borderColor": "rgb(255, 99, 132)",
+      "tension": 0.4
+    }]
+  },
+  "options": {
+    "scales": {
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "Sample Line Chart"
+      }
+    }
+  }
+}
+{{< /chart >}}
+
 
 ## Sensors Data
 
