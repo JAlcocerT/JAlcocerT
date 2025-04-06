@@ -32,12 +32,29 @@ Its was time to put few pieces together, and add **Generative AI capabilities**:
 See **[Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)** source code 💻 and presentation *powered by SliDev*!
 {{< /callout >}}
 
+As you know, this Streamlit Projects are very simple to structure:
+
+{{< filetree/container >}}
+  {{< filetree/folder name="StreamlitProject" >}}
+    {{< filetree/file name="app.py" >}}
+    {{< filetree/folder name="Z_UDF" state="open" >}}
+      {{< filetree/file name="Auth_functions.py" >}}
+      {{< filetree/file name="Other_UDFs.py" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
 
 ### The AI Tech Stack
 
 What are we building exactly?
 
-![alt text](/blog_img/biz/RE/RE-bot.jpeg)
+<!-- ![alt text](/blog_img/biz/RE/RE-bot.jpeg) -->
+
+<!-- https://youtu.be/9MV9wj95iBE -->
+
+{{< youtube "9MV9wj95iBE" >}}
+
 
 {{< tabs items="Full-Fledge,PoC Gen AI" >}}
 
@@ -127,11 +144,13 @@ You can have now a **real estate aigent** that provides 24/7 recommendations abo
 
 ![alt text](/blog_img/biz/RE/properties-md.png)
 
-The data?
+**The data?**
 
 Pure [markdown](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/properties.md) or `.mdx` from the site itself: 
 
 ![alt text](/blog_img/biz/RE/re-properties.png)
+
+The good thing about markdown, is that it can be used to create related websites very quickly:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-website/" title="Latest updates for a Real Estate Website" image="/blog_img/biz/RE/dmproperties.png" subtitle="Customizing Astro Themes for RE Agency " >}}
@@ -139,13 +158,21 @@ Pure [markdown](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/prop
 
 > You can use a **live editor** to get around **markdown**: https://dillinger.io/
 
+
+
 ---
 
 ## Conclusions
 
+It all started few months back, with just some [tinker on few RAGs frameworks](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/)
+
+And now...
+
 See the RAG with [LlamaIndex and Mem0](https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0) in action:
 
 <!-- https://youtu.be/cEfqonasQ0M -->
+
+Remember that it will require a delay with the embedding process and further retrieval after each question:
 
 {{< youtube "cEfqonasQ0M" >}}
 
@@ -156,9 +183,26 @@ I have also been tinkering with a Web App framework alternative, Reflex:
     {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
 {{< /cards >}}
 
-You could be implementing similar RAG with any of these frameworks:
+You could be implementing similar RAG with any of these frameworks, like [LangChain](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/#exploring-langchain):
 
 [![Star History Chart](https://api.star-history.com/svg?repos=run-llama/llama_index,langchain-ai/langchain,Sinaptik-AI/pandas-ai&,type=Date)](https://star-history.com/#run-llama/llama_index/caddy-docker-proxy&langchain-ai/langchain&Sinaptik-AI/pandas-ai&Date)
+
+And as data source, you could be using anything, from CSV, PDFs to regular SQL Databases:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="LangChain + SQL DB">}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs//" title="LangChain + PDF" >}}
+{{< /cards >}}
+
+
+Remember that you can also create PPT's as a code [thanks to SliDev!](#how-to-prepare-a-tech-talk-with-slidevjs)
+
+![Streamlit User Auth](/blog_img/apps/streamlit/slidev-ghpages.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/" title="MultiChat SliDev" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="MiltiChat SliDev" >}}
+  {{< card link="" title="SliDev PPTs as Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="I Wrote a small PPT with SliDev for MultiChat and Published it with GHA" >}}
+{{< /cards >}}
 
 ---
 
@@ -205,7 +249,7 @@ Its all about: https://pypi.org/project/streamlit-authenticator/
 {{< /details >}}
 
 {{< callout type="info" >}}
-With this method, you can have several hardcoded `user/password` created!
+With this method, you can have several hardcoded `user/password` created! See [this example auth UDF](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/UDF_Auth_functions.py).
 {{< /callout >}}
 
 {{< cards >}}
@@ -239,22 +283,10 @@ Recently I got to know also about this project to verify emails:
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Different auth options" >}}
 {{< /cards >}}
 
-![Streamlit User Auth](/blog_img/apps/streamlit/slidev-ghpages.png)
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/" title="MultiChat SliDev" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="MiltiChat SliDev" >}}
-  {{< card link="" title="SliDev PPTs as Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="I Wrote a small PPT with SliDev for MultiChat and Published it with GHA" >}}
-{{< /cards >}}
 
 ##### With Other Containers
 
-You're asking for a self-hostable solution that combines frontend *and* user management (registration, login, access control). 
-
-That narrows the options considerably, as most frontend frameworks rely on a separate backend.
-
-Here are some strong contenders, keeping in mind that "self-hostable" implies you control the server:
-
-
+Self-hostable solution that combines frontend *and* user management (registration, login, access control). 
 
 {{< details title="Keycloak, Supabase, Authentic, LogTo,... 📌" closed="true" >}}
 

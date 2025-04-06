@@ -8,7 +8,7 @@ url: 'web-apps-with-flask'
 ---
 
 * https://github.com/pallets/flask/
-* https://pypi.org/project/Flask/
+  * https://pypi.org/project/Flask/
 
 > The Python micro framework for building web applications.
 
@@ -762,6 +762,12 @@ See the logs at Portainer:
 If you want **simpler Dashbards**, check:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Streamlit Web Apps" icon="warning">}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Streamlit Web Apps">}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="BI Tools with Docker" >}}
+{{< /cards >}}
+
+<!-- ![alt text](/blog_img/biz/RE/RE-bot.jpeg) -->
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data-Chat" image="/blog_img/biz/RE/RE-bot.jpeg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
