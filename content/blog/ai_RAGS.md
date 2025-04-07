@@ -12,6 +12,8 @@ url: 'comparing-rag-and-use-cases'
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-projects-python-dependencies/" title="Python Deps 101" >}}
 {{< /cards >}}
 
+
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
@@ -55,3 +57,13 @@ https://www.nltk.org/api/nltk.tag.perceptron.html
 
 
 ## LLamaIndex
+
+
+## PandasAI
+
+
+---
+
+## Conclusions
+
+
