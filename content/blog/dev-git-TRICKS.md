@@ -251,3 +251,50 @@ services:
 
 ##localhost:3070
 ```
+
+#### Weekly Planning
+
+> A proactive approach to planning, information sharing, and continuous learning:
+
+================= WK1234 Y25 | Sprint 123ab =================
+
+**Sprint Goal:** [Clearly state the overarching goal of the sprint]
+
+**Key Objectives for This Week:**
+
+* **Grooming:**
+    * Status: [e.g., On Track, Needs Attention]
+    * Deliverables: [e.g., Backlog prioritized, X user stories refined]
+* **Requirements:**
+    * Status: [e.g., In Progress, Blocked ⚠️]
+    * Deliverables: [e.g., Y requirements documented, User journey map updated]
+* **Tasks:** ✅
+    * **Boards:**
+        * DE - [Link] - Status: [e.g., X/Y tasks completed]
+        * DA - [Link] - Status: [e.g., P/Q tasks in progress]
+    * **Individual Task Areas (SMD, Created, Validated, Documented):**
+        * [Consider listing a few key tasks under each with status if helpful]
+
+**Projects:** [Briefly mention key projects and their current focus this week]
+
+**Learnings & Insights:**
+
+* **This Week's Key Learnings:**
+    * [Bulleted list as before]
+
+**Meetings & Decisions:**
+
+* **Daily DnA:** [Keep the structure as is, but consider adding key decisions or action items briefly]
+* **MTG abc:**
+    * Summary:
+    * **Key Decisions:** [New section]
+    * **Action Items (Owner - Due Date):** [New section, extracted from Conclusions/NextSteps]
+    * Raw Notes:
+
+**Tools & Resources:** [Keep as is]
+
+**Processes & Environment:** [Keep as is]
+
+**Key Contacts:** [Keep as is]
+
+**Technical Reference:** [Keep as is]

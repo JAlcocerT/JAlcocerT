@@ -695,6 +695,34 @@ streamparser_kafka \
     .sort(desc("kpi_stbmodel"))\
     .show(30,truncate=False)
 ```
+
+```sh
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, when, split
+
+def process_cable_modem_data(country_code):
+    # Initialize Spark session
+    spark = SparkSession.builder.appName("CableModemDataProcessing").getOrCreate()
+    
+    # Load the DataFrame based on the country code
+    path = f"hdfs://123456789:9820/delta/refined_tables/{country_code}/dimensions/dim_cable_modem/"
+    dim_cable_modem_df = spark.read.format("delta").load(path)
+    
+    # Add the node_id_prefix column
+    dim_cable_modem_df = dim_cable_modem_df.withColumn('node_id_prefix', split(dim_cable_modem_df['node_id'], '\.')[0])
+    
+    # Compare node_id_prefix and site_Id, and create a new column 'is_same'
+    dim_cable_modem_df = dim_cable_modem_df.withColumn('is_same', when(col('node_id_prefix') == col('site_Id'), True).otherwise(False))
+    
+    # Filter the DataFrame to keep only the rows where 'is_same' is False
+    filtered_df = dim_cable_modem_df.filter(col('is_same') == False)
+    
+    # Show the result
+    filtered_df.select('node_id', 'node_id_prefix', 'site_Id', 'is_same').distinct().show(5, truncate=False)
+
+# Example usage
+process_cable_modem_data("CountryCode")
+```
 {{< /details >}}
 
 {{< callout type="info" >}}

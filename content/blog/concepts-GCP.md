@@ -196,21 +196,34 @@ But its actually much more than an interface to write your **SQL queries**.
 
 ##### Big Query Tricks
 
+Given a table, you should always do cool filters while reading it:
+
 ```sql
 SELECT * FROM `projectID-on-gcp.dataset_ID.table_ID`
 --WHERE TIMESTAMP_TRUNC(ts, HOUR) = TIMESTAMP("2024-04-01T12:00:00") 
 --LIMIT 100
+```
 
+And you can also script them:
 
+```sh
 --This refers to the previous hour
 Select TIMESTAMP_SUB(TIMESTAMP_TRUNC('2024-04-01T12:00:00', HOUR), INTERVAL 1 HOUR)
 ```
 
-When in production, with dataform, you might do it with:
+When in production, with **dataform**, you might do it with:
 
 ```sql
 SELECT * FROM `projectID-on-gcp.dataset_ID.table_ID` as qoe
 WHERE TIMESTAMP_TRUNC(qoe.ts, HOUR) = TIMESTAMP_SUB(TIMESTAMP_TRUNC('${dataform.projectConfig.vars.executionDate}', HOUR), INTERVAL 1 HOUR)
+```
+
+Check the **Schema of any table** with:
+
+```sql
+SELECT column_name, data_type
+FROM `projectID-on-gcp.dataset_ID.INFORMATION_SCHEMA.COLUMNS`
+WHERE table_name = 'table_ID'
 ```
 
 {{< callout type="info" >}}
