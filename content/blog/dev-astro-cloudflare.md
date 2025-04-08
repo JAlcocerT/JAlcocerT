@@ -26,10 +26,19 @@ Push your code to a [Github Repository](https://jalcocert.github.io/JAlcocerT/gi
 
 Go to [Cloudflare UI](https://dash.cloudflare.com/). **Worker & Pages** -> Overview. Create -> Pages -> `Connect Git`.
 
-> You will Need a Github Account Authentication
+![alt text](/blog_img/web/Cloudflare/cf-wnp-gh-permissions.png)
+
+> You will Need a Github Account Authentication and provide repo permissions: https://github.com/settings/installations/56072936
+
+For hugo you would need the `hugo` command to build instead
+
+![alt text](/blog_img/web/Cloudflare/cf-hugo-wnp-agujaypunto.png)
+
+You might also need to specify the `HUGO_VERSION` as variable
+
+![alt text](/blog_img/web/Cloudflare/cf-hugoversion-wnp-aguja-.png)
 
 ### Setup Cloudflare Workers and Pages
-
 
 {{% /steps %}}
 

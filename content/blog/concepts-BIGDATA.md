@@ -816,7 +816,7 @@ Analogy with a four-layer data lakehouse architecture: Landing, Bronze, Silver, 
 
 **1. Landing Layer:**
 
-* **Purpose:** This is the initial point of entry for raw data, as it arrives from various source systems. The goal is to ingest the data quickly and reliably with minimal transformation.
+* **Purpose:** This is the initial point of **entry for raw data**, as it arrives from various source systems. The goal is to ingest the data quickly and reliably with minimal transformation.
 * **Typical Format:** **JSON** often fits well here due to its flexibility and the fact that many source systems naturally produce JSON. You might also find other raw formats like CSV, XML, or even proprietary binary formats in the landing zone. The key is to keep it as close to the original source as possible.
 * **Your Analogy Alignment:** JSON fits perfectly as a typical format in the **Landing** layer.
 
@@ -829,7 +829,7 @@ Analogy with a four-layer data lakehouse architecture: Landing, Bronze, Silver, 
 **3. Silver Layer (Conformed/Cleaned/Integrated):**
 
 * **Purpose:** This layer focuses on data quality, integration, and creating a conformed view of the data. Data from various bronze tables might be joined, cleaned, transformed, and enriched to create business-oriented entities. The schema is typically well-defined and stable.
-* **Typical Format:** **Parquet** is the dominant format in the Silver layer due to its columnar storage, which is highly optimized for analytical queries. The data in the silver layer is often queried and used for reporting, business intelligence, and data exploration.
+* **Typical Format:** **Parquet** is the dominant format in the Silver layer due to its **columnar storage**, which is highly optimized for analytical queries. The data in the silver layer is often queried and used for reporting, business intelligence, and data exploration.
 * **Your Analogy Alignment:** **Parquet** fits perfectly into the **Silver** layer, providing the performance needed for analytical workloads on cleaned and integrated data.
 
 **4. Gold Layer (Aggregated/Business-Specific):**
@@ -855,6 +855,11 @@ graph LR
     B --> C["Silver: Parquet (Optimized for analytics on conformed data)"];
     C --> D["Gold: Parquet (Optimized for specific business use cases, often with a transactional layer like Delta Lake)"];
 ```
+
+
+{{< callout type="info" >}}
+
+{{< /callout >}}
 
 
 #### DataBricks
@@ -1470,3 +1475,7 @@ If you want to get started with BI Tools, check how to **quickly setup REDASH**:
 {{< youtube "_0_Qk0Oleeo" >}}
 
 > It can be veeery helpful for [IoT Projects!](https://jalcocert.github.io/RPi/tags/iot/)
+
+
+### DSc Tools for D&A Projects
+

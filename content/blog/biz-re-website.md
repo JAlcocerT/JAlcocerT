@@ -1,6 +1,6 @@
 ---
 title: "Real Estate Project Updates"
-date: 2025-04-07T10:20:21+01:00
+date: 2025-04-08T10:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'RE Gen AI App, RE Calculator and a RE Website (with Astro). Combo.'
@@ -8,7 +8,7 @@ url: 'real-estate-website'
 math: true
 ---
 
-<!-- 
+<!--  
 https://github.com/JAlcocerT/cybernetik-realestate-moises 
 https://dm-realestate.web.app/
 -->
@@ -299,6 +299,11 @@ This is kind of a **four in one project**:
 3. **Gen AI App** to provide recommendations based on the available houses
 4. **Scrapping Tool** to get Photos automatically
 5. **Social Link Website**: with LinkStack, *as seen [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)*
+
+
+{{< cards >}}
+  {{< card link="https://whois.jalcocertech.com/@me" title="LinkStack" image="/blog_img/web/web-linkstack.png" subtitle="Social Link Website" >}}
+{{< /cards >}}
 
 6. **Bonus**: Newsletter (with mailerlite) + GDPR Compliant Web Analytics: [Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
 

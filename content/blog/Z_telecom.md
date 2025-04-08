@@ -19,25 +19,28 @@ Measure your Home Internet Speed with: [WYL and OpenSpeedTest/SpeedTest Tracker]
 
 First things first.
 
-Which modem do I have?
+**Which modem do I have?**
 
-[text](/blog_img/outro/telecom/2cm.png)
+![text](/blog_img/outro/telecom/2cm.png)
 
 **This is a fiber Cable Modem**
 
-[text](/blog_img/outro/telecom/fiber-cm.png)
+![text](/blog_img/outro/telecom/fiber-cm.png)
 
 This, instead, is a COAX cable:
 
-[text](/blog_img/outro/telecom/coax.png)
+![text](/blog_img/outro/telecom/coax.png)
 
 See how they compare:
 
-[text](/blog_img/outro/telecom/cm-fiber-coax.png)
+![text](/blog_img/outro/telecom/cm-fiber-coax.png)
 
-### Linear TV (LTV)
 
-**Linear TV** refers to traditional television broadcasting where content is transmitted according to a scheduled lineup on predetermined channels.
+<!-- ![alt text](/blog_img/outro/telecom/cm-fiber-coax.png) -->
+
+### Linear TV
+
+**Linear TV** (LTV) refers to traditional television broadcasting where content is transmitted according to a scheduled lineup on predetermined channels.
 
 Viewers tune in at specific times to watch programs and commercials.
 
