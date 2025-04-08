@@ -1479,3 +1479,39 @@ If you want to get started with BI Tools, check how to **quickly setup REDASH**:
 
 ### DSc Tools for D&A Projects
 
+1. https://github.com/mlflow/mlflow
+
+> Apache v2 | Open source platform for the machine learning lifecycle
+
+2. https://github.com/langfuse/langfuse
+
+> 🪢 [OLangfuse](https://langfuse.com/) is an pen source **LLM engineering platform**: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with OpenTelemetry, Langchain, OpenAI SDK, LiteLLM, and more. 🍊YC W23
+
+
+Langfuse can be selfhosted as per: https://langfuse.com/self-hosting/local
+
+```sh
+# Get a copy of the latest Langfuse repository
+git clone https://github.com/langfuse/langfuse.git
+cd langfuse
+
+# Run the langfuse docker compose
+docker compose up #important DONT DO docker-compose, it works using v2
+#sudo docker stop portainer #if you get port 9000 conflict
+#sudo docker start portainre
+```
+
+> Go to port `3000` to see the web UI
+
+![alt text](/blog_img/GenAI/langfuse-signup.png)
+
+![alt text](/blog_img/GenAI/langfuse-webui.png)
+
+
+3. LangGraph: https://www.langchain.com/langgraph
+
+4. Concepts Like:
+
+* Reranking models for RAG
+* Summarization Techniques: https://python.langchain.com/v0.1/docs/use_cases/summarization/
+* Hypothetical Documents Embeddings: https://python.langchain.com/v0.1/docs/use_cases/query_analysis/techniques/hyde/

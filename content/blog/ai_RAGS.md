@@ -49,6 +49,9 @@ https://www.nltk.org/api/nltk.tag.perceptron.html
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
+
+![alt text](/blog_img/GenAI/chromadb-cli.png)
+
 ### CSV
 
 ### PDF

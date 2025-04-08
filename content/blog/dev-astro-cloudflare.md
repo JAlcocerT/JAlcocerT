@@ -38,6 +38,11 @@ You might also need to specify the `HUGO_VERSION` as variable
 
 ![alt text](/blog_img/web/Cloudflare/cf-hugoversion-wnp-aguja-.png)
 
+
+![alt text](/blog_img/web/Cloudflare/cf-wnp-deployed.png)
+
+![alt text](/blog_img/web/Cloudflare/cf-wnp-connected-domain.png)
+
 ### Setup Cloudflare Workers and Pages
 
 {{% /steps %}}

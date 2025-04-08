@@ -273,6 +273,11 @@ networks:
 
 By using the `streamlit-authenticator` library, only my client can access it:
 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/UDF_Auth_functions.py" title="Streamlit UDF Auth Code ↗" icon="book-open" >}}
+{{< /cards >}}
+
 ![Streamlit User Auth](/blog_img/biz/RE/re-tool-userauth.png)
 
 
