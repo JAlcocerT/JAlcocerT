@@ -45,6 +45,21 @@ A lot of what I have achieved, would not be possible w/o proper attention.
 
 > MIT | A modern, open-source lofi experience powered by Next.js
 
+2. https://github.com/Eigenfocus/eigenfocus?tab=readme-ov-file#installation
+
+
+```sh
+docker run \
+    --restart unless-stopped \
+    -v ./app-data:/eigenfocus-app/app-data \
+    -p 3001:3000 \
+    -e DEFAULT_HOST_URL=http://localhost:3001 \
+    -d \
+    eigenfocus/eigenfocus:1.0.0-free
+```
+
+>  All-in-One Self-Hosted Project Management, Time Tracking and Focus App 
+
 ### Reading Focus
 
 How about having a proper news feed?

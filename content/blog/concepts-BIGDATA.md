@@ -663,8 +663,14 @@ df = spark.read.schema(schema).json(f"{active_node}/raw/folder1/folder2/table/{y
 df.show()
 ```
 
+{{< tabs items="JSON,YAML,TOML" >}}
 
-You can also read yml:
+  {{< tab >}}**JSON**: JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax.{{< /tab >}}
+  {{< tab >}}
+  
+  **YAML**: YAML is a human-readable data serialization language.
+  
+  You can also read yml:
 
 ```py
 import yaml
@@ -676,6 +682,14 @@ with open('your_file.yml', 'r') as file:
 # Access the data as you would with a Python dictionary
 print(yaml_data)
 ```
+  
+  {{< /tab >}}
+  {{< tab >}}**TOML**: TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.{{< /tab >}}
+
+{{< /tabs >}}
+
+
+
 {{< details title="Explore PySpark FAQ 📌" closed="true" >}}
 
 **Why is PySpark called lazy?**  
@@ -840,14 +854,12 @@ Analogy with a four-layer data lakehouse architecture: Landing, Bronze, Silver, 
 
 **Revised Analogy:**
 
-* **Landing:** **JSON** (Raw, as-is ingestion)
+* **Landing:** **JSON**, CSVs,... (Raw, as-is ingestion)
 * **Bronze:** **Avro** (Structured raw, schema enforcement & evolution)
 * **Silver:** **Parquet** (Optimized for analytics on conformed data)
 * **Gold:** **Parquet** (Optimized for specific business use cases, often with a transactional layer like Delta Lake)
 
-This four-layer model provides a more granular view of the data journey, and your initial intuition about the roles of JSON, Avro, and Parquet holds up well within this framework. 
 
-The choice of format at each layer is driven by the specific requirements of that stage in the data processing pipeline.
 
 ```mermaid
 graph LR
@@ -856,9 +868,8 @@ graph LR
     C --> D["Gold: Parquet (Optimized for specific business use cases, often with a transactional layer like Delta Lake)"];
 ```
 
-
 {{< callout type="info" >}}
-
+This **four-layer model** provides a more granular [view of the **data journey**](https://www.mermaidchart.com/play?utm_source=mermaid_live_editor&utm_medium=toggle#pako:eNp1zk1qwzAQBeCrPLwoCcQXcKEQJ1AIpinxsu5iKo9jEVlyNZJDUnr3yu6iq85yfr43X5lyLWdFdvY09qhOjUWq7VuTVWRbbc8FDvXxBSe6bkCSa0FqsgTt7LrJ3pHnTyjTeumdvXOB7eQdVnXwUYXouYWfL0X1PBDYds4rHtgGPIAnZ-IMJefxN7hcvF3yam0m9gVeyX9GDlgdx6AHfU9iMkCWzC1oJXAWys3ukEYtBVr_cbuF2yfu2Zn2X0xGVrrTCh9RtGURRGEoEpYNXBfY4qpDD0LwZIXU_DQZGLqxh9EXxp5NIFR04SU--_4BEPJ0GA)
 {{< /callout >}}
 
 
@@ -1510,8 +1521,29 @@ docker compose up #important DONT DO docker-compose, it works using v2
 
 3. LangGraph: https://www.langchain.com/langgraph
 
+It allows you to **create complex workflows** by defining tasks as nodes in a directed graph, with edges representing the flow of data.
+
+{{< details title="More about LangGraph 📌" closed="true" >}}
+
+- The system supports **dynamic state management**, maintaining context and ensuring coherent interactions across different agents.
+- **Fault tolerance** is built in, meaning the system can recover from failures in individual agents.
+- LangGraph is **flexible and customizable**, supporting custom agent logic and communication protocols.
+- It is scalable, suitable for **enterprise-level applications**, and excels in handling complex workflows with a high volume of interactions.
+
+- The framework is particularly useful for applications like **chatbots**, **retrieval-augmented generation (RAG)** systems, and **self-correcting agents**.
+
+{{< /details >}}
+
+<!-- https://www.youtube.com/watch?v=qaWOwbFw3cs -->
+
+{{< youtube "qaWOwbFw3cs" >}}
+
+> This is an agentic fwk!
+
 4. Concepts Like:
 
 * Reranking models for RAG
 * Summarization Techniques: https://python.langchain.com/v0.1/docs/use_cases/summarization/
 * Hypothetical Documents Embeddings: https://python.langchain.com/v0.1/docs/use_cases/query_analysis/techniques/hyde/
+* MultiVector Retrieval
+* ReACT fwk

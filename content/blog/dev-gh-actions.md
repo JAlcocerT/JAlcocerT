@@ -538,6 +538,11 @@ jobs:
 
 ## GHA for R Projects
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/plotly/dash" title="Dash in Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner/" title="Dash project example - Trip Planner with Weather" >}}
+{{< /cards >}}
+
 ### Actions CI/CD for Shiny
 
 See [this GH Actions config file](https://github.com/JAlcocerT/R_Stocks/blob/main/.github/workflows/build_shiny.yml)
@@ -551,8 +556,23 @@ Use static deploy, as seen on the `static.yml` [GH Actions workflow at the RStoc
   {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Rstocks and its Flexdashboard" >}}
 {{< /cards >}}
 
+---
+
 ## Conclusions
 
-To test your GHA workflows locally, try: https://github.com/nektos/act
+To test your **GHA workflows locally**, try: https://github.com/nektos/act
 
 > Run your GitHub Actions locally 🚀
+
+
+---
+
+## FAQ
+
+### Other Useful CI/CD Tools
+
+#### Cloudflare WnP with your Repos
+
+If you are familiar with static sites, you can have them build and pushed to Cloudflare Pages also via CI/CD.
+
+

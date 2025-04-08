@@ -206,7 +206,11 @@ sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -
 {{< /cards >}}
 
 
-### clone audio
+* https://console.anthropic.com/settings/keys
+    * https://docs.anthropic.com/en/docs/about-claude/models
+* https://platform.openai.com/api-keys
+
+### Clone Audio
 
 Taking some help from yt-dlp: https://github.com/yt-dlp/yt-dlp
 

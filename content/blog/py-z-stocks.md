@@ -328,6 +328,8 @@ Similar projects include **Firefly III** and **GnuCash**.
 * https://wtfhappenedin1971.com/
 * https://whycryptocurrencies.com/
 
+* https://curvo.eu/
+
 
 {{< callout type="info" >}}
 You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/author/B0BW46JD83?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) one with AI. How? with an [**AIssistant**](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#kindle-notes-to-ai) 

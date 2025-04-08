@@ -339,6 +339,8 @@ We can put all of this into containers with [this `docker-compose`](https://gith
 To use containers you will need [Docker installed](https://jalcocert.github.io/JAlcocerT/IT-concepts/#containers). Or just be [ready for SelfHosting](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/).
 {{< /callout >}}
 
+---
+
 ## Conclusions
 
 We have seen how to use LangChain to:
@@ -376,11 +378,6 @@ You can also try:
 * LlamaIndex
 
 
-* https://console.anthropic.com/settings/keys
-    * https://docs.anthropic.com/en/docs/about-claude/models
-* https://platform.openai.com/api-keys
-
-
 ### What it is LangGraph?
 
 * https://github.com/langchain-ai/langgraph
@@ -388,16 +385,3 @@ You can also try:
 > Build resilient language agents as graphs - **MIT!**
 
 **LangGraph** is a framework designed for building multi-agent systems, particularly when using large language models (LLMs).
-
-
-It allows you to **create complex workflows** by defining tasks as nodes in a directed graph, with edges representing the flow of data.
-
-- The system supports **dynamic state management**, maintaining context and ensuring coherent interactions across different agents.
-- **Fault tolerance** is built in, meaning the system can recover from failures in individual agents.
-- LangGraph is **flexible and customizable**, supporting custom agent logic and communication protocols.
-- It is scalable, suitable for **enterprise-level applications**, and excels in handling complex workflows with a high volume of interactions.
-- The framework is particularly useful for applications like **chatbots**, **retrieval-augmented generation (RAG)** systems, and **self-correcting agents**.
-
-<!-- https://www.youtube.com/watch?v=qaWOwbFw3cs -->
-
-{{< youtube "qaWOwbFw3cs" >}}

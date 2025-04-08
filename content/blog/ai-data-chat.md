@@ -131,7 +131,7 @@ It can helpful to:
 {{< /cards >}}
 
 {{< callout type="info" >}}
-You might be interested to see also [LangGraph](https://github.com/langchain-ai/langgraph)
+You might be interested to see also [**LangGraph**](https://github.com/langchain-ai/langgraph)
 {{< /callout >}}
 
 4. There is another one! - [Langchain with Pandas DF](#langchain-pandasdf-chat)
@@ -288,6 +288,7 @@ LLMs that have already appeared:
 ---
 
 ## FAQ
+
 
 ### More Github Actions CI/CD
 

@@ -13,19 +13,18 @@ Google has one of the **important cloud** out there!
 
 If you understand these, you need to know that there are similar alternatives in other clouds.
 
-Just with the service having a different name.
+Just with the services having a different names: https://console.cloud.google.com/
 
 ### Data Analytics with GCP
 
-Bigtable: While Bigtable is a distributed NoSQL database good for very high volumes of data, it's not a relational database and doesn't offer the same level of transactional consistency as Cloud Spanner.
+* Bigtable: While Bigtable is a distributed NoSQL database good for very high volumes of data, it's not a relational database and doesn't offer the same level of transactional consistency as Cloud Spanner.
 
-Cloud SQL: Cloud SQL is a relational database service, but it's not globally distributed in the same way as Cloud Spanner, and it might not be the best choice for applications requiring very high scalability and availability across multiple regions.
+* Cloud SQL: Cloud SQL is a relational database service, but it's not globally distributed in the same way as Cloud Spanner, and it might not be the best choice for applications requiring very high scalability and availability across multiple regions.
 
 **BigQuery**: BigQuery is a data warehouse designed for analytics and business intelligence, not for transactional workloads or CRUD operations. It's used for analyzing large datasets, not for serving real-time application requests.
 
 {{< cards cols="1" >}}
-  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
-  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
+  {{< card link="https://console.cloud.google.com/" title="GCP Console ↗ " >}}
 {{< /cards >}}
 
 
