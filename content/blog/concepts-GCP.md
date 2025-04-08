@@ -214,8 +214,8 @@ Select TIMESTAMP_SUB(TIMESTAMP_TRUNC('2024-04-01T12:00:00', HOUR), INTERVAL 1 HO
 When in production, with **dataform**, you might do it with:
 
 ```sql
-SELECT * FROM `projectID-on-gcp.dataset_ID.table_ID` as qoe
-WHERE TIMESTAMP_TRUNC(qoe.ts, HOUR) = TIMESTAMP_SUB(TIMESTAMP_TRUNC('${dataform.projectConfig.vars.executionDate}', HOUR), INTERVAL 1 HOUR)
+SELECT * FROM `projectID-on-gcp.dataset_ID.table_ID` as abc
+WHERE TIMESTAMP_TRUNC(abc.ts, HOUR) = TIMESTAMP_SUB(TIMESTAMP_TRUNC('${dataform.projectConfig.vars.executionDate}', HOUR), INTERVAL 1 HOUR)
 ```
 
 Check the **Schema of any table** with:
@@ -226,11 +226,20 @@ FROM `projectID-on-gcp.dataset_ID.INFORMATION_SCHEMA.COLUMNS`
 WHERE table_name = 'table_ID'
 ```
 
+Once you know it, you can do some data profiling on the field distribution:
+
+```sql
+SELECT DISTINCT location_id
+FROM `projectID-on-gcp.dataset_ID.table_ID`
+WHERE location_id IS NOT NULL
+LIMIT 3;
+```
+
 {{< callout type="info" >}}
 Remember to always document your queries. For example with [MermaidJS](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/)! 
 {{< /callout >}}
 
-If you have a local DB...
+If you have a local DB...you can do cool tricks with GenAI to extract insights:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}

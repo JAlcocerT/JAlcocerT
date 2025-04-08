@@ -591,6 +591,91 @@ Actually, you can have your own PySpark cluster and use it within JupyterHub (JH
 * It promotes collaboration, simplifies workflows, and enables scalable data analysis in big data environments.
 * It is a tool that helps to bridge the gap between big data infrastructure, and the data scientists that need to use it.
 
+Some **useful Pyspark stuff?**
+
+```py
+spark.read.format('avro')\
+.load(f'{active_node}/raw/folder1/folder2/table/{year}/{month}/{day_selected}/00/00')\
+.printSchema()
+
+spark.read.format('avro')\
+.load(f'{active_node}/raw/folder1/folder2/table/{year}/{month}/{day_selected}/00/00')\
+.limit(1).toPandas().style.hide_index()
+```
+
+Avro and Parquet are the workhorses for storing and processing large datasets.
+
+```py
+spark.read.format('parquet')\
+  .load(f'{active_node}/processed/folder1/folder2/table/{year}/{month}/{day_selected}/00/00')\
+  .printSchema()         
+```
+
+Avro is good for write-intensive scenarios and schema evolution, while **Parquet excels in read-heavy analytical workloads due to its columnar nature**.
+
+> That's why you will find mostly parquet at /processed, Staging or Silver layers. While avro will be closer to /raw, bronze.
+
+Delta Lake builds upon formats like Parquet to provide a robust and reliable data lake architecture, enabling more complex data pipelines and analytical use cases with transactional guarantees and data governance.
+
+```py
+from pyspark.sql.functions import sum, col, desc,asc,countDistinct
+import pyspark.sql.functions as F
+
+df = spark.read.format('avro')\
+    .load(f'{active_node}/raw/folder1/folder2/table/{year}/{month}/{day_selected}/00/00')
+
+df.groupBy("idtype")\
+    .agg(f.countDistinct("id").alias("macs"))\
+    .sort(desc("macs"))\
+    .show(35)
+```
+
+You can also read **json tables**: often the initial format for data ingestion or for simple data exchange but is usually transformed into more efficient formats for storage and analysis in big data systems
+
+```py
+df = ss.read.json(f"{active_node}/raw/folder1/folder2/table/{year}/{month}/{day_selected}/04/00")
+```
+
+> JSON is typical for Landing stages of a Data Lakehouse!
+
+As you can imagine, as json are very close to data sources in big data, you might find interesting **schemas with 29k+ rows**. Yes, I wrote schema.
+
+In such cases, you can **parse just the json fields you need** while reading:
+
+```py
+#from pyspark.sql import SparkSession
+from pyspark.sql.types import StructType, StructField, StringType
+
+# Initialize Spark session
+spark = SparkSession.builder.appName("ExtractFields").getOrCreate()
+
+# Define the schema
+schema = StructType([
+    StructField("props.cpe.DeviceInfo.ModelName", StringType(), True),
+    StructField("props.cpe.DeviceInfo.SerialNumber", StringType(), True),
+    StructField("props.cpe.DeviceInfo.SoftwareVersion", StringType(), True)
+])
+
+# Read the JSON file using the defined schema
+df = spark.read.schema(schema).json(f"{active_node}/raw/folder1/folder2/table/{year}/{month}/{day_selected}/04/00")
+
+# Show the extracted fields
+df.show()
+```
+
+
+You can also read yml:
+
+```py
+import yaml
+
+# Replace 'your_file.yml' with the path to your YAML file
+with open('your_file.yml', 'r') as file:
+    yaml_data = yaml.safe_load(file)
+
+# Access the data as you would with a Python dictionary
+print(yaml_data)
+```
 {{< details title="Explore PySpark FAQ 📌" closed="true" >}}
 
 **Why is PySpark called lazy?**  
@@ -669,8 +754,107 @@ Grouping data before partitioning organizes it for more efficient processing.
   - Object storage and distributed file systems
   - Core tools: HDFS, S3, Azure Blob
 
+Let's break down each of these concepts related to code profiling in Python:
+
+**🤔 What are code profilers?**
+
+This section provides a concise definition of code profilers:
+
+* **Tools that measure how quickly a computer program runs:** At their core, profilers are about performance measurement. They tell you how long different parts of your code take to execute.
+* **Identify areas where it can be improved:** By pinpointing the slow parts of your code (bottlenecks), profilers guide you on where to focus your optimization efforts.
+* **Help developers make their programs run faster and more efficiently:** The ultimate goal of using a profiler is to improve the speed and resource usage of your software.
+
+**💡Here are 7 code profilers that you can use in Python.**
+
+This introduces a list of specific Python tools designed for code profiling.
+
+**👉Time and Timeit**
+
+* **a simple way to time small bits of Python code:** These are built-in Python modules that allow you to measure the execution time of specific code snippets.
+* **`time`:** Provides basic time-related functions, including getting the current time. You can use it to measure the time before and after a block of code to find the elapsed time.
+* **`timeit`:** Designed specifically for accurately timing small code snippets by running them multiple times and averaging the results. This helps to reduce the impact of transient system variations.
+
+**👉cProfile**
+
+* **cProfile is a Python library that is used to measure the performance of code.** It's a standard library module, meaning it comes with Python.
+* **It can be used to identify areas of code that are running slowly and need to be optimized.** `cProfile` provides detailed statistics about function calls, including how many times each function was called and the total and per-call execution time. It's a powerful tool for finding performance bottlenecks at the function level.
+
+**👉FunctionTrace**
+
+* **FunctionTrace is a tool used to trace the execution of a program.** Unlike `cProfile` which focuses on timing, `FunctionTrace` primarily records the sequence of function calls.
+* **It records the sequence of functions that are called and the parameters that are passed to them.** This can be invaluable for understanding the flow of your program and debugging complex execution paths.
+* **This helps to identify errors and optimize the performance of a program.** By seeing the order of function calls and their inputs, you can sometimes spot logical errors or inefficient call patterns that contribute to performance issues.
+
+**👉pyinstrument**
+
+* **Pyinstrument is a Python library that helps developers measure and analyzes the performance of their code.** It's an external library that you need to install.
+* **It provides tools to measure how long code takes to execute and to identify which parts of the code are taking the most time.** Pyinstrument is known for its clear and interactive output, often presented as a call stack with timing information. This makes it easy to visualize where your program is spending its time.
+
+**👉py-spy**
+
+* **Py-Spy is a tool used to measure the performance of Python programs.** It's an external tool that can profile running Python processes without modifying the target code.
+* **It can be used to measure the speed of code execution, memory usage, and other metrics.** This makes it useful for profiling production systems or long-running processes where you can't easily insert profiling code. Py-Spy samples the running process to gather performance data.
+
+**👉Snakeviz**
+
+* **Snakeviz is a tool for visualizing the run time of Python programs.** It's primarily a visualization tool that takes the output from profilers like `cProfile` and presents it in a graphical and interactive way.
+* **It helps you to see how long each part of your code takes to run, so you can identify areas where you can make improvements.** Snakeviz often uses sunburst charts or similar visualizations to represent the call hierarchy and the time spent in each function. This makes it easier to understand complex profiling data.
+
+**👉Yappi**
+
+* **A tracing profiler that is multithreading, asyncio and gevent aware.** This highlights Yappi's key strength: its ability to accurately profile asynchronous and concurrent Python code.
+* **Tracing profiler:** Like `FunctionTrace` and `cProfile`, it records detailed information about function calls.
+* **Multithreading, asyncio and gevent aware:** This is crucial for modern Python applications that heavily rely on concurrency and asynchronicity. Standard profilers might not accurately represent the execution flow and timings in such applications, but Yappi is designed to handle these complexities.
+
+In summary, these tools provide different ways to understand how your Python code behaves in terms of execution time and resource usage. 
+
+Choosing the right profiler depends on your specific needs, the complexity of your code, and the level of detail you require.
 
 {{< /details >}}
+
+Analogy with a four-layer data lakehouse architecture: Landing, Bronze, Silver, and Gold.
+
+**1. Landing Layer:**
+
+* **Purpose:** This is the initial point of entry for raw data, as it arrives from various source systems. The goal is to ingest the data quickly and reliably with minimal transformation.
+* **Typical Format:** **JSON** often fits well here due to its flexibility and the fact that many source systems naturally produce JSON. You might also find other raw formats like CSV, XML, or even proprietary binary formats in the landing zone. The key is to keep it as close to the original source as possible.
+* **Your Analogy Alignment:** JSON fits perfectly as a typical format in the **Landing** layer.
+
+**2. Bronze Layer (Raw/Curated Raw):**
+
+* **Purpose:** In this layer, the raw data from the landing zone is often made more consistent and reliable. This might involve basic data cleaning, standardization, and potentially schema enforcement (schema-on-write or schema evolution management). The data is still considered "raw" in the sense that it hasn't been heavily transformed for specific use cases.
+* **Typical Format:** **Avro** becomes a strong contender in the Bronze layer. Its schema enforcement and evolution capabilities ensure data consistency as it moves downstream. Its binary format also offers better storage efficiency and parsing speed compared to JSON. You might also see Parquet starting to appear in the Bronze layer if the data is already well-structured and the primary goal is efficient storage of the raw data.
+* **Your Analogy Alignment:** **Avro** aligns well with the **Bronze** layer, providing structure and efficiency to the raw data.
+
+**3. Silver Layer (Conformed/Cleaned/Integrated):**
+
+* **Purpose:** This layer focuses on data quality, integration, and creating a conformed view of the data. Data from various bronze tables might be joined, cleaned, transformed, and enriched to create business-oriented entities. The schema is typically well-defined and stable.
+* **Typical Format:** **Parquet** is the dominant format in the Silver layer due to its columnar storage, which is highly optimized for analytical queries. The data in the silver layer is often queried and used for reporting, business intelligence, and data exploration.
+* **Your Analogy Alignment:** **Parquet** fits perfectly into the **Silver** layer, providing the performance needed for analytical workloads on cleaned and integrated data.
+
+**4. Gold Layer (Aggregated/Business-Specific):**
+
+* **Purpose:** This is the final layer, tailored for specific business use cases and end-user consumption. Data in the gold layer is often highly aggregated, denormalized, and optimized for specific reporting dashboards, analytical applications, or machine learning models.
+* **Typical Format:** **Parquet** remains a common format in the Gold layer due to its analytical performance. However, depending on the specific needs, you might also find data in other formats optimized for particular tools or applications. Delta Lake often plays a significant role here, providing transactional guarantees and data governance for these business-critical datasets built on Parquet.
+* **Your Analogy Alignment:** Parquet continues to be relevant in the **Gold** layer for efficient consumption by business users and applications.
+
+**Revised Analogy:**
+
+* **Landing:** **JSON** (Raw, as-is ingestion)
+* **Bronze:** **Avro** (Structured raw, schema enforcement & evolution)
+* **Silver:** **Parquet** (Optimized for analytics on conformed data)
+* **Gold:** **Parquet** (Optimized for specific business use cases, often with a transactional layer like Delta Lake)
+
+This four-layer model provides a more granular view of the data journey, and your initial intuition about the roles of JSON, Avro, and Parquet holds up well within this framework. 
+
+The choice of format at each layer is driven by the specific requirements of that stage in the data processing pipeline.
+
+```mermaid
+graph LR
+    A["Landing: JSON Raw, as-is ingestion"] --> B["Bronze: Avro Structured raw, schema enforcement & evolution"];
+    B --> C["Silver: Parquet (Optimized for analytics on conformed data)"];
+    C --> D["Gold: Parquet (Optimized for specific business use cases, often with a transactional layer like Delta Lake)"];
+```
 
 
 #### DataBricks

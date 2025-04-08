@@ -696,6 +696,8 @@ streamparser_kafka \
     .show(30,truncate=False)
 ```
 
+Use functions with pyspark to read/filter:
+
 ```sh
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, when, split
