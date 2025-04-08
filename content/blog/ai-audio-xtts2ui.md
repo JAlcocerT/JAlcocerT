@@ -13,10 +13,40 @@ url: 'guide-xtts2-ui-docker'
 
 ## Coqui TTS
 
-https://github.com/coqui-ai/TTS
+* https://github.com/coqui-ai/TTS
 
 
 > MPL |  🐸💬 - a deep learning toolkit for Text-to-Speech, battle-tested in research and production 
+
+Eager to spin a Coqui Text to speech local server?
+
+
+```sh
+docker run -d \
+    --name coquitts \
+    -p 5002:5002 \
+    --entrypoint python3 \
+    ghcr.io/coqui-ai/tts-cpu \
+    TTS/server/server.py \
+    --model_name \
+    tts_models/en/vctk/vits
+```
+
+It will go with the `en/vctk/vits` model. But you can change it later on.
+
+
+
+The web ui will be at port `5002`:
+
+![alt text](/blog_img/GenAI/audio/coqui-tts.png)
+
+> And it works with more language than EN as well!
+
+Deploy with the related [docker-compose for CoquiTTS](https://github.com/JAlcocerT/Docker/blob/main/AI_Gen/TTS_Coqui/docker-compose.yml).
+
+
+{{< details title="Deploy CoquiTTS with Docker | CLI Details 📌" closed="true" >}}
+
 
 ```sh
 docker exec -it coquitts /bin/bash
@@ -29,16 +59,10 @@ python3 TTS/server/server.py --model_name tts_models/en/vctk/vits # To start a s
 #python3 TTS/server/server.py --model_name tts_models/es/mai/tacotron2-DDC
 ```
 
-The web ui will be at port `5002`:
 
-![alt text](/blog_img/GenAI/audio/coqui-tts.png)
-
-> And it works with more language than EN as well!
 
 
 ```yml
-version: '3.8'
-
 services:
   tts-cpu:
     image: ghcr.io/coqui-ai/tts-cpu
@@ -53,28 +77,57 @@ services:
     #   - ./local_data:/data
 ```
 
+
+{{< /details >}}
+
+
+
+{{< callout type="info" >}}
+[That `server.py`](https://github.com/coqui-ai/TTS/blob/dev/TTS/server/server.py) is a Flask App btw :)
+{{< /callout >}}
+
 ## Bark
 
 https://github.com/suno-ai/bark
 
 ## More
 
-Text to Speech with xTTS2 UI
+### xTTS2
 
-https://github.com/BoltzmannEntropy/xtts2-ui
-https://github.com/BoltzmannEntropy/xtts2-ui?tab=MIT-1-ov-file#readme
+Text to Speech with xTTS2 UI, which uses the package: https://pypi.org/project/TTS/
+
+> Meaning CoquiTTS under the hood
+
+* https://github.com/BoltzmannEntropy/xtts2-ui
+
+> MIT | A User Interface for XTTS-2 Text-Based Voice Cloning using only 10 seconds of speech 
 
 The model used
 
-https://coqui.ai/cpml.txt
-
-Hardware needed: works with CPU ✅
+* https://coqui.ai/cpml.txt
+* Hardware needed: works with CPU ✅
 
 Installing xTTS2 with Docker. Clone audio locally.
 
 
+```sh
+git clone https://github.com/pbanuru/xtts2-ui.git
+cd xtts2-ui
+
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Get the right pytorch installed: https://pytorch.org/get-started/locally/
+
+```sh
+#pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install -r requirements.txt
+```
+
 ```yml
-version: '3'
+#version: '3'
 
 services:
   audio:
@@ -113,12 +166,63 @@ pip install --upgrade TTS
 streamlit run app2.py 
 ```
 
-## Streamlit UI
-
+**Streamlit UI**
 
 
 ```sh
 streamlit run app2.py
+```
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
+
+### text_generation_webui_xtts
+
+https://github.com/kanttouchthis/text_generation_webui_xtts/
+
+
+---
+
+
+## Conclusions
+
+
+Making these with portainer is always easier:
+
+```sh
+sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+
+# docker stop portainer
+# docker rm portainer
+# docker volume rm portainer_data
+```
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
+
+### clone audio
+
+Taking some help from yt-dlp: https://github.com/yt-dlp/yt-dlp
+
+> Unlicensed| A feature-rich command-line audio/video downloader
+
+```sh
+yt-dlp -x --audio-format wav "https://www.youtube.com/watch?"
+yt-dlp -x --audio-format wav "https://www.youtube.com/watch?v=5Em5McC_ulc"
+```
+
+Which I could not get working, nor: https://github.com/ytdl-org/youtube-dl
+
+```sh
+sudo apt install youtube-dl
+youtube-dl -x --audio-format mp3 "https://www.youtube.com/watch?v=5Em5McC_ulc"
+
 ```
 
 ---
