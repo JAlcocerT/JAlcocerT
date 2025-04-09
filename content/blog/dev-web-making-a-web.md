@@ -203,31 +203,6 @@ But, if you really want something to perform with your data...
 You could say this is all **a [Data-ChatBot](https://github.com/JAlcocerT/Data-Chat)**. LlamaIndex + Mem0 does the trick.
 {{< /callout >}}
 
-<!-- 
-Observability Platform for LLMs
-  https://github.com/traceloop/openllmetry
-  https://github.com/langfuse/langfuse
-  
-  Epam Dial + prometheus + grafana
-  Or with LangSmith
-Also DataDog - https://docs.datadoghq.com/llm_observability/ -->
-
-<!-- 
-Observability Platform for LLMs
-    https://github.com/traceloop/openllmetry
-    https://github.com/langfuse/langfuse -->
-
-<!-- Goals:
-  • AI Gen
-    LangChain
-    LocalModels: with Docker
-    From Streamlit to Chainlit / Gradio: https://pypi.org/project/gradio/
-    LLMOps: MLFlow, Airflow, VectorDBs… Onboarding Guide - GenAI-X Innovation Team - EPAM Knowledge Base
-      mlflow/mlflow: Open source platform for the machine learning lifecycle (github.com)
-    GPT4-Turbo
-  • V3 of ML trainnings - To include MLFlow
-Airflow to start some job? -->
-
 ### AI Driven Website Migration
 
 Do you have tons of images in and old website?

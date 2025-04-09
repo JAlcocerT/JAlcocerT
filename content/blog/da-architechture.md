@@ -1,6 +1,6 @@
 ---
 title: "Architecture D&A like a Pro"
-date: 2025-04-17T00:20:21+01:00
+date: 2025-04-09T00:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: '.'
@@ -8,7 +8,63 @@ url: 'data-analytics-architecture'
 ---
 
 
-## Example
+You might encounter this kind of architectures:
+
+
+```mermaid
+
+graph LR
+    subgraph Landing & Bronze
+        direction LR
+        L1 --> B1
+        L2 --> B2
+        L3 --> B3
+    end
+
+    subgraph Silver
+        direction LR
+        B1 --> S1
+        B2 --> S2
+        B3 --> S2
+    end
+
+    subgraph Gold
+        direction LR
+        S1 --> G1
+        S2 --> G1
+    end
+
+```
+
+
+
+1. An Operational Data Hub (ODH) is a central, integrated data store that serves operational systems and analytical applications with near real-time or real-time data.
+
+It acts as a single source of truth for operational data, consolidating information from various source systems.
+Key characteristics of an ODH include:
+Real-time or near real-time data ingestion and delivery.
+Data integration and transformation.
+Support for operational analytics and decision-making.
+Lower latency compared to traditional data warehouses.
+
+2. Data LakeHouses
+
+
+{{< callout type="warning" >}}
+Always make comprehensible designs & docs for all the parties involved in the project
+{{< /callout >}}
+
+---
+
+## Conclusions
+
+
+
+---
+
+## FAQ
+
+### Example
 
 > tienes una fabrica de leche y quieres extraer tres arhcivos: lsita de vacas, medidas de leche y otro de calidad de la leche. Quieres crear facts y dimensions: como lo harias?
 

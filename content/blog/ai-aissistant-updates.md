@@ -1,6 +1,6 @@
 ---
 title: "Streamlit and Assistant Updates"
-date: 2025-04-10
+date: 2025-04-17
 draft: false
 tags: ["dev"]
 description: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT) Generator, Speech Rater...'

@@ -54,6 +54,10 @@ See `st.audio_input`
 3. 3rd Party *repurposed* APIs: Like mailerlite or Stripe
 4.  
 
+### PyGWalker
+
+https://docs.kanaries.net/pygwalker/use-pygwalker-with-streamlit
+
 ## Conclusions
 
 These have been enough so far to develop a couple of Apps:

@@ -1,7 +1,7 @@
 Better **YT Workflow** on:
  
 * https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#youtube-tricks
-* [this post](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/)
+* [this post](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/) and [this](https://jalcocert.github.io/JAlcocerT/local-ai-audio/) 
 
 * https://github.com/JAlcocerT/YT-Video-Edition
 
@@ -23,8 +23,7 @@ export OPENAI_API_KEY=sk-... # on Linux/Mac
 * <https://platform.openai.com/docs/api-reference>
 * <https://openai.com/pricing>
 
-## Text to AUdio
+## Text to Audio
 
 * 👉 <https://www.youtube.com/watch?v=LWfE-j_V2J0>
 * <https://platform.openai.com/docs/guides/text-to-speech>
-

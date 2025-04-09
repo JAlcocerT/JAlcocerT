@@ -700,11 +700,22 @@ So, when you see APHYRate values, they will typically be expressed in Megabits p
 
 Having this Telco experience made me learn many things.
 
-Not just D&A stuff. But concepts around it as well.
+Starting by the importance of proper **Operational Data Hubs**.
+
+> An Operational Data Hub (ODH) is a central, integrated data store that serves operational systems and analytical applications with near real-time or real-time data.
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB" title="Chat with DB ↗" >}}
+{{< /cards >}}
+
+Not just D&A Tech stuff.
+
+But concepts around it as well.
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="Better Time Management ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB" title="Product Mindset ↗" >}}
 {{< /cards >}}
 
 

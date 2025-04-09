@@ -1,8 +1,8 @@
 ---
 title: "DevOps Tools"
-date: 2025-12-10T00:20:21+01:00
-draft: true
-description: 'Setting up devops tools - Grafana...'
+date: 2025-05-10T00:20:21+01:00
+draft: false
+description: 'Setting up devops tools - From CI/CD, to Monitoring withGrafana, k8s, DSc Tools...'
 url: 'dev-ops-for-non-devops'
 ---
 
@@ -168,6 +168,35 @@ Cloud Native [Function-as-a-Service Platform](https://github.com/OpenFunction/Op
 
 > Thanks to [DevOps Toolkit](https://www.youtube.com/watch?v=UGysOX84v2c) for showing this. 
 
+## Conclusions
+
+
+<!-- 
+Observability Platform for LLMs
+  https://github.com/traceloop/openllmetry
+  https://github.com/langfuse/langfuse
+  
+  Epam Dial + prometheus + grafana
+  Or with LangSmith
+Also DataDog - https://docs.datadoghq.com/llm_observability/ -->
+
+<!-- 
+Observability Platform for LLMs
+    https://github.com/traceloop/openllmetry
+    https://github.com/langfuse/langfuse -->
+
+<!-- Goals:
+  • AI Gen
+    LangChain
+    LocalModels: with Docker
+    From Streamlit to Chainlit / Gradio: https://pypi.org/project/gradio/
+    LLMOps: MLFlow, Airflow, VectorDBs… Onboarding Guide - GenAI-X Innovation Team - EPAM Knowledge Base
+      mlflow/mlflow: Open source platform for the machine learning lifecycle (github.com)
+    GPT4-Turbo
+  • V3 of ML trainnings - To include MLFlow
+Airflow to start some job? -->
+
+
 ---
 
 ## FAQ
@@ -240,6 +269,8 @@ https://www.youtube.com/watch?v=dihfA7Ol6Mw
 ### Linux and Robotics?
 
 https://www.youtube.com/watch?v=-JVHvU3Oor8
+
+---
 
 
 ## FAQ

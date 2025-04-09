@@ -3,7 +3,7 @@ title: "My Favourite ways to RAG"
 date: 2025-04-06T10:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'RAG applications.'
+description: 'RAG applications. From LangChain to '
 url: 'comparing-rag-and-use-cases'
 ---
 
@@ -33,8 +33,8 @@ And actually the build has happened faster than for streamlit Apps
 [NLTK](https://github.com/nltk/nltk) was key!
 
 
-https://pypi.org/project/nltk/
-https://www.nltk.org/api/nltk.tag.perceptron.html
+* https://pypi.org/project/nltk/
+* https://www.nltk.org/api/nltk.tag.perceptron.html
 
 
 > And I almost forgot, but used it as NLP Tool
@@ -87,8 +87,15 @@ Lately I have been using:
 ### GEN AI Techniques
 
 
-Fundamentals of Neural Networks: Understand the architecture and training of deep neural networks.
-Generative Adversarial Networks (GANs): Basic understanding of how GANs work for generating synthetic data or other creative outputs.
-Variational Autoencoders (VAEs): Another type of generative model.
-Transformer Networks: Deep dive into the architecture of Transformers, which are the foundation for many state-of-the-art NLP and generative models (e.g., BERT, GPT).
-Large Language Models (LLMs): Understand the capabilities and limitations of LLMs and how they can be applied to HR-related tasks.
+* Fundamentals of Neural Networks: Understand the architecture and training of deep neural networks.
+* Generative Adversarial Networks (GANs): Basic understanding of how GANs work for generating synthetic data or other creative outputs.
+* Variational Autoencoders (VAEs): Another type of generative model.
+* Transformer Networks: Deep dive into the architecture of Transformers, which are the foundation for many state-of-the-art NLP and generative models (e.g., BERT, GPT).
+* Large Language Models (LLMs): Understand the capabilities and limitations of LLMs and how they can be applied to HR-related tasks.
+
+
+See how to run **LangGraph or MLFlow**
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects" title="DSc Tools for DA Projects ↗ " >}}
+{{< /cards >}}

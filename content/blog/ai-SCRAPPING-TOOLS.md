@@ -82,6 +82,13 @@ Because of its simplicity and permissiveness, the ISC license is favored for pro
 
 >  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
 
+
+---
+
+## Conclusions
+
+
+
 ---
 
 ## FAQ

@@ -1,10 +1,10 @@
 ---
-title: "SelfHosting Python AI Apps - My 2025 Favs"
-date: 2025-12-16T23:20:21+01:00
+title: "SelfHosting AI Apps - My 2025 Favs"
+date: 2025-11-30T23:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: '.'
-url: 'selfhosting-ai-apps'
+url: 'selfhosting-ai-apps-2025'
 ---
 
 https://pytorch.org/get-started/locally/
@@ -49,6 +49,7 @@ The goal of **this post** is:
 * Authelia / Zitadel / Authentik
 
 {{% /details %}}
+
 ### How to Back Up my Server?
 
 Duplicati to other location (HD / Mega, One drive, s3...)

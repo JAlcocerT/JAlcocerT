@@ -19,9 +19,20 @@ Its time to discover **LiteLLM**
 [![Star History Chart](https://api.star-history.com/svg?repos=BerriAI/litellm,type=Date)](https://star-history.com/BerriAI/litellm&Date)
 
 
+
+
 {{< callout type="info" >}}
 Been testing LiteLLM at [AIssistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Tests), with this [script](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_Tests/LiteLLM/litellm_sample.py)
 {{< /callout >}}
+
+
+All the learnings are collected:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
 
 
 

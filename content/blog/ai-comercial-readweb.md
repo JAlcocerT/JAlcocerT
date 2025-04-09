@@ -8,10 +8,11 @@ url: 'scrap-and-chat-with-the-web'
 ---
 
 
-* **Some Alternatives to Selenium and BS4**:
-  * https://github.com/ScrapeGraphAI/Scrapegraph-ai
-  * https://github.com/mendableai/firecrawl
-  * https://github.com/unclecode/crawl4ai
+**Some Alternatives to Selenium and BS4**:
+
+* https://github.com/ScrapeGraphAI/Scrapegraph-ai
+* https://github.com/mendableai/firecrawl
+* https://github.com/unclecode/crawl4ai
 
 But first, some recap on the old school.
 
