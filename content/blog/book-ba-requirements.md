@@ -15,7 +15,9 @@ This guide delves into the crucial aspects of requirements management, analysis,
 
 ### Requirements Life Cycle Management (LCM)
 
-Requirements LCM encompasses all activities involved in managing requirements and design information throughout the project lifecycle, from initial conception to solution retirement.  It ensures alignment between business needs, stakeholder expectations, and the delivered solution.
+Requirements LCM encompasses all activities involved in managing requirements and design information throughout the project lifecycle, from initial conception to solution retirement.
+
+It ensures alignment between business needs, stakeholder expectations, and the delivered solution.
 
 **Key Principles:**
 
@@ -95,7 +97,9 @@ A RACI matrix helps to clearly define who is responsible for each task or decisi
 
 > Clarifies roles and responsibilities for each task or decision (Responsible, Accountable, Consulted, Informed).  Especially helpful for meetings and approvals.
 
-The matrix is typically displayed as a table, with each task or decision listed along the top and the stakeholders listed along the left side. Each cell in the matrix then indicates which of the four different roles applies to that particular task or decision.
+The matrix is typically displayed as a table, with each task or decision listed along the top and the stakeholders listed along the left side.
+
+Each cell in the matrix then indicates which of the four different roles applies to that particular task or decision.
 
 * **R**esponsible, **A**ccountable, **C**onsulted and **I**nformed.
 * Keep it in mind when [creating meetings](/JAlcocerT/effective-meetings-data-analytics/).

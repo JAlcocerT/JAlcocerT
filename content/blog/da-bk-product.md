@@ -30,7 +30,9 @@ We'll explore the concept of product vision in data analytics, the significance 
 
 ## Understanding Product Vision in Data Analytics
 
-Product vision is a strategic approach to creating data products and solutions that meet specific business objectives and end-user needs. It involves understanding the market landscape, target audience, and key performance indicators (KPIs) to design data-driven products that drive growth and innovation. 
+Product vision is a strategic approach to creating data products and solutions that meet specific business objectives and end-user needs.
+
+It involves understanding the market landscape, target audience, and key performance indicators (KPIs) to design data-driven products that drive growth and innovation. 
 
 In data analytics, a product vision mindset allows analysts to align their efforts with organizational goals, ensuring that the insights they generate contribute to the company's overall success.
 
@@ -40,7 +42,9 @@ In data analytics, a product vision mindset allows analysts to align their effor
 
 Data products are tools or applications that leverage data analysis and visualization to provide valuable insights for decision-making. Examples of data products include dashboards, reports, and predictive models. 
 
-These tools enable organizations to make data-driven decisions, optimize processes, and uncover new business opportunities. By focusing on creating effective data products, analysts can better understand the needs of their users, deliver meaningful results, and maximize the impact of their work.
+These tools enable organizations to make data-driven decisions, optimize processes, and uncover new business opportunities. 
+
+By focusing on creating effective data products, analysts can better understand the needs of their users, deliver meaningful results, and maximize the impact of their work.
 
 ## Cultivating a Product Vision Mindset
 
@@ -66,19 +70,23 @@ By adopting a product vision mindset, any analysts can get several benefits:
 
 ### How to Succesfully Interact with the Product Team
 
-When interacting with product managers and discussing requirements, each of the data professionals (data analysts, business intelligence experts, data scientists, and data consultants) should have a list of questions to ensure they fully understand the project's goals and expectations. 
+When interacting with product managers and discussing requirements, each of the data professionals (data analysts, business intelligence experts, data scientists, and data consultants) should **have a list of questions to ensure they fully understand the project's goals and expectations.** 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md" title="Have a Project Charter Handy ↗ " >}}
+{{< /cards >}}
 
 #### Data Analyst
 
-* What are the key objectives (OKR) and goals of this data product or project?
-* Who are the primary end-users or target audience for this data product?
+* What are the key objectives (OKR) and **goals of this data product or project**?
+* **Who are the primary end-users** or target audience for this data product?
 * What specific data sources and datasets will be used for this project?
 * Are there any preferred data visualization tools or techniques for this data product?
 * What are the expected timelines or milestones for this project?
 
 #### Business Intelligence (BI)
 
-* What are the most important KPIs or metrics that the data product should track and display?
+* What are the most important KPIs or **metrics that the data product should track** and display?
 * How will the data product integrate with existing BI tools or platforms within the organization?
 * What are the data governance and security requirements for this project?
 * What level of interactivity and customization is expected in the data product (e.g., dashboards, reports)?
@@ -94,7 +102,8 @@ When interacting with product managers and discussing requirements, each of the 
 
 #### Data Consultant
 
-* How does this data product align with the organization's overall data strategy and objectives?
+How does this data product align with the organization's overall data strategy and objectives?
+
 * Are there any known pain points or challenges in the organization's data landscape that this data product should address?
 * What specific tools, technologies, or platforms should be used for this project, and do they align with the organization's existing infrastructure?
 * What is the scope for collaboration and communication between different teams (e.g., data, IT, business) during this project?

@@ -13,13 +13,13 @@ url: 'guide-deploy-shinyapps'
 ---
 
 
-# Shiny to ShinyApps.io
+## Shiny to ShinyApps.io
 
 After building a great **Shiny dashboard**, you will be wondering **how could you share it** with others and keep the interactivity.
 
 Using **ShinyApps** service is one of the options that are available - They offer a free tier after registering that can be used for starters.
 
-Remember that shiny dashboards require computation to be processed (not like flexdashboards), this is why they cant be deployed as a static site.
+Remember that shiny dashboards require computation to be processed (not like flexdashboards), this is why they cant be **deployed as a static site**.
 
 > In this case you are not in control of the Infrastructure ❗
 
@@ -89,6 +89,7 @@ setwd(wd)
 deployApp(appName = 'your_desired_app_name') #it will look for your ui.R and server.R files in the same directory
 ```
 
+## Example
 
 You can check one simple **working example** at: <https://jalcocert.shinyapps.io/retirement_facts/>
 

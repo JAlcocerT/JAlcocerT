@@ -1,5 +1,5 @@
 ---
-title: "Buying a car being in Data Analytics"
+title: "Buying a Car being in Data Analytics"
 date: 2021-10-03T23:20:21+01:00
 draft: false
 tags: ["Outro"]
@@ -211,6 +211,57 @@ Steps for **buying a car in Germany**.
   * [Example](https://www.carfax.eu/es/vhr?reportId=11bd37fd-859c-45f4-9d7b-e30a53704bf1)
 
 * [DGT Info about a car](https://sede.dgt.gob.es/es/vehiculos/informacion-de-vehiculos/informe-de-un-vehiculo/#:~:text=Para%20obtener%20el%20informe%20de,directamente%20desde%20la%20propia%20app.)
+
+
+{{< details title="Tricks | Car in Spain 📌" closed="true" >}}
+
+Comprar un vehículo de segunda mano en España implica una serie de pasos y consideraciones importantes para garantizar una transacción segura y sin contratiempos. Aquí te presento una guía detallada:
+
+**1. Verificación del estado del vehículo:**
+
+* **Inspección mecánica:**
+    * Es fundamental revisar el estado general del vehículo, incluyendo motor, frenos, neumáticos, luces y otros componentes.
+    * Considera llevar el coche a un taller de confianza para una revisión profesional.
+* **Historial del vehículo:**
+    * Solicita un informe de historial en la Dirección General de Tráfico (DGT) para verificar la titularidad, historial de inspecciones técnicas (ITV), posibles cargas o embargos, y otros datos relevantes.
+    * También puedes obtener informes de empresas especializadas que ofrecen datos adicionales sobre el vehículo.
+
+**2. Documentación necesaria:**
+
+* **Contrato de compraventa:**
+    * Elabora un contrato de compraventa que incluya los datos del comprador y vendedor, la descripción del vehículo (marca, modelo, matrícula), el precio de venta, la fecha y hora de la transacción, y las condiciones de la venta.
+* **Permiso de circulación y ficha técnica:**
+    * Asegúrate de que el vendedor te entregue el permiso de circulación y la ficha técnica del vehículo.
+* **Justificante del pago del Impuesto sobre Vehículos de Tracción Mecánica (IVTM):**
+    * Verifica que el vendedor esté al corriente de pago de este impuesto.
+
+**3. Trámites administrativos:**
+
+* **Cambio de titularidad:**
+    * Debes realizar el cambio de titularidad del vehículo en la DGT en un plazo de 30 días desde la firma del contrato de compraventa.
+    * Puedes realizar este trámite de forma presencial en las oficinas de la DGT o de forma telemática a través de su sede electrónica.
+* **Pago del Impuesto de Transmisiones Patrimoniales (ITP):**
+    * Este impuesto se paga en la comunidad autónoma donde resides y varía según la comunidad.
+    * El importe se calcula aplicando un porcentaje sobre el valor del vehículo según tablas oficiales.
+
+**4. Impuestos:**
+
+* **Impuesto de Transmisiones Patrimoniales (ITP):**
+    * Este es el principal impuesto a pagar al comprar un vehículo de segunda mano.
+    * El porcentaje varía según la comunidad autónoma, generalmente entre el 4% y el 8% del valor del vehículo.
+* **Impuesto sobre Vehículos de Tracción Mecánica (IVTM):**
+    * Este impuesto, también conocido como impuesto de circulación, se paga anualmente al ayuntamiento donde resides.
+    * El importe varía según la potencia fiscal del vehículo y el municipio.
+
+**Recomendaciones adicionales:**
+
+* Asegúrate de que el vendedor esté al corriente de pago de multas y sanciones.
+* Verifica que el vehículo tenga la ITV en vigor.
+* Considera contratar un seguro de automóvil antes de utilizar el vehículo.
+* Comprueba que el vehiculo esta libre de cargas, embargos o precintos.
+
+
+{{< /details >}}
 
 ### In Poland
 

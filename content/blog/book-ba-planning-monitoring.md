@@ -89,6 +89,8 @@ Several techniques can aid in planning and monitoring:
 * **Surveys/Questionnaires:** Gathering broad input.
 * **Workshops:** Collaborative planning sessions.
 
+---
+
 ### Recommended Software
 
 For **project planning and monitoring**, consider using tools like:

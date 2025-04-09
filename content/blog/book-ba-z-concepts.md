@@ -187,9 +187,9 @@ Knowledge areas represent areas of specific business analysis expertise that enc
     * Stakeholder Engagement: The article emphasizes the importance of effective collaboration with stakeholders for maintaining their engagement in business analysis activities. It provides several factors to consider while arranging a collaboration.
     * Techniques that can be used for better planning and monitoring: brainstorming, business cases, document analysis, estimation, financial analysis, functional decomposition, interviews, item tracking, lessons learned, process modeling, reviews, risk analysis and management, scope modeling, survey or questionnaire, and workshops.
 
-### [**Elicitation and Collaboration**](https://fossengineer.com/elicitation-data-analytics/):
+### Elicitation and Collaboration
 
-The tasks that business analysts perform to prepare for and conduct elicitation activities and confirm the results obtained. 
+The tasks that business analysts perform to prepare for and conduct [elicitation activities](https://fossengineer.com/elicitation-data-analytics/) and confirm the results obtained. 
     
 * It also describes the communication with stakeholders once the business analysis information is assembled and the ongoing collaboration with them throughout the business analysis activities.
     * Elicitation Techniques:The process of gathering information from sources such as stakeholders or other sources. It is the primary method for learning about needs and designs, and it may involve speaking with stakeholders directly, doing research, conducting experiments, or simply receiving information.

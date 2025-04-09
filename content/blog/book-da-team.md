@@ -136,9 +136,15 @@ Discipline must be saved for essential activities. -->
 
 ##  Improving Team's Performance
 
-Improving team performance is not always about making huge changes or drastic improvements. Rather, it can be achieved through small, consistent, and incremental improvements that compound over time. Each small step may not seem significant in isolation, but when combined and sustained over a period, these small changes can lead to substantial improvements in overall team performance.
+Improving team performance is not always about making huge changes or drastic improvements.
 
-**Remember about the compound effect** - As each team member enhances their skills and capabilities, they contribute more effectively to the team's goals, thereby improving the team's collective performance. Over time, this continuous improvement can lead to a high-performing team that exceeds its objectives.
+Rather, it can be achieved through small, consistent, and incremental improvements that compound over time.
+
+Each small step may not seem significant in isolation, but when combined and sustained over a period, these small changes can lead to substantial improvements in overall team performance.
+
+**Remember about the compound effect** - As each team member enhances their skills and capabilities, they contribute more effectively to the team's goals, thereby improving the team's collective performance.
+
+Over time, this continuous improvement can lead to a high-performing team that exceeds its objectives.
 
 ### Kaizen & Pareto
 

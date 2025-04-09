@@ -8,7 +8,6 @@ url: 'setup-bi-tools-docker'
 ---
 
 
-
 ## Business Intelligence and IoT (BIA & IoT)
 
 - [Superset](https://superset.apache.org/)
@@ -277,10 +276,37 @@ Takeaways
 | Use Cases   | Filtering data in Kibana dashboards, visualizations, and Discover | Querying Elasticsearch for data analysis and machine learning |
 
 
+> KQL queries are ultimately translated into Elasticsearch Query DSL queries before being sent to Elasticsearch.
+
+
+DSL Sample:
+
+```json
+{
+  "query": {
+    "prefix": {
+      "node.keyword": {
+        "value": "FN-LC0001"
+      }
+    }
+  }
+}
+```
+
+And for KQL logic, we would do:
+
+```sql
+viewerID : *  and site : "AD04" and (HttpPlayerPlaybackEndEvent_assetType : * or HttpPlayerStartEvent_assetType : * )
+```
+
+Lucene is the foundation, providing the core search capabilities.
+
+KQL is a user-friendly layer built on top of Elasticsearch, simplifying common searches.
+
+Elasticsearch DSL is the most powerful and flexible query language, allowing for complex and precise searches.
 
 {{< details title="Kibana Queries - KQL, DSL, Lucene... 📌" closed="true" >}}
 
-Absolutely! Let's break down Kibana KQL, DSL, and their relationship to Lucene queries, then translate your KQL query into DSL.
 
 **Understanding Kibana Query Languages**
 
@@ -653,6 +679,87 @@ IoT Project example with Superset: <>
 
 
 ---
+
+## Conclusions
+
+Whatever technology you are using, make sure to understand how it adds values to the final users:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/business-intelligence-data-analytics/" title="Concepts for BI Analytics" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#how-to-succesfully-interact-with-the-product-team" title="Questions to shape BI Products" icon="book-open" >}}  
+{{< /cards >}}
+
+
+{{< details title="Why a Project Charter? 📌" closed="true" >}}
+
+Imagine you're planning a big trip with your friends.
+
+Before you pack your bags and hit the road, you'd probably want to agree on a few key things, right?
+
+A **project charter** is like that agreement for a project at work or school.
+
+**In simple terms, it's a short, important document that clearly says:**
+
+* **What exactly are we trying to achieve with this project?** (The goal)
+* **Why are we doing this project?** (The reason and benefits)
+* **Who are the main people involved?** (The key players)
+* **What are the main things we need to do?** (The high-level plan)
+* **What are the big limits or rules we need to follow?** (Like budget or deadlines)
+* **Who has the authority to say "yes, let's do this"?** (The person who approves the project)
+
+**Think of it as the project's "birth certificate" and "permission slip."** It makes sure everyone is on the same page from the very beginning and knows what the project is all about before a lot of time and effort is spent.
+
+1. Project purpose: Why is this project important, and what business need does it fulfill? 
+2. Project objectives: What do you want to achieve by the end of your project, and what metrics will you use to measure project success? 
+3. Project scope and deliverables: What specific deliverables will you complete, and what will you NOT work on? 
+4. Required resources or project needs: What do you need to complete this work? This includes people, tools, and budget. 
+5. Project stakeholders: Who are your project team members? Who needs to approve the project charter, who’s the project sponsor, and who should be looped into key decisions? 
+
+{{< /details >}}
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md" title="Have a Project Charter Handy ↗ " >}}
+{{< /cards >}}
+
+> Without a project charter, it's like going on that trip without knowing where you're going, who's paying, or when you need to be back – it can get messy quickly!
+
+### Syncing Expectations
+
+{{< callout type="info" >}}
+Specify the goals, requirements, and key stakeholders of your project to ensure clear communication.
+{{< /callout >}}
+
+**During Requirements Gathering:**
+
+* **What are the most important KPIs or metrics that the data product should track and display?** This is fundamental to understanding the *purpose* and *value* of the data product. It directly informs what data needs to be sourced, transformed, and presented.
+* **How will the data product integrate with existing BI tools or platforms within the organization?** This addresses the *usability* and *adoption* of the new product. Avoiding siloed tools and ensuring seamless integration is key for user acceptance and efficiency.
+* **What are the data governance and security requirements for this project?** This is critical for *compliance*, *trust*, and *mitigating risks*. Understanding data sensitivity, access controls, and governance policies early on prevents costly rework later.
+* **What level of interactivity and customization is expected in the data product (e.g., dashboards, reports)?** This defines the *user experience* and the *technical complexity* of the solution. Understanding these expectations early guides design and development choices.
+* **What are the key objectives (OKR) and goals of this data product or project?** This establishes the *strategic alignment* and *desired outcomes*. These goals will be the yardstick for measuring the project's success.
+* **Who are the primary end-users or target audience for this data product?** Understanding the *audience* is crucial for tailoring the data, visualizations, and overall user experience to their specific needs and technical proficiency.
+* **What specific data sources and datasets will be used for this project?** This is a foundational question for *technical feasibility* and *data availability*. Identifying data sources early helps assess data quality, accessibility, and the need for data integration efforts.
+* **Are there any preferred data visualization tools or techniques for this data product?** This can be driven by organizational standards, user familiarity, or specific analytical needs. Knowing these preferences early can streamline development.
+* **What are the expected timelines or milestones for this project?** Understanding the *time constraints* is essential for project planning, resource allocation, and managing stakeholder expectations.
+* **How does this data product align with the organization’s overall data strategy and objectives?** This ensures the project contributes to the broader *data vision* of the organization and avoids creating isolated solutions.
+* **Are there any known pain points or challenges in the organization’s data landscape that this data product should address?** This helps frame the project as a *solution to existing problems*, increasing its relevance and potential impact.
+* **What specific tools, technologies, or platforms should be used for this project, and do they align with the organization’s existing infrastructure?** This addresses *technical feasibility*, *cost efficiency*, and *maintainability*. Leveraging existing infrastructure can reduce complexity and costs.
+* **What is the scope for collaboration and communication between different teams (e.g., data, IT, business) during this project?** Defining *communication channels* and *collaboration expectations* early is crucial for smooth project execution and stakeholder alignment.
+
+**When Creating the Project Charter:**
+
+These questions directly inform the key sections of a project charter:
+
+* **Project Objectives and Goals:** Directly addressed by "What are the key objectives (OKR) and goals...?"
+* **Project Scope:** Defined by "What specific data sources...", "What level of interactivity...", and "What specific tools...?"
+* **Key Stakeholders:** Identified by "Who are the primary end-users...?" and "What is the scope for collaboration...?"
+* **High-Level Requirements:** Summarized from the answers to questions about KPIs, integration, governance, visualization, and alignment with data strategy.
+* **Project Deliverables:** Implicitly defined by the expected functionality and outputs of the data product.
+* **High-Level Timelines and Milestones:** Directly addressed by "What are the expected timelines...?"
+* **Assumptions and Constraints:** Informed by the existing BI tools, data governance requirements, preferred tools, and infrastructure alignment.
+* **Success Criteria:** Directly linked to the "most important KPIs or metrics" and the "key objectives and goals."
+
+**These are not just good questions; they are *essential* questions for laying a strong foundation for a data product project. Addressing them thoroughly during requirements gathering will significantly contribute to a well-defined and effective project charter, ultimately increasing the likelihood of project success.**
 
 ## FAQ
 

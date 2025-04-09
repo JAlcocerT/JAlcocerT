@@ -58,7 +58,7 @@ Look for the first minute activity that would make you be one step closer to com
 
 ## Prioritize Work
 
-* Is this actually needed? 
+* **Is this actually needed?** 
     - Keep in mind the value that the customer perceives out of this task <!-- Lean, VSM -->
     - Try Reverse Pilot - Scale the activity back / eliminate a task and check if it makes a difference 
 * Can it be delegated?

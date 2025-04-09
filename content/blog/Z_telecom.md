@@ -125,7 +125,7 @@ They are not alternatives to each other; rather, "superpollers" (or clustered po
 In essence:
 
 * ServAssure NXT is the overall management system.
-* "superpollers" are a sub system that gathers data that ServAssure NXT then uses.
+* "Superpollers" are a sub system that gathers data that ServAssure NXT then uses.
 
 Therefore, "superpollers" are not an alternative to ServAssure NXT; they are a critical part of its architecture.
 
@@ -154,7 +154,9 @@ Therefore, "superpollers" are not an alternative to ServAssure NXT; they are a c
 - **Security**: Given the remote nature of access, security is a critical aspect of ACS. Implementations typically include robust authentication and encryption mechanisms to protect against unauthorized access and ensure data privacy.
 
 
-ACS plays a vital role in modern telecommunications networks by enabling efficient and secure management of customer-premises equipment. It supports the dynamic needs of both service providers and customers, ensuring high levels of service availability and reliability.
+ACS plays a vital role in modern telecommunications networks by enabling efficient and secure management of customer-premises equipment.
+
+It supports the dynamic needs of both service providers and customers, ensuring high levels of service availability and reliability.
 
 
 ### MoCA (Multimedia over Coax Alliance)
@@ -192,7 +194,7 @@ MoCA technology provides an effective way to enhance home network performance by
 
 It offers a practical solution for improving connectivity and network reliability, especially in environments where Wi-Fi may face limitations due to distance, barriers, or interference.
 
-### Optical Network Terminal (ONT)
+### Optical Network Terminal
 
 **ONT (Optical Network Terminal)** is a device used in fiber-optic internet setups like Fiber to the Home (FTTH) or Fiber to the Building (FTTB).
 
@@ -254,7 +256,9 @@ It is widely used by many cable television operators to provide internet access 
   - It also supports functionalities like IPTV and on-demand services, integrating seamlessly with digital TV offerings.
 
 
-DOCSIS is a cornerstone technology for cable service providers, enabling them to leverage existing coaxial cable infrastructure to deliver high-speed internet and other digital services. As technology evolves with newer versions like DOCSIS 3.1 and 4.0, it continues to enhance the capacity, efficiency, and performance of cable broadband services, making it a competitive option against other types of broadband delivery technologies such as fiber optics.
+DOCSIS is a cornerstone technology for cable service providers, enabling them to leverage existing **coaxial cable** infrastructure to deliver high-speed internet and other digital services.
+
+As technology evolves with newer versions like DOCSIS 3.1 and 4.0, it continues to enhance the capacity, efficiency, and performance of cable broadband services, making it a competitive option against other types of broadband delivery technologies such as fiber optics.
 
 {{< /details >}}
 
@@ -428,6 +432,50 @@ Understanding these differences is crucial for optimizing wireless network perfo
 
 ## Other Acronyms
 
+{{< details title="SAMKnows 📌" closed="true" >}}
+
+SAMknows is a company that specializes in **internet performance measurement and analysis**, primarily for the telecommunications industry and consumers. For telecom, SAMknows provides various solutions and insights related to the quality and performance of broadband and mobile networks.
+
+Here's a breakdown of what SAMknows means for telecom:
+
+**1. Network Performance Monitoring and Measurement:**
+
+* **Independent Testing:** SAMknows conducts independent and objective measurements of internet performance metrics like download speed, upload speed, latency, packet loss, and jitter. This helps to understand the real-world performance experienced by end-users.
+* **Hardware and Software Agents:** They utilize "Whiteboxes" (hardware devices installed in users' homes) and software agents (on devices and routers) to collect network performance data.
+* **Real-time and Historical Data:** SAMknows provides both real-time and historical data on network performance, allowing for trend analysis and identification of issues.
+
+**2. Regulatory Compliance and Benchmarking:**
+
+* **Working with Regulators:** SAMknows has worked with telecommunications regulators globally (e.g., FCC in the US, Ofcom in the UK, CRTC in Canada) to conduct national broadband measurement programs.
+* **Benchmarking:** Their data allows regulators and consumers to benchmark the performance of different internet service providers (ISPs) and technologies.
+* **Transparency:** By publishing reports based on their measurements, SAMknows contributes to greater transparency in the telecom market.
+
+**3. Insights for Internet Service Providers (ISPs):**
+
+* **Network Optimization:** ISPs can use SAMknows' data to identify network bottlenecks, optimize their infrastructure, and improve the quality of service for their customers.
+* **Troubleshooting:** Their tools can help diagnose network problems and identify the root cause of performance issues.
+* **Customer Experience Management:** Understanding real-world performance helps ISPs manage customer expectations and improve satisfaction.
+* **Competitive Analysis:** ISPs can benchmark their performance against competitors to identify areas for improvement.
+
+**4. Empowering Consumers:**
+
+* **Internet Performance Testing:** SAMknows offers tools (like mobile apps and web-based speed tests) that allow consumers to test their own internet connection performance.
+* **Understanding Service Quality:** This helps consumers understand if they are receiving the internet speeds and quality of service they are paying for.
+* **Making Informed Choices:** The independent data and reports can help consumers make more informed decisions when choosing an ISP.
+
+**5. Specific Solutions and Products:**
+
+* **SamKnows One:** A cloud-based analytics platform for detailed analysis and operational management of internet performance data.
+* **RealSpeed:** A tool for in-home Wi-Fi performance measurement and troubleshooting.
+* **FaultFinder:** A tool to help identify and diagnose network performance issues.
+* **ConnectedHome:** Provides insights into the internet connection rate within a home network.
+
+It's also important to note that in June 2023, SAMknows was acquired by Cisco and is now part of their ThousandEyes team, further integrating their network performance insights into a broader network intelligence platform.
+
+{{< /details >}}
+
+**In summary**, SAMknows is a key player in providing independent, accurate, and insightful data on network performance. This data is valuable for regulators, ISPs, and consumers alike, contributing to a more transparent and better-performing internet ecosystem.
+
 
 {{< details title="VoIP 📌" closed="true" >}}
 
@@ -457,6 +505,7 @@ Understanding these differences is crucial for optimizing wireless network perfo
 VoIP (Voice over Internet Protocol) typically involves devices or applications specifically designed to handle voice communications over internet protocols, rather than devices primarily intended for other functions like streaming media. Here are some typical devices and setups that are commonly used for VoIP:
 
 ### Dedicated VoIP Phones
+
 - **Hardware-based VoIP Phones**: These look similar to traditional telephones but connect to the internet instead of a standard telephone line. They have built-in IP technology to manage the routing of voice data over an internet connection.
 
 ### Computers
@@ -640,10 +689,23 @@ So, when you see APHYRate values, they will typically be expressed in Megabits p
 
 ### MTA
 
-* **Multimedia Terminal Adapter:**
-    * This is a piece of hardware used in cable telecommunications. It allows you to use traditional telephone services over a cable internet connection.
-    * This is very relevant to cable based phone services.
-* Cable-based phone services (Multimedia Terminal Adapter).
+**Multimedia Terminal Adapter:**
+
+* This is a piece of hardware used in cable telecommunications. It allows you to use traditional telephone services over a cable internet connection.
+* This is very relevant to cable based phone services.
+
+> Cable-based phone services (Multimedia Terminal Adapter).
+
+## Conclusions
+
+Having this Telco experience made me learn many things.
+
+Not just D&A stuff. But concepts around it as well.
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB" title="Chat with DB ↗" >}}
+{{< /cards >}}
 
 
 ---
@@ -774,11 +836,50 @@ And you can do many tricks with it, like using [Grafana to display Sensor Data](
 
 {{< /details >}}
 
-#### Kibana and ES have something to say
+#### Kibana and ES
+
+These tools have have something to say.
 
 You can use **DSL queries** to explore data within Kibana, which pulls from **Elastic Search** DB.
 
+```json
+{
+  "query": {
+    "prefix": {
+      "node.keyword": {
+        "value": "FN-LC0001"
+      }
+    }
+  }
+}
+```
+
+Which can be...
+
+```json
+{
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "script": {
+            "script": {
+              "source": "doc['node.keyword'].value.startsWith(params.site)",
+              "params": {
+                "site": "FN-LC0001"  // Replace with your site variable
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
 > **Kibana** is very useful to see **Streaming Data** (from Kafka topics, or [IoT devices: like this DHT22](https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/))
+
+
 
 
 ### Workflow for Effectiveness

@@ -4,11 +4,12 @@ date: 2021-10-31T23:20:21+01:00
 draft: false
 tags: ["Career"]
 description: 'Summary - Business Analysis skills for your career in Analytics.'
-summary: 'In this post I am summarizing the must know points to level up your career in analytics. Excel at this Business Analytics skills and you will improve your workflow.'
 url: 'business-analytics-skills'
 ---
 
-# The Business Analytics Mindset
+In this post I am summarizing the must know points to level up your career in analytics. Excel at this Business Analytics skills and you will improve your workflow.
+
+<!-- # The Business Analytics Mindset -->
 
 ## Analytical Thinking and Problem Solving
 
@@ -185,6 +186,7 @@ The matrix is typically displayed as a table, with each task or decision listed 
 
 * **R**esponsible, **A**ccountable, **C**onsulted and **I**nformed.
 * Keep it in mind when [creating meetings](/JAlcocerT/effective-meetings-data-analytics/).
+* See this [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md) for Reference
 
 ### Models and Diagrams
 

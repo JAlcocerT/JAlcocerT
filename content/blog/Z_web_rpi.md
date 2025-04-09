@@ -99,7 +99,9 @@ My Raspberry **Pi related blog** is publically available at: https://jalcocert.g
 
 * Other [Interesting jekyll Themes](https://github.com/planetjekyll/awesome-jekyll): [Theme memories](https://github.com/wowthemesnet/jekyll-theme-memoirs)
 
-### More About Raspberry Pi
+---
+
+## More About Raspberry Pi
 
 **Wi-Fi Setup on Raspberry Pi**
 
@@ -172,7 +174,7 @@ When considering Home Assistant OS (HAOS) versus a Docker image installation, it
 {{% /details %}} 
 
 {{< callout type="info" >}}
-HA Docker is more portable, but add-ons not supported out of the box!
+HA Docker is more portable, but add-ons not supported out of the box in there!
 {{< /callout >}}
 
 * If you prioritize simplicity and ease of use, HAOS is likely the better choice.
@@ -216,9 +218,9 @@ Integrations and add-ons in Home Assistant serve distinct purposes, and it's imp
 
 {{% /details %}} 
 
-Integrations are how Home Assistant "talks" to things, while add-ons are extra "tools" that Home Assistant can use.
+> Integrations are how Home Assistant "talks" to things, while add-ons are extra "tools" that Home Assistant can use.
 
-**Interesting HA Integrations**
+**Interesting HA Integrations**: these works on Home assistant as container as well
 
 - [Raspberry Pi Installation](https://www.home-assistant.io/installation/raspberrypi/)
 - [Raspberry Pi GPIO](https://www.home-assistant.io/integrations/remote_rpi_gpio)

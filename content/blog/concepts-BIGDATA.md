@@ -942,7 +942,9 @@ While a local cluster might seem cheaper initially, the long-term costs and comp
   {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-mongodatabricks/" title="Databricks with a Pi" image="/blog_img/dev/databricks-mongo.JPG" subtitle="Mongo and Databricks IoT Project" >}}
 {{< /cards >}}
 
+You can [learn about databricks for free](https://partner-academy.databricks.com/learn/courses/1511/get-started-with-databricks-for-data-engineering)
 
+![alt text](/blog_img/DA/DataBricks-Registr.png)
 
 
 {{< details title="Databricks vs Google Big Query and Other Clouds 📌" closed="true" >}}
@@ -1371,7 +1373,7 @@ Tools are great.
 > And you can do [diagrams with AI](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#diagrams-with-ai)
 
 {{< callout type="info" >}}
-[Time Management](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) is definitely one of the skills i find most valuable.
+[Time Management](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) is definitely one of the skills I find most valuable.
 {{< /callout >}}
 
 Together with [effective meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/), RACI Matrix & [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md)

@@ -155,7 +155,9 @@ Tried with P110 and working. You will need P110 local IP + user and pass to tpli
 
 There are another ways to control such devices (with Python): <https://github.com/fishbigger/TapoP100>
 
-![Desktop View](/img/p110.png){: width="772" height="489" }
+<!-- ![Desktop View](/img/p110.png){: width="772" height="489" } -->
+
+---
 
 ## Outro
 

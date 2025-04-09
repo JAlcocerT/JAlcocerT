@@ -29,7 +29,10 @@ This makes Flexdashboards an excellent choice for **static reporting** and when 
 
 Flexdashboards are **static dashboards** - this means that they can be hosted like a **static web page** on Github pages, Gitlab pages...
 
+{{< callout type="info" >}}
 This does not mean that you can't have interactivity in flexdashboards, since you can, for example include plotly graphs and include widgets to filter the data.
+{{< /callout >}}
+
 
 
 ### Using Flexdashboards for the first time

@@ -10,7 +10,7 @@ url: 'guide-python-PySpark'
 <!-- 
 https://hub.docker.com/layers/bitnami/spark/3.5-debian-11/images/sha256-70d7589cb07f24c09a28863e3fce5b9f0419042da2fff6505d0822e0ccbb7cde -->
 
-If you have been using SQL and Pandas with Python for a while, you might want to leverage that knowledge by learning PySpark - Using Python for Big Data Analytics with distributed computing.
+If you have been using SQL and Pandas with Python for a while, you might want to leverage that knowledge by learning PySpark - Using Python for Big Data Analytics with **distributed computing**.
 
 ## The PySpark Project
 

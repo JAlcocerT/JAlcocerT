@@ -108,6 +108,6 @@ Food for thought on what's next:
 
 ![Spanish Historical CashFlow](/blog_img/outro/piramideesp.gif)
 
-The solution to inflation:
+The solution to inflation: *let's yell at clouds*
 
 ![Spanish Historical CashFlow](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)

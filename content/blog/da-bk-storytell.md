@@ -31,8 +31,14 @@ Designing effective data-driven story presentations involves balancing aesthetic
 
 * People are much more **more likely (~x20) to recall a tale** than factual information that lacks narrative structure. When people hear a narrative, their brain waves synchronize with the teller's, allowing them to assimilate elements of the story into their own experiences.
 
+> In Spanish People Say: **El relato mata al dato**
 
-* {{< dropdown title="And few more Tips 👇" closed="true" >}}
+{{< callout type="info" >}}
+No matter how great and right your data and analysis is, if you are not able to coat it within a story
+{{< /callout >}}
+
+
+{{< dropdown title="And few more Tips 👇" closed="true" >}}
 
 * Consider your audience, your content and your purpose for telling a story. Likewise, define the point of your story and craft your message to illuminate it.
 
@@ -51,14 +57,16 @@ Designing effective data-driven story presentations involves balancing aesthetic
 * Test and refine: Test your presentation with a diverse group of users, gather feedback, and iterate on the design to ensure it effectively communicates the insights and engages the audience.
 
 By considering these factors, you can create a data-driven story presentation that effectively communicates your insights, engages your audience, and supports better decision-making.
+
 {{< /dropdown >}}
 
 
 All those TIPS basically resonates with the **best practices to create a Data Product**:
-    * Audience: Understand the people WHO need your data
-    * Data: Define and enhance the data for your solution
-    * Design: Craft an application that solves problems (HOW)
-    * Delivery: Transition from application to profitable product (WHAT)
+
+* Audience: Understand the people WHO needs your data
+* Data: Define and enhance the data for your solution
+* Design: Craft an application that solves problems (HOW)
+* Delivery: Transition from application to profitable product (WHAT)
 
 
 

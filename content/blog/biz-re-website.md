@@ -397,13 +397,14 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 Setting the **pricing strategy for a generative AI application** that recommends real estate properties requires careful consideration of the value it provides, the target audience, and the competitive landscape.
 
-Here's a breakdown of potential pricing strategies:
-
-{{< details title="Adding DaisyUI to Astro Themes | Cybernetic 📌" closed="true" >}}
+{{< details title="Breakdown of potential Pricing Strategies 📌" closed="true" >}}
 
 1. Value-Based Pricing:
 
-* **Concept:** Price is determined by the perceived value the AI application offers to clients. This focuses on the outcomes and benefits users receive, such as finding the perfect property faster, making more informed decisions, and potentially increasing sales or client satisfaction for real estate professionals.
+* **Concept:** Price is determined by the perceived value the AI application offers to clients.
+
+This focuses on the outcomes and benefits users receive, such as finding the perfect property faster, making more informed decisions, and potentially increasing sales or client satisfaction for real estate professionals.
+
 * **Implementation:**
     * **Tiered Pricing based on Features & Value:** Offer different subscription tiers with varying levels of features and recommendations. For example:
         * **Basic Tier:** Core recommendation engine with a limited number of property analyses or saved searches. Priced lower, suitable for individual clients or small-scale use.

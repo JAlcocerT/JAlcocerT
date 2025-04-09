@@ -70,3 +70,25 @@ https://www.nltk.org/api/nltk.tag.perceptron.html
 ## Conclusions
 
 
+
+
+## FAQ
+
+MLflow on Databricks: Review how MLflow is integrated into Databricks for tracking machine learning experiments, managing models, and deploying them. Understand concepts like runs, experiments, and the model registry.
+
+### AI Keys
+
+Lately I have been using:
+
+* https://claude.ai/
+
+
+
+### GEN AI Techniques
+
+
+Fundamentals of Neural Networks: Understand the architecture and training of deep neural networks.
+Generative Adversarial Networks (GANs): Basic understanding of how GANs work for generating synthetic data or other creative outputs.
+Variational Autoencoders (VAEs): Another type of generative model.
+Transformer Networks: Deep dive into the architecture of Transformers, which are the foundation for many state-of-the-art NLP and generative models (e.g., BERT, GPT).
+Large Language Models (LLMs): Understand the capabilities and limitations of LLMs and how they can be applied to HR-related tasks.

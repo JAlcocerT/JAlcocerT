@@ -63,7 +63,11 @@ Here's a list of common elicitation techniques:
 
 ### Gaining Agreement on Commitments
 
-It's crucial to secure stakeholder commitment early on.  Clearly define expectations and resource requirements.  Open communication and transparency are essential for building trust and fostering support for the project.
+It's crucial to **secure stakeholder commitment** early on.
+
+Clearly define expectations and resource requirements.
+
+Open communication and transparency are essential for building trust and fostering support for the project.
 
 ### FAQ: Requirements Gathering vs. Elicitation (Reiterated)
 

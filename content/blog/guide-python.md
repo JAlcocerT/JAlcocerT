@@ -25,6 +25,10 @@ Python has evolved into a go-to choice for programmers across various domains.
 
 ## About Python
 
+{{< callout type="info" >}}
+See the latest [docs updated](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) on how I use Python.
+{{< /callout >}}
+
 ### History and Philosophy
 
 Python, created by Guido van Rossum in 1991, draws inspiration from Monty Python's Flying Circus, evident in whimsical names like "Spam" and "Eggs" in code samples.

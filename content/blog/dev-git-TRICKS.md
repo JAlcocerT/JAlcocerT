@@ -11,6 +11,12 @@ When I started to use Git, I could actually start see my progress and build upon
 
 This is a recap of the best GIT related tricks I have so far.
 
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/github-gists/" title="Github Gists Tricks" icon="book-open" >}}
+{{< /cards >}}
+
 ### Github
 
 1. Use vscode on the cloud with: https://github.com/codespaces/

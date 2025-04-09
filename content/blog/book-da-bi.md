@@ -61,18 +61,23 @@ Both static and dynamic prototyping help refine designs, gather feedback, and en
 
 ### User Journey Map
 
-A user journey map (also known as a customer journey map) is a diagram that visually illustrates the user flow through your site, starting with initial contact and ending with the desired outcome. 
+A user journey map (also known as a **customer journey map**) is a diagram that visually illustrates the user flow through your site, starting with initial contact and ending with the desired outcome. 
 
 It is **a visual representation of how a user interacts** with your product or service, and is used to identify areas of friction and user pain points in the customer experience. 
 
-A user journey map shows the different steps a user takes to complete a task, including the emotions, motivations, and behaviors that occur along the way. It also shows the various touchpoints and channels a user might use to interact with your business, such as website, mobile app, email, and physical stores.
+A user journey map shows the different steps a user takes to complete a task, including the emotions, motivations, and behaviors that occur along the way.
+
+It also shows the various touchpoints and channels a user might use to interact with your business, such as website, mobile app, email, and physical stores.
 
 By understanding the user journey, organizations can better optimize their customer experience and create more successful interactions.
 
-UI prototyping on the project: static and dynamic prototyping.
+{{< callout type="info" >}}
+UI prototyping on projects: **static and dynamic prototyping**.
+{{< /callout >}}
 
-Working w/end users and PO on prototypes.
+> While working at D&A, you might be Working w/end users and PO on **prototypes**.
 
+---
 
 ## FAQ
 
@@ -82,5 +87,6 @@ Working w/end users and PO on prototypes.
 * Tableau
 * Looker
 * Microstrategy
+* Grafana, Redash, Metabase,...
 
-You can check the updated trends at [Gartner](https://www.gartner.com/reviews/market/analytics-business-intelligence-platforms/ "Gartner BI Tools {rel='nofollow'}") 
+> You can check the updated trends at [Gartner](https://www.gartner.com/reviews/market/analytics-business-intelligence-platforms/ "Gartner BI Tools {rel='nofollow'}") 

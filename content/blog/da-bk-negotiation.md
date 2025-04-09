@@ -74,10 +74,11 @@ Focus on the other person. Encourage him or her to feel safe and to talk openly.
 >
 
 Time is a negotiator’s best friend. Never offer a quick solution. Speak slowly, calmly and softly. Keep your demeanor and delivery light and playful, not aggressive or confrontational.
+
 Instead of doing any thinking at all in the early goings about what you’re going to say – make your sole and all-encompassing focus the other person and what they have to say.
 
 Voss recommends a few techniques you can use to show that you’re listening carefully:
 
 * **Mirroring** (repeating the last one to three words the other party said, often in question form)
 * **Labeling** (verbally identifying the emotion that the other party seems to be experiencing) 
-* **Responding*8 (addressing the other party’s concerns in good faith).
+* **Responding** (addressing the other party’s concerns in good faith).

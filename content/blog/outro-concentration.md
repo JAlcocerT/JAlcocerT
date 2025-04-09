@@ -12,12 +12,14 @@ As you know, I spent some time in D&A field already.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/" title="D&A Concepts Recap" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/" title="Time Management for D&A" icon="book-open" >}}
 {{< /cards >}}
 
 A lot of what I have achieved, would not be possible w/o proper attention.
 
-
 ### Time Management
+
+> Mind your [time also during meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/)
 
 1. Pomodoro:
     * Timelite [*and you can use it for free*](https://fossengineer.com/selfhosting-timelite-free-tracking-tool-with-docker/)

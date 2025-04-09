@@ -4,11 +4,12 @@ date: 2021-01-23T23:20:21+01:00
 draft: false
 tags: ["Career"]
 description: 'Software development methodologies in Analytics.'
-summary: 'Reviewing software development methodologies - Understanding them and choosing the right one will provide a systematic, efficient, and quality-oriented way of working on a software project.'
 url: 'software-development-methodologies-data-analytics'
 ---
 
-# Understanding Software Development Methodologies
+Reviewing software development methodologies - Understanding them and choosing the right one will provide a systematic, efficient, and quality-oriented way of working on a software project.
+
+## Understanding Software Development Methodologies
 
 <!-- Basic understanding of SDLC (phases, roles, responsibilities, artefacts).
 Basic understanding of Agile and Waterfall   methodologies (process, roles, responsibilities, events, artefacts).
@@ -122,7 +123,7 @@ In most cases, there is no procedure for going back and changing the project or 
 
 ### Evaluate Source Code
 
-You can use SonarQube <https://hub.docker.com/_/sonarqube/tags>
+You can use **SonarQube**: <https://hub.docker.com/_/sonarqube/tags>
 
 ### CI/CD
 
@@ -134,19 +135,27 @@ CI/CD helps to ensure that the code is always in a releasable state, and allows 
 
 By integrating CI/CD practices into their development process, agile teams can improve quality, speed, and efficiency, and deliver value to customers more quickly and with greater confidence.
 
-* The deployment in CI/CD typically involves the following steps:
-    * Version Control: The application codebase is stored in a version control system like Git, enabling multiple developers to work collaboratively and track changes over time.
-    * Continuous Integration: Developers regularly merge their code changes into a shared repository. This triggers an automated build process that compiles the code, runs tests, and generates artifacts.
-    * Automated Testing: Various types of tests, such as unit tests, integration tests, and acceptance tests, are executed automatically to ensure that the application meets quality standards and functions as expected.
-    * Artifact Management: The built artifacts, such as executable files, libraries, or container images, are stored in a repository or artifact management system, allowing them to be versioned and easily accessed for deployment.
-    * Continuous Deployment/Delivery: The validated and tested artifacts are deployed to the target environment, such as development, staging, or production. This step can involve different deployment strategies, including blue-green deployments, canary releases, or rolling updates, depending on the organization's requirements.
-    * Infrastructure as Code: Infrastructure provisioning and configuration are automated using tools like Terraform or Ansible, enabling the consistent and reproducible creation of infrastructure resources required for the application.
-    * Orchestration and Release Management: Continuous deployment is often orchestrated using tools like Jenkins, GitLab CI/CD, or Azure DevOps, which automate the release process and manage the deployment pipeline.
-    * Monitoring and Feedback: Continuous monitoring and logging mechanisms are set up to gather insights into the application's behavior and performance in the deployed environment. This feedback loop helps detect issues and gather metrics for further improvement.
+{{< details title="The deployment in CI/CD typically involves the following steps 📌" closed="true" >}}
+
+
+* Version Control: The application codebase is stored in a version control system like Git, enabling multiple developers to work collaboratively and track changes over time.
+* Continuous Integration: Developers regularly merge their code changes into a shared repository. This triggers an automated build process that compiles the code, runs tests, and generates artifacts.
+* Automated Testing: Various types of tests, such as unit tests, integration tests, and acceptance tests, are executed automatically to ensure that the application meets quality standards and functions as expected.
+* Artifact Management: The built artifacts, such as executable files, libraries, or container images, are stored in a repository or artifact management system, allowing them to be versioned and easily accessed for deployment.
+* Continuous Deployment/Delivery: The validated and tested artifacts are deployed to the target environment, such as development, staging, or production. This step can involve different deployment strategies, including blue-green deployments, canary releases, or rolling updates, depending on the organization's requirements.
+* Infrastructure as Code: Infrastructure provisioning and configuration are automated using tools like Terraform or Ansible, enabling the consistent and reproducible creation of infrastructure resources required for the application.
+* Orchestration and Release Management: Continuous deployment is often orchestrated using tools like Jenkins, GitLab CI/CD, or Azure DevOps, which automate the release process and manage the deployment pipeline.
+* Monitoring and Feedback: Continuous monitoring and logging mechanisms are set up to gather insights into the application's behavior and performance in the deployed environment. This feedback loop helps detect issues and gather metrics for further improvement.
+
+{{< /details >}}
+
 
 #### CI/CD Tools
 
-* Build automation tools: like **Jenkins**, Travis CI, CircleCI, or Azure Pipelines are used to automate the build process, compiling source code, running tests, and generating artifacts.
+Build automation tools: like **Jenkins**, Travis CI, CircleCI, or Azure Pipelines are used to automate the build process, compiling source code, running tests, and generating artifacts.
+
+
+{{< details title="More CI/CD Tools 📌" closed="true" >}}
 
 * Artifact Management: Tools like JFrog Artifactory, Nexus Repository, or **Docker Registry** manage the storage and versioning of built artifacts, making them easily accessible for deployment.
     * GitHub Container Registry (GHCR) is a specific artifact management tool provided by GitHub that focuses on container images.
@@ -160,15 +169,23 @@ By integrating CI/CD practices into their development process, agile teams can i
 
 * Monitoring and Logging: Tools like Prometheus, ELK Stack (Elasticsearch, Logstash, Kibana), or Splunk provide monitoring and logging capabilities, allowing teams to monitor application health, performance, and log data to identify issues and gather insights.
 
+
+{{< /details >}}
+
 #### Why using CI/CD Tools?
 
 CI/CD (Continuous Integration/Continuous Deployment) practices and tools contribute to achieving a more efficient and reliable deployment process, which can align with the goals of a *perfect deployment*.
 
-* Some ways CI/CD helps in achieving a better deployment:
-    * Faster Feedback: CI/CD enables frequent and automated builds, tests, and deployments, allowing developers to receive rapid feedback on the quality and functionality of their code. This helps identify issues early on, reducing the time taken to address them and preventing potential deployment failures.
-    * Consistency and Reproducibility: CI/CD ensures that the deployment process is consistent and repeatable across different environments. By automating the entire process, including build, test, and deployment steps, it reduces the chance of manual errors and ensures that deployments are consistent and reproducible.
-    * Continuous Integration: CI enables developers to regularly merge their code changes into a shared repository. This practice promotes early detection of integration issues, ensuring that conflicts or incompatibilities are identified and resolved promptly. It helps maintain a stable codebase and improves collaboration among team members.
-    * Automated Testing: CI/CD incorporates automated testing, including unit tests, integration tests, and other types of tests, as part of the deployment pipeline. This ensures that code changes are thoroughly tested before being deployed, reducing the risk of introducing bugs or regressions into the production environment.
-    * Continuous Deployment: CD automates the deployment process, ensuring that validated and tested code changes are deployed to the target environment in a controlled manner. Continuous deployment enables faster and more frequent releases, reducing the time between feature development and its availability to end-users.
-    * Rollback and Recovery: CI/CD pipelines typically include rollback mechanisms and version control, allowing for quick and controlled rollbacks in case of deployment issues or failures. This enables teams to revert to a previous working version swiftly and minimize downtime or impact on users.
-    * Continuous Improvement: CI/CD promotes a culture of continuous improvement by allowing teams to iteratively refine their deployment process. Feedback from deployments, monitoring, and user experiences helps identify areas for optimization, leading to gradual enhancements in the deployment pipeline and the overall deployment quality.
+
+{{< details title="Some ways CI/CD helps in achieving a better deployment 📌" closed="true" >}}
+
+
+* Faster Feedback: CI/CD enables frequent and automated builds, tests, and deployments, allowing developers to receive rapid feedback on the quality and functionality of their code. This helps identify issues early on, reducing the time taken to address them and preventing potential deployment failures.
+* Consistency and Reproducibility: CI/CD ensures that the deployment process is consistent and repeatable across different environments. By automating the entire process, including build, test, and deployment steps, it reduces the chance of manual errors and ensures that deployments are consistent and reproducible.
+* Continuous Integration: CI enables developers to regularly merge their code changes into a shared repository. This practice promotes early detection of integration issues, ensuring that conflicts or incompatibilities are identified and resolved promptly. It helps maintain a stable codebase and improves collaboration among team members.
+* Automated Testing: CI/CD incorporates automated testing, including unit tests, integration tests, and other types of tests, as part of the deployment pipeline. This ensures that code changes are thoroughly tested before being deployed, reducing the risk of introducing bugs or regressions into the production environment.
+* Continuous Deployment: CD automates the deployment process, ensuring that validated and tested code changes are deployed to the target environment in a controlled manner. Continuous deployment enables faster and more frequent releases, reducing the time between feature development and its availability to end-users.
+* Rollback and Recovery: CI/CD pipelines typically include rollback mechanisms and version control, allowing for quick and controlled rollbacks in case of deployment issues or failures. This enables teams to revert to a previous working version swiftly and minimize downtime or impact on users.
+* Continuous Improvement: CI/CD promotes a culture of continuous improvement by allowing teams to iteratively refine their deployment process. Feedback from deployments, monitoring, and user experiences helps identify areas for optimization, leading to gradual enhancements in the deployment pipeline and the overall deployment quality.
+
+{{< /details >}}

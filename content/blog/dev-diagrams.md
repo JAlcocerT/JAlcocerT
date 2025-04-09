@@ -33,6 +33,30 @@ graph TD;
 
 Dont be afraid, the **MermaidJS docs are just amazing** to follow: https://mermaid.js.org/intro/
 
+Im in love with Mermaid to create really quick **diagrams for D&A Architechtural designs**:
+
+```mermaid
+graph LR
+    subgraph Gold
+        direction LR
+        G1
+         
+    end
+ 
+    subgraph Silver
+        direction LR
+        S1 --> G1
+        S2 --> G1
+    end
+ 
+    subgraph Bronze
+        direction LR
+        B1 --> S1
+        B2 --> S2
+        B3 --> S2
+      
+    end
+```
 
 ## Other Diagram Tools
 
