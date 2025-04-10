@@ -696,6 +696,8 @@ So, when you see APHYRate values, they will typically be expressed in Megabits p
 
 > Cable-based phone services (Multimedia Terminal Adapter).
 
+---
+
 ## Conclusions
 
 Having this Telco experience made me learn many things.
@@ -706,15 +708,32 @@ Starting by the importance of proper **Operational Data Hubs**.
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB" title="Chat with DB ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="Data Modelling 101 ↗" >}}
 {{< /cards >}}
+
+
+Data types, extracting info from s3 buckets,...
+
+```sh
+#Install aws CLI 
+#https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+#Check that it is installed with:
+aws --version
+
+#Configure it with the credentials:
+aws configure
+
+#Explore the buckets with: 
+aws s3 ls
+```
 
 Not just D&A Tech stuff.
 
-But concepts around it as well.
+But concepts around it as well. Starting from [effective meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner)...
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="Better Time Management ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/" title="Better Time Management ↗ " >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB" title="Product Mindset ↗" >}}
 {{< /cards >}}
 

@@ -3,24 +3,21 @@ title: "Embracing Product Vision: Delivering Data Products"
 date: 2022-05-07T23:20:21+01:00
 draft: false
 tags: ["Outro"]
-description: 'Maximize data product impact by understanding the roles of data professionals & asking the right questions.'
-summary: 'How you can shape data products and address requirements. The essential questions to collaborate with the product team for successful data-driven projects and maximizing impact.'
+description: 'Data Product impact for D&A roles. The power of asking the right questions.'
 url: 'product-skills-for-data-analytics'
 ---
 
-<!-- 
-referencia a persuasion escrito en jan 2022
 
-y aqui cositas de neuromarketing
+How you can shape data products and address requirements?
 
-the buying brain....
-`brainfluence`
+The [essential questions](#faq) to **collaborate with the product team** for successful data-driven projects, while maximizing impact.
 
- -->
 
-# Product Vision for Data Analytics
+If you understand [Pareto Principle](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) already...this will resonate.
 
-In the rapidly evolving world of data analytics, professionals need to adopt a forward-thinking approach to stay ahead of the curve. A key element of this approach is embracing a **product vision mindset**.
+## Product Vision for Data Analytics
+
+In the rapidly evolving world of data analytics, professionals need to adopt a forward-thinking approach to stay ahead of the curve. A key element of this approach is embracing a **product mindset**.
 
 This mindset helps data analysts understand the importance of creating data products that offer value, solve problems, and drive actionable insights.
 

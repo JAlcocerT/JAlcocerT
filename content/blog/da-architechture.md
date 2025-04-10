@@ -3,7 +3,7 @@ title: "Architecture D&A like a Pro"
 date: 2025-04-09T00:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: '.'
+description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
 url: 'data-analytics-architecture'
 ---
 
@@ -41,22 +41,131 @@ graph LR
 1. An Operational Data Hub (ODH) is a central, integrated data store that serves operational systems and analytical applications with near real-time or real-time data.
 
 It acts as a single source of truth for operational data, consolidating information from various source systems.
-Key characteristics of an ODH include:
-Real-time or near real-time data ingestion and delivery.
-Data integration and transformation.
-Support for operational analytics and decision-making.
-Lower latency compared to traditional data warehouses.
+
+{{< details title="Key characteristics of an ODH 📌" closed="true" >}}
+
+* Real-time or near real-time data ingestion and delivery.
+* Data integration and transformation.
+* Support for operational analytics and decision-making.
+* Lower latency compared to traditional data warehouses.
+
+{{< /details >}}
+
+
 
 2. Data LakeHouses
 
 
 {{< callout type="warning" >}}
-Always make comprehensible designs & docs for all the parties involved in the project
+Always make comprehensible **designs & docs** for all the parties involved in the project
 {{< /callout >}}
+
+
+### Data Modelling
+
+Design a [Data Story](https://jalcocert.github.io/JAlcocerT/business-intelligence-data-analytics/#designing-an-analytical-flow)
+
+https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#others
+
+* A **conceptual data model** is the highest level, and therefore the least detailed.
+* A **logical data model** involves more detailed thinking about the implementation without actually implementing anything.
+* Finally, the **physical data model** draws on the requirements from the logical data model to create a real database.
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="Data Modelling 101 ↗" >}}
+{{< /cards >}}
+
+### Tech
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="DataBricks 101 ↗" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="GCP and BQ 101 ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="PySpark 101 ↗" >}}
+{{< /cards >}}
+
+---
+
+
+
+## From the Experience
+
+{{< callout type="info" >}}
+Understand *the one thing* the client value the most. [Pareto](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)?
+{{< /callout >}}
+
+### PM Skills
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#raci-matrix" title="RACI 101 ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#conclusions" title="A Project Charter Handy ↗ " >}}  
+{{< /cards >}}
+
+Get ready to organize effective meetings:
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#facilitating-meetings" title="BA MTG Facilitating Skills ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="Effective Meeting Owership ↗ " >}}  
+{{< /cards >}}
+
+
+https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-mockups-and-wireframes
+
+### BA & Elicitation Skills
+
+https://jalcocert.github.io/JAlcocerT/business-analytics-concepts/#business-analysis-key-questions
+
+
+* What are the kinds of changes we are doing?
+* **What are the needs we are trying to satisfy?**
+* What are the solutions we are creating or changing?
+* Who are the stakeholders involved?
+* **What do stakeholders consider to be of value?**
+* What are the contexts that we and the solution are in?
+
+
+
+{{< callout type="info" >}}
+For more questions, you can switch on your **[product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq) mindset**
+{{< /callout >}}
+
+
+{{< details title="My Favourite Questions for Requirement Gathering 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+
+<!-- 
+referencia a persuasion escrito en jan 2022
+
+y aqui cositas de neuromarketing
+
+the buying brain....
+`brainfluence`
+
+ -->
+
+
+> These are very helpful on end to end projects - where we went from raw data modelling to [BI solutions](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/)
+
+You can also have handy a list of QQ to enable others perform their job:
+
+https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/#enabling-others
 
 ---
 
 ## Conclusions
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
 
 
 

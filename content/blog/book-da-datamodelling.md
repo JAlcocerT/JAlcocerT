@@ -128,7 +128,7 @@ By understanding these basic types of data models and common terms, you can gain
         * OLTP handles simple, fast, and real-time transactions that involve CRUD operations (Create, Read, Update, Delete) on individual records.
         *  OLTP is designed for transactional processing, supporting day-to-day operational tasks and real-time transaction management.
 
-* Data Arquitecture:
+* **Data Arquitecture:**
     * Data Warehouse: Central platform for storage that collects and integrates data from different operational sources. *Typically stores structured data.*
         * It is designed to support reporting, analytics, and decision-making processes. Data from operational systems is extracted, transformed, and loaded (ETL) into the Data Warehouse, following a specific schema and data model optimized for querying and analysis.
     * Data Mart: mechanism in which business users access data inside a DWH. *They are user focused*.
@@ -186,7 +186,10 @@ Databases are used to store and manage information, and are a fundamental compon
     * Typically structured data, with a defined schema.
     * Designed to be transactional (**OLTP**), not designed to perform Data Analytics.
     * More examples: MySQL, PostgreSQL, Amz Aurora...
-* To interact with DB's you will want to learn about [SQL](https://fossengineer.com/sql-data-analytics/) 
+
+{{< callout type="info" >}}
+To interact with DB's you will want to learn about [SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)
+{{< /callout >}}
 
 ### DB Management Systems
 
@@ -208,7 +211,7 @@ Data warehousing is the process of collecting, storing, and managing large volum
 
 Understanding the fundamentals of data warehousing is essential for effectively leveraging data for analytics and reporting. Here are some key concepts:
 
-* Information System Types: Operational vs Analytic
+* Information System Types: **Operational vs Analytic**
     * Operational systems - **OLTP**: These systems support day-to-day business operations, such as transaction processing, record-keeping, and managing business processes. Operational systems focus on efficiency, data integrity, and real-time processing. Examples include CRM, ERP, and order management systems.
     * Analytic systems - **OLAP**: These systems focus on analyzing data to support decision-making, identify patterns and trends, and gain insights for strategic planning. Analytic systems prioritize data organization, consolidation, and historical context. Examples include data warehouses, data marts, and OLAP systems.
 
@@ -216,18 +219,22 @@ Do it step by step, *one concept at a time* - Gaining practical experience in da
 
 ### DWH Concepts
 
-A data warehouse is a large, centralized repository of data that is used to support business intelligence and reporting. Data warehouses are designed to store and analyze large amounts of data from a variety of sources, and provide users with the ability to analyze and report on this data in a meaningful way. 
+A data warehouse is a large, centralized repository of data that is used to support business intelligence and reporting.
+
+Data warehouses are designed to store and analyze large amounts of data from a variety of sources, and provide users with the ability to analyze and report on this data in a meaningful way. 
 
 * It exists on top of several DB's, providing a layer to do Data Analytics.
 * Typically working with ETL and can outputs BI reports.
-* Examples of data warehouse solutions include Microsoft Azure Synapse Analytics, Snowflake, and Amazon Redshift.
+* Examples of data warehouse solutions include Microsoft Azure Synapse Analytics, BQ, Snowflake, and Amazon Redshift.
 
 ### Data warehouses Layers
 
-* They typically have three main layers:
-    * Staging area: Data from multiple sources is temporarily stored and prepared for further processing. This may involve data cleansing, transformation, and deduplication.
-    * Integration layer: Data is transformed, integrated, and stored in a consistent format. This layer often uses a star or snowflake schema to organize data into fact and dimension tables for efficient querying and analysis.
-    * Presentation layer: The final layer presents data in a format suitable for reporting and analysis. This may involve creating summary tables, aggregations, or data marts tailored to specific business functions or departments.
+DWH typically have three main layers:
+
+
+* Staging area: Data from multiple sources is temporarily stored and prepared for further processing. This may involve data cleansing, transformation, and deduplication.
+* Integration layer: Data is transformed, integrated, and stored in a consistent format. This layer often uses a star or snowflake schema to organize data into fact and dimension tables for efficient querying and analysis.
+* Presentation layer: The final layer presents data in a format suitable for reporting and analysis. This may involve creating summary tables, aggregations, or data marts tailored to specific business functions or departments.
 
 ### ETL and ELT in DWH Architecture
 
@@ -238,7 +245,9 @@ A data warehouse is a large, centralized repository of data that is used to supp
 * ETL vs ELT: ETL and ELT (Extract, Load, Transform) are both **Data Integration Methods**.
     * While ETL performs transformations before loading data into the warehouse, ELT loads the data first and then applies transformations within the warehouse. 
     * ELT is often faster and more scalable, especially when using modern cloud-based data warehouses that can handle large-scale data processing. 
-    * The choice between ETL and ELT depends on factors like data volume, processing capabilities, and specific organizational requirements.
+    
+    
+The choice between ETL and ELT depends on factors like data volume, processing capabilities, and specific organizational requirements.
 
 ### DWH Architecture Approaches
 
@@ -270,9 +279,13 @@ A star schema is a type of dimensional model where a central fact table is conne
     * Surrogate key - Is unique in the DB
     * Alternate key - the primary key
 
-A star schema is a simple and intuitive design that consists of a fact table surrounded by dimension tables.
 
-The fact table contains the measures or metrics, such as sales or revenue, and the dimension tables provide context for the measures, such as product, customer, or date. 
+
+{{< callout type="info" >}}
+A star schema is a simple and intuitive design that consists of a fact table surrounded by dimension tables.
+{{< /callout >}}
+
+The fact table contains the measures or metrics, such as sales or revenue, and the **dimension tables provide context for the measures, such as product, customer, or date**. 
 
 **The fact table and dimension tables are linked by keys**, which allows for easy querying and analysis of the data. The star schema is well-suited for simple and straightforward reporting and analysis.
 
@@ -319,9 +332,11 @@ Data warehouses (DWH) serve as a central repository for data collected from vari
     * Historical data storage for trend analysis and forecasting
     * Increased efficiency by offloading analytics and reporting from operational systems
 
-### Data Marts?
+### Data Marts
 
-A data mart is a subset of a data warehouse that is designed to support a specific business function or department. Data marts are typically smaller and more focused than a data warehouse, and are designed to provide users with fast, efficient access to the data they need to support their specific business needs. 
+A data mart is a subset of a data warehouse that is designed to support a specific business function or department.
+
+Data marts are typically smaller and more focused than a data warehouse, and are designed to provide users with fast, efficient access to the data they need to support their specific business needs. 
 
 Examples of data mart solutions include: *IBM Cognos Analytics, Oracle Business Intelligence, and SAP BusinessObjects.*
 
@@ -358,10 +373,12 @@ It also provides functionalities for data transformation, data loading, and data
 
 ### Big Query
 
-Snowflake and Google BigQuery are both popular **cloud-based data warehousing solutions** that offer similar capabilities. They are considered alternatives to each other, providing scalable storage and powerful analytics capabilities in the cloud. 
+Snowflake and Google BigQuery are both popular **cloud-based data warehousing solutions** that offer similar capabilities.
+
+They are considered alternatives to each other, providing scalable storage and powerful analytics capabilities in the cloud. 
 
 * However, there are some differences between the two platforms:
-    * Architecture: Snowflake follows a multi-cluster shared data architecture, where compute and storage are separate, allowing independent scaling. BigQuery, on the other hand, employs a distributed columnar storage approach with shared storage.
+    * Architecture: Snowflake follows a multi-cluster shared data architecture, where compute and storage are separate, allowing independent scaling. BigQuery, on the other hand, employs a **distributed columnar storage** approach with shared storage.
     * Snowflake is cloud-agnostic, while BigQuery is Google Cloud-specific
 
 ## Data Integration Services
@@ -401,7 +418,9 @@ Examples of data lake solutions include: *Microsoft Azure Data Lake Storage, Ama
 
 A data lake house is a concept that combines the best features of data lakes and data warehouses. It aims to address some of the limitations and challenges associated with both approaches and provides a unified and scalable solution for *storing, managing, and analyzing large volumes of data*.
 
-By combining the flexibility and scalability of data lakes with the structure and performance optimizations of data warehouses, data lake houses provide a middle ground that addresses the challenges of managing and deriving insights from large-scale data sets. They enable organizations to store and process raw data while maintaining the ability to apply structure, governance, and efficient querying for analytics purposes.
+By combining the flexibility and scalability of data lakes with the structure and performance optimizations of data warehouses, data lake houses provide a middle ground that addresses the challenges of managing and deriving insights from large-scale data sets.
+
+They enable organizations to store and process raw data while maintaining the ability to apply structure, governance, and efficient querying for analytics purposes.
 
 * The term "data lake house" is not commonly used by Google, Microsoft, or AWS to describe their specific offerings, and yet each cloud provider has services and platforms that can be used to **build a data lake house architecture**:
     * Google Cloud Platform:
@@ -434,7 +453,7 @@ Data profiling and quality of source data are two interrelated concepts in the f
 
 ### Data Profiling
 
-Data profiling is the process of examining, analyzing, and summarizing data to gain an understanding of its structure, relationships, content, and quality. 
+Data profiling is the **process of examining, analyzing, and summarizing data** to gain an understanding of its structure, relationships, content, and quality. 
 
 * This process typically involves the following activities:
     * Assessing data distributions and patterns
@@ -450,7 +469,9 @@ Data profiling provides valuable insights that help organizations make informed 
 
 ### Quality of Source Data
 
-Quality of source data refers to the degree to which the data from its original source is accurate, reliable, complete, and fit for its intended purpose. High-quality source data is critical for ensuring that data-driven insights and decisions are based on accurate and trustworthy information.
+Quality of source data refers to the degree to which the data from its original source is accurate, reliable, complete, and fit for its intended purpose.
+
+High-quality source data is critical for ensuring that data-driven insights and decisions are based on accurate and trustworthy information.
 
 * Some key dimensions of data quality include:
     * Accuracy: The degree to which the data correctly represents the real-world entities or events it is intended to describe.
@@ -463,7 +484,9 @@ Quality of source data refers to the degree to which the data from its original 
 
 ### Functional design
 
-Functional design is the process of defining the features, functions, and workflows of a system or application to meet specific business requirements. This includes creating detailed specifications for user interfaces, data management, and system interactions.
+Functional design is the process of defining the features, functions, and workflows of a system or application to meet specific business requirements.
+
+This includes creating detailed specifications for user interfaces, data management, and system interactions.
 
 In the context of a project, functional design involves working with stakeholders to gather and analyze requirements, creating functional specifications, designing user interfaces and workflows, and documenting the functional design for developers to implement.
 
@@ -480,7 +503,9 @@ Data structure design is the process of defining the organization, relationships
 
 ## About Data Governance
 
-Data Governance is the process of managing the availability, usability, integrity, and security of data within an organization. It involves establishing policies, standards, and processes to ensure data quality, consistency, and compliance with regulations.
+Data Governance is the process of managing the availability, usability, integrity, and security of data within an organization.
+
+It involves establishing policies, standards, and processes to ensure data quality, consistency, and compliance with regulations.
 
 The *DG function* ensures that data is managed effectively and efficiently, in accordance with organizational policies and regulatory requirements. You should be familiar with concepts like: data stewardship, data quality, data lineage, data cataloging, and data privacy.
 
@@ -511,7 +536,9 @@ The *DG function* ensures that data is managed effectively and efficiently, in a
 
 **MDM** helps organizations maintain a single, consistent view of critical business data, leading to improved data quality, reduced data redundancy, better decision-making, and increased operational efficiency.
 
-MDM can be applied to various business scenarios, such as consolidating customer data, managing product information, or ensuring data consistency across multiple systems. Examples of MDM tools include Informatica MDM, SAP Master Data Governance, IBM InfoSphere MDM, and Talend MDM.
+MDM can be applied to various business scenarios, such as consolidating customer data, managing product information, or ensuring data consistency across multiple systems.
+
+Examples of MDM tools include *Informatica MDM, SAP Master Data Governance, IBM InfoSphere MDM, and Talend MDM.*
 
 Important - The process of **Golden record** creation involves data enrichment (adding missing or additional information), cleansing (correcting errors and inconsistencies), matching (identifying and linking related records), merging (combining matched records), and survivorship (selecting the most accurate and up-to-date values for each attribute).
 
@@ -557,6 +584,7 @@ Be aware that these **regulations exists**:
 
 
 
+---
 
 ## FAQ
 
@@ -566,7 +594,9 @@ A set of data transformation instructions that determine how to convert the stru
 
 ### What are ERD's?
 
-The entity relationship diagrams are flowchart-like diagrams that explain the structure of entities, attributes, and their relationships in a database. They are mainly used for relational database design, and can be used to troubleshooting designs.
+The entity relationship diagrams are flowchart-like diagrams that explain the structure of entities, attributes, and their relationships in a database.
+
+They are mainly used for relational database design, and can be used to troubleshooting designs.
 
 There are different notations that you might find: UML (unified modeling language), CHEN, CROW, IDEF1X...
 
@@ -578,8 +608,16 @@ Databases, data flows, data warehouses, data lakes, and data marts.
 
 Data flows refer to the movement of data from one system to another. This can include data flowing within a single application, or between different applications or systems. 
 
-Data flows can be visualized and documented using data flow diagrams, which show the flow of data through a system. Data flows are a critical component of many data integration and ETL (Extract, Transform, Load) processes.
+Data flows can be visualized and documented using data flow diagrams, which show the flow of data through a system.
+
+{{< callout type="info" >}}
+Make sure to have proper Data Lineage documented!
+{{< /callout >}}
+
+Data flows are a critical component of many data integration and ETL (Extract, Transform, Load) processes.
 
 ### Others
 
-* A **conceptual data model** is the highest level, and therefore the least detailed. A **logical data model** involves more detailed thinking about the implementation without actually implementing anything. Finally, the **physical data model** draws on the requirements from the logical data model to create a real database.
+* A **conceptual data model** is the highest level, and therefore the least detailed.
+* A **logical data model** involves more detailed thinking about the implementation without actually implementing anything.
+* Finally, the **physical data model** draws on the requirements from the logical data model to create a real database.

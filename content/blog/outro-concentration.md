@@ -15,9 +15,14 @@ As you know, I spent some time in D&A field already.
   {{< card link="https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/" title="Time Management for D&A" icon="book-open" >}}
 {{< /cards >}}
 
-A lot of what I have achieved, would not be possible w/o proper attention.
+A lot of what I have achieved, would not be possible w/o **proper attention**.
 
 ### Time Management
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="GCP and BQ 101 ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="PySpark 101 ↗" >}}
+{{< /cards >}}
 
 > Mind your [time also during meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/)
 
@@ -106,3 +111,9 @@ I mean, Selfhostable and **RSS Feeds**!
 #logseq
 ```
 
+<!-- ## FAQ
+
+### What Tools can help me Focus?
+
+Pomodoro
+Kanban Boards ... -->

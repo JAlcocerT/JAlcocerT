@@ -10,13 +10,13 @@ url: 'effective-meetings-data-analytics'
 
 Effective meetings, whether remote or in-person, are critical for teamwork and productivity.
 
-Yes, efficient meetings can get through a lengthy agenda in a short period of time. Even so, truly effective meetings produce a measurable result.
+Efficient meetings can get through a lengthy agenda in a short period of time. Even so, truly effective meetings produce a measurable result.
 
 Everyone should leave feeling:
 
 1. Clear and confident about what they need to do
-2. how they need to do it
-3. and when they need to do it.
+2. How they need to do it
+3. and...when they need to do it.
 
 If you can't explain why you're holding a meeting in a sentence or two, the meeting is probably unnecessary.
 
@@ -24,10 +24,10 @@ If you can't explain why you're holding a meeting in a sentence or two, the meet
 
 Creating effective meetings is NOT just a matter of booking a timeslot with a group of people.
 
-Take your time to plan and prepare accordingly, so that the team's time investment is worth it.
+Take your time to plan and prepare accordingly, so that the **team's time investment is worth it**.
 
-* Defining the objectives clearly: attendees are interested in the **what**, the purpose of their time commitment.
-    * Meetings that are successful have a clear goal. There is no reason to hold a meeting if there is no goal.  
+* Defining the objectives clearly: attendees are interested in the **WHAT**, the purpose of their time commitment.
+    * Meetings that are successful have a clear **goal**. There is no reason to hold a meeting if there is no goal.  
     * Goals categories: project planning, solving a problem, setting a goal, making a decision, or mapping out a customer journey.
 
 * Invite the right people. Everyone invited to the meeting should have some level of involvement or purpose:
@@ -46,6 +46,8 @@ A Table with the following structure can be of help to keep everyone informed:
 | Goal | Task | Blockers | Timeline |
 |------|------|----------|----------|
 |  A    |  AA | AAA      |    AAAA  | 
+
+> Remember about the RACI!
 
 ## As a participant
 
@@ -68,7 +70,7 @@ A Table with the following structure can be of help to keep everyone informed:
     * Avoid Yes/No Questions. 
 
 {{< callout type="info" >}}
-Open-Ended questions are much better to gather information: What and How.
+**Open-Ended questions** are much better to gather information: What and How.
 {{< /callout >}}
 
 ## Psychology in Meetings

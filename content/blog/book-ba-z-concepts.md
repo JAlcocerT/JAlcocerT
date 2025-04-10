@@ -3,10 +3,11 @@ title: "Concepts to get started in Business Analytics"
 date: 2021-10-23T16:20:21+01:00
 draft: false
 tags: ["Career"]
-description: 'Summary - Business Analysis skills for your career in Analytics.'
-summary: 'In this post I am summarizing the must know points to level up your career in analytics. Excel at this Business Analytics skills and you will improve your workflow.'
+description: 'Business Analysis Concepts [Recap] for your career in Analytics.'
 url: 'business-analytics-concepts'
 ---
+
+In this post I am summarizing the must know points to level up your career in analytics. Excel at this Business Analytics skills and you will improve your workflow.
 
 ## The Business Analytics Guide
 
@@ -131,7 +132,9 @@ If any of the core concepts experience a change, we should re-evaluate these cor
         but rather describe conditions under which a solution must remain 
         effective or qualities that a solution must have.
 
-* Transition requirements: describe the capabilities that the solution must have and the conditions the solution must meet to facilitate transition from the current state to the future state, but which are not needed once the change is complete. They are differentiated from other requirements types because they are of a temporary nature. Transition requirements address topics such as data conversion, training, and business continuity.
+* Transition requirements: describe the capabilities that the solution must have and the conditions the solution must meet to facilitate transition from the current state to the future state, but which are not needed once the change is complete.
+
+They are differentiated from other requirements types because they are of a temporary nature. Transition requirements address topics such as data conversion, training, and business continuity.
 
 #### Requirements and Designs
 
@@ -237,4 +240,3 @@ Describes the tasks that business analysts perform in order to manage and mainta
     * Solution Evaluation tasks include measuring solution performance, analyzing performance measures, assessing solution limitations, assessing enterprise limitations, and recommending actions to increase solution value.
     * Examples of potential recommendations to increase solution value, including doing nothing, organizational change, reducing complexity of interfaces, eliminating redundancy, avoiding waste, identifying additional capabilities, and retiring the solution.
     * Several factors that may impact the decision regarding the replacement or retirement of a solution, including ongoing cost versus initial investment, opportunity cost, necessity, and sunk cost.
-

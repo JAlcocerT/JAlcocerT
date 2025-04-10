@@ -1,13 +1,15 @@
 ---
-title: "MUST HAVE BA Skills to work in Analytics"
+title: "Must have BA SKILLS to work in Analytics"
 date: 2021-10-31T23:20:21+01:00
 draft: false
 tags: ["Career"]
-description: 'Summary - Business Analysis skills for your career in Analytics.'
+description: 'Summary - Business Analysis Skills for your career in Analytics.'
 url: 'business-analytics-skills'
 ---
 
-In this post I am summarizing the must know points to level up your career in analytics. Excel at this Business Analytics skills and you will improve your workflow.
+In this post I am summarizing the must know points to level up your career in analytics.
+
+Excel at this **Business Analytics skills** and you will improve your team's workflow.
 
 <!-- # The Business Analytics Mindset -->
 
@@ -35,8 +37,8 @@ Business analysts utilize analytical thinking and problem solving as they facili
 To deliver solutions that are meaningful to your client, you will need to know about:
 
 * *Acceptance Criteria* are the conditions that a system or product must meet to be **considered complete and acceptable to the stakeholders**. These criteria are typically defined during the requirements gathering phase and help guide development and testing efforts.
-    * Definition of Done (DoD): The Definition of Done outlines the criteria that a user story or task must meet to be considered completed and ready for review or deployment. It encompasses the conditions that must be met for the work to be considered done.
-    * Definition of Ready (DoR): The Definition of Ready defines the criteria that a user story or task should meet before it is accepted into the sprint backlog and scheduled for development
+    * Definition of Done (**DoD**): The Definition of Done outlines the criteria that a user story or task must meet to be considered completed and ready for review or deployment. It encompasses the conditions that must be met for the work to be considered done.
+    * Definition of Ready (**DoR**): The Definition of Ready defines the criteria that a user story or task should meet before it is accepted into the sprint backlog and scheduled for development
 * *Evaluation Criteria*, on the other hand, are the specific measures or characteristics used to assess and **compare different solution** alternatives.
 
 Go one step further, analyze the requirements, constraints, and goals of a project to identify any potential features or capabilities that may not have been initially considered. 
@@ -69,8 +71,8 @@ This involves preparing test plans, test cases, and test data based on the accep
 Behavioural characteristics are not unique to business analysis but they have been found to increase personal effectiveness in the practice of business analysis. The core of them are:
 
 * Ethics and Trustworthiness
-* [Personal Accountability](https://fossengineer.com/business-analytics-skills/#ownership)
-* [Organization](https://fossengineer.com/business-analytics-skills/#kanban-board) and [Time Management](https://fossengineer.com/time-management-data-analytics)
+* [Personal Accountability](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#ownership)
+* [Organization](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#kanban-board) and [Time Management](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics)
 * Adaptability: in many senses, for example *in communication* - have a clear understanding of the unique needs of various audiences
     * Use questions to enhance understanding of others and engage them in discussions
 
@@ -91,7 +93,7 @@ Behavioural characteristics are not unique to business analysis but they have be
     * Open discussion properly and establish clearly the purpose and importance of a meeting
         * Emphasize the important points and build a logical sequence of what is needed
     * Rephrase when needed: focus on what is being said and ask for clarifications, gives and summarizes relevant points
-        * *What you mean by ... is...?*
+        * **What** *you mean by ... is...?*
     * Make people feel valuable and appreciated
         * Treat the opinions of others with consideration and fairness
     * Be ready to be creative for unexpected meeting flows and adjust on the way
@@ -110,7 +112,9 @@ Be ready to drive iniciatives, dont wait for others to provide the green light, 
 
 Move the stone in the way, for you and others.
 
-Determine, examine, and tackle issues or obstacles that emerge within a particular scope of responsibility. This may involve pinpointing the fundamental sources of difficulties, devising and executing resolutions, and tracking advancements to confirm that the issue has been entirely addressed.
+Determine, examine, and tackle issues or obstacles that emerge within a particular scope of responsibility.
+
+This may involve pinpointing the fundamental sources of difficulties, devising and executing resolutions, and tracking advancements to confirm that the issue has been entirely addressed.
 
 Problem-solving is a crucial ability for both owners and teams, as it enables them to actively confront concerns before they develop into more significant complications.
 
@@ -143,15 +147,23 @@ Takes ownership and responsibility for solution implementation. -->
 
 ### Use Cases
 
-Use cases are graphical representations that describe interactions between actors (users or systems) and a system. They capture the functional requirements and help visualize how users interact with the system, including specific actions and expected outcomes.
+Use cases are graphical representations that describe interactions between actors (users or systems) and a system.
+
+They capture the **functional requirements** and help visualize how users interact with the system, including specific actions and expected outcomes.
 
 ### User Stories
 
-User stories are concise, user-focused descriptions of a system's functionality. They follow a specific format ("As a [user role], I want [action] so that [benefit]") and help prioritize and organize requirements from a user's perspective.
+User stories are concise, user-focused descriptions of a system's functionality.
+
+They follow a specific format ("As a [user role], I want [action] so that [benefit]") and help prioritize and organize requirements from a user's perspective.
+
+I like to provide on each of the stories in Jira: Context + ASK.
 
 ### Data Flow Diagrams
 
-Data Flow Diagrams (DFDs) are graphical representations that illustrate the flow of data through a system. They depict inputs, outputs, processes, and data stores, helping to analyze and document data movement and transformation.
+Data Flow Diagrams (DFDs) are graphical representations that illustrate the flow of data through a system.
+
+They depict inputs, outputs, processes, and data stores, helping to analyze and document data movement and transformation.
 
 ### Prototyping: Mockups and Wireframes
 
@@ -161,7 +173,9 @@ Wireframing tools are used to create visual representations of system screens or
 
 A mockup is a visual representation or prototype of a design, typically used in the early stages of a project or product development process. It provides a visual overview of how a system, interface, or layout will look and function, without the full functionality or interactivity of the final product.
 
-A mockup is a static representation that focuses on the visual aspects, including the placement of elements, typography, color schemes, and general layout. It aims to give stakeholders a tangible visualization of the design concept and allows them to provide feedback and make informed decisions before moving forward with the development process.
+**A mockup is a static representation that focuses on the visual aspects**, including the placement of elements, typography, color schemes, and general layout.
+
+It aims to give stakeholders a tangible visualization of the design concept and allows them to provide feedback and make informed decisions before moving forward with the development process.
 
 Mockups can be created using various tools, including graphic design software, prototyping tools, or even by hand sketches.
 
@@ -178,11 +192,13 @@ They can range from *low-fidelity wireframes*, which are simple and minimalistic
 
 ### RACI Matrix
 
-A RACI matrix, also called a RACI chart or responsibility assignment matrix, is a tool used in project management to identify and assign roles and responsibilities to different stakeholders.
+A RACI matrix, also called a **RACI chart or responsibility assignment matrix**, is a tool used in project management to identify and assign roles and responsibilities to different stakeholders.
 
 A RACI matrix helps to clearly define who is responsible for each task or decision in a project, who is accountable for its completion, who needs to be consulted during the process, and who should be kept informed of the progress. 
 
-The matrix is typically displayed as a table, with each task or decision listed along the top and the stakeholders listed along the left side. Each cell in the matrix then indicates which of the four different roles applies to that particular task or decision.
+The matrix is typically displayed as a table, with each task or decision listed along the top and the stakeholders listed along the left side.
+
+Each cell in the matrix then indicates which of the four different roles applies to that particular task or decision.
 
 * **R**esponsible, **A**ccountable, **C**onsulted and **I**nformed.
 * Keep it in mind when [creating meetings](/JAlcocerT/effective-meetings-data-analytics/).
@@ -205,19 +221,25 @@ There are several diagramming tools used to visually represent different aspects
 
 #### Unified Modeling Language (UML)
 
-A standardized visual language used to represent and communicate the structure, behavior, and architecture of software systems. UML diagrams help developers and stakeholders understand complex systems more easily. 
+A standardized visual language used to represent and communicate the structure, behavior, and architecture of software systems.
 
-* Here's an overview of five basic UML diagrams:
-    * Use Case Diagram: A use case diagram represents the interactions between users (actors) and the system, showcasing the functionality provided by the system. Use case diagrams help identify the system's requirements and provide a high-level overview of its interactions. 
-        * Key elements include actors, use cases (ovals), and relationships (lines connecting actors to use cases).
-    * Activity Diagram: An activity diagram models the flow of activities and decisions within a process or system. It highlights the sequence of actions, parallel branches, and synchronization points, providing a dynamic view of the system's behavior.
-        *  Key elements include activities (rounded rectangles), decisions (diamonds), initial/final nodes (circles), and arrows (showing the flow of control).
-    * Sequence Diagram: A sequence diagram represents the dynamic behavior of a system, showing the sequence of messages exchanged between objects over time. Sequence diagrams help visualize interactions, focus on message flow, and highlight the system's temporal aspects. 
-        * Key elements include objects (labeled rectangles), lifelines (dashed lines), messages (arrows), and activation bars (rectangles representing the duration of an object's activity).
-    * Statechart Diagram (also known as State Machine Diagram): A statechart diagram models the various states an object can be in and the transitions between those states. It captures the object's behavior in response to events, highlighting the system's dynamic nature. 
-        * Key elements include states (rounded rectangles), transitions (arrows), and events (labels on the transitions).
-    * Class Diagram: A class diagram depicts the static structure of a system, including its classes, attributes, methods, and relationships. Class diagrams help model the system's building blocks, providing a detailed view of its design. 
-        * Key elements include classes (rectangles with three compartments for the class name, attributes, and methods), associations (lines connecting classes), and multiplicities (numbers indicating the cardinality of relationships).
+UML diagrams help developers and stakeholders understand complex systems more easily. 
+
+{{% details title="Overview of five basic UML diagrams 🌍" closed="true" %}}
+
+* Use Case Diagram: A use case diagram represents the interactions between users (actors) and the system, showcasing the functionality provided by the system. Use case diagrams help identify the system's requirements and provide a high-level overview of its interactions. 
+    * Key elements include actors, use cases (ovals), and relationships (lines connecting actors to use cases).
+* Activity Diagram: An activity diagram models the flow of activities and decisions within a process or system. It highlights the sequence of actions, parallel branches, and synchronization points, providing a dynamic view of the system's behavior.
+    *  Key elements include activities (rounded rectangles), decisions (diamonds), initial/final nodes (circles), and arrows (showing the flow of control).
+* Sequence Diagram: A sequence diagram represents the dynamic behavior of a system, showing the sequence of messages exchanged between objects over time. Sequence diagrams help visualize interactions, focus on message flow, and highlight the system's temporal aspects. 
+    * Key elements include objects (labeled rectangles), lifelines (dashed lines), messages (arrows), and activation bars (rectangles representing the duration of an object's activity).
+* Statechart Diagram (also known as State Machine Diagram): A statechart diagram models the various states an object can be in and the transitions between those states. It captures the object's behavior in response to events, highlighting the system's dynamic nature. 
+    * Key elements include states (rounded rectangles), transitions (arrows), and events (labels on the transitions).
+* Class Diagram: A class diagram depicts the static structure of a system, including its classes, attributes, methods, and relationships. Class diagrams help model the system's building blocks, providing a detailed view of its design. 
+    * Key elements include classes (rectangles with three compartments for the class name, attributes, and methods), associations (lines connecting classes), and multiplicities (numbers indicating the cardinality of relationships).
+
+
+{{% /details %}}
 
 **Remember** - Understanding these basic UML diagrams is essential for anyone working with software systems, as they help convey complex concepts, facilitate communication, and provide a foundation for designing and implementing the system.
 
@@ -243,9 +265,10 @@ Selecting the appropriate diagramming tool and type of diagram depends on the sp
 
 ### Kanban Board
 
-* Some of well known comercial software are: Jira, Trello, Asana
+Some of well known comercial software are: Jira, Trello, Asana
+
 * You can also think about free open source alternatives, like **Focalboard**. 
-    * [I already created a guide to install Focalboard for free](https://fossengineer.com/focalboard-docker/).
+    * [Guide to install Focalboard for free](https://fossengineer.com/focalboard-docker/).
 
 ### Timeline / Gantt Chart
 
@@ -254,11 +277,10 @@ A timeline contains events visualized on a single line while a Gantt chart is a 
 Timelines give stakeholders a high-level overview of a project's start, end, and important milestones.
 
 * In this category you must have heard about Microsoft Project
-* A free open source alternative can be **Leantime**. [I created a guide to install Leantime](https://fossengineer.com/selfhosting-leantime-docker/).
+* A free open source alternative can be **Leantime**: [Guide to install Leantime](https://fossengineer.com/selfhosting-leantime-docker/).
 
 ### Note Apps
 
 * Microsoft One Note
 * A free open source alternative can be **Trilium**. 
-    * [I created a guide to install Trilium](https://fossengineer.com/selfhosting-Trilium-docker/).
-
+    * [Install Trilium](https://fossengineer.com/selfhosting-Trilium-docker/).
