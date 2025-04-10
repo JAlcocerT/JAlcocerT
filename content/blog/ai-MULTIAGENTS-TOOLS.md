@@ -8,7 +8,12 @@ url: 'ai-multi-agents-frameworks'
 ---
 
 
-https://github.com/JAlcocerT/Multi-Agents
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with " >}}
+{{< /cards >}}
 
 Recently I was having a [conversation about whats trendy in the Dsc/AI space](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects).
 
@@ -32,7 +37,7 @@ Actually, this is great tool to have when doing **research** of some new topic.
 
 
 
-https://github.com/camel-ai/camel
+* https://github.com/camel-ai/camel
 
 > 🐫 CAMEL: Finding the Scaling Law of Agents. A multi-agent framework. https://www.camel-ai.org
 
@@ -48,13 +53,67 @@ https://github.com/camel-ai/camel
 
 ### LangGraph
 
+Aigent builder framework: alternative to autogen and crewAI.
+
+It is a graph framework and each node is code.
+
 * https://www.langchain.com/langgraph
+
+    * https://pypi.org/project/langgraph/
+
+<!-- https://www.youtube.com/watch?v=1Q_MDOWaljk -->
+
+{{< youtube "1Q_MDOWaljk" >}}
+
+
+{{< details title="LangGraph | Summarized with Groq 📌" closed="true" >}}
+
+https://pypi.org/project/langgraph/
+https://pypi.org/project/langchain-openai/
+
+
+
+{{< /details >}}
+
+
+https://github.com/whitew1994WW/LangGraphForBeginners
+
+https://marketplace.visualstudio.com/items/?itemName=ms-toolsai.jupyter
+
+> I have replicated the code here for the REact example. But this fwk can do also reflection agent, router...
 
 {{< youtube "qAF1NjEVHhY" >}}
 
 <!-- 
 https://www.youtube.com/watch?v=qAF1NjEVHhY 
 -->
+
+
+{{< details title="LangGraph vs LangChain | Summarized with Groq 📌" closed="true" >}}
+
+LangChain is a framework that focuses on chaining together multiple language models to generate more accurate and informative responses. By leveraging the strengths of individual models, LangChain creates a robust system capable of tackling complex linguistic tasks. The video highlights LangChain's ability to handle long-range dependencies, making it an attractive solution for applications that require detailed explanations or storytelling.
+
+
+LangGraph, on the other hand, takes a more graph-based approach to language understanding. By representing language as a graph, LangGraph can capture relationships between entities, concepts, and relationships, enabling more nuanced and context-aware interactions. The video showcases LangGraph's strength in handling ambiguous or unclear input, making it an ideal choice for applications that require high accuracy and precision.
+Key Differences and Applications
+
+
+LangChain excels in tasks that require creativity and coherence, such as writing stories or generating dialogues. LangGraph, with its graph-based approach, is better suited for tasks that require precision and accuracy, such as question answering or entity disambiguation.
+
+Takeaways
+
+    LangChain and LangGraph are two distinct frameworks with unique strengths and weaknesses.
+    LangChain is ideal for applications that require creativity, coherence, and long-range dependencies.
+    LangGraph is better suited for applications that require precision, accuracy, and nuanced language understanding.
+    Understanding the differences between these frameworks is crucial for harnessing the power of AI in various industries.
+
+
+
+{{< /details >}}
+
+<!-- https://www.youtube.com/watch?v=PqS1kib7RTw -->
+
+{{< youtube "PqS1kib7RTw" >}}
 
 
 ## The Fabric Project
@@ -139,7 +198,7 @@ Im testing these tools at the [**MultiAgents** Repo](https://github.com/JAlcocer
 
 ### Agents with AutoGen - AG2AI
 
-We have several agent concepts in AG2 to help you build your AI agents.
+We have several agent concepts in **AG2 to help you build your AI agents**.
 
 We introduce the most common ones here:
 

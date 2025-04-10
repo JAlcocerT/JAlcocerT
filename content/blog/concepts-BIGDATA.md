@@ -1492,6 +1492,11 @@ If you want to get started with BI Tools, check how to **quickly setup REDASH**:
 
 ### DSc Tools for D&A Projects
 
+
+{{< callout type="info" >}}
+I have tinkered with them with Docker
+{{< /callout >}}
+
 1. https://github.com/mlflow/mlflow
 
 > Apache v2 | Open source platform for the **machine learning lifecycle**
@@ -1540,11 +1545,3 @@ It allows you to **create complex workflows** by defining tasks as nodes in a di
 {{< youtube "qaWOwbFw3cs" >}}
 
 > This is an **agentic fwk**!
-
-4. Concepts Like:
-
-* Reranking models for RAG
-* Summarization Techniques: https://python.langchain.com/v0.1/docs/use_cases/summarization/
-* Hypothetical Documents Embeddings: https://python.langchain.com/v0.1/docs/use_cases/query_analysis/techniques/hyde/
-* MultiVector Retrieval
-* ReACT fwk

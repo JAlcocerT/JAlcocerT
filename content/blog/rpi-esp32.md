@@ -1,9 +1,15 @@
 ---
 title: "ESP32:"
-date: 2023-08-30T23:20:21+01:00
+date: 2025-12-30T23:20:21+01:00
 draft: true
 tags: ["Self-Hosting"]
 ---
+
+https://www.youtube.com/watch?v=V_mZsiZcy7s
+
+https://www.youtube.com/watch?v=XKQgvmeApjI
+
+https://www.youtube.com/watch?v=g0sRbt8xrbY 
 
 # The ESP32 and the RPi - Killer Combination
 
