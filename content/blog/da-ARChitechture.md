@@ -163,15 +163,10 @@ https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-moc
 To tell better stories with data, you have to [ask the right questions](https://jalcocert.github.io/JAlcocerT/business-analytics-concepts/#business-analysis-key-questions):
 
 
-
 * What are the kinds of changes we are doing?
 * **What are the needs we are trying to satisfy?**
-* What are the solutions we are creating or changing?
 * Who are the stakeholders involved?
 * **What do stakeholders consider to be of value?**
-* What are the contexts that we and the solution are in?
-
-
 
 {{< callout type="info" >}}
 For more questions, you can switch on your **[product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq) mindset**
@@ -202,7 +197,7 @@ the buying brain....
  -->
 
 
-> These are very helpful on end to end projects - where we went from raw data modelling to [BI solutions](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/)
+> These are very helpful on end to end projects - where we went from raw data modelling to [BI solutions](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#syncing-expectations):
 
 You can also have handy a list of QQ to enable others perform their job:
 

@@ -3,7 +3,7 @@ title: "My Favourite ways to RAG"
 date: 2025-04-06T10:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'RAG applications. From LangChain to '
+description: 'RAG applications. From LangChain, LLamaIndex... to MLFlow.'
 url: 'comparing-rag-and-use-cases'
 ---
 
@@ -26,6 +26,7 @@ url: 'comparing-rag-and-use-cases'
 {{< callout type="info" >}}
 And actually the build has happened faster than for streamlit Apps
 {{< /callout >}}
+
 
 
 
@@ -91,6 +92,72 @@ https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
+
+### MLFlow
+
+
+LangChain, LLamaindex, OpenAI... can be used together with MLFlow! https://mlflow.org/docs/latest/llms/
+
+From this simple prompts: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_mermaid.py
+
+To This one: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_t2t-o1mini.py
+
+To....
+
+
+{{< callout type="info" >}}
+to finally, GenAI observavility with MLFlow https://github.com/mlflow/mlflow
+{{< /callout >}}
+
+![alt text](/blog_img/GenAI/mlflow-prompts.png)
+
+https://pypi.org/project/mlflow/
+
+import mlflow
+
+mlflow.set_tracking_uri(uri="http://<host>:<port>")
+
+```sh
+##pip install mlflow==2.21.3
+mlflow server --host 127.0.0.1 --port 8080
+```
+
+![alt text](/blog_img/GenAI/mlflow-prompts.png)
+
+```py
+from openai import OpenAI
+import mlflow
+client = OpenAI(api_key="<YOUR_API_KEY>")
+
+# Set MLflow tracking URI
+mlflow.set_tracking_uri("<YOUR_TRACKING_URI>")
+
+# Example of loading and using the prompt
+prompt = mlflow.load_prompt("prompts:/RealEstate/1")
+response = client.chat.completions.create(
+    messages=[{
+        "role": "user",
+        "content": prompt.format(),
+    }],
+    model="gpt-4o-mini",
+)
+
+print(response.choices[0].message.content)
+```
+
+
+MLflow Tracing provides LLM observability for various GenAI libraries such as OpenAI, LangChain, LlamaIndex, DSPy, AutoGen, and more. To enable auto-tracing, call mlflow.xyz.autolog() before running your models. Refer to the documentation for customization and manual instrumentation.
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="MLFlow is powered by Flask! ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title=" ↗" >}}
+{{< /cards >}}
+
+
+![alt text](/blog_img/GenAI/langfuse-webui.png)
+
+---
 
 ## FAQ
 
