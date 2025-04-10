@@ -267,7 +267,6 @@ Whats next from here?
 
 Why not building something cool?
 
-[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&Date)
 
 ### Interesting API keys for LLMs
 

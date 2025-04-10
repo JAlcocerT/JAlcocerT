@@ -12,6 +12,8 @@ How you can shape data products and address requirements?
 
 The [essential questions](#faq) to **collaborate with the product team** for successful data-driven projects, while maximizing impact.
 
+![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+
 
 If you understand [Pareto Principle](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) already...this will resonate.
 

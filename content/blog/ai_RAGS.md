@@ -27,6 +27,8 @@ url: 'comparing-rag-and-use-cases'
 And actually the build has happened faster than for streamlit Apps
 {{< /callout >}}
 
+
+
 ### With Persistent ChromaDB and MD
 
 
@@ -54,22 +56,40 @@ And actually the build has happened faster than for streamlit Apps
 
 ### CSV
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Project 1st Iteration ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/ScrewFastMoiRealEstate" title="The Source Code, using Screw Fast MIT Theme ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
 ### PDF
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Project 1st Iteration ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/ScrewFastMoiRealEstate" title="The Source Code, using Screw Fast MIT Theme ↗" icon="book-open" >}}
+{{< /cards >}}
+
 
 ### Database
 
 
 ## LLamaIndex
 
+https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/
+
+
+
 
 ## PandasAI
+
+https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/
 
 
 ---
 
 ## Conclusions
 
-
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 
 ## FAQ
@@ -98,4 +118,11 @@ See how to run **LangGraph or MLFlow**
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects" title="DSc Tools for DA Projects ↗ " >}}
+{{< /cards >}}
+
+### AI Apps Im SelfHosting
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}

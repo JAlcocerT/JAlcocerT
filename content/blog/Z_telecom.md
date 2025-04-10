@@ -47,7 +47,7 @@ Viewers tune in at specific times to watch programs and commercials.
 - Operates on fixed channels accessed via antenna or cable/satellite connections.
 - Requires a predetermined schedule set by the broadcaster.
 
-#### Alternatives to Linear TV:
+#### Alternatives to Linear TV
 
 1. **Streaming Services**  
    Platforms like Netflix, Hulu, Amazon Prime Video, offering on-demand content.
@@ -75,7 +75,8 @@ An **ONT (Optical Network Terminal)** is a device used in fiber optic networks. 
 
 A **CMTS (Cable Modem Termination System)** is a core component of cable internet networks, managing communication between cable modems (CM) and the internet.
 
-#### Key Functions of a CMTS:
+#### Key Functions of a CMTS
+
 1. **Cable Modems**  
    Connect customers to the internet via a cable TV network.
    
@@ -131,9 +132,11 @@ Therefore, "superpollers" are not an alternative to ServAssure NXT; they are a c
 
 {{< /details >}}
 
-### ACS (Auto Configuration Server)
+### ACS
 
-**ACS (Auto Configuration Server)** is a crucial component in the management of network devices in telecommunications. It facilitates the **remote configuration and management of customer-premises equipment (CPE)** such as: modems, routers, gateways, and set-top boxes - STBs.
+**ACS (Auto Configuration Server)** is a crucial component in the management of network devices in telecommunications. 
+
+It facilitates the **remote configuration and management of customer-premises equipment (CPE)** such as: modems, routers, gateways, and set-top boxes - STBs.
 
 
 - **Purpose**: ACS is primarily used to automate the initial setup of devices, ongoing management, and firmware updates. It ensures that devices are always running with the latest software and settings, improving security and performance.
@@ -976,6 +979,8 @@ Which can be...
 
 {{< details title="Meeting Creation - Scheduler Template 📌" closed="true" >}}
 
+You can have a expanded view: [here ](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner) and as meeting facilatator, [here](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#facilitating-meetings)
+
 - **Meeting Creation**
   - **How/what - Always use them!**
     - The context of this meeting is ....
@@ -1019,7 +1024,7 @@ After model deployment and its validation, DA team will require 1-2 story points
 
 {{< /details >}}
 
-{{< details title="Meeting Creation - Bug RCA 📌" closed="true" >}}
+{{< details title="Summary - Bug RCA 📌" closed="true" >}}
 
 - **BUG** - [Jira-123](#faq)
 
@@ -1154,20 +1159,20 @@ graph TD;
 Managing **Project Expectations** with a [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md  "Microsoft Project Charter Example {rel='nofollow'}").
 {{< /callout >}}
 
-![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+<!-- ![Cat product Meme](/blog_img/memes/features-vs-needs.png) -->
 
-#### More T-Shaped Skills
-
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/" title="Product MindSet" image="/blog_img/memes/features-vs-needs.png" subtitle="Vision for Data Products and more" >}}
+{{< /cards >}}
 
 #### Prompts for Telecom
 
 Learning Telecom concepts its now possible with AI:
 
-
+```md
 You are an expert telecom and network engineer who can summarize concepts in simple terms in markdown.
-
 You will use for readability bullet points, bold and underlines, but never h1 h2 or any header.
-
+```
 
 
 

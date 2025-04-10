@@ -76,7 +76,9 @@ Ive documented LlamaIndex at **[Chat over Data](https://github.com/JAlcocerT/Dat
 
 ## Improvements
 
-The current Trip Planner Apps does not have any AI feature. Yet.
+The current Trip Planner Apps does not have any AI feature.
+
+Yet.
 
 Why not adding it Chat capabilities over the weather data that we are fetching already?
 

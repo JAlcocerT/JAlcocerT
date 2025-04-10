@@ -7,7 +7,7 @@ description: 'What it is MLOps?.'
 url: 'ml-ops-101'
 ---
 
-* Open-source tools for prompt testing and experimentation, with support for both LLMs (e.g. OpenAI, LLaMA) and vector databases (e.g. Chroma, Weaviate, LanceDB).
+Open-source tools for prompt testing and experimentation, with support for both LLMs (e.g. OpenAI, LLaMA) and vector databases (e.g. Chroma, Weaviate, LanceDB).
 
 * https://github.com/hegelai/prompttools
 
@@ -28,4 +28,8 @@ https://github.com/EthicalML/awesome-production-machine-learning
 https://github.com/openvinotoolkit/openvino
 
 > OpenVINO™ is an open-source toolkit for optimizing and deploying AI inference
+
+---
+
+## Conclusion
 

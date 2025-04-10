@@ -36,6 +36,23 @@ graph LR
 
 ```
 
+I love [diagrams](https://www.mermaidchart.com/play#pako:eNp90N9LwzAQB_B_5ciDKKwPzrc-qOsPZA9OwQ6UZYysuW5h7UWStAPL_neTlskQ8SUP37vPJbmelVoii1kURZxKTZXaxZwAaq0PMewFycyII4XI7bHBGCRWoq0dp4FUtT6We2EcFFloApitOHtzIcmM6tBwtoYouoek5yx_z9NlMX9ZbLJZkYMiQOoeODuNNPGN8IF26E_9nCd08MtURjdB-bEXaKEHk_1jhNl1q-n6x6WDyL2Yv2aJsPiMzqjSXo9bmIBpaeNUgxvrzM3IRkm3HhVoHUjhxNajgz3_kqa-tiSnXI3SP0tiqFwB3f2Rn8c99qD8rTFwJr5ag_FwRpfTJ1Bp04QOo1uSKEP0qW1ItsMC2ekbNbOQkA)
+
+```mermaid
+---
+config:
+  look: handDrawn
+  theme: default
+---
+flowchart TD
+    A["Start Driver"] --> B{"EXECUTION_DATE in env?"}
+    B -- Yes --> C["Get EXECUTION_DATE from env"]
+    B -- No --> D["Get EXECUTION_DATE from argv[2]"]
+    C --> E["IPDBaseMetrics(config, run_time_str)"]
+ 
+    n1["Test databricks"] --> n2["Untitled Node"] & n3["Untitled Node"]
+    n1@{ icon: "azure:azure-databricks", form: "rounded", pos: "b"}
+```
 
 
 1. An Operational Data Hub (ODH) is a central, integrated data store that serves operational systems and analytical applications with near real-time or real-time data.
@@ -88,11 +105,37 @@ https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#others
   {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="PySpark 101 ↗" >}}
 {{< /cards >}}
 
+
+```py
+Test_Data = [("James","Sales","NY",90000,34,10000),
+    ("Michael","Sales","NY",86000,56,20000),
+    ("Robert","Sales","CA",81000,30,23000),
+    ("Maria","Finance","CA",90000,24,23000),
+    ("Raman","Finance","CA",99000,40,24000),
+    ("Scott","Finance","NY",83000,36,19000),
+    ("Jen","Finance","NY",79000,53,15000),
+    ("Jeff","Marketing","CA",80000,25,18000),
+    ("Kumar","Marketing","NY",91000,50,21000)
+  ]
+
+schema = ["employee_name","department","state","salary","age","bonus"]
+Test_DF = spark.createDataFrame(data=Test_Data, schema = schema)
+Test_DF.printSchema()
+Test_DF.show(truncate=False)
+```
+
 ---
 
 
 
 ## From the Experience
+
+Whatever the industry you are working on, make sure to set and improve your [workflow for effectiveness](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/#workflow-for-effectiveness):
+
+1. What's going on
+2. Meeting Scheduler Template
+3. RCA Template
+4. MTG Summary Template
 
 {{< callout type="info" >}}
 Understand *the one thing* the client value the most. [Pareto](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)?
@@ -117,7 +160,8 @@ https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-moc
 
 ### BA & Elicitation Skills
 
-https://jalcocert.github.io/JAlcocerT/business-analytics-concepts/#business-analysis-key-questions
+To tell better stories with data, you have to [ask the right questions](https://jalcocert.github.io/JAlcocerT/business-analytics-concepts/#business-analysis-key-questions):
+
 
 
 * What are the kinds of changes we are doing?
@@ -132,6 +176,12 @@ https://jalcocert.github.io/JAlcocerT/business-analytics-concepts/#business-anal
 {{< callout type="info" >}}
 For more questions, you can switch on your **[product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq) mindset**
 {{< /callout >}}
+
+<!-- ![Cat product Meme](/blog_img/memes/features-vs-needs.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq" title="Product MindSet" image="/blog_img/memes/features-vs-needs.png" subtitle="Questions to Define Products" >}}
+{{< /cards >}}
 
 
 {{< details title="My Favourite Questions for Requirement Gathering 📌" closed="true" >}}
@@ -164,8 +214,10 @@ https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/#enabling-o
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
-  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/outro/telecom/cm-fiber-coax.png" subtitle="Source Code on Github" >}}
 {{< /cards >}}
+
+
 
 
 
@@ -346,3 +398,5 @@ Sí, exactamente. La capa Oro es donde se definen y materializan los modelos dim
     * Esto permite mayor facilidad a los usuarios finales, para la creación de reportes.
 
 **En resumen, la capa Oro es el lugar donde los datos se transforman en información valiosa y fácil de usar para la toma de decisiones.**
+
+### More T-Shaped Skills

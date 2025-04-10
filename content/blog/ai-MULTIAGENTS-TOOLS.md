@@ -10,6 +10,10 @@ url: 'ai-multi-agents-frameworks'
 
 https://github.com/JAlcocerT/Multi-Agents
 
+Recently I was having a [conversation about whats trendy in the Dsc/AI space](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects).
+
+
+
 [RAGs](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/), [Function calling](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/), [Structured Output](https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/),...
 
 They are all great.
@@ -24,6 +28,7 @@ Actually, this is great tool to have when doing **research** of some new topic.
 3. [CrewAI](#crewai)
 4. [MetaGPT](#metagpt)
 5. [Camel](#camel)
+6. [LangGraph](#langgraph)
 
 
 
@@ -41,6 +46,15 @@ https://github.com/camel-ai/camel
 ## Open Source Agents Swarm Projects
 
 
+### LangGraph
+
+* https://www.langchain.com/langgraph
+
+{{< youtube "qAF1NjEVHhY" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=qAF1NjEVHhY 
+-->
 
 
 ## The Fabric Project
@@ -63,9 +77,9 @@ We can use Fabric together with Ollama and Groq - Both are OpenAI API Compatible
 
 ### Fabric with Groq
 
-## Other F/OSS MultiAAgent Projects
+## Other F/OSS Multi-Agent Projects
 
-[![Star History Chart](https://api.star-history.com/svg?repos=lucaslorentz/caddy-docker-proxy,NginxProxyManager/nginx-proxy-manager,traefik/traefik&,type=Date)](https://star-history.com/#lucaslorentz/caddy-docker-proxy&NginxProxyManager/nginx-proxy-manager&traefik/traefik&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=lucaslorentz/caddy-docker-proxy,NginxProxyManager/nginx-proxy-manager,geekan/MetaGPT&,type=Date)](https://star-history.com/#lucaslorentz/caddy-docker-proxy&NginxProxyManager/nginx-proxy-manager&geekan/MetaGPT&Date)
 
 
 
@@ -243,6 +257,8 @@ In summary, AutoGen can be a powerful tool for building applications that retrie
 
 {{< /details >}}
 
+
+
 ### Agents with LangChain
 
 You guessed it.
@@ -256,6 +272,8 @@ You might know Langchain because of its useful **Chains**.
 {{< callout type="info" >}}
 **LangChain as RAG** can [chat with CSV](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/)& [**DBs**](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/). Also [with PDFs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/)
 {{< /callout >}}
+
+
 <!-- 
 https://www.youtube.com/watch?v=rFQ5Kmkd4jc -->
 
@@ -367,6 +385,18 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
     * https://github.com/TransformerOptimus/SuperAGI?tab=MIT-1-ov-file#readme
 
 >  <⚡️> SuperAGI - A dev-first open source autonomous AI agent framework. Enabling developers to build, manage & run useful autonomous agents quickly and reliably. 
+
+---
+
+## Conclusions
+
+
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&Date)
 
 
 ---

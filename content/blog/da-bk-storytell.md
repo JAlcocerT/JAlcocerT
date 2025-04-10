@@ -70,13 +70,7 @@ All those TIPS basically resonates with the **best practices to create a Data Pr
 
 
 
-<!-- 
-Data storytelling in analytics is important because it helps to uncover insights from data that might otherwise go unnoticed, and also helps to communicate those insights to others in a more engaging and memorable way. By presenting data in the form of a narrative, we can make the insights more relatable and understandable to a wider range of people. This is especially important in the world of business, where decisions need to be made based on data and insights, but not everyone may have the technical expertise to fully understand the underlying data.
 
-Furthermore, data storytelling has been shown to be more effective at communicating insights and influencing decisions than simply presenting data in a spreadsheet or chart. By providing context and meaning to the data, data storytelling can help decision-makers better understand the implications of the data and make more informed decisions based on those insights. Overall, data storytelling is a powerful tool that can help organizations unlock the full potential of their data and use it to drive better decision-making and business outcomes. -->
-
-<!-- 
-story telling with data -->
 
 ## Building your Story with Data
 
@@ -90,14 +84,6 @@ story telling with data -->
     * **Biases** - What are the [most common *mind traps*](https://fossengineer.com/psychology-skills-data-analytics/#biases)?
     * Be accountable, transparent and tell your stories ethically
 
-<!-- In your analytics career, 
- -->
-
-<!-- Data interacts with narratives and systems in the following ways:
-* Data shapes a strategic narrative – Whether you’re segmenting customers or developing brand stories, data provides context to shape and share stories.
-* Data visualizations deliver the story – In formats such as data journalism, data-inspired social media campaigns and analyst reports, organizations use data visualizations to deliver powerful stories.
-* Data provides macro insights – Humans or AI interpret big-picture patterns in data to form an insight, which provides the basis for a story.
-* Data shapes processes – Using visually prepared data – via dashboards – systems emerge that enable the control of workflows, processes and states by detecting anomalies and monitoring systems. -->
 
 Use stories to assist decision makers see patterns in data to help them make sense of the world around them. Today's storytelling is more machine-powered, with robots finding correlations in data that people may overlook.
 
@@ -152,15 +138,7 @@ We tend to think in polarities, separating the universe into binary categories. 
 
 Polarization allows the brain to make quick judgements, but thinking in basic, binary terms does not allow you to adequately comprehend the complexity of reality.
 
-<!-- ### The Echo Chambers
 
-When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. Today, however, people often only engage with those who share their opinions. Digital channels have returned humans to a cave-like existence: Only a small social bubble within an echo chamber shares a given person’s view of reality.
-
-“The multiplicity of digital channels allows us to avoid self-awareness and surround ourselves with the people (or machines, it is not always certain) who share our opinions.” 
-
-Individuals that hold opposing viewpoints on reality encourage, criticize, and adjust one another's ideas, influencing economic and human behavior. Different narratives, like an epidemic, may infect and alter communities, according to Shiller. The validity of a narrative has no bearing on its "contagion rate." Viral tales capture attention, look cohesive, and fit readily into existing narratives.
-
--->
 
 ### Avoiding Mind Traps
 
@@ -184,7 +162,4 @@ Data inaccuracies can arise, resulting in "machine bias," which occurs when data
 The [data you choose may be skewed](https://fossengineer.com/guide-python-PySpark/#what-is-data-skew), especially if it originates from social media platforms where people express prejudiced opinions.
 
 > We need to be extra careful when trusting blindly Algorithms, as [there is always a trade-off](https://fossengineer.com/machine-learning-data-analytics/#the-bias-variance-trade-off).
-
-<!-- 
-To tell better stories with data, you have to [ask the right questions](). -->
 

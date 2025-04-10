@@ -1494,12 +1494,11 @@ If you want to get started with BI Tools, check how to **quickly setup REDASH**:
 
 1. https://github.com/mlflow/mlflow
 
-> Apache v2 | Open source platform for the machine learning lifecycle
+> Apache v2 | Open source platform for the **machine learning lifecycle**
 
 2. https://github.com/langfuse/langfuse
 
-> 🪢 [OLangfuse](https://langfuse.com/) is an pen source **LLM engineering platform**: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with OpenTelemetry, Langchain, OpenAI SDK, LiteLLM, and more. 🍊YC W23
-
+> 🪢 [Langfuse](https://langfuse.com/) is an pen source **LLM engineering platform: LLM Observability**, metrics, evals, prompt management, playground, datasets. Integrates with OpenTelemetry, Langchain, OpenAI SDK, LiteLLM, and more. 🍊YC W23
 
 Langfuse can be selfhosted as per: https://langfuse.com/self-hosting/local
 
@@ -1540,7 +1539,7 @@ It allows you to **create complex workflows** by defining tasks as nodes in a di
 
 {{< youtube "qaWOwbFw3cs" >}}
 
-> This is an agentic fwk!
+> This is an **agentic fwk**!
 
 4. Concepts Like:
 
