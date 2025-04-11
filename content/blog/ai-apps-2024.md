@@ -258,8 +258,6 @@ ssh ubuntu@57.128.public.ip
 * https://akashrajpurohit.com/blog/setup-authelia-for-sso-authentication/
 
 
-
-
 ---
 
 ## FAQ

@@ -1,6 +1,6 @@
 ---
 title: "My Favourite ways to RAG"
-date: 2025-04-06T10:20:21+01:00
+date: 2025-04-10T10:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
 description: 'RAG applications. From LangChain, LLamaIndex... to MLFlow.'
@@ -18,6 +18,11 @@ url: 'comparing-rag-and-use-cases'
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
+
+
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,mlflow/mlflow,langfuse/langfuse&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&mlflow/mlflow&langfuse/langfuse&Date)
 
 
 ## LangChain
@@ -104,11 +109,16 @@ https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 
-Concepts that are **veeery trendy:**
+Concepts/Tools that are **veeery trendy:**
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen" title="MLFlow and LangFuse with Docker 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects" title="Big Data & DSc Cool Tools ↗" >}}
+{{< /cards >}}
 
 * MLFlow, LangGraph, LangFuse
 
-* Reranking models for RAG
+* Reranking models for RAG - *As it can be done with [LocalAI](https://jalcocert.github.io/JAlcocerT/local-ai-audio/#localai-tts)!*
 * Summarization Techniques: https://python.langchain.com/v0.1/docs/use_cases/summarization/
 * Hypothetical Documents Embeddings: https://python.langchain.com/v0.1/docs/use_cases/query_analysis/techniques/hyde/
 * MultiVector Retrieval
@@ -128,7 +138,7 @@ To....
 
 
 {{< callout type="info" >}}
-to finally, GenAI observavility with MLFlow https://github.com/mlflow/mlflow
+to finally, **GenAI observavility with MLFlow** https://github.com/mlflow/mlflow
 {{< /callout >}}
 
 ![alt text](/blog_img/GenAI/mlflow-prompts.png)

@@ -207,6 +207,17 @@ https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/#enabling-o
 
 ## Conclusions
 
+
+### The Information Workflow
+
+Important from how you handle meetings, to how you write designs, to how you ask from others.
+
+
+{{< callout type="info" >}}
+I like this way of summarizing whats required from others (useful for JIRA stories!)
+{{< /callout >}}
+
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/outro/telecom/cm-fiber-coax.png" subtitle="Source Code on Github" >}}

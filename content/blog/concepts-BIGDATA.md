@@ -1494,7 +1494,7 @@ If you want to get started with BI Tools, check how to **quickly setup REDASH**:
 
 
 {{< callout type="info" >}}
-I have tinkered with them with Docker
+I have tinkered with them with Docker, [here](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen)
 {{< /callout >}}
 
 1. https://github.com/mlflow/mlflow
@@ -1521,6 +1521,8 @@ docker compose up #important DONT DO docker-compose, it works using v2
 > Go to port `3000` to see the web UI
 
 ![alt text](/blog_img/GenAI/langfuse-signup.png)
+
+Once you create a local account, access the UI:
 
 ![alt text](/blog_img/GenAI/langfuse-webui.png)
 

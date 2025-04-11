@@ -20,7 +20,6 @@ An overview to the existing open source alternatives for audio to text conversio
 
 ## S2T
 
-
 {{< callout type="info" >}}
 Make sure to have the right PyTorch installed: https://pytorch.org/get-started/locally/
 {{< /callout >}}
@@ -30,6 +29,10 @@ Make sure to have the right PyTorch installed: https://pytorch.org/get-started/l
 <https://github.com/beyondcode/writeout.ai>
 
 ### OpenAI Whisper
+
+This one requires OpenAI API Key.
+
+But its worth to give it a try.
 
 * https://github.com/openai/whisper (MIT Licensed ❤️)
   * https://pypi.org/project/whisper/#history
@@ -99,6 +102,10 @@ The project has **only wheels for Windows**, and your system is not Windows, hen
 
 * OpenAI Whisper: <https://pypi.org/project/openai-whisper/#history>
 
+
+{{< details title="Trying to bundle Ecoute 📌" closed="true" >}}
+
+
 ```sh
 python main.py
 # python main.py --api
@@ -161,6 +168,9 @@ volumes:
 
 ```
 
+{{< /details >}}
+
+
 ### oTranscribe
 
 * <https://github.com/oTranscribe/oTranscribe>
@@ -173,8 +183,15 @@ volumes:
 
 * [Whishper](https://fossengineer.com/whishper-docker)
   * https://github.com/pluja/whishper
+  * https://whishper.net/
 
 >  aGPL | Transcribe any audio to text, translate and edit subtitles 100% locally with a web UI. Powered by whisper models! 
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
 
 bark
 libretranslate...

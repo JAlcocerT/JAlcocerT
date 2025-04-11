@@ -1,6 +1,6 @@
 ---
 title: "AI Multi Agents: PyAutogen"
-date: 2025-04-10
+date: 2025-04-10T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
 description: 'Reviewing the most Popular AI Agents frameworks: AG2AI (AutoGen), CrewAI, LangChain, LlamaIndex,'
@@ -68,9 +68,8 @@ It is a graph framework and each node is code.
 
 {{< details title="LangGraph | Summarized with Groq 📌" closed="true" >}}
 
-https://pypi.org/project/langgraph/
-https://pypi.org/project/langchain-openai/
-
+* https://pypi.org/project/langgraph/
+* https://pypi.org/project/langchain-openai/
 
 
 {{< /details >}}
