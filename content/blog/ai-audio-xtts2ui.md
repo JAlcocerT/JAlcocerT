@@ -374,20 +374,26 @@ Generally, here you can get many ideas: <https://github.com/sindresorhus/awesome
 Also, in [HF there are already interesting projects](https://jalcocert.github.io/Linux/docs/linux__cloud.md/llms/#how-to-use-hf).
 
 * <https://www.futuretools.io/tools/uberduck>
-* [Audiocraft](/whishper-docker/#how-to-install-audiocraft)
+
 
 * ecoute (OpenAI API needed)
 * Meeper (OpenAI API needed)
+
 * Bark
 
 * Whisper - https://github.com/openai/whisper
-
   * https://github.com/Vaibhavs10/insanely-fast-whisper
   * https://github.com/ggerganov/whisper.cpp
   * https://huggingface.co/openai/whisper-large-v2#long-form-transcription
   * https://github.com/SYSTRAN/faster-whisper
 
-  * https://libretranslate.com/
+* https://libretranslate.com/
+  *  Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup. 
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/nlp-tools/#interesting-offline-tools---translations" title="NLP Post ↗ " >}}
+{{< /cards >}}
+
 * https://github.com/CorentinJ/Real-Time-Voice-Cloning
 
 * Linux Desktop App:

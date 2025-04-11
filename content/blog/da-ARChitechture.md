@@ -228,7 +228,11 @@ I like this way of summarizing whats required from others (useful for JIRA stori
 
 ## FAQ
 
-### Example
+### Examples
+
+
+{{< details title="Milk Factory | Sample Concept 📌" closed="true" >}}
+
 
 > tienes una fabrica de leche y quieres extraer tres arhcivos: lsita de vacas, medidas de leche y otro de calidad de la leche. Quieres crear facts y dimensions: como lo harias?
 
@@ -402,4 +406,8 @@ Sí, exactamente. La capa Oro es donde se definen y materializan los modelos dim
 
 **En resumen, la capa Oro es el lugar donde los datos se transforman en información valiosa y fácil de usar para la toma de decisiones.**
 
+
+
+
+{{< /details >}}
 ### More T-Shaped Skills

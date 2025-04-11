@@ -9,9 +9,8 @@ url: 'ai-multi-agents-frameworks'
 
 
 
-
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
   {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with " >}}
 {{< /cards >}}
 
@@ -19,9 +18,13 @@ Recently I was having a [conversation about whats trendy in the Dsc/AI space](ht
 
 
 
-[RAGs](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/), [Function calling](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/), [Structured Output](https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/),...
+1. [RAGs](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/)
+2. [Function calling](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/)
+3. [Structured Output](https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/),...
+4. Langfuse and MLFlow...
 
-They are all great.
+
+They are all great. And a must. 
 
 But can we just have LLMs working together? 
 

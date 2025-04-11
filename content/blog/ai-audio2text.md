@@ -1,9 +1,9 @@
 ---
-title: "An overview of F/OSS Audio to Text Tools "
+title: "An overview of F/OSS Audio to Text Tools"
 date: 2025-04-11T11:20:21+01:00
 draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"] 
-description: 'Audio 2 Text Open Source and commercial transcription (S2T) Tools'
+description: 'Audio 2 Text Open Source and commercial transcription (S2T) Tools. ST Audio input.'
 url: 'audio-to-text'    
 ---
 
@@ -16,7 +16,7 @@ An overview to the existing open source alternatives for audio to text conversio
 
 
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mezbaul-h/june,coqui-ai/TTS,mudler/LocalAI&,type=Date)](https://star-history.com/mezbaul-h/june&coqui-ai/TTS&mudler/LocalAI&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=openai/whisper,SevaSk/ecoute,oTranscribe/oTranscribe,beyondcode/writeout.ai,pluja/whishper&,type=Date)](https://star-history.com/openai/whisper&SevaSk/ecoute&oTranscribe/oTranscribe&beyondcode/writeout.ai&pluja/whishper&Date)
 
 ## S2T
 
@@ -24,9 +24,6 @@ An overview to the existing open source alternatives for audio to text conversio
 Make sure to have the right PyTorch installed: https://pytorch.org/get-started/locally/
 {{< /callout >}}
 
-### WriteOutAI
-
-<https://github.com/beyondcode/writeout.ai>
 
 ### OpenAI Whisper
 
@@ -173,25 +170,59 @@ volumes:
 
 ### oTranscribe
 
-* <https://github.com/oTranscribe/oTranscribe>
+* https://github.com/oTranscribe/oTranscribe
+  * <https://otranscribe.com/>
 
-* <https://otranscribe.com/>
+> MIT |  A free & open tool for transcribing audio interviews 
+
+### WriteOutAI
+
+* https://github.com/beyondcode/writeout.ai
+
+> MIT |  Transcribe and translate your audio files - for free 
 
 
-## WHISHPER POST
+### WHISHPER
 
-
-* [Whishper](https://fossengineer.com/whishper-docker)
-  * https://github.com/pluja/whishper
-  * https://whishper.net/
+* https://github.com/pluja/whishper
+* https://whishper.net/
 
 >  aGPL | Transcribe any audio to text, translate and edit subtitles 100% locally with a web UI. Powered by whisper models! 
 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/LibreTranslate/LibreTranslate" title="It uses LibreTranslate ↗ " >}}
+{{< /cards >}}
+
+![alt text](/blog_img/GenAI/audio/whishper.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Whishper" title="Whishper Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+* https://whishper.net/guides/install/
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
-bark
-libretranslate...
+---
+
+## Conclusions
+
+Now we have seen the differences between TTS and S2T (Transcription) frameworks out there!
+
+Time to do cool things with them.
+
+
+Like putting together a voice assistant with Streamlit
+
+{{< cards cols="1" >}}
+  {{< card link="https://docs.streamlit.io/develop/api-reference/media/st.audio" title="ST Audio Component DOCS ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps/Python_Streamlit" title="Python Streamlit App Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+https://docs.streamlit.io/develop/api-reference/widgets/st.audio_input
+

@@ -119,6 +119,8 @@ You can also have a look to **Sketch**, as it can make data cataloguing, like PI
 
 * https://github.com/LibreTranslate/LibreTranslate
 
+> agpl 3.0 | Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup. 
+
 ### What about n-Grams?
 
 In Natural Language Processing (NLP), an **n-gram** is a contiguous sequence of *n* items from a given sample of text or speech.
