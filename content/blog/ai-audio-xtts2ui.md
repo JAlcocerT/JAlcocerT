@@ -26,9 +26,16 @@ url: local-ai-audio
 
 * https://localai.io/features/text-to-audio/
 
+<!-- 
+https://www.youtube.com/watch?v=G7aXgKlhbGk 
+-->
 
-{{< youtube "TbTqA09-cwQ" >}}
+{{< youtube "G7aXgKlhbGk" >}}
 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LocalAI" title="LocalAI Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### Coqui TTS
 
@@ -58,6 +65,11 @@ docker run -d \
     tts_models/en/vctk/vits
 ```
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/TTS_Coqui" title="CoquiTTS Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 It will go with the `en/vctk/vits` model. But you can change it later on.
 
 
@@ -73,7 +85,6 @@ Deploy with the related [docker-compose for CoquiTTS](https://github.com/JAlcoce
 
 {{< details title="Deploy CoquiTTS with Docker | CLI Details 📌" closed="true" >}}
 
-
 ```sh
 docker exec -it coquitts /bin/bash
 
@@ -84,9 +95,6 @@ python3 TTS/server/server.py --list_models #To get the list of available models
 python3 TTS/server/server.py --model_name tts_models/en/vctk/vits # To start a server
 #python3 TTS/server/server.py --model_name tts_models/es/mai/tacotron2-DDC
 ```
-
-
-
 
 ```yml
 services:
@@ -125,20 +133,20 @@ services:
 https://github.com/suno-ai/bark
 
 
-
-https://github.com/suno-ai/bark
-
-
 > Important https://pytorch.org/get-started/locally/
 
+{{< youtube "hrYhk9Khyho" >}}
 
 
 https://www.youtube.com/watch?v=hrYhk9Khyho
+
+
+
 https://github.com/gitmylo/bark-voice-cloning-HuBERT-quantizer
 
-### Whishper
+> MIT |  The code for the bark-voicecloning model. Training and inference. 
 
-/selfhosting-whishper-with-docker/
+
 
 ### OpenVoice
 
@@ -175,7 +183,7 @@ I had to use this as environment...
 
 
 
-## RVC-Project
+### RVC-Project
 
 Another VC (Voice Clonning) project
 
@@ -184,6 +192,14 @@ https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI?tab=MIT-1-
 
 https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/docs/en/README.en.md
 
+### LocalAI Packaged
+
+
+* https://github.com/coleam00/local-ai-packaged
+
+> Apache v2.0 | Run all your local AI together in one package - Ollama, Supabase, n8n, Open WebUI, and more!
+
+https://www.youtube.com/watch?v=hKrl5Gr7hM0
 
 ---
 
@@ -359,16 +375,18 @@ Also, in [HF there are already interesting projects](https://jalcocert.github.io
 
 * <https://www.futuretools.io/tools/uberduck>
 * [Audiocraft](/whishper-docker/#how-to-install-audiocraft)
+
 * ecoute (OpenAI API needed)
 * Meeper (OpenAI API needed)
 * Bark
+
 * Whisper - https://github.com/openai/whisper
+
   * https://github.com/Vaibhavs10/insanely-fast-whisper
   * https://github.com/ggerganov/whisper.cpp
   * https://huggingface.co/openai/whisper-large-v2#long-form-transcription
   * https://github.com/SYSTRAN/faster-whisper
-* [Whishper](https://fossengineer.com/whishper-docker)
-  * <https://github.com/pluja/whishper>
+
   * https://libretranslate.com/
 * https://github.com/CorentinJ/Real-Time-Voice-Cloning
 

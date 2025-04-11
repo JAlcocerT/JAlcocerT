@@ -3,7 +3,7 @@ title: "An overview of F/OSS Audio to Text Tools "
 date: 2025-04-11T11:20:21+01:00
 draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"] 
-description: 'Audio 2 Text Open Source and commercial S2T Tools'
+description: 'Audio 2 Text Open Source and commercial transcription (S2T) Tools'
 url: 'audio-to-text'    
 ---
 
@@ -18,18 +18,23 @@ An overview to the existing open source alternatives for audio to text conversio
 
 [![Star History Chart](https://api.star-history.com/svg?repos=mezbaul-h/june,coqui-ai/TTS,mudler/LocalAI&,type=Date)](https://star-history.com/mezbaul-h/june&coqui-ai/TTS&mudler/LocalAI&Date)
 
+## S2T
 
-## WrireOut AI
+
+{{< callout type="info" >}}
+Make sure to have the right PyTorch installed: https://pytorch.org/get-started/locally/
+{{< /callout >}}
+
+### WriteOutAI
 
 <https://github.com/beyondcode/writeout.ai>
 
-## Whisper
+### OpenAI Whisper
 
-https://github.com/openai/whisper (MIT Licensed ❤️)
-https://github.com/openai/whisper?tab=MIT-1-ov-file#readme
-https://pypi.org/project/whisper/#history
+* https://github.com/openai/whisper (MIT Licensed ❤️)
+  * https://pypi.org/project/whisper/#history
 
-> Robust Speech Recognition via Large-Scale Weak Supervision
+> MIT | Robust Speech Recognition via Large-Scale Weak Supervision
 
 * <https://www.reddit.com/r/Python/comments/xqlay2/speech_to_text_that_actually_works_my_first/>
 
@@ -42,21 +47,34 @@ https://pypi.org/project/whisper/#history
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py" title="Sample Script OpenAI Whisper ↗" >}}
 {{< /cards >}}
 
-## Whishper
 
-/selfhosting-whishper-with-docker
 
-## ecoute
+### Ecoute
 
-* Project Source Code: <https://github.com/SevaSk/ecoute>
+* Project Source Code: https://github.com/SevaSk/ecoute
     * License: [MIT](https://github.com/SevaSk/ecoute?tab=MIT-1-ov-file#readme)
+
+> Ecoute is a live transcription tool that provides real-time transcripts for both the user's microphone input (You) and the user's speakers output (Speaker) in a textbox. 
 
 
 ```sh
 git clone https://github.com/SevaSk/ecoute
 cd ecoute
-pip install -r requirements.txt
+```
 
+```sh
+#python -m venv solvingerror_venv #create the venv
+python3 -m venv ecoute_venv #create the venv
+
+#solvingerror_venv\Scripts\activate #activate venv (windows)
+source ecoute_venv/bin/activate #(linux)
+
+
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+```
+
+```sh
+pip install -r requirements.txt
 pip install whisper==1.10.0
 ```
 
@@ -69,11 +87,15 @@ pip install whisper==1.10.0
  #cmd
 ```
 
-### ecoute requirements
+#### ecoute requirements
 
 * Record Audio from speakers: <https://github.com/s0d3s/PyAudioWPatch>
-* <https://pypi.org/project/PyAudioWPatch/#history>
-  * The project has **only wheels for Windows**, and your system is not Windows, hence the error.
+  * https://pypi.org/project/PyAudioWPatch/#history
+
+
+{{< callout type="warning" >}}
+The project has **only wheels for Windows**, and your system is not Windows, hence the error
+{{< /callout >}}
 
 * OpenAI Whisper: <https://pypi.org/project/openai-whisper/#history>
 
@@ -115,7 +137,6 @@ Ecoute is a live transcription tool that provides real-time transcripts for both
 
 It also generates a suggested response using OpenAI's GPT-3.5 for the user to say based on the live transcription of the conversation.
 
-
 ```sh
 docker build -t ecoute .
 #docker tag ecoute docker.io/fossengineer/ecoute:latest
@@ -123,7 +144,7 @@ docker build -t ecoute .
 ```
 
 ```yml
-version: '3'
+#version: '3'
 
 services:
   ai-ecoute:
@@ -140,7 +161,7 @@ volumes:
 
 ```
 
-## oTranscribe
+### oTranscribe
 
 * <https://github.com/oTranscribe/oTranscribe>
 
@@ -148,5 +169,12 @@ volumes:
 
 
 ## WHISHPER POST
- bark
- libretranslate...
+
+
+* [Whishper](https://fossengineer.com/whishper-docker)
+  * https://github.com/pluja/whishper
+
+>  aGPL | Transcribe any audio to text, translate and edit subtitles 100% locally with a web UI. Powered by whisper models! 
+
+bark
+libretranslate...

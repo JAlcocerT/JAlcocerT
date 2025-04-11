@@ -210,7 +210,26 @@ Rencoding? save time not doing it. If the parts have similar resolution/fps/code
 With [this Script you can **bundle together videos** with MoviePy on W11/Linux](https://github.com/JAlcocerT/YT-Video-Edition/blob/main/With_Python/joinALLvideosFolderNoRencod2.py)
 {{< /callout >}}
 
-You can also try to silence, include another audio as background (Rencoding needed for those)
+You can also try to silence, include another audio as background...
+
+---
+
+
+## Conclusions
+
+Thanks to a couple of scripts and some CLI with ffmpeg, now everything flows much faster:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py" title="Script OpenAI+Whisper T2S Transcription ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_t2t.py" title="Script OpenAI T2T ↗" >}}
+{{< /cards >}}
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Youtube Video Edition CLIs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
+### Next Steps
 
 #### Data Driven Videos with Streamlit
 
@@ -255,7 +274,7 @@ bash get-whishper.sh
 
 ### Whisper
 
-{{< details title="Whisper - Speech recognition system developed by OpenAI 📌" closed="true" >}}
+{{< details title="Whisper - Speech recognition OpenAI powered | Script with Docker 📌" closed="true" >}}
 
 
 * <https://github.com/sindresorhus/awesome-whisper> : Awesome list for Whisper — an open-source AI-powered speech recognition system developed by OpenAI
@@ -294,7 +313,6 @@ pip install -U openai-whisper
 sudo apt update && sudo apt install ffmpeg
 ```
 
-
 Using Whisper:
 
 ```sh
@@ -307,13 +325,13 @@ whisper audio.flac audio.mp3 audio.wav --model medium #--model large
 
 **bigwav**
 
-https://github.com/ggerganov/whisper.cpp/discussions/604
+* https://github.com/ggerganov/whisper.cpp/discussions/604
 
 {{< /details >}}
 
 
 
-{{< details title="Meeper is your secretary for any in-browser conference.📌" closed="true" >}}
+{{< details title="Meeper is your secretary for any in-browser conference 📌" closed="true" >}}
 
 * https://chromewebstore.google.com/detail/meeper-transcribe-summari/pollmehpbdljnolojdajljeoejeglcfi
 * https://github.com/serg-plusplus/meeper
@@ -360,8 +378,6 @@ wget https://github.com/Cuperino/QPrompt-Teleprompter/releases/download/v1.1.6/q
 chmod +x qprompt-v1.1.6-51788eb-linux-gcc-x86_64.AppImage
 ./qprompt-v1.1.6-51788eb-linux-gcc-x86_64.AppImage
 ```
-
-
 
 ### Social Media Automation
 

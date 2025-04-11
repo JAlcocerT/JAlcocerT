@@ -213,9 +213,6 @@ https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/#enabling-o
 {{< /cards >}}
 
 
-
-
-
 ---
 
 ## FAQ

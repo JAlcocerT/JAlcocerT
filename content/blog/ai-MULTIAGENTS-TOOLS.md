@@ -324,7 +324,12 @@ You guessed it.
 
 * https://www.langchain.com/stateofaiagents
 
-You might know Langchain because of its useful **Chains**.
+You might know Langchain because of its useful **Chains** and its RAGs Features
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain" title="Explored LangChain with Data-Chat ↗" >}}
+{{< /cards >}}
 
 {{< callout type="info" >}}
 **LangChain as RAG** can [chat with CSV](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/)& [**DBs**](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/). Also [with PDFs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/)
