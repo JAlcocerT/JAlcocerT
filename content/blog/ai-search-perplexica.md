@@ -8,7 +8,6 @@ cover:
   caption: "Build a ChatGPT Clone with Streamlit." # display caption under cover
 tags: ["Docker","Gen-AI","Python","Dev","Self-Hosting"]
 description: 'perplexity ai free alternative'
-summary: '.'
 url: 'perplexica-docker'
 ---
 <!-- 

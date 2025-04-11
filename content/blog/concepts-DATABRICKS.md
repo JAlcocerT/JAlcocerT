@@ -68,6 +68,14 @@ cm_stats_renamed.filter(cm_stats_renamed.ModelName == "CH7465LG")\
 #.show(30, truncate=False)
 ```
 
+```py
+nr.filter(nr.locationId == "something")\
+.withColumn("year_month_day", date_format(nr["createdAt"], "yyyy-MM-dd"))\
+.groupBy("year_month_day")\
+    .agg(count("nodeId").alias("Node_Distctinct_Counts"))\
+.orderBy("Node_Distctinct_Counts", ascending=False)\
+.limit(30).toPandas().style.hide_index()
+```
 
 ```py
 from pyspark.sql import SparkSession

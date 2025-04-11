@@ -8,7 +8,14 @@ url: 'setup-bi-tools-docker'
 ---
 
 
-## Business Intelligence and IoT (BIA & IoT)
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/business-intelligence-data-analytics/" title="BIA 101 ↗ " >}}
+  {{< card link="https://youtube.com/@JAlcocerTech" title="My YT Tech Channel ↗" >}}
+{{< /cards >}}
+
+## Business Intelligence and IoT 
+
+(BIA & IoT)
 
 - [Superset](https://superset.apache.org/)
   - [Superset UI](https://apache-superset.github.io/superset-ui/?path=/story/legacy-chart-plugins-legacy-plugin-chart-map-box--basic)
@@ -266,7 +273,7 @@ Takeaways
 * https://github.com/elastic/kibana
 
 **Lucene Queries in Kibana & Grafana**
-- **KQL**: Kibana Query Language for data filtering.
+- **KQL**: Kibana Query Language for data filtering: https://www.elastic.co/guide/en/kibana/current/kuery-query.html
 - **Lucene Queries**: Used in Grafana for more complex data analysis and machine learning.
 
 | Feature     | KQL (Kibana) | DSL (Grafana)           |
@@ -279,7 +286,7 @@ Takeaways
 > KQL queries are ultimately translated into Elasticsearch Query DSL queries before being sent to Elasticsearch.
 
 
-DSL Sample:
+DSL Sample: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
 ```json
 {
@@ -301,7 +308,7 @@ viewerID : *  and site : "AD04" and (HttpPlayerPlaybackEndEvent_assetType : * or
 
 Lucene is the foundation, providing the core search capabilities.
 
-KQL is a user-friendly layer built on top of Elasticsearch, simplifying common searches.
+**KQL is a user-friendly layer** built on top of Elasticsearch, simplifying common searches.
 
 Elasticsearch DSL is the most powerful and flexible query language, allowing for complex and precise searches.
 

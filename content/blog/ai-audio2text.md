@@ -1,13 +1,22 @@
 ---
 title: "An overview of F/OSS Audio to Text Tools "
-date: 2025-12-06T23:20:21+01:00
+date: 2025-04-11T11:20:21+01:00
 draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"] 
-description: 'Audio 2 Text Open Source'
-url: 'audio-to-text-open-source'    
+description: 'Audio 2 Text Open Source and commercial S2T Tools'
+url: 'audio-to-text'    
 ---
 
-An overview to the existing open source alternatives for audio to text conversion
+An overview to the existing open source alternatives for audio to text conversion (also called Speech to Text).
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/local-ai-audio" title="Local AI Audio 101 ↗ " >}}
+{{< /cards >}}
+
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mezbaul-h/june,coqui-ai/TTS,mudler/LocalAI&,type=Date)](https://star-history.com/mezbaul-h/june&coqui-ai/TTS&mudler/LocalAI&Date)
 
 
 ## WrireOut AI
@@ -23,6 +32,15 @@ https://pypi.org/project/whisper/#history
 > Robust Speech Recognition via Large-Scale Weak Supervision
 
 * <https://www.reddit.com/r/Python/comments/xqlay2/speech_to_text_that_actually_works_my_first/>
+
+
+
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/" title="I used Whisper with my YT Workflow ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py" title="Sample Script OpenAI Whisper ↗" >}}
+{{< /cards >}}
 
 ## Whishper
 

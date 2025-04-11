@@ -135,7 +135,7 @@ ext install ms-vscode-remote.vscode-remote-extensionpack #do this one inside VSC
 #code --install-extension ms-vscode-remote.vscode-remote-extensionpack #or this one from the terminal
 ```
 
-Then, do CTRL SHIFT P and write: `connect to host`
+Then, do `CTRL SHIFT P` and write: `connect to host`
 
 ![alt text](/blog_img/dev/remote-dev.png)
 
@@ -192,6 +192,7 @@ ext install eamodio.gitlens
 
 #gemini assistant https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist
 
+#jupyter https://marketplace.visualstudio.com/items/?itemName=ms-toolsai.jupyter
 ```
 
 ---

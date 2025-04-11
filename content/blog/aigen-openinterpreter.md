@@ -11,7 +11,6 @@ cover:
    alt: "OpenInterpreter - Let LLMs control your PC." # alt text
    caption: "OpenInterpreter - Lets make Local LLMs to control our PC." # display caption
 description: 'A guide to use OpenInterpreter. Locally and with Free LLM Agents powered by Ollama.'
-summary: '.'    
 url: 'openinterpreter-ollama'
 ---
 

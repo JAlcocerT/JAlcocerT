@@ -1,6 +1,6 @@
 ---
 title: "Testing AI Scrapping projects: GPT-Crawler"
-date: 2025-12-31
+date: 2025-08-30
 draft: true
 tags: ["Dev","Python"]
 description: 'How to use . Compared with BS4, ...'
@@ -9,6 +9,23 @@ url: 'ai-projects-scrapping'
 
 {{< callout type="info" >}}
 https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
+{{< /callout >}}
+
+
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mezbaul-h/june,coqui-ai/TTS,mudler/LocalAI&,type=Date)](https://star-history.com/mezbaul-h/june&coqui-ai/TTS&mudler/LocalAI&Date)
+
+## RAG / Agentic Frameworks
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-multi-agents-frameworks/" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with " >}}
+{{< /cards >}}
+
+{{< callout type="info" >}}
+You can use [LangChain with Website as context](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/web).
 {{< /callout >}}
 
 ## GPT-CRAWLER

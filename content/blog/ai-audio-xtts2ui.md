@@ -1,24 +1,50 @@
 ---
-title: "Local Audio with AI"
+title: "Audio with AI. TTS and Voice Cloning"
 date: 2025-04-06T18:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
 #   alt: "SelfHosting xTTS2 with Docker." # alt text
 #   caption: "Succesfull installation of xTTS2 with Docker." # display caption
-description: 'Clone audio with xTTS2. Local TTS Tools.'
-url: local-ai-audio'
+description: 'Local TTS Tools with Coqui and LocalAI.Clone audio with xTTS2'
+url: local-ai-audio
 ---
 
 
-## Coqui TTS
+## TTS
+
+**Text to Speech** AI tools!
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mezbaul-h/june,coqui-ai/TTS,mudler/LocalAI&,type=Date)](https://star-history.com/mezbaul-h/june&coqui-ai/TTS&mudler/LocalAI&Date)
+
+### LocalAI TTS
+
+* https://github.com/mudler/LocalAI
+
+> MIT |  🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference 
+
+* https://localai.io/features/text-to-audio/
+
+
+{{< youtube "TbTqA09-cwQ" >}}
+
+
+### Coqui TTS
+
+* https://github.com/mezbaul-h/june
+
+>  Local voice chatbot for engaging conversations, powered by Ollama, Hugging Face Transformers, and Coqui TTS Toolkit 
+
 
 * https://github.com/coqui-ai/TTS
-
+  * https://huggingface.co/spaces/coqui/xtts
 
 > MPL |  🐸💬 - a deep learning toolkit for Text-to-Speech, battle-tested in research and production 
 
 Eager to spin a Coqui Text to speech local server?
+
+* https://localai.io/gallery.html
 
 
 ```sh
@@ -86,58 +112,35 @@ services:
 [That `server.py`](https://github.com/coqui-ai/TTS/blob/dev/TTS/server/server.py) is a Flask App btw :)
 {{< /callout >}}
 
-## Bark
+## More
+
+
+### RT Voice Cloning 
+
+<https://github.com/CorentinJ/Real-Time-Voice-Cloning>
+
+
+### BARK
 
 https://github.com/suno-ai/bark
 
-## More
 
+
+https://github.com/suno-ai/bark
 
 
 > Important https://pytorch.org/get-started/locally/
 
 
-## <https://github.com/CorentinJ/Real-Time-Voice-Cloning>
-
-
-## BARK
-
-https://github.com/suno-ai/bark
-
-## TTS
-
-**Text to Speech**
-
-### LocalAI TTS
-
-* https://localai.io/gallery.html
-
-https://localai.io/features/text-to-audio/
-
-## Coqui TTS
-
-<https://github.com/coqui-ai/TTS>
-https://github.com/coqui-ai/TTS?tab=MPL-2.0-1-ov-file#readme
-https://huggingface.co/spaces/coqui/xtts
-
-
-https://github.com/mezbaul-h/june
-
->  Local voice chatbot for engaging conversations, powered by Ollama, Hugging Face Transformers, and Coqui TTS Toolkit 
-
-
-## 
 
 https://www.youtube.com/watch?v=hrYhk9Khyho
 https://github.com/gitmylo/bark-voice-cloning-HuBERT-quantizer
 
-## Whishper
+### Whishper
 
 /selfhosting-whishper-with-docker/
 
----
-
-## OpenVoice
+### OpenVoice
 
 https://www.youtube.com/watch?v=1ec-jOlxt_E
 
@@ -153,12 +156,6 @@ https://pythonawesome.com/clone-a-voice-in-5-seconds-to-generate-arbitrary-speec
     * https://github.com/myshell-ai/OpenVoice
         * https://github.com/myshell-ai/OpenVoice?tab=MIT-1-ov-file#readme
         * https://huggingface.co/myshell-ai/OpenVoice
-
-
-## T2S - text to speech
-
-* elevenlabs - https://elevenlabs.io/pricing
-* https://azure.microsoft.com/en-us/products/ai-services/text-to-speech
 
 
 ### XTTS2 Local Voice Clonning
@@ -323,6 +320,8 @@ sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -
     * https://docs.anthropic.com/en/docs/about-claude/models
 * https://platform.openai.com/api-keys
 
+
+
 ### Clone Audio
 
 Taking some help from yt-dlp: https://github.com/yt-dlp/yt-dlp
@@ -339,7 +338,6 @@ Which I could not get working, nor: https://github.com/ytdl-org/youtube-dl
 ```sh
 sudo apt install youtube-dl
 youtube-dl -x --audio-format mp3 "https://www.youtube.com/watch?v=5Em5McC_ulc"
-
 ```
 
 ---
@@ -384,3 +382,8 @@ flatpak run net.mkiol.SpeechNote
 * Not F/OSS: 
   * https://www.gladia.io/pricing
   * https://bigwav.app/
+
+T2S/TTS - text to speech
+
+* elevenlabs - https://elevenlabs.io/pricing
+* https://azure.microsoft.com/en-us/products/ai-services/text-to-speech

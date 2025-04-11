@@ -1,28 +1,32 @@
 ---
 title: "How to create music with AI Tools"
-date: 2025-12-15T23:20:21+01:00
-draft: true
-# cover:
-#    image: "/img/GenAI/LLMs_Locally_LLamas.png" # image path/url 
-#    Width: 360
-#    Height: 200
-#    sizes: 360
-#    alt: "From Fiction to Function: A Hands-On Guide to Open Source LLM Models.." # alt text
-#    caption: "From Fiction to Function: A Hands-On Guide to Open Source LLM Models." # display caption
+date: 2025-11-10T23:20:21+01:00
+draft: false
 tags: ["Docker","Gen-AI"]
 description: ''
-summary: ''
 url: 'music-with-ai-tools'
 ---
 
+
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/local-ai-audio" title="Local AI Audio 101 ↗ " >}}
+{{< /cards >}}
 
 
 ## Open Source AI Tools for Music Creation
 
 
 
-This AI Makes you a PRO Singer ! 
+This AI Makes you a PRO Singer !
+
+<!--
 https://www.youtube.com/watch?v=Sj8hXeMcoUg
+-->
+
+{{< youtube "Sj8hXeMcoUg" >}}
+
 
 Takes a song, separates voice and beat, then inputs your voice to it (not foss)
 

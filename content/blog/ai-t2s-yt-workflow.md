@@ -21,12 +21,19 @@ With the [YT Groq Summarizer](https://jalcocert.github.io/JAlcocerT/summarize-yt
 
 ## My Initial Workflow
 
+It all started with...
+
 ### OBS + OpenAI [Whisper]
 
-1) OBS to record video. Then create audio with OpenAI API
-* API Required - https://platform.openai.com/api-keys
+1) OBS to record video. Then create audio with OpenAI API:
 
-{{< details title="OpenAI API Audio creation - Example 📌" closed="true" >}}
+* API Required from - https://platform.openai.com/api-keys
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py" title="Sample Script OpenAI Whisper ↗" >}}
+{{< /cards >}}
+
+{{< details title="OpenAI API Audio creation | Example 📌" closed="true" >}}
 
 ```py
 import openai

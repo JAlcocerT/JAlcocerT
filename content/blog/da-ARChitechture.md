@@ -1,6 +1,6 @@
 ---
 title: "Architecture D&A like a Pro"
-date: 2025-04-09T00:20:21+01:00
+date: 2025-04-13T00:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
@@ -74,7 +74,7 @@ It acts as a single source of truth for operational data, consolidating informat
 
 
 {{< callout type="warning" >}}
-Always make comprehensible **designs & docs** for all the parties involved in the project
+Always make comprehensible **Designs & Docs** for all the parties involved in the project
 {{< /callout >}}
 
 

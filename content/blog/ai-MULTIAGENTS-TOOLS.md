@@ -76,9 +76,7 @@ https://pypi.org/project/langchain-openai/
 {{< /details >}}
 
 
-https://github.com/whitew1994WW/LangGraphForBeginners
-
-https://marketplace.visualstudio.com/items/?itemName=ms-toolsai.jupyter
+* Thanks to the related repo - https://github.com/whitew1994WW/LangGraphForBeginners
 
 > I have replicated the code here for the REact example. But this fwk can do also reflection agent, router...
 
