@@ -299,18 +299,34 @@ https://docs.google.com/document/d/1SIfj7KK956zXQ3IPt9NHzFptPGcF0bVSc6AUZPIaoDA/
 
 This is kind of a **four in one project**:
 
-1. Responsive **Web** UI
+1. Responsive **Web** UI - Thanks to [Streamlit](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/)
 2. **Real Estate Calculator** to engage users and potential clients
-3. **Gen AI App** to provide recommendations based on the available houses
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
+  {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage" title="RE Streamlit App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the RE Calculator" >}}
+{{< /cards >}}
+
+3. **Gen AI App** to provide recommendations based on the available houses (which are related to the ones exposed on the site)
 4. **Scrapping Tool** to get Photos automatically
 
 > Combining these 2 we can ask questions about the property images to create an engaging SEO description, [see the AI Vision post](https://jalcocert.github.io/JAlcocerT/ai-vision-models/#conclusion)
+
+<!-- ![alt text](/blog_img/GenAI/image/openai-vision-realestate.png) -->
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Dream Calculator" image="/blog_img/biz/RE/properties-md.png" subtitle="Real Estate App with Streamlit | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-vision-models/" title="AI Vision Post" image="/blog_img/GenAI/image/openai-vision-realestate.png" subtitle="OpenAI Image2Text for Real Estate" >}}
+{{< /cards >}}
+
+
+
 5. **Social Link Website**: with LinkStack, *as seen [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)*
 
 
 {{< cards >}}
-  {{< card link="https://whois.jalcocertech.com/@me" title="LinkStack" image="/blog_img/web/web-linkstack.png" subtitle="Social Link Website" >}}
+  {{< card link="https://whois.jalcocertech.com/@me" title="LinkStack" image="/blog_img/web/web-linkstack.png" subtitle="My Social Link Website" >}}
 {{< /cards >}}
 
 6. **Bonus**: Newsletter (with mailerlite) + GDPR Compliant Web Analytics: [Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
@@ -348,7 +364,7 @@ And with an interesting tool to get the **photo properties adquisition automated
 
 ### Checks Ive Done
 
-{{< details title="Website Checks before delivery 📌" closed="true" >}}
+{{< details title="Website Checks before its delivery 📌" closed="true" >}}
 
 Once deployed:
 

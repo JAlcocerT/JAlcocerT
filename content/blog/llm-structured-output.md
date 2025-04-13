@@ -14,8 +14,6 @@ Lately, I heard about s**tructure outputs for LLMs**:
 And I could not just but to think on the possibilities for projects...
 
 
-
-
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/" title="Configuring CF WnP with Github and Astro ↗" >}}
 {{< /cards >}}
@@ -46,6 +44,15 @@ Therefore, while the underlying goal is the same (allowing the LLM to interact w
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multi-Chat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github where ive tested Structured Outputs" >}}
 {{< /cards >}}
 
+---
+
+## Conclusions
+
+This is a great feature that can be applied to project like:
+
+1. CV Generation as per a certain latex/opencv framework
+2. Generate `.md` posts with their proper headers for your SSG powered sites...
+3. aaaand more
 
 
 ---

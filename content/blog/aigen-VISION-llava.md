@@ -200,6 +200,8 @@ This can also be helpful for the real estate project, where you can ask context 
 python3 scraping-ask-v2.py > comments_property_alijares.mdx
 ```
 
+![alt text](/blog_img/GenAI/image/openai-vision-realestate.png)
+
 
 
 {{< cards cols="1" >}}

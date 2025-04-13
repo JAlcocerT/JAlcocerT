@@ -135,7 +135,7 @@ Whatever the industry you are working on, make sure to set and improve your [wor
 1. What's going on
 2. Meeting Scheduler Template
 3. RCA Template
-4. MTG Summary Template
+4. MTG Summary Template - What's your takeaway after the time investment?
 
 {{< callout type="info" >}}
 Understand *the one thing* the client value the most. [Pareto](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)?
