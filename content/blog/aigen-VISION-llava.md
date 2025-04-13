@@ -1,9 +1,9 @@
 ---
-title: "AI with Vision"
+title: "AI with Vision - Image2Text"
 date: 2025-04-09T00:20:21+01:00
 draft: false
 #tags: ["Gen-AI","Self-Hosting","Docker"]
-description: 'LLaVa, OpenAI'
+description: 'LLaVa, OpenAI Vision Models. Ask questions about images.'
 url: 'ai-vision-models'
 ---
 
@@ -15,6 +15,11 @@ url: 'ai-vision-models'
 
 
 ## Vision with AI
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Image" title="OpenAI Vision Script ↗ " >}}
+  {{< card link="" title="DataBricks 101 ↗" >}}
+{{< /cards >}}
 
 ### OpenAI
 
@@ -162,7 +167,8 @@ https://www.youtube.com/watch?v=ZjkS11DSeEk
 ### LLaVa
 
 
-https://github.com/haotian-liu/LLaVA
+* https://github.com/haotian-liu/LLaVA
+
 https://github.com/haotian-liu/LLaVA?tab=Apache-2.0-1-ov-file#readme ✅
 https://huggingface.co/liuhaotian/llava-v1.5-7b
 https://llava-vl.github.io/
@@ -175,6 +181,31 @@ https://www.youtube.com/watch?v=4Jpltb9crPM
 
 > Image Recognition with LLaVa in Python
 
+
+---
+
+
+## Conclusion
+
+Now we have 2 ways (local and API based) to get to know context about images!
+
+* https://platform.openai.com/docs/guides/images?api-mode=responses
+* https://ollama.com/search?c=vision
+
+
+This can also be helpful for the real estate project, where you can ask context about particular property scrapped images:
+
+
+```py
+python3 scraping-ask-v2.py > comments_property_alijares.mdx
+```
+
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Image" title="OpenAI Vision Script ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Image/scraping-ask-v2.py" title="real Estate Scrap + ScriptVision ↗" >}}
+{{< /cards >}}
 
 ---
 

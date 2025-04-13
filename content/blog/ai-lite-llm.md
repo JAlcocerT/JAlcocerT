@@ -19,8 +19,6 @@ Its time to discover **LiteLLM**
 [![Star History Chart](https://api.star-history.com/svg?repos=BerriAI/litellm,type=Date)](https://star-history.com/BerriAI/litellm&Date)
 
 
-
-
 {{< callout type="info" >}}
 Been testing LiteLLM at [AIssistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Tests), with this [script](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_Tests/LiteLLM/litellm_sample.py)
 {{< /callout >}}
@@ -35,10 +33,18 @@ All the learnings are collected:
 
 
 
+{{< callout type="info" >}}
+See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit-MultiChat) 💻, where all the AI API tinkering started 
+{{< /callout >}}
+
+
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/" title="AIssistant" image="/blog_img/GenAI/AIssistant.png" subtitle="AI all in one assistant" >}}
 {{< /cards >}}
+
+
 
 
 ### LiteLLM Setup
@@ -310,8 +316,15 @@ https://docs.litellm.ai/docs/providers/openrouter
 
 This very cool library can simplify AI Apps like the multichat I built.
 
-As it can unify the API calls across different providers
+As it can unify the API calls across different providers!
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/" title="Tinkering with structured outputs | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/" title="Tinkering with function calling | Post ↗" >}}
+{{< /cards >}}
+
+
+This also resonates with Tools like
 ---
 
 ## FAQ

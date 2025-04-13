@@ -302,7 +302,10 @@ This is kind of a **four in one project**:
 1. Responsive **Web** UI
 2. **Real Estate Calculator** to engage users and potential clients
 3. **Gen AI App** to provide recommendations based on the available houses
+
 4. **Scrapping Tool** to get Photos automatically
+
+> Combining these 2 we can ask questions about the property images to create an engaging SEO description, [see the AI Vision post](https://jalcocert.github.io/JAlcocerT/ai-vision-models/#conclusion)
 5. **Social Link Website**: with LinkStack, *as seen [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)*
 
 

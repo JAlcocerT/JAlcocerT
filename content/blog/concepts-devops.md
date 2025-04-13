@@ -154,6 +154,8 @@ You can try with Beszel
 
 GrafanaPrometheusNodeExp.JPG
 
+https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana
+
 ### NetData
 
 [SelfHost NetData with Docker](https://fossengineer.com/selfhosting-server-monitoring-with-netdata-and-docker/)
@@ -180,10 +182,7 @@ Observability Platform for LLMs
   Or with LangSmith
 Also DataDog - https://docs.datadoghq.com/llm_observability/ -->
 
-<!-- 
-Observability Platform for LLMs
-    https://github.com/traceloop/openllmetry
-    https://github.com/langfuse/langfuse -->
+
 
 <!-- Goals:
   • AI Gen

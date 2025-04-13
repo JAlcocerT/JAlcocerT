@@ -10,7 +10,7 @@ url: 'ai-multi-agents-frameworks'
 
 
 {{< cards >}}
-  {{< card link="" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
   {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with " >}}
 {{< /cards >}}
 
@@ -21,16 +21,19 @@ Recently I was having a [conversation about whats trendy in the Dsc/AI space](ht
 1. [RAGs](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/)
 2. [Function calling](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/)
 3. [Structured OutputS](https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/),...
-4. Langfuse and MLFlow...
+4. [Langfuse](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects) and [MLFlow](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#mlflow)...
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/" title="LangFuse & MLFlow Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 
 They are all great. **And a must KNOW.**
 
 
-{{< cards cols="1" >}}
+{{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/" title="Tinkering with structured outputs | Post ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/" title="Tinkering with function calling | Post ↗" >}}
-
 {{< /cards >}}
 
 But can we just have LLMs working together? 

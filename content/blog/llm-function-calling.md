@@ -273,6 +273,8 @@ https://ollama.com/library/llama3.2
 ollama run llama3.2
 ```
 
+> See a sample here: https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OllamaAPI
+
 ---
 
 ## Conclusions
