@@ -51,9 +51,14 @@ Therefore, while the underlying goal is the same (allowing the LLM to interact w
 This is a great feature that can be applied to project like:
 
 1. CV Generation as per a certain latex/opencv framework
-2. Generate `.md` posts with their proper headers for your SSG powered sites...
+2. Generate `.md` posts with their proper headers for your SSG powered sites...As we can have proper **front matter**
 3. aaaand more
 
+{{< cards >}}
+  {{< card link="" title="CV as a Code" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/StructureOutput_1" title="Structured outputs script to create md post and related image ↗" icon="book-open" >}}
+  
+{{< /cards >}}
 
 ---
 

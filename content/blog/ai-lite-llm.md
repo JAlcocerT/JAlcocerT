@@ -1,6 +1,6 @@
 ---
 title: "[AI] Using LiteLLM to unify LLMs calls. Applied to AIssistant."
-date: 2025-04-12
+date: 2025-04-17
 draft: false
 tags: ["Gen-AI","Python"]
 description: 'How to use LiteLLM with different APIs - From OpenAI to Mistral APIs'
@@ -314,7 +314,7 @@ https://docs.litellm.ai/docs/providers/openrouter
 
 ## Conclusions
 
-This very cool library can simplify AI Apps like the multichat I built.
+This very cool library can **simplify AI Apps** like the [multichat](github.com/JAlcocerT/Streamlit-MultiChat) I built.
 
 As it can unify the API calls across different providers!
 
@@ -325,6 +325,7 @@ As it can unify the API calls across different providers!
 
 
 This also resonates with Tools like
+
 ---
 
 ## FAQ

@@ -235,6 +235,8 @@ As this agency is having collaborations with couple of well known agents in the 
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="See the post about the first iteration of the tool" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_AIgents/WebMigrAItion" title="Sample Photo adquisition Script ↗" icon="book-open" >}}
+  
 {{< /cards >}}
 
 The client is responsible to ask for permissions first to his collaborators before using it, as it involves using **BS4 for scrapping**.
@@ -409,7 +411,17 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 ### Audio with AI
 
+Audio from text can be generated from the OpenAI API itself.
+
+But there are few tools around that will give me a more *human touch*.
+
 ![alt text](/blog_img/biz/RE/re-coquitts.png)
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/TTS_Coqui/" title="Coqui TTS Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 
 ### Pricing Strategy
