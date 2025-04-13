@@ -16,6 +16,15 @@ url: 'learning-new-tools-oct-2024'
 
 
 
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/" title="Configuring CF WnP with Github and Astro ↗" >}}
+{{< /cards >}}
+
+https://jalcocert.github.io/JAlcocerT/understanding-openl-tablets/
+
+
+
 ## Link Shorteners / QR Gen
 
 * https://www.qrcode-monkey.com/

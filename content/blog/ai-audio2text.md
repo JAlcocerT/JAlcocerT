@@ -1,6 +1,6 @@
 ---
 title: "An overview of F/OSS Audio to Text Tools"
-date: 2025-04-11T11:20:21+01:00
+date: 2025-05-11T11:20:21+01:00
 draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"] 
 description: 'Audio 2 Text Open Source and commercial transcription (S2T) Tools. ST Audio input.'

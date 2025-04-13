@@ -1,6 +1,6 @@
 ---
 title: "Audio with AI. TTS and Voice Cloning"
-date: 2025-04-06T18:20:21+01:00
+date: 2025-05-06T18:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
@@ -36,6 +36,12 @@ https://www.youtube.com/watch?v=G7aXgKlhbGk
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LocalAI" title="LocalAI Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+The UI will be at: http://192.168.0.12:8081/
+
+And it has a swagger API: http://192.168.0.12:8081/swagger/
+
+![alt text](/blog_img/GenAI/audio/localai.png)
 
 ### Coqui TTS
 
@@ -130,19 +136,21 @@ services:
 
 ### BARK
 
-https://github.com/suno-ai/bark
+* https://github.com/suno-ai/bark
 
 
-> Important https://pytorch.org/get-started/locally/
+> Important https://pytorch.org/get-started/locally/ get the right PyTorch version!
 
 {{< youtube "hrYhk9Khyho" >}}
 
 
-https://www.youtube.com/watch?v=hrYhk9Khyho
+<!-- https://www.youtube.com/watch?v=hrYhk9Khyho -->
+
+<!-- {{< youtube "hrYhk9Khyho" >}} -->
 
 
 
-https://github.com/gitmylo/bark-voice-cloning-HuBERT-quantizer
+* https://github.com/gitmylo/bark-voice-cloning-HuBERT-quantizer
 
 > MIT |  The code for the bark-voicecloning model. Training and inference. 
 
@@ -150,9 +158,13 @@ https://github.com/gitmylo/bark-voice-cloning-HuBERT-quantizer
 
 ### OpenVoice
 
-https://www.youtube.com/watch?v=1ec-jOlxt_E
-
 * https://github.com/camenduru/OpenVoice-colab
+
+<!-- 
+https://www.youtube.com/watch?v=1ec-jOlxt_E 
+-->
+
+{{< youtube "1ec-jOlxt_E" >}}
 
 F/OSS Voice Clone
 
@@ -201,9 +213,14 @@ https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/
 
 https://www.youtube.com/watch?v=hKrl5Gr7hM0
 
+{{< youtube "hKrl5Gr7hM0" >}}
+
+
 ---
 
-## FAQ
+## Conclusions
+
+### FAQ
 
 * https://github.com/snakers4/silero-models
 

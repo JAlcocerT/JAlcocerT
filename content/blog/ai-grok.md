@@ -1,11 +1,16 @@
 ---
 title: "How to use Grok (X) API"
-date: 2025-05-10
+date: 2025-04-11
 draft: false
 tags: ["AI"]
 description: 'A Recap on AI APIs calls and learning how to use Grok API'
 url: 'how-to-use-grok-api'
 ---
+
+{{< cards >}}
+  {{< card link="" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with " >}}
+{{< /cards >}}
 
 ## About Grok
 
@@ -142,3 +147,13 @@ message = client.messages.create(
 #### Grok via LiteLLM
 
 * https://jalcocert.github.io/JAlcocerT/how-to-use-lite-llm/
+
+
+---
+
+## Conclusions
+
+
+{{< callout type="info" >}}
+See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit-MultiChat) 💻
+{{< /callout >}}

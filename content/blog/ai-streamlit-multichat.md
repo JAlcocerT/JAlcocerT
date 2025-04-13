@@ -72,6 +72,9 @@ for model in models:
 
 ## DeepSeek via Ollama
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api" title="Grok API Blog Post" >}}
+{{< /cards >}}
 
 ## Conclusions
 

@@ -534,6 +534,17 @@ jobs:
 ```
 
 
+### Workers and Pages
+
+If you have used Cloudflare WnP, you have implicitely used CI/CD already:
+
+![alt text](/blog_img/web/Cloudflare/ci-cd-github-wnp.png)
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/" title="Configuring CF WnP with Github and Astro ↗" >}}
+{{< /cards >}}
+
 ---
 
 ## GHA for R Projects

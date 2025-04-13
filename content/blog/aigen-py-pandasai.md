@@ -219,7 +219,7 @@ https://www.youtube.com/watch?v=mcZKQe2pUA0 -->
 
 * https://github.com/BerriAI/litellm
 
-> Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs)
+> **Call all LLM APIs using the OpenAI format**. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (**100+ LLMs**)
 
 If you would like to have a look to a project that implements RAG with UI:
 

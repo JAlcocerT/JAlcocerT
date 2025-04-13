@@ -6,6 +6,11 @@ description: 'Two buzz words in one. Understand crypto once and for all. This ti
 url: 'understading-crypto-with-ai'
 ---
 
+* https://chainlist.org/
+
+> ChainList is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.
+
+
 Here we go again...
 
 I was testing [Astro Bento Portfolio + Github Pages + Github CI/CD](https://github.com/JAlcocerT/web3) with the resulting Web3/Crypto related microblog [here](https://jalcocert.github.io/web3/).

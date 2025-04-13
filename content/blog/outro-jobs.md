@@ -9,9 +9,14 @@ url: 'when-to-apply-for-a-job'
 
 New year, new **opportunities**.
 
-> Or so some say.
+> Or so some say...
+
+
+* https://www.trueup.io/layoffs
+* https://roadmap.sh/
 
 ## Data for Job Market
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scrapping the Web" image="/videos/job_offers.png" subtitle="Post where I tinkered with scrapping tools." >}}
@@ -281,6 +286,13 @@ For more ideas, check also:
 * https://github.com/dgtlmoon/changedetection.io
 
 > Apache v2 | The best and simplest free open source web page change detection, website watcher, restock monitor and notification service. Restock Monitor, change detection. Designed for simplicity - Simply monitor which websites had a text change for free. Free Open source web page change detection, Website defacement monitoring, Price change notification
+
+* https://github.com/feder-cr/Auto_Jobs_Applier_AIHawk
+
+
+> AIHawk aims to easy job hunt process by automating the job application process. Utilizing artificial intelligence, it enables users to apply for multiple jobs in a tailored way.
+
+
 
 
 

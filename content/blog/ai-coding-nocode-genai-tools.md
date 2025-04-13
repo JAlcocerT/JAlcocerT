@@ -1,6 +1,6 @@
 ---
 title: "No Code Tools to use Gen AI"
-date: 2025-06-01T23:20:21+01:00
+date: 2025-12-01T23:20:21+01:00
 draft: true
 # cover:
 #     image: "https://socialify.git.ci/jw782cn/Claude-Streamlit/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"

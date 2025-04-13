@@ -138,7 +138,7 @@ Let's clarify how client/server architecture and three-tier architecture relate 
 
 ### JamStack
 
-It's important to understand the core principles of Jamstack:
+It's important to understand the core principles of Jamstack: https://jamstack.org/
 
 **Jamstack Fundamentals:**
 

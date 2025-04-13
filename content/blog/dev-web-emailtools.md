@@ -60,3 +60,9 @@ Similar projects include Hunter.io and NeverBounce, which offer email validation
 ## MailTrap
 
 * https://mailtrap.io/signin
+
+
+---
+
+
+## Conclusions

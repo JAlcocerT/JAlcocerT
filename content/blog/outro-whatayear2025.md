@@ -24,7 +24,26 @@ Check how, *if you are passionate about Photography*
 
 ## Processes
 
-### To create Tech Videos
+From Last year...
+
+https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/#next-year
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="DataBricks 101 ↗" >}}
+{{< /cards >}}
+
+- [ ] Better Webs
+- [x] Better AI APIs Usage
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
+{{< /cards >}}
+
+- [ ] [Tech Videos](#creating-tech-videos)
+
+
+### Creating Tech Videos
 
 Creating 24 tech videos to make AI, D&A more accesible: [x]
 
