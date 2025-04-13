@@ -1,5 +1,5 @@
 ---
-title: "About Jobs. And LLM Engineers."
+title: "About Jobs. HR Prep and LLM Engineers."
 date: 2025-02-10
 draft: false
 tags: ["Dev"]
@@ -293,7 +293,9 @@ For more ideas, check also:
 > AIHawk aims to easy job hunt process by automating the job application process. Utilizing artificial intelligence, it enables users to apply for multiple jobs in a tailored way.
 
 
+* https://github.com/thiago4int/resume-ai
 
+> MIT | Resume AI with Ollama
 
 
 ---
@@ -304,7 +306,9 @@ For more ideas, check also:
     * https://prompty.ai/
     * https://github.com/microsoft/prompty?tab=MIT-1-ov-file#readme
 
-> Prompty makes it easy to create, manage, debug, and **evaluate LLM prompts** for your AI applications. Prompty is an asset class and format for LLM prompts designed to enhance observability, understandability, and portability for developers.
+> Prompty makes it easy to create, manage, debug, and **evaluate LLM prompts** for your AI applications.
+
+Prompty is an asset class and format for LLM prompts designed to enhance observability, understandability, and portability for developers.
 
 
 <!-- 
@@ -499,3 +503,197 @@ In essence, if you need to create a highly formatted document with complex mathe
 
 
 2. I was also exploring how to create a [CV with AI](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#cv-with-ai), based on [**open source CV as a Code**](https://fossengineer.com/open-source-curriculum)
+
+
+### Historieta
+
+HR might as you with these, so be prepared:
+
+1. A situation where you lead digital transformation and modified/shaped a product
+2. What are you looking for in your career?
+
+> I am seeking a role that blends technology, data, and business acumen, allowing me to orchestrate data-driven solutions that resonate with client’s need at the highest professional level.
+
+
+
+
+**Questions to HR:**
+
+1. How does the on boarding looks like - To company and project?
+2. Are there any colleagues already on boarded? in which roles?
+3. How does the tech interview looks like?
+
+How do you define success in the team?
+
+what does it mean success in this position? how do you measure it?
+what do u like the most working for this company?
+what key features a person need to be a good cultural fit for the company?
+what are the current company goals and how this team/role is supporting them? 
+
+
+Regarding priority management What is the work methodology that is implemented in the team? Kanban? Scrum?
+
+What are other departments that we collaborate with? How does the marketing team work with other teams in the company.
+
+What is the business domain of the customers that we are expected to work for?
+
+What opportunities for professional development and learning are available?
+
+
+In addition to my professional experience, I actively maintain a tech blog where I share insights, methodologies, and best practices in analytics.
+
+This platform not only demonstrates my deep commitment to the field but also shows my enthusiasm for collaborating and sharing knowledge with the broader community.
+
+**QQs to managers**
+
+What kinds of data will I have access to?
+What tools and technologies does the team currently use for data science work?
+What is the biggest challenge your team is currently facing in making the most out of your data?
+
+Can you describe the company's vision for the future of data analytics and how this role fits into that vision?
+
+What is the team's approach to handling unexpected challenges or roadblocks in data analytics projects? 
+
+trusted advisor of products - 1 person dedicated to 1 squad
+
+Can you describe any ongoing or upcoming business development projects that involve data analytics, and how this role would be involved?
+
+How does the company foster collaboration between the data analytics and business development teams to ensure data-driven strategies are effectively implemented?
+
+How do you promote knowledge sharing and collaboration among team members to ensure continuous improvement in data practices?
+
+
+
+<!-- 
+
+partially BA - domain and project is known in advance healthcare company - 
+
+Information to insight
+Stakeholder management
+Managing expectations
+Estimating tasks
+How to sell ideas
+What we are missing (fomo, loss>>>gain)
+
+
+
+
+
+### 🔍 **Interview Summary – Data/Analytics/Product Role**
+
+#### 🧑‍🤝‍🧑 **Stakeholders**
+- Key stakeholders: Finance, Software Engineering, UK team
+- Strong collaboration with Product Owners, especially Ekaterina (Platform Lead)
+
+#### 🚀 **Onboarding Process**
+- 2-week onboarding includes:
+  - Research
+  - Estimations
+  - Reviewing product documentation
+  - Identifying/flagging conflicts
+- RACI model might be applied (unclear how currently)
+
+#### ⏱️ **Work Environment & Context**
+- High time pressure due to organizational and cultural changes
+- 5 of 7 EU companies acquired over 5 years (e.g. Alteryx; legacy systems like Pentaho)
+- Data Analyst/Product Analyst (Maria) with a statistics background has been with them for 1 year
+
+#### 💻 **Architecture & Tools**
+- Big Data platform (used in healthcare analytics)
+- Components:  
+  - Data Lakehouse with Spark, Hive, Trino, Iceberg, Nessie
+  - Data Quality Engine (380 rules processed in 5 min)
+  - Data Viewer
+- Experimental/prototyping approach supported (e.g. anomaly detection, profiling, test data dashboards)
+- Great Expectations framework in use
+
+#### 🏥 **Use Case & Scale**
+- Platform supports hospitals and pharma companies across Europe
+- ~40-50 concurrent data jobs — high throughput
+- Populate infra with data; not just infra building
+
+#### 🔁 **Processes & Team Structure**
+- Scrum-like, but customized:
+  - Product backlog + team backlog
+  - Phase-out & Program Increment (PI) planning
+- Team roles:
+  - Python engineers
+  - Frontend & backend developers
+  - PySpark engineers
+  - System analysts
+  - Scrum master
+  - UX/UI designers
+  - 2–3 Product Owners
+  - E. defines priorities
+
+#### 📈 **Your Potential Contributions**
+- Support E. and Product Owners (especially with the Data Quality Engine)
+- Work may span multiple teams
+- Collaborate closely with developers and analysts
+- Help bridge communication between stakeholders and devs (e.g. with RCA and bug triaging)
+
+#### 🏆 **Goals & Success Criteria**
+1. **Readiness:** Team consistently ready for sprints every 2 weeks
+2. **Education:** Increase stakeholder understanding of:
+   - Data quality rules
+   - Broader data culture
+3. MVP targeted for March Y24
+
+#### 📚 **Other Observations**
+- Migration project — some stakeholders are SQL-savvy, others less so
+- Strong focus on aligning devs on *what* to build and *why* (prototyping, edge cases)
+- Anomaly detection experience stood out to the team
+
+
+ -->
+
+
+<!--
+50/50 tech/business customer journey and so on
+maximize efficiency of taxi locations 7-3 UAT
+
+
+moving from rule base to ML based decisions systems
+
+Continuously develop and learn new skills independently, staying up to date with the latest marketing science and analytics techniques.
+
+Contribute to the development of innovative approaches in marketing science, exploring new areas for growth and improvement.
+
+
+
+H. - hiring manager
+saudi arabia - manager data analytics
+
+it will be
+
+comm skills - get to the point + add info
+product knowledge
+how to fit in the team
+present to: work autonomously + lead others 
+-->
+
+
+
+<!-- 
+================
+Hello XYZ,
+ Thank you for reaching out and considering me for the position. 
+Before moving forward, I'd like to get a better understanding of the role and its alignment with my career goals. 
+
+If you could provide answers to the following questions, it would help me in evaluating the opportunity further:
+
+Can you share more details about the main responsibilities of the role, and how it fits within the larger organizational structure?
+What are the key performance indicators (KPIs) for this role, and how is success measured? 
+What kind of projects and challenges would I be working on, and what is the typical project duration?
+ How is the professional growth and development of the employees supported?
+Can you provide some insights about work culture, values, and long-term vision? 
+
+Please, consider that I am interested in B2B + Remote roles only.
+
+Could you also provide details on the contract duration and renewal process?
+ Additionally, I would like to mention that due to my wide range of skills, including not only technical expertise but also strong interpersonal and project management, my salary expectations for this role are between 123k and 567k.
+
+Leveraging upon my T-shaped skills that i like to share with others (you can see my blog), I  understand the distinct dynamics of various fields, and therefore can facilitate collaboration across teams. I believe this adds extra value to my overall technical skill set.
+
+Thank you in advance for providing more information about this opportunity. This will help me assess if the role aligns with my career goals and interests. 
+Best regards, -->

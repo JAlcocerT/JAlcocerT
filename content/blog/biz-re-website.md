@@ -407,6 +407,13 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 4. **DNS Config**: The site is accesible from the base domain name as well as the `www.` subdomain
 
+
+5. Responsiveness and ping
+
+* Uptime Kuma
+* https://github.com/KSJaay/Lunalytics?ref=selfh.st
+
+
 {{< /details >}}
 
 ### Audio with AI
@@ -499,11 +506,18 @@ Given the nature of a real estate recommendation system, a **tiered subscription
 
 You could also consider a **freemium model** to attract a broad user base, with premium tiers unlocking the full power of the AI for serious buyers, renters, or real estate professionals.
 
-**It's crucial to continuously monitor user feedback, track usage patterns, and iterate on your pricing strategy as your AI application evolves and you gain a better understanding of your market.** You may even consider A/B testing different pricing models or tiers to optimize for revenue and user adoption.
+**It's crucial to continuously monitor user feedback, track usage patterns, and iterate on your pricing strategy as your AI application evolves and you gain a better understanding of your market.**
+
+You may even consider A/B testing different pricing models or tiers to optimize for revenue and user adoption.
 
 
+### Business Cards
 
-### Other Sites ive worked on
+* https://github.com/kyaustad/cardyo?ref=selfh.st
+
+>  A simple URL based digital business card creation and sharing system 
+
+### Other Sites Ive worked on
 
 I like static sites to leverage [free static hosting services](https://jalcocert.github.io/JAlcocerT/create-your-website/#deployments).
 

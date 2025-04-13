@@ -93,6 +93,8 @@ https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#others
   {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="Data Modelling 101 ↗" >}}
 {{< /cards >}}
 
+#### The Data LifeCycle
+
 ### Tech
 
 {{< cards cols="1" >}}
@@ -124,9 +126,41 @@ Test_DF.printSchema()
 Test_DF.show(truncate=False)
 ```
 
+
+1. **Diagrams**: Tools like Mermaid and Excalidraw for visualizing workflows and processes.
+2. **Apache NiFi**: Automates and manages data flows between systems, supporting scalable data routing and transformation.
+3. **Apache Iceberg**: A table format for large analytic datasets, improving performance and schema handling in big data ecosystems.
+4. **MinIO**: Distributed, high-performance object storage, compatible with Amazon S3, commonly used for cloud-based and private storage solutions.
+5. **Boto3**: AWS SDK for Python, used for managing AWS services like S3.
+6. **Great Expectations**: A Python library for defining data quality checks and validating data integrity.
+7. **Project Nessie**: Version control for data lakes, enabling Git-like data management and collaboration.
+8. **Hue**: An open-source web interface for interacting with big data systems like Hadoop, simplifying SQL querying and data browsing.
+9. **Argo Workflows**: Kubernetes-native workflow engine for orchestrating complex jobs and data pipelines.
+10. **Kubernetes, Helm, HULL**: Kubernetes for container orchestration, Helm for packaging applications, and HULL for Helm chart linting.
+11. **Rancher**: A platform that simplifies Kubernetes cluster management.
+12. **RabbitMQ**: A message broker that enables distributed communication between applications.
+13. **Parquet**: Columnar storage format optimized for querying large datasets.
+14. **Avro**: A data serialization system with schema evolution capabilities.
+15. **Apache Livy**: REST service for remote Spark job execution.
+16. **Pydantic**: Data validation and settings management via Python type annotations.
+17. **Celery**: Distributed task queue system for managing background processes.
+18. **TRINO**: Distributed SQL query engine for large-scale data analysis.
+19. **Open Data Hub**: Metadata platform for data management and integration.
+20. **CleverCSV**: Python tool for working with messy CSV files.
+21. **StringZilla**: Library for high-performance string operations across multiple languages.
+
+These tools span across data flow automation, big data management, Kubernetes workflows, data validation, and distributed computing.
+
+
 ---
 
 
+Information to insight
+Stakeholder management
+Managing expectations
+Estimating tasks
+How to sell ideas
+What we are missing in the product (fomo, loss>>>gain) ?
 
 ## From the Experience
 
@@ -140,6 +174,8 @@ Whatever the industry you are working on, make sure to set and improve your [wor
 {{< callout type="info" >}}
 Understand *the one thing* the client value the most. [Pareto](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)?
 {{< /callout >}}
+
+> Knowing the customer journey or the *what this product feels like*, always helps! The less friction, the more beautiful funnel you get
 
 ### PM Skills
 
@@ -157,6 +193,34 @@ Get ready to organize effective meetings:
 
 
 https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-mockups-and-wireframes
+
+#### Decision Making
+
+These are indeed fundamental and widely used simple frameworks for decision-making. They each offer a distinct approach and are valuable tools in various contexts. Here's a breakdown of my thoughts on each:
+
+**SWOT Analysis:**
+
+* **Strengths:** Its simplicity and broad applicability are major strengths. It provides a structured way to think about both internal capabilities and external factors. It's a great starting point for strategic planning and can be used for individual decisions as well as organizational ones. The visual representation (often a 2x2 matrix) makes it easy to understand and communicate.
+* **Weaknesses:** SWOT analysis can be subjective and doesn't inherently provide a way to weigh the different factors. It can also be static, offering a snapshot in time rather than a dynamic view. Without further analysis or prioritization, it might not lead to clear action steps.
+* **Overall:** A valuable initial assessment tool. It helps frame the decision and identify key considerations. However, it often needs to be followed up with more detailed analysis and prioritization techniques.
+
+**Satisficing Model:**
+
+* **Strengths:** This model acknowledges the reality of bounded rationality – that decision-makers have limited time, information, and cognitive resources. It's a practical approach when speed and efficiency are crucial, or when the cost of finding the absolute best solution outweighs the potential benefits. It can prevent "analysis paralysis."
+* **Weaknesses:** Satisficing might lead to suboptimal outcomes if the minimum criteria are set too low or if potentially much better options are overlooked. It relies heavily on the decision-maker's judgment in defining "satisfactory." In complex or high-stakes decisions, settling for the first acceptable option could have significant negative consequences.
+* **Overall:** A realistic and often necessary approach in many situations. However, it's important to be mindful of the potential trade-offs and to ensure that the "minimum criteria" are thoughtfully considered, especially for important decisions.
+
+**Cost-Benefit Analysis (CBA):**
+
+* **Strengths:** CBA provides a quantitative and systematic way to evaluate options based on their economic impact. It helps to make decisions more objective and transparent. By assigning monetary values to both costs and benefits, it allows for a direct comparison of different alternatives. It's particularly useful for evaluating investments, projects, and policy decisions.
+* **Weaknesses:** Assigning accurate monetary values to all costs and benefits, especially intangible ones (like environmental impact or social well-being), can be challenging and subjective. The results of a CBA are highly dependent on the assumptions made and the discount rate used. It might also oversimplify complex issues by focusing solely on economic factors.
+* **Overall:** A powerful tool for evaluating the economic implications of decisions. However, it's crucial to acknowledge its limitations and to consider non-economic factors alongside the quantitative results. Transparency in the assumptions and calculations is essential for its credibility.
+
+**In Conclusion:**
+
+These three frameworks offer different lenses through which to approach decision-making. They are not mutually exclusive and can even be used in conjunction. For instance, a SWOT analysis might help identify potential areas for a cost-benefit analysis, or the concept of satisficing might be applied when considering various options identified through a SWOT.
+
+The "best" framework depends heavily on the specific context of the decision, including the complexity, urgency, available resources, and the goals of the decision-maker. Understanding the strengths and weaknesses of each framework allows for a more informed and effective approach to making choices.
 
 ### BA & Elicitation Skills
 
@@ -181,10 +245,15 @@ For more questions, you can switch on your **[product](https://jalcocert.github.
 
 {{< details title="My Favourite Questions for Requirement Gathering 📌" closed="true" >}}
 
-
+1. What are the key objectives (OKR) and goals of this data product or project?
+2. Who are the primary end-users or target audience for this data product?
+3. What are the most important KPIs or metrics that the data product should track and display?
+4. What level of interactivity and customization is expected in the data product (e.g., dashboards, reports)?
+5. How will the data product’s model performance be evaluated and validated?
 
 {{< /details >}}
 
+> See more questions [here](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#conclusions)
 
 <!-- 
 referencia a persuasion escrito en jan 2022

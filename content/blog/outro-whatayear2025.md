@@ -79,9 +79,17 @@ Creating 24 tech videos to make AI, D&A more accesible: [x]
 2. Real Estate RAG
 
 
+### Travel
+
+https://github.com/maxlerebourg/outpin?ref=selfh.st
+
+
 ### Dev Smart not Hard
 
 Using AI to create more and better, in less time.
+
+
+> El relato mata al dato - Thats also true when looking for project opportunities
 
 #### AI Stuff
 

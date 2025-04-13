@@ -1,6 +1,6 @@
 ---
 title: "Stocks with Python"
-date: 2025-04-17
+date: 2025-05-17
 draft: false
 tags: ["Python"]
 description: "A Cooler R/Stocks - This time with Python. And with proper Auth/UIM."
@@ -41,6 +41,9 @@ Sometime ago I was doing similar Project in **R Shiny** 💻
 * [yfR - yahoo finance in R](https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/#the-yfr-package)
 
 {{< /details >}}
+
+
+https://github.com/CodeWithCJ/SparkyBudget?ref=selfh.st
 
 ## PyStocks
 

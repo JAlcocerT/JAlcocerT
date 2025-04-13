@@ -766,7 +766,9 @@ These questions directly inform the key sections of a project charter:
 * **Assumptions and Constraints:** Informed by the existing BI tools, data governance requirements, preferred tools, and infrastructure alignment.
 * **Success Criteria:** Directly linked to the "most important KPIs or metrics" and the "key objectives and goals."
 
-**These are not just good questions; they are *essential* questions for laying a strong foundation for a data product project. Addressing them thoroughly during requirements gathering will significantly contribute to a well-defined and effective project charter, ultimately increasing the likelihood of project success.**
+**These are not just good questions; they are *essential* questions for laying a strong foundation for a data product project.**
+
+Addressing them thoroughly during requirements gathering will significantly contribute to a well-defined and effective project charter, ultimately increasing the likelihood of project success.
 
 ---
 
