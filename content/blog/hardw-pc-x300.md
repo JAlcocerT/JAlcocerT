@@ -425,6 +425,27 @@ apt install cargo
 time cargo install --git https://github.com/astral-sh/rye rye
 ```
 
+```sh
+sudo snap install astral-uv --classic
+
+uv python list
+uv python install 3.12
+```
+
+This installs the Python 3.12 interpreter into the currently active virtual environment, if uv is configured to manage Python versions within that environment.
+
+However, it's important to understand that uv's primary focus, at least in its current state, is on package installation and dependency resolution within an existing Python environment. It doesn't directly manage the creation or switching of Python versions in the same way that tools like pyenv or conda do.
+
+to run apps:
+
+```sh
+uv sync #install the deps
+#uv pip show dash
+uv run main.py
+```
+
+> you don't need any conda, poetry, pip and other things
+
 * Just simple **stress test**:
 
 ```sh

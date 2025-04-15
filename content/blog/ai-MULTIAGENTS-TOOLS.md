@@ -501,6 +501,7 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 * MoE - Mix of Experts
 * MoA - Mix of Agents
 * ReACT - **Reasoning + Acting**
+  * First they think, then they execute an action inside an environment
 
 
 

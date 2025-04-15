@@ -126,6 +126,7 @@ Test_DF.printSchema()
 Test_DF.show(truncate=False)
 ```
 
+{{< details title="Some TECH/Tools for BIG Data Platforms 📌" closed="true" >}}
 
 1. **Diagrams**: Tools like Mermaid and Excalidraw for visualizing workflows and processes.
 2. **Apache NiFi**: Automates and manages data flows between systems, supporting scalable data routing and transformation.
@@ -151,6 +152,9 @@ Test_DF.show(truncate=False)
 
 These tools span across data flow automation, big data management, Kubernetes workflows, data validation, and distributed computing.
 
+
+
+{{< /details >}}
 
 ---
 
@@ -198,6 +202,11 @@ https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-moc
 
 These are indeed fundamental and widely used simple frameworks for decision-making. They each offer a distinct approach and are valuable tools in various contexts. Here's a breakdown of my thoughts on each:
 
+
+
+{{< details title="SWOT vs Satisficing vs CBA 📌" closed="true" >}}
+
+
 **SWOT Analysis:**
 
 * **Strengths:** Its simplicity and broad applicability are major strengths. It provides a structured way to think about both internal capabilities and external factors. It's a great starting point for strategic planning and can be used for individual decisions as well as organizational ones. The visual representation (often a 2x2 matrix) makes it easy to understand and communicate.
@@ -216,11 +225,15 @@ These are indeed fundamental and widely used simple frameworks for decision-maki
 * **Weaknesses:** Assigning accurate monetary values to all costs and benefits, especially intangible ones (like environmental impact or social well-being), can be challenging and subjective. The results of a CBA are highly dependent on the assumptions made and the discount rate used. It might also oversimplify complex issues by focusing solely on economic factors.
 * **Overall:** A powerful tool for evaluating the economic implications of decisions. However, it's crucial to acknowledge its limitations and to consider non-economic factors alongside the quantitative results. Transparency in the assumptions and calculations is essential for its credibility.
 
+
+{{< /details >}}
+
 **In Conclusion:**
 
-These three frameworks offer different lenses through which to approach decision-making. They are not mutually exclusive and can even be used in conjunction. For instance, a SWOT analysis might help identify potential areas for a cost-benefit analysis, or the concept of satisficing might be applied when considering various options identified through a SWOT.
+These three frameworks offer different lenses through which to approach decision-making.
 
-The "best" framework depends heavily on the specific context of the decision, including the complexity, urgency, available resources, and the goals of the decision-maker. Understanding the strengths and weaknesses of each framework allows for a more informed and effective approach to making choices.
+They are not mutually exclusive and can even be used in conjunction. For instance, a SWOT analysis might help identify potential areas for a cost-benefit analysis, or the concept of satisficing might be applied when considering various options identified through a SWOT.
+
 
 ### BA & Elicitation Skills
 
