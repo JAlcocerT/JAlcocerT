@@ -236,7 +236,6 @@ As this agency is having collaborations with couple of well known agents in the 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-migrate-a-website/#for-the-real-estate-project" title="See the post about the first iteration of the tool" icon="book-open" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_AIgents/WebMigrAItion" title="Sample Photo adquisition Script ↗" icon="book-open" >}}
-  
 {{< /cards >}}
 
 The client is responsible to ask for permissions first to his collaborators before using it, as it involves using **BS4 for scrapping**.

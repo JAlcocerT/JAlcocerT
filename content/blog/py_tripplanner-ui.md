@@ -109,10 +109,15 @@ Different colors have distinct psychological associations, such as blue conveyin
 
 ### How can I try the Python DASH App?
 
-Trying the app locally might be an easy process for people that are familiar with software development. But I want this project to help as much people as possible.
+Trying the app locally might be an easy process for people that are familiar with software development.
 
-* For that reason I [deployed the DASH App at home using Docker and Cloudflare Tunnels](https://fossengineer.com/selfhosting-python-dash-apps-with-docker/).
-    * You can **use it for free from any browser at:** <https://trip-planner.fossengineer.com/>
+But I want this project to help as much people as possible.
+
+
+You can SelfHost it as per: https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/Deploy
+
+<!-- * For that reason I [deployed the DASH App at home using Docker and Cloudflare Tunnels](https://fossengineer.com/selfhosting-python-dash-apps-with-docker/).
+    * You can **use it for free from any browser at:** <https://trip-planner.fossengineer.com/> -->
 
 
 ### How can I Contribute?
@@ -121,3 +126,45 @@ Trying the app locally might be an easy process for people that are familiar wit
     * The [Python Trip Planner with Weather Github Repository](https://github.com/JAlcocerT/Py_Trip_Planner "Python Trip Planner DASH Repository {rel='nofollow'}").
     * Don't have a IDE right now? Have a look to the .ipynb notebook that I used to integrate the packages with Google Colaboratory:
  [![Google Colab](/img/OpenInColab.svg)](https://colab.research.google.com/github/JAlcocerT/Py_Trip_Planner/blob/main/TripPlanner.ipynb)
+
+### DASH Callbacks
+
+In programming, **callbacks** are essentially functions that are passed as arguments to other functions.
+
+{{< callout type="info" >}}
+The idea is that the "outer" function can then execute the "inner" function (the callback) at a later point in time, often after a specific event has occurred or a task has been completed.
+{{< /callout >}}
+
+Think of it like this: you tell someone to do a task for you, and you give them your phone number (the callback function). They will call you back (execute the callback function) when they are finished.
+
+**Key aspects of callbacks:**
+
+* **Functions as Arguments:** Callbacks treat functions as first-class citizens, meaning they can be passed around like any other variable.
+* **Deferred Execution:** The callback function is not executed immediately when it's passed as an argument. Instead, the receiving function stores it and executes it later.
+* **Event Handling and Asynchronous Operations:** Callbacks are commonly used in scenarios like:
+    * **Event Listeners:** In web development, you might attach a callback function to a button click event. When the button is clicked, the browser will "call back" and execute your function.
+    * **Asynchronous Tasks:** When performing long-running operations (like fetching data from a server), you can provide a callback function to be executed once the operation is complete. This prevents the main program from freezing while waiting.
+
+**Callbacks in the Dash Framework:**
+
+The **Dash framework** heavily utilizes callbacks to create **interactive web applications**.
+
+{{< callout type="info" >}}
+In Dash, callbacks are the mechanism that allows you to define how different components in your user interface interact with each other.
+{{< /callout >}}
+
+Here's how callbacks work in Dash:
+
+1.  **Triggering Events (Inputs):** You define which component properties will trigger a callback function. These are specified using the `Input` object from `dash.dependencies`. For example, a callback might be triggered when the `value` of a `dcc.Dropdown` component changes or when the `n_clicks` property of a `html.Button` is updated.
+2.  **Callback Function:** You write a Python function that will be executed when the specified input property changes. This function receives the current values of the input components as arguments.
+3.  **Updating Components (Outputs):** Inside the callback function, you perform some computation or action based on the input values. The function then returns one or more values that will update the properties of other components in your Dash app. These target component properties are specified using the `Output` object from `dash.dependencies`. For example, a callback might take the selected value from a dropdown as input and return a new `figure` for a `dcc.Graph` component (updating the displayed graph).
+
+**Why are callbacks important in Dash?**
+
+* **Interactivity:** Callbacks are the core of making Dash apps interactive. They allow user actions in one part of the application to dynamically update other parts without requiring a full page reload.
+* **Dynamic Content:** You can use callbacks to generate and display dynamic content based on user input or other events.
+* **Building Complex Applications:** Callbacks enable you to create complex workflows and interactions between different UI elements, making it possible to build sophisticated data visualization tools and web applications.
+
+In summary, callbacks are a fundamental programming concept that allows for deferred execution of code, often in response to events or the completion of asynchronous tasks.
+
+> In the Dash framework, callbacks are the key to creating interactive and dynamic web applications by defining how user interactions with UI components trigger updates in other components.

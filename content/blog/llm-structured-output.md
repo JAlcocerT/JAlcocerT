@@ -74,7 +74,7 @@ What have I learnt recently?
 
 * https://github.com/JAlcocerT/open-resume
 
-{{< details title="Use a CV Builder Framework: OpenResume or Reactive Resume" closed="true" >}}
+{{< details title="Use a CV Builder Framework - OpenResume or Reactive Resume" closed="true" >}}
 
 * With [Reactive-Resume](https://fossengineer.com/open-source-curriculum/#the-reactive-resume-project)
 

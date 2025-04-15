@@ -1,9 +1,9 @@
 ---
-title: "AI Multi Agents: PyAutogen"
+title: "AI Multi Agents: PyAutogen, LangGraph,..."
 date: 2025-04-10T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Reviewing the most Popular AI Agents frameworks: AG2AI (AutoGen), CrewAI, LangChain, LlamaIndex,'
+description: 'Reviewing the most Popular AI Agents frameworks: AG2AI (AutoGen), CrewAI, LangChain,...'
 url: 'ai-multi-agents-frameworks'
 ---
 
@@ -28,7 +28,9 @@ Recently I was having a [conversation about whats trendy in the Dsc/AI space](ht
 {{< /cards >}}
 
 
-They are all great. **And a must KNOW.**
+They are all great.
+
+**And a must KNOW.**
 
 
 {{< cards cols="2" >}}
@@ -66,7 +68,7 @@ Actually, this is great tool to have when doing **research** of some new topic.
 
 ### LangGraph
 
-Aigent builder framework: alternative to autogen and crewAI.
+> AIgent builder framework: alternative to autogen and crewAI.
 
 It is a graph framework and each node is code.
 
@@ -145,6 +147,20 @@ We can use Fabric together with Ollama and Groq - Both are OpenAI API Compatible
 ### Fabric with Ollama
 
 ### Fabric with Groq
+
+### OpenAI Agents
+
+* https://github.com/openai/openai-agents-python
+    * https://pypi.org/project/openai-agents/
+
+### AI Agents with LangGraph
+
+* https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/
+
+
+
+---
+
 
 ## Other F/OSS Multi-Agent Projects
 
@@ -484,7 +500,9 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 
 * MoE - Mix of Experts
 * MoA - Mix of Agents
-* ReACT
+* ReACT - **Reasoning + Acting**
+
+
 
 {{< details title="More about Solara - ReACT Framework 📌" closed="true" >}}
 

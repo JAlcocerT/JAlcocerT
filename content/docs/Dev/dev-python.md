@@ -63,7 +63,7 @@ pip install -r requirements.txt #all at once
 
 #pip show beautifulsoup4
 pip list
-#pip freeze > requirements.txt #generate a txt with the ones you have!
+#pip freeze > requirements-output.txt #generate a txt with the ones you have!
 ```
 
 ```sh

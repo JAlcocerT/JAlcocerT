@@ -1,11 +1,11 @@
 ---
-title: "OpenProject"
+title: "PM Tools for Business"
 date: 2025-12-15T23:20:21+01:00
 draft: true
 tags: ["Web","OSS for Business","Self-Hosting"] 
 description: ''
 summary: '.'    
-url: 'selfhosting-openproject-docker'    
+url: 'selfhosting-pm-tools-docker'    
 ---
 
 ## Note Taking Apps
@@ -50,6 +50,8 @@ AppFlowy, an open source project mgmt, documentation, and note-taking app for ex
 ## Creating Diagrams
 
 ### ExcaliDraw
+
+* https://libraries.excalidraw.com/?theme=dark&sort=downloadsTotal
 
 ### DrawIO
 

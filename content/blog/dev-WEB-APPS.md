@@ -487,6 +487,39 @@ One of the most popular ways to create **python web apps is with Flask**.
 
 <!-- ![Flask Https NginX Setup](/blog_img/apps/flask-nginx-duckdns.png) -->
 
+##### DASH
+
+https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/#faq
+
+Yes, that's a very accurate and common way to describe the relationship between **Dash** and **Flask**. **Dash is indeed an abstraction layer built on top of Flask.**
+
+Here's a breakdown of what that means:
+
+* **Flask as the Foundation:** Flask is a lightweight and flexible **micro web framework** for Python. It provides the essential tools for building web applications, such as:
+    * **Routing:** Mapping URLs to specific functions.
+    * **Request and Response Handling:** Managing incoming HTTP requests and generating responses.
+    * **Templating (Jinja2):** Rendering dynamic HTML content.
+    * **WSGI Server Integration:** Interfacing with web servers.
+
+* **Dash Adding High-Level Components:** Dash takes Flask and adds a layer of higher-level abstractions and components specifically designed for building **interactive data visualization web applications**. Key features that Dash provides on top of Flask include:
+    * **Declarative UI:** You define the layout of your application using Python code, and Dash handles the rendering of the HTML, CSS, and JavaScript.
+    * **Interactive Callbacks:** As we discussed, Dash provides a simple and powerful way to define interactive behavior through callbacks, connecting UI components to Python functions.
+    * **Component Library:** Dash comes with a rich set of pre-built, interactive UI components (using React.js under the hood) like graphs, dropdowns, sliders, tables, etc.
+    * **State Management:** Dash manages the state of your application components behind the scenes, making it easier to build interactive applications without manually dealing with front-end state management.
+    * **Simplified Deployment:** Dash simplifies the process of deploying web applications.
+
+**Think of it like this analogy:**
+
+* **Flask is like the engine and chassis of a car.** It provides the fundamental mechanisms for it to run and move.
+* **Dash is like the car's body, interior, and user interface (dashboard, seats, steering wheel).** It takes the underlying engine and chassis (Flask) and provides a more user-friendly and specialized structure for a specific purpose – in this case, building interactive data apps.
+
+**Key takeaways:**
+
+* Dash leverages the robustness and flexibility of Flask for its underlying web server and request/response handling.
+* Dash simplifies the development of interactive web applications, especially those focused on data visualization, by providing a higher-level API and pre-built components.
+* You don't need to directly interact with Flask when building a Dash application, as Dash handles the Flask setup and configuration for you. However, understanding that Dash is built on Flask can be helpful for more advanced customization or troubleshooting.
+
+In essence, Dash provides a more opinionated and specialized framework on top of the more general-purpose Flask, making it easier and faster to build interactive data-driven web applications in Python.
 
 
 #### Streamlit
