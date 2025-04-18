@@ -6,7 +6,7 @@ draft: false
 #   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
 #   alt: "SelfHosting xTTS2 with Docker." # alt text
 #   caption: "Succesfull installation of xTTS2 with Docker." # display caption
-description: 'Local TTS Tools with Coqui and LocalAI.Clone audio with xTTS2'
+description: 'Local TTS Tools with Coqui and LocalAI. Clone audio with xTTS2.'
 url: local-ai-audio
 ---
 
@@ -225,6 +225,26 @@ https://www.youtube.com/watch?v=hKrl5Gr7hM0
 
 ## Conclusions
 
+### Adding TTS to MultiChat
+
+* https://platform.openai.com/playground/tts
+* https://www.openai.fm/
+
+* https://platform.openai.com/docs/guides/text-to-speech
+
+* https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Audio
+
+<!-- https://www.youtube.com/watch?v=azWX0EesDzQ -->
+
+{{< youtube "azWX0EesDzQ" >}}
+
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+
 ### FAQ
 
 * https://github.com/snakers4/silero-models
@@ -335,7 +355,7 @@ https://github.com/kanttouchthis/text_generation_webui_xtts/
 ---
 
 
-## Conclusions
+## More
 
 
 Making these with portainer is always easier:
