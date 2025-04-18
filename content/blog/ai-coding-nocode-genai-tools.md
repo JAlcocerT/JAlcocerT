@@ -1,14 +1,9 @@
 ---
 title: "No Code Tools to use Gen AI"
-date: 2025-12-01T23:20:21+01:00
-draft: true
-# cover:
-#     image: "https://socialify.git.ci/jw782cn/Claude-Streamlit/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-#     alt: "" # alt text
-#     caption: "" # display caption under cover
+date: 2025-04-17T23:20:21+01:00
+draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Create Web Apps in Python'
-summary: 'Quickly Prototype Gen AI Web Apps in pure Python.'
+description: 'Generative AI made simple. Flowise, '
 url: 'no-code-ai-tools'
 ---
 
@@ -19,6 +14,11 @@ url: 'no-code-ai-tools'
   * {{< newtab url="https://flowiseai.com/" text="The Flowise AI Official Page" >}}
   * {{< newtab url="https://github.com/FlowiseAI/Flowise" text="The Flowise AI Source Code at Github" >}}
       * License: {{< newtab url="https://github.com/FlowiseAI/Flowise?tab=Apache-2.0-1-ov-file#readme" text="Apache v2" >}} ✅
+
+<!-- https://www.youtube.com/watch?v=SASUXOV7tEQ -->
+
+{{< youtube "SASUXOV7tEQ" >}}
+
 
 ### LangFlow
 
@@ -33,9 +33,9 @@ It is **based on Python**, which makes it ready to have many integrations:
   * {{< newtab url="https://github.com/langflow-ai/langflow" text="The Flowise AI Source Code at Github" >}}
       * License: {{< newtab url="https://github.com/langflow-ai/langflow?tab=MIT-1-ov-file#readme" text="MIT" >}} 
 
-https://hub.docker.com/r/langflowai/langflow
+* https://hub.docker.com/r/langflowai/langflow
 
-> ⛓️ Langflow is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.
+> ⛓️ Langflow is a **visual framework for building multi-agent and RAG applications**. It's open-source, Python-powered, fully customizable, model and vector store agnostic.
 
 ```sh
 python -m venv langflow #create the venv (python3 if you are in mac/linux)
@@ -58,7 +58,7 @@ Acces LangFlow at `localhost:7860`
 > Thanks again Leon Van Zyl
 
 ```yml
-version: '3.8'
+#version: '3.8'
 
 services:
   langflow:
@@ -84,6 +84,14 @@ https://www.youtube.com/watch?v=yXAJwDtAbLo
 
 
 ## Conclusion
+
+
+### See also...
+
+1. Chatwoot
+
+{{< youtube "1Q_MDOWaljk" >}}
+
 
 
 ---

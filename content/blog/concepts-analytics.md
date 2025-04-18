@@ -221,7 +221,7 @@ When authorized you will see [this](https://developers.google.com/gemini-code-as
 
 3. OSS code assistants:
 
-* Codeium
+* Codeium -  which is now called windsurf!
 * Tabby - https://fossengineer.com/selfhosting-Tabby-coding-assistant/
 * [Bito AI](https://docs.bito.ai/feature-guides/ai-that-understands-your-code/how-it-works)
 

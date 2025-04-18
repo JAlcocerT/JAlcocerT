@@ -248,6 +248,8 @@ The primary Dash library responsible for the `dcc.Store` component and its inter
 
 ### UV
 
+UV is an interesting way to manage python dependencies (which I got to know as [a way of benchmarking](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#benchmarks-101))
+
 The good thing with uv is that we can have **different python verions!**
 
 ```sh

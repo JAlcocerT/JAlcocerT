@@ -440,6 +440,13 @@ to run apps:
 
 ```sh
 uv sync #install the deps
+
+#uv venv test_venv
+#uv venv test_venv --python 3.10.12
+#source test_venv/bin/activate
+#uv pip install -r requirements.txt
+
+
 #uv pip show dash
 uv run main.py
 ```

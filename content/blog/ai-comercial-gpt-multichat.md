@@ -55,6 +55,10 @@ See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit
 
 ### Streamlit Chat with OpenAI
 
+Remember that there will be model/pricing changes over time: https://openai.com/api/pricing/
+
+See how text will be tokenized: https://platform.openai.com/tokenizer
+
 I first had a look to this existing project that used OpenAI API Key:
 
 {{< cards >}}
@@ -104,6 +108,16 @@ openai==0.28.0 #https://pypi.org/project/openai/#history
 Now, to create the Docker Image:
 
 {{< dropdown_docker title="Really, Just Get Docker 🐋👇" closed="true" >}}
+
+Or with uv...
+
+
+```sh
+uv pip install ollama==0.2.1 --index-url https://pypi.org/simple
+
+
+```
+
 
 ```Dockerfile
 FROM python:3.11
