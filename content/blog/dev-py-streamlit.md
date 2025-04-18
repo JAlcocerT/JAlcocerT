@@ -1,6 +1,6 @@
 ---
 title: "Streamlit Updates. Improving Data Apps"
-date: 2025-04-17T23:50:21+01:00
+date: 2025-07-17T23:50:21+01:00
 draft: false
 tags: ["Dev"]
 summary: 'More cool Streamlit Stuff'

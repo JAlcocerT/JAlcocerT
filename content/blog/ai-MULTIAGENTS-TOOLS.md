@@ -11,7 +11,7 @@ url: 'ai-multi-agents-frameworks'
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
-  {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with " >}}
+  {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Python and MultiAgents" >}}
 {{< /cards >}}
 
 Recently I was having a [conversation about whats trendy in the Dsc/AI space](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects).

@@ -1,6 +1,6 @@
 ---
 title: "Buying a house being in Data Analytics"
-date: 2025-05-01T23:20:21+01:00
+date: 2025-04-17T11:20:21+01:00
 draft: false
 tags: ["Outro"]
 description: 'What to keep in mind - what not to do and the data behind...When buying a house.'
@@ -12,8 +12,6 @@ If you are getting a credit...
 Before anything, understand how [French Amortization](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/) works.
 
 And maybe have a look to the properties around with some [RE AIgent](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/).
-
-
 
 
 ## Property Costs Analytics
@@ -34,7 +32,7 @@ In Spain you could expect:
 
 * 6% taxes + 3-5k notario + 0.5 to 1k/m2 repairs/setup
 
-![a](/blog_img/outro/honda-road.jpg)
+<!-- ![a](/blog_img/outro/honda-road.jpg) -->
 
 ---
 

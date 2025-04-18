@@ -8,6 +8,11 @@ url: 'no-code-ai-tools'
 ---
 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker" title="Docker Config Files" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Docker Services" >}}
+{{< /cards >}}
+
 ### Flowise AI
 
 * **Flowise AI**, a groundbreaking Free platform that is making AI more accessible than ever before.
@@ -18,6 +23,12 @@ url: 'no-code-ai-tools'
 <!-- https://www.youtube.com/watch?v=SASUXOV7tEQ -->
 
 {{< youtube "SASUXOV7tEQ" >}}
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/FlowiseAI" title="FlowiseAI Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
+
 
 
 ### LangFlow
@@ -57,6 +68,10 @@ Acces LangFlow at `localhost:7860`
 
 > Thanks again Leon Van Zyl
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/" title="LangFuse & MLFlow Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
+
 ```yml
 #version: '3.8'
 
@@ -70,11 +85,14 @@ services:
     restart: unless-stopped
 ```
 
+https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFlow
+https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse
+
 ### Rivet AI
 
 https://www.youtube.com/watch?v=Zd5wjy4YPis&t=157s
 
-✅
+
 
 ### DifyAI
 
@@ -85,12 +103,26 @@ https://www.youtube.com/watch?v=yXAJwDtAbLo
 
 ## Conclusion
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/" title="Tinkering with structured outputs | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/" title="Tinkering with function calling | Post ↗" >}}
+{{< /cards >}}
+
 
 ### See also...
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="Docker Config" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker" title="Docker Config Files" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config" >}}
+{{< /cards >}}
 
 1. Chatwoot
 
 {{< youtube "1Q_MDOWaljk" >}}
+
+
+2. N8N
 
 
 
@@ -114,9 +146,9 @@ Baserow is an open source no-code database and Airtable alternative.
 
 Create your own database without technical experience. Our user friendly no-code tool gives you the powers of a developer without leaving your browser.
 
-Focus: Open-source no-code database tool with a user-friendly interface resembling spreadsheets but with relational database capabilities.
-Strengths: Offers a visual interface for building tables, defining relationships, and managing data. Supports various data types, including files, formulas, and automations. Integrates with popular tools like Zapier and webhooks.
-Considerations: While feature-rich, it might not be as powerful as some options for complex relational modeling.
+* Focus: Open-source no-code database tool with a user-friendly interface resembling spreadsheets but with relational database capabilities.
+* Strengths: Offers a visual interface for building tables, defining relationships, and managing data. Supports various data types, including files, formulas, and automations. Integrates with popular tools like Zapier and webhooks.
+* Considerations: While feature-rich, it might not be as powerful as some options for complex relational modeling.
 
 #### Other
 
