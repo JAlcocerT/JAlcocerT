@@ -67,8 +67,8 @@ Creating 24 tech videos to make AI, D&A more accesible: [x]
 17. 
 18. 
 19. 
-20. 
-21. 
+20. N8N
+21. ChatWoot
 22. 
 23. 
 24. 

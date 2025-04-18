@@ -83,6 +83,16 @@ code --install-extension gitlab.gitlab-workflow
 
 > Definitely use the extension `GitLab Workflow VS Code Extension`. Authenticate with OAuth.
 
+
+```sh
+#sudo snap install gitlab-cli
+sudo snap install glab
+
+glab auth login #you will need https://gitlab.com/-/user_settings/personal_access_tokens?page=1
+glab mr list
+#glab mr diff 25
+```
+
 ## VSCode
 
 You can install it with flatpak:

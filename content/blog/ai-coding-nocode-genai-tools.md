@@ -30,6 +30,14 @@ url: 'no-code-ai-tools'
 {{< /cards >}}
 
 
+#### Embedded Flowise Chat
+
+
+* https://docs.flowiseai.com/using-flowise/embed
+* https://github.com/FlowiseAI/FlowiseChatEmbed
+
+
+* https://github.com/ZynthCode/flowise-ai-with-python
 
 ### LangFlow
 
@@ -104,18 +112,28 @@ https://www.youtube.com/watch?v=yXAJwDtAbLo
 ## Conclusion
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/" title="Tinkering with structured outputs | Post ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/" title="Tinkering with function calling | Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="Tinkering with structured outputs | Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="Tinkering with function calling | Post ↗" >}}
 {{< /cards >}}
 
 
 ### See also...
 
+How about embedding a chatbot within your website?
 
+> A branded AI-powered website chatbot
+
+I show recently how to do a Streamlit Web App Chat bot. 
+
+But that might cause friction on users having to leave your home/services page.
+
+
+<!-- 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="Docker Config" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker" title="Docker Config Files" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config" >}}
-{{< /cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="Docker Config" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="Docker Config Files" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config" >}}
+{{< /cards >}} 
+-->
 
 1. Chatwoot
 
@@ -124,6 +142,26 @@ https://www.youtube.com/watch?v=yXAJwDtAbLo
 
 2. N8N
 
+* https://github.com/n8n-io/self-hosted-ai-starter-kit
+
+> The Self-hosted AI Starter Kit is an open-source template that quickly sets up a local AI environment. Curated by n8n, it provides essential tools for creating secure, self-hosted AI workflows.
+
+
+
+<!-- 
+https://drive.google.com/file/d/1QIyrIOWJFperDhzuvgDlB2xQCZ-eo79a/view
+https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
+ -->
+
+![alt text](/blog_img/GenAI/NoCode-AI/n8n.png)
+
+* You can build cool things with these:
+  * https://formbricks.com/docs/xm-and-surveys/core-features/integrations/n8n
+
+
+https://www.youtube.com/watch?v=dC2Q_cyzgjg
+
+{{< youtube "dC2Q_cyzgjg" >}}
 
 
 ---

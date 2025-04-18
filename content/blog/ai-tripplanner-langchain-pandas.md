@@ -88,6 +88,10 @@ So lets make some tweaks and get trip planner V3 ready, this time with **AI Chat
 
 > Im keeping the app framework as **DASH**
 
+* https://dash.plotly.com/authentication
+
+### Conclusions
+
 
 ---
 
@@ -245,6 +249,8 @@ The primary Dash library responsible for the `dcc.Store` component and its inter
 - It achieves this through JavaScript code embedded within the `dash_core_components` library.
 - It is **not cookie-based**. Session storage is a distinct and more suitable mechanism for client-side session-specific data.
 
+
+> You can also have a look to [flask session](https://flask-session.readthedocs.io/en/latest/installation.html) 
 
 ### UV
 

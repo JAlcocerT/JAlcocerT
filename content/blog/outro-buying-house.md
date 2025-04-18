@@ -16,13 +16,22 @@ And maybe have a look to the properties around with some [RE AIgent](https://jal
 
 ## Property Costs Analytics
 
+A gantt chart is worth a zillion words:
 
 ```mermaid
-pie title Car Expenses Breakdown
-         "Gas" : 537
-         "Maintenance" : 831
-         "Insurance" : 865
-         "Car's Price" : 2180
+pie title Property Adquisition Expenses Breakdown
+         "Property" : 100
+         "Maintenance" : 10
+         "Insurance" : 1
+         "Registrations" : 2
+```
+
+```mermaid
+pie title Property Adquisition Expenses Breakdown
+         "Property" : 100
+         "Maintenance" : 10
+         "Insurance" : 1
+         "Registrations" : 2
 ```
 
 ### Spain
