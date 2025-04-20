@@ -291,8 +291,10 @@ The TechHut:
 
 {{< youtube "yUyxJr2xboI" >}}
 
+<!-- https://www.youtube.com/watch?v=yUyxJr2xboI -->
 
-https://www.youtube.com/watch?v=yUyxJr2xboI
+* https://www.youtube.com/@AwesomeOpenSource
+* https://www.youtube.com/watch?v=ZXit4mZetWA (Tech By Mat)
 
 ### Outro
 

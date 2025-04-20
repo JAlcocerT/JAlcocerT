@@ -23,6 +23,19 @@ First things first.
 
 ![text](/blog_img/outro/telecom/2cm.png)
 
+You can see which router you are connected to via:
+
+```sh
+ip route | grep default
+#default via 192.168.0.1 dev wlp3s0 proto dhcp metric 600 
+```
+
+> Access the router admin panel, this example is at 192.168.0.1
+
+{{< callout type="info" >}}
+You will see the software version its running, like CH7465PLAY-NCIP-6.15.32p5-GA-NOSH, its mac address, serial number...
+{{< /callout >}}
+
 **This is a fiber Cable Modem**
 
 ![text](/blog_img/outro/telecom/fiber-cm.png)
@@ -221,12 +234,14 @@ It communicates with multiple ONTs to deliver internet services in a **Passive O
 
 **DOCSIS (Data Over Cable Service Interface Specification)** and **Fiber** refer to different internet technologies:
 
-#### DOCSIS (Cable)
+#### DOCSIS
 
 - Uses a mix of **fiber-optic and coaxial cable** to deliver data.
 - Requires a **cable modem** to access the internet.
 - **Shared** connection in a neighborhood, which can lead to congestion.
 - Versions like **DOCSIS 3.0 and 3.1** offer faster speeds but may still experience slowdowns during peak times.
+
+> The trick is DOCSIS ~ COAX ~ TV ~ RF (vs) ONT ~ Fiber To Home
 
 
 {{< details title="More about DocSIS 📌" closed="true" >}}
@@ -296,11 +311,12 @@ Optical networks use different technologies and standards, which include distinc
 
 
 #### Fiber
+
 - Uses **fiber-optic cables** to transmit data as light, offering extremely fast speeds.
 - Provides a **dedicated connection**, avoiding congestion.
 - **Symmetric speeds** for uploads and downloads (unlike cable).
   
-**Key Difference**: DOCSIS uses coaxial cables (shared) and may have network slowdowns, while fiber provides higher performance through dedicated fiber-optic lines.
+**Key Difference**: DOCSIS uses coaxial cables (shared) and may have network slowdowns, while **fiber provides higher performance** through dedicated fiber-optic lines.
 
 ### XGS-PON vs GPON
 

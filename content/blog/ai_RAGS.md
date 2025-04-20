@@ -86,6 +86,13 @@ https://pypi.org/project/langchain-chroma/
   {{< card link="https://github.com/JAlcocerT/ScrewFastMoiRealEstate" title="The Source Code, using Screw Fast MIT Theme ↗" icon="book-open" >}}
 {{< /cards >}}
 
+If you are interested, you can **edit PDFs** with:
+
+* [Inkscape](https://www.youtube.com/watch?v=z_O_casrDjM)
+* [GIMP](https://www.youtube.com/watch?v=itGZ7SZAayg)
+* See also: stirlingPDF,...
+
+
 
 ### Database
 

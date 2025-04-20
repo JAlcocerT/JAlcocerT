@@ -21,6 +21,7 @@ But how about creating websites with....
 ## OpenAI
 
 * https://github.com/openai/codex
+    * https://www.npmjs.com/package/@openai/codex
 
 > Apache v2 | Lightweight coding agent that runs in your terminal
 
@@ -30,10 +31,30 @@ npm i -g @openai/codex
 
 ```sh
 OPENAI_API_KEY=your-api-key-here
+```
+
+```sh
 codex
 
 #codex "explain this codebase to me"
 ```
+
+
+```sh
+git clone https://github.com/JAlcocerT/Py_Trip_Planner
+```
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/VibeCoding/OpenAI-Codex" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+<!-- https://www.youtube.com/watch?v=qqcmI72marw -->
+
+{{< youtube "qqcmI72marw" >}}
+
+
 
 
 ## Claude
@@ -42,3 +63,11 @@ codex
 
 > Claude Code is an agentic coding tool that **lives in your terminal, understands your codebase**, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
 
+---
+
+## Conclusions
+
+### Others
+
+* https://replit.com/
+* Lovable
