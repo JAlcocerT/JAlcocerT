@@ -140,6 +140,7 @@ Or simply check devices connected to the same router with:
 
 ```sh
 arp -a
+#ip neigh
 ```
 
 **Local Network** examples:

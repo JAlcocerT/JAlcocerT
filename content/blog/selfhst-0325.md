@@ -10,14 +10,15 @@ url: 'selfhosted-apps-spring-2025'
 
 It all started with...
 
-{{< cards cols="1" >}}
+{{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/benchmarking-computers/#internet-benchmark" title="BenchMarking Computers ↗" >}}
 {{< /cards >}}
 
 
 ## New SelfHosted Apps
 
-But first, new Selfhosting ways, wit PODMAN:
+But first, new Selfhosting ways, with PODMAN:
 
 ```sh
 sudo apt-get install python3-pip
@@ -30,7 +31,9 @@ nano ~/.bashrc  # Or nano ~/.zshrc
 #add this at the end
 export PATH="$PATH:$HOME/.local/bin"
 ```
+
 Reload:
+
 ```sh
 source ~/.bashrc   # Or source ~/.zshrc
 ```
