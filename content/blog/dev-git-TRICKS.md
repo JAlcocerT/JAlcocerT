@@ -162,6 +162,15 @@ ext install ms-vscode-remote.remote-containers #do this one inside VSCode with C
 #code --install-extension ms-vscode-remote.remote-containers #or this one from the terminal
 ```
 
+
+```sh
+sudo usermod -aG docker jalcocert
+groups jalcocert
+
+#sudo groupadd docker
+#sudo usermod -aG docker $USER
+```
+
 > This can be very useful to do Jekyll web dev as seen [here](https://www.youtube.com/watch?v=X7guekGZM20)
 
 Generally, to develop inside a container: you will need one

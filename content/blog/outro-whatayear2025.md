@@ -73,6 +73,14 @@ Creating 24 tech videos to make AI, D&A more accesible: [x]
 23. 
 24. 
 
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/
+....
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
+{{< /cards >}}
+
 > Additionally, I participated in few tech Talks:
 
 1. Using LangChain to chat with a DB

@@ -8,6 +8,12 @@ url: 'selfhosted-apps-spring-2025'
 ---
 
 
+It all started with...
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ## New SelfHosted Apps
 
@@ -150,10 +156,10 @@ Forward Auth
 
 My previous go to solution with: Syncthing + PiGallery works perfectly.
 
-But among all the Photo Tools I reviewed recently, Immich is the one I tried with the best mobile app experience.
+But among all the Photo Tools I reviewed/tried recently, Immich is the one I tried with the **best mobile app experience**.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Photo/Immich_Docker-Compose.yml" title="Config File 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Photo/Immich_Docker-Compose.yml" title="Immich Config File 🐳 ↗"  >}}
 {{< /cards >}}
 
 **What do I like about Immich**?
@@ -250,7 +256,13 @@ Its a very intuitive way to backup your Smartphones:
 
 ![alt text](/blog_img/selfh/media/nextcloud-pixel8-sync.png)
 
-> Respecting your folder order and avoiding the use of ML of immich
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml" title="NextCloud Config File 🐳 ↗"  >}}
+{{< /cards >}}
+
+
+> Nextcloud! Respecting your folder order and avoiding the use of ML of immich
 
 And you can always see what you have / modify stuff without taking space on your laptop:
 

@@ -30,6 +30,12 @@ ip route | grep default
 #default via 192.168.0.1 dev wlp3s0 proto dhcp metric 600 
 ```
 
+See other *local devices* connected to the same router:
+
+```sh
+ip neigh
+```
+
 > Access the router admin panel, this example is at 192.168.0.1
 
 {{< callout type="info" >}}
