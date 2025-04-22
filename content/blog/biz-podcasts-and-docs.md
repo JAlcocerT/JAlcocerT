@@ -1,6 +1,6 @@
 ---
 title: "Tech for Creating Documentation and Podcast"
-date: 2025-04-19
+date: 2025-09-19
 draft: false
 tags: ["Web"]
 description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. A look to GitPodcast and LangChain as Research Agent."

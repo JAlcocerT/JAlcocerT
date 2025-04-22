@@ -153,6 +153,8 @@ Yes, **Dash applications can definitely be affected by data race issues**, espec
 * **Difficult-to-reproduce bugs:** Race conditions can be timing-dependent, making them hard to consistently reproduce and debug.
 * **Potential for crashes (though less common in typical Dash scenarios):** In more complex scenarios involving shared resources and improper synchronization, crashes could theoretically occur.
 
+* https://dash.plotly.com/sharing-data-between-callbacks
+
 **Example Scenario in Dash:**
 
 Imagine a simple Dash app with a global variable `click_count` initialized to 0. Two different buttons, when clicked, are supposed to increment this counter and update a display.

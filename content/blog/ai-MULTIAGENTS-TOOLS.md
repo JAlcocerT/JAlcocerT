@@ -14,14 +14,23 @@ url: 'ai-multi-agents-frameworks'
   {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Python and MultiAgents" >}}
 {{< /cards >}}
 
-Recently I was having a [conversation about whats trendy in the Dsc/AI space](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects).
+Recently I was having a [conversation about whats trendy in the **Dsc/AI space**](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects).
 
+Considering that I come from these...
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat Project ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat RAG project ↗" >}}
+{{< /cards >}}
+
+Its time to have a look to these and put some code together into the Multi Agents project:
 
 1. [RAGs](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/)
 2. [Function calling](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/)
 3. [Structured OutputS](https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/),...
 4. [Langfuse](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects) and [MLFlow](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#mlflow)...
+5. LangFlow
+6. MCP - Model Context protocol
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/" title="LangFuse & MLFlow Docker Configs 🐋 ↗" >}}
@@ -49,6 +58,7 @@ Actually, this is great tool to have when doing **research** of some new topic.
 4. [MetaGPT](#metagpt)
 5. [Camel](#camel)
 6. [LangGraph](#langgraph)
+7. OpenAI Agents
 
 
 
@@ -152,6 +162,8 @@ We can use Fabric together with Ollama and Groq - Both are OpenAI API Compatible
 
 * https://github.com/openai/openai-agents-python
     * https://pypi.org/project/openai-agents/
+
+> A lightweight, powerful framework for multi-agent workflows
 
 ### AI Agents with LangGraph
 
@@ -488,6 +500,30 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 
 [![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&Date)
 
+
+### Example
+
+Ah, you're looking to identify the AI-related libraries in your project's dependencies. Based on their names, here's a breakdown of the libraries in your `pyproject.toml` that are commonly used for Artificial Intelligence and Machine Learning:
+
+* **`langchain>=0.3.19`**: LangChain is a popular framework for building applications powered by large language models (LLMs). It provides tools for prompt management, model interaction, memory, routing, and more.
+* **`langchain-community>=0.3.18`**: This package contains community-contributed integrations and utilities for LangChain, often including connections to various data sources, tools, and other services relevant to AI applications.
+* **`langchain-openai>=0.3.7`**: This is a specific integration package for LangChain that provides seamless access to OpenAI's models (like GPT-3.5, GPT-4, etc.) and related services.
+* **`langgraph>=0.2.74`**: LangGraph is a library built on top of LangChain that helps you build conversational agents as graphs of steps, making it easier to design more complex and structured AI interactions.
+* **`openai>=1.64.0`**: This is the official Python library for interacting directly with the OpenAI API. It allows you to access their models for tasks like text generation, translation, code generation, and more.
+* **`openai-agents>=0.0.7`**: This library focuses on building AI agents that can use tools and perform actions in the real world, often in conjunction with large language models.
+
+**In summary, the following libraries in your list are the primary AI-related ones:**
+
+* `langchain`
+* `langchain-community`
+* `langchain-openai`
+* `langgraph`
+* `openai`
+* `openai-agents`
+
+The other libraries in your `dependencies` list serve different purposes:
+
+* `langfuse`: An observability platform for language model applications, helping with tracking and debugging.
 
 ---
 

@@ -11,9 +11,22 @@ url: 'selfhosted-apps-spring-2025'
 It all started with...
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="SelfHosting 101 Script 🐋 ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/benchmarking-computers/#internet-benchmark" title="BenchMarking Computers ↗" >}}
 {{< /cards >}}
+
+```sh
+sudo tailscale status | grep -v "offline"
+#sudo tailscale up --exit-node=
+#uptime
+
+sudo apt update
+sudo apt install nmap
+nmap 100.pi.home.address
+
+#ip route | grep default #modem local ip!
+```
+
 
 
 ## New SelfHosted Apps
@@ -282,6 +295,8 @@ Or...use **SFTP-Go** as WebDav together with Syncthing:
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go" title="RE Streamlit App" image="/blog_img/selfh/media/sftpgo-webadmin.png" subtitle="SFTP-Go Setup" >}}
 {{< /cards >}}
+
+> See also https://github.com/iamjavadali/nextcloudpi
 
 
 #### Youtube FE

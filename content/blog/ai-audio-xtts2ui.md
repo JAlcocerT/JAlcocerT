@@ -11,6 +11,12 @@ url: local-ai-audio
 ---
 
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat Project ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat RAG project ↗" >}}
+{{< /cards >}}
+
+
 ## TTS
 
 **Text to Speech** AI tools!

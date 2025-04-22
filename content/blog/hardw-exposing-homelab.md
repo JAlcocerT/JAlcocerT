@@ -1,6 +1,6 @@
 ---
 title: "A look to Reverse Proxy options. Pangolin"
-date: 2025-04-20
+date: 2025-09-20
 draft: false
 tags: ["Dev"]
 description: 'Pangolin. Compared with other https tools like Cloudflared, Caddy, Traefik and NGINX.'
