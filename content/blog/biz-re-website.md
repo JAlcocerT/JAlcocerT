@@ -514,7 +514,7 @@ You may even consider A/B testing different pricing models or tiers to optimize 
 
 * https://github.com/kyaustad/cardyo?ref=selfh.st
 
->  A simple URL based digital business card creation and sharing system 
+>  A simple URL based **digital business card creation** and sharing system 
 
 ### Other Sites Ive worked on
 

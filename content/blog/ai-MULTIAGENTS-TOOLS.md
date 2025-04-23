@@ -29,7 +29,7 @@ Its time to have a look to these and put some code together into the Multi Agent
 2. [Function calling](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/)
 3. [Structured OutputS](https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/),...
 4. [Langfuse](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects) and [MLFlow](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#mlflow)...
-5. LangFlow
+5. LangFlow and LangGraph (which supports cyclic Graphs)
 6. MCP - Model Context protocol
 
 {{< cards cols="1" >}}
@@ -500,10 +500,51 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 
 [![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&Date)
 
+### MCP
+
+
+**MCP** aka Model Context Protocol - https://openai.github.io/openai-agents-python/mcp/
+
+* https://github.com/openai/openai-agents-python/tree/main/examples/mcp
+
+```sh
+#git clone https://github.com/openai/openai-agents-python
+git clone https://github.com/JAlcocerT/openai-agents-python
+cd examples/mcp
+```
+
+```sh
+#python -m venv solvingerror_venv #create the venv
+python3 -m venv mcp_venv #create the venv
+
+#solvingerror_venv\Scripts\activate #activate venv (windows)
+source mcp_venv/bin/activate #(linux)
+```
+
+**Install dependencies** with:
+
+```sh
+#pip install openai-agents==0.0.12
+pip install -r requirements.txt #all at once
+#pip freeze | grep langchain
+
+#pip show openai-agents
+#pip list
+pip freeze > requirements-output.txt #generate a txt with the ones you have!
+```
+
+<!-- https://www.youtube.com/watch?v=KHDMoQ2Sp2s -->
+
+{{< youtube "KHDMoQ2Sp2s" >}}
+
+Model Context Protocol (MCP) is an open standard designed to **connect large language models (LLMs) with external data sources and tools**, allowing these models to access and interact with real-world information more effectively.
+
+This protocol, introduced by Anthropic, simplifies the integration process for developers, making it easier to build context-aware applications without the need for custom coding for each combination of AI model and external system.
+
 
 ### Example
 
-Ah, you're looking to identify the AI-related libraries in your project's dependencies. Based on their names, here's a breakdown of the libraries in your `pyproject.toml` that are commonly used for Artificial Intelligence and Machine Learning:
+Breakdown of the libraries in your `pyproject.toml` that are commonly used for Artificial Intelligence and Machine Learning:
 
 * **`langchain>=0.3.19`**: LangChain is a popular framework for building applications powered by large language models (LLMs). It provides tools for prompt management, model interaction, memory, routing, and more.
 * **`langchain-community>=0.3.18`**: This package contains community-contributed integrations and utilities for LangChain, often including connections to various data sources, tools, and other services relevant to AI applications.

@@ -317,6 +317,7 @@ There are more alternatives, like:
 
 ## Thanks to 
 
+
 The TechHut:
 
 {{< youtube "yUyxJr2xboI" >}}
@@ -325,6 +326,12 @@ The TechHut:
 
 * https://www.youtube.com/@AwesomeOpenSource
 * https://www.youtube.com/watch?v=ZXit4mZetWA (Tech By Mat)
+* https://www.youtube.com/@Jims-Garage/videos
+
+
+* https://www.youtube.com/@NovaspiritTech/videos
+
+> RIP
 
 ### Outro
 

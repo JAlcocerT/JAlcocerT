@@ -18,19 +18,34 @@ But how about creating websites with....
 
 * https://studio.firebase.google.com/
 
-## OpenAI
+
+## CLI Based
+
+### OpenAI
+
+Codex CLI is built for developers who already live in the terminal and want ChatGPT‑level reasoning plus the power to actually run code, manipulate files, and iterate – all under version control. In short, it’s chat‑driven development that understands and executes your repo.
+
+* Zero setup — bring your OpenAI API key and it just works!
+* Full auto-approval, while safe + secure by running network-disabled and directory-sandboxed
+* Multimodal — pass in screenshots or diagrams to implement features ✨
 
 * https://github.com/openai/codex
     * https://www.npmjs.com/package/@openai/codex
 
 > Apache v2 | Lightweight coding agent that runs in your terminal
 
+Install codex as an NPM package:
+
 ```sh
 npm i -g @openai/codex
+#npm install -g @openai/codex@0.1.2504211509 #https://github.com/openai/codex/issues/525
+npm list codex #0.2.3
 ```
 
 ```sh
-OPENAI_API_KEY=your-api-key-here
+#source .env
+export OPENAI_API_KEY="your_secret_api_key"
+#OPENAI_API_KEY=your-api-key-here
 ```
 
 ```sh
@@ -57,7 +72,7 @@ git clone https://github.com/JAlcocerT/Py_Trip_Planner
 
 
 
-## Claude
+### Claude Code
 
 * https://github.com/anthropics/claude-code
 

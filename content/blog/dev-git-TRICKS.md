@@ -209,10 +209,23 @@ ext install eamodio.gitlens
 #yaml https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 
+
+```
+
+
+Diagrams/Wireframes...
+
+```sh
 #gemini assistant https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist
 
 #jupyter https://marketplace.visualstudio.com/items/?itemName=ms-toolsai.jupyter
+
+
+#excalidraw https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor
+ext install pomdtr.excalidraw-editor
 ```
+
+
 
 ---
 

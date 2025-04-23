@@ -16,7 +16,7 @@ And maybe have a look to the properties around with some [RE AIgent](https://jal
 
 ## Property Costs Analytics
 
-A gantt chart is worth a zillion words:
+A **gantt chart** is worth a zillion words:
 
 ```mermaid
 pie title Property Adquisition Expenses Breakdown

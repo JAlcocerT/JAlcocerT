@@ -15,6 +15,9 @@ We come from...
 {{< /cards >}}
 
 
+https://www.youtube.com/watch?v=kaa1vPHqKdw
+
+
 ## Photo Editing
 
 Spending a lot on smartphone with cool cameras to...use snapseed?
@@ -239,6 +242,15 @@ Yes, **you can definitely apply `.cube` files to any MP4 video file** using the 
 4.  **Rendering or exporting** the video to permanently apply the color grading.
 
 So, regardless of the MP4 file itself (as long as it's a standard, decodable video), you can use `.cube` LUTs to change its color appearance using compatible software like Kdenlive or FFmpeg.
+
+#### D-log
+
+https://www.youtube.com/watch?v=-g0E4ntS8qA
+
+{{< youtube "-g0E4ntS8qA" >}}
+
+
+
 
 ### Shutter Speed
 
