@@ -753,7 +753,19 @@ git clone https://github.com/JAlcocerT/LLaMa-MCP-Streamlit
 
 ```
 
-This is going to use all the playwright tools: https://github.com/executeautomation/mcp-playwright
+This is going to use all the playwright tools: https://github.com/executeautomation/mcp-playwright at the `mcp_server.py`
+
+```py
+from mcp import StdioServerParameters
+
+server_params = StdioServerParameters(
+    command="npx",
+    args=["-y", "@executeautomation/playwright-mcp-server"],
+    env=None,
+)
+```
+
+![Streamlit Ollama MCP](https://raw.githubusercontent.com/JAlcocerT/LLaMa-MCP-Streamlit/raw/main/screenshot/streamlit-ollama-mcp.png)
 
 > Playwright Model Context Protocol Server - Tool to automate Browsers and APIs in Claude Desktop, Cline, Cursor IDE..... 🔌
 
@@ -832,3 +844,93 @@ results = ddg_answers('Python programming')
 # Output the search results
 print(results)
 ```
+
+### I improved with this one...
+
+{{< details title="Python deps management - venv uv poetry 📌" closed="true" >}}
+
+Let's break down the pros and cons of `venv`, `uv`, and `poetry` for managing Python projects:
+
+`venv` (Built-in Virtual Environment)
+
+**Pros:**
+
+* **Built-in:** It comes standard with Python 3, so no extra installation is required. This makes it readily available and easy to start with for basic isolation.
+* **Lightweight and Simple:** `venv` focuses solely on creating isolated Python environments. It's straightforward to use for basic dependency isolation.
+* **Universally Understood:** As the standard, it's the most widely understood and compatible with other Python tools and workflows. Most deployment environments and CI/CD systems have good support for `venv`-based environments.
+* **Good for Simple Projects:** For smaller projects with straightforward dependencies, `venv` can be sufficient.
+
+**Cons:**
+
+* **Basic Functionality:** It only manages the Python environment itself. It doesn't handle dependency management, locking, or packaging in a comprehensive way. You typically use `pip` and `requirements.txt` alongside it.
+* **Manual Dependency Management:** You need to manually track and update your dependencies in `requirements.txt`. This can be error-prone and doesn't guarantee reproducible builds across different environments.
+* **No Dependency Resolution:** `pip` (when used with `venv` and `requirements.txt`) doesn't have a built-in dependency resolver that ensures compatible versions of your dependencies are installed. This can lead to dependency conflicts.
+* **Limited Packaging Support:** `venv` itself doesn't provide tools for building and publishing Python packages.
+
+`uv` (Fast Package Installer and Resolver)
+
+**Pros:**
+
+* **Extremely Fast:** `uv` is written in Rust and is significantly faster than `pip` for installing and resolving dependencies. This can drastically reduce the time spent setting up and managing environments.
+* **PEP 621 Support:** It understands and utilizes the standard `pyproject.toml` file for project configuration, making it compatible with other modern Python tooling.
+* **Virtual Environment Management:** `uv` can create and manage virtual environments, often placing the `.venv` directory directly in the project root by default, which some users prefer.
+* **Faster Dependency Resolution:** Its dependency resolver is also much quicker than `pip`'s, leading to faster and more efficient environment setup.
+* **Potentially Replaces `pip` and `venv`:** `uv` aims to be a faster alternative to both `pip` and `venv` for many common tasks.
+
+**Cons:**
+
+* **Relatively New:** While promising, `uv` is a newer tool compared to `venv` and `poetry`. Its ecosystem and integration with all existing tools might still be evolving.
+* **Limited Feature Set Compared to Poetry:** While it excels at environment management and package installation, it doesn't yet have the full suite of features that `poetry` offers for packaging, publishing, and dependency management. For example, it currently doesn't have its own build backend.
+* **Learning Curve (for some):** While designed to be easy to use, switching to a new tool always involves a slight learning curve.
+* **Not a Complete Replacement for All Workflows Yet:** Depending on your specific needs, especially around complex packaging and publishing workflows, you might still need other tools in conjunction with `uv`.
+
+`poetry` (Comprehensive Dependency Management and Packaging Tool)
+
+**Pros:**
+
+* **Comprehensive Solution:** `poetry` provides a complete solution for dependency management, packaging, and publishing. It manages your virtual environment, dependencies, build process, and package publishing.
+* **Dependency Resolution:** It has a sophisticated dependency resolver that automatically finds compatible versions of your dependencies, preventing conflicts and ensuring reproducible builds with the `poetry.lock` file.
+* **`pyproject.toml` Standard:** It uses the `pyproject.toml` file (PEP 621) to store project metadata and dependencies, which is becoming the standard in the Python ecosystem.
+* **Reproducible Builds:** The `poetry.lock` file ensures that everyone working on the project uses the exact same versions of dependencies.
+* **Packaging and Publishing:** `poetry` simplifies the process of building and publishing your Python packages to PyPI.
+* **Dependency Groups:** It allows you to define different groups of dependencies (e.g., development dependencies), keeping your main project dependencies clean.
+* **Script Management:** You can define scripts within `pyproject.toml` to automate common development tasks.
+
+**Cons:**
+
+* **Overkill for Simple Projects:** For very small and simple projects with few dependencies, `poetry`'s comprehensive nature might feel like overkill.
+* **Can be Slower Than `uv` for Basic Tasks:** While its dependency resolver is powerful, the initial environment setup and dependency installation can sometimes be slower than `uv`.
+* **Abstraction Layer:** Some users prefer the more direct control offered by `venv` and `pip`. `poetry` introduces its own layer of abstraction, which might feel less transparent to some.
+* **Lock File Conflicts:** While the lock file ensures reproducibility, merge conflicts in the `poetry.lock` file can sometimes be challenging to resolve.
+
+**Here's a table summarizing the key differences:**
+
+| Feature             | `venv`                       | `uv`                             | `poetry`                                  |
+| ------------------- | ---------------------------- | -------------------------------- | ----------------------------------------- |
+| **Environment Mgmt.** | Basic creation/activation    | Fast creation/activation         | Integrated                                |
+| **Package Mgmt.** | Relies on `pip`              | Fast installation/resolution     | Integrated, with dependency resolution    |
+| **Dependency Resolution** | None (via standard `pip`)   | Fast and efficient             | Robust and automatic                      |
+| **Locking** | Requires manual `pip freeze > requirements.txt` | Uses `pyproject.toml` for constraints | `poetry.lock` for reproducible builds |
+| **Packaging** | Requires separate tools      | Limited                            | Built-in                                  |
+| **Speed** | Standard `pip` speed         | Very fast                        | Can be slower for initial setup           |
+| **Complexity** | Simplest                     | Moderate                         | More comprehensive                        |
+| **Standard Compliance** | Basic                        | Good (`pyproject.toml`)          | Excellent (`pyproject.toml`, PEP 517)   |
+| **Maturity** | Long-established standard    | Relatively new                   | Mature and widely adopted                  |
+
+{{< /details >}}
+
+{{< callout type="info" >}}
+Both uv and poetry use `pyproject.toml` to define your project's core metadata (name, version, authors) and your direct dependencies.
+{{< /callout >}}
+
+They both understand the [project] and [project.dependencies] sections to know which top-level packages your project requires.
+
+**Which one should you choose?**
+
+* **`venv`:** Best for very simple projects or when you need maximum flexibility and direct control and are comfortable managing dependencies manually with `pip` and `requirements.txt`.
+* **`uv`:** A great option if speed is a primary concern and you want a faster alternative to `pip` and `venv` for environment management and dependency installation. It's particularly appealing for its performance and adherence to modern standards.
+* **`poetry`:** Ideal for larger projects, libraries, and applications where reproducible builds, robust dependency management, and streamlined packaging are crucial. It offers a more opinionated but comprehensive workflow.
+
+Ultimately, the best choice depends on the specific needs and complexity of your Python projects and your personal preferences. 
+
+You might even find yourself using a combination of these tools in different situations. For instance, you might use `uv` for its speed in setting up environments for projects managed by `poetry`.

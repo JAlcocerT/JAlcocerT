@@ -165,6 +165,8 @@ https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
   * Or...embedable chat widget - https://www.npmjs.com/package/@n8n/chat
 
 
+![alt text](/blog_img/GenAI/NoCode-AI/n8n-ui.png)
+
 <!-- https://www.youtube.com/watch?v=0KR8e4WP0E0 -->
 
 {{< youtube "0KR8e4WP0E0" >}}

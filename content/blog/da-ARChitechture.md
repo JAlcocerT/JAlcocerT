@@ -55,7 +55,7 @@ flowchart TD
 ```
 
 
-1. An Operational Data Hub (ODH) is a central, integrated data store that serves operational systems and analytical applications with near real-time or real-time data.
+1. An **Operational Data Hub** (ODH) is a central, integrated data store that serves operational systems and analytical applications with near real-time or real-time data.
 
 It acts as a single source of truth for operational data, consolidating information from various source systems.
 
