@@ -3,7 +3,7 @@ title: "Must have BA SKILLS to work in Analytics"
 date: 2021-10-31T23:20:21+01:00
 draft: false
 tags: ["Career"]
-description: 'Summary - Business Analysis Skills for your career in Analytics.'
+description: 'Summary - Business Analysis Skills for your career in Analytics. Tools: UML, BPMN, RPA...'
 url: 'business-analytics-skills'
 ---
 
@@ -42,6 +42,10 @@ To deliver solutions that are meaningful to your client, you will need to know a
 * *Evaluation Criteria*, on the other hand, are the specific measures or characteristics used to assess and **compare different solution** alternatives.
 
 Go one step further, analyze the requirements, constraints, and goals of a project to identify any potential features or capabilities that may not have been initially considered. 
+
+{{< callout type="info" >}}
+Whenever you are creating user stories, aka tickets, consider the DoR when all the information to work on it is given.
+{{< /callout >}}
 
 This can help ensure that the solution is comprehensive, flexible, and future-proof, as well as providing a basis for prioritizing and selecting solution options.
 
@@ -153,11 +157,14 @@ They capture the **functional requirements** and help visualize how users intera
 
 ### User Stories
 
-User stories are concise, user-focused descriptions of a system's functionality.
+User stories are concise, user-focused **descriptions of a system's functionality**.
 
 They follow a specific format ("As a [user role], I want [action] so that [benefit]") and help prioritize and organize requirements from a user's perspective.
 
-I like to provide on each of the stories in Jira: Context + ASK.
+
+{{< callout type="info" >}}
+I like to provide on each of the stories in Jira: Context (for better DoR) + ASK + Acceptance Criteria (for DoD) + References to wiki.
+{{< /callout >}}
 
 ### Data Flow Diagrams
 
@@ -190,6 +197,10 @@ They can range from *low-fidelity wireframes*, which are simple and minimalistic
 *  Popular tools for creating mockups and wireframes: *Adobe XD, Sketch, Figma, Balsamiq, Axure RP, Marvel, InVision*
     * You can also use Draw.io or the [Pencil Project](https://pencil.evolus.vn/ "Pencil Project link {rel='nofollow'}") as your open source solutions.
 
+{{< callout type="info" >}}
+You can have a look to drawIO, excalidraw or mermaidJS
+{{< /callout >}}
+
 ### RACI Matrix
 
 A RACI matrix, also called a **RACI chart or responsibility assignment matrix**, is a tool used in project management to identify and assign roles and responsibilities to different stakeholders.
@@ -221,9 +232,9 @@ There are several diagramming tools used to visually represent different aspects
 
 #### Unified Modeling Language (UML)
 
-A standardized visual language used to represent and communicate the structure, behavior, and architecture of software systems.
+A standardized **visual language** that is used to represent and communicate the structure, behavior, and architecture of software systems.
 
-UML diagrams help developers and stakeholders understand complex systems more easily. 
+> UML diagrams help developers and stakeholders understand complex systems more easily. 
 
 {{% details title="Overview of five basic UML diagrams 🌍" closed="true" %}}
 
@@ -238,20 +249,90 @@ UML diagrams help developers and stakeholders understand complex systems more ea
 * Class Diagram: A class diagram depicts the static structure of a system, including its classes, attributes, methods, and relationships. Class diagrams help model the system's building blocks, providing a detailed view of its design. 
     * Key elements include classes (rectangles with three compartments for the class name, attributes, and methods), associations (lines connecting classes), and multiplicities (numbers indicating the cardinality of relationships).
 
-
 {{% /details %}}
 
 **Remember** - Understanding these basic UML diagrams is essential for anyone working with software systems, as they help convey complex concepts, facilitate communication, and provide a foundation for designing and implementing the system.
 
 * Business Process Model and Notation (BPMN): A graphical notation specifically designed for modeling business processes, including elements such as events, activities, gateways, and sequence flows.
 
-* Entity-Relationship Diagram (ERD): A diagram used to represent the relationships between entities in a database or information system, including entities, attributes, and relationships.
+{{< details title="UML vs BPMN 📌" closed="true" >}}
+
+
+UML (Unified Modeling Language) and BPMN (Business Process Model and Notation) are visual modeling languages that are invaluable tools for a Business Analyst, each serving distinct but sometimes complementary purposes. Her
+
+**UML for a Business Analyst**
+
+UML is a **standardized visual modeling language** used to specify, visualize, construct, and document the artifacts of software systems, as well as for business modeling and other non-software systems. For a Business Analyst, UML helps in understanding and communicating the structure and behavior of systems and business processes.
+
+**Key UML diagrams relevant to Business Analysts and their uses:**
+
+* **Use Case Diagrams:** These diagrams illustrate the interactions between users (actors) and the system to achieve specific goals. They are crucial for capturing functional requirements from a user's perspective, defining the scope of the system, and understanding user needs.
+* **Activity Diagrams:** These depict the flow of activities within a process or system. Business Analysts use them to model business workflows, system processes, and the sequence of actions, including decision points and parallel activities.
+* **Sequence Diagrams:** These show the interactions between objects in a system over time. They are useful for understanding the sequence of messages exchanged between different parts of a system or between actors and the system to fulfill a specific use case.
+* **Class Diagrams:** While more technical, class diagrams can help Business Analysts model the structure of an organization or business domain by showing entities (classes) and their relationships. This can be useful for understanding data structures and business rules.
+* **State Machine Diagrams:** These illustrate the different states an object can be in and the transitions between those states in response to events. This can be helpful for understanding the behavior of complex business entities or system components.
+
+**Why is UML important for a Business Analyst?**
+
+* **Visualizing Requirements:** UML provides a visual way to represent complex requirements, making them easier for stakeholders (both business and technical) to understand and validate.
+* **Improving Communication:** It offers a common language that bridges the gap between business needs and technical implementation, facilitating clearer communication among all project stakeholders.
+* **Defining Scope:** Use case diagrams, in particular, are excellent for clearly defining the boundaries of a project and the functionalities it will include.
+* **Analyzing and Designing Systems:** UML helps in analyzing existing systems and designing new ones by providing different perspectives on their structure and behavior.
+* **Documenting Requirements:** UML diagrams serve as valuable documentation that can be used throughout the software development lifecycle.
+
+**BPMN for a Business Analyst**
+
+BPMN is a graphical notation specifically designed for modeling business processes in a workflow.
+
+Its primary goal is to provide a standard notation that is easily understandable by all business stakeholders, from business analysts creating the initial drafts of the processes to the technical developers responsible for implementing them, and finally, to the business people who will manage and monitor those processes.
+
+**Key BPMN elements relevant to Business Analysts and their uses:**
+
+* **Flow Objects:** These include events (start, intermediate, end), activities (tasks, sub-processes), and gateways (decision, merge, parallel). They represent the steps and control flow of a business process.
+* **Connecting Objects:** These include sequence flows (showing the order of activities), message flows (showing the exchange of messages between participants), and associations (linking artifacts to flow objects).
+* **Swimlanes and Pools:** Pools represent major participants in a process (e.g., departments, organizations), and swimlanes within a pool represent roles or systems. They help in illustrating responsibilities and interactions between different entities.
+* **Data Objects:** These show data inputs and outputs of activities within a process.
+* **Artifacts:** These provide additional information about the process, such as annotations, groups, and text.
+
+**Why is BPMN important for a Business Analyst?**
+
+* **Process Modeling and Analysis:** BPMN is specifically designed for **mapping out existing ("as-is") processes and designing future ("to-be") processes**, making it ideal for process improvement initiatives.
+* **Stakeholder Communication:** Its intuitive symbols and standardized notation make it easier for business stakeholders to understand and provide feedback on process flows.
+* **Identifying Inefficiencies:** Visualizing processes with BPMN can help identify bottlenecks, redundancies, and areas for improvement.
+* **Requirements Elicitation:** By modeling processes, Business Analysts can uncover detailed functional and non-functional requirements related to how the business operates.
+* **Basis for Automation:** BPMN models can serve as a foundation for automating business processes using Business Process Management Systems (BPMS).
+
+**UML vs. BPMN for a Business Analyst**
+
+While both are visual modeling languages, they focus on different aspects:
+
+* **Focus:** UML primarily focuses on modeling software systems and their components, although it can be used for business modeling. BPMN is specifically designed for business process workflows.
+* **Audience:** UML diagrams can sometimes be more technical and geared towards developers. BPMN aims for broader accessibility to both business and technical stakeholders.
+* **Application:** UML is often used in software development projects for understanding system requirements and design. BPMN is widely used for business process analysis, optimization, and automation.
+
+**In practice, a Business Analyst might use both UML and BPMN:**
+
+* Use **BPMN** to model end-to-end business processes, identify areas for improvement, and communicate process flows to business stakeholders.
+* Use **UML** (especially use case, activity, and sequence diagrams) to delve deeper into the functional requirements of a system that supports those business processes and to communicate system behavior to the development team.
+
+
+{{< /details >}}
+
+{{< details title="Designing RPA Solutions with UML and BPMN 📌" closed="true" >}}
+
+* BPMN: The "to-be" BPMN diagrams will explicitly show where RPA bots will be integrated into the business process. This includes identifying the specific tasks the bots will perform and how they interact with other parts of the process (human tasks, systems, etc.).
+
+* UML: Can be used to model the software components or architecture of the RPA solution itself, although this is often more in the realm of the RPA developer. However, a Business Analyst with technical understanding might use UML to visualize how the RPA bot interacts with different applications at a higher level.
+
+{{< /details >}}
+
+* Entity-Relationship Diagram (ERD): A diagram used to represent the **relationships between entities in a database** or information system, including entities, attributes, and relationships.
 
 * Data Flow Diagram (DFD): A diagram that depicts the flow of data within a system, including processes, data stores, and external entities.
 
 * Flowcharts: A diagramming technique used to represent the flow of control or decision-making within a process, using standardized symbols such as rectangles, diamonds, and arrows.
 
-Types of diagrams and their basic opportunities:
+**Types of diagrams** and their basic opportunities:
 
 * Use Case Diagrams: Illustrate the interactions between users (actors) and the system, focusing on the functionality provided by the system.
 * Class Diagrams: Depict the static structure of a system, including classes, attributes, methods, and relationships.

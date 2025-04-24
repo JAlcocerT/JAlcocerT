@@ -266,7 +266,28 @@ For more questions, you can switch on your **[product](https://jalcocert.github.
 
 {{< /details >}}
 
-> See more questions [here](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#conclusions)
+> See more questions [here]()
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#conclusions" title="More Questions for Requirements gathering | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/business-analytics-skills/" title="Skills for BA - DoD DoR UAT... | Post ↗" >}}
+{{< /cards >}}
+
+In practice, as a Business Analyst might use both UML and BPMN:
+
+* Use BPMN to **model end-to-end business processes**, identify areas for improvement, and communicate process flows to business stakeholders.
+    * You will hear about: Microsoft Visio, LucidCharts, Miro, DrawIO,...
+* Use UML (especially use case, activity, and sequence diagrams) to delve deeper into the **functional requirements** of a system that supports those business processes and to communicate system behavior to the development team.  
+    * Lucidchart, Visio, DrawIO, [UMLet](https://github.com/umlet/umlet),...
+
+While BPMN focuses on process flow, UML can complement this by providing different perspectives:
+
+* Activity Diagrams: Can also be used to model process flows, especially when integrating system interactions.   
+* Use Case Diagrams: Help define the interactions between users and the RPA bots or the systems they interact with. This clarifies the scope and goals of the automation.
+* Sequence Diagrams: Can illustrate the interactions between the RPA bot and various systems over time, showing the sequence of actions and data exchange.   
+
+
 
 <!-- 
 referencia a persuasion escrito en jan 2022

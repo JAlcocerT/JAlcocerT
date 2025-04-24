@@ -10,6 +10,8 @@ description: 'Local TTS Tools with Coqui and LocalAI. Clone audio with xTTS2.'
 url: local-ai-audio
 ---
 
+https://platform.openai.com/playground/tts
+
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat Project ↗" >}}

@@ -3,7 +3,7 @@ title: "AI Multi Agents: PyAutogen, LangGraph,..."
 date: 2025-04-10T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Reviewing the most Popular AI Agents frameworks: AG2AI (AutoGen), CrewAI, LangChain,...'
+description: 'Reviewing the most Popular AI Agents frameworks: From AG2AI (AutoGen), CrewAI, LangChain,...to MCPs'
 url: 'ai-multi-agents-frameworks'
 ---
 
@@ -493,7 +493,18 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 ## Conclusions
 
 * https://platform.openai.com/logs
+    * https://platform.openai.com/playground/prompts?models=gpt-4.1
 
+* Ive also started to use: https://windsurf.com/pricing
+    * https://windsurf.com/editor/download-linux
+
+```sh
+curl -fsSL "https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/windsurf.gpg" | sudo gpg --dearmor -o /usr/share/keyrings/windsurf-stable-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/windsurf-stable-archive-keyring.gpg arch=amd64] https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/apt stable main" | sudo tee /etc/apt/sources.list.d/windsurf.list > /dev/null
+
+sudo apt-get update
+sudo apt-get upgrade windsurf
+```
 
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
@@ -573,6 +584,8 @@ For that, **the app we are building must have an MCP client**: https://modelcont
 * https://github.com/cline/cline
 * https://github.com/lastmile-ai/mcp-agent
     * https://github.com/lastmile-ai/openai-agents-mcp
+* https://modelcontextprotocol.io/clients#windsurf-editor
+    * This was known as codeium!
 * Agents can be aware of the tools inside the MCP server - https://openai.github.io/openai-agents-python/mcp/
 
 
@@ -729,7 +742,24 @@ Model Context Protocol (MCP) is an open standard designed to **connect large lan
 This protocol, introduced by Anthropic, simplifies the integration process for developers, making it easier to build context-aware applications without the need for custom coding for each combination of AI model and external system.
 
 
-### Example
+#### MCP Streamlit Ollama
+
+{{< callout type="info" >}}
+Thanks to https://github.com/Nikunj2003/LLaMa-MCP-Streamlit
+{{< /callout >}}
+
+```sh
+git clone https://github.com/JAlcocerT/LLaMa-MCP-Streamlit
+
+```
+
+This is going to use all the playwright tools: https://github.com/executeautomation/mcp-playwright
+
+> Playwright Model Context Protocol Server - Tool to automate Browsers and APIs in Claude Desktop, Cline, Cursor IDE..... 🔌
+
+
+
+#### Example
 
 Breakdown of the libraries in your `pyproject.toml` that are commonly used for Artificial Intelligence and Machine Learning:
 
@@ -771,7 +801,7 @@ The other libraries in your `dependencies` list serve different purposes:
 
 {{< details title="More about Solara - ReACT Framework 📌" closed="true" >}}
 
-https://github.com/widgetti/solara
+* https://github.com/widgetti/solara
 
 > A Pure Python, React-style Framework for Scaling Your Jupyter and Web Apps
 

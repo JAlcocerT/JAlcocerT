@@ -9,6 +9,10 @@ url: 'music-with-ai-tools'
 
 
 
+https://www.youtube.com/watch?v=lBsv-ssPJpo
+
+https://www.youtube.com/watch?v=OM2FyFxzeRM
+
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/local-ai-audio" title="Local AI Audio 101 ↗ " >}}
