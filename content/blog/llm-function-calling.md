@@ -7,14 +7,17 @@ description: "Testing function calling with OpenAI Models. OpenAI Functions"
 url: "how-to-use-openai-function-calling"
 ---
 
-How to make so that LLMs are using our already built tools?
+How to make so that LLMs will be using our already built tools?
 
 ## Function Calling
 
-Let's imagine you have a super smart assistant (that's your LLM) who can understand your requests in natural language. However, sometimes you don't just want an answer in words; you want the assistant to *do* something in the real world based on your request. That's where function calling comes in.
+Let's imagine you have a super smart assistant (that's your LLM) who can understand your requests in natural language. 
+
+However, sometimes you don't just want an answer in words; you want the assistant to *do* something in the real world based on your request. 
+
+That's where function calling comes in.
 
 {{< details title="**Think of it like this:** 📌" closed="true" >}}
-
 
 You ask your assistant: "What's the weather like in Warsaw?"
 
@@ -105,7 +108,7 @@ The functions you define serve as an abstraction layer, making it easier for the
 You define the function's purpose and the LLM intelligently decides when and how to use it, including making the necessary API calls within that function's implementation.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multi-Chat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI" title="Multi-Chat Soure Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Testing Function Calling with OpenAI" >}}
 {{< /cards >}}
 
 
@@ -265,9 +268,8 @@ Groq function calling via LiteLLM - https://docs.litellm.ai/docs/providers/groq#
 * https://mer.vin/2024/07/ollama-tool-call-example/
 
 
-https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama
-
-https://ollama.com/library/llama3.2
+* https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama
+* https://ollama.com/library/llama3.2
 
 ```sh
 ollama run llama3.2
@@ -490,7 +492,7 @@ print(completed_message)
 
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_mtg.py" title="See the script ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_mtg.py" title="See the script to use the API with System Prompt ↗" >}}
 {{< /cards >}}
 
 ---
@@ -579,12 +581,9 @@ The **choice between function calling agents and ReACt agents** depends on the l
 
 Function calling agents provide ease of use but less control, while ReACt agents offer more control but require more effort from the developer.
 
-
 LangChain - AgentsExecutors
 
 * https://api.python.langchain.com/en/latest/agents/langchain.agents.agent.AgentExecutor.html
-
-
 
 * https://aman.ai/primers/ai/agents/
 

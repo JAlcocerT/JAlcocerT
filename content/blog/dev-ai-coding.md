@@ -17,7 +17,7 @@ But how about creating websites with....
 ## Firebase Studio
 
 * https://studio.firebase.google.com/
-
+* https://firebase.google.com/docs/studio/get-started-import?import_type=source
 
 ## CLI Based
 

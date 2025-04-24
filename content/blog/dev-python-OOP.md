@@ -1,13 +1,13 @@
 ---
 title: "OOP 101 "
-date: 2025-04-24
+date: 2025-09-24
 draft: false
 tags: ["Dev"]
-description: 'Object Oriented Programming for Python users.'
+description: 'Object Oriented Programming for Python users'
 url: 'object-oriented-programming-101'
 ---
 
-gabemorris12-mechanism-project-setup
+https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
 
 {{< callout type="info" >}}
 And with an 

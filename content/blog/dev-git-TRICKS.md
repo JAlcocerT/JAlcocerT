@@ -223,6 +223,9 @@ Diagrams/Wireframes...
 
 #excalidraw https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor
 ext install pomdtr.excalidraw-editor
+
+#formatter #https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+ext install esbenp.prettier-vscode
 ```
 
 

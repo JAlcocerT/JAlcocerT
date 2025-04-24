@@ -211,6 +211,10 @@ python3 scraping-ask-v2.py > comments_property_alijares.mdx
 
 ### RoomGPT for Real Estate
 
+Whats great?
+
+Given a photo of a room and a prompt...you can re-imagine how everything could potentially look like:
+
 * https://github.com/Nutlope/roomGPT
 
 > MIT | Upload a photo of your room to generate your dream room with AI.

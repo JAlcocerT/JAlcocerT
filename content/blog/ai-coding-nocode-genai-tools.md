@@ -3,7 +3,7 @@ title: "No Code Tools to use Gen AI"
 date: 2025-04-17T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Generative AI made simple. Flowise, '
+description: 'Generative AI made simple. Flowise, n8n, Tg...AI Powered Chat bots!'
 url: 'no-code-ai-tools'
 ---
 
@@ -140,13 +140,18 @@ But that might cause friction on users having to leave your home/services page.
 {{< youtube "1Q_MDOWaljk" >}}
 
 
+
+{{< callout type="info" >}}
+
+{{< /callout >}}
+
 2. N8N
 
 * https://github.com/n8n-io/self-hosted-ai-starter-kit
 
 > The Self-hosted AI Starter Kit is an open-source template that quickly sets up a local AI environment. Curated by n8n, it provides essential tools for creating secure, self-hosted AI workflows.
 
-
+<!-- https://www.youtube.com/watch?v=xQ1tCQZhLaI -->
 
 <!-- 
 https://drive.google.com/file/d/1QIyrIOWJFperDhzuvgDlB2xQCZ-eo79a/view
@@ -157,9 +162,15 @@ https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
 
 * You can build cool things with these:
   * https://formbricks.com/docs/xm-and-surveys/core-features/integrations/n8n
+  * Or...embedable chat widget - https://www.npmjs.com/package/@n8n/chat
 
 
-https://www.youtube.com/watch?v=dC2Q_cyzgjg
+<!-- https://www.youtube.com/watch?v=0KR8e4WP0E0 -->
+
+{{< youtube "0KR8e4WP0E0" >}}
+
+
+<!-- https://www.youtube.com/watch?v=dC2Q_cyzgjg -->
 
 {{< youtube "dC2Q_cyzgjg" >}}
 
