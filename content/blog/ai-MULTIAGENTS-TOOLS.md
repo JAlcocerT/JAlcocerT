@@ -492,6 +492,8 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 
 ## Conclusions
 
+* https://platform.openai.com/logs
+
 
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
@@ -504,6 +506,32 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 
 
 **MCP** aka Model Context Protocol - https://openai.github.io/openai-agents-python/mcp/
+
+* https://modelcontextprotocol.io/introduction
+
+
+<!-- https://www.youtube.com/watch?v=Ek8JHgZtmcI&t=333s -->
+{{< youtube "Ek8JHgZtmcI" >}}
+
+
+Currently, the MCP spec defines [two kinds of servers](https://openai.github.io/openai-agents-python/mcp/#mcp-servers), based on the transport mechanism they use:
+
+* stdio servers run as a subprocess of your application. You can think of them as running "locally".
+* HTTP over SSE servers run remotely. You connect to them via a URL.
+
+
+{{< details title="stdio vs http over SSE 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+
+MCP servers can be added to Agents.
+
+The Agents SDK will call `list_tools()` on the MCP servers each time the Agent is run.
+
+This makes the LLM aware of the MCP server's tools. When the LLM calls a tool from an MCP server, the SDK calls `call_tool()` on that server.
 
 * https://github.com/openai/openai-agents-python/tree/main/examples/mcp
 

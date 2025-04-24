@@ -3,7 +3,7 @@ title: "AI with Vision - Image2Text"
 date: 2025-04-09T00:20:21+01:00
 draft: false
 #tags: ["Gen-AI","Self-Hosting","Docker"]
-description: 'LLaVa, OpenAI Vision Models. Ask questions about images.'
+description: 'LLaVa, OpenAI Vision Models. Ask questions about images or design your perfect room with roomGPT.'
 url: 'ai-vision-models'
 ---
 
@@ -162,7 +162,7 @@ if __name__ == "__main__":
 OpenAI Vision API Crash Course - Chat with Images (Node)
 
 
-https://www.youtube.com/watch?v=ZjkS11DSeEk
+* https://www.youtube.com/watch?v=ZjkS11DSeEk
 
 ### LLaVa
 
@@ -208,6 +208,12 @@ python3 scraping-ask-v2.py > comments_property_alijares.mdx
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Image" title="OpenAI Vision Script ↗ " >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Image/scraping-ask-v2.py" title="real Estate Scrap + ScriptVision ↗" >}}
 {{< /cards >}}
+
+### RoomGPT for Real Estate
+
+* https://github.com/Nutlope/roomGPT
+
+> MIT | Upload a photo of your room to generate your dream room with AI.
 
 ---
 

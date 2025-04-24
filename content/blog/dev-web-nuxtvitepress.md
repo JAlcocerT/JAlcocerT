@@ -1,6 +1,6 @@
 ---
 title: "Trying new SSGS Nuxt & VitePress [and a SSG Recap]"
-date: 2025-04-23
+date: 2025-10-23
 draft: false
 tags: ["dev"]
 description: 'Testing NUXT & VitePress Themes. Looking back to the learnings with other SSGs like HUGO and Astro.'

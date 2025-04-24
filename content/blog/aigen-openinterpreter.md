@@ -14,14 +14,15 @@ description: 'A guide to use OpenInterpreter. Locally and with Free LLM Agents p
 url: 'openinterpreter-ollama'
 ---
 
-https://www.youtube.com/watch?v=xPd8FFzIeOw
-https://www.youtube.com/watch?v=BNgFLqBg1P0
+* https://www.youtube.com/watch?v=xPd8FFzIeOw
+* https://www.youtube.com/watch?v=BNgFLqBg1P0
 
 If you ever dream about having a **natural language interface to control your computer**, that dream has become true.
 
 
 
 {{< dropdown title="Dropdown Example 👇" closed="true" >}}
+
 {{< /dropdown >}}
 
 
