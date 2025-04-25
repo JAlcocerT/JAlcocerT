@@ -729,7 +729,7 @@ So, when you see APHYRate values, they will typically be expressed in Megabits p
 
 ## Conclusions
 
-Having this Telco experience made me learn many things.
+Having this **Telco experience** made me learn many things.
 
 Starting by the importance of proper **Operational Data Hubs**.
 
@@ -741,23 +741,9 @@ Starting by the importance of proper **Operational Data Hubs**.
 {{< /cards >}}
 
 
-Data types, extracting info from s3 buckets,...
+Data types understanding, Data Modelling techniques, Data Profiling, [extracting info from s3 buckets](https://jalcocert.github.io/JAlcocerT/aws-s3-python-boto-queries),...
 
-```sh
-#Install aws CLI 
-#https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-
-#Check that it is installed with:
-aws --version
-
-#Configure it with the credentials:
-aws configure
-
-#Explore the buckets with: 
-aws s3 ls
-```
-
-Not just D&A Tech stuff.
+...But Not just D&A Tech stuff.
 
 But concepts around it as well. Starting from [effective meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner)...
 

@@ -8,12 +8,22 @@ url: 'selfhosted-apps-spring-2025'
 ---
 
 
-It all started with...
+It all started with a quick way to setup apps with Docker...
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="SelfHosting 101 Script 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="SelfHosting 101 Script to get containers, tailscale and more ready to go! 🐋 ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/benchmarking-computers/#internet-benchmark" title="BenchMarking Computers ↗" >}}
 {{< /cards >}}
+
+...and it has continued to surprise me.
+
+Recently I was [reviewing the OS's](https://jalcocert.github.io/JAlcocerT/os-for-nas/) I would consider as of today for my homelab
+
+> PS: give a try to ubuntu as dual boot (and check Ventoy!)
+
+What else?
+
+I had to debug tailscale VPN like so:
 
 ```sh
 sudo tailscale status | grep -v "offline"
@@ -27,9 +37,14 @@ nmap 100.pi.home.address
 #ip route | grep default #modem local ip!
 ```
 
+But still its my go to!
+
+> Actually, if you are new to homelabs, id recommend you to get: containers, tailscale VPN and [nextcloud](#nextcloud) as the very first project
 
 
 ## New SelfHosted Apps
+
+I have tried few containerized apps lately...
 
 But first, new Selfhosting ways, with PODMAN:
 
