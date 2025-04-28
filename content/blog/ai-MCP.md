@@ -3,13 +3,24 @@ title: "The new next thing - Model Context Protocol"
 date: 2025-04-24T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Reviewing how MCP works'
+description: 'Reviewing how MCP protocol works. From LangGraph to OpenAI Agents. Example with: MCP Server Streamlit with Ollama + '
 url: 'ai-understanding-mcp-framework'
 ---
 
+1. [What](#mcp) it is Model Context Protocol?
+2. [MCP Examples](#mcp-examples)
+
+* MCP server example from AlejandroAO that integrates the tools to Claude Desktop and Claude code (those being the MCP clients)
+    * https://github.com/alejandro-ao/mcp-server-example
+
+* [MCP with Streamlit and Ollama](#mcp-streamlit-ollama)
+    * https://github.com/Nikunj2003/LLaMa-MCP-Streamlit
+
+* MCP with LangChain
+    * https://github.com/langchain-ai/langchain-mcp-adapters
 
 
-### MCP
+## MCP
 
 
 {{< callout type="info" >}}
@@ -28,6 +39,73 @@ Very cool uses cases for MCP - https://github.com/punkpeye/awesome-mcp-servers
 
 * https://modelcontextprotocol.io/introduction
 
+### Before Starting with MCP...
+
+
+1. Agents
+
+2. LangGraph vs LangChain
+
+* **LangChain:** Primarily focuses on creating **linear or sequential graphs**, often represented as **Directed Acyclic Graphs (DAGs)**. The flow of execution typically moves in one direction without looping back in the same execution.
+
+* **LangGraph:** Creates **stateful graphs** that allow for much more **complex workflows**. The key difference is the ability to have **cycles** and maintain a persistent **state** across the graph's execution. This enables iterative processes, conditional looping, multi-agent interactions with memory, and more dynamic control flow.
+
+LangGraph builds upon the foundation of LangChain's capabilities but adds the crucial elements of state management and cyclical execution to handle more sophisticated and agentic applications.
+
+
+{{< callout type="info" >}}
+Think about LangChain as the ~ building blocks and LangGraph as Orchestration Framework for Agents
+{{< /callout >}}
+
+
+{{< details title="More about LangGraph... 📌" closed="true" >}}
+
+- The system supports **dynamic state management**, maintaining context and ensuring coherent interactions across different agents.
+- **Fault tolerance** is built in, meaning the system can recover from failures in individual agents.
+- LangGraph is **flexible and customizable**, supporting custom agent logic and communication protocols.
+- It is scalable, suitable for **enterprise-level applications**, and excels in handling complex workflows with a high volume of interactions.
+
+- The framework is particularly useful for applications like **chatbots**, **retrieval-augmented generation (RAG)** systems, and **self-correcting agents**.
+
+That's a nuanced but important distinction. Here's a breakdown:
+
+**LangChain's Approach to Agents:**
+
+* **Provides the Building Blocks:** LangChain offers a comprehensive set of modules and abstractions for building agents. This includes:
+    * **Agent Types:** Various pre-designed agent architectures (like ReAct, OpenAI Functions Agent, etc.) that define how the agent reasons and acts.
+    * **AgentExecutor:** A runtime that drives the agent's execution loop (observe, think, act).
+    * **Tools:** Interfaces for agents to interact with the outside world (search, calculators, databases, etc.).
+    * **Toolkits:** Collections of related tools.
+    * **Prompting Strategies:** Guidelines for crafting prompts that guide the agent's behavior.
+    * **Memory:** Components to allow agents to retain information from previous interactions.
+
+* **Requires Assembly:** While LangChain provides all the necessary components, you still need to **assemble and configure** these pieces to create a functional agent. You choose the agent type, provide the LLM, select the tools, and set up the memory.
+
+* **Focus on Flexibility:** LangChain's agent framework is designed to be flexible, allowing you to customize various aspects of the agent's behavior.
+
+**LangGraph's Approach to Agents:**
+
+* **Orchestration Framework for Agents:** LangGraph is specifically designed as an **orchestration framework** for building more complex and stateful **agentic workflows**. It provides a lower-level and more controllable way to define the interactions between different components, which are often agents themselves or tools used by agents.
+
+* **Graph-Based Structure for Agent Interactions:** LangGraph uses a graph structure where nodes can represent individual agents, tools, or decision points. Edges define how the control and information flow between these nodes.
+
+* **Emphasis on Stateful, Multi-Actor Systems:** LangGraph excels at managing the state of complex, multi-agent systems where different agents might need to collaborate, iterate, or react to each other's outputs over multiple steps.
+
+* **Greater Control and Customization:** LangGraph offers more granular control over the agent's thought process and execution flow compared to some of LangChain's higher-level `AgentExecutor` abstractions. This allows for building highly customized agent behaviors, including human-in-the-loop integration and more sophisticated control logic.
+
+
+
+{{< /details >}}
+
+**Recommendation for Building Agents:** The LangChain documentation itself now often **recommends using LangGraph for building agents**, especially for more sophisticated and customized use cases, as it overcomes some limitations of the traditional `AgentExecutor`.
+
+**In essence:**
+
+* **LangChain provides the foundational tools and concepts for building agents, but you need to put them together.** It offers various agent "recipes" (agent types) but still requires you to do the cooking.
+* **LangGraph is a framework that helps you design and orchestrate the entire "kitchen" for complex agent interactions.** It gives you more control over how different agents and tools work together in a stateful and potentially cyclical manner.
+
+
+### MCP Examples
 
 <!-- https://www.youtube.com/watch?v=Ek8JHgZtmcI&t=333s -->
 {{< youtube "Ek8JHgZtmcI" >}}
@@ -292,3 +370,154 @@ server_params = StdioServerParameters(
 
 
 > Playwright Model Context Protocol Server - Tool to automate Browsers and APIs in Claude Desktop, Cline, Cursor IDE..... 🔌
+
+
+#### MCP with LangChain
+
+This library provides a lightweight wrapper that makes Anthropic Model Context Protocol (MCP) tools compatible with LangChain and LangGraph.
+
+* https://github.com/langchain-ai/langchain-mcp-adapters
+    * https://pypi.org/project/langchain-mcp-adapters/
+
+Understand first:
+
+* https://pypi.org/project/langgraph/
+    * https://github.com/langchain-ai/langgraph
+    * https://langchain-ai.github.io/langgraph/
+
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langgraph,type=Date)](https://star-history.com/langchain-ai/langgraph&Date)
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,langchain-ai/langgraph,Sinaptik-AI/pandas-ai,mlflow/mlflow,langfuse/langfuse&,type=Date)](https://star-history.com/langchain-ai/langchain&langchain-ai/langgraph&Sinaptik-AI/pandas-ai&mlflow/mlflow&langfuse/langfuse&Date)
+
+
+
+LangGraph works with multiple LLM providers:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="OpenAI... ↗" >}}
+  {{< card link="https://console.anthropic.com/settings/plans" title="Anthropic... ↗" >}}
+{{< /cards >}}
+
+> 🛠️ Convert MCP tools into LangChain tools that can be used with LangGraph Agents
+
+{{< callout type="info" >}}
+For observability, you can plug langgraph with langfuse - https://langfuse.com/docs/integrations/langchain/example-python-langgraph
+{{< /callout >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects" title="I tinkered with LangFuse on this post... ↗" image="/blog_img/GenAI/langfuse-webui.png" subtitle="Observability for LangGraph" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse" title="LangFuse Docker Config... ↗" >}}
+{{< /cards >}}
+
+![alt text](/)
+
+
+
+{{% details title="More about LangGraph - New fwk built on top of LangChain 🚀" closed="true" %}}
+
+Think of it as a way to orchestrate complex, multi-actor workflows in a more structured and robust manner than just chaining together LangChain components.
+
+**What is LangGraph?**
+
+At its core, LangGraph allows you to define a **stateful graph** where each node in the graph represents a step in your workflow. These steps can involve:
+
+* **LLM calls:** Interacting with language models.
+* **Tools:** Executing external functions or APIs (like search, calculators, databases).
+* **Conditional logic:** Making decisions based on the current state.
+* **Loops:** Repeating steps based on certain conditions.
+* **Transitions:** Defining how the workflow moves from one node to another.
+
+The "stateful" aspect is crucial. LangGraph manages a state object that evolves as the workflow progresses through the graph. Each node can update this state, and subsequent nodes can access and utilize the information in the state. This makes it easier to build more sophisticated and context-aware applications.
+
+**Key Concepts in LangGraph:**
+
+* **Nodes:** The building blocks of your graph. Each node typically performs a specific action (e.g., call an LLM, use a tool).
+* **Edges:** Define the transitions between nodes. You can have simple linear transitions or more complex conditional transitions.
+* **State:** A shared object that holds information relevant to the entire workflow. Nodes can read from and write to this state.
+* **Graph:** The overall structure that connects nodes and edges, defining the flow of the application.
+
+**Can LangGraph be used with Agents?**
+
+**Absolutely, and this is one of its most powerful use cases!** LangGraph is specifically designed to address some of the complexities involved in building and managing sophisticated agent workflows.
+
+Here's why LangGraph is a great fit for agents:
+
+* **Structured Agent Loops:** Traditional LangChain agents often involve a loop of "observe-think-act". LangGraph provides a more explicit and manageable way to define this loop as a cycle within the graph. You can clearly define the "observe" node (e.g., getting the latest tool output), the "think" node (the LLM deciding the next action), and the "act" node (executing a tool).
+* **Complex Decision Making:** Agents often need to make complex decisions about which tool to use or how to respond. LangGraph's conditional edges allow you to define different paths in the graph based on the LLM's output or the current state. For example, if the LLM decides to use a search tool, the workflow can transition to a "search" node; otherwise, it might transition to a "final answer" node.
+* **Handling Multiple Actors:** In more advanced agent scenarios, you might have multiple "actors" or specialized agents working together. LangGraph can represent these different actors as nodes in the graph, with clear transitions defining how they interact and pass information.
+* **Improved Observability and Debugging:** The explicit graph structure in LangGraph can make it easier to understand the flow of your agent and debug issues. You can visualize the graph and track the state as it evolves through the different nodes.
+* **State Management for Context:** Agents need to maintain context over multiple interactions. LangGraph's state management makes it easier to carry information (like previous observations, goals, and intermediate results) between different steps in the agent's reasoning process.
+* **Customizable Agent Behavior:** LangGraph provides a flexible framework for building agents with highly customized behaviors. You're not limited to predefined agent types; you can design the exact flow and decision-making process you need.
+
+LangGraph is a powerful tool for building more complex and manageable workflows, and it's particularly well-suited for creating sophisticated and customizable agents with structured reasoning and decision-making processes.
+
+{{% /details %}}
+
+**In essence, LangGraph provides a more robust and structured way to build the "control flow" of your agents.** Instead of relying on the often implicit looping and decision-making within the agent's prompt and LLM output parsing, LangGraph makes these aspects explicit in the graph definition.
+
+
+
+{{% details title="Wait, but then...LangChain vs LangGraph 🚀" closed="true" %}}
+
+LangChain's core concept for structuring sequences of operations is indeed **chains**, and these chains are typically represented as **Directed Acyclic Graphs (DAGs)**.
+
+**Directed Acyclic Graph (DAG):**
+
+* **Directed:** The flow of data and execution has a specific direction from one step to the next.
+* **Acyclic:** There are no loops or cycles in the graph. Once a step is executed, you don't go back to a previous step in the same execution flow.
+
+This DAG structure is excellent for many tasks where you have a clear sequence of operations, like:
+
+* Retrieval then generation
+* Summarization of multiple documents
+* Question answering over a knowledge base
+
+**LangGraph's Structure:**
+
+LangGraph, on the other hand, is built around the concept of **Stateful Graphs**. While it can certainly represent DAGs, its key advantage lies in its ability to create more complex workflows that can include **cycles**.
+
+**Stateful Graph:**
+
+* **Nodes:** Represent individual steps or actors (which can be LangChain runnables, tools, or even other LangGraph graphs).
+* **Edges:** Define the transitions between nodes. LangGraph supports different types of edges, including:
+    * **Direct Edges:** Unconditional flow from one node to another.
+    * **Conditional Edges:** The next node to execute is determined based on the current state of the graph.
+    * **Cyclic Edges:** Allow the workflow to loop back to previous nodes based on certain conditions.
+* **State:** A central piece of data that is passed between nodes and can be updated by them. This state allows the graph to maintain context across multiple steps and iterations.
+
+**How LangGraph Enables More Complex Workflows:**
+
+The ability to have cycles and manage state explicitly allows LangGraph to implement more sophisticated agentic behaviors, such as:
+
+* **Iterative Reasoning:** An agent might go through a thought-process loop multiple times, refining its answer or plan based on intermediate results.
+* **Tool Use with Feedback:** An agent can use a tool, observe the result, and then decide whether to use another tool, revise its approach, or respond to the user. This often involves looping back to a decision-making step.
+* **Multi-Agent Collaboration:** Different agents can interact and exchange information within the graph, with the flow of interaction potentially involving cycles until a final goal is reached.
+* **Human-in-the-Loop:** The graph can pause at certain points to get human feedback and then resume execution based on that input, potentially revisiting previous steps.
+
+
+{{% /details %}}
+
+
+
+**In essence:**
+
+* **LangChain** focuses on building linear/sequential or acyclic sequences (DAGs) of operations.
+* **LangGraph** provides a framework for building more complex, **stateful workflows that can include cycles**, enabling more advanced agentic capabilities.
+
+Think of LangChain as providing the individual building blocks and simple recipes, while LangGraph provides a more advanced orchestration system that allows you to create intricate and dynamic processes with feedback loops and persistent memory.
+
+{{< callout type="info" >}}
+LangGraph can structure the core agent loop of thinking, acting (using a tool), and observing the result, with clear conditions for continuing the loop or finishing.
+{{< /callout >}}
+
+* https://github.com/von-development/awesome-LangGraph
+
+>  A curated list of awesome projects, resources, and tools for building stateful, multi-actor applications with LangGraph 🦜🕸️ 
+
+<!-- https://www.youtube.com/watch?v=WAV66F-Zbio -->
+
+{{< youtube "WAV66F-Zbio" >}}

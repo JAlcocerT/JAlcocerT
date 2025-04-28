@@ -38,7 +38,7 @@ pip install -r requirements.txt #all at once
 streamlit run claude.py
 ```
 
-> that project also supports OpenAI Models
+> That project also supports OpenAI Models!
 
 * https://docs.anthropic.com/en/prompt-library/library
 * https://docs.anthropic.com/en/docs/about-claude/models
