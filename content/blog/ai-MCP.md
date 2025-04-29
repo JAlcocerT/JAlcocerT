@@ -44,6 +44,11 @@ Very cool uses cases for MCP - https://github.com/punkpeye/awesome-mcp-servers
 
 1. Agents
 
+{{< cards >}}
+  {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
+  {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs...Source Code" >}}
+{{< /cards >}}
+
 2. LangGraph vs LangChain
 
 * **LangChain:** Primarily focuses on creating **linear or sequential graphs**, often represented as **Directed Acyclic Graphs (DAGs)**. The flow of execution typically moves in one direction without looping back in the same execution.
@@ -104,6 +109,91 @@ That's a nuanced but important distinction. Here's a breakdown:
 * **LangChain provides the foundational tools and concepts for building agents, but you need to put them together.** It offers various agent "recipes" (agent types) but still requires you to do the cooking.
 * **LangGraph is a framework that helps you design and orchestrate the entire "kitchen" for complex agent interactions.** It gives you more control over how different agents and tools work together in a stateful and potentially cyclical manner.
 
+It would be great if you **understand what state graphs** are: https://mermaid.js.org/syntax/stateDiagram.html or with https://graphviz.readthedocs.io/en/stable/
+
+
+{{< details title="More about State Graphs for LangGraph... 📌" closed="true" >}}
+
+Yes, that's correct! **LangGraph utilizes the concept of state graphs as its fundamental structure for defining the flow and logic of your LLM application or agent.** Understanding state graphs is key to effectively using LangGraph.
+
+Think of a state graph as a way to model the different stages or conditions your application can be in, and how it transitions between these states based on certain events or outputs. In the context of LangGraph and LLMs, these states often represent the current information the agent has, the stage of a task it's in, or the outcome of a previous step.
+
+Here's a breakdown to help you understand state graphs in LangGraph:
+
+**Core Components of a LangGraph State Graph:**
+
+1.  **Nodes:**
+    * Represent individual steps or operations in your application's flow.
+    * These nodes can be:
+        * **LLM Calls:** Invoking a language model with a specific prompt.
+        * **Tool Calls:** Executing external tools (like search engines, calculators, APIs).
+        * **Functions:** Running Python code to process data or make decisions.
+        * **Control Flow Logic:** Implementing conditional branching or loops.
+    * Each node takes the current state as input and produces an output that updates the state.
+
+2.  **Edges:**
+    * Represent the transitions between nodes. They define the possible paths the application can take.
+    * Edges can be:
+        * **Direct Edges:** An unconditional transition from one node to the next. After one node finishes, the flow always goes to the connected node.
+        * **Conditional Edges:** Transitions that depend on the output of a node or the current state. These allow for branching logic, where the next node to be executed is determined dynamically.
+
+3.  **State:**
+    * A central piece of information that is passed between nodes as the graph is traversed.
+    * The state is typically a dictionary containing all the relevant data the application needs to operate, such as:
+        * User input.
+        * LLM outputs from previous steps.
+        * Results from tool calls.
+        * Internal variables or flags.
+    * Each node in the graph takes the current state as input and returns an update to this state.
+
+**How to Understand State Graphs in LangGraph:**
+
+1.  **Visualize the Flow:** The best way to understand a LangGraph is often to visualize it. Imagine a flowchart where each box is a node (an action or step) and the arrows are the edges (transitions). Some arrows might have conditions attached to them.
+
+2.  **Track the State:** Follow the state as it moves through the graph. See how each node consumes the current state and modifies it with its output. Understanding what information is being carried along is crucial.
+
+3.  **Identify the Entry and Exit Points:** A LangGraph typically has a starting node where the process begins and potentially one or more end nodes or conditions where the process might terminate.
+
+4.  **Analyze the Edges:** Pay close attention to the types of edges. Are they direct or conditional? What determines which path is taken when there are conditional edges? This reveals the decision-making logic of the graph.
+
+5.  **Consider Cycles (Loops):** LangGraph allows for cycles in the graph, enabling iterative processes or the ability to revisit previous steps based on certain conditions. Understand what triggers these loops and how they eventually terminate.
+
+**Analogy:**
+
+Think of a board game with different spaces (nodes) and rules for moving between them (edges). The current position of your game piece and any resources you've collected (state) determine where you can go next. Some spaces might always lead to the same next space, while others might have different paths depending on a dice roll (a condition based on the output of a node).
+
+**Example Scenario (Simplified):**
+
+Imagine a simple agent that answers questions using a knowledge base. A LangGraph for this might look like:
+
+1.  **`Get User Query` (Node):** Takes user input and adds it to the state.
+2.  **`Determine Search Keywords` (Node/LLM Call):** Takes the user query from the state and uses an LLM to extract relevant keywords, updating the state with these keywords.
+3.  **`Search Knowledge Base` (Node/Tool Call):** Takes the keywords from the state, performs a search, and adds the search results to the state.
+4.  **`Generate Answer` (Node/LLM Call):** Takes the user query and search results from the state and uses an LLM to generate an answer, updating the state with the answer.
+5.  **`Respond to User` (Node):** Takes the generated answer from the state and presents it to the user.
+
+The edges would likely be direct transitions between these nodes in this simple example. A more complex scenario might involve conditional edges to handle cases where no relevant information is found in the knowledge base, requiring the agent to ask clarifying questions or try a different approach.
+
+
+{{< /details >}}
+
+
+**In essence, understanding LangGraph's state graphs involves grasping how information flows through a series of interconnected steps, with the "state" acting as the central data container that is modified and used to make decisions about the next steps.** By visualizing the graph and tracking how the state evolves, you can gain a clear understanding of the application's logic and behavior.
+
+```mermaid
+stateDiagram
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+
+3. What it is a RAG?
+
+
 
 ### MCP Examples
 
@@ -155,6 +245,8 @@ The idea of the MCP (protocol) is that we will be able to **connect a given app 
 In rest APIs there are few http verbs like get, post, path, put, delete...with MCP, we are concerned mainly about resources (file, dbs...) and tools (action)
 {{< /callout >}}
 
+Thanks to **fastMCP** we can quickly build a **MCP Server**:
+
 * https://github.com/jlowin/fastmcp
     * https://gofastmcp.com/getting-started/welcome
 
@@ -170,10 +262,13 @@ pip install fastmcp
 For that, **the app we are building must have an MCP client**: https://modelcontextprotocol.io/clients
 
 * https://modelcontextprotocol.io/clients#claude-code
+
 * https://github.com/continuedev/continue
+
 * https://github.com/cline/cline
 * https://github.com/lastmile-ai/mcp-agent
     * https://github.com/lastmile-ai/openai-agents-mcp
+
 * https://modelcontextprotocol.io/clients#windsurf-editor
     * This was known as codeium!
 * Agents can be aware of the tools inside the MCP server - https://openai.github.io/openai-agents-python/mcp/

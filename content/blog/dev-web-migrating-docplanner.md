@@ -7,14 +7,16 @@ description: 'From DocPlanner to owning a responsive Website with Astro. The jor
 url: 'docplanner-web-migration'
 ---
 
+Recently, I was talking with a friend and we found out about:
 
+Competitors / The initial site:
 
-* Competitors / The initial site:
     * https://www.docplanner.com/
     * https://www.doktortakvimi.com/
         * https://pro.doktortakvimi.com/fiyatlandirma
     * https://www.psikolognevinkeskin.com/
     * https://www.psikolojisaati.com/
+
 * Chosen Domain: `psikolognevinkeskin.info`
 
 {{< callout type="warning" >}}
