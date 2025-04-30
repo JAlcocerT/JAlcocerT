@@ -88,13 +88,17 @@ Viewers tune in at specific times to watch programs and commercials.
 
 ### Optical Network Terminal (ONT)
 
-An **ONT (Optical Network Terminal)** is a device used in fiber optic networks. It connects the optical fiber from the service provider to the customer's home equipment, such as a router or set-top box.
+An **ONT (Optical Network Terminal)** is a device used in fiber optic networks.
+
+It connects the optical fiber from the service provider to the customer's home equipment, such as a router or set-top box.
+
+> Example if this can be the ZTE (GPON ONT) [ZXHN F601](https://www.zte.com.cn/global/product_index/smart_home_en/ont/zxhn-f601/zxhn-f601.html) 
 
 ### Cable Modem Termination System (CMTS)
 
 A **CMTS (Cable Modem Termination System)** is a core component of cable internet networks, managing communication between cable modems (CM) and the internet.
 
-#### Key Functions of a CMTS
+**Key Functions of a CMTS**
 
 1. **Cable Modems**  
    Connect customers to the internet via a cable TV network.
@@ -116,13 +120,17 @@ A **CMTS (Cable Modem Termination System)** is a core component of cable interne
 
 The CMTS acts as a gateway between the cable network and the internet, enabling high-speed access and maintaining network performance.
 
-**CMTS (Cable Modem Termination System)** is a device located at a cable provider’s headend or hubsite that provides high-speed data services to cable subscribers. It communicates with **Cable Modems (CM)** in homes using Hybrid Fiber-Coaxial (HFC) networks.
+**CMTS (Cable Modem Termination System)** is a device located at a cable provider’s headend or hubsite that provides high-speed data services to cable subscribers.
+
+It communicates with **Cable Modems (CM)** in homes using Hybrid Fiber-Coaxial, **HFC** networks.
 
 - **Functions**:
   1. **Modulation**: Converts digital signals to analog and vice versa.
   2. **Routing**: Manages data flow and session handling between modems and the internet.
 
-- **Context**: Similar to the OLT, but used in cable networks rather than fiber networks.
+{{< callout type="info" >}}
+**Context**: CMTS is similar to the OLT, but used in cable networks rather than fiber networks.
+{{< /callout >}}
 
 
 
@@ -218,7 +226,7 @@ It offers a practical solution for improving connectivity and network reliabilit
 
 ### Optical Network Terminal
 
-**ONT (Optical Network Terminal)** is a device used in fiber-optic internet setups like Fiber to the Home (FTTH) or Fiber to the Building (FTTB).
+**ONT (Optical Network Terminal)** is a device used in fiber-optic internet setups like Fiber to the Home (**FTTH**) or Fiber to the Building (FTTB).
 
 It converts the optical signal from the carrier’s network into electronic signals that can be used by home devices (computers, routers, TVs).
 
@@ -240,15 +248,15 @@ It communicates with multiple ONTs to deliver internet services in a **Passive O
 
 **DOCSIS (Data Over Cable Service Interface Specification)** and **Fiber** refer to different internet technologies:
 
-#### DOCSIS
+
+> The trick is DOCSIS ~ COAX ~ HFC ~ TV ~ RF **(vs)** ONT ~ OLT ~ Fiber To The Home
+
+**DOCSIS**
 
 - Uses a mix of **fiber-optic and coaxial cable** to deliver data.
 - Requires a **cable modem** to access the internet.
 - **Shared** connection in a neighborhood, which can lead to congestion.
 - Versions like **DOCSIS 3.0 and 3.1** offer faster speeds but may still experience slowdowns during peak times.
-
-> The trick is DOCSIS ~ COAX ~ TV ~ RF (vs) ONT ~ Fiber To Home
-
 
 {{< details title="More about DocSIS 📌" closed="true" >}}
 
@@ -337,7 +345,7 @@ Both GPON and XGS-PON are types of **Passive Optical Networks (PON)** used for b
 
 It uses the same infrastructure as GPON, making it a cost-effective upgrade for service providers to deliver multi-gigabit services.
 
-XGSPOM is an acronym for telecommunications. It stands for:
+XGSPOM is an acronym for telecom, it stands for:
 
 * X: 10 (Roman numeral X)
 * G: Gigabit
@@ -391,6 +399,8 @@ This technology is a part of the broader category of fiber-optic access technolo
 
 ## Signals for Telecom
 
+Some are only applicable for COAX, other for fiber networks.
+
 {{< details title="SNR, RSSi, and T3/T4 Timeouts in Telecom Signals 📌" closed="true" >}}
 
 In telecommunications, various metrics and signals like SNR, RSSI, and T3/T4 timeouts are crucial for assessing the quality and reliability of network connections. Below is an overview of each:
@@ -412,6 +422,7 @@ In telecommunications, various metrics and signals like SNR, RSSI, and T3/T4 tim
   - **Consequences**: This is more severe than a T3 timeout and can result in the modem failing to connect or dropping the connection entirely, often requiring a restart or intervention.
 
 ### Practical Applications and Monitoring
+
 - **Network Performance Monitoring**: Service providers continuously monitor these parameters to manage network health. Adjustments are made based on SNR and RSSI readings to optimize performance, while T3/T4 timeouts help identify and troubleshoot connectivity issues.
 - **Installation and Maintenance**: Proper setup and regular maintenance of network equipment are crucial to maintaining good SNR and RSSI levels, thereby minimizing T3/T4 timeouts and ensuring reliable service delivery.
 
@@ -529,28 +540,30 @@ It's also important to note that in June 2023, SAMknows was acquired by Cisco an
 
 VoIP (Voice over Internet Protocol) typically involves devices or applications specifically designed to handle voice communications over internet protocols, rather than devices primarily intended for other functions like streaming media. Here are some typical devices and setups that are commonly used for VoIP:
 
-### Dedicated VoIP Phones
+**Dedicated VoIP Phones**
 
 - **Hardware-based VoIP Phones**: These look similar to traditional telephones but connect to the internet instead of a standard telephone line. They have built-in IP technology to manage the routing of voice data over an internet connection.
 
-### Computers
+Computers
+
 - **Softphones**: Software applications installed on computers that enable voice calls over the internet using a microphone and speakers or a headset. Examples include Skype, Zoom, or Google Voice.
 
-### Mobile Devices
+Mobile Devices
 - **VoIP Apps on Smartphones and Tablets**: Mobile devices can use apps like WhatsApp, Viber, or FaceTime Audio to make voice calls over the internet. These apps use the device’s data connection (Wi-Fi or cellular data) to transmit voice.
 
-### Analog Telephone Adapters (ATA)
+Analog Telephone Adapters (ATA)
 - **ATA Devices**: These devices allow traditional analog telephones to be connected to the internet for VoIP services. They convert analog voice signals into digital data that can be transmitted over the internet.
 
-### Specialized VoIP Adapters and Routers
+Specialized VoIP Adapters and Routers
 - **Integrated VoIP Routers**: Some routers come with built-in VoIP support, allowing direct connection of traditional phones and routing of VoIP calls alongside normal internet traffic.
 
-### Not Typically VoIP Devices
+Not Typically VoIP Devices
 - **Smart TVs**: While smart TVs are capable of internet connectivity and can support apps for streaming services like Netflix, they are generally not used for VoIP communications. Their primary function is media consumption rather than voice communication.
 
 VoIP technology is versatile and can be implemented across various devices, but it primarily revolves around voice communication capabilities rather than media streaming. Devices used for VoIP need to support audio input and output, have a stable internet connection, and be equipped with the necessary software to manage voice data packets.
 
 {{< /details >}}
+
 <!-- 
 Anomaly Detection - Video over IP
 
@@ -673,7 +686,6 @@ OTT services in telecommunications represent a significant shift in how content 
 {{< callout type="info" >}}
 While RDK-B is focused on software standardization for broadband devices, OFT (Open Field Test) is a method for testing the performance of these devices in an open environment. 
 {{< /callout >}}
-
 
 
 ---

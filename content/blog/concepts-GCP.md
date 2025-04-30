@@ -182,6 +182,22 @@ Block storage:  File systems themselves are built on top of block storage. Block
 **Tables are a structured view of data**, which are typically stored as files, and those files reside on block storage.
 {{< /callout >}}
 
+The good thing about **GCS** is that you can query the content of its files via **JHub and Pyspark**:
+
+```py
+#most likely they will be avro (row based, ~OLTP)
+df = spark.read.format("avro").load(
+    "gs://cs-odh-data/raw/type=datawarehouse-avrodata/environment=prod/deployment=abcd/table=awsometabletoexplore"
+)
+```
+
+Pretty similar to [inspecting s3 buckets with python](https://jalcocert.github.io/JAlcocerT/aws-s3-python-boto-queries/).
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/" title="PySpark | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/" title="Telecom | Post ↗" >}}
+{{< /cards >}}
+
 #### Big Query
 
 Simply speaking, BQ *is just [SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)*.

@@ -110,7 +110,7 @@ That's a nuanced but important distinction. Here's a breakdown:
 * **LangGraph is a framework that helps you design and orchestrate the entire "kitchen" for complex agent interactions.** It gives you more control over how different agents and tools work together in a stateful and potentially cyclical manner.
 
 It would be great if you **understand what state graphs** are: https://mermaid.js.org/syntax/stateDiagram.html or with https://graphviz.readthedocs.io/en/stable/
-
+or....https://github.com/terrastruct/d2
 
 {{< details title="More about State Graphs for LangGraph... 📌" closed="true" >}}
 
@@ -616,3 +616,24 @@ LangGraph can structure the core agent loop of thinking, acting (using a tool), 
 <!-- https://www.youtube.com/watch?v=WAV66F-Zbio -->
 
 {{< youtube "WAV66F-Zbio" >}}
+
+
+#### MCP with LangGraph
+
+* https://langchain-ai.github.io/langgraph/agents/mcp/
+* https://github.com/esxr/langgraph-mcp/blob/main/src/langgraph_mcp/mcp_wrapper.py
+
+https://www.youtube.com/watch?v=OX89LkTvNKQ
+
+{{< youtube "OX89LkTvNKQ" >}}
+
+
+If you inspect the https://github.com/esxr/langgraph-mcp repository, you will see dependencies on:
+
+1. MilvusDB - https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Z_VectorDBs/MilvusDB
+2. OpenAI API Key
+3. LangSmith (optional for monitoring LLM)
+
+
+#### Generating project Docs with LLMs
+

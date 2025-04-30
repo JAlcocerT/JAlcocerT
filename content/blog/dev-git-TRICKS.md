@@ -216,7 +216,8 @@ ext install eamodio.gitlens
 #yaml https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 
-
+#makefile #https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools
+ext install ms-vscode.makefile-tools
 ```
 
 

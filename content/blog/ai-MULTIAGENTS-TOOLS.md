@@ -19,6 +19,13 @@ url: 'ai-multi-agents-frameworks'
 * **Analogy:** Think of an assembly line where each station performs a specific task on the incoming piece. The LLM is like the worker at each station, and the prompts are the instructions for each step.
 * **Use Cases:** Generating marketing copy and then translating it, outlining a document and then writing it, performing multi-step reasoning where each step builds upon the previous one.
 
+> Example with the Databse chat with langchain: https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/ChatWithDB/test_langchainChatDB.ipynb
+
+{{< callout type="info" >}}
+With LangChain it was also possible to do agent stuff as per [agent_executor](https://python.langchain.com/v0.2/docs/how_to/agent_executor/). But its going to be depricated in favour of langgraph
+{{< /callout >}}
+
+
 **2. Orchestration Worker:**
 
 * **Concept:** An orchestration worker is a component within a broader system that manages and coordinates the execution of various tasks, which can include interacting with LLMs, calling external APIs, retrieving data, or using other tools.
@@ -27,6 +34,8 @@ url: 'ai-multi-agents-frameworks'
 * **Analogy:** Imagine a conductor leading an orchestra. The conductor (orchestration worker) ensures each section (LLMs, tools, etc.) plays its part at the right time to create a harmonious whole.
 * **Use Cases:** Building chatbots that need to access knowledge bases, call APIs, and generate responses; automating complex business processes involving LLM-powered content generation or data analysis.
 
+> Langgraph
+
 **3. Agents:**
 
 * **Concept:** Agents are autonomous or semi-autonomous systems powered by LLMs that can perceive their environment, make decisions, and take actions to achieve specific goals. They can dynamically determine the sequence of steps needed to fulfill a task, including which tools to use and when.
@@ -34,6 +43,15 @@ url: 'ai-multi-agents-frameworks'
 * **Intelligence/Autonomy:** High. Agents exhibit a significant degree of autonomy in deciding how to approach a problem and what actions to take. They can use tools (including prompt chains or individual LLM calls) in a flexible and dynamic manner.
 * **Analogy:** Think of a skilled project manager who understands the overall objective and can independently decide which resources to use and in what order to complete the project.
 * **Use Cases:** Building sophisticated conversational AI that can handle complex user requests, perform tasks across different domains (e.g., booking flights, setting reminders), and learn from interactions; creating autonomous problem-solving systems.
+
+> OpenAI Agents: https://github.com/JAlcocerT/Multi-Agents/tree/main/OpenAI-Agents
+
+<!-- https://www.youtube.com/watch?v=m59y309_cpg -->
+
+{{< youtube "m59y309_cpg" >}}
+
+
+
 
 **Here's a table summarizing the key differences:**
 
@@ -563,6 +581,10 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 
 ## Conclusions
 
+Isnt it crazy that we already have: https://jobforagent.com/
+
+
+
 * https://platform.openai.com/logs
     * https://platform.openai.com/playground/prompts?models=gpt-4.1
 
@@ -582,7 +604,7 @@ sudo apt-get upgrade windsurf
 
 [![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&Date)
 
-#### Example
+#### Example with DASH
 
 Breakdown of the libraries in your `pyproject.toml` that are commonly used for Artificial Intelligence and Machine Learning:
 
@@ -605,6 +627,19 @@ Breakdown of the libraries in your `pyproject.toml` that are commonly used for A
 The other libraries in your `dependencies` list serve different purposes:
 
 * `langfuse`: An observability platform for language model applications, helping with tracking and debugging.
+
+#### Make and Docker Compose
+
+```sh
+make --version #4.3
+```
+
+This is a new version to manage dockerfiles:
+
+```sh
+docker compose version #v2.35.1
+```
+
 
 ---
 
