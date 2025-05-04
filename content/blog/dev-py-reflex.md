@@ -472,7 +472,10 @@ But you are missing all internal walls which make the rooms, say thats 100% more
 #### RE Resources
 
 1. https://tradingeconomics.com/poland/consumer-price-index-cpi (see the change %)
+
 2. https://tradingeconomics.com/poland/interest-rate
+
+---
 
 ## Conclusions
 

@@ -15,6 +15,8 @@ New year, new **opportunities**.
 * https://www.trueup.io/layoffs
 * https://roadmap.sh/
 
+If you are using linkedin, you can see how good is your profile supposed to be: https://www.linkedin.com/sales/login its called the SSI, social selling index.
+
 ## Data for Job Market
 
 

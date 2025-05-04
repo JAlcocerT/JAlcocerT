@@ -172,6 +172,13 @@ Having a look to the spark plugs after changing them can tell you a lot of the e
 
 ![Honda Civic 6 Spark Plugs](/blog_img/outro/hondacivic-sparkplugs.jpg)
 
+## Conclusions
+
+This project started as a test to see the costs of owning a car.
+
+And in the meantime I saw an interesting post: https://forocoches.com/foro/showthread.php?t=9203326&highlight=
+
+> Some people are doing cool adventures with old card *Salgo para Dakar para intentar vender un Mercedes viejo. Haremos seguimiento*
 
 ---
 

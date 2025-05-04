@@ -3,7 +3,7 @@ title: "Buying a house being in Data Analytics"
 date: 2025-04-17T11:20:21+01:00
 draft: false
 tags: ["Outro"]
-description: 'What to keep in mind - what not to do and the data behind...When buying a house.'
+description: 'What to keep in mind - what not to do and the data behind...When buying a house. Plus AI painting cost estimation.'
 url: 'buying-house-data-analytics'
 ---
 
@@ -45,7 +45,19 @@ In Spain you could expect:
 
 ---
 
-## Cool Stuff
+## Conclusions
+
+This project started as a test to see the costs of owning a house.
+
+I got to know how quickly furniture costs can escalate: whats x1 can be x4
+
+Id say you have to stay open for ideas: not only IKEA, but maybe sklum or others...
+
+And in the meantime I thought on how to estimate the painting cost, given a house plan.
+
+### Estimating painting costs with AI
+
+### Cool Stuff
 
 Some people are building their custom and modular houses.
 
