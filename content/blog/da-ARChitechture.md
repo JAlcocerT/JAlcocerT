@@ -258,7 +258,7 @@ For more questions, you can switch on your **[product](https://jalcocert.github.
 
 {{< details title="My Favourite Questions for Requirement Gathering 📌" closed="true" >}}
 
-1. What are the key objectives (OKR) and goals of this data product or project?
+1. What are the key objectives (**OKR**) and goals of this data product or project?
 2. Who are the primary end-users or target audience for this data product?
 3. What are the most important KPIs or metrics that the data product should track and display?
 4. What level of interactivity and customization is expected in the data product (e.g., dashboards, reports)?
@@ -266,7 +266,7 @@ For more questions, you can switch on your **[product](https://jalcocert.github.
 
 {{< /details >}}
 
-> See more questions [here]()
+> See more questions [here](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#syncing-expectations)
 
 
 {{< cards cols="2" >}}
@@ -291,6 +291,113 @@ While BPMN focuses on process flow, UML can complement this by providing differe
 
 #### SMART vs INVEST
 
+```markdown
+It's helpful to understand that **INVEST** and **SMART** serve different purposes, though they can be related.
+
+**INVEST** is a set of guidelines to help you create well-formed **user stories**.
+**SMART** is a set of criteria to help you define **objectives or goals**.
+
+Here's a breakdown of when each is most appropriate:
+
+### INVEST: For User Stories
+
+INVEST helps ensure that your user stories are functional, valuable, and manageable within an Agile development process.
+
+* **Independent:** Can be worked on without dependencies.
+* **Negotiable:** Flexible and open to discussion.
+* **Valuable:** Delivers value to the user.
+* **Estimable:** Can be estimated in terms of effort.
+* **Small:** Can be completed within a sprint.
+* **Testable:** Can be verified through testing.
+
+**When to Use INVEST:**
+
+* When writing and evaluating user stories for Agile development.
+* To ensure stories are actionable, manageable, and deliver value.
+
+### SMART: For Objectives and Goals
+
+SMART helps you define clear, measurable, and achievable objectives, whether for a project, a sprint, or even a user story's acceptance criteria.
+
+* **Specific:** Clearly defined.
+* **Measurable:** Progress can be tracked.
+* **Achievable:** Realistic and attainable.
+* **Relevant:** Aligned with overall goals.
+* **Time-bound:** Has a defined timeframe.
+
+**When to Use SMART:**
+
+* When defining project goals, sprint goals, or any objectives you want to track.
+* When writing **acceptance criteria for a user story.** (This is a very common and effective use of SMART in Agile.)
+* When setting performance targets or any other kind of goal.
+
+### How They Relate
+
+While INVEST and SMART are distinct, they can work together. For example:
+
+* You use INVEST to write a good user story.
+* You use SMART to write the **acceptance criteria** for that user story. The acceptance criteria are the specific, measurable conditions that must be met to say the user story is complete, and those should be SMART.
+
+**In the context of user stories:**
+
+* You wouldn't say "a user story should be SMART" in place of "a user story should be INVEST."
+* Instead, you'd say, "The **acceptance criteria** for a user story should be SMART."
+```
+
+A successful user story should be a concise and clear description of a feature or functionality from the **end-user's perspective**. 
+
+It helps the development team understand **who** will use the feature, **what** they want to achieve, and **why** it's important to them.
+
+Here are the key components that a successful user story typically contains, often remembered by the acronym **INVEST**:
+
+**I - Independent:**
+
+* **The story should be self-contained and not heavily dependent on other stories.** This allows the team to prioritize and work on stories in a flexible order. Dependencies can lead to delays and complexities in planning and execution.
+
+**N - Negotiable:**
+
+* **The story is a starting point for a conversation, not a contract.** The details of the story can be discussed and refined collaboratively between the product owner, development team, and stakeholders during backlog refinement or sprint planning. It leaves room for technical implementation details and alternative approaches.
+
+**V - Valuable:**
+
+* **The story must deliver value to the end-user or the business.** It should clearly articulate the benefit or outcome the user will experience by having this feature. This ensures the team is working on things that matter.
+
+**E - Estimable:**
+
+* **The story should be small enough that the development team can estimate the effort required to implement it.** This helps with sprint planning and forecasting. If a story is too large or vague, it becomes difficult to estimate accurately.
+
+**S - Small:**
+
+* **The story should be sized appropriately to be completed within a single sprint.** Smaller stories allow for faster feedback loops, easier tracking of progress, and reduced risk. Large epics should be broken down into smaller, manageable stories.
+
+**T - Testable:**
+
+* **The story should be written in a way that makes it clear how to verify if it has been implemented correctly.** This often involves defining clear acceptance criteria that can be used to create test cases.
+
+Beyond the INVEST criteria, a well-formed user story often follows a simple template:
+
+**As a [type of user], I want [some goal] so that [some reason/benefit].**
+
+**Example:**
+
+* **As a registered customer, I want to be able to reset my password so that I can regain access to my account if I forget it.**
+
+**In addition to the core structure and INVEST principles, a successful user story often benefits from:**
+
+* **Clear Acceptance Criteria:** These are specific, measurable, achievable, relevant, and time-bound (SMART) conditions that define when the story is considered complete and working correctly. They provide clarity for the developers and testers.
+    * **Example Acceptance Criteria for the password reset story:**
+        * Given I am on the "Forgot Password" page.
+        * When I enter my registered email address and click "Submit".
+        * Then I should receive an email with a link to reset my password.
+        * And the reset password link should be valid for 24 hours.
+        * And if I enter an invalid email address, I should see an error message.
+
+* **Context and Background:** Briefly providing context or background information can help the team understand the user's needs and the overall purpose of the feature.
+
+* **Prioritization:** While not part of the story itself, clearly prioritizing user stories helps the team understand which ones to work on first based on business value and urgency.
+
+By including these elements, a user story becomes a powerful tool for communication, collaboration, and ensuring that the development team is building the right product for the right users.
+
 <!-- 
 referencia a persuasion escrito en jan 2022
 
@@ -306,7 +413,7 @@ the buying brain....
 
 You can also have handy a list of QQ to enable others perform their job:
 
-https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/#enabling-others
+* https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/#enabling-others
 
 ---
 

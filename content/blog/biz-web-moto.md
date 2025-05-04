@@ -223,6 +223,12 @@ Optionally, you can **extract the mp3 audio** of your joined video, edit it with
 ffmpeg -i output.mp4 -vn output.mp3
 ```
 
+Dont forget to add **chapters to your video description**:
+
+```sh
+$files = Get-ChildItem -Filter "*.MP4" | Sort-Object Name; $currentTime = 0; function Format-Time ($seconds) { [TimeSpan]::FromSeconds($seconds).ToString("g") }; $files | ForEach-Object { $formattedTime = Format-Time $currentTime; try { $duration = (ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$($_.FullName)") -as [double] } catch { Write-Warning "ffprobe failed for $($_.Name).  Assuming 0 seconds."; $duration = 0 }; $currentTime += $duration; "$formattedTime $($_.Name)" } | Set-Content file_list.txt
+```
+
 **HEVC** (High Efficiency Video Coding), also known as **H.265**, is a video compression standard. 
 
 To play HEVC videos, your system needs the appropriate codecs in Windows.

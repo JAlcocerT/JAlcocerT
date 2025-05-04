@@ -136,7 +136,7 @@ sudo nast -m
 nmap -sP 192.168.0.1/24 | grep "scan"
 ```
 
-Or simply check devices connected to the same router with:
+Or simply check devices connected to the **same router** with:
 
 ```sh
 arp -a

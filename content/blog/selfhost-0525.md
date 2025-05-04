@@ -3,7 +3,7 @@ title: "SelfHosting Updates - Spring 2025"
 date: 2025-05-04T01:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Selfhosted Apps that simplify my workflow as of May 2025: Homarr, Immich'
+description: 'Selfhosted Apps that simplify my workflow as of May 2025: Termix, Immich'
 url: 'selfhosted-apps-may-2025'
 ---
 
@@ -56,7 +56,85 @@ filebrowser alternative!
 
 >  Cap is a lightweight, modern open-source CAPTCHA alternative designed using SHA-256 proof-of-work 
 
+9. Wordpres...but static sites? https://github.com/nityam2007/StaticPress-Docker?ref=selfh.st
+
+## New SelfH Apps
+
+
+### Termix
+
+Termix, not termux, its being great:
+
+* https://github.com/LukeGus/Termix
+  * https://github.com/LukeGus/Termix/wiki/Docker
+
+> MIT |  Clientless web-based SSH terminal emulator that stores and manages your connection details 
+
+<!-- https://www.youtube.com/watch?v=s15a-ysSQE0 -->
+
+{{< youtube "s15a-ysSQE0" >}}
+
+![alt text](/blog_img/selfh/termix-ui.png)
+
+![alt text](/blog_img/selfh/termix-user.png)
+
+```yml
+services:
+  termix:
+    image: ghcr.io/lukegus/termix:latest
+    container_name: termix
+    restart: unless-stopped
+    ports:
+      - "8090:8080"
+    volumes:
+      - termix-data:/app/data
+    environment:
+      # Generate random salt here https://www.lastpass.com/features/password-generator (max 32 characters, include all characters for settings)
+      SALT: "something_generated"
+      PORT: "8080"
+
+volumes:
+  termix-data:
+    driver: local
+```
+
+You can use it to manage devices on the same local network:
+
+```sh
+#arp -a
+arp -a | grep "192.168.1" #filtered to avoid containers
+#ip neigh
+#nmap -sP 192.168.1.1/24 | grep "scan"
+```
+
+But also the ones via tailscale, even if they are outside your home network:
+
+```sh
+sudo tailscale status | grep -v "offline"
+```
+
+You can measure the temp of a distant Pi:
+
+```sh
+vcgencmd measure_temp pmic
+```
+
+### Publiteme
+
+* https://github.com/MikeMather/publite.me
+
+https://www.youtube.com/watch?v=yAJvbF-m5FM
+
+
+
+
 ### Recap from Spring 2025
+
+I was covering recently nextcloud...
+
+![alt text](/blog_img/selfh/nextcloud-untrusteddomain.png)
+
+and found out about OpenCloud:
 
 https://www.youtube.com/watch?v=Ud9FEmNOgLs
 
@@ -64,8 +142,21 @@ https://github.com/opencloud-eu/opencloud
 
 > Apache v2 | This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.
 
+### I needed recently...
 
 
+* https://speed.cloudflare.com/
+
+
+## Analytics Stuff
+
+* https://github.com/chartbrew/chartbrew
+* https://docs.chartbrew.com/deployment/run-on-docker#run-on-docker
+* https://raw.githubusercontent.com/chartbrew/chartbrew/refs/heads/master/docker-compose.yml
+
+>  Open-source web platform used to create live reporting dashboards from APIs, MongoDB, Firestore, MySQL, PostgreSQL, and more 📈📊 
+
+Which resonates with my recent post: https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/
 
 ## Conclusions
 

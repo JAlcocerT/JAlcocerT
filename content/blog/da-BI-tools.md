@@ -734,7 +734,7 @@ A **project charter** is like that agreement for a project at work or school.
 ### Syncing Expectations
 
 {{< callout type="info" >}}
-Specify the goals, requirements, and key stakeholders of your project to ensure clear communication.
+**Specify the goals**, requirements, and key stakeholders of your project to ensure clear communication.
 {{< /callout >}}
 
 **During Requirements Gathering:**

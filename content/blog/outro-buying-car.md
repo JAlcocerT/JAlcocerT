@@ -97,6 +97,10 @@ It of course depends, I have observed them to be from 0,38$/km to...1.54$/km.
 
 > On average, when renting **~0,68$/km**.
 
+Remember that not everywhere you can rent without a credit card.
+
+For me, it worked with sixt, budget and avis.
+
 
 ## The costs of a Car
 
@@ -161,6 +165,10 @@ I mean an **used car**.
 
 1. No water in the space where there should be oil (and biceversa)
 2. Tires Equally used across the contact patch
+
+I kind of had a file with these...
+
+![alt text](/blog_img/data-experiments/coches.png)
 
 <!-- 
 https://www.youtube.com/watch?v=UINEmTO0LCY

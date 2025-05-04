@@ -250,6 +250,12 @@ sudo apt install vlc
 sudo apt install ubuntu-restricted-extras
 ```
 
+<!-- https://www.youtube.com/watch?v=aUOnQ_boqCw -->
+
+{{< youtube "aUOnQ_boqCw" >}}
+
+
+
 ---
 
 ## FAQ
@@ -595,6 +601,8 @@ Modern cameras record that data internally (GoPro, Sony, Insta360 etc), and this
 {{< callout type="warning" >}}
 To capture gyro data with the OA5Pro, make sure to have **RS disabled + Wide** video mode
 {{< /callout >}}
+
+![alt text](/blog_img/selfh/oa5pro-gyro.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/" title="Telemetry Trackdays | Post ↗" >}}

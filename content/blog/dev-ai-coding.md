@@ -3,7 +3,7 @@ title: "Vide Coding. For websites and more..."
 date: 2025-04-15T23:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'How to get started with vibe coding.'
+description: 'How to get started with vibe coding. FirebaseStudio vs Codex...'
 url: 'vide-coding'
 ---
 
@@ -23,7 +23,9 @@ But how about creating websites with....
 
 ### OpenAI
 
-Codex CLI is built for developers who already live in the terminal and want ChatGPT‑level reasoning plus the power to actually run code, manipulate files, and iterate – all under version control. In short, it’s chat‑driven development that understands and executes your repo.
+Codex CLI is built for developers who already live in the terminal and want ChatGPT‑level reasoning plus the power to actually run code, manipulate files, and iterate – all under version control.
+
+In short, it’s chat‑driven development that understands and executes your repo.
 
 * Zero setup — bring your OpenAI API key and it just works!
 * Full auto-approval, while safe + secure by running network-disabled and directory-sandboxed
@@ -103,6 +105,9 @@ https://www.youtube.com/watch?v=_fhTXJe_awY
 
 * https://aistudio.google.com/prompts/new_chat
 
+You can also see firebasestudio...
+
+* https://firebase.studio/
 
 ## OSS Extension + Propietary Models
 

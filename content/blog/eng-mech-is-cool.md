@@ -89,3 +89,9 @@ Therefore, when considering tensile resistance, you need to specify whether you'
 I have been using:
 
 * https://notebooklm.google.com/
+
+
+### Analogies with Electrical Eng
+
+https://www.youtube.com/watch?v=f7oXhDatwtY
+
