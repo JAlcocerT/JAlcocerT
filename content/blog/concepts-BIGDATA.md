@@ -1531,7 +1531,7 @@ Once you create a local account, access the UI:
 
 It allows you to **create complex workflows** by defining tasks as nodes in a directed graph, with edges representing the flow of data.
 
-{{< details title="More about LangGraph 📌" closed="true" >}}
+{{< details title="More about LangGraph... 📌" closed="true" >}}
 
 - The system supports **dynamic state management**, maintaining context and ensuring coherent interactions across different agents.
 - **Fault tolerance** is built in, meaning the system can recover from failures in individual agents.

@@ -37,6 +37,13 @@ git config --global user.name "JAlcocerT"
 git config --global user.email "youremail@example.com"
 ```
 
+See active branch and latest commits:
+
+```sh
+#git branch
+git log --oneline -n 10
+```
+
 #### Creating Releases
 
 And given a project, you can **get the latest Github release** as per:
@@ -209,7 +216,8 @@ ext install eamodio.gitlens
 #yaml https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 
 
-
+#makefile #https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools
+ext install ms-vscode.makefile-tools
 ```
 
 
@@ -259,6 +267,8 @@ npx serve -s dist #http://localhost:3000
 Lately, a colleague mentioned to me about: https://lovable.dev/
 
 > Lovable is an **AI software engineer**, which enables anyone to build for the web. Simply chat to instantly build websites and web apps, with no technical knowledge needed.
+
+It seems this is called vibe coding!
 
 It requires a signup, yet they provide a free tier.
 
