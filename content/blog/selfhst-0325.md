@@ -3,7 +3,7 @@ title: "SelfHosting Updates - Spring 2025"
 date: 2025-03-21T01:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich'
+description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich,...'
 url: 'selfhosted-apps-spring-2025'
 ---
 

@@ -107,7 +107,8 @@ pie title City Bike Expenses
 **With add-ons**:
 
 * Shimano SH-M089L ~75$
-* SHIMANO SPD PD-EH500 (Hibryd pedals) ~60$
+* SHIMANO SPD **PD-EH500** (Hibryd pedals) ~60$
+  * I also tried some mixed Van Rysel Pedals (Cost about the same)
 
 
 

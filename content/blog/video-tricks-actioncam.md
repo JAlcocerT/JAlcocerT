@@ -295,6 +295,13 @@ done
 
 Making things simpler with CLI.
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="YT Video Edition Github ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#ffmpeg-video-workflow-for-windows" title="FFMPeg Windows Samples | Post ↗" >}}
+{{< /cards >}}
+
+
+
 {{< details title="FFMPEG CLI Tricks within Linux 📌" closed="true" >}}
 
 1. **Simply Join**: Keeping original audio and **no reencoding**.
@@ -446,7 +453,6 @@ Some tricks with **ffmpeg package**.
 
 > No reencoding = Quick 
 
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tricks for quick videos as a code from action cams" >}}
 {{< /cards >}}
@@ -586,12 +592,31 @@ Wide-angle mode.
 
 Modern cameras record that data internally (GoPro, Sony, Insta360 etc), and this application stabilizes the captured footage precisely by using them. 
 
-It can also use gyro data from an external source (eg. from Betaflight blackbox).
+{{< callout type="warning" >}}
+To capture gyro data with the OA5Pro, make sure to have **RS disabled + Wide** video mode
+{{< /callout >}}
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/" title="Telemetry Trackdays | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="Go Pro H9 telemetry extraction | Post ↗" >}}
+{{< /cards >}}
+
+```sh
+#choco install exiftool
+#exiftool -ver
+exiftool -ee .\DJI_20250504152345_0011_D.MP4 #working when recorded W and no RS!
+```
+
+> I got a sample acelerometer data every 0.3s *when recording at 30FPS*
+
+It can also use gyro data from an external sources (eg. from Betaflight blackbox).
 
 * https://github.com/gyroflow/gyroflow
+  * https://gyroflow.xyz/download
 
 > GPL v3.0 | **Video stabilization** using gyroscope data
+
+For Windows you have it on the [microsoft store](ms-windows-store://pdp?hl=en-us&gl=pl&productid=9NZG7T0JCG9H&mode=mini&pos=1920%2C0%2C1920%2C1080&referrer=storeforweb&source=https%3A%2F%2Fgyroflow.xyz%2F), for linux:
 
 ```sh
 sudo apt update

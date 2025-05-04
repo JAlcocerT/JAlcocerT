@@ -82,7 +82,13 @@ git clone https://github.com/JAlcocerT/Py_Trip_Planner
 
 ## AI Code Assistants
 
-Gemini, Github Copilot has a recent free tier, we also have Gitlab Duo Chat. What else can help us code better?
+Gemini, Github Copilot has a recent free tier, we also have Gitlab Duo Chat.
+
+What else can help us code better?
+
+* https://github.com/block/goose
+
+> Apache v2 | an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
 
 
 ## Propietary
@@ -91,7 +97,12 @@ Gemini, Github Copilot has a recent free tier, we also have Gitlab Duo Chat. Wha
 
 ### Gitlab Duo
 
-### Gemini
+### Gemini and AIStudio
+
+https://www.youtube.com/watch?v=_fhTXJe_awY
+
+* https://aistudio.google.com/prompts/new_chat
+
 
 ## OSS Extension + Propietary Models
 
@@ -125,6 +136,8 @@ We can use open models, with 3rd party APIs (like Groq).
 
 * https://github.com/paul-gauthier/aider
     * https://github.com/Aider-AI/aider
+
+
 
 ---
 

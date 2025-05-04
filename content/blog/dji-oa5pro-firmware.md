@@ -409,7 +409,9 @@ The OA5Pro now is **~100Mbit/s** (when bit rate is selected **as high**.)
 
 3. The **GoPro has GPS** - Which allow us to do [cool analysis with python](https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro)
 
-The OA5Pro does NOT have GPS unfortunately!
+{{< callout type="warning" >}}
+The OA5Pro does NOT have GPS unfortunately, so will just have the acelerometer one
+{{< /callout >}}
 
 #### Extracting Telemetry Data from GPH9
 

@@ -274,6 +274,8 @@ For more questions, you can switch on your **[product](https://jalcocert.github.
   {{< card link="https://jalcocert.github.io/JAlcocerT/business-analytics-skills/" title="Skills for BA - DoD DoR UAT... | Post ↗" >}}
 {{< /cards >}}
 
+#### BPMN AND UML
+
 In practice, as a Business Analyst might use both UML and BPMN:
 
 * Use BPMN to **model end-to-end business processes**, identify areas for improvement, and communicate process flows to business stakeholders.
@@ -287,7 +289,7 @@ While BPMN focuses on process flow, UML can complement this by providing differe
 * Use Case Diagrams: Help define the interactions between users and the RPA bots or the systems they interact with. This clarifies the scope and goals of the automation.
 * Sequence Diagrams: Can illustrate the interactions between the RPA bot and various systems over time, showing the sequence of actions and data exchange.   
 
-
+#### SMART vs INVEST
 
 <!-- 
 referencia a persuasion escrito en jan 2022
@@ -325,6 +327,13 @@ I like this way of summarizing whats required from others (useful for JIRA stori
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/outro/telecom/cm-fiber-coax.png" subtitle="Source Code on Github" >}}
 {{< /cards >}}
+
+
+### Diagrams and Retros
+
+* https://github.com/excalidraw/excalidraw
+
+>  Virtual whiteboard for sketching hand-drawn like diagrams 
 
 
 ---

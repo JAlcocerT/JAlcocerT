@@ -540,18 +540,20 @@ flowchart TD
     Warning --> Start
 ```
 
-{{< dropdown title="Email Challenge for ST based on MailerLite+FormBricks 👇" closed="true" >}}
+FormBricks is an open source Survey Platform....
 
-FormBricks is an open source Survey Platform.
+{{< dropdown title="Email Challenge for ST based on MailerLite+FormBricks 👇" closed="true" >}}
 
 You can make very interesting polls and embedd them or reference them with a link into your Apps. The Survey Type **Link Survey** was very helpful for this case.
 
 It has very cool integrations, like with GSheets, which you can use:
 
 * **Pros** 
+
 1. Integrated with MailerLite API
 * With MailerLite double opt-in, you will get just verified emails
 * You can use Formbricks as another EmailWall with the GSheets integration
+
 2. No hardcoded values in the app
 * **Cons** MailerLite Free Tier finishes at 1k subs
 

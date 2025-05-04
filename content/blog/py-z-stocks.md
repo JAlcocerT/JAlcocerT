@@ -1,6 +1,6 @@
 ---
 title: "Stocks with Python"
-date: 2025-05-17
+date: 2025-05-03
 draft: false
 tags: ["Python"]
 description: "A Cooler R/Stocks - This time with Python. And with proper Auth/UIM."
@@ -104,12 +104,19 @@ I was exploring on [this post](https://jalcocert.github.io/JAlcocerT/how-to-chat
 Chat with a DB applied for finance - <https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/PyStocksDB>
 
 
+---
 
 ## Conclusions
 
 This goes one step further than the previous [project RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/).
 
 And definitely much more than [FlexDashboards](https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/) in R.
+
+### Selfhostable Apps
+
+1. https://github.com/maybe-finance/maybe
+
+>  The personal finance app for everyone 
 
 ### Stock Questions - Answered
 

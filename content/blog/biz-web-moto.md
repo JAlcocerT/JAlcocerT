@@ -215,7 +215,13 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
 #ffmpeg -stream_loop -1 -i "TRAVELATOR - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp 
 ```
 
-> Every time you do this for ~20min GOPro 4K videos, you are saving 3h and 65W *as of today ~0.05$*
+> Every time you do this for ~20min GOPro 4K videos, you are saving ~3h, which at ~65W *as of today ~0.05$*
+
+Optionally, you can **extract the mp3 audio** of your joined video, edit it with [Audacity](https://github.com/audacity/audacity) and place it back as in step 3:
+
+```sh
+ffmpeg -i output.mp4 -vn output.mp3
+```
 
 **HEVC** (High Efficiency Video Coding), also known as **H.265**, is a video compression standard. 
 
