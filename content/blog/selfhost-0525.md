@@ -111,7 +111,7 @@ arp -a | grep "192.168.1" #filtered to avoid containers
 #nmap -sP 192.168.1.1/24 | grep "scan"
 ```
 
-But also the ones via tailscale, even if they are outside your home network:
+But also the ones **via tailscale**, even if they are outside your home network:
 
 ```sh
 sudo tailscale status | grep -v "offline"
@@ -121,6 +121,7 @@ You can measure the temp of a distant Pi:
 
 ```sh
 vcgencmd measure_temp pmic
+#docker system prune -a #or clean its unused container space
 ```
 
 ### CheckMate
@@ -267,6 +268,11 @@ python3 app.py
 
 But...it used davinci model which was deprecated: https://platform.openai.com/docs/deprecations#instructgpt-models
 
+So I had to vibe code a little bit with codex to fix it:
+
+![alt text](/blog_img/GenAI/reporeader-qatrack.png)
+
+But...I feel its already superseeded few times by other tools.
 
 2. Scrapping with FireCrawl + OpenAI
 
@@ -356,8 +362,23 @@ Once embedded, it will reply with both context provided: [![Open in Google Colab
 
 4. https://github.com/langchain-ai/local-deep-researcher
 
+![Optional alt text describing the image](https://private-user-images.githubusercontent.com/122662504/425216824-1c6b28f8-6b64-42ba-a491-1ab2875d50ea.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1Yi51c2VyY29udGVudC5jb20iLCJrZXkiOiJrZXk1IiwiZXhwIjoxNzQ2NDU5NTM5LCJuYmYiOjE3NDY0NTkyMzksInBhdGgiOiIvMTIyNjYyNTA0LzQyNTIxNjgyNC0xYzZiMjhmOC02YjY0LTQyYmEtYTQ5MS0xYWIyODc1ZDUwZWEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUSszNFpBJTIwRjIwMjUwNTA1JTIwLXVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA1MDVUMTUzMzU5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9OGViNGI2MGQ4NWU1NDQ2NDM0ZDg1NDk2YzI1YzdmMTY2Yzk4OWQ3ODE0N2NlM2IzMTU1OGU0NjJhMmMxYTU5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.kfz_F1RpWA1n4UtDrTnR5zdz2UCyNqKs7mAkOvA_Q-8)
+
 > MIT | Fully local web research and report writing assistant 
 
+```sh
+git clone https://github.com/langchain-ai/local-deep-researcher
+
+docker exec -it ollama sh
+ollama pull deepseek-r1:8b
+
+langgraph dev
+```
+
+
+{{< callout type="info" >}}
+By default uses duckduckgo, with no API key required. You will need one for SearXNG, Tavily or Perplexity
+{{< /callout >}}
 
 5. Simply Cloning and using...[codex](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai)?
 

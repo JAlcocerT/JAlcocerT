@@ -212,10 +212,10 @@ LangChain excels in tasks that require creativity and coherence, such as writing
 
 Takeaways
 
-    LangChain and LangGraph are two distinct frameworks with unique strengths and weaknesses.
-    LangChain is ideal for applications that require creativity, coherence, and long-range dependencies.
-    LangGraph is better suited for applications that require precision, accuracy, and nuanced language understanding.
-    Understanding the differences between these frameworks is crucial for harnessing the power of AI in various industries.
+LangChain and LangGraph are two distinct frameworks with unique strengths and weaknesses.
+LangChain is ideal for applications that require creativity, coherence, and long-range dependencies.
+LangGraph is better suited for applications that require precision, accuracy, and nuanced language understanding.
+Understanding the differences between these frameworks is crucial for harnessing the power of AI in various industries.
 
 
 
@@ -470,21 +470,21 @@ In summary, AutoGen can be a powerful tool for building applications that retrie
 
 ### Agents with LangChain
 
-You guessed it.
+You guessed it!
 
-[LangChain can also do Agents](https://www.langchain.com/agents) tricks.
+[LangChain](https://www.langchain.com/agents) can also do [Agents tricks](https://python.langchain.com/v0.1/docs/modules/agents).
 
 * https://www.langchain.com/stateofaiagents
 
 You might know Langchain because of its useful **Chains** and its RAGs Features
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#langchain-agents" title="RAG Post | LangChain Agents Section ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain" title="Explored LangChain with Data-Chat ↗" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
-**LangChain as RAG** can [chat with CSV](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/)& [**DBs**](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/). Also [with PDFs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/)
+**LangChain as RAG** can [chat with CSV](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/) & [**DBs**](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/). Also [with PDFs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/)
 {{< /callout >}}
 
 
@@ -497,7 +497,7 @@ https://www.youtube.com/watch?v=rFQ5Kmkd4jc -->
 
 ### Agents with Llama-Index
 
-LlamaIndex, as described, is designed to work with various tools, data sources, and workflows. 
+LlamaIndex, is designed to work with various tools, data sources, and workflows. 
 
 * https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#llamaindex-and-pandas-dataframes
 * https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/#llama-index
