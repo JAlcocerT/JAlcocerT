@@ -3,7 +3,7 @@ title: "SelfHosting Updates - Spring 2025"
 date: 2025-05-04T01:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Selfhosted Apps that simplify my workflow as of May 2025: Termix, Immich'
+description: 'Selfhosted Apps that simplify my workflow as of May 2025: Termix, CheckMate'
 url: 'selfhosted-apps-may-2025'
 ---
 
@@ -78,6 +78,10 @@ Termix, not termux, its being great:
 
 ![alt text](/blog_img/selfh/termix-user.png)
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Termix" title="Termix with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
 ```yml
 services:
   termix:
@@ -119,6 +123,18 @@ You can measure the temp of a distant Pi:
 vcgencmd measure_temp pmic
 ```
 
+### CheckMate
+
+https://github.com/bluewave-labs/checkmate
+https://checkmate.so/
+
+
+> agpl | Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
+
+
+
+
+
 ### Publiteme
 
 * https://github.com/MikeMather/publite.me
@@ -142,10 +158,36 @@ https://github.com/opencloud-eu/opencloud
 
 > Apache v2 | This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.
 
+
+![alt text](/blog_img/selfh/dockerprune.png)
+
 ### I needed recently...
 
 
 * https://speed.cloudflare.com/
+
+
+
+![alt text](/blog_img/selfh/Internet/internet-test.png)
+
+Speedtest CLI from Ookla®
+
+![alt text](../../static/blog_img/selfh/Internet/SpeedTest.png)
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/InternetQuality/InternetSpeedTracker.yaml" title="InternetSpeedTracker with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+See that its running with:
+
+```sh
+curl 192.168.1.11:8065/api/healthcheck
+```
+
+{{< callout type="info" >}}
+It has influxDB 2.0 integration, inc ase that you want to use this with Grafana. Also integrations with: tg, webhooks, gotify, ntfy,...
+{{< /callout >}}
 
 
 ## Analytics Stuff
@@ -159,6 +201,20 @@ https://github.com/opencloud-eu/opencloud
 Which resonates with my recent post: https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/
 
 ## Conclusions
+
+Lately I got to know about couple of new VectorDBs:
+
+* https://github.com/milvus-io/milvus
+
+>  Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search 
+
+* https://github.com/pgvector/pgvector
+
+>  Open-source vector similarity search for Postgres 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/" title="Milvus and PgVector Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
 
 * https://github.com/hollowpnt92/docker-port-viewer?ref=selfh.st
 https://github.com/hollowpnt92/docker-port-viewer/blob/main/docker-compose.yml
@@ -178,14 +234,41 @@ Also, https://github.com/Litlyx/litlyx which i discovered few months back
 
 Wouldnt it be great to have a project documentation automatically and AI generated?
 
+<!-- 
+https://git.exadel.com/exadel-ai-practice/accelerator/project-documentation-generator
+ -->
 
 
+* OpenAI API Keys - <https://platform.openai.com/api-keys>
+* Anthropic - <https://console.anthropic.com/settings/keys>
+* Groq - <https://console.groq.com/keys>
+* For [Ollama](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama), you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
 
+1. RepoReader
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/RepoReader" title="Repo Reader | Forked Project ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/#conclusions" title="Web Scrapping | Post ↗" >}}
 {{< /cards >}}
+
+
+```sh
+git clone https://github.com/JAlcocerT/RepoReader
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install -r requirements.txt
+source .env
+
+python3 app.py
+#An error occurred: The model `text-davinci-003` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+```
+
+But...it used davinci model which was deprecated: https://platform.openai.com/docs/deprecations#instructgpt-models
+
+
+2. Scrapping with FireCrawl + OpenAI
 
 I also tried with Firecrawl and OpenAI to give me some readme/ [sample posts](https://github.com/JAlcocerT/Scrap_Tools/blob/main/FireCrawl/Z_Scrap_GHRepo/z_sample_post.md) about a given project:
 
@@ -195,12 +278,24 @@ I also tried with Firecrawl and OpenAI to give me some readme/ [sample posts](ht
 {{< /cards >}}
 
 
+3. LangChain Web content embedd + ask:
 
-In the meantime I discovered that it is also possible to ask questions about a Web's content with LangChain, for example, a repository:
+In the meantime I discovered that it is also possible to [ask questions about a Web's content with LangChain](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#web-scrapping), for example, [a repository's readme info](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/web):
 
 ```py
-
+    ###Change these parameters and lets go###
+    ollama_url = "http://192.168.1.5:11434"  # Replace with your Ollama server URL if different
+    embedding_model = "all-minilm"
+    llm_model = "llama3.2:1b"
+    #user_question = "what it is this offer about?"
+    user_question = "what it is this repository about?"
+    #target_website = "https://justjoin.it/job-offer/link-group-product-manager-warszawa-ai"
+    target_website = "https://github.com/JAlcocerT/Streamlit-MultiChat"
+    #content_area_class = "MuiBox-root css-rcazos" # Use the same class as in the example
+    content_area_class = "markdown-body entry-content container-lg"
 ```
+
+![alt text](tic/blog_img/GenAI/langchain-repo-webask.png)
 
 <!-- https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-web.ipynb
 https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-repo-readme.ipynb
@@ -213,5 +308,57 @@ https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-
 It uses a [local ChromaDB](https://pypi.org/project/langchain-chroma/), Local embedding model and the LLM of your taste, via `LangChail.LLM`: [Ollama](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama), [OpenAI](https://python.langchain.com/api_reference/openai/llms/langchain_openai.llms.base.OpenAI.html#langchain_openai.llms.base.OpenAI)...
 {{< /callout >}}
 
+
+{{< details title="It provides real and accurate information | Sample with gpt-4.1-nano 📌" closed="true" >}}
+
+Based on the provided context, this repository is about creating a Streamlit Web App that allows users to chat with multiple large language models (LLMs) simultaneously, including OpenAI, Anthropic, Ollama, and Groq. 
+
+The repository is called `Streamlit-MultiChat` and it features support for several LLMs, including:
+
+- OpenAI (GPT 3.5, GPT4, GPT4o, GPT4o-mini)
+- Anthropic (Claude 3, Claude 3.5)
+- Ollama (Open Source Models)
+- Groq API (LlaMa models using quick LPU inference)
+
+The repository also includes documentation on how to get started, including:
+
+- Cloning the repository and running the Streamlit Web App with API keys
+- Exploring the project's features, such as SliDev presentations, ScrapeGraph, DaLLe, Streamlit Auth, and OpenAI as Custom Agents
+- Deploying the project using Docker and Portainer
+
+The repository is designed to be used with Python venvs, and it includes instructions on how to set up a venv, install dependencies, and run the Streamlit Web App.
+
+To set up the project, you can follow these steps:
+
+1. Clone the repository using `git clone https://github.com/JAlcocerT/Streamlit-MultiChat`
+2. Create a new Python venv using `python3 -m venv multichat_venv` (for Linux) or `python -m venv multichat_venv` (for Windows)
+3. Activate the venv using `source multichat_venv/bin/activate` (for Linux) or `multichat_venv\Scripts\activate` (for Windows)
+4. Install the dependencies using `pip install -r requirements.txt`
+5. Copy the API keys to the `.streamlit/secrets.toml` file
+6. Run the Streamlit Web App using `streamlit run Z_multichat.py`
+
+Alternatively, you can use the Docker image by running `docker pull ghcr.io/jalcocert/streamlit-multichat:latest` and then running the container using `docker run -p 8501:8501 ghcr.io/jalcocert/streamlit-multichat:latest
+
+{{< /details >}}
+
+
+The problem with this approach is that the context is limited to one file only, the `readme.md` and also subject that class changes on the repository website will require a class review for bs4 to work.
+
+We are missing for example the technologies split of the project, which are at `content_area_class = "BorderGrid about-margin"`
+
+Once embedded, it will reply with both context provided: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-scrap-repo-groq.py)
+
+Whatever API you are using, remember that you can see the available models:
+
+Once embedded, it will reply with both context provided: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/Z_API_Models_check.ipynb)
+
+
+
+4. https://github.com/langchain-ai/local-deep-researcher
+
+> MIT | Fully local web research and report writing assistant 
+
+
+5. Simply Cloning and using...[codex](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai)?
 
 In many of these projects you will see [UV as package manager](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)

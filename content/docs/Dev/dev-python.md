@@ -82,6 +82,11 @@ echo $OPENAI_API_KEY
 I discovered UV package manager with a [DASH App](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)
 
 
+Could not resist to add it to [this project, as an example](https://github.com/JAlcocerT/Streamlit-MultiChat?tab=readme-ov-file#getting-started)
+
+```sh
+uv sync
+```
 
 
 ### Containers for Python Apps

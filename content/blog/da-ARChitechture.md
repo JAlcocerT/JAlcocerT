@@ -38,21 +38,6 @@ graph LR
 
 I love [diagrams](https://www.mermaidchart.com/play#pako:eNp90N9LwzAQB_B_5ciDKKwPzrc-qOsPZA9OwQ6UZYysuW5h7UWStAPL_neTlskQ8SUP37vPJbmelVoii1kURZxKTZXaxZwAaq0PMewFycyII4XI7bHBGCRWoq0dp4FUtT6We2EcFFloApitOHtzIcmM6tBwtoYouoek5yx_z9NlMX9ZbLJZkYMiQOoeODuNNPGN8IF26E_9nCd08MtURjdB-bEXaKEHk_1jhNl1q-n6x6WDyL2Yv2aJsPiMzqjSXo9bmIBpaeNUgxvrzM3IRkm3HhVoHUjhxNajgz3_kqa-tiSnXI3SP0tiqFwB3f2Rn8c99qD8rTFwJr5ag_FwRpfTJ1Bp04QOo1uSKEP0qW1ItsMC2ekbNbOQkA)
 
-<!-- ```mermaid
----
-config:
-  look: handDrawn
-  theme: default
----
-flowchart TD
-    A["Start Driver"] --> B{"EXECUTION_DATE in env?"}
-    B -- Yes --> C["Get EXECUTION_DATE from env"]
-    B -- No --> D["Get EXECUTION_DATE from argv[2]"]
-    C --> E["IPDBaseMetrics(config, run_time_str)"]
- 
-    n1["Test databricks"] --> n2["Untitled Node"] & n3["Untitled Node"]
-    n1@{ icon: "azure:azure-databricks", form: "rounded", pos: "b"}
-``` -->
 
 
 1. An **Operational Data Hub** (ODH) is a central, integrated data store that serves operational systems and analytical applications with near real-time or real-time data.
@@ -183,6 +168,8 @@ Understand *the one thing* the client value the most. [Pareto](https://jalcocert
 > Knowing the customer journey or the *what this product feels like*, always helps! The less friction, the more beautiful funnel you get
 
 ### PM Skills
+
+Whenever you are involved on a project, make sure that there are clear:
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#raci-matrix" title="RACI 101 ↗ " >}}
@@ -441,8 +428,8 @@ I like this way of summarizing whats required from others (useful for JIRA stori
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
-  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/outro/telecom/cm-fiber-coax.png" subtitle="Source Code on Github" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="Effective Meetings" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="As a MTG Owner" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/#workflow-for-effectiveness" title="WorkFlow for Effectiveness" image="/blog_img/outro/telecom/cm-fiber-coax.png" subtitle="This one worked for me while working at Telecom environment" >}}
 {{< /cards >}}
 
 

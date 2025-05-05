@@ -113,6 +113,20 @@ Further into data analytics, you will want to chat directly with the content of 
 
 This can be very valuable for [real estate applications](https://jalcocert.github.io/JAlcocerT/real-estate-website/) as seen [here](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/)
 
+### LangChain Agents
+
+* https://python.langchain.com/v0.1/docs/modules/agents/
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/Agents" title="LangChain Agents | Sample Script ↗" icon="book-open" >}}
+{{< /cards >}}
+
+But thats a topic beyond RAG, with Agents:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-multi-agents-frameworks/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi Agents Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Not just LangChain, but LangGraph, OpenAI Agents..." >}}
+{{< /cards >}}
 
 ## LLamaIndex
 

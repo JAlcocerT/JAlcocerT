@@ -77,7 +77,13 @@ pip install langflow #https://pypi.org/project/langflow/  #--pre --force-reinsta
 
 Acces LangFlow at `localhost:7860`
 
-* https://www.youtube.com/watch?v=VbqfZjT_PLE
+<!-- 
+https://www.youtube.com/watch?v=VbqfZjT_PLE 
+-->
+
+{{< youtube "VbqfZjT_PLE" >}}
+
+
   * https://github.com/leonvanzyl/langflow-tutorial-2024/blob/master/run.sh
 
 > Thanks again Leon Van Zyl

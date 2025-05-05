@@ -7,8 +7,15 @@ description: 'Reviewing the most Popular AI Agents frameworks: From AG2AI (AutoG
 url: 'ai-multi-agents-frameworks'
 ---
 
-**Prompt chaining, orchestration workers, and agents** are distinct but related concepts in the realm of building complex applications with Large Language Models (LLMs).
+## The Agentic Ecosystem
 
+Lately everyone talks about **agents**...
+
+And most likely than not, you will have found already these frameworks: **LangGraph vs. CrewAI vs. AutoGen vs. OpenAI Agents...**
+
+But lets get few concepts in place first.
+
+**Prompt chaining, orchestration workers, and agents** are distinct but related concepts in the realm of building complex applications with Large Language Models (LLMs).
 
 
 **1. Prompt Chaining:**
@@ -19,7 +26,16 @@ url: 'ai-multi-agents-frameworks'
 * **Analogy:** Think of an assembly line where each station performs a specific task on the incoming piece. The LLM is like the worker at each station, and the prompts are the instructions for each step.
 * **Use Cases:** Generating marketing copy and then translating it, outlining a document and then writing it, performing multi-step reasoning where each step builds upon the previous one.
 
-> Example with the Databse chat with langchain: https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/ChatWithDB/test_langchainChatDB.ipynb
+> Example with the Database chat with langchain - Where the LLM flow us defined by us, humans and its one dimensional/sequentially
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/ChatWithDB/test_langchainChatDB.ipynb)
+
+<!-- 
+```mermaid
+
+``` -->
+
+
 
 {{< callout type="info" >}}
 With LangChain it was also possible to do agent stuff as per [agent_executor](https://python.langchain.com/v0.2/docs/how_to/agent_executor/). But its going to be depricated in favour of langgraph
@@ -49,6 +65,13 @@ With LangChain it was also possible to do agent stuff as per [agent_executor](ht
 <!-- https://www.youtube.com/watch?v=m59y309_cpg -->
 
 {{< youtube "m59y309_cpg" >}}
+
+
+
+{{< callout type="info" >}}
+* The core idea of agents is to use a language model to choose a sequence of actions to take. 
+* In chains, a sequence of actions is hardcoded (in code). In agents, a language model is used as a reasoning engine to determine which actions to take and in which order.
+{{< /callout >}}
 
 
 
