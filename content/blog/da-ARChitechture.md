@@ -8,7 +8,7 @@ url: 'data-analytics-architecture'
 ---
 
 
-You might encounter this kind of architectures:
+You might encounter this kind of **architectures in your data analytics** journey:
 
 
 ```mermaid
@@ -38,7 +38,7 @@ graph LR
 
 I love [diagrams](https://www.mermaidchart.com/play#pako:eNp90N9LwzAQB_B_5ciDKKwPzrc-qOsPZA9OwQ6UZYysuW5h7UWStAPL_neTlskQ8SUP37vPJbmelVoii1kURZxKTZXaxZwAaq0PMewFycyII4XI7bHBGCRWoq0dp4FUtT6We2EcFFloApitOHtzIcmM6tBwtoYouoek5yx_z9NlMX9ZbLJZkYMiQOoeODuNNPGN8IF26E_9nCd08MtURjdB-bEXaKEHk_1jhNl1q-n6x6WDyL2Yv2aJsPiMzqjSXo9bmIBpaeNUgxvrzM3IRkm3HhVoHUjhxNajgz3_kqa-tiSnXI3SP0tiqFwB3f2Rn8c99qD8rTFwJr5ag_FwRpfTJ1Bp04QOo1uSKEP0qW1ItsMC2ekbNbOQkA)
 
-```mermaid
+<!-- ```mermaid
 ---
 config:
   look: handDrawn
@@ -52,7 +52,7 @@ flowchart TD
  
     n1["Test databricks"] --> n2["Untitled Node"] & n3["Untitled Node"]
     n1@{ icon: "azure:azure-databricks", form: "rounded", pos: "b"}
-```
+``` -->
 
 
 1. An **Operational Data Hub** (ODH) is a central, integrated data store that serves operational systems and analytical applications with near real-time or real-time data.
@@ -159,12 +159,13 @@ These tools span across data flow automation, big data management, Kubernetes wo
 ---
 
 
-Information to insight
-Stakeholder management
-Managing expectations
-Estimating tasks
-How to sell ideas
-What we are missing in the product (fomo, loss>>>gain) ?
+* Information to insight
+* Stakeholder management
+* Managing expectations
+* Estimating tasks
+* How to sell ideas
+* What we are missing in the product?
+    * *fomo, loss>>>gain*
 
 ## From the Experience
 
@@ -195,14 +196,14 @@ Get ready to organize effective meetings:
   {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="Effective Meeting Owership ↗ " >}}  
 {{< /cards >}}
 
+As a D&A Architect, you will also [prototype and create mockups](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-mockups-and-wireframes)
 
-https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-mockups-and-wireframes
 
 #### Decision Making
 
-These are indeed fundamental and widely used simple frameworks for decision-making. They each offer a distinct approach and are valuable tools in various contexts. Here's a breakdown of my thoughts on each:
+Swot and cost-benefit analysis are fundamental and widely used simple **frameworks for decision-making**.
 
-
+They each offer a distinct approach and are valuable tools in various contexts. 
 
 {{< details title="SWOT vs Satisficing vs CBA 📌" closed="true" >}}
 
@@ -232,7 +233,9 @@ These are indeed fundamental and widely used simple frameworks for decision-maki
 
 These three frameworks offer different lenses through which to approach decision-making.
 
-They are not mutually exclusive and can even be used in conjunction. For instance, a SWOT analysis might help identify potential areas for a cost-benefit analysis, or the concept of satisficing might be applied when considering various options identified through a SWOT.
+They are not mutually exclusive and can even be used in conjunction.
+
+For instance, a SWOT analysis might help identify potential areas for a cost-benefit analysis, or the concept of satisficing might be applied when considering various options identified through a SWOT.
 
 
 ### BA & Elicitation Skills
@@ -246,7 +249,7 @@ To tell better stories with data, you have to [ask the right questions](https://
 * **What do stakeholders consider to be of value?**
 
 {{< callout type="info" >}}
-For more questions, you can switch on your **[product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq) mindset**
+For more questions, you can switch-on your **[product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq) mindset**
 {{< /callout >}}
 
 <!-- ![Cat product Meme](/blog_img/memes/features-vs-needs.png) -->
@@ -266,7 +269,7 @@ For more questions, you can switch on your **[product](https://jalcocert.github.
 
 {{< /details >}}
 
-> See more questions [here](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#syncing-expectations)
+See more questions [here](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#syncing-expectations)
 
 
 {{< cards cols="2" >}}
@@ -291,7 +294,6 @@ While BPMN focuses on process flow, UML can complement this by providing differe
 
 #### SMART vs INVEST
 
-```markdown
 It's helpful to understand that **INVEST** and **SMART** serve different purposes, though they can be related.
 
 **INVEST** is a set of guidelines to help you create well-formed **user stories**.
@@ -299,7 +301,7 @@ It's helpful to understand that **INVEST** and **SMART** serve different purpose
 
 Here's a breakdown of when each is most appropriate:
 
-### INVEST: For User Stories
+**INVEST: For User Stories**
 
 INVEST helps ensure that your user stories are functional, valuable, and manageable within an Agile development process.
 
@@ -315,40 +317,14 @@ INVEST helps ensure that your user stories are functional, valuable, and managea
 * When writing and evaluating user stories for Agile development.
 * To ensure stories are actionable, manageable, and deliver value.
 
-### SMART: For Objectives and Goals
-
-SMART helps you define clear, measurable, and achievable objectives, whether for a project, a sprint, or even a user story's acceptance criteria.
-
-* **Specific:** Clearly defined.
-* **Measurable:** Progress can be tracked.
-* **Achievable:** Realistic and attainable.
-* **Relevant:** Aligned with overall goals.
-* **Time-bound:** Has a defined timeframe.
-
-**When to Use SMART:**
-
-* When defining project goals, sprint goals, or any objectives you want to track.
-* When writing **acceptance criteria for a user story.** (This is a very common and effective use of SMART in Agile.)
-* When setting performance targets or any other kind of goal.
-
-### How They Relate
-
-While INVEST and SMART are distinct, they can work together. For example:
-
-* You use INVEST to write a good user story.
-* You use SMART to write the **acceptance criteria** for that user story. The acceptance criteria are the specific, measurable conditions that must be met to say the user story is complete, and those should be SMART.
-
-**In the context of user stories:**
-
-* You wouldn't say "a user story should be SMART" in place of "a user story should be INVEST."
-* Instead, you'd say, "The **acceptance criteria** for a user story should be SMART."
-```
 
 A successful user story should be a concise and clear description of a feature or functionality from the **end-user's perspective**. 
 
 It helps the development team understand **who** will use the feature, **what** they want to achieve, and **why** it's important to them.
 
-Here are the key components that a successful user story typically contains, often remembered by the acronym **INVEST**:
+{{< details title="More about INVEST 📌" closed="true" >}}
+
+The key components that a successful user story typically contains, often remembered by the acronym **INVEST**:
 
 **I - Independent:**
 
@@ -374,6 +350,8 @@ Here are the key components that a successful user story typically contains, oft
 
 * **The story should be written in a way that makes it clear how to verify if it has been implemented correctly.** This often involves defining clear acceptance criteria that can be used to create test cases.
 
+{{< /details >}}
+
 Beyond the INVEST criteria, a well-formed user story often follows a simple template:
 
 **As a [type of user], I want [some goal] so that [some reason/benefit].**
@@ -381,6 +359,36 @@ Beyond the INVEST criteria, a well-formed user story often follows a simple temp
 **Example:**
 
 * **As a registered customer, I want to be able to reset my password so that I can regain access to my account if I forget it.**
+
+**SMART: For Objectives and Goals**
+
+SMART helps you define clear, measurable, and achievable objectives, whether *for a project, a sprint, or even a user story's acceptance criteria*.
+
+* **Specific:** Clearly defined.
+* **Measurable:** Progress can be tracked.
+* **Achievable:** Realistic and attainable.
+* **Relevant:** Aligned with overall goals.
+* **Time-bound:** Has a defined timeframe.
+
+**When to Use SMART:**
+
+* When defining project goals, sprint goals, or any objectives you want to track.
+* When writing **acceptance criteria for a user story.** (This is a very common and effective use of SMART in Agile.)
+* When setting performance targets or any other kind of goal.
+
+
+{{< details title="How They Relate | While INVEST and SMART are distinct, they can work together 📌" closed="true" >}}
+
+* You use INVEST to write a good user story.
+* You use SMART to write the **acceptance criteria** for that user story. The acceptance criteria are the specific, measurable conditions that must be met to say the user story is complete, and those should be SMART.
+
+**In the context of user stories:**
+
+* You wouldn't say "a user story should be SMART" in place of "a user story should be INVEST."
+* Instead, you'd say, "The **acceptance criteria** for a user story should be SMART."
+
+
+{{< /details >}}
 
 **In addition to the core structure and INVEST principles, a successful user story often benefits from:**
 
@@ -397,6 +405,8 @@ Beyond the INVEST criteria, a well-formed user story often follows a simple temp
 * **Prioritization:** While not part of the story itself, clearly prioritizing user stories helps the team understand which ones to work on first based on business value and urgency.
 
 By including these elements, a user story becomes a powerful tool for communication, collaboration, and ensuring that the development team is building the right product for the right users.
+
+
 
 <!-- 
 referencia a persuasion escrito en jan 2022

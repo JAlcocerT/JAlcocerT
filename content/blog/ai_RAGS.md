@@ -14,7 +14,7 @@ If you are already familiar with Python:
 {{< /cards >}}
 
 
-And have been tinkering with ways to chat with your data...
+And have been tinkering with **ways to chat with data context...**
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
@@ -142,17 +142,19 @@ I also learnt a lot with the chat over `.md` files with [LlamaIndex + Mem0](http
 
 Remember that there are already some [alternatives to RAGS: like MCP or KBLM](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#other-alternatives-to-rag)
 
+For now, my favourite one is still LangChain for its various use cases:
+
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 
-Concepts / AI Tools that are **veeery trendy:**
+Concepts / AI Tools that are **veeery trendy**, also as seen [here](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen" title="MLFlow and LangFuse with Docker 🐋 ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects" title="Big Data & DSc Cool Tools ↗" >}}
 {{< /cards >}}
 
-* [MLFlow](#mlflow), [LangGraph](#langgraph-bigtool), LangFuse and...LangFlow
+* [MLFlow](#mlflow), [LangGraph](#langgraph-bigtool), [LangFuse](#langfuse) and...[LangFlow](#langflow)
 
 * Reranking models for RAG - *As it can be done with [LocalAI](https://jalcocert.github.io/JAlcocerT/local-ai-audio/#localai-tts)!*
 * Summarization Techniques: https://python.langchain.com/v0.1/docs/use_cases/summarization/
@@ -163,8 +165,7 @@ Concepts / AI Tools that are **veeery trendy:**
 
 ### MLFlow
 
-
-LangChain, LLamaindex, OpenAI... can be used together with MLFlow! https://mlflow.org/docs/latest/llms/
+LangChain, LLamaindex, OpenAI... can all be used together with MLFlow! https://mlflow.org/docs/latest/llms/
 
 What for?
 
@@ -291,8 +292,13 @@ docker run -it --rm -p 7860:7860 langflowai/langflow:latest
 ![LangFlow Store](/blog_img/GenAI/NoCode-AI/LangFlow_Store.png)
 
 
-
 ### LangFuse
+
+An Equivalent to LangSmith for observability but MIT and selfhostable
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse" title="LangFuse with Docker 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ---

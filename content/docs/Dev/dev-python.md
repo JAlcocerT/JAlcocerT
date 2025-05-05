@@ -77,6 +77,12 @@ echo $OPENAI_API_KEY
 
 {{< /details >}}
 
+### UV
+
+I discovered UV package manager with a [DASH App](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)
+
+
+
 
 ### Containers for Python Apps
 

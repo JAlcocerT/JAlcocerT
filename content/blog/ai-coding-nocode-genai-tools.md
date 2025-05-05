@@ -3,15 +3,17 @@ title: "No Code Tools to use Gen AI"
 date: 2025-04-19T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Generative AI made simple. Flowise, n8n, LangFlow, Tg...AI Powered Chat bots!'
+description: 'Generative AI made simple. Flowise, n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
 url: 'no-code-ai-tools'
 ---
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker" title="Docker Config Files" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Docker Services" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="/blog_img/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker" title="Docker Config Files Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Docker Services" >}}
 {{< /cards >}}
+
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
 
 ### Flowise AI
 
@@ -109,10 +111,16 @@ Dont confuse it with LangFuse nor MLFlow, which are used for:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse" title="LangFuse with Docker 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/MLFlow" title="Got to know aobut LangFlow sometime ago | Post 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects" title="SelfHosted LangFuse sometime ago | Post  ↗" >}}
 {{< /cards >}}
 
 > LangFuse is kind of langsmith, but MIT and selfhostable
+
+![alt text](/blog_img/GenAI/langfuse-signup.png)
+
+Once you create a local account, access the UI:
+
+![alt text](/blog_img/GenAI/langfuse-webui.png)
 
 
 
@@ -121,6 +129,7 @@ Dont confuse it with LangFuse nor MLFlow, which are used for:
 https://www.youtube.com/watch?v=Zd5wjy4YPis
 
 
+{{< youtube "Zd5wjy4YPis" >}}
 
 
 
@@ -129,21 +138,31 @@ https://www.youtube.com/watch?v=Zd5wjy4YPis
 https://www.youtube.com/watch?v=yXAJwDtAbLo
 
 
+{{< youtube "yXAJwDtAbLo" >}}
+
+
 
 > Is Dify the easiest way to build AI Applications?
 
+---
 
 ## Conclusion
 
-{{< cards cols="2" >}}
+<!-- {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="Tinkering with structured outputs | Post ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="Tinkering with function calling | Post ↗" >}}
+{{< /cards >}} -->
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8N with Docker 🐋 ↗" >}}
+
 {{< /cards >}}
 
 
 ### See also...
 
-How about embedding a chatbot within your website?
+How about **embedding a chatbot** within your website?
 
 > A branded AI-powered website chatbot
 

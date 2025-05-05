@@ -1497,7 +1497,7 @@ If you want to get started with BI Tools, check how to **quickly setup REDASH**:
 I have tinkered with them with Docker, [here](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen)
 {{< /callout >}}
 
-1. https://github.com/mlflow/mlflow
+1. https://github.com/mlflow/mlflow for ~observability
 
 > Apache v2 | Open source platform for the **machine learning lifecycle**
 
@@ -1507,6 +1507,10 @@ I have tinkered with them with Docker, [here](https://github.com/JAlcocerT/Docke
 
 Langfuse can be selfhosted as per: https://langfuse.com/self-hosting/local
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse" title="LangFuse with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
 ```sh
 # Get a copy of the latest Langfuse repository
 git clone https://github.com/langfuse/langfuse.git
@@ -1515,7 +1519,7 @@ cd langfuse
 # Run the langfuse docker compose
 docker compose up #important DONT DO docker-compose, it works using v2
 #sudo docker stop portainer #if you get port 9000 conflict
-#sudo docker start portainre
+#sudo docker start portainer
 ```
 
 > Go to port `3000` to see the web UI
