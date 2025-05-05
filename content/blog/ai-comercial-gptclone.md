@@ -249,7 +249,7 @@ You can make some F/OSS Project that delegates the model execution to a third pa
 
 > More flexible and can be used for a wider range of tasks, including data processing, automation of repetitive tasks
 
-* [Flowise AI](/selfhosting-flowise-ai/) - Drag & drop UI to build your customized LLM flows 
+* [Flowise AI](/selfhosting-flowise-ai/) - Drag & drop UI to build your **customized LLM flows** 
   * **Low-code application** building with LLMs. It offers a drag-and-drop interface that allows users to visually construct workflows and applications using LLMs without extensive coding.
   * User-friendly interface, ideal for beginners or those with limited coding experience. Supports various LLMs and offers pre-built components for common tasks.
   * Less flexibility and customization compared to code-based frameworks like crewAI or MetaGPT.

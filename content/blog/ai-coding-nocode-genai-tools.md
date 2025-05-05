@@ -3,7 +3,7 @@ title: "No Code Tools to use Gen AI"
 date: 2025-04-19T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Generative AI made simple. Flowise, n8n, Tg...AI Powered Chat bots!'
+description: 'Generative AI made simple. Flowise, n8n, LangFlow, Tg...AI Powered Chat bots!'
 url: 'no-code-ai-tools'
 ---
 
@@ -43,9 +43,13 @@ url: 'no-code-ai-tools'
 
 Langflow is designed to redefine the boundaries of AI development in experimentation and real-world scenarios.
 
+Its a lowcode **visual framework** for building multi-agent and RAG applications.
+
+It's open-source, Python-powered, fully customizable, model and vector store agnostic.
+
 It is **based on Python**, which makes it ready to have many integrations:
 
-![LangFlow Store](/img/GenAI/NoCode-AI/LangFlow_Store.png)
+![LangFlow Store](/blog_img/GenAI/NoCode-AI/LangFlow_Store.png)
 
 * **LangFlow**:
   * {{< newtab url="https://www.langflow.org/" text="The Flowise AI Official Page" >}}
@@ -93,18 +97,38 @@ services:
     restart: unless-stopped
 ```
 
-https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFlow
-https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFlow" title="LangFlow with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+Dont confuse it with LangFuse nor MLFlow, which are used for:
+
+1. MLflow is an open-source platform to manage the complete machine learning lifecycle, including experiment tracking, model versioning, deployment, and providing integrated observability features, especially for LLM-powered applications.
+2. Langfuse is an open-source observability platform specifically designed for LLM applications, offering detailed tracing, monitoring, and analytics to help developers understand, debug, and improve their language model-based systems.
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse" title="LangFuse with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/MLFlow" title="Got to know aobut LangFlow sometime ago | Post 🐋 ↗" >}}
+{{< /cards >}}
+
+> LangFuse is kind of langsmith, but MIT and selfhostable
+
+
 
 ### Rivet AI
 
-https://www.youtube.com/watch?v=Zd5wjy4YPis&t=157s
+https://www.youtube.com/watch?v=Zd5wjy4YPis
+
+
 
 
 
 ### DifyAI
 
 https://www.youtube.com/watch?v=yXAJwDtAbLo
+
+
 
 > Is Dify the easiest way to build AI Applications?
 

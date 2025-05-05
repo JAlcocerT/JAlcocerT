@@ -1,6 +1,6 @@
 ---
 title: "Knitting patterns are all about...math?"
-date: 2025-09-29
+date: 2025-02-17
 draft: false
 tags: ["Dev"]
 description: 'Creating a clothing size calculator'
@@ -65,10 +65,10 @@ Why i needed that?
 
 I got the ig profile shared via email, and they are...making you go back to the app, with a QR code.
 
-Unless... :)
+[Unless...](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt) :)
 
 Im now using https://github.com/Litlyx/litlyx for the **web analytics** of this project
 
 ![Cookies Meme](/blog_img/web/COOKIES.jpg)
 
-With no cookie monster involved!
+> With no cookie monster involved!

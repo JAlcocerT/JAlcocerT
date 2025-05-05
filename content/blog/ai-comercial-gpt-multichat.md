@@ -665,8 +665,10 @@ services:
 
 {{< /details >}}
 
-* [FlowiseAI](/selfhosting-flowise-ai/)
-* Langflow - **Visual framework** for building multi-agent and RAG applications. It is open-source, Python-powered, fully customizable, LLM and vector store agnostic.
+* [FlowiseAI](https://fossengineer.com/selfhosting-flowise-ai/)
+
+* Langflow - **Visual framework** for building multi-agent and RAG applications.
+  * It is open-source, Python-powered, fully customizable, LLM and vector store agnostic.
   * https://docs.langflow.org/getting-started-installation
   * MIT Licensed ❤️- https://github.com/langflow-ai/langflow?tab=MIT-1-ov-file#readme
 
@@ -677,6 +679,9 @@ python -m langflow run
 
 > Langflow is a no-code AI ecosystem, integrating seamlessly with the tools and stacks your team knows and loves.
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFlow" title="LangFlow with Docker 🐋 ↗" >}}
+{{< /cards >}}
 
 ---
 

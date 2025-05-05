@@ -401,7 +401,9 @@ But, it does NOT support `.HEIC` files.
 
 And having the https was a headache.
 
-So I went with [**FileBrowser**](https://fossengineer.com/selfhosting-filebrowser-docker/)  [![shields.io Stars](https://img.shields.io/github/stars/filebrowser/filebrowser)](https://github.com/filebrowser/filebrowser/stargazers)
+So I went with [**FileBrowser**](https://fossengineer.com/selfhosting-filebrowser-docker/)
+
+[![shields.io Stars](https://img.shields.io/github/stars/filebrowser/filebrowser)](https://github.com/filebrowser/filebrowser/stargazers)
 
 ```yml
 services:

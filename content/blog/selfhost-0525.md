@@ -170,3 +170,34 @@ docker run -d --name docker-socket-proxy -e CONTAINERS=1 -e POST=0 -e PUT=0 -e D
 ### Better WebAnalytics
 
 Lately I tried littlyx, but I saw this cool post: https://jakubwolynko.eu/blog/202505-hosting-umami-on-vercel/
+
+Also, https://github.com/Litlyx/litlyx which i discovered few months back
+
+
+### Automated Projects Docs
+
+Wouldnt it be great to have a project documentation automatically and AI generated?
+
+
+
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/RepoReader" title="Repo Reader | Forked Project ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/#conclusions" title="Web Scrapping | Post ↗" >}}
+{{< /cards >}}
+
+I also tried with Firecrawl and OpenAI to give me some readme/ [sample posts](https://github.com/JAlcocerT/Scrap_Tools/blob/main/FireCrawl/Z_Scrap_GHRepo/z_sample_post.md) about a given project:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/RepoReader" title="Repo Reader | Forked Project ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Scrap_Tools/tree/main/FireCrawl/Z_Scrap_GHRep" title="Firecrawl Scrap GH Repo | Project Files ↗" >}}
+{{< /cards >}}
+
+
+
+In the meantime I discovered that it is also possible to ask questions about the web with LangChain:
+
+https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-web.ipynb
+
+In many of these projects you will see [UV as package manager](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)

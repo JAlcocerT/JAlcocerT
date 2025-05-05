@@ -3,49 +3,62 @@ title: "My Favourite ways to RAG"
 date: 2025-04-10T10:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'RAG applications. From LangChain, LLamaIndex... to MLFlow.'
+description: 'RAG Applications. From LangChain, LLamaIndex... to MLFlow observability container setup.'
 url: 'comparing-rag-and-use-cases'
 ---
 
+If you are already familiar with Python:
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-projects-python-dependencies/" title="Python Deps 101" >}}
 {{< /cards >}}
 
 
+And have been tinkering with ways to chat with your data...
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
-  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
 
+These should be **some familiar RAG frameworks** so far:
+
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
 
 
-[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,mlflow/mlflow,langfuse/langfuse&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&mlflow/mlflow&langfuse/langfuse&Date)
+We will also see some [*trendy* AI tools](#conclusions) that work with RAGs as well:
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mlflow/mlflow,langchain-ai/langgraph,langfuse/langfuse&,type=Date)](https://star-history.com/mlflow/mlflow&langchain-ai/langgraph&langfuse/langfuse&Date)
 
 
 ## LangChain
 
 
 {{< callout type="info" >}}
-And actually the build has happened faster than for streamlit Apps
+For now, the most popular RAG framework
 {{< /callout >}}
 
+[![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
 
 
+### Web Scrapping
 
-### With Persistent ChromaDB and MD
+LangChain can also help us to *chat with website content*:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/web" title="Data Chat | LangChain Web Chat Code ↗" >}}
+  {{< card link="https://pypi.org/project/langchain-chroma/" title="LangChain ChromaDB | PyPi ↗" >}}
+{{< /cards >}}
 
 
-[NLTK](https://github.com/nltk/nltk) was key!
+> In this case, With Ollama and ChromaDB.
 
 
-* https://pypi.org/project/nltk/
-* https://www.nltk.org/api/nltk.tag.perceptron.html
+#### With Persistent ChromaDB and MD
 
 
-> And I almost forgot, but used it as NLP Tool
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 
 {{< filetree/container >}}
@@ -61,29 +74,23 @@ And actually the build has happened faster than for streamlit Apps
 ![alt text](/blog_img/GenAI/chromadb-cli.png)
 
 
-### Web Scrapping
+### CSV and PDF
 
-https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/web
+Wherever office work you have, you will most certainly see 2 kind of files, spreadsheets (CSVs) and pdfs.
 
-With Ollama and ChromaDB:
-
-https://pypi.org/project/langchain-chroma/
-
-
-
-### CSV
+Thanks to langchain, we can ask information contained in both kind of files:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Project 1st Iteration ↗" icon="book-open" >}}
-  {{< card link="https://github.com/JAlcocerT/ScrewFastMoiRealEstate" title="The Source Code, using Screw Fast MIT Theme ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#chat-with-csv-with-langchain/" title="LangChain CSV | Post ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-ask-csv" title="Repo Langchain ask CSV ↗" icon="book-open" >}}
 {{< /cards >}}
 
 
-### PDF
+For PDF's you can do:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Project 1st Iteration ↗" icon="book-open" >}}
-  {{< card link="https://github.com/JAlcocerT/ScrewFastMoiRealEstate" title="The Source Code, using Screw Fast MIT Theme ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs//" title="LangChain PDF | Post ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/ask-multiple-pdfs/" title="Repo LangChain ask PDFs ↗" icon="book-open" >}}
 {{< /cards >}}
 
 If you are interested, you can **edit PDFs** with:
@@ -96,34 +103,56 @@ If you are interested, you can **edit PDFs** with:
 
 ### Database
 
+Further into data analytics, you will want to chat directly with the content of your databases:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="LangChain PDF | Post ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#chat-with-a-db-with-langchain" title="Repo LangChain ask PDFs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+This can be very valuable for [real estate applications](https://jalcocert.github.io/JAlcocerT/real-estate-website/) as seen [here](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/)
+
 
 ## LLamaIndex
 
-https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/
+A competitor in the RAG space for Langchain is **LLamaIndex**
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#llamaindex-and-pandas-dataframes" title="LLamaIndex Pandas DF | Trip Planner Post ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/Tests" title="Repo Trip Planner ↗" icon="book-open" >}}
+{{< /cards >}}
 
+I also learnt a lot with the chat over `.md` files with [LlamaIndex + Mem0](https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0).
 
 
 ## PandasAI
 
-https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df//" title="LangChain Pandas DF | Post ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-pandasAI/" title="PandasAI | Post ↗" icon="book-open" >}}
+{{< /cards >}}
 
 
 ---
 
 ## Conclusions
 
+Remember that there are already some [alternatives to RAGS: like MCP or KBLM](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#other-alternatives-to-rag)
+
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 
-Concepts/Tools that are **veeery trendy:**
+Concepts / AI Tools that are **veeery trendy:**
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen" title="MLFlow and LangFuse with Docker 🐋 ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects" title="Big Data & DSc Cool Tools ↗" >}}
 {{< /cards >}}
 
-* MLFlow, LangGraph, LangFuse
+* [MLFlow](#mlflow), [LangGraph](#langgraph-bigtool), LangFuse and...LangFlow
 
 * Reranking models for RAG - *As it can be done with [LocalAI](https://jalcocert.github.io/JAlcocerT/local-ai-audio/#localai-tts)!*
 * Summarization Techniques: https://python.langchain.com/v0.1/docs/use_cases/summarization/
@@ -137,6 +166,10 @@ Concepts/Tools that are **veeery trendy:**
 
 LangChain, LLamaindex, OpenAI... can be used together with MLFlow! https://mlflow.org/docs/latest/llms/
 
+What for?
+
+It helps us see how our LLMs are working in production.
+
 From this simple prompts: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_mermaid.py
 
 To This one: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_t2t-o1mini.py
@@ -145,8 +178,12 @@ To....
 
 
 {{< callout type="info" >}}
-to finally, **GenAI observavility with MLFlow** https://github.com/mlflow/mlflow
+...finally, **GenAI observavility with MLFlow** https://github.com/mlflow/mlflow
 {{< /callout >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/MLFlow" title="MLFlow with Docker 🐋 ↗" >}}
+{{< /cards >}}
 
 ![alt text](/blog_img/GenAI/mlflow-prompts.png)
 
@@ -187,7 +224,11 @@ print(response.choices[0].message.content)
 ```
 
 
-MLflow Tracing provides LLM observability for various GenAI libraries such as OpenAI, LangChain, LlamaIndex, DSPy, AutoGen, and more. To enable auto-tracing, call mlflow.xyz.autolog() before running your models. Refer to the documentation for customization and manual instrumentation.
+**MLflow Tracing provides LLM observability** for various GenAI libraries such as OpenAI, LangChain, LlamaIndex, DSPy, AutoGen, and more. 
+
+To enable auto-tracing, call `mlflow.xyz.autolog()` before running your models.
+
+Refer to the documentation for customization and manual instrumentation.
 
 
 {{< cards cols="1" >}}
@@ -199,7 +240,20 @@ MLflow Tracing provides LLM observability for various GenAI libraries such as Op
 ![alt text](/blog_img/GenAI/langfuse-webui.png)
 
 
-### BigTool
+### LangGraph BigTool
+
+LangGraph is a Python library for building stateful, multi-agent systems and complex conversational workflows.
+
+* https://github.com/langchain-ai/langgraph
+  * https://github.com/JAlcocerT/Multi-Agents/tree/main/LangGraph
+
+> MIT |  Build resilient language agents as graphs. 
+
+The LangGraph library enables agent orchestration — offering customizable architectures, long-term memory, and human-in-the-loop to reliably handle complex tasks.
+
+{{< callout type="info" >}}
+It provides a more programmatic and flexible way to define the interactions and state transitions between multiple agents or steps in a sophisticated AI application.
+{{< /callout >}}
 
 <!--
 https://www.youtube.com/watch?v=3ISRS2hQlfI 
@@ -207,20 +261,53 @@ https://www.youtube.com/watch?v=3ISRS2hQlfI
 
 {{< youtube "3ISRS2hQlfI" >}}
 
-https://github.com/langchain-ai/langgraph-bigtool
+* https://github.com/langchain-ai/langgraph-bigtool
+
+>  Build LangGraph agents with large numbers of tools 
+
+### LangFlow
+
+Langflow's primary strength lies in its **visual, low-code environment** for building AI applications, especially those leveraging LLMs and LangChain.
+
+
+{{< callout type="info" >}}
+It simplifies the creation of complex multi-agent/RAG LangChain workflows via UI
+{{< /callout >}}
+
+<!-- 
+* https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFlow
+* https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/#langflow 
+-->
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFlow" title="LangFlow with Docker 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/#langflow" title="Got to know aobut LangFlow sometime ago | Post 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+docker run -it --rm -p 7860:7860 langflowai/langflow:latest
+```
+
+![LangFlow Store](/blog_img/GenAI/NoCode-AI/LangFlow_Store.png)
+
+
+
+### LangFuse
+
 
 ---
 
 ## FAQ
 
-MLflow on Databricks: Review how MLflow is integrated into Databricks for tracking machine learning experiments, managing models, and deploying them. Understand concepts like runs, experiments, and the model registry.
+MLflow on Databricks: Review how MLflow is integrated into Databricks for tracking machine learning experiments, managing models, and deploying them.
+
+Understand concepts like runs, experiments, and the model registry.
 
 ### AI Keys
 
 Lately I have been using:
 
 * https://claude.ai/
-
 * https://console.anthropic.com/workbench/
 * https://console.groq.com/keys
 * https://platform.openai.com/api-keys
@@ -242,9 +329,6 @@ See how to run **LangGraph or MLFlow**
 {{< /cards >}}
 
 ### AI Apps Im SelfHosting
-
-
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_AIs" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
@@ -278,8 +362,8 @@ https://www.youtube.com/watch?v=sGUjmyfof4Q
 
 {{< youtube "sGUjmyfof4Q" >}}
 
-https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama
-https://fossengineer.com/selfhosting-llms-ollama/
+* https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama
+* https://fossengineer.com/selfhosting-llms-ollama/
 
 ```sh
 
@@ -291,7 +375,7 @@ docker exec -it ollama sh
 ollama pull deepseek-r1:8b
 ```
 
-https://docs.searxng.org/dev/search_api.html
+* https://docs.searxng.org/dev/search_api.html
 
 
 ```
@@ -301,9 +385,11 @@ LOCAL_LLM=model # the model to use, defaults to `llama3.2` if not set
 ```
 
 
-Overview
+{{< details title="Video Summarized 📌" closed="true" >}}
+
 
 The video explores the new fully open source reasoning model, DeepSeek-R1, which represents a new scaling paradigm for Large Language Models (LLMs). The model is trained using a combination of fine-tuning and reinforcement learning, and its training strategy is described in detail. The video also demonstrates the capabilities of the model, including its ability to reason and generate comprehensive summaries.
+
 The Training Strategy of DeepSeek-R1
 
 DeepSeek-R1 uses a combination of fine-tuning and reinforcement learning to produce a strong reasoning model. The first stage involves fine-tuning a strong base chat model, DeepSeek V3, on thousands of chain of thought reasoning examples. The second stage uses reinforcement learning with a rule-based reward function to score the model's outputs. The model generates 64 different attempts to solve a problem and scores each one, increasing or decreasing the probability of generating tokens based on the score. This process helps the model discover good reasoning patterns.
@@ -322,3 +408,6 @@ Takeaways
     The model's training strategy involves a combination of fine-tuning and reinforcement learning, with filtering and fine-tuning to restore general capabilities.
     The model is capable of generating comprehensive summaries and reasoning about complex topics.
     The distillation of the model into smaller versions, such as the 14 billion parameter model, makes it possible to run on a laptop.
+
+
+{{< /details >}}

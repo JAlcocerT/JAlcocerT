@@ -387,7 +387,9 @@ Primarily **focused on indexing and retrieval**, may lack advanced generation ca
 
 #### LangFlow
 
-Langflow is a visual framework for building multi-agent and RAG applications. It's open-source, Python-powered, fully customizable, model and vector store agnostic.
+Langflow is a **visual framework for building multi-agent and RAG** applications.
+
+It's open-source, Python-powered, fully customizable, model and vector store agnostic.
 
 
 {{< dropdown title="Why (or Why not) LangFlow as RAG? ⏬ " closed="true" >}}

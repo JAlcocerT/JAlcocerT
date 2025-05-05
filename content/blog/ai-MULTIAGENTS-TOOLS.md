@@ -673,6 +673,9 @@ Build a Python WebApp in 3 minutes with [Solara (Streamlit Alternative)](https:/
 
 #### Via Scrapping
 
+https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#web-scrapping
+https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/web
+
 #### Via Web Search
 
 For example, with **duckduckgo**:

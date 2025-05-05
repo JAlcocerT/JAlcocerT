@@ -52,11 +52,26 @@ Yes, fuzzy matching is indeed very important when processing text, especially wh
     * **Fuzzywuzzy:** A popular Python library for fuzzy string matching. It uses the Levenshtein distance to calculate the similarity between strings.
     * **RapidFuzz:** A faster alternative to Fuzzywuzzy, written in C++.
     * **TheFuzz:** this is the new version of Fuzzywuzzy.
+
+
 * **Other Relevant NLP Libraries:**
+
     * **NLTK (Natural Language Toolkit):** A comprehensive library for NLP tasks, including tokenization, stemming, lemmatization, and part-of-speech tagging.
+
+[NLTK](https://github.com/nltk/nltk) was key for some tasks I was given
+
+
+* https://pypi.org/project/nltk/
+* https://www.nltk.org/api/nltk.tag.perceptron.html
+
+
+> Yea... I almost forgot, but used it as NLP Tool
+
     * **SpaCy:** A fast and efficient library for advanced NLP tasks, such as named entity recognition, dependency parsing, and text classification.
     * **Hugging Face Transformers:** A library for working with transformer-based models, such as BERT, GPT, and T5. Essential for modern NLP applications.
     * **Regular Expressions (re):** A built-in Python module for pattern matching. Essential for text cleaning and extraction.
+
+
 * **Vector Databases:**
     * When dealing with GenAI, and embeddings, vector databases are becoming extremely important.
     * These databases allow for the fast retreival of similar embeddings, which is the core of retrieval augmented generation(RAG).
@@ -68,12 +83,10 @@ Yes, fuzzy matching is indeed very important when processing text, especially wh
 https://www.cccis.com/about
  -->
 
-* Document intelligence involves extracting meaningful information from unstructured or semi-structured documents.
+* **Document intelligence** involves extracting meaningful information from unstructured or semi-structured documents.
 * This often requires:
     * Text cleaning and preprocessing.
     * Entity recognition and extraction.
     * Text classification and summarization.
     * Building language models to understand the context and meaning of the text.
 * The tools listed above provide the necessary capabilities to perform these tasks effectively.
-
-By recapping these libraries and tools, you'll be well-prepared to tackle the challenges of building a document intelligence solution.
