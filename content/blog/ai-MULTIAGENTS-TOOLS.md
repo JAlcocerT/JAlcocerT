@@ -26,7 +26,9 @@ But lets get few concepts in place first.
 * **Analogy:** Think of an assembly line where each station performs a specific task on the incoming piece. The LLM is like the worker at each station, and the prompts are the instructions for each step.
 * **Use Cases:** Generating marketing copy and then translating it, outlining a document and then writing it, performing multi-step reasoning where each step builds upon the previous one.
 
-> Example with the Database chat with langchain - Where the LLM flow us defined by us, humans and its one dimensional/sequentially
+This leverage the *simple Text-to-Text LLM queries*, like the ones [tested in the MultiChat project](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_t2t-o1mini.py)
+
+> Example with the Database chat with langchain - Where the LLM flow are defined by us, humans and they execute in 1dimension/sequentially
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/ChatWithDB/test_langchainChatDB.ipynb)
 
@@ -34,7 +36,6 @@ But lets get few concepts in place first.
 ```mermaid
 
 ``` -->
-
 
 
 {{< callout type="info" >}}
@@ -50,7 +51,13 @@ With LangChain it was also possible to do agent stuff as per [agent_executor](ht
 * **Analogy:** Imagine a conductor leading an orchestra. The conductor (orchestration worker) ensures each section (LLMs, tools, etc.) plays its part at the right time to create a harmonious whole.
 * **Use Cases:** Building chatbots that need to access knowledge bases, call APIs, and generate responses; automating complex business processes involving LLM-powered content generation or data analysis.
 
-> Langgraph
+> Langgraph!
+
+
+{{< callout type="info" >}}
+With langgraph we can define this kind of stategraphs, as [seen on the local deep researcher](https://github.com/JAlcocerT/local-deep-researcher/blob/main/src/ollama_deep_researcher/graph.py#L8)
+{{< /callout >}}
+
 
 **3. Agents:**
 
