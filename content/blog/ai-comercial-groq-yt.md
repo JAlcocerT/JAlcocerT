@@ -35,6 +35,11 @@ Thanks to the **Groq LPU API** we have a programmatic way for developers to inte
 
 > Build AI Assistants with memory, knowledge and tools.
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/phidata/pkgs/container/phidata" title="PhiData Youtube Groq" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Container Image at GHCR" >}}
+  {{< card link="https://github.com/JAlcocerT/phidata" title="PhiData Forked Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
 Today, we are going to use **Groq API with F/OSS Models** to...[chat with a Youtube video](#selfhosting-groq-video-summaries).
 
 **With LLaMa3 and crazy inference speed**
@@ -94,7 +99,7 @@ The PhiData Teams has made our life even easier, with some modules:
 * And how to [list the available LLMs at groqAPI](https://github.com/JAlcocerT/phidata/blob/main/cookbook/llms/groq/video_summary/groq_available_models.py) (because there s more to come..)
 
 
-The magic happens at **the assistant.py module**
+The magic happens at **the `assistant.py` module**
 
 ```mermaid
 flowchart TD
@@ -125,6 +130,53 @@ flowchart TD
     K --> L[Generate Final Markdown Report]
     
     L --> M[End]
+```
+
+At a [higher level](https://mermaid.live/edit#pako:eNqFVetu2jAUfhXLUisqAYIQLuXHJJSWqhtdt0IndWGKTGKC1cTObKctrSrtEfaMe5IdJ0AhoYUfYJ_zfT73wwv2RUBxH4eSJAs0OZtytPkcHaGxlpTEEdPo9nJbpdJZztgAvEGSuFP8RoA7qpAkqSfLkyn-tc1G8FrTHdOI-hqNRlfoCpyI0DFyFim_R2P2TEt4yz3nmkr0gwVUoNubkYFHzL9HF5RTSXSZ0nJvKA82nGP0eXz9FcVUk4BoUoLb7hlTSUSWazfSOCaSUQXMIeMkWkmWO0ywMOWFrA1SvaBcM59oJvjevBkIpKuALKbJqJuu-fbmKfcNRtUjETJ-0Ic7kU7SGUWMh1S968YKNREiUt6IzcClbRGqJAtW1-ZYruHdpOmGVHtLkWogeA8my55JLVSnhLX2YH2SZCEV8fviyWry78_fiD5Aq6i8Ns_vJzjDe-P3cAg50IGJadS1F5AqLdCjkAGYmRFFA-SbR1QhFicPJdN5a0eojE0PF6EttwirSyikkRWhtuuIKJuITL0OkaqDqcmb83BKMtxHKRnmBc2L83FkQ8stwkxkJAwlDWEYA8jmXBx2PRKP2yLYC6hW-2TmfVdsZeJsHrYVmQBUEKTvU6U-IkO_rtSt_er819kx4OQcZ6Vr5T_2DsTOhMMcObRWRuxSsOdPsMBMqQKamMXEfahuAQORbDbo8du5Rt4WhZAlDkypmTtUGSjFlCZcIzIDMslWxkkJH0rxO5_tKIrr5lbGrEa1Bq9w5UuWgBMJK5te6oXgtUBoyh9QZS4kuri5_u4Nvl16X87vTnAV_ltYgPtaprSKY2gnYq74xTw1xRBWTKe4D8eAyPspnvJX4CSE_xQiXtOkSMMF7s9JpOCWJhAtPWME-jreSGW27B2Rco377U4vewT3X_AT7jet07rdbPfsbrfba1mNVhUvcb9mtax6w2527V7D7vS67dcqfs6sNutWu2Hbp5221YZDs9N6_Q-pIhe9):
+
+```mermaid
+graph TD
+          %% Streamlit UI
+          subgraph Streamlit_App["Streamlit App (app.py)"]
+            UI1[Select LLM Model & Chunk Size]
+            UI2[Enter Video URL & Click Generate]
+            UI3[Render Video & JSON metadata]
+            UI4[Display Chunk Summaries & Final Summary]
+          end
+
+          %% Authentication
+          subgraph Auth["Authentication"]
+            Auth1[Auth_functions.login]
+          end
+
+          %% YouTube ingestion
+          subgraph YouTubeTools_Lib["YouTubeTools (phi.tools)"]
+            YT1[get_youtube_video_dataURL]
+            YT2[get_youtube_video_captionsURL]
+          end
+
+          %% Chunk‐level summarization
+          subgraph Chunk_Summarization
+            C1[Split captions into word‐based chunks]
+            C2[get_chunk_summarizermodel]
+            C3[chunk_summarizer.runchunk]
+            C4[Collect chunk summaries]
+          end
+
+          %% Final summarization
+          subgraph Final_Summarization
+            F1[get_video_summarizermodel]
+            F2[video_summarizer.runaggregated info]
+          end
+
+          %% Flow
+          UI1 --> UI2
+          UI2 --> Auth1
+          Auth1 -- success --> UI2
+          UI2 --> YT1 --> UI3
+          UI2 --> YT2 --> C1
+          C1 --> C2 --> C3 --> C4
+          C4 --> F1 --> F2 --> UI4
 ```
 
 

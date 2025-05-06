@@ -73,6 +73,13 @@ git clone https://github.com/JAlcocerT/Py_Trip_Planner
 
 
 
+Thanks to codex I could understand better how the Groq Youtube summarizer works (as I forked it from PhiData repo)
+
+https://github.com/JAlcocerT/phidata
+
+
+
+
 
 ### Claude Code
 

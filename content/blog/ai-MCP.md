@@ -637,3 +637,16 @@ If you inspect the https://github.com/esxr/langgraph-mcp repository, you will se
 
 #### Generating project Docs with LLMs
 
+
+
+---
+
+
+## Conclusions
+
+
+### Interesting MCP Servers
+
+1. https://github.com/executeautomation/mcp-playwright?tab=readme-ov-file
+
+> Playwright Model Context Protocol Server - Tool to automate Browsers and APIs in Claude Desktop, Cline, Cursor IDE and More 🔌
