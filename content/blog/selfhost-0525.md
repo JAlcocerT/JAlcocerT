@@ -284,7 +284,7 @@ I also tried with Firecrawl and OpenAI to give me some readme/ [sample posts](ht
 {{< /cards >}}
 
 
-3. LangChain Web content embedd + ask:
+3. LangChain Web content embedd (to ChromaDB) + ask on that context:
 
 In the meantime I discovered that it is also possible to [ask questions about a Web's content with LangChain](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#web-scrapping), for example, [a repository's readme info](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/web):
 
@@ -301,7 +301,9 @@ In the meantime I discovered that it is also possible to [ask questions about a 
     content_area_class = "markdown-body entry-content container-lg"
 ```
 
-![alt text](tic/blog_img/GenAI/langchain-repo-webask.png)
+Its possible to use few LLMs to get the reply, tried with local models via Ollama, OpenAI and Groq APIs.
+
+![alt text](/blog_img/GenAI/langchain-repo-webask.png)
 
 <!-- https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-web.ipynb
 https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-repo-readme.ipynb
@@ -360,26 +362,60 @@ Once embedded, it will reply with both context provided: [![Open in Google Colab
 
 
 
+#### Local Deep Researcher
+
 4. https://github.com/langchain-ai/local-deep-researcher
 
-![Optional alt text describing the image](https://private-user-images.githubusercontent.com/122662504/425216824-1c6b28f8-6b64-42ba-a491-1ab2875d50ea.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1Yi51c2VyY29udGVudC5jb20iLCJrZXkiOiJrZXk1IiwiZXhwIjoxNzQ2NDU5NTM5LCJuYmYiOjE3NDY0NTkyMzksInBhdGgiOiIvMTIyNjYyNTA0LzQyNTIxNjgyNC0xYzZiMjhmOC02YjY0LTQyYmEtYTQ5MS0xYWIyODc1ZDUwZWEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUSszNFpBJTIwRjIwMjUwNTA1JTIwLXVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA1MDVUMTUzMzU5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9OGViNGI2MGQ4NWU1NDQ2NDM0ZDg1NDk2YzI1YzdmMTY2Yzk4OWQ3ODE0N2NlM2IzMTU1OGU0NjJhMmMxYTU5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.kfz_F1RpWA1n4UtDrTnR5zdz2UCyNqKs7mAkOvA_Q-8)
+
+![Streamlit Chat PDF Diagram - AlejandroAO](https://raw.githubusercontent.com/JAlcocerT/ask-multiple-pdfs/blob/main/docs/PDF-LangChain.jpg)
+
+![ollama-deep-research](https://github.com/user-attachments/assets/1c6b28f8-6b64-42ba-a491-1ab2875d50ea)
+
 
 > MIT | Fully local web research and report writing assistant 
 
-```sh
-git clone https://github.com/langchain-ai/local-deep-researcher
+You will need to follow these steps and have [**ollama** ready](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama):
 
+```sh
+git clone https://github.com/JAlcocerT/local-deep-researcher #it was called ollama deep researcher before
+```
+
+Adjust the `.env` file with the search engine and local LLM to be used:
+
+```sh
 docker exec -it ollama sh
 ollama pull deepseek-r1:8b
-
-langgraph dev
 ```
+
+Once ready, run the project with UV:
+
+```sh
+uvx \
+                 --refresh \
+                 --from "langgraph-cli[inmem]" \
+                 --with-editable . \
+                 --python 3.11 \
+                 langgraph dev
+```
+
+You will get a 
+
+<!-- https://youtu.be/sGUjmyfof4Q?t=568 -->
+
+
+{{< youtube "sGUjmyfof4Q" >}}
+
+
 
 
 {{< callout type="info" >}}
-By default uses duckduckgo, with no API key required. You will need one for SearXNG, Tavily or Perplexity
+By default uses **duckduckgo, with no API key required**. You will need one for SearXNG, Tavily or Perplexity
 {{< /callout >}}
 
 5. Simply Cloning and using...[codex](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai)?
 
 In many of these projects you will see [UV as package manager](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)
+
+
+
+https://github.com/qatrackplus/qatrackplus/

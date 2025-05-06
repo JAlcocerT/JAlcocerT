@@ -366,7 +366,7 @@ Not so long ago I was lucky to try the following mini PCs:
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers" title="BMax B4 Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="Small Factor x86 MiniPC" >}}
 {{< /cards >}}
 
-Mini PCs tend to have **x86** CPU architecture.
+Mini PCs tend to have **x86** CPU arch.
 
 They tend to behave better if you plan to reproduce high resolution video, but in general, are less efficient as per compute power / Watt.
 

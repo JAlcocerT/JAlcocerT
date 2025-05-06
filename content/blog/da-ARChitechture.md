@@ -176,12 +176,14 @@ Whenever you are involved on a project, make sure that there are clear:
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#conclusions" title="A Project Charter Handy ↗ " >}}  
 {{< /cards >}}
 
-Get ready to organize effective meetings:
+Get ready to organize **effective meetings**:
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#facilitating-meetings" title="BA MTG Facilitating Skills ↗ " >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="Effective Meeting Owership ↗ " >}}  
 {{< /cards >}}
+
+There is no god meeting without a proper MoM notes and clear action points.
 
 As a D&A Architect, you will also [prototype and create mockups](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-mockups-and-wireframes)
 

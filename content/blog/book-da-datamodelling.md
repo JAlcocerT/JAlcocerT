@@ -362,7 +362,7 @@ It also provides functionalities for data transformation, data loading, and data
     * Transient Tables
 * What is Snowpipe?
     *  A feature in Snowflake that allows for real-time data ingestion into a Snowflake database. It provides a seamless and automated way to load data from various sources, such as streaming platforms, event queues, or cloud storage, directly into Snowflake for immediate analysis and processing.
-    * You can set up continuous data loading pipelines that enable near real-time data ingestion. Instead of manually triggering data loads or using scheduled jobs, Snowpipe leverages event-driven architecture to automatically load data as soon as it becomes available in the source.
+    * You can set up continuous data loading pipelines that enable near real-time data ingestion. Instead of manually triggering data loads or using scheduled jobs, Snowpipe leverages event-driven archite. to automatically load data as soon as it becomes available in the source.
 * What is a Stream?
     *  Streams are a powerful feature that enables capturing and processing real-time data changes in a database table. Streams provide a continuous and ordered record of data changes, allowing you to track and react to modifications happening in your database in near real-time.
 * How to load data into Snowflake?
@@ -378,7 +378,7 @@ Snowflake and Google BigQuery are both popular **cloud-based data warehousing so
 They are considered alternatives to each other, providing scalable storage and powerful analytics capabilities in the cloud. 
 
 * However, there are some differences between the two platforms:
-    * Architecture: Snowflake follows a multi-cluster shared data architecture, where compute and storage are separate, allowing independent scaling. BigQuery, on the other hand, employs a **distributed columnar storage** approach with shared storage.
+    * Snowflake follows a multi-cluster shared data arch, where compute and storage are separate, allowing independent scaling. BigQuery, on the other hand, employs a **distributed columnar storage** approach with shared storage.
     * Snowflake is cloud-agnostic, while BigQuery is Google Cloud-specific
 
 ## Data Integration Services
