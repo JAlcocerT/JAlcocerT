@@ -180,8 +180,34 @@ https://www.youtube.com/watch?v=Ud9FEmNOgLs
 
 * For Ollama, you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
 
+2. I got to know about [librechat](https://github.com/danny-avila/LibreChat) and [Oterm](https://github.com/ggozad/oterm)
 
-2. I got working a **local research assistant** the searches the web for you and summarizes the content via Ollama (I added OpenAI as well and groq is WIP).
+
+* https://github.com/ggozad/oterm
+* https://pypi.org/project/oterm/
+
+![alt text](/blog_img/GenAI/oterm.png)
+
+> MIT | The terminal client for Ollama 
+
+
+```sh
+sudo snap install astral-uv --classic #got it working with python 3.13.2
+#astral-uv 0.7.2 from Alex Lowe (lengau) installed
+
+uvx oterm #https://ggozad.github.io/oterm/installation/#installation
+```
+
+{{< callout type="info" >}}
+Oterm seems to [support MCP](https://ggozad.github.io/oterm/mcp/?h=mcp#tools)
+{{< /callout >}}
+
+
+* https://github.com/danny-avila/LibreChat
+
+![alt text](/blog_img/GenAI/librechat-openai.png)
+
+3. I got working a **local research assistant** the searches the web for you and summarizes the content via Ollama (I added OpenAI as well and groq is WIP).
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher/#local-deep-researcher-project" title="Local Deep Researcher" image="//blog_img/GenAI/rag101.jpeg" subtitle="Local Deep Researcher | Post" >}}
@@ -418,7 +444,7 @@ https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researc
 
 5. Simply Cloning a project repo and just vibe coding...
 
-[Codex with o4-mini as default model](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to write [Astro](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) powered [docs](https://astro.build/themes/1/?search=&price%5B%5D=free)?
+[Codex with **o4-mini** as default model](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to write [Astro](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) powered [docs](https://astro.build/themes/1/?search=&price%5B%5D=free)?
 
 
 Using [starlight theme](https://starlight.astro.build/getting-started/):
@@ -608,7 +634,9 @@ git clone https://github.com/JAlcocerT/qatrackplus
 nano create-starlight.sh #use the script above
 chmod +x create-starlight.sh
 ./create-starlight.sh
-cd documentaition && npm run dev
+cd documentaition && npm install && npm run dev
+
+codex
 ```
 
 
@@ -666,12 +694,71 @@ So far with these projects AI docs, I was getting at the worst case a 86% contex
 
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/docs" title="Tested with LocalDeepResearcher | Astro AI Powered Docs v1.0 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/qatrackplus/tree/master/documentaition" title="Tested with QaTrack+ | Astro AI Powered Docs v1.2 ↗" >}}
 {{< /cards >}}
 
 ![alt text](/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-2.png)
 
-* I could not resist to follow up with a: can you create an additional post on how to deploy this app with docker containers?
+I could not resist to
+
+* follow up with a: can you create an additional post on how to deploy this app with docker containers?
+* leave aut mode...
+
+
+```sh
+#codex --approval-mode full-auto "theawsomeprompt"--provider ollama
+codex --approval-mode full-auto < input.txt #--provider ollama
+```
+
+As `input.txt` is the prompt we have tinkered with.
+
+{{< details title="Codex AI Docs Prompt Astro | v1.3 📌" closed="true" >}}
+
+You are an AI documentation generator. Your task is to create technical documentation for the LibreChat cloned project and write the post as markdown files where specified.
+
+**1. Project Files:**
+
+Inspect the content of the files located in the `./` directory. Please process the content of these files to understand the project's structure, modules, functions, classes, and overall functionality.
+
+**2. Documentation Requirements:**
+
+The generated documentation should aim to cover the following aspects (please be as comprehensive as possible based on the code):
+
+* **Project Overview:** A high-level summary of the local-deep-researcher project's purpose and main features.
+* **Module Descriptions:** For each Python file (or identified module), provide a description of its functionality and key components.
+* **Function and Class Documentation:** For each function and class, include:
+    * A concise description of its purpose.
+    * Its signature (parameters, return type).
+    * Explanations of the parameters and return values.
+    * (If possible and relevant) Short examples of usage.
+* **Key Concepts and Algorithms:** If the code implements any significant algorithms or concepts, explain them in a clear and understandable way.
+* **Dependencies:** List any external libraries or dependencies used by the project.
+* Create one `index.md` with the high level overview: description of the project, key features, modules, dependencies, configuration and environment, also Static code analysis (languages, structure, dependencies).
+* For each mdule that you consider important to understand the project way of working, create a separated markdown post file
+* If the project have guidelines on how t run it or deploy, lets create a `deploy.md` post with such info. Else, lets try to guess it based on the technlogies.
+* Inspect the git code changes on a highlevel and describe on a different post the versions and associated changes into a `releases.md` post.
+* Create an additional post on how to deploy this app with docker containers into `container.md`
+* **(Optional, if discernible) Configuration:** If the code involves configuration files or settings, document their purpose and how to modify them.
+
+**3. Output Format (Astro Theme Template):**
+
+The final documentation should be formatted to be easily integrated with the Astro theme located at `./documentaition/src/content/docs/reference`. Please consider the following:
+
+* **Markdown Output:** Generate the documentation in Markdown format (`.md` files) as this is the primary format for Astro content.
+* **Frontmatter:** Respect the following Astro frontmatter at the beginning of each Markdown file (e.g., `title`, `description`)
+
+
+**4. Input:**
+
+See the content of each file in the `./` directory. Please process them one by one and get an idea of how the all work together.
+
+**5. Output Instructions:**
+
+Output the generated documentation in Markdown format, ready to be placed within the `./documentaition/src` directory of my Astro project. 
+
+
+{{< /details >}}
+
 
 
 6. **Windsurf IDE** - which is a vscode forked, recently adquired by openai...

@@ -25,8 +25,9 @@ But how about creating websites with....
 
 Codex CLI is built for developers who already live in the terminal and want ChatGPT‑level reasoning plus the power to actually run code, manipulate files, and iterate – all under version control.
 
-https://www.youtube.com/watch?v=qqcmI72marw
+<!-- https://www.youtube.com/watch?v=qqcmI72marw -->
 
+{{< youtube "qqcmI72marw" >}}
 
 
 
@@ -62,11 +63,19 @@ codex
 #codex "explain this codebase to me"
 ```
 
+Codex also allows you to use other providers that support the OpenAI Chat Completions API. 
+
+You can set the provider in the config file or use the --provider flag.
+
+
+{{< callout type="info" >}}
+The possible options for --provider are:  openai (default),    openrouter,    gemini,    ollama,    mistral,    deepseek
+    xai,    groq...
+{{< /callout >}}
 
 ```sh
-git clone https://github.com/JAlcocerT/Py_Trip_Planner
+codex --approval-mode full-auto "create the fanciest todo-list app"--provider ollama
 ```
-
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/VibeCoding/OpenAI-Codex" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
@@ -77,6 +86,11 @@ git clone https://github.com/JAlcocerT/Py_Trip_Planner
 
 {{< youtube "qqcmI72marw" >}}
 
+
+```sh
+#git clone https://github.com/JAlcocerT/Py_Trip_Planner
+git clone https://github.com/JAlcocerT/phidata
+```
 
 Thanks to codex I could understand better how the [Groq Youtube summarizer](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/) works, *as I [forked it from PhiData](https://github.com/JAlcocerT/phidata).*
 
