@@ -416,7 +416,9 @@ https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researc
 
 #### Vibe Coded Project Docs
 
-5. Simply Cloning a prject repo and using...[codex](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to write [Astro](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) powered [docs](https://astro.build/themes/1/?search=&price%5B%5D=free)?
+5. Simply Cloning a project repo and just vibe coding...
+
+[Codex with o4-mini as default model](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to write [Astro](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) powered [docs](https://astro.build/themes/1/?search=&price%5B%5D=free)?
 
 
 Using [starlight theme](https://starlight.astro.build/getting-started/):
@@ -497,6 +499,10 @@ This is the result:
 
 ![alt text](/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-0.png.png)
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/docs" title="Tested with LocalDeepResearcher | Astro AI Powered Docs v1.0 ↗" >}}
+{{< /cards >}}
+
 ![alt text](/blog_img/GenAI/aidocs/starlight-v1-0.png)
 
 
@@ -552,17 +558,30 @@ Automating this a little bit more, the astro setup can be done with:
 
 spawn npm create astro@latest -- --template starlight
 
-# Expect the project directory prompt
-expect "Where should we create your new project?"
-send "./docs\r"  # Replace with your desired directory
+# Increase timeout and add debugging after expect
+expect -timeout 20 "*Where should we create your new project?*" {
+    send "./documentaition\r"
+    puts "Sent project directory."
+} timeout {
+    puts "Timeout occurred while waiting for project directory prompt."
+    exit 1
+}
 
-# Expect the install dependencies prompt
-expect "Install dependencies?"
-send "y\r"
+expect -timeout 20 "*Install dependencies?*" {
+    send "y\r"
+    puts "Sent 'yes' for dependencies."
+} timeout {
+    puts "Timeout occurred while waiting for install dependencies prompt."
+    exit 1
+}
 
-# Expect the initialize git repository prompt
-expect "Initialize a new git repository?"
-send "n\r"
+expect -timeout 20 "*Initialize a new git repository?*" {
+    send "n\r"
+    puts "Sent 'no' for Git initialization."
+} timeout {
+    puts "Timeout occurred while waiting for Git init prompt."
+    exit 1
+}
 
 expect eof
 ```
@@ -576,9 +595,86 @@ I also added the following fllow ups:
   {{< card link="https://github.com/JAlcocerT/Claper" title="Tested with Clapper | Astro AI Powered Docs v1.1 ↗" >}}
 {{< /cards >}}
 
-![alt text](../../static/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-1.png)
+![alt text](/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-1.png)
 
-6. **Windsurf IDE**
+So now I need to:
+
+```sh
+#Clone the repo
+git clone https://github.com/JAlcocerT/qatrackplus
+#git show HEAD #q
+
+#sudo apt install expect
+nano create-starlight.sh #use the script above
+chmod +x create-starlight.sh
+./create-starlight.sh
+cd documentaition && npm run dev
+```
+
+
+
+
+{{< details title="Codex AI Docs Prompt Astro | v1.2 📌" closed="true" >}}
+
+You are an AI documentation generator. Your task is to create technical documentation for the QATrackPlus cloned project and write the post as markdown files where specified.
+
+**1. Project Files:**
+
+Inspect the content of the files located in the `./` directory. Please process the content of these files to understand the project's structure, modules, functions, classes, and overall functionality.
+
+**2. Documentation Requirements:**
+
+The generated documentation should aim to cover the following aspects (please be as comprehensive as possible based on the code):
+
+* **Project Overview:** A high-level summary of the local-deep-researcher project's purpose and main features.
+* **Module Descriptions:** For each Python file (or identified module), provide a description of its functionality and key components.
+* **Function and Class Documentation:** For each function and class, include:
+    * A concise description of its purpose.
+    * Its signature (parameters, return type).
+    * Explanations of the parameters and return values.
+    * (If possible and relevant) Short examples of usage.
+* **Key Concepts and Algorithms:** If the code implements any significant algorithms or concepts, explain them in a clear and understandable way.
+* **Dependencies:** List any external libraries or dependencies used by the project.
+* Create one `index.md` with the high level overview: description of the project, key features, modules, dependencies, configuration and environment, also Static code analysis (languages, structure, dependencies).
+* For each mdule that you consider important to understand the project way of working, create a separated markdown post file
+* If the project have guidelines on how t run it or deploy, lets create a `deploy.md` post with such info. Else, lets try to guess it based on the technlogies.
+* Inspect the git code changes on a highlevel and describe on a different post the versions and associated changes into a `releases.md` post.
+* **(Optional, if discernible) Configuration:** If the code involves configuration files or settings, document their purpose and how to modify them.
+
+**3. Output Format (Astro Theme Template):**
+
+The final documentation should be formatted to be easily integrated with the Astro theme located at `./documentaition/src/content/docs/reference`. Please consider the following:
+
+* **Markdown Output:** Generate the documentation in Markdown format (`.md` files) as this is the primary format for Astro content.
+* **Frontmatter:** Respect the following Astro frontmatter at the beginning of each Markdown file (e.g., `title`, `description`)
+
+
+**4. Input:**
+
+See the content of each file in the `./` directory. Please process them one by one and get an idea of how the all work together.
+
+**5. Output Instructions:**
+
+Output the generated documentation in Markdown format, ready to be placed within the `./documentaition/src` directory of my Astro project. 
+
+
+{{< /details >}}
+
+{{< callout type="info" >}}
+So far with these projects AI docs, I was getting at the worst case a 86% context left for codex
+{{< /callout >}}
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/docs" title="Tested with LocalDeepResearcher | Astro AI Powered Docs v1.0 ↗" >}}
+{{< /cards >}}
+
+![alt text](/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-2.png)
+
+* I could not resist to follow up with a: can you create an additional post on how to deploy this app with docker containers?
+
+
+6. **Windsurf IDE** - which is a vscode forked, recently adquired by openai...
 
 Tested with:
 
@@ -589,6 +685,8 @@ Tested with:
 
 
 * https://github.com/qatrackplus/qatrackplus/
+  * https://github.com/jlleongarcia/qatrackplus
+
 
 https://github.com/airbytehq/airbyte
 https://github.com/SigNoz/signoz
