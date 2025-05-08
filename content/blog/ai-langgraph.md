@@ -78,7 +78,7 @@ And allow us to do not just DAG workflows, like with LangChain:
 
 ## About LangGraph
 
-LangGraph is one of the most used tools recently to build AI apps.
+LangGraph is one of the [most used tools recently](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#trendy-ai-concepts) to build AI apps.
 
 **LangGraph is a Python library under the MIT license designed for building programatically sophisticated AI applications involving multiple agents and complex, stateful conversational workflows.**
 
@@ -146,7 +146,7 @@ uvx \
 
 You will get a a firefox browser tab with the following diagram and place to ask questions:
 
-![Local Deep Researcher with Ollama and DuckDuckGo](https://raw.githubusercontent.com/JAlcocerT/local-deep-researcher/blob/main/local-research-sample.png)
+<!-- ![Local Deep Researcher with Ollama and DuckDuckGo](https://raw.githubusercontent.com/JAlcocerT/local-deep-researcher/blob/main/local-research-sample.png) -->
 
 ![Local Deep Researcher with Ollama and DuckDuckGo](https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png)
 
@@ -155,8 +155,6 @@ You will get a a firefox browser tab with the following diagram and place to ask
 
 
 {{< youtube "sGUjmyfof4Q" >}}
-
-
 
 
 {{< callout type="info" >}}
@@ -309,22 +307,22 @@ The purpose of `state.py` is to define the “shape” of the **in‐memory stat
 Concretely [the state file](https://github.com/JAlcocerT/local-deep-researcher/blob/main/src/ollama_deep_researcher/state.py) provides three dataclasses:
 
 1. SummaryState
-• This is your running state object.  It has fields for:
+* This is your running state object.  It has fields for:
   – research_topic: the user’s original topic
   – search_query: the current query you asked the LLM to run
   – web_research_results: a list of the raw text results returned by each web_research node
   – sources_gathered: a list of the formatted source metadata you’ll feed into summaries
   – research_loop_count: how many times you’ve gone through the loop so far
   – running_summary: your accumulated summary text
-• Notice that web_research_results and sources_gathered are wrapped with
+* Notice that web_research_results and sources_gathered are wrapped with
   Annotated[..., operator.add].  That tells LangGraph that whenever a node returns a new list for one of those fields, it should do `old_list + new_list` (i.e.
 append) rather than overwrite.
 2. SummaryStateInput
-• Defines the very first inputs your graph expects when you call `.invoke(...)`.
-• Here it just has `research_topic`.
+* Defines the very first inputs your graph expects when you call `.invoke(...)`.
+* Here it just has `research_topic`.
 3. SummaryStateOutput
-• Defines what you get back when the graph finishes.
-• Here it just exposes `running_summary`.
+* Defines what you get back when the graph finishes.
+* Here it just exposes `running_summary`.
 
 When you do
 
@@ -339,9 +337,9 @@ config_schema=…
 
 You’re telling LangGraph:
 
-• “This is the shape of my mutable state and how to merge updates.”
-• “This is the payload I start with.”
-• “This is the payload I return at the end.”
+* “This is the shape of my mutable state and how to merge updates.”
+* “This is the payload I start with.”
+* “This is the payload I return at the end.”
 
 If you want to track additional bits of data (say timing metrics, alternate summaries, etc.) or change how fields combine between nodes, this is the file you’d edit.
 
@@ -349,7 +347,7 @@ If you want to track additional bits of data (say timing metrics, alternate summ
 ### Tweaks to Local Deep Researcher
 
 
-I dont have a crazy fast GPU, so my first thought was to use codex to simply plug alternatively **OpenAI models**.
+I dont have a crazy fast GPU, so my first thought was to use [codex](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to simply plug alternatively **OpenAI models**:
 
 
 

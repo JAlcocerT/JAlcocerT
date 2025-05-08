@@ -187,7 +187,7 @@ Concepts / AI Tools that are **veeery trendy**, also as seen [here](https://jalc
 * ReACT fwk
 
 
-### MLFlow
+#### MLFlow
 
 LangChain, LLamaindex, OpenAI... can all be used together with MLFlow! https://mlflow.org/docs/latest/llms/
 
@@ -265,7 +265,7 @@ Refer to the documentation for customization and manual instrumentation.
 ![alt text](/blog_img/GenAI/langfuse-webui.png)
 
 
-### LangGraph BigTool
+#### LangGraph BigTool
 
 LangGraph is a Python library for building stateful, multi-agent systems and **complex conversational workflows**.
 
@@ -290,7 +290,7 @@ https://www.youtube.com/watch?v=3ISRS2hQlfI
 
 >  Build LangGraph agents with large numbers of tools 
 
-### LangFlow
+#### LangFlow
 
 Langflow's primary strength lies in its **visual, low-code environment** for building AI applications, especially those leveraging LLMs and LangChain.
 
@@ -316,7 +316,7 @@ docker run -it --rm -p 7860:7860 langflowai/langflow:latest
 ![LangFlow Store](/blog_img/GenAI/NoCode-AI/LangFlow_Store.png)
 
 
-### LangFuse
+#### LangFuse
 
 [LangFuse](https://github.com/langfuse/langfuse) is an Equivalent to LangSmith for observability but MIT and selfhostable
 

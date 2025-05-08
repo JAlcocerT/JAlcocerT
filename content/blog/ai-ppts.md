@@ -1,5 +1,5 @@
 ---
-title: "How to create awsome Presentations with AI"
+title: "How to create awsome Presentations with [AI] SlidevJS x Claper"
 date: 2025-01-02
 draft: false
 tags: ["AI"]
@@ -431,7 +431,9 @@ print(completed_message)
 
 ### SelfHosting Cool PPT Software
 
-Any of these will be a replacement for powerpoint / mentimeter/ slido. You can upload the ppt/pdf created with the PPT as a code frameworks.
+Any of these will be a replacement for powerpoint / mentimeter/ slido.
+
+You can upload the ppt/pdf created with the mentioned PPT as a code frameworks.
 
 1. https://github.com/ClaperCo/Claper
 
@@ -446,12 +448,19 @@ Claper turns your presentations into an interactive, engaging and exciting exper
 https://github.com/JAlcocerT/Claper #I forked it!
 cd Claper
 #openssl rand -base64 48 #create one secret
+#copy the .env and adjust it
 docker compose up -d
 ```
 
+![alt text](/blog_img/selfh/CLAPER.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Termix" title="Termix with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
 
 {{< callout type="info" >}}
-Claper is a perfect example of how to deploy an app with **https thanks to Traefik**!
+Claper is a perfect example of how to deploy an app with **https thanks to [Traefik](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/#traefik)**!
 {{< /callout >}}
 
 ### PPT with Astro

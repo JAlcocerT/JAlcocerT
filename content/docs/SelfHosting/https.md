@@ -13,8 +13,8 @@ draft: false
 ### Traefik
 
 Selfhosted Apps with Traefik support out of the box:
-* Dokploy
-* Claper PPT
+* [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
+* [Claper](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#selfhosting-cool-ppt-software) PPTs
 * The MultiChat!
 
 {{< cards cols="2" >}}
@@ -29,7 +29,7 @@ Selfhosted Apps with Traefik support out of the box:
 ### NGINX
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
+  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX Setup and HTTPs with DuckDNS" >}}
 {{< /cards >}}
 
 NGINX Can be used together with Authelia, which provides a authentication layer.
@@ -47,7 +47,12 @@ Thanks to for the video!
 
 How to expose Apps safely, through your domain, with https and **without exposing your home public IP**.
 
-https://jalcocert.github.io/JAlcocerT/why-i-love-containers/
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/why-i-love-containers/" title="Why I love Containers | Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main" title="Cloudflared with Docker 🐋 ↗" >}}
+{{< /cards >}}
 
 ```sh
 sudo docker network tunnel

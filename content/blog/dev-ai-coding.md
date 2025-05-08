@@ -55,9 +55,10 @@ export OPENAI_API_KEY="your_secret_api_key"
 #OPENAI_API_KEY=your-api-key-here
 ```
 
+You can run it with [default parameters](https://github.com/openai/codex?tab=readme-ov-file#basic-configuration-parameters): 
+
 ```sh
 codex
-
 #codex "explain this codebase to me"
 ```
 
@@ -77,13 +78,7 @@ git clone https://github.com/JAlcocerT/Py_Trip_Planner
 {{< youtube "qqcmI72marw" >}}
 
 
-
-Thanks to codex I could understand better how the Groq Youtube summarizer works (as I forked it from PhiData repo)
-
-* https://github.com/JAlcocerT/phidata
-
-
-
+Thanks to codex I could understand better how the [Groq Youtube summarizer](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/) works, *as I [forked it from PhiData](https://github.com/JAlcocerT/phidata).*
 
 
 ### Claude Code

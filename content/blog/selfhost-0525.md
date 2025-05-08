@@ -126,11 +126,11 @@ vcgencmd measure_temp pmic
 
 ### CheckMate
 
-https://github.com/bluewave-labs/checkmate
-https://checkmate.so/
+* https://github.com/bluewave-labs/checkmate
+* https://checkmate.so/
 
 
-> agpl | Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
+> aGPL | Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
 
 
 
@@ -140,8 +140,9 @@ https://checkmate.so/
 
 * https://github.com/MikeMather/publite.me
 
-https://www.youtube.com/watch?v=yAJvbF-m5FM
+<!-- https://www.youtube.com/watch?v=yAJvbF-m5FM -->
 
+{{< youtube "yAJvbF-m5FM" >}}
 
 
 
@@ -161,8 +162,9 @@ https://www.youtube.com/watch?v=Ud9FEmNOgLs
 
 ![alt text](/blog_img/selfh/dockerprune.png)
 
+#### AI Apps Im SelfHosting
 
-* Now the MultiChat project I've been tinkering on, [now](https://github.com/JAlcocerT/Streamlit-MultiChat/releases/tag/llms%2Byt) supports also the Youtube Groq Summaries:
+1. Now the **MultiChat** project I've been tinkering on, [now](https://github.com/JAlcocerT/Streamlit-MultiChat/releases/tag/llms%2Byt) supports also the Youtube Groq Summaries:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
@@ -177,6 +179,17 @@ https://www.youtube.com/watch?v=Ud9FEmNOgLs
 * Groq - https://console.groq.com/keys
 
 * For Ollama, you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
+
+
+2. I got working a **local research assistant** the searches the web for you and summarizes the content via Ollama (I added OpenAI as well and groq is WIP).
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher/#local-deep-researcher-project" title="Local Deep Researcher" image="//blog_img/GenAI/rag101.jpeg" subtitle="Local Deep Researcher | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked Repo" >}}
+{{< /cards >}}
+
+It uses [LangGraph](https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher/) under the hood!
+
 
 ### I needed recently...
 
@@ -219,11 +232,15 @@ Which resonates with my recent post: https://jalcocert.github.io/JAlcocerT/setup
 
 ## Conclusions
 
-Lately I got to know about couple of new VectorDBs:
+Lately I got to know about couple of **'new' VectorDBs**:
 
 * https://github.com/milvus-io/milvus
 
 >  Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search 
+
+Milvus can have **Attu** as UI companion:
+
+![alt text](/blog_img/GenAI/attu.png)
 
 * https://github.com/pgvector/pgvector
 
@@ -246,6 +263,8 @@ Lately I tried littlyx, but I saw this cool post: https://jakubwolynko.eu/blog/2
 
 Also, https://github.com/Litlyx/litlyx which i discovered few months back
 
+![alt text](/blog_img/web/weban/littlyx-weban.png)
+
 
 ### Automated Projects Docs
 
@@ -261,7 +280,7 @@ https://git.exadel.com/exadel-ai-practice/accelerator/project-documentation-gene
 * Groq - <https://console.groq.com/keys>
 * For [Ollama](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama), you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
 
-1. RepoReader
+1. **RepoReader**
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/RepoReader" title="Repo Reader | Forked Project ↗" >}}
@@ -286,11 +305,12 @@ But...it used davinci model which was deprecated: https://platform.openai.com/do
 
 So I had to vibe code a little bit with codex to fix it:
 
-![alt text](/blog_img/GenAI/reporeader-qatrack.png)
+![alt text](/blog_img/GenAI/aidocs/reporeader-qatrack.png)
+<!-- ![alt text](/blog_img/GenAI/reporeader-qatrack.png) -->
 
 But...I feel its already superseeded few times by other tools.
 
-2. Scrapping with FireCrawl + OpenAI
+2. **Scrapping** with FireCrawl + OpenAI
 
 I also tried with Firecrawl and OpenAI to give me some readme/ [sample posts](https://github.com/JAlcocerT/Scrap_Tools/blob/main/FireCrawl/Z_Scrap_GHRepo/z_sample_post.md) about a given project:
 
@@ -300,7 +320,7 @@ I also tried with Firecrawl and OpenAI to give me some readme/ [sample posts](ht
 {{< /cards >}}
 
 
-3. LangChain Web content embedd (to ChromaDB) + ask on that context:
+3. **LangChain** Web content embedd (to ChromaDB) + ask on that context:
 
 In the meantime I discovered that it is also possible to [ask questions about a Web's content with LangChain](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#web-scrapping), for example, [a repository's readme info](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/web):
 
@@ -380,15 +400,51 @@ Once embedded, it will reply with both context provided: [![Open in Google Colab
 
 #### Local Deep Researcher
 
-4. https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher
+4. Some kind of LangGraph workflow to iteratively explore the code, instead of searching the web? 
 
+https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher
+
+
+> In many of these AI projects you will see [UV as package manager](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)
 
 #### Vibe Coded Project Docs
 
-5. Simply Cloning and using...[codex](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai)?
-
-In many of these projects you will see [UV as package manager](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)
+5. Simply Cloning a prject repo and using...[codex](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to write [Astro](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) powered [docs](https://astro.build/themes/1/?search=&price%5B%5D=free)?
 
 
+Using [starlight theme](https://starlight.astro.build/getting-started/):
 
+```sh
+#npm i -g @openai/codex
+npm create astro@latest -- --template starlight
+# cd docs
+# npm run dev
+cd docs && npm run dev
+```
+
+![alt text](/blog_img/GenAI/aidocs/starlight-ai-dcs.png)
+
+Once finished, we can see locally the theme: `localhost:4321`
+
+> These docs could be plugged directly to [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/)
+
+Now, we need to prompt codex:
+
+```sh
+codex
+ #are you able to generate documentation of the local-deep-researcher project, which files are located at ./src/ollama_deep_researcher and have it outputed to the astro theme
+#template that it is loaded at ./docs/src?
+```
+
+
+Tested with:
+
+https://github.com/JAlcocerT/Claper
+https://github.com/JAlcocerT/mechanism
+https://github.com/JAlcocerT/local-deep-researcher/tree/main
 https://github.com/qatrackplus/qatrackplus/
+
+https://github.com/airbytehq/airbyte
+https://github.com/SigNoz/signoz
+https://github.com/syncthing/syncthing
+https://github.com/grafana/grafana
