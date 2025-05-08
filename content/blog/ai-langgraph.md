@@ -1,5 +1,5 @@
 ---
-title: "[AI] Understanding LangGraph"
+title: "[AI] Understanding LangGraph Workflows"
 date: 2025-05-05
 draft: false
 tags: ["Gen-AI","Python","Dev"]
@@ -8,7 +8,7 @@ url: 'understanding-langgraph-local-deep-researcher'
 ---
 
 
-Wait...what it is LangGraph?
+Wait...what it is **LangGraph**?
 
 Let me jump forward a little bit and give you a summary from the project we are going to see:
 
@@ -22,7 +22,7 @@ Let me jump forward a little bit and give you a summary from the project we are 
 
 LangGraph is an advanced orchestration framework built on top of LangChain, designed to create, deploy, and manage autonomous AI agents powered by large language models (LLMs). 
 
-It models AI workflows as stateful graphs, where nodes represent individual agents or task stages and edges define the flow of control, supporting complex behaviors such as branching, loops, and conditional transitions.
+It models AI workflows as **stateful graphs**, where nodes represent individual agents or task stages and edges define the flow of control, supporting complex behaviors such as branching, loops, and conditional transitions.
 
 Unlike traditional DAG-based frameworks, **LangGraph introduces cyclic computational capabilities**, enabling agents to maintain and update context or memory dynamically across interactions for coherent, goal-directed behavior.
 
@@ -34,7 +34,7 @@ This makes it well-suited for building sophisticated multi-agent systems that ca
 
 It facilitates human-in-the-loop interventions when necessary and exemplifies its capabilities in applications like multi-agent flight and hotel booking systems that handle conditional routing and tool operations.
 
-Overall, LangGraph serves as a foundational cognitive architecture that balances agent control with agency, enabling the creation of intelligent, adaptable AI agents applicable across diverse domains such as business process automation, complex decision-making, and interactive AI applications like chatbots and virtual assistants. 
+Overall, LangGraph serves as a foundational cognitive **architecture that balances agent control** with agency, enabling the creation of intelligent, adaptable AI agents applicable across diverse domains such as business process automation, complex decision-making, and interactive AI applications like chatbots and virtual assistants. 
 
 It is recognized for driving innovation in next-generation AI applications and integrates seamlessly with cloud platforms like Amazon Bedrock for scalable multi-agent deployments.
 
@@ -55,20 +55,61 @@ It is recognized for driving innovation in next-generation AI applications and i
 
 {{< /details >}}
 
+So, in a way, its a framework to make **customized LLM workflows**.
+
+One step forward of what I covered with the groq YT summarizer:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/phidata" title="PhiData Groq Youtube Summaries | Forked Project ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/" title="Groq YT Summarizer | Post ↗" >}}
+{{< /cards >}}
+
+And allow us to do not just DAG workflows, like with LangChain:
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#langchain" title="Data-Chat | Project ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="LangChain DB Query DAG | Post ↗" >}}
+{{< /cards >}}
+
+
+<!-- Thanks to LangGraph, we can have programatic agent workflows. -->
+
+
+## About LangGraph
+
+LangGraph is one of the most used tools recently to build AI apps.
+
+**LangGraph is a Python library under the MIT license designed for building programatically sophisticated AI applications involving multiple agents and complex, stateful conversational workflows.**
+
+It offers a **programmatic and flexible way to define the interactions and state transitions** between different components (agents or steps) within these workflows.
+
+Key features and benefits include:
+
+* **Building complex conversational workflows:** Enabling the creation of multi-turn interactions and intricate logic.
+* **Agent orchestration:** Providing tools to manage and coordinate the actions of multiple agents.
+* **Customizable architectures:** Allowing developers to define unique interaction patterns between agents.
+* **Long-term memory:** Facilitating the persistence of information across multiple steps and agent interactions.
+* **Human-in-the-loop:** Integrating human intervention into the workflow for review or decision-making.
+* **Resilient language agents:** Aiming to create robust and reliable AI systems capable of handling complex tasks.
+
+In essence, LangGraph provides a more structured and code-driven approach to building multi-agent systems compared to more declarative methods, offering greater control and flexibility for complex AI applications. 
 
 
 ## Local Deep Researcher Project
 
-I have clone the original project: https://github.com/langchain-ai/local-deep-researcher
+To properly understand LangGraph, I was in search of a cool project.
+
+I have cloned the original project: https://github.com/langchain-ai/local-deep-researcher
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG x LangGraph" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
 
-![Streamlit Chat PDF Diagram - AlejandroAO](https://raw.githubusercontent.com/JAlcocerT/ask-multiple-pdfs/blob/main/docs/PDF-LangChain.jpg)
+<!-- ![Streamlit Chat PDF Diagram - AlejandroAO](https://raw.githubusercontent.com/JAlcocerT/ask-multiple-pdfs/blob/main/docs/PDF-LangChain.jpg) -->
 
 ![Streamlit MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat/raw/main/streamlit-multichat.png)
 
@@ -107,7 +148,7 @@ You will get a a firefox browser tab with the following diagram and place to ask
 
 ![Local Deep Researcher with Ollama and DuckDuckGo](https://raw.githubusercontent.com/JAlcocerT/local-deep-researcher/blob/main/local-research-sample.png)
 
-![Streamlit MultiChat](https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png)
+![Local Deep Researcher with Ollama and DuckDuckGo](https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png)
 
 
 <!-- https://youtu.be/sGUjmyfof4Q?t=568 -->
@@ -308,4 +349,11 @@ If you want to track additional bits of data (say timing metrics, alternate summ
 ### Tweaks to Local Deep Researcher
 
 
-I dont have a crazy fast GPU, so my first thought was to use codex to simply plug alternatively OpenAI models
+I dont have a crazy fast GPU, so my first thought was to use codex to simply plug alternatively **OpenAI models**.
+
+
+
+* OpenAI API Keys - <https://platform.openai.com/api-keys>
+* Anthropic - <https://console.anthropic.com/settings/keys>
+* Groq - <https://console.groq.com/keys>
+* For [Ollama](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama), you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)

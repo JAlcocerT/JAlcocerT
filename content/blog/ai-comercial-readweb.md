@@ -168,9 +168,11 @@ With ScrapeGraph, you just need an **API for LLM** and just ask questions about 
 
 But if you are looking for a quick thing...
 
-...with OpenAI is really quick. Plus you already have the API plugged in for any other purpuse.
+...with OpenAI is really quick.
 
-Like summarizing the resulting `.json` file of the scrapt or any other workflow.
+Plus you already have the API plugged in for any other purpuse.
+
+Like summarizing the resulting `.json` file of the scrap or any other workflow.
 
 This is what I made with [this script - **combining ScrapeGraph with OpenAI API Call to summarize**](https://github.com/JAlcocerT/Scrap_Tools/blob/main/ScrapeGraph/sample6_sg_openai.py)
 

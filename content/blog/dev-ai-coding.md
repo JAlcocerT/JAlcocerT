@@ -25,6 +25,11 @@ But how about creating websites with....
 
 Codex CLI is built for developers who already live in the terminal and want ChatGPT‑level reasoning plus the power to actually run code, manipulate files, and iterate – all under version control.
 
+https://www.youtube.com/watch?v=qqcmI72marw
+
+
+
+
 In short, it’s chat‑driven development that understands and executes your repo.
 
 * Zero setup — bring your OpenAI API key and it just works!
@@ -75,7 +80,7 @@ git clone https://github.com/JAlcocerT/Py_Trip_Planner
 
 Thanks to codex I could understand better how the Groq Youtube summarizer works (as I forked it from PhiData repo)
 
-https://github.com/JAlcocerT/phidata
+* https://github.com/JAlcocerT/phidata
 
 
 
@@ -102,13 +107,28 @@ What else can help us code better?
 
 ## Propietary
 
+
+* https://platform.openai.com/playground/prompts?models=gpt-4.1
+* https://platform.openai.com/logs
+  * OpenAI API Keys - https://platform.openai.com/api-keys
+  
+* Anthropic - https://console.anthropic.com/settings/keys
+* Groq - https://console.groq.com/keys
+
+* For Ollama, you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
+
+* https://huggingface.co/
+
 ### Github Copilot
 
 ### Gitlab Duo
 
 ### Gemini and AIStudio
 
-https://www.youtube.com/watch?v=_fhTXJe_awY
+<!-- https://www.youtube.com/watch?v=_fhTXJe_awY -->
+
+{{< youtube "_fhTXJe_awY" >}}
+
 
 * https://aistudio.google.com/prompts/new_chat
 

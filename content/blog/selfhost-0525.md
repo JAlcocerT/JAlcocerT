@@ -159,8 +159,24 @@ https://www.youtube.com/watch?v=Ud9FEmNOgLs
 
 > Apache v2 | This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.
 
-
 ![alt text](/blog_img/selfh/dockerprune.png)
+
+
+* Now the MultiChat project I've been tinkering on, [now](https://github.com/JAlcocerT/Streamlit-MultiChat/releases/tag/llms%2Byt) supports also the Youtube Groq Summaries:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Chat with various LLMs x Youtube Groq Summaries" >}}
+{{< /cards >}}
+
+* https://platform.openai.com/playground/prompts?models=gpt-4.1
+* https://platform.openai.com/logs
+  * OpenAI API Keys - https://platform.openai.com/api-keys
+  
+* Anthropic - https://console.anthropic.com/settings/keys
+* Groq - https://console.groq.com/keys
+
+* For Ollama, you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
 
 ### I needed recently...
 

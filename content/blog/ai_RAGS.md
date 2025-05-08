@@ -29,6 +29,11 @@ These should be **some familiar RAG frameworks** so far:
 
 We will also see some [*trendy* AI tools](#conclusions) that work with RAGs as well:
 
+* [MLFlow](#mlflow) - For observability (from ML to AI)
+* [LangGraph](#langgraph-bigtool) - Programatic agents workflows
+* [LangFlow](#langflow) - Low code environment to build AI Apps ~ Flwise
+* [LangFuse](#langfuse) - Observability for AI ~LangSmith but MIT
+
 [![Star History Chart](https://api.star-history.com/svg?repos=mlflow/mlflow,langchain-ai/langgraph,langfuse/langfuse&,type=Date)](https://star-history.com/mlflow/mlflow&langchain-ai/langgraph&langfuse/langfuse&Date)
 
 
@@ -158,7 +163,12 @@ Remember that there are already some [alternatives to RAGS: like MCP or KBLM](ht
 
 For now, my favourite one is still LangChain for its various use cases:
 
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-repo-readme.ipynb)
+
+
+For a simpler local RAG setup, have a look to [these](#selfhosted-rags).
+
+### Trendy AI Concepts
 
 
 Concepts / AI Tools that are **veeery trendy**, also as seen [here](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects)
@@ -257,7 +267,7 @@ Refer to the documentation for customization and manual instrumentation.
 
 ### LangGraph BigTool
 
-LangGraph is a Python library for building stateful, multi-agent systems and complex conversational workflows.
+LangGraph is a Python library for building stateful, multi-agent systems and **complex conversational workflows**.
 
 * https://github.com/langchain-ai/langgraph
   * https://github.com/JAlcocerT/Multi-Agents/tree/main/LangGraph
@@ -267,7 +277,7 @@ LangGraph is a Python library for building stateful, multi-agent systems and com
 The LangGraph library enables agent orchestration — offering customizable architectures, long-term memory, and human-in-the-loop to reliably handle complex tasks.
 
 {{< callout type="info" >}}
-It provides a more programmatic and flexible way to define the interactions and state transitions between multiple agents or steps in a sophisticated AI application.
+It provides a more **programmatic and flexible way to define the interactions** and state transitions between multiple agents or steps in a sophisticated AI application.
 {{< /callout >}}
 
 <!--
@@ -308,7 +318,7 @@ docker run -it --rm -p 7860:7860 langflowai/langflow:latest
 
 ### LangFuse
 
-An Equivalent to LangSmith for observability but MIT and selfhostable
+[LangFuse](https://github.com/langfuse/langfuse) is an Equivalent to LangSmith for observability but MIT and selfhostable
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse" title="LangFuse with Docker 🐋 ↗" >}}
@@ -355,6 +365,17 @@ See how to run **LangGraph or MLFlow**
   {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
+#### SelfHosted RAGs
+
+1. PrivateGPT
+
+https://github.com/zylon-ai/private-gpt
+https://docs.privategpt.dev/overview/welcome/introduction
+
+
+2. QUIVIR - https://github.com/QuivrHQ/quivr
+
+> Opiniated RAG for integrating GenAI in your apps 🧠 Focus on your product rather than the RAG. Easy integration in existing products with customisation! Any LLM: GPT4, Groq, Llama. Any Vectorstore: PGVector, Faiss. Any Files. Anyway you want. 
 
 #### Groq YT Summarizer
 
@@ -372,6 +393,7 @@ docker pull ghcr.io/jalcocert/streamlit-multichat:latest #:v1.1  #:latest
 
 
 * https://github.com/langchain-ai/local-deep-researcher
+  * https://github.com/JAlcocerT/local-deep-researcher/
 
 > MIT | Fully local web research and report writing assistant
 
@@ -381,6 +403,8 @@ https://www.youtube.com/watch?v=sGUjmyfof4Q
 -->
 
 {{< youtube "sGUjmyfof4Q" >}}
+
+Setup Ollama as per:
 
 * https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama
 * https://fossengineer.com/selfhosting-llms-ollama/
@@ -398,6 +422,9 @@ ollama pull deepseek-r1:8b
 * https://docs.searxng.org/dev/search_api.html
 
 
+Make sure to adapt the `.env`:
+
+
 ```
 LLM_PROVIDER=ollama
 OLLAMA_BASE_URL="http://localhost:11434" # Ollama service endpoint, defaults to `http://localhost:11434` 
@@ -405,10 +432,13 @@ LOCAL_LLM=model # the model to use, defaults to `llama3.2` if not set
 ```
 
 
-{{< details title="Video Summarized 📌" closed="true" >}}
+{{< details title="Video Summarized with Groq | Local Deep Researcher📌" closed="true" >}}
 
+> Summarized with [this groq project](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/).
 
-The video explores the new fully open source reasoning model, DeepSeek-R1, which represents a new scaling paradigm for Large Language Models (LLMs). The model is trained using a combination of fine-tuning and reinforcement learning, and its training strategy is described in detail. The video also demonstrates the capabilities of the model, including its ability to reason and generate comprehensive summaries.
+The video explores the new fully open source reasoning model, DeepSeek-R1, which represents a new scaling paradigm for Large Language Models (LLMs).
+
+The model is trained using a combination of fine-tuning and reinforcement learning, and its training strategy is described in detail. The video also demonstrates the capabilities of the model, including its ability to reason and generate comprehensive summaries.
 
 The Training Strategy of DeepSeek-R1
 

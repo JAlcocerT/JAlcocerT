@@ -112,13 +112,12 @@ docker-compose up -d
 
 Scrap the Web with AI
 
-https://github.com/VinciGit00/Scrapegraph-ai
+* https://github.com/VinciGit00/Scrapegraph-ai
 
 > Python scraper based on AI
 
 ### F/OSS Alternatives to perplexity
 
-* otra
 * https://github.com/Omniplex-ai/omniplex
   * https://github.com/Omniplex-ai/omniplex?tab=AGPL-3.0-1-ov-file#readme
 

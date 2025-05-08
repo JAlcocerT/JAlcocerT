@@ -214,6 +214,7 @@ If you are not sure which LLM will be the best, you can give it a try to:
 * Combine strong/weak models with: https://github.com/lm-sys/RouteLLM
 
 > A framework for serving and evaluating LLM routers - save LLM costs without compromising quality!
+
 <!-- 
 https://www.youtube.com/watch?v=mcZKQe2pUA0 -->
 
@@ -241,7 +242,7 @@ If you would like to have a look to a project that implements RAG with UI:
 
 {{< dropdown title="What it is a RAG? ⏬" closed="true" >}}
 
-In a RAG framework, when a user poses a question or provides a prompt, the **system first retrieves relevant information** from a large corpus of text data.
+In a **RAG framework**, when a user poses a question or provides a prompt, the **system first retrieves relevant information** from a large corpus of text data.
 
 The retrieved information is then used to augment the input prompt, providing additional context and knowledge to the language generation model.
 

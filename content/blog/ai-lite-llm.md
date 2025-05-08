@@ -1,6 +1,6 @@
 ---
 title: "[AI] Using LiteLLM to unify LLMs calls. Applied to AIssistant."
-date: 2025-06-17
+date: 2025-05-07
 draft: false
 tags: ["Gen-AI","Python"]
 description: 'How to use LiteLLM with different APIs - From OpenAI to Mistral APIs'
@@ -69,6 +69,9 @@ pip install litellm==1.55.9 #https://pypi.org/project/litellm/#history
 ```
 
 As of today, it **automatically installs OpenAI** (version `1.58.1`).
+
+
+https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/LiteLLM/test-litellm.ipynb
 
 
 ## About LLMs APIs
