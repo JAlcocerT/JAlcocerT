@@ -125,7 +125,9 @@ There are some cool **extensions** to help you create.
     * Id: ms-vscode-remote.remote-containers
     * [VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-![alt text](/blog_img/dev/remote-dev.png)
+![VSCode Remote Container](/blog_img/dev/vscode-remotecontainer.png)
+
+![VSCode SSH Dev](/blog_img/dev/remote-dev.png)
 
 Remember that there are many cool extensions: https://marketplace.visualstudio.com/VSCode
 
@@ -194,6 +196,7 @@ For a Python Dev Container, you can get one with **this docker-compose**.
 ```sh
 #docker #https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
 ext install ms-azuretools.vscode-docker
+#https://marketplace.windsurf.com/extension/ms-azuretools/vscode-docker
 
 #MDX #https://open-vsx.org/vscode/item?itemName=unifiedjs.vscode-mdx
 ext install unifiedjs.vscode-mdx

@@ -196,20 +196,25 @@ It uses [LangGraph](https://jalcocert.github.io/JAlcocerT/understanding-langgrap
 
 * https://speed.cloudflare.com/
 
-
-
 ![alt text](/blog_img/selfh/Internet/internet-test.png)
 
-Speedtest CLI from Ookla®
+Speedtest CLI from Ookla®:
 
 ![alt text](/blog_img/selfh/Internet/SpeedTest.png)
 
+As seen on the [benchmarking post](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/#internet-benchmark):
+
+```sh
+sudo apt-get install speedtest-cli
+```
+
+![alt text](/blog_img/Monitoring/eth-vs-wifi.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/InternetQuality/InternetSpeedTracker.yaml" title="InternetSpeedTracker with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-See that its running with:
+See that the speedtest app is running with:
 
 ```sh
 curl 192.168.1.11:8065/api/healthcheck
@@ -223,12 +228,14 @@ It has influxDB 2.0 integration, inc ase that you want to use this with Grafana.
 ## Analytics Stuff
 
 * https://github.com/chartbrew/chartbrew
-* https://docs.chartbrew.com/deployment/run-on-docker#run-on-docker
-* https://raw.githubusercontent.com/chartbrew/chartbrew/refs/heads/master/docker-compose.yml
+  * https://docs.chartbrew.com/deployment/run-on-docker#run-on-docker
+  * https://raw.githubusercontent.com/chartbrew/chartbrew/refs/heads/master/docker-compose.yml
 
 >  Open-source web platform used to create live reporting dashboards from APIs, MongoDB, Firestore, MySQL, PostgreSQL, and more 📈📊 
 
-Which resonates with my recent post: https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/
+Which resonates with my recent [post on BI Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/)
+
+---
 
 ## Conclusions
 
@@ -432,17 +439,156 @@ Now, we need to prompt codex:
 
 ```sh
 codex
- #are you able to generate documentation of the local-deep-researcher project, which files are located at ./src/ollama_deep_researcher and have it outputed to the astro theme
-#template that it is loaded at ./docs/src?
 ```
 
+* Are you able to generate documentation of the local-deep-researcher project, which files are located at ./src/ollama_deep_researcher and have it outputed to the astro theme
+template that it is loaded at ./docs/src?
+
+* Iterating on the prompts for Codex:
+
+
+{{< details title="Codex AI Docs Prompt Astro | v1.0 📌" closed="true" >}}
+
+You are an AI documentation generator. Your task is to create technical documentation for the local-deep-researcher project.
+
+**1. Project Files:**
+
+Inspect the content of the files located in the `./src/ollama_deep_researcher` directory. Please process the content of these files to understand the project's structure, modules, functions, classes, and overall functionality.
+
+**2. Documentation Requirements:**
+
+The generated documentation should aim to cover the following aspects (please be as comprehensive as possible based on the code):
+
+* **Project Overview:** A high-level summary of the local-deep-researcher project's purpose and main features.
+* **Module Descriptions:** For each Python file (or identified module), provide a description of its functionality and key components.
+* **Function and Class Documentation:** For each function and class, include:
+    * A concise description of its purpose.
+    * Its signature (parameters, return type).
+    * Explanations of the parameters and return values.
+    * (If possible and relevant) Short examples of usage.
+* **Key Concepts and Algorithms:** If the code implements any significant algorithms or concepts, explain them in a clear and understandable way.
+* **Dependencies:** List any external libraries or dependencies used by the project.
+* **(Optional, if discernible) Configuration:** If the code involves configuration files or settings, document their purpose and how to modify them.
+
+**3. Output Format (Astro Theme Template):**
+
+The final documentation should be formatted to be easily integrated with the Astro theme located at `./docs/src`. Please consider the following:
+
+* **Markdown Output:** Generate the documentation in Markdown format (`.md` files) as this is the primary format for Astro content.
+* **Frontmatter:** Respect the Astro frontmatter at the beginning of each Markdown file (e.g., `title`, `description`, `sidebar`)as per the sample posts
+**4. Input:**
+
+I will now provide you with the content of each file in the `./src/ollama_deep_researcher` directory. Please process them one by one.
+
+**5. Output Instructions:**
+
+Output the generated documentation in Markdown format, ready to be placed within the `./docs/src` directory of my Astro project. 
+
+
+{{< /details >}}
+
+The agent placed them at the *wrong place*, just following my incorrect orders:
+
+![alt text](/blog_img/GenAI/aidocs/codex-aidocs-v1-0.png)
+
+So I moved the files and it required to tweak the frontmatter, which I will specify on the next prompt iteration.
+
+This is the result:
+
+![alt text](/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-0.png.png)
+
+![alt text](/blog_img/GenAI/aidocs/starlight-v1-0.png)
+
+
+{{< details title="Codex AI Docs Prompt Astro | v1.1 📌" closed="true" >}}
+
+You are an AI documentation generator. Your task is to create technical documentation for the Claper cloned project.
+
+**1. Project Files:**
+
+Inspect the content of the files located in the `./` directory. Please process the content of these files to understand the project's structure, modules, functions, classes, and overall functionality.
+
+**2. Documentation Requirements:**
+
+The generated documentation should aim to cover the following aspects (please be as comprehensive as possible based on the code):
+
+* **Project Overview:** A high-level summary of the local-deep-researcher project's purpose and main features.
+* **Module Descriptions:** For each Python file (or identified module), provide a description of its functionality and key components.
+* **Function and Class Documentation:** For each function and class, include:
+    * A concise description of its purpose.
+    * Its signature (parameters, return type).
+    * Explanations of the parameters and return values.
+    * (If possible and relevant) Short examples of usage.
+* **Key Concepts and Algorithms:** If the code implements any significant algorithms or concepts, explain them in a clear and understandable way.
+* **Dependencies:** List any external libraries or dependencies used by the project.
+* Create one `index.md` with the high level overview: description of the project, key features, modules, dependencies, configuration and environment, also Static code analysis (languages, structure, dependencies).
+* For each mdule that you consider important to understand the project way of working, create a separated markdown post file
+* If the project have guidelines on how t run it or deploy, lets create a `deploy.md` post with such info. Else, lets try to guess it based on the technlogies.
+* **(Optional, if discernible) Configuration:** If the code involves configuration files or settings, document their purpose and how to modify them.
+
+**3. Output Format (Astro Theme Template):**
+
+The final documentation should be formatted to be easily integrated with the Astro theme located at `./docs/src/content/docs/reference`. Please consider the following:
+
+* **Markdown Output:** Generate the documentation in Markdown format (`.md` files) as this is the primary format for Astro content.
+* **Frontmatter:** Respect the following Astro frontmatter at the beginning of each Markdown file (e.g., `title`, `description`)
+
+
+**4. Input:**
+
+See the content of each file in the `./` directory. Please process them one by one and get an idea of how the all work together.
+
+**5. Output Instructions:**
+
+Output the generated documentation in Markdown format, ready to be placed within the `./docs/src` directory of my Astro project. 
+
+
+{{< /details >}}
+
+Automating this a little bit more, the astro setup can be done with:
+
+```sh
+#!/usr/bin/expect -f
+
+spawn npm create astro@latest -- --template starlight
+
+# Expect the project directory prompt
+expect "Where should we create your new project?"
+send "./docs\r"  # Replace with your desired directory
+
+# Expect the install dependencies prompt
+expect "Install dependencies?"
+send "y\r"
+
+# Expect the initialize git repository prompt
+expect "Initialize a new git repository?"
+send "n\r"
+
+expect eof
+```
+
+I also added the following fllow ups:
+
+* Write the files
+* Can you inspect the git code changes on a highlevel and describe on a different post the versions and associated changes?
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Claper" title="Tested with Clapper | Astro AI Powered Docs v1.1 ↗" >}}
+{{< /cards >}}
+
+![alt text](../../static/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-1.png)
+
+6. **Windsurf IDE**
 
 Tested with:
 
-https://github.com/JAlcocerT/Claper
-https://github.com/JAlcocerT/mechanism
-https://github.com/JAlcocerT/local-deep-researcher/tree/main
-https://github.com/qatrackplus/qatrackplus/
+* https://github.com/JAlcocerT/local-deep-researcher/
+* https://github.com/JAlcocerT/Claper
+
+<!-- * https://github.com/JAlcocerT/mechanism -->
+
+
+* https://github.com/qatrackplus/qatrackplus/
 
 https://github.com/airbytehq/airbyte
 https://github.com/SigNoz/signoz

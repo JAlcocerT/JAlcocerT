@@ -111,7 +111,7 @@ I have cloned the original project: https://github.com/langchain-ai/local-deep-r
 
 <!-- ![Streamlit Chat PDF Diagram - AlejandroAO](https://raw.githubusercontent.com/JAlcocerT/ask-multiple-pdfs/blob/main/docs/PDF-LangChain.jpg) -->
 
-![Streamlit MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat/raw/main/streamlit-multichat.png)
+<!-- ![Streamlit MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat/raw/main/streamlit-multichat.png) -->
 
 ![ollama-deep-research](https://github.com/user-attachments/assets/1c6b28f8-6b64-42ba-a491-1ab2875d50ea)
 
@@ -144,11 +144,13 @@ uvx \
                  langgraph dev
 ```
 
-You will get a a firefox browser tab with the following diagram and place to ask questions:
+You will get a a firefox **browser tab** with the following diagram and place to ask questions:
 
 <!-- ![Local Deep Researcher with Ollama and DuckDuckGo](https://raw.githubusercontent.com/JAlcocerT/local-deep-researcher/blob/main/local-research-sample.png) -->
 
 ![Local Deep Researcher with Ollama and DuckDuckGo](https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png)
+
+> I could not resist to ask to provide a research on Titanium for [bycicle applications](https://jalcocert.github.io/JAlcocerT/buying-bicycle-through-data-analytics/)
 
 
 <!-- https://youtu.be/sGUjmyfof4Q?t=568 -->
