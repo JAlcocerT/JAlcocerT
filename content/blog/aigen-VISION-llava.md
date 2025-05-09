@@ -3,7 +3,7 @@ title: "AI with Vision - Image2Text"
 date: 2025-04-09T00:20:21+01:00
 draft: false
 #tags: ["Gen-AI","Self-Hosting","Docker"]
-description: 'LLaVa, OpenAI Vision Models. Ask questions about images or design your perfect room with roomGPT.'
+description: 'LLaVa, OpenAI Vision Models compared with T2I. Ask questions about images or design your perfect room with roomGPT.'
 url: 'ai-vision-models'
 ---
 
@@ -18,12 +18,20 @@ url: 'ai-vision-models'
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Image" title="OpenAI Vision Script ↗ " >}}
-  {{< card link="" title="DataBricks 101 ↗" >}}
+  {{< card link="https://fossengineer.com/selfhosting-llms-ollama/" title="Ollama Container Setup 101 ↗" >}}
 {{< /cards >}}
 
 ### OpenAI
 
-You can use the OpenAI API to feed one image and ask questions about it.
+You can use the **OpenAI API** to feed one image and ask questions about it.
+
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Image/z_openai-t2i-vision.ipynb)
+
+<!-- 
+https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Image/z_openai-t2i-vision.ipynb -->
+
+> This is Image to Text!
 
 This functionality is primarily offered through the **GPT-4 Turbo with Vision** model (also referred to as `gpt-4-vision-preview` or `gpt-4o`).
 
@@ -159,25 +167,42 @@ if __name__ == "__main__":
 
 #### Understanding OpenAI Vision 
 
-OpenAI Vision API Crash Course - Chat with Images (Node)
+**OpenAI Vision** API Crash Course - Chat with Images (Node)
+
+<!-- https://www.youtube.com/watch?v=ZjkS11DSeEk -->
+
+{{< youtube "ZjkS11DSeEk" >}}
+
+**LLaVa** on a Pi:
+
+<!-- https://www.youtube.com/watch?v=Y2ldwg8xsgE -->
+
+{{< youtube "Y2ldwg8xsgE" >}}
 
 
-* https://www.youtube.com/watch?v=ZjkS11DSeEk
+
 
 ### LLaVa
 
+If you are familiar with local LLMs powered by Ollama...
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama" title="SelfHosting Ollama Docker Config! 🐋 ↗" >}}
+{{< /cards >}}
+
 
 * https://github.com/haotian-liu/LLaVA
-
-https://github.com/haotian-liu/LLaVA?tab=Apache-2.0-1-ov-file#readme ✅
-https://huggingface.co/liuhaotian/llava-v1.5-7b
-https://llava-vl.github.io/
+  * https://github.com/haotian-liu/LLaVA?tab=Apache-2.0-1-ov-file#readme ✅
+  * https://huggingface.co/liuhaotian/llava-v1.5-7b
+  * https://llava-vl.github.io/
 
 ```sh 
 ollama run llava #https://ollama.com/library/llava
 ```
 
-https://www.youtube.com/watch?v=4Jpltb9crPM
+<!-- https://www.youtube.com/watch?v=4Jpltb9crPM -->
+
+{{< youtube "4Jpltb9crPM" >}}
 
 > Image Recognition with LLaVa in Python
 
@@ -195,8 +220,7 @@ Now we have 2 ways (local and API based) to get to know context about images!
 
 This can also be helpful for the real estate project, where you can ask context about particular property scrapped images:
 
-
-```py
+```sh
 python3 scraping-ask-v2.py > comments_property_alijares.mdx
 ```
 
@@ -219,6 +243,18 @@ Given a photo of a room and a prompt...you can re-imagine how everything could p
 
 > MIT | Upload a photo of your room to generate your dream room with AI.
 
+### Text to Image
+
+If what you want is the opposite...
+
+Given a text description of an image, generate the image itself:
+
+
+
+See als: https://promptfolder.com/midjourney-prompt-helper/
+
+
+
 ---
 
 ## FAQ
@@ -227,34 +263,16 @@ Given a photo of a room and a prompt...you can re-imagine how everything could p
 
 {{< dropdown title="Computer Vision with PyTorch ⏬" closed="true" >}}
 
+* https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/#python-libraries-for-cv
 
 {{< /dropdown >}}
 
 {{< dropdown title="Computer Vision with Yolov8 Models ⏬" closed="true" >}}
 
-https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection
+* https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection
 
 {{< /dropdown >}}
 
-{{< dropdown title="Computer Vision with PyTorch ⏬" closed="true" >}}
-
-
-{{< /dropdown >}}
-
-
-### Understanding OpenAI Vision 
-
-**OpenAI Vision** API Crash Course - Chat with Images (Node)
-
-<!-- https://www.youtube.com/watch?v=ZjkS11DSeEk -->
-
-{{< youtube "ZjkS11DSeEk" >}}
-
-**LLaVa** on a Pi:
-
-<!-- https://www.youtube.com/watch?v=Y2ldwg8xsgE -->
-
-{{< youtube "Y2ldwg8xsgE" >}}
 
 
 ### Outro
@@ -288,4 +306,4 @@ ollama run llava #https://ollama.com/library/llava
 * https://www.youtube.com/watch?v=4Jpltb9crPM
 * https://www.youtube.com/watch?v=2Tv5ZfPabGM
 
-> Image Recognition with LLaVa in Python
+> Image Recognition with **LLaVa in Python**

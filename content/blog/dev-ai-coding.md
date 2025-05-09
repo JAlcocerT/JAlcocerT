@@ -23,15 +23,13 @@ But how about creating websites with....
 
 ### OpenAI
 
-Codex CLI is built for developers who already live in the terminal and want ChatGPT‑level reasoning plus the power to actually run code, manipulate files, and iterate – all under version control.
+**Codex CLI** is built for developers who already live in the terminal and want ChatGPT‑level reasoning plus the power to actually run code, manipulate files, and iterate – all under version control.
 
 <!-- https://www.youtube.com/watch?v=qqcmI72marw -->
 
 {{< youtube "qqcmI72marw" >}}
 
-
-
-In short, it’s chat‑driven development that understands and executes your repo.
+In short, it’s chat‑driven development that understands and executes your repos.
 
 * Zero setup — bring your OpenAI API key and it just works!
 * Full auto-approval, while safe + secure by running network-disabled and directory-sandboxed
@@ -65,7 +63,7 @@ codex
 
 Codex also allows you to use other providers that support the OpenAI Chat Completions API. 
 
-You can set the provider in the config file or use the --provider flag.
+You can set the provider in the config file or use the `--provider` flag.
 
 
 {{< callout type="info" >}}

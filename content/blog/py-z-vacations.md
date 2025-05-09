@@ -329,8 +329,6 @@ Interesting maps for offline mode:
 
 * https://organicmaps.app/news/
 * Maps.me
-  * 
-  * 
 
 ```sh
 flatpak install flathub app.organicmaps.desktop
@@ -341,12 +339,13 @@ flatpak install flathub app.organicmaps.desktop
 
 > GPL3.0 | A modern, open-source personal flight tracking system
 
-See also the Jetlog project:
+See also the AdventureLog project:
 
 * https://github.com/seanmorley15/AdventureLog
 
 
 Share media with your friends (airdrop for all devices):
+
 * https://github.com/seemoo-lab/opendrop
 * https://github.com/SnapDrop/snapdrop - Game changer!
 
@@ -369,21 +368,16 @@ Share media with your friends (airdrop for all devices):
 
 With HA we also can...
 
-<https://pirateweather.net/en/latest/ha/>
-
+* <https://pirateweather.net/en/latest/ha/>
 
 
 {{< callout type="info" >}}
 After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/), there is also the financial aspects of travelling. [**Source Code**](https://gitlab.com/fossengineer1/py_vacations)
 {{< /callout >}}
 
-
-
-
 ### Scrapping and LLMs
 
 Get Google Flights information with python.
-
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scrapping Tools" >}}

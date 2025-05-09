@@ -163,6 +163,8 @@ You can use FormBricks for **launching surveys or contact forms.**
 
 Go to the [FormBricks UI](https://formbricks.com/)
 
+![alt text](/blog_img/entrepre/formbricks.png)
+
 <!-- 
 https://app.formbricks.com/environments/cm0vgwasu00061484bqmicsbm/surveys -->
 
@@ -192,30 +194,10 @@ Before the </head> add:
 
 {{< /details >}}
 
-Setup FormBricks with no code, or with **code actions**
+This is how the admin panel looks:
 
-```py
-Setting Up Code Actions
+![alt text](/blog_img/entrepre/formbricks-sample.png)
 
-For more granular control, you can implement actions directly in your codebase:
-
-    Configure the Action: First, add the action via the Formbricks web interface to make it available for survey configuration. After that you can fire an action using formbricks.track()
-
-    Track an Action: Use formbricks.track() to send an action event to Formbricks.
-
-Track an action
-
-formbricks.track("Action Name");
-
-Here is an example of how to fire an action when a user clicks a button:
-Track Button Click
-
-const handleClick = () => {
-  formbricks.track("Button Clicked");
-};
-
-return <button onClick={handleClick}>Click Me</button>;
-```
 
 {{< callout type="warning" >}}
 It seems that FormBricks Forms can just be embedded **and not opened as a hyperlink url**.
@@ -223,10 +205,33 @@ It seems that FormBricks Forms can just be embedded **and not opened as a hyperl
 
 But, you can do **a cool trick**.
 
-To make a button call the JS that makes FormBricks pop out.
+Setup FormBricks with no code, or with **code actions**
+
+For more granular control, you can implement actions directly in your codebase:
+
+1. Configure the Action: First, add the action via the Formbricks web interface to make it available for survey configuration. After that you can fire an action using formbricks.track()
+
+2.  Track an Action: Use formbricks.track() to send an action event to Formbricks `formbricks.track("Action Name")`
+
+Here is an example of how to fire an action when a user clicks a button:
+
+
+```js
+const handleClick = () => {
+  formbricks.track("Button Clicked");
+};
+
+return <button onClick={handleClick}>Click Me</button>;
+```
+
+
+> To make a button call the JS that makes FormBricks pop out.
 
 ### GoodSheet
 
+* https://github.com/Luxapodular/GoodSheet
+
+>  A tiny library that makes it easy to post and get data from a google sheet. 
 
 {{< details title="Using GoodSheet.io 📌" closed="true" >}}
 
@@ -243,29 +248,41 @@ This can be combined with a Daisy UI CSS component, to get interesting functiona
 
 ### Symfony Forms
 
-https://github.com/symfony/form
+* https://github.com/symfony/form
+
+> MIT | https://github.com/symfony/form
+
 
 ### Formulosity
 
-https://github.com/plutov/formulosity
+* https://github.com/plutov/formulosity
+
+>  MIT | Self-hosted Surveys as Code platform. 
 
 ### HeyForms
+
+* https://github.com/heyform/heyform
+
+> aGPLv3 | Open-Source Form Builder
 
 You can try their SaaS - https://heyform.net/pricing
 
 {{< details title="How to Setup HeyForms 📌" closed="true" >}}
 
 * https://hub.docker.com/r/heyform/community-edition/tags
-* https://github.com/heyform/heyform/tree/main
 * https://docs.heyform.net/open-source/self-hosting
 
-```yml
-
-```
 
 {{< /details >}}
 
-### TypeForm
+### TypeForm vs QuillForms
+
+* https://github.com/QuillForms/quillforms
+
+>  Open Source TypeForm Alternative Based on React JS and Typescript | Best Typeform Clone | Conversational Multi Step Form 
+
+A great example: https://quillforms.com/forms/web-design-cost-calculator/
+
 
 ---
 

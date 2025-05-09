@@ -106,14 +106,14 @@ Which you can combine with [Mullvad](https://jalcocert.github.io/Linux/docs/debi
 -->
 
 {{< cards cols="1" >}}
-  {{< card link="https://fossengineer.com/selfhosting-adventurelog/" title="How to Setuo AdventureLog with Containers" >}}
+  {{< card link="https://fossengineer.com/selfhosting-adventurelog/" title="How to Setup AdventureLog with Containers" >}}
   {{< card link="https://fossengineer.com/selfhosting-airtrail/" title="Selfhosting AirTrail" >}}
 {{< /cards >}}
 
 
 {{< details title="Quick Trip Planner Deployment 📌" closed="true" >}}
 
-
+https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/Deploy
 
 {{< /details >}}
 
@@ -187,7 +187,7 @@ Get one of these connected to your SBCs at home and you are ready:
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="Crucial SSD for a Pi" image="/blog_img/hardware/crucial-1tb-ssd.jpg" subtitle="Ready to Plug to MiniPC or SBc" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="Crucial SSD for a Pi" image="/blog_img/hardware/crucial-1tb-ssd.jpg" subtitle="Ready to Plug to MiniPC or SBC" >}}
 {{< /cards >}}
 
 <!-- 
@@ -201,7 +201,7 @@ Remember that Nextcloud is a full fledged selfhosted cloud.
 NC together with [MariaDB Compose](https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml)
 
 ```yml
-version: '2'
+#version: '2'
 
 # volumes:
 #   nextcloud:

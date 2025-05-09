@@ -1,5 +1,5 @@
 ---
-title: "SelfHosting Updates - Spring 2025"
+title: "SelfHosting Updates - May 2025"
 date: 2025-05-06T01:20:21+01:00
 draft: false
 tags: ["Dev"]
@@ -9,7 +9,7 @@ url: 'selfhosted-apps-may-2025'
 
 Ive been following closely the newsletter from: https://selfh.st/icons/
 
-And these have taken my attention: 
+And [these apps](https://selfh.st/apps/) have taken my attention: 
 
 1. https://github.com/karakeep-app/karakeep
 
@@ -27,43 +27,43 @@ Having retrospective is really important when working Agile...
 
 > Apache v2 |  Developer-first, open source Typeform alternative (formerly known as Blocks.md) 
 
-An interesting alternative also to formbricks
+An interesting alternative also to [formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="SelfHosting 101 Script to get containers, tailscale and more ready to go! 🐋 ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-forms/" title="Forms | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-forms/" title="Forms/Newsletter Alternatives | Post ↗" >}}
 {{< /cards >}}
 
-4. https://github.com/donaldzou/WGDashboard?ref=selfh.st
+4. https://github.com/donaldzou/WGDashboard
 
-https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/
-https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel router setup with WG/Tailscale | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="WG Setup with WG-Easy on a VPS | Post ↗" >}}
+{{< /cards >}}
 
 
-5. https://github.com/Bubka/2FAuth?ref=selfh.st
+5. https://github.com/Bubka/2FAuth
 
 As I recently had some trouble with my phone...
 
 
-6. https://github.com/besoeasy/file-drop?ref=selfh.st
-
+6. https://github.com/besoeasy/file-drop
 
 filebrowser alternative!
 
-7. BYOD, I mean bring your own music https://github.com/swingmx/swingmusic?ref=selfh.st
+7. BYOD, I mean bring your own music https://github.com/swingmx/swingmusic
 
-8. https://github.com/tiagorangel1/cap?ref=selfh.st
+8. https://github.com/tiagorangel1/cap
 
 >  Cap is a lightweight, modern open-source CAPTCHA alternative designed using SHA-256 proof-of-work 
 
-9. Wordpres...but static sites? https://github.com/nityam2007/StaticPress-Docker?ref=selfh.st
+9. Wordpres...but static sites? https://github.com/nityam2007/StaticPress-Docker
 
 ## New SelfH Apps
 
-
 ### Termix
 
-Termix, not termux, its being great:
+Termix, not [termux](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#termux), its being great:
 
 * https://github.com/LukeGus/Termix
   * https://github.com/LukeGus/Termix/wiki/Docker
