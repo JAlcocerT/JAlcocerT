@@ -1,6 +1,6 @@
 ---
 title: "DevOps Tools"
-date: 2025-05-10T00:20:21+01:00
+date: 2025-10-10T00:20:21+01:00
 draft: false
 description: 'Setting up devops tools - From CI/CD, to Monitoring withGrafana, k8s, DSc Tools...'
 url: 'dev-ops-for-non-devops'
@@ -206,13 +206,17 @@ You can get help from [Uptime Kuma with Docker](https://fossengineer.com/selfhos
 
 ### Transfering Files - What it is a FTP?
 
-FTP stands for **File Transfer Protocol**, and an FTP server is a computer or software application that runs the FTP protocol. Its primary purpose is to facilitate the transfer of files between different computers over a network, such as the internet or a local area network (LAN). 
+FTP stands for **File Transfer Protocol**, and an FTP server is a computer or software application that runs the FTP protocol.
+
+Its primary purpose is to facilitate the transfer of files between different computers over a network, such as the internet or a local area network (LAN). 
 
 
 
 #### Why FTPs?
 
-In essence, FileZilla acts as **a bridge between your local computer and remote servers**, making it easy to work with files stored on those servers as if they were part of your own file system. It's a popular choice for developers, system administrators, and anyone who needs to transfer files to or from remote servers **securely and efficiently**.
+In essence, FileZilla acts as **a bridge between your local computer and remote servers**, making it easy to work with files stored on those servers as if they were part of your own file system. 
+
+It's a popular choice for developers, system administrators, and anyone who needs to transfer files to or from remote servers **securely and efficiently**.
 
 * Sharing Large Files: FTP servers allow you to share really big files that are too large for email or messaging apps.
 * Fast and Efficient: They make it easy for multiple people to download the same file at the same time, so you don't have to send it to each person individually.

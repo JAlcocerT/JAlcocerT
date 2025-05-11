@@ -3,7 +3,7 @@ title: "SelfHosting Updates - May 2025"
 date: 2025-05-06T01:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Selfhosted Apps that simplify my workflow as of May 2025: Termix, CheckMate'
+description: 'Selfhosted Apps that simplify my workflow as of May 2025: Termix, CheckMate, LibreChat'
 url: 'selfhosted-apps-may-2025'
 ---
 
@@ -271,6 +271,18 @@ Which resonates with my recent [post on BI Tools](https://jalcocert.github.io/JA
 ---
 
 ## Conclusions
+
+Recently I saw a really cool podcast from TDOAC:
+
+And one of the messages I got was:
+
+* 70% more of the same
+* 20% better
+* 10% new
+
+With Selfhosting I feel im balancing a lot towards the new, which makes me operate away from my bests, yet I learn a lot.
+
+For example
 
 Lately I got to know about couple of **'new' VectorDBs**:
 
@@ -651,7 +663,7 @@ codex
 
 {{< details title="Codex AI Docs Prompt Astro | v1.2 📌" closed="true" >}}
 
-You are an AI documentation generator. Your task is to create technical documentation for the QATrackPlus cloned project and write the post as markdown files where specified.
+You are an AI documentation generator. Your task is to create technical documentation for the **QATrackPlus** cloned project and write the post as markdown files where specified.
 
 **1. Project Files:**
 
@@ -696,7 +708,7 @@ Output the generated documentation in Markdown format, ready to be placed within
 {{< /details >}}
 
 {{< callout type="info" >}}
-So far with these projects AI docs, I was getting at the worst case a 86% context left for codex
+So far with these projects AI docs, I was getting at the worst case a **86% context left** for codex
 {{< /callout >}}
 
 
@@ -721,7 +733,7 @@ As `input.txt` is the prompt we have tinkered with.
 
 {{< details title="Codex AI Docs Prompt Astro | v1.3 📌" closed="true" >}}
 
-You are an AI documentation generator. Your task is to create technical documentation for the LibreChat cloned project and write the post as markdown files where specified.
+You are an AI documentation generator. Your task is to create technical documentation for **the LibreChat cloned project** and write the post as markdown files where specified.
 
 **1. Project Files:**
 
@@ -767,6 +779,10 @@ Output the generated documentation in Markdown format, ready to be placed within
 {{< /details >}}
 
 
+![alt text](/blog_img/GenAI/librechat-docs.png)
+
+
+![alt text](/blog_img/GenAI/librechat-docs-ai.png)
 
 6. **Windsurf IDE** - which is a vscode forked, recently adquired by openai...
 

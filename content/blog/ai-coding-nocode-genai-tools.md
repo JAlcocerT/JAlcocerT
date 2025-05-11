@@ -251,8 +251,14 @@ Sometime ago I was doing some tests with [tg bots](https://github.com/JAlcocerT/
 pip install python-telegram-bot==22.0
 ```
 
-{{< details title="Setup a TG Bot | BotFather and API Tokens 📌" closed="true" >}}
 
+
+
+{{< callout type="info" >}}
+It was about time to make [a project again with a telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot) 💻 (combined with [web](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/)!)
+{{< /callout >}}
+
+{{< details title="Setup a TG Bot | BotFather and API Tokens 📌" closed="true" >}}
 
 * Open the **Telegram** app and search for the "BotFather" user.
 * Start a chat with BotFather and use the `/newbot` command to create a new bot.
@@ -313,7 +319,7 @@ Here's how you would typically do it:
     * If its "Disable" your bot can read all messages. Be mindful of the implications of this setting.
 * **Permissions:** As the group creator or an admin, you can manage the permissions of both regular users and bots within the group (e.g., who can send messages, add members, etc.).
 
-![alt text](../../static/blog_img/dev/tb-mybots.png)
+![TG Bots Settings](/blog_img/dev/tb-mybots.png)
 
 For me, using `/mybots` allow me to change it.
 

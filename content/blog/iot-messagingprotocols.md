@@ -1,6 +1,6 @@
 ---
 title: "Whats the right Messaging Protocol for me?"
-date: 2025-05-09T05:20:21+01:00
+date: 2025-09-09T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
 description: 'MQTT vs RMQ vs Kafka. Great Tools for IoT Projects!'
