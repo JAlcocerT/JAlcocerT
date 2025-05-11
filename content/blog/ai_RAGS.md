@@ -267,14 +267,18 @@ Refer to the documentation for customization and manual instrumentation.
 
 #### LangGraph BigTool
 
-LangGraph is a Python library for building stateful, multi-agent systems and **complex conversational workflows**.
+**LangGraph** is a Python library for building stateful, multi-agent systems and **complex conversational workflows**.
 
 * https://github.com/langchain-ai/langgraph
   * https://github.com/JAlcocerT/Multi-Agents/tree/main/LangGraph
 
 > MIT |  Build resilient language agents as graphs. 
 
-The LangGraph library enables agent orchestration — offering customizable architectures, long-term memory, and human-in-the-loop to reliably handle complex tasks.
+The LangGraph library enables **agent orchestration** — offering customizable architectures, long-term memory, and human-in-the-loop to reliably handle complex tasks.
+
+<!-- https://github.com/langchain-ai/langgraph-bigtool/blob/main/static/img/graph.png -->
+
+![Streamlit MultiChat](https://github.com/langchain-ai/langgraph-bigtool/raw/main/static/img/graph.png)
 
 {{< callout type="info" >}}
 It provides a more **programmatic and flexible way to define the interactions** and state transitions between multiple agents or steps in a sophisticated AI application.
@@ -459,5 +463,60 @@ Takeaways
     The model is capable of generating comprehensive summaries and reasoning about complex topics.
     The distillation of the model into smaller versions, such as the 14 billion parameter model, makes it possible to run on a laptop.
 
+
+{{< /details >}}
+
+### RAG x Ollama
+
+
+Ollama makes it easy to get up and running with large language models locally. It is **like Docker for managing LLMs**.
+
+With [modelfile](https://github.com/Decentralised-AI/ollama/blob/main/docs/modelfile.md), it creates a [profile](https://github.com/Decentralised-AI/ollama/tree/main/examples) of a model: **ollama create your_model_profile -f ./testmodelfile**
+
+```sh
+ollama run testmodelfile
+```
+
+Install it with docker or with CLI:
+
+* <https://hub.docker.com/r/ollama/ollama>
+* <https://gpt-index.readthedocs.io/en/stable/examples/llm/ollama.html>
+
+
+{{< details title="Using Ollama with RAGs 📌" closed="true" >}}
+
+
+```sh
+docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+podman run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+```
+
+```sh
+#sudo systemctl status ollama
+#sudo systemctl stop ollama
+```
+
+```yml
+#version: '3'
+services:
+  ollama:
+    image: ollama/ollama:latest #0.1.17
+    container_name: ollama
+    ports:
+      - "11434:11434" #Could also be any free local port like 9999:11434
+    volumes:
+      - ai_ollama_data:/root/.ollama
+
+volumes:
+  ai_ollama_data:
+
+
+
+ollama run orca-mini:3b
+
+
+#http://localhost:11434/
+#    #network_mode: host      
+```
 
 {{< /details >}}

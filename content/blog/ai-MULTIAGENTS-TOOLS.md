@@ -7,6 +7,14 @@ description: 'Reviewing the most Popular AI Agents frameworks: From AG2AI (AutoG
 url: 'ai-multi-agents-frameworks'
 ---
 
+Couple of years back there where prjects like https://github.com/unconv/gpt-autopilot
+
+> MIT |  A GPT-4 powered AI agent that can create full projects with iterative prompting 
+
+A ChatGPT API powered Python script that can build almost anything with the power of the Function Calling. Just tell it what you want to build, and it will build it and ask you clarifying questions along the way.
+
+And look at this now...
+
 ## The Agentic Ecosystem
 
 Lately everyone talks about **agents**...

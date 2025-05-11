@@ -79,7 +79,7 @@ Not everything is Github.
 
 There are very cool projects on [Gitlab](https://jalcocert.github.io/JAlcocerT/how-to-use-gitlab/) as well.
 
-You can start by adding their extension to sync your repos:
+You can start by adding the **Gitlab extension** to sync your repos:
 
 ```sh
 code --install-extension gitlab.gitlab-workflow
@@ -182,11 +182,11 @@ groups jalcocert
 
 > This can be very useful to do Jekyll web dev as seen [here](https://www.youtube.com/watch?v=X7guekGZM20)
 
-Generally, to develop inside a container: you will need one
+Generally, to develop inside a container - you will need one
 
 
 {{< callout type="info" >}}
-For a Python Dev Container, you can get one with **this docker-compose**.
+For a Python Dev Container, you can get one with **this kind of [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps)**.
 {{< /callout >}}
 
 {{< youtube "yUyxJr2xboI" >}}
@@ -194,6 +194,9 @@ For a Python Dev Container, you can get one with **this docker-compose**.
 **More VSCode extensions**
 
 ```sh
+#code --install-extension gitlab.gitlab-workflow
+
+
 #docker #https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
 ext install ms-azuretools.vscode-docker
 #https://marketplace.windsurf.com/extension/ms-azuretools/vscode-docker
@@ -230,7 +233,6 @@ Diagrams/Wireframes...
 #gemini assistant https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist
 
 #jupyter https://marketplace.visualstudio.com/items/?itemName=ms-toolsai.jupyter
-
 
 #excalidraw https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor
 ext install pomdtr.excalidraw-editor

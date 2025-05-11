@@ -186,7 +186,7 @@ https://www.youtube.com/watch?v=Ud9FEmNOgLs
 * https://github.com/ggozad/oterm
 * https://pypi.org/project/oterm/
 
-![alt text](/blog_img/GenAI/oterm.png)
+![Oterm](/blog_img/GenAI/oterm.png)
 
 > MIT | The terminal client for Ollama 
 
@@ -202,10 +202,17 @@ uvx oterm #https://ggozad.github.io/oterm/installation/#installation
 Oterm seems to [support MCP](https://ggozad.github.io/oterm/mcp/?h=mcp#tools)
 {{< /callout >}}
 
+<!-- 
+* <https://www.youtube.com/watch?v=0BRnK5BGZHU>
+
+* <https://github.com/danny-avila/LibreChat/tree/main>
+    * <https://github.com/danny-avila/LibreChat/blob/main/docs/install/docker_compose_install.md>
+    * mongoDB: <https://docs.librechat.ai/features/manage_your_database.html> -->
+
 
 * https://github.com/danny-avila/LibreChat
 
-![alt text](/blog_img/GenAI/librechat-openai.png)
+![LibreChat UI with OpenAI](/blog_img/GenAI/librechat-openai.png)
 
 3. I got working a **local research assistant** the searches the web for you and summarizes the content via Ollama (I added OpenAI as well and groq is WIP).
 

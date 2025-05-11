@@ -134,6 +134,86 @@ But you are missing all internal walls which make the rooms, say thats 100% more
 
 > First estimation ~ 55+30*2 = 115m2, which for **2 layers** would be ~30kg
 
+{{< details title="Different kind of paints... 📌" closed="true" >}}
+
+
+The world of home paints can be a bit overwhelming with different types and terminologies. Let's break down some common categories and their pros and cons:
+
+### Synthetic Paints
+
+"Synthetic" is a broad term that essentially means the paint is made from artificially created materials, often derived from petrochemicals. Many modern paints fall under this category. Within synthetic paints, you'll find various binders (the substance that holds the pigment together and adheres to the surface), each with its own characteristics.
+
+**Pros:**
+
+* **Durability and Resistance:** Generally offer good resistance to wear, tear, moisture, and UV light, leading to a longer-lasting finish.
+* **Wide Range of Colors:** Synthetic pigments often provide more vibrant and long-lasting colors.
+* **Good Coverage:** Many synthetic paints offer excellent opacity, requiring fewer coats.
+* **Versatility:** Can be formulated for various surfaces like wood, metal, and walls.
+* **Affordability:** Often more cost-effective than natural paints.
+
+**Cons:**
+
+* **VOCs (Volatile Organic Compounds):** Can release higher levels of VOCs, which can negatively impact indoor air quality and pose health risks. Water-based synthetic paints generally have lower VOCs than solvent-based ones.
+* **Environmental Impact:** Production often relies on non-renewable resources and energy-intensive processes.
+* **Breathability:** May not allow walls to "breathe" as much as some natural paints, potentially trapping moisture.
+* **Strong Odor:** Solvent-based synthetic paints can have a strong and lingering odor.
+* **Cleaning:** Often require solvents like mineral spirits for cleaning brushes and spills.
+
+### Acrylic Paints
+
+Acrylic paints are a type of synthetic paint where the binder is an acrylic resin. They are water-based.
+
+**Pros:**
+
+* **Quick Drying Time:** Dries relatively fast, allowing for quicker recoating.
+* **Water-Based:** Easier to clean up with soap and water while wet. Lower odor and VOCs compared to oil-based paints.
+* **Good Adhesion:** Adheres well to various surfaces, including walls, ceilings, furniture, and even some exterior applications.
+* **Durability and Flexibility:** Once dry, they are water-resistant and flexible, making them less prone to cracking and peeling, especially on surfaces that might expand or contract.
+* **Color Retention:** Colors tend to remain vibrant after drying.
+* **Versatility:** Can be mixed with various mediums to achieve different textures and effects.
+* **Affordability:** Generally more budget-friendly than oil-based paints.
+
+**Cons:**
+
+* **Fast Drying Can Be a Drawback:** Requires working quickly to avoid brush strokes and issues with blending.
+* **Color Shift:** May slightly darken as it dries, which can be a consideration for color matching.
+* **Can Be Difficult to Remove When Dry:** Once acrylic paint dries, it becomes water-resistant and can be challenging to remove from surfaces and brushes.
+* **May Require Priming:** Some surfaces may need a primer for optimal adhesion.
+
+### Latex Paints
+
+"Latex" paint is a bit of a misnomer because most modern latex paints do not actually contain natural rubber latex. They are also water-based and use synthetic polymers like acrylic, vinyl acrylic, or a combination as binders. For practical purposes in the home painting context, **latex paints are often considered a subset of acrylic or vinyl-acrylic water-based paints.**
+
+**Pros:**
+
+* **Easy Application:** Generally easy to apply with brushes, rollers, or sprayers.
+* **Quick Drying Time:** Dries relatively quickly.
+* **Water-Based:** Easy cleanup with soap and water. Low odor and VOCs compared to oil-based paints.
+* **Good Flexibility:** Offers good flexibility, resisting cracking and peeling, especially on walls and ceilings.
+* **Breathability:** Allows better breathability compared to some oil-based or high-gloss paints.
+* **Wide Availability and Affordability:** Widely available and generally more cost-effective than oil-based or some specialized acrylic paints.
+* **Good for Interior Walls and Ceilings:** Well-suited for most interior painting projects.
+* **Non-Yellowing:** Resists yellowing over time, especially in areas not exposed to direct sunlight.
+
+**Cons:**
+
+* **Can Show Brush Strokes:** Some formulations or application techniques may result in visible brush strokes.
+* **Less Durable Than Some Acrylics:** May not be as durable or scrub-resistant as high-quality 100% acrylic paints, especially in high-traffic areas or bathrooms.
+* **Not Ideal for All Surfaces:** May not adhere well to glossy surfaces or metal without proper priming.
+* **Can Swell Wood Grain:** Water-based nature can cause wood grain to swell if not properly sealed.
+* **Less Suitable for Exterior:** Generally not as durable as exterior-grade acrylic paints for outdoor use due to less resistance to weather elements.
+
+{{< /details >}}
+
+
+**In summary:**
+
+* For most **interior walls and ceilings**, **latex (water-based acrylic or vinyl-acrylic)** paints are a popular and practical choice due to their ease of use, cleanup, low odor, and affordability.
+* For **high-moisture areas like bathrooms and kitchens**, or for **exterior projects**, **100% acrylic paints** are often preferred for their better durability, adhesion, and resistance to moisture and mildew.
+* **Synthetic paints** encompass a broad category, and understanding the specific binder (like acrylic) will give you a better idea of the paint's properties. Oil-based synthetic paints are less common for general home use now due to VOCs and cleanup requirements but still have specific applications (e.g., durable finishes on trim or metal).
+
+When choosing paint, consider the surface you're painting, the desired finish (matte, satin, semi-gloss, gloss), the level of durability needed, and your preference regarding VOCs and ease of cleanup.
+
 
 ### Cool Stuff
 

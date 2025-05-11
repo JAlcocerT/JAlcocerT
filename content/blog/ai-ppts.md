@@ -174,7 +174,16 @@ npm install @iconify-json/logos #https://github.com/gilbarbara/logos
 
 You can also create **PPTs from markdown** with [Marp](https://github.com/marp-team/marpit)
 
+Marp is a presentation software that simplifies the creation of visually appealing slideshows and presentations for college students.
+
+It allows you to write your presentation content using Markdown, a plain text formatting syntax, and then effortlessly convert it into professionally designed slides.
+
+
 * https://github.com/marp-team/marpit
+
+
+
+Marp is especially helpful for students who want to focus on their content without the complexities of traditional presentation software, making it an excellent tool for academic presentations and reports.
 
 [Two other options](https://fossengineer.com/create-ppt-with-code/#marp) to create PPTs as a Code.
 

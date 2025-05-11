@@ -64,7 +64,7 @@ One step forward of what I covered with the groq YT summarizer:
   {{< card link="https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/" title="Groq YT Summarizer | Post ↗" >}}
 {{< /cards >}}
 
-And allow us to do not just DAG workflows, like with LangChain:
+And allow us to do not *just* DAG workflows, like with LangChain:
 
 
 {{< cards cols="2" >}}
@@ -357,3 +357,11 @@ I dont have a crazy fast GPU, so my first thought was to use [codex](https://jal
 * Anthropic - <https://console.anthropic.com/settings/keys>
 * Groq - <https://console.groq.com/keys>
 * For [Ollama](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama), you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
+
+
+
+## Other LangGraph Resurces
+
+### Big Tool
+
+LangGraph Big Tool caught my attention [while writting the RAG Post](https://jalcocert.github.io/JAlcocerT/comp.aring-rag-and-use-cases/#langgraph-bigtool)

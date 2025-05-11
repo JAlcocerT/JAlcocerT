@@ -3,9 +3,12 @@ title: "No Code Tools to use Gen AI"
 date: 2025-04-19T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Generative AI made simple. Flowise, n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
+description: 'Generative AI made simple with Low Code. Flowise, n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
 url: 'no-code-ai-tools'
 ---
+
+
+
 
 
 {{< cards >}}
@@ -14,6 +17,9 @@ url: 'no-code-ai-tools'
 {{< /cards >}}
 
 [![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
+
+
+The AI tech side might be perceived as chaotic...but you can keep it close to [apps you are familiar](#see-also), like [telegram bots](#tg-bots)
 
 ### Flowise AI
 
@@ -184,6 +190,8 @@ But that might cause friction on users having to leave your home/services page.
 {{< /cards >}} 
 -->
 
+#### ChatWoot
+
 1. Chatwoot
 
 {{< youtube "1Q_MDOWaljk" >}}
@@ -193,6 +201,8 @@ But that might cause friction on users having to leave your home/services page.
 {{< callout type="info" >}}
 
 {{< /callout >}}
+
+#### N8N
 
 2. N8N
 
@@ -207,14 +217,14 @@ https://drive.google.com/file/d/1QIyrIOWJFperDhzuvgDlB2xQCZ-eo79a/view
 https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
  -->
 
-![alt text](/blog_img/GenAI/NoCode-AI/n8n.png)
+![N8N](/blog_img/GenAI/NoCode-AI/n8n.png)
 
 * You can build cool things with these:
   * https://formbricks.com/docs/xm-and-surveys/core-features/integrations/n8n
   * Or...embedable chat widget - https://www.npmjs.com/package/@n8n/chat
 
 
-![alt text](/blog_img/GenAI/NoCode-AI/n8n-ui.png)
+![N8N Interface](/blog_img/GenAI/NoCode-AI/n8n-ui.png)
 
 <!-- https://www.youtube.com/watch?v=0KR8e4WP0E0 -->
 
@@ -225,10 +235,112 @@ https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
 
 {{< youtube "dC2Q_cyzgjg" >}}
 
+#### TG Bots
+
 3. Telegram...bots?
 
 
+Sometime ago I was doing some tests with [tg bots](https://github.com/JAlcocerT/Private/tree/main/Web_scrapping/Py_BeautifulSoup/TelegramBot), but that was all before the LLM boom.
 
+* https://core.telegram.org/bots/api
+* https://pypi.org/project/python-telegram-bot/
+* https://github.com/python-telegram-bot/python-telegram-bot
+* https://docs.python-telegram-bot.org/en/stable/telegram.ext.application.html
+
+```sh
+pip install python-telegram-bot==22.0
+```
+
+{{< details title="Setup a TG Bot | BotFather and API Tokens 📌" closed="true" >}}
+
+
+* Open the **Telegram** app and search for the "BotFather" user.
+* Start a chat with BotFather and use the `/newbot` command to create a new bot.
+* Name your bot: *botwithuniquename*
+* The bot will be `botwithuniquename_bot` -> <https://t.me/botwithuniquename_bot>
+* Follow the instructions to set a name and username for your bot.
+* Once the bot is created, BotFather will provide you with an **API token**.
+  *  Save this token; you'll need it in your Python code.
+
+with **/token** you can change the token:
+
+{{< /details >}}
+
+With the API token, you can use this token to access the HTTP API for your new bot.
+
+![Bot Father](/blog_img/dev/tg-botfather.png)
+
+{{< details title="Telegram Bots in groups 📌" closed="true" >}}
+
+You can definitely create a group in Telegram and add both regular users and bots to it.**
+
+Here's how you would typically do it:
+
+1.  **Create a New Group:**
+    * Open your Telegram app.
+    * Tap the "New Message" icon (usually a pencil in a circle).
+    * Select "New Group".
+
+2.  **Add the First Regular User:**
+    * Telegram will ask you to select the first member for your group. Choose one of the regular users you want to include.
+    * Tap "Next" (or a similar button).
+
+3.  **Name Your Group:**
+    * Give your group a name.
+    * You can also set a group photo if you like.
+    * Tap "Create" (or a similar button).
+
+4.  **Add the Second Regular User:**
+    * Once the group is created, open the group chat.
+    * Tap on the group name at the top to view the group info.
+    * Look for an option like "Add members" or a "+" icon.
+    * Select the second regular user you want to add and tap "Add".
+
+5.  **Add Your Bot:**
+    * In the same "Add members" section of the group info, search for your bot's username (the one you chose when you created the bot with BotFather, usually ending in `_bot`).
+    * Select your bot from the search results and tap "Add".
+
+
+{{< /details >}}
+
+
+**Important Considerations for Bots in Groups:**
+
+* **Privacy Settings:** By default, bots in groups can only see messages that directly mention them (e.g., `@YourBotName some command`). If you want your bot to be able to read all messages in the group, you need to adjust its privacy settings via BotFather.
+    * Talk to BotFather in Telegram.
+    * Send the command `/setprivacy`.
+    * Choose your bot from the list and see which one it has.
+    * If its "Disable" your bot can read all messages. Be mindful of the implications of this setting.
+* **Permissions:** As the group creator or an admin, you can manage the permissions of both regular users and bots within the group (e.g., who can send messages, add members, etc.).
+
+![alt text](../../static/blog_img/dev/tb-mybots.png)
+
+For me, using `/mybots` allow me to change it.
+
+
+* To obtain your **chat ID on Telegram**, you can follow these steps:
+  * Open the Telegram app on your mobile device or use the Telegram web version on your computer.
+  * Start a chat with the "userinfobot." You can search for it by its username: @userinfobot.
+  * Once you've started a chat with @userinfobot, send any message to it.
+  * The `@userinfobot` will reply with information about your chat, including your chat ID. The chat ID will be a numerical value.
+  * Copy the chat ID provided by @userinfobot. This is the ID you will use in your Python code as the chat_id variable.
+
+
+
+{{< details title="Telegram Bots with LLMs 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+{{< details title="Telegram Bots to download given images 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+
+And if you are already getting ideas... https://core.telegram.org/bots/webapps
 
 ---
 

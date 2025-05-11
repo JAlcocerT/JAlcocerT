@@ -184,6 +184,9 @@ if __name__ == "__main__":
 
 ### LLaVa
 
+<!-- 
+<https://www.youtube.com/watch?v=2Tv5ZfPabGM> -->
+
 If you are familiar with local LLMs powered by Ollama...
 
 {{< cards cols="2" >}}
