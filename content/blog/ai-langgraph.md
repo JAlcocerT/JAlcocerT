@@ -66,7 +66,6 @@ One step forward of what I covered with the groq YT summarizer:
 
 And allow us to do not *just* DAG workflows, like with LangChain:
 
-
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#langchain" title="Data-Chat | Project ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="LangChain DB Query DAG | Post ↗" >}}
@@ -80,7 +79,14 @@ And allow us to do not *just* DAG workflows, like with LangChain:
 
 LangGraph is one of the [most used tools recently](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/#trendy-ai-concepts) to build AI apps.
 
+* https://pypi.org/project/langgraph/
+  * https://langchain-ai.github.io/langgraph/
+* https://github.com/von-development/awesome-LangGraph
+
 **LangGraph is a Python library under the MIT license designed for building programatically sophisticated AI applications involving multiple agents and complex, stateful conversational workflows.**
+
+* https://langchain-ai.github.io/langgraph/concepts/template_applications/
+* https://langchain-ai.github.io/langgraph/how-tos/
 
 It offers a **programmatic and flexible way to define the interactions and state transitions** between different components (agents or steps) within these workflows.
 
@@ -93,7 +99,19 @@ Key features and benefits include:
 * **Human-in-the-loop:** Integrating human intervention into the workflow for review or decision-making.
 * **Resilient language agents:** Aiming to create robust and reliable AI systems capable of handling complex tasks.
 
-In essence, LangGraph provides a more structured and code-driven approach to building multi-agent systems compared to more declarative methods, offering greater control and flexibility for complex AI applications. 
+In essence, LangGraph provides a more structured and **code-driven approach to building multi-agent systems** compared to more declarative methods, offering greater control and flexibility for complex AI applications. 
+
+* https://github.com/langchain-ai/langgraph
+  * https://langchain-ai.github.io/langgraph/tutorials/workflows/
+
+> MIT | Build resilient language agents as graphs
+
+<!-- https://www.youtube.com/watch?v=aHCDrAbH_go&t=120s -->
+
+{{< youtube "aHCDrAbH_go" >}}
+
+
+Lets have a look to a sample project with [langGraph](#local-deep-researcher-project)
 
 
 ## Local Deep Researcher Project
@@ -361,6 +379,8 @@ I dont have a crazy fast GPU, so my first thought was to use [codex](https://jal
 
 
 ## Other LangGraph Resurces
+
+* https://github.com/esxr/langgraph-mcp/tree/main
 
 ### Big Tool
 

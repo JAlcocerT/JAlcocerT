@@ -7,6 +7,13 @@ description: 'Creating a website for a moto blogger. Or how to make two websites
 url: 'web-for-moto-blogger'
 ---
 
+Today I have managed to help **two friends** to get their own website up and running.
+
+
+{{< cards cols="2" >}}
+  {{< card link="#Conclusions" title="This one, the moto vlog one" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/" title="The PDH website, revisited | Post ↗" >}}
+{{< /cards >}}
 
 ## Moto Blogger Setup
 
@@ -14,7 +21,7 @@ A friend wanted to have the following **Astro theme**:
 
 The **theme** - https://github.com/Boston343/horizon
 
-Which initially seems oriented to weddings, but its fully photo centered.
+Which initially seems oriented to weddings, but its **fully photo centered**.
 
 <!-- 
 https://github.com/JAlcocerT/horizon
@@ -46,7 +53,7 @@ npm --v
 4. Install npm firebase package to configure the hosting
 
 
-{{< details title="Google Firebase Setup 📌" closed="true" >}}
+{{< details title="Google Firebase | Setup for Static Site Hosting 📌" closed="true" >}}
 
 Using **Firebase Free Tier Hosting**
 
@@ -87,27 +94,40 @@ Alternatively, do the [**Web-Dev setup** for Astro at Windows with Chocolatey](#
 
 Just using Google account was enough after accepting firebase T&C's.
 
-![Firebase Custom Domain](/blog_img/web/Firebase/firebase-auth.png)
+![Firebase Auth](/blog_img/web/Firebase/firebase-auth.png)
 
-![Firebase Custom Domain](/blog_img/web/Firebase/firebasedeploy-gha.png)
+![Firebase Deploy from GHA](/blog_img/web/Firebase/firebasedeploy-gha.png)
 
-![Firebase Custom Domain](/blog_img/web/Firebase/firebase-gha-auth.png)
+![Firebase GHA Auth](/blog_img/web/Firebase/firebase-gha-auth.png)
 
-![Firebase Custom Domain](/blog_img/web/Firebase/firebase-gha-auth2.png)
+![Firebase GHA Authentication](/blog_img/web/Firebase/firebase-gha-auth2.png)
 
 
-And...thats all the one time things required.
+And...thats all the one time things/setup required to get your website.
+
+### Conclusions
+
+A free website with Firebase and Astro SSG!
 
 **In a nutshell,** from now on, just these **3 commands** are enough:
 
 ```sh
-npm run dev #to see locally the changes
-npm run build #to render the site to /dist
+npm run dev #to see locally the changes live, as you tweak your website
+npm run build #To render the site to /dist
+
+#optional
+#npm install -g serve
+#serve -s dist #See locally the built website
+```
+
+Deploy to firebase:
+ 
+```sh
+#As all the files are ready, we just upload them to firebase free static hosting
 firebase deploy #to push dist to proyectorutasmoto.web.app
 ```
 
-> There you go: https://proyectorutasmoto.web.app/
-
+> There you go, your public website with a free firebase subdomain: https://proyectorutasmoto.web.app/
 
 **Next steps** - To link a **custom domain** and to not forget to sync it to github for a free code backup!
 
@@ -120,10 +140,13 @@ https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/
   {{< card link="https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/" title="SSGs are Crazy Efficient" image="/blog_img/web/success5-aga/photogallery-hugo-whilecyclingthere-carbon.png" subtitle="See how this other HUGO Gallery Project was delivered" method="Resize" options="600x q80 webp" >}}
 {{< /cards >}}
 
-## Outro
 
 
-I encouraged this client to also do somethign with his **awsome action camera video content**.
+---
+
+### Outro
+
+I encouraged this *client* to also do somethign with his **awsome action camera video content**.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="Some video tricks" icon="book-open" >}}
@@ -229,6 +252,8 @@ Dont forget to add **chapters to your video description**:
 $files = Get-ChildItem -Filter "*.MP4" | Sort-Object Name; $currentTime = 0; function Format-Time ($seconds) { [TimeSpan]::FromSeconds($seconds).ToString("g") }; $files | ForEach-Object { $formattedTime = Format-Time $currentTime; try { $duration = (ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$($_.FullName)") -as [double] } catch { Write-Warning "ffprobe failed for $($_.Name).  Assuming 0 seconds."; $duration = 0 }; $currentTime += $duration; "$formattedTime $($_.Name)" } | Set-Content file_list.txt
 ```
 
+#### About HEVC Format
+
 **HEVC** (High Efficiency Video Coding), also known as **H.265**, is a video compression standard. 
 
 To play HEVC videos, your system needs the appropriate codecs in Windows.
@@ -238,6 +263,10 @@ I have created a [**script** to automatically](https://github.com/JAlcocerT/Linu
 {{< /callout >}}
 
 > Still, imo it performs better in Linux! 
+
+---
+
+## FAQ
 
 ### Chocolatey Setup for Astro
 

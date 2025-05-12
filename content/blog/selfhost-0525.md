@@ -274,6 +274,10 @@ Which resonates with my recent [post on BI Tools](https://jalcocert.github.io/JA
 
 Recently I saw a really cool podcast from TDOAC:
 
+https://www.youtube.com/watch?v=Kl-I7sUcAOY
+
+{{< youtube "Kl-I7sUcAOY" >}}
+
 And one of the messages I got was:
 
 * 70% more of the same

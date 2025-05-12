@@ -355,3 +355,70 @@ services:
 **Key Contacts:** [Keep as is]
 
 **Technical Reference:** [Keep as is]
+
+### FAQ
+
+
+#### MonoRepos and more
+
+**What is a Monorepo?**
+
+At its core, a monorepo is a single repository that contains code for *many* different projects, libraries, and applications. Instead of having separate repositories for each part of your codebase, everything lives together in one big happy family.
+
+Think of it like organizing all your important documents into one well-structured filing cabinet instead of scattering them across multiple folders and drawers.
+
+**What are the Alternatives?**
+
+The primary alternative to a monorepo is a **multirepo** (also sometimes called a polyrepo). In a multirepo setup, each project, library, or application has its own distinct repository. This has been the more traditional approach for a long time.
+
+**Pros and Cons:**
+
+Let's weigh the advantages and disadvantages of each approach:
+
+**Monorepo:**
+
+**Pros:**
+
+* **Simplified Dependencies:** Managing dependencies across projects becomes much easier. You can often have a single version of a library used by multiple projects, reducing inconsistencies and potential conflicts.
+* **Code Sharing and Reuse:** It's simpler to share code and components between different parts of your organization. Changes to shared libraries are immediately available to all dependent projects.
+* **Atomic Commits:** You can make changes that span multiple projects in a single commit, ensuring consistency across related code modifications.
+* **Easier Refactoring:** Large-scale refactoring across multiple projects is more straightforward since all the code is in one place.
+* **Centralized Build and Deployment:** You can often set up a unified build and deployment pipeline for all projects in the monorepo.
+* **Improved Visibility:** It's easier to see how different parts of the system interact and understand the overall codebase.
+* **Streamlined Onboarding:** New team members have a single place to clone the entire codebase, making it easier to get started (though the size can be a factor).
+
+**Cons:**
+
+* **Size and Scalability:** As the monorepo grows, it can become very large, potentially impacting clone times, build times, and IDE performance.
+* **Build Complexity:** While centralization can be a pro, configuring and optimizing the build process for a diverse set of projects can become complex.
+* **Permissions and Access Control:** Managing permissions and ensuring that teams only have access to the relevant parts of the codebase can be challenging.
+* **Tooling Maturity:** While tooling for monorepos has improved significantly, it might not be as mature or widely adopted as tooling for multirepos in some areas.
+* **Impact of Changes:** A breaking change in a shared library can potentially affect many different projects within the monorepo.
+* **Perceived Complexity:** Some developers might find the sheer size and scope of a monorepo intimidating initially.
+
+**Multirepo:**
+
+**Pros:**
+
+* **Clear Boundaries and Ownership:** Each project has its own repository, making ownership and responsibilities clear.
+* **Smaller and Faster Clones:** Individual repositories are typically smaller, leading to faster clone times and less disk space usage.
+* **Independent Builds and Deployments:** Projects can often be built and deployed independently, reducing the risk of one project's issues affecting others.
+* **Technology Diversity:** Teams can choose the best technologies and tools for their specific project without impacting others.
+* **Mature Tooling:** The tooling and workflows around multirepos are generally well-established and widely understood.
+* **Improved Isolation:** Changes in one repository are less likely to have unintended consequences on other projects.
+
+**Cons:**
+
+* **Dependency Management:** Managing dependencies across multiple repositories can be complex, often leading to version inconsistencies and integration challenges.
+* **Code Sharing Challenges:** Sharing code between repositories can be cumbersome, often requiring the creation and maintenance of separate libraries or packages.
+* **Coordination Overhead:** Making changes that span multiple projects requires more coordination and can be more prone to errors.
+* **Refactoring Difficulties:** Large-scale refactoring across multiple repositories is significantly more challenging.
+* **Inconsistent Development Experience:** Teams working on different repositories might have different build processes, testing strategies, and deployment workflows.
+* **Reduced Visibility:** It can be harder to get a holistic view of the entire system and how different parts interact.
+
+**Which one is right for you?**
+
+The choice between a monorepo and a multirepo depends heavily on the specific needs and context of your organization and projects.
+
+* **Monorepos** often work well for organizations with many interconnected projects, a strong emphasis on code sharing, and the resources to invest in robust tooling and infrastructure. Companies like Google, Facebook, and Twitter are well-known users of monorepos.
+* **Multirepos** might be a better fit for organizations with highly independent teams and projects, a need for strict isolation, or when working with a diverse range of technologies with limited overlap.

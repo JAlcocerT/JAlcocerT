@@ -1,6 +1,6 @@
 ---
 title: "Audio with AI. TTS and Voice Cloning"
-date: 2025-05-26T18:20:21+01:00
+date: 2025-05-10T18:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
@@ -10,7 +10,7 @@ description: 'Local TTS Tools with Coqui and LocalAI. Clone audio with xTTS2.'
 url: local-ai-audio
 ---
 
-https://platform.openai.com/playground/tts
+* https://platform.openai.com/playground/tts
 
 
 {{< cards cols="2" >}}

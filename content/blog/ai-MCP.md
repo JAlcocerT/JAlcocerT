@@ -620,10 +620,13 @@ LangGraph can structure the core agent loop of thinking, acting (using a tool), 
 
 #### MCP with LangGraph
 
+* https://pypi.org/project/langgraph/
+* https://github.com/esxr/langgraph-mcp/tree/main
+    * https://github.com/esxr/langgraph-mcp/blob/main/src/langgraph_mcp/mcp_wrapper.py
 * https://langchain-ai.github.io/langgraph/agents/mcp/
 * https://github.com/esxr/langgraph-mcp/blob/main/src/langgraph_mcp/mcp_wrapper.py
 
-https://www.youtube.com/watch?v=OX89LkTvNKQ
+<!-- https://www.youtube.com/watch?v=OX89LkTvNKQ -->
 
 {{< youtube "OX89LkTvNKQ" >}}
 

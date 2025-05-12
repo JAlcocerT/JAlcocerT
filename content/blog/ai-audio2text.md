@@ -1,10 +1,10 @@
 ---
 title: "An overview of F/OSS Audio to Text Tools"
-date: 2025-05-11T11:20:21+01:00
+date: 2025-05-12T09:20:21+01:00
 draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"] 
 description: 'Audio 2 Text Open Source and commercial transcription (S2T) Tools. ST Audio input.'
-url: 'audio-to-text'    
+url: 'audio-to-text-tools'    
 ---
 
 An overview to the existing open source alternatives for audio to text conversion (also called Speech to Text).
@@ -17,6 +17,12 @@ An overview to the existing open source alternatives for audio to text conversio
 
 
 [![Star History Chart](https://api.star-history.com/svg?repos=openai/whisper,SevaSk/ecoute,oTranscribe/oTranscribe,beyondcode/writeout.ai,pluja/whishper&,type=Date)](https://star-history.com/openai/whisper&SevaSk/ecoute&oTranscribe/oTranscribe&beyondcode/writeout.ai&pluja/whishper&Date)
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG x LangGraph" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
 
 ## S2T
 
@@ -37,9 +43,6 @@ But its worth to give it a try.
 > MIT | Robust Speech Recognition via Large-Scale Weak Supervision
 
 * <https://www.reddit.com/r/Python/comments/xqlay2/speech_to_text_that_actually_works_my_first/>
-
-
-
 
 
 {{< cards cols="1" >}}
@@ -212,17 +215,29 @@ volumes:
 
 ## Conclusions
 
-Now we have seen the differences between TTS and S2T (Transcription) frameworks out there!
+Now we have seen the differences between **TTS and S2T** (Transcription) frameworks out there!
 
 Time to do cool things with them.
 
 
-Like putting together a voice assistant with Streamlit
+Like putting together a voice assistant with Streamlit:
 
 {{< cards cols="1" >}}
   {{< card link="https://docs.streamlit.io/develop/api-reference/media/st.audio" title="ST Audio Component DOCS ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps/Python_Streamlit" title="Python Streamlit App Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-https://docs.streamlit.io/develop/api-reference/widgets/st.audio_input
+### Streamlit Audio
 
+With the `st.audio_input` component, a lot of cool stuff can be done: https://docs.streamlit.io/develop/api-reference/widgets/st.audio_input
+
+See `st.audio_input` - https://docs.streamlit.io/develop/api-reference/widgets/st.audio_input
+
+Thanks to benji youtube video: https://www.youtube.com/watch?v=UnjaSkrfWOs
+
+{{< youtube "UnjaSkrfWOs" >}}
+
+
+I have added a sample working script at the [MultiChat project](https://github.com/JAlcocerT/Streamlit-MultiChat),  here: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/audio-input.py
+
+See also [another way to do T2S](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openait2a.py) with openAI: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/openai-tts.py

@@ -1,17 +1,17 @@
 ---
-title: "More photo and video fun stuff"
-date: 2025-07-30
+title: "More Photo and Video fun stuff"
+date: 2025-05-12T13:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'From ffmpeg to color grading.'
+description: 'From ffmpeg CLIs to color grading LUTs. And AI generated audio for shorts.'
 url: 'photo-video-tinkering'
 ---
 
 We come from...
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="Video Tricks  ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/benchmarking-computers/#internet-benchmark" title="BenchMarking Computers ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="Video Tricks ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg" title="Chocolatey and FFMPEG ↗" >}}
 {{< /cards >}}
 
 
@@ -47,6 +47,37 @@ https://www.youtube.com/watch?v=rMhe2gYJa9s
 
 
 ## Video Editing
+
+
+### CLI Tricks
+
+
+{{< details title="FFMPEG CLI Tricks | Ubuntu 📌" closed="true" >}}
+
+**Extracting images from a video...and making a gif**
+
+1. From a timeframe until the end, 1 frame:
+
+```bash
+#from second 90 of the video, give me 1fps
+ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.png
+ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.jpg
+```
+
+2. And just **between 90s and 105s** timeframe, 1fps:
+
+```sh
+ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -vsync vfr frame_%03d.png
+```
+
+3. Make a gif with the pulled images
+
+{{< /details >}}
+
+
+#### Shorts
+
+How about adding [TTS generated audio](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/openai-tts.py) to shorts?
 
 ### Kdenlive
 
@@ -99,7 +130,7 @@ https://www.youtube.com/watch?v=00e8XDRoge4
 {{< youtube "00e8XDRoge4" >}}
 
 
-https://www.youtube.com/watch?v=oIJlSP0u6FU
+<!-- https://www.youtube.com/watch?v=oIJlSP0u6FU -->
 
 
 
@@ -108,10 +139,15 @@ https://www.youtube.com/watch?v=oIJlSP0u6FU
 ## Conclusions
 
 
-https://www.youtube.com/watch?v=-OO6Qrw6NWE
+<!-- https://www.youtube.com/watch?v=-OO6Qrw6NWE -->
 
 {{< youtube "-OO6Qrw6NWE" >}}
 
+
+
+<!-- https://www.youtube.com/watch?v=7CnjKua865Y -->
+
+{{< youtube "7CnjKua865Y" >}}
 
 
 
@@ -146,11 +182,9 @@ In essence, a color grading LUT is a powerful tool that offers a quick and effic
 
 Yes, you can definitely apply color grading LUTs using both **Kdenlive** and **FFmpeg**. Here's how:
 
-Applying LUT with KDEnlive
+Applying LUT with KDEnlive: https://www.dji.com/pl/downloads/softwares/dji-osmo-action-5-pro-d-log-m-to-rec-709-vivid-lut
 
-
-
-{{< details title="Deploy CoquiTTS with Docker | CLI Details 📌" closed="true" >}}
+{{< details title="KDEnlive | Color Grading with Cube files 📌" closed="true" >}}
 
 
 Kdenlive has a built-in effect specifically for applying LUTs. Here's how you can use it:
@@ -174,7 +208,7 @@ FFmpeg + LUT
 
 
 
-{{< details title="Deploy CoquiTTS with Docker | CLI Details 📌" closed="true" >}}
+{{< details title=" | CLI Details 📌" closed="true" >}}
 
 FFmpeg, being a command-line tool, requires you to use the appropriate filter to apply LUTs. The primary filter for this is `lut3d`.
 
@@ -202,8 +236,8 @@ If you have a LUT in a format that `lut3d` doesn't directly support, you might n
 ffmpeg -i input.mp4 -i haldclut.png -filter_complex haldclut output.mp4
 ```
 
-    * `-i haldclut.png`: Specifies the Hald CLUT image as a second input.
-    * `-filter_complex haldclut`: Uses the `haldclut` filter.
+* `-i haldclut.png`: Specifies the Hald CLUT image as a second input.
+* `-filter_complex haldclut`: Uses the `haldclut` filter.
 
 **Important Considerations for FFmpeg:**
 

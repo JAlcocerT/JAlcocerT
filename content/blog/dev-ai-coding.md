@@ -19,6 +19,11 @@ But how about creating websites with....
 * https://studio.firebase.google.com/
 * https://firebase.google.com/docs/studio/get-started-import?import_type=source
 
+<!-- https://www.youtube.com/watch?v=bnNXIUdqnt0 -->
+
+{{< youtube "bnNXIUdqnt0" >}}
+
+
 ## CLI Based
 
 ### OpenAI
@@ -40,13 +45,15 @@ In short, it’s chat‑driven development that understands and executes your re
 
 > Apache v2 | Lightweight coding agent that runs in your terminal
 
-Install codex as an NPM package:
+**Install codex** as an NPM package:
 
 ```sh
 npm i -g @openai/codex
 #npm install -g @openai/codex@0.1.2504211509 #https://github.com/openai/codex/issues/525
 npm list codex #0.2.3
 ```
+
+And provide your API: https://platform.openai.com/api-keys
 
 ```sh
 #source .env

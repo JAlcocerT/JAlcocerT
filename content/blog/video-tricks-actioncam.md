@@ -218,12 +218,11 @@ overlay_gpx_on_video(video_path, gpx_path, output_path)
 * **User Interface:** For a more user-friendly tool, you could create a graphical user interface (GUI) using libraries like `Tkinter`, `PyQt`, or `Kivy`.
 * **Error Handling:** Add robust error handling to your code.
 
-This detailed breakdown should give you a solid starting point for building your Python GPX overlay tool.
+This detailed breakdown should give you a solid starting point for building your **Python GPX overlay tool**.
 
 Remember that this is a complex project, so break it down into smaller, manageable steps.
 
-Start with the basics (loading video and GPX, basic visualization) and then gradually add more features (synchronization, map integration, speed graphs, etc.).  Good luck!
-
+Start with the basics (loading video and GPX, basic visualization) and then gradually add more features (synchronization, map integration, speed graphs, etc.).  
 
 {{< /details >}}
 
@@ -463,7 +462,7 @@ Some tricks with **ffmpeg package**.
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tricks for quick videos as a code from action cams" >}}
 {{< /cards >}}
 
-1. **Simply Join**: Keeping original audio and no reencoding.
+1. **Simply Join**: Keeping original audio and no reencoding
 
 ```sh
 ###ffmpeg -i "concat:$(ls *.mp4 | tr '\n' '|')" -c copy output_video.mp4 #all from a folder
@@ -476,6 +475,9 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c copy /home/jalcocert/Desktop/output
 
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an output_video.mp4 #silenced video
 #ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #
+
+#shorts (limited to 3min)
+ffmpeg -i DJI_2025abc.MP4 -t 175 -c copy output.mp4
 ```
 
 2. **Join (Silenced) + Song**
