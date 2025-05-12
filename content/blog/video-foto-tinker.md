@@ -2,7 +2,7 @@
 title: "More Photo and Video fun stuff"
 date: 2025-05-12T13:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Tinkering"]
 description: 'From ffmpeg CLIs to color grading LUTs. And AI generated audio for shorts.'
 url: 'photo-video-tinkering'
 ---
@@ -14,9 +14,16 @@ We come from...
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg" title="Chocolatey and FFMPEG ↗" >}}
 {{< /cards >}}
 
+Wait, there is even a repo!
 
-https://www.youtube.com/watch?v=kaa1vPHqKdw
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tricks for quick videos as a code from action cams" >}}
+{{< /cards >}}
 
+
+<!-- https://www.youtube.com/watch?v=kaa1vPHqKdw -->
+
+{{< youtube "kaa1vPHqKdw" >}}
 
 ## Photo Editing
 
@@ -49,6 +56,10 @@ https://www.youtube.com/watch?v=rMhe2gYJa9s
 ## Video Editing
 
 
+{{< callout type="warning" >}}
+If you are planning to use Gyroflow for custom video estabilization, make sure that the OA5Pro records without RS modes and Wide! In that way the acelerometer information will be captured in the mp4 file.
+{{< /callout >}}
+
 ### CLI Tricks
 
 
@@ -79,11 +90,57 @@ ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -
 
 How about adding [TTS generated audio](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/openai-tts.py) to shorts?
 
+
+1. Generate the AI Audio with TTS:
+
+2. Get your short content transfered
+
+3. Make 175s pieces max:
+
+4. Extract the audio of the .MP4 piece, and combine it with the ai generated audio:
+
+```sh
+# ffmpeg -i DJI_20250511143231_0004_D.MP4 -i audio_reply.wav \
+# -filter_complex "[0:a:0][1:a:0]amix=inputs=2:duration=longest[aout]" \
+# -map "[aout]" -c:a libmp3lame output.mp3
+
+ffmpeg -i DJI_20250511143231_0004_D.MP4 -i audio_reply.wav \
+-filter_complex "[0:a:0]volume=0.6[vid_audio];[1:a:0]volume=1.4[reply_audio];[vid_audio][reply_audio]amix=inputs=2:duration=longest[aout]" \
+-map "[aout]" -c:a libmp3lame output.mp3
+```
+
+5. Put back the combined audio to the .mp4:
+
+
+```sh
+ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
+
+#Generate a video from few parts
+#ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
+ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
+#ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #x4
+
+#ffmpeg -stream_loop -1 -i "AETHER - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
+ffmpeg -stream_loop -1 -i "output.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
+
+### 🎵 Mu
+```
+
+#### Telemetry
+
+Initially I tought that would be possible only with the GoPro...
+
+But I was wrong, action cameras have built in acelerometers (just that not all of them have GPS's)
+
 ### Kdenlive
 
 ### Gyroflow
 
 * https://github.com/gyroflow/lens_profiles/tree/main/DJI
+
+{{< callout type="info" >}}
+Watching **4k video on Linux** might not be **fluent** until you install these:
+{{< /callout >}}
 
 ## Filters
 
@@ -180,9 +237,11 @@ Here's a breakdown of what that means:
 
 In essence, a color grading LUT is a powerful tool that offers a quick and efficient way to apply complex color transformations to your footage, helping you achieve a desired visual style and maintain consistency across your projects.
 
-Yes, you can definitely apply color grading LUTs using both **Kdenlive** and **FFmpeg**. Here's how:
+{{< callout type="info" >}}
+You can definitely apply color grading LUTs using both **Kdenlive** and **FFmpeg**.
+{{< /callout >}}
 
-Applying LUT with KDEnlive: https://www.dji.com/pl/downloads/softwares/dji-osmo-action-5-pro-d-log-m-to-rec-709-vivid-lut
+* Applying LUT with KDEnlive + `.Cube`'s for the DJI Oa5pro: https://www.dji.com/pl/downloads/softwares/dji-osmo-action-5-pro-d-log-m-to-rec-709-vivid-lut
 
 {{< details title="KDEnlive | Color Grading with Cube files 📌" closed="true" >}}
 

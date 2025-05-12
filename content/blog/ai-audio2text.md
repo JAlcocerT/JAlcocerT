@@ -227,6 +227,10 @@ Like putting together a voice assistant with Streamlit:
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps/Python_Streamlit" title="Python Streamlit App Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+For TTS, lately OpenAI have made interesting upgrades: https://platform.openai.com/docs/models/gpt-4o-mini-tts
+
+
+
 ### Streamlit Audio
 
 With the `st.audio_input` component, a lot of cool stuff can be done: https://docs.streamlit.io/develop/api-reference/widgets/st.audio_input
