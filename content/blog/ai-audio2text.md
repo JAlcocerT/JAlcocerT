@@ -1,9 +1,9 @@
 ---
-title: "An overview of F/OSS Audio to Text Tools"
+title: "An overview of F/OSS Audio to Text Tools. Speech rAIter"
 date: 2025-05-12T09:20:21+01:00
 draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"] 
-description: 'Audio 2 Text Open Source and commercial transcription (S2T) Tools. ST Audio input.'
+description: 'Audio 2 Text Open Source and commercial transcription (S2T) Tools. ST Audio input and creation of a speech rater.'
 url: 'audio-to-text-tools'    
 ---
 
@@ -217,10 +217,9 @@ volumes:
 
 Now we have seen the differences between **TTS and S2T** (Transcription) frameworks out there!
 
-Time to do cool things with them.
+Time to do [cool things](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/audio-input.py) with them.
 
-
-Like putting together a voice assistant with Streamlit:
+Like...putting together a voice assistant with Streamlit:
 
 {{< cards cols="1" >}}
   {{< card link="https://docs.streamlit.io/develop/api-reference/media/st.audio" title="ST Audio Component DOCS ↗" >}}
@@ -242,6 +241,6 @@ Thanks to benji youtube video: https://www.youtube.com/watch?v=UnjaSkrfWOs
 {{< youtube "UnjaSkrfWOs" >}}
 
 
-I have added a sample working script at the [MultiChat project](https://github.com/JAlcocerT/Streamlit-MultiChat),  here: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/audio-input.py
+I have added a sample working script at the [MultiChat project](https://github.com/JAlcocerT/Streamlit-MultiChat), here: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/audio-input.py
 
 See also [another way to do T2S](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openait2a.py) with openAI: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/openai-tts.py

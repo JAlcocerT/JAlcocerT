@@ -492,6 +492,11 @@ Now, we need to prompt codex:
 codex
 ```
 
+
+{{< callout type="warning" >}}
+Make sure to run codex on a git environment so that you can see whats been changed!
+{{< /callout >}}
+
 * Are you able to generate documentation of the local-deep-researcher project, which files are located at ./src/ollama_deep_researcher and have it outputed to the astro theme
 template that it is loaded at ./docs/src?
 
@@ -715,6 +720,12 @@ Output the generated documentation in Markdown format, ready to be placed within
 So far with these projects AI docs, I was getting at the worst case a **86% context left** for codex
 {{< /callout >}}
 
+And this was applied also to **big repos**, like signoz with ~380mb in it or...remotion, with 4GB!
+
+```sh
+du -sh .
+```
+
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/qatrackplus/tree/master/documentaition" title="Tested with QaTrack+ | Astro AI Powered Docs v1.2 ↗" >}}
@@ -788,7 +799,12 @@ Output the generated documentation in Markdown format, ready to be placed within
 
 ![alt text](/blog_img/GenAI/librechat-docs-ai.png)
 
-6. **Windsurf IDE** - which is a vscode forked, recently adquired by openai...
+6. **Windsurf/Cline/Aider IDE's** - As seen on the [vibe coding post](https://jalcocert.github.io/JAlcocerT/vide-coding/#free-assistants)
+
+Windsurf, which is a vscode forked, recently adquired by openai...
+
+* https://github.com/ichoosetoaccept/awesome-windsurf
+
 
 Tested with:
 

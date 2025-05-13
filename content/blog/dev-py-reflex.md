@@ -1,9 +1,9 @@
 ---
 title: "Reflex. Cooler Web Apps?"
-date: 2025-05-12T10:20:21+01:00
+date: 2025-06-12T10:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Using (Python) Reflex to display Real Estate and Job Market Trends as Web Apps.'
+description: 'Using (Python) Reflex framework to display Data. Tested with Real Estate and Job Market Trends as Web Apps.'
 url: 'tinkering-with-reflex'
 ---
 
@@ -13,6 +13,11 @@ url: 'tinkering-with-reflex'
 {{< callout type="info" >}}
 See the [source code magic](https://github.com/JAlcocerT/Python_is_awesome). Applied to [RE here](https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage_Reflex) 🔥💻
 {{< /callout >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
 
 
 ## The Reflex Package

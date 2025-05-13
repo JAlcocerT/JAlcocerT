@@ -122,6 +122,23 @@ What else can help us code better?
 ## Propietary
 
 
+Some Paid IDE/Assistants
+
+* https://www.cursor.com/pricing
+* https://zed.dev/pricing
+
+```sh
+#https://zed.dev/download
+#https://zed.dev/docs/linux#other-ways-to-install-zed-on-linux
+curl -f https://zed.dev/install.sh | sh
+```
+
+![ZED IDE](/blog_img/dev/dev-zed.png)
+
+Zed IDE allow to use MCP or custom LLMs (ollama, OpenAI...)
+
+You can plug API keys to some IDEs/extensions:
+
 * https://platform.openai.com/playground/prompts?models=gpt-4.1
 * https://platform.openai.com/logs
   * OpenAI API Keys - https://platform.openai.com/api-keys
@@ -133,9 +150,9 @@ What else can help us code better?
 
 * https://huggingface.co/
 
-### Github Copilot
-
 ### Gitlab Duo
+
+* https://about.gitlab.com/gitlab-duo/
 
 ### Gemini and AIStudio
 
@@ -150,39 +167,63 @@ You can also see firebasestudio...
 
 * https://firebase.studio/
 
-## OSS Extension + Propietary Models
-
-We can use Anthropic or OpenAI models, with free extensions:
-
-## OSS Extension & Models
-
-We can use open models, with 3rd party APIs (like Groq).
-
-## OSS Extension & Model & Local Run
-
-[Deepseek v3](https://huggingface.co/deepseek-ai)
-
-
-
-
-## Paid Assistants
-
 ### Github Copilot
 
-### Cursor
+* https://github.com/features/copilot
 
-* https://www.cursor.com/pricing
+Its already on vscode and we can get for free (at the time of writing):
+
+* 50 agent mode or chat requests per month
+* 2,000 completions per month
+* Access to Claude 3.5 Sonnet, GPT-4o, and more
 
 
 ## Free Assistants
 
-* Tabby
-* Codeium
-* Continue.dev
+* [Tabby](https://github.com/Eugeny/tabby/releases/tag/v1.0.223)
+
+
+<!-- [![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date) -->
+
+[![Star History Chart](https://api.star-history.com/svg?repos=continuedev/continue,plandex-ai/plandex,paul-gauthier/aider,Aider-AI/aider,cline/cline&type=Date)](https://star-history.com/continuedev/continue&plandex-ai/plandex&paul-gauthier/aider&Aider-AI/aider&cline/cline&Date)
+
+
+
+* Codeium - **Windsurf** was indeed renamed from Codeium.   
+
+```sh
+#https://windsurf.com/editor/download-linux
+sudo apt-get upgrade windsurf
+```
+
+![Windsurf IDE](/blog_img/dev/dev-windsurf.png)
+
+* Continue.dev: https://github.com/continuedev/continue
+
+> Apache v2 |  ⏩ Create, share, and use custom AI code assistants with our open-source IDE extensions and hub of models, rules, prompts, docs, and other building blocks 
+
+* https://github.com/plandex-ai/plandex
+
+> MIT | Open source AI coding agent. Designed for large projects and real world tasks.
+
 
 * https://github.com/paul-gauthier/aider
     * https://github.com/Aider-AI/aider
 
+> Apache v2 | aider is AI pair programming in your terminal
+
+
+* https://github.com/cline/cline
+
+> Apache v2 | Autonomous **coding agent right in your IDE**, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
+
+[Cline](https://cline.bot/) can also be installed as [vscode extension](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev).
+
+```sh
+ext install saoudrizwan.claude-dev
+```
+
+## Conclusions
 
 
 ---
@@ -191,15 +232,28 @@ We can use open models, with 3rd party APIs (like Groq).
 
 ### Code Assistants fully open source
 
+Looking for a fully local and OSS solution? 
+
 What we need:
 
 1. Open VSCode Extension
-2. Open LLM
+2. Open Sourced LLM
 3. Some kind of ownership on the Server/GPU that runs the model
 
-## Conclusions
+**OSS Extension + Propietary Models**
+
+We can use Anthropic or OpenAI models, with free extensions.
+
+**OSS Extension & Models**
+
+We can use open models, with 3rd party APIs (like Groq).
+
+**OSS Extension & Model & Local Run**
+
+[Deepseek v3](https://huggingface.co/deepseek-ai)
+
 
 ### Others
 
 * https://replit.com/
-* Lovable
+* [Lovable](https://jalcocert.github.io/JAlcocerT/git-recap/#outro)

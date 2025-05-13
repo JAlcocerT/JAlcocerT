@@ -1,10 +1,17 @@
 ---
 title: "Websites with SSG + CMS - The missing piece."
-date: 2025-03-23T22:20:21+01:00
+date: 2025-05-13T22:20:21+01:00
 draft: false
 description: "UI for customization SSGs. About Keystatic CMS with Astro."
 url: 'cms-for-static-websites'
 ---
+
+
+https://wyremontuje.pl/
+
+Lately I have added some upgrades (via telegram bot), so that whenever a customer sends new photos, they are synced to its photo centered repo.
+
+But..wouldnt it be nice to have a native solution?
 
 Some time ago I tried Ghost as CMS connected to Gatsby as **headless CMS**.
 
@@ -32,9 +39,6 @@ Content Management Systems (CMS):
   - [Add to Your Site](https://decapcms.org/docs/add-to-your-site/)
 - [Directus](https://jamstack.org/headless-cms/directus/)
   - Directus turns SQL databases into REST and GraphQL APIs with an intuitive no-code app.
-
-
-
 
 
 ## decapCMS
