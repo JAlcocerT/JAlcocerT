@@ -315,7 +315,7 @@ docker run -d --name docker-socket-proxy -e CONTAINERS=1 -e POST=0 -e PUT=0 -e D
 
 ### Better WebAnalytics
 
-Lately I tried littlyx, but I saw this cool post: https://jakubwolynko.eu/blog/202505-hosting-umami-on-vercel/
+Lately I tried littlyx, but I saw this cool post on [Umami](https://github.com/umami-software/umami/releases): https://jakubwolynko.eu/blog/202505-hosting-umami-on-vercel/
 
 Also, https://github.com/Litlyx/litlyx which i discovered few months back
 

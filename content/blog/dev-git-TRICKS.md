@@ -196,6 +196,8 @@ For a Python Dev Container, you can get one with **this kind of [docker-compose]
 ```sh
 #code --install-extension gitlab.gitlab-workflow
 
+#https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx
+ext install unifiedjs.vscode-mdx
 
 #docker #https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
 ext install ms-azuretools.vscode-docker

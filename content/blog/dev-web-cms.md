@@ -205,6 +205,7 @@ https://github.com/decaporg/decap-cms
 
 ## Conclusions
 
+
 ### KeyStatic CMS with Astro
 
 When you deploy the static site, the `whateverdomain.com/keystatic` path will still be there:
@@ -229,6 +230,8 @@ But you wont be able to make any changes, as the server (API) is NOT running.
 * Hostinger
 * https://porkbun.com/api/json/v3/documentation#Domain%20Pricing
 * Cloudflare domains...
+* https://account.squarespace.com/
+
 
 ### What are Static Site Generators?
 

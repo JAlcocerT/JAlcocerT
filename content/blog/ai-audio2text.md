@@ -20,11 +20,18 @@ An overview to the existing open source alternatives for audio to text conversio
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG x LangGraph" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="#conclusions" title="OpenAI TTS and Transcription Project" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
 {{< /cards >}}
 
+
 ## S2T
+
+The process of converting spoken words into written text is called **transcription**.
+
+The output of this process is also often referred to as a transcript.
+
+
 
 {{< callout type="info" >}}
 Make sure to have the right PyTorch installed: https://pytorch.org/get-started/locally/
@@ -221,12 +228,18 @@ Time to do [cool things](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/m
 
 Like...putting together a voice assistant with Streamlit:
 
+
+![alt text](/blog_img/GenAI/audio/speechraiter.png)
+
 {{< cards cols="1" >}}
   {{< card link="https://docs.streamlit.io/develop/api-reference/media/st.audio" title="ST Audio Component DOCS ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps/Python_Streamlit" title="Python Streamlit App Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 For TTS, lately OpenAI have made interesting upgrades: https://platform.openai.com/docs/models/gpt-4o-mini-tts
+
+
+* Voice Synthesis: TTS systems use various techniques to create synthetic voices. Early systems used concatenative synthesis (piecing together recorded human speech), while modern systems often use more advanced techniques like statistical parametric synthesis and neural network-based synthesis, which can produce more natural-sounding speech.   
 
 
 
