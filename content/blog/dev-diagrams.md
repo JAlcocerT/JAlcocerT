@@ -70,3 +70,7 @@ And if you want, you have a SelfHosted option:
 {{< callout type="info" >}}
 These tools play great with **PPTs as a code**: SliDev, Remark, MARP
 {{< /callout >}}
+
+3. Excalidraw!
+
+* https://github.com/excalidraw/excalidraw

@@ -7,7 +7,11 @@ description: 'Interesting Telecom stuff I got to know while using a Data LakeHou
 url: 'telecom-concepts-101'
 ---
 
-The book *Building the data lakehouse* by Bill Inmon. Helped me a lot. 
+Its been a while working with telecom data...
+
+The book *Building the data lakehouse* by Bill Inmon...
+
+Helped me a lot. 
 
 Also being curious and tinkering with the Pi:
 
@@ -57,36 +61,83 @@ See how they compare:
 
 <!-- ![alt text](/blog_img/outro/telecom/cm-fiber-coax.png) -->
 
-### Linear TV
+### Fiber vs Coax
 
-**Linear TV** (LTV) refers to traditional television broadcasting where content is transmitted according to a scheduled lineup on predetermined channels.
 
-Viewers tune in at specific times to watch programs and commercials.
 
-- Operates on fixed channels accessed via antenna or cable/satellite connections.
-- Requires a predetermined schedule set by the broadcaster.
+#### Fiber
 
-#### Alternatives to Linear TV
+- Uses **fiber-optic cables** to transmit data as light, offering extremely fast speeds.
+- Provides a **dedicated connection**, avoiding congestion.
+- **Symmetric speeds** for uploads and downloads (unlike cable).
+  
+**Key Difference**: DOCSIS uses coaxial cables (shared) and may have network slowdowns, while **fiber provides higher performance** through dedicated fiber-optic lines.
 
-1. **Streaming Services**  
-   Platforms like Netflix, Hulu, Amazon Prime Video, offering on-demand content.
-   
-2. **Video-on-Demand (VOD) Services**  
-   Platforms like iTunes, Google Play, and Vudu offer users the ability to rent/purchase movies and TV shows.
-   
-3. **Catch-Up TV**  
-   Broadcasters offer previously aired shows for a limited time, e.g., BBC iPlayer, NBC app.
-   
-4. **Live Streaming Platforms**  
-   Twitch and Facebook Live offer live content, including gaming and performances.
-   
-5. **Over-the-Top (OTT) Services**  
-   Sling TV, YouTube TV, and Hulu + Live TV deliver content over the internet without cable or satellite providers.
-   
-6. **Social M. Platforms**  
-   Facebook, Instagram, and Twitter allow video sharing within networks.
+##### XGS-PON vs GPON
 
-### Optical Network Terminal (ONT)
+
+Both GPON and XGS-PON are types of **Passive Optical Networks (PON)** used for broadband services, they differ significantly in their performance and application scenarios:
+
+- **Speed**: The most significant difference is in their speed. GPON offers asymmetric speeds of up to 2.5 Gbps downstream and 1.25 Gbps upstream, whereas XGS-PON provides symmetric speeds of up to 10 Gbps both downstream and upstream.
+
+- **Symmetry**: GPON is asymmetric, which was suitable for earlier internet usage patterns where downloading was predominant. XGS-PON, however, offers symmetric speeds, catering to modern internet activities that require substantial upstream bandwidth like video conferencing, online gaming, and uploading large files.
+
+- **Upgrade Path**: XGS-PON is considered an evolution of GPON, designed to meet the increasing demands for higher bandwidth and greater symmetry in network traffic.
+
+It uses the same infrastructure as GPON, making it a cost-effective upgrade for service providers to deliver multi-gigabit services.
+
+XGSPOM is an acronym for telecom, it stands for:
+
+* X: 10 (Roman numeral X)
+* G: Gigabit
+* S: Symmetric
+* PON: Passive Optical Network
+
+**XGS-PON** refers to a type of **Passive Optical Network technology** that supports symmetric data rates of up to 10 Gigabits per second (Gbps) both downstream and upstream.
+
+This technology is a part of the broader category of fiber-optic access technologies used to deliver high-speed broadband services.
+
+
+{{< details title="More about XGSPON 📌" closed="true" >}}
+
+- **XGS-PON (10 Gigabit Symmetric Passive Optical Network)**: A high-speed, high-capacity broadband standard used in telecommunication networks to deliver advanced triple-play services such as voice, video, and data.
+
+- **Speed and Capacity**: Offers symmetric speeds of up to 10 Gbps, both downstream and upstream, supporting bandwidth-intensive applications like ultra-high-definition video streaming, cloud computing, and virtual reality.
+
+- **Technology Upgrade**: An evolutionary step **beyond older GPON technology**, XGS-PON enhances both capacity and efficiency without requiring a complete overhaul of existing fiber infrastructure.
+
+- **Fiber to the Home (FTTH) Deployments**: Deployed in FTTH scenarios where a single fiber from the central office is split to serve multiple homes or businesses, enabling telecom operators to provide ultra-fast internet services directly to consumer premises.
+
+- **Network Simplification and Cost Efficiency**: Provides high bandwidth over a single type of connection, simplifies network architecture, reduces operational costs, supports longer distances between equipment without active components, reduces maintenance, and improves reliability.
+
+- **Future-Proofing Networks**: As data demand grows, XGS-PON is seen as a future-proof technology that can accommodate next-generation network demands without immediate upgrades, providing a pathway for seamless upgrades to higher capacity systems like 25G or 50G PON.
+
+- **Application in Multiple Sectors**: Applicable in residential broadband, business services, mobile backhaul, and smart city applications, providing a versatile solution for various high-speed data requirements.
+
+- **Conclusion**: XGS-PON is a significant advancement in telecom fiber-optic technology, offering high-speed, symmetric bandwidth that supports a wide range of modern applications and services, pivotal for telecom operators to meet current and future data demands efficiently and cost-effectively.
+
+{{< /details >}}
+
+
+{{< details title="More about GPON - Gigabit Passive Optical Network 📌" closed="true" >}}
+
+
+- **Definition**: GPON is a widely used broadband access technology based on fiber optics. It primarily delivers internet, voice, and video services through optical fiber cables to residential and commercial premises.
+
+- **Speed and Capacity**: GPON supports higher bandwidth compared to older PON technologies, offering downstream capacities up to 2.5 Gbps and upstream capacities up to 1.25 Gbps.
+
+- **Technology Components**:
+  - **Optical Line Terminal (OLT)**: Located at the service provider's central site, this device coordinates the fiber optic traffic from multiple premises.
+  - **Optical Network Unit (ONU)**: Installed at the user's premises, this device converts optical signals into electrical signals suitable for use by consumer devices.
+  - **Splitter**: This component divides the optical signal sent from the OLT, allowing a single fiber to serve multiple ONUs.
+
+- **Efficiency and Cost-Effectiveness**: By using passive splitters in the fiber distribution network, GPON reduces the amount of fiber and central office equipment required compared to traditional point-to-point architectures.
+
+- **Service Integration**: GPON is capable of delivering high-speed internet, VoIP (Voice over Internet Protocol), and IPTV services over a single optical fiber, providing a triple-play solution that is efficient and scalable.
+
+{{< /details >}}
+
+#### Optical Network Terminal (ONT)
 
 An **ONT (Optical Network Terminal)** is a device used in fiber optic networks.
 
@@ -94,7 +145,7 @@ It connects the optical fiber from the service provider to the customer's home e
 
 > Example if this can be the ZTE (GPON ONT) [ZXHN F601](https://www.zte.com.cn/global/product_index/smart_home_en/ont/zxhn-f601/zxhn-f601.html) 
 
-### Cable Modem Termination System (CMTS)
+#### Cable Modem Termination System (CMTS)
 
 A **CMTS (Cable Modem Termination System)** is a core component of cable internet networks, managing communication between cable modems (CM) and the internet.
 
@@ -158,6 +209,106 @@ In essence:
 Therefore, "superpollers" are not an alternative to ServAssure NXT; they are a critical part of its architecture.
 
 {{< /details >}}
+
+#### Optical Network Terminal
+
+**ONT (Optical Network Terminal)** is a device used in fiber-optic internet setups like Fiber to the Home (**FTTH**) or Fiber to the Building (FTTB).
+
+It converts the optical signal from the carrier’s network into electronic signals that can be used by home devices (computers, routers, TVs).
+
+- **Function**: Converts light signals into electronic signals.
+- **Ports**: Provides Ethernet, telephone, and sometimes video outputs.
+- **Placement**: Located at the customer's premises.
+
+#### Optical Line Terminal (OLT)
+
+**OLT (Optical Line Terminal)** is the counterpart to the ONT, located at the telecom provider's central office.
+
+It communicates with multiple ONTs to deliver internet services in a **Passive Optical Network (PON)**, sending signals over fiber without requiring powered equipment between the OLT and ONTs.
+
+- **Function**: Manages communication, bandwidth allocation, and error monitoring for ONTs.
+- **Placement**: Located at the provider's end.
+
+
+#### DOCSIS vs Fiber
+
+**DOCSIS (Data Over Cable Service Interface Specification)** and **Fiber** refer to different internet technologies:
+
+
+> The trick is DOCSIS ~ COAX ~ HFC ~ TV ~ RF **(vs)** ONT ~ OLT ~ Fiber To The Home (FTTH)
+
+**DOCSIS**
+
+- Uses a mix of **fiber-optic and coaxial cable** to deliver data.
+- Requires a **cable modem** to access the internet.
+- **Shared** connection in a neighborhood, which can lead to congestion.
+- Versions like **DOCSIS 3.0 and 3.1** offer faster speeds but may still experience slowdowns during peak times.
+
+{{< details title="More about DocSIS 📌" closed="true" >}}
+
+**DOCSIS** is an international telecommunications standard that allows the addition of high-speed data transfer to an existing cable TV (CATV) system.
+
+It is widely used by many cable television operators to provide internet access (over their existing hybrid fiber-coaxial infrastructure) in addition to television services. Here are key aspects of DOCSIS:
+
+- **Purpose**: DOCSIS technology enables cable operators to efficiently utilize their existing coaxial cable infrastructure to deliver high-speed broadband internet access, along with voice and video services.
+
+- **Versions of DOCSIS**:
+  - **DOCSIS 1.x**: Introduced features like BPI (Baseline Privacy Interface) for security and QoS (Quality of Service).
+  - **DOCSIS 2.0**: Improved upstream data rates suitable for voice and video applications.
+  - **DOCSIS 3.0**: Introduced channel bonding, significantly increasing downstream and upstream data rates by combining multiple channels.
+  - **DOCSIS 3.1**: Enhanced capacity and efficiency with OFDM (Orthogonal Frequency-Division Multiplexing) and improved modulation schemes, supporting up to 10 Gbps downstream and 1-2 Gbps upstream.
+  - **DOCSIS 4.0**: Currently in development, aiming to further increase efficiency and capacity, potentially supporting up to 10 Gbps symmetric (downstream and upstream) speeds.
+
+- **Components**:
+  - **CMTS (Cable Modem Termination System)**: Located at the cable provider’s facility, this equipment routes data between the internet and local cable networks.
+
+  - **Cable Modem**: Installed at the user’s premises, this device modulates and demodulates data signals to interface between the digital data network and the coaxial network used in homes and businesses.
+
+- **Advantages**:
+  - **Utilization of Existing Infrastructure**: Uses the existing coaxial cable setups, which allows cable operators to offer broadband without the need for new wiring.
+  - **High-Speed Internet Access**: Provides high bandwidth for internet access, which is competitive with fiber-optic networks in many scenarios.
+  - **Scalability**: The technology can be scaled by upgrading CMTS and modem equipment to newer DOCSIS standards without overhauling the entire infrastructure.
+
+- **Applications**:
+  - Primarily used by cable TV operators to provide high-speed internet access and VoIP services.
+  - It also supports functionalities like IPTV and on-demand services, integrating seamlessly with digital TV offerings.
+
+
+DOCSIS is a cornerstone technology for cable service providers, enabling them to leverage existing **coaxial cable** infrastructure to deliver high-speed internet and other digital services.
+
+As technology evolves with newer versions like DOCSIS 3.1 and 4.0, it continues to enhance the capacity, efficiency, and performance of cable broadband services, making it a competitive option against other types of broadband delivery technologies such as fiber optics.
+
+{{< /details >}}
+
+
+### Linear TV
+
+**Linear TV** (LTV) refers to traditional television broadcasting where content is transmitted according to a scheduled lineup on predetermined channels.
+
+Viewers tune in at specific times to watch programs and commercials.
+
+- Operates on fixed channels accessed via antenna or cable/satellite connections.
+- Requires a predetermined schedule set by the broadcaster.
+
+#### Alternatives to Linear TV
+
+1. **Streaming Services**  
+   Platforms like Netflix, Hulu, Amazon Prime Video, offering on-demand content.
+   
+2. **Video-on-Demand (VOD) Services**  
+   Platforms like iTunes, Google Play, and Vudu offer users the ability to rent/purchase movies and TV shows.
+   
+3. **Catch-Up TV**  
+   Broadcasters offer previously aired shows for a limited time, e.g., BBC iPlayer, NBC app.
+   
+4. **Live Streaming Platforms**  
+   Twitch and Facebook Live offer live content, including gaming and performances.
+   
+5. **Over-the-Top (OTT) Services**  
+   Sling TV, YouTube TV, and Hulu + Live TV deliver content over the internet without cable or satellite providers.
+   
+6. **Social M. Platforms**  
+   Facebook, Instagram, and Twitter allow video sharing within networks.
 
 ### ACS
 
@@ -224,76 +375,6 @@ MoCA technology provides an effective way to enhance home network performance by
 
 It offers a practical solution for improving connectivity and network reliability, especially in environments where Wi-Fi may face limitations due to distance, barriers, or interference.
 
-### Optical Network Terminal
-
-**ONT (Optical Network Terminal)** is a device used in fiber-optic internet setups like Fiber to the Home (**FTTH**) or Fiber to the Building (FTTB).
-
-It converts the optical signal from the carrier’s network into electronic signals that can be used by home devices (computers, routers, TVs).
-
-- **Function**: Converts light signals into electronic signals.
-- **Ports**: Provides Ethernet, telephone, and sometimes video outputs.
-- **Placement**: Located at the customer's premises.
-
-### Optical Line Terminal (OLT)
-
-**OLT (Optical Line Terminal)** is the counterpart to the ONT, located at the telecom provider's central office.
-
-It communicates with multiple ONTs to deliver internet services in a **Passive Optical Network (PON)**, sending signals over fiber without requiring powered equipment between the OLT and ONTs.
-
-- **Function**: Manages communication, bandwidth allocation, and error monitoring for ONTs.
-- **Placement**: Located at the provider's end.
-
-
-### DOCSIS vs Fiber
-
-**DOCSIS (Data Over Cable Service Interface Specification)** and **Fiber** refer to different internet technologies:
-
-
-> The trick is DOCSIS ~ COAX ~ HFC ~ TV ~ RF **(vs)** ONT ~ OLT ~ Fiber To The Home
-
-**DOCSIS**
-
-- Uses a mix of **fiber-optic and coaxial cable** to deliver data.
-- Requires a **cable modem** to access the internet.
-- **Shared** connection in a neighborhood, which can lead to congestion.
-- Versions like **DOCSIS 3.0 and 3.1** offer faster speeds but may still experience slowdowns during peak times.
-
-{{< details title="More about DocSIS 📌" closed="true" >}}
-
-**DOCSIS** is an international telecommunications standard that allows the addition of high-speed data transfer to an existing cable TV (CATV) system.
-
-It is widely used by many cable television operators to provide internet access (over their existing hybrid fiber-coaxial infrastructure) in addition to television services. Here are key aspects of DOCSIS:
-
-- **Purpose**: DOCSIS technology enables cable operators to efficiently utilize their existing coaxial cable infrastructure to deliver high-speed broadband internet access, along with voice and video services.
-
-- **Versions of DOCSIS**:
-  - **DOCSIS 1.x**: Introduced features like BPI (Baseline Privacy Interface) for security and QoS (Quality of Service).
-  - **DOCSIS 2.0**: Improved upstream data rates suitable for voice and video applications.
-  - **DOCSIS 3.0**: Introduced channel bonding, significantly increasing downstream and upstream data rates by combining multiple channels.
-  - **DOCSIS 3.1**: Enhanced capacity and efficiency with OFDM (Orthogonal Frequency-Division Multiplexing) and improved modulation schemes, supporting up to 10 Gbps downstream and 1-2 Gbps upstream.
-  - **DOCSIS 4.0**: Currently in development, aiming to further increase efficiency and capacity, potentially supporting up to 10 Gbps symmetric (downstream and upstream) speeds.
-
-- **Components**:
-  - **CMTS (Cable Modem Termination System)**: Located at the cable provider’s facility, this equipment routes data between the internet and local cable networks.
-
-  - **Cable Modem**: Installed at the user’s premises, this device modulates and demodulates data signals to interface between the digital data network and the coaxial network used in homes and businesses.
-
-- **Advantages**:
-  - **Utilization of Existing Infrastructure**: Uses the existing coaxial cable setups, which allows cable operators to offer broadband without the need for new wiring.
-  - **High-Speed Internet Access**: Provides high bandwidth for internet access, which is competitive with fiber-optic networks in many scenarios.
-  - **Scalability**: The technology can be scaled by upgrading CMTS and modem equipment to newer DOCSIS standards without overhauling the entire infrastructure.
-
-- **Applications**:
-  - Primarily used by cable TV operators to provide high-speed internet access and VoIP services.
-  - It also supports functionalities like IPTV and on-demand services, integrating seamlessly with digital TV offerings.
-
-
-DOCSIS is a cornerstone technology for cable service providers, enabling them to leverage existing **coaxial cable** infrastructure to deliver high-speed internet and other digital services.
-
-As technology evolves with newer versions like DOCSIS 3.1 and 4.0, it continues to enhance the capacity, efficiency, and performance of cable broadband services, making it a competitive option against other types of broadband delivery technologies such as fiber optics.
-
-{{< /details >}}
-
 
 {{< details title="CCer for Cable Modems 📌" closed="true" >}}
 
@@ -324,77 +405,6 @@ Optical networks use different technologies and standards, which include distinc
 {{< /details >}}
 
 
-#### Fiber
-
-- Uses **fiber-optic cables** to transmit data as light, offering extremely fast speeds.
-- Provides a **dedicated connection**, avoiding congestion.
-- **Symmetric speeds** for uploads and downloads (unlike cable).
-  
-**Key Difference**: DOCSIS uses coaxial cables (shared) and may have network slowdowns, while **fiber provides higher performance** through dedicated fiber-optic lines.
-
-### XGS-PON vs GPON
-
-
-Both GPON and XGS-PON are types of **Passive Optical Networks (PON)** used for broadband services, they differ significantly in their performance and application scenarios:
-
-- **Speed**: The most significant difference is in their speed. GPON offers asymmetric speeds of up to 2.5 Gbps downstream and 1.25 Gbps upstream, whereas XGS-PON provides symmetric speeds of up to 10 Gbps both downstream and upstream.
-
-- **Symmetry**: GPON is asymmetric, which was suitable for earlier internet usage patterns where downloading was predominant. XGS-PON, however, offers symmetric speeds, catering to modern internet activities that require substantial upstream bandwidth like video conferencing, online gaming, and uploading large files.
-
-- **Upgrade Path**: XGS-PON is considered an evolution of GPON, designed to meet the increasing demands for higher bandwidth and greater symmetry in network traffic.
-
-It uses the same infrastructure as GPON, making it a cost-effective upgrade for service providers to deliver multi-gigabit services.
-
-XGSPOM is an acronym for telecom, it stands for:
-
-* X: 10 (Roman numeral X)
-* G: Gigabit
-* S: Symmetric
-* PON: Passive Optical Network
-
-**XGS-PON** refers to a type of **Passive Optical Network technology** that supports symmetric data rates of up to 10 Gigabits per second (Gbps) both downstream and upstream.
-
-This technology is a part of the broader category of fiber-optic access technologies used to deliver high-speed broadband services.
-
-
-{{< details title="More about XGSPON 📌" closed="true" >}}
-
-- **XGS-PON (10 Gigabit Symmetric Passive Optical Network)**: A high-speed, high-capacity broadband standard used in telecommunication networks to deliver advanced triple-play services such as voice, video, and data.
-
-- **Speed and Capacity**: Offers symmetric speeds of up to 10 Gbps, both downstream and upstream, supporting bandwidth-intensive applications like ultra-high-definition video streaming, cloud computing, and virtual reality.
-
-- **Technology Upgrade**: An evolutionary step **beyond older GPON technology**, XGS-PON enhances both capacity and efficiency without requiring a complete overhaul of existing fiber infrastructure.
-
-- **Fiber to the Home (FTTH) Deployments**: Deployed in FTTH scenarios where a single fiber from the central office is split to serve multiple homes or businesses, enabling telecom operators to provide ultra-fast internet services directly to consumer premises.
-
-- **Network Simplification and Cost Efficiency**: Provides high bandwidth over a single type of connection, simplifies network architecture, reduces operational costs, supports longer distances between equipment without active components, reduces maintenance, and improves reliability.
-
-- **Future-Proofing Networks**: As data demand grows, XGS-PON is seen as a future-proof technology that can accommodate next-generation network demands without immediate upgrades, providing a pathway for seamless upgrades to higher capacity systems like 25G or 50G PON.
-
-- **Application in Multiple Sectors**: Applicable in residential broadband, business services, mobile backhaul, and smart city applications, providing a versatile solution for various high-speed data requirements.
-
-- **Conclusion**: XGS-PON is a significant advancement in telecom fiber-optic technology, offering high-speed, symmetric bandwidth that supports a wide range of modern applications and services, pivotal for telecom operators to meet current and future data demands efficiently and cost-effectively.
-
-{{< /details >}}
-
-
-{{< details title="More about GPON - Gigabit Passive Optical Network 📌" closed="true" >}}
-
-
-- **Definition**: GPON is a widely used broadband access technology based on fiber optics. It primarily delivers internet, voice, and video services through optical fiber cables to residential and commercial premises.
-
-- **Speed and Capacity**: GPON supports higher bandwidth compared to older PON technologies, offering downstream capacities up to 2.5 Gbps and upstream capacities up to 1.25 Gbps.
-
-- **Technology Components**:
-  - **Optical Line Terminal (OLT)**: Located at the service provider's central site, this device coordinates the fiber optic traffic from multiple premises.
-  - **Optical Network Unit (ONU)**: Installed at the user's premises, this device converts optical signals into electrical signals suitable for use by consumer devices.
-  - **Splitter**: This component divides the optical signal sent from the OLT, allowing a single fiber to serve multiple ONUs.
-
-- **Efficiency and Cost-Effectiveness**: By using passive splitters in the fiber distribution network, GPON reduces the amount of fiber and central office equipment required compared to traditional point-to-point architectures.
-
-- **Service Integration**: GPON is capable of delivering high-speed internet, VoIP (Voice over Internet Protocol), and IPTV services over a single optical fiber, providing a triple-play solution that is efficient and scalable.
-
-{{< /details >}}
 
 
 ## Signals for Telecom
@@ -777,7 +787,7 @@ phase 1 (28 weeks) --- 90 min
 phase 2 = phase 1 + 12 weeks --- 20/40 min
  -->
 
-Typical Gateways (Routers) Models: 
+Typical Gateways (Routers, Cable Modems) Models: 
 
 | GW Type       | **GW Model**  | Comment|
 |---------------|-----------|-------------------------------------------------------------------------|
@@ -1189,9 +1199,9 @@ Managing **Project Expectations** with a [Project Charter](https://github.com/Az
   {{< card link="https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/" title="Product MindSet" image="/blog_img/memes/features-vs-needs.png" subtitle="Vision for Data Products and more" >}}
 {{< /cards >}}
 
-#### Prompts for Telecom
+### Prompts for Telecom
 
-Learning Telecom concepts its now possible with AI:
+Learning Telecom concepts its now possible with AI (LLMs):
 
 ```md
 You are an expert telecom and network engineer who can summarize concepts in simple terms in markdown.

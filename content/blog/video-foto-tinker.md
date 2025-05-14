@@ -132,7 +132,23 @@ Initially I tought that would be possible only with the GoPro...
 
 But I was wrong, action cameras have built in acelerometers (just that not all of them have GPS's)
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#facilitating-meetings" title="OA5Pro Acelerometer Data Extraction | Post ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="GoPro Telemetry | Karting Post Section ↗ " >}}  
+{{< /cards >}}
+
+
 ### Kdenlive
+
+
+I was tinkering with KDEnlive sometime ago
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="Video Tricks ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg" title="Chocolatey and FFMPEG ↗" >}}
+{{< /cards >}}
+
+Have rediscovered it for LUT (cube files) color grading application!
 
 ### Gyroflow
 

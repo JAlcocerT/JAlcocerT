@@ -102,7 +102,16 @@ volumes:
     driver: local
 ```
 
-You can use it to manage devices on the same local network:
+Termix reminded me [about Tabby](https://fossengineer.com/selfhosting-Tabby-coding-assistant/).
+
+https://github.com/TabbyML/tabby
+
+* [Tabby](https://github.com/Eugeny/tabby/releases/tag/v1.0.223)
+
+> [Tabby](https://tabby.sh/) is *a terminal for the modern age* 
+
+
+You can use Termix to manage devices on the same local network:
 
 ```sh
 #arp -a

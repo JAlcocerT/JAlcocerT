@@ -161,7 +161,7 @@ Whatever the industry you are working on, make sure to set and improve your [**w
 3. RCA Template
 4. MTG Summary Template - What's your takeaway after the time investment?
 
-For ideas, you can check [this one](https://jalcocert.github.io/JAlcocerT/git-recap/#weekly-planning) and then tweak it as per your daily/scrum ceremonies.
+For ideas, you can check [this one](https://jalcocert.github.io/JAlcocerT/git-recap/#weekly-planning) and then tweak it as per your [daily/scrum ceremonies](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/#workflow-for-effectiveness).
 
 {{< callout type="info" >}}
 Understand *the one thing* the client value the most. [Pareto](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)?
@@ -240,7 +240,7 @@ To tell better stories with data, you have to [ask the right questions](https://
 * **What do stakeholders consider to be of value?**
 
 {{< callout type="info" >}}
-For more questions, you can switch-on your **[product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq) mindset**
+For MORE QUESTIONS, you can switch-on your **[product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq) mindset**
 {{< /callout >}}
 
 <!-- ![Cat product Meme](/blog_img/memes/features-vs-needs.png) -->
@@ -264,7 +264,7 @@ See more questions [here](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-d
 
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#conclusions" title="More Questions for Requirements gathering | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#conclusions" title="More Questions for Requirements Gathering | Post ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/business-analytics-skills/" title="Skills for BA - DoD DoR UAT... | Post ↗" >}}
 {{< /cards >}}
 
@@ -440,6 +440,7 @@ I like this way of summarizing whats required from others (useful for JIRA stori
 ### Diagrams and Retros
 
 * https://github.com/excalidraw/excalidraw
+    * https://excalidraw.com/
 
 >  Virtual whiteboard for sketching hand-drawn like diagrams 
 
@@ -630,4 +631,5 @@ Sí, exactamente. La capa Oro es donde se definen y materializan los modelos dim
 
 
 {{< /details >}}
+
 ### More T-Shaped Skills
