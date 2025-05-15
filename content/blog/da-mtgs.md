@@ -59,8 +59,11 @@ A Table with the following structure can be of help to keep everyone informed:
     - Before exiting the meeting, make sure you understand what should be priotizited.
     - As well as what are the other participants next steps.
 
+---
 
-## Questions in the Meetings
+## FAQ
+
+### Questions in the Meetings
 
 * Clarifying ambiguity: make sure that groups positions are clear
     * What you mean by Y is Z?
@@ -73,7 +76,7 @@ A Table with the following structure can be of help to keep everyone informed:
 **Open-Ended questions** are much better to gather information: What and How.
 {{< /callout >}}
 
-## Psychology in Meetings
+### Psychology in Meetings
 
 Be aware of *the analysis paralysis*, especially when the options increase.
 

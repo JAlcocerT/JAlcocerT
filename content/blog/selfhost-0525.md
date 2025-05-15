@@ -104,7 +104,7 @@ volumes:
 
 Termix reminded me [about Tabby](https://fossengineer.com/selfhosting-Tabby-coding-assistant/).
 
-https://github.com/TabbyML/tabby
+* https://github.com/TabbyML/tabby
 
 * [Tabby](https://github.com/Eugeny/tabby/releases/tag/v1.0.223)
 
@@ -368,7 +368,7 @@ python3 app.py
 
 But...it used davinci model which was deprecated: https://platform.openai.com/docs/deprecations#instructgpt-models
 
-So I had to vibe code a little bit with codex to fix it:
+So I had to vibe code a little bit with **codex** to fix it:
 
 ![alt text](/blog_img/GenAI/aidocs/reporeader-qatrack.png)
 <!-- ![alt text](/blog_img/GenAI/reporeader-qatrack.png) -->
@@ -674,6 +674,10 @@ chmod +x create-starlight.sh
 cd documentaition && npm install && npm run dev
 
 codex
+
+#codex "$ai_docs_prompt"
+#codex --approval-mode full-auto "create the fanciest todo-list app"
+#codex --approval-mode full-auto "$ai_docs_prompt"
 ```
 
 
@@ -729,10 +733,10 @@ Output the generated documentation in Markdown format, ready to be placed within
 So far with these projects AI docs, I was getting at the worst case a **86% context left** for codex
 {{< /callout >}}
 
-And this was applied also to **big repos**, like signoz with ~380mb in it or...remotion, with 4GB!
+And this was applied also to **big repos**, like signoz with ~380mb in it or...remotion, with 4GB size!
 
 ```sh
-du -sh .
+du -sh . #see repo size
 ```
 
 

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Whats an FPV?"
 date: 2025-12-30T23:20:21+01:00
 draft: true
 tags: ["Tinkering"]
@@ -15,7 +15,7 @@ Betaflight is **open-source firmware for flight controllers** used in multirotor
 
 {{< details title="What it is betaflight 📌" closed="true" >}}
 
- Think of it as the operating system for your drone.  It takes the inputs from your radio transmitter (your remote control), interprets them, and then translates those commands into actions for the drone's motors, allowing you to control its flight.
+Think of it as the operating system for your drone.  It takes the inputs from your radio transmitter (your remote control), interprets them, and then translates those commands into actions for the drone's motors, allowing you to control its flight.
 
 Here's a breakdown of what Betaflight does and why it's popular:
 
@@ -45,7 +45,7 @@ Here's a breakdown of what Betaflight does and why it's popular:
 **In simpler terms:** Imagine Betaflight as the brain of your drone. It takes your commands, processes information from the drone's sensors, and tells the motors what to do to make the drone fly the way you want it to.  Its open-source nature and extensive configurability have made it the go-to choice for many drone enthusiasts, especially those who enjoy racing and freestyle flying.
 
 
-https://www.youtube.com/watch?v=FfrRiPhn-LA&t=343s
+<!-- https://www.youtube.com/watch?v=FfrRiPhn-LA&t=343s -->
 
 {{< youtube "FfrRiPhn-LA" >}}
 

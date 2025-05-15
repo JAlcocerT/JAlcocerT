@@ -85,6 +85,13 @@ ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -
 
 {{< /details >}}
 
+Applying custom luts with ffmpeg:
+
+```sh
+#https://video.stackexchange.com/questions/21483/apply-custom-lut-via-ffmpeg
+ffmpeg -i "Input.mov" -vf lut3d="ARRIP3D65PQ108-33.cube" -s 1920x1080 -c:v dnxhd -pix_fmt yuv422p -b:v 120M DNxHD_for_Editing.mxf
+```
+
 
 #### Shorts
 
@@ -104,12 +111,17 @@ How about adding [TTS generated audio](https://github.com/JAlcocerT/Streamlit-Mu
 # -filter_complex "[0:a:0][1:a:0]amix=inputs=2:duration=longest[aout]" \
 # -map "[aout]" -c:a libmp3lame output.mp3
 
-ffmpeg -i DJI_20250511143231_0004_D.MP4 -i audio_reply.wav \
+# ffmpeg -i DJI_20250511143231_0004_D.MP4 -i audio_reply.wav \
+# -filter_complex "[0:a:0]volume=0.6[vid_audio];[1:a:0]volume=1.4[reply_audio];[vid_audio][reply_audio]amix=inputs=2:duration=longest[aout]" \
+# -map "[aout]" -c:a libmp3lame output.mp3
+
+#with just one video in the folder:
+ffmpeg -i "$(ls *.MP4)" -i audio_reply.wav \
 -filter_complex "[0:a:0]volume=0.6[vid_audio];[1:a:0]volume=1.4[reply_audio];[vid_audio][reply_audio]amix=inputs=2:duration=longest[aout]" \
 -map "[aout]" -c:a libmp3lame output.mp3
 ```
 
-5. Put back the combined audio to the .mp4:
+5. Put back the combined audio to the `.mp4`:
 
 
 ```sh

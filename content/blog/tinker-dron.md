@@ -18,7 +18,7 @@ The dron has a camera as well, similar to the [RPi Camera tested here](https://j
 
 ## DJI Tello Python
 
-If there are some doubts, I wanted to try and control the **drone with...code**.
+If there are some doubts, I wanted to try and control the **drone with...Python code**.
 
 I have [forked](https://github.com/damiafuentes/DJITelloPy) and created a Docker Image with **Python Code which is able to control the drone**.
 
@@ -27,8 +27,8 @@ I have [forked](https://github.com/damiafuentes/DJITelloPy) and created a Docker
 {{< /callout >}}
 
 
-* **Hardware** Specs:
-    * The Battery last ~10 min
+* **Hardware** Specs for the [Tello](https://www.ryzerobotics.com/tello/downloads):
+    * The Battery (LiPo) has 4,18Wh lasts ~10 min with 1100mAh and 3.8V, can be loaded at 10W
     * Weight ~80g
     * Price ~100$
     * It has an Intel CPU which **we can program with python**, 5MP Camera with **720p** Live View Vision System, WIFI 802.11n 2.4G,
@@ -38,6 +38,12 @@ So far it can do the following:
 1. Test Setup
 2. Keyboard Control
 3. Camera (Photo/Video) Control
+
+* Photo: 5MP (2592x1936)
+* FOV: 82.6°
+* Video: HD720P30
+* Format: JPG(Photo); MP4(Video)
+
 4. Computer Vision with DJI Tello
 
 Credits to [Murtaza's **YT Video**](https://www.youtube.com/watch?v=LmEcyQnfpDA&t=1286s) that helped me a lot to get started.

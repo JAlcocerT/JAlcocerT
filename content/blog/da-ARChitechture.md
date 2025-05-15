@@ -107,8 +107,10 @@ Test_Data = [("James","Sales","NY",90000,34,10000),
 
 schema = ["employee_name","department","state","salary","age","bonus"]
 Test_DF = spark.createDataFrame(data=Test_Data, schema = schema)
+
 Test_DF.printSchema()
-Test_DF.show(truncate=False)
+#Test_DF.show(5, truncate=False)
+Test_DF.limit(5).toPandas().style.hide_index()
 ```
 
 {{< details title="Some TECH/Tools for BIG Data Platforms 📌" closed="true" >}}
@@ -251,6 +253,8 @@ For MORE QUESTIONS, you can switch-on your **[product](https://jalcocert.github.
 
 
 {{< details title="My Favourite Questions for Requirement Gathering 📌" closed="true" >}}
+
+Remember about functional and non functional **BRs** (business requirements):
 
 1. What are the key objectives (**OKR**) and goals of this data product or project?
 2. Who are the primary end-users or target audience for this data product?

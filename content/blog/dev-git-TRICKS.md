@@ -363,7 +363,7 @@ services:
 
 #### MonoRepos and more
 
-**What is a Monorepo?**
+**What is a Mono repo?**
 
 At its core, a monorepo is a single repository that contains code for *many* different projects, libraries, and applications. Instead of having separate repositories for each part of your codebase, everything lives together in one big happy family.
 
@@ -371,7 +371,11 @@ Think of it like organizing all your important documents into one well-structure
 
 **What are the Alternatives?**
 
-The primary alternative to a monorepo is a **multirepo** (also sometimes called a polyrepo). In a multirepo setup, each project, library, or application has its own distinct repository. This has been the more traditional approach for a long time.
+The primary alternative to a monorepo is a **multirepo** (also sometimes called a polyrepo).
+
+In a multirepo setup, each project, library, or application has its own distinct repository.
+
+> This has been the more traditional approach for a long time.
 
 **Pros and Cons:**
 
