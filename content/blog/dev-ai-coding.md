@@ -10,7 +10,7 @@ url: 'vide-coding'
 
 * https://uiverse.io/elements
 
-But how about creating websites with....
+But how about creating websites with these....
 
 
 

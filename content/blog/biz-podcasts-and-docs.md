@@ -1,9 +1,9 @@
 ---
 title: "Tech for Creating Documentation and Podcast"
-date: 2025-09-19
+date: 2025-05-15
 draft: false
 tags: ["Web"]
-description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. A look to GitPodcast and LangChain as Research Agent."
+description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. A look to GitPodcast and Research Agents."
 url: 'tech-for-podcast'
 ---
 
@@ -12,6 +12,12 @@ url: 'tech-for-podcast'
 ### Docs Website
 
 * https://github.com/withastro/starlight
+    * See how great this can look: 
+        * https://starlight.astro.build/getting-started/
+        * https://docs.astro.build/en/install-and-setup/#use-a-theme-or-starter-template
+        * https://fevol.github.io/starlight-theme-obsidian/getting-started/
+
+![alt text](ic/blog_img/web/fosseng/starlight-docs-sample.png)
 
 > MIT | 🌟 Build beautiful, accessible, high-performance documentation websites with Astro
 
@@ -57,6 +63,8 @@ I was (one more time) amazed on what people is able to create:
 * https://github.com/BandarLabs/gitpodcast
 
 > MIT | Convert any git repository into an engaging podcast
+
+Does this resonates with creating **AI powered podcasts** on how selfhosting projects work?
 
 **How does this works?**
 

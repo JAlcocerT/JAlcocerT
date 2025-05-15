@@ -61,6 +61,8 @@ filebrowser alternative!
 
 ## New SelfH Apps
 
+I had a look to https://github.com/localtunnel/server, just cloudflared is the go to option for me.
+
 ### Termix
 
 Termix, not [termux](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#termux), its being great:
@@ -153,6 +155,15 @@ vcgencmd measure_temp pmic
 
 {{< youtube "yAJvbF-m5FM" >}}
 
+### UserTour
+
+For product people in the room:
+
+* https://github.com/usertour/usertour
+
+> Agpl v3 | Usertour is an open-source user onboarding platform designed for developers. It allows you to create in-app product tours, checklists, and launchers in minutes—effortlessly and with full control.The open-source alternative to Userflow and Appcues
+
+
 
 
 ### Recap from Spring 2025
@@ -235,7 +246,7 @@ It uses [LangGraph](https://jalcocert.github.io/JAlcocerT/understanding-langgrap
 
 ### I needed recently...
 
-
+* https://notebooklm.google.com/
 * https://speed.cloudflare.com/
 
 ![alt text](/blog_img/selfh/Internet/internet-test.png)

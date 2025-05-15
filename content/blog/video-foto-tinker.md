@@ -25,6 +25,10 @@ Wait, there is even a repo!
 
 {{< youtube "kaa1vPHqKdw" >}}
 
+{{< callout type="info" >}}
+For night video and the oa5pro, for me it has worked better: -0.7EV, 50fps, S 1/400, ISO 100 ~25600 (max range), AWB, Texture -1 and Noise Reduction -2.
+{{< /callout >}}
+
 ## Photo Editing
 
 Spending a lot on smartphone with cool cameras to...use snapseed?
@@ -61,6 +65,23 @@ If you are planning to use Gyroflow for custom video estabilization, make sure t
 {{< /callout >}}
 
 ### CLI Tricks
+
+
+
+```sh
+## For Tinkering with more video parts
+ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
+
+#Generate a video from few parts
+#ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
+ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
+#ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #x4
+
+#ffmpeg -stream_loop -1 -i "AETHER - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
+ffmpeg -stream_loop -1 -i "output.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
+
+### 🎵 Music by...
+```
 
 
 {{< details title="FFMPEG CLI Tricks | Ubuntu 📌" closed="true" >}}
@@ -100,13 +121,28 @@ How about adding [TTS generated audio](https://github.com/JAlcocerT/Streamlit-Mu
 
 1. Generate the AI Audio with TTS:
 
+```sh
+soxi -D audio_reply.wav #video duration
+```
+
 2. Get your short content transfered
 
 3. Make 175s pieces max:
 
-4. Extract the audio of the .MP4 piece, and combine it with the ai generated audio:
+```sh
+#shorts (limited to 3min or generated audio duration)
+ffmpeg -i DJI_2025abc123.MP4 -t $(soxi -D audio_reply.wav) -c copy cut_output.mp4
+#ffmpeg -i DJI_2025abc123.MP4 -t 175 -c copy output.mp4
+ffmpeg -i "$(ls *.MP4)" -t $(soxi -D audio_reply.wav) -c copy cut_output.mp4
+```
+
+4. Extract the audio of the `.MP4` piece, and combine it with the ai generated audio:
 
 ```sh
+#Take the cut video and combine its audio with the AI generated
+ffmpeg -i cut_output.mp4 -i audio_reply.wav \
+-filter_complex "[0:a:0]volume=0.6[vid_audio];[1:a:0]volume=1.4[reply_audio];[vid_audio][reply_audio]amix=inputs=2:duration=longest[aout]" \
+-map "[aout]" -c:a libmp3lame output.mp3
 # ffmpeg -i DJI_20250511143231_0004_D.MP4 -i audio_reply.wav \
 # -filter_complex "[0:a:0][1:a:0]amix=inputs=2:duration=longest[aout]" \
 # -map "[aout]" -c:a libmp3lame output.mp3
@@ -123,24 +159,22 @@ ffmpeg -i "$(ls *.MP4)" -i audio_reply.wav \
 
 5. Put back the combined audio to the `.mp4`:
 
-
 ```sh
-ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
-
-#Generate a video from few parts
-#ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
-ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
-#ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #x4
-
-#ffmpeg -stream_loop -1 -i "AETHER - Density & Time.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
-ffmpeg -stream_loop -1 -i "output.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
-
-### 🎵 Mu
+#For a Quick Short:
+ffmpeg -i cut_output.mp4 -i output.mp3 -map 0:v -map 1:a -c:v copy -c:a libmp3lame -q:a 0 -shortest final_output.mp4
 ```
+
+
+<!-- https://www.youtube.com/shorts/u3-5yN9xIv0 -->
+
+{{< youtube "u3-5yN9xIv0" >}}
+
 
 #### Telemetry
 
 Initially I tought that would be possible only with the GoPro...
+
+https://goprotelemetryextractor.com/cycling-stats-video-overlay?affi=safabrian#download_0
 
 But I was wrong, action cameras have built in acelerometers (just that not all of them have GPS's)
 
@@ -159,6 +193,8 @@ I was tinkering with KDEnlive sometime ago
   {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="Video Tricks ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg" title="Chocolatey and FFMPEG ↗" >}}
 {{< /cards >}}
+
+https://www.youtube.com/watch?v=V0_yp-ziqvI
 
 Have rediscovered it for LUT (cube files) color grading application!
 
@@ -210,7 +246,7 @@ While a good quality ND filter should ideally not affect color, some cheaper one
 Essentially, ND filters give you greater control over your exposure settings in bright light, allowing you to achieve creative effects and maintain the desired look and feel of your video or photographs.
 
 
-https://www.youtube.com/watch?v=00e8XDRoge4
+<!-- https://www.youtube.com/watch?v=00e8XDRoge4 -->
 
 {{< youtube "00e8XDRoge4" >}}
 
@@ -370,7 +406,7 @@ So, regardless of the MP4 file itself (as long as it's a standard, decodable vid
 
 #### D-log
 
-https://www.youtube.com/watch?v=-g0E4ntS8qA
+<!-- https://www.youtube.com/watch?v=-g0E4ntS8qA -->
 
 {{< youtube "-g0E4ntS8qA" >}}
 

@@ -9,6 +9,8 @@ url: 'fpv-programming'
 
 ![DJI Tello Dron](/blog_img/hardware/dji-dron.png)
 
+https://www.youtube.com/watch?v=KSP4o_WCqVs
+
 ## BetaFlight
 
 Betaflight is **open-source firmware for flight controllers** used in multirotor aircraft (drones), primarily racing drones and freestyle drones. 

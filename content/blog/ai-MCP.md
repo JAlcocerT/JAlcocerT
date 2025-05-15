@@ -19,9 +19,23 @@ url: 'ai-understanding-mcp-framework'
 * MCP with LangChain
     * https://github.com/langchain-ai/langchain-mcp-adapters
 
+https://mcpservers.org/servers/browsermcp/mcp
+
+https://gofastmcp.com/clients/transports#sse-server-sent-events
+https://github.com/jlowin/fastmcp
+
+https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#travel-and-transportation
+https://github.com/githejie/mcp-server-calculator
+https://mcpservers.org/servers/executeautomation/mcp-playwright
+https://mcpservers.org/category/web-scraping
+https://github.com/lastmile-ai/openai-agents-mcp
+
+https://openai.github.io/openai-agents-python/mcp/#mcp-servers
 
 ## MCP
 
+* https://github.com/modelcontextprotocol/python-sdk
+    * https://github.com/modelcontextprotocol/python-sdk/issues
 
 {{< callout type="info" >}}
 Very cool uses cases for MCP - https://github.com/punkpeye/awesome-mcp-servers
@@ -471,6 +485,11 @@ server_params = StdioServerParameters(
 
 This library provides a lightweight wrapper that makes Anthropic Model Context Protocol (MCP) tools compatible with LangChain and LangGraph.
 
+<!-- https://www.youtube.com/watch?v=hccNm88bk6w -->
+
+{{< youtube "hccNm88bk6w" >}}
+
+
 * https://github.com/langchain-ai/langchain-mcp-adapters
     * https://pypi.org/project/langchain-mcp-adapters/
 
@@ -508,7 +527,7 @@ For observability, you can plug langgraph with langfuse - https://langfuse.com/d
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse" title="LangFuse Docker Config... ↗" >}}
 {{< /cards >}}
 
-![alt text](/)
+<!-- ![alt text](/) -->
 
 
 
@@ -527,6 +546,13 @@ At its core, LangGraph allows you to define a **stateful graph** where each node
 * **Transitions:** Defining how the workflow moves from one node to another.
 
 The "stateful" aspect is crucial. LangGraph manages a state object that evolves as the workflow progresses through the graph. Each node can update this state, and subsequent nodes can access and utilize the information in the state. This makes it easier to build more sophisticated and context-aware applications.
+
+<!-- https://www.youtube.com/watch?v=OX89LkTvNKQ -->
+
+{{< youtube "OX89LkTvNKQ" >}}
+
+https://langchain-ai.github.io/langgraph/agents/mcp/
+
 
 **Key Concepts in LangGraph:**
 
