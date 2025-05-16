@@ -646,7 +646,6 @@ tar -xzvf Gyroflow-linux64.tar.gz
 cd Gyroflow
 chmod +x gyroflow
 ./gyroflow
-
 ```
 
 {{< callout type="info" >}}
@@ -687,4 +686,4 @@ DJI OA5Pro 4k/30/RS/UW
 [Any other relevant description text can go here]
 ```
 
-And they can be automatic, I mean...when you join your parts, get already a `.txt` telling which parts you joined, in which second...
+And the [timestamps can be automatic](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#automatic-video-chapters), I mean...when you join your parts, get already a `.txt` telling which parts you joined, in which second...

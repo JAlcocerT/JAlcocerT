@@ -71,6 +71,9 @@ If you are planning to use [Gyroflow](#gyroflow) for custom video estabilization
 Just put [your video parts](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#ffmpeg) together / silenced / with a given .mp3 audio:
 
 ```sh
+#ffmpeg -i DJI_20250515200111_0003_D.MP4 -ss 10 -to 90 -c copy output.mp4
+#ffmpeg -i DJI_20250515200111_0003_D.MP4 -ss 91 -c copy output_.mp4
+
 ## For Tinkering with more video parts
 ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
 
@@ -189,7 +192,11 @@ A friend told me recently to have a look to:
 * Klingai.com for video generated from images/text
 * Ilevenlabs to create TTSpeach
 
+Whatever you do, dont forget to add proper [video description](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#youtube-video-descriptions)
+
 Its kind of what [these channels](https://www.youtube.com/watch?v=UhvMylLrKw8) do!
+
+
 
 
 #### Telemetry
@@ -209,16 +216,28 @@ But I was wrong, action cameras have built in acelerometers (just that not all o
 ### Kdenlive
 
 
-I was tinkering with KDEnlive sometime ago
+I was tinkering with KDEnlive sometime ago...
+
+```sh
+flatpak install flathub org.kde.kdenlive
+```
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="Video Tricks ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg" title="Chocolatey and FFMPEG ↗" >}}
 {{< /cards >}}
 
-https://www.youtube.com/watch?v=V0_yp-ziqvI
+<!-- https://www.youtube.com/watch?v=V0_yp-ziqvI -->
+
+{{< youtube "V0_yp-ziqvI" >}}
+
 
 Have rediscovered it for LUT (cube files) color grading application!
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Action Cam Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#kdenlive" title="KDenLive with OA5Pro" image="/blog_img/outro/kdenlive.png" subtitle="Editing video with kdenlive" >}}
+{{< /cards >}}
 
 ### Gyroflow
 

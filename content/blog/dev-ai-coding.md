@@ -165,6 +165,8 @@ You can plug API keys to some IDEs/extensions:
 
 ### Gemini and AIStudio
 
+So not only Gemini Code Assist vscode extension is great...
+
 <!-- https://www.youtube.com/watch?v=_fhTXJe_awY -->
 
 {{< youtube "_fhTXJe_awY" >}}

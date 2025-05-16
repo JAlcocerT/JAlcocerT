@@ -62,6 +62,11 @@ As I recently had some trouble with my phone...
 
 I had a look to https://github.com/localtunnel/server, just that still, [cloudflared](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/) is the go to option for me.
 
+<!-- https://studio.youtube.com/video/k75PviBQeA0/edit -->
+
+{{< youtube "k75PviBQeA0" >}}
+
+
 ### Termix
 
 Termix, *not [termux](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#termux)*, its being great to get all my servers at one place:
@@ -490,6 +495,8 @@ https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researc
 
 [Codex with **o4-mini** as default model](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to write [Astro](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) powered [docs](https://astro.build/themes/1/?search=&price%5B%5D=free)?
 
+> Having in mind that astro can embed mermaidJS diagrams as per https://astro-digital-garden.stereobooster.com/recipes/mermaid-diagrams-in-markdown/
+
 
 Using [starlight theme](https://starlight.astro.build/getting-started/):
 
@@ -501,7 +508,7 @@ npm create astro@latest -- --template starlight
 cd docs && npm run dev
 ```
 
-![alt text](/blog_img/GenAI/aidocs/starlight-ai-dcs.png)
+![Starlight AI Powered Docs](/blog_img/GenAI/aidocs/starlight-ai-dcs.png)
 
 Once finished, we can see locally the theme: `localhost:4321`
 
