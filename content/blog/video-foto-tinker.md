@@ -17,7 +17,7 @@ We come from...
 Wait, there is even a repo!
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tricks for quick videos as a code from action cams" >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Quick videos as a code from Action Cams" >}}
 {{< /cards >}}
 
 
@@ -61,12 +61,14 @@ https://www.youtube.com/watch?v=rMhe2gYJa9s
 
 
 {{< callout type="warning" >}}
-If you are planning to use Gyroflow for custom video estabilization, make sure that the OA5Pro records without RS modes and Wide! In that way the acelerometer information will be captured in the mp4 file.
+If you are planning to use [Gyroflow](#gyroflow) for custom video estabilization, make sure that the OA5Pro records **without RS** modes and **Wide**!
 {{< /callout >}}
+
+ In that way the acelerometer information will be captured in the mp4 file.
 
 ### CLI Tricks
 
-
+Just put [your video parts](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#ffmpeg) together / silenced / with a given .mp3 audio:
 
 ```sh
 ## For Tinkering with more video parts
@@ -90,7 +92,7 @@ ffmpeg -stream_loop -1 -i "output.mp3" -i silenced_output_video.mp4 -c:v copy -c
 
 1. From a timeframe until the end, 1 frame:
 
-```bash
+```sh
 #from second 90 of the video, give me 1fps
 ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.png
 ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.jpg
@@ -106,7 +108,7 @@ ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -
 
 {{< /details >}}
 
-Applying custom luts with ffmpeg:
+4. Applying custom luts with ffmpeg:
 
 ```sh
 #https://video.stackexchange.com/questions/21483/apply-custom-lut-via-ffmpeg
@@ -125,15 +127,25 @@ How about adding [TTS generated audio](https://github.com/JAlcocerT/Streamlit-Mu
 soxi -D audio_reply.wav #video duration
 ```
 
-2. Get your short content transfered
+2. Get your short content [transfered](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#transfering-files):
+
+```sh
+mkdir -p "$HOME/Desktop/CAM1-$(date +%m-%d)" && rsync -avP --include='*.MP4' --exclude='*' . "$HOME/Desktop/CAM1-$(date +%m-%d)"
+```
+
+> From SD card I get transfers at 68MB/s and from the internal ~200MB/s (when using an external nvme case usb-c)
 
 3. Make 175s pieces max:
 
 ```sh
-#shorts (limited to 3min or generated audio duration)
+#Shorts (limited to 3min or generated audio duration)
+
+#As per audio duration, which is passed to the CLI
 ffmpeg -i DJI_2025abc123.MP4 -t $(soxi -D audio_reply.wav) -c copy cut_output.mp4
-#ffmpeg -i DJI_2025abc123.MP4 -t 175 -c copy output.mp4
 ffmpeg -i "$(ls *.MP4)" -t $(soxi -D audio_reply.wav) -c copy cut_output.mp4
+
+#As per hardcoded duration
+#ffmpeg -i DJI_2025abc123.MP4 -t 175 -c copy output.mp4
 ```
 
 4. Extract the audio of the `.MP4` piece, and combine it with the ai generated audio:
@@ -169,6 +181,16 @@ ffmpeg -i cut_output.mp4 -i output.mp3 -map 0:v -map 1:a -c:v copy -c:a libmp3la
 
 {{< youtube "u3-5yN9xIv0" >}}
 
+#### AI Powered shorts
+
+A friend told me recently to have a look to:
+
+* Suno.ai for audio/songs...
+* Klingai.com for video generated from images/text
+* Ilevenlabs to create TTSpeach
+
+Its kind of what [these channels](https://www.youtube.com/watch?v=UhvMylLrKw8) do!
+
 
 #### Telemetry
 
@@ -199,6 +221,8 @@ https://www.youtube.com/watch?v=V0_yp-ziqvI
 Have rediscovered it for LUT (cube files) color grading application!
 
 ### Gyroflow
+
+I already had [a look to Gyroflow](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#gyroflow) on the last video post.
 
 * https://github.com/gyroflow/lens_profiles/tree/main/DJI
 

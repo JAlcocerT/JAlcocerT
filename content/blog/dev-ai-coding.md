@@ -106,6 +106,8 @@ Thanks to codex I could understand better how the [Groq Youtube summarizer](http
 
 > Claude Code is an agentic coding tool that **lives in your terminal, understands your codebase**, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
 
+Actually [Plandex](#plandex) was first!
+
 ---
 
 ## AI Code Assistants
@@ -121,9 +123,16 @@ What else can help us code better?
 
 ## Propietary
 
+* https://v0.dev/ From vercel!
+  * https://v0.dev/community/financial-dashboard-DuidKNEmCKf
 
-Some Paid IDE/Assistants
+* https://chef.convex.dev/
 
+### Cursor and ZED
+
+Some Paid IDE/Assistants/Agentic coding...
+
+* Repliit
 * https://www.cursor.com/pricing
 * https://zed.dev/pricing
 
@@ -193,22 +202,32 @@ Its already on vscode and we can get for free (at the time of writing):
 sudo apt-get upgrade windsurf
 ```
 
+<!-- https://www.youtube.com/watch?v=Wvyc2E6OHm8 -->
+
+{{< youtube "Wvyc2E6OHm8" >}}
+
+
 ![Windsurf IDE](/blog_img/dev/dev-windsurf.png)
 
 * Continue.dev: https://github.com/continuedev/continue
 
 > Apache v2 |  ⏩ Create, share, and use custom AI code assistants with our open-source IDE extensions and hub of models, rules, prompts, docs, and other building blocks 
 
+### Plandex
+
 * https://github.com/plandex-ai/plandex
 
 > MIT | Open source AI coding agent. Designed for large projects and real world tasks.
 
+
+### Aider
 
 * https://github.com/paul-gauthier/aider
     * https://github.com/Aider-AI/aider
 
 > Apache v2 | aider is AI pair programming in your terminal
 
+### Clone
 
 * https://github.com/cline/cline
 

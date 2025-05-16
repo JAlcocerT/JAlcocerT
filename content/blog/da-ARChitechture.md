@@ -113,6 +113,17 @@ Test_DF.printSchema()
 Test_DF.limit(5).toPandas().style.hide_index()
 ```
 
+```sh
+from pyspark.sql import functions as f
+
+(df
+    .withColumn("update_month_day", f.date_format(f.col("last_updated"), "MM-dd")) # Extract MM-dd
+    .groupBy("update_month_day")
+    .agg(f.count("*").alias("record_count"))
+    .orderBy("update_month_day")
+    .show())
+```
+
 {{< details title="Some TECH/Tools for BIG Data Platforms 📌" closed="true" >}}
 
 1. **Diagrams**: Tools like Mermaid and Excalidraw for visualizing workflows and processes.

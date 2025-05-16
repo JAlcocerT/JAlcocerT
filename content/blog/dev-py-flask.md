@@ -3,9 +3,11 @@ title: "Web Apps with Flask and cool ChartJS"
 date: 2025-04-05T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'Flask webapps, IoT Sensors, ChartJS and Websockets.'
+description: 'Flask WebApps, IoT Sensors, ChartJS and Websockets.'
 url: 'web-apps-with-flask'
 ---
+
+For quite some time I wanted to give it a try to Flask (as an alternative to Streamlit) and Websockets.
 
 * https://github.com/pallets/flask/
   * https://pypi.org/project/Flask/
@@ -17,8 +19,8 @@ url: 'web-apps-with-flask'
 > The Python micro framework for building web applications.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
-  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github to tinker with Flask, Websockets and Hardware Temperature" >}}
 {{< /cards >}}
 
 
@@ -36,7 +38,6 @@ These are the main files and **structure of a Python Flask Project**:
 As you can see, with Flaks we need to be creative with `html`.
 
 Within the html, the content of the variables processed via python are represented.
-
 
 {{< details title="Be aware about the routes! 📌" closed="true" >}}
 
@@ -111,35 +112,35 @@ Think back to the "house with rooms" analogy:
 
 * **Serving Static HTML:** You can definitely have routes that directly render specific HTML files. This is common for static pages like "About Us," "Contact," or specific sections of your site.
 
-   ```python
-   @app.route('/about')
-   def about_page():
-       return render_template('about.html')
+```python
+@app.route('/about')
+def about_page():
+    return render_template('about.html')
 
-   @app.route('/contact')
-   def contact_page():
-       return render_template('contact.html')
-   ```
+@app.route('/contact')
+def contact_page():
+    return render_template('contact.html')
+```
 
 * **Generating Dynamic HTML:** Many routes will involve generating HTML dynamically based on data. This is where you use template engines like Jinja2 (which comes with Flask). The route function fetches data and passes it to a template, which then renders the final HTML. Different routes will likely fetch different data and might use different templates to display that data.
 
-   ```python
-   @app.route('/users/<username>')
-   def user_profile(username):
-       user = get_user_data(username)  # Fetch user data
-       return render_template('profile.html', user=user)
-   ```
+```python
+@app.route('/users/<username>')
+def user_profile(username):
+    user = get_user_data(username)  # Fetch user data
+    return render_template('profile.html', user=user)
+```
 
 * **Returning Other Data Formats:** Flask routes aren't limited to returning HTML. They can return other data formats, which is common for building APIs (Application Programming Interfaces):
 
-   ```python
-   from flask import jsonify
+```python
+from flask import jsonify
 
-   @app.route('/api/users')
-   def get_all_users():
-       users = fetch_all_users()
-       return jsonify(users)  # Returns data as JSON
-   ```
+@app.route('/api/users')
+def get_all_users():
+    users = fetch_all_users()
+    return jsonify(users)  # Returns data as JSON
+```
 
 
 {{< /details >}}
@@ -147,7 +148,9 @@ Think back to the "house with rooms" analogy:
 
 A Flask route acts as a **traffic controller** for your web application.
 
-It listens for specific URLs and, based on the URL and the HTTP method used, directs the request to the appropriate Python function to generate a response for the user's browser. It's the fundamental way you define the different "pages" and functionalities of your web application and how users can interact with them.
+It listens for specific URLs and, based on the URL and the HTTP method used, directs the request to the appropriate Python function to generate a response for the user's browser.
+
+It's the fundamental way you define the different "pages" and functionalities of your web application and how users can interact with them.
 
 Use routes to structure your web application and define how different URLs are handled.
 
@@ -474,8 +477,8 @@ But it doesn't happen magically with standard HTTP requests.
 You need to employ specific techniques to achieve this "push" behavior from the server to the client:
 
 1. Client Side Polling
-2. SSE
-3. WebSockets
+2. SSE - Server Sent Events
+3. **WebSockets**
 
 
 {{< details title="More about each Flask Refresh Approach 📌" closed="true" >}}
@@ -645,11 +648,10 @@ WebSockets are also widely supported in many other programming languages, includ
 * **C# (.NET):** Has built-in support through the `System.Net.WebSockets` namespace and libraries like SignalR.
 * **And many more!**
 
-**In summary:**
-
-WebSockets are a powerful protocol for enabling real-time, bidirectional communication between clients and servers over a persistent connection. 
 
 {{< /details >}}
+
+**In summary:** WebSockets are a powerful protocol for enabling real-time, bidirectional communication between clients and servers over a persistent connection. 
 
 As long as a programming language has libraries or built-in support for handling the WebSocket protocol, you can use WebSockets in that language.   
 
@@ -661,7 +663,7 @@ As long as a programming language has libraries or built-in support for handling
 
 We can make this kind of quick Flask Web socket Web App:
 
-![alt text](/blog_img/iot/flask/flask-x13-ws.png)
+![Flask and x13 Laptop Temperature representation with WebSockets](/blog_img/iot/flask/flask-x13-ws.png)
 
 
 ```sh

@@ -2,12 +2,12 @@
 title: "Websites with SSG + CMS - The missing piece."
 date: 2025-05-13T22:20:21+01:00
 draft: false
-description: "UI for customization SSGs. About Keystatic CMS with Astro."
+description: "UI for customization SSGs. About Keystatic CMS with Astro SSG. Combined with PostHog/OpenReplay "
 url: 'cms-for-static-websites'
 ---
 
 
-https://wyremontuje.pl/
+
 
 Lately I have added some upgrades (via telegram bot), so that whenever a customer sends new photos, they are synced to its photo centered repo.
 
@@ -52,6 +52,7 @@ https://decapcms.org/docs/working-with-a-local-git-repository/
 
 
 ### netlifyCMS === decapCMS
+
 Create a Custom Blog with Astro & NetlifyCMS in MINUTES!
 https://www.youtube.com/watch?v=3yip2wSRX_4
 
@@ -205,6 +206,11 @@ https://github.com/decaporg/decap-cms
 
 ## Conclusions
 
+I cant stop seeing interesting sites out there...
+
+* https://wyremontuje.pl/
+
+
 
 ### KeyStatic CMS with Astro
 
@@ -213,6 +219,10 @@ When you deploy the static site, the `whateverdomain.com/keystatic` path will st
 ![KeyStatic statically deployed UI](/blog_img/web/staticcms/keystatic-ssg-deployed.png)
 
 But you wont be able to make any changes, as the server (API) is NOT running.
+
+### Product Analytics
+
+#### PostHog
 
 ---
 

@@ -171,7 +171,7 @@ sudo iftop
 
 See also [**Portchecker**](https://github.com/dsgnr/portchecker.io)
 
->  portchecker.io is a free online utility to check the port status of a given hostname or IP address. 
+>  Portchecker.io is a free online utility to check the port status of a given hostname or IP address. 
 
 ### Disk Benchmarks
 
@@ -183,9 +183,9 @@ sudo hdparm -I /dev/sda  # Example for /dev/sda (detailed info of the disk)
 sudo apt install ntfs-3g
 ```
 
-![Graphic Walker UI](/blog_img/hardware/sd-samsung.png)
+![SD Samsung](/blog_img/hardware/sd-samsung.png)
 
-![Graphic Walker UI](/blog_img/hardware/sd-kingston.png)
+![SD Kingston](/blog_img/hardware/sd-kingston.png)
 
 **Space for Home Lab**
 

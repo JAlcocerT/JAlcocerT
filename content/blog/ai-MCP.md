@@ -7,6 +7,8 @@ description: 'Reviewing how MCP protocol works. From LangGraph to OpenAI Agents.
 url: 'ai-understanding-mcp-framework'
 ---
 
+And Anthropic has made it...[a protocol for LLMs](https://www.anthropic.com/news/model-context-protocol), **MCP**.
+
 1. [What](#mcp) it is Model Context Protocol?
 2. [MCP Examples](#mcp-examples)
 
@@ -29,6 +31,8 @@ https://github.com/githejie/mcp-server-calculator
 https://mcpservers.org/servers/executeautomation/mcp-playwright
 https://mcpservers.org/category/web-scraping
 https://github.com/lastmile-ai/openai-agents-mcp
+
+https://github.com/ALucek/quick-mcp-example
 
 https://openai.github.io/openai-agents-python/mcp/#mcp-servers
 

@@ -674,6 +674,8 @@ flatpak install flathub org.kde.kdenlive
 
 ### Youtube video Descriptions
 
+How about something like:
+
 ```md
 Kampinos, 8 xyz 2025
 DJI OA5Pro 4k/30/RS/UW
@@ -684,3 +686,5 @@ DJI OA5Pro 4k/30/RS/UW
 
 [Any other relevant description text can go here]
 ```
+
+And they can be automatic, I mean...when you join your parts, get already a `.txt` telling which parts you joined, in which second...

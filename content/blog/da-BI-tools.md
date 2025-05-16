@@ -3,7 +3,7 @@ title: "BI Tools for the AI era"
 date: 2025-02-26T00:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'Setting up Data Analytics Visualization (Business Intelligence) tools with containers.'
+description: 'Setting up Data Analytics Visualization (Business Intelligence) tools with containers. From Superset to Kibana'
 url: 'setup-bi-tools-docker'
 ---
 
@@ -336,9 +336,22 @@ Elasticsearch DSL is the most powerful and flexible query language, allowing for
 
 **Relationship to Lucene Queries**
 
-* Both KQL and DSL are ultimately translated into Lucene queries.
+* Both KQL and DSL are ultimately **translated into Lucene queries**.
 * KQL acts as a higher-level abstraction, simplifying the process for users.
-* DSL provides the most control, as it is the direct Json that is sent to elasticsearch.
+* **DSL provides the most control**, as it is the direct Json that is sent to elasticsearch.
+
+With DSL you can do cool things, like the *contain filter*:
+
+```json
+{
+  "query": {
+    "wildcard": {
+      "SOME_ES_SOURCE.metric.keyword": "*gponPonOltsideOpInfoTxOpticalSignalLevel*"
+    }
+  }
+}
+```
+
 
 **Translating Your KQL Query to DSL**
 

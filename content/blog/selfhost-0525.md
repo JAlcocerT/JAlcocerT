@@ -7,9 +7,9 @@ description: 'Selfhosted Apps that simplify my workflow as of May 2025: Termix, 
 url: 'selfhosted-apps-may-2025'
 ---
 
-Ive been following closely the newsletter from: https://selfh.st/icons/
+Ive been following closely this awsome newsletter from: https://selfh.st/icons/
 
-And [these apps](https://selfh.st/apps/) have taken my attention: 
+And [these apps](https://selfh.st/apps/) have taken my attention lately:
 
 1. https://github.com/karakeep-app/karakeep
 
@@ -21,7 +21,7 @@ A replacement for raindrop....
 
 > MIT |  A real-time app for conducting a remote sprint retrospective meeting 
 
-Having retrospective is really important when working Agile...
+Having retrospectives is really important when [working Agile](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/#from-the-experience)...
 
 3. https://github.com/formsmd/formsmd
 
@@ -46,10 +46,9 @@ An interesting alternative also to [formbricks](https://jalcocert.github.io/JAlc
 
 As I recently had some trouble with my phone...
 
-
 6. https://github.com/besoeasy/file-drop
 
-filebrowser alternative!
+> Filebrowser alternative!
 
 7. BYOD, I mean bring your own music https://github.com/swingmx/swingmusic
 
@@ -61,11 +60,11 @@ filebrowser alternative!
 
 ## New SelfH Apps
 
-I had a look to https://github.com/localtunnel/server, just cloudflared is the go to option for me.
+I had a look to https://github.com/localtunnel/server, just that still, [cloudflared](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/) is the go to option for me.
 
 ### Termix
 
-Termix, not [termux](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#termux), its being great:
+Termix, *not [termux](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#termux)*, its being great to get all my servers at one place:
 
 * https://github.com/LukeGus/Termix
   * https://github.com/LukeGus/Termix/wiki/Docker
@@ -76,9 +75,20 @@ Termix, not [termux](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#t
 
 {{< youtube "s15a-ysSQE0" >}}
 
-![alt text](/blog_img/selfh/termix-ui.png)
+![Termix UI](/blog_img/selfh/termix-ui.png)
 
 ![alt text](/blog_img/selfh/termix-user.png)
+
+Now I can have one tab for each home selfhost related device:
+
+* http://192.168.1.11:9000/ the x300
+* .1.13 this x13 laptop...
+* A distant Pi and connect via tailscale to [see its temperature](https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/#pi4)...
+
+```sh
+udo apt update && sudo apt upgrade -y
+vcgencmd measure_temp
+```
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Termix" title="Termix with Docker 🐋 ↗" >}}
@@ -86,6 +96,7 @@ Termix, not [termux](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#t
 
 ```yml
 services:
+#http://192.168.1.11:8090/
   termix:
     image: ghcr.io/lukegus/termix:latest
     container_name: termix
@@ -138,14 +149,9 @@ vcgencmd measure_temp pmic
 ### CheckMate
 
 * https://github.com/bluewave-labs/checkmate
-* https://checkmate.so/
+  * https://checkmate.so/
 
-
-> aGPL | Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
-
-
-
-
+> aGPL | Checkmate is an open-source, self-hosted tool designed to **track and monitor server hardware**, uptime, response times, and incidents in real-time with beautiful visualizations.
 
 ### Publiteme
 
@@ -164,23 +170,19 @@ For product people in the room:
 > Agpl v3 | Usertour is an open-source user onboarding platform designed for developers. It allows you to create in-app product tours, checklists, and launchers in minutes—effortlessly and with full control.The open-source alternative to Userflow and Appcues
 
 
-
-
 ### Recap from Spring 2025
 
 I was covering recently nextcloud...
 
-![alt text](/blog_img/selfh/nextcloud-untrusteddomain.png)
+![NextCloud Untrusted Domain](/blog_img/selfh/nextcloud-untrusteddomain.png)
 
-and found out about OpenCloud:
-
-https://www.youtube.com/watch?v=Ud9FEmNOgLs
+and found out about [OpenCloud](https://www.youtube.com/watch?v=Ud9FEmNOgLs)
 
 * https://github.com/opencloud-eu/opencloud
 
 > Apache v2 | This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.
 
-![alt text](/blog_img/selfh/dockerprune.png)
+![Docker Prune Satisfaction](/blog_img/selfh/dockerprune.png)
 
 #### AI Apps Im SelfHosting
 
@@ -204,7 +206,7 @@ https://www.youtube.com/watch?v=Ud9FEmNOgLs
 
 
 * https://github.com/ggozad/oterm
-* https://pypi.org/project/oterm/
+  * https://pypi.org/project/oterm/
 
 ![Oterm](/blog_img/GenAI/oterm.png)
 
@@ -228,7 +230,6 @@ Oterm seems to [support MCP](https://ggozad.github.io/oterm/mcp/?h=mcp#tools)
 * <https://github.com/danny-avila/LibreChat/tree/main>
     * <https://github.com/danny-avila/LibreChat/blob/main/docs/install/docker_compose_install.md>
     * mongoDB: <https://docs.librechat.ai/features/manage_your_database.html> -->
-
 
 * https://github.com/danny-avila/LibreChat
 
@@ -294,11 +295,11 @@ Which resonates with my recent [post on BI Tools](https://jalcocert.github.io/JA
 
 Recently I saw a really cool podcast from TDOAC:
 
-https://www.youtube.com/watch?v=Kl-I7sUcAOY
+<!-- https://www.youtube.com/watch?v=Kl-I7sUcAOY -->
 
 {{< youtube "Kl-I7sUcAOY" >}}
 
-And one of the messages I got was:
+And **one of the messages** I got was:
 
 * 70% more of the same
 * 20% better

@@ -246,6 +246,8 @@ Optionally, you can **extract the mp3 audio** of your joined video, edit it with
 ffmpeg -i output.mp4 -vn output.mp3
 ```
 
+#### Automatic Video Chapters
+
 Dont forget to add **chapters to your video description**:
 
 ```sh
