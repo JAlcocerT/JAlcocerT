@@ -54,7 +54,9 @@ To cultivate a product vision mindset, data analysts should focus on the followi
 * Iterative development: Embrace an agile approach to continuously improve data products based on user feedback and changing market conditions.
 * Technical proficiency: Stay updated on the latest data analytics tools, techniques, and industry trends to create innovative data products that offer a competitive edge.
 
-## The Benefits of a Product Vision Mindset
+## Conclusions
+
+### The Benefits of a Product Vision Mindset
 
 By adopting a product vision mindset, any analysts can get several benefits:
 
@@ -62,6 +64,15 @@ By adopting a product vision mindset, any analysts can get several benefits:
 * Increased user satisfaction: Tailoring data products to user needs enhances their overall experience, leading to higher satisfaction and engagement.
 * Improved efficiency: Focusing on creating valuable data products helps analysts prioritize their efforts and allocate resources effectively, ultimately increasing productivity.
 * Career growth: A product vision mindset positions data analysts as strategic partners within the organization, opening up opportunities for career advancement and professional development.
+
+### PostHog for Product Analytics
+
+How about combining product + **POSTHOG** + [A|B Testing](https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/)?
+
+<!-- https://www.youtube.com/watch?v=C2ICJbICfsg -->
+
+{{< youtube "C2ICJbICfsg" >}}
+
 
 ---
 

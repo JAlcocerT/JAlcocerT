@@ -1,9 +1,9 @@
 ---
-title: "Server Monitoring [Recap]. Beszel and more"
+title: "Server Monitoring [Recap]. Know your hardware health."
 date: 2025-02-05
 draft: false
 tags: ["Dev"]
-description: 'Container Monitoring with Beszel. Compared with Netdata, Grafana...'
+description: 'Container Server Monitoring with Beszel. Compared with Netdata, Grafana...'
 url: 'how-to-setup-beszel-monitoring'
 ---
 
@@ -106,46 +106,25 @@ systemctl --type=service --state=running
 # sudo systemctl stop tianji-reporter.service
 ```
 
-
-{{< details title="If you just need web analytics - See Medama 📌" closed="true" >}}
-
-
-```yml
-version: '3.9'
-services:
-  medama:
-    image: ghcr.io/medama-io/medama:latest
-    container_name: medama
-    restart: unless-stopped
-    environment:
-      - LOGGER=pretty
-    ports:
-      - "8085:8080"
-    volumes:
-      - ./data:/app/data
-```
-
-{{< /details >}}
-
-
-
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/Analytics/medama_docker-compose.yml" title="For just web analytics - See Medama Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### Netdata and Grafana
 
 
 {{< cards cols="1" >}}
-  {{< card link="https://fossengineer.com/selfhosting-netdata/" title="NetData Setup ↗" >}}
+  {{< card link="https://fossengineer.com/selfhosting-netdata/" title="NetData Setup 🐋 ↗" >}}
 {{< /cards >}}
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/selfh-grafana-monit/" title="Grafana Setup with a Pi ↗" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/selfh-grafana-monit/" title="Grafana Setup with a Pi 🐋 ↗" >}}
 {{< /cards >}}
 
 And you can actually use Netdata + Grafana + Prometheus to make a cool monitoring setup.
 
-
 {{< cards cols="1" >}}
-  {{< card link="" title="See how to build such monitoring at noted.lol ↗" >}}
+  {{< card link="https://noted.lol/netdata-prometheus-and-grafana/" title="See how to build such monitoring at noted.lol ↗" >}}
 {{< /cards >}}
 
 ### Internet Monitoring Tools

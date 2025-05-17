@@ -75,7 +75,7 @@ And some **add-ons**:
 1. Calendar meetings: see [cal.com](https://cal.com/jalcocertech/consulting)
 2. Newsletters: see [mailerlite.com](https://www.mailerlite.com/invite/225babb421546)
 3. Payments? Try stripe *which links with paypal, bank accounts, CC's*
-4. Web Analytics - Id go for GDPR compliant and cookieless, like: umami, tianji
+4. Web Analytics - Id go for GDPR compliant and cookieless, [like: umami, tianji,...](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics)
 5. Uptime Monitoring
 6. Chatbot with AI?
 7. *Optional:* Social Contacts,...

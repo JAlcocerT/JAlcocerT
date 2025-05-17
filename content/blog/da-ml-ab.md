@@ -126,6 +126,7 @@ The p-value resulting from the test is compared to a pre-defined significance le
 **Please note** that this is a basic example. Adapt it according to your specific use case.
 {{< /callout >}}
 
+
 ---
 
 ## FAQ

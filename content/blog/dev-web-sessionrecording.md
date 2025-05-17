@@ -31,6 +31,18 @@ Copy the json before the `</head>`, normally in `BaseLayout.astro`
 
 ## PostHog
 
+#### Record and Replay Web
+
+https://www.rrweb.io/
+https://github.com/rrweb-io/rrweb
+https://github.com/rrweb-io/rrweb/blob/master/guide.md
+
+https://docs.uxwizz.com/
+
+https://docs.sessionstack.com/docs/overview
+
+Matomo - it has session recording in the on premise option, but is to be paid for that plugin
+
 ---
 
 ## FAQ

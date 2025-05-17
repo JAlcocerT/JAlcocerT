@@ -19,15 +19,15 @@ Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhos
 {{< /callout >}}
 
 ## General OSS Resources
+
 - [Open Source Alternative - Add Project](https://www.opensourcealternative.to/add-project)
 - [Privacy Tools](https://www.privacytools.io/)
 - [Selfh.st](https://selfh.st/)
 
 ## SelfHosted Email
 
-
 {{< callout type="warning" >}}
-This is advance
+This is advanced
 {{< /callout >}}
 
 Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101ee05cc64a59b46e4d299f?ref=selfh.st)
@@ -302,55 +302,3 @@ services:
 
 
 #Log in to your Huginn instance using the username admin and password password
-
-
-```yml
-##https://posthog.com/
-
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/posthog/posthog/HEAD/bin/deploy-hobby)"
-
-#version: '3'
-
-services:
-  posthog:
-    image: posthog/posthog
-    ports:
-      - "8010:8000"
-    environment:
-      - DATABASE_URL=postgresql://posthog:posthogpassword@db:5432/posthog
-      - CLICKHOUSE_HOST=clickhouse
-      - REDIS_URL=redis://redis:6379/0
-      - SECRET_KEY=albertoyhermosin123
-    depends_on:
-      - db
-      - clickhouse
-      - redis
-    networks:
-      - posthog-net
-
-  db:
-    image: postgres:12
-    environment:
-      - POSTGRES_DB=posthog
-      - POSTGRES_USER=posthog
-      - POSTGRES_PASSWORD=posthogpassword34567
-    networks:
-      - posthog-net
-
-  clickhouse:
-    image: yandex/clickhouse-server:latest
-    ports:
-      - "8123:8123"
-    networks:
-      - posthog-net
-
-  redis:
-    image: redis:6
-    ports:
-      - "6379:6379"
-    networks:
-      - posthog-net
-
-networks:
-  posthog-net:
-```

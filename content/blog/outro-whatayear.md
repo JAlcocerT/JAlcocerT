@@ -103,12 +103,12 @@ From an [AI driven content](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-
 ### Get Better at Webs
 
 Good recap of whats going on at JS: https://stateofjs.com/en-US
-* Web Analytics: with [Umami](https://fossengineer.com/selfhosting-umami-with-docker/) or Tianji
+* Web Analytics: with [Umami](https://fossengineer.com/selfhosting-umami-with-docker/) or [Tianji...](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics)
 * CMS for Webs: DecapCMS, ...
 
-After few months, fixed [my RPi site](https://jalcocert.github.io/RPi/), as there was sth wrong with the Jekyll automatic CI/CD build.
+After few months if [CI/CD build](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#github-actions-for-web-projects) errors, fixed [my RPi site](https://jalcocert.github.io/RPi/), as there was sth wrong with the Jekyll automatic CI/CD build.
 
-Maybe will need to [migrate from Jekyll](https://simplyexplained.com/blog/migrating-this-blog-from-jekyll-to-eleventy/) at some point to HUGO/Astro.
+Maybe, just maybe, will need to [migrate from Jekyll](https://simplyexplained.com/blog/migrating-this-blog-from-jekyll-to-eleventy/) at some point to HUGO/Astro.
 
 {{% /steps %}}
 

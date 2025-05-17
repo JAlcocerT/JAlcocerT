@@ -341,21 +341,29 @@ docker run -d --name docker-socket-proxy -e CONTAINERS=1 -e POST=0 -e PUT=0 -e D
 
 ### Better WebAnalytics
 
-Lately I tried littlyx, but I saw this cool post on [Umami](https://github.com/umami-software/umami/releases): https://jakubwolynko.eu/blog/202505-hosting-umami-on-vercel/
+It's always great to see new options appearing on the web analytics space.
 
-Also, https://github.com/Litlyx/litlyx which i discovered few months back
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="Specially, when those are SelfHostable WebAn 🐋✅ ↗" >}}
+{{< /cards >}}
 
-![alt text](/blog_img/web/weban/littlyx-weban.png)
+I saw this cool post on [Umami](https://github.com/umami-software/umami/releases): https://jakubwolynko.eu/blog/202505-hosting-umami-on-vercel/
 
+Yet, lately I tried littlyx: https://github.com/Litlyx/litlyx which i discovered few months back
+
+![Littlyx Web Analytics](/blog_img/web/weban/littlyx-weban.png)
+
+> Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
 
 ### Automated Projects Docs
 
-Wouldnt it be great to have a project documentation automatically and AI generated?
+> Wouldnt it be great to have a project documentation/on boarding guide automatically (and AI) generated?
 
 <!-- 
 https://git.exadel.com/exadel-ai-practice/accelerator/project-documentation-generator
  -->
 
+It's all about using what we know already, **LLMs with appropiate context**:
 
 * OpenAI API Keys - <https://platform.openai.com/api-keys>
 * Anthropic - <https://console.anthropic.com/settings/keys>
