@@ -87,7 +87,7 @@ sudo docker stats linkstack
 
 See the results:
 
-![alt text](/blog_img/web/web-linkstack.png)
+![LinkStack UI](/blog_img/web/web-linkstack.png)
 
 ## Bento Portfolio as LinkinBio Alternative
 

@@ -395,7 +395,7 @@ curl -s https://dm-real-estate.com/sitemap.xml -o /dev/null -w "%{http_code}\n"
 curl -s https://dm-real-estate.com/robots.txt | head -n 10 #see the first 10 lines
 ```
 
-2. Notify Search engines:
+2. Notify the Search engines about the changes:
 
 ```sh
 curl "https://www.google.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"

@@ -263,11 +263,12 @@ By combining **Docker with Cloudflare Zero Tunnel**, we can securely expose serv
    - Run `cloudflared` as a container linked to your own services:
    
 ```bash
-docker network create tunnel
+#it will be created automatically and called: cloudflared_tunnel as per the <containername><networkname>
+#docker network create tunnel
 ```
 
 ```yml
-version: '3.8'
+#version: '3.8'
 
 services:
   cloudflared:
@@ -297,7 +298,7 @@ docker network connect tunnel your_service_container
 - [Cloudflare One Dash](https://one.dash.cloudflare.com/)
 - [Cloudflare Docker Image](https://hub.docker.com/r/cloudflare/cloudflared)
 
-
+![Cloudflare Zero Trust UI](/blog_img/selfh/CF-Cloudflared.png)
 
 {{< details title="Is my home IP safe with Cloudflare? 📌" closed="true" >}}
 

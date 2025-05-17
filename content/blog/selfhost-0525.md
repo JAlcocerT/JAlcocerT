@@ -60,11 +60,18 @@ As I recently had some trouble with my phone...
 
 ## New SelfH Apps
 
-I had a look to https://github.com/localtunnel/server, just that still, [cloudflared](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/) is the go to option for me.
+I had a look to https://github.com/localtunnel/server, just that still, [cloudflared](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/) is the go to option for me [when exposing homelab containers](https://jalcocert.github.io/JAlcocerT/why-i-love-containers/).
 
 <!-- https://studio.youtube.com/video/k75PviBQeA0/edit -->
 
 {{< youtube "k75PviBQeA0" >}}
+
+New apps always come with new tricks
+
+```sh
+openssl rand -base64 12 #for secrets
+openssl rand -hex 32 #for apikeys
+```
 
 
 ### Termix
@@ -181,13 +188,18 @@ I was covering recently nextcloud...
 
 ![NextCloud Untrusted Domain](/blog_img/selfh/nextcloud-untrusteddomain.png)
 
-and found out about [OpenCloud](https://www.youtube.com/watch?v=Ud9FEmNOgLs)
+found out about
+
+1. [OpenCloud](https://www.youtube.com/watch?v=Ud9FEmNOgLs)
 
 * https://github.com/opencloud-eu/opencloud
 
 > Apache v2 | This is the main repository of the OpenCloud server. It contains the golang codebase for the backend services.
 
-![Docker Prune Satisfaction](/blog_img/selfh/dockerprune.png)
+2. Using [ProtonDrive](https://blog.otterlord.dev/posts/proton-drive-rclone/) with [rclone](https://rclone.org/protondrive/#configurations)
+
+Which I could not resist to try: https://github.com/JAlcocerT/Docker/tree/main/Backups#rclone
+
 
 #### AI Apps Im SelfHosting
 
@@ -298,7 +310,7 @@ Which resonates with my recent [post on BI Tools](https://jalcocert.github.io/JA
 
 ## Conclusions
 
-Recently I saw a really cool podcast from TDOAC:
+Recently I saw a really cool podcast from DOAC:
 
 <!-- https://www.youtube.com/watch?v=Kl-I7sUcAOY -->
 
@@ -347,13 +359,21 @@ It's always great to see new options appearing on the web analytics space.
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="Specially, when those are SelfHostable WebAn 🐋✅ ↗" >}}
 {{< /cards >}}
 
-I saw this cool post on [Umami](https://github.com/umami-software/umami/releases): https://jakubwolynko.eu/blog/202505-hosting-umami-on-vercel/
+I saw a cool post about [Umami](https://github.com/umami-software/umami/releases) and how 
 
-Yet, lately I tried littlyx: https://github.com/Litlyx/litlyx which i discovered few months back
+Yet, lately I tried [littlyx](https://dashboard.litlyx.com/): which I discovered few months back
 
-![Littlyx Web Analytics](/blog_img/web/weban/littlyx-weban.png)
+<!-- ![Littlyx Web Analytics](/blog_img/web/weban/littlyx-weban.png) -->
+
+{{< cards >}}
+  {{< card link="https://github.com/Litlyx/litlyx" title="Litlyx Repo" image="/blog_img/web/weban/littlyx-weban.png" subtitle="How Litlyx web analytics looks" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/" title="Litlyx Post Views Distribution" image="/blog_img/web/weban/litlyx.png" subtitle="How could this not relate with Pareto?" >}}
+{{< /cards >}}
 
 > Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
+
+
+![Docker Prune Satisfaction](/blog_img/selfh/dockerprune.png)
 
 ### Automated Projects Docs
 

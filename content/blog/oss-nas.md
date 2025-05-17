@@ -296,6 +296,8 @@ Where to get a VPS?
 
 * Hetzner, ...
 * https://lowendstock.com/
+* Some would say to [Oracle](https://www.oracle.com/cloud/sign-in.html), but I got my account shut down without a reason (nothing like selfhosting P2P programs...which was interesting and customer service did not came back with a solution)
+* GCP: https://console.cloud.google.com/
 
 ### Other 
 

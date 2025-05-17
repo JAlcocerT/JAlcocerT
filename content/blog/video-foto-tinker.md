@@ -186,7 +186,7 @@ ffmpeg -i cut_output.mp4 -i output.mp3 -map 0:v -map 1:a -c:v copy -c:a libmp3la
 
 #### AI Powered shorts
 
-A friend told me recently to have a look to:
+A friend told me recently to have a look to the following to create **interesting youtube shorts**:
 
 * Suno.ai for audio/songs...
 * Klingai.com for video generated from images/text
@@ -195,8 +195,6 @@ A friend told me recently to have a look to:
 Whatever you do, dont forget to add proper [video description](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#youtube-video-descriptions)
 
 Its kind of what [these channels](https://www.youtube.com/watch?v=UhvMylLrKw8) do!
-
-
 
 
 #### Telemetry
@@ -216,7 +214,7 @@ But I was wrong, action cameras have built in acelerometers (just that not all o
 ### Kdenlive
 
 
-I was tinkering with KDEnlive sometime ago...
+I was tinkering with KDEnlive sometime ago, [with the x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#video-editing-101/)...
 
 ```sh
 flatpak install flathub org.kde.kdenlive

@@ -31,6 +31,7 @@ A lot of what I have achieved, would not be possible w/o **proper attention**.
     * [The-Wise-Pomodoro](https://the-wise-pomodoro.firebaseapp.com/)
     * [Focus Tide](https://focustide.app/)
     * Focus-To-Do, ToDoIst
+    * https://pomofocus.io/
 
     * https://github.com/notclickable-jordan/starbase-80
 
@@ -104,12 +105,7 @@ I mean, Selfhostable and **RSS Feeds**!
 2. [DrawIO Diagrams](https://fossengineer.com//selfhosting-drawio-with-docker)
 3. [LeanTime](https://fossengineer.com/selfhosting-Leantime-docker)
 
-4. For note taking apps:
-
-```sh
-#joplin
-#logseq
-```
+4. For note taking apps: see [trilium](https://fossengineer.com/selfhosting-Trilium-docker/), joplin or [logseq](https://fossengineer.com/selfhosting-logseq/)
 
 <!-- ## FAQ
 

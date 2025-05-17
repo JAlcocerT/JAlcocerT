@@ -11,7 +11,7 @@ Recently I was setting a VPS to [software for weddings](https://jalcocert.github
 
 And i found this on reddit - https://www.reddit.com/r/selfhosted/comments/1eb4bi5/i_just_released_beszel_a_server_monitoring_hub/
 
-So I went back to https://console.hetzner.cloud/projects to try the setup.
+So I went back to the [VPS provider](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#other-clouds) https://console.hetzner.cloud/projects to try the setup.
 
 
 ## Beszel

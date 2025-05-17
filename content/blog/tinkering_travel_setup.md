@@ -149,7 +149,6 @@ To record your **routes as GPX**
 
 > FitoTrack - A privacy oriented fitness tracker for Android
 
-
 And they can be combined with **FitTrackee**
 
 * https://github.com/SamR1/FitTrackee

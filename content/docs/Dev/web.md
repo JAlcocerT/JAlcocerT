@@ -90,7 +90,8 @@ And some **add-ons**:
 ### Select a SSG
 
 Choose the SSG (Hugo, Astro,...)
-And find/create a theme you like
+
+And find/create/tweak a theme you like!
 
 ### Tweak the Theme and Build
 
