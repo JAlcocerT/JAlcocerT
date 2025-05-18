@@ -34,9 +34,7 @@ Improvements:
 
 1. [DaisyUI CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#daisyui) for Carousels, FAQ,...
 
-
 {{< details title="Adding DaisyUI to Astro Themes | Cybernetic 📌" closed="true" >}}
-
 
 As always, I got amazed with other themes, like:
 
