@@ -10,7 +10,7 @@ sidebar:
 ---
 
 {{< callout type="info" >}}
-New to SSGs and HUGO? See the [**101 HUGO** Guide](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
+New to SSGs and HUGO? See the [**101 HUGO** Guide](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)
 {{< /callout >}}
 
 ## HUGO Themes
@@ -21,7 +21,11 @@ New to SSGs and HUGO? See the [**101 HUGO** Guide](https://jalcocert.github.io/J
 
 > MIT Geeky is a Personal Hugo blog theme focused on high speed. Geeky is fully responsive, Superfast, and powered by Bootstrap v5.
 
+2. [Tweaked](https://github.com/JAlcocerT/JAlcocerT/tree/main/themes/hextra/layouts/blog) HUGO HEXTRA - This site!
 
+{{< callout type="info" >}}
+You can clone this HUGO site and run it locally [with HUGO v0.117](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)
+{{< /callout >}}
 
 ### Presentations with HUGO
 

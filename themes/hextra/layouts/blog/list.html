@@ -46,10 +46,17 @@
               {{ end -}}
             {{- end -}}
             <p class="opacity-80 mt-4 leading-7">{{- partial "utils/page-description" . -}}</p>
-            <p class="opacity-80 mt-1 leading-7">
+            <p class="opacity-80 mt-1 leading-7 flex items-center gap-4">
               <a class="text-[color:hsl(var(--primary-hue),100%,50%)] underline underline-offset-2 decoration-from-font" href="{{ .RelPermalink }}">
                 {{- $readMore -}}
               </a>
+              {{ with .Params.tags }}
+                <span class="text-sm opacity-60">
+                  {{- range $index, $tag := . -}}
+                    {{- if $index }}, {{ end -}}{{ $tag -}}
+                  {{- end -}}
+                </span>
+              {{ end }}
             </p>
             <p class="opacity-50 text-sm mt-4 leading-7">{{ partial "utils/format-date" .Date }}</p>
           </div>
