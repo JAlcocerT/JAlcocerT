@@ -20,6 +20,9 @@ This is a recap of the best GIT related tricks I have so far.
 ### Github
 
 1. Use vscode on the cloud with: https://github.com/codespaces/
+
+![alt text](/blog_img/dev/gh-codespaces.png)
+
 2. GISTS are a great way to share code: https://jalcocert.github.io/JAlcocerT/github-gists/
 
 ```sh
@@ -156,13 +159,13 @@ ext install ms-vscode-remote.vscode-remote-extensionpack #do this one inside VSC
 
 Then, do `CTRL SHIFT P` and write: `connect to host`
 
-![alt text](/blog_img/dev/remote-dev.png)
+![VSCode Remote Dev](/blog_img/dev/remote-dev.png)
 
 > [This video](https://www.youtube.com/watch?v=cOopQQIL8JU) summarizes it very well
 
 When you are done, you will get the possibility to connect confortably:
 
-![alt text](/blog_img/dev/dev-via-ssh.png)
+![VSCode SSH Development](/blog_img/dev/dev-via-ssh.png)
 
 **Container Dev**
 
@@ -182,8 +185,7 @@ groups jalcocert
 
 > This can be very useful to do Jekyll web dev as seen [here](https://www.youtube.com/watch?v=X7guekGZM20)
 
-Generally, to develop inside a container - you will need one
-
+Generally, to develop inside a container...*you will need one*.
 
 {{< callout type="info" >}}
 For a Python Dev Container, you can get one with **this kind of [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps)**.

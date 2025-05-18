@@ -28,7 +28,7 @@ url: 'tech-for-podcast'
 3. Search built in (with algoliasearch)
 4. Amazing Docs: https://starlight.astro.build/
 5. OpenGraph (OG) image when shared (also when sharing posts)
-
+6. All the sample features at [their sample posts](https://github.com/withastro/starlight/blob/main/docs/src/content/docs/guides/sidebar.mdx)
 
 ```sh
 npm create astro@latest -- --template starlight
@@ -45,12 +45,16 @@ npm run dev
 {{< /cards >}}
 
 
-**Whats missing (imo)?**
+**What was missing (imo)?**
 
-1. Blog Interface
+1. Blog/Archives Interface
 2. Pages Interface
 3. Tag system
-4. Some kind of "directory Template" to search
+4. Some kind of "app [directory](https://astro-nomy.vercel.app/blog) Template" to search, like [this one](https://github.com/JAlcocerT/astro-nomy)
+
+{{< callout type="info" >}}
+Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%5B%5D=free) from time to time to get ideas
+{{< /callout >}}
 
 ### PodCast Website
 

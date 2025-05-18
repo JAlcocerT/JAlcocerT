@@ -1,5 +1,5 @@
 ---
-title: "Why not tinkering with a Dron?"
+title: "Tinkering with a Dron?"
 date: 2024-09-04T10:20:21+01:00
 draft: false
 tags: ["dev"]
