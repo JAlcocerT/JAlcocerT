@@ -134,6 +134,16 @@ ffmpeg -i "Input.mov" -vf lut3d="ARRIP3D65PQ108-33.cube" -s 1920x1080 -c:v dnxhd
 
 #### Shorts
 
+While 1080p (Full HD: 1920x180) is a very common and recommended resolution for YouTube, you can definitely upload videos in other resolutions, both higher and lower.
+
+* Frame Rate: Upload your video in the same frame rate it was recorded. Common frame rates include 24, 25, 30, 48, 50, and 60 frames per second.
+
+* Aspect Ratio: The standard aspect ratio for YouTube is 16:9. While other aspect ratios are supported, 16:9 generally provides the best viewing experience across different devices.
+
+4K UHD (Ultra High Definition): This is the most common 4K resolution for televisions, monitors, and streaming services. Its dimensions are 3840 pixels wide by 2160 pixels high (3840 x 2160). This resolution has exactly four times the number of pixels as 1080p (1920 x 1080).
+
+
+
 How about adding [TTS generated audio](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/openai-tts.py) to shorts?
 
 
@@ -192,10 +202,15 @@ ffmpeg -i "$(ls *.MP4)" -i audio_reply.wav \
 ffmpeg -i cut_output.mp4 -i output.mp3 -map 0:v -map 1:a -c:v copy -c:a libmp3lame -q:a 0 -shortest final_output.mp4
 ```
 
-
 <!-- https://www.youtube.com/shorts/u3-5yN9xIv0 -->
 
 {{< youtube "u3-5yN9xIv0" >}}
+
+You can also take a 1080p part from a 4K video withour rencoding:
+
+```sh
+ffmpeg -i DJI_20250518172824_0001_D.MP4 -c copy -bsf:v hevc_metadata=crop_left=960:crop_right=960:crop_top=0:crop_bottom=1080 output_horizontal_1080p_no_encode.mp4
+```
 
 #### AI Powered shorts
 
@@ -217,13 +232,18 @@ Initially I tought that would be possible only [with the GoPro...](https://jalco
 
 * https://goprotelemetryextractor.com/cycling-stats-video-overlay?affi=safabrian#download_0
 
-But I was wrong, action cameras, including the oa5pro, have built in acelerometers (just that not all of them have GPS's)
+But I was wrong, action cameras, including the oa5pro, have built in acelerometers (just that not all of them have GPS's):
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#gyroflow" title="OA5Pro Acelerometer Data Extraction | Post exploring Gyroflow ↗ " >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction" title="GoPro Telemetry | Karting Post Section ↗ " >}}  
 {{< /cards >}}
 
+```sh
+#choco install exiftool
+#exiftool -ver
+exiftool -ee DJI_20250518182847_0015_D.MP4 #working when recorded W and no RS!
+```
 
 {{< callout type="info" >}}
 On the OA5Pro, you need to record without RS and with Wide mode to get such data.
@@ -249,18 +269,41 @@ flatpak install flathub org.kde.kdenlive
 {{< youtube "V0_yp-ziqvI" >}}
 
 
-Have rediscovered it for LUT (cube files) color grading application!
+Have rediscovered KDEnlive [for LUT](https://docs.kdenlive.org/en/effects_and_filters/video_effects/color_image_correction/applylut.html) (`.cube` files) color grading application!
+
+![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
+
+I personally like the `CINEMATIC.cube` that KDE brings:
+
+```sh
+#find / -name "*.cube" 2>/dev/null
+#cd /var/lib/flatpak/app/org.kde.kdenlive/x86_64/stable/1e36391e875577fd4cd61f5a02e7e52d1cf22598a625d235d49546fd39b77c0c/files/share/kdenlive/luts
+cp CINEMATIC.cube /home/jalcocert/Desktop
+```
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Action Cam Review" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#kdenlive" title="KDenLive with OA5Pro" image="/blog_img/outro/kdenlive.png" subtitle="Editing video with kdenlive" >}}
 {{< /cards >}}
 
+Which can *potentially* be applied via FFMPEG CLI:
+
+```sh
+# ffmpeg -i DJI_20250518175448_0005_D.MP4 -ss 0 -to 10 -c copy output_first_10_seconds.mp4
+# ffmpeg -i output_first_10_seconds.mp4 -i ./CINEMATIC.cube -filter_complex "lut3d" -c:a copy output_first_10_seconds_cinematic.mp4
+```
+
 ### Gyroflow
 
 I already had [a look to Gyroflow](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#gyroflow) on the last video post.
 
 * https://github.com/gyroflow/lens_profiles/tree/main/DJI
+
+And it can also be done with [gyroflow-CLI](https://docs.gyroflow.xyz/app/advanced-usage/command-line-cli):
+
+```sh
+gyroflow-cli --input DJI_20250518182847_0015_D.MP4 --output stabilized_video.mp4
+```
 
 {{< callout type="info" >}}
 Watching **4k video on Linux** might not be **fluent** until you install these:
