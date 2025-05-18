@@ -2,7 +2,7 @@
 title: "[Review] Asrock x300 as Home Server"
 date: 2024-11-03
 draft: false
-tags: ["Dev"]
+tags: ["HomeLab"]
 description: Checking my new small factor computer - Asrock x300 with AMD 5600G. AI, video edition and more.
 url: asrock-x300-home-server
 math: true

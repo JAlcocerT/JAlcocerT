@@ -231,6 +231,7 @@ Its kind of what [these channels](https://www.youtube.com/watch?v=UhvMylLrKw8) d
 Initially I tought that would be possible only [with the GoPro...](https://jalcocert.github.io/JAlcocerT/geospatial-data/#exif-and-python-with-gopro)
 
 * https://goprotelemetryextractor.com/cycling-stats-video-overlay?affi=safabrian#download_0
+* https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/
 
 But I was wrong, action cameras, including the oa5pro, have built in acelerometers (just that not all of them have GPS's):
 
@@ -249,6 +250,15 @@ exiftool -ee DJI_20250518182847_0015_D.MP4 #working when recorded W and no RS!
 On the OA5Pro, you need to record without RS and with Wide mode to get such data.
 {{< /callout >}}
 
+#####
+
+How to Telemetry Overlay a Video
+
+I tried to bypass this with: https://jalcocert.github.io/JAlcocerT/polar-data-python-analysis/
+
+and with https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/
+
+Then the geospatial analysis came...https://jalcocert.github.io/JAlcocerT/geospatial-data/
 
 ### Kdenlive
 

@@ -1,9 +1,9 @@
 ---
-title: "About Jobs. HR Prep and LLM Engineers."
+title: "About Jobs. HR Prep and AI Engineers."
 date: 2025-02-10
 draft: false
 tags: ["Dev"]
-description: 'Is it a good moment to change jobs? A curriculum for LLM/ML Engineer?. Time to recap Scraps firecrawl API and Latex.'
+description: 'Is it a good moment to change jobs? A curriculum for LLM/ML Engineer?. Time to recap Scraps firecrawl API and a Latex powered CV.'
 url: 'when-to-apply-for-a-job'
 ---
 
@@ -11,18 +11,26 @@ New year, new **opportunities**.
 
 > Or so some say...
 
-
 * https://www.trueup.io/layoffs
 * https://roadmap.sh/
+
+{{< cards cols="2" >}}
+  {{< card link="https://roadmap.sh/ai-engineer" title="Data Analytics RoadMap" >}}
+{{< /cards >}}
+
+What we could do though is:
+
+1. To understand current job opportunities
+2. To prepare a cool [CV as a code with Latex](#creating-a-responsive-cv)
+
 
 If you are using linkedin, you can see how good is your profile supposed to be: https://www.linkedin.com/sales/login its called the SSI, social selling index.
 
 ## Data for Job Market
 
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scrapping the Web" image="/videos/job_offers.png" subtitle="Post where I tinkered with scrapping tools." >}}
-  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for using BS4, AI Scraps..." >}}
+  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4, AI Scraps..." >}}
 {{< /cards >}}
 
 
@@ -34,7 +42,6 @@ It was all very simple, very clear...
 git clone https://gitlab.com/fossengineer1/cv-check
 cd Scrap_Pracuj
 ```
-
 
 {{< cards >}}
   {{< card link="https://gitlab.com/fossengineer1/cv-check" title="CV-Check" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Testing CVs with AI/LLMs" >}}

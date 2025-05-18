@@ -2,7 +2,7 @@
 title: "Networking - Understanding Domains and DNS Setup"
 date: 2025-12-31
 draft: true
-tags: ["Dev"]
+tags: ["OSS","HomeLab","Dev"]
 description: 'How to Setup DNS for your Domains.'
 summary: 'How to Setup DNS for your Domains'
 url: 'web-domain-basics'

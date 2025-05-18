@@ -41,7 +41,9 @@ I mean, with: HUGO, Astro, NodeJS, jekyll...
 
 And if you are new to Websites, do it (The Web [Deployment](#select-the-deployment-method)) with [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) to get a free subdomain with it.
 
-If you come from a Data Analytics domain and this sounds too far out of reach. You are wrong.
+> If you come from a Data Analytics domain and this sounds too far out of reach.
+
+> > You are wrong. Specially with the vibecoding
 
 I discovered static sites thanks to using first [Flexdashboards in R language](https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/).
 
@@ -71,7 +73,7 @@ See: https://blog.otterlord.dev/posts/dynamic-opengraph/
 {{< /details >}}
 
 {{< callout type="info" >}}
-
+That make a website much cooler!
 {{< /callout >}}
 
 
@@ -169,10 +171,10 @@ firebase deploy #you will get something like -> https://jalcocertech.web.app/
 {{< /cards >}}
 
 {{< callout type="info" >}}
-Some [**CSS**](https://jalcocert.github.io/JAlcocerT/blog/dev-css/) will do the Trick. As well as [**JS** libraries](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites) like: PhotoSwipe,...
+Some [**CSS**](hthttps://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/) will do the Trick. As well as [**JS** libraries](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites) like: PhotoSwipe,...
 {{< /callout >}}
 
-https://stateofjs.com/en-US
+* https://stateofjs.com/en-US
 
 2. **Web Analytics**: you have **several options**, like [Umami](https://fossengineer.com/selfhosting-umami-with-docker/) or Tianji *as alternatives to Google Analytics.*
 

@@ -2,7 +2,7 @@
 title: "What a Year...2025"
 date: 2025-12-30
 draft: false
-tags: ["Dev"]
+tags: ["Year-Review"]
 description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---

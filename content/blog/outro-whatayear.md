@@ -2,9 +2,8 @@
 title: "What a Year..."
 date: 2024-12-30
 draft: false
-tags: ["Dev"]
+tags: ["Year-Review"]
 description: 'Looking back to the learnings of the year 2024.'
-summary: 'Looking back to the learnings of 2024'
 url: 'this-year-was-crazy'
 ---
 

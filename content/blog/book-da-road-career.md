@@ -2,7 +2,7 @@
 title: "[Guide] Kickstart Your Career in Data Analytics "
 date: 2023-06-04
 draft: false
-tags: ["Career"]
+tags: ["Career","D&A"]
 description: 'How to start a (Self-taught) career in data analytics. The skills you need and tips on your first steps.'
 summary: 'In-depth guide for anyone interested in starting a career in data analytics. It covers essential skills, the best educational routes, gaining practical experience, and real-world application of data analytics skills. This guide aims to motivate, inform, and guide you on your journey to become a data analyst'
 url: 'self-taught-career-guide-for-data-analytics'

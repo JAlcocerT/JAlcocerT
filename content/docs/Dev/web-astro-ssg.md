@@ -110,7 +110,6 @@ This one could also be used for CV thanks to its work section.
 
 Looking for app directories or blog sections that you can filter interactively?
 
-
 1. https://github.com/lukenguyen-me/astro-template-directory-website
 
 > Unlicensed | Astro template for a directory website in minimal theme, with reactjs + tailwind + shadcn
@@ -135,7 +134,7 @@ npm install lucide-react
 
 This one has a blog which can be filtered per tags:
   
-4. https://github.com/mickasmt/astro-nomy
+4. https://github.com/mickasmt/astro-nomy which I tinkered with on this post and related repo
 
 > MIT | Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Open Source.
 
@@ -292,3 +291,9 @@ import photopost1b from '/src/assets/img_folder/image.jpg';
 ```
 
 {{< /details >}}
+
+### Math Mermaid and ChartJS for Astro
+
+I discovered the following in a [gh discussion](https://github.com/withastro/starlight/discussions/1259):
+https://astro-digital-garden.stereobooster.com/recipes/math-support-in-markdown/
+https://astro-digital-garden.stereobooster.com/recipes/mermaid-diagrams-in-markdown/

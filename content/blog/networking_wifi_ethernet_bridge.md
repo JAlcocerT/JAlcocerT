@@ -2,7 +2,7 @@
 title: "Networking - Wifi to Ethernet Bridge"
 date: 2024-08-23T10:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["OSS","HomeLab","Dev"]
 description: 'Tinkering with a Raspberry Pi and Networking. Wifi2Ethernet with Wireguard as VPN.'
 url: 'raspberry-pi-networking'
 ---

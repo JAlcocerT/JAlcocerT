@@ -25,6 +25,8 @@ Was testing it [here](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main
 
 ## Diagrams Tools
 
+### DrawIO
+
 * https://app.diagrams.net/ - Draw.io
     * https://github.com/jgraph/drawio
 
@@ -34,18 +36,34 @@ Was testing it [here](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main
 
 Thanks to mermaidJs, we can make cool **diagrams as a code**
 
-And you can use it for free at: https://mermaid.live/edit
+You can use mermaidJS for free at: https://mermaid.live/edit
 
 > I discovered **mermaidJS diagrams** thanks to [HUGO SSG Hextra Theme](https://jalcocert.github.io/JAlcocerT/create-your-website/)
+
+### Excalidraw
+
+* https://github.com/excalidraw/excalidraw
+    * https://excalidraw.com/
+
+> MIT | Virtual whiteboard for sketching hand-drawn like diagrams 
 
 ### Python Diagrams
 
 
 **Python Plotly Graphs**
 
-### [ChartJS](https://www.chartjs.org/) Graphs
+### ChartJS Graphs
 
+* https://www.chartjs.org/
 
+Which can also be [part of HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo) Themes, [with such results](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/#the-costs-of-a-car).
+
+### Structurizr Lite 
+
+* https://github.com/structurizr/lite
+* https://docs.structurizr.com/lite
+
+This free and open source version of Structurizr allows you to view/edit diagrams, view documentation, and view architecture decision records defined via a DSL or JSON workspace. Structurizr Lite can be used standalone for workspace viewing/authoring, or in conjunction with the cloud service/on-premises installation as an authoring/testing/staging environment.
 
 ---
 

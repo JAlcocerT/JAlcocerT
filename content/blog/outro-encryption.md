@@ -1,11 +1,22 @@
 ---
-title: "Encryption."
-date: 2025-07-10
+title: "Encryption. Captchas and more"
+date: 2025-05-20
 draft: false
 tags: ["Dev"]
-description: ''
+description: 'SHA'
 url: 'encryption-101'
 ---
+
+
+## Captchas
+
+### PoW Captcha
+
+1. https://github.com/sequentialread/pow-bot-deterrent
+
+>  A proof-of-work based bot deterrent. Lightweight, self-hosted and copyleft licensed. 
+
+## The SHA256 Algorithm
 
 https://emn178.github.io/online-tools/sha256.html
 
@@ -40,7 +51,7 @@ SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function. Here's
 
 Let's analyze your Python function:
 
-```python
+```py
 def hash_mac(mac):
     mac = f.upper(mac)
     mac = f.regexp_replace(mac, '[-:]', '')

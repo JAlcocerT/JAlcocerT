@@ -2,7 +2,7 @@
 title: "[Review] Tapo P110"
 date: 2022-11-03
 draft: false
-tags: ["Dev"]
+tags: ["HomeLab"]
 description: Checking my first Smart Plug Connecting it with Home Assistant [HA].
 url: tapo-p110-review
 ---

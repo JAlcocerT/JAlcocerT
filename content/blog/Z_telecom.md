@@ -2,7 +2,7 @@
 title: "Interesting Telecom Concepts"
 date: 2023-12-31T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting","Web"]
+tags: ["Analytics","D&A"]
 description: 'Interesting Telecom stuff I got to know while using a Data LakeHouse'
 url: 'telecom-concepts-101'
 ---

@@ -3,8 +3,6 @@ title: "HUGO Websites"
 draft: false
 url: 'create-your-website-hugo-ssg'
 type: docs
-prev: docs/debian
-next: docs/arch
 sidebar:
   open: false
 ---
@@ -41,8 +39,6 @@ You can clone this HUGO site and run it locally [with HUGO v0.117](https://jalco
 
 
 > MIT | 📽️ Create rich HTML-based presentations with Hugo and Reveal.js
-
-
 
 ### Links
 
@@ -85,8 +81,11 @@ Dont forget to [Setup HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-
 {{< /callout >}}
 
 
-
 ### HUGO Shortcodes
+
+Shortcodes for HUGO are like components for Astro.
+
+They help us provide interesting funcitonality to our themes.
 
 1. If you are using HUGO, embedd your images with [this **shortcode**](https://raw.githubusercontent.com/gohugoio/hugo/master/tpl/tplimpl/embedded/templates/shortcodes/figure.html)
 
@@ -103,6 +102,14 @@ Just use it like so in your markdown ,**example with the gist**:
 * Second parameter (879fecd6ae9bccaa0175d1c180a032cd): This is the unique Gist ID.
 * Third parameter ("RStocks - PayoutRatioEvolution.JPG"): This is the specific file within the Gist that you want to load.
 
+### MermaidJS and ChartJS
+
+* https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo
+* https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/#mermaidjs
+
+### Math with Katex
+
+As see on this [HUGO Hextra post](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/#the-chemistry-of-lye)
 
 ### Tweaking HUGO Themes
 
@@ -110,16 +117,14 @@ Just use it like so in your markdown ,**example with the gist**:
 
 The [HUGO **Setup**](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) was the first SSG that I could get working back in the days.
 
-And you can make it even better by:
-
 {{< details title="How to add `ads.txt` to HUGO 📌" closed="true" >}}
 
 1. **Create an `ads.txt` file** in your Hugo project’s `static` directory. The `static` folder in Hugo is where you put any files you want to be copied directly to the root of your build output.
 
 2. **Add your content** to the `ads.txt` file:
 
-```plaintext
-   google.com, pub-123456, DIRECT, abcdef123456
+```txt
+google.com, pub-123456, DIRECT, abcdef123456
 ```
 
 3. **Build your Hugo site**:
@@ -131,6 +136,6 @@ And you can make it even better by:
 
 This method ensures that `ads.txt` is part of your site’s root directory in the final build output, as required by ad networks.
 
-![Firebase Custom Domain](/blog_img/web/ads-txt-public-hugo.png)
+![HUGO adsense txt](/blog_img/web/ads-txt-public-hugo.png)
 
 {{< /details >}}

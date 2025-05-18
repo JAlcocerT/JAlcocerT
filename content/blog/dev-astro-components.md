@@ -375,10 +375,10 @@ Something like: `fattouche.ns.cloudflare.com, leanna.ns.cloudflare.com`
 #### ChartJS
 
 * https://github.com/chartjs/Chart.js
-* https://www.chartjs.org/
-* https://github.com/chartjs/Chart.js?tab=MIT-1-ov-file#readme
+  * https://www.chartjs.org/
+  * https://github.com/chartjs/Chart.js?tab=MIT-1-ov-file#readme
 
-> Simple yet flexible JavaScript charting library for the modern web
+> MIT | Simple yet flexible JavaScript charting library for the modern web
 Simple HTML5 Charts using the <canvas> tag
 
 #### Swiper

@@ -2,7 +2,7 @@
 title: "Architecture D&A like a Pro"
 date: 2025-04-13T00:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Career", "D&A", "Analytics"]
 description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
 url: 'data-analytics-architecture'
 ---
@@ -10,6 +10,10 @@ url: 'data-analytics-architecture'
 
 You might encounter this kind of **architectures in your data analytics** journey:
 
+{{< cards cols="2" >}}
+  {{< card link="https://roadmap.sh/data-analyst" title="Data Analytics RoadMap" >}}
+  {{< card link="https://roadmap.sh/software-architect" title="Software Architect RoadMap" >}}
+{{< /cards >}}
 
 ```mermaid
 

@@ -1,5 +1,5 @@
 ---
-title: Tools for Tinkers and SelfHosters
+title: Tools for Tinkers
 type: docs
 prev: docs/debian
 next: docs/arch

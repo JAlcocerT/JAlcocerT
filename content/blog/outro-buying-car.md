@@ -20,7 +20,7 @@ It was a **Honda Civic 6**, born on 1997 (1995-2000).
 {{< /cards >}}
 
 
-{{< details title="**Honda Civic EJ9 1996–2000 (Mercado Europeo)** 📌" closed="true" >}}
+{{< details title="Honda Civic EJ9 1996–2000 (EU) 📌" closed="true" >}}
 
 
 D14A3 1.4 i (vs D14A4 1.4iS 90cv)
@@ -61,7 +61,7 @@ So far, this is the **split of the costs**:
 
 ![Car Init](/blog_img/data-experiments/Car_initial.JPG)
 
-When sold:
+When sold, the car expenses looked like:
 
 ```mermaid
 pie title Car Expenses Breakdown

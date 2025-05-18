@@ -2,6 +2,7 @@
 title: "Which OS for a NAS?"
 date: 2025-03-17T21:20:21+01:00
 draft: false
+tags: ["OSS","HomeLab"]
 description: 'Testing Operative Systems for a NAS / MiniPCs. Improving a Homelab.'
 url: 'os-for-nas'
 ---
