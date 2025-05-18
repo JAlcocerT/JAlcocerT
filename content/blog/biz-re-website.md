@@ -13,7 +13,9 @@ https://github.com/JAlcocerT/cybernetik-realestate-moises
 https://dm-realestate.web.app/
 -->
 
-Not long ago, I was working on a website for a real estate client, based on Astro SSG.
+Not long ago, I was working on a **website for real estate**, based on Astro SSG.
+
+After the [initial demo in September 2024](https://github.com/IoTechCrafts/ScrewFastMoises)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/" title="See Astro 101 Docs ↗" icon="book-open" >}}
@@ -21,7 +23,7 @@ Not long ago, I was working on a website for a real estate client, based on Astr
 
 For the initial web UI status, we come from:
 
-![Streamlit User Auth](/blog_img/web/WebsSnapshots/Web_realestate.png)
+![Web Real Estate](/blog_img/web/WebsSnapshots/Web_realestate.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Project 1st Iteration ↗" icon="book-open" >}}
@@ -417,11 +419,11 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 ### Audio with AI
 
-Audio from text can be generated from the OpenAI API itself.
+Audio from text can be generated from the [OpenAI API itself](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Audio).
 
 But there are few tools around that will give me a more *human touch*.
 
-![alt text](/blog_img/biz/RE/re-coquitts.png)
+![CoquiTTS for RealEstate](/blog_img/biz/RE/re-coquitts.png)
 
 
 {{< cards cols="1" >}}
@@ -499,20 +501,123 @@ This focuses on the outcomes and benefits users receive, such as finding the per
 {{< /details >}}
 
 
+{{< details title="Value is subjective | Menger has something to say about Pricing 📌" closed="true" >}}
+
+The "Menger Principle" in economics, named after Carl Menger, the founder of the Austrian School of economics, isn't a single, formally stated principle.
+
+Instead, it refers to a set of interconnected ideas that revolutionized economic thought in the late 19th century.
+
+Here are the key aspects of what is understood as the Menger Principle:
+
+**1. Subjective Theory of Value:** This is the cornerstone of Menger's contribution. He argued that the value of a good is not inherent in the good itself (determined by the labor used to produce it, as classical economists believed). Instead, value is entirely **subjective**, residing in the individual's judgment of the importance of that good for satisfying their needs and wants.
+
+* **Implication:** A good's value is not fixed but depends on the specific individual, their circumstances, and the intensity of their desire for it. A bottle of water has high value to someone dying of thirst in a desert but little value to someone near a plentiful water source.
+
+**2. Marginal Utility:** Menger emphasized that individuals value goods based on the **marginal utility** they provide – the additional satisfaction gained from consuming one more unit of that good.
+
+* **Implication:** As an individual consumes more of a good, the additional satisfaction they derive from each extra unit decreases. This principle of diminishing marginal utility explains why people are willing to pay less for subsequent units of the same good.
+
+**3. Goods of Different Orders:** Menger analyzed the production process by categorizing goods into "orders."
+
+* **First-order goods (consumer goods):** These directly satisfy human wants (e.g., food, clothing).
+* **Higher-order goods (producer goods or capital goods):** These are used to produce first-order goods (e.g., raw materials, machinery).
+
+* **Implication:** The value of higher-order goods is derived from the value of the lower-order (ultimately, first-order consumer goods) they help to produce. This is known as the principle of **imputation**. Consumer preferences and values ultimately drive the valuation of all factors of production.
+
+**4. Methodological Individualism:** Menger stressed the importance of understanding economic phenomena by focusing on the **actions and decisions of individuals**. He believed that aggregate economic outcomes are the result of the choices made by individual actors pursuing their own goals.
+
+* **Implication:** Economic analysis should start with the individual and their subjective valuations, rather than focusing solely on abstract aggregates or classes.
+
+
+{{< /details >}}
+
+**In essence, the Menger Principle emphasizes:**
+
+* The **subjective nature of value** determined by individual needs and wants.
+* The role of **marginal utility** in valuation and decision-making.
+* The **interconnectedness of goods** in the production process and the derivation of value from consumer goods back to producer goods.
+* The importance of **individual action** as the foundation of economic understanding.
+
+Menger's ideas were revolutionary and laid the groundwork for the Austrian School of economics, which continues to emphasize these principles.
+
+{{< callout type="info" >}}
+Think of **value imputation** as a consequence or an application of the broader Menger Principle, particularly its emphasis on the subjective theory of value and the hierarchy of goods.
+{{< /callout >}}
+
+> It's all about the crucial role of individual preferences and subjective valuations in determining economic value and driving market processes.
+
+Would you pay a lot for my service because I spend a lot of hours building it?
+
+{{< callout type="warning" >}}
+That's what the labor theory of value says: "The value of a good is determined by the amount of labor time socially necessary to produce it. The more labor embodied in a good, the higher its value"
+{{< /callout >}}
+
+
+{{< details title="The two visions compared 📌" closed="true" >}}
+
+The most significant opposing value theory to Menger's subjective theory of value is the **labor theory of value**, which was prominent in classical economics before the marginalist revolution that Menger spearheaded.
+
+Here's a breakdown of the key differences:
+
+**Labor Theory of Value:**
+
+* **Core Idea:** The value of a good is determined by the amount of labor time socially necessary to produce it. The more labor embodied in a good, the higher its value.
+* **Objective:** Value is seen as an objective attribute inherent in the good, based on the physical input of labor.
+* **Focus:** Emphasis is on the cost of production, particularly the labor component.
+* **Key Proponents:** Adam Smith, David Ricardo, Karl Marx.
+
+**Menger's Subjective Theory of Value:**
+
+* **Core Idea:** The value of a good is determined by the subjective utility it provides to an individual in satisfying their needs and wants. Value resides in the mind of the consumer.
+* **Subjective:** Value is not inherent but depends on individual preferences, circumstances, and the marginal utility derived from the good.
+* **Focus:** Emphasis is on demand and the satisfaction derived from consumption.
+* **Key Proponent:** Carl Menger (and the Austrian School).
+
+**Here's an analogy to illustrate the difference:**
+
+Imagine a handcrafted wooden chair.
+
+* **Labor Theory of Value:** Its value would be primarily determined by the hours of skilled labor required to carve and assemble it, plus the cost of the wood (which also embodies labor in its harvesting and processing).
+* **Subjective Theory of Value:** Its value would depend on how much a particular individual desires that chair. Someone who desperately needs a place to sit and appreciates the craftsmanship might value it highly. Someone with plenty of seating and no particular interest in wooden furniture might value it much less, regardless of the labor that went into making it.
+
+**Why the Labor Theory is Considered Opposing:**
+
+* **Source of Value:** The fundamental disagreement lies in where value originates. The labor theory posits it in production (supply-side), while the subjective theory locates it in consumption (demand-side).
+* **Determinants of Value:** Labor hours are the primary determinant under the labor theory, whereas individual preferences and marginal utility are key under the subjective theory.
+* **Implications:** These different foundations lead to contrasting explanations for prices, resource allocation, and other economic phenomena. For instance, the labor theory struggles to explain the value of goods that require little labor but are highly desired (like rare collectibles), while the subjective theory readily accounts for this through scarcity and individual preferences.
+
+{{< /details >}}
+
 **Recommendations:**
 
-Given the nature of a real estate recommendation system, a **tiered subscription model based on features and value** is likely a strong starting point. This allows you to cater to different user segments with varying needs and willingness to pay, while also providing a predictable revenue stream.
+Given the nature of a real estate recommendation system, a **tiered subscription model based on features and value** is likely a strong starting point.
+
+This allows you to cater to different user segments with varying needs and willingness to pay, while also providing a **predictable revenue stream**.
 
 You could also consider a **freemium model** to attract a broad user base, with premium tiers unlocking the full power of the AI for serious buyers, renters, or real estate professionals.
 
 **It's crucial to continuously monitor user feedback, track usage patterns, and iterate on your pricing strategy as your AI application evolves and you gain a better understanding of your market.**
 
-You may even consider A/B testing different pricing models or tiers to optimize for revenue and user adoption.
+You may even consider [A/B testing](https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/#ab-testing---common-use) different pricing models or tiers to optimize for revenue and user adoption.
+
+**How to do that?**
+
+Someday ill cover how to use these [product analytics projects](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics/Product_analytics).
+
+They can help us understand how users intereact with our apps/services.
+
+Its all about [understanding which product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/) the customer values the most.
+
+Quizzes/[forms or surveys](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)/waiting lists: could also help you get an idea about it. 
+
+But the ultimate words is the price, the real skin in the game.
+
+[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
 
 
 ### Business Cards
 
-* https://github.com/kyaustad/cardyo?ref=selfh.st
+* https://github.com/kyaustad/cardyo
 
 >  A simple URL based **digital business card creation** and sharing system 
 
@@ -520,7 +625,7 @@ You may even consider A/B testing different pricing models or tiers to optimize 
 
 I like static sites to leverage [free static hosting services](https://jalcocert.github.io/JAlcocerT/create-your-website/#deployments).
 
-{{< details title="Deployed with Cloudflare Pages or Firebase Mostly 📌" closed="true" >}}
+{{< details title="Deployed with Cloudflare Pages or Firebase | Mostly 📌" closed="true" >}}
 
 There are few [static deployments **options**](https://fossengineer.com/alternatives-for-hosting-static-websites/):
 
@@ -560,15 +665,13 @@ npx wrangler pages deploy dist # normally will be dist, but whatever <BUILD_OUTP
     {{< card link="https://jalcocert.github.io/Portfolio/" title="All your Links" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Sleek collection of important Links" >}} 
   {{< card link="https://cyclingthere.com" title="My Travel Adventures" image="/blog_img/web/WebsSnapshots/Web_CyclingThere.png" subtitle="I can write and also create interesting photo galleries about my travel experiences" >}}
       {{< card link="https://morita-web.pages.dev//" title="Mental Health Care Site" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Because the brain is as important as the body" >}}
-
 {{< /cards >}}
 
-> With an option to plug [adsense](https://adsense.google.com/adsense/) to them
+> With an option to plug [adsense](https://adsense.google.com/adsense/) to each of this websites
 
 **Photo centered blogs:**
 
 {{< cards >}}
-
   {{< card link="https://cozyknittingclub.web.app/" title="Content Creator Blog" image="/blog_img/web/WebsSnapshots/Web_CKC.png" subtitle="For an instagramer who loves knitting" >}}
     {{< card link="http://entreagujaypunto.com/" title="Punto Photo Gallery" image="/blog_img/web/web-entreagujaypunto.png" subtitle="A Photo centered Web for Punto" >}}
     {{< card link="https://enjoylittlethings.org/" title="Travel Adict Photo Gallery" image="/blog_img/web/WebsSnapshots/Web_PhotoGalleryAGA.png" subtitle="Because Photo & Travel lovers need something more than instagram" >}}    

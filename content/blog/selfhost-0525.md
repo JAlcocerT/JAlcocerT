@@ -102,6 +102,12 @@ udo apt update && sudo apt upgrade -y
 vcgencmd measure_temp
 ```
 
+Or the health statistics of distant containers:
+
+```sh
+docker stats $(docker-compose ps -q)
+```
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Termix" title="Termix with Docker 🐋 ↗" >}}
 {{< /cards >}}
@@ -251,6 +257,10 @@ Oterm seems to [support MCP](https://ggozad.github.io/oterm/mcp/?h=mcp#tools)
 * https://github.com/danny-avila/LibreChat
 
 ![LibreChat UI with OpenAI](/blog_img/GenAI/librechat-openai.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LibreChat" title="LibreChat Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
 
 3. I got working a **local research assistant** the searches the web for you and summarizes the content via Ollama (I added OpenAI as well and groq is WIP).
 
@@ -522,6 +532,8 @@ https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researc
 5. Simply Cloning a project repo and just vibe coding...
 
 [Codex with **o4-mini** as default model](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to write [Astro](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) powered [docs](https://astro.build/themes/1/?search=&price%5B%5D=free)?
+
+![alt text](/blog_img/GenAI/aidocs/ai_docs.png)
 
 > Having in mind that astro can embed mermaidJS diagrams as per https://astro-digital-garden.stereobooster.com/recipes/mermaid-diagrams-in-markdown/
 

@@ -12,6 +12,10 @@ To give some cool functionality to static websites, we can use **some tricks**.
   It is beneficial to [review some CSS Tricks](https://jalcocert.github.io/JAlcocerT/blog/dev-css/)
 {{< /callout >}}
 
+Im talking about adding the possibility for readers to [subscribe to a newsletter](#newsletters) or to interact with us via [surveys/forms](#contact-forms).
+
+Its all going to be API based, so our website code base wont grow in size/complexity too much!
+
 ## Newsletters
 
 ### Keila
@@ -196,8 +200,7 @@ Before the </head> add:
 
 This is how the admin panel looks:
 
-![alt text](/blog_img/entrepre/formbricks-sample.png)
-
+![Formbricks survey Example](/blog_img/entrepre/formbricks-sample.png)
 
 {{< callout type="warning" >}}
 It seems that FormBricks Forms can just be embedded **and not opened as a hyperlink url**.
@@ -286,19 +289,24 @@ A great example: https://quillforms.com/forms/web-design-cost-calculator/
 
 ---
 
-## FAQ
+## Conclusions
+
+So far I have tried [Formbricks](https://app.formbricks.com/environments/cm0vgwasu00061484bqmicsbm/surveys) and [Mailerlite](https://accounts.mailerlite.com/user/verify) for these uses cases.
+
+
+
+### FAQ
 
 Check that your **web is performing** well with [these tools](/create-your-website/#is-my-website-performing-well)
 
 <!-- * https://pagespeed.web.dev/
 * https://web-check.xyz/ -->
 
-### Other Tools
+#### Other Tools
 
-https://www.tawk.to/ - Talk to customers
+* https://www.tawk.to/ - Talk to customers
 
 #### Appointments with cal.com
-
 
 Manage your appointments with [cal.com](https://www.cal.com/).
 

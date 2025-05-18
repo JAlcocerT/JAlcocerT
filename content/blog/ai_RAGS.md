@@ -300,7 +300,7 @@ Langflow's primary strength lies in its **visual, low-code environment** for bui
 
 
 {{< callout type="info" >}}
-It simplifies the creation of complex multi-agent/RAG LangChain workflows via UI
+[Langflow](https://github.com/IoTechCrafts/langflow) simplifies the creation of complex **multi-agent/RAG LangChain workflows via UI**
 {{< /callout >}}
 
 <!-- 

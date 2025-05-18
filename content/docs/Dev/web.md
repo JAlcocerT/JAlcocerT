@@ -7,6 +7,23 @@ summary: 'Interesting stuff Ive learn along the way when trying to make better W
 url: 'create-your-website'
 ---
 
+<!-- * Where to get **Free SVGs for HUGO**:
+  * https://www.svgrepo.com/svg/424489/adventure-journey-location
+  * https://fontawesome.com/
+    * https://fontawesome.com/search?q=triangle-exclamation&o=r&m=free
+
+* How to choose proper HEX colors:
+  * https://github.com/Toinane/colorpicker -  A mininal but complete colorpicker desktop app 
+    * https://colorpicker.fr/app/ - you can try it online as well
+  * https://github.com/eigenmiao/rickrack -  Generate harmonious colors freely. 
+  * https://huey.design/
+
+* https://colorpicker.fr/app/
+* https://huey.design/
+* https://leonardocolor.io/#
+  * https://github.com/adobe/leonardo -  Generate colors based on a desired contrast ratio  - Apache v2
+   -->
+
 You can create **cool static websites** with these SSG frameworks.
 
 And also with [Remix](https://github.com/jacob-ebey/remix-ssg).
@@ -79,7 +96,7 @@ And some **add-ons**:
 5. Uptime Monitoring
 6. Chatbot with AI?
 7. *Optional:* Social Contacts,...
-
+8. All links up and running as per [Linkckchecker](https://github.com/IoTechCrafts/linkchecker)
 ---
 
 ## Deployments

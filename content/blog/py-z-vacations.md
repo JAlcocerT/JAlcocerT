@@ -1,6 +1,6 @@
 ---
 title: "[AI] Vacation Planning - Recommendations, Costs, Weather"
-date: 2025-08-23
+date: 2025-10-23
 draft: false
 tags: ["Dev","AI"]  
 description: "Python App to explore vacation destination. LLMs ❤️ Data. While exploring Agents."
@@ -342,6 +342,7 @@ flatpak install flathub app.organicmaps.desktop
 See also the AdventureLog project:
 
 * https://github.com/seanmorley15/AdventureLog
+  * https://github.com/IoTechCrafts/AdventureLog
 
 
 Share media with your friends (airdrop for all devices):

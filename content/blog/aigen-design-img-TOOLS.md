@@ -99,6 +99,8 @@ CSV Video
 
 https://platform.openai.com/docs/guides/images/language-specific-tips
 
+![alt text](/blog_img/GenAI/image/openai-dalle-t2i.png)
+
 <!-- 
 PPT with DaLle + SliDev 
 -->

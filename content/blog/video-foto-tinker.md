@@ -66,13 +66,26 @@ If you are planning to use [Gyroflow](#gyroflow) for custom video estabilization
 
  In that way the acelerometer information will be captured in the mp4 file.
 
+
+
 ### CLI Tricks
+
+#### Transfering Files
+
+```sh
+mkdir -p "$HOME/Desktop/CAM1-$(date +%m-%d)" && rsync -avP --include='*.MP4' --exclude='*' . "$HOME/Desktop/CAM1-$(date +%m-%d)"
+```
+
+#### Videos with FFMPeg
 
 Just put [your video parts](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#ffmpeg) together / silenced / with a given .mp3 audio:
 
 ```sh
+#Cut between two second or from a second to the end
 #ffmpeg -i DJI_20250515200111_0003_D.MP4 -ss 10 -to 90 -c copy output.mp4
 #ffmpeg -i DJI_20250515200111_0003_D.MP4 -ss 91 -c copy output_.mp4
+ffmpeg -i "$(ls *.MP4)" -ss 26 -c copy output_.mp4
+
 
 ## For Tinkering with more video parts
 ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
@@ -190,7 +203,8 @@ A friend told me recently to have a look to the following to create **interestin
 
 * Suno.ai for audio/songs...
 * Klingai.com for video generated from images/text
-* Ilevenlabs to create TTSpeach
+* Ilevenlabs to create TTSpeech
+  * Thanks to GitPodcast, I saw that its also possible to do with [Azure AI Speech](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/)
 
 Whatever you do, dont forget to add proper [video description](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#youtube-video-descriptions)
 
@@ -199,16 +213,21 @@ Its kind of what [these channels](https://www.youtube.com/watch?v=UhvMylLrKw8) d
 
 #### Telemetry
 
-Initially I tought that would be possible only with the GoPro...
+Initially I tought that would be possible only [with the GoPro...](https://jalcocert.github.io/JAlcocerT/geospatial-data/#exif-and-python-with-gopro)
 
-https://goprotelemetryextractor.com/cycling-stats-video-overlay?affi=safabrian#download_0
+* https://goprotelemetryextractor.com/cycling-stats-video-overlay?affi=safabrian#download_0
 
-But I was wrong, action cameras have built in acelerometers (just that not all of them have GPS's)
+But I was wrong, action cameras, including the oa5pro, have built in acelerometers (just that not all of them have GPS's)
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#facilitating-meetings" title="OA5Pro Acelerometer Data Extraction | Post ↗ " >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="GoPro Telemetry | Karting Post Section ↗ " >}}  
+  {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#gyroflow" title="OA5Pro Acelerometer Data Extraction | Post exploring Gyroflow ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction" title="GoPro Telemetry | Karting Post Section ↗ " >}}  
 {{< /cards >}}
+
+
+{{< callout type="info" >}}
+On the OA5Pro, you need to record without RS and with Wide mode to get such data.
+{{< /callout >}}
 
 
 ### Kdenlive

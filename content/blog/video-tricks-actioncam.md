@@ -447,10 +447,11 @@ exiftool -ee ./GX030390.MP4
 If you do similarly with a OA5Pro video and **see the metadata**, the output is **much more reduced**
 
 ```sh
-exiftool -ee ./DJI_20241008163958_0031_D.MP4 #no GPS - no party
+exiftool -ee ./DJI_20241008163958_0031_D.MP4 #no GPS - no party, but it can have acelerometer data!
 ```
 
-* Make the magic happen with moviepy: https://zulko.github.io/moviepy/getting_started/updating_to_v2.html
+* Not everything is lost, see the [oa5pro acelerometer as telemetry](#gyroflow)
+* Idea to *Make the magic happen* with moviepy: https://zulko.github.io/moviepy/getting_started/updating_to_v2.html
 
 #### FFMPEG
 
