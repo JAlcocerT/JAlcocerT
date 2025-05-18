@@ -21,7 +21,7 @@ After the [initial demo in September 2024](https://github.com/IoTechCrafts/Screw
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/" title="See Astro 101 Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-For the initial web UI status, we come from:
+For the initial web UI status, we come from the ScrewFast Theme:
 
 ![Web Real Estate](/blog_img/web/WebsSnapshots/Web_realestate.png)
 

@@ -1,5 +1,5 @@
 ---
-title: "Tech for Creating Documentation and Podcast"
+title: "Tech for Creating Documentation and related Podcast"
 date: 2025-05-15
 draft: false
 tags: ["Web"]
@@ -12,12 +12,12 @@ url: 'tech-for-podcast'
 ### Docs Website
 
 * https://github.com/withastro/starlight
-    * See how great this can look: 
+    * See how great this can look [once you tweak it](https://github.com/IoTechCrafts/starlight-SSG) a little bit 
         * https://starlight.astro.build/getting-started/
         * https://docs.astro.build/en/install-and-setup/#use-a-theme-or-starter-template
         * https://fevol.github.io/starlight-theme-obsidian/getting-started/
 
-![alt text](ic/blog_img/web/fosseng/starlight-docs-sample.png)
+![Starlight Theme Docs UI](ic/blog_img/web/fosseng/starlight-docs-sample.png)
 
 > MIT | 🌟 Build beautiful, accessible, high-performance documentation websites with Astro
 
@@ -27,7 +27,7 @@ url: 'tech-for-podcast'
 2. Internationalization (different languages with `i18n`)
 3. Search built in (with algoliasearch)
 4. Amazing Docs: https://starlight.astro.build/
-5. OpenGraph (OG) image when shared
+5. OpenGraph (OG) image when shared (also when sharing posts)
 
 
 ```sh
@@ -35,7 +35,15 @@ npm create astro@latest -- --template starlight
 npm run dev
 ```
 
-> And...thats all: `localhost:4321`
+> And...thats all go to `localhost:4321` and see your cool [Astro powered docs](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#automated-projects-docs).
+
+<!-- ![AI Powered Docs](/blog_img/GenAI/aidocs/ai_docs.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#vibe-coded-project-docs" title="Vibe Coded Repo Docs- Post ↗" image="/blog_img/GenAI/aidocs/ai_docs.png" subtitle="Tinkerin with astro, codex and documentation" >}}
+  {{< card link="https://github.com/IoTechCrafts/starlight-SSG" title="Starlight Tweaked Docs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Starlight" >}}
+{{< /cards >}}
+
 
 **Whats missing (imo)?**
 
@@ -59,6 +67,8 @@ I was (one more time) amazed on what people is able to create:
 * https://github.com/BandarLabs/gitpodcast
 
 > MIT | Convert any git repository into an engaging podcast
+
+The project uses an interesting [TTS setup](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#ai-powered-shorts)
 
 Does this resonates with creating **AI powered podcasts** on how selfhosting projects work?
 
@@ -89,6 +99,13 @@ Lately, I have been [tinkering with shorts](https://jalcocert.github.io/JAlcocer
 Wouldnt this be a way to catch up with the bast amount of cool projects to SelfHost and share a quick overview with others?
 
 **Example use case**: Given the awsome weekly newsletter https://selfh.st/weekly/2025-05-09/ at the New Software section
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
+
+[![Star History Chart](https://api.star-history.com/svg?repos=dcodesdev/LetterSpace,openconstruct/Peersuite,crocofied/PortNote,0PandaDEV/Ziit,cheatsnake/airstation,gelbphoenix/autocaliweb,rmfatemi/bitvoker,operacle/checkcle,ashishjullia/cloudflare-worker-tailscale-monitor,sinandredemption/kath,log-forge/logforge,murtaza-nasir/maestro,kennethsible/mkvpriority,rrbarrero/pass-web,galvez/plainbudget,andomeder/rektube,daquino94/rss-telegram,magweter/spacepad,kugie-app/summit,muliswilliam/webhook-tester&type=Date)](https://star-history.com/#dcodesdev/LetterSpace&openconstruct/Peersuite&crocofied/PortNote&0PandaDEV/Ziit&cheatsnake/airstation&gelbphoenix/autocaliweb&rmfatemi/bitvoker&operacle/checkcle&ashishjullia/cloudflare-worker-tailscale-monitor&sinandredemption/kath&log-forge/logforge&murtaza-nasir/maestro&kennethsible/mkvpriority&rrbarrero/pass-web&galvez/plainbudget&andomeder/rektube&daquino94/rss-telegram&magweter/spacepad&kugie-app/summit&muliswilliam/webhook-tester&type=Date)
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ChrispyBacon-dev/DockFlare,kyantech/Palmr,crocofied/PortNote,electh/ReactFlux,LizardByte/Sunshine&type=Date)](https://star-history.com/#ChrispyBacon-dev/DockFlare&kyantech/Palmr&crocofied/PortNote&electh/ReactFlux&LizardByte/Sunshine&type=Date)
 
 See a project, summarize it and make a podcast/short about it: https://github.com/lumenlabss/LumenOne
 

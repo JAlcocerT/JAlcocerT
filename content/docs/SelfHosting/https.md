@@ -12,12 +12,18 @@ How to get https for selfhosted apps on a homelab or VPS.
 
 I started with [NPM](#nginx), but understood that there are few alternatives to get https into your selfhosted services.
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy" title="Proxies Docker Config Files 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ### Traefik
 
-Selfhosted Apps with Traefik support out of the box:
-* [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
-* [Claper](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#selfhosting-cool-ppt-software) PPTs
-* The MultiChat!
+Sample Selfhosted Apps with **Traefik support** out of the box:
+
+1. [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
+2. [Claper](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#selfhosting-cool-ppt-software) PPTs
+3. The MultiChat!
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
@@ -28,13 +34,21 @@ Selfhosted Apps with Traefik support out of the box:
 
 ### Caddy
 
+Sample SelfHosted Apps with **Caddy support** out of the box:
+
 ### NGINX
 
 NGINX can be used together with Authelia, which provides a authentication layer.
 
-
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX Setup and HTTPs with DuckDNS" >}}
+{{< /cards >}}
+
+Example project working with NGINX Proxy Manager:
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/nginx_docker_compose.yaml" title="NginxPM Docker Config File 🐋 ↗" >}}
 {{< /cards >}}
 
 

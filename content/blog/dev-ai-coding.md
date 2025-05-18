@@ -3,10 +3,14 @@ title: "Vide Coding. For websites and more..."
 date: 2025-04-15T23:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'How to get started with vibe coding. FirebaseStudio vs Codex...'
+description: 'How to get started with vibe coding. FirebaseStudio vs Codex...or maybe Windsurf?'
 url: 'vide-coding'
 ---
 
+There is a new concept around: **vibe coding**
+
+
+![Windsurf Codeium IDE and Astro](/blog_img/GenAI/NoCode-AI/windsurf-vibecoding-astro.png)
 
 * https://uiverse.io/elements
 
@@ -197,7 +201,9 @@ Its already on vscode and we can get for free (at the time of writing):
 
 
 
-* Codeium - **Windsurf** was indeed renamed from Codeium.   
+* Codeium - **Windsurf** was renamed from Codeium.   
+
+And it has some interesting [features under paywall](https://windsurf.com/pricing)
 
 ```sh
 #https://windsurf.com/editor/download-linux
@@ -210,6 +216,11 @@ sudo apt-get upgrade windsurf
 
 
 ![Windsurf IDE](/blog_img/dev/dev-windsurf.png)
+
+<!-- https://www.youtube.com/watch?v=3qi94lCdYI0 -->
+
+{{< youtube "3qi94lCdYI0" >}}
+
 
 * Continue.dev: https://github.com/continuedev/continue
 

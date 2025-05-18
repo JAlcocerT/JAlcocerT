@@ -533,7 +533,6 @@ https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researc
 
 [Codex with **o4-mini** as default model](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to write [Astro](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) powered [docs](https://astro.build/themes/1/?search=&price%5B%5D=free)?
 
-![alt text](/blog_img/GenAI/aidocs/ai_docs.png)
 
 > Having in mind that astro can embed mermaidJS diagrams as per https://astro-digital-garden.stereobooster.com/recipes/mermaid-diagrams-in-markdown/
 
