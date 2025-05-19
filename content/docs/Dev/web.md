@@ -7,6 +7,20 @@ summary: 'Interesting stuff Ive learn along the way when trying to make better W
 url: 'create-your-website'
 ---
 
+**Icons?**
+
+* https://github.com/akveo/eva-icons
+
+> MIT | A pack of more than 480 beautifully crafted Open Source icons. SVG, Sketch, Web Font and Animations support.
+
+**Where to get Domains?**
+
+* https://developer.godaddy.com/getstarted
+* Hostinger
+* https://porkbun.com/api/json/v3/documentation#Domain%20Pricing
+* Cloudflare domains...
+* https://account.squarespace.com/
+
 <!-- * Where to get **Free SVGs for HUGO**:
   * https://www.svgrepo.com/svg/424489/adventure-journey-location
   * https://fontawesome.com/

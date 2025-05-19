@@ -10,9 +10,12 @@ url: 'tech-recap-2025'
 
 https://github.com/OpenInterpreter/open-interpreter
 
- A natural language interface for computers 
+> A natural language interface for computers 
+## Entrepreneuring
 
-## Launching Webifyer
+Contact forms (QR), waiting lists and business cards..
+
+### Launching Webifyer
 
 One of the skills I enjoy learning more is about photography.
 
@@ -22,11 +25,17 @@ One of the best decisions I ever had was to have a Photo Blog.
 
 Check how, *if you are passionate about Photography*
 
+Web templates (SSG'ed) connected to CMS
+
+#### Leads and Offers
+
+Linktree does things very well, yet cant compete with:
+
+1. Domain 1sty free with CC required (This is a potentialy CAC)
+
 ## Processes
 
-From Last year...
-
-https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/#next-year
+From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/#next-year)...
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
@@ -40,24 +49,23 @@ https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/#next-year
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
 {{< /cards >}}
 
-- [ ] [Tech Videos](#creating-tech-videos)
+- [ ] [x24 Tech Videos](#creating-tech-videos)
 
 
 ### Creating Tech Videos
 
-Creating 24 tech videos to make AI, D&A more accesible: [x]
+What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
 
-1. Cloudflare Tunnels
-2. OpenAI API Tricks
-3. Redash (BI)
-4. Apache superset (BI)
-5. MinIO object storage
+1. [Cloudflare Tunnels](https://www.youtube.com/watch?v=k75PviBQeA0)
+2. [OpenAI API Tricks](https://www.youtube.com/watch?v=Yihsci3QcfI)
+3. [Redash](https://www.youtube.com/watch?v=_0_Qk0Oleeo) (BI)
+4. Apache [Superset](https://www.youtube.com/watch?v=4HUqYbknTOM) (BI)
+5. [MinIO](https://www.youtube.com/watch?v=KzZ2zCvHhl0) object storage
 6. [JHub](https://youtu.be/VEOyKhgat2Q)
 7. [Metabase](https://youtu.be/eCplQYrvabk) (BI)
 8. [Grafana](https://youtu.be/Uq5tZv6T3ko) (BI)
 9. Kibana (BI) and ES 
-10. Streamlit
-
+10. Slefhosted Streamlit Apps
 11. FileBrowser
 12. PiGallery
 13. Photoview
@@ -69,12 +77,11 @@ Creating 24 tech videos to make AI, D&A more accesible: [x]
 19. 
 20. N8N
 21. ChatWoot
-22. 
+22. LangFlow
 23. 
 24. 
 
 
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/
 ....
 
 {{< cards cols="1" >}}
@@ -86,18 +93,26 @@ https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/
 1. Using LangChain to chat with a DB
 2. Real Estate RAG
 
+### Other Videos
+
+1. AI Powered shorts
+2. ChartJS Powered Shorts
+3. Python powered shorts (pyfinance related?)
+3. RemotionJS powered
 
 ### Travel
 
-https://github.com/maxlerebourg/outpin?ref=selfh.st
+
+https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/
 
 
 ### Dev Smart not Hard
 
 Using AI to create more and better, in less time.
 
+The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)
 
-> El relato mata al dato - Thats also true when looking for project opportunities
+> El relato mata al dato - Thats also true when looking for new project opportunities
 
 #### AI Stuff
 
@@ -108,6 +123,8 @@ Using AI to create more and better, in less time.
 https://docs.postiz.com/introduction
 
 ### Improving the HomeLab
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/
 
 
 ---

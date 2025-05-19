@@ -112,26 +112,6 @@ docker stats $(docker-compose ps -q)
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Termix" title="Termix with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-```yml
-services:
-#http://192.168.1.11:8090/
-  termix:
-    image: ghcr.io/lukegus/termix:latest
-    container_name: termix
-    restart: unless-stopped
-    ports:
-      - "8090:8080"
-    volumes:
-      - termix-data:/app/data
-    environment:
-      # Generate random salt here https://www.lastpass.com/features/password-generator (max 32 characters, include all characters for settings)
-      SALT: "something_generated"
-      PORT: "8080"
-
-volumes:
-  termix-data:
-    driver: local
-```
 
 Termix reminded me [about Tabby](https://fossengineer.com/selfhosting-Tabby-coding-assistant/).
 

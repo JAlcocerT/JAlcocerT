@@ -2,8 +2,8 @@
 title: "Having a look to KeyStatic CMS"
 date: 2025-03-22T20:20:21+01:00
 draft: false
-tags: ["dev"]
-description: 'KeyStatic. Creating a website for a moto blogger. Now with a cool user interface.'
+tags: ["Dev","Web"]
+description: 'KeyStatic. Creating a website for a moto blogger. Now with a cool CMS powered user interface.'
 url: 'understanding-keystatic-cms'
 ---
 
@@ -207,11 +207,15 @@ This implies that the guide *doesn't* directly address how to use Keystatic with
 
 * **SSR (Server-Side Rendering):**  In SSR, your Astro components are rendered on the server when a user requests a page.  This means the server generates the HTML and sends it to the client (the user's browser).  
 
-Keystatic, as a content management system (CMS), likely needs a server-side component to interact with its data and serve it to your Astro components.  The server can dynamically fetch content from Keystatic and incorporate it into the page before sending it to the user.
+Keystatic, as a content management system (CMS), likely needs a server-side component to interact with its data and serve it to your Astro components. 
+
+The server can dynamically fetch content from Keystatic and incorporate it into the page before sending it to the user.
 
 * **SSG (Static Site Generation):** In SSG, your Astro project is built into a set of static HTML files at build time.  This means there's no server involved when a user visits your site; the pre-generated HTML is simply served.
 
-This presents a challenge for Keystatic because it typically requires a server to function.  If you're generating static pages, there's no server to dynamically fetch content from Keystatic *during runtime*.
+This presents a challenge for Keystatic because it typically requires a server to function. 
+
+If you're generating static pages, there's no server to dynamically fetch content from Keystatic *during runtime*.
 
 **Why the guide likely focuses on SSR:**
 

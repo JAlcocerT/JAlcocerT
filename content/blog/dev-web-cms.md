@@ -1,14 +1,12 @@
 ---
 title: "Websites with SSG + CMS - The missing piece."
-date: 2025-05-20T22:20:21+01:00
+date: 2025-05-18T22:20:21+01:00
 draft: false
-description: "UI for customization SSGs. About Keystatic CMS with Astro SSG. Combined with PostHog/OpenReplay fr Product Analytics."
+description: "UI for customization SSG generated content. About Keystatic CMS with Astro SSG. Combined with PostHog/OpenReplay for Product Analytics."
 url: 'cms-for-static-websites'
 ---
 
-
-
-Lately I have added some upgrades (via telegram bot), so that whenever a customer sends new photos, they are synced to its photo centered repo.
+Lately I have added some [upgrades (via telegram bot)](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot), so that whenever a customer sends new photos, they are synced to its photo centered repo.
 
 But..wouldnt it be nice to have a native solution?
 
@@ -24,6 +22,15 @@ But I was looking for a way to integrate **CMS with HUGO/Astro**:
 {{< callout type="info" >}}
 See more at [awsome CMS](https://github.com/postlight/awesome-cms) 
 {{< /callout >}}
+
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Headless-CMS" title="CMS+SSGs with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+
+
 
 
 ## CMS
@@ -120,6 +127,8 @@ How many cool things can be done with those generous free tiers?
 
 Keystatic CMS is a modern, open-source, headless content management system designed to **work directly with your codebase**. 
 
+* https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
+
 {{< details title="KeyStatic key features 📌" closed="true" >}}
 
 **Core Concepts:**
@@ -177,6 +186,42 @@ It has fully local mode, but also [Github Mode](https://keystatic.com/docs/githu
 Use [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH App config overhead
 {{< /callout >}}
 
+
+##### KeyStatic Astro Sample
+
+Thanks to [these devs tricks](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/)...
+
+I could put [this landing theme](https://github.com/majesticooss/mizar) with **KeyStatic** into selfhosting with my Pi.
+
+1. [Installed Node](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
+
+```sh
+# Verify installation
+node -v   # Should show Node.js version - 20.18.1
+npm -v    # Should show npm version - 10.8.2
+```
+
+2. Clone the repo and run it:
+
+```sh
+#git clone https://github.com/majesticooss/mizar
+npm run dev --host #as i was using the Opi
+npm run build
+#npm install -g serve #serve with npm
+#serve -s dist #http://localhost:3000
+npx serve -s dist #http://localhost:3000
+```
+
+> Go to http://127.0.0.1:4321/
+
+###### KeyStatic CMS with Astro
+
+When you deploy the static site, the `whateverdomain.com/keystatic` path will still be there:
+
+![KeyStatic statically deployed UI](/blog_img/web/staticcms/keystatic-ssg-deployed.png)
+
+But you wont be able to make any changes, as the server (API) is NOT running.
+
 ##### Static CMS
 
 * https://github.com/StaticJsCMS/static-cms
@@ -191,7 +236,7 @@ Archived since SeptY24!
 
 ##### Decap CMS
 
-https://github.com/decaporg/decap-cms
+* https://github.com/decaporg/decap-cms
 
 > MIT | A Git-based CMS for Static Site Generators 
 
@@ -211,35 +256,26 @@ I cant stop seeing interesting sites out there...
 
 
 
-### KeyStatic CMS with Astro
 
-When you deploy the static site, the `whateverdomain.com/keystatic` path will still be there:
-
-![KeyStatic statically deployed UI](/blog_img/web/staticcms/keystatic-ssg-deployed.png)
-
-But you wont be able to make any changes, as the server (API) is NOT running.
 
 ### Product Analytics
 
-#### PostHog
+
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics/Product_analytics" title="Product Analitycs Tools with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+1. PostHog
+2. 
+
+[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
+
 
 ---
 
 ## FAQ
-
-**Icons?**
-
-* https://github.com/akveo/eva-icons
-
-> MIT | A pack of more than 480 beautifully crafted Open Source icons. SVG, Sketch, Web Font and Animations support.
-
-**Where to get Domains?**
-
-* https://developer.godaddy.com/getstarted
-* Hostinger
-* https://porkbun.com/api/json/v3/documentation#Domain%20Pricing
-* Cloudflare domains...
-* https://account.squarespace.com/
 
 
 ### What are Static Site Generators?
@@ -250,40 +286,17 @@ But you wont be able to make any changes, as the server (API) is NOT running.
 
 ### What are NginX Static Routes?
 
+Think about having: SSG -> CMS for UI edits -> CI/CD Builds as per git changes -> exposed via NGINX with https.
+
 
 ### Making Webs with AI
 
 * https://github.com/rapidpages/rapidpages
 
-> MIT |  Generate React and Tailwind components using AI 
+> MIT | Generate React and Tailwind components using AI 
 
 
-### How to setup Strapi?
-
-## STRAPI
+### How to setup StrapiCMS?
 
 * <https://www.opensourcealternative.to/project/Strapi>
     * <https://docs.strapi.io/dev-docs/installation/docker>
-
-
-```dockerfile
-FROM node:18-alpine
-# Installing libvips-dev for sharp Compatibility
-RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev git
-ARG NODE_ENV=development
-ENV NODE_ENV=${NODE_ENV}
-
-WORKDIR /opt/
-COPY package.json yarn.lock ./
-RUN yarn global add node-gyp
-RUN yarn config set network-timeout 600000 -g && yarn install
-ENV PATH /opt/node_modules/.bin:$PATH
-
-WORKDIR /opt/app
-COPY . .
-RUN chown -R node:node /opt/app
-USER node
-RUN ["yarn", "build"]
-EXPOSE 1337
-CMD ["yarn", "develop"]
-```

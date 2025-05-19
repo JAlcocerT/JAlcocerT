@@ -103,6 +103,10 @@ git clone https://github.com/JAlcocerT/phidata
 
 Thanks to codex I could understand better how the [Groq Youtube summarizer](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/) works, *as I [forked it from PhiData](https://github.com/JAlcocerT/phidata).*
 
+#### Codex1
+
+https://openai.com/index/introducing-codex/
+
 
 ### Claude Code
 

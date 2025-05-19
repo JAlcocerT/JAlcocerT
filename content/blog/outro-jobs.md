@@ -2,7 +2,7 @@
 title: "About Jobs. HR Prep and AI Engineers."
 date: 2025-02-10
 draft: false
-tags: ["Dev"]
+tags: ["Outro","Scrapping"]
 description: 'Is it a good moment to change jobs? A curriculum for LLM/ML Engineer?. Time to recap Scraps firecrawl API and a Latex powered CV.'
 url: 'when-to-apply-for-a-job'
 ---

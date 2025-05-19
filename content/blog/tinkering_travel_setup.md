@@ -2,12 +2,14 @@
 title: "Technology Setup for a Trip"
 date: 2025-02-11
 draft: false
-tags: ["AI"]
+tags: ["AI", "utro"]
 description: "Software and Hardware setup before trips or vacations. Tech Travel Setup. With Cost of Living."
 url: 'tech-for-a-trip'
 ---
 
 Software and Hardware setup **before trips or vacations**.
+
+Let see interesting tech for a trip.
 
 ### Software Setup
 
@@ -110,6 +112,11 @@ Which you can combine with [Mullvad](https://jalcocert.github.io/Linux/docs/debi
   {{< card link="https://fossengineer.com/selfhosting-airtrail/" title="Selfhosting AirTrail" >}}
 {{< /cards >}}
 
+You can also have a look to projects like: https://github.com/maxlerebourg/outpin?ref=selfh.st
+
+> Apache v2 |  OutPin offers a way to plan your future holidays by creating adventures and adding steps to them (with PocketBase/SQLite) 
+
+Which are selfhostable as per: https://github.com/JAlcocerT/Docker/tree/main/Others/Travel
 
 {{< details title="Quick Trip Planner Deployment 📌" closed="true" >}}
 

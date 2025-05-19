@@ -245,31 +245,8 @@ ext install pomdtr.excalidraw-editor
 ext install esbenp.prettier-vscode
 ```
 
-
-
 ---
 
-## Learnt with This one
-
-Thanks to [these devs tricks](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/), I could put [this landing theme](https://github.com/majesticooss/mizar) with **KeyStatic** into selfhosting with my Pi.
-
-1. [Installed Node](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
-
-```sh
-# Verify installation
-node -v   # Should show Node.js version - 20.18.1
-npm -v    # Should show npm version - 10.8.2
-```
-
-2. Clone the repo and run it:
-
-```sh
-npm run dev --host #as i was using the Opi
-npm run build
-#npm install -g serve #serve with npm
-#serve -s dist #http://localhost:3000
-npx serve -s dist #http://localhost:3000
-```
 
 ### Outro
 
@@ -279,39 +256,17 @@ Lately, a colleague mentioned to me about: https://lovable.dev/
 
 It seems this is called vibe coding!
 
-It requires a signup, yet they provide a free tier.
+It requires a signup, yet, they provide a free tier.
 
 Definitely have to take a look to suck tools and also to the open/local ones.
 
-
 Use **VSCodium via container**:
 
-```yml
-#https://docs.linuxserver.io/images/docker-vscodium/#lossless-mode
-#---
-#version: "2.1"
-services:
-  vscodium:
-    image: lscr.io/linuxserver/vscodium:latest
-    container_name: vscodium
-    cap_add:
-      - IPC_LOCK
-    security_opt:
-      - seccomp:unconfined #optional
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-    volumes:
-      - /home/Docker/vscodium/config:/config
-    ports:
-      - 3070:3000
-      - 3071:3001
-    shm_size: "1gb"
-    restart: unless-stopped
 
-##localhost:3070
-```
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev" title="VSCOdium with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
 
 #### Weekly Planning
 
@@ -321,7 +276,7 @@ services:
 
 **Sprint Goal:** [Clearly state the overarching goal of the sprint]
 
-**Key Objectives for This Week:**
+{{< details title="Key Objectives for This Week 📌" closed="true" >}}
 
 * **Grooming:**
     * Status: [e.g., On Track, Needs Attention]
@@ -360,8 +315,9 @@ services:
 
 **Technical Reference:** [Keep as is]
 
-### FAQ
+{{< /details >}}
 
+### FAQ
 
 #### MonoRepos and more
 

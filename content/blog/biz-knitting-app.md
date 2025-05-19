@@ -2,8 +2,8 @@
 title: "Knitting patterns are all about...math?"
 date: 2025-02-17
 draft: false
-tags: ["Dev"]
-description: 'Creating a clothing size calculator'
+tags: ["Tinkering"]
+description: 'Creating a clothing size calculator. Using Litlyx for WebAn.'
 url: 'knitting-pattern-calculator'
 math: true
 ---
@@ -28,7 +28,7 @@ Before starting, **credits to lowkey.bold.knit** - https://instagram.com/p/DE7cD
 
 You need to create a test of the pattern:
 
-![KeyStatic CMS with LandingPad Theme](/blog_img/apps/knitting/gaugeswatch.jpeg)
+![Gauges Watch Example](/blog_img/apps/knitting/gaugeswatch.jpeg)
 
 With that, you will know: the **weight ~12g**
 
