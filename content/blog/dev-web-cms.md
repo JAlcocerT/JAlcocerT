@@ -6,7 +6,7 @@ description: "UI for customization SSG generated content. About Keystatic CMS wi
 url: 'cms-for-static-websites'
 ---
 
-Lately I have added some [upgrades (via telegram bot)](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot), so that whenever a customer sends new photos, they are synced to its photo centered repo.
+Lately I have added some [upgrades](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) (via [telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot)), so that whenever a customer sends new photos, they are synced to its photo centered repo.
 
 But..wouldnt it be nice to have a native solution?
 
@@ -37,6 +37,8 @@ See more at [awsome CMS](https://github.com/postlight/awesome-cms)
 
 Content Management Systems (CMS):
 
+- [KEYSTATICCMS](#keystatic-cms
+)
 - [Tina](https://tina.io/)
 - [GHOST + GATSBY](https://ghost.org/docs/jamstack/)
 - [Strapi](https://jamstack.org/headless-cms/strapi/)
@@ -46,6 +48,21 @@ Content Management Systems (CMS):
 - [Directus](https://jamstack.org/headless-cms/directus/)
   - Directus turns SQL databases into REST and GraphQL APIs with an intuitive no-code app.
 
+
+A **file-based CMS** is a content management system that stores its content in files on a server's file system, rather than in a traditional database. These files can be in various formats like Markdown, YAML, JSON, or even plain text.
+
+A **Git-based CMS** is a specific type of file-based CMS that leverages the Git version control system to manage and store content. In this system, the content files are stored in a Git repository. Content editors typically use a user-friendly interface provided by the CMS to make changes, and these changes are then committed to the Git repository. This offers benefits like version control, collaboration features, and the ability to easily roll back changes.
+
+**All Git-based CMS are a subset of file-based CMS.**
+
+Here's why:
+
+* **Foundation in Files:** Git-based CMS inherently rely on storing content as files within a Git repository. This aligns with the fundamental characteristic of a file-based CMS.
+* **Git as a File Management Tool:** Git itself is a system designed to track changes to files. A Git-based CMS simply uses Git as its underlying mechanism for managing these content files.
+
+However, **not all file-based CMS are Git-based.** Many file-based CMS exist that manage files directly without using Git for version control. They might use other methods for backup or offer no built-in versioning capabilities at all.
+
+**In summary:** Think of "file-based CMS" as the broader category. Within that category, "Git-based CMS" is a specific type that uses Git for its file management and version control.
 
 ## decapCMS
 
@@ -121,11 +138,27 @@ How many cool things can be done with those generous free tiers?
 
 ##### KeyStatic CMS
 
+A tool that makes Markdown, JSON and YAML content in your codebase editable by humans. Live edit content on GitHub or your local file system, without disrupting your existing code and workflows.
+
+* First-class CMS experience
+* Markdown & YAML/JSON based
+* TypeScript API
+* **No database**
+* Markdoc & MDX support
+
+> Two way editing
+
+Keystatic CMS is a modern, open-source, headless content management system designed to **work directly with your codebase**. 
+
 * https://github.com/Thinkmill/keystatic
 
 > **MIT** | First class CMS experience, TypeScript API, Markdown & YAML/JSON based, **no DB**
 
-Keystatic CMS is a modern, open-source, headless content management system designed to **work directly with your codebase**. 
+
+{{< callout type="info" >}}
+Keystatic is a “file-based” CMS and rich-content editor that lives alongside your source code.
+{{< /callout >}}
+
 
 * https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
 
@@ -177,14 +210,48 @@ It has fully local mode, but also [Github Mode](https://keystatic.com/docs/githu
 
 **How I learnt about KeystaticCMS?**
 
-* https://github.com/Boston343/landingpad
-  * https://github.com/JAlcocerT/landingpad
+With 2 astro themes:
 
-* And due to [Mizar landing Page](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/)
+1. https://github.com/Boston343/landingpad
 
-{{< callout type="info" >}}
-Use [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH App config overhead
+* https://github.com/JAlcocerT/landingpad
+
+
+{{< callout type="warning" >}}
+Uses [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH App config overhead
 {{< /callout >}}
+
+2. And due to [Mizar landing Page](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#conclusions)
+
+{{< filetree/container >}}
+  {{< filetree/folder name="src" >}}
+    {{< filetree/folder name="content" >}}
+      {{< filetree/folder name="authors" state="closed" >}}
+      {{< /filetree/folder >}}
+      {{< filetree/folder name="global" state="closed" >}}
+      {{< /filetree/folder >}}
+      {{< filetree/folder name="pages" state="closed" >}}
+      {{< /filetree/folder >}}
+      {{< filetree/folder name="posts" state="closed" >}}
+      {{< /filetree/folder >}}
+      {{< filetree/folder name="works" state="closed" >}}
+      {{< /filetree/folder >}}
+      {{< filetree/file name="config.ts" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="assets" state="closed" >}}{{< /filetree/folder >}}
+    {{< filetree/folder name="components" state="closed" >}}{{< /filetree/folder >}}
+    {{< filetree/folder name="layouts" state="closed" >}}{{< /filetree/folder >}}
+    {{< filetree/folder name="lib" state="closed" >}}{{< /filetree/folder >}}
+    {{< filetree/folder name="pages" state="closed" >}}{{< /filetree/folder >}}
+    {{< filetree/folder name="styles" state="closed" >}}{{< /filetree/folder >}}
+    {{< filetree/folder name="utils" state="closed" >}}{{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+  {{< filetree/file name="astro.config.ts" >}}
+  {{< filetree/file name="keystatic.config.ts" >}}
+  {{< filetree/file name="package.json" >}}
+  {{< filetree/file name="README.md" >}}
+{{< /filetree/container >}}
+
 
 
 ##### KeyStatic Astro Sample
@@ -201,10 +268,12 @@ node -v   # Should show Node.js version - 20.18.1
 npm -v    # Should show npm version - 10.8.2
 ```
 
-2. Clone the repo and run it:
+2. Clone the repo and run it, as tested [here](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#faq):
 
 ```sh
 #git clone https://github.com/majesticooss/mizar
+npm install
+
 npm run dev --host #as i was using the Opi
 npm run build
 #npm install -g serve #serve with npm
@@ -220,7 +289,7 @@ When you deploy the static site, the `whateverdomain.com/keystatic` path will st
 
 ![KeyStatic statically deployed UI](/blog_img/web/staticcms/keystatic-ssg-deployed.png)
 
-But you wont be able to make any changes, as the server (API) is NOT running.
+>But you wont be able to make any changes, as the server (Typescrypt API) is NOT running.
 
 ##### Static CMS
 
@@ -286,7 +355,7 @@ I cant stop seeing interesting sites out there...
 
 ### What are NginX Static Routes?
 
-Think about having: SSG -> CMS for UI edits -> CI/CD Builds as per git changes -> exposed via NGINX with https.
+Think about having: SSG -> CMS, like `/keystatic` for UI edits -> CI/CD Builds as per git changes -> exposed via NGINX with https with some kind of authentication.
 
 
 ### Making Webs with AI

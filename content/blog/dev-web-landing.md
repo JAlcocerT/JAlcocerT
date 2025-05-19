@@ -1,5 +1,5 @@
 ---
-title: "Creating a Landing Website!"
+title: "Creating a Landing Website with Astro!"
 date: 2024-02-14
 draft: false
 tags: ["dev"]
@@ -20,10 +20,9 @@ Astro Themes for inspiration on **Landing Pages**:
 
 * The fav icons works as configured with `"./public/favicon.svg"`
 
-Which I could change from png to svg thanks to [adobe](https://www.adobe.com/express/feature/image/convert/png-to-svg) and provided `guideventure-logo.svg`
+Which I could change *from png to svg* thanks to [adobe](https://www.adobe.com/express/feature/image/convert/png-to-svg) and provided `guideventure-logo.svg`
 
-* The theme brings a OG Image, which equals to the first image of the landing.
-
+* The theme brings an **OG Image**, which equals to the first image of the landing.
 * PagesSpeed: 100/100/100/100
 
 > Compared with the competitor (WP) ~ping 30 vs ping ~300
@@ -55,45 +54,48 @@ convert tour1.webp -rotate 180 tour1_rotated.webp
 
 It could be deployed quickly with CF Wrangler CLI:
 
-![alt text](/blog_img/web/Cloudflare/CF_WranglerCLI.png)
+![Cloudflare Wrangler CLI](/blog_img/web/Cloudflare/CF_WranglerCLI.png)
 
 Creating such view:
 
-![alt text](/blog_img/web/success10-ourika/landing-ourika.png)
+![Ourika Landing Page](/blog_img/web/success10-ourika/landing-ourika.png)
 
 {{< callout type="info" >}}
 From [Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), to show your work, to helping others :)
 {{< /callout >}}
 
 
+**Other alternatives** explored were:
+
 3. Minimal Studio
-
 4. Sendit
-
 5. [Energy Template](https://github.com/vbartalis/energy-template)
 
 
-
-{{< details title="For Taxies as well 📌" closed="true" >}}
+{{< details title="For Taxies as well | Astro Demo 📌" closed="true" >}}
 
 * https://taxiourika.pages.dev/
-
 * https://github.com/JAlcocerT/taxi-web
-
 
 {{< /details >}}
 
 
 ---
 
+## Conclusion
+
+That was a one time setup, but one directional.
+
+Im also exploring how these kind of themes do it so that it incorporates a KeystaticCMS:
+
 **Update**
 
 5. Mizar - https://github.com/majesticooss/mizar
 
-✅ Localization
-✅ Blog
-✅ CMS for editing blog post (thanks to **Keystatic CMS**)
-✅ PWA (thanks to vite-pwa)
+* ✅ Localization
+* ✅ Blog
+* ✅ CMS for editing blog post (thanks to **Keystatic CMS**)
+* ✅ PWA (thanks to vite-pwa)
 
 
 {{< details title="Im well aware that a Bachata-Cerdo uses it 📌" closed="true" >}}

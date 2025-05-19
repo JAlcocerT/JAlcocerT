@@ -205,10 +205,11 @@ Its already on vscode and we can get for free (at the time of writing):
 
 
 
-* Codeium - **Windsurf** was renamed from Codeium.   
+* Codeium - **Windsurf** was renamed from Codeium and [forked from vscode](https://www.youtube.com/watch?v=y__FNi7klwM)
 
 And it has some interesting [features under paywall](https://windsurf.com/pricing)
 
+You can [download windsurf](https://windsurf.com/editor) IDE
 ```sh
 #https://windsurf.com/editor/download-linux
 sudo apt-get upgrade windsurf

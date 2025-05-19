@@ -15,6 +15,10 @@ https://github.com/OpenInterpreter/open-interpreter
 
 Contact forms (QR), waiting lists and business cards..
 
+Some people have been contacting me via EE registry https://ariregister.rik.ee/eng/company/
+
+Was wondering how were they able to get my email?
+
 ### Launching Webifyer
 
 One of the skills I enjoy learning more is about photography.

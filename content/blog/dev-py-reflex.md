@@ -115,7 +115,7 @@ git clone https://github.com/codingforentrepreneurs/reflex-gpt
 https://imfing.github.io/hextra/docs/guide/shortcodes/filetree/
 -->
 
-These are the main files and structure of a Reflex Project:
+These are the main files and **structure of a Reflex Project**:
 
 {{< filetree/container >}}
   {{< filetree/folder name="content" >}}
