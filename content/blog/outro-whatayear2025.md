@@ -7,10 +7,12 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+https://kindlemodding.org/
 
 https://github.com/OpenInterpreter/open-interpreter
 
 > A natural language interface for computers 
+
 ## Entrepreneuring
 
 Contact forms (QR), waiting lists and business cards..
@@ -36,6 +38,7 @@ Web templates (SSG'ed) connected to CMS
 Linktree does things very well, yet cant compete with:
 
 1. Domain 1sty free with CC required (This is a potentialy CAC)
+2. 
 
 ## Processes
 

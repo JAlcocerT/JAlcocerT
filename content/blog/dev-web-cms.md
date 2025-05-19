@@ -223,6 +223,26 @@ Uses [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH 
 
 2. And due to [Mizar landing Page](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#conclusions)
 
+
+{{< callout type="info" >}}
+This one is cnfigured to work locally as per its `keystatic.config.ts`. 
+{{< /callout >}}
+
+The `keystatic.config.ts` file is the main configuration file for Keystatic CMS.
+
+```ts
+export default config({
+	storage: {
+		kind: "local",
+	},
+//........
+})
+```
+
+It defines how content is managed, structured, and edited within your project.
+
+This file tells Keystatic which collections and singletons to manage, how fields are structured, where content is stored, and how the CMS UI should behave.
+
 {{< filetree/container >}}
   {{< filetree/folder name="src" >}}
     {{< filetree/folder name="content" >}}
