@@ -55,8 +55,6 @@ A **Git-based CMS** is a specific type of file-based CMS that leverages the Git 
 
 **All Git-based CMS are a subset of file-based CMS.**
 
-Here's why:
-
 * **Foundation in Files:** Git-based CMS inherently rely on storing content as files within a Git repository. This aligns with the fundamental characteristic of a file-based CMS.
 * **Git as a File Management Tool:** Git itself is a system designed to track changes to files. A Git-based CMS simply uses Git as its underlying mechanism for managing these content files.
 
@@ -64,7 +62,7 @@ However, **not all file-based CMS are Git-based.** Many file-based CMS exist tha
 
 **In summary:** Think of "file-based CMS" as the broader category. Within that category, "Git-based CMS" is a specific type that uses Git for its file management and version control.
 
-## decapCMS
+### decapCMS
 
 https://astro.build/themes/details/astros/ -->> decap CMS
 https://astros.zank.studio/blog/introducing-decap-cms-your-go-to-solution-for-content-management/
@@ -74,22 +72,23 @@ https://astro-decapcms-starter.netlify.app/
 https://decapcms.org/docs/working-with-a-local-git-repository/
 
 
-### netlifyCMS === decapCMS
+#### netlifyCMS === decapCMS
 
 Create a Custom Blog with Astro & NetlifyCMS in MINUTES!
+
 https://www.youtube.com/watch?v=3yip2wSRX_4
 
-## payloadCMS
+### payloadCMS
 
-https://github.com/payloadcms/payload
+* https://github.com/payloadcms/payload
 
 > MIT |  Payload is the open-source, fullstack Next.js framework, giving you instant backend superpowers. Get a full TypeScript backend and admin panel instantly. Use Payload as a headless CMS or for building powerful applications. 
 
-https://github.com/mooxl/astroad/tree/main
+* https://github.com/mooxl/astroad/tree/main
 
 
 
-## tinaCMS + astro
+### tinaCMS + astro
 
 TinaCMS + Astro
 
@@ -105,7 +104,7 @@ https://github.com/tinacms/tina-self-hosted-demo
 
 ## Static CMS
 
-https://github.com/MatthiesenXYZ/astro-ghostcms
+* https://github.com/MatthiesenXYZ/astro-ghostcms
 
 
 * https://github.com/GetPublii/Publii
@@ -121,10 +120,7 @@ https://github.com/MatthiesenXYZ/astro-ghostcms
 
 * https://alternateoss.com/category/cms/
 
-#### API Based
-
-#### GIT Based
-
+**API Based vs GIT Based**
 
 {{< callout type="info" >}}
 https://blog.logrocket.com/9-best-git-based-cms-platforms/
@@ -136,7 +132,7 @@ https://blog.logrocket.com/9-best-git-based-cms-platforms/
 
 How many cool things can be done with those generous free tiers?
 
-##### KeyStatic CMS
+#### KeyStatic CMS
 
 A tool that makes Markdown, JSON and YAML content in your codebase editable by humans. Live edit content on GitHub or your local file system, without disrupting your existing code and workflows.
 
@@ -212,10 +208,7 @@ It has fully local mode, but also [Github Mode](https://keystatic.com/docs/githu
 
 With 2 astro themes:
 
-1. https://github.com/Boston343/landingpad
-
-* https://github.com/JAlcocerT/landingpad
-
+1. https://github.com/Boston343/landingpad which I [forked](https://github.com/JAlcocerT/landingpad)
 
 {{< callout type="warning" >}}
 Uses [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH App config overhead
@@ -227,6 +220,12 @@ Uses [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH 
 {{< callout type="info" >}}
 This one is cnfigured to work locally as per its `keystatic.config.ts`. 
 {{< /callout >}}
+
+
+```sh
+#npm install keystatic
+npm install @keystatic/core @keystatic/astro
+```
 
 The `keystatic.config.ts` file is the main configuration file for Keystatic CMS.
 
@@ -334,6 +333,10 @@ Archived since SeptY24!
 * https://github.com/tinacms/tinacms
 
 > Apache v2 | A fully open-source headless CMS that supports Markdown and Visual Editing
+
+
+Tried it with: https://github.com/JAlcocerT/barebones-starter
+
 
 ---
 

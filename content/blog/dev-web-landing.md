@@ -18,7 +18,7 @@ Astro Themes for inspiration on **Landing Pages**:
 * **Configurable** with a JSON!
 * **MIT** | Template of a business landing page to be configured by json file `/src/data/landing.json`
 
-{{< details title="Proposed for Ourika 📌" closed="true" >}}
+{{< details title="Proposed Theme for Ourika 📌" closed="true" >}}
 
 * The fav icons works as configured with `"./public/favicon.svg"`
 
@@ -74,17 +74,18 @@ From [Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), to show y
 5. [Energy Template](https://github.com/vbartalis/energy-template)
 
 
-{{< details title="For Taxies as well | Astro Demo 📌" closed="true" >}}
+{{< details title="For Taxies as well | Astro Demo with energy template 📌" closed="true" >}}
 
 * https://taxiourika.pages.dev/
-* https://github.com/JAlcocerT/taxi-web
+* https://github.com/JAlcocerT/taxi-web with the energy template
 
 {{< /details >}}
 
 ### The Result
 
-* https://www.guideventuretour.com/
-  * https://github.com/JAlcocerT/ourika
+* The Ourika site is hosted at: https://www.guideventuretour.com/
+  * Source Code: https://github.com/JAlcocerT/ourika
+  * Which leverage [cal.com](https://refer.cal.com/jalcocertech) for customer booking appointment and allow to the client to manage its own pricing/payment methods
 
 ```mermaid
 graph TD
@@ -92,6 +93,8 @@ graph TD
     B --> C[Add Cal.com Links];
     C --> D{People Can Book Tours};
 ```
+
+![Booking tours with Cal](/blog_img/web/success10-ourika/ourika-cal.png)
 
 
 ---
@@ -218,11 +221,13 @@ Live edit content *on GitHub or your local file system*, without disrupting your
 
 > MIT | Content Management for your Codebase - https://github.com/Thinkmill/keystatic
 
-**Using KeyStatic CMS** with Mizar Astro Theme
+**Using KeyStatic CMS** with [Mizar Astro Theme](https://github.com/JAlcocerT/mizar)
 
 Once you install and run the dev server:
 
 ```sh
+#git clone https://github.com/JAlcocerT/mizar
+
 npm install
 #rm -rf .git
 npm run dev
@@ -241,6 +246,26 @@ For existing sites, we have to:
 
 1. **Add the keystatic integration** in your `astro.config.mjs` file:
 
+The `output` field in your Astro configuration determines the fundamental rendering strategy for your entire site:
+
+"static": Pre-render everything to static HTML at build time.
+"server": Render pages on the server for each request.
+"[hybrid](https://github.com/JAlcocerT/mizar/blob/main/astro.config.ts#L17)": Allows you to mix both static generation and server-side rendering on a per-page basis.
+
+> The output field in your Astro configuration (astro.config.mjs or astro.config.ts) is not a mandatory field. [If not present](https://github.com/JAlcocerT/taxi-web/blob/main/energy-template/astro.config.mjs#L7), it will be considered `static`
+
+When you want to plug in a CMS like Keystatic, the "hybrid" approach for your output configuration in Astro is generally the most recommended and flexible option. 
+
+While you can use "static" with Keystatic, you'll need to ensure that your build process is triggered whenever content changes in Keystatic. This often involves setting up:
+
+* Webhook integrations: Configuring Keystatic to trigger a rebuild of your Astro site on platforms like Netlify, Vercel, or others whenever content is updated.
+* Manual builds: Manually triggering a build after content changes, which isn't ideal for a smooth content editing workflow.
+
+```sh
+#npm install keystatic
+npm install @keystatic/core @keystatic/astro
+```
+
 ```mjs
 import keystatic from '@keystatic/astro'
 
@@ -250,7 +275,7 @@ export default defineConfig({
 })
 ```
 
-2. Create `keystatic.config.ts` in the root of the project and add the following code to define both your storage type (local) and a single content collection (posts):
+2. Create `keystatic.config.ts` in the root of the project and add the following code to define both your [storage type (local)](https://github.com/JAlcocerT/mizar/blob/main/keystatic.config.ts#L26), instead of [cloud](https://github.com/JAlcocerT/landingpad/blob/main/keystatic.config.tsx#L21). And a single content collection (posts).
 
 ```ts
 // keystatic.config.ts
@@ -258,7 +283,7 @@ import { config, fields, collection } from '@keystatic/core';
 
 export default config({
   storage: {
-    kind: 'local',
+    kind: 'local', //or cloud one, depending on the theme and what you want
   },
   collections: {
     posts: collection({
