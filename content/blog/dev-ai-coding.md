@@ -82,6 +82,8 @@ The possible options for --provider are:  openai (default),    openrouter,    ge
     xai,    groq...
 {{< /callout >}}
 
+This is how we would make codex use ollama and in auto mode:
+
 ```sh
 codex --approval-mode full-auto "create the fanciest todo-list app"--provider ollama
 ```
@@ -142,6 +144,32 @@ Some Paid IDE/Assistants/Agentic coding...
 
 * Repliit
 * https://www.cursor.com/pricing
+
+
+{{< callout type="info" >}}
+Cursor made a [interesting guide](https://docs.cursor.com/guides/selecting-models#2-task-type)
+{{< /callout >}}
+
+Cursor's documentation on "Selecting Models" explains how to choose the right model for your task to improve speed, efficiency, and results. 
+
+Model Differences: Models vary in assertiveness, curiosity, and context window.
+Model Behavior: Some models 'think' and take initiative, while others require explicit instructions.
+Choosing by Style: Users often prefer models based on interaction style (assertive vs. controlled).
+How to Select: Consider prompting style and task type.
+
+For control, use models like claude-3.5-sonnet or gpt-4.1.
+For initiative, use models like claude-3.7-sonnet, gemini-2.5-pro, or o3.
+
+Task-Specific Models:
+
+claude-3.5-sonnet: Small changes.
+claude-3.7-sonnet, gemini-2.5-pro: Larger refactors.
+gemini-2.5-pro, claude-3.7-sonnet, o3: Codebase navigation.
+claude-3.7-sonnet, gemini-2.5-pro: Planning.
+o3: Complex issues.
+Auto-select: A reliable default option.
+Custom Modes: Save preferred model/prompt combinations.
+
 * https://zed.dev/pricing
 
 ```sh
@@ -170,6 +198,8 @@ You can plug API keys to some IDEs/extensions:
 ### Gitlab Duo
 
 * https://about.gitlab.com/gitlab-duo/
+
+Which is similar to Github CodeSpaces
 
 ### Gemini and AIStudio
 
@@ -226,6 +256,8 @@ sudo apt-get upgrade windsurf
 
 {{< youtube "3qi94lCdYI0" >}}
 
+
+![Windsurf Pro](/blog_img/dev/windsurf-pro-payment.png)
 
 * Continue.dev: https://github.com/continuedev/continue
 

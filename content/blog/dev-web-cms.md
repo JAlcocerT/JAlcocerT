@@ -31,14 +31,11 @@ See more at [awsome CMS](https://github.com/postlight/awesome-cms)
 
 
 
-
-
 ## CMS
 
 Content Management Systems (CMS):
 
-- [KEYSTATICCMS](#keystatic-cms
-)
+- [KEYSTATICCMS](#keystatic-cms)
 - [Tina](https://tina.io/)
 - [GHOST + GATSBY](https://ghost.org/docs/jamstack/)
 - [Strapi](https://jamstack.org/headless-cms/strapi/)
@@ -76,7 +73,10 @@ https://decapcms.org/docs/working-with-a-local-git-repository/
 
 Create a Custom Blog with Astro & NetlifyCMS in MINUTES!
 
-https://www.youtube.com/watch?v=3yip2wSRX_4
+<!-- https://www.youtube.com/watch?v=3yip2wSRX_4 -->
+
+{{< youtube id="3yip2wSRX_4" autoplay="false" >}}
+
 
 ### payloadCMS
 
@@ -88,16 +88,17 @@ https://www.youtube.com/watch?v=3yip2wSRX_4
 
 
 
-### tinaCMS + astro
+### TinaCMS + astro
 
-TinaCMS + Astro
+This was a helpful video on TinaCMS x Astro:
+
+<!-- https://www.youtube.com/watch?v=5Opvp6z1uSc -->
 
 {{< youtube id="5Opvp6z1uSc" autoplay="false" >}}
 
-https://docs.astro.build/en/guides/cms/wordpress/
+* https://docs.astro.build/en/guides/cms/wordpress/
 
-https://www.youtube.com/watch?v=5Opvp6z1uSc
-https://github.com/tinacms/tina-self-hosted-demo
+* https://github.com/tinacms/tina-self-hosted-demo
 
 > It can also work with HUGO as seen during [the mechanism docs](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/#tinacms)
 
@@ -117,7 +118,6 @@ https://github.com/tinacms/tina-self-hosted-demo
 ### Headless CMS
 
 * https://jamstack.org/headless-cms/
-
 * https://alternateoss.com/category/cms/
 
 **API Based vs GIT Based**
@@ -130,7 +130,7 @@ https://blog.logrocket.com/9-best-git-based-cms-platforms/
 
 * Github provides with [Max 5GB per repo](https://www.reddit.com/r/github/comments/xn8y97/is_there_a_limit_to_how_big_a_github_repo_can_be/), with a limit of 100mb per file.
 
-How many cool things can be done with those generous free tiers?
+> How many cool things can be done with those generous free tiers?
 
 #### KeyStatic CMS
 
@@ -157,6 +157,8 @@ Keystatic is a “file-based” CMS and rich-content editor that lives alongside
 
 
 * https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
+* https://docs.astro.build/en/guides/cms/keystatic/
+* https://maciekpalmowski.dev/blog/keystatic-x-astro/
 
 {{< details title="KeyStatic key features 📌" closed="true" >}}
 

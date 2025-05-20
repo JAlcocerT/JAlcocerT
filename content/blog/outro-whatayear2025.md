@@ -7,6 +7,11 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+https://github.com/penpot/penpot/blob/develop/docker/images/docker-compose.yaml
+https://snapcraft.io/penpot-desktop
+
+https://astro.build/themes/details/photography-portfolio-template/
+
 https://kindlemodding.org/
 
 https://github.com/OpenInterpreter/open-interpreter
@@ -38,13 +43,13 @@ Web templates (SSG'ed) connected to CMS
 Linktree does things very well, yet cant compete with:
 
 1. Domain 1sty free with CC required (This is a potentialy CAC)
-2. 
+2. abcd
 
 ## Processes
 
 From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/#next-year)...
 
-{{< cards cols="1" >}}
+{{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="DataBricks 101 ↗" >}}
 {{< /cards >}}
@@ -82,10 +87,14 @@ What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
 17. 
 18. 
 19. 
+
+It was a year of a lot of applied AI...
+
 20. N8N
 21. ChatWoot
 22. LangFlow
-23. 
+23. https://github.com/von-development/awesome-LangGraph
+https://langchain-ai.github.io/langgraph/#
 24. 
 
 
@@ -103,7 +112,7 @@ What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
 ### Other Videos
 
 1. AI Powered shorts
-2. ChartJS Powered Shorts
+2. [ChartJS](https://www.chartjs.org/docs/latest/charts/line.html) Powered Shorts
 3. Python powered shorts (pyfinance related?)
 3. RemotionJS powered
 

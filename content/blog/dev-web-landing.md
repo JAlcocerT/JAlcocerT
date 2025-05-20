@@ -87,6 +87,8 @@ From [Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), to show y
   * Source Code: https://github.com/JAlcocerT/ourika
   * Which leverage [cal.com](https://refer.cal.com/jalcocertech) for customer booking appointment and allow to the client to manage its own pricing/payment methods
 
+![alt text](/blog_img/web/success10-ourika/result-guideventour.png)
+
 ```mermaid
 graph TD
     A[Get Web Content and Pictures] --> B{Publish Site with Own Domain};
@@ -121,7 +123,9 @@ Im also exploring how these kind of themes do it so that it incorporates a Keyst
 
 What is `keystatic.config.ts`?
 
-The `keystatic.config.ts` file is the main configuration file for Keystatic CMS. It defines how content is managed, structured, and edited within your project. This file tells Keystatic which collections and singletons to manage, how fields are structured, where content is stored, and how the CMS UI should behave.
+The `keystatic.config.ts` file is the main configuration file for Keystatic CMS. It defines how content is managed, structured, and edited within your project. 
+
+This file tells [Keystatic which collections](https://keystatic.com/showcase/marketing-landing-page) and [singletons](https://keystatic.com/docs/singletons) to manage, how fields are structured, where content is stored, and how the CMS UI should behave.
 
 High-Level Configuration Options
 
@@ -239,7 +243,7 @@ But also: `http://127.0.0.1:4321/keystatic/` is available.
 
 ```sh
 npm run build
-npx serve -s dist #http://localhost:3000
+npx serve -s dist #http://localhost:3000 #from here /keystatic path wont be available as the server is not running
 ```
 
 For existing sites, we have to:

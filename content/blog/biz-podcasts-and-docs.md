@@ -51,6 +51,8 @@ npm run dev
 2. Pages Interface
 3. Tag system
 4. Some kind of "app [directory](https://astro-nomy.vercel.app/blog) Template" to search, like [this one](https://github.com/JAlcocerT/astro-nomy)
+5. Integration with some CMS, like Keystatic 
+6. [LastUpdated](https://starlight.astro.build/reference/configuration/#lastupdated) for Docs/Posts
 
 {{< callout type="info" >}}
 Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%5B%5D=free) from time to time to get ideas

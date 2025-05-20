@@ -66,7 +66,7 @@ I had a look to https://github.com/localtunnel/server, just that still, [cloudfl
 
 {{< youtube "k75PviBQeA0" >}}
 
-New apps always come with new tricks
+New apps always come with new tricks: *generating secrets automatically with CLI*
 
 ```sh
 openssl rand -base64 12 #for secrets

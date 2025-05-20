@@ -194,9 +194,15 @@ export default defineConfig({
 
 {{< youtube "BAnfePGzkbg" >}}
 
+### KeyStatic Concepts
+
+* Singleton: “About Page”, “Contact Info”, “Global Settings”
+* Multi-entry: “Blog Posts”, “Projects”, “Team Members”
+
 ### Adding KeyStatic to Astro Themes
 
 * https://keystatic.com/docs/installation-astro
+* https://maciekpalmowski.dev/blog/keystatic-x-astro/
 
 The text you've quoted indicates that the guide for adding Keystatic to an Astro project assumes you're using Server-Side Rendering (SSR) mode, specifically with the `output: 'hybrid'` or `output: 'server'` configuration options in your Astro project.  
 
@@ -375,7 +381,7 @@ services:
 ```
 
 ```yml
-version: '3.8'
+#version: '3.8'
 
 services:
   gatsby-dev:
@@ -496,18 +502,27 @@ Now, just get the key for the DNS challenge, and go to NGINX UI:
 {{< /cards >}}
 
 
-#### More
+#### More KeyStatic
 
 But, if you go to keystatic path...you need to authenticate?
 
 Not really, just copy the `.env` that you have locally and that it has not been synced to github for security reasons.
 
-#### Adding Auth
+##### Adding Auth
 
 So now, anyone can just go and edit the website?
 
-Recently I got to know about **TinyAuth**
+> Recently I got to know about **TinyAuth**...
 
+### KeyStatic from Scratch
+
+As per https://keystatic.com/docs/quick-start
+
+```sh
+npm create @keystatic@latest
+```
+
+![KeyStatic CLI](/blog_img/web/staticcms/keystatic-cli-setup.png)
 
 ---
 
@@ -522,4 +537,63 @@ Recently I got to know about **TinyAuth**
 
 ### Building Webs with AI
 
-https://web.lmarena.ai/leaderboard
+See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/leaderboard
+
+### Markdown vs MDX vs Markdoc
+
+#### Markdown
+
+Imagine you want to write text that looks good on the web, with headings, lists, bold text, etc., but you only want to use a simple text editor. 
+
+That's where **Markdown** comes in.
+
+* **Lightweight Markup Language:** Markdown is a simple way to format text using plain text syntax. Think of it as adding special characters to your regular text to tell a program how to display it.
+* **Easy to Read and Write:** One of its main goals is to be readable even in its raw, unformatted state. The syntax is intuitive and doesn't get in the way of the content.
+* **Basic Formatting:** It allows you to do common things like:
+    * Create **bold** and *italic* text.
+    * Make headings (like `# My Main Heading` or `## Subheading`).
+    * Create lists (`* Item 1`, `1. Item A`).
+    * Add links (`[Link Text](https://example.com)`).
+    * Display code (` ```javascript ... ``` `).
+    * Insert images (`![Alt text](image.jpg)`).
+* **Widely Used:** You'll find Markdown used everywhere from writing README files for software projects to formatting comments on platforms like Reddit and GitHub, and for creating blog posts and documentation.
+* **Conversion to HTML:** A Markdown processor takes your `.md` file and converts it into standard HTML (the language of web pages), which web browsers can then display beautifully.
+
+**In essence, Markdown is a simple and efficient way to write formatted content for the web using a plain text editor.**
+
+#### MDX
+
+**MDX** takes Markdown a step further by allowing you to **embed JSX (JavaScript XML) directly within your Markdown content.**
+
+* **Markdown + JSX:** Think of it as supercharged Markdown. You get all the simplicity of Markdown with the power and flexibility of React (a popular JavaScript library for building user interfaces) components.
+* **Component Integration:** This means you can import and use interactive components, like charts, buttons, alerts, or any custom React component you create, right inside your `.mdx` files.
+* **Dynamic Content:** This opens up possibilities for creating more dynamic and interactive documentation, blog posts, or websites. Imagine embedding a live graph or a small interactive quiz directly within your text.
+* **Use Cases:** MDX is popular in modern web development frameworks like Next.js and Gatsby for building content-rich websites and documentation sites that need interactive elements.
+
+**In short, MDX lets you write Markdown with the ability to seamlessly integrate and render interactive React components within your content.**
+
+#### Markdoc
+
+**[Markdoc](https://github.com/markdoc/markdoc)** is a powerful **Markdown-based authoring framework** created by Stripe.
+
+It's designed for building custom documentation sites and content experiences with a focus on flexibility and extensibility.
+
+* **Markdown Extension:** Markdoc builds upon the familiar Markdown syntax but adds a system for defining **custom tags and nodes**. This allows developers to create their own specialized syntax for authors to use.
+* **Declarative Approach:** Unlike MDX where you embed JSX directly, Markdoc uses a more declarative approach. Developers define custom tags (which are backed by React components or other rendering logic), and authors use these tags in their Markdown without needing to know the underlying implementation.
+* **Configuration and Validation:** Markdoc emphasizes configuration and validation. You can define schemas for your custom tags and content structures, ensuring consistency and preventing errors.
+* **Developer and Writer Friendly:** It aims to provide a good experience for both developers (who can extend the system) and writers (who can use a familiar Markdown-based syntax with powerful custom elements).
+* **Use Cases:** Markdoc is well-suited for large, complex documentation sites where consistency, reusability, and custom interactive elements are important.
+
+**To summarize, Markdoc is a comprehensive framework built on Markdown that allows for highly customizable and structured content creation through the definition of custom tags and a focus on configuration and validation.**
+
+Here's a table summarizing the key differences:
+
+| Feature         | Markdown                                  | MDX                                       | Markdoc                                         |
+| --------------- | ----------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
+| Core Concept    | Simple text-to-HTML formatting             | Markdown + JSX embedding                   | Extensible Markdown framework with custom tags   |
+| Interactivity   | Limited to HTML elements                  | Full power of React components              | Achieved through pre-defined custom tags        |
+| Extensibility   | Primarily through HTML passthrough        | Direct use of JavaScript and React          | Through defining custom tags and renderers      |
+| Complexity      | Simple                                    | Moderate (requires understanding of JSX)   | More complex setup for developers, simpler for authors using defined tags |
+| Use Cases       | Basic web content, READMEs, simple docs   | Dynamic blogs, interactive documentation     | Large, structured, custom documentation sites |
+| Creator/Origin  | John Gruber                               | Open source community                      | Stripe                                          |
+| File Extension  | `.md`                                    | `.mdx`                                     | `.md`, potentially with custom tag syntax        |
