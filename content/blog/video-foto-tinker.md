@@ -3,7 +3,7 @@ title: "More Photo and Video fun stuff"
 date: 2025-05-12T13:20:21+01:00
 draft: false
 tags: ["Tinkering"]
-description: 'From ffmpeg CLIs to color grading LUTs. And AI generated audio for shorts.'
+description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI generated audio for shorts.'
 url: 'photo-video-tinkering'
 ---
 
@@ -29,32 +29,7 @@ Wait, there is even a repo!
 For night video and the oa5pro, for me it has worked better: -0.7EV, 50fps, S 1/400, ISO 100 ~25600 (max range), AWB, Texture -1 and Noise Reduction -2.
 {{< /callout >}}
 
-## Photo Editing
 
-Spending a lot on smartphone with cool cameras to...use snapseed?
-
-Come on... whats next?
-
-Uploading to social media in low resolution?
-
-
-### Darktable
-
-As a light room alternative:
-
-<!-- 
-https://www.youtube.com/watch?v=rMhe2gYJa9s 
--->
-
-{{< youtube "rMhe2gYJa9s" >}}
-
-
-
-### Other photo editing
-
-1. GIMP
-2. digiKam
-3. Photoflow
 
 
 ## Video Editing
@@ -250,7 +225,7 @@ exiftool -ee DJI_20250518182847_0015_D.MP4 #working when recorded W and no RS!
 On the OA5Pro, you need to record without RS and with Wide mode to get such data.
 {{< /callout >}}
 
-#####
+##### Adding Telemetry to MP4s
 
 How to Telemetry Overlay a Video
 
@@ -261,7 +236,6 @@ and with https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/
 Then the geospatial analysis came...https://jalcocert.github.io/JAlcocerT/geospatial-data/
 
 ### Kdenlive
-
 
 I was tinkering with KDEnlive sometime ago, [with the x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#video-editing-101/)...
 
@@ -275,6 +249,8 @@ flatpak install flathub org.kde.kdenlive
 {{< /cards >}}
 
 <!-- https://www.youtube.com/watch?v=V0_yp-ziqvI -->
+
+This video was very helpful to understand additional KDE tricks:
 
 {{< youtube "V0_yp-ziqvI" >}}
 
@@ -296,7 +272,7 @@ cp CINEMATIC.cube /home/jalcocert/Desktop
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#kdenlive" title="KDenLive with OA5Pro" image="/blog_img/outro/kdenlive.png" subtitle="Editing video with kdenlive" >}}
 {{< /cards >}}
 
-Which can *potentially* be applied via FFMPEG CLI:
+Those LUT `.cube` files can *potentially* be applied via FFMPEG CLI:
 
 ```sh
 # ffmpeg -i DJI_20250518175448_0005_D.MP4 -ss 0 -to 10 -c copy output_first_10_seconds.mp4
@@ -322,18 +298,21 @@ Watching **4k video on Linux** might not be **fluent** until you install these:
 ## Filters
 
 ### ND Filters
+
 <!-- 
 https://allegro.pl/oferta/zestaw-6-filtrow-nd-8-16-32-64-1000-cpl-dji-osmo-action-4-3-fw-oa4-ald-15143043373
 https://allegro.pl/oferta/etui-pokrowiec-na-kamere-sportowa-dji-osmo-action-3-4-5-pro-gopro-13-16982113322?reco_id=cc5aea34-1efb-11f0-9d44-c214b156ab4e&sid=662c7a15915b4ff7cbe3591dc77c5ba25a9c6e61630a3346ef7abf0742c8b1f5&dd_referrer=https%3A%2F%2Fallegro.pl%2Fkategoria%2Fkamery-kamery-sportowe-147894%3Fstring%3Ddji%2520osmo%2520action%25205 -->
 
 A **Neutral Density (ND) filter** is essentially a **sunglass for your camera lens**. It's a filter made of darkened glass or resin that reduces the amount of light entering the camera sensor **without affecting the color** or **hue** of the scene.
 
-Here's a more detailed breakdown:
-
 **How they work:**
 
 * ND filters are designed to reduce the intensity of **all wavelengths of light equally**. This means they dim the overall brightness of the scene without introducing any color casts (in theory; some cheaper ND filters might have slight color shifts).
 * They work by absorbing or reflecting a certain percentage of the incoming light.
+
+
+{{< details title="What ND Filders do | Types of ND 📌" closed="true" >}}
+
 
 **What they do:**
 
@@ -350,23 +329,51 @@ By reducing the amount of light reaching the sensor, ND filters allow you to:
 * **Variable ND Filters:** These filters consist of two polarizing layers that can be rotated relative to each other to control the amount of light reduction. They offer more flexibility but can sometimes introduce an "X" pattern or uneven darkening at their extreme settings, especially on wide-angle lenses.
 * **Graduated ND Filters (GND):** These are dark on one half and gradually become clear on the other. They are typically rectangular and used in a filter holder to allow for precise positioning of the dark area (often used for landscapes).
 
-**In the context of video:**
+{{< /details >}}
+
+
+{{< details title="In the context of video | Summarized 📌" closed="true" >}}
 
 ND filters are particularly crucial for video because you typically want to maintain a consistent frame rate and shutter speed for natural motion. Adjusting the aperture and ISO (sensitivity) are the primary ways to control exposure, but aperture also affects depth of field, and increasing ISO can introduce noise. ND filters provide an additional way to control the amount of light without sacrificing your desired cinematic motion or depth of field.
 
 While a good quality ND filter should ideally not affect color, some cheaper ones might introduce a slight color cast. It's generally recommended to invest in reputable brands to minimize this issue. Post-processing can often correct minor color casts if they occur.
 
-Essentially, ND filters give you greater control over your exposure settings in bright light, allowing you to achieve creative effects and maintain the desired look and feel of your video or photographs.
+Essentially, ND filters give you greater control over your exposure settings in bright light, allowing you to achieve creative effects and maintain the desired look and feel of your video or photographs
 
+{{< /details >}}
 
 <!-- https://www.youtube.com/watch?v=00e8XDRoge4 -->
 
 {{< youtube "00e8XDRoge4" >}}
 
-
 <!-- https://www.youtube.com/watch?v=oIJlSP0u6FU -->
 
+## Photo Editing
 
+Spending a lot on smartphone with cool cameras to...use snapseed?
+
+Come on... whats next?
+
+Uploading to social media in low resolution?
+
+
+### Darktable
+
+As a light room alternative:
+
+<!-- 
+https://www.youtube.com/watch?v=rMhe2gYJa9s 
+-->
+
+{{< youtube "rMhe2gYJa9s" >}}
+
+
+
+### Other photo editing
+
+1. GIMP
+2. digiKam
+3. Photoflow
 
 ---
 
@@ -522,8 +529,6 @@ So, regardless of the MP4 file itself (as long as it's a standard, decodable vid
 <!-- https://www.youtube.com/watch?v=-g0E4ntS8qA -->
 
 {{< youtube "-g0E4ntS8qA" >}}
-
-
 
 
 ### Shutter Speed

@@ -7,6 +7,8 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+https://echarts.apache.org/en/index.html
+
 https://github.com/penpot/penpot/blob/develop/docker/images/docker-compose.yaml
 https://snapcraft.io/penpot-desktop
 
@@ -104,15 +106,19 @@ https://langchain-ai.github.io/langgraph/#
   {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
 {{< /cards >}}
 
-> Additionally, I participated in few tech Talks:
+> Additionally, I participated in *few* tech Talks
 
 1. Using LangChain to chat with a DB
 2. Real Estate RAG
 
 ### Other Videos
 
-1. AI Powered shorts
+1. AI Powered [shorts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#ai-powered-shorts)
+
 2. [ChartJS](https://www.chartjs.org/docs/latest/charts/line.html) Powered Shorts
+
+https://echarts.apache.org/en/index.html
+
 3. Python powered shorts (pyfinance related?)
 3. RemotionJS powered
 

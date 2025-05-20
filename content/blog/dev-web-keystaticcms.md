@@ -364,7 +364,7 @@ COPY . .
 ```
 
 ```yml
-version: '3'
+#version: '3'
 services:
   app:
     image: mynode_webapp:cyclingthere #node:20.12.2
@@ -403,7 +403,7 @@ volumes:
 {{< /details >}}
 
 
-{{< details title="Node Dockerfile 📌" closed="true" >}}
+{{< details title="Node Dockerfile for Astro Cntainer 📌" closed="true" >}}
 
 ```sh
 sudo docker pull node:20.12.2
@@ -425,6 +425,7 @@ npm run dev --host
 #docker run -d -p 3001:3000 --name astro-web33 mynode_web:web3 npm run dev
 ```
 
+The dockerfile would look: 
 
 ```dockerfile
 # Use the official Node.js image.

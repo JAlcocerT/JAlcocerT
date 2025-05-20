@@ -2,8 +2,8 @@
 title: "Encryption. Captchas and more"
 date: 2025-05-20
 draft: false
-tags: ["Dev"]
-description: 'SHA'
+tags: ["Outro"]
+description: 'SHA256 Protocol. The concept and applications.'
 url: 'encryption-101'
 ---
 
@@ -18,14 +18,28 @@ url: 'encryption-101'
 
 ## The SHA256 Algorithm
 
-https://emn178.github.io/online-tools/sha256.html
+* https://emn178.github.io/online-tools/sha256.html
+
+[Lately](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#new-selfh-apps) I discovered a cool way to create unique keys:
+
+```sh
+openssl rand -base64 12 #for secrets
+openssl rand -hex 32 #for apikeys
+```
+
+Those come very handy when deploying containers.
+
+> Let's break down the SHA-256 protocol
 
 
-Let's break down the SHA-256 protocol and its relation to Bitcoin, as well as analyze your Python function.
 
 **What is the SHA-256 Protocol?**
 
-SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function. Here's what that means:
+SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function. 
+
+
+{{< details title="More about SHA256 📌" closed="true" >}}
+
 
 * **Cryptographic:** It's designed with security in mind, making it very difficult to reverse the process (find the original input from the output) or to find two different inputs that produce the same output (collision resistance).
 * **Hash Function:** It takes an input of any arbitrary length (a message, a file, data, etc.) and produces a fixed-size output called a "hash" or "digest." For SHA-256, this output is always 256 bits long (which is 32 bytes or 64 hexadecimal characters).
@@ -38,28 +52,40 @@ SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function. Here's
 * **Avalanche effect:** A small change in the input data will result in a drastically different hash output. This makes it very sensitive to even minor alterations.
 * **Fixed output size:** Regardless of the size of the input, the output is always 256 bits.
 
+{{< /details >}}
+
+> Easy to encrypt, hard to decrypt!
+
 **Does Bitcoin Implement SHA-256?**
 
-**Yes, Bitcoin heavily relies on the SHA-256 hash function.** It is a fundamental building block of the Bitcoin blockchain and is used in several crucial processes:
+**Bitcoin heavily relies on the SHA-256 hash function.**
+
+It is a fundamental building block of the Bitcoin blockchain and is used in several crucial processes.
+
+{{< details title="BTC x SHA256 📌" closed="true" >}}
+
 
 * **Proof-of-Work:** Bitcoin's mining process involves repeatedly hashing block headers (which contain transaction information, a timestamp, and a reference to the previous block) along with a "nonce" (an arbitrary number). Miners compete to find a nonce that, when the entire block header is hashed using SHA-256, results in a hash value that meets a certain difficulty target (starts with a specific number of leading zeros).
 * **Transaction Hashing:** Individual transactions are hashed using SHA-256 (often multiple times in a Merkle tree structure) to create a unique identifier for each transaction.
 * **Merkle Trees:** Blocks in the Bitcoin blockchain organize transactions into a Merkle tree. SHA-256 is used to hash pairs of transaction IDs, and then hash the resulting hashes, and so on, up to the Merkle root. This provides an efficient way to verify if a specific transaction is included in a block.
 * **Address Generation (Indirectly):** While Bitcoin addresses are not directly SHA-256 hashes, SHA-256 is used in the process of creating them (along with other hashing algorithms like RIPEMD-160).
 
-**Is This Function Also Doing It?**
 
-Let's analyze your Python function:
+{{< /details >}}
+
+### SHA256 Python
+
+**Can we has via Python Function?**
 
 ```py
+#from pyspark.sql import functions as f
+
 def hash_mac(mac):
     mac = f.upper(mac)
     mac = f.regexp_replace(mac, '[-:]', '')
     mac = f.sha2(mac, 256)
     return mac
 ```
-
-Assuming `f` is a library or module that provides string manipulation and hashing functions, here's what the function does:
 
 1.  **`mac = f.upper(mac)`:** Converts the input `mac` address to uppercase.
 2.  **`mac = f.regexp_replace(mac, '[-:]', '')`:** Removes any hyphens (`-`) or colons (`:`) from the `mac` address string. This likely aims to standardize the MAC address format before hashing.
@@ -71,29 +97,8 @@ Assuming `f` is a library or module that provides string manipulation and hashin
 * It standardizes the MAC address by converting it to uppercase and removing hyphens or colons.
 * It then applies a hash function named `sha2` with a parameter `256`. **If `f.sha2` with the `256` parameter correctly implements the SHA-256 algorithm, then the function is indeed performing a SHA-256 hash.**
 
-To be absolutely sure, you would need to know the specific library or module that `f` refers to and consult its documentation to confirm that `f.sha2(data, 256)` is a standard SHA-256 implementation. However, the naming convention strongly suggests that it is.
 
-
-Ah, with the clarification that `f` comes from `pyspark.sql.functions`! Let's re-evaluate.
-
-**Regarding `pyspark.sql.functions as f`:**
-
-Yes, in PySpark SQL functions, `f.sha2(column, numBits)` is indeed the function used to compute the SHA-2 family of hash functions.
-
-* **`column`**: This would be the PySpark DataFrame column containing the string data you want to hash (in your case, the processed MAC address).
-* **`numBits`**: This parameter specifies the desired bit length of the hash. When you use `f.sha2(mac, 256)`, you are explicitly telling PySpark to compute the **SHA-256 hash** of the data in the `mac` column.
-
-**Therefore, with `import pyspark.sql.functions as f`, the function you provided:**
-
-```python
-def hash_mac(mac):
-    mac = f.upper(mac)
-    mac = f.regexp_replace(mac, '[-:]', '')
-    mac = f.sha2(mac, 256)
-    return mac
-```
-
-**is indeed performing a SHA-256 hash on the standardized MAC address within a PySpark DataFrame context.** Keep in mind that in a real PySpark application, `mac` here would likely be the name of a column in your DataFrame, and you would apply these transformations using PySpark DataFrame operations (e.g., `df.withColumn('hashed_mac', hash_mac(df['mac_column']))`).
+### SHA256 Online
 
 **Can you convert with online tools or with Ubuntu CLI?**
 
@@ -114,30 +119,32 @@ Ubuntu (and most other Linux distributions) comes with command-line utilities th
 
 * **To hash a string directly:** You can use the `echo` command to pipe the string to `sha256sum`. Be mindful of the newline character that `echo` adds by default. You might want to use the `-n` option to avoid it if you need to hash the exact string without a trailing newline.
 
-    ```bash
-    echo -n "YOUR_STRING_HERE" | sha256sum
-    ```
+```bash
+echo -n "YOUR_STRING_HERE" | sha256sum
+```
 
     Replace `"YOUR_STRING_HERE"` with the standardized MAC address you want to hash. The output will be the SHA-256 hash followed by a hyphen (`-`).
 
-    ```bash
-    echo -n "0123456789AB" | sha256sum
-    # Output (example): a8fdc205a9f1939e69028f5c16191399c71a01d276c8a0d12c9c8769341286c7 -
-    ```
+```bash
+echo -n "0123456789AB" | sha256sum
+# Output (example): a8fdc205a9f1939e69028f5c16191399c71a01d276c8a0d12c9c8769341286c7 -
+```
 
 * **To hash the content of a file:**
 
-    ```bash
-    sha256sum your_file.txt
-    ```
+```bash
+sha256sum your_file.txt
+```
 
-    This will output the SHA-256 hash of the contents of `your_file.txt` along with the filename.
+This will output the SHA-256 hash of the contents of `your_file.txt` along with the filename.
 
 **Therefore, you have multiple ways to verify the SHA-256 hash of a standardized MAC address, both online and using the Ubuntu command line.** This can be useful for testing or confirming the output of your PySpark function for specific inputs.
 
-### SSH
+### SSH x SHA256
 
-Yes, the SSH (Secure Shell) protocol can and often does use the SHA-256 hashing algorithm, but it's not the *only* hashing algorithm it employs. SHA-256 is used in various parts of the SSH protocol for different purposes, contributing to its security.
+The SSH (Secure Shell) protocol can and often does use the SHA-256 hashing algorithm, but it's not the *only* hashing algorithm it employs. 
+
+SHA-256 is used in various parts of the SSH protocol for different purposes, contributing to its security.
 
 Here's a breakdown of how SHA-256 is involved in SSH:
 
@@ -162,6 +169,12 @@ Here's a breakdown of how SHA-256 is involved in SSH:
 
 **In summary:**
 
-While SSH uses a variety of cryptographic algorithms for different aspects of the secure connection (including encryption ciphers like AES, key exchange algorithms like Diffie-Hellman and ECDH, and MAC algorithms), **SHA-256 is a significant and widely used hashing algorithm within the SSH protocol, particularly in modern and secure configurations.** It plays a crucial role in key exchange, host key verification, and ensuring data integrity.
+While SSH uses a variety of cryptographic algorithms for different aspects of the secure connection (including encryption ciphers like AES, key exchange algorithms like Diffie-Hellman and ECDH, and MAC algorithms), **SHA-256 is a significant and widely used hashing algorithm within the SSH protocol, particularly in modern and secure configurations.** 
 
-It's important to note that the specific algorithms used by an SSH connection are negotiated between the client and the server during the initial handshake. The availability and preference of SHA-256 depend on the SSH client and server software and their configuration. Modern systems are generally configured to prefer stronger algorithms like those using SHA-256 over older, less secure options like SHA-1.
+It plays a crucial role in key exchange, host key verification, and ensuring data integrity.
+
+It's important to note that the specific algorithms used by an SSH connection are negotiated between the client and the server during the initial handshake. 
+
+The availability and preference of SHA-256 depend on the SSH client and server software and their configuration. 
+
+Modern systems are generally configured to prefer stronger algorithms like those using SHA-256 over older, less secure options like SHA-1.

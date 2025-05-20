@@ -18,7 +18,7 @@ Astro Themes for inspiration on **Landing Pages**:
 * **Configurable** with a JSON!
 * **MIT** | Template of a business landing page to be configured by json file `/src/data/landing.json`
 
-{{< details title="Proposed Theme for Ourika 📌" closed="true" >}}
+{{< details title="Proposed Theme for Ourika | Luna Landing 📌" closed="true" >}}
 
 * The fav icons works as configured with `"./public/favicon.svg"`
 

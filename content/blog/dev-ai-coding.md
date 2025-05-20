@@ -234,6 +234,7 @@ Its already on vscode and we can get for free (at the time of writing):
 [![Star History Chart](https://api.star-history.com/svg?repos=continuedev/continue,plandex-ai/plandex,paul-gauthier/aider,Aider-AI/aider,cline/cline&type=Date)](https://star-history.com/continuedev/continue&plandex-ai/plandex&paul-gauthier/aider&Aider-AI/aider&cline/cline&Date)
 
 
+### Windsurf
 
 * Codeium - **Windsurf** was renamed from Codeium and [forked from vscode](https://www.youtube.com/watch?v=y__FNi7klwM)
 
@@ -256,8 +257,37 @@ sudo apt-get upgrade windsurf
 
 {{< youtube "3qi94lCdYI0" >}}
 
+The interesting thing about Windsurf, is that we can select different models and also to swap between the write mode (to affect the cdebase) and the chat mode with them.
 
 ![Windsurf Pro](/blog_img/dev/windsurf-pro-payment.png)
+
+These are the [models](https://docs.windsurf.com/windsurf/models) we can use with windsurf.
+
+> At the time of writing, when selecting by provider, the Deepseek V3 and R1 are free to use (nt consuming credits)
+
+>> Check the credits by [login](https://windsurf.com/account/login) and go to [usage](https://windsurf.com/subscription/usage) or [profile](https://windsurf.com/profile)
+
+
+See also the bottom right section (click on Pro) and you will see:
+
+
+#### Windsurf Memories
+
+Go to the top right (the book icon), customizations
+
+#### Windsurf Image/Web input
+
+You can send images to give context to the code assistant.
+
+You can do: `@web`
+
+Or simply `https://keystatic.com/docs/installation-astro understand those docs and review if we have everything in place on this project for keystatic to work`
+
+#### Windsurf x MCP
+
+Lately I was discovering [about MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/)
+
+### ContinueDev
 
 * Continue.dev: https://github.com/continuedev/continue
 
