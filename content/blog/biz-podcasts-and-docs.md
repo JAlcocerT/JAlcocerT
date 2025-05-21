@@ -29,6 +29,7 @@ url: 'tech-for-podcast'
 4. Amazing Docs: https://starlight.astro.build/
 5. OpenGraph (OG) image when shared (also when sharing posts)
 6. All the sample features at [their sample posts](https://github.com/withastro/starlight/blob/main/docs/src/content/docs/guides/sidebar.mdx)
+7. Supports `md`, `mdx` and `mdoc`
 
 ```sh
 npm create astro@latest -- --template starlight

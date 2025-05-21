@@ -271,6 +271,11 @@ These are the [models](https://docs.windsurf.com/windsurf/models) we can use wit
 See also the bottom right section (click on Pro) and you will see:
 
 
+{{< callout type="warning" >}}
+Files/folders need to be out of the `.gitignore` so that cna be used as context for Windsurf Mdels
+{{< /callout >}}
+
+
 #### Windsurf Memories
 
 Go to the top right (the book icon), customizations
@@ -283,6 +288,11 @@ You can do: `@web`
 
 Or simply `https://keystatic.com/docs/installation-astro understand those docs and review if we have everything in place on this project for keystatic to work`
 
+* This one can also be helpful:
+  *  https://keystatic.com/docs/format-options
+  * https://docs.astro.build/en/reference/configuration-reference/#output
+
+  
 #### Windsurf x MCP
 
 Lately I was discovering [about MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/)

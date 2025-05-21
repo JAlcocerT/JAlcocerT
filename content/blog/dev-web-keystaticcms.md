@@ -24,7 +24,11 @@ I got to know about **Keystatic CMS** thanks to:
 
 - https://github.com/Thinkmill/keystatic
 
-> MIT | First class **CMS experience**, TypeScript API, Markdown & YAML/JSON based, no DB
+> MIT | First class **CMS experience**, TypeScript API, [Markdown & YAML/JSON](https://keystatic.com/docs/format-options) based, no DB
+
+Keystatic is capable to store your data in multiple formats: YAML, JSON, Markdoc and MDX.
+
+By default, entries will be stored in a YAML file.
 
 <!-- https://www.youtube.com/watch?v=N3pywDv-0Tg -->
 

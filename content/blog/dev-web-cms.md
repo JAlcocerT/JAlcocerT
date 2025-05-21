@@ -142,7 +142,14 @@ A tool that makes Markdown, JSON and YAML content in your codebase editable by h
 * **No database**
 * Markdoc & MDX support
 
-> Two way editing
+> Two way editing!
+
+```sh
+# npm run build
+# #npm install -g serve #serve with npm
+# #serve -s dist #http://localhost:3000
+# npx serve -s dist #http://localhost:3000
+```
 
 Keystatic CMS is a modern, open-source, headless content management system designed to **work directly with your codebase**. 
 
@@ -223,6 +230,13 @@ Uses [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH 
 This one is cnfigured to work locally as per its `keystatic.config.ts`. 
 {{< /callout >}}
 
+
+
+**How I was able to implement it?**
+
+Thanks to [windsurf and some vibecoding](https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf)!
+
+You will need to do: 
 
 ```sh
 #npm install keystatic
