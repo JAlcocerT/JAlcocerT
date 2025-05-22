@@ -5,7 +5,7 @@ draft: true
 tags: ["Tinkering"]
 summary: Learning how to 
 description: Testing the 
-url: 'learning-new-tools-oct-2024'
+url: 'learning-new-tools'
 ---
 
 * https://github.com/glideapps/glide-data-grid
@@ -13,9 +13,6 @@ url: 'learning-new-tools-oct-2024'
 * Baserow
 
 ![BaseRow](/blog_img/apps/baserow.png)
-
-
-
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/" title="Configuring CF WnP with Github and Astro ↗" >}}
@@ -33,4 +30,6 @@ https://jalcocert.github.io/JAlcocerT/understanding-openl-tablets/
     * https://github.com/dubinc/dub#self-hosting
     * https://dub.co/pricing
 
-### InkScape can also Generate Branded QR's
+> Yet this is free https://emn178.github.io/online-tools/qr-code/generator/
+
+**InkScape can also Generate Branded QR's**

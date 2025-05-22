@@ -123,6 +123,8 @@ from pyspark.sql import functions as f
     .show())
 ```
 
+> To work with huge JSON's, consider [this tool](https://emn178.github.io/online-tools/json/formatter/)
+
 {{< details title="Some TECH/Tools for BIG Data Platforms 📌" closed="true" >}}
 
 1. **Diagrams**: Tools like Mermaid and Excalidraw for visualizing workflows and processes.
@@ -148,8 +150,6 @@ from pyspark.sql import functions as f
 21. **StringZilla**: Library for high-performance string operations across multiple languages.
 
 These tools span across data flow automation, big data management, Kubernetes workflows, data validation, and distributed computing.
-
-
 
 {{< /details >}}
 

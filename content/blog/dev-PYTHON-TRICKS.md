@@ -14,6 +14,10 @@ https://www.geeksforgeeks.org/python-pillow-creating-a-watermark/
 
 ## Video
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
+{{< /cards >}}
+
 ## WebApps
 
 {{< cards cols="1" >}}
@@ -30,9 +34,11 @@ Flask
 
 To generate [**QR's with logo** thanks to Python](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb) 
 
-> Tt can be done as well with Inkscape, or [with QR-Code-Generator](https://github.com/nayuki/QR-Code-generator)
+> It can be done as well with Inkscape, or [with QR-Code-Generator](https://github.com/nayuki/QR-Code-generator) or with [emn178](https://emn178.github.io/online-tools/qr-code/generator/)
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+As seen during [this wedding](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt)
 
 
 

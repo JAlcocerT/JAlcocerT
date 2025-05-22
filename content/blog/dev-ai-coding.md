@@ -30,6 +30,15 @@ But how about creating websites with these....
 
 ## CLI Based
 
+For some of these, you will need...
+
+* https://platform.openai.com/playground/prompts?models=gpt-4.1
+* https://platform.openai.com/logs
+  * OpenAI API Keys - https://platform.openai.com/api-keys
+  
+* Anthropic - https://console.anthropic.com/settings/keys
+* Groq - https://console.groq.com/keys
+
 ### OpenAI
 
 **Codex CLI** is built for developers who already live in the terminal and want ChatGPT‑level reasoning plus the power to actually run code, manipulate files, and iterate – all under version control.
@@ -113,10 +122,28 @@ https://openai.com/index/introducing-codex/
 ### Claude Code
 
 * https://github.com/anthropics/claude-code
+  * https://docs.anthropic.com/en/docs/claude-code/overview
 
 > Claude Code is an agentic coding tool that **lives in your terminal, understands your codebase**, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
 
-Actually [Plandex](#plandex) was first!
+```sh
+# Ask questions about your codebase
+claude
+> how does our authentication system work?
+
+# Create a commit with one command
+#claude commit
+
+# Fix issues across multiple files
+#claude "fix the type errors in the auth module"
+claude "Can you explain this code base?"
+claude < prompt.md
+```
+
+
+> > Actually [Plandex](#plandex) was first!
+
+
 
 ---
 

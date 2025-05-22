@@ -73,6 +73,8 @@ openssl rand -base64 12 #for secrets
 openssl rand -hex 32 #for apikeys
 ```
 
+> See als https://emn178.github.io/online-tools/
+
 
 ### Termix
 
@@ -200,7 +202,7 @@ To get in a quick look what Im selfhosting lately.
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Chat with various LLMs x Youtube Groq Summaries" >}}
 {{< /cards >}}
 
-**Get your AI API KEYS**
+**Get your AI API KEYS**:
 
 * https://platform.openai.com/playground/prompts?models=gpt-4.1
 * https://platform.openai.com/logs
