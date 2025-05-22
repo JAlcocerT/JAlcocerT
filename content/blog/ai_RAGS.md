@@ -76,7 +76,7 @@ LangChain can also help us to *chat with website content*:
 {{< /filetree/container >}}
 
 
-![alt text](/blog_img/GenAI/chromadb-cli.png)
+![Chroma DB CLI](/blog_img/GenAI/chromadb-cli.png)
 
 
 ### CSV and PDF
@@ -102,9 +102,8 @@ If you are interested, you can **edit PDFs** with:
 
 * [Inkscape](https://www.youtube.com/watch?v=z_O_casrDjM)
 * [GIMP](https://www.youtube.com/watch?v=itGZ7SZAayg)
-* See also: stirlingPDF,...
 
-
+> See also: [stirlingPDF](https://fossengineer.com/selfhosting-stirling-pdf/),...
 
 ### Database
 
@@ -147,7 +146,7 @@ I also learnt a lot with the chat over `.md` files with [LlamaIndex + Mem0](http
 
 ## PandasAI
 
-
+This was the first RAG I heard about 2 years ago.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df//" title="LangChain Pandas DF | Post ↗" icon="book-open" >}}
@@ -193,7 +192,7 @@ LangChain, LLamaindex, OpenAI... can all be used together with MLFlow! https://m
 
 What for?
 
-It helps us see how our LLMs are working in production.
+It helps us see/observ how our LLMs are working in production.
 
 From this simple prompts: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_mermaid.py
 
@@ -210,7 +209,7 @@ To....
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/MLFlow" title="MLFlow with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/GenAI/mlflow-prompts.png)
+![Prompting ML Flow](/blog_img/GenAI/mlflow-prompts.png)
 
 * https://pypi.org/project/mlflow/
 
@@ -262,7 +261,7 @@ Refer to the documentation for customization and manual instrumentation.
 {{< /cards >}}
 
 
-![alt text](/blog_img/GenAI/langfuse-webui.png)
+![Langfuse Web UI](/blog_img/GenAI/langfuse-webui.png)
 
 
 #### LangGraph BigTool
@@ -347,7 +346,6 @@ Lately I have been using:
 * https://platform.openai.com/api-keys
 
 ### GEN AI Techniques
-
 
 * Fundamentals of Neural Networks: Understand the architecture and training of deep neural networks.
 * Generative Adversarial Networks (GANs): Basic understanding of how GANs work for generating synthetic data or other creative outputs.

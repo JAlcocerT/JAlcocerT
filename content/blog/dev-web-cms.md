@@ -182,6 +182,7 @@ Keystatic CMS is a modern, open-source, headless content management system desig
 
 > **MIT** | First class CMS experience, TypeScript API, Markdown & YAML/JSON based, **no DB**
 
+https://www.youtube.com/watch?v=K_-yTaBWzbA
 
 {{< callout type="info" >}}
 Keystatic is a “file-based” CMS and rich-content editor that lives alongside your source code.

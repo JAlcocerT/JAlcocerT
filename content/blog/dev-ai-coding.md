@@ -134,12 +134,14 @@ claude
 # Create a commit with one command
 #claude commit
 
-# Fix issues across multiple files
-#claude "fix the type errors in the auth module"
-claude "Can you explain this code base?"
+#Query Claude Code Examples:
+#claude "Can you explain this code base?"
 claude < prompt.md
 ```
 
+{{< callout type="info" >}}
+Claude will inform you about the used credits and used models
+{{< /callout >}}
 
 > > Actually [Plandex](#plandex) was first!
 

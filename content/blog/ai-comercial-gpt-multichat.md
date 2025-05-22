@@ -7,7 +7,7 @@ cover:
   alt: "ChatGPT Clone" # alt text
   caption: "Build a ChatGPT Clone with Streamlit." # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
-description: 'More than a ChatGPT Clone with Streamlit. Creating the Streamlit-MultiChat Project. Supporting multiple LLMs Ollama, Anthropic, Groq...'
+description: 'More than a ChatGPT Clone with Streamlit. Creating the Streamlit-MultiChat Project. Supporting multiple LLMs: Ollama, Anthropic, Groq...'
 url: 'create-streamlit-chatgpt'
 ---
 
@@ -255,9 +255,8 @@ And deploy with docker-compose, where you have **environment variables to place 
 
 * {{< newtab url="https://platform.openai.com/api-keys" text="OpenAI API Keys" >}}
 
-
 ```yml
-version: '3'
+#version: '3'
 
 services:
   streamlit-multichat:
@@ -291,22 +290,46 @@ networks:
 #docker-compose up -d
 ```
 
-
 {{< /details >}}
 
----
+```sh
+docker pull ghcr.io/jalcocert/streamlit-multichat:latest #:v1.1  #:latest
+```
 
-## Conclusion - And what I learnt
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_DeployMe/Docker-Compose.yml" title="MultiChat Container Config 🐋 ↗" >}}
+{{< /cards >}}
 
-Now you are free to **prompt those different models!**
+
+### What Ive learnt
+
+0. Now you are free to **prompt those different models!** via APIs:
 
 * https://console.anthropic.com/workbench/
 * https://console.groq.com/keys
 * https://platform.openai.com/api-keys
 
-```sh
-docker pull ghcr.io/jalcocert/streamlit-multichat:latest #:v1.1  #:latest
-```
+1. Passing `env` variables via the `secrets.toml` is interesting approach.
+2. Having sample streamlit auth functions handy
+3. Using different pages to keep the code clean
+
+{{< filetree/container >}}
+  {{< filetree/folder name="Multichat Project" >}}
+    {{< filetree/file name="Z_multichat.py" >}}
+    {{< filetree/file name="Z_multichat_Auth.py" >}}
+    {{< filetree/folder name=".streamlit" state="open" >}}
+      {{< filetree/file name="config.toml" >}}
+      {{< filetree/file name="secrets.toml" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="Streamlit_Pages" state="open" >}}
+      {{< filetree/file name="Auth_functions.py" >}}
+      {{< filetree/file name="Streamlit_OpenAI.py" >}}
+      {{< filetree/file name="Streamlit_OpenAI.py" >}}
+      {{< filetree/file name="Streamlit_YT_Groq.py" >}}
+      {{< filetree/file name="Streamlit_groq.py" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
 
 Or you can do it with the built: `streamlit-multichat`
 

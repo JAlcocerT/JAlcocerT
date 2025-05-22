@@ -12,6 +12,11 @@ Lets see some *no code* websites that you can use at a Home Server/VPS.
 
 > [One Stack deploy them all with Dockge **here**](https://github.com/JAlcocerT/Docker/blob/main/Z_Dockge/stacks/Webs/Compose.yaml)
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/CMS" title="Web CMSs | Container Configs 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/" title="Linktree Alternatives | Post ↗" >}}
+{{< /cards >}}
+
 ### Just Get Wordpress
 
 No time for tinkering with web dev stuff?
@@ -22,7 +27,11 @@ Just get a **wordpress going**.
 See the docker container **config files [here](https://github.com/JAlcocerT/Docker/tree/main/Web)**
 {{< /callout >}}
 
+This is were most of us started, right?
+
 {{< details title="Wordpress Docker Compose for VPS 📌" closed="true" >}}
+
+Get such docker config, a server and https and you are ready to go:
 
 ```yml
 services: ##for ubuntu
@@ -72,7 +81,7 @@ volumes:
 See [WP Docker Compose](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Wordpress%20RPi%20Docker%20compose.yml)
 {{< /callout >}}
 
-> Site will be ready at `subdomain.jalcocertech.com` and for the user `subdomain.jalcocertech.com/wp-admin` 
+> The WP site will be ready at `subdomain.jalcocertech.com` and for the user `subdomain.jalcocertech.com/wp-admin` 
 
 #### Wordpress Tweaks
 
@@ -80,11 +89,9 @@ See [WP Docker Compose](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Wo
 
 > A curated list of amazingly awesome WordPress resources, themes, plugins and shiny things. Inspired by awesome-php.
 
-
-
 ### Wordpress Alternatives
 
-You can also try these.
+You can also try these selfhstable alternatives
 
 #### Ghost
 
@@ -242,7 +249,7 @@ services:
 
 ## Conclusions
 
-To sell to the masses, **you need a cool UI** for the users to manage their stuff and make it scalable.
+To sell Webs to the *masses*, **you need a cool UI** for the users to manage their stuff and make it scalable.
 
 {{< callout type="info" >}}
 If you are looking for a [LinkTree Alternative, see LinkStack](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/)
@@ -250,11 +257,15 @@ If you are looking for a [LinkTree Alternative, see LinkStack](https://jalcocert
 
 See mine deployed: https://whois.jalcocertech.com/@me
 
-![alt text](/blog_img/web/web-linkstack.png)
+![LinkStack Web UI](/blog_img/web/web-linkstack.png)
 
 What's next?
 
-Maybe place [some GDPR compliant Web Analytics](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics) or add some [other cool features](https://jalcocert.github.io/JAlcocerT/create-your-website/#features-for-webs)
+Maybe... place [some GDPR compliant Web Analytics](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics) or add some [other cool features](https://jalcocert.github.io/JAlcocerT/create-your-website/#features-for-webs)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="Web Analytics Tools | Container Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 ### SelfHosted LinkTree Alternatives
 

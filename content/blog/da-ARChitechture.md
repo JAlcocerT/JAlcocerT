@@ -123,7 +123,7 @@ from pyspark.sql import functions as f
     .show())
 ```
 
-> To work with huge JSON's, consider [this tool](https://emn178.github.io/online-tools/json/formatter/)
+> To work with huge JSON's, consider [these tools](https://jalcocert.github.io/JAlcocerT/aws-s3-python-boto-queries/#faq)
 
 {{< details title="Some TECH/Tools for BIG Data Platforms 📌" closed="true" >}}
 

@@ -49,9 +49,18 @@ See my [HUGO Lynx deployed at GHPages](https://jalcocert.github.io/Portfolio/) a
 
 1. [Astro + Tina](https://darko.io/posts/linktree-and-linkinbio-clone-with-astro-and-tinacms/)
 
+The long overdue topic of SSG + CMS... one day ill have to cver that up.
+
 ---
 
 ## SelfHosted Solutions for LinkinBio
+
+
+See these container config files: 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/CMS" title="Web CMSs | Container Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 
 1. **Little Link**: A lightweight DIY Linktree alternative.
