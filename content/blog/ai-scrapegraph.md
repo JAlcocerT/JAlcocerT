@@ -10,12 +10,13 @@ cover:
 description: 'Selfhosting Scrapegraph-ai with Docker. Scrap with Python.'
 summary: 'Scrapping with AI and Open Source. How to use Scrape Graph and how it compares with similar F/OSS projects.'
 url: 'scrapping-with-llms'
-isPinned: true
+#isPinned: true
 ---
 
 <!-- 
 https://star-history.com/blog/how-to-use-github-star-history
-https://star-history.com/blog/ai-web-scraper -->
+https://star-history.com/blog/ai-web-scraper 
+-->
 
 Over the past years ive'been something like this...
 

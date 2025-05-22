@@ -143,6 +143,14 @@ claude < prompt.md
 Claude will inform you about the used credits and used models
 {{< /callout >}}
 
+Total cost:            $3.22
+Total duration (API):  52m 3.2s
+Total duration (wall): 6h 53m 43.5s
+Total code changes:    4351 lines added, 0 lines removed
+Token usage by model:
+    claude-3-5-haiku:  70.0k input, 117.8k output, 0 cache read, 0 cache write
+   claude-3-7-sonnet:  123 input, 40.6k output, 3.1m cache read, 304.1k cache write
+
 > > Actually [Plandex](#plandex) was first!
 
 

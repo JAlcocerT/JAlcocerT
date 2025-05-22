@@ -13,7 +13,7 @@ cover:
 description: 'A guide to SelfHost FileBrowser and Syncthing with docker.'
 summary: 'A Free alternative to one drive/google drive / apple cloud - Your Cloud with Syncthing and Filebrowser.'    
 url: 'selfhosting-filebrowser-docker'
-isPinned: true
+#isPinned: true
 ---
 
 In an era where cloud storage is ubiquitous, not everyone is comfortable entrusting their personal files to third-party services. 

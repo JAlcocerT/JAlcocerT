@@ -5,7 +5,7 @@ draft: false
 tags: ["Dev","AI"]  
 description: "Python App to explore vacation destination. LLMs ❤️ Data. While exploring Agents."
 url: 'vacation-planner-python'
-isPinned: false
+#isPinned: false
 ---
 
 *Where to go. When to go. Can I go?*

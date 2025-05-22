@@ -14,7 +14,7 @@ editPost:
 description: "Python App as (Historical and Forecasted) Weather Guide"
 summary: 'Unpredictable weather led to the creation of the Python Trip Planner app. This open source tool forecasts weather, ensuring a smoother trip planning. Discover the features, how to use it for Free.'
 url: 'trip-planner-with-weather'
-isPinned: false
+#isPinned: false
 ---
 
 

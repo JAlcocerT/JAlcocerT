@@ -1,12 +1,11 @@
 ---
-title: "How to Query s3 buckets with Python"
+title: "How to Query AWS s3 buckets data [with Python]"
 date: 2023-08-19
 draft: false
 tags: ["Self-Hosting","Web"]
 description: 'Understanding how to use boto to query aws s3 buckets information. Be ready for JSON.'
 url: 'aws-s3-python-boto-queries'
 ---
-
 
 ## Using AWS CLI
 
@@ -33,8 +32,8 @@ But we came here to query the data, right?
 Make sure that you have a solid understanding about Python Dependencies and PySpark:
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat Project ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat RAG project ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="PySpark 101 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Python 101 ↗" >}}
 {{< /cards >}}
 
 

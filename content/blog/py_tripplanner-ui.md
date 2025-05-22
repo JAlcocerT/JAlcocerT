@@ -10,7 +10,7 @@ tags: ["Python","Dashboards","DASH","Trip-Planner"]
 description: "Creating synergy in Python Dash App - Modifying DASH & Plotly Graphs default colors."
 summary: 'Improving the UI of The Python Trip Planner Dash App. The layouts importance and how to tweak colors of our charts.'
 url: 'improving-ui-python-dash-apps'
-isPinned: false
+#isPinned: false
 ---
 
 ## Tweaking Python Dash Apps'UI

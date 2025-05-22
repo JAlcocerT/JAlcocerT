@@ -10,7 +10,7 @@ cover:
 description: "Making informed decisions about the best time to travel to a location based on historical weather data and this Python DASH app."
 summary: 'Are you planning your next adventure but not sure if the weather will be fine? This Python Dash App based on Meteostat API data allows you to explore historical weather data for any location you are planning to visit.'
 url: 'python-trip-planner'
-isPinned: false
+#isPinned: false
 ---
 
 # Trip Planner - Python Weather App

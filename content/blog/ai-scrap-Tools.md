@@ -7,17 +7,17 @@ tags: ["Gen-AI","Dev"]
 #     image: "https://socialify.git.ci/VinciGit00/Scrapegraph-ai/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
 #     alt: "Using ScrapeGraph with Python" # alt text
 #     caption: "ScrapeGraph 101." # display caption under cover
-cover:
-   image: "/img/SelfHosting/ai-scrapping-tools-recap2024.png" # image path/url 
-   Width: 360
-   Height: 200
-   sizes: 360
-   alt: "AI Scrapping Tools Compared." # alt text
-   caption: "ScrapeGraph vs FireCrawl vs Crawl4AI vs Others." # display caption
+# cover:
+#    image: "/img/SelfHosting/ai-scrapping-tools-recap2024.png" # image path/url 
+#    Width: 360
+#    Height: 200
+#    sizes: 360
+#    alt: "AI Scrapping Tools Compared." # alt text
+#    caption: "ScrapeGraph vs FireCrawl vs Crawl4AI vs Others." # display caption
 description: 'AI Powered Scrap.'
 summary: 'Comparing ScrapeGraph, Crawl4AI, Firecrawl and Reporeader to help on research.'
 url: 'ai-scrapping-tools'
-isPinned: false
+#isPinned: false
 ---
 
 There are few **AI Scrapping Tools** out there already.
