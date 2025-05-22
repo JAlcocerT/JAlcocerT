@@ -378,8 +378,15 @@ Now you can try the app at:
 
 
 
+* {{< newtab url="https://github.com/cmooredev/RepoReader" text="The RepoReader Source Code at Github" >}}
 
-{{< details title="Tools to get Repo Information 📌" closed="true" >}}
+>  Explore and ask questions about a GitHub code repository using OpenAI's GPT.
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=cmooredev/RepoReader&type=Date)](https://star-history.com/#cmooredev/RepoReader&Date) 
+
+
+{{< details title="Tools to get Repo Information | Repo Reader 📌" closed="true" >}}
 
 * https://github.com/cmooredev/RepoReader
   * https://github.com/JAlcocerT/RepoReader
@@ -387,6 +394,36 @@ Now you can try the app at:
 Summarize Github Readme (or actually any web).
 
 And...create [posts **scheletons** based on that info](https://github.com/JAlcocerT/Scrap_Tools/tree/main/FireCrawl/Z_Scrap_GHRepo)
+
+
+```sh
+git clone https://github.com/cmooredev/RepoReader
+cd RepoReader
+```
+
+We need to provide OpenAI API key (which is **not OSS**):
+
+```sh
+#source .env
+export OPENAI_API_KEY="sk-..." #linux
+```
+
+And make a proper python setup:
+
+```sh
+#sudo apt install python3.12-venv
+#sudo apt install libxml2-dev libxslt1-dev
+
+python3 -m venv RepoReader_venv
+
+source RepoReader_venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+```sh
+python3 app.py
+```
 
 {{< /details >}}
 

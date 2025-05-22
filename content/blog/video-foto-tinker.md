@@ -373,6 +373,10 @@ https://www.youtube.com/watch?v=rMhe2gYJa9s
 2. digiKam
 3. Photoflow
 
+* Darktable is an open source photography workflow application and raw developer - https://github.com/darktable-org/darktable
+* GIMP: The GNU Image Manipulation Program - https://gitlab.gnome.org/GNOME/gimp
+
+
 ---
 
 ## Conclusions
@@ -562,3 +566,220 @@ While the double frame rate rule is a great starting point, there are creative r
 **In conclusion:**
 
 For the vast majority of your video work, aiming for a shutter speed that is double your frame rate is a solid foundation for achieving natural-looking and aesthetically pleasing motion. Deviating from this rule should be a conscious creative choice made to achieve a specific visual effect.
+
+
+### F/OSS Tools for Video
+
+* Create Animations with Code: https://github.com/motion-canvas/motion-canvas
+  * https://github.com/motion-canvas/motion-canvas?tab=MIT-1-ov-file#readme
+
+A TypeScript library for creating animated videos using the Canvas API.
+
+>  Visualize Your Ideas With Code 
+
+<!-- Motion Canvas is a tool that bridges the gap between code and animation, specifically targeted at creating animated videos. Here's a breakdown of what I know about it:
+
+
+Library & Editor: Motion Canvas offers two main parts:
+
+Library (written in TypeScript): This library allows you to write animation code using generators, providing a structured approach for creating animations.
+Web-based Editor: This editor provides a real-time preview of your animations as you write the code.
+Animation with Canvas API: Motion Canvas leverages the Canvas API, a built-in functionality of web browsers that allows for dynamic manipulation of graphics. This gives you control over various visual elements of your animation.
+
+Benefits:
+
+Combined Power of Code and UI:  Motion Canvas offers the benefits of both writing code for precise control and a visual editor for intuitive adjustments, making it suitable for users with different comfort levels. -->
+<!-- 
+To use Motion Canvas, you'll need a few things:
+
+Node.js and npm: Motion Canvas relies on Node.js, a JavaScript runtime environment, and npm (Node Package Manager) for managing dependencies. You can download and install them together from the official Node.js website: https://nodejs.org/en
+
+Code editor: You'll need a code editor of your choice to write and edit your Motion Canvas code. Popular options include Visual Studio Code, Atom, or Sublime Text.
+
+(Optional) ffmpeg: While not strictly necessary for basic functionality, ffmpeg is a powerful tool for video encoding and manipulation. Motion Canvas can leverage ffmpeg for exporting your animations as videos. You can find installation instructions for ffmpeg based on your operating system through a web search. -->
+
+<!-- 
+
+---
+
+## FAQ
+
+* https://github.com/TheLastBen/fast-stable-diffusion
+  * With DreamBooth and others -->
+
+<!-- 
+
+```Dockerfile
+# Use the specified Python base image
+FROM python:3.11-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y \
+    git \
+    build-essential
+
+```
+
+```yml
+version: '3'
+
+services:
+  automatic:
+    image: python:3.11-slim
+    container_name: ai-automatic
+    command: tail -f /dev/null
+    volumes:
+      - ai_automatic:/app
+    working_dir: /app  # Set the working directory to /app
+    ports:
+      - "7865:7865"
+
+volumes:
+  ai_automatic:
+```
+
+## Fooocus
+
+Fooocus is an image generating software (based on Gradio).
+
+ **It supports GPU and M1/M2**.
+
+https://www.youtube.com/watch?v=mKuhY3LSLwY
+* <https://github.com/lllyasviel/Fooocus>
+
+
+
+```sh
+apt update
+apt install git
+git clone https://github.com/lllyasviel/Fooocus
+#python3 -m vend fooocus_env
+#source fooocus_env/bin/activate
+cd Fooocus
+pip install -r requirements_versions.txt
+
+python entry_with_update.py
+#python entry_with_update.py --listen
+```
+
+The default model is [Juggernaut-XL](https://huggingface.co/stablediffusionapi/juggernaut-xl)
+
+```yml
+version: '3'
+
+services:
+  sd-fooocus:
+    image: python:3.11-slim
+    container_name: fooocus
+    command: tail -f /dev/null
+    volumes:
+      - ai_fooocus:/app
+    working_dir: /app  # Set the working directory to /app
+    ports:
+      - "7865:7865"
+
+volumes:
+  ai_fooocus:
+```
+
+## ComfyUI
+
+* https://github.com/comfyanonymous/ComfyUI
+  * NVIDIA OR CPU WINDOWS PORTABLE - https://github.com/comfyanonymous/ComfyUI/releases
+  * <https://github.com/comfyanonymous/ComfyUI#installing>
+
+
+
+Fully supports SD1.x, SD2.x, SDXL and Stable Video Diffusion
+
+Works even if you don't have a GPU with: --cpu (slow)
+
+
+
+
+
+```Dockerfile
+# Use the specified Python base image
+FROM python:3.11-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y \
+    git \
+    build-essential
+
+RUN git clone https://github.com/comfyanonymous/ComfyUI
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.6
+
+WORKDIR /app/ComfyUI
+RUN pip install -r requirements.txt
+
+#python main.py --cpu
+
+```
+
+```sh
+
+```
+
+```sh
+apt update
+apt install git
+git clone https://github.com/comfyanonymous/ComfyUI
+#
+#
+#pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.6
+pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
+
+cd ComfyUI
+pip install -r requirements.txt
+#python main.py
+python main.py --cpu
+```
+
+
+```yml
+version: '3'
+
+services:
+  sd-comfyui:
+    image: comfyui #python:3.11-slim
+    container_name: comfyui
+    command: tail -f /dev/null
+    volumes:
+      - ai_comfyui:/app
+    working_dir: /app  # Set the working directory to /app
+    ports:
+      - "8188:8188"
+
+volumes:
+  ai_comfyui:
+```
+
+---
+
+## FAQ
+
+### Other AIGen for (SD) and Generate Images
+
+* <https://github.com/ttio2tech/Fooocus>
+* ConfyUI: <https://www.youtube.com/watch?v=Z0BYc-w-jaI>
+
+### Gradio?
+
+Typical port is 7860
+
+### Wait, What is...?
+
+<!-- CUDA?? -->
+<!-- 
+**Ray Tracing:** Imagine you're playing a video game and you see reflections in water, shadows from trees, and light coming through windows. Ray tracing is a way to make these scenes look super realistic. 
+
+**Integrated GPU (iGPU):** An integrated GPU (Graphics Processing Unit) is like a small artist living inside your computer's main brain (the CPU). 
+
+Unlike a separate, big artist (a dedicated graphics card), this small artist shares the same space and resources with the main brain. This means that while it's good for everyday tasks like watching videos, doing homework, or playing simple games, it's not as powerful for heavy-duty tasks like playing big, graphics-heavy video games or doing 3D design. It's like having a helper for graphics inside your computer without needing extra space or power. -->

@@ -7,6 +7,20 @@ description: 'Reviewing the most Popular AI Agents frameworks: From AG2AI (AutoG
 url: 'ai-multi-agents-frameworks'
 ---
 
+
+<!-- https://fossengineer.com/create-chatgpt-clone-streamlit/
+https://fossengineer.com/summarize-yt-videos/ -->
+
+<!-- https://fossengineer.com/chaos-theory-and-the-double-pendulum-with-python/
+https://github.com/agnanp/Ollama-Streamlit
+https://github.com/romilandc/streamlit-ollama-llm
+https://github.com/ChingWeiChan/ollama-streamlit-demo -->
+
+<!-- https://github.com/AIDevBytes/Streamlit-Ollama-Chatbot
+
+https://github.com/iamaziz/ollachat -->
+
+
 Couple of years back there where prjects like https://github.com/unconv/gpt-autopilot
 
 > MIT |  A GPT-4 powered AI agent that can create full projects with iterative prompting 
@@ -310,7 +324,10 @@ LangGraph adds:
 
 * https://github.com/microsoft/autogen
     * https://microsoft.github.io/autogen/
-
+<!-- 
+* {{< newtab url="https://docs.librechat.ai/" text="LibreChat Official Docs" >}}
+* {{< newtab url="https://github.com/danny-avila/LibreChat" text="The LibreChat Source Code at Github" >}}
+    * License: {{< newtab url="https://github.com//?tab=AGPL-3.0-1-ov-file#readme" text="aGPL 3.0" >}} ❤️ -->
 
 
 ### Camel
@@ -358,6 +375,7 @@ LangGraph adds:
 {{< callout type="info" >}}
 Im testing these tools at the [**MultiAgents** Repo](https://github.com/JAlcocerT/multiagents) 💻 
 {{< /callout >}}
+
 
 
 ### Agents with AutoGen - AG2AI

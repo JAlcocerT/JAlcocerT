@@ -57,10 +57,7 @@ It acts as a single source of truth for operational data, consolidating informat
 
 {{< /details >}}
 
-
-
-2. Data LakeHouses
-
+2. Data LakeHouses:
 
 {{< callout type="warning" >}}
 Always make comprehensible **Designs & Docs** for all the parties involved in the project
@@ -71,7 +68,7 @@ Always make comprehensible **Designs & Docs** for all the parties involved in th
 
 Design a [Data Story](https://jalcocert.github.io/JAlcocerT/business-intelligence-data-analytics/#designing-an-analytical-flow)
 
-https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#others
+* https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#others
 
 * A **conceptual data model** is the highest level, and therefore the least detailed.
 * A **logical data model** involves more detailed thinking about the implementation without actually implementing anything.
@@ -161,8 +158,7 @@ These tools span across data flow automation, big data management, Kubernetes wo
 * Managing expectations
 * Estimating tasks
 * How to sell ideas
-* What we are missing in the product?
-    * *fomo, loss>>>gain*
+* What we are missing in the product? *fomo, loss>>>gain*
 
 ## From the Experience
 
@@ -213,7 +209,6 @@ Swot and cost-benefit analysis are fundamental and widely used simple **framewor
 They each offer a distinct approach and are valuable tools in various contexts. 
 
 {{< details title="SWOT vs Satisficing vs CBA 📌" closed="true" >}}
-
 
 **SWOT Analysis:**
 

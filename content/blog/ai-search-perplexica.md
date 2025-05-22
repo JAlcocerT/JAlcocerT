@@ -10,6 +10,7 @@ tags: ["Docker","Gen-AI","Python","Dev","Self-Hosting"]
 description: 'perplexity ai free alternative'
 url: 'perplexica-docker'
 ---
+
 <!-- 
 https://www.fahdmirza.com/2024/07/install-perplexica-with-searxng-and.html
  -->

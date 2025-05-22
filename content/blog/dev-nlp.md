@@ -95,7 +95,8 @@ for string in strings_to_check:
     print(f"String: '{string}' -> PII Detected: {result}")
 ```
 
---
+
+---
 
 ## Conclusions
 
@@ -110,6 +111,31 @@ You can also have a look to **Sketch**, as it can make data cataloguing, like PI
 
 > MIT | AI code-writing assistant that understands data content. Sketch is usable in seconds and doesn't require adding a plugin to your IDE.
 
+
+### Other NERs
+
+
+NER stands for **Named Entity Recognition**.
+
+It is a subtask of information extraction that seeks to **locate and classify named entities mentioned in text into predefined categories** such as the names of persons, organizations, locations, expressions of times, quantities, monetary values, percentages, etc.
+
+NER is not directly used for detecting Personally Identifiable Information (PII) or for sentiment analysis, but it can be **an important component in** those tasks. For instance:
+
+1. **PII Detection**: While NER itself does not specifically detect PII, it can identify entities like names, addresses, or other specifics that might be considered PII. Additional rules or models are typically needed to specifically classify data as PII.
+
+2. **Sentiment Analysis**: NER is generally not used directly in sentiment analysis. Sentiment analysis focuses on determining the attitude or emotion conveyed in a piece of text, such as positive, negative, or neutral sentiments. However, understanding what entities are being discussed can provide context that might be useful in a more nuanced analysis of sentiment.
+
+NER is **a foundational NLP tool** that helps in structuring text for deeper analysis, which can be useful in tasks like PII detection and sentiment analysis, but it is not solely sufficient for these tasks.
+
+* https://github.com/urchade/GLiNER
+* https://github.com/urchade/GLiNER?tab=Apache-2.0-1-ov-file#readme
+
+> Generalist and Lightweight Model for Named Entity Recognition (Extract any entity types from texts) @ NAACL 2024
+
+* https://github.com/flairNLP/flair
+* https://github.com/flairNLP/flair?tab=License-1-ov-file#readme MIT Licensed
+
+> A very simple framework for state-of-the-art Natural Language Processing (NLP)
 
 ---
 
@@ -157,3 +183,58 @@ The items can be characters, words, or even syllables.
 {{% /details %}}
 
 > In essence, n-grams provide a simple yet powerful way to analyze and understand the structure of language.
+
+### F/OSS Gen AI Tools - Summer 2025
+
+This document discusses various open-source tools and concepts related to generative AI.
+
+* **Lobe Chat:** A tool from LobeHub ([https://lobehub.com/?utm\_source=chat\_preview&utm\_content=brand\_watermark](https://lobehub.com/?utm_source=chat_preview&utm_content=brand_watermark), GitHub: [https://github.com/lobehub/lobe-chat?tab=License-1-ov-file#readme](https://github.com/lobehub/lobe-chat?tab=License-1-ov-file#readme)).
+* **GPT4All:** A desktop application.
+* **Ollama**
+* **KNIME:** AI-powered data apps ([https://www.youtube.com/watch?v=HN-IJdUP4kc](https://www.youtube.com/watch?v=HN-IJdUP4kc)).
+* **node-llmatic:** ([https://github.com/fardjad/node-llmatic](https://github.com/fardjad/node-llmatic)).
+
+#### Key Concepts
+
+* **Vector DBs:** Databases optimized for storing and querying vector embeddings.
+* **Context Window:** The amount of information a model can consider when generating text.
+* **Hugging Face Models:** Models available on the Hugging Face Hub.
+* **RAG (Retrieval Augmented Generation):** A framework for enhancing LLMs with external knowledge.
+* **Semantic Search:** Search based on the meaning of the query.
+* **Embeddings:** Numerical representations of words or phrases (e.g., Word2Vec).
+    * **Word2Vec:** A neural network-based algorithm for learning word embeddings.
+* **GGUF:** A file format for storing large language models, successor to GGML.
+
+#### Neural Network Architectures
+
+* **CNNs (Convolutional Neural Networks):**
+    * Used for processing structured array data like images.
+    * Key components: Convolutional Layers, Activation Functions (e.g., ReLU), Pooling Layers, Fully Connected Layers.
+    * Applications: Image classification, object detection, face recognition, etc.
+* **RNNs (Recurrent Neural Networks):**
+    * Designed for processing sequences of data.
+    * Used in time-series analysis, NLP, and speech recognition.
+    * Challenges: Struggle with long-range dependencies.
+* **Transformers:**
+    * Rely on attention mechanisms instead of recurrence.
+    * Handle long-range dependencies more effectively than RNNs.
+    * Foundation of models like BERT, GPT, and T5.
+* **GPT (Generative Pre-trained Transformer):**
+    * A type of neural network architecture for natural language processing.
+    * Pre-trained on large datasets and fine-tuned for specific tasks.
+    * Generates human-like responses to text prompts.
+* **GANs (Generative Adversarial Networks):**
+    * Two neural networks (Generator and Discriminator) contesting each other.
+    * Used for generating realistic images, videos, and voice recordings.
+* **Diffusion Models:**
+    * Focus on quality and diversity in generated outputs.
+    * ([https://www.youtube.com/watch?v=sc_zOsnmMx0](https://www.youtube.com/watch?v=sc_zOsnmMx0))
+* **VAEs (Variational Autoencoders):**
+    * Focus on speed and diversity.
+* **Autoencoders:**
+    * Used for unsupervised learning of efficient codings of unlabeled data.
+    * Structure: Encoder, Decoder, Bottleneck.
+    * Applications: Dimensionality reduction, feature learning, denoising, anomaly detection.
+
+* **Prompting:** Giving instructions to an AI system. Small changes can significantly affect the output.
+    * Zero-Shot: Performing a task without prior examples.
