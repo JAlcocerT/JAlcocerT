@@ -7,14 +7,14 @@ description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI gen
 url: 'photo-video-tinkering'
 ---
 
-We come from...
+We come from...getting to know what [ffmpeg is for benchmarks](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#ffmpeg-benchmark-in-linux) to compare [CPU performance](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/).
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="Video Tricks ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg" title="Chocolatey and FFMPEG ↗" >}}
 {{< /cards >}}
 
-Wait, there is even a repo!
+Wait, there is even a repo for video stuff!
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Quick videos as a code from Action Cams" >}}
@@ -26,10 +26,8 @@ Wait, there is even a repo!
 {{< youtube "kaa1vPHqKdw" >}}
 
 {{< callout type="info" >}}
-For night video and the oa5pro, for me it has worked better: -0.7EV, 50fps, S 1/400, ISO 100 ~25600 (max range), AWB, Texture -1 and Noise Reduction -2.
+For night video and [the oa5pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/), for me it has worked better: -0.7EV, 50fps, S 1/400, ISO 100 ~25600 (max range), AWB, Texture -1 and Noise Reduction -2.
 {{< /callout >}}
-
-
 
 
 ## Video Editing
@@ -39,9 +37,7 @@ For night video and the oa5pro, for me it has worked better: -0.7EV, 50fps, S 1/
 If you are planning to use [Gyroflow](#gyroflow) for custom video estabilization, make sure that the OA5Pro records **without RS** modes and **Wide**!
 {{< /callout >}}
 
- In that way the acelerometer information will be captured in the mp4 file.
-
-
+In that way the acelerometer information will be captured in the `mp4` file.
 
 ### CLI Tricks
 
@@ -61,6 +57,8 @@ Just put [your video parts](https://jalcocert.github.io/JAlcocerT/my-action-cam-
 #ffmpeg -i DJI_20250515200111_0003_D.MP4 -ss 91 -c copy output_.mp4
 ffmpeg -i "$(ls *.MP4)" -ss 26 -c copy output_.mp4
 
+#Last 52s
+ffmpeg -sseof -52 -i DJI_20250520200235_0006_D.MP4 -c copy output_last_52s.mp4
 
 ## For Tinkering with more video parts
 ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list

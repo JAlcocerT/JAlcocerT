@@ -189,12 +189,18 @@ Which I could not resist to try: https://github.com/JAlcocerT/Docker/tree/main/B
 
 #### AI Apps Im SelfHosting
 
+I decided to add this section: https://github.com/JAlcocerT/Docker/tree/main/SelfH
+
+To get in a quick look what Im selfhosting lately.
+
 1. Now the **MultiChat** project I've been tinkering on, [now](https://github.com/JAlcocerT/Streamlit-MultiChat/releases/tag/llms%2Byt) supports also the Youtube Groq Summaries:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Chat with various LLMs x Youtube Groq Summaries" >}}
 {{< /cards >}}
+
+**Get your AI API KEYS**
 
 * https://platform.openai.com/playground/prompts?models=gpt-4.1
 * https://platform.openai.com/logs

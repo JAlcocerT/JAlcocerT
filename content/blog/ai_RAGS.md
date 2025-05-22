@@ -436,7 +436,7 @@ LOCAL_LLM=model # the model to use, defaults to `llama3.2` if not set
 ```
 
 
-{{< details title="Video Summarized with Groq | Local Deep Researcher📌" closed="true" >}}
+{{< details title="YT Vid Summarized with Groq | Local Deep Researcher📌" closed="true" >}}
 
 > Summarized with [this groq project](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/).
 

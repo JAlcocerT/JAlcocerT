@@ -268,7 +268,7 @@ Then, just...
 
 Proton Drive is cool...but it does not work out of the box for Linux.
 
-Unless... https://blog.otterlord.dev/posts/proton-drive-rclone/
+Unless... you find this [awsome Otterlord's post](https://blog.otterlord.dev/posts/proton-drive-rclone/)
 
 Recently when installing [Gyroflow for better video edition](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/) the ubuntu on my [x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/) could not access the files.
 
@@ -282,7 +282,6 @@ You can try with: Syncthing, Nextcloud, WebDav...
 
 > But try something!
 
-
 ---
 
 ## Conclusions
@@ -293,9 +292,9 @@ Maybe time to cancel some subscription tat you are not really using after you go
 
 You can still use cloud VPS as complementary backup, or s3 buckets...
 
-Where to get a VPS?
+Where to get [a VPS](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#other-clouds)?
 
-* Hetzner ...
+* Hetzner, Hostinger ...
 * https://lowendstock.com/
 * Some would say to [Oracle](https://www.oracle.com/cloud/sign-in.html), but I got my account shut down without a reason (nothing like selfhosting P2P programs...which was interesting and customer service did not came back with a solution)
 * GCP: https://console.cloud.google.com/

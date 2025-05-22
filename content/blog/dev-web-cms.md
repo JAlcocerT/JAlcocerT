@@ -14,22 +14,30 @@ Some time ago I tried Ghost as CMS connected to Gatsby as **headless CMS**.
 
 It was a very interesting setup.
 
-But I was looking for a way to integrate **CMS with HUGO/Astro**:
+But I was looking for a way to integrate **a CMS with HUGO/Astro**:
 
+* https://docs.astro.build/en/guides/cms/
 * https://jamstack.org/generators/
+* https://github.com/postlight/awesome-cms
 
+**Why CMS?**
+
+Because editing [markdown](https://docs.astro.build/en/guides/markdown-content/) content or adding [images like so](https://docs.astro.build/en/guides/markdown-content/), might not be for everyone.
+
+For me its just fine, but there are many people out there tied to some e2e website providers just because of the *easy UX*, despite the price.
 
 {{< callout type="info" >}}
-See more at [awsome CMS](https://github.com/postlight/awesome-cms) 
+Not sure if its good or bad news, yet there are a ton of CMS and I just needed one of them to be working.
 {{< /callout >}}
 
+[![Star History Chart](https://api.star-history.com/svg?repos=Thinkmill/keystatic,tinacms/tinacms,decaporg/decap-cms&,type=Date)](https://star-history.com/#Thinkmill/keystatic&tinacms/tinacms&decaporg/decap-cms&Date)
 
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Headless-CMS" title="CMS+SSGs with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-
+## Why a CMS
 
 ## CMS
 
@@ -107,12 +115,9 @@ This was a helpful video on TinaCMS x Astro:
 
 * https://github.com/MatthiesenXYZ/astro-ghostcms
 
-
 * https://github.com/GetPublii/Publii
 
 > GPLv3 | The most intuitive Static Site CMS designed for SEO-optimized and privacy-focused websites. 
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Thinkmill/keystatic,tinacms/tinacms,decaporg/decap-cms&,type=Date)](https://star-history.com/#Thinkmill/keystatic&tinacms/tinacms&decaporg/decap-cms&Date)
 
 
 ### Headless CMS
@@ -120,21 +125,41 @@ This was a helpful video on TinaCMS x Astro:
 * https://jamstack.org/headless-cms/
 * https://alternateoss.com/category/cms/
 
+A **Headless CMS** (Content Management System) is a type of CMS that **separates the "body" (the backend, where content is created, stored, and managed) from the "head" (the frontend, where content is presented to users)**.
+
+Think of it like this:
+
+* **Traditional CMS (e.g., WordPress, Drupal, Joomla):** These are like a complete car. They come with both the engine (content management and database) and the body (the website's design, themes, templates, and how it looks to users). They're all-in-one solutions that tightly couple content and presentation.
+
+* **Headless CMS:** This is just the engine of the car. It provides a robust system for creating, editing, and storing content, but it **doesn't dictate how or where that content will be displayed**. Instead, it exposes the content through **APIs (Application Programming Interfaces)**.
+
+**Key characteristics and what makes it "headless":**
+
+* **Content as a Service (CaaS):** A headless CMS functions primarily as a content repository. It stores content in a structured, raw format (like JSON or XML) and makes it available via APIs.
+* **API-First Approach:** The core of a headless CMS is its API. Developers use these APIs to pull the content and then display it on *any* "head" or frontend application.
+* **Decoupled Architecture:** The backend and frontend are completely independent. This means you can update or change one without affecting the other.
+* **No Built-in Frontend:** Unlike traditional CMS, a headless CMS does not provide themes, templates, or a rendering engine to build the user interface.
+
+
+
 **API Based vs GIT Based**
 
 {{< callout type="info" >}}
 https://blog.logrocket.com/9-best-git-based-cms-platforms/
 {{< /callout >}}
 
-* Gitlab provides with [up to 10 GB for repository](https://forum.gitlab.com/t/max-size-per-repo/17403), artifacts and LFS
+**Remember about these *file hosting* free tiers**
 
+* Gitlab provides with [up to 10 GB for repository](https://forum.gitlab.com/t/max-size-per-repo/17403), artifacts and LFS
 * Github provides with [Max 5GB per repo](https://www.reddit.com/r/github/comments/xn8y97/is_there_a_limit_to_how_big_a_github_repo_can_be/), with a limit of 100mb per file.
 
 > How many cool things can be done with those generous free tiers?
 
 #### KeyStatic CMS
 
-A tool that makes Markdown, JSON and YAML content in your codebase editable by humans. Live edit content on GitHub or your local file system, without disrupting your existing code and workflows.
+A tool that makes Markdown, JSON and YAML content in your codebase editable by humans. 
+
+Live edit content on GitHub or your local file system, without disrupting your existing code and workflows.
 
 * First-class CMS experience
 * Markdown & YAML/JSON based
@@ -162,10 +187,12 @@ Keystatic CMS is a modern, open-source, headless content management system desig
 Keystatic is a “file-based” CMS and rich-content editor that lives alongside your source code.
 {{< /callout >}}
 
-
-* https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
-* https://docs.astro.build/en/guides/cms/keystatic/
 * https://maciekpalmowski.dev/blog/keystatic-x-astro/
+* https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
+
+* https://docs.astro.build/en/guides/cms/keystatic/
+* https://docs.astro.build/en/guides/on-demand-rendering/
+* https://keystatic.com/docs/installation-astro
 
 {{< details title="KeyStatic key features 📌" closed="true" >}}
 
@@ -258,7 +285,54 @@ It defines how content is managed, structured, and edited within your project.
 
 This file tells Keystatic which collections and singletons to manage, how fields are structured, where content is stored, and how the CMS UI should behave.
 
+This structure shows all the key components we worked with to implement Keystatic:
+
+Configuration Files:
+keystatic.config.ts - The main Keystatic configuration
+astro.config.mjs - Updated to include Keystatic integration
+src/content/config.ts - Content schemas for Astro and Keystatic
+Content Directories:
+src/content/articles/ - The new directory for articles managed by Keystatic
+src/content/docs/ - Existing documentation directories now accessible through Keystatic
+Templates:
+src/pages/articles/ - Contains templates for displaying articles (index and dynamic [slug] page)
+Package Dependencies:
+Referenced in package.json (includes @keystatic/core and @keystatic/astro)
+This represents the complete file structure relevant to the Keystatic implementation that we set up.
+
 {{< filetree/container >}}
+  {{< filetree/folder name="src" >}}
+    {{< filetree/folder name="content" >}}
+      {{< filetree/folder name="articles" >}}
+        {{< filetree/file name="sample-article.mdoc" >}}
+      {{< /filetree/folder >}}
+      {{< filetree/folder name="docs" >}}
+        {{< filetree/folder name="dependencies" >}}
+          {{< filetree/file name="aaa.mdoc" >}}
+          {{< filetree/file name="pydantic.md" >}}
+          {{< filetree/file name="chromadb.md" >}}
+          {{< filetree/file name="langfuse.md" >}}
+          {{< filetree/file name="other-dependencies.md" state="closed" >}}
+        {{< /filetree/folder >}}
+        {{< filetree/folder name="reference" state="closed" >}}{{< /filetree/folder >}}
+        {{< filetree/folder name="guides" state="closed" >}}{{< /filetree/folder >}}
+        {{< filetree/file name="index.mdx" >}}
+      {{< /filetree/folder >}}
+      {{< filetree/file name="config.ts" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="pages" >}}
+      {{< filetree/folder name="articles" >}}
+        {{< filetree/file name="index.astro" >}}
+        {{< filetree/file name="[slug].astro" >}}
+      {{< /filetree/folder >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+  {{< filetree/file name="astro.config.mjs" >}}
+  {{< filetree/file name="keystatic.config.ts" >}}
+  {{< filetree/file name="package.json" >}}
+{{< /filetree/container >}}
+
+<!-- {{< filetree/container >}}
   {{< filetree/folder name="src" >}}
     {{< filetree/folder name="content" >}}
       {{< filetree/folder name="authors" state="closed" >}}
@@ -285,7 +359,7 @@ This file tells Keystatic which collections and singletons to manage, how fields
   {{< filetree/file name="keystatic.config.ts" >}}
   {{< filetree/file name="package.json" >}}
   {{< filetree/file name="README.md" >}}
-{{< /filetree/container >}}
+{{< /filetree/container >}} -->
 
 
 
@@ -362,13 +436,15 @@ I cant stop seeing interesting sites out there...
 
 * https://wyremontuje.pl/
 
+Now, who are the [real web competitors](https://jalcocert.github.io/JAlcocerT/no-code-websites/#competitors)?
 
+Who are the real people who need one? and their real needs?
 
+Do people *just* want some kind of [linktree alternative](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#ssg-solutions-for-linkinbios)?
 
+There is just one way to know: [testing the market](#product-analytics)
 
 ### Product Analytics
-
-
 
 
 {{< cards cols="2" >}}
@@ -376,7 +452,7 @@ I cant stop seeing interesting sites out there...
 {{< /cards >}}
 
 1. PostHog
-2. 
+2. OpenReplay
 
 [![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
 

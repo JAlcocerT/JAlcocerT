@@ -16,6 +16,8 @@ I started with [NPM](#nginx), but understood that there are few alternatives to 
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy" title="Proxies Docker Config Files 🐋 ↗" >}}
 {{< /cards >}}
 
+See this example on how one service ([Multichat](https://github.com/JAlcocerT/Streamlit-MultiChat)), can be deployed with [Https with any of the 3 Proxies](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat).
+
 
 ### Traefik
 
@@ -38,7 +40,7 @@ Sample SelfHosted Apps with **Caddy support** out of the box:
 
 ### NGINX
 
-NGINX can be used together with Authelia, which provides a authentication layer.
+NGINX can be used together with Authelia, which provides potentially, an authentication layer.
 
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX Setup and HTTPs with DuckDNS" >}}
@@ -46,14 +48,13 @@ NGINX can be used together with Authelia, which provides a authentication layer.
 
 Example project working with NGINX Proxy Manager:
 
-
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/nginx_docker_compose.yaml" title="NginxPM Docker Config File 🐋 ↗" >}}
 {{< /cards >}}
 
 
 {{< callout type="info" >}}
-Thanks to for the video!
+Thanks to Jims Garage and Chrstian Lempa for the explanatory videos!
 {{< /callout >}}
 
 ## Behind a NAT 

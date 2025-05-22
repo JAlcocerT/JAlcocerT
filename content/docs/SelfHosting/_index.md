@@ -11,20 +11,26 @@ Whatever you plan to **Selfhost**, there will be a moment that you will be looki
 
 1. [HTTPs and SSL](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) Setup
 2. [Monitoring](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/)
-3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/)
+3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) hardware
 
 
 {{< callout type="info" >}}
 Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhosted
 {{< /callout >}}
 
-## General OSS Resources
+**General SelfHosted Resources**
 
 - [Open Source Alternative - Add Project](https://www.opensourcealternative.to/add-project)
 - [Privacy Tools](https://www.privacytools.io/)
 - [Selfh.st](https://selfh.st/)
 
-## SelfHosted Email
+---
+
+## FAQ
+
+SelfHosted Email
+
+* MailInaBox - https://www.maketecheasier.com/create-email-server-linux-with-mail-in-a-box/
 
 {{< callout type="warning" >}}
 This is advanced
@@ -34,12 +40,8 @@ Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101e
 
 [SMTP2Go](https://www.reddit.com/r/selfhosted/comments/1hr7bi5/smtp2go_free_plan_spam_score/)
 
----
 
-## FAQ
-
-
-{{% details title="Hot to mount external drives consistently?" closed="true" %}}
+{{% details title="How to mount external drives consistently?" closed="true" %}}
 
 ```sh
 lsblk #list them again
@@ -93,38 +95,17 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 
 ### What do I like to SelfHost?
 
-1. Container UI's 🐳: Portainer, 
+> See https://github.com/JAlcocerT/Docker/tree/main/SelfH
+
+1. Container UI's 🐳: Portainer, Rancher, Dockge
 
 2. Syncthing 🐳
 
 3. Tools 🐳: IT-Tools, CosmosServer, OmniTools
 
-```yml
-version: '3'
-services:
-  cosmos-server:
-    image: azukaar/cosmos-server:latest
-    container_name: cosmos-server
-    hostname: cosmos-server
-    privileged: true
-    restart: always
-    ports:
-      - "800:80"
-      - "4433:443"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /:/mnt/host
-      - /var/lib/cosmos:/config
-    networks:
-      - default
-
-networks:
-  default:
-```
-
 4. [Webs 🐳](https://github.com/JAlcocerT/Docker/tree/main/Web/CMS): Wordpress, Ghost, LinkInBio selfhosted alternatives...
 
-> Wrote a post about the most popular CMS [here](https://jalcocert.github.io/JAlcocerT/no-code-websites/) and about LinkStack [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)
+> Wrote a post about the most popular CMS's [here](https://jalcocert.github.io/JAlcocerT/no-code-websites/) and about LinkStack [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)
 
 5. Productivity Tools 🐳: Get [proper focus](https://jalcocert.github.io/JAlcocerT/tools-to-improve-focus/)
 
@@ -138,57 +119,15 @@ networks:
 
 > The docker files are [here 🐳](https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos)
 
-10. SSGs 🐳
+10. SSGs combined with a headlessCMS 🐳 
 
-Like Hugo Theme Gallery
-
-Even SliDevJS PPTs!
+> Like Hugo Theme Gallery
 
 11. Change Detection
 
-```yml
-#https://docs.linuxserver.io/images/docker-changedetection.io/#application-setup
-#https://github.com/dgtlmoon/changedetection.io
-
----
-version: "2.1"
-services:
-  changedetection:
-    image: lscr.io/linuxserver/changedetection.io:latest
-    container_name: changedetection
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
-      - BASE_URL= #optional
-    volumes:
-      - /home/Docker/changedetection/config:/config
-    ports:
-      - 5000:5000
-    restart: unless-stopped
-```
-
 12. DUckDNS
 
-https://hub.docker.com/r/linuxserver/duckdns
-
-
-```yml
-docker run -d \
-  --name=duckdns \
-  --net=host `#optional` \
-  -e PUID=1000 `#optional` \
-  -e PGID=1000 `#optional` \
-  -e TZ=Etc/UTC `#optional` \
-  -e SUBDOMAINS=subdomain1,subdomain2 \
-  -e TOKEN=token \
-  -e UPDATE_IP=ipv4 `#optional` \
-  -e LOG_FILE=false `#optional` \
-  -v /path/to/appdata/config:/config `#optional` \
-  --restart unless-stopped \
-  lscr.io/linuxserver/duckdns:latest
-```
-
+* https://hub.docker.com/r/linuxserver/duckdns
 
 
 #https://docs.nextcloud.com/server/latest/user_manual/en/files/file_drop.html#setting-up-your-own-file-drop
@@ -231,7 +170,6 @@ CRON JOBS UI
 FAIL2BAN
 
 <https://docs.linuxserver.io/images/docker-fail2ban/#docker-compose-recommended-click-here-for-more-info>
-
 
 ---
 version: "2.1"

@@ -79,7 +79,7 @@ https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#others
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="Data Modelling 101 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="Data Modelling Concepts 101 ↗" >}}
 {{< /cards >}}
 
 #### The Data LifeCycle
@@ -92,8 +92,8 @@ https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#others
 {{< /cards >}}
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="GCP and BQ 101 ↗ " >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="PySpark 101 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="GCP and BQ 101 ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/" title="PySpark 101 ↗" >}}
 {{< /cards >}}
 
 

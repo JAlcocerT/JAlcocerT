@@ -216,6 +216,8 @@ You can also see firebasestudio...
 
 * https://firebase.studio/
 
+**EDIT** and as of 20th May, Google also launched [Jules](https://blog.google/technology/google-labs/jules/)
+
 ### Github Copilot
 
 * https://github.com/features/copilot
@@ -233,6 +235,16 @@ Its already on vscode and we can get for free (at the time of writing):
 
 [![Star History Chart](https://api.star-history.com/svg?repos=continuedev/continue,plandex-ai/plandex,paul-gauthier/aider,Aider-AI/aider,cline/cline&type=Date)](https://star-history.com/continuedev/continue&plandex-ai/plandex&paul-gauthier/aider&Aider-AI/aider&cline/cline&Date)
 
+### Void
+
+* https://voideditor.com/
+* https://github.com/voideditor/void
+
+Void is the open-source Cursor alternative.
+
+Use AI agents on your codebase, checkpoint and visualize changes, and bring any model or host locally. 
+
+Void sends messages directly to providers without retaining your data.
 
 ### Windsurf
 
