@@ -126,6 +126,18 @@ https://openai.com/index/introducing-codex/
 
 > Claude Code is an agentic coding tool that **lives in your terminal, understands your codebase**, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
 
+![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode1.png)
+
+![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode2.png)
+
+![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode3.png)
+
+![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode4.png)
+
+![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode5.png)
+
+![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode6.png)
+
 ```sh
 # Ask questions about your codebase
 claude
@@ -320,6 +332,7 @@ These are the [models](https://docs.windsurf.com/windsurf/models) we can use wit
 See also the bottom right section (click on Pro) and you will see:
 
 
+
 {{< callout type="warning" >}}
 Files/folders need to be out of the `.gitignore` so that cna be used as context for Windsurf Mdels
 {{< /callout >}}
@@ -334,6 +347,10 @@ Go to the top right (the book icon), customizations
 You can send images to give context to the code assistant.
 
 You can do: `@web`
+
+```txt
+I need some help to integrate keystaticCMS into this astro site, please do so taking into account the following docs: https://keystatic.com/docs/installation-astro
+```
 
 Or simply `https://keystatic.com/docs/installation-astro understand those docs and review if we have everything in place on this project for keystatic to work`
 

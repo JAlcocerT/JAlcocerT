@@ -1121,10 +1121,11 @@ The test are configured with a `.yml` file
 
 #### ADF
 
-**Talend is like Azure Data Factory.**
+You will see Azure Data Factory in many job offers nowadays.
 
-I mean, a **data integration tool**.
+And **Talend is like ADF**, but kind of oldschool.
 
+> I mean, a **data integration tool**.
 
 <!--
  https://www.youtube.com/watch?v=dFEzT-qfVIk
@@ -1136,7 +1137,7 @@ Here you have a fantastic introductory video to azure data factory:
 
 > NOT a big data processing tool, like pyspark/databricks are.
 
-You can plug input sources from places like APIs or SAP and direct it towards your DWH (like snowflake).
+You can plug input sources from places like APIs or SAP and direct it towards your DWH, *like snowflake*.
 
 {{< callout type="info" >}}
 **Azure Data Factory (ADF)** is a **data engineering tool** within the Azure ecosystem, designed for **orchestrating workflows** and **managing ETL/ELT processes**.
@@ -1154,7 +1155,6 @@ It shares similarities with **Airflow** for workflow orchestration and **dbt** f
 {{< /cards >}}
 
 A escalable, low-code solution for **integrating and preparing data** for analytics.
-
 
 ---
 

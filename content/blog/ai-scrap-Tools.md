@@ -51,14 +51,10 @@ Lets have a look to **repo reader**
   * {{< newtab url="https://github.com/oobabooga/text-generation-webui/releases/" text="The TextGenWebUI Releases" >}}
   * License: {{< newtab url="https://github.com/oobabooga/text-generation-webui?tab=AGPL-3.0-1-ov-file#readme" text="Apache v2" >}} ✅
 
+---
 
 ## Conclusions
 
 There will always be space for **beautiful soup**.
 
 But we have to recognize the power of these **AI powered scrappers**.
-
-<!-- 
----
-
-## FAQ -->
