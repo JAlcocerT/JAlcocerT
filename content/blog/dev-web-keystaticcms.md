@@ -1,11 +1,16 @@
 ---
-title: "Having a look to KeyStatic CMS"
+title: "Having a look to KeyStatic CMS. Markdown Powering Websites."
 date: 2025-03-22T20:20:21+01:00
 draft: false
 tags: ["Dev","Web"]
 description: 'KeyStatic. Creating a website for a moto blogger. Now with a cool CMS powered user interface.'
 url: 'understanding-keystatic-cms'
 ---
+
+In this post, we will see:
+
+1. How to setup Keystatic CMS
+2. Explain [markdown](#markdown-vs-mdx-vs-markdoc) and share some tools
 
 > Thanks to [Jankraus](https://jankraus.net/2025/02/25/a-simple-guide-to-using-astro-with-keystatic/)
 
@@ -545,6 +550,23 @@ npm create @keystatic@latest
 See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/leaderboard
 
 ### Markdown vs MDX vs Markdoc
+
+**Some markdown tools, to make cooler websites** 
+
+Recently I read this [xda post on why markdown](https://www.xda-developers.com/reasons-use-markdown-documentation-notetaking/) to power up your notes.
+
+* https://github.com/notable/notable
+
+> The Markdown-based note-taking app that doesn't suck.
+
+* https://github.com/Xafloc/NoteFlow
+
+> A lightweight note-taking application that lets your thoughts flow naturally while keeping your tasks in check. NoteFlow transforms a single Markdown file into a modern web interface where notes and tasks coexist seamlessly.
+
+* https://github.com/davistdaniel/kurup
+
+> A simple, markdown-based note-taking application written in python and built with NiceGUI.
+ 
 
 #### Markdown
 

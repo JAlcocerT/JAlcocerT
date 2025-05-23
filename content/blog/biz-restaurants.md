@@ -7,13 +7,17 @@ description: "Astro Websites for Restaurants. Million dollar idea in the Mediter
 url: "webs-for-restaurants"
 ---
 
+One thing was so clear to me.
+
+This required to make the website owners responsible of their content.
+
 * https://github.com/wpinfusion/AstroPie
   * https://astropie.netlify.app/
 
 
 **AstroPie** is a free restaurant theme for Astro sites
 
-![Streamlit User Auth](/blog_img/webs/restaurant-astro-speed.png)
+![Astro restaurant](/blog_img/webs/restaurant-astro-speed.png)
 
 
 ---

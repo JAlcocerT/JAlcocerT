@@ -1,16 +1,57 @@
 ---
-title: "Testing AI Scrapping projects: GPT-Crawler"
-date: 2025-08-30
-draft: true
+title: "Testing AI Scrapping projects: GPT-Crawler..."
+date: 2024-12-07
+draft: false
 tags: ["Dev","Python"]
 description: 'How to use . Compared with BS4, ...'
 url: 'ai-projects-scrapping'
 ---
 
+Leverage your Research with AI Scrap Tools - Repo Reader Setup.
+
+
+There are few **AI Scrapping Tools** out there already.
+
+Lets have a look to **repo reader**
+
+### More AI Powered Scrapping
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ScrapeGraphAI/Scrapegraph-ai,unclecode/crawl4ai,mendableai/firecrawl,cmooredev/RepoReader&,type=Date)](https://star-history.com/#ScrapeGraphAI/Scrapegraph-ai&unclecode/crawl4ai&mendableai/firecrawl&cmooredev/RepoReader&Date)
+
+### Crawl4AI
+
+[Crawl4AI](https://fossengineer.com/crawl4ai-open-source-web-crawler/)
+
+* {{< newtab url="https://github.com/oobabooga/text-generation-webui" text="The TextGenWebUI Source Code at Github" >}}
+  * {{< newtab url="https://github.com/oobabooga/text-generation-webui/releases/" text="The TextGenWebUI Releases" >}}
+  * License: {{< newtab url="https://github.com/oobabooga/text-generation-webui?tab=AGPL-3.0-1-ov-file#readme" text="Apache v2" >}} ✅
+
+### ScrapeGraph
+
+[ScrapeGraph](https://fossengineer.com/scrapping-with-llms) 
+
+* {{< newtab url="https://github.com/oobabooga/text-generation-webui" text="The TextGenWebUI Source Code at Github" >}}
+  * {{< newtab url="https://github.com/oobabooga/text-generation-webui/releases/" text="The TextGenWebUI Releases" >}}
+  * License: {{< newtab url="https://github.com/oobabooga/text-generation-webui?tab=AGPL-3.0-1-ov-file#readme" text="Apache v2" >}} ✅
+
+
+### FireCrawl
+
+* {{< newtab url="https://github.com/oobabooga/text-generation-webui" text="The TextGenWebUI Source Code at Github" >}}
+  * {{< newtab url="https://github.com/oobabooga/text-generation-webui/releases/" text="The TextGenWebUI Releases" >}}
+  * License: {{< newtab url="https://github.com/oobabooga/text-generation-webui?tab=AGPL-3.0-1-ov-file#readme" text="Apache v2" >}} ✅
+
+---
+
+## Conclusions
+
+There will always be space for **beautiful soup**.
+
+But we have to recognize the power of these **AI powered scrappers**.
+
 {{< callout type="info" >}}
 https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
 {{< /callout >}}
-
 
 
 
@@ -91,20 +132,22 @@ Key features of the ISC license include:
 
 Because of its simplicity and permissiveness, the ISC license is favored for projects that wish to impose minimal restrictions on the use and distribution of their software, promoting open and free use of the code.
 
-## LangChain Web Scrapping
 
-## Browserless
-
-* https://github.com/browserless/browserless
-
->  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
 
 
 ---
 
 ## Conclusions
 
+See also:
 
+1. LangChain Web Scrapping
+
+2. Browserless
+
+* https://github.com/browserless/browserless
+
+>  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
 
 ---
 
@@ -147,12 +190,13 @@ cp .env.example .env. #and adjust
 
 #5432 will be ok as it is in the same stack
 
+```txt
 JWT_SECRET="some-random-string"
 SYS_EMAIL="root@vectoradmin.com"
 SYS_PASSWORD="password"
 DATABASE_CONNECTION_STRING="postgresql://vectoradmin:password@postgres:5432/vdbms" # Valid PG Connection string.
 INNGEST_SIGNING_KEY="some-random-string"
-
+```
 
 <!-- 
 ```yml
@@ -199,9 +243,7 @@ Go to: `localhost:3001`
 
 For your first login will require you to use the `SYS_EMAIL` and `SYS_PASSWORD` set via **ENV** during build or run. After onboarding this login will be permanently disabled.
 
-Try and **connect to qDrant** with:
-
-http://192.168.3.103:6333
+Try and **connect to qDrant** with: `http://192.168.3.103:6333`
 
 **And to Chroma**:
 
@@ -209,8 +251,7 @@ Chroma running locally When trying to connect to a Chroma instance running also 
 
 Using: `http://localhost:8001`
 
-#if you stored something
-http://localhost:8001/api/v1/collections
+If you stored something, it will be at: http://localhost:8001/api/v1/collections
 
 ---
 

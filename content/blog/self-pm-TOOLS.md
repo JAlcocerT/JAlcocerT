@@ -10,13 +10,9 @@ url: 'selfhosting-pm-tools-docker'
 
 ## Note Taking Apps
 
-### LogSeq
-
-https://fossengineer.com/selfhosting-logseq/
-
-### Trilium
-
-### Joplin
+1. [LogSeq](https://fossengineer.com/selfhosting-logseq/)
+2. Trilium
+3. Joplin
 
 ### AppFlowy
 
@@ -49,11 +45,11 @@ AppFlowy, an open source project mgmt, documentation, and note-taking app for ex
 
 ## Creating Diagrams
 
-### ExcaliDraw
+1. ExcaliDraw
 
 * https://libraries.excalidraw.com/?theme=dark&sort=downloadsTotal
 
-### DrawIO
+2. DrawIO
 
 ## F/OSS to Manage Projects
 
@@ -78,15 +74,12 @@ Airtable alternatives...
 
 ### How to Make a CV with Open Software
 
-#### Open Resume
-
-#### Reactive Resume
+1. Open Resume
+2. Reactive Resume
 
 ### How to BackUp My Projects
 
-#### Syncthing
-
-https://github.com/nware-lab/sm2?ref=selfh.st
+1. Syncthing, together with https://github.com/nware-lab/sm2?ref=selfh.st
 
 #### NextCloud
 
@@ -97,10 +90,6 @@ url: 'selfhosting-Leantime-docker'
 * {{< newtab url="https://github.com//" text="The  Source Code at Github" >}}
     * License: {{< newtab url="https://github.com//?tab=AGPL-3.0-1-ov-file#readme" text="aGPL 3.0" >}} ❤️
 
-
-Nextcloud + kanban board
-
-FocalBoard
 
 ---
 

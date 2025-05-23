@@ -5,7 +5,7 @@ draft: true
 tags: ["Docker","Self-Hosting"]
 description: ''
 summary: '.'    
-url: 'selfhosting-retro-games'
+url: 'forms-and-surveys'
 ---
 
 1. [Frombricks](#formbricks)
@@ -29,7 +29,6 @@ https://github.com/formbricks/formbricks
 
 {{< dropdown title="How to setup HeyForm ⏬" closed="true" >}}
 
-https://docs.heyform.net/open-source/self-hosting#_1-install-docker-and-docker-compose
 
 {{< /dropdown >}}
 
@@ -58,40 +57,6 @@ Let users request feature and create a RoadMap accordingly
 
 #### Astuto
 
-https://astuto.io/
-https://github.com/astuto/astuto
-https://github.com/astuto/astuto?tab=AGPL-3.0-1-ov-file#readme
-
 https://docs.astuto.io/
 
 >  A free, open source, self-hosted customer feedback tool 🦊 
-
-Example - https://feedback.astuto.io/
-
-```yml
-version: '3.4'
-services:
-  db:
-    image: postgres:14.5
-    environment:
-      POSTGRES_USER: yourpostgresusername
-      POSTGRES_PASSWORD: yourpostgrespassword
-    volumes:
-      - dbdata:/var/lib/postgresql/data
-  web:
-    image: riggraz/astuto:latest #https://hub.docker.com/r/riggraz/astuto
-    environment:
-      POSTGRES_USER: yourpostgresusername
-      POSTGRES_PASSWORD: yourpostgrespassword
-      BASE_URL: http://yourwebsite.com
-      SECRET_KEY_BASE: yoursecretkeybase
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-    
-volumes:
-  dbdata:
-```
-
-* By default, use it al `localhost:3000` with `admin@example.com` and `password`

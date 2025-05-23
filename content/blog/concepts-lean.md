@@ -1,7 +1,7 @@
 ---
 title: "What is Lean? Why do I need it as Software ?"
 date: 2022-10-02T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Outro"]
 description: 'Understanding and applying Lean.'
 summary: 'Talking about Lean and how we can apply this philosophy to all processes to improve efficiency, quality, response time as well as reducing costs and waste.'

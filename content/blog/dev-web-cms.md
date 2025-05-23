@@ -1,8 +1,8 @@
 ---
-title: "Websites with SSG + CMS - The missing piece."
+title: "Websites with SSG + CMS - The missing piece"
 date: 2025-05-18T22:20:21+01:00
 draft: false
-description: "UI for customization SSG generated content. About Keystatic CMS with Astro SSG. Combined with PostHog/OpenReplay for Product Analytics."
+description: "UI/X for customizing SSGs. Keystatic, Frontmatter and others. Combined with PostHog/OpenReplay for Product Analytics."
 url: 'cms-for-static-websites'
 ---
 
@@ -140,6 +140,8 @@ Based on your criteria, here are the top contenders from your list:
 
 ### FrontMatter CMS
 
+
+
 * https://frontmatter.codes/
   * https://github.com/estruyf/vscode-front-matter
   * https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-front-matter
@@ -153,12 +155,25 @@ npm install frontmatter-markdown-loader --save-dev
 #code --install-extension eliostruyf.vscode-front-matter
 ```
 
-It provides interesting **SEO recommendations**
+![alt text](/blog_img/web/frontmatter/frontmatter-101.png)
 
-* title 43/60 chars
-* slug 43/75 chars
-* description 41/160 chars
-* Article length 402/1760 words
+
+You can setu your project just by following these steps (indicate where are your .md posts and thats it):
+
+![alt text](/blog_img/web/frontmatter/frontmatter-setup.png)
+
+Now, you will see that frontmatter recognizes all your posts
+
+![alt text](/blog_img/web/frontmatter/frontmatter-project.png)
+
+
+Frontmatter provides interesting **SEO recommendations**
+
+* title up to 60 chars
+* slug up to75 chars
+* description up to 160 chars
+* Article length up to 1760 words
+* Keywords, just 0,75-1,5% frecuency
 
 ![Front Matter CMS](/blog_img/dev/frontmatter-cms.png)
 

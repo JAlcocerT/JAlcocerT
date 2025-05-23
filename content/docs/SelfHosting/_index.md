@@ -28,12 +28,22 @@ Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhos
 
 ## FAQ
 
+
+MailTrap
+
+* https://mailtrap.io/signin
+
+
+<!-- https://www.youtube.com/watch?v=sJQUuN7R8sA&themeRefresh=1 -->
+
+{{< youtube "sJQUuN7R8sA" >}}
+
+
 SelfHosted Email
 
    * Mail:
        * iRedMail
        * Mailcow
-       * Mailinabox
        * Mailserver
        * Mailu (rspamd)
        * Poste

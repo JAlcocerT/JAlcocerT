@@ -1,9 +1,9 @@
 ---
 title: "Whats the right Messaging Protocol for me?"
-date: 2025-09-09T05:20:21+01:00
+date: 2025-07-09T05:20:21+01:00
 draft: false
-tags: ["Dev","Python"]
-description: 'MQTT vs RMQ vs Kafka. Great Tools for IoT Projects!'
+tags: ["D&A","HomeLab"]
+description: 'MQTT vs RMQ vs Kafka. Messaging Tools for IoT Projects and more'
 url: 'messaging-protocols'
 ---
 
@@ -17,6 +17,8 @@ You might be playing around with your Pi:
   {{< card link="https://github.com/JAlcocerT/demo-realtime-pollution" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed with NGINX" >}}
   {{< card link="https://github.com/JAlcocerT/demo-realtime-pollution" title="Taipy Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
+
+Or maybe you are an architect withing D&A and need some clarity on messaging protocols.
 
 As seen here:
 
@@ -131,30 +133,13 @@ It can manage complex workflows, ensure data consistency, and improve system rel
 
 1.  ThingBoards https://github.com/thingsboard/thingsboard
 
-```yml
-version: '3.0'
-services:
-  mytb:
-    restart: always
-    image: "thingsboard/tb-postgres"
-    ports:
-      - "8080:9090"
-      - "1889:1883"
-      - "7070:7070"
-      - "5683-5688:5683-5688/udp"
-    environment:
-      TB_QUEUE_TYPE: in-memory
-    volumes:
-      - /home/Docker/thingsboard/data:/data
-      - /home/Docker/thingsboard/var:/var/log/thingsboard
-```
 
 2. MQTTX
 
 ```sh
 flatpak install flathub com.emqx.MQTTX
 ```
-![alt text](blog_img/iot/mqttx-desktop.png)
+![MQTT Desktop](blog_img/iot/mqttx-desktop.png)
 
 3. MQTT Explorer
 

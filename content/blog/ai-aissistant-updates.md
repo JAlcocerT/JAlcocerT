@@ -1,5 +1,5 @@
 ---
-title: "Streamlit and Assistant Updates"
+title: "Streamlit Updates. Assistant"
 date: 2025-08-17
 draft: false
 tags: ["dev"]
@@ -9,6 +9,8 @@ url: 'ai-assistant-streamlit'
 
 
 ## AIssistant Updates
+
+The aissistant was ideated as a some kind of all-in-one tool around LLMs.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Streamlit Speech Rater PoC" >}}

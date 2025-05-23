@@ -82,6 +82,8 @@ For a more personal site, id have a look to: https://github.com/saicaca/fuwari
 
 Very useful to create **app directories**:
 
+![alt text](/blog_img/web/post-vs-properties.png)
+
 1. https://github.com/lukenguyen-me/astro-template-directory-website
 
 > Unlicensed | Astro template for a directory website in minimal theme, with reactjs + tailwind + shadcn
@@ -114,9 +116,25 @@ npm install lucide-react
 
 **What if your news/blog are working?**
 
-Maybe writing and selling a book?
+> Maybe writing and selling a book?
 
-This theme could be interesting - https://github.com/candidosales/landing-page-book-astro-svelte-tailwind
-
+>> For that, This theme could be interesting - https://github.com/candidosales/landing-page-book-astro-svelte-tailwind
 
 ---
+
+
+### Open Source Search for your websites
+
+If you already have your website (Wordpress, Ghost, or SSG's...)
+
+You will want to have search in it.
+
+Mind that not all static search work same, some just work when the ssg is built
+
+Lunr.js
+Typesense
+[Meili](https://github.com/meilisearch/meilisearch)
+
+* https://www.meilisearch.com/docs
+
+> A lightning-fast search API that fits effortlessly into your apps, websites, and workflow

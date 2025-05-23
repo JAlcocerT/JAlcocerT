@@ -1,12 +1,13 @@
 ---
 title: "Systems Engineering and Infrastructure 101"
 date: 2023-02-05T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Career"]
 description: 'System Engineering and Infrastructure: What It Is and Why It Matters for Developers'
-summary: 'Having a closer look at System Engineering and Infrastructure Management, why it matters for developers, and how it relates to CI/CD tools and processes.'
 url: 'systems-engineering-and-infraestructure'
 ---
+
+Having a closer look at System Engineering and Infrastructure Management, why it matters for developers, and how it relates to CI/CD tools and processes.
 
 ## What is Systems Engineering
 
@@ -34,7 +35,9 @@ System engineering involves several key steps, including:
 
 ## Why System Engineering Matters for Developers
 
-System engineering is important for developers because it helps them to **design and build software that is reliable, scalable, and efficient**. By using a structured approach to software development, developers can ensure that the software they build meets the needs and requirements of the system, and functions as intended. 
+System engineering is important for developers because it helps them to **design and build software that is reliable, scalable, and efficient**.
+
+By using a structured approach to software development, developers can ensure that the software they build meets the needs and requirements of the system, and functions as intended. 
 
 This is particularly important for complex systems, where even small errors or inefficiencies can have significant impacts on performance and reliability.
 

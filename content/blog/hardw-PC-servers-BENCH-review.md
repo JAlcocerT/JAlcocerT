@@ -6,6 +6,10 @@ tags: ["HomeLab"]
 description: 'Benchmarks for CPU, Memory, Disks, Internet speed... Whats enough for a HomeLab?'
 url: 'benchmarking-computers'
 ---
+<!-- 
+GParted
+[Sysbench](https://fossengineer.com/testing-performance-orange-pi5-versus-raspberry-pi4/#how-to-run-the-synthetic-benchmarks)
+[CPU Stress](https://fossengineer.com/testing-performance-orange-pi5-versus-raspberry-pi4/#how-to-run-the-synthetic-benchmarks) -->
 
 ## Benchmarks
 
