@@ -3,7 +3,7 @@ title: "Vide Coding. For websites and more..."
 date: 2025-04-15T23:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'How to get started with vibe coding. FirebaseStudio vs Codex...or maybe Windsurf?'
+description: 'How to get started with vibe coding. FirebaseStudio vs Codex vs Claude Code...or maybe just Windsurf?'
 url: 'vide-coding'
 ---
 
@@ -58,9 +58,10 @@ In short, it’s chat‑driven development that understands and executes your re
 
 > Apache v2 | Lightweight coding agent that runs in your terminal
 
-**Install codex** as an NPM package:
+**Install codex** as an NPM package, it requires **node 22**, at least:
 
 ```sh
+#FROM node:22-slim
 npm i -g @openai/codex
 #npm install -g @openai/codex@0.1.2504211509 #https://github.com/openai/codex/issues/525
 npm list codex #0.2.3
@@ -87,8 +88,7 @@ You can set the provider in the config file or use the `--provider` flag.
 
 
 {{< callout type="info" >}}
-The possible options for --provider are:  openai (default),    openrouter,    gemini,    ollama,    mistral,    deepseek
-    xai,    groq...
+The possible options for --provider are:  openai (default), openrouter, gemini, ollama, mistral, deepseek, xai, groq...
 {{< /callout >}}
 
 This is how we would make codex use ollama and in auto mode:
@@ -106,20 +106,27 @@ codex --approval-mode full-auto "create the fanciest todo-list app"--provider ol
 
 {{< youtube "qqcmI72marw" >}}
 
+Testing OpenAI Codex: Improving personal projects
 
 ```sh
 #git clone https://github.com/JAlcocerT/Py_Trip_Planner
 git clone https://github.com/JAlcocerT/phidata
 ```
 
-Thanks to codex I could understand better how the [Groq Youtube summarizer](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/) works, *as I [forked it from PhiData](https://github.com/JAlcocerT/phidata).*
+> Thanks to codex I could understand better how the [Groq Youtube summarizer](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/) works, *as I [forked it from PhiData](https://github.com/JAlcocerT/phidata).*
+
+> > Also, I added groq YT summarization capabilities to the MultiChat and interesting working notes to the localdeepresearch
 
 #### Codex1
 
-https://openai.com/index/introducing-codex/
+Everyone has a cloud IDE.
+
+So does OpenAI now, with https://openai.com/index/introducing-codex/
 
 
 ### Claude Code
+
+Another CLI tool, this time from Anthropic:
 
 * https://github.com/anthropics/claude-code
   * https://docs.anthropic.com/en/docs/claude-code/overview
@@ -132,9 +139,19 @@ https://openai.com/index/introducing-codex/
 
 ![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode3.png)
 
+* Claude 3.5 Sonnet: Often noted for its strong coding capabilities.
+* Claude 3.7 Sonnet: The current default and a powerful all-around model.
+* Claude 3 Opus: The most capable model, designed for highly complex tasks, but typically more expensive and slower.
+* Claude 3 Haiku: The fastest and most cost-effective model, suitable for simpler tasks.
+
 ![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode4.png)
 
 ![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode5.png)
+
+
+{{< callout type="warning" >}}
+Interesting enough, I could not find a way to change the temperature on these CLI tools
+{{< /callout >}}
 
 ![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode6.png)
 
@@ -231,11 +248,15 @@ curl -f https://zed.dev/install.sh | sh
 
 Zed IDE allow to use MCP or custom LLMs (ollama, OpenAI...)
 
-You can plug API keys to some IDEs/extensions:
+You can plug **API keys** to some IDEs/extensions:
 
 * https://platform.openai.com/playground/prompts?models=gpt-4.1
 * https://platform.openai.com/logs
   * OpenAI API Keys - https://platform.openai.com/api-keys
+
+* https://x.ai/api
+    * https://console.x.ai/
+    * https://docs.x.ai/docs/overview
   
 * Anthropic - https://console.anthropic.com/settings/keys
 * Groq - https://console.groq.com/keys
@@ -304,6 +325,8 @@ And it has some interesting [features under paywall](https://windsurf.com/pricin
 You can [download windsurf](https://windsurf.com/editor) IDE
 ```sh
 #https://windsurf.com/editor/download-linux
+#https://windsurf.com/editor/update-linux
+sudo apt-get update
 sudo apt-get upgrade windsurf
 ```
 

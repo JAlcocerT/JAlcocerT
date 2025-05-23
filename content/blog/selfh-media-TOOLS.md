@@ -2,7 +2,7 @@
 title: "How to make a Media Home Server with OSS"
 date: 2023-11-29
 draft: false
-description: 'Using the OrangePi as Media Server with Jellyfin'
+description: 'Using the OrangePi as Media Server with Jellyfin. With a look to the -arr stack.'
 url: 'media-server-with-open-source'
 ---
 
@@ -12,16 +12,21 @@ url: 'media-server-with-open-source'
 4. Kodi
 
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Media/Video" title="Jellyfin and others | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+
 You can use all these tools [together with ...](#faq)
 
 ### Jellyfin
 
-https://github.com/jellyfin/jellyfin
-https://github.com/jellyfin/jellyfin?tab=GPL-2.0-1-ov-file#readme
+* https://github.com/jellyfin/jellyfin
+  * https://github.com/jellyfin/jellyfin?tab=GPL-2.0-1-ov-file#readme
 
 > The Free Software Media System
 
-https://jellyfin.org/docs/general/installation/container/
+* https://jellyfin.org/docs/general/installation/container/
 
 * Official Image: https://hub.docker.com/r/jellyfin/jellyfin
 * LinuxServer Image: https://hub.docker.com/r/linuxserver/jellyfin
@@ -56,7 +61,7 @@ services:
 {{< /dropdown >}}
 
 
-https://github.com/awesome-jellyfin/awesome-jellyfin
+* https://github.com/awesome-jellyfin/awesome-jellyfin
 
 {{< dropdown title="Add-ons for Jellyfin ⏬" closed="true" >}}
 

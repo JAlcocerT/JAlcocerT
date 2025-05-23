@@ -146,6 +146,9 @@ vcgencmd measure_temp pmic
 #docker system prune -a #or clean its unused container space
 ```
 
+![Docker Prune Satisfaction](/blog_img/selfh/dockerprune.png)
+
+
 ### CheckMate
 
 * https://github.com/bluewave-labs/checkmate
@@ -207,6 +210,10 @@ To get in a quick look what Im selfhosting lately.
 * https://platform.openai.com/playground/prompts?models=gpt-4.1
 * https://platform.openai.com/logs
   * OpenAI API Keys - https://platform.openai.com/api-keys
+
+* https://x.ai/api
+    * https://console.x.ai/
+    * https://docs.x.ai/docs/overview
   
 * Anthropic - https://console.anthropic.com/settings/keys
 * Groq - https://console.groq.com/keys
@@ -214,7 +221,6 @@ To get in a quick look what Im selfhosting lately.
 * For Ollama, you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
 
 2. I got to know about [librechat](https://github.com/danny-avila/LibreChat) and [Oterm](https://github.com/ggozad/oterm)
-
 
 * https://github.com/ggozad/oterm
   * https://pypi.org/project/oterm/
@@ -371,7 +377,6 @@ Yet, lately I tried [littlyx](https://dashboard.litlyx.com/): which I discovered
 > Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
 
 
-![Docker Prune Satisfaction](/blog_img/selfh/dockerprune.png)
 
 ### Automated Projects Docs
 

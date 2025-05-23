@@ -17,6 +17,7 @@ url: 'how-to-use-grok-api'
 * https://x.ai/api
     * https://console.x.ai/
     * https://docs.x.ai/docs/overview
+    * https://docs.x.ai/docs/models
 
 {{< callout type="info" >}}
 **Paywalled**. You need to **top up** the account to use the API.
@@ -153,6 +154,9 @@ message = client.messages.create(
 
 ## Conclusions
 
+This is it.
+
+Now you have one more LLM to play with via API queries!
 
 {{< callout type="info" >}}
 See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit-MultiChat) 💻

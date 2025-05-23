@@ -8,7 +8,7 @@ url: 'cms-for-static-websites'
 
 Lately I have added some [upgrades](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) (via [telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot)), so that whenever a customer sends new photos, they are synced to its photo centered repo.
 
-But..wouldnt it be nice to have a native solution?
+But..wouldnt it be nice to have a *native* solution?
 
 Some time ago I tried Ghost as CMS connected to Gatsby as **headless CMS**.
 
@@ -37,11 +37,16 @@ Not sure if its good or bad news, yet there are a ton of CMS and I just needed o
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Headless-CMS" title="CMS+SSGs with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-## Why a CMS
+**In a rush?**
+
+1. For a quick setup, try [frontmatterCMS](#frontmatter-cms)
+2. For something more UI friendly, yet with some config, try [TinaCMS](#tinacms) or [KeystaticCMS](#keystatic-cms)
+3. Probably leave the rest for Pros web devs
+
 
 ## CMS
 
-Content Management Systems (CMS):
+As you can imagine, there are more than a few Content Management Systems (CMS) available:
 
 - [KEYSTATICCMS](#keystatic-cms)
 - [Tina](https://tina.io/)
@@ -130,6 +135,8 @@ Based on your criteria, here are the top contenders from your list:
     * **Self-hostable:** Yes, it runs locally within your VS Code instance, managing your local files.
     * **Totally Open Source:** Yes.
     * **SSG & Markdown:** Perfect for this. It directly edits the Markdown files that your SSG consumes. It's ideal for developers who want a UI for content but prefer to stay in their editor.
+
+### FrontMatter CMS
 
 * https://frontmatter.codes/
   * https://github.com/estruyf/vscode-front-matter
@@ -226,9 +233,15 @@ Create a Custom Blog with Astro & NetlifyCMS in MINUTES!
 
 * https://github.com/mooxl/astroad/tree/main
 
-
-
 ### TinaCMS + astro
+
+I was playing around with TinaCMS when [doing the docs for Gabe's mechanism](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/) project, on [this repo](https://github.com/JAlcocerT/mechanism).
+
+Since then, I upscaled the way I ask about unknown repos with [vibe coding tools](https://jalcocert.github.io/JAlcocerT/vide-coding/).
+
+Even found out a better way to write reliably [projects repo docs with such models](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#vibe-coded-project-docs)
+
+So now...how about TinaCMS, is it easy to integrate with Astro?
 
 This was a helpful video on TinaCMS x Astro:
 

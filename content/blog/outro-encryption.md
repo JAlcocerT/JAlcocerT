@@ -142,7 +142,7 @@ This will output the SHA-256 hash of the contents of `your_file.txt` along with 
 
 ### SSH x SHA256
 
-The SSH (Secure Shell) protocol can and often does use the SHA-256 hashing algorithm, but it's not the *only* hashing algorithm it employs. 
+[The SSH (Secure Shell) protocol](#faq) can and often does use the SHA-256 hashing algorithm, but it's not the *only* hashing algorithm it employs. 
 
 SHA-256 is used in various parts of the SSH protocol for different purposes, contributing to its security.
 
@@ -178,3 +178,84 @@ It's important to note that the specific algorithms used by an SSH connection ar
 The availability and preference of SHA-256 depend on the SSH client and server software and their configuration. 
 
 Modern systems are generally configured to prefer stronger algorithms like those using SHA-256 over older, less secure options like SHA-1.
+
+---
+
+## FAQ
+
+### Other Security Tools
+
+If thinking about SSH made you wonder about security...
+
+
+* **[Fail2Ban](https://fossengineer.com/setup-fail2ban-with-docker):** Your server's automated bouncer, kicking out repeat offenders based on log analysis.
+* **[Endlessh](https://github.com/skeeto/endlessh):** Your server's sticky trap, wasting attackers' time on a fake service.
+* **[Watchtower](https://fossengineer.com/setup-watchtower-with-docker/):** Your server's automated update manager for Docker containers.
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security" title="Security Docker | Container Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+{{< callout type="info" >}}
+They serve completely different purposes in a self-hosted environment. One is about slowing down malicious actors, and the other is about maintaining your deployed services.
+{{< /callout >}}
+
+
+**Endlessh Project:**
+
+* **What it is:** Endlessh is an **SSH tarpit**. Its purpose is to waste the time and resources of attackers who are trying to brute-force or scan your SSH server.
+* **How it works:** When an attacker connects to Endlessh (which you'd typically run on your standard SSH port, like 22, while moving your *real* SSH server to a different, less common port), Endlessh doesn't immediately close the connection or present a standard SSH banner. Instead, it very slowly sends an endless, random stream of data that looks like an SSH banner. This keeps the attacker's client "stuck" for hours or even days, effectively bogging down their attack tools.
+* **Goal:** To annoy, slow down, and ultimately deter automated scanning and brute-force attempts on your SSH server. It's a defensive security tool.
+* **Self-hostable:** Yes, it's designed to be self-hosted. You run it on your own server.
+
+**Watchtower Project:**
+
+This name can refer to a few different things, but in the context of self-hosting and Docker, the most common "Watchtower" project you're likely referring to is:
+
+* **Watchtower (containrrr/watchtower):** This is a **Docker container update automation tool**.
+* **How it works:** Watchtower runs as a Docker container itself. It monitors your other running Docker containers and checks if the base images they are built from have newer versions available on Docker Hub or other registries. If a new version is found, Watchtower can automatically pull the new image, stop the old container, remove it, and then restart a new container with the updated image and the same parameters as the old one.
+* **Goal:** To keep your Docker containers updated with the latest versions of their underlying images, which can include security patches, bug fixes, and new features, without manual intervention.
+* **Self-hostable:** Yes, it's designed to be self-hosted and is itself a Docker container you deploy.
+
+**Are they similar? No, not at all.**
+
+* **Endlessh** is a **security tool** that acts as a decoy to defend against SSH brute-force attacks.
+* **Watchtower** (the Docker one) is an **automation tool** for managing and updating Docker containers.
+
+
+**Fail2ban** is another excellent security tool for self-hosted environments.
+
+And it's quite different from both Endlessh and Watchtower, although it shares some defensive goals with Endlessh.
+
+* **What it is:** Fail2ban is an **intrusion prevention framework** that scans log files (e.g., `/var/log/auth.log`, web server logs, mail server logs, etc.) for malicious patterns and then automatically blocks the IP addresses that exhibit suspicious behavior.
+* **How it works:**
+    1.  You define "jails" (configurations) for different services (SSH, web servers like Nginx/Apache, FTP, mail servers, etc.).
+    2.  Each jail has a "filter" that defines the patterns to look for in log files (e.g., multiple failed SSH login attempts from the same IP, too many HTTP 404 errors, etc.).
+    3.  When an IP address matches the predefined patterns within a specified time window, Fail2ban takes an action. The most common action is to **temporarily ban** the IP address using the server's firewall (like `iptables` or `ufw`).
+    4.  After a defined ban time, the IP address is automatically unbanned.
+* **Goal:** To mitigate brute-force attacks, dictionary attacks, and other automated scanning attempts against various network services by blocking the attacking IP addresses at the firewall level. It prevents attackers from making repeated attempts.
+* **Self-hostable:** Yes, absolutely. It's a fundamental security tool often installed directly on Linux servers.
+
+
+**Fail2Ban Project:**
+
+* **What it is:** Fail2Ban is an **intrusion prevention software framework** that protects your server from brute-force attacks and other malicious activities by monitoring log files and automatically banning IP addresses that show suspicious behavior.
+* **How it works:**
+    1.  **Log Monitoring:** Fail2Ban continuously scans various log files on your server (e.g., `/var/log/auth.log` for SSH, Apache access logs, Nginx logs, mail server logs, etc.).
+    2.  **Pattern Matching:** It uses regular expressions (defined in "filters") to identify specific patterns that indicate failed login attempts, port scans, or other unwanted actions.
+    3.  **Jails:** These filters are grouped into "jails," where you define the service to monitor (e.g., `sshd` for SSH, `apache-auth` for Apache login attempts), the maximum number of failed attempts (`maxretry`), and the time window (`findtime`) within which those attempts must occur.
+    4.  **Banning:** If an IP address exceeds the defined `maxretry` within the `findtime`, Fail2Ban takes an "action." The most common action is to update your server's firewall rules (like `iptables` or `nftables`) to temporarily block that IP address for a specified duration (`bantime`).
+    5.  **Unbanning:** After the `bantime` expires, Fail2Ban automatically unbans the IP address, allowing it to connect again. This prevents permanent lockouts for legitimate users who might have simply mistyped their password a few times.
+* **Goal:** To prevent automated brute-force attacks, reduce server load from malicious traffic, and secure various services by dynamically blocking abusive IP addresses.
+* **Self-hostable:** Yes, it's a daemon designed to be installed and run on your Linux server.
+
+**How Fail2Ban compares to Endlessh and Watchtower:**
+
+They are all valuable for self-hosting, but they serve distinct purposes and operate at different layers:
+
+1.  **Fail2Ban vs. Endlessh:**
+    * **Fail2Ban:** *Reactive* security. It waits for failed attempts to appear in logs and then blocks the IP. It's for services you want to keep available (like your real SSH, web server, etc.) but want to protect from abuse.
+    * **Endlessh:** *Proactive/Deceptive* security. It acts as a fake SSH server to endlessly tie up attackers' resources *before* they even interact with your real services. You'd typically run Endlessh on port 22 and your real SSH on a different port.
+    * **Synergy:** They can actually work together! Some setups use Fail2Ban to detect IPs that connect to Endlessh (or other services) and then ban those IPs from *all* your services, including your *real* SSH or web server. This adds another layer of defense, ensuring that persistent attackers who hit your tarpit are then blocked from everything else.

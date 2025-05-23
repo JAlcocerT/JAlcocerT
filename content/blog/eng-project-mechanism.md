@@ -2,9 +2,10 @@
 title: "How to setup Gabe's project, Mechanism"
 date: 2025-03-02T10:20:21+01:00
 draft: false
-tags: ["Python","Mechanics"]
-description: "Mechanisms Animations in Python. From Singer machines to car engines."
+tags: ["Python","Mechanics","Engineering"]
+description: "Mechanisms Animations in Python. From Singer machines to car engines. Project Docs with Astro and Tina?"
 url: 'gabemorris12-mechanism-project-setup'
+math: true
 ---
 
 Some time ago I got to know this **awsome project**: <https://github.com/gabemorris12/mechanism>
@@ -26,7 +27,7 @@ https://www.youtube.com/watch?v=usY-oBifcM4&list=PLghzFAspn1-eGjPOTT0D_6LXWqMBFR
 
 {{< cards >}}
   {{< card link="https://github.com/gabemorris12/mechanism" title="Gabe Mechanism Project" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code" >}}
-  {{< card link="https://github.com/JAlcocerT/mechanism" title="My Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/mechanism" title="My Fork of the Mechanism Project" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
 To get started with this python project:
@@ -79,9 +80,11 @@ I exchanged some email with its creator, [GabeMorris12](https://github.com/gabem
 
 ### Creating Docs for the Mechanism Project
 
-For more people to be able to use the fantastic mechanism project...
+For more people to be able to use **the fantastic mechanism project**...
 
-...I had a look to these projects:
+...how about making some Docs to it?
+
+I had a look to these Astro Docs projects:
 
 1. https://github.com/mickasmt/astro-nomy
 
@@ -99,13 +102,13 @@ git clone https://github.com/mickasmt/astro-nomy
 git clone https://github.com/HYP3R00T/CelestialDocs
 ```
 
-![Streamlit User Auth](/blog_img/web/GHAnPages/gha&pages-celestialdocs-mechanism.png)
+![Astro celestial Docs for Gabe mechanism](/blog_img/web/GHAnPages/gha&pages-celestialdocs-mechanism.png)
 
 It requires a couple of adjustment to the `basepath`...
 
 3. HUGO Theme (with MermaidJS, ChartJS TinaCMS support) https://github.com/onweru/compose
 
-> MIT | A Hugo theme for documentation sites.
+> MIT | A Hugo theme for documentation sites - With TinaCMS
 
 {{< callout type="info" >}}
 **Add ChartJS to HUGO** Themes with this [shortcode](https://github.com/shen-yu/hugo-chart) 
@@ -113,9 +116,9 @@ It requires a couple of adjustment to the `basepath`...
 
 I followed the installation guide https://composedocs.netlify.app/docs/compose/install-theme/
 
-You have to install vercel and tinacloud app into your github 
+You have to **install vercel and tinacloud app** into your github:
 
-https://github.com/tinacms/tina-barebones-starter
+* https://github.com/tinacms/tina-barebones-starter
 
 > We are good to go: https://jalcocert.github.io/mechanism/
 
@@ -123,7 +126,10 @@ https://github.com/tinacms/tina-barebones-starter
 
 ## Conclusions
 
-Its been very helpful to use [this](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist):
+
+Recently I also discovered about https://www.divergent3d.com/ which seems to be a very cool application of Mechanical Engineering!
+
+Its been very helpful to use [this gemini extension](https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist):
 
 ![Gemini Code Assistant](/blog_img/dev/GeminiCodeAssist.png)
 
@@ -149,19 +155,17 @@ Making our lifes better thanks to their smart designs and leverage.
 
 Mechanisms are kind of code that "automates" the physical movement logic.
 
-Some example?
+> Some example?
 
-The one of the engine I will reserve for another post.
+>> The one of the engine I will reserve for another post.
 
-Today is the turn of a Singer Machine!
-
-> Recently I also discovered about https://www.divergent3d.com/ which seems to be a very cool application of Mechanical Engineering!
+Today is the turn of a [Singer Machine](#singer-mechanism!)
 
 ### Singer Mechanism
 
-15cm on the bottom
-35cm la biela
-4cm (x2) crank
+* 15cm on the bottom
+* 35cm la biela
+* 4cm (x2) crank
 
 ---
 
@@ -178,21 +182,34 @@ Today is the turn of a Singer Machine!
 
 ### 3D Design
 
+See these tools: https://jalcocert.github.io/Linux/docs/debian/foss_engineering/
+
+And these ones SelfHosted
+
 <!-- https://www.youtube.com/watch?v=MwIBTbumd1Q -->
 {{< youtube "MwIBTbumd1Q" >}}
 
 ## Outro
 
-Created this simple version with python:
+Created this simpler version with python, for anyone just starting.
 
-And working on the symbolic one: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
+$$
+\begin{aligned}
+  \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+  \nabla \cdot \mathbf{B} &= 0 \\
+  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+  \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
+\end{aligned}
+$$
 
-* https://github.com/JAlcocerT/Slider-Crank
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Slider Crank Repo" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Understanding SliderCrank Mechanism with Python - The Source Code" >}}
   {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
+
+And working on the **symbolic Python**: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
+
 
 * Optimum Gears - https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
 
@@ -204,7 +221,7 @@ And working on the symbolic one: https://github.com/JAlcocerT/MultiBodySystemDyn
 
 A **headless CMS setup**, finally!
 
-All thanks to the HUGO Theme, Compose: https://github.com/onweru/compose/
+> All thanks to the HUGO Theme, Compose: https://github.com/onweru/compose/
 
 Its great to see that:
 
