@@ -2,20 +2,29 @@
 title: "BI Tools for the AI era"
 date: 2025-02-26T00:20:21+01:00
 draft: false
-tags: ["Dev"]
-description: 'Setting up Data Analytics Visualization (Business Intelligence) tools with containers. From Superset to Kibana'
+tags: ["Dev","D&A"]
+description: 'Setting up Data Analytics Visualization (Business Intelligence) tools with containers. From Superset to Kibana and Grafana.'
 url: 'setup-bi-tools-docker'
 ---
 
+If you have interact with the data & analytics space, at some point you had to build a dashboard.
+
+Yet again, there are several tools out there.
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/business-intelligence-data-analytics/" title="BIA 101 ↗ " >}}
   {{< card link="https://youtube.com/@JAlcocerTech" title="My YT Tech Channel ↗" >}}
 {{< /cards >}}
 
+
+
 ## Business Intelligence and IoT 
 
-(BIA & IoT)
+The BIA world & IoT can be bridge thanks to these visualization tools.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/IoT" title="BI Visualizations Tools | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 - [Superset](https://superset.apache.org/)
   - [Superset UI](https://apache-superset.github.io/superset-ui/?path=/story/legacy-chart-plugins-legacy-plugin-chart-map-box--basic)
@@ -25,13 +34,14 @@ url: 'setup-bi-tools-docker'
   - [Static Embedding in Metabase](https://www.metabase.com/embedding-demo)
 - [Redash](https://redash.io/)
 
-How about real time data analytics?
 
-Real-Time Analytics with ClickHouse
+How about **real time data analytics**?
+
+Real-Time Analytics with ClickHouse:
 - [ClickHouse Use Cases](https://clickhouse.com/use-cases/real-time-analytics)
 - **Superset**: An open-source data exploration and visualization platform that supports ClickHouse as a data source.
 - **Metabase**: An open-source business intelligence tool with ClickHouse integration.
-- **Tableau, Looker, Power BI**: Commercial BI tools that may have connectors or integrations with ClickHouse.
+- **Tableau, [Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/), Power BI**: Commercial BI tools that may have connectors or integrations with ClickHouse.
 
 
 #### SuperSet
@@ -73,7 +83,6 @@ TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up
     * <https://pypi.org/project/apache-superset/>
 
 #### MetaBase
-
 
 * <https://www.opensourcealternative.to/project/LightDashs>
 * <https://www.opensourcealternative.to/project/Metabase>
@@ -130,7 +139,7 @@ Redash is a versatile data analytics tool that simplifies the process of queryin
 Get Redash running locally with [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/IoT/Redash)
 
 {{< callout type="info" >}}
-IoT Project example [with Redash]()
+IoT Project example with Redash
 {{< /callout >}}
 
 
@@ -160,7 +169,7 @@ chmod +x ./setup.sh
 
 For the IoT Fans out there: Grafana, Kibana and Chronogaph
 
-![alt text](/blog_img/iot/grafana.png)
+![Grafana UI](/blog_img/iot/grafana.png)
 
 
 {{< callout type="info" >}}
@@ -208,12 +217,13 @@ Then, you will take the JSON and carefully add it respecting other dashboard are
 
 The good thing about Grafana is how **many data sources** we can use it with:
 
-![alt text](/blog_img/iot/grafana-datasources.png)
+![Grafana Sources](/blog_img/iot/grafana-datasources.png)
 
-There are many Grafana stacks, like LGTM: **L**oki, **G**rafana, **T**empo and Pro**m**etheus
+There are many Grafana stacks and applications, like LGTM: **L**oki, **G**rafana, **T**empo and Pro**m**etheus
 
 
 {{< youtube "1X3dV3D5EJg" >}}
+
 <!--
  https://www.youtube.com/watch?v=1X3dV3D5EJg
  -->
@@ -266,6 +276,12 @@ Takeaways
 
 {{< /details >}}
 
+* Grafana with Graphite StatsD
+* Grafana with InfluxDB (Temperature measuring)
+* Grafana with Proxmox and InfluxDB
+* Grafana with Proxmox and Graphite
+* Grafana with Node-Red
+* Grafana + cAdvisor
 
 
 #### Kibana
@@ -286,7 +302,7 @@ Takeaways
 > KQL queries are ultimately translated into Elasticsearch Query DSL queries before being sent to Elasticsearch.
 
 
-DSL Sample: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
+**DSL** Sample: https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
 
 ```json
 {
@@ -300,7 +316,7 @@ DSL Sample: https://www.elastic.co/guide/en/elasticsearch/reference/current/quer
 }
 ```
 
-And for KQL logic, we would do:
+And for Kibana **KQL logic**, we would do:
 
 ```sql
 viewerID : *  and site : "AD04" and (HttpPlayerPlaybackEndEvent_assetType : * or HttpPlayerStartEvent_assetType : * )

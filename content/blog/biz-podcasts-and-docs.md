@@ -3,7 +3,7 @@ title: "Tech for Creating Documentation and related Podcast"
 date: 2025-05-15
 draft: false
 tags: ["Web"]
-description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. A look to GitPodcast and Research Agents."
+description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. A look to GitPodcast, Code2Prompt and Research Agents."
 url: 'tech-for-podcast'
 ---
 
@@ -91,6 +91,11 @@ See it yourself: https://www.gitpodcast.com/streamlit/streamlit
 
 * https://www.gitpodcast.com/rybbit-io/rybbit
 
+
+### Code2Prompt
+
+https://github.com/mufeedvh/code2prompt/
+
 ---
 
 ## Conclusions
@@ -130,8 +135,7 @@ See a project, summarize it and make a podcast/short about it: https://github.co
 
 1. Windscribe CEO almost got jailed?
 
-> Our CEO Almost Got Jailed, So We Made a Shirt!
-https://windscribe.com/blog/windscribe-greek-court-case/
+> [Our CEO](https://windscribe.com/blog/windscribe-greek-court-case/) Almost Got Jailed, So We Made a Shirt!
 
 2. Cal will have EU hosted instance: https://cal.com/europe
 

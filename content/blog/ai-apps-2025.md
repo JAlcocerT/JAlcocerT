@@ -38,6 +38,9 @@ The goal of **this post** is:
 * [Piper](https://github.com/rhasspy/piper) - Also works [Text to Voice](https://www.youtube.com/watch?v=SzRF50UwzYk)
   * [Voices at HF](https://huggingface.co/rhasspy/piper-voices/tree/main)
 
+See https://github.com/mumble-voip/mumble
+
+>  Mumble is an open-source, low-latency, high quality voice chat software. 
 
 ---
 

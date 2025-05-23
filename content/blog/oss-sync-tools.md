@@ -24,6 +24,9 @@ sudo flatpak install flathub com.nextcloud.desktopclient.nextcloud -y
 #nload
 ```
 
+* Recommended Apps inside Nextcloud: cospend (moneybuster Android)
+
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="Crucial SSD for a Pi" image="/blog_img/hardware/crucial-1tb-ssd.jpg" subtitle="Ready to Plug to MiniPC or SBc" >}}
 {{< /cards >}}

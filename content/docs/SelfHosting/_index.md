@@ -30,6 +30,15 @@ Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhos
 
 SelfHosted Email
 
+   * Mail:
+       * iRedMail
+       * Mailcow
+       * Mailinabox
+       * Mailserver
+       * Mailu (rspamd)
+       * Poste
+       * Postfix
+
 * MailInaBox - https://www.maketecheasier.com/create-email-server-linux-with-mail-in-a-box/
 
 {{< callout type="warning" >}}

@@ -201,6 +201,10 @@ For a Python Dev Container, you can get one with **this kind of [docker-compose]
 #https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx
 ext install unifiedjs.vscode-mdx
 
+#https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-front-matter
+ext install eliostruyf.vscode-front-matter
+#code --install-extension eliostruyf.vscode-front-matter
+
 #docker #https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
 ext install ms-azuretools.vscode-docker
 #https://marketplace.windsurf.com/extension/ms-azuretools/vscode-docker

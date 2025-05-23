@@ -389,7 +389,6 @@ These tools combined will allow your Flask app to handle user registration, logi
 
 {{< details title="Flask UM with MailerLite and Stripe 📌" closed="true" >}}
 
-
 To implement a system where user registration, payments, and content access are tied together using **Flask**, **Stripe**, and **MailerLite**, you can break down the logic as follows:
 
 1. **User Sign-Up and Newsletter Subscription (MailerLite)**

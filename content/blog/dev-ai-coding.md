@@ -67,6 +67,7 @@ npm i -g @openai/codex
 npm list codex #0.2.3
 ```
 
+
 And provide your API: https://platform.openai.com/api-keys
 
 ```sh
@@ -106,7 +107,11 @@ codex --approval-mode full-auto "create the fanciest todo-list app"--provider ol
 
 {{< youtube "qqcmI72marw" >}}
 
-Testing OpenAI Codex: Improving personal projects
+**Codex CLI inside a container?**
+
+https://github.com/openai/codex/tree/main/codex-cli/scripts
+
+**Testing OpenAI Codex**: Improving personal projects
 
 ```sh
 #git clone https://github.com/JAlcocerT/Py_Trip_Planner

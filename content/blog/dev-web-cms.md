@@ -33,7 +33,9 @@ Not sure if its good or bad news, yet there are a ton of CMS and I just needed o
 [![Star History Chart](https://api.star-history.com/svg?repos=Thinkmill/keystatic,tinacms/tinacms,decaporg/decap-cms&,type=Date)](https://star-history.com/#Thinkmill/keystatic&tinacms/tinacms&decaporg/decap-cms&Date)
 
 
+
 {{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/Selfhosting-Static-Webs-with-Apache-in-Docker" title="Static Sites x Apache Container 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Headless-CMS" title="CMS+SSGs with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
@@ -141,20 +143,22 @@ Based on your criteria, here are the top contenders from your list:
 * https://frontmatter.codes/
   * https://github.com/estruyf/vscode-front-matter
   * https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-front-matter
+  * 
 
 > Front Matter Headless CMS right in your code editor
 
 ```sh
 npm install frontmatter-markdown-loader --save-dev
 #ext install eliostruyf.vscode-front-matter
+#code --install-extension eliostruyf.vscode-front-matter
 ```
 
 It provides interesting **SEO recommendations**
 
-title 43/60 chars
-slug 43/75 chars
-description 41/160 chars
-Article length 402/1760 words
+* title 43/60 chars
+* slug 43/75 chars
+* description 41/160 chars
+* Article length 402/1760 words
 
 ![Front Matter CMS](/blog_img/dev/frontmatter-cms.png)
 

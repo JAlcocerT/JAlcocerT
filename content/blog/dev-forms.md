@@ -2,7 +2,7 @@
 title: "Forms and Newsletters for your Website"
 date: 2024-09-10T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Webs"]
 description: "Easy Forms/Newsletters for Websites: MailerLite, FormBricks and more"
 ---
 
@@ -20,7 +20,7 @@ Its all going to be API based, so our website code base wont grow in size/comple
 
 ### Keila
 
-OhMyForm is Discontinued, but...
+OhMyForm is Discontinued, but we have:
 
 * **Keila** https://github.com/pentacent/keila - aGPL
 
