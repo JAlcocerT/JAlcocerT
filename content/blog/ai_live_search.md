@@ -30,9 +30,17 @@ What you need to have handy:
   {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG x LangGraph" >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher" title="Forked Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Local Deep Researcher with langGraph - Source Code on Github" >}}
+{{< /cards >}}
+
+
 ### Local Deep Researcher
 
 Its all about the magic of langgraph.
+
+
 
 [![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
 
@@ -77,6 +85,13 @@ uvx \
   --python 3.11 \
   langgraph dev --host 192.168.1.8 --port 8011
 ```
+
+See how:
+
+1. Your search gets translated into a search query
+2. Results are loaded from DDG
+
+![Local Deep Researcher - Web Query Step](/blog_img/GenAI/ai-search/langgraph-web-query.png)
 
 ### Perplexity
 

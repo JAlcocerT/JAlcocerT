@@ -661,3 +661,19 @@ I would recommend you to have a look to:
 >  Virtual whiteboard for sketching hand-drawn like diagrams 
 
 2. Having a look back and be able to assess what it worked and what has not can be insightful for further directions.
+
+#### Knowledge Management
+
+These are some knowledge management tools, noting their data storage method:
+
+* **SilverBullet:** A web-based "second brain" tool that stores its Markdown notes as **flat files** locally or on a self-hosted server, emphasizing extensibility and linking.
+* **Joplin:** A feature-rich, open-source note-taking and to-do app that uses a **database** (SQLite by default, or other databases via sync targets) to store notes, with robust Markdown support and synchronization.
+* **Logseq:** An open-source, local-first knowledge base and outliner that stores its content as Markdown or Org-mode **flat files** directly on your filesystem, focusing on bi-directional linking and block-based editing.
+* **BookStack:** A user-friendly, self-hosted platform ideal for organizing documentation and wikis, relying on a **database** (MySQL/MariaDB) to manage its structured content.
+* **Raneto:** A simple, flat-file Markdown knowledge base built with Node.js, requiring no **database** and storing all content as simple **Markdown files**.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Notes" title="Note Tools | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+[![Star History Chart](https://api.star-history.com/svg?repos=silverbulletmd/silverbullet,laurent22/joplin,logseq/logseq,BookStackApp/BookStack,gilbitron/Raneto&type=Date)](https://star-history.com/silverbulletmd/silverbullet&laurent22/joplin&logseq/logseq&BookStackApp/BookStack&gilbitron/Raneto&Date)

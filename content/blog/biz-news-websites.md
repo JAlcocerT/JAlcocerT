@@ -82,7 +82,7 @@ For a more personal site, id have a look to: https://github.com/saicaca/fuwari
 
 Very useful to create **app directories**:
 
-![alt text](/blog_img/web/post-vs-properties.png)
+![Astro App Directory - Post vs Properties](/blog_img/web/post-vs-properties.png)
 
 1. https://github.com/lukenguyen-me/astro-template-directory-website
 

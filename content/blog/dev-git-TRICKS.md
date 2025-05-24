@@ -2,7 +2,7 @@
 title: "Git & Development Tricks: Github, Gitlab and more"
 date: 2025-02-20T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Git 101"]
 url: 'git-recap'
 description: 'Git and useful extensions while developing.'
 ---
@@ -88,10 +88,12 @@ You can start by adding the **Gitlab extension** to sync your repos:
 code --install-extension gitlab.gitlab-workflow
 ```
 
-![alt text](/blog_img/dev/gitlab-extension.png)
+![Gitlab VS Code](/blog_img/dev/gitlab-extension.png)
 
 
-> Definitely use the extension `GitLab Workflow VS Code Extension`. Authenticate with OAuth.
+> Definitely use the extension `GitLab Workflow VS Code Extension`.
+
+> > Authenticate with OAuth.
 
 
 ```sh
@@ -105,7 +107,7 @@ glab mr list
 
 ## VSCode
 
-You can install it with flatpak:
+You can install vscode in Ubuntu with flatpak:
 
 ```sh
 flatpak install flathub com.visualstudio.code #https://flathub.org/apps/com.visualstudio.code
@@ -115,7 +117,7 @@ flatpak list --app
 #flatpak uninstall com.visualstudio.code
 ```
 
-Or with snap (which I would recommend):
+Or with snap, which I would **recommend**:
 
 ```sh
 sudo snap install code --classic

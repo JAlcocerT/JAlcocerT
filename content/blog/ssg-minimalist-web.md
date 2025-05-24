@@ -7,6 +7,8 @@ description: 'Open Source Minimalist Websites.'
 url: 'open-source-minimalist-websites'
 ---
 
+Do we need that much bloat?
+
 <!-- echo chambers -->
 
 https://lukesmith.xyz/articles/modern-freedom-means-being-a-slave-to-impulses/

@@ -9,7 +9,6 @@ url: 'tools-to-improve-focus'
 
 As you know, I spent some time in D&A field already.
 
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/" title="D&A Concepts Recap" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/" title="Time Management for D&A" icon="book-open" >}}
@@ -19,15 +18,18 @@ A lot of what I have achieved, would not be possible w/o **proper attention**.
 
 ### Time Management
 
+
+
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="GCP and BQ 101 ↗ " >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="PySpark 101 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="Effective Meetings | Post ↗" >}}
 {{< /cards >}}
 
 > Mind your [time also during meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/)
 
 1. Pomodoro:
     * Timelite [*and you can use it for free*](https://fossengineer.com/selfhosting-timelite-free-tracking-tool-with-docker/)
+      * 
     * [The-Wise-Pomodoro](https://the-wise-pomodoro.firebaseapp.com/)
     * [Focus Tide](https://focustide.app/)
     * Focus-To-Do, ToDoIst
@@ -39,13 +41,22 @@ A lot of what I have achieved, would not be possible w/o **proper attention**.
 
 2. [Timelite](https://fossengineer.com/selfhosting-timelite-with-docker/)
 
-3. Pomatez
+3. [Pomatez](https://github.com/zidoro/pomatez)
 
 ```sh
- #https://github.com/zidoro/pomatez
+#https://snapcraft.io/pomatez
+sudo snap install pomatez
 ```
 
-### More
+### More Concentration Tools
+
+You can use many of this OSS tools for free, just with proper configuration:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LibreChat" title="PM Focus Tools | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+I really enjoy placing this as **background sound**:
 
 1. https://nextbeats.vercel.app/
 
@@ -53,18 +64,7 @@ A lot of what I have achieved, would not be possible w/o **proper attention**.
 
 > MIT | A modern, open-source lofi experience powered by Next.js
 
-2. https://github.com/Eigenfocus/eigenfocus?tab=readme-ov-file#installation
-
-
-```sh
-docker run \
-    --restart unless-stopped \
-    -v ./app-data:/eigenfocus-app/app-data \
-    -p 3001:3000 \
-    -e DEFAULT_HOST_URL=http://localhost:3001 \
-    -d \
-    eigenfocus/eigenfocus:1.0.0-free
-```
+2. https://github.com/Eigenfocus/eigenfocus
 
 >  All-in-One Self-Hosted Project Management, Time Tracking and Focus App 
 
@@ -81,10 +81,10 @@ I mean, Selfhostable and **RSS Feeds**!
 
 > MIT | Generate rich RSS feeds from Reddit, Hacker News, Lemmy, and Mbin
 
+
 ### Video
 
 1. Piped
-
 2. NewPipe
 
 ### Productivity
@@ -99,7 +99,15 @@ I mean, Selfhostable and **RSS Feeds**!
 * You can find it in FDroid: https://f-droid.org/en/packages/com.superproductivity.superproductivity/
 * And also in snapcraft: https://snapcraft.io/superproductivity
 
-#### Other Productivity Tools
+## Conclusions
+
+If you follow the one thing at a time rule: kanban will definitely resonate with you.
+
+--- 
+
+## FAQ
+
+### Other Productivity Tools
 
 1. [Focalboard](https://fossengineer.com/focalboard-docker) 
 2. [DrawIO Diagrams](https://fossengineer.com//selfhosting-drawio-with-docker)
@@ -107,9 +115,14 @@ I mean, Selfhostable and **RSS Feeds**!
 
 4. For note taking apps: see [trilium](https://fossengineer.com/selfhosting-Trilium-docker/), joplin or [logseq](https://fossengineer.com/selfhosting-logseq/)
 
-<!-- ## FAQ
+**Other F/OSS Tools to Track our Time Online***
 
-### What Tools can help me Focus?
+1. ActivityWatch - It is Cross Platform.
+2. Wakatime + VSCode - A self-hosted WakaTime-compatible backend for coding statistics.
 
-Pomodoro
-Kanban Boards ... -->
+* https://wakapi.dev/
+  * https://github.com/muety/wakapi
+  * https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime
+
+
+* https://awweso.me/time-tracking/

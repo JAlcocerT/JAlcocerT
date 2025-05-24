@@ -257,3 +257,51 @@ Thanks to benji youtube video: https://www.youtube.com/watch?v=UnjaSkrfWOs
 I have added a sample working script at the [MultiChat project](https://github.com/JAlcocerT/Streamlit-MultiChat), here: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/audio-input.py
 
 See also [another way to do T2S](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openait2a.py) with openAI: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/openai-tts.py
+
+
+
+### More Audio Generation
+
+1. https://github.com/SevaSk/ecoute
+2. https://pypi.org/project/PyAudioWPatch/#description
+
+**TRY Ecoute IN WINDOWS**
+
+```sh
+python3 -m venv ecoutevenv
+source ecoutevenv/bin/activate
+
+apt install ffmpeg
+
+git clone https://github.com/SevaSk/ecoute ./ecoute_repo
+cd ecoute_repo
+python -m pip install -r requirements.txt
+
+chmod +x cygwin_cibuildwheel_build.sh
+
+./cygwin_cibuildwheel_build.sh
+
+#deactivate
+```
+
+3. LocalAI - With **voice cloning**! The reason why I dont like to put my voice over the internet :)
+
+* https://github.com/mudler/LocalAI/
+  * https://github.com/mudler/LocalAI/blob/master/docker-compose.yaml
+
+> Runs gguf, transformers, diffusers and many more models architectures. Allows to generate Text, Audio, Video, Images. **Also with voice cloning capabilities.**
+
+4. [Willow on GitHub](https://github.com/toverainc/willow). See [HeyWillow](https://heywillow.io/#)
+
+> Apache v2 | Open source, local, and self-hosted Amazon Echo/Google Home competitive Voice Assistant alternative
+
+
+5. [Zonos](https://noted.lol/zonos/): eleven labs alternative
+
+* https://github.com/Zyphra/Zonos
+
+> Zonos-v0.1 is a leading **open-weight text-to-speech** model trained on more than 200k hours of varied multilingual speech, delivering expressiveness and quality on par with—or even surpassing—top TTS providers.
+
+
+
+Found out about it at https://noted.lol/zonos/

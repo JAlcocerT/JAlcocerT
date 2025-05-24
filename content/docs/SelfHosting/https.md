@@ -71,6 +71,8 @@ That was a blocker for long to me.
 
 Until I discovered [Cloudflared tunnels](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/).
 
+And saw a practical [example to expose a selfhosted app with cf](https://fossengineer.com/selfhosting-timelite-with-docker/).
+
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/why-i-love-containers/" title="Why I love Containers | Post ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Cloudflared" title="Cloudflared with Docker 🐋 ↗" >}}
@@ -84,7 +86,7 @@ Remember to use the `cloudflared_tunnel` network on the containers you want to e
 
 * https://one.dash.cloudflare.com
 
-![alt text](/blog_img/web/Cloudflare/cf-tunnel.png)
+![CF Tunnels](/blog_img/web/Cloudflare/cf-tunnel.png)
 
 ```sh
 docker network connect cloudflared_tunnel portainer #your_docker_container_to_expose  #network (tunnel) - service

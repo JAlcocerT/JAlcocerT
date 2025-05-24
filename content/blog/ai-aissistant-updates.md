@@ -30,6 +30,8 @@ And I could not resist to combine it:
 
 ![AIssistant](/blog_img/apps/ai-assistant-dbchat.png)
 
+You can think about this is a [kind of BI/AI part](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/)
+
 {{< youtube "KXamTdJA-uc" >}}
 
 {{< cards >}}
@@ -204,7 +206,6 @@ How about adding a **QR tool**?
 
 Like the one I used for [this weddin](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt).
 
-
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 Because the [PIL package](https://pypi.org/project/pillow/) counts as AI, doesnt it?
@@ -245,55 +246,6 @@ Probably more NoCode stuff: https://www.youtube.com/@AI-GPTWorkshop/videos
 {{< /cards >}}
 
 
-### Audio Generation
-
-
-
-1. https://github.com/SevaSk/ecoute
-2. https://pypi.org/project/PyAudioWPatch/#description
-
-**TRY Ecoute IN WINDOWS**
-
-```sh
-python3 -m venv ecoutevenv
-source ecoutevenv/bin/activate
-
-apt install ffmpeg
-
-git clone https://github.com/SevaSk/ecoute ./ecoute_repo
-cd ecoute_repo
-python -m pip install -r requirements.txt
-
-chmod +x cygwin_cibuildwheel_build.sh
-
-./cygwin_cibuildwheel_build.sh
-
-#deactivate
-```
-
-3. LocalAI - With **voice cloning**! The reason why I dont like to put my voice over the internet :)
-
-* https://github.com/mudler/LocalAI/
-  * https://github.com/mudler/LocalAI/blob/master/docker-compose.yaml
-
-
-> Runs gguf, transformers, diffusers and many more models architectures. It allows to generate Text, Audio, Video, Images. **Also with voice cloning capabilities.**
-
-4. [Willow on GitHub](https://github.com/toverainc/willow). See [HeyWillow](https://heywillow.io/#)
-
-> Apache v2 | Open source, local, and self-hosted Amazon Echo/Google Home competitive Voice Assistant alternative
-
-
-5. Zonos: eleven labs alternative
-
-* https://github.com/Zyphra/Zonos
-
-> Zonos-v0.1 is a leading **open-weight text-to-speech** model trained on more than 200k hours of varied multilingual speech, delivering expressiveness and quality on par with—or even surpassing—top TTS providers.
-
-
-
-Found out about it at https://noted.lol/zonos/
-
 
 ### Books
 
@@ -308,7 +260,7 @@ Epub to AudioBook with Python
 
 ## Interesting Music Related Projects
 
-{{< details title="GraphMuse (Python) 📌" closed="true" >}}
+{{< details title="GraphMuse - Python 📌" closed="true" >}}
 
 * https://github.com/manoskary/graphmuse
 

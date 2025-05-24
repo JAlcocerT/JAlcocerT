@@ -123,7 +123,7 @@ I have cloned the original project: https://github.com/langchain-ai/local-deep-r
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG x LangGraph" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher" title="Forked Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Local Deep Researcher with langGraph - Source Code on Github" >}}
 {{< /cards >}}
 
 

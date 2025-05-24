@@ -3,7 +3,7 @@ title: "AI|BI Tools "
 date: 2025-05-22T00:20:21+01:00
 draft: false
 tags: ["Dev","D&A"]
-description: '.'
+description: 'BI/AI another combo and more D&A Tools'
 url: 'ai-bi-tools'
 ---
 
@@ -21,7 +21,7 @@ Today, we will have a look to:
 ### ChartDB
 
 
-I thought everything was done with LangChain querying DBs with LLMs in DAG mode.
+I thought everything was done with [LangChain querying DBs with LLMs](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/) in DAG mode.
 
 Then I found this:
 
@@ -30,6 +30,8 @@ Then I found this:
 > agpl 3 | Database diagrams editor that allows you to visualize and design your DB with a single query.
 
 [![shields.io Stars](https://img.shields.io/github/stars/chartdb/chartdb)](https://github.com/chartdb/chartdb/stargazers)
+
+---
 
 ## Conclusions
 

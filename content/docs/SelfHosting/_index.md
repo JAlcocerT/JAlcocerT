@@ -23,6 +23,7 @@ Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhos
 - [Open Source Alternative - Add Project](https://www.opensourcealternative.to/add-project)
 - [Privacy Tools](https://www.privacytools.io/)
 - [Selfh.st](https://selfh.st/)
+- https://awweso.me/
 
 ---
 

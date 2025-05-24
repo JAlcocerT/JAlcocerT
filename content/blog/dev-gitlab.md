@@ -2,8 +2,8 @@
 title: "How to Setup Gitlab"
 date: 2023-12-30T23:20:21+01:00
 draft: false
-tags: ["Dev"]
-summary: 'How to use Gitlab for development'
+tags: ["Dev","Git 101"]
+description: 'How to use Gitlab for development'
 url: 'how-to-use-gitlab'
 ---
 
@@ -17,9 +17,14 @@ For Github 101 check [this post](https://jalcocert.github.io/JAlcocerT/github-gi
 
 You will see a message like `you cant pull repositories ussing SSH until you add an SSH key to your profile`
 
+![alt text](/blog_img/dev/gitlab/gitlab-ssh-error.png)
+
 Then lets add it:
 
 1. Go to user setting -> SSH Keys Section
+
+![alt text](/blog_img/dev/gitlab/gitlab-ssh-summary.png)
+
 
 2. Create a ssh key:
 

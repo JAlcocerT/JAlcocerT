@@ -1158,7 +1158,6 @@ A escalable, low-code solution for **integrating and preparing data** for analyt
 
 ## Conclusions
 
-Okay, here's a summary of the data analytics and engineering tools mentioned in the document, categorized for clarity:
 
 **Data Storage (Where to Store Data):**
 
@@ -1236,13 +1235,13 @@ graph TD
   C5 --> C1
 ```
 
-### How to use the AIssistant for Tech?
+**How to use the AIssistant for Tech?**
 
 So you want to use the AI assistant to get help on **Tech Questions**?
 
 SSH into your server and...
 
-...if you need, generate **ssh keys** to authenticate to your repo:
+...if you need, [generate **ssh keys**](https://jalcocert.github.io/JAlcocerT/how-to-use-gitlab/) to authenticate to your repo:
 
 
 {{< details title="See SQLiteDB Job History 📌" closed="true" >}}
@@ -1264,7 +1263,6 @@ ssh-add ~/.ssh/id_ed25519 # Add your private key (you'll be prompted for the pas
 ```sh
 git clone git@github.com:JAlcocerT/Streamlit-AIssistant.git
 ```
-
 
 Now, do it with Python:
 
@@ -1312,42 +1310,14 @@ time docker build -t st_aissistant:v2 . # ~2min
 # podman run -d --name=AIstreamlitaissistant -p 8502:8501 ....
 ```
 
+The [container Image is Compatible](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat) with x86 and ARM64!
 
-```yml
-services:
-  streamlit_aissistant:
-    image: st_aissistant:v2  
-    container_name: st_aissistant #docker exec -it st_aissistant /bin/bash
-    ports:
-      - "8505:8501"    
-    # env_file:
-    #   - .env  # Ensure this line is present
-    environment:
-      - DEV_MODE=False  # Set to "1" for development mode, "0" for production mode
-      - OPENAI_API_KEY=sk-proj-open-ai-api
-      - AUTH_MODE=Stripe  # Must be set for production
-      # - BASE_URL_MAILERLITE=${BASE_URL_MAILERLITE}  # Must be set for production
-      # - SHEET_URL_FORMBRICKS=${SHEET_URL_FORMBRICKS}  # Must be set for production
-      # - LIST_OF_PRODUCTS=${LIST_OF_PRODUCTS}  # Must be set for production
-      - MENU_OPTIONS=Custom Agent,Email Summarizer,Diagram Creation
-      - MENU_ICONS=bar-chart-line,envelope,pencil
-      - SYSTEM_PROMPT="You are a helpful data analytics assistant, specialized in Python and SQL. You will help to migrate pyspark code into big query sql code and leave the comments in the code where appropiate."
-    command: streamlit run Z_ST_AIssistant_v2.py
-    #command: tail -f /dev/null
-    # networks:
-    #   - cloudflare_tunnel
-    restart: unless-stopped
-            
-# networks:
-#   cloudflare_tunnel:
-#     external: true
-```
-
+Now, you can just use the compose and ask your tech questions.
 
 {{< /details >}}
 
 {{< callout type="info" >}}
-Compatible with x86 and ARM64!
+Be open and look for clarifications in cross-domain [meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/)
 {{< /callout >}}
 
 ---
