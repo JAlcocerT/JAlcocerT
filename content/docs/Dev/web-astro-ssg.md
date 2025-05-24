@@ -74,6 +74,10 @@ npm run dev
 
 {{< /details >}}
 
+<!-- {{< callout type="info" >}}
+There is another Astro theme called musee
+{{< /callout >}} -->
+
 
 
 2. https://github.com/AREA44/astro-multiverse?ref=statichunt.com

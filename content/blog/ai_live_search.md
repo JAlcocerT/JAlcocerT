@@ -88,7 +88,7 @@ uvx \
 
 See how:
 
-1. Your search gets translated into a search query
+1. Your search gets translated into a search query: *how can i [selfhost raneto](https://fossengineer.com/raneto-markdown-knowledgebase-selfhosting/) with docker-compose?*
 2. Results are loaded from DDG
 
 ![Local Deep Researcher - Web Query Step](/blog_img/GenAI/ai-search/langgraph-web-query.png)

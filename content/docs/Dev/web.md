@@ -173,6 +173,8 @@ firebase deploy #you will get something like -> https://jalcocertech.web.app/
 
 2. You can also try with [Cloudflare **Workers and Pages**](https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/#faq) or [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/).
 
+Alternatively, you can use [Cloudflare wrangler CLI](https://fossengineer.com/hosting-with-cloudflare-pages/#cloudflare-pages-hosting-with-wrangler) to get your SSG hosted, also for free and a custom subdomain.
+
 {{< /details >}}
 
 ### Get Better at Webs

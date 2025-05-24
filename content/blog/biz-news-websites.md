@@ -24,36 +24,46 @@ If you are new to SSGs, have a look to:
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101" >}}
 {{< /cards >}}
 
-2. https://github.com/Mrahmani71/astro-news
+2. https://github.com/Mrahmani71/astro-news which can be applied to [this kind of sites](https://github.com/JAlcocerT/BeyondAJourney)
 
 > **MIT** | A news website built with Astro
 
 {{< details title="What I like about Astro News Theme 📌" closed="true" >}}
 
-* Post are writen with `.mdx`
-* **Search** working in prod
+1. Post are writen with `.mdx`
+
+2. **Search** working in prod, not in dev when running `npm run dev`
+
+It uses pagefind, similarly to [the astroverse/visvrs theme](https://github.com/IoTechCrafts/astroverse/blob/main/package.json#L23)
 
 ```sh
 npm install astro-pagefind pagefind
 ```
 
-* **Image optimizations** to `.webp`
-* **OpenGraph** images working when sharing the web (and also considering the post images)
+3. **Image optimizations** to `.webp`
+
+4. **OpenGraph** images working when sharing the web (and also considering the post images)
 * Icons: https://lucide.dev/
 
 > MIT | Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons.
 
-* **RSS** Feed and sitemap!
+5. **RSS** Feed and sitemap!
 * Very **modular** implementation of which posts goes where thanks to `isBigHeadline` and `isSmallHeadline` 
 * Base path is present at `index.ts`
 
 **What could be better**?
 
-* The header could follow the users when its scrolling
+1. The header could follow the users when its scrolling
+2. It could bring multilanguage support out of the box...
+
 
 {{< /details >}}
 
+
+
 This one is **fantastic** for blogging/news!
+
+Like [this one](https://beyondajourney.pages.dev/)
 
 Definitely worth to have a look at it, maybe even enhance it with a photo gallery or a subscription / book selling page.
 
@@ -113,6 +123,10 @@ npm install lucide-react
 ---
 
 ## Conclusions
+
+**How to knw if your website works?**
+
+Get [proper web analytics tools](https://fossengineer.com/open-source-selfhostable-web-analytics-alternatives-ga/) next to your website
 
 **What if your news/blog are working?**
 

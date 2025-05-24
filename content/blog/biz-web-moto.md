@@ -9,7 +9,6 @@ url: 'web-for-moto-blogger'
 
 Today I have managed to help **two friends** to get their own website up and running.
 
-
 {{< cards cols="2" >}}
   {{< card link="#Conclusions" title="This one, the moto vlog one" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/" title="The PDH website, revisited | Post ↗" >}}
@@ -140,7 +139,17 @@ https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/
   {{< card link="https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/" title="SSGs are Crazy Efficient" image="/blog_img/web/success5-aga/photogallery-hugo-whilecyclingthere-carbon.png" subtitle="See how this other HUGO Gallery Project was delivered" method="Resize" options="600x q80 webp" >}}
 {{< /cards >}}
 
+To make the user experience better when starting with SSGs and markdown:
 
+1. Add **FrontMatter CMS** support
+  * https://frontmatter.codes/ -  A CMS that works seamlessly with any static site generator 
+      * https://github.com/estruyf/vscode-front-matter
+
+> Front Matter is a CMS running straight in Visual Studio Code.
+
+Can be used with static site generators like Hugo, Jekyll, Hexo, NextJs, Gatsby, and many more... 
+
+2. Add the vscode [MDX extension](https://marketplace.windsurf.com/vscode/item?itemName=unifiedjs.vscode-mdx)
 
 ---
 

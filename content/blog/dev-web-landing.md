@@ -54,7 +54,12 @@ convert tour1.webp -rotate 180 tour1_rotated.webp
 {{< /details >}}
 
 
-It could be deployed quickly with CF Wrangler CLI:
+It could be deployed quickly with [CF Wrangler CLI](https://fossengineer.com/hosting-with-cloudflare-pages/#cloudflare-pages-hosting-with-wrangler):
+
+```sh
+npx wrangler pages project create #this will install the wrangler CLI package
+npx wrangler pages project list
+```
 
 ![Cloudflare Wrangler CLI](/blog_img/web/Cloudflare/CF_WranglerCLI.png)
 
