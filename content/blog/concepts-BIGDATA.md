@@ -87,8 +87,6 @@ In essence, the **data lakehouse is a modern data architecture** that seeks to o
 
 It provides a more versatile and efficient platform for organizations to manage and analyze their data.
 
-
-
 {{< /details >}}
 
 
@@ -145,10 +143,10 @@ A data lakehouse is built on top of a data lake. It uses the data lake as its fo
 
 The "house" part refers to the added layers of structure, governance, and transactional capabilities that transform the raw data lake into a more manageable and versatile platform.   
 
-<!-- {{< cards >}}
-  {{< card link="" title="Streamlit Web Apps">}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="BI Tools with Docker" >}}
-{{< /cards >}} -->
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Big_Data" title="Big Data tools | Container Configs">}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="BI Tools with Docker | Post" >}}
+{{< /cards >}}
 
 Examples of Data Lakehouse Technologies and Implementations:
 

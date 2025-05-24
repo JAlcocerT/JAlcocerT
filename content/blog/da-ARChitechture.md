@@ -15,6 +15,14 @@ You might encounter this kind of **architectures in your data analytics** journe
   {{< card link="https://roadmap.sh/software-architect" title="Software Architect RoadMap" >}}
 {{< /cards >}}
 
+What am I talking about?
+
+Well, you might have heard of several [**big data** tools](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/), even [BI tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/).
+
+Many names, many concepts.
+
+In reality, what organizations want is to have tech processing capabilities, from the enormou amounts of data that today is generated and *lands* into their systems:
+
 ```mermaid
 
 graph LR
@@ -37,10 +45,11 @@ graph LR
         S1 --> G1
         S2 --> G1
     end
-
 ```
 
-I love [diagrams](https://www.mermaidchart.com/play#pako:eNp90N9LwzAQB_B_5ciDKKwPzrc-qOsPZA9OwQ6UZYysuW5h7UWStAPL_neTlskQ8SUP37vPJbmelVoii1kURZxKTZXaxZwAaq0PMewFycyII4XI7bHBGCRWoq0dp4FUtT6We2EcFFloApitOHtzIcmM6tBwtoYouoek5yx_z9NlMX9ZbLJZkYMiQOoeODuNNPGN8IF26E_9nCd08MtURjdB-bEXaKEHk_1jhNl1q-n6x6WDyL2Yv2aJsPiMzqjSXo9bmIBpaeNUgxvrzM3IRkm3HhVoHUjhxNajgz3_kqa-tiSnXI3SP0tiqFwB3f2Rn8c99qD8rTFwJr5ag_FwRpfTJ1Bp04QOo1uSKEP0qW1ItsMC2ekbNbOQkA)
+Make it compatible with their stack *bronze*, do some kind of enhancement *silver* and then have a layer to based their decisions on: *gold*.
+
+> Yes, I love [diagrams](https://www.mermaidchart.com/play#pako:eNp90N9LwzAQB_B_5ciDKKwPzrc-qOsPZA9OwQ6UZYysuW5h7UWStAPL_neTlskQ8SUP37vPJbmelVoii1kURZxKTZXaxZwAaq0PMewFycyII4XI7bHBGCRWoq0dp4FUtT6We2EcFFloApitOHtzIcmM6tBwtoYouoek5yx_z9NlMX9ZbLJZkYMiQOoeODuNNPGN8IF26E_9nCd08MtURjdB-bEXaKEHk_1jhNl1q-n6x6WDyL2Yv2aJsPiMzqjSXo9bmIBpaeNUgxvrzM3IRkm3HhVoHUjhxNajgz3_kqa-tiSnXI3SP0tiqFwB3f2Rn8c99qD8rTFwJr5ag_FwRpfTJ1Bp04QOo1uSKEP0qW1ItsMC2ekbNbOQkA)
 
 
 
@@ -433,6 +442,10 @@ You can also have handy a list of QQ to enable others perform their job:
 
 ## Conclusions
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.com/" title="Let's do cool stuff ↗ " >}}
+  {{< card link="https://youtube.com/@JAlcocerTech" title="My YT Tech Channel ↗" >}}
+{{< /cards >}}
 
 ### The Information Workflow
 
@@ -450,19 +463,11 @@ I like this way of summarizing whats required from others (useful for JIRA stori
 {{< /cards >}}
 
 
-### Diagrams and Retros
-
-* https://github.com/excalidraw/excalidraw
-    * https://excalidraw.com/
-
->  Virtual whiteboard for sketching hand-drawn like diagrams 
-
-
 ---
 
 ## FAQ
 
-### Examples
+### D&A Use Case
 
 
 {{< details title="Milk Factory | Sample Concept 📌" closed="true" >}}
@@ -640,9 +645,19 @@ Sí, exactamente. La capa Oro es donde se definen y materializan los modelos dim
 
 **En resumen, la capa Oro es el lugar donde los datos se transforman en información valiosa y fácil de usar para la toma de decisiones.**
 
-
-
-
 {{< /details >}}
 
 ### More T-Shaped Skills
+
+#### Diagrams and Retros
+
+1. In addition to my *inconditional* love for mermaidJS and general diagrams...
+
+I would recommend you to have a look to:
+
+* https://github.com/excalidraw/excalidraw
+    * https://excalidraw.com/
+
+>  Virtual whiteboard for sketching hand-drawn like diagrams 
+
+2. Having a look back and be able to assess what it worked and what has not can be insightful for further directions.

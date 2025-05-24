@@ -16,7 +16,9 @@ Recently, XAI added [live search](https://docs.x.ai/docs/guides/live-search) cap
 
 ### Grok Live Search
 
-https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api/
+Few weeks ago I was tinkering with [grok API](https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api/), which can be used also via LiteLLM.
+
+What you need to have handy:
 
 * https://x.ai/api
     * https://console.x.ai/
@@ -57,6 +59,23 @@ uvx \
                  --with-editable . \
                  --python 3.11 \
                  langgraph dev
+
+#https://langchain-ai.github.io/langgraph/cloud/reference/cli/#dev
+uvx \
+  --refresh \
+  --from "langgraph-cli[inmem]" \
+  --with-editable . \
+  --python 3.11 \
+  langgraph dev --host 0.0.0.0 --port 8011 # <-- Added host and port
+
+
+
+uvx \
+  --refresh \
+  --from "langgraph-cli[inmem]" \
+  --with-editable . \
+  --python 3.11 \
+  langgraph dev --host 192.168.1.8 --port 8011
 ```
 
 ### Perplexity
