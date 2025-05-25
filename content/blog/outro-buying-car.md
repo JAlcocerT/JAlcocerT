@@ -227,6 +227,10 @@ Steps for **buying a car in Germany**.
 
 * [DGT Info about a car](https://sede.dgt.gob.es/es/vehiculos/informacion-de-vehiculos/informe-de-un-vehiculo/#:~:text=Para%20obtener%20el%20informe%20de,directamente%20desde%20la%20propia%20app.)
 
+* furgoneta
+    * https://forocoches.com/foro/showthread.php?t=7244645 - Quiero Vivir en una Furgoneta +Proyecto+Consejos
+    * https://forocoches.com/foro/showthread.php?t=6536967&highlight=vivo+autocaravana - Vivo en una autocaravana y respondo preguntas +HD
+
 
 {{< details title="Tricks | Car in Spain 📌" closed="true" >}}
 

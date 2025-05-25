@@ -275,6 +275,10 @@ Because rendering/[knitting Rmarkdown](https://jalcocert.github.io/JAlcocerT/r-k
 
 2. Or even...[ApexchartJS](https://apexcharts.com/)?
 
-I got to knw them [thanks to dteather post](https://dteather.com/blogs/astro-interactive-charts/)
+I got to know them [thanks to dteather post](https://dteather.com/blogs/astro-interactive-charts/)
+
+There are very interesting [demo charts](https://apexcharts.com/javascript-chart-demos/funnel-charts/funnel/), like this [column chart](https://apexcharts.com/javascript-chart-demos/column-charts/column-with-negative-values/).
 
 > It has very interesting post about [rehype/mermaidJS diagrams](https://dteather.com/blogs/astro-uml-diagrams/) that [work with mdx](https://github.com/remcohaszing/rehype-mermaid)
+
+> > I think I saw apexchart applied, sometime ago on [this post for HA](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/#adding-graphs-to-ha) - https://github.com/RomRider/apexcharts-card 

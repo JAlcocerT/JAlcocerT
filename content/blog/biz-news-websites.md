@@ -55,6 +55,27 @@ npm install astro-pagefind pagefind
 * Very **modular** implementation of which posts goes where thanks to `isBigHeadline` and `isSmallHeadline` 
 * Base path is present at `index.ts`
 
+
+```sh
+curl https://beyondajourney.pages.dev/rss.xml
+curl https://beyondajourney.pages.dev/sitemap-index.xml
+```
+{
+  href: "https://beyondajourney.pages.dev/rss.xml",
+  text: "RSS",
+},
+{
+  href: "https://beyondajourney.pages.dev/sitemap-index.xml",
+  text: "Sitemap",
+},
+
+
+```sh
+sudo apt install liferea
+```
+
+![RSS with Liferea](/blog_img/web/liferea-rss.png)
+
 **What could be better**?
 
 1. The header could follow the users when its scrolling

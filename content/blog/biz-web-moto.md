@@ -320,3 +320,70 @@ choco install vscode -y
 {{< /details >}}
 
 > For additional installs with Chocolatey, see [this **gist**](https://gist.github.com/JAlcocerT/76f22ddf886277ef2653f82898c634d8) and packages [here](https://community.chocolatey.org/packages/rpi-imager)
+
+---
+
+### Other Interesting Tools for Astro
+
+* Maps ✅
+    * https://github.com/roblabs/maps-withastro ✅
+        * Leaflet + OSM ✅
+        * MapLibre ✅ - https://github.com/roblabs/maps-withastro/blob/main/src/MapLibre.astro
+            * An open source **visual editor** for the '**MapLibre Style** Specification'  - https://github.com/maplibre/maputnik
+
+* adding interactive globe
+    * From astro bento portfolio (d3 & solid-js library) ✅
+* ig embed ✅
+    * https://developers.facebook.com/docs/instagram/oembed
+    * https://about.instagram.com/blog/announcements/introducing-web-embedding-instagram-content-on-websites
+        * must be a public profile!
+
+* komoot embed OK
+* gpx.studio TBCchecked
+
+* https://www.youtrack.es
+* metabase/superset/redash - Can also represent GPX data
+* OSM Widgets
+    * https://snorpey.codes/en/articles/self-host-openstreetmaps-widgets
+    * https://github.com/maplibre/maplibre-gl-js?tab=License-1-ov-file#readme
+
+* rawhtml shortcode from hugo - translate to astro ->> gpx support?
+
+* with peertube
+* https://www.vidstack.io/
+    * https://github.com/vidstack/player
+
+* https://vimejs.com/
+    * https://github.com/vime-js
+
+
+YouTube Videos
+
+Or, in pure Markdown, but losing the image sizing and border:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/PCvrcyV3_hI/maxresdefault.jpg)](https://www.youtube.com/watch?v=PCvrcyV3_hI)
+
+
+carousel 
+
+* with react (v1) as per astro project: https://github.com/gio-del/Astro-Theme-Astroway
+* with embla - v2
+    * https://www.embla-carousel.com/
+    * https://github.com/davidjerleke/embla-carousel
+* with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
+
+photo gallery
+
+https://github.com/tvoma/cube-gallery
+https://github.com/jomaendle/astro-photo-gallery
+
+https://jankraus.net/2024/04/05/how-to-build-a-simple-photo-gallery-with-astro/
+
+pop up at time or location of page
+
+
+* Others: if traffic is directed here, ever
+    * booking maps - https://affiliates.support.booking.com/kb/s/article/Map-Widget-everything-you-need-to-know
+    * https://www.travelocity.com/Flights
+    * Search
+    * Booking/expedia widgets

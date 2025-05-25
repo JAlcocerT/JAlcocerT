@@ -14,6 +14,14 @@ Recently, XAI added [live search](https://docs.x.ai/docs/guides/live-search) cap
 
 > Goodbye knowledge cuttof they say!
 
+But actually, there has been couple of tools that allow us to interact with Web information.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf" title="WindSurf IDE" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Scrapping" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+
 ### Grok Live Search
 
 Few weeks ago I was tinkering with [grok API](https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api/), which can be used also via LiteLLM.
@@ -230,3 +238,12 @@ Interesting Search Engines to have a look:
 * Qwant
 * PrivacyWall
 
+### How to use HF?
+
+In HuggingFace you will find really cool and Open AI Projects to try out:
+
+* Image to Code: <https://huggingface.co/spaces/HuggingFaceM4/screenshot2html>
+* Audio to text: <https://huggingface.co/spaces/sanchit-gandhi/whisper-jax>
+
+
+* <https://www.futuretools.io/?pricing-model=open-source>
