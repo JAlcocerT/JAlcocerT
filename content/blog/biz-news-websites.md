@@ -7,6 +7,10 @@ description: "Creating a News focused Website with app directory (with Astro SSG
 url: 'creating-news-website'
 ---
 
+I came across SSG looking for simplicity.
+
+Got in love due to the [many ways and how easy is to host them](https://fossengineer.com/alternatives-for-hosting-static-websites/).
+
 {{< cards >}}
   <!-- {{< card link="blog" title="Blog" icon="book-open" >}} -->
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/" title="See Astro 101 Docs ↗" icon="book-open" >}}
@@ -60,10 +64,9 @@ npm install astro-pagefind pagefind
 {{< /details >}}
 
 
-
 This one is **fantastic** for blogging/news!
 
-Like [this one](https://beyondajourney.pages.dev/)
+Like going from [this one](https://cyclingthere.pages.dev/), towards a more serious [like this one](https://beyondajourney.pages.dev/)
 
 Definitely worth to have a look at it, maybe even enhance it with a photo gallery or a subscription / book selling page.
 

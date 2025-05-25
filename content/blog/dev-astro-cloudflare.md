@@ -119,6 +119,11 @@ For Github, you would go to the [actions tab of the repo](https://github.com/JAl
 Github Pages will allow for 25mb+ individual files, but not Cloudflare.
 {{< /callout >}}
 
+## Conclusions 
+
+If you have already been tinkering with [few SSG deploying methods](https://fossengineer.com/alternatives-for-hosting-static-websites/)
+
+You might be wondering whats fastest.
 
 ### Cloudflare Pages vs other Free Deployment Methods
 

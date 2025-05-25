@@ -84,7 +84,7 @@ Failing bc the project is not in root, but at pacamara
 
 ## Use Cloudflare Workers and Pages with Gitlab
 
-I have tried it with a Private Gitlab repository.
+I have tried it with a Private Gitlab repository (works same for public repos).
 
 {{% steps %}}
 
@@ -150,13 +150,15 @@ I've added this after my learnings with a real estate project, where I used [Clo
 
 ## Conclusions
 
-A **good readme** always helps...for any repo, including the Gitlab ones.
+1. If you plan to use GitlabxCloudflare for [SSG Hosting](https://fossengineer.com/alternatives-for-hosting-static-websites/), remember that there is a 100mb file limitation.
+
+2. A **good readme** always helps...for any repo, including the Gitlab ones.
 
 
 {{< details title="Example - Python Project 📌" closed="true" >}}
 
 
-For Python I like to start with the **pre-requisites for the project:**
+[For Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) I like to start with the **pre-requisites for the project:**
 
 ```sh
 python -m venv openltabletstests_venv 
@@ -212,14 +214,13 @@ Use docker push --dry-run to test the push command without actually pushing the 
 If using a self-hosted GitLab instance, configure the GitLab Container Registry to use a custom TLS certificate.
 
 
-
 ---
 
 ## FAQ
 
 ### Gitea - A Gitlab Alternative
 
-You can also setup [Gitea locally with containers](https://github.com/JAlcocerT/Docker/blob/main/Dev/GIT/Gitea_Docker-compose.yaml):
+You can also setup [Gitea locally with containers](https://github.com/JAlcocerT/Docker/blob/main/Dev/GIT/Gitea_Docker-compose.yaml), as seen [here](https://fossengineer.com/selfhosting-Gitea-docker/)
 
 ![Gitea Install](/blog_img/selfh/gitea_install.png)
 

@@ -3,7 +3,7 @@ title: "Cool Link in Bios (with SSGs) with CF Workers and Pages"
 date: 2025-01-22
 draft: false
 tags: ["Web"]
-description: "Have a cool LinkInBio website with HUGO and Astro SSGs. Alternative to linktree with Gitlab and Cloudflare WnP Setup."
+description: "Have a cool LinkInBio/Bento website with HUGO and Astro SSGs. Alternative to linktree with Gitlab and Cloudflare WnP Setup."
 url: 'cool-link-in-bios'
 ---
 
@@ -173,7 +173,7 @@ While I was investigating those astro linkinbio theme, I found out also about so
 npm run build
 ```
 
-You just need to follow [these commands](https://developers.cloudflare.com/workers/wrangler/commands/):
+You just need to follow [these commands](https://developers.cloudflare.com/workers/wrangler/commands/), as seen [here](https://fossengineer.com/alternatives-for-hosting-static-websites/#cloudflare-pages-with-wrangler)
 
 ```sh
 npx wrangler pages project create #this will install the wrangler CLI package
@@ -252,3 +252,20 @@ This will grant that whenever you push, the workers are doing the **right steps 
 Go to the [Cloudflare UI](https://dash.cloudflare.com), and...
 
 You will see under the **WnP section** that the site is already published.
+
+
+---
+
+## Conclusions
+
+This is once again the same process:
+
+1. Choosing a theme
+2. Tweaking
+3. Deploying in one of the [static hosting methods](https://fossengineer.com/alternatives-for-hosting-static-websites)
+
+**What would I add further?**
+
+ChartJS support for some themes like the bento would be really cool.
+
+Specially for those who want to have a data driven blog.

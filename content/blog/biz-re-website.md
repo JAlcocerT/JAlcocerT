@@ -638,7 +638,7 @@ firebase init
 #firebase hosting:channel:delete <channelId>
 ```
 
-You just need to follow [these commands](https://developers.cloudflare.com/workers/wrangler/commands/):
+You just need to follow [the official commands](https://developers.cloudflare.com/workers/wrangler/commands/), as seen on this [wrangler CLI guide](https://fossengineer.com/alternatives-for-hosting-static-websites/#cloudflare-pages-with-wrangler):
 
 ```sh
 npx wrangler pages project create #this will install the wrangler CLI package

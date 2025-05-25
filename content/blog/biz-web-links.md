@@ -3,7 +3,7 @@ title: "One link for Social Bios: LinkinBios vs Bento like websites"
 date: 2025-01-24
 draft: false
 tags: ["OSS"]
-description: 'Simple Link Website Hosting Services. SSGs vs Selfhostable LittleLink and LinkStack.'
+description: 'Simple Link/Bento Website Hosting Services. SSGs vs Selfhostable LittleLink and LinkStack.'
 url: 'linktree-web-alternative'
 ---
 
@@ -19,7 +19,7 @@ Vendor lock up?
 
 Then, lets have a look to solutions that will **just require your time**:
 
-1. Using Static Site Generators, aka **SSG**'s (Advance)
+1. [Using Static Site](#bento-portfolio-as-linkinbio-alternative) Generators, aka **SSG**'s (Advanced)
 2. Keep it simple with containers and **[SelfHostable solutions](#selfhosted-solutions-for-linkinbio)**
 
 ## SSG Solutions for LinkInBios
@@ -49,7 +49,7 @@ See my [HUGO Lynx deployed at GHPages](https://jalcocert.github.io/Portfolio/) a
 
 1. [Astro + Tina](https://darko.io/posts/linktree-and-linkinbio-clone-with-astro-and-tinacms/)
 
-The long overdue topic of SSG + CMS... one day ill have to cver that up.
+The long overdue topic of SSG + CMS... one day ill have to cover that up!
 
 ---
 
@@ -114,16 +114,17 @@ You can also have a look to:
 2. https://github.com/tim-hub/techtim-astro-bento-portfolio
 
 
-> I have forked this one here - https://github.com/JAlcocerT/techtim-astro-bento-portfolio
+> I have **forked** this one here - https://github.com/JAlcocerT/techtim-astro-bento-portfolio
 
 And you can use it by:
 
 ```sh
+#https://github.com/tim-hub/techtim-astro-bento-portfolio
+git clone https://github.com/JAlcocerT/techtim-astro-bento-portfolio
 npm install
 
 npm run dev
 #npm run build
-
 #rm -rf .git
 ```
 
@@ -133,14 +134,11 @@ Remember to tweak:
 2. The `index.astro` file calls the individual components, like `../components/sections/AboutMe.astro`
 
 
-<!-- 
-libreportfolio.fyi
-https://gitlab.com/fossengineer1/libreportfolio 
--->
+You can see a [interesting](https://gitlab.com/fossengineer1/libreportfolio) working [example](https://libreportfolio.pages.dev)
 
 
 {{< callout type="warning" >}}
-Gitlab wont let you upload **>100mb individual files**
+[Gitlab](https://jalcocert.github.io/JAlcocerT/how-to-use-gitlab/#conclusions) wont let you upload **>100mb individual files**
 {{< /callout >}}
 
 ```sh
@@ -153,10 +151,12 @@ gifsicle --resize 480x480 --colors 64 --optimize=3 src/assets/memes/cable-rojo.g
 
 --- 
 
-## Interesting Posts
+## Conclusions
+
+**Interesting Posts**
 
 1. https://darko.io/posts/but-auth-is-hard
 
-## Comercial bento
+**Comercial bento**
 
 1. bento.me (owned by linktree)
