@@ -109,7 +109,7 @@ https://fossengineer.com/selfhosting-whoogle-docker/#searxng-with-docker
 
 Perplexica is an **AI-powered search engine**. It is an Open source alternative to Perplexity AI
 
-## The Perplexica AI Project
+### The Perplexica AI Project
 
   * {{< newtab url="https://github.com/ItzCrazyKns/Perplexica" text="Project Source Code at Github" >}}
   * {{< newtab url="https://github.com/ItzCrazyKns/Perplexica?tab=MIT-1-ov-file#readme" text="License MIT" >}} ❤️
@@ -144,7 +144,6 @@ docker-compose up -d
 
 As per:  https://www.fahdmirza.com/2024/07/install-perplexica-with-searxng-and.html
 
-
 ```sh
 conda create -n px python=3.11 -y && conda activate px
 
@@ -165,8 +164,6 @@ ollama pull bgesmall
 #perplexica
 git clone https://github.com/ItzCrazyKns/Perplexica.git && cd Perplexica
 docker-compose up -d
-
-
 ```
 
 {{< /dropdown >}}
@@ -192,6 +189,9 @@ docker-compose up -d
 
 >  SearchGPT / Perplexity clone, but personalised for you. 
 
+* https://github.com/Omniplex-ai/omniplex
+  * https://github.com/Omniplex-ai/omniplex?tab=AGPL-3.0-1-ov-file#readme
+
 ---
 
 ## FAQ
@@ -202,15 +202,10 @@ Scrap the Web with AI
 
 > Python scraper based on AI
 
-### F/OSS Alternatives to perplexity
+**F/OSS Search Engines**
 
-* https://github.com/Omniplex-ai/omniplex
-  * https://github.com/Omniplex-ai/omniplex?tab=AGPL-3.0-1-ov-file#readme
-
-### F/OSS Search Engines
-
-* Whoogle
-* SearXNG
+* [Whoogle](https://fossengineer.com/selfhosting-whoogle-docker/)
+* [SearXNG](https://jalcocert.github.io/RPi/posts/selfh-internet-better/#searxng---private-web-search)
 * LibreX / Y - https://github.com/hnhx/librex
 * WebSurfX - https://github.com/neon-mmd/websurfx
   https://github.com/neon-mmd/websurfx/blob/rolling/docs/installation.md
@@ -221,7 +216,6 @@ Scrap the Web with AI
 * https://github.com/yacy/yacy_search_server
 
 > Distributed Peer-to-Peer Web Search Engine and Intranet Search Appliance
-
 
 **More Search Engines**
 

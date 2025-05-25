@@ -93,12 +93,15 @@ sudo snap install shotcut --classic
 
 {{< /details >}}
 
+---
 
 ## Conclusions of Osmo Action 5 Pro
 
-Make sure to **explore the resolutions and modes**.
+Make sure to **explore the resolutions and modes**
 
-It can do photo and video. But for photo I still prefer [the Pixel](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks)
+It can do photos and videos.
+
+But for photo I still prefer [the Pixel](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks)
 
 There is the possibility to record at FHD 1080p@240fps, but not with wide mode, for example.
 

@@ -189,7 +189,7 @@ More **GHA uses cases**, [here](https://jalcocert.github.io/JAlcocerT/github-act
 
 ### Shiny
 
-With Shiny, I created my very first web app.
+With Shiny, I created **my very first web app**.
 
 And it was a really interesting learning!
 
@@ -248,3 +248,14 @@ https://hub.docker.com/r/fossengineer/trip_planner:arm64
 To label docker images
 To Private
  -->
+
+---
+
+## Conclusions
+
+These are two related repos with examples of whats discussed:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="RStocks" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/DividendGrowth.jpeg" subtitle="Tinkering with Maps/Geolocation Data" >}}
+  {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code with SHiny & Flexdashboard" >}}
+{{< /cards >}}

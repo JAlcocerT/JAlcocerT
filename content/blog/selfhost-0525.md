@@ -314,6 +314,12 @@ Which resonates with my recent [post on BI Tools](https://jalcocert.github.io/JA
 
 ## Conclusions
 
+From now on, I will include docker-compose stacks linked to this kind of recap Selfhosting posts:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/" title="Selfhosting Stack May 2025 | Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
+
 Recently I saw a really cool podcast from DOAC:
 
 <!-- https://www.youtube.com/watch?v=Kl-I7sUcAOY -->

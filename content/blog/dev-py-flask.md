@@ -749,7 +749,7 @@ ChartJS has been an interesting discovery.
 It can work within:
 
 1. Python Apps, like the Flask we have tinkered with
-2. HUGO Themes, like this, HEXTRA as a shortcode
+2. HUGO Themes, like [this example](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/), HEXTRA, as a [shortcode](https://github.com/JAlcocerT/JAlcocerT/blob/main/themes/hextra/layouts/shortcodes/chart.html)
 3. Ideally, should be possible to create a component for [ChartJS to work with Astro SSG Themes](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#bento-portfolio-as-linkinbio-alternative)!
 
 ---

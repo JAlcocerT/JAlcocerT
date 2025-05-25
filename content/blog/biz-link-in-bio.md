@@ -266,6 +266,15 @@ This is once again the same process:
 
 **What would I add further?**
 
-ChartJS support for some themes like the bento would be really cool.
+1. ChartJS support for some themes like the bento would be really cool.
 
 Specially for those who want to have a data driven blog.
+
+
+Because rendering/[knitting Rmarkdown](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/) / [Flexdashboard](https://jalcocert.github.io/JAlcocerT/r-language-101/#flexdashboards) is always an option...but kind of tedious to bring the html to your .mdx posts.
+
+2. Or even...[ApexchartJS](https://apexcharts.com/)?
+
+I got to knw them [thanks to dteather post](https://dteather.com/blogs/astro-interactive-charts/)
+
+> It has very interesting post about [rehype/mermaidJS diagrams](https://dteather.com/blogs/astro-uml-diagrams/) that [work with mdx](https://github.com/remcohaszing/rehype-mermaid)

@@ -74,6 +74,8 @@ MQTT works on a **publish-subscribe** model, where devices can **publish** messa
 This decouples the sender from the receiver, making it ideal for scenarios where multiple devices need to communicate without needing direct knowledge of each other.
 
 
+> You can use MQTT with a Pi: https://jalcocert.github.io/RPi/posts/rpi-mqtt/
+
 {{% details title="More about - MQTT 🌍" closed="true" %}}
 
 The key benefits of MQTT include:
