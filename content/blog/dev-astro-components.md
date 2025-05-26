@@ -1,10 +1,10 @@
 ---
 title: "ASTRO - SSG: Components & How to use Them"
-date: 2024-01-27T23:20:21+01:00
+date: 2024-05-21T23:20:21+01:00
 draft: false
 tags: ["Web","Dev"]
-description: 'Tutorial - Making ASTRO Website better.'
-summary: 'How to get better with ASTRO as SSG (for non web-devs). My favourite components for Astro.'
+description: 'Tutorial - Making any ASTRO Website better.'
+summary: 'How to get better with ASTRO as SSG (for non web-devs). My favourite components for Astro: search, Charts, OG/SEO, GPX...'
 url: 'understanding-astro-ssg-components'
 ---
 
@@ -24,13 +24,20 @@ CSS Link ---> -->
 
 * https://www.geeksforgeeks.org/how-to-add-chartjs-in-nextjs-13/
 
-1. [Spinning World Map](#spinning-world-map)
-2. Charts
+1. [Spinning World Map](#spinning-world-map): Including .GPX stuff
+
+2. Charts:
+
 * MermaidJS
 * ChartJS
+* ApexCharts - Like this cool [timeline chart](https://apexcharts.com/javascript-chart-demos/timeline-charts/distributed/)
+
 3. [OG and SEO](#astro-opengraph-and-seo-metadata)
+
 4. RSS
-5. SiteMap
+5. [SiteMap](#adding-sitemap-for-astro-pages)
+
+6. [Search](#ssg-search): Flexsearch, fuseJS, pagefind,...
 
 If you dont know yet, this is **Astro, the HTML first framework**.
 
@@ -42,7 +49,11 @@ If you dont know yet, this is **Astro, the HTML first framework**.
 
 > Thanks to both, code to the moon and Awsome YT channels
 
-## Adding SiteMap for Astro Pages
+
+
+
+
+### Adding SiteMap for Astro Pages
 
 <!-- 
 curl -s https://bachatameet.com/sitemap.xml -o /dev/null -w "%{http_code}\n" #https://github.com/IoTechCrafts/astroverse ex visvrs
@@ -59,7 +70,7 @@ We will need the package: `"@astrojs/sitemap": "^3.0.3"`
 {{< /callout >}}
 
 
-{{< details title="Check that the SiteMap Works 📌" closed="true" >}}
+{{< details title="SiteMap Astro | Setup 📌" closed="true" >}}
 
 ```sh
 npm install @astrojs/sitemap
@@ -114,7 +125,7 @@ curl "https://www.bing.com/ping?sitemap=https://jalcocertech.com/sitemap-index.x
 {{< /details >}}
 
 
-{{< details title="Check that the SiteMap Works 📌" closed="true" >}}
+{{< details title="Check that the SiteMap/RSS/Robots Works | Astro Web checks 📌" closed="true" >}}
 
 ```sh
 #curl -s https://example.com/sitemap.xml -o /dev/null -w "%{http_code}\n"
@@ -140,11 +151,41 @@ curl -s https://bachatafests.com/sitemap_index.xml -o /dev/null -w "%{http_code}
 
 {{< /details >}}
 
+## Cool features
 
-## Spinning World Map
+### Charts
+
+* [ChartJS](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/Chart.astro?ref_type=heads)
+* [ApexCharts](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/mdx/ApexChart.astro?ref_type=heads)
+* [MermaidJS](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/mdx/Mermaid.astro?ref_type=heads)
+
+
+**ChartJS**
+
+* https://github.com/chartjs/Chart.js
+  * https://www.chartjs.org/
+  * https://github.com/chartjs/Chart.js?tab=MIT-1-ov-file#readme
+
+> MIT | Simple yet flexible JavaScript charting library for the modern web
+Simple HTML5 Charts using the <canvas> tag
+
+**Swiper** - This one I got recommended by a real web dev!
+
+* https://github.com/nolimits4web/swiper
+
+**MermaidJS**
+
+* https://github.com/mermaid-js/mermaid
+* https://github.com/mermaid-js/mermaid-cli
+
+> More [about diagrams](https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/)
+
+### Spinning World Map
+
+If you just need a GPX map embedded into your .mdx, thats perfectly possible, [like so.](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/mdx/GpxMap.astro?ref_type=heads)
 
 * Found it at theme: https://github.com/Ladvace/astro-bento-portfolio
-  * https://github.com/IoTechCrafts/astro-bento-portfolio-ssg/blob/master/src/components/Globe.tsx
+  * See the [Globe component](https://github.com/IoTechCrafts/astro-bento-portfolio-ssg/blob/master/src/components/Globe.tsx), also [here](https://github.com/JAlcocerT/web3/blob/main/src/components/Globe.tsx)
 
 {{< dropdown title="Extra nerdy details - Get your world Map for Astro 👇" closed="true" >}}
 
@@ -167,7 +208,6 @@ export default defineConfig({
 ```
 
 ```json
-
 {
   "name": "astro-bento-portfolio",
   "type": "module",
@@ -204,11 +244,12 @@ export default defineConfig({
     "unocss": "^0.58.0"
   }
 }
-
 ```
 
 {{< /dropdown >}}
 
+
+---
 
 ## FAQ for Astro
 
@@ -220,14 +261,16 @@ export default defineConfig({
 
 {{< /dropdown >}}
 
+
 ## SSG Search
 
+1. **FlexSearch** - As seen [on Hextra](https://imfing.github.io/hextra/docs/guide/configuration/#search-index), this theme!
 
 ### FuseJS
 
-* FuseJS - https://www.fusejs.io/
+2. FuseJS - https://www.fusejs.io/
 
-> Also works with HUGO!
+> [Fusejs](https://www.fusejs.io/getting-started/different-builds.html#explanation-of-different-builds) works with HUGO, [like papermod](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page)!
 
 ### PageFind
 
@@ -240,8 +283,6 @@ Static web search with low bandwitdh
 
 > Pagefind runs after Hugo, Eleventy, Jekyll, Next, Astro, SvelteKit, or any other website framework!
 
-## Convert the Images to WebP
-
 ### Interesting Post Slider with React
 
 * https://github.com/gio-del/Astro-Theme-Astroway
@@ -250,6 +291,18 @@ Static web search with low bandwitdh
 ---
 
 ## FAQ
+
+
+**Primitives**
+
+* https://github.com/radix-ui/primitives - Unstyled, accessible, open source React primitives for high-quality web apps and design systems.
+
+> Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos.
+
+
+**Convert the Images to WebP**
+
+Thats done automatically in Astro, as you can see [here](https://docs.astro.build/en/guides/images/)
 
 {{< callout type="info" >}}
   Whatever you try, make sure it pass the [Tips for Websites](https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well)
@@ -355,42 +408,15 @@ Something like: `fattouche.ns.cloudflare.com, leanna.ns.cloudflare.com`
 
 * Image Optimization - It's built in in astro: *you dont want huge images for performance*.
 
-### Astro Cookies
+#### Astro Cookies
 
 * https://docs.astro.build/en/reference/api-reference/#astrocookies
 
-### Astro OpenGraph and SEO Metadata
+#### Astro OpenGraph and SEO Metadata
 
 * Example - https://github.com/IoTechCrafts/stablo-astro-SSG/blob/main/src/layouts/Layout.astro#L42
 
-### Interesting Tools
 
-#### Primitives
-
-* https://github.com/radix-ui/primitives - Unstyled, accessible, open source React primitives for high-quality web apps and design systems.
-
-
-> Radix Primitives is an open-source UI component library for building high-quality, accessible design systems and web apps. Maintained by @workos.
-
-#### ChartJS
-
-* https://github.com/chartjs/Chart.js
-  * https://www.chartjs.org/
-  * https://github.com/chartjs/Chart.js?tab=MIT-1-ov-file#readme
-
-> MIT | Simple yet flexible JavaScript charting library for the modern web
-Simple HTML5 Charts using the <canvas> tag
-
-#### Swiper
-
-* https://github.com/nolimits4web/swiper
-
-#### MermaidJS
-
-https://github.com/mermaid-js/mermaid
-https://github.com/mermaid-js/mermaid-cli
-
-* [More about diagrams](/free-diagram-tools/)
 
 
 ### User Management / Authentication

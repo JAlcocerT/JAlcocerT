@@ -238,6 +238,8 @@ Create -> Pages -> **Connect Git**.
 
 You will Need a Gitlab Account OAth (Authentication)
 
+![Cloudflare build](/blog_img/web/Cloudflare/cf-gitlab-cicd.png)
+
 ### Setup Cloudflare Workers and Pages
 
 Make sure you set the **proper settings**.
@@ -246,6 +248,7 @@ This will grant that whenever you push, the workers are doing the **right steps 
 
 ![CF WnP Settings with Astro ](/blog_img/web/Cloudflare/CF-Settings-Astro.png)
 
+![alt text](/blog_img/web/Cloudflare/gitlab-cf-customdomain.png)
 
 {{% /steps %}}
 
