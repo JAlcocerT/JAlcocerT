@@ -7,6 +7,7 @@ draft: false
 #   alt: "SelfHosting xTTS2 with Docker." # alt text
 #   caption: "Succesfull installation of xTTS2 with Docker." # display caption
 description: 'Local TTS Tools with Coqui and LocalAI. Clone audio with xTTS2.'
+tags: ["AI-Gen"]
 url: local-ai-audio
 ---
 
@@ -21,10 +22,11 @@ url: local-ai-audio
 
 ## TTS
 
-**Text to Speech** AI tools!
-
+Lets see some **Text to Speech** AI tools!
 
 [![Star History Chart](https://api.star-history.com/svg?repos=mezbaul-h/june,coqui-ai/TTS,mudler/LocalAI&,type=Date)](https://star-history.com/mezbaul-h/june&coqui-ai/TTS&mudler/LocalAI&Date)
+
+Including [Google and OpenAI](#conclusions) solutions
 
 ### LocalAI TTS
 
@@ -32,7 +34,8 @@ url: local-ai-audio
 
 > MIT |  🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference 
 
-* https://localai.io/features/text-to-audio/
+* But we came for the text to audio capabilities: https://localai.io/features/text-to-audio/
+* And a very interesting API: http://192.168.1.11:8081/swagger/index.html
 
 <!-- 
 https://www.youtube.com/watch?v=G7aXgKlhbGk 
@@ -49,7 +52,7 @@ The UI will be at: http://192.168.0.12:8081/
 
 And it has a swagger API: http://192.168.0.12:8081/swagger/
 
-![alt text](/blog_img/GenAI/audio/localai.png)
+![Local AI UI](/blog_img/GenAI/audio/localai.png)
 
 ### Coqui TTS
 
@@ -224,7 +227,7 @@ https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/
 
 > Apache v2.0 | Run all your local AI together in one package - Ollama, Supabase, n8n, Open WebUI, and more!
 
-https://www.youtube.com/watch?v=hKrl5Gr7hM0
+<!-- https://www.youtube.com/watch?v=hKrl5Gr7hM0 -->
 
 {{< youtube "hKrl5Gr7hM0" >}}
 
@@ -232,6 +235,42 @@ https://www.youtube.com/watch?v=hKrl5Gr7hM0
 ---
 
 ## Conclusions
+
+There are many ways to generate AI audio from text.
+
+1. Google also offers one from their: https://aistudio.google.com/prompts/new_chat 
+
+The Native Speech Generation - https://aistudio.google.com/generate-speech
+
+For which you will need [Google API Keys](https://aistudio.google.com/apikey)
+
+2. And OpenAI also has its own: https://platform.openai.com/playground/tts
+
+
+Plus, Recemtly ive seen this usage of n8n to build AI workflows:
+
+<!-- https://www.youtube.com/watch?v=uAtSMEBosGU -->
+
+{{< youtube "uAtSMEBosGU" >}}
+
+
+
+
+
+### FAQ
+
+* https://github.com/snakers4/silero-models
+
+* https://github.com/p0p4k/vits2_pytorch
+https://github.com/p0p4k/vits2_pytorch?tab=MIT-1-ov-file#readme
+
+https://github.com/yl4579/StyleTTS?tab=MIT-1-ov-file#readme
+
+* https://github.com/rhasspy/piper?tab=MIT-1-ov-file#readme
+
+* https://github.com/natlamir/PiperUI
+
+Below are samples for Piper, a fast and local text to speech system. Samples were generated from the first paragraph of the Wikipedia entry for rainbow.
 
 ### Adding TTS to MultiChat
 
@@ -251,22 +290,6 @@ https://www.youtube.com/watch?v=hKrl5Gr7hM0
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
-
-
-### FAQ
-
-* https://github.com/snakers4/silero-models
-
-https://github.com/p0p4k/vits2_pytorch
-https://github.com/p0p4k/vits2_pytorch?tab=MIT-1-ov-file#readme
-
-https://github.com/yl4579/StyleTTS?tab=MIT-1-ov-file#readme
-
-* https://github.com/rhasspy/piper?tab=MIT-1-ov-file#readme
-
-https://github.com/natlamir/PiperUI
-
-Below are samples for Piper, a fast and local text to speech system. Samples were generated from the first paragraph of the Wikipedia entry for rainbow.
 
 ### xTTS2
 
@@ -357,7 +380,7 @@ streamlit run app2.py
 
 ### text_generation_webui_xtts
 
-https://github.com/kanttouchthis/text_generation_webui_xtts/
+* https://github.com/kanttouchthis/text_generation_webui_xtts/
 
 
 ---
@@ -461,3 +484,8 @@ T2S/TTS - text to speech
 
 * elevenlabs - https://elevenlabs.io/pricing
 * https://azure.microsoft.com/en-us/products/ai-services/text-to-speech
+
+And now there is even prompt to audio at: google veo3
+
+* https://openart.ai/video?ai_model=veo2
+* revid.ai

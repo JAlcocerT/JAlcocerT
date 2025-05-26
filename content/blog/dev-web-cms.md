@@ -343,10 +343,12 @@ Live edit content on GitHub or your local file system, without disrupting your e
 Keystatic CMS is a modern, open-source, headless content management system designed to **work directly with your codebase**. 
 
 * https://github.com/Thinkmill/keystatic
+* https://docsmill.dev/npm/@keystatic/core@0.5.47#/.Format
+* https://keystatic.com/docs/format-options
 
 > **MIT** | First class CMS experience, TypeScript API, Markdown & YAML/JSON based, **no DB**
 
-https://www.youtube.com/watch?v=K_-yTaBWzbA
+* https://www.youtube.com/watch?v=K_-yTaBWzbA
 
 {{< callout type="info" >}}
 Keystatic is a “file-based” CMS and rich-content editor that lives alongside your source code.

@@ -20,7 +20,9 @@ https://docs.astro.build/en/tutorial/2-pages/3/ -->
 <!-- https://www.youtube.com/watch?v=NniT0vKyn-E -->
 
 <!-- 
-CSS Link ---> -->
+CSS Link 
+--->
+
 
 * https://www.geeksforgeeks.org/how-to-add-chartjs-in-nextjs-13/
 
@@ -264,6 +266,10 @@ export default defineConfig({
 
 ## SSG Search
 
+There are few ways to implement search of Static sites.
+
+And some people get very created: https://dteather.com/blogs/astro-search-bar/
+
 1. **FlexSearch** - As seen [on Hextra](https://imfing.github.io/hextra/docs/guide/configuration/#search-index), this theme!
 
 ### FuseJS
@@ -272,9 +278,11 @@ export default defineConfig({
 
 > [Fusejs](https://www.fusejs.io/getting-started/different-builds.html#explanation-of-different-builds) works with HUGO, [like papermod](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page)!
 
+
+
 ### PageFind
 
-Static web search with low bandwitdh
+3. Pagefind is a Static web search with low bandwitdh. With a working example [here](https://github.com/JAlcocerT/BeyondAJourney/blob/main/astro-news/src/pages/search/index.astro)
 
 * PageFind - https://github.com/cloudcannon/pagefind
   * https://github.com/cloudcannon/pagefind?tab=MIT-1-ov-file#readme
@@ -282,6 +290,10 @@ Static web search with low bandwitdh
     * https://github.com/shishkin/astro-pagefind - MIT Licensed
 
 > Pagefind runs after Hugo, Eleventy, Jekyll, Next, Astro, SvelteKit, or any other website framework!
+
+{{< callout type="info" >}}
+FuseJS or Flexsearch, work even on dev env, but for pagefind you will have to build the site
+{{< /callout >}}
 
 ### Interesting Post Slider with React
 
@@ -432,3 +444,11 @@ Something like: `fattouche.ns.cloudflare.com, leanna.ns.cloudflare.com`
 It works with **Authentik**! - https://authjs.dev/getting-started/providers/authentik
 
 > ith wordpress, mastodon as well :)
+
+
+### Giscus
+
+* https://github.com/giscus/giscus
+
+> MIT | A comment system powered by GitHub Discussions. :octocat: 💬 💎
+

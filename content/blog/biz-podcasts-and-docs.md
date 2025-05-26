@@ -69,6 +69,11 @@ Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%
 
 Superlative job from ManuelErnestog, which I forked [here](https://github.com/JAlcocerT/astropod)
 
+{{< callout type="info" >}}
+You can generate podcasts from videos with [notebooklm](https://notebooklm.google.com/)
+{{< /callout >}}
+
+
 ### A look to GitPodcast
 
 I was (one more time) amazed on what people is able to create:
@@ -96,7 +101,7 @@ See it yourself: https://www.gitpodcast.com/streamlit/streamlit
 
 * https://github.com/mufeedvh/code2prompt/
 
-> 
+> MIT | A CLI tool to convert your codebase into a single LLM prompt with source tree, prompt templating, and token counting.
 
 ---
 

@@ -81,7 +81,6 @@ sudo apt install liferea
 1. The header could follow the users when its scrolling
 2. It could bring multilanguage support out of the box...
 
-
 {{< /details >}}
 
 
@@ -95,6 +94,51 @@ Definitely worth to have a look at it, maybe even **enhance it with a photo gall
 {{< callout type="info" >}}
 Photo galleries like [this one](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#photo-galleries) or [this one](https://github.com/rockem/astro-photography-portfolio)
 {{< /callout >}}
+
+{{< details title="Astro Photography Portfolio | Gallery Internals 📌" closed="true" >}}
+
+Based on my exploration of the theme, here's how the gallery system is structured and functions:
+
+1. Gallery Configuration (YAML-based)
+The gallery is primarily defined in /src/gallery/gallery.yaml, which contains:
+
+Collections: Categories for organizing photos (nature, travel, street)
+Images: Individual image entries with:
+Path to the image file
+Metadata (title, description)
+Collection assignments (including "featured" for highlighted images)
+2. Image Management System
+The theme handles images through:
+
+imageStore.ts: Core logic for loading and processing images
+Glob Imports: Images are loaded dynamically using import.meta.glob('/src/**/*.{jpg,jpeg,png,gif}')
+Collection-based Filtering: getImagesByCollection() function retrieves images belonging to specific collections
+3. Gallery Rendering Components
+The gallery is displayed using:
+
+PhotoGrid.astro: Main component that creates the image grid layout
+FeaturedGallery.astro: Shows selected "featured" works
+GLightbox Integration: Provides lightbox functionality when images are clicked
+4. Image Display Process
+When the gallery renders:
+
+Images are loaded from the specified directories
+Metadata from the YAML file is applied to each image
+Images are displayed in a responsive grid
+Clicking an image opens it in a lightbox with title/description
+5. Directory Structure
+Images are organized in collection-based folders:
+
+/src/gallery/nature/
+/src/gallery/travel/
+/src/gallery/street/
+This architecture makes it easy to add new images by:
+
+Adding the image file to the appropriate directory
+Adding an entry in the gallery.yaml file with metadata and collection assignments
+Would you like me to explain any specific aspect of the gallery system in more detail?
+
+{{< /details >}}
 
 3. https://github.com/danielcgilibert/blog-template
 

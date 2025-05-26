@@ -265,6 +265,10 @@ Zed IDE allow to use MCP or custom LLMs (ollama, OpenAI...)
 
 You can plug **API keys** to some IDEs/extensions:
 
+* https://aistudio.google.com/generate-speech
+
+For which you will need [Google API Keys](https://aistudio.google.com/apikey)
+
 * https://platform.openai.com/playground/prompts?models=gpt-4.1
 * https://platform.openai.com/logs
   * OpenAI API Keys - https://platform.openai.com/api-keys
@@ -337,12 +341,19 @@ Void sends messages directly to providers without retaining your data.
 
 And it has some interesting [features under paywall](https://windsurf.com/pricing)
 
-You can [download windsurf](https://windsurf.com/editor) IDE
+You can [download windsurf](https://windsurf.com/editor) IDE:
+
 ```sh
 #https://windsurf.com/editor/download-linux
 #https://windsurf.com/editor/update-linux
 sudo apt-get update
 sudo apt-get upgrade windsurf
+```
+
+You will need this to go back in git time:
+
+```sh
+git reset --hard HEAD #back to last commit
 ```
 
 <!-- https://www.youtube.com/watch?v=Wvyc2E6OHm8 -->

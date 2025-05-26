@@ -2,7 +2,7 @@
 title: "Scaling Services with SelfHosted PaaS - Netlify Vercel alternatives"
 date: 2025-03-14T21:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Webs","Entrepreneuring"]
 description: 'Deploying with Dokploy. Make ideas scalable: Wordpress and Ghost with build in Traefik SSL.'
 url: 'selfhosted-paas'
 ---
@@ -45,6 +45,8 @@ curl -sSL https://dokploy.com/install.sh | sh #will need ~300mb to get started
 
 
 You will authorize dokploy as Github App: https://github.com/apps/dokploy-jesalctag
+
+https://www.youtube.com/watch?v=kwVNpfru6pk
 
 <!-- 
 https://www.youtube.com/watch?v=2Q4-EgYS0u4
