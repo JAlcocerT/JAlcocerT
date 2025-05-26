@@ -89,8 +89,12 @@ This one is **fantastic** for blogging/news!
 
 Like going from [this one](https://cyclingthere.pages.dev/), towards a more serious [like this one](https://beyondajourney.pages.dev/)
 
-Definitely worth to have a look at it, maybe even enhance it with a photo gallery or a subscription / book selling page.
+Definitely worth to have a look at it, maybe even **enhance it with a photo gallery** or a subscription / book selling page.
 
+
+{{< callout type="info" >}}
+Photo galleries like [this one](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#photo-galleries) or [this one](https://github.com/rockem/astro-photography-portfolio)
+{{< /callout >}}
 
 3. https://github.com/danielcgilibert/blog-template
 

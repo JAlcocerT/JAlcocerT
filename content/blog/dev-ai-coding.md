@@ -138,7 +138,17 @@ Another CLI tool, this time from Anthropic:
 
 > Claude Code is an agentic coding tool that **lives in your terminal, understands your codebase**, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
 
+You can see the [CLI usage](https://docs.anthropic.com/en/docs/claude-code/cli-usage)
+
 ![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode1.png)
+
+
+```sh
+npm install -g @anthropic-ai/claude-code
+#npm list -g @anthropic-ai/claude-code
+#npm install -g @anthropic-ai/claude-code@0.2.126
+```
+
 
 ![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode2.png)
 

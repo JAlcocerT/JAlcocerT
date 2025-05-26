@@ -17,6 +17,15 @@ Today, we will have a look to:
 * **Querybook**: Pinterest's open-source big data ad-hoc query and visualization tool.
 * **Quix Streams**: A Python library designed for building real-time data streaming applications.
 
+### ChartBrew
+
+* https://github.com/chartbrew/chartbrew
+  * https://docs.chartbrew.com/deployment/run-on-docker#run-on-docker
+  * https://raw.githubusercontent.com/chartbrew/chartbrew/refs/heads/master/docker-compose.yml
+
+>  Open-source web platform used to create live reporting dashboards from APIs, MongoDB, Firestore, MySQL, PostgreSQL, and more 📈📊 
+
+Which resonates with my recent [post on **BI Tools**](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/)
 
 ### ChartDB
 

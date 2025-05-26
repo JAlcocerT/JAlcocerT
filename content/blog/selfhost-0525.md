@@ -87,11 +87,16 @@ Termix, *not [termux](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/#
 
 <!-- https://www.youtube.com/watch?v=s15a-ysSQE0 -->
 
+
 {{< youtube "s15a-ysSQE0" >}}
+
+This is how termix UI looks:
 
 ![Termix UI](/blog_img/selfh/termix-ui.png)
 
-![alt text](/blog_img/selfh/termix-user.png)
+You can create user on termix like so:
+
+![Termix users creation](/blog_img/selfh/termix-user.png)
 
 Now I can have one tab for each home selfhost related device:
 
@@ -300,15 +305,6 @@ It has influxDB 2.0 integration, inc ase that you want to use this with Grafana.
 {{< /callout >}}
 
 
-## Analytics Stuff
-
-* https://github.com/chartbrew/chartbrew
-  * https://docs.chartbrew.com/deployment/run-on-docker#run-on-docker
-  * https://raw.githubusercontent.com/chartbrew/chartbrew/refs/heads/master/docker-compose.yml
-
->  Open-source web platform used to create live reporting dashboards from APIs, MongoDB, Firestore, MySQL, PostgreSQL, and more 📈📊 
-
-Which resonates with my recent [post on BI Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/)
 
 ---
 
@@ -317,7 +313,7 @@ Which resonates with my recent [post on BI Tools](https://jalcocert.github.io/JA
 From now on, I will include docker-compose stacks linked to this kind of recap Selfhosting posts:
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/" title="Selfhosting Stack May 2025 | Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/SelfH/May25_docker-compose.yml/" title="Selfhosting Stack May 2025 | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
 Recently I saw a really cool podcast from DOAC:

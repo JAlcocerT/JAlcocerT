@@ -102,7 +102,7 @@ slidev export --format pptx #this will properly render mermaid diagrams and code
 
 7. Or generate the PDF via the UI at: `localhost:3030/export`
 
-![alt text](/blog_img/biz/RE/slidev-re.png)
+![SliDev Real Estate](/blog_img/biz/RE/slidev-re.png)
 
 8. Build it ready to be hosted *as static page*:
 
@@ -115,7 +115,7 @@ slidev build --base /talks/my-cool-talk/ #deploy under sub-route
 #slidev build --base /data-chat/ #useful for github pages
 ```
 
-![alt text](/blog_img/biz/RE/slidev-build.png)
+![Building SliDevJS](/blog_img/biz/RE/slidev-build.png)
 
 
 

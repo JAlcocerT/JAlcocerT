@@ -167,9 +167,16 @@ chmod +x ./setup.sh
 
 #### Grafana
 
-For the IoT Fans out there: Grafana, Kibana and Chronogaph
+1. For the tinkers out there, see: Grafana, Kibana and Chronogaph
+2. For the IoT Fans:
 
-![Grafana UI](/blog_img/iot/grafana.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614" title="Pi IoT Project with Grafana" image="/blog_img/iot/grafana.png" subtitle="MLX90614 + grafana + InfluxDB | ioT Project Post" >}}
+{{< /cards >}}
+
+<!-- 
+![Grafana UI](/blog_img/iot/grafana.png) 
+-->
 
 
 {{< callout type="info" >}}
@@ -179,7 +186,6 @@ Grafana dashboards and Panels have an asociated **JSON** file that defines them!
 <!-- https://youtu.be/Uq5tZv6T3ko -->
 
 {{< youtube "Uq5tZv6T3ko" >}}
-
 
 
 {{< details title="Designing Graphana Panels...with Python? 📌" closed="true" >}}
@@ -685,15 +691,20 @@ IoT Project example with Superset: <>
 ![SBC Raspberry Pi 4](/blog_img/iot/Rpi4_4gb_size.jpg) 
 -->
 
----
-
 <!-- https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0 -->
 
 {{< gist JAlcocerT 953cab1052af58f4241f28dbc0a314a0>}}
 <!-- {{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks - PayoutRatioEvolution.JPG" >}} -->
 
 
-### Analytics Tools
+
+
+---
+
+## Conclusions
+
+Many analytics tools to choose from:
+
 - [KNIME](https://www.knime.com/)
 - [Superset](https://www.opensourcealternative.to/project/Superset)
 - [Metabase](https://www.metabase.com/)
@@ -702,7 +713,8 @@ IoT Project example with Superset: <>
 - [Lightdash](https://github.com/lightdash/lightdash)
 - [MongoDB tutorial: Building Metabase Dashboards](https://www.youtube.com/watch?v=utMxX014na4)
 
-### Additional Databases and Tools
+Additional Databases and Tools
+
 - **MongoDB**
 - **Elasticsearch (ES)**
 - **InfluxDB**
@@ -710,15 +722,7 @@ IoT Project example with Superset: <>
 - **OPENFoam**
 
 
-
-### Other F/OSS BI Tools
-
-
----
-
-## Conclusions
-
-Whatever technology you are using, make sure to understand how it adds values to the final users:
+Whatever BI technology you are using, make sure to understand how it adds values to the final users.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/business-intelligence-data-analytics/" title="Concepts for BI Analytics" icon="book-open" >}}
