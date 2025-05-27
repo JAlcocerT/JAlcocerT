@@ -167,7 +167,7 @@ Would you like me to explain any specific aspect of the gallery system in more d
 
 > GPL 3.0 | 📚 Openblog is an elegant, simple, and user-friendly blog. Focused on accessibility, SEO and performance.
 
-For a more personal site, id have a look to: https://github.com/saicaca/fuwari
+>> For a more personal site, id have a look to [Fuwari](https://github.com/saicaca/fuwari)
 
 
 ### Directory Astro Themes
@@ -200,6 +200,9 @@ npm install lucide-react
 
 4. https://github.com/piotrkulpinski/openalternative
 
+> GPL3.0  A community driven list of open source alternatives to proprietary software and applications. 
+
+5. [AstroNomy](https://github.com/mickasmt/astro-nomy), forked [here](https://github.com/JAlcocerT/astro-nomy), has an interesting part with post and tags, which are [cool for real estate](https://jalcocert.github.io/JAlcocerT/real-estate-website/#real-estate-web-ui-enhancements)
 
 ---
 
@@ -223,7 +226,7 @@ If you already have your website (Wordpress, Ghost, or SSG's...)
 
 You will want to have search in it.
 
-Mind that not all static search work same, some just work when the ssg is built
+Mind that not all [static search work](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/#ssg-search) same, some just work when the ssg is built
 
 I was writing about SSG search [here](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/#ssg-search)
 

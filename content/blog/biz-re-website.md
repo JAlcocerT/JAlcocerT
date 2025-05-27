@@ -15,7 +15,7 @@ https://dm-realestate.web.app/
 
 Not long ago, I was working on a **website for real estate**, based on Astro SSG.
 
-After the [initial demo in September 2024](https://github.com/IoTechCrafts/ScrewFastMoises)
+After the [initial demo in September 2024](https://github.com/IoTechCrafts/ScrewFastMoises) of the [code base](https://github.com/JAlcocerT/ScrewFastMoiRealEstate)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/" title="See Astro 101 Docs ↗" icon="book-open" >}}
@@ -123,7 +123,7 @@ I almost forgot...the **GenAI Real estate Chat part**!
 ## Real Estate Web UI Enhancements
 
 
-{{% details title="Themes Considered: ScrewFast, Nebulix, AstroFront...  🚀" closed="true" %}}
+{{% details title="Themes Considered: ScrewFast, Nebulix, AstroFront, Foxi...  🚀" closed="true" %}}
 
 1. https://github.com/mearashadowfax/ScrewFast
 
@@ -132,7 +132,6 @@ I almost forgot...the **GenAI Real estate Chat part**!
 2. https://github.com/unfolding-io/nebulix
 
 > Nebulix, a Fast & Green Theme Based on Astro + Static CMS + Snipcart
-
 
 ```sh
 git clone https://github.com/unfolding-io/nebulix
@@ -148,7 +147,6 @@ With very interesting components at `/src/content/project/crafting-the-perfect-c
 ```
 
 > http://localhost:4321/work/crafting-the-perfect-cosmic-mojito/
-
 
 
 3. https://github.com/themefisher/astrofront-astro
@@ -197,7 +195,7 @@ npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 
 {{% /details %}}
 
-5. And...Astronomy! https://github.com/mickasmt/astro-nomy
+5. And...Astronomy! https://github.com/mickasmt/astro-nomy forked [here](https://github.com/JAlcocerT/astro-nomy)
 
 {{< details title="What I like about Astro astro-nomy Theme 📌" closed="true" >}}
 
@@ -212,8 +210,7 @@ npm install -D tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 
 ![alt text](/blog_img/biz/RE/dmproperties.png)
 
-> See it live https://dmproperties.web.app/
-
+> See it live https://dmproperties.web.app/ as per its astro-nomy forked repo
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/" title="CSS 101 ↗" icon="book-open" >}}
@@ -301,6 +298,11 @@ https://docs.google.com/document/d/1SIfj7KK956zXQ3IPt9NHzFptPGcF0bVSc6AUZPIaoDA/
 This is kind of a **four in one project**:
 
 1. Responsive **Web** UI - Thanks to [Streamlit](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/)
+
+https://dmproperties.web.app/
+https://dm-realestate.web.app/
+
+
 2. **Real Estate Calculator** to engage users and potential clients
 
 {{< cards >}}
@@ -321,20 +323,17 @@ This is kind of a **four in one project**:
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-vision-models/" title="AI Vision Post" image="/blog_img/GenAI/image/openai-vision-realestate.png" subtitle="OpenAI Image2Text for Real Estate" >}}
 {{< /cards >}}
 
-
-
 5. **Social Link Website**: with LinkStack, *as seen [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)*
-
 
 {{< cards >}}
   {{< card link="https://whois.jalcocertech.com/@me" title="LinkStack" image="/blog_img/web/web-linkstack.png" subtitle="My Social Link Website" >}}
 {{< /cards >}}
 
-6. **Bonus**: Newsletter (with mailerlite) + GDPR Compliant Web Analytics: [Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
+6. **Bonus**: Newsletter (with mailerlite) + GDPR Compliant [Web Analytics](https://fossengineer.com/open-source-selfhostable-web-analytics-alternatives-ga/): [with Litlyx](https://dashboard.litlyx.com/) + Forms/Questionaires:[Formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms)
 
 
 
-**Result**: after trying with few alternatives *https://moises-era.pages.dev (vs) https://dm-realestate.web.app/*
+**Result**: after trying with few alternatives *https://moises-era.pages.dev with [screwfast](https://github.com/JAlcocerT/ScrewFastMoiRealEstate) **(vs)** https://dm-realestate.web.app/ with [Cybernetik](https://github.com/JAlcocerT/cybernetik-realestate-moises) **(vs)** [astronomy](https://github.com/JAlcocerT/astro-nomy) seen 
 
 {{< cards cols="1" >}}
   {{< card link="https://dm-real-estate.com" title="Web UI Result" >}}
@@ -350,7 +349,7 @@ This is kind of a **four in one project**:
 And with an interesting tool to get the **photo properties adquisition automated**
 {{< /callout >}}
 
-> Still, would you keep your [Wordpress](https://fossengineer.com/selfhosting-wordpress-docker/), [Ghost](https://fossengineer.com/selfhosting-ghost-docker/), Wix?
+> Still, would you keep your [Wordpress](https://fossengineer.com/selfhosting-wordpress-docker/), [Ghost](https://fossengineer.com/selfhosting-ghost-docker/), Wix...?
 
 ---
 
@@ -362,6 +361,14 @@ And with an interesting tool to get the **photo properties adquisition automated
 ---
 
 ## Outro
+
+All [links inside the website work](https://jalcocert.github.io/JAlcocerT/scrapping-with-llms/#how-to-monitor-broken-links-of-websites) and are ready as per [linkchecker](https://github.com/IoTechCrafts/linkchecker)
+
+
+```sh
+docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://dm-real-estate.com/
+#docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://fossengineer.com
+```
 
 ### Checks Ive Done
 
@@ -406,11 +413,10 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 4. **DNS Config**: The site is accesible from the base domain name as well as the `www.` subdomain
 
-
 5. Responsiveness and ping
 
-* Uptime Kuma
-* https://github.com/KSJaay/Lunalytics?ref=selfh.st
+* [Uptime Kuma](https://fossengineer.com/selfhosting-uptime-Kuma-docker/)
+* https://github.com/KSJaay/Lunalytics
 
 
 {{< /details >}}
@@ -419,9 +425,10 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 Audio from text can be generated from the [OpenAI API itself](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Audio).
 
-But there are few tools around that will give me a more *human touch*.
+But there are [few audio tools](https://jalcocert.github.io/JAlcocerT/local-ai-audio/) around that will give me a more *human touch*.
 
 ![CoquiTTS for RealEstate](/blog_img/biz/RE/re-coquitts.png)
+
 
 
 {{< cards cols="1" >}}

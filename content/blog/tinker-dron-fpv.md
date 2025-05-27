@@ -9,6 +9,9 @@ url: 'fpv-programming'
 
 ![DJI Tello Dron](/blog_img/hardware/dji-dron.png)
 
+https://gitlab.com/fossengineer1/dron
+https://github.com/JAlcocerT/DJITelloPy
+
 https://www.youtube.com/watch?v=KSP4o_WCqVs
 
 ## BetaFlight

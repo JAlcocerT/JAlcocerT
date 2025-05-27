@@ -16,7 +16,7 @@ It all started few years ago with my **own blogs**.
 {{< /cards >}}
 
 {{< callout type="info" >}}
-And there is a **new and very special website**! <http://entreagujaypunto.com/> Built with GH  + Cloudflare Pages <https://github.com/JAlcocerT/EntreAgujayPunto> 💻
+And there is a **new and very special website**! <http://entreagujaypunto.com/> Built with GH  + Cloudflare Pages <https://github.com/JAlcocerT/EntreAgujayPunto> 💻 Similar to [this](https://gitlab.com/fossengineer1/whilecyclingthere)
 {{< /callout >}}
 
 I got the domain at PorkBun and changed the **NameServer** to Cloudflare ones.

@@ -2,6 +2,8 @@ hugo.exe
 *venv/
 
 linkchecker_output.txt
+linkchecker_report.txt
+
 sensor_output.txt
 *_output.txt
 

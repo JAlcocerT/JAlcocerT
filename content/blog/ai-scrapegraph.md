@@ -7,7 +7,7 @@ cover:
     image: "https://socialify.git.ci/VinciGit00/Scrapegraph-ai/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
     alt: "Using ScrapeGraph with Python" # alt text
     caption: "ScrapeGraph 101." # display caption under cover
-description: 'Selfhosting Scrapegraph-ai with Docker. Scrap with Python.'
+description: 'Selfhosting Scrapegraph-ai with Docker. Scrap with Python. Check links with linkchecker'
 summary: 'Scrapping with AI and Open Source. How to use Scrape Graph and how it compares with similar F/OSS projects.'
 url: 'scrapping-with-llms'
 #isPinned: true
@@ -436,15 +436,19 @@ lynx duckduckgo.com
 
 #### How to Monitor Broken Links of Websites
 
+Nobody wants to have broken links on their own website.
+
+Thankfully, we have [linkchecker](https://github.com/IoTechCrafts/linkchecker).
+
 {{< dropdown title="How to Use LinkChecker with Docker ⏬" closed="true" >}}
 
 * Use LinkChecker with their [GHCR Image](https://github.com/linkchecker/linkchecker/pkgs/container/linkchecker)
 
 ```sh
 #podman run --rm -it ghcr.io/linkchecker/linkchecker:latest --verbose https://fossengineer.com > linkchecker_output.txt
-
 docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://www.example.com
 ```
+
 {{< /dropdown >}}
 
 #### F/OSS RAG Frameworks

@@ -25,7 +25,7 @@ https://github.com/OpenInterpreter/open-interpreter
 
 https://fossengineer.com/open-source-invoice-creator/
 
-Contact forms (QR), waiting lists and business cards..
+Contact forms (QR), waiting lists (like the one of astro-nomy theme) and business cards..
 
 Some people have been contacting me via EE registry https://ariregister.rik.ee/eng/company/
 
