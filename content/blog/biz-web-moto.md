@@ -330,16 +330,17 @@ choco install vscode -y
         * Leaflet + OSM ✅
         * MapLibre ✅ - https://github.com/roblabs/maps-withastro/blob/main/src/MapLibre.astro
             * An open source **visual editor** for the '**MapLibre Style** Specification'  - https://github.com/maplibre/maputnik
+      * komoot embed OK
 
-* adding interactive globe
-    * From astro bento portfolio (d3 & solid-js library) ✅
+* Adding interactive globe with the countries you have visited
+    * From [astro bento portfolio](https://github.com/IoTechCrafts/astro-bento-portfolio-ssg/blob/master/src/components/Globe.tsx) (d3 & solid-js library) ✅
+
 * ig embed ✅
     * https://developers.facebook.com/docs/instagram/oembed
     * https://about.instagram.com/blog/announcements/introducing-web-embedding-instagram-content-on-websites
-        * must be a public profile!
+        * must be a public profile to be shared!
 
-* komoot embed OK
-* gpx.studio TBCchecked
+* Use [gpx.studio](https://gpx.studio/) to visualize your GPX, or see [my Route Tracker repo](https://github.com/JAlcocerT/Py_RouteTracker)
 
 * https://www.youtrack.es
 * metabase/superset/redash - Can also represent GPX data
@@ -364,7 +365,7 @@ Or, in pure Markdown, but losing the image sizing and border:
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/PCvrcyV3_hI/maxresdefault.jpg)](https://www.youtube.com/watch?v=PCvrcyV3_hI)
 
 
-carousel 
+* Carousel - Even with CSS Only as per [this video](https://www.youtube.com/watch?v=g03Yldh9Nkw) like [so](https://developer.chrome.com/blog/carousels-with-css) and [so](https://flackr.github.io/carousel/)
 
 * with react (v1) as per astro project: https://github.com/gio-del/Astro-Theme-Astroway
 * with embla - v2
@@ -372,15 +373,12 @@ carousel
     * https://github.com/davidjerleke/embla-carousel
 * with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
 
-photo gallery
-
-https://github.com/tvoma/cube-gallery
-https://github.com/jomaendle/astro-photo-gallery
-
-https://jankraus.net/2024/04/05/how-to-build-a-simple-photo-gallery-with-astro/
+* Photo galleries
+  * https://github.com/tvoma/cube-gallery
+  * https://github.com/jomaendle/astro-photo-gallery
+  * https://jankraus.net/2024/04/05/how-to-build-a-simple-photo-gallery-with-astro/
 
 pop up at time or location of page
-
 
 * Others: if traffic is directed here, ever
     * booking maps - https://affiliates.support.booking.com/kb/s/article/Map-Widget-everything-you-need-to-know

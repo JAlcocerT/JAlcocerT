@@ -53,23 +53,34 @@ If you dont know yet, this is **Astro, the HTML first framework**.
 
 
 
+## ASTRO SEO PACKAGES
+
+* robots.txt - https://www.npmjs.com/package/astro-robots-txt#why-astro-robots-txt` (MIT Licensed ❤️)
+  * You also need a **sitemap**!
+
+* rss
+
+* Image Optimization - It's built in in astro: *you dont want huge images for performance* and astro makes them webp.
+
+Astro Cookies: https://docs.astro.build/en/reference/api-reference/#astrocookies
+
+Astro OpenGraph and SEO Metadata - Like [here](https://github.com/IoTechCrafts/stablo-astro-SSG/blob/main/src/layouts/Layout.astro#L42)
 
 
 ### Adding SiteMap for Astro Pages
 
-<!-- 
-curl -s https://bachatameet.com/sitemap.xml -o /dev/null -w "%{http_code}\n" #https://github.com/IoTechCrafts/astroverse ex visvrs
-https://verse-astro.vercel.app/
-curl -s https://verse-astro.vercel.app/sitemap.xml -o /dev/null -w "%{http_code}\n"
- -->
+
 
 We will need the package: `"@astrojs/sitemap": "^3.0.3"`
 
-
-
 {{< callout type="info" >}}
-  Thanks to [Astroverse Theme](https://github.com/IoTechCrafts/astroverse) to show how to setup sitemaps in astro
+Thanks to [Astroverse/VisVrs Theme](https://github.com/IoTechCrafts/astroverse) to show how to setup sitemaps in astro
 {{< /callout >}}
+
+```sh
+curl -s https://fossengineer.com/sitemap.xml -o /dev/null -w "%{http_code}\n" #https://github.com/IoTechCrafts/astroverse ex visvrs
+curl -s https://verse-astro.vercel.app/sitemap.xml -o /dev/null -w "%{http_code}\n"
+```
 
 
 {{< details title="SiteMap Astro | Setup 📌" closed="true" >}}
@@ -103,6 +114,7 @@ That will make your sitemap be at: `https://yoursite.com/sitemap.xml`
 curl -s https://jalcocertech.com/sitemap.xml -o /dev/null -w "%{http_code}\n" #200 means its there!
 curl -s https://jalcocertech.com/sitemap-index.xml -o /dev/null -w "%{http_code}\n" #could be
 ```
+{{< /details >}}
 
 > Make sure to have a `robots.txt` in the `/public` directory specifying the path:
 
@@ -123,8 +135,6 @@ Also, you can do it for **bing search**:
 #curl "https://www.bing.com/ping?sitemap=https://yoursite.com/sitemap.xml"
 curl "https://www.bing.com/ping?sitemap=https://jalcocertech.com/sitemap-index.xml"
 ```
-
-{{< /details >}}
 
 
 {{< details title="Check that the SiteMap/RSS/Robots Works | Astro Web checks 📌" closed="true" >}}
@@ -156,6 +166,8 @@ curl -s https://bachatafests.com/sitemap_index.xml -o /dev/null -w "%{http_code}
 ## Cool features
 
 ### Charts
+
+For the ones who are crazy about data.
 
 * [ChartJS](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/Chart.astro?ref_type=heads)
 * [ApexCharts](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/mdx/ApexChart.astro?ref_type=heads)
@@ -253,7 +265,7 @@ export default defineConfig({
 
 ---
 
-## FAQ for Astro
+### FAQs for Astro
 
 **With AlpineJS and TailwindCSS**
 
@@ -411,24 +423,6 @@ Something like: `fattouche.ns.cloudflare.com, leanna.ns.cloudflare.com`
 
 {{< /dropdown >}}
 
-### ASTRO SEO PACKAGES
-
-* robots.txt - https://www.npmjs.com/package/astro-robots-txt#why-astro-robots-txt` (MIT Licensed ❤️)
-  * You also need a **sitemap**!
-
-* rss
-
-* Image Optimization - It's built in in astro: *you dont want huge images for performance*.
-
-#### Astro Cookies
-
-* https://docs.astro.build/en/reference/api-reference/#astrocookies
-
-#### Astro OpenGraph and SEO Metadata
-
-* Example - https://github.com/IoTechCrafts/stablo-astro-SSG/blob/main/src/layouts/Layout.astro#L42
-
-
 
 
 ### User Management / Authentication
@@ -448,7 +442,8 @@ It works with **Authentik**! - https://authjs.dev/getting-started/providers/auth
 
 ### Giscus
 
+As seen [here](https://dteather.com/blogs/adding-giscus-discussions-to-astro/)
+
 * https://github.com/giscus/giscus
 
-> MIT | A comment system powered by GitHub Discussions. :octocat: 💬 💎
-
+> MIT | A comment system powered by GitHub Discussions.

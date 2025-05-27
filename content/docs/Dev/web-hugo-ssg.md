@@ -7,6 +7,14 @@ sidebar:
   open: false
 ---
 
+Why bother with HUGO SSG?
+
+Well, you just write markdown and when you get tired of a theme, you can just [change to another HUGO theme](https://fossengineer.com/changing-hugo-theme/) and keeping all your data as is, flat files.
+
+Pretty awsome, ah?
+
+Well, I havent mentioned yet that *potentially*, you dont have to pay for [hosting these sites](https://fossengineer.com/alternatives-for-hosting-static-websites/).
+
 {{< callout type="info" >}}
 New to SSGs and HUGO? See the [**101 HUGO** Guide](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)
 {{< /callout >}}
@@ -99,7 +107,7 @@ Shortcodes for HUGO are like components for Astro.
 
 They help us provide interesting funcitonality to our themes.
 
-1. If you are using HUGO, embedd your images with [this **shortcode**](https://raw.githubusercontent.com/gohugoio/hugo/master/tpl/tplimpl/embedded/templates/shortcodes/figure.html)
+1. If you are using HUGO, embed your images with [this **shortcode**](https://raw.githubusercontent.com/gohugoio/hugo/master/tpl/tplimpl/embedded/templates/shortcodes/figure.html)
 
 2. You can also embed [GISTS with this shortcode](https://raw.githubusercontent.com/gohugoio/hugo/refs/heads/master/tpl/tplimpl/embedded/templates/shortcodes/gist.html)
 
@@ -113,6 +121,8 @@ Just use it like so in your markdown ,**example with the gist**:
 * First parameter (jalcocert): This is the GitHub username or organization that owns the Gist.
 * Second parameter (879fecd6ae9bccaa0175d1c180a032cd): This is the unique Gist ID.
 * Third parameter ("RStocks - PayoutRatioEvolution.JPG"): This is the specific file within the Gist that you want to load.
+
+3. You can also [bring cool charts](#mermaidjs-and-chartjs), thanks to shortcodes
 
 ### MermaidJS and ChartJS
 
@@ -129,7 +139,7 @@ As see on this [HUGO Hextra post](https://jalcocert.github.io/JAlcocerT/making-s
 
 The [HUGO **Setup**](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) was the first SSG that I could get working back in the days.
 
-{{< details title="How to add `ads.txt` to HUGO 📌" closed="true" >}}
+{{< details title="How to add `ads.txt` to a HUGO Website 📌" closed="true" >}}
 
 1. **Create an `ads.txt` file** in your Hugo project’s `static` directory. The `static` folder in Hugo is where you put any files you want to be copied directly to the root of your build output.
 
@@ -142,7 +152,6 @@ google.com, pub-123456, DIRECT, abcdef123456
 3. **Build your Hugo site**:
 
 4. **Verify the output** by checking the `public` directory (Hugo's default output folder). You should find the `ads.txt` file in the root of `public`:
-
 
 5. **Deploy your site** as usual. The `ads.txt` file should now be available at `https://yourdomain.com/ads.txt`. 
 

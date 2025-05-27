@@ -1,5 +1,5 @@
 ---
-title: "Tech for Creating Documentation and related Podcast"
+title: "Tech for Creating i18n Documentation and related Podcast"
 date: 2025-05-15
 draft: false
 tags: ["Web"]
@@ -51,7 +51,8 @@ npm run dev
 1. Blog/Archives Interface
 2. Pages Interface
 3. Tag system
-4. Some kind of "app [directory](https://astro-nomy.vercel.app/blog) Template" to search, like [this one](https://github.com/JAlcocerT/astro-nomy)
+4. Some kind of "app [directory](https://astro-nomy.vercel.app/blog) Template" to search, like [this one](https://github.com/JAlcocerT/astro-nomy) or [this one](https://github.com/piotrkulpinski/openalternative)
+
 5. Integration with some CMS, like Keystatic 
 6. [LastUpdated](https://starlight.astro.build/reference/configuration/#lastupdated) for Docs/Posts
 7. Some [Astro data fetching](https://docs.astro.build/en/guides/data-fetching/) example

@@ -112,7 +112,7 @@ Which you can combine with [Mullvad](https://jalcocert.github.io/Linux/docs/debi
   {{< card link="https://fossengineer.com/selfhosting-airtrail/" title="Selfhosting AirTrail" >}}
 {{< /cards >}}
 
-You can also have a look to projects like: https://github.com/maxlerebourg/outpin?ref=selfh.st
+You can also have a look to projects like: https://github.com/maxlerebourg/outpin and to [GPX Studio](#conclusions)
 
 > Apache v2 |  OutPin offers a way to plan your future holidays by creating adventures and adding steps to them (with PocketBase/SQLite) 
 
@@ -120,7 +120,7 @@ Which are selfhostable as per: https://github.com/JAlcocerT/Docker/tree/main/Oth
 
 {{< details title="Quick Trip Planner Deployment 📌" closed="true" >}}
 
-https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/Deploy
+See the [project deployment options](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/Deploy).
 
 {{< /details >}}
 
@@ -140,13 +140,15 @@ You can install **Organic Maps** as [Android](https://jalcocert.github.io/JAlcoc
 flatpak install flathub app.organicmaps.desktop #https://flathub.org/apps/app.organicmaps.desktop
 ```
 
-> Before I was using maps.me, but it became so bloated lately.
+> Before Organic Maps, I was using maps.me, but it became so bloated lately.
 
-To record your **routes as GPX**
+To record your **routes as GPX**:
 
 1. https://github.com/OpenTracksApp/OpenTracks
 
 > OpenTracks is a sport tracking application that completely respects your privacy.
+
+To visualize them later, you can use [GPX Studio](#conclusions)
 
 2. https://github.com/jonasoreland/runnerup
 
@@ -176,7 +178,6 @@ And they can be combined with **FitTrackee**
 
 * see the app: https://gpx.studio/app#3.98/41.91/19.39
 
-
 > MIT |  the online GPX file editor 
 
 ### BackUps
@@ -187,10 +188,9 @@ If you will be recording at 4K, you will need **back up space**.
 
 Here it comes **Nextcloud as a backup solution**, as it has clients for desktop/web/android/ios.
 
-> I also like Syncthing but it does not have ios app
+> I also like Syncthing but, *if you care*,  it does not have ios app
 
 Get one of these connected to your SBCs at home and you are ready:
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="Crucial SSD for a Pi" image="/blog_img/hardware/crucial-1tb-ssd.jpg" subtitle="Ready to Plug to MiniPC or SBC" >}}
@@ -250,7 +250,6 @@ services:
 #   nginx_nginx_network: #optional
 #     external: true #optional
 ```
-
 {{< /details >}}
 
 {{< callout type="info" >}}
@@ -267,8 +266,7 @@ Setup [Nextcloud as Docker container](https://github.com/JAlcocerT/Docker/tree/m
 
 ![PiGallery2 Map Zoom](/blog_img/selfh/Photo/PiGallery2-MapZoom.png)
 
-> ...You can see These tools covered at [this post](https://github.com/JAlcocerT/photo-management-tools)
-
+> ...You can see These tools covered at [this post](https://jalcocert.github.io/JAlcocerT/photo-management-tools)
 
 ### Hardware Setup
 
@@ -358,11 +356,16 @@ After travelling and hopefully learning new perspectives, you can [create a webs
   {{< card link="https://www.beyondajourney.com/" title="My Story" image="https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
 {{< /cards >}}
 
+You can also have a look to https://github.com/gpxstudio/gpx.studio 
+
+> MIT | the online GPX file editor 
+
+And to https://github.com/JAlcocerT/pigallery2 to display your photos and their GPX metadata (the gallery also render the GPX files!) and is very simple to [setup 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGallery_docker-compose.yml)
+
+
 **Bonus**
 
-1. Movemouse
-
-* https://github.com/sw3103/movemouse?ref=fossengineer.com
+1. [Movemouse](https://github.com/sw3103/movemouse?ref=fossengineer.com)
 
 > GPL 3.0 |  Move Mouse is a simple piece of software that is designed to simulate user activity. 
 
@@ -423,7 +426,6 @@ Local Development:
 
 {{< /details >}}
 
-
 Spliit offers a robust solution for managing shared expenses and simplifies the process for users. 
 
 > Spliit an fantastic project to have a look to.
@@ -462,7 +464,7 @@ Thanks to this sites, I get to know more cool apps:
 
 * https://github.com/piotrkulpinski/openalternative
 
-> Which can be seen also as an **awsome Astro project!**
+> Which can be seen also as an **awsome Astro [project](https://github.com/piotrkulpinski/openalternative)!**
 
 2. https://alternateoss.com/
 

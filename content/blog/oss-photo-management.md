@@ -121,7 +121,7 @@ See PiGalleryv2 config file [here 🐳](https://github.com/JAlcocerT/Docker/blob
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="Adventures!" image="/blog_img/selfh/Photo/PiGallery2-MapZoom.png" subtitle="PiGallery2 is the perfect companion for Travellers!" >}}
-  {{< card link="https://github.com/JAlcocerT/pigallery2" title="PiGallery2 Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Could not resist to fork this project!" >}}
+  {{< card link="https://github.com/JAlcocerT/pigallery2" title="PiGallery2 Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Could not resist to fork the PiGallery2 project!" >}}
 {{< /cards >}}
 
 
@@ -224,9 +224,12 @@ Basically using:
 1. HUGO Theme Gallery
 2. Astro Musee: even simpler, just place the photos under `./src/assets/images/original`
 
+<!-- 
+https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp
+-->
 
 {{< cards >}}
-  {{< card link="https://www.beyondajourney.com/" title="Diamond Bike" image="https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
+  {{< card link="https://www.beyondajourney.com/" title="Diamond Bike" image="https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
 {{< /cards >}}
 
 ### Lately...

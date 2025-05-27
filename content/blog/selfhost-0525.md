@@ -148,6 +148,7 @@ You can measure the temp of a distant Pi:
 
 ```sh
 vcgencmd measure_temp pmic
+
 #docker system prune -a #or clean its unused container space
 ```
 
@@ -315,6 +316,13 @@ From now on, I will include docker-compose stacks linked to this kind of recap S
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/SelfH/May25_docker-compose.yml/" title="Selfhosting Stack May 2025 | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
+
+```sh
+docker builder prune
+#docker system prune -a
+docker volume prune
+docker image prune -a
+```
 
 Recently I saw a really cool podcast from DOAC:
 

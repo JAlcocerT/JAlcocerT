@@ -1,13 +1,13 @@
 ---
 title: "Features for a Professional Looking News Website"
-date: 2025-06-22
+date: 2025-05-16
 draft: false
 tags: ["Web"]
-description: "Creating a News focused Website with app directory (with Astro SSG)."
-url: 'creating-news-website'
+description: "Creating a News focused Website with app directory (with Astro SSG). Beyond the basics."
+url: 'creating-web-directory-website'
 ---
 
-I came across SSG looking for simplicity.
+I came across SSGs looking for simplicity.
 
 Got in love due to the [many ways and how easy is to host them](https://fossengineer.com/alternatives-for-hosting-static-websites/).
 
@@ -92,7 +92,7 @@ Definitely worth to have a look at it, maybe even **enhance it with a photo gall
 
 
 {{< callout type="info" >}}
-Photo galleries like [this one](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#photo-galleries) or [this one](https://github.com/rockem/astro-photography-portfolio)
+Photo galleries like [this one](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#photo-galleries) or [this one](https://github.com/rockem/astro-photography-portfolio) or [this](https://github.com/jomaendle/astro-photo-gallery)
 {{< /callout >}}
 
 {{< details title="Astro Photography Portfolio | Gallery Internals 📌" closed="true" >}}
@@ -107,18 +107,21 @@ Images: Individual image entries with:
 Path to the image file
 Metadata (title, description)
 Collection assignments (including "featured" for highlighted images)
+
 2. Image Management System
 The theme handles images through:
 
 imageStore.ts: Core logic for loading and processing images
 Glob Imports: Images are loaded dynamically using import.meta.glob('/src/**/*.{jpg,jpeg,png,gif}')
 Collection-based Filtering: getImagesByCollection() function retrieves images belonging to specific collections
+
 3. Gallery Rendering Components
 The gallery is displayed using:
 
 PhotoGrid.astro: Main component that creates the image grid layout
 FeaturedGallery.astro: Shows selected "featured" works
 GLightbox Integration: Provides lightbox functionality when images are clicked
+
 4. Image Display Process
 When the gallery renders:
 
@@ -126,6 +129,7 @@ Images are loaded from the specified directories
 Metadata from the YAML file is applied to each image
 Images are displayed in a responsive grid
 Clicking an image opens it in a lightbox with title/description
+
 5. Directory Structure
 Images are organized in collection-based folders:
 
@@ -188,8 +192,7 @@ npm install lucide-react
 
 > MIT | Replicate the design of mobbin.com to test the news components of shadcn-ui. #builtinpublic
 
-
-
+4. https://github.com/piotrkulpinski/openalternative
 
 
 ---
