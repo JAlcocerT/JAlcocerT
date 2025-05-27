@@ -81,6 +81,9 @@ You can run it with [default parameters](https://github.com/openai/codex?tab=rea
 ```sh
 codex
 #codex "explain this codebase to me"
+
+#find . -name ".git" -type d
+#git reset --hard HEAD
 ```
 
 Codex also allows you to use other providers that support the OpenAI Chat Completions API. 

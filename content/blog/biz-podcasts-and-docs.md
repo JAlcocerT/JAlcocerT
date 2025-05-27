@@ -24,6 +24,7 @@ url: 'tech-for-podcast'
 **What I like about this Starlight theme?**
 
 1. Doc like interface
+2. With ToC (Table of contents that goes down as you read)
 2. [Internationalization](https://docs.astro.build/en/guides/internationalization/) (different languages with `i18n`)
 3. Search built in (with algoliasearch)
 4. Amazing Docs: https://starlight.astro.build/
@@ -51,12 +52,13 @@ npm run dev
 1. Blog/Archives Interface
 2. Pages Interface
 3. Tag system
-4. Some kind of "app [directory](https://astro-nomy.vercel.app/blog) Template" to search, like [this one](https://github.com/JAlcocerT/astro-nomy) or [this one](https://github.com/piotrkulpinski/openalternative)
+4. Some kind of "app [directory](https://astro-nomy.vercel.app/blog) Template" to search apps/real estate properties..., like [this one](https://github.com/JAlcocerT/astro-nomy) or [this one](https://github.com/piotrkulpinski/openalternative)
 
-5. Integration with some CMS, like Keystatic 
+5. Integration with [some CMS](https://docs.astro.build/en/guides/cms/), like Keystatic... 
 6. [LastUpdated](https://starlight.astro.build/reference/configuration/#lastupdated) for Docs/Posts
 7. Some [Astro data fetching](https://docs.astro.build/en/guides/data-fetching/) example
 8. [Image Options](https://docs.astro.build/en/guides/images/) examples: raw and optimized
+9. [Data fetching](https://docs.astro.build/en/guides/data-fetching/), so that you can reference content, like your docker-compose.yml public on github, so that others can edit them.
 
 {{< callout type="info" >}}
 Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%5B%5D=free) from time to time to get ideas
@@ -73,6 +75,10 @@ Superlative job from ManuelErnestog, which I forked [here](https://github.com/JA
 {{< callout type="info" >}}
 You can generate podcasts from videos with [notebooklm](https://notebooklm.google.com/)
 {{< /callout >}}
+
+<!-- 
+https://www.youtube.com/watch?v=gQW-NcPVlXQ&t=1669s 
+-->
 
 
 ### A look to GitPodcast

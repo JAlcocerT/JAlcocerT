@@ -1,6 +1,6 @@
 ---
 title: "ASTRO - SSG: Components & How to use Them"
-date: 2024-05-21T23:20:21+01:00
+date: 2024-05-14T23:20:21+01:00
 draft: false
 tags: ["Web","Dev"]
 description: 'Tutorial - Making any ASTRO Website better.'
@@ -28,10 +28,10 @@ CSS Link
 
 1. [Spinning World Map](#spinning-world-map): Including .GPX stuff
 
-2. Charts:
+2. [Charts](#charts)
 
 * MermaidJS
-* ChartJS
+* ChartJS, like the ones used with hugo [here](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/)
 * ApexCharts - Like this cool [timeline chart](https://apexcharts.com/javascript-chart-demos/timeline-charts/distributed/)
 
 3. [OG and SEO](#astro-opengraph-and-seo-metadata)
@@ -41,7 +41,9 @@ CSS Link
 
 6. [Search](#ssg-search): Flexsearch, fuseJS, pagefind,...
 
-If you dont know yet, this is **Astro, the HTML first framework**.
+If you dont know yet, this is **[Astro](https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/), the HTML first framework**.
+
+And these are very good intro videos on astro:
 
 <!-- https://www.youtube.com/watch?v=rRxuVOutmFQ -->
 {{< youtube "rRxuVOutmFQ" >}}
@@ -49,7 +51,7 @@ If you dont know yet, this is **Astro, the HTML first framework**.
 {{< youtube "XRe560_vVF0" >}}
 <!-- https://www.youtube.com/watch?v=XRe560_vVF0 -->
 
-> Thanks to both, code to the moon and Awsome YT channels
+> Thanks to both: code to the moon and Awsome YT channels
 
 
 
@@ -62,9 +64,8 @@ If you dont know yet, this is **Astro, the HTML first framework**.
 
 * Image Optimization - It's built in in astro: *you dont want huge images for performance* and astro makes them webp.
 
-Astro Cookies: https://docs.astro.build/en/reference/api-reference/#astrocookies
-
-Astro OpenGraph and SEO Metadata - Like [here](https://github.com/IoTechCrafts/stablo-astro-SSG/blob/main/src/layouts/Layout.astro#L42)
+* Astro Cookies: https://docs.astro.build/en/reference/api-reference/#astrocookies
+* Astro OpenGraph and SEO Metadata - Like [here](https://github.com/IoTechCrafts/stablo-astro-SSG/blob/main/src/layouts/Layout.astro#L42)
 
 
 ### Adding SiteMap for Astro Pages

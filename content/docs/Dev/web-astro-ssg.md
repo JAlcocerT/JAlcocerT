@@ -34,10 +34,9 @@ http-server dist
     {{< filetree/folder name="docs" state="closed" >}}
       {{< filetree/file name="_index.md" >}}
       {{< filetree/file name="introduction.md" >}}
-      {{< filetree/file name="introduction.fr.md" >}}
     {{< /filetree/folder >}}
   {{< /filetree/folder >}}
-  {{< filetree/file name="hugo.toml" >}}
+  {{< filetree/file name="package.json" >}}
 {{< /filetree/container >}}
 
 

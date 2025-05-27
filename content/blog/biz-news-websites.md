@@ -3,11 +3,13 @@ title: "Features for a Professional Looking News Website"
 date: 2025-05-16
 draft: false
 tags: ["Web"]
-description: "Creating a News focused Website with app directory (with Astro SSG). Beyond the basics."
+description: "Creating a News focused Website with App Directory section (with Astro SSG). Beyond the basics."
 url: 'creating-web-directory-website'
 ---
 
 I came across SSGs looking for simplicity.
+
+Plus their possibility to be enhanced via shortcodes/[components](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/).
 
 Got in love due to the [many ways and how easy is to host them](https://fossengineer.com/alternatives-for-hosting-static-websites/).
 
@@ -94,6 +96,10 @@ Definitely worth to have a look at it, maybe even **enhance it with a photo gall
 {{< callout type="info" >}}
 Photo galleries like [this one](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#photo-galleries) or [this one](https://github.com/rockem/astro-photography-portfolio) or [this](https://github.com/jomaendle/astro-photo-gallery)
 {{< /callout >}}
+
+What for?
+
+Maybe to tinker with more time for [Real Estate webs](https://jalcocert.github.io/JAlcocerT/real-estate-website/#real-estate-web-ui-enhancements), particularly for [this](https://github.com/JAlcocerT/moi-photo-galleries)
 
 {{< details title="Astro Photography Portfolio | Gallery Internals 📌" closed="true" >}}
 
@@ -209,7 +215,6 @@ Get [proper web analytics tools](https://fossengineer.com/open-source-selfhostab
 
 >> For that, This theme could be interesting - https://github.com/candidosales/landing-page-book-astro-svelte-tailwind
 
----
 
 
 ### Open Source Search for your websites
@@ -220,9 +225,9 @@ You will want to have search in it.
 
 Mind that not all static search work same, some just work when the ssg is built
 
-Lunr.js
-Typesense
-[Meili](https://github.com/meilisearch/meilisearch)
+I was writing about SSG search [here](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/#ssg-search)
+
+But you can also see: Lunr.js, Typesense and [Meili](https://github.com/meilisearch/meilisearch)
 
 * https://www.meilisearch.com/docs
 
