@@ -12,6 +12,12 @@ And Anthropic has made it...[a protocol for LLMs](https://www.anthropic.com/news
 1. [What](#mcp) it is Model Context Protocol?
 2. [MCP Examples](#mcp-examples)
 
+[![Star History Chart](https://api.star-history.com/svg?repos=jlowin/fastmcp,nickclyde/duckduckgo-mcp-server,punkpeye/awesome-mcp-servers&type=Date)](https://star-history.com/#jlowin/fastmcp&nickclyde/duckduckgo-mcp-server&punkpeye/awesome-mcp-servers&Date)
+
+3. One of the ways to get started: https://github.com/jlowin/fastmcp
+
+* https://github.com/nickclyde/duckduckgo-mcp-server
+
 * MCP server example from AlejandroAO that integrates the tools to Claude Desktop and Claude code (those being the MCP clients)
     * https://github.com/alejandro-ao/mcp-server-example
 
@@ -24,9 +30,11 @@ And Anthropic has made it...[a protocol for LLMs](https://www.anthropic.com/news
 https://mcpservers.org/servers/browsermcp/mcp
 
 https://gofastmcp.com/clients/transports#sse-server-sent-events
-https://github.com/jlowin/fastmcp
 
 https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#travel-and-transportation
+
+
+
 https://github.com/githejie/mcp-server-calculator
 https://mcpservers.org/servers/executeautomation/mcp-playwright
 https://mcpservers.org/category/web-scraping

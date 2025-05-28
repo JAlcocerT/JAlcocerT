@@ -20,6 +20,7 @@ Wait, there is even a repo for video stuff!
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Quick videos as a code from Action Cams" >}}
 {{< /cards >}}
 
+And now there is a chance to do a **photo & video recap**.
 
 <!-- https://www.youtube.com/watch?v=kaa1vPHqKdw -->
 
@@ -355,6 +356,19 @@ Spending a lot on smartphone with cool cameras to...use snapseed?
 Come on... whats next?
 
 Uploading to social media in low resolution?
+
+
+Lets do some CLI Photo tinkering:
+
+```sh
+file libreportfolio.png
+#libreportfolio.png: PNG image data, 2048 x 2048, 8-bit/color RGBA, non-interlaced
+```
+
+```sh
+convert libreportfolio.png -resize 1200x630^ -gravity Center -extent 1200x630 -quality 85% libreportfolio-og.jpeg
+convert libreportfolio.png -resize 1200x630^ -gravity Center -extent 1200x630 libreportfolio-og.png
+```
 
 
 ### Darktable

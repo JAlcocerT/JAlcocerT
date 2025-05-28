@@ -13,10 +13,14 @@ https://tinyauth.doesmycode.work/docs/guides/github-oauth.html
 
 https://github.com/steveiliop56/tinyauth
 
+But whats TinyAuth?
+
+Just a [Okta alternative](https://opensourcealternative.to/?searchTerm=okta), similarly to [Authentik](https://opensourcealternative.to/project/authentik)
+
 
 ### Example TinyAuth
 
-https://tinyauth.doesmycode.work/docs/getting-started.html
+* https://tinyauth.doesmycode.work/docs/getting-started.html
 
 
 
@@ -121,6 +125,8 @@ This setup provides a basic example of how to use Traefik, Nginx, and TinyAuth t
 
 
 ## About Traefik
+
+If you have ever faced with the problem of [http vs https](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/#proxies), 
 
 * https://doc.traefik.io/traefik/plugins/
 * https://plugins.traefik.io/plugins

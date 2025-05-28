@@ -19,12 +19,17 @@ But I was looking for a way to integrate **a CMS with HUGO/Astro**:
 * https://docs.astro.build/en/guides/cms/
 * https://jamstack.org/generators/
 * https://github.com/postlight/awesome-cms
+* https://opensourcealternative.to/?searchTerm=cms
 
 **Why CMS?**
 
 Because editing [markdown](https://docs.astro.build/en/guides/markdown-content/) content or adding [images like so](https://docs.astro.build/en/guides/markdown-content/), might not be for everyone.
 
-For me its just fine, but there are many people out there tied to some e2e website providers just because of the *easy UX*, despite the price.
+For me its *just fine*.
+
+Yet, there are many people out there tied to some e2e website providers just because of the *easy UX*, despite the price.
+
+And the final goal of tech is not tech itself, but being accesible.
 
 {{< callout type="info" >}}
 Not sure if its good or bad news, yet there are a ton of CMS and I just needed one of them to be working.

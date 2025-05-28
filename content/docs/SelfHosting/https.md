@@ -16,7 +16,10 @@ I started with [NPM](#nginx), but understood that there are few alternatives to 
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy" title="Proxies Docker Config Files 🐋 ↗" >}}
 {{< /cards >}}
 
-See this example on how one service ([Multichat](https://github.com/JAlcocerT/Streamlit-MultiChat)), can be deployed with [Https with any of the 3 Proxies](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat).
+See this **example** on how one service ([Multichat](https://github.com/JAlcocerT/Streamlit-MultiChat)), can be deployed with [Https with any of the 3 Proxies](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat).
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=NginxProxyManager/nginx-proxy-manager,traefik/traefik,caddyserver/caddy&type=Date)](https://star-history.com/#NginxProxyManager/nginx-proxy-manager&traefik/traefik&caddyserver/caddy&Date)
 
 
 ### Traefik
@@ -25,16 +28,18 @@ Sample Selfhosted Apps with **Traefik support** out of the box:
 
 1. [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
 2. [Claper](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#selfhosting-cool-ppt-software) PPTs
-3. The MultiChat!
+3. [The MultiChat](https://jalcocert.github.io/JAlcocerT/selfhosting-python-ai-apps-caddy/#https-options-for-the-multichat-project): which works with traefik/nginx as per [these configs](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat)
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}
-  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="FFMpeg and Windows GH Reference" >}}  
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="Traefik x TinyAuth | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/" title="Traefik | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 > See https://myzopotamia.dev/traefik-reverse-proxy-with-containers
 
 ### Caddy
+
+I tried to close 2024 with a [post about selfhosting AI apps with Caddy](https://jalcocert.github.io/JAlcocerT/selfhosting-python-ai-apps-caddy/#how-to-setup-caddy).
 
 Sample SelfHosted Apps with **Caddy support** out of the box:
 
@@ -62,6 +67,8 @@ Thanks to Jims Garage and Chrstian Lempa for the explanatory videos!
 Initially, it was all about [cloudflared](#cloudflare-tunnels), but lately you will also hear about:
 
 1. Pangolin
+2. 
+3. [Cloudflare Tunnels](#cloudflare-tunnels)
 
 ### Cloudflare Tunnels
 

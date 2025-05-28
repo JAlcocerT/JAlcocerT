@@ -41,12 +41,15 @@ The platform provides all the necessary tools for building, deploying, and manag
 curl -sSL https://dokploy.com/install.sh | sh #will need ~300mb to get started
 ```
 
-> This automatically spins: Dokploy + PostgreSQL + Redis + Traefik
+> This automatically spins: Dokploy + PostgreSQL + Redis + [Traefik](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/#traefik)
 
 
 You will authorize dokploy as Github App: https://github.com/apps/dokploy-jesalctag
 
-https://www.youtube.com/watch?v=kwVNpfru6pk
+<!-- https://www.youtube.com/watch?v=kwVNpfru6pk -->
+
+{{< youtube "kwVNpfru6pk" >}}
+
 
 <!-- 
 https://www.youtube.com/watch?v=2Q4-EgYS0u4
@@ -86,9 +89,9 @@ Also for the services:
 
 *See how multichat needs <10mb of RAM*
 
-4. You can invite and manage what other users/members can do with your Dokploy server
+4. You can invite and **manage what other users/members can do** with your Dokploy server
 
-![alt text](/blog_img/selfh/PaaS/dokploy-member.png)
+![Dokploy create member](/blog_img/selfh/PaaS/dokploy-member.png)
 
 5. It enables **docker swarm mode**, making us ready to play with several servers for load balancing
 
@@ -143,11 +146,13 @@ There are other **PaaS alternatives** like:
 
 ## Conclusions
 
-For some time Ive been looking for a way to leverage the way I can deliver websites to others.
+For some time Ive been looking for a way to leverage the way I can **deliver websites to others**.
 
 Definitely SelfHosted PaaS solutions, like DokPloy, resonates with *[no code websites](https://jalcocert.github.io/JAlcocerT/no-code-websites/)*.
 
 I mean with Wordpress and Ghost!
+
+> And its so cool that it bring [https with Traefik working out of the box](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/#traefik)!
 
 ### Scaling Wordpress and Ghost
 
