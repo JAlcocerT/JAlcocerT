@@ -61,6 +61,7 @@ npm run dev
 8. [Image Options](https://docs.astro.build/en/guides/images/) examples: raw and optimized
 9. [Data fetching](https://docs.astro.build/en/guides/data-fetching/), so that you can reference content, like your docker-compose.yml public on github, so that others can edit them.
 10. A progress line bar on the top of the posts to show how much you have left
+11. Katex, Charts and diagrams rendering 
 
 {{< callout type="info" >}}
 Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%5B%5D=free) from time to time to get ideas
@@ -110,6 +111,8 @@ See it yourself: https://www.gitpodcast.com/streamlit/streamlit
 
 After tinkering with project docs automatic creation, I found this.
 
+
+![alt text](/blog_img/GenAI/aidocs/code2prompt.png)
 
 
 * https://github.com/mufeedvh/code2prompt/
@@ -185,13 +188,11 @@ Wouldnt this be a way to catch up with the bast amount of cool projects to SelfH
 **Example use case**: Given the awsome weekly newsletter https://selfh.st/weekly/2025-05-09/ at the New Software section
 
 
-[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
-
 [![Star History Chart](https://api.star-history.com/svg?repos=dcodesdev/LetterSpace,openconstruct/Peersuite,crocofied/PortNote,0PandaDEV/Ziit,cheatsnake/airstation,gelbphoenix/autocaliweb,rmfatemi/bitvoker,operacle/checkcle,ashishjullia/cloudflare-worker-tailscale-monitor,sinandredemption/kath,log-forge/logforge,murtaza-nasir/maestro,kennethsible/mkvpriority,rrbarrero/pass-web,galvez/plainbudget,andomeder/rektube,daquino94/rss-telegram,magweter/spacepad,kugie-app/summit,muliswilliam/webhook-tester&type=Date)](https://star-history.com/#dcodesdev/LetterSpace&openconstruct/Peersuite&crocofied/PortNote&0PandaDEV/Ziit&cheatsnake/airstation&gelbphoenix/autocaliweb&rmfatemi/bitvoker&operacle/checkcle&ashishjullia/cloudflare-worker-tailscale-monitor&sinandredemption/kath&log-forge/logforge&murtaza-nasir/maestro&kennethsible/mkvpriority&rrbarrero/pass-web&galvez/plainbudget&andomeder/rektube&daquino94/rss-telegram&magweter/spacepad&kugie-app/summit&muliswilliam/webhook-tester&type=Date)
 
 [![Star History Chart](https://api.star-history.com/svg?repos=ChrispyBacon-dev/DockFlare,kyantech/Palmr,crocofied/PortNote,electh/ReactFlux,LizardByte/Sunshine&type=Date)](https://star-history.com/#ChrispyBacon-dev/DockFlare&kyantech/Palmr&crocofied/PortNote&electh/ReactFlux&LizardByte/Sunshine&type=Date)
 
-See a project, summarize it and make a podcast/short about it: https://github.com/lumenlabss/LumenOne
+See a project, [summarize its code/features](https://fossengineer.com/selfhosting-lumenone/) and make a podcast/short about it: https://github.com/lumenlabss/LumenOne
 
 > MIT | Best Plesk (The Ultimate Toolkit for WordPress Sites) alternative open source & free 
 

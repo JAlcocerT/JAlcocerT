@@ -23,7 +23,7 @@ Which is crazy.
 But how about other ways to interact with *real/live* data for LLM context?
 
 {{< callout type="warning" >}}
-Mind the contamination that live data might provide to the LLMs. Plus the possibility to mis [Dynamic content](https://www.firecrawl.dev/blog/mastering-firecrawl-scrape-endpoint)
+Mind the contamination that live data might provide to the LLMs. Plus the possibility to mis [Dynamic content](https://www.firecrawl.dev/blog/mastering-firecrawl-scrape-endpoint) - like [gh discussions](https://github.com/orgs/modelcontextprotocol/discussions/364#discussioncomment-13264660)
 {{< /callout >}}
 
 

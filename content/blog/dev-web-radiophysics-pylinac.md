@@ -50,7 +50,7 @@ To run it locally, it was required to:
 1. Download Go: from `go.dev`
 2. Download HUGO from [github releases: 0.117](https://discourse.gohugo.io/t/hugo-0-117-0-released/45644) as its the ones that works on Github Actions
 3. Get in love with [Hextra Hugo Theme](https://github.com/imfing/hextra)
-4. Discover [diagrams with mermaid.js](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/) (with preview at https://mermaid.live/ ) and get in love with [Katex](https://imfing.github.io/hextra/docs/guide/latex/#supported-functions)!
+4. Discover [diagrams with mermaid.js](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/) (with preview at https://mermaid.live/ ) and get in love with [**Katex**](https://imfing.github.io/hextra/docs/guide/latex/#supported-functions), like I did [here](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#server-power-and-fan-management)!
 
 
 Commands to know:
@@ -84,7 +84,7 @@ No wonder, he already knows that Im there to help with any Python that could mak
 JLL was involved in the crearion of [RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/)
 {{< /callout >}}
 
-### Next Steps
+**Next Steps**
 
 1. Learn to use **containers**
 2. Setup **wsl** within Windows
@@ -99,7 +99,7 @@ Windows will ask you to **restart**.
 
 Then, you can creeate a user and pass for Linux. 
 
-Thats really it!
+> Thats really it!
 
 Log in again to wsl via CMD:
 
@@ -145,7 +145,9 @@ Once containers are installed, **you can bundle your apps** or use the ones that
 {{< /cards >}}
 
 
-{{< details title="Django's Core Philosophy and Strengths 📌" closed="true" >}}
+{{< details title="Django | Core Philosophy and Strengths 📌" closed="true" >}}
+
+Django is a Python Web framework: it makes Web Apps
 
 * **"Batteries Included":**
     * This phrase perfectly captures Django's philosophy. It means that Django provides a comprehensive set of tools and libraries out of the box. You don't have to hunt for third-party packages for common tasks.

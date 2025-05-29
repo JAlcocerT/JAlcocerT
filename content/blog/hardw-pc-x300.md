@@ -23,6 +23,8 @@ I went crazy and build it with **64GB RAM**.
 * Companion for the [SBC's](https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers), and the [ThinkPad](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)
 {{< /callout >}}
 
+## Energy x300
+
 The idle consumptions of the x300 are decent (12/13w with 2 ssd's) and max power drawn during the tests of 53W.
 
 With a room air temperature of 21C, in idle the air was getting out of the computer at ~28C:
@@ -78,7 +80,24 @@ Let's break down the full KaTeX formula for calculating the heat dissipation, st
 {{< /details >}}
 
 
-ṁ_a = V \times ρ_a
+
+$$\dot{m}_a = V \times \rho_a$$
+
+$$\dot{m}_w = \dot{m}_a \times h$$
+
+$$Q_a = \dot{m}_a \times c_a \times \Delta T$$
+
+$$Q_w = \dot{m}_w \times c_w \times \Delta T$$
+
+$$Q = Q_a + Q_w$$
+
+$$Q = (V \times \rho_a \times c_a \times \Delta T) + ((V \times \rho_a \times h) \times c_w \times \Delta T)$$
+
+$$Q = V \times \rho_a \times \Delta T \times (c_a + h \times c_w)$$
+
+$$Q = 0.0139 \times 1.2 \times 7 \times (1006 + 0.01 \times 1840) \approx 120 \, \text{W}$$
+
+<!-- ṁ_a = V \times ρ_a
 ṁ_w = ṁ_a \times h
 Q_a = ṁ_a \times c_a \times ΔT
 Q_w = ṁ_w \times c_w \times ΔT
@@ -89,7 +108,7 @@ Q = V \times ρ_a \times ΔT \times (c_a + h \times c_w)
 
 $$
 Q = 0.0139 \times 1.2 \times 7 \times (1006 + 0.01 \times 1840) \approx 120 \, \text{W} 
-$$
+$$ -->
 
 
 ## Asrock x300 How to

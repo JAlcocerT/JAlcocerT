@@ -1,5 +1,5 @@
 ---
-title: "Testing new AI projects with Python"
+title: "Testing new AI projects with Python: Conda, venvs, containers..."
 date: 2024-12-25
 draft: false
 tags: ["Dev","Python"]

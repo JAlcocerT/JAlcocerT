@@ -66,8 +66,11 @@ sudo apt install sysbench
 sysbench memory run
 ```
 
-* The x13 8164 Mib/sec 
-* The x300 got 8099Mib/sec
+![alt text](/blog_img/hardware/ram-test.png)
+
+
+* The [x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/) with 16GB RAM , got 8164 Mib/sec 
+* The [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/) got 8099Mib/sec
 * The Lenovo ThinkBook with 24GB got 6510 MiB/s
 * A VPS, the cpx11 *hetzner*: ~5245Mib/sec
 * The Firebat miniPC got me 4077Mib/sec
