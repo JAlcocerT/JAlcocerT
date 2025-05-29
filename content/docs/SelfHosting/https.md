@@ -35,6 +35,11 @@ Sample Selfhosted Apps with **Traefik support** out of the box:
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/" title="Traefik | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+```sh
+nslookup gibme.duckdns.org
+#nslookup traefik.groq.gibme.duckdns.org
+```
+
 > See https://myzopotamia.dev/traefik-reverse-proxy-with-containers
 
 ### Caddy

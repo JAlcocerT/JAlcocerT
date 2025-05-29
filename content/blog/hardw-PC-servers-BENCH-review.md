@@ -63,10 +63,13 @@ flatpak install flathub io.missioncenter.MissionCenter
 
 ```sh
 sudo apt install sysbench
-sysbench memory run
+sysbench memory --memory-oper=read run
+
+#sysbench memory run
+#sysbench memory --memory-oper=write run
 ```
 
-![alt text](/blog_img/hardware/ram-test.png)
+![Sysbench Ram Example](/blog_img/hardware/ram-test.png)
 
 
 * The [x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/) with 16GB RAM , got 8164 Mib/sec 

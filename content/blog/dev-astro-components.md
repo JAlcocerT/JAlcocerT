@@ -58,9 +58,10 @@ And these are very good intro videos on astro:
 ## ASTRO SEO PACKAGES
 
 * robots.txt - https://www.npmjs.com/package/astro-robots-txt#why-astro-robots-txt` (MIT Licensed ❤️)
-  * You also need a **sitemap**!
+  
+* You also need a **sitemap**!
 
-* rss
+* RSS
 
 * [Image Optimization](https://docs.astro.build/en/guides/images/) - It's built in in astro: *you dont want huge images for performance* and astro makes them webp.
 

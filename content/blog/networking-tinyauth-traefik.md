@@ -9,6 +9,9 @@ url: 'testing-tinyauth'
 
 I was having a look to https://selfh.st/newsletter/2025-02-07/ and found out about **TinuAuth**
 
+Which seems to integrate with https services and provide an auth layer.
+
+
 https://tinyauth.doesmycode.work/docs/guides/github-oauth.html
 
 https://github.com/steveiliop56/tinyauth
@@ -23,42 +26,16 @@ Just a [Okta alternative](https://opensourcealternative.to/?searchTerm=okta), si
 * https://tinyauth.doesmycode.work/docs/getting-started.html
 
 
+Remember, [generate your keys](https://jalcocert.github.io/JAlcocerT/encryption-101/):
+
+```sh
+openssl rand -base64 32
+```
 
 {{< details title="TinyAuth Compose with traefik and nginx 📌" closed="true" >}}
 
 ```yml
-services:
-  traefik:
-    container_name: traefik
-    image: traefik:v3.3
-    command: --api.insecure=true --providers.docker
-    ports:
-      - 80:80
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    labels:
-      traefik.http.middlewares.tinyauth.forwardauth.address: http://tinyauth:3000/api/auth
 
-  nginx:
-    container_name: nginx
-    image: nginx:latest
-    labels:
-      traefik.enable: true
-      traefik.http.routers.nginx.rule: Host(`nginx.example.com`)
-      traefik.http.services.nginx.loadbalancer.server.port: 80
-      traefik.http.routers.nginx.middlewares: tinyauth
-
-  tinyauth:
-    container_name: tinyauth
-    image: ghcr.io/steveiliop56/tinyauth:latest
-    environment:
-      - SECRET=some-random-32-chars-string
-      - APP_URL=https://tinyauth.example.com
-      - USERS=# user:password
-    labels:
-      traefik.enable: true
-      traefik.http.routers.tinyauth.rule: Host(`tinyauth.example.com`)
-      traefik.http.services.tinyauth.loadbalancer.server.port: 3000
 ```
 
 
