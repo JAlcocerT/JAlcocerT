@@ -264,22 +264,20 @@ Released on Jan 2021, with 7nm, its related GPU has 8 ROPs and 28 TMUs as per GP
 
 > The X300 supports **2.5-inch** drives with a thickness of **7mm or 9.5mm** (which normally go up to 2TB).
 
-The energy consumption is reasonable, at **~15w with Linux**, Windows goes ++66%:
+The [energy consumption](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/) is reasonable, at **~15w with Linux**, Windows goes ++66%:
 
 ![alt text](/blog_img/hardware/energy/x300-linux-w11-energy.jpg)
 
 
 > Regarding the BIOS: it can support AMD Ryzen 5xxx APUS with the right version.
 
-EDIT: some people commented in the youtube video that it is actually possible to plug the bigger AMD fan to the x300 with some small MOD.
-
+> > **EDIT**: some people commented in the youtube video that it is actually possible to plug the bigger AMD fan to the x300 with some small MOD.
 
 ### What am I using it for right now?
 
 It works really nice combined with a **Logitech k380** multi-device keyboard.
 
 For something more robust, I also enjoy the K120 version.
-
 
 #### Video Editing 101
 

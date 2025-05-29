@@ -2,7 +2,7 @@
 title: "Forms and Newsletters for your Website"
 date: 2024-09-10T23:20:21+01:00
 draft: false
-tags: ["Dev","Webs"]
+tags: ["Dev","Webs","Entrepreneuring"]
 description: "Easy Forms/Newsletters for Websites: MailerLite, FormBricks and more"
 ---
 

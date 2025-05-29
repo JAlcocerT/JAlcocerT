@@ -211,7 +211,11 @@ npm install lucide-react
 
 ## Conclusions
 
-**How to knw if your website works?**
+**These are the results**
+
+![Beyond a Journey](/blog_img/web/beyond-journey-web.png)
+
+**How to know if your website works?**
 
 Get [proper web analytics tools](https://fossengineer.com/open-source-selfhostable-web-analytics-alternatives-ga/) next to your website
 
@@ -238,3 +242,40 @@ But you can also see: Lunr.js, Typesense and [Meili](https://github.com/meilisea
 * https://www.meilisearch.com/docs
 
 > A lightning-fast search API that fits effortlessly into your apps, websites, and workflow
+
+
+### Outro
+
+#### Other Webs Ive Built
+
+1. With an option to plug [adsense](https://adsense.google.com/adsense/) to each of this websites
+
+
+{{< cards >}}
+  {{< card link="https://cozyknittingclub.web.app/" title="Content Creator Blog" image="/blog_img/web/WebsSnapshots/Web_CKC.png" subtitle="For an instagramer who loves knitting" >}}
+    {{< card link="https://dm-real-estate.com/" title="Real Estate Official Site" image="/blog_img/web/WebsSnapshots/Web_realestate.png" subtitle="A Real Estate Business Site for Spain" >}}
+    {{< card link="https://ira-english.pages.dev/" title="Personal Business Landing" image="/blog_img/web/WebsSnapshots/Web_EnglishIra.png" subtitle="Landing Page for a well Known English Teacher" >}}
+    {{< card link="https://jalcocert.github.io/Portfolio/" title="All your Links" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Sleek collection of important Links" >}} 
+  {{< card link="https://cyclingthere.pages.dev" title="Blog / Adventures" image="/blog_img/web/WebsSnapshots/Web_CyclingThere.png" subtitle="I can write and also create interesting photo galleries about my travel experiences" >}}
+      {{< card link="https://morita-web.pages.dev//" title="Mental Health Care Site" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Because the brain is as important as the body" >}}
+{{< /cards >}}
+
+
+**Photo centered blogs:**
+
+{{< cards >}}
+  {{< card link="https://cozyknittingclub.web.app/" title="Content Creator Blog" image="/blog_img/web/WebsSnapshots/Web_CKC.png" subtitle="For an instagramer who loves knitting" >}}
+    {{< card link="http://entreagujaypunto.com/" title="Punto Photo Gallery" image="/blog_img/web/web-entreagujaypunto.png" subtitle="A Photo centered Web for Punto" >}}
+    {{< card link="https://enjoylittlethings.org/" title="Travel Adict Photo Gallery" image="/blog_img/web/WebsSnapshots/Web_PhotoGalleryAGA.png" subtitle="Because Photo & Travel lovers need something more than instagram" >}}    
+    {{< card link="https://while.cyclingthere.com" image="/blog_img/web/whilecycling.png" title="Photo Gallery Blog" subtitle="Made with HUGO and Photo centered" >}}
+{{< /cards >}}
+
+**Business Sites:**
+
+{{< cards >}}
+  {{< card link="https://iotechcrafts.web.app/" title="Business Website" image="/blog_img/web/WebsSnapshots/Web_IoTechCrafts.png" subtitle="A Website for Agency - AI & IoT Consulting Services">}}   
+  {{< card link="https://iotiotechcrafts.web.app/" title="IoT SaaS Site" image="/blog_img/web/WebsSnapshots/web_iotiotech.png" subtitle="One Pager with FAQ and Pricing" >}} 
+  {{< card link="https://iodoctor.iotechcrafts.com/" title="Doctor Consultation" image="/blog_img/web/WebsSnapshots/Web_IoDoctor.png" subtitle="Landing for Scheduling Doctor Appointments" >}}           
+  {{< card link="https://iodoctor-iotechcrafts.web.app/" title="Web for Doctor Consultation" image="/blog_img/web/WebsSnapshots/web_iodoctors.png" subtitle="With Astro mdx blogs filtrable by tags and docs sections" >}}  
+  {{< card link="https://ioracing-iotechcrafts.web.app/" title="IoT SaaS Site" image="/blog_img/web/WebsSnapshots/web_ioracing.png" subtitle="One Pager with FAQ, Pricing and MultiLang" >}}            
+{{< /cards >}}
