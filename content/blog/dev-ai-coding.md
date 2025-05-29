@@ -386,13 +386,18 @@ See also the bottom right section (click on Pro) and you will see:
 
 
 {{< callout type="warning" >}}
-Files/folders need to be out of the `.gitignore` so that cna be used as context for Windsurf Mdels
+Files/folders need to be out of the `.gitignore` so that can be used as context for Windsurf Mdels
 {{< /callout >}}
 
 
 #### Windsurf Memories
 
 Go to the top right (the book icon), customizations
+
+
+![alt text](/blog_img/dev/IDEs/WindsurfPro.png)
+
+![alt text](/blog_img/dev/IDEs/WindsurfCustom.png)
 
 #### Windsurf Image/Web input
 

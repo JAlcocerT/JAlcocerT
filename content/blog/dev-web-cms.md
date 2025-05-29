@@ -625,7 +625,8 @@ There is just one way to know: [testing the market](#product-analytics)
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics/Product_analytics" title="Product Analitycs Tools with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-1. PostHog
+1. [PostHog](https://posthog.com)
+
 2. OpenReplay
 
 [![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)

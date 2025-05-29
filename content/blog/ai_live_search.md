@@ -8,9 +8,28 @@ url: 'live-search-and-research-with-ai'
 ---
 
 
+Last year I had the Groq YT project as a very useful one.
+
+And the [notebookLM](https://notebooklm.google/) as a kind of [RAG](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/) from google, that could be useful to summarize docs.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-openl-tablets/" title="OpenLTables" image="/blog_img/GenAI/notebookllm-openltables.png" subtitle="Using notebookLM to understand new syntax" >}}
+{{< /cards >}}
+
+Today, notebookLM can summary not only PDFs, but it also sumarizes youtube videos (given a link) and...it can provide even a audio summary of it / podcast like summary.
+
+Which is crazy.
+
+But how about other ways to interact with *real/live* data for LLM context?
+
+{{< callout type="warning" >}}
+Mind the contamination that live data might provide to the LLMs. Plus the possibility to mis [Dynamic content](https://www.firecrawl.dev/blog/mastering-firecrawl-scrape-endpoint)
+{{< /callout >}}
+
+
 ## Live Search with LLMs
 
-Recently, XAI added [live search](https://docs.x.ai/docs/guides/live-search) capabilities to their models.
+Recently, xAI added [live search](https://docs.x.ai/docs/guides/live-search) capabilities to their models.
 
 > Goodbye knowledge cuttof they say!
 
@@ -237,6 +256,166 @@ Interesting Search Engines to have a look:
 * https://metager.org/
 * Qwant
 * PrivacyWall
+
+### Gaps to Cover
+
+I got to know about these when playing around with the [AIssistant here](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/)
+
+{{< details title="Latitude (prompt engineering) and...latitude analytics 📌" closed="true" >}}
+
+* https://github.com/latitude-dev/latitude-llm
+
+**Latitude is an open-source prompt engineering platform** designed to streamline AI feature development.
+
+It addresses the following problems:
+
+- Managing prompts can be cumbersome when they're embedded in code.
+- Testing AI outputs can be inconsistent and challenging.
+- Analyzing performance metrics of AI models requires a centralized tool.
+
+> As per the docs, for now [SDKs are Rust or JS/TS](https://docs.latitude.so/guides/evaluations/overview)
+
+**Key Features:**
+
+- **Collaborative Prompt Management**: Enables team collaboration on prompt development.
+  
+- **Testing and Validation**: Uses LLMs to verify AI responses for accuracy and relevance.
+
+- **Performance Insights**: Provides analytics on response times and cost comparisons.
+
+- **Version Control**: Tracks changes in prompts for better management.
+
+- **API and SDK Support**: Facilitates easy integration into existing systems.
+
+- **Open-Source Community Driven**: Encourages contributions and improvements from users.
+
+**Deployment Options:**
+
+1. **Latitude Cloud**: Managed solution for quick setup.
+  
+2. **Latitude Self-Hosted**: Open-source version for greater control and customization.
+
+**Community Engagement:**
+
+- A vibrant community on Slack for support and collaboration.
+  
+- Contributions are welcomed to enhance the platform.
+
+In conclusion, Latitude simplifies the process of integrating AI into products while facilitating ongoing evaluation and improvement.
+
+**Similar Projects**: TBC
+
+* https://github.com/latitude-dev/latitude
+
+**Latitude** is an open-source framework created to simplify **embedded analytics** by providing a powerful **analytics layer between databases and end-users**. 
+
+It allows developers to integrate data analytics into applications efficiently without requiring deep expertise in database management or visualization.
+
+> Among other DBs, [latitude works with SQLite](https://docs-analytics.latitude.so/sources/sqlite)!
+
+Key Features:
+- **Database Connectivity**: Latitude can connect to a variety of databases and data warehouses, providing flexibility for different environments and data sources.
+- **Parameterized SQL Queries as API Endpoints**: It allows users to create parameterized SQL queries and expose them as API endpoints, making it easy to query data dynamically and integrate with other systems.
+- **Interactive Visualizations**: Latitude supports interactive data visualizations in frontend frameworks (such as React, Svelte, and Vue), or alternatively, it can display them within iframes for easy embedding in web pages.
+- **Caching for Performance**: The framework includes built-in caching, which optimizes query performance and reduces the load on databases by storing previously queried results.
+- **Security**: Latitude is SSL-ready and includes protections against SQL injection, ensuring secure communication between the client and the database.
+- **Community-driven**: The project encourages contributions from developers, fostering an active open-source community.
+
+Use Cases:
+- **Quick Dashboard Creation**: Developers can rapidly build dashboards and visualizations, allowing end-users to explore and interact with data without extensive custom development.
+- **Single-command Deployment**: Latitude can be deployed quickly with a single command, making it easier for developers to get up and running without complex configurations.
+- **Framework Integration**: Latitude integrates seamlessly with popular frontend frameworks like React, Svelte, and Vue, which are commonly used for building modern web applications.
+
+Community and Support:
+- Latitude has an active community on **Slack**, where developers can collaborate, share insights, and get support.
+- Comprehensive **documentation** is available to guide users through the setup process and help with integration into various systems.
+
+Current Status:
+- The project is **no longer maintained** as the focus has shifted to a new project, **Latitude LLM**, which likely focuses on new features or different capabilities.
+- Existing users can still use the codebase and license as-is, though no new updates are being released.
+
+Conclusion:
+
+Latitude simplifies the integration of embedded analytics for developers, allowing for easy creation and deployment of dashboards, visualizations, and queries.
+
+Its simplicity and integration with modern frontend frameworks make it a valuable tool for building analytics-rich applications.
+
+Similar projects to Latitude include:
+- **Superset**: An open-source data visualization tool that allows users to create and share dashboards.
+- **Metabase**: Another open-source analytics platform that focuses on simple setup and user-friendly dashboards.
+
+{{< /details >}}
+
+
+There are ofc tools already waiting to be used...
+
+{{< details title="To learn how to interact with real time internet data - GNews, Perplexica,... 📌" closed="true" >}}
+
+**GNews** - https://github.com/ranahaani/GNews
+
+- **Summary:**  
+  _GNews_ is a lightweight Python package that provides an API to search for articles on Google News, returning results in JSON format. It supports fetching articles by keywords, topics, and locations, making it versatile for news aggregation.  
+
+- **Key Features:**  
+  - **Lightweight:** Easy to use with minimal setup.  
+  - **Integration:** Fetches articles directly from Google News RSS Feed.  
+  - **Global Support:** Covers over **141 countries** and **41 languages**.  
+  - **Structured Results:** Returns data in JSON format for easy parsing.  
+
+- **Pros:**  
+  - **Simple Installation:** No complex dependencies.  
+  - **Convenience:** Eliminates the need for custom scrapers.  
+  - **Flexible Searches:** Supports a variety of search parameters.  
+
+- **Cons:**  
+  - _Limited Sources:_ Only fetches from Google News.  
+  - _Dependency:_ Relies on the availability of Google News RSS feeds.  
+
+- **Alternatives:**  
+  - NewsAPI  
+  - ContextualWeb News API  
+  - Bing News Search API  
+
+
+From Perplexica to **OpenSearch GPT** [AI Search Engines!] - https://github.com/supermemoryai/opensearch-ai
+
+**OpenSearch GPT**, an open-source, AI-powered search engine that personalizes search results by learning from user interactions. It emphasizes key features like its **Mem Zero** memory system for remembering past interactions, its robust technological framework, and its versatility as a tool for writing assistance and data management. 
+
+OpenSearch GPT aims to enhance productivity and streamline workflows, offering transparency and flexibility as an alternative to proprietary search engines.
+
+---
+
+Key Points
+
+- **Personalization:** Delivers tailored search results by learning from user behavior.
+- **Memory System:** Includes **Mem Zero** to retain past interactions and improve relevance.
+- **Technology Framework:** Built using **Versal AI ADK** and **Next.js** for a robust experience.
+- **Versatility:** Functions as a writing assistant and supports data management tasks.
+- **Open Source:** Provides transparency and customization options for users.
+
+---
+
+Pros and Cons
+
+**Pros:**
+- Highly personalized search experience.
+- Open-source design allows community involvement and customization.
+- Supports a range of functionalities for diverse use cases.
+
+**Cons:**
+- Requires Google account sign-in to access the platform.
+- May pose a learning curve for users new to open-source tools.
+
+---
+
+Alternatives
+
+- **Perplexity AI**
+- **OpenAI's Search Engine Prototype**
+
+
+{{< /details >}}
+
 
 ### How to use HF?
 

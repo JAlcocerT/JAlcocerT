@@ -24,8 +24,9 @@ npm run dev
 ```
 
 ```sh
-npm install -g http-server
-http-server dist
+npx http-server dist --listen 0.0.0.0
+#npm install -g http-server
+#http-server dist
 ```
 
 {{< filetree/container >}}
@@ -239,6 +240,18 @@ If you are looking to impress with a new curriculum, why not doing it as a web?
 > MIT
 
 
+### Deploy Astro
+
+
+
+<!-- ![alt text](/blog_img/web/astro-gitlab-cloudflarepages.png) -->
+
+{{< cards >}}
+  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="NGINX on VPS" image="/blog_img/web/astro-gitlab-cloudflarepages.png" subtitle="With Cloudflare" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#how-to-deploy-ssgs-link-in-bio/" title="Cloudflare x Gitlab" image="/blog_img/web/astro-gitlab-cloudflarepages.png" subtitle="Deploying Astro with CI/CD" >}}
+{{< /cards >}}
+
+
 
 ---
 
@@ -312,3 +325,107 @@ import photopost1b from '/src/assets/img_folder/image.jpg';
 I discovered the following in a [gh discussion](https://github.com/withastro/starlight/discussions/1259):
 https://astro-digital-garden.stereobooster.com/recipes/math-support-in-markdown/
 https://astro-digital-garden.stereobooster.com/recipes/mermaid-diagrams-in-markdown/
+
+
+### Astro Data Fetching
+
+https://docs.astro.build/en/guides/data-fetching/
+
+You can create a astro component: `DockerCompose.astro`
+
+
+---
+// DockerCompose.astro - Fetches and displays a docker-compose.yml file
+// Usage: <DockerCompose url="URL_TO_RAW_GITHUB_CONTENT" />
+
+interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+
+// Fetch the docker-compose.yml content from GitHub
+const response = await fetch(url);
+const dockerComposeContent = await response.text();
+---
+
+<div class="docker-compose-container">
+  <div class="file-header">
+    <div class="file-name">docker-compose.yml</div>
+    <a href={url.replace('raw.githubusercontent.com', 'github.com').replace('/main/', '/blob/main/')} 
+       target="_blank" class="view-on-github">
+      View on GitHub
+    </a>
+  </div>
+  <pre class="yaml-code"><code>{dockerComposeContent}</code></pre>
+</div>
+
+<style>
+  .docker-compose-container {
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .file-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f8fa;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  .file-name {
+    font-weight: 600;
+    color: #24292f;
+  }
+
+  .view-on-github {
+    font-size: 0.85rem;
+    color: #0969da;
+    text-decoration: none;
+  }
+
+  .view-on-github:hover {
+    text-decoration: underline;
+  }
+
+  .yaml-code {
+    margin: 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #24292f;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .file-header {
+      background-color: #161b22;
+    }
+    
+    .file-name {
+      color: #c9d1d9;
+    }
+    
+    .view-on-github {
+      color: #58a6ff;
+    }
+    
+    .yaml-code {
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+    
+    .docker-compose-container {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+</style>

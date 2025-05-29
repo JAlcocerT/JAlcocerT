@@ -114,7 +114,6 @@ My Raspberry **Pi related blog** is publically available at: https://jalcocert.g
 - [Pi-hole](https://github.com/AdguardTeam/AdGuardHome#getting-started)
 - [Unbound](https://nlnetlabs.nl/projects/unbound/about/)
 - **No-IP**
-- [PostHog](https://posthog.com/)
 
 
 ### HA

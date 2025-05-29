@@ -678,7 +678,7 @@ If you inspect the https://github.com/esxr/langgraph-mcp repository, you will se
 
 #### Generating project Docs with LLMs
 
-
+I was tinkering with [AI projects docs here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#automated-projects-docs), by using some [vibe coding *skills*](https://jalcocert.github.io/JAlcocerT/vide-coding/)
 
 ---
 

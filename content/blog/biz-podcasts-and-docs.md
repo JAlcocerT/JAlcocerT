@@ -31,6 +31,7 @@ url: 'tech-for-podcast'
 5. OpenGraph (OG) image when shared (also when sharing posts)
 6. All the sample features at [their sample posts](https://github.com/withastro/starlight/blob/main/docs/src/content/docs/guides/sidebar.mdx)
 7. Supports `md`, `mdx` and `mdoc`
+8. Sitemap/RSS/Robots
 
 ```sh
 npm create astro@latest -- --template starlight
@@ -59,6 +60,7 @@ npm run dev
 7. Some [Astro data fetching](https://docs.astro.build/en/guides/data-fetching/) example
 8. [Image Options](https://docs.astro.build/en/guides/images/) examples: raw and optimized
 9. [Data fetching](https://docs.astro.build/en/guides/data-fetching/), so that you can reference content, like your docker-compose.yml public on github, so that others can edit them.
+10. A progress line bar on the top of the posts to show how much you have left
 
 {{< callout type="info" >}}
 Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%5B%5D=free) from time to time to get ideas
@@ -106,9 +108,63 @@ See it yourself: https://www.gitpodcast.com/streamlit/streamlit
 
 ### Code2Prompt
 
+After tinkering with project docs automatic creation, I found this.
+
+
+
 * https://github.com/mufeedvh/code2prompt/
 
+{{< details title="Code2Prompt Features... 📌" closed="true" >}}
+
+Key features include:
+
+- Converts entire codebases into a single prompt.
+  
+- Utilizes Handlebars templates for customizable prompt generation.
+  
+- Respects `.gitignore` and allows file filtering with glob patterns.
+  
+- Displays token count for generated prompts.
+  
+- Supports copying prompts to clipboard and saving them to files.
+  
+- Generates Git commit messages and pull request descriptions from staged files.
+  
+- Offers built-in templates for various use cases (e.g., documenting code, finding vulnerabilities).
+
+Installation options available include:
+
+1. **Binary Releases**: Download from the Releases page.
+  
+2. **Source Build**: Requires Git, Rust, and Cargo.
+
+3. **Cargo**: Install via `cargo install code2prompt`.
+
+4. **AUR**: Available for Arch Linux users.
+
+5. **Nix**: Can be installed using `nix-env`.
+
+Usage is straightforward, allowing users to generate prompts from their codebase with optional filters and custom templates.
+
+The tool helps streamline LLM prompt creation, enhancing productivity for developers.
+
+{{< /details >}}
+
 > MIT | A CLI tool to convert your codebase into a single LLM prompt with source tree, prompt templating, and token counting.
+
+{{< details title="Query LLMs via Mistral API 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+{{< details title="Query LLMs via GroK API 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mufeedvh/code2prompt/,BandarLabs/gitpodcast&type=Date)](https://star-history.com/#mufeedvh/code2prompt/&BandarLabs/gitpodcast&type=Date)
 
 ---
 

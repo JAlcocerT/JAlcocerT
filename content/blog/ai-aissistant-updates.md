@@ -224,15 +224,14 @@ Probably more NoCode stuff: https://www.youtube.com/@AI-GPTWorkshop/videos
 **Product Analytics Tools**
 
 * [Umami](https://fossengineer.com/selfhosting-umami-with-docker/)
-* PostHog - https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics
+* [PostHog](https://eu.posthog.com/project/15002/replay/home) - https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics
 
 ---
 
 
 ## FAQ
 
-### Multichat
-
+**Multichat**
 
 {{< cards >}}
   {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
@@ -252,9 +251,7 @@ Probably more NoCode stuff: https://www.youtube.com/@AI-GPTWorkshop/videos
 * https://bookstash.io/ - Top books recommended by famous folk, in 3m or less.
 
 
-Epub to AudioBook with Python
-
-* https://github.com/C-Loftus/QuickPiperAudiobook?ref=selfh.st
+Epub to AudioBook with Python: https://github.com/C-Loftus/QuickPiperAudiobook
 
 ---
 

@@ -395,6 +395,7 @@ As per the [general webs checks docs](https://jalcocert.github.io/JAlcocerT/crea
 1. Sitemap and Robots:
 
 ```sh
+#npm install @astrojs/sitemap
 curl -s https://dm-real-estate.com/sitemap.xml -o /dev/null -w "%{http_code}\n"
 ```
 

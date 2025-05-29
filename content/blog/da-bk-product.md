@@ -69,6 +69,8 @@ By adopting a product vision mindset, any analysts can get several benefits:
 
 How about combining product + **POSTHOG** + [A|B Testing](https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/)?
 
+- [PostHog](https://posthog.com/)
+
 <!-- https://www.youtube.com/watch?v=C2ICJbICfsg -->
 
 {{< youtube "C2ICJbICfsg" >}}

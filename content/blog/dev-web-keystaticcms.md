@@ -574,6 +574,8 @@ Imagine you want to write text that looks good on the web, with headings, lists,
 
 That's where **Markdown** comes in.
 
+> And Im sure you care about it, as for sure *you have been trolled* and not just once with Word formatting
+
 * **Lightweight Markup Language:** Markdown is a simple way to format text using plain text syntax. Think of it as adding special characters to your regular text to tell a program how to display it.
 * **Easy to Read and Write:** One of its main goals is to be readable even in its raw, unformatted state. The syntax is intuitive and doesn't get in the way of the content.
 * **Basic Formatting:** It allows you to do common things like:
@@ -624,3 +626,37 @@ Here's a table summarizing the key differences:
 | Use Cases       | Basic web content, READMEs, simple docs   | Dynamic blogs, interactive documentation     | Large, structured, custom documentation sites |
 | Creator/Origin  | John Gruber                               | Open source community                      | Stripe                                          |
 | File Extension  | `.md`                                    | `.mdx`                                     | `.md`, potentially with custom tag syntax        |
+
+### What are markdown directives
+
+I got to know these thanks to [fuwari theme and its about section](https://github.com/saicaca/fuwari).
+
+Based on the text you provided, here's an explanation of what a Markdown directive is in the context of your Astro project:
+
+A **Markdown directive** is a custom extension to the standard Markdown syntax that allows you to embed dynamic or interactive components directly within your Markdown content.
+
+Here's a breakdown of its characteristics and how it's used in your project:
+
+1.  **Not Standard Markdown:** The text explicitly states, "This is not a standard Markdown feature but an extension." Standard Markdown is primarily for static text formatting (headings, lists, bold, italics, links, etc.). Directives go beyond this to introduce more complex, structured content.
+
+2.  **Custom Syntax:** In your case, the custom syntax is `::github{repo="sooperset/mcp-atlassian"}`.
+    * The `::` prefix indicates a directive.
+    * `github` is the name of the directive, which your system maps to a specific component.
+    * `{repo="sooperset/mcp-atlassian"}` are "attributes" or "arguments" passed to the directive, providing data or configuration for the component it represents. Here, it specifies which GitHub repository to display.
+
+3.  **Purpose: Embedding Components/Dynamic Content:** The primary purpose of a Markdown directive is to serve as a placeholder or instruction to render a specific component or generate dynamic content within your static Markdown file. Instead of writing complex HTML or JavaScript directly in your Markdown (which can be messy and hard to maintain), you use a clean, concise directive.
+
+4.  **Processing Pipeline Integration:** Markdown directives require a sophisticated processing pipeline to work. In your Astro setup, this involves:
+    * **`remarkDirective`:** This is a `remark` plugin that specifically understands and parses the `::directive{...}` syntax, converting it into a structured node in the Markdown Abstract Syntax Tree (AST).
+    * **`parseDirectiveNode`:** This appears to be a custom parser that further processes the directive node, likely transforming it into a format that `rehype` (which handles HTML) can understand and map to components.
+    * **`rehypeComponents`:** This `rehype` plugin is the crucial link. It takes the processed directive nodes and maps them to actual JavaScript/Astro components. In your example, it maps the "github" directive to the `GithubCardComponent`.
+
+5.  **Component Rendering:** Once mapped, the associated component (`GithubCardComponent` in your case) is responsible for generating the actual HTML, CSS, and JavaScript needed to display the desired content (the GitHub repository card). This allows for complex functionality (like fetching data from an API) to be encapsulated within a component rather than being directly within the Markdown.
+
+**In simpler terms:**
+
+Imagine you're writing a document in Markdown, and you want to include a special interactive element, like a real-time weather widget or, as in your example, a dynamic GitHub repository card. Standard Markdown doesn't have a way to do this.
+
+A Markdown directive acts like a special tag or instruction that tells your build system: "Hey, at *this* point in the document, I want you to insert a 'github card' and here's the repository I want it to display." Your build system then processes this instruction, finds the corresponding component, and injects the necessary HTML, CSS, and JavaScript to render that interactive card when the page loads.
+
+This approach keeps your Markdown clean and focused on content, while offloading the complexity of rendering dynamic elements to dedicated components and a robust build pipeline.

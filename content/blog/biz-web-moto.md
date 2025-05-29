@@ -74,6 +74,10 @@ Went to [firebase UI](https://console.firebase.google.com/) -> Compilation -> ho
 
 Add a custom domain.
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Domains" image="/blog_img/web/porkbun.png" subtitle="Get a domain first!" >}}
+{{< /cards >}}
+
 Select my subdomain, and added a **CName + TXT record to the DNS**.
 
 ![Firebase Custom Domain](/blog_img/web/success5-aga/firebase-own-domain.png)

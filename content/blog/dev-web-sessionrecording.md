@@ -31,6 +31,8 @@ Copy the json before the `</head>`, normally in `BaseLayout.astro`
 
 ## PostHog
 
+https://eu.posthog.com/project/15002/replay/home
+
 #### Record and Replay Web
 
 https://www.rrweb.io/

@@ -62,6 +62,8 @@ npm install astro-pagefind pagefind
 curl https://beyondajourney.pages.dev/rss.xml
 curl https://beyondajourney.pages.dev/sitemap-index.xml
 ```
+
+```json
 {
   href: "https://beyondajourney.pages.dev/rss.xml",
   text: "RSS",
@@ -70,7 +72,8 @@ curl https://beyondajourney.pages.dev/sitemap-index.xml
   href: "https://beyondajourney.pages.dev/sitemap-index.xml",
   text: "Sitemap",
 },
-
+//....
+```
 
 ```sh
 sudo apt install liferea

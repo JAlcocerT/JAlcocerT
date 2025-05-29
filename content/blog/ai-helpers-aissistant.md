@@ -2,7 +2,7 @@
 title: "Can [AI] be the all in one Assistant?"
 date: 2024-10-21
 draft: false
-tags: ["dev"]
+tags: ["dev","Gen-AI"]
 description: 'Make AI be helpful with an AIssistant: Neuromarketer, PPT Creator... While learning to make Streamlit better.'
 url: 'ai-useful-yet-simple'
 ---
@@ -706,19 +706,12 @@ Big **thanks to Fanilo Andrianasolo** for the great Streamlit Videos
 
 {{< /details >}}
 
-There is also [this video](https://www.youtube.com/watch?v=ZI7_INDzqbw)
-explaining whats going to be released...now.
-
-
-{{< details title="How could I not summarize the video... 📌" closed="true" >}}
+There is also [this video](https://www.youtube.com/watch?v=ZI7_INDzqbw) explaining whats going to be released...now.
 
 
 
-
-{{< /details >}}
 
 ### What Ive learnt with this one
-
 
 ```sh
 #streamlit run st_scrapnsummarize.py --server.address 100.104.tail.scale
@@ -780,37 +773,19 @@ There is a **live editor for GraphViz**: <http://www.webgraphviz.com/>
 
 Features:
 
-    Complex Layouts: Graphviz supports automatic layout algorithms to position nodes, such as hierarchical, radial, and circular layouts.
-    Advanced Styling: It offers a variety of options for styling nodes, edges, and labels, including colors, shapes, and gradients.
-    Performance: Graphviz is optimized for rendering large graphs, making it suitable for generating complex visualizations.
-    Rendering: It can output in various formats such as PNG, SVG, PDF, and more.
+1. Complex Layouts: Graphviz supports automatic layout algorithms to position nodes, such as hierarchical, radial, and circular layouts.
+2. Advanced Styling: It offers a variety of options for styling nodes, edges, and labels, including colors, shapes, and gradients.
+3. Performance: Graphviz is optimized for rendering large graphs, making it suitable for generating complex visualizations.
+4. Rendering: It can output in various formats such as PNG, SVG, PDF, and more.
 
 
 **LocalStack - A Replacement for AWS** 😲
 
-LocalStack is a tool designed for developers who want to test AWS functionalities locally. It provides an emulated environment of AWS services, solving issues related to unpredictable billing and resource management during development. 
-
-- **Purpose**: LocalStack emulates AWS API functionality.
-- **Problem Solved**: Allows local testing without involving AWS services directly.
-- **Installation**: 
-  - Sign up with a GitHub account.
-  - Use `brew install localstack/tap/localstack-cli` for installation on macOS.
-  - Requires Docker to function as a local “mini-cloud” operating system.
-- **Basic Use**: 
-  - Set environment variables for AWS access.
-  - Create services like S3 buckets using standard AWS commands.
-  - Offers a Community Image for free usage.
-- **Limitations**:
-  - Not all AWS services are fully emulated; some are available only in the Pro version.
-  - Works with a single API endpoint unlike AWS's regional separation.
-- **Key Features**: 
-  - Supports essential services like EC2.
-  - Allows basic CRUD operations.
-  - Requires understanding of feature coverage before use.
+LocalStack is a tool designed for developers who want to test AWS functionalities locally. 
 
 LocalStack is crucial for developers needing a local AWS-like environment without the complexities of AWS billing. 
 
-Conclusion: LocalStack is essential for developers needing local AWS API testing without unpredictable costs. It simplifies local development workflows. 
+> Conclusion: LocalStack is essential for developers needing local AWS API testing without unpredictable costs. It simplifies local development workflows. 
 
 **Code2prompt** 😲
 
@@ -820,37 +795,7 @@ This project addresses the cumbersome task of generating prompts for LLMs from c
 
 It automates the collection and formatting of code, making it easier to interact with models like GPT and Claude.
 
-Key features include:
 
-- Converts entire codebases into a single prompt.
-  
-- Utilizes Handlebars templates for customizable prompt generation.
-  
-- Respects `.gitignore` and allows file filtering with glob patterns.
-  
-- Displays token count for generated prompts.
-  
-- Supports copying prompts to clipboard and saving them to files.
-  
-- Generates Git commit messages and pull request descriptions from staged files.
-  
-- Offers built-in templates for various use cases (e.g., documenting code, finding vulnerabilities).
-
-Installation options available include:
-
-1. **Binary Releases**: Download from the Releases page.
-  
-2. **Source Build**: Requires Git, Rust, and Cargo.
-
-3. **Cargo**: Install via `cargo install code2prompt`.
-
-4. **AUR**: Available for Arch Linux users.
-
-5. **Nix**: Can be installed using `nix-env`.
-
-Usage is straightforward, allowing users to generate prompts from their codebase with optional filters and custom templates.
-
-The tool helps streamline LLM prompt creation, enhancing productivity for developers.
 
 In conclusion, `code2prompt` simplifies the process of creating prompts from codebases, making LLM interactions efficient.
 
@@ -861,162 +806,6 @@ Similar projects include `CodeGPT` and `Code2Flow`.
 {{< /details >}}
 
 
-{{< details title="Latitude (prompt engineering) and...latitude analytics 📌" closed="true" >}}
-
-* https://github.com/latitude-dev/latitude-llm
-
-**Latitude is an open-source prompt engineering platform** designed to streamline AI feature development.
-
-It addresses the following problems:
-
-- Managing prompts can be cumbersome when they're embedded in code.
-- Testing AI outputs can be inconsistent and challenging.
-- Analyzing performance metrics of AI models requires a centralized tool.
-
-> As per the docs, for now [SDKs are Rust or JS/TS](https://docs.latitude.so/guides/evaluations/overview)
-
-**Key Features:**
-
-- **Collaborative Prompt Management**: Enables team collaboration on prompt development.
-  
-- **Testing and Validation**: Uses LLMs to verify AI responses for accuracy and relevance.
-
-- **Performance Insights**: Provides analytics on response times and cost comparisons.
-
-- **Version Control**: Tracks changes in prompts for better management.
-
-- **API and SDK Support**: Facilitates easy integration into existing systems.
-
-- **Open-Source Community Driven**: Encourages contributions and improvements from users.
-
-**Deployment Options:**
-
-1. **Latitude Cloud**: Managed solution for quick setup.
-  
-2. **Latitude Self-Hosted**: Open-source version for greater control and customization.
-
-**Community Engagement:**
-
-- A vibrant community on Slack for support and collaboration.
-  
-- Contributions are welcomed to enhance the platform.
-
-In conclusion, Latitude simplifies the process of integrating AI into products while facilitating ongoing evaluation and improvement.
-
-**Similar Projects**: TBC
-
-* https://github.com/latitude-dev/latitude
-
-**Latitude** is an open-source framework created to simplify **embedded analytics** by providing a powerful **analytics layer between databases and end-users**. 
-
-It allows developers to integrate data analytics into applications efficiently without requiring deep expertise in database management or visualization.
-
-> Among other DBs, [latitude works with SQLite](https://docs-analytics.latitude.so/sources/sqlite)!
-
-Key Features:
-- **Database Connectivity**: Latitude can connect to a variety of databases and data warehouses, providing flexibility for different environments and data sources.
-- **Parameterized SQL Queries as API Endpoints**: It allows users to create parameterized SQL queries and expose them as API endpoints, making it easy to query data dynamically and integrate with other systems.
-- **Interactive Visualizations**: Latitude supports interactive data visualizations in frontend frameworks (such as React, Svelte, and Vue), or alternatively, it can display them within iframes for easy embedding in web pages.
-- **Caching for Performance**: The framework includes built-in caching, which optimizes query performance and reduces the load on databases by storing previously queried results.
-- **Security**: Latitude is SSL-ready and includes protections against SQL injection, ensuring secure communication between the client and the database.
-- **Community-driven**: The project encourages contributions from developers, fostering an active open-source community.
-
-Use Cases:
-- **Quick Dashboard Creation**: Developers can rapidly build dashboards and visualizations, allowing end-users to explore and interact with data without extensive custom development.
-- **Single-command Deployment**: Latitude can be deployed quickly with a single command, making it easier for developers to get up and running without complex configurations.
-- **Framework Integration**: Latitude integrates seamlessly with popular frontend frameworks like React, Svelte, and Vue, which are commonly used for building modern web applications.
-
-Community and Support:
-- Latitude has an active community on **Slack**, where developers can collaborate, share insights, and get support.
-- Comprehensive **documentation** is available to guide users through the setup process and help with integration into various systems.
-
-Current Status:
-- The project is **no longer maintained** as the focus has shifted to a new project, **Latitude LLM**, which likely focuses on new features or different capabilities.
-- Existing users can still use the codebase and license as-is, though no new updates are being released.
-
-Conclusion:
-
-Latitude simplifies the integration of embedded analytics for developers, allowing for easy creation and deployment of dashboards, visualizations, and queries.
-
-Its simplicity and integration with modern frontend frameworks make it a valuable tool for building analytics-rich applications.
-
-Similar projects to Latitude include:
-- **Superset**: An open-source data visualization tool that allows users to create and share dashboards.
-- **Metabase**: Another open-source analytics platform that focuses on simple setup and user-friendly dashboards.
-
-{{< /details >}}
-
-#### Gaps to Cover
-
-There are ofc tools already waiting to be used...
-
-{{< details title="To learn how to interact with real time internet data - GNews, Perplexica,... 📌" closed="true" >}}
-
-**GNews** - https://github.com/ranahaani/GNews
-
-- **Summary:**  
-  _GNews_ is a lightweight Python package that provides an API to search for articles on Google News, returning results in JSON format. It supports fetching articles by keywords, topics, and locations, making it versatile for news aggregation.  
-
-- **Key Features:**  
-  - **Lightweight:** Easy to use with minimal setup.  
-  - **Integration:** Fetches articles directly from Google News RSS Feed.  
-  - **Global Support:** Covers over **141 countries** and **41 languages**.  
-  - **Structured Results:** Returns data in JSON format for easy parsing.  
-
-- **Pros:**  
-  - **Simple Installation:** No complex dependencies.  
-  - **Convenience:** Eliminates the need for custom scrapers.  
-  - **Flexible Searches:** Supports a variety of search parameters.  
-
-- **Cons:**  
-  - _Limited Sources:_ Only fetches from Google News.  
-  - _Dependency:_ Relies on the availability of Google News RSS feeds.  
-
-- **Alternatives:**  
-  - NewsAPI  
-  - ContextualWeb News API  
-  - Bing News Search API  
-
-
-From Perplexica to **OpenSearch GPT** [AI Search Engines!] - https://github.com/supermemoryai/opensearch-ai
-
-**OpenSearch GPT**, an open-source, AI-powered search engine that personalizes search results by learning from user interactions. It emphasizes key features like its **Mem Zero** memory system for remembering past interactions, its robust technological framework, and its versatility as a tool for writing assistance and data management. 
-
-OpenSearch GPT aims to enhance productivity and streamline workflows, offering transparency and flexibility as an alternative to proprietary search engines.
-
----
-
-Key Points
-
-- **Personalization:** Delivers tailored search results by learning from user behavior.
-- **Memory System:** Includes **Mem Zero** to retain past interactions and improve relevance.
-- **Technology Framework:** Built using **Versal AI ADK** and **Next.js** for a robust experience.
-- **Versatility:** Functions as a writing assistant and supports data management tasks.
-- **Open Source:** Provides transparency and customization options for users.
-
----
-
-Pros and Cons
-
-**Pros:**
-- Highly personalized search experience.
-- Open-source design allows community involvement and customization.
-- Supports a range of functionalities for diverse use cases.
-
-**Cons:**
-- Requires Google account sign-in to access the platform.
-- May pose a learning curve for users new to open-source tools.
-
----
-
-Alternatives
-
-- **Perplexity AI**
-- **OpenAI's Search Engine Prototype**
-
-
-{{< /details >}}
-
 <!-- [![Star History Chart](https://api.star-history.com/svg?repos=ollama/ollama-python,openai/openai-python,anthropic/anthropic-sdk-python,groq/groq-api-python&type=Date)](https://star-history.com/#ollama/ollama-python&openai/openai-python&anthropic/anthropic-sdk-python&groq/groq-api-python&Date) -->
 
 [![Star History Chart](https://api.star-history.com/svg?repos=supermemoryai/opensearch-ai,ranahaani/GNews&type=Date)](https://star-history.com/#supermemoryai/opensearch-ai&ranahaani/GNews&Date)
@@ -1025,11 +814,11 @@ Alternatives
 
 ## FAQ
 
-### How to Query Different APIs
+**How to Query Different APIs**
 
 You can also use OpenRouter API to query many different model providers...
 
-#### LLMs - OpenAI,Anthropic, Groq...
+LLMs - OpenAI,Anthropic, Groq...
 
 * https://console.anthropic.com/workbench/
 * https://console.groq.com/keys
@@ -1076,17 +865,7 @@ See [available models via groq API](https://github.com/JAlcocerT/Streamlit-AIssi
 
 {{< /details >}}
 
-{{< details title="Query LLMs via Mistral API 📌" closed="true" >}}
 
-
-
-{{< /details >}}
-
-{{< details title="Query LLMs via GroK API 📌" closed="true" >}}
-
-
-
-{{< /details >}}
 
 [![Star History Chart](https://api.star-history.com/svg?repos=ScrapeGraphAI/Scrapegraph-ai,unclecode/crawl4ai,mendableai/firecrawl&,type=Date)](https://star-history.com/#ScrapeGraphAI/Scrapegraph-ai&unclecode/crawl4ai&mendableai/firecrawl&Date)
 
