@@ -129,10 +129,11 @@ https://massively.ghost.io/
 I dont use WP myself, but...
 
 
-{{< details title="WP SEO Stuff 📌" closed="true" >}}
+{{< details title="Wordpres | SEO Stuff from a marketer 📌" closed="true" >}}
 
 
-On-Page SEO Tools
+On-Page SEO Tools:
+
 - **Rank Math**  
   An SEO plugin for WordPress to help optimize your website’s on-page SEO.
   
@@ -145,7 +146,8 @@ On-Page SEO Tools
 - **Anchor Text**  
   Use relevant anchor text to link to other pages on your site to improve internal linking.
 
-## Image Optimization
+**Image Optimization**
+
 - **Kraken.io**  
   A tool to compress images like .jpg files for faster page load times.
 
@@ -160,6 +162,7 @@ Authority & Analytics
   Displays search volume, CPC, and competition data.
 
 Advanced Google Search
+
 - Use `site:yourwebsite.com` in Google to see indexed pages.
 - Ensure external links open in a new tab and are marked as "no follow" where necessary.
 
@@ -183,7 +186,7 @@ Free SEO Tools & Resources
 5. **Google PageSpeed Insights**  
    Analyze your website's speed and get suggestions for improvement.
 
-Other Notes
+Other Notes:
 - Proxy-related resources like **cerveza.gratis** or **disfruta badajoz**.
 - Check out [this app](https://joseo20-gpt.streamlit.app/) for more insights.
 

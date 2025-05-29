@@ -62,7 +62,7 @@ And these are very good intro videos on astro:
 
 * rss
 
-* Image Optimization - It's built in in astro: *you dont want huge images for performance* and astro makes them webp.
+* [Image Optimization](https://docs.astro.build/en/guides/images/) - It's built in in astro: *you dont want huge images for performance* and astro makes them webp.
 
 * Astro Cookies: https://docs.astro.build/en/reference/api-reference/#astrocookies
 * Astro OpenGraph and SEO Metadata - Like [here](https://github.com/IoTechCrafts/stablo-astro-SSG/blob/main/src/layouts/Layout.astro#L42)

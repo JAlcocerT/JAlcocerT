@@ -2,10 +2,18 @@
 title: "Software for Servers"
 date: 2025-05-31T01:20:21+01:00
 draft: false
-tags: ["PaaS","HomeLab"]
+tags: ["PaaS","HomeLab","Entrepreneuring"]
 description: 'Selfhosted Apps that simplify my workflow as of May 2025: Termix, CheckMate, LibreChat'
 url: 'selfhosted-server-paas'
 ---
+
+Few months ago, I wrote about [different PaaS Tools](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/)
+
+## PaaS Tools
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/PaaS" title="Selfhostable PaaS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### LocalStack
 
@@ -33,9 +41,20 @@ It provides an emulated environment of AWS services, solving issues related to u
 
 ### Dokploy
 
+I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)
 
-{{< details title="How could I not summarize the video... 📌" closed="true" >}}
+
+{{< details title=" 📌" closed="true" >}}
 
 
 
 {{< /details >}}
+
+
+
+
+
+
+## Conclusions
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#Dokploy/dokploy&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)

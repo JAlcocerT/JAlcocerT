@@ -19,7 +19,7 @@ Then I found **[these F/OSS PaaS software](https://jalcocert.github.io/JAlcocerT
 
 ## Selfhostable PaaS
 
-As of the time of writing: Dokploy and Caprover are way ahead of the rest
+As of the time of writing: *Dokploy and Caprover are way ahead of the rest*
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#Dokploy/dokploy&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)
 
@@ -81,7 +81,7 @@ With Dokploty we can for example, **serve an Astro site, or any other containeri
 
 Also for the services:
 
-![alt text](/blog_img/selfh/PaaS/dokploy-rstocks-service-https.png)
+![DokPlot with RStocks and https](/blog_img/selfh/PaaS/dokploy-rstocks-service-https.png)
 
 3. Dokploy brings a monitoring section to see how much each app consumes
 

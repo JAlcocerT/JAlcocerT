@@ -3,7 +3,6 @@ title: "Deploying with PaaS: Coolify, Dokku and more"
 date: 2025-03-13
 draft: false
 tags: ["OSS","HomeLab"]
-
 description: 'SelfHosted PaaS: Coolify, Dokku, Dokploy, Caprover, Openfaas'
 url: 'deploying-software-with-paas-to-servers'
 ---
@@ -108,7 +107,9 @@ Requires a **domain** and a **Virtual Private Server (VPS)**. The tutorial uses 
 
 ### Coolify
 
-Application could be any type of web application.
+With coolify, we can spin apps on servers veeery easily.
+
+> Application could be any type of **web application**.
 
 It **could be a static site**, a NodeJS application, a PHP application, etc.
 
@@ -122,9 +123,6 @@ For complex applications, you can use Docker Compose based deployments or the on
 
 > Apache v2 | An open-source & self-hostable Heroku / Netlify / Vercel alternative.
 
-```yml
-
-```
 
 * No Features Behind Paywall. Everything is included in the open-source software (OSS) version. And will always be.
 * No Limitations. You have the freedom to host an unlimited number of websites on any quantity of servers without any restrictions.
@@ -229,4 +227,4 @@ curl -sfL https://get.quickstack.dev/setup.sh | sh -
 
 ## Conclusions
 
-Definitely these SelfHosted PaaS are a cool way to provide value!
+Definitely these SelfHosted PaaS are a cool way to **provide value** for people that does not want to go into the *complicated server world!*

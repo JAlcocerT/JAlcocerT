@@ -3,8 +3,8 @@ title: "So: You want to be an entrepreneur?"
 date: 2025-05-29
 draft: false
 tags: ["AI","Entrepreneuring"]
-description: 'SelfHosted product tools'
-url: 'live-search-and-research-with-ai'
+description: 'SelfHosted Product Tools'
+url: 'product-tools'
 ---
 
 Its been few months since I covered [these Tools for forms/newsletters](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/)

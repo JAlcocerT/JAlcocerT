@@ -46,7 +46,7 @@ It uses pagefind, similarly to [the astroverse/visvrs theme](https://github.com/
 npm install astro-pagefind pagefind
 ```
 
-3. **Image optimizations** to `.webp`
+3. **Image [optimizations](https://docs.astro.build/en/guides/images/)** to `.webp`
 
 4. **OpenGraph** images working when sharing the web (and also considering the post images)
 * Icons: https://lucide.dev/
