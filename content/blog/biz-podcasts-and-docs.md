@@ -24,7 +24,7 @@ url: 'tech-for-podcast'
 **What I like about this Starlight theme?**
 
 1. Doc like interface
-2. With ToC (Table of contents that goes down as you read)
+2. With ToC (Table of contents *that goes down with you, as you read*)
 2. [Internationalization](https://docs.astro.build/en/guides/internationalization/) (different languages with `i18n`)
 3. Search built in (with algoliasearch)
 4. Amazing Docs: https://starlight.astro.build/
@@ -62,6 +62,7 @@ npm run dev
 9. [Data fetching](https://docs.astro.build/en/guides/data-fetching/), so that you can reference content, like your docker-compose.yml public on github, so that others can edit them.
 10. A progress line bar on the top of the posts to show how much you have left
 11. Katex, Charts and diagrams rendering 
+12. Maybe [commenting](https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento) system?
 
 {{< callout type="info" >}}
 Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%5B%5D=free) from time to time to get ideas

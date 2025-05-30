@@ -299,9 +299,8 @@ This is kind of a **four in one project**:
 
 1. Responsive **Web** UI - Thanks to [Streamlit](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/)
 
-https://dmproperties.web.app/
-https://dm-realestate.web.app/
-
+* https://dmproperties.web.app/
+* https://dm-realestate.web.app/
 
 2. **Real Estate Calculator** to engage users and potential clients
 
@@ -360,7 +359,7 @@ And with an interesting tool to get the **photo properties adquisition automated
 
 ---
 
-## Outro
+### Outro and final version
 
 All [links inside the website work](https://jalcocert.github.io/JAlcocerT/scrapping-with-llms/#how-to-monitor-broken-links-of-websites) and are ready as per [linkchecker](https://github.com/IoTechCrafts/linkchecker)
 
@@ -369,6 +368,8 @@ All [links inside the website work](https://jalcocert.github.io/JAlcocerT/scrapp
 docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://dm-real-estate.com/
 #docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://fossengineer.com
 ```
+
+We moved forward with astro-nomy MIT theme, tweaked with some photo galleries for the real estate agency as per [this repo section](https://github.com/JAlcocerT/cybernetik-realestate-moises/tree/main/astro-nomy)
 
 ### Checks Ive Done
 

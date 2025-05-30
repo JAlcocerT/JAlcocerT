@@ -91,6 +91,8 @@ I also enjoy the night mode (but make sure to have a tripod).
 
 > Get ready for some serious **backup setup**!
 
+>> EDIT: specially as [these things happen](https://kevquirk.com/blog/new-motorbike-broken-phone-drama)
+
 3. The charging time is not the quickest. It can go up to ~25W.
 
 > For comparison, a s6 lite tablet loads at 15w
