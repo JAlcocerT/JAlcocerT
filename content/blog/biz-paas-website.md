@@ -1,5 +1,5 @@
 ---
-title: "Scaling Services with SelfHosted PaaS - Netlify Vercel alternatives"
+title: "Services with SelfHosted PaaS - Netlify/Vercel alternatives"
 date: 2025-03-14T21:20:21+01:00
 draft: false
 tags: ["Dev","Webs","Entrepreneuring"]

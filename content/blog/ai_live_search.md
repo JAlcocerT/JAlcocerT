@@ -413,7 +413,6 @@ Alternatives
 - **Perplexity AI**
 - **OpenAI's Search Engine Prototype**
 
-
 {{< /details >}}
 
 

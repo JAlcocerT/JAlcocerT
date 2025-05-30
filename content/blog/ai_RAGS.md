@@ -393,6 +393,7 @@ docker pull ghcr.io/jalcocert/streamlit-multichat:latest #:v1.1  #:latest
 
 #### Local Deep Researcher
 
+A very interesting project that makes web searches and summarizes them:
 
 * https://github.com/langchain-ai/local-deep-researcher
   * https://github.com/JAlcocerT/local-deep-researcher/

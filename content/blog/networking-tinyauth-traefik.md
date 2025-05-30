@@ -21,6 +21,12 @@ But whats TinyAuth?
 Just a [Okta alternative](https://opensourcealternative.to/?searchTerm=okta), similarly to [Authentik](https://opensourcealternative.to/project/authentik)
 
 
+{{< cards cols="2" >}}
+  {{< card link="https://www.youtube.com/watch?v=CmUzMi5QLzI" title="Traefik v3.3 Must See Video | From Jims Garage ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/" title="Traefik | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ### Example TinyAuth
 
 * https://tinyauth.doesmycode.work/docs/getting-started.html

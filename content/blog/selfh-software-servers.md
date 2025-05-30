@@ -17,7 +17,7 @@ Few months ago, I wrote about [different PaaS Tools](https://jalcocert.github.io
 
 ### LocalStack
 
-LocalStack is a tool designed for developers who want to test AWS functionalities locally. 
+LocalStack is a tool designed for developers who want to test **AWS functionalities locally**. 
 
 It provides an emulated environment of AWS services, solving issues related to unpredictable billing and resource management during development. 
 

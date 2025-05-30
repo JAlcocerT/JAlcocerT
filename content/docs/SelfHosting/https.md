@@ -31,16 +31,36 @@ Sample Selfhosted Apps with **Traefik support** out of the box:
 3. [The MultiChat](https://jalcocert.github.io/JAlcocerT/selfhosting-python-ai-apps-caddy/#https-options-for-the-multichat-project): which works with traefik/nginx as per [these configs](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat)
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11" title="Traefik x TinyAuth | Post" >}}
+  {{< card link="https://www.youtube.com/watch?v=CmUzMi5QLzI" title="Traefik v3.3 Must See Video | From Jims Garage ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/" title="Traefik | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+If the DNS is set properly, these will work:
+
 ```sh
-nslookup gibme.duckdns.org
-#nslookup traefik.groq.gibme.duckdns.org
+#nslookup gibme.duckdns.org
+nslookup https://jalcocertech.com
 ```
 
-> See https://myzopotamia.dev/traefik-reverse-proxy-with-containers
+If the DNS Challenge worked with the [Cloudflare API token](https://dash.cloudflare.com/profile/api-tokens), these will work:
+
+```sh
+curl -I https://jalcocertech.com
+echo | openssl s_client -servername jalcocertech.com -connect jalcocertech.com:443 2>/dev/null | openssl x509 -noout -dates
+```
+
+> [This blog](https://myzopotamia.dev/traefik-reverse-proxy-with-containers) was inspiring and here you have a [Traefik x Groq working sample](https://github.com/JAlcocerT/phidata/tree/main/Z_DeployMe) with the [PhiData Fork](https://github.com/JAlcocerT/phidata)
+
+
+Whats great about Traefik, is that you can provide HTTPs to other services, just by adding label into their `docker-compose.yml`:
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/phidata/tree/main/Z_DeployMe" title="Youtube Groq | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+And all of that happens programatically, plus we wont have conflict of using the same ports, as the host wont be seeing them!
 
 ### Caddy
 

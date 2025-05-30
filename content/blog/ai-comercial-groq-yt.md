@@ -320,11 +320,14 @@ services:
 
 > For Production deployment, you can use [NGINX](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/) or [Cloudflare Tunnels](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/) to get HTTPs.
 
+
+
 {{< details title="Docker Compose Stack for GenAI Apps: YT Summarizer, Ollama and MultiChat 📌" closed="true" >}}
 
 
 * https://github.com/JAlcocerT/phidata/pkgs/container/phidata
 * This is my [AI-Gen docker Compose](https://github.com/JAlcocerT/Docker/blob/main/Z_Dockge/stacks/z_aigen/compose.yaml)
+
 
 ```yml
 version: '3.8'
@@ -455,9 +458,12 @@ And make sure to place the name of the container and its internal port:
 
 ## Conclusion
 
-<!-- {{< dropdown_docker title="Really, Just Get Docker 🐋👇" closed="true" >}} -->
 
-Now we have our Streamlit UI at: `localhost:8501`
+Now we have our Streamlit UI at: `localhost:8501`, thanks to this docker configuration:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/phidata/tree/main/Z_DeployMe" title="Youtube Groq | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 Feel free to ask for **Summaries about Youtube Videos with Groq**:
 
@@ -470,6 +476,7 @@ Feel free to ask for **Summaries about Youtube Videos with Groq**:
 
 {{< /dropdown >}}
 
+We have also learnt along the way how to query Groq LLMs via API, as per [this section](https://github.com/JAlcocerT/phidata/tree/main/cookbook/llms/groq/video_summary)
 
 ### Groq vs Others
 
