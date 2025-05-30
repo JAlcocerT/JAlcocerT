@@ -281,7 +281,7 @@ It uses [LangGraph](https://jalcocert.github.io/JAlcocerT/understanding-langgrap
 
 Speedtest CLI from Ookla®:
 
-![alt text](/blog_img/selfh/Internet/SpeedTest.png)
+![Speed Test](/blog_img/selfh/Internet/SpeedTest.png)
 
 As seen on the [benchmarking post](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/#internet-benchmark):
 
@@ -311,11 +311,29 @@ It has influxDB 2.0 integration, inc ase that you want to use this with Grafana.
 
 ## Conclusions
 
-From now on, I will include docker-compose stacks linked to this kind of recap Selfhosting posts:
+From now on, I will include **ocker-compose stacks** linked to this kind of recap Selfhosting posts:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/SelfH/May25_docker-compose.yml/" title="Selfhosting Stack May 2025 | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
+
+I could not forget about PiGallery with its lovely map render and no DB requirement!
+
+![PiGallery Map](/blog_img/selfh/https/pigallery-map.png)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="/blog_img/selfh/https/pigallery-traefik-https.png" subtitle="PiGallery x Traefik | Docker Config" >}}
+{{< /cards >}}
+
+And How could I miss SearXNG and PiHole
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="/blog_img/selfh/https/pigallery-traefik-https.png" subtitle="PiGallery x Traefik | Docker Config" >}}
+{{< /cards >}}
+
+![alt text](/blog_img/selfh/https/SearXNG-Traefik.png)
+
 
 ```sh
 docker builder prune
@@ -896,3 +914,10 @@ https://github.com/airbytehq/airbyte
 https://github.com/SigNoz/signoz
 https://github.com/syncthing/syncthing
 https://github.com/grafana/grafana
+
+## FAQ
+
+More Selfhosted resources
+
+* https://libreselfhosted.com/project/fluxbb/
+* https://awesome-docker-compose.com/apps/photo-server/pigallery-2

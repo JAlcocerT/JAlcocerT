@@ -3,7 +3,7 @@ title: "Encryption. Captchas and more"
 date: 2025-05-20
 draft: false
 tags: ["Outro"]
-description: 'SHA256 Protocol. The concept and applications.'
+description: 'SHA256 Protocol. The concept and applications: SSH, HTTPs, Bitcoin...'
 url: 'encryption-101'
 ---
 
@@ -14,7 +14,7 @@ url: 'encryption-101'
 
 1. https://github.com/sequentialread/pow-bot-deterrent
 
->  A proof-of-work based bot deterrent. Lightweight, self-hosted and copyleft licensed. 
+>  A **proof-of-work based** bot deterrent. Lightweight, self-hosted and copyleft licensed. 
 
 ## The SHA256 Algorithm
 
@@ -30,7 +30,6 @@ openssl rand -hex 32 #for apikeys
 Those come very handy when deploying containers.
 
 > Let's break down the SHA-256 protocol
-
 
 
 **What is the SHA-256 Protocol?**

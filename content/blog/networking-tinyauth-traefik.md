@@ -448,9 +448,48 @@ networks:
 
 #### Traefik JimGarage v3.3
 
+Thanks to this, finally I got my head around Traefik, for good:
+
 * https://github.com/JamesTurland/JimsGarage/tree/main/Traefikv3
-
-
 
 <!-- https://www.youtube.com/watch?v=CmUzMi5QLzI -->
 {{< youtube "CmUzMi5QLzI" >}}
+
+
+## Conclusions
+
+```sh
+docker compose -f PiwigoTraefik_docker-compose.yml up -d
+
+docker builder prune
+#docker system prune -a
+docker volume prune
+docker image prune -a
+```
+
+
+
+---
+
+
+### Updating DNS Records
+
+Before moving forward...make sure that you have proper DNS records at your domain provider.
+
+> See [this script](https://github.com/JAlcocerT/Docker/tree/main/Security/DNS/Cloudflare_DNS)
+
+We will need the Cloudflare API and zoneID, which you can get from:
+
+```sh
+curl -X GET "https://api.cloudflare.com/client/v4/zones?name=whateveryourdomainis.com" \
+  -H "Authorization: Bearer whateveryourAPIis" \
+  -H "Content-Type: application/json"
+```
+
+Or, if you just want it simple, get the **ZoneID parsed** with:
+
+```sh
+curl -X GET "https://api.cloudflare.com/client/v4/zones?name=whateveryourdomainis.com" \
+  -H "Authorization: Bearer whateveryourAPIis" \
+  -H "Content-Type: application/json" | jq -r '.result[0].id'
+```

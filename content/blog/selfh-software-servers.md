@@ -51,8 +51,13 @@ I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-pa
 {{< /details >}}
 
 
+### Runtipi
 
+https://github.com/runtipi/runtipi
 
+>  Runtipi is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps. ✨ 
+
+>> Got to know this one thanks to [awsomedockercompose](https://awesome-docker-compose.com)
 ---
 
 ## Conclusions

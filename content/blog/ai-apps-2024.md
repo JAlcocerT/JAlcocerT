@@ -32,7 +32,7 @@ As seen during the [Flask Setup post on a VPS](https://jalcocert.github.io/JAlco
 * https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/
 * Get your Groq API for the app <https://console.groq.com/keys>
 
-2. Streamlit MultiChat
+2. [Streamlit MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat/pkgs/container/streamlit-multichat)
 * https://github.com/JAlcocerT/Streamlit-MultiChat
 * https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt
 * Get (at least) OpenAI API for this app - <https://platform.openai.com/api-keys>
