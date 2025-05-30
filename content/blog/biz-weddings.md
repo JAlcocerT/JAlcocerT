@@ -219,7 +219,11 @@ docker network connect nginx_nginx_network WeddingShare
 
 ![Hetzner VPS](/blog_img/selfh/portainer.png)
 
-For the DNS Challenge, you need input from your domain registrar, like: Cloudflare, duckDNS, Porkbun,...
+For the **DNS Challenge**, you need input from your domain registrar, like: Cloudflare, duckDNS, Porkbun,...
+
+{{< callout type="warning" >}}
+With DNS challenge, we dont need any port forwarding!
+{{< /callout >}}
 
 ![DNS Challenges](/blog_img/selfh/nginx-challenges.png)
 

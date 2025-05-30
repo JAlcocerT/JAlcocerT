@@ -135,8 +135,9 @@ It can manage complex workflows, ensure data consistency, and improve system rel
 
 1.  ThingBoards https://github.com/thingsboard/thingsboard
 
-
 2. MQTTX
+  * mosquito mqtt
+  * mqttx
 
 ```sh
 flatpak install flathub com.emqx.MQTTX
@@ -185,6 +186,13 @@ When designing a Kafka-based system, consider partitioning your topics for paral
 ---
 
 ## Conclusions
+
+
+These tools will be useful:
+
+1. VSCodium
+2. THonny
+3. Arduino IDE
 
 ### Outro
 

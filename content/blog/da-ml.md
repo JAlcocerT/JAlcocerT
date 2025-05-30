@@ -213,9 +213,22 @@ Have a look to this awsome **gradient descent** explanation:
 
 ### Software for DSc
 
-* Knime
 * Alteryx
 * AMZ (AWS) Sagemaker - Propietary
+
+* Knime: It is free and open-source.
+
+It is a visual programming environment, so you can create data workflows without writing any code.
+It is highly modular, so you can easily create custom workflows.
+It has a large library of pre-built nodes for common tasks.
+It is a powerful tool for data science, machine learning, and data mining.
+
+Data cleaning and preparation
+Exploratory data analysis (EDA)
+Machine learning
+Data mining
+Business intelligence (BI)
+Reporting
 
 ### Python for DSc
 

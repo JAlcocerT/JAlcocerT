@@ -21,7 +21,7 @@ With **~1.005L in volume** its even smaller than the [AsrockX300](https://jalcoc
 
 It comes with W11 already installed, which I kept together with an Ubuntu installation (you need to desable Windows bitlocker first to be able to tweak the SDD space distribution).
 
-The battery life with its **57Wh** is much better with Linux imo, doing ~8h for my typical use.
+The [battery life](#battery-life) with its **57Wh** is much better with Linux imo, doing ~8h for my typical use.
 
 <!-- > How big is that battery? x -->
 
@@ -331,3 +331,27 @@ If you got any, you can return the laptop or ask for a 5-10% discount.
 
 * https://lcdtech.info/en/tests/dead.pixel.htm
 * https://deadpixeltest.org/colors/black
+
+### Battery Life
+
+```sh
+upower -e
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 #could be _BAT1...
+```
+
+* Use Hardware acceleration
+    * Check it in firefox with: `about:support`
+        * Look for Compositing - if it says WebRender is fine (software would mean CPU does it which is not desirable)
+        * Also look HARDWARE_VIDEO_DECODING --> Default means GPU is used -> OK
+        * `about:config`
+            * media.hardware-video-decoding.enabled
+    * In chromium based: `brave://gpu`
+        *   WebGL: Hardware accelerated
+        *   WebGL2: Hardware accelerated
+
+```sh
+sudo apt install tlp
+sudo systemctl status tlp
+
+flatpak install flathub com.github.d4nj1.tlpui #https://flathub.org/apps/com.github.d4nj1.tlpui
+```

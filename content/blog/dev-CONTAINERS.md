@@ -392,10 +392,6 @@ Make sure to understand [docker volumes vs bind mounts](https://dev.to/aijeyomah
 
 
 
-
-
-
-
 ---
 
 ## FAQ

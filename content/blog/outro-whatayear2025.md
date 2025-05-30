@@ -130,6 +130,18 @@ https://echarts.apache.org/en/index.html
 
 https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/
 
+### Note Taking
+
+Is note taking a waste of time?
+
+The time that you are writing notes, you are not doing new things...
+
+Is note taking just bike-shedding?
+
+> I got to know about the concept during 2024
+
+The power of notes. Without bikeshedding!
+
 
 ### Dev Smart not Hard
 

@@ -340,6 +340,11 @@ sudo apt install dupeguru-se
 8. https://alternateoss.com/
 9. https://star-history.com/blog/knowledge-management
 
+* Sources:
+    * https://www.producthunt.com/topics/open-source
+    * https://www.opensourcealternative.to/
+    * https://trendshift.io/
+
 ### Interesting Software for Servers
 
 1. https://github.com/moghtech/komodo

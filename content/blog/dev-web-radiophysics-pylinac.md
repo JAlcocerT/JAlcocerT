@@ -215,3 +215,7 @@ See https://github.com/joemccann/dillinger as The last **Markdown editor**, ever
 2. https://github.com/vinta/awesome-python
 
 > A great source to get Python ideas (good for the Python unknown unknowns!)
+
+3. Wolfram alfa but FOSS calculator: <https://www.opensourcealternative.to/project/Kalker>
+
+* https://kalker.xyz/

@@ -397,6 +397,14 @@ https://www.youtube.com/watch?v=rMhe2gYJa9s
 
 ## Conclusions
 
+Tools for Creator Mode:
+
+* OBS Studio
+   * SHAREX
+* OpenShot ~~Shotcut~~
+* Audacity
+
+
 
 <!-- https://www.youtube.com/watch?v=-OO6Qrw6NWE -->
 
