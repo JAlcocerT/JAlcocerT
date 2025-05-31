@@ -1,20 +1,20 @@
 ---
-title: "How to setup TinyAuth"
+title: "How to setup TinyAuth x Traefik. Compared to LogTo."
 date: 2025-05-27T23:20:21+01:00
 draft: false
-tags: ["Dev"]
-description: 'TinyAuth Setup, together with Traefik Reverse Proxy for https and Authentication.'
+tags: ["Dev","HomeLab"]
+description: 'TinyAuth  Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
 url: 'testing-tinyauth'
 ---
 
 I was having a look to https://selfh.st/newsletter/2025-02-07/ and found out about **TinuAuth**
 
-Which seems to integrate with https services and provide an auth layer.
+Which seems to integrate with https services and provide an **auth layer**.
 
 
-https://tinyauth.doesmycode.work/docs/guides/github-oauth.html
-
-https://github.com/steveiliop56/tinyauth
+* https://tinyauth.doesmycode.work/docs/guides/github-oauth.html
+* https://github.com/steveiliop56/tinyauth
+* https://tinyauth.doesmycode.work/docs/getting-started.html
 
 But what's **TinyAuth**?
 
@@ -22,13 +22,12 @@ But what's **TinyAuth**?
 
 {{< cards cols="2" >}}
   {{< card link="https://www.youtube.com/watch?v=CmUzMi5QLzI" title="Traefik v3.3 Must See Video | From Jims Garage ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/" title="Traefik | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/" title="Traefik & other Proxies| Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+We will be setting up a **Flask Web app** with https via **Traefik** and auth via **TinyAuth**. [Jump](#conclusions).
 
-### Example TinyAuth
-
-* https://tinyauth.doesmycode.work/docs/getting-started.html
+## TinyAuth
 
 
 Remember, [generate your keys](https://jalcocert.github.io/JAlcocerT/encryption-101/):
@@ -39,12 +38,6 @@ openssl rand -base64 32
 
 {{< details title="TinyAuth Compose with traefik and nginx 📌" closed="true" >}}
 
-```yml
-
-```
-
-
-{{< /details >}}
 
 This `docker-compose.yml` file defines a setup using Traefik as a reverse proxy, Nginx as a web server, and TinyAuth for authentication.
 
@@ -105,6 +98,18 @@ Let's break down each service:
 
 This setup provides a basic example of how to use Traefik, Nginx, and TinyAuth together.  Remember to address the security concerns before deploying this in a production environment.
 
+{{< /details >}}
+
+With TinyAuth, we will be able to login via GITHUB or with particular users and passwords
+
+When hitting: Forgot your password?
+
+You can reset your password by changing the **USERS environment variable**.
+
+
+https://www.youtube.com/watch?v=qmlHirOpzpc
+{{< youtube "qmlHirOpzpc" >}}
+
 
 ## About Traefik
 
@@ -115,7 +120,7 @@ If you have ever faced with the problem of [http vs https](https://jalcocert.git
 
 <!-- https://www.youtube.com/watch?v=vVKMey6SfSw -->
 
-{{< youtube "vVKMey6SfSw" >}}
+<!-- {{< youtube "vVKMey6SfSw" >}} -->
 
 **Traefik is an open-source reverse proxy** and load balancer that's designed to be easy to use, flexible, and scalable. 
 
@@ -137,7 +142,9 @@ Some of its key features include:
 
 {{< /details >}}
 
-Traefik is a powerful and flexible reverse proxy that's worth considering for your next project. With its ease of use, high performance, and scalability, Traefik can help you improve your application's reliability and performance.
+Traefik is a powerful and flexible reverse proxy that's worth considering for your next project. 
+
+With its ease of use, high performance, and scalability, Traefik can help you improve your application's reliability and performance.
 
 
 ### How to Install Traefik
@@ -163,7 +170,7 @@ And it also provides a UI dashboard.
 > MIT | The Cloud Native Application Proxy
 
 
-![alt text](/blog_img/selfh/https/traefik-logs-ok.png)
+![Traefik Logs OK](/blog_img/selfh/https/traefik-logs-ok.png)
 
 
 * **Strengths:**
@@ -179,7 +186,6 @@ And it also provides a UI dashboard.
 
 <!-- https://www.youtube.com/watch?v=XH9XgiVM_z4 -->
 {{< youtube "XH9XgiVM_z4" >}}
-
 
 
 #### Traefik JimGarage
@@ -202,65 +208,23 @@ To validate that we own the domain, we can do **DNS or TLS Challenge** (the latt
 
 For the **DNS Challenge**, we just need the **API access**, for example to Cloudflare Domains.
 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="HUGO Container | Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
+
+
 ```sh
 nano docker-compose.yaml
 ```
 
-```yml
-services:
-  traefik:
-    image: traefik:latest
-    container_name: traefik
-    restart: unless-stopped
-    security_opt:
-      - no-new-privileges:true
-    networks:
-       proxy:
-    ports:
-      - 80:80
-      - 443:443
-    environment:
-      - CF_API_EMAIL=your@email.com
-      - CF_DNS_API_TOKEN=your-api-key
-      # - CF_API_KEY=YOU_API_KEY
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /home/ubuntu/docker/traefik/traefik.yml:/traefik.yml:ro
-      - /home/ubuntu/docker/traefik/acme.json:/acme.json
-      - /home/ubuntu/docker/traefik/config.yml:/config.yml:ro
-      - /home/ubuntu/docker/traefik/logs:/var/log/traefik
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.traefik.entrypoints=http"
-      - "traefik.http.routers.traefik.rule=Host(`traefik-dashboard.yourdomain.co.uk`)" # if you want a internal domain, get the wildcard cert for it and then choos traefik-dashboard.home.yourdomain.co.uk or what you want
-      - "traefik.http.middlewares.traefik-auth.basicauth.users=YOUR_USERNAME_PASSWORD"
-      - "traefik.http.middlewares.traefik-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
-      - "traefik.http.routers.traefik.middlewares=traefik-https-redirect"
-      - "traefik.http.routers.traefik-secure.entrypoints=https"
-      - "traefik.http.routers.traefik-secure.rule=Host(`traefik-dashboard.yourdomain.co.uk`)" # if you want a internal domain, get the wildcard cert for it and then choos traefik-dashboard.home.yourdomain.co.uk or what you want
-      - "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
-      - "traefik.http.routers.traefik-secure.tls=true"
-      - "traefik.http.routers.traefik-secure.tls.certresolver=cloudflare"
-      #- "traefik.http.routers.traefik-secure.tls.domains[0].main=home.yourdomain.co.uk" # If you want *.home.yourdomain.co.uk subdomain or something else, you have to get the certifcates at first.
-      #- "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.home.yourdomain.co.uk" # get a wildcard certificat for your .home.yourdomain.co.uk
-      - "traefik.http.routers.traefik-secure.tls.domains[0].main=jalcocertech.com" #if you use the .home.yourdomain.co.uk entry you have to change the [0] into [1]
-      - "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.jalcocertech.com" # same here, change 0 to 1
-      - "traefik.http.routers.traefik-secure.service=api@internal"
-
-
-networks:
-  proxy:
-    name: proxy
-    external: true
-```
 
 Important:
 
 * `/home/ubuntu/docker/traefik/acme.json` stores the private keys of the certificates
 * `/home/ubuntu/docker/traefik/traefik.yml` entry points for traefik
 * `/home/ubuntu/docker/traefik/config.yml`
+
 With that, LetsEncrypt will login to the Domain registrar and creates a temporary record.
 
 Then, it will know that you are the one that really own the domain and therefore you can get certificates for that domain.
@@ -271,10 +235,11 @@ Go to My Profile on the top right -> `API Tokens` -> `Create Token` -> Select th
 
 ![Zone DNS CF](/blog_img/selfh/CF-APITokens-ZoneDNS.png)
 
+> Keep Permissions Zone: DNS And as Zone Resources you can specify the particular domain (optional).
 
-Keep Permissions Zone: DNS And as Zone Resources you can specify the particular domain (optional).
+> > You will need to point DNS to your server via Cloudflare UI or [programatically](#updating-dns-records)
 
-You will get a way to verify it works:
+You will get a way to verify that the **token works**:
 
 ```sh
 curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \
@@ -292,12 +257,9 @@ And the docker network:
 sudo docker network create proxy
 ```
 
-Acme files can be blank, we will fill `traefik.yml`
+Acme file will be created blank (and fill later automatically).
 
-{{< tabs items="Files we need,traefik.yml,acme.yml" >}}
-
-  {{< tab >}}
-  
+ 
 
 ```sh
 mkdir -p /home/docker/traefik
@@ -312,60 +274,8 @@ touch /home/docker/traefik/traefik.yml
 chmod 600 ./acme.json && \
 chmod 600 ./traefik.yml #or it will be a security risk for other users to see the privatekey
 ```
-  
-  
-  {{< /tab >}}
-
-  {{< tab >}}
-  
-
-With such info:
-
-```yml
-#https://github.com/JamesTurland/JimsGarage/blob/main/Traefik/traefik-config/traefik.yml
-
-api:
-  dashboard: true
-  debug: true
-entryPoints:
-  http:
-    address: ":80"
-    http:
-      redirections:
-        entryPoint:
-          to: https
-          scheme: https
-  https:
-    address: ":443"
-serversTransport:
-  insecureSkipVerify: true
-providers:
-  docker:
-    endpoint: "unix:///var/run/docker.sock"
-    exposedByDefault: false
-  file:
-    filename: /config.yml
-certificatesResolvers:
-  cloudflare:
-    acme:
-      email: your@email.com #add your email!!!
-      storage: acme.json
-      dnsChallenge:
-        provider: cloudflare
-        #disablePropagationCheck: true # uncomment this if you have issues pulling certificates through cloudflare, By setting this flag to true disables the need to wait for the propagation of the TXT record to all authoritative name servers.
-        resolvers: #CF 1 and 2nd DNS Resolvers
-          - "1.1.1.1:53"
-          - "1.0.0.1:53"
-```
-  
-  {{< /tab >}}
-  
-  
-  {{< tab >}}**TOML**: TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.
-  
-  {{< /tab >}}
-
-{{< /tabs >}}
+    
+> See https://github.com/JamesTurland/JimsGarage/blob/main/Traefik/traefik-config/traefik.yml
 
 
 And last but not least, we need to **create a strong password**
@@ -390,24 +300,27 @@ And I got this kind of error:
 
 `2025-02-08T22:54:03Z ERR Error while building configuration (for the first time) error="error reading configuration file: /config.yml - read /config.yml: is a directory" providerName=file`
 
-But it worked for me with the v3.3 version and this guide:
-
-
-
-* https://www.jimgogarty.com/installing-traefik-on-docker-with-docker-compose/
+But it worked for me with the **Traefik v3.3 version** and this guide: https://www.jimgogarty.com/installing-traefik-on-docker-with-docker-compose/
 
 
 #### Traefik JimGarage v3.3
 
 Thanks to this, finally I got my head around Traefik, for good:
 
-* https://github.com/JamesTurland/JimsGarage/tree/main/Traefikv3
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JamesTurland/JimsGarage/tree/main/Traefikv3" title="Traefik v3 Container Jimsgarage | Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik v3 Container | Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
 
 <!-- https://www.youtube.com/watch?v=CmUzMi5QLzI -->
 {{< youtube "CmUzMi5QLzI" >}}
 
+---
 
 ## Conclusions
+
+With Traefik working, its time to combine it with a sample Flask Web App and **Tinyauth**.
 
 ### Traefik x TinyAuth x Flask
 
@@ -415,9 +328,14 @@ I have [vibe coded](https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf)
 
 It's the 3 body problem, baby!
 
-![Flask 3 Bodies](/blog_img/dev/flask-vibe-coded.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="Three Body Repo" image="/blog_img/dev/flask-vibe-coded.png" subtitle="My Fav RAGs Post" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Chat with various LLMs x Youtube Groq Summaries" >}}
+{{< /cards >}}
 
-https://github.com/JAlcocerT/ThreeBodies
+<!-- ![Flask 3 Bodies](/blog_img/dev/flask-vibe-coded.png) -->
+
+
 
 How about using this Flask web app with https thanks to Traefik?
 
@@ -457,8 +375,6 @@ Just sping up Tiny Auth with:
 ```sh
 sudo docker compose up -d
 ```
-
-
 And go to `https://tinyauth.jalcocertech.com` or whatever subdomain you placed.
 
 
@@ -474,14 +390,13 @@ And you will be logged in:
 
 ```sh
 docker compose -f PiwigoTraefik_docker-compose.yml up -d
+##command: tail -f /dev/null #in case you need to keep running
 
-docker builder prune
-#docker system prune -a
-docker volume prune
-docker image prune -a
 
-    #command: tail -f /dev/null
-
+# docker builder prune
+# #docker system prune -a
+# docker volume prune
+# docker image prune -a
 ```
 
 
@@ -491,9 +406,11 @@ docker image prune -a
 
 ### Updating DNS Records
 
-Before moving forward...make sure that you have proper DNS records at your domain provider.
+Before moving forward...make sure that you have **proper DNS records** at your domain provider.
 
-> See [this script](https://github.com/JAlcocerT/Docker/tree/main/Security/DNS/Cloudflare_DNS)
+I have tested this with **Cloudflare**.
+
+> See [this script](https://github.com/JAlcocerT/Docker/tree/main/Security/DNS/Cloudflare_DNS), also at [3bodies](https://github.com/JAlcocerT/ThreeBodies/blob/main/Z_DeployMe/update_dns.py)
 
 We will need the Cloudflare API and zoneID, which you can get from:
 
@@ -510,3 +427,9 @@ curl -X GET "https://api.cloudflare.com/client/v4/zones?name=whateveryourdomaini
   -H "Authorization: Bearer whateveryourAPIis" \
   -H "Content-Type: application/json" | jq -r '.result[0].id'
 ```
+
+### Logto Authentication
+
+https://docs.logto.io/quick-starts/python
+
+* https://cloud.logto.io/
