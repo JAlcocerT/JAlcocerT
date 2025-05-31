@@ -383,6 +383,7 @@ Aquí tienes una recopilación de librerías de R, APIs, sitios web y otros recu
     * [https://dividendsandincome.com/dave-van-knapps-dividend-growth-portfolio/](https://dividendsandincome.com/dave-van-knapps-dividend-growth-portfolio/)
     * Ejemplo de un portafolio de crecimiento de dividendos.
 
+#### Google Sheets Tricks
 
 **Gráfico de Precios (Sparkline):**
 

@@ -369,7 +369,19 @@ docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest 
 #docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://fossengineer.com
 ```
 
-We moved forward with astro-nomy MIT theme, tweaked with some photo galleries for the real estate agency as per [this repo section](https://github.com/JAlcocerT/cybernetik-realestate-moises/tree/main/astro-nomy)
+We moved forward with **astro-nomy MIT theme**, tweaked with some photo galleries for the real estate agency as per [this repo section](https://github.com/JAlcocerT/cybernetik-realestate-moises/tree/main/astro-nomy)
+
+```sh
+
+```
+
+**It includes:**
+
+1. Welcome page
+2. About
+3. Pricing
+4. Properties searchable by location
+5. Property details with sliders / galleries
 
 ### Checks Ive Done
 

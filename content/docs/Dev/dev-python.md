@@ -9,6 +9,14 @@ url: 'useful-python-stuff'
 
 If you have [Python Installed](https://jalcocert.github.io/JAlcocerT/guide-python/#installing-python-) already.
 
+<!-- Flexdashboards: bootstrap, css, framekow (a,b,c),mcustomize from R with {bslib} 
+RSHiny + bslib
+
+DASH - flask, plotly.js, react.js, dash_bootstrap_components
+
+heroku
+netlify? -->
+
 You can do very cool things with it.
 
 {{< callout type="info" >}}
@@ -23,7 +31,6 @@ A good readme does the trick for any project.
 This is a [good Python Project Readme.](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/README.md)
 
 ### Python Virtual Envs
-
 
 There are several ways to install [Python Dependencies](https://fossengineer.com/python-dependencies-for-ai/).
 
@@ -79,8 +86,7 @@ echo $OPENAI_API_KEY
 
 ### UV
 
-I discovered UV package manager with a [DASH App](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)
-
+I discovered **UV package manager** with a [DASH App](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)
 
 Could not resist to add it to [this project, as an example](https://github.com/JAlcocerT/Streamlit-MultiChat?tab=readme-ov-file#getting-started)
 

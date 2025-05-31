@@ -12,10 +12,9 @@ This repository has a lot https://github.com/qinwf/awesome-R and I have done an 
 {{< /callout >}}
 
 
-
 ## Data Driven R
 
-What I enjoy about R, is that it can do very cool data stuff.
+What I enjoy **about R**, is that it can do very cool data stuff.
 
 > R can do many things, from simple **Websites** with Knit, to **Data Apps**
 
@@ -39,28 +38,21 @@ Flexdashboard can be hosted, for example, on Github Pages for free:
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/" title="Github Pages Recap Post" >}}
 {{< /cards >}}
 
+You can also render (knit) the html of those flexdashboards and add them to your [Staticaly Generated Sites](https://jalcocert.github.io/JAlcocerT/create-your-website/).
 
-<!-- Flexdashboards: bootstrap, css, framekow (a,b,c),mcustomize from R with {bslib} 
-RSHiny + bslib
-
-DASH - flask, plotly.js, react.js, dash_bootstrap_components
-
-heroku
-netlify? -->
 
 ### Shiny Apps
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for RStocks" >}}
-    {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="The RStocks App" image="/blog_img/hardware/x300.jpg" subtitle="Creating and Deploying a ShinyAPP with R" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="RStocks" image="/blog_img/hardware/x300.jpg" subtitle="Creating and Deploying a ShinyAPP with R | Blog Post" >}}
 {{< /cards >}}
 
+And if you are looking for a Flexdashboard example (deployed to Github Pages), see:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="The RStocks App" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="Creating and Deploying a ShinyAPP with R" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="The RStocks related FlexDashboard" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="Sample flexdashboard deployed to github pages" >}}
 {{< /cards >}}
-
-
 
 {{< callout type="info" >}}
 I covered **Containers for R Apps** [here](https://jalcocert.github.io/JAlcocerT/building-r-shiny-apps-container-image-with-docker/)

@@ -7,10 +7,10 @@ description: 'BI/AI another combo and more D&A Tools'
 url: 'ai-bi-tools'
 ---
 
-https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/
+
+It not just about *old school* [BI Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/), or the well known propietary ones like [Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) or PBi
 
 Today, we will have a look to:
-
 
 * **ChartDB**: A database diagrams editor that lets you visualize and design your database with a single query.
 * **Quix (wix-incubator)**: A powerful, open-source platform for data exploration and analysis.

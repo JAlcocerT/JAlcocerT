@@ -766,5 +766,5 @@ If you want **simpler Dashbards**, check:
 <!-- ![alt text](/blog_img/biz/RE/RE-bot.jpeg) -->
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data-Chat" image="/blog_img/biz/RE/RE-bot.jpeg" subtitle="Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data-Chat" image="/blog_img/biz/RE/RE-bot.jpeg" subtitle="Tinkering with RAGs - Source Code on Github" >}}
 {{< /cards >}}

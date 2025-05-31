@@ -381,6 +381,12 @@ chmod +x qprompt-v1.1.6-51788eb-linux-gcc-x86_64.AppImage
 
 ### Social Media Automation
 
+
+**Social Media Management Apps**
+
+- [Shoutify](https://github.com/TechSquidTV/Shoutify)
+
+
 Social Media can be simplified
 
 ![Forocoches3kbmw](/blog_img/memes/ezoeazin.jpg)
@@ -396,17 +402,10 @@ Social Media can be simplified
 
 * [IFTTT](https://ifttt.com/plans)
 
-* N8N AI Automation
+* **N8N** AI Automation - https://n8n.io/workflows/2950-ai-powered-social-media-content-generator-and-publisher/
 
 [N8N with ollama video](https://www.youtube.com/watch?v=VDuA5xbkEjo)
 
-* Active Pieces
-
-https://github.com/activepieces/activepieces
+* Active Pieces - https://github.com/activepieces/activepieces
 
 > Your friendliest open source AI automation tool ✨ Workflow automation tool 200+ integration / Enterprise automation tool / Zapier Alternative
-
-
-#### Social Media Management Apps
-
-- [Shoutify](https://github.com/TechSquidTV/Shoutify)

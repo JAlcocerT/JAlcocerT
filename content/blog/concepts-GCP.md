@@ -2,7 +2,7 @@
 title: "A closer look to Google Cloud Platform"
 date: 2025-02-16
 draft: false
-tags: ["dev"]
+tags: ["dev","BQ","Looker"]
 description: 'Big Query, Dataform and more about GCP. Compared with other Clouds and OnPrem.'
 url: 'understanding-google-cloud-platform'
 ---

@@ -317,23 +317,34 @@ From now on, I will include **ocker-compose stacks** linked to this kind of reca
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/SelfH/May25_docker-compose.yml/" title="Selfhosting Stack May 2025 | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
-I could not forget about PiGallery with its lovely map render and no DB requirement!
+You can see how each service is consuming with:
+
+```sh
+sudo docker compose stats
+```
+
+Or just sping couple of the services listed:
+
+```sh
+#sudo docker compose up -d
+```
+
+I could not forget about **PiGallery** somplicity, with its lovely map render and **no DB** requirement!
 
 ![PiGallery Map](/blog_img/selfh/https/pigallery-map.png)
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="/blog_img/selfh/https/pigallery-traefik-https.png" subtitle="PiGallery x Traefik | Docker Config" >}}
-{{< /cards >}}
-
-And How could I miss SearXNG and PiHole
-
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="/blog_img/selfh/https/pigallery-traefik-https.png" subtitle="PiGallery x Traefik | Docker Config" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGalleryTraefik_docker-compose.yml" title="Local Photo Viewer" image="/blog_img/selfh/https/pigallery-traefik-https.png" subtitle="PiGallery x Traefik | Docker Config" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/https/SearXNG-Traefik.png)
+And How could I miss **SearXNG and [PiHole](https://fossengineer.com/selfhosting-PiHole-docker/)**
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Search/SearXNG" title="SearXNG" image="/blog_img/selfh/https/SearXNG-Traefik.png" subtitle="SearXNG x Traefik | Docker Config" >}}
+{{< /cards >}}
+
+<!-- ![alt text](/blog_img/selfh/https/SearXNG-Traefik.png) -->
 
 ```sh
 docker builder prune

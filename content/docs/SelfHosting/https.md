@@ -37,6 +37,14 @@ Sample Selfhosted Apps with **Traefik support** out of the box:
 
 If the DNS is set properly, these will work:
 
+![alt text](/blog_img/selfh/https/cf-api-token.png)
+
+![alt text](/blog_img/selfh/https/cf-dns-python.png)
+
+![alt text](/blog_img/selfh/https/cf-dns-record.png)
+
+![alt text](/blog_img/selfh/https/Traefik-https.png)
+
 ```sh
 #nslookup gibme.duckdns.org
 nslookup https://jalcocertech.com

@@ -3,7 +3,7 @@ title: "How to setup TinyAuth"
 date: 2025-05-27T23:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'TinyAuth Setup, together with Traefik Reverse Proxy.'
+description: 'TinyAuth Setup, together with Traefik Reverse Proxy for https and Authentication.'
 url: 'testing-tinyauth'
 ---
 
@@ -16,10 +16,9 @@ https://tinyauth.doesmycode.work/docs/guides/github-oauth.html
 
 https://github.com/steveiliop56/tinyauth
 
-But whats TinyAuth?
+But what's **TinyAuth**?
 
-Just a [Okta alternative](https://opensourcealternative.to/?searchTerm=okta), similarly to [Authentik](https://opensourcealternative.to/project/authentik)
-
+*Just* a [Okta alternative](https://opensourcealternative.to/?searchTerm=okta), similarly to [Authentik](https://opensourcealternative.to/project/authentik)
 
 {{< cards cols="2" >}}
   {{< card link="https://www.youtube.com/watch?v=CmUzMi5QLzI" title="Traefik v3.3 Must See Video | From Jims Garage ↗" >}}
@@ -122,7 +121,6 @@ If you have ever faced with the problem of [http vs https](https://jalcocert.git
 
 It's written in Go, which makes it lightweight and efficient. Traefik is ideal for modern web applications, microservices, and containerized environments.
 
-
 {{< details title="Benefits of Traefik? 📌" closed="true" >}}
 
 Ease of use, high performance, and flexibility. You'll learn how Traefik can help you simplify your infrastructure, improve your application's scalability, and reduce errors.
@@ -148,7 +146,7 @@ Not enough with Nginx or Caddy?
 
 {{< cards cols="2" >}}
   {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosting-python-ai-apps-caddy/" title="Caddy Setup for AI Apps" >}}
+  {{< card link="https://fossengineer.com/selfhosting-traefik/" title="Traefik Setup" >}}
 {{< /cards >}}
 
 Have a look to **Traefik**
@@ -163,6 +161,9 @@ And it also provides a UI dashboard.
     * https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/
 
 > MIT | The Cloud Native Application Proxy
+
+
+![alt text](/blog_img/selfh/https/traefik-logs-ok.png)
 
 
 * **Strengths:**
@@ -381,6 +382,7 @@ Right on this label of the docker compose: `traefik.http.middlewares.traefik-aut
 And now, we just do:
 
 ```sh
+##https://github.com/JamesTurland/JimsGarage/blob/main/Traefik/docker-compose.yml
 sudo docker-compose up -d
 ```
 
@@ -388,59 +390,8 @@ And I got this kind of error:
 
 `2025-02-08T22:54:03Z ERR Error while building configuration (for the first time) error="error reading configuration file: /config.yml - read /config.yml: is a directory" providerName=file`
 
-```yml
-#https://github.com/JamesTurland/JimsGarage/blob/main/Traefik/docker-compose.yml
+But it worked for me with the v3.3 version and this guide:
 
-version: '3.5'
-
-services:
-  traefik:
-    image: traefik:latest
-    container_name: traefik
-    restart: unless-stopped
-    security_opt:
-      - no-new-privileges:true
-    networks:
-       proxy:
-    ports:
-      - 80:80
-      - 443:443
-    environment:
-      - CF_API_EMAIL=your@email.com
-      - CF_DNS_API_TOKEN=your-api-key
-      # - CF_API_KEY=YOU_API_KEY
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /home/ubuntu/docker/traefik/traefik.yml:/traefik.yml:ro
-      - /home/ubuntu/docker/traefik/acme.json:/acme.json
-      - /home/ubuntu/docker/traefik/config.yml:/config.yml:ro
-      - /home/ubuntu/docker/traefik/logs:/var/log/traefik
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.traefik.entrypoints=http"
-      - "traefik.http.routers.traefik.rule=Host(`traefik-dashboard.yourdomain.co.uk`)" # if you want a internal domain, get the wildcard cert for it and then choos traefik-dashboard.home.yourdomain.co.uk or what you want
-      - "traefik.http.middlewares.traefik-auth.basicauth.users=YOUR_USERNAME_PASSWORD"
-      - "traefik.http.middlewares.traefik-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https"
-      - "traefik.http.routers.traefik.middlewares=traefik-https-redirect"
-      - "traefik.http.routers.traefik-secure.entrypoints=https"
-      - "traefik.http.routers.traefik-secure.rule=Host(`traefik-dashboard.yourdomain.co.uk`)" # if you want a internal domain, get the wildcard cert for it and then choos traefik-dashboard.home.yourdomain.co.uk or what you want
-      - "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
-      - "traefik.http.routers.traefik-secure.tls=true"
-      - "traefik.http.routers.traefik-secure.tls.certresolver=cloudflare"
-      #- "traefik.http.routers.traefik-secure.tls.domains[0].main=home.yourdomain.co.uk" # If you want *.home.yourdomain.co.uk subdomain or something else, you have to get the certifcates at first.
-      #- "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.home.yourdomain.co.uk" # get a wildcard certificat for your .home.yourdomain.co.uk
-      - "traefik.http.routers.traefik-secure.tls.domains[0].main=yourdomain.co.uk" #if you use the .home.yourdomain.co.uk entry you have to change the [0] into [1]
-      - "traefik.http.routers.traefik-secure.tls.domains[0].sans=*.yourdomain.co.uk" # same here, change 0 to 1
-      - "traefik.http.routers.traefik-secure.service=api@internal"
-
-
-networks:
-  proxy:
-    name: proxy
-    external: true
-```
 
 
 * https://www.jimgogarty.com/installing-traefik-on-docker-with-docker-compose/
@@ -458,6 +409,69 @@ Thanks to this, finally I got my head around Traefik, for good:
 
 ## Conclusions
 
+### Traefik x TinyAuth x Flask
+
+I have [vibe coded](https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf) this [Flask](https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/) App:
+
+It's the 3 body problem, baby!
+
+![Flask 3 Bodies](/blog_img/dev/flask-vibe-coded.png)
+
+https://github.com/JAlcocerT/ThreeBodies
+
+How about using this Flask web app with https thanks to Traefik?
+
+Easy.
+
+We will need to create a Github OAUTH App
+
+![alt text](/blog_img/selfh/https/TinyAuth/gh-apps.png)
+
+1. Go to https://github.com/settings/applications/new
+
+Add the link as per your subdomain: https://tinyauth.jalcocertech.com/api/oauth/callback/github
+
+![alt text](/blog_img/selfh/https/TinyAuth/gh-oauth-apps.png)
+
+2. Then, registre the application. Get its ID and and its client secret:
+
+![alt text](/blog_img/selfh/https/TinyAuth/gh-client-secret.png)
+
+
+Those are required for
+
+```yml
+    environment:
+      - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID} #For GitHub OAuth
+      - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
+```
+
+3. When its done, we will be Seeing the application: https://github.com/settings/applications/3023538
+
+particularly at the [OAUTH developer section](https://github.com/settings/developers). 
+
+![alt text](/blog_img/selfh/https/TinyAuth/oauth-app-created.png)
+
+Just sping up Tiny Auth with:
+
+```sh
+sudo docker compose up -d
+```
+
+
+And go to `https://tinyauth.jalcocertech.com` or whatever subdomain you placed.
+
+
+![alt text](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png)
+
+Authorize the app
+
+![alt text](/blog_img/selfh/https/TinyAuth/tinyauth-authorize-app.png)
+
+And you will be logged in:
+
+![alt text](/blog_img/selfh/https/TinyAuth/tinyauth-logged-in.png)
+
 ```sh
 docker compose -f PiwigoTraefik_docker-compose.yml up -d
 
@@ -465,6 +479,9 @@ docker builder prune
 #docker system prune -a
 docker volume prune
 docker image prune -a
+
+    #command: tail -f /dev/null
+
 ```
 
 
