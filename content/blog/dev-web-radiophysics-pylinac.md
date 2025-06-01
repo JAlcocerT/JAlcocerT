@@ -219,3 +219,7 @@ See https://github.com/joemccann/dillinger as The last **Markdown editor**, ever
 3. Wolfram alfa but FOSS calculator: <https://www.opensourcealternative.to/project/Kalker>
 
 * https://kalker.xyz/
+
+4. See also the [Sympy](https://pypi.org/project/sympy/) Python library for symbolic mathematics
+
+> Matlab had a similar feature, which I used on [this thesis](https://github.com/JAlcocerT/Bike_dynamic_simulator)

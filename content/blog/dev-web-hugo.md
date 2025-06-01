@@ -2,7 +2,7 @@
 title: "How to use HUGO [101] and make quick Websites"
 date: 2024-09-06
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Website"]
 summary: 'How to get started with HUGO as SSG and create Webs. GO & HUGO Setup with ChartJS.'
 url: 'using-hugo-as-website'
 ---

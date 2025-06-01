@@ -1,6 +1,6 @@
 ---
 title: "Stocks with Python"
-date: 2025-06-03
+date: 2025-06-01T19:20:21+01:00
 draft: false
 tags: ["Python"]
 description: "A Cooler R/Stocks - This time with Python. And with proper Auth/UIM."
@@ -18,7 +18,7 @@ After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with
 
 
 {{< callout type="info" >}}
-The project [**source code**](https://gitlab.com/fossengineer1/py_stocks) - PyStocks 💻 
+The project initially, [**source code**](https://gitlab.com/fossengineer1/py_stocks) - PyStocks. But then vibe coded it here 💻 
 {{< /callout >}}
 
 If all of this sounds familiar.
@@ -33,6 +33,8 @@ Sometime ago I was doing similar Project in **R Shiny** 💻
 {{< /cards >}}
 
 
+And it was not all about yahoo finance back then...
+
 {{< details title="API's I was using with R/Stocks 📌" closed="true" >}}
 
 * [PriceR](https://jalcocert.github.io/JAlcocerT/r-priceR-package-guide/#what-is-pricer-about)
@@ -42,20 +44,38 @@ Sometime ago I was doing similar Project in **R Shiny** 💻
 
 {{< /details >}}
 
+But this time, I thought to keep a **simpler data architecture** and *just* rely on yfinance queries.
 
-https://github.com/CodeWithCJ/SparkyBudget?ref=selfh.st
+From [google sheets](https://jalcocert.github.io/JAlcocerT/R-Stocks/#google-sheets-tricks) we have the possibility to query, very simply the price/PER/EPS of a stock:
 
-## PyStocks
+```sh
+=SPARKLINE(GoogleFinance("NYSE:KO"; "price"; HOY()-60; HOY()))
+=GoogleFinance("NYSE:KO")
+=SI.ERROR(GoogleFinance("NYSE:KO";"pe");999)
+=GoogleFinance("NYSE:KO";"eps")
+```
 
-For user authentication: clear/supabase/logto...
+**The Idea:**
+
+Business Side:
+- To feed a portfolio
+- To see consolidated information
+- To see value and dividend % CAGR for a past period
+- To let the user play with future what if scenarios (given just percentages of growth for those parameters)
+
+Tech Side:
+
+To see whats the best way for me to authencate users: clear/supabase/logto...
 
 * https://clerk.com/docs
 * https://github.com/clerk/clerk-sdk-python/blob/main/README.md
+
 * https://www.reddit.com/r/Supabase/comments/1dvabn6/what_is_the_best_solution_to_use_supabase_auth/
 * https://www.reddit.com/r/nextjs/comments/1bvda9r/officially_hate_supabase_auth/?rdt=40537
 * https://www.reddit.com/r/Supabase/comments/xaxecr/authentication_with_supabase_is_easy_almost/
 
 
+## PyStocks
 
 
 {{< filetree/container >}}
@@ -76,24 +96,31 @@ For user authentication: clear/supabase/logto...
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
-```
-content
-├── _index.md // <- /
-├── docs
-│   ├── _index.md // <- /docs/
-│   ├── getting-started.md // <- /docs/getting-started/
-│   └── guide
-│       ├── _index.md // <- /docs/guide/
-│       └── organize-files.md // <- /docs/guide/organize-files/
-└── blog
-    ├── _index.md // <- /blog/
-    └── post-1.md // <- /blog/post-1/
-```
+
+### The Data Source
+
+### User Interaction
+
+The user will potentially be curious about that 'what if' for its assets.
+
+So why not giving the possibility to feed a sample Google Sheet with its sharable link to the app?
+
+### The Charts
+
 
 ### AI Features for PyStocks
 
-Chat with the pulled financial data thanks to [LangChain](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/#exploring-langchain).
+This is very yolo mode.
 
+Do you really want to make these decions based on a LLM?
+
+Nooot the best idea.
+
+But since grok allows for real time information retrieval since not long ago, that can be very interesting to see.
+
+> We could also chat with the pulled financial data thanks to [LangChain](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/#exploring-langchain)
+
+>> Chat with a DB applied for finance - <https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/PyStocksDB>
 
 
 {{< callout type="info" >}}
@@ -101,16 +128,22 @@ I was exploring on [this post](https://jalcocert.github.io/JAlcocerT/how-to-chat
 {{< /callout >}}
 
 
-Chat with a DB applied for finance - <https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/PyStocksDB>
-
 
 ---
 
 ## Conclusions
 
-This goes one step further than the previous [project RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/).
+This goes few steps further than the previous [project RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/).
 
 And definitely much more than [FlexDashboards](https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/) in R.
+
+Wouldnt this be a cool companion for a website, as a lead magnet?
+
+Even as a subscription based model, say 7$/month to have access to such tool and historical info?
+
+---
+
+## FAQ 
 
 ### Selfhostable Apps
 
@@ -154,9 +187,6 @@ I also got time to compare **different SP500 ETFS performance**:
   * https://www.youtube.com/watch?v=REw3y_Jv3Ig&t=0s
   * Paid alternative - https://www.outerbase.com/
 
----
-
-## FAQ
 
 {{< details title="Interesting Financial Parameters / KPIs 📌" closed="true" >}}
 
@@ -337,7 +367,13 @@ The project is actively being developed, inviting community involvement through 
 
 Similar projects include **Firefly III** and **GnuCash**.
 
+* https://github.com/CodeWithCJ/SparkyBudget
+
+> Simple Budgeting, Powerful Results 
+
 ### Interesting Financial Stories
+
+These are a collection of finance related posts that have been somehow interesting for me to read:
 
 * https://dividendsandincome.com/author/dave-van-knapp/
 * https://dividendsandincome.com/2024/04/08/how-my-dividend-growth-portfolios-income-keeps-expanding/
@@ -346,9 +382,9 @@ Similar projects include **Firefly III** and **GnuCash**.
 
 * https://wtfhappenedin1971.com/
 * https://whycryptocurrencies.com/
+* https://libreportfolio.fyi/
 
 * https://curvo.eu/
-
 
 {{< callout type="info" >}}
 You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/author/B0BW46JD83?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) one with AI. How? with an [**AIssistant**](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#kindle-notes-to-ai) 
@@ -360,8 +396,7 @@ You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/a
 
 * https://tecalculo.com/en/compound-interest-calculator
 
-* https://www.multpl.com/
-  * it has Sp500 PE Ratios, 10y treausry rates...
+* https://www.multpl.com/- It has Sp500 PE Ratios, 10y treausry rates...
 
 * https://www.wallstreetmojo.com/trailing-pe-vs-forward-pe/
 
@@ -415,14 +450,17 @@ You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/a
 
 ---
 
-## Thanks to
+## Outro
+
+### Thanks to
 
 * Hugo Hextra [Latex/Katex Syntax](https://imfing.github.io/hextra/docs/guide/latex/)
-
+* Thanks to Streamlit/Flask for the foundations for the web/app.
 
 ### VBA vs OpenPyxl
 
-Okay, let's break down what openpyxl is and how it relates to Excel macros:
+And all of this could have just been done in plain excel...
+
 
 **What is openpyxl?**
 

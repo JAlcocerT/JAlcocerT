@@ -26,6 +26,10 @@ Or maybe you had some kind of **waiting list** in place.
 
 ## Authentication
 
+### TinyAuth
+
+
+
 ### LogTo
 
 I was playing around with [LogTo](https://logto.io/) few months ago, together with Streamlit.
@@ -47,3 +51,12 @@ To see how customers interact with your product, you can try with https://eu.pos
 ![alt text](/blog_img/entrepre/product/Posthog-PMF.png)
 
 [![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
+
+
+---
+
+## Use Case
+
+[HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) Websites, via its own container
+
+Spinned with subdomain via Traefik
