@@ -149,7 +149,7 @@ You can use this, for example, to send a welcome email.
     * https://kwesforms.com/pricing
     * You place [whatever front end UI](https://jalcocert.github.io/JAlcocerT/blog/dev-css/#flowbite) you like and they manage the forms back end
 
-{{< details title="Using Google Forms 📌" closed="true" >}}
+{{< details title="Using Google Forms | The iframe required 📌" closed="true" >}}
 
 You just need to copy the html!
 
