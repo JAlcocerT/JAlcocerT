@@ -2,23 +2,22 @@
 title: "Stocks with Python"
 date: 2025-06-01T19:20:21+01:00
 draft: false
-tags: ["Python"]
+tags: ["Python","Streamlit","Flask","RStocks"]
 description: "A Cooler R/Stocks - This time with Python. And with proper Auth/UIM."
 summary: 'A Cooler R/Stocks - This time with Python. And with proper auth'
 url: 'python-stocks-webapp'
 math: true
 ---
 
-**TradFi** - Traditional Finances as I saw recently on redit.
+**TradFi** - Or Traditional Finances, as I saw recently on redit.
+
+Wouldnt it be great to go out the typical google sheet and have a great UX when looking at your finances?
+
+
 
 
 {{< callout type="info" >}}
-After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/), there is also the **financial aspects of travelling**
-{{< /callout >}}
-
-
-{{< callout type="info" >}}
-The project initially, [**source code**](https://gitlab.com/fossengineer1/py_stocks) - PyStocks. But then vibe coded it here 💻 
+The project initially, [**source code**](https://gitlab.com/fossengineer1/py_stocks) - PyStocks. But then vibe coded it [here](https://github.com/JAlcocerT/Py_Stocks) 💻 
 {{< /callout >}}
 
 If all of this sounds familiar.
@@ -62,6 +61,7 @@ Business Side:
 - To see consolidated information
 - To see value and dividend % CAGR for a past period
 - To let the user play with future what if scenarios (given just percentages of growth for those parameters)
+- Reply to typical [questions](#stock-questions---answered)
 
 Tech Side:
 
@@ -135,11 +135,16 @@ I was exploring on [this post](https://jalcocert.github.io/JAlcocerT/how-to-chat
 
 This goes few steps further than the previous [project RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/).
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks//" title="About RStocks" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="R Stock Shiny App Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Stocks" title="Python Stocks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Vibe coding Python WebApps" >}}
+{{< /cards >}}
+
 And definitely much more than [FlexDashboards](https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/) in R.
 
 Wouldnt this be a cool companion for a website, as a lead magnet?
 
-Even as a subscription based model, say 7$/month to have access to such tool and historical info?
+Even as a subscription based model, say [7$/month](https://www.cazadividendos.com/recursos/indice/) to have access to such tool and historical info?
 
 ---
 
@@ -284,7 +289,7 @@ Both metrics are important:
 
 {{< /details >}}
 
-A diagram is worth more than xyz words, right?
+A [diagram](https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/) is worth more than xyz words, right?
 
 ```mermaid
 %%{init: {"flowchart": {"htmlLabels": false}} }%%

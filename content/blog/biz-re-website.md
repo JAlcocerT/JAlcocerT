@@ -372,7 +372,11 @@ docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest 
 We moved forward with **astro-nomy MIT theme**, tweaked with some photo galleries for the real estate agency as per [this repo section](https://github.com/JAlcocerT/cybernetik-realestate-moises/tree/main/astro-nomy)
 
 ```sh
+git clone https://github.com/JAlcocerT/cybernetik-realestate-moises
+cd cybernetik-realestate-moises/astro-nomy
+npm install
 
+npm run dev
 ```
 
 **It includes:**
@@ -383,7 +387,7 @@ We moved forward with **astro-nomy MIT theme**, tweaked with some photo gallerie
 4. Properties searchable by location
 5. Property details with sliders / galleries
 
-### Checks Ive Done
+### Checks for Website Delivery
 
 {{< details title="Website Checks before its delivery 📌" closed="true" >}}
 

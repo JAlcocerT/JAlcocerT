@@ -30,6 +30,8 @@ And now there is a chance to do a **photo & video recap**.
 For night video and [the oa5pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/), for me it has worked better: -0.7EV, 50fps, S 1/400, ISO 100 ~25600 (max range), AWB, Texture -1 and Noise Reduction -2.
 {{< /callout >}}
 
+And all of this is great, but [consider this](#conclusions) while creating.
+
 
 ## Video Editing
 
@@ -416,6 +418,13 @@ Tools for Creator Mode:
 
 {{< youtube "7CnjKua865Y" >}}
 
+Never forget about proper photo/video backup before your trips!
+
+https://jalcocert.github.io/JAlcocerT/photo-management-tools/
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#backups" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Hardware & Softw setup for traveling" >}}
+{{< /cards >}}
 
 
 ### Color Grading

@@ -1,9 +1,9 @@
 ---
-title: "So: You want to be an entrepreneur?"
+title: "Want to be an entrepreneur?"
 date: 2025-05-29
 draft: false
-tags: ["AI","Entrepreneuring"]
-description: 'SelfHosted Product Tools, Analytics and Authentication'
+tags: ["Entrepreneuring","Websites"]
+description: 'SelfHosted Product Tools, Analytics and Authentication. The mission of ghost websites its just so great.'
 url: 'product-tools'
 ---
 
@@ -23,6 +23,36 @@ You got to know about that thanks to a [newsletter/forms](https://jalcocert.gith
 > From those I enjoyed [formbricks](https://formbricks.com/) and [Mailerlite](https://accounts.mailerlite.com/login), which can be integrated with Gsheets/[cal](https://cal.com/)/webhooks as seen [here](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)
 
 Or maybe you had some kind of **waiting list** in place.
+
+## Motivation
+
+Recently I got to [read a blog](https://john.onolan.org/12/?ref=selfh.st) about the CEO of [ghost](https://github.com/TryGhost/Ghost)
+
+{{< details title="Ghost Post Summary 📌" closed="true" >}}
+
+This article celebrates Ghost's **12th anniversary**, reflecting on its journey from an idealistic open-source project to a successful business with **$8M in annual recurring revenue** and a team of 34.
+
+The founder, who started Ghost at 24, initially aimed to provide independent publishers with a dedicated open technology stack. This was a response to the rise of media companies like Vox and BuzzFeed, whose proprietary software gave them a significant advantage over traditional outlets. Ghost sought to empower creators and newsrooms to compete without being beholden to closed platforms like Facebook and Medium.
+
+Over the past 12 years, Ghost has consistently focused on building tools for web publishing, particularly helping creators build sustainable businesses through features like **paid subscriptions**. This focus has led to over **$100 million** earned by independent media businesses using Ghost.
+
+The author expresses pride in Ghost's achievements as a **small, independent non-profit** competing with large, VC-funded platforms.
+
+The article concludes by noting a growing appetite for independent solutions and announces the upcoming release of **Ghost 6.0**, a significant step forward for the platform. Ghost is also **hiring** for remote positions.
+{{< /details >}}
+
+And the quote was just so resonating: 
+
+> 'Freedom of the press is guaranteed only to those who own one'
+
+So....why not trying something similar?
+
+Similar but:
+
+1. Keeping OSS
+2. No database required - Your flat files, your rules. Easier to migrate.
+3. Even cooler themes
+4. *Greener* to serve
 
 ## Authentication
 
@@ -57,6 +87,8 @@ To see how customers interact with your product, you can try with https://eu.pos
 
 ## Use Case
 
-[HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) Websites, via its own container
+[HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) Websites, via [its own container](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#hugo-container)
 
-Spinned with subdomain via Traefik
+Spinned with [subdomain and https](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) via [Traefik](https://fossengineer.com/selfhosting-traefik/)
+
+And...for user interaction [a CMS](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/)

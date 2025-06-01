@@ -318,16 +318,12 @@ And by using the chart.html shortcode:
 
 ### HUGO Container
 
-Thanks to https://github.com/JamesTurland/JimsGarage/tree/main/Web-Servers and https://github.com/klakegg/docker-hugo
+Thanks to https://github.com/JamesTurland/JimsGarage/tree/main/Web-Servers from where I got to know:
 
-
+* https://github.com/klakegg/docker-hugo
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="HUGO Container | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
-This is a very cool way to selfhost your HUGO instance!
-
-
-
-
+This is a very cool way to [selfhost your SSG](https://fossengineer.com/alternatives-for-hosting-static-websites/) - The HUGO website instance!

@@ -3,7 +3,7 @@ title: "Web Apps with Flask and cool ChartJS"
 date: 2025-04-05T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'Flask WebApps, IoT Sensors, ChartJS and Websockets.'
+description: 'Flask WebApps, IoT Sensors, ChartJS and Websockets. Deployed as container to ghcr.'
 url: 'web-apps-with-flask'
 ---
 
@@ -11,6 +11,10 @@ For quite some time I wanted to give it a try to Flask (as an alternative to Str
 
 * https://github.com/pallets/flask/
   * https://pypi.org/project/Flask/
+
+> What it is Flask for?
+
+Its a Python framework to build Web Apps (and pretty fast!).
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-projects-python-dependencies/" title="Python Deps 101" >}}
@@ -195,7 +199,7 @@ How about using some sensor data to be displayed into a Flask Web app?
 We can use the data from IoT Sensors, or directly data from our own devices: laptops, server, sbc...
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/" title="x13 and SBCs" image="/blog_img/hardware/sbcs-x13.jpg" subtitle="CPU Temp" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/" title="x13 and SBCs" image="/blog_img/hardware/sbcs-x13.jpg" subtitle="CPU Temp measurement from the Lenovo x13" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/" title="X300" image="/blog_img/mini_pc/bmax_asrockx300.jpg" subtitle="Server CPU Temp" >}}
 {{< /cards >}}
 
@@ -278,9 +282,9 @@ sensors | grep -E "Tctl|fan2|PPT"
 
 We are going to get to this
 
-![alt text](/blog_img/iot/flask/flask-x300-cpu.png)
+![Flask WebApp for the x300](/blog_img/iot/flask/flask-x300-cpu.png)
 
-> [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/)
+> For the [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/) small factor computer
 
 
 ```sh

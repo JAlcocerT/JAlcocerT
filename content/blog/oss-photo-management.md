@@ -2,12 +2,12 @@
 title: "Tools for better Photo Management and BackUps"
 date: 2025-03-08
 draft: false
-tags: ["OSS"]
+tags: ["OSS","Homelab"]
 description: 'Testing tools for Photo Management and better backup techniques.'
 url: 'photo-management-tools'
 ---
 
-After traveling and tinkering for a while with Photos and videos with [the Pixel 8 Pro](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/)...
+After **traveling and tinkering** for a while with Photos and videos with [the Pixel 8 Pro](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/)...
 
 
 {{< cards >}}
@@ -16,8 +16,13 @@ After traveling and tinkering for a while with Photos and videos with [the Pixel
 
 ...I soon required a lot of extra space.
 
-> Literally in ~1year of use I created >200GB of data. Not counting the [OA5Pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/) Videos.
+**A lot of it**
 
+> Literally in ~1year of use I created >200GB of data.
+
+Not counting the [OA5Pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/) Videos.
+
+Thats why today, I want to talk about Selfhosted photo Tools!
 
 ## SelfHosted Photo Tools
 
@@ -65,7 +70,7 @@ I have added a complete docker stack with these [Selfhostable photo tools **here
 
 [Photoview](https://fossengineer.com/selfhosting-Photoview-docker/) can be configured with a [docker compose **configuration file 🐳**](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Photoview_docker-compose.yml)
 
-![alt text](/blog_img/selfh/Photo/photoview.png)
+![Photoview UI](/blog_img/selfh/Photo/photoview.png)
 
 > Create your user/pass + Your path is `/photos` as per the config file.
 
@@ -105,7 +110,7 @@ sudo docker stats pigallery2 #~190mb for 66GB data
 
 * Yet powerful Photo Details:
 
-![alt text](/blog_img/selfh/Photo/PiGallery-PhotoInfo.png)
+![PiGalleri2 UI](/blog_img/selfh/Photo/PiGallery-PhotoInfo.png)
 
 * The MAP feature is lovely...
 
@@ -115,7 +120,7 @@ sudo docker stats pigallery2 #~190mb for 66GB data
 
 
 {{< callout type="info" >}}
-See PiGalleryv2 config file [here 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGallery_docker-compose.yml)
+See PiGalleryv2 config file [here 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGallery_docker-compose.yml). It's all without a DB!
 {{< /callout >}}
 
 
@@ -132,8 +137,6 @@ See PiGalleryv2 config file [here 🐳](https://github.com/JAlcocerT/Docker/blob
   * https://piwigo.org/
 
 > GPL2.0 | Manage your photos with Piwigo, a full featured open source photo gallery application for the web. Star us on Github! More than 200 plugins and themes available. Join us and contribute!
-
-
 
 {{< callout type="info" >}}
 See PiwiGo config file [here 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Piwigo_Docker-compose.yml)
@@ -173,7 +176,8 @@ With pretty cool [features](https://piwigo.org/features):
 
 ### Chevereto
 
-* https://fossengineer.com/selfhosting-chevereto-docker/
+Chevereto is more like an open instagram that [you can Selfhost](https://fossengineer.com/selfhosting-chevereto-docker/)
+
 * https://v4-docs.chevereto.com/guides/docker/
 * https://hub.docker.com/r/linuxserver/chevereto
 
@@ -181,9 +185,11 @@ With pretty cool [features](https://piwigo.org/features):
 
 ## Interesting BackUp Software
 
-https://jalcocert.github.io/RPi/posts/selfhosting-with-docker/#several-apps---raspberry-pi-media-server
+You could use a [Pi as backpin server](https://jalcocert.github.io/RPi/posts/selfhosting-with-docker/#several-apps---raspberry-pi-media-server).
 
 ### Nextcloud
+
+And Nextcloud would be an amazing option for it.
 
 Nextcloud can do much more than just photo management.
 

@@ -326,22 +326,22 @@ With Traefik working, its time to combine it with a sample Flask Web App and **T
 
 I have [vibe coded](https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf) this [Flask](https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/) App:
 
-It's the 3 body problem, baby!
+It's the **3 body problem**, baby!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="Three Body Repo" image="/blog_img/dev/flask-vibe-coded.png" subtitle="My Fav RAGs Post" >}}
-  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Chat with various LLMs x Youtube Groq Summaries" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="Three Body Repo" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask Post" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App" >}}
 {{< /cards >}}
 
 <!-- ![Flask 3 Bodies](/blog_img/dev/flask-vibe-coded.png) -->
 
 
 
-How about using this Flask web app with https thanks to Traefik?
+How about using this **Flask web app** with https thanks to Traefik?
 
 Easy.
 
-We will need to create a Github OAUTH App
+We will need to create a **Github OAUTH App**:
 
 ![alt text](/blog_img/selfh/https/TinyAuth/gh-apps.png)
 
@@ -354,7 +354,6 @@ Add the link as per your subdomain: https://tinyauth.jalcocertech.com/api/oauth/
 2. Then, registre the application. Get its ID and and its client secret:
 
 ![alt text](/blog_img/selfh/https/TinyAuth/gh-client-secret.png)
-
 
 Those are required for
 

@@ -333,6 +333,15 @@ I could not forget about **PiGallery** somplicity, with its lovely map render an
 
 ![PiGallery Map](/blog_img/selfh/https/pigallery-map.png)
 
+In fact, PiGallery is my favourite HomeLab photo tool, due to its simplicity
+<!-- 
+![PiGalleri2 UI](/blog_img/selfh/Photo/PiGallery-PhotoInfo.png) -->
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/#pigallery" title="PiGallery2 Setup" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="I even forked PiGallery2!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="See Immich" image="/blog_img/selfh/Photo/immich-map.png" subtitle="As a full fledged Photo backup alternative with mobile apps" >}}
+{{< /cards >}}
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGalleryTraefik_docker-compose.yml" title="Local Photo Viewer" image="/blog_img/selfh/https/pigallery-traefik-https.png" subtitle="PiGallery x Traefik | Docker Config" >}}

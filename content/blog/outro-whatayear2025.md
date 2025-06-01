@@ -7,6 +7,10 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+{{< callout type="info" >}}
+After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/), there is also the **financial aspects of travelling**
+{{< /callout >}}
+
 https://echarts.apache.org/en/index.html
 
 https://github.com/penpot/penpot/blob/develop/docker/images/docker-compose.yaml

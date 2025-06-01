@@ -2,8 +2,8 @@
 title: "SelfHosting Updates - Spring 2025"
 date: 2025-03-21T01:20:21+01:00
 draft: false
-tags: ["Dev"]
-description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich,...'
+tags: ["Homelab"]
+description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich, Caddy...'
 url: 'selfhosted-apps-spring-2025'
 ---
 
@@ -23,7 +23,7 @@ Recently I was [reviewing the OS's](https://jalcocert.github.io/JAlcocerT/os-for
 
 What else?
 
-I had to debug tailscale VPN like so:
+I had to debug **tailscale VPN** like so:
 
 ```sh
 sudo tailscale status | grep -v "offline"
@@ -75,10 +75,12 @@ source ~/.bashrc   # Or source ~/.zshrc
 podman run -d -p 8888:8000 -p 9999:9000 --name=portainerpodman --restart=always -v $XDG_RUNTIME_DIR/podman/podman.sock:/var/run/docker.sock -v portainerpodman_data:/data portainer/portainer-ce
 ```
 
-![alt text](/blog_img/selfh/podman-network.png)
+![Podman Network](/blog_img/selfh/podman-network.png)
 
 
 ### Homarr
+
+A very interesting web app to put together your **homelab links**:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Config File 🐳 ↗"  >}}
@@ -88,7 +90,7 @@ podman run -d -p 8888:8000 -p 9999:9000 --name=portainerpodman --restart=always 
 
 1. **Integrations** with other apps: Nextcloud, qbitrorrent, ...
 
-![alt text](/blog_img/selfh/media/homarr-nc.png)
+![Homarr - NextCloud Integration](/blog_img/selfh/media/homarr-nc.png)
 
 ![alt text](/blog_img/selfh/media/homarr1.png)
 
@@ -98,20 +100,22 @@ podman run -d -p 8888:8000 -p 9999:9000 --name=portainerpodman --restart=always 
 
 ### Better HTTPs and SSL
 
+As this can be a recurrent topic, I have created [this docs section](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/).
+
 1. I Started to get https with **NGINX**
 
-2. Then I tried **Caddy** with some of my AI projects last year
+2. Then I tried **Caddy** with some of my [AI projects last year](https://jalcocert.github.io/JAlcocerT/selfhosting-python-ai-apps-caddy/#how-to-setup-caddy)
 
 The good thing with Caddy, is that it will work as long as you have a good `Caddyfile` written and the DNS records set properly.
 
-> http challenge will require portforwarding if you are behind a NAT, but with DNS Challenge we are good to go
+> http challenge will require portforwarding if you are behind a NAT, but **with DNS Challenge we are good to go!**
 
 **What do I like about Caddy**
 
 Easy setup as per [JimsGarage Video](https://www.youtube.com/watch?v=ZOtUco5EwoI) and this post https://ugeek.github.io/blog/post/2023-10-05-caddy-certificado-https-autofirmado-red-local.html
 
 {{< callout type="warning" >}}
-Make sure to create the **A DNS Record** pointing to the Pi home address, like `pi-portainer.jalcocertech.xyz` before!
+Make sure to create the **A DNS Record** pointing to the Pi home address, like `pi-portainer.jalcocertech.xyz` before spinning the container!
 {{< /callout >}}
 
 
@@ -127,7 +131,7 @@ sudo docker compose up -d #dont use the OLD docker-compose up -d
 
 The local addresses are treated specially, as *reserved IP*:
 
-![alt text](/blog_img/selfh/https/caddy-cloudflare-dns.png)
+![Caddy Cloudflare DNS](/blog_img/selfh/https/caddy-cloudflare-dns.png)
 
 Remember to configure this:
 
@@ -151,7 +155,7 @@ ping pi-portainer.jalcocertech.xyz
 # rtt min/avg/max/mdev = 7.313/14.621/25.481/7.830 ms
 ```
 
-![alt text](static/blog_img/selfh/https/caddy-https-cert.png)
+![Caddy HTTPs Certificates](static/blog_img/selfh/https/caddy-https-cert.png)
 
 The **Caddy API** its just amazing:
 
@@ -175,17 +179,27 @@ And...you can do some automatic magic, and make new configurations to it via CLI
 
 ### Authentication
 
+There are ways to put layers of authentication between the proxies and our apps.
+
+So that we can authenticate who can login to the services behind them.
+
+Pretty awsome.
+
 <!--
 https://www.youtube.com/watch?v=ywQVe9ikcVI 
 -->
 
 {{< youtube "ywQVe9ikcVI" >}}
 
-Forward Auth
+Forward Auth...?
+
+Thats another story.
+
+And scope for another post!
 
 ### Immich
 
-My previous go to solution with: Syncthing + PiGallery works perfectly.
+My previous go to solution with: Syncthing + PiGallery, which works perfectly and avoid having a database to backup!
 
 But among all the Photo Tools I reviewed/tried recently, Immich is the one I tried with the **best mobile app experience**.
 
@@ -195,7 +209,7 @@ But among all the Photo Tools I reviewed/tried recently, Immich is the one I tri
 
 **What do I like about Immich**?
 
-It provides a very similar experience to Google Photos.
+It provides a very *similar* experience to Google Photos.
 
 1. Semantic Search and facial recognition
 
@@ -207,11 +221,16 @@ It provides a very similar experience to Google Photos.
 
 4. Also with Map Feature!
 
-![alt text](/blog_img/selfh/Photo/immich-map.png)
+![Immich Map](/blog_img/selfh/Photo/immich-map.png)
 
-![alt text](/blog_img/selfh/Photo/immich.png)
+![Immich UI](/blog_img/selfh/Photo/immich.png)
 
 5. When you create a new user, they will be prompted to change their password during the first login
+
+
+{{< callout type="info" >}}
+Alternatively, see [these photo tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/): like PiGallery or Nextcloud
+{{< /callout >}}
 
 ---
 
@@ -219,7 +238,7 @@ It provides a very similar experience to Google Photos.
 
 Remember that it is possible to make business around open source.
 
-Always check the licenses.
+> Always check the licenses though!
 
 And remember to [create the proper invoice, also with F/OSS](https://fossengineer.com/open-source-invoice-creator/).
 
@@ -234,7 +253,7 @@ And remember to [create the proper invoice, also with F/OSS](https://fossenginee
 
 If you have a smart tv, probably those are already installed or you can add them
 
-![alt text](/blog_img/selfh/media/jellyfin-smarttv.png)
+![Jellyfin SmartTV](/blog_img/selfh/media/jellyfin-smarttv.png)
 
 ![alt text](/blog_img/selfh/media/jellyfin1.png)
 
@@ -262,8 +281,6 @@ See it live: https://it-tools.tech/
 
 4. [Fail2Ban](https://fossengineer.com/setup-fail2ban-with-docker/) Setup
 
-
-
 <!--
  https://www.youtube.com/watch?v=UCsYWXEuvms 
  -->
@@ -275,17 +292,19 @@ This has been with my for a while.
 
 But now *its reloaded* with its **v6**.
 
-If you are looking for other Selfhosted DNS, see: GoAdblock
 
 <!-- https://www.youtube.com/watch?v=mnry95ay0Bk -->
 
 {{< youtube "mnry95ay0Bk" >}}
 
+> If you are looking for other Selfhosted DNS, see: GoAdblock
+
+
 #### NextCloud
 
 Its a very intuitive way to backup your Smartphones:
 
-![alt text](/blog_img/selfh/media/nextcloud-pixel8-sync.png)
+![NextCloud Sync Android](/blog_img/selfh/media/nextcloud-pixel8-sync.png)
 
 
 {{< cards >}}
@@ -293,11 +312,11 @@ Its a very intuitive way to backup your Smartphones:
 {{< /cards >}}
 
 
-> Nextcloud! Respecting your folder order and avoiding the use of ML of immich
+> Nextcloud! Respecting your folder order and avoiding the use of ML of [immich](#immich)
 
 And you can always see what you have / modify stuff without taking space on your laptop:
 
-![alt text](/blog_img/selfh/media/nc-dav-otherlocations.png)
+![Nextcloud WebDAV](/blog_img/selfh/media/nc-dav-otherlocations.png)
 
 See the bottom right, where you can add your [NC web Dav](https://docs.nextcloud.com/server/31/user_manual/en/files/access_webdav.html) path: `davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav` or `dav://your_nc_user@192.168.0.12:8080/remote.php/webdav`
 

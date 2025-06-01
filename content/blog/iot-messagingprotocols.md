@@ -9,6 +9,8 @@ url: 'messaging-protocols'
 
 You might be playing around with your Pi:
 
+https://jalcocert.github.io/RPi/posts/rpi-mqtt/
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/rpi-gps-superset/#apache-superset-setup" title="Superset Setup" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="IoT Pi Project with Superset" >}}
 {{< /cards >}}
