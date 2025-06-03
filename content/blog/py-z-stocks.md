@@ -43,7 +43,7 @@ And it was not all about yahoo finance back then...
 
 {{< /details >}}
 
-But this time, I thought to keep a **simpler data architecture** and *just* rely on yfinance queries.
+But this time, I thought to keep a **simpler data architecture** and *just* rely on [yfinance queries](#the-data-source).
 
 From [google sheets](https://jalcocert.github.io/JAlcocerT/R-Stocks/#google-sheets-tricks) we have the possibility to query, very simply the price/PER/EPS of a stock:
 
@@ -77,6 +77,7 @@ To see whats the best way for me to authencate users: clear/supabase/logto...
 
 ## PyStocks
 
+The structure looks like so:
 
 {{< filetree/container >}}
   {{< filetree/folder name="content" >}}
@@ -96,8 +97,27 @@ To see whats the best way for me to authencate users: clear/supabase/logto...
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
+From the MultiChat and Aissistant Ive tried to bundle streamlit features on different pages.
+
+So that the main `app.py` can be very simple/modular and clean.
 
 ### The Data Source
+
+This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/) based. That's it!
+
+> Less is more
+
+Or so some say.
+
+Anyways, we will need this package: https://pypi.org/project/yfinance/
+
+```sh
+pip install yfinance==0.2.61
+```
+
+And as I dont really like building stuff on data source I dont control: I added the possibility to saved into sqlite the pulled data.
+
+> You just pull once *philosophy*
 
 ### User Interaction
 

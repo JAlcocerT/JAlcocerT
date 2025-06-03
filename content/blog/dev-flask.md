@@ -525,17 +525,19 @@ LogTo Tutorials
 
 ### Flask Alternatives
 
+At this point, FastAPI and Django are the direct competitors in terms of popularity.
+
 <!-- [![Star History Chart](https://api.star-history.com/svg?repos=django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart&type=Date)](https://star-history.com/#django/django&tiangolo/fastapi&tornadoweb/tornado&bottlepy/bottle&cherrypy/cherrypy&sanic-org/sanic&Pylons/pyramid&falconry/falcon&hugapi/hug&pgjones/quart&Date) -->
 
 [![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex&type=Date)](https://star-history.com/#pallets/flask&django/django&tiangolo/fastapi&tornadoweb/tornado&bottlepy/bottle&cherrypy/cherrypy&sanic-org/sanic&Pylons/pyramid&falconry/falcon&hugapi/hug&pgjones/quart&streamlit/streamlit&flet-dev/flet&reflex-dev/reflex&Date)
+
+But I cant say no to [Streamlit](#streamlit) for quick PoC's
 
 #### FastAPI
 
 * [FastAPI](https://github.com/tiangolo/fastapi): Fully supports Jinja2 templates.
 
 [YT - Create a Video Membership Web App from Scratch with Python, NoSQL, & FastAPI](https://www.youtube.com/watch?v=KQ-u4RcFLBY)
-
-
 
 #### Django
 

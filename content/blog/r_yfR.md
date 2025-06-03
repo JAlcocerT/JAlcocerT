@@ -3,7 +3,7 @@ title: "Financial data in R - Stocks Price - yfR"
 date: 2022-08-07T23:20:21+01:00
 draft: false
 tags: ["R-Stocks","R"]
-description: 'yfR - Using R together with yfR to fetch financial data.'
+description: 'yfR - Using R together with yahooFinance to fetch financial data.'
 summary: 'You might be curious about getting historical stock price on companies, for some project that you want to accomplish - yfR is an open source library that helps us with this task. '
 url: 'r-yfR-package-guide'
 ---

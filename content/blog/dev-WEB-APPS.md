@@ -293,6 +293,8 @@ The best framework for you depends on your specific needs and preferences. Consi
 
 #### DJANGO
 
+* https://github.com/JAlcocerT/qatrackplus
+
 {{< details title="More Python Django 📌" closed="true" >}}
 
 You've touched on the core strengths of Django. Let's dive deeper into its features and why they make it a popular choice for web development.
@@ -416,6 +418,12 @@ Django is a powerful and versatile framework that's well-suited for **building c
 Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
 
 #### FLASK
+
+* https://github.com/JAlcocerT/ThreeBodies
+* https://github.com/JAlcocerT/flask_sensor_display
+
+* https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/
+* https://jalcocert.github.io/JAlcocerT/get-started-with-flask/
 
 {{< details title="More Python Flask 📌" closed="true" >}}
 
@@ -726,6 +734,8 @@ For some PoC, Id stay with streamlit as my go to.
 #### Taipy
 
 * https://github.com/Avaiga/taipy
+
+* https://github.com/JAlcocerT/demo-realtime-pollution
 
 #### Shiny with R
 

@@ -108,7 +108,7 @@ I was playing around with [LogTo](https://logto.io/) few months ago, together wi
 
 But I did not quite manage to get where I wanted.
 
-
+Just recently...I got some inspiration, while doing [this post](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication).
 
 ### Product First
 

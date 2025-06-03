@@ -36,8 +36,9 @@ Remember, [generate your keys](https://jalcocert.github.io/JAlcocerT/encryption-
 openssl rand -base64 32
 ```
 
-{{< details title="TinyAuth Compose with traefik and nginx 📌" closed="true" >}}
+And at first, the docker compose example was a little bit intimidating...
 
+{{< details title="TinyAuth Compose with traefik and nginx web server 📌" closed="true" >}}
 
 This `docker-compose.yml` file defines a setup using Traefik as a reverse proxy, Nginx as a web server, and TinyAuth for authentication.
 
@@ -87,7 +88,7 @@ Let's break down each service:
 5.  TinyAuth checks the credentials (if any) and authenticates the user.
 6.  If authentication is successful, TinyAuth redirects the request back to Traefik.
 7.  Traefik then forwards the request to the Nginx container.
-8.  Nginx serves the content.
+8.  Nginx serves the website content
 
 **Key Security Considerations:**
 
@@ -100,6 +101,8 @@ This setup provides a basic example of how to use Traefik, Nginx, and TinyAuth t
 
 {{< /details >}}
 
+> The flow is that Traefik exposes NGINX with a sample website, but you need to pass TinyAuth to see the content
+
 With TinyAuth, we will be able to login via GITHUB or with particular users and passwords
 
 When hitting: Forgot your password?
@@ -107,9 +110,13 @@ When hitting: Forgot your password?
 You can reset your password by changing the **USERS environment variable**.
 
 
-https://www.youtube.com/watch?v=qmlHirOpzpc
+Here you have a great explanation:
+
+<!-- https://www.youtube.com/watch?v=qmlHirOpzpc -->
+
 {{< youtube "qmlHirOpzpc" >}}
 
+But, to get to that point, make sure to get [Traefik ready](https://fossengineer.com/selfhosting-traefik/) first.
 
 ## About Traefik
 
@@ -117,14 +124,14 @@ If you have ever faced with the problem of [http vs https](https://jalcocert.git
 
 * https://doc.traefik.io/traefik/plugins/
 * https://plugins.traefik.io/plugins
+* https://www.youtube.com/watch?v=vVKMey6SfSw
 
-<!-- https://www.youtube.com/watch?v=vVKMey6SfSw -->
-
-<!-- {{< youtube "vVKMey6SfSw" >}} -->
 
 **Traefik is an open-source reverse proxy** and load balancer that's designed to be easy to use, flexible, and scalable. 
 
-It's written in Go, which makes it lightweight and efficient. Traefik is ideal for modern web applications, microservices, and containerized environments.
+It's written in Go, which makes it lightweight and efficient.
+
+Traefik is ideal for modern web applications, microservices, and containerized environments.
 
 {{< details title="Benefits of Traefik? 📌" closed="true" >}}
 
@@ -149,10 +156,12 @@ With its ease of use, high performance, and scalability, Traefik can help you im
 
 ### How to Install Traefik
 
-Not enough with Nginx or Caddy?
+Not enough with [Nginx](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/) or Caddy?
+
+Id say that it was not a setup for beginners, but lets try:
 
 {{< cards cols="2" >}}
-  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX" >}}
+  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX Setup" >}}
   {{< card link="https://fossengineer.com/selfhosting-traefik/" title="Traefik Setup" >}}
 {{< /cards >}}
 
@@ -160,7 +169,9 @@ Have a look to **Traefik**
 
 We can also get **SSL certificates thanks to LetsEncrypt**.
 
-And it also provides a UI dashboard.
+And it also provides a UI dashboard:
+
+![Traefik UI](/blog_img/selfh/https/traefik-ui.png)
 
 * https://github.com/traefik/traefik
 * https://hub.docker.com/_/traefik
@@ -210,14 +221,15 @@ For the **DNS Challenge**, we just need the **API access**, for example to Cloud
 
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="HUGO Container | Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik v3.3 Container | Docker Config 🐋✅ ↗" >}}
+    {{< card link="https://dash.cloudflare.com/profile/api-tokens" title="Cloudflare API for DNS Challenge ↗" >}}
 {{< /cards >}}
 
+Which uses the [v3.3 approach from Jim](https://github.com/JamesTurland/JimsGarage/tree/main/Traefikv3)
 
 ```sh
 nano docker-compose.yaml
 ```
-
 
 Important:
 
@@ -231,7 +243,7 @@ Then, it will know that you are the one that really own the domain and therefore
 
 **How to get API Token from Cloudflare** - DNS Challenge!
 
-Go to My Profile on the top right -> `API Tokens` -> `Create Token` -> Select the `Edit Zone DNS` Template
+Log into Cloudflare and [Go to My Profile](https://dash.cloudflare.com/profile/api-tokens) on the top right -> `API Tokens` -> `Create Token` -> Select the `Edit Zone DNS` Template
 
 ![Zone DNS CF](/blog_img/selfh/CF-APITokens-ZoneDNS.png)
 
@@ -257,9 +269,7 @@ And the docker network:
 sudo docker network create proxy
 ```
 
-Acme file will be created blank (and fill later automatically).
-
- 
+Acme file has to be created blank (and fill later automatically).
 
 ```sh
 mkdir -p /home/docker/traefik
@@ -275,7 +285,7 @@ chmod 600 ./acme.json && \
 chmod 600 ./traefik.yml #or it will be a security risk for other users to see the privatekey
 ```
     
-> See https://github.com/JamesTurland/JimsGarage/blob/main/Traefik/traefik-config/traefik.yml
+> See https://github.com/JamesTurland/JimsGarage/tree/main/Traefikv3
 
 
 And last but not least, we need to **create a strong password**
@@ -300,12 +310,24 @@ And I got this kind of error:
 
 `2025-02-08T22:54:03Z ERR Error while building configuration (for the first time) error="error reading configuration file: /config.yml - read /config.yml: is a directory" providerName=file`
 
-But it worked for me with the **Traefik v3.3 version** and this guide: https://www.jimgogarty.com/installing-traefik-on-docker-with-docker-compose/
+But it worked for me with the **[Traefik v3.3](https://github.com/JamesTurland/JimsGarage/tree/main/Traefikv3) version** and this [JimGoGarty](https://www.jimgogarty.com/installing-traefik-on-docker-with-docker-compose/) guide.
 
 
 #### Traefik JimGarage v3.3
 
-Thanks to this, finally I got my head around Traefik, for good:
+Thanks to this, **finally I got my head around Traefik**, for good:
+
+
+{{< filetree/container >}}
+  {{< filetree/folder name="config" >}}
+    {{< filetree/file name="acme.json" >}}
+    {{< filetree/file name="config.yml" >}}
+    {{< filetree/file name="traefik.yml" >}}
+    {{< /filetree/folder >}}
+  {{< filetree/file name="docker-compose.yaml" >}}
+  {{< filetree/file name=".env" >}}
+  {{< filetree/file name="cf-token" >}}
+{{< /filetree/container >}}
 
 
 {{< cards cols="1" >}}
@@ -314,6 +336,9 @@ Thanks to this, finally I got my head around Traefik, for good:
 {{< /cards >}}
 
 <!-- https://www.youtube.com/watch?v=CmUzMi5QLzI -->
+
+**Thanks to**
+
 {{< youtube "CmUzMi5QLzI" >}}
 
 ---
@@ -329,7 +354,7 @@ I have [vibe coded](https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf)
 It's the **3 body problem**, baby!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="Three Body Repo" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Three Body Repo" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask Post" >}}
   {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
 {{< /cards >}}
 
@@ -426,13 +451,20 @@ curl -X GET "https://api.cloudflare.com/client/v4/zones?name=whateveryourdomaini
 
 ### Logto Authentication
 
-https://docs.logto.io/quick-starts/python
+* https://docs.logto.io/quick-starts/python
+* https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo
 
-* https://cloud.logto.io/
+You will need an account: https://cloud.logto.io/
 
-![alt text](/blog_img/dev/LogTo/logto-apps.png)
+And follow these steps:
 
-![alt text](/blog_img/dev/LogTo/logto-create-pythonapp.png)
+![LogTo Apps](/blog_img/dev/LogTo/logto-apps.png)
+
+Create an app withing Logto:
+
+![LogTo Creating an App](/blog_img/dev/LogTo/logto-create-pythonapp.png)
+
+Be prepared to get familiar with these fields:
 
 ![alt text](/blog_img/dev/LogTo/logto-creating-app.png)
 
@@ -440,7 +472,7 @@ Make sure to set proper redirects:
 
 ![alt text](/blog_img/dev/LogTo/logto-app-settings.png)
 
-Like these for the flask app:
+Like these for the [flask app](https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo):
 
 ![alt text](/blog_img/dev/LogTo/logto-redirects.png)
 
@@ -454,7 +486,7 @@ Which allow us to verify emails:
 
 And which you can customize further, with your logo etc:
 
-![alt text](/blog_img/dev/LogTo/logto-signin-up-settings.png)
+![LogTo Email verification ](/blog_img/dev/LogTo/logto-signin-up-settings.png)
 
 So that it looks like so:
 

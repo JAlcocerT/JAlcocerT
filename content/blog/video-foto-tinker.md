@@ -825,9 +825,15 @@ Unlike a separate, big artist (a dedicated graphics card), this small artist sha
 
 ### How to Setup PostIZ
 
-https://docs.postiz.com/introduction
+Schedule post on social media:
+
+* https://docs.postiz.com/introduction
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="PostIZ Container | Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
 
 
-![alt text](/blog_img/selfh/postiz/postiz-https-ui.png)
+![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
 
 ![alt text](/blog_img/selfh/postiz/postiz-ui.png)
