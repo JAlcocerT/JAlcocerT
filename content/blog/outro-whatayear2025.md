@@ -161,7 +161,7 @@ The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)
 
 #### Better Social Media
 
-https://docs.postiz.com/introduction
+With better video workflow and Postiz for sharing.
 
 ### Improving the HomeLab
 

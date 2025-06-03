@@ -330,12 +330,10 @@ It's the **3 body problem**, baby!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="Three Body Repo" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask Post" >}}
-  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
 {{< /cards >}}
 
 <!-- ![Flask 3 Bodies](/blog_img/dev/flask-vibe-coded.png) -->
-
-
 
 How about using this **Flask web app** with https thanks to Traefik?
 
@@ -343,7 +341,7 @@ Easy.
 
 We will need to create a **Github OAUTH App**:
 
-![alt text](/blog_img/selfh/https/TinyAuth/gh-apps.png)
+![Github Apps](/blog_img/selfh/https/TinyAuth/gh-apps.png)
 
 1. Go to https://github.com/settings/applications/new
 
@@ -378,15 +376,15 @@ sudo docker compose up -d
 And go to `https://tinyauth.jalcocertech.com` or whatever subdomain you placed.
 
 
-![alt text](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png)
+![TinyAuth UI with https](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png)
 
 Authorize the app:
 
-![alt text](/blog_img/selfh/https/TinyAuth/tinyauth-authorize-app.png)
+![Authorizing TinyAuth](/blog_img/selfh/https/TinyAuth/tinyauth-authorize-app.png)
 
 And you will be logged in:
 
-![alt text](/blog_img/selfh/https/TinyAuth/tinyauth-logged-in.png)
+![Logged in via TinyAuth](/blog_img/selfh/https/TinyAuth/tinyauth-logged-in.png)
 
 ```sh
 docker compose -f PiwigoTraefik_docker-compose.yml up -d
@@ -398,8 +396,6 @@ docker compose -f PiwigoTraefik_docker-compose.yml up -d
 # docker volume prune
 # docker image prune -a
 ```
-
-
 
 ---
 
@@ -433,3 +429,33 @@ curl -X GET "https://api.cloudflare.com/client/v4/zones?name=whateveryourdomaini
 https://docs.logto.io/quick-starts/python
 
 * https://cloud.logto.io/
+
+![alt text](/blog_img/dev/LogTo/logto-apps.png)
+
+![alt text](/blog_img/dev/LogTo/logto-create-pythonapp.png)
+
+![alt text](/blog_img/dev/LogTo/logto-creating-app.png)
+
+Make sure to set proper redirects:
+
+![alt text](/blog_img/dev/LogTo/logto-app-settings.png)
+
+Like these for the flask app:
+
+![alt text](/blog_img/dev/LogTo/logto-redirects.png)
+
+If set properly, you will get this kind of middleware from LogTo, when tyring to signin to your app:
+
+![alt text](/blog_img/dev/LogTo/logto-middleware.png)
+
+Which allow us to verify emails:
+
+![alt text](/blog_img/dev/LogTo/logto-email-verif.png)
+
+And which you can customize further, with your logo etc:
+
+![alt text](/blog_img/dev/LogTo/logto-signin-up-settings.png)
+
+So that it looks like so:
+
+![alt text](/blog_img/dev/LogTo/logto-branded-signin.png)

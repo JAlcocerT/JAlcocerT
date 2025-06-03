@@ -1,5 +1,5 @@
 ---
-title: "More Photo and Video fun stuff"
+title: "More Photo and Video fun stuff with PostIZ"
 date: 2025-05-13T13:20:21+01:00
 draft: false
 tags: ["Tinkering"]
@@ -31,6 +31,8 @@ For night video and [the oa5pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-
 {{< /callout >}}
 
 And all of this is great, but [consider this](#conclusions) while creating.
+
+> Never forget: share your content, specially if its easy with Postiz
 
 
 ## Video Editing
@@ -816,3 +818,16 @@ Typical port is 7860
 **Integrated GPU (iGPU):** An integrated GPU (Graphics Processing Unit) is like a small artist living inside your computer's main brain (the CPU). 
 
 Unlike a separate, big artist (a dedicated graphics card), this small artist shares the same space and resources with the main brain. This means that while it's good for everyday tasks like watching videos, doing homework, or playing simple games, it's not as powerful for heavy-duty tasks like playing big, graphics-heavy video games or doing 3D design. It's like having a helper for graphics inside your computer without needing extra space or power. -->
+
+---
+
+## FAQ
+
+### How to Setup PostIZ
+
+https://docs.postiz.com/introduction
+
+
+![alt text](/blog_img/selfh/postiz/postiz-https-ui.png)
+
+![alt text](/blog_img/selfh/postiz/postiz-ui.png)

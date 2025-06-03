@@ -9,7 +9,7 @@ url: 'product-tools'
 
 Its been few months since I covered [these Tools for forms/newsletters](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/)
 
-Now, how to built great products?
+Now, how to built great [products](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)?
 
 What it is our potential client? What does it values the most? what are their *pain points*?
 
@@ -21,6 +21,8 @@ People are reading, so...what are they interested at?
 You got to know about that thanks to a [newsletter/forms](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/).
 
 > From those I enjoyed [formbricks](https://formbricks.com/) and [Mailerlite](https://accounts.mailerlite.com/login), which can be integrated with Gsheets/[cal](https://cal.com/)/webhooks as seen [here](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)
+
+![Formbricks Results](/blog_img/entrepre/formbricks-results.png)
 
 Or maybe you had some kind of **waiting list** in place.
 
@@ -47,7 +49,15 @@ And the quote was just so resonating:
 
 So....why not trying something similar?
 
-Similar but:
+During early spring I [tested Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/), which does kind of that - Wrap apps into Traefik to expose them.
+
+But that's not niche enough. Which app are you offering? all of them? none of them?
+
+So Dokploy would more a [PaaS offering](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/).
+
+And an alternative to Ghost would have to keep it simple.
+
+Similar to Ghost in scope (just web) but:
 
 1. Keeping OSS
 2. No database required - Your flat files, your rules. Easier to migrate.

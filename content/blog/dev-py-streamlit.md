@@ -24,7 +24,6 @@ This Post is **WIP**
 
 To learn streamlit with youtube: https://www.youtube.com/@andfanilo
 
-
 * https://github.com/pmbaumgartner/streamlitopedia
 
 ## Streamlit Features I love
