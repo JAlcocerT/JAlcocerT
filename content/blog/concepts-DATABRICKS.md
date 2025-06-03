@@ -2,12 +2,16 @@
 title: "A closer look to DataBricks"
 date: 2024-06-10
 draft: false
-tags: ["dev"]
+tags: ["Dev", "Career", "D&A"]
 description: 'Databricks for D&A Big Data.'
 url: 'understanding-databricks'
 ---
 
-{{< callout type="info" >}}
+You will hear a lot about databricks nowadays.
+
+Its one datalakehouse platform, where you can run [Spark](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/) to do big data processing.
+
+{{< callout type="warning" >}}
 This Post is **WIP**
 {{< /callout >}}
 
@@ -19,7 +23,7 @@ This Post is **WIP**
 
 
 
-![alt text](/blog_img/DA/DataBricks-Registr.png)
+![Register on DataBricks](/blog_img/DA/DataBricks-Registr.png)
 
 
 {{< details title="The Data Catalogue 📌" closed="true" >}}
@@ -33,6 +37,8 @@ This Post is **WIP**
 ## FAQ
 
 ### Spark Recap
+
+Interesting queries to get started with PySpark:
 
 ```py
 ### CREATES A SPARK DATAFRAME

@@ -75,7 +75,7 @@ With Dokploty we can for example, **serve an Astro site, or any other containeri
 
 ![alt text](/blog_img/selfh/PaaS/dokploy-rstocks.png)
 
-2. Traefik HTTPs built in
+2. [Traefik HTTPs](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) built in
 
 ![alt text](/blog_img/selfh/PaaS/dockploy-https.png)
 

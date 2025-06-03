@@ -1,8 +1,8 @@
 ---
-title: "[AI] Using LiteLLM to unify LLMs calls. Applied to AIssistant."
+title: "[AI] Using LiteLLM to unify LLMs calls."
 date: 2025-05-07
 draft: false
-tags: ["Gen-AI","Python"]
+tags: ["Gen-AI","Python","AIssistant"]
 description: 'How to use LiteLLM with different APIs - From OpenAI to Mistral APIs'
 url: 'how-to-use-lite-llm'
 ---

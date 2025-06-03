@@ -15,7 +15,7 @@ url: 'improving-ui-python-dash-apps'
 
 ## Tweaking Python Dash Apps'UI
 
-This post is about **synergy, UI's and Python**.
+This post is about **synergy, UI/x's and Python**.
 
 * https://github.com/JAlcocerT/Py_Trip_Planner
 

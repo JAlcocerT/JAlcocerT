@@ -54,13 +54,45 @@ Similar but:
 3. Even cooler themes
 4. *Greener* to serve
 
-## Authentication
+```mermaid
+mindmap
+  root((Web Publishing & Tools))
+    CMS
+      KeystaticCMS
+      TinaCMS
+    Static Hosting
+      Cloudflare Pages
+      Netlify/Vercel
+      Firebase
+    SSG
+      Hugo
+      Astro
+      Gatsby
+    Authentication
+      Firebase Auth
+      Auth0
+      Supabase Auth
+    HTTPS
+      Traefik
+      NginxPM
+      Caddy
+```
 
-### TinyAuth
+People out there say that its all about shipping: [4/70](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) projects went into something - <https://twitter.com/levelsio/status/1457315274466594817>
+
+## The Components and Idea
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/WebGenerAItor" title="Web GenerAItor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with the 5 components to server better webs" >}}
+{{< /cards >}}
+
+### Authentication
+
+#### TinyAuth
 
 
 
-### LogTo
+#### LogTo
 
 I was playing around with [LogTo](https://logto.io/) few months ago, together with Streamlit.
 
@@ -68,9 +100,9 @@ But I did not quite manage to get where I wanted.
 
 
 
-## Product First
+### Product First
 
-### PostHog
+#### PostHog
 
 To see how customers interact with your product, you can try with https://eu.posthog.com/
 

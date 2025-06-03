@@ -2,8 +2,8 @@
 title: "No Code Tools to use Gen AI"
 date: 2025-04-19T23:20:21+01:00
 draft: false
-tags: ["Gen-AI","Python","Dev"]
-description: 'Generative AI made simple with Low Code. Flowise, n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
+tags: ["Gen-AI","Python","Dev","ChatBots"]
+description: 'Generative AI made simple with Low Code. Chatwoot, Flowise, n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
 url: 'no-code-ai-tools'
 ---
 
@@ -115,9 +115,19 @@ services:
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFlow" title="LangFlow with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-Dont confuse it with LangFuse nor MLFlow, which are used for:
+
+**LangFlow Embedded**
+
+You can embedd langflow in your websites with few lines of JS and this project: https://github.com/langflow-ai/langflow-embedded-chat
+
+{{< callout type="info" >}}
+Dont confuse LangFlow with LangFuse nor MLFlow
+{{< /callout >}}
+
+These other 2 are used for:
 
 1. MLflow is an open-source platform to manage the complete machine learning lifecycle, including experiment tracking, model versioning, deployment, and providing integrated observability features, especially for LLM-powered applications.
+
 2. Langfuse is an open-source observability platform specifically designed for LLM applications, offering detailed tracing, monitoring, and analytics to help developers understand, debug, and improve their language model-based systems.
 
 
@@ -128,11 +138,11 @@ Dont confuse it with LangFuse nor MLFlow, which are used for:
 
 > LangFuse is kind of langsmith, but MIT and selfhostable
 
-![alt text](/blog_img/GenAI/langfuse-signup.png)
+![LangFuse UI Signup](/blog_img/GenAI/langfuse-signup.png)
 
 Once you create a local account, access the UI:
 
-![alt text](/blog_img/GenAI/langfuse-webui.png)
+![LangFuse UI](/blog_img/GenAI/langfuse-webui.png)
 
 
 
@@ -192,14 +202,12 @@ But that might cause friction on users having to leave your home/services page.
 
 #### ChatWoot
 
-1. Chatwoot
+1. [Chatwoot](https://fossengineer.com/selfhosting-chatwoot/)
 
 {{< youtube "1Q_MDOWaljk" >}}
 
-
-
 {{< callout type="info" >}}
-
+You can selfhost Chatwoot with this compose
 {{< /callout >}}
 
 #### N8N
@@ -235,6 +243,7 @@ https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
 
 {{< youtube "dC2Q_cyzgjg" >}}
 
+
 #### TG Bots
 
 3. Telegram...bots?
@@ -243,16 +252,13 @@ https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
 Sometime ago I was doing some tests with [tg bots](https://github.com/JAlcocerT/Private/tree/main/Web_scrapping/Py_BeautifulSoup/TelegramBot), but that was all before the LLM boom.
 
 * https://core.telegram.org/bots/api
-* https://pypi.org/project/python-telegram-bot/
-* https://github.com/python-telegram-bot/python-telegram-bot
-* https://docs.python-telegram-bot.org/en/stable/telegram.ext.application.html
+  * https://pypi.org/project/python-telegram-bot/
+  * https://github.com/python-telegram-bot/python-telegram-bot
+  * https://docs.python-telegram-bot.org/en/stable/telegram.ext.application.html
 
 ```sh
 pip install python-telegram-bot==22.0
 ```
-
-
-
 
 {{< callout type="info" >}}
 It was about time to make [a project again with a telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot) 💻 (combined with [web](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/)!)
@@ -306,7 +312,6 @@ Here's how you would typically do it:
     * In the same "Add members" section of the group info, search for your bot's username (the one you chose when you created the bot with BotFather, usually ending in `_bot`).
     * Select your bot from the search results and tap "Add".
 
-
 {{< /details >}}
 
 
@@ -335,7 +340,7 @@ For me, using `/mybots` allow me to change it.
 
 {{< details title="Telegram Bots with LLMs 📌" closed="true" >}}
 
-
+Instead of giving hardcoded replies, you can plug any LLM to process and reply the conversation
 
 {{< /details >}}
 
@@ -346,14 +351,13 @@ For me, using `/mybots` allow me to change it.
 {{< /details >}}
 
 
-And if you are already getting ideas... https://core.telegram.org/bots/webapps
+> And if you are already getting ideas... https://core.telegram.org/bots/webapps
 
 ---
 
 ## FAQ
 
 ### F/OSS No Code Data Tools
-
 
 #### BaseRow
 

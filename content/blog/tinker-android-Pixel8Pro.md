@@ -9,7 +9,7 @@ url: 'pixel-8-pro-tricks'
 
 I Got a new phone recently.
 
-It promises years of updates. 
+It promises 7 years of updates. 
 
 And have good rating here: https://www.kimovil.com/en/compare-smartphones/
 
@@ -101,6 +101,10 @@ I like that it charges slow during the night, according to your alarm time.
 
 4. Its possible not only to connect the Pixel to HDMI, but also to control it with a keyboard *like the k400+*
 
+5. It integrates perfectly with google services and its not bloated.
+
+An interesting integration was the recorder app, to their service: https://recorder.google.com/
+
 ### Fav Apps for the Pixel
 
 > Hello from the future!
@@ -109,7 +113,7 @@ I like that it charges slow during the night, according to your alarm time.
 
 2. Security
 
-* [2FAS](https://play.google.com/store/apps/details?id=com.twofasapp)
+* [2FAS](https://play.google.com/store/apps/details?id=com.twofasapp) which can be synced with Google Drive and recovers automatically
 * [Bitwarden](https://play.google.com/store/apps/details?id=com.x8bit.bitwarden)
 
 3. Nextcloud / Immich: to sync your photos or to have a full cloud
@@ -124,7 +128,7 @@ When adding a new account on the phone, make sure to hit **restore from backup**
 Make sure to have **proper backup codes stored** to enter your critical applications: gmail/microsoft/2fas/....
 {{< /callout >}}
 
-> You could also make sure to be login on those services at your tablet, if you have one.
+> You could also make sure to be logged in on those services at your tablet, if you have one
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "AI Multi Agents: PyAutogen, LangGraph,..."
-date: 2025-04-10T23:20:21+01:00
+date: 2025-04-11T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
 description: 'Reviewing the most Popular AI Agents frameworks: From AG2AI (AutoGen), CrewAI, LangChain,...to MCP'

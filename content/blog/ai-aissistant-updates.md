@@ -1,6 +1,6 @@
 ---
 title: "Streamlit Updates. Assistant"
-date: 2025-08-17
+date: 2025-04-12
 draft: false
 tags: ["dev"]
 description: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT) Generator, Speech Rater...'
@@ -10,14 +10,20 @@ url: 'ai-assistant-streamlit'
 
 ## AIssistant Updates
 
-The aissistant was ideated as a some kind of all-in-one tool around LLMs.
+The [aissistant was ideated](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/) as a some kind of all-in-one tool around LLMs.
+
+Well, not only text centered, but using the multi-model capabilities as well:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Streamlit Speech Rater PoC" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat Project" >}}
 {{< /cards >}}
 
-Do you prefer the box? the plastic? or the expensive toy I bought you?
+And it had quite a few different features.
+
+Do you prefer the box? the plastic?
+
+Or the expensive toy I bought you?
 
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 
@@ -30,7 +36,7 @@ And I could not resist to combine it:
 
 ![AIssistant](/blog_img/apps/ai-assistant-dbchat.png)
 
-You can think about this is a [kind of BI/AI part](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/)
+You can think about this is a [kind of **BI/AI** part](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/)
 
 {{< youtube "KXamTdJA-uc" >}}
 
@@ -150,15 +156,17 @@ with st.expander("Run Custom SQL Query"):
 
 ### Presentation GenerAItor
 
-https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/
+8 https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/
 
 
 ### Speech RAIter
 
+AI is not only about text, but it can also be about AI generated audio.
+
+Or interpreted audio.
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Streamlit Speech Rater PoC" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Streamlit Speech Rater PoC on Github" >}}
 {{< /cards >}}
 
 
@@ -166,20 +174,23 @@ https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/
 
 ### CV CreAItor
 
-https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/
+* https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/
+* https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web
 
-https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web
+> Have you ever thought that...
 
-
-![AIssistant](/blog_img/memes/oldnewjob.jpg)
+![Old vs New Job](/blog_img/memes/oldnewjob.jpg)
 
 
 ### Diagram GenerAItor
 
+For the ones in loved with [Diagrams](https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/).
 
 ### Youtube SummarAIzer
 
-https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/
+Because there is too much information (and noise) out there:
+
+* https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/
 
 
 ![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png)
@@ -199,6 +210,8 @@ With Whisper
 ---
 
 ## Conclusions
+
+Many ideas...
 
 If that was not enough...
 
@@ -221,13 +234,14 @@ Probably more NoCode stuff: https://www.youtube.com/@AI-GPTWorkshop/videos
 
 ### The Market Test
 
+Which of these very different use cases will be valued the most?
+
 **Product Analytics Tools**
 
 * [Umami](https://fossengineer.com/selfhosting-umami-with-docker/)
 * [PostHog](https://eu.posthog.com/project/15002/replay/home) - https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics
 
 ---
-
 
 ## FAQ
 
@@ -244,58 +258,9 @@ Probably more NoCode stuff: https://www.youtube.com/@AI-GPTWorkshop/videos
   {{< card link="https://github.com/JAlcocerT/MultiChat" title="MultiChat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the MultiChat" >}}
 {{< /cards >}}
 
-
-
 ### Books
 
 * https://bookstash.io/ - Top books recommended by famous folk, in 3m or less.
 
 
 Epub to AudioBook with Python: https://github.com/C-Loftus/QuickPiperAudiobook
-
----
-
-## Interesting Music Related Projects
-
-{{< details title="GraphMuse - Python 📌" closed="true" >}}
-
-* https://github.com/manoskary/graphmuse
-
-**GraphMuse** is a Python library designed for **symbolic music graph processing**, addressing the growing need for efficient and effective analysis of musical scores through graph-based methods.
-
-- **Problem Solved**: Traditional music processing lacks efficient tools for analyzing complex musical scores, which often include various elements beyond just notes. 
-
-- **Functionality**:
-  - Converts musical scores into graphs where:
-    - Each note is a vertex.
-    - Temporal relationships between notes define edges.
-  - Supports deep graph models for music analysis.
-  - Built on **PyTorch** and **PyTorch Geometric**, offering strong flexibility and performance.
-
-- **Graph Structure**:
-  - Edges are categorized into:
-    - Onset edges (notes starting simultaneously).
-    - Consecutive edges (notes starting after others).
-    - During edges (notes overlapping with others).
-    - Silent edges (connecting notes separated by silence).
-
-- **Key Features**:
-  - Efficient graph creation (up to 300x faster).
-  - Built-in utilities for preprocessing musical scores.
-  - Sampling methods for handling variable graph sizes during training.
-
-- **Use Case**:
-  - Demonstrates pitch spelling tasks using annotated datasets.
-
-- **Future Plans**:
-  - Improve installation processes.
-  - Expand model and data loader support.
-  - Foster community contributions.
-
-GraphMuse is a promising tool for anyone interested in symbolic music analysis, combining music theory with advanced graph neural networks.
-
-In conclusion, GraphMuse simplifies symbolic music processing through advanced graph techniques, fostering innovation and analysis.
-
-**Similar Projects**: MusGViz for music visualization and other graph neural network frameworks in music processing.
-
-{{< /details >}}

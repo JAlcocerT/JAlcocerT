@@ -2,10 +2,19 @@
 title: "Web Apps with Python Explained"
 date: 2025-04-07T10:20:21+01:00
 draft: false
-tags: ["Dev","Python"]
-description: 'My favourite ways to build web apps with Python.'
+tags: ["Dev","Python","WebApps"]
+description: 'My favourite ways to build WebApps with Python.'
 url: 'web-apps-with-python'
 ---
+
+Plain websites are cool.
+
+But if you would need extra functionality, you will come to the webapp domain.
+
+As you can imagine, there are many flavours of web apps.
+
+I first tried [Shiny in R](#shiny-with-r) and then [DASH](#dash), with the trip planner project.W
+
 
 ## WebApps
 
@@ -487,13 +496,13 @@ One of the most popular ways to create **python web apps is with Flask**.
 
 <!-- ![Flask Https NginX Setup](/blog_img/apps/flask-nginx-duckdns.png) -->
 
-##### DASH
+#### DASH
 
-https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/#faq
+* https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/#faq
 
-Yes, that's a very accurate and common way to describe the relationship between **Dash** and **Flask**. **Dash is indeed an abstraction layer built on top of Flask.**
 
-Here's a breakdown of what that means:
+**Dash is indeed an abstraction layer built on top of Flask.**
+
 
 * **Flask as the Foundation:** Flask is a lightweight and flexible **micro web framework** for Python. It provides the essential tools for building web applications, such as:
     * **Routing:** Mapping URLs to specific functions.
@@ -521,6 +530,14 @@ Here's a breakdown of what that means:
 
 In essence, Dash provides a more opinionated and specialized framework on top of the more general-purpose Flask, making it easier and faster to build interactive data-driven web applications in Python.
 
+**Python DASH Example**
+
+* https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="Python Web apps with DASH" image="/blog_img/apps/TripPlanner/TripPlanner.JPG" subtitle="Python Trip Planner with DASh" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
 
 #### Streamlit
 
@@ -688,14 +705,7 @@ npm i --save @kanaries/graphic-walker
 
 {{< /details >}}
 
-#### Python DASH
 
-* https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="Python Web apps with DASH" image="/blog_img/apps/TripPlanner/TripPlanner.JPG" subtitle="Python Trip Planner with DASh" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
 
 
 

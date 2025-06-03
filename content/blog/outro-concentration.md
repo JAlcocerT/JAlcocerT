@@ -18,8 +18,6 @@ A lot of what I have achieved, would not be possible w/o **proper attention**.
 
 ### Time Management
 
-
-
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="GCP and BQ 101 ↗ " >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="Effective Meetings | Post ↗" >}}

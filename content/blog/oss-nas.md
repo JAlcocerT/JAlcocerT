@@ -11,7 +11,7 @@ Ive been pretty much **comfortable with these OS's**:
 
 1. **Ubuntu LTS**
 2. if you come from Windows: **Zorin OS**, Linux Mint,...
-3. Garuda Linux 
+3. [Garuda](https://sourceforge.net/projects/garuda-linux/) Linux 
 4. If you miss XP, see https://xpq4.sourceforge.io/
 5. For apple users: ElementaryOS, Deepin or [PearOS](https://pearos.xyz/)
 6. SelfHosting / **network attached storage** Focused: CasaOS, OpenMediaVault (OMV), Synology,...

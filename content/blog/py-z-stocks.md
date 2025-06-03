@@ -108,13 +108,22 @@ So why not giving the possibility to feed a sample Google Sheet with its sharabl
 ### The Charts
 
 
+I wanted to have a simple growth comparison (and actually the vibez added this cool normalized view)
+![Normalized Value Change](/blog_img/dev/pystocks/pystocks-vibed1.png)
+
+#### PyGWalker
+
+How about giving the possibility to *build your own visuals*?
+
+That's where the pygwalker use case comes in to any streamlit app.
+
 ### AI Features for PyStocks
 
 This is very yolo mode.
 
 Do you really want to make these decions based on a LLM?
 
-Nooot the best idea.
+**Nooot the best idea.**
 
 But since grok allows for real time information retrieval since not long ago, that can be very interesting to see.
 

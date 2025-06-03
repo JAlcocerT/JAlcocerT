@@ -2,8 +2,8 @@
 title: "Big Data Tools [Data Analytics Recap]"
 date: 2025-03-10T19:20:21+01:00
 draft: false
-tags: ["Dev"]
-description: 'Big Data Tools recap for the AI era. SQL, PySpark and more. AIssistant for Tech.'
+tags: ["Dev","AIssistant","D&A","Career"]
+description: 'Big Data Tools recap for the AI era. SQL, PySpark and more.'
 url: 'big-data-tools-for-data-analytics'
 ---
 
@@ -18,11 +18,6 @@ A recap on [SQL](#sq), [PySpark](#pyspark) and [Data Modelling](#concepts-for-da
   {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs...Source Code" >}}
 {{< /cards >}}
-
-
-{{< callout type="warning" >}}
-This Post is **WIP**
-{{< /callout >}}
 
 ## Concepts for Data Analytics
 
@@ -150,7 +145,7 @@ The "house" part refers to the added layers of structure, governance, and transa
 
 Examples of Data Lakehouse Technologies and Implementations:
 
-* **Databricks** Lakehouse Platform: One of the pioneers of the data lakehouse concept, built around Apache Spark and Delta Lake.   
+* **Databricks** [The Lakehouse Platform](https://jalcocert.github.io/JAlcocerT/understanding-databricks/): One of the pioneers of the data lakehouse concept, built around Apache Spark and Delta Lake.   
 * AWS Lake House: Offers services like S3 for storage and technologies like Apache Iceberg, AWS Glue, and Amazon Redshift Spectrum to build a lakehouse architecture.
 * Microsoft Fabric Lakehouse: A unified data analytics platform with a central data lakehouse.   
 * **Snowflake**: Evolving to support data lakehouse patterns with features for querying data in external object storage.

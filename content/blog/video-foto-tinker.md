@@ -1,6 +1,6 @@
 ---
 title: "More Photo and Video fun stuff"
-date: 2025-05-12T13:20:21+01:00
+date: 2025-05-13T13:20:21+01:00
 draft: false
 tags: ["Tinkering"]
 description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI generated audio for shorts.'

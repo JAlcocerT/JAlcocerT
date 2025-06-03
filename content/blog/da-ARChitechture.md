@@ -259,6 +259,10 @@ To tell better stories with data, you have to [ask the right questions](https://
 * Who are the stakeholders involved?
 * **What do stakeholders consider to be of value?**
 
+Remember [the power of 80/20](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/)
+
+Be ready to sharp these questions and go from *the nice to have* to the MUST have features.
+
 {{< callout type="info" >}}
 For MORE QUESTIONS, you can switch-on your **[product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq) mindset**
 {{< /callout >}}

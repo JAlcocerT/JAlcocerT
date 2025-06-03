@@ -44,6 +44,8 @@ It provides an emulated environment of AWS services, solving issues related to u
 I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)
 
 
+https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy
+
 {{< details title="More about Dokploy 📌" closed="true" >}}
 
 
@@ -53,7 +55,7 @@ I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-pa
 
 ### Runtipi
 
-https://github.com/runtipi/runtipi
+* https://github.com/runtipi/runtipi
 
 >  Runtipi is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps. ✨ 
 
