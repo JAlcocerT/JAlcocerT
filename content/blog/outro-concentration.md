@@ -58,7 +58,7 @@ You can use many of this OSS tools for free, just with proper configuration:
 
 I really enjoy placing this as **background sound**:
 
-1. https://nextbeats.vercel.app/
+1. https://nextbeats.vercel.app/ - With cool background music!
 
 * https://github.com/btahir/next-beats
 
@@ -70,7 +70,9 @@ I really enjoy placing this as **background sound**:
 
 ### Reading Focus
 
-How about having a proper news feed?
+How about having a proper **news feed**?
+
+Without the ads I mean.
 
 I mean, Selfhostable and **RSS Feeds**!
 
@@ -81,6 +83,7 @@ I mean, Selfhostable and **RSS Feeds**!
 
 > MIT | Generate rich RSS feeds from Reddit, Hacker News, Lemmy, and Mbin
 
+You can also be 
 
 ### Video
 
@@ -99,9 +102,11 @@ I mean, Selfhostable and **RSS Feeds**!
 * You can find it in FDroid: https://f-droid.org/en/packages/com.superproductivity.superproductivity/
 * And also in snapcraft: https://snapcraft.io/superproductivity
 
+---
+
 ## Conclusions
 
-If you follow the one thing at a time rule: kanban will definitely resonate with you.
+If you follow the one thing at a time rule: kanban and [lean](https://jalcocert.github.io/JAlcocerT/lean/) will definitely resonate with you.
 
 --- 
 

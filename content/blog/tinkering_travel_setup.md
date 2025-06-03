@@ -353,7 +353,7 @@ Can’t access the internet via the repeated hotspot. Try to enter **Login Mode 
 After travelling and hopefully learning new perspectives, you can [create a website](https://jalcocert.github.io/JAlcocerT/create-your-website/) to tell your story.
 
 {{< cards >}}
-  {{< card link="https://www.beyondajourney.com/" title="My Story" image="https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
+  {{< card link="https://cyclingthere.pages.dev/" title="My Story" image="https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with a MTB" >}}
 {{< /cards >}}
 
 You can also have a look to https://github.com/gpxstudio/gpx.studio 
@@ -380,9 +380,11 @@ A pure reflection of the **knowledge of crowds**, applied for cost of living.
 * https://www.numbeo.com/cost-of-living/in/Warsaw
 * https://www.numbeo.com/cost-of-living/in/Amsterdam
 
-> At the time of writing, these are separeted by x1.4 without rent
+> At the time of writing, these are separeted by x1.4 without rent (and ~x2 with rent)
 
-If you are planning a trip and want to make a guess on the costs, its worth to have a look!
+If you are [planning a trip](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main) and want to make a guess on the costs, its worth to have a look!
+
+> > Wouldnt it be great to have an app that combines all of that? :)
 
 ---
 

@@ -349,11 +349,11 @@ We will need to create a **Github OAUTH App**:
 
 Add the link as per your subdomain: https://tinyauth.jalcocertech.com/api/oauth/callback/github
 
-![alt text](/blog_img/selfh/https/TinyAuth/gh-oauth-apps.png)
+![Github OAUTH](/blog_img/selfh/https/TinyAuth/gh-oauth-apps.png)
 
 2. Then, registre the application. Get its ID and and its client secret:
 
-![alt text](/blog_img/selfh/https/TinyAuth/gh-client-secret.png)
+![Github Secret](/blog_img/selfh/https/TinyAuth/gh-client-secret.png)
 
 Those are required for
 
@@ -367,19 +367,20 @@ Those are required for
 
 particularly at the [OAUTH developer section](https://github.com/settings/developers). 
 
-![alt text](/blog_img/selfh/https/TinyAuth/oauth-app-created.png)
+![Github OAUTH App Created](/blog_img/selfh/https/TinyAuth/oauth-app-created.png)
 
 Just sping up Tiny Auth with:
 
 ```sh
 sudo docker compose up -d
 ```
+
 And go to `https://tinyauth.jalcocertech.com` or whatever subdomain you placed.
 
 
 ![alt text](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png)
 
-Authorize the app
+Authorize the app:
 
 ![alt text](/blog_img/selfh/https/TinyAuth/tinyauth-authorize-app.png)
 

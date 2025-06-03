@@ -3,7 +3,7 @@ title: "Software for Servers"
 date: 2025-05-31T01:20:21+01:00
 draft: false
 tags: ["PaaS","HomeLab","Entrepreneuring"]
-description: 'Selfhosted Apps that simplify my workflow as of May 2025: Termix, CheckMate, LibreChat'
+description: 'Selfhosted Apps that simplify my workflow as of May 2025: LocalStack,  DokPloy, Runtipi'
 url: 'selfhosted-server-paas'
 ---
 
@@ -44,7 +44,7 @@ It provides an emulated environment of AWS services, solving issues related to u
 I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)
 
 
-{{< details title=" 📌" closed="true" >}}
+{{< details title="More about Dokploy 📌" closed="true" >}}
 
 
 

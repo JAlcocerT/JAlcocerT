@@ -62,7 +62,7 @@ npm run dev
 9. [Data fetching](https://docs.astro.build/en/guides/data-fetching/), so that you can reference content, like your docker-compose.yml public on github, so that others can edit them.
 10. A progress line bar on the top of the posts to show how much you have left
 11. Katex, Charts and diagrams rendering 
-12. Maybe [commenting](https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento) system?
+12. Maybe [commenting](https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento) system? Or [Giscus](https://justinjbird.com/blog/2023/adding-comments-to-a-hugo-site-using-giscus/#adding-the-parameters), [maybe?](https://dteather.com/blogs/adding-giscus-discussions-to-astro/)
 
 {{< callout type="info" >}}
 Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%5B%5D=free) from time to time to get ideas

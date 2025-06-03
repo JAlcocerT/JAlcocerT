@@ -344,6 +344,8 @@ See also the AdventureLog project:
 * https://github.com/seanmorley15/AdventureLog
   * https://github.com/IoTechCrafts/AdventureLog
 
+It has very interestin [use cases](https://adventurelog.app/docs/usage/usage.html), even integration with Immich
+
 
 Share media with your friends (airdrop for all devices):
 

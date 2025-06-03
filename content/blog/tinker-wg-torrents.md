@@ -106,7 +106,7 @@ When sharing content via P2P, you are **exposing your public IP**. You might wan
 
 **Here I want to show you have to do it using the VPN you just setup**.
 
-But you can do similarly with 3rd party VPNs.
+But you can do similarly with 3rd party VPNs: https://protonvpn.com/support/bittorrent-vpn/
 
 Choose one and use your `wg0` network interface from the **wireguard client**:
 

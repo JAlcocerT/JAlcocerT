@@ -14,6 +14,21 @@ In this post, we will see:
 
 > Thanks to [Jankraus](https://jankraus.net/2025/02/25/a-simple-guide-to-using-astro-with-keystatic/)
 
+Why bothering with all of this?
+
+Because there are many [reasons to love markdown](https://fossengineer.com/note-taking-markdown/).
+
+And tools like:
+
+1. Dilinger
+2. StackEdit
+3. [HackMD extension](https://github.com/hackmdio/vscode-hackmd)
+4. [FrontMatter](https://frontmatter.codes/) as seen [here](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#conclusions)
+
+Might not be for everyone
+
+Se...we need a CMS!
+
 ## KeyStatic
 
 I got to know about **Keystatic CMS** thanks to:

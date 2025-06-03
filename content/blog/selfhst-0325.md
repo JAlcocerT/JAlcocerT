@@ -3,7 +3,7 @@ title: "SelfHosting Updates - Spring 2025"
 date: 2025-03-21T01:20:21+01:00
 draft: false
 tags: ["Homelab"]
-description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich, Caddy...'
+description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich, Caddy, pihole v6...'
 url: 'selfhosted-apps-spring-2025'
 ---
 
@@ -288,10 +288,14 @@ See it live: https://it-tools.tech/
 
 #### PiHole
 
-This has been with my for a while.
+This service has been with my [for a while](https://jalcocert.github.io/RPi/posts/selfh-internet-better/).
 
 But now *its reloaded* with its **v6**.
 
+> Replacing any v5 image (2024.07.0 and earlier) with a v6 image will result in updated configuration files. These changes are irreversible.
+
+https://github.com/JAlcocerT/Docker/tree/main/Security/DNS
+https://github.com/JamesTurland/JimsGarage/blob/main/Piholev6/docker-compose.yaml
 
 <!-- https://www.youtube.com/watch?v=mnry95ay0Bk -->
 
@@ -341,13 +345,7 @@ There are more alternatives, like:
 
 > Unlicensed | A clean and minimal youtube frontend, without all the ads and whistles
 
-
-
-
-
 ---
-
-
 
 ## Thanks to 
 
@@ -386,7 +384,7 @@ sudo apt-get -y install wifite
 sudo apt install remmina
 ```
 
-2. RustDesk - To help others with their setup remotely
+2. **RustDesk** - To help others with their setup remotely
 
 3. Have everything synced properly?
 
