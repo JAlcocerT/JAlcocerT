@@ -2,7 +2,7 @@
 title: "Cool Link in Bios (with SSGs) with CF Workers and Pages"
 date: 2025-01-22
 draft: false
-tags: ["Web"]
+tags: ["Web","Portfolio"]
 description: "Have a cool LinkInBio/Bento website with HUGO and Astro SSGs. Alternative to linktree with Gitlab and Cloudflare WnP Setup."
 url: 'cool-link-in-bios'
 ---
@@ -75,13 +75,17 @@ npm run dev
 npm run build
 ```
 
-It worked and **I Forked it**! https://github.com/JAlcocerT/treelink
+It worked and **I Forked it**! 
+
+Here it is: https://github.com/JAlcocerT/treelink
+
+> Just waiting for you to add your config
 
 * https://pagespeed.web.dev/analysis/https-example-treelink-app/l6prjspv4k?form_factor=mobile
 
 **What did I like about this theme?**
 
-It allows you to have a exposed static built site and also provides the capability to edit also online and export the `/src/siteConfig.json`
+It allows you to have a **exposed static built** site and also provides the capability to **edit also online** and export the `/src/siteConfig.json`
 
 5. https://github.com/SofiDevO/allmylinks
 
@@ -263,9 +267,11 @@ You will see under the **WnP section** that the site is already published.
 
 This is once again the same process:
 
-1. Choosing a theme
+1. Choosing a theme: for Bento you can try [this](https://github.com/JAlcocerT/web3) or [tech-tim forked theme](https://github.com/JAlcocerT/techtim-astro-bento-portfolio)
 2. Tweaking
 3. Deploying in one of the [static hosting methods](https://fossengineer.com/alternatives-for-hosting-static-websites)
+
+
 
 **What would I add further?**
 

@@ -96,9 +96,8 @@ That make a website much cooler!
 | **Description**                        | **Link**                                   |
 |----------------------------------------|--------------------------------------------|
 | PageFind with Astro      | [VisVRS/AstroVerse Example](https://github.com/IoTechCrafts/astroverse)    |
-| FuseJS with Astro      | [AstroEngineeringBlog Example](https://github.com/EddyVinck/astro-engineering-blog)    |
-| FuseJS with HUGO      | [AstroEngineeringBlog Example](https://github.com/EddyVinck/astro-engineering-blog)    |
-| Ghost                | [Compose Overview](https://docs.docker.com/compose/) |
+| FuseJS with Astro      | [AstroEngineeringBlog Example](https://github.com/EddyVinck/astro-engineering-blog)  or [celestial docs](https://github.com/HYP3R00T/CelestialDocs)  |
+| FuseJS with HUGO      | [HUGO PaperMod](https://github.com/EddyVinck/astro-engineering-blog)    |
 
 
 {{< /details >}}
@@ -207,7 +206,7 @@ There are [many CMS alternatives](https://jalcocert.github.io/JAlcocerT/cms-for-
 
 1. Payload - https://github.com/payloadcms/payload
 2. KeyStatic CMS - *As seen with Mizar landing Theme*
-3. TinaCMS - 
+3. TinaCMS
 
 ---
 

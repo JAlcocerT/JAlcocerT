@@ -49,6 +49,13 @@ And the quote was just so resonating:
 
 So....why not trying something similar?
 
+Similar as in these Selfhosted Tools:
+
+* Bloggin Platforms https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file#blogging-platforms
+* CMS platforms https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file#content-management-systems-cms
+
+Or like this no code platform for landing webpages: https://www.producthunt.com/products/tilda-publishing
+
 During early spring I [tested Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/), which does kind of that - Wrap apps into Traefik to expose them.
 
 But that's not niche enough. Which app are you offering? all of them? none of them?
@@ -92,14 +99,72 @@ People out there say that its all about shipping: [4/70](https://jalcocert.githu
 
 ## The Components and Idea
 
+It's all combined on this project:
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/WebGenerAItor" title="Web GenerAItor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with the 5 components to server better webs" >}}
 {{< /cards >}}
 
+### The CMS
+
+I first had a look to reddit:
+
+* https://www.reddit.com/r/webdev/comments/1hdf2ey/best_headless_cms_for_freelancing_editable_by_the/
+* https://www.reddit.com/r/webdev/comments/mk8vrx/looking_for_a_headless_cms_recommendation/
+* https://www.reddit.com/r/webdev/comments/1ht3vyd/looking_for_a_minimalistic_opensource_cms/
+* https://www.reddit.com/r/nextjs/comments/1g9ihih/what_is_the_best_headless_cms_we_can_use/
+* https://www.reddit.com/r/webdev/comments/gcutf8/freelancers_which_headless_cms_with_a_generous/
+
+And after that I consolidated the [CMS alternatives](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/), focusing on these two (for their simplicity)
+
+[LinkStack](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/LinkStack_docker-compose.yml) was really interesting, with themes, authentication...
+
+But it needs a server for the viewers.
+
+So ideally, it would be server just for edition, static for users.
+
+Which is what the [Treelink](https://github.com/JAlcocerT/treelink) project does out-of the box as we saw [on this post](https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/) - The only missing piece would be the [authentication](#authentication), so that only logged in can make changes
+
+![Treelink Astro](/blog_img/entrepre/treelink.png)
+
+#### TinaCMS
+
+* https://tina.io/
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mechanism" title="Cechanism project docs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Celestial Theme x TinaCMS Setup" >}}
+{{< /cards >}}
+
+* https://github.com/JAlcocerT/barebones-starter
+
+
+
+
+#### KeyStaticCMS
+
+* https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
+* https://github.com/JAlcocerT/landingpad
+
 ### Authentication
+
 
 #### TinyAuth
 
+To get this right, first we need to have a **proper Traefik Setup**, that routes both:
+
+1. The built website to a given sub/domain with https
+2. The editor/admin panel into another sub/domain/static route - That only the website owner can access
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/WebGenerAItor/tree/main/Traefik_v3_3" title="Web GenerAItor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Traefik Setup for HUGO Lynx Theme" >}}
+{{< /cards >}}
+
+
+![Traefik on a SubDomain Routing HUGO Dev Server](/blog_img/selfh/https/traefik-subdomain-webgeneraitor.png)
+
+
+The theme im using is Lynx, and you can get an avatar thanks to [Avartartion](https://github.com/wilmerterrero/Avatartion)
 
 
 #### LogTo
@@ -116,7 +181,11 @@ Just recently...I got some inspiration, while doing [this post](https://jalcocer
 
 To see how customers interact with your product, you can try with https://eu.posthog.com/
 
-![alt text](/blog_img/entrepre/product/posthog-surveys.png)
+![PostHog Surveys](/blog_img/entrepre/product/posthog-surveys.png)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/WebGenerAItor/tree/main/Traefik_v3_3" title="Formbricks and more" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Other Forms and newsletter for your products" >}}
+{{< /cards >}}
 
 ![alt text](/blog_img/entrepre/product/posthog-survey.png)
 

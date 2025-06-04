@@ -43,6 +43,7 @@ See my [HUGO Lynx deployed at GHPages](https://jalcocert.github.io/Portfolio/) a
 
 1. https://github.com/nevthereal/linktree-template
 2. https://astro.build/themes/details/ltree/
+3. I covered portfolio links themes on [this post](https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/#web-demo-results)
 
 
 ### SSG LinkinBio with CMS

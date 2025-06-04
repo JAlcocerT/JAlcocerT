@@ -8,7 +8,9 @@ url: 'no-code-ai-tools'
 ---
 
 
+Gen AI, Rags, containers...
 
+But what about the use cases?
 
 
 {{< cards >}}
@@ -16,7 +18,7 @@ url: 'no-code-ai-tools'
   {{< card link="https://github.com/JAlcocerT/Docker" title="Docker Config Files Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Docker Services" >}}
 {{< /cards >}}
 
-[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=FlowiseAI/Flowise,langflow-ai/langflow,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/FlowiseAI/Flowise&langflow-ai/langflow&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
 
 
 The AI tech side might be perceived as chaotic...but you can keep it close to [apps you are familiar](#see-also), like [telegram bots](#tg-bots)
@@ -148,7 +150,7 @@ Once you create a local account, access the UI:
 
 ### Rivet AI
 
-https://www.youtube.com/watch?v=Zd5wjy4YPis
+<!-- https://www.youtube.com/watch?v=Zd5wjy4YPis -->
 
 
 {{< youtube "Zd5wjy4YPis" >}}
@@ -157,7 +159,7 @@ https://www.youtube.com/watch?v=Zd5wjy4YPis
 
 ### DifyAI
 
-https://www.youtube.com/watch?v=yXAJwDtAbLo
+<!-- https://www.youtube.com/watch?v=yXAJwDtAbLo -->
 
 
 {{< youtube "yXAJwDtAbLo" >}}
@@ -170,10 +172,11 @@ https://www.youtube.com/watch?v=yXAJwDtAbLo
 
 ## Conclusion
 
-<!-- {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="Tinkering with structured outputs | Post ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="Tinkering with function calling | Post ↗" >}}
-{{< /cards >}} -->
+I have been tinkering with docker and some of these flows/bot builders:
+
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/selfhosting-chatwoot/" title="ChatWoot | Post ↗" >}}
+{{< /cards >}}
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot with Docker 🐋 ↗" >}}

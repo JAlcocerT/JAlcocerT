@@ -2,7 +2,7 @@
 title: "All your web links for Social Media combined"
 date: 2024-09-29T10:20:21+01:00
 draft: false
-tags: ["dev"]
+tags: ["Dev","Web","Portfolio"]
 description: 'Consolidating Social Media Links with a cool website. Show your work with Hugo and Lynx. Compared with LinkStack.'
 url: 'portfolio-website-for-social-media'
 ---
@@ -31,6 +31,7 @@ https://www.udemy.com/courses/search/?src=ukw&q=local+llm -->
 
 ### Web Demo Results
 
+#### HUGO LYNX with GithubPages
 
 {{< details title="Proposing a Quick HUGO Theme 📌" closed="true" >}}
 
@@ -92,6 +93,10 @@ In **less than ~1min**, your site will be refreshed at **Github Pages**.
 
 Other Interesting **HUGO Themes**: BlowFish, BeautifulHugo, ...
 
+#### Astro LTree with TinaCMS
+
+Withing Astro, we also have similar *links collector* static themes, like the previous HUGO Lynx.
+
 {{< details title="It all started testing this Astro Theme with TinaCMS📌" closed="true" >}}
 
 Have a look to this video for a first [Astro + TinaCMS test](https://www.youtube.com/watch?v=5Opvp6z1uSc&t=2s)
@@ -107,22 +112,29 @@ npm install
 npm run dev --host #as i was using the Opi
 ```
 
-Everything worked, so i created this [repo for the project](https://github.com/JAlcocerT/morita-web)
-
-
 ```sh
 npm run build
 npm install -g serve #serve with npm
 
 serve -s dist #http://localhost:3000
 ```
+
+
+> Everything worked, so i created this [repo for the project](https://github.com/JAlcocerT/yarness-web)
+
+
 {{< /details >}}
+
 
 ## Selhostable Link Tools
 
+It requires a server, but it gets the job done and it brigns multi-user, authentication out of the box:
+
 1. [LinkStack](https://linkstack.org/docker/) - Selfhostable with [this docker config](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/LinkStack_docker-compose.yml)
 
->  A simple to set up [docker variant of LinkStack](https://github.com/linkstackorg/linkstack-docker). LinkStack is a highly customizable link sharing platform with an intuitive, easy to use user interface. 
+>  A simple to set up [docker variant of LinkStack](https://github.com/linkstackorg/linkstack-docker). 
+
+> > LinkStack is a highly customizable link sharing platform with an intuitive, easy to use user interface. 
 
 ---
 
@@ -147,12 +159,14 @@ And lets go with the blog template.
 npm run dev #a default astro blog is ready at localhost:4321
 ```
 
-You can use **Tina together with a Github Repository**
-
 {{< /details >}}
+
+> You can use **Tina together with a Github Repository**
+
 
 ### Web Analytics - A Comparison
 
+And when you got a website...you will want to know how much people is visiting it.
 
 
 {{< callout type="info" >}}
@@ -170,7 +184,6 @@ This feature integrates seamlessly with its robust marketing automation capabili
 - **Google Analytics**: A web analytics tool that tracks website traffic, user behavior, and conversions. It provides insights into how users interact with your website and identifies potential areas for improvement.
 
 - **Adobe Analytics**: Known for its advanced capabilities in website analytics and customer journey intelligence. Adobe Analytics offers detailed insights into customer behaviors and preferences, going beyond basic traffic data to help understand deeper customer dynamics.
-
 
 <!-- 
 sf - secure forms

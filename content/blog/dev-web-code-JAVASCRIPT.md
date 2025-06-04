@@ -144,12 +144,11 @@ I saw this one for the first time at this Astro Theme.
 
 ### Search
 
-1. FuseJS
+1. FuseJS - as HUGO PaperMod or Astro celestial docs
 2. pageFind - as astro starlight
 
 * google
 * whoogle
-* fusejs (hugo papermod)
 
 ### Image Galleries
 
@@ -171,7 +170,6 @@ npm install photoswipe react react-dom
 #### Skulpt
 
 Skulpt is an entirely **in-browser implementation of Python**.
-
 
 * <https://skulpt.org/>
     * <https://github.com/skulpt/skulpt>

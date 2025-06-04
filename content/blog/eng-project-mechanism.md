@@ -2,7 +2,7 @@
 title: "How to setup Gabe's project, Mechanism"
 date: 2025-03-02T10:20:21+01:00
 draft: false
-tags: ["Python","Mechanics","Engineering"]
+tags: ["Python","Mechanics","Engineering","TinaCMS"]
 description: "Mechanisms Animations in Python. From Singer machines to car engines. Project Docs with Astro and Tina?"
 url: 'gabemorris12-mechanism-project-setup'
 math: true

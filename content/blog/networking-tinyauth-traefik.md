@@ -261,6 +261,8 @@ curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \
 
 You can use that API into the **Traefik docker-compose below** at `CF_DNS_API_TOKEN`
 
+> Or even better, just paste it into the `cf-token` file. Just the API, no additional strings.
+
 See that we also have a `traefik.yml` linked in the volumes of this compose.
 
 And the docker network:
@@ -329,6 +331,10 @@ Thanks to this, **finally I got my head around Traefik**, for good:
   {{< filetree/file name="cf-token" >}}
 {{< /filetree/container >}}
 
+{{< callout type="info" >}}
+The config and traefik yml's are loaded at run time (when container starts or restarts). Labels are dynamic.
+{{< /callout >}}
+
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JamesTurland/JimsGarage/tree/main/Traefikv3" title="Traefik v3 Container Jimsgarage | Docker Configs 🐋✅ ↗" >}}
@@ -341,9 +347,23 @@ Thanks to this, **finally I got my head around Traefik**, for good:
 
 {{< youtube "CmUzMi5QLzI" >}}
 
+{{< callout type="info" >}}
+There are many [Plugins](https://plugins.traefik.io/plugins) that cna act as middleware!
+{{< /callout >}}
+
+
+
+
 ---
 
 ## Conclusions
+
+Traefik has been a really interesting setup, what I like:
+
+1. Programatic implementation of new subdomains
+2. No need to expose services ports (though you still can)
+3. Automatic https for homelab private IPs working (also for public ones on VPS's)
+4. The rabbithole of middlewares...like for Authentication purpuses (as we will see below)
 
 With Traefik working, its time to combine it with a sample Flask Web App and **Tinyauth**.
 

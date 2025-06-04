@@ -697,6 +697,7 @@ npm i --save @kanaries/graphic-walker
 
 #### Reflex
 
+* https://reflex.dev/blog/2024-10-8-self-hosting-reflex-with-docker/
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Tinkering with Reflex" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Python Web apps with Reflex" >}}

@@ -145,7 +145,9 @@ Based on your criteria, here are the top contenders from your list:
 
 ### FrontMatter CMS
 
+As simpler as it gets.
 
+A VSCode extension that get the work done for editing markdown posts!
 
 * https://frontmatter.codes/
   * https://github.com/estruyf/vscode-front-matter
@@ -160,7 +162,7 @@ npm install frontmatter-markdown-loader --save-dev
 #code --install-extension eliostruyf.vscode-front-matter
 ```
 
-![alt text](/blog_img/web/frontmatter/frontmatter-101.png)
+![FrontMatter 101](/blog_img/web/frontmatter/frontmatter-101.png)
 
 
 You can setu your project just by following these steps (indicate where are your .md posts and thats it):
@@ -232,12 +234,12 @@ However, **not all file-based CMS are Git-based.** Many file-based CMS exist tha
 
 ### decapCMS
 
-https://astro.build/themes/details/astros/ -->> decap CMS
-https://astros.zank.studio/blog/introducing-decap-cms-your-go-to-solution-for-content-management/
+* https://astro.build/themes/details/astros/ -->> decap CMS
+* https://astros.zank.studio/blog/introducing-decap-cms-your-go-to-solution-for-content-management/
 
-https://github.com/gxanshu/astro-decap-cms-starter
-https://astro-decapcms-starter.netlify.app/
-https://decapcms.org/docs/working-with-a-local-git-repository/
+* https://github.com/gxanshu/astro-decap-cms-starter
+* https://astro-decapcms-starter.netlify.app/
+* https://decapcms.org/docs/working-with-a-local-git-repository/
 
 
 #### netlifyCMS === decapCMS
@@ -267,14 +269,13 @@ Even found out a better way to write reliably [projects repo docs with such mode
 
 So now...how about TinaCMS, is it easy to integrate with Astro?
 
-This was a helpful video on TinaCMS x Astro:
+This was a helpful video on **TinaCMS x Astro**:
 
 <!-- https://www.youtube.com/watch?v=5Opvp6z1uSc -->
 
 {{< youtube id="5Opvp6z1uSc" autoplay="false" >}}
 
 * https://docs.astro.build/en/guides/cms/wordpress/
-
 * https://github.com/tinacms/tina-self-hosted-demo
 
 > It can also work with HUGO as seen during [the mechanism docs](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/#tinacms)

@@ -114,13 +114,16 @@ An interesting integration was the recorder app, to their service: https://recor
 2. Security
 
 * [2FAS](https://play.google.com/store/apps/details?id=com.twofasapp) which can be synced with Google Drive and recovers automatically
+
+> You can also see Aegis, or Authy (but is not OSS)
+
 * [Bitwarden](https://play.google.com/store/apps/details?id=com.x8bit.bitwarden)
 
 3. Nextcloud / Immich: to sync your photos or to have a full cloud
 
 **TIP**
 
-If you are using microsoft authenticator, make sure to have cloud backup enabled for your company stuff.
+If you are using **microsoft authenticator**, make sure to have cloud backup enabled for your company stuff.
 
 When adding a new account on the phone, make sure to hit **restore from backup** (the last option below) instead of just sign in with MCSFT.
 
@@ -128,7 +131,7 @@ When adding a new account on the phone, make sure to hit **restore from backup**
 Make sure to have **proper backup codes stored** to enter your critical applications: gmail/microsoft/2fas/....
 {{< /callout >}}
 
-> You could also make sure to be logged in on those services at your tablet, if you have one
+> You could also make sure to be logged in on those services at a tablet, if you have one.
 
 ---
 

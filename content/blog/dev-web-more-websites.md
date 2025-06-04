@@ -106,7 +106,7 @@ But there are very well known services that provide interesting service without 
     * And somethin' like:
         * https://github.com/jpanther/lynx - MIT!
         * https://github.com/SofiDevO/allmylinks
-        * https://github.com/DBozhinovski/astro-theme-ltree - TinaCMS!
+        * https://github.com/DBozhinovski/astro-theme-ltree - With TinaCMS integration!
 
 {{< callout type="info" >}}
 Like we did at the **Social Media Project!**

@@ -219,7 +219,7 @@ But there are very well known services that provide interesting service without 
     * And somethin' like:
         * https://github.com/jpanther/lynx - MIT!
         * https://github.com/SofiDevO/allmylinks
-        * https://github.com/DBozhinovski/astro-theme-ltree - TinaCMS!
+        * https://github.com/DBozhinovski/astro-theme-ltree - With [TinaCMS](https://jalcocert.github.io/JAlcocerT/create-your-website/#setup-a-static-cms)!
 
 {{< callout type="info" >}}
 Like we did at the **Social Media Project!**
