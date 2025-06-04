@@ -112,6 +112,8 @@ npm install
 npm run dev --host #as i was using the Opi
 ```
 
+And to serve the built files just do: 
+
 ```sh
 npm run build
 npm install -g serve #serve with npm
@@ -119,9 +121,7 @@ npm install -g serve #serve with npm
 serve -s dist #http://localhost:3000
 ```
 
-
 > Everything worked, so i created this [repo for the project](https://github.com/JAlcocerT/yarness-web)
-
 
 {{< /details >}}
 

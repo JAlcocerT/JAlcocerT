@@ -41,6 +41,7 @@ Over the past 12 years, Ghost has consistently focused on building tools for web
 The author expresses pride in Ghost's achievements as a **small, independent non-profit** competing with large, VC-funded platforms.
 
 The article concludes by noting a growing appetite for independent solutions and announces the upcoming release of **Ghost 6.0**, a significant step forward for the platform. Ghost is also **hiring** for remote positions.
+
 {{< /details >}}
 
 And the quote was just so resonating: 
@@ -127,16 +128,40 @@ Which is what the [Treelink](https://github.com/JAlcocerT/treelink) project does
 
 ![Treelink Astro](/blog_img/entrepre/treelink.png)
 
+> The only thing the theme need is [a Flask App](https://github.com/JAlcocerT/treelink/tree/main/config-generator) so that people generates its config!
+
 #### TinaCMS
 
 * https://tina.io/
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/mechanism" title="Cechanism project docs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Celestial Theme x TinaCMS Setup" >}}
+  {{< card link="https://app.tina.io/projects" title="Tina Cloud" image="/blog_img/entrepre/astro-tina-cloud.png" subtitle="" >}}
+  {{< card link="https://github.com/JAlcocerT/mechanism" title="Mechanism project docs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Celestial Theme x TinaCMS Setup" >}}
 {{< /cards >}}
 
+![alt text](/blog_img/entrepre/astro-tina-cloud.png)
+
 * https://github.com/JAlcocerT/barebones-starter
+* https://github.com/JAlcocerT/yarness-web
+  * https://github.com/DBozhinovski/astro-theme-ltree
+
+![Astro Ltree](/blog_img/entrepre/astro-ltree-tinacms.png)
+
+
+##### Astro Theme LTree
+
+I great working sample with TinaCMS Cloud.
+
+
+![TinaCMS Cloud Login](/blog_img/web/tinaCMS/tina-cloud-login.png)
+
+{{< details title="Astro Theme Ltree and TinaCMS | Step by Step with Snapshots 📌" closed="true" >}}
+
+![alt text](/blog_img/web/tinaCMS/tina-cloud-ui.png)
+
+
+{{< /details >}}
 
 
 
@@ -148,6 +173,7 @@ Which is what the [Treelink](https://github.com/JAlcocerT/treelink) project does
 
 ### Authentication
 
+https://darko.io/posts/but-auth-is-hard
 
 #### TinyAuth
 
@@ -203,3 +229,11 @@ To see how customers interact with your product, you can try with https://eu.pos
 Spinned with [subdomain and https](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) via [Traefik](https://fossengineer.com/selfhosting-traefik/)
 
 And...for user interaction [a CMS](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/)
+
+
+### Next Steps
+
+Who said weddings?
+
+https://youtube.com/shorts/YvqRzjcR7EI
+
