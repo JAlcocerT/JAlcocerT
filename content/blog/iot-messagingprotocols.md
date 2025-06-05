@@ -240,3 +240,14 @@ While Redis offers messaging capabilities, it's not a direct replacement for all
 The best choice depends on the specific requirements and complexity of your application.
 
 For simpler real-time updates and scenarios where some message loss is acceptable (or handled at the application level), Redis can be a performant and easy-to-manage option.
+
+### Cloud for IoT
+
+* <https://cloud.google.com/free>
+  * PUB/SUB <https://cloud.google.com/free/docs/free-cloud-features#pub-sub>
+
+
+{{< youtube "jYIgcdIW1yk" >}}
+
+
+* AWS IoT - <https://www.youtube.com/watch?v=hgQ-Ewrm48c>

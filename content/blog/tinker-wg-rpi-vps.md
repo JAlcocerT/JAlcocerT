@@ -245,6 +245,8 @@ ping -4 google.com
 }
 ```
 
+![Digital Ocean Droplet VPS | Amsterdam](/blog_img/selfh/DO-Amsterdam.png)
+
 {{< callout type="info" >}}
 Remember that **the Pi has to be WIFI connected**! And I recommend you to do so [when Installing the OS](https://jalcocert.github.io/RPi/posts/getting-started/#how-to-get-started-with-a-rpi) itself.
 {{< /callout >}}

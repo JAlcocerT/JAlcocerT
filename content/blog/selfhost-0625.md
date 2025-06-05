@@ -37,6 +37,8 @@ It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcoc
 
 ### Nextcloud with Https
 
+Getting Better at [sync file tools](https://jalcocert.github.io/JAlcocerT/sync-file-tools/)
+
 ```sh
 nslookup nextcloud.jalcocertech.com
 ```
@@ -62,3 +64,5 @@ docker exec -u www-data nextcloud php /var/www/html/occ config:system:set truste
 Going from this: https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#nextcloud
 
 To this
+
+> remember to use the [Android](https://play.google.com/store/apps/details?id=com.nextcloud.client&pli=1) or iOS app

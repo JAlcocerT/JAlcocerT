@@ -296,7 +296,10 @@ Where to get [a VPS](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#
 
 * Hetzner, Hostinger ...
 * https://lowendstock.com/
-* Some would say to [Oracle](https://www.oracle.com/cloud/sign-in.html), but I got my account shut down without a reason (nothing like selfhosting P2P programs...which was interesting and customer service did not came back with a solution)
+* Some would say to [Oracle](https://www.oracle.com/cloud/sign-in.html)
+
+> I got my account shut down without a reason (nothing like selfhosting P2P programs...which was interesting and customer service did not came back with a solution)
+
 * GCP: https://console.cloud.google.com/
 
 ### Other 
@@ -352,6 +355,7 @@ sudo apt install dupeguru-se
 > 🦎 a tool to build and deploy software on many servers 🦎
 
 <!-- https://www.youtube.com/watch?v=acDVwwLklas -->
+
 {{< youtube "acDVwwLklas" >}}
 
 2. https://github.com/safing/portmaster
