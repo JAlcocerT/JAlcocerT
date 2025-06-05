@@ -108,6 +108,25 @@ It's all combined on this project:
 
 ### The CMS
 
+
+{{< details title="Markdown edition is fine, but...some tools? 📌" closed="true" >}}
+
+You need **markdown** for these SSGs. And there are cool **markdown tools**:
+
+1. https://github.com/Cveinnt/LetsMarkdown.com
+
+```sh
+docker run --rm -dp 3030:3030 cveinnt/letsMarkdown
+```
+
+2. https://github.com/joemccann/dillinger
+
+> MIT | The last Markdown editor, ever.
+
+{{< /details >}}
+
+
+
 I first had a look to reddit:
 
 * https://www.reddit.com/r/webdev/comments/1hdf2ey/best_headless_cms_for_freelancing_editable_by_the/
@@ -140,7 +159,7 @@ Which is what the [Treelink](https://github.com/JAlcocerT/treelink) project does
   {{< card link="https://github.com/JAlcocerT/mechanism" title="Mechanism project docs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Celestial Theme x TinaCMS Setup" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/entrepre/astro-tina-cloud.png)
+<!-- ![alt text](/blog_img/entrepre/astro-tina-cloud.png) -->
 
 * https://github.com/JAlcocerT/barebones-starter
 * https://github.com/JAlcocerT/yarness-web
@@ -151,12 +170,16 @@ Which is what the [Treelink](https://github.com/JAlcocerT/treelink) project does
 
 ##### Astro Theme LTree
 
-I great working sample with TinaCMS Cloud.
+I great working sample with TinaCMS Cloud: https://app.tina.io/projects
 
 
-![TinaCMS Cloud Login](/blog_img/web/tinaCMS/tina-cloud-login.png)
+<!-- ![TinaCMS Cloud Login](/blog_img/web/tinaCMS/tina-cloud-login.png) -->
 
 {{< details title="Astro Theme Ltree and TinaCMS | Step by Step with Snapshots 📌" closed="true" >}}
+
+Following the original theme instructions: https://darko.io/posts/linktree-and-linkinbio-clone-with-astro-and-tinacms
+
+* https://github.com/DBozhinovski/astro-theme-ltree
 
 ![alt text](/blog_img/web/tinaCMS/tina-cloud-ui.png)
 

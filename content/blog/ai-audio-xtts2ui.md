@@ -476,16 +476,19 @@ flatpak install flathub net.mkiol.SpeechNote
 flatpak run net.mkiol.SpeechNote
 ```
 
+---
+
 * Not F/OSS: 
   * https://www.gladia.io/pricing
   * https://bigwav.app/
 
-T2S/TTS - text to speech
+T2S/TTS - **text to speech** tools:
 
 * elevenlabs - https://elevenlabs.io/pricing
 * https://azure.microsoft.com/en-us/products/ai-services/text-to-speech
 
-And now there is even prompt to audio at: google veo3
+And now there is even **prompt to video** at: google veo3
 
 * https://openart.ai/video?ai_model=veo2
 * revid.ai
+* HeyGen - https://docs.heygen.com/ with avatar videos that are API driven

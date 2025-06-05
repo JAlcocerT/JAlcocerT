@@ -2,7 +2,7 @@
 title: "SelfHosted Cloud vs Syncs vs WebDav"
 date: 2025-03-15
 draft: false
-tags: ["OSS"]
+tags: ["OSS","Homelkab"]
 description: 'Alternatives to sync your files. From Nextcloud Web Dav to SFTP Go'
 url: 'sync-file-tools'
 ---
@@ -23,6 +23,10 @@ sudo flatpak install flathub com.nextcloud.desktopclient.nextcloud -y
 #sudo apt install nload
 #nload
 ```
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml" title="NextCloud Config File 🐳 ↗"  >}}
+{{< /cards >}}
 
 * Recommended Apps inside Nextcloud: cospend (moneybuster Android)
 

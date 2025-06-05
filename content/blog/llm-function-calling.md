@@ -301,7 +301,7 @@ Let's break down the implementation details of function calling for OpenAI, Groq
 
 **Example (Conceptual OpenAI):**
 
-```python
+```py
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[{"role": "user", "content": "What's the weather in Warsaw?"}],

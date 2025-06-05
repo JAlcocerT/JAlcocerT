@@ -516,7 +516,7 @@ Here's a breakdown of what SAMknows means for telecom:
 * **FaultFinder:** A tool to help identify and diagnose network performance issues.
 * **ConnectedHome:** Provides insights into the internet connection rate within a home network.
 
-It's also important to note that in June 2023, SAMknows was acquired by Cisco and is now part of their ThousandEyes team, further integrating their network performance insights into a broader network intelligence platform.
+It's also important to note that in 06/2023, SAMknows was acquired by Cisco and is now part of their ThousandEyes team, further integrating their network performance insights into a broader network intelligence platform.
 
 {{< /details >}}
 

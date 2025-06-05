@@ -4,6 +4,7 @@ date: 2025-05-18T22:20:21+01:00
 draft: false
 description: "UI/X for customizing SSGs. Keystatic, Frontmatter and others. Combined with PostHog/OpenReplay for Product Analytics."
 url: 'cms-for-static-websites'
+tags: ["Web","CMS","Entrepreneur"]
 ---
 
 Lately I have added some [upgrades](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) (via [telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot)), so that whenever a customer sends new photos, they are synced to its photo centered repo.
@@ -35,7 +36,7 @@ And the final goal of tech is not tech itself, but being accesible.
 Not sure if its good or bad news, yet there are a ton of CMS and I just needed one of them to be working.
 {{< /callout >}}
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Thinkmill/keystatic,tinacms/tinacms,decaporg/decap-cms&,type=Date)](https://star-history.com/#Thinkmill/keystatic&tinacms/tinacms&decaporg/decap-cms&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Thinkmill/keystatic,tinacms/tinacms,directus/directus,decaporg/decap-cms&,type=Date)](https://star-history.com/#Thinkmill/keystatic&tinacms/tinacms&decaporg/decap-cms&directus/directus&Date)
 
 
 
@@ -55,15 +56,20 @@ Not sure if its good or bad news, yet there are a ton of CMS and I just needed o
 
 As you can imagine, there are more than a few Content Management Systems (CMS) available:
 
-- [KEYSTATICCMS](#keystatic-cms)
-- [Tina](https://tina.io/)
-- [GHOST + GATSBY](https://ghost.org/docs/jamstack/)
-- [Strapi](https://jamstack.org/headless-cms/strapi/)
+0. FrontMatterCMS
+1. [KEYSTATICCMS](#keystatic-cms)
+2. [Tina](https://tina.io/)
+3. [GHOST + GATSBY](https://ghost.org/docs/jamstack/)
+  - Or Ghost x Astro - https://docs.astro.build/en/guides/cms/ghost/
+4. [Strapi](https://jamstack.org/headless-cms/strapi/)
   - Supports **GraphQL** or **RESTful** API.
-- [Decap CMS (formerly Netlify CMS)](https://decapcms.org/)
+5. [Decap CMS (formerly Netlify CMS)](https://decapcms.org/)
   - [Add to Your Site](https://decapcms.org/docs/add-to-your-site/)
-- [Directus](https://jamstack.org/headless-cms/directus/)
+6. [Directus](https://jamstack.org/headless-cms/directus/)
   - Directus turns SQL databases into REST and GraphQL APIs with an intuitive no-code app.
+  - https://directus.io/solutions/headless-cms
+7. Wordpress x Astro
+  - https://docs.astro.build/en/guides/cms/wordpress/
 
 Given your requirements for a **very simple, self-hostable, and totally open-source CMS that works well with Static Site Generators (SSG) and Markdown**, let's filter this list.
 
@@ -599,6 +605,9 @@ This is one of the cool and simple headlessCMS out there.
 
 > Apache v2 | A fully open-source headless CMS that supports Markdown and Visual Editing
 
+{{< callout type="info" >}}
+With an interesting free tier for 2 users
+{{< /callout >}}
 
 Tried it with: https://github.com/JAlcocerT/barebones-starter
 

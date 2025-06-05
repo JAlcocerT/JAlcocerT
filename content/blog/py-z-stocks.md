@@ -77,7 +77,11 @@ To see whats the best way for me to authencate users: clear/supabase/logto...
 
 ## PyStocks
 
-The structure looks like so:
+There are cool apps outthere: https://openalternative.co/maybe
+
+But I wanted to build mine and learn something more along the way.
+
+The structure looks like:
 
 {{< filetree/container >}}
   {{< filetree/folder name="content" >}}

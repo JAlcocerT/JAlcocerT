@@ -88,11 +88,11 @@ A very interesting web app to put together your **homelab links**:
 
 **What I like about Homarr**
 
-1. **Integrations** with other apps: Nextcloud, qbitrorrent, ...
+1. **Integrations** with other apps: [Nextcloud](#nextcloud), qbitrorrent, ...
 
 ![Homarr - NextCloud Integration](/blog_img/selfh/media/homarr-nc.png)
 
-![alt text](/blog_img/selfh/media/homarr1.png)
+![Homarr UI](/blog_img/selfh/media/homarr1.png)
 
 2. Weather for location (and forecast)
 3. Built in RSS Feed. [Example](https://feeds.feedburner.com/visualcapitalist)
@@ -306,7 +306,9 @@ https://github.com/JamesTurland/JimsGarage/blob/main/Piholev6/docker-compose.yam
 
 #### NextCloud
 
-Its a very intuitive way to backup your Smartphones:
+Its not all aboyt nc and syncthing is i recently wrote [here, together with webdavs](https://jalcocert.github.io/JAlcocerT/sync-file-tools/)
+
+But tbh, NC is a very intuitive way to backup your Smartphones (iOS or android):
 
 ![NextCloud Sync Android](/blog_img/selfh/media/nextcloud-pixel8-sync.png)
 
