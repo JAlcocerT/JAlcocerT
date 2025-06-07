@@ -178,7 +178,7 @@ The idea behind is it simple:
 3. Let them sign up and make the tweaks with a headless CMS UI
 4. When changes are done, build the SSG and push it to static hosting
 5. Get leads, scale it
-6. Get rich 
+6. Get rich (?)
 
 > Sounds like a plan?
 

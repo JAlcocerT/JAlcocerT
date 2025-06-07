@@ -540,3 +540,11 @@ And all of this could have just been done in plain excel...
 
 * openpyxl is a powerful tool for working with Excel files programmatically.
 * While it doesn't directly replace VBA macros, it provides a robust alternative for many automation needs.
+
+### eBooks
+
+**Making ebooks** is possible with pandoc or MKDoc
+
+* https://github.com/Wandmalfarbe/pandoc-latex-template
+
+> Maybe someone will do with financial miss-conceptions?

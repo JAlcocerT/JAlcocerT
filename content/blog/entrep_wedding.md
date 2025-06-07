@@ -3,7 +3,7 @@ title: "Just shipping."
 date: 2025-06-04T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Cloud"]
-description: 'Wedding stuff'
+description: 'Wedding stuff. Aka 200, you mean 4k?'
 url: 'wedding-photo-galleries'
 ---
 
@@ -23,12 +23,42 @@ https://filebrowser.org/configuration/custom-branding
 
 ### The Landing Page
 
+Pictures 360, from every angle
+Capture the special moments
+
+
+{{< details title="With a Domain in Place 📌" closed="true" >}}
+
+
+* https://www.namecheap.com/domains/
+* Cloudflare domains
+* Google Domains / SquareSpace
+* GoDaddy...
+
+
+{{< /details >}}
+
+
+How people are doing this kind of stuff?
+
+* https://www.gymlaunch.com/
+
+Using tools like [webflow](https://webflow.com/pricing)...
+
+https://web-check.xyz/check/https%3A%2F%2Fwww.gymlaunch.com%2F
+
+It always great to find new astro themes:
+
+* https://github.com/iann-mathaiya/nikola-tesla
+* Saasify
+* 
+
 First things first: a catchy name
 
 * GaleriaSlubna
 * SlubneChwile
 
-https://fossengineer.com/alternatives-for-hosting-static-websites/
+* https://fossengineer.com/alternatives-for-hosting-static-websites/
 
 ```sh
 npx wrangler pages project create slubnechwile #this will install the wrangler CLI package
@@ -41,8 +71,21 @@ npx wrangler pages deploy dist # normally will be dist/public, but whatever <BUI
 
 #### Formbricks
 
+Formbricks works perfectly with Astro being static:
+
 ![Formbricks and Astro](/blog_img/entrepre/wedding/formbrics-astro.png)
 
+And also with n8n to make no code stuff with our leads.
+
+### The Product
+
+
+Create the svg and following the [custom branding](https://filebrowser.org/configuration/custom-branding)
+```sh
+convert "Desktop/JAlcocerTech xyz logo2.png" -threshold 50% -negate -transparent white -trim +repage temp.pnm && potrace temp.pnm -s -o "Desktop/JAlcocerTech-logo.svg" && rm temp.pnm
+```
+
+And dont forget to add in the UI settings the [custom location](https://github.com/filebrowser/filebrowser/tree/master/frontend/public/img/icons) `./branding`
 
 ### The VPS
 
@@ -65,6 +108,17 @@ https://www.hetzner.com/storage/object-storage/
 
 ## The Leads
 
+Or in other words: *How to Get Strangers To Want To Buy Your Stuff* As i learnt [here](https://www.acquisition.com/training/leads16)
+
+As a friend recommended me [last year](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/): it's all about leads and offers
+
+### The Lead Magnet
+
+How about some [wedding theme](https://github.com/Boston343/horizon)?
+
+### Interest Groups
+
+* https://www.facebook.com/groups/549014068636656
 
 ### The Ads
 
@@ -241,3 +295,15 @@ How to Get Started:
 Participating in Google Ads requires a commitment to learning and ongoing optimization, but the basic requirements are straightforward to meet.
 
 {{< /details >}}
+
+
+## Financials
+
+Recently I was reading about [Pricing strategies](https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy) and Menger's view.
+
+If everything works...
+
+You should get:
+
+- Some revenue: EBITDA (?)
+- Net profit after all the expenses and so on

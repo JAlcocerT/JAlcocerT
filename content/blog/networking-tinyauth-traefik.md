@@ -473,6 +473,7 @@ curl -X GET "https://api.cloudflare.com/client/v4/zones?name=whateveryourdomaini
 
 * https://docs.logto.io/quick-starts/python
 * https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo
+* https://openapi.logto.io/operation/operation-identifyuser
 
 You will need an account: https://cloud.logto.io/
 
