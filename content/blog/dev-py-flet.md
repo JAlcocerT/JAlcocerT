@@ -3,7 +3,7 @@ title: "Flet."
 date: 2025-12-27T23:20:21+01:00
 draft: true
 tags: ["Dev"]
-summary: 'More cool Streamlit Stuff'
+summary: 'More cool python Stuff'
 url: 'flet-apps'
 ---
 

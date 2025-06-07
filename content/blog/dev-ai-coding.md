@@ -84,12 +84,12 @@ codex
 
 #find . -name ".git" -type d
 #git reset --hard HEAD
+git restore ./docs/index.mdx #restore a particular file back to last commit
 ```
 
 Codex also allows you to use other providers that support the OpenAI Chat Completions API. 
 
 You can set the provider in the config file or use the `--provider` flag.
-
 
 {{< callout type="info" >}}
 The possible options for --provider are:  openai (default), openrouter, gemini, ollama, mistral, deepseek, xai, groq...

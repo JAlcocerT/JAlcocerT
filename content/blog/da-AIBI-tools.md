@@ -2,7 +2,7 @@
 title: "AI|BI Tools "
 date: 2025-05-22T00:20:21+01:00
 draft: false
-tags: ["Dev","D&A"]
+tags: ["Dev","D&A","Career"]
 description: 'BI/AI another combo and more D&A Tools'
 url: 'ai-bi-tools'
 ---

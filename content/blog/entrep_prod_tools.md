@@ -3,7 +3,7 @@ title: "Want to be an entrepreneur?"
 date: 2025-05-29
 draft: false
 tags: ["Entrepreneuring","Websites"]
-description: 'SelfHosted Product Tools, Analytics and Authentication. The mission of ghost websites its just so great.'
+description: 'SelfHosted Product Tools, Analytics and Authentication. The mission of Ghost Websites its just so great.'
 url: 'product-tools'
 ---
 

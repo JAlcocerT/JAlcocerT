@@ -274,7 +274,7 @@ Recently when installing [Gyroflow for better video edition](https://jalcocert.g
 
 And after reboot I could not access the system at all.
 
-Thankfully, I got proper backup implemented!
+Thankfully, I got **proper backup** implemented!
 
 or at least, one that worked.
 

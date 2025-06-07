@@ -185,7 +185,7 @@ I was covering recently nextcloud...
 
 ![NextCloud Untrusted Domain](/blog_img/selfh/nextcloud-untrusteddomain.png)
 
-found out about
+Found out about these along the way:
 
 1. [OpenCloud](https://www.youtube.com/watch?v=Ud9FEmNOgLs)
 
@@ -195,7 +195,7 @@ found out about
 
 2. Using [ProtonDrive](https://blog.otterlord.dev/posts/proton-drive-rclone/) with [rclone](https://rclone.org/protondrive/#configurations)
 
-Which I could not resist to try: https://github.com/JAlcocerT/Docker/tree/main/Backups#rclone
+> Which I could not resist to try: https://github.com/JAlcocerT/Docker/tree/main/Backups#rclone
 
 
 #### AI Apps Im SelfHosting

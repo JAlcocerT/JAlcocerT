@@ -7,6 +7,8 @@ description: 'Programatic Https for all services and docker stacks'
 url: 'selfhosted-apps-06-2025'
 ---
 
+<!-- https://fossengineer.com/selfhosting-favourite-aug-2024/ -->
+
 It was all about...[Traefik](https://fossengineer.com/selfhosting-traefik/) to get programatic https for homelab services!
 
 
@@ -39,6 +41,10 @@ It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcoc
 
 Getting Better at [sync file tools](https://jalcocert.github.io/JAlcocerT/sync-file-tools/)
 
+All thanks to getting Traefik to work programatically!
+
+So I just needed to get the domain DNS records accordingly:
+
 ```sh
 nslookup nextcloud.jalcocertech.com
 ```
@@ -66,3 +72,47 @@ Going from this: https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-20
 To this
 
 > remember to use the [Android](https://play.google.com/store/apps/details?id=com.nextcloud.client&pli=1) or iOS app
+
+https://jalcocert.github.io/JAlcocerT/sync-file-tools/#webdavs
+https://docs.nextcloud.com/server/31/user_manual/en/files/access_webdav.html
+
+```txt
+dav://reisikei@192.168.1.11:8080/remote.php/webdav
+davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
+davs://your_nc_user@nextcloud.jalcocertech.com/remote.php/webdav
+```
+
+{{< callout type="warning" >}}
+When using WebDav the files are only on the server, not backed up on your device. I got a transfer speed of ~15mb/s via wifi.
+{{< /callout >}}
+
+You can also use the desktop app:
+
+```sh
+flatpak install flathub com.nextcloud.desktopclient.nextcloud
+```
+
+See the transfer speed with
+
+```sh
+sudo apt install nload
+#ip a
+nload wlp3s0
+```
+
+> Got a transfer speed of , compared to the ~60MB/s avg to ProtonDrive
+
+#### Third Party Cloud NC Backup
+
+Last month i tried protondrive with rclone https://github.com/JAlcocerT/Docker/tree/main/Backups#rclone
+
+1. **ProtonDrive**
+
+2. **Google Drive**
+
+### In Home Tools
+
+1. Reubah
+2. IT/Toos + OmniTools
+
+...

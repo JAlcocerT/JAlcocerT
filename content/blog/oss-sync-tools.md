@@ -216,7 +216,9 @@ This will depend on the router you are using:
   {{< card link="https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/" title="More Telco Stuff" image="/blog_img/outro/telecom/2cm.png" subtitle="Concepts and Tools" >}}
 {{< /cards >}}
 
-I used iperf and iotop to check that I get ~730Mbits/sec on Wifi and ~916Mbits/sec on eth
+I used **iperf and iotop** to check that I get
+
+* ~730Mbits/sec on Wifi and ~916Mbits/sec on eth
 
 ### More Tools
 

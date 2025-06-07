@@ -6,7 +6,7 @@ draft: false
 #   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
 #   alt: "SelfHosting xTTS2 with Docker." # alt text
 #   caption: "Succesfull installation of xTTS2 with Docker." # display caption
-description: 'Local TTS Tools with Coqui and LocalAI. Clone audio with xTTS2.'
+description: 'Local T2S Tools with Coqui and LocalAI. Clone audio with xTTS2.'
 tags: ["AI-Gen"]
 url: local-ai-audio
 ---
@@ -484,7 +484,7 @@ flatpak run net.mkiol.SpeechNote
 
 T2S/TTS - **text to speech** tools:
 
-* elevenlabs - https://elevenlabs.io/pricing
+* Elevenlabs - https://elevenlabs.io/pricing
 * https://azure.microsoft.com/en-us/products/ai-services/text-to-speech
 
 And now there is even **prompt to video** at: google veo3
@@ -492,3 +492,5 @@ And now there is even **prompt to video** at: google veo3
 * https://openart.ai/video?ai_model=veo2
 * revid.ai
 * HeyGen - https://docs.heygen.com/ with avatar videos that are API driven
+
+> Hey gen can be combined with MCP - https://github.com/heygen-com/heygen-mcp witht their [mcp server](https://docs.heygen.com/docs/heygen-mcp-server)
