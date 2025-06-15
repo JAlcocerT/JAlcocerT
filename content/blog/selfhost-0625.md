@@ -110,6 +110,21 @@ Last month i tried protondrive with rclone https://github.com/JAlcocerT/Docker/t
 
 2. **Google Drive**
 
+#### PortMaster and https
+
+
+{{< callout type="info" >}}
+If you are using portmaster, you might need to disable DNS config ->Enforce global/private-split view so that the nextcloud configured via Traefik and tailscale DSN will work
+{{< /callout >}}
+
+![Portmaster](/blog_img/selfh/https/portmaster-nc-https.png)
+
+### The DNSs
+
+Its all about the DNS.
+
+And I saw on [this post](https://forocoches.com/foro//showthread.php?t=10372366) that there is an EU alternative to cloudflare, goodle, quad9 and many other DNS: https://www.joindns4.eu/for-public#resolver-options
+
 ### In Home Tools
 
 1. Reubah

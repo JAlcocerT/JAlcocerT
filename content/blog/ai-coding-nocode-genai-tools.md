@@ -254,6 +254,7 @@ https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
 
 Sometime ago I was doing some tests with [tg bots](https://github.com/JAlcocerT/Private/tree/main/Web_scrapping/Py_BeautifulSoup/TelegramBot), but that was all before the LLM boom.
 
+And definitely there are interesting bots outthere, like the bibliotecasecreta.nl
 * https://core.telegram.org/bots/api
   * https://pypi.org/project/python-telegram-bot/
   * https://github.com/python-telegram-bot/python-telegram-bot

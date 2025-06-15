@@ -109,7 +109,11 @@ An interesting integration was the recorder app, to their service: https://recor
 
 > Hello from the future!
 
-1. The GCam works really nice with the phone. *They have included a cool astro mode*.
+1. The GCam works really nice with the phone. *They have included a cool astro mode*
+
+{{< callout type="info" >}}
+To make appear the option to save a photo while recording a video, you need to Turn off HDR and 60fps as per [this thread](https://www.reddit.com/r/GooglePixel/comments/ynckao/take_photo_while_recording_video/)
+{{< /callout >}}
 
 2. Security
 

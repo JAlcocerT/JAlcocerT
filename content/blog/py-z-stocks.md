@@ -11,13 +11,12 @@ math: true
 
 **TradFi** - Or Traditional Finances, as I saw recently on redit.
 
-Wouldnt it be great to go out the typical google sheet and have a great UX when looking at your finances?
-
-
+Wouldnt it be great to go out the *typical google sheet* and have a great UI/X when looking at your finances?
 
 
 {{< callout type="info" >}}
-The project initially, [**source code**](https://gitlab.com/fossengineer1/py_stocks) - PyStocks. But then vibe coded it [here](https://github.com/JAlcocerT/Py_Stocks) 💻 
+The project initially, [**source code**](https://gitlab.com/fossengineer1/py_stocks) - PyStocks.
+But then vibe coded it [here](https://github.com/JAlcocerT/Py_Stocks) 💻 
 {{< /callout >}}
 
 If all of this sounds familiar.
@@ -183,6 +182,11 @@ Even as a subscription based model, say [7$/month](https://www.cazadividendos.co
 
 ## FAQ 
 
+ETF vs Dividends?
+
+> Why not both with DGRW?
+
+
 ### Selfhostable Apps
 
 1. https://github.com/maybe-finance/maybe
@@ -258,6 +262,19 @@ Valuation Metrics:
 - **PER (Price-to-Earnings Ratio)**: A valuation measure comparing share price to earnings per share.
 - **PEGI (Price/Earnings to Growth Index)**: PER adjusted for expected earnings growth; calculated as `PER / Annual EPS Growth`.
 - **PEGY (Price/Earnings to Growth and Yield)**: PER adjusted for both expected earnings growth and dividend yield; calculated as `PER / (Annual EPS Growth + Dividend Yield)`.
+
+**Financial Terminology Explained**
+
+* **P/E Ratio (PER):** The P/E Ratio indicates how much investors are willing to pay for each dollar of a company's earnings.
+* **Forward P/E Ratio (Forward PER):** The Forward P/E Ratio is an estimate of a company's P/E ratio using forecasted future earnings, offering a forward-looking valuation.
+* **Forward Yield (Forward Yield PER):** Forward Yield estimates the expected dividend yield of a stock over the next year based on projected future dividends.
+* **P/E Last 5Y Percentile:** This metric shows where a company's current P/E ratio stands relative to its P/E ratios over the past five years, helping assess if it's trading high or low historically.
+* **5Y Avg P/E:** The 5-year Average P/E is the average of a company's P/E ratio over the last five years, providing a benchmark for its typical valuation.
+* **Yield Growth 1Y/5Y/10Y:** This term measures the percentage increase in a company's dividend yield over one, five, or ten years, showing its history of growing payouts.
+* **Payout Ratio:** The Payout Ratio indicates the percentage of a company's earnings paid out to shareholders as dividends, reflecting how much profit is returned versus reinvested.
+* **PEG Ratio (PEG):** The PEG Ratio compares a company's P/E ratio to its expected earnings growth rate, used to determine if a stock's price is reasonable relative to its growth potential.
+* **PEGI:** PEGI (Price/Earnings Growth Index) is a less common variation of the PEG ratio, sometimes incorporating additional factors beyond just earnings growth.
+
 
 {{< /details >}}
 

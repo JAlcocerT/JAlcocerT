@@ -165,8 +165,8 @@ The tool helps streamline LLM prompt creation, enhancing productivity for develo
 {{< details title="Query LLMs via GroK API 📌" closed="true" >}}
 
 
-
 {{< /details >}}
+
 
 [![Star History Chart](https://api.star-history.com/svg?repos=mufeedvh/code2prompt/,BandarLabs/gitpodcast&type=Date)](https://star-history.com/#mufeedvh/code2prompt/&BandarLabs/gitpodcast&type=Date)
 

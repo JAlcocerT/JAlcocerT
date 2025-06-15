@@ -7,6 +7,8 @@ description: abcd
 url: 'starting-with-3dprinting'
 ---
 
+https://forocoches.com/foro/showthread.php?t=10360182
+
 ## Choosing a Printer
 
 People recommended me: [Prusa](https://www.prusa3d.com/) or BambuLabs
