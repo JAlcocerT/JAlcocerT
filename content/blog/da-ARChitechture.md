@@ -1,6 +1,6 @@
 ---
 title: "Architecture D&A like a Pro"
-date: 2025-04-13T00:20:21+01:00
+date: 2025-04-18T00:20:21+01:00
 draft: false
 tags: ["Career", "D&A", "Analytics"]
 description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
@@ -258,10 +258,12 @@ To tell better stories with data, you have to [ask the right questions](https://
 * **What are the needs we are trying to satisfy?**
 * Who are the stakeholders involved?
 * **What do stakeholders consider to be of value?**
+* The [BRD vs FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics) in the SDLC
+
 
 Remember [the power of 80/20](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/)
 
-Be ready to sharp these questions and go from *the nice to have* to the MUST have features.
+Be ready to **sharp these questions** and go from *the nice to have* to the MUST have features.
 
 {{< callout type="info" >}}
 For MORE QUESTIONS, you can switch-on your **[product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq) mindset**

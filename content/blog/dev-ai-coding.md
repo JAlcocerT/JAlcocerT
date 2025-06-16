@@ -2,7 +2,7 @@
 title: "Vide Coding. For websites and more..."
 date: 2025-04-15T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","GenAI"]
 description: 'How to get started with vibe coding. FirebaseStudio vs Codex vs Claude Code...or maybe just Windsurf?'
 url: 'vide-coding'
 ---
@@ -99,6 +99,20 @@ This is how we would make codex use ollama and in auto mode:
 
 ```sh
 codex --approval-mode full-auto "create the fanciest todo-list app"--provider ollama
+```
+
+If you want to log all the thinking process:
+
+```sh
+codex --quiet --full-auto "$(cat ./prompts/prompt.md)" > output-k8s-auto.json #saved the full reply with errors 
+jq 'select(.type == "message" and .status == "completed")' output-k8s-auto.json #to see the final reply only
+```
+
+To use other providers/LLMs, as per [this post](https://machinelearningmastery.com/understanding-openai-codex-cli-commands/):
+
+```sh
+#codex --provider openai --model o4-mini "This is the default llm selection"
+codex --provider groq --model deepseek-r1-distill-llama-70b "Please create a data analysis script that takes the clean data and runs statistical analysis."
 ```
 
 {{< cards cols="1" >}}

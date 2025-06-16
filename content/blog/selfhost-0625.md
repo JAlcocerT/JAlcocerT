@@ -125,6 +125,12 @@ Its all about the DNS.
 
 And I saw on [this post](https://forocoches.com/foro//showthread.php?t=10372366) that there is an EU alternative to cloudflare, goodle, quad9 and many other DNS: https://www.joindns4.eu/for-public#resolver-options
 
+https://www.youtube.com/watch?v=c3XMAz--_Us
+
+### P2P
+
+You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/)
+
 ### In Home Tools
 
 1. Reubah

@@ -1,6 +1,6 @@
 ---
 title: "Crypto. Now understandable with AI"
-date: 2025-06-13
+date: 2025-09-13
 draft: false
 description: 'Two buzz words in one. Understand crypto once and for all. This time thanks to LLMs'
 url: 'understading-crypto-with-ai'
