@@ -2,10 +2,16 @@
 title: "Whats a BRD?"
 date: 2025-04-16T00:20:21+01:00
 draft: false
-tags: ["Career", "D&A", "Analytics","GenAi"]
-description: 'The business requirement document and the FRD for the GenAI / vibecoded times.'
+tags: ["Career", "D&A", "Analytics","GenAI"]
+description: 'The business requirement document and the FRD for the GenAI / vibecoded times. Better questions for LLMs.'
 url: 'brd-vs-frd-for-data-analytics'
 ---
+
+The BRD, *not the BRP if you read this from NL...* :)
+
+There might be few reasons you want to read this:
+
+1. To give AI proper instructions to build stuff for you:
 
 Lately I was tinkering with [vibe coding tools](https://jalcocert.github.io/JAlcocerT/vide-coding/).
 
@@ -52,6 +58,12 @@ How to make sure that the LLM will have the proper context to have from the very
 **In conclusion:** This is a well-written and highly accurate summary of what a Business Requirements Document is, its purpose, its distinctions from other documents, and best practices for its creation and use. Anyone looking for an overview of BRDs would find this description very helpful.
 
 {{< /details >}}
+
+
+2. To make sure you build whats required
+
+> If you are part of AIOps / [AI|BI](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) or whatever [domain specific](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/) projects, how to make sure that stakeholders expectations are captured and have everyone happy during the delivery? 
+
 
 ## The BRD
 
@@ -172,7 +184,7 @@ The FRD dives into the technical specifics of *how* the system will function to 
 
 By meticulously answering these questions, the FRD provides the precise specifications needed for development, ensuring that the final system aligns perfectly with the detailed expectations of the project team and, ultimately, fulfills the higher-level business needs outlined in the BRD.
 
-### The BRD and FRD with the SDLC
+## The BRD and FRD with the SDLC
 
 The Business Requirements Document (BRD) and Functional Requirements Document (FRD) are foundational artifacts within the **Software Development Life Cycle (SDLC)**. The SDLC is a structured process that software development teams use to plan, design, develop, test, and deploy software. It provides a roadmap for the entire project, from conception to maintenance.
 
@@ -241,3 +253,6 @@ It's important to remember that the BRD and FRD are not created in isolation. Th
 * Conversely, technical feasibility identified during FRD creation or design might lead to adjustments in the BRD.
 
 In essence, the BRD and FRD are critical communication tools that guide a project through the SDLC, ensuring that the final software product effectively addresses the initial business problem.
+
+## Conclusions
+

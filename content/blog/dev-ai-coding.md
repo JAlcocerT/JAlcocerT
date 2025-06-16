@@ -107,6 +107,9 @@ If you want to log all the thinking process:
 codex --quiet --full-auto "$(cat ./prompts/prompt.md)" > output-k8s-auto.json #saved the full reply with errors 
 jq 'select(.type == "message" and .status == "completed")' output-k8s-auto.json #to see the final reply only
 ```
+It will avoid you saving these errors:
+
+![alt text](/blog_img/GenAI/codex-logs.png)
 
 To use other providers/LLMs, as per [this post](https://machinelearningmastery.com/understanding-openai-codex-cli-commands/):
 

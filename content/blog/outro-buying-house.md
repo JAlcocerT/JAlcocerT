@@ -53,7 +53,13 @@ I got to know how quickly furniture costs can escalate: whats x1 can be x4
 
 Id say you have to stay open for ideas: not only IKEA, but maybe sklum or others...
 
-And in the meantime I thought on how to estimate the painting cost, given a house plan.
+And in the meantime I thought on how to estimate the **painting cost, given a house plan**.
+
+You can find sample house plans at:
+
+* https://www.funda.nl/detail/koop/vijfhuizen/huis-jack-sharp-park-29/43919214/
+* https://www.funda.nl/detail/koop/heerhugowaard/huis-steigerdijk-41/43938874/
+* https://www.funda.nl/detail/koop/vijfhuizen/huis-jack-sharp-park-13/43843421/
 
 ### Estimating painting costs with AI
 
