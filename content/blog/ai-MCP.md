@@ -3,7 +3,7 @@ title: "The new next thing - Model Context Protocol"
 date: 2025-04-24T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Dev"]
-description: 'Reviewing how MCP protocol works. From LangGraph to OpenAI Agents. Example with: MCP Server Streamlit with Ollama + '
+description: 'Reviewing how MCP protocol works. From LangGraph to OpenAI Agents. Example with: MCP Server Streamlit with Ollama + Windsurf Context7 MCP'
 url: 'ai-understanding-mcp-framework'
 ---
 
@@ -703,9 +703,97 @@ Directus does not have a free tier at the time of writing, starting the [basic o
 
 This is going to be something.
 
-Yet I dont really see how to extract all the juice.
+Yet I dont really see how to extract all the juice (for now).
+
+There are these use cases:
+
+1. Generate code as per [updated doc context](#context7-with-windsurf-ide)
+2. AI driven development with [a PM controlling the non-sense](#ai-driven-development-with-mcp)
+
 ### Interesting MCP Servers
 
 1. https://github.com/executeautomation/mcp-playwright?tab=readme-ov-file
 
 > Playwright Model Context Protocol Server - Tool to automate Browsers and APIs in Claude Desktop, Cline, Cursor IDE and More 🔌
+
+### Using MCP with Windsurf
+
+You will need: ~/.codeium/windsurf/mcp_config.json as per [the docs](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
+
+```sh
+cd ~/.codeium/windsurf
+find . -name "mcp_config.json" -type f
+```
+
+#### Context7 with Windsurf IDE
+
+Why not using Windsurf IDE and the latest models https://docs.windsurf.com/windsurf/models together with MCP tools?
+
+https://docs.windsurf.com/windsurf/cascade/web-search
+
+As per [Context7](https://context7.com/) project https://github.com/upstash/context7
+
+> MIT | Context7 MCP Server -- Up-to-date code documentation for LLMs and AI code editors
+
+
+```json
+{
+  "mcpServers": {
+    "context7": {
+      "serverUrl": "https://mcp.context7.com/sse"
+    }
+  }
+}
+```
+
+or with:
+
+```json
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}
+```
+
+On the bottom right, hit the hammer to [configure mcp via windsurf, as per this yt video](https://www.youtube.com/watch?v=KLD5WyV6LNg):
+
+![alt text](/blog_img/GenAI/aidocs/windsurf-mcp-context7.png)
+
+Then hit refresh, and you will have the MCP tools available (2 in this case).
+
+Now, find the libraries that you want to use: https://context7.com/?q=reflex or https://context7.com/streamlit/docs
+
+You can use Context7 MCP on windsurf, together with its new [plan feature](https://docs.windsurf.com/windsurf/cascade/planning-mode):
+
+![alt text](/blog_img/GenAI/aidocs/windsurf-plan-mcp.png)
+
+Example usage:
+
+```txt
+Using the  context7 MCP tool. {"libraryName": "reflex python"}  updated docs, can you createa very simple python reflex app called real_estate_simply that given the interest rate, years and amount of loan, we will have a table on whats to be paid each month?
+
+total, interest and principal
+
+Please make sure to have a look on how it works the /dashboard sample app of this repository before start the development, I need something very simple
+
+Lets run it with its virtual environment as well and same dependencies as that sample app
+
+Put the project files at real_estate, where a blank reflex app structure is waiting
+```
+
+#### AI Driven Development with MCP
+
+The **PM for Your AI agent**: how about AI taking care of whats next following a structure, like [the one of a BRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/)?
+
+* https://github.com/eyaltoledano/claude-task-master
+    * https://github.com/eyaltoledano/claude-task-master/blob/main/docs/tutorial.md
+
+> An AI-powered task-management system you can drop into Cursor, Lovable, Windsurf, Roo, and others.
+
+An AI-powered task-management system you can drop into Cursor, Lovable, Windsurf, Roo, and others.
+
+Taskmaster is your AI's personal project manager. Organize, research, expand, prioritize, and ship tasks effortlessly. Enjoy permanent context, zero drift &amp; instant clarity. It's free, open-source &amp; API-friendly. Let's vibe productively.

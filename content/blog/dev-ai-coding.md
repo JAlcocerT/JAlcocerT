@@ -3,20 +3,19 @@ title: "Vide Coding. For websites and more..."
 date: 2025-04-15T23:20:21+01:00
 draft: false
 tags: ["Dev","GenAI"]
-description: 'How to get started with vibe coding. FirebaseStudio vs Codex vs Claude Code...or maybe just Windsurf?'
+description: 'How to get started with vibe coding. FirebaseStudio vs Codex vs Claude Code...or maybe just Windsurf IDE?'
 url: 'vide-coding'
 ---
 
 There is a new concept around: **vibe coding**
 
+And it seems it will stay for a while.
 
 ![Windsurf Codeium IDE and Astro](/blog_img/GenAI/NoCode-AI/windsurf-vibecoding-astro.png)
 
 * https://uiverse.io/elements
 
-But how about creating websites with these....
-
-
+But how about creating websites with these... or even web apps?
 
 ## Firebase Studio
 
@@ -98,18 +97,28 @@ The possible options for --provider are:  openai (default), openrouter, gemini, 
 This is how we would make codex use ollama and in auto mode:
 
 ```sh
-codex --approval-mode full-auto "create the fanciest todo-list app"--provider ollama
+codex --approval-mode full-auto "create the fanciest todo-list app" --provider ollama
 ```
 
-If you want to log all the thinking process:
+If you want to **log all the codex thinking process:**
 
 ```sh
+#codex --quiet "Explain the prompt-init-userguide-iterative.md file"
+#codex --quiet "Explain the prompt-followup-userguide-iterative.md file" > codex_log_quite.json
 codex --quiet --full-auto "$(cat ./prompts/prompt.md)" > output-k8s-auto.json #saved the full reply with errors 
 jq 'select(.type == "message" and .status == "completed")' output-k8s-auto.json #to see the final reply only
 ```
 It will avoid you saving these errors:
 
-![alt text](/blog_img/GenAI/codex-logs.png)
+![Codex Logs saved with errors](/blog_img/GenAI/codex-logs.png)
+
+And instead you can get this kind of json:
+
+```json
+{"role":"user","content":[{"type":"input_text","text":"You are an AI documentation generator.\n\nYour task is to understand about the **user on boarding documentation for a cloned project** and write a post as markdown file where specified.\n\nFor every post section created, create an additional markdownn post that will expand its content depth.\n\nWe aim to get very detailed information about the project, specially the tech stack details and the use cases of each component.\n\n\n**1. Project Files: Input**\n\n* Inspect the content of the files located in the `/home/jalcocert/Desktop/IT/DOCS_TESTING/docs-k8s/input-sources/kubernetes` directory.\n\nYour task is to create **technical documentation for the cloned project** and write a post as markdown file where specified.\n\n* According to the content of the files located in the project directory, we want to expand our understanding of a given section of the repository.\n* Provide ideas to expand our understanding of how the directory works \n* Add a H2 with Use cases and this new information that you will discover about the use cases:\n    * Given a library dependency, to list the uses cases for the code base and the used architectural design\n    * Referencing to sample code and file that is using it\n    * Are any of the technologies being used for something that they are not ready design for (design patterns)\n    * Are there any closed sourced libraries in the project? (or referencing a repository with closed source?)\n* Provide a final section in H2 to the post so that we can see the files that have been used to generate it\n\n\n**Output Format (Astro Theme Template):**\n\nThe final documentation should be formatted to be easily integrated with the Astro theme located at `/home/jalcocert/Desktop/IT/DOCS_TESTING/docs-k8s/docs/src/content/docs/reference`.\n\n* Write the posts as soon as you generated them.\n\nPlease consider the following:\n\n* **Markdown Output:** Generate the documentation in Markdown format (`.md` files) as this is the primary format for Astro content.\n* **Frontmatter:** Respect the following Astro frontmatter at the beginning of each Markdown file (e.g., `title`, `description`)"}],"type":"message"}
+{"id":"rs_68515b5395f8819fbeb6d5ae5b3dc0b102e3250c19237b0e","type":"reasoning","summary":[],"duration_ms":4160}
+{"id":"rs_68515b5395f8819fbeb6d5ae5b3dc0b102e3250c19237b0e","type":"reasoning","summary":[]}
+```
 
 To use other providers/LLMs, as per [this post](https://machinelearningmastery.com/understanding-openai-codex-cli-commands/):
 
@@ -469,7 +478,19 @@ Lately I was discovering [about MCP](https://jalcocert.github.io/JAlcocerT/ai-un
 ext install saoudrizwan.claude-dev
 ```
 
+---
+
 ## Conclusions
+
+Similar to AI project docs generation...
+
+I could not resist but to try these IDE's and their context awareness to generate SliDev PPTs.
+
+{{< details title="PPT with SliDev for Codex x Astro 📌" closed="true" >}}
+
+
+
+{{< /details >}}
 
 
 ---

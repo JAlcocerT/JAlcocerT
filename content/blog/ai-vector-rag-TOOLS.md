@@ -351,7 +351,9 @@ whatsap chat bot, but OSS -->
 
 ### How to run LLMs Locally
 
-https://www.youtube.com/watch?v=5WCvGyPpWwg
+<!-- https://www.youtube.com/watch?v=5WCvGyPpWwg -->
+
+{{< youtube "5WCvGyPpWwg" >}}
 
 
 * {{< newtab url="/selfhosting-llms-ollama/" text="Ollama" >}}
@@ -463,32 +465,10 @@ Here's a breakdown:
 Embedding models are essential tools for representing data in a way that captures its semantic meaning, enabling a wide range of applications that rely on understanding relationships and similarities between data points. They are a core component of many modern AI systems.
 
 
-<!-- 
-
-### What it is function calling
-
-#### FAST API
-
-#### Django 
-
--->
-
-
-
-<!-- ### F/OSS Low Code AI
-
-* {{< newtab url="/selfhosting-flowise-ai/" text="Flowise AI" >}}
+{{< newtab url="/selfhosting-flowise-ai/" text="Flowise AI" >}}
 
 ### F/OSS Vector DBs
 
 * {{< newtab url="/selfhosting-chromadb-docker/" text="ChromaDB" >}}
 * {{< newtab url="/selfhosting-vector-admin-docker/" text="Vector Admin" >}}
 * {{< newtab url="/selfhosting-vector-admin-docker/#foss-vector-dbs-for-ai-projects" text="And much more!" >}} -->
-
-
-<!-- Efficient data management is crucial, and ChromaDB is at the forefront of this revolution.
-
-Welcome into the world of **ChromaDB, a cutting-edge Vector Database**. Whether you're a developer, data scientist, or tech enthusiast, you'll discover how ChromaDB is transforming data storage and retrieval with its speed, scalability, and flexibility.  
-
-https://www.youtube.com/watch?v=UT3CR5t-6EU
--->

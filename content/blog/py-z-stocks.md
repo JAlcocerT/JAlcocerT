@@ -178,6 +178,9 @@ Wouldnt this be a cool companion for a website, as a lead magnet?
 
 Even as a subscription based model, say [7$/month](https://www.cazadividendos.com/recursos/indice/) to have access to such tool and historical info?
 
+People are money on amazon ebooks with much simpler concepts.
+
+
 ---
 
 ## FAQ 
@@ -428,9 +431,9 @@ Similar projects include **Firefly III** and **GnuCash**.
 
 ### Interesting Financial Stories
 
-These are a collection of finance related posts that have been somehow interesting for me to read:
+These are a collection of **finance related posts/sites** that have been somehow interesting for me to read:
 
-* https://dividendsandincome.com/author/dave-van-knapp/
+* https://dividendsandincome.com/author/dave-van-knapp/ - Interesting story about someone who made a one time investment 15y+ ago
 * https://dividendsandincome.com/2024/04/08/how-my-dividend-growth-portfolios-income-keeps-expanding/
 
 * https://engineeredportfolio.com/
@@ -442,8 +445,12 @@ These are a collection of finance related posts that have been somehow interesti
 * https://curvo.eu/
 
 {{< callout type="info" >}}
-You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/author/B0BW46JD83?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) one with AI. How? with an [**AIssistant**](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#kindle-notes-to-ai) 
+You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/author/B0BW46JD83?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) one with AI.
 {{< /callout >}}
+
+How exactly?
+
+With an [**AIssistant**](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/) or with [agents](https://jalcocert.github.io/JAlcocerT/ai-multi-agents-frameworks/) / [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) 
 
 * https://www.visualcapitalist.com/top-sp-500-stocks-return/
 
@@ -514,8 +521,7 @@ You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/a
 
 ### VBA vs OpenPyxl
 
-And all of this could have just been done in plain excel...
-
+And all of this could have just been done in **plain excel**...
 
 **What is openpyxl?**
 
@@ -557,11 +563,3 @@ And all of this could have just been done in plain excel...
 
 * openpyxl is a powerful tool for working with Excel files programmatically.
 * While it doesn't directly replace VBA macros, it provides a robust alternative for many automation needs.
-
-### eBooks
-
-**Making ebooks** is possible with pandoc or MKDoc
-
-* https://github.com/Wandmalfarbe/pandoc-latex-template
-
-> Maybe someone will do with financial miss-conceptions?

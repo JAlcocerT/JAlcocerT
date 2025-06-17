@@ -3,12 +3,12 @@ title: "How to do live search/research with AI"
 date: 2025-05-23
 draft: false
 tags: ["AI","Web Search"]
-description: 'Grok XAi API and Local Deep Researcher compared with Perplexity/Perplexica'
+description: 'Grok XAi API and Local Deep Researcher compared with Perplexity/Perplexica.'
 url: 'live-search-and-research-with-ai'
 ---
 
 
-Last year I had the Groq YT project as a very useful one.
+Last year I had the [Groq YT project](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/) as a very useful one.
 
 And the [notebookLM](https://notebooklm.google/) as a kind of [RAG](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/) from google, that could be useful to summarize docs.
 

@@ -101,13 +101,13 @@ Then, you can creeate a user and pass for Linux.
 
 > Thats really it!
 
-Log in again to wsl via CMD:
+Log in again to **wsl via CMD**:
 
 ```sh
 wsl
 ```
 
-Right now, you will see that you are using Linux:
+Right now, you will see that you are using Linux inside your windows:
 
 ```sh
 sudo apt update #this is ubuntu already!
@@ -138,12 +138,22 @@ This is a great moment to [get started with SelfHosting](https://jalcocert.githu
 Once containers are installed, **you can bundle your apps** or use the ones that other have created!
 {{< /callout >}}
 
-3. To understand better Python Web Frameworks, specially **Django**, as its the one that QaTrack uses
+
+3. Write, Write, write! **Markdown is all you need** and Practice makes perfection!
+
+{{< callout type="info" >}}
+See https://github.com/joemccann/dillinger as The last **Markdown editor**, ever.
+{{< /callout >}}
+
+
+4. To understand better Python Web Frameworks, specially [**Django**, as its the one that QaTrack uses](#django-101)
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-projects-python-dependencies/" title="Python Deps 101" >}}
 {{< /cards >}}
 
+
+### Django 101
 
 {{< details title="Django | Core Philosophy and Strengths 📌" closed="true" >}}
 
@@ -196,15 +206,9 @@ Django is a Python Web framework: it makes Web Apps
 
 Its "batteries-included" approach, security features, and scalability make it a popular choice for developers of all skill levels.
 
-5. Write, Write, write! **Markdown is all you need** and Practice makes perfection!
-
-{{< callout type="info" >}}
-See https://github.com/joemccann/dillinger as The last **Markdown editor**, ever.
-{{< /callout >}}
-
 ---
 
-## Cool stuff for Researchers
+### Cool stuff for Researchers
 
 1. If you are building on top of existing libraries...
 

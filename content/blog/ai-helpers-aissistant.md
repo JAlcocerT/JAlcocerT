@@ -2,7 +2,7 @@
 title: "Can [AI] be the all in one Assistant?"
 date: 2024-10-21
 draft: false
-tags: ["Dev","Gen-AI"]
+tags: ["Dev","Gen-AI","LLMs"]
 description: 'Make AI be helpful with an AIssistant: Neuromarketer, PPT Creator... While learning to make Streamlit better.'
 url: 'ai-useful-yet-simple'
 ---
@@ -268,15 +268,13 @@ Oh, and it uses [OpenAI Text2Speech](https://platform.openai.com/docs/guides/tex
 
 #### Video as a Code
 
-Is it even possible to create a full .mp4 with AI?
-
-
+Is it even possible to create a full `.mp4` with AI?
 
 {{< callout type="info" >}}
 From Data to Streamlit to Animation to Video, which [I tested in AIssistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Tests/ST_AutomaticYTVideo). To the to be checked [RemotionJS for VideoAsACode](https://github.com/JAlcocerT/VideoEditingRemotion)
 {{< /callout >}}
 
-In the meantime, I will stay with real life with the [DJI Action cam](/dji-osmo-action-5-pro/) and [my repo for putting the videos together](https://github.com/JAlcocerT/YT-Video-Edition)
+In the meantime, I will stay with **real life** with the [DJI Action cam](/dji-osmo-action-5-pro/) and [my repo for putting the videos together](https://github.com/JAlcocerT/YT-Video-Edition)
 
 ---
 
@@ -378,10 +376,12 @@ And there are people already making money with similar tools:
 
 It all started with **a friend doing public speaking courses**.
 
+Then, OpenAI made easy to do [T2S and S2T](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Audio) (Transcription).
+
 And this idea appeared...
 
 {{< callout type="info" >}}
-[SpeechRater](https://github.com/JAlcocerT/streamlitspeechrater) and [StreamlitSpeech](https://github.com/JAlcocerT/Streamlit-Speech) 🔥💻
+Repos - [SpeechRater](https://github.com/JAlcocerT/streamlitspeechrater) and [StreamlitSpeech](https://github.com/JAlcocerT/Streamlit-Speech) 🔥💻
 {{< /callout >}}
 
 And since OpenAI can **transcribe (Audio to Text)**...
@@ -410,19 +410,6 @@ flowchart TD
     F --> G[User engages in live chat to improve speech]
 ```
 
-
-## Kindle Notes to AI
-
-Kindle notes are saved into a `.txt` in the device.
-
-I was storing notes for few years already and im really curious to see whats inside.
-
-> I gave it a try with Google's NotebookLLM, but...custom is custom
-
-### Creating an Ebook
-
-I mean, an AI Assisted e-book.
-
 ---
 
 ## Conclusions
@@ -431,7 +418,7 @@ Potentially, you can choose [any other LLMs via API](https://jalcocert.github.io
 
 Its all about getting proper API calls to each of them.
 
-I have chosen OpenAI API for the project.
+I have chosen OpenAI API for the project as the default.
 
 <!-- [![Star History Chart](https://api.star-history.com/svg?repos=openai/openai-python&type=Date)](https://star-history.com/#openai/openai-python&Date)
 
@@ -455,11 +442,7 @@ For passing important variables (like API keys)
 
 {{< /details >}}
 
-{{< details title="PPT with SliDev to describe the Project 📌" closed="true" >}}
 
-
-
-{{< /details >}}
 
 
 #### User Authentication
@@ -496,23 +479,23 @@ flowchart TD
     Welcome -->|Logout| LoginPrompt
 ```
 
-But to place real users fast into the features loop...
+But to **place real users** fast into the features loop, we need a way to identify them.
 
-It is interesting at least to get them to provide the email in exchange for getting early access.
+It is interesting at least to get the interested users to provide the email in exchange for getting early access:
 
 ![Simple Streamlit Email Challenge](/blog_img/apps/streamlit/ST_EmailChallenge-UI.png)
 
+Anyways, if they are not interested to get access to features by giving their email, definitely they wont pay for your solution.
 
-{{< dropdown title="Email Challenge for Streamlit based on MailerLite 👇" closed="true" >}}
+{{< dropdown title="Email Challenge for Streamlit based on MailerLite API 👇" closed="true" >}}
 
 * **Pros** 
 1. Integrated with MailerLite API
 * With double opt-in, you will get just verified emails
 2. No hardcoded values in the app
+
 * **Cons** MailerLite Free Tier finishes at 1k subs
 * [Example Code in CV-Check](https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_CVCheck_pdfmineropenAI_v3.py?ref_type=heads) - A very simple one that allow certain user/passwords to access an app
-
-
 
 
 {{< /dropdown >}}

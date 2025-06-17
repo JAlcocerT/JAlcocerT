@@ -1,9 +1,9 @@
 ---
 title: "Web Apps with Python Explained"
-date: 2025-04-07T10:20:21+01:00
+date: 2025-06-20T10:20:21+01:00
 draft: false
 tags: ["Dev","Python","WebApps"]
-description: 'My favourite ways to build WebApps with Python.'
+description: 'My favourite ways to build WebApps with Python. From Streamlit and PyGWalker to Reflex.'
 url: 'web-apps-with-python'
 ---
 
@@ -13,7 +13,7 @@ But if you would need extra functionality, you will come to the webapp domain.
 
 As you can imagine, there are many flavours of web apps.
 
-I first tried [Shiny in R](#shiny-with-r) and then [DASH](#dash), with the trip planner project.W
+I first tried [Shiny in R](#shiny-with-r) and then [DASH](#dash), with the trip planner project.
 
 
 ## WebApps
@@ -569,6 +569,11 @@ This setup enables you to **quickly create interactive web apps using Python**, 
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
+##### PyGWalker x Streamlit
+
+While working on some PoCs where a quick demo of the data model is required, you can use Pygwalker via jhub or with Streamlit.
+
+This can be helpful before full [AI/BI solutions](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) are getting build and get stakeholders expectations in line.
 
 {{< details title="PyGWalker | Turn your pandas dataframe into an interactive UI for visual analysis 📌" closed="true" >}}
 
@@ -652,10 +657,15 @@ else:
 
 {{< /details >}}
 
-
 I really enjoy using **PyGWalker together with Streamlit**!
 
+##### Geolocation Data
+
+> In case you have [geolocation data](https://jalcocert.github.io/JAlcocerT/geospatial-data/), you can use it in combination with folium (and streamlit_folium) maps!
+
 And there is more...
+
+##### Graphic Walker
 
 **Graphic Walker** is a different open-source alternative to Tableau.
 
@@ -664,7 +674,6 @@ It allows data scientists to analyze data and visualize patterns with simple dra
 It is extremely easy to embed in your apps just **as a React component** 🎉!
 
 The original purpose of graphic-walker is **not to be a heavy BI platform**, but a easy to embed, lite, plugin.
-
 
 * https://github.com/Kanaries/graphic-walker
   * https://docs.kanaries.net/graphic-walker
@@ -723,6 +732,12 @@ npm i --save @kanaries/graphic-walker
 ## Conclusions
 
 For some PoC, Id stay with streamlit as my go to.
+
+### Vibe Coding Python Web Apps
+
+You can always combine [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/) techniques with [MCP tools](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/)
+
+For example https://context7.com/streamlit/docs, to provide proper context while building web apps.
 
 ### Others
 

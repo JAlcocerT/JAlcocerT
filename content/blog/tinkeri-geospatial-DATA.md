@@ -3,7 +3,7 @@ title: "Geospatial Data Tricks and a GoPro"
 date: 2025-01-05T23:20:21+01:00
 draft: false
 tags: ["Dev"]
-description: 'What Ive learnt so far about GeoSpatial Data Analysis. Applied to GoPro MetaData and Telemetry Extraction. And karting!.'
+description: 'What Ive learnt so far about GeoSpatial/Geolocation Data Analysis. Applied to GoPro MetaData and Telemetry Extraction. And karting!'
 url: 'geospatial-data'
 math: true
 ---
@@ -19,11 +19,13 @@ Geospatial learnings are placed at [RouteTracker Repo](https://github.com/JAlcoc
 
 ### GeoJSON
 
-With R I learnt about many other formats.
+With [R language](https://jalcocert.github.io/JAlcocerT/useful-r-stuff/) I learnt about many other formats.
 
 One of them was **GeoJson**.
 
 ### GPX
+
+While [riding bikes](https://jalcocert.github.io/JAlcocerT/buying-bicycle-through-data-analytics/), I got to know GPX format.
 
 Phone apps like Komoot or even [PhyPhox can save the GPS records as GPX files](https://www.leafwindow.com/en/get-gps-log-with-phyphox-and-plot-it-with-wp-gpx-maps-en/)
 

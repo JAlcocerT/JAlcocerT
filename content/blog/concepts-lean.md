@@ -56,20 +56,23 @@ The second Lean principle is to **optimize the flow of work** through the system
 In software development, this means identifying and removing bottlenecks and inefficiencies in the development process. An example of applying this principle to software development would be to use Kanban boards to visualize the flow of work and identify areas where work is getting stuck, so that improvements can be made to optimize the flow of work.
 {{< /dropdown >}}
 
-* {{< dropdown title="Pull" closed="true" >}}
+{{< dropdown title="Pull" closed="true" >}}
 The third Lean principle is to use a pull-based system, where work is pulled through the system in response to demand, rather than pushed through based on arbitrary timelines or quotas.
 
 In software development, this means focusing on delivering features or functionality as they are needed, rather than trying to deliver everything at once. An example of applying this principle to software development would be to use agile development methodologies, such as Scrum or Kanban, to prioritize work based on customer needs and pull work through the development process as it is needed.
 {{< /dropdown >}}
 
-* {{< dropdown title="Continuous Improvement" closed="true" >}}
+> Deliver whats the client is really asking for!
+
+{{< dropdown title="Continuous Improvement" closed="true" >}}
 The fourth Lean principle is to strive for perfection by [continuously improving processes](https://fossengineer.com/lean/#kaizen) and eliminating waste. In software development, this means continually identifying and eliminating inefficiencies in the development process, such as manual testing or redundant code. 
 
 An example of applying this principle to software development would be to implement a continuous improvement process, such as the PDCA (Plan-Do-Check-Act) cycle, to identify areas for improvement and make iterative changes to the development process.
 {{< /dropdown >}}
 
 
-* {{< dropdown title="Respect" closed="true" >}}
+{{< dropdown title="Respect" closed="true" >}}
+
 The fifth Lean principle is to **respect the people doing the work and empower them** to make improvements to the development process.
 
 In software development, this means creating a culture of collaboration and continuous improvement, where team members are encouraged to share their ideas and contribute to the development process.
@@ -119,11 +122,31 @@ Kaizen can be applied in software development to encourage continuous improvemen
 
 ### Jidoka
 
-Jidoka is a term used in Lean to describe a process that stops automatically when a problem occurs. The goal of jidoka is to build quality into the process and prevent defects from occurring. When a problem is detected, the process stops, and the problem is addressed before the process resumes. Jidoka helps to create a culture of quality and encourages employees to take ownership of the process and the product.
+Jidoka is a term used in Lean to describe a process that stops automatically when a problem occurs.
+
+The goal of jidoka is to build quality into the process and prevent defects from occurring. When a problem is detected, the process stops, and the problem is addressed before the process resumes. Jidoka helps to create a culture of quality and encourages employees to take ownership of the process and the product.
 
 In software development, Jidoka can be applied to prevent defects and improve the quality of the product. This can involve implementing automated testing and continuous integration processes to catch errors early in the development cycle. By building quality into the development process, teams can improve the reliability and stability of the final product.
 
 > "Do it right, even when nobody is looking".
+
+## The SDLC
+
+While developing, these tricks have been useful to me:
+
+1. Use short-lived feature branches.
+2. Merge and delete branches promptly.
+3. Keep the main branch as the single source of truth.
+4. Avoid keeping local changes uncommitted, especially when others need to review or experiment with your repository
+
+```sh
+#git clone https://git.exadel.com/exadel-ai-practice/accelerator/project-documentation-generator.git
+git@git.exadel.com:exadel-ai-practice/accelerator/project-documentation-generator.git
+git branch -a
+
+git checkout codex-logs #go to a branch to bring some new feature to main
+#git checkout claudetaskmaster
+```
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Whats a BRD?"
+title: "Whats a BRD and how it helps project delivery?"
 date: 2025-04-16T00:20:21+01:00
 draft: false
 tags: ["Career", "D&A", "Analytics","GenAI"]
@@ -63,6 +63,9 @@ How to make sure that the LLM will have the proper context to have from the very
 2. To make sure you build whats required
 
 > If you are part of AIOps / [AI|BI](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) or whatever [domain specific](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/) projects, how to make sure that stakeholders expectations are captured and have everyone happy during the delivery? 
+
+3. To make sure that AI builds what you want
+
 
 
 ## The BRD
@@ -256,3 +259,46 @@ In essence, the BRD and FRD are critical communication tools that guide a projec
 
 ## Conclusions
 
+How a BRD, FRD, RACI, and Project Charter relate to each other in the context of project management. 
+
+They are all crucial documents, but they serve different purposes and are typically developed at different stages of a project lifecycle.
+
+* **Project Charter: The Foundation**
+    * **What it is:** The Project Charter is the *very first* document. It formally authorizes the project, defines its high-level objectives, scope, stakeholders, and assigns the project manager. It's a foundational document that provides the "why" and the initial "what" of the project.
+    * **Relationship to others:** It sets the stage for everything else. Without a Project Charter, you wouldn't typically move on to detailed requirements or role assignments. It provides the initial mandate and context for the BRD, FRD, and RACI.
+
+* **Business Requirements Document (BRD): The "What" from a Business Perspective**
+    * **What it is:** The BRD comes *after* the Project Charter. It elaborates on the business needs and objectives outlined in the charter. It describes *what* the business wants to achieve, the problems it wants to solve, and the high-level functionalities required, often without specifying how those functionalities will be technically implemented. It focuses on the "why" and "what" from a business user's perspective.
+    * **Relationship to others:**
+        * **Relates to Project Charter:** The BRD expands upon the high-level objectives and scope defined in the Project Charter. It provides more detail on the business problems and opportunities that the project aims to address.
+        * **Leads to FRD:** The BRD serves as the primary input for the FRD. The functional requirements defined in the FRD directly flow from the business requirements outlined in the BRD.
+        * **Informs RACI:** While not directly linked, the business processes and stakeholders identified in the BRD can help in understanding who needs to be involved in various aspects of the project, which can then feed into the RACI matrix.
+
+* **Functional Requirements Document (FRD): The "How" (from a Functional Perspective)**
+    * **What it is:** The FRD builds directly upon the BRD. It translates the high-level business requirements into specific, detailed, and measurable functional requirements. It describes *how* the system or solution will behave, what features it will have, and how users will interact with it. It focuses on the "how" from a functional standpoint, often detailing user stories, use cases, and system functionalities.
+    * **Relationship to others:**
+        * **Derives from BRD:** The FRD is a direct descendant of the BRD. Every functional requirement in the FRD should be traceable back to a business requirement in the BRD.
+        * **Influences RACI:** The specific functionalities and modules defined in the FRD can help in identifying the specific roles and responsibilities needed for development, testing, and deployment, which are then documented in the RACI matrix. For example, if a new reporting module is defined in the FRD, you'd need to identify who is Responsible for developing it, Accountable for its accuracy, etc.
+
+* **RACI Matrix: Defining Roles and Responsibilities**
+    * **What it is:** RACI stands for Responsible, Accountable, Consulted, and Informed. A RACI matrix is a tool used to clarify and define the roles and responsibilities of different stakeholders for various tasks or deliverables within a project. It identifies who does the work (Responsible), who is ultimately answerable (Accountable), who provides input (Consulted), and who needs to be kept in the loop (Informed).
+    * **Relationship to others:**
+        * **Informed by all:** The RACI matrix is informed by the information contained in all the other documents.
+            * The **Project Charter** identifies key stakeholders and the Project Manager (who is often Accountable for the overall project).
+            * The **BRD** and **FRD** describe the deliverables and processes that need to be completed. For each requirement or task outlined in these documents (e.g., "Develop User Authentication," "Test Reporting Module"), the RACI matrix would assign the R, A, C, and I.
+        * **Supports execution:** The RACI matrix doesn't define *what* needs to be done (that's the job of the BRD and FRD), but rather *who* is doing it, ensuring clear communication and accountability throughout the project lifecycle.
+
+**Here's a simplified flow:**
+
+1.  **Project Charter:** "We need to build a new online store to increase sales by 20%." (High-level why and what)
+2.  **BRD:** "The online store needs to allow customers to browse products, add to cart, and checkout. It should support various payment methods and provide order tracking." (Detailed business needs)
+3.  **FRD:** "The system shall allow users to search for products by keyword. The checkout process shall integrate with PayPal and credit card gateways. Users will receive email notifications for order status changes." (Specific functional details)
+4.  **RACI:** For the task "Develop payment gateway integration," John is Responsible, Sarah is Accountable, the Finance team is Consulted, and the Marketing team is Informed. (Who does what for the tasks defined by the FRD and BRD).
+
+In essence, the Project Charter provides the overarching authorization and direction.
+
+The BRD defines the business needs, which are then translated into specific functional requirements in the FRD. 
+
+The RACI matrix then clarifies who is responsible for executing the tasks and deliverables derived from these requirements, ensuring accountability and smooth collaboration throughout the project.
+
+They are interconnected and sequentially refined, building upon each other to **guide the project from concept to completion**.

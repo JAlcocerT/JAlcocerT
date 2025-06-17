@@ -1,6 +1,6 @@
 ---
 title: "Reflex. Cooler Web Apps?"
-date: 2025-06-12T10:20:21+01:00
+date: 2025-06-16T10:20:21+01:00
 draft: false
 tags: ["Dev","WebApps"]
 description: 'Using (Python) Reflex framework to display Data. Tested with Real Estate and Job Market Trends as Web Apps.'
@@ -501,6 +501,38 @@ Like this one: https://github.com/JAlcocerT/real-estate-reflex/blob/main/brd-frd
 1. https://tradingeconomics.com/poland/consumer-price-index-cpi (see the change %)
 2. https://tradingeconomics.com/poland/interest-rate
 
+## Reflex Authentication
+
+For Streamlit I got to know this very [simple hardcoded user/pwd authentication](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py).
+
+![Simple Streamlit Auth](/blog_img/apps/streamlit/ST_AuthFunction.png)
+
+Is it possible to have something similar to that with Reflex?
+
+It seems that Reflex supports [few authentication methods](https://reflex.dev/docs/authentication/authentication-overview/):
+
+* [Captcha](https://github.com/masenf/reflex-google-recaptcha-v2) as seen [here](https://jalcocert.github.io/JAlcocerT/encryption-101/#pow-captcha), there are alternatives
+
+
+### Reflex x Mailerlite
+
+[Mailerlite](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#mailerlite) its just a newsletter platform, with a cool API that can be used so that only subscribers (with validated emails) can interact in certain ways with your webapp.
+
+https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_CVCheck_pdfmineropenAI_v3.py?ref_type=heads
+https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#user-authentication
+
+### Reflex x LocalDB
+
+* [Local auth](https://github.com/masenf/reflex-local-auth)
+
+
+### Reflex x Traefik x Middleware
+
+Recently I got [Traefik https](https://fossengineer.com/selfhosting-traefik/) to work and I use it at [home for SelfHosting](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/).
+
+### Reflex x Stripe
+
+
 ---
 
 ## Conclusions
@@ -524,7 +556,7 @@ But definitely, Reflex apps can look really cool, **also on smartphones**!
 * **Focus:** Building interactive web apps with a reactive programming model.  It's designed for complex UIs where you need real-time updates and dynamic behavior.
 * **Technology:** Uses a Python backend (typically FastAPI) and a frontend built with React.  This allows for a rich, single-page application (SPA) experience.
 * **Strengths:** Excellent for data-driven applications, dashboards, and anything requiring frequent UI updates.  The reactive model makes complex interactions manageable.
-* **Weaknesses:** Steeper learning curve compared to some other frameworks due to the reactive paradigm and the use of both Python and JavaScript (React under the hood, though you mostly interact with it through Python).  Can be overkill for very simple UIs.
+* **Weaknesses:** Steeper learning curve compared to some other frameworks due to the reactive paradigm and the use of both Python and [JavaScript](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/) (React under the hood, though you mostly interact with it through Python).  Can be overkill for very simple UIs.
 
 **2. Flet:**
 
