@@ -549,6 +549,14 @@ In essence, Dash provides a more opinionated and specialized framework on top of
 
 #### Streamlit
 
+Some of my favourite Streamlit APps?
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="The multichat ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="The Speech Rater ↗" >}}
+{{< /cards >}}
+
 {{< details title="Why I love Streamlit for Quick UI's 📌" closed="true" >}}
 
 Streamlit uses a combination of front-end technologies to create its user interface, primarily leveraging React.js, a popular JavaScript library for building user interfaces.
@@ -567,6 +575,10 @@ This setup enables you to **quickly create interactive web apps using Python**, 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Chat with Data" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="Other LangChain use cases" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Aissistant" title="The Aissistant! That all in one tool, that even has webmigration capabilities ↗ " >}}
 {{< /cards >}}
 
 ##### PyGWalker x Streamlit

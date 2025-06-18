@@ -2,7 +2,7 @@
 title: "No Code Tools to use Gen AI"
 date: 2025-04-19T23:20:21+01:00
 draft: false
-tags: ["Gen-AI","Python","Dev","ChatBots"]
+tags: ["Gen-AI","Python","Dev","ChatBots","TelegramBots"]
 description: 'Generative AI made simple with Low Code. Chatwoot, Flowise, n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
 url: 'no-code-ai-tools'
 ---
@@ -267,6 +267,39 @@ pip install python-telegram-bot==22.0
 {{< callout type="info" >}}
 It was about time to make [a project again with a telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot) 💻 (combined with [web](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/)!)
 {{< /callout >}}
+
+Its all done with Python and the following structure:
+
+{{< filetree/container >}}
+  {{< filetree/folder name="TelegramBot" >}}
+    {{< filetree/file name=".dockerignore" >}}
+    {{< filetree/file name=".env" >}}
+    {{< filetree/file name=".env.sample" >}}
+    {{< filetree/file name="Dockerfile" >}}
+    {{< filetree/folder name="Z_Tests" state="closed" >}}
+      {{< filetree/file name="tg_bot_image5.py" >}}
+      {{< filetree/file name="z_tg_bot_botchatero.py" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/file name="docker-compose.yml" >}}
+    {{< filetree/file name="readme.md" >}}
+    {{< filetree/file name="requirements.txt" >}}
+    {{< filetree/file name="tg_bot_agujapunto.py" >}}
+    {{< filetree/folder name="tgbot_image_venv" state="closed" >}}
+      {{< filetree/file name="lib/python3.10/site-packages/..." >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="tgbot_venv" state="closed" >}}
+      {{< filetree/file name="lib/python3.10/site-packages/..." >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
+With a env file:
+
+```
+BOT_TOKEN=YOUR_BOT_TOKEN_HERE
+CHAT_ID=YOUR_TELEGRAM_CHAT_ID_HERE
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY_HERE
+```
 
 {{< details title="Setup a TG Bot | BotFather and API Tokens 📌" closed="true" >}}
 

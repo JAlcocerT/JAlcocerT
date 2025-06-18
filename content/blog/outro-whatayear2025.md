@@ -67,6 +67,13 @@ Linktree does things very well, yet cant compete with:
 * **Procedural Knowledge (Knowing *How*):** This is knowledge of how to perform a task or sequence of actions. It's the "how-to." It often involves skills, techniques, processes, and strategies.
     * *Examples:* Writing code in a programming language, facilitating a Scrum meeting, riding a bicycle, cooking a recipe, debugging software, performing a surgical procedure.
 
+4. The woman in the red dress - Matrix
+
+An example? 
+
+Could [the aissistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main) have any additional feature not to *leave money on the table*?
+
+
 ## Processes
 
 From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/#next-year)...

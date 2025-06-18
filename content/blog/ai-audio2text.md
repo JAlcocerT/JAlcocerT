@@ -2,7 +2,7 @@
 title: "An overview of F/OSS Audio to Text Tools. Speech rAIter"
 date: 2025-05-12T09:20:21+01:00
 draft: false
-tags: ["Gen-AI","Self-Hosting","Docker"] 
+tags: ["Gen-AI","Self-Hosting","Docker","TTS","T2S"] 
 description: 'Audio 2 Text Open Source and commercial transcription (S2T) Tools. ST Audio input and creation of a speech rater.'
 url: 'audio-to-text-tools'    
 ---
@@ -18,11 +18,40 @@ An overview to the existing open source alternatives for audio to text conversio
 
 [![Star History Chart](https://api.star-history.com/svg?repos=openai/whisper,SevaSk/ecoute,oTranscribe/oTranscribe,beyondcode/writeout.ai,pluja/whishper&,type=Date)](https://star-history.com/openai/whisper&SevaSk/ecoute&oTranscribe/oTranscribe&beyondcode/writeout.ai&pluja/whishper&Date)
 
+## The Speech Rater
+
+How about using streamlit to input and output audio?
+
+Well, plugging LLMs to that is kind of easy:
 
 {{< cards >}}
   {{< card link="#conclusions" title="OpenAI TTS and Transcription Project" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
 {{< /cards >}}
+
+{{< filetree/container >}}
+  {{< filetree/folder name="Streamlit-Speech" >}}
+    {{< filetree/file name="speechraiter.py" >}}
+    {{< filetree/file name="requirements.txt" >}}
+    {{< filetree/file name="Dockerfile" >}}
+    {{< filetree/file name="README.md" >}}
+    {{< filetree/folder name="Tools" >}}
+      {{< filetree/file name="Auth_functions.py" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="STPages_Speech" >}}
+      {{< filetree/file name="Streamlit_OpenAI.py" >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="Z_Tests" state="closed" >}}
+      {{< filetree/file name="readme.md" >}}
+      {{< filetree/file name="openai_t2t.py" >}}
+      {{< filetree/file name="openai-tts.py" >}}
+      {{< filetree/file name="audio-input.py" >}}
+      {{< filetree/file name="audio-input-save.py" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
+
 
 
 ## S2T

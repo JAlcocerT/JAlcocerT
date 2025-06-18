@@ -843,7 +843,7 @@ du -sh . #see repo size
   {{< card link="https://github.com/JAlcocerT/qatrackplus/tree/master/documentaition" title="Tested with QaTrack+ | Astro AI Powered Docs v1.2 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-2.png)
+![Codex Astro and AI Docs](/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-2.png)
 
 I could not resist to
 
@@ -929,11 +929,37 @@ Tested with:
 * https://github.com/qatrackplus/qatrackplus/
   * https://github.com/jlleongarcia/qatrackplus
 
+Tested it with:
 
 https://github.com/airbytehq/airbyte
 https://github.com/SigNoz/signoz
 https://github.com/syncthing/syncthing
 https://github.com/grafana/grafana
+
+#### Prompt for own repo docs with windsurf
+
+If like me, you are starting to use windsurf and want to add a simple docs to your existing projects, consider this prompt:
+
+```txt
+can you make a docs.md, explaining how the current speechraiter.py works?
+
+Dont forget to mentino the libraries, packages dependencies, functions, file structure and so on
+
+Add the info to a docs.md and please also provide a last section with a relevant hugo shortcode like this one for the project:
+
+{{< filetree/container >}}
+  {{< filetree/folder name="content" >}}
+    {{< filetree/file name="_index.md" >}}
+    {{< filetree/folder name="docs" state="closed" >}}
+      {{< filetree/file name="_index.md" >}}
+      {{< filetree/file name="introduction.md" >}}
+      {{< filetree/file name="introduction.fr.md" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+  {{< filetree/file name="hugo.toml" >}}
+{{< /filetree/container >}}
+```
+
 
 ## FAQ
 

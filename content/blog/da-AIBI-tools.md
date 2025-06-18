@@ -8,7 +8,7 @@ url: 'ai-bi-tools'
 ---
 
 
-It not just about *old school* [BI Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/), or the well known propietary ones like [Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) or PBi
+It not just about *old school* [**BI** Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/), or the well known propietary ones like [Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) or PBi
 
 Today, we will have a look to:
 

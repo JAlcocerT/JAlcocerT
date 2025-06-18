@@ -14,7 +14,6 @@ But this year I have been testing more features with the [Streamlit MultiChat Su
 
 Anyways, it was time to **[level up my Streamlit](#making-streamlit-better), again.**
 
-
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Streamlit Speech Rater PoC" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat" >}}
@@ -419,6 +418,8 @@ And this idea appeared...
 {{< callout type="info" >}}
 Repos - [SpeechRater](https://github.com/JAlcocerT/streamlitspeechrater) and [StreamlitSpeech](https://github.com/JAlcocerT/Streamlit-Speech) 🔥💻
 {{< /callout >}}
+
+Which I will cover on a [future post](https://jalcocert.github.io/JAlcocerT/audio-to-text-tools/).
 
 And since OpenAI can **transcribe (Audio to Text)**...
 

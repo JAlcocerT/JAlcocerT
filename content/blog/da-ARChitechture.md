@@ -208,7 +208,7 @@ Get ready to organize **effective meetings**:
   {{< card link="https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner" title="Effective Meeting Owership ↗ " >}}  
 {{< /cards >}}
 
-There is no god meeting without a proper MoM notes and clear action points.
+There is no good meeting without a **proper MoM notes and clear action points**.
 
 As a D&A Architect, you will also [prototype and create mockups](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-mockups-and-wireframes)
 
@@ -464,6 +464,10 @@ You can also have handy a list of QQ to [enable others](https://jalcocert.github
 
 ### The Information Workflow
 
+Have you ever felt that nobody has doubts during syncs, but then each has very different understandings of the same?
+
+Thats why information is so crucial.
+
 Important from how you handle meetings, to how you write designs, to how you ask from others.
 
 {{< callout type="info" >}}
@@ -714,6 +718,8 @@ I would recommend you to have a look to:
     * https://excalidraw.com/
 
 * You can also render [mermaidJS](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_mermaid_v2c.py) and [plotly graphs](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_plotly_v1b.py) with your [aissistant, via streamlit webapp](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main)
+
+* I was recently impressed also by ChartJS
 
 >  Virtual whiteboard for sketching hand-drawn like diagrams 
 
