@@ -512,3 +512,7 @@ And which you can customize further, with your logo etc:
 So that it looks like so:
 
 ![alt text](/blog_img/dev/LogTo/logto-branded-signin.png)
+
+Updating the domain:
+
+![alt text](/blog_img/dev/LogTo/logto-custom-domain.png)

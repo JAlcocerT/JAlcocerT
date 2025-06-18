@@ -222,9 +222,16 @@ I was playing around with [LogTo](https://logto.io/) few months ago, together wi
 
 But I did not quite manage to get where I wanted.
 
+![alt text](../../static/blog_img/apps/logto-auth.png)
+
 Just recently...I got some inspiration, while doing [this post](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication).
 
 ### Product First
+
+Make sure you understand how to use funnels and Sankey diagrams:
+
+
+> Like this graph? Me too and its thanks to [HUGO shortcodes x ChartJS](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo) - [funnels](https://www.npmjs.com/package/chartjs-funnel)
 
 #### PostHog
 
@@ -256,7 +263,8 @@ And...for user interaction [a CMS](https://jalcocert.github.io/JAlcocerT/cms-for
 
 ### Next Steps
 
-Who said weddings?
+Who said [weddings](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/)?
 
-https://youtube.com/shorts/YvqRzjcR7EI
+<!-- https://youtube.com/shorts/YvqRzjcR7EI -->
 
+{{< youtube "YvqRzjcR7EI" >}}

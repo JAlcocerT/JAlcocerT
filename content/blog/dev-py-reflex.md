@@ -26,7 +26,7 @@ reflex run
 python3 -m pip list | grep -i reflex
 ```
 
-Make sure that Ports 3000 FE and 8000 BE (portainer) are available!
+> Make sure that Ports 3000 FE and 8000 BE (portainer) are available!
 
 Why not just building something simple to try out?
 
@@ -36,10 +36,6 @@ Sky is the limit, as Reflex can do **real time data visualization** stuff thanks
 See the [source code magic](https://github.com/JAlcocerT/Python_is_awesome).
 Applied to [RE here](https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage_Reflex) 🔥💻
 {{< /callout >}}
-
-![alt text](/blog_img/apps/reflex/reflex-stocks-sample.png)
-
-![alt text](/blog_img/apps/reflex/reflex-stocks-sample2.png)
 
 [Vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/) a Python reflex webapp:
 
@@ -66,7 +62,9 @@ How about enhancing these streamlit projects?
 
 Enhancing in a way...that they are also good looking and providing UI/UX for mobile users?
 
-Lets have a look.
+**Lets have a look to Reflex.**
+
+But first, get your [Python ready](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) for action:
 
 {{< details title="Compile Python on a Pi 📌" closed="true" >}}
 
@@ -225,7 +223,7 @@ app.add_page(index)
 Now, its all about adding components to the `def index()`, like: https://reflex.dev/docs/library/data-display/moment/
 
 ```py
-rx.moment(MomentState.date_now), #you will need to define its associated MomentState(), also given in the docs
+rx.moment(MomentState.date_now) #you will need to define its associated MomentState(), also given in the docs
 ```
 
 Not long after get that working, you will **build some demo, using graph components**:
@@ -368,6 +366,20 @@ You will find also useful:
 1. rx.input - https://reflex.dev/docs/library/forms/input/
 2. rx.datatable - https://reflex.dev/docs/library/tables-and-data-grids/data-table/ or [table](https://reflex.dev/docs/library/tables-and-data-grids/table/)
 
+#### Reflex Sample Apps
+
+I could not resist to make this form: https://github.com/JAlcocerT/reflex-templates
+
+And enjoy using this sample apps out of the box:
+
+1. `./dashboard`
+
+![Reflex dashboard sample](/blog_img/apps/reflex/reflex-stocks-sample.png)
+
+2. `./stock_market_dashboard`
+
+![Reflex Stocks Sample](/blog_img/apps/reflex/reflex-stocks-sample2.png)
+
 
 ---
 
@@ -377,16 +389,16 @@ Now its time to rebuild with Reflex some Streamlit apps I made!
 
 ### Historical Job Market Data with Reflex
 
-For this one
+For this one, id like to have a very simple graph for the seasonality of jobs and to use a sqlite DB to pull the data.
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/videos/job_offers.png" subtitle="Post where I tinkered with scrapping tools." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/videos/job_offers.png" subtitle="Post where I tinkered with scrapping tools and job offers" >}}
   {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for using BS4, AI Scraps..." >}}
 {{< /cards >}}
 
 
-{{< details title="See the details 📌" closed="true" >}}
+{{< details title="See the details on how Ive done it 📌" closed="true" >}}
 
 
 {{< /details >}}
@@ -395,19 +407,27 @@ For this one
 
 Lately Ive been playing with **RE data** driven apps.
 
+But it was mostly with streamlit, where Im most confortable for now.
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Understanding Real Estate" image="/blog_img/data-experiments/buyr_mortage_NAV_norent.png" subtitle="Post where I tinkered with Math for Real Estate." >}}
-  {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage?ref_type=heads" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source CodeEDA French Amortization" >}}
+  {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage?ref_type=heads" title="EDA Mortage with Reflex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for EDA French Amortization" >}}
 {{< /cards >}}
 
-And with Reflex and some tricks with Gemini...
+And with Reflex and some tricks with Gemini code assistant I got to this:
 
 ![Reflex using Components](/blog_img/apps/reflex/reflex-composedchart-datatable.png)
+
+Which is a very interesting use case of Reflex components.
+
+But that was a repurposed app, which required few more tricks to be cooler, now with a [composed chart](https://reflex.dev/docs/library/graphing/charts/composedchart/), but with the [piechart](https://reflex.dev/docs/library/graphing/charts/piechart/)
+
+
 
 
 {{< details title="More | Real Estate Reflex, RBD and RFD 📌" closed="true" >}}
 
-I will provide definitions for [the BRD and FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) for your Python Reflex real estate calculator web app, keeping in mind the input, desired output, and additional "cool ideas" for the FRD.
+When creating vibe coded apps, [the BRD and FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) concepts for theweb app, keeping in mind the input, desired output, and additional "cool ideas" for the FRD.
 
 Like this one: https://github.com/JAlcocerT/real-estate-reflex/blob/main/brd-frd.md
 
@@ -466,7 +486,9 @@ Like this one: https://github.com/JAlcocerT/real-estate-reflex/blob/main/brd-frd
 3. The interest/principal split just depends on: years and %interest
 4. The PER of the flats depends on the city/neighbourhood you look
 
-{{< details title="Examples of PER for RE 📌" closed="true" >}}
+{{< details title="Real Examples of PER for Real Estate 📌" closed="true" >}}
+
+Just out of curiosity, see how each city/neighbourhood will have differant PER or yields:
 
 * https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/andalucia/sevilla-provincia/dos-hermanas/
 * https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/andalucia/sevilla-provincia/dos-hermanas/
@@ -492,20 +514,25 @@ Like this one: https://github.com/JAlcocerT/real-estate-reflex/blob/main/brd-frd
 {{< /details >}}
 
 
-#### More RE Costs
-
-
-
 #### RE Resources
+
+Remember that there are other costs associated with RE, not just interests.
+
+You could also bring to the equation the inflation factor to your reflex app:
 
 1. https://tradingeconomics.com/poland/consumer-price-index-cpi (see the change %)
 2. https://tradingeconomics.com/poland/interest-rate
+
 
 ## Reflex Authentication
 
 For Streamlit I got to know this very [simple hardcoded user/pwd authentication](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py).
 
+https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#features-under-a-wall
+
 ![Simple Streamlit Auth](/blog_img/apps/streamlit/ST_AuthFunction.png)
+
+
 
 Is it possible to have something similar to that with Reflex?
 

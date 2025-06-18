@@ -224,11 +224,11 @@ These libraries and competitors offer different strengths depending on the type 
 
 Infinite scroll, Just with CSS! 
 
-https://blog.logto.io/css-only-infinite-scroll
+As per: https://blog.logto.io/css-only-infinite-scroll
 
 and thanks to [logto blog post](https://blog.logto.io/css-only-infinite-scroll)
 
-```astro
+```js
 ---
 // Frontmatter script area (JavaScript goes here if needed, but for this example, it's not required)
 ---

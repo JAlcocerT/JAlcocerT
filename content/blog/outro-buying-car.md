@@ -104,9 +104,7 @@ For me, it worked with sixt, budget and avis.
 
 ## The costs of a Car
 
-As mentioned, from my experience, this is what I got:
-
-
+As mentioned, from my experience, this is the **cost split that I got:**
 
 {{< chart 100 200 >}}
 {
@@ -222,6 +220,7 @@ Steps for **buying a car in Germany**.
 
 ### In Spain
 
+* https://www.historialvehiculo.com/
 * https://www.carfax.eu/es
   * [Example](https://www.carfax.eu/es/vhr?reportId=11bd37fd-859c-45f4-9d7b-e30a53704bf1)
 

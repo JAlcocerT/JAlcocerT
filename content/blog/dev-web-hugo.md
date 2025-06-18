@@ -2,7 +2,7 @@
 title: "How to use HUGO [101] and make quick Websites"
 date: 2024-09-06
 draft: false
-tags: ["Dev","Website"]
+tags: ["Dev","Website","Shortcodes"]
 summary: 'How to get started with HUGO as SSG and create Webs. GO & HUGO Setup with ChartJS.'
 url: 'using-hugo-as-website'
 ---
@@ -195,6 +195,14 @@ Looking for features to add for your website? See [some ideas **here**](https://
 ---
 
 ## Outro
+
+HUGO its not only about its crazy build speed.
+
+But also about its shortcodes.
+
+You can use them to embed youtube videos, creating cool dropdowns or even to bring MermaidJS charts, Katex and ChartJS to your website.
+
+Think of them like *HUGO components*, if you come from NextJS or Astro.
 
 ### Charts in HUGO
 
