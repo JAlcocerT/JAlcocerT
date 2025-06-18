@@ -538,7 +538,7 @@ You could also bring to the equation the inflation factor to your reflex app:
 
 For Streamlit I got to know this very [simple hardcoded user/pwd authentication](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py).
 
-https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#features-under-a-wall
+Which I developed for [the Aissistant here](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Auth_Ways) and explained at this post of [features under a wall](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#features-under-a-wall)
 
 ![Simple Streamlit Auth](/blog_img/apps/streamlit/ST_AuthFunction.png)
 

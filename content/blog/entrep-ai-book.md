@@ -9,6 +9,8 @@ url: 'ai-driven-ebooks'
 
 You know what to tell, its just that... time.
 
+https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_ebook.py
+
 ### eBooks
 
 **Making ebooks** is possible with **pandoc or MKDoc**

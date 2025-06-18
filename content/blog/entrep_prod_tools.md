@@ -7,6 +7,17 @@ description: 'SelfHosted Product Tools, Analytics and Authentication. The missio
 url: 'product-tools'
 ---
 
+
+<!-- 
+referencia a persuasion escrito en jan 2022
+
+y aqui cositas de neuromarketing
+
+the buying brain....
+`brainfluence`
+
+ -->
+
 Its been few months since I covered [these Tools for forms/newsletters](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/)
 
 Now, how to built great [products](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)?

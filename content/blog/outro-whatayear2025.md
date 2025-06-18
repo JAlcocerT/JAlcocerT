@@ -57,7 +57,15 @@ Linktree does things very well, yet cant compete with:
 ## Interesting Concepts
 
 1. CYA was always a thing. But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level.
+
 2. Its 2025 and now everyones says that it wants AI / [AI|BI](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) / AIOps / whatever. When it really needs [good'old ML](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/)
+
+3. Declarative vs Procedural
+
+* **Declarative Knowledge (Knowing *What*):** This is factual knowledge. It's about concepts, theories, principles, facts, definitions, and data. It's the "what" and "why" behind things.
+    * *Examples:* Knowing the syntax of a programming language, understanding the principles of agile methodology, knowing the capital of France, recalling historical dates, understanding different economic theories.
+* **Procedural Knowledge (Knowing *How*):** This is knowledge of how to perform a task or sequence of actions. It's the "how-to." It often involves skills, techniques, processes, and strategies.
+    * *Examples:* Writing code in a programming language, facilitating a Scrum meeting, riding a bicycle, cooking a recipe, debugging software, performing a surgical procedure.
 
 ## Processes
 

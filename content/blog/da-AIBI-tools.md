@@ -3,7 +3,7 @@ title: "AI|BI Tools "
 date: 2025-05-22T00:20:21+01:00
 draft: false
 tags: ["Dev","D&A","Career"]
-description: 'BI/AI another combo and more D&A Tools'
+description: 'BI/AI another combo and more D&A Tools. PoC Dashboards with PyGWalker can be a thing!'
 url: 'ai-bi-tools'
 ---
 
@@ -28,7 +28,6 @@ Today, we will have a look to:
 Which resonates with my recent [post on **BI Tools**](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/)
 
 ### ChartDB
-
 
 I thought everything was done with [LangChain querying DBs with LLMs](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/) in DAG mode.
 
@@ -58,6 +57,10 @@ Then I found this:
 You can also have a look to a killer combi: **Streamlit x pygwalker**
 
 Give the users a webapp that they can play with tables / graph that does not require huge development!
+
+If you want to use actively AI to develop the dashboarding, consider **LLM x Streamlit:**
+
+As can also render [mermaidJS](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_mermaid_v2c.py) and [plotly graphs](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_plotly_v1b.py) with your [aissistant, via streamlit webapp](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main)
 
 ## Other D&A Tools
 

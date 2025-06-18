@@ -335,6 +335,7 @@ While BPMN focuses on process flow, UML can complement this by providing differe
 It's helpful to understand that **INVEST** and **SMART** serve different purposes, though they can be related.
 
 **INVEST** is a set of guidelines to help you create well-formed **user stories**.
+
 **SMART** is a set of criteria to help you define **objectives or goals**.
 
 Here's a breakdown of when each is most appropriate:
@@ -445,37 +446,25 @@ SMART helps you define clear, measurable, and achievable objectives, whether *fo
 By including these elements, a user story becomes a powerful tool for communication, collaboration, and ensuring that the development team is building the right product for the right users.
 
 
-
-<!-- 
-referencia a persuasion escrito en jan 2022
-
-y aqui cositas de neuromarketing
-
-the buying brain....
-`brainfluence`
-
- -->
-
-
 > These are very helpful on end to end projects - where we went from raw data modelling to [BI solutions](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#syncing-expectations):
 
-You can also have handy a list of QQ to enable others perform their job:
+You can also have handy a list of QQ to [enable others](https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/#enabling-others) perform their job.
 
-* https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/#enabling-others
+#### JIRA Creation
+
 
 ---
 
 ## Conclusions
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.com/" title="Let's do cool stuff ↗ " >}}
+  {{< card link="https://jalcocertech.com/" title="Let's do cool stuff ↗ " >}}
   {{< card link="https://youtube.com/@JAlcocerTech" title="My YT Tech Channel ↗" >}}
 {{< /cards >}}
 
 ### The Information Workflow
 
 Important from how you handle meetings, to how you write designs, to how you ask from others.
-
 
 {{< callout type="info" >}}
 I like this way of summarizing whats required from others (useful for JIRA stories!)
@@ -673,6 +662,48 @@ Sí, exactamente. La capa Oro es donde se definen y materializan los modelos dim
 
 ### More T-Shaped Skills
 
+There are 2 kind of knowledge you can have:
+
+* Declarative - To know that something is possible
+* Procedural - To know how to do something
+
+{{< details title="A T-shaped individual has 📌" closed="true" >}}
+
+* **A deep specialization in one area** (the vertical bar of the "T").
+* **A broad understanding across multiple related disciplines** (the horizontal bar of the "T").
+
+Here's how declarative and procedural knowledge fit into this framework:
+
+The Vertical Bar (Deep Specialization)
+
+The vertical bar of the T is where a person's **deep expertise** lies. This depth requires a strong blend of both declarative and procedural knowledge, often with a heavy emphasis on the latter.
+
+* **Deep Declarative Knowledge:** Within their specialization, a T-shaped individual possesses a vast amount of declarative knowledge. They know the foundational theories, the history, the best practices, the common pitfalls, and the nuances of their field. For a software engineer, this would be a deep understanding of data structures, algorithms, system architecture patterns, and the specific APIs of their chosen framework.
+* **Deep Procedural Knowledge:** This is where the "mastery" comes in. They have spent countless hours applying their declarative knowledge through practice. They can *do* the work efficiently, effectively, and with high quality. They know the shortcuts, the debugging techniques, the refactoring patterns, and how to optimize for performance. For a software engineer, this means they can write clean, efficient code, design robust systems, and troubleshoot complex issues quickly. Their procedural knowledge becomes almost intuitive.
+
+**In essence, the vertical bar is where deep declarative knowledge is *applied and transformed* into highly effective procedural knowledge.**
+
+The Horizontal Bar (Broad Understanding)
+
+The horizontal bar represents the **breadth of knowledge** across various related fields. This broad understanding is primarily driven by **declarative knowledge**, but it also involves a foundational level of procedural awareness.
+
+* **Broad Declarative Knowledge:** This is about "knowing *what* other disciplines do" and "knowing *why* they do it."
+    * For a software engineer, this might mean understanding the basics of UX design principles (knowing *what* good design looks like and *why* it's important for usability), marketing strategies (knowing *what* marketing does and *why* it matters for product adoption), or business operations (knowing *what* the company's business model is and *why* certain features are prioritized). They don't need to be able to *do* UX design, marketing, or business operations at an expert level, but they understand the concepts and how these areas interact with their own.
+* **Foundational Procedural Awareness:** While not deep, the horizontal bar also implies an appreciation for the *how* in other areas. The T-shaped individual might not *do* the work, but they understand the general processes, challenges, and tools involved. This helps them communicate effectively and empathize with colleagues in different roles. For example, a developer might not be a UX designer, but they understand the basic steps of user research and wireframing, which helps them collaborate better with the design team.
+
+**The horizontal bar facilitates communication, collaboration, and problem-solving across disciplines, largely by providing a shared declarative vocabulary and an appreciation for different procedural approaches.**
+
+The Relationship Summarized:
+
+* **Declarative knowledge** forms the **foundation** for both the vertical (deep specialization) and horizontal (broad understanding) bars. You can't truly *do* something well without first understanding the underlying *what* and *why*.
+* **Procedural knowledge** represents the **application and mastery** of that declarative knowledge. It's what allows a T-shaped individual to be highly effective within their specialization (vertical bar) and to understand the practicalities and challenges of related fields (horizontal bar).
+* **The "T" shape itself highlights the interplay:** A strong vertical bar (deep procedural skill rooted in deep declarative knowledge) makes you an expert. A broad horizontal bar (broad declarative knowledge and procedural awareness) makes you a great collaborator, innovator, and adaptable problem-solver.
+
+{{< /details >}}
+
+
+Essentially, T-shaped individuals leverage their **deep procedural knowledge** to excel in their primary role, while using their **broad declarative knowledge** to connect with, understand, and contribute effectively to other parts of the project or organization.
+
 #### Diagrams and Retros
 
 1. In addition to my *inconditional* love for mermaidJS and general diagrams...
@@ -681,6 +712,8 @@ I would recommend you to have a look to:
 
 * https://github.com/excalidraw/excalidraw
     * https://excalidraw.com/
+
+* You can also render [mermaidJS](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_mermaid_v2c.py) and [plotly graphs](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_plotly_v1b.py) with your [aissistant, via streamlit webapp](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main)
 
 >  Virtual whiteboard for sketching hand-drawn like diagrams 
 
@@ -698,6 +731,8 @@ These are some knowledge management tools, noting their data storage method:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Notes" title="Note Tools | Docker Configs 🐋 ↗" >}}
+    {{< card link="https://fossengineer.com/selfhostable-note-taking-tools/" title="OSS Note taking tools ↗" >}}
 {{< /cards >}}
+
 
 [![Star History Chart](https://api.star-history.com/svg?repos=silverbulletmd/silverbullet,laurent22/joplin,logseq/logseq,BookStackApp/BookStack,gilbitron/Raneto&type=Date)](https://star-history.com/silverbulletmd/silverbullet&laurent22/joplin&logseq/logseq&BookStackApp/BookStack&gilbitron/Raneto&Date)

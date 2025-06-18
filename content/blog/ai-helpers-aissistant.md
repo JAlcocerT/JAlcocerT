@@ -29,8 +29,44 @@ Looking at [Streamlit Roadmap](https://roadmap.streamlit.app/), more ideas will 
 This is how [CV-Check // **CVCreAItor**](https://gitlab.com/fossengineer1/cv-check) and [**AIssistant**](https://github.com/JAlcocerT/Streamlit-AIssistant) were born 🔥💻
 {{< /callout >}}
 
+Its a streamlit webapp!
 
 ![AIssistant](/blog_img/apps/ai-assistant.png)
+
+{{< filetree/container >}}
+  {{< filetree/folder name="Z_ST_AIssistant" >}}
+    {{< filetree/file name="Z_ST_AIssistant_v2.py" >}}
+    {{< filetree/file name=".env" >}}
+    {{< filetree/folder name="Z_AIgents" state="open" >}}
+      {{< filetree/file name="OpenAI_MDSummarizer_v1.py" >}}
+      {{< filetree/file name="OpenAI_email.py" >}}
+      {{< filetree/file name="OpenAI_Neuromkt.py" >}}
+      {{< filetree/file name="Z_OpenAI_GeneralChatv1.py" >}}
+      {{< filetree/file name="OpenAI_mermaid_v2c.py" >}}
+      {{< filetree/file name="OpenAI_plotly_v1b.py" >}}
+      {{< filetree/folder name="Prompts" >}}
+        {{< filetree/file name="prompts_mdsummarizer.md" >}}
+        {{< filetree/file name="prompts_email.md" >}}
+        {{< filetree/file name="prompts_neuromkt.md" >}}
+      {{< /filetree/folder >}}
+      {{< filetree/folder name="FAQs" >}}
+        {{< filetree/file name="FAQ_MDSummarizer.md" >}}
+        {{< filetree/file name="FAQ_Email.md" >}}
+        {{< filetree/file name="FAQ_MermaidJS.md" >}}
+      {{< /filetree/folder >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name="Z_FromOtherProjects" >}}
+      {{< filetree/file name="Streamlit_OpenAI.py" >}}
+    {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
+**Trying to keep it modular**
+
+Via the agents section, I tried to bring LLM prompt + feature.
+
+Via the FAQS, each module can have its own section attached as markdowns.
+
 
 <!-- #![AIssistant](/blog_img/GenAI/Aissistant.png) -->
 

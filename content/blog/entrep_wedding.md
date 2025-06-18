@@ -21,6 +21,16 @@ All was about some software setup on VPS:
 
 https://filebrowser.org/configuration/custom-branding
 
+A little AI help on [neuromarketing](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_Neuromkt.py)
+
+### QR Generator
+
+This can be done in several ways
+
+1. With Streamlit https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/QR_GenerAItor
+2. With Python or several containers / tools as seen during the [initial wedding delivery](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt)
+3. In theory, also with javascript on the client side...
+
 ### The Landing Page
 
 Pictures 360, from every angle
