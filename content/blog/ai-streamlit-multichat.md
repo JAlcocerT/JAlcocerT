@@ -1,6 +1,6 @@
 ---
 title: "Testing new LLMs with Streamlit MultiChat"
-date: 2025-06-17T23:20:21+01:00
+date: 2025-05-25T23:20:21+01:00
 draft: false
 cover:
   image: "https://socialify.git.ci/jalcocert/streamlit-multichat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
@@ -86,6 +86,17 @@ Companions for this multichat.
 {{< /cards >}}
 
 ![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png)
+
+### Agents with Streamlit
+
+With a very interesting article about agents: https://www.anthropic.com/engineering/built-multi-agent-research-system
+
+
+
+* https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
+
+> FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser & Trae AI (And other Open Sourced) System Prompts, Tools & AI Models.
+
 
 
 ### AIssistant

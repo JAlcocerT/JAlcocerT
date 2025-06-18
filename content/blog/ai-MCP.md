@@ -801,3 +801,8 @@ Taskmaster is your AI's personal project manager. Organize, research, expand, pr
 ![Claude Task Master - 101](/blog_img/GenAI/aidocs/taskmater-model.png)
 
 ![alt text](/blog_img/GenAI/aidocs/taskmaster-setup.png)
+
+### OpenAI x MCP
+
+https://github.com/openai/codex/issues/5?ref=blog.lai.so
+https://github.com/agency-ai-solutions/openai-codex-mcp

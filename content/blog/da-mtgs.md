@@ -39,7 +39,7 @@ Take your time to plan and prepare accordingly, so that the **team's time invest
     * Dont'miss anyone who is needed in the discussion
     * Dont overbook people with meetings that wont have any impact
 
-End with clear Actions, Owners and Timelines:
+**End with clear Actions, Owners and Timelines:**
 
 A Table with the following structure can be of help to keep everyone informed:
 

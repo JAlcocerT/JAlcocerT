@@ -2,7 +2,7 @@
 title: "Whats a BRD and how it helps project delivery?"
 date: 2025-04-16T00:20:21+01:00
 draft: false
-tags: ["Career", "D&A", "Analytics","GenAI"]
+tags: ["Career", "D&A", "Analytics"]
 description: 'The business requirement document and the FRD for the GenAI / vibecoded times. Better questions for LLMs.'
 url: 'brd-vs-frd-for-data-analytics'
 ---
@@ -26,7 +26,6 @@ How to make sure that the LLM will have the proper context to have from the very
 {{< /cards >}}
 
 {{< details title="BRD vs FRD 📌" closed="true" >}}
-
 
 * **Core Definition and Purpose:**
     * "A business requirements document (BRD) is a formal document that outlines the business needs and objectives of a project. It serves as a critical blueprint for project success, clearly defining business objectives, project scope, and stakeholder expectations." - **Accurate.** This perfectly captures the essence of a BRD.
@@ -66,6 +65,65 @@ How to make sure that the LLM will have the proper context to have from the very
 
 3. To make sure that AI builds what you want
 
+## Why these are important
+
+You might think that spending time on filling some docs is just bike-shedding, a waste of time.
+
+Yet actually, when working cross-functionally with several teams, they are very beneficial to [track the stream of value](https://jalcocert.github.io/JAlcocerT/lean/#vsm) and how resources are utilized.
+
+**Trust me, keep this handy:**
+
+| Artifact           | Question / Green Light / Purpose                                   | Who (Primary Responsible)                                        |
+| :----------------- | :----------------------------------------------------------------- | :--------------------------------------------------------------- |
+| **Project Charter** | **"Go/No-Go": Do we authorize this project and empower the PM?** | **Project Sponsor**, Project Manager (drafts)                  |
+| **BRD** | "Why are we doing this from a business perspective?"             | **Business Analyst**, Business Stakeholders                      |
+| **PRD** | "What product features will solve the user/business problem?"      | **Product Manager / Product Owner** |
+| **FRD** | "How will the system specifically behave to deliver these features?" | **Business Analyst**, Systems Analyst, Technical Lead            |
+| **Project Estimation** | "How much time and resources will this project require?"          | **Project Manager**, Development Team, QA Team, Design Team      |
+| **RACI Matrix** | "Who is responsible for what specific task/decision?"              | **Project Manager** (with team leads and key stakeholders)     |
+
+
+1.  **[BRD](#the-brd) (Business Requirements Document)**
+    * **Who defines it:** Primarily the **Business Analyst (BA)**. They work closely with **Business Stakeholders**, **Project Sponsors**, and sometimes **Product Owners/Managers**.
+    * **Why them:** BAs are skilled at understanding business needs, translating them into clear requirements, and acting as a bridge between the business side and the technical teams. Business stakeholders provide the "why" and the overall vision.
+
+2.  **PRD (Product Requirements Document)**
+    * **Who defines it:** The **Product Manager** or **Product Owner**.
+    * **Why them:** Product Managers are responsible for the success of the product. They take the high-level business needs from the BRD (or directly from business strategy) and define the specific features, user experiences, and functionalities that the product will have to meet those needs. They act as the voice of the user and the market. They collaborate extensively with designers and development leads.
+
+3.  **[FRD](#the-frd) (Functional Requirements Document)**
+    * **Who defines it:** Often the **Business Analyst** or **Systems Analyst**, sometimes in conjunction with a **Technical Lead** or **Solution Architect**.
+    * **Why them:** The FRD delves into the technical "how." BAs and Systems Analysts have the analytical skills to break down product features into granular system behaviors. Technical leads and architects ensure that the detailed requirements are technically feasible and align with the overall system design. In many modern agile teams, detailed functional requirements might be captured as elaborated user stories and acceptance criteria directly in the development backlog, with the **Development Team** itself defining the fine-grained "how" during sprint planning.
+
+4.  **[RACI](#conclusions) Matrix**
+    * **Who defines it:** The **Project Manager** or **Program Manager**. They typically create this in collaboration with the **team leads** and **key stakeholders** who will be involved in the tasks.
+    * **Why them:** The Project Manager is responsible for project planning, execution, and ensuring clear communication and accountability. The RACI matrix is a crucial tool for this.
+
+**When is Project Estimation Done?**
+
+Project estimation is **an ongoing and iterative process** throughout the project lifecycle, but it becomes more refined and accurate as more information becomes available.
+
+Here's how estimation typically progresses:
+
+1.  **Initiation Phase (Very Early - BRD Stage):**
+    * **Type of Estimate:** **Rough Order of Magnitude (ROM) estimate.** This is a very high-level, preliminary estimate, often given as a wide range (e.g., -25% to +75% accuracy).
+    * **Purpose:** To determine the project's feasibility and secure initial budget approval. It answers the question: "Is this even worth pursuing?"
+    * **Who does it:** Often senior management, project sponsors, or experienced project managers based on similar past projects or industry benchmarks. It's usually based on the high-level scope outlined in a preliminary BRD or even just a project idea.
+
+2.  **Planning Phase (After BRD, during PRD/FRD definition):**
+    * **Type of Estimate:** Estimates become more **definitive** and **detailed**, narrowing the range (e.g., -10% to +25% or even -5% to +10% as more details emerge). This is where more robust techniques like analogous estimating (comparing to similar past projects), parametric estimating (using historical data and statistical relationships), and eventually **bottom-up estimating** come into play.
+    * **Purpose:** To create a detailed project budget, schedule, and resource plan. This is when the development team starts to weigh in more heavily.
+    * **Who does it:**
+        * **Project Manager:** Facilitates the estimation process, gathers input, and consolidates estimates.
+        * **Product Manager/Owner:** Provides clarity on features and priorities from the PRD.
+        * **Development Team (Architects, Leads, Developers):** Crucially, the people who will actually do the work provide the most accurate task-level estimates for effort and duration. They break down the FRD (or detailed user stories) into individual tasks.
+        * **QA/Testing Team:** Estimates time for testing cycles.
+        * **Other Teams (Design, Marketing, etc.):** Provide estimates for their respective contributions.
+
+3.  **Execution and Monitoring Phases (Throughout Development):**
+    * **Type of Estimate:** Estimates are continuously **refined and updated** through a process called **progressive elaboration**. As work progresses and new information or challenges arise, estimates for remaining work are adjusted.
+    * **Purpose:** To track progress, manage costs, forecast completion dates, and identify potential risks or deviations from the plan.
+    * **Who does it:** The Project Manager, in collaboration with the Development Team and other relevant stakeholders, continuously monitors actuals against estimates and updates forecasts.
 
 
 ## The BRD
@@ -257,6 +315,8 @@ It's important to remember that the BRD and FRD are not created in isolation. Th
 
 In essence, the BRD and FRD are critical communication tools that guide a project through the SDLC, ensuring that the final software product effectively addresses the initial business problem.
 
+---
+
 ## Conclusions
 
 How a BRD, FRD, RACI, and Project Charter relate to each other in the context of project management. 
@@ -302,3 +362,56 @@ The BRD defines the business needs, which are then translated into specific func
 The RACI matrix then clarifies who is responsible for executing the tasks and deliverables derived from these requirements, ensuring accountability and smooth collaboration throughout the project.
 
 They are interconnected and sequentially refined, building upon each other to **guide the project from concept to completion**.
+
+### In a nutshell
+
+The Project Charter is a crucial document that fits right at the **very beginning** of the project lifecycle, specifically during the **Initiation Phase**.
+
+Here's a breakdown of its purpose, who defines it, and where it sits in the typical project flow:
+
+#### What is a Project Charter?
+
+A Project Charter is a formal, high-level document that:
+
+* **Formally authorizes the existence of a project.** It's the "go-ahead" signal from the organization.
+* **Empowers the Project Manager** to apply organizational resources to project activities. This is critical for giving the PM the authority they need.
+* **Provides a high-level overview** of the project's purpose, objectives, high-level scope, key deliverables, high-level timeline, high-level budget, major stakeholders, and potential high-level risks.
+* **Aligns stakeholders** by providing a shared understanding of the project's goals and boundaries right from the start.
+* **Serves as a reference point** throughout the project lifecycle to ensure the project stays on track and within its authorized scope.
+
+#### Who Defines the Project Charter?
+
+The **Project Manager** typically drafts the Project Charter, but it's done in close collaboration with the **Project Sponsor** (the person or group who provides the financial resources and support for the project) and other key **stakeholders**.
+
+The Project Sponsor's **formal approval and signature** on the Project Charter are essential, as this signifies their commitment and grants the Project Manager the necessary authority.
+
+#### Where Does it Fit in the Project Lifecycle?
+
+The Project Charter comes **before** the detailed planning and requirements gathering (like the BRD, PRD, FRD).
+
+Here's the refined order:
+
+1.  **Project Initiation Phase:**
+    * **Business Case/Feasibility Study:** (Often precedes the charter) A document that justifies the project from a business perspective, outlining the problem, opportunities, and potential benefits. This feeds into the charter.
+    * **Project Charter:** This is the foundational document created here. It officially launches the project, defines its high-level parameters, and authorizes the Project Manager.
+
+2.  **Project Planning Phase:**
+    * **BRD (Business Requirements Document):** Built upon the high-level needs identified in the charter and business case, this details the business problems and high-level solutions.
+    * **PRD (Product Requirements Document):** Translates the business needs into specific product features and user requirements.
+    * **FRD (Functional Requirements Document):** Details the technical "how-to" for specific system functions.
+    * **Project Management Plan:** This is the comprehensive plan that includes detailed scope, schedule, budget, resource plan, risk management plan, communication plan, quality plan, and other subsidiary plans. The project charter provides the high-level inputs for this detailed planning.
+    * **RACI Matrix:** Developed as part of the planning phase, often within the Project Management Plan, to define roles and responsibilities for specific tasks identified during detailed planning.
+
+3.  **Project Execution Phase**
+4.  **Project Monitoring & Control Phase**
+5.  **Project Closure Phase**
+
+**Think of it this way:**
+
+* The **Project Charter** is like getting permission and the initial funding to build a house, and agreeing on its general size and purpose (e.g., "We're going to build a three-bedroom family home").
+* The **BRD** then clarifies *why* you need a three-bedroom family home (e.g., "Our growing family needs more space, and we want it to be energy-efficient").
+* The **PRD** details *what* features the house will have (e.g., "It will have an open-concept living area, a modern kitchen with an island, and a two-car garage").
+* The **FRD** goes into the specifics of *how* those features will be implemented (e.g., "The kitchen island will have a built-in sink with specific plumbing requirements, and the garage door will be controlled via an app").
+* The **RACI** defines who is responsible for pouring the foundation, framing the walls, installing the plumbing, etc.
+
+> The Project Charter acts as the **mandate** that gives life to the project, setting the stage for all the detailed work that follows.

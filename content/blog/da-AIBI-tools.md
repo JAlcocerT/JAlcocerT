@@ -53,6 +53,12 @@ Then I found this:
 
 [![Star History Chart](https://api.star-history.com/svg?repos=chartdb/chartdb,wix-incubator/quix,pinterest/querybook,quixio/quix-streams&type=Date)](https://star-history.com/chartdb/chartdb&wix-incubator/quix&pinterest/querybook&quixio/quix-streams&Date)
 
+### PyGWalker
+
+You can also have a look to a killer combi: **Streamlit x pygwalker**
+
+Give the users a webapp that they can play with tables / graph that does not require huge development!
+
 ## Other D&A Tools
 
 * https://github.com/wix-incubator/quix

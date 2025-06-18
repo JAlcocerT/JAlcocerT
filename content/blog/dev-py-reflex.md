@@ -20,7 +20,7 @@ I think it should be in between Streamlit and Flask in terms of UI and developme
 
 ```sh
 pip install reflex
-reflex init
+reflex init #https://reflex.dev/docs/api-reference/cli/
 reflex run
 
 python3 -m pip list | grep -i reflex
@@ -46,6 +46,8 @@ Applied to [RE here](https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_
 
 
 ## The Reflex Package
+
+Reflex launched in December 2022 with the name Pynecone.
 
 * https://github.com/reflex-dev/reflex
 
@@ -420,9 +422,15 @@ And with Reflex and some tricks with Gemini code assistant I got to this:
 
 Which is a very interesting use case of Reflex components.
 
-But that was a repurposed app, which required few more tricks to be cooler, now with a [composed chart](https://reflex.dev/docs/library/graphing/charts/composedchart/), but with the [piechart](https://reflex.dev/docs/library/graphing/charts/piechart/)
+But that was a repurposed app, which required few more tricks to be cooler, now with a [composed chart](https://reflex.dev/docs/library/graphing/charts/composedchart/), but with the [piechart](https://reflex.dev/docs/library/graphing/charts/piechart/):
 
+```sh
+reflex run --backend-port 8001 --frontend-port 3001
+```
 
+> When running reflex, its exposed to home devices out of the box
+
+![Reflex PieChart](../../static/blog_img/apps/reflex/reflex-piechart.png)
 
 
 {{< details title="More | Real Estate Reflex, RBD and RFD 📌" closed="true" >}}
@@ -432,6 +440,8 @@ When creating vibe coded apps, [the BRD and FRD](https://jalcocert.github.io/JAl
 Like this one: https://github.com/JAlcocerT/real-estate-reflex/blob/main/brd-frd.md
 
 {{< /details >}}
+
+#### Vibe Coded Reflex Real Estate App
 
 {{< filetree/container >}}
   {{< filetree/folder name="real_estate" >}}
@@ -559,6 +569,12 @@ Recently I got [Traefik https](https://fossengineer.com/selfhosting-traefik/) to
 
 ### Reflex x Stripe
 
+
+## Deploy Reflex
+
+```sh
+reflex run --backend-port 8001 --frontend-port 3001
+```
 
 ---
 

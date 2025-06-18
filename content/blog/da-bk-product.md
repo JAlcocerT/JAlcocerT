@@ -54,6 +54,8 @@ To cultivate a product vision mindset, data analysts should focus on the followi
 * Iterative development: Embrace an agile approach to continuously improve data products based on user feedback and changing market conditions.
 * Technical proficiency: Stay updated on the latest data analytics tools, techniques, and industry trends to create innovative data products that offer a competitive edge.
 
+---
+
 ## Conclusions
 
 ### The Benefits of a Product Vision Mindset
@@ -89,6 +91,8 @@ When interacting with product managers and discussing requirements, each of the 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md" title="Have a Project Charter Handy ↗ " >}}
 {{< /cards >}}
+
+To work with or as a [BA, see this questions](https://jalcocert.github.io/JAlcocerT/business-analytics-concepts/#business-analysis-key-questions).
 
 #### Data Analyst
 

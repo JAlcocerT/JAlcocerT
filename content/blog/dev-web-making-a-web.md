@@ -15,6 +15,7 @@ How to make a **cool website for Real Estate?**
   * https://www.inmobiliariacano.es/
   * https://casaensol.pl/
   * https://syrenare.com/
+  * https://www.budmos.pl/firma1
   * All are **performing slooow** at up to ~1 second initial for a simple http request!
   
 * **Result**: <https://dm-real-estate.com/>

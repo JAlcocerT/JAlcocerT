@@ -171,6 +171,8 @@ These tools span across data flow automation, big data management, Kubernetes wo
 
 ## From the Experience
 
+Its not all about tech and hard skills.
+
 Whatever the industry you are working on, make sure to set and improve your [**workflow** for effectiveness](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/#workflow-for-effectiveness):
 
 1. What's going on
@@ -248,6 +250,23 @@ They are not mutually exclusive and can even be used in conjunction.
 
 For instance, a SWOT analysis might help identify potential areas for a cost-benefit analysis, or the concept of satisficing might be applied when considering various options identified through a SWOT.
 
+#### Project Delivery
+
+To increase the likelihood of a successfully project delivery, having everyone involved on the same page and working on whats actually valuable is key.
+
+{{< cards cols="" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/" title="Dont forget to CYA with PRD, BRD, FRD... ↗ " >}}
+{{< /cards >}}
+
+| Artifact           | Question / Green Light / Purpose                                   | Who (Primary Responsible)                                        |
+| :----------------- | :----------------------------------------------------------------- | :--------------------------------------------------------------- |
+| **Project Charter** | **"Go/No-Go": Do we authorize this project and empower the PM?** | **Project Sponsor**, Project Manager (drafts)                  |
+| **BRD** | "Why are we doing this from a business perspective?"             | **Business Analyst**, Business Stakeholders                      |
+| **PRD** | "What product features will solve the user/business problem?"      | **Product Manager / Product Owner** |
+| **FRD** | "How will the system specifically behave to deliver these features?" | **Business Analyst**, Systems Analyst, Technical Lead            |
+| **Project Estimation** | "How much time and resources will this project require?"          | **Project Manager**, Development Team, QA Team, Design Team      |
+| **RACI Matrix** | "Who is responsible for what specific task/decision?"              | **Project Manager** (with team leads and key stakeholders)     |
+
 
 ### BA & Elicitation Skills
 
@@ -272,7 +291,7 @@ For MORE QUESTIONS, you can switch-on your **[product](https://jalcocert.github.
 <!-- ![Cat product Meme](/blog_img/memes/features-vs-needs.png) -->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq" title="Product MindSet" image="/blog_img/memes/features-vs-needs.png" subtitle="Questions to Define Products" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/#faq" title="Product MindSet" image="/blog_img/memes/features-vs-needs.png" subtitle="Questions to Define Products from DA / BI / Dsc / Consultant angles" >}}
 {{< /cards >}}
 
 
@@ -474,7 +493,6 @@ I like this way of summarizing whats required from others (useful for JIRA stori
 ## FAQ
 
 ### D&A Use Case
-
 
 {{< details title="Milk Factory | Sample Concept 📌" closed="true" >}}
 

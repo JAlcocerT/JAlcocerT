@@ -54,6 +54,11 @@ Linktree does things very well, yet cant compete with:
 1. Domain 1sty free with CC required (This is a potentialy CAC)
 2. abcd
 
+## Interesting Concepts
+
+1. CYA was always a thing. But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level.
+2. Its 2025 and now everyones says that it wants AI / [AI|BI](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) / AIOps / whatever. When it really needs [good'old ML](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/)
+
 ## Processes
 
 From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/#next-year)...
