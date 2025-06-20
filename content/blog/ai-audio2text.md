@@ -9,20 +9,15 @@ url: 'audio-to-text-tools'
 
 An overview to the existing open source alternatives for audio to text conversion (also called Speech to Text).
 
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/local-ai-audio" title="Local AI Audio 101 ↗ " >}}
-{{< /cards >}}
-
-
-
-[![Star History Chart](https://api.star-history.com/svg?repos=openai/whisper,SevaSk/ecoute,oTranscribe/oTranscribe,beyondcode/writeout.ai,pluja/whishper&,type=Date)](https://star-history.com/openai/whisper&SevaSk/ecoute&oTranscribe/oTranscribe&beyondcode/writeout.ai&pluja/whishper&Date)
+But first: how to [create a PoC](#the-speech-rater) to help people get better at public speaking.
 
 ## The Speech Rater
 
 How about using streamlit to input and output audio?
 
 Well, plugging LLMs to that is kind of easy:
+
+![Speech Rater PoC Streamlit](/blog_img/GenAI/audio/speechraiter.png)
 
 {{< cards >}}
   {{< card link="#conclusions" title="OpenAI TTS and Transcription Project" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter" >}}
@@ -51,8 +46,15 @@ Well, plugging LLMs to that is kind of easy:
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
+It was all about getting the [streamlit audio part right](#streamlit-audio).
 
-
+```mermaid
+graph TD
+    A[User records Audio] --> B(Streamlit receives Audio);
+    B --> C{OpenAI Transcription};
+    C --> D[Transcription Inputs to LLM];
+    D --> E[Text-to-Speech (T2S)];
+```
 
 ## S2T
 
@@ -258,19 +260,16 @@ Time to do [cool things](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/m
 Like...putting together a voice assistant with Streamlit:
 
 
-![alt text](/blog_img/GenAI/audio/speechraiter.png)
+![SpeechRater](/blog_img/GenAI/audio/speechraiter.png)
 
 {{< cards cols="1" >}}
   {{< card link="https://docs.streamlit.io/develop/api-reference/media/st.audio" title="ST Audio Component DOCS ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps/Python_Streamlit" title="Python Streamlit App Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-For TTS, lately OpenAI have made interesting upgrades: https://platform.openai.com/docs/models/gpt-4o-mini-tts
-
+For TTS, lately OpenAI have made interesting upgrades, with [4o-mini](https://platform.openai.com/docs/models/gpt-4o-mini-tts).
 
 * Voice Synthesis: TTS systems use various techniques to create synthetic voices. Early systems used concatenative synthesis (piecing together recorded human speech), while modern systems often use more advanced techniques like statistical parametric synthesis and neural network-based synthesis, which can produce more natural-sounding speech.   
-
-
 
 ### Streamlit Audio
 
@@ -278,16 +277,13 @@ With the `st.audio_input` component, a lot of cool stuff can be done: https://do
 
 See `st.audio_input` - https://docs.streamlit.io/develop/api-reference/widgets/st.audio_input
 
-Thanks to benji youtube video: https://www.youtube.com/watch?v=UnjaSkrfWOs
+**Thanks to Benji** youtube video: https://www.youtube.com/watch?v=UnjaSkrfWOs
 
 {{< youtube "UnjaSkrfWOs" >}}
-
 
 I have added a sample working script at the [MultiChat project](https://github.com/JAlcocerT/Streamlit-MultiChat), here: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/audio-input.py
 
 See also [another way to do T2S](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openait2a.py) with openAI: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/openai-tts.py
-
-
 
 ### More Audio Generation
 
@@ -331,6 +327,4 @@ chmod +x cygwin_cibuildwheel_build.sh
 
 > Zonos-v0.1 is a leading **open-weight text-to-speech** model trained on more than 200k hours of varied multilingual speech, delivering expressiveness and quality on par with—or even surpassing—top TTS providers.
 
-
-
-Found out about it at https://noted.lol/zonos/
+> > Found out about it at https://noted.lol/zonos/

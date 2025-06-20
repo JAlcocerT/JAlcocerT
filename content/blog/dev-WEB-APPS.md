@@ -2,7 +2,7 @@
 title: "Web Apps with Python Explained"
 date: 2025-06-20T10:20:21+01:00
 draft: false
-tags: ["Dev","Python","WebApps"]
+tags: ["Dev","Python","WebApps","Authentication","LogTo","Traefik"]
 description: 'My favourite ways to build WebApps with Python. From Streamlit and PyGWalker to Reflex.'
 url: 'web-apps-with-python'
 ---
@@ -583,9 +583,9 @@ This setup enables you to **quickly create interactive web apps using Python**, 
 
 ##### PyGWalker x Streamlit
 
-While working on some PoCs where a quick demo of the data model is required, you can use Pygwalker via jhub or with Streamlit.
+While working on some PoCs where a quick demo of the data model is required, you can use **Pygwalker via jhub or with Streamlit**.
 
-This can be helpful before full [AI/BI solutions](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) are getting build and get stakeholders expectations in line.
+This can be helpful before full [AI/BI solutions](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) are getting build and get stakeholders expectations in line during early development phases.
 
 {{< details title="PyGWalker | Turn your pandas dataframe into an interactive UI for visual analysis 📌" closed="true" >}}
 
@@ -669,11 +669,11 @@ else:
 
 {{< /details >}}
 
-I really enjoy using **PyGWalker together with Streamlit**!
+> I really enjoy using **PyGWalker together with Streamlit**!
 
 ##### Geolocation Data
 
-> In case you have [geolocation data](https://jalcocert.github.io/JAlcocerT/geospatial-data/), you can use it in combination with folium (and streamlit_folium) maps!
+> In case you have [geolocation data](https://jalcocert.github.io/JAlcocerT/geospatial-data/), you can use PyGWalker in combination with folium (and streamlit_folium) maps!
 
 And there is more...
 
@@ -736,8 +736,16 @@ npm i --save @kanaries/graphic-walker
 {{< /details >}}
 
 
+Ive been tinkering with [flet here](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/Video_App_Flet)
+
+## Web Apps Auth
+
+So far, these should work with any of the python web app frameworks.
+
+### LogTo
 
 
+### Traefik x Middleware
 
 ---
 
@@ -795,6 +803,7 @@ Here's a breakdown of some of the most popular options:
     * It's relatively easy to learn and is included with most Python installations, making it a good choice for beginners.
     * However, its appearance can be somewhat dated.
     * Good for simple applications.
+    * Ive tinkered with it [here](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/VideoApp_tkinter)
 
 
 {{< cards >}}

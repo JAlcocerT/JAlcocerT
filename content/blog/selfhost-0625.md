@@ -134,6 +134,7 @@ https://www.youtube.com/watch?v=c3XMAz--_Us
 You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/)
 
 
+![Qbittorrent](/blog_img/selfh/media/qbit.png)
 
 ### In Home Tools
 

@@ -113,7 +113,7 @@ See it yourself: https://www.gitpodcast.com/streamlit/streamlit
 After tinkering with project docs automatic creation, I found this.
 
 
-![alt text](/blog_img/GenAI/aidocs/code2prompt.png)
+![Code 2 Prompt](/blog_img/GenAI/aidocs/code2prompt.png)
 
 
 * https://github.com/mufeedvh/code2prompt/
@@ -176,9 +176,11 @@ The tool helps streamline LLM prompt creation, enhancing productivity for develo
 
 Its great, yet overwhelming the amount of new SelfHosting Projects that are out there and that are coming.
 
-Would there be a way to automate the test deployment of such software?
+**Would there be a way** to automate the test and deployment of such software via containers?
 
 Or should our selfhoster backlog *to be tried* list to keep growing?
+
+> Why are you doing this though?
 
 **The idea**
 

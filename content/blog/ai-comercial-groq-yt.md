@@ -627,6 +627,11 @@ chain.invoke(
 ```
 {{< /dropdown >}}
 
+#### Other Interesting Projects with Groq
+
+* https://github.com/JAlcocerT/groq_streamlit_demo
+* https://github.com/JAlcocerT/Streamlit-Rag-Groq
+
 
 
 ### Ways to Secure a Streamlit App

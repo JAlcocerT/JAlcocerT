@@ -227,3 +227,7 @@ Its "batteries-included" approach, security features, and scalability make it a 
 4. See also the [Sympy](https://pypi.org/project/sympy/) Python library for symbolic mathematics
 
 > Matlab had a similar feature, which I used on [this thesis](https://github.com/JAlcocerT/Bike_dynamic_simulator)
+
+5. https://github.com/3b1b/manim, https://github.com/3b1b/videos?tab=readme-ov-file#workflow and https://github.com/ManimCommunity/manim/
+
+> Math Animation engine for explanatory math videos. The ones [3Blue1Brown Channel created](https://www.youtube.com/watch?v=rbu7Zu5X1zI)!

@@ -244,3 +244,7 @@ Stopped checking at 2024-10-19 07:34:09+000 (12 seconds)
 Create a WF with 3 jobs: build, test (Linkcheck here, informative), deploy. Like this one with HUGO.
 
 {{% /details %}}
+
+### Whatsapp Bubble
+
+As simple as: https://api.whatsapp.com/send?phone=34123456789

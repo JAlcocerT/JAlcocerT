@@ -167,16 +167,38 @@ https://imfing.github.io/hextra/docs/guide/shortcodes/filetree/
 These are the main files and **structure of a Reflex Project**:
 
 {{< filetree/container >}}
-  {{< filetree/folder name="content" >}}
-    {{< filetree/file name="_index.md" >}}
-    {{< filetree/folder name="docs" state="closed" >}}
-      {{< filetree/file name="_index.md" >}}
-      {{< filetree/file name="introduction.md" >}}
-      {{< filetree/file name="introduction.fr.md" >}}
+  {{< filetree/file name="rxconfig.py" >}}  
+  {{< filetree/file name="your_app_name.py" >}} 
+  {{< filetree/folder name="assets" >}} 
+    {{< filetree/file name="style.css" >}}
+    {{< filetree/file name="logo.png" >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name=".web" state="closed" >}}
+    {{< filetree/file name="package.json" >}}
+    {{< filetree/folder name="node_modules" state="closed" >}}
+      {{< filetree/file name="..." >}}
+    {{< /filetree/folder >}}
+    {{< filetree/folder name=".next" state="closed" >}}
+      {{< filetree/file name="..." >}}
     {{< /filetree/folder >}}
   {{< /filetree/folder >}}
-  {{< filetree/file name="hugo.toml" >}}
+  {{< filetree/file name=".gitignore" >}}
+  {{< filetree/file name="requirements.txt" >}}
 {{< /filetree/container >}}
+
+**Explanation of the Reflex File Structure:**
+
+* **`rxconfig.py`**: This is the configuration file for your Reflex application. It defines the app's name, backend/frontend ports, and other global settings. Every Reflex project has one.
+* **`your_app_name.py`**: This is where the main Python code for your Reflex application resides. It defines your states, components, event handlers, and the `rx.App` instance. You might have multiple `.py` files if your app is larger.
+* **`assets/` (folder)**: This is an optional folder where you can place static assets like custom CSS files, images, fonts, or other files that your frontend needs directly. Reflex copies these to the `public` directory during the build process.
+    * `style.css`: An example CSS file.
+    * `logo.png`: An example image file.
+* **`.web/` (folder - usually hidden/ignored)**: This directory is created by Reflex during the build process. It contains the generated Next.js frontend code. You typically **do not interact with this folder directly** and should add it to your `.gitignore`.
+    * `package.json`: Frontend dependencies.
+    * `node_modules/`: Node.js packages used by the frontend.
+    * `.next/`: Next.js build output.
+* **`.gitignore`**: Essential for version control, specifying files and directories (like `.web/`, `__pycache__/`, `.venv/`) that Git should ignore.
+* **`requirements.txt`**: A standard Python file listing your project's dependencies, including `reflex` itself, and any other Python libraries your backend code might use.
 
 If you inspect, this is how the reflex `main.py` looks:
 

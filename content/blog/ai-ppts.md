@@ -2,7 +2,7 @@
 title: "How to create awsome Presentations with [AI] SlidevJS x Claper"
 date: 2025-01-02
 draft: false
-tags: ["AI"]
+tags: ["Gen-AI","PPTx","Windsurf","LLMs"]
 description: 'AI Driven Presentations - PPT as code with SliDev, MarpJS, RemarkJS. Diagrams and ULM.'
 url: 'creating-presentations-with-ai'
 ---
@@ -16,7 +16,7 @@ But the **AI powered PPT creator** deserves a separate post.
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service" title="AI Driven PPTs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="AIssistant to create Presentations powered by LLMs" >}}
 {{< /cards >}}
 
-Lets use LLMs to create PPTs!
+> Lets use AI/LLMs to create PPTs!
 
 
 ## Understanding PPT as a Code Frameworks
@@ -290,12 +290,15 @@ PlantUML is a very useful tool, especially for those working in software develop
 In essence, PlantUML simplifies the creation of diagrams by using a text-based approach, and being open source, it is a very valuable tool.
 
 
-
-
 ### AI Powered SliDev
+
+There are a couple of options...
+
+#### With OpenAI Calls
 
 First **SliDev with AI scheleton**, pretty much an [OpenAI API call](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/PPT_Service).
 
+And its not only about text, you can also prompt images that fits what you want to communicate.
 
 {{< details title="OpenAI API + SliDev - Cool AI Created PPT as a Code 📌" closed="true" >}}
 
@@ -416,6 +419,10 @@ print(completed_message)
 > With this approach you can have the prompts saved at `./Z_AIgents/Prompts/prompts_mdsummarizer.md`
 
 {{< /details >}}
+
+#### With Agentic IDEs like Windsurf
+
+> **EDIT**: Coming from the future - With Windsurf IDE or codex, why not getting ppts as per your codebase?
 
 
 ---

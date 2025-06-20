@@ -2,7 +2,7 @@
 title: "Architecture D&A like a Pro"
 date: 2025-04-18T00:20:21+01:00
 draft: false
-tags: ["Career", "D&A", "Analytics"]
+tags: ["Career", "D&A", "Analytics","SliDev","PPTs"]
 description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
 url: 'data-analytics-architecture'
 ---
@@ -212,6 +212,12 @@ There is no good meeting without a **proper MoM notes and clear action points**.
 
 As a D&A Architect, you will also [prototype and create mockups](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-mockups-and-wireframes)
 
+And as *obvious* as it might seem, I still heard project managers asking to developers about ETA's instead of task duration.
+
+{{< callout type="info" >}}
+Be Smart: **ETA** is a function of task duration + Priorities!
+{{< /callout >}}
+
 
 #### Decision Making
 
@@ -267,6 +273,13 @@ To increase the likelihood of a successfully project delivery, having everyone i
 | **Project Estimation** | "How much time and resources will this project require?"          | **Project Manager**, Development Team, QA Team, Design Team      |
 | **RACI Matrix** | "Who is responsible for what specific task/decision?"              | **Project Manager** (with team leads and key stakeholders)     |
 
+##### PPTs
+
+After a successful project, people will want to promote it.
+
+Be ready to create cool presentations.
+
+Remember that nobody is stopping you from using AI to create ppts!
 
 ### BA & Elicitation Skills
 
@@ -719,7 +732,7 @@ I would recommend you to have a look to:
 
 * You can also render [mermaidJS](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_mermaid_v2c.py) and [plotly graphs](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_plotly_v1b.py) with your [aissistant, via streamlit webapp](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main)
 
-* I was recently impressed also by ChartJS
+* I was recently impressed also by ChartJS / ApexChart
 
 >  Virtual whiteboard for sketching hand-drawn like diagrams 
 
