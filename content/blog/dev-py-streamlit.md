@@ -118,6 +118,5 @@ https://www.youtube.com/watch?v=6AoSBpZqsRo
 
 ### Level Up Streamlit
 
-#### Adding Authelia Authentification
-
-#### Monitoring Streamlit Logs
+1. Adding Authelia Authentification
+2. Monitoring Streamlit Logs

@@ -22,11 +22,19 @@ I think it should be in between Streamlit and Flask in terms of UI and developme
 pip install reflex
 reflex init #https://reflex.dev/docs/api-reference/cli/
 reflex run
+#reflex run --backend-port 8001 --frontend-port 3001
 
 python3 -m pip list | grep -i reflex
 ```
 
 > Make sure that Ports 3000 FE and 8000 BE (portainer) are available!
+
+You can also reach it via you home devices:
+
+```sh
+ip a show wlp3s0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1 #192.168.1.8:3001
+#sudo ufw allow 3001/tcp
+```
 
 Why not just building something simple to try out?
 
@@ -417,7 +425,7 @@ For this one, id like to have a very simple graph for the seasonality of jobs an
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/videos/job_offers.png" subtitle="Post where I tinkered with scrapping tools and job offers" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/blog_img/memes/oldnewjob.png" subtitle="Post where I tinkered with scrapping tools and job offers" >}}
   {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for using BS4, AI Scraps..." >}}
 {{< /cards >}}
 

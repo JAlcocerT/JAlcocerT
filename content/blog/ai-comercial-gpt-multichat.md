@@ -6,7 +6,7 @@ cover:
   image: "https://socialify.git.ci/JAlcocerT/Streamlit-MultiChat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
   alt: "ChatGPT Clone" # alt text
   caption: "Build a ChatGPT Clone with Streamlit." # display caption under cover
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Gen-AI","Python","Dev","SliDev"]
 description: 'More than a ChatGPT Clone with Streamlit. Creating the Streamlit-MultiChat Project. Supporting multiple LLMs: Ollama, Anthropic, Groq...'
 url: 'create-streamlit-chatgpt'
 ---

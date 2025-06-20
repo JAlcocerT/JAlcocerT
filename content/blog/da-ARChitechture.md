@@ -277,11 +277,15 @@ To increase the likelihood of a successfully project delivery, having everyone i
 
 After a successful project, people will want to promote it.
 
-Be ready to create cool presentations.
+Be ready to **create cool presentations.**
 
 Remember that nobody is stopping you from using AI to create ppts!
 
-### BA & Elicitation Skills
+> I covered SliDev [here](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev), which I got to know [here](https://fossengineer.com/how-to-use-slidev/) and forked [here](https://github.com/JAlcocerT/slidev)
+
+With Streamlit we can instruct the LLM to build those markdowns for Slidev. Now, even by vibe coding.
+
+### BA & Elicitation
 
 To tell better stories with data, you have to [ask the right questions](https://jalcocert.github.io/JAlcocerT/business-analytics-concepts/#business-analysis-key-questions):
 

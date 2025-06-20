@@ -2,7 +2,7 @@
 title: "Streamlit Updates. Assistant"
 date: 2025-04-12
 draft: false
-tags: ["dev"]
+tags: ["Dev","Entrepreneur"]
 description: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT) Generator, Speech Rater...'
 url: 'ai-assistant-streamlit'
 ---
@@ -156,8 +156,9 @@ with st.expander("Run Custom SQL Query"):
 
 ### Presentation GenerAItor
 
-8 https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/
+Puting [SliDevJS PPTs](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/) together?
 
+Nooot a problem!
 
 ### Speech RAIter
 
@@ -177,10 +178,11 @@ Or interpreted audio.
 * https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/
 * https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web
 
-> Have you ever thought that...
+Have you ever thought that...?
 
 ![Old vs New Job](/blog_img/memes/oldnewjob.jpg)
 
+Well...
 
 ### Diagram GenerAItor
 
@@ -196,10 +198,14 @@ Because there is too much information (and noise) out there:
 ![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png)
 
 
-/blog_img/GenAI/yt-summaries/yt-summaries-groq_example.png
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="The YT Groq Summarizer Post" image="/blog_img/GenAI/yt-summaries/yt-summaries-groq_example.png" subtitle="But still there is some signal in between the noise" >}}
+{{< /cards >}}
+
+<!-- 
 ![Groq Youtube Summaries Example](/blog_img/GenAI/yt-summaries/yt-summaries-groq_example.png)
-
+ -->
 
 ### Youtube Script CreAItor
 

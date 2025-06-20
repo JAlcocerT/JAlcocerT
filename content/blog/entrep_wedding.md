@@ -1,8 +1,8 @@
 ---
-title: "Just shipping."
+title: "Just shipping"
 date: 2025-06-04T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Cloud"]
+tags: ["Entrepreneuring","Cloud","QR","Web"]
 description: 'Wedding stuff. Aka 200, you mean 4k?'
 url: 'wedding-photo-galleries'
 ---

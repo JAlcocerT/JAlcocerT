@@ -2,7 +2,7 @@
 title: "My Favourite ways to RAG"
 date: 2025-04-10T10:20:21+01:00
 draft: false
-tags: ["Dev","Python"]
+tags: ["Dev","Python","LLMs","GenAI"]
 description: 'RAG Applications. From LangChain, LLamaIndex... to MLFlow observability container setup.'
 url: 'comparing-rag-and-use-cases'
 ---
