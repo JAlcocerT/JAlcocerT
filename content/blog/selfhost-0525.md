@@ -748,6 +748,11 @@ expect -timeout 20 "*Initialize a new git repository?*" {
 expect eof
 ```
 
+<!-- https://www.youtube.com/watch?v=e_l6HJISIrs&feature=youtu.be -->
+
+{{< youtube "e_l6HJISIrs" >}}
+
+
 I also added the following fllow ups:
 
 * Write the files

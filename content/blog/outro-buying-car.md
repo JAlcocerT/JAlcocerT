@@ -2,7 +2,7 @@
 title: "Buying a Car being in Data Analytics"
 date: 2021-10-03T23:20:21+01:00
 draft: false
-tags: ["Outro"]
+tags: ["Outro","Mechanics"]
 description: 'What to keep in mind, what NOT to do...When buying a second hand car. The data behind a Honda Civic 6.'
 url: 'buying-car-data-analytics'
 ---
