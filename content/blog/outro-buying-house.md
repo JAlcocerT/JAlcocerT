@@ -65,6 +65,8 @@ You can find sample house plans at:
 
 Those are **gross yields**, remember that there are many costs, amortizations,... related that you will have to plug for your specific case.
 
+> See [home decorating](https://www.reddit.com/r/HomeDecorating/top/) ideas
+
 Lets say that it cost **~65eur afor 15kg of paint.**
 
 With that one, you can paint ~100m2.

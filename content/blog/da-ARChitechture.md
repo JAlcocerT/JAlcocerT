@@ -283,6 +283,11 @@ Remember that nobody is stopping you from using AI to create ppts!
 
 > I covered SliDev [here](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev), which I got to know [here](https://fossengineer.com/how-to-use-slidev/) and forked [here](https://github.com/JAlcocerT/slidev)
 
+To get confortable with SliDev, you can try:
+
+* https://sli.dev/features/vscode-extension
+* https://sli.dev/resources/theme-gallery
+
 With Streamlit we can instruct the LLM to build those markdowns for Slidev. Now, even by vibe coding.
 
 ### BA & Elicitation

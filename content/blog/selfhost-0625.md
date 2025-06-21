@@ -1,8 +1,8 @@
 ---
-title: "SelfHosting - 1st Half 2025 June "
+title: "SelfHosting - 1st Half 2025 "
 date: 2025-06-01T01:20:21+01:00
 draft: false
-tags: ["HomeLab","Authentication"]
+tags: ["HomeLab","Authentication","P2P"]
 description: 'Programatic Https for all services and docker stacks'
 url: 'selfhosted-apps-06-2025'
 ---
@@ -41,7 +41,7 @@ It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcoc
 
 Getting Better at [sync file tools](https://jalcocert.github.io/JAlcocerT/sync-file-tools/)
 
-All thanks to getting Traefik to work programatically!
+All thanks to getting Traefik (traefik:v3.3) to work programatically!
 
 So I just needed to get the domain DNS records accordingly:
 
@@ -74,6 +74,9 @@ To this
 > remember to use the [Android](https://play.google.com/store/apps/details?id=com.nextcloud.client&pli=1) or iOS app
 
 https://jalcocert.github.io/JAlcocerT/sync-file-tools/#webdavs
+
+![alt text](/blog_img/selfh/media/nc-dav-otherlocations.png)
+
 https://docs.nextcloud.com/server/31/user_manual/en/files/access_webdav.html
 
 ```txt
@@ -101,6 +104,10 @@ nload wlp3s0
 ```
 
 > Got a transfer speed of , compared to the ~60MB/s avg to ProtonDrive
+
+You can now enable other devices or create accounts for your friends/family:
+
+![nextcloud settings](/blog_img/selfh/media/nc-settings-sec.png)
 
 #### Third Party Cloud NC Backup
 
@@ -133,12 +140,49 @@ https://www.youtube.com/watch?v=c3XMAz--_Us
 
 You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/)
 
+https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/
 
 ![Qbittorrent](/blog_img/selfh/media/qbit.png)
+
+![Qbit Login](/blog_img/selfh/media/qbit-admin.png)
 
 ### In Home Tools
 
 1. Reubah
 2. IT/Toos + OmniTools
 
-...
+---
+
+## Conclusions
+
+Filebrowser dev has been abandoned and for me it was still a thing to combine it with PiGallery2.
+
+---
+
+## FAQ
+
+### HomeLab Commands
+
+Whats taking that much space?
+
+```sh
+#sudo du -ahx / | sort -rh | head -n 50
+sudo du -ahx . | sort -rh | head -n 50 #from current folder and below
+```
+
+I want to clean old container stuff
+
+```sh
+docker builder prune
+#docker system prune -a
+docker volume prune
+docker image prune -a
+```
+
+### SelfHosting Python Web Apps
+
+Lately I have also been [tinkering with Python Web Apps](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/)
+
+So I have updated the docker-compose and Dockerfiles at:
+
+https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps

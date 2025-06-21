@@ -2,13 +2,14 @@
 title: "Some JS to make Cooler Webs"
 date: 2025-01-12T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","React","Web","Astro"]
 summary: "Javascript Frameworks I find amazing to make nice UI/X for Websites"
 url: 'javascript-for-static-websites'
 ---
 
 Ive learnt all of this **about JS** thanks to tinkering with the [Astro](https://jalcocert.github.io/JAlcocerT/create-your-website/#what-ive-learnt-about-astro) and [NextJS](https://fossengineer.com/nextjs-ssg/) web frameworks.
 
+## JS 101
 
 {{< callout type="info" >}}
 See more at https://github.com/sorrycc/awesome-javascript

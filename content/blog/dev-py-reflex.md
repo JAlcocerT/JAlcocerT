@@ -1,15 +1,17 @@
 ---
-title: "Reflex. Cooler Web Apps?"
+title: "Reflex. Cooler Web Apps for Leads?"
 date: 2025-06-16T10:20:21+01:00
 draft: false
-tags: ["Dev","WebApps"]
+tags: ["Dev","WebApps","Plotly","Authentication","entrepreneuring"]
 description: 'Using (Python) Reflex framework to display Data. Tested with Real Estate and Job Market Trends as Web Apps.'
 url: 'tinkering-with-reflex'
 ---
 
 Reflex is another way to create [WebApps with Python](https://reflex.dev/blog/2024-12-20-python-comparison/).
 
-I think it should be in between Streamlit and Flask in terms of UI and development complexity:
+It is based on **[React](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#react)** and Chakra UI for the frontend, and FastAPI and SQLAlchemy for the backend.
+
+I think Reflex (exPicone), should be in between Streamlit and Flask in terms of UI and development complexity:
 
 * https://reflex.dev/templates/dashboard/
 * https://github.com/reflex-dev/reflex/releases
@@ -21,13 +23,32 @@ I think it should be in between Streamlit and Flask in terms of UI and developme
 ```sh
 pip install reflex
 reflex init #https://reflex.dev/docs/api-reference/cli/
+
+#sudo docker stop portainer
 reflex run
 #reflex run --backend-port 8001 --frontend-port 3001
 
 python3 -m pip list | grep -i reflex
 ```
 
-> Make sure that Ports 3000 FE and 8000 BE (portainer) are available!
+![Reflex run](/blog_img/apps/reflex/reflex-init.png)
+
+Make sure that Ports 3000 FE and 8000 BE (portainer) are available!
+
+Or just adapt the `rxconfig.py`:
+
+```py
+#rxconfig.py
+
+import reflex as rx
+
+config = rx.Config(
+    app_name="Py_Reflex",
+    frontend_port=3001,
+    backend_port=8005,
+    backend_host=8006
+)
+```
 
 You can also reach it via you home devices:
 
@@ -404,11 +425,11 @@ I could not resist to make this form: https://github.com/JAlcocerT/reflex-templa
 
 And enjoy using this sample apps out of the box:
 
-1. `./dashboard`
+1. `./stock_market_dashboard`
 
 ![Reflex dashboard sample](/blog_img/apps/reflex/reflex-stocks-sample.png)
 
-2. `./stock_market_dashboard`
+2. `./stock_graph_app`
 
 ![Reflex Stocks Sample](/blog_img/apps/reflex/reflex-stocks-sample2.png)
 
@@ -568,17 +589,18 @@ You could also bring to the equation the inflation factor to your reflex app:
 
 For Streamlit I got to know this very [simple hardcoded user/pwd authentication](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py).
 
-Which I developed for [the Aissistant here](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Auth_Ways) and explained at this post of [features under a wall](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#features-under-a-wall)
-
 ![Simple Streamlit Auth](/blog_img/apps/streamlit/ST_AuthFunction.png)
 
+That was not the only way, as seen with [the AIssistant here](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Auth_Ways) and explained at this post of [features under a wall](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#features-under-a-wall):
 
+1. Mailerlite: handles email verification
+2. Google Sheets *filled via FormBricks*, no email verif
 
-Is it possible to have something similar to that with Reflex?
+> Is it possible to have something similar to that with Reflex?
 
 It seems that Reflex supports [few authentication methods](https://reflex.dev/docs/authentication/authentication-overview/):
 
-* [Captcha](https://github.com/masenf/reflex-google-recaptcha-v2) as seen [here](https://jalcocert.github.io/JAlcocerT/encryption-101/#pow-captcha), there are alternatives
+if you need a [Captcha](https://github.com/masenf/reflex-google-recaptcha-v2) as seen [here](https://jalcocert.github.io/JAlcocerT/encryption-101/#pow-captcha), there are alternatives!
 
 
 ### Reflex x Mailerlite
@@ -599,8 +621,14 @@ Recently I got [Traefik https](https://fossengineer.com/selfhosting-traefik/) to
 
 ### Reflex x Stripe
 
+Aka a Paywall.
+
+Which resonates with SaaS.
+
 
 ## Deploy Reflex
+
+Remember, this is the trick to use reflex with any port:
 
 ```sh
 reflex run --backend-port 8001 --frontend-port 3001
@@ -616,10 +644,136 @@ That makes it easier to iterate.
 
 But definitely, Reflex apps can look really cool, **also on smartphones**!
 
+### My favourite Reflex Components
+
+
+1. If you enjoy **Plotly** as much as I do, you are lucky. See this beautiful [treemap](https://plotly.com/python/treemaps/) which I tinkered with with the [stock graph app template](https://github.com/JAlcocerT/reflex-templates/tree/main/stock_graph_app)
+
+![Plotly Treemap withing reflex](/blog_img/apps/reflex/reflex-plotly.png)
+
+Or the [Stacked area chart](https://plotly.com/python/filled-area-plots/):
+
+![Plotly Stack area chart](/blog_img/apps/reflex/reflex-plotly-stacked-area.png)
+
+2. There are few ways to bring tables into your apps 
+
+### Understanding Reflex with Windsurf
+
+Vibe coding has helped me a lot understanding Reflex app.
+
+I have asked to:
+
+```
+Can you now create a doc.md explaining how the app works?
+
+Im interested to have Python modules used, how the UDFs are used, what external dependencies there are... 
+```
+
+And improved my UDF creation with:
+
+```
+could you see in the folder Z_UDF and udf-gsheet.py and create the logic that given a gsheets url, it will pull its data?
+
+and then a second function, that will let us choose which columns we want to filter on the pulled data and optionally how many rows (by default will be all of them)
+
+Add also a proper description when defining those functions
+```
+
+### Ideas with Reflex
+
+1. Combine it with some of the authentication ways seen and create a **waiting list / lead magnet**.
+
+I got the idea as soon as I saw:
+
+![Reflex Newsletter Sample](/blog_img/apps/reflex/reflex-newsletter-sample.png)
+
+
+{{< details title="Sample from Reflex Official Site 📌" closed="true" >}}
+
+
+```py
+import reflex as rx
+
+class FormState(rx.State):
+
+    @rx.event
+    def submit(self, form_data):
+        return rx.toast(form_data)
+
+def form() -> rx.Component:
+    return rx.card(
+        rx.form(
+            rx.hstack(
+                rx.image(src="/envelope.png"),
+                rx.vstack(
+                    rx.heading("Join Newsletter"),
+                    rx.text(
+                        "Get the latest updates and news about Reflex.",
+                    ),
+                ),
+            ),
+            rx.vstack(
+                rx.text(
+                    "Name ",
+                    rx.text.span("*", color="red"),
+                ),
+                rx.input(
+                    name="name",
+                    required=True,
+                ),
+            ),
+            rx.vstack(
+                rx.text(
+                    "Email ",
+                    rx.text.span("*", color="red"),
+                ),
+                rx.input(
+                    name="email",
+                    type="email",
+                    required=True,
+                ),
+            ),
+            rx.vstack(
+                rx.text("Message"),
+                rx.textarea(
+                    name="message",
+                ),
+            ),
+            rx.button("Send", type="submit"),
+            on_submit=FormState.submit,
+        )
+    )
+```
+
+
+{{< /details >}}
+
+
 ---
 
 ## FAQ
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/DebtBlackBox" title="Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Testing Reflex vs other Python Web Apps | Sample Project" >}}
+{{< /cards >}}
+
+**When to Use Which:**
+
+* **Use Django:**
+    * When building complex web applications with user authentication, database management, and API development.
+    * For large-scale projects requiring robustness and scalability.
+    * For projects that need a traditional web application structure.
+* **Use Dash, Shiny, Streamlit, or Reflex:**
+    * When creating interactive data visualizations and dashboards.
+    * For rapid prototyping and sharing data science projects.
+    * When you need to quickly build web applications with Python or R.
+    * When your primary goal is to display and interact with data.
+    * When you do not need complex user management.
+
+**In essence:**
+
+* Django is a general-purpose web framework.
+* Dash, Shiny, Streamlit, and Reflex are specialized tools for building interactive data applications.
 
 {{< details title="There is a good range of Python web Apps frameworks... 📌" closed="true" >}}
 
@@ -633,7 +787,7 @@ But definitely, Reflex apps can look really cool, **also on smartphones**!
 
 **2. Flet:**
 
-* **Focus:** Creating cross-platform desktop and web applications using Flutter (Google's UI toolkit).
+* **Focus:** Creating **cross-platform** desktop and web applications using Flutter (Google's UI toolkit).
 * **Technology:** Python backend with a Flutter frontend.  This enables native-like performance on desktop and a good web experience.
 * **Strengths:**  Fast development for both desktop and web from a single codebase.  Good performance and a modern UI.  Relatively easy to learn.
 * **Weaknesses:**  While it handles web, its primary strength is cross-platform desktop development.  The UI might not feel *completely* native on the web compared to frameworks specifically designed for the web.
@@ -673,8 +827,6 @@ But definitely, Reflex apps can look really cool, **also on smartphones**!
 * **Streamlit:** If you're building a **data-driven web app** or dashboard quickly and easily, especially for data science projects.
 * **PySimpleGUI:** If you need to create a simple desktop utility or tool with a basic UI.
 * **NiceGUI:** If you want to create a simple web UI quickly and easily, with a focus on data visualization and interactivity.
-
-
 
 {{< details title="Popular Full-Stack... Tech Stacks 📌" closed="true" >}}
 
@@ -795,7 +947,6 @@ Here are some of the most common and popular options:
 * While not a full front end framework, Tailwind CSS is very popular with django projects. It is a utility first CSS framework, that allows for very rapid UI development.
 * It can be combined with any of the above, and is most often used with Django's built in templating, or with Vue.js.
 
-
 {{< /details >}}
 
 **Key Considerations:**
@@ -849,23 +1000,3 @@ Yes, you can achieve similar outcomes with Dash, Shiny, Streamlit, and Reflex as
     * Good for creating interactive web apps, with a focus on ease of use.
     * Less mature than Django.
     * Good for python first web apps.
-
-**When to Use Which:**
-
-* **Use Django:**
-    * When building complex web applications with user authentication, database management, and API development.
-    * For large-scale projects requiring robustness and scalability.
-    * For projects that need a traditional web application structure.
-* **Use Dash, Shiny, Streamlit, or Reflex:**
-    * When creating interactive data visualizations and dashboards.
-    * For rapid prototyping and sharing data science projects.
-    * When you need to quickly build web applications with Python or R.
-    * When your primary goal is to display and interact with data.
-    * When you do not need complex user management.
-
-**In essence:**
-
-* Django is a general-purpose web framework.
-* Dash, Shiny, Streamlit, and Reflex are specialized tools for building interactive data applications.
-
-Therefore, while you can create web applications with all of them, the best choice depends on your specific project requirements.

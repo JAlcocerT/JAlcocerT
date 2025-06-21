@@ -246,6 +246,8 @@ We are able to switch tool kits, or to add more, so that the agent can choose wh
 
 {{< /details >}}
 
+You can see that there are things going on: https://github.com/openai/openai-agents-python/blob/main/examples/mcp/filesystem_example/main.py
+
 Every MCP server is going to be treated as a **toolbox**...
 
 ```mermaid

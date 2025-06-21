@@ -766,6 +766,8 @@ For example https://context7.com/streamlit/docs, to provide proper context while
 
 * **PySimpleGUI:** If you need to create a simple desktop utility or tool with a basic UI.
 * **NiceGUI:** If you want to create a simple web UI quickly and easily, with a focus on data visualization and interactivity.
+    * Example:  A simple, markdown-based note-taking application written in python and built with NiceGUI https://github.com/davistdaniel/kurup
+        * All notes are stored locally in plain-text, no database required.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=pallets/flask,django/django,tiangolo/fastapi,tornadoweb/tornado,bottlepy/bottle,cherrypy/cherrypy,sanic-org/sanic,Pylons/pyramid,falconry/falcon,hugapi/hug,pgjones/quart,streamlit/streamlit,flet-dev/flet,reflex-dev/reflex&type=Date)](https://star-history.com/#pallets/flask&django/django&tiangolo/fastapi&tornadoweb/tornado&bottlepy/bottle&cherrypy/cherrypy&sanic-org/sanic&Pylons/pyramid&falconry/falcon&hugapi/hug&pgjones/quart&streamlit/streamlit&flet-dev/flet&reflex-dev/reflex&Date)
 
