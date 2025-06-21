@@ -1,6 +1,6 @@
 ---
 title: "A new webpage"
-date: 2025-05-31T18:20:21+01:00
+date: 2025-06-21T18:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
@@ -40,6 +40,11 @@ git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/jalcocertech.git
 ```
 
 ## Conclusions
+
+### Features I liked
+
+1. The moving [navbar](https://github.com/JAlcocerT/DataNova/blob/main/src/components/sections/Navbar.astro) as you move around the web
+2. The [Diagram.astro](https://github.com/JAlcocerT/DataNova/blob/main/src/components/common/Diagram.astro) component
 
 ### Deploying
 

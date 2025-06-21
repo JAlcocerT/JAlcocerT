@@ -1,8 +1,8 @@
 ---
 title: "SelfHosting - 1st Half 2025 "
-date: 2025-06-01T01:20:21+01:00
+date: 2025-06-22T01:20:21+01:00
 draft: false
-tags: ["HomeLab","Authentication","P2P"]
+tags: ["HomeLab","Authentication","P2P","Traefik"]
 description: 'Programatic Https for all services and docker stacks'
 url: 'selfhosted-apps-06-2025'
 ---
