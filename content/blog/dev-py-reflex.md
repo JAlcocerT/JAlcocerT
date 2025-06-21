@@ -655,7 +655,51 @@ Or the [Stacked area chart](https://plotly.com/python/filled-area-plots/):
 
 ![Plotly Stack area chart](/blog_img/apps/reflex/reflex-plotly-stacked-area.png)
 
+```sh
+git clone https://github.com/JAlcocerT/reflex-templates/
+cd reflex-templates/stock_graph_app
+
+uv venv
+uv pip install -r requirements.txt
+uv run reflex run
+```
+
 2. There are few ways to bring tables into your apps 
+
+3. The [callouts](https://reflex.dev/docs/library/data-display/callout/)
+
+### SelfHosting Reflex
+
+As per [Reflex docs](https://reflex.dev/docs/hosting/self-hosting/):
+
+Then run your **Reflex app in production mode**:
+
+```sh
+#reflex run --env prod
+uv run reflex run --env prod --backend-port 8001 --frontend-port 3001
+```
+
+![Reflex prod](/blog_img/apps/reflex/reflex-prod-baremetal.png)
+
+> It can be visible fronm other home devices with this approach!
+
+And for containers...it took me a while to make it work and be visible for other devices:
+
+```sh
+docker build -t my_custom_reflex_app:latest .
+
+docker run \
+  --env-file ./stock_graph_app/.env \
+  -e GOOGLE_SHEET_CSV_URL="https://docs.google.com/spreadsheets/d/1pFwGaJHrA6VjwnGH1IOFlEepmRlfI-_Gc1iPTHkblIs/export?format=csv&gid=301359878" \
+  -p 8033:8001 -p 3033:3001 \
+  my_custom_reflex_app:latest
+
+  #-e ${GOOGLE_SHEET_CSV_URL}
+```
+
+Production mode creates an optimized build of your app. By default, the static frontend of the app (HTML, Javascript, CSS) will be exposed on port 3000 and the backend (event handlers) will be listening on port 8000.
+
+> You can also have [static build](https://reflex.dev/docs/hosting/self-hosting/#exporting-a-static-build)!
 
 ### Understanding Reflex with Windsurf
 
@@ -679,6 +723,16 @@ and then a second function, that will let us choose which columns we want to fil
 Add also a proper description when defining those functions
 ```
 
+Keep git tricks handy though:
+
+```sh
+git restore stock_chart_display.py
+```
+
+{{< callout type="warning" >}}
+One action, one commit. Something working **SYNC**.
+{{< /callout >}}
+
 ### Ideas with Reflex
 
 1. Combine it with some of the authentication ways seen and create a **waiting list / lead magnet**.
@@ -686,7 +740,6 @@ Add also a proper description when defining those functions
 I got the idea as soon as I saw:
 
 ![Reflex Newsletter Sample](/blog_img/apps/reflex/reflex-newsletter-sample.png)
-
 
 {{< details title="Sample from Reflex Official Site 📌" closed="true" >}}
 
@@ -747,6 +800,9 @@ def form() -> rx.Component:
 
 
 {{< /details >}}
+
+
+2. https://github.com/JAlcocerT/Reflex_Stocks
 
 
 ---
