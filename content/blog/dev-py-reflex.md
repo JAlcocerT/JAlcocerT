@@ -596,12 +596,41 @@ That was not the only way, as seen with [the AIssistant here](https://github.com
 1. Mailerlite: handles email verification
 2. Google Sheets *filled via FormBricks*, no email verif
 
+```py
+#dont forget to import csv as pandas df with such format:
+FORM_BRICKS_SHEET_URL="https://docs.google.com/spreadsheets/d/abcdef12345/export?format=csv&gid=0"
+```
+
 > Is it possible to have something similar to that with Reflex?
 
 It seems that Reflex supports [few authentication methods](https://reflex.dev/docs/authentication/authentication-overview/):
 
 if you need a [Captcha](https://github.com/masenf/reflex-google-recaptcha-v2) as seen [here](https://jalcocert.github.io/JAlcocerT/encryption-101/#pow-captcha), there are alternatives!
 
+### Reflex x GSheets
+
+The adaptation of the streamlit hardcoded auth to Reflex looks like so:
+
+![Reflex login google sheets hardcoded emails](/blog_img/apps/reflex/reflex-login.png)
+
+And with some tinkering, it can use [formbricks](https://formbricks.com/docs/xm-and-surveys/surveys/website-app-surveys/quickstart)
+
+![alt text](/blog_img/apps/reflex/reflexformbricks.png)
+
+And by using [reflex modals](https://reflex.dev/docs/library/overlay/alert-dialog/), we can play with the pop up version:
+
+![alt text](/blog_img/apps/reflex/gsheet-formbricks.png)
+
+### Reflex x WebHooks
+
+With Formbricks, you can also set webhooks.
+
+![alt text](/blog_img/apps/reflex/formbrick-webhook.png)
+
+
+{{< callout type="info" >}}
+Its very simple, you reply to a survey with your email - you get early access. Make sure to provide a contact for users who want to un-enroll!
+{{< /callout >}}
 
 ### Reflex x Mailerlite
 
@@ -655,6 +684,8 @@ Or the [Stacked area chart](https://plotly.com/python/filled-area-plots/):
 
 ![Plotly Stack area chart](/blog_img/apps/reflex/reflex-plotly-stacked-area.png)
 
+You can even bring [animations with plotly](https://plotly.com/python/animations/)
+
 ```sh
 git clone https://github.com/JAlcocerT/reflex-templates/
 cd reflex-templates/stock_graph_app
@@ -667,6 +698,23 @@ uv run reflex run
 2. There are few ways to bring tables into your apps 
 
 3. The [callouts](https://reflex.dev/docs/library/data-display/callout/)
+
+4. [Image](https://reflex.dev/docs/library/media/image/)
+
+```py
+rx.image(
+    src="https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp",
+    width="50px",
+    height="50px"
+)
+```
+
+It was very helpful:
+
+* This [opengraph checker](https://opengraph.dev/panel?url=https%3A%2F%2Flibreportfolio.fyi%2F) ---> https://libreportfolio.fyi/libreportfolio-og.jpeg
+
+5. Bringing [scripts](https://reflex.dev/docs/library/other/script/) into play: for example for web analytics
+
 
 ### SelfHosting Reflex
 
@@ -734,6 +782,8 @@ One action, one commit. Something working **SYNC**.
 {{< /callout >}}
 
 ### Ideas with Reflex
+
+https://reflex.dev/docs/getting-started/use-cases/
 
 1. Combine it with some of the authentication ways seen and create a **waiting list / lead magnet**.
 
