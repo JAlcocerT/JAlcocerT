@@ -494,26 +494,21 @@ Its extensibility and simplicity make it a popular choice for various web develo
 > When I think about flask, I cant avoid to think this [flask cloud deployment](https://jalcocert.github.io/JAlcocerT/get-started-with-flask/) or...
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Flask Sensors App" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed with NGINX" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Flask Sensors App" image="/blog_img/iot/flask/flask-x300-cpu.png" subtitle="Flask Web App + CPU Temp Trends | Blog Post" >}}
   {{< card link="https://github.com/JAlcocerT/flask_sensor_display" title="Flask Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
-
 
 One of the most popular ways to create **python web apps is with Flask**.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Tinkering with Flask" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Flask Apps with VPS and HTTPs" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Tinkering with Flask" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Flask Apps with VPS and HTTPs via NGINX Proxy Manager" >}}
 {{< /cards >}}
 
 <!-- ![Flask Https NginX Setup](/blog_img/apps/flask-nginx-duckdns.png) -->
 
 #### DASH
 
-* https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/#faq
-
-
-**Dash is indeed an abstraction layer built on top of Flask.**
-
+Dash is an abstraction layer **built on top of Flask.**
 
 * **Flask as the Foundation:** Flask is a lightweight and flexible **micro web framework** for Python. It provides the essential tools for building web applications, such as:
     * **Routing:** Mapping URLs to specific functions.
@@ -539,11 +534,9 @@ One of the most popular ways to create **python web apps is with Flask**.
 * Dash simplifies the development of interactive web applications, especially those focused on data visualization, by providing a higher-level API and pre-built components.
 * You don't need to directly interact with Flask when building a Dash application, as Dash handles the Flask setup and configuration for you. However, understanding that Dash is built on Flask can be helpful for more advanced customization or troubleshooting.
 
-In essence, Dash provides a more opinionated and specialized framework on top of the more general-purpose Flask, making it easier and faster to build interactive data-driven web applications in Python.
+> In essence, Dash provides a more opinionated and specialized framework on top of the more general-purpose Flask, making it easier and faster to build interactive data-driven web applications in Python.
 
-**Python DASH Example**
-
-* https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/
+**Python DASH Example** With DASH I built my first Python Web App, as I covered [here](https://jalcocert.github.io/JAlcocerT/improving-ui-python-dash-apps/)!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="Python Web apps with DASH" image="/blog_img/apps/TripPlanner/TripPlanner.JPG" subtitle="Python Trip Planner with DASh" >}}
@@ -552,8 +545,9 @@ In essence, Dash provides a more opinionated and specialized framework on top of
 
 #### Streamlit
 
-Some of my favourite Streamlit APps?
+If you read me for sometime, you might have noticed that Streamlit is my go to solution for quick PoC's: from AI/BI
 
+Some of my favourite Streamlit APps?
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="The multichat ↗ " >}}
@@ -562,7 +556,7 @@ Some of my favourite Streamlit APps?
 
 {{< details title="Why I love Streamlit for Quick UI's 📌" closed="true" >}}
 
-Streamlit uses a combination of front-end technologies to create its user interface, primarily leveraging React.js, a popular JavaScript library for building user interfaces.
+Streamlit uses a combination of front-end technologies to create its user interface, primarily leveraging [React.js](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#react), a popular JavaScript library for building user interfaces.
 
 - **React.js**: Used for building dynamic and responsive user interfaces.
 - **WebSockets**: Maintains a real-time connection between the client and server for instant updates.
@@ -575,18 +569,25 @@ This setup enables you to **quickly create interactive web apps using Python**, 
 
 {{< /details >}}
 
+Lately I have been using Streamlit on these projects:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Chat with Data" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="Other LangChain use cases" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on GH" >}}
 {{< /cards >}}
 
+I also used Streamlit for **AI related PoCs** like:
+
 {{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="The Aissistant! That all in one tool, that even has webmigration capabilities ↗ " >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-Aissistant" title="The Aissistant! That all in one tool, that even has webmigration capabilities ↗ " >}}
 {{< /cards >}}
 
+And potentially you can do audio in and audio out with streamlit too, as seen [here, with the Speech Rater](https://github.com/JAlcocerT/Streamlit-Speech)
+
 ##### PyGWalker x Streamlit
 
-While working on some PoCs where a quick demo of the data model is required, you can use **Pygwalker via jhub or with Streamlit**.
+While working on some PoCs where a quick demo of your [data models](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/) will be required, you can use **Pygwalker via jhub or with Streamlit**.
 
 This can be helpful before full [AI/BI solutions](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) are getting build and get stakeholders expectations in line during early development phases.
 
@@ -678,6 +679,10 @@ else:
 
 > In case you have [geolocation data](https://jalcocert.github.io/JAlcocerT/geospatial-data/), you can use PyGWalker in combination with folium (and streamlit_folium) maps!
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="PyRouteTracker | Tinkering with Geo data on Github ↗ " >}}
+{{< /cards >}}
+
 And there is more...
 
 ##### Graphic Walker
@@ -700,17 +705,13 @@ You can try it here: https://graphic-walker.kanaries.net/ with some csv:
 ![Graphic Walker UI](/blog_img/dev/graphic-walker.png)
 
 
-It allows you to import/export an already configured dashboard as `.json`!
+It **allows you to import/export** an already configured dashboard as `.json`!
 
 ![Meme - Fantastic](/blog_img/memes/bertin-osborne-incredible.gif)
 
 ```sh
 npm i --save @kanaries/graphic-walker
 ```
-
-
-
-
 
 1. Cool Streamlit Apps I found: https://github.com/AIAnytime/Document-Buddy-App
 
@@ -721,16 +722,28 @@ npm i --save @kanaries/graphic-walker
 
 #### Reflex
 
+Reflex has been one of the latest webapp frameworks Ive tried with Python.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Reflex_Stocks" title="Reflex Stocks | Tinkering Stocks Data with reflex on Github ↗ " >}}
+    {{< card link="https://github.com/JAlcocerT/DebtBlackBox" title="DebtBlackBox |  Github ↗ " >}}
+{{< /cards >}}
+
+![alt text](/blog_img/apps/reflex/reflex-stocks.png)
+
+And it has such a huge potential to become by go to.
+
 * https://reflex.dev/blog/2024-10-8-self-hosting-reflex-with-docker/
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Tinkering with Reflex" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Python Web apps with Reflex" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/reflex-templates" title="Reflex Templates Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code" >}}
 {{< /cards >}}
+
+Reflex has a very interesting [Grid Cards](https://reflex.dev/docs/library/layout/grid/) for anomaly detection projects
 
 
 #### Flet
-
 
 
 {{< details title="More about Flet 📌" closed="true" >}}
@@ -743,7 +756,7 @@ Ive been tinkering with [flet here](https://github.com/JAlcocerT/YT-Video-Editio
 
 ## Web Apps Auth
 
-So far, these should work with any of the python web app frameworks.
+As far as I know, these should work with any of the python web app frameworks.
 
 ### LogTo
 
@@ -754,7 +767,13 @@ So far, these should work with any of the python web app frameworks.
 
 ## Conclusions
 
-For some PoC, Id stay with streamlit as my go to.
+1. For some PoC, Id stay with [streamlit](#streamlit) as my go to.
+
+You can make generate [Plotly / Mermaid / QRs](https://github.com/JAlcocerT/Streamlit_PoC). Even [ApexChartsJS](https://discuss.streamlit.io/t/new-component-streamlit-apex-charts/18769)!
+
+![Streamlit Funnel](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
+
+2. 
 
 ### Vibe Coding Python Web Apps
 

@@ -2,7 +2,7 @@
 title: "Want to be an entrepreneur?"
 date: 2025-05-29
 draft: false
-tags: ["Entrepreneuring","Websites"]
+tags: ["Entrepreneuring","Websites","Web Generator"]
 description: 'SelfHosted Product Tools, Analytics and Authentication. The mission of Ghost Websites its just so great.'
 url: 'product-tools'
 ---
@@ -239,7 +239,8 @@ Just recently...I got some inspiration, while doing [this post](https://jalcocer
 
 ### Product First
 
-Make sure you understand how to use funnels and [Sankey](https://apexcharts.com/apexsankey/) diagrams:
+Make sure you understand how to use funnels and [Sankey](https://apexcharts.com/apexsankey/) diagrams.
+
 
 
 > Like this graph? Me too and its thanks to [HUGO shortcodes x ChartJS](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo) - [funnels](https://www.npmjs.com/package/chartjs-funnel)

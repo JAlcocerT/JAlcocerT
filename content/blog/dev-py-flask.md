@@ -280,9 +280,11 @@ sensors | grep -E "Tctl|fan2|PPT"
 
 ### x300
 
-We are going to get to this
+We are going to get to this:
 
 ![Flask WebApp for the x300](/blog_img/iot/flask/flask-x300-cpu.png)
+
+A historical trend of CPU Temperature!
 
 > For the [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/) small factor computer
 

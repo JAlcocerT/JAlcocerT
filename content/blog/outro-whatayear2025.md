@@ -51,7 +51,8 @@ Web templates (SSG'ed) connected to CMS
 
 Linktree does things very well, yet cant compete with:
 
-1. Domain 1sty free with CC required (This is a potentialy CAC)
+
+1. Domain 1sty free with CC required (This is a potential CAC)
 2. abcd
 
 ## Interesting Concepts
@@ -68,6 +69,12 @@ Linktree does things very well, yet cant compete with:
     * *Examples:* Writing code in a programming language, facilitating a Scrum meeting, riding a bicycle, cooking a recipe, debugging software, performing a surgical procedure.
 
 4. The woman in the red dress - Matrix
+
+5. What are you afraid of loosing if you wont take any with you?
+
+6. Guesstimates
+
+7. Business KPIs: CAC, EBITDA, LTV, NRR,...
 
 An example? 
 

@@ -2,7 +2,7 @@
 title: "Real Estate Project Updates"
 date: 2025-04-08T10:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Pricing Strategies"]
 description: 'RE Gen AI App, RE Calculator and a RE Website (with Astro). Combo.'
 url: 'real-estate-website'
 math: true
@@ -511,6 +511,8 @@ This focuses on the outcomes and benefits users receive, such as finding the per
     * **Subscription with Usage Overage:** A fixed monthly fee with additional charges for exceeding certain usage limits.
     * **Freemium with Usage-Based Premium Features:** Basic features are free, while advanced, resource-intensive features are charged based on usage.
 
+{{< /details >}}
+
 **Key Considerations for Your Pricing Strategy:**
 
 * **Target Audience:** Who are you primarily serving (individual buyers, renters, real estate agents, agencies)? Their willingness to pay and perceived value will differ.
@@ -520,9 +522,6 @@ This focuses on the outcomes and benefits users receive, such as finding the per
 * **Customer Acquisition Cost (CAC):** Factor in the cost of acquiring new users when determining pricing.
 * **Churn Rate:** Monitor how many users stop using the application and adjust pricing or value proposition accordingly.
 * **Scalability:** Your pricing model should ideally scale as your user base and features grow.
-
-{{< /details >}}
-
 
 {{< details title="Value is subjective | Menger has something to say about Pricing 📌" closed="true" >}}
 

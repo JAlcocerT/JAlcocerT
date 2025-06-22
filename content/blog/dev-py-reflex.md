@@ -747,7 +747,11 @@ docker run \
   #-e ${GOOGLE_SHEET_CSV_URL}
 ```
 
-Production mode creates an optimized build of your app. By default, the static frontend of the app (HTML, Javascript, CSS) will be exposed on port 3000 and the backend (event handlers) will be listening on port 8000.
+![Reflex Container Local Run Working](/blog_img/apps/reflex/reflex-container-101.png)
+
+Production mode creates an optimized build of your app.
+
+By default, the static frontend of the app (HTML, Javascript, CSS) will be exposed on port 3000 and the backend (event handlers) will be listening on port 8000.
 
 > You can also have [static build](https://reflex.dev/docs/hosting/self-hosting/#exporting-a-static-build)!
 

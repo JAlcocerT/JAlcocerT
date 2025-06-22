@@ -10,8 +10,9 @@ description: 'AstroDB x KeyStaticCMS.'
 tags: ["Web","Landing Page","CMS","SSG","JAlcocerTech","Cloudflare Workers and Pages"]
 url: keystaticcms-astrodb
 ---
-
-
+<!-- 
+https://github.com/JAlcocerT/jalcocertech/settings
+ -->
 
 * https://github.com/mearashadowfax/DataNova
 
@@ -85,3 +86,21 @@ You always get surprised with astro themes:
 * https://github.com/wpinfusion/astro-hyperdrive
 
 > An Astro template designed for Automotive dealerships. For the ones who like [cars](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/)!
+
+### Wordpress and NRR
+
+For **WordPress.com (the hosted service)**, I would guestimate their **Net Revenue Retention (NRR) to be in the range of 90% to 110%+**.
+
+Here's why:
+
+* **Subscription Model:** WordPress.com operates on a recurring subscription model (freemium with paid plans for features, storage, and support). Recurring revenue businesses typically have an NRR as a key performance indicator.
+* **High Switching Costs:** Once a website is built and established on a platform like WordPress.com, migrating it to another provider can be complex and time-consuming. This "stickiness" inherently contributes to higher retention.
+* **Upselling and Cross-selling Opportunities:**
+    * Users often start with basic plans and upgrade as their needs grow (e.g., needing more storage, custom domain, e-commerce features with WooCommerce, advanced SEO tools, premium themes/plugins).
+    * Automattic has also acquired other services (like WooCommerce, Jetpack, Tumblr) which can lead to cross-selling opportunities to their existing WordPress.com customer base.
+* **Brand Recognition and Ecosystem:** WordPress.com benefits from the massive brand recognition of WordPress itself and a vast ecosystem of themes and plugins, which adds value and encourages continued use.
+* **Customer Support and Managed Services:** For many users, the convenience of managed hosting and readily available support is a key factor in staying with WordPress.com rather than self-hosting.
+
+An NRR of **over 100%** (e.g., 105% or 110%) would indicate that WordPress.com is not only retaining most of its customers but also successfully increasing revenue from its existing customer base through upgrades and additional service purchases. Given their scale and the continuous development of their offerings, achieving NRR over 100% is certainly plausible.
+
+Without direct financial disclosures from Automattic, this remains an informed approximation.

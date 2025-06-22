@@ -157,6 +157,8 @@ https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/
 
 Filebrowser dev has been abandoned and for me it was still a thing to combine it with PiGallery2.
 
+But now we have filebrowser quantum!
+
 ---
 
 ## FAQ
@@ -186,3 +188,12 @@ Lately I have also been [tinkering with Python Web Apps](https://jalcocert.githu
 So I have updated the docker-compose and Dockerfiles at:
 
 https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps
+
+
+### Other
+
+Link analytics solutions, like Kutt:
+
+![alt text](/blog_img/selfh/links/kutt-selfh.png)
+
+![alt text](/blog_img/selfh/links/kutt-link-creation.png)

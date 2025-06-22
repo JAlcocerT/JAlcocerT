@@ -2,7 +2,7 @@
 title: "Just shipping"
 date: 2025-06-04T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Cloud","QR","Web"]
+tags: ["Entrepreneuring","Cloud","QR","Web","Business KPIs","ads","Funnel"]
 description: 'Wedding stuff. Aka 200, you mean 4k?'
 url: 'wedding-photo-galleries'
 ---
@@ -315,5 +315,16 @@ If everything works...
 
 You should get:
 
+- A very Clear view of your CAC
+- Very clear picture of your LTV: assuming that people will just buy once makes things easy
+    - If there is some word of mouth and virality, better for you, just dont count on it
+- Your infra costs are very well defined, a sper your selected [VPS](#the-vps)
+- Some of the eyes that saw your ad and product, would hopefully buy your [pricing strategy](https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy)
+
+Do the math and get:
+
 - Some revenue: EBITDA (?)
 - Net profit after all the expenses and so on
+- NRR (Net revenue retention)
+
+Create your funnel:
