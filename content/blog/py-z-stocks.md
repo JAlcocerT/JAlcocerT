@@ -184,6 +184,7 @@ And with webapps like:
 
 * https://www.simplysafedividends.com/
 * https://www.dividenddata.com/ This one uses Shiny!
+  * You can also see historical dividends for companies at [nasdaq](https://www.nasdaq.com/market-activity/stocks/pep/dividend-history)
 
 
 ---

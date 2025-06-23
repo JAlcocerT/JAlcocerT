@@ -2,7 +2,7 @@
 title: "Just shipping"
 date: 2025-06-04T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Cloud VPS","QR","Authentication","Web","Business KPIs","ads","Funnel"]
+tags: ["Entrepreneuring","Cloud VPS","QR","Authentication","Web","Business KPIs","ads","Funnel","Cloudflare DNS"]
 description: 'Wedding stuff. Aka 200, you mean 4k?'
 url: 'wedding-photo-galleries'
 ---
@@ -31,6 +31,35 @@ And here we are with the solution for that pain.
 This one is tested *in production* as seen [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings)
 
 
+{{< chart 100 200 >}}
+{
+  "type": "line",
+  "data": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "datasets": [{
+      "label": "Sample Data",
+      "data": [10, 25, 15, 30, 22, 40],
+      "fill": false,
+      "borderColor": "rgb(54, 124, 165)",
+      "tension": 0.4
+    }]
+  },
+  "options": {
+    "scales": {
+      "y": {
+        "beginAtZero": true
+      }
+    },
+    "plugins": {
+      "title": {
+        "display": true,
+        "text": "Sample Line with ChartJS"
+      }
+    }
+  }
+}
+{{< /chart >}}
+
 Whats required?
 
 1. https://filebrowser.org/configuration/custom-branding
@@ -49,6 +78,14 @@ This can be done in several ways
 And thanks to vibe coding, you can get very quick this kind of Flask App:
 
 ![Flask QR Generator](/blog_img/apps/flask/flask-qr.png)
+
+If everything worked:
+
+```sh
+nslookup test.jalcocertech.com
+```
+
+Should be pointing to the DNS you queried via Flask UI.
 
 ### The Landing Page
 
@@ -98,6 +135,46 @@ npx wrangler pages project create slubnechwile #this will install the wrangler C
 npx wrangler pages deploy dist # normally will be dist/public, but whatever <BUILD_OUTPUT_DIRECTORY>
 #https://slubnechwile.pages.dev/
 ```
+
+#### Automated DNS Records
+
+https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#updating-dns-records
+
+We will need these artifacts from cloudflare:
+
+1. APi Token
+![alt text](/blog_img/entrepre/wedding/cf/cf-api-tokens.png)
+
+Just enough with edit zone dns
+
+![alt text](/blog_img/entrepre/wedding/cf/zone-dns)
+
+![alt text](/blog_img/entrepre/wedding/cf/api-token.png)
+
+2. CF ZoneID
+
+![alt text](/blog_img/entrepre/wedding/cf/cf-zoneID.png)
+
+```py
+# Cloudflare DNS updater
+CLOUDFLARE_API_TOKEN=your_api_token
+CLOUDFLARE_ZONE_ID=your_zone_id #this is not the domain name, you can get it at the bottom right of the Cloudflare dashboard
+CLOUDFLARE_DOMAIN=your_domain #this is the domain name
+```
+
+You can validate that your API is valid with:
+
+```sh
+#source .env
+
+curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+     -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" | jq .
+```
+
+And vibe code a flask app to change the CF DNS records:
+
+![Flask Changing Cloudflare DNS Records](/blog_img/entrepre/wedding/cf/flask-changed-cf-dns.png)
+
 
 #### Formbricks
 

@@ -2,7 +2,7 @@
 title: "How to setup TinyAuth x Traefik. Compared to LogTo."
 date: 2025-05-27T23:20:21+01:00
 draft: false
-tags: ["Dev","HomeLab","OAUTH"]
+tags: ["Dev","HomeLab","OAUTH","Cloudflare DNS"]
 description: 'TinyAuth  Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
 url: 'testing-tinyauth'
 ---
@@ -451,7 +451,9 @@ Before moving forward...make sure that you have **proper DNS records** at your d
 
 I have tested this with **Cloudflare**.
 
-> See [this script](https://github.com/JAlcocerT/Docker/tree/main/Security/DNS/Cloudflare_DNS), also at [3bodies](https://github.com/JAlcocerT/ThreeBodies/blob/main/Z_DeployMe/update_dns.py)
+See [this **script** to updated Cloudflare DNS records programatically](https://github.com/JAlcocerT/Docker/tree/main/Security/DNS/Cloudflare_DNS)
+
+> Ive also used it at [the 3bodies flask tinker app](https://github.com/JAlcocerT/ThreeBodies/blob/main/Z_DeployMe/update_dns.py)
 
 We will need the Cloudflare API and zoneID, which you can get from:
 
