@@ -2,7 +2,7 @@
 title: "Just shipping"
 date: 2025-06-04T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Cloud VPS","QR","Authentication","Web","Business KPIs","ads","Funnel","Cloudflare DNS"]
+tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS"]
 description: 'Wedding stuff. Aka 200, you mean 4k?'
 url: 'wedding-photo-galleries'
 ---
@@ -226,6 +226,19 @@ As a friend recommended me [last year](https://jalcocert.github.io/JAlcocerT/thi
 
 How about some [wedding theme](https://github.com/Boston343/horizon)?
 
+> GPL 3.0 | A free and open source photography websites template by Cosmic Themes. Built with Astro and Tailwind CSS.
+
+
+
+```sh
+git clone https://github.com/JAlcocerT/horizon
+#rm -rf .git
+npm install
+npm run dev
+```
+
+![alt text](/blog_img/entrepre/wedding/wedding-astro-lead.png)
+
 ### Interest Groups
 
 * https://www.facebook.com/groups/549014068636656
@@ -441,3 +454,13 @@ Do the math and get:
 - NRR (Net revenue retention)
 
 Create your funnel:
+
+---
+
+## Conclusions
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/Flask_SlubnyChwile" title="Flask Back End" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Flask Back End for Weddings" >}}
+{{< /cards >}}

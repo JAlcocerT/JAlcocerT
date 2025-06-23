@@ -732,7 +732,7 @@ Essentially, T-shaped individuals leverage their **deep procedural knowledge** t
 
 #### Diagrams and Retros
 
-1. In addition to my *inconditional* love for mermaidJS and general diagrams...
+1. In addition to my *inconditional* love for [mermaidJS](https://mermaid.js.org/syntax/architecture.html) and general diagrams...
 
 I would recommend you to have a look to:
 
