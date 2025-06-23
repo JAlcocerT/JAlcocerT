@@ -2,7 +2,7 @@
 title: "Just shipping"
 date: 2025-06-04T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Cloud","QR","Web","Business KPIs","ads","Funnel"]
+tags: ["Entrepreneuring","Cloud VPS","QR","Authentication","Web","Business KPIs","ads","Funnel"]
 description: 'Wedding stuff. Aka 200, you mean 4k?'
 url: 'wedding-photo-galleries'
 ---
@@ -13,13 +13,28 @@ All was about some software setup on VPS:
 
 * [Hetzner](https://www.hetzner.com/cloud/)
 * [Digital Ocean](https://www.digitalocean.com/pricing) 
-
-> https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#faq
+* Any of the VPS covered [here](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#faq)
 
 
 ## The Offer
 
-https://filebrowser.org/configuration/custom-branding
+So...its very simple:
+
+* People get married
+* They like photos
+* A lot of photos are *lost* in guests phones
+
+The kind of idea that when you ask and people say that they'd buy it (with other's money, for sure)
+
+And here we are with the solution for that pain.
+
+This one is tested *in production* as seen [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings)
+
+
+Whats required?
+
+1. https://filebrowser.org/configuration/custom-branding
+2. A Landing [Page](#the-landing-page)
 
 A little AI help on [neuromarketing](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_Neuromkt.py)
 
@@ -31,9 +46,14 @@ This can be done in several ways
 2. With Python or several containers / tools as seen during the [initial wedding delivery](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt)
 3. In theory, also with javascript on the client side...
 
+And thanks to vibe coding, you can get very quick this kind of Flask App:
+
+![Flask QR Generator](/blog_img/apps/flask/flask-qr.png)
+
 ### The Landing Page
 
 Pictures 360, from every angle
+
 Capture the special moments
 
 
@@ -89,8 +109,8 @@ And also with n8n to make no code stuff with our leads.
 
 ### The Product
 
-
 Create the svg and following the [custom branding](https://filebrowser.org/configuration/custom-branding)
+
 ```sh
 convert "Desktop/JAlcocerTech xyz logo2.png" -threshold 50% -negate -transparent white -trim +repage temp.pnm && potrace temp.pnm -s -o "Desktop/JAlcocerTech-logo.svg" && rm temp.pnm
 ```
@@ -110,11 +130,14 @@ https://cloud.digitalocean.com/images/backups?i=af28ae&preserveScrollPosition=tr
 
 ![Digital Ocean VPS and Extra Space](/blog_img/entrepre/wedding/DO-VPS.png)
 
+> With current information, id say that Digital Ocean would be the go to for now
+
 #### Hetzner
 
-https://console.hetzner.cloud
+I was also very happy with Hetzner performance and pricing thought:
 
-https://www.hetzner.com/storage/object-storage/
+* https://console.hetzner.cloud
+    * https://www.hetzner.com/storage/object-storage/
 
 ## The Leads
 
@@ -132,7 +155,21 @@ How about some [wedding theme](https://github.com/Boston343/horizon)?
 
 ### The Ads
 
+The other side of the coin.
+
+Same as you can paid cents when placing google adsense on your page...
+
+There are people paying (surprise, *much more*) to place those ads.
+
+Thats the business model of google, facebook and pretty much all social media platform out there.
+
 #### FB and IG
+
+Decide in which platform you might have better chances.
+
+Or just try whatever.
+
+Imo, for this kind of project a facebook or ig would be a good starting point.
 
 For these to work you will need:
 
@@ -143,9 +180,7 @@ For these to work you will need:
 
 Facebook (now Meta) Ads work by allowing businesses and individuals to create and display advertisements to a highly specific and targeted audience across Meta's platforms, including Facebook, Instagram, Messenger, and Audience Network.
 
-Here's a breakdown of how it works and the payment process:
-
-How Facebook Ads Work
+**How Facebook Ads Work**
 
 The process generally follows these steps:
 
@@ -269,6 +304,7 @@ Just like with Facebook Ads, you need to know what you want to achieve. Google A
 4. An Understanding of How Google Ads Works (Basics)
 
 Google Ads operates on an auction system, but it's not just about the highest bid.
+
 * **Keywords:** For Search ads, you bid on keywords – the words or phrases people type into Google.
 * **Ad Quality & Relevance:** Google prioritizes showing ads that are highly relevant and useful to the user's search query, and that lead to a good landing page experience. This is measured by **Quality Score**. A higher Quality Score can lead to lower costs and better ad positions.
 * **Ad Rank:** Determines where your ad appears on the search results page. It's based on your bid, Quality Score, the context of the search, and expected impact of your ad extensions.

@@ -735,7 +735,7 @@ https://docs.windsurf.com/windsurf/cascade/web-search
 
 As per [Context7](https://context7.com/) project https://github.com/upstash/context7
 
-> MIT | Context7 MCP Server -- Up-to-date code documentation for LLMs and AI code editors
+> **MIT** | Context7 MCP Server -- Up-to-date code documentation for LLMs and AI code editors
 
 
 ```json
@@ -763,7 +763,7 @@ or with:
 
 On the bottom right, hit the hammer to [configure mcp via windsurf, as per this yt video](https://www.youtube.com/watch?v=KLD5WyV6LNg):
 
-![alt text](/blog_img/GenAI/aidocs/windsurf-mcp-context7.png)
+![MCP with Windsurf and Context7](/blog_img/GenAI/aidocs/windsurf-mcp-context7.png)
 
 Then hit refresh, and you will have the MCP tools available (2 in this case).
 

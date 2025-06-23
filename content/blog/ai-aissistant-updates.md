@@ -7,9 +7,6 @@ description: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT
 url: 'ai-assistant-streamlit'
 ---
 
-
-## AIssistant Updates
-
 The [aissistant was ideated](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/) as a some kind of all-in-one tool around LLMs.
 
 Well, not only text centered, but using the multi-model capabilities as well:
@@ -21,11 +18,20 @@ Well, not only text centered, but using the multi-model capabilities as well:
 
 And it had quite a few different features.
 
+
+## AIssistant Updates
+
+Now its time for some updates.
+
+Im very aware the less is more. But what *kind of less* will the people want to have?
+
 Do you prefer the box? the plastic?
 
-Or the expensive toy I bought you?
+The expensive toy I bought you?
 
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+
+Maybe its just the simplest feature we havent thought about...
 
 
 ### DBChat Assistant
@@ -45,7 +51,7 @@ You can think about this is a [kind of **BI/AI** part](https://jalcocert.github.
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
-
+So if you are tired of making SQL queries on your own, you can now use LLMs + Context to help you.
 
 {{< details title="Streamlit + DataChat AI / SQL + PyGWalker | Example 📌" closed="true" >}}
 
@@ -160,6 +166,11 @@ Puting [SliDevJS PPTs](https://jalcocert.github.io/JAlcocerT/creating-presentati
 
 Nooot a problem!
 
+Just make the LLM aware of few tricks, or provide an example on:
+
+- How to change the [backgrounds](https://github.com/slidevjs/slidev/issues/1892)
+- How to change the theme, frontmatter etc
+
 ### Speech RAIter
 
 AI is not only about text, but it can also be about AI generated audio.
@@ -194,10 +205,7 @@ Because there is too much information (and noise) out there:
 
 * https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/
 
-
 ![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png)
-
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="The YT Groq Summarizer Post" image="/blog_img/GenAI/yt-summaries/yt-summaries-groq_example.png" subtitle="But still there is some signal in between the noise" >}}

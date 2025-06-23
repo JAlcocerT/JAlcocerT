@@ -2,7 +2,7 @@
 title: "Pixel8 Pro - Tricks with a New Android phone."
 date: 2024-04-27T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Android"]
 description: 'Tricks for Google Pixel 8 Pro. Together with Android Apps I enjoy: Waydroid, Termux?'
 url: 'pixel-8-pro-tricks'
 ---

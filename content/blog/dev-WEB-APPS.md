@@ -2,7 +2,7 @@
 title: "Web Apps with Python Explained"
 date: 2025-06-20T10:20:21+01:00
 draft: false
-tags: ["Dev","Python","WebApps","Authentication","LogTo","Traefik"]
+tags: ["Dev","Python","WebApps","Authentication","LogTo","Traefik","uv"]
 description: 'My favourite ways to build WebApps with Python. From Streamlit and PyGWalker to Reflex.'
 url: 'web-apps-with-python'
 ---
@@ -11,6 +11,8 @@ url: 'web-apps-with-python'
 Plain websites are cool.
 
 But if you would need extra functionality, you will come to the webapp domain.
+
+I mean: something more that HUGO shortcodes or Astro components cant handle
 
 As you can imagine, there are many flavours of web apps.
 
@@ -187,11 +189,19 @@ In essence, while Jamstack's core philosophy is **centered around pre-built stat
 
 ## Web Apps with Python
 
+Lately Ive been **using uv** instead of python venvs:
+
+```sh
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+
+uv streamlit run main.py
+```
 
 {{% details title="Web Apps in Python w/o fwk" closed="true" %}}
 
-
-Yes, that Python code would work as a basic CGI script, and you're correct, it's essentially Python without a web framework. Here's a breakdown:
+A Python code would work as a basic CGI script, essentially, Python without a web framework.
 
 **How it Works:**
 
@@ -579,11 +589,12 @@ Lately I have been using Streamlit on these projects:
 I also used Streamlit for **AI related PoCs** like:
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="The Aissistant! That all in one tool, that even has webmigration capabilities ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC | Plotly / Mermaid Charts, AI Generated ↗ " >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-Aissistant" title="The Aissistant! That all in one tool, that even has webmigration capabilities ↗ " >}}
 {{< /cards >}}
 
 And potentially you can do audio in and audio out with streamlit too, as seen [here, with the Speech Rater](https://github.com/JAlcocerT/Streamlit-Speech)
+
 
 ##### PyGWalker x Streamlit
 

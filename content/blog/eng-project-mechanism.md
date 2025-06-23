@@ -2,7 +2,7 @@
 title: "How to setup Gabe's project, Mechanism"
 date: 2025-03-02T10:20:21+01:00
 draft: false
-tags: ["Python","Mechanics","Engineering","TinaCMS"]
+tags: ["Python","Mechanics","Engineering","TinaCMS","Plotly","Animations"]
 description: "Mechanisms Animations in Python. From Singer machines to car engines. Project Docs with Astro and Tina?"
 url: 'gabemorris12-mechanism-project-setup'
 math: true
@@ -179,6 +179,15 @@ Today is the turn of a [Singer Machine](#singer-mechanism!)
 
 
 * https://www.goodreads.com/book/show/13237758-in-pursuit-of-the-unknown
+
+### Animations in Python
+
+See these plotly examples with: https://plotly.com/python/animations/
+
+* Point moving over a curve
+* Moving Frenet Frame Along a Planar Curve
+
+> How cool is that to learn mechanics?
 
 ### 3D Design
 

@@ -108,7 +108,8 @@ If you want to **log all the codex thinking process:**
 codex --quiet --full-auto "$(cat ./prompts/prompt.md)" > output-k8s-auto.json #saved the full reply with errors 
 jq 'select(.type == "message" and .status == "completed")' output-k8s-auto.json #to see the final reply only
 ```
-It will avoid you saving these errors:
+
+It will avoid you saving time with these errors:
 
 ![Codex Logs saved with errors](/blog_img/GenAI/codex-logs.png)
 
@@ -119,6 +120,8 @@ And instead you can get this kind of json:
 {"id":"rs_68515b5395f8819fbeb6d5ae5b3dc0b102e3250c19237b0e","type":"reasoning","summary":[],"duration_ms":4160}
 {"id":"rs_68515b5395f8819fbeb6d5ae5b3dc0b102e3250c19237b0e","type":"reasoning","summary":[]}
 ```
+
+> You can also have a look to [Prompt Layer Library](https://github.com/MagnivOrg/prompt-layer-library) for openai logs
 
 To use other providers/LLMs, as per [this post](https://machinelearningmastery.com/understanding-openai-codex-cli-commands/):
 

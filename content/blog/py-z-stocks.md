@@ -178,7 +178,12 @@ Wouldnt this be a cool companion for a website, as a lead magnet?
 
 Even as a subscription based model, say [7$/month](https://www.cazadividendos.com/recursos/indice/) to have access to such tool and historical info?
 
-People are money on amazon ebooks with much simpler concepts.
+People are on *money making mode* on amazon ebooks with much simpler concepts.
+
+And with webapps like: 
+
+* https://www.simplysafedividends.com/
+* https://www.dividenddata.com/ This one uses Shiny!
 
 
 ---

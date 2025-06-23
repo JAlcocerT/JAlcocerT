@@ -209,6 +209,8 @@ Steps for **buying a car in Germany**.
 
 ### In Netherlands
 
+If you live in NL and want to buy a car instead of minding your [pension](https://www.mijnpensioenoverzicht.nl/en). Then see:
+
 * [IMPORTACION Vehículos HOLANDA](https://forocoches.com/foro//showthread.php?p=439130711)
 
 * [MarktPlaats](https://www.marktplaats.nl/l/auto-s/#q:vito)

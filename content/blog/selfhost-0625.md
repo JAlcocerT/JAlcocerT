@@ -119,9 +119,12 @@ Last month i tried protondrive with rclone https://github.com/JAlcocerT/Docker/t
 
 #### PortMaster and https
 
+If you are using portmaster, you might need to disable DNS config ->Enforce global/private-split view
+
+So that the nextcloud configured via Traefik and tailscale DSN will work
 
 {{< callout type="info" >}}
-If you are using portmaster, you might need to disable DNS config ->Enforce global/private-split view so that the nextcloud configured via Traefik and tailscale DSN will work
+PortMaster might give other incompatibilities with VPNs and so on (if you are using your laptop for work)
 {{< /callout >}}
 
 ![Portmaster](/blog_img/selfh/https/portmaster-nc-https.png)
