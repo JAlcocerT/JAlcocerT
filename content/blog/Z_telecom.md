@@ -274,11 +274,28 @@ It is widely used by many cable television operators to provide internet access 
   - It also supports functionalities like IPTV and on-demand services, integrating seamlessly with digital TV offerings.
 
 
+You're asking if the HFC (Hybrid Fiber-Coaxial) signal to your cable modem is a DC voltage, and how many volts.
+
+The primary signal carried over the coaxial cable to your cable modem in an HFC network is **not DC voltage for powering the modem**. Instead, it's a **high-frequency alternating current (AC) signal** that carries the digital internet data (DOCSIS).
+
+**Here's why and what it means for voltage:**
+
+* **Cable Modems are Powered by an External AC Adapter:** Almost all cable modems require an external power supply (a "power brick" or "AC adapter") that plugs into a standard wall outlet (e.g., 220V AC in Poland). This adapter then converts the AC wall power into the DC voltage (commonly 12V DC, but can vary slightly depending on the modem model) that the modem needs to operate.
+* **RF Signals are AC:** The DOCSIS signals themselves are radio frequency (RF) signals, which are a form of alternating current. They have very low voltage levels, typically measured in millivolts (mV). These are signal voltages, not power voltages intended to energize the device.
+* **No Power Over Coax (PoC) for Modems (Generally):** Unlike some satellite LNBs or specialized CCTV cameras, cable modems are *not* generally powered by the coaxial cable that carries the internet signal. The power they need is much greater than what's typically feasible or practical to deliver reliably over the coax without interfering with the data signals.
+* **Signal Levels (not power):** When technicians talk about "voltage" on a coax cable for internet, they're usually referring to the strength of the RF signal, often expressed in dBmV (decibels relative to 1 millivolt). This is a measure of signal strength, not the DC power supply for the device. A good downstream signal level for a cable modem is typically in the range of -7 dBmV to +7 dBmV, but it can vary.
+
+**In summary:**
+
+The coaxial cable delivers **RF data signals (AC, low voltage)** to your cable modem via the HFC network using the DOCSIS standard.
+
+Your cable modem itself gets its **DC power (typically 12V DC)** from a separate power adapter plugged into your wall's electrical outlet.
+
+{{< /details >}}
+
 DOCSIS is a cornerstone technology for cable service providers, enabling them to leverage existing **coaxial cable** infrastructure to deliver high-speed internet and other digital services.
 
 As technology evolves with newer versions like DOCSIS 3.1 and 4.0, it continues to enhance the capacity, efficiency, and performance of cable broadband services, making it a competitive option against other types of broadband delivery technologies such as fiber optics.
-
-{{< /details >}}
 
 
 ### Linear TV

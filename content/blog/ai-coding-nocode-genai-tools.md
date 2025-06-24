@@ -293,7 +293,7 @@ Its all done with Python and the following structure:
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
-With a env file:
+With a `.env` file like this one:
 
 ```
 BOT_TOKEN=YOUR_BOT_TOKEN_HERE

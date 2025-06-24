@@ -2,7 +2,7 @@
 title: "Websites 2024 Consolidation"
 date: 2024-12-17
 draft: false
-tags: ["dev"]
+tags: ["Dev","Filebrowser"]
 summary: 'Websites and getting better at `Show your Work`. HUGO Theme Gallery for a Punto Website.'
 url: 'websites-themes-2024'
 ---
@@ -273,3 +273,55 @@ You can print to pdf, add your logo, taxes, CSS...
 2. FileBrowser
 3. NGINX
 4. A server
+
+### FileBrowser x HUGO
+
+**EDITING FROM THE FUTURE**: To make adding photos more intuitive, combine HUGO + Filebrowser. You will just need to commit the changes (or put some cron job), then CI/CD will do the rest and push it to your domain.
+
+If you setup [filebrowser](https://fossengineer.com/selfhosting-filebrowser-docker/#filebrowser-docker-compose)
+
+
+```yml
+services:
+  filebrowser:
+    image: gtstef/filebrowser #docker pull gtstef/filebrowser
+
+    container_name: filebrowser
+    ports:
+      - 8081:80
+    volumes:
+      - /home/Docker/FileBrowser/config:/config
+      - /home/datafolder/Z_BACKUP_DATA/data1:/srv #tweak this
+    restart: always       
+```
+
+
+For filebrowser quantum you will login with: `admin/admin` for the original one with 'admin/console logs'
+
+```sh
+
+```
+
+To make it more intuitive, you can create an user and put that their path is directly `./content` which maps to the place where HUGO Theme Gallery loads all the photos.
+
+![alt text](/blog_img/web/filebrowser-hugo/filebrowser-creating-user-hugo.png)
+
+![alt text](/blog_img/web/filebrowser-hugo/filebrowser-hugotheme.png)
+
+
+![alt text](/blog_img/web/filebrowser-hugo/hugotheme-rendered.png)
+
+Provide access with
+
+![alt text](/blog_img/web/filebrowser-hugo/filebrowser-cloudflare.png)
+
+And as you are logged in already, show the analytics for motivation :) 
+
+![alt text](/blog_img/web/filebrowser-hugo/cloudflare-hugo-analytics.png)
+
+
+Before pushing changes, I had to do provide this git CLI:
+
+```sh
+git config --global --add safe.directory /home/jalcocert/EntreAgujayPunto
+```

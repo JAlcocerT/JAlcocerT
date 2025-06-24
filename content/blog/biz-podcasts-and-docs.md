@@ -2,7 +2,7 @@
 title: "Tech for Creating i18n Documentation and related Podcast"
 date: 2025-05-15
 draft: false
-tags: ["Web"]
+tags: ["Web","Commento"]
 description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. A look to GitPodcast, Code2Prompt and Research Agents."
 url: 'tech-for-podcast'
 ---
@@ -63,6 +63,19 @@ npm run dev
 10. A progress line bar on the top of the posts to show how much you have left
 11. Katex, Charts and diagrams rendering 
 12. Maybe [commenting](https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento) system? Or [Giscus](https://justinjbird.com/blog/2023/adding-comments-to-a-hugo-site-using-giscus/#adding-the-parameters), [maybe?](https://dteather.com/blogs/adding-giscus-discussions-to-astro/)
+
+You can explore commento PostgresSQL DB:
+
+```sh
+docker exec -it commento_db-foss bash
+psql -U commento -d commento
+\dt
+\c commento
+SELECT * FROM comments;
+```
+
+![Commento Analytics](/blog_img/selfh/commento.png)
+
 
 {{< callout type="info" >}}
 Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%5B%5D=free) from time to time to get ideas
