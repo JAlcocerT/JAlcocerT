@@ -485,6 +485,8 @@ And follow these steps:
 
 ![LogTo Apps](/blog_img/dev/LogTo/logto-apps.png)
 
+You will get the preview of the auth page: https://oxa37q.logto.app/sign-in *you can put your sub/domain later*
+
 2. Create a Python app withing Logto:
 
 ![LogTo Creating an App](/blog_img/dev/LogTo/logto-create-pythonapp.png)
@@ -513,9 +515,9 @@ Like these for the [flask app](https://github.com/JAlcocerT/ThreeBodies/tree/mai
 
 ![LogTo HomeLab Redirect](/blog_img/dev/LogTo/logto-configure-app-redirect.png)
 
-Optionally, add the **custom domain to LogTo**:
+Optionally, add the **custom domain to LogTo**: *remember that these will be DNS only if you are using cloudflare*
 
-![alt text](../../static/blog_img/entrepre/stripe/logto-custom-dom.png)
+![alt text](/blog_img/entrepre/stripe/logto-custom-dom.png)
 
 You will need to configure DNS records so that:
 
@@ -568,7 +570,6 @@ With url: http://192.168.1.11:5088/logto-webhook
 
 After a user signs in, signs up, or triggers any selected event, Logto will POST a JSON payload to your /logto-webhook endpoint.
 Check the logto_webhook_events.log file in your project directory to see the events.
-
 
 To test a webhook from LogTo console, they should be able to send requests:
 
@@ -663,7 +664,7 @@ You're on the "Create OAuth client ID" page in the Google Cloud Console.
 This is where you tell Google how your application (via Logto) will interact with Google's OAuth servers.
 
 {{< callout type="warning" >}}
-You will be needing a `.com` from here
+You will be needing a `.com` from here and a subscription to LogTo
 {{< /callout >}}
 
 And there are few interesting concepts here.
@@ -694,6 +695,8 @@ This URI must exactly match what Google is expecting. If it doesn't, you'll get 
     * **Example:** If your Logto endpoint is `https://auth.jalcocertech.com` and the `connector_id` is `brbkm77m35jfe7qzkkvel` (from your example):
         * Click "+ Add URI" and enter:
             `https://auth.jalcocertech.com/callback/brbkm77m35jfe7qzkkvel`
+        * When seeting up the google social signin, Logto will give you the ORI to add to google and you will have to fill in LogTO UI the ClientId and Client Secret (after completing this step in Google CLoud)
+
 
 ![alt text](/blog_img/entrepre/stripe/logto-gcp-3.png)
 
@@ -702,3 +705,19 @@ This URI must exactly match what Google is expecting. If it doesn't, you'll get 
 * Click the **Create** button.
 * Google will then display a pop-up showing you your **Client ID** and **Client Secret**.
     * **IMPORTANT:** Copy both of these values immediately and securely! The Client Secret is often shown only once. You'll need these for the next step in Logto.
+
+So not like this:
+
+![alt text](/blog_img/entrepre/webify/gcp-oauth.png)
+
+But like this:
+
+![alt text](/blog_img/entrepre/webify/gcp-oauth-ok.png)
+
+Then, save it and bring the artifacts:
+
+![alt text](/blog_img/entrepre/webify/gcp-logto-config.png)
+
+And it will stay like so:
+
+![alt text](/blog_img/entrepre/webify/gcp-oauth-end.png)

@@ -165,8 +165,7 @@ stripe listen --forward-to localhost:5006/webhook
 
 Once that its done, you can vibe code again to have real time updates for the logged in user:
 
-![alt text](/blog_img/entrepre/stripe/stripe-webhook-flask.png)
-
+![Stripe Webhooks](/blog_img/entrepre/stripe/stripe-webhook-flask.png)
 
 ### Stripe x Logto
 
@@ -178,7 +177,7 @@ Where I could get proper sing up/in and user email information via LogTo as per:
 python3 ./Logto/logto-sample-v2.py
 ```
 
-So now:
+So now just do:
 
 ```sh
 uv venv
@@ -186,17 +185,36 @@ source .venv/bin/activate
 
 uv pip install -r requirements.txt
 
-
-uv run logto-stripe-app-v5.py
-stripe listen --forward-to localhost:5088/webhook
+uv run ./LogTo-Stripe/logto-stripe-app-v5.py
+#stripe listen --forward-to localhost:5088/webhook #The Stripe CLI (used for local development) is not needed in production. In production, Stripe will POST directly to your server’s public /webhook endpoint.
 ```
 
 Dont forget to add the **after payment behaviour** into your stripe payment link, so that it gets redirected to `http://192.168.1.6:5088`
 
-![alt text](/blog_img/entrepre/stripe/stripe-redirect.png)
+![Stripe Payment link - Redirects to Flask](/blog_img/entrepre/stripe/stripe-redirect.png)
 
 > Thanks to the cookies, that new tab will be already logged into and authenticated per LogTo to the flask admin panel, showing that you have got the service
 
+If you have done everything properly, you can get this kind of user journey in production, with https and no paid tiers *as of the time of writting*
+
+![alt text](/blog_img/entrepre/webify/webify-logto-login.png)
+
+![alt text](/blog_img/entrepre/webify/wibify-logto-customdomain.png)
+
+Which is the result of:
+
+```sh
+git clone https://github.com/JAlcocerT/WebifAI
+docker build -t webifai:latest .
+
+# docker run --env-file .env.prod -p 5088:5088 \
+#   -v $(pwd)/payments.db:/app/payments.db \
+#   --network cloudflared_tunnel \
+#   --name webifai webifai:latest
+ping webify.jalcocertech.com
+```
+
+![Flask Webify Working via Cloudflare Tunnels](/blog_img/entrepre/webify/webify-logto-loggedin.png)
 
 ---
 
