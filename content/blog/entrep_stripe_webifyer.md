@@ -167,6 +167,37 @@ Once that its done, you can vibe code again to have real time updates for the lo
 
 ![alt text](/blog_img/entrepre/stripe/stripe-webhook-flask.png)
 
+
+### Stripe x Logto
+
+I have been recently playing with [LogTo and Flask on this repo folder](https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo)
+
+Where I could get proper sing up/in and user email information via LogTo as per:
+
+```sh
+python3 ./Logto/logto-sample-v2.py
+```
+
+So now:
+
+```sh
+uv venv
+source .venv/bin/activate
+
+uv pip install -r requirements.txt
+
+
+uv run logto-stripe-app-v5.py
+stripe listen --forward-to localhost:5088/webhook
+```
+
+Dont forget to add the **after payment behaviour** into your stripe payment link, so that it gets redirected to `http://192.168.1.6:5088`
+
+![alt text](/blog_img/entrepre/stripe/stripe-redirect.png)
+
+> Thanks to the cookies, that new tab will be already logged into and authenticated per LogTo to the flask admin panel, showing that you have got the service
+
+
 ---
 
 ## FAQ

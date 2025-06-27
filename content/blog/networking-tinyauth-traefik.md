@@ -3,14 +3,13 @@ title: "How to setup TinyAuth x Traefik. Compared to LogTo."
 date: 2025-05-27T23:20:21+01:00
 draft: false
 tags: ["Dev","HomeLab","OAUTH","Cloudflare DNS","Three Bodies","LogTo","TinyAuth"]
-description: 'TinyAuth  Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
+description: 'Logto vs TinyAuth Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
 url: 'testing-tinyauth'
 ---
 
 I was having a look to https://selfh.st/newsletter/2025-02-07/ and found out about **TinuAuth**
 
-Which seems to integrate with https services and provide an **auth layer**.
-
+Which seems to integrate with https services and provide an **auth layer**:
 
 * https://tinyauth.doesmycode.work/docs/guides/github-oauth.html
 * https://github.com/steveiliop56/tinyauth
@@ -478,7 +477,7 @@ curl -X GET "https://api.cloudflare.com/client/v4/zones?name=whateveryourdomaini
 * https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo
 * https://openapi.logto.io/operation/operation-identifyuser
 
-You will need an account: https://cloud.logto.io/
+You will need an account: https://cloud.logto.io/ and some project to tinker with it, like this: https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo
 
 And follow these steps:
 
@@ -490,7 +489,7 @@ And follow these steps:
 
 ![LogTo Creating an App](/blog_img/dev/LogTo/logto-create-pythonapp.png)
 
-Be prepared to get familiar with these fields:
+Be prepared to get familiar with these fields: https://docs.logto.io/quick-starts/python
 
 ![alt text](/blog_img/dev/LogTo/logto-creating-app.png)
 
@@ -514,7 +513,11 @@ Like these for the [flask app](https://github.com/JAlcocerT/ThreeBodies/tree/mai
 
 ![LogTo HomeLab Redirect](/blog_img/dev/LogTo/logto-configure-app-redirect.png)
 
-Optionally, add the custom domain:
+Optionally, add the **custom domain to LogTo**:
+
+![alt text](../../static/blog_img/entrepre/stripe/logto-custom-dom.png)
+
+You will need to configure DNS records so that:
 
 ![alt text](/blog_img/dev/LogTo/logto-customdomain-redirect.png)
 
@@ -535,17 +538,21 @@ So that the sign in/up experience looks like so:
 
 ![LogTo Brand UI/X](/blog_img/dev/LogTo/logto-branded-signin.png)
 
+And also very interesting config for: email, terms and conditions, policy...
+
+![alt text](/blog_img/entrepre/stripe/logto-tnc-policy.png)
+
 > You can also customize it as per https://docs.logto.io/customization/bring-your-ui
 
-**To bring the information to the UI of the signed in email, you can try with Webhooks** https://cloud.logto.io/vurfo6/webhooks
+To bring the information to the UI of the signed in email, **you can try with [Webhooks](https://docs.logto.io/developers/webhooks)** https://cloud.logto.io/vurfo6/webhooks
 
-Because this is cool
+Because this is cool:
 
-![alt text](../../static/blog_img/dev/LogTo/logto-sample-signedIN.png)
+![alt text](/blog_img/dev/LogTo/logto-sample-signedIN.png)
 
-But how to know who's actually in?
+But how to know who's actually signed in?
 
-You will need a:
+In that case, you will need a:
 
 ![alt text](/blog_img/dev/LogTo/logto-webhooks.png)
 
@@ -597,6 +604,22 @@ curl -X POST https://webhooks.jalcocertech.com/logto-webhook \
 By pointing the sample flask app to cloudflare tunnel as well: https://flask.jalcocertech.com/
 
 
+**Bringing logged in information with Logto, the easy way** As per the docs, [add the scopes](https://docs.logto.io/quick-starts/python#request-additional-claims) 
+
+```py
+from logto import UserInfoScope #this does the trick to get the signed in and verified email!
+
+client = LogtoClient(
+    LogtoConfig(
+        endpoint=LOGTO_ENDPOINT,
+        appId=LOGTO_APP_ID,
+        appSecret=LOGTO_APP_SECRET,
+        scopes=[UserInfoScope.profile, UserInfoScope.email], #add these!
+    ),
+    storage=SessionStorage(),
+)
+```
+
 **Updating the domain** for a custom domain with Logto will look like: https://cloud.logto.io/vurfo6/tenant-settings/domains
 
 ![LogTo Custom Domain](/blog_img/dev/LogTo/logto-custom-domain.png)
@@ -606,3 +629,76 @@ Example: https://auth.jalcocertech.com/sign-in
 **Configuring social signin** for Logto: https://cloud.logto.io/vurfo6/connectors/social
 
 ![alt text](/blog_img/dev/LogTo/logto-socialsignin.png)
+
+
+![alt text](/blog_img/entrepre/stripe/logto-social-connector.png)
+
+![alt text](/blog_img/entrepre/stripe/logto-google-config.png)
+
+1. Create a project on GCP https://console.cloud.google.com/projectcreate
+2. Look for `API and Services` -> `OAUT consent screen`
+
+![alt text](/blog_img/entrepre/stripe/logto-gcp-1.png)
+
+
+Choose the User Type you want, and click the Create button. (Note: If you select External as your User Type, you will need to add test users later.)
+
+External User Type
+Audience: Your app is available to any user with a Google Account, regardless of their Google Workspace affiliation. This includes personal Gmail accounts and users from other Google Workspace organizations.
+
+Use Cases:
+
+Public-facing applications: Any app designed for general users (e.g., a photo editing app that integrates with Google Photos, a task manager that syncs with Google Calendar).
+
+Third-party integrations: When your app needs to interact with users outside of your direct organization.
+
+
+![alt text](/blog_img/entrepre/stripe/logto-gcp-2.png)
+
+
+3. Hit `Create OAUTH client`, select a WebApp:
+
+You're on the "Create OAuth client ID" page in the Google Cloud Console. 
+
+This is where you tell Google how your application (via Logto) will interact with Google's OAuth servers.
+
+{{< callout type="warning" >}}
+You will be needing a `.com` from here
+{{< /callout >}}
+
+And there are few interesting concepts here.
+
+**Authorized JavaScript origins:**
+
+* **For use with requests from a browser**
+* **What this means:** This field is for applications that make API calls directly from a user's browser using JavaScript (e.g., if you had a "Sign in with Google" button directly on your custom website that called Google's APIs). It enforces the "same-origin policy" for security.
+* **What to do:** In your case, Logto handles the authentication flow on its own domain. So, you need to add the **origin (base URL) of your Logto endpoint**.
+    * Referring to your previous instructions: "This is the domain that your logto authorization page will be served from. In our case, this will be `${your_logto_endpoint_origin}`. e.g. `https://foo.logto.app`."
+    * **Example:** If your Logto instance is `https://auth.jalcocertech.com`, then you would click "+ Add URI" and enter:
+        `https://auth.jalcocertech.com`
+
+**Authorized redirect URIs:**
+
+* **For use with requests from a web server**
+* **What this means:** This is *critical*. After a user successfully signs in with their Google account and grants consent, Google will redirect their browser back to this specific URL in your application (or in this case, your Logto instance).
+
+This URI must exactly match what Google is expecting. If it doesn't, you'll get a `redirect_uri_mismatch` error.
+
+* **What to do:** You need to add the **full callback URI provided by Logto** for the Google connector.
+    * Referring to your previous instructions: "In our case, this will be `${your_logto_endpoint}/callback/${connector_id}`. e.g. `https://foo.logto.app/callback/${connector_id}`. The `connector_id` can be found on the top bar of the Logto Admin Console connector details page."
+    * **To get the `connector_id`:**
+        1.  Open your Logto Admin Console in a separate browser tab.
+        2.  Navigate to **Connectors** -> **Social Connectors**.
+        3.  Click on the "Google" connector (you should have started setting it up by now).
+        4.  On that Google connector's detail page in Logto, look for the "Callback URI" or similar field. It will show you the full URL, including the unique `connector_id`.
+    * **Example:** If your Logto endpoint is `https://auth.jalcocertech.com` and the `connector_id` is `brbkm77m35jfe7qzkkvel` (from your example):
+        * Click "+ Add URI" and enter:
+            `https://auth.jalcocertech.com/callback/brbkm77m35jfe7qzkkvel`
+
+![alt text](/blog_img/entrepre/stripe/logto-gcp-3.png)
+
+**After filling these out:**
+
+* Click the **Create** button.
+* Google will then display a pop-up showing you your **Client ID** and **Client Secret**.
+    * **IMPORTANT:** Copy both of these values immediately and securely! The Client Secret is often shown only once. You'll need these for the next step in Logto.
