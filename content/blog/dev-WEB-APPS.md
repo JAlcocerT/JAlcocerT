@@ -2,7 +2,7 @@
 title: "Web Apps with Python Explained"
 date: 2025-06-20T10:20:21+01:00
 draft: false
-tags: ["Dev","Python","WebApps","Authentication","LogTo","Traefik","uv"]
+tags: ["Dev","Python","WebApps","Traefik","uv"]
 description: 'My favourite ways to build WebApps with Python. From Streamlit and PyGWalker to Reflex.'
 url: 'web-apps-with-python'
 ---
@@ -12,16 +12,24 @@ Plain websites are cool.
 
 But if you would need extra functionality, you will come to the webapp domain.
 
-I mean: something more that HUGO shortcodes or Astro components cant handle
+I mean: *something more that HUGO shortcodes or Astro components will not handle*
 
 As you can imagine, there are many flavours of web apps.
 
 I first tried [Shiny in R](#shiny-with-r) and then [DASH](#dash), with the trip planner project.
 
-
 ## WebApps
 
-https://github.com/JAlcocerT/DebtBlackBox
+Lately I have been possitively surprised by the [Streamlit x PyGWalker](#pygwalker-x-streamlit) combo.
+
+But it's time to try something more:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication" title="LogTo 101" image="/blog_img/dev/LogTo/logto-branded-signin.png" subtitle="Using Logto as Flask Web App Authentication with a sample 3 body WebApp | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/DebtBlackBox" title="Sample Python Web Apps" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Trying Flask vs Reflex vs Django" >}}
+{{< /cards >}}
+
+
 
 **Understanding Web Programming**
 
@@ -31,7 +39,6 @@ It goes beyond simply designing a static webpage with HTML and CSS.
 
 
 {{< details title="See a more detailed look on these 📌" closed="true" >}}
-
 
 * **Core Components:**
     * **Web Content (HTML, CSS, JavaScript):**
@@ -765,15 +772,6 @@ Reflex has a very interesting [Grid Cards](https://reflex.dev/docs/library/layou
 
 Ive been tinkering with [flet here](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/Video_App_Flet)
 
-## Web Apps Auth
-
-As far as I know, these should work with any of the python web app frameworks.
-
-### LogTo
-
-
-### Traefik x Middleware
-
 ---
 
 ## Conclusions
@@ -870,3 +868,26 @@ https://pypi.org/project/PyAutoGUI/
 * **Complexity:** Consider the complexity of your application and choose a framework that matches your needs. Tkinter is suitable for simple applications, while PyQt/PySide and wxPython are better for more complex ones.
 * **Appearance:** If you want your application to have a modern and visually appealing interface, PyQt/PySide or Kivy might be good choices.
 * **Licensing:** Be aware of the licensing terms of the framework you choose, especially if you plan to distribute your application commercially.
+
+
+### Web Apps Auth
+
+As far as I know, these should work with any of the python web app frameworks.
+
+#### LogTo
+
+With LogTo Ive been very happy lately to get it going.
+
+Specially I managed to have an end to end user flow into my apps applied to Flask WebApps:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication" title="LogTo 101" image="/blog_img/dev/LogTo/logto-branded-signin.png" subtitle="Using Logto as Flask Web App Authentication with a sample 3 body WebApp | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI" title="WebifAi / WebifAIyer" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github to package and sale SSG Themes" >}}
+{{< /cards >}}
+
+Havent yet get there with logto and streamlit, but it should be replicable.
+
+*Unless there is something strange with the callbacks.*
+
+
+#### Traefik x Middleware

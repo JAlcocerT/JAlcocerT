@@ -3,7 +3,7 @@ title: "What are you selling?"
 date: 2025-06-03T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Auth","Web","Flask","Webhooks","LogTo"]
-description: 'Stripe 101 together with LogTo into a Flask WebApp'
+description: 'Stripe 101. Together with LogTo into a Flask WebApp for selling and editing SSG powered websites.'
 url: 'using-stripe-with-flask'
 ---
 
@@ -19,6 +19,13 @@ But you will want to scale the ideas.
 {{< /cards >}}
 
 And shame on me, I have not been tinkering with Stripe since last year [with the CV project](https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_Auth_Ways/Z_Auth_Stripe.py?ref_type=heads) as per [these tests](https://gitlab.com/fossengineer1/cv-check/-/tree/main/Z_Tests/Stripe?ref_type=heads).
+
+What we will be covering on this post:
+
+1. How to setup Stripe integration to sell like a Pro
+2. Recap on how to authenticate users into your Flask Apps
+3. Using Flask as a simple CMS for Astro Themes
+4. Configure subdomains for Cloudflare as per Flask 
 
 ## Stripe
 
@@ -199,6 +206,8 @@ If you have done everything properly, you can get this kind of user journey in p
 
 ![alt text](/blog_img/entrepre/webify/webify-logto-login.png)
 
+> If you want the [google](https://console.cloud.google.com/auth) signin/up, you will need a Logto Subscription as seen [here](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication)
+
 ![alt text](/blog_img/entrepre/webify/wibify-logto-customdomain.png)
 
 Which is the result of:
@@ -215,6 +224,37 @@ ping webify.jalcocertech.com
 ```
 
 ![Flask Webify Working via Cloudflare Tunnels](/blog_img/entrepre/webify/webify-logto-loggedin.png)
+
+## Flask x SSG Themes
+
+How about making the user select the desired theme for its website.
+
+### Astro Themes
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docplanner-web-migration/" title="Astro Theme 101 for Webifyer" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="For a psycology centered portfolio | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/morita-web" title="Astro Theme x Webifyer Sample" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github of a sample first 10 websites to combine with Webifyer" >}}
+{{< /cards >}}
+
+
+
+
+## Choosing a Domain
+
+In this case it will be a **sub**domain.
+
+And we will be needing from Cloudflare:
+
+```py
+CLOUDFLARE_API = 'https://api.cloudflare.com/client/v4'
+CLOUDFLARE_API_TOKEN = os.getenv('CLOUDFLARE_API_TOKEN')
+CLOUDFLARE_ZONE_ID = os.getenv('CLOUDFLARE_ZONE_ID')
+DOMAIN = os.getenv('CLOUDFLARE_DOMAIN')  # e.g., jalcocertech.com
+```
+
+### Automatic DNS Setup
+
+So how about choosing that subdomain, and getting it configured on the backend to point properly?
 
 ---
 

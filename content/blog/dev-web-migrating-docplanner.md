@@ -2,7 +2,7 @@
 title: "Customizing a Web for Mental Health Care"
 date: 2024-09-29
 draft: false
-tags: ["dev"]
+tags: ["dev","Website","SSG","Firecrawl"]
 description: 'From DocPlanner to owning a responsive Website with Astro. The joruney of a psychologist'
 url: 'docplanner-web-migration'
 ---
@@ -20,7 +20,7 @@ Competitors / The initial site:
 * Chosen Domain: `psikolognevinkeskin.info`
 
 {{< callout type="warning" >}}
-Currently paying **80 USD a MONTH** for that website (and...marketplace)
+Currently paying **80 USD a MONTH** for that website *(and...marketplace)*
 {{< /callout >}}
 
 
@@ -129,7 +129,9 @@ But actually, **FireCrawl provides markdown**, ready for LLMs:
 
 And time to translate. Yea, the original site its in turkish, and initially I went the [googletranslation](https://pypi.org/project/googletrans/#history) way, but the pkg is outdated and i got conflicts with httpx.
 
-Time to try [deep_translator](https://pypi.org/project/deep-translator/). And [the test](https://github.com/JAlcocerT/Scrap_Tools/blob/main/FireCrawl/Z_UseCase1-Nevin/firecrawl_output_parsertransdeepL.py) went fine.
+Time to try [deep_translator](https://pypi.org/project/deep-translator/). 
+
+And [the test](https://github.com/JAlcocerT/Scrap_Tools/blob/main/FireCrawl/Z_UseCase1-Nevin/firecrawl_output_parsertransdeepL.py) went fine.
 
 {{< callout type="info" >}}
 FireCrawl can be integrated with: [CrewAI](https://fossengineer.com/ai-agents-crewai/), LangChain, [Flowise](https://fossengineer.com/selfhosting-flowise-ai/), DifyAI, Zapier...
@@ -147,7 +149,7 @@ So I proposed this as a [landing single pager](https://github.com/mhyfritz/astro
 
 
 
-{{< details title="Testing Proposed Astro Themes 📌" closed="true" >}}
+{{< details title="Testing Proposed Astro Themes | Morita Web WithAstro Astro Theme 📌" closed="true" >}}
 
 ```sh
 git clone https://github.com/withastro/astro
@@ -159,7 +161,6 @@ npm run dev
 
 Everything worked, so i created this [repo for the project](https://github.com/JAlcocerT/morita-web)
 
-
 ```sh
 npm run build
 npm install -g serve #serve with npm
@@ -170,13 +171,22 @@ serve -s dist #http://localhost:3000
 
 And I used [Cloudflare together with github](https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/), for the demo deployment.
 
-The result was available, after few minutes here: <https://morita-web.pages.dev/>
+---
 
 ## Conclusions
-
 
 Other THemes for Doctors:
 
 1. https://github.com/cssninjaStudio/dokto 
 2. https://github.com/mhyfritz/astro-landing-page
 3. https://github.com/withastro/astro/tree/main/examples/portfolio
+
+**The final result**: Withastro/astro the example portfolio theme was the selected one for this case!
+
+```sh
+npm create astro@latest -- --template portfolio
+```
+
+The result was available, after few minutes here: <https://morita-web.pages.dev/>
+
+![Sample Web Result](/blog_img/web/WebsSnapshots/Web_Nevin.png)

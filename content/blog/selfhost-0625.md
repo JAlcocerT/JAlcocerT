@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting - 1st Half 2025 "
-date: 2025-06-22T01:20:21+01:00
+date: 2025-06-27T01:20:21+01:00
 draft: false
 tags: ["HomeLab","Authentication","P2P","Traefik"]
 description: 'Programatic Https for all services and docker stacks'
@@ -161,6 +161,9 @@ https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/
 Filebrowser dev has been abandoned and for me it was still a thing to combine it with PiGallery2.
 
 But now we have filebrowser quantum!
+
+Also, ive been tinkering a lot with authentication via Logto
+
 
 ---
 

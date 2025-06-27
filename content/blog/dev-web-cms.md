@@ -4,7 +4,7 @@ date: 2025-05-18T22:20:21+01:00
 draft: false
 description: "UI/X for customizing SSGs. Keystatic, Frontmatter and others. Combined with PostHog/OpenReplay for Product Analytics."
 url: 'cms-for-static-websites'
-tags: ["Web","CMS","Entrepreneur"]
+tags: ["Web","CMS","Entrepreneur","FrontMatter"]
 ---
 
 Lately I have added some [upgrades](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) (via [telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot)), so that whenever a customer sends new photos, they are synced to its photo centered repo.

@@ -7,6 +7,8 @@ description: 'Using (Python) Reflex framework to display Data. Tested with Real 
 url: 'tinkering-with-reflex'
 ---
 
+## What's Reflex?
+
 Reflex is another way to create [WebApps with Python](https://reflex.dev/blog/2024-12-20-python-comparison/).
 
 It is based on **[React](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#react)** and Chakra UI for the frontend, and FastAPI and SQLAlchemy for the backend.
@@ -19,6 +21,8 @@ I think Reflex (exPicone), should be in between Streamlit and Flask in terms of 
     * https://github.com/reflex-dev/templates
     * Like this BA sample app: https://build.reflex.dev/gen/28194790-f5cc-4625-bd30-cf2693890e08/
     * Or this process monitor: https://build.reflex.dev/gen/e6293a74-4a47-44a3-bc1e-8966863feb46/
+
+
 
 ```sh
 pip install reflex
@@ -56,6 +60,8 @@ You can also reach it via you home devices:
 ip a show wlp3s0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1 #192.168.1.8:3001
 #sudo ufw allow 3001/tcp
 ```
+
+### Ideas for Reflex
 
 Why not just building something simple to try out?
 
