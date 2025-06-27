@@ -109,15 +109,13 @@ Now, to create the Docker Image:
 
 {{< dropdown_docker title="Really, Just Get Docker 🐋👇" closed="true" >}}
 
-Or with uv...
-
+Or with uv as package manager...
 
 ```sh
 uv pip install ollama==0.2.1 --index-url https://pypi.org/simple
-
-
 ```
 
+This is your dockerfile:
 
 ```Dockerfile
 FROM python:3.11

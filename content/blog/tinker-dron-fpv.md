@@ -14,6 +14,8 @@ https://github.com/JAlcocerT/DJITelloPy
 
 https://www.youtube.com/watch?v=KSP4o_WCqVs
 
+https://www.youtube.com/watch?v=k7et0oKxXp8
+
 ## BetaFlight
 
 Betaflight is **open-source firmware for flight controllers** used in multirotor aircraft (drones), primarily racing drones and freestyle drones. 

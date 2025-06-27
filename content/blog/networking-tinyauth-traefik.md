@@ -2,7 +2,7 @@
 title: "How to setup TinyAuth x Traefik. Compared to LogTo."
 date: 2025-05-27T23:20:21+01:00
 draft: false
-tags: ["Dev","HomeLab","OAUTH","Cloudflare DNS"]
+tags: ["Dev","HomeLab","OAUTH","Cloudflare DNS","Three Bodies","LogTo","TinyAuth"]
 description: 'TinyAuth  Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
 url: 'testing-tinyauth'
 ---
@@ -351,9 +351,6 @@ The config and traefik yml's are loaded at run time (when container starts or re
 There are many [Plugins](https://plugins.traefik.io/plugins) that cna act as middleware!
 {{< /callout >}}
 
-
-
-
 ---
 
 ## Conclusions
@@ -365,7 +362,7 @@ Traefik has been a really interesting setup, what I like:
 3. Automatic https for homelab private IPs working (also for public ones on VPS's)
 4. The rabbithole of middlewares...like for Authentication purpuses (as we will see below)
 
-With Traefik working, its time to combine it with a sample Flask Web App and **Tinyauth**.
+With Traefik working, its time to combine it with a sample Flask Web App and **Tinyauth**
 
 ### Traefik x TinyAuth x Flask
 
@@ -471,6 +468,10 @@ curl -X GET "https://api.cloudflare.com/client/v4/zones?name=whateveryourdomaini
   -H "Content-Type: application/json" | jq -r '.result[0].id'
 ```
 
+---
+
+## FAQ
+
 ### Logto Authentication
 
 * https://docs.logto.io/quick-starts/python
@@ -481,9 +482,11 @@ You will need an account: https://cloud.logto.io/
 
 And follow these steps:
 
+1. Go to the Apps page and create a new one: https://cloud.logto.io/vurfo6/applications/create
+
 ![LogTo Apps](/blog_img/dev/LogTo/logto-apps.png)
 
-Create an app withing Logto:
+2. Create a Python app withing Logto:
 
 ![LogTo Creating an App](/blog_img/dev/LogTo/logto-create-pythonapp.png)
 
@@ -491,19 +494,36 @@ Be prepared to get familiar with these fields:
 
 ![alt text](/blog_img/dev/LogTo/logto-creating-app.png)
 
+And install the artifacts:
+
+```sh
+uv venv
+source .venv/bin/activate
+
+uv pip install logto # or `poetry add logto` or whatever you use
+#uv pip install -r requirements.txt
+```
+
 Make sure to set proper redirects:
 
 ![alt text](/blog_img/dev/LogTo/logto-app-settings.png)
 
 Like these for the [flask app](https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo):
 
-![alt text](/blog_img/dev/LogTo/logto-redirects.png)
+![Logto Local Redirect](/blog_img/dev/LogTo/logto-redirects.png)
+
+![LogTo HomeLab Redirect](/blog_img/dev/LogTo/logto-configure-app-redirect.png)
+
+Optionally, add the custom domain:
+
+![alt text](/blog_img/dev/LogTo/logto-customdomain-redirect.png)
+
 
 If set properly, you will get this kind of middleware from LogTo, when tyring to signin to your app:
 
 ![alt text](/blog_img/dev/LogTo/logto-middleware.png)
 
-Which allow us to verify emails:
+Which allow us to verify emails: https://cloud.logto.io/vurfo6/connectors/passwordless
 
 ![alt text](/blog_img/dev/LogTo/logto-email-verif.png)
 
@@ -511,10 +531,78 @@ And which you can customize further, with your logo etc:
 
 ![LogTo Email verification ](/blog_img/dev/LogTo/logto-signin-up-settings.png)
 
-So that it looks like so:
+So that the sign in/up experience looks like so:
 
-![alt text](/blog_img/dev/LogTo/logto-branded-signin.png)
+![LogTo Brand UI/X](/blog_img/dev/LogTo/logto-branded-signin.png)
 
-Updating the domain:
+> You can also customize it as per https://docs.logto.io/customization/bring-your-ui
 
-![alt text](/blog_img/dev/LogTo/logto-custom-domain.png)
+**To bring the information to the UI of the signed in email, you can try with Webhooks** https://cloud.logto.io/vurfo6/webhooks
+
+Because this is cool
+
+![alt text](../../static/blog_img/dev/LogTo/logto-sample-signedIN.png)
+
+But how to know who's actually in?
+
+You will need a:
+
+![alt text](/blog_img/dev/LogTo/logto-webhooks.png)
+
+```sh
+LOGTO_WEBHOOK_SECRET=your-very-secret-value
+```
+
+And create the webhook: Go to your Logto Admin Console → Developer → Webhooks.
+
+With url: http://192.168.1.11:5088/logto-webhook
+
+> And copy the Signing key
+
+After a user signs in, signs up, or triggers any selected event, Logto will POST a JSON payload to your /logto-webhook endpoint.
+Check the logto_webhook_events.log file in your project directory to see the events.
+
+
+To test a webhook from LogTo console, they should be able to send requests:
+
+```sh
+#this wont receive it
+#curl -X POST http://192.168.1.11:5088/logto-webhook -d '{}' -H 'Content-Type: application/json'
+```
+
+So be prepared to use Cloudflare Tunnels or any other form of exposing your app: 
+
+![alt text](/blog_img/dev/LogTo/logto-cloudflare-tunnels.png)
+
+> I Added a new tunnel as http to `logto-webhook-receiver:5088` which goes to https://webhooks.jalcocertech.com/
+
+```sh
+ping webhooks.jalcocertech.com
+```
+
+From that moment, when i hit the test webhook via logtoUI, at least I was getting these 401:
+
+![alt text](/blog_img/dev/LogTo/logto-webhook-tests.png)
+
+And then:
+
+```sh
+#source .env
+curl -X POST https://webhooks.jalcocertech.com/logto-webhook \
+  -H 'Content-Type: application/json' \
+  -H 'X-Logto-Signature: ${LOGTO_WEBHOOK_SECRET}' \
+  -d '{"test":123}'
+```
+
+By pointing the sample flask app to cloudflare tunnel as well: https://flask.jalcocertech.com/
+
+
+**Updating the domain** for a custom domain with Logto will look like: https://cloud.logto.io/vurfo6/tenant-settings/domains
+
+![LogTo Custom Domain](/blog_img/dev/LogTo/logto-custom-domain.png)
+
+Example: https://auth.jalcocertech.com/sign-in
+
+**Configuring social signin** for Logto: https://cloud.logto.io/vurfo6/connectors/social
+
+![alt text](/blog_img/dev/LogTo/logto-socialsignin.png)

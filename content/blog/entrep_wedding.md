@@ -1,5 +1,5 @@
 ---
-title: "Just shipping"
+title: "Just shipping and Stripping"
 date: 2025-06-04T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS"]
@@ -9,14 +9,20 @@ url: 'wedding-photo-galleries'
 
 Its been a while since I was helping on [this wedding](https://jalcocert.github.io/JAlcocerT/software-for-weddings/)
 
-All was about some software setup on a VPS:
+{{< youtube "Y0AOGLRC7h4" >}}
+
+<!-- https://youtube.com/shorts/Y0AOGLRC7h4 -->
+
+It was all about some software setup on a VPS:
 
 * [Hetzner](https://www.hetzner.com/cloud/)
 * [Digital Ocean](https://www.digitalocean.com/pricing) 
 * GCS - https://cloud.google.com/storage/pricing
 * Any of the VPS covered [here](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#faq)
 
-But how to bring this service to more people?
+But how to bring this service to more people and [get paid for it](#stripe)?
+
+This requires proper packaging, quite some additional tech to bring the offer
 
 ## The Offer
 
@@ -241,6 +247,9 @@ You will need some CTAs and clear value proposition:
 * Pictures 360, from every angle
 * Capture the special moments
 
+The webpage should make easy for the prospects to say: *I want that*
+
+Just be prepared to receive many NO's - As the sale starts when the client says no :)
 
 {{< details title="With a Domain in Place 📌" closed="true" >}}
 
@@ -288,7 +297,7 @@ https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#updating-dns-records
 
 We will need these artifacts from cloudflare:
 
-1. APi Token
+1. API Token
 
 ![Cloudflare UI API Tokens](/blog_img/entrepre/wedding/cf/cf-api-tokens.png)
 
@@ -1069,7 +1078,7 @@ Recently I was reading about [Pricing strategies](https://jalcocert.github.io/JA
 If everything works...
 
 {{< callout type="info" >}}
-Given LTV=Price and virality=0% - For a 75$ price and 22% spent on VPS, **you better get a CAC below ~60$**
+Given LTV=Price, ChurnRate=100%, virality=0% - For a 75$ price and 22% spent on VPS, **you better get a CAC below ~60$**
 {{< /callout >}}
 
 You should get:
@@ -1098,3 +1107,82 @@ If this does not give you a taste of what end to end feels like, nothing will.
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/Flask_SlubnyChwile" title="Flask Back End" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Flask Back End for Weddings" >}}
 {{< /cards >}}
+
+---
+
+## FAQ
+
+### More Tech
+
+#### Gotify
+
+Thanks to [magnus](https://magnus919.com/notes/gotify/)
+
+```yml
+services:
+  gotify:
+    image: ghcr.io/gotify/server:2.6
+    restart: always
+    ports:
+      - 6886:80 # Maps container port 80 to host port 6886
+    environment:
+      - "GOTIFY_DATABASE_DIALECT=postgres"
+      # Hardcoded database connection details
+      - "GOTIFY_DATABASE_CONNECTION=host=postgres\ port=5432\ user=gotify\ dbname=gotify\ password=YOUR_HARDCODED_PASSWORD\ sslmode=disable"
+      - "GOTIFY_REGISTRATION=false"
+      - TZ=Europe/Rome # Hardcoded timezone
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - gotify:/app/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  postgres:
+    image: 'postgres:17.2'
+    restart: always
+    environment:
+      # Hardcoded PostgreSQL environment variables
+      - POSTGRES_DB=gotify
+      - POSTGRES_PASSWORD=YOUR_HARDCODED_PASSWORD
+      - POSTGRES_USER=gotify
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  gotify:
+  postgres_data:
+```
+
+Send a message via Gotify with:
+
+```sh
+curl -X POST \
+  "http://192.168.1.11:6886/message?token=your_app_generated_token" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "message": "Hello from your server at 192.168.1.11!",
+        "title": "Gotify Test Message",
+        "priority": 5,
+        "extras": {
+          "client::display": {
+            "contentType": "text/markdown",
+            "url": "https://gotify.net"
+          }
+        }
+      }'
+```

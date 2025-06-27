@@ -3,7 +3,7 @@ title: "Want to be an entrepreneur?"
 date: 2025-05-29
 draft: false
 tags: ["Entrepreneuring","Websites","Web Generator"]
-description: 'SelfHosted Product Tools, Analytics and Authentication. The mission of Ghost Websites its just so great.'
+description: 'Building Websites for others. SelfHosted Product Tools, Analytics and Authentication. The mission of Ghost Websites its just so great.'
 url: 'product-tools'
 ---
 
@@ -39,7 +39,7 @@ Or maybe you had some kind of **waiting list** in place.
 
 ## Motivation
 
-Recently I got to [read a blog](https://john.onolan.org/12/?ref=selfh.st) about the CEO of [ghost](https://github.com/TryGhost/Ghost)
+Recently I got to [read a blog](https://john.onolan.org/12/?ref=selfh.st) about the **CEO of [ghost](https://github.com/TryGhost/Ghost)**
 
 {{< details title="Ghost Post Summary 📌" closed="true" >}}
 
@@ -233,9 +233,11 @@ I was playing around with [LogTo](https://logto.io/) few months ago, together wi
 
 But I did not quite manage to get where I wanted.
 
-![alt text](../../static/blog_img/apps/logto-auth.png)
+![LogTo Authentication](/blog_img/apps/logto-auth.png)
 
 Just recently...I got some inspiration, while doing [this post](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication).
+
+And I can confirm that it works great with Flask Apps, [like the 3body webapp](https://github.com/JAlcocerT/ThreeBodies).
 
 ### Product First
 

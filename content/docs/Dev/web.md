@@ -53,6 +53,8 @@ I mean, with: HUGO, Astro, NodeJS, jekyll...
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101" >}}
 {{< /cards >}}
 
+https://magnus919.com/notes/embed-mastodon-shortcode/
+
 And if you are new to Websites, do it (The Web [Deployment](#select-the-deployment-method)) with [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) to get a free subdomain with it.
 
 > If you come from a Data Analytics domain and this sounds too far out of reach.

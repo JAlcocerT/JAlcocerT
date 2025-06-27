@@ -693,6 +693,8 @@ There are 2 kind of knowledge you can have:
 * Declarative - To know that something is possible
 * Procedural - To know how to do something
 
+![alt text](/blog_img/DA/agile.png)
+
 {{< details title="A T-shaped individual has 📌" closed="true" >}}
 
 * **A deep specialization in one area** (the vertical bar of the "T").

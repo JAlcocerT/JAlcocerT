@@ -106,7 +106,13 @@ So that the main `app.py` can be very simple/modular and clean.
 
 ### The Data Source
 
-This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/) based. That's it!
+This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/) based. 
+
+Im aware that there are many APIs around: https://github.com/public-apis/public-apis
+
+https://www.youtube.com/watch?v=aUtFn-qS7Xk
+
+But...That's it!
 
 > Less is more
 

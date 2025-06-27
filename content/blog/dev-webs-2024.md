@@ -227,7 +227,7 @@ Like we did at the **Social Media Project!**
 
 
 * **Automatic Invoices**
-  * With Stripe as payment gateway, they create the invoices for your product/services automatically
+  * With [Stripe as payment gateway](https://gitlab.com/fossengineer1/cv-check/-/tree/main/Z_Tests/Stripe?ref_type=heads), they create the invoices for your product/services automatically
   * There are some project to [create invoices with open software](https://fossengineer.com/open-source-invoice-creator/) - **Serverless Invoices** worked great for me!
 
 

@@ -654,6 +654,8 @@ Aka a Paywall.
 
 Which resonates with SaaS.
 
+And I [tinkered](https://gitlab.com/fossengineer1/cv-check/-/tree/main/Z_Tests/Stripe?ref_type=heads) with this [with the CV-CreAItor here](https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_Auth_Ways/Z_Auth_Stripe.py?ref_type=heads)
+
 
 ## Deploy Reflex
 

@@ -298,3 +298,5 @@ https://en.wikipedia.org/wiki/Fiat_Ducato
 * [Park4Night](https://park4night.com/en/search?lat=52.372756486328726&lng=4.893615245819092&z=15)
 
 * [Trick1](https://www.kartamultisport.pl/en/multisport/search-for-facilities/#/@51.8283438,19.7351276,10z?cards=1&categories=3)
+
+You might want to have [a look to portable batteries](https://www.reddit.com/r/camping/comments/rujbie/portable_power_station/)

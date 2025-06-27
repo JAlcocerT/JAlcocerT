@@ -2,7 +2,7 @@
 title: "The new next thing - Model Context Protocol"
 date: 2025-04-24T23:20:21+01:00
 draft: false
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Gen-AI","Python","Dev","Context7"]
 description: 'Reviewing how MCP protocol works. From LangGraph to OpenAI Agents. Example with: MCP Server Streamlit with Ollama + Windsurf Context7 MCP'
 url: 'ai-understanding-mcp-framework'
 ---
@@ -488,6 +488,7 @@ server_params = StdioServerParameters(
 
 ![Streamlit Ollama MCP](https://github.com/JAlcocerT/LLaMa-MCP-Streamlit/blob/main/screenshot/streamlit-ollama-mcp.png)
 
+As seen with the 
 
 ![Streamlit MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat/raw/main/streamlit-multichat.png)
 
@@ -771,9 +772,9 @@ Now, find the libraries that you want to use: https://context7.com/?q=reflex or 
 
 You can use Context7 MCP on windsurf, together with its new [plan feature](https://docs.windsurf.com/windsurf/cascade/planning-mode):
 
-![alt text](/blog_img/GenAI/aidocs/windsurf-plan-mcp.png)
+![Windsurf Plan interacting with MCP Context7](/blog_img/GenAI/aidocs/windsurf-plan-mcp.png)
 
-Example usage:
+**Example usage of Context7:**
 
 ```txt
 Using the  context7 MCP tool. {"libraryName": "reflex python"}  updated docs, can you createa very simple python reflex app called real_estate_simply that given the interest rate, years and amount of loan, we will have a table on whats to be paid each month?
