@@ -505,7 +505,7 @@ uv pip install logto # or `poetry add logto` or whatever you use
 #uv pip install -r requirements.txt
 ```
 
-Make sure to set proper redirects:
+Make sure to **set proper redirects**:
 
 ![alt text](/blog_img/dev/LogTo/logto-app-settings.png)
 
@@ -515,11 +515,13 @@ Like these for the [flask app](https://github.com/JAlcocerT/ThreeBodies/tree/mai
 
 ![LogTo HomeLab Redirect](/blog_img/dev/LogTo/logto-configure-app-redirect.png)
 
-Optionally, add the **custom domain to LogTo**: *remember that these will be DNS only if you are using cloudflare*
+Optionally, add the **custom domain to LogTo**:
+
+*remember that these will be DNS only if you are using cloudflare*
 
 ![alt text](/blog_img/entrepre/stripe/logto-custom-dom.png)
 
-You will need to configure DNS records so that:
+You will need to configure DNS records so that they match LogTo expectations:
 
 ![alt text](/blog_img/dev/LogTo/logto-customdomain-redirect.png)
 
@@ -540,7 +542,7 @@ So that the sign in/up experience looks like so:
 
 ![LogTo Brand UI/X](/blog_img/dev/LogTo/logto-branded-signin.png)
 
-And also very interesting config for: email, terms and conditions, policy...
+And also very **interesting config** for: email, terms and conditions, policy, tick box before entering...
 
 ![alt text](/blog_img/entrepre/stripe/logto-tnc-policy.png)
 

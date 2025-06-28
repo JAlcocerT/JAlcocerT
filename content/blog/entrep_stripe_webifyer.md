@@ -3,7 +3,7 @@ title: "What are you selling?"
 date: 2025-06-03T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Auth","Web","Flask","Webhooks","LogTo"]
-description: 'Stripe 101. Together with LogTo into a Flask WebApp for selling and editing SSG powered websites.'
+description: 'Stripe 101. Together with LogTo into a Flask WebApp as Webifyer. Selling Themes and editing capabilities for SSG powered websites.'
 url: 'using-stripe-with-flask'
 ---
 
@@ -279,6 +279,11 @@ You have learn how to:
 
 The flows assume the you want to login and give the signup as option (like most apps do)
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication" title="LogTo 101" image="/blog_img/entrepre/stripe/logto-tnc-policy.png" subtitle="Using Logto with Flask WebApp | Post" >}}
+{{< /cards >}}
+
+
 2. Get Stripe API working inside the flask App with a DB and webhooks for updates
 
 OpenAI or Windsurf are also using stripe to charge you
@@ -347,6 +352,18 @@ Like this one: https://app.formbricks.com/s/cmcg5qxve55q0ww01wqc2jdo7
 {{< callout type="info" >}}
 With the last method, you can customize via FormBricks when the pop-up appears, to show to how many users, when to close it...all without existing flask
 {{< /callout >}}
+
+The result can look like so (and its also great on phone):
+
+```sh
+uv run python ./Z_Tests/Formbricks/flask-umami-formbricks-v3.py #working v3 with formbricks embedded via html and also umami
+```
+
+![alt text](/blog_img/entrepre/webify/flask-formbricks-umami.png)
+
+**Just mind the difference of link vs app**: for Flask, the app version + html embedd was my go to
+
+![alt text](/blog_img/entrepre/webify/formbrick-link-vs-app.png)
 
 ---
 
