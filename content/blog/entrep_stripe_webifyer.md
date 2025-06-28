@@ -1,8 +1,8 @@
 ---
-title: "What are you selling?"
+title: "What are you selling? Webify"
 date: 2025-06-03T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Auth","Web","Flask","Webhooks","LogTo"]
+tags: ["Entrepreneuring","Auth","Flask","Webhooks","LogTo","Stripe","Formbricks"]
 description: 'Stripe 101. Together with LogTo into a Flask WebApp as Webifyer. Selling Themes and editing capabilities for SSG powered websites.'
 url: 'using-stripe-with-flask'
 ---
@@ -303,6 +303,7 @@ CMD ["gunicorn", "logto-stripe-app-v5prod:app", "-b", "0.0.0.0:5088"]
 
 It is designed to efficiently serve your app to many users at once, with support for multiple worker processes and better handling of concurrent requests than Flask’s built-in server.
 
+4. Plugging [Umami](#adding-umami-web-analytics-to-flask) to the full Flask Routes and [in-App Formbricks](#adding-formbricks-to-flask)
 
 {{< callout type="info" >}}
 I would not have managed to do this without containers and [Cloudflare Tunnels](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/)
@@ -312,6 +313,7 @@ I would not have managed to do this without containers and [Cloudflare Tunnels](
 ### Adding Umami Web Analytics to Flask
 
 * https://github.com/ImShyMike/Flask-Umami
+* https://pypi.org/project/Flask-Umami/
 
 Add your new website to [Umami](https://fossengineer.com/selfhosting-umami-with-docker/): with domain without http/s like: `flask.jalcocertech.com`
 
@@ -353,17 +355,43 @@ Like this one: https://app.formbricks.com/s/cmcg5qxve55q0ww01wqc2jdo7
 With the last method, you can customize via FormBricks when the pop-up appears, to show to how many users, when to close it...all without existing flask
 {{< /callout >}}
 
-The result can look like so (and its also great on phone):
+**The result of that formbricks html embed** can look like so (and its also great on phone):
 
 ```sh
 uv run python ./Z_Tests/Formbricks/flask-umami-formbricks-v3.py #working v3 with formbricks embedded via html and also umami
 ```
+
+> You will need to get the `environment_id` from Formbricks UI.
 
 ![alt text](/blog_img/entrepre/webify/flask-formbricks-umami.png)
 
 **Just mind the difference of link vs app**: for Flask, the app version + html embedd was my go to
 
 ![alt text](/blog_img/entrepre/webify/formbrick-link-vs-app.png)
+
+
+### T&C and Privacy
+
+Never forget to add such records into your SaaS
+
+![alt text](/blog_img/entrepre/webify/flask-terms-privacy.png)
+
+You can use the static routes so that any user registering, will have to accept that agree with these conditions as per LogTo.
+
+### OG for Flask
+
+
+Add Open Graph meta tags to your HTML <head> on the landing page:
+
+```html
+<meta property="og:title" content="WebifAI: The Website you deserve is just 1 min ahead of you">
+<meta property="og:description" content="A blueprint Flask WebApp to authenticate via Logto and Sell via Stripe.">
+<meta property="og:image" content="https://yourdomain.com/static/Gemini_Generated.jpeg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com/">
+```
+
+Replace https://yourdomain.com/ with your actual domain.
 
 ---
 
