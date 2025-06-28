@@ -2,7 +2,7 @@
 title: "Web Apps with Python Explained"
 date: 2025-06-20T10:20:21+01:00
 draft: false
-tags: ["Dev","Python","WebApps","Traefik","uv"]
+tags: ["Dev","Python","WebApps","Traefik","uv","Streamlit PoCs"]
 description: 'My favourite ways to build WebApps with Python. From Streamlit and PyGWalker to Reflex.'
 url: 'web-apps-with-python'
 ---
@@ -20,7 +20,7 @@ I first tried [Shiny in R](#shiny-with-r) and then [DASH](#dash), with the trip 
 
 ## WebApps
 
-Lately I have been possitively surprised by the [Streamlit x PyGWalker](#pygwalker-x-streamlit) combo.
+Lately I have been possitively surprised by the [Streamlit x PyGWalker](#pygwalker-x-streamlit) combo, which work great for [PoCs](#conclusions).
 
 But it's time to try something more:
 
@@ -763,6 +763,8 @@ Reflex has a very interesting [Grid Cards](https://reflex.dev/docs/library/layou
 
 #### Flet
 
+If you still have some spare time...
+
 
 {{< details title="More about Flet 📌" closed="true" >}}
 
@@ -778,11 +780,18 @@ Ive been tinkering with [flet here](https://github.com/JAlcocerT/YT-Video-Editio
 
 1. For some PoC, Id stay with [streamlit](#streamlit) as my go to.
 
-You can make generate [Plotly / Mermaid / QRs](https://github.com/JAlcocerT/Streamlit_PoC). Even [ApexChartsJS](https://discuss.streamlit.io/t/new-component-streamlit-apex-charts/18769)!
+You can make generate [Plotly / Mermaid / QRs](https://github.com/JAlcocerT/Streamlit_PoC).
+
+Even [ApexChartsJS](https://discuss.streamlit.io/t/new-component-streamlit-apex-charts/18769)!
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication" title="LogTo 101" image="/blog_img/dev/LogTo/logto-branded-signin.png" subtitle="Using Logto as Flask Web App Authentication with a sample 3 body WebApp | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ApexCharts..." >}}
+{{< /cards >}}
 
 ![Streamlit Funnel](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
 
-2. 
+2. For the auth part and something that requires users flows, I would go with Flask, as Reflex is *harder* to vibe code for now.
 
 ### Vibe Coding Python Web Apps
 

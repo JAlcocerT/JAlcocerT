@@ -62,6 +62,11 @@ If you want to use actively AI to develop the dashboarding, consider **LLM x Str
 
 As can also render [mermaidJS](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_mermaid_v2c.py) and [plotly graphs](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_plotly_v1b.py) with your [aissistant, via streamlit webapp](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main)
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ApexCharts..." >}}
+{{< /cards >}}
+
+
 ## Other D&A Tools
 
 * https://github.com/wix-incubator/quix

@@ -11,7 +11,18 @@ It was about time to put this together.
 
 Selling websites 1 by 1 can be good for starters.
 
-But you will want to scale the ideas.
+Even before that, you have this kind of journey:
+
+1. S**k at something
+2. Do it for free
+3. Repeat n times
+4. Get better
+5. Start $
+6. Swap free for $
+
+As demand can grow when you get better at something, you will need to increase the supply.
+
+As your time is limited, you will want to scale the ideas **with tech**:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication" title="LogTo 101" image="/blog_img/dev/LogTo/logto-branded-signin.png" subtitle="Using Logto as Flask Web App Authentication with a sample 3 body WebApp | Post" >}}
@@ -255,6 +266,87 @@ DOMAIN = os.getenv('CLOUDFLARE_DOMAIN')  # e.g., jalcocertech.com
 ### Automatic DNS Setup
 
 So how about choosing that subdomain, and getting it configured on the backend to point properly?
+
+---
+
+## Conclusions
+
+This was quite a ride.
+
+You have learn how to:
+
+1. Get Flask working with Logto https://authentication.jalcocertech.com/ or https://oxa37q.logto.app/sign-in
+
+The flows assume the you want to login and give the signup as option (like most apps do)
+
+2. Get Stripe API working inside the flask App with a DB and webhooks for updates
+
+OpenAI or Windsurf are also using stripe to charge you
+
+Normally you have a billing section in the web app that redirects to the logged in user to its stripe related info on subscriptions
+
+Example: https://billing.stripe.com/p/session/live_YWNjdF8xTlJsomethingmorehere
+
+![alt text](/blog_img/entrepre/webify/stripe-windsurf-sample.png)
+
+3. Concurrency for Flask apps is better via Gunicorn and it can be included in the Dockerfiles like:
+
+```dockerfile
+#CMD python3 logto-stripe-app-v5prod.py
+CMD ["gunicorn", "logto-stripe-app-v5prod:app", "-b", "0.0.0.0:5088"]
+```
+
+It is designed to efficiently serve your app to many users at once, with support for multiple worker processes and better handling of concurrent requests than Flask’s built-in server.
+
+
+{{< callout type="info" >}}
+I would not have managed to do this without containers and [Cloudflare Tunnels](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/)
+{{< /callout >}}
+
+
+### Adding Umami Web Analytics to Flask
+
+* https://github.com/ImShyMike/Flask-Umami
+
+Add your new website to [Umami](https://fossengineer.com/selfhosting-umami-with-docker/): with domain without http/s like: `flask.jalcocertech.com`
+
+Ive put that together into the `./Z_Tests/Umami` folder of the repo.
+
+```sh
+uv run python flask-umami-101.py 
+```
+
+Got happily surprised to see it working also on the local network (as well as via https with CF tunnels)
+
+![alt text](/blog_img/entrepre/webify/flask-umami.png)
+
+![alt text](/blog_img/entrepre/webify/flask-tc-sample.png)
+
+### Adding Formbricks to Flask
+
+So if you have created Formbricks links, like this one: https://app.formbricks.com/s/cmc6gnjc1bx06xg01xizn1g1y
+
+You know you can embedd them:
+
+![alt text](/blog_img/entrepre/webify/formbricks-link-embed.png)
+
+
+But it will work better if you select the webapp category (embedded into the product):
+
+![alt text](/blog_img/entrepre/webify/formbricks-webapp-survey.png)
+
+![alt text](/blog_img/entrepre/webify/formbrick-webapp.png)
+
+
+And then: https://formbricks.com/docs/xm-and-surveys/surveys/website-app-surveys/quickstart
+
+Like this one: https://app.formbricks.com/s/cmcg5qxve55q0ww01wqc2jdo7
+
+![alt text](/blog_img/entrepre/webify/formbrick-html-snippet-for-flask.png)
+
+{{< callout type="info" >}}
+With the last method, you can customize via FormBricks when the pop-up appears, to show to how many users, when to close it...all without existing flask
+{{< /callout >}}
 
 ---
 

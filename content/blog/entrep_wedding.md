@@ -1,5 +1,5 @@
 ---
-title: "Just shipping and Stripping"
+title: "Just shipping"
 date: 2025-06-04T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS"]
@@ -22,7 +22,32 @@ It was all about some software setup on a VPS:
 
 But how to bring this service to more people and [get paid for it](#stripe)?
 
-This requires proper packaging, quite some additional tech to bring the offer
+This requires proper packaging, quite some additional tech to bring the offer to prospects:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="How to use LogTo for Authenticate users into your flow | Post ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Aissistant" title="How to use Stripe API to give access to features | Post ↗ " >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Flask_SlubnyChwile" title="Wedding Tech" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github to package all the tech for this product" >}}
+{{< /cards >}}
+
+And if you want to go all in into such kind of idea...be aware of the **risks for entrepreneurs**:
+
+```mermaid
+mindmap
+  root((Risk for entrepreneurs))
+    PMF
+    Tech
+    Execution
+```
+
+* PMF (Product-Market Fit) - The "What": *defines what you are offering and what problem you are solving for what audience. Without a clear "what" that resonates, everything else is building on shaky ground. The biggest risk for entrepreneurs often lies in building something nobody wants*
+* Tech - The "How": software, hardware, or a proprietary process...
+* Execution - The "Doing" / "Making it Happen": Actual work to make it a reality and sustain it. Risks in execution include poor team dynamics, inability to raise funds, failing to hit milestones, losing focus, or simply not having the grit to push through challenges
+
+
 
 ## The Offer
 
@@ -32,14 +57,21 @@ So...its very simple:
 * They like photos
 * A lot of photos are *lost* in guests phones
 
+{{< callout type="info" >}}
+Or not that simple. Make sure to iterate with LLMs to get feedback on your users flows and value proposition!
+{{< /callout >}}
+
 
 {{< details title="Total Addressable Market | TAM Guesstimation 📌" closed="true" >}}
 
-Let's make a guesstimate of the potential revenue for a QR and photo storage service for weddings in Poland. This will involve making several assumptions, as exact market data for such a niche service is scarce.
+Let's make a guesstimate of the potential revenue for a QR and photo storage service for weddings in Poland.
+
+This will involve making several assumptions, as exact market data for such a niche service is scarce.
 
 1. Total Addressable Market (TAM) - Number of Weddings per Year
 
 * **Data:** According to Notes from Poland, the number of marriages in Poland dropped to just over **140,000 in 2020** from **180,000 in 2019**, with a general decline since a high of almost 260,000 in 2008. More recent data from Poland Insight (May 2024) notes a "demographic downturn" and a shrinking base of potential newlyweds, suggesting the number might still be lower than pre-pandemic highs.
+
 * **Assumption:** Let's take a cautious estimate for current weddings, considering the decline and potential for stabilization. We'll use **160,000 weddings per year** as a mid-point estimate between the lower pandemic number and the 2019 figure.
 
 2. Market Penetration - Weddings that will use the service
@@ -126,11 +158,11 @@ Breakdown and Considerations for the Funnel:
 
 The kind of idea that when you ask and people say that they'd buy it (*with other's money, for sure*)
 
-And here we are with the solution for that pain.
+And here we are with *the solution for that pain.*
 
 This one is tested *in production* as seen [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings)
 
-Whats required?
+**Whats required?**
 
 1. https://filebrowser.org/configuration/custom-branding or [filebrowser quantum](https://github.com/gtsteffaniak/filebrowser)
 
@@ -139,10 +171,14 @@ Whats required?
 
 2. A Landing [Page](#the-landing-page)
 
-
-
-
 A little AI help on [neuromarketing](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_Neuromkt.py)
+
+
+3. Being clear on the **VALUE PROPOSITION**: dream outcome vs discounts
+
+- Speed/Time: 1 minute
+- Effort: Low
+- % success / Chances that it will happen: Free tiers / money back...
 
 
 {{< details title="Neuromarketing 101 | Conversion optimization 📌" closed="true" >}}
@@ -241,8 +277,25 @@ Should be pointing to the DNS you queried via Flask UI.
 
 ### The Landing Page
 
+{{< details title="First Impressions matter | Above the Fold 📌" closed="true" >}}
 
-You will need some CTAs and clear value proposition:
+The content of a web page that is visible before scrolling is commonly called: Above the fold
+
+This term originates from newspapers, where the most important content was placed above the physical fold of the paper.
+
+On the web, "above the fold" refers to everything visible in the browser window before the user scrolls down.
+
+Other ways people might refer to this:
+
+"Initial viewport"
+"First screen"
+"Hero section" (if it's a prominent area at the top)
+
+{{< /details >}}
+
+This is a great example: https://www.acquisition.com/ Which btw they do some changes into the mobile app version.
+
+You will need some **CTAs and clear value proposition**:
 
 * Pictures 360, from every angle
 * Capture the special moments
@@ -433,14 +486,32 @@ I was also very happy with Hetzner performance and pricing thought:
 
 Or in other words: *How to Get Strangers To Want To Buy Your Stuff* As i learnt [here](https://www.acquisition.com/training/leads16)
 
-As a friend recommended me [last year](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/): it's all about leads and offers
+As a friend recommended me [last year](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/): *it's all about leads and offers*
+
+
 
 ### The Lead Magnet
 
+**The trick about leads magnet**: free stuff to potential customers / qualified prospects
 
-{{< details title="Types of Lead Magnets |  📌" closed="true" >}}
+1. Then, get feedback from them
+2. Improve the product
+3. Charge $ to people like them
 
-You've listed some great examples of lead magnets! They broadly fall into categories, and your "show a problem and solve it" concept is a fantastic underlying *strategy* that applies to many of them.
+How to define a potential client?
+
+Try with **BANT** logic:
+
+* **B**udget
+* **A**uthority
+* **N**eed
+* **T**imming
+
+If those apply, you get the free thing and we are happy to get your feedback
+
+{{< details title="Types of Lead Magnets | Chatting with Gemini about this idea 📌" closed="true" >}}
+
+They broadly fall into categories, and your "show a problem and solve it" concept is a fantastic underlying *strategy* that applies to many of them.
 
 Here's a more comprehensive breakdown of lead magnet types, often categorized by what they offer or their format:
 
@@ -626,6 +697,8 @@ This approach leverages the immediate utility of a personalized website while st
 
 
 From the options we've discussed, a **personalized wedding website with a free tier for photo hosting** is by far the most compelling lead magnet for your specific business model.
+
+
 
 {{< details title="Ask Gemini for opinion... | Customizing your Lead Magnet 📌" closed="true" >}}
 
@@ -1081,7 +1154,7 @@ If everything works...
 Given LTV=Price, ChurnRate=100%, virality=0% - For a 75$ price and 22% spent on VPS, **you better get a CAC below ~60$**
 {{< /callout >}}
 
-You should get:
+You could build **some KPIs** to help you:
 
 - A very Clear view of your CAC after few repetitions
 - Very clear picture of your LTV: assuming that people will just buy once makes things easy
@@ -1089,13 +1162,19 @@ You should get:
 - Your infra costs are very well defined, a sper your selected [VPS](#the-vps)
 - Some of the eyes that saw your ad and product, would hopefully buy your [pricing strategy](https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy)
 
-Do the math and get:
+**Do the math and get:**
 
-- Some revenue: EBITDA (?)
+- Some revenue metrics: EBITDA (?)
 - Net profit after all the expenses and so on
+    - % Gross Margin
 - NRR (Net revenue retention)
+    - % Revenue Retention, % Churn Rate...
 
-Create your funnel:
+Some people say that if you get LTV/CAC >3 that you should forget about [Stocks](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp) or [Real Estate](https://jalcocert.github.io/JAlcocerT/real-estate-website/).
+
+Others, look into LTGP *the life time to gross profit*
+
+> Create your funnel and a user journey map to see where the friction is!
 
 ---
 
