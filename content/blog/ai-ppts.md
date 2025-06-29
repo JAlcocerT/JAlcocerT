@@ -289,6 +289,13 @@ PlantUML is a very useful tool, especially for those working in software develop
 
 In essence, PlantUML simplifies the creation of diagrams by using a text-based approach, and being open source, it is a very valuable tool.
 
+### SliDev Containerized
+
+You can build your presentation inside a container: https://github.com/JAlcocerT/slidev/blob/main/README.md
+
+![alt text](/blog_img/dev/slidev-presenter-container.png)
+
+And the regular view, `/presenter` `/overview` modes will work the same!
 
 ### AI Powered SliDev
 

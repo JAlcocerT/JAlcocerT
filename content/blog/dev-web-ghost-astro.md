@@ -75,9 +75,9 @@ GHOST_CONTENT_API_URL=http://your-ghost-url:2368
 GHOST_CONTENT_API_KEY=your_content_api_key
 ```
 
-4. Create your @utils/ghost-client, like this one
+4. Create your @utils/ghost-client, like [this one](https://github.com/JAlcocerT/taxi-web/blob/main/astro-ghost-sample/morita-ghost/src/utils/ghost-client.js)
 
-5. Install the ghost artifacts
+5. Install the ghost artifacts:
 
 ```sh
 npm install @tryghost/content-api @tryghost/helpers
@@ -85,14 +85,13 @@ npm install @tryghost/content-api @tryghost/helpers
 
 And we are pretty mach ready to go.
 
-See these snippets for reference:
+**See these snippets for reference:**
 
 Get the API Keys. Ive also noticed the [webhook](#ghost-webhooks) part!
 
 ![alt text](/blog_img/web/ghost/ghost-api.png)
 
 Ive got few created posts that are now rendered like so:
-
 
 ```sh
 npm run dev -- --host 0.0.0.0 --port 4321

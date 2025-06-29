@@ -1197,55 +1197,12 @@ If this does not give you a taste of what end to end feels like, nothing will.
 
 Thanks to [magnus](https://magnus919.com/notes/gotify/)
 
-```yml
-services:
-  gotify:
-    image: ghcr.io/gotify/server:2.6
-    restart: always
-    ports:
-      - 6886:80 # Maps container port 80 to host port 6886
-    environment:
-      - "GOTIFY_DATABASE_DIALECT=postgres"
-      # Hardcoded database connection details
-      - "GOTIFY_DATABASE_CONNECTION=host=postgres\ port=5432\ user=gotify\ dbname=gotify\ password=YOUR_HARDCODED_PASSWORD\ sslmode=disable"
-      - "GOTIFY_REGISTRATION=false"
-      - TZ=Europe/Rome # Hardcoded timezone
-    depends_on:
-      postgres:
-        condition: service_healthy
-    volumes:
-      - gotify:/app/data
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/gotify_docker-compose.yml" title="Gotify Setup Docker Config 🐋 ↗" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently" title="Use Gotify together with Internet Speed Tracker | SelfH Post 0525 Post ↗" >}}
+{{< /cards >}}
 
-  postgres:
-    image: 'postgres:17.2'
-    restart: always
-    environment:
-      # Hardcoded PostgreSQL environment variables
-      - POSTGRES_DB=gotify
-      - POSTGRES_PASSWORD=YOUR_HARDCODED_PASSWORD
-      - POSTGRES_USER=gotify
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
 
-volumes:
-  gotify:
-  postgres_data:
-```
 
 Send a message via Gotify with:
 

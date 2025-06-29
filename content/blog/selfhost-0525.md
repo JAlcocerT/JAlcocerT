@@ -289,7 +289,7 @@ As seen on the [benchmarking post](https://jalcocert.github.io/JAlcocerT/benchma
 sudo apt-get install speedtest-cli
 ```
 
-![alt text](/blog_img/Monitoring/eth-vs-wifi.png)
+![Wthernet vs Wifi Connection](/blog_img/Monitoring/eth-vs-wifi.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/InternetQuality/InternetSpeedTracker.yaml" title="InternetSpeedTracker with Docker 🐋 ↗" >}}
@@ -302,7 +302,7 @@ curl 192.168.1.11:8065/api/healthcheck
 ```
 
 {{< callout type="info" >}}
-It has influxDB 2.0 integration, inc ase that you want to use this with Grafana. Also integrations with: tg, webhooks, gotify, ntfy,...
+InternetSpeedTracker has influxDB 2.0 integration, inc ase that you want to use this with Grafana. Also integrations with: tg, webhooks, gotify, ntfy,...
 {{< /callout >}}
 
 

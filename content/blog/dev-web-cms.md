@@ -62,11 +62,16 @@ Not sure if its good or bad news, yet there are a ton of CMS and I just needed o
 
 As you can imagine, there are more than a few Content Management Systems (CMS) available:
 
-0. FrontMatterCMS
+0. [FrontMatterCMS](#frontmatter-cms)
 1. **[KEYSTATICCMS](#keystatic-cms)**
+
 2. [Tina](https://tina.io/)
+
 3. [GHOST + GATSBY](https://ghost.org/docs/jamstack/)
   - Or Ghost x Astro - https://docs.astro.build/en/guides/cms/ghost/
+
+And if you want more ideas...
+
 4. [Strapi](https://jamstack.org/headless-cms/strapi/)
   - Supports **GraphQL** or **RESTful** API.
 5. [Decap CMS (formerly Netlify CMS)](https://decapcms.org/)
@@ -77,9 +82,13 @@ As you can imagine, there are more than a few Content Management Systems (CMS) a
 7. Wordpress x Astro
   - https://docs.astro.build/en/guides/cms/wordpress/
 
-Given your requirements for a **very simple, self-hostable, and totally open-source CMS that works well with Static Site Generators (SSG) and Markdown**, let's filter this list.
+A **very simple, self-hostable, and totally open-source CMS that works well with Static Site Generators (SSG) and Markdown**, let's filter this list.
 
 Many of the options you provided are powerful headless CMS platforms or traditional CMSes, which might be overkill or not align with your "very simple" and "totally open-source" criteria for direct Markdown file management.
+
+
+{{< details title="For Taxies as well | Astro Demo with energy template with JSON content edits! 📌" closed="true" >}}
+
 
 Here are the ones from your list that best fit your criteria, along with why:
 
@@ -118,13 +127,15 @@ Here are the ones from your list that best fit your criteria, along with why:
     * **Open Source:** Yes, totally.
     * **SSG/Markdown:** Designed for this, especially with real-time editing.
 
----
 
 **Why some others are less of a fit for "very simple, self-hostable, totally open source" in *this context*:**
 
 * **Builder.io, ButterCMS, Caisy, CloudCannon, Contentful, Cosmic, Crystallize, DatoCMS, Flotiq, Hygraph, Kontent.ai, microCMS, Prepr CMS, Prismic, Sanity, Storyblok:** These are primarily **headless CMS** solutions. While many are great and have free tiers or open-source components, they are typically cloud-hosted (even if you self-host the backend, it's often more complex than a "very simple" Git-based solution) and manage content via APIs, not directly as Markdown files in your repo (though they can *output* Markdown). They introduce more architectural complexity.
 * **ApostropheCMS, Craft CMS, Drupal, Ghost, KeystoneJS, Payload CMS, Spinal, Statamic, Strapi, StudioCMS, Umbraco, Wordpress:** These are more full-fledged **traditional CMS platforms or API-first CMSes**. While some are open-source and self-hostable, they often come with their own databases, user management, and render pages themselves, or require more significant setup than a simple Git-based CMS. Many can work with SSGs (by acting as a headless backend), but their core design isn't "very simple" in the way a Git-based Markdown CMS is. Ghost is blogging-focused and self-hostable, but still more involved than a simple Git CMS.
 * **Hashnode:** This is a blogging platform, not a self-hostable CMS.
+
+
+{{< /details >}}
 
 **In summary, for "very simple, self-hostable, totally open-source, and works with SSG and Markdown" from your list, focus on:**
 
@@ -134,10 +145,12 @@ Here are the ones from your list that best fit your criteria, along with why:
 * **Keystatic**
 * **Tina CMS**
 
-These are purpose-built for the Git-centric, Markdown-driven static site workflow.
+> These are purpose-built for the Git-centric, Markdown-driven static site workflow.
 
-Let me know if you'd like me to elaborate on any of these, or if you have a specific SSG in mind!
 You're looking for a very specific type of CMS: one that is **simple, self-hostable, totally open-source, and integrates seamlessly with Static Site Generators (SSGs) using Markdown files directly**.
+
+
+{{< details title="Decap vs FrontMatter 📌" closed="true" >}}
 
 Many of the options on your list are powerful, but might be overkill or operate differently than what you're asking for (e.g., they might be cloud-hosted, API-driven headless CMSs, or full-blown traditional CMSs with their own database requirements).
 
@@ -155,11 +168,14 @@ Based on your criteria, here are the top contenders from your list:
     * **Totally Open Source:** Yes.
     * **SSG & Markdown:** Perfect for this. It directly edits the Markdown files that your SSG consumes. It's ideal for developers who want a UI for content but prefer to stay in their editor.
 
+{{< /details >}}
+
+
 ### FrontMatter CMS
 
 As simpler as it gets.
 
-A VSCode extension that get the work done for editing markdown posts!
+A **VSCode extension** that get the work done for editing markdown posts!
 
 * https://frontmatter.codes/
   * https://github.com/estruyf/vscode-front-matter
@@ -179,7 +195,7 @@ npm install frontmatter-markdown-loader --save-dev
 
 You can setu your project just by following these steps (indicate where are your .md posts and thats it):
 
-![alt text](/blog_img/web/frontmatter/frontmatter-setup.png)
+![FrontMatter Setup](/blog_img/web/frontmatter/frontmatter-setup.png)
 
 Now, you will see that frontmatter recognizes all your posts
 
@@ -349,7 +365,7 @@ Think of it like this:
 **API Based vs GIT Based**
 
 {{< callout type="info" >}}
-https://blog.logrocket.com/9-best-git-based-cms-platforms/
+Thanks to this post: https://blog.logrocket.com/9-best-git-based-cms-platforms/
 {{< /callout >}}
 
 **Remember about these *file hosting* free tiers**
@@ -369,7 +385,7 @@ Live edit content on GitHub or your local file system, without disrupting your e
 * Markdown & YAML/JSON based
 * TypeScript API
 * **No database**
-* Markdoc & MDX support
+* Markdoc & **MD/MDX support**
 
 > The Two way editing works!
 

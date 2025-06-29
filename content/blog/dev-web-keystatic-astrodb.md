@@ -117,7 +117,5 @@ Without direct financial disclosures from Automattic, this remains an informed a
 
 If you are looking from CMS, you can have a look to [this post](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites), where I [setup KeystaticCMS](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms)
 
-
-
 * <https://www.opensourcealternative.to/project/Strapi>
     * <https://docs.strapi.io/dev-docs/installation/docker>
