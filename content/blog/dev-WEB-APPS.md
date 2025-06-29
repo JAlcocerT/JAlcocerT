@@ -10,13 +10,17 @@ url: 'web-apps-with-python'
 
 Plain websites are cool.
 
-But if you would need extra functionality, you will come to the webapp domain.
+But if you would need extra functionality, you will come to the *webapp domain*.
 
 I mean: *something more that HUGO shortcodes or Astro components will not handle*
 
 As you can imagine, there are many flavours of web apps.
 
-I first tried [Shiny in R](#shiny-with-r) and then [DASH](#dash), with the trip planner project.
+I first tried [Shiny in R](#shiny-with-r) around 2020-2022
+
+Then [DASH](#dash), with the trip planner project at early 2023, already with some GPT help
+
+Around a year later, was the time to get creative with streamlit.
 
 ## WebApps
 
@@ -313,7 +317,7 @@ The best framework for you depends on your specific needs and preferences. Consi
 
 #### DJANGO
 
-* https://github.com/JAlcocerT/qatrackplus
+* Example: https://github.com/JAlcocerT/qatrackplus
 
 {{< details title="More Python Django 📌" closed="true" >}}
 

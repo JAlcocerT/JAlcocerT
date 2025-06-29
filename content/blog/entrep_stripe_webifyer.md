@@ -248,6 +248,16 @@ How about making the user select the desired theme for its website.
 {{< /cards >}}
 
 
+So I put these one inside the repo folder: `./Astro-Themes`
+
+```sh
+git clone https://github.com/JAlcocerT/morita-web #npm create astro@latest -- --template portfolio
+
+cd ./Astro-Themes/morita-web
+rm -r .git
+```
+
+
 
 
 ## Choosing a Domain

@@ -53,7 +53,20 @@ I mean, with: HUGO, Astro, NodeJS, jekyll...
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101" >}}
 {{< /cards >}}
 
+```sh
+npm run dev -- --host 0.0.0.0 --port 4321
+npm run build
+sudo npm run preview -- --host 0.0.0.0 --port 8080
+npx serve -s dist -l 8080
+sudo python3 -m http.server 80 --directory dist
+
+
+hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.11" --port=1313
+```
+
 https://magnus919.com/notes/embed-mastodon-shortcode/
+
+https://github.com/JAlcocerT/WebGenerAItor/blob/main/docker-compose.yml
 
 And if you are new to Websites, do it (The Web [Deployment](#select-the-deployment-method)) with [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) to get a free subdomain with it.
 

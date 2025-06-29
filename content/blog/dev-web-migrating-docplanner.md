@@ -147,8 +147,6 @@ Both probably an overkill, coming from a single pager.
 
 So I proposed this as a [landing single pager](https://github.com/mhyfritz/astro-landing-page) or this as sth more advance with blog as well, **[portfolio](https://github.com/withastro/astro/tree/main/examples/portfolio)** - Both **MIT Licensed**.
 
-
-
 {{< details title="Testing Proposed Astro Themes | Morita Web WithAstro Astro Theme 📌" closed="true" >}}
 
 ```sh
@@ -190,3 +188,101 @@ npm create astro@latest -- --template portfolio
 The result was available, after few minutes here: <https://morita-web.pages.dev/>
 
 ![Sample Web Result](/blog_img/web/WebsSnapshots/Web_Nevin.png)
+
+There is always the possibility to add **cal.com embedded** or via links CTAs like this one: https://cal.com/jalcocertech/consulting
+
+Also, you can put some **[whatsapp](https://api.whatsapp.com/send/?phone=905421997116&text=Hola%21+Quiero+informaci%C3%B3n&type=phone_number&app_absent=0) bouble** via astro components, as seen [here](https://eltiodelaspapas.com/)
+
+<!-- 
+![Astro Whatsapp component](/blog_img/web/astro-whatsapp-bouble.png) 
+-->
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro" title="Astro Component" image="/blog_img/web/astro-whatsapp-bouble.png" subtitle="Whatsapp x Astro" >}}
+{{< /cards >}}
+
+---
+
+## FAQ
+
+### Docker Artifacts for Astro Websites
+
+```dockerfile
+#https://hub.docker.com/_/node
+# Stage 1: Build the Astro site
+FROM node:22.16-alpine3.22 as builder
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the source code
+COPY . .
+
+# Build the Astro site
+RUN npm run build
+
+# Stage 2: Serve with Nginx
+FROM nginx:alpine
+
+# Copy the built site from the builder stage
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx server
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+```yml
+#version: '3'
+
+services:
+  # Run one of these two Astro services at a time by specifying it directly with the command
+  # e.g., docker-compose up astro-dev astro-prod
+
+  # Astro Development Server
+  astro-dev:
+    image: node:22.16-alpine3.22 #node:18-alpine
+    container_name: astro-dev
+    working_dir: /app
+    ports:
+      - "4324:4321"  # Astro dev server with live changes port - Go to http://localhost:4324/
+    volumes:
+      - /home/jalcocert/WebifAI/Astro-Themes/morita-web:/app #this is a common volume for Astro container to place the .md post
+    command: sh -c "cd /app && npm install && npm run dev -- --host 0.0.0.0"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - project-network
+    tty: true
+    restart: "no"
+
+  astro-prod:
+    image: node:22.16-alpine3.22 #node:18-alpine #docker pull node:22.16-alpine3.22
+    container_name: astro-prod
+    working_dir: /app
+    volumes:
+      - /home/jalcocert/WebifAI/Astro-Themes/morita-web:/app #this is a common volume for Codex container to place the .md post
+    ports:
+      - "8087:4321"  # Changed to match Astro's default port
+    command: >
+      sh -c "cd /app && 
+      npm install && 
+      npm run build && 
+      npx http-server ./dist -p 4321"
+     #check 2 commands for same container (?) 
+    environment:
+      - NODE_ENV=production
+    networks:
+      - project-network
+    restart: "no"
+
+networks:
+  project-network:
+    name: project-documentation-network
+```

@@ -2,12 +2,15 @@
 title: "A/B Testing: Revolutionize Your Optimization Strategy"
 date: 2020-11-27T23:20:21+01:00
 draft: false
-tags: ["Outro"]
-description: 'What it is A/B Testing? Statistical insights and informed decisions that drive conversions'
-summary: 'Explore A/B testing. Learn how to integrate advanced data analysis techniques, uncover insights, and make informed decisions that drive conversions.'
+tags: ["Outro","AB Testing","Product","DSc","AdSense"]
+description: 'What it is AB Testing? Statistical insights and informed decisions that drive conversions'
 url: 'AB-Testing-for-data-analytics'
 math: true
 ---
+
+Explore A/B testing.
+
+Learn how to integrate advanced data analysis techniques, get insights and make informed decisions that drive conversions!
 
 By combining the power of **data-driven experimentation** with advanced analytical techniques, you can revolutionize your **optimization strategy** and achieve impressive results.
 
@@ -29,7 +32,7 @@ A/B testing provides practical tips to help you master this game-changing strate
 
 ## AB Testing - Common Use
 
-A/B testing, also known as split testing or bucket testing, is a method used to compare two different versions of a web page, email, advertisement, or any other marketing material, to determine which one performs better.
+A/B testing, also known as split testing or bucket testing, is a method used to **compare two different versions** of a product, web page, email, advertisement, or any other marketing material, **to determine which one performs better**.
 
 The goal is to identify which version is more effective in driving desired outcomes, such as clicks, conversions, or sign-ups.
 
@@ -168,3 +171,65 @@ Here's how:
 **In summary:**
 
 While the core t-test in A/B testing doesn't directly involve explicit conditional probability calculations, the concept of conditional probability is relevant when analyzing subgroups or when using Bayesian methods for A/B testing. 
+
+### AB with Adsense
+
+If you have ever used adsense *or similar platforms*, you may have run experiments:
+
+![alt text](/blog_img/outro/adsense-101.png)
+
+Here's a breakdown of each metric:
+
+**1. FECHA (DATE)**
+* **What it is:** This column simply shows the specific day or time period for which the data is being reported. "Todo" means "All" or "Total," representing the sum for the entire period shown.
+
+**2. Ingresos estimados (Estimated Earnings)**
+* **What it is:** This is the total estimated revenue you've earned from your AdSense ads for the given date or period. It's an estimate because the final earnings are usually reconciled and finalized later by Google.
+* **Why it's important:** This is your bottom line! It tells you how much money your website or content is generating from ads.
+
+**3. Vistas de página (Page Views)**
+* **What it is:** This metric represents the total number of times your pages (with AdSense ads) were viewed. A single user can generate multiple page views.
+* **Why it's important:** It's a measure of your website's traffic. More page views generally mean more opportunities for ads to be seen and clicked.
+
+**4. RPM pág (Page RPM - Revenue Per Mille / Thousand Page Views)**
+* **What it is:** This is calculated as: `(Estimated Earnings / Page Views) * 1000`. It tells you how much you've earned for every 1,000 page views your site received.
+* **Why it's important:** This is a crucial metric for understanding your monetization efficiency. A higher Page RPM means you're earning more money for the same amount of traffic. It helps you compare the performance of different pages, ad placements, or time periods.
+
+**5. Impresiones (Impressions)**
+* **What it is:** An impression is recorded each time an ad is displayed to a user. This can be slightly different from page views, as a single page might display multiple ads, or some ads might not load if the user scrolls away too quickly.
+* **Why it's important:** It tells you how many times your ads were actually seen by users. It's a measure of ad visibility.
+
+**6. RPM de impresiones (Impression RPM - Revenue Per Mille / Thousand Impressions)**
+* **What it is:** This is calculated as: `(Estimated Earnings / Impressions) * 1000`. It tells you how much you've earned for every 1,000 ad impressions.
+* **Why it's important:** Similar to Page RPM, this measures the efficiency of your ads *per ad unit displayed*. It's a good metric if you want to understand how well your individual ad units are performing.
+
+**7. Visibles Segun Active View (Active View Viewable)**
+* **What it is:** This is the percentage of ad impressions that were considered "viewable" according to Google's Active View criteria. An ad is generally considered viewable if at least 50% of its pixels are on screen for at least one continuous second for display ads, or two continuous seconds for video ads.
+* **Why it's important:** This metric indicates the quality of your ad placements and user engagement. A higher percentage means more of your ads are actually being seen by users, which can positively impact your earnings and attract better advertisers. 
+
+**8. Clics (Clicks)**
+* **What it is:** The total number of times users clicked on your AdSense ads.
+* **Why it's important:** Clicks are a direct indicator of user engagement with your ads. More clicks generally lead to higher earnings.
+
+---
+
+Key Takeaways from Your Data:
+
+* **Total Earnings ("Todo"):** You've earned 165.37 PLN over the period shown.
+* **Traffic:** You've had 3,739 page views in total.
+* **Efficiency:** Your overall Page RPM is 44.23 PLN, and your Impression RPM is 18.27 PLN.
+* **Daily Fluctuations:** You can see how your earnings, page views, and RPMs vary from day to day.
+* **Active View:** Your Active View Viewability hovers around 50-60%, which is decent but always has room for improvement.
+
+What to Look For and Optimize:
+
+* **Trend in Earnings:** Are your earnings generally increasing or decreasing over time?
+* **Page RPM:** Aim to increase this! This means your traffic is being monetized more effectively. You can improve it by:
+    * Optimizing ad placements (where ads appear on your page).
+    * Improving ad sizes.
+    * Creating more engaging content that attracts relevant users and higher-paying advertisers.
+* **Active View Viewable:** A higher percentage means your ads are more likely to be seen. Consider:
+    * Ad placement (are they above the fold or in easily viewable areas?).
+    * Page load speed (slow pages mean ads might not load before users scroll away).
+    * User experience (are users staying on your pages long enough for ads to become viewable?).
+* **Clics:** If clicks are low relative to impressions, it might indicate that ads aren't relevant to your audience or are not engaging enough.

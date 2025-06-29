@@ -1,8 +1,8 @@
 ---
 title: "Stocks with Python"
-date: 2025-06-01T19:20:21+01:00
+date: 2025-06-19T19:20:21+01:00
 draft: false
-tags: ["Python","Streamlit","Flask","RStocks"]
+tags: ["Python","Streamlit","Flask","Reflex","RStocks"]
 description: "A Cooler R/Stocks - This time with Python. And with proper Auth/UIM."
 summary: 'A Cooler R/Stocks - This time with Python. And with proper auth'
 url: 'python-stocks-webapp'
@@ -19,7 +19,14 @@ The project initially, [**source code**](https://gitlab.com/fossengineer1/py_sto
 But then vibe coded it [here](https://github.com/JAlcocerT/Py_Stocks) 💻 
 {{< /callout >}}
 
-If all of this sounds familiar.
+If all of these sounds familiar...
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Reflex_Stocks" title="Reflex Stocks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Reflex Stocks Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Stocks" title="Python Stocks (Streamlit)" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PyStocks Source Code on Github" >}}
+{{< /cards >}}
+
+
 
 It is because it is actually familiar.
 

@@ -151,8 +151,10 @@ https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/
 
 ### In Home Tools
 
-1. Reubah
+1. Reubah: with background removal coming soon
 2. IT/Toos + OmniTools
+
+![alt text](/blog_img/selfh/Photo/reubah.png)
 
 ---
 

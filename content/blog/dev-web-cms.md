@@ -2,7 +2,7 @@
 title: "Websites with SSG + CMS - The missing piece"
 date: 2025-05-18T22:20:21+01:00
 draft: false
-description: "UI/X for customizing SSGs. Keystatic, Frontmatter and others. Combined with PostHog/OpenReplay for Product Analytics."
+description: "UI/X for customizing SSGs. Keystatic and more"
 url: 'cms-for-static-websites'
 tags: ["Web","CMS","Entrepreneur","FrontMatter"]
 ---
@@ -15,6 +15,8 @@ Some time ago I tried Ghost as CMS connected to Gatsby as **headless CMS**.
 
 It was a very interesting setup.
 
+*Unfortunately, I was not taking screenshots nor writting these kind of posts back then...*
+
 But I was looking for a way to integrate **a CMS with HUGO/Astro**:
 
 * https://docs.astro.build/en/guides/cms/
@@ -22,7 +24,7 @@ But I was looking for a way to integrate **a CMS with HUGO/Astro**:
 * https://github.com/postlight/awesome-cms
 * https://opensourcealternative.to/?searchTerm=cms
 
-**Why CMS?**
+**Why a CMS?**
 
 Because editing [markdown](https://docs.astro.build/en/guides/markdown-content/) content or adding [images like so](https://docs.astro.build/en/guides/markdown-content/), might not be for everyone.
 
@@ -626,20 +628,9 @@ Who are the real people who need one? and their real needs?
 
 Do people *just* want some kind of [linktree alternative](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#ssg-solutions-for-linkinbios)?
 
-There is just one way to know: [testing the market](#product-analytics)
+There is just one way to know: **testing the market** 
 
-### Product Analytics
-
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics/Product_analytics" title="Product Analitycs Tools with Docker 🐋 ↗" >}}
-{{< /cards >}}
-
-1. [PostHog](https://posthog.com)
-
-2. OpenReplay
-
-[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
+With something tangible ofc, at least a PMF via [formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)! 
 
 
 ---

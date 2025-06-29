@@ -118,6 +118,8 @@ https://www.instagram.com/outficik.secondhand/ -->
   * https://subscribepage.io/listy#
 
 <!-- * Proposed: bogusiabachata.pro -->
+<!-- 
+https://issyinformatica.es/ -->
 
 <!-- More ppl to help - future CLIENTS
 

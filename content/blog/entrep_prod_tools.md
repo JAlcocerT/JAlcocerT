@@ -1,9 +1,9 @@
 ---
-title: "Want to be an entrepreneur?"
+title: "Want to be an entrepreneur? Try these SelfH Product Tools"
 date: 2025-05-29
 draft: false
-tags: ["Entrepreneuring","Websites","Web Generator"]
-description: 'Building Websites for others. SelfHosted Product Tools, Analytics and Authentication. The mission of Ghost Websites its just so great.'
+tags: ["Entrepreneuring","Websites","Web Generator","PostHog","PMF"]
+description: 'Building Websites for others with CMS. The mission of Ghost Websites its just so great...'
 url: 'product-tools'
 ---
 
@@ -24,7 +24,6 @@ Now, how to built great [products](https://jalcocert.github.io/JAlcocerT/product
 
 What it is our potential client? What does it values the most? what are their *pain points*?
 
-
 Given that you have a cool website, already with web analytics.
 
 People are reading, so...what are they interested at?
@@ -35,7 +34,9 @@ You got to know about that thanks to a [newsletter/forms](https://jalcocert.gith
 
 ![Formbricks Results](/blog_img/entrepre/formbricks-results.png)
 
-Or maybe you had some kind of **waiting list** in place.
+Or maybe you had some kind of **waiting list** in place...
+
+*You could do those with a simple flask + formbricks/mailerlite/logto...*
 
 ## Motivation
 
@@ -45,7 +46,11 @@ Recently I got to [read a blog](https://john.onolan.org/12/?ref=selfh.st) about 
 
 This article celebrates Ghost's **12th anniversary**, reflecting on its journey from an idealistic open-source project to a successful business with **$8M in annual recurring revenue** and a team of 34.
 
-The founder, who started Ghost at 24, initially aimed to provide independent publishers with a dedicated open technology stack. This was a response to the rise of media companies like Vox and BuzzFeed, whose proprietary software gave them a significant advantage over traditional outlets. Ghost sought to empower creators and newsrooms to compete without being beholden to closed platforms like Facebook and Medium.
+The founder, who started Ghost at 24, initially aimed to provide independent publishers with a dedicated open technology stack.
+
+This was a response to the rise of media companies like Vox and BuzzFeed, whose proprietary software gave them a significant advantage over traditional outlets.
+
+Ghost sought to empower creators and newsrooms to compete without being beholden to closed platforms like Facebook and Medium.
 
 Over the past 12 years, Ghost has consistently focused on building tools for web publishing, particularly helping creators build sustainable businesses through features like **paid subscriptions**. This focus has led to over **$100 million** earned by independent media businesses using Ghost.
 
@@ -55,7 +60,7 @@ The article concludes by noting a growing appetite for independent solutions and
 
 {{< /details >}}
 
-And the quote was just so resonating: 
+And **the quote** was just so resonating: 
 
 > 'Freedom of the press is guaranteed only to those who own one'
 
@@ -160,6 +165,37 @@ Which is what the [Treelink](https://github.com/JAlcocerT/treelink) project does
 
 > The only thing the theme need is [a Flask App](https://github.com/JAlcocerT/treelink/tree/main/config-generator) so that people generates its config!
 
+#### DecapCMS
+
+```sh
+git clone https://github.com/JAlcocerT/Portfolio
+
+#hugo server
+#hugo server --bind="0.0.0.0" --baseURL="http://192.168.0.117" 
+hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.11" --port=1313
+```
+
+YOu might need some vibe code help:
+
+```
+can we try to implement decapCMS to work with this repo? I dont want to use any netlify service, my goal is to have a UI where the content of the hugo theme can be edited via UI and then just commit changes
+```
+
+Check that http://192.168.1.11:1313/admin/config.json 
+
+```sh
+npm install -g netlify-cms-proxy-server
+npx netlify-cms-proxy-server
+```
+
+> With vibe coding - is possible.
+
+Its just that...you will need Github OAUTh and stuff.
+
+Do you want to give people OAUTH access to your actual github account?
+
+Im not sure yet about that.
+
 #### TinaCMS
 
 * https://tina.io/
@@ -207,7 +243,12 @@ Following the original theme instructions: https://darko.io/posts/linktree-and-l
 
 ### Authentication
 
-https://darko.io/posts/but-auth-is-hard
+This one will require your focus: https://darko.io/posts/but-auth-is-hard
+
+As per my [recent post](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/), you have few options, like:
+
+1. [TinaAuth](#tinyauth)
+2. [LogTo](#logto)
 
 #### TinyAuth
 
@@ -229,23 +270,45 @@ The theme im using is Lynx, and you can get an avatar thanks to [Avartartion](ht
 
 #### LogTo
 
-I was playing around with [LogTo](https://logto.io/) few months ago, together with Streamlit.
+I was playing around with [LogTo](https://logto.io/) few months ago, together with Streamlit, [here](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#user-authentication).
 
 But I did not quite manage to get where I wanted.
 
 ![LogTo Authentication](/blog_img/apps/logto-auth.png)
 
-Just recently...I got some inspiration, while doing [this post](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication).
+Just recently...I got some inspiration, while doing [**this post**](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication).
 
-And I can confirm that it works great with Flask Apps, [like the 3body webapp](https://github.com/JAlcocerT/ThreeBodies).
+And I can confirm that LogTo works great with Flask Apps, [like the 3body webapp](https://github.com/JAlcocerT/ThreeBodies).
+
+---
+
+## Conclusion
+
+With the CMS - giving people possibility to edit
+
+And the authentication layer - Knowing who is going to edit what...
+
+You will want to know how it actually works for them, aka, *where are the frictions in the app flow*
 
 ### Product First
 
 Make sure you understand how to use funnels and [Sankey](https://apexcharts.com/apexsankey/) diagrams.
 
-
-
 > Like this graph? Me too and its thanks to [HUGO shortcodes x ChartJS](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo) - [funnels](https://www.npmjs.com/package/chartjs-funnel)
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics/Product_analytics" title="Product Analitycs Tools with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+Any Web or Webapp can potentially be Combined with PostHog/OpenReplay for Product Analytics
+
+1. [PostHog](https://posthog.com)
+2. OpenReplay
+
+[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
+
+
 
 #### PostHog
 
@@ -259,14 +322,12 @@ To see how customers interact with your product, you can try with https://eu.pos
 
 ![alt text](/blog_img/entrepre/product/posthog-survey.png)
 
-![alt text](/blog_img/entrepre/product/Posthog-PMF.png)
+![PostHog Product Market Fit](/blog_img/entrepre/product/Posthog-PMF.png)
 
 [![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
 
 
----
-
-## Use Case
+### Use Cases
 
 [HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) Websites, via [its own container](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#hugo-container)
 
@@ -275,7 +336,7 @@ Spinned with [subdomain and https](https://jalcocert.github.io/JAlcocerT/docs/se
 And...for user interaction [a CMS](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/)
 
 
-### Next Steps
+#### Next Steps
 
 Who said [weddings](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/)?
 
