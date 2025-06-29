@@ -104,3 +104,20 @@ Here's why:
 An NRR of **over 100%** (e.g., 105% or 110%) would indicate that WordPress.com is not only retaining most of its customers but also successfully increasing revenue from its existing customer base through upgrades and additional service purchases. Given their scale and the continuous development of their offerings, achieving NRR over 100% is certainly plausible.
 
 Without direct financial disclosures from Automattic, this remains an informed approximation.
+
+
+### Making Webs with AI
+
+* https://github.com/rapidpages/rapidpages
+
+> MIT | Generate React and Tailwind components using AI 
+
+
+### How to setup StrapiCMS?
+
+If you are looking from CMS, you can have a look to [this post](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites), where I [setup KeystaticCMS](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms)
+
+
+
+* <https://www.opensourcealternative.to/project/Strapi>
+    * <https://docs.strapi.io/dev-docs/installation/docker>

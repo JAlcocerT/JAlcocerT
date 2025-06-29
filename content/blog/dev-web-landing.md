@@ -79,10 +79,11 @@ From [Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), to show y
 5. [Energy Template](https://github.com/vbartalis/energy-template)
 
 
-{{< details title="For Taxies as well | Astro Demo with energy template 📌" closed="true" >}}
+{{< details title="For Taxies as well | Astro Demo with energy template with JSON content edits! 📌" closed="true" >}}
 
 * https://taxiourika.pages.dev/
 * https://github.com/JAlcocerT/taxi-web with the energy template
+* Edit the JSON and the shown content will be changed!
 
 {{< /details >}}
 
@@ -101,6 +102,8 @@ graph TD
     C --> D{People Can Book Tours};
 ```
 
+See how cool the embedded calendar can look:
+
 ![Booking tours with Cal](/blog_img/web/success10-ourika/ourika-cal.png)
 
 
@@ -110,7 +113,9 @@ graph TD
 
 That was a one time setup, but one directional.
 
-Im also exploring how these kind of themes do it so that it incorporates a KeystaticCMS:
+Im also exploring how these kind of themes do it so that it incorporates a KeystaticCMS.
+
+### KeyStatic CMS 101
 
 **Update**
 
@@ -124,11 +129,13 @@ Im also exploring how these kind of themes do it so that it incorporates a Keyst
 
 {{< details title="Im well aware that a Bachata-Cerdo uses | Understanding Mizar with KeyStaticCMS 📌" closed="true" >}}
 
-# Keystatic CMS Integration in This Astro Theme
+Keystatic CMS Integration in This Astro Theme
 
 What is `keystatic.config.ts`?
 
-The `keystatic.config.ts` file is the main configuration file for Keystatic CMS. It defines how content is managed, structured, and edited within your project. 
+The `keystatic.config.ts` file is the main configuration file for Keystatic CMS.
+
+It defines how content is managed, structured, and edited within your project. 
 
 This file tells [Keystatic which collections](https://keystatic.com/showcase/marketing-landing-page) and [singletons](https://keystatic.com/docs/singletons) to manage, how fields are structured, where content is stored, and how the CMS UI should behave.
 
@@ -151,7 +158,7 @@ How Keystatic is Integrated
 - The Astro theme loads content using standard Astro Content Collections, so changes made via Keystatic are reflected in the site automatically.
 - Keystatic-related dependencies are listed in `package.json` (notably `@keystatic/core` and `@keystatic/astro`).
 
-## Key Files for Keystatic Integration
+**Key Files for Keystatic Integration**
 
 | File/Directory                | Purpose                                                                 |
 |------------------------------|------------------------------------------------------------------------|
@@ -160,11 +167,12 @@ How Keystatic is Integrated
 | `package.json`                | Declares Keystatic dependencies.                                       |
 | `.keystatic/` (if present)    | Keystatic icons and UI assets.                                          |
 
-### Content Collections & Singletons
+**Content Collections & Singletons**
+
 - **Collections**: `pages`, `posts`, `works`, `authors` (see `src/content/` subfolders)
 - **Singletons**: `header`, `footer`, `widget` (see `src/content/global/`)
 
-### How Content Flows
+**How Content Flows**
 1. **Edit content** in the Keystatic UI (typically run locally).
 2. **Content is saved** as Markdown/JSON under `src/content/`.
 3. **Astro** loads this content at build time using its content collections.
@@ -178,15 +186,14 @@ References
 - [Keystatic Docs](https://keystatic.com/docs)
 - [Astro Content Collections](https://docs.astro.build/en/guides/content-collections/)
 
----
-If you want to run the Keystatic CMS locally, make sure you have all dependencies installed and run the appropriate dev command (e.g. `pnpm keystatic dev` or check your scripts in `package.json`).
-
-
 {{< /details >}}
 
-## High-Level Project Structure
 
-Below is a Hugo-style filetree shortcode representation of the main structure of this Astro + Keystatic project:
+If you want to run the Keystatic CMS locally, make sure you have all dependencies installed and run the appropriate dev command (e.g. `pnpm keystatic dev` or check your scripts in `package.json`).
+
+**High-Level Project Structure**
+
+This is a representation of the main structure of this Astro + Keystatic project:
 
 
 {{< filetree/container >}}
@@ -220,7 +227,7 @@ Currently this theme only works with the **premium version of GSAP**, the steps 
 
 ## FAQ
 
-**What it is KeyStaticCMS?**
+### What it is KeyStaticCMS?
 
 A tool that makes Markdown, JSON and YAML content in your codebase editable by humans.
 

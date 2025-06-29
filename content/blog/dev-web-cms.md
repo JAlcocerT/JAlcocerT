@@ -4,7 +4,7 @@ date: 2025-05-18T22:20:21+01:00
 draft: false
 description: "UI/X for customizing SSGs. Keystatic and more"
 url: 'cms-for-static-websites'
-tags: ["Web","CMS","Entrepreneur","FrontMatter"]
+tags: ["Web","CMS","Entrepreneur","FrontMatter","KeyStaticCMS"]
 ---
 
 Lately, I have added some [upgrades](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) (via [telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot)), so that whenever a customer sends new photos, they are synced to its photo centered repo.
@@ -23,6 +23,10 @@ But I was looking for a way to integrate **a CMS with HUGO/Astro**:
 * https://jamstack.org/generators/
 * https://github.com/postlight/awesome-cms
 * https://opensourcealternative.to/?searchTerm=cms
+
+{{< callout type="info" >}}
+The goal of this post is to understand how [KeystaticCMS](#keystatic-cms) works for once
+{{< /callout >}}
 
 **Why a CMS?**
 
@@ -59,7 +63,7 @@ Not sure if its good or bad news, yet there are a ton of CMS and I just needed o
 As you can imagine, there are more than a few Content Management Systems (CMS) available:
 
 0. FrontMatterCMS
-1. [KEYSTATICCMS](#keystatic-cms)
+1. **[KEYSTATICCMS](#keystatic-cms)**
 2. [Tina](https://tina.io/)
 3. [GHOST + GATSBY](https://ghost.org/docs/jamstack/)
   - Or Ghost x Astro - https://docs.astro.build/en/guides/cms/ghost/
@@ -249,8 +253,9 @@ However, **not all file-based CMS are Git-based.** Many file-based CMS exist tha
 * https://astro-decapcms-starter.netlify.app/
 * https://decapcms.org/docs/working-with-a-local-git-repository/
 
+* https://github.com/decaporg/decap-cms
 
-#### netlifyCMS === decapCMS
+> MIT | A Git-based CMS for Static Site Generators | **netlifyCMS === decapCMS**
 
 Create a Custom Blog with Astro & NetlifyCMS in MINUTES!
 
@@ -267,7 +272,21 @@ Create a Custom Blog with Astro & NetlifyCMS in MINUTES!
 
 * https://github.com/mooxl/astroad/tree/main
 
-### TinaCMS + astro
+### TinaCMS
+
+This is one of the cool and simple headlessCMS out there.
+
+* https://github.com/tinacms/tinacms
+
+> Apache v2 | A fully open-source headless CMS that supports Markdown and Visual Editing
+
+{{< callout type="info" >}}
+With an interesting free tier for 2 users
+{{< /callout >}}
+
+Tried it with: https://github.com/JAlcocerT/barebones-starter
+
+#### TinaCMS + Astro
 
 I was playing around with TinaCMS when [doing the docs for Gabe's mechanism](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/) project, on [this repo](https://github.com/JAlcocerT/mechanism).
 
@@ -275,7 +294,7 @@ Since then, I upscaled the way I ask about unknown repos with [vibe coding tools
 
 Even found out a better way to write reliably [projects repo docs with such models](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#vibe-coded-project-docs)
 
-So now...how about TinaCMS, is it easy to integrate with Astro?
+So now...how about TinaCMS, easy to integrate with Astro?
 
 This was a helpful video on **TinaCMS x Astro**:
 
@@ -289,10 +308,19 @@ This was a helpful video on **TinaCMS x Astro**:
 > It can also work with HUGO as seen during [the mechanism docs](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/#tinacms)
 
 
-## Static CMS
+### Static CMS
+
+* https://github.com/StaticJsCMS/static-cms
+
+> A Git-based CMS for Static Site Generators
+
+{{< callout type="warning" >}}
+Archived since SeptY24!
+{{< /callout >}}
+
+**Static CMS**
 
 * https://github.com/MatthiesenXYZ/astro-ghostcms
-
 * https://github.com/GetPublii/Publii
 
 > GPLv3 | The most intuitive Static Site CMS designed for SEO-optimized and privacy-focused websites. 
@@ -317,8 +345,6 @@ Think of it like this:
 * **API-First Approach:** The core of a headless CMS is its API. Developers use these APIs to pull the content and then display it on *any* "head" or frontend application.
 * **Decoupled Architecture:** The backend and frontend are completely independent. This means you can update or change one without affecting the other.
 * **No Built-in Frontend:** Unlike traditional CMS, a headless CMS does not provide themes, templates, or a rendering engine to build the user interface.
-
-
 
 **API Based vs GIT Based**
 
@@ -345,7 +371,7 @@ Live edit content on GitHub or your local file system, without disrupting your e
 * **No database**
 * Markdoc & MDX support
 
-> Two way editing!
+> The Two way editing works!
 
 ```sh
 # npm run build
@@ -423,7 +449,7 @@ It has fully local mode, but also [Github Mode](https://keystatic.com/docs/githu
 
 **How I learnt about KeystaticCMS?**
 
-With 2 astro themes:
+With these 2 astro themes:
 
 1. https://github.com/Boston343/landingpad which I [forked](https://github.com/JAlcocerT/landingpad)
 
@@ -431,14 +457,11 @@ With 2 astro themes:
 Uses [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH App config overhead
 {{< /callout >}}
 
-2. And due to [Mizar landing Page](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#conclusions)
-
+2. And due to [Mizar landing Page](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#conclusion)
 
 {{< callout type="info" >}}
 This one is cnfigured to work locally as per its `keystatic.config.ts`. 
 {{< /callout >}}
-
-
 
 **How I was able to implement it?**
 
@@ -468,6 +491,7 @@ This file tells Keystatic which collections and singletons to manage, how fields
 
 This structure shows all the key components we worked with to implement Keystatic:
 
+```
 Configuration Files:
 keystatic.config.ts - The main Keystatic configuration
 astro.config.mjs - Updated to include Keystatic integration
@@ -480,6 +504,7 @@ src/pages/articles/ - Contains templates for displaying articles (index and dyna
 Package Dependencies:
 Referenced in package.json (includes @keystatic/core and @keystatic/astro)
 This represents the complete file structure relevant to the Keystatic implementation that we set up.
+```
 
 {{< filetree/container >}}
   {{< filetree/folder name="src" >}}
@@ -579,40 +604,7 @@ When you deploy the static site, the `whateverdomain.com/keystatic` path will st
 
 ![KeyStatic statically deployed UI](/blog_img/web/staticcms/keystatic-ssg-deployed.png)
 
->But you wont be able to make any changes, as the server (Typescrypt API) is NOT running.
-
-##### Static CMS
-
-* https://github.com/StaticJsCMS/static-cms
-
-> A Git-based CMS for Static Site Generators
-
-{{< callout type="warning" >}}
-Archived since SeptY24!
-{{< /callout >}}
-
-
-
-##### Decap CMS
-
-* https://github.com/decaporg/decap-cms
-
-> MIT | A Git-based CMS for Static Site Generators 
-
-##### TinaCMS
-
-This is one of the cool and simple headlessCMS out there.
-
-* https://github.com/tinacms/tinacms
-
-> Apache v2 | A fully open-source headless CMS that supports Markdown and Visual Editing
-
-{{< callout type="info" >}}
-With an interesting free tier for 2 users
-{{< /callout >}}
-
-Tried it with: https://github.com/JAlcocerT/barebones-starter
-
+> But you wont be able to make any changes, as the server (Typescrypt API) is NOT running.
 
 ---
 
@@ -647,16 +639,3 @@ With something tangible ofc, at least a PMF via [formbricks](https://jalcocert.g
 ### What are NginX Static Routes?
 
 Think about having: SSG -> CMS, like `/keystatic` for UI edits -> CI/CD Builds as per git changes -> exposed via NGINX with https with some kind of authentication.
-
-
-### Making Webs with AI
-
-* https://github.com/rapidpages/rapidpages
-
-> MIT | Generate React and Tailwind components using AI 
-
-
-### How to setup StrapiCMS?
-
-* <https://www.opensourcealternative.to/project/Strapi>
-    * <https://docs.strapi.io/dev-docs/installation/docker>

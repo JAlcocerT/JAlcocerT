@@ -7,10 +7,11 @@ url: 'ghost-cms-for-astro'
 tags: ["Web","CMS","Ghost","Astro SSG"]
 ---
 
+Thanks to https://www.yzlow.com/build-a-custom-static-site-with-headless-ghost-astro for inspiration.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication" title="LogTo 101" image="/blog_img/dev/LogTo/logto-branded-signin.png" subtitle="Using Logto as Flask Web App Authentication with a sample 3 body WebApp | Post" >}}
-  {{< card link="https://github.com/JAlcocerT/taxi-web" title="As" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github to package and sale SSG Themes" >}}
+  {{< card link="https://github.com/JAlcocerT/morita-web" title="Morita Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Sample Astro Theme" >}}
+  {{< card link="https://github.com/JAlcocerT/taxi-web" title="Taxi Web Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Tinkering with Astro + JSON/Ghost CMS API" >}}
 {{< /cards >}}
 
 ## Astro and JSON Powered Content
@@ -58,6 +59,10 @@ If you are ready with Ghost up and running, go the the settings:
 
 
 ### Configuring Ghost x Astro 101
+
+**IMPORTANT**: This will be **API based CMS Setup**, so make sure to do proper ghost containers backup!
+
+*For Git based, see this KeyStatic related post*
 
 We will need to:
 
