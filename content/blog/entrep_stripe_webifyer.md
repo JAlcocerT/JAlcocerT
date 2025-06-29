@@ -1,9 +1,9 @@
 ---
-title: "What are you selling? Webify"
+title: "How are you selling? Webify Edition"
 date: 2025-06-03T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Auth","Flask","Webhooks","LogTo","Stripe","Formbricks"]
-description: 'Stripe 101. Together with LogTo into a Flask WebApp as Webifyer. Selling Themes and editing capabilities for SSG powered websites.'
+description: 'Stripe 101. Selling Themes and editing capabilities for SSG powered websites.'
 url: 'using-stripe-with-flask'
 ---
 
@@ -22,10 +22,12 @@ Even before that, you have this kind of journey:
 
 As demand can grow when you get better at something, you will need to increase the supply.
 
-As your time is limited, you will want to scale the ideas **with tech**:
+As your time is limited, you will want to scale the ideas **with tech**: 
+
+*Via LogTo Authentication plugged into a Flask WebApp called... Webifyer or...WebifAI or...WebGenerAItor...*
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication" title="LogTo 101" image="/blog_img/dev/LogTo/logto-branded-signin.png" subtitle="Using Logto as Flask Web App Authentication with a sample 3 body WebApp | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/WebGenerAItor" title="WebGenerAItor" image="/blog_img/dev/LogTo/logto-branded-signin.png" subtitle="Source Code on GH | Tinkering with CloudflareDNS and Traefik v3_3 to serve websites" >}}
   {{< card link="https://github.com/JAlcocerT/WebifAI" title="WebifAi / WebifAIyer" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github to package and sale SSG Themes" >}}
 {{< /cards >}}
 

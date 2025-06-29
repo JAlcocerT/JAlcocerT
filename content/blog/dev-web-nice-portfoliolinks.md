@@ -173,6 +173,12 @@ And when you got a website...you will want to know how much people is visiting i
 I have collected some [Selfhostable WebAn Tools config files **here**](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics)
 {{< /callout >}}
 
+Be prepared to find out some [Pareto](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) in action.
+
+See this split of views for the F/OSS Umami Web Analytics:
+
+![Umami Web Analytics and Pareto](/blog_img/outro/pareto-weban.png)
+
 You also have the closed sourced ones, like:
 
 **Microsoft Dynamics 365** enhances marketing efforts by offering the capability to send emails directly from within the context of the records you are working on. 
@@ -185,11 +191,12 @@ This feature integrates seamlessly with its robust marketing automation capabili
 
 - **Adobe Analytics**: Known for its advanced capabilities in website analytics and customer journey intelligence. Adobe Analytics offers detailed insights into customer behaviors and preferences, going beyond basic traffic data to help understand deeper customer dynamics.
 
-<!-- 
-sf - secure forms
-aa - adobe analytics
-adf - azure data factory
-ac - adobe campaign -->
+
+{{< callout type="info" >}}
+There are many acronyms: sf - secure forms / aa - adobe analytics / adf - azure data factory / ac - adobe campaign
+{{< /callout >}}
+
+
 
 Together, these tools provide comprehensive solutions for refining marketing strategies, enhancing user engagement, and ultimately driving business growth through informed decision-making.
 

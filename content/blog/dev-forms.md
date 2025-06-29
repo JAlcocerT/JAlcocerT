@@ -16,6 +16,15 @@ Im talking about adding the possibility for readers to [subscribe to a newslette
 
 Its all going to be API based, so our website code base wont grow in size/complexity too much!
 
+Plus, you can get some of those to work with F/OSS and Selfhosted:
+
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web" title="Web Related Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Forms" title="Forms Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
 ## Newsletters
 
 ### Keila

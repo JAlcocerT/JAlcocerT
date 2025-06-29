@@ -284,9 +284,9 @@ And I can confirm that LogTo works great with Flask Apps, [like the 3body webapp
 
 ## Conclusion
 
-With the CMS - giving people possibility to edit
+With the CMS -> giving people possibility to edit
 
-And the authentication layer - Knowing who is going to edit what...
+And the authentication layer -> Knowing who is going to edit what...
 
 You will want to know how it actually works for them, aka, *where are the frictions in the app flow*
 

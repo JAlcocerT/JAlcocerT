@@ -176,6 +176,8 @@ While the core t-test in A/B testing doesn't directly involve explicit condition
 
 If you have ever used adsense *or similar platforms*, you may have run experiments:
 
+![alt text](/blog_img/outro/ads-experiments.png)
+
 ![alt text](/blog_img/outro/adsense-101.png)
 
 Here's a breakdown of each metric:

@@ -7,7 +7,7 @@ url: 'cms-for-static-websites'
 tags: ["Web","CMS","Entrepreneur","FrontMatter"]
 ---
 
-Lately I have added some [upgrades](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) (via [telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot)), so that whenever a customer sends new photos, they are synced to its photo centered repo.
+Lately, I have added some [upgrades](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) (via [telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot)), so that whenever a customer sends new photos, they are synced to its photo centered repo.
 
 But..wouldnt it be nice to have a *native* solution?
 
