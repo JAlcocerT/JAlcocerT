@@ -262,6 +262,11 @@ However, **not all file-based CMS are Git-based.** Many file-based CMS exist tha
 
 ### decapCMS
 
+{{< callout type="info" >}}
+I have been tinkering with [DecapCMS + HUGO Lynx Portfolio](https://github.com/JAlcocerT/Portfolio). See the [101.md](https://github.com/JAlcocerT/Portfolio/blob/main/decapcms-101.md) and [DecapCMS x Github](https://github.com/JAlcocerT/Portfolio/blob/main/decapcms-github.md) which will require GH OAuth Setup
+{{< /callout >}}
+
+
 * https://astro.build/themes/details/astros/ -->> decap CMS
 * https://astros.zank.studio/blog/introducing-decap-cms-your-go-to-solution-for-content-management/
 
@@ -388,6 +393,8 @@ Live edit content on GitHub or your local file system, without disrupting your e
 * Markdoc & **MD/MDX support**
 
 > The Two way editing works!
+
+Ive already been writting about KeyStaticCMS: https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
 
 ```sh
 # npm run build

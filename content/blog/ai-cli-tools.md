@@ -44,9 +44,18 @@ https://github.com/google-gemini/gemini-cli
 
 ```sh
 npx https://github.com/google-gemini/gemini-cli #one time install
-#npm install -g @google/gemini-cli
+#npm install -g @google/gemini-cli #global install
 gemini
+
+gemini --prompt "are you able to be queried with non interactive mode?" -m gemini-2.5-flash --yolo --debug
 ```
+
+
+The flags used for Gemini are:
+
+`--yolo` automatically accepts all actions
+`--debug` shows debug information
+`--model` allows to specify the model to use
 
 https://developers.google.com/gemini-code-assist/auth/auth_success_gemini
 

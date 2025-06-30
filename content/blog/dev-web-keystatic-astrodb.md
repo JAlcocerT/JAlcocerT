@@ -1,5 +1,5 @@
 ---
-title: "A new webpage"
+title: "A new webpage for JAlcocerTech"
 date: 2025-06-21T18:20:21+01:00
 draft: false
 # cover:
@@ -7,7 +7,7 @@ draft: false
 #   alt: "SelfHosting xTTS2 with Docker." # alt text
 #   caption: "Succesfull installation of xTTS2 with Docker." # display caption
 description: 'AstroDB x KeyStaticCMS.'
-tags: ["Web","Landing Page","CMS","SSG","JAlcocerTech","Cloudflare Workers and Pages"]
+tags: ["Web","Landing Page","CMS","SSG","JAlcocerTech","Cloudflare Workers and Pages","Web Checks"]
 url: keystaticcms-astrodb
 ---
 <!-- 
@@ -18,9 +18,7 @@ https://github.com/JAlcocerT/jalcocertech/settings
 
 > **MIT** | Open-source Astro website template with TailwindCSS, Keystatic CMS, and Astro DB support.
 
-
-
-Could not resist to fork it: https://github.com/JAlcocerT/DataNova
+Could not resist to fork it: https://github.com/JAlcocerT/DataNova and using it with cloudflare pages configured at [private this repo](https://github.com/JAlcocerT/jalcocertech)
 
 And to get familiar with: https://docs.astro.build/en/guides/astro-db/
 
@@ -36,9 +34,9 @@ git commit -m "Initial commit for your site"
 
 git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/jalcocertech.git
 #git remote add origin https://github.com/JAlcocerT/jalcocertech.git
-
-
 ```
+
+
 
 ## Conclusions
 
@@ -46,6 +44,7 @@ git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/jalcocertech.git
 
 1. The moving [navbar](https://github.com/JAlcocerT/DataNova/blob/main/src/components/sections/Navbar.astro) as you move around the web
 2. The [Diagram.astro](https://github.com/JAlcocerT/DataNova/blob/main/src/components/common/Diagram.astro) component
+3. Browser tab icon working, as well as OG when shared via whatsapp.
 
 ### Deploying
 
@@ -55,7 +54,7 @@ With GH + [CF WnP](https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#clou
 
 For what I needed to review CF permissions: https://github.com/settings/installations/56072936
 
-![alt text](/blog_img/web/astro/cf-gh-permissions.png)
+![Cloudflare Github Permissions](/blog_img/web/astro/cf-gh-permissions.png)
 
 Which I accepted
 
@@ -63,7 +62,13 @@ And review that its only for selected repos:
 
 ![alt text](/blog_img/web/astro/cf-gh-selected-repos.png)
 
-> The result is: jalcocert.pages.dev or jalcocertech.com
+> **The result is visible at**: jalcocert.pages.dev or www.jalcocertech.com
+
+```sh
+ping www.jalcocertech.com
+nslookup www.jalcocertech.com
+
+```
 
 ### Website Checks
 
@@ -85,7 +90,15 @@ You always get surprised with astro themes:
 
 * https://github.com/wpinfusion/astro-hyperdrive
 
-> An Astro template designed for Automotive dealerships. For the ones who like [cars](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/)!
+> An Astro template designed for **Automotive dealerships**. For the ones who like [cars](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/)!
+
+#### Astro Components I discovered
+
+As always, trying some new astro theme makes you discover some very cool components.
+
+---
+
+## Outro
 
 ### Wordpress and NRR
 

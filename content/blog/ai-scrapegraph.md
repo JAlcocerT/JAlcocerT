@@ -289,7 +289,7 @@ If you are looking for a tool to **get general knowledge about a website**, you 
 
 >  🕵️‍♂️ All-in-one OSINT tool for analysing any website 
 
-And you can use these projects together with https://github.com/datopian/markdowndb - MIT Licensed
+And you can use these projects together with https://github.com/datopian/markdowndb - **MIT** Licensed
 
 * https://markdowndb.com/ - A rich API to your markdown files in seconds.
 

@@ -7,7 +7,15 @@ url: 'ghost-cms-for-astro'
 tags: ["Web","CMS","Ghost","Astro SSG"]
 ---
 
-Thanks to https://www.yzlow.com/build-a-custom-static-site-with-headless-ghost-astro for inspiration.
+<!-- * https://pagespeed.web.dev/
+* https://web-check.xyz/ -->
+
+Thanks to:
+
+1. https://www.yzlow.com/build-a-custom-static-site-with-headless-ghost-astro
+2. https://github.com/MatthiesenXYZ/astro-ghostcms and https://github.com/MatthiesenXYZ/ghostcms-loader/tree/main
+
+for resources to put this together.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/morita-web" title="Morita Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Sample Astro Theme" >}}

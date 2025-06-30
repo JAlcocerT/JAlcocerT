@@ -46,14 +46,14 @@ and some more rows...
 
 Now, you can select the Code button in the Gitlab Repository, and **select open in your IDE (with SSH)**.
 
-Check how many branches there are:
+Check **how many branches** there are:
 
 ```sh
 git branch -a #list them all
 git branch #and in which one you are
 ```
 
-Change to another branch with:
+**Change to another branch** with:
 
 ```sh
 git checkout other_branch_name #git checkout tests

@@ -322,12 +322,12 @@ Using tools like [webflow](https://webflow.com/pricing)...
 
 https://web-check.xyz/check/https%3A%2F%2Fwww.gymlaunch.com%2F
 
-It always great to find new astro themes:
+It always great to find **new astro themes**:
 
 * https://github.com/iann-mathaiya/nikola-tesla
-* Saasify
+* Saasify...
 
-First things first: a catchy name
+First things first: *a catchy name*
 
 * GaleriaSlubna
 * SlubneChwile
@@ -360,9 +360,9 @@ Just enough with edit zone dns
 
 ![alt text](/blog_img/entrepre/wedding/cf/api-token.png)
 
-2. CF ZoneID
+2. CF ZoneID:
 
-![alt text](/blog_img/entrepre/wedding/cf/cf-zoneID.png)
+![CLoudflare Zone ID](/blog_img/entrepre/wedding/cf/cf-zoneID.png)
 
 ```py
 # Cloudflare DNS updater
@@ -371,7 +371,7 @@ CLOUDFLARE_ZONE_ID=your_zone_id #this is not the domain name, you can get it at 
 CLOUDFLARE_DOMAIN=your_domain #this is the domain name
 ```
 
-You can validate that your API is valid with:
+You can check that your **CF API is valid** with:
 
 ```sh
 #source .env

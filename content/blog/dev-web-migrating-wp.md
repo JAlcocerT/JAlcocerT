@@ -426,8 +426,9 @@ You will get a report with what’s link working and what not when it comes to L
 
 ### How to have email with your Domain
 
+First Step...
 
-{{< details title="1 - Get a Domain! 📌" closed="true" >}}
+{{< details title=" Get a Domain! 📌" closed="true" >}}
 
 - [Cloudflare Domains](https://www.cloudflare.com/products/registrar/)
 - [Porkbun](https://porkbun.com/)

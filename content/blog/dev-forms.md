@@ -308,9 +308,6 @@ So far I have tried [Formbricks](https://app.formbricks.com/environments/cm0vgwa
 
 Check that your **web is performing** well with [these tools](/create-your-website/#is-my-website-performing-well)
 
-<!-- * https://pagespeed.web.dev/
-* https://web-check.xyz/ -->
-
 #### Other Tools
 
 * https://www.tawk.to/ - Talk to customers

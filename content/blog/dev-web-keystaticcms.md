@@ -672,6 +672,8 @@ Here's a breakdown of its characteristics and how it's used in your project:
 
 Imagine you're writing a document in Markdown, and you want to include a special interactive element, like a real-time weather widget or, as in your example, a dynamic GitHub repository card. Standard Markdown doesn't have a way to do this.
 
-A Markdown directive acts like a special tag or instruction that tells your build system: "Hey, at *this* point in the document, I want you to insert a 'github card' and here's the repository I want it to display." Your build system then processes this instruction, finds the corresponding component, and injects the necessary HTML, CSS, and JavaScript to render that interactive card when the page loads.
+A Markdown directive acts like a special tag or instruction that tells your build system: "Hey, at *this* point in the document, I want you to insert a 'github card' and here's the repository I want it to display."
+
+Your build system then processes this instruction, finds the corresponding component, and injects the necessary HTML, CSS, and JavaScript to render that interactive card when the page loads.
 
 This approach keeps your Markdown clean and focused on content, while offloading the complexity of rendering dynamic elements to dedicated components and a robust build pipeline.
