@@ -6,7 +6,7 @@ draft: false
 #   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
 #   alt: "SelfHosting xTTS2 with Docker." # alt text
 #   caption: "Succesfull installation of xTTS2 with Docker." # display caption
-description: 'AstroDB x KeyStaticCMS.'
+description: 'AstroDB x KeyStaticCMS. A new website to show Embedded Analytics capabilities.'
 tags: ["Web","Landing Page","CMS","SSG","JAlcocerTech","Cloudflare Workers and Pages","Web Checks"]
 url: keystaticcms-astrodb
 ---
@@ -15,10 +15,13 @@ https://github.com/JAlcocerT/jalcocertech/settings
  -->
 
 * https://github.com/mearashadowfax/DataNova
+    * https://github.com/JAlcocerT/DataNova
 
 > **MIT** | Open-source Astro website template with TailwindCSS, Keystatic CMS, and Astro DB support.
 
-Could not resist to fork it: https://github.com/JAlcocerT/DataNova and using it with cloudflare pages configured at [private this repo](https://github.com/JAlcocerT/jalcocertech)
+Could not resist to [fork it](https://github.com/JAlcocerT/DataNova).
+
+And used it with cloudflare pages configured at [private this repo](https://github.com/JAlcocerT/jalcocertech)
 
 And to get familiar with: https://docs.astro.build/en/guides/astro-db/
 
@@ -99,6 +102,40 @@ As always, trying some new astro theme makes you discover some very cool compone
 ---
 
 ## Outro
+
+### Embedded Analytics
+
+Lately I have been tinkering with Streamlit and PyGWalker on [this post](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker).
+
+
+But I was also surprised on how much can be achieved via Plotly, ChartJS or ApexChartsJS.
+
+In fact, to render interesting interactive charts into your SSG powered websites, like astro its just a matter of having the *declarative knowledge* that you can actuualy do it.
+
+Just think of a interesting visual you want to have, tell to windsurf to vibe code your astro component that renders it and simply import it into your post.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="AI Bi Tools Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
+
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
+{{< /cards >}}
+
+<!-- ![alt text](/blog_img/apps/streamlit/st_pygwalker_map.png) -->
+
+How can these chart actually look like?
+
+![ApexChartsJS and Astro SSG Theme ](/blog_img/web/astro/astro-apexchartsjs-component.png)
+
+Again: *and these are interactive charts!*
+
+Another option is to embedd the *knitted html* of a R FlexDashboard to your SSG powered websites:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/r-dashboard-shinyapps/" title="Retirement Facts [Post]" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="Life savings and inflation in a R Shiny App." >}}
+  {{< card link="https://github.com/JAlcocerT/R_is_Great/tree/main/ShinyApps" title="Retirement Facts" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Life savings and inflation in a R Shiny App." >}}
+{{< /cards >}}
+
+But I find the Astro + Graph base component a much cooler (and simpler) approach.
 
 ### Wordpress and NRR
 

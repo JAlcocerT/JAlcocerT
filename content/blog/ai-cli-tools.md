@@ -129,7 +129,22 @@ Once logged in again to GeminiCLI, you will get access to them:
 
 See how it works:
 
-![alt text](/blog_img/GenAI/geminiCLI/gemini-mcp.png)
+![Gemini MCP Working](/blog_img/GenAI/geminiCLI/gemini-mcp.png)
+
+#### Gemini CLI x Git-MCP
+
+What else can be connected to Gemini via MCP?
+
+PRety much anything: https://github.com/punkpeye/awesome-mcp-servers
+
+**For example** - https://github.com/idosal/git-mcp
+
+> Apache v2 | Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project
+
+#### Gemini CLI x Databases
+
+* https://github.com/runekaagaard/mcp-alchemy
+
 
 ### Other CLI Tools
 
@@ -168,8 +183,15 @@ Also with **200K context window**.
 
 #### Claude Task Master
 
-https://github.com/eyaltoledano/claude-task-master
+If you are familiar with BRD/PRD and similar project management concept, Claude Task Master is a tool that can create ai driven projects in such a way.
 
+* https://github.com/eyaltoledano/claude-task-master
+
+
+#### WARP IDE
+
+
+#### AIDER
 
 ## BAML
 

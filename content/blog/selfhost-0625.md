@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting - 1st Half 2025 "
-date: 2025-06-27T01:20:21+01:00
+date: 2025-06-30T01:20:21+01:00
 draft: false
 tags: ["HomeLab","Authentication","P2P","Traefik"]
 description: 'Programatic Https for all services and docker stacks'
@@ -52,7 +52,7 @@ nslookup nextcloud.jalcocertech.com
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml" title="NextCloud MariaDB | Config File 🐳 ↗"  >}}
-    {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb_traefik.yml" title="NextCloud x Traefik | Config File 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb_traefik.yml" title="NextCloud x Traefik | Config File 🐳 ↗"  >}}
 {{< /cards >}}
 
 
@@ -154,7 +154,23 @@ https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/
 1. Reubah: with background removal coming soon
 2. IT/Toos + OmniTools
 
-![alt text](/blog_img/selfh/Photo/reubah.png)
+![SelfHosting Reubah](/blog_img/selfh/Photo/reubah.png)
+
+### HomeLab Diagrams
+
+I was very surprised to find out that you can embed https://docs.excalidraw.com/docs/@excalidraw/excalidraw/integration into your websites!
+
+A very interesting to share homelab diagrams with your friends/family.
+
+You could also do the classic Mermaid inside a SliDev PPT https://sli.dev/features/mermaid
+
+To have a rendered pdf with instructions how to access your selfhosted services
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs/SliDevJS" title="SliDev PPTs Containerized | Config File 🐳 ↗"  >}}
+  {{< card link="https://fossengineer.com/selfhosting-excalidraw/" title="SelfHosting Excalidraw | Post 🐳 ↗"  >}}
+{{< /cards >}}
+
 
 ---
 
@@ -165,6 +181,15 @@ Filebrowser dev has been abandoned and for me it was still a thing to combine it
 But now we have filebrowser quantum!
 
 Also, ive been tinkering a lot with authentication via Logto
+
+With gemini CLI and similar vibe coding tools, its been much easier to spin new services:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli" title="AI CLI Tools" image="/blog_img/GenAI/geminiCLI/gemini-mcp.png" subtitle="Tinkering with GeminiCLI | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#traefik-x-tinyauth-x-flask" title="TinyAuth x Traefik x Flask" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code with a Flask App working with the authentication middleware" >}}
+{{< /cards >}}
+
+<!-- ![Gemini MCP Working](/blog_img/GenAI/geminiCLI/gemini-mcp.png) -->
 
 
 ---

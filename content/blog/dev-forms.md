@@ -319,3 +319,4 @@ Manage your appointments with [cal.com](https://www.cal.com/).
 * You can integrate it with:
   * Stripe to collect payment in advance of the meeting
   * Also to require requestor email validation
+  * Embedd into your website...

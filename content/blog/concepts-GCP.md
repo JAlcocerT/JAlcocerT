@@ -266,10 +266,8 @@ If you have a local DB...you can do cool tricks with GenAI to extract insights:
 
 **Bigtable** is highly consistent for multi-row updates: TRUE.
 
-Bigtable is designed for low-latency, high-throughput operations and supports atomic row-level mutations, ensuring consistency even with multiple updates.
-
 {{< callout type="info" >}}
-Retirements 
+Bigtable is designed for low-latency, high-throughput operations and supports atomic row-level mutations, ensuring consistency even with multiple updates. 
 {{< /callout >}}
 
 Bigtable has lesser administrative overhead: TRUE. As a fully managed NoSQL database service, Bigtable handles infrastructure management, including scaling, replication, and failover, reducing administrative overhead.

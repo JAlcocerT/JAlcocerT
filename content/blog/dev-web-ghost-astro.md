@@ -32,7 +32,8 @@ Sometime ago I got to know this Astro theme:
 And as per its **MIT** License, its a great skeleton to build, for example website for Taxi Drivers:
 
 ```sh
-git clone https://github.com/JAlcocerT/taxi-web 
+#git clone https://github.com/vbartalis/energy-template
+git clone https://github.com/JAlcocerT/taxi-web
 cd energy-template
 
 ```
