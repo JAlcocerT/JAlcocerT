@@ -6,13 +6,23 @@ draft: false
 #   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
 #   alt: "SelfHosting xTTS2 with Docker." # alt text
 #   caption: "Succesfull installation of xTTS2 with Docker." # display caption
-description: 'AstroDB x KeyStaticCMS. A new website to show Embedded Analytics capabilities.'
-tags: ["Web","Landing Page","CMS","SSG","JAlcocerTech","Cloudflare Workers and Pages","Web Checks"]
+description: 'AstroDB x KeyStaticCMS. A new SSG website to show Embedded Analytics capabilities.'
+tags: ["Web","Landing Page","CMS","Cloudflare Workers and Pages","Web Checks","Animations"]
 url: keystaticcms-astrodb
 ---
 <!-- 
 https://github.com/JAlcocerT/jalcocertech/settings
  -->
+
+On this post I will be covering:
+
+1. Astro
+
+2. Embedded Analytics into Astro
+
+3. Animations
+
+### Astro DataNova Theme
 
 * https://github.com/mearashadowfax/DataNova
     * https://github.com/JAlcocerT/DataNova
@@ -70,7 +80,6 @@ And review that its only for selected repos:
 ```sh
 ping www.jalcocertech.com
 nslookup www.jalcocertech.com
-
 ```
 
 ### Website Checks
@@ -136,6 +145,13 @@ Another option is to embedd the *knitted html* of a R FlexDashboard to your SSG 
 {{< /cards >}}
 
 But I find the Astro + Graph base component a much cooler (and simpler) approach.
+
+### Animations
+
+If what you want is to create a simple a quick .mp4, then matplotlib + Python should be your go to.
+
+They should not be something new to you If you have explored Gabe's mechanism project and my post about it.
+
 
 ### Wordpress and NRR
 

@@ -33,8 +33,10 @@ My goal with that simple app was to bring the math into those conversations, so 
 
 {{< callout type="warning" >}}
 **No information exposed on this post/app can be taken as financial recommendations** 
-These are just my notes on how Python can be used to create a calculator app.
 {{< /callout >}}
+
+These are just my notes on how R/Python can be used to create a calculator app.
+
 
 ## The Logic - How Does it Work?
 
@@ -94,7 +96,7 @@ I invite you to:
 * Play with the App, it is **deployed** at <https://jalcocert.shinyapps.io/retirement_facts/>
 * **Inspect the code** <https://github.com/JAlcocerT/R_is_Great/tree/main/ShinyApps>
 * Take a few minutes to think about this, as the example represented show that a 5% inflation rate make that person life savings last up to 75 years instead of 97 - Help needed afterwards.
-* Think about: `where does inflation come from?`, `who benefit?`
+* Think about: `where does inflation come from?`, `who benefits?`
 
 Of course, the results of this dashboard just try to show one simple example on how to build and deploy your simple app with an interactive graph and **must not been taking as a tool that provides any financial advice.**
 
@@ -106,8 +108,8 @@ Maybe, just maybe...
 
 Food for thought on what's next:
 
-![Spanish Historical CashFlow](/blog_img/outro/piramideesp.gif)
+![Spanish Population](/blog_img/outro/piramideesp.gif)
 
 The solution to inflation: *let's yell at clouds*
 
-![Spanish Historical CashFlow](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)
+![Simpsons Clouds](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)

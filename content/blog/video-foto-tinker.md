@@ -2,7 +2,7 @@
 title: "More Photo and Video fun stuff with PostIZ"
 date: 2025-05-13T13:20:21+01:00
 draft: false
-tags: ["Tinkering"]
+tags: ["Tinkering","PostIZ","n8n"]
 description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI generated audio for shorts.'
 url: 'photo-video-tinkering'
 ---
@@ -837,3 +837,45 @@ Schedule post on social media:
 ![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
 
 ![alt text](/blog_img/selfh/postiz/postiz-ui.png)
+
+### How to setup n8n
+
+![alt text](/blog_img/selfh/postiz/n8n-setup.png)
+
+![alt text](/blog_img/selfh/postiz/n8n-ui.png)
+
+```yml
+services:
+  n8n:
+    image: n8nio/n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=user
+      - N8N_BASIC_AUTH_PASSWORD=password
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=db
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=n8n
+      - DB_POSTGRESDB_USER=n8n
+      - DB_POSTGRESDB_PASSWORD=n8n
+      - NODE_FUNCTION_ALLOW_EXTERNAL=axios,qs
+      #- N8N_SECURE_COOKIE=False
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: postgres:12
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=n8n
+      - POSTGRES_PASSWORD=n8n
+      - POSTGRES_DB=n8n
+    restart: unless-stopped
+
+volumes:
+  db-data:
+```
