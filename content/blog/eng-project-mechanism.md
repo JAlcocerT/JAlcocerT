@@ -3,7 +3,7 @@ title: "How to setup Gabe's project, Mechanism"
 date: 2025-03-02T10:20:21+01:00
 draft: false
 tags: ["Python","Mechanics","Engineering","TinaCMS","Plotly","Animations"]
-description: "Mechanisms Animations in Python. From Singer machines to car engines. Project Docs with Astro and Tina?"
+description: "Mechanisms Animations in Python. From Singer machines to car engines. Project Docs with Astro."
 url: 'gabemorris12-mechanism-project-setup'
 math: true
 ---
@@ -200,7 +200,7 @@ And these ones SelfHosted
 
 ## Outro
 
-Created this simpler version with python, for anyone just starting.
+Created this simpler version with python, for anyone just starting with mechanics:
 
 $$
 \begin{aligned}
@@ -229,6 +229,8 @@ And working on the **symbolic Python**: https://github.com/JAlcocerT/MultiBodySy
 #### TinaCMS
 
 A **headless CMS setup**, finally!
+
+Or...almost finally.
 
 > All thanks to the HUGO Theme, Compose: https://github.com/onweru/compose/
 

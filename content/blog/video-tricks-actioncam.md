@@ -26,7 +26,9 @@ Now its time for a recap on my **latest video tricks**.
 
 ## High vs Low Bit Rate
 
-**Bit rate for video** simply refers to the **amount of data used per second** to store the video. It's usually measured in **bits per second (bps)**, often expressed as kilobits per second (kbps) or megabits per second (Mbps).
+**Bit rate for video** simply refers to the **amount of data used per second** to store the video. 
+
+It's usually measured in **bits per second (bps)**, often expressed as kilobits per second (kbps) or megabits per second (Mbps).
 
 **Higher bit rate = More data = Better video quality (more detail, less compression artifacts) = Larger file size.**
 

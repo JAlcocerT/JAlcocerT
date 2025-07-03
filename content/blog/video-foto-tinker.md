@@ -2,7 +2,7 @@
 title: "More Photo and Video fun stuff with PostIZ"
 date: 2025-05-13T13:20:21+01:00
 draft: false
-tags: ["Tinkering","PostIZ","n8n"]
+tags: ["Tinkering","PostIZ","n8n","OpenAI TTS"]
 description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI generated audio for shorts.'
 url: 'photo-video-tinkering'
 ---
@@ -20,7 +20,13 @@ Wait, there is even a repo for video stuff!
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Quick videos as a code from Action Cams" >}}
 {{< /cards >}}
 
-And now there is a chance to do a **photo & video recap**.
+I will be showing you how to put your videos into social media with:
+
+1. [PostIZ](#how-to-setup-postiz)
+2. [N8N](#how-to-setup-n8n)
+3. [AI Powered Shorts](#ai-powered-shorts) (Audio and description)
+
+And now there is a chance to do a **photo & video recap**
 
 <!-- https://www.youtube.com/watch?v=kaa1vPHqKdw -->
 
@@ -201,6 +207,10 @@ A friend told me recently to have a look to the following to create **interestin
 * Ilevenlabs to create TTSpeech
   * Thanks to GitPodcast, I saw that its also possible to do with [Azure AI Speech](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/)
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Audio" title="Testing OpenAI API + Audio for YT  ↗" >}}
+{{< /cards >}}
+
 Whatever you do, dont forget to add proper [video description](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#youtube-video-descriptions)
 
 Its kind of what [these channels](https://www.youtube.com/watch?v=UhvMylLrKw8) do!
@@ -300,59 +310,6 @@ gyroflow-cli --input DJI_20250518182847_0015_D.MP4 --output stabilized_video.mp4
 Watching **4k video on Linux** might not be **fluent** until you install these:
 {{< /callout >}}
 
-## Filters
-
-### ND Filters
-
-<!-- 
-https://allegro.pl/oferta/zestaw-6-filtrow-nd-8-16-32-64-1000-cpl-dji-osmo-action-4-3-fw-oa4-ald-15143043373
-https://allegro.pl/oferta/etui-pokrowiec-na-kamere-sportowa-dji-osmo-action-3-4-5-pro-gopro-13-16982113322?reco_id=cc5aea34-1efb-11f0-9d44-c214b156ab4e&sid=662c7a15915b4ff7cbe3591dc77c5ba25a9c6e61630a3346ef7abf0742c8b1f5&dd_referrer=https%3A%2F%2Fallegro.pl%2Fkategoria%2Fkamery-kamery-sportowe-147894%3Fstring%3Ddji%2520osmo%2520action%25205 -->
-
-A **Neutral Density (ND) filter** is essentially a **sunglass for your camera lens**. It's a filter made of darkened glass or resin that reduces the amount of light entering the camera sensor **without affecting the color** or **hue** of the scene.
-
-**How they work:**
-
-* ND filters are designed to reduce the intensity of **all wavelengths of light equally**. This means they dim the overall brightness of the scene without introducing any color casts (in theory; some cheaper ND filters might have slight color shifts).
-* They work by absorbing or reflecting a certain percentage of the incoming light.
-
-
-{{< details title="What ND Filders do | Types of ND 📌" closed="true" >}}
-
-
-**What they do:**
-
-By reducing the amount of light reaching the sensor, ND filters allow you to:
-
-* **Shoot with wider apertures in bright conditions:** This lets you achieve a shallow depth of field (blurry background) even in bright sunlight, which would otherwise overexpose your image if you tried to open up the aperture.
-* **Use slower shutter speeds in bright conditions:** This enables you to capture motion blur in subjects like flowing water, moving clouds, or passing vehicles, creating a smoother, more artistic look. Without an ND filter in bright light, using a slow shutter speed would result in an overexposed image.
-* **Maintain a desired shutter speed for cinematic motion:** As you mentioned, the 180-degree shutter rule often dictates a shutter speed double your frame rate. In bright conditions, without an ND filter, you might be forced to use a faster shutter speed than desired, resulting in less natural-looking motion. An ND filter allows you to stick to your desired shutter speed even when there's plenty of light.
-* **Balance exposure:** In situations with a very bright sky and a darker foreground, graduated ND filters (darker on one half, clear on the other with a gradual transition) can help balance the exposure across the scene, preventing the sky from being overexposed while keeping the foreground well-lit.
-
-**Types of ND Filters:**
-
-* **Fixed ND Filters:** These filters have a fixed density, meaning they reduce the light by a specific amount (e.g., 1-stop, 2-stop, 10-stop). You would need a set of these for different lighting conditions.
-* **Variable ND Filters:** These filters consist of two polarizing layers that can be rotated relative to each other to control the amount of light reduction. They offer more flexibility but can sometimes introduce an "X" pattern or uneven darkening at their extreme settings, especially on wide-angle lenses.
-* **Graduated ND Filters (GND):** These are dark on one half and gradually become clear on the other. They are typically rectangular and used in a filter holder to allow for precise positioning of the dark area (often used for landscapes).
-
-{{< /details >}}
-
-
-{{< details title="In the context of video | Summarized 📌" closed="true" >}}
-
-ND filters are particularly crucial for video because you typically want to maintain a consistent frame rate and shutter speed for natural motion. Adjusting the aperture and ISO (sensitivity) are the primary ways to control exposure, but aperture also affects depth of field, and increasing ISO can introduce noise. ND filters provide an additional way to control the amount of light without sacrificing your desired cinematic motion or depth of field.
-
-While a good quality ND filter should ideally not affect color, some cheaper ones might introduce a slight color cast. It's generally recommended to invest in reputable brands to minimize this issue. Post-processing can often correct minor color casts if they occur.
-
-Essentially, ND filters give you greater control over your exposure settings in bright light, allowing you to achieve creative effects and maintain the desired look and feel of your video or photographs
-
-{{< /details >}}
-
-<!-- https://www.youtube.com/watch?v=00e8XDRoge4 -->
-
-{{< youtube "00e8XDRoge4" >}}
-
-<!-- https://www.youtube.com/watch?v=oIJlSP0u6FU -->
-
 ## Photo Editing
 
 Spending a lot on smartphone with cool cameras to...use snapseed?
@@ -422,11 +379,62 @@ Tools for Creator Mode:
 
 Never forget about proper photo/video backup before your trips!
 
-https://jalcocert.github.io/JAlcocerT/photo-management-tools/
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#backups" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Hardware & Softw setup for traveling" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Tools" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="PiGallery, PhotoView, Immich..." >}}
 {{< /cards >}}
+
+
+### ND Filters
+
+<!-- 
+https://allegro.pl/oferta/zestaw-6-filtrow-nd-8-16-32-64-1000-cpl-dji-osmo-action-4-3-fw-oa4-ald-15143043373
+https://allegro.pl/oferta/etui-pokrowiec-na-kamere-sportowa-dji-osmo-action-3-4-5-pro-gopro-13-16982113322?reco_id=cc5aea34-1efb-11f0-9d44-c214b156ab4e&sid=662c7a15915b4ff7cbe3591dc77c5ba25a9c6e61630a3346ef7abf0742c8b1f5&dd_referrer=https%3A%2F%2Fallegro.pl%2Fkategoria%2Fkamery-kamery-sportowe-147894%3Fstring%3Ddji%2520osmo%2520action%25205 -->
+
+A **Neutral Density (ND) filter** is essentially a **sunglass for your camera lens**. It's a filter made of darkened glass or resin that reduces the amount of light entering the camera sensor **without affecting the color** or **hue** of the scene.
+
+**How they work:**
+
+* ND filters are designed to reduce the intensity of **all wavelengths of light equally**. This means they dim the overall brightness of the scene without introducing any color casts (in theory; some cheaper ND filters might have slight color shifts).
+* They work by absorbing or reflecting a certain percentage of the incoming light.
+
+
+{{< details title="What ND Filders do | Types of ND 📌" closed="true" >}}
+
+
+**What they do:**
+
+By reducing the amount of light reaching the sensor, ND filters allow you to:
+
+* **Shoot with wider apertures in bright conditions:** This lets you achieve a shallow depth of field (blurry background) even in bright sunlight, which would otherwise overexpose your image if you tried to open up the aperture.
+* **Use slower shutter speeds in bright conditions:** This enables you to capture motion blur in subjects like flowing water, moving clouds, or passing vehicles, creating a smoother, more artistic look. Without an ND filter in bright light, using a slow shutter speed would result in an overexposed image.
+* **Maintain a desired shutter speed for cinematic motion:** As you mentioned, the 180-degree shutter rule often dictates a shutter speed double your frame rate. In bright conditions, without an ND filter, you might be forced to use a faster shutter speed than desired, resulting in less natural-looking motion. An ND filter allows you to stick to your desired shutter speed even when there's plenty of light.
+* **Balance exposure:** In situations with a very bright sky and a darker foreground, graduated ND filters (darker on one half, clear on the other with a gradual transition) can help balance the exposure across the scene, preventing the sky from being overexposed while keeping the foreground well-lit.
+
+**Types of ND Filters:**
+
+* **Fixed ND Filters:** These filters have a fixed density, meaning they reduce the light by a specific amount (e.g., 1-stop, 2-stop, 10-stop). You would need a set of these for different lighting conditions.
+* **Variable ND Filters:** These filters consist of two polarizing layers that can be rotated relative to each other to control the amount of light reduction. They offer more flexibility but can sometimes introduce an "X" pattern or uneven darkening at their extreme settings, especially on wide-angle lenses.
+* **Graduated ND Filters (GND):** These are dark on one half and gradually become clear on the other. They are typically rectangular and used in a filter holder to allow for precise positioning of the dark area (often used for landscapes).
+
+{{< /details >}}
+
+
+{{< details title="In the context of video | Summarized 📌" closed="true" >}}
+
+ND filters are particularly crucial for video because you typically want to maintain a consistent frame rate and shutter speed for natural motion. Adjusting the aperture and ISO (sensitivity) are the primary ways to control exposure, but aperture also affects depth of field, and increasing ISO can introduce noise. ND filters provide an additional way to control the amount of light without sacrificing your desired cinematic motion or depth of field.
+
+While a good quality ND filter should ideally not affect color, some cheaper ones might introduce a slight color cast. It's generally recommended to invest in reputable brands to minimize this issue. Post-processing can often correct minor color casts if they occur.
+
+Essentially, ND filters give you greater control over your exposure settings in bright light, allowing you to achieve creative effects and maintain the desired look and feel of your video or photographs
+
+{{< /details >}}
+
+<!-- https://www.youtube.com/watch?v=00e8XDRoge4 -->
+
+{{< youtube "00e8XDRoge4" >}}
+
+<!-- https://www.youtube.com/watch?v=oIJlSP0u6FU -->
 
 
 ### Color Grading
@@ -836,13 +844,15 @@ Schedule post on social media:
 
 ![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
 
-![alt text](/blog_img/selfh/postiz/postiz-ui.png)
+![Postiz UI](/blog_img/selfh/postiz/postiz-ui.png)
 
 ### How to setup n8n
 
-![alt text](/blog_img/selfh/postiz/n8n-setup.png)
+As long as you have docker ready, you are good to go:
 
-![alt text](/blog_img/selfh/postiz/n8n-ui.png)
+![N8N Creating user and password](/blog_img/selfh/postiz/n8n-setup.png)
+
+![N8N UI Panel](/blog_img/selfh/postiz/n8n-ui.png)
 
 ```yml
 services:

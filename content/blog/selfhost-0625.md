@@ -152,9 +152,23 @@ https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/
 ### In Home Tools
 
 1. Reubah: with background removal coming soon
-2. IT/Toos + OmniTools
 
 ![SelfHosting Reubah](/blog_img/selfh/Photo/reubah.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#backups" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Hardware & Softw setup for traveling" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Tools" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="PiGallery, PhotoView, Immich..." >}}
+{{< /cards >}}
+
+For more photo/video tricks, see also:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/" title="Photo & Video Tricks | Post ↗"  >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#quick-videos---ffmpeg-cli" title="Video FFMPEG CLI | Post 🐳 ↗"  >}}
+{{< /cards >}}
+
+2. IT/Toos + OmniTools
+
 
 ### HomeLab Diagrams
 

@@ -86,6 +86,18 @@ codex
 git restore ./docs/index.mdx #restore a particular file back to last commit
 ```
 
+{{< callout type="info" >}}
+By default, you are using the model o4-mini
+{{< /callout >}}
+
+See available models with:
+
+```sh
+#source .env
+curl -s https://api.openai.com/v1/models \
+                 -H "Authorization: Bearer $OPENAI_API_KEY"
+```
+
 Codex also allows you to use other providers that support the OpenAI Chat Completions API. 
 
 You can set the provider in the config file or use the `--provider` flag.

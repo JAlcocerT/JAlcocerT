@@ -53,17 +53,22 @@ git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/jalcocertech.git
 
 ## Conclusions
 
+DigITalize your Creativity | JAlcocerTech
+
+Use IT or lose it The AI Revolution for your business · It all start with a Modern and fast website. Secured by Default and GDPR compliant
+
 ### Features I liked
 
 1. The moving [navbar](https://github.com/JAlcocerT/DataNova/blob/main/src/components/sections/Navbar.astro) as you move around the web
 2. The [Diagram.astro](https://github.com/JAlcocerT/DataNova/blob/main/src/components/common/Diagram.astro) component
-3. Browser tab icon working, as well as OG when shared via whatsapp.
+3. Browser tab icon working, as well as OG when shared via whatsapp
+4. 
 
 ### Deploying
 
 With GH + [CF WnP](https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#cloudflare-as-authoritative-name-server)
 
-![alt text](/blog_img/web/astro/cf-wnp.png)
+![Cloudflare Workers and Pages](/blog_img/web/astro/cf-wnp.png)
 
 For what I needed to review CF permissions: https://github.com/settings/installations/56072936
 
@@ -148,10 +153,17 @@ But I find the Astro + Graph base component a much cooler (and simpler) approach
 
 ### Animations
 
-If what you want is to create a simple a quick .mp4, then matplotlib + Python should be your go to.
+If what you want is to create a simple a quick .mp4, then **matplotlib + Python** should be your go to.
+
+https://youtu.be/YuvHXyFeRV4
+
+You can do very smooth animations, with gradient background colors, 
+
+* For matching image background colors, this was usefulhttps://imagecolorpicker.com/
 
 They should not be something new to you If you have explored Gabe's mechanism project and my post about it.
 
+* https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
 
 ### Wordpress and NRR
 

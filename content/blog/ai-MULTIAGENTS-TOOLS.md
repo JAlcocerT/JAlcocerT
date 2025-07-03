@@ -431,7 +431,7 @@ AG2 supports more advanced concepts to help you build your AI agent workflows.
 * Tools with Secrets
 
 
-{{< details title="What mor ecan PyAutoGen do? 📌" closed="true" >}}
+{{< details title="What more can PyAutoGen do? 📌" closed="true" >}}
 
 Yes, PyAutoGen can be used to get information about websites and databases, although the methods and complexity vary. Here's how:
 

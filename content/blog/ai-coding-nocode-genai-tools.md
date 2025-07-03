@@ -217,6 +217,14 @@ You can selfhost Chatwoot with this compose
 
 2. N8N
 
+We can embed n8n Chats into our sites thanks to: https://www.npmjs.com/package/@n8n/chat
+
+```sh
+npm install @n8n/chat
+```
+
+There are many more possibilities by playing with: https://docs.n8n.io/api/#learn-about-rest-apis
+
 * https://github.com/n8n-io/self-hosted-ai-starter-kit
 
 > The Self-hosted AI Starter Kit is an open-source template that quickly sets up a local AI environment. Curated by n8n, it provides essential tools for creating secure, self-hosted AI workflows.

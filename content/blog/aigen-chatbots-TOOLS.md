@@ -396,7 +396,6 @@ cat <<EOL >> .env
 FLOWISE_USERNAME=jalcocert
 FLOWISE_PASSWORD=youramazingpassword
 EOL
-
 ```
 
 Then, just spin FlowiseAI:
@@ -418,8 +417,7 @@ FlowiseAI is ready for you at: `http://localhost:3000`
 You will get also a **MIT Licensed Widget** on your Page
 
 
-{{< dropdown title="Dropdown Example 👇" closed="true" >}}
-
+{{< dropdown title="Flowise AI | Website Embed 101 👇" closed="true" >}}
 
 ```html
 <script type="module">

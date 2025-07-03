@@ -148,7 +148,7 @@ Make this match your docker config:
 
 And we are ready:
 
-![alt text](/blog_img/selfh/Photo/piwigo_setup.png)
+![Piwigo 101](/blog_img/selfh/Photo/piwigo_setup.png)
 
 
 <!-- 
@@ -165,6 +165,10 @@ With pretty cool [features](https://piwigo.org/features):
   
 ### Immich
 
+Probably the most complete solution.
+
+But might be an overkill if you just need a very simple photo tool for your homelab.
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Photo/Immich_Docker-Compose.yml" title="Immich Config File 🐳 ↗"  >}}
 {{< /cards >}}
@@ -176,7 +180,7 @@ With pretty cool [features](https://piwigo.org/features):
 
 ### Chevereto
 
-Chevereto is more like an open instagram that [you can Selfhost](https://fossengineer.com/selfhosting-chevereto-docker/)
+Chevereto is more like an *open instagram* that [you can Selfhost](https://fossengineer.com/selfhosting-chevereto-docker/)
 
 * https://v4-docs.chevereto.com/guides/docker/
 * https://hub.docker.com/r/linuxserver/chevereto

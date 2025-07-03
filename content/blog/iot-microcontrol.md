@@ -754,7 +754,9 @@ When the power bank steps up the voltage to **5V** for USB output, the effective
 
 ### Solar Power & MicroControllers
 
-I wanted to try with an low cost Solar Panel `CL-0915` which goes up to 15W (5V3A).
+I wanted to try with an low cost (~20$) Solar Panel `CL-0915` which goes up to 15W (5V3A).
+
+![Solar Panel](/blog_img/outro/solar-panel.jpg)
 
 Thats really on the edge to power a Pi4.
 

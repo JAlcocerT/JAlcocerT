@@ -41,7 +41,6 @@ Web programming is the foundation for creating dynamic and interactive websites 
 
 It goes beyond simply designing a static webpage with HTML and CSS. 
 
-
 {{< details title="See a more detailed look on these 📌" closed="true" >}}
 
 * **Core Components:**
@@ -106,6 +105,31 @@ Web programming is a complex field that requires a wide range of skills!
 Python, with its frameworks, simplifies the process of building web applications, making it a popular choice for web developers.
 {{< /callout >}}
 
+**Whatever you are doing in Python**
+
+1. This should be the **entry point** of our python apps
+
+```sh
+import plan_enhancement_json
+#from orchestrator import plan_enhancement_json
+
+def main():
+    run_plan_enhancement()
+
+if __name__ == "__main__":
+    main()
+```
+
+2. **uv** is a very powerfull way for reproducible dependency management
+
+```sh
+#uv init #pyproject.toml
+uv add pandas=2.2.2
+uv sync
+uv run sample.py
+#uv run streamlit run main.py
+```
+
 
 ### Client Server
 
@@ -123,10 +147,6 @@ Let's clarify how client/server architecture and three-tier architecture relate 
     * **Persistence Layer:** This manages the data (the database).
 
 **How SSR and SSG Fit In**
-
-
-
-
 
 {{< details title="Now, let's connect these architectures to SSR and SSG: 📌" closed="true" >}}
 
@@ -203,9 +223,9 @@ In essence, while Jamstack's core philosophy is **centered around pre-built stat
 Lately Ive been **using uv** instead of python venvs:
 
 ```sh
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
+# uv venv
+# source .venv/bin/activate
+# uv pip install -r requirements.txt
 
 uv streamlit run main.py
 ```
@@ -613,6 +633,12 @@ While working on some PoCs where a quick demo of your [data models](https://jalc
 
 This can be helpful before full [AI/BI solutions](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) are getting build and get stakeholders expectations in line during early development phases.
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="AI Bi Tools Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
+
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
+{{< /cards >}}
+
 {{< details title="PyGWalker | Turn your pandas dataframe into an interactive UI for visual analysis 📌" closed="true" >}}
 
 * https://kanaries.net/pygwalker
@@ -753,7 +779,7 @@ Reflex has been one of the latest webapp frameworks Ive tried with Python.
 
 ![alt text](/blog_img/apps/reflex/reflex-stocks.png)
 
-And it has such a huge potential to become by go to.
+And it has such a huge potential to become my go to.
 
 * https://reflex.dev/blog/2024-10-8-self-hosting-reflex-with-docker/
 

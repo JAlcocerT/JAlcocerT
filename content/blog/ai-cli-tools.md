@@ -2,7 +2,7 @@
 title: "AI Tools for CLI"
 date: 2025-06-25T01:20:21+01:00
 draft: false
-tags: ["Gemini CLI","LLMs"]
+tags: ["Gemini CLI","LLMs","BAML"]
 description: 'A look to the CLI tools to bring LLMs and better prompt engineering with BAML'
 url: 'ai-tools-for-cli'
 ---
@@ -77,7 +77,7 @@ As I could not do it via [regular google auth](https://github.com/google-gemini/
 
 ![alt text](/blog_img/GenAI/geminiCLI/geminicli-auth.png)
 
-![alt text](/blog_img/GenAI/geminiCLI/geminiCLI-authorized.png)
+![GeminiCLI is authorized now](/blog_img/GenAI/geminiCLI/geminiCLI-authorized.png)
 
 > You could do it as per [this issue](https://github.com/google-gemini/gemini-cli/issues/1502#issuecomment-3007518759)
 
@@ -141,9 +141,36 @@ PRety much anything: https://github.com/punkpeye/awesome-mcp-servers
 
 > Apache v2 | Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project
 
+You can add it to Windsurf by: https://gitmcp.io/openai/codex or https://gitmcp.io/google-gemini/gemini-cli
+
+```json
+{
+  "mcpServers": {
+    "gitmcp": {
+      "serverUrl": "https://gitmcp.io/google-gemini/gemini-cli"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}
+```
+
+![alt text](/blog_img/dev/IDEs/windsurf-mcp-gitmcp.png)
+
+![alt text](/blog_img/dev/IDEs/windsurf-mcp-chat.png)
+
 #### Gemini CLI x Databases
 
 * https://github.com/runekaagaard/mcp-alchemy
+
+#### Logging GeminiCLI
+
+```sh
+#npx https://github.com/google-gemini/gemini-cli -y && gemini
+gemini --debug -p "How do I use the Gemini CLI to log my thinking process?"
+```
 
 
 ### Other CLI Tools
@@ -158,7 +185,12 @@ You can get started as per [openai manual](https://help.openai.com/en/articles/1
 
 And use your favourite model: https://platform.openai.com/docs/models Which at this point offer a **200k context Window**
 
-You could say that at this point o3 > o1 > 4o / GPT 4.1
+You could say that at this point o3 > o1 > 4o / GPT 4.1:
+
+```sh
+codex --provider openai --model gpt-4.1-mini #32k tokens
+codex --provider openai --model gpt-4.1-nano #8k tokens
+```
 
 ```sh
 codex --approval-mode full-auto "create the fanciest todo-list app" --provider ollama
@@ -167,8 +199,8 @@ codex --approval-mode full-auto "create the fanciest todo-list app" --provider o
 #/model
 
 #codex -m o3-mini
-codex --provider openai --model o3-mini "Please create a data analysis script that cleans data"
-codex --quiet --full-auto "$(cat ./prompts/codex-tree-stack-components.md)" > ./Outputs_Model/output-codex-tree-stack-components-plan.json #saved the full reply with errors 
+#codex --provider openai --model o3-mini "Please create a data analysis script that cleans data"
+codex --provider openai --model o3-mini --quiet --approval-mode full-auto "$(cat ./prompts/codex-tree-stack-components.md)" > ./Outputs_Model/output-codex-tree-stack-components-plan.json #saved the full reply with errors 
 ```
 
 Remember that using providers you will get some associated cost. Like: https://platform.openai.com/usage
@@ -190,18 +222,32 @@ If you are familiar with BRD/PRD and similar project management concept, Claude 
 
 #### WARP IDE
 
+https://www.warp.dev/
 
 #### AIDER
 
 ## BAML
 
-https://github.com/BoundaryML/baml
+* https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
 
-> Apache v2 | The AI framework that adds the engineering to prompt engineering (Python/TS/Ruby/Java/C#/Rust/Go compatible)
+```sh
+ext install Boundary.baml-extension
+```
+
+
+> "Every system in the world should be able to run LLMs, not just Python. Vaibhav Gupta."
+
+* https://github.com/BoundaryML/baml
+* https://pypi.org/project/baml-py/
+
+> **Apache v2** | The AI framework that adds the **engineering to prompt engineering** (Python/TS/Ruby/Java/C#/Rust/Go compatible)
 
 BAML, which stands for "Basically a Made-up Language," is an open-source AI framework designed to bring traditional software engineering rigor and best practices to the development of applications that utilize Large Language Models (LLMs).
 
-Essentially, it offers a structured and type-safe way to define and manage how you interact with LLMs, moving beyond simple text prompts to a more robust, function-based approach.
+Essentially, it offers a **structured and type-safe way to define and manage how you interact with LLMs**, moving beyond simple text prompts to a more robust, function-based approach.
+
+
+{{< details title="More about BAML 📌" closed="true" >}}
 
 BAML helps you be better with LLMs by addressing several common pain points in LLM application development. 
 
@@ -209,34 +255,105 @@ Firstly, it transforms raw LLM prompts into defined "functions" with specific in
 
 This "schema engineering" ensures that your LLM outputs are reliable and consistently formatted, significantly reducing parsing errors and the need for complex error handling.
 
-Secondly, it drastically improves iteration speed with built-in IDE tooling and a "playground" that allows you to visualize and test your prompts rapidly, speeding up development cycles and enabling quicker experimentation with different ideas.
+Secondly, it drastically **improves iteration speed with built-in IDE tooling and a "playground"** that allows you to visualize and test your prompts rapidly, speeding up development cycles and enabling quicker experimentation with different ideas.
 
 Finally, BAML promotes maintainability and scalability by abstracting away the complexities of integrating with various LLM providers, offering features like model rotation, retry policies, and fallbacks, all while generating type-safe client code for multiple programming languages.
 
+{{< /details >}}
+
+> The core of BAML are RUST functions :) 
+
+> > Similarly as numpy goes to C.
+
+```sh
+uv add baml-py
+```
+
+All BAML does under the hood is go generate a web request (you will be able to see the raw curl) and configurable via `client.baml`
+
+https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
+
+There is a `baml_client` you can do:
+
+```sh
+from baml_client import b
+
+#you can now bring your classes that will check types and so on, just like typescript does, but in python, thanks to BAML (typechecking in prompts)
+```
+
+And there wont be any dependencies on baml code once it has been run!
+
+So you will just ship the `baml_client` part.
+
+**BAML examples**
+
+1. Semantic streaming feature - A react components that know how to renders itself
+
+2. There is a LLM Client Call Graph to debug which model is being called
+
+3. No Internet connection required
+
+4. Gpt 3.5 + BAML > 4o with structured outputs | *Function-calling for every model, in your favorite language*
+
+We let the LLM speak the language it thinks its better for the reply and then we take what we want from that reply (that does not have to be a JSON like with structured outputs)
+
+**Competitors**: PydanticAI
+
+baml.com/chat
+
+https://gloochat.notion.site/benefits-of-baml
+
+https://gloochat.notion.site/BAML-Advanced-Prompting-Workshop-Dec-2024-161bb2d26216807b892fed7d9d978a37?pvs=74
+
+https://www.youtube.com/watch?v=Xece-W7Xf48
+
+https://github.com/hellovai/ai-that-works
+
+
+```
+write me a webscrapper with selenium to extract a products on a site
+
+write the baml code + python code example
+```
+
+
 ### BAML as a DSL 
 
-They call BAML a **DSL (Domain-Specific Language)** because it's precisely that: a programming language tailored specifically to a particular "domain" of problems. In this case, the domain is **building reliable AI workflows and agents, particularly around prompt engineering for Large Language Models (LLMs).**
+They call BAML a **DSL (Domain-Specific Language)** because it's precisely that: a programming language tailored specifically to a particular "domain" of problems.
+
+In this case, the domain is **building reliable AI workflows and agents, particularly around prompt engineering for Large Language Models (LLMs).**
 
 Here's why that classification fits and what it means:
 
 * **Specialized Focus:** Unlike a General-Purpose Language (GPL) like Python, JavaScript, or Java, which are designed to solve a wide range of problems across various domains, a DSL like BAML has a very narrow and specific focus. Its syntax, keywords, and constructs are all designed to express concepts directly relevant to interacting with LLMs – defining prompts, specifying input/output schemas, handling model clients, streaming, retries, and so on.
 
-* **Higher Level of Abstraction for the Domain:** BAML allows you to express your intentions for LLM interactions at a higher level of abstraction than you would in a GPL. Instead of writing boilerplate code to serialize JSON schemas into prompts, handle API calls, and parse messy outputs, BAML provides dedicated syntax for these tasks. For example, the `function ChatAgent(...) -> StopTool | ReplyTool { client "openai/gpt-4o-mini" prompt #"...#" }` syntax is very specific to defining an LLM function, its model, and its prompt structure.
+
+{{< details title="More about BAML as DSL 📌" closed="true" >}}
+
+* **Higher Level of Abstraction for the Domain:** 
+BAML allows you to express your intentions for LLM interactions at a higher level of abstraction than you would in a GPL. Instead of writing boilerplate code to serialize JSON schemas into prompts, handle API calls, and parse messy outputs, BAML provides dedicated syntax for these tasks. For example, the `function ChatAgent(...) -> StopTool | ReplyTool { client "openai/gpt-4o-mini" prompt #"...#" }` syntax is very specific to defining an LLM function, its model, and its prompt structure.
 
 * **Improved Readability and Maintainability within the Domain:** Because its syntax is specialized, BAML code becomes more readable and understandable for anyone working within the LLM application development domain. It clearly delineates the structure of your prompts and expected outputs, making it easier to maintain and debug your LLM-driven logic over time compared to managing hundreds of complex f-strings in a general-purpose language.
 
 * **Generated Code:** BAML files are typically compiled or transformed into code in a GPL (like Python, TypeScript, Go, etc.). This means you write your LLM logic in the specialized BAML DSL, and then BAML's tooling generates the necessary "boilerplate" code in your application's primary language, which you then integrate into your project. This is a common characteristic of external DSLs.
 
+{{< /details >}}
+
 In essence, BAML is a DSL because it provides a dedicated, purpose-built language to solve a specific problem set (LLM prompt engineering and workflow automation), offering specialized syntax and abstractions that make working within that domain more efficient, reliable, and understandable.
 
-> A DSL like the one [Kibana has](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#kibana)!
+> A DSL, like the one [Kibana has](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#kibana)!
 
 ---
 
 ## Conclusions
 
-[![Star History Chart](https://api.star-history.com/svg?repos=BoundaryML/baml,google-gemini/gemini-cli&,type=Date)](https://star-history.com/BoundaryML/baml&google-gemini/gemini-cli&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=BoundaryML/baml,google-gemini/gemini-cli&pydantic/pydantic-ai&,type=Date)](https://star-history.com/BoundaryML/baml&google-gemini/gemini-cli&pydantic/pydantic-ai&Date)
 
+
+### Python CLi Tools
+
+* https://pypi.org/project/questionary/
+* https://docs.pytest.org/en/stable/
 
 
 ---
@@ -246,7 +363,7 @@ In essence, BAML is a DSL because it provides a dedicated, purpose-built languag
 ### Other TOols
 
 
-https://github.com/Chivo-Systems/Shinar/
+* https://github.com/Chivo-Systems/Shinar/
 
 
 > gpl 3.0 | Open Source AI Calling Transcriptions, Summaries, and Analytics built on OpenAI Whisper
