@@ -2,7 +2,7 @@
 title: "Git & Development Tricks: Github, Gitlab and more"
 date: 2025-02-20T23:20:21+01:00
 draft: false
-tags: ["Dev","Git 101"]
+tags: ["Dev","Git 101","branch"]
 url: 'git-recap'
 description: 'Git and useful extensions while developing.'
 ---
@@ -30,7 +30,7 @@ sudo apt install git #you need GIT first
 #git remote -v
 ```
 
-![alt text](/blog_img/dev/github-auth.png)
+![Github Auth](/blog_img/dev/github-auth.png)
 
 
 You will also need:
@@ -45,6 +45,9 @@ See active branch and latest commits:
 ```sh
 #git branch
 git log --oneline -n 10
+
+#create a new branch from main
+git checkout -b <new-branch-name> main
 ```
 
 #### Creating Releases

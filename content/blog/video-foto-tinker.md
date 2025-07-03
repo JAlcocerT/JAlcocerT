@@ -198,6 +198,12 @@ You can also take a 1080p part from a 4K video withour rencoding:
 ffmpeg -i DJI_20250518172824_0001_D.MP4 -c copy -bsf:v hevc_metadata=crop_left=960:crop_right=960:crop_top=0:crop_bottom=1080 output_horizontal_1080p_no_encode.mp4
 ```
 
+#### Thumbnails
+
+```sh
+ffmpeg -i extracted-image.png -c:v libwebp -quality 80 ./compressed_thumbnail.webp
+```
+
 #### AI Powered shorts
 
 A friend told me recently to have a look to the following to create **interesting youtube shorts**:

@@ -7,7 +7,7 @@ draft: false
 #   alt: "SelfHosting xTTS2 with Docker." # alt text
 #   caption: "Succesfull installation of xTTS2 with Docker." # display caption
 description: 'Local T2S Tools with Coqui and LocalAI. Clone audio with xTTS2.'
-tags: ["AI-Gen"]
+tags: ["AI-Gen","Pinokio AI"]
 url: local-ai-audio
 ---
 
@@ -24,9 +24,26 @@ url: local-ai-audio
 
 Lets see some **Text to Speech** AI tools!
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mezbaul-h/june,coqui-ai/TTS,mudler/LocalAI&,type=Date)](https://star-history.com/mezbaul-h/june&coqui-ai/TTS&mudler/LocalAI&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=mezbaul-h/june,coqui-ai/TTS,mudler/LocalAI&,SWivid/F5-TTS,pinokiocomputer/pinokio,type=Date)](https://star-history.com/mezbaul-h/june&coqui-ai/TTS&mudler/LocalAI&SWivid/F5-TTS&pinokiocomputer/pinokio&Date)
 
 Including [Google and OpenAI](#conclusions) solutions
+
+### F5-TTS
+
+
+
+* https://huggingface.co/spaces/mrfakename/E2-F5-TTS
+* https://github.com/SWivid/F5-TTS
+
+<!-- https://www.youtube.com/watch?v=PmHDuLePaeU -->
+
+{{< youtube "PmHDuLePaeU" >}}
+
+https://pinokio.co/
+https://github.com/pinokiocomputer/pinokio
+
+> MIT | AI Browser
+
 
 ### LocalAI TTS
 
@@ -257,7 +274,7 @@ Plus, Recemtly ive seen this usage of n8n to build AI workflows:
 
 
 
-### FAQ
+## FAQ
 
 * https://github.com/snakers4/silero-models
 
