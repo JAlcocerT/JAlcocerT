@@ -48,19 +48,39 @@ npm install astro-pagefind pagefind
 
 3. **Image [optimizations](https://docs.astro.build/en/guides/images/)** to `.webp`
 
-4. **OpenGraph** images working when sharing the web (and also considering the post images)
+4. **OpenGraph** images working when sharing the web (and also considering the post images, that are rendered)
+
+When sharing the main page, is the image that will be displayed
+
+```html
+import defaultImage from "~/assets/images/default-image.jpg";
+```
+
 * Icons: https://lucide.dev/
 
 > MIT | Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons.
 
 5. **RSS** Feed and sitemap!
+
 * Very **modular** implementation of which posts goes where thanks to `isBigHeadline` and `isSmallHeadline` 
 * Base path is present at `index.ts`
 
+As part of the tests, I used CF Wrangler CLI for a quick static deployment:
+
+![CF CLI](/blog_img/web/astro/cf-cli-wrangler.png)
 
 ```sh
 curl https://beyondajourney.pages.dev/rss.xml
-curl https://beyondajourney.pages.dev/sitemap-index.xml
+curl https://beyondajourney.pages.dev/sitemap-index0.xml
+```
+
+At `./public/robots.txt`, you can adapt the sitemap path:
+
+```
+User-agent: *
+Allow: /
+
+Sitemap: https://beyondajourney.pages.dev/sitemap-0.xml
 ```
 
 ```json
@@ -74,6 +94,16 @@ curl https://beyondajourney.pages.dev/sitemap-index.xml
 },
 //....
 ```
+
+![Astro-News Theme - beyond a journey result](/blog_img/web/astro/astro-news-theme-beyondajourney.png)
+
+* https://web-check.xyz/check/https%3A%2F%2Fbeyondajourney.pages.dev%2F
+* https://www.websitecarbon.com/
+
+The theme did not have ToC be default, but I have vibecoded one:
+
+![Astro News - Post ToC](/blog_img/web/astro/astro-news-toc-vibecoded.png)
+
 
 ```sh
 sudo apt install liferea

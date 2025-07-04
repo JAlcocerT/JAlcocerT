@@ -60,9 +60,35 @@ Use IT or lose it The AI Revolution for your business · It all start with a Mod
 ### Features I liked
 
 1. The moving [navbar](https://github.com/JAlcocerT/DataNova/blob/main/src/components/sections/Navbar.astro) as you move around the web
-2. The [Diagram.astro](https://github.com/JAlcocerT/DataNova/blob/main/src/components/common/Diagram.astro) component
+
+2. The [Diagram.astro](https://github.com/JAlcocerT/DataNova/blob/main/src/components/common/Diagram.astro) component, which is a *static* visual diagram
+
+![alt text](/blog_img/web/astro/astro-datanova-animated-graph.png)
+
+> THis looks so cool andfor sure drive conversions rate up!
+
 3. Browser tab icon working, as well as OG when shared via whatsapp
-4. 
+4. Inside the Articles part, we have a [very interesting sticky ToC](https://github.com/JAlcocerT/jalcocertech/tree/main/src/pages/support/articles) that goes down as you scroll (in the desktop version)
+
+5. It also bring some embedded video
+
+```html
+        <div class="aspect-video">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+            class="aspect-auto rounded-xl"
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+```
+
+6. What it does NOT bring, is search. But for a simple *landing page + few pages*...thats fine.
 
 ### Deploying
 
@@ -80,7 +106,7 @@ And review that its only for selected repos:
 
 ![alt text](/blog_img/web/astro/cf-gh-selected-repos.png)
 
-> **The result is visible at**: jalcocert.pages.dev or www.jalcocertech.com
+> **The result is visible at**: jalcocert.pages.dev or `www.jalcocertech.com`
 
 ```sh
 ping www.jalcocertech.com

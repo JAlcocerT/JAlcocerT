@@ -15,7 +15,7 @@ If we are ready...what are those cool use cases?
 
 ## Photo
 
-https://www.geeksforgeeks.org/python-pillow-creating-a-watermark/
+* https://www.geeksforgeeks.org/python-pillow-creating-a-watermark/
 
 ## Video
 
@@ -31,8 +31,7 @@ TO create videos with Python, for now, I have tried [data driven animations](#an
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
-    {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
-
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
 {{< /cards >}}
 
 Flask

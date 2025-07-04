@@ -200,7 +200,14 @@ HUGO its not only about its crazy build speed.
 
 But also about its shortcodes.
 
-You can use them to embed youtube videos, creating cool dropdowns or even to bring MermaidJS charts, Katex and ChartJS to your website.
+You can use them to embed youtube videos, creating cool dropdowns or even to bring MermaidJS charts, Katex and [ChartJS to your website](#charts-in-hugo).
+
+Or bringing tweets information:
+
+```
+{{< youtube "-05mOdHmQVc" >}}
+{{< tweet user="stratebi" id="1231889201198772224" >}}
+```
 
 Think of them like *HUGO components*, if you come from NextJS or Astro.
 
@@ -272,21 +279,19 @@ hugo server --bind="0.0.0.0" --baseURL="http://192.168.0.12" --port=1319
 
 > Tested it with hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d linux/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio
 
-### More about ChartJS
+#### More about ChartJS
 
-https://github.com/chartjs/Chart.js
+* https://github.com/chartjs/Chart.js
 
-> MIT Simple HTML5 Charts using the <canvas> tag
-
+> **MIT** | Simple HTML5 Charts using the <canvas> tag
 
 With ChartJS you can also do [Animations](https://www.chartjs.org/docs/latest/configuration/animations.html)!
-
 
 ```sh
 npm install chart.js
 ```
 
-And by using the chart.html shortcode:
+And by using the `chart.html` shortcode:
 
 1. https://www.chartjs.org/docs/latest/charts/doughnut.html#pie
 

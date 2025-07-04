@@ -1148,6 +1148,8 @@ Participating in Google Ads requires a commitment to learning and ongoing optimi
 
 Recently I was reading about [Pricing strategies](https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy) and Menger's view.
 
+> As per Menger's view: *Costs don't drive final prices*
+
 If everything works...
 
 {{< callout type="info" >}}
