@@ -2,7 +2,7 @@
 title: "No Code Tools to use Gen AI"
 date: 2025-04-19T23:20:21+01:00
 draft: false
-tags: ["Gen-AI","Python","Dev","ChatBots","TelegramBots"]
+tags: ["Gen-AI","Python","Dev","ChatBots","TelegramBots","N8N Workflows"]
 description: 'Generative AI made simple with Low Code. Chatwoot, Flowise, n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
 url: 'no-code-ai-tools'
 ---
@@ -11,7 +11,6 @@ url: 'no-code-ai-tools'
 Gen AI, Rags, containers...
 
 But what about the use cases?
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="/blog_img/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
@@ -24,6 +23,10 @@ But what about the use cases?
 The AI tech side might be perceived as chaotic...but you can keep it close to [apps you are familiar](#see-also), like [telegram bots](#tg-bots)
 
 ### Flowise AI
+
+Flowise provides modular building blocks for you to build any agentic systems, from simple compositional workflows to autonomous agents
+
+> Build AI Agents, Visually
 
 * **Flowise AI**, a groundbreaking Free platform that is making AI more accessible than ever before.
   * {{< newtab url="https://flowiseai.com/" text="The Flowise AI Official Page" >}}
@@ -38,6 +41,18 @@ The AI tech side might be perceived as chaotic...but you can keep it close to [a
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/FlowiseAI" title="FlowiseAI Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
+
+#### Flowise x Streamlit
+
+Developer Friendly
+API, SDK, Embed
+Extend and integrate to your applications using APIs, SDK and Embedded Chat
+
+APIs
+Embedded Widget
+Typescript & Python SDK
+
+https://docs.flowiseai.com/integrations/3rd-party-platform-integration/streamlit
 
 
 #### Embedded Flowise Chat
@@ -215,15 +230,92 @@ You can selfhost Chatwoot with this compose
 
 #### N8N
 
-2. N8N
+2. What is n8n?
 
-We can embed n8n Chats into our sites thanks to: https://www.npmjs.com/package/@n8n/chat
+* https://github.com/n8n-io/n8n
+* https://docs.n8n.io/hosting/
+  * https://docs.n8n.io/hosting/starter-kits/ai-starter-kit/
+  * https://docs.n8n.io/choose-n8n/#platforms
+
+* **Low-Code/No-Code, but with Code Flexibility:** n8n is often described as a "low-code" platform. This means it provides a visual, drag-and-drop interface for building workflows without needing to write code for basic tasks. However, it also allows users (especially developers) to insert custom JavaScript or Python code within nodes for more complex logic and transformations.
+* **Node-Based Architecture:** Workflows in n8n are built by connecting "nodes." Each node represents a specific action, trigger, or data transformation (e.g., an HTTP request, a data manipulation, sending an email, or interacting with an AI model).
+* **Self-Hostable and Open-Source:** A significant advantage of n8n is that it's open-source and can be self-hosted. This gives you full control over your data, privacy, and infrastructure, which is a major differentiator from many other cloud-only automation platforms. They also offer a cloud-hosted version for convenience.
+* **Extensive Integrations:** n8n boasts hundreds of pre-built integrations with popular applications, databases, and cloud services (e.g., Slack, GitHub, Google Sheets, Salesforce, HubSpot, OpenAI). If an integration doesn't exist, you can use the generic HTTP Request node or create custom nodes to connect to almost any API.
+* **AI and LLM Capabilities:** n8n is well-positioned for the "AI age." It has native support for integrating with AI services like OpenAI's GPT models, Claude, and Hugging Face. This allows you to build sophisticated AI-powered workflows for tasks like summarizing content, generating replies, classifying data, and creating AI agents.
+* **Use Cases:** n8n is used for a wide range of automation, including:
+    * Automating repetitive tasks across various tools.
+    * Building complex data pipelines (ETL).
+    * Creating custom integrations between applications.
+    * Marketing automation (lead capture, email campaigns).
+    * CRM integration and data synchronization.
+    * IT Operations (onboarding, security incident enrichment).
+    * Building AI agents.
+    * Customer support automation.
+
+
+{{< details title="Why should you care about N8N? | Vibe Coding + JSON Driven Workflows 📌" closed="true" >}}
+
+n8n (pronounced "n-eight-n") is a powerful and flexible workflow automation tool. Here's a breakdown of what it is and how you can work with its workflow JSON:
+
+**Can you feed workflow JSON to n8n?**
+
+**Absolutely, yes!** n8n workflows are essentially saved as JSON files.
+
+This is a core feature that enables sharing, versioning, and **programmatic management of workflows**.
+
+You can import and export workflows in several ways:
+
+1.  **Copy-Paste in the UI:**
+    * In the n8n Editor UI, you can select nodes (or the entire workflow) and copy them to your clipboard (`Ctrl+C` or `Cmd+C`).
+    * You can then paste them (`Ctrl+V` or `Cmd+V`) into another n8n instance or even a text editor to see the JSON structure.
+    * Conversely, you can copy workflow JSON from a file or another source and paste it directly into the n8n canvas to import it.
+
+2.  **From the Editor UI Menu:**
+    * **Download:** You can download your current workflow as a JSON file to your computer. This is great for backing up or sharing.
+    * **Import from File:** You can upload a JSON file from your computer to import a workflow.
+    * **Import from URL:** You can import workflow JSON directly from a URL (e.g., a GitHub Gist or a shared link).
+
+3.  **From the Command Line (CLI):**
+    * If you're self-hosting n8n (especially in Docker environments), you can use the n8n CLI to import and export workflows programmatically.
+    * Commands like `n8n import:workflow --input=file.json` allow you to import workflows. This is particularly useful for DevOps practices, CI/CD pipelines, and managing workflows across different environments (development, staging, production).
+
+**Benefits of using workflow JSON:**
+
+* **Sharing:** Easily share workflows with others in the n8n community or within your team.
+* **Version Control:** Store your workflow JSON files in Git or other version control systems, treating your automations as "code." This allows for tracking changes, reverting to previous versions, and collaborative development.
+* **Vibe Coding / Building Outside n8n:** Yes, if you understand the n8n workflow JSON structure (which is fairly logical), you could technically "vibe code" or manually construct parts of a workflow in JSON and then import it. This is advanced, but certainly possible, especially for experienced developers.
+* **Programmatic Deployment:** Automate the deployment of workflows to new n8n instances.
+* **Community Templates:** The n8n community is active and shares many pre-built workflow templates in JSON format. You can find these on the official n8n website (under "Workflows" or "Templates") and in community forums/repositories.
+
+{{< /details >}}
+
+**Important Considerations when sharing/importing JSON:**
+
+* **Credentials:** Workflow JSON files *include credential names and IDs*. While IDs aren't sensitive, the names could be. Crucially, **they generally do NOT include the actual sensitive credential data (like API keys)**. When you import a workflow, you'll need to manually re-link or create new credentials in your n8n instance for the workflow to function.
+* **Webhook URLs:** If a workflow uses a Webhook trigger, the URL will be specific to the original n8n instance. When you import it, you'll likely need to generate a new Webhook URL for your instance and update any external services configured to call that webhook.
+* **Node Versions:** Occasionally, if you import a workflow built with a much older or newer version of n8n, you might encounter minor compatibility issues or warnings about outdated nodes. These are usually easy to resolve by updating the nodes within the UI.
+
+In summary, n8n is a highly capable and developer-friendly automation tool, and its reliance on JSON for workflow definition makes it incredibly flexible for sharing, managing, and integrating with your existing development workflows.
+
+We can **embed n8n Chats** into our sites thanks to: https://www.npmjs.com/package/@n8n/chat
 
 ```sh
 npm install @n8n/chat
 ```
 
 There are many more possibilities by playing with: https://docs.n8n.io/api/#learn-about-rest-apis
+
+* https://docs.n8n.io/integrations/community-nodes/installation/
+  * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite/
+  * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/
+  * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.stripe/
+  * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.telegram/
+  * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.youtube/
+  * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/
+* https://docs.n8n.io/integrations/builtin/node-types/
+
+https://www.youtube.com/watch?v=Rmi-ckbMOQE
+
 
 * https://github.com/n8n-io/self-hosted-ai-starter-kit
 
@@ -254,15 +346,30 @@ https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
 
 {{< youtube "dC2Q_cyzgjg" >}}
 
+You can get ideas on what to build with n8n: https://n8n.io/workflows/
+
+![alt text](/blog_img/selfh/n8n-sample-flow.png)
+
+Like this one: https://n8n.io/workflows/4827-ai-powered-whatsapp-chatbot-for-text-voice-images-and-pdf-with-rag/
+
+
+{{< callout type="warning" >}}
+For [embedding n8n](https://n8n.io/embed/) you will need a license!
+{{< /callout >}}
+
 
 #### TG Bots
 
 3. Telegram...bots?
 
+They can be used via n8n: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.telegram/
+
+But also code driven, if you dare.
 
 Sometime ago I was doing some tests with [tg bots](https://github.com/JAlcocerT/Private/tree/main/Web_scrapping/Py_BeautifulSoup/TelegramBot), but that was all before the LLM boom.
 
-And definitely there are interesting bots outthere, like the bibliotecasecreta.nl
+And definitely there are interesting bots outthere, like the `bibliotecasecreta.nl`:
+
 * https://core.telegram.org/bots/api
   * https://pypi.org/project/python-telegram-bot/
   * https://github.com/python-telegram-bot/python-telegram-bot
@@ -276,7 +383,7 @@ pip install python-telegram-bot==22.0
 It was about time to make [a project again with a telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot) 💻 (combined with [web](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/)!)
 {{< /callout >}}
 
-Its all done with Python and the following structure:
+Its all done with Python and the following **project structure**:
 
 {{< filetree/container >}}
   {{< filetree/folder name="TelegramBot" >}}
@@ -387,11 +494,7 @@ For me, using `/mybots` allow me to change it.
 
 Instead of giving hardcoded replies, you can plug any LLM to process and reply the conversation
 
-{{< /details >}}
-
-{{< details title="Telegram Bots to download given images 📌" closed="true" >}}
-
-
+You could also manage to do Telegram Bots to download given images and then interprete it via a multi-modal model.
 
 {{< /details >}}
 
@@ -404,6 +507,9 @@ Instead of giving hardcoded replies, you can plug any LLM to process and reply t
 
 ### F/OSS No Code Data Tools
 
+* Node Red
+* Apache Airflow
+
 #### BaseRow
 
 * The open platform to create scalable databases and applications—without coding - https://baserow.io/
@@ -413,7 +519,7 @@ https://gitlab.com/baserow/baserow/-/blob/develop/LICENSE
 
 Can be SelfHosted or use: https://baserow.io/database
 
-Baserow is an open source no-code database and Airtable alternative.
+> Baserow is an open source no-code database and Airtable alternative.
 
 Create your own database without technical experience. Our user friendly no-code tool gives you the powers of a developer without leaving your browser.
 
@@ -421,28 +527,32 @@ Create your own database without technical experience. Our user friendly no-code
 * Strengths: Offers a visual interface for building tables, defining relationships, and managing data. Supports various data types, including files, formulas, and automations. Integrates with popular tools like Zapier and webhooks.
 * Considerations: While feature-rich, it might not be as powerful as some options for complex relational modeling.
 
-#### Other
+#### Others
 
-  * API Table - https://github.com/apitable/apitable
-  https://github.com/apitable/apitable?tab=AGPL-3.0-1-ov-file#readme
-    * https://github.com/apitable/apitable#installation
+* API Table - https://github.com/apitable/apitable
+  * https://github.com/apitable/apitable?tab=AGPL-3.0-1-ov-file#readme
+  * https://github.com/apitable/apitable#installation
 
-Rowy: https://github.com/rowyio/rowy?tab=readme-ov-file
+* Rowy: https://github.com/rowyio/rowy?tab=readme-ov-file
 
 Focus: Low-code backend platform for building internal tools and automating workflows.
+
 Strengths: Flexible and customizable, allowing you to build custom interfaces, integrations, and automations. Supports a variety of data sources and connects to external APIs.
+
 Considerations: Requires more development knowledge compared to other options. Might have a steeper learning curve for non-programmers.
 
 4. Appsmith: https://www.appsmith.com/integration
 https://github.com/appsmithorg/appsmith
 
 Focus: Open-source **low-code platform** for building internal tools and custom applications.
+
 Strengths: Visually build user interfaces using drag-and-drop functionality and connect to various data sources. Offers features like user authentication, form handling, and data integrations.
+
 Considerations: While offering a visual interface, it might require some coding knowledge for complex functionalities.
 
 > Platform to build admin panels, internal tools, and dashboards. Integrates with 25+ databases and any API.
 
-https://docs.appsmith.com/getting-started/setup/installation-guides/docker?utm_source=github&utm_medium=organic&utm_campaign=readme
+* https://docs.appsmith.com/getting-started/setup/installation-guides/docker?utm_source=github&utm_medium=organic&utm_campaign=readme
 
 ```yml
 services:
@@ -461,27 +571,19 @@ services:
 5. Budibase:
 
 Focus: Open-source self-hosted alternative for building internal tools and managing data.
+
 Strengths: Offers a modular architecture with components for building databases, forms, dashboards, and workflows. Supports user management, role-based access control, and data filtering.
+
 Considerations: Relatively new project compared to some alternatives. Feature set might be under development.
 
-https://github.com/Budibase/budibase
-https://github.com/Budibase/budibase?tab=License-1-ov-file#readme
-
+* https://github.com/Budibase/budibase
+* https://github.com/Budibase/budibase?tab=License-1-ov-file#readme
 
 > Low code platform for building business apps and workflows in minutes. Supports PostgreSQL, MySQL, MSSQL, MongoDB, Rest API, Docker, K8s, and more 🚀
 
-
-
 * https://github.com/RasaHQ/rasa
-https://github.com/RasaHQ/rasa?tab=Apache-2.0-1-ov-file#readme
+  * https://github.com/RasaHQ/rasa?tab=Apache-2.0-1-ov-file#readme
 
 Rasa Open Source is the most popular open source framework for **building chat and voice-based AI assistants**.
 
 > 💬 Open source machine learning framework to automate text- and voice-based conversations: NLU, dialogue management, connect to Slack, Facebook, and more - Create chatbots and voice assistants
-
-
-
-### Other F/OSS No Code Tools
-
-* Node Red
-* Apache Airflow

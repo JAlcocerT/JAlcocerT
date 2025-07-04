@@ -105,6 +105,8 @@ https://www.youtube.com/watch?v=VnGRFwDrLHo
 
 ### RabbitMQ
 
+https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/
+
 **RabbitMQ** is an open-source message broker that facilitates communication between applications, services, or microservices in a distributed system.
 
 It supports multiple messaging protocols, including **AMQP** (Advanced Message Queuing Protocol), which is the default protocol used by RabbitMQ for managing and routing messages.
@@ -151,6 +153,8 @@ flatpak install flathub com.emqx.MQTTX
 4. MQTT with Python: https://www.emqx.com/en/blog/how-to-use-mqtt-in-python
 
 ### Apache Kafka
+
+https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.kafka/
 
 **Apache Kafka** is a distributed event streaming platform that is used for building real-time data pipelines and streaming applications.
 

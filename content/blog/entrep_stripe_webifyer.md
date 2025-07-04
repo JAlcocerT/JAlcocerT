@@ -429,7 +429,7 @@ Add Open Graph meta tags to your HTML <head> on the landing page:
 <meta property="og:url" content="https://yourdomain.com/">
 ```
 
-Replace https://yourdomain.com/ with your actual domain.
+> Replace https://yourdomain.com/ with your actual domain!
 
 ---
 
@@ -437,3 +437,27 @@ Replace https://yourdomain.com/ with your actual domain.
 
 ### Flask Container
 
+### Stripe x InvoiceNinja
+
+* https://hub.docker.com/r/invoiceninja/invoiceninja/
+* https://invoiceninja.com/
+* https://invoiceninja.github.io/en/getting-started/
+
+Which has stripe and [BTCPay](https://btcpayserver.org/) integration https://invoiceninja.com/payments/
+
+
+* https://github.com/btcpayserver/btcpayserver
+
+> MIT | Accept Bitcoin payments. Free, open-source & self-hosted, Bitcoin payment processor.
+
+### EE id x Ubuntu
+
+If you are into entrepreneuring and sell digital stuff, you might be interested in: https://www.id.ee/en/article/ubuntu-id-software-installation-updating-and-removal/#removing-mozilla-firefox
+
+* https://www.id.ee/en/article/operating-systems-supported-by-id-software/
+
+```sh
+#wget https://installer.id.ee/media/install-scripts/install-open-eid.sh
+nano install-open-eid.sh 
+#sh install-open-eid.sh
+```

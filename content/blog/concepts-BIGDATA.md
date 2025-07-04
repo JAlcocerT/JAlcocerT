@@ -739,7 +739,7 @@ Grouping data before partitioning organizes it for more efficient processing.
 
 - Understanding the concept of a Data Lake
 
-- Recognizing the key architectural layers and their roles:
+- Recognizing the key **architectural layers** and their roles:
   - Sources
   - Ingestion
   - Storage

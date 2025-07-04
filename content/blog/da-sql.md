@@ -266,8 +266,6 @@ FROM AlphabeticalSectors
 WHERE Rank = 1;
 ```
 
-
-
 {{< tweet user="iamsimuna" id="1581816237301956609" >}}
 
 <!-- SQL: Data definition and indexing

@@ -106,7 +106,6 @@ We just need to [have Docker installed](https://jalcocert.github.io/RPi/posts/se
 ### Master Node
 
 ```yml
-version: '3'
 services:
   k3s:
     image: rancher/k3s
@@ -149,7 +148,7 @@ kubectl exec -it <pod_name> -- /bin/bash: Executes a command, like opening a bas
 You can try with Beszel
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring with Beszel" >}}
 {{< /cards >}}
 
 ### Grafana

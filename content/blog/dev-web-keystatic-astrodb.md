@@ -153,13 +153,17 @@ But I find the Astro + Graph base component a much cooler (and simpler) approach
 
 ### Animations
 
-If what you want is to create a simple a quick .mp4, then **matplotlib + Python** should be your go to.
+If what you want is to create a simple a quick .mp4, then **matplotlib + Python** should be your go to:
 
-https://youtu.be/YuvHXyFeRV4
+<!-- https://youtu.be/YuvHXyFeRV4 -->
 
-You can do very smooth animations, with gradient background colors, 
+{{< youtube "YuvHXyFeRV4" >}}
 
-* For matching image background colors, this was usefulhttps://imagecolorpicker.com/
+You can do very smooth animations, with gradient background colors, as [I did here](https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations)
+
+{{< tweet user="LibrePortfolio" id="1940801205577699713" >}}
+
+* For matching image background colors, this was useful: https://imagecolorpicker.com/
 
 They should not be something new to you If you have explored Gabe's mechanism project and my post about it.
 
@@ -169,19 +173,31 @@ They should not be something new to you If you have explored Gabe's mechanism pr
 
 For **WordPress.com (the hosted service)**, I would guestimate their **Net Revenue Retention (NRR) to be in the range of 90% to 110%+**.
 
-Here's why:
+{{< callout type="info" >}}
+Recurring revenue businesses typically have an NRR as a key performance indicator!
+{{< /callout >}}
 
-* **Subscription Model:** WordPress.com operates on a recurring subscription model (freemium with paid plans for features, storage, and support). Recurring revenue businesses typically have an NRR as a key performance indicator.
+{{< details title="NRR Over 100%? 📌" closed="true" >}}
+
+* **Subscription Model:** WordPress.com operates on a recurring subscription model (freemium with paid plans for features, storage, and support). 
+
 * **High Switching Costs:** Once a website is built and established on a platform like WordPress.com, migrating it to another provider can be complex and time-consuming. This "stickiness" inherently contributes to higher retention.
+
 * **Upselling and Cross-selling Opportunities:**
     * Users often start with basic plans and upgrade as their needs grow (e.g., needing more storage, custom domain, e-commerce features with WooCommerce, advanced SEO tools, premium themes/plugins).
     * Automattic has also acquired other services (like WooCommerce, Jetpack, Tumblr) which can lead to cross-selling opportunities to their existing WordPress.com customer base.
+
 * **Brand Recognition and Ecosystem:** WordPress.com benefits from the massive brand recognition of WordPress itself and a vast ecosystem of themes and plugins, which adds value and encourages continued use.
+
 * **Customer Support and Managed Services:** For many users, the convenience of managed hosting and readily available support is a key factor in staying with WordPress.com rather than self-hosting.
 
-An NRR of **over 100%** (e.g., 105% or 110%) would indicate that WordPress.com is not only retaining most of its customers but also successfully increasing revenue from its existing customer base through upgrades and additional service purchases. Given their scale and the continuous development of their offerings, achieving NRR over 100% is certainly plausible.
+{{< /details >}}
 
-Without direct financial disclosures from Automattic, this remains an informed approximation.
+An NRR of **over 100%** (e.g., 105% or 110%) would indicate that WordPress.com is not only retaining most of its customers but also successfully increasing revenue from its existing customer base through upgrades and additional service purchases. 
+
+Given their scale and the continuous development of their offerings, achieving NRR over 100% is certainly plausible.
+
+> Without direct financial disclosures from Automattic, this remains an informed approximation/guestimation from *Gemini*!
 
 
 ### Making Webs with AI

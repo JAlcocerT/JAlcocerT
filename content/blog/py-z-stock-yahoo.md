@@ -1,8 +1,8 @@
 ---
-title: "Financial Data for Python - Trying YahooFinancial and YFinance packages"
-date: 2025-09-26
+title: "Financial Data for Python - Trying YFinance Package"
+date: 2025-06-18
 draft: false
-tags: ["Python"]
+tags: ["Python","GoogleFinance","Animations"]
 description: "Initial Yield vs Growth EDA and its math. How to analyze stock and dividend data with Python. Together with Data animations."
 url: 'python-financial-data-with-yfinance'
 math: true
@@ -25,10 +25,8 @@ How to pull data from: https://finance.yahoo.com/
 ```sh
 pip install yahoofinancials==1.20
 ```
+
 You can get started with a `.ipynb` jupyter for exploration.
-
-
-
 
 {{< callout type="warning" >}}
 The first time, [you will need a **venv**](https://jalcocert.github.io/JAlcocerT/useful-python-stuff) and the [vscode jupyter **extension**](https://github.com/microsoft/vscode-jupyter/wiki/Jupyter-Kernels-and-the-Jupyter-Extension#python-extension-and-ipykernel)
@@ -36,13 +34,14 @@ The first time, [you will need a **venv**](https://jalcocert.github.io/JAlcocerT
 
 ### YFinance
 
+It was a fundamental piece for RStocks, and it will be for any financial tricks you want to do with Python.
+
 * https://pypi.org/project/yfinance/
 * https://rowzero.io/blog/yfinance
 * https://github.com/ranaroussi/yfinance
     * https://ranaroussi.github.io/yfinance/
 
 > Apache v2 | Download market data from **Yahoo! Finance's API**
-
 
 ```sh
 pip install yfinance==0.2.52
@@ -62,7 +61,6 @@ STOCK('KO')
 
 When you put together **few stocks with growing dividends**, you might expect something like this:
 
- 
 ![Portfolio DGI Example](/blog_img/data-experiments/dgi_example.png) 
 
 Some years might have a decrease due to:
@@ -148,7 +146,6 @@ How about the stock value?
 
 ---
 
-
 ## Conclusions
 
 Is it possible to life from dividends?
@@ -166,7 +163,7 @@ And the math goes... $Needs = P \times \frac{Yearly_Gross_Expenses}{(Yearly_retu
 
 People mention about different strategies to estimate the returns:
 
-* The 4% rule, which apparently is an estimate of what you can take from a portfolio without killing your principal every year
+* The *4% rule*, which apparently is an estimate of what you can take from a portfolio without killing your principal every year
 * Others just go with a dividend investing approach, so they dont need to sell shares
 * And some people have a balance between stocks funds and bonds, so that if stock market goes down they can live with those bonds, without selling really cheap the stocks
 
@@ -174,24 +171,32 @@ People mention about different strategies to estimate the returns:
 To keep it simple, lets go with the 4%, but as you can imagine, life is much more complex and unpredictable than a fixed rate. Definitely, **this is not any financial advice of any type**.
 {{< /callout >}}
 
+If Python sounds like a very crazy thing to get started with: you can try with simple [Google Sheets + Google Finance formula](#gfinance-with-google-sheets)
+
 ---
 
 ## FAQ
 
-### YFinance with Google Sheets
+### GFinance with Google Sheets
 
-You can have a simple, yet useful **Google Sheets with Stocks** info:
+You can have a simple, yet useful **Google Sheets with Stocks** info: https://support.google.com/docs/answer/3093281?hl=en
 
 ```sh
 =GoogleFinance(S35;"eps") #S35 can reference some ticket, like NYSE:KO
 =GoogleFinance(S35;"pe")
+
+=GoogleFinance(S35;"pe")
+
+
 =GoogleFinance("INDEXSP:.INX") #sp500
 
 =INDICE(GoogleFinance("INDEXSP:.INX"; "price"; HOY()-365);2;2) #get the price 365 ago
 
-=SPARKLINE(GoogleFinance("CURRENCY:EURCHF"; "price"; HOY()-J$1; HOY()))
+=SPARKLINE(GoogleFinance("CURRENCY:EURCHF"; "price"; HOY()-90; HOY()))
 =SPARKLINE(GoogleFinance("CURRENCY:"&"USD" & DERECHA(A6;3); "price"; HOY()-J$1; HOY()))
 ```
+
+
 
 And if you need, you can also **import info from other website** sources:
 
@@ -236,7 +241,11 @@ You can learn more about **Scrapping** as covered on this [blog post](https://ja
 
 ### Animating Stock Data
 
-{{< details title="Data Animations with Python 📌" closed="true" >}}
+
+
+As you can imagine, you can get another ways to create animated stock data.
+
+{{< details title="Data Animations with Python | Plotly + MoviePy + ... 📌" closed="true" >}}
 
 It's absolutely possible to create animations with Plotly, and you can export them as GIFs or MP4s.  
 
@@ -246,7 +255,9 @@ Here's a breakdown of how to create animations and export them in different form
 
 **1. Creating the Animation with Plotly:**
 
-Plotly's `frames` argument is key to creating animations. You essentially create a series of plots (frames), each representing a step in your animation, and then Plotly smoothly transitions between them.
+Plotly's `frames` argument is key to creating animations.
+
+You essentially create a series of plots (frames), each representing a step in your animation, and then Plotly smoothly transitions between them.
 
 ```python
 import plotly.graph_objects as go
@@ -275,26 +286,28 @@ fig.show() # Display the interactive animation
 
 *   **Using `kaleido` (Recommended):**  Kaleido is a static image export utility for Plotly.  It's the easiest way to export to GIF.
 
-    ```python
-    import imageio # For GIF creation
+```python
+import imageio # For GIF creation
 
-    images = []
-    for frame in fig.frames:
-        fig.update_layout(scene=frame.layout) # Important for 3D plots
-        img_bytes = fig.to_image(format="png")  # or "jpg"
-        img = imageio.v2.imread(img_bytes)
-        images.append(img)
+images = []
+for frame in fig.frames:
+    fig.update_layout(scene=frame.layout) # Important for 3D plots
+    img_bytes = fig.to_image(format="png")  # or "jpg"
+    img = imageio.v2.imread(img_bytes)
+    images.append(img)
 
-    imageio.mimsave("animation.gif", images, fps=2) # fps controls the animation speed
-    ```
+imageio.mimsave("animation.gif", images, fps=2) # fps controls the animation speed
+```
 
-    You'll need to install `kaleido` and `imageio`: `pip install kaleido imageio`
+You'll need to install `kaleido` and `imageio`: `pip install kaleido imageio`
 
 *   **Alternative (if `kaleido` has issues):**  You could save each frame as a PNG and then use a separate tool (like ImageMagick) to combine them into a GIF.  This is more complex.
 
 **3. Exporting to MP4:**
 
-Plotly doesn't directly export to MP4. You'll need to use a video encoding library like `moviepy`.
+Plotly doesn't directly export to MP4.
+
+You'll need to use a video encoding library like `moviepy`.
 
 ```python
 from moviepy.editor import ImageSequenceClip

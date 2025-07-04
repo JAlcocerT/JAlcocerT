@@ -201,6 +201,8 @@ Whenever you are involved on a project, make sure that there are clear:
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#conclusions" title="A Project Charter Handy ↗ " >}}  
 {{< /cards >}}
 
+You might hear about the *Eisenhower Matrix* as well - A time management tool that helps you prioritize tasks by dividing them into four categories based on urgency and importance.
+
 Get ready to organize **effective meetings**:
 
 {{< cards cols="2" >}}

@@ -4,7 +4,7 @@ date: 2025-05-19T22:20:21+01:00
 draft: false
 description: "Connecting Ghost CMS to work with Astro Themes. Compared with Editing Astro via JSON."
 url: 'ghost-cms-for-astro'
-tags: ["Web","CMS","Ghost","Astro SSG"]
+tags: ["Web","CMS","Ghost","Astro SSG","n8n"]
 ---
 
 <!-- * https://pagespeed.web.dev/
@@ -273,7 +273,11 @@ You can deploy your static site anywhere, and simply rebuild it when Ghost conte
 
 https://ghost.org/docs/webhooks/
 
+### Ghost x N8N
 
+Who said about writing AI Driven content?
+
+https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.ghost/
 
 
 ## Hosting Ghost Powered Astro Theme

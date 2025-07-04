@@ -1,8 +1,8 @@
 ---
-title: "Server Monitoring [Recap]. Know your hardware health."
+title: "Server Monitoring [Recap]. Know your hardware' health."
 date: 2025-02-05
 draft: false
-tags: ["Dev"]
+tags: ["Dev","HomeLab","SelfHosting"]
 description: 'Container Server Monitoring with Beszel. Compared with Netdata, Grafana...'
 url: 'how-to-setup-beszel-monitoring'
 ---
@@ -21,8 +21,6 @@ So I went back to the [VPS provider](https://jalcocert.github.io/Linux/docs/linu
     * https://beszel.dev/
 
 > MIT | Lightweight **server monitoring hub** with historical data, docker stats, and alerts.
-
-
 
 Following the docs - https://beszel.dev/guide/getting-started
 
@@ -99,7 +97,7 @@ You just need to setup the given **script on your server** that pops up when you
 
 ![Tianji Server Setup](/blog_img/Monitoring/tianji-server-script.png)
 
-To stop it:
+To stop Tianji:
 
 ```sh
 systemctl --type=service --state=running
@@ -112,6 +110,7 @@ systemctl --type=service --state=running
 
 ### Netdata and Grafana
 
+My first monitoring at the homelab were possible thanks to:
 
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/selfhosting-netdata/" title="NetData Setup 🐋 ↗" >}}

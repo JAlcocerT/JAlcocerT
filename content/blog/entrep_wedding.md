@@ -1195,6 +1195,8 @@ If this does not give you a taste of what end to end feels like, nothing will.
 
 #### Gotify
 
+* https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gotify/
+
 Thanks to [magnus](https://magnus919.com/notes/gotify/)
 
 {{< cards cols="1" >}}

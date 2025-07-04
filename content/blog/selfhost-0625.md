@@ -143,7 +143,23 @@ https://www.youtube.com/watch?v=6sznCZ7ttbI
 
 ### Monitoring
 
-Beszel
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring Tools Post | With Beszel 101 Setup" >}}
+{{< /cards >}}
+
+On that post I also talked about Tianji, which is something more than a Web Analytics tool.
+
+{{< cards cols="1" >}}
+  {{< card link="https://fossengineer.com/setup-tianji-with-docker/" title="Tianji Setup 101 ↗" >}}
+  {{< card link="https://fossengineer.com/selfhosting-netdata/" title="NetData Setup ↗" >}}
+{{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/Selfhosting-Static-Webs-with-Apache-in-Docker" title="Static Sites x Apache Container 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Headless-CMS" title="Monitoring Tools with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
 
 Grafana
 
@@ -153,11 +169,16 @@ Uptime Kuma
 
 * https://orb.net/docs/setup-sensor/docker
 https://orb.net/
+
 ### P2P
 
 You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/)
 
-https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/" title="QBitTorrent Setup  ↗" >}}
+{{< /cards >}}
 
 ![Qbittorrent](/blog_img/selfh/media/qbit.png)
 

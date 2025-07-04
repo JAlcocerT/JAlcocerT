@@ -7,12 +7,14 @@ draft: false
 #   alt: "SelfHosting xTTS2 with Docker." # alt text
 #   caption: "Succesfull installation of xTTS2 with Docker." # display caption
 description: 'Local T2S Tools with Coqui and LocalAI. Clone audio with xTTS2.'
-tags: ["AI-Gen","Pinokio AI"]
+tags: ["AI-Gen","Pinokio AI","F5-TTS","Coqui-TTS"]
 url: local-ai-audio
 ---
 
-* https://platform.openai.com/playground/tts
+We have couple of *free to use* places to get TTS working out of the box:
 
+* https://platform.openai.com/playground/tts
+* https://aistudio.google.com/generate-speech
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat Project ↗" >}}
@@ -30,17 +32,25 @@ Including [Google and OpenAI](#conclusions) solutions
 
 ### F5-TTS
 
-
-
-* https://huggingface.co/spaces/mrfakename/E2-F5-TTS
+* Try it live without installing anything via HF and this gradio web-app: https://huggingface.co/spaces/mrfakename/E2-F5-TTS
 * https://github.com/SWivid/F5-TTS
 
-<!-- https://www.youtube.com/watch?v=PmHDuLePaeU -->
+Ive tried cloning my own voice:
 
-{{< youtube "PmHDuLePaeU" >}}
+```sh
+ffmpeg -i my_wa_audio.ogg my_wa_audio.mp3
+```
 
-https://pinokio.co/
-https://github.com/pinokiocomputer/pinokio
+Once again, thanks to DotCSV I could get to know about this project:
+
+{{< youtube "S1hO8SFIX5s" >}}
+
+<!-- https://www.youtube.com/watch?v=S1hO8SFIX5s -->
+
+And we can run our voice cloning tool, locally by **using PinokioAI**:
+
+* https://pinokio.co/
+* https://github.com/pinokiocomputer/pinokio
 
 > MIT | AI Browser
 
@@ -50,6 +60,10 @@ https://github.com/pinokiocomputer/pinokio
 * https://github.com/mudler/LocalAI
 
 > MIT |  🤖 The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement for OpenAI, running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more models architectures. Features: Generate Text, Audio, Video, Images, Voice Cloning, Distributed, P2P inference 
+
+<!-- https://www.youtube.com/watch?v=PmHDuLePaeU -->
+
+{{< youtube "PmHDuLePaeU" >}}
 
 * But we came for the text to audio capabilities: https://localai.io/features/text-to-audio/
 * And a very interesting API: http://192.168.1.11:8081/swagger/index.html
@@ -111,11 +125,9 @@ docker run -d \
 
 It will go with the `en/vctk/vits` model. But you can change it later on.
 
-
-
 The web ui will be at port `5002`:
 
-![alt text](/blog_img/GenAI/audio/coqui-tts.png)
+![Coqui TTS UI](/blog_img/GenAI/audio/coqui-tts.png)
 
 > And it works with more language than EN as well!
 
@@ -201,8 +213,8 @@ https://www.youtube.com/watch?v=1ec-jOlxt_E
 
 F/OSS Voice Clone
 
-https://github.com/CorentinJ/Real-Time-Voice-Cloning
-https://pythonawesome.com/clone-a-voice-in-5-seconds-to-generate-arbitrary-speech-in-real-time/
+* https://github.com/CorentinJ/Real-Time-Voice-Cloning
+* https://pythonawesome.com/clone-a-voice-in-5-seconds-to-generate-arbitrary-speech-in-real-time/
 
 * Open Voice + Google Colab
 * Also locally
@@ -242,7 +254,7 @@ https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/
 
 * https://github.com/coleam00/local-ai-packaged
 
-> Apache v2.0 | Run all your local AI together in one package - Ollama, Supabase, n8n, Open WebUI, and more!
+> Apache v2.0 | Run all your local AI together in one package - Ollama, Supabase, [n8n](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#n8n), Open WebUI, and more!
 
 <!-- https://www.youtube.com/watch?v=hKrl5Gr7hM0 -->
 
@@ -264,15 +276,13 @@ For which you will need [Google API Keys](https://aistudio.google.com/apikey)
 2. And OpenAI also has its own: https://platform.openai.com/playground/tts
 
 
-Plus, Recemtly ive seen this usage of n8n to build AI workflows:
+Plus, Recently, ive seen this [usage of n8n](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#n8n) to build AI workflows: *using Claude Code to create n8n flows*
 
 <!-- https://www.youtube.com/watch?v=uAtSMEBosGU -->
 
 {{< youtube "uAtSMEBosGU" >}}
 
-
-
-
+---
 
 ## FAQ
 
@@ -288,6 +298,69 @@ https://github.com/yl4579/StyleTTS?tab=MIT-1-ov-file#readme
 * https://github.com/natlamir/PiperUI
 
 Below are samples for Piper, a fast and local text to speech system. Samples were generated from the first paragraph of the Wikipedia entry for rainbow.
+
+
+https://github.com/kanttouchthis/text_generation_webui_xtts/?tab=readme-ov-file
+
+With **Oobaboga Gradio UI**
+
+And its extensions: https://github.com/oobabooga/text-generation-webui-extensions
+
+
+#### Voice?
+
+Generally, here you can get many ideas: <https://github.com/sindresorhus/awesome-whisper>
+
+Also, in [HF there are already interesting projects](https://jalcocert.github.io/Linux/docs/linux__cloud.md/llms/#how-to-use-hf).
+
+* <https://www.futuretools.io/tools/uberduck>
+
+
+* ecoute (OpenAI API needed)
+* Meeper (OpenAI API needed)
+
+* Bark
+
+* Whisper - https://github.com/openai/whisper
+  * https://github.com/Vaibhavs10/insanely-fast-whisper
+  * https://github.com/ggerganov/whisper.cpp
+  * https://huggingface.co/openai/whisper-large-v2#long-form-transcription
+  * https://github.com/SYSTRAN/faster-whisper
+
+* https://libretranslate.com/
+  *  Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup. 
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/nlp-tools/#interesting-offline-tools---translations" title="NLP Post ↗ " >}}
+{{< /cards >}}
+
+* https://github.com/CorentinJ/Real-Time-Voice-Cloning
+
+* Linux Desktop App:
+
+```sh
+flatpak install flathub net.mkiol.SpeechNote
+flatpak run net.mkiol.SpeechNote
+```
+
+---
+
+* Not F/OSS: 
+  * https://www.gladia.io/pricing
+  * https://bigwav.app/
+
+T2S/TTS - **text to speech** tools:
+
+* Elevenlabs - https://elevenlabs.io/pricing
+* https://azure.microsoft.com/en-us/products/ai-services/text-to-speech
+
+And now there is even **prompt to video** at: google veo3
+
+* https://openart.ai/video?ai_model=veo2
+* revid.ai
+* HeyGen - https://docs.heygen.com/ with avatar videos that are API driven
+
+> HeyGen can be combined with MCP - https://github.com/heygen-com/heygen-mcp witht their [mcp server](https://docs.heygen.com/docs/heygen-mcp-server)
 
 ### Adding TTS to MultiChat
 
@@ -445,69 +518,3 @@ Which I could not get working, nor: https://github.com/ytdl-org/youtube-dl
 sudo apt install youtube-dl
 youtube-dl -x --audio-format mp3 "https://www.youtube.com/watch?v=5Em5McC_ulc"
 ```
-
----
-
-## FAQ
-
-https://github.com/kanttouchthis/text_generation_webui_xtts/?tab=readme-ov-file
-
-With **Oobaboga Gradio UI**
-
-And its extensions: https://github.com/oobabooga/text-generation-webui-extensions
-
-
-#### Voice?
-
-Generally, here you can get many ideas: <https://github.com/sindresorhus/awesome-whisper>
-
-Also, in [HF there are already interesting projects](https://jalcocert.github.io/Linux/docs/linux__cloud.md/llms/#how-to-use-hf).
-
-* <https://www.futuretools.io/tools/uberduck>
-
-
-* ecoute (OpenAI API needed)
-* Meeper (OpenAI API needed)
-
-* Bark
-
-* Whisper - https://github.com/openai/whisper
-  * https://github.com/Vaibhavs10/insanely-fast-whisper
-  * https://github.com/ggerganov/whisper.cpp
-  * https://huggingface.co/openai/whisper-large-v2#long-form-transcription
-  * https://github.com/SYSTRAN/faster-whisper
-
-* https://libretranslate.com/
-  *  Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup. 
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/nlp-tools/#interesting-offline-tools---translations" title="NLP Post ↗ " >}}
-{{< /cards >}}
-
-* https://github.com/CorentinJ/Real-Time-Voice-Cloning
-
-* Linux Desktop App:
-
-```sh
-flatpak install flathub net.mkiol.SpeechNote
-flatpak run net.mkiol.SpeechNote
-```
-
----
-
-* Not F/OSS: 
-  * https://www.gladia.io/pricing
-  * https://bigwav.app/
-
-T2S/TTS - **text to speech** tools:
-
-* Elevenlabs - https://elevenlabs.io/pricing
-* https://azure.microsoft.com/en-us/products/ai-services/text-to-speech
-
-And now there is even **prompt to video** at: google veo3
-
-* https://openart.ai/video?ai_model=veo2
-* revid.ai
-* HeyGen - https://docs.heygen.com/ with avatar videos that are API driven
-
-> Hey gen can be combined with MCP - https://github.com/heygen-com/heygen-mcp witht their [mcp server](https://docs.heygen.com/docs/heygen-mcp-server)

@@ -4,7 +4,7 @@ date: 2025-06-19T19:20:21+01:00
 draft: false
 tags: ["Python","Streamlit","Flask","Reflex","RStocks"]
 description: "A Cooler R/Stocks - This time with Python. And with proper Auth/UIM."
-summary: 'A Cooler R/Stocks - This time with Python. And with proper auth'
+summary: 'A Cooler R/Stocks - This time with Python. And with proper Auth'
 url: 'python-stocks-webapp'
 math: true
 ---
