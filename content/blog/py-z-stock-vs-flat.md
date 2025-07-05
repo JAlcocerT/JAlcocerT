@@ -934,7 +934,7 @@ if monthly_payment is not None:
 * https://notebooklm.google.com/notebook/
 
 
-{{< details title="Interesting Questions for R.E | Iterate and make them better! 📌" closed="true" >}}
+{{< details title="Questions for R.E | Iterate and make them better! 📌" closed="true" >}}
 
 Sí, las preguntas que has enumerado son muy buenas y cubren una amplia gama de aspectos importantes a considerar al visitar un piso para comprar, especialmente si tu objetivo es la inversión.
 
@@ -1001,6 +1001,6 @@ Aquí te doy algunas observaciones y sugerencias adicionales:
 13. Księga wieczysta czy istnieje i czy mogę prosić o numer?
 14. Najbliższy paczkomat? Sprawdzić
 
-* https://hipoteczny.expert/
+From here, you might need some [help to get a credit](https://hipoteczny.expert/), *or maybe not* :)
 
 {{< /details >}}

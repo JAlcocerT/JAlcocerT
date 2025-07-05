@@ -2,7 +2,7 @@
 title: "My [AI] Youtube Workflow with Whisper"
 date: 2024-11-07
 draft: false
-tags: ["Tinkering"]
+tags: ["Tinkering","OpenAI TTS","Youtube Videos"]
 description: 'How to use AI to share more (and hopefully better) video content with others'
 url: 'my-youtube-ai-workflow'
 ---
@@ -25,15 +25,14 @@ It all started with...
 
 ### OBS + OpenAI [Whisper]
 
-1) OBS to record video. Then create audio with OpenAI API:
-
-* API Required from - https://platform.openai.com/api-keys
+1. OBS to record video.
+2. Then create audio with OpenAI API: https://platform.openai.com/api-keys
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py" title="Sample Script OpenAI Whisper ↗" >}}
 {{< /cards >}}
 
-{{< details title="OpenAI API Audio creation | Example 📌" closed="true" >}}
+{{< details title="OpenAI API Audio creation for YT Videos | Example 📌" closed="true" >}}
 
 ```py
 import openai
@@ -84,8 +83,8 @@ The initial scripts I used are at [YT_Audios](https://github.com/JAlcocerT/JAlco
 
 #### Updating My YT Video WF [AI Powered]
 
-* **OBSStudio** to record + I record myself commenting the video
-* Then, that `.mp4` gets a transcript, which is passed to the **OpenAI API to generate an AI voice**
+1. **OBSStudio** to record + I record myself commenting the video
+2. Then, that `.mp4` gets a transcript, which is passed to the **OpenAI API to generate an AI voice**
 
 ![FC Meme](/blog_img/memes/ezoeazin.jpg)
 
@@ -106,7 +105,6 @@ client = OpenAI(api_key='')
  
 # Path to your audio file
 audio_file_path = r'C:\Users\diazc\OneDrive\Escritorio\speech-analyzer-app\audio_test_api.wav'
-
  
 # Open the audio file
 with open(audio_file_path, "rb") as audio_file:
@@ -119,12 +117,9 @@ with open(audio_file_path, "rb") as audio_file:
     # Print the transcription text
     print(transcription.text)
 
- 
-
 # Extract the transcription text
 transcription_text = transcription.text
  
-
 # Step 2: Save the transcription to a .txt file
 output_file_path = 'audio.txt'
 
@@ -144,13 +139,9 @@ openai.api_key = ''
 # Path to the file containing the speech text (audio.txt)
 file_path = r'C:\Users\diazc\OneDrive\Escritorio\speech-analyzer-app\audio.txt'
 
- 
-
 # Step 1: Read the content of the file
 with open(file_path, 'r') as file:
-    file_content = file.read()
-
- 
+    file_content = file.read() 
 
 # Step 2: Create the prompt for GPT-4 using the content from the file
 analysis_prompt = f"You are an expert in public speaking. Analyze this speech: {file_content}"
@@ -163,17 +154,11 @@ response = openai.chat.completions.create(
     ]
 )
 
-
 # Step 4: Extract the analysis from the response
-
 analysis = response.choices[0].message.content
 
- 
-
 # Step 5: Print the analysis
-
 print("Speech Analysis: ")
-
 print(analysis)
 
 ```
@@ -357,6 +342,8 @@ chmod +x cygwin_cibuildwheel_build.sh
 
 ### TelePrompter for Youtube Videos
 
+If you have prepared a speech and want to follow it...have a look to:
+
 * https://qprompt.app/
 
 ```sh
@@ -378,34 +365,3 @@ wget https://github.com/Cuperino/QPrompt-Teleprompter/releases/download/v1.1.6/q
 chmod +x qprompt-v1.1.6-51788eb-linux-gcc-x86_64.AppImage
 ./qprompt-v1.1.6-51788eb-linux-gcc-x86_64.AppImage
 ```
-
-### Social Media Automation
-
-
-**Social Media Management Apps**
-
-- [Shoutify](https://github.com/TechSquidTV/Shoutify)
-
-
-Social Media can be simplified
-
-![Forocoches3kbmw](/blog_img/memes/ezoeazin.jpg)
-
-* Postiz-App - https://github.com/gitroomhq/postiz-app
-    * https://docs.postiz.com/introduction
-    
-> 📨 The ultimate **social media scheduling tool**, with a bunch of AI 🤖 and Apache 2.0!
-
-* [Zapier](https://zapier.com/app/home)
-
-* Canva seems to have it too
-
-* [IFTTT](https://ifttt.com/plans)
-
-* **N8N** AI Automation - https://n8n.io/workflows/2950-ai-powered-social-media-content-generator-and-publisher/
-
-[N8N with ollama video](https://www.youtube.com/watch?v=VDuA5xbkEjo)
-
-* Active Pieces - https://github.com/activepieces/activepieces
-
-> Your friendliest open source AI automation tool ✨ Workflow automation tool 200+ integration / Enterprise automation tool / Zapier Alternative

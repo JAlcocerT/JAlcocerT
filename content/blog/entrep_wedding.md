@@ -3,11 +3,13 @@ title: "Just shipping | Wedding Edition"
 date: 2025-06-04T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS"]
-description: 'Wedding stuff. Aka 200, you mean 4k?'
+description: 'Wedding stuff. Aka 200, you mean 4k? The story and some entrepreneuring concepts.'
 url: 'wedding-photo-galleries'
 ---
 
 Its been a while since I was helping on [this wedding](https://jalcocert.github.io/JAlcocerT/software-for-weddings/)
+
+Thankfully, I have a video on how cool that was:
 
 {{< youtube "Y0AOGLRC7h4" >}}
 
@@ -356,9 +358,9 @@ We will need these artifacts from cloudflare:
 
 Just enough with edit zone dns
 
-![alt text](/blog_img/entrepre/wedding/cf/zone-dns)
+![Cloudflare Zone DNS](/blog_img/entrepre/wedding/cf/zone-dns.png)
 
-![alt text](/blog_img/entrepre/wedding/cf/api-token.png)
+![Getting a Cloudflare API Token](/blog_img/entrepre/wedding/cf/api-token.png)
 
 2. CF ZoneID:
 
@@ -488,8 +490,6 @@ Or in other words: *How to Get Strangers To Want To Buy Your Stuff* As i learnt 
 
 As a friend recommended me [last year](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/): *it's all about leads and offers*
 
-
-
 ### The Lead Magnet
 
 **The trick about leads magnet**: free stuff to potential customers / qualified prospects
@@ -498,7 +498,7 @@ As a friend recommended me [last year](https://jalcocert.github.io/JAlcocerT/thi
 2. Improve the product
 3. Charge $ to people like them
 
-How to define a potential client?
+**How to define a potential client?**
 
 Try with **BANT** logic:
 
@@ -574,7 +574,11 @@ Let's analyze your idea for a lead magnet, considering your target audience (peo
 
 Your current lead magnet idea: **"a landing page for wedding, where people can see who where are going to get married"**
 
-This idea, while a nice gesture, isn't immediately a strong lead magnet because it doesn't offer *direct value* or solve a *problem* for someone who just lands on your page. They see a list of couples getting married... and then what? There's no clear incentive for *them* to sign up or engage with *your photo storage service*.
+This idea, while a nice gesture, isn't immediately a strong lead magnet because it doesn't offer *direct value* or solve a *problem* for someone who just lands on your page.
+
+They see a list of couples getting married... and then what?
+
+There's no clear incentive for *them* to sign up or engage with *your photo storage service*.
 
 **You absolutely need to follow the "reveal a problem" approach.**
 
@@ -613,7 +617,9 @@ Here are a few strong lead magnet ideas that leverage the "reveal a problem and 
 
 **Recommendation:**
 
-Forget the generic "who's getting married" list as your primary lead magnet. Instead, focus on creating a high-value piece of content or a small, tangible experience (like a mini-trial) that directly addresses the pain points of collecting guest photos and clearly positions your service as the solution.
+Forget the generic "who's getting married" list as your primary lead magnet. 
+
+Instead, focus on creating a high-value piece of content or a small, tangible experience (like a mini-trial) that directly addresses the pain points of collecting guest photos and clearly positions your service as the solution.
 
 ---
 
@@ -754,7 +760,7 @@ Compared to more traditional lead magnets like an eBook or checklist, which offe
 
 {{< details title="Its up to you on how to | Upsale that 📌" closed="true" >}}
 
-Got it! No lifetime access. We'll focus on **space and duration up to 2 months** for your upsell strategy, which is a smart way to encourage timely upgrades and manage long-term storage costs.
+Focusing on **space and duration up to 2 months** for your upsell strategy, which is a smart way to encourage timely upgrades and manage long-term storage costs.
 
 Upsell Possibilities: Space & Duration (Up to 2 Months)
 
@@ -867,6 +873,8 @@ Make sure both, the wedding invitation them and the *CMS* look good on mobile ve
 {{< /callout >}}
 
 ### Interest Groups
+
+People that are in such groups, are already *prefiltered* to like certain services
 
 * https://www.facebook.com/groups/549014068636656
 
@@ -1071,6 +1079,10 @@ Facebook's payment system for ads is generally automated and designed to be flex
 In summary, Facebook Ads provide a powerful, self-service platform for reaching specific audiences with flexible budgeting and a clear, automated payment system that typically charges you as your ad spend accrues or on a monthly basis.
 
 #### Google Ads
+
+Ive tried these...
+
+From from the other angle, with [adsense](https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/#ab-with-adsense)
 
 {{< details title="Google Ads 101 📌" closed="true" >}}
 

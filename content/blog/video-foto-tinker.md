@@ -58,7 +58,14 @@ There is people outthere doing cool things with ffmpeg: https://blog.bartzz.com/
 
 ```sh
 mkdir -p "$HOME/Desktop/CAM1-$(date +%m-%d)" && rsync -avP --include='*.MP4' --exclude='*' . "$HOME/Desktop/CAM1-$(date +%m-%d)"
+#rsync -avP --include='*.MP4' --exclude='*' . "/media/jalcocert/Backup2TB/OA5Pro/May-Jul25"
 ```
+
+1.  **Create a dated folder:** A new directory like `CAM1-07-05` will be created on your Desktop. If it already exists from a previous run on the same day, `mkdir -p` will just do nothing and succeed.
+2.  **Conditional Execution:** If the directory creation is successful, `rsync` will proceed.
+3.  **Copy MP4s:** `rsync` will then scan the *current directory* you are in, and copy *only* files that end with `.MP4` into the newly created (or existing) dated folder on your Desktop. It will do this efficiently, preserve file attributes, and show you the progress.
+
+> This command is perfect for quickly backing up or moving only video files (from a OA5Pro) into a clearly dated folder on your desktop.
 
 #### Videos with FFMPeg
 
@@ -844,11 +851,13 @@ Schedule post on social media:
 * https://docs.postiz.com/introduction
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="PostIZ Container | Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Postiz" title="PostIZ Container | Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik Container | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
-
 ![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
+
+Once logged into PostIZ:
 
 ![Postiz UI](/blog_img/selfh/postiz/postiz-ui.png)
 

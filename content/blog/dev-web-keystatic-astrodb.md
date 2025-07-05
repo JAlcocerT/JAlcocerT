@@ -233,7 +233,7 @@ Recurring revenue businesses typically have an NRR as a key performance indicato
 
 {{< /details >}}
 
-An NRR of **over 100%** (e.g., 105% or 110%) would indicate that WordPress.com is not only retaining most of its customers but also successfully increasing revenue from its existing customer base through upgrades and additional service purchases. 
+An NRR of **over 100%** (e.g., 105% or 110%) would indicate that `WordPress.com` is not only retaining most of its customers but also successfully increasing revenue from its existing customer base through upgrades and additional service purchases. 
 
 Given their scale and the continuous development of their offerings, achieving NRR over 100% is certainly plausible.
 

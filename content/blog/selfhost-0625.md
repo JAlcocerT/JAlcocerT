@@ -240,6 +240,9 @@ With gemini CLI and similar vibe coding tools, its been much easier to spin new 
 
 <!-- ![Gemini MCP Working](/blog_img/GenAI/geminiCLI/gemini-mcp.png) -->
 
+People are still doing cool stuff with the Pis
+
+https://www.youtube.com/watch?v=6Vf_zj4Ytxg
 
 ---
 
