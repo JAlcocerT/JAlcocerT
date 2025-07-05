@@ -169,9 +169,10 @@ curl -s https://bachatafests.com/sitemap_index.xml -o /dev/null -w "%{http_code}
 
 ### Charts
 
-For the ones who are crazy about data.
+For the ones who are crazy about data
 
 * [ChartJS](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/Chart.astro?ref_type=heads)
+  * I have some more examples [here](https://gitlab.com/fossengineer1/libreportfolio/-/tree/main/src/components/calculators) 
 * [ApexCharts](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/mdx/ApexChart.astro?ref_type=heads)
 * [MermaidJS](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/mdx/Mermaid.astro?ref_type=heads)
 

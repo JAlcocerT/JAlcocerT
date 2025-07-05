@@ -2,7 +2,7 @@
 title: "How to Setup Gitlab"
 date: 2023-12-30T23:20:21+01:00
 draft: false
-tags: ["Dev","Git 101"]
+tags: ["Dev","Git 101","SSH"]
 description: 'How to use Gitlab for development'
 url: 'how-to-use-gitlab'
 ---
@@ -21,18 +21,19 @@ You will see a message like `you cant pull repositories ussing SSH until you add
 
 Then lets add it:
 
-1. Go to user setting -> SSH Keys Section
+1. Go to user setting -> SSH Keys Section at: https://gitlab.com/-/user_settings/ssh_keys
 
-![alt text](/blog_img/dev/gitlab/gitlab-ssh-summary.png)
+![Creating SSH Keys at Gitlab](/blog_img/dev/gitlab/gitlab-ssh-summary.png)
 
 
 2. Create a ssh key:
 
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com" #place something that will make it easy to find
+#Enter file in which to save the key (/home/jalcocert/.ssh/id_rsa): 
 ```
 
-3. You will see something generated like
+3. You will see something generated like:
 
 ```yml
 +---[RSA 4096]----+
@@ -42,9 +43,18 @@ and some more rows...
 ```
 
 4. Go to the location folder of `.ssh` and **look for the id_rsa.pub** file generated (copy its content)
+
+```sh
+cat ~/.ssh/id_rsa.pub
+```
+
 5. Paste it in the Gitlab UI (it will start by ssh-rsa and many more chars will follow)
 
 Now, you can select the Code button in the Gitlab Repository, and **select open in your IDE (with SSH)**.
+
+```sh
+git clone git@gitlab.com:fossengineer1/libreportfolio.git
+```
 
 Check **how many branches** there are:
 

@@ -2,7 +2,7 @@
 title: "Features for a Professional Looking News Website"
 date: 2025-05-16
 draft: false
-tags: ["Web"]
+tags: ["Web","Beyond a Journey"]
 description: "Creating a News focused Website with App Directory section (with Astro SSG). Beyond the basics."
 url: 'creating-web-directory-website'
 ---
@@ -17,6 +17,8 @@ Got in love due to the [many ways and how easy is to host them](https://fossengi
   <!-- {{< card link="blog" title="Blog" icon="book-open" >}} -->
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/" title="See Astro 101 Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+Lately, I have came across few interesting **Astro Themes**
 
 
 1. https://github.com/oxygenna-themes/foxi-astro-theme/
@@ -34,11 +36,11 @@ If you are new to SSGs, have a look to:
 
 > **MIT** | A news website built with Astro
 
-{{< details title="What I like about Astro News Theme 📌" closed="true" >}}
+{{< details title="What I like about Astro News Theme - Search, mdx, OG, RSS... 📌" closed="true" >}}
 
 1. Post are writen with `.mdx`
 
-2. **Search** working in prod, not in dev when running `npm run dev`
+2. **Search** working in prod with **PageFInd**, not in dev when running `npm run dev`
 
 It uses pagefind, similarly to [the astroverse/visvrs theme](https://github.com/IoTechCrafts/astroverse/blob/main/package.json#L23)
 
@@ -65,9 +67,6 @@ import defaultImage from "~/assets/images/default-image.jpg";
 * Very **modular** implementation of which posts goes where thanks to `isBigHeadline` and `isSmallHeadline` 
 * Base path is present at `index.ts`
 
-As part of the tests, I used CF Wrangler CLI for a quick static deployment:
-
-![CF CLI](/blog_img/web/astro/cf-cli-wrangler.png)
 
 ```sh
 curl https://beyondajourney.pages.dev/rss.xml
@@ -95,6 +94,33 @@ Sitemap: https://beyondajourney.pages.dev/sitemap-0.xml
 //....
 ```
 
+Test the RSS with:
+
+```sh
+sudo apt install liferea
+```
+
+![RSS with Liferea](/blog_img/web/liferea-rss.png)
+
+
+{{< /details >}}
+
+**What could be better**?
+
+1. The header could follow the users when its scrolling
+2. It could bring multilanguage support out of the box...
+
+
+As part of the tests, I used CF Wrangler CLI for a quick static deployment:
+
+![CF CLI](/blog_img/web/astro/cf-cli-wrangler.png)
+
+And soon after, with CI/CD: [Github -> CF WnP](https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#cloudflare-as-authoritative-name-server)
+
+```sh
+cd ./astro-news && npm run build
+```
+
 ![Astro-News Theme - beyond a journey result](/blog_img/web/astro/astro-news-theme-beyondajourney.png)
 
 * https://web-check.xyz/check/https%3A%2F%2Fbeyondajourney.pages.dev%2F
@@ -105,32 +131,17 @@ The theme did not have ToC be default, but I have vibecoded one:
 ![Astro News - Post ToC](/blog_img/web/astro/astro-news-toc-vibecoded.png)
 
 
-```sh
-sudo apt install liferea
-```
-
-![RSS with Liferea](/blog_img/web/liferea-rss.png)
-
-**What could be better**?
-
-1. The header could follow the users when its scrolling
-2. It could bring multilanguage support out of the box...
-
-{{< /details >}}
-
-
 This one is **fantastic** for blogging/news!
 
 Like going from [this one](https://cyclingthere.pages.dev/), towards a more serious [like this one](https://beyondajourney.pages.dev/)
 
-Definitely worth to have a look at it, maybe even **enhance it with a photo gallery** or a subscription / book selling page.
-
+Definitely worth to have a look at it, maybe even **enhance it with a photo gallery** or a subscription / book selling page....
 
 {{< callout type="info" >}}
 Photo galleries like [this one](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#photo-galleries) or [this one](https://github.com/rockem/astro-photography-portfolio) or [this](https://github.com/jomaendle/astro-photo-gallery)
 {{< /callout >}}
 
-What for?
+**What for?**
 
 Maybe to tinker with more time for [Real Estate webs](https://jalcocert.github.io/JAlcocerT/real-estate-website/#real-estate-web-ui-enhancements), particularly for [this](https://github.com/JAlcocerT/moi-photo-galleries)
 
@@ -139,6 +150,7 @@ Maybe to tinker with more time for [Real Estate webs](https://jalcocert.github.i
 Based on my exploration of the theme, here's how the gallery system is structured and functions:
 
 1. Gallery Configuration (YAML-based)
+
 The gallery is primarily defined in /src/gallery/gallery.yaml, which contains:
 
 Collections: Categories for organizing photos (nature, travel, street)
@@ -241,7 +253,7 @@ npm install lucide-react
 
 ## Conclusions
 
-**These are the results**
+**These are the results**: Im keeping the MIT Astro-News for a personal blog :)
 
 ![Beyond a Journey](/blog_img/web/beyond-journey-web.png)
 

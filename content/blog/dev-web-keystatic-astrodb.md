@@ -10,6 +10,7 @@ description: 'AstroDB x KeyStaticCMS. A new SSG website to show Embedded Analyti
 tags: ["Web","Landing Page","CMS","Cloudflare Workers and Pages","Web Checks","Animations"]
 url: keystaticcms-astrodb
 ---
+
 <!-- 
 https://github.com/JAlcocerT/jalcocertech/settings
  -->
@@ -92,6 +93,16 @@ Use IT or lose it The AI Revolution for your business · It all start with a Mod
 
 ### Deploying
 
+With everything working locally as per:
+
+```sh
+npm install
+#npm run dev
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+```
+
+It was time to deploy the generated page.
+
 With GH + [CF WnP](https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#cloudflare-as-authoritative-name-server)
 
 ![Cloudflare Workers and Pages](/blog_img/web/astro/cf-wnp.png)
@@ -104,7 +115,7 @@ Which I accepted
 
 And review that its only for selected repos:
 
-![alt text](/blog_img/web/astro/cf-gh-selected-repos.png)
+![CF WnP Github Connection to Repositories](/blog_img/web/astro/cf-gh-selected-repos.png)
 
 > **The result is visible at**: jalcocert.pages.dev or `www.jalcocertech.com`
 
@@ -112,6 +123,9 @@ And review that its only for selected repos:
 ping www.jalcocertech.com
 nslookup www.jalcocertech.com
 ```
+
+* https://www.websitecarbon.com/website/jalcocertech-com/
+* https://web-check.xyz/check/https%3A%2F%2Fwww.jalcocertech.com%2F
 
 ### Website Checks
 
