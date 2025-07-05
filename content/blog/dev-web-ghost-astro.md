@@ -15,12 +15,28 @@ Thanks to:
 1. https://www.yzlow.com/build-a-custom-static-site-with-headless-ghost-astro
 2. https://github.com/MatthiesenXYZ/astro-ghostcms and https://github.com/MatthiesenXYZ/ghostcms-loader/tree/main
 
-for resources to put this together.
+...for resources to put this together.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/morita-web" title="Morita Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Sample Astro Theme" >}}
   {{< card link="https://github.com/JAlcocerT/taxi-web" title="Taxi Web Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Tinkering with Astro + JSON/Ghost CMS API" >}}
 {{< /cards >}}
+
+It's been an idea for sometime to bring a website to anyone who has something to say.
+
+But its always about how to bring the edition capabilities to the public.
+
+Even during the [Dokploy PaaS Post](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#scaling-ssg-deployment), I posted the steps for scaling a SSG deployment.
+
+The https part is covered with the built in Traefik, or a custom one, if you want.
+
+The container for SSGs are not a mistery
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="SSG Containers | Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
+
+So...how about the editing capabilities?
 
 ## Astro and JSON Powered Content
 

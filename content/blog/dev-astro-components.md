@@ -2,7 +2,7 @@
 title: "ASTRO - SSG: Components & How to use Them"
 date: 2024-05-14T23:20:21+01:00
 draft: false
-tags: ["Web","Dev"]
+tags: ["Web","Dev","Websites"]
 description: 'Tutorial - Making any ASTRO Website better.'
 summary: 'How to get better with ASTRO as SSG (for non web-devs). My favourite components for Astro: search, Charts, OG/SEO, GPX...'
 url: 'understanding-astro-ssg-components'

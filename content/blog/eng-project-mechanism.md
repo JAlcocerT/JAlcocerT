@@ -30,7 +30,7 @@ https://www.youtube.com/watch?v=usY-oBifcM4&list=PLghzFAspn1-eGjPOTT0D_6LXWqMBFR
   {{< card link="https://github.com/JAlcocerT/mechanism" title="My Fork of the Mechanism Project" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
-To get started with this python project:
+To get started with this python project: https://pypi.org/project/mechanism/
 
 ```sh
 #python -m venv gabe_mechanism_venv #create the venv
@@ -44,7 +44,7 @@ source gabe_mechanism_venv/bin/activate #(linux/mac)
 
 ```sh
 pip install -e .
-#pip freeze > requirements.txt #generate a txt with the ones you have!
+#pip freeze > requirements-output.txt #generate a txt with the ones you have!
 ```
 
 
@@ -52,14 +52,24 @@ pip install -e .
 I tried with `./examples/engine.py` and worked perfectly! 
 {{< /callout >}}
 
-I just added this line at the script to get a `.gif` rendered:
+```py
+python3 ./examples/engine.py
+#uv run ./examples/engine.py
+```
+
+I just added this line at the script to get a `.gif` rendered: [See the code line](https://github.com/JAlcocerT/mechanism/blob/master/examples/offset_crankslider_with_speed.py#L86)
 
 ```py
 #ani.save('../animations/engine.mp4', dpi=300)
 ani.save('../animations/engine.gif', writer='pillow', fps=30)
 ```
 
-So that you can see the **engine sample animation working**:
+<!-- https://youtube.com/shorts/2xMOxiRz6F4 -->
+{{< youtube "2xMOxiRz6F4-g" >}}
+
+
+
+So that you can see the **engine sample animation working**: Go to `./animations`
 
 ![Engine Sample Animation](/blog_img/mec/engine.gif)
 
@@ -104,7 +114,7 @@ git clone https://github.com/HYP3R00T/CelestialDocs
 
 ![Astro celestial Docs for Gabe mechanism](/blog_img/web/GHAnPages/gha&pages-celestialdocs-mechanism.png)
 
-It requires a couple of adjustment to the `basepath`...
+It required a couple of adjustment to the `basepath`... but it works
 
 3. HUGO Theme (with MermaidJS, ChartJS TinaCMS support) https://github.com/onweru/compose
 
@@ -126,6 +136,11 @@ You have to **install vercel and tinacloud app** into your github:
 
 ## Conclusions
 
+Here you have the results of some of my tweaks: https://github.com/JAlcocerT/mechanism/tree/master/animations
+
+I kept the project docs with the Astro Celestial Docs theme for now.
+
+The Astro-nomy its cool, but for not for this kind of purpose :)
 
 Recently I also discovered about https://www.divergent3d.com/ which seems to be a very cool application of Mechanical Engineering!
 

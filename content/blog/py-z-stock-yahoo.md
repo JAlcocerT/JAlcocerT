@@ -2,7 +2,7 @@
 title: "Financial Data for Python - Trying YFinance Package"
 date: 2025-06-18
 draft: false
-tags: ["Python","GoogleFinance","Animations"]
+tags: ["Python","GoogleFinance","Animations","Payout Ratio"]
 description: "Initial Yield vs Growth EDA and its math. How to analyze stock and dividend data with Python. Together with Data animations."
 url: 'python-financial-data-with-yfinance'
 math: true
@@ -47,6 +47,8 @@ It was a fundamental piece for RStocks, and it will be for any financial tricks 
 pip install yfinance==0.2.52
 ```
 
+You can get a ton of information about some stock, like `NYSE:KO`:
+
 ```py
 import yfinance as yf
 import pandas as pd
@@ -55,6 +57,28 @@ def STOCK(ticker):
     return yf.Ticker(ticker).history(period="max")
 
 STOCK('KO')
+```
+
+For prices, you can try with [such script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_price.py)
+
+You can also pull **dividend data from yfinance**, as seen on [this example](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py).
+
+```py
+import yfinance as yf
+import sys
+
+def get_dividend_data(ticker: str):
+    """
+    Fetch and print the dividend history for a given stock ticker.
+    :param ticker: Stock ticker symbol (e.g., 'AAPL')
+    """
+    stock = yf.Ticker(ticker)
+    dividends = stock.dividends
+    if dividends.empty:
+        print(f"No dividend data found for {ticker}.")
+    else:
+        print(f"Dividend history for {ticker}:")
+        print(dividends)
 ```
 
 ## Dividend Data - DGI vs Yield
@@ -173,6 +197,148 @@ To keep it simple, lets go with the 4%, but as you can imagine, life is much mor
 
 If Python sounds like a very crazy thing to get started with: you can try with simple [Google Sheets + Google Finance formula](#gfinance-with-google-sheets)
 
+### Payout Ratio for Dividends
+
+Make sure you learn few finance and dividend related concepts.
+
+Like the **payout ratio**
+
+The payout ratio is normally calculated using **Earnings Per Share (EPS)** or **Net Income**.
+
+The most common formula is:
+
+**Payout Ratio = Dividends Per Share (DPS) / Earnings Per Share (EPS)**
+
+Alternatively, it can be calculated using total dividends and net income:
+
+**Payout Ratio = Total Dividends Paid / Net Income**
+
+While EPS/Net Income is the standard, some investors and analysts also use **Free Cash Flow (FCF)** to calculate a "Free Cash Flow Payout Ratio." This is because FCF can sometimes be a better indicator of a company's ability to pay dividends, as it accounts for actual cash generated from operations and capital expenditures, whereas net income can be influenced by non-cash charges like depreciation.
+
+However, when people generally refer to "the payout ratio," they are most often referring to the calculation based on EPS or Net Income.
+
+{{< details title="Net Income vs EPS  📌" closed="true" >}}
+
+Yes, you are absolutely correct! **Earnings Per Share (EPS) is directly based on Net Income.**
+
+Here's the fundamental relationship:
+
+**EPS = (Net Income - Preferred Dividends) / Weighted Average Shares Outstanding**
+
+Let's break down each component:
+
+* **Net Income:** This is the "bottom line" profit of a company, found at the very end of the Income Statement. It represents the total revenue minus all expenses (cost of goods sold, operating expenses, interest, taxes, etc.).
+
+* **Preferred Dividends:** If a company has preferred stock, it must pay dividends to preferred shareholders *before* any earnings are available to common shareholders. Therefore, these dividends are subtracted from net income to arrive at the profit attributable solely to common shareholders.
+
+* **Weighted Average Shares Outstanding:** This is the average number of common shares that were in circulation during the reporting period. It's used because the number of shares can change over time (due to stock issuances, buybacks, or splits). Using a weighted average provides a more accurate representation of the shares actually "earning" the profit throughout the period.
+
+{{< /details >}}
+
+
+EPS takes the company's total profit (Net Income, adjusted for preferred dividends) and divides it by the number of common shares, giving you a **per-share measure of profitability**. It tells you how much of the company's net profit is allocated to each outstanding share of common stock.
+
+This makes EPS a very popular metric for investors because it normalizes a company's profit down to a per-share basis, making it easier to compare the profitability of companies with different numbers of shares outstanding.
+
+
+{{< details title="Payout Ratio 101 | NetIncome vs FCF  📌" closed="true" >}}
+
+Net Income and Free Cash Flow (FCF) are both crucial metrics for evaluating a company's financial health, but they tell different stories and are derived from different financial statements.
+
+The fundamental difference lies in their focus:
+
+* **Net Income** (also called Net Profit or the "bottom line") focuses on a company's **profitability** based on **accrual accounting**.
+* **Free Cash Flow (FCF)** focuses on a company's **liquidity** and its ability to generate **actual cash** available for discretionary use, after covering its operating expenses and necessary investments.
+
+Let's break down the key distinctions:
+
+**Net Income**
+
+* **What it is:** The final profit figure on a company's **Income Statement**. It's calculated by taking all revenues and subtracting all expenses, including operating expenses, interest, taxes, and non-cash expenses like depreciation and amortization.
+* **Accounting Method:** Based on **accrual accounting**. This means revenues are recognized when earned (even if cash hasn't been received yet), and expenses are recognized when incurred (even if cash hasn't been paid yet).
+* **Key Components:**
+    * Sales Revenue
+    * Cost of Goods Sold (COGS)
+    * Operating Expenses (Salaries, Rent, Marketing, R&D, etc.)
+    * Depreciation & Amortization (non-cash expense)
+    * Interest Expense
+    * Taxes
+* **Purpose:** Shows how profitable a company is over a specific period (quarter, year). It's a key indicator of a company's earnings power.
+* **Limitations:**
+    * **Can be misleading regarding cash:** A company can report high net income but have very little cash if, for example, most sales are on credit (Accounts Receivable) or if it has significant non-cash expenses.
+    * **Subject to accounting estimates and choices:** Depreciation methods, inventory valuation, and revenue recognition policies can impact net income without directly affecting cash.
+    * **Doesn't account for capital expenditures:** It doesn't show how much cash is needed to maintain or grow the business.
+
+**Free Cash Flow (FCF)**
+
+* **What it is:** The cash a company generates from its operations *after* accounting for the cash needed to maintain and expand its asset base (capital expenditures). It's a measure of the cash truly "free" for the company to distribute to shareholders (dividends, buybacks), pay down debt, or pursue new investments without impacting core operations.
+* **Accounting Method:** Based on **cash accounting principles**, starting from the **Cash Flow Statement**.
+* **Calculation (Common Formula):**
+    $FCF = \text{Cash Flow from Operating Activities} - \text{Capital Expenditures (CapEx)}$
+    * **Cash Flow from Operating Activities (CFO):** This is typically found on the Cash Flow Statement. It adjusts net income for non-cash items (like depreciation, which is added back) and changes in working capital (like increases in accounts receivable or inventory, which consume cash, or increases in accounts payable, which provide cash).
+    * **Capital Expenditures (CapEx):** These are investments in property, plant, and equipment (PP&E) – the money spent on long-term assets needed to run and grow the business. This is found under "Investing Activities" on the Cash Flow Statement.
+* **Purpose:** Shows the actual cash a company has available for discretionary uses. It's often considered a more robust measure of financial health and value than net income because it's harder to manipulate and reflects real cash in and out.
+* **Advantages:**
+    * **Truer picture of liquidity:** Shows if a company can pay its bills, fund growth, and pay dividends from its own operations.
+    * **Less susceptible to accounting manipulation:** As it deals with actual cash movements.
+    * **Directly relates to valuation:** Many valuation models (like Discounted Cash Flow - DCF) are based on FCF.
+
+**Analogy**
+
+Think of it this way:
+
+* **Net Income** is like your **salary on your payslip** before any deductions for taxes, retirement contributions, or even your daily coffee. It's what you "earned" in theory.
+* **Free Cash Flow** is like the **actual cash you have in your bank account** after your salary has been deposited, your taxes and bills have been paid, and you've bought your groceries and covered your basic living expenses and necessary investments (like fixing your car). It's the money you have left over to save, invest, or spend on luxuries.
+
+**Why Both are Important**
+
+Both metrics are vital for a complete financial picture:
+
+* **Net Income** helps assess a company's **profitability** and efficiency in managing its revenues and expenses.
+* **Free Cash Flow** helps assess a company's **liquidity, solvency, and ability to generate cash** for long-term sustainability, growth, and shareholder returns (like dividends and buybacks).
+
+A healthy company will generally have positive net income *and* positive free cash flow. Discrepancies between the two can indicate areas for further investigation (e.g., high net income but low FCF might mean aggressive revenue recognition or high capital intensity).
+
+{{< /details >}}
+
+It's very possible and actually quite common for a company to have **positive Net Income (profit)** but **negative Free Cash Flow (FCF)**.
+
+This is a crucial distinction that often surprises people new to financial analysis, and it highlights why both metrics are essential.
+
+The core reason for this divergence lies in the fundamental difference between **accrual accounting** (used for Net Income) and **cash accounting** (which FCF ultimately reflects).
+
+Here are the primary reasons why a profitable company might have negative FCF:
+
+1.  **High Capital Expenditures (CapEx):**
+    * **Net Income:** Only reflects the *depreciation* of assets, which is a non-cash expense spread over many years. When a company buys a new factory, machinery, or invests heavily in technology, that full cash outflow (CapEx) hits the cash flow statement in the year of purchase.
+    * **FCF:** Is calculated by subtracting Capital Expenditures from Operating Cash Flow. So, if a company is making significant investments for future growth, even if it's profitable, these large cash outflows for CapEx will reduce or even turn its FCF negative.
+    * **Example:** A software company spends \$100 million on R&D for a new product, which is expensed. It also spends \$50 million on new data servers. Its Net Income might be positive, but that \$50 million cash outflow for servers directly reduces FCF, even though the income statement only records depreciation of existing assets.
+
+2.  **Increases in Working Capital (especially Accounts Receivable and Inventory):**
+    * **Net Income:** Recognizes revenue when it's *earned*, even if the cash hasn't been collected yet (e.g., selling goods on credit). It also records expenses when *incurred*, not necessarily when paid.
+    * **FCF:** Is about actual cash.
+        * **Growing Accounts Receivable:** If a company sells a lot on credit but customers pay slowly, revenue and net income will look good. However, the cash isn't in the bank. An increase in Accounts Receivable (money owed to the company) is a *use* of cash, reducing Operating Cash Flow and thus FCF.
+        * **Building Inventory:** If a company produces a lot of goods but they sit unsold in inventory, the costs associated with producing those goods are incurred (reducing net income), but the cash is tied up in inventory. An increase in Inventory is a *use* of cash, reducing FCF.
+    * **Example:** A retailer sells \$1 million worth of goods, boosting net income. But \$500,000 of those sales are on credit, and they also spend \$300,000 building up inventory for the next season. Even with a positive net income, their cash flow could suffer significantly due to these working capital needs.
+
+3.  **Timing Differences in Revenue and Expense Recognition (Accrual Accounting):**
+    * **Prepaid Expenses:** A company might pay for insurance or rent for a full year upfront. This is a large cash outflow now, but the expense is recognized on the income statement gradually over the year. FCF takes the immediate cash hit, while net income is spread out.
+    * **Deferred Revenue:** A company receives cash upfront for services to be rendered in the future (e.g., annual subscriptions). This is a cash inflow, but the revenue isn't recognized immediately on the income statement. While this would generally *boost* FCF relative to Net Income, other factors can still lead to negative FCF.
+
+4.  **Non-Cash Expenses on the Income Statement:**
+    * **Depreciation and Amortization (D&A):** These are the largest and most common non-cash expenses. They reduce net income but do not involve any current cash outflow. In the FCF calculation, D&A is added back to Net Income (or CFO is used, which already adds it back) because it's not a cash expense. However, if CapEx (the actual cash spent on assets) is much higher than D&A, then FCF can still be negative.
+    * **Stock-Based Compensation:** This is an expense that reduces net income but doesn't involve cash leaving the company. It's also added back when calculating cash flow from operations.
+
+5.  **Debt Repayments (Financing Activities):**
+    * While not directly part of the FCF calculation (which focuses on operations and investments), significant debt repayments (principal, not interest) consume cash and can make a seemingly profitable company appear cash-strapped if one only looks at the overall cash position. FCF is cash *before* debt repayments, but if a company relies heavily on debt for growth, the need to service that debt can constrain the "free" cash.
+
+**In essence:**
+
+Net income tells you how much money a company "made" according to accounting rules, considering when sales were earned and expenses incurred. FCF tells you how much actual cash the company has left after funding its ongoing operations and necessary investments.
+
+A healthy company usually aims for both positive Net Income and positive Free Cash Flow. A consistent disconnect (positive Net Income, negative FCF) can be a red flag, indicating that the company is burning cash, potentially relying on external financing, or struggling to convert its sales into actual cash. However, a temporary negative FCF due to significant growth-oriented CapEx can be a good sign for future potential.
+
+
 ---
 
 ## FAQ
@@ -240,8 +406,6 @@ You can learn more about **Scrapping** as covered on this [blog post](https://ja
 
 
 ### Animating Stock Data
-
-
 
 As you can imagine, you can get another ways to create animated stock data.
 

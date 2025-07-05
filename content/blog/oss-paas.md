@@ -121,10 +121,10 @@ For complex applications, you can use Docker Compose based deployments or the on
     * https://coolify.io/docs/installation
     * https://coolify.io/
 
-> Apache v2 | An open-source & self-hostable Heroku / Netlify / Vercel alternative.
+> **Apache v2** | An open-source & self-hostable Heroku / Netlify / Vercel alternative.
 
 
-* No Features Behind Paywall. Everything is included in the open-source software (OSS) version. And will always be.
+* **No Features Behind Paywall**. Everything is included in the open-source software (OSS) version. And will always be.
 * No Limitations. You have the freedom to host an unlimited number of websites on any quantity of servers without any restrictions.
 * Nice UI. You get a simple and easy to use UI to manage your servers and applications.
 * Open Source. You can see the source code and contribute to it, if you want. You can shape the future of the software.
@@ -133,7 +133,7 @@ For complex applications, you can use Docker Compose based deployments or the on
 curl -fsSL https://cdn.coollabs.io/coolify/install.sh | sudo bash
 ```
 
-https://www.reddit.com/r/selfhosted/comments/1dbmv4d/alternatives_to_vercel_coolify_dokploy_or_caprover/
+* https://www.reddit.com/r/selfhosted/comments/1dbmv4d/alternatives_to_vercel_coolify_dokploy_or_caprover/
 
 
 ### Dokku

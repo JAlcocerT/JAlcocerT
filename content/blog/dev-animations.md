@@ -1,8 +1,8 @@
 ---
-title: "How to create cool Animations"
+title: "How to create cool Animations | Data in Motion"
 date: 2025-07-04T18:20:21+01:00
 draft: false
-description: 'From Embedded Analytics into SSGs to Data Driven Animations.'
+description: 'From Embedded Analytics into SSGs Websites to Data Driven Animations.'
 tags: ["Animations","Python","Matplotlib","Youtube Shorts","Social Media"]
 url: animations-as-a-code
 ---
@@ -47,7 +47,6 @@ Maybe now this can be a thing, since we have [MCP](https://jalcocert.github.io/J
 
 I created [this repo for putting *real life* videos together](https://github.com/JAlcocerT/YT-Video-Edition), as covered on [these posts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/)
 
-
 ## Animations with Python
 
 Is it even possible to create a full `.mp4` with code?
@@ -60,9 +59,13 @@ Now, the concept I want to do is very simple:
 2. Use Python to pull the data
 3. Use matplotlib for the final `.mp4` animations
 
+Something very similar, but [with mechanisms](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/#conclusions), can be done as well!
 
+{{< youtube "2xMOxiRz6F4-g" >}}
 
 ## Animations x SSG
+
+This year I also was playing around with Astro components:
 
 ```sh
 npm install
@@ -77,6 +80,7 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ### Embedded Analytics
 
 
+---
 
 ## FAQ
 
@@ -100,6 +104,9 @@ Social Media can be simplified:
 
 I got working PostIZ recently, together with Traefik, both as containers and locally accesible: https://postiz.jalcocertech.com/launches
 
+* https://docs.postiz.com/reverse-proxies/traefik
+* You could also install it as part of [Coolify](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/#coolify) or similar PaaS, like [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas): https://coolify.io/docs/services/postiz
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Postiz" title="PostIZ Container | Docker Configs 🐋✅ ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik Container | Docker Configs 🐋✅ ↗" >}}
@@ -116,6 +123,11 @@ Do the setup for the platforms you need: https://docs.postiz.com/providers/youtu
 [PostIZ also has MCP](https://postiz.jalcocertech.com/settings): Connect your MCP client to Postiz to schedule your posts faster!
 {{< /callout >}}
 
+You will get something like:
+
+```txt
+https://postiz.jalcocertech.com/api/mcp/some_id_here/sse
+```
 
 2. [Zapier](https://zapier.com/app/home)
 
