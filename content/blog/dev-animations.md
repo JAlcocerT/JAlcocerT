@@ -1,5 +1,5 @@
 ---
-title: "How to create cool Animations | Data in Motion"
+title: "Creating Animated Data Stories | Data in Motion"
 date: 2025-07-04T18:20:21+01:00
 draft: false
 description: 'From Embedded Analytics into SSGs Websites to Data Driven Animations.'
@@ -47,9 +47,21 @@ Maybe now this can be a thing, since we have [MCP](https://jalcocert.github.io/J
 
 I created [this repo for putting *real life* videos together](https://github.com/JAlcocerT/YT-Video-Edition), as covered on [these posts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/)
 
+
+Python is a versatile programming language that can be used for a wide range of tasks, including creating animations. 
+
+
+
+
 ## Animations with Python
 
 Is it even possible to create a full `.mp4` with code?
+
+Apparently, it is:
+
+<https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/>
+<https://jckantor.github.io/CBE30338/A.03-Animation-in-Jupyter-Notebooks.html>
+
 
 From Data to Streamlit to Animation to Video, is a topic that I tinkered [during the AIssistant, here](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Tests/ST_AutomaticYTVideo).
 
@@ -62,6 +74,12 @@ Now, the concept I want to do is very simple:
 Something very similar, but [with mechanisms](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/#conclusions), can be done as well!
 
 {{< youtube "2xMOxiRz6F4-g" >}}
+
+But same as it can be done for mechanism, it can be done for time series data, like this SP500 returns which is powered by [this script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/animate_total_return_from_csv.py)
+
+{{< youtube "I46bPuSdrqk" >}}
+
+<!-- https://youtu.be/I46bPuSdrqk -->
 
 ## Animations x SSG
 
@@ -78,6 +96,18 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ## Conclusions
 
 ### Embedded Analytics
+
+### ipyvizzu
+
+Probably oriented more if you are building PoCs at work.
+
+* https://github.com/vizzuhq/ipyvizzu-story
+
+> **Apache v2** | Build, present and share **animated data stories** in Jupyter Notebook and similar environments. 
+
+* https://ipyvizzu-story.vizzuhq.com/latest/
+* https://ipyvizzu.vizzuhq.com/latest/installation/
+* https://pypi.org/project/ipyvizzu-story/
 
 
 ---

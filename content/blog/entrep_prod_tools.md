@@ -312,15 +312,15 @@ Any Web or Webapp can potentially be Combined with PostHog/OpenReplay for Produc
 
 #### PostHog
 
-To see how customers interact with your product, you can try with https://eu.posthog.com/
+To see **how customers interact** with your product, you can try with https://eu.posthog.com/
 
-![PostHog Surveys](/blog_img/entrepre/product/posthog-surveys.png)
+![PostHog Surveys Example](/blog_img/entrepre/product/posthog-surveys.png)
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/WebGenerAItor/tree/main/Traefik_v3_3" title="Formbricks and more" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Other Forms and newsletter for your products" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks" title="Formbricks and more" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Other Forms and newsletter for your products" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/entrepre/product/posthog-survey.png)
+![Posthog Survey Example](/blog_img/entrepre/product/posthog-survey.png)
 
 ![PostHog Product Market Fit](/blog_img/entrepre/product/Posthog-PMF.png)
 

@@ -196,7 +196,6 @@ I have been tinkering with docker and some of these flows/bot builders:
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot with Docker 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8N with Docker 🐋 ↗" >}}
-
 {{< /cards >}}
 
 
@@ -348,7 +347,7 @@ https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
 
 You can get ideas on what to build with n8n: https://n8n.io/workflows/
 
-![alt text](/blog_img/selfh/n8n-sample-flow.png)
+![N8N Example Configuration](/blog_img/selfh/n8n-sample-flow.png)
 
 Like this one: https://n8n.io/workflows/4827-ai-powered-whatsapp-chatbot-for-text-voice-images-and-pdf-with-rag/
 

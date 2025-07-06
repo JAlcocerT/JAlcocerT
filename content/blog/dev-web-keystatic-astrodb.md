@@ -129,7 +129,7 @@ nslookup www.jalcocertech.com
 
 ### Website Checks
 
-* This [opengraph checker](https://opengraph.dev/panel?url=https%3A%2F%2Flibreportfolio.fyi%2F) ---> https://libreportfolio.fyi/libreportfolio-og.jpeg
+* This [OpenGraph checker](https://opengraph.dev/panel?url=https%3A%2F%2Flibreportfolio.fyi%2F) ---> https://libreportfolio.fyi/libreportfolio-og.jpeg
 
 
 
@@ -203,7 +203,7 @@ You can do very smooth animations, with gradient background colors, as [I did he
 
 {{< tweet user="LibrePortfolio" id="1940801205577699713" >}}
 
-* For matching image background colors, this was useful: https://imagecolorpicker.com/
+* For matching image background colors, this was useful: https://imagecolorpicker.com/, here you have few more tools I found [useful for color picking](https://jalcocert.github.io/JAlcocerT/create-your-website/#faq)
 
 They should not be something new to you If you have explored Gabe's mechanism project and my post about it.
 

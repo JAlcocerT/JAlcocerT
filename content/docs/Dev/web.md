@@ -254,7 +254,7 @@ There are [many CMS alternatives](https://jalcocert.github.io/JAlcocerT/cms-for-
 {{< /details >}}
 
 
-{{< details title="Better Colors for your website 📌" closed="true" >}}
+{{< details title="Better Colors for your website | Branding Color selection 📌" closed="true" >}}
 
 1. How to get the **HEX colors** of websites - [SmartColorPicker extension](https://chromewebstore.google.com/detail/smart-color-picker/ilifjbbjhbgkhgabebllmlcldfdgopfl?hl=en)
 
@@ -274,9 +274,10 @@ snap install rickrack
 
 6. https://leonardocolor.io?ref=fossengineer.com
  
-https://github.com/adobe/leonardo?ref=fossengineer.com - 
+* https://github.com/adobe/leonardo?ref=fossengineer.com
+  * And can be use freely from: https://leonardocolor.io/theme.html#
 
-> Apache v2 | Generate colors based on a desired contrast ratio
+> **Apache v2** | Generate colors based on a desired contrast ratio
 
 7. See more [here](https://fossengineer.com/nextjs-ssg/#icons-for-nextjs)
 

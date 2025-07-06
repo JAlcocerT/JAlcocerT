@@ -92,6 +92,7 @@ Here's a breakdown:
 
 Therefore, when considering tensile resistance, you need to specify whether you're looking at absolute strength, strength relative to weight, or the material's ability to deform before breaking. Titanium often wins when weight is a critical factor, while certain steels excel in absolute strength.
 
+---
 
 ## Conclusions
 
@@ -104,3 +105,12 @@ I have been using:
 
 https://www.youtube.com/watch?v=f7oXhDatwtY
 
+
+### Cool Physics Animations
+
+There are people very creative out there: https://jakevdp.github.io/
+
+See for yourself how cool are these animations:
+
+* <https://jakevdp.github.io/blog/2012/09/05/quantum-python/>
+* <https://jakevdp.github.io/blog/2013/02/16/animating-the-lorentz-system-in-3d/>

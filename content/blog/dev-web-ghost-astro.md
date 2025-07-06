@@ -7,8 +7,6 @@ url: 'ghost-cms-for-astro'
 tags: ["Web","CMS","Ghost","Astro SSG","n8n"]
 ---
 
-<!-- * https://pagespeed.web.dev/
-* https://web-check.xyz/ -->
 
 Thanks to:
 
@@ -37,6 +35,15 @@ The container for SSGs are not a mistery
 {{< /cards >}}
 
 So...how about the editing capabilities?
+
+Because this might not be for everyone:
+
+
+```sh
+npm install
+#npm run dev
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+```
 
 ## Astro and JSON Powered Content
 
@@ -298,14 +305,29 @@ https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.ghost/
 
 ## Hosting Ghost Powered Astro Theme
 
-https://fossengineer.com/alternatives-for-hosting-static-websites/
+There are few [alternatives to host static websites](https://fossengineer.com/alternatives-for-hosting-static-websites/), as I tinkered with [here](https://fossengineer.com/hosting-static-websites/).
 
-https://fossengineer.com/hosting-static-websites/
+If you dont want to use Cloudflare Pages you can go the Selfhosting static website approach via container:
+
+
+```sh
+docker compose up astro-prod astro-dev
+#docker system prune -a
+```
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web" title="Web Related Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/StaticWebServer" title="Selfhosted Static Hosting - Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
+
+### Reviewing the SSG Quality
+
+* https://pagespeed.web.dev/
+* https://web-check.xyz/
+
+```sh
+docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://libreportfolio.fyi/ > Review_links_libreportfolio.txt
+```
 
 ---
 
@@ -323,4 +345,22 @@ See these ideas of fully static components
 
 * [Whatsapp bouble](https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro)
 * [TG bouble](https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/TelegramBubble.astro)
+* For youtue videos or Komoot, you can simple use the iframe to embed
+* But for twitter/X, you will need some ReactJS tricks, and put together a component like this
 
+#### Embedding ChatBots
+
+From Chatwoot to N8N and FlowiseAI, why not bringing those?
+
+There are many [no code AI tools](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#n8n) that can change *for better* your website experience:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8N with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+
+It's not just about n8n embeddedd chat, but scrapping capabilities:
+
+{{< youtube "AhyO9AVm49k" >}}
+<!-- https://www.youtube.com/watch?v=AhyO9AVm49k -->

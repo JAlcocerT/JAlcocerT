@@ -1,5 +1,5 @@
 ---
-title: "AI|BI Tools "
+title: "AI|BI Tools"
 date: 2025-05-22T00:20:21+01:00
 draft: false
 tags: ["Dev","D&A","Career","Streamlit PoCs","uv"]
@@ -99,6 +99,7 @@ uv --version
 uv sync #creates/updates the uv.lock for repricability
 
 uv run streamlit run main.py
+#uv run streamlit run main.py  --env=./
 ```
 
 Thats pretty much it (way faster than via pip install!)
@@ -112,7 +113,13 @@ Its also great to **export your configured PyGWalker dashboard** design into a c
 vis_spec = r"""{"config":[{"config":{"defaultAggregated":true,"geoms":["poi"],"coordSystem":"geographic","limit":-1,"timezoneDisplayOffset":0},"encodings":{"dimensions":[{"fid":"OLT","name":"OLT","basename":"OLT","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"Latitude","name":"Latitude","basename":"Latitude","semanticType":"quantitative","analyticType":"dimension","offset":0},{"fid":"Longitude","name":"Longitude","basename":"Longitude","semanticType":"quantitative","analyticType":"dimension","offset":0},{"fid":"Geohash","name":"Geohash","basename":"Geohash","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"SyntheticMapped","name":"SyntheticMapped","basename":"SyntheticMapped","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"gw_mea_key_fid","name":"Measure names","analyticType":"dimension","semanticType":"nominal"}],"measures":[{"fid":"SyntheticLocationsforOLT","name":"SyntheticLocationsforOLT","basename":"SyntheticLocationsforOLT","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0},{"fid":"Viewers","name":"Viewers","basename":"Viewers","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0},{"fid":"Viewers_1","name":"Viewers_1","basename":"Viewers_1","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0},{"fid":"Viewers_14","name":"Viewers_14","basename":"Viewers_14","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0},{"fid":"KPI_1","name":"KPI_1","basename":"KPI_1","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0},{"fid":"KPI_14","name":"KPI_14","basename":"KPI_14","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0},{"analyticType":"measure","fid":"gw_SkCP","name":"KPI_Color","semanticType":"quantitative","computed":true,"aggName":"sum","expression":{"op":"expr","as":"gw_SkCP","params":[{"type":"sql","value":"case when KPI_14 > 0.07 then 1 else 0 end"}]}},{"fid":"gw_count_fid","name":"Row count","analyticType":"measure","semanticType":"quantitative","aggName":"sum","computed":true,"expression":{"op":"one","params":[],"as":"gw_count_fid"}},{"fid":"gw_mea_val_fid","name":"Measure values","analyticType":"measure","semanticType":"quantitative","aggName":"sum"}],"rows":[],"columns":[],"color":[{"analyticType":"measure","fid":"gw_SkCP","name":"KPI_Color","semanticType":"quantitative","computed":true,"aggName":"sum","expression":{"op":"expr","as":"gw_SkCP","params":[{"type":"sql","value":"case when KPI_14 > 0.07 then 1 else 0 end"}]}}],"opacity":[],"size":[],"shape":[],"radius":[],"theta":[],"longitude":[{"fid":"Longitude","name":"Longitude","basename":"Longitude","semanticType":"quantitative","analyticType":"dimension","offset":0}],"latitude":[{"fid":"Latitude","name":"Latitude","basename":"Latitude","semanticType":"quantitative","analyticType":"dimension","offset":0}],"geoId":[],"details":[{"fid":"KPI_1","name":"KPI_1","basename":"KPI_1","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0},{"fid":"KPI_14","name":"KPI_14","basename":"KPI_14","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0}],"filters":[],"text":[]},"layout":{"showActions":false,"showTableSummary":false,"stack":"stack","interactiveScale":false,"zeroScale":true,"size":{"mode":"auto","width":800,"height":600},"format":{},"geoKey":"name","resolve":{"x":false,"y":false,"color":false,"opacity":false,"shape":false,"size":false},"scaleIncludeUnmatchedChoropleth":false,"showAllGeoshapeInChoropleth":false,"colorPalette":"darkGreen","useSvg":false,"scale":{"opacity":{},"size":{}}},"visId":"gw_-1jR","name":"Chart 1"}],"chart_map":{},"workflow_list":[{"workflow":[{"type":"transform","transform":[{"key":"gw_SkCP","expression":{"op":"expr","as":"gw_SkCP","params":[{"type":"sql","value":"(CASE  WHEN (\"KPI_14\" > (0.07)) THEN (1) ELSE (0) END )"}]}}]},{"type":"view","query":[{"op":"aggregate","groupBy":["Longitude","Latitude"],"measures":[{"field":"gw_SkCP","agg":"sum","asFieldKey":"gw_SkCP_sum"},{"field":"KPI_1","agg":"sum","asFieldKey":"KPI_1_sum"},{"field":"KPI_14","agg":"sum","asFieldKey":"KPI_14_sum"}]}]}]}],"version":"0.4.9"}"""
 ```
 
+### Data Stories with a Notebook and ipyvizzu
 
+If you feel confortable with Jupyter notebooks, have a look to: https://github.com/vizzuhq/ipyvizzu-story
+
+> See an example of a data story: https://ipyvizzu-story.vizzuhq.com/latest/examples/titanic/
+
+This is food for thought if you normally create presentations with SliDev!
 
 ## Other D&A Tools
 

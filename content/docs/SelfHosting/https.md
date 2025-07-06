@@ -12,6 +12,8 @@ How to get https for selfhosted apps on a homelab or VPS.
 
 I started with [NPM](#nginx), but understood that there are few alternatives to get https into your selfhosted services.
 
+Because some people will charge you from having that SSL setup, like [here](https://raiolanetworks.com/certificados-ssl/)
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy" title="Proxies Docker Config Files 🐋 ↗" >}}
 {{< /cards >}}
