@@ -84,8 +84,32 @@ Something very similar, but [with mechanisms](https://jalcocert.github.io/JAlcoc
 But same as it can be done for mechanism, it can be done for time series data, like this SP500 returns which is powered by [this script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/animate_total_return_from_csv.py)
 
 {{< youtube "I46bPuSdrqk" >}}
-
 <!-- https://youtu.be/I46bPuSdrqk -->
+
+Then, your imagination is the limit, as you can do scripts to compare few stocks returns and placing some [OpenAI APi TTS audio](https://github.com/JAlcocerT/DataInMotion/tree/main/OpenAI-Audio) that describes them:
+
+1. Create your audio and matplotlib generated video (of 10s duration):
+
+```sh
+uv run ./OpenAI-Audio/openai-tts.py --env=./.env
+ffmpeg -f s16le -ar 24000 -ac 1 -i audio_reply.pcm audio_reply.mp3 #transform it to mp3
+
+uv run animate_sequential_compare_price_evolution_flex_custom.py MC.PA RMS.PA 2010-01-01 10 short
+```
+
+> Creating a "full circle" or cyclical narrative can be incredibly impactful.
+
+The trick is to reference the beginning in the end, but with the added context or impact of what was just revealed in the middle.
+
+2. Combine them and give 5 seconds time for the video to be paused and audio to keep going:
+
+```sh
+ffmpeg -y -i luxury-ytshort.mp4 -i audio_reply.mp3   -filter_complex "[0:v]tpad=stop_mode=clone:stop_duration=5[v_extended]"   -map "[v_extended]" -map 1:a:0   -c:v libx264 -preset fast -crf 23 -c:a aac   ./luxury-ytshort_extended_frozen_audio_added.mp4
+```
+
+<!-- https://youtube.com/shorts/FQVSITWjxJE -->
+{{< youtube "FQVSITWjxJE" >}}
+
 
 ## Animations x SSG
 
@@ -103,7 +127,7 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 ### Embedded Analytics
 
-### ipyvizzu
+### Ipyvizzu
 
 Probably oriented more if you are [building PoCs](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#data-stories-with-a-notebook-and-ipyvizzu) at work.
 
@@ -121,6 +145,12 @@ Probably oriented more if you are [building PoCs](https://jalcocert.github.io/JA
 ## FAQ
 
 ### Social Media Automation
+
+If you are able to create mp4 animations, you can also create images or .gif from them.
+
+With those, you can go to different social media platforms and share the content you have just created.
+
+
 
 
 **Social Media Management Apps**

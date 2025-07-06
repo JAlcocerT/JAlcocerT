@@ -314,7 +314,7 @@ Any Web or Webapp can potentially be Combined with PostHog/OpenReplay for Produc
 
 To see **how customers interact** with your product, you can try with https://eu.posthog.com/
 
-Add this kind of snippet before the `/head` of your website:
+Add this kind of snippet before the `</head>` of your website, as done [here](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/layouts/BaseLayout.astro?ref_type=heads#L31):
 
 ```html
     <script>

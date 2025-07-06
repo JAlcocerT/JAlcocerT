@@ -482,7 +482,7 @@ You can also have handy a list of QQ to [enable others](https://jalcocert.github
 ## Conclusions
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocertech.com/" title="Let's do cool stuff ↗ " >}}
+  {{< card link="https://www.jalcocertech.com/" title="Let's do cool stuff ↗ " >}}
   {{< card link="https://youtube.com/@JAlcocerTech" title="My YT Tech Channel ↗" >}}
 {{< /cards >}}
 

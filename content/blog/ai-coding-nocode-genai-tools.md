@@ -360,14 +360,20 @@ Like this one: https://n8n.io/workflows/4827-ai-powered-whatsapp-chatbot-for-tex
 For [embedding n8n](https://n8n.io/embed/) you will need a license!
 {{< /callout >}}
 
-But for doing a **quick N8N chatbot**, like I did here, you are good to go with the OSS License
+But for doing a **quick N8N chatbot**, like I did [here](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/n8n.md?ref_type=heads), you are good to go with the OSS License
 
 ```yml
     environment:
-      N8N_CHAT_ENABLED=true
+      - N8N_CHAT_ENABLED=true
+      - N8N_CHAT_CORS_ORIGINS=* #for local
+      - N8N_CHAT_CORS_ORIGINS=https://your-website.com
 ```
 
 So that this will become available in your n8n instance: `http://192.168.1.11:5678/chat`
+
+Then, you can add the script to your website's `</head>` as [done here](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/layouts/BaseLayout.astro?ref_type=heads#L40)
+
+* https://n8n.io/workflows/1954-ai-agent-chat/
 
 #### TG Bots
 
