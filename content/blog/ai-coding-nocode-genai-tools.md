@@ -299,8 +299,45 @@ In summary, n8n is a highly capable and developer-friendly automation tool, and 
 We can **embed n8n Chats** into our sites thanks to: https://www.npmjs.com/package/@n8n/chat
 
 ```sh
-npm install @n8n/chat
+npm install @n8n/chat #with this approach, you can customize how it looks, its called the import embed
 ```
+
+But you can also use the script provided at the same npmjs link to have the default one, working out of the box, when placed at your website's `</head>`:
+
+```js
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL'
+	});
+</script>
+```
+
+> This is called the CDN embed
+
+<!-- https://www.youtube.com/watch?v=4VD-6dFQJsk -->
+
+{{< youtube "4VD-6dFQJsk" >}}
+
+1. Select add new trigger: Add on Chat message
+2. Make Chat publically available & Select Mode as: embedded Chat
+
+![alt text](/blog_img/GenAI/NoCode-AI/n8n-chat-workflow.png)
+
+3. Now, get the `YOUR_PRODUCTION_WEBHOOK_URL` to feed it to the script
+4. Paste the n8n workflow url into your website's code. it will be something like: http://localhost:5678/webhook/some-random-uuid/chat`
+
+You should soo this in the bottom right of your page:
+
+![n8n chat embeded to astro sgg website](/blog_img/GenAI/NoCode-AI/n8n-chat-embed-astro-101.png)
+
+And now...how to actually send messages and do stuff with n8n via your website?
+
+5. Save the workflow and **mark it as active** via n8n UI
+
+
 
 There are many more possibilities by playing with: https://docs.n8n.io/api/#learn-about-rest-apis
 

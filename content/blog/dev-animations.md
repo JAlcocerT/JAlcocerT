@@ -97,7 +97,7 @@ ffmpeg -f s16le -ar 24000 -ac 1 -i audio_reply.pcm audio_reply.mp3 #transform it
 uv run animate_sequential_compare_price_evolution_flex_custom.py MC.PA RMS.PA 2010-01-01 10 short
 ```
 
-> Creating a "full circle" or cyclical narrative can be incredibly impactful.
+> Creating a "full circle" or cyclical narrative can be incredibly impactful for youtube shorts
 
 The trick is to reference the beginning in the end, but with the added context or impact of what was just revealed in the middle.
 
@@ -109,6 +109,12 @@ ffmpeg -y -i luxury-ytshort.mp4 -i audio_reply.mp3   -filter_complex "[0:v]tpad=
 
 <!-- https://youtube.com/shorts/FQVSITWjxJE -->
 {{< youtube "FQVSITWjxJE" >}}
+
+
+{{< callout type="info" >}}
+You can bring those, even snapshots or gif to [other social media](#social-media-automation) platforms
+{{< /callout >}}
+
 
 
 ## Animations x SSG
