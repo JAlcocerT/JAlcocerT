@@ -44,6 +44,8 @@ What we will be covering on this post:
 
 Because you wont to bill people. Probably.
 
+Others are doing stripe stuff already: https://sabandijers.club/cvv/
+
 * You can login https://dashboard.stripe.com/login
 * Set your accepted payment methods: https://dashboard.stripe.com/test/settings/payment_methods/
 * And create a product / subscription

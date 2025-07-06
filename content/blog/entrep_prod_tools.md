@@ -314,6 +314,18 @@ Any Web or Webapp can potentially be Combined with PostHog/OpenReplay for Produc
 
 To see **how customers interact** with your product, you can try with https://eu.posthog.com/
 
+Add this kind of snippet before the `/head` of your website:
+
+```html
+    <script>
+    //somethingsomething 
+      posthog.init('phc_someid', {
+          api_host: 'https://eu.i.posthog.com',
+          person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+      })
+  </script>
+```
+
 ![PostHog Surveys Example](/blog_img/entrepre/product/posthog-surveys.png)
 
 {{< cards >}}

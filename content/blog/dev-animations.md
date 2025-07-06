@@ -31,6 +31,10 @@ But...it was not enough for me to get started with someting cool.
 
 Maybe now this can be a thing, since we have [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) + Windsurf or GeminiCLI [Configured with Git-MCP](https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#gemini-cli-x-mcp)
 
+* https://github.com/idosal/git-mcp
+    * https://gitmcp.io/remotion-dev/remotion
+    * https://gitmcp.io/remotion-dev/remotion/chat
+
 ```json
 {
   "mcpServers": {
@@ -73,7 +77,9 @@ Now, the concept I want to do is very simple:
 
 Something very similar, but [with mechanisms](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/#conclusions), can be done as well!
 
-{{< youtube "2xMOxiRz6F4-g" >}}
+{{< youtube "2xMOxiRz6F4" >}}
+
+<!-- https://youtube.com/shorts/2xMOxiRz6F4?feature=share -->
 
 But same as it can be done for mechanism, it can be done for time series data, like this SP500 returns which is powered by [this script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/animate_total_return_from_csv.py)
 
@@ -99,7 +105,7 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 ### ipyvizzu
 
-Probably oriented more if you are building PoCs at work.
+Probably oriented more if you are [building PoCs](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#data-stories-with-a-notebook-and-ipyvizzu) at work.
 
 * https://github.com/vizzuhq/ipyvizzu-story
 

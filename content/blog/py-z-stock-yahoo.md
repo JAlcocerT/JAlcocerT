@@ -1,5 +1,5 @@
 ---
-title: "Financial Data for Python - Trying YFinance Package"
+title: "Financial Data for Python - The YFinance Package"
 date: 2025-06-18
 draft: false
 tags: ["Python","GoogleFinance","Animations","Payout Ratio"]
@@ -87,10 +87,12 @@ When you put together **few stocks with growing dividends**, you might expect so
 
 ![Portfolio DGI Example](/blog_img/data-experiments/dgi_example.png) 
 
-Some years might have a decrease due to:
+> Snapshots generated via PyStocks with Plotly
+
+Some years, the total dividends you are getting from a portfolio, might have a decrease due to:
 
 * Global financial circunstances
-* Or maybe just one of the stocks gave you a special dividend last year
+* Or maybe just one of the stocks gave you a special dividend last year and now its time to a *regression to the mean*
 
 What this tries to illustrate its just the general upwards trend.
 
@@ -164,9 +166,20 @@ Assuming that the price of the stock and the initial yield is the same, we would
 
 ## Stock Value Data
 
-So that's how dividends can behave over time.
+That was how dividends can behave over time.
 
 How about the stock value?
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_price.py" title="DataInMotion yfinance Price ↗" >}}
+    {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py" title="DataInMotion yfinance Dividend ↗" >}}
+{{< /cards >}}
+
+
+<!-- https://youtu.be/I46bPuSdrqk -->
+
+{{< youtube "I46bPuSdrqk" >}}
+
 
 ---
 
@@ -185,21 +198,93 @@ In theory, you just need to know 2 things:
 
 And the math goes... $Needs = P \times \frac{Yearly_Gross_Expenses}{(Yearly_returns)}$.
 
-People mention about different strategies to estimate the returns:
+People mention about **different strategies** to estimate the returns:
 
 * The *4% rule*, which apparently is an estimate of what you can take from a portfolio without killing your principal every year
 * Others just go with a dividend investing approach, so they dont need to sell shares
 * And some people have a balance between stocks funds and bonds, so that if stock market goes down they can live with those bonds, without selling really cheap the stocks
 
+
+{{< details title="You also have the 5% rule for property investing  📌" closed="true" >}}
+
+The "5% Rule" in property investing can refer to a couple of different concepts, so it's important to clarify which one is being discussed.
+
+However, the most common interpretation in real estate investment analysis revolves around **expected total return**.
+
+Here are the two primary ways the 5% rule is often used:
+
+1. **The 5% Rule (Combined Return on Rent and Appreciation)**
+
+This is the most prevalent definition when discussing the "5% Rule" for evaluating the attractiveness of a real estate investment property.
+
+**Definition:** This rule suggests that a real estate investor should aim for a **combined annual return of at least 5%** of the property's purchase price, derived from the sum of its **annual rental income** and its **expected annual appreciation in value**.
+
+**How it Works:**
+
+1.  **Estimate Annual Rent:** Calculate the total annual rental income the property is expected to generate (monthly rent x 12).
+2.  **Estimate Annual Appreciation:** Project the potential annual increase in the property's market value. This requires research into market trends, historical appreciation rates in the area, and future development prospects.
+3.  **Calculate Total Returns:** Add the estimated annual rent and the estimated annual appreciation amount.
+4.  **Assess Against Property Price:** Divide the total returns by the initial purchase price of the property (including any immediate renovation costs) and convert it into a percentage.
+
+**Formula:**
+
+$$\text{5% Rule Return} = \left( \frac{\text{Annual Rent Income} + \text{Annual Property Appreciation}}{\text{Property Purchase Price}} \right) \times 100\%$$
+
+**Significance:**
+
+* **Benchmark:** It serves as a quick benchmark to gauge whether a property is a potentially worthwhile investment. If the calculated percentage is 5% or higher, it might be considered a good opportunity.
+* **Balanced Approach:** It encourages investors to consider both sources of return in real estate:
+    * **Rental Yield (Cash Flow):** The income generated from rent.
+    * **Capital Appreciation:** The increase in the property's value over time.
+* **Risk Mitigation:** By requiring a healthy combined return, it helps mitigate risks. A property that meets this threshold suggests it's not overly reliant on just one source of return (e.g., extremely high appreciation but no cash flow, or vice versa).
+* **Simplicity:** It provides a relatively simple rule of thumb for initial screening of properties.
+
+**Example:**
+If you buy a property for \$200,000, expect to rent it for \$1,000 per month (\$12,000 annually), and anticipate 3% annual appreciation (\$6,000 annually):
+Total Return = \$12,000 (Rent) + \$6,000 (Appreciation) = \$18,000
+5% Rule Return = (\$18,000 / \$200,000) * 100% = 9%
+In this case, the property beats the 5% rule.
+
+**Limitations:**
+* **Estimates:** Relies on accurate estimations of future rent and appreciation, which can be uncertain.
+* **Doesn't Account for Expenses:** This simple rule doesn't factor in other significant costs like property taxes, insurance, maintenance, vacancies, property management fees, or mortgage interest. These would be considered in a more detailed cash flow analysis.
+* **Market Specificity:** What constitutes a "good" return can vary significantly by market. A 5% combined return might be excellent in a low-growth, high-yield market, but considered low in a high-growth, high-appreciation market.
+
+**2. The 5% Rule (Comparing Renting vs. Buying a Primary Residence)**
+
+Another less common but sometimes discussed "5% Rule" is a guideline for deciding whether it's financially better to rent or buy a primary residence.
+
+**Definition:** This version suggests that if the total annual "unrecoverable costs" of owning a home (property tax, maintenance, and opportunity cost of capital) exceed 5% of the home's value, it might be more financially advantageous to rent a comparable property and invest the difference.
+
+**How it Works:**
+
+* **Property Tax:** Often estimated at around 1% of the home's value annually.
+* **Maintenance Costs:** Also estimated at around 1% of the home's value annually for routine upkeep.
+* **Cost of Capital (Opportunity Cost):** The remaining 3% accounts for the money you've tied up in a down payment and equity that could otherwise be invested elsewhere (e.g., in the stock market or other investment properties) earning a return.
+
+**Formula:**
+$$\text{Annual Owning Costs \%} = \text{Property Tax \%} + \text{Maintenance Costs \%} + \text{Opportunity Cost \%}$$
+If this percentage (typically targeted at 5%) is significantly higher than your equivalent annual rent for a similar property, then renting might be the better financial decision.
+
+**Significance:** It provides a simplified framework for individuals to weigh the financial implications of homeownership beyond just mortgage payments, factoring in hidden costs and opportunity cost.
+
+{{< /details >}}
+
+Like all rules of thumb, the "5% Rule" is a **guideline**, not a rigid law.
+
+It's a useful starting point for preliminary analysis but should always be supplemented with more detailed financial modeling, market research, and due diligence specific to the property and location.
+
+
 {{< callout type="warning" >}}
-To keep it simple, lets go with the 4%, but as you can imagine, life is much more complex and unpredictable than a fixed rate. Definitely, **this is not any financial advice of any type**.
+To keep it simple, lets go with the 4%, but as you can imagine, life is much more complex and unpredictable than a fixed rate. 
+Definitely, **this is not a financial advice of any type**.
 {{< /callout >}}
 
 If Python sounds like a very crazy thing to get started with: you can try with simple [Google Sheets + Google Finance formula](#gfinance-with-google-sheets)
 
 ### Payout Ratio for Dividends
 
-Make sure you learn few finance and dividend related concepts.
+Make sure you learn and understand ew finance and dividend **related concepts**.
 
 Like the **payout ratio**
 

@@ -31,7 +31,19 @@ Copy the json before the `</head>`, normally in `BaseLayout.astro`
 
 ## PostHog
 
-https://eu.posthog.com/project/15002/replay/home
+* https://eu.posthog.com/project/15002/replay/home
+
+Then, you will need to add this kind of snippet before the `/head`:
+
+```html
+    <script>
+    //somethingsomething 
+      posthog.init('phc_someid', {
+          api_host: 'https://eu.i.posthog.com',
+          person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+      })
+  </script>
+```
 
 #### Record and Replay Web
 

@@ -235,7 +235,7 @@ volumes:
   {{< card link="https://github.com/LibreTranslate/LibreTranslate" title="It uses LibreTranslate ↗ " >}}
 {{< /cards >}}
 
-![alt text](/blog_img/GenAI/audio/whishper.png)
+![Whishper Audio](/blog_img/GenAI/audio/whishper.png)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Whishper" title="Whishper Docker Config 🐋 ↗" >}}

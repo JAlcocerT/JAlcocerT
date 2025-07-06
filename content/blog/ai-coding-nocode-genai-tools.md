@@ -313,7 +313,10 @@ There are many more possibilities by playing with: https://docs.n8n.io/api/#lear
   * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/
 * https://docs.n8n.io/integrations/builtin/node-types/
 
-https://www.youtube.com/watch?v=Rmi-ckbMOQE
+<!-- https://www.youtube.com/watch?v=Rmi-ckbMOQE -->
+
+{{< youtube "Rmi-ckbMOQE" >}}
+
 
 
 * https://github.com/n8n-io/self-hosted-ai-starter-kit
@@ -332,6 +335,7 @@ https://drive.google.com/drive/folders/1uYz0QUkGbGpsZJO2RcpvWD47GClcWeKd
 * You can build cool things with these:
   * https://formbricks.com/docs/xm-and-surveys/core-features/integrations/n8n
   * Or...embedable chat widget - https://www.npmjs.com/package/@n8n/chat
+    * https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/#make-chat-publicly-available
 
 
 ![N8N Interface](/blog_img/GenAI/NoCode-AI/n8n-ui.png)
@@ -356,6 +360,14 @@ Like this one: https://n8n.io/workflows/4827-ai-powered-whatsapp-chatbot-for-tex
 For [embedding n8n](https://n8n.io/embed/) you will need a license!
 {{< /callout >}}
 
+But for doing a **quick N8N chatbot**, like I did here, you are good to go with the OSS License
+
+```yml
+    environment:
+      N8N_CHAT_ENABLED=true
+```
+
+So that this will become available in your n8n instance: `http://192.168.1.11:5678/chat`
 
 #### TG Bots
 
