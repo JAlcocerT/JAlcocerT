@@ -209,20 +209,25 @@ How about the stock value?
 {{< youtube "I46bPuSdrqk" >}}
 
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Animations/WK27Y25/Short-4/eurusd_ytd_change.py" title="With YFinance, you can also pull Currency Exchange Data ↗" >}}
+{{< /cards >}}
 ---
 
 ## Conclusions
 
-Is it possible to life from dividends?
+1. Is it possible to live from dividends?
 
-**How much** do I need to live from dividends?
+2. **How much** do I need to live from dividends?
 
-Those are typical questions i frequently see over the internet.
+> Those are typical questions i frequently see over the internet.
+
+In practice: **it depends**
 
 In theory, you just need to know 2 things:
 
-1. How much you spend (the net + taxes and so on)
-2. What it is the avg return on your assets
+1. How much do you spend (the net + taxes and so on) ?
+2. What it is the avg return on your assets?
 
 And the math goes... $Needs = P \times \frac{Yearly_Gross_Expenses}{(Yearly_returns)}$.
 
@@ -418,7 +423,11 @@ It's very possible and actually quite common for a company to have **positive Ne
 
 This is a crucial distinction that often surprises people new to financial analysis, and it highlights why both metrics are essential.
 
+
 The core reason for this divergence lies in the fundamental difference between **accrual accounting** (used for Net Income) and **cash accounting** (which FCF ultimately reflects).
+
+{{< details title="Accrual vs Cash | Accounting 📌" closed="true" >}}
+
 
 Here are the primary reasons why a profitable company might have negative FCF:
 
@@ -445,11 +454,18 @@ Here are the primary reasons why a profitable company might have negative FCF:
 5.  **Debt Repayments (Financing Activities):**
     * While not directly part of the FCF calculation (which focuses on operations and investments), significant debt repayments (principal, not interest) consume cash and can make a seemingly profitable company appear cash-strapped if one only looks at the overall cash position. FCF is cash *before* debt repayments, but if a company relies heavily on debt for growth, the need to service that debt can constrain the "free" cash.
 
+{{< /details >}}
+
 **In essence:**
 
-Net income tells you how much money a company "made" according to accounting rules, considering when sales were earned and expenses incurred. FCF tells you how much actual cash the company has left after funding its ongoing operations and necessary investments.
+1. Net income tells you how much money a company "made" according to accounting rules, considering when sales were earned and expenses incurred. 
+2. FCF tells you how much actual cash the company has left after funding its ongoing operations and necessary investments.
 
-A healthy company usually aims for both positive Net Income and positive Free Cash Flow. A consistent disconnect (positive Net Income, negative FCF) can be a red flag, indicating that the company is burning cash, potentially relying on external financing, or struggling to convert its sales into actual cash. However, a temporary negative FCF due to significant growth-oriented CapEx can be a good sign for future potential.
+A healthy company usually aims for both positive Net Income and positive Free Cash Flow.
+
+A consistent disconnect (positive Net Income, negative FCF) can be a red flag, indicating that the company is burning cash, potentially relying on external financing, or struggling to convert its sales into actual cash. 
+
+However, a **temporary** negative FCF due to significant growth-oriented CapEx can be a good sign for future potential.
 
 
 ---

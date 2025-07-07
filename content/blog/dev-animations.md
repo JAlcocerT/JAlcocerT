@@ -51,10 +51,9 @@ Maybe now this can be a thing, since we have [MCP](https://jalcocert.github.io/J
 
 I created [this repo for putting *real life* videos together](https://github.com/JAlcocerT/YT-Video-Edition), as covered on [these posts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/)
 
-
-Python is a versatile programming language that can be used for a wide range of tasks, including creating animations. 
-
 ## Animations with Python
+
+[Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) is a versatile programming language that can be used for a wide range of tasks, including creating animations. 
 
 ### Matplotlib Styled Charts
 
