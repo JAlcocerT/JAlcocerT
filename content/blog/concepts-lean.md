@@ -136,12 +136,19 @@ While developing, these tricks have been useful to me:
 
 1. Use short-lived feature branches.
 2. Merge and delete branches promptly.
-3. Keep the main branch as the single source of truth.
+
+```sh
+git checkout main
+git pull origin main
+git checkout -b business-features
+```
+
+3. Keep the **main branch as the single source of truth**.
+
 4. Avoid keeping local changes uncommitted, especially when others need to review or experiment with your repository
 
 ```sh
 #git clone https://git.exadel.com/exadel-ai-practice/accelerator/project-documentation-generator.git
-git@git.exadel.com:exadel-ai-practice/accelerator/project-documentation-generator.git
 git branch -a
 
 git checkout codex-logs #go to a branch to bring some new feature to main

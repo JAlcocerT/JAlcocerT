@@ -59,12 +59,20 @@ Python is a versatile programming language that can be used for a wide range of 
 
 ## Animations with Python
 
+Before animating, you can create very styled plots:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="Matplotlib x YFinance" image="//blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Using Matplotlib to generat TimeSeries Styles Snapshots" >}}
+{{< /cards >}}
+
+But now...
+
 Is it even possible to create a full `.mp4` with code?
 
-Apparently, it is:
+Apparently, it is: *and not necesarily with plotly, as I tought*
 
-<https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/>
-<https://jckantor.github.io/CBE30338/A.03-Animation-in-Jupyter-Notebooks.html>
+* <https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/>
+* <https://jckantor.github.io/CBE30338/A.03-Animation-in-Jupyter-Notebooks.html>
 
 
 From Data to Streamlit to Animation to Video, is a topic that I tinkered [during the AIssistant, here](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Tests/ST_AutomaticYTVideo).
@@ -95,9 +103,13 @@ uv run ./OpenAI-Audio/openai-tts.py --env=./.env
 ffmpeg -f s16le -ar 24000 -ac 1 -i audio_reply.pcm audio_reply.mp3 #transform it to mp3
 
 uv run animate_sequential_compare_price_evolution_flex_custom.py MC.PA RMS.PA 2010-01-01 10 short
+#ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 animated_yt_short.mp4
 ```
 
-> Creating a "full circle" or cyclical narrative can be incredibly impactful for youtube shorts
+> Creating a "full circle" or cyclical narrative can be incredibly impactful for youtube shorts (1080x1920)
+
+https://www.youtube.com/watch?v=XrQliJX-e8A
+https://www.youtube.com/watch?v=GrVIJ6Xb_I0
 
 The trick is to reference the beginning in the end, but with the added context or impact of what was just revealed in the middle.
 
@@ -152,11 +164,12 @@ Probably oriented more if you are [building PoCs](https://jalcocert.github.io/JA
 
 ### Social Media Automation
 
-If you are able to create mp4 animations, you can also create images or .gif from them.
+If you are able to create mp4 animations, you can also create images or animated `.gif` from them.
 
 With those, you can go to different social media platforms and share the content you have just created.
 
 
+{{< tweet user="LibrePortfolio" id="1940801205577699713" >}}
 
 
 **Social Media Management Apps**

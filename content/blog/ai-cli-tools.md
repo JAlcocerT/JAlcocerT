@@ -2,7 +2,7 @@
 title: "AI Tools for CLI"
 date: 2025-06-25T01:20:21+01:00
 draft: false
-tags: ["Gemini CLI","LLMs","BAML","GIT-MCP"]
+tags: ["Gemini CLI","LLMs","BAML","git-mcp","codeact"]
 description: 'A look to the CLI tools to bring LLMs and better prompt engineering with BAML'
 url: 'ai-tools-for-cli'
 ---
@@ -40,7 +40,7 @@ You could also do these queries to [Gemini with python](https://ai.google.dev/ge
 
 ### Gemini CLI
 
-https://github.com/google-gemini/gemini-cli
+* https://github.com/google-gemini/gemini-cli
 
 ```sh
 npx https://github.com/google-gemini/gemini-cli #one time install
@@ -157,7 +157,7 @@ You can add it to Windsurf by: https://gitmcp.io/openai/codex or https://gitmcp.
 }
 ```
 
-![alt text](/blog_img/dev/IDEs/windsurf-mcp-gitmcp.png)
+![Windsurf together with git-mcp](/blog_img/dev/IDEs/windsurf-mcp-gitmcp.png)
 
 ![alt text](/blog_img/dev/IDEs/windsurf-mcp-chat.png)
 
@@ -182,6 +182,11 @@ These 2 I already have tested and covered on [this post](https://jalcocert.githu
 If you like **OpenAI taste**: https://platform.openai.com/docs/guides/tools-image-generation
 
 You can get started as per [openai manual](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)
+
+```sh
+#codex
+codex --approval-mode full-auto
+```
 
 And use your favourite model: https://platform.openai.com/docs/models Which at this point offer a **200k context Window**
 
@@ -247,6 +252,8 @@ BAML, which stands for "Basically a Made-up Language," is an open-source AI fram
 Essentially, it offers a **structured and type-safe way to define and manage how you interact with LLMs**, moving beyond simple text prompts to a more robust, function-based approach.
 
 
+
+
 {{< details title="More about BAML 📌" closed="true" >}}
 
 BAML helps you be better with LLMs by addressing several common pain points in LLM application development. 
@@ -271,7 +278,7 @@ uv add baml-py
 
 All BAML does under the hood is go generate a web request (you will be able to see the raw curl) and configurable via `client.baml`
 
-https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
+* https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
 
 There is a `baml_client` you can do:
 
@@ -297,15 +304,24 @@ So you will just ship the `baml_client` part.
 
 We let the LLM speak the language it thinks its better for the reply and then we take what we want from that reply (that does not have to be a JSON like with structured outputs)
 
-**Competitors**: PydanticAI
+**Competitors**: PydanticAI, or maybe https://github.com/langchain-ai/langgraph-codeact
 
-baml.com/chat
+> langgraph-codeact his library implements the CodeAct architecture in LangGraph. This is the architecture is used by [Manus.im](https://manus.im/). It implements an alternative to JSON function-calling, which enables solving more complex tasks in less steps.
+
+> > This is achieved by making use of the full power of a Turing complete programming language (such as Python used here) to combine and transform the outputs of multiple tools.
+
+* https://www.boundaryml.com/
+* baml.com/chat
+* https://www.promptfiddle.com/
 
 https://gloochat.notion.site/benefits-of-baml
 
 https://gloochat.notion.site/BAML-Advanced-Prompting-Workshop-Dec-2024-161bb2d26216807b892fed7d9d978a37?pvs=74
 
-https://www.youtube.com/watch?v=Xece-W7Xf48
+<!-- https://www.youtube.com/watch?v=Xece-W7Xf48 -->
+
+{{< youtube "Xece-W7Xf48" >}}
+
 
 https://github.com/hellovai/ai-that-works
 
@@ -350,6 +366,13 @@ In essence, BAML is a DSL because it provides a dedicated, purpose-built languag
 [![Star History Chart](https://api.star-history.com/svg?repos=BoundaryML/baml,google-gemini/gemini-cli&pydantic/pydantic-ai&,type=Date)](https://star-history.com/BoundaryML/baml&google-gemini/gemini-cli&pydantic/pydantic-ai&Date)
 
 
+### 11Labs x MCP
+
+<!-- https://www.youtube.com/watch?v=uOneCuSj2tI -->
+
+{{< youtube "uOneCuSj2tI" >}}
+
+
 ### Python CLi Tools
 
 * https://pypi.org/project/questionary/
@@ -362,26 +385,21 @@ In essence, BAML is a DSL because it provides a dedicated, purpose-built languag
 
 ### Other TOols
 
-
 * https://github.com/Chivo-Systems/Shinar/
-
 
 > gpl 3.0 | Open Source AI Calling Transcriptions, Summaries, and Analytics built on OpenAI Whisper
 
 
 Similar to fireb
 
-https://github.com/getmaxun/maxun
+* https://github.com/getmaxun/maxun
 
 > agpl | No Code Web Data Extraction Platform • Turn Websites To APIs & Spreadsheets In Minutes
 
-
-https://github.com/clusterzx/paperless-ai
-
+* https://github.com/clusterzx/paperless-ai
 
 > MIT | An automated document analyzer for Paperless-ngx using OpenAI API, Ollama, Deepseek-r1, Azure and all OpenAI API compatible Services to automatically analyze and tag your documents.
 
-
-https://github.com/esxr/langgraph-mcp
+* https://github.com/esxr/langgraph-mcp
 
 > MIT | LangGraph solution template for MCP

@@ -364,3 +364,10 @@ It's not just about n8n embeddedd chat, but scrapping capabilities:
 
 {{< youtube "AhyO9AVm49k" >}}
 <!-- https://www.youtube.com/watch?v=AhyO9AVm49k -->
+
+
+### OSS for Selfhosted Blogs
+
+* https://github.com/ddoemonn/next-blog
+
+> **MIT** | self-hosted blog platform built with next.js 

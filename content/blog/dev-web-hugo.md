@@ -202,9 +202,9 @@ But also about its shortcodes.
 
 You can use them to embed youtube videos, creating cool dropdowns or even to bring MermaidJS charts, Katex and [ChartJS to your website](#charts-in-hugo).
 
-Or bringing tweets information:
+Or bringing youtube/tweets information:
 
-```
+```yml
 {{< youtube "-05mOdHmQVc" >}}
 {{< tweet user="stratebi" id="1231889201198772224" >}}
 ```

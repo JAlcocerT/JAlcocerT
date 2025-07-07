@@ -9,8 +9,13 @@ url: 'selfhosted-apps-06-2025'
 
 <!-- https://fossengineer.com/selfhosting-favourite-aug-2024/ -->
 
-It was all about...[Traefik](https://fossengineer.com/selfhosting-traefik/) to get programatic https for homelab services!
+People keep doing awsome stuff...
 
+<!-- https://www.youtube.com/watch?v=Alx_vwyksTw -->
+
+{{< youtube "Alx_vwyksTw" >}}
+
+But lately, it was all about...[Traefik](https://fossengineer.com/selfhosting-traefik/) to get [programatic https](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) for homelab services!
 
 While exploring [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#traefik-x-tinyauth-x-flask), I revisited the Jims Garage guide on Traefik v3.
 
@@ -22,7 +27,6 @@ While exploring [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyaut
 It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication).
 
 <!-- ![Traefik UI](/blog_img/selfh/https/Traefik-UI-https.png) -->
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH" title="Docker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Collection of Docker Config Files - 0625 Edition" >}}
@@ -48,7 +52,6 @@ So I just needed to get the domain DNS records accordingly:
 ```sh
 nslookup nextcloud.jalcocertech.com
 ```
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml" title="NextCloud MariaDB | Config File 🐳 ↗"  >}}

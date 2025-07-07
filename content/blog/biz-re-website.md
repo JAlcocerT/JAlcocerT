@@ -2,7 +2,7 @@
 title: "Real Estate Project Updates"
 date: 2025-04-08T10:20:21+01:00
 draft: false
-tags: ["Dev","Pricing Strategies"]
+tags: ["Web","n8n chatbot","Pricing Strategies"]
 description: 'RE Gen AI App, RE Calculator and a RE Website (with Astro). Combo.'
 url: 'real-estate-website'
 math: true
@@ -438,6 +438,14 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 
 {{< /details >}}
+
+## Outro
+
+### N8N Automation for Real Estate
+
+<!-- https://www.youtube.com/watch?v=-77yBmdKc7U -->
+
+{{< youtube "-77yBmdKc7U" >}}
 
 ### Audio with AI
 

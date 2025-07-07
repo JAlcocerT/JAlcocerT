@@ -11,6 +11,10 @@ math: true
 Recently, I was writing about [this awsome mechanism project](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/)
 
 
+<!-- https://www.youtube.com/watch?v=-QTkPfq7w1A -->
+
+{{< youtube "-QTkPfq7w1A" >}}
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/mechanical-engineering-cool-stuff/" title="Summarizer" image="/blog_img/GenAI/yt-summaries/yt-summaries-groq.png" subtitle="With Groq API" >}}
   {{< card link="gabemorris12-mechanism-project-setup" title="Slider Crank" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Slider Crank Mechanism in Python" >}}

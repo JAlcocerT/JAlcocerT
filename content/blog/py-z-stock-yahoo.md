@@ -34,14 +34,14 @@ The first time, [you will need a **venv**](https://jalcocert.github.io/JAlcocerT
 
 ### YFinance
 
-It was a fundamental piece for RStocks, and it will be for any financial tricks you want to do with Python.
+It was a fundamental piece for [RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/), and it will be for any financial tricks you want to do with Python.
 
 * https://pypi.org/project/yfinance/
 * https://rowzero.io/blog/yfinance
 * https://github.com/ranaroussi/yfinance
     * https://ranaroussi.github.io/yfinance/
 
-> Apache v2 | Download market data from **Yahoo! Finance's API**
+> **Apache v2** | Download market data from **Yahoo! Finance's API**
 
 ```sh
 pip install yfinance==0.2.52
@@ -59,9 +59,9 @@ def STOCK(ticker):
 STOCK('KO')
 ```
 
-For prices, you can try with [such script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_price.py)
+1. For **prices**, you can try with [such script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_price.py)
 
-You can also pull **dividend data from yfinance**, as seen on [this example](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py).
+2. You can also pull **dividend data from yfinance**, as seen on [this example](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py).
 
 ```py
 import yfinance as yf
@@ -80,6 +80,8 @@ def get_dividend_data(ticker: str):
         print(f"Dividend history for {ticker}:")
         print(dividends)
 ```
+
+3. And for **currency exchange rates**...you can also use yfinance, [like so](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Animations/WK27Y25/Short-4/eurusd_ytd_change.py).
 
 ## Dividend Data - DGI vs Yield
 
@@ -151,6 +153,9 @@ In this case, you **just buy one time in the beginning, no debt**, sit and wait 
 Without [re-investing](#with-dividend-reinvestment), is harder to see the snowball effect 
 {{< /callout >}}
 
+{{< youtube "I46bPuSdrqk" >}}
+
+> Powered by [this animation script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/animate_total_return_from_csv.py)
 
 ### With Dividend Reinvestment
 
@@ -161,6 +166,23 @@ Assuming that the price of the stock and the initial yield is the same, we would
 <!-- 
 ![Div Re-Investment](/blog_img/data-experiments/div_reinvestment.png)  
 -->
+
+With some vibe coding here, I got to see the difference of evolution of `SPY` in terms of:
+
+To make a simple plot, you can do [like so](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/plot_total_return_from_yfinance.py)
+
+```sh
+python plot_total_return_from_yfinance.py PG 2010-01-01
+```
+
+1. Just Price
+2. Price + dividends
+3. Price + dividends reinvested
+
+![Matplotlib Styled Graph with Python](/blog_img/data-experiments/sample-matplotlib-timeseries.png)
+
+{{< youtube "I46bPuSdrqk" >}}
+
 
 #### Compared with Real Estate
 

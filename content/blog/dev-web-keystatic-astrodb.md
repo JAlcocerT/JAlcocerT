@@ -74,19 +74,19 @@ Use IT or lose it The AI Revolution for your business · It all start with a Mod
 5. It also bring some embedded video
 
 ```html
-        <div class="aspect-video">
-          <video
-            autoplay
-            loop
-            muted
-            playsinline
-            preload="metadata"
-            class="aspect-auto rounded-xl"
-          >
-            <source src={video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+<div class="aspect-video">
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="metadata"
+    class="aspect-auto rounded-xl"
+  >
+    <source src={video} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
 ```
 
 6. What it does NOT bring, is search. But for a simple *landing page + few pages*...thats fine.

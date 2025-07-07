@@ -68,13 +68,19 @@ But how about the promised **AI/BI** part?
 
 ### PyGWalker
 
-You can also have a look to a killer combi: **Streamlit x pygwalker**
+What am I talking about: **Streamlit x pygwalker**
 
 Give the users a webapp that they can play with tables / graph that does not require huge development!
 
 If you want to use actively AI to develop the dashboarding, consider **LLM x Streamlit:**
 
 As can also render [mermaidJS](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_mermaid_v2c.py) and [plotly graphs](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_plotly_v1b.py) with your [aissistant, via streamlit webapp](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main)
+
+You can also bring:
+
+* [QR Code](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py) Generation
+* [Plotly render](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/st_Plotly.py) inside Streamlit
+* You can even [modify DNS via this script](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/flask_dnsupdater.py)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
