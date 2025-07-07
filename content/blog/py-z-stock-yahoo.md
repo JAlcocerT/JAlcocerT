@@ -136,7 +136,7 @@ What does the **data and math** tell us about it?
 ![Div Yield vs Growth](/blog_img/data-experiments/div-growth-vs-yield-3d.png) 
 
 
-As seen on [the real estate post](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/), the catch up its all about: $t = \frac{\ln(A/B)}{\ln(1 + (r))}$
+As seen on [the real estate post](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/), the *catch up* its all about: $t = \frac{\ln(A/B)}{\ln(1 + (r))}$
 
 * Where A and B are the initial yield of each stock
 * And r the difference in growth between them
@@ -180,6 +180,12 @@ python plot_total_return_from_yfinance.py PG 2010-01-01
 3. Price + dividends reinvested
 
 ![Matplotlib Styled Graph with Python](/blog_img/data-experiments/sample-matplotlib-timeseries.png)
+
+> [Sample series](https://github.com/JAlcocerT/DataInMotion/commit/0382cf295f16629eb6b8beaf5fc0c45c5ff01fa7) for `ALV.DE` with [this script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/flexible_stock_timeseries.py)
+
+![Survivorship bias with a dividend stock that broke its dividend increase track record](/blog_img/data-experiments/MMM_dividends_pct_12m.png)
+
+> Generated for 3M with [this script](https://github.com/JAlcocerT/DataInMotion/blob/main/Generation/WK28Y25/plot_dividends_pct_12m.py)
 
 {{< youtube "I46bPuSdrqk" >}}
 

@@ -54,22 +54,39 @@ I created [this repo for putting *real life* videos together](https://github.com
 
 Python is a versatile programming language that can be used for a wide range of tasks, including creating animations. 
 
-
-
-
 ## Animations with Python
 
-Before animating, you can create very styled plots:
+### Matplotlib Styled Charts
+
+Before animating, be aware that you can create very styled plots with matplotlib.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="Matplotlib x YFinance" image="//blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Using Matplotlib to generat TimeSeries Styles Snapshots" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="Matplotlib x YFinance" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Using Matplotlib to generat TimeSeries Styles Snapshots" >}}
 {{< /cards >}}
+
+They wont be interactive, but they can look pretty cool!
+
+{{< details title="Vibe Coding Proper Matplotlib Charts 📌" closed="true" >}}
+
+1. Brand Colors
+2. Adding *watermark* / url or not
+3. Proper modules for: pull data, store data, transform data + style plots (you can have one for price, another for dividend oriented...)
+4. Output format size (resolution)
+
+
+{{< /details >}}
+
+You can create a script with modes, in such a way that given few parameters, it will generate for you whatever domain specific chart you need.
 
 But now...
 
 Is it even possible to create a full `.mp4` with code?
 
+### Matplotlib Animations
+
 Apparently, it is: *and not necesarily with plotly, as I tought*
+
+And again, people are doing fantastic stuff with matplotlib:
 
 * <https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/>
 * <https://jckantor.github.io/CBE30338/A.03-Animation-in-Jupyter-Notebooks.html>
@@ -80,8 +97,9 @@ From Data to Streamlit to Animation to Video, is a topic that I tinkered [during
 Now, the concept I want to do is very simple:
 
 1. Generate Code & Data driven animations
-2. Use Python to pull the data
+2. Use Python to pull the data (and save the data for the records)
 3. Use matplotlib for the final `.mp4` animations
+4. Have as parameter the time of the animation and its output resolution
 
 Something very similar, but [with mechanisms](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/#conclusions), can be done as well!
 
@@ -96,7 +114,7 @@ But same as it can be done for mechanism, it can be done for time series data, l
 
 Then, your imagination is the limit, as you can do scripts to compare few stocks returns and placing some [OpenAI APi TTS audio](https://github.com/JAlcocerT/DataInMotion/tree/main/OpenAI-Audio) that describes them:
 
-1. Create your audio and matplotlib generated video (of 10s duration):
+1. Create your AI-audio and matplotlib generated video (of 10s duration):
 
 ```sh
 uv run ./OpenAI-Audio/openai-tts.py --env=./.env
@@ -113,7 +131,7 @@ https://www.youtube.com/watch?v=GrVIJ6Xb_I0
 
 The trick is to reference the beginning in the end, but with the added context or impact of what was just revealed in the middle.
 
-2. Combine them and give 5 seconds time for the video to be paused and audio to keep going:
+2. Combine them and **give 5 seconds** time for the video to be paused and audio to keep going:
 
 ```sh
 ffmpeg -y -i luxury-ytshort.mp4 -i audio_reply.mp3   -filter_complex "[0:v]tpad=stop_mode=clone:stop_duration=5[v_extended]"   -map "[v_extended]" -map 1:a:0   -c:v libx264 -preset fast -crf 23 -c:a aac   ./luxury-ytshort_extended_frozen_audio_added.mp4
@@ -131,7 +149,9 @@ You can bring those, even snapshots or gif to [other social media](#social-media
 
 ## Animations x SSG
 
-This year I also was playing around with Astro components:
+This year I also was playing around with Astro components.
+
+And withing the datanova theme, I found out that they are doing a really cool animation (which is a SVG!)
 
 ```sh
 npm install
@@ -175,7 +195,6 @@ With those, you can go to different social media platforms and share the content
 **Social Media Management Apps**
 
 - [Shoutify](https://github.com/TechSquidTV/Shoutify)
-
 
 Social Media can be simplified:
 

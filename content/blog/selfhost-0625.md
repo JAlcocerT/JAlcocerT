@@ -9,7 +9,7 @@ url: 'selfhosted-apps-06-2025'
 
 <!-- https://fossengineer.com/selfhosting-favourite-aug-2024/ -->
 
-People keep doing awsome stuff...
+People keep doing awsome stuff: this time with solar energy
 
 <!-- https://www.youtube.com/watch?v=Alx_vwyksTw -->
 

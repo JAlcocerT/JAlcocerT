@@ -365,6 +365,17 @@ In essence, BAML is a DSL because it provides a dedicated, purpose-built languag
 
 [![Star History Chart](https://api.star-history.com/svg?repos=BoundaryML/baml,google-gemini/gemini-cli&pydantic/pydantic-ai&,type=Date)](https://star-history.com/BoundaryML/baml&google-gemini/gemini-cli&pydantic/pydantic-ai&Date)
 
+### Context Engineering
+
+Apparently, this is an alternative already to vibe coding.
+
+* https://github.com/coleam00/context-engineering-intro
+
+https://www.youtube.com/watch?v=uohI3h4kqyg
+
+> MIT | Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work. Claude Code is the best for this so that's what this repo is centered around, but you can apply this strategy with any AI coding assistant!
+
+
 
 ### 11Labs x MCP
 
