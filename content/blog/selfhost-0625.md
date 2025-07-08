@@ -89,8 +89,15 @@ davs://your_nc_user@nextcloud.jalcocertech.com/remote.php/webdav
 ```
 
 {{< callout type="warning" >}}
-When using WebDav the files are only on the server, not backed up on your device. I got a transfer speed of ~15mb/s via wifi.
+When using WebDav the files are **only** on the server, not backed up on your device.
 {{< /callout >}}
+
+I got a transfer speed of ~15mb/s via wifi:
+
+```sh
+nload
+#nload wlp3s0
+```
 
 You can also use the desktop app:
 
@@ -122,7 +129,7 @@ Last month i tried protondrive with rclone https://github.com/JAlcocerT/Docker/t
 
 #### PortMaster and https
 
-If you are using portmaster, you might need to disable DNS config ->Enforce global/private-split view
+If you are using *portmaster*, you might need to disable DNS config -> Enforce global/private-split view
 
 So that the nextcloud configured via Traefik and tailscale DSN will work
 
@@ -138,14 +145,18 @@ Its all about the DNS.
 
 And I saw on [this post](https://forocoches.com/foro//showthread.php?t=10372366) that there is an EU alternative to cloudflare, goodle, quad9 and many other DNS: https://www.joindns4.eu/for-public#resolver-options
 
-Lately, I evne learnt how to modify Cloudflare DNS records via its API with Python.
+Lately, I evne learnt how to modify Cloudflare DNS records via its API with a [Python script](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/flask_dnsupdater.py)
 
-https://www.youtube.com/watch?v=c3XMAz--_Us
+<!-- https://www.youtube.com/watch?v=c3XMAz--_Us -->
 
-https://www.youtube.com/watch?v=6sznCZ7ttbI
+{{< youtube "c3XMAz--_Us" >}}
+
+{{< youtube "6sznCZ7ttbI" >}}
+
+
+<!-- https://www.youtube.com/watch?v=6sznCZ7ttbI -->
 
 ### Monitoring
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring Tools Post | With Beszel 101 Setup" >}}
@@ -245,7 +256,9 @@ With gemini CLI and similar vibe coding tools, its been much easier to spin new 
 
 People are still doing cool stuff with the Pis
 
-https://www.youtube.com/watch?v=6Vf_zj4Ytxg
+<!-- https://www.youtube.com/watch?v=6Vf_zj4Ytxg -->
+
+{{< youtube "6Vf_zj4Ytxg" >}}
 
 ---
 

@@ -187,20 +187,46 @@ python plot_total_return_from_yfinance.py PG 2010-01-01
 
 > Generated for 3M with [this script](https://github.com/JAlcocerT/DataInMotion/blob/main/Generation/WK28Y25/plot_dividends_pct_12m.py)
 
-{{< youtube "I46bPuSdrqk" >}}
-
 
 #### Compared with Real Estate
 
+You can always keep improving the charts: *like adding the number of % change*
+
+![Matplotlib Custom Graph for Dividend Trend Example](/blog_img/data-experiments/MCD_dividends_pct_12m.png)
+
+> Generated for `MCD`, which can give you insights about how *real estate* can do
+
+> > Will that growth be repeated? who knows! The thing is that you can do cool graphs with Matplotlib...
+
+```yml
+=== Dividend Growth Statistics ===
+Range considered: 2000–2024
+Total % increase: +3053.5%
+CAGR (all completed years): +15.46%
+5y CAGR: +7.47%
+3y CAGR: +8.90%
+=================================
+```
+
+And you can create such animations:
+
+{{< youtube "I46bPuSdrqk" >}}
+
 ## Stock Value Data
 
-That was how dividends can behave over time.
+That was how dividends can *(or not)* behave over time.
 
 How about the stock value?
 
+> Wait, If you are getting tempted to [use ML](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/#supervised-learning) to get rich...remember about [Overfitting the data](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/#the-bias-variance-trade-off)
+
+> > Which can be also told as: previous performance does not guarantee ANYTHING for future performance
+
+But, you can anyways do your *data experiment* for fun:
+
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_price.py" title="DataInMotion yfinance Price ↗" >}}
-    {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py" title="DataInMotion yfinance Dividend ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_price.py" title="DataInMotion yfinance Price Script ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py" title="DataInMotion yfinance Dividend Script ↗" >}}
 {{< /cards >}}
 
 

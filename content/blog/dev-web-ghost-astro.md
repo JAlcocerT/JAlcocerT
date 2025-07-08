@@ -371,3 +371,11 @@ It's not just about n8n embeddedd chat, but scrapping capabilities:
 * https://github.com/ddoemonn/next-blog
 
 > **MIT** | self-hosted blog platform built with next.js 
+
+### Other Websites Ive worked
+
+07/25 version
+
+https://github.com/majesticooss/astros/discussions/56
+https://github.com/majesticooss/astros
+https://ioracing-iotechcrafts.web.app/blog/unleashing-the-power-of-tailwind-css/

@@ -449,20 +449,30 @@ For example: 1NF (First Normal Form): A table in 1NF is in first normal form if 
     * A star schema is a simple, normalized dimensional model that consists of a fact table and several dimension tables. The fact table contains the measures of the business, and the dimension tables contain the attributes that describe the measures.
     * A snowflake schema is a more complex, **denormalized dimensional model** that consists of a fact table and several dimension tables. This can improve performance for queries that only need to access a subset of the data in the dimension table.
 
-{{< dropdown title="I need an example 👇 " closed="true" >}}
+{{< dropdown title="I need an example | Facts and Dimensions 👇 " closed="true" >}}
+
 Imagine you're managing a bustling retail store, and you want to analyze your sales data to understand which products are selling well and who your most loyal customers are. 
 
 > The **"Fact" table in this scenario is like a ledger** where you record every transaction that happens in your store—a list of all the sales made, including the products bought, the prices, and the dates. This table captures the heartbeat of your business, showing the actual sales activities.
 
-> Now, think of **"Dimension" tables as labels that provide extra information** about your products and customers. For instance, you might have a "Product" dimension table that includes details about each product's category, brand, and supplier. Another dimension could be the "Customer" table, which includes demographic information like age, location, and loyalty status.
+> Now, think of **"Dimension" tables as labels that provide extra information** about your products and customers.
 
-When you combine the "Fact" and "Dimension" tables, you're not just looking at rows of sales data—you're building a story. You can discover insights like which product categories are most popular among specific customer groups, or whether loyalty members tend to buy certain types of products more often. By weaving together these elements, you create a powerful narrative that helps you make informed decisions and optimize your store's performance. 
+For instance, you might have a "Product" dimension table that includes details about each product's category, brand, and supplier. Another dimension could be the "Customer" table, which includes demographic information like age, location, and loyalty status.
+
+When you combine the "Fact" and "Dimension" tables, you're not just looking at rows of sales data — you're building a story. 
+
+You can discover insights like which product categories are most popular among specific customer groups, or whether loyalty members tend to buy certain types of products more often.
+
+By weaving together these elements, you create a powerful narrative that helps you make informed decisions and optimize your store's performance. 
+
 {{< /dropdown >}}
 
 
 ### Data Warehouses
 
-A data warehouse is a specialized database that is designed for storing and analyzing large amounts of historical data. It is used to **support business intelligence** (BI) and analytics applications.
+A data warehouse is a specialized database that is designed for storing and analyzing large amounts of historical data. 
+
+It is used to **support business intelligence** (BI) and analytics applications.
 
 Data warehouses are typically used by businesses to track their performance, identify trends, and make better decisions.
 
@@ -470,7 +480,9 @@ This data is **typically structured**, because it is easier to store and query s
 
 If you are storing semi-structured or unstructured data in a data warehouse, then you will need to use a tool to transform the data into a structured format before it can be stored in the data warehouse. This process is called **ETL** (extract, transform, and load).
 
-Specifically designed to support **OLAP operations**. They store large amounts of historical and transactional data in a structured format optimized for analytical processing. 
+Specifically designed to support **OLAP operations**.
+
+They store large amounts of historical and transactional data in a structured format optimized for analytical processing. 
 
 * The data in a [data warehouse](/JAlcocert/data-basics-for-data-analytics/#data-warehousing) is typically organized into dimensions and measures, forming a multidimensional model that allows for slicing, dicing, drill-down, and roll-up operations.
     * You will need to understand how ETL and ELT compare in DWH Architecture as [Data Integration Methods](/JAlcocert/data-basics-for-data-analytics/#etl-and-elt-in-dwh-architecture)
@@ -480,7 +492,7 @@ Specifically designed to support **OLAP operations**. They store large amounts o
 
 {{< dropdown title="DWH's and Data Marts Examples" closed="true" >}}
 
-#### Some DWH Examples
+**Some DWH Examples**
 
 * [BigQuery](/JAlcocert/data-basics-for-data-analytics/#big-query) is an example of a cloud-based data warehouse offered by Google Cloud. It is a serverless and highly scalable platform that allows users to analyze massive datasets using SQL queries. 
 * Other well known data warehousing solution include is **Snowflake**:
@@ -490,7 +502,7 @@ Specifically designed to support **OLAP operations**. They store large amounts o
     * BigQuery employs a *columnar storage* format called Capacitor, which compresses and stores data column-wise, enabling high performance for analytical queries.
 * As well as: *Amazon Redshift, Microsoft Azure Synapse Analytics*
 
-#### Data Marts
+**Data Marts**
 
 **A data mart is a subset of a DWH** that is designed to support a specific business unit or department. Data marts are typically smaller and more focused than data warehouses, and they are often used to support decision-making and analysis for a particular area of the business.
 
@@ -517,7 +529,6 @@ It's all about bringing data together from different places and making it work t
     * One example of a data integration service is **[Azure Data Factory (ADF)](/JAlcocertdata-basics-for-data-analytics/#azure-data-factory)**. ADF allows you to create data pipelines that connect to different data sources, such as databases, cloud storage, or web services, and bring the data into a central location.
     * Google Cloud and Amazon Web Services (AWS) offer their own equivalents to Azure Data Factory for data integration services: *Google Cloud Data Fusion and AWS Glue.*
 
-
 ### Visualizations
 
 * Mind the end user experience. You will benefit of [this UI/UX overview](/better-visualizations-data-analytics).
@@ -528,37 +539,51 @@ It's all about bringing data together from different places and making it work t
     * Try different layouts, [data representations](/better-visualizations-data-analytics/#different-problems---different-chart-types), and interactivity to create engaging and actionable insights for end-users.
 
 
->  The way you present insights is crucial because, just like telling a story with the right tone and pace, choosing the right visualization style and layout ensures that your data's story is clear and impactful. Whether it's a bar chart, pie chart, or interactive dashboard, each choice plays a role in guiding your audience through the journey.
+>  The way you present insights is crucial because, just like telling a story with the right tone and pace, choosing the right visualization style and layout ensures that your data's story is clear and impactful.
 
-<!-- * 'mastering-looker-studio' bi-looker-studio -->
+> > Whether it's a bar chart, pie chart, or interactive dashboard, each choice plays a role in guiding your audience through the journey.
+
 
 ### Machine Learning
 
-Machine learning is a process by which computers are trained to **learn without being explicitly programmed**. This is done by feeding the computer with data and allowing it to identify patterns in the data. Once the computer has **identified patterns**, it can use these patterns to **make predictions** about new data.
+Machine learning is a process by which computers are trained to **learn without being explicitly programmed**. 
+
+This is done by feeding the computer with data and allowing it to identify patterns in the data. Once the computer has **identified patterns**, it can use these patterns to **make predictions** about new data.
 
 {{< dropdown title="With labels or without labels - that's the ❓ " closed="true" >}}
-* The **supervised machine learning** approach requires you to start with a dataset with known label values. Two types of [supervised machine](/machine-learning-data-analytics/#supervised-learning) learning tasks include regression and classification.
-	* Regression: used to predict a continuous value; like a price, a sales total, or some other measure.
-	* Classification: used to determine a class label; an example of a binary class label is whether a patient has diabetes or not; an example of multi-class labels is classifying text as positive, negative, or neutral.
+
+* The **supervised machine learning** approach requires you to start with a dataset with known label values. 
+
+Two types of [supervised machine](/machine-learning-data-analytics/#supervised-learning) learning tasks include regression and classification.
+
+* Regression: used to predict a continuous value; like a price, a sales total, or some other measure.
+* Classification: used to determine a class label; an example of a binary class label is whether a patient has diabetes or not; an example of multi-class labels is classifying text as positive, negative, or neutral.
+
 * The **unsupervised machine learning** approach starts with a dataset without known label values. One type of [unsupervised machine learning](/machine-learning-data-analytics/#unsupervised-learning) task is clustering.
     * Clustering: used to determine labels by grouping similar information into label groups; like grouping measurements from birds into species.
 
 * One of the reasons that motivated me to improve Python Skills, was [Machine Learning](/machine-learning-data-analytics/)
     * Once you are confortable enough, you can also check also the concepts of [ROC](/machine-learning-the-roc-curve-in-detail/) and  [A|B Testing](/AB-Testing-for-data-analytics/).
     * Remember that you can apply ML concepts together with Big Data Processing tools like [Spark](/guide-python-PySpark/)
+
 {{< /dropdown >}}
 
 
-Remember - It's all about **[the trade-off](/machine-learning-data-analytics/#the-bias-variance-trade-off).**
+Remember - It's all about **[the trade-off](/JAlcocerT/machine-learning-data-analytics/#the-bias-variance-trade-off).**
 
-> In the World of machine learning, **overfitting** means your model is too focused on the training data, missing the bigger picture. **Underfitting** means it's not capturing the patterns in the data. Just like in basketball, the **goal is to find that perfect balance** where your shots (or predictions) are consistently accurate. 
+> In the World of machine learning, **overfitting** means your model is too focused on the training data, missing the bigger picture.
+
+> >  **Underfitting** means it's not capturing the patterns in the data.
+
+Just like in basketball, the **goal is to find that perfect balance** where your shots (or predictions) are consistently accurate. 
 
 ### Cloud / DevOps
 
-
 #### Learn Linux - Don't be Scared of CLI
 
-I mean, dont be afraid of it. Neither of the terminal.
+I mean, dont be afraid of it. 
+
+Neither of the terminal.
 
 > Think of the command line as your magical wand. In Linux, you can use text commands to summon powers, create spells (programs, scripts), and control the world around you.
 
@@ -569,12 +594,12 @@ Linux is often used in cloud servers because it is a reliable, open source opera
 Feel free to have a look at my repository and [Github Page for Linux](https://jalcocert.github.io/Linux/ "Github Linux A-Z Guide {rel='nofollow'}") to learn useful tips to get started. I was including there the notes I wished to have found on the internet when installed it for the first time.
 
 #### Learn Docker
-<!-- 
-Docker is a containerization platform that allows developers to package their applications and dependencies into isolated containers.
+ 
+Docker is a **containerization platform** that allows developers to package their applications and dependencies into isolated containers.
 
-> Think of Docker as the genius architect who designs the spaceship. It creates "blueprints" called containers—self-contained units holding everything needed to run an application, like software, libraries, and settings. -->
+A powerful tool for quickly deploying and managing applications!
 
-Docker is a powerful tool for quickly deploying and managing applications. It allows developers to create and deploy self-contained applications that can run on any machine without needing to install or configure any additional software.
+It allows developers to create and deploy self-contained applications that can run on any machine without needing to install or configure any additional software.
 
 This makes it easier to quickly deploy applications across different environments and makes sure that applications run consistently. 
 
@@ -636,6 +661,7 @@ We talked about Github Actions, but you will also encounter Jenkins, a popular C
 Prometheus is a **monitoring and alerting system** that helps developers track the health of their applications.
 
 > You're a guardian, responsible for keeping an eye on the health of everything within your responsability. Now, picture having a magical watchtower named Prometheus that lets you see the heartbeat of your software, ensuring it remains vibrant and trouble-free.
+
 {{< /dropdown >}}
 
 
@@ -646,26 +672,14 @@ Prometheus is a **monitoring and alerting system** that helps developers track t
 
 You can use: <https://roadmap.sh/roadmaps>
 
+**take time to zoom out**
 
-<!-- And for that we have to **take time to zoom out**. -->
+Don't be scared to start!
 
-<!-- ## Don't be scared to start
+As I was experiencing and is well described in the range book analysis, having different experiences early in your career can be an advantage in the long term to perform technical jobs.
 
+* Have you been doing customer service roles while studying?
+* Maybe you were doing sales?
+* Or does it sounds familiar the story of *someone* who joined to a caligraphy course and that changed everything?
 
-As I was experiencing and describe in [the range book analysis](), having different experiences early in your career can be an advantage in the long term to perform technical jobs.
-
-Have you been doing customer service roles while studying?
-Maybe you were doing sales?
-Or does it sounds familiar the story of someone who joined to a caligraphy course and that changed everything?
-
-Again. Don't be scared of the process and explore new areas of knowledge.
-
-## Resources
-
-### Useful resources to learn DA **for free**
-
-
-### Useful free data sources -->
-
-
-
+Again: Don't be scared of the process and be open to explore new areas of knowledge!

@@ -2,12 +2,12 @@
 title: "Buying a Car being in Data Analytics"
 date: 2021-10-03T23:20:21+01:00
 draft: false
-tags: ["Outro","Mechanics"]
-description: 'What to keep in mind, what NOT to do...When buying a second hand car. The data behind a Honda Civic 6.'
+tags: ["Outro","Mechanics","Honda Civic 6","Data Experiment"]
+description: 'What to keep in mind, what NOT to do...When buying a second hand car.'
 url: 'buying-car-data-analytics'
 ---
 
-It was a **Honda Civic 6**, born on 1997 (1995-2000).
+It was a **Honda Civic 6**, *born* on 1997 (1995-2000).
 
 > NA / In Line 4 cilinders / 1.4L
 
@@ -166,15 +166,22 @@ I mean an **used car**.
 
 I kind of had a file with these...
 
-![alt text](/blog_img/data-experiments/coches.png)
+![Excel Looking for Second hand Car](/blog_img/data-experiments/coches.png)
+
+But saved into some private sheet gives nothing!
+
 
 <!-- 
 https://www.youtube.com/watch?v=UINEmTO0LCY
  -->
 
+Thats why I put together this *how to* video for changing the **Civic 6 spark plugs**:
+
 {{< youtube "UINEmTO0LCY" >}}
 
-Having a look to the spark plugs after changing them can tell you a lot of the engine status:
+Having a look to the spark plugs after changing them can tell you a lot of the engine status.
+
+See a sample old Civic 6 spark plugs:
 
 ![Honda Civic 6 Spark Plugs](/blog_img/outro/hondacivic-sparkplugs.jpg)
 
@@ -190,10 +197,9 @@ And in the meantime I saw an interesting post: https://forocoches.com/foro/showt
 
 ## FAQ
 
-https://www.spritmonitor.de/de/suche.html
+If you are wondering how efficient you are driving, you can compare your fuel consumption with people using the same car: https://www.spritmonitor.de/de/suche.html
 
-
-
+> Notice the difference in summer vs winter months!
 
 ### In Germany
 
@@ -203,8 +209,7 @@ Steps for **buying a car in Germany**.
 
 * Find one:
   * [Mobile.de](https://suchen.mobile.de/fahrzeuge/search.html?cn=DE&isSearchRequest=true&ms=9000%3B%3B39%3B&od=up&pageNumber=4&ref=srpNextPage&refId=f5035f63-2646-3531-69d5-c28f462839dd&s=Car&sb=p&vc=Car)
-
-* https://forocoches.com/foro/showthread.php?t=6139690&highlight=alemania
+  * https://forocoches.com/foro/showthread.php?t=6139690&highlight=alemania
 
 
 ### In Netherlands

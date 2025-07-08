@@ -2,9 +2,8 @@
 title: "Machine Learning and Data Science for Data Analytics"
 date: 2020-11-25T23:20:21+01:00
 draft: false
-tags: ["Python","Dev"]
+tags: ["Python","Dev","Supervised","Unsupervised","Bias-Variance"]
 description: 'The starting point for anyone interested in learning AI/ML from the basics. Understand DSc language.'
-summary: ' .'
 url: 'machine-learning-data-analytics'
 ---
 
@@ -33,9 +32,12 @@ This relates to variance in machine learning, where your model is too sensitive 
 
 {{< dropdown title="Balancing bias and variance is like tuning your guitar perfectly 🎸👇" closed="true" >}}
 
-You adjust the strings just right so that each note is accurate and consistent across different parts of the instrument. Similarly, in machine learning, you aim to find the sweet spot where your model neither underfits (bias) nor overfits (variance), resulting in reliable and accurate predictions. 
+You adjust the strings just right so that each note is accurate and consistent across different parts of the instrument.
+
+Similarly, in machine learning, you aim to find the sweet spot where your model neither underfits (bias) nor overfits (variance), resulting in reliable and accurate predictions. 
 
 Just as a well-tuned guitar produces beautiful music, a well-balanced model produces meaningful insights.
+
 {{< /dropdown >}}
 
 
@@ -67,7 +69,9 @@ This is particularly helpful in programs like:
 
 **Supervised Models require training**, for that we need a dataset that includes historical features, characteristics of the entity for which you want to make a prediction, and known label values. 
 
-**The train/test split** - Normally we train the model using a subset of the data, while holding back some data with which to test the trained model. This enables you to compare the labels that the model predicts with the actual known labels in the original dataset.    
+**The train/test split** - Normally we train the model using a subset of the data, while holding back some data with which to test the trained model.
+
+This enables you to compare the labels that the model predicts with the actual known labels in the original dataset.    
 
 **Steps required for Supervised ML models:** Prepare data (Pre-process, or clean and transform), train model (train/test split), evaluate performance, deploy the model.
 
@@ -88,7 +92,9 @@ It can be used to **predict a continuous outcome** (such as salary or weight) ba
 
 Classification is a supervised machine learning method where the model attempts to **predict the correct label** of a given input data.
 
-It involves categorizing a given set of input data into classes based on one or more variables. Classification algorithms use a set of *labeled data points to learn* how to assign labels to unseen data points.
+It involves categorizing a given set of input data into classes based on one or more variables.
+
+> Classification algorithms use a set of *labeled data points to learn* how to **assign labels** to unseen data points.
 
 Common classification algorithms include: Support Vector Machines (SVM), Logistic Regression, Decision Trees, Random Forests, and Naive Bayes.
 
@@ -324,10 +330,6 @@ It depends on what you prioritize:
 * You can check the [latest trends at Gartner](https://www.gartner.com/reviews/market/multipersona-data-science-and-machine-learning-platforms "Book {rel='nofollow'}")
 
 ## How to get Started with ML via Free Resources
-
-Claro, aquí tienes un resumen en Markdown de los recursos de IA proporcionados, organizado por categorías para facilitar la navegación:
-
-Presentación en Video
 
 * [Charla sobre recursos de IA](https://youtu.be/iFGgq6btits)
 

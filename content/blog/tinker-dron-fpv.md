@@ -9,6 +9,13 @@ url: 'fpv-programming'
 
 ![DJI Tello Dron](/blog_img/hardware/dji-dron.png)
 
+https://www.youtube.com/watch?v=7yVFZn87TkY
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_price.py" title="DataInMotion yfinance Price ↗" >}}
+    {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py" title="DataInMotion yfinance Dividend ↗" >}}
+{{< /cards >}}
+
 https://gitlab.com/fossengineer1/dron
 https://github.com/JAlcocerT/DJITelloPy
 

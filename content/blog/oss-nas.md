@@ -406,11 +406,14 @@ chmod +x Selfhosting_101.sh & sudo ./Selfhosting_101.sh
 
 ```sh
 sudo flatpak install flathub com.nextcloud.desktopclient.nextcloud -y
-#See how quick you are transfering data
-#sudo apt install nload
-#nload
 ```
 
+See how quick you are transfering data:
+
+```sh
+#sudo apt install nload
+nload
+```
 2. [Photo Tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/)
 
 

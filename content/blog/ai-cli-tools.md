@@ -2,7 +2,7 @@
 title: "AI Tools for CLI"
 date: 2025-06-25T01:20:21+01:00
 draft: false
-tags: ["Gemini CLI","LLMs","BAML","git-mcp","codeact"]
+tags: ["Gemini CLI","LLMs","BAML","git-mcp","codeact","manus"]
 description: 'A look to the CLI tools to bring LLMs and better prompt engineering with BAML'
 url: 'ai-tools-for-cli'
 ---
@@ -159,7 +159,9 @@ You can add it to Windsurf by: https://gitmcp.io/openai/codex or https://gitmcp.
 
 ![Windsurf together with git-mcp](/blog_img/dev/IDEs/windsurf-mcp-gitmcp.png)
 
-![alt text](/blog_img/dev/IDEs/windsurf-mcp-chat.png)
+See how you can use mcp with windsurf:
+
+![Windsurf x MCP Tools](/blog_img/dev/IDEs/windsurf-mcp-chat.png)
 
 #### Gemini CLI x Databases
 
@@ -186,6 +188,7 @@ You can get started as per [openai manual](https://help.openai.com/en/articles/1
 ```sh
 #codex
 codex --approval-mode full-auto
+#codex --provider openai --model o3-mini --quiet --approval-mode full-auto "$(cat ./prompts/codex-tree-stack-components.md)" > ./Outputs_Model/output-codex-tree-stack-components-plan.json #saved the full reply with errors 
 ```
 
 And use your favourite model: https://platform.openai.com/docs/models Which at this point offer a **200k context Window**
@@ -234,13 +237,13 @@ https://www.warp.dev/
 ## BAML
 
 * https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
+* https://docs.boundaryml.com/home
 
 ```sh
 ext install Boundary.baml-extension
 ```
 
-
-> "Every system in the world should be able to run LLMs, not just Python. Vaibhav Gupta."
+> "*Every system in the world should be able to run LLMs, not just Python*. Vaibhav Gupta."
 
 * https://github.com/BoundaryML/baml
 * https://pypi.org/project/baml-py/
@@ -250,8 +253,6 @@ ext install Boundary.baml-extension
 BAML, which stands for "Basically a Made-up Language," is an open-source AI framework designed to bring traditional software engineering rigor and best practices to the development of applications that utilize Large Language Models (LLMs).
 
 Essentially, it offers a **structured and type-safe way to define and manage how you interact with LLMs**, moving beyond simple text prompts to a more robust, function-based approach.
-
-
 
 
 {{< details title="More about BAML 📌" closed="true" >}}
@@ -323,7 +324,7 @@ https://gloochat.notion.site/BAML-Advanced-Prompting-Workshop-Dec-2024-161bb2d26
 {{< youtube "Xece-W7Xf48" >}}
 
 
-https://github.com/hellovai/ai-that-works
+* https://github.com/hellovai/ai-that-works
 
 
 ```
