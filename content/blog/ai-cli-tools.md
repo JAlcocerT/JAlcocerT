@@ -242,6 +242,11 @@ https://www.warp.dev/
 ```sh
 ext install Boundary.baml-extension
 ```
+You might hear about BAML as per its type safe guarantees:
+<!-- https://www.youtube.com/watch?v=XwT7MhT_BEY -->
+
+{{< youtube "XwT7MhT_BEY" >}}
+
 
 > "*Every system in the world should be able to run LLMs, not just Python*. Vaibhav Gupta."
 

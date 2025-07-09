@@ -2,7 +2,7 @@
 title: "Real Estate Calculator with Python"
 date: 2025-01-25
 draft: false
-tags: ["Python"]
+tags: ["Python","Streamlit","CAGR","WebApp"]
 description: "Making my own mortage calculator in Python. Understanding LTV, I2P, French Amortization..."
 url: 'python-real-estate-mortage-calculator'
 math: true
@@ -26,7 +26,7 @@ But its all about few mathematical ways to represent very logical financial conc
 
 {{< callout type="warning" >}}
 **No information exposed on this post can be taken as financial recommendations** 
-These are just my notes on how Python can be used to create a calculator app.
+These are just my notes on how Python can be used to create a calculator webapp!
 {{< /callout >}}
 
 There are out there cool calculators - https://tecalculo.com/en/mortgage-calculator
@@ -36,8 +36,12 @@ There are out there cool calculators - https://tecalculo.com/en/mortgage-calcula
 But how about creating something to understand the underlying logic?
 
 {{< callout type="info" >}}
-See the [source code magic](https://github.com/JAlcocerT/Python_is_awesome) 🔥💻
+See the [source code magic](https://github.com/JAlcocerT/Python_is_awesome) 🔥💻. Feel free to [deploy](#real-estate-tech).
 {{< /callout >}}
+
+{{< cards >}}
+  {{< card link="https://gitlab.com/fossengineer1/py_stocks/EDA_Mortage" title="EDA Real Estate WebApp" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Sample Real Estate Calculator Source Code" >}}
+{{< /cards >}}
 
 
 ## Understanding Loans
@@ -47,14 +51,13 @@ When we get a mortage, our **net total assets today are reduced**, as we have so
 
 ### French Amortization 101
 
+This is the **French amortization** formula: $M = P \times \frac{r(1 + r)^n}{(1 + r)^n - 1}$.
 
-<!-- This $\sigma(z) = \frac{1}{1 + e^{-z}}$ is inline.
+Its a way to calculate how much will be your monthly payments, given:
 
-$$F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-j\omega t} \, dt$$ -->
-
-
-This is the French amortization formula: $M = P \times \frac{r(1 + r)^n}{(1 + r)^n - 1}$.
-
+1. What you took
+2. For how long
+3. At which interest rate
 
 
 {{< details title="More about French Amortization 📌" closed="true" >}}
@@ -74,7 +77,6 @@ Where:
 - \(n\) is the number of payments (loan term in years multiplied by 12)
 
 Each month, the interest portion of the payment decreases, and the principal portion increases.
-
 
 **Understanding French Amortization**
 
@@ -444,6 +446,7 @@ But I also heard about **idealista:**
 
 
 * https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/
+  * https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/andalucia/malaga-provincia/malaga/
 * https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/venta/
 
 * https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/andalucia/sevilla-provincia/dos-hermanas/

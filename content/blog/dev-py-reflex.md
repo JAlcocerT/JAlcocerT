@@ -2,7 +2,7 @@
 title: "Reflex. Cooler Web Apps for Leads?"
 date: 2025-06-16T10:20:21+01:00
 draft: false
-tags: ["Dev","WebApps","Plotly","Authentication","entrepreneuring"]
+tags: ["Dev","WebApps","Plotly","Authentication","Entrepreneuring"]
 description: 'Using (Python) Reflex framework to display Data. Tested with Real Estate and Job Market Trends as Web Apps.'
 url: 'tinkering-with-reflex'
 ---
@@ -76,7 +76,7 @@ Applied to [RE here](https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/reflex-templates/" title="Reflex Templates FORKED" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Interesting Reflex WebApps templates" >}}
-  {{< card link="https://github.com/JAlcocerT/real-estate-reflex" title="Reflex WebApp / Real Estate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/real-estate-reflex" title="Reflex WebApp / Real Estate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github of a Vibe Coded Reflex Web app (Via BRD/FRD)" >}}
 {{< /cards >}}
 
 
@@ -444,15 +444,18 @@ And enjoy using this sample apps out of the box:
 
 ## Building with Reflex
 
-Now its time to rebuild with Reflex some Streamlit apps I made!
+Now its **time to rebuild** with Reflex some Streamlit apps I made!
+
+Ideally, the data collection, storage and so on should be already in separated modules.
+
+So you will be just experimenting with only one new thing: Reflex.
 
 ### Historical Job Market Data with Reflex
 
-For this one, id like to have a very simple graph for the seasonality of jobs and to use a sqlite DB to pull the data.
-
+For this one, id like to have a very **simple graph for the seasonality of the job market** and to use a sqlite DB to pull the data.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/blog_img/memes/oldnewjob.png" subtitle="Post where I tinkered with scrapping tools and job offers" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/blog_img/memes/oldnewjob.jpg" subtitle="Post where I tinkered with scrapping tools and job offers" >}}
   {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for using BS4, AI Scraps..." >}}
 {{< /cards >}}
 
@@ -671,13 +674,15 @@ Remember, this is the trick to use reflex with any port:
 reflex run --backend-port 8001 --frontend-port 3001
 ```
 
+But placing reflex inside a container was not as simple as with Streamlit.
+
 ---
 
 ## Conclusions
 
 I find it easier to iterate with streamlit, as there is no waiting time for compiling.
 
-That makes it easier to iterate.
+For [PoCs](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#conclusions), That makes it easier to loop through features.
 
 But definitely, Reflex apps can look really cool, **also on smartphones**!
 
@@ -698,8 +703,9 @@ You can even bring [animations with plotly](https://plotly.com/python/animations
 git clone https://github.com/JAlcocerT/reflex-templates/
 cd reflex-templates/stock_graph_app
 
-uv venv
-uv pip install -r requirements.txt
+uv sync
+# uv venv
+# uv pip install -r requirements.txt
 uv run reflex run
 ```
 

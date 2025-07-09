@@ -101,9 +101,13 @@ Make sure to **explore the resolutions and modes**
 
 It can do photos and videos.
 
-But for photo I still prefer [the Pixel](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks)
+But for photos, I still prefer [the Pixel](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks)
 
 There is the possibility to record at FHD 1080p@240fps, but not with wide mode, for example.
+
+{{< callout type="warning" >}}
+EDIT 07/25: There has been issues with [Firmware Updates](https://www.reddit.com/r/djiosmo/comments/1l5gd4p/what_is_dji_doing_with_the_action_5_pro_firmware/), I kept mine unconnected from the Mobile Apps, so offline mode is not a bad idea
+{{< /callout >}}
 
 * Video Modes
    * TimeLapse 1h/3s Sunset Scene - 1080p@30 aka **1080P30/3s**- It makes 1 real hour to be 40s in the video and 93mb - 2.3mb/s

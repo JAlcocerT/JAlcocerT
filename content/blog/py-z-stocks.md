@@ -2,9 +2,8 @@
 title: "Stocks with Python"
 date: 2025-06-19T19:20:21+01:00
 draft: false
-tags: ["Python","Streamlit","Flask","Reflex","RStocks"]
-description: "A Cooler R/Stocks - This time with Python. And with proper Auth/UIM."
-summary: 'A Cooler R/Stocks - This time with Python. And with proper Auth'
+tags: ["Python","Streamlit","Flask","Reflex","RStocks","YFinance"]
+description: "A Cooler RStocks - This time, with Pytho and better Auth/UIM."
 url: 'python-stocks-webapp'
 math: true
 ---
@@ -13,6 +12,9 @@ math: true
 
 Wouldnt it be great to go out the *typical google sheet* and have a great UI/X when looking at your finances?
 
+There are [some tools](#interesting-software-for-finances) which do exactly that.
+
+But you miss the learnings of building one:
 
 {{< callout type="info" >}}
 The project initially, [**source code**](https://gitlab.com/fossengineer1/py_stocks) - PyStocks.
@@ -26,15 +28,13 @@ If all of these sounds familiar...
   {{< card link="https://github.com/JAlcocerT/Py_Stocks" title="Python Stocks (Streamlit)" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PyStocks Source Code on Github" >}}
 {{< /cards >}}
 
-
-
 It is because it is actually familiar.
 
 Sometime ago I was doing similar Project in **R Shiny** 💻
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks//" title="About RStocks" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="R Stock Shiny App Post" >}}
-  {{< card link="https://github.com/JAlcocerT/RStocks" title="Retirement Facts" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Life savings and inflation in a R Shiny App." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks//" title="About RStocks" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="R Stock Shiny App | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/RStocks" title="RStocks Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with financial data within a R Shiny App." >}}
 {{< /cards >}}
 
 
@@ -51,7 +51,10 @@ And it was not all about yahoo finance back then...
 
 But this time, I thought to keep a **simpler data architecture** and *just* rely on [yfinance queries](#the-data-source).
 
-From [google sheets](https://jalcocert.github.io/JAlcocerT/R-Stocks/#google-sheets-tricks) we have the possibility to query, very simply the price/PER/EPS of a stock:
+But dont worry, that can be more than enough to fill a cool Python web app!
+
+From [google sheets](https://jalcocert.github.io/JAlcocerT/R-Stocks/#google-sheets-tricks) we have the possibility to query data from stocks:
+
 
 ```sh
 =SPARKLINE(GoogleFinance("NYSE:KO"; "price"; HOY()-60; HOY()))
@@ -59,6 +62,10 @@ From [google sheets](https://jalcocert.github.io/JAlcocerT/R-Stocks/#google-shee
 =SI.ERROR(GoogleFinance("NYSE:KO";"pe");999)
 =GoogleFinance("NYSE:KO";"eps")
 ```
+
+> From its price, to PER/EPS... of a stock
+
+> > Unfortunately, no dividend data is given out of the box
 
 **The Idea:**
 
@@ -70,8 +77,27 @@ Business Side:
 - Reply to typical [questions](#stock-questions---answered)
 
 Tech Side:
+- To choose the webapp framework that looks the coolest: streamlit vs Flask vs Reflex...
 
-To see whats the best way for me to authencate users: clear/supabase/logto...
+![Streamlit Real Estate App](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Whishper" title="Streamlit x Real Estate | Post 🐋 ↗" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#traefik-x-tinyauth-x-flask" title="Flask x Three Bodies | Post 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Flask x Three Bodies | Post 🐋 ↗" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Reflex x Real Estate | Post 🐋 ↗" >}}
+{{< /cards >}}
+
+
+- To see whats the best way for me to authencate users: clear/supabase/logto...
+
+{{< details title="Auth Alternatives 📌" closed="true" >}}
 
 * https://clerk.com/docs
 * https://github.com/clerk/clerk-sdk-python/blob/main/README.md
@@ -79,6 +105,8 @@ To see whats the best way for me to authencate users: clear/supabase/logto...
 * https://www.reddit.com/r/Supabase/comments/1dvabn6/what_is_the_best_solution_to_use_supabase_auth/
 * https://www.reddit.com/r/nextjs/comments/1bvda9r/officially_hate_supabase_auth/?rdt=40537
 * https://www.reddit.com/r/Supabase/comments/xaxecr/authentication_with_supabase_is_easy_almost/
+
+{{< /details >}}
 
 
 ## PyStocks
@@ -117,9 +145,16 @@ This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-
 
 Im aware that there are many APIs around: https://github.com/public-apis/public-apis
 
-https://www.youtube.com/watch?v=aUtFn-qS7Xk
+And yesss people are earning a lot of money building APIs and you are missing out
 
-But...That's it!
+<!-- https://www.youtube.com/watch?v=aUtFn-qS7Xk -->
+
+{{< youtube "UtFn-qS7Xk" >}}
+
+
+Just leave that money on the table.
+
+YFinance data and a Python Web App...That's it!
 
 > Less is more
 
@@ -143,15 +178,15 @@ So why not giving the possibility to feed a sample Google Sheet with its sharabl
 
 ### The Charts
 
-
 I wanted to have a simple growth comparison (and actually the vibez added this cool normalized view)
+
 ![Normalized Value Change](/blog_img/dev/pystocks/pystocks-vibed1.png)
 
 #### PyGWalker
 
 How about giving the possibility to *build your own visuals*?
 
-That's where the pygwalker use case comes in to any streamlit app.
+That's where the [pygwalker use case comes in to any streamlit app](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker).
 
 ### AI Features for PyStocks
 
@@ -187,7 +222,7 @@ This goes few steps further than the previous [project RStocks](https://jalcocer
 
 And definitely much more than [FlexDashboards](https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/) in R.
 
-Wouldnt this be a cool companion for a website, as a lead magnet?
+> Wouldnt this be a cool companion for a website, as a lead magnet?
 
 Even as a subscription based model, say [7$/month](https://www.cazadividendos.com/recursos/indice/) to have access to such tool and historical info?
 
@@ -198,16 +233,23 @@ And with webapps like:
 * https://www.simplysafedividends.com/
 * https://www.dividenddata.com/ This one uses Shiny!
   * You can also see historical dividends for companies at [nasdaq](https://www.nasdaq.com/market-activity/stocks/pep/dividend-history)
-
+* https://blog.wisesheets.io/google-finance-dividend-yield-a-guide/
 
 ---
 
 ## FAQ 
 
-ETF vs Dividends?
+ETF like `IDUS` vs Dividends like `O`?
 
-> Why not both with DGRW?
+> Why not both with `DGRW`?
 
+It's all about that non existing cristal ball to see the future.
+
+Together with the math problem of: low yield + high growth vs high yield + low growth
+
+You can try and solve this via [the CAGR](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#cagr)
+
+> But you will be oversimplifying the fact that you got cash on hand earlier with the latter option
 
 ### Selfhostable Apps
 

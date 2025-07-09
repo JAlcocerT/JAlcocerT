@@ -7,19 +7,21 @@ tags: ["Animations","Python","Matplotlib Animations","Youtube Shorts","Social Me
 url: animations-as-a-code
 ---
 
-Not long ago I was tinkering with [AI/BI Tools](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/): ChartBrew, ChartDB, DB2Rest and Streamlit x PyGWalker
+Not long ago I was tinkering with [AI/BI Tools](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/): ChartBrew, ChartDB, DB2Rest and [Streamlit x PyGWalker](#conclusions)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="AI BI Tools Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
 {{< /cards >}}
 
-From there, I could not resist to **create this project**
+From there, I could not resist to **create this project**:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/#animations" title="Tinkering with Animations | Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Posting to Twitter or Youtube those animations 101." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/#animations" title="Tinkering with Animations | Post" image="https://img.youtube.com/vi/YuvHXyFeRV4/hqdefault.jpg" subtitle="Posting to Twitter or Youtube those animations 101." >}}
   {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Data In Motion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Generating mp4 animations with Matplotlib and Python..." >}}
 {{< /cards >}}
+
+<!-- ![Rick Astley - Never Gonna Give You Up](https://img.youtube.com/vi/YuvHXyFeRV4/hqdefault.jpg) -->
 
 Sometime ago, I was exploring some [options to create video as a code](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#video-as-a-code)
 
@@ -57,7 +59,7 @@ I created [this repo for putting *real life* videos together](https://github.com
 
 ### Matplotlib Styled Charts
 
-Before animating, be aware that you can create very styled plots with matplotlib.
+Before animating: be aware that you can create **styled plots with matplotlib**.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="Matplotlib x YFinance" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Using Matplotlib to generat TimeSeries Styles Snapshots" >}}
@@ -65,13 +67,14 @@ Before animating, be aware that you can create very styled plots with matplotlib
 
 They wont be interactive, but they can look pretty cool!
 
-{{< details title="Vibe Coding Proper Matplotlib Charts 📌" closed="true" >}}
+{{< details title="Vibe Coding Proper Styled Matplotlib Charts 📌" closed="true" >}}
+
+If you are using Windsurf or similar tools, make sure to ask them to bring:
 
 1. Brand Colors
 2. Adding *watermark* / url or not
 3. Proper modules for: pull data, store data, transform data + style plots (you can have one for price, another for dividend oriented...)
 4. Output format size (resolution)
-
 
 {{< /details >}}
 
@@ -89,6 +92,8 @@ And again, people are doing fantastic stuff with matplotlib:
 
 * <https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/>
 * <https://jckantor.github.io/CBE30338/A.03-Animation-in-Jupyter-Notebooks.html>
+
+Even very interesting [video use cases](#cool-data-driven-videos) with them!
 
 
 From Data to Streamlit to Animation to Video, is a topic that I tinkered [during the AIssistant, here](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Tests/ST_AutomaticYTVideo).
@@ -161,6 +166,21 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ---
 
 ## Conclusions
+
+You can organize your repository in a way that from one source code, you have different kind of outputs:
+
+```sh
+git branch libreportfolio 285484eafeae5c79436cef73678df8ae5153bc52
+git checkout libreportfolio
+```
+
+Or say:
+
+```sh
+git branch unfoldingdata 285484eafeae5c79436cef73678df8ae5153bc52
+git checkout unfoldingdata
+git branch -a
+```
 
 ### Embedded Analytics
 
@@ -245,3 +265,30 @@ https://postiz.jalcocertech.com/api/mcp/some_id_here/sse
 * Active Pieces - https://github.com/activepieces/activepieces
 
 > Your friendliest open source AI automation tool ✨ Workflow automation tool 200+ integration / Enterprise automation tool / Zapier Alternative
+
+### Cool Data Driven Videos
+
+{{< youtube "pcQIF8kHbp1flsBb" >}}
+<!-- https://youtu.be/5yAbVkIMl_M?si=pcQIF8kHbp1flsBb -->
+
+Fractal stuff:
+
+{{< youtube "QU1nxIYNIRbOFe9j" >}}
+
+<!-- https://youtube.com/shorts/ugBTczoyFRo?si=QU1nxIYNIRbOFe9j -->
+
+
+Data is beautiful, indeed:
+<!-- https://www.youtube.com/watch?v=29qnXTw0qr0 -->
+
+{{< youtube "29qnXTw0qr0" >}}
+
+How could I not mention the awsome 3B1B channel and its OSS animation engine, that I recommended [here](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/#cool-stuff-for-researchers)
+
+* https://github.com/3b1b/manim
+* https://github.com/3b1b/videos?tab=readme-ov-file#workflow
+* https://github.com/ManimCommunity/manim/
+
+> Math Animation engine for explanatory math videos. The ones [3Blue1Brown Channel created](https://www.youtube.com/watch?v=rbu7Zu5X1zI)!
+
+{{< youtube "rbu7Zu5X1zI" >}}
