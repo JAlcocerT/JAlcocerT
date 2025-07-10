@@ -191,6 +191,8 @@ codex --approval-mode full-auto
 #codex --provider openai --model o3-mini --quiet --approval-mode full-auto "$(cat ./prompts/codex-tree-stack-components.md)" > ./Outputs_Model/output-codex-tree-stack-components-plan.json #saved the full reply with errors 
 ```
 
+Remember that the quiet mode always requires a string with the question already passed!
+
 And use your favourite model: https://platform.openai.com/docs/models Which at this point offer a **200k context Window**
 
 You could say that at this point o3 > o1 > 4o / GPT 4.1:
@@ -238,20 +240,40 @@ https://www.warp.dev/
 
 * https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
 * https://docs.boundaryml.com/home
+  * https://gitmcp.io/BoundaryML/baml
+  * https://gitmcp.io/BoundaryML/baml/chat
 
 ```sh
 ext install Boundary.baml-extension
 ```
-You might hear about BAML as per its type safe guarantees:
+You might hear about BAML as per its **type safe guarantees for LLMs**:
 <!-- https://www.youtube.com/watch?v=XwT7MhT_BEY -->
 
 {{< youtube "XwT7MhT_BEY" >}}
+
+When comparing with BAML, you can see several key differences:
+
+1. Type Safety:
+Without BAML: You manually define JSON schemas, no compile-time checking
+With BAML: Types are checked at compile time with Pydantic
+2. Configuration vs. Code:
+Without BAML: Function definitions are mixed with business logic
+With BAML: Function definitions are in declarative BAML files
+3. Maintenance:
+Without BAML: Parameter changes require code updates in multiple places
+With BAML: Changes in one BAML file propagate to generated code
 
 
 > "*Every system in the world should be able to run LLMs, not just Python*. Vaibhav Gupta."
 
 * https://github.com/BoundaryML/baml
 * https://pypi.org/project/baml-py/
+
+```sh
+uv init
+uv add baml-py
+
+```
 
 > **Apache v2** | The AI framework that adds the **engineering to prompt engineering** (Python/TS/Ruby/Java/C#/Rust/Go compatible)
 

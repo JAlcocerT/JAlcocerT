@@ -1,6 +1,6 @@
 ---
 title: "Whats the right Messaging Protocol for me?"
-date: 2025-07-09T05:20:21+01:00
+date: 2025-09-09T05:20:21+01:00
 draft: false
 tags: ["D&A","HomeLab"]
 description: 'MQTT vs RMQ vs Kafka. Messaging Tools for IoT Projects and more'
@@ -20,7 +20,7 @@ You might be playing around with your Pi:
   {{< card link="https://github.com/JAlcocerT/demo-realtime-pollution" title="Taipy Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
-Or maybe you are an architect withing D&A and need some clarity on messaging protocols.
+Or maybe you are an [architect withing D&A](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/) and need some clarity on messaging protocols.
 
 As seen here:
 

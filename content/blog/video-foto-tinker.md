@@ -2,7 +2,7 @@
 title: "More Photo and Video fun stuff with PostIZ"
 date: 2025-05-13T13:20:21+01:00
 draft: false
-tags: ["Tinkering","PostIZ","n8n","OpenAI TTS"]
+tags: ["Tinkering","ffmpeg","PostIZ","n8n","OpenAI TTS"]
 description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI generated audio for shorts.'
 url: 'photo-video-tinkering'
 ---

@@ -268,12 +268,12 @@ https://postiz.jalcocertech.com/api/mcp/some_id_here/sse
 
 ### Cool Data Driven Videos
 
-{{< youtube "pcQIF8kHbp1flsBb" >}}
+{{< youtube "5yAbVkIMl_M" >}}
 <!-- https://youtu.be/5yAbVkIMl_M?si=pcQIF8kHbp1flsBb -->
 
 Fractal stuff:
 
-{{< youtube "QU1nxIYNIRbOFe9j" >}}
+{{< youtube "ugBTczoyFRo" >}}
 
 <!-- https://youtube.com/shorts/ugBTczoyFRo?si=QU1nxIYNIRbOFe9j -->
 

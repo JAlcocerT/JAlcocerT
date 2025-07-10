@@ -2,7 +2,7 @@
 title: "Geospatial Data Tricks and a GoPro"
 date: 2025-01-05T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","FFMPeg","Python GeoData","PhyPhox"]
 description: 'What Ive learnt so far about GeoSpatial/Geolocation Data Analysis. Applied to GoPro MetaData and Telemetry Extraction. And karting!'
 url: 'geospatial-data'
 math: true
@@ -120,7 +120,8 @@ exiftool -ee ./GX030390.MP4 #adapt as per your GoPro file name
 #exiftool -ee ./GX030390.MP4 > output.txt
 ```
 
- and Plotly, to get such graphs from the GoPro:
+And Plotly, to get such graphs from the GoPro:
+
 ![GoPro Metadata Map](/blog_img/karting/gopro-speed-sample.png)
 
 
@@ -139,6 +140,11 @@ Hey, but why would you want to...
 <!-- 
 ![Phyphox Android Karting](/blog_img/iot/phyphox-android.jpg) 
 -->
+
+You can even see what happens when a plane takes off:
+
+{{< youtube "Z9xNMP3nW0A" >}}
+
 
 ---
 
