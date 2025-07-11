@@ -1,9 +1,9 @@
 ---
 title: "Designing with Blender and LLMs"
-date: 2025-12-15T23:20:21+01:00
-draft: true
-tags: ["Docker","Gen-AI"]
-description: 'The Future of Generative Text AI: A DIY Guide to Exploring Generative Models Locally'
+date: 2025-08-15T23:20:21+01:00
+draft: false
+tags: ["Docker","Gen-AI","Animations"]
+description: 'Generative AI applied to Blender'
 url: 'how-to-use-blender-with-AI'
 ---
 
@@ -18,9 +18,31 @@ It's one of the most comprehensive open-source animation suites available, offer
     * License: {{< newtab url="https://github.com/blender/blender?tab=License-1-ov-file#readme" text="GNU GPL" >}} ✅ 
 
 
+<!-- https://www.youtube.com/watch?v=r7H60u0kHRA -->
+{{< youtube "r7H60u0kHRA" >}}
+
+* https://gitmcp.io/blender/blender/chat
+
+```json
+{
+  "mcpServers": {
+    "gitmcp": {
+      "serverUrl": "https://gitmcp.io/blender/blender"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}
+```
+
 ## Blender API - With Python
 
 https://www.youtube.com/watch?v=cyt0O7saU4Q&list=PLFtLHTf5bnym_wk4DcYIMq1DkjqB7kDb-
+
+{{< youtube "cyt0O7saU4Q" >}}
+
 
 https://docs.blender.org/api/current/
 https://docs.blender.org/api/current/info_overview.html
@@ -70,6 +92,13 @@ sphere.data.materials.append(material)
 
 ## Render with Stable Diffusion
 
+## Blender for Video Editing
+
+<!-- https://www.youtube.com/watch?v=9tWEsqIgeDY -->
+{{< youtube "9tWEsqIgeDY" >}}
+
+You can even use it to bring custom [LUT](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#color-grading) to videos, apparently!
+
 ---
 
 ## FAQ
@@ -102,4 +131,3 @@ sphere.data.materials.append(material)
 6. Recently Motion Canvas was released as Open Source as well, with MIT license ❤️ - https://github.com/motion-canvas/motion-canvas
 
 > Visualize Your Ideas With Code
-

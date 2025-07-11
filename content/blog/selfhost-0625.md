@@ -239,6 +239,12 @@ To have a rendered pdf with instructions how to access your selfhosted services
 
 ## Conclusions
 
+Termix has been great to manage couple of homelab devices.
+
+```sh
+http://192.168.1.11:8090/
+```
+
 Filebrowser dev has been abandoned and for me it was still a thing to combine it with PiGallery2.
 
 But now we have filebrowser quantum!

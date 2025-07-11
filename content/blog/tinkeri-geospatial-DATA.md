@@ -17,6 +17,13 @@ math: true
 Geospatial learnings are placed at [RouteTracker Repo](https://github.com/JAlcocerT/Py_RouteTracker) 💻
 {{< /callout >}}
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/#animations" title="Tinkering with Animations | Post" image="https://img.youtube.com/vi/YuvHXyFeRV4/hqdefault.jpg" subtitle="Posting to Twitter or Youtube those animations 101." >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="RouteTracker Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Tinkering with GPX" >}}
+{{< /cards >}}
+
+
 ### GeoJSON
 
 With [R language](https://jalcocert.github.io/JAlcocerT/useful-r-stuff/) I learnt about many other formats.
@@ -120,7 +127,7 @@ exiftool -ee ./GX030390.MP4 #adapt as per your GoPro file name
 #exiftool -ee ./GX030390.MP4 > output.txt
 ```
 
-And Plotly, to get such graphs from the GoPro:
+And Plotly, to get such map graphs from the GoPro:
 
 ![GoPro Metadata Map](/blog_img/karting/gopro-speed-sample.png)
 

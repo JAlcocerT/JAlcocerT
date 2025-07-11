@@ -287,7 +287,7 @@ Have rediscovered KDEnlive [for LUT](https://docs.kdenlive.org/en/effects_and_fi
 
 ![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
 
-![alt text](../../static/blog_img/data-experiments/video-lut.png)
+![Video LUT Example](/blog_img/data-experiments/video-lut.png)
 
 I personally like the `CINEMATIC.cube` that KDE brings:
 

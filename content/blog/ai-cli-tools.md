@@ -123,9 +123,9 @@ You will just need a `.gemini/settings.json` as per [the docs](https://github.co
   }
 ```
 
-Once logged in again to GeminiCLI, you will get access to them:
+Once logged in again to GeminiCLI, you will get access to the MCP tools:
 
-![alt text](/blog_img/GenAI/geminiCLI/geminicli-mcp-connection.png)
+![Gemini CLI Connection to MCP](/blog_img/GenAI/geminiCLI/geminicli-mcp-connection.png)
 
 See how it works:
 
@@ -220,6 +220,10 @@ Remember that using providers you will get some associated cost. Like: https://p
 #### Claude Code
 
 With Anthropic, you have the magestic Claude 4 Opus - https://www.anthropic.com/claude/opus
+
+```sh
+npm install -g @anthropic-ai/claude-code
+```
 
 Also with **200K context window**.
 
