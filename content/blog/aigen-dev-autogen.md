@@ -47,12 +47,12 @@ They can operate in various modes that employ combinations of LLMs, human inputs
 
 <!-- The [Autogen Project]() and the code is [Open Source](). -->
 
-The Autogen package in [PyPI](https://pypi.org/project/pyautogen/).
+The Autogen package in [PyPI](https://pypi.org/project/ag2/).
 
 
 ```sh
-pip install pyautogen==0.1.14
-#pip show pyautogen
+pip install ag2==0.1.14
+#pip show ag2
 
 
 pip install --upgrade streamlit reflex

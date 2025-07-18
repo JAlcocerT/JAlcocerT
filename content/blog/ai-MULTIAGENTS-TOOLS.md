@@ -393,7 +393,7 @@ We introduce the most common ones here:
 
 Advanced Concepts: AG2 supports more concepts such as structured outputs, rag, code execution, etc.
 
-* https://pypi.org/project/pyautogen/
+* https://pypi.org/project/ag2/
 * https://github.com/ag2ai/ag2
 
 ```sh
