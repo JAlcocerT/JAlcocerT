@@ -3,9 +3,8 @@ title: "[AI] Vacation Planning - Recommendations, Costs, Weather"
 date: 2025-10-23
 draft: false
 tags: ["Dev","AI"]  
-description: "Python App to explore vacation destination. LLMs ❤️ Data. While exploring Agents."
+description: "Python App to explore vacAItion destination. LLMs ❤️ Data. While exploring Agents."
 url: 'vacation-planner-python'
-#isPinned: false
 ---
 
 *Where to go. When to go. Can I go?*
@@ -24,10 +23,14 @@ Why not taking a break in between?
 
 ```sh
 git clone https://github.com/JAlcocerT/Py_Trip_Planner && cd ./Py_Trip_Planner
+```
 
+```sh
 #docker build -t trip_planner .
 DOCKER_BUILDKIT=1 docker build --no-cache --progress=plain -t trip_planner .
+```
 
+```sh
 docker run -d \
   --name tripplanner \
   -p 8051:8050 \
@@ -38,7 +41,7 @@ docker run -d \
 Or...Use the following **docker compose**:
 
 ```yml
-version: "2"
+#version: "2"
 services:
   tripplanner:
     image: trip_planner #ghcr.io/jalcocert/py_trip_planner #fossengineer/trip_planner

@@ -239,9 +239,9 @@ And with webapps like:
 
 ## FAQ 
 
-ETF like `IDUS` vs Dividends like `O`?
+ETF like `LON:IDUS` vs Dividends like `O`?
 
-> Why not both with `DGRW`?
+> Why not both with `NASDAQ:DGRW`?
 
 It's all about that non existing cristal ball to see the future.
 

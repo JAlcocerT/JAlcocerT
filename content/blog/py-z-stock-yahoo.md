@@ -357,9 +357,11 @@ Alternatively, it can be calculated using total dividends and net income:
 
 **Payout Ratio = Total Dividends Paid / Net Income**
 
-While EPS/Net Income is the standard, some investors and analysts also use **Free Cash Flow (FCF)** to calculate a "Free Cash Flow Payout Ratio." This is because FCF can sometimes be a better indicator of a company's ability to pay dividends, as it accounts for actual cash generated from operations and capital expenditures, whereas net income can be influenced by non-cash charges like depreciation.
+While EPS/Net Income is the standard, some investors and analysts also use **Free Cash Flow (FCF)** to calculate a "Free Cash Flow Payout Ratio."
 
-However, when people generally refer to "the payout ratio," they are most often referring to the calculation based on EPS or Net Income.
+This is because FCF can sometimes be a better indicator of a company's ability to pay dividends, as it accounts for actual cash generated from operations and capital expenditures, whereas net income can be influenced by non-cash charges like depreciation.
+
+> However, when people generally refer to "the payout ratio," they are most often referring to the calculation based on EPS or Net Income.
 
 {{< details title="Net Income vs EPS  📌" closed="true" >}}
 

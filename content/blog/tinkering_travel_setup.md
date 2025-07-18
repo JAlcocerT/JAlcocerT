@@ -2,7 +2,7 @@
 title: "Technology Setup for a Trip"
 date: 2025-02-11
 draft: false
-tags: ["AI", "utro"]
+tags: ["AI", "Outro","Photo"]
 description: "Software and Hardware setup before trips or vacations. Tech Travel Setup. With Cost of Living."
 url: 'tech-for-a-trip'
 ---
@@ -266,10 +266,13 @@ Setup [Nextcloud as Docker container](https://github.com/JAlcocerT/Docker/tree/m
 
 ![PiGallery2 Map Zoom](/blog_img/selfh/Photo/PiGallery2-MapZoom.png)
 
-> ...You can see These tools covered at [this post](https://jalcocert.github.io/JAlcocerT/photo-management-tools)
+> ...You can see These tools covered at [this photo management tools post](https://jalcocert.github.io/JAlcocerT/photo-management-tools)
 
 ### Hardware Setup
 
+A [travel router](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/), an [action cam](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/) and a kindle.
+
+> What else would you need?
 
 ![Travel pack](/blog_img/hardware/travel-pakc.jpg)
 

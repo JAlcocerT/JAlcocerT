@@ -22,7 +22,7 @@ After **traveling and tinkering** for a while with Photos and videos with [the P
 
 Not counting the [OA5Pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/) Videos.
 
-Thats why today, I want to talk about Selfhosted photo Tools!
+Thats why today, I want to talk about **Selfhosted photo Tools**!
 
 ## SelfHosted Photo Tools
 
@@ -48,15 +48,13 @@ I have added a complete docker stack with these [Selfhostable photo tools **here
 
 * https://github.com/xemle/home-gallery
 
-
 [Home Gallery](https://noted.lol/home-gallery-a-simple-self-hosted-photo-gallery/)
-
-
 
 ### PhotoView
 
 * https://github.com/photoview/photoview
   * https://photoview.github.io/
+  * https://fossengineer.com/selfhosting-Photoview-docker/
 
 > aGPL3.0| Photo gallery for self-hosted personal servers 
 
@@ -108,13 +106,13 @@ sudo docker stats pigallery2 #~190mb for 66GB data
 #du -h --max-depth=1 #see folder size
 ```
 
-* Yet powerful Photo Details:
+* Yet powerful Photo Details: ISO, shutter speed, focal point, [geolocation](https://jalcocert.github.io/JAlcocerT/geospatial-data/)...
 
 ![PiGalleri2 UI](/blog_img/selfh/Photo/PiGallery-PhotoInfo.png)
 
 * The MAP feature is lovely...
 
-![alt text](/blog_img/selfh/Photo/PiGallery-MAP.png)
+![PiGallery Map](/blog_img/selfh/Photo/PiGallery-MAP.png)
 
 > Pretty cool if you have tinkered with [video telemetry](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9)
 
@@ -178,6 +176,10 @@ But might be an overkill if you just need a very simple photo tool for your home
 
 ### PhotoPrism
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/photoprism/photoprism" title="PhotoPrism Github | Source Code  ↗" >}}
+{{< /cards >}}
+
 ### Chevereto
 
 Chevereto is more like an *open instagram* that [you can Selfhost](https://fossengineer.com/selfhosting-chevereto-docker/)
@@ -239,7 +241,7 @@ https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp
 -->
 
 {{< cards >}}
-  {{< card link="https://www.beyondajourney.com/" title="Diamond Bike" image="https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
+  {{< card link="https://cyclingthere.pages.dev/" title="Diamond Bike" image="https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB via astro theme" >}}
 {{< /cards >}}
 
 ### Lately...
@@ -249,7 +251,7 @@ I have learnt to **export photo frames** from a video ([with ffmpeg](https://jal
 Im still impressed that with ffmpeg I dont need to re-render videos, which makes joining them really fast.
 
 {{< callout type="info" >}}
-Everything **about videos**, is captured [here](https://github.com/JAlcocerT/YT-Video-Edition)
+Everything **about videos**, is captured [here, at this repo](https://github.com/JAlcocerT/YT-Video-Edition)
 {{< /callout >}}
 
 > PS: You can also export snapshots with Google photos, *at least at this moment*.
@@ -295,8 +297,9 @@ Im exploring other options at this point.
 
 > MIT | Rembg is a tool to remove images background
 
-
 2. [UpScayl](https://github.com/upscayl/upscayl)
+
+> Use AI to enhance your old photos, without leaving your PC
 
 #### Cold Storage
 

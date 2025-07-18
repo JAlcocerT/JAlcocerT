@@ -18,6 +18,7 @@ Wait, there is even a repo for video stuff!
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Quick videos as a code from Action Cams" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Management Tools Post" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="PiGallery2 and SelfHosted Photo Tools " >}}  
 {{< /cards >}}
 
 I will be showing you how to put your videos into social media with:
@@ -221,7 +222,7 @@ ffmpeg -i extracted-image.png -c:v libwebp -quality 80 ./compressed_thumbnail.we
 
 #### AI Powered shorts
 
-A friend told me recently to have a look to the following to create **interesting youtube shorts**:
+A friend told me recently to have a look to these to do **interesting youtube shorts**:
 
 * Suno.ai for audio/songs...
 * Klingai.com for video generated from images/text

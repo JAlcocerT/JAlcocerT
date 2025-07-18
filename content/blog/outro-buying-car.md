@@ -116,8 +116,6 @@ Remember that not everywhere you can rent without a credit card!
 
 > For me, it worked with sixt, budget and avis. Also in hertz.
 
-
-
 ## The costs of a Car
 
 As mentioned, from my experience, this is the **cost split that I got:**
