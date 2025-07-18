@@ -2,16 +2,8 @@
 title: "GUI's to use Stable Difussion Models"
 date: 2030-08-15T23:20:21+01:00
 draft: true
-# cover:
-#    image: "/img/GenAI/LLMs_Locally_LLamas.png" # image path/url 
-#    Width: 360
-#    Height: 200
-#    sizes: 360
-#    alt: "From Fiction to Function: A Hands-On Guide to Open Source LLM Models.." # alt text
-#    caption: "From Fiction to Function: A Hands-On Guide to Open Source LLM Models." # display caption
-tags: ["Docker","Gen-AI"]
+tags: ["Blender","Gen-AI"]
 description: ''
-summary: '.'
 url: ''
 ---
 

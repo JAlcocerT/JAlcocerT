@@ -3,12 +3,12 @@ title: "SelfHosting Python AI Apps - My 2024 Favs"
 date: 2024-12-16T23:20:21+01:00
 #Lastmod: 2022-11-17
 draft: false
-tags: ["Dev"]
+tags: ["Dev","AI"]
 description: 'How to get your custom MultiChat, Youtube Summarizer and more ready for SelfHosting with Caddy. Bonus comparison with Traefik and NGINX Proxies.'
-summary: 'A recap on Python AI Apps that I have been working on during 2024'
 url: 'selfhosting-python-ai-apps-caddy'
 ---
 
+A recap on Python AI Apps that I have been working on during 2024.
 
 The goal of **this post** is:
 

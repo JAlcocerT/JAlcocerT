@@ -97,9 +97,25 @@ It of course depends, I have observed them to be from 0,38$/km to...1.54$/km.
 
 > On average, when renting **~0,68$/km**.
 
-Remember that not everywhere you can rent without a credit card.
 
-For me, it worked with sixt, budget and avis.
+The energy costs, you can say it depends on the car.
+
+Or throw a 10% number
+
+{{< details title="With electric cars...its kind of differnet 📌" closed="true" >}}
+
+In norway, you can find charging station around 4.4 ~ 5.5 NOK / Kwh
+
+In a regular route, say that a electrical car would require ~15kwh to drive 100km
+
+Some chargers are slow and will give you 3.3 KW, others, can give you 22/50 or even 150KW.
+
+{{< /details >}}
+
+Remember that not everywhere you can rent without a credit card!
+
+> For me, it worked with sixt, budget and avis. Also in hertz.
+
 
 
 ## The costs of a Car

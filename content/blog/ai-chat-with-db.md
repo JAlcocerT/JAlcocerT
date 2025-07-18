@@ -11,7 +11,7 @@ description: 'How to use Langchain to chat with a DB. How I prepared for a Tech 
 url: 'langchain-chat-with-database'
 ---
 
-By tinkering with AI, I discoverd that it is possible to make [SQL queries more efficient](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)!
+By tinkering with AI, I discoverd that it is possible to make [**SQL** queries more efficient](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)!
 
 {{< cards >}}
   {{< card link="/JAlcocerT/how-to-chat-with-pdfs" title="Chat with PDFs ↗" icon="book-open" >}}

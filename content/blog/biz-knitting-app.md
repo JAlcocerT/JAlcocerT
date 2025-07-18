@@ -20,9 +20,7 @@ Before starting, **credits to lowkey.bold.knit** - https://instagram.com/p/DE7cD
 3. Pattern Ready or the idea!
 4. Know some [cool Knitter](https://cozyknittingclub.com/) to explain you how it works!
 
-
 ![Like this pattern](/blog_img/apps/knitting/pattern.png)
-
 
 ### GaugesWatch
 

@@ -2,7 +2,7 @@
 title: "Airtable Free and OSS Alternatives"
 date: 2025-12-15T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting"]
+tags: ["Self-Hosting","Airtable","NocoDB"]
 description: ''
 url: 'airtable-alternatives'
 ---

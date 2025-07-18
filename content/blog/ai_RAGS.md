@@ -445,25 +445,47 @@ The model is trained using a combination of fine-tuning and reinforcement learni
 
 The Training Strategy of DeepSeek-R1
 
-DeepSeek-R1 uses a combination of fine-tuning and reinforcement learning to produce a strong reasoning model. The first stage involves fine-tuning a strong base chat model, DeepSeek V3, on thousands of chain of thought reasoning examples. The second stage uses reinforcement learning with a rule-based reward function to score the model's outputs. The model generates 64 different attempts to solve a problem and scores each one, increasing or decreasing the probability of generating tokens based on the score. This process helps the model discover good reasoning patterns.
+DeepSeek-R1 uses a combination of fine-tuning and reinforcement learning to produce a strong reasoning model. 
+
+The first stage involves fine-tuning a strong base chat model, DeepSeek V3, on thousands of chain of thought reasoning examples. 
+
+The second stage uses reinforcement learning with a rule-based reward function to score the model's outputs. 
+
+The model generates 64 different attempts to solve a problem and scores each one, increasing or decreasing the probability of generating tokens based on the score.
+
+This process helps the model discover good reasoning patterns.
+
+
 Filtering and Fine-Tuning
 
-The model's outputs are filtered to get high-quality reasoning traces, which are then used for further fine-tuning. This process helps restore general model capabilities while baking in high-quality reasoning. The final stage involves a second round of reinforcement learning with different rewards, including helpfulness and harm.
+The model's outputs are filtered to get high-quality reasoning traces, which are then used for further fine-tuning. 
+
+This process helps restore general model capabilities while baking in high-quality reasoning. The final stage involves a second round of reinforcement learning with different rewards, including helpfulness and harm.
+
 Results and Distillation
 
-The results show that DeepSeek-R1 is on par with other state-of-the-art reasoning models, including the O Series models from OpenAI. The model is also distilled into smaller models, including a 14 billion parameter model that can run on a laptop.
+The results show that DeepSeek-R1 is on par with other state-of-the-art reasoning models, including the O Series models from OpenAI. 
+
+The model is also distilled into smaller models, including a 14 billion parameter model that can run on a laptop.
+
 Playing with DeepSeek-R1
 
-The video demonstrates the capabilities of DeepSeek-R1, including its ability to generate summaries and reason about complex topics. The model is shown to be very expressive, emitting think tokens that provide insight into its thought process. The video also explores the use of Json mode, which strips away think tokens and provides a cleaner output.
-Takeaways
+The video demonstrates the capabilities of DeepSeek-R1, including its ability to generate summaries and reason about complex topics. 
 
-    DeepSeek-R1 represents a new scaling paradigm for LLMs, using reinforcement learning to discover good reasoning patterns.
-    The model's training strategy involves a combination of fine-tuning and reinforcement learning, with filtering and fine-tuning to restore general capabilities.
-    The model is capable of generating comprehensive summaries and reasoning about complex topics.
-    The distillation of the model into smaller versions, such as the 14 billion parameter model, makes it possible to run on a laptop.
+The model is shown to be very expressive, emitting think tokens that provide insight into its thought process. 
 
+The video also explores the use of Json mode, which strips away think tokens and provides a cleaner output.
 
 {{< /details >}}
+
+
+Takeaways:
+
+1. DeepSeek-R1 represents a new scaling paradigm for LLMs, using reinforcement learning to discover good reasoning patterns.
+2. The model's training strategy involves a combination of fine-tuning and reinforcement learning, with filtering and fine-tuning to restore general capabilities.
+3. The model is capable of generating comprehensive summaries and reasoning about complex topics.
+4. The distillation of the model into smaller versions, such as the 14 billion parameter model, makes it possible to run on a laptop.
+
 
 ### RAG x Ollama
 

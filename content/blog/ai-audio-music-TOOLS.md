@@ -3,7 +3,7 @@ title: "How to create music with AI Tools"
 date: 2025-11-10T23:20:21+01:00
 draft: false
 tags: ["Docker","Gen-AI"]
-description: ''
+description: 'Tryign to Make music with AI'
 url: 'music-with-ai-tools'
 ---
 
@@ -62,10 +62,16 @@ https://www.choosellm.com/ -->
 <!-- 
 https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms -->
 
+<!-- 
+https://www.youtube.com/watch?v=lBsv-ssPJpo -->
 
-https://www.youtube.com/watch?v=lBsv-ssPJpo
+{{< youtube "lBsv-ssPJpo" >}}
 
-https://www.youtube.com/watch?v=OM2FyFxzeRM
+
+{{< youtube "OM2FyFxzeRM" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=OM2FyFxzeRM -->
 
 
 {{< cards cols="1" >}}
@@ -107,7 +113,7 @@ Takes a song, separates voice and beat, then inputs your voice to it (not foss)
 
 You can try simply LLMs!
 
-
+---
 
 ## Conclusions
 

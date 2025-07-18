@@ -276,7 +276,7 @@ With BAML: Changes in one BAML file propagate to generated code
 ```sh
 uv init
 uv add baml-py
-
+#uv sync
 ```
 
 > **Apache v2** | The AI framework that adds the **engineering to prompt engineering** (Python/TS/Ruby/Java/C#/Rust/Go compatible)
@@ -290,13 +290,13 @@ Essentially, it offers a **structured and type-safe way to define and manage how
 
 BAML helps you be better with LLMs by addressing several common pain points in LLM application development. 
 
-Firstly, it transforms raw LLM prompts into defined "functions" with specific input parameters and expected output types.
+Firstly, it transforms raw LLM prompts into defined "functions" with **specific input parameters and expected output types**.
 
 This "schema engineering" ensures that your LLM outputs are reliable and consistently formatted, significantly reducing parsing errors and the need for complex error handling.
 
 Secondly, it drastically **improves iteration speed with built-in IDE tooling and a "playground"** that allows you to visualize and test your prompts rapidly, speeding up development cycles and enabling quicker experimentation with different ideas.
 
-Finally, BAML promotes maintainability and scalability by abstracting away the complexities of integrating with various LLM providers, offering features like model rotation, retry policies, and fallbacks, all while generating type-safe client code for multiple programming languages.
+Finally, BAML promotes maintainability and scalability by **abstracting away the complexities of integrating with various LLM providers**, offering features like model rotation, retry policies, and fallbacks, all while generating type-safe client code for multiple programming languages.
 
 {{< /details >}}
 
@@ -306,9 +306,58 @@ Finally, BAML promotes maintainability and scalability by abstracting away the c
 
 ```sh
 uv add baml-py
+#uv add pydantic
+#uv add typing-extensions
 ```
 
-All BAML does under the hood is go generate a web request (you will be able to see the raw curl) and configurable via `client.baml`
+### BAML Workflow
+
+The typical development workflow when using BAML follows these steps: https://docs.boundaryml.com/guide/installation-language/python
+
+1. **Define Your Schema in BAML** (`baml_src/doc_enhancement.baml`):
+   - Create data structures (input/output classes)
+   - Define functions with their input/output types
+   - Configure LLM clients and prompt templates
+
+2. **Generate the Client Code**:
+
+```bash
+npx @boundaryml/baml generate
+#npx @boundaryml/baml generate --lang python
+```
+- This creates Pydantic models and API client code in `baml_client/`
+
+3. **Write Your Business Logic** (`plan_enhancement_baml.py`):
+   - Import the generated client
+   - Handle file I/O, argument parsing, etc.
+   - Call the BAML functions and process results
+
+4. **Iterate When Needed**:
+   - If you need to change schemas or prompts, modify the BAML file
+   - Regenerate the client code
+   - Update your Python script if necessary
+
+This separation helps maintain a **clean architecture** where:
+
+- BAML files handle the "what" (data structures and LLM interactions)
+- Python code handles the "how" (business logic, file handling, etc.)
+
+Get your code ready:
+
+```sh
+#git checkout -b baml main
+
+#./baml_src/doc_enhancement.baml
+#plan_enhancement_baml.py
+
+npm install -g @boundaryml/baml
+#npx @boundaryml/baml --version
+#0.201.0
+#sudo npm install -g @boundaryml/baml@0.201.0
+npx @boundaryml/baml generate
+```
+
+All BAML does under the hood is *to generate a web request* (you will be able to see the raw curl) and configurable via `client.baml`
 
 * https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
 
@@ -390,6 +439,119 @@ BAML allows you to express your intentions for LLM interactions at a higher leve
 In essence, BAML is a DSL because it provides a dedicated, purpose-built language to solve a specific problem set (LLM prompt engineering and workflow automation), offering specialized syntax and abstractions that make working within that domain more efficient, reliable, and understandable.
 
 > A DSL, like the one [Kibana has](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#kibana)!
+
+### BAML vs Function Calling
+
+This completes our implementation of all three approaches:
+
+Basic JSON mode (simplest)
+Function calling (schema-defined)
+BAML (type-safe, declarative)
+
+
+{{< details title="BAML vs Function Caling 📌" closed="true" >}}
+
+1. **Schema Definition** (`baml_src/doc_enhancement.baml`):
+   - Defines the data structures and function signatures
+   - Contains class definitions for inputs and outputs
+   - Specifies the OpenAI client configuration
+   - Declares prompts and system messages
+
+2. **Generated Client** (`baml_client/` directory):
+   - Auto-generated from BAML definitions
+   - Contains Pydantic models for type checking
+   - Provides a strongly-typed client interface
+   - Generated using `npx @boundaryml/baml generate` command
+
+3. **Python Implementation** (`plan_enhancement_baml.py`):
+   - Imports the generated BAML client
+   - Handles business logic like loading files and parsing arguments
+   - Makes type-safe API calls using the client
+   - Processes and formats the results
+
+
+The type-safe, declarative approach (BAML) offers several significant advantages over just schema-defined approaches (like function calling):
+
+### 1. Compile-Time Validation vs. Runtime Validation
+
+**Function Calling:**
+- Schema validation happens at runtime
+- Errors in schema structure are only discovered when the API is called
+- Typos or incorrect field types aren't caught until execution
+
+**BAML:**
+- Validation happens at compile/generation time
+- The code generator catches errors before your application runs
+- IDE can provide immediate feedback on type mismatches
+
+### 2. Language Integration
+
+**Function Calling:**
+- Schema is defined as a JSON structure in your code
+- No native language integration with your programming language
+- No autocomplete or type hints in your IDE
+
+**BAML:**
+- Generates native language bindings (Pydantic models in Python)
+- Full IDE support with autocomplete and type hints
+- Seamless integration with the language's type system
+
+### 3. Separation of Concerns
+
+**Function Calling:**
+- Schema definition mixed with business logic
+- Changes to schema require modifying application code
+- Difficult to reuse schemas across different applications
+
+**BAML:**
+- Clear separation between schema and implementation
+- Schemas defined in dedicated `.baml` files
+- Easy to reuse schemas across multiple applications
+
+
+{{< /details >}}
+
+### BAML Is and Is not
+
+It's important to understand what BAML does and doesn't do for type safety:
+
+**What BAML Does:**
+
+1. **Type-safe Input/Output Handling**:
+   - Defines data structures in a declarative language
+   - Generates Pydantic models for runtime type checking
+   - Validates inputs before sending to LLM and outputs after receiving responses
+
+2. **API Integration Management**:
+   - Generates all the code needed to connect to the LLM provider (OpenAI in our case)
+   - Handles authentication, request formatting, response parsing
+
+3. **Prompt Engineering**: 
+   - Uses your defined templates from BAML files
+   - Handles variable interpolation in prompts
+
+4. **Response Format Enforcement**:
+   - Sets the appropriate parameters like `response_format={"type": "json_object"}`
+   - Processes and validates the response through Pydantic models
+
+**What BAML Doesn't Do:**
+
+1. **Magically Make LLM Outputs Type-Safe**:
+   - BAML doesn't modify your prompts to ensure type safety
+   - The LLM could still generate invalid responses
+   - BAML will catch these invalid responses through Pydantic validation
+
+2. **Replace Good Prompt Engineering**:
+   - You still need to write clear prompts that guide the LLM
+   - BAML provides the structure, but you provide the guidance
+
+The type safety comes from the combination of:
+- The schema you defined (which becomes Pydantic models)
+- The response format configuration in the API call
+- The runtime validation after the response is received
+
+BAML's power is that it generates all the infrastructure to properly request, validate, and process responses according to your defined schema, letting you focus on defining your schema and business logic without writing boilerplate code.
+
 
 ---
 

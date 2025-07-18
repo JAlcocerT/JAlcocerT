@@ -28,6 +28,7 @@ I found an amazing project and video from Alejandro AO and decided to make a few
 
 
 - The Project is done in **Python Streamlit** for the UI part ✅
+
   * {{< newtab url="https://github.com/alejandro-ao/ask-multiple-pdfs" text="Project Source Code at Github" >}}
 
 - The [vector store](/selfhosting-vector-admin-docker/) it is Open Source (FAISS) ✅
@@ -168,7 +169,7 @@ You can make this build manually, [use Github Actions](/docker-github-actions-ci
 With this Docker Compose below, you will be using the x86 Docker Image created by the [CI/CD of Github Actions](#how-to-use-github-actions-to-build-a-streamlit-image)
 
 ```yml
-version: '3'
+#version: '3'
 
 services:
   streamlit-embeddings-pdfs:

@@ -2,7 +2,7 @@
 title: "How to use Grok (X) API"
 date: 2025-05-08
 draft: false
-tags: ["AI"]
+tags: ["AI","LLM"]
 description: 'A Recap on AI APIs calls and learning how to use Grok API'
 url: 'how-to-use-grok-api'
 ---
@@ -59,6 +59,8 @@ But a little bit cleaner:
 source .env
 export XAI_API_KEY="xai-somecoolapikey"
 ```
+
+Then just execute the query to Grok via web request:
 
 ```sh
 curl https://api.x.ai/v1/chat/completions \

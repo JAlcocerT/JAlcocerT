@@ -2,13 +2,8 @@
 title: "LLMOps Tools - Bento ML and Others"
 date: 2025-12-31T23:20:21+01:00
 draft: true
-cover:
-  image: "https://socialify.git.ci/bentoml/BentoML/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-  alt: "BentoML LLM Ops Setup" # alt text
-  caption: "Exploring LLM Ops Tools." # display caption under cover
 tags: ["Gen-AI"]
-description: ''
-summary: '.'
+description: 'Exploring LLM Ops Tools'
 url: 'open-source-LLM-Ops-Tools'
 ---
 
@@ -98,23 +93,39 @@ https://github.com/AgentOps-AI/agentops?tab=MIT-1-ov-file#readme
 
 >  **Python SDK for agent monitoring**, LLM cost tracking, benchmarking, and more. Integrates with most LLMs and agent frameworks like CrewAI, Langchain, and Autogen 
 
-In this informative video, AI Anytime dives into the world of AI monitoring, introducing AgentOps, a library designed to simplify the process of tracking AI agents' performance. The speaker highlights the importance of observability in AI development, emphasizing the need for a more interpretable monitoring system. If you're interested in building production-grade AI agents, this video is a must-watch.
+In this informative video, AI Anytime dives into the world of AI monitoring, introducing AgentOps, a library designed to simplify the process of tracking AI agents' performance. 
+
+The speaker highlights the importance of observability in AI development, emphasizing the need for a more interpretable monitoring system. 
+
+If you're interested in building production-grade AI agents, this video is a must-watch.
+
 Introduction to AgentOps
 
-AgentOps is a comprehensive library that offers a range of features, including token consumption tracking, cost calculations, logging, and carbon emissions tracking. The speaker stressed the significance of observability in AI development, noting that AgentOps can help alleviate the problems associated with current AI agents, such as high costs, latency, and lack of observability.
+AgentOps is a comprehensive library that offers a range of features, including token consumption tracking, cost calculations, logging, and carbon emissions tracking.
+
+The speaker stressed the significance of observability in AI development, noting that AgentOps can help alleviate the problems associated with current AI agents, such as high costs, latency, and lack of observability.
+
 Building a Crew AI Agent with AgentOps
 
-The speaker takes viewers on a step-by-step journey, demonstrating how to build a Crew AI agent using AgentOps. The process involves defining the agent's role, goal, and backstory, as well as creating tasks and defining the expected output. This detailed guidance provides a solid foundation for those looking to create their own AI agents.
+The speaker takes viewers on a step-by-step journey, demonstrating how to build a Crew AI agent using AgentOps.
+
+The process involves defining the agent's role, goal, and backstory, as well as creating tasks and defining the expected output.
+
+This detailed guidance provides a solid foundation for those looking to create their own AI agents.
+
 Running the Code and Monitoring the Agent
 
-The speaker demonstrates how the agent operates, showcasing its capabilities as it searches the internet for recent developments in AI. The AgentOps dashboard is then introduced, allowing viewers to track token consumption, cost, and carbon emissions in real-time. This hands-on approach provides a clear understanding of AgentOps' capabilities and potential applications.
-Takeaways
+The speaker demonstrates how the agent operates, showcasing its capabilities as it searches the internet for recent developments in AI.
 
-By the end of the video, viewers can expect to take away the following key points:
+The AgentOps dashboard is then introduced, allowing viewers to track token consumption, cost, and carbon emissions in real-time. 
 
-    AgentOps offers a powerful library for monitoring AI agents, simplifying the process of tracking crucial metrics.
-    Observability is critical in AI development, and AgentOps can help provide a more interpretable monitoring system.
-    Building a Crew AI agent with AgentOps requires defining the agent's role, goal, and backstory, as well as creating tasks and defining expected output.
+This hands-on approach provides a clear understanding of AgentOps' capabilities and potential applications.
+
+**Takeaways**
+
+1. AgentOps offers a powerful library for monitoring AI agents, simplifying the process of tracking crucial metrics.
+2.  Observability is critical in AI development, and AgentOps can help provide a more interpretable monitoring system.
+3.  Building a Crew AI agent with AgentOps requires defining the agent's role, goal, and backstory, as well as creating tasks and defining expected output.
 
 
 ## Others

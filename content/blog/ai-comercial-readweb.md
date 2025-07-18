@@ -2,7 +2,7 @@
 title: "Ask the Web with Streamlit and AI - Looking for a Job?"
 date: 2024-10-17
 draft: false
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Gen-AI","Python","Dev","Web Scrapping"]
 description: 'Using Streamlit with OpenAI API and FireCrawl to Scrap the Web for Info. Compared with other scrapping Crawl4AI, ScrapeGraph and EmbedChain'
 url: 'scrap-and-chat-with-the-web'
 ---
@@ -365,8 +365,12 @@ You will **need mem0 API**, or to [plug one of your favourite LLMs, as per the d
 
 ## Conclusions
 
+After few days of running such script, you should be able to see a cool trend.
+
+Maybe even after a while, you will detect some seasonality or more
+
 {{< callout type="info" >}}
-Now you can try the app at:
+Good luck with that job market evolution!
 {{< /callout >}}
 
 **What can we do now?**
@@ -375,7 +379,6 @@ Now you can try the app at:
 1. Cool CV Stuff
 2. Understading Repositories Much better (and faster)
 3. Github Quick Summaries!
-
 
 
 * {{< newtab url="https://github.com/cmooredev/RepoReader" text="The RepoReader Source Code at Github" >}}
@@ -456,11 +459,13 @@ Sample [St Web App with PDFMiner](https://gitlab.com/fossengineer1/cv-check/-/bl
 
 I tried with FireCrawl, but the juice of the offer is not captured
 
-I can imagine is due to some `robots.txt` info that it is blocking it
+I can imagine is due to some `robots.txt` info that it is blocking the crawling.
 
-But how about feeding pure HTML to OpenAI?
+But how about:
 
-And Using Other Scrappers like: Crawl4AI or ScrapeCraph?
+1. Feeding pure HTML to OpenAI? Then, making it give us the bs4 way of parsing that html.
+
+2. And Using Other Scrappers like: Crawl4AI or ScrapeCraph?
 
 **Lets Find out**
 
@@ -479,8 +484,6 @@ You can tweak it for other sites, like `nl.indeed.com`
 Summarize Github Readme (or actually any web).
 
 And...create [posts scheletons based on that info](https://github.com/JAlcocerT/Scrap_Tools/tree/main/FireCrawl/Z_Scrap_GHRepo)
-
-
 
 
 --- 
@@ -504,7 +507,7 @@ And...create [posts scheletons based on that info](https://github.com/JAlcocerT/
 * https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_DeployMe
 
 ```yml
-version: '3'
+#version: '3'
 
 services:
   streamlit-openaichatbot:

@@ -2,10 +2,6 @@
 title: "[AI] LangChain Explained - Providing context to LLMs"
 date: 2024-07-15
 draft: false
-# cover:
-#     image: "https://socialify.git.ci/alejandro-ao/ask-multiple-pdfs/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-#     alt: "ChatPDF" # alt text
-#     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
 description: 'Why LangChain is great for AI Projects. How to RAG with LangChain: CSV, PDF and DB examples.'
 summary: 'How to create a Streamlit App that uses LangChain to chat with your data.'

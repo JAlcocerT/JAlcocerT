@@ -90,6 +90,4 @@ Its a good complement to the GROQ API for LLMs.
 
 Thanks to Fireship and the video:
 
-<!-- {{< youtube id="v=m_xoN8KlP3w" autoplay="false" >}} -->
-
 {{< youtube "m_xoN8KlP3w" >}}

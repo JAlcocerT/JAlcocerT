@@ -2,7 +2,7 @@
 title: "How to do live search/research with AI"
 date: 2025-05-23
 draft: false
-tags: ["AI","Web Search"]
+tags: ["AI","Web Search","LLMs"]
 description: 'Grok XAi API and Local Deep Researcher compared with Perplexity/Perplexica.'
 url: 'live-search-and-research-with-ai'
 ---
@@ -67,10 +67,7 @@ What you need to have handy:
 
 Its all about the magic of langgraph.
 
-
-
 [![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher/#local-deep-researcher-project" title="Tinkering with LangGraph" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Local Deep Researcher - Post" >}}

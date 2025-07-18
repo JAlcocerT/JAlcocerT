@@ -2,9 +2,9 @@
 title: "SelfHosting AI Apps - My 2025 Favs"
 date: 2025-11-30T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","HomeLab","Scrapping"]
 description: '.'
-url: 'selfhosting-ai-apps-2025'
+url: 'ai-apps-2025'
 ---
 
 https://pytorch.org/get-started/locally/
@@ -59,14 +59,13 @@ Duplicati to other location (HD / Mega, One drive, s3...)
 
 You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/):
 
-```sh
-python -m venv your-env #(create a virtual environment)
-source your-env/bin/activate #(or on Windows your-env\Scripts\activate) (activatea the venv)
-#deactivate
-```
 
-```sh
-conda create -n yourcondaenvironment python=3.11
-conda activate yourcondaenvironment
-conda deactivate
-```
+## Web x AI
+
+Ive been using a lot vibe coding, like windsurf and CLI tools like gemini this year.
+
+There were interesting tools: scrapegraph, firecrawl, crawl4ai...
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web" title="Tinkering with Scrapping Tools" image="/videos/job_offers.png" subtitle="Scrapped Job Offers Analytics" >}}
+{{< /cards >}}

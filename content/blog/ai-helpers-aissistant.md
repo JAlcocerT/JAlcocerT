@@ -174,7 +174,7 @@ I called this my `z_aigen` stack in Portainer:
 * This is my [AI-Gen docker Compose](https://github.com/JAlcocerT/Docker/blob/main/Z_Dockge/stacks/z_aigen/compose.yaml)
 
 ```yml
-version: '3.8'
+#version: '3.8'
 
 services:
   phidata_service:

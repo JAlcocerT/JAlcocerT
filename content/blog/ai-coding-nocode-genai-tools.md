@@ -44,23 +44,21 @@ Flowise provides modular building blocks for you to build any agentic systems, f
 
 #### Flowise x Streamlit
 
-Developer Friendly
-API, SDK, Embed
-Extend and integrate to your applications using APIs, SDK and Embedded Chat
+* Developer Friendly
+  * API, SDK, Embed
+  * Extend and integrate to your applications using APIs, SDK and Embedded Chat
 
-APIs
-Embedded Widget
-Typescript & Python SDK
+* APIs
+  * Embedded Widget
+  * Typescript & Python SDK
 
-https://docs.flowiseai.com/integrations/3rd-party-platform-integration/streamlit
+* https://docs.flowiseai.com/integrations/3rd-party-platform-integration/streamlit
 
 
 #### Embedded Flowise Chat
 
-
 * https://docs.flowiseai.com/using-flowise/embed
 * https://github.com/FlowiseAI/FlowiseChatEmbed
-
 
 * https://github.com/ZynthCode/flowise-ai-with-python
 
@@ -132,24 +130,23 @@ services:
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFlow" title="LangFlow with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-
 **LangFlow Embedded**
 
-You can embedd langflow in your websites with few lines of JS and this project: https://github.com/langflow-ai/langflow-embedded-chat
+You can embedd langflow in [your websites](https://jalcocert.github.io/JAlcocerT/docs) with few lines of JS and this project: https://github.com/langflow-ai/langflow-embedded-chat
 
-{{< callout type="info" >}}
-Dont confuse LangFlow with LangFuse nor MLFlow
+{{< callout type="warning" >}}
+Dont confuse LangFlow with LangFuse nor MLFlow!
 {{< /callout >}}
 
 These other 2 are used for:
 
 1. MLflow is an open-source platform to manage the complete machine learning lifecycle, including experiment tracking, model versioning, deployment, and providing integrated observability features, especially for LLM-powered applications.
 
-2. Langfuse is an open-source observability platform specifically designed for LLM applications, offering detailed tracing, monitoring, and analytics to help developers understand, debug, and improve their language model-based systems.
+2. **Langfuse is an open-source observability platform** specifically designed for LLM applications, offering detailed tracing, monitoring, and analytics to help developers understand, debug, and improve their language model-based systems.
 
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse" title="LangFuse with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LangFuse" title="LangFuse with Docker Config 🐋 ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#dsc-tools-for-da-projects" title="SelfHosted LangFuse sometime ago | Post  ↗" >}}
 {{< /cards >}}
 
@@ -176,10 +173,7 @@ Once you create a local account, access the UI:
 
 <!-- https://www.youtube.com/watch?v=yXAJwDtAbLo -->
 
-
 {{< youtube "yXAJwDtAbLo" >}}
-
-
 
 > Is Dify the easiest way to build AI Applications?
 
@@ -207,15 +201,14 @@ How about **embedding a chatbot** within your website?
 
 I show recently how to do a Streamlit Web App Chat bot. 
 
-But that might cause friction on users having to leave your home/services page.
+But that might cause friction on users having to leave your home/services page and go to the streamlit domain/subdomain
 
+You could do something similar, but inside your web, with:
 
-<!-- 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="Docker Config" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="Docker Config Files" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot" image="/blog_img/GenAI/rag101.jpeg" subtitle="Docker Config  🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8n Docker Config" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config  🐋 ↗" >}}
 {{< /cards >}} 
--->
 
 #### ChatWoot
 
@@ -336,8 +329,6 @@ You should soo this in the bottom right of your page:
 And now...how to actually send messages and do stuff with n8n via your website?
 
 5. Save the workflow and **mark it as active** via n8n UI
-
-
 
 There are many more possibilities by playing with: https://docs.n8n.io/api/#learn-about-rest-apis
 

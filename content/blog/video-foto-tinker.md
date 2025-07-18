@@ -197,7 +197,15 @@ ffmpeg -i cut_output.mp4 -i output.mp3 -map 0:v -map 1:a -c:v copy -c:a libmp3la
 
 <!-- https://www.youtube.com/shorts/u3-5yN9xIv0 -->
 
+This is how you will see shorts:
+
 {{< youtube "u3-5yN9xIv0" >}}
+
+And for longer than 3 minutes, they will render as:
+
+{{< youtube "Sz5jlIbV0JA" >}}
+
+<!-- https://youtu.be/Sz5jlIbV0JA -->
 
 You can also take a 1080p part from a 4K video withour rencoding:
 
