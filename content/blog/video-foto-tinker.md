@@ -358,6 +358,8 @@ convert libreportfolio.png -resize 1200x630^ -gravity Center -extent 1200x630 li
 
 ### Darktable
 
+* Darktable is an open source photography workflow application and raw developer - https://github.com/darktable-org/darktable
+
 As a light room alternative:
 
 <!-- 
@@ -370,36 +372,41 @@ https://www.youtube.com/watch?v=rMhe2gYJa9s
 
 ### Other photo editing
 
-1. GIMP
+If you are into OSS, see:
+
+1. GIMP - The GNU Image Manipulation Program - https://gitlab.gnome.org/GNOME/gimp
 2. digiKam
 3. Photoflow
 
-* Darktable is an open source photography workflow application and raw developer - https://github.com/darktable-org/darktable
-* GIMP: The GNU Image Manipulation Program - https://gitlab.gnome.org/GNOME/gimp
 
+**Tools for Creator Mode:**
+
+* OBS Studio - To record your screen
+   * SHAREX
+* OpenShot or ~~Shotcut~~
+* Audacity - For audio edition
 
 ---
 
 ## Conclusions
 
-Tools for Creator Mode:
-
-* OBS Studio
-   * SHAREX
-* OpenShot ~~Shotcut~~
-* Audacity
 
 
+
+Now its time to put theory in practice:
 
 <!-- https://www.youtube.com/watch?v=-OO6Qrw6NWE -->
 
 {{< youtube "-OO6Qrw6NWE" >}}
 
 
+Should you go for proper cameras, or just do with your smartphone?
 
 <!-- https://www.youtube.com/watch?v=7CnjKua865Y -->
 
 {{< youtube "7CnjKua865Y" >}}
+
+You will need ton of space (specially for video)
 
 Never forget about proper photo/video backup before your trips!
 
@@ -444,13 +451,17 @@ By reducing the amount of light reaching the sensor, ND filters allow you to:
 {{< /details >}}
 
 
-{{< details title="In the context of video | Summarized 📌" closed="true" >}}
+{{< details title="In the context of video | ND Filters, Summarized 📌" closed="true" >}}
 
-ND filters are particularly crucial for video because you typically want to maintain a consistent frame rate and shutter speed for natural motion. Adjusting the aperture and ISO (sensitivity) are the primary ways to control exposure, but aperture also affects depth of field, and increasing ISO can introduce noise. ND filters provide an additional way to control the amount of light without sacrificing your desired cinematic motion or depth of field.
+ND filters are particularly crucial for video because you typically want to maintain a consistent frame rate and shutter speed for natural motion. 
+
+Adjusting the aperture and ISO (sensitivity) are the primary ways to control exposure, but aperture also affects depth of field, and increasing ISO can introduce noise. 
+
+ND filters provide an additional way to control the amount of light without sacrificing your desired cinematic motion or depth of field.
 
 While a good quality ND filter should ideally not affect color, some cheaper ones might introduce a slight color cast. It's generally recommended to invest in reputable brands to minimize this issue. Post-processing can often correct minor color casts if they occur.
 
-Essentially, ND filters give you greater control over your exposure settings in bright light, allowing you to achieve creative effects and maintain the desired look and feel of your video or photographs
+Essentially, **ND filters give you greater control over your exposure settings in bright light**, allowing you to achieve creative effects and maintain the desired look and feel of your video or photographs
 
 {{< /details >}}
 
@@ -465,7 +476,7 @@ Essentially, ND filters give you greater control over your exposure settings in 
 
 A **Color Grading LUT (Lookup Table)** is essentially a **preset color filter** that you can apply to your video footage or images to quickly alter and enhance its colors. Think of it as a shortcut for complex color adjustments.
 
-Here's a breakdown of what that means:
+{{< details title="A breakdown of what Color Grading means 📌" closed="true" >}}
 
 * **Lookup Table:** At its core, a LUT is a file containing a series of numerical values. These values act as a map, instructing your editing software how to transform the existing colors in your footage to a new set of colors.
 * **Color Transformation:** When you apply a LUT, the software analyzes the original color values of each pixel in your video or image and then uses the LUT's data to change those values according to a predetermined formula. This can affect various aspects of color, including:
@@ -481,12 +492,19 @@ Here's a breakdown of what that means:
 
 **Key things to understand about LUTs:**
 
-* **Not a Replacement for Color Correction:** While LUTs handle color *grading* (the creative aspect of establishing a look), they are generally not a substitute for basic **color correction**. It's often best to first balance your footage for white balance, exposure, and contrast before applying a creative LUT.
+* **Not a Replacement for Color Correction:** While LUTs handle color *grading* (the creative aspect of establishing a look), they are generally not a substitute for basic **color correction**. 
+
+It's often best to first balance your footage for white balance, exposure, and contrast before applying a creative LUT.
+
+
 * **Different Types of LUTs:**
     * **Technical LUTs (Conversion LUTs):** These are designed to convert footage from a specific camera's log format (a flat, high dynamic range format) to a standard color space like Rec. 709, providing a more natural starting point for grading.
     * **Creative LUTs (Look LUTs):** These are designed to impart a specific aesthetic or style to your footage, such as a vintage feel, a cinematic look, or a specific color palette.
 * **File Formats:** Common LUT file formats include `.cube`, `.3dl`, and `.look`.
 * **Software Compatibility:** LUTs are widely supported by most professional video editing and color grading software (e.g., DaVinci Resolve, Adobe Premiere Pro, Final Cut Pro).
+
+{{< /details >}}
+
 
 In essence, a color grading LUT is a powerful tool that offers a quick and efficient way to apply complex color transformations to your footage, helping you achieve a desired visual style and maintain consistency across your projects.
 
@@ -515,12 +533,7 @@ Kdenlive supports `.3dl` (After Effects) and `.cube` (Iridas) LUT file formats.
 {{< /details >}}
 
 
-
-FFmpeg + LUT
-
-
-
-{{< details title=" | CLI Details 📌" closed="true" >}}
+{{< details title="FFmpeg + LUT | CLI Details 📌" closed="true" >}}
 
 FFmpeg, being a command-line tool, requires you to use the appropriate filter to apply LUTs. The primary filter for this is `lut3d`.
 
@@ -604,7 +617,10 @@ So, regardless of the MP4 file itself (as long as it's a standard, decodable vid
 
 Yes, in most standard video production scenarios, it **absolutely makes sense and is generally recommended** to have your shutter speed roughly double your frame rate. This is often referred to as the **"180-degree shutter rule."**
 
-Here's why it's a good practice:
+
+
+{{< details title="Why the 180 rule is a good practice 📌" closed="true" >}}
+
 
 * **Natural Motion Blur:** This combination creates a level of motion blur that looks natural to the human eye. It mimics how we perceive motion in the real world. Each frame captures movement over roughly half of the time it takes for the next frame to be captured.
 * **Cinematic Look:** This is a key element in achieving a cinematic feel. Too little motion blur can make movement look stroboscopic and unnatural, while too much can make everything appear smeary and soft.
@@ -630,226 +646,16 @@ While the double frame rate rule is a great starting point, there are creative r
     * **Exaggerated Sense of Speed:** To make fast-moving objects leave long trails of blur.
     * **Low Light Situations (as a last resort):** If you absolutely need more light and can't open your aperture or increase ISO further, a slower shutter speed will let in more light, but at the cost of increased motion blur.
 
+
+{{< /details >}}
+
+
 **In conclusion:**
 
-For the vast majority of your video work, aiming for a shutter speed that is double your frame rate is a solid foundation for achieving natural-looking and aesthetically pleasing motion. Deviating from this rule should be a conscious creative choice made to achieve a specific visual effect.
+For the vast majority of your video work, aiming for a shutter speed that is double your frame rate is a solid foundation for achieving natural-looking and aesthetically pleasing motion.
 
+> Deviating from this rule should be a conscious creative choice made to achieve a specific visual effect!
 
-### F/OSS Tools for Video
-
-* Create Animations with Code: https://github.com/motion-canvas/motion-canvas
-  * https://github.com/motion-canvas/motion-canvas?tab=MIT-1-ov-file#readme
-
-A TypeScript library for creating animated videos using the Canvas API.
-
->  Visualize Your Ideas With Code 
-
-<!-- Motion Canvas is a tool that bridges the gap between code and animation, specifically targeted at creating animated videos. Here's a breakdown of what I know about it:
-
-
-Library & Editor: Motion Canvas offers two main parts:
-
-Library (written in TypeScript): This library allows you to write animation code using generators, providing a structured approach for creating animations.
-Web-based Editor: This editor provides a real-time preview of your animations as you write the code.
-Animation with Canvas API: Motion Canvas leverages the Canvas API, a built-in functionality of web browsers that allows for dynamic manipulation of graphics. This gives you control over various visual elements of your animation.
-
-Benefits:
-
-Combined Power of Code and UI:  Motion Canvas offers the benefits of both writing code for precise control and a visual editor for intuitive adjustments, making it suitable for users with different comfort levels. -->
-<!-- 
-To use Motion Canvas, you'll need a few things:
-
-Node.js and npm: Motion Canvas relies on Node.js, a JavaScript runtime environment, and npm (Node Package Manager) for managing dependencies. You can download and install them together from the official Node.js website: https://nodejs.org/en
-
-Code editor: You'll need a code editor of your choice to write and edit your Motion Canvas code. Popular options include Visual Studio Code, Atom, or Sublime Text.
-
-(Optional) ffmpeg: While not strictly necessary for basic functionality, ffmpeg is a powerful tool for video encoding and manipulation. Motion Canvas can leverage ffmpeg for exporting your animations as videos. You can find installation instructions for ffmpeg based on your operating system through a web search. -->
-
-<!-- 
-
----
-
-## FAQ
-
-* https://github.com/TheLastBen/fast-stable-diffusion
-  * With DreamBooth and others -->
-
-<!-- 
-
-```Dockerfile
-# Use the specified Python base image
-FROM python:3.11-slim
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Install necessary packages
-RUN apt-get update && apt-get install -y \
-    git \
-    build-essential
-
-```
-
-```yml
-version: '3'
-
-services:
-  automatic:
-    image: python:3.11-slim
-    container_name: ai-automatic
-    command: tail -f /dev/null
-    volumes:
-      - ai_automatic:/app
-    working_dir: /app  # Set the working directory to /app
-    ports:
-      - "7865:7865"
-
-volumes:
-  ai_automatic:
-```
-
-## Fooocus
-
-Fooocus is an image generating software (based on Gradio).
-
- **It supports GPU and M1/M2**.
-
-https://www.youtube.com/watch?v=mKuhY3LSLwY
-* <https://github.com/lllyasviel/Fooocus>
-
-
-
-```sh
-apt update
-apt install git
-git clone https://github.com/lllyasviel/Fooocus
-#python3 -m vend fooocus_env
-#source fooocus_env/bin/activate
-cd Fooocus
-pip install -r requirements_versions.txt
-
-python entry_with_update.py
-#python entry_with_update.py --listen
-```
-
-The default model is [Juggernaut-XL](https://huggingface.co/stablediffusionapi/juggernaut-xl)
-
-```yml
-version: '3'
-
-services:
-  sd-fooocus:
-    image: python:3.11-slim
-    container_name: fooocus
-    command: tail -f /dev/null
-    volumes:
-      - ai_fooocus:/app
-    working_dir: /app  # Set the working directory to /app
-    ports:
-      - "7865:7865"
-
-volumes:
-  ai_fooocus:
-```
-
-## ComfyUI
-
-* https://github.com/comfyanonymous/ComfyUI
-  * NVIDIA OR CPU WINDOWS PORTABLE - https://github.com/comfyanonymous/ComfyUI/releases
-  * <https://github.com/comfyanonymous/ComfyUI#installing>
-
-
-
-Fully supports SD1.x, SD2.x, SDXL and Stable Video Diffusion
-
-Works even if you don't have a GPU with: --cpu (slow)
-
-
-
-
-
-```Dockerfile
-# Use the specified Python base image
-FROM python:3.11-slim
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Install necessary packages
-RUN apt-get update && apt-get install -y \
-    git \
-    build-essential
-
-RUN git clone https://github.com/comfyanonymous/ComfyUI
-RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.6
-
-WORKDIR /app/ComfyUI
-RUN pip install -r requirements.txt
-
-#python main.py --cpu
-
-```
-
-```sh
-
-```
-
-```sh
-apt update
-apt install git
-git clone https://github.com/comfyanonymous/ComfyUI
-#
-#
-#pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.6
-pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
-
-cd ComfyUI
-pip install -r requirements.txt
-#python main.py
-python main.py --cpu
-```
-
-
-```yml
-version: '3'
-
-services:
-  sd-comfyui:
-    image: comfyui #python:3.11-slim
-    container_name: comfyui
-    command: tail -f /dev/null
-    volumes:
-      - ai_comfyui:/app
-    working_dir: /app  # Set the working directory to /app
-    ports:
-      - "8188:8188"
-
-volumes:
-  ai_comfyui:
-```
-
----
-
-## FAQ
-
-### Other AIGen for (SD) and Generate Images
-
-* <https://github.com/ttio2tech/Fooocus>
-* ConfyUI: <https://www.youtube.com/watch?v=Z0BYc-w-jaI>
-
-### Gradio?
-
-Typical port is 7860
-
-### Wait, What is...?
-
-<!-- CUDA?? -->
-<!-- 
-**Ray Tracing:** Imagine you're playing a video game and you see reflections in water, shadows from trees, and light coming through windows. Ray tracing is a way to make these scenes look super realistic. 
-
-**Integrated GPU (iGPU):** An integrated GPU (Graphics Processing Unit) is like a small artist living inside your computer's main brain (the CPU). 
-
-Unlike a separate, big artist (a dedicated graphics card), this small artist shares the same space and resources with the main brain. This means that while it's good for everyday tasks like watching videos, doing homework, or playing simple games, it's not as powerful for heavy-duty tasks like playing big, graphics-heavy video games or doing 3D design. It's like having a helper for graphics inside your computer without needing extra space or power. -->
 
 ---
 

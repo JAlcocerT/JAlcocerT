@@ -130,4 +130,38 @@ You can even use it to bring custom [LUT](https://jalcocert.github.io/JAlcocerT/
 
 6. Recently Motion Canvas was released as Open Source as well, with MIT license ❤️ - https://github.com/motion-canvas/motion-canvas
 
-> Visualize Your Ideas With Code
+Motion Canvas is a tool that bridges the gap between code and animation, specifically targeted at creating animated videos.
+
+* Create Animations with Code: https://github.com/motion-canvas/motion-canvas
+  * https://github.com/motion-canvas/motion-canvas?tab=MIT-1-ov-file#readme
+
+A TypeScript library for creating animated videos using the Canvas API.
+
+> MIT| Visualize Your Ideas With Code 
+
+{{< details title="More about Motion Canvas 📌" closed="true" >}}
+
+Library & Editor: Motion Canvas offers two main parts:
+
+1. Library (written in TypeScript): This library allows you to write animation code using generators, providing a structured approach for creating animations.
+2. Web-based Editor: This editor provides a real-time preview of your animations as you write the code.
+
+Animation with Canvas API: Motion Canvas leverages the Canvas API, a built-in functionality of web browsers that allows for dynamic manipulation of graphics. 
+
+This gives you control over various visual elements of your animation.
+
+Benefits:
+
+Combined Power of Code and UI:  Motion Canvas offers the benefits of both writing code for precise control and a visual editor for intuitive adjustments, making it suitable for users with different comfort levels. -->
+
+ 
+To use Motion Canvas, you'll need a few things:
+
+Node.js and npm: Motion Canvas relies on Node.js, a JavaScript runtime environment, and npm (Node Package Manager) for managing dependencies. You can download and install them together from the official Node.js website: https://nodejs.org/en
+
+Code editor: You'll need a code editor of your choice to write and edit your Motion Canvas code. Popular options include Visual Studio Code, Atom, or Sublime Text.
+
+(Optional) ffmpeg: While not strictly necessary for basic functionality, ffmpeg is a powerful tool for video encoding and manipulation. Motion Canvas can leverage ffmpeg for exporting your animations as videos. You can find installation instructions for ffmpeg based on your operating system through a web search. 
+
+{{< /details >}}
+
