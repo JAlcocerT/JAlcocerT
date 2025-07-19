@@ -57,6 +57,8 @@ I created [this repo for putting *real life* videos together](https://github.com
 
 [Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) is a versatile programming language that can be used for a wide range of tasks, including creating animations. 
 
+And on the [mechanical engineering post](https://jalcocert.github.io/JAlcocerT/mechanical-engineering-cool-stuff), we saw how people are doing amazing [Lorentz attractor animations](https://jalcocert.github.io/JAlcocerT/mechanical-engineering-cool-stuff/#cool-physics-animations).
+
 ### Matplotlib Styled Charts
 
 Before animating: be aware that you can create **styled plots with matplotlib**.
@@ -166,6 +168,18 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ---
 
 ## Conclusions
+
+We've learnt how to do cool Python Animations.
+
+Including cool `.gif` that you can easily share.
+
+
+But, as you can imagine, there are more ways to generate **animations as a code**
+
+0. MotionCanvas
+1. Animotion
+2. RemotionJS
+3. The 3B1B way...
 
 You can organize your repository in a way that from one source code, you have different kind of outputs:
 

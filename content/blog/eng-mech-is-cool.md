@@ -118,3 +118,42 @@ See for yourself how cool are these animations:
 
 * <https://jakevdp.github.io/blog/2012/09/05/quantum-python/>
 * <https://jakevdp.github.io/blog/2013/02/16/animating-the-lorentz-system-in-3d/>
+
+The last one with the **Lorentz 3D animation** is simply fantastic.
+
+{{< details title="More about Lorentz Attactor 📌" closed="true" >}}
+
+The Lorentz attractor (often spelled Lorenz, after its discoverer Edward Lorenz) is a fascinating mathematical object that arises from a system of three simple, non-linear differential equations.
+
+It's a classic example in chaos theory and is famous for its distinctive "butterfly" shape when plotted in three dimensions.
+
+Here's a breakdown of what it is and its key characteristics:
+
+**What is it?**
+
+* **A System of Equations:** The Lorenz attractor is the graphical representation of the solutions to a simplified system of three ordinary differential equations (ODEs). Edward Lorenz, a meteorologist, developed these equations in the early 1960s as a highly simplified model of atmospheric convection (how fluids move when heated and cooled).
+* **An Attractor:** In a dynamical system, an attractor is a set of states towards which the system tends to evolve over time, regardless of its initial starting conditions (within a certain "basin of attraction"). The Lorenz system, for specific parameter values, will always settle into a trajectory that orbits around this specific, butterfly-shaped region.
+* **A "Strange" Attractor:** The Lorenz attractor is specifically known as a "strange attractor." Unlike simple attractors (like a single point or a stable cycle), a strange attractor exhibits chaotic behavior. This means its trajectories never repeat themselves exactly, even though they remain bounded within a finite region of space.
+
+**Key Characteristics:**
+
+1.  **Sensitive Dependence on Initial Conditions (The Butterfly Effect):** This is the most famous characteristic of the Lorenz attractor. Even an infinitesimally small change in the initial starting values of the system's variables can lead to vastly different long-term trajectories. This is where the popular "butterfly effect" metaphor comes from: the idea that a butterfly flapping its wings in Brazil could theoretically contribute to a hurricane in Texas (though this is a poetic exaggeration, it illustrates the principle of amplified small differences).
+
+2.  **Deterministic Chaos:** Despite its unpredictable behavior, the Lorenz system is entirely deterministic. This means that if you know the exact initial conditions, the future state of the system is theoretically determined. The "chaos" arises because even tiny imprecisions in measuring or defining those initial conditions make long-term prediction practically impossible.
+
+3.  **Fractal Structure:** The Lorenz attractor has a fractal dimension, meaning it exhibits self-similarity at different scales. If you zoom in on parts of the attractor, you'll see similar intricate patterns. Its infinite complexity is a hallmark of fractal geometry.
+
+4.  **Two "Wings":** Visually, the Lorenz attractor resembles a butterfly with two distinct "wings" or lobes. The system's trajectory will spiral around one wing for a period, then switch to the other wing, then back again, in an irregular, non-repeating fashion.
+
+{{< /details >}}
+
+
+**Significance:**
+
+The Lorenz attractor was groundbreaking because it demonstrated that even simple, deterministic systems could exhibit incredibly complex and chaotic behavior. This had profound implications for fields like:
+
+* **Meteorology:** It highlighted the inherent limits of long-range weather prediction.
+* **Physics:** It showed how chaos can arise in seemingly straightforward physical systems.
+* **Mathematics:** It spurred further research into nonlinear dynamics and chaos theory.
+
+In essence, the Lorenz attractor is a beautiful and powerful illustration of chaos, showing how order and unpredictability can coexist within a seemingly simple set of rules.
