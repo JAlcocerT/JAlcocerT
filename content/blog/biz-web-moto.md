@@ -25,11 +25,15 @@ The **theme** - https://github.com/Boston343/horizon
 
 As always, when trying a new astro theme, we just need to:
 
-1. Clone it:
+1. Clone the theme:
 
 ```sh
 git clone https://github.com/WhitePaper233/yukina
 ```
+
+You can also fork it to your github and sync your edits in there.
+
+> Make sure about the license of the theme before moving forward: MIT, GNU, Apache...are good starting points.
 
 2. Install the dependencies:
 
@@ -37,10 +41,18 @@ git clone https://github.com/WhitePaper233/yukina
 npm install
 ```
 
-3. Test how it feels:
+3. Test how it feels
+
+This will allow you to see the changes live:
 
 ```sh
-npm run dev
+#npm run dev
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/ #useful to see from your phone how it looks
+```
+
+This is required to check that its all ready for static hosting:
+
+```sh
 #npm run build
 ```
 

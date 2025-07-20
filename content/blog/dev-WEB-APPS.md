@@ -765,7 +765,7 @@ npm i --save @kanaries/graphic-walker
 
 > Built using Open Source Stack (Llama 3.2 Model, BGE Embeddings, and Qdrant running locally within a Docker Container)
 
-2. 
+2. https://github.com/JAlcocerT/Streamlit_PoC as seen on [this post](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker)
 
 
 #### Reflex
@@ -794,7 +794,6 @@ Reflex has a very interesting [Grid Cards](https://reflex.dev/docs/library/layou
 #### Flet
 
 If you still have some spare time...
-
 
 {{< details title="More about Flet 📌" closed="true" >}}
 

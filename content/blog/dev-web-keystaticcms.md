@@ -3,7 +3,7 @@ title: "Having a look to KeyStatic CMS. Markdown Powering Websites."
 date: 2025-03-22T20:20:21+01:00
 draft: false
 tags: ["Dev","Web"]
-description: 'KeyStatic. Creating a website for a moto blogger. Now with a cool CMS powered user interface.'
+description: 'KeyStatic. An easier website to manage for a moto blogger. Now with a cool CMS powered user interface.'
 url: 'understanding-keystatic-cms'
 ---
 

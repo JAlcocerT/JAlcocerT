@@ -2,8 +2,8 @@
 title: "SelfHosting - 1st Half 2025 "
 date: 2025-06-30T01:20:21+01:00
 draft: false
-tags: ["HomeLab","Authentication","P2P","Traefik"]
-description: 'Programatic Https for all services and docker stacks'
+tags: ["HomeLab","Authentication","P2P","Traefik https"]
+description: 'Programatic Https for all services and docker stacks runnong in your server'
 url: 'selfhosted-apps-06-2025'
 ---
 
@@ -24,22 +24,17 @@ While exploring [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyaut
   {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#traefik-x-tinyauth-x-flask" title="TinyAuth x Traefik x Flask" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code with a Flask App working with the authentication middleware" >}}
 {{< /cards >}}
 
-It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication).
+It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication) which is an option to bring authentication capabilities to [your webapps](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/).
 
 <!-- ![Traefik UI](/blog_img/selfh/https/Traefik-UI-https.png) -->
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH" title="Docker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Collection of Docker Config Files - 0625 Edition" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Home-Lab" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Ordered config files | Youtube Video friendly" >}}
-{{< /cards >}}
-
-**SelfHosting Resources**:
-
-* https://openalternative.co/self-hosted
-* https://devsuite.co/collections/open-source
-
 
 ## Improvements
+
+Better Backup and media management is always welcome in any homelab.
+
+Ive been improving my [Nextcloud setup](#nextcloud-with-https), together with the [photo management tools](#in-home-tools).
+
 
 ### Nextcloud with Https
 
@@ -182,7 +177,7 @@ Uptime Kuma
 #### Internet Speed
 
 * https://orb.net/docs/setup-sensor/docker
-https://orb.net/
+  * https://orb.net/
 
 ### P2P
 
@@ -204,6 +199,8 @@ You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/
 
 ![SelfHosting Reubah](/blog_img/selfh/Photo/reubah.png)
 
+2. Tools for Photo and tech for trips:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#backups" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Hardware & Softw setup for traveling" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Tools" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="PiGallery, PhotoView, Immich..." >}}
@@ -213,10 +210,10 @@ For more photo/video tricks, see also:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/" title="Photo & Video Tricks | Post ↗"  >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#quick-videos---ffmpeg-cli" title="Video FFMPEG CLI | Post 🐳 ↗"  >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#quick-videos---ffmpeg-cli" title="Video FFMPEG CLI | Post ↗"  >}}
 {{< /cards >}}
 
-2. IT/Toos + OmniTools
+3. IT/Toos + OmniTools
 
 
 ### HomeLab Diagrams
@@ -249,9 +246,24 @@ Filebrowser dev has been abandoned and for me it was still a thing to combine it
 
 But now we have filebrowser quantum!
 
-Also, ive been tinkering a lot with authentication via Logto
+Also, ive been tinkering a lot with authentication via Logto.
 
-With gemini CLI and similar vibe coding tools, its been much easier to spin new services:
+If you are looking for this edition's config files:
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH" title="Docker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Collection of Docker Config Files - 0625 Edition" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Home-Lab" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Ordered config files | Youtube Video friendly" >}}
+{{< /cards >}}
+
+**SelfHosting Resources**: If you want more inspiration
+
+* https://openalternative.co/self-hosted
+* https://devsuite.co/collections/open-source
+
+
+
+With [gemini CLI](https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/) and similar [vibe coding tools](https://jalcocert.github.io/JAlcocerT/vide-coding/), its been much easier to spin new services:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli" title="AI CLI Tools" image="/blog_img/GenAI/geminiCLI/gemini-mcp.png" subtitle="Tinkering with GeminiCLI | Post" >}}
@@ -301,6 +313,6 @@ https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps
 
 Link analytics solutions, like Kutt:
 
-![alt text](/blog_img/selfh/links/kutt-selfh.png)
+![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
 
 ![alt text](/blog_img/selfh/links/kutt-link-creation.png)

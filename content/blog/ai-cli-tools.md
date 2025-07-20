@@ -557,6 +557,12 @@ BAML's power is that it generates all the infrastructure to properly request, va
 
 ## Conclusions
 
+You can see which of these cli tools you have installed globally via npm:
+
+```sh
+npm list -g --depth=0
+```
+
 [![Star History Chart](https://api.star-history.com/svg?repos=BoundaryML/baml,google-gemini/gemini-cli&pydantic/pydantic-ai&,type=Date)](https://star-history.com/BoundaryML/baml&google-gemini/gemini-cli&pydantic/pydantic-ai&Date)
 
 ### Context Engineering

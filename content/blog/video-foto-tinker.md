@@ -479,12 +479,14 @@ A **Color Grading LUT (Lookup Table)** is essentially a **preset color filter** 
 {{< details title="A breakdown of what Color Grading means 📌" closed="true" >}}
 
 * **Lookup Table:** At its core, a LUT is a file containing a series of numerical values. These values act as a map, instructing your editing software how to transform the existing colors in your footage to a new set of colors.
+
 * **Color Transformation:** When you apply a LUT, the software analyzes the original color values of each pixel in your video or image and then uses the LUT's data to change those values according to a predetermined formula. This can affect various aspects of color, including:
     * **Hue:** The actual color (e.g., red, blue, green).
     * **Saturation:** The intensity or purity of a color.
     * **Luminance:** The brightness or darkness of a color.
     * **Contrast:** The difference between the light and dark areas.
     * **Gamma:** The overall tonal range and distribution of brightness.
+
 * **Predetermined Look:** LUTs are designed to achieve a specific visual style or look. This could be anything from a subtle color correction to a dramatic cinematic effect, or even emulating the look of specific film stocks.
 * **Efficiency:** Instead of manually tweaking numerous color parameters for each shot, applying a LUT provides a one-click solution to achieve a consistent look across your project, saving significant time in the color grading process.
 
@@ -495,7 +497,6 @@ A **Color Grading LUT (Lookup Table)** is essentially a **preset color filter** 
 * **Not a Replacement for Color Correction:** While LUTs handle color *grading* (the creative aspect of establishing a look), they are generally not a substitute for basic **color correction**. 
 
 It's often best to first balance your footage for white balance, exposure, and contrast before applying a creative LUT.
-
 
 * **Different Types of LUTs:**
     * **Technical LUTs (Conversion LUTs):** These are designed to convert footage from a specific camera's log format (a flat, high dynamic range format) to a standard color space like Rec. 709, providing a more natural starting point for grading.

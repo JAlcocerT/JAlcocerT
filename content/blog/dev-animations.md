@@ -181,14 +181,18 @@ But, as you can imagine, there are more ways to generate **animations as a code*
 2. RemotionJS
 3. The 3B1B way...
 
-You can organize your repository in a way that from one source code, you have different kind of outputs:
+Ive been having the need to do some [git recap](https://jalcocert.github.io/JAlcocerT/git-recap/):
+
+You can organize your repository in a way that from one source code, you have different kind of outputs.
+
+Say you have your animations for a website/twitter:
 
 ```sh
 git branch libreportfolio 285484eafeae5c79436cef73678df8ae5153bc52
 git checkout libreportfolio
 ```
 
-Or say:
+Or say you have similar data collection, but different outputs for some youtube channel:
 
 ```sh
 git branch unfoldingdata 285484eafeae5c79436cef73678df8ae5153bc52
@@ -221,9 +225,7 @@ If you are able to create mp4 animations, you can also create images or animated
 
 With those, you can go to different social media platforms and share the content you have just created.
 
-
 {{< tweet user="LibrePortfolio" id="1940801205577699713" >}}
-
 
 **Social Media Management Apps**
 
@@ -300,8 +302,8 @@ Data is beautiful, indeed:
 How could I not mention the awsome 3B1B channel and its OSS animation engine, that I recommended [here](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/#cool-stuff-for-researchers)
 
 * https://github.com/3b1b/manim
-* https://github.com/3b1b/videos?tab=readme-ov-file#workflow
-* https://github.com/ManimCommunity/manim/
+  * https://github.com/3b1b/videos?tab=readme-ov-file#workflow
+  * https://github.com/ManimCommunity/manim/
 
 > Math Animation engine for explanatory math videos. The ones [3Blue1Brown Channel created](https://www.youtube.com/watch?v=rbu7Zu5X1zI)!
 
