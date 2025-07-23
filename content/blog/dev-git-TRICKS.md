@@ -21,7 +21,7 @@ This is a recap of the best GIT related tricks I have so far.
 
 1. Use vscode on the cloud with: https://github.com/codespaces/
 
-![alt text](/blog_img/dev/gh-codespaces.png)
+![github codespaces](/blog_img/dev/gh-codespaces.png)
 
 2. GISTS are a great way to share code: https://jalcocert.github.io/JAlcocerT/github-gists/
 
@@ -40,15 +40,23 @@ git config --global user.name "JAlcocerT"
 git config --global user.email "youremail@example.com"
 ```
 
-See active branch and latest commits:
+See **active branch** and latest commits:
 
 ```sh
+git branch -a
 #git branch
+
+#git log
 git log --oneline -n 10
+git log --graph --oneline --decorate --all
+
+git log --follow -- <file_path> #see which commits are affecting a particular file
 
 #create a new branch from main
 git checkout -b <new-branch-name> main
 ```
+
+This can be useful in combination with LLMs, like github copilot, to bring them context!
 
 #### Creating Releases
 

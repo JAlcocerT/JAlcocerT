@@ -1209,6 +1209,10 @@ If this does not give you a taste of what end to end feels like, nothing will.
 
 #### Gotify
 
+Notifications everywhere!
+
+Because maybe...you got a stripe payment, right?
+
 * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gotify/
 
 Thanks to [magnus](https://magnus919.com/notes/gotify/)
@@ -1217,8 +1221,6 @@ Thanks to [magnus](https://magnus919.com/notes/gotify/)
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/gotify_docker-compose.yml" title="Gotify Setup Docker Config 🐋 ↗" >}}
     {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently" title="Use Gotify together with Internet Speed Tracker | SelfH Post 0525 Post ↗" >}}
 {{< /cards >}}
-
-
 
 Send a message via Gotify with:
 

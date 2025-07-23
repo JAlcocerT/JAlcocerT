@@ -57,7 +57,7 @@ The flags used for Gemini are:
 `--debug` shows debug information
 `--model` allows to specify the model to use
 
-https://developers.google.com/gemini-code-assist/auth/auth_success_gemini
+* https://developers.google.com/gemini-code-assist/auth/auth_success_gemini
 
 <!-- https://www.youtube.com/watch?v=KUCZe1xBKFM -->
 
@@ -67,7 +67,7 @@ https://developers.google.com/gemini-code-assist/auth/auth_success_gemini
 
 
 
-![alt text](/blog_img/GenAI/geminiCLI/geminicli-101.png)
+![Gemini CLI 101](/blog_img/GenAI/geminiCLI/geminicli-101.png)
 
 I had to login via API key as per:
 
@@ -75,15 +75,15 @@ I had to login via API key as per:
 
 As I could not do it via [regular google auth](https://github.com/google-gemini/gemini-cli/issues/1901)
 
-![alt text](/blog_img/GenAI/geminiCLI/geminicli-auth.png)
+![Autnehticating Google CLI](/blog_img/GenAI/geminiCLI/geminicli-auth.png)
 
 ![GeminiCLI is authorized now](/blog_img/GenAI/geminiCLI/geminiCLI-authorized.png)
 
 > You could do it as per [this issue](https://github.com/google-gemini/gemini-cli/issues/1502#issuecomment-3007518759)
 
-https://console.cloud.google.com/welcome?hl=en&inv=1&invt=Ab1Jlw&project=starlit-advice-464112-j9
-https://console.developers.google.com/apis/api/cloudaicompanion.googleapis.com
-https://console.cloud.google.com/apis/dashboard
+* https://console.cloud.google.com/welcome?hl=en&inv=1&invt=Ab1Jlw&project=starlit-advice-464112-j9
+* https://console.developers.google.com/apis/api/cloudaicompanion.googleapis.com
+* https://console.cloud.google.com/apis/dashboard
 
 
 ```sh
@@ -244,7 +244,7 @@ https://www.warp.dev/
 
 * https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
 * https://docs.boundaryml.com/home
-  * https://gitmcp.io/BoundaryML/baml
+  * https://gitmcp.io/BoundaryML/baml - This can be added to windsurf as MCP reference about BAML via SSE
   * https://gitmcp.io/BoundaryML/baml/chat
 
 ```sh
@@ -304,11 +304,58 @@ Finally, BAML promotes maintainability and scalability by **abstracting away the
 
 > > Similarly as numpy goes to C.
 
+Make sure to add baml as a dependency to your [virtual environment](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/):
+
 ```sh
+#uv init
 uv add baml-py
 #uv add pydantic
 #uv add typing-extensions
+#uv add baml-py pydantic typing-extensions
+
+uv run baml-cli init #https://docs.boundaryml.com/guide/installation-language/python
+uv run baml-cli generate #generates ./baml_client python files
 ```
+
+![BAML to Python](https://prod.ferndocs.com/_next/image?url=https%3A%2F%2Ffiles.buildwithfern.com%2Fhttps%3A%2F%2Fboundary.docs.buildwithfern.com%2F2025-07-21T00%3A18%3A05.793Z%2Fassets%2Flanguages%2Fbaml-to-py.png&w=1920&q=75)
+
+Those will produce `*.py` files!
+
+### BAMl Architectyre 
+
+**BAML's architecture** is centered around a clear separation of concerns:
+
+1. **BAML Schema (`baml_src/*.baml` files)**: *to be defined by the user, allows for BAML setup*
+   - Define the contract/interface 
+   - Specify what functions exist, what data types they use
+   - Configure which LLM providers to call
+
+2. **Generated Client Code (`baml_client/` folder)**: *its generated automatically by BAML and its used for reliable type safety*
+   - Handles all the technical details of calling models correctly
+   - Manages parsing responses, error handling, retry logic
+   - Provides type-safe interfaces for your business logic
+
+3. **Your Business Logic** (like `plan_enhancement_baml.py`): *instead of the typical python script that calls OpenAI API*
+   - Only needs to import and use the generated clients
+   - Focuses purely on solving your business problem
+   - Remains clean and readable
+
+> This architecture means your main Python files can remain focused on business logic, while all the complexity of reliable LLM calling is abstracted away in the generated client code.
+
+**Benefits**
+
+- **Type Safety**: Compile-time checking for LLM interactions
+- **Maintainability**: Change models without changing business code
+- **Testability**: Built-in testing framework
+- **Separation of Concerns**: Business logic separate from LLM interaction details
+
+**Workflow**: see [details](#baml-workflow)
+
+1. Define your schema in .baml files
+2. Run baml generate (or npx @boundaryml/baml generate) to create client code `./baml_client`
+3. Import and use the client in your business logic
+
+> When you need to change your LLM interface, modify BAML files, re-generate, and the changes propagate
 
 ### BAML Workflow
 
@@ -322,8 +369,7 @@ The typical development workflow when using BAML follows these steps: https://do
 2. **Generate the Client Code**:
 
 ```bash
-npx @boundaryml/baml generate
-#npx @boundaryml/baml generate --lang python
+npx @boundaryml/baml generate #this one will generate .ts client files
 ```
 - This creates Pydantic models and API client code in `baml_client/`
 
@@ -336,6 +382,46 @@ npx @boundaryml/baml generate
    - If you need to change schemas or prompts, modify the BAML file
    - Regenerate the client code
    - Update your Python script if necessary
+
+```mermaid
+graph TD
+    %% Main execution flow
+    A[When calling plan_enhancement_baml.py] --> B[parse_arguments]
+    B --> C[run_plan_enhancement_baml]
+    
+    %% File imports and usage flow
+    C --> D[Load prompts from files]
+    C --> E[Read documentation file]
+    C --> F[Create EnhancementInput object]
+    F --> G[Call b.EnhanceDocumentation]
+    
+    %% BAML component relationships
+    G --> H[BAML Sync Client]
+    H --> I[OpenAI API]
+    I --> H
+    H --> G
+    G --> J[Process and save results]
+    
+    %% File relationships and imports
+    subgraph "Files and Imports"
+        K[plan_enhancement_baml.py] -.imports.-> L[baml_client/sync_client.py]
+        K -.imports.-> M[baml_client/types.py]
+        N[doc_enhancement.baml] -.generates.-> L
+        N -.generates.-> M
+        K -.reads.-> O[prompts/*.md files]
+    end
+    
+    %% Styling
+    classDef script fill:#f9d77e,stroke:#333,stroke-width:1px;
+    classDef bamlSchema fill:#a1d8b2,stroke:#333,stroke-width:1px;
+    classDef generated fill:#f8b88b,stroke:#333,stroke-width:1px;
+    classDef external fill:#bae1ff,stroke:#333,stroke-width:1px;
+    
+    class A,B,C,D,E,F,J script;
+    class N bamlSchema;
+    class L,M,G,H generated;
+    class I,O external;
+```
 
 This separation helps maintain a **clean architecture** where:
 
@@ -361,17 +447,16 @@ All BAML does under the hood is *to generate a web request* (you will be able to
 
 * https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
 
-There is a `baml_client` you can do:
+There is a `baml_client` and you can do:
 
 ```sh
 from baml_client import b
-
 #you can now bring your classes that will check types and so on, just like typescript does, but in python, thanks to BAML (typechecking in prompts)
 ```
 
-And there wont be any dependencies on baml code once it has been run!
+And there wont be any dependencies on baml code once it has been run and the `./client_baml/*.py` files (or ts, whatever) are generated.
 
-So you will just ship the `baml_client` part.
+> So you will just ship the `baml_client` part!
 
 **BAML examples**
 
@@ -387,7 +472,11 @@ We let the LLM speak the language it thinks its better for the reply and then we
 
 **Competitors**: PydanticAI, or maybe https://github.com/langchain-ai/langgraph-codeact
 
-> langgraph-codeact his library implements the CodeAct architecture in LangGraph. This is the architecture is used by [Manus.im](https://manus.im/). It implements an alternative to JSON function-calling, which enables solving more complex tasks in less steps.
+> langgraph-codeact his library implements the CodeAct architecture in LangGraph. This is the architecture is used by [Manus.im](https://manus.im/).
+
+It implements an alternative to JSON function-calling, which enables solving more complex tasks in less steps.
+
+YOu also have the OSS equivalent: https://github.com/FoundationAgents/OpenManus
 
 > > This is achieved by making use of the full power of a Turing complete programming language (such as Python used here) to combine and transform the outputs of multiple tools.
 
@@ -395,9 +484,9 @@ We let the LLM speak the language it thinks its better for the reply and then we
 * baml.com/chat
 * https://www.promptfiddle.com/
 
-https://gloochat.notion.site/benefits-of-baml
+* https://gloochat.notion.site/benefits-of-baml
 
-https://gloochat.notion.site/BAML-Advanced-Prompting-Workshop-Dec-2024-161bb2d26216807b892fed7d9d978a37?pvs=74
+* https://gloochat.notion.site/BAML-Advanced-Prompting-Workshop-Dec-2024-161bb2d26216807b892fed7d9d978a37?pvs=74
 
 <!-- https://www.youtube.com/watch?v=Xece-W7Xf48 -->
 
@@ -444,9 +533,9 @@ In essence, BAML is a DSL because it provides a dedicated, purpose-built languag
 
 This completes our implementation of all three approaches:
 
-Basic JSON mode (simplest)
-Function calling (schema-defined)
-BAML (type-safe, declarative)
+* Basic JSON mode (simplest)
+* Function calling (schema-defined)
+* BAML (type-safe, declarative)
 
 
 {{< details title="BAML vs Function Caling 📌" closed="true" >}}
@@ -468,7 +557,6 @@ BAML (type-safe, declarative)
    - Handles business logic like loading files and parsing arguments
    - Makes type-safe API calls using the client
    - Processes and formats the results
-
 
 The type-safe, declarative approach (BAML) offers several significant advantages over just schema-defined approaches (like function calling):
 

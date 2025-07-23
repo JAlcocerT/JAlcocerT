@@ -2,12 +2,50 @@
 title: "OpenL Tablets 101"
 date: 2024-09-03T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Docker","xml","BRMS","BRE"]
 description: 'How to get started with OpenL Tablets. Business rules, for excel users.'
 url: 'understanding-openl-tablets'
 ---
 
 **[OpenL Tablets](https://www.openl-tablets.org/)** is a powerful business rule management system (BRMS) that leverages Excel spreadsheets for defining and managing business rules.
+
+{{< details title="OpenL Tablets vs XML 📌" closed="true" >}}
+
+OpenL Tablets (often just "OpenL") is a **Business Rule Management System (BRMS)** and a **Business Rules Engine (BRE)**. 
+
+Its core idea is to allow business users to define and manage complex business logic in a way that is familiar to them: using **tables, often in Excel documents**.
+
+Let's break that down:
+
+* **Business Rules Management System (BRMS):** This is a software system that helps organizations define, deploy, execute, monitor, and maintain their business rules. It aims to bridge the gap between business analysts (who define the rules) and developers (who implement them).
+* **Business Rules Engine (BRE):** This is the component of a BRMS that actually executes the business rules. When your application needs to make a decision based on business logic, it sends data to the rule engine, and the engine processes it according to the defined rules and returns a result.
+
+**The "Tablets" in OpenL Tablets refers to its unique approach:**
+
+Instead of writing rules in traditional programming code or complex XML directly, OpenL Tablets allows you to define rules in various table formats within documents, most commonly Microsoft Excel spreadsheets. These tables can be:
+
+* **Decision Tables:** Used for defining a set of conditions and corresponding actions.
+* **Decision Trees:** Visual representation of decision logic.
+* **Spreadsheet-like Calculators:** For defining calculations and formulas.
+* **Other table types:** OpenL supports various structures to capture different kinds of business logic.
+
+The goal is to empower business users to directly "author" and maintain these rules, reducing the need for constant developer intervention for every business logic change.
+
+**Is it generating XML business rules?**
+
+Yes, in a way, **OpenL Tablets uses XML behind the scenes for its project configuration and to represent its internal structure, but it's not primarily about *generating XML for end-user business rules* in the same way you might write an XML schema for data.**
+
+Here's the nuance:
+
+1.  **Internal XML for Project Definition:** OpenL Tablets projects often have a "rules project descriptor," which is an **XML file**. This XML file defines the project configuration, lists the Excel files containing the actual rules, and sets up dependencies between different rule modules. This XML helps OpenL Tablets understand how to load and compile the rules defined in your Excel tables.
+2.  **Not Direct XML Authoring for Business Rules:** The business user doesn't typically write raw XML to define their decision tables or business logic. They use the intuitive table formats in Excel or the OpenL WebStudio.
+3.  **Transformation to Executable Code:** When you "deploy" OpenL Tablets rules, the engine processes these tables (from Excel and the internal XML descriptors) and transforms them into executable code (often Java bytecode). This allows the rules to be run efficiently within applications, or exposed as services (like RESTful APIs).
+
+So, while XML plays a crucial role in OpenL Tablets' internal structure and configuration, the strength of OpenL Tablets lies in its ability to abstract away that complexity, allowing business users to work with more human-readable, table-based rule definitions. 
+
+The system then handles the "technical" representation and execution, which might involve XML and other compiled formats internally.
+
+{{< /details >}}
 
 To effectively use this tool, it's essential to grasp the following:
 
@@ -66,7 +104,7 @@ To effectively use this tool, it's essential to grasp the following:
 * https://hub.docker.com/r/openltablets/demo
 
 ```yml
-version: '3.8'  # Using version 3.8, but you can use other versions as appropriate
+#version: '3.8'  # Using version 3.8, but you can use other versions as appropriate
 
 services:
   openltablets-demo:
@@ -91,7 +129,7 @@ services:
 * And the WebStudio - https://hub.docker.com/r/openltablets/webstudio
 
 ```yml
-version: '3.8'  # Using version 3.8, but you can use other versions as appropriate
+#version: '3.8'  # Using version 3.8, but you can use other versions as appropriate
 
 services:
   openl-webstudio:
