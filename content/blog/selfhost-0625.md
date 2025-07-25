@@ -215,6 +215,42 @@ For more photo/video tricks, see also:
 
 3. IT/Toos + OmniTools
 
+4. Specters: Some kind of filebrowser, but better?
+
+* https://github.com/Phantom8015/Specters
+
+> MIT | A linux web interface
+
+```sh
+docker run -p 3001:3000 phantom8016/specters:latest
+```
+
+![Specters for HomeLab File Management](/blog_img/selfh/HomeLab/specters.png)
+
+5. PortTracker
+
+```yml
+version: "3.8"
+
+services:
+  portracker:
+    image: mostafawahied/portracker:latest
+    container_name: portracker
+    restart: unless-stopped
+    network_mode: "host"
+    volumes:
+      # Required for data persistence
+      - ./portracker-data:/data
+      # Required for discovering services running in Docker
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - DATABASE_PATH=/data/portracker.db
+      - PORT=4999
+      # Optional: For enhanced TrueNAS features
+      # - TRUENAS_API_KEY=your-api-key-here
+```
+
+![alt text](/blog_img/selfh/HomeLab/PortTracker.png)
 
 ### HomeLab Diagrams
 
@@ -236,10 +272,12 @@ To have a rendered pdf with instructions how to access your selfhosted services
 
 ## Conclusions
 
-Termix has been great to manage couple of homelab devices.
+Termix has been great to manage couple of homelab devices:
+
+![alt text](/blog_img/selfh/HomeLab/termix-specters.png)
 
 ```sh
-http://192.168.1.11:8090/
+http://192.168.1.11:8090
 ```
 
 Filebrowser dev has been abandoned and for me it was still a thing to combine it with PiGallery2.

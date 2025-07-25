@@ -50,6 +50,8 @@ This will allow you to see the changes live:
 npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/ #useful to see from your phone how it looks
 ```
 
+> With the second command, you will be able to see how the website looks from your phone, if its connected to the same wifi as your laptop
+
 This is required to check that its all ready for static hosting:
 
 ```sh

@@ -24,7 +24,7 @@ It was all about some software setup on a VPS:
 
 But how to bring this service to more people and [get paid for it](#stripe)?
 
-This requires proper packaging, quite some additional tech to bring the offer to prospects:
+This requires proper packaging, quite some additional tech to **bring the offer to prospects**:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="How to use LogTo for Authenticate users into your flow | Post ↗ " >}}

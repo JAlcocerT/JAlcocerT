@@ -41,11 +41,11 @@ One of the skills I enjoy learning more is about photography.
 
 One of the best decisions I ever had was to have a Photo Blog.
 
-> Now you can also tell your story.
+> Now you can also tell your story
 
 Check how, *if you are passionate about Photography*
 
-Web templates (SSG'ed) connected to CMS
+Web templates (SSG'ed) connected to CMS's
 
 #### Leads and Offers
 
@@ -73,7 +73,9 @@ Linktree does things very well, yet cant compete with:
 <!-- https://www.youtube.com/watch?v=YgJ5ZEn67tk -->
 {{< youtube "YgJ5ZEn67tk" >}}
 
-5. What are you afraid of loosing if you wont take any with you?
+5. Quote
+
+> *What are you afraid of loosing if you wont take any with you?*
 
 6. Guesstimates
 
@@ -83,6 +85,9 @@ An example?
 
 Could [the aissistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main) have any additional feature not to *leave money on the table*?
 
+8. Mental **Obesity**
+
+From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael Easter) https://open.spotify.com/episode/6EDcPmRd6HHh2zdDnapEFS
 
 ## Processes
 
@@ -105,6 +110,8 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 ### Creating Tech Videos
 
+Last year I set this as a goal.
+
 What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
 
 1. [Cloudflare Tunnels](https://www.youtube.com/watch?v=k75PviBQeA0)
@@ -126,6 +133,17 @@ What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
 17. 
 18. 
 19. 
+
+If this was too much content, you can always use a LLMs to summarize the YT Videos, like this one, or like:
+
+* https://github.com/DevRico003/youtube_summarizer
+
+> MIT | A modern Next.js-based tool for AI-powered YouTube video summarization. This application allows you to generate concise summaries of YouTube videos using different AI models, with support for multiple languages and summary styles.
+
+* https://github.com/Milkshiift/YouTubeTLDR
+
+> MIT | ⚡ A lightweight, self-hosted YouTube video summarizer with Gemini AI
+
 
 It was a year of a lot of applied AI...
 

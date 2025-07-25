@@ -308,3 +308,45 @@ How could I not mention the awsome 3B1B channel and its OSS animation engine, th
 > Math Animation engine for explanatory math videos. The ones [3Blue1Brown Channel created](https://www.youtube.com/watch?v=rbu7Zu5X1zI)!
 
 {{< youtube "rbu7Zu5X1zI" >}}
+
+<!-- https://youtu.be/BuVFMVGZxtY?si=FmIS8B57-5J4j--T -->
+
+
+{{< youtube "BuVFMVGZxtY" >}}
+<!-- 
+https://youtu.be/Tjc-qrjzRcU?si=mv6RcbArGfjsCad_ -->
+
+{{< youtube "Tjc-qrjzRcU" >}}
+
+
+<!-- https://youtu.be/Rez6h808M-U?si=mHkTnIy9sejfVncY
+ -->
+
+{{< youtube "Rez6h808M-U" >}}
+
+
+https://youtu.be/xpvWHrgVZUg?si=a0wOyHHtd_KD2GtA
+
+https://youtu.be/u2C3NMDrmCw?si=W2dMEVlUdvw2me8X
+
+https://youtu.be/DZQ5-INW32Y?si=a1YPGn77-8vH-F8H
+
+https://youtu.be/5xsUOmi-MxY?si=uK7sNHScVORAWf6R
+
+https://youtu.be/5d_WxPEpr3Q?si=kMubQx542aCQlHlT
+
+If you are into physics and mechanics...
+
+<!-- 
+https://youtu.be/v0cZjOIfwos?si=mU7mej3IoFF25GD2 
+-->
+
+{{< youtube "v0cZjOIfwos" >}}
+
+<!-- 
+https://youtu.be/efqhjbQ0fRE?si=Q7a7fCMGw36yi2kU 
+-->
+
+
+{{< youtube "efqhjbQ0fRE" >}}
+

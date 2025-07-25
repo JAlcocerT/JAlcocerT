@@ -201,6 +201,10 @@ Also, you can put some **[whatsapp](https://api.whatsapp.com/send/?phone=9054219
   {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro" title="Astro Component" image="/blog_img/web/astro-whatsapp-bouble.png" subtitle="Whatsapp x Astro" >}}
 {{< /cards >}}
 
+You can combine the WA with the cal.com bouble:
+
+![Astro Theme + Boubles](/blog_img/web/astro/astro-wa-cal-bouble.png)
+
 ---
 
 ## FAQ

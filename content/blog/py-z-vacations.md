@@ -340,6 +340,8 @@ flatpak install flathub app.organicmaps.desktop
 * https://github.com/joaovitoriasilva/endurain
 * https://github.com/johanohly/AirTrail
 
+![AirTrail UI](/blog_img/selfh/HomeLab/airtrail.png)
+
 > GPL3.0 | A modern, open-source personal flight tracking system
 
 See also the AdventureLog project:
@@ -349,6 +351,10 @@ See also the AdventureLog project:
 
 It has very interestin [use cases](https://adventurelog.app/docs/usage/usage.html), even integration with Immich
 
+
+Or the
+
+* https://github.com/itskovacs/trip?tab=License-1-ov-file#readme
 
 Share media with your friends (airdrop for all devices):
 

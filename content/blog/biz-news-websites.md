@@ -2,8 +2,8 @@
 title: "Features for a Professional Looking News Website"
 date: 2025-05-16
 draft: false
-tags: ["Web","Beyond a Journey"]
-description: "Creating a News focused Website with App Directory section (with Astro SSG). Beyond the basics."
+tags: ["Web","Astro SSG","Beyond a Journey"]
+description: "Creating a News focused Website with App Directory section. Beyond the basics."
 url: 'creating-web-directory-website'
 ---
 
@@ -117,9 +117,13 @@ As part of the tests, I used CF Wrangler CLI for a quick static deployment:
 
 And soon after, with CI/CD: [Github -> CF WnP](https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#cloudflare-as-authoritative-name-server)
 
+Configure properly the build of your SSG:
+
 ```sh
 cd ./astro-news && npm run build
 ```
+
+![alt text](/blog_img/web/astro/astro-cf-build.png)
 
 ![Astro-News Theme - beyond a journey result](/blog_img/web/astro/astro-news-theme-beyondajourney.png)
 

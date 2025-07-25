@@ -31,6 +31,11 @@ And now there is a chance to do a **photo & video recap**
 
 <!-- https://www.youtube.com/watch?v=kaa1vPHqKdw -->
 
+<!-- https://www.youtube.com/watch?v=iuhXwVNdz4w -->
+
+{{< youtube "iuhXwVNdz4w" >}}
+
+
 {{< youtube "kaa1vPHqKdw" >}}
 
 {{< callout type="info" >}}
@@ -390,7 +395,11 @@ If you are into OSS, see:
 
 ## Conclusions
 
+Every file has some metadata.
 
+If you want, you can clean it with: https://github.com/KitQuietDev/rMeta
+
+> MIT | Secure, local tool for metadata stripping, GPG encryption, and file sanitization.
 
 
 Now its time to put theory in practice:

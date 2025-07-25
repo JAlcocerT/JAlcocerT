@@ -55,6 +55,7 @@ git log --follow -- <file_path> #see which commits are affecting a particular fi
 #create a new branch from main
 git checkout -b <new-branch-name> main
 ```
+> There are many git patterns / branching strategies, an interesting one is [this one](https://learn.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance?view=azure-devops#keep-your-branch-strategy-simple) keeping main as the only reality
 
 This can be useful in combination with LLMs, like github copilot, to bring them context!
 

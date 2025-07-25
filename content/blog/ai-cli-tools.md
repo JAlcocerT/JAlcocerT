@@ -2,7 +2,7 @@
 title: "AI Tools for CLI"
 date: 2025-06-25T01:20:21+01:00
 draft: false
-tags: ["Gemini CLI","LLMs","BAML","git-mcp","codeact","manus"]
+tags: ["Gemini CLI","LLMs","BAML","git-mcp","scira-mcp","CodeAct","manus"]
 description: 'A look to the CLI tools to bring LLMs and better prompt engineering with BAML'
 url: 'ai-tools-for-cli'
 ---
@@ -236,16 +236,34 @@ If you are familiar with BRD/PRD and similar project management concept, Claude 
 
 #### WARP IDE
 
-https://www.warp.dev/
+* https://www.warp.dev/
 
 #### AIDER
+
+
+## More MCP Tools
+
+Git MCP was a great discovery.
+
+But there are other interesting MCP tools already...
+
+![Windsurf MCP](/blog_img/GenAI/geminiCLI/windsurf-mcp.png)
+
+Which can be discovered from within Windsurf's MCP store!
+
+### Scrira MCP Chat
+
+* https://github.com/zaidmukaddam/scira-mcp-chat
+   * https://mcpchat.scira.ai/chat/
+
+>  Apache v2 | A minimalistic MCP client with a good feature set. 
 
 ## BAML
 
 * https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
 * https://docs.boundaryml.com/home
   * https://gitmcp.io/BoundaryML/baml - This can be added to windsurf as MCP reference about BAML via SSE
-  * https://gitmcp.io/BoundaryML/baml/chat
+  * https://gitmcp.io/BoundaryML/baml/chat - Or just ask via web UI
 
 ```sh
 ext install Boundary.baml-extension
@@ -258,20 +276,27 @@ You might hear about BAML as per its **type safe guarantees for LLMs**:
 When comparing with BAML, you can see several key differences:
 
 1. Type Safety:
-Without BAML: You manually define JSON schemas, no compile-time checking
-With BAML: Types are checked at compile time with Pydantic
+
+* Without BAML: You manually define JSON schemas, no compile-time checking
+* With BAML: Types are checked at compile time with Pydantic
+
 2. Configuration vs. Code:
-Without BAML: Function definitions are mixed with business logic
-With BAML: Function definitions are in declarative BAML files
+
+* Without BAML: Function definitions are mixed with business logic
+* With BAML: Function definitions are in declarative BAML files
+
 3. Maintenance:
-Without BAML: Parameter changes require code updates in multiple places
-With BAML: Changes in one BAML file propagate to generated code
+
+* Without BAML: Parameter changes require code updates in multiple places
+* With BAML: Changes in one BAML file propagate to generated code
 
 
 > "*Every system in the world should be able to run LLMs, not just Python*. Vaibhav Gupta."
 
 * https://github.com/BoundaryML/baml
 * https://pypi.org/project/baml-py/
+
+For a python project with uv:
 
 ```sh
 uv init

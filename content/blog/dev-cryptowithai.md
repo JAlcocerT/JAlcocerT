@@ -1,6 +1,6 @@
 ---
 title: "Crypto. Now understandable with AI"
-date: 2025-09-13
+date: 2025-06-24
 draft: false
 description: 'Two buzz words in one. Understand crypto once and for all. This time thanks to LLMs'
 url: 'understading-crypto-with-ai'
@@ -10,13 +10,17 @@ url: 'understading-crypto-with-ai'
 
 > ChainList is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.
 
-
 Here we go again...
 
 I was testing [Astro Bento Portfolio + Github Pages + Github CI/CD](https://github.com/JAlcocerT/web3) with the resulting Web3/Crypto related microblog [here](https://jalcocert.github.io/web3/).
 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/web3" title="Web3 Astro Bento Template" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a sample blog were I chatted with LLMs about few crypto concepts." >}}
+{{< /cards >}}
+
 {{< callout type="warning" >}}
-This post is just describing the process to apply data analytics with crypto. **Not any recommendation or financial advice of any type.**
+This post is just describing the process to apply data analytics with crypto. **This is NOT a recommendation or financial advice of any type.**
 {{< /callout >}}
 
 Some time ago I was having a look to this **amazing BlockChain/Solidity FreeCodeCamp course:**
@@ -31,16 +35,16 @@ Some time ago I was having a look to this **amazing BlockChain/Solidity FreeCode
 <!-- 
 inspired by CryptaIQ and keeping that intelligent, AI-powered vibe:
 
-    ProtocolAI – Simple and clear, focusing on AI-powered protocol insights.
-    DeCryptIQ – Emphasizing crypto and intelligent insights with a "decryption" feel.
-    BlockWise – Suggests wisdom and understanding of blockchain protocols.
-    CryptoLens – Implies a clear view or “lens” into understanding crypto.
-    ChainSage – Conveys expertise and guidance in blockchain.
-    Protocolize – Playful and suggests simplifying protocols with AI.
-    InsightChain – Focuses on providing deep insights into blockchain protocols.
-    CryptoCompass – Implies navigating and understanding the crypto landscape.
-    IntelliChain – A combination of intelligence and blockchain, emphasizing smart analysis.
-    BlockIQ – Short, catchy, and focused on intelligent blockchain insights. -->
+ProtocolAI – Simple and clear, focusing on AI-powered protocol insights.
+DeCryptIQ – Emphasizing crypto and intelligent insights with a "decryption" feel.
+BlockWise – Suggests wisdom and understanding of blockchain protocols.
+CryptoLens – Implies a clear view or “lens” into understanding crypto.
+ChainSage – Conveys expertise and guidance in blockchain.
+Protocolize – Playful and suggests simplifying protocols with AI.
+InsightChain – Focuses on providing deep insights into blockchain protocols.
+CryptoCompass – Implies navigating and understanding the crypto landscape.
+IntelliChain – A combination of intelligence and blockchain, emphasizing smart analysis.
+BlockIQ – Short, catchy, and focused on intelligent blockchain insights. -->
 
 
 
@@ -245,7 +249,7 @@ https://de.fi/explore/borrow-lending/cat/stablecoin
 
 ![alt text](/blog_img/crypto/sample-eth-wallet.png)
 
-![alt text](/blog_img/crypto/sample-eth-aave.png)
+![AAVE v3 ETH Lending](/blog_img/crypto/sample-eth-aave.png)
 
 * https://www.reddit.com/r/CryptoCurrency/comments/mnzv1c/defi_explained_lending_borrowing/
 * https://www.reddit.com/r/CryptoCurrency/comments/nletmi/defi_explained_the_full_guide/#:~:text=Decentralized%20Finance%20(DeFi)%20is%20a,protocols%20that%20work%20without%20intermediaries.
@@ -329,6 +333,117 @@ For example, the **aave token is ERC20**:
 ---
 
 ## Conclusions
+
+I could not resist to try few protocols (under my own risk).
+
+![Metamask Transactions Notifcations via ZorinOS](/blog_img/crypto/defi/metamask-zorin-notif.png)
+
+So...does the code explanations match what happened in reality?
+
+
+### Crypto Example 1
+
+**Lending with Aave.**
+
+I lended ETH, which gave me `aEthWETH` mapped 1:1 with the amount deposited.
+
+After some time, i started getting new ETH (?)
+
+![alt text](/blog_img/crypto/defi/aave-eth-and-usdt.png)
+
+![AAVE v3 UI](/blog_img/crypto/defi/aave-v3-coreinstance.png)
+
+**The AAve ETH Staking smart contract**: https://etherscan.io/address/0xd01607c3c5ecaba394d8be377a08590149325722#code
+
+### Crypto Example 2
+
+This relates with: https://instadapp.io/
+
+> The Unified Platform for Everything DeFi
+
+Lending with FLuid: https://fluid.io/lending/1
+
+I tested it with lending `USDT`.
+
+![alt text](/blog_img/crypto/defi/fluid-usdt-metamask.png)
+
+![alt text](/blog_img/crypto/defi/fluid-usdt-metamask-2.png)
+
+See USDT https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7?a=0x52aa899454998be5b000ad077a46bbe360f4e497 with ~8M holders
+
+Placed 40$ in, and the transaction cost me some gas (2.11$ in USDT or 1.29$ in ETH == 2.363828823 Gwei)
+
+![alt text](/blog_img/crypto/defi/fluid-transaction-cost.png)
+
+![alt text](/blog_img/crypto/defi/fluid-gas-etherscan.png)
+
+![alt text](/blog_img/crypto/defi/fluid-usdt-etherscan-transaction.png)
+
+You can pay in different tokens:
+
+![alt text](/blog_img/crypto/defi/fluid-gas-pay.png)
+
+![alt text](/blog_img/crypto/defi/fluid-gas-transactio.png)
+
+I got 34.684249 `fUSDT` mapped to it, in theory to a ~7% interest: 
+
+![alt text](/blog_img/crypto/defi/usdt-apy.png)
+
+![alt text](/blog_img/crypto/defi/etherscan-assets.png)
+
+![alt text](/blog_img/crypto/defi/fluid-supply-usdt.png)
+
+And now it appears:
+
+![alt text](/blog_img/crypto/defi/fluid-ui-post-lending.png)
+
+NetAPR examples:
+
+![alt text](/blog_img/crypto/defi/fluid-usdt-netapr.png)
+
+To recover your initial investment of $40 after it dropped by 13% and then grew at an annual rate of 7%:
+
+Value after the drop: Your investment of $40 dropped by 13%, meaning it became $40 \times (1 - 0.13) = 34.80.
+
+Required growth to recover: To get back to $40 from $34.80, your investment needs to grow by a factor of 40/34.80
+approx1.1494.
+
+Time to recover: With an annual growth rate of 7% (0.07), it would take approximately 2.06 years to recover your initial investment.
+
+See fUSDT: https://etherscan.io/token/0x5c20b550819128074fd538edf79791733ccedd18 with ~1k holders
+
+<!-- 
+https://etherscan.io/tx/0xec1272d2f8f2c146e9cdb835b7ba75dd2b22fbeaf5264af3a50a38f12392fdc2 -->
+
+See in your wallet transaction details
+
+> But I really didnt get the drop to 34 (-13,3%), despite showing 40$ value on the UI...
+
+As we are here for the code and how AI can interprete it, this is the **fluid Smart Contract**: https://etherscan.io/address/0x5C20B550819128074FD538Edf79791733ccEdd18#code
+
+### Example 3
+
+I could not resist to go back to **aave v3** and lend the rest of USDT for comparison.
+<!-- 
+https://portfolio.metamask.io/networks/1/transactions/0x0d0eb1599871c0cee559b6b76abfd377d9fc2c292b806d0966ee52f758ee7702 -->
+
+8 USDT supplied, ~0.44$ usd paid in gas fees via eth (2461719711 wei)
+
+But something went wrong, and the gas was spent, yet the 8 USDT werte still at my wallet.
+
+So i tried again with 5USDT (and slow speed to safe some gas, as i have to pay again 0.456722383 Gwei)
+<!-- 
+https://etherscan.io/tx/0x353a4a3232a037ff6e3e2db44576220f7a2e0b349fc63de94287f504e2dd26fc -->
+
+Then, i got `aEthUSDT` https://etherscan.io/token/0x23878914efe38d27c4d67ab83ed1b93a74d4086a with a ~3,26% interest
+
+> If someone borrow, it will do 4,72%
+
+After spending some eth in these transactions, this is how the asset looks like:
+<!-- 
+https://etherscan.io/address/0x89c4f8ba6111e708e7fa108b49d769c1faaf67d0#asset-tokens -->
+
+![Asset Tokens ETH wallet](/blog_img/crypto/defi/eth-wallet-assets-tokens-snapshot.png)
 
 ---
 

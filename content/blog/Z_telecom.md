@@ -2,7 +2,7 @@
 title: "Interesting Telecom Concepts"
 date: 2023-12-31T23:20:21+01:00
 draft: false
-tags: ["Analytics","D&A"]
+tags: ["Analytics","D&A","DOCSIS","Fiber"]
 description: 'Interesting Telecom stuff I got to know while using a Data LakeHouse'
 url: 'telecom-concepts-101'
 ---
@@ -290,6 +290,53 @@ The primary signal carried over the coaxial cable to your cable modem in an HFC 
 The coaxial cable delivers **RF data signals (AC, low voltage)** to your cable modem via the HFC network using the DOCSIS standard.
 
 Your cable modem itself gets its **DC power (typically 12V DC)** from a separate power adapter plugged into your wall's electrical outlet.
+
+---
+
+DOCSIS (Data Over Cable Service Interface Specification) is the international standard that enables high-speed internet over existing cable TV infrastructure (Hybrid Fiber-Coaxial or HFC networks). Each new version introduces significant improvements in speed, efficiency, and features.
+
+Here's a breakdown of the key differences between DOCSIS versions:
+
+**Early Versions (1.0, 1.1, 2.0):**
+
+* **DOCSIS 1.0 (1997):** The foundational standard, offering up to 40 Mbps downstream and 10 Mbps upstream.
+* **DOCSIS 1.1 (1999):** Introduced Quality of Service (QoS) mechanisms and support for Voice over IP (VoIP), but kept similar speeds to 1.0.
+* **DOCSIS 2.0 (2002):** Focused on improving upstream speeds, reaching up to 30 Mbps upstream while downstream remained at 40 Mbps. It used more effective modulation schemes.
+
+**DOCSIS 3.0:**
+
+* **Release (2006):** A significant leap forward.
+* **Key Feature: Channel Bonding.** This allowed the combination of multiple downstream and upstream channels, dramatically increasing speeds.
+* **Speeds:** Up to 1 Gbps downstream and 200 Mbps upstream (though real-world speeds vary depending on the number of bonded channels and network implementation). EuroDOCSIS, used in Europe, supported higher speeds due to wider channels.
+* **Other Features:** Enabled IPv6 functionality and AES encryption.
+* **Current Status:** Still widely used for many internet plans, especially those below gigabit speeds.
+
+**DOCSIS 3.1:**
+
+* **Release (2013):** Built upon 3.0 with more advanced technologies.
+* **Key Features: OFDM (Orthogonal Frequency Division Multiplexing) and OFDMA (Orthogonal Frequency Division Multiple Access).** These advanced modulation techniques allow for much more efficient use of spectrum, dividing the bandwidth into multiple narrower subchannels. This provides better performance in challenging network conditions and reduces interference.
+* **Speeds:** Capable of up to 10 Gbps downstream and 1-2 Gbps upstream. This is a significant jump from DOCSIS 3.0.
+* **Other Features:** Improved error correction (LDPC), lower latency, and more flexible modulation schemes. It also eliminated the need for separate EuroDOCSIS standards.
+* **Current Status:** The most common DOCSIS version for gigabit and multi-gigabit cable internet services. Many new modems are DOCSIS 3.1.
+
+**DOCSIS 4.0:**
+
+* **Specification Issued (2019):** Aims to deliver "10G" capabilities over HFC networks.
+* **Key Features: Full Duplex DOCSIS (FDX) and Extended Spectrum DOCSIS (ESD).**
+    * **FDX:** Allows for simultaneous upstream and downstream transmission on the same block of spectrum, leading to true symmetrical multi-gigabit speeds.
+    * **ESD:** Expands the available frequency spectrum for both upstream and downstream, enabling higher capacities.
+* **Speeds:** Up to 10 Gbps downstream and up to 6 Gbps upstream, significantly improving upstream capacity.
+* **Other Features:** Enhanced reliability, security, and lower latency. It seeks to bring fiber-like symmetrical speeds to cable networks.
+* **Current Status:** DOCSIS 4.0 modems are starting to become available, and cable providers are in the process of evaluating, testing, and beginning initial deployments. It's a major step towards enabling symmetrical multi-gigabit services over existing HFC networks.
+
+**DOCSIS 5.0:**
+
+* **Status: Under development/Early Planning.** DOCSIS 5.0 is not yet a finalized standard, nor is it commercially deployed anywhere.
+* **Goals:** Often referred to as "25G DOCSIS" or "3 GHz DOCSIS," the discussions around DOCSIS 5.0 are focused on pushing speeds even further, potentially exceeding 20 Gbps downstream and increasing upstream speeds further by expanding the spectrum to 3 GHz or even higher.
+* **Development:** Companies like Comcast, Charter, and Broadcom have announced collaborations to develop a unified DOCSIS 5.0 standard. Prototypes and demonstrations of 25G DOCSIS have been shown.
+* **Deployment:** Given that DOCSIS 4.0 is only just beginning to see deployment, DOCSIS 5.0 is still in very early stages and will likely not see widespread deployment for several years. The industry is currently focused on maximizing DOCSIS 3.1 and rolling out DOCSIS 4.0.
+
+In summary, each DOCSIS version has built upon the previous one, primarily by increasing maximum theoretical speeds, improving spectrum efficiency, and enhancing capabilities like QoS and latency. While DOCSIS 4.0 is the latest version being actively deployed, DOCSIS 5.0 is still in the conceptual and early development phase, aiming for even higher speeds in the future.
 
 {{< /details >}}
 

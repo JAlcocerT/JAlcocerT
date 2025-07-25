@@ -70,6 +70,16 @@ They are great companions for SBC's like a RPi:
 Connecting ESP32 to Linux - https://github.com/tio/tio
 IDE - Thonny
 
+You can do ton of stuff with a ESP32, like building a [drone](https://jalcocert.github.io/JAlcocerT/useful-dron-stuff/):
+
+* https://github.com/Circuit-Digest/ESP-Drone
+
+<!-- 
+https://www.youtube.com/watch?v=V_mZsiZcy7s -->
+
+{{< youtube "V_mZsiZcy7s" >}}
+
+
 ### Testing ESP32
 
 
