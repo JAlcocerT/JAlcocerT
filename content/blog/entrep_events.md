@@ -3,7 +3,7 @@ title: "Shipping | Photo for Events"
 date: 2025-07-25T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring"]
-description: ''
+description: 'Filebrowser vs PicPeak vs Transfer vs CloudReve. From Weddings to Events.'
 url: 'events-photo-galleries'
 ---
 
@@ -39,5 +39,10 @@ Which can be deployed as per: https://github.com/the-luap/picpeak/blob/main/DEPL
 > agpl 3.0 | A self-hostable complete file-sharing solution that focuses on reliability, security and ease of use.
 
 4. https://github.com/cloudreve/Cloudreve
+
+Cloudreve can help you build a self-hosted file management service that is both suitable for private and public use, with support for multiple storage providers and virtual file systems to provide a flexible file management experience.
+
+
+
 
 > GPL3/0 | 🌩 Self-hosted file management and sharing system, supports multiple storage providers

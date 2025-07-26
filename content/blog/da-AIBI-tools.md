@@ -91,8 +91,7 @@ Remember about maps:
 * https://docs.streamlit.io/develop/api-reference/charts/st.map
 * https://github.com/Leaflet/Leaflet
 
-To run it, I will be using **uv** as a venv:
-
+To run it, I will be [using **uv** as a venv](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/#uv):
 
 ```sh
 uv --version
@@ -109,7 +108,6 @@ uv run streamlit run main.py
 ```
 
 Thats pretty much it (way faster than via pip install!)
-
 
 ![Streamlit PyGWalker Rendered Map with locations](/blog_img/apps/streamlit/st_pygwalker_map.png)
 

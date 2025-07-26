@@ -1,13 +1,72 @@
 ---
-title: "Admin Panels for Websites "
-date: 2025-12-14
-draft: true
+title: "Admin Panels for Websites | Testing Manifest "
+date: 2025-07-24
 tags: ["AI"]
-description: "Admin Panels."
-summary: '.'
+description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
 ---
 
+Ive been exploring few authentications method lately.
+
+And suddendly, I have found an interesting solution (that its vibe coded friendly!): [Manifest](#manifest)
+
+## Manifest
+
+* https://github.com/mnfst/manifest
+    * https://manifest.build/
+    * https://manifest.build/docs
+        * https://manifest.build/docs/astro
+
+> **MIT** | A backend for modern workflow. 🦚 Code or vibe-code your backend in seconds with Manifest.
+
+<!-- https://www.youtube.com/watch?v=BceJdw2W6GU -->
+
+{{< youtube "BceJdw2W6GU" >}}
+
+
+**Why manifest**
+
+Manifest is an Open Source, portable backend that fits into 1 YAML file. Easy for both humans and LLMs to generate and validate.
+
+Host it on any server that can run NodeJS.
+
+Manifest comes with essential features like auth and custom logic, and a built-in admin panel.
+
+Manifest fits great in those type of projects:
+
+🛠️ Rapid prototyping: POCs and MVPs | Turning any entity into an authenticated user is as simple as adding a authenticable: true line to your backend file.
+🧩 Micro services: notification, payment, logging, file services...
+🏭 CRUD-heavy apps: mobile apps, directories, PIMs, E-shops
+🌐 Headless CMS: dynamic corporate websites, portfolios, blogs...
+
+### Manifest 101
+
+This sounds great for quick PoCs:
+
+https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
+
+![Streamlit PyGWalker Rendered Map with locations](/blog_img/apps/streamlit/st_pygwalker_map.png)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
+{{< /cards >}}
+
+But how to **get started with Manifest**?
+
+
+```sh
+npx create-manifest@latest  --windsurf
+```
+
+### Manifest UseCases
+
+#### Headless CMS
+
+Via Flask, you can make a quick webapp to allow users to edit specific fields of your SSG Themes.
+
+---
+
+## Others
 
 ### AdminJS
 
@@ -29,23 +88,34 @@ https://tailadmin.com/
 
 ### Open Admin
 
-https://open-admin.org/
-https://github.com/open-admin-org/open-admin
+* https://open-admin.org/
+* https://github.com/open-admin-org/open-admin
 
 ### Flask Dahobards
 
-https://appseed.us/admin-dashboards/open-source/
-https://github.com/app-generator/flask-argon-dashboard
+* https://appseed.us/admin-dashboards/open-source/
+* https://github.com/app-generator/flask-argon-dashboard
 
 
-### 
+###  NGX Admin
 
 https://github.com/akveo/ngx-admin
+
+## Authentication
+
+### Authentication with Logto
+
+* https://github.com/voidauth/voidauth
+
+> Agpl v3 | An Easy to Use and Self-Host Single Sign-On Provider 🐈‍⬛🔒
+
+---
+
+## Conclusions
+
 
 ---
 
 ## FAQ
 
-### Authentication
-
-### Static Routes
+### Password Protected Static Routes with NGINX 

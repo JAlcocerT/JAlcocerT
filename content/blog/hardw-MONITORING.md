@@ -1,5 +1,5 @@
 ---
-title: "Server Monitoring [Recap]. Know your hardware' health."
+title: "Server Monitoring [Recap]. Know your hardware' Health"
 date: 2025-02-05
 draft: false
 tags: ["Dev","HomeLab","SelfHosting"]
@@ -24,31 +24,9 @@ So I went back to the [VPS provider](https://jalcocert.github.io/Linux/docs/linu
 
 Following the docs - https://beszel.dev/guide/getting-started
 
-```yml
-services:
-  beszel:
-    image: henrygd/beszel:latest
-    container_name: beszel
-    restart: unless-stopped
-    extra_hosts:
-      - host.docker.internal:host-gateway
-    ports:
-      - 8090:8090
-    volumes:
-      - ./beszel_data:/beszel_data
-
-  beszel-agent:
-    image: henrygd/beszel-agent:latest
-    container_name: beszel-agent
-    restart: unless-stopped
-    network_mode: host
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    environment:
-      PORT: 45876
-      # Do not remove quotes around the key
-      KEY: 'UPDATE WITH YOUR PUBLIC KEY (copy from "Add system" dialog)' #you will take it from the UI when adding a new monitor, copy the compose for the agent, and there it is
-```
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/Monitoring-Notifications/beszel_docker-compose.yml" title="Beszel with Docker 🐋 ↗" >}}
+{{< /cards >}}
 
 Then, you will **create the admin user** at first login.
 
@@ -84,7 +62,6 @@ Remember to add the Public server IP as host (or the private IP of your home net
 
 ### Tianji
 
-
 Its not just a **web analytics** tool!
 
 ![Tianji Server Monitoring](/blog_img/Monitoring/tianji-server-monit.png)
@@ -103,9 +80,10 @@ To stop Tianji:
 systemctl --type=service --state=running
 # sudo systemctl stop tianji-reporter.service
 ```
+For just web analytics:
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/Analytics/medama_docker-compose.yml" title="For just web analytics - See Medama Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/Analytics/medama_docker-compose.yml" title="See Medama Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ### Netdata and Grafana
@@ -120,7 +98,7 @@ My first monitoring at the homelab were possible thanks to:
   {{< card link="https://jalcocert.github.io/RPi/posts/selfh-grafana-monit/" title="Grafana Setup with a Pi 🐋 ↗" >}}
 {{< /cards >}}
 
-And you can actually use Netdata + Grafana + Prometheus to make a cool monitoring setup.
+And you can actually use Netdata + Grafana + Prometheus to make a **cool monitoring setup**:
 
 {{< cards cols="1" >}}
   {{< card link="https://noted.lol/netdata-prometheus-and-grafana/" title="See how to build such monitoring at noted.lol ↗" >}}

@@ -221,8 +221,10 @@ ffmpeg -i DJI_20250518172824_0001_D.MP4 -c copy -bsf:v hevc_metadata=crop_left=9
 
 #### Thumbnails
 
+If you have extracted an image from your video, you can force it to be the video thumbnail:
 ```sh
-ffmpeg -i extracted-image.png -c:v libwebp -quality 80 ./compressed_thumbnail.webp
+#ffmpeg -i extracted-image.png -c:v libwebp -quality 80 ./compressed_thumbnail.webp
+ffmpeg -i cat.png -c:v libwebp -quality 80 ./compressed_thumbnail.png
 ```
 
 #### AI Powered shorts

@@ -36,6 +36,10 @@ If you are new to SSGs, have a look to:
 
 > **MIT** | A news website built with Astro
 
+Which is some kind of theme that very interesting people would use to tell you a life story: https://www.cyclingabout.com/
+
+
+
 {{< details title="What I like about Astro News Theme - Search, mdx, OG, RSS... 📌" closed="true" >}}
 
 1. Post are writen with `.mdx`

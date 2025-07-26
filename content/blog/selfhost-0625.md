@@ -3,7 +3,7 @@ title: "SelfHosting - 1st Half 2025 "
 date: 2025-06-30T01:20:21+01:00
 draft: false
 tags: ["HomeLab","Authentication","P2P","Traefik https"]
-description: 'Programatic Https for all services and docker stacks runnong in your server'
+description: 'Programatic Https for all services and docker stacks runnong in your server.'
 url: 'selfhosted-apps-06-2025'
 ---
 
@@ -153,40 +153,77 @@ Lately, I evne learnt how to modify Cloudflare DNS records via its API with a [P
 
 ### Monitoring
 
+Beszel has been an interesting tools for monitoring:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring Tools Post | With Beszel 101 Setup" >}}
 {{< /cards >}}
 
-On that post I also talked about Tianji, which is something more than a Web Analytics tool.
+On that post I also talked about **Tianji**, which is something more than a Web Analytics tool.
 
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/setup-tianji-with-docker/" title="Tianji Setup 101 ↗" >}}
   {{< card link="https://fossengineer.com/selfhosting-netdata/" title="NetData Setup ↗" >}}
 {{< /cards >}}
 
+You will need a website to monitor (and probably a headlessCMS)
+
 {{< cards cols="2" >}}
   {{< card link="https://fossengineer.com/Selfhosting-Static-Webs-with-Apache-in-Docker" title="Static Sites x Apache Container 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Headless-CMS" title="Monitoring Tools with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Headless-CMS" title="HeadLess Tools with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
+* Grafana: 
 
-Grafana
+![Grafana UI](/blog_img/selfh/HomeLab/Grafana.png)
 
-Uptime Kuma
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/selfh-grafana-monit/" title="Grafana Setup with a Pi 🐋 ↗" >}}
+{{< /cards >}}
+
+<!-- 
+https://youtu.be/Uq5tZv6T3ko 
+-->
+
+{{< youtube "Uq5tZv6T3ko" >}}
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/IoT/Grafana" title="Grafana with Docker 🐋 ↗" >}}
+  {{< card link="https://fossengineer.com/selfhosting-uptime-Kuma-docker/" title="Uptime Kuma ↗" >}}
+{{< /cards >}}
 
 #### Internet Speed
 
+I was writting about Server monitoring and internet speed tools [here](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#internet-monitoring-tools).
+
 * https://orb.net/docs/setup-sensor/docker
   * https://orb.net/
+
+
+{{< callout type="info" >}}
+Measure your Home Internet Speed with: [WYL and OpenSpeedTest/SpeedTest Tracker](https://jalcocert.github.io/RPi/posts/self-internet-monit/)
+{{< /callout >}}
+
+{{< details title="What's the ping and internet speed?" closed="true" >}}
+
+```sh
+apt-get install -y iputils-ping
+```
+
+```sh
+sudo apt-get install speedtest-cli
+speedtest-cli #speedtest-cli --simple
+```
+
+{{< /details >}}
 
 ### P2P
 
 You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/)
 
-
-
 {{< cards cols="1" >}}
-  {{< card link="https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/" title="QBitTorrent Setup  ↗" >}}
+  {{< card link="https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/" title="QBitTorrent Setup ↗" >}}
 {{< /cards >}}
 
 ![Qbittorrent](/blog_img/selfh/media/qbit.png)
@@ -215,7 +252,7 @@ For more photo/video tricks, see also:
 
 3. IT/Toos + OmniTools
 
-4. Specters: Some kind of filebrowser, but better?
+4. Specters: Some kind of ~ filebrowser, but better?
 
 * https://github.com/Phantom8015/Specters
 
@@ -229,28 +266,12 @@ docker run -p 3001:3000 phantom8016/specters:latest
 
 5. PortTracker
 
-```yml
-version: "3.8"
+![PortTracker UI](/blog_img/selfh/HomeLab/PortTracker.png)
 
-services:
-  portracker:
-    image: mostafawahied/portracker:latest
-    container_name: portracker
-    restart: unless-stopped
-    network_mode: "host"
-    volumes:
-      # Required for data persistence
-      - ./portracker-data:/data
-      # Required for discovering services running in Docker
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    environment:
-      - DATABASE_PATH=/data/portracker.db
-      - PORT=4999
-      # Optional: For enhanced TrueNAS features
-      # - TRUENAS_API_KEY=your-api-key-here
-```
-
-![alt text](/blog_img/selfh/HomeLab/PortTracker.png)
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/PortTracker" title="PortTracker | Docker Config Setup 🐋 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Specters" title="Specters | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
 
 ### HomeLab Diagrams
 
@@ -274,7 +295,7 @@ To have a rendered pdf with instructions how to access your selfhosted services
 
 Termix has been great to manage couple of homelab devices:
 
-![alt text](/blog_img/selfh/HomeLab/termix-specters.png)
+![Using Specters via Termix](/blog_img/selfh/HomeLab/termix-specters.png)
 
 ```sh
 http://192.168.1.11:8090
@@ -322,14 +343,14 @@ People are still doing cool stuff with the Pis
 
 ### HomeLab Commands
 
-Whats taking that much space?
+1. Whats taking that much space?
 
 ```sh
 #sudo du -ahx / | sort -rh | head -n 50
 sudo du -ahx . | sort -rh | head -n 50 #from current folder and below
 ```
 
-I want to clean old container stuff
+2. I want to clean old container stuff
 
 ```sh
 docker builder prune
@@ -353,4 +374,4 @@ Link analytics solutions, like Kutt:
 
 ![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
 
-![alt text](/blog_img/selfh/links/kutt-link-creation.png)
+![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)

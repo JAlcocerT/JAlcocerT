@@ -1,14 +1,13 @@
 ---
 title: "Crypto. Now understandable with AI"
-date: 2025-06-24
+date: 2025-07-23
 draft: false
+tags: ["AI","Aave v3","Fluid"]
 description: 'Two buzz words in one. Understand crypto once and for all. This time thanks to LLMs'
 url: 'understading-crypto-with-ai'
 ---
 
-* https://chainlist.org/
 
-> ChainList is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.
 
 Here we go again...
 
@@ -23,14 +22,13 @@ I was testing [Astro Bento Portfolio + Github Pages + Github CI/CD](https://gith
 This post is just describing the process to apply data analytics with crypto. **This is NOT a recommendation or financial advice of any type.**
 {{< /callout >}}
 
+
 Some time ago I was having a look to this **amazing BlockChain/Solidity FreeCodeCamp course:**
 
 {{< youtube "gyMwXuJrbJQ" >}}
 
 **Practical Blockchain:**
 - Parties that do not know each other can **exchange value without a central authority**
-
-
 
 <!-- 
 inspired by CryptaIQ and keeping that intelligent, AI-powered vibe:
@@ -159,7 +157,9 @@ For many casual users, **DeBank** and **Zapper** provide sufficient features, wh
 
 ### Exploring Protocols
 
-Solidity is not the only language you can use with Polygon. While it's the most popular language for developing smart contracts on Polygon due to its compatibility with the Ethereum Virtual Machine (EVM), other languages can be used indirectly.
+Solidity is not the only language you can use with Polygon. 
+
+While it's the most popular language for developing smart contracts on Polygon due to its compatibility with the Ethereum Virtual Machine (EVM), other languages can be used indirectly.
 
 {{< details title="Here are some other options 📌" closed="true" >}}
 
@@ -206,12 +206,17 @@ Key Takeaways:
 
 {{< /details >}}
 
+People have created what?
 
 {{< youtube "GvT_Fycvt14" >}}
 
 #### The Code - BlockChain Transaction Analyzer
 
+How about taking the best of 2 worlds?
 
+Lets use AI (LLMs and vibe coding techniques) to see how good are they at understanding the code of some public DeFi Protocols.
+
+Because...[why not!](#conclusions)
 
 ---
 
@@ -279,7 +284,6 @@ If you have a website, I show you [how to also have a **Web3 Compatible website*
 
 Open Source, Permissionless & privacy conscious DeFi portfolio tracker
 
-
 * https://llamafolio.com/
 
 > Start visualising and tracking 434 protocols across 17 blockchains.
@@ -334,7 +338,33 @@ For example, the **aave token is ERC20**:
 
 ## Conclusions
 
-I could not resist to try few protocols (under my own risk).
+I got to know this defi app called **MetaLend** that consolidates what you have in a wallet: https://app.metalend.tech/#earn
+
+Its a **Defi Aggregator**, as seen in [Reddit](https://www.reddit.com/r/defi/comments/1hdk8fs/how_are_people_getting_1020_yields_on_stablecoins/).
+
+They can tell you some ideas on where to lend (sorted by %).
+
+Similarly to what you can learn at **DefiLLama**: https://defillama.com/protocols/lending
+
+> Which is where I got to know about Fluid: https://defillama.com/protocol/fluid
+
+![Fluid Defi](/blog_img/crypto/fluid-defi.png)
+
+I also got to learn about another lending protocol called Morpho and Lulo: 
+
+* https://app.morpho.org/ethereum/migrate
+* https://app.lulo.fi/
+
+![Morpho Defi UI](/blog_img/crypto/morpho-defi.png)
+
+From where it can detect what I have lended via Aave, *my open positions*.
+
+* https://chainlist.org/
+
+> ChainList is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.
+
+
+**I could not resist to try few protocols (under my own risk).**
 
 ![Metamask Transactions Notifcations via ZorinOS](/blog_img/crypto/defi/metamask-zorin-notif.png)
 
@@ -391,8 +421,6 @@ I got 34.684249 `fUSDT` mapped to it, in theory to a ~7% interest:
 
 ![alt text](/blog_img/crypto/defi/etherscan-assets.png)
 
-![alt text](/blog_img/crypto/defi/fluid-supply-usdt.png)
-
 And now it appears:
 
 ![alt text](/blog_img/crypto/defi/fluid-ui-post-lending.png)
@@ -421,9 +449,12 @@ See in your wallet transaction details
 
 As we are here for the code and how AI can interprete it, this is the **fluid Smart Contract**: https://etherscan.io/address/0x5C20B550819128074FD538Edf79791733ccEdd18#code
 
-### Example 3
+### Crypto Example 3
 
-I could not resist to go back to **aave v3** and lend the rest of USDT for comparison.
+I could not resist to go back to **aave v3** and lend the rest of USDT for comparison: *Here with a ~3.26% interest.*
+
+![alt text](/blog_img/crypto/defi/fluid-supply-usdt.png)
+
 <!-- 
 https://portfolio.metamask.io/networks/1/transactions/0x0d0eb1599871c0cee559b6b76abfd377d9fc2c292b806d0966ee52f758ee7702 -->
 
