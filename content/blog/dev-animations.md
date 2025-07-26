@@ -173,7 +173,6 @@ We've learnt how to do cool Python Animations.
 
 Including cool `.gif` that you can easily share.
 
-
 But, as you can imagine, there are more ways to generate **animations as a code**
 
 0. MotionCanvas
@@ -235,7 +234,6 @@ Social Media can be simplified:
 
 ![Forocoches3kbmw](/blog_img/memes/ezoeazin.jpg)
 
-
 1. Postiz-App - https://github.com/gitroomhq/postiz-app
     * https://docs.postiz.com/introduction
     
@@ -274,13 +272,20 @@ https://postiz.jalcocertech.com/api/mcp/some_id_here/sse
 
 * [IFTTT](https://ifttt.com/plans)
 
-* **N8N** AI Automation - https://n8n.io/workflows/2950-ai-powered-social-media-content-generator-and-publisher/
+3. **N8N** AI Automation - https://n8n.io/workflows/2950-ai-powered-social-media-content-generator-and-publisher/
 
 [N8N with ollama video](https://www.youtube.com/watch?v=VDuA5xbkEjo)
 
-* Active Pieces - https://github.com/activepieces/activepieces
+4. Active Pieces - https://github.com/activepieces/activepieces
 
 > Your friendliest open source AI automation tool ✨ Workflow automation tool 200+ integration / Enterprise automation tool / Zapier Alternative
+
+
+5. MultiNotify: https://github.com/ethanocurtis/MultiNotify *in case that you want to get ideas for animations from reddit posts*
+
+> MIT | A lightweight, open‑source Discord bot that **monitors a subreddit for new posts** (optionally filtered by flair) and automatically send them to Discord, Mattermost, Slack, or other services via webhook, with optional DM notifications.
+
+
 
 ### Cool Data Driven Videos
 

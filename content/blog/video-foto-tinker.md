@@ -44,8 +44,7 @@ For night video and [the oa5pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-
 
 And all of this is great, but [consider this](#conclusions) while creating.
 
-> Never forget: share your content, specially if its easy with Postiz
-
+> Never forget: share your content, specially if its that easy with [Postiz](#how-to-setup-postiz)
 
 ## Video Editing
 

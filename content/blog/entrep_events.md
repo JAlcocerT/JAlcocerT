@@ -36,6 +36,8 @@ Which can be deployed as per: https://github.com/the-luap/picpeak/blob/main/DEPL
 
 3. https://github.com/robinkarlberg/transfer.zip-web
 
+* https://transfer.zip/
+
 > agpl 3.0 | A self-hostable complete file-sharing solution that focuses on reliability, security and ease of use.
 
 4. https://github.com/cloudreve/Cloudreve

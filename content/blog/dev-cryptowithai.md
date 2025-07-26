@@ -2,7 +2,7 @@
 title: "Crypto. Now understandable with AI"
 date: 2025-07-23
 draft: false
-tags: ["AI","Aave v3","Fluid"]
+tags: ["AI","Aave v3","Fluid","QuickSwap"]
 description: 'Two buzz words in one. Understand crypto once and for all. This time thanks to LLMs'
 url: 'understading-crypto-with-ai'
 ---
@@ -95,7 +95,6 @@ Understanding SC's with LLMs: these are are some [interesting protocols](https:/
 
 * [SETH](https://etherscan.io/token/0xae7ab96520de3a18e5e111b5eaab095312d7fe84)
 
-
 {{% /details %}}
 
 ## Crypto Analytics
@@ -121,7 +120,7 @@ And that exploration of a wallet can be [done with Python](https://github.com/JA
 I have used [Dune-Analytics](https://dune.com/), together with [SQL](/sql-data-analytics/)
 
 {{< callout type="info" >}}
-Particularly, to make a [UniSwap Protocol Dashboard](https://dune.com/fossengineer/uniswap).
+Particularly, to make a [UniSwap Protocol Dashboard](https://dune.com/fossengineer/uniswap). Which is a [DEX](#dex-amm).
 {{< /callout >}}
 
 
@@ -239,31 +238,7 @@ If you want to read one and only one book aboyt Crypto - [WhyCryptoCurrencies](h
 
 ### Interesting Crypto Stuff I found lately
 
-
-{{< callout type="warning" >}}
-**Remember** that these are my notes as I learn and not any recommendation to buy/sell anything, neither to follow any link.
-{{< /callout >}}
-
-#### Lending Protocols
-
-I mean **Lending&Borrowing** Protocols:
-
-https://de.fi/explore/borrow-lending/cat/stablecoin
-
-> As of now, some popular ones are [Compound](https://compound.finance/), AAve v3 or [Spark](https://app.spark.fi/)
-
-![alt text](/blog_img/crypto/sample-eth-wallet.png)
-
-![AAVE v3 ETH Lending](/blog_img/crypto/sample-eth-aave.png)
-
-* https://www.reddit.com/r/CryptoCurrency/comments/mnzv1c/defi_explained_lending_borrowing/
-* https://www.reddit.com/r/CryptoCurrency/comments/nletmi/defi_explained_the_full_guide/#:~:text=Decentralized%20Finance%20(DeFi)%20is%20a,protocols%20that%20work%20without%20intermediaries.
-
-#### Staking Protocols
-
-I was always confused by staking vs lending.
-
-#### More Web3 Stuff
+More Web3 Stuff?
 
 > I was writing [about web3 here](https://jalcocert.github.io/JAlcocerT/guide-web3). 
 
@@ -275,10 +250,108 @@ If you have a website, I show you [how to also have a **Web3 Compatible website*
 * https://www.reddit.com/r/defi/comments/1dl9ecu/most_reputable_respected_and_definitive_guides_on/
 
 *  Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts  https://github.com/scio-labs/inkathon?ref=statichunt.com
-
-
 * Top Protocols per Chain (for example Ethereum) - https://defillama.com/top-protocols
 * AAVE v3 is the most popular lending protocol for ETH at this moment - https://defillama.com/protocol/aave-v3?medianApy=true
+
+
+{{< callout type="warning" >}}
+**Remember** that these are my notes as I learn and not any recommendation to buy/sell anything, neither to follow any link.
+{{< /callout >}}
+
+#### Lending Protocols
+
+I mean **Lending&Borrowing** Protocols: *which I could not resist to try on [these examples](#crypto-example-1)
+
+* https://de.fi/explore/borrow-lending/cat/stablecoin
+
+> As of now, some popular ones are [Compound](https://compound.finance/), AAve v3 or [Spark](https://app.spark.fi/)
+
+I got some interesting ideas from about them at:
+
+* https://www.reddit.com/r/CryptoCurrency/comments/mnzv1c/defi_explained_lending_borrowing/
+* https://www.reddit.com/r/CryptoCurrency/comments/nletmi/defi_explained_the_full_guide/#:~:text=Decentralized%20Finance%20(DeFi)%20is%20a,protocols%20that%20work%20without%20intermediaries.
+
+> I was always confused by staking vs lending, but [here is the difference](#what-are-staking-protocols)
+
+#### DEX AMM
+
+You will hear about quickswap (also uniswap as is very popular into the ETH network) for exchanging tokens pairs.
+
+* https://defillama.com/dexs
+  * https://defillama.com/protocol/uniswap?tvl=false&events=false&dexVolume=true
+  * https://defillama.com/yields?project=Uniswap%20V3&project=Uniswap%20V2&project=Uniswap%20V4&project=Uniswap%20V1
+
+![Dexes sorted per Volume](/blog_img/crypto/defi/defillama-dexes.png)
+
+QuickSwap falls primarily under the category of a **Decentralized Exchange (DEX)** and, more specifically, an **Automated Market Maker (AMM)**.
+
+QuickSwap is famously a **fork of Uniswap**, meaning its foundational code is derived from Uniswap's open-source code.
+
+{{% details title="Uniswap vs Quickswap... 🚀" closed="true" %}}
+
+**QuickSwap's Category:**
+
+* **Decentralized Exchange (DEX):** This means it's a peer-to-peer marketplace where cryptocurrency transactions occur directly between crypto traders, without the need for a centralized intermediary (like Binance or Coinbase). Users maintain custody of their funds in their own wallets.
+* **Automated Market Maker (AMM):** Instead of an order book (where buyers and sellers place specific orders), QuickSwap (like Uniswap) uses **liquidity pools** and algorithms to facilitate trades. Users trade against these pools of tokens.
+* **Layer 2 DEX:** This is a crucial distinction. QuickSwap is built on the **Polygon Network**, which is a Layer 2 scaling solution for Ethereum. This is its core differentiating factor.
+
+They share many similarities in their AMM model (including the evolution to concentrated liquidity with V3). 
+
+However, their primary differences stem from the blockchain networks they operate on and some ecosystem specifics:
+
+1.  **Blockchain Network (The BIGGEST Difference):**
+    * **Uniswap:** Originally and primarily operates on the **Ethereum mainnet (Layer 1)**. While Uniswap has expanded to other chains (including Polygon, Arbitrum, Optimism), its roots and largest liquidity pools are historically on Ethereum.
+    * **QuickSwap:** Built natively on the **Polygon Network (Layer 2)**. This is its raison d'être.
+
+2.  **Transaction Fees (Gas Fees):**
+    * **Uniswap (on Ethereum):** Transactions can incur **high gas fees**, especially during periods of high network congestion on Ethereum. This can make smaller trades or frequent interactions expensive.
+    * **QuickSwap (on Polygon):** Benefits from Polygon's design, offering **significantly lower gas fees** (often fractions of a cent) and faster transaction times. This makes it much more accessible for users with smaller capital and for frequent trading or LP management.
+
+3.  **Transaction Speed:**
+    * **Uniswap (on Ethereum):** Transaction confirmation times can vary, sometimes taking minutes depending on network congestion.
+    * **QuickSwap (on Polygon):** Offers **much faster transaction finality**, often within a few seconds, enhancing the user experience.
+
+4.  **Native Tokens:**
+    * **Uniswap:** Uses **UNI** as its governance token.
+    * **QuickSwap:** Uses **QUICK** as its governance token.
+
+5.  **Ecosystem and Interoperability:**
+    * **Uniswap:** Part of the vast and mature Ethereum DeFi ecosystem. To use it on Polygon, you typically need to bridge assets from Ethereum to Polygon.
+    * **QuickSwap:** Integrally part of the Polygon ecosystem. It's often the go-to DEX for swapping tokens directly on Polygon, avoiding the need to bridge to Ethereum for trades. It also facilitates bridging ERC-20 tokens from Ethereum to Polygon.
+
+6.  **Capital Efficiency (V3):**
+    * Both QuickSwap V3 and Uniswap V3 utilize **concentrated liquidity**. This means liquidity providers can specify a price range for their liquidity, leading to higher capital efficiency and potentially higher fee earnings *within that range*. The core mechanism for this is the same because QuickSwap V3 is a fork of Uniswap V3.
+
+7.  **User Base and Liquidity:**
+    * **Uniswap:** Generally has a larger overall user base and deeper liquidity across a wider range of tokens, particularly on Ethereum.
+    * **QuickSwap:** Has a significant user base and liquidity on Polygon, serving as a vital part of Polygon's DeFi landscape.
+
+{{% /details %}}
+
+In essence, QuickSwap can be thought of as **Uniswap for Polygon**.
+
+It brings the familiar and successful AMM model of Uniswap to a Layer 2 network, addressing the scalability and high gas fee issues that can plague Ethereum mainnet DEXs, making decentralized trading more accessible and affordable for a broader range of users.
+
+> Quickswap-core repository contains the core smart contracts, and interface-v2 houses the code for their web interface.
+
+There is a key **distinction in how you earn as a liquidity provider in many DeFi protocols**, especially with the introduction of V3 concentrated liquidity:
+
+1.  **Pool APR (e.g., 39%):**
+    * **Source:** This comes from the **trading fees** generated by swaps that happen within the USDC/USDT liquidity pool.
+    * **Reward Token:** Since these are trading fees from the USDC/USDT pair, your "reward" comes in the form of an increase in the value of your underlying **USDC and USDT** tokens within your liquidity position. If you deposit $1000 USDC and $1000 USDT, and you earn fees, your share of the pool effectively grows, meaning when you eventually withdraw, you'll get back *more* than $1000 USDC and $1000 USDT (assuming the price stays within your range and no impermanent loss).
+    * **How to access:** These fees accrue directly to your LP position and might need to be "claimed" or simply increase the value of your LP tokens/NFT. To compound them, you'd typically withdraw them and then re-deposit them back into your LP position.
+
+2.  **Rewards API (e.g., 4%):**
+    * **Source:** This comes from **liquidity mining or farm programs** set up by QuickSwap or partner projects to incentivize liquidity to certain pools.
+    * **Reward Token:** These are usually paid out in the **native token of the platform (QUICK)**, or sometimes in tokens of the project that is incentivizing the pool. In QuickSwap's case, it's typically QUICK.
+    * **How to access:** To earn these, you usually have to take an extra step: **stake your LP position (which is an NFT in V3)** into a designated "farm" on QuickSwap. The reward tokens (e.g., QUICK) will then accumulate in that farm, and you'll need to manually "harvest" or "claim" them.
+
+So, in your scenario:
+
+* **39% Pool APR** means you are earning more **USDC and USDT** proportional to your liquidity's contribution to trades.
+* **4% Rewards API** means you are earning **QUICK** tokens (or another specific reward token, but most commonly QUICK for QuickSwap farms) for staking your USDC/USDT LP position.
+
+This dual-earning structure is common in DeFi and is designed to provide both a share of the protocol's revenue (fees) and additional incentives (farm rewards) to attract and retain liquidity.
 
 #### Some dApps
 
@@ -287,8 +360,6 @@ Open Source, Permissionless & privacy conscious DeFi portfolio tracker
 * https://llamafolio.com/
 
 > Start visualising and tracking 434 protocols across 17 blockchains.
-
-
 
 #### Stable Coins
 
@@ -300,7 +371,7 @@ Example stable coins are: USDT, USDC, DAI, USDS...
 
 #### ERC20
 
-
+You might have read about ERC20 compatible Tokens...well:
 
 {{< details title="What cool things can be done with ERC20? USDC USDT DAI Transfers" closed="true" >}}
 
@@ -377,9 +448,13 @@ So...does the code explanations match what happened in reality?
 
 I lended ETH, which gave me `aEthWETH` mapped 1:1 with the amount deposited.
 
-After some time, i started getting new ETH (?)
+![Aave v3 lending eth](/blog_img/crypto/sample-eth-wallet.png)
 
-![alt text](/blog_img/crypto/defi/aave-eth-and-usdt.png)
+![AAVE v3 ETH Lending](/blog_img/crypto/sample-eth-aave.png)
+
+After some time, i started getting new ETH (TBC?)
+
+![Aave v3 lending ETH and USDT](/blog_img/crypto/defi/aave-eth-and-usdt.png)
 
 ![AAVE v3 UI](/blog_img/crypto/defi/aave-v3-coreinstance.png)
 
@@ -425,7 +500,7 @@ And now it appears:
 
 ![alt text](/blog_img/crypto/defi/fluid-ui-post-lending.png)
 
-NetAPR examples:
+NetAPR examples with Fluid and USDT:
 
 ![alt text](/blog_img/crypto/defi/fluid-usdt-netapr.png)
 
@@ -475,6 +550,88 @@ After spending some eth in these transactions, this is how the asset looks like:
 https://etherscan.io/address/0x89c4f8ba6111e708e7fa108b49d769c1faaf67d0#asset-tokens -->
 
 ![Asset Tokens ETH wallet](/blog_img/crypto/defi/eth-wallet-assets-tokens-snapshot.png)
+
+#### Crypto Example 4
+
+**Testing the Liquidity providing** into a Dex.
+
+* https://dapp.quickswap.exchange/farm
+* https://app.uniswap.org/explore/pools
+
+{{% details title="What if I LP ETH and USDT into Uniswap... 🚀?" closed="true" %}}
+
+If you put **ETH and USDT** into a Uniswap pool, you would be acting as a **Liquidity Provider (LP)** on a Decentralized Exchange (DEX) using the Automated Market Maker (AMM) model.
+
+Here's a breakdown of what you would get and the considerations, especially since you'd likely be using **Uniswap V3**:
+
+What You'll Get (The Rewards)
+
+1.  **Trading Fees (The Primary Incentive):**
+    * You will earn a percentage of the trading fees generated by every swap between ETH and USDT that occurs in the pool.
+    * Uniswap V3 offers multiple fee tiers (e.0.01%, 0.05%, 0.3%, 1%). The ETH/USDT pool is typically in a higher fee tier (often 0.3% or 0.05%) because ETH is volatile relative to USDT.
+    * These fees accrue to your liquidity position, **meaning the value of your ETH and USDT in the pool will gradually increase.**
+    * You receive a pro-rata share of these fees based on how much liquidity you've provided and whether your liquidity is within the active price range.
+
+2.  **LP NFT (Your Proof of Ownership):**
+    * Unlike Uniswap V2 which gave you fungible ERC-20 LP tokens, Uniswap V3 issues you a **unique ERC-721 NFT** (Non-Fungible Token).
+    * This NFT represents your specific liquidity position, including the exact price range you set and the amount of liquidity you provided within that range. It's your "receipt" and proof of ownership. You need this NFT to manage or withdraw your liquidity and accrued fees.
+
+3.  **Potential Farm Rewards (if applicable):**
+    * Sometimes, projects (including Uniswap in the past through governance votes) will offer additional **liquidity mining incentives** (farm rewards) on top of the trading fees. These would typically be paid out in the project's native token (like UNI for Uniswap, or another token from a partnering project).
+    * To earn these, you usually need to take an extra step: **stake your Uniswap V3 LP NFT** into a designated farm contract. Not all pools have active farm rewards, so you'd need to check the Uniswap interface or third-party analytics sites.
+
+What You Need to Consider (The Risks & Mechanics)
+
+1.  **Impermanent Loss (IL):**
+    * This is the **most significant risk** when providing liquidity for volatile pairs like ETH/USDT.
+    * **How it works:** If the price ratio between ETH and USDT changes significantly from when you deposited them (e.g., ETH's price goes up or down relative to USDT), you will experience impermanent loss. The AMM constantly rebalances the pool, so if ETH increases, you'll end up with less ETH and more USDT than if you had just held (HODLed) both assets outside the pool. Conversely, if ETH drops, you'll end up with less USDT and more ETH.
+    * **Impact:** For highly volatile pairs like ETH/USDT, impermanent loss can often **outweigh the earned trading fees**, leading to a net loss compared to simply holding your assets. Research has shown that a significant portion of Uniswap V3 LPs are unprofitable after accounting for IL.
+
+2.  **Concentrated Liquidity (V3 Specific):**
+    * Uniswap V3 introduced "concentrated liquidity," meaning you **must define a price range** within which you want to provide liquidity (e.g., ETH price between $3,000 and $4,000 against USDT).
+    * **Capital Efficiency:** This allows for much higher capital efficiency, as your capital is concentrated where most trading occurs, potentially earning more fees for a given amount of capital.
+    * **Active Management:** If the price of ETH moves *outside* your chosen range, your liquidity becomes **inactive** and stops earning fees. To continue earning, you would need to either wait for the price to return to your range or manually adjust your range (which incurs gas fees). This often requires a more active, market-making approach, or the use of automated liquidity management services.
+    * **Increased Impermanent Loss Risk (if not managed):** While concentrated liquidity offers higher fee potential, it can also amplify impermanent loss if not managed well, as your position can quickly go out of range in volatile markets.
+
+3.  **Gas Fees:**
+    * Since Uniswap's largest pools are on the Ethereum mainnet, providing liquidity, adjusting ranges, claiming fees, and withdrawing liquidity will incur **significant Ethereum gas fees**. This can eat into your profits, especially for smaller positions or frequent management.
+    * (Remember, if you used Uniswap on a Layer 2 like Polygon or Arbitrum, gas fees would be much lower, making LPing more accessible).
+
+4.  **Smart Contract Risk:**
+    * As with any DeFi protocol, there's a risk of bugs, vulnerabilities, or exploits in Uniswap's smart contracts that could lead to loss of funds.
+
+**In summary:**
+
+When you put ETH and USDT into a Uniswap V3 pool, you are attempting to earn **trading fees** and potentially **farm rewards** by facilitating swaps.
+
+However, you are taking on **significant impermanent loss risk** due to the volatility of ETH, and you'll need to **actively manage your concentrated liquidity position** (or pay a service to do so) to ensure your capital remains active and earns fees, all while navigating Ethereum's potentially high gas fees.
+
+---
+
+You're asking about the different types of earnings you get when providing liquidity on a DEX like Uniswap, specifically for an ETH/USDT pair. And yes, you've pretty much nailed the distinction!
+
+When you LP ETH and USDT into a Uniswap V3 pool, your earnings will typically come from two main components:
+
+1.  **Pool APR (from Trading Fees):**
+    * This is the **primary and most consistent source of revenue** for LPs on an AMM like Uniswap.
+    * **How it works:** Every time a user swaps ETH for USDT, or USDT for ETH, they pay a small trading fee (e.g., 0.05%, 0.3%, or 1% depending on the pool's fee tier). This fee is added back into the liquidity pool.
+    * **What you get:** You, as an LP, earn a pro-rata share of these accumulated fees based on how much liquidity you provided and whether your liquidity is within the active price range. These fees effectively increase the amount of **ETH and USDT** you hold within your LP position. When you eventually withdraw your liquidity, you'll get back more of the tokens than you initially put in (assuming enough fees were earned to offset any impermanent loss).
+    * **Displayed as:** Often shown as "Pool APR" or "LP Fees APR" on the DEX interface.
+
+2.  **Rewards API (from Liquidity Mining / Farm Rewards):**
+    * This is an **additional incentive layer** that may or may not be active for a particular pool.
+    * **How it works:** Projects (including Uniswap itself, through governance, or other protocols building on Uniswap's liquidity) might offer extra tokens to LPs in specific pools to encourage deeper liquidity. For Uniswap, this would typically be **UNI tokens**, or tokens from a partner project (e.g., if a new project wanted to attract liquidity for its token paired with ETH, it might offer its own tokens as rewards).
+    * **What you get:** You receive these **additional tokens** (e.g., UNI, or the partner project's token) on top of the trading fees. To earn these, you usually have to take an extra step: stake your Uniswap V3 LP NFT (which represents your liquidity position) into a designated "farm" or "rewards contract."
+    * **Displayed as:** Often shown as "Farm APR," "Rewards APR," or indicated through an "API" (Application Programming Interface) that displays these additional earnings.
+
+**So, yes:**
+
+* **One part of your earnings (the Pool APR) will be in the form of more of the paired assets (ETH and USDT).** These are your share of the trading fees.
+* **The other part (the Rewards API) will be in the form of a separate, specified reward token (e.g., UNI),** which you get for participating in a liquidity mining program for that pool.
+
+It's crucial to distinguish between these two sources, as their value and consistency can differ. The Pool APR from trading fees is directly tied to trading volume and fee tier. The Rewards API is dependent on the duration and emission schedule of the incentive program.
+
+{{% /details %}}
 
 ---
 
@@ -542,3 +699,239 @@ https://portfolio.metamask.io/stake?tab=pooled
 
 * https://app.extrafi.io/farm
 * https://defillama.com/yields/stablecoins?token=USDT
+
+### Lending vs Dex
+
+* **When you lend one token only (e.g., just USDC) on Aave or Compound, you are NOT providing to a DEX's liquidity pool in the same way you would on Uniswap or QuickSwap.**
+
+Let's clarify the categories and their mechanisms:
+
+**Lending Protocols (Aave, Compound)**
+
+* **Category:** Decentralized Lending and Borrowing Protocols.
+* **Purpose:** To enable users to lend out their crypto assets to earn interest, and to borrow crypto assets by providing collateral.
+* **Mechanism:**
+    * **Lending Pools (Supply Side):** Lenders deposit their single asset (e.g., USDC) into a **lending pool** (also known as a "money market" or "liquidity market"). These pools are managed by smart contracts. The funds in this pool are then available for borrowers to take out. Lenders earn interest, which is paid by the borrowers.
+    * **Borrowing (Demand Side):** Borrowers deposit *collateral* (often a different crypto asset, and usually *more* than the amount they want to borrow, i.e., "overcollateralized") into a separate smart contract, and then they can borrow a single asset from the lending pool.
+    * **Interest Rates:** Interest rates for both lenders and borrowers are typically determined algorithmically based on the supply and demand within that specific lending pool (i.e., how much is being supplied vs. how much is being borrowed).
+    * **Tokens Received:** When you lend on Aave, you receive "aTokens" (e.g., aUSDC for USDC). On Compound, you receive "cTokens" (e.g., cUSDC for USDC). These tokens represent your deposit plus accrued interest and can often be used as collateral in other DeFi protocols.
+
+* **Your Action:** You provide a **single asset** (e.g., 1000 USDC) to earn interest on that specific asset. You are not pairing it with another asset to facilitate swaps.
+
+**DEXs (Decentralized Exchanges) with AMMs (Uniswap, QuickSwap)**
+
+* **Category:** Decentralized Exchanges (DEXs), specifically using the Automated Market Maker (AMM) model.
+* **Purpose:** To facilitate permissionless and automated **swaps/exchanges** between different crypto assets.
+* **Mechanism:**
+    * **Liquidity Pools:** As discussed, these require LPs to deposit **two (or sometimes more) different tokens in equivalent value** into a pool (e.g., 1000 USDC and 1000 USDT). This pair forms the "market" for users to swap between those two assets.
+    * **Trading Fees:** LPs earn a portion of the trading fees generated when users swap against their provided liquidity.
+    * **Impermanent Loss:** A risk unique to AMM liquidity pools, where the price ratio of the paired assets changes, potentially leading to a loss compared to simply holding the assets.
+    * **Tokens Received:** When you provide liquidity, you receive **LP tokens** (or an LP NFT in V3), which represent your share of the pool and accrue the trading fees.
+
+* **Your Action:** You provide a **pair of assets** (e.g., USDC/USDT) to enable trading between them and earn trading fees.
+
+**Summary of the Difference:**
+
+| Feature           | Lending Protocols (Aave, Compound)                                 | DEXs with AMMs (Uniswap, QuickSwap)                                |
+| :---------------- | :------------------------------------------------------------------ | :----------------------------------------------------------------- |
+| **Primary Function** | Lending and Borrowing of assets                                     | Facilitating Swaps/Exchanges between assets                      |
+| **LP Deposit** | **Single asset** (e.g., USDC)                                       | **Pair of assets** (e.g., USDC + USDT) in equivalent value         |
+| **LP Earnings** | Interest paid by borrowers on the lent asset                        | Trading fees from swaps; sometimes also farm rewards (in a separate step) |
+| **Main Risk** | Liquidation risk for borrowers; smart contract risk for lenders.    | Impermanent Loss for LPs; smart contract risk                      |
+| **Output Token** | aTokens (Aave) or cTokens (Compound) representing your deposit + interest | LP tokens/NFT representing your share of the liquidity pool + fees |
+
+
+### What are Staking Protocols?
+
+"Staking protocols" represent another distinct category within the blockchain and DeFi ecosystem, though there can be some overlap in terms of earning rewards.
+
+**Staking Protocols (e.g., Ethereum (PoS), Solana, Cardano, Polkadot)**
+
+* **Category:** Primarily related to **blockchain consensus mechanisms**, specifically **Proof-of-Stake (PoS)**.
+* **Purpose:** To secure a blockchain network, validate transactions, and create new blocks.
+* **Mechanism:**
+    * **Locking Assets:** In a Proof-of-Stake blockchain, instead of "mining" (like in Proof-of-Work Bitcoin), validators (or users who delegate to validators) "stake" (lock up) a certain amount of the blockchain's native cryptocurrency as collateral. This stake acts as a financial incentive to behave honestly.
+    * **Validation:** These staked tokens give validators the right to participate in the network's consensus process (e.g., proposing new blocks, verifying transactions).
+    * **Rewards:** In return for helping to secure the network and validate transactions, stakers earn newly minted tokens from the blockchain or a portion of transaction fees.
+    * **Slashing:** If a validator acts maliciously or goes offline, a portion of their staked tokens can be "slashed" (forfeited) as a penalty.
+    * **No Pair Required:** You typically stake a **single asset** (the native token of the blockchain, e.g., ETH, SOL, ADA, DOT).
+    * **Lock-up Periods:** Often, tokens staked directly on a blockchain are locked for a specific period (unbonding period) during which they cannot be traded or moved.
+
+* **Famous Staking Protocols (Blockchains):**
+    * **Ethereum (since "The Merge"):** You can stake ETH directly (requiring 32 ETH to run a full validator node) or through staking pools.
+    * **Solana (SOL):** Users can delegate their SOL to validators.
+    * **Cardano (ADA):** Users can delegate their ADA to stake pools.
+    * **Polkadot (DOT):** Uses a Nominated Proof-of-Stake (NPoS) model where DOT holders nominate validators.
+    * **Cosmos (ATOM):** Known for its "Internet of Blockchains" and allows staking ATOM.
+    * **Avalanche (AVAX):** Allows staking AVAX to secure its network.
+
+**Sub-categories of Staking:**
+
+* **Direct Staking:** Staking directly on the blockchain, either by running your own validator node or delegating to one.
+* **Pooled Staking:** Multiple users contribute smaller amounts to reach the minimum required for a validator node, and rewards are shared proportionally.
+* **Liquid Staking:** This is a newer innovation that solves the "lock-up" problem of traditional staking.
+    * When you stake ETH (or other assets) with a liquid staking protocol (like **Lido Finance** or **Rocket Pool** for Ethereum, **Marinade Finance** for Solana), you receive a **liquid staking token (LST)** in return (e.g., stETH for staked ETH).
+    * This LST is pegged 1:1 to the value of your staked asset and can be freely traded, used as collateral in lending protocols (like Aave!), or deployed in DEX liquidity pools.
+    * You continue to earn staking rewards on your original staked asset while having liquidity with the LST. This effectively "unlocks" the capital that would otherwise be locked.
+* **Restaking (Emerging Concept):** This is even newer, championed by protocols like **EigenLayer** on Ethereum.
+    * Restaking allows users to re-purpose their already staked ETH (or liquid staked ETH like stETH) to simultaneously secure *other* decentralized applications or "actively validated services" (AVSs) in addition to the Ethereum blockchain itself.
+    * In return, restakers earn **additional rewards** from these AVSs, effectively "stacking" yield. It increases the economic security of the broader ecosystem but also introduces new layers of complexity and slashing risks.
+
+**Key Differences Summarized:**
+
+| Feature           | Lending Protocols (Aave, Compound)                                | DEXs with AMMs (Uniswap, QuickSwap)                               | Staking Protocols (Ethereum PoS, Solana, Lido)                     |
+| :---------------- | :---------------------------------------------------------------- | :---------------------------------------------------------------- | :----------------------------------------------------------------- |
+| **Core Purpose** | Lending & Borrowing crypto assets                                 | Facilitating token swaps (trading)                                | Securing a blockchain network (Proof-of-Stake consensus)         |
+| **Your Action** | Deposit **single asset** to earn interest.                        | Deposit **pair of assets** to facilitate trades.                  | Lock/delegate **single asset** to validate/secure the blockchain. |
+| **Main Earnings** | Interest paid by borrowers.                                       | Trading fees from swaps; optionally farm rewards.                 | Block rewards (newly minted tokens) & transaction fees from the blockchain. |
+| **Primary Risk** | Liquidation risk (for borrowers); Smart contract risk.            | Impermanent Loss; Smart contract risk.                          | Slashing risk (for validators); Smart contract risk; Price volatility of staked asset. |
+| **Output** | aTokens / cTokens (receipt of deposit + interest)                 | LP tokens / LP NFT (share of pool + fees)                         | Staked tokens (locked); or Liquid Staking Tokens (LSTs like stETH). |
+| **Capital Lockup**| Funds can usually be withdrawn on demand (subject to liquidity). | Funds locked in LP pool (subject to withdrawal).                  | Often involves lock-up/unbonding periods (traditional staking). LSTs solve this. |
+
+While these categories are distinct, DeFi is all about **composability** (or "money Legos"). 
+
+This means these protocols can often be combined: for example, you might take your `stETH` (from a liquid staking protocol) and deposit it into an Aave lending pool to earn additional interest, or provide it to an `stETH/ETH` liquidity pool on Uniswap V3.
+
+This layering of protocols is what makes DeFi so powerful and complex.
+
+#### Comparing the Risks
+
+When comparing the risk profiles of staking, lending, and providing liquidity (LPing) into a DEX with stablecoins, it's essential to understand the unique risks associated with each.
+
+**According to [Gemini](https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/)** This is a breakdown, generally from **lowest to highest relative risk**, along with the "why":
+
+1. Lending Stablecoins (e.g., Aave, Compound with USDC/USDT)
+
+* **Risk Level:** Generally considered the **lowest risk** among the three, especially when using well-established, fully-backed stablecoins like USDC and USDT.
+* **Why:**
+    * **No Impermanent Loss:** This is the biggest advantage. Since you're depositing a single asset, there's no price divergence between two assets in a pair, thus no impermanent loss.
+    * **Stablecoin Peg Risk is Minimized (for major ones):** While not zero, the risk of major stablecoins like USDC or USDT permanently losing their peg to the USD is relatively low due to their backing and regulatory scrutiny (though temporary de-pegs can occur, as seen with SVB and USDC).
+    * **Simple Mechanism:** You're simply providing liquidity to a borrowing pool. The smart contracts are typically simpler than those for AMMs or complex staking derivatives.
+* **Primary Risks:**
+    * **Smart Contract Risk:** The most significant risk. Bugs, exploits, or hacks in the Aave or Compound smart contracts could lead to loss of funds. Protocols mitigate this with audits, bug bounties, and sometimes insurance.
+    * **Liquidity Risk:** In extreme market conditions, borrowers might not be able to repay, or there might be high demand for withdrawals, leading to periods where you cannot immediately withdraw your funds from the lending pool. While these protocols have mechanisms (like variable interest rates that increase to incentivize deposits) to balance this, it's a possibility.
+    * **Oracle Risk:** Lending protocols rely on external price feeds (oracles) to determine collateral values and trigger liquidations. If an oracle is manipulated or provides incorrect data, it could lead to bad debt or unfair liquidations.
+    * **Centralization Risk of Stablecoin:** If the stablecoin itself (USDC or USDT) were to suffer a major, permanent de-peg due to issuer insolvency or regulatory action, the value of your lent assets would decline.
+
+2. LPing into a DEX with Stablecoins (e.g., QuickSwap V3 with USDC/USDT or the [Uniswap Equivalent Pool](https://app.uniswap.org/explore/pools/ethereum/0x8aa4e11cbdf30eedc92100f4c8a31ff748e201d44712cc8c90d189edaa8e4e47?utm_source=share-pool&utm_medium=web)) 
+
+* **Risk Level:** **Low to Moderate**, slightly higher than simple stablecoin lending due to the introduction of Impermanent Loss, even if minimal.
+* **Why:**
+    * **Low Impermanent Loss (with stablecoins):** As discussed, since both assets in the pair aim for $1, their relative price movement is minimal. This means impermanent loss is significantly reduced compared to volatile pairs (like ETH/MATIC).
+    * **Earns Trading Fees:** You earn fees from every swap, which can be a consistent source of yield.
+    * **Additional Farm Rewards:** Often boosted by liquidity mining incentives (like QUICK tokens), which can enhance overall APR.
+* **Primary Risks:**
+    * **Residual Impermanent Loss:** Even with stablecoins, minor de-pegs can occur. If USDC goes to $0.998 and USDT stays at $1.000 for a period, you will incur a small amount of impermanent loss. If one stablecoin suffers a *significant* de-peg, your IL could become substantial.
+    * **Smart Contract Risk:** Vulnerabilities in the DEX's (e.g., QuickSwap's) smart contracts.
+    * **Oracle Risk:** Less direct than lending protocols, but if a DEX's internal price discovery mechanism or external oracle (if used) is manipulated, it could lead to issues.
+    * **Concentrated Liquidity Management (V3 specific):** If you set a tight price range and the price moves outside that range, your liquidity becomes inactive and stops earning fees and rewards until the price returns or you adjust your range. This requires active management or reliance on automated tools, adding a layer of complexity and potential for missed earnings.
+    * **Centralization Risk of Stablecoins:** Same as lending, if one of the stablecoins significantly de-pegs.
+
+> See the difference in APR (and total value locked)
+
+![alt text](/blog_img/crypto/defi/uniswap-dai-usdc.png)
+
+![alt text](/blog_img/crypto/defi/uniswap-lp-usdc-usdt.png)
+
+3. Staking (especially direct PoS staking of volatile assets or complex liquid staking/restaking)
+
+* **Risk Level:** Generally the **highest risk** among these three, especially for direct staking of volatile assets or using newer, more complex staking derivatives.
+* **Why:**
+    * **Price Volatility of Staked Asset:** This is the *dominant risk*. If you stake ETH, and ETH's price drops significantly, the value of your principal can decrease dramatically, potentially offsetting or even overshadowing any staking rewards.
+    * **Slashing Risk:** Unique to Proof-of-Stake. If the validator you stake with (or if you run your own) acts maliciously, goes offline for extended periods, or makes errors (e.g., double-signing), a portion of your staked assets can be "slashed" (forfeited).
+    * **Lock-up/Liquidity Risk:** Traditional staking often involves unbonding periods (e.g., 7-28 days on many chains). During this time, your assets are locked and cannot be traded or moved, leaving you exposed to price drops without the ability to react. Liquid staking mitigates this but introduces new risks (see below).
+* **Primary Risks (beyond price volatility):**
+    * **Smart Contract Risk:** For staking pools or liquid staking protocols (e.g., Lido, Rocket Pool), bugs in their smart contracts could lead to loss of staked funds.
+    * **De-peg of Liquid Staking Token (LST):** If you're using liquid staking, there's a small risk that the LST (e.g., stETH) could temporarily de-peg from the underlying staked asset (ETH), creating arbitrage opportunities but also potential losses if you need to sell the LST at a discount.
+    * **Centralization Risk (for some staking pools):** While the blockchain itself is decentralized, large liquid staking providers can accumulate significant control over the network's stake, posing a centralization risk to the underlying blockchain's decentralization.
+    * **Oracle Risk:** Used in liquid staking for redemption rates.
+    * **Restaking Risks (Emerging):** Restaking introduces *additional* smart contract risks from the "actively validated services" (AVSs) you're securing, and potential for *additional slashing* if those AVSs have their own slashing conditions. This is a very new and potentially higher-risk frontier.
+
+
+**Summary (General Ranking of Risk, for the AVERAGE User):**
+
+1.  **Lending Stablecoins:** Lowest relative risk. Main concern is smart contract vulnerability and potential stablecoin de-pegging.
+2.  **LPing Stablecoins on a DEX:** Low to moderate risk. Adds minor impermanent loss risk compared to lending, plus smart contract risk, and the operational complexity of V3 concentrated liquidity.
+3.  **Staking Volatile Assets (especially direct PoS):** Highest risk among these. Dominated by the volatility of the underlying asset, plus slashing risk, smart contract risk, and potential liquidity lock-ups. Liquid staking and restaking add layers of complexity and their own specific risks.
+
+. Always do your own research (DYOR) and understand the specific protocol's mechanics and audits before committing capital to any DeFi activity!!
+
+### Difference Growth Rates KPIs
+
+You will need to understand a very important distinction in finance and especially in crypto! 
+
+APR and APY are both ways to express interest rates over a year, but they differ significantly in how they account for **compounding**.
+
+In traditional Finances, as seen within [real estate](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#understanding-loans), it was interesting to get to know the [CAGR](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#useful-concepts).
+
+But while you explore Defi Protocols, these will pop up: [APR](#apr-annual-percentage-rate) and [APY](#apy-annual-percentage-yield)
+
+**The Critical Difference:**
+
+* **APR is the simple annual rate**. If compounding occurs more frequently than annually, the actual earnings will be higher than the APR.
+
+* APY is the effective annual rate that already includes the effect of compounding. It tells you the true percentage gain on your initial principal over a year.
+
+Therefore, when you see an "APY" figure on QuickSwap or any other DeFi protocol, it's designed to give you the most accurate picture of your annual returns, taking all compounding into account.
+
+If they stated an "APR," it would be a lower number, and you'd need to manually calculate the APY based on the compounding frequency to understand your true annual return.
+
+#### APR (Annual Percentage Rate)
+
+* **What it is:** The **Annual Percentage Rate (APR)** is the simple interest rate for a year, without taking into account the effect of compounding within that year. It represents the annual cost of a loan or the annual earning rate of an investment *before* considering the "interest on interest."
+* **Key Characteristics:**
+    * **Simple Interest:** APR is based on simple interest. It's the periodic interest rate multiplied by the number of periods in a year.
+    * **No Compounding:** It does not account for interest being added to the principal more frequently than annually.
+    * **Context:** Primarily used for **loans** (mortgages, car loans, credit cards) to show the basic cost of borrowing. A lower APR is better when you're borrowing. It's also used in some DeFi contexts to indicate a base rate before any compounding.
+    * **Example:** If you have a loan with a 12% APR compounded monthly, the interest rate per month is 1%. The APR is just 1% * 12 months = 12%.
+
+#### APY (Annual Percentage Yield)
+
+* **What it is:** The **Annual Percentage Yield (APY)** is the actual rate of return on an investment or savings account over a year, **taking into account the effect of compounding interest**. It shows you how much your money will *actually* grow over a year if the interest earned is reinvested and also earns interest.
+* **Key Characteristics:**
+    * **Compounding Included:** APY factors in "interest on interest." The more frequently interest is compounded (e.g., daily vs. monthly vs. quarterly), the higher the APY will be compared to the APR, assuming the same nominal interest rate.
+    * **Higher than APR:** APY will always be equal to or higher than the APR if compounding occurs more frequently than annually. If interest only compounds annually, then APR = APY.
+    * **Context:** Primarily used for **savings accounts, investments, and yield-generating DeFi products** to show the actual earnings. A higher APY is better when you're investing or saving.
+    * **Example:** If you have an investment with a 12% APR compounded monthly:
+        * Monthly interest rate = 12% / 12 = 1%
+        * After 1 month: $1000 * 1.01 = $1010
+        * After 2 months: $1010 * 1.01 = $1020.10
+        * ...and so on.
+        * The **APY** will be higher than 12% because of this compounding effect. (For 12% APR compounded monthly, the APY is approximately 12.68%).
+
+**Key Difference Summary:**
+
+| Feature           | APR (Annual Percentage Rate)                     | APY (Annual Percentage Yield)                              |
+| :---------------- | :----------------------------------------------- | :--------------------------------------------------------- |
+| **Compounding** | **Excludes** compounding (simple interest)       | **Includes** compounding (interest on interest)            |
+| **Calculation** | Periodic rate * Number of periods in a year      | $(1 + \frac{APR}{n})^n - 1$ (where n = compounding periods) |
+| **Context** | Cost of **borrowing** (loans, credit cards)      | Earnings on **investments/savings** (deposits, yield farms) |
+| **Comparative** | Look for **lower** APR when borrowing            | Look for **higher** APY when investing/saving              |
+
+**Are there any others?**
+
+While APR and APY are the most common, especially in consumer finance and DeFi, there are other related or more specific metrics:
+
+1.  **Effective Annual Rate (EAR) / Effective Annual Interest Rate (EAIR) / Annual Equivalent Rate (AER):**
+    * This is essentially **another name for APY**, particularly when applied to borrowing costs. It emphasizes the "true" annual rate after accounting for compounding. So, APY is typically used for returns, and EAR is used for costs, but mathematically they are the same concept of a compounded annual rate.
+
+2.  **Nominal Interest Rate:**
+    * This is the stated interest rate before taking into account any fees or compounding. APR is often derived from a nominal interest rate plus fees. APY/EAR are derived from the nominal interest rate plus compounding.
+
+3.  **Real Interest Rate:**
+    * This adjusts the nominal or effective interest rate for **inflation**.
+    * Formula: Real Interest Rate $\approx$ Nominal Interest Rate - Inflation Rate.
+    * This tells you the true purchasing power gain (or loss) of your investment or the real cost of your loan after accounting for the erosion of money's value due to inflation.
+
+4.  **Compound Annual Growth Rate (CAGR):**
+    * While not strictly an "interest rate" in the sense of a stated rate, CAGR is a very useful metric for investors.
+    * **What it is:** It's the mean annual growth rate of an investment over a specified period longer than one year, assuming the profits are reinvested (compounded). It provides a "smoothed" annual growth rate, eliminating the effects of volatility that can make simple average returns misleading.
+    * **Context:** Used to evaluate the performance of investments (e.g., portfolios, mutual funds, company revenue growth) over multiple years.
+    * **Formula:** $CAGR = (\frac{EndingValue}{BeginningValue})^{\frac{1}{NumberOfYears}} - 1$
+    * **Difference from APY:** APY is typically for a single year and a stated interest rate. CAGR is a backward-looking metric calculated from actual investment performance over potentially many years, providing an average annual compounded return.
+
+5.  **Fixed vs. Variable Rates:**
+    * **Fixed Rate:** The interest rate remains constant for the entire term of the loan or investment.
+    * **Variable/Floating Rate:** The interest rate can change over time based on an underlying benchmark rate (e.g., LIBOR, SOFR, or in DeFi, algorithmic rates based on supply/demand in a pool).
+
+Understanding these different terms helps you accurately assess the true cost of borrowing and the actual return on your investments, which is crucial for sound financial decision-making in both traditional finance and the rapidly evolving DeFi space.

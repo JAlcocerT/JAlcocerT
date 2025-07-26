@@ -230,10 +230,15 @@ You can selfhost Chatwoot with this compose
   * https://docs.n8n.io/choose-n8n/#platforms
 
 * **Low-Code/No-Code, but with Code Flexibility:** n8n is often described as a "low-code" platform. This means it provides a visual, drag-and-drop interface for building workflows without needing to write code for basic tasks. However, it also allows users (especially developers) to insert custom JavaScript or Python code within nodes for more complex logic and transformations.
+
 * **Node-Based Architecture:** Workflows in n8n are built by connecting "nodes." Each node represents a specific action, trigger, or data transformation (e.g., an HTTP request, a data manipulation, sending an email, or interacting with an AI model).
+
 * **Self-Hostable and Open-Source:** A significant advantage of n8n is that it's open-source and can be self-hosted. This gives you full control over your data, privacy, and infrastructure, which is a major differentiator from many other cloud-only automation platforms. They also offer a cloud-hosted version for convenience.
+
 * **Extensive Integrations:** n8n boasts hundreds of pre-built integrations with popular applications, databases, and cloud services (e.g., Slack, GitHub, Google Sheets, Salesforce, HubSpot, OpenAI). If an integration doesn't exist, you can use the generic HTTP Request node or create custom nodes to connect to almost any API.
+
 * **AI and LLM Capabilities:** n8n is well-positioned for the "AI age." It has native support for integrating with AI services like OpenAI's GPT models, Claude, and Hugging Face. This allows you to build sophisticated AI-powered workflows for tasks like summarizing content, generating replies, classifying data, and creating AI agents.
+
 * **Use Cases:** n8n is used for a wide range of automation, including:
     * Automating repetitive tasks across various tools.
     * Building complex data pipelines (ETL).
@@ -243,7 +248,6 @@ You can selfhost Chatwoot with this compose
     * IT Operations (onboarding, security incident enrichment).
     * Building AI agents.
     * Customer support automation.
-
 
 {{< details title="Why should you care about N8N? | Vibe Coding + JSON Driven Workflows 📌" closed="true" >}}
 
@@ -284,10 +288,18 @@ You can import and export workflows in several ways:
 **Important Considerations when sharing/importing JSON:**
 
 * **Credentials:** Workflow JSON files *include credential names and IDs*. While IDs aren't sensitive, the names could be. Crucially, **they generally do NOT include the actual sensitive credential data (like API keys)**. When you import a workflow, you'll need to manually re-link or create new credentials in your n8n instance for the workflow to function.
+
 * **Webhook URLs:** If a workflow uses a Webhook trigger, the URL will be specific to the original n8n instance. When you import it, you'll likely need to generate a new Webhook URL for your instance and update any external services configured to call that webhook.
+
 * **Node Versions:** Occasionally, if you import a workflow built with a much older or newer version of n8n, you might encounter minor compatibility issues or warnings about outdated nodes. These are usually easy to resolve by updating the nodes within the UI.
 
 In summary, n8n is a highly capable and developer-friendly automation tool, and its reliance on JSON for workflow definition makes it incredibly flexible for sharing, managing, and integrating with your existing development workflows.
+
+<!-- 
+https://www.youtube.com/watch?v=UPvBc4kS8UA
+ -->
+
+{{< youtube "UPvBc4kS8UA" >}}
 
 We can **embed n8n Chats** into our sites thanks to: https://www.npmjs.com/package/@n8n/chat
 
