@@ -7,6 +7,7 @@ description: 'Exploring LLM Ops Tools'
 url: 'open-source-LLM-Ops-Tools'
 ---
 
+https://github.com/tensorchord/Awesome-LLMOps
 
 We will cover:
 

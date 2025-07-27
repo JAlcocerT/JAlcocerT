@@ -79,6 +79,7 @@ As can also render [mermaidJS](https://github.com/JAlcocerT/Streamlit-AIssistant
 You can also bring:
 
 * [QR Code](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py) Generation
+  * https://me-qr.com/page/blog/colored-qr-codes
 * [Plotly render](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/st_Plotly.py) inside Streamlit
 * You can even [modify DNS via this script](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/flask_dnsupdater.py)
 

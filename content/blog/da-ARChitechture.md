@@ -21,7 +21,7 @@ Well, you might have heard of several [**big data** tools](https://jalcocert.git
 
 Many names, many concepts.
 
-In reality, what organizations want is to have tech processing capabilities, from the enormou amounts of data that today is generated and *lands* into their systems:
+In reality, what organizations want is to have tech processing capabilities, from the enormous amounts of data that today is generated and *lands* into their **data systems**:
 
 ```mermaid
 
@@ -214,11 +214,50 @@ There is no good meeting without a **proper MoM notes and clear action points**.
 
 As a D&A Architect, you will also [prototype and create mockups](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/#prototyping-mockups-and-wireframes)
 
-And as *obvious* as it might seem, I still heard project managers asking to developers about ETA's instead of task duration.
+And as *obvious* as it might seem, I still heard **project managers** asking to developers about ETA's instead of task duration.
 
 {{< callout type="info" >}}
 Be Smart: **ETA** is a function of task duration + Priorities!
 {{< /callout >}}
+
+
+
+{{< details title="If you are a PM, be aware of the Triple Constraint  📌" closed="true" >}}
+
+As a project manager, the variables you can typically "play with" (or, more formally, manage and optimize) are indeed:
+
+* **Scope:** What needs to be done; the features, functions, and deliverables of the project.
+* **Resources:** The people, equipment, materials, and facilities needed to complete the project.
+* **Timeline (or Schedule):** The duration of the project and the sequence of activities.
+* **Cost (or Money/Budget):** The financial resources allocated to the project.
+
+These four are often referred to as the **"Project Management Triple Constraint"** (or sometimes Quadruple Constraint, including quality, or even more if you consider risk, etc.). 
+
+The classic "triple constraint" usually focuses on scope, time, and cost, with quality being an outcome influenced by how you balance these three.
+
+**What's your goal then? Knowing 3 get the last one right?**
+
+In essence, yes, that's a very good way to think about it, particularly when changes or trade-offs are necessary. Your primary goal as a project manager is to **deliver the project successfully, meeting the defined objectives and stakeholder expectations.**
+
+This usually means:
+
+1.  **Delivering the agreed-on scope:** Ensuring all required features and functionalities are present.
+2.  **Within the allocated budget:** Not overspending.
+3.  **On schedule:** Finishing by the agreed-upon deadline.
+4.  **To the required quality standards:** The deliverables are fit for purpose and meet expectations.
+
+The "knowing 3 get the last one right" concept comes into play during **trade-offs**. If one variable changes, it almost always impacts at least one of the others. For example:
+
+* **If scope increases** (you want more features), you'll likely need more **time**, more **resources**, and/or more **money**.
+* **If the timeline shortens** (you need it faster), you'll likely need more **resources** (e.g., more people working in parallel, possibly leading to higher **costs**) or you'll have to **reduce the scope**.
+* **If the budget is cut**, you might have to **reduce scope**, extend the **timeline**, or reduce the **quality** (e.g., using cheaper materials, less experienced staff).
+
+{{< /details >}}
+
+
+A PM's job is to manage these interdependencies, communicate the impacts of changes to stakeholders, and make informed decisions (or help stakeholders make them) to keep the project on track for success. 
+
+It's about finding the optimal balance among these constraints to achieve the project's goals.
 
 
 #### Decision Making

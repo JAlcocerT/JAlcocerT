@@ -9,4 +9,4 @@ Consolidating my **Tech Knowledge** in a public and [open site](https://github.c
 
 Hope that these guides will make the **your Tech Journey** a better experience.
 
-> You can reach me out at `hello@jalcocertech.com` and  https://www.youtube.com/@JAlcocerTech
+> You can reach me out at `hello@jalcocertech.com` and  https://www.youtube.com/@JAlcocerTech and support via https://ko-fi.com/jalcocertech

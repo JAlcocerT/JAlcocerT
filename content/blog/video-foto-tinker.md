@@ -59,7 +59,10 @@ In that way the acelerometer information will be captured in the `mp4` file.
 
 ### CLI Tricks
 
-There is people outthere doing cool things with ffmpeg: https://blog.bartzz.com/create-stunning-timelapses-with-ffmpeg/
+There is people outthere doing cool things with ffmpeg:
+
+* https://blog.bartzz.com/create-stunning-timelapses-with-ffmpeg/
+* https://schnerring.net/blog/use-obs-and-ffmpeg-to-create-gif-like-screencasts/
 
 #### Transfering Files
 

@@ -185,6 +185,8 @@ Let's clarify how client/server architecture and three-tier architecture relate 
 
 It's important to understand the core principles of Jamstack: https://jamstack.org/
 
+8 https://www.cloudflare.com/learning/performance/what-is-jamstack/
+
 **Jamstack Fundamentals:**
 
 * **JavaScript, APIs, and Markup:**

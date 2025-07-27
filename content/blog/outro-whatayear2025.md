@@ -93,7 +93,7 @@ An example?
 
 Could [the aissistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main) have any additional feature not to *leave money on the table*?
 
-8. Mental **Obesity**
+8. Mental **Obesity**. Which relates with bikeshedding and the [enless student syndrome](https://youtu.be/QFH-_exyNoo?si=yToM8KSBbT0V5xG3)
 
 From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael Easter) https://open.spotify.com/episode/6EDcPmRd6HHh2zdDnapEFS
 

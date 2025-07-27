@@ -6,6 +6,11 @@ tags: ["Tinkering"]
 description: OBD Data
 ---
 
+AndrOBD (Connect to your car's OBD system)
+
+https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/
+
+* https://github.com/offa/android-foss
 
 {{< details title="OBD...CANBUS...? 📌" closed="true" >}}
 

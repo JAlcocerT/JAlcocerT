@@ -182,6 +182,12 @@ Today is the turn of a [Singer Machine](#singer-mechanism!)
 * 35cm la biela
 * 4cm (x2) crank
 
+### Check Also
+
+* https://github.com/simupy/simupy
+
+>  A framework for modeling and simulating dynamical systems 
+
 ---
 
 ## FAQ

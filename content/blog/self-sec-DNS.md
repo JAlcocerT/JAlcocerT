@@ -34,7 +34,8 @@ Simple internet performance tester written in Python
 * google
 * PiDNS - url: 'selfhosting-PiHole-docker'
 
-https://www.dnsleaktest.com/
+* https://www.dnsleaktest.com/
+* https://www.techradar.com/news/best-dns-server
 
 Verify DNS Server Functionality:
 
