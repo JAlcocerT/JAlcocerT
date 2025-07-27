@@ -9,7 +9,7 @@ url: 'selfhosted-apps-06-2025'
 
 <!-- https://fossengineer.com/selfhosting-favourite-aug-2024/ -->
 
-People keep doing awsome stuff: this time with solar energy
+People keep doing awsome stuff: *this time with solar energy*
 
 <!-- https://www.youtube.com/watch?v=Alx_vwyksTw -->
 
@@ -35,6 +35,10 @@ Better Backup and media management is always welcome in any homelab.
 
 Ive been improving my [Nextcloud setup](#nextcloud-with-https), together with the [photo management tools](#in-home-tools).
 
+Keeping my references for new ideas clear:
+
+* https://github.com/awesome-selfhosted/awesome-selfhosted
+* https://selfh.st/
 
 ### Nextcloud with Https
 
@@ -300,6 +304,17 @@ Termix has been great to manage couple of homelab devices:
 http://192.168.1.11:8090
 ```
 
+You have NextTerm as an alternative: https://noted.lol/nexterm/
+
+If you will be connecting to remote computers, remember to:
+
+1. Set proper expiry policy into your tailscale
+2. Have a look to RustDesk as [Remote Desktop Solution](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#tools-for-selfhosters)
+
+```sh
+flatpak install flathub com.rustdesk.RustDesk
+```
+
 Filebrowser dev has been abandoned and for me it was still a thing to combine it with PiGallery2.
 
 But now we have filebrowser quantum!
@@ -362,7 +377,7 @@ Lately I have also been [tinkering with Python Web Apps](https://jalcocert.githu
 
 So I have updated the docker-compose and Dockerfiles at:
 
-https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps
+* https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps
 
 
 ### Other
@@ -372,3 +387,9 @@ Link analytics solutions, like Kutt:
 ![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
 
 ![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
+
+If you like Matrix or Signal, you might find interesting:
+
+* https://github.com/permissionlesstech/bitchat
+
+> Bluetooth mesh chat, IRC vibes

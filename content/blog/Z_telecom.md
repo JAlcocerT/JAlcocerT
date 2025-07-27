@@ -679,7 +679,9 @@ Anomaly Detection - Video over IP
 
 Set-top boxes (STBs) are primarily devices that receive and decode digital television broadcasts from satellite, cable, or broadband sources to display on a television or similar display device. They are not inherently Voice over Internet Protocol (VoIP) devices.
 
- However, with the advancement in technology and integration of various services, some modern set-top boxes can support VoIP functionality if they are connected to the internet and have the necessary software and hardware capabilities to handle voice communications.
+Example STB: `Dekoder dv8990 play`
+
+However, with the advancement in technology and integration of various services, some modern set-top boxes can support VoIP functionality if they are connected to the internet and have the necessary software and hardware capabilities to handle voice communications.
 
 Here's a breakdown of their functionalities:
 

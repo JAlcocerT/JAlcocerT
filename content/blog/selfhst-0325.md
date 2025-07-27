@@ -386,7 +386,7 @@ sudo apt-get -y install wifite
 sudo apt install remmina
 ```
 
-2. **RustDesk** - To help others with their setup remotely
+2. **[RustDesk](https://github.com/rustdesk/rustdesk)** - To help others with their setup remotely
 
 3. Have everything synced properly?
 

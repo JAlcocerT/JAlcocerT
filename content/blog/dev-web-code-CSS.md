@@ -65,6 +65,7 @@ I really like the **TW Image gallery**
 
 * https://daisyui.com/components/diff/
   * https://daisyui.com/components/card/
+  * https://daisyui.com/components/carousel/#item2
 
 When you **add Daisy UI** to your npm based project like so...
 

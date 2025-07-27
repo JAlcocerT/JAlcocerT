@@ -408,19 +408,23 @@ If you are into OSS, see:
 
 ## Conclusions
 
-Every file has some metadata.
+Every file has some **metadata**.
 
 If you want, you can clean it with: https://github.com/KitQuietDev/rMeta
 
 > MIT | Secure, local tool for metadata stripping, GPG encryption, and file sanitization.
 
+To enhance the quality of the images, we had [UpScayl in our toolbox](https://jalcocert.github.io/JAlcocerT/photo-management-tools/#tools-for-photos).
 
-Now its time to put theory in practice:
+And there is a repo with some tweaks to make to **UpScayl usable via CLI**:
+
+* https://github.com/yashschandra/upscayl-cli
+
+Now its time to put **theory in practice**:
 
 <!-- https://www.youtube.com/watch?v=-OO6Qrw6NWE -->
 
 {{< youtube "-OO6Qrw6NWE" >}}
-
 
 Should you go for proper cameras, or just do with your smartphone?
 
@@ -428,13 +432,13 @@ Should you go for proper cameras, or just do with your smartphone?
 
 {{< youtube "7CnjKua865Y" >}}
 
-You will need ton of space (specially for video)
+You will need ton of space (specially for video).
 
 Never forget about proper photo/video backup before your trips!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#backups" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Hardware & Softw setup for traveling" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Tools" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="PiGallery, PhotoView, Immich..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Tools" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="PiGallery, PhotoView, Immich, UpScayl..." >}}
 {{< /cards >}}
 
 

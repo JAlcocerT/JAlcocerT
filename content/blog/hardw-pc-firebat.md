@@ -542,7 +542,7 @@ A list of applications and tools, organized into categories
 **Virtualization and Remote Access**
 
 - Tailscale
-- RustDesk
+- RustDesk - https://github.com/rustdesk/rustdesk
 
 ```sh
 flatpak install flathub com.rustdesk.RustDesk

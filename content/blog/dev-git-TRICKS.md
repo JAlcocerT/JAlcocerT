@@ -49,6 +49,7 @@ git branch -a
 #git log
 git log --oneline -n 10
 git log --graph --oneline --decorate --all
+#git log -n 10 --pretty=format:"%h %ad %s" --date=short
 
 git log --follow -- <file_path> #see which commits are affecting a particular file
 

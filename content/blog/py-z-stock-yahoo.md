@@ -260,8 +260,11 @@ And the math goes... $Needs = P \times \frac{Yearly_Gross_Expenses}{(Yearly_retu
 People mention about **different strategies** to estimate the returns:
 
 * The *4% rule*, which apparently is an estimate of what you can take from a portfolio without killing your principal every year
+    * See https://engaging-data.com/visualizing-4-rule/
 * Others just go with a dividend investing approach, so they dont need to sell shares
 * And some people have a balance between stocks funds and bonds, so that if stock market goes down they can live with those bonds, without selling really cheap the stocks
+
+There are many ways to estime when will yo be F.I.R.E - https://engaging-data.com/fire-calculator/
 
 
 {{< details title="You also have the 5% rule for property investing  📌" closed="true" >}}

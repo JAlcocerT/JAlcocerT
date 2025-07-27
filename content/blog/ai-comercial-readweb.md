@@ -2,7 +2,7 @@
 title: "Ask the Web with Streamlit and AI - Looking for a Job?"
 date: 2024-10-17
 draft: false
-tags: ["Gen-AI","Python","Dev","Web Scrapping"]
+tags: ["Gen-AI","Python","Dev","Web Scrapping","EmbedChain"]
 description: 'Using Streamlit with OpenAI API and FireCrawl to Scrap the Web for Info. Compared with other scrapping Crawl4AI, ScrapeGraph and EmbedChain'
 url: 'scrap-and-chat-with-the-web'
 ---
@@ -295,7 +295,7 @@ With mem0/embedchain, we are going a little bit further than just scrapping.
 
 > The Memory layer for your AI apps 
 
-You can ofc use embedchain to ask questions about a web!
+You can ofc use embedchain to ask questions about a web or a QA BOT as seen [here](https://www.hleroy.com/2023/11/build-a-qa-chatbot-on-your-data-within-minutes-with-llm-and-embedchain/)
 
 {{< callout type="info" >}}
 Or...use just **embedchain without API** - [Embed online resources **(web urls) and ask** questions about them with **this script**](https://github.com/JAlcocerT/Scrap_Tools/blob/main/EmbedChain/sample_scrap_qna2.py)

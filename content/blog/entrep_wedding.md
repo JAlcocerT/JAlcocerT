@@ -1155,6 +1155,12 @@ Participating in Google Ads requires a commitment to learning and ongoing optimi
 
 {{< /details >}}
 
+There is the possibility to **setup a conversion action**: https://support.google.com/google-ads/answer/12216226?hl=en
+
+In that way, the directed click to your site will have a `GUID` to track what a particular user made.
+
+> That would require to have GA web analytics and cookies card placed into your web/app though
+
 
 ## Financials
 

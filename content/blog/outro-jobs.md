@@ -28,10 +28,16 @@ If you are using linkedin, you can see how good is your profile supposed to be: 
 
 ## Data for Job Market
 
+We will need some data to make this work.
+
+Last year, I was tinkering with **scrapping tools**:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scrapping the Web" image="/videos/job_offers.png" subtitle="Post where I tinkered with scrapping tools." >}}
   {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4, AI Scraps..." >}}
 {{< /cards >}}
+
+This post will be a continuation of the learnings gain in there.
 
 
 ### Using BS4 and CRON
@@ -286,7 +292,7 @@ Its all about **[Scrapping Tools](https://github.com/JAlcocerT/Scrap_Tools)** �
 
 ## Conclusions
 
-There you have few ways to make scrapping.
+There you have few ways to make scrapping work.
 
 Or how to make it better.
 
@@ -298,13 +304,19 @@ For more ideas, check also:
 
 * https://github.com/feder-cr/Auto_Jobs_Applier_AIHawk
 
-
 > AIHawk aims to easy job hunt process by automating the job application process. Utilizing artificial intelligence, it enables users to apply for multiple jobs in a tailored way.
 
+You can build a **CV with code via overleaf** (latex powered). 
+
+These tools are also interesting:
 
 * https://github.com/thiago4int/resume-ai
 
 > MIT | Resume AI with Ollama
+
+* https://github.com/resume-llm/resume-ai
+
+> MIT |  A local, privacy-first résumé builder using LLMs and Markdown to generate ATS-ready DOCX files with Pandoc — no cloud, no tracking. 
 
 
 ---

@@ -988,6 +988,8 @@ Aquí te doy algunas observaciones y sugerencias adicionales:
 
 
 **More**
+<!-- 
+https://www.otodom.pl/pl/oferta/bialoleka-aluzyjna-3pok-do-wejscia-okazyjna-cena-ID4ukLi -->
 
 1. Na którą stone wychodzą okna? 
 2. Kiedy był ostatni remont?

@@ -2,7 +2,7 @@
 title: "Tools for better Photo Management and BackUps"
 date: 2025-03-08
 draft: false
-tags: ["OSS","Homelab"]
+tags: ["OSS","Homelab","Upscayl"]
 description: 'Testing tools for Photo Management and better backup techniques.'
 url: 'photo-management-tools'
 ---

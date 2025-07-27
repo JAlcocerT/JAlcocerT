@@ -225,6 +225,7 @@ Because...[why not!](#conclusions)
   * [Solscan](https://solscan.io/)
   * [PolygonScan](https://polygonscan.com/)
   * https://btcscan.org/
+  * https://aavescan.com/ethereum-v3/usdc
 
 * Blockchain explorer for Ethereum based network and a tool for inspecting and analyzing **EVM based blockchains**.
   * https://github.com/blockscout/blockscout
@@ -385,6 +386,7 @@ Example stable coins are: USDT, USDC, DAI, USDS...
 * https://defillama.com/stablecoins
 * https://defillama.com/stablecoin/dai
 * https://defillama.com/stablecoins/Polygon
+* https://aavescan.com/ethereum-v3/usdc
 
 #### ERC20
 
@@ -464,7 +466,7 @@ So...does the code explanations match what happened in reality?
 
 ### Crypto Example 1
 
-**Lending with Aave.**
+**Lending with Aave:** https://aavescan.com/ethereum-v3/usdc
 
 I lended ETH, which gave me `aEthWETH` mapped 1:1 with the amount deposited.
 
@@ -479,6 +481,10 @@ After some time, i started getting new ETH (TBC?)
 ![AAVE v3 UI](/blog_img/crypto/defi/aave-v3-coreinstance.png)
 
 **The AAve ETH Staking smart contract**: https://etherscan.io/address/0xd01607c3c5ecaba394d8be377a08590149325722#code
+
+See how the interest floats freely between supply and demand:
+
+![USDC Historical Supply Rates seen via aavescan](/blog_img/crypto/defi/aavescan-ethv3-supplyAPR-rates.png)
 
 ### Crypto Example 2
 

@@ -7,11 +7,14 @@ summary: 'Interesting stuff Ive learn along the way when trying to make better W
 url: 'create-your-website'
 ---
 
-**Icons?**
+**Icons and fonts?**
 
 * https://github.com/akveo/eva-icons
 
 > MIT | A pack of more than 480 beautifully crafted Open Source icons. SVG, Sketch, Web Font and Animations support.
+
+* https://fonts.google.com/
+
 
 **Where to get Domains?**
 

@@ -45,7 +45,15 @@ One of the best decisions I ever had was to have a Photo Blog.
 
 Check how, *if you are passionate about Photography*
 
-Web templates (SSG'ed) connected to CMS's
+Web templates (SSG'ed) connected to CMS's.
+
+Because Selfhosting Static Generated Sites, is not a secret anymore:
+
+https://github.com/ricsanfre/public-websites-docker
+
+> MIT |  Selfhosting personal static websites using private web analytics and comments platforms 
+
+
 
 #### Leads and Offers
 
@@ -180,7 +188,7 @@ https://echarts.apache.org/en/index.html
 ### Travel
 
 
-https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/
+* https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/
 
 ### Note Taking
 
@@ -201,11 +209,30 @@ Using AI to create more and better, in less time.
 
 The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)
 
-> El relato mata al dato - Thats also true when looking for new project opportunities
+> *El relato mata al dato* - Thats also true when looking for new project opportunities
+
+
 
 #### AI Stuff
 
+If you have been doing [some scrapping](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/), you might be interested to know:
+
+* https://github.com/browser-use/browser-use
+
+> MIT |  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
+
+**More Agents**
+
+* https://github.com/agno-agi/agno
+
+> MPL2 | Full-stack framework for building Multi-Agent Systems with memory, knowledge and reasoning.
+
+You can make interesting conditional logic, like: *If scrap fails, send msg to telegram bot*
+
 #### More Websites!
+
+* https://whilecyclingthere.web.app/
+* https://cyclingthere.pages.dev/
 
 #### Better Social Media
 
@@ -213,7 +240,8 @@ With better video workflow and Postiz for sharing.
 
 ### Improving the HomeLab
 
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/
+* https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/
+* https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/
 
 
 ---

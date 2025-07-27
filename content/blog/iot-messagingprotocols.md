@@ -29,10 +29,12 @@ As seen here:
 {{< /cards >}}
 
 
+
 1. MQTT
 2. Kafka
 3. RabitMQ
 
+> See https://www.geeksforgeeks.org/kafka-vs-rabbitmq/
 
 | Feature               | WebSockets                         | MQTT                               | RabbitMQ                           |
 |-----------------------|------------------------------------|-------------------------------------|------------------------------------|
