@@ -2,17 +2,22 @@
 title: "ASTRO - SSG: Components & How to use Them"
 date: 2024-05-14T23:20:21+01:00
 draft: false
-tags: ["Web","Dev","Websites"]
+tags: ["Web","Dev","Websites","Astro Components"]
 description: 'Tutorial - Making any ASTRO Website better.'
-summary: 'How to get better with ASTRO as SSG (for non web-devs). My favourite components for Astro: search, Charts, OG/SEO, GPX...'
 url: 'understanding-astro-ssg-components'
 ---
 
 There is one thing that you need to understand to be on the **top percentile of webs**.
 
+
+
 ![Just use Astro - IQ Percentiles](/blog_img/memes/IQ_default.jpg)
 
 And it is **how to use components**.
+
+How to get better with ASTRO as SSG (for non web-devs)?
+
+This is a post about *My favourite components for Astro*: Search, Charts, OG/SEO, GPX support...
 
 <!-- Add dynamic content about you
 https://docs.astro.build/en/tutorial/2-pages/3/ -->
@@ -450,3 +455,10 @@ As seen [here](https://dteather.com/blogs/adding-giscus-discussions-to-astro/)
 * https://github.com/giscus/giscus
 
 > MIT | A comment system powered by GitHub Discussions.
+
+Alternatively, you can use commento as your commenting system!
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento" title="Commento | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="SSG Containers | Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}

@@ -2,35 +2,37 @@
 title: "Crypto. Now understandable with AI"
 date: 2025-07-23
 draft: false
-tags: ["AI","Aave v3","Fluid","QuickSwap"]
+tags: ["AI","Aave v3 / Fluid / Compund","QuickSwap / UniSwap"]
 description: 'Two buzz words in one. Understand crypto once and for all. This time thanks to LLMs'
 url: 'understading-crypto-with-ai'
 ---
 
-
-
 Here we go again...
 
-I was testing [Astro Bento Portfolio + Github Pages + Github CI/CD](https://github.com/JAlcocerT/web3) with the resulting Web3/Crypto related microblog [here](https://jalcocert.github.io/web3/).
-
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/web3" title="Web3 Astro Bento Template" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a sample blog were I chatted with LLMs about few crypto concepts." >}}
-{{< /cards >}}
+Since last year crypto is back again in many people's mouth.
 
 {{< callout type="warning" >}}
 This post is just describing the process to apply data analytics with crypto. **This is NOT a recommendation or financial advice of any type.**
 {{< /callout >}}
 
+What I want to cover here:
+
+1. Crypto Analytics with Dune x PolyMarket
+2. [Crypto Resources](#crypto-resources) to explore further some concepts: [dex](#dex-amm), [lending](#lending-protocols)
+3. [Skin in the game](#conclusions)
 
 Some time ago I was having a look to this **amazing BlockChain/Solidity FreeCodeCamp course:**
 
 {{< youtube "gyMwXuJrbJQ" >}}
 
+And this can be much easier thanks to [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)!
+
 **Practical Blockchain:**
 - Parties that do not know each other can **exchange value without a central authority**
 
 <!-- 
+SOME NAMES for the AI APP
+
 inspired by CryptaIQ and keeping that intelligent, AI-powered vibe:
 
 ProtocolAI – Simple and clear, focusing on AI-powered protocol insights.
@@ -42,9 +44,8 @@ Protocolize – Playful and suggests simplifying protocols with AI.
 InsightChain – Focuses on providing deep insights into blockchain protocols.
 CryptoCompass – Implies navigating and understanding the crypto landscape.
 IntelliChain – A combination of intelligence and blockchain, emphasizing smart analysis.
-BlockIQ – Short, catchy, and focused on intelligent blockchain insights. -->
-
-
+BlockIQ – Short, catchy, and focused on intelligent blockchain insights. 
+-->
 
 {{< callout type="info" >}}
 I decided to create [the **InsighChAIn Project**](https://github.com/JAlcocerT/PyInsightChAIn). Knowledge from [the Scrap project](https://github.com/JAlcocerT/Scrap_Tools) and practically from [CVCreAItor](/ai-useful-yet-simple/) 💻 
@@ -83,13 +84,14 @@ But...I think many of us know how to use AI already (particularly LLMs) - to get
 
 > Let's try to get clarification on some Smart Contract
 
-Understanding SC's with LLMs: these are are some [interesting protocols](https://dappradar.com/rankings/defi?sort=tvlInFiat&order=desc)
+Understanding SC's with LLMs: these are are some [interesting protocols as per dappradar](https://dappradar.com/rankings/defi?sort=tvlInFiat&order=desc)
 
-{{% details title="More about protocols... 🚀" closed="true" %}}
+{{% details title="More protocols...Lido, yearn, compound... 🚀" closed="true" %}}
 
 * https://lido.fi/ - Decentralized [Staking ETH](https://stake.lido.fi/) (get stETH and use stETH in DeFi)
 * https://yearn.fi/
 * https://compound.finance/
+    * https://defillama.com/protocol/compound-v3
 * https://aavescan.com
   * https://aavescan.com/polygon-v3/0x8f3cf7ad23cd3cadbd9735aff958023239c6a0630xa97684ead0e402dc232d5a977953df7ecbab3cdb
 
@@ -149,8 +151,6 @@ Particularly, to make a [UniSwap Protocol Dashboard](https://dune.com/fossengine
 
 For many casual users, **DeBank** and **Zapper** provide sufficient features, while **Nansen** and **Messari** are more suited for power users needing professional-grade analysis.
 
-
-
 {{< /details >}}
 
 
@@ -160,48 +160,47 @@ Solidity is not the only language you can use with Polygon.
 
 While it's the most popular language for developing smart contracts on Polygon due to its compatibility with the Ethereum Virtual Machine (EVM), other languages can be used indirectly.
 
-{{< details title="Here are some other options 📌" closed="true" >}}
+{{< details title="Here are some other options - Vyper and Yul 📌" closed="true" >}}
 
 Indirectly through Compilation:
 
-Vyper: A Python-like language that compiles to EVM bytecode, allowing you to write smart contracts in a more Pythonic style.   
-Yul: A low-level assembly language for the EVM, which can be used for highly optimized or specific use cases.
+* Vyper: A Python-like language that compiles to EVM bytecode, allowing you to write smart contracts in a more Pythonic style.   
+* Yul: A low-level assembly language for the EVM, which can be used for highly optimized or specific use cases.
 
 {{< /details >}}
-
-
-
 
 
 So if the Analytics part is clear...
 
 ...and blockchain data is public?
 
-How about exploring one protocol as an example? 
+**How about exploring one protocol as an example?**
 
 > Let's give it a try to **PolyMarket**
 
+#### PolyMarket
 
-* Its kind of a prediction market...place? Lets find out how many transactions are happening
+* Its kind of a prediction market...place? *Lets find out how many transactions are happening*
   * https://defillama.com/protocol/polymarket#information
   * Transactions - https://polygonscan.com/txs?a=0x4bfb41d5b3570defd03c39a9a4d8de6bd8b8982e
 
-{{< details title="About PolyMarket... 📌" closed="true" >}}
-
-
 Polymarket Overview: **A decentralized application on the Polygon blockchain** for predicting real-world events like elections and sports.
 
-Functionality: Users buy shares based on their predictions; share prices fluctuate with user confidence. Correct predictions yield profits, while incorrect ones result in losses.
-Prediction Examples: Includes political outcomes (e.g., presidential elections) and pop culture events (e.g., TikTok's potential ban in the U.S.).
-Liquidity Providers: Essential for market function; they deposit funds into a share pool and earn rewards, including weekly payouts in USDC.
-Important Considerations:
-    Not available in the U.S.; users should verify local laws.
-    Distinction between actual probabilities and market opinions is crucial.
-Key Takeaways:
-    Users can profit from accurate predictions.
-    Liquidity providers ensure market efficiency.
-    Awareness of local regulations is necessary before participation.
 
+{{< details title="About PolyMarket... 📌" closed="true" >}}
+
+* Functionality: Users buy shares based on their predictions; share prices fluctuate with user confidence. Correct predictions yield profits, while incorrect ones result in losses.
+* Prediction Examples: Includes political outcomes (e.g., presidential elections) and pop culture events (e.g., TikTok's potential ban in the U.S.).
+* Liquidity Providers: Essential for market function; they deposit funds into a share pool and earn rewards, including weekly payouts in USDC.
+
+* Important Considerations:
+    * Not available in the U.S.; users should verify local laws.
+    * Distinction between actual probabilities and market opinions is crucial.
+
+* Key Takeaways:
+    * Users can profit from accurate predictions.
+    * Liquidity providers ensure market efficiency.
+    * Awareness of local regulations is necessary before participation.
 
 {{< /details >}}
 
@@ -224,16 +223,21 @@ Because...[why not!](#conclusions)
 * BlockChain Scanners
   * [ETHScan](https://etherscan.io/)
   * [Solscan](https://solscan.io/)
-  * https://polygonscan.com/
+  * [PolygonScan](https://polygonscan.com/)
+  * https://btcscan.org/
 
 * Blockchain explorer for Ethereum based network and a tool for inspecting and analyzing **EVM based blockchains**.
   * https://github.com/blockscout/blockscout
+  * https://defillama.com
+  * https://dappradar.com/rankings/defi
+  * https://dune.com
+  * See what you have in your defi wallet: https://app.metalend.tech/
+
+* If you are [having a business](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe-x-invoiceninja) and want to set crypto payment, you can have a look to https://btcpayserver.org/
 
 {{< callout type="info" >}}
 If you want to read one and only one book aboyt Crypto - [WhyCryptoCurrencies](https://whycryptocurrencies.com/)
 {{< /callout >}}
-
-
 
 
 ### Interesting Crypto Stuff I found lately
@@ -242,8 +246,15 @@ More Web3 Stuff?
 
 > I was writing [about web3 here](https://jalcocert.github.io/JAlcocerT/guide-web3). 
 
+I was testing [Astro Bento Portfolio + Github Pages + Github CI/CD](https://github.com/JAlcocerT/web3) with the resulting Web3/Crypto related microblog [here](https://jalcocert.github.io/web3/).
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/web3" title="Web3 Astro Bento Template" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a sample blog were I chatted with LLMs about few crypto concepts." >}}
+{{< /cards >}}
+
 {{< callout type="info" >}}
-If you have a website, I show you [how to also have a **Web3 Compatible website**](/guide-web3/)
+If you have a website, I show you [how to also have a **Web3 Compatible website**](/JAlcocerT/guide-web3/)
 {{< /callout >}}
 
 
@@ -275,6 +286,8 @@ I got some interesting ideas from about them at:
 
 #### DEX AMM
 
+DEX are the defi counterparts of [CEX like binance, OKX...](https://defillama.com/cexs)
+
 You will hear about quickswap (also uniswap as is very popular into the ETH network) for exchanging tokens pairs.
 
 * https://defillama.com/dexs
@@ -284,6 +297,10 @@ You will hear about quickswap (also uniswap as is very popular into the ETH netw
 ![Dexes sorted per Volume](/blog_img/crypto/defi/defillama-dexes.png)
 
 QuickSwap falls primarily under the category of a **Decentralized Exchange (DEX)** and, more specifically, an **Automated Market Maker (AMM)**.
+
+* https://docs.quickswap.exchange/technical-reference/core-concepts/pools
+* https://quickswap.exchange/
+* See some sample pools: https://dapp.quickswap.exchange/farm/0xefFA9E5e63ba18160Ee26BdA56b42F3368719615
 
 QuickSwap is famously a **fork of Uniswap**, meaning its foundational code is derived from Uniswap's open-source code.
 
@@ -419,6 +436,9 @@ Similarly to what you can learn at **DefiLLama**: https://defillama.com/protocol
 
 > Which is where I got to know about Fluid: https://defillama.com/protocol/fluid
 
+* https://github.com/Instadapp/fluid-contracts-public
+* https://defillama.com/protocol/fluid-lending
+
 ![Fluid Defi](/blog_img/crypto/fluid-defi.png)
 
 I also got to learn about another lending protocol called Morpho and Lulo: 
@@ -490,7 +510,7 @@ You can pay in different tokens:
 
 ![alt text](/blog_img/crypto/defi/fluid-gas-transactio.png)
 
-I got 34.684249 `fUSDT` mapped to it, in theory to a ~7% interest: 
+I got 34.684249 `fUSDT` mapped to it, in theory to a ~7% interest: *compared with the 2% you get on USD on xtb and the ~4% the FED stablishes*
 
 ![alt text](/blog_img/crypto/defi/usdt-apy.png)
 
@@ -673,7 +693,7 @@ Bitcoin, Ethereum, Solana, and Polkadot: A Comparative Overview
 
 
 {{< callout type="warning" >}}
-Always think twice before doing. Consult with a professional.
+Always think twice before doing any crypto stuff. Consult with a professional.
 {{< /callout >}}
 
 
@@ -689,9 +709,10 @@ This can happen when the value of 2 assets deposited in a pool diverse: https://
 
 > And you receive some tokens while your assets are staked: https://etherscan.io/token/0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8
 
-3. Sample wallet
+3. Sample wallet: metamask is quite popular, but there are many OSS wallets
 
-https://portfolio.metamask.io/stake?tab=pooled
+* https://portfolio.metamask.io/stake?tab=pooled
+* For other currencies you can have a look to feather wallet or electrum.
 
 > You can find your wallet address / transactions and so on at https://etherscan.io/address/
 
@@ -887,51 +908,4 @@ If they stated an "APR," it would be a lower number, and you'd need to manually 
 
 #### APY (Annual Percentage Yield)
 
-* **What it is:** The **Annual Percentage Yield (APY)** is the actual rate of return on an investment or savings account over a year, **taking into account the effect of compounding interest**. It shows you how much your money will *actually* grow over a year if the interest earned is reinvested and also earns interest.
-* **Key Characteristics:**
-    * **Compounding Included:** APY factors in "interest on interest." The more frequently interest is compounded (e.g., daily vs. monthly vs. quarterly), the higher the APY will be compared to the APR, assuming the same nominal interest rate.
-    * **Higher than APR:** APY will always be equal to or higher than the APR if compounding occurs more frequently than annually. If interest only compounds annually, then APR = APY.
-    * **Context:** Primarily used for **savings accounts, investments, and yield-generating DeFi products** to show the actual earnings. A higher APY is better when you're investing or saving.
-    * **Example:** If you have an investment with a 12% APR compounded monthly:
-        * Monthly interest rate = 12% / 12 = 1%
-        * After 1 month: $1000 * 1.01 = $1010
-        * After 2 months: $1010 * 1.01 = $1020.10
-        * ...and so on.
-        * The **APY** will be higher than 12% because of this compounding effect. (For 12% APR compounded monthly, the APY is approximately 12.68%).
-
-**Key Difference Summary:**
-
-| Feature           | APR (Annual Percentage Rate)                     | APY (Annual Percentage Yield)                              |
-| :---------------- | :----------------------------------------------- | :--------------------------------------------------------- |
-| **Compounding** | **Excludes** compounding (simple interest)       | **Includes** compounding (interest on interest)            |
-| **Calculation** | Periodic rate * Number of periods in a year      | $(1 + \frac{APR}{n})^n - 1$ (where n = compounding periods) |
-| **Context** | Cost of **borrowing** (loans, credit cards)      | Earnings on **investments/savings** (deposits, yield farms) |
-| **Comparative** | Look for **lower** APR when borrowing            | Look for **higher** APY when investing/saving              |
-
-**Are there any others?**
-
-While APR and APY are the most common, especially in consumer finance and DeFi, there are other related or more specific metrics:
-
-1.  **Effective Annual Rate (EAR) / Effective Annual Interest Rate (EAIR) / Annual Equivalent Rate (AER):**
-    * This is essentially **another name for APY**, particularly when applied to borrowing costs. It emphasizes the "true" annual rate after accounting for compounding. So, APY is typically used for returns, and EAR is used for costs, but mathematically they are the same concept of a compounded annual rate.
-
-2.  **Nominal Interest Rate:**
-    * This is the stated interest rate before taking into account any fees or compounding. APR is often derived from a nominal interest rate plus fees. APY/EAR are derived from the nominal interest rate plus compounding.
-
-3.  **Real Interest Rate:**
-    * This adjusts the nominal or effective interest rate for **inflation**.
-    * Formula: Real Interest Rate $\approx$ Nominal Interest Rate - Inflation Rate.
-    * This tells you the true purchasing power gain (or loss) of your investment or the real cost of your loan after accounting for the erosion of money's value due to inflation.
-
-4.  **Compound Annual Growth Rate (CAGR):**
-    * While not strictly an "interest rate" in the sense of a stated rate, CAGR is a very useful metric for investors.
-    * **What it is:** It's the mean annual growth rate of an investment over a specified period longer than one year, assuming the profits are reinvested (compounded). It provides a "smoothed" annual growth rate, eliminating the effects of volatility that can make simple average returns misleading.
-    * **Context:** Used to evaluate the performance of investments (e.g., portfolios, mutual funds, company revenue growth) over multiple years.
-    * **Formula:** $CAGR = (\frac{EndingValue}{BeginningValue})^{\frac{1}{NumberOfYears}} - 1$
-    * **Difference from APY:** APY is typically for a single year and a stated interest rate. CAGR is a backward-looking metric calculated from actual investment performance over potentially many years, providing an average annual compounded return.
-
-5.  **Fixed vs. Variable Rates:**
-    * **Fixed Rate:** The interest rate remains constant for the entire term of the loan or investment.
-    * **Variable/Floating Rate:** The interest rate can change over time based on an underlying benchmark rate (e.g., LIBOR, SOFR, or in DeFi, algorithmic rates based on supply/demand in a pool).
-
-Understanding these different terms helps you accurately assess the true cost of borrowing and the actual return on your investments, which is crucial for sound financial decision-making in both traditional finance and the rapidly evolving DeFi space.
+* **What it is:** The **Annual Percentage Yield (APY)** is the actual rate of return on an investment or savings account over a year, **taking into account the effect of compounding interest**. It shows you how much your money will *actually* grow over a year if the int

@@ -148,6 +148,8 @@ And...thats all the one time things/setup required to get your website.
 
 We just created a free website with Firebase and Astro SSG!
 
+Isnt it like 1M times better looking than such webs (that are making money): https://unamoteracualquiera.com/
+
 **In a nutshell,** from now on, just these **3 commands** are enough, as the setup is completed:
 
 ```sh

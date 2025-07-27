@@ -29,6 +29,8 @@ I will be showing you how to put your videos into social media with:
 
 And now there is a chance to do a **photo & video recap**
 
+Because there are people doing really cool videos: https://www.youtube.com/@JustDriving4K
+
 <!-- https://www.youtube.com/watch?v=kaa1vPHqKdw -->
 
 <!-- https://www.youtube.com/watch?v=iuhXwVNdz4w -->
@@ -71,6 +73,16 @@ mkdir -p "$HOME/Desktop/CAM1-$(date +%m-%d)" && rsync -avP --include='*.MP4' --e
 3.  **Copy MP4s:** `rsync` will then scan the *current directory* you are in, and copy *only* files that end with `.MP4` into the newly created (or existing) dated folder on your Desktop. It will do this efficiently, preserve file attributes, and show you the progress.
 
 > This command is perfect for quickly backing up or moving only video files (from a OA5Pro) into a clearly dated folder on your desktop.
+
+If you want to send files to your HomeLab server via CLI: *I got ~90MB/s transfer speed*
+
+```sh
+#rsync -avP /path/to/video.mp4 username@destination_host:/path/to/destination/
+rsync -avP /media/jalcocert/OsmoAction/DCIM/DJI_001/output_video.mp4 jalcocert@192.168.1.11:/home/jalcocert/Norway
+
+#rsync -avP /path/to/local/folder/ username@destination_host:/path/to/remote/destination/
+rsync -avP /home/jalcocert/Desktop/norway-4k/Norway-13-15Jul25 jalcocert@192.168.1.11:/home/jalcocert/Norway
+```
 
 #### Videos with FFMPeg
 

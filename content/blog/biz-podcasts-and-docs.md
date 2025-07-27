@@ -59,10 +59,15 @@ npm run dev
 6. [LastUpdated](https://starlight.astro.build/reference/configuration/#lastupdated) for Docs/Posts
 7. Some [Astro data fetching](https://docs.astro.build/en/guides/data-fetching/) example
 8. [Image Options](https://docs.astro.build/en/guides/images/) examples: raw and optimized
-9. [Data fetching](https://docs.astro.build/en/guides/data-fetching/), so that you can reference content, like your docker-compose.yml public on github, so that others can edit them.
+9. [Data fetching](https://docs.astro.build/en/guides/data-fetching/), so that you can reference content, like your `docker-compose.yml` public on github, so that others can edit them.
 10. A progress line bar on the top of the posts to show how much you have left
 11. Katex, Charts and diagrams rendering 
 12. Maybe [commenting](https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento) system? Or [Giscus](https://justinjbird.com/blog/2023/adding-comments-to-a-hugo-site-using-giscus/#adding-the-parameters), [maybe?](https://dteather.com/blogs/adding-giscus-discussions-to-astro/)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento" title="Commento | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="SSG Containers | Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
 
 You can explore commento PostgresSQL DB:
 

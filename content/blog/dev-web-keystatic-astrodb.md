@@ -23,6 +23,13 @@ On this post I will be covering:
 
 3. Animations
 
+There is always a chane to improve few web concepts, specially with great videos: *Microfrontends the right way*
+
+<!-- https://www.youtube.com/watch?v=nX44PRZ6Pcc -->
+
+{{< youtube "nX44PRZ6Pcc" >}}
+
+
 ### Astro DataNova Theme
 
 * https://github.com/mearashadowfax/DataNova

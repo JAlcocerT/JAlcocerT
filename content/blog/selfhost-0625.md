@@ -71,11 +71,11 @@ To this
 
 > remember to use the [Android](https://play.google.com/store/apps/details?id=com.nextcloud.client&pli=1) or iOS app
 
-https://jalcocert.github.io/JAlcocerT/sync-file-tools/#webdavs
+* https://jalcocert.github.io/JAlcocerT/sync-file-tools/#webdavs
 
-![alt text](/blog_img/selfh/media/nc-dav-otherlocations.png)
+![NextCloud WebDAV Zorin UI](/blog_img/selfh/media/nc-dav-otherlocations.png)
 
-https://docs.nextcloud.com/server/31/user_manual/en/files/access_webdav.html
+* https://docs.nextcloud.com/server/31/user_manual/en/files/access_webdav.html
 
 ```txt
 dav://reisikei@192.168.1.11:8080/remote.php/webdav
@@ -100,7 +100,7 @@ You can also use the desktop app:
 flatpak install flathub com.nextcloud.desktopclient.nextcloud
 ```
 
-See the transfer speed with
+See the transfer speed with:
 
 ```sh
 sudo apt install nload
@@ -112,7 +112,7 @@ nload wlp3s0
 
 You can now enable other devices or create accounts for your friends/family:
 
-![nextcloud settings](/blog_img/selfh/media/nc-settings-sec.png)
+![Nextcloud settings](/blog_img/selfh/media/nc-settings-sec.png)
 
 #### Third Party Cloud NC Backup
 
@@ -288,7 +288,6 @@ To have a rendered pdf with instructions how to access your selfhosted services
   {{< card link="https://fossengineer.com/selfhosting-excalidraw/" title="SelfHosting Excalidraw | Post 🐳 ↗"  >}}
 {{< /cards >}}
 
-
 ---
 
 ## Conclusions
@@ -307,19 +306,17 @@ But now we have filebrowser quantum!
 
 Also, ive been tinkering a lot with authentication via Logto.
 
-If you are looking for this edition's config files:
-
+If you are looking for this **post edition's config files**:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH" title="Docker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Collection of Docker Config Files - 0625 Edition" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Home-Lab" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Ordered config files | Youtube Video friendly" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH" title="Docker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Collection of Docker Config Files - 0625 Edition 🐳 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Home-Lab Github Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Ordered config files | Youtube Video friendly 🐳 ↗" >}}
 {{< /cards >}}
 
 **SelfHosting Resources**: If you want more inspiration
 
 * https://openalternative.co/self-hosted
 * https://devsuite.co/collections/open-source
-
 
 
 With [gemini CLI](https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/) and similar [vibe coding tools](https://jalcocert.github.io/JAlcocerT/vide-coding/), its been much easier to spin new services:

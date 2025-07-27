@@ -20,7 +20,7 @@ Thanks to:
   {{< card link="https://github.com/JAlcocerT/taxi-web" title="Taxi Web Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Tinkering with Astro + JSON/Ghost CMS API" >}}
 {{< /cards >}}
 
-It's been an idea for sometime to bring a website to anyone who has something to say.
+It's been an idea for sometime to **bring a website to anyone who has something to say.**
 
 But its always about how to bring the edition capabilities to the public.
 
@@ -36,8 +36,7 @@ The container for SSGs are not a mistery
 
 So...how about the editing capabilities?
 
-Because this might not be for everyone:
-
+Because doing this via IDE might not be for everyone:
 
 ```sh
 npm install
@@ -58,7 +57,6 @@ And as per its **MIT** License, its a great skeleton to build, for example websi
 #git clone https://github.com/vbartalis/energy-template
 git clone https://github.com/JAlcocerT/taxi-web
 cd energy-template
-
 ```
 
 ## Ghost Setup
@@ -82,7 +80,6 @@ npm run dev -- --host 0.0.0.0 --port 4321
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web" title="Web Related Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/taxi-web/blob/main/docker-compose.yml" title="Ghost Setup Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 
 If you are ready with Ghost up and running, go the the settings:
@@ -271,7 +268,7 @@ export async function getStaticPaths() {
 
 Once you have done the tweaks, it will look like:
 
-![alt text](/blog_img/web/ghost/ghost-cms-posts.png)
+![Ghost x CMS Post](/blog_img/web/ghost/ghost-cms-posts.png)
 
 So you will need to give proper promps to that the initial asto theme design is mantained, just pulling the info written in ghost:
 
@@ -282,25 +279,40 @@ Your current setup uses **Ghost as a headless CMS**.
 Here’s how it works:
 
 Ghost runs as a backend/content management system (in your Docker container).
+
 You create and manage posts, images, and metadata via the Ghost Admin UI.
+
 Astro (your frontend static site) pulls content from Ghost using the Ghost Content API at build time (or runtime, if desired).
+
 The content (posts, images, tags, etc.) is fetched via API calls (not by reading Ghost’s HTML or database directly).
+
 Astro renders the content into your custom layouts and components, giving you full control over the presentation.
 Benefits:
 
-You get a modern, user-friendly CMS for editing content.
-Your frontend is fast, secure, and fully customizable.
-You can deploy your static site anywhere, and simply rebuild it when Ghost content changes.
+* You get a modern, user-friendly CMS for editing content.
+* Your frontend is fast, secure, and fully customizable.
+* You can deploy your static site anywhere, and simply rebuild it when Ghost content changes.
 
 ## Ghost WebHooks
 
-https://ghost.org/docs/webhooks/
+* https://ghost.org/docs/webhooks/
 
 ### Ghost x N8N
 
 Who said about writing AI Driven content?
 
-https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.ghost/
+* https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.ghost/
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8n Docker Config 🐋 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+### N8N x MCP
+<!-- 
+https://www.youtube.com/watch?v=c9E-tDyKy_A -->
+
+{{< youtube "c9E-tDyKy_A" >}}
 
 
 ## Hosting Ghost Powered Astro Theme
@@ -337,7 +349,7 @@ docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest 
 
 ### Why that much love to Astro
 
-I have been writting about astro components sometime ago.
+I have been writting about [astro components](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/) sometime ago.
 
 But now, with vibe coding, nothing should be stopping you to create your own. 
 

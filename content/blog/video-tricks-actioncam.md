@@ -15,7 +15,7 @@ So far, ive been doing couple of things with the **action cam**.
 {{< /cards >}}
 
 
-Even apply **data analytics for action cams** andfor karting!
+Even apply **data analytics for action cams** and for karting!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/" title="Geospatial Analysis (with action cams) ↗" >}}
