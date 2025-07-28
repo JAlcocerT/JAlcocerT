@@ -11,6 +11,8 @@ Software and Hardware setup **before trips or vacations**.
 
 Let see interesting tech for a trip.
 
+Because you wont be carrying a lot of stuff: https://levels.io/carry-on-world-travel/
+
 ### Software Setup
 
 If you are reading for some time already - You know that I really enjoy [SelfHosted Apps](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/).

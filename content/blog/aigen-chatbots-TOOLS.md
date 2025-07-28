@@ -642,3 +642,16 @@ docker-compose up -d #modify it if your ports are busy already
 
 There is a Python SDK - https://github.com/openlit/openlit/tree/main/sdk/python // https://pypi.org/project/openlit/
 {{< /dropdown >}}
+
+* https://github.com/kuvasz-uptime/kuvasz
+
+> Kuvasz (pronounce as [ˈkuvɒs]) is an open-source uptime and SSL monitoring service, built in Kotlin
+
+* https://github.com/openstatusHQ/openstatus
+
+> 🏓 The open-source synthetic monitoring platform 🏓
+
+* https://github.com/chamanbravo/upstat
+
+> 🟢 a simple open-source, self-hosted status monitoring tool
+

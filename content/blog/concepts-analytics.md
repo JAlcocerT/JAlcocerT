@@ -2,19 +2,16 @@
 title: "Data Analytics Concepts [Recap]"
 date: 2025-03-05
 draft: false
-tags: ["Dev"]
+tags: ["D&A","GXs","Pydantic"]
 description: "Data Management (Validation, Profiling, Modelling,...)"
 url: 'data-analytics-concepts'
 ---
-
-
 
 ## Data Management Concepts
 
 A very important distinction in data management. 
 
-Here's a breakdown of the differences between **data validation and data profiling**.
-
+See differences between **data validation and data profiling**.
 
 ```mermaid
 graph LR
@@ -27,12 +24,12 @@ graph LR
 
 ### Data Validation
 
-<!-- 
- https://greatexpectations.io/expectations/
- https://greatexpectations.io/blog/what-is-data-profiling
-  -->
+If you work within D&A already, you might have heard about:
 
-<!-- pydantic -->
+* GX's: *which is helpful to set **data validation rules**, once you know which data you expect as per domain knowledge or previous Data Profiling*
+    * https://greatexpectations.io/expectations/
+    * https://greatexpectations.io/blog/what-is-data-profiling
+* Pydantic: *specially now that they go into the AI space*
 
 {{< details title="Data Validation Tools - Pydantic vs GXs 📌" closed="true" >}}
 
@@ -100,13 +97,12 @@ Pydantic and Great Expectations both play roles in data validation, but they ser
 {{< /details >}}
 
 
-* Pydantic is for validating data structures within your Python code.
+* **Pydantic is for validating data structures** within your Python code.
 * Great Expectations is for validating the quality and consistency of your data as it moves through your data pipelines.
 
 They can complement each other.
 
 You might use Pydantic to validate the data you receive from an API and then use Great Expectations to validate the data after it's been processed and stored in your database.
-
 
 * **Purpose:**
     * Data validation is the process of ensuring that data meets specific criteria or constraints. It's about checking if the data is *correct* according to predefined rules.
@@ -165,7 +161,7 @@ You might use Pydantic to validate the data you receive from an API and then use
 
 They are **complementary processes**.
 
-You often use data profiling to understand your data and then define data validation rules based on those insights.
+> You often use data profiling to understand your data and then define data validation rules based on those insights.
 
 ### Data Modelling
 
@@ -176,6 +172,7 @@ I made a project with a **Raspberry Pi with [Mongo & DataBricks CE](https://jalc
 
 ## BI Tools and DBs
 
+These tools work to bring proper data to Gold layer, where we tend to have reporting and BI tools:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="The BI Tools" image="/blog_img/iot/grafana-datasources.png" subtitle="Dashboards For DAs and IoT Projects" >}}

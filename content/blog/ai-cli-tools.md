@@ -18,6 +18,16 @@ And as of now, they are on top of the LLM Leaderboard: https://lmarena.ai/leader
 
 Querying Gemini was as simple as getting your [API Key](https://aistudio.google.com/app/apikey) and doing:
 
+
+Your `.env` definition:
+
+```sh
+GEMINI_API_KEY=some-apikey
+GOOGLE_CLOUD_PROJECT="project-whatever"
+```
+
+Then execute:
+
 ```sh
 #source .env
 curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}" \
@@ -35,6 +45,65 @@ curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:g
     ]
   }'
 ```
+
+{{< details title="Testing GeminiCLI for the first time 📌" closed="true" >}}
+
+
+
+```sh
+npx https://github.com/google-gemini/gemini-cli
+export GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_ID"
+#gemini
+#npx https://github.com/google-gemini/gemini-cli -y && gemini
+```
+
+```sh
+#source .env
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}" \
+  -H 'Content-Type: application/json' \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }'
+```
+
+---
+
+
+Could you look at the structure of the input-sources/sdlc-speedup folder and generate a documentation for Skeleton for it?
+
+
+Your task is to create **technical documentation for the SpeedUp cloned project** and write a post as markdown file where specified.
+
+
+**Output Format (Astro Theme Template):**
+
+The final documentation should be formatted to be easily integrated with the Astro theme located at `/home/jalcocert/Desktop/IT/project-documentation-generator-geminiCLI/docs/src/content/docs/reference`.
+
+Please consider the following:
+
+* **Markdown Output:** Generate the documentation in Markdown format (`.md` files) as this is the primary format for Astro content.
+* **Frontmatter:** Respect the following Astro frontmatter at the beginning of each Markdown file (e.g., `title`, `description`)
+
+* Add H2/H3 and bullet points to structure the information of the post
+* Provide a final section in H2 to the post so that we can see the files that have been used to generate it
+* Make a plan also as per the information of the tree -L commands to enhance the documentation at a later stage.
+* Inspect also the most likely files of the project to provide value and direction on tech details
+* Consider information like repository structure and real app files, not markdowns
+
+---
+
+could you write one post for each front end component? 
+
+{{< /details >}}
 
 You could also do these queries to [Gemini with python](https://ai.google.dev/gemini-api/docs/quickstart?lang=python)
 
@@ -260,6 +329,43 @@ Which can be discovered from within Windsurf's MCP store!
 
 ## BAML
 
+Last year I got to learn a little bit about [OpenAI Function Calling here](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/).
+
+
+{{< details title="Function calling vs BAML 📌" closed="true" >}}
+
+- **Standard OpenAI Function Calling**: More direct, but less type-safe and more verbose
+- **BAML Approach**: More structured, type-safe, and maintainable, but requires learning BAML
+
+Standard OpenAI function calling involves:
+
+1. **Manual Schema Definition**: You define JSON schemas for functions directly in your code
+2. **Manual Execution**: You intercept function calls and execute them yourself
+3. **Manual Response Handling**: You parse and process the results manually
+4. **No Type Safety**: No compile-time checking of parameters or return types
+
+Choose based on your project's needs:
+
+- For quick prototypes or small scripts: Standard OpenAI approach
+- For larger applications, complex schemas, or team development: BAML approach
+
+While it requires **learning BAML syntax** and adding a code generation step, the benefits outweigh these costs for any project that needs reliable, maintainable AI integrations.
+
+The BAML approach is particularly valuable for:
+
+- Projects with complex JSON schemas
+- Teams where different people work on models vs. business logic
+- Production systems where type safety and reliability are important
+- Applications that need to evolve their schemas or prompts over time
+
+**Further `.md` and tests can be found**:  https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/BAML
+
+{{< /details >}}
+
+
+> BAML uses Pydantic model under the hood as well!
+
+
 * https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
 * https://docs.boundaryml.com/home
   * https://gitmcp.io/BoundaryML/baml - This can be added to windsurf as MCP reference about BAML via SSE
@@ -278,7 +384,7 @@ When comparing with BAML, you can see several key differences:
 1. Type Safety:
 
 * Without BAML: You manually define JSON schemas, no compile-time checking
-* With BAML: Types are checked at compile time with Pydantic
+* With BAML: Types are checked at compile time with [Pydantic](https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/#data-validation)
 
 2. Configuration vs. Code:
 
@@ -699,8 +805,24 @@ https://www.youtube.com/watch?v=uohI3h4kqyg
 
 ### Python CLi Tools
 
-* https://pypi.org/project/questionary/
+* https://pypi.org/project/questionary/ - Create CLI utilities with python
 * https://docs.pytest.org/en/stable/
+
+### Tokenization vs Dynamic Chunking
+
+* https://arxiv.org/abs/2507.07955
+
+<!-- Twitter
+https://x.com/sukjun_hwang/status/1943703574908723674 -->
+
+{{< tweet user="sukjun_hwang" id="1943703574908723674" >}}
+
+
+<!-- 
+https://www.youtube.com/watch?v=7wf7fsI-Gp4 
+-->
+
+{{< youtube "7wf7fsI-Gp4" >}}
 
 
 ---

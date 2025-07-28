@@ -1196,9 +1196,15 @@ Others, look into LTGP *the life time to gross profit*
 
 > Create your funnel and a user journey map to see where the friction is!
 
+After some time, you might get an interesting ARR or **MRR**, the *monthly recurring revenue* that you were looking for!
+
 ---
 
 ## Conclusions
+
+Remember, people paying for your product is the only validation you need: https://levels.io/idea-validation/
+
+
 
 If this does not give you a taste of what end to end feels like, nothing will.
 

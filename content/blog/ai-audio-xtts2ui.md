@@ -2,19 +2,15 @@
 title: "Audio with AI. TTS and Voice Cloning"
 date: 2025-05-10T18:20:21+01:00
 draft: false
-# cover:
-#   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
-#   alt: "SelfHosting xTTS2 with Docker." # alt text
-#   caption: "Succesfull installation of xTTS2 with Docker." # display caption
 description: 'Local T2S Tools with Coqui and LocalAI. Clone audio with xTTS2.'
-tags: ["AI-Gen","Pinokio AI","F5-TTS","Coqui-TTS"]
+tags: ["AI-Gen","Google AI Studio","Pinokio AI","F5-TTS","Coqui-TTS"]
 url: local-ai-audio
 ---
 
 We have couple of *free to use* places to get TTS working out of the box:
 
 * https://platform.openai.com/playground/tts
-* https://aistudio.google.com/generate-speech
+* https://aistudio.google.com/generate-speech and you could aso via Gemini API Key
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat Project ↗" >}}

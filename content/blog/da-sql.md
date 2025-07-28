@@ -149,6 +149,8 @@ SELECT CustomerName FROM Sales2020;
 
 But what are joins?
 
+I found an interesting post about SQL Joins:
+
 {{< tweet user="stratebi" id="1231889201198772224" >}}
 
 

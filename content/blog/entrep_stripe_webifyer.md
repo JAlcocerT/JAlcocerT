@@ -313,6 +313,17 @@ So how about choosing that subdomain, and getting it configured on the backend t
 
 This was quite a ride.
 
+Even porkbun is offering this kind of static hosting service for ~30$/year: https://porkbun.com/products/webhosting/staticHosting
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web" title="Web Related Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/StaticWebServer" title="Selfhosted Static Hosting - Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+* https://porkbun.com/products/webhosting/managedLinks
+
+But...forget about the theming part and edition we have talked on this post.
+
 You have learn how to:
 
 1. Get Flask working with Logto https://authentication.jalcocertech.com/ or https://oxa37q.logto.app/sign-in

@@ -2,8 +2,8 @@
 title: "LLMs Function Calling"
 date: 2024-08-18T23:20:21+01:00
 draft: false
-tags: ["Dev"] 
-description: "Testing function calling with OpenAI Models. OpenAI Functions"
+tags: ["Dev","LLMs"] 
+description: "Testing function calling with OpenAI API Models. OpenAI Functions"
 url: "how-to-use-openai-function-calling"
 ---
 
@@ -17,7 +17,7 @@ However, sometimes you don't just want an answer in words; you want the assistan
 
 That's where function calling comes in.
 
-{{< details title="**Think of it like this:** 📌" closed="true" >}}
+{{< details title="Think about Function calling like this 📌" closed="true" >}}
 
 You ask your assistant: "What's the weather like in Warsaw?"
 

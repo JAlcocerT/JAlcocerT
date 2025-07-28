@@ -249,6 +249,7 @@ A friend told me recently to have a look to these to do **interesting youtube sh
 * Klingai.com for video generated from images/text
 * Ilevenlabs to create TTSpeech
   * Thanks to GitPodcast, I saw that its also possible to do with [Azure AI Speech](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/)
+* Even via Gemini API / Google AI Studio as seen on [this post](https://jalcocert.github.io/JAlcocerT/audio-to-text-tools/) and [this post of TTS](https://jalcocert.github.io/JAlcocerT/local-ai-audio/) - https://aistudio.google.com/generate-speech
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Audio" title="Testing OpenAI API + Audio for YT  ↗" >}}

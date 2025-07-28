@@ -24,6 +24,8 @@ url: 'create-your-website'
 * Cloudflare domains...
 * https://account.squarespace.com/
 
+If you are new and are just trying, you can get a `.fyi`
+
 <!-- * Where to get **Free SVGs for HUGO**:
   * https://www.svgrepo.com/svg/424489/adventure-journey-location
   * https://fontawesome.com/
@@ -41,7 +43,7 @@ url: 'create-your-website'
   * https://github.com/adobe/leonardo -  Generate colors based on a desired contrast ratio  - Apache v2
    -->
 
-You can create **cool static websites** with these SSG frameworks.
+You can create **cool static websites** with these SSG frameworks below.
 
 And also with [Remix](https://github.com/jacob-ebey/remix-ssg).
 
@@ -68,8 +70,7 @@ sudo python3 -m http.server 80 --directory dist
 hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.11" --port=1313
 ```
 
-https://magnus919.com/notes/embed-mastodon-shortcode/
-
+* https://magnus919.com/notes/embed-mastodon-shortcode/
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web" title="Web Related Docker Config 🐋 ↗" >}}
@@ -79,8 +80,10 @@ https://magnus919.com/notes/embed-mastodon-shortcode/
 
 You can also put Astro/HUGO inside a container as seen:
 
-https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs
-https://github.com/JAlcocerT/WebGenerAItor/blob/main/docker-compose.yml
+* https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs
+* https://github.com/JAlcocerT/WebGenerAItor/blob/main/docker-compose.yml
+
+In case that you would like to skip the hosting cost: https://porkbun.com/products/webhosting/staticHosting
 
 And if you are new to Websites, do it (The Web [Deployment](#select-the-deployment-method)) with [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) to get a free subdomain with it.
 
