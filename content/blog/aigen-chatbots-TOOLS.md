@@ -1,14 +1,13 @@
 ---
-title: "ChatBots with AI: Langflow and other OS Tools "
+title: "ChatBots with AI: Langflow and other OSS Tools "
 date: 2024-08-08T00:20:21+01:00
 draft: false
-cover:
-    image: "https://socialify.git.ci/langflow-ai/langflow/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
-    alt: "Using LangFlow to create ChatBots" # alt text
-    caption: "AI ChatBots 101" # display caption under cover
-tags: ["Gen-AI","OSS for Business"]
+# cover:
+#     image: "https://socialify.git.ci/langflow-ai/langflow/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
+#     alt: "Using LangFlow to create ChatBots" # alt text
+#     caption: "AI ChatBots 101" # display caption under cover
+tags: ["Gen-AI","OSS for Business","Monitoring Tools"]
 description: 'LangFlow. AI chatbots with open source'
-summary: 'How to use open source ChatBots Tools: LangFlow, BotPress, TypeBot, FlowiseAI and ChatWoot'
 url: 'free-open-source-chat-bots'
 ---
 
@@ -20,7 +19,7 @@ Recently I have been exploring PandasAI to learn **how to create RAGs** over loc
 
 ![If you are a programmer](/img/GenAI/llms-frameworks.webp#center)
 
-Some people say that OpenAI + LangChain is the way, is it right?
+Some people say that OpenAI + LangChain via Python is the way, is it right?
 
 <!-- 
 https://dev.to/worldlinetech/in-bed-with-gpt-and-nodejs-4kh2 
@@ -36,6 +35,7 @@ Found these interesting projects to **create ChatBots through UI**:
 * [FlowiseAI](#flowiseai) - a UI for LangChain (JS)
 * [ChatWoot](#chatwoot) -->
 
+*How to use open source ChatBots Tools: LangFlow, BotPress, TypeBot, FlowiseAI and ChatWoot?*
 
 | **Tool**         | Description                                 | License Type          |
 |--------------|---------------------------------------------|-----------------------|
@@ -49,6 +49,8 @@ Found these interesting projects to **create ChatBots through UI**:
 
 <!-- [![Star History Chart](https://api.star-history.com/svg?repos=AmruthPillai/Reactive-Resume,botpress/botpress&type=Date)](https://star-history.com/#AmruthPillai/Reactive-Resume&botpress/botpress&Date) -->
 
+We will also be **exploring [monitoring tools](#foss-ai-monitoring-tools)** for our apps.
+
 ## Open Source Chatbots
 
 [![Star History Chart](https://api.star-history.com/svg?repos=botpress/botpress,langflow-ai/langflow,baptisteArno/typebot.io,chatwoot/chatwoot,FlowiseAI/Flowise&type=Date)](https://star-history.com/#botpress/botpress&langflow-ai/langflow&baptisteArno/typebot.io&chatwoot/chatwoot&FlowiseAI/Flowise&Date)
@@ -56,7 +58,6 @@ Found these interesting projects to **create ChatBots through UI**:
 > Let's see how to use some of these ChatBot Tools step by step
 
 ### The LangFlow Project
-
 
 LangFlow uses **LangChain Python** under the hood and allow us to quickly prototype AI ChatBots:
 
@@ -250,20 +251,17 @@ Acces LangFlow at `localhost:7860`
 
 {{< /dropdown >}}
 
-{{< dropdown title="LangFlow with OpenAI API Key ⏬" closed="true" >}}
-
-
-{{< /dropdown >}}
 
 #### How to Embed LangFlow
 
 * https://github.com/langflow-ai/langflow-embedded-chat
 
-You will get a MIT Licensed Widget on your Page
+> You will get a **MIT Licensed Widget** on your Page
 
 
 ### Botpress
 
+Another alternative is BotPress:
 
 * {{< newtab url="https://botpress.com/" text="The Botpress Official Site" >}} - Botpress | AI Chatbot Platform
 * {{< newtab url="https://github.com/botpress/botpress" text="The Botpress Source Code at Github" >}}
@@ -289,6 +287,8 @@ docker run -d --name=botpress -p 3000:3000 botpress/server
 
 
 ### TypeBot
+
+We also have TypeBot:
 
 * https://docs.typebot.io/self-hosting/deploy/docker
 * https://github.com/baptisteArno/typebot.io - AGPLv3
@@ -318,7 +318,7 @@ docker-compose up -d
 
 ### ChatWoot
 
-* {{< newtab url="/selfhosting-chatwoot" text="ChatWoot with Docker" >}} - Mixed MIT License ❗
+* You can also [SelfHost ChatWoot](https://fossengineer.com/selfhosting-chatwoot/) - Mixed MIT License ❗
 
 {{< dropdown title="Quick Chatwoot Setup ⏬" closed="true" >}}
 
@@ -372,9 +372,6 @@ and will get something like: random_number:random_string
 ### FlowiseAI
 
 
-<!-- 
-* {{< newtab url="https://fossengineer.com/embedchain-ai/" text="Mem0, ex-EmbedChain" >}} -->
-
 
 [FlowiseAI](/selfhosting-flowise-ai) Project Details - which it is Apache v2 Licensed ✅
 
@@ -414,7 +411,7 @@ FlowiseAI is ready for you at: `http://localhost:3000`
 
 * https://github.com/FlowiseAI/FlowiseChatEmbed
 
-You will get also a **MIT Licensed Widget** on your Page
+> You will get also a **MIT Licensed Widget** on your Page
 
 
 {{< dropdown title="Flowise AI | Website Embed 101 👇" closed="true" >}}
@@ -551,9 +548,10 @@ Thats right, you have many options to create your Website with Open Source:
 
 **Example with TypeBot**:
 
-https://docs.typebot.io/deploy/web/libraries/html-javascript
+* https://docs.typebot.io/deploy/web/libraries/html-javascript
 
 Popup window after 3 seconds:
+
 ```js
 <script type="module">
   import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js'
@@ -568,11 +566,7 @@ Popup window after 3 seconds:
 
 {{< /dropdown >}}
 
-### It's all about RAGs
-
-There are several RAG frameworks out there, for example:
-
-* {{< newtab url="https://fossengineer.com/embedchain-ai/" text="Mem0, ex-EmbedChain" >}}
+**It's all about RAGs**: There are several RAG frameworks out there, LangChain, LlamaIndex, EmbedChain,...
 
 ---
 
@@ -590,7 +584,10 @@ There are several RAG frameworks out there, for example:
 
 {{< dropdown title="More about ToolJet and how to Set it up⏬" closed="true" >}}
 
-* Low-code platform for building business applications. Connect to databases, cloud storages, GraphQL, API endpoints, Airtable, Google sheets, OpenAI, etc and build apps using drag and drop application builder. Built using JavaScript/TypeScript. 🚀 
+* Low-code platform for building business applications. Connect to databases, cloud storages, GraphQL, API endpoints, Airtable, Google sheets, OpenAI, etc and build apps using drag and drop application builder. 
+
+Built using JavaScript/TypeScript. 🚀 
+
 * Visual App Builder: 45+ built-in responsive components, including Tables, Charts, Lists, Forms, and Progress Bars.
 
 * https://docs.tooljet.com/docs/setup/docker/?ref=fossengineer.com
@@ -608,19 +605,6 @@ docker run \
 {{< /dropdown >}}
 
 
-### F/OSS Tools to Create Custom Agents
-
-* You can also check {{< newtab url="https://fossengineer.com/embedchain-ai/" text="Mem0, ex-EmbedChain" >}}
-
-{{< dropdown title="Quick EmbedChain Code ⏬" closed="true" >}}
-
-
-{{< /dropdown >}}
-
-{{< dropdown title="Quick FlowiseAI Setup ⏬" closed="true" >}}
-
-
-{{< /dropdown >}}
 
 ### F/OSS AI Monitoring Tools
 
@@ -647,6 +631,8 @@ There is a Python SDK - https://github.com/openlit/openlit/tree/main/sdk/python 
 
 > Kuvasz (pronounce as [ˈkuvɒs]) is an open-source uptime and SSL monitoring service, built in Kotlin
 
+Looking for OSS SelfHosted Status Monitors? https://www.reddit.com/r/opensource/comments/1bejyiv/open_sourceself_hosted_status_monitors/
+
 * https://github.com/openstatusHQ/openstatus
 
 > 🏓 The open-source synthetic monitoring platform 🏓
@@ -655,3 +641,10 @@ There is a Python SDK - https://github.com/openlit/openlit/tree/main/sdk/python 
 
 > 🟢 a simple open-source, self-hosted status monitoring tool
 
+* https://github.com/rajnandan1/kener
+
+> MIT |Stunning status pages, batteries included!
+
+* https://github.com/openITCOCKPIT/openITCOCKPIT
+
+> gpl3.0 | openITCOCKPIT is an Open Source system monitoring tool built for different monitoring engines like Nagios, Naemon and Prometheus.

@@ -7,6 +7,13 @@ description: 'A look to the CLI tools to bring LLMs and better prompt engineerin
 url: 'ai-tools-for-cli'
 ---
 
+**TL;DR**
+
+* See how to use [GeminiCLI](#gemini)
+* More [MCP via Gemini](#gemini-cli-x-mcp) and [better MCP](#more-mcp-tools)
+* Recap on Codex and Claude Code
+* Bonus: See how to do cool type safe LLM calls via [BAML](#baml)
+
 
 ## Gemini
 
@@ -252,6 +259,10 @@ These 2 I already have tested and covered on [this post](https://jalcocert.githu
 
 If you like **OpenAI taste**: https://platform.openai.com/docs/guides/tools-image-generation
 
+* https://platform.openai.com/usage
+* https://platform.openai.com/docs/models
+    * https://platform.openai.com/chat/edit?models=o1
+
 You can get started as per [openai manual](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)
 
 ```sh
@@ -296,23 +307,31 @@ npm install -g @anthropic-ai/claude-code
 
 Also with **200K context window**.
 
+They have added interesting features in the meantime: subagents and also MCP calls
+
+
+
 #### Claude Task Master
 
-If you are familiar with BRD/PRD and similar project management concept, Claude Task Master is a tool that can create ai driven projects in such a way.
+If you are familiar with **BRD/PRD** and similar project management concepts, Claude Task Master is a tool that can create ai driven projects in such a way.
 
 * https://github.com/eyaltoledano/claude-task-master
 
+From my experience, a good Cursor/Windsurf rule/guideline also does the trick: https://windsurf.com/editor/directory
 
-#### WARP IDE
+#### Goose
 
-* https://www.warp.dev/
+* https://github.com/block/goose
 
-#### AIDER
 
 
 ## More MCP Tools
 
-Git MCP was a great discovery.
+[Git MCP](#gemini-cli-x-git-mcp) was a great discovery. 
+
+Same as [Context7 MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/#context7-with-windsurf-ide).
+
+And the fact that GeminiCLI can be connected to MCP is amazing.
 
 But there are other interesting MCP tools already...
 
@@ -613,10 +632,9 @@ YOu also have the OSS equivalent: https://github.com/FoundationAgents/OpenManus
 
 * https://www.boundaryml.com/
 * baml.com/chat
-* https://www.promptfiddle.com/
+* Use BAML in a playground via: https://www.promptfiddle.com/
 
 * https://gloochat.notion.site/benefits-of-baml
-
 * https://gloochat.notion.site/BAML-Advanced-Prompting-Workshop-Dec-2024-161bb2d26216807b892fed7d9d978a37?pvs=74
 
 <!-- https://www.youtube.com/watch?v=Xece-W7Xf48 -->
@@ -642,7 +660,9 @@ In this case, the domain is **building reliable AI workflows and agents, particu
 
 Here's why that classification fits and what it means:
 
-* **Specialized Focus:** Unlike a General-Purpose Language (GPL) like Python, JavaScript, or Java, which are designed to solve a wide range of problems across various domains, a DSL like BAML has a very narrow and specific focus. Its syntax, keywords, and constructs are all designed to express concepts directly relevant to interacting with LLMs – defining prompts, specifying input/output schemas, handling model clients, streaming, retries, and so on.
+* **Specialized Focus:** Unlike a General-Purpose Language (GPL) like Python, JavaScript, or Java, which are designed to solve a wide range of problems across various domains, a DSL like BAML has a very narrow and specific focus.
+
+Its syntax, keywords, and constructs are all designed to express concepts directly relevant to interacting with LLMs – defining prompts, specifying input/output schemas, handling model clients, streaming, retries, and so on.
 
 
 {{< details title="More about BAML as DSL 📌" closed="true" >}}
@@ -665,11 +685,11 @@ In essence, BAML is a DSL because it provides a dedicated, purpose-built languag
 This completes our implementation of all three approaches:
 
 * Basic JSON mode (simplest)
-* Function calling (schema-defined)
-* BAML (type-safe, declarative)
+* Function calling (schema-defined): as seen on [this post](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/)
+* BAML (type-safe, declarative): **new**
 
 
-{{< details title="BAML vs Function Caling 📌" closed="true" >}}
+{{< details title="BAML vs Function Caling | Comparing approaches 📌" closed="true" >}}
 
 1. **Schema Definition** (`baml_src/doc_enhancement.baml`):
    - Defines the data structures and function signatures
@@ -691,7 +711,7 @@ This completes our implementation of all three approaches:
 
 The type-safe, declarative approach (BAML) offers several significant advantages over just schema-defined approaches (like function calling):
 
-### 1. Compile-Time Validation vs. Runtime Validation
+**1. Compile-Time Validation vs. Runtime Validation**
 
 **Function Calling:**
 - Schema validation happens at runtime
@@ -703,7 +723,7 @@ The type-safe, declarative approach (BAML) offers several significant advantages
 - The code generator catches errors before your application runs
 - IDE can provide immediate feedback on type mismatches
 
-### 2. Language Integration
+**2. Language Integration**
 
 **Function Calling:**
 - Schema is defined as a JSON structure in your code
@@ -715,7 +735,7 @@ The type-safe, declarative approach (BAML) offers several significant advantages
 - Full IDE support with autocomplete and type hints
 - Seamless integration with the language's type system
 
-### 3. Separation of Concerns
+**3. Separation of Concerns**
 
 **Function Calling:**
 - Schema definition mixed with business logic
@@ -765,12 +785,11 @@ It's important to understand what BAML does and doesn't do for type safety:
    - BAML provides the structure, but you provide the guidance
 
 The type safety comes from the combination of:
-- The schema you defined (which becomes Pydantic models)
+- The schema you defined (which becomes [Pydantic](https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/#data-validation) models)
 - The response format configuration in the API call
 - The runtime validation after the response is received
 
-BAML's power is that it generates all the infrastructure to properly request, validate, and process responses according to your defined schema, letting you focus on defining your schema and business logic without writing boilerplate code.
-
+BAML's power is that it generates all the infrastructure to properly request, validate, and process responses according to your defined schema, letting you **focus on defining your schema and business logic without writing boilerplate code**.
 
 ---
 
@@ -782,7 +801,20 @@ You can see which of these cli tools you have installed globally via npm:
 npm list -g --depth=0
 ```
 
+Personally, I keep using Codex (Combined with Windsurf IDE) as Im pretty confortable with my setup.
+
+But GeminiCLI MCP integration is a great contender.
+
+Just cant be changing the workflow every week!
+
 [![Star History Chart](https://api.star-history.com/svg?repos=BoundaryML/baml,google-gemini/gemini-cli&pydantic/pydantic-ai&,type=Date)](https://star-history.com/BoundaryML/baml&google-gemini/gemini-cli&pydantic/pydantic-ai&Date)
+
+if you are exploring a new workflow, see also: 
+
+* WARP IDE
+   * https://www.warp.dev/
+
+* AIDER
 
 ### Context Engineering
 
@@ -790,25 +822,15 @@ Apparently, this is an alternative already to vibe coding.
 
 * https://github.com/coleam00/context-engineering-intro
 
-https://www.youtube.com/watch?v=uohI3h4kqyg
+<!-- https://www.youtube.com/watch?v=uohI3h4kqyg -->
+
+{{< youtube "uohI3h4kqyg" >}}
 
 > MIT | Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work. Claude Code is the best for this so that's what this repo is centered around, but you can apply this strategy with any AI coding assistant!
 
-
-
-### 11Labs x MCP
-
-<!-- https://www.youtube.com/watch?v=uOneCuSj2tI -->
-
-{{< youtube "uOneCuSj2tI" >}}
-
-
-### Python CLi Tools
-
-* https://pypi.org/project/questionary/ - Create CLI utilities with python
-* https://docs.pytest.org/en/stable/
-
 ### Tokenization vs Dynamic Chunking
+
+And even new approaches keep coming:
 
 * https://arxiv.org/abs/2507.07955
 
@@ -816,13 +838,25 @@ https://www.youtube.com/watch?v=uohI3h4kqyg
 https://x.com/sukjun_hwang/status/1943703574908723674 -->
 
 {{< tweet user="sukjun_hwang" id="1943703574908723674" >}}
-
-
 <!-- 
 https://www.youtube.com/watch?v=7wf7fsI-Gp4 
 -->
 
 {{< youtube "7wf7fsI-Gp4" >}}
+
+### 11Labs x MCP
+
+ElevenLabs already has its own MCP Server:
+
+<!-- https://www.youtube.com/watch?v=uOneCuSj2tI -->
+
+{{< youtube "uOneCuSj2tI" >}}
+
+
+### Python CLI Tools
+
+* https://pypi.org/project/questionary/ - Create CLI utilities with python
+* https://docs.pytest.org/en/stable/
 
 
 ---
@@ -834,9 +868,6 @@ https://www.youtube.com/watch?v=7wf7fsI-Gp4
 * https://github.com/Chivo-Systems/Shinar/
 
 > gpl 3.0 | Open Source AI Calling Transcriptions, Summaries, and Analytics built on OpenAI Whisper
-
-
-Similar to fireb
 
 * https://github.com/getmaxun/maxun
 

@@ -42,7 +42,7 @@ What we will be covering on this post:
 
 ## Stripe
 
-Because you wont to bill people. Probably.
+Because you want to bill people. *Probably*.
 
 Others are doing stripe stuff already: https://sabandijers.club/cvv/
 
@@ -75,9 +75,13 @@ The stripe docs are great and have a lot of resources for dev, like the workbenc
 
 You might want to get started with payment links. Like this one https://buy.stripe.com/test_14A3cvfV98LE2X6dLA4ko01
 
-You can add coupons/promo codes to certain products/subs, as per https://docs.stripe.com/billing/subscriptions/coupons
+You can add coupons/promo codes to certain products/subs, as per:
+
+* https://docs.stripe.com/billing/subscriptions/coupons
 
 ![alt text](/blog_img/entrepre/stripe/stripe-paymentlink.png)
+
+See the payment link code ready to be placed into your website or app:
 
 ![alt text](/blog_img/entrepre/stripe/stripe-paymentlink-code.png)
 
@@ -465,7 +469,9 @@ Which has stripe and [BTCPay](https://btcpayserver.org/) integration https://inv
 
 ### EE id x Ubuntu
 
-If you are into entrepreneuring and sell digital stuff, you might be interested in: https://www.id.ee/en/article/ubuntu-id-software-installation-updating-and-removal/#removing-mozilla-firefox
+If you are into entrepreneuring and sell digital stuff, you might be interested in the EE e-residency:
+
+* https://www.id.ee/en/article/ubuntu-id-software-installation-updating-and-removal/#removing-mozilla-firefox
 
 * https://www.id.ee/en/article/operating-systems-supported-by-id-software/
 

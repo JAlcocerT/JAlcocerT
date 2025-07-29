@@ -2,7 +2,7 @@
 title: "Just shipping | Wedding Edition"
 date: 2025-06-04T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS"]
+tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS","Gotify"]
 description: 'Wedding stuff. Aka 200, you mean 4k? The story and some entrepreneurship concepts.'
 url: 'wedding-photo-galleries'
 ---
@@ -1204,9 +1204,21 @@ After some time, you might get an interesting ARR or **MRR**, the *monthly recur
 
 Remember, people paying for your product is the only validation you need: https://levels.io/idea-validation/
 
+If you are trying to build stuff, you can get some ideas also from the book: https://readmake.com/
+
+> Specially if you want to ship fast / build in public / indie
+
+<!-- 
+https://x.com/dzhohola/status/1919349013888795119
+https://www.youtube.com/watch?v=V0ej29G7ZGg
+-->
+
+{{< tweet user="dzhohola" id="1919349013888795119" >}}
+
+{{< youtube "V0ej29G7ZGg" >}}
 
 
-If this does not give you a taste of what end to end feels like, nothing will.
+If this does not give you a taste of what **end to end project feels** like, nothing will:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
@@ -1223,7 +1235,9 @@ If this does not give you a taste of what end to end feels like, nothing will.
 
 Notifications everywhere!
 
-Because maybe...you got a stripe payment, right?
+*Alert, alert, alert*
+
+Because maybe...you got a st[ripe payment](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe), right?
 
 * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gotify/
 
@@ -1234,7 +1248,7 @@ Thanks to [magnus](https://magnus919.com/notes/gotify/)
     {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently" title="Use Gotify together with Internet Speed Tracker | SelfH Post 0525 Post ↗" >}}
 {{< /cards >}}
 
-Send a message via Gotify with:
+Send a message via **Gotify** with:
 
 ```sh
 curl -X POST \

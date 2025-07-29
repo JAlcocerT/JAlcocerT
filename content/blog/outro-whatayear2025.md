@@ -142,7 +142,7 @@ What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
 18. 
 19. 
 
-If this was too much content, you can always use a LLMs to summarize the YT Videos, like this one, or like:
+If this was too much content, you can always use a LLMs to summarize the YT Videos, like these ones:
 
 * https://github.com/DevRico003/youtube_summarizer
 
@@ -155,12 +155,16 @@ If this was too much content, you can always use a LLMs to summarize the YT Vide
 
 It was a year of a lot of applied AI...
 
+* https://platform.openai.com/docs/models
+    * https://platform.openai.com/chat/edit?models=o1
+
 20. N8N
 21. ChatWoot
 22. LangFlow
 23. https://github.com/von-development/awesome-LangGraph
 https://langchain-ai.github.io/langgraph/#
 24. 
+
 
 
 ....
@@ -178,15 +182,21 @@ https://langchain-ai.github.io/langgraph/#
 
 1. AI Powered [shorts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#ai-powered-shorts)
 
+The TTS capabilities from these were also useful:
+
+* https://aistudio.google.com/generate-speech
+* https://platform.openai.com/audio/realtime
+
 2. [ChartJS](https://www.chartjs.org/docs/latest/charts/line.html) Powered Shorts
 
-https://echarts.apache.org/en/index.html
+I also got to know about: https://echarts.apache.org/en/index.html
 
-3. Python powered shorts (pyfinance related?)
-3. RemotionJS powered
+3. Python powered YT Shorts - @UnfoldingData (PyFinance related via Matplotlib Animations)
+3. RemotionJS / Animation powered
 
 ### Travel
 
+Combining Tech and Travel to get the most out of them:
 
 * https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/
 
@@ -248,10 +258,9 @@ With better video workflow and Postiz for sharing.
 
 ## Conclusions
 
-There was even time to make **Data Analytics recaps**.
+There was even time to make **Data Analytics recaps** and create/**ship better products**.
 
 ### D&A Tech Stacks
-
 
 **Examples of Tech Stacks:**
 
@@ -329,6 +338,16 @@ Here's a breakdown of **typical components** and how they fit together:
 {{< callout type="info" >}}
 You can plug to those stacks interesting tools like superset or ODH ([Open Data Hub](https://datahubproject.io/docs/docker/))
 {{< /callout >}}
+
+#### Shipping Products
+
+If you are successful, you will need to know [how to use Stripe API](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe) and any form of invoicing customers:
+
+* https://fossengineer.com/open-source-invoice-creator/
+
+* https://github.com/Impre-visible/invoicerr
+
+> agpl 3.0 | Invoicerr is a freelance-focused invoicing app that lets you create quotes, generate invoices, track payments, and collect secure signatures.
 
 
 ### Outro

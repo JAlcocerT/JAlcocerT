@@ -9,13 +9,7 @@ url: 'selfhosted-apps-06-2025'
 
 <!-- https://fossengineer.com/selfhosting-favourite-aug-2024/ -->
 
-People keep doing awsome stuff: *this time with solar energy*
-
-<!-- https://www.youtube.com/watch?v=Alx_vwyksTw -->
-
-{{< youtube "Alx_vwyksTw" >}}
-
-But lately, it was all about...[Traefik](https://fossengineer.com/selfhosting-traefik/) to get [programatic https](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) for homelab services!
+Lately, it was all about...[Traefik](https://fossengineer.com/selfhosting-traefik/) to get [programatic https](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) for homelab services!
 
 While exploring [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#traefik-x-tinyauth-x-flask), I revisited the Jims Garage guide on Traefik v3.
 
@@ -27,6 +21,23 @@ While exploring [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyaut
 It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication) which is an option to bring authentication capabilities to [your webapps](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/).
 
 <!-- ![Traefik UI](/blog_img/selfh/https/Traefik-UI-https.png) -->
+
+**TL;DR**
+
+* A better [NextCloud Setup](#nextcloud-with-https)
+* Better [P2P Setup](#p2p) and [Monitoring](#monitoring): from apps to [internet speed](#internet-speed)
+* Some interesting [In Home Tools](#in-home-tools)
+* Mid year iteration (06/25) of the [Home Lab container Setup](#conclusions)
+
+In the meantime...
+
+People keep doing awsome stuff: *this time with solar energy*
+
+<!-- https://www.youtube.com/watch?v=Alx_vwyksTw -->
+
+{{< youtube "Alx_vwyksTw" >}}
+
+I expect to write a post about solar panels soon (relating it with micro-controllers).
 
 
 ## Improvements
@@ -43,6 +54,12 @@ Keeping my references for new ideas clear:
 ### Nextcloud with Https
 
 Getting Better at [sync file tools](https://jalcocert.github.io/JAlcocerT/sync-file-tools/)
+
+* https://github.com/9001/copyparty/
+
+> MIT | Portable file server with accelerated resumable uploads, dedup, WebDAV, FTP, TFTP, zeroconf, media indexer, thumbnails++ all in one file, no deps
+
+
 
 All thanks to getting Traefik (traefik:v3.3) to work programatically!
 
@@ -140,11 +157,11 @@ PortMaster might give other incompatibilities with VPNs and so on (if you are us
 
 ### The DNSs
 
-Its all about the DNS.
+Its all about **the DNS**.
 
 And I saw on [this post](https://forocoches.com/foro//showthread.php?t=10372366) that there is an EU alternative to cloudflare, goodle, quad9 and many other DNS: https://www.joindns4.eu/for-public#resolver-options
 
-Lately, I evne learnt how to modify Cloudflare DNS records via its API with a [Python script](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/flask_dnsupdater.py)
+Lately, I evne learnt how to **modify Cloudflare DNS records via its API** with a [Python script](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/flask_dnsupdater.py)
 
 <!-- https://www.youtube.com/watch?v=c3XMAz--_Us -->
 
@@ -197,6 +214,12 @@ https://youtu.be/Uq5tZv6T3ko
   {{< card link="https://fossengineer.com/selfhosting-uptime-Kuma-docker/" title="Uptime Kuma ↗" >}}
 {{< /cards >}}
 
+To **Monitor LLMs and other Apps**, I also collected few OSS Tools: 
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/free-open-source-chat-bots/#foss-ai-monitoring-tools" title="OSS Monitoring|Post Section ↗" >}}
+{{< /cards >}}
+
 #### Internet Speed
 
 I was writting about Server monitoring and internet speed tools [here](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#internet-monitoring-tools).
@@ -236,7 +259,7 @@ You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/
 
 ### In Home Tools
 
-1. Reubah: with background removal coming soon
+1. Reubah: *with img background removal coming soon*
 
 ![SelfHosting Reubah](/blog_img/selfh/Photo/reubah.png)
 
@@ -268,7 +291,7 @@ docker run -p 3001:3000 phantom8016/specters:latest
 
 ![Specters for HomeLab File Management](/blog_img/selfh/HomeLab/specters.png)
 
-5. PortTracker
+5. PortTracker: *if you like PortMaster, you might be interested on this*
 
 ![PortTracker UI](/blog_img/selfh/HomeLab/PortTracker.png)
 
@@ -283,7 +306,7 @@ I was very surprised to find out that you can embed https://docs.excalidraw.com/
 
 A very interesting to share homelab diagrams with your friends/family.
 
-You could also do the classic Mermaid inside a SliDev PPT https://sli.dev/features/mermaid
+You could also do the classic Mermaid inside a SliDev PPT: https://sli.dev/features/mermaid
 
 To have a rendered pdf with instructions how to access your selfhosted services
 
