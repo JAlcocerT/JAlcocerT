@@ -86,14 +86,24 @@ echo $OPENAI_API_KEY
 
 ### UV
 
-I discovered **UV package manager** with a [DASH App](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv)
+I discovered **[UV](https://github.com/astral-sh/uv) package manager** with a [DASH App](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv) which is veeery fast installing dependencies.
 
 Could not resist to add it to [this project, as an example](https://github.com/JAlcocerT/Streamlit-MultiChat?tab=readme-ov-file#getting-started)
 
+Its based on RUST:
+
 ```sh
-uv sync
+#cargo install --git https://github.com/astral-sh/uv uv
+uv --version #uv 0.7.7
 ```
 
+```sh
+uv init
+uv add baml-py #or any other dependency
+#uv sync
+```
+
+* https://docs.astral.sh/uv/getting-started/installation/#docker
 
 ### Containers for Python Apps
 

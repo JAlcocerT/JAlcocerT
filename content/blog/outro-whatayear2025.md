@@ -59,7 +59,6 @@ https://github.com/ricsanfre/public-websites-docker
 
 Linktree does things very well, yet cant compete with:
 
-
 1. Domain 1sty free with CC required (This is a potential CAC)
 2. abcd
 
@@ -221,7 +220,7 @@ The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)
 
 > *El relato mata al dato* - Thats also true when looking for new project opportunities
 
-
+Discovering uv as package manager and the power of makefile >>> readme.md code snippets was huge to me.
 
 #### AI Stuff
 

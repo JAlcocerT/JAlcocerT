@@ -441,7 +441,24 @@ curl "https://www.bing.com/ping?sitemap=https://dm-real-estate.com/sitemap.xml"
 
 ## Outro
 
+You can use astro components to create a simple static mortage calculator, as seen [here](https://libreportfolio.fyi/recursos/entendiendo-inmuebles/)
+
+In that way the streamlit calculator can be removed from the server and you can provide some no code chatbots for automation.
+
+How much people charge for such projects?
+
+* https://zackproser.com/calculator say ~$20k + for such custom stuff :)
+* https://www.youtube.com/@zackproser/videos
+
 ### N8N Automation for Real Estate
+
+N8N is a great no code automation tools, as I explained on [this post](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#n8n).
+
+The idea with this, is to have a chatbot embeded into the real estate web that can reply potential clients questions and push their contact data into a database (A google sheet would do).
+
+* You can have a look to the templates: https://n8n.io/workflows/
+
+> You could also have a whatsapp bouble or a simple [formbricks contact form](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#adding-formbricks-to-flask) for a simpler solution
 
 <!-- https://www.youtube.com/watch?v=-77yBmdKc7U -->
 

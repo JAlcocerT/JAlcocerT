@@ -2,7 +2,7 @@
 title: "Shipping | Photo for Events"
 date: 2025-07-25T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring"]
+tags: ["Entrepreneuring","Build in Public","Indie Dev", "Product hunt", "Makers"]
 description: 'Filebrowser vs PicPeak vs Transfer vs CloudReve. From Weddings to Events.'
 url: 'events-photo-galleries'
 ---
@@ -20,7 +20,7 @@ This one is tested *in production* as seen [here](https://jalcocert.github.io/JA
 > Apache v2 | 📂 Web File Browser
 
 
-![alt text](/blog_img/web/filebrowser-hugo/filebrowser-quantum-login.png)
+![Filebrowser Quantum](/blog_img/web/filebrowser-hugo/filebrowser-quantum-login.png)
 
 ![alt text](/blog_img/web/filebrowser-hugo/filebrowser-quantum-users.png)
 
@@ -47,6 +47,16 @@ Cloudreve can help you build a self-hosted file management service that is both 
 > GPL3/0 | 🌩 Self-hosted file management and sharing system, supports multiple storage providers
 
 5. https://codeberg.org/shroff/phylum?ref=selfh.st
+
+6. Palmr https://github.com/kyantech/Palmr
+
+ 🌴 Palmr. is an open-source file-sharing platform focused on privacy and security. It enables users to upload, manage, and share files with features like password protection, custom links, and access control without tracking or limitations. Designed for seamless and secure sharing, Palmr. is completely free. 
+
+https://www.youtube.com/watch?v=Z-zmXoA26Eo
+
+7. https://github.com/error311/FileRise
+
+https://www.youtube.com/watch?v=t8p222fxVL0
 
 ## Web Front End - Theme
 

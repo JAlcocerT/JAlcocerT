@@ -15,11 +15,16 @@ Since last year crypto is back again in many people's mouth.
 This post is just describing the process to apply data analytics with crypto. **This is NOT a recommendation or financial advice of any type.**
 {{< /callout >}}
 
+
+Recently I was writing about hashing and encryption tools [here](https://jalcocert.github.io/JAlcocerT/encryption-101/) 
+
 What I want to cover here:
 
 1. Crypto Analytics with Dune x PolyMarket
 2. [Crypto Resources](#crypto-resources) to explore further some concepts: [dex](#dex-amm), [lending](#lending-protocols)
 3. [Skin in the game](#conclusions)
+
+What this post is not about: *a solidity 101*
 
 Some time ago I was having a look to this **amazing BlockChain/Solidity FreeCodeCamp course:**
 

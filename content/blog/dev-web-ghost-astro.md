@@ -309,6 +309,11 @@ Who said about writing AI Driven content?
 {{< /cards >}}
 
 ### N8N x MCP
+
+If you already made the [n8n setup](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#n8n), congratz!
+
+You can also use n8n with MCP:
+
 <!-- 
 https://www.youtube.com/watch?v=c9E-tDyKy_A -->
 

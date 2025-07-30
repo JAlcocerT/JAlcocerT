@@ -248,6 +248,14 @@ ping webify.jalcocertech.com
 
 How about making the user select the desired theme for its website.
 
+And later on...have a markdown editor, just like: https://github.com/MikeMather/publite.me as per https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#publiteme
+
+These guys have done it with Python: *which brings comenting working out of the box*
+
+![PubliteMe UI](/blog_img/web/SaaS/publiteme.png)
+
+https://www.youtube.com/watch?v=yAJvbF-m5FM
+
 ### Astro Themes
 
 We can do this potentially for any SSG.
@@ -386,11 +394,11 @@ Got happily surprised to see it working also on the local network (as well as vi
 
 ### Adding Formbricks to Flask
 
-So if you have created Formbricks links, like this one: https://app.formbricks.com/s/cmc6gnjc1bx06xg01xizn1g1y
+So if you have [created Formbricks links](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks), like this one: https://app.formbricks.com/s/cmc6gnjc1bx06xg01xizn1g1y
 
 You know you can embedd them:
 
-![alt text](/blog_img/entrepre/webify/formbricks-link-embed.png)
+![Formbricks Link Embed](/blog_img/entrepre/webify/formbricks-link-embed.png)
 
 
 But it will work better if you select the webapp category (embedded into the product):

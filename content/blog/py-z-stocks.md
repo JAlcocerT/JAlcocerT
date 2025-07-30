@@ -494,7 +494,7 @@ Similar projects include **Firefly III** and **GnuCash**.
 
 These are a collection of **finance related posts/sites** that have been somehow interesting for me to read:
 
-* https://dividendsandincome.com/author/dave-van-knapp/ - Interesting story about someone who made a one time investment 15y+ ago
+* https://dividendsandincome.com/author/dave-van-knapp/ - Interesting story about someone who made a one time investment 15y+ ago (Dave)
 * https://dividendsandincome.com/2024/04/08/how-my-dividend-growth-portfolios-income-keeps-expanding/
 
 * https://engineeredportfolio.com/

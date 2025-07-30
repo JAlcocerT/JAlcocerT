@@ -259,7 +259,7 @@ You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/
 
 ### In Home Tools
 
-1. Reubah: *with img background removal coming soon*
+1. Reubah: Open source file converter *with img background removal coming soon*
 
 ![SelfHosting Reubah](/blog_img/selfh/Photo/reubah.png)
 

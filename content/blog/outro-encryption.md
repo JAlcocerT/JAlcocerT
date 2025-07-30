@@ -2,11 +2,16 @@
 title: "Encryption. Captchas and more"
 date: 2025-05-20
 draft: false
-tags: ["Outro"]
+tags: ["Outro","Security"]
 description: 'SHA256 Protocol. The concept and applications: SSH, HTTPs, Bitcoin...'
 url: 'encryption-101'
 ---
 
+Some tools and concepts regarding encryption.
+
+I started requiring this to fill some env variables of home lab docker containers.
+
+Decided to consolidate them into this post.
 
 ## Captchas
 
@@ -75,6 +80,8 @@ It is a fundamental building block of the Bitcoin blockchain and is used in seve
 ### SHA256 Python
 
 **Can we has via Python Function?**
+
+You might need to hash customer identifiable data or [PII](https://jalcocert.github.io/JAlcocerT/nlp-tools/) in many industries, like in [telco](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/)
 
 ```py
 #from pyspark.sql import functions as f

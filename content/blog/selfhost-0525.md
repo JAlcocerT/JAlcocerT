@@ -164,6 +164,8 @@ vcgencmd measure_temp pmic
 
 ### Publiteme
 
+If you'd like to have a simple blogging platform: 
+
 * https://github.com/MikeMather/publite.me
 
 <!-- https://www.youtube.com/watch?v=yAJvbF-m5FM -->
@@ -277,7 +279,9 @@ It uses [LangGraph](https://jalcocert.github.io/JAlcocerT/understanding-langgrap
 * https://notebooklm.google.com/
 * https://speed.cloudflare.com/
 
-![alt text](/blog_img/selfh/Internet/internet-test.png)
+To monitor my internet speed:
+
+![Cloudflare Internet Speed](/blog_img/selfh/Internet/internet-test.png)
 
 Speedtest CLI from Ookla®:
 
@@ -289,7 +293,7 @@ As seen on the [benchmarking post](https://jalcocert.github.io/JAlcocerT/benchma
 sudo apt-get install speedtest-cli
 ```
 
-![Wthernet vs Wifi Connection](/blog_img/Monitoring/eth-vs-wifi.png)
+![Ethernet vs Wifi Connection Speed](/blog_img/Monitoring/eth-vs-wifi.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/InternetQuality/InternetSpeedTracker.yaml" title="InternetSpeedTracker with Docker 🐋 ↗" >}}
@@ -305,13 +309,11 @@ curl 192.168.1.11:8065/api/healthcheck
 InternetSpeedTracker has influxDB 2.0 integration, inc ase that you want to use this with Grafana. Also integrations with: tg, webhooks, gotify, ntfy,...
 {{< /callout >}}
 
-
-
 ---
 
 ## Conclusions
 
-From now on, I will include **ocker-compose stacks** linked to this kind of recap Selfhosting posts:
+From now on, I will include **docker-compose stacks** linked to this kind of recap Selfhosting posts:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/SelfH/May25_docker-compose.yml/" title="Selfhosting Stack May 2025 | Docker Configs 🐋✅ ↗" >}}
@@ -329,11 +331,12 @@ Or just sping couple of the services listed:
 #sudo docker compose up -d
 ```
 
-I could not forget about **PiGallery** somplicity, with its lovely map render and **no DB** requirement!
+I could not forget about **PiGallery** simplicity, with its lovely map render and **no DB** requirement!
 
 ![PiGallery Map](/blog_img/selfh/https/pigallery-map.png)
 
-In fact, PiGallery is my favourite HomeLab photo tool, due to its simplicity
+> In fact, PiGallery is my favourite HomeLab photo tool, due to its simplicity.
+
 <!-- 
 ![PiGalleri2 UI](/blog_img/selfh/Photo/PiGallery-PhotoInfo.png) -->
 
@@ -372,9 +375,11 @@ And **one of the messages** I got was:
 
 * 70% more of the same
 * 20% better
-* 10% new
+* 10% new *kind of R&D of whats next*
 
-With Selfhosting I feel im balancing a lot towards the new, which makes me operate away from my bests, yet I learn a lot.
+With Selfhosting I feel im balancing a lot towards the new.
+
+Which makes me operate away from my bests, yet I learn a lot.
 
 For example
 
@@ -397,7 +402,7 @@ Milvus can have **Attu** as UI companion:
 {{< /cards >}}
 
 * https://github.com/hollowpnt92/docker-port-viewer?ref=selfh.st
-https://github.com/hollowpnt92/docker-port-viewer/blob/main/docker-compose.yml
+  * https://github.com/hollowpnt92/docker-port-viewer/blob/main/docker-compose.yml
 
 ```sh
 docker run -d --name docker-socket-proxy -e CONTAINERS=1 -e POST=0 -e PUT=0 -e DELETE=0 -v /var/run/docker.sock:/var/run/docker.sock:ro tecnativa/docker-socket-proxy && docker run -d --name docker-port-viewer --link docker-socket-proxy -p 3003:80 hollowpnt/docker-port-viewer:latest
@@ -413,7 +418,7 @@ It's always great to see new options appearing on the web analytics space.
 
 I saw a cool post about [Umami](https://github.com/umami-software/umami/releases) and how 
 
-Yet, lately I tried [littlyx](https://dashboard.litlyx.com/): which I discovered few months back
+Yet, lately I tried [Littlyx](https://dashboard.litlyx.com/): which I discovered few months back
 
 <!-- ![Littlyx Web Analytics](/blog_img/web/weban/littlyx-weban.png) -->
 
@@ -424,9 +429,9 @@ Yet, lately I tried [littlyx](https://dashboard.litlyx.com/): which I discovered
 
 > Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
 
-
-
 ### Automated Projects Docs
+
+And I was tinkering with AI Agents / IDES / Codex...
 
 > Wouldnt it be great to have a project documentation/on boarding guide automatically (and AI) generated?
 
@@ -466,7 +471,7 @@ But...it used davinci model which was deprecated: https://platform.openai.com/do
 
 So I had to vibe code a little bit with **codex** to fix it:
 
-![alt text](/blog_img/GenAI/aidocs/reporeader-qatrack.png)
+![QA Track via reporeader](/blog_img/GenAI/aidocs/reporeader-qatrack.png)
 <!-- ![alt text](/blog_img/GenAI/reporeader-qatrack.png) -->
 
 But...I feel its already superseeded few times by other tools.
@@ -936,10 +941,60 @@ Tested with:
 
 Tested it with:
 
-https://github.com/airbytehq/airbyte
-https://github.com/SigNoz/signoz
-https://github.com/syncthing/syncthing
-https://github.com/grafana/grafana
+* https://github.com/airbytehq/airbyte
+* https://github.com/SigNoz/signoz
+* https://github.com/syncthing/syncthing
+* https://github.com/grafana/grafana
+
+And you can use **codex + orchestrat it** via python [in such a way](https://mermaid.live/edit#pako:eNqVVGtz2joQ_Ssafy3mhlcAz512CJA0KSFpSJuCyXgUW4AbW3IlOSEl-e93tbLDo_d-uMxgkHXO6uzZ1W6cUETM8ZxFIp7DFZWa3A7mnMCn5080rD3CeKQFPKrZyz1x3Y_kxFcsYaEOFiKJmAwoj4IUwiT3lnmCqP7mFLcJW8dKq09vdrNvNl_H4pUM_KGUQnpkuI71_e7ulKlXMvT7K8qXjGhB7EEkiiUcK-RLgR7iQaf-BOWQ3jm5NDL-fpB_fRRNN415XCGiAd9ahSwz7TarNXxb8E-Rf-aHKyEUC2ioY8GLPfs8Q8Tnzd2KamL3y0Ts8zMK7qlHsmScSZqQPkhYk185Uwb9Ss59qh4DY_M6KN-qIBEiK046xzMu_DOmSZgrLdJ3NllIWOWKyQJ7gdgvvsz5QcgC8AUBI3-4ZmGumUcQBS-xQPD7K4_hHNdd5Eni0lyLgjhC4qU_oU-MSKYyUInei1xnuXYxjmv1ueWhVb0uK3eJ_LGfyZjrIKFKFwIpV8_v-seIutoYwygXegVVLYOVxl5te-Bi943pmeEYumbbLrs1GK61hAqRh1zFnClFFozqXJow1-jt-wazSOPvgXvXKO8rwkVmNqCg8ZILyUhG9UoVuK-Iu9m6XMYOMihYpgOoD3SDuTGWcIMEUP-n7mspfprujUSYp4xrisJsN9kOmvyHHqlLPRMMf4ttsRcneBby0dztPcNuEf7Nn9wOr0nNIzeMRsQqd7OEchdiqGoaFaRvCP_u90X6AFkWSPLB_EHpxfX88G_SviP57v835B0Sf9iG3PbhZDDqI8w112KZxxFzY41ePbHqT3VwgX9glKlNte4R45BJMWAcpkvIjFPBA03L2TW1-Jo_EuDJSe9yVKRb5jOtWUTdR9f2qxYKrmFRQusW2vD7NElssKE9drBLK-ENC2_alHcEEqPYeHAxuRrvpTdtImdm82vY_KwdorxzMwspUjoMW4JsWrO6f45ssHwlRb5cwSwIRQrwCLWWNsxsbrMG9Ca3hCJyVLpAnmO9suOwJNkMZ0WG72UjcQomP6EotZffzObX623uKEQEC2CYHk7JcnD0etvJcb73qhgdc-5UnKWMI8fTMmcVJ2UypWbpbAx-7sBAStnc8eBvROXj3JnzN-BklM-ESEsaGuN4C5ooWOUZWMMGMV1KuoWAYUz2Rc6147XaGMLxNs7a8ZpH1frRUavWOm402u1uu1NxXhzPrTcbR9Va97jeandhs9F9qzi_8dBGtdPsHLe67XqzU291a53m2z-NEnrW)
+
+
+```
+
+1. First-Pass Structure & Scoping
+
+* Scan the repo root and key subfolders (Like `input-sources/`, `docs/`) to understand the overall layout (the user will give specific paths)
+* Identify “source of truth” files: READMEs, architecture diagrams, and project entrypoints. Remember that actual code files are the ultimate source of truth.
+* Locate existing documentation (business features, reference deep dives) to follow established styles and conventions.
+
+2. Pattern Matching & Reuse
+
+* Recognize recurring doc templates (e.g. frontmatter → Business Need → Code Evidence → How It Works → Files Referenced).
+* Copy and adapt those templates rather than reinventing each page from scratch.
+* Use simple CLI tools (`find`, `grep`, `sed` or `tree`) to discover all occurrences of a feature or pattern.
+
+3. Focused Deep Dives
+
+* For each component (e.g. FastAPI service, NiFi flows, agent graph or any other component applicable to the project under analysis), map code modules to doc sections:
+Entrypoint (main.py) → initialization and service overview.
+Listener/Processor → message and data flow steps.
+Storage/Vector Store → persistence and retrieval mechanisms.
+* Sketch lightweight architecture diagrams (plaintext or Mermaid) for visual readers.
+
+4. Incremental, Patch-Based Edits
+* Stage each documentation change as a small, self-contained patch for easy review and rollback.
+* Verify file paths, titles, frontmatter, and link targets after each patch to maintain consistency.
+
+5. Cross-Referencing & Linking
+* Link every guide or feature page back to its companion deep dive, code evidence, and high-level overview.
+* Create a web of docs that lets readers of any role (engineering, QA, DevOps, business) find exactly what they need.
+
+6. Efficiency Considerations
+* Lean on existing docs as templates: build new content from well-tested skeletons.
+* Automate repetitive discovery with CLI tools instead of manual browsing.
+* Break the project into vertical slices (e.g. ingestion pipeline, conversational AI, as per project file structure.) and apply a consistent rubric:
+   * Why it exists.
+   * What code implements it.
+   * How it works, step by step.
+   * Key benefits and next steps.
+
+7. Write the markdown post based on the analysis of the existing documentation and the input from the repository directory under analysis, without any additional information from the user, as long as you have built it the post, make sure to save it.
+* Always bring code snippets that validate why you write that a certain use case and feature is implemented.
+
+8. Avoid assuming features that are not clear as per existing code structures. Just because it might be obvious that it is implemented, dont assume it is unless you verify that it makes sense as per existing and working code.
+```
+
+And you can improvide it so that
 
 #### Prompt for own repo docs with windsurf
 

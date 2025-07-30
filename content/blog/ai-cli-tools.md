@@ -816,6 +816,25 @@ if you are exploring a new workflow, see also:
 
 * AIDER
 
+
+If you are tired of CLI and need some UI:
+
+* https://opal.withgoogle.com/landing/
+  * https://developers.googleblog.com/en/introducing-opal/ Share AI mini apps without code
+
+<!-- https://www.youtube.com/watch?v=CJyg30kowg0 -->
+
+{{< youtube "CJyg30kowg0" >}}
+
+
+Or go the **n8n** route, as seen with:
+
+* https://jalcocert.github.io/JAlcocerT/real-estate-website/#n8n-automation-for-real-estate
+
+![n8n Overview](/blog_img/GenAI/NoCode-AI/n8n-overview.png)
+
+See how embeded boubles look: https://morita-web.pages.dev/
+
 ### Context Engineering
 
 Apparently, this is an alternative already to vibe coding.
