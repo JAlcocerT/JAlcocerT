@@ -93,6 +93,7 @@ Could not resist to add it to [this project, as an example](https://github.com/J
 Its based on RUST:
 
 ```sh
+curl -LsSf https://astral.sh/uv/0.7.7/install.sh | sh
 #cargo install --git https://github.com/astral-sh/uv uv
 uv --version #uv 0.7.7
 ```

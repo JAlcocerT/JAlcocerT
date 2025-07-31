@@ -2,8 +2,8 @@
 title: "How to Develop AI Projects inside a Docker Container"
 date: 2024-08-17T23:20:21+01:00
 draft: false
-tags: ["Dev"]
-summary: "Developing like a PRO (via SSH or into a container)"
+tags: ["Dev in Docker"]
+description: "Developing like a PRO (via SSH or into a container)"
 ---
 
 
@@ -65,8 +65,9 @@ ext install ms-vscode-remote.remote-containers
 ```
 2. Clone your repository:
 
-For Docker Desktop: Start VS Code and clone your repo [in a container volume.](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume)
-For Docker Engine: Clone your repo locally, then [open it in a container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) via VS Code.
+* For Docker Desktop: Start VS Code and clone your repo [in a container volume.](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume)
+
+* For Docker Engine: Clone your repo locally, then [open it in a container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) via VS Code.
 
 3. Wait for the Dev Containers setup to complete.
 
@@ -75,6 +76,10 @@ For Docker Engine: Clone your repo locally, then [open it in a container](https:
 1. Get your Dockerfile Ready
 2. `CTRL+SHIFT+P` -> **Attach to running container**. Accept to run docker in wsl
 3. Steting up Dev Containers....
+
+![alt text](/blog_img/dev/IDEs/devindocker-1.png)
+
+![alt text](/blog_img/dev/IDEs/devindocker-2.png)
 
 **Option 2**
 
