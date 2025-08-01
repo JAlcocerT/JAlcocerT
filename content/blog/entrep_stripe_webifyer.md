@@ -2,7 +2,7 @@
 title: "How are you selling? Webify Edition"
 date: 2025-06-03T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Auth","Flask","Webhooks","LogTo","Stripe","Formbricks"]
+tags: ["Entrepreneuring","Auth","Flask","Webhooks","LogTo","Stripe","SaaS Invoice/Billing","Formbricks"]
 description: 'Stripe 101. Selling Themes and editing capabilities for SSG powered websites.'
 url: 'using-stripe-with-flask'
 ---
@@ -11,7 +11,7 @@ It was about time to put this together.
 
 Selling websites 1 by 1 can be good for starters.
 
-Even before that, you have this kind of journey:
+Even before that, you have this kind of *journey*:
 
 1. S**k at something
 2. Do it for free
@@ -33,18 +33,26 @@ As your time is limited, you will want to scale the ideas **with tech**:
 
 And shame on me, I have not been tinkering with Stripe since last year [with the CV project](https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_Auth_Ways/Z_Auth_Stripe.py?ref_type=heads) as per [these tests](https://gitlab.com/fossengineer1/cv-check/-/tree/main/Z_Tests/Stripe?ref_type=heads).
 
+
+**TL;DR**
+
 What we will be covering on this post:
 
 1. How to setup Stripe integration to sell like a Pro
 2. Recap on how to authenticate users into your Flask Apps
 3. Using Flask as a simple CMS for Astro Themes
 4. Configure subdomains for Cloudflare as per Flask 
+5. Monitoring a Flask WebApp with Umami
 
 ## Stripe
 
-Because you want to bill people. *Probably*.
+Because you will need to bill people.
 
-Others are doing stripe stuff already: https://sabandijers.club/cvv/
+*Probably*.
+
+**Hopefully**
+
+Others are doing stripe stuff already: https://sabandijers.club/cvv/ or https://readmake.com/ or https://zackproser.com/calculator or....
 
 * You can login https://dashboard.stripe.com/login
 * Set your accepted payment methods: https://dashboard.stripe.com/test/settings/payment_methods/
@@ -388,7 +396,7 @@ uv run python flask-umami-101.py
 
 Got happily surprised to see it working also on the local network (as well as via https with CF tunnels)
 
-![alt text](/blog_img/entrepre/webify/flask-umami.png)
+![aFlask App with Umami Integration](/blog_img/entrepre/webify/flask-umami.png)
 
 ![alt text](/blog_img/entrepre/webify/flask-tc-sample.png)
 
@@ -426,25 +434,25 @@ uv run python ./Z_Tests/Formbricks/flask-umami-formbricks-v3.py #working v3 with
 
 > You will need to get the `environment_id` from Formbricks UI.
 
-![alt text](/blog_img/entrepre/webify/flask-formbricks-umami.png)
+![Flask x Formbricks x Umami](/blog_img/entrepre/webify/flask-formbricks-umami.png)
 
-**Just mind the difference of link vs app**: for Flask, the app version + html embedd was my go to
+**Just mind the difference of link vs app**: for Flask, the app version + html embed was my go to
 
-![alt text](/blog_img/entrepre/webify/formbrick-link-vs-app.png)
+![Formbricks working with Flask App](/blog_img/entrepre/webify/formbrick-link-vs-app.png)
 
 
 ### T&C and Privacy
 
-Never forget to add such records into your SaaS
+Never forget to add such records into your SaaS:
 
-![alt text](/blog_img/entrepre/webify/flask-terms-privacy.png)
+![Terms and Conditions / Privacy](/blog_img/entrepre/webify/flask-terms-privacy.png)
 
 You can use the static routes so that any user registering, will have to accept that agree with these conditions as per LogTo.
 
 ### OG for Flask
 
 
-Add Open Graph meta tags to your HTML <head> on the landing page:
+Add **Open Graph** meta tags to your HTML <head> on the landing page:
 
 ```html
 <meta property="og:title" content="WebifAI: The Website you deserve is just 1 min ahead of you">
@@ -464,16 +472,53 @@ Add Open Graph meta tags to your HTML <head> on the landing page:
 
 ### Stripe x InvoiceNinja
 
-* https://hub.docker.com/r/invoiceninja/invoiceninja/
+One of the most boring part of a job (if you do it for others), yet very rewarding if its for yourself: **billing/invoicing**
+
+Aka: *gib me my moni*
+
+As always, there are few alternatives:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Billing" title="Invoices with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+1. https://hub.docker.com/r/invoiceninja/invoiceninja/
 * https://invoiceninja.com/
 * https://invoiceninja.github.io/en/getting-started/
 
-Which has stripe and [BTCPay](https://btcpayserver.org/) integration https://invoiceninja.com/payments/
-
+Which has stripe and [BTCPay](https://btcpayserver.org/) integration https://invoiceninja.com/payments/, just in case you are into crypto.
 
 * https://github.com/btcpayserver/btcpayserver
 
 > MIT | Accept Bitcoin payments. Free, open-source & self-hosted, Bitcoin payment processor.
+
+2. Serverless Invoices and more: https://fossengineer.com/open-source-invoice-creator
+
+I git to know it last year and mentioned it [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#scaling-ideas)
+
+Could not resist to fork: https://github.com/JAlcocerT/serverless-invoices
+
+Amazing features as covered [here](https://fossengineer.com/open-source-invoice-creator/#serverless-invoices):
+
+* Custom CSS
+* Export Import JSON
+* Export as PDF
+
+> As im in love with projects which do not require a BE running
+
+3. Invoicerr: https://github.com/Impre-visible/invoicerr
+
+With an amazing UI:
+
+![alt text](/blog_img/biz/invoicerr/invoicerr-signup.png)
+
+![alt text](/blog_img/biz/invoicerr/invoicerr-setup.png)
+
+![alt text](/blog_img/biz/invoicerr/invoicerr-dash.png)
+
+You can also have a look to https://github.com/BillaBear/billabear for your cool SaaS
+
+> Subscription Management and Billing System 
 
 ### EE id x Ubuntu
 

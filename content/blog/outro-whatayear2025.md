@@ -357,4 +357,4 @@ If you are successful, you will need to know [how to use Stripe API](https://jal
 
 ### Outro
 
-https://jalcocert.github.io/JAlcocerT/making-soap-at-home/
+* https://jalcocert.github.io/JAlcocerT/making-soap-at-home/

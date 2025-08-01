@@ -2,8 +2,8 @@
 title: "SelfHosting - 1st Half 2025 "
 date: 2025-06-30T01:20:21+01:00
 draft: false
-tags: ["HomeLab","Authentication","P2P","Traefik https"]
-description: 'Programatic Https for all services and docker stacks runnong in your server.'
+tags: ["HomeLab","Authentication","P2P","Traefik https SSL"]
+description: 'Programatic HTTPs for all services and docker stacks runnong in your server.'
 url: 'selfhosted-apps-06-2025'
 ---
 
@@ -23,6 +23,18 @@ It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcoc
 <!-- ![Traefik UI](/blog_img/selfh/https/Traefik-UI-https.png) -->
 
 **TL;DR**
+
+Discovering [lazydocker](https://github.com/jesseduffield/lazydocker/releases) tool has been very interesting, together with Makefile and uv package manager.
+
+```sh
+sudo apt  install golang-go
+go install github.com/jesseduffield/lazydocker@latest
+
+# docker run --rm -it -v \
+# /var/run/docker.sock:/var/run/docker.sock \
+# -v /yourpath:/.config/jesseduffield/lazydocker \
+# lazyteam/lazydocker
+```
 
 * A better [NextCloud Setup](#nextcloud-with-https)
 * Better [P2P Setup](#p2p) and [Monitoring](#monitoring): from apps to [internet speed](#internet-speed)

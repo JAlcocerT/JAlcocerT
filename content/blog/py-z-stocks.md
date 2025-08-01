@@ -501,19 +501,40 @@ These are a collection of **finance related posts/sites** that have been somehow
 
 * https://wtfhappenedin1971.com/
 * https://whycryptocurrencies.com/
+
+There are **interesting free calculators** on the internet: which I got to know thanks to `Damiem Talks Money YT Channel`
+
+<!-- https://www.youtube.com/watch?v=-yLl-IBl_zo -->
+
+{{< youtube "yLl-IBl_zo" >}}
+
+
+* https://www.thecalculatorsite.com/finance/calculators/compoundinterestcalculator.php
+* https://www.thecalculatorsite.com/finance/calculators/how-long-will-my-money-last
+* https://www.thecalculatorsite.com/finance/calculators/cagr-calculator.php
 * https://libreportfolio.fyi/
 
 * https://curvo.eu/
 
 {{< callout type="info" >}}
-You can create an [ebook like this](https://www.amazon.es/stores/Marco-Garrido/author/B0BW46JD83?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) one with AI.
+You can create an [finance related **ebook** like this](https://www.amazon.es/stores/Marco-Garrido/author/B0BW46JD83?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) one with AI
 {{< /callout >}}
 
-How exactly?
+**How exactly?**
 
 With an [**AIssistant**](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/) or with [agents](https://jalcocert.github.io/JAlcocerT/ai-multi-agents-frameworks/) / [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) 
 
 * https://www.visualcapitalist.com/top-sp-500-stocks-return/
+
+And how to publish it?
+
+You can also publish it on a website, like https://readmake.com/
+
+Which uses the **obfuscate technique** unless you have paid via stripe, where you will get the full copy :)
+
+* https://github.com/TrueWinter/astro-obfuscate
+
+> MIT | Astro-obfuscate is a set of components that prevent spam bots from finding email addresses, phone numbers, or other text that you wish to hide. 
 
 ### Interesting Financial Data WebSites
 
@@ -568,8 +589,6 @@ With an [**AIssistant**](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-sim
 
 * https://stockevents.app/en
 * https://stockle.app/
-
-
 
 ---
 

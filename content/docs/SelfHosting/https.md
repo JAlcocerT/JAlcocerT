@@ -8,6 +8,16 @@ draft: false
 
 How to get https for selfhosted apps on a homelab or VPS.
 
+First thing: get a domain!
+
+> You dont need an expensive one, neither fancy.
+
+You can find deals for Top Level Domains: https://tld-list.com/ from any provider like ovhcloud, namesilo, godaddy, porkbun, cloudflare...
+
+There are some deals for first year for around 1-3$ to get you started.
+
+Get ready to learn A LOT.
+
 ## Proxies
 
 I started with [NPM](#nginx), but understood that there are few alternatives to get https into your selfhosted services.

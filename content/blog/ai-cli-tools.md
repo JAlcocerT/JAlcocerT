@@ -14,6 +14,10 @@ url: 'ai-tools-for-cli'
 * Recap on Codex and Claude Code
 * Bonus: See how to do cool type safe LLM calls via [BAML](#baml)
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/VibeCoding" title="See these CLI Tools with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ## Gemini
 
@@ -271,6 +275,20 @@ codex --approval-mode full-auto
 #codex --provider openai --model o3-mini --quiet --approval-mode full-auto "$(cat ./prompts/codex-tree-stack-components.md)" > ./Outputs_Model/output-codex-tree-stack-components-plan.json #saved the full reply with errors 
 ```
 
+If you have containerized codex:
+
+```sh
+docker exec -it codex-container bash
+docker exec -it codex-container bash -c "uv run endtoend.py"
+
+#docker exec -t codex-container bash -c "cd /app/input-sources && codex --provider openai --model o4-mini --quiet --approval-mode full-auto \"$$(cat ./orchestrator/prompts/prompt-init-userguide-iterative.md)\" > .//output-init-userguide-iterative.json"
+#docker exec -t $DOCKER_ENV_VARS "$CONTAINER_NAME" bash -c "cd /app/input-sources && $CODEX_COMMAND"
+#codex --provider openai --model o4-mini --quiet --approval-mode full-auto "who are you"
+#codex --provider openai --model o4-mini --quiet --approval-mode full-auto "$$(cat ./orchestrator/prompts/prompt-init-userguide-iterative.md)" > ./outputs_model/output-init-userguide-iterative.json
+
+#Dev Containers: attach to running container
+```
+
 Remember that the quiet mode always requires a string with the question already passed!
 
 And use your favourite model: https://platform.openai.com/docs/models Which at this point offer a **200k context Window**
@@ -305,9 +323,15 @@ With Anthropic, you have the magestic Claude 4 Opus - https://www.anthropic.com/
 npm install -g @anthropic-ai/claude-code
 ```
 
+Same as GeminiCLI, it can also be connected to MCP: https://docs.anthropic.com/en/docs/claude-code/mcp
+
 Also with **200K context window**.
 
 They have added interesting features in the meantime: subagents and also MCP calls
+
+See details at: 
+* https://github.com/davepoon/claude-code-subagents-collection
+* https://docs.anthropic.com/en/docs/claude-code/sub-agents
 
 
 
@@ -322,7 +346,8 @@ From my experience, a good Cursor/Windsurf rule/guideline also does the trick: h
 #### Goose
 
 * https://github.com/block/goose
-
+  * https://block.github.io/goose/docs/experimental/subagents/
+  * https://block.github.io/goose/docs/guides/goose-cli-commands/
 
 
 ## More MCP Tools

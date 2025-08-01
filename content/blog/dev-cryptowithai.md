@@ -439,7 +439,7 @@ Its a **Defi Aggregator**, as seen in [Reddit](https://www.reddit.com/r/defi/com
 
 They can tell you some ideas on where to lend (sorted by %).
 
-Similarly to what you can learn at **DefiLLama**: https://defillama.com/protocols/lending
+Similarly, to what you can learn at **DefiLLama**: https://defillama.com/protocols/lending
 
 > Which is where I got to know about Fluid: https://defillama.com/protocol/fluid
 
@@ -447,6 +447,8 @@ Similarly to what you can learn at **DefiLLama**: https://defillama.com/protocol
 * https://defillama.com/protocol/fluid-lending
 
 ![Fluid Defi](/blog_img/crypto/fluid-defi.png)
+
+> Within fluid UI, you can see your total assets and how their value changed overtime
 
 I also got to learn about another lending protocol called Morpho and Lulo: 
 
