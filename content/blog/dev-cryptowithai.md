@@ -9,12 +9,11 @@ url: 'understading-crypto-with-ai'
 
 Here we go again...
 
-Since last year crypto is back again in many people's mouth.
+Since last year, crypto *seems to* be back again in many people's mouth.
 
 {{< callout type="warning" >}}
 This post is just describing the process to apply data analytics with crypto. **This is NOT a recommendation or financial advice of any type.**
 {{< /callout >}}
-
 
 Recently I was writing about hashing and encryption tools [here](https://jalcocert.github.io/JAlcocerT/encryption-101/) 
 
@@ -22,7 +21,7 @@ What I want to cover here:
 
 1. Crypto Analytics with Dune x PolyMarket
 2. [Crypto Resources](#crypto-resources) to explore further some concepts: [dex](#dex-amm), [lending](#lending-protocols)
-3. [Skin in the game](#conclusions)
+3. [Skin in the game](#conclusions): testing some DeFi protocols to understand them better
 
 What this post is not about: *a solidity 101*
 
@@ -517,7 +516,7 @@ Placed 40$ in, and the transaction cost me some gas (2.11$ in USDT or 1.29$ in E
 
 ![alt text](/blog_img/crypto/defi/fluid-usdt-etherscan-transaction.png)
 
-You can pay in different tokens:
+You can pay in different tokens: *because the transactions has some expenses, ofc!*
 
 ![alt text](/blog_img/crypto/defi/fluid-gas-pay.png)
 
@@ -574,7 +573,7 @@ So i tried again with 5USDT (and slow speed to safe some gas, as i have to pay a
 <!-- 
 https://etherscan.io/tx/0x353a4a3232a037ff6e3e2db44576220f7a2e0b349fc63de94287f504e2dd26fc -->
 
-Then, i got `aEthUSDT` https://etherscan.io/token/0x23878914efe38d27c4d67ab83ed1b93a74d4086a with a ~3,26% interest
+Then, I got `aEthUSDT` https://etherscan.io/token/0x23878914efe38d27c4d67ab83ed1b93a74d4086a with a ~3,26% interest
 
 > If someone borrow, it will do 4,72%
 
@@ -584,9 +583,17 @@ https://etherscan.io/address/0x89c4f8ba6111e708e7fa108b49d769c1faaf67d0#asset-to
 
 ![Asset Tokens ETH wallet](/blog_img/crypto/defi/eth-wallet-assets-tokens-snapshot.png)
 
-#### Crypto Example 4
+### Crypto Example 4
 
 **Testing the Liquidity providing** into a Dex.
+
+Because people like to change token pairs and you can provide such tokens.
+
+Basically, just be in between people exchanging the pairs, for example [this one](https://app.uniswap.org/explore/pools/ethereum/0x8aa4e11cbdf30eedc92100f4c8a31ff748e201d44712cc8c90d189edaa8e4e47).
+
+> This has some risks, like IP!
+
+So again, be mindful about all the things that can go very wrong with these operations.
 
 * https://dapp.quickswap.exchange/farm
 * https://app.uniswap.org/explore/pools

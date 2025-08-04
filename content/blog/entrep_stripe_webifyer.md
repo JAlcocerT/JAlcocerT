@@ -36,6 +36,12 @@ And shame on me, I have not been tinkering with Stripe since last year [with the
 
 **TL;DR**
 
+For some time Im looking for a way to scale how I build websites for people.
+
+Call it: webify, webifAI, webifyer, contentyourule.com or whatever...
+
+> Your website, your rules
+
 What we will be covering on this post:
 
 1. How to setup Stripe integration to sell like a Pro
@@ -48,7 +54,7 @@ What we will be covering on this post:
 
 Because you will need to bill people.
 
-*Probably*.
+*Probably?*
 
 **Hopefully**
 
@@ -62,19 +68,20 @@ You can create payment links with stripe, like this: https://buy.stripe.com/6oEg
 
 I liked the stripe integrations with cal.com or zapier.
 
-![alt text](/blog_img/entrepre/stripe/stripe-apps.png)
+![Stripe Apps Connection](/blog_img/entrepre/stripe/stripe-apps.png)
 
 But you can use those to put the links into your app *And embedd them into your flask app*
 
 Go to stripe developer section: https://dashboard.stripe.com/workbench/overview
 
+You can add a custom domain to stripe via:
 
-You can add a custom domain to stripe via [these instructions](https://docs.stripe.com/payments/checkout/custom-domains?nameserver-provider=cloudflare) and *paying the monthly subscriptionfor 10$/month*
+* [These instructions](https://docs.stripe.com/payments/checkout/custom-domains?nameserver-provider=cloudflare) 
+* *And paying the monthly stripe subscription for 10$/month*
 
-![alt text](/blog_img/entrepre/stripe/stripe-customdomain.png)
+![Stripe Custom Domain - For Paid stripe clients](/blog_img/entrepre/stripe/stripe-customdomain.png)
 
-
-The stripe docs are great and have a lot of resources for dev, like the workbench:
+The **stripe docs** are great and have a lot of resources for dev, like the workbench:
 
 * https://dashboard.stripe.com/test/apikeys
 * https://docs.stripe.com/testing
@@ -314,7 +321,7 @@ rm -r .git
 
 In this case it will be a **sub**domain.
 
-And we will be needing from Cloudflare:
+And we will be needing these **artifacts from Cloudflare**:
 
 ```py
 CLOUDFLARE_API = 'https://api.cloudflare.com/client/v4'

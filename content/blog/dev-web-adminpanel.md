@@ -8,7 +8,16 @@ url: 'admin-panels-for-websites'
 
 Ive been exploring few authentications method lately.
 
-And suddendly, I have found an interesting solution (that its vibe coded friendly!): [Manifest](#manifest)
+Some people claim that ads + onboarding + paywall is your source of revenue as a SaaS indie creator.
+
+{{< tweet user="SinaSinry" id="1951606811829604488" >}}
+
+<!-- 
+https://x.com/SinaSinry/status/1951606811829604488?t=jRvoxV9sxOPDvFHh89HF5w&s=35 -->
+
+> The ARR/MRR retention must be another topic, *I guess*
+
+And suddendly, I have found an interesting solution (that its vibe-code friendly!): [Manifest](#manifest)
 
 ## Manifest
 

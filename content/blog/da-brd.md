@@ -2,12 +2,12 @@
 title: "Whats a BRD and how it helps project delivery?"
 date: 2025-04-16T00:20:21+01:00
 draft: false
-tags: ["Career", "D&A", "Analytics"]
+tags: ["Career", "D&A", "Analytics","PM/PRD/BRD/FRD"]
 description: 'The business requirement document and the FRD for the GenAI / vibecoded times. Better questions for LLMs.'
 url: 'brd-vs-frd-for-data-analytics'
 ---
 
-The BRD, *not the BRP if you read this from NL...* :)
+The BRD, *not the BRP if you read this [from NL](https://beyondajourney.pages.dev/articles/exploring-netherlands-by-bike/#cycling-around-amsterdam)...* :)
 
 There might be few reasons you want to read this:
 
@@ -18,7 +18,6 @@ Lately I was tinkering with [vibe coding tools](https://jalcocert.github.io/JAlc
 We can now do cool and functional apps by providing a **cool initial prompt**.
 
 How to make sure that the LLM will have the proper context to have from the very beginning the best possible app or its best first iteration?
-
 
 {{< cards cols="2" >}}
   {{< card link="https://roadmap.sh/data-analyst" title="Data Analytics RoadMap" >}}
@@ -363,13 +362,15 @@ The RACI matrix then clarifies who is responsible for executing the tasks and de
 
 They are interconnected and sequentially refined, building upon each other to **guide the project from concept to completion**.
 
-### In a nutshell
+**In a nutshell**
 
 The Project Charter is a crucial document that fits right at the **very beginning** of the project lifecycle, specifically during the **Initiation Phase**.
 
 Here's a breakdown of its purpose, who defines it, and where it sits in the typical project flow:
 
-#### What is a Project Charter?
+## FAQ
+
+### What is a Project Charter?
 
 A Project Charter is a formal, high-level document that:
 
@@ -379,28 +380,28 @@ A Project Charter is a formal, high-level document that:
 * **Aligns stakeholders** by providing a shared understanding of the project's goals and boundaries right from the start.
 * **Serves as a reference point** throughout the project lifecycle to ensure the project stays on track and within its authorized scope.
 
-#### Who Defines the Project Charter?
+### Who Defines the Project Charter?
 
 The **Project Manager** typically drafts the Project Charter, but it's done in close collaboration with the **Project Sponsor** (the person or group who provides the financial resources and support for the project) and other key **stakeholders**.
 
 The Project Sponsor's **formal approval and signature** on the Project Charter are essential, as this signifies their commitment and grants the Project Manager the necessary authority.
 
-#### Where Does it Fit in the Project Lifecycle?
+### Where Does it Fit in the Project Lifecycle?
 
 The Project Charter comes **before** the detailed planning and requirements gathering (like the BRD, PRD, FRD).
 
 Here's the refined order:
 
 1.  **Project Initiation Phase:**
-    * **Business Case/Feasibility Study:** (Often precedes the charter) A document that justifies the project from a business perspective, outlining the problem, opportunities, and potential benefits. This feeds into the charter.
-    * **Project Charter:** This is the foundational document created here. It officially launches the project, defines its high-level parameters, and authorizes the Project Manager.
+* **Business Case/Feasibility Study:** (Often precedes the charter) A document that justifies the project from a business perspective, outlining the problem, opportunities, and potential benefits. This feeds into the charter.
+* **Project Charter:** This is the foundational document created here. It officially launches the project, defines its high-level parameters, and authorizes the Project Manager.
 
 2.  **Project Planning Phase:**
-    * **BRD (Business Requirements Document):** Built upon the high-level needs identified in the charter and business case, this details the business problems and high-level solutions.
-    * **PRD (Product Requirements Document):** Translates the business needs into specific product features and user requirements.
-    * **FRD (Functional Requirements Document):** Details the technical "how-to" for specific system functions.
-    * **Project Management Plan:** This is the comprehensive plan that includes detailed scope, schedule, budget, resource plan, risk management plan, communication plan, quality plan, and other subsidiary plans. The project charter provides the high-level inputs for this detailed planning.
-    * **RACI Matrix:** Developed as part of the planning phase, often within the Project Management Plan, to define roles and responsibilities for specific tasks identified during detailed planning.
+* **BRD (Business Requirements Document):** Built upon the high-level needs identified in the charter and business case, this details the business problems and high-level solutions.
+* **PRD (Product Requirements Document):** Translates the business needs into specific product features and user requirements.
+* **FRD (Functional Requirements Document):** Details the technical "how-to" for specific system functions.
+* **Project Management Plan:** This is the comprehensive plan that includes detailed scope, schedule, budget, resource plan, risk management plan, communication plan, quality plan, and other subsidiary plans. The project charter provides the high-level inputs for this detailed planning.
+* **RACI Matrix:** Developed as part of the planning phase, often within the Project Management Plan, to define roles and responsibilities for specific tasks identified during detailed planning.
 
 3.  **Project Execution Phase**
 4.  **Project Monitoring & Control Phase**

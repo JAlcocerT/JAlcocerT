@@ -1,8 +1,8 @@
 ---
-title: "Encryption. Captchas and more"
+title: "Encryption, Captchas and more"
 date: 2025-05-20
 draft: false
-tags: ["Outro","Security"]
+tags: ["Outro","Security","PoW"]
 description: 'SHA256 Protocol. The concept and applications: SSH, HTTPs, Bitcoin...'
 url: 'encryption-101'
 ---
@@ -15,11 +15,23 @@ Decided to consolidate them into this post.
 
 ## Captchas
 
+Internet is full of bots.
+
+How about making their life harder?
+
 ### PoW Captcha
 
 1. https://github.com/sequentialread/pow-bot-deterrent
 
 >  A **proof-of-work based** bot deterrent. Lightweight, self-hosted and copyleft licensed. 
+
+2. https://github.com/tiagorangel1/cap
+
+* https://capjs.js.org/
+
+Cap is a lightweight, modern open-source CAPTCHA alternative designed using SHA-256 proof-of-work
+
+> I discovered it recently, [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/)
 
 ## The SHA256 Algorithm
 

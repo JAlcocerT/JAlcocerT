@@ -26,20 +26,19 @@ https://github.com/OpenInterpreter/open-interpreter
 
 ## Entrepreneuring
 
-
-https://fossengineer.com/open-source-invoice-creator/
+* https://fossengineer.com/open-source-invoice-creator/
 
 Contact forms (QR), waiting lists (like the one of astro-nomy theme) and business cards..
 
 Some people have been contacting me via EE registry https://ariregister.rik.ee/eng/company/
 
-Was wondering how were they able to get my email?
+> Was wondering how were some EE business owner able to get my email?
 
 ### Launching Webifyer
 
 One of the skills I enjoy learning more is about photography.
 
-One of the best decisions I ever had was to have a Photo Blog.
+One of the best decisions I ever had was to have a [Photo Blog](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/).
 
 > Now you can also tell your story
 
@@ -49,7 +48,7 @@ Web templates (SSG'ed) connected to CMS's.
 
 Because Selfhosting Static Generated Sites, is not a secret anymore:
 
-https://github.com/ricsanfre/public-websites-docker
+* https://github.com/ricsanfre/public-websites-docker
 
 > MIT |  Selfhosting personal static websites using private web analytics and comments platforms 
 
@@ -64,7 +63,9 @@ Linktree does things very well, yet cant compete with:
 
 ## Interesting Concepts
 
-1. CYA was always a thing. But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level.
+1. CYA (cover your ***) was always a thing. 
+
+But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level.
 
 2. Its 2025 and now everyones says that it wants AI / [AI|BI](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) / AIOps / whatever. When it really needs [good'old ML](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/)
 

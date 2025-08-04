@@ -1,4 +1,3 @@
-
 ---
 title: Resources
 type: docs
@@ -8,6 +7,16 @@ sidebar:
   open: false
 ---
 
+**Free resources:**
+
+* https://free-for.dev/#/
+  * https://github.com/ripienaar/free-for-dev
+
+<!--   
+* https://github.com/protonpass/free-for-dev
+ -->
+
+>  A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev 
 
 1. https://ugeek.github.io/blog/list.html
 2. https://i12bretro.github.io/tutorials/

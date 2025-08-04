@@ -1,0 +1,80 @@
+---
+title: "A Stronger HomeLab"
+date: 2025-08-03
+draft: false
+tags: ["HomeLab","Security","BackUps"]
+description: 'Apps to make your Linux and SelfHosting more private and secure'
+url: 'homelab-security'
+---
+
+
+## BackUps
+
+Lately I was reading this [reddit backup post](https://www.reddit.com/r/DataHoarder/comments/1gsutp5/list_of_free_open_source_and_crossplatform_backup/?chainedPosts=t3_yqonpo)
+
+Because its not about if, but when a single point of failure will be gone.
+
+
+1. NextCloud
+2. 
+
+Unfortunately, there is no official https://github.com/donniedice/protondrive-linux
+
+* https://developers.cloudflare.com/r2/pricing/
+* s3
+
+**How about code backups?**
+
+* https://giteamirror.com/#features
+
+
+### Media
+
+
+
+## Privacy Apps
+
+### VPN
+
+To connect to your homelab, having a VPN at home is a nice way.
+
+You can combine it with HTTPs/SSL setup if you have a domain + have this Traefik Setup.
+
+To get started, tailscale is a great way to proceed.
+
+### Passwords
+
+I simply love Bitwarden (which can also be selfhosted).
+
+
+
+### 2FA
+
+Initially, I was using authy as my 2fa app.
+
+I also tried Google auth and microsoft version of it.
+
+They all work fine.
+
+Then I heard about: 2FAS and Aegis, which are OSS.
+
+But just recently, we have https://proton.me/authenticator
+
+* https://github.com/orgs/protonpass/repositories
+    * https://github.com/protonpass/proton-pass-common/releases
+
+```sh
+curl -LO https://proton.me/download/authenticator/linux/ProtonAuthenticator_1.0.0_amd64.deb
+sudo dpkg -i ProtonAuthenticator_1.0.0_amd64.deb
+sudo apt-get install -f
+#rm ProtonAuthenticator_1.0.0_amd64.deb
+```
+
+* It works cross-device (for real, including linux desktop + android).
+* Its OSS and allows direct import/export.
+* Allows (optional) to automatic sync via a proton account.
+
+
+---
+
+## Conclusions

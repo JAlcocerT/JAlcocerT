@@ -200,7 +200,7 @@ Im now using **rsync** to move the **big video files**:
 rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #speeds of ~32mb/s from internal card!
 #rsync -avP *.MP4 /media/jalcocert/Backup2TB/DJI-OA5Pro #copy it to an external SSD
 
-#rm *.LRF #clean if needed LRF
+#rm *.LRF #clean (if needed) all LRF files
 ```
 
 ## Learn with this one

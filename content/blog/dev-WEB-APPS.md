@@ -2,7 +2,7 @@
 title: "Web Apps with Python Explained"
 date: 2025-06-20T10:20:21+01:00
 draft: false
-tags: ["Dev","Python","WebApps","Traefik","uv","Streamlit PoCs"]
+tags: ["Dev","WebApps","Traefik","uv","Streamlit PoCs"]
 description: 'My favourite ways to build WebApps with Python. From Streamlit and PyGWalker to Reflex.'
 url: 'web-apps-with-python'
 ---
@@ -121,6 +121,8 @@ if __name__ == "__main__":
 ```
 
 2. **uv** is a very powerfull way for reproducible dependency management
+
+Its actually very trendy this year: https://survey.stackoverflow.co/2025/technology#2-stack-overflow-tags
 
 ```sh
 #uv init #pyproject.toml

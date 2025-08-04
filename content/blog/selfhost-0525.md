@@ -13,7 +13,7 @@ And [these apps](https://selfh.st/apps/) have taken my attention lately:
 
 1. https://github.com/karakeep-app/karakeep
 
-> aGPL |  A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search 
+> aGPL |  **A self-hostable bookmark-everything app** (links, notes and images) with AI-based automatic tagging and full text search 
 
 A replacement for raindrop....
 
@@ -25,7 +25,7 @@ Having retrospectives is really important when [working Agile](https://jalcocert
 
 3. https://github.com/formsmd/formsmd
 
-> Apache v2 |  Developer-first, open source Typeform alternative (formerly known as Blocks.md) 
+> Apache v2 | Developer-first, open source Typeform alternative (formerly known as Blocks.md) 
 
 An interesting alternative also to [formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)
 
@@ -44,7 +44,7 @@ An interesting alternative also to [formbricks](https://jalcocert.github.io/JAlc
 
 5. https://github.com/Bubka/2FAuth
 
-As I recently had some trouble with my phone...
+As I recently had some trouble with my phone...having proper 2fa was critical!
 
 6. https://github.com/besoeasy/file-drop
 
@@ -54,9 +54,11 @@ As I recently had some trouble with my phone...
 
 8. https://github.com/tiagorangel1/cap
 
->  Cap is a lightweight, modern open-source CAPTCHA alternative designed using SHA-256 proof-of-work 
+>  Cap is a lightweight, modern open-source CAPTCHA alternative designed using **SHA-256 proof-of-work** 
 
 9. Wordpres...but static sites? https://github.com/nityam2007/StaticPress-Docker
+
+It requires Wordpress Plugins to convert WP to static files and then expose them.
 
 ## New SelfH Apps
 
@@ -73,7 +75,7 @@ openssl rand -base64 12 #for secrets
 openssl rand -hex 32 #for apikeys
 ```
 
-> See als https://emn178.github.io/online-tools/
+> See also https://emn178.github.io/online-tools/
 
 
 ### Termix
@@ -164,7 +166,7 @@ vcgencmd measure_temp pmic
 
 ### Publiteme
 
-If you'd like to have a simple blogging platform: 
+If you'd like to have **a simple blogging platform**: 
 
 * https://github.com/MikeMather/publite.me
 
@@ -178,7 +180,7 @@ For product people in the room:
 
 * https://github.com/usertour/usertour
 
-> Agpl v3 | Usertour is an open-source user onboarding platform designed for developers. It allows you to create in-app product tours, checklists, and launchers in minutes—effortlessly and with full control.The open-source alternative to Userflow and Appcues
+> Agpl v3 | Usertour is an open-source user onboarding platform designed for developers. It allows you to create in-app product tours, checklists, and launchers in minutes—effortlessly and with full control.**The open-source alternative to Userflow and Appcues**
 
 
 ### Recap from Spring 2025

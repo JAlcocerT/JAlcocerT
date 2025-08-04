@@ -2,7 +2,7 @@
 title: "Want to be an entrepreneur? Try these SelfH Product Tools"
 date: 2025-05-29
 draft: false
-tags: ["Entrepreneuring","Websites","Web Generator","PostHog","PMF"]
+tags: ["Entrepreneuring","Websites","Web Generator","PostHog","PMF","Product Analytics"]
 description: 'Building Websites for others with CMS. The mission of Ghost Websites its just so great...'
 url: 'product-tools'
 ---
@@ -22,11 +22,13 @@ Its been few months since I covered [these Tools for forms/newsletters](https://
 
 Now, how to built great [products](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)?
 
-What it is our potential client? What does it values the most? what are their *pain points*?
+What it is our potential client? 
+
+What does it values the most? What are their *pain points*?
 
 Given that you have a cool website, already with web analytics.
 
-People are reading, so...what are they interested at?
+People are reading, so...**what are they interested at?**
 
 You got to know about that thanks to a [newsletter/forms](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/).
 
@@ -36,7 +38,7 @@ You got to know about that thanks to a [newsletter/forms](https://jalcocert.gith
 
 Or maybe you had some kind of **waiting list** in place...
 
-*You could do those with a simple flask + formbricks/mailerlite/logto...*
+*You could do those with a simple flask webapp + formbricks/mailerlite/logto...*
 
 ## Motivation
 

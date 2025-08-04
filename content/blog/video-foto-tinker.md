@@ -2,7 +2,7 @@
 title: "More Photo and Video fun stuff with PostIZ"
 date: 2025-05-13T13:20:21+01:00
 draft: false
-tags: ["Tinkering","ffmpeg","PostIZ","n8n","OpenAI TTS"]
+tags: ["Tinkering","ffmpeg","PostIZ","N8N","OpenAI TTS"]
 description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI generated audio for shorts.'
 url: 'photo-video-tinkering'
 ---
@@ -21,13 +21,29 @@ Wait, there is even a repo for video stuff!
   {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Management Tools Post" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="PiGallery2 and SelfHosted Photo Tools " >}}  
 {{< /cards >}}
 
+**TL;DR**
+
+After few months tinkering with an action camera and trying to ship videos easily...
+
+{{< callout type="info" >}}
+For **night video** and [the oa5pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/), for me it has worked better: -0.7EV, 50fps, S 1/400, ISO 100 ~25600 (max range), AWB, Texture -1 and Noise Reduction -2.
+{{< /callout >}}
+
+
+Ive been learnign few stuff on the way.
+
+0. And now there is a chance to do a **photo & video recap**
+
 I will be showing you how to put your videos into social media with:
 
 1. [PostIZ](#how-to-setup-postiz)
 2. [N8N](#how-to-setup-n8n)
 3. [AI Powered Shorts](#ai-powered-shorts) (Audio and description)
 
-And now there is a chance to do a **photo & video recap**
+{{< callout type="info" >}}
+Watching **4k video on Linux** might not be **fluent** until you install these.
+{{< /callout >}}
+
 
 Because there are people doing really cool videos: https://www.youtube.com/@JustDriving4K
 
@@ -37,19 +53,16 @@ Because there are people doing really cool videos: https://www.youtube.com/@Just
 
 {{< youtube "iuhXwVNdz4w" >}}
 
+See also:
 
 {{< youtube "kaa1vPHqKdw" >}}
 
-{{< callout type="info" >}}
-For night video and [the oa5pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/), for me it has worked better: -0.7EV, 50fps, S 1/400, ISO 100 ~25600 (max range), AWB, Texture -1 and Noise Reduction -2.
-{{< /callout >}}
 
 And all of this is great, but [consider this](#conclusions) while creating.
 
 > Never forget: share your content, specially if its that easy with [Postiz](#how-to-setup-postiz)
 
 ## Video Editing
-
 
 {{< callout type="warning" >}}
 If you are planning to use [Gyroflow](#gyroflow) for custom video estabilization, make sure that the OA5Pro records **without RS** modes and **Wide**!
@@ -77,7 +90,7 @@ mkdir -p "$HOME/Desktop/CAM1-$(date +%m-%d)" && rsync -avP --include='*.MP4' --e
 
 > This command is perfect for quickly backing up or moving only video files (from a OA5Pro) into a clearly dated folder on your desktop.
 
-If you want to send files to your HomeLab server via CLI: *I got ~90MB/s transfer speed*
+If you want to **send files** to your HomeLab server via CLI: *I got ~90MB/s transfer speed*
 
 ```sh
 #rsync -avP /path/to/video.mp4 username@destination_host:/path/to/destination/
@@ -88,6 +101,10 @@ rsync -avP /home/jalcocert/Desktop/norway-4k/Norway-13-15Jul25 jalcocert@192.168
 ```
 
 #### Videos with FFMPeg
+
+If you are *lazy enough* and just want to paste one video to the next one.
+
+This is for you.
 
 Just put [your video parts](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#ffmpeg) together / silenced / with a given .mp3 audio:
 
@@ -103,8 +120,11 @@ ffmpeg -sseof -52 -i DJI_20250520200235_0006_D.MP4 -c copy output_last_52s.mp4
 ## For Tinkering with more video parts
 ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
 
-#Generate a video from few parts
-#ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4
+#Clean the LRF
+##rm *.LRF #clean (if needed) all LRF files
+
+#Generate a video from few parts (audio or silenced)
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
 ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
 #ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #x4
 
@@ -147,17 +167,20 @@ ffmpeg -i "Input.mov" -vf lut3d="ARRIP3D65PQ108-33.cube" -s 1920x1080 -c:v dnxhd
 
 #### Shorts
 
-While 1080p (Full HD: 1920x180) is a very common and recommended resolution for YouTube, you can definitely upload videos in other resolutions, both higher and lower.
+While 1080p (Full HD: 1920x180) is a very common and recommended resolution for YouTube
+
+you can definitely upload videos in other resolutions, both higher and lower.
 
 * Frame Rate: Upload your video in the same frame rate it was recorded. Common frame rates include 24, 25, 30, 48, 50, and 60 frames per second.
-
 * Aspect Ratio: The standard aspect ratio for YouTube is 16:9. While other aspect ratios are supported, 16:9 generally provides the best viewing experience across different devices.
 
-4K UHD (Ultra High Definition): This is the most common 4K resolution for televisions, monitors, and streaming services. Its dimensions are 3840 pixels wide by 2160 pixels high (3840 x 2160). This resolution has exactly four times the number of pixels as 1080p (1920 x 1080).
+4K UHD (Ultra High Definition): This is the most common 4K resolution for televisions, monitors, and streaming services.
 
+Its typical dimensions are 3840 pixels wide by 2160 pixels high (3840 x 2160).
 
+This resolution has exactly four times the number of pixels as 1080p (1920 x 1080)!
 
-How about adding [TTS generated audio](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/openai-tts.py) to shorts?
+How about adding [**TTS** generated audio](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/openai-tts.py) to shorts?
 
 
 1. Generate the AI Audio with TTS:
@@ -217,17 +240,17 @@ ffmpeg -i cut_output.mp4 -i output.mp3 -map 0:v -map 1:a -c:v copy -c:a libmp3la
 
 <!-- https://www.youtube.com/shorts/u3-5yN9xIv0 -->
 
-This is how you will see shorts:
+This is how you will see shorts: *they look better on phones, with vertical layout way of watching*
 
 {{< youtube "u3-5yN9xIv0" >}}
 
-And for longer than 3 minutes, they will render as:
+And for videos longer than 3 minutes, they will render as: *youtube will detect the horizontal/vertical layout*
 
 {{< youtube "Sz5jlIbV0JA" >}}
 
 <!-- https://youtu.be/Sz5jlIbV0JA -->
 
-You can also take a 1080p part from a 4K video withour rencoding:
+You can also take a 1080p part from a 4K video withour rencoding: *WIP*
 
 ```sh
 ffmpeg -i DJI_20250518172824_0001_D.MP4 -c copy -bsf:v hevc_metadata=crop_left=960:crop_right=960:crop_top=0:crop_bottom=1080 output_horizontal_1080p_no_encode.mp4
@@ -235,7 +258,10 @@ ffmpeg -i DJI_20250518172824_0001_D.MP4 -c copy -bsf:v hevc_metadata=crop_left=9
 
 #### Thumbnails
 
-If you have extracted an image from your video, you can force it to be the video thumbnail:
+Having a catchy image on a video can make a difference on how many people get to see it.
+
+If you have **extracted an image** from your video, you can force it to be the video thumbnail:
+
 ```sh
 #ffmpeg -i extracted-image.png -c:v libwebp -quality 80 ./compressed_thumbnail.webp
 ffmpeg -i cat.png -c:v libwebp -quality 80 ./compressed_thumbnail.png
@@ -281,12 +307,12 @@ exiftool -ee DJI_20250518182847_0015_D.MP4 #working when recorded W and no RS!
 ```
 
 {{< callout type="info" >}}
-On the OA5Pro, you need to record without RS and with Wide mode to get such data.
+On the [OA5Pro](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/), you need to record without RS and with Wide mode to get such data.
 {{< /callout >}}
 
 ##### Adding Telemetry to MP4s
 
-How to Telemetry Overlay a Video
+How to Telemetry Overlay a Video?
 
 I tried to bypass this with: https://jalcocert.github.io/JAlcocerT/polar-data-python-analysis/
 
@@ -309,7 +335,7 @@ flatpak install flathub org.kde.kdenlive
 
 <!-- https://www.youtube.com/watch?v=V0_yp-ziqvI -->
 
-This video was very helpful to understand additional KDE tricks:
+This video was very helpful to understand additional **KDE tricks**:
 
 {{< youtube "V0_yp-ziqvI" >}}
 
@@ -352,9 +378,7 @@ And it can also be done with [gyroflow-CLI](https://docs.gyroflow.xyz/app/advanc
 gyroflow-cli --input DJI_20250518182847_0015_D.MP4 --output stabilized_video.mp4
 ```
 
-{{< callout type="info" >}}
-Watching **4k video on Linux** might not be **fluent** until you install these:
-{{< /callout >}}
+
 
 ## Photo Editing
 
@@ -363,7 +387,6 @@ Spending a lot on smartphone with cool cameras to...use snapseed?
 Come on... whats next?
 
 Uploading to social media in low resolution?
-
 
 Lets do some CLI Photo tinkering:
 
@@ -380,7 +403,7 @@ convert libreportfolio.png -resize 1200x630^ -gravity Center -extent 1200x630 li
 
 ### Darktable
 
-* Darktable is an open source photography workflow application and raw developer - https://github.com/darktable-org/darktable
+Darktable is an **open source photography workflow application** and raw developer - https://github.com/darktable-org/darktable
 
 As a light room alternative:
 
@@ -389,7 +412,6 @@ https://www.youtube.com/watch?v=rMhe2gYJa9s
 -->
 
 {{< youtube "rMhe2gYJa9s" >}}
-
 
 
 ### Other photo editing
@@ -438,7 +460,7 @@ Should you go for proper cameras, or just do with your smartphone?
 
 You will need ton of space (specially for video).
 
-Never forget about proper photo/video backup before your trips!
+Never forget about **proper photo/video backups** before your trips!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#backups" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Hardware & Softw setup for traveling" >}}
@@ -452,7 +474,9 @@ Never forget about proper photo/video backup before your trips!
 https://allegro.pl/oferta/zestaw-6-filtrow-nd-8-16-32-64-1000-cpl-dji-osmo-action-4-3-fw-oa4-ald-15143043373
 https://allegro.pl/oferta/etui-pokrowiec-na-kamere-sportowa-dji-osmo-action-3-4-5-pro-gopro-13-16982113322?reco_id=cc5aea34-1efb-11f0-9d44-c214b156ab4e&sid=662c7a15915b4ff7cbe3591dc77c5ba25a9c6e61630a3346ef7abf0742c8b1f5&dd_referrer=https%3A%2F%2Fallegro.pl%2Fkategoria%2Fkamery-kamery-sportowe-147894%3Fstring%3Ddji%2520osmo%2520action%25205 -->
 
-A **Neutral Density (ND) filter** is essentially a **sunglass for your camera lens**. It's a filter made of darkened glass or resin that reduces the amount of light entering the camera sensor **without affecting the color** or **hue** of the scene.
+A **Neutral Density (ND) filter** is essentially a **sunglass for your camera lens**. 
+
+It's a filter made of darkened glass or resin that reduces the amount of light entering the camera sensor **without affecting the color** or **hue** of the scene.
 
 **How they work:**
 
@@ -461,7 +485,6 @@ A **Neutral Density (ND) filter** is essentially a **sunglass for your camera le
 
 
 {{< details title="What ND Filders do | Types of ND 📌" closed="true" >}}
-
 
 **What they do:**
 
@@ -489,7 +512,10 @@ Adjusting the aperture and ISO (sensitivity) are the primary ways to control exp
 
 ND filters provide an additional way to control the amount of light without sacrificing your desired cinematic motion or depth of field.
 
-While a good quality ND filter should ideally not affect color, some cheaper ones might introduce a slight color cast. It's generally recommended to invest in reputable brands to minimize this issue. Post-processing can often correct minor color casts if they occur.
+While a good quality ND filter should ideally not affect color, some cheaper ones might introduce a slight color cast.
+
+* It's generally recommended to invest in reputable brands to minimize this issue.
+* Post-processing can often correct minor color casts if they occur.
 
 Essentially, **ND filters give you greater control over your exposure settings in bright light**, allowing you to achieve creative effects and maintain the desired look and feel of your video or photographs
 
@@ -714,6 +740,8 @@ Once logged into PostIZ:
 As long as you have docker ready, you are good to go:
 
 ![N8N Creating user and password](/blog_img/selfh/postiz/n8n-setup.png)
+
+Then, create your **N8N workflows**:
 
 ![N8N UI Panel](/blog_img/selfh/postiz/n8n-ui.png)
 

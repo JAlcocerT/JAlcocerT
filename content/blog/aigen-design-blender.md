@@ -7,6 +7,8 @@ description: 'Generative AI applied to Blender'
 url: 'how-to-use-blender-with-AI'
 ---
 
+https://github.com/JAlcocerT/3Design
+
 ### The Blender Project
 
 While primarily known as a 3D modeling and rendering software, Blender also includes robust animation capabilities.

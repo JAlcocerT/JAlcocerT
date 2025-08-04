@@ -15,7 +15,7 @@ And it seems it will stay for a while.
 
 * https://uiverse.io/elements
 
-But how about creating websites with these... or even web apps?
+But how about creating/improving websites and their components with these tools... or even web apps?
 
 ## Firebase Studio
 
@@ -172,6 +172,7 @@ Everyone has a cloud IDE.
 
 So does OpenAI now, with https://openai.com/index/introducing-codex/
 
+> Still, I prefer the *locally working* stuff.
 
 ### Claude Code
 
@@ -184,7 +185,7 @@ Another CLI tool, this time from Anthropic:
 
 You can see the [CLI usage](https://docs.anthropic.com/en/docs/claude-code/cli-usage)
 
-![alt text](/blog_img/GenAI/Anthropic/claudecode/claudecode1.png)
+![Claude Code 101](/blog_img/GenAI/Anthropic/claudecode/claudecode1.png)
 
 
 ```sh

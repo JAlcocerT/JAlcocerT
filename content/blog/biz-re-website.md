@@ -655,9 +655,9 @@ They can help us understand how users intereact with our apps/services.
 
 Its all about [understanding which product](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/) the customer values the most.
 
-Quizzes/[forms or surveys](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)/waiting lists: could also help you get an idea about it. 
+Quizzes / [forms or surveys](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks) / waiting lists: could also help you get an idea about it. 
 
-But the ultimate words is the price, the real skin in the game.
+But **the ultimate word is the price**, the real *skin in the game*.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
 

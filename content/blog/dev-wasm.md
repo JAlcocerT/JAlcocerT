@@ -11,7 +11,7 @@ url: 'wasm'
 
 ### What about Web Assembly?
 
-With WASM we can run Apps coded in other language (other than web language like js) in our browsers.
+With **WASM** we can run Apps coded in other language (other than web language like js) in our browsers.
 
 WASM allow us to compiled code and run it in various environments (for example browsers) - Regardless of OS and even architecture ARM/X86/RISC-V...
 

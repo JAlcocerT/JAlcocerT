@@ -2,6 +2,7 @@
 title: "Tinkering with PhyPhox"
 date: 2024-02-27
 draft: false
+tags: ["OBD2","Car Data"]
 description: Analyzing phone Sensors Data with PhyPhox and Python.
 ---
 
@@ -31,5 +32,7 @@ Related **Project Source Code** is here: <https://github.com/JAlcocerT/Py_RouteT
 ### More Thoughts
 
 Some time ago I tried **Torque (Lite and Pro) Android apps** to read [OBD](https://github.com/JAlcocerT/RPi/tree/main/Z_IoT/OBD2) info from a car.
+
+All you need is a basic OBD2 reader, connect via bluetooth to it (typically with a `1234` password) and launch the android app.
 
 Would be great to build a real time dashboard with such data to place as onboard panel.

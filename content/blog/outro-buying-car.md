@@ -260,7 +260,7 @@ Remember that not everywhere you can rent without a credit card!
 
 ## The costs of a Car
 
-As mentioned, from my experience, this is the **cost split that I got:**
+As mentioned, from my experience, this is the **cost split that I got:** ~20% were gas costs!
 
 {{< chart 100 200 >}}
 {
@@ -317,8 +317,9 @@ I mean an **used car**.
 
 ### What to Look when buying a second hand car
 
-1. No water in the space where there should be oil (and biceversa)
+1. No water in the space where there should be oil (and vice versa)
 2. Tires Equally used across the contact patch
+3. ....
 
 I kind of had a file with these...
 
@@ -343,9 +344,9 @@ See a sample old Civic 6 spark plugs:
 
 ## Conclusions
 
-This project started as a test to see the costs of owning a car.
+This project started as a **test to see the costs of owning a car**.
 
-And in the meantime I saw an interesting post: https://forocoches.com/foro/showthread.php?t=9203326&highlight=
+And in the meantime I saw an interesting post: [Buying a Mercedes and making a roadtrip](https://forocoches.com/foro/showthread.php?t=9203326&highlight=)
 
 > Some people are doing cool adventures with old card *Salgo para Dakar para intentar vender un Mercedes viejo. Haremos seguimiento*
 
@@ -353,7 +354,7 @@ And in the meantime I saw an interesting post: https://forocoches.com/foro/showt
 
 ## FAQ
 
-If you are wondering how efficient you are driving, you can compare your fuel consumption with people using the same car: https://www.spritmonitor.de/de/suche.html
+If you are wondering how efficient you are driving, you can compare your **fuel consumption** with people using the same car: https://www.spritmonitor.de/de/suche.html
 
 > Notice the difference in summer vs winter months!
 

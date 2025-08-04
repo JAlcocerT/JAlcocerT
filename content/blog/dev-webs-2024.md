@@ -2,7 +2,7 @@
 title: "Websites 2024 Consolidation"
 date: 2024-12-17
 draft: false
-tags: ["Dev","Filebrowser","EntreAgujayPunto","SSG"]
+tags: ["Dev","Filebrowser","EntreAgujayPunto","SSG","Photo Gallery"]
 description: 'Websites and getting better at `Show your Work`. HUGO Theme Gallery for a Punto Website.'
 url: 'websites-themes-2024'
 ---

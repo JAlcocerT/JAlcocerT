@@ -451,11 +451,13 @@ uv python install 3.12
 
 This installs the Python 3.12 interpreter into the currently active virtual environment, if uv is configured to manage Python versions within that environment.
 
-However, it's important to understand that uv's primary focus, at least in its current state, is on package installation and dependency resolution within an existing Python environment. It doesn't directly manage the creation or switching of Python versions in the same way that tools like pyenv or conda do.
+However, it's important to understand that uv's primary focus, at least in its current state, is on package installation and dependency resolution within an existing Python environment.
 
-to run apps:
+To run Python apps with uv:
 
 ```sh
+uv init
+uv add pandas
 uv sync #install the deps
 
 #uv venv test_venv
