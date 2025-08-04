@@ -2,7 +2,7 @@
 title: "Creating a Blog with AI Powered content"
 date: 2024-09-25
 draft: false
-tags: ["dev"]
+tags: ["Dev","SSG"]
 description: 'Creating Landing Web pages with Astro. Automated Website Posts with HUGO and OpenAI.'
 url: 'creating-hugo-blog'
 ---

@@ -458,6 +458,14 @@ As seen [here](https://dteather.com/blogs/adding-giscus-discussions-to-astro/)
 
 Alternatively, you can use [remark42](https://www.hleroy.com/2023/11/adding-a-remark42-comment-system-to-my-statically-generated-blog/) or commento as your commenting system!
 
+See also:
+
+* https://github.com/walinejs/waline
+
+> 💬 A Simple, Safe Comment System
+
+
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento" title="Commento | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="SSG Containers | Docker Configs 🐋✅ ↗" >}}

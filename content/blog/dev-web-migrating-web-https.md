@@ -3,7 +3,7 @@ title: "Getting Cool (and secure) Website with https"
 date: 2024-09-28
 draft: false
 tags: ["dev"]
-summary: 'Creating a secure Site with no https errors'
+summary: 'Creating a secure Landing Page WebSite with no https errors'
 url: 'transforming-and-securing-a-website'
 ---
 

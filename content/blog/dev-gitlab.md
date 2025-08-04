@@ -100,7 +100,7 @@ I have tried it with a Private Gitlab repository (works same for public repos).
 
 ### Select a Gitlab Repository
 
-For testing purposes, I made it with [this one](https://gitlab.com/fossengineer1/cyclingthere)
+For testing purposes, I made the setup with [this one](https://gitlab.com/fossengineer1/cyclingthere)
 
 ### Try the Theme
 

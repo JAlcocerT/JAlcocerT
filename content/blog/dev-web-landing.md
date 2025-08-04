@@ -1,11 +1,17 @@
 ---
-title: "Creating a Landing Website with Astro!"
+title: "Creating a Landing Website with Astro"
 date: 2024-02-14
 draft: false
-tags: ["dev"]
+tags: ["Dev"]
 description: 'Creating Landing Web Pages with Astro SSG - Ourika. The last site without keystaticcms or similar editors.'
 url: 'creating-landing-pages-astro'
 ---
+
+Few months ago I was doing a secure landing page as covered [here](https://jalcocert.github.io/JAlcocerT/transforming-and-securing-a-website/)
+
+Now, after doing [some travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), got the chance to help another person.
+
+Lets get to it.
 
 ## Landing Page for Ourika
 
