@@ -349,6 +349,11 @@ From my experience, a good Cursor/Windsurf rule/guideline also does the trick: h
   * https://block.github.io/goose/docs/experimental/subagents/
   * https://block.github.io/goose/docs/guides/goose-cli-commands/
 
+See how to setup Goose:
+
+![alt text](/blog_img/GenAI/goose-1.png)
+
+![alt text](/blog_img/GenAI/goose-2.png)
 
 ## More MCP Tools
 

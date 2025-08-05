@@ -19,7 +19,7 @@ Recently I was writing about hashing and encryption tools [here](https://jalcoce
 
 What I want to cover here:
 
-1. Crypto Analytics with Dune x PolyMarket
+1. Crypto 101 Analytics with Dune *and a look to PolyMarket*
 2. [Crypto Resources](#crypto-resources) to explore further some concepts: [dex](#dex-amm), [lending](#lending-protocols)
 3. [Skin in the game](#conclusions): testing some DeFi protocols to understand them better
 
@@ -30,7 +30,7 @@ Some time ago I was having a look to this **amazing BlockChain/Solidity FreeCode
 {{< youtube "gyMwXuJrbJQ" >}}
 
 And this can be much easier thanks to [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)!
-
+a
 **Practical Blockchain:**
 - Parties that do not know each other can **exchange value without a central authority**
 
@@ -475,6 +475,8 @@ So...does the code explanations match what happened in reality?
 **Lending with Aave:** https://aavescan.com/ethereum-v3/usdc
 
 I lended ETH, which gave me `aEthWETH` mapped 1:1 with the amount deposited.
+
+![AAve may](/blog_img/crypto/defi/aave-12may25.png)
 
 ![Aave v3 lending eth](/blog_img/crypto/sample-eth-wallet.png)
 

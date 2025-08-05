@@ -133,15 +133,13 @@ crontab -l
 #python3 pracuj_v3.py >> /home/reisipi/dirty_repositories/cv-check/Scrap_Pracuj/script_output.log 2>&1
 ```
 
-Look if you have space, still:
+{{< /details >}}
+
+Look if you have space, *still*:
 
 ```sh
 df -h | awk '$2 ~ /G/ && $2+0 > 3' #if you set logs, careful with the disk space (see drives >3GB)
 ```
-
-{{< /details >}}
-
-
 
 
 ## Scrapping with AI

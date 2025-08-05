@@ -783,6 +783,9 @@ Reflex has been one of the latest webapp frameworks Ive tried with Python.
 
 ![alt text](/blog_img/apps/reflex/reflex-stocks.png)
 
+![CAGR Reflex Sample](/blog_img/dev/pystocks/cagr-reflex.png)
+
+
 And it has such a huge potential to become my go to.
 
 * https://reflex.dev/blog/2024-10-8-self-hosting-reflex-with-docker/

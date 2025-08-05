@@ -8,6 +8,12 @@ url: 'python-stocks-webapp'
 math: true
 ---
 
+This is not a financial recommendation post
+
+![alt text](/blog_img/data-experiments/investors-scatter.png)
+
+Because they have made it, but you wont.
+
 **TradFi** - Or Traditional Finances, as I saw recently on redit.
 
 Wouldnt it be great to go out the *typical google sheet* and have a great UI/X when looking at your finances?
@@ -36,7 +42,6 @@ Sometime ago I was doing similar Project in **R Shiny** 💻
   {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks//" title="About RStocks" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="R Stock Shiny App | Post" >}}
   {{< card link="https://github.com/JAlcocerT/RStocks" title="RStocks Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with financial data within a R Shiny App." >}}
 {{< /cards >}}
-
 
 And it was not all about yahoo finance back then...
 

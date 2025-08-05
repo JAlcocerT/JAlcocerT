@@ -618,11 +618,12 @@ docker run --rm -it ghcr.io/wg-easy/wg-easy wgpw 'YOUR_PASSWORD'
 docker run --rm -it ghcr.io/wg-easy/wg-easy wgpw 'YOUR_PASSWORD' | sed 's/\$/\$\$/g'
 ```
 
-{{< callout type="warning" >}}
-* Don't wrap the generated hash password in single quotes when you use docker-compose.yml. Instead, replace each $ symbol with two $$ symbols. [Example](https://github.com/wg-easy/wg-easy/blob/master/How_to_generate_an_bcrypt_hash.md)
+**warning**
+
+* Don't wrap the generated hash password in single quotes when you use `docker-compose.yml`. Instead, replace each $ symbol with two $$ symbols. [Example](https://github.com/wg-easy/wg-easy/blob/master/How_to_generate_an_bcrypt_hash.md)
 
 * You'll get different results (for the same given pass) because the hash is salted
-{{< /callout >}}
+
 
 ```sh
 version: "3.8"  # Specify Docker Compose version (optional)
@@ -657,6 +658,7 @@ services:
 ```
 
 {{< /details >}}
+
 
 ```sh
 curl -sS https://ipinfo.io/json #the command to use

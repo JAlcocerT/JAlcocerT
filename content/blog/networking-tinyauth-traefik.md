@@ -646,10 +646,11 @@ Example: https://auth.jalcocertech.com/sign-in
 
 Choose the User Type you want, and click the Create button. (Note: If you select External as your User Type, you will need to add test users later.)
 
-External User Type
-Audience: Your app is available to any user with a Google Account, regardless of their Google Workspace affiliation. This includes personal Gmail accounts and users from other Google Workspace organizations.
+* External User Type
 
-Use Cases:
+* Audience: Your app is available to any user with a Google Account, regardless of their Google Workspace affiliation. This includes personal Gmail accounts and users from other Google Workspace organizations.
+
+* Use Cases:
 
 Public-facing applications: Any app designed for general users (e.g., a photo editing app that integrates with Google Photos, a task manager that syncs with Google Calendar).
 

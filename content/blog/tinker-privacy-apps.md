@@ -2,7 +2,7 @@
 title: "A Stronger HomeLab"
 date: 2025-08-03
 draft: false
-tags: ["HomeLab","Security","BackUps"]
+tags: ["HomeLab","Security","BackUps","VPN"]
 description: 'Apps to make your Linux and SelfHosting more private and secure'
 url: 'homelab-security'
 ---
@@ -30,6 +30,8 @@ Unfortunately, there is no official https://github.com/donniedice/protondrive-li
 
 ### Media
 
+* ProtonDrive
+
 
 
 ## Privacy Apps
@@ -40,13 +42,42 @@ To connect to your homelab, having a VPN at home is a nice way.
 
 You can combine it with HTTPs/SSL setup if you have a domain + have this Traefik Setup.
 
-To get started, tailscale is a great way to proceed.
+To get started, **tailscale** is a great way to proceed.
+
+You also have:
+
+1. ProtonVPN
+
+* https://protonvpn.com/support/installing-protonvpn-on-a-router
+* https://account.proton.me/u/0/vpn/vpn-apps
+    * https://protonvpn.com/download-linux
+    * https://github.com/ProtonVPN/proton-vpn-gtk-app
+    * https://protonvpn.com/support/official-linux-vpn-ubuntu/
+
+2. Mullvad
+
+* [Mullvad x Gluetun](https://fossengineer.com/gluetun-vpn-docker/) 
+
+3. Wireguard
+
+Which you can setup via wg easy as [seen with the x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#desktop-with-vps-as-vpn-with-wireguard)
+
+* https://github.com/Devsfy/wiregui
+
+### HTTPs and SSL Everywhere
+
+1. With NGINX Proxy Manager via UI
+
+2. With Traefik Programatically! 
+
 
 ### Passwords
 
 I simply love Bitwarden (which can also be selfhosted).
 
+You also have:
 
+* https://github.com/ProtonPass
 
 ### 2FA
 
@@ -75,6 +106,40 @@ sudo apt-get install -f
 * Allows (optional) to automatic sync via a proton account.
 
 
+## Private AI
+
+### LLMs
+
+Try with **Ollama**
+
+* https://ollama.com/blog/new-app
+
+Alternatively:
+
+* https://lumo.proton.me/guest
+* https://proton.me/support/lumo-getting-started
+
+### Image Generation
+
+* Foocus
+* Stable Difussion Web UI
+* Easy Difussion
+
 ---
 
 ## Conclusions
+
+Its a long way to the top if you wanna rocknroll.
+
+Same for homelab security.
+
+
+## FAQ
+
+### How to Change USB Size
+
+Diskpart
+List disk
+select disk N
+clean 
+create partition primary

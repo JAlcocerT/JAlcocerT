@@ -2,7 +2,7 @@
 title: "Cloud vs Pi's: What Should I get?"
 date: 2024-08-10T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Pi Container","Wireguard"]
 description: Comparing SBCs performance with the Cloud - Raspberry Pi, Orange Pi, Mini PC (BMax-B4),...?
 url: cloud-vs-single-board-computers
 ---
@@ -400,7 +400,7 @@ portainer/portainer-ce #now you can re-use your portainer, as it was
 {{% /details %}}
 
 
-{{% details title="Hot to mount external drives consistently" closed="true" %}}
+{{% details title="How to mount external drives consistently" closed="true" %}}
 
 ```sh
 lsblk #list them again
@@ -443,4 +443,4 @@ A raspberry Pi inside a container - https://github.com/ptrsr/pi-ci
 * AWS IoT - <https://www.youtube.com/watch?v=hgQ-Ewrm48c>
 
 
-I also had this saved (credits to BasvanKaam)
+> I also had this saved (credits to BasvanKaam)

@@ -552,6 +552,8 @@ But I cant say no to [Streamlit](#streamlit) for quick PoC's
 
 No frontend experience required.
 
+![CAGR Reflex Sample](/blog_img/dev/pystocks/cagr-reflex.png)
+
 * [YT1 - Pure Python: Build a full stack ChatGPT-like UI. Reflex, Neon Postgres. Deploy with Docker to a VM](https://www.youtube.com/watch?v=NuNaI__4xiU)
 * [Build Full Stack Web Apps in Pure Python with Reflex - No Javascript Required](https://www.youtube.com/watch?v=ITOZkzjtjUA)
 

@@ -2,7 +2,7 @@
 title: "How are you selling? Webify Edition"
 date: 2025-06-03T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Auth","Flask","Webhooks","LogTo","Stripe","SaaS Invoice/Billing","Formbricks"]
+tags: ["Entrepreneuring","Auth","Flask","LogTo","Stripe","SaaS Invoice/Billing","Formbricks"]
 description: 'Stripe 101. Selling Themes and editing capabilities for SSG powered websites.'
 url: 'using-stripe-with-flask'
 ---

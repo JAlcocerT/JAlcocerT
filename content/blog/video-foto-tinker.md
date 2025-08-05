@@ -164,12 +164,27 @@ ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -
 ffmpeg -i "Input.mov" -vf lut3d="ARRIP3D65PQ108-33.cube" -s 1920x1080 -c:v dnxhd -pix_fmt yuv422p -b:v 120M DNxHD_for_Editing.mxf
 ```
 
+Look if you have space, *still*:
+
+```sh
+df -h | awk '$2 ~ /G/ && $2+0 > 3' #if you set logs, careful with the disk space (see drives >3GB)
+```
+
+```sh
+du -h --max-depth=1 | sort -hr | head -n 20
+```
 
 #### Shorts
 
-While 1080p (Full HD: 1920x180) is a very common and recommended resolution for YouTube
+While 1080p (Full HD: 1920x180) is a very common and recommended resolution for YouTube.
 
-you can definitely upload videos in other resolutions, both higher and lower.
+To upload you can try with brave or firefox:
+
+```sh
+pkill -9 brave
+```
+
+You can definitely upload videos in other resolutions, both higher and lower.
 
 * Frame Rate: Upload your video in the same frame rate it was recorded. Common frame rates include 24, 25, 30, 48, 50, and 60 frames per second.
 * Aspect Ratio: The standard aspect ratio for YouTube is 16:9. While other aspect ratios are supported, 16:9 generally provides the best viewing experience across different devices.
@@ -267,6 +282,10 @@ If you have **extracted an image** from your video, you can force it to be the v
 ffmpeg -i cat.png -c:v libwebp -quality 80 ./compressed_thumbnail.png
 ```
 
+Also, having proper youtube channel setting can help:
+
+![alt text](/blog_img/outro/yt-channel-setting.png)
+
 #### AI Powered shorts
 
 A friend told me recently to have a look to these to do **interesting youtube shorts**:
@@ -344,6 +363,8 @@ Have rediscovered KDEnlive [for LUT](https://docs.kdenlive.org/en/effects_and_fi
 
 ![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
 
+You can try few of the default ones available:
+
 ![Video LUT Example](/blog_img/data-experiments/video-lut.png)
 
 I personally like the `CINEMATIC.cube` that KDE brings:
@@ -370,6 +391,13 @@ Those LUT `.cube` files can *potentially* be applied via FFMPEG CLI:
 
 I already had [a look to Gyroflow](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#gyroflow) on the last video post.
 
+
+{{< callout type="warning" >}}
+Be careful and backup your system before installing GyroFlow (I had issues twice)
+{{< /callout >}}
+
+For the DJI, they provide some lens profile:
+
 * https://github.com/gyroflow/lens_profiles/tree/main/DJI
 
 And it can also be done with [gyroflow-CLI](https://docs.gyroflow.xyz/app/advanced-usage/command-line-cli):
@@ -378,8 +406,6 @@ And it can also be done with [gyroflow-CLI](https://docs.gyroflow.xyz/app/advanc
 gyroflow-cli --input DJI_20250518182847_0015_D.MP4 --output stabilized_video.mp4
 ```
 
-
-
 ## Photo Editing
 
 Spending a lot on smartphone with cool cameras to...use snapseed?
@@ -387,6 +413,13 @@ Spending a lot on smartphone with cool cameras to...use snapseed?
 Come on... whats next?
 
 Uploading to social media in low resolution?
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Management Tools" image="/blog_img/GenAI/rag101.jpeg" subtitle="Blog Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8n Docker Config" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config  🐋 ↗" >}}
+{{< /cards >}} 
+
 
 Lets do some CLI Photo tinkering:
 

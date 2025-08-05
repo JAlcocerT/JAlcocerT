@@ -169,6 +169,7 @@ This one is tested *in production* as seen [here](https://jalcocert.github.io/JA
 1. https://filebrowser.org/configuration/custom-branding or [filebrowser quantum](https://github.com/gtsteffaniak/filebrowser)
 
 ![alt text](/blog_img/web/filebrowser-hugo/filebrowser-quantum-login.png)
+
 ![alt text](/blog_img/web/filebrowser-hugo/filebrowser-quantum-users.png)
 
 2. A Landing [Page](#the-landing-page)

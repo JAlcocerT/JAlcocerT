@@ -1,13 +1,18 @@
 ---
 title: "Designing with Blender and LLMs"
-date: 2025-08-15T23:20:21+01:00
+date: 2025-12-15T23:20:21+01:00
 draft: false
 tags: ["Docker","Gen-AI","Animations"]
 description: 'Generative AI applied to Blender'
 url: 'how-to-use-blender-with-AI'
 ---
 
-https://github.com/JAlcocerT/3Design
+
+
+{{< cards >}}
+  {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3D Design Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of scripts for Blender, OpenSCAD and more" >}}
+{{< /cards >}}
 
 ### The Blender Project
 
