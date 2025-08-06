@@ -468,6 +468,8 @@ I was testing Automatic [Posts creation with AIssistant here](https://jalcocert.
 * https://github.com/serversideup/financial-freedom
 * It serves as an alternative to commercial apps like Mint and YNAB.
 
+> GPL3.0 | An open source alternative to Mint, YNAB, and more. Stay on budget and build wealth without sacrificing your privacy. 
+
 {{< details title="More about Financial Freedom Software 📌" closed="true" >}}
 
 This project addresses privacy concerns by allowing users to **self-host their financial data**.

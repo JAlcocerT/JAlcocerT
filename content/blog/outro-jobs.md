@@ -2,7 +2,7 @@
 title: "About Jobs. HR Prep and AI Engineers."
 date: 2025-02-10
 draft: false
-tags: ["Outro","Scrapping"]
+tags: ["Outro","Scrapping","Job-Trends"]
 description: 'Is it a good moment to change jobs? A curriculum for LLM/ML Engineer?. Time to recap Scraps firecrawl API and a Latex powered CV.'
 url: 'when-to-apply-for-a-job'
 ---
@@ -34,7 +34,7 @@ Last year, I was tinkering with **scrapping tools**:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scrapping the Web" image="/videos/job_offers.png" subtitle="Post where I tinkered with scrapping tools." >}}
-  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4, AI Scraps..." >}}
+  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4, AI Scraps like Firecrawl..." >}}
 {{< /cards >}}
 
 This post will be a continuation of the learnings gain in there.
@@ -43,6 +43,8 @@ This post will be a continuation of the learnings gain in there.
 ### Using BS4 and CRON
 
 It was all very simple, very clear...
+
+Clone this repo, go to the folder where the magic happens:
 
 ```sh
 git clone https://gitlab.com/fossengineer1/cv-check
@@ -290,11 +292,20 @@ Its all about **[Scrapping Tools](https://github.com/JAlcocerT/Scrap_Tools)** ðŸ
 
 ![Job Market Trend](/blog_img/data-experiments/job-market.png)
 
+---
+
 ## Conclusions
 
 There you have few ways to make scrapping work.
 
-Or how to make it better.
+Or how to make your scrapping better.
+
+
+If it gets really complex, you will need Playwright magic, instead of
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Job-Trends" title="Job-Trend Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4 to get Data about the Job Market and push it to sqlite3" >}}
+{{< /cards >}}
 
 For more ideas, check also:
 

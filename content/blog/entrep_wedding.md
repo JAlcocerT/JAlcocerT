@@ -328,13 +328,15 @@ https://web-check.xyz/check/https%3A%2F%2Fwww.gymlaunch.com%2F
 It always great to find **new astro themes**:
 
 * https://github.com/iann-mathaiya/nikola-tesla
-* Saasify...
+* Saasify...*for example this one*
+    * https://github.com/larry-xue/astro-sassify-template
+    * https://astro-sassify.larryxue.dev/
 
-First things first: *a catchy name*
+First things first: **a catchy name**
 
 * GaleriaSlubna
 * SlubneChwile
-* What else?
+* ...What else?
 
 Some place to do [static web hosting](https://fossengineer.com/alternatives-for-hosting-static-websites/):
 
@@ -460,6 +462,15 @@ And dont forget to add in the UI settings the [custom location](https://github.c
 
 ### The VPS
 
+Last year I was [tinkering with VPS's](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/).
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#hetzner" title="Tinkerin with Hetzner ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Tinkering with DO ↗" >}}
+{{< /cards >}}
+
+They come very handy right now.
+
 Say this is going to be... [300GB for 100$/month](https://www.digitalocean.com/pricing/droplets)
 
 If the package would be 75$ for 50GB, every 450 revenue, you got 100 VPS expenses or a 22%.
@@ -470,9 +481,8 @@ If the package would be 75$ for 50GB, every 450 revenue, you got 100 VPS expense
 
 Starting with something simple: https://cloud.digitalocean.com/droplets/new?i=af28ae&region=ams3&size=s-1vcpu-1gb
 
-https://cloud.digitalocean.com/account/api/tokens
-https://cloud.digitalocean.com/images/backups?i=af28ae&preserveScrollPosition=true
-
+* https://cloud.digitalocean.com/account/api/tokens
+* https://cloud.digitalocean.com/images/backups?i=af28ae&preserveScrollPosition=true
 
 ![Digital Ocean VPS and Extra Space](/blog_img/entrepre/wedding/DO-VPS.png)
 

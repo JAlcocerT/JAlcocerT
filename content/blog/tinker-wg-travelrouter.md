@@ -367,6 +367,6 @@ We can also use [Wireguard and OpenVPN](#interesting-vpns-solutions) with the ML
 I [tried some VPSs](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/), and Wireguard worked perfectly with:
 
 1. [Hetzner](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#hetzner)
-1. [Digital Ocean](https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/)
+2. [Digital Ocean](https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/)
 
 > DO added recently GPU Droplets which can be interesting to try out!
