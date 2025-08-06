@@ -14,7 +14,6 @@ Lately I was reading this [reddit backup post](https://www.reddit.com/r/DataHoar
 
 Because its not about if, but when a single point of failure will be gone.
 
-
 1. NextCloud
 2. 
 
@@ -22,6 +21,10 @@ Unfortunately, there is no official https://github.com/donniedice/protondrive-li
 
 * https://developers.cloudflare.com/r2/pricing/
 * s3
+
+```sh
+sudo sudo du -h --max-depth=10 /var/lib/docker | sort -rh | head
+```
 
 **How about code backups?**
 
@@ -108,13 +111,16 @@ sudo apt-get install -f
 
 ## Private AI
 
+AI Apps with Containers and Cloudflare Tunnels
+
+
 ### LLMs
 
 Try with **Ollama**
 
 * https://ollama.com/blog/new-app
 
-Alternatively:
+Alternatively, you can try these LLMs:
 
 * https://lumo.proton.me/guest
 * https://proton.me/support/lumo-getting-started
@@ -138,8 +144,11 @@ Same for homelab security.
 
 ### How to Change USB Size
 
+```sh
 Diskpart
 List disk
 select disk N
 clean 
 create partition primary
+```
+

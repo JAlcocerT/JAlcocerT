@@ -4,11 +4,14 @@ date: 2021-09-25T23:20:21+01:00
 draft: false
 tags: ["Outro"]
 description: 'Time Management Techniques for Data Analytics'
-summary: 'Been commited to dive into Data Analytics will require that you excel at Time Management techniques. In this post I cover some of the techniques to help you stay on top of your projects.'
 url: 'time-management-data-analytics'
 ---
 
 Time, it's all **about Time**.
+
+Been commited to dive into Data Analytics will require that you excel at Time Management techniques. 
+
+In this post I cover some of the techniques to help you stay on top of your projects.
 
 {{< callout type="info" >}}
 Be aware of the **Optimism Bias** when commiting with others (and with yourself)
@@ -16,7 +19,7 @@ Be aware of the **Optimism Bias** when commiting with others (and with yourself)
 
 ## Understanding your Productivity Peak
 
-Finding your prodictivity rhythm.
+Finding your productivity rhythm.
 
 ### Establish Boundaries
 

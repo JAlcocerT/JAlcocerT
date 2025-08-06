@@ -116,6 +116,11 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 - [ ] [x24 Tech Videos](#creating-tech-videos)
 
 
+System > Goals
+
+
+
+
 ### Creating Tech Videos
 
 Last year I set this as a goal.
@@ -256,8 +261,35 @@ With better video workflow and Postiz for sharing.
 
 ### Improving the HomeLab
 
+Ive had time to write few posts about making your selfhosting better.
+
+Together with a better and more organized repository:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Trip Planner Post" image="https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png" subtitle="Weather Trends with Python" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
+{{< /cards >}}
+  
+That one I want to keep it minimalistic and very simple to replicate.
+
 * https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/
 * https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/
+
+Ive been taking **inspiration from**:
+
+Thanks to this sites, I get to know more cool apps:
+
+1. https://openalternative.co/self-hosted
+
+* https://github.com/piotrkulpinski/openalternative
+
+> Which can be seen also as an **awsome Astro [project](https://github.com/piotrkulpinski/openalternative)!**
+
+2. https://alternateoss.com/
+
+3. https://youmightnotneed.co/
+
+selfhst.st
 
 
 ---

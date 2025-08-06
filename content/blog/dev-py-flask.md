@@ -435,7 +435,7 @@ docker pull ghcr.io/jalcocert/flask_sensor_display:latest
 
 And made public:
 
-![alt text](/blog_img/iot/flask/flask-ghcr-public.png)
+![Flask Sensor WebApp GHCR](/blog_img/iot/flask/flask-ghcr-public.png)
 
 If you are pushing the **container to GHCR**, remember to set your PAT:
 

@@ -19,6 +19,8 @@ It was a **Honda Civic 6**, *born* on 1997 (1995-2000).
   {{< card link="https://en.wikipedia.org/wiki/Honda_Civic_(sixth_generation)" title="Civic 6" image="/blog_img/outro/honda-road.jpg" subtitle="Features of the beast" >}}
 {{< /cards >}}
 
+![alt text](/blog_img/outro/car-maker.jpg)
+
 
 {{< details title="Honda Civic EJ9 1996–2000 (EU) 📌" closed="true" >}}
 
@@ -52,6 +54,12 @@ D14A3 1.4 i (vs D14A4 1.4iS 90cv)
 
 {{< /details >}}
 
+
+How much power you need? 
+
+And when?
+
+![alt text](/blog_img/outro/tdci130-powercurve.png)
 
 
 ## Car Costs Analytics

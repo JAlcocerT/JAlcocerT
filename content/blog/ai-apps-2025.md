@@ -2,7 +2,7 @@
 title: "SelfHosting AI Apps - My 2025 Favs"
 date: 2025-11-30T23:20:21+01:00
 draft: false
-tags: ["Dev","HomeLab","Scrapping"]
+tags: ["Dev","HomeLab"]
 description: '.'
 url: 'ai-apps-2025'
 ---
@@ -69,3 +69,11 @@ There were interesting tools: scrapegraph, firecrawl, crawl4ai...
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web" title="Tinkering with Scrapping Tools" image="/videos/job_offers.png" subtitle="Scrapped Job Offers Analytics" >}}
 {{< /cards >}}
+
+
+
+### Business Cards
+
+* https://github.com/kyaustad/cardyo
+
+>  A simple URL based **digital business card creation** and sharing system 

@@ -2,7 +2,7 @@
 title: "Technology Setup for a Trip"
 date: 2025-02-11
 draft: false
-tags: ["AI", "Outro","Photo"]
+tags: ["AI", "Outro","Photo","Spliit"]
 description: "Software and Hardware setup before trips or vacations. Tech Travel Setup. With Cost of Living."
 url: 'tech-for-a-trip'
 ---
@@ -355,7 +355,7 @@ Can’t access the internet via the repeated hotspot. Try to enter **Login Mode 
 
 ## Conclusions
 
-After travelling and hopefully learning new perspectives, you can [create a website](https://jalcocert.github.io/JAlcocerT/create-your-website/) to tell your story.
+After travelling and *hopefully learning new perspectives*, you can [create a website](https://jalcocert.github.io/JAlcocerT/create-your-website/) to tell your story.
 
 {{< cards >}}
   {{< card link="https://cyclingthere.pages.dev/" title="My Story" image="https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with a MTB" >}}

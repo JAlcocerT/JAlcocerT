@@ -23,7 +23,9 @@ Wait, there is even a repo for video stuff!
 
 **TL;DR**
 
-After few months tinkering with an action camera and trying to ship videos easily...
+After few months tinkering with an [action camera](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro) 
+
+and trying to ship [travel/adventure](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/) videos easily...
 
 {{< callout type="info" >}}
 For **night video** and [the oa5pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/), for me it has worked better: -0.7EV, 50fps, S 1/400, ISO 100 ~25600 (max range), AWB, Texture -1 and Noise Reduction -2.
@@ -132,28 +134,35 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp
 ffmpeg -stream_loop -1 -i "output.mp3" -i silenced_output_video.mp4 -c:v copy -c:a aac -shortest output_with_song.mp4
 
 ### 🎵 Music by...
+#https://www.youtube.com/audiolibrary
 ```
 
 
-{{< details title="FFMPEG CLI Tricks | Ubuntu 📌" closed="true" >}}
+{{< details title="More FFMPEG CLI Tricks: .gifs | Ubuntu 📌" closed="true" >}}
 
 **Extracting images from a video...and making a gif**
 
-1. From a timeframe until the end, 1 frame:
+You have few alternatives.
+
+1. From a given timeframe until the end, 1 frame:
 
 ```sh
-#from second 90 of the video, give me 1fps
-ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.png
-ffmpeg -i DJI_20250116072852_0036_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.jpg
+#from the second 90 of the video, give me 1fps
+ffmpeg -i DJI_20250802102352_0021_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.png
+ffmpeg -i DJI_20250802102352_0021_D.MP4 -vf "select='gte(t\,90)',fps=1" -vsync vfr frame_%03d.jpg
 ```
 
 2. And just **between 90s and 105s** timeframe, 1fps:
 
 ```sh
-ffmpeg -i DJI_20250116072528_0035_D.MP4 -vf "select='between(t,90,105)',fps=1" -vsync vfr frame_%03d.png
+ffmpeg -i DJI_20250802102352_0021_D.MP4 -vf "select='between(t,0,10)',fps=1" -vsync vfr frame_%03d.png
 ```
 
 3. Make a gif with the pulled images
+
+```sh
+ffmpeg -framerate 10 -i frame_%03d.png output.gif
+```
 
 {{< /details >}}
 
@@ -280,6 +289,9 @@ If you have **extracted an image** from your video, you can force it to be the v
 ```sh
 #ffmpeg -i extracted-image.png -c:v libwebp -quality 80 ./compressed_thumbnail.webp
 ffmpeg -i cat.png -c:v libwebp -quality 80 ./compressed_thumbnail.png
+
+#ffmpeg -i DJI_20250802115907_0033_D.MP4 -vf "select='between(t,0,10)',fps=1" -vsync vfr frame_%03d.png
+#ffmpeg -i frame_001.png -c:v libwebp -quality 80 ./compressed_thumbnail.png
 ```
 
 Also, having proper youtube channel setting can help:

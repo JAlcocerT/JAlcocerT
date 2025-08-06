@@ -9,7 +9,7 @@ url: 'how-to-use-mermaid-diagrams'
 
 An image is worth a 1000 words.
 
-I cant disagree with that sentece since I discovered these tools:
+I cant disagree with that sentence, specially since I discovered these tools:
 
 1. [MermaidJS](#mermaidjs)
 2. [Python Diagrams and DrawIO](#other-diagram-tools)

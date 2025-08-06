@@ -3,9 +3,8 @@ title: "First Look to Flutter Apps"
 date: 2025-12-31
 draft: true
 tags: ["Dev"]
-description: ''
-summary: 'Flutter Apps. Created with Python via Flet and more'
-url: ''
+description: 'Flutter Apps. Created with Python via Flet and more'
+url: 'flutter-flet-python'
 ---
 
 ## FlutterFlow

@@ -27,11 +27,9 @@ And Anthropic has made it...[a protocol for LLMs](https://www.anthropic.com/news
 * MCP with LangChain
     * https://github.com/langchain-ai/langchain-mcp-adapters
 
-https://mcpservers.org/servers/browsermcp/mcp
-
-https://gofastmcp.com/clients/transports#sse-server-sent-events
-
-https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#travel-and-transportation
+* https://mcpservers.org/servers/browsermcp/mcp
+* https://gofastmcp.com/clients/transports#sse-server-sent-events
+* https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#travel-and-transportation
 
 
 
@@ -67,6 +65,7 @@ Very cool uses cases for MCP - https://github.com/punkpeye/awesome-mcp-servers
 
 ### Before Starting with MCP...
 
+These AI related concepts might help:
 
 1. Agents
 
@@ -123,8 +122,6 @@ That's a nuanced but important distinction. Here's a breakdown:
 * **Emphasis on Stateful, Multi-Actor Systems:** LangGraph excels at managing the state of complex, multi-agent systems where different agents might need to collaborate, iterate, or react to each other's outputs over multiple steps.
 
 * **Greater Control and Customization:** LangGraph offers more granular control over the agent's thought process and execution flow compared to some of LangChain's higher-level `AgentExecutor` abstractions. This allows for building highly customized agent behaviors, including human-in-the-loop integration and more sophisticated control logic.
-
-
 
 {{< /details >}}
 

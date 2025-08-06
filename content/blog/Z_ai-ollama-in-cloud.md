@@ -34,10 +34,7 @@ services:
 volumes:
   ai_ollama_data:
 
-
-
-ollama run orca-mini:3b
-
+#ollama run orca-mini:3b
 
 #http://localhost:11434/
 #    #network_mode: host      

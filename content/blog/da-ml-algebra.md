@@ -8,7 +8,7 @@ url: 'algebra-101'
 math: true
 ---
 
-Algebra was one of my favourite subjects in my first year of studies.
+Algebra was one of my favourite subjects in my first year of uni studies.
 
 And its been a while since I have had the chance to do cool stuff with it.
 
@@ -26,5 +26,6 @@ These were pretty crazy concepts.
 
 ---
 
-https://www.youtube.com/watch?v=e50Bj7jn9IQ
+<!-- https://www.youtube.com/watch?v=e50Bj7jn9IQ -->
+
 {{< youtube "e50Bj7jn9IQ" >}}

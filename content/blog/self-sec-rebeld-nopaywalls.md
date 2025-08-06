@@ -1,6 +1,6 @@
 ---
 title: "[GUIDE] - How to avoid Web Paywalls"
-date: 2025-08-07T23:20:21+01:00
+date: 2025-12-31T23:20:21+01:00
 draft: true
 tags: ["",""]
 description: ''

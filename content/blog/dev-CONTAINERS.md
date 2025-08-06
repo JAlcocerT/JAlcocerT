@@ -7,7 +7,7 @@ description: 'Reasons to use containers (Docker 🐋 Podman): selfhosting with C
 url: 'why-i-love-containers'
 ---
 
-A Container and related tools recap
+A Container and related tools recap post.
 
 <!-- https://fossengineer.com/understanding-containers-for-selfhosting/ -->
 
@@ -17,14 +17,19 @@ We will be combining [Docker](#container-tech-is-cool)+[Cloudflare Tunnels](#exp
 
 ## Container Tech is Cool
 
-Containers are an essential tool for simplifying self-hosting software. They give us:
+Containers are an essential tool for simplifying self-hosting software.
+
+They give us:
 
 - **Portability**: Containers ensure that your software runs consistently across different environments (development, testing, production).
 - **Scalability**: Easily replicated and orchestrated, containers allow for dynamic scaling, particularly in cloud environments.
 - **Isolation**: Containers isolate applications, preventing conflicts between dependencies.
 - **Efficiency**: Containers share the host OS kernel, making them more resource-efficient and faster than virtual machines. 
 
-More? **Coderized** have a couple of very interesting and well edited videos [about containers](https://www.youtube.com/watch?v=J0NuOlA2xDc&t=7s).
+More? 
+
+**Coderized** have a couple of very interesting and well edited videos [about containers](https://www.youtube.com/watch?v=J0NuOlA2xDc&t=7s).
+
 <!-- 
 {{< youtube "ilkZ27TwYVg" >}}
 
@@ -79,12 +84,14 @@ You can use the SelfHosting script I prepared [here](https://jalcocert.github.io
 
 1. **Install Docker**:
    - **On Linux**:
+
 ```bash
 sudo apt update
 sudo apt install docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
+
 - For more installation details, check Docker's [official guide](https://docs.docker.com/get-docker/).
 
 2. **Verify Installation**:
@@ -204,6 +211,7 @@ These tools simplify the process of managing containers, especially if you prefe
 Setting up Docker or Podman is straightforward, and with UI tools like Portainer, Dockge, and others, managing your containers has never been easier.
 
 ## Easy SelfHosting with Containers
+
 <!-- 
 https://www.youtube.com/watch?v=fuZoxuBiL9o&t=717s
  -->
@@ -304,11 +312,13 @@ docker network connect tunnel your_service_container
 
 
 How to check my local IP address?
+
 ```bash
 ifconfig
 ```
 
 How to check the exposed service IP?
+
 Cloudflare Tunnel ensures your service is securely exposed **without revealing your local IP**:
 
 ```bash
@@ -373,22 +383,13 @@ How Argo CD works?
 * **Jenkins** is a versatile platform suitable for various CI/CD needs, offering extensive customization options.
 * **GitHub Actions** provides a user-friendly, integrated solution for [CI/CD workflows within the GitHub ecosystem](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/).
 
-
-
 {{< /details >}}
 
-
 ### Using Containers
-
 
 {{< callout type="info" >}}
 Make sure to understand [docker volumes vs bind mounts](https://dev.to/aijeyomah/docker-volumes-vs-bind-mounts-choosing-the-right-storage-for-your-containers-3pb8)!
 {{< /callout >}}
-
-
-
-
-## AI Apps with Containers and Cloudflare Tunnels
 
 
 
@@ -398,7 +399,7 @@ Make sure to understand [docker volumes vs bind mounts](https://dev.to/aijeyomah
 
 **Cloudflare alternatives?**
 
-https://github.com/rapiz1/rathole
+* https://github.com/rapiz1/rathole
 
 > A lightweight and high-performance reverse proxy for NAT traversal, written in Rust. An alternative to frp and ngrok.
 
@@ -412,3 +413,5 @@ https://github.com/rapiz1/rathole
 ### What about NIX?
 
 Recently I heard about Flox and NIX...
+
+Are they the best alternative for a homelab OS?

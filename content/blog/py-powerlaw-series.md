@@ -1,15 +1,10 @@
 ---
 title: "Power Laws: What?"
-date: 2025-07-26T23:20:21+01:00
-draft: true
+date: 2025-09-01T23:20:21+01:00
+draft: false
 tags: ["Python","Blog"]
-cover:
-    image: "https://socialify.git.ci/JAlcocerT/Python_is_awesome/image?language=1&name=1&theme=Auto" # image path/url 
-    alt: "" # alt text
-    caption: "." # display caption under cover
-description: ""
-summary: 'Explaining series and the relation with the power law.'
-url: 'predictions-series-and-data-analysis'
+description: "Explaining series and the relation with the power law"
+url: 'powerlaw-and-series-with-python'
 math: true
 ---
 

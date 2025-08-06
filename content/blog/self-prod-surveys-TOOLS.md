@@ -27,10 +27,6 @@ https://github.com/formbricks/formbricks
 
 > HeyForm is an open-source form builder that allows anyone to create engaging conversational forms for surveys, questionnaires, quizzes, and polls. No coding skills required.
 
-{{< dropdown title="How to setup HeyForm ⏬" closed="true" >}}
-
-
-{{< /dropdown >}}
 
 ### ohmyform
 
@@ -48,7 +44,7 @@ https://github.com/formbricks/formbricks
 ### F/OSS to Interact with Audience
 
 * https://github.com/ClaperCo/Claper
-https://claper.co/
+  * https://claper.co/
 
 
 ### F/OSS Customer FeedBack Tool
@@ -57,6 +53,6 @@ Let users request feature and create a RoadMap accordingly
 
 #### Astuto
 
-https://docs.astuto.io/
+* https://docs.astuto.io/
 
 >  A free, open source, self-hosted customer feedback tool 🦊 

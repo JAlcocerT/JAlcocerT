@@ -548,6 +548,10 @@ This focuses on the outcomes and benefits users receive, such as finding the per
 * **Churn Rate:** Monitor how many users stop using the application and adjust pricing or value proposition accordingly.
 * **Scalability:** Your pricing model should ideally scale as your user base and features grow.
 
+Decreasing Marginal utility?
+
+What?
+
 {{< details title="Value is subjective | Menger has something to say about Pricing 📌" closed="true" >}}
 
 The "Menger Principle" in economics, named after Carl Menger, the founder of the Austrian School of economics, isn't a single, formally stated principle.
@@ -661,12 +665,6 @@ But **the ultimate word is the price**, the real *skin in the game*.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
 
-
-### Business Cards
-
-* https://github.com/kyaustad/cardyo
-
->  A simple URL based **digital business card creation** and sharing system 
 
 ### Other Sites Ive worked on
 
