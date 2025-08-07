@@ -11,6 +11,12 @@ This is way far from my confort zone, yet here we go.
 
 ## PocketBase
 
+Despite not been able to code in Go, I really admire few projects already that use Go.
+
+HUGO was the first for me.
+
+And now is time to Pocketbase:
+
 * https://pocketbase.io/
     * https://pocketbase.io/docs/
     * https://github.com/pocketbase/pocketbase
@@ -36,6 +42,13 @@ Because it provides all of these features out-of-the-box, it's designed to be a 
 
 ### PB 101
 
+Spin Pocketbase into your PC building a Go container with the project:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 * https://github.com/pocketbase/pocketbase/discussions/3279 -  Self host with Docker and Docker Compose #3279 
 
 ```sh
@@ -56,6 +69,8 @@ And you can do so via the UI:
 
 ![alt text](/blog_img/dev/PB/pocketbase-collection-ui.png)
 
+You can also try with the demo: https://pocketbase.io/demo/
+
 ### Programatic PB Interaction
 
 But you can also do them via scripts.
@@ -66,6 +81,16 @@ python3 create_user_settings.py
 ```
 
 Validate within the UI that they are as you wanted it to be: `http://localhost:8080/_/#/collections`
+
+You can also export the existing collections into json:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/create_user_settings.py" title="Pocketbase x Py, Collection Creator ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/export_collections.py" title="Pocketbase x Py, Collections Export ↗" >}}
+{{< /cards >}}
+
+
+
 
 
 ## Redux
