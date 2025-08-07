@@ -39,7 +39,11 @@ These are the main files and **structure of a Python Flask Project**:
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
-As you can see, with Flaks we need to be creative with `html`.
+```py
+python3 app.py
+```
+
+As you can see, with Flask we need to be creative with `html`.
 
 Within the html, the content of the variables processed via python are represented.
 
@@ -162,13 +166,15 @@ Use routes to structure your web application and define how different URLs are h
 The initial app is using Flask in a really cool way with **ChartsJS**, like [ChartJS HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo)!
 {{< /callout >}}
 
+See how it renders within the HUGO post:
+
 {{< chart 100 200 >}}
 {
   "type": "line",
   "data": {
     "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     "datasets": [{
-      "label": "Sample Data",
+      "label": "Sample Temp Data",
       "data": [10, 25, 15, 30, 22, 40],
       "fill": false,
       "borderColor": "rgb(54, 124, 165)",
@@ -190,6 +196,15 @@ The initial app is using Flask in a really cool way with **ChartsJS**, like [Cha
   }
 }
 {{< /chart >}}
+
+
+Flask will work for you *even better* if you use **uv as package manager**
+
+```sh
+uv init
+uv add flask
+uv sync
+```
 
 
 ## Sensors Data

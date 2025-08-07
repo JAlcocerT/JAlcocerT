@@ -10,11 +10,15 @@ url: 'web-apps-with-python'
 
 Plain websites are cool.
 
+And there are many things that can be achieve via SSG + APIs.
+
 But if you would need extra functionality, you will come to the *webapp domain*.
 
 I mean: *something more that HUGO shortcodes or Astro components will not handle*
 
 As you can imagine, there are many flavours of web apps.
+
+**My story with webapps**
 
 I first tried [Shiny in R](#shiny-with-r) around 2020-2022
 
@@ -22,9 +26,15 @@ Then [DASH](#dash), with the trip planner project at early 2023, already with so
 
 Around a year later, was the time to get creative with streamlit.
 
+**What now?**
+
+I need some checkpoint with what I enjoy the most and my blockers regarding webapps.
+
+Time to consolidate!
+
 ## WebApps
 
-Lately I have been possitively surprised by the [Streamlit x PyGWalker](#pygwalker-x-streamlit) combo, which work great for [PoCs](#conclusions).
+Lately, I have been possitively surprised by the [Streamlit x PyGWalker](#pygwalker-x-streamlit) combo, which work great for [PoCs](#conclusions).
 
 But it's time to try something more:
 
@@ -919,6 +929,12 @@ https://pypi.org/project/PyAutoGUI/
 
 As far as I know, these should work with any of the python web app frameworks.
 
+1. [LogTo](#logto)
+2. [BaaS](#baas)
+3. [Traefik](#traefik-x-middleware)
+4. *Probably tons more...*
+
+
 #### LogTo
 
 With LogTo Ive been very happy lately to get it going.
@@ -934,5 +950,12 @@ Havent yet get there with logto and streamlit, but it should be replicable.
 
 *Unless there is something strange with the callbacks.*
 
+#### BaaS
+
+Supabase, Pocketbase...
 
 #### Traefik x Middleware
+
+Exposing your flask app via a proxy manager, like Traefik.
+
+Then, plugging some authentication middleware into Traefik to do the auth job for us.

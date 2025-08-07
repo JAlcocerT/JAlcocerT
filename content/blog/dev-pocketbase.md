@@ -57,13 +57,22 @@ cd ./Dev/BaaS/PB
 docker compose -f PB_docker-compose.yml up -d
 ```
 
-![alt text](/blog_img/dev/PB/selfh-pb.png)
+![SelfHosting PocketBase](/blog_img/dev/PB/selfh-pb.png)
 
 > You can use PB admin UI via the default: http://localhost:8080/_/
 
 > > And log in as per your `.env` credentials if you provided any, or just created an account
 
 You might need to create **collections in pocketbase**
+
+Overview of Core Data Entities as per https://deepwiki.com/pocketbase/pocketbase/2.2-data-model
+
+The PocketBase data model is built on three primary entities:
+
+1. Collections - Schema definitions that describe the structure of data (similar to tables in traditional databases)
+2. Records - Individual data entries stored within collections (similar to rows in a table)
+3. Fields - The attributes or properties that define the structure of records (similar to columns)
+
 
 And you can do so via the UI:
 
@@ -75,12 +84,16 @@ You can also try with the demo: https://pocketbase.io/demo/
 
 But you can also do them via scripts.
 
+* https://deepwiki.com/pocketbase/pocketbase/9.2-collection-schema-management
+
+I have made few samples next to the docker configs:
+
 ```sh
 cd ./Dev/BaaS/PB
 python3 create_user_settings.py
 ```
 
-Validate within the UI that they are as you wanted it to be: `http://localhost:8080/_/#/collections`
+> Once executed, Validate within the UI that they are as you wanted it to be: `http://localhost:8080/_/#/collections`
 
 You can also export the existing collections into json:
 
@@ -90,7 +103,53 @@ You can also export the existing collections into json:
 {{< /cards >}}
 
 
+### PocketBase x Flask
 
+If you are vibecoding, you can get a quick sample [Flask](https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/) Web App connected to Pocketbase as its BE.
+
+Then, it can signup/in users and create posts:
+
+```sh
+cd ./Dev/BaaS/PB
+uv run flask_pocketbase_app.py 
+```
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/flask_pocketbase_app.py" title="Pocketbase x Flask WebAp ↗" >}}
+{{< /cards >}}
+
+![Flask connected to local PocketBase](/blog_img/dev/PB/flask-pocketbase.png)
+
+It creates a `posts` collection with these fields:
+
+* title (text, required)
+* content (editor, required)
+* author (text, required)
+* published (boolean, default: false)
+* tags (select, optional)
+* featured_image (file, optional)
+
+![PB collection of the sample Flask WebApp](/blog_img/dev/PB/pb-posts-collection.png)
+
+If you create a post via adding a new record into the posts collection, it will be reflected in the Flask UI.
+
+> It was all one prompt and Claude Sonnet 4 magic...
+
+This can be a quick and local alternative to bring user authentication.
+
+But, even if you ask for the email, it wont be validated, like LogTo was doing for us outofthebox:
+
+![LogTo custom domain auth](/blog_img/dev/PB/logto-custom-domain-auth.png)
+
+### PocketBase x Stripe
+
+People are building in public: https://www.reddit.com/r/pocketbase/comments/1cfnt5f/i_built_a_pocketbase_stripe_extension_and_open/
+
+* https://github.com/mrwyndham/pocketbase-stripe
+    * And seeling on top of it - https://www.fastpocket.dev/
+* https://github.com/mrwyndham/pocketbase-mcp
+
+>  MCP server for building PocketBase apps really quickly - Need a front end quick consider FastPocket 
 
 
 ## Redux
@@ -100,3 +159,4 @@ You can also export the existing collections into json:
 
 ## Conclusions
 
+I got to know along the way about: https://deepwiki.com/pocketbase/pocketbase

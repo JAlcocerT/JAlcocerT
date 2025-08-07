@@ -7,7 +7,7 @@ description: 'Stripe 101. Selling Themes and editing capabilities for SSG powere
 url: 'using-stripe-with-flask'
 ---
 
-It was about time to put this together.
+It was about time to put these **entrepreneuring concepts together**.
 
 Selling websites 1 by 1 can be good for starters.
 
