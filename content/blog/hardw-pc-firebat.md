@@ -70,6 +70,9 @@ Running some **synthetic tests on the Firebat MiniPC** and comparing it with SBC
 | AMD 2200g          | ~26.9k events             | ~4.2k/15.34k events    |
 | **FireBat AK2 Plus**  | ~35k events               | ~1.8k/6.4k events   |
 
+![Sysbench UI](/blog_img/hardware/sysbench-250524.png)
+
+![Open-Benchmark](/blog_img/hardware/openbenchmark.png)
 
 ```sh
 sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run #4 cores

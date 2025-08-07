@@ -306,8 +306,7 @@ To make it more intuitive, you can create an user and put that their path is dir
 
 ![alt text](/blog_img/web/filebrowser-hugo/filebrowser-creating-user-hugo.png)
 
-![alt text](/blog_img/web/filebrowser-hugo/filebrowser-hugotheme.png)
-
+![Filebrowser view of the HUGO Theme Gallery Folder](/blog_img/web/filebrowser-hugo/filebrowser-hugotheme.png)
 
 ![alt text](/blog_img/web/filebrowser-hugo/hugotheme-rendered.png)
 
@@ -318,7 +317,6 @@ Provide access with
 And as you are logged in already, show the analytics for motivation :) 
 
 ![alt text](/blog_img/web/filebrowser-hugo/cloudflare-hugo-analytics.png)
-
 
 Before pushing changes, I had to do provide this git CLI:
 

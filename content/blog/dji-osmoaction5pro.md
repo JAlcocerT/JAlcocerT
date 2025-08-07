@@ -3,7 +3,6 @@ title: "[Review] DJI Osmo Action 5 Pro"
 date: 2024-10-05T00:20:21+01:00
 draft: false
 tags: ["Tinkering"]
-summary: Learning how to edit videos with the OA5Pro
 description: Testing the OA5 Pro and improving my Video Creation workflow
 url: 'dji-osmo-action-5-pro'
 ---
@@ -12,7 +11,7 @@ First, A photo of the **latest DJI Action Camera**:
 
 ![DJI Osmo Action 5 Pro](/blog_img/hardware/dji_oa5pro.jpg)
 
-And some **test video**:
+And some **test video**: *Learning how to edit videos with the OA5Pro is a thing...*
 
 {{< youtube "MlbJ3tY43vE" >}}
 
@@ -356,6 +355,7 @@ Before going to YT, I like to have **Brave Browser**:
 
 ```sh
 sudo snap install brave
+#pkill -9 brave
 ```
 
 > You will also be [one step closer of Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/)

@@ -93,7 +93,16 @@ How to run [these tests/benchmarks](#faq)
 | BMAX B4 | 9W | 18W & 64°C, fan | - | **~$14** |
 
 
-Disabling Wi-Fi improves power efficiency. On the BMAX B4 by ~10% (~1W).
+<!-- https://youtube.com/shorts/jRLMJlVYLRc?feature=share -->
+
+{{< youtube "jRLMJlVYLRc" >}}
+
+
+Disabling Wi-Fi improves power efficiency. 
+
+On the BMAX B4 by ~10% (~1W).
+
+![alt text](/blog_img/hardware/energy/tapo/bmax-linux.jpg)
 
 {{< callout type="info" >}}
 * Calculation of energy costs:

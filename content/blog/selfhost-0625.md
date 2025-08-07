@@ -71,11 +71,13 @@ Getting Better at [sync file tools](https://jalcocert.github.io/JAlcocerT/sync-f
 
 > MIT | Portable file server with accelerated resumable uploads, dedup, WebDAV, FTP, TFTP, zeroconf, media indexer, thumbnails++ all in one file, no deps
 
+But the big thing is to get **nextcloud to work with https out of the box.**
 
+![alt text](/blog_img/selfh/media/NC-traefik/running.png)
 
 All thanks to getting Traefik (traefik:v3.3) to work programatically!
 
-So I just needed to get the domain DNS records accordingly:
+So I just needed to get the domain **DNS records accordingly**:
 
 ```sh
 nslookup nextcloud.jalcocertech.com
@@ -98,9 +100,13 @@ docker exec -u www-data nextcloud php /var/www/html/occ config:system:set truste
 docker exec -u www-data nextcloud php /var/www/html/occ config:system:set trusted_domains 3 --value="nextcloud.jalcocertech.com"
 ```
 
+![alt text](/blog_img/selfh/media/NC-traefik/trusted.png)
+
 Going from this: https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#nextcloud
 
-To this
+To this:
+
+![alt text](/blog_img/selfh/media/NC-traefik/nc-https.png)
 
 > remember to use the [Android](https://play.google.com/store/apps/details?id=com.nextcloud.client&pli=1) or iOS app
 
@@ -115,6 +121,16 @@ dav://reisikei@192.168.1.11:8080/remote.php/webdav
 davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
 davs://your_nc_user@nextcloud.jalcocertech.com/remote.php/webdav
 ```
+
+![alt text](/blog_img/selfh/media/NC-traefik/davs.png)
+
+To setup **nextcloud leveraging the https of traefik**
+
+![alt text](/blog_img/selfh/media/NC-traefik/cf-dns.png)
+
+![alt text](/blog_img/selfh/media/NC-traefik/untrusted.png)
+
+![alt text](/blog_img/selfh/media/NC-traefik/config-php.png)
 
 {{< callout type="warning" >}}
 When using WebDav the files are **only** on the server, not backed up on your device.
@@ -132,6 +148,8 @@ You can also use the desktop app:
 ```sh
 flatpak install flathub com.nextcloud.desktopclient.nextcloud
 ```
+
+![alt text](/blog_img/selfh/media/NC-traefik/nc-app.png)
 
 See the transfer speed with:
 
@@ -291,6 +309,8 @@ For more photo/video tricks, see also:
 
 3. IT/Toos + OmniTools
 
+
+
 4. Specters: Some kind of ~ filebrowser, but better?
 
 * https://github.com/Phantom8015/Specters
@@ -331,7 +351,23 @@ To have a rendered pdf with instructions how to access your selfhosted services
 
 ## Conclusions
 
-Termix has been great to manage couple of homelab devices:
+I have discovered **about lazydocker**:
+
+```sh
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+lazydocker
+```
+
+And tmux:
+
+```sh
+sudo apt install tmux
+tmux
+```
+
+Termix has also been great to manage couple of homelab devices:
 
 ![Using Specters via Termix](/blog_img/selfh/HomeLab/termix-specters.png)
 
@@ -344,7 +380,7 @@ You have NextTerm as an alternative: https://noted.lol/nexterm/
 If you will be connecting to remote computers, remember to:
 
 1. Set proper expiry policy into your tailscale
-2. Have a look to RustDesk as [Remote Desktop Solution](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#tools-for-selfhosters)
+2. Have a look to **RustDesk** as [Remote Desktop Solution](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#tools-for-selfhosters)
 
 ```sh
 flatpak install flathub com.rustdesk.RustDesk
@@ -354,7 +390,7 @@ Filebrowser dev has been abandoned and for me it was still a thing to combine it
 
 But now we have filebrowser quantum!
 
-Also, ive been tinkering a lot with authentication via Logto.
+Also, Ive been tinkering a lot with authentication via Logto.
 
 If you are looking for this **post edition's config files**:
 

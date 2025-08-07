@@ -149,6 +149,8 @@ What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
 
 If this was too much content, you can always use a LLMs to summarize the YT Videos, like these ones:
 
+* https://github.com/jkawamoto/mcp-youtube-transcript
+
 * https://github.com/DevRico003/youtube_summarizer
 
 > MIT | A modern Next.js-based tool for AI-powered YouTube video summarization. This application allows you to generate concise summaries of YouTube videos using different AI models, with support for multiple languages and summary styles.

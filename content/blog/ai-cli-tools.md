@@ -551,6 +551,13 @@ The typical development workflow when using BAML follows these steps: https://do
 ```bash
 npx @boundaryml/baml generate #this one will generate .ts client files
 ```
+
+You will have busy port 3031 if you installed the BAML IDE extension:
+
+```sh
+ps aux | grep -i '[b]aml'
+```
+
 - This creates Pydantic models and API client code in `baml_client/`
 
 3. **Write Your Business Logic** (`plan_enhancement_baml.py`):
