@@ -81,6 +81,8 @@ I simply love Bitwarden (which can also be selfhosted).
 You also have:
 
 * https://github.com/ProtonPass
+* KeePass
+    * https://sideofburritos.com/blog/i-switched-to-keepass/
 
 ### 2FA
 

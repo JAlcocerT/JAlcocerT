@@ -12,6 +12,19 @@ Because of the makereadme and this post
 
 I got to know about:
 
+* https://github.com/pandao/editor.md
+
+> MIT | EasyMDE: A simple, beautiful, and embeddable JavaScript Markdown editor. Delightful editing for beginners and experts alike. Features built-in autosaving and spell checking.
+
+* https://github.com/nhn/tui.editor
+* https://ui.toast.com/tui-editor
+
+> MIT | 🍞📝 Markdown WYSIWYG Editor. GFM Standard + Chart & UML Extensible.
+
+
+
+{{% details title="About SimpleMDE, editormd, toast UI editor... 🚀" closed="true" %}}
+
 
 We dont want to embed the Front Matter application itself, but rather replicate the user experience of having a powerful Markdown editor with a frontmatter UI within your Flask app.
 
@@ -47,3 +60,12 @@ You have several excellent options for a client-side Markdown editor. These libr
 
 
 This approach gives you a complete, file-based CMS with a rich, client-side editing experience that feels very much like using Front Matter CMS, but fully integrated into your Flask application.
+
+{{% /details %}}
+
+
+The idea:
+
+1. Take a SSG Theme
+2. Get the main page stuff configurable via .env
+3. Give possibility to easy add/edit/remove the posts

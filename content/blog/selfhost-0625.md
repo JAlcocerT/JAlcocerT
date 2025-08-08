@@ -283,6 +283,8 @@ You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/
   {{< card link="https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/" title="QBitTorrent Setup ↗" >}}
 {{< /cards >}}
 
+> Isnt it great when [people give credits?](https://www.vimoire.com/blog/2025-04-18/qBittorrent-web-UI-container-behind-a-VPN)?
+
 ![Qbittorrent](/blog_img/selfh/media/qbit.png)
 
 ![Qbit Login](/blog_img/selfh/media/qbit-admin.png)

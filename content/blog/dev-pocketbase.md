@@ -15,7 +15,7 @@ Despite not been able to code in Go, I really admire few projects already that u
 
 HUGO was the first for me.
 
-And now is time to Pocketbase:
+And now is time to Pocketbase, also written in Go:
 
 * https://pocketbase.io/
     * https://pocketbase.io/docs/
@@ -23,12 +23,14 @@ And now is time to Pocketbase:
 
 > MIT | Open Source realtime backend in 1 file 
 
-Realtime database
-Authentication
-File storage
-Admin dashboard
+PB Features:
 
-While PocketBase **includes** a database, it's more accurate to call it a **backend-as-a-service (BaaS)** or a "realtime backend" rather than just a database. 
+1. Realtime database
+2. Authentication
+3. File storage
+4. Admin dashboard
+
+While PocketBase **includes** a database, it's more accurate to call it a **backend-as-a-service (BaaS)** or a "realtime backend" rather than *just a database*. 
 
 PocketBase is a single, self-contained Go application that bundles several key components into one executable file:
 
@@ -101,6 +103,51 @@ You can also export the existing collections into json:
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/create_user_settings.py" title="Pocketbase x Py, Collection Creator ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/export_collections.py" title="Pocketbase x Py, Collections Export ↗" >}}
 {{< /cards >}}
+
+
+To make the code a little bit cleaner, we can have the **collection creator** to get the collection details **from a JSON with the details**, instead of hardcode them.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/create_json_collection.py" title="Pocketbase x Py, Collection JSON Creator ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/collection_details.json" title="Pocketbase JSON Collection Sample ↗" >}}
+{{< /cards >}}
+
+```sh
+python3 create_json_collection.py user_settings
+make create-specific COLLECTIONS="posts user_settings" #if some exist, it will skip it
+```
+
+And I also brought a way to list and delete collections:
+
+```sh
+make list-collections
+make delete-collection COLLECTIONS="user_settings"
+```
+
+We can also export existing collections from the UI, or programatically: See [this md](https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/SCRIPT_USAGE.md#collection-export)
+
+
+{{% details title="Full format vs Portable for Recreation... 🚀" closed="true" %}}
+
+There are two different formats:
+
+📊 Format Comparison:
+🔴 Full Format (what you just exported):
+Raw PocketBase API format - exactly as stored in PocketBase
+Contains IDs, timestamps, metadata
+Relations use collectionId (like "_pb_users_auth_")
+Not directly usable for recreation
+
+🟢 Template Format (for 
+create_json_collection.py
+):
+Clean, portable format - designed for recreation
+No IDs or timestamps
+Relations use collectionName (like "users")
+Directly compatible with your JSON creation system
+
+{{% /details %}}
+
 
 
 ### PocketBase x Flask

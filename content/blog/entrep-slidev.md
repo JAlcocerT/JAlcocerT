@@ -15,6 +15,7 @@ I was *bikeshedding* and found out this grear project:
 
 *Blame* again to the people building in public: https://www.reddit.com/r/github/comments/1itqlh4/i_got_tired_of_writing_readmes_so_i_built_an/
 
+For the ones who [mind their time](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/), Shaan is also the dev behind this OSS Pomodoro Timer: https://github.com/ShaanCoding/Pomodoro-Timer
 
 {{% details title="About MPL 2.0 🚀" closed="true" %}}
 
