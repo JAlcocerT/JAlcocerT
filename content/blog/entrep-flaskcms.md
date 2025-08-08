@@ -12,12 +12,14 @@ Because of the makereadme and this post
 
 I got to know about:
 
+* https://github.com/sparksuite/simplemde-markdown-editor
+
 * https://github.com/pandao/editor.md
 
 > MIT | EasyMDE: A simple, beautiful, and embeddable JavaScript Markdown editor. Delightful editing for beginners and experts alike. Features built-in autosaving and spell checking.
 
 * https://github.com/nhn/tui.editor
-* https://ui.toast.com/tui-editor
+  * https://ui.toast.com/tui-editor
 
 > MIT | 🍞📝 Markdown WYSIWYG Editor. GFM Standard + Chart & UML Extensible.
 

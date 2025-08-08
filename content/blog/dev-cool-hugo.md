@@ -1,5 +1,5 @@
 ---
-title: "Hugo can also be cool"
+title: "HUGO can also be cool"
 date: 2025-08-05
 draft: false
 tags: ["Dev","SSG","Photo-Gallery","Flask CMS"]
@@ -71,7 +71,7 @@ Which it seems to
 
 ### Flask for HugoThemeGallery
 
-
+I decided to create a new branch and vibecode a little:
 
 ![Flask WebAPP x HUGO Theme](/blog_img/web/hugo-themegallery-flask.png)
 
@@ -88,10 +88,60 @@ I went for the EasyMDE as GPT5 mentioned is the lightest weight.
   {{< card link="https://github.com/JAlcocerT/hugo-theme-gallery-flasked/blob/flask-hugo-gallery/markdown-edit-alternatives.md" title="Editing md from Flask | Alternatives explored for this vibe-coded WebApp ↗" >}}
 {{< /cards >}}
 
+And...this thing works:
 
+- Edit `_index.md` or `index.md` via Flask WebApp, containerized at `hugo-flaskapp`
+- Build the Hugo changes (THIS IS FAST) via UI 
+- Visualize your hugo changed theme live with the `hugo_container` or via the serve built from `hugo-static-python`
+
+It's all on the `flask-hugo-gallery` branch and this compose: https://github.com/JAlcocerT/hugo-theme-gallery-flasked/blob/flask-hugo-gallery/docker-compose-hugoflask.yml
+
+```sh
+git clone https://github.com/JAlcocerT/hugo-theme-gallery-flasked
+#git clone -b flask-hugo-gallery --single-branch https://github.com/user/repo.git
+cd hugo-theme-gallery-flasked/
+```
+
+
+```sh
+git branch -a
+git switch flask-hugo-gallery
+```
+
+And just **build + spin** the containers:
+
+```sh
+# Install Hugo module
+hugo mod get
+
+# Pull example images from Unsplash
+./pull-images.sh
+
+#make help
+
+make hugoflask-build #to get go and hugo into a container
+make hugoflask-up
+#docker exec -it hugo-flaskapp sh
+```
+
+Add any photo, hit **Build Hugo** and you are done:
+
+![alt text](/blog_img/web/WebsSnapshots/hugo-flask-build.png)
+
+See the changes via: `localhost:5050`, `localhost:8089`, `localhost:1318`
 
 ## Saasify Theme
 
 * https://github.com/chaoming/hugo-saasify-theme
 * https://saasify-demo.chaoming.li/
 * https://dev.to/chaoming/open-source-hugo-theme-for-building-saas-websites-saasify-3onj
+
+## HUGO Doks
+
+I had to fork the theme:
+
+https://github.com/JAlcocerT/hugo-doks
+
+> Which it reminds me a lot to Astro Starlight :)
+
+See: https://docs.thulite.io/getting-started/

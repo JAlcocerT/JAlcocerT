@@ -14,11 +14,29 @@ Thats one of the outcomes of *the lean startup*
 
 ## VPS
 
-### Do
+### DO
+
+* https://www.digitalocean.com/pricing/droplets
+
+> From ~4/m for 1vcpu
 
 ### Hetzner
 
+* https://www.hetzner.com/cloud/
+
+> Competitive prices ~4$ for 2vcpu
+
+> > Germany or Finland
+
 ### Linode
+
+* https://cloud-estimator.linode.com/s/
+
+![alt text](/blog_img/mini_pc/linode-vps.png)
+
+> The basic ones goes for around 60$/y for 1vcpu
+
+> > They have several locations, including US, JAPAN, EU AMS
 
 ---
 

@@ -127,6 +127,7 @@ ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder
 
 #Generate a video from few parts (audio or silenced)
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
+#ffmpeg -f concat -safe 0 -i file_list.txt -c copy /media/jalcocert/SD_Card/DCIM/output_video.mp4 #original audio to another folder
 ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
 #ffmpeg -i output_video.mp4 -filter:v "setpts=PTS/4" -an fast_output_video.mp4 #x4
 
