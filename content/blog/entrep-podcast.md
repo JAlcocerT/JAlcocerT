@@ -2,7 +2,7 @@
 title: "A podcast for all"
 date: 2025-08-07
 draft: false
-tags: ["","Astro","Entrep"]
+tags: ["Web","Astro","Entrep"]
 description: ''
 url: 'make-podcast'
 ---

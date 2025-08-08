@@ -12,7 +12,7 @@ url: 'homelab-security'
 
 Lately I was reading this [reddit backup post](https://www.reddit.com/r/DataHoarder/comments/1gsutp5/list_of_free_open_source_and_crossplatform_backup/?chainedPosts=t3_yqonpo)
 
-Because its not about if, but when a single point of failure will be gone.
+Because its not about if, but when a *single point of failure* will be gone.
 
 1. NextCloud
 2. 

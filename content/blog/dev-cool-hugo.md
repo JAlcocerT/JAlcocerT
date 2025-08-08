@@ -18,7 +18,6 @@ As described here - https://jalcocert.github.io/JAlcocerT/creating-photo-centric
 
 {{< cards cols="1" >}}
   {{< card link="https://whilecyclingthere.web.app/" title="Cycling There Photo Gallery" >}}
-  {{< card link="https://enjoylittlethings.org/" title="Travel Addict Photo Blog" >}}
   {{< card link="http://entreagujaypunto.com/" title="Portfolio Aguja&Punto" >}}
 {{< /cards >}}
 
@@ -47,6 +46,12 @@ hugo mod get
 ./pull-images.sh
 ```
 
+If your go and hugo version allows: 
+```sh
+#hugo server
+hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.7" --port=1319
+```
+
 ![HUGO Theme Gallery](/blog_img/web/hugo-theme-gallery.png)
 
 ```sh
@@ -61,6 +66,27 @@ I saw some people doing cool things:
 
 * https://github.com/thuliteio/thulite
 * https://github.com/thuliteio/doks
+
+Which it seems to
+
+### Flask for HugoThemeGallery
+
+
+
+![Flask WebAPP x HUGO Theme](/blog_img/web/hugo-themegallery-flask.png)
+
+> See the [FlaskCMS Post](https://jalcocert.github.io/JAlcocerT/make-cms/), where Im bringing few ways to edit live into a webapp
+
+> > As I was tinkering also with the [SliDevCMS Post](https://jalcocert.github.io/JAlcocerT/make-slidev/)
+
+As per the different options described here.
+
+I went for the EasyMDE as GPT5 mentioned is the lightest weight.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/hugo-theme-gallery-flasked/blob/flask-hugo-gallery/flask_app/app.py" title="Flask x HUGO ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/hugo-theme-gallery-flasked/blob/flask-hugo-gallery/markdown-edit-alternatives.md" title="Editing md from Flask | Alternatives explored for this vibe-coded WebApp ↗" >}}
+{{< /cards >}}
 
 
 

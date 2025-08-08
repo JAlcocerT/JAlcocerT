@@ -1,5 +1,5 @@
 ---
-title: "Where to deploy?"
+title: "Where to Deploy?"
 date: 2025-08-08
 draft: false
 tags: ["VPS","PaaS for SaaS","Lean Startup"]

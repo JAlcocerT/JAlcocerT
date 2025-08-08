@@ -7,7 +7,9 @@ description: 'Understanding and applying Lean for SDLC.'
 url: 'lean'
 ---
 
-Talking about Lean and how we can apply this philosophy to all processes to improve efficiency, quality, response time as well as reducing costs and waste.
+Talking about Lean and how we can apply this philosophy to all processes to improve: *efficiency, quality, response time as well as reducing costs and waste*.
+
+You can also apply lean if you are building a startup.
 
 ## What is Lean?
 
@@ -23,7 +25,11 @@ The cycle consists of four steps:
 
 {{< dropdown title="Plan" closed="true" >}}
 
-The Plan step involves identifying the problem or opportunity for improvement, and developing a plan to address it. This can involve defining the scope of the problem, setting goals and objectives, and determining the resources and activities required to achieve them. The goal of the Plan step is to develop a clear and actionable plan that addresses the problem or opportunity for improvement.
+The Plan step involves identifying the problem or opportunity for improvement, and developing a plan to address it.
+
+This can involve defining the scope of the problem, setting goals and objectives, and determining the resources and activities required to achieve them. 
+
+The goal of the Plan step is to develop a clear and actionable plan that addresses the problem or opportunity for improvement.
 
 {{< /dropdown >}}
 
@@ -33,11 +39,21 @@ The Do step involves implementing the plan developed in the previous step. This 
 
 
 {{< dropdown title="Check" closed="true" >}}
-The Check step involves evaluating the results of the implementation to determine whether the plan was effective in addressing the problem or opportunity for improvement. This can involve collecting and analyzing data, and comparing the results to the goals and objectives established in the Plan step. The goal of the Check step is to determine whether the plan was effective, and identify any areas for improvement.
+
+The Check step involves evaluating the results of the implementation to determine whether the plan was effective in addressing the problem or opportunity for improvement.
+
+This can involve collecting and analyzing data, and comparing the results to the goals and objectives established in the Plan step.
+
+The goal of the Check step is to determine whether the plan was effective, and identify any areas for improvement.
 {{< /dropdown >}}
 
 {{< dropdown title="Act" closed="true" >}}
-The Act step involves making any necessary adjustments to the plan or the implementation based on the results of the Check step. This can involve modifying the plan to address any issues or problems identified during the implementation, and implementing the revised plan on a larger scale. The goal of the Act step is to incorporate the lessons learned from the Check step into the plan, and continually improve the process.
+
+The Act step involves making any necessary adjustments to the plan or the implementation based on the results of the Check step.
+
+This can involve modifying the plan to address any issues or problems identified during the implementation, and implementing the revised plan on a larger scale. 
+
+The goal of the Act step is to incorporate the lessons learned from the Check step into the plan, and continually improve the process.
 {{< /dropdown >}}
 
 The Lean improvement cycle is a continuous process, and once the Act step is completed, the cycle begins again with the Plan step.
@@ -47,27 +63,41 @@ The goal is to continually identify areas for improvement, develop and implement
 ### The 5 Lean Principles
 
 * {{< dropdown title="Value" closed="true" >}}
-The first Lean principle is to focus on [creating value for the customer](https://fossengineer.com/lean/#vsm). In software development, this means identifying what the customer needs and delivering it in the most efficient and effective way possible. An example of applying this principle to software development would be to conduct user research to understand the needs and preferences of the target audience, and using this information to guide the development process and ensure that the product delivers value to the customer.
+
+The first Lean principle is to focus on [creating value for the customer](https://fossengineer.com/lean/#vsm).
+
+In software development, this means identifying what the customer needs and delivering it in the most efficient and effective way possible. 
+
+An example of applying this principle to software development would be to conduct user research to understand the needs and preferences of the target audience, and using this information to guide the development process and ensure that the product delivers value to the customer.
+
 {{< /dropdown >}}
 
 * {{< dropdown title="Flow" closed="true" >}}
+
 The second Lean principle is to **optimize the flow of work** through the system.
 
-In software development, this means identifying and removing bottlenecks and inefficiencies in the development process. An example of applying this principle to software development would be to use Kanban boards to visualize the flow of work and identify areas where work is getting stuck, so that improvements can be made to optimize the flow of work.
+In software development, this means identifying and removing bottlenecks and inefficiencies in the development process. 
+
+An example of applying this principle to software development would be to use Kanban boards to visualize the flow of work and identify areas where work is getting stuck, so that improvements can be made to optimize the flow of work.
 {{< /dropdown >}}
 
 {{< dropdown title="Pull" closed="true" >}}
+
 The third Lean principle is to use a pull-based system, where work is pulled through the system in response to demand, rather than pushed through based on arbitrary timelines or quotas.
 
-In software development, this means focusing on delivering features or functionality as they are needed, rather than trying to deliver everything at once. An example of applying this principle to software development would be to use agile development methodologies, such as Scrum or Kanban, to prioritize work based on customer needs and pull work through the development process as it is needed.
+In software development, this means focusing on delivering features or functionality as they are needed, rather than trying to deliver everything at once.
+
+An example of applying this principle to software development would be to use agile development methodologies, such as Scrum or Kanban, to prioritize work based on customer needs and pull work through the development process as it is needed.
+
 {{< /dropdown >}}
 
 > Deliver whats the client is really asking for!
 
-{{< dropdown title="Continuous Improvement" closed="true" >}}
+{{< dropdown title="Continuous Improvement" closed - PDCA="true" >}}
+
 The fourth Lean principle is to strive for perfection by [continuously improving processes](https://fossengineer.com/lean/#kaizen) and eliminating waste. In software development, this means continually identifying and eliminating inefficiencies in the development process, such as manual testing or redundant code. 
 
-An example of applying this principle to software development would be to implement a continuous improvement process, such as the PDCA (Plan-Do-Check-Act) cycle, to identify areas for improvement and make iterative changes to the development process.
+An example of applying this principle to software development would be to implement a continuous improvement process, such as the **PDCA** (Plan-Do-Check-Act) cycle, to identify areas for improvement and make iterative changes to the development process.
 {{< /dropdown >}}
 
 
@@ -93,15 +123,25 @@ Value stream mapping is a technique used in Lean to **identify and eliminate was
 
 The goal of value stream mapping is to **create a visual representation of the process** that highlights opportunities for improvement and identifies areas where value can be added.
 
-In software development, VSM can be used to map out the flow of work from the initial idea to the delivery of the final product. This can help identify areas of waste, such as excessive waiting times or rework, and identify opportunities to streamline the development process. By understanding the value stream of software development, teams can focus on delivering value to the customer by optimizing the flow of work.
+In software development, VSM can be used to map out the flow of work from the initial idea to the delivery of the final product.
+
+This can help identify areas of waste, such as excessive waiting times or rework, and identify opportunities to streamline the development process.
+
+By understanding the value stream of software development, teams can focus on delivering value to the customer by optimizing the flow of work.
 
 > Do not accept something because it has always been that way.
 
 ### Kanban
 
-Kanban is a method for managing and optimizing the flow of work. It involves using visual signals, such as cards or boards, to represent work and its progress through a process. Kanban helps teams to understand the current state of the work and identify any bottlenecks or areas for improvement. The goal of Kanban is to create a smooth and efficient flow of work that meets the needs of customers.
+Kanban is a method for managing and optimizing the flow of work.
 
-Kanban is a popular method used in software development for visualizing and managing workflow. It involves breaking down tasks into manageable pieces, represented as cards on a board, and moving them through a series of columns that represent different stages of the development process. This visual representation helps teams to identify bottlenecks and areas of improvement, and prioritize work based on customer needs.
+It involves using visual signals, such as cards or boards, to represent work and its progress through a process. Kanban helps teams to understand the current state of the work and identify any bottlenecks or areas for improvement. The goal of Kanban is to create a smooth and efficient flow of work that meets the needs of customers.
+
+Kanban is a popular method used in software development for visualizing and managing workflow.
+
+It involves breaking down tasks into manageable pieces, represented as cards on a board, and moving them through a series of columns that represent different stages of the development process.
+
+This visual representation helps teams to identify bottlenecks and areas of improvement, and prioritize work based on customer needs.
 
 * It will put a spotlight on inefficient processes - It looks at all steps in the process and find the ones that are more value
 * It focus on changing the current process.
@@ -113,9 +153,17 @@ Kanban is a popular method used in software development for visualizing and mana
 
 ### Kaizen
 
-Kaizen is a Japanese term that means **continuous improvement**. It is a key principle of the Lean approach, and involves constantly looking for ways to improve processes and eliminate waste. Kaizen can be applied to any area of an organization, from manufacturing to marketing. It encourages employees at all levels to contribute to the improvement process and creates a culture of continuous learning and improvement.
+Kaizen is a Japanese term that means **continuous improvement**.
 
-Kaizen can be applied in software development to encourage continuous improvement. It involves identifying areas of waste and inefficiency, such as manual testing or lengthy code reviews, and finding ways to automate or streamline these processes. Teams can also regularly review their development practices and seek feedback from customers to identify areas for improvement and make iterative changes to the product.
+It is a key principle of the Lean approach, and involves constantly looking for ways to improve processes and eliminate waste. Kaizen can be applied to any area of an organization, from manufacturing to marketing. 
+
+It encourages employees at all levels to contribute to the improvement process and creates a **culture of continuous learning** and improvement.
+
+Kaizen can be applied in software development to encourage continuous improvement.
+
+It involves identifying areas of waste and inefficiency, such as manual testing or lengthy code reviews, and finding ways to automate or streamline these processes.
+
+Teams can also regularly review their development practices and seek feedback from customers to identify areas for improvement and make iterative changes to the product.
 
 * It relies heavily on the team's hands, no tools provided.
 * This is the technique (**a work process management tool**) inside lean that drives continuous improvement.
@@ -124,7 +172,9 @@ Kaizen can be applied in software development to encourage continuous improvemen
 
 Jidoka is a term used in Lean to describe a process that stops automatically when a problem occurs.
 
-The goal of jidoka is to build quality into the process and prevent defects from occurring. When a problem is detected, the process stops, and the problem is addressed before the process resumes. Jidoka helps to create a culture of quality and encourages employees to take ownership of the process and the product.
+The goal of jidoka is to build quality into the process and prevent defects from occurring. 
+
+When a problem is detected, the process stops, and the problem is addressed before the process resumes. Jidoka helps to create a culture of quality and encourages employees to take ownership of the process and the product.
 
 In software development, Jidoka can be applied to prevent defects and improve the quality of the product. This can involve implementing automated testing and continuous integration processes to catch errors early in the development cycle. By building quality into the development process, teams can improve the reliability and stability of the final product.
 
@@ -132,10 +182,10 @@ In software development, Jidoka can be applied to prevent defects and improve th
 
 ## The SDLC
 
-While developing, these tricks have been useful to me:
+While developing, these *software development life cycle* tricks have been useful to me:
 
-1. Use short-lived feature branches.
-2. Merge and delete branches promptly.
+1. Use short-lived feature branches
+2. Merge and delete branches promptly
 
 ```sh
 git checkout main
@@ -143,7 +193,7 @@ git pull origin main
 git checkout -b business-features
 ```
 
-3. Keep the **main branch as the single source of truth**.
+3. Keep the **main branch as the single source of truth**
 
 4. Avoid keeping local changes uncommitted, especially when others need to review or experiment with your repository
 
