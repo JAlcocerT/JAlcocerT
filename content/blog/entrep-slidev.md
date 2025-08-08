@@ -13,6 +13,9 @@ I was *bikeshedding* and found out this grear project:
 
 > MPL2 | An Awesome ReadME Generator To Jumpstart Your Projects!
 
+*Blame* again to the people building in public: https://www.reddit.com/r/github/comments/1itqlh4/i_got_tired_of_writing_readmes_so_i_built_an/
+
+
 {{% details title="About MPL 2.0 🚀" closed="true" %}}
 
 It's not just about keeping the initial license; it's about a specific type of copyleft that applies at the file level.
@@ -39,9 +42,13 @@ However, the details of how that "keeping" works—at the file level and upon di
 
 Isnt it great?
 
-![alt text](/blog_img/entrepre/public-build/makeslidev/makereadme-live-edit.png)
+![MakeReadMe UI](/blog_img/entrepre/public-build/makeslidev/makereadme-live-edit.png)
 
 It can edit markdown and see the result live!
+
+No CMS, nor headless CMS.
+
+Ive been looking for such a thing for long time:
 
 * https://makeread.me/generator/pottekkat-awesome-readme
 
@@ -49,18 +56,47 @@ It can edit markdown and see the result live!
 
 ## From Readme to SliDev
 
+It's all about taking makereadme features.
+
+And combining them with SliDev: https://sli.dev/resources/theme-gallery
+
+> I mean, letting [windsurf](https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf) do so
+
+Because the ppt templates should not be our focus anymore.
+
+But the content quality!
 
 ### MakeSlidev
 
+
 * https://github.com/JAlcocerT/makeslidev
 
-
+The original features you have them in `main`
 ```sh
-git clone
+git clone https://github.com/JAlcocerT/makeslidev
 make setup
 make dev
 ```
 
+There you go, the original makeread.me project running locally:
+
+*I changed the img to `https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp`*
+
+![alt text](/blog_img/entrepre/public-build/makeslidev/makereadme-local-liveedit.png)
+
 > See the UI at: `http://localhost:3000/`
 
 > > And the swagger api: http://localhost:8080/
+
+But the juice starts at the branch `makeslidev`:
+
+```sh
+git branch -a
+```
+
+
+
+### Alternative routes
+
+I got to know along the way about these live markdown editors, that in theory can be plugged into a flask web app:
+

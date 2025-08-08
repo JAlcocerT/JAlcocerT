@@ -2,7 +2,7 @@
 title: "Vide Coding. For websites and more..."
 date: 2025-04-15T23:20:21+01:00
 draft: false
-tags: ["Dev","GenAI"]
+tags: ["Dev","GenAI","WindSurf"]
 description: 'How to get started with vibe coding. FirebaseStudio vs Codex vs Claude Code...or maybe just Windsurf IDE?'
 url: 'vide-coding'
 ---

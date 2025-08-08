@@ -2,11 +2,14 @@
 title: "Where to deploy?"
 date: 2025-08-08
 draft: false
-tags: ["VPS","PaaS for SaaS"]
-description: 'Resources to launch your stuff.'
+tags: ["VPS","PaaS for SaaS","Lean Startup"]
+description: 'Resources to launch your stuff to your clients.'
 url: 'where-to-deploy'
 ---
 
+Have your client in the loop asap.
+
+Thats one of the outcomes of *the lean startup*
 
 
 ## VPS
@@ -14,6 +17,10 @@ url: 'where-to-deploy'
 ### Do
 
 ### Hetzner
+
+### Linode
+
+---
 
 ##  Others
 
