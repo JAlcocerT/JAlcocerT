@@ -8,9 +8,13 @@ cover:
     alt: "R Shiny Apps" # alt text
     caption: "Explaining what 'Retirement Facts Dashboards Represents." 
 description: 'Building a Shiny Dashboard to visualize inflation impact on saving. Deploying to shinyapp'
-summary: 'In this post I show you how to build a simple interactive shiny dashboard and how to deploy it to shinyapps using its free tier. The topic I chose to visualize is inflation and how affects a person wealth.'
 url: 'r-dashboard-shinyapps'
 ---
+
+
+In this post I show you how to build a simple interactive shiny dashboard and **how to deploy it to shinyapps** using its free tier.
+
+> The topic I chose to visualize is inflation and how affects a person wealth.
 
 
 **Inflation** is a topic that is currently more and more listened.

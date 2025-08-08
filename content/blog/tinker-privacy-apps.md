@@ -76,11 +76,16 @@ Which you can setup via wg easy as [seen with the x300](https://jalcocert.github
 
 ### Passwords
 
-I simply love Bitwarden (which can also be selfhosted).
+I simply love **Bitwarden** (which can also be selfhosted).
+
+* It has a nice Android/Linux Desktop App
+* You can add [2fa](#2fa) to it as well: https://vault.bitwarden.com/#/login
 
 You also have:
 
 * https://github.com/ProtonPass
+    * https://proton.me/blog/pass-roadmap-summer-2025
+
 * KeePass
     * https://sideofburritos.com/blog/i-switched-to-keepass/
 
@@ -109,6 +114,12 @@ sudo apt-get install -f
 * It works cross-device (for real, including linux desktop + android).
 * Its OSS and allows direct import/export.
 * Allows (optional) to automatic sync via a proton account.
+
+> Im using mostly **2FAS** (which syncs codes via gdrive)
+
+>> But im giving a try to ProtonAuthenticator (Synced via protonmail + keeping backup codes handy, just in case)
+
+For business purpose, you can still keep your microsoft auth / Google 2fa
 
 
 ## Private AI
