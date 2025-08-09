@@ -8,6 +8,14 @@ url: 'cool-hugo-themes'
 ---
 
 
+Time for a HUGO recap: *the [crazy fast SSG](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)*
+
+And to make some updates to:
+
+1. [Entreagujaypunto](#entreagujaypunto-updates)
+2. [EnjoyLittleThings](#enjoylittlethings-updates)
+3. [FossEngineer](#fossengineer-updates)
+
 ## Cool HUGO Themes
 
 My favourite is still **hugo-theme-gallery**: https://github.com/nicokaiser/hugo-theme-gallery
@@ -145,3 +153,21 @@ https://github.com/JAlcocerT/hugo-doks
 > Which it reminds me a lot to Astro Starlight :)
 
 See: https://docs.thulite.io/getting-started/
+
+
+---
+
+## Conclusions
+
+
+### Theme Gallery + Flask
+
+This superseeds the telegram bot thing that I plugged [here to the theme](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot) as per this [post](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots)
+
+And the filebrowser + Hugo approach described [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#filebrowser-x-hugo)
+
+#### EntreAgujayPunto Updates
+
+#### EnjoyLittleThings Updates
+
+### FossEngineer Updates

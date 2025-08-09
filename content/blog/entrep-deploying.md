@@ -1,6 +1,6 @@
 ---
 title: "Where to Deploy?"
-date: 2025-08-08
+date: 2025-08-06
 draft: false
 tags: ["VPS","PaaS for SaaS","Lean Startup"]
 description: 'Resources to launch your stuff to your clients.'
@@ -13,6 +13,14 @@ Thats one of the outcomes of *the lean startup*
 
 
 ## VPS
+
+I started using GCP free tier to get started with cloud.
+
+Later I got dissapointed with Oracle Cloud.
+
+Then decided to try these VPS for fun.
+
+> Any of these can help you serve your Apps to people, unless you want to do so from your homelab!
 
 ### DO
 
@@ -52,3 +60,12 @@ Their mission is great!
 
 * https://dash.elest.io/login
 
+---
+
+## Conclusions
+
+Its up to you:
+
+1. Get a [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#energy-x300), get a ~15w avg at 0,25eur/kwh will cost you ~32eur/y (or 2,74 a month)
+
+2. Deploy on one of these smaller servers for a little bit more of the price, but you forget about the initial costs.

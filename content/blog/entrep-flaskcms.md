@@ -8,9 +8,9 @@ url: 'making-flask-cms-for-ssg'
 ---
 
 
-Because of the makereadme and this post
+Because of the makereadme project and this [related post](https://jalcocert.github.io/JAlcocerT/make-slidev/)
 
-I got to know about:
+I got to know about: *its possible to edit md from webapps!*
 
 * https://github.com/sparksuite/simplemde-markdown-editor
 
@@ -22,7 +22,6 @@ I got to know about:
   * https://ui.toast.com/tui-editor
 
 > MIT | 🍞📝 Markdown WYSIWYG Editor. GFM Standard + Chart & UML Extensible.
-
 
 
 {{% details title="About SimpleMDE, editormd, toast UI editor... 🚀" closed="true" %}}
@@ -39,7 +38,6 @@ To achieve this, you'll need to combine a few key technologies:
   * **A Frontend Markdown Editor:** This is the most crucial part. You'll need a robust, JavaScript-based Markdown editor that you can embed in your web pages. This will provide the real-time preview and editing features you're looking for.
   * **A Backend for File Handling:** Your Flask routes will need to handle saving the content from the editor to your file system.
   * **A "Frontmatter" Interface:** You'll build a simple form or a more integrated UI to let users edit the metadata (title, date, slug, etc.) that goes into the YAML frontmatter block.
-
 
 **For the Markdown Editor**
 
@@ -242,13 +240,13 @@ As this is a one person app, Ill go the user/password way: this time, using [poc
 
 ### Flask x PocketBase
 
-I was put in front of PB quite recently as I covered [here](https://jalcocert.github.io/JAlcocerT/pocketbase-redux/).
+I was put in front of PB *quite recently* as I covered [here](https://jalcocert.github.io/JAlcocerT/pocketbase-redux/).
 
 And I could not wait to try this combination!
 
 > I asked windsurf for some architectural help on how to get PB to be the one dictating who logs in and who does not as per [this project doc](https://github.com/JAlcocerT/morita-astroportfolio-flasked/blob/main/pb-flask.md)
 
-So we will get a Flask Container + PB Container:
+So we will get a Flask Container + PB Container: *you could also vibe code a simpler auth with just Flask, as Ill do for this [RE tweaks](#real-estate)*
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/BaaS/PB" title="PB | Docker Config 🐋 ↗" >}}

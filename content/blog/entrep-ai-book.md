@@ -1,6 +1,6 @@
 ---
 title: "AI Driven ebooks"
-date: 2025-08-06T01:20:21+01:00
+date: 2025-10-06
 draft: false
 tags: ["Entrepreneuring","sell-your-ebook","Stripe API","n8n"]
 description: 'Building in public a simple web platform to sell ebooks.'
@@ -22,8 +22,7 @@ How about selling an ebook be all about having an stripe account and a proper co
 
 > You can also sell ebooks via amazon or ko-fi.
 
-You know what to tell, its just that... time matters.
-
+You know what to tell, its just that... **time matters**.
 
 * https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_ebook.py
 

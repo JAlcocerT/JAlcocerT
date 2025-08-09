@@ -1,11 +1,13 @@
 ---
 title: "A podcast for all"
-date: 2025-08-07
+date: 2025-09-07
 draft: false
 tags: ["Web","Astro","Entrep"]
 description: ''
 url: 'make-podcast'
 ---
+
+Lately Iv been tinkering with custom (vibecoded) flask apps to interact with SSGs
 
 * https://github.com/manuelernestog/astropod
 * https://github.com/JAlcocerT/astropod

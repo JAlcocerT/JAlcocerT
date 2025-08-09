@@ -1,6 +1,6 @@
 ---
-title: "From ReadMe to MakeSliDev"
-date: 2025-08-07
+title: "From ReadMe to MakeSliDev v0.1"
+date: 2025-08-06
 draft: false
 tags: ["MakeReadme","SliDev","Entrep"]
 description: 'Its all about markdown - From ReadMe generator to SliDev presentations for all'
@@ -54,7 +54,6 @@ Ive been looking for such a thing for long time:
 * https://makeread.me/generator/pottekkat-awesome-readme
 
 
-
 ## From Readme to SliDev
 
 It's all about taking makereadme features.
@@ -95,9 +94,21 @@ But the juice starts at the branch `makeslidev`:
 git branch -a
 ```
 
+---
 
+## Conclusions
 
-### Alternative routes
+Ill come back to SliDev + *CMS* on a future post.
 
-I got to know along the way about these live markdown editors, that in theory can be plugged into a flask web app:
+Expect a v0.2 coming with a simpler way of editing a SliDev PPT!
 
+### Alternatives
+
+I got to know along the way about these live markdown editors, that *in theory* can be plugged into a flask web app.
+
+So as per the learnings of:
+
+* https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/
+* https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/
+
+> This can be done muuuch simpler

@@ -276,7 +276,11 @@ You can print to pdf, add your logo, taxes, CSS...
 
 ### FileBrowser x HUGO
 
-**EDITING FROM THE FUTURE**: To make adding photos more intuitive, combine HUGO + Filebrowser. You will just need to commit the changes (or put some cron job), then CI/CD will do the rest and push it to your domain.
+**EDITING FROM THE FUTURE**: To make adding photos more intuitive, combine HUGO + Filebrowser.
+
+For this very special project: `fotos.entreagujaypunto.com`
+
+You will just need to commit the changes (or put some cron job), then CI/CD will do the rest and push it to your domain.
 
 If you setup [filebrowser](https://fossengineer.com/selfhosting-filebrowser-docker/#filebrowser-docker-compose)
 

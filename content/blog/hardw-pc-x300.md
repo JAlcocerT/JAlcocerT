@@ -25,7 +25,9 @@ I went crazy and build it with **64GB RAM**.
 
 ## Energy x300
 
-The idle consumptions of the x300 are decent (12/13w with 2 ssd's) and max power drawn during the tests of 53W.
+The idle consumptions of the x300 are decent (12/13w with 2 ssd's).
+
+Max power drawn during the tests of 53W.
 
 With a room air temperature of 21C, in idle the air was getting out of the computer at ~28C:
 
