@@ -176,7 +176,7 @@ Lets put the flask functionality into containers:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps" title="Morita Web v2 - Source Code Y25" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro x Flask CMS" >}}
-  {{< card link="" title="Morita Web v2 - Source Code Y25" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro x Flask CMS" >}}
+  {{< card link="https://github.com/JAlcocerT/morita-astroportfolio-flasked" title="Morita Web v2 - Source Code Y25" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro x Flask CMS" >}}
 {{< /cards >}}
 
 {{< cards cols="1" >}}
@@ -255,6 +255,8 @@ So we will get a Flask Container + PB Container:
 
 > I didnt manage to create the initial admin and pass programatically
 
+![SelfHosting PocketBase](/blog_img/dev/PB/selfh-pb.png)
+
 > > Just create your admin: `localhost:8080/_/` and lets move forward
 
 
@@ -329,6 +331,10 @@ npm run build
 make web-prod-up
 ```
 
+From this point, you have to ways forward:
+
+1. Spend time to put billing with [stripe](#flask-x-stripe)
+2. Spin the stack publically with [https via Traefik setup](#traefik-x-vps) or just do a quick view at your [homelab with CF tunnels](#mental-health)
 
 ### Flask x Stripe
 
@@ -346,7 +352,29 @@ I have been messing around with Stripe as per:
 
 ### Traefik x VPS
 
-Time to share this.
+Time to share this with the public.
+
+Get some VPS and authenticate your github: https://github.com/settings/keys `Add new SSH Key`
+
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+Take the output of this:
+
+```sh
+cat ~/.ssh/id_ed25519.pub #paste it int gh UI
+```
+
+And just:
+
+```sh
+ssh -T git@github.com
+#Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+#Hi JAlcocerT! You've successfully authenticated, but GitHub does not provide shell access.
+```
 
 And time to bring yet one more container: **Traefik** for those https and stuff
 
@@ -358,10 +386,52 @@ And time to bring yet one more container: **Traefik** for those https and stuff
 ### Mental Health
 
 
+```sh
+git clone git@github.com:JAlcocerT/morita-astroportfolio-flasked.git
+cd morita-astroportfolio-flasked
+
+make stack-up
+```
+
+You will have to:
+
+1. Go to `192.168.1.11:8080/_/` to create that pb admin user/pass.
+
+2. Create the user who can use the app
 
 ```sh
+cp .env.sample .env #adapt the .env with the PB admin credentials and url
+source .env
 
+#make pb-create-user #in case that you have not synced the PB data
 ```
+
+3. Login to Flask via `192.168.1.11:5050`
+4. See live changes to astro via `192.168.1.11:4321`
+
+How about the https?
+
+If you havent gone the Traefik v3.3 way.
+
+You can still just plug/attach your flask container to the **CF tunnel network**
+
+```sh
+#docker network ls | grep cloudflared_tunnel
+docker network connect cloudflared_tunnel flask-cms #connect
+
+#verify
+#docker inspect flask-cms --format '{{json .NetworkSettings.Networks}}' | jq
+```
+
+> You can also connect flask to the existing CF network via docker-compose!
+
+>> Dont forget to go to CF UI: `Zero Trust` -> `Networks` -> `Tunnels` -> `Public Hostnames`
+
+![alt text](/blog_img/web/morita-flask/flask-cf-ui.png)
+
+And we are good to go!
+
+![alt text](/blog_img/web/morita-flask/https-flask-cf.png)
 
 ### Real Estate
 
