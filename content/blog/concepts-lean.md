@@ -2,7 +2,7 @@
 title: "What is Lean? Why do I need it for Software ?"
 date: 2022-10-02T23:20:21+01:00
 draft: false
-tags: ["Outro"]
+tags: ["Outro","VSM","5s"]
 description: 'Understanding and applying Lean for SDLC.'
 url: 'lean'
 ---
@@ -93,7 +93,7 @@ An example of applying this principle to software development would be to use ag
 
 > Deliver whats the client is really asking for!
 
-{{< dropdown title="Continuous Improvement" closed - PDCA="true" >}}
+{{< dropdown title="Continuous Improvement and PDCA" closed="true" >}}
 
 The fourth Lean principle is to strive for perfection by [continuously improving processes](https://fossengineer.com/lean/#kaizen) and eliminating waste. In software development, this means continually identifying and eliminating inefficiencies in the development process, such as manual testing or redundant code. 
 
@@ -117,7 +117,9 @@ There are several key concepts that are central to the Lean approach, lets go on
 
 ### VSM
 
-Value stream mapping is a technique used in Lean to **identify and eliminate waste in a process**. It involves mapping out the flow of materials and information through a process, and identifying areas where value is added and areas where waste is occurring.
+Value stream mapping is a technique used in Lean to **identify and eliminate waste in a process**.
+
+It involves mapping out the flow of materials and information through a process, and identifying areas where value is added and areas where waste is occurring.
 
 > Why things are the way we are? Most processes just evolve overtime.
 
