@@ -163,7 +163,9 @@ Now, how about the edit?
 
 From the recent [HUGO Theme Gallery x Flask](https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/), I got this info from [gpt5 about web app flask editing.](https://github.com/JAlcocerT/hugo-theme-gallery-flasked/blob/flask-hugo-gallery/markdown-edit-alternatives.md).
 
-But this time Windsurf just made its own and quick way of editing files.
+But this time Windsurf just made its own and quick way of editing files:
+
+![alt text](/blog_img/web/morita-flask/flask-md-editor.png)
 
 Which works and affects the local markdown files at `./src/content/work/*.md`
 
@@ -431,10 +433,11 @@ docker network connect cloudflared_tunnel flask-cms #connect
 
 And we are good to go!
 
-![alt text](/blog_img/web/morita-flask/https-flask-cf.png)
+![FlaskCMS for Mental health Astro portfolio theme working via CF tunnel](/blog_img/web/morita-flask/https-flask-cf.png)
 
 ### Real Estate
 
-```sh
 
+```sh
+git clone https://github.com/JAlcocerT/real-estate-moi
 ```
