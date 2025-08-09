@@ -88,7 +88,7 @@ But you can also do them via scripts.
 
 * https://deepwiki.com/pocketbase/pocketbase/9.2-collection-schema-management
 
-I have made few samples next to the docker configs:
+I have made **few samples python scripts** next to the docker configs: https://github.com/JAlcocerT/Docker/tree/main/Dev/BaaS/PB
 
 ```sh
 cd ./Dev/BaaS/PB
@@ -97,7 +97,7 @@ python3 create_user_settings.py
 
 > Once executed, Validate within the UI that they are as you wanted it to be: `http://localhost:8080/_/#/collections`
 
-You can also export the existing collections into json:
+You can also **export the existing collections** into json:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/create_user_settings.py" title="Pocketbase x Py, Collection Creator ↗" >}}
@@ -148,6 +148,8 @@ Directly compatible with your JSON creation system
 
 {{% /details %}}
 
+> All that should get you started to **interact with PB via Python Scripts 🐍**
+
 
 
 ### PocketBase x Flask
@@ -184,9 +186,28 @@ If you create a post via adding a new record into the posts collection, it will 
 
 This can be a quick and local alternative to bring user authentication.
 
-But, even if you ask for the email, it wont be validated, like LogTo was doing for us outofthebox:
+But, even if you ask for the email, it wont be validated.
+
+Unlike [LogTo](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication) was doing for us properly and out-of-thebox:
 
 ![LogTo custom domain auth](/blog_img/dev/PB/logto-custom-domain-auth.png)
+
+For **LogTo References**, see these posts:
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth" title="Traefik + TinyAuth vs Logto | Three Bodies Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#conclusions" title="Logto x Stripe | Webify Post ↗" >}}
+
+{{< /cards >}}
+
+And these sample webapps with their code:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Z_Utils/logto_utils.py" title="WebifAI Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App with Stripe, Umami, FormBricks and Logto as Utils" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo" title="Three Bodies Web App Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth and compare it with LogTo" >}}
+{{< /cards >}}
+
+
 
 ### PocketBase x Stripe
 

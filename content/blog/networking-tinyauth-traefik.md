@@ -3,7 +3,7 @@ title: "How to setup TinyAuth x Traefik. Compared to LogTo."
 date: 2025-05-27T23:20:21+01:00
 draft: false
 tags: ["Dev","HomeLab","OAUTH","Cloudflare DNS","Three Bodies","LogTo","TinyAuth"]
-description: 'Logto vs TinyAuth Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
+description: 'Logto vs (Traefik + TinyAuth) Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
 url: 'testing-tinyauth'
 ---
 
@@ -28,14 +28,13 @@ We will be setting up a **Flask Web app** with https via **Traefik** and auth vi
 
 ## TinyAuth
 
-
 Remember, [generate your keys](https://jalcocert.github.io/JAlcocerT/encryption-101/):
 
 ```sh
 openssl rand -base64 32
 ```
 
-And at first, the docker compose example was a little bit intimidating...
+And at first, the **docker compose example** was a little bit intimidating...
 
 {{< details title="TinyAuth Compose with traefik and nginx web server 📌" closed="true" >}}
 

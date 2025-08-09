@@ -4,7 +4,7 @@ date: 2025-05-19T22:20:21+01:00
 draft: false
 description: "Connecting Ghost CMS to work with Astro Themes. Compared with Editing Astro via JSON."
 url: 'ghost-cms-for-astro'
-tags: ["Web","CMS","Ghost","Astro SSG","n8n"]
+tags: ["Web","CMS","Ghost","Astro SSG","n8n","Whatsapp Bouble Component"]
 ---
 
 
@@ -76,6 +76,8 @@ npm run dev -- --host 0.0.0.0 --port 4321
 #sudo npm run preview -- --host 0.0.0.0 --port 8080
 ```
 
+That should make the site accesible from your laptop and any other home device.
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web" title="Web Related Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/taxi-web/blob/main/docker-compose.yml" title="Ghost Setup Docker Config 🐋 ↗" >}}
@@ -89,9 +91,11 @@ If you are ready with Ghost up and running, go the the settings:
 
 ### Configuring Ghost x Astro 101
 
-**IMPORTANT**: This will be **API based CMS Setup**, so make sure to do proper ghost containers backup!
+**IMPORTANT**: This will be **API based CMS Setup**
 
-*For Git based, see this KeyStatic related post*
+So make sure to do proper ghost containers backup!
+
+*For Git based, see the KeyStatic related post*, in that case, your markdown post and content are saved probably into Github.
 
 We will need to:
 
@@ -145,7 +149,7 @@ For that you will need such file: https://github.com/JAlcocerT/taxi-web/blob/mai
 
 Anf if you pay attention, this is all we do in the main page: https://github.com/JAlcocerT/taxi-web/blob/main/astro-ghost-sample/major-matter/src/pages/index.astro
 
-We are fetching via Ghost API all the posts:
+We are **fetching via Ghost API** all the posts:
 
 ```js
 ---
@@ -174,17 +178,18 @@ const posts = await ghostClient.posts.browse({ limit: 'all', include: ['tags', '
 
 With Astro + Ghost as you’ve set it up:
 
-Astro fetches content from Ghost’s API at build time (using the Content API).
-You can programmatically decide what to do with that content:
-Main page: Show a list of posts, a welcome message, etc.
-About page: Fetch and render a specific Ghost page by its slug.
-All pages: Use a dynamic route ([slug].astro) to render every Ghost page as a static route.
-Blog posts: Use a dynamic route (e.g., /blog/[slug].astro) to render all posts.
+* Astro fetches content from Ghost’s API at build time (using the Content API).
+* You can programmatically decide what to do with that content:
+* Main page: Show a list of posts, a welcome message, etc.
+* About page: Fetch and render a specific Ghost page by its slug.
+* All pages: Use a dynamic route ([slug].astro) to render every Ghost page as a static route.
+* Blog posts: Use a dynamic route (e.g., /blog/[slug].astro) to render all posts.
+
 You have full control in Astro to:
 
 Render just the pages you want (e.g., only /about).
-Or, render everything Ghost provides, automatically creating static pages for each one.
 
+Or, render everything Ghost provides, automatically creating static pages for each one.
 
 {{< callout type="info" >}}
 I have captured the learning of this simple setup on [this markdown](https://github.com/JAlcocerT/taxi-web/blob/main/ghost-astro.md). 
@@ -342,14 +347,25 @@ docker compose up astro-prod astro-dev
 * https://pagespeed.web.dev/
 * https://web-check.xyz/
 
+As always, a pass to **LinkChecker** does no harm:
+
 ```sh
 docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://libreportfolio.fyi/ > Review_links_libreportfolio.txt
 ```
+
+You can review the `.txt` and also ask LLMs to spot problematic points.
 
 ---
 
 ## Conclusions
 
+Connecting Ghost CMS to astro is not that straight forward.
+
+What a surprise!
+
+I need to think a way to move forward to scale how I serve websites.
+
+But probably this wont be my way to go.
 
 
 ### Why that much love to Astro
@@ -362,7 +378,7 @@ See these ideas of fully static components
 
 * [Whatsapp bouble](https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro)
 * [TG bouble](https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/TelegramBubble.astro)
-* For youtue videos or Komoot, you can simple use the iframe to embed
+* For youtue videos or Komoot, you can simple use the **iframe to embed**
 * But for twitter/X, you will need some ReactJS tricks, and put together a component like this
 
 #### Embedding ChatBots
@@ -373,11 +389,10 @@ There are many [no code AI tools](https://jalcocert.github.io/JAlcocerT/no-code-
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot with Docker 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8N with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8N with Docker config 🐋 ↗" >}}
 {{< /cards >}}
 
-
-It's not just about n8n embeddedd chat, but scrapping capabilities:
+It's not just about **n8n embeddedd chat**, but scrapping capabilities:
 
 {{< youtube "AhyO9AVm49k" >}}
 <!-- https://www.youtube.com/watch?v=AhyO9AVm49k -->
@@ -391,8 +406,8 @@ It's not just about n8n embeddedd chat, but scrapping capabilities:
 
 ### Other Websites Ive worked
 
-07/25 version
+**07/25 version**
 
-https://github.com/majesticooss/astros/discussions/56
-https://github.com/majesticooss/astros
-https://ioracing-iotechcrafts.web.app/blog/unleashing-the-power-of-tailwind-css/
+* https://github.com/majesticooss/astros
+  * https://github.com/majesticooss/astros/discussions/56
+  * https://ioracing-iotechcrafts.web.app/blog/unleashing-the-power-of-tailwind-css/

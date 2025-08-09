@@ -3,7 +3,7 @@ title: "HUGO can also be cool"
 date: 2025-08-05
 draft: false
 tags: ["Dev","SSG","Photo-Gallery","Flask CMS"]
-description: 'Improving HUGO Themes'
+description: 'Improving HUGO Themes: Flask x Theme Gallery, HUGO Doks Tweaks'
 url: 'cool-hugo-themes'
 ---
 
