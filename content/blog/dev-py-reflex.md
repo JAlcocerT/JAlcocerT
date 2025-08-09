@@ -748,7 +748,11 @@ uv run reflex run --env prod --backend-port 8001 --frontend-port 3001
 
 > It can be visible fronm other home devices with this approach!
 
-And for containers...it took me a while to make it work and be visible for other devices:
+And for containers...
+
+It took me a while to make reflex work
+
+Specially to be visible for other devices:
 
 ```sh
 docker build -t my_custom_reflex_app:latest .
@@ -804,7 +808,7 @@ One action, one commit. Something working **SYNC**.
 
 ### Ideas with Reflex
 
-https://reflex.dev/docs/getting-started/use-cases/
+* https://reflex.dev/docs/getting-started/use-cases/
 
 1. Combine it with some of the authentication ways seen and create a **waiting list / lead magnet**.
 
@@ -874,7 +878,6 @@ def form() -> rx.Component:
 
 
 2. https://github.com/JAlcocerT/Reflex_Stocks
-
 
 ---
 

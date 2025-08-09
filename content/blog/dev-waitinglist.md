@@ -14,26 +14,26 @@ In case that you want to let people be the ones telling what you are building, y
 
 The ultimage validator is your Stripe paywall.
 
-And yet, you can have some idea by listening what your potential client tells they they want.
+And yet, you can have some idea by listening what your potential client *say that they want*.
 
 > They might change their mind while you build the solution though :)
 
 I had pending to write about Waiting List as referenced on few previous posts:
 
-* https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#ideas-with-reflex
+* Future Ideas with Reflex WebApps: https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#ideas-with-reflex
 * https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy
 * https://jalcocert.github.io/JAlcocerT/product-tools/
 
 
 ## SSG Astro Waiting List
 
-
 I took inspiration on the **MIT astro theme**: 
 
 * https://github.com/unoforge/agency-landing-page-Astrojs
 
+>  A simple agency landing page made with astrojs and tailwindcss 
+
 {{< cards >}}
-  {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Astro Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Forked and Tweaked Astro Theme" >}}
 {{< /cards >}}
 
@@ -74,6 +74,7 @@ You will need to provide the `survey_url` to have the pop up and also `question_
 
 2. ReactForms
 3. FormsMD
+4. Probably million other ways: BaaS, sqlite...?
 
 ### Cal
 
@@ -151,15 +152,20 @@ docker ps -q | grep -v portainer | xargs docker stop
 Use the `Makefile commands`, which basically use docker:
 
 ```sh
+git clone https://github.com/JAlcocerT/waiting-to-landing
 #make help
 make local-waiting
 ```
 
-Whats next?
+**Whats next?**
 
-After a Waiting list, if you get enough leads, you **might want to build a landing page**.
+After a Waiting list, if you get enough leads, etc...
+
+You **might want to build a landing page**.
 
 But we are ready for that with the current setup!
+
+Just switch from waiting, to landing:
 
 ```sh
 make local-landing
@@ -167,14 +173,11 @@ make local-landing
 
 ### Astro Landing Pages / Book Pages
 
-I was creating other landing pages and wrote about it:
-
-https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/
-https://jalcocert.github.io/JAlcocerT/transforming-and-securing-a-website/
+I was creating other *landing pages* and wrote about it:
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento" title="Commento | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="SSG Containers | Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/" title="Astro landing pages | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/transforming-and-securing-a-website/" title="Astro landing page with https | Post ↗" >}}
 {{< /cards >}}
 
 
