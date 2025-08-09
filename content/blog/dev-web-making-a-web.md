@@ -2,7 +2,7 @@
 title: "Customizing a Web for Real Estate"
 date: 2024-09-27T10:20:21+01:00
 draft: false
-tags: ["dev"]
+tags: ["dev","SSG","Website"]
 summary: 'Creating a responsive Astro site - Real Estate Oriented'
 url: 'astro-web-setup'
 ---

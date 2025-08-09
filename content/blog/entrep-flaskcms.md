@@ -2,7 +2,7 @@
 title: "Interacting with SSGs and md via Flask"
 date: 2025-08-09
 draft: false
-tags: ["Astro x Flask","PocketBase"]
+tags: ["Astro x Flask","PocketBase","n8n"]
 description: 'Markdown and FlaskCMS that works for Mental Health and Real Estate'
 url: 'making-flask-cms-for-ssg'
 ---
@@ -434,6 +434,30 @@ And we are good to go!
 ![FlaskCMS for Mental health Astro portfolio theme working via CF tunnel](/blog_img/web/morita-flask/https-flask-cf.png)
 
 ### Real Estate
+
+For the last 12months Ive thought about real estate.
+
+It all started with [this post](https://jalcocert.github.io/JAlcocerT/astro-web-setup/).
+
+Later on, few posts followed:
+
+https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/
+https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
+
+> I even tested to migrate the streamlit functionality of the [RE WebApp to Reflex](https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#real-estate-with-reflex)
+
+It all started by helping a friend.
+
+Last time I gave him updates, we concluded with: https://jalcocert.github.io/JAlcocerT/real-estate-website/#conclusions
+
+Recently, we had a chat and we talked about n8n.
+
+So its time to bring some **upgrades to the project**:
+
+1. Astro SSG: yes, but photos and descriptions has to be send via Web UI
+2. Keep the scrapping feature
+3. Bringing n8n and phase out the old streamlit recommendator webapp
+4. Streamlit Mortage calculator
 
 
 ```sh

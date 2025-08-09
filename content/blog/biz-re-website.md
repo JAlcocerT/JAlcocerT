@@ -454,7 +454,9 @@ How much people charge for such projects?
 
 N8N is a great no code automation tools, as I explained on [this post](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#n8n).
 
-The idea with this, is to have a chatbot embeded into the real estate web that can reply potential clients questions and push their contact data into a database (A google sheet would do).
+The idea with this, is to have a chatbot embeded into the real estate web that can reply potential clients questions.
+
+Also pushing their contact data or questions into a database (A google sheet would do).
 
 * You can have a look to the templates: https://n8n.io/workflows/
 
