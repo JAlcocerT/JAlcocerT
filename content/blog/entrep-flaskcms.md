@@ -1,6 +1,6 @@
 ---
 title: "Interacting with SSGs and md via Flask"
-date: 2025-08-08
+date: 2025-08-09
 draft: false
 tags: ["Astro x Flask","PocketBase"]
 description: 'Markdown and FlaskCMS that works for Mental Health and Real Estate'
@@ -253,7 +253,10 @@ So we will get a Flask Container + PB Container:
   {{< card link="https://github.com/JAlcocerT/morita-astroportfolio-flasked/blob/main/docker-compose-flask.yml" title="PB Docker-compose.yml in the project ↗" >}}
 {{< /cards >}}
 
-> I didnt manage to create the initial admin and pass programatically.
+> I didnt manage to create the initial admin and pass programatically
+
+> > Just create your admin: `localhost:8080/_/` and lets move forward
+
 
 But anyways:
 
@@ -262,7 +265,7 @@ make pb-build
 make pb-up
 ```
 
-Will get your PB container spinned.
+Will get your PB container spinned and waiting for your flask user creation.
 
 Now we needed a script to create the user of the flask app (the ones who can get authenticated):
 
@@ -272,21 +275,73 @@ PB_ADMIN_PASSWORD=change-me-strong \
 uv run scripts/create_user.py --email new.user@example.com --password change-me-strong
 ```
 
-And now you can go to `localhost:5050/login` and see that you can get in with it/
+Or better, via Make:
+
+```sh
+cp .env.sample .env #adapt the .env with the PB admin credentials and url
+source .env
+
+make pb-create-user
+```
 
 
-Just create your admin: `localhost:8080/_/` and lets move forward.
+```sh
+#uv run app.py
+make flask-up #in case that you stopped the flask container
+```
 
-That are working together.
+And now you can go to `localhost:5050/` and see that you get redirected to: `localhost:5050/login`
 
-All plugged with the other 2 node containers for Astro.
+![Flask UI Login as per PocketBase user collectio](/blog_img/web/morita-flask/flask-login-pb.png)
+
+Via CLI, these wont get you a 200 now, as we cant access them without being one of the registered users under PB collection `users`:
+
+```sh
+curl -I http://localhost:5050/
+curl -I http://localhost:5050/api/list
+```
+
+```
+HTTP/1.1 302 FOUND
+Server: Werkzeug/3.1.3 Python/3.12.10
+Date: Sat, 09 Aug 2025 20:18:55 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 199
+Location: /login
+Vary: Cookie
+Connection: close
+```
+
+Those two (Flask and PB) are working together pretty nicely!
+
+
+All plugged, with the other 2 node containers for Astro as per `docker-compose.yml`:
+
+```sh
+make stack-up #spins flask + pb + dev astro
+```
+
+When done editing:
+
+```sh
+npm run build
+#docker compose -f docker-compose.yml logs -f astro-prod
+make web-prod-up
+```
 
 
 ### Flask x Stripe
 
 This is going to be a one time thing.
 
-Still, I wanted to try the integration.
+Still, I wanted to try the integration: *has an user paid, or not really?*
+
+I have been messing around with Stripe as per:
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe" title="Stripe API | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe-x-logto" title="Stripe x Logto | Post ↗" >}}
+{{< /cards >}}
 
 
 ### Traefik x VPS
@@ -300,6 +355,16 @@ And time to bring yet one more container: **Traefik** for those https and stuff
 
 ## Conclusions
 
-### Mental health
+### Mental Health
+
+
+
+```sh
+
+```
 
 ### Real Estate
+
+```sh
+
+```
