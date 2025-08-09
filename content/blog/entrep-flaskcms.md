@@ -2,8 +2,8 @@
 title: "Interacting with SSGs and md via Flask"
 date: 2025-08-08
 draft: false
-tags: ["Entrep","Astro x Flask","PocketBase"]
-description: 'Markdown and a FlaskCMS that works.'
+tags: ["Astro x Flask","PocketBase"]
+description: 'Markdown and FlaskCMS that works for Mental Health and Real Estate'
 url: 'making-flask-cms-for-ssg'
 ---
 
@@ -74,13 +74,10 @@ The idea:
 
 ## Astro x Flask
 
-Last year I was doing a custom website via astro as covered:
-
-
-![Sample Web Result](/blog_img/web/WebsSnapshots/Web_Nevin.png)
+Last year I was doing a custom website via astro as covered on these:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docplanner-web-migration//" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docplanner-web-migration//" title="Morita x DocPlanner Web proposal" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Mental Health Astro Web Creation | POST" >}}
   {{< card link="https://github.com/JAlcocerT/morita-web" title="Morita Web v1 - Source Code Y24/5" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro" >}}
 {{< /cards >}}
 
@@ -142,7 +139,7 @@ Ok, so what it worked before still works.
 
 Great.
 
-Now, lets do some Flask with GPT5:
+Now, **lets do some Flask** with GPT5:
 
 ```sh
 make local-flask-install
@@ -175,7 +172,71 @@ So...for now thats not bad at all!
 And the goals/implementation/limitations/possible next steps are [here](https://github.com/JAlcocerT/morita-astroportfolio-flasked/blob/main/flask-md-edit.md)
 
 
+Lets put the flask functionality into containers:
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps" title="Morita Web v2 - Source Code Y25" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro x Flask CMS" >}}
+  {{< card link="" title="Morita Web v2 - Source Code Y25" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro x Flask CMS" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps" title="Python Apps | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/morita-astroportfolio-flasked/blob/main/docker-compose-flask.yml" title="The Project Flask Docker-compose.yml  ↗" >}}
+{{< /cards >}}
+
+
+
+
+And quickly check that it works:
+
+```sh
+docker compose -f docker-compose-flask.yml build
+
+docker run --rm -d --name flask-cms \
+  -p 5050:5050 \
+  -e CONTENT_DIR=/app/src/content \
+  flask-cms sh -lc "uv run app.py"
+```
+
+Aaaall good on `localhost:5050`
+
+But I got to know that **using gunicorn** is better when the webapp has to bring concurrency of users among other details that you can read [here](https://github.com/JAlcocerT/morita-astroportfolio-flasked/blob/main/gunicorn.md).
+
+So remember to do `uv add gunicorn` and `uv sync`.
+
+uv run app.py:
+Flask’s built-in dev server.
+Single-process, auto-reload, debugger.
+Not hardened for production.
+
+gunicorn app:app:
+Production WSGI server.
+Multiple workers/threads, timeouts, graceful restarts.
+Better throughput and robustness.
+
+Then rebuild and:
+
+```sh
+docker run --rm -d --name flask-cms \
+  -p 5050:5050 \
+  -e CONTENT_DIR=/app/src/content \
+  flask-cms sh -lc "uv run gunicorn app:app -b 0.0.0.0:5050 --workers 2 --threads 4 --timeout 60"
+```
+
+We are good to move forward.
+
+Lets create the `docker-compose` for the flask web and just sping it via make:
+
+```sh
+make flask-up
+#curl -fsS http://127.0.0.1:5050/api/list 
+```
+
+The curl command should return you the list of folders, as part of the healthcheck of the compose.
+
+With that ready, next step is to add some custom login.
+
+As this is a one person app, Ill go the user/password way: this time, using [pocketbase](#flask-x-pocketbase)
 
 ### Flask x PocketBase
 
@@ -183,9 +244,38 @@ I was put in front of PB quite recently as I covered [here](https://jalcocert.gi
 
 And I could not wait to try this combination!
 
+> I asked windsurf for some architectural help on how to get PB to be the one dictating who logs in and who does not as per [this project doc](https://github.com/JAlcocerT/morita-astroportfolio-flasked/blob/main/pb-flask.md)
+
 So we will get a Flask Container + PB Container:
 
-https://github.com/JAlcocerT/Docker/tree/main/Dev/BaaS/PB
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/BaaS/PB" title="PB | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/morita-astroportfolio-flasked/blob/main/docker-compose-flask.yml" title="PB Docker-compose.yml in the project ↗" >}}
+{{< /cards >}}
+
+> I didnt manage to create the initial admin and pass programatically.
+
+But anyways:
+
+```sh
+make pb-build
+make pb-up
+```
+
+Will get your PB container spinned.
+
+Now we needed a script to create the user of the flask app (the ones who can get authenticated):
+
+```sh
+PB_ADMIN_EMAIL=you@example.com \
+PB_ADMIN_PASSWORD=change-me-strong \
+uv run scripts/create_user.py --email new.user@example.com --password change-me-strong
+```
+
+And now you can go to `localhost:5050/login` and see that you can get in with it/
+
+
+Just create your admin: `localhost:8080/_/` and lets move forward.
 
 That are working together.
 
@@ -204,3 +294,12 @@ Still, I wanted to try the integration.
 Time to share this.
 
 And time to bring yet one more container: **Traefik** for those https and stuff
+
+
+---
+
+## Conclusions
+
+### Mental health
+
+### Real Estate

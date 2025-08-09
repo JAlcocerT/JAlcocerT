@@ -159,6 +159,7 @@ If you are vibecoding, you can get a quick sample [Flask](https://jalcocert.gith
 Then, it can signup/in users and create posts:
 
 ```sh
+#https://github.com/JAlcocerT/Docker/tree/main/Dev/BaaS/PB
 cd ./Dev/BaaS/PB
 uv run flask_pocketbase_app.py 
 ```
