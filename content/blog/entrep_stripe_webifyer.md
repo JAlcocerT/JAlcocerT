@@ -1,5 +1,5 @@
 ---
-title: "How are you selling? Webify Edition"
+title: "How are you selling? Webify (v0.1) Edition"
 date: 2025-06-03T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Auth","Flask","LogTo","Stripe","SaaS Invoice/Billing","Formbricks"]
@@ -339,6 +339,14 @@ So how about choosing that subdomain, and getting it configured on the backend t
 ## Conclusions
 
 This was quite a ride.
+
+And it has been an interesting PoC for Webify, hence calling it v0.1.
+
+**Learnings**: Stripe working, Logto Auth working, umami tested with flask...even tried to edit few astro themes.
+
+> A good starting point, but I need to keep exploring
+
+> > Maybe tweaking themes and do so in a way to be editable and then add them to this *webify* platform for anyone to edit independently...
 
 Even porkbun is offering this kind of static hosting service for ~30$/year: https://porkbun.com/products/webhosting/staticHosting
 

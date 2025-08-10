@@ -76,8 +76,11 @@ But hey...I put them **manually into sqlite**:
 
 ```sh
 #https://github.com/JAlcocerT/Job-Trends
+git clone git@github.com:JAlcocerT/Job-Trends.git
+
 cd Job-Trends
-uv run manual_entry.py
+#uv sync
+uv run manual_entry.py #it.pracuj.pl
 ```
 
 ```sh
@@ -87,7 +90,26 @@ make plot-matplotlib
 
 And now we get...
 
+
+```sh
+chafa "./matplotlib_job_offers_plot_06-08-2025.png"
+```
+
 ![Job Market Trend | Matplotlib Job-Trends](/blog_img/data-experiments/matplotlib_job_offers_plot_06-08-2025.png)
+
+```sh
+# See what changed
+git status
+
+# Stage everything (or specify files instead of .)
+git add .
+
+# Commit with a message
+git commit -m "new data added"
+
+# Push to the current branch (first time sets upstream)
+git push -u origin "$(git rev-parse --abbrev-ref HEAD)"
+```
 
 Thats a matplotlib chart this time, instead of a plotly one.
 

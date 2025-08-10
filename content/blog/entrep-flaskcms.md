@@ -407,7 +407,20 @@ MODE=LANDING make run-dev
 
 3. And now these 2 astro+flaskCMS: [mentalhealth](#mental-health) and [real estate](#real-estate)
 
+What these are screaming is to have Logto+Stripe setup:
 
+
+
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/" title="Stripe x Flask - Webify v0.1" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Webify with Logto Auth working | POST" >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/docker-compose.env.yml/" title="Webify Repo and Container - Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask + Stripe + Logto working and containerized" >}}
+{{< /cards >}}
+
+
+
+But anyways, lets see how to better serve these: mental health and [re](#real-estate)
 
 ### Mental Health
 

@@ -24,6 +24,8 @@ I had pending to write **about Waiting List** as referenced on few previous post
 * https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy
 * https://jalcocert.github.io/JAlcocerT/product-tools/
 
+And for sure you have seen many waiting list on social media, like `https://throughthelyns.com/sms-challenge/sms-challange-landing/`
+
 
 ## SSG Astro Waiting List
 
