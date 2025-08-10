@@ -2,7 +2,7 @@
 title: "Bootstrap and other concepts for SoloPreneurs"
 date: 2025-08-06
 draft: false
-tags: ["SoloPreneur","Indie SaaS"]
+tags: ["SoloPreneur","Indie SaaS","Product"]
 description: 'Resources to launch your stuff.'
 url: 'whats-boostrap'
 ---

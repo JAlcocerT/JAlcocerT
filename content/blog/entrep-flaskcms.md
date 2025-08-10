@@ -100,7 +100,7 @@ rm -rf .git
 {{< /cards >}}
 
 
-You can just do:
+You can just do the *bare metal* development:
 
 ```sh
 npm install
@@ -459,7 +459,29 @@ So its time to bring some **upgrades to the project**:
 3. Bringing n8n and phase out the old streamlit recommendator webapp
 4. Streamlit Mortage calculator
 
+As in the meantime Ive been tinkering with astro components: *like this [image slider component](https://github.com/JAlcocerT/cybernetik-realestate-moises/blob/main/astro-nomy/src/components/ImageSlider.astro)*
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro" title="Astro Component | Whatsap Bouble ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/cybernetik-realestate-moises/blob/main/astro-nomy/src/components/InstagramGallery.astro" title="Astro Component | Make a in-post Gallery, zoomable and that allows to move to next  ↗" >}}
+{{< /cards >}}
+
+I took the landing and services part from screwfast.
+
+Then the idea of the `localhost:4321/property` section, that it is filterable by tags - from astro-nomy.
+
+Together with this [improved Instagram like gallery component](https://github.com/JAlcocerT/real-estate-moi/blob/main/ScrewFastMoiRealEstate/src/components/InstagramGallery.astro), with load more, zoom in and arrow key navigation.
 
 ```sh
+#first demo oct24 - https://github.com/IoTechCrafts/ScrewFastMoises
+
+#updates
+#https://github.com/JAlcocerT/cybernetik-realestate-moises #cybernetyk and astro-nomy themes + ig like galleries
+#https://github.com/JAlcocerT/ScrewFastMoiRealEstate #ScrapPhotosWebApp
+
 git clone https://github.com/JAlcocerT/real-estate-moi
+```
+
+```
+would it be possible to bring that same logic to the ScrewFastMoiRealEstate folder (where there is another astro theme) but instead that into the /blog section, we will have a /propety section?
 ```
