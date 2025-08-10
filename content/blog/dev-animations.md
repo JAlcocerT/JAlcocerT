@@ -3,18 +3,20 @@ title: "Creating Animated Data Stories | Data in Motion"
 date: 2025-07-04T18:20:21+01:00
 draft: false
 description: 'From Embedded Analytics into SSGs Websites to Data Driven Animations.'
-tags: ["Animations","Python","Matplotlib Animations","Youtube Shorts","Social Media"]
+tags: ["Animations","Python","Matplotlib Animations","Youtube Shorts","Social Media","Unfolding Data"]
 url: animations-as-a-code
 ---
 
-Not long ago I was tinkering with [AI/BI Tools](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/): ChartBrew, ChartDB, DB2Rest and [Streamlit x PyGWalker](#conclusions)
+Not long ago I was tinkering with [AI/BI Tools](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/).
+
+Among them (ChartBrew, ChartDB, DB2Rest) I was impressed by [Streamlit x PyGWalker](#conclusions)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="AI BI Tools Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
 {{< /cards >}}
 
-From there, I could not resist to **create this project**:
+From there, I could not resist to **create this project**: *there will be some [cool animations](#animations-with-python) coming...*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/#animations" title="Tinkering with Animations | Post" image="https://img.youtube.com/vi/YuvHXyFeRV4/hqdefault.jpg" subtitle="Posting to Twitter or Youtube those animations 101." >}}

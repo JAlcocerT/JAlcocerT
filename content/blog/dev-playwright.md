@@ -7,6 +7,11 @@ description: 'Playwright based WebApp with job trends info.'
 url: 'playwright-101'
 ---
 
+What are the chances to find a remote job still today?
+
+In theory they are not null: https://remoteok.com/
+
+But I wanted to keep checking to be ready for *bronversations*:
 
 <!-- ![Job Market Trend - Old version](/blog_img/data-experiments/job-market.png) -->
 
@@ -86,6 +91,6 @@ And now we get...
 
 Thats a matplotlib chart this time, instead of a plotly one.
 
-Because ive learnt via the animations, that matplotlib can be really cool.
+Because ive learnt via the [animations tinkering here](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/), that matplotlib can be really cool.
 
 > And job market is not bad lately...

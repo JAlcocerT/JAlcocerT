@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap and other concepts for SoloPreneurs"
-date: 2025-08-06
+date: 2025-09-06
 draft: false
 tags: ["SoloPreneur","Indie SaaS","Product"]
 description: 'Resources to launch your stuff.'
@@ -27,3 +27,9 @@ But what should a solopreneur get to know?
 ## Where to share
 
 * https://www.producthunt.com/products/make-bootstrappers-handbook
+
+
+---
+
+
+## Conclusions

@@ -472,6 +472,8 @@ Then the idea of the `localhost:4321/property` section, that it is filterable by
 
 Together with this [improved Instagram like gallery component](https://github.com/JAlcocerT/real-estate-moi/blob/main/ScrewFastMoiRealEstate/src/components/InstagramGallery.astro), with load more, zoom in and arrow key navigation.
 
+So, within the project folder:
+
 ```sh
 #first demo oct24 - https://github.com/IoTechCrafts/ScrewFastMoises
 
@@ -480,8 +482,81 @@ Together with this [improved Instagram like gallery component](https://github.co
 #https://github.com/JAlcocerT/ScrewFastMoiRealEstate #ScrapPhotosWebApp
 
 git clone https://github.com/JAlcocerT/real-estate-moi
+cd moirealestate-astro-theme
+
+#npm run dev -- --host 0.0.0.0 --port 4324
+sudo docker-compose up -d astro-dev
 ```
 
+And this works properly in dev:
+
+![Astro IG Gallery inpost for Properties](/blog_img/web/moi-realestate/ig-gallery.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro" title="Astro Component | Improved IG Gallery with local photos as per given folder ↗" >}}
+{{< /cards >}}
+
+Just making sure the build works:
+
+```sh
+#npm run build
+{ npx astro check --verbose || true; npx astro build --verbose; } |& tee build-logs.txt #check those long logs
+#head -n 200 build-logs.txt
+#tail -n 200 build-logs.txt #I got tons of errorson the build...while dev was all OK
+
+#npx http-server dist -p 4321 #and I could not find the results on ./dist
+#npx http-server .vercel/output/static -p 4321 #because this theme pushed them by default to other folder
 ```
-would it be possible to bring that same logic to the ScrewFastMoiRealEstate folder (where there is another astro theme) but instead that into the /blog section, we will have a /propety section?
+
+> It was all due to the `process-html.mjs`
+
+> > So after configuring the `astro.config.mjs`, the built files are going to `./dist` and this works:
+
+```sh
+npx http-server dist -p 4321
+sudo docker-compose build astro-prod
+sudo docker-compose up -d astro-prod
+docker logs -f astro-prod
 ```
+
+The `package.json` will be picky if you keep:
+
+```json
+    "build": "astro check && astro build && node process-html.mjs",
+```
+
+Which can be replaced by:
+
+```json
+"build": "astro build && node process-html.mjs"
+```
+
+```sh
+# sudo npm run build
+# npx http-server dist -p 4321
+sudo docker-compose build astro-prod
+sudo docker-compose up -d astro-prod
+docker logs -f astro-prod
+```
+
+All reeeady: `curl -I http://localhost:8087`
+
+{{< callout type="info" >}}
+Remember to update the `astro.config.mjs` with the **site variable**.
+{{< /callout >}}
+
+Well, no.
+
+I still wanted to tweak the theme so that the main content can be easily tweakable.
+
+#### FlaskCMS x Quick Auth
+
+This time i vibecoded a flask web app that just allows one user/password to login/out: `HARD_USER` and `HARD_PASS`
+
+Which is configured via environment variable, so that things move quickly.
+
+It will just allow to upload photos to a location (also as per env), where the real estate galleries will formed: `UPLOAD_ROOT`
+
+![Uploading real estate photos via Flask](/blog_img/web/moi-realestate/flask-cms-simpe-login.png)
+
+> It looks to the same place where the improved gallery component is searching for content
