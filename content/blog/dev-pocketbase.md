@@ -220,6 +220,13 @@ People are building in public: https://www.reddit.com/r/pocketbase/comments/1cfn
 
 >  MCP server for building PocketBase apps really quickly - Need a front end quick consider FastPocket 
 
+### PB x Collections JS
+
+I was wondering how to get specific pb collections initialize from the first moment.
+
+I tried to do some py script that setup the collections I need.
+
+But it seems that there is another way: via `./pb_migrations/*.json` files
 
 ## Redux
 

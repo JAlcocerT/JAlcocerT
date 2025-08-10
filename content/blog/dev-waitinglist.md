@@ -18,7 +18,7 @@ And yet, you can have some idea by listening what your potential client *say tha
 
 > They might change their mind while you build the solution though :)
 
-I had pending to write about Waiting List as referenced on few previous posts:
+I had pending to write **about Waiting List** as referenced on few previous posts:
 
 * Future Ideas with Reflex WebApps: https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#ideas-with-reflex
 * https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy
@@ -138,7 +138,13 @@ This time, with a **python questionary script**, instead of the flask based that
 
 Now, we have a tweaked theme that serves as both, a **waiting list and a landing page**.
 
-Connected to a formbrick Form which outputs its data into a google sheet.
+Connected to a [formbrick Form](https://app.formbricks.com/s/cmdxm7avj0zgjw001z2q5qtp0) which can output its data into a google sheet.
+
+From there, you have to be creative on your form questions and what to do later on.
+
+You can get ideas to shape your products.
+
+> Listen to the people!
 
 **How to run the asto waiting/landing page?**
 
@@ -156,6 +162,12 @@ git clone https://github.com/JAlcocerT/waiting-to-landing
 #make help
 make local-waiting
 ```
+
+> Dont forget to update properly [the `.env`](https://github.com/JAlcocerT/waiting-to-landing/blob/main/.env#L19)
+
+> > It brings the formbricks details, title, prefix...
+
+![Astro Waiting List + Formbricks URL Link](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
 
 **Whats next?**
 

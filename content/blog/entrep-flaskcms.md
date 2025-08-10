@@ -12,6 +12,8 @@ Because of the makereadme project and this [related post](https://jalcocert.gith
 
 I got to know about: *its possible to edit md from webapps!*
 
+> So Ive done few things with [SSGs + Flask lately](#conclusions)
+
 * https://github.com/sparksuite/simplemde-markdown-editor
 
 * https://github.com/pandao/editor.md
@@ -383,8 +385,31 @@ And time to bring yet one more container: **Traefik** for those https and stuff
 
 ## Conclusions
 
-### Mental Health
+Ive been tinkering lately with **ssg's+flask**:
 
+1. From a quick waiting list that can be swapped to a landing page, covered [here](https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/)
+
+* https://github.com/JAlcocerT/waiting-to-landing
+
+```sh
+git clone git@github.com:JAlcocerT/waiting-to-landing.git
+cd waiting-to-landing
+
+#make run-dev #will spin a waiting list connected to formbricks (see the .env vars)
+MODE=LANDING make run-dev
+```
+
+![alt text](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
+
+2. To making HUGO greater (and connecting a flaskCMS)
+
+* https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/
+
+3. And now these 2 astro+flaskCMS: [mentalhealth](#mental-health) and [real estate](#real-estate)
+
+
+
+### Mental Health
 
 ```sh
 git clone git@github.com:JAlcocerT/morita-astroportfolio-flasked.git
@@ -591,3 +616,9 @@ SECRET_KEY="$(openssl rand -base64 32)" CMS_USER=myuser CMS_PASS=securepass make
 ```
 
 ![alt text](/blog_img/web/moi-realestate/flaskcms-cf-admin.png)
+
+I later added a way to enable **creation new folders and deleting photos** (only inside the `CMS_UPLOAD_ROOT`)
+
+```sh
+CMS_ENABLE_MKDIR=true CMS_ENABLE_DELETE=true uv run app.py
+```
