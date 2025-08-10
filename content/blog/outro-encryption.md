@@ -44,6 +44,13 @@ openssl rand -base64 12 #for secrets
 openssl rand -hex 32 #for apikeys
 ```
 
+For flask cookies secrets:
+
+```sh
+# ~256-bit
+openssl rand -base64 32
+```
+
 Those come very handy when deploying containers.
 
 > Let's break down the SHA-256 protocol

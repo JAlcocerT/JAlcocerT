@@ -166,7 +166,13 @@ This superseeds the telegram bot thing that I plugged [here to the theme](https:
 
 And the filebrowser + Hugo approach described [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#filebrowser-x-hugo)
 
+All that people wants is a simple UI to upload images with this kind of themes.
+
+So why not doing so via Flask?
+
 #### EntreAgujayPunto Updates
+
+
 
 #### EnjoyLittleThings Updates
 

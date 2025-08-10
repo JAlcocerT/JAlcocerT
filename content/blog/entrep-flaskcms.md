@@ -560,3 +560,34 @@ It will just allow to upload photos to a location (also as per env), where the r
 ![Uploading real estate photos via Flask](/blog_img/web/moi-realestate/flask-cms-simpe-login.png)
 
 > It looks to the same place where the improved gallery component is searching for content
+
+Spin the Flask web app with custom user/password and proper [secret key](https://jalcocert.github.io/JAlcocerT/encryption-101/) via:
+
+```sh
+docker compose -f /home/jalcocert/Desktop/IT/real-estate-moi/moirealestate-flaskcms/docker-compose.yml up -d --build
+SECRET_KEY="$(openssl rand -base64 32)" CMS_USER=myuser CMS_PASS=securepass docker compose up -d
+```
+
+* Flask SECRET_KEY: It’s the key Flask uses to sign session cookies (and other signed data like flash messages).
+  * Why it matters: If someone knows your `SECRET_KEY`, they can forge session cookies (e.g., log in as someone else).
+  * It must be secret, random, and not committed to git.
+
+> This flask real estate uploader is documented on [this .md](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-flaskcms/flask-architecture.md)
+
+#### Quick Deploy to HomeLab
+
+```sh
+git clone git@github.com:JAlcocerT/real-estate-moi.git
+cd real-estate-moi
+
+make flaskcms-build
+docker inspect moirealestate-flaskcms --format '{{json .NetworkSettings.Networks}}' | jq
+```
+
+To pass all the goodies via CLI:
+
+```sh
+SECRET_KEY="$(openssl rand -base64 32)" CMS_USER=myuser CMS_PASS=securepass make flaskcms-up
+```
+
+![alt text](/blog_img/web/moi-realestate/flaskcms-cf-admin.png)
