@@ -2,12 +2,12 @@
 title: "One link for Social Bios: LinkinBios vs Bento like websites"
 date: 2025-01-24
 draft: false
-tags: ["OSS"]
+tags: ["OSS","Web",HomeLab]
 description: 'Simple Link/Bento Website Hosting Services. SSGs vs Selfhostable LittleLink and LinkStack.'
 url: 'linktree-web-alternative'
 ---
 
-I know we cant know about everything.
+I know, we cant know about everything.
 
 But the amount of close people that its trying to build something on social media, yet does not have a website still amazes me.
 
@@ -57,7 +57,7 @@ The long overdue topic of SSG + CMS... one day ill have to cover that up!
 ## SelfHosted Solutions for LinkinBio
 
 
-See these container config files: 
+See these container **config files**: 
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/CMS" title="Web CMSs | Container Configs 🐋 ↗" >}}
@@ -85,9 +85,11 @@ See the config file [here](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS
 * Add also custom WebAn tools `http://192.168.0.155/admin/config#2`
 * Allows for instance backups via UI `http://192.168.0.155/admin/config#3`
 
->  A simple to set up [docker variant of LinkStack](https://github.com/linkstackorg/linkstack-docker). LinkStack is a highly customizable link sharing platform with an intuitive, easy to use user interface. 
+>  A simple to set up [docker variant of **LinkStack**](https://github.com/linkstackorg/linkstack-docker).
 
-Both are really light weight to use even on Raspberry Pis:
+> > LinkStack is a highly customizable link sharing platform with an intuitive, easy to use user interface. 
+
+Both are **really light weight** to use even on Raspberry Pis:
 
 ```sh
 #htop

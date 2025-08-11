@@ -228,6 +228,26 @@ I tried to do some py script that setup the collections I need.
 
 But it seems that there is another way: via `./pb_migrations/*.json` files
 
+* https://pocketbase.io/docs/js-migrations/
+* https://deepwiki.com/pocketbase/pocketbase/7-migrations-system
+
+```sh
+#docker volume ls
+docker volume prune -f
+docker volume ls -f dangling=true
+docker system df -v
+
+#sudo docker prune
+#docker system prune -a
+#docker system prune -a --volumes
+```
+
+Adding a timestamp string to get trazability:
+
+```sh
+touch devops/pocketbase/pb_migrations/$(date +%s)_created_my_collection.js
+```
+
 ## Redux
 
 
