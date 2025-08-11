@@ -4,8 +4,11 @@ date: 2025-08-30T01:20:21+01:00
 draft: false
 tags: ["Dev"]
 description: 'Selfhosting Updates: Leds and API with the Pi'
-url: 'selfhosted-apps-aug-2025'
+url: 'selfhosted-apps-autumn-2025'
 ---
+
+
+Summer is almost gone...
 
 
 

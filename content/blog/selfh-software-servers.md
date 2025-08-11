@@ -3,11 +3,11 @@ title: "Software for Servers"
 date: 2025-05-31T01:20:21+01:00
 draft: false
 tags: ["PaaS","HomeLab","Entrepreneuring"]
-description: 'Selfhosted Apps that simplify my workflow as of May 2025: LocalStack,  DokPloy, Runtipi'
+description: 'Selfhosted Apps that simplify my workflow as of May 2025: LocalStack, DokPloy, Runtipi...'
 url: 'selfhosted-server-paas'
 ---
 
-Few months ago, I wrote about [different PaaS Tools](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/)
+Few months ago, I wrote about [different **PaaS** Tools](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/)
 
 Among which, [Dokploy](#dokploy) resonated a lot with me.
 

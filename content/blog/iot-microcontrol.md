@@ -1,8 +1,8 @@
 ---
 title: "[IoT] Setup RPi Pico W and ESP32 MicroControllers"
-date: 2025-09-02
+date: 2025-08-15
 draft: false
-tags: ["Tinkering"]
+tags: ["Tinkering","Solar Panel"]
 description: What Ive learnt while using a ESP32 and a Raspberry Pi Pico W [Microcontrollers]
 url: 'microcontrollers-setup-101'
 ---
@@ -14,7 +14,7 @@ Last year I bough a couple of **companions for my Raspberry Pi 4 2GB**:
 
 And Recently, this new release got my attention:
 
-![alt text](/blog_img/iot/pis-esp32.jpg)
+![Pi and ESP32](/blog_img/iot/pis-esp32.jpg)
 
 3. Raspberry Pi Pico 2 -  A brand new model, with both **ARM and RISC-V cores**
 

@@ -49,7 +49,7 @@ People keep doing awsome stuff: *this time with solar energy*
 
 {{< youtube "Alx_vwyksTw" >}}
 
-I expect to write a post about solar panels soon (relating it with micro-controllers).
+I expect to write a post about solar panels *soon* (relating it with micro-controllers).
 
 
 ## Improvements
