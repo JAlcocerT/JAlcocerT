@@ -248,6 +248,9 @@ Adding a timestamp string to get trazability:
 touch devops/pocketbase/pb_migrations/$(date +%s)_created_my_collection.js
 ```
 
+If you **define those collections**with proper syntax, you will get them initialized from the get to when you run the PB container.
+
+
 ## Redux
 
 
@@ -255,4 +258,12 @@ touch devops/pocketbase/pb_migrations/$(date +%s)_created_my_collection.js
 
 ## Conclusions
 
-I got to know along the way about: https://deepwiki.com/pocketbase/pocketbase
+I got to know along the way about: 
+
+1. https://deepwiki.com/pocketbase/pocketbase
+
+Which provides info about many libraries
+
+2. Connect your backend to your client libraries and frameworks https://github.com/get-convex/convex-backend
+
+

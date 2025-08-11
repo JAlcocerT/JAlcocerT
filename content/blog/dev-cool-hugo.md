@@ -170,10 +170,77 @@ All that people wants is a simple UI to upload images with this kind of themes.
 
 So why not doing so via Flask?
 
+> This is my first try: https://github.com/JAlcocerT/hugo-theme-gallery-flasked
+
+> > At some point...could UI be modifed via Flask as per Codex commands? Who knows...
+
 #### EntreAgujayPunto Updates
 
 
 
 #### EnjoyLittleThings Updates
 
+
+
 ### FossEngineer Updates
+
+**PaperMod** has been great.
+
+```sh
+git clone https://gitlab.com/fossengineer1/fossengineerpapermod
+cd fossengineerpapermod
+hugo server
+# Start building sites … 
+# hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d linux/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio
+
+#                    | EN   
+# -------------------+------
+#   Pages            | 228  
+#   Paginator pages  |  63  
+#   Non-page files   |   0  
+#   Static files     | 248  
+#   Processed images |   0  
+#   Aliases          |  45  
+#   Sitemaps         |   1  
+#   Cleaned          |   0  
+
+# Built in 759 ms
+```
+
+The first HUGO Theme that I tried.
+
+But I feel like I need now something more than a blog like theme for this project.
+
+I like the doc feeling of **Hextra**.
+
+#### Shortcode to parse YML
+
+I was thinking on a way to have proper mantainance of the `docker-compose` on the posts.
+
+As im just one, I thought to take help from others (and also take feedback).
+
+Some kind of general readme would be fine, like: https://github.com/rokbenko/ai-playground/tree/main
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://gitlab.com/fossengineer1/fossengineerpapermod/-/blob/main/layouts/shortcodes/includeyaml.html?ref_type=heads" title=" HUGO Shortcode | Parsing ymls into blog posts  ↗" >}}
+{{< /cards >}}
+
+This shortcode looks into `./assets/snippets` and just renders the content into the markdown post:
+
+```md
+{{< includeyaml "assets/snippets/it-tools/Dockerfile" linenos="true" >}} #
+{{< includeyaml path="assets/snippets/it-tools/Dockerfile" lang="dockerfile" >}} #forcing a language
+```
+
+<!-- {{< includeyaml "assets/snippets/it-tools/docker-compose.yml" >}}
+
+### Dockerfile example
+
+{{< includeyaml "assets/snippets/it-tools/Dockerfile" >}} -->
+
+
+####
+
+
+

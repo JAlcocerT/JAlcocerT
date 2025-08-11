@@ -24,8 +24,13 @@ I had pending to write **about Waiting List** as referenced on few previous post
 * https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy
 * https://jalcocert.github.io/JAlcocerT/product-tools/
 
-And for sure you have seen many waiting list on social media, like `https://throughthelyns.com/sms-challenge/sms-challange-landing/`
+And for sure you have seen many waiting list on social media, like:
 
+* `https://throughthelyns.com/sms-challenge/sms-challange-landing/`
+* `https://prospactive.nl/funnel-system`
+* `https://www.thecreatorproject.com/live`
+* `https://agencysupremacy.io/winning-ad-templates-f1`
+* `https://bewebtec.com/calendly-routing/`
 
 ## SSG Astro Waiting List
 

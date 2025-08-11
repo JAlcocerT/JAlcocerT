@@ -10,6 +10,8 @@ url: 'ai-driven-ebooks'
 
 I got inspired recently by the concept of: https://readmake.com/
 
+And some people are selling this kind of things on social media: `https://altagency.com/guide/`
+
 
 Together with the *build in public*, which it seems to be a thing.
 

@@ -194,6 +194,8 @@ The TTS capabilities from these were also useful:
 * https://aistudio.google.com/generate-speech
 * https://platform.openai.com/audio/realtime
 
+> I also came to know: https://github.com/speaches-ai/speaches which is *the ollama for TTS*
+
 2. [ChartJS](https://www.chartjs.org/docs/latest/charts/line.html) Powered Shorts
 
 I also got to know about: https://echarts.apache.org/en/index.html

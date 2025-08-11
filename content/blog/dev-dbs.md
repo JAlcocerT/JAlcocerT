@@ -7,6 +7,17 @@ description: 'What are pros and cons of popular DBs: SQlite, PostgreSQL and thei
 url: 'databases-101'
 ---
 
+Not all DB's are useful for the same.
+
+Interesting revelations after trying pocketbase (which uses sqlite)
+
+
+I will cover:
+
+1. Sqlite
+2. PostgreSQL
+3. MariaDB: because I like it for SelfHosting
+
 
 ## SQLite
 
@@ -101,3 +112,8 @@ PostgreSQL is a **robust, client-server** database management system. It's an id
 * **Complex Setup**: Setting up and managing a PostgreSQL server is more complex than using SQLite and requires more administrative effort.
 * **Higher Resource Usage**: It is a more heavyweight solution and consumes more system resources (CPU and RAM) than SQLite.
 * **Slower for Simple Tasks**: The overhead of the client-server model can make it slightly slower for very simple, single-user operations compared to a local SQLite file.
+
+## MariaDB
+
+
+## Conclusions

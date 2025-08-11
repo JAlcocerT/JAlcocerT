@@ -127,15 +127,18 @@ I tried first [Neuromarketing with openAI](https://github.com/JAlcocerT/Streamli
 
 Using already a SSG for your websites?
 
-If a LLM can write markdown...why not using it to create posts assisted with AI?
+If a LLM can write markdown...
+
+why not using it to create posts assisted with AI?
 
 ### Youtube Stuff
 
 There are great videos out there.
 
-#### YT Summarizer and More
+But they are hidden between...too much fluff...
 
-But there are hidden between...too much fluff.
+
+#### YT Summarizer and More
 
 But the PhiData team put together an awsome idea that I decided to Fork and bundle automatically in a Container for further reach...
 

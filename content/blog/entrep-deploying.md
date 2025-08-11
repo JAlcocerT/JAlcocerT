@@ -69,3 +69,10 @@ Its up to you:
 1. Get a [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#energy-x300), get a ~15w avg at 0,25eur/kwh will cost you ~32eur/y (or 2,74 a month)
 
 2. Deploy on one of these smaller servers for a little bit more of the price, but you forget about the initial costs.
+
+### Goodies for Servers
+
+
+Dont forget about fail2ban:
+
+* https://akashrajpurohit.com/blog/fail2ban-protecting-your-homelab-from-brute-force-attacks/

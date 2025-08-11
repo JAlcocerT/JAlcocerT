@@ -2,11 +2,13 @@
 title: "Interacting with SSGs and md via Flask"
 date: 2025-08-09
 draft: false
-tags: ["Astro x Flask","PocketBase","n8n"]
+tags: ["Astro x Flask","PocketBase","n8n","Markdown editors"]
 description: 'Markdown and FlaskCMS that works for Mental Health and Real Estate'
 url: 'making-flask-cms-for-ssg'
 ---
 
+
+**TL;DR** I love SSGs and markdown. Tinkering with markdown web editors to make SSG edition more accesible
 
 Because of the makereadme project and this [related post](https://jalcocert.github.io/JAlcocerT/make-slidev/)
 
@@ -24,6 +26,19 @@ I got to know about: *its possible to edit md from webapps!*
   * https://ui.toast.com/tui-editor
 
 > MIT | 🍞📝 Markdown WYSIWYG Editor. GFM Standard + Chart & UML Extensible.
+
+* https://github.com/styledown/styledown
+
+>  Markdown-based styleguide generator 
+
+* https://github.com/zuck/alighieri
+  * https://snapcraft.io/alighieri
+
+```sh
+sudo snap install alighieri
+```
+
+> **MIT**  A distraction-free tool for novelists and writers (Desktop and PWA)
 
 
 {{% details title="About SimpleMDE, editormd, toast UI editor... 🚀" closed="true" %}}
