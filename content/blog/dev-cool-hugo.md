@@ -228,8 +228,10 @@ Some kind of general readme would be fine, like: https://github.com/rokbenko/ai-
 
 This shortcode looks into `./assets/snippets` and just renders the content into the markdown post:
 
+<!-- 
 * `{{< includeyaml "assets/snippets/it-tools/Dockerfile" linenos="true" >}} #`
-* `{{< includeyaml path="assets/snippets/it-tools/Dockerfile" lang="dockerfile" >}} #forcing a language`
+* `{{< includeyaml path="assets/snippets/it-tools/Dockerfile" lang="dockerfile" >}} #forcing a language` 
+-->
 
 <!-- {{< includeyaml "assets/snippets/it-tools/docker-compose.yml" >}}
 
