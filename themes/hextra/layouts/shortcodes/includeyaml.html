@@ -1,0 +1,40 @@
+{{- /* Shortcode: includeyaml (generic include with highlighting)
+Usage:
+  Positional: {{< includeyaml "path/to/file" >}}
+  Named:      {{< includeyaml path="path/to/file" >}}
+  Optional:   {{< includeyaml path="Dockerfile" lang="dockerfile" linenos="true" >}}
+
+Notes:
+- If lang is not provided, it will be auto-detected from extension or filename (Dockerfile, .yml/.yaml, .json, .toml, .sh/.bash).
+- Requires security.filesystem.allow in site config only for absolute paths outside the project.
+*/ -}}
+{{- $path := .Get "path" | default (.Get 0) -}}
+{{- $lang := .Get "lang" -}}
+{{- $linenos := .Get "linenos" | default "false" -}}
+{{- if not $path -}}
+  <div class="notice warning">includeyaml: missing path parameter</div>
+{{- else -}}
+  {{- if not (fileExists $path) -}}
+    <div class="notice error">includeyaml: file not found or not allowed by security.filesystem.allow: {{$path}}</div>
+  {{- else -}}
+    {{- if not $lang -}}
+      {{- $base := path.Base $path -}}
+      {{- $ext := lower (path.Ext $path) -}}
+      {{- if or (eq $base "Dockerfile") (hasPrefix $base "Dockerfile") -}}
+        {{- $lang = "dockerfile" -}}
+      {{- else if or (eq $ext ".yml") (eq $ext ".yaml") -}}
+        {{- $lang = "yaml" -}}
+      {{- else if eq $ext ".json" -}}
+        {{- $lang = "json" -}}
+      {{- else if eq $ext ".toml" -}}
+        {{- $lang = "toml" -}}
+      {{- else if or (eq $ext ".sh") (eq $ext ".bash") -}}
+        {{- $lang = "bash" -}}
+      {{- else -}}
+        {{- $lang = "text" -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $content := readFile $path -}}
+    {{- highlight $content $lang (printf "linenos=%s" $linenos) -}}
+  {{- end -}}
+{{- end -}}

@@ -1,8 +1,8 @@
 ---
-title: "Geospatial Data Tricks and a GoPro"
+title: "Geospatial Data Tricks and a GoPro!"
 date: 2025-01-05T23:20:21+01:00
 draft: false
-tags: ["Dev","FFMPeg","Python GeoData","PhyPhox"]
+tags: ["Dev","FFMPeg","Python GeoData","PhyPhox","GPX"]
 description: 'What Ive learnt so far about GeoSpatial/Geolocation Data Analysis. Applied to GoPro MetaData and Telemetry Extraction. And karting!'
 url: 'geospatial-data'
 math: true
@@ -37,7 +37,13 @@ While [riding bikes](https://jalcocert.github.io/JAlcocerT/buying-bicycle-throug
 Phone apps like Komoot or even [PhyPhox can save the GPS records as GPX files](https://www.leafwindow.com/en/get-gps-log-with-phyphox-and-plot-it-with-wp-gpx-maps-en/)
 
 
-https://github.com/exiftool/exiftool/blob/master/fmt_files/gpx.fmt
+* https://github.com/exiftool/exiftool/blob/master/fmt_files/gpx.fmt
+
+
+{{< rawhtml >}} 
+<iframe src="/videos/Output_map_PL-SK-HU.html"
+style="width: 454px; height: 454px;"></iframe>
+{{< /rawhtml >}}
 
 ## GoPro Metadata Extraction
 
