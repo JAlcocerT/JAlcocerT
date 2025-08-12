@@ -209,6 +209,31 @@ And these sample webapps with their code:
 {{< /cards >}}
 
 
+PB uses sqlite!
+
+1. you have a `pb_data/data.db` that you can inspect with a client:
+
+```sh
+ sqlite3 ./data.db
+#SQLite version 3.37.2 2022-01-06 13:25:41
+#Enter ".help" for usage hints.
+sqlite> .tables
+# _authOrigins           _params                knowledge_source_tags
+# _collections           _superusers            knowledge_sources    
+# _externalAuths         agent_types            role_prompts         
+# _mfas                  chat_model_info        users                
+# _migrations            chat_models          
+# _otps                  knowledge_source_info
+# sqlite> 
+```
+
+* https://kerkour.com/sqlite-for-servers
+
+
+pb is concurrent for reads (select and with)
+nonconcurrent for writes/updates of data!!!
+
+2. `./pb_hooks` and `./pb_migrations` folder are checked first whenever PB gets intialized (its configures any initial collections for example)
 
 ### PocketBase x Stripe
 
@@ -232,10 +257,20 @@ But it seems that there is another way: via `./pb_migrations/*.json` files
 * https://deepwiki.com/pocketbase/pocketbase/7-migrations-system
 
 ```sh
+#docker stop $(docker ps -a -q) #stop all
+#docker kill $(docker ps -q)
+
+#make up-local-setup
+du -sh ./* | sort -h
+```
+
+```sh
 #docker volume ls
 docker volume prune -f
 docker volume ls -f dangling=true
 docker system df -v
+#docker volume ls -q | grep -v '^portainer_data$'
+#docker volume rm $(docker volume ls -q | grep -v '^portainer_data$')
 
 #sudo docker prune
 #docker system prune -a
@@ -250,6 +285,7 @@ touch devops/pocketbase/pb_migrations/$(date +%s)_created_my_collection.js
 
 If you **define those collections**with proper syntax, you will get them initialized from the get to when you run the PB container.
 
+Fast API: http://localhost:3900/docs
 
 ## Redux
 

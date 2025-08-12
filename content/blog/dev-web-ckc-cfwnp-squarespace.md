@@ -2,7 +2,7 @@
 title: "Crafting a Website for Knitting. Blog and more. "
 date: 2024-09-23
 draft: false
-tags: ["dev"]
+tags: ["dev","SSG","Astro"]
 descripton: 'SquareSpace to Cloudflare. From Firebase and Google Domains to Web a with Cloudflare Pages'
 url: 'squarespace-to-cloudflare-website'
 ---
@@ -34,6 +34,8 @@ Once updated, we can **connect** the real domains with the build.
 ![Custom Domain CKC - DNS Records Working](/blog_img/web/success2-ckc/CF-WnP-DNS-CKC.png)
 
 ## CKC Conclusions
+
+CozyKnittingClub website is updated!
 
 {{< details title="Website Checks before delivery 📌" closed="true" >}}
 

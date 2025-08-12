@@ -9,7 +9,9 @@ url: 'playwright-101'
 
 What are the chances to find a remote job still today?
 
-In theory they are not null: https://remoteok.com/
+In theory they are not null.
+
+As per `https://remoteok.com/` or `https://www.levels.fyi/t/software-engineer/locations/warsaw-metropolitan-area`
 
 But I wanted to keep checking to be ready for *bronversations*:
 

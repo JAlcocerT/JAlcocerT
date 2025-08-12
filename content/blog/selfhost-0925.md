@@ -20,7 +20,6 @@ Summer is almost gone...
 
 https://github.com/appleimperio/docker-hyperhdr
 
-
 > MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
 
 ### HA
@@ -118,3 +117,36 @@ sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
 * **Often Free of Charge (as in freedom and price):** While some open-source projects might offer paid support or enterprise features, the core functionality is usually free to use.
 
 When choosing an alternative, consider your specific needs, such as the protocols you work with, the importance of collaboration features, whether you prefer a GUI or CLI, and your comfort level with community-supported software. All the options listed above are viable and actively developed, offering strong alternatives to Postman's free tier without the proprietary aspects of the full Postman platform.
+
+## Conclusions
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs" >}}
+{{< /cards >}}
+
+
+### Lately I...
+
+
+1. Tried [Zen browser](https://github.com/zen-browser/desktop/releases/tag/1.14.11b): https://zen-browser.app/download/
+
+With CTRL+ALT+C it gets really compact
+
+```sh
+flatpak install flathub app.zen_browser.zen
+```
+> Welcome to a calmer internet | Firefox based 
+
+> > Zen offers a "Sync" feature, which is implemented using Mozilla Firefox's Sync feature.
+
+**Had a look to couple of tools for diagrams**
+
+2. https://github.com/stan-smith/FossFLOW
+
+>  Make beautiful isometric infrastructure diagrams 
+
+3. https://markmap.js.org/ and https://github.com/markmap/markmap
+
+It renders text to diagram and can reference files: https://gist.githubusercontent.com/raw/af76a4c245b302206b16aec503dbe07b/markmap.md
+
+> MIT | Build mindmaps with plain text 

@@ -45,7 +45,7 @@ Isnt it great?
 
 ![MakeReadMe UI](/blog_img/entrepre/public-build/makeslidev/makereadme-live-edit.png)
 
-It can edit markdown and see the result live!
+It can **edit markdown** and see the result live!
 
 No CMS, nor headless CMS.
 

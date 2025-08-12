@@ -3,7 +3,7 @@ title: "Interacting with SSGs and md via Flask"
 date: 2025-08-09
 draft: false
 tags: ["Astro x Flask","PocketBase","n8n","Markdown editors"]
-description: 'Markdown and FlaskCMS that works for Mental Health and Real Estate'
+description: 'Markdown and FlaskCMS v0.1 that works for Mental Health and Real Estate'
 url: 'making-flask-cms-for-ssg'
 ---
 
@@ -39,6 +39,14 @@ sudo snap install alighieri
 ```
 
 > **MIT**  A distraction-free tool for novelists and writers (Desktop and PWA)
+
+* You also have **Ghostwritter** https://ghostwriter.kde.org/download/#linux as a desktop app to edit markdown
+
+```sh
+sudo add-apt-repository ppa:wereturtle/ppa
+sudo apt update
+sudo apt install ghostwriter
+```
 
 
 {{% details title="About SimpleMDE, editormd, toast UI editor... 🚀" closed="true" %}}

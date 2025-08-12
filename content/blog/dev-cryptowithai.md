@@ -701,7 +701,7 @@ Bitcoin, Ethereum, Solana, and Polkadot: A Comparative Overview
 
 **Open-Source Wallets**
 
-* **Bitcoin:** Electrum, Bitcoin Core, Mycelium
+* **Bitcoin:** Electrum, Bitcoin Core, Mycelium. You also have [Proton Wallet](https://github.com/protonwallet/)
 
 ```sh
 #flatpak install flathub org.electrum.electrum

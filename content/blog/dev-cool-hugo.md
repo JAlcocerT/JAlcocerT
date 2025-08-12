@@ -58,6 +58,7 @@ If your go and hugo version allows:
 ```sh
 #hugo server
 hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.7" --port=1319
+#hugo
 ```
 
 ![HUGO Theme Gallery](/blog_img/web/hugo-theme-gallery.png)

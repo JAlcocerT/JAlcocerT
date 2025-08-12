@@ -38,7 +38,8 @@ I took inspiration on the **MIT astro theme**:
 
 * https://github.com/unoforge/agency-landing-page-Astrojs
 
->  A simple agency landing page made with astrojs and tailwindcss 
+>  MIT | A simple agency landing page made with astrojs and tailwindcss 
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Astro Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Forked and Tweaked Astro Theme" >}}
@@ -191,6 +192,10 @@ make local-landing
 ```
 
 ### Astro Landing Pages / Book Pages
+
+* You can see how cool can astro be for landing pages: https://github.com/Enmamosley/astro-landing-page
+
+> CC4.0 |  Landing page blackspike 
 
 I was creating other *landing pages* and wrote about it:
 

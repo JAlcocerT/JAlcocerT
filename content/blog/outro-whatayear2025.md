@@ -81,21 +81,38 @@ But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-anal
 <!-- https://www.youtube.com/watch?v=YgJ5ZEn67tk -->
 {{< youtube "YgJ5ZEn67tk" >}}
 
-5. Quote
+An example? 
+
+Could [the aissistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main) have any additional feature?
+
+Just not to *leave money on the table*?
+
+A person cant solve all problems at the same time
+
+5. Quotes
 
 > *What are you afraid of loosing if you wont take any with you?*
+
+> *Punishment fades but reward stayes*
 
 6. Guesstimates
 
 7. Business KPIs: CAC, EBITDA, LTV, NRR,...
 
-An example? 
-
-Could [the aissistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main) have any additional feature not to *leave money on the table*?
-
 8. Mental **Obesity**. Which relates with bikeshedding and the [enless student syndrome](https://youtu.be/QFH-_exyNoo?si=yToM8KSBbT0V5xG3)
 
+> Mental obesity (information vs execution) ig post
+
 From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael Easter) https://open.spotify.com/episode/6EDcPmRd6HHh2zdDnapEFS
+
+9. Time is the currency of life
+
+10. Authenticity is how you behave when you have no risk of punishment
+
+11. Some *unrelated* blog & posts:
+
+* https://kerkour.com/writing-against-the-global-lobotomy
+
 
 ## Processes
 
@@ -271,7 +288,7 @@ Together with a better and more organized repository:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Trip Planner Post" image="https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png" subtitle="Weather Trends with Python" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs" >}}
 {{< /cards >}}
   
 That one I want to keep it minimalistic and very simple to replicate.

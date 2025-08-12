@@ -37,6 +37,7 @@ I got inspired to write this post and created in public a way for any one to sel
 
 2. Reddit...
 
+* https://www.reddit.com/r/selfhosted/comments/vyk6dm/top_opensource_crm/
 
 ### Where to share
 
@@ -88,8 +89,18 @@ Time to put something together, for when you are about to build in public, creat
     * What sounds better than privacy?
     * Is your Business performing at 100%? Here is the best/easiest way to find out
         * Measure, Check, Act
+    * Blinded pa lazyness?
+    * A friend told me that this will fail as people on ig has really nothing to say
+      * Lets proove him wrong
 
-
+* Interesting catchy sentences:
+  * Pollo hecho en serio y no en serie
+  * Hay una casa para cada persona, hay una app para todas las casas.
+  * Lets sea
+  * We ve bean waiting for you (coffee)
+  * Make IT happen
+  * Fotografiamos historias de amor. 
+    * La historia la escribís vosotros; nosotros la contaremos con imágenes.
 
 
 ---
