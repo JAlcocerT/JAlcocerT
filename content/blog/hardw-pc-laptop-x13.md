@@ -2,7 +2,7 @@
 title: "Reviewing a Laptop: ThinkPad x13-G2"
 date: 2024-10-04T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Hardware"]
 description: Checking my new Laptop - The Lenovo ThinkPad x13
 url: laptop-lenovo-thinkpad-x13-benchmark
 ---
@@ -13,7 +13,7 @@ This **x13 has a 8C/16T** CPU, 16GB Ram and 500GB SSD.
 
 ![Lenovo Thinkpad x13](/blog_img/hardware/Lenovo_x13.jpg)
 
-**It's 13'**, over 1kg of weight and 30.44x21,58x1,55cm. 
+> **It's 13'**, over 1kg of weight and 30.44x21,58x1,55cm. 
 
 {{< callout type="info" >}}
 With **~1.005L in volume** its even smaller than the [AsrockX300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/)

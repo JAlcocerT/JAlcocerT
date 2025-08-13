@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap and other concepts for SoloPreneurs"
-date: 2025-08-12
+date: 2025-08-15
 draft: false
 tags: ["SoloPreneur","Indie SaaS","Product","Entrepre-AI"]
 description: 'Resources to launch your stuff.'
@@ -45,7 +45,8 @@ Creators of your favourite software are already doing so.
 
 Like the creator of postIZ on reddit: https://www.reddit.com/r/selfhosted/comments/1mhhs94/postiz_v225_opensource_social_media_scheduling/
 
-* https://www.producthunt.com/products/make-bootstrappers-handbook
+* Product Hunt, where you have an archive of the leaderboard: https://www.producthunt.com/leaderboard/daily/2025/8/13
+  * https://www.producthunt.com/products/make-bootstrappers-handbook
 
 ## Concepts
 

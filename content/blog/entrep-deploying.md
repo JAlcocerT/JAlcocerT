@@ -1,6 +1,6 @@
 ---
 title: "Where to Deploy?"
-date: 2025-08-06
+date: 2025-08-17
 draft: false
 tags: ["VPS","PaaS for SaaS","Lean Startup","VPN"]
 description: 'Resources to launch your stuff to your clients.'

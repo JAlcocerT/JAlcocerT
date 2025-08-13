@@ -2,7 +2,7 @@
 title: "[Review] Asrock x300 as Home Server"
 date: 2024-11-03
 draft: false
-tags: ["HomeLab"]
+tags: ["HomeLab","Hardware"]
 description: Checking my new small factor computer - Asrock x300 with AMD 5600G. AI, video edition and more.
 url: asrock-x300-home-server
 math: true
@@ -10,18 +10,19 @@ math: true
 
 It is about **time to put everything together**.
 
-This year I got this **compact ~2L box** as my new personal computer (probably server at some point).
-
-Why a server?
+This year, I got this **compact ~2L box** as my new personal computer (probably server at some point).
 
 I went crazy and build it with **64GB RAM**.
 
 ![Asrock x300 boxes](/blog_img/hardware/x300.jpg)
 
 {{< callout type="info" >}}
-* Processing power for my new YT Video creation: [Dji OA5Pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/) & [Pixel 8Pro](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/) +++ [Video edition with ffmpeg](https://github.com/JAlcocerT/YT-Video-Edition) and [video with remotion](https://github.com/JAlcocerT/VideoEditingRemotion)
-* Companion for the [SBC's](https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers), and the [ThinkPad](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)
+Why a server?
 {{< /callout >}}
+
+* Processing power for my new YT Video creation: [Dji OA5Pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/) & [Pixel 8Pro](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/) +++ [Video edition with ffmpeg](https://github.com/JAlcocerT/YT-Video-Edition) and [video with remotion](https://github.com/JAlcocerT/VideoEditingRemotion)
+
+* Companion for the [SBC's](https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers), and the [ThinkPad](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)
 
 ## Energy x300
 

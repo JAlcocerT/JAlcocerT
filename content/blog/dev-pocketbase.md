@@ -26,7 +26,7 @@ And now is time to Pocketbase, also written in Go.
 1. What it is [PB](#pocketbase?
 2. Using PB with Flask - *Some day PB + Stripe*
 3. Understanding PB Collections
-4. 
+4. The [PB JS SDK](#pb-sdk)
 
 
 
@@ -321,7 +321,10 @@ If you **define those collections**with proper syntax, you will get them initial
 
 Fast API: http://localhost:3900/docs
 
+### PB SDK
 
+* https://github.com/pocketbase/js-sdk
+  * https://www.npmjs.com/package/pocketbase
 
 ---
 
@@ -491,6 +494,17 @@ RTK Query acts as an **abstraction layer** over browser storage.
 
 ### IndexDB
 
+IndexedDB is the standard, low-level database API built into all modern web browsers.
+
+It's designed for **client-side storage** of large amounts of structured data, including files and blobs.
+
+Think of it as a NoSQL database that runs directly in the browser.
+
+However, the native IndexedDB API is notoriously complex, verbose, and difficult to work with.
+
+It's asynchronous and uses a callback-based system, which can lead to a lot of boilerplate code, even for simple operations.
+
+
 **What it is**: Browser's built-in NoSQL database with transactions
 **Storage Limit**: ~50MB+ (varies by browser)
 **Scope**: Per origin, shared across tabs
@@ -512,7 +526,49 @@ RTK Query acts as an **abstraction layer** over browser storage.
 
 
 
-### Dexie
+#### Dexie
 
-https://dexie.org/
+* https://dexie.org/
 
+Dexie.js is a powerful JavaScript library that acts as a **wrapper for IndexedDB**. 
+
+What Dexie.js Does: **Dexie simplifies working with IndexedDB** by providing a much more intuitive, elegant, and developer-friendly API.
+
+> It's like how jQuery simplified DOM manipulation or how a framework simplifies building a web application.
+
+With Dexie, you can:
+
+* **Use a Promise-based API:** This makes asynchronous operations much easier to handle with `async/await`.
+* **Define a database schema:** You can easily define your "tables" (called object stores in IndexedDB) and indexes.
+* **Perform powerful queries:** Dexie provides a simple, SQL-like syntax for querying your data.
+* **Manage transactions:** It simplifies the complex transaction model of IndexedDB.
+* **Handle database migrations:** It provides a clear way to update your database schema when your application evolves.
+* **Get real-time updates:** Dexie supports "live queries" that can automatically update your UI when the data in the database changes.
+
+**How it Relates to Redux and Local Storage**
+
+Dexie, Redux, and local storage all deal with data, but they serve different and often complementary purposes:
+
+| Feature           | **Redux** | **Local Storage** | **Dexie.js (and IndexedDB)** |
+| ----------------- | ---------------------------------------- | ------------------------------------------------- | -------------------------------------------------- |
+| **Purpose** | In-memory application state management   | Simple, persistent key-value storage              | Persistent, structured database storage            |
+| **Data Flow** | Unidirectional, predictable (actions)    | Direct, synchronous API (get/set)                 | Asynchronous, promise-based (CRUD operations)      |
+| **Persistence** | Temporary (lost on page refresh)         | Permanent (persists across sessions)              | Permanent (persists across sessions)               |
+| **Data Size** | Best for small-to-medium UI state        | Small (typically a few megabytes)                 | Large (hundreds of megabytes or more)              |
+| **Data Structure**| Any JavaScript object                    | Strings only (objects must be serialized)         | Any structured data, including blobs and files     |
+| **Querying** | No built-in querying, state is read directly | Only by key                                     | Powerful querying with indexes and filters         |
+
+
+**The Interplay:**
+
+* **Redux vs. Dexie/Local Storage:** Redux is for "application state" (e.g., whether a modal is open, the currently selected item, the current state of a form). 
+
+Dexie and local storage are for "persistent data" (e.g., user profiles, a list of todos, cached API data). 
+
+The two can work together.
+
+For example, you could fetch data from a server and save it to a Dexie database for offline use, and then load a small, relevant subset of that data into your Redux store to manage the UI state.
+
+* **Dexie vs. Local Storage:** Dexie is a much more powerful and scalable solution than local storage. Use local storage for simple, small pieces of data (like a user's theme preference). 
+
+Use Dexie when you need to store large amounts of structured data, perform complex queries, or build an application that works offline.

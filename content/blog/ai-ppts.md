@@ -28,6 +28,10 @@ But the **AI powered PPT creator** deserves a separate post.
 
 ### SliDev
 
+Presentations as a Code?
+
+No problem with SliDev:
+
 * https://github.com/slidevjs/slidev/releases
 
 [SliDev is an awsome project](https://fossengineer.com/how-to-use-slidev/) to generate PPT as code - **leveraging VueJS framework**.
@@ -39,7 +43,6 @@ But the **AI powered PPT creator** deserves a separate post.
 {{< /callout >}}
 
 > See the result: https://jalcocert.github.io/Streamlit-MultiChat/1
-
 
 [Setup a SliDev Project](https://fossengineer.com/how-to-use-slidev/#the-slidev-project), like any other SSG:
 
