@@ -9,6 +9,10 @@ sidebar:
   open: false
 ---
 
+Looking for creating cool and responsive web designs?
+
+Astro can get you there very quickly.
+
 {{< callout type="info" >}}
 New to SSGs and ASTRO? See the [**101 Astro** Guide](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
 {{< /callout >}}
@@ -19,7 +23,11 @@ New to SSGs and ASTRO? See the [**101 Astro** Guide](https://jalcocert.github.io
 ```sh
 git clone #theme
 npm install
-npm run dev
+#npm run dev
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+```
+
+```sh
 #npm run build
 ```
 
@@ -79,12 +87,9 @@ There is another Astro theme called musee
 {{< /callout >}} -->
 
 
-
 2. https://github.com/AREA44/astro-multiverse?ref=statichunt.com
 
 > One-page gallery design with a fully functional lightbox, designed by HTML5 UP
-
-
 
 {{< callout type="info" >}}
 See also HUGO Theme Gallery implemented [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/) and [here](https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/)

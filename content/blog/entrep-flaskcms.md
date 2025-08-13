@@ -265,7 +265,7 @@ As this is a one person app, Ill go the user/password way: this time, using [poc
 
 ### Flask x PocketBase
 
-I was put in front of PB *quite recently* as I covered [here](https://jalcocert.github.io/JAlcocerT/pocketbase-redux/).
+I was put in front of PB *quite recently* as I covered [here](https://jalcocert.github.io/JAlcocerT/pocketbase/).
 
 And I could not wait to try this combination!
 

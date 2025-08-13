@@ -24,7 +24,7 @@ url: 'create-your-website'
 * Cloudflare domains...
 * https://account.squarespace.com/
 
-If you are new and are just trying, you can get a `.fyi`
+If you are new and are just trying, you can get a `.fyi` or `.lol` TLD for few $.
 
 <!-- * Where to get **Free SVGs for HUGO**:
   * https://www.svgrepo.com/svg/424489/adventure-journey-location

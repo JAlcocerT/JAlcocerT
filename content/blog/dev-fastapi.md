@@ -10,7 +10,7 @@ url: 'fast-api'
 
 **TL;DR**
 
-Ive been working with [PB](https://jalcocert.github.io/JAlcocerT/pocketbase-redux/), [DBs](https://jalcocert.github.io/JAlcocerT/databases-101/) lately, within a [FastAPI](#fastapi) Python BE and wanted to write about few new concepts
+Ive been working with [PB](https://jalcocert.github.io/JAlcocerT/pocketbase/), [DBs](https://jalcocert.github.io/JAlcocerT/databases-101/) lately, within a [FastAPI](#fastapi) Python BE and wanted to write about few new concepts
 
 **Intro**
 
@@ -24,19 +24,51 @@ FastAPI is a modern, high-performance web framework for building **APIs (Applica
 
 It's designed to be fast, easy to use, and to automatically generate API documentation.
 
+{{% details title="interactive API documentation out of the box..." closed="true" %}}
+
+It automatically generates two different documentation UIs based on the OpenAPI standard.
+
+* **Swagger UI**: Accessible at `/docs`, this is a fully interactive interface where you can see all your API endpoints, their expected parameters, and their response models. You can also make live requests directly from the browser to test your endpoints. 
+
+> This is what you see at `http://localhost:3900/docs` in your example. 
 
 
-{{% details title="Tradeoff | PG vs Local Storage... 🚀" closed="true" %}}
+* **ReDoc**: Accessible at `/redoc`, this is a more compact and elegant documentation UI that is better for viewing the API reference. It is designed to be read like a single-page document.
 
+This automatic documentation is a core feature of FastAPI and is enabled by default. 
+
+It's a key advantage because it eliminates the need for manual documentation, ensuring your API docs are always up-to-date with your code.
 
 {{% /details %}}
 
 
-### How it Relates to Redux, Dexie, and Local Storage
+{{% details title="Whats that cool SWAGger UI..." closed="true" %}}
 
-FastAPI, Redux, and Dexie/local storage all deal with data, but they operate at completely different levels of the application stack.
+A Swagger UI is an interactive, web-based documentation interface for an API. It automatically generates a visual representation of your API, allowing developers to interact with and understand the endpoints without needing to write any code. 
 
-* **FastAPI is the backend.** 💻 It's the server-side technology that runs on a remote machine. Its job is to handle requests from clients (like a web browser), interact with a database (like PostgreSQL, MySQL, etc.), and send back responses. It doesn't run in the user's browser.
+Why it Matters
+
+The Swagger UI is a crucial tool for modern API development because it directly addresses several common challenges:
+
+* **Discoverability**: It makes an API's functionality immediately discoverable. Developers can browse a complete list of endpoints, their methods (GET, POST, PUT, DELETE), and the paths they use, all in one place.
+* **Ease of Use**: It turns API documentation into a live, interactive tool. Users can try out the API directly from the UI by filling out forms for parameters and request bodies, then executing the request to see the response. This dramatically simplifies the process of learning and testing an API.
+* **Consistency**: When a framework like **FastAPI** generates a Swagger UI, it does so directly from the code. This ensures that the documentation is always up-to-date with the latest version of the API, eliminating the risk of outdated or inaccurate docs.
+* **Collaboration**: It serves as a single source of truth for the API's contract. Both frontend and backend developers can use it to agree on data models and endpoints, which improves collaboration and reduces miscommunication.
+
+{{% /details %}}
+
+
+{{% details title="How FASTAPI Relates to Redux, Dexie, and Local Storage... 🚀" closed="true" %}}
+
+FastAPI, [Redux, and Dexie/local storage](https://jalcocert.github.io/JAlcocerT/pocketbase/#local-vs-session-storage) all deal with data.
+
+But they operate at completely different levels of the application stack.
+
+* **FastAPI is the backend.** 💻 It's the server-side technology that runs on a remote machine.
+
+Its job is to handle requests from clients (like a web browser), interact with a database (like PostgreSQL, MySQL, etc.), and send back responses. 
+
+It doesn't run in the user's browser!
 
 * **Redux, Dexie, and local storage are frontend technologies.** 🌐 They all run directly in the user's browser and manage data on the client side.
 
@@ -49,9 +81,12 @@ FastAPI, Redux, and Dexie/local storage all deal with data, but they operate at 
         * Store a persistent copy of the data in a **Dexie** database to allow the user to view it offline.
         * Store a small piece of user-specific data, like a user ID or a preference, in **local storage**.
 
+In short, FastAPI is the **server** that provides the data, while Redux, Dexie, and local storage are different ways the **client** (the user's browser) can store and manage that data.
 
+They are not competing technologies but are often used together in a modern web application.
 
-In short, FastAPI is the **server** that provides the data, while Redux, Dexie, and local storage are different ways the **client** (the user's browser) can store and manage that data. They are not competing technologies but are often used together in a modern web application.
+{{% /details %}}
+
 
 
 ## Concepts

@@ -14,28 +14,38 @@ url: 'databases-101'
 
 Not all DB's are useful for the same.
 
-Interesting revelations after trying [pocketbase](https://jalcocert.github.io/JAlcocerT/pocketbase-redux/) (which uses sqlite)
+Interesting revelations after trying [pocketbase](https://jalcocert.github.io/JAlcocerT/pocketbase/) (which uses sqlite)
 
 I will cover:
 
 1. [Sqlite](#sqlite)
 2. [PostgreSQL](#postgresql)
 3. [MariaDB](#mariadb): because I like it for SelfHosting
-
+4. Some [interesting tools](#related-db-tools) to interact with your DBs
 
 
 
 ## SQLite
 
-SQLite is generally excellent for **reads**, especially in scenarios where it's being accessed by many concurrent readers. However, it is also very good for **writes** in single-user or low-concurrency environments.
+SQLite is generally excellent for **reads**, especially in scenarios where it's being accessed by many concurrent readers.
+
+> However, it is also very good for **writes** in single-user or low-concurrency environments.
 
 ---
 
 ### Reads
 
-SQLite's read performance is exceptionally fast. Because the database is stored in a local file, there is no network latency. This makes it very efficient for applications that need to perform many read operations, such as mobile apps, desktop software, and low-to-medium traffic websites. In many cases, SQLite can even outperform a traditional filesystem for reading small data blobs. 
+SQLite's read performance is exceptionally fast. 
 
-The main strength of SQLite is its ability to handle an unlimited number of concurrent readers. Multiple processes can read from the database at the same time without any issues.
+Because the database is stored in a local file, there is no network latency.
+
+This makes it very efficient for applications that need to perform many read operations, such as mobile apps, desktop software, and low-to-medium traffic websites. 
+
+In many cases, SQLite can even outperform a traditional filesystem for reading small data blobs. 
+
+The main strength of SQLite is its ability to handle an unlimited number of concurrent readers.
+
+Multiple processes can read from the database at the same time without any issues.
 
 ---
 
@@ -301,6 +311,8 @@ PostgreSQL is a **robust, client-server** database management system. It's an id
 ## MariaDB
 
 
+---
+
 ## Conclusions
 
 
@@ -309,7 +321,9 @@ PostgreSQL is a **robust, client-server** database management system. It's an id
 ## Related DB Tools
 
 
-Many open-source companion tools exist to help with different aspects of database management, from schema migrations to monitoring and data visualization. Here are some of the most popular categories and tools.
+Many open-source companion tools exist to help with different aspects of database management, from schema migrations to monitoring and data visualization.
+
+Here are some of the most popular categories and tools.
 
 ---
 
