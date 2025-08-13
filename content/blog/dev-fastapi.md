@@ -2,7 +2,7 @@
 title: "FastAPI"
 date: 2025-08-13
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Python"]
 description: 'FastAPI'
 url: 'fast-api'
 ---
@@ -11,10 +11,24 @@ url: 'fast-api'
 curl -X GET "http://localhost:3900/healthcheck" -H "accept: application/json"
 ```
 
-Yes, you're absolutely right - we have the PUT endpoint for updates, which can handle all user settings modifications including resetting to defaults if needed.
+**TL;DR** Ive been working with [PB](https://jalcocert.github.io/JAlcocerT/pocketbase-redux/), [DBs](https://jalcocert.github.io/JAlcocerT/databases-101/) lately, within a FastAP Python BE and wanted to write about few new concepts
 
-📚 What is an API Endpoint?
-An API endpoint is a specific URL where an API can be accessed by a client application. Think of it as a "digital address" where your application can send requests to get or modify data.
+**Intro**
+
+
+## FastAPI
+
+
+
+
+## Concepts
+
+
+### What is an API Endpoint?
+
+An API endpoint is a specific URL where an API can be accessed by a client application.
+
+ Think of it as a "digital address" where your application can send requests to get or modify data.
 
 Anatomy of an Endpoint
 [HTTP METHOD] [BASE_URL][PATH] 
@@ -43,3 +57,50 @@ GET	Retrieve data	Get user settings
 PUT	Update/replace data	Update user settings
 POST	Create new data	Create new user
 DELETE	Remove data	Delete user account
+
+---
+
+## Conclusions
+
+### Proper Py and uv
+
+Make your Python have the version you want to: *in my case, I wanted 3.12.11*
+
+```sh
+sudo apt update
+sudo apt install -y build-essential wget \
+  libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
+  libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev \
+  libffi-dev liblzma-dev
+
+wget https://www.python.org/ftp/python/3.12.11/Python-3.12.11.tgz
+tar -xzf Python-3.12.11.tgz
+cd Python-3.12.11
+./configure --enable-optimizations
+make -j"$(nproc)"
+sudo make altinstall   # installs as /usr/local/bin/python3.12
+python3.12 --version
+python3.12 -m pip install --upgrade pip setuptools wheel
+```
+
+If you are using uv, do:
+
+```sh
+#uv lock --python 3.12.11
+```
+
+If you had another one, **change the default python** to the new installed:
+
+```sh
+# verify current PATH order (expect /usr/local/bin before /usr/bin)
+echo "$PATH"
+which -a python3
+
+# create symlink (adjust source if you installed under /opt)
+sudo ln -s /usr/local/bin/python3.12 /usr/local/bin/python3
+
+# verify it takes precedence
+which -a python3
+python3 --version   # should show 3.12.11
+```
+

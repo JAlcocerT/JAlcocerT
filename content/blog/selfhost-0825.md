@@ -1,14 +1,16 @@
 ---
 title: "SelfHosting Updates - Summer 2025"
-date: 2025-08-30T01:20:21+01:00
+date: 2025-08-13T01:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","SSGs"]
 description: 'Selfhosting Updates: Leds and API with the Pi'
 url: 'selfhosted-apps-autumn-2025'
 ---
 
 
 Summer is almost gone...
+
+**TL;DR:** 
 
 
 
@@ -24,13 +26,11 @@ https://github.com/appleimperio/docker-hyperhdr
 
 ### HA
 
-https://www.home-assistant.io/docs/automation/
+* https://www.home-assistant.io/docs/automation/
 
 ### APIs
 
-https://www.postman.com/downloads/
-
-Ah, you meant **Postman**, not Podman! My apologies for the confusion. Let's talk about Postman.
+*https://www.postman.com/downloads/
 
 **Yes, Postman (the API platform) has a free tier, which is open source in the sense that it's freely available for anyone to download and use for their API development and testing needs.**
 
@@ -72,7 +72,11 @@ Postman is an incredibly popular and powerful tool for API development, testing,
 
 **In summary:**
 
-Postman's free tier provides a robust set of tools for interacting with APIs and is widely used by developers for testing, development, and exploration. While the entire platform isn't open source, key components like Newman are. You would need Postman if you work with APIs and want a user-friendly and efficient way to interact with them, test them, and understand how they work. Its collaborative features (especially in paid tiers) are also valuable for team-based API development.
+Postman's free tier provides a robust set of tools for interacting with APIs and is widely used by developers for testing, development, and exploration. 
+
+While the entire platform isn't open source, key components like Newman are. You would need Postman if you work with APIs and want a user-friendly and efficient way to interact with them, test them, and understand how they work.
+
+Its collaborative features (especially in paid tiers) are also valuable for team-based API development.
 
 
 Yes, there are several **totally and fully open-source alternatives to Postman**. These tools offer similar functionality for API testing and development but are released under open-source licenses, giving you more freedom and control.
@@ -118,11 +122,17 @@ sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
 
 When choosing an alternative, consider your specific needs, such as the protocols you work with, the importance of collaboration features, whether you prefer a GUI or CLI, and your comfort level with community-supported software. All the options listed above are viable and actively developed, offering strong alternatives to Postman's free tier without the proprietary aspects of the full Postman platform.
 
+---
+
 ## Conclusions
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs" >}}
 {{< /cards >}}
+
+### SelfHosting SSGs
+
+
 
 
 ### Lately I...

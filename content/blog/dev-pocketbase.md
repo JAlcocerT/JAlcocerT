@@ -2,37 +2,37 @@
 title: "PocketBase for BackEnd"
 date: 2025-08-05
 draft: false
-tags: ["PocketBase","Redux","OSS Auth"]
+tags: ["PocketBase","OSS Auth","Concurrency"]
 description: 'Things your learn outside the confort zone. BackEnd Storage for a WebApp'
 url: 'pocketbase-redux'
 ---
 
-This is way far from my confort zone, yet here we go.
+**TL;DR** 
 
-## PocketBase
+I finally got to try [PB](#pocketbase). 
+
+It can be used as auth for your [Flask Web Apps](#pocketbase-x-flask) and also be connected via JS SDK to FE.
+
+Along the way, I got to know few [new concepts](#concepts), like: Redux, Dexie 
+
+**Intro** *This is way far from my confort zone, yet here we go*
 
 Despite not been able to code in Go, I really admire few projects already that use Go.
 
 HUGO was the first for me.
 
-And now is time to Pocketbase, also written in Go:
+And now is time to Pocketbase, also written in Go.
 
-* https://pocketbase.io/
-    * https://pocketbase.io/docs/
-    * https://github.com/pocketbase/pocketbase
+1. What it is [PB](#pocketbase?
+2. Using PB with Flask - *Some day PB + Stripe*
+3. Understanding PB Collections
+4. 
 
-> MIT | Open Source realtime backend in 1 file 
 
-PB Features:
 
-1. Realtime database
-2. Authentication
-3. File storage
-4. Admin dashboard
+## PocketBase
 
-While PocketBase **includes** a database, it's more accurate to call it a **backend-as-a-service (BaaS)** or a "realtime backend" rather than *just a database*. 
-
-PocketBase is a single, self-contained Go application that bundles several key components into one executable file:
+PocketBase is a single, **self-contained Go application** that bundles several key components into one executable file:
 
 * **An embedded SQLite database:** This is the core storage engine. So yes, it does contain a database.
 * **A RESTful API:** This provides an interface to interact with the data in the database.
@@ -42,7 +42,31 @@ PocketBase is a single, self-contained Go application that bundles several key c
 
 Because it provides all of these features out-of-the-box, it's designed to be a full backend for applications, allowing you to build a project without having to set up a separate database server, API, and authentication system.
 
+* https://pocketbase.io/
+    * https://pocketbase.io/docs/
+    * https://github.com/pocketbase/pocketbase
+
+> **MIT** | Open Source realtime backend in 1 file 
+
+PB Features:
+
+1. Realtime database
+2. Authentication
+3. File storage
+4. Admin dashboard
+
+> While PocketBase **includes** a database, it's more accurate to call it a **backend-as-a-service (BaaS)** or a "realtime backend" rather than *just a database*. 
+
+> > You can also try with the demo: https://pocketbase.io/demo/
+
+
+
 ### PB 101
+
+In simple terms: PB can be selfhosted, its better for read than for writes and its [data model and collections](#programatic-pb-interaction) are very useful.
+
+
+**Selfhosting PB**
 
 Spin Pocketbase into your PC building a Go container with the project:
 
@@ -59,32 +83,65 @@ cd ./Dev/BaaS/PB
 docker compose -f PB_docker-compose.yml up -d
 ```
 
+```sh
+curl -s http://localhost:8080/api/health || echo "PocketBase not accessible"
+#curl -s http://localhost:9000/api/health || echo "PocketBase not accessible"
+```
+
 ![SelfHosting PocketBase](/blog_img/dev/PB/selfh-pb.png)
 
 > You can use PB admin UI via the default: http://localhost:8080/_/
 
 > > And log in as per your `.env` credentials if you provided any, or just created an account
 
-You might need to create **collections in pocketbase**
+
+**What you need to know about PB**
+
+PB uses sqlite as its DB!
+
+1. you have a `pb_data/data.db` that you can inspect with a client:
+
+```sh
+ sqlite3 ./data.db
+#SQLite version 3.37.2 2022-01-06 13:25:41
+#Enter ".help" for usage hints.
+sqlite> .tables
+# _authOrigins           _params                knowledge_source_tags
+# _collections           _superusers            knowledge_sources    
+# _externalAuths         agent_types            role_prompts         
+# _mfas                  chat_model_info        users                
+# _migrations            chat_models          
+# _otps                  knowledge_source_info
+# sqlite> 
+```
+
+* https://kerkour.com/sqlite-for-servers
+
+
+pb is concurrent for reads (select and with)
+nonconcurrent for writes/updates of data!!!
+
+2. `./pb_hooks` and `./pb_migrations` folder are checked first whenever PB gets intialized (its configures any initial collections for example)
+
+
+### Programatic PB Interaction
+
 
 Overview of Core Data Entities as per https://deepwiki.com/pocketbase/pocketbase/2.2-data-model
 
-The PocketBase data model is built on three primary entities:
+The **PocketBase data model** is built on three primary entities:
 
 1. Collections - Schema definitions that describe the structure of data (similar to tables in traditional databases)
 2. Records - Individual data entries stored within collections (similar to rows in a table)
 3. Fields - The attributes or properties that define the structure of records (similar to columns)
 
+You might need to create **collections in pocketbase**
 
 And you can do so via the UI:
 
-![alt text](/blog_img/dev/PB/pocketbase-collection-ui.png)
+![PB Collection UI](/blog_img/dev/PB/pocketbase-collection-ui.png)
 
-You can also try with the demo: https://pocketbase.io/demo/
-
-### Programatic PB Interaction
-
-But you can also do them via scripts.
+But you can interact with collections via scripts.
 
 * https://deepwiki.com/pocketbase/pocketbase/9.2-collection-schema-management
 
@@ -133,6 +190,7 @@ There are two different formats:
 
 📊 Format Comparison:
 🔴 Full Format (what you just exported):
+
 Raw PocketBase API format - exactly as stored in PocketBase
 Contains IDs, timestamps, metadata
 Relations use collectionId (like "_pb_users_auth_")
@@ -150,6 +208,7 @@ Directly compatible with your JSON creation system
 
 > All that should get you started to **interact with PB via Python Scripts 🐍**
 
+> > But dont forget that you can also get collections initialized into PB thanks to `./pb_migrations/*.js` 
 
 
 ### PocketBase x Flask
@@ -209,31 +268,6 @@ And these sample webapps with their code:
 {{< /cards >}}
 
 
-PB uses sqlite!
-
-1. you have a `pb_data/data.db` that you can inspect with a client:
-
-```sh
- sqlite3 ./data.db
-#SQLite version 3.37.2 2022-01-06 13:25:41
-#Enter ".help" for usage hints.
-sqlite> .tables
-# _authOrigins           _params                knowledge_source_tags
-# _collections           _superusers            knowledge_sources    
-# _externalAuths         agent_types            role_prompts         
-# _mfas                  chat_model_info        users                
-# _migrations            chat_models          
-# _otps                  knowledge_source_info
-# sqlite> 
-```
-
-* https://kerkour.com/sqlite-for-servers
-
-
-pb is concurrent for reads (select and with)
-nonconcurrent for writes/updates of data!!!
-
-2. `./pb_hooks` and `./pb_migrations` folder are checked first whenever PB gets intialized (its configures any initial collections for example)
 
 ### PocketBase x Stripe
 
@@ -287,7 +321,6 @@ If you **define those collections**with proper syntax, you will get them initial
 
 Fast API: http://localhost:3900/docs
 
-## Redux
 
 
 ---
@@ -302,4 +335,184 @@ Which provides info about many libraries
 
 2. Connect your backend to your client libraries and frameworks https://github.com/get-convex/convex-backend
 
+
+## Concepts
+
+
+**Some new concepts**
+
+1. Concurrency = Multiple Things Happening at the Same Time
+Concurrency means multiple operations or processes running simultaneously and potentially accessing the same resources.
+
+2. Race Condition = When Concurrency Goes Wrong
+A race condition is a specific problem that occurs in concurrent systems when:
+
+Multiple processes access shared data simultaneously
+The final result depends on the unpredictable timing of these accesses
+This leads to inconsistent or corrupted data
+
+3. Redux, [browser storage technologies](#local-vs-session-storage), [IndexDB](#indexdb), RTK...
+
+### Redux
+
+Redux is a predictable **state management library** for JavaScript applications.
+
+It helps you manage the state of your application in a single, centralized store, making it easier to understand how and when the state changes. 
+
+> While it's most commonly used with React, it can be used with any other UI library. 
+
+Redux is not a local data storage solution like localStorage or sessionStorage. It's a state management library for your application's memory.
+
+{{< details title="About redux... 📌" closed="true" >}}
+
+**Core Principles**
+
+Redux operates on three fundamental principles:
+
+1.  **Single source of truth**: The state of your entire application is stored in a single object tree within a single store. This makes it easier to debug and test your application, as all state is in one place.
+
+2.  **State is read-only**: The only way to change the state is by dispatching an **action**. An action is a plain JavaScript object that describes what happened. For example, `{ type: 'ADD_TODO', text: 'Learn Redux' }`. This ensures that views can't directly modify the state, preventing unpredictable behavior.
+
+3.  **Changes are made with pure functions**: To specify how the state tree is transformed by actions, you write **reducers**. Reducers are pure functions that take the current state and an action as arguments, and return a new state. They must not mutate the original state or perform any side effects like API calls.
+
+---
+
+**How it Works**
+
+The data flow in a Redux application follows a strict, one-way cycle:
+
+1.  **View**: The user interacts with the application's UI, which dispatches an action.
+2.  **Action**: An action object is dispatched to the store.
+3.  **Reducer**: The store passes the action and the current state to the reducer. The reducer calculates and returns a new state.
+4.  **Store**: The store updates its state with the new state from the reducer.
+5.  **View**: The store notifies the view of the state change, and the view re-renders itself to reflect the new state.
+
+This unidirectional data flow makes it easy to trace the source of any state change, which is a major benefit for debugging and maintenance. 
+
+
+
+{{< /details >}}
+
+
+
+{{< details title="What redux does compared to local storage... 📌" closed="true" >}}
+
+No, Redux is **not** a local data storage solution like `localStorage` or `sessionStorage`. It's a **state management library** for your application's memory.
+
+**What Redux Does**
+
+Redux holds your application's state in a single, centralized object called the **store**. 
+
+This store exists only while your application is running in the browser's memory. When you refresh the page or close the tab, the Redux store and all its data are cleared.
+
+---
+
+**What Local Storage Does**
+
+Local storage, on the other hand, is a browser feature that allows you to store key-value pairs of data persistently.
+
+This data is saved on the user's computer and remains even after the browser is closed.
+
+This makes it suitable for things like user preferences, authentication tokens, or cached data that you want to persist between sessions.
+
+---
+
+**Key Differences**
+
+* **Persistence**: Redux data is temporary and lost on page refresh. Local storage data is persistent and remains until explicitly cleared.
+* **Purpose**: Redux is for managing the dynamic state of an application (e.g., UI state, fetched data). Local storage is for saving persistent data across browser sessions.
+* **Access**: Redux state is managed through a strict, predictable flow of actions and reducers. Local storage data is accessed directly through a simple API (`localStorage.getItem()`, `localStorage.setItem()`).
+
+{{< /details >}}
+
+While you can use Redux and local storage together (e.g., to save your Redux state to local storage to persist it), they serve different purposes.
+
+Redux manages the active state of your application, while local storage provides a way to save data on the user's device for long-term use.
+
+
+### Local vs Session Storage
+
+If you go to the inspect section of a website and you go the `application` part of it...
+
+Under storage, you will see 2 options: locan and session storage:
+
+
+![Local vs Session Storage](/blog_img/dev/PB/local-session-storage.png)
+
+> These 2 are **browser storage technologies!**
+
+
+{{< details title="More about local vs session... 📌" closed="true" >}}
+
+**1. localStorage**
+
+**What it is**: Persistent key-value storage that survives browser restarts
+**Storage Limit**: ~5-10MB per origin
+**Scope**: Per origin (protocol + domain + port), shared across all tabs
+
+**Pros:**
+- ✅ **Persistent** - Data survives browser restart
+- ✅ **Simple API** - Easy to use key-value interface
+- ✅ **Synchronous** - No async/await needed
+- ✅ **Cross-tab sharing** - All tabs see the same data
+- ✅ **Wide browser support** - Available everywhere
+
+**Cons:**
+- ❌ **Limited storage** - Only 5-10MB
+- ❌ **String-only** - Must JSON.stringify/parse objects
+- ❌ **Blocking** - Synchronous operations can freeze UI
+- ❌ **No transactions** - Race conditions possible
+- ❌ **No indexing** - Linear search only
+
+**2. sessionStorage**
+**What it is**: Temporary key-value storage that dies when tab closes
+**Storage Limit**: ~5-10MB per origin
+**Scope**: Per tab/window only
+
+**Pros:**
+- ✅ **Tab-isolated** - Each tab has independent storage
+- ✅ **Simple API** - Same as localStorage
+- ✅ **Automatic cleanup** - Cleared when tab closes
+- ✅ **Synchronous** - No async/await needed
+
+**Cons:**
+- ❌ **Temporary** - Lost when tab closes
+- ❌ **Tab-isolated** - Can't share data between tabs
+- ❌ **Limited storage** - Only 5-10MB
+- ❌ **String-only** - Must JSON.stringify/parse objects
+- ❌ **No transactions** - Race conditions possible
+
+
+{{< /details >}}
+
+### RTK
+
+RTK Query acts as an **abstraction layer** over browser storage.
+
+### IndexDB
+
+**What it is**: Browser's built-in NoSQL database with transactions
+**Storage Limit**: ~50MB+ (varies by browser)
+**Scope**: Per origin, shared across tabs
+
+**Pros:**
+- ✅ **Large storage** - 50MB+ capacity
+- ✅ **Object storage** - Can store complex objects directly
+- ✅ **Transactions** - ACID properties for data integrity
+- ✅ **Indexing** - Fast queries with indexes
+- ✅ **Asynchronous** - Non-blocking operations
+- ✅ **Persistent** - Survives browser restart
+
+**Cons:**
+- ❌ **Complex API** - Difficult to use directly
+- ❌ **Asynchronous** - Requires Promise/callback handling
+- ❌ **Browser variations** - Inconsistent implementations
+- ❌ **No SQL** - NoSQL query limitations
+- ❌ **Debugging difficulty** - Hard to inspect data
+
+
+
+### Dexie
+
+https://dexie.org/
 

@@ -7,7 +7,11 @@ description: 'Its all about markdown - From ReadMe generator to SliDev presentat
 url: 'make-slidev'
 ---
 
-I was *bikeshedding* and found out this grear project:
+**TL;DR** I found out a great web app that edits markdown in live time and wanted to combine it with SliDev for PPT Generation.
+
+**Intro**
+
+I was *bikeshedding* and found out this great project:
 
 * https://github.com/ShaanCoding/makeread.me
 
@@ -98,9 +102,20 @@ git branch -a
 
 ## Conclusions
 
-Ill come back to SliDev + *CMS* on a future post.
+Similar to AI project docs generation...
+
+I could not resist but to try these IDE's (Windsurf etc) and their context awareness to generate SliDev PPTs.
+
+And it worked.
+
+So in a way a codex + md editor + slidev should be possible .
+
+
+> Ill come back to SliDev + *CMS* on a future post.
 
 Expect a v0.2 coming with a simpler way of editing a SliDev PPT!
+
+
 
 ### Alternatives
 

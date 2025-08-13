@@ -259,6 +259,8 @@ What else can help us code better?
 
 ## Propietary
 
+There are many options...
+
 * https://v0.dev/ From vercel!
   * https://v0.dev/community/financial-dashboard-DuidKNEmCKf
 
@@ -288,13 +290,13 @@ For initiative, use models like claude-3.7-sonnet, gemini-2.5-pro, or o3.
 
 Task-Specific Models:
 
-claude-3.5-sonnet: Small changes.
-claude-3.7-sonnet, gemini-2.5-pro: Larger refactors.
-gemini-2.5-pro, claude-3.7-sonnet, o3: Codebase navigation.
-claude-3.7-sonnet, gemini-2.5-pro: Planning.
-o3: Complex issues.
-Auto-select: A reliable default option.
-Custom Modes: Save preferred model/prompt combinations.
+* claude-3.5-sonnet: Small changes.
+* claude-3.7-sonnet, gemini-2.5-pro: Larger refactors.
+* gemini-2.5-pro, claude-3.7-sonnet, o3: Codebase navigation.
+* claude-3.7-sonnet, gemini-2.5-pro: Planning.
+* o3: Complex issues.
+* Auto-select: A reliable default option.
+* Custom Modes: Save preferred model/prompt combinations.
 
 * https://zed.dev/pricing
 
@@ -306,7 +308,7 @@ curl -f https://zed.dev/install.sh | sh
 
 ![ZED IDE](/blog_img/dev/dev-zed.png)
 
-Zed IDE allow to use MCP or custom LLMs (ollama, OpenAI...)
+> Zed IDE allows to use MCP or custom LLMs (ollama, OpenAI...)
 
 You can plug **API keys** to some IDEs/extensions:
 
@@ -498,15 +500,7 @@ ext install saoudrizwan.claude-dev
 
 ## Conclusions
 
-Similar to AI project docs generation...
-
-I could not resist but to try these IDE's and their context awareness to generate SliDev PPTs.
-
-{{< details title="PPT with SliDev for Codex x Astro 📌" closed="true" >}}
-
-
-
-{{< /details >}}
+I think Ill stay with Windsurf for a while :)
 
 
 ---

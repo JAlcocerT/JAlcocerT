@@ -7,6 +7,9 @@ description: 'AI Driven Presentations - PPT as code with SliDev, MarpJS, RemarkJ
 url: 'creating-presentations-with-ai'
 ---
 
+
+**Intro**
+
 It all started with the [**AIssistant** post](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent).
 
 But the **AI powered PPT creator** deserves a separate post.

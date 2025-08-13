@@ -27,20 +27,16 @@ It seems to be another markdown lover :)
 
 
 
+---
 
 
-
-
-
-
-
-## COnclusions
+## Conclusions
 
 
 ### Lately I...
 
 
-have tried cursor: https://cursor.com/dashboard
+Have tried **Cursor**: https://cursor.com/dashboard
 
 As i consumed all windsurf tokens very fast...
 
@@ -51,4 +47,14 @@ chmod +x Cursor-1.4.3-x86_64.AppImage
 ./Cursor-1.4.3-x86_64.AppImage
 ```
 
-But that just executes it once
+But that just executes it once.
+
+So I got to know: **appimagelauncher**
+
+```sh
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt update
+
+sudo apt install appimagelauncher
+mkdir ~/Applications #place your *.AppImages there and they will integrate with your linux!
+```
