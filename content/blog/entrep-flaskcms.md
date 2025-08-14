@@ -8,7 +8,16 @@ url: 'making-flask-cms-for-ssg'
 ---
 
 
-**TL;DR** I love SSGs and markdown. Tinkering with markdown web editors to make SSG edition more accesible
+**TL;DR**: Tinkering with markdown web editors via Flask(CMS v0.1) to make SSG edition more accesible.
+
+In the meantime I got to put inside the [container the flask app](#flask-containerized) via uv and learnt that:
+
+
+`flask-cms sh -lc "uv run gunicorn app:app -b 0.0.0.0:5050 --workers 2 --threads 4 --timeout 60"` >>> `uv run app.py`
+
+**Intro**
+
+I simply love SSGs and markdown.
 
 Because of the makereadme project and this [related post](https://jalcocert.github.io/JAlcocerT/make-slidev/)
 
@@ -209,10 +218,9 @@ Lets put the flask functionality into containers:
   {{< card link="https://github.com/JAlcocerT/morita-astroportfolio-flasked/blob/main/docker-compose-flask.yml" title="The Project Flask Docker-compose.yml  ↗" >}}
 {{< /cards >}}
 
+### Flask Containerized
 
-
-
-And quickly check that it works:
+And quickly check that the **FlaskCMS works via container**:
 
 ```sh
 docker compose -f docker-compose-flask.yml build
@@ -223,21 +231,59 @@ docker run --rm -d --name flask-cms \
   flask-cms sh -lc "uv run app.py"
 ```
 
-Aaaall good on `localhost:5050`
+> Aaaall good on `localhost:5050`
 
 But I got to know that **using gunicorn** is better when the webapp has to bring concurrency of users among other details that you can read [here](https://github.com/JAlcocerT/morita-astroportfolio-flasked/blob/main/gunicorn.md).
 
 So remember to do `uv add gunicorn` and `uv sync`.
 
-uv run app.py:
-Flask’s built-in dev server.
-Single-process, auto-reload, debugger.
-Not hardened for production.
+1. Running regularly a flaks app via uv package manager is just: `uv run app.py`
 
-gunicorn app:app:
-Production WSGI server.
-Multiple workers/threads, timeouts, graceful restarts.
-Better throughput and robustness.
+* Flask’s built-in dev server.
+* Single-process, auto-reload, debugger.
+* Not hardened for production.
+
+2. But even better if you do: `gunicorn app:app`
+
+* Production WSGI server.
+* Multiple workers/threads, timeouts, graceful restarts.
+* Better throughput and robustness.
+
+
+{{% details title="More Web Server Gateway Interface and Flask ... 🚀" closed="true" %}}
+
+WSGI is an interface standard that defines a common way for web servers to communicate with Python web applications or frameworks. It stands for **Web Server Gateway Interface**. 
+
+Essentially, it acts as a bridge, allowing any WSGI-compatible web server to run any WSGI-compatible web application. 
+
+This decouples the web server from the web application, so you can mix and match them. 
+
+**WSGI's Relation to Flask**
+
+**Flask** is a web framework that's built on top of WSGI. When you run a Flask application, you're not just running Flask; you're running it through a WSGI server.
+
+Flask's core is designed to be a WSGI application, meaning it adheres to the WSGI specification.
+
+This is why you can deploy a Flask app using a variety of WSGI servers like Gunicorn, uWSGI, or Waitress.
+
+The WSGI server's job is to take an incoming HTTP request, pass it to the Flask application in a standardized way, and then send the application's response back to the client.
+
+In a development environment, Flask's built-in development server includes a simple WSGI server. However, for a production environment, you would use a more robust, dedicated WSGI server to handle things like performance, security, and scalability.
+
+> This is a key benefit of WSGI: it allows developers to focus on writing their application logic in Flask, while leaving the complexities of serving that application to a specialized, high-performance web server.
+
+**Gunicorn** is a dedicated WSGI server. It's a high-performance, lightweight, and widely used server designed specifically to run Python web applications that conform to the WSGI standard.
+
+**Other Popular WSGI Servers**
+
+While Gunicorn is a popular choice, several other WSGI servers are commonly used in production environments, each with its own strengths:
+
+* **uWSGI**: A powerful and feature-rich application server that can serve as a WSGI container. It's known for its high performance and extensive configuration options, although this can make it more complex to set up than Gunicorn.
+* **Waitress**: A pure-Python WSGI server that's often praised for its simplicity and ease of use. It's a great choice for smaller to medium-sized applications or for developers who prefer an all-Python solution with minimal dependencies.
+* **mod_wsgi**: An Apache HTTP Server module that allows you to serve WSGI applications directly within the Apache web server. This is a good option if your deployment is already built around Apache.
+* **CherryPy**: While also a full-fledged web framework, CherryPy includes a production-ready, thread-pooled WSGI server that can be used to run other WSGI applications.
+
+{{% /details %}}
 
 Then rebuild and:
 

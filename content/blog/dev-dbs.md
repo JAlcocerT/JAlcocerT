@@ -388,13 +388,13 @@ This is crucial in modern software development, where databases often need to be
 
 The key concepts that explain this relationship are:
 
----
-
 1. Changelogs and Changesets
 
 Instead of writing manual SQL scripts to alter a database, you create **changelog files**.
 
-These are plain text files (often in YAML, XML, JSON, or SQL format) that contain a sequence of **changesets**. A changeset is a single, atomic change to the database, like creating a new table, adding a column, or updating data. Each changeset has a unique ID and author, ensuring that changes are never applied more than once.
+These are plain text files (often in YAML, XML, JSON, or SQL format) that contain a sequence of **changesets**. A changeset is a single, atomic change to the database, like creating a new table, adding a column, or updating data. 
+
+Each changeset has a unique ID and author, ensuring that changes are never applied more than once.
 
 ---
 

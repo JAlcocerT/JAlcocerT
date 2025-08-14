@@ -2,7 +2,7 @@
 title: "How to use ASTRO [101] and make Stunning Websites"
 date: 2024-09-07
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Astro 101"]
 summary: 'How to get started with Astro as SSG to create Webs. NPM & Node Setup.'
 url: 'using-astro-as-website'
 ---
@@ -50,7 +50,8 @@ npm -v    # Should show npm version - 10.8.2
 git clone https://github.com/JAlcocerT/web3 && cd ./web3
 
 npm install
-npm run dev
+#npm run dev
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
 3. [Optional] - Use [Astro within a Container](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/#node)

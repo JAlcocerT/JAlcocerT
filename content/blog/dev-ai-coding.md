@@ -467,7 +467,8 @@ Lately I was discovering [about MCP](https://jalcocert.github.io/JAlcocerT/ai-un
 ### ContinueDev
 
 * Continue.dev: https://github.com/continuedev/continue
-
+  * https://docs.continue.dev/getting-started/install
+  
 > Apache v2 |  ⏩ Create, share, and use custom AI code assistants with our open-source IDE extensions and hub of models, rules, prompts, docs, and other building blocks 
 
 ### Plandex

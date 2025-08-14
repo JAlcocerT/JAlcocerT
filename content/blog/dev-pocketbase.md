@@ -126,9 +126,49 @@ nonconcurrent for writes/updates of data!!!
 
 2. `./pb_hooks` and `./pb_migrations` folder are checked first whenever PB gets intialized (its configures any initial collections for example)
 
+#### About PB_Hooks
+
+What pb_hooks/ does
+Purpose: Holds PocketBase server-side hook scripts. PocketBase auto-loads any *.pb.js files here and executes them to customize backend behavior.
+When they run:
+On server start/bootstrapping.
+On specific collection events if you register handlers (before/after create, update, delete, auth, etc.).
+Common use cases:
+App-wide configuration at startup (e.g., storage, SMTP, auth providers).
+Data validation and defaulting before/after record writes.
+Side effects like webhooks, audit logs, denormalization.
+Access control beyond collection rules.
+
+This repo’s example
+File: 
+
+devops/pocketbase/pb_hooks/pocketbase_settings.pb.js
+
+Reads S3-related env vars and sets settings.s3 accordingly.
+
+If required envs are missing, throws an error to prevent misconfigured storage.
+Calls app.save(settings) to persist the updated PocketBase settings.
+In short, pb_hooks/ lets you programmatically configure and extend PocketBase on the server, and this specific hook configures S3 file storage from environment variables.
+
+#### About PB_Migrations
+
+What pb_migrations/ does
+Purpose: Version-controlled schema for PocketBase. Each file defines a migration that creates/updates/deletes collections, fields, rules, and indexes.
+Where: devops/pocketbase/pb_migrations/
+How they look: Timestamped files like:
+1754901820_created_user_settings.js
+ — defines user_settings collection, fields, owner-only rules, unique index.
+1754984000_created_images.js
+ — defines chat_attachments (images) collection, fields, rules, index. Each migration usually has an “up” (apply) and “down” (rollback) section and uses PocketBase’s JS helpers (e.g., new Collection({...}), dao.insert(), dao.deleteCollection()).
+When/how applied:
+Applied on the PocketBase server (via CLI or your container entrypoint). They must run before the frontend SDK can use those collections/fields.
+You can run them during build/startup or manually with the PB CLI. In many setups, the Docker image executes migrations at startup.
+Why important:
+Acts as the single source of truth for your PB schema.
+Safe to commit to VCS; supports rollbacks.
+Ensures environments (local, staging, prod) have the same collections, rules, and indexes.
 
 ### Programatic PB Interaction
-
 
 Overview of Core Data Entities as per https://deepwiki.com/pocketbase/pocketbase/2.2-data-model
 
@@ -529,16 +569,109 @@ It makes the FastAPI layer largely redundant for tasks like fetching user data, 
 
 ## Conclusions
 
+
+I also placed the **PB SelfHosted Setup,** here:
+
+1. See that your PB is ready:
+
+```sh
+curl http://192.168.1.11:8080/api/health
+```
+
+2. Read users collection info: *which should be empty*
+
+```sh
+curl http://192.168.1.11:8080/api/collections/users/records
+```
+
+3. Create a new record into the users collection:
+
+```sh
+# curl -X POST -H "Content-Type: application/json" -d '{
+#     "email": "testuser@example.com",
+#     "password": "my_secure_password",
+#     "passwordConfirm": "my_secure_password"
+# }' http://192.168.1.11:8080/api/collections/users/records
+
+curl -X POST -H "Content-Type: application/json" -d '{
+    "email": "'"${NEW_USER_EMAIL}"'",
+    "password": "'"${NEW_USER_PASSWORD}"'",
+    "passwordConfirm": "'"${NEW_USER_PASSWORD}"'"
+}' "${POCKETBASE_URL}/api/collections/users/records"
+```
+
+The difference between a simple `curl` command and one with flags like `-X POST -H` is about specifying the details of an **HTTP request**.
+
+{{< details title="Curl vs Curl -X and Bearer tokens... 📌" closed="true" >}}
+
+This gets to the heart of how web applications and APIs communicate!
+
+**`curl`** is a command-line tool that's used to transfer data from or to a server. When you run `curl http://example.com`, you're making a **simple HTTP GET request** by default.
+
+This is the most basic type of request, used to retrieve data from a server, much like what your browser does when you visit a webpage.
+
+**`curl -X POST -H ...`** is a more complex command that includes specific **flags** to define a more detailed request:
+
+* **`-X POST`**: This flag explicitly sets the **HTTP method** to `POST`.
+  * While `GET` is for fetching data, `POST` is for sending data to a server to create or update a resource.
+  * Other common http methods include `PUT` and `DELETE`.
+* **`-H`**: This flag allows you to set a specific **HTTP header**. Headers contain important metadata about the request, such as the data format (`Content-Type: application/json`), the authentication token (`Authorization: Bearer <token>`), or information about the client making the request. You can use `-H` multiple times to send different headers.
+* **`-d`**: This flag (often used with `POST` or `PUT`) sends **data** in the body of the request, such as the JSON object you used to create a new user.
+
+In summary, a simple `curl` command is a basic request to fetch information, while the one with flags is a targeted, detailed instruction to the server, specifying not just what you want, but *how* you want to interact with it.
+
+
+**What are Bearer Tokens?**
+
+Yes, those tokens you're using are indeed **Bearer tokens**. 
+
+A Bearer token is a standard type of access token used for authentication and authorization in web APIs.
+
+The name "bearer" simply means **"the bearer of this token is authorized."** It's like a concert ticket 🎫—the person holding the ticket is the one who gets to enter, regardless of who originally bought it.
+
+Here's how they work:
+
+1.  You first send a request with your credentials (like email and password) to an authentication endpoint.
+2.  If the credentials are valid, the server generates and sends you a Bearer token.
+3.  For all subsequent requests to protected endpoints, you include this token in the `Authorization` header of your HTTP request. The format is always `Authorization: Bearer <token>`.
+4.  The server then validates the token. If it's valid, it grants you access to the requested resource without needing to know your username and password again.
+
+That's an excellent way to think about it. Yes, a bearer token is a temporary replacement for the user's credentials. It's a token that represents the authenticated identity, and it allows you to make subsequent API calls without repeatedly sending the username and password.
+
+**Key Points of Bearer Tokens**
+
+* **Replacement, Not Credential**: The token isn't a new password; it's a signed, temporary key. The server generates it after validating the initial credentials (username and password).
+* **Single-Use vs. Multi-Use**: Unlike the original credentials, which you should use only for the initial authentication, a bearer token is designed to be used multiple times. You'll include it in the `Authorization` header of every API request to a protected endpoint until it expires.
+* **Statelessness**: Once the server issues the token, it doesn't need to keep a record of it. The token itself contains the necessary information (often signed with a secret key) for the server to verify its authenticity and the user's identity. This makes APIs scalable because the server doesn't have to manage a list of active sessions.
+* **Expiration**: Tokens have a limited lifespan. This is a crucial security feature. If a token is stolen, an attacker can only use it for a short period before it becomes invalid. After a token expires, you must re-authenticate with your original credentials to get a new one.
+
+In essence, you can think of the user's credentials (email/password) as a **key** to an armored vault, and the bearer token as a **temporary access card** you get from the vault's security desk. 
+
+You use the key once to get into the building, but you then use the access card for all the other doors inside. 
+
+{{< /details >}}
+
+>  Bearer tokens represents the authenticated identity, and it allows you to make subsequent API calls without repeatedly sending the username and password.
+
+They are popular because they are **stateless** (the server doesn't need to store session information) and can be easily managed by the client.
+
+However, they should always be sent over a secure, encrypted connection (HTTPS) because anyone who intercepts the token can use it.
+
+
+
+
+**Other learnings**
+
 I got to know along the way about: 
 
-1. https://deepwiki.com/pocketbase/pocketbase
+1. An interesting site to get familiar with project documentation: https://deepwiki.com/pocketbase/pocketbase
 
-Which provides info about many libraries
+> Which provides info about many more libraries
 
 2. Connect your backend to your client libraries and frameworks https://github.com/get-convex/convex-backend
 
 
-## Concepts
+### Concepts
 
 
 **Some new concepts**

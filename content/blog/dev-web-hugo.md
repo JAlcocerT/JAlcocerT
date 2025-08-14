@@ -3,9 +3,11 @@ title: "How to use HUGO [101] and make quick Websites"
 date: 2024-09-06
 draft: false
 tags: ["Dev","Website","Shortcodes"]
-summary: 'How to get started with HUGO as SSG and create Webs. GO & HUGO Setup with ChartJS.'
+summary: 'How to get started with HUGO 101 as SSG and create Webs. GO & HUGO Setup with ChartJS.'
 url: 'using-hugo-as-website'
 ---
+
+**Intro**
 
 To use HUGO, you just need **2 things**:
 

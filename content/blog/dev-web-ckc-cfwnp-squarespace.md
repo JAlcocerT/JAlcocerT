@@ -1,11 +1,13 @@
 ---
-title: "Crafting a Website for Knitting. Blog and more. "
+title: "Crafting a Website for a Knitting Blog"
 date: 2024-09-23
 draft: false
-tags: ["dev","SSG","Astro"]
-descripton: 'SquareSpace to Cloudflare. From Firebase and Google Domains to Web a with Cloudflare Pages'
+tags: ["Dev","SSG","Astro"]
+description: 'From SquareSpace to Cloudflare.'
 url: 'squarespace-to-cloudflare-website'
 ---
+
+**Intro:** From Firebase and Google Domains to Web a with Cloudflare Pages
 
 Continue with the free option.
 
@@ -25,7 +27,7 @@ The CKC website is completed and visible at Cloudflare Pages: https://cozyknitti
 
 ![alt text](/blog_img/web/success2-ckc/CKC-CFWnP-Github.png)
 
-![alt text](/blog_img/web/success2-ckc/CKC-Deployed.png)
+![CozyKnittingClub Deployed](/blog_img/web/success2-ckc/CKC-Deployed.png)
 
 Once updated, we can **connect** the real domains with the build.
 
@@ -96,11 +98,12 @@ For this knitting site, I proposed to go with:
   
 * https://github.com/oxygenna-themes/foxi-astro-theme
 
-3. Others
+3. Other Themes
+
 * [Pacamara](https://github.com/palmiak/pacamara-headless)
 * [AllMyLinks](https://github.com/SofiDevO/allmylinks)
 * https://github.com/ouranoshong/astro-melody-starter
 
-Which its similar to Visvrs ([AstroVerse](https://github.com/penboxlab/astroverse))
+> Which its similar to Visvrs ([AstroVerse](https://github.com/penboxlab/astroverse))
 
 4. **The winner**: [Astro Minimma](https://github.com/iamnyasha/minimma)

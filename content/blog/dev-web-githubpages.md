@@ -2,7 +2,7 @@
 title: "How to create a free Web (ASTRO/HUGO/Jekyll) with Github Pages"
 date: 2024-09-08
 draft: false
-tags: ["Dev"]
+tags: ["Dev","SSG"]
 description: 'How to get a Free Webpage for your Projects with Github Pages. Github Actions + Github Pages Setup.'
 url: 'how-to-use-github-pages'
 ---
@@ -11,7 +11,7 @@ It does not really matter if you want to use [HUGO](https://jalcocert.github.io/
 
 With **Github Pages we can host** you Static Files (like the outputs of a SSG), that creates a good looking website.
 
-You get a (sub)domain as well.
+> You get a free (sub)domain as well.
 
 **And all for free.**
 
@@ -25,11 +25,13 @@ If you are into R language, you can also try with the [RKnit Package](https://ja
 
 But I promise that having **a quick look to SSGs** is totally worth it.
 
-Whats also great? 
+> Whats also great? 
 
 To forget about building your site.
 
-Commit your changes. Push. And let **Github Actions CI/CD Workflows** do the rest.
+Commit your changes. Push.
+
+And let **Github Actions CI/CD Workflows** do the rest.
 
 These are example of **CI/CD depending on your desired SSG**:
 
