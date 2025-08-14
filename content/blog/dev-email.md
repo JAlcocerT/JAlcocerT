@@ -21,8 +21,4 @@ url: 'emails-101'
 
 If you just wanted a quick way to chat...
 
-### Interesting Chats
-
-* https://github.com/permissionlesstech/bitchat
-
->  bluetooth mesh chat, IRC vibes 
+If you need, there are many [Interesting Chats](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps) to use :)

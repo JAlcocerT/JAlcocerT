@@ -79,29 +79,9 @@ Its up to you:
 ### Goodies for Servers
 
 
-1. Dont forget about fail2ban:
+1. Dont forget about **fail2ban**:
 
 * https://akashrajpurohit.com/blog/fail2ban-protecting-your-homelab-from-brute-force-attacks/
 
 
-2. **VPNs**: Like Mullvad or ProtonVPN
-
-* https://protonvpn.com/support/official-linux-vpn-debian/
-
-```sh
-wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.8_all.deb
-sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update
-#echo "0b14e71586b22e498eb20926c48c7b434b751149b1f2af9902ef1cfe6b03e180 protonvpn-stable-release_1.0.8_all.deb" | sha256sum --check -
-sudo apt install proton-vpn-gnome-desktop
-```
-
-
-3. **Secure email client** via Thunderbird or https://proton.me/blog/proton-mail-desktop-app
-
-```sh
-wget https://proton.me/download/mail/linux/1.9.0/ProtonMail-desktop-beta.deb
-sudo dpkg -i ProtonMail-desktop-beta.deb
-sudo apt-get install -f
-```
-
-* https://pr.tn/ref/RHJ7YZE8BN8G
+2. **VPNs**: Like Mullvad or ProtonVPN as covered [here](https://jalcocert.github.io/JAlcocerT/homelab-security/#vpn)

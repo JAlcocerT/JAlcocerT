@@ -23,6 +23,9 @@ I will cover:
 3. [MariaDB](#mariadb): because I like it for SelfHosting
 4. Some [interesting tools](#related-db-tools) to interact with your DBs
 
+<!-- https://www.youtube.com/watch?v=3gVBjTMS8FE -->
+
+{{< youtube "3gVBjTMS8FE" >}}
 
 
 ## SQLite
@@ -53,9 +56,15 @@ Multiple processes can read from the database at the same time without any issue
 
 SQLite's main limitation is its write concurrency. By default, SQLite only allows **one write operation at any given moment**. While one process is writing, the entire database is locked, and all other write attempts will be delayed or will fail.
 
-However, this doesn't mean writes are slow. In fact, for a single writer, SQLite's write performance can be very fast, particularly when using **transactions** to batch multiple write operations together. By wrapping many `INSERT` or `UPDATE` statements within a single transaction, you can drastically reduce the overhead and significantly improve write speed.
+However, this doesn't mean writes are slow. 
 
-Modern SQLite versions also offer a **Write-Ahead Logging (WAL)** mode, which improves write concurrency by allowing readers to continue working while a writer is active. Even in WAL mode, however, only one process can be writing at a time.
+In fact, for a single writer, SQLite's write performance can be very fast, particularly when using **transactions** to batch multiple write operations together. 
+
+By wrapping many `INSERT` or `UPDATE` statements within a single transaction, you can drastically reduce the overhead and significantly improve write speed.
+
+Modern SQLite versions also offer a **Write-Ahead Logging (WAL)** mode, which improves write concurrency by allowing readers to continue working while a writer is active.
+
+> Even in WAL mode, however, only one process can be writing at a time.
 
 
 ## PostgreSQL

@@ -224,7 +224,7 @@ You will need a website to monitor (and probably a headlessCMS)
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Headless-CMS" title="HeadLess Tools with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-* Grafana: 
+* Grafana: *for monitoring or [IoT](https://jalcocert.github.io/RPi) projects*
 
 ![Grafana UI](/blog_img/selfh/HomeLab/Grafana.png)
 
@@ -254,9 +254,12 @@ To **Monitor LLMs and other Apps**, I also collected few OSS Tools:
 
 I was writting about Server monitoring and internet speed tools [here](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#internet-monitoring-tools).
 
+I got to now a new interesting tool: https://github.com/orb-community/orb
+
 * https://orb.net/docs/setup-sensor/docker
   * https://orb.net/
 
+> MPL2 | Orb is a **dynamic network observability platform** with agent fleet orchestration and data pipelines with OpenTelemetry 
 
 {{< callout type="info" >}}
 Measure your Home Internet Speed with: [WYL and OpenSpeedTest/SpeedTest Tracker](https://jalcocert.github.io/RPi/posts/self-internet-monit/)
@@ -289,6 +292,8 @@ You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/
 
 ![Qbittorrent](/blog_img/selfh/media/qbit.png)
 
+This is how the admin UI looks like:
+
 ![Qbit Login](/blog_img/selfh/media/qbit-admin.png)
 
 ### In Home Tools
@@ -312,8 +317,6 @@ For more photo/video tricks, see also:
 {{< /cards >}}
 
 3. IT/Toos + OmniTools
-
-
 
 4. Specters: Some kind of ~ filebrowser, but better?
 
@@ -445,26 +448,3 @@ docker builder prune
 docker volume prune
 docker image prune -a
 ```
-
-### SelfHosting Python Web Apps
-
-Lately I have also been [tinkering with Python Web Apps](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/)
-
-So I have updated the docker-compose and Dockerfiles at:
-
-* https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps
-
-
-### Other
-
-Link analytics solutions, like Kutt:
-
-![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
-
-![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
-
-If you like Matrix or Signal, you might find interesting:
-
-* https://github.com/permissionlesstech/bitchat
-
-> Bluetooth mesh chat, IRC vibes

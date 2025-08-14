@@ -814,10 +814,3 @@ Addressing them thoroughly during requirements gathering will significantly cont
 > MIT | 🪄 Create rich visualizations with AI
 
 * You can also make Python scripts to write for you tedious and repetitive Grafana dashboards (like x400 pannel creation)
-
-
-### Interesting SelfHostable DnA Tools
-
-#### MinIO
-
-{{< youtube "KzZ2zCvHhl0" >}}

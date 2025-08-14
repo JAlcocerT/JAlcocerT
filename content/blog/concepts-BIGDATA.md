@@ -1156,7 +1156,13 @@ A escalable, low-code solution for **integrating and preparing data** for analyt
 
 **Data Storage (Where to Store Data):**
 
-* **MinIO:** A high-performance, scalable, and cloud-native object storage solution. Ideal for modern data-intensive applications, big data architectures, analytics, and machine learning workloads. It's fast, S3 compatible, and Kubernetes-native.
+* **MinIO:** A high-performance, scalable, and cloud-native object storage solution. Ideal for modern data-intensive applications, big data architectures, analytics, and machine learning workloads.
+
+> It's fast, S3 compatible, and Kubernetes-native. You can set [expiration policies as per its docs](https://docs.min.io/enterprise/aistor-object-store/administration/object-lifecycle-management/create-lifecycle-management-expiration-rule/)
+
+> > If you inspect the s3 container volume, everything will be flat, the folders in the UI is just to make it Human friendly
+
+{{< youtube "KzZ2zCvHhl0" >}}
 
 **Data Processing Engines (How to Process Data):**
 

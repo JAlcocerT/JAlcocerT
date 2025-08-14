@@ -19,10 +19,9 @@ The author seems to be the creator of: https://github.com/bloom42/markdown-ninja
 
 It seems to be another markdown lover :)
 
+## A CMS with Flask
 
-
-
-
+Version 0.2 coming!
 
 
 
