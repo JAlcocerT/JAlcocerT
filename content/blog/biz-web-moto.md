@@ -108,10 +108,6 @@ Went to [firebase UI](https://console.firebase.google.com/) -> Compilation -> ho
 
 Add a custom domain.
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Domains" image="/blog_img/web/porkbun.png" subtitle="Get a domain first!" >}}
-{{< /cards >}}
-
 Select my subdomain, and added a **CName + TXT record to the DNS**.
 
 ![Firebase Custom Domain](/blog_img/web/success5-aga/firebase-own-domain.png)
@@ -119,6 +115,11 @@ Select my subdomain, and added a **CName + TXT record to the DNS**.
 For that domain, Im using cloudflare - so made sure that its **DNS only and not proxied records**
 
 {{< /details >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Domains" image="/blog_img/web/porkbun.png" subtitle="Get a domain first!" >}}
+{{< /cards >}}
+
 
 {{< callout type="info" >}}
 Alternatively, do the [**Web-Dev setup** for Astro at Windows with Chocolatey](#chocolatey-setup-for-astro)
@@ -208,7 +209,7 @@ I encouraged this *client* to also do somethign with his **awsome action camera 
 
 ### Chocolatey and FFMPeg
 
-You can **install ffmpeg** without chocolatey.
+You can **install ffmpeg** without [chocolatey](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/).
 
 But thats *'en plan pringao'*.
 
@@ -220,9 +221,9 @@ So that programs will get installed programatically (instead of downloading `.ex
 If you have ffmpeg installed already, jump [here](#ffmpeg-video-workflow-for-windows)
 {{< /callout >}}
 
-With **Chocolatey as package manager** you just need to use these 4 commands to get **ffmpeg ready**.
+With **[Chocolatey](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/) as package manager** you just need to use these 4 commands to get **ffmpeg ready**.
 
-Open powershel as administrator and copy paste these (one by one):
+Open powershel *as administrator* and copy paste these (one by one):
 
 ```sh
 # Install Chocolatey (Run as Administrator)

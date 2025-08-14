@@ -16,6 +16,8 @@ There are few [tools to understand APIs](#apis) as you work with them.
 
 **Intro**
 
+
+
 > Stay if you also want to see how to [install the Py version you want](#proper-py-and-uv).
 
 
@@ -336,6 +338,8 @@ Most modern JavaScript environments handle these network requests asynchronously
 ---
 
 ## Conclusions
+
+Definitely, FastAPI is something that I will consider and try to combine with Astro and/or Pocketbase. 
 
 ### Proper Py and uv
 

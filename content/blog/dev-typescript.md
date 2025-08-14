@@ -101,13 +101,62 @@ When you are confortable with this, *if you want to share it publically*, you ha
 
 Deploy your new blog statically to your preferred solution:
 
-https://fossengineer.com/alternatives-for-hosting-static-websites/
+{{< cards cols="1" >}}
+  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="Pocketbase Docker Config 🐋 ↗" >}}
+  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="Pocketbase Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 You can also create a quick `make` command that will build and push your changes (manually) to CF, Firebase or any of those.
 
+```makefile
+# Default make goal
+.DEFAULT_GOAL := help
+
+.PHONY: dev
+dev: ## Install Python deps for Flask app using uv (manages .venv automatically)
+	npm run dev -- --host 0.0.0.0 --port 4321
+
+.PHONY: build
+build: ## Run the Flask app on http://localhost:5050 using uv
+	npm run build
+
+.PHONY: help
+help: ## Show this help
+	@awk 'BEGIN {FS = ":.*##"}; /^[a-zA-Z0-9_.-]+:.*?##/ {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 ```
-#makefile
+
+If you are using Windows, install npde/npm fast: *thanks to [chocolatey](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/)*
+
+1. Open the Start Menu and search for cmd or PowerShell.
+2. Right-click on the search result.
+3. Select "Run as administrator".
+4. If a User Account Control (UAC) prompt appears, click "Yes".
+
+```sh
+choco upgrade all -y
+choco install chocolateygui
+
+choco install nodejs -y
+#node -v
+#npm -v
+```
+
+As seen with the [moto bloger post](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/): *you can try with firebase with your gmail account*
+
+```sh
+#npm install -g firebase-tools
+
+firebase login
+firebase init
+#firebase projects:list
+```
+
+You might also need some git tricks:
+
+```sh
+choco install gh
+gh auth login
 ```
 
 ### Gitea x GHA
