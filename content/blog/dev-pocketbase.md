@@ -413,6 +413,10 @@ This SDK makes it much easier to interact with the auto-generated REST API and o
 * https://github.com/pocketbase/js-sdk
   * https://www.npmjs.com/package/pocketbase
 
+```sh
+npm i pocketbase
+```
+
 > MIT | PocketBase JavaScript SDK
 
 - PocketBase excels at: authentication, simple CRUD, schema validation, real-time subscriptions, admin UI, and serving configuration/user-profile style data.

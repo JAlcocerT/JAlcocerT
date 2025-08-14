@@ -479,9 +479,12 @@ sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
 
 6. **Yaade (apidoc7/yaade on GitHub):** Yaade is an open-source, self-hosted, collaborative API development environment. It aims to provide a complete platform for designing, developing, and testing APIs.
 
-7. Reqable - Reqable implements the core features of traffic analysis and API testing, and deeply integrates them. One app is worth multiple apps. 
+7. Reqable - Reqable implements the core features of traffic analysis and API testing, and deeply integrates them. 
 
-> Reqable = Fiddler + Charles + Postman
+One app is worth multiple apps: Advanced API Debugging Proxy and REST Client
+
+
+> [Reqable](https://github.com/reqable/reqable-app) = Fiddler + Charles + Postman
 
 ```sh
 flatpak install flathub com.reqable.Reqable

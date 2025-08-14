@@ -8,6 +8,10 @@ url: 'live-search-and-research-with-ai'
 ---
 
 
+**TL;DR** Setting up [Local Deep Researcher](#local-deep-researcher) and [Perplexica](#the-perplexica-ai-project)
+
+**Intro**
+
 Last year I had the [Groq YT project](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/) as a very useful one.
 
 And the [notebookLM](https://notebooklm.google/) as a kind of [RAG](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/) from google, that could be useful to summarize docs.
@@ -59,7 +63,7 @@ What you need to have handy:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG x LangGraph" >}}
-  {{< card link="https://github.com/JAlcocerT/local-deep-researcher" title="Forked Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Local Deep Researcher with langGraph - Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher" title="Local Deep Researcher Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Local Deep Researcher with langGraph - Source Code on Github" >}}
 {{< /cards >}}
 
 
@@ -128,10 +132,12 @@ Sometime ago Whoogle and SearXNG to make private Web Search.
 
 But GenAI can help us to retrieve relevant Web results.
 
-https://fossengineer.com/selfhosting-whoogle-docker/
-https://fossengineer.com/selfhosting-whoogle-docker/#searxng-with-docker
+* *ttps://fossengineer.com/selfhosting-whoogle-docker/
+* SearXNG: https://fossengineer.com/selfhosting-whoogle-docker/#searxng-with-docker
 
-Perplexica is an **AI-powered search engine**. It is an Open source alternative to Perplexity AI
+Perplexica is an **AI-powered search engine**. 
+
+> It is an Open source alternative to Perplexity AI
 
 ### The Perplexica AI Project
 
@@ -145,7 +151,6 @@ It uses advanced machine learning algorithms like **similarity searching and emb
 Using SearxNG to stay current and fully open source, Perplexica ensures you always get the most up-to-date information without compromising your privacy.
 
 ### Why Perplexica AI?
-
 
 * All Mode: Searches the entire web to find the best results.
 * Writing Assistant Mode: Helpful for writing tasks that does not require searching the web.
@@ -330,8 +335,6 @@ Community and Support:
 Current Status:
 - The project is **no longer maintained** as the focus has shifted to a new project, **Latitude LLM**, which likely focuses on new features or different capabilities.
 - Existing users can still use the codebase and license as-is, though no new updates are being released.
-
-Conclusion:
 
 Latitude simplifies the integration of embedded analytics for developers, allowing for easy creation and deployment of dashboards, visualizations, and queries.
 

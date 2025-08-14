@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2025-12-31
+date: 2025-08-17
 draft: true
 tags: ["Tinkering"]
 description: 'IoT Meets AI. Using MQTT and AI Together'
@@ -15,7 +15,7 @@ And now AI on the edge?
 
 AI-IOT?
 
-https://jalcocert.github.io/RPi/
+* https://jalcocert.github.io/RPi/
 
 ## IoT on Raspberry Pi
 
@@ -117,7 +117,7 @@ services:
 
 ## Edge AI - AIoT
 
-https://github.com/9tigerio/db2rest
+* https://github.com/9tigerio/db2rest
 
 > Instant no code DATA API platform. Connect any database, run anywhere. Power your GENAI application function/tools calls in seconds.
 
@@ -166,6 +166,15 @@ https://github.com/tensorchord/Awesome-LLMOps?tab=readme-ov-file#llmops
 * Open-source tools for prompt testing and experimentation, with support for both LLMs (e.g. OpenAI, LLaMA) and vector databases (e.g. Chroma, Weaviate, LanceDB).
 
 https://github.com/hegelai/prompttools
+
+## Conclusions
+
+* Edge Computing - https://github.com/qijianpeng/awesome-edge-computing
+* Domotica para pobres - https://forocoches.com/foro/showthread.php?t=6655749
+
+* MicroPython - https://awesome-micropython.com/
+
+* https://github.com/ahundt/awesome-robotics
 
 ---
 

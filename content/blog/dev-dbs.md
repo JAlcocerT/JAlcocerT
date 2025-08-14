@@ -66,6 +66,28 @@ Modern SQLite versions also offer a **Write-Ahead Logging (WAL)** mode, which im
 
 > Even in WAL mode, however, only one process can be writing at a time.
 
+### Using SQLite
+
+SQlite is so useful than other tools uses it, like pocketbase:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase | POST ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase | POST ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+To visualize whats going on:
+* [SQliteBrowser](https://github.com/sqlitebrowser/sqlitebrowser)
+* Many [others tools](#database-management--gui-tools-)
+
+```sh
+sudo apt install sqlitebrowser
+```
+
 
 ## PostgreSQL
 
@@ -340,7 +362,34 @@ Here are some of the most popular categories and tools.
 
 These tools provide a graphical user interface (GUI) to interact with and manage your databases, offering a more user-friendly alternative to the command line.
 
-* **DBeaver**: A universal database tool for developers and administrators. It's cross-platform and supports virtually any database that has a JDBC driver, including PostgreSQL, MySQL, SQLite, and many others. It features a SQL editor, ER diagrams, and data export/import capabilities.
+
+{{< details title="Useful Tools to work with DBs 📌" closed="true" >}}
+
+* [ChartDB](https://github.com/chartdb/chartdb) - Database diagrams editor that allows you to visualize and design your DB with a single query.
+* [SQLiteViz](https://github.com/lana-k/sqliteviz)
+
+
+* [DuckDB](https://github.com/duckdb/duckdb) ~ OLAP
+  * [Huey](https://github.com/rpbouman/huey) an UI for DuckDB
+  * GetHue - https://hub.docker.com/r/gethue/hue/tags - Hue is an open source SQL Assistant for Database & Data Warehouses. - https://github.com/cloudera/hue
+
+* [ChartDB](https://github.com/chartdb/chartdb) - Database diagrams editor that allows you to visualize and design your DB with a single query.
+* [SQLiteViz](https://github.com/lana-k/sqliteviz)
+* [SQliteBrowser](https://github.com/sqlitebrowser/sqlitebrowser)
+
+
+{{< /details >}}
+
+
+
+* **DBeaver**: A universal database tool for developers and administrators. It's cross-platform and supports virtually any database that has a JDBC driver, including PostgreSQL, MySQL, SQLite, and many others.
+
+> It features a SQL editor, ER diagrams, and data export/import capabilities.
+
+```sh
+flatpak install flathub io.dbeaver.DBeaverCommunity
+```
+
 * **pgAdmin**: A powerful and feature-rich management and development platform for PostgreSQL. It provides a visual interface for managing database objects, running queries, and monitoring server activity.
 * **phpMyAdmin**: A classic web-based tool specifically for managing MySQL and MariaDB databases. It's widely used for its simplicity and ease of use in managing tables, users, and running queries.
 

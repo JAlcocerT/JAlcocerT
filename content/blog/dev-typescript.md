@@ -113,17 +113,29 @@ You can also create a quick `make` command that will build and push your changes
 # Default make goal
 .DEFAULT_GOAL := help
 
+.PHONY: install
+install: ## Install Node.js dependencies
+    npm install
+
 .PHONY: dev
-dev: ## Install Python deps for Flask app using uv (manages .venv automatically)
-	npm run dev -- --host 0.0.0.0 --port 4321
+dev: ## Start development server on http://localhost:4321
+    npm run dev -- --host 0.0.0.0 --port 4321
 
 .PHONY: build
-build: ## Run the Flask app on http://localhost:5050 using uv
-	npm run build
+build: ## Build the Astro site for production
+    npm run build
+
+.PHONY: preview
+preview: ## Preview the production build locally
+    npm run preview
+
+.PHONY: clean
+clean: ## Clean build artifacts and node_modules
+    rm -rf dist node_modules
 
 .PHONY: help
 help: ## Show this help
-	@awk 'BEGIN {FS = ":.*##"}; /^[a-zA-Z0-9_.-]+:.*?##/ {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+    @powershell -Command "Get-Content Makefile | Select-String '^[a-zA-Z0-9_.-]+:.*?##' | ForEach-Object { $$line = $$_.Line; if ($$line -match '^([a-zA-Z0-9_.-]+):.*?##\s*(.+)') { Write-Host ('{0,-20} {1}' -f $$matches[1], $$matches[2]) -ForegroundColor Cyan } }"
 ```
 
 If you are using Windows, install npde/npm fast: *thanks to [chocolatey](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/)*

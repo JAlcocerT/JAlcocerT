@@ -363,7 +363,9 @@ In simple terms, it's the process of:
 
 **Data modeling is about creating a structured and logical representation of the data you need, making it easier to work with and understand.**
 
-It's the crucial first step in designing any system that stores and manages information. Just like a good blueprint is essential for a successful building, a good data model is essential for a successful data system.
+It's the crucial first step in designing any system that stores and manages information.
+
+Just like a good blueprint is essential for a successful building, a good data model is essential for a successful data system.
 
 {{< callout type="info" >}}
 As per my experience, we should follow this kind of process. Including a [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md) is also a great idea.
@@ -446,10 +448,9 @@ Name it as you want it.
 
 Just control the basics and know that there will be some *ad-ons*.
 
-
 **What is Normalization?**  
 
-https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#data-modelling-techniques
+You should be aware of common [data modelling techniques](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#data-modelling-techniques).
 
 {{< details title="Explore SQL FAQ 📌" closed="true" >}}
 
@@ -522,7 +523,6 @@ Denormalization combines normalized tables to improve **read performance**, ofte
 {{< callout type="info" >}}
 Talk [with a DB via LLMs as described **here**](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#chat-with-a-db-with-langchain) with **LangChain**
 {{< /callout >}}
-
 
 
 {{< details title="Useful Tools to work with DBs 📌" closed="true" >}}

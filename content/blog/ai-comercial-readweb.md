@@ -84,7 +84,7 @@ After executing the script...
 #python3 pracuj_v3.py
 ```
 
-we will have records:
+We will have records into the DB:
 
 ```sh
 sudo apt install sqlite3

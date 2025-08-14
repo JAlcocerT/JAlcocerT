@@ -25,6 +25,12 @@ I wanted to try for long Fuwari Theme:
 
 * https://github.com/saicaca/fuwari
 
+```sh
+pnpm install
+pnpm run dev
+```
+
+This can be combined with PB.
 
 ### Frosti
 

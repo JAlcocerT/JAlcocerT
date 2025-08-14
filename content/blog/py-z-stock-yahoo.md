@@ -238,11 +238,26 @@ But, you can anyways do your *data experiment* for fun:
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Animations/WK27Y25/Short-4/eurusd_ytd_change.py" title="With YFinance, you can also pull Currency Exchange Data ↗" >}}
 {{< /cards >}}
+
 ---
 
 ## Conclusions
 
-1. Is it possible to live from dividends?
+People throw many numbers into finance.
+
+Sp500 is 10% avg return. Did it?
+
+It depends when exactly you are looking at.
+
+> Now you can play with the data and see for yourself :)
+
+Some say that you should go with the `65/20/15` (Living expenses/fund spending/future you) approach.
+
+Or the `50/25/25` (lifestyle/tax/monetary system)
+
+> You can make up any other, same as that people made
+
+1. Is it possible to **live from dividends**?
 
 2. **How much** do I need to live from dividends?
 
