@@ -14,8 +14,6 @@ url: 'just-iot'
 
 
 
-
-
 ## Hardware and Projects
 
 

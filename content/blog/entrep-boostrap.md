@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap and other concepts for SoloPreneurs"
-date: 2025-08-15
+date: 2025-08-23
 draft: false
 tags: ["SoloPreneur","Indie SaaS","Product","Entrepre-AI"]
 description: 'Resources to launch your stuff.'

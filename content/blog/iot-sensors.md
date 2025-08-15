@@ -9,11 +9,6 @@ url: 'iot-sensors-101'
 
 
 
-
-
-
-
-
 ### MLX90614 GY-906 - IR
 
 The MLX90614 GY-906 is an infrared (IR) temperature sensor module commonly used for non-contact temperature measurements.

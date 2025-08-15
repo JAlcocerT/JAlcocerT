@@ -8,7 +8,7 @@ url: 'databases-101'
 ---
 
 
-**TL;DR:** Recap on popular DBs. For SelfHosters and BE Devs.
+**TL;DR:** Recap on popular DBs. For SelfHosters and BackEnd Devs. For D&A view see [this post](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/).
 
 **Intro**
 

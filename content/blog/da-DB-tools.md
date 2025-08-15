@@ -8,6 +8,18 @@ url: 'setup-databases-docker'
 ---
 
 
+**Intro**
+
+
+SQL Based:
+
+1. MySQL
+2. MariaDB
+3. PostgreSQL
+
+No SQL DB:
+
+4. Mongo
 
 ## SQL
 

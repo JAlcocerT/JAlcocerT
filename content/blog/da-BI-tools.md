@@ -7,6 +7,10 @@ description: 'Setting up Data Analytics Visualization (Business Intelligence) to
 url: 'setup-bi-tools-docker'
 ---
 
+
+
+**Intro**
+
 If you have interact with the data & analytics space, at some point you had to build a dashboard.
 
 Yet again, there are several tools out there.
@@ -16,6 +20,16 @@ Yet again, there are several tools out there.
   {{< card link="https://youtube.com/@JAlcocerTech" title="My YT Tech Channel ↗" >}}
 {{< /cards >}}
 
+What should you focus on?
+
+PowerBI, tableau and Looker are quite popular.
+
+But there are few more that you can try from your laptop:
+
+1. [Superset](#superset)
+2. [Metabase](#metabase)
+3. [Redash](#redash)
+4. [Grafana](#grafana)
 
 
 ## Business Intelligence and IoT 

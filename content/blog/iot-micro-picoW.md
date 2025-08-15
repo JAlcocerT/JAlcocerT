@@ -2,19 +2,12 @@
 title: "Raspberry Pi Pico W"
 date: 2025-08-14T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting","IoT"]
+tags: ["Self-Hosting","IoT","Embedded Systems"]
 description: 'Using the Pico W [Microcontrollers]'
 url: 'pico-w'
 ---
 
-
-You can try with Thony or ArduinoIDE (I prefer the latter)
-```sh
-#sudo apt-get install -y thonny
-flatpak install flathub cc.arduino.IDE2
-```
-
-The "Arduino Mbed OS RP2040 Boards [v 4.4.1]" core has to be installed for the currently selected "Raspberry Pi Pico" board. Do you want to install it now?
+**TL;DR**
 
 **Intro**
 
@@ -22,28 +15,41 @@ Two years ago I was tinkering with microcontrollers.
 
 But still I have not put together all my learnings in a *proper way*.
 
-ACtually in any way.
+Actually... in any way :)
 
 So lets get the [PicoW](#raspberry-pi-pico-w) part sorted out.
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/categories/iot-data-analytics/" title="RPi Related Blog" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="Jekyll Blog with posts about IoT" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW" title="RPi (PicoW Scripts) Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PicoW Scripts Python Scripts to tinker!" >}}
+{{< /cards >}}
+
+
+We will see:
+
+1. How to [connect the PicoW](#piw-101)
+2. Using the [IDE](#ide-for-picow)
 
 ## Raspberry Pi Pico W
 
-
-
-
 Ideas for Readme's - https://github.com/STJRush/handycode/tree/master/Raspi%20Pico
 
-<https://picockpit.com/raspberry-pi/everything-about-the-raspberry-pi-pico/>
+* The chip: RP2040 and you can get the pinout and schematics as per https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico-1-family
+* The schema: <https://docs.micropython.org/en/latest/rp2/quickref.html>
+
+> The W version (brings wifi), see the [official docs](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#raspberry-pi-pico-w-and-pico-wh)
 
 
-The chip: RP2040 and you can get the pinout and schematics as per https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico-1-family
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
-The schema: <https://docs.micropython.org/en/latest/rp2/quickref.html>
-
-W version (wifi): <https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#raspberry-pi-pico-w-and-pico-wh>
 
 ### PiW 101
+
+You can get familiar via this post with the picoW: https://picockpit.com/raspberry-pi/everything-about-the-raspberry-pi-pico/
+
+But basically, you will want to connect it to your laptop:
 
 ```sh
 ls /dev/tty*
@@ -62,8 +68,7 @@ newgrp dialout
 mpremote connect /dev/ttyACM0 repl
 ```
 
-
-You can connect to your PiW console logs:
+You can connect to your **PiW console logs**:
 
 ```sh
 sudo apt install picocom
@@ -108,140 +113,146 @@ Type "help()" for more information.
 >>>  #the program will stop executing in loop while u are here
 ```
 
+#### IDE for PicoW
+
+You can try with Thony or ArduinoIDE (I prefer the latter)
+
+```sh
+#sudo apt-get install -y thonny
+flatpak install flathub cc.arduino.IDE2
+```
+
+You will see a message like: The "Arduino Mbed OS RP2040 Boards [v 4.4.1]" core has to be installed for the currently selected "Raspberry Pi Pico" board. Do you want to install it now?
+
+> I said yes!
+
+
 ### PicoW and MicroPython
+
+The PicoW supports few [languages](#faq).
+
+But if you are confortable with Python, just stick to this one.
 
 Thanks to [core-electronics](https://core-electronics.com.au/guides/raspberry-pi-pico-w-connect-to-the-internet/)
 
-1. Hold the BOOTSEL button on the Pico W
+I was using Windows11 to make this one time setup:
+
+1. Hold the `BOOTSEL` button on the Pico W
 2. Connect the Pico W to your computer via the USB cable
 3. Release the BOOTSEL button -> you will see a new device in the PC.
 4. Download this and move it to the Pico folder: <https://github.com/micropython/micropython/releases>
 
 * Mip: <https://github.com/micropython/micropython-lib>
-    * installing from fork: 
+    * Installing from fork: https://micropython.org/download/rp2-pico-w/rp2-pico-w-latest.uf2
 
 ```py    
 import mip
 mip.install(PACKAGE_NAME, index="https://USERNAME.github.io/micropython-lib/mip/BRANCH_NAME")
 ```
 
-<https://micropython.org/download/rp2-pico-w/rp2-pico-w-latest.uf2>
-
-unplug usb and plug
+> Unplug usb and plug
 
 To install libraries, i have observed that recently **upip has been depricated in favour of mip**
 
 
+#### Using the Built in Led
+
+The **led is the pin 25** as per the PicoW schema.
+
+1. Run -> Configure Interpreter -> Interpreter -> MicroPython (Raspberry Pi Pico)
+
+2. View -> files
+
+> The Pico will look for a **main.py** to execute in loop
+
+3. View -> plotter
+
+Press `CTRL+D` for soft reboot and load the new program!
+
+{{< youtube "_ouzuI_ZPLs" >}}
+<!-- 
+<https://www.youtube.com/watch?v=_ouzuI_ZPLs> -->
 
 
 
-#### using the built in led
-
-The led is the pin 25 as per the schema
-
-<https://www.youtube.com/watch?v=_ouzuI_ZPLs>
-
-Run -> Configure Interpreter -> Interpreter -> MicroPython (Raspberry Pi Pico)
-
-View -> files
-
-The Pico will look for a **main.py** to execute in loop
-View -> plotter
-
-CTRL+D for soft reboot and load the program
+#### Reading internal temp sensor
 
 
-```py
-from machine import Pin
-from time import sleep
-
-#led = Pin(25, Pin.OUT)
-led = Pin("LED", Pin.OUT) #For Pico W: Thanks to Easy Learning Video https://www.youtube.com/watch?v=PvH_yKwtoEA
-
-n=0
-
-while True:
-    led.toggle()
-    print("13 times {} is {}".format(n,13))
-    n = n+1
-    sleep(0.5)
-
-```
+* Required library: https://pypi.org/project/machine/
 
 
-#### Reading internal temp sensor:
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/InternalSensor" title="PicoW + Wifi Connection 🐍 ↗" >}}
+{{< /cards >}}
+
+{{< youtube "PYOaO1yW0rY" >}}
 
 
-<https://www.youtube.com/watch?v=PYOaO1yW0rY>
-
-<https://pypi.org/project/machine/>
-
-```py
-import machine
-import utime
-sensor_temp = machine.ADC(4)
-conversion_factor = 3.3 / (65535) #pico's datasheet
-while True:
-    reading = sensor_temp.read_u16() * conversion_factor
-    temperature = 27 - (reading - 0.706)/0.001721
-    print(temperature)
-    utime.sleep(2)
-```
 
 #### Connecting the Pico to Wifi
 
-<https://www.youtube.com/watch?v=GiT3MzRzG48>
+Thanks to the video:
 
-Name the file different than `main.py` to avoid the automatic execution.
+<!-- <https://www.youtube.com/watch?v=GiT3MzRzG48> -->
 
-You can connect your picoW to Wifi and blik the led while attempting to do so with:
-
-https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI/boot.py
-
-```py
-# A simple example that:
-# - Connects to a WiFi Network defined by "ssid" and "password"
-# - Performs a GET request (loads a webpage)
-# - Queries the current time from a server
-
-import network   # handles connecting to WiFi
-import urequests # handles making and servicing network requests
-
-# Connect to network
-wlan = network.WLAN(network.STA_IF)
-wlan.active(True)
-
-# Fill in your network name (ssid) and password here:
-ssid = 'HUAWEI P30'
-password = 'mokradupa68'
-wlan.connect(ssid, password)
+{{< youtube "GiT3MzRzG48" >}}
 
 
-# Example 1. Make a GET request for google.com and print HTML
-# Print the html content from google.com
-print("1. Querying the Web.com:")
-r = urequests.get("https://fossengineer.com")
-print(r.content)
+> Name the file different than `main.py` to avoid the automatic execution.
 
-r = urequests.get("http://date.jsontest.com/")
-print(r.json())
-print(r.json()['time'])
-```
+You can connect your picoW to Wifi and blik the led while attempting to do so with [this script](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI/boot.py).
 
-## Pico and MQTT
+Even reading html webcontent, with [this other script](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectWifi_ReadWeb).
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI" title="PicoW + Wifi Connection 🐍 ↗" >}}
+{{< /cards >}}
+
+#### Pico W with MLX90614
+
+GND is pin38
+3v3 out is pin 36
+
+11 (GP8) is I2C0 SDA
+12 (GP9) is I2C0 SCL
+
+<https://www.youtube.com/watch?v=FsdSkhdfOqY&t=24s> and they are giving their own library: <https://github.com/embeddedclub/micropython>
+
+we need to install: <https://github.com/mcauser/micropython-mlx90614>
+it is not available in mip, the new package manager
+
+so cloned the repo and copied into /lib/mlx/mlx90614.py (i did not compiled it into .mpy) the .py file of the repo
+
+in this way, we can import with from mlx.mlx90614 import MLX90614 (we import the class)
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MLX90614" title="PicoW + MLX906014 🐍 ↗" >}}
+{{< /cards >}}
+
+
+
+#### Pico and MQTT
 
 Message Queue Telemetry Transport
 
-###  with **HiveMQ**
+You could also play with **HiveMQ**
 
-<https://www.youtube.com/watch?v=jw9zTjKqoUA>
+<!-- 
+https://www.youtube.com/watch?v=jw9zTjKqoUA 
+-->
 
-### with RPI and mqttx/mosquitto
+{{< youtube "jw9zTjKqoUA" >}}
 
+
+## The RPI and mqttx/mosquitto
+
+If you want to bring the *bigger* Pi4 to the MQTT game:
 
 <https://mqttx.app/>
 <https://github.com/emqx/MQTTX>
 
+```sh
 sudo apt install -y mosquitto
 sudo apt install -y mosquitto-clients
 
@@ -249,24 +260,29 @@ sudo apt install -y mosquitto-clients
 sudo pip3 install paho-mqtt
 
 sudo systemctl status mosquitto.service
+```
 
-In the absence of a direct configuration entry for the port, the port used by Mosquitto could be the default port (1883 for MQTT or 8883 for MQTT over TLS/SSL).
+> In the absence of a direct configuration entry for the port, the port used by Mosquitto could be the default port (1883 for MQTT or 8883 for MQTT over TLS/SSL).
 
-You can check which one is in used with: netstat -tuln
+You can check which one is in used with: 
 
+```sh
+netstat -tuln
+```
 
 <https://www.youtube.com/watch?v=GQOqvvei5Do> #also hivemq
 
 
 #without hivemq <https://www.youtube.com/watch?v=THUGLRGuOU8> GREAT VIDEO!!!!!!!! **To be used mqttx and emqx**
-<https://www.donskytech.com/umqtt-simple-micropython-tutorial/>
+
+
+* https://www.donskytech.com/umqtt-simple-micropython-tutorial/
 
 
 
-REQUIRED:
+**REQUIRED:**
 
 ```py
-
 #connect to wifi
 import network   # handles connecting to WiFi
 import urequests # handles making and servicing network requests
@@ -279,7 +295,6 @@ wlan.active(True)
 ssid = 'HUAWEI P30'
 password = 'mokradupa68'
 wlan.connect(ssid, password)
-
 
 #install libraries for mqtt
 
@@ -294,7 +309,6 @@ mip.install("umqtt.robust")
 
 #https://github.com/micropython/micropython-lib/tree/master/micropython/umqtt.simple
 mip.install("umqtt.simple")
-
 ```
 
 then the code <https://github.com/donskytech/micropython-raspberry-pi-pico/tree/main/umqtt.simple>
@@ -407,126 +421,30 @@ if __name__ == "__main__":
 
 ```
 
-#### MQTT to NodeRed
-
-NodeRed will subscribe to the topic
-
-
-```yml
-version: '3'
-
-services:
-  emqx:
-    image: emqx/emqx
-    container_name: emqx
-    ports:
-      - "1883:1883"
-      - "8083:8083"
-      - "8883:8883"
-      - "8084:8084"
-      - "18083:18083"
-    restart: always
-
-  nodered:
-    image: nodered/node-red
-    container_name: nodered
-    ports:
-      - "1880:1880"
-    restart: always
-
-```
-
-
-<https://www.youtube.com/watch?v=_DO2wHI6JWQ&t=21s>
-<https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server>
-
-
-###
-
-https://www.youtube.com/watch?v=ybCMXqsQyDw&t=19s
-
-
-## Pico to Pico Wifi comm
+1. Pico to Pico Wifi communication
 
 <https://www.youtube.com/watch?v=ACAmVg6MakI>
 
-## Pico W web server
+2. Pico W web server:
 
 <https://www.youtube.com/watch?v=ufK_knxWn08>
 
 and also <https://www.youtube.com/watch?v=AK8UYh7pMGM>
 
-## Pico and Solar Panel + Battery
+3.  MQTT to NodeRed: NodeRed will subscribe to the MQTT topic.
+
+* https://www.youtube.com/watch?v=_DO2wHI6JWQ&t=21s>
+* https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server>
+
+
+https://www.youtube.com/watch?v=ybCMXqsQyDw&t=19s
 
 
 
+## FAQ
 
 
-
-
-
-
-## PicoW with DHT11
-
-
-
-
-
-## Pico W with MLX90614
-
-GND is pin38
-3v3 out is pin 36
-
-11 (GP8) is I2C0 SDA
-12 (GP9) is I2C0 SCL
-
-<https://www.youtube.com/watch?v=FsdSkhdfOqY&t=24s> and they are giving their own library: <https://github.com/embeddedclub/micropython>
-
-we need to install: <https://github.com/mcauser/micropython-mlx90614>
-it is not available in mip, the new package manager
-
-so cloned the repo and copied into /lib/mlx/mlx90614.py (i did not compiled it into .mpy) the .py file of the repo
-
-in this way, we can import with from mlx.mlx90614 import MLX90614 (we import the class)
-
-
-```py
-from machine import Pin, Timer, I2C, SoftI2C
-#from aphanum import ALPHANUM_I2C
-from mlx90614 import MLX90614_I2C
-
-
-i2c2 = SoftI2C(scl=Pin(9),sda=Pin(8),freq=100000)
-
-print("I2C Comm Success")
-
-# d = i2c2.scan()
-# print(hex(d[0])
-# print(hex(d[1])
-# alph = ALPHANUM_I2C(i2c2,0x70,000,15)
-# print("Alpha display init")
-
-irtemp = MLX90614_I2C(i2c2,0x5A)
-
-led1 = Pin(25, Pin.OUT)
-
-timer1 = Timer()
-
-def tick_timer(timer):
-    global led1
-    led1.toggle()
-    t1 = irtemp.get_temperature(0)
-    t2 = irtemp.get_temperature(1)
-    print("T1 = %f", t1)
-    print("T2 = %f", t2)
-    alph.set_digit(int(t2*100),2);
-timer1.init(freq=2,mode=Timer.PERIODIC,callback=tick_timer)
-
-```
-
-
-
-## Languages
+**supported Languages** 
 
 C/C++
 MicroPython
@@ -535,13 +453,11 @@ CircuitPython (?)
 
 O.S FreeRTS ??? <https://www.youtube.com/watch?v=5pUY7xVE2gU>
 
-### Even with RUST?
+> Even with RUST?
 
 https://www.alexdwilson.dev/how-to-program-raspberry-pi-pico-with-rust
 
 https://www.youtube.com/watch?v=jZT8APrzvc4
-
-## FAQ
 
 
 ### How can you see what code is currently inside the microcontroller (Pico W)?

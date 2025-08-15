@@ -15,14 +15,14 @@ url: 'whats-typescript'
 
 ## TS
 
-If you know [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/), going to ts should be relatively simple.
+If you know [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/), going to TS *should be relatively* simple.
 
 
 
 ### TS x PB
 
 
-{{% details title="About LiquiBase... 🚀" closed="true" %}}
+{{% details title="Why TypeScript + PocketBase...?" closed="true" %}}
 
 {{% /details %}}
 

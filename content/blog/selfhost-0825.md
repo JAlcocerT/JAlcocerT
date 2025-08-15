@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - Summer 2025"
-date: 2025-08-15T01:20:21+01:00
+date: 2025-08-30T01:20:21+01:00
 draft: false
 tags: ["Dev","SSGs"]
 description: 'Selfhosting Updates: SelfHosting SSGs & Python WebApps + Leds and API with the Pi'
