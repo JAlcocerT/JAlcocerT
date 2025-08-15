@@ -100,7 +100,14 @@ I prefered to go With Arduino IDE and create test projects like this one.
 
 > Dont forget to include the libraries: `Tools -> Manage Libraries -> DHT sensor library` for ESPx
 
-If you are going to do it via VSCode and PlatformIO...
+If you are going to do it via VSCode and [PlatformIO](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide)...
+
+```sh
+#ext install platformio.platformio-ide
+code --install-extension platformio.platformio-ide
+```
+
+> Platformio, is an embedded development ecosystem and a popular VS Code extension. Focus: building, debugging, and uploading firmware for C/C++ frameworks (Arduino, ESP-IDF, etc.).
 
 I recommend you also the **Serial Monitor extension**, [this one](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor), as seen:
 

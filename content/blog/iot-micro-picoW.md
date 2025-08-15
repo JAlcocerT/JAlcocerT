@@ -122,6 +122,10 @@ Type "help()" for more information.
 
 #### IDE for PicoW
 
+This repository: https://github.com/ajgquional/rpi-picow-micropython
+
+Is great to get your started!
+
 You can try with Thony or ArduinoIDE (I prefer the latter)
 
 ```sh
@@ -141,6 +145,26 @@ Do you want to install it now?
 
 > I said yes!
 
+https://www.youtube.com/watch?v=RQRQvjIBbUo
+
+{{< youtube "RQRQvjIBbUo" >}}
+
+You will also have to:
+
+* Go to preferences -> settings and add the json as per: https://github.com/earlephilhower/arduino-pico?tab=readme-ov-file#installation
+* Then go to Tools -> Board -> Boards Manager and look on the left for pi pico/Rp2040
+
+
+![alt text](/blog_img/iot/picoW/arduinoIDE-install3.png)
+
+
+![alt text](/blog_img/iot/picoW/arduinoIDE-install4.png)
+
+Then the PicoW will be visible at arduinoIDE:
+
+![alt text](/blog_img/iot/picoW/arduinoIDE-install5-picow.png)
+
+
 For Thonny installation
 
 ![alt text](/blog_img/iot/picoW/thonny-install.png)
@@ -154,7 +178,7 @@ You will need to do `sudo usermod -aG dialout $USER` so that Thonny wont have pe
 You could also check the serial access to the PicoW via:
 
 ```sh
-screen /dev/ttyACM0 115200
+screen /dev/ttyACM0 115200 #this will show the prints of your picoW scripts
 ```
 
 Also, VSCode + extensions can work for your IoT projects:
@@ -173,7 +197,9 @@ code --install-extension ms-vscode.vscode-serial-monitor
 
 The PicoW supports few [languages](#faq).
 
-But if you are confortable with Python, just stick to this one.
+But if you are confortable with Python, just stick to this one: **MicroPython**
+
+![alt text](/blog_img/iot/picoW/micropython-101.png)
 
 Thanks to [core-electronics](https://core-electronics.com.au/guides/raspberry-pi-pico-w-connect-to-the-internet/)
 
@@ -201,6 +227,15 @@ mip.install(PACKAGE_NAME, index="https://USERNAME.github.io/micropython-lib/mip/
 > Unplug usb and plug
 
 To install libraries, i have observed that recently **upip has been depricated in favour of mip**
+
+You can see whats the micropython code running inside your picoW by:
+
+```sh
+#stop anything reading
+#screen -ls
+kill -9 9096
+mpremote connect /dev/ttyACM0 fs ls
+
 
 
 #### Using the Built in Led
@@ -513,11 +548,27 @@ https://www.alexdwilson.dev/how-to-program-raspberry-pi-pico-with-rust
 https://www.youtube.com/watch?v=jZT8APrzvc4
 
 
+**Checking micropython files inside PicoW via RShell**
+
+```sh
+python3 -m pip install --user rshell
+ls -l /dev/serial/by-id/
+#fuser -v /dev/ttyACM0 || true
+#kill 48470 || kill -9 48470
+#fuser -v /dev/ttyACM0 || true
+#rshell -p /dev/serial/by-id/usb-MicroPython_Board_in_FS_mode_e66141040370772c-if00 -b 115200
+rshell -p /dev/serial/by-id/usb-MicroPython_Board_in_FS_mode_e66141040370772c-if00 --buffer-size 512 -b 115200
+```
+
 ### How can you see what code is currently inside the microcontroller (Pico W)?
+
+
 
 Short Answer:
 
-**You *cannot* directly view or retrieve the code that’s already been uploaded to a microcontroller like the Pico W from the Arduino IDE.** Once code is uploaded, it's compiled into machine code and stored in flash memory — not easily readable or reversible.
+**You *cannot* directly view or retrieve the code that’s already been uploaded to a microcontroller like the Pico W from the Arduino IDE.** 
+
+Once code is uploaded, it's compiled into machine code and stored in flash memory — not easily readable or reversible.
 
 ---
 
@@ -566,10 +617,9 @@ But since you're using Arduino IDE, that's not applicable here.
 
 Let me know if you want help reading serial output or uploading a new sketch!
 
-
 Thanks for sharing your script — and yes, this looks like a **MicroPython** script, not Arduino.
 
-### What if the Pico W was running **MicroPython**,
+### What if the Pico W was running **MicroPython**
 
 This `boot.py` script would have been uploaded to the internal file system of the board.
 
@@ -605,7 +655,8 @@ Once connected:
   * **Files on this computer**
   * **Files on Raspberry Pi Pico**
 
-If your script (`boot.py`) is still there, you’ll see it listed. Double-click to open and view it.
+If your script (`boot.py`) is still there, you’ll see it listed.
+Double-click to open and view it.
 
 ---
 

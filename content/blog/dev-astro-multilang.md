@@ -2,12 +2,16 @@
 title: "I18n with Astro SSG"
 date: 2025-09-15
 draft: false
-tags: ["Astro","ssg"]
+tags: ["Astro","SSG"]
 description: 'Understanding i18n with astro'
 url: 'astro-i18'
 ---
 
 **TL;DR** Finally getting to try i18n languages with SSGs
+
+**Intro**
+
+
 
 ## Cool Blogging Themes
 
@@ -17,7 +21,7 @@ Which is kind of an improved jekyll theme that i used for the RPi: https://jalco
 
 1. [Fuwari](#fuwari)
 2. [Frosti](#frosti)
-3. HUGO has also something to say: [Hugo Theme Stack](#hugo-theme-stack)
+3. HUGO has also *something* to say: [Hugo Theme Stack](#hugo-theme-stack)
 
 ### Fuwari
 

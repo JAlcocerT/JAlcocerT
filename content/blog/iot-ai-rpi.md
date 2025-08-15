@@ -30,14 +30,7 @@ Expertise:
     CAN Bus
     Sensors: ESP32…
     https://esp32io.com/tutorials/esp32-gps
-    
-    
-Vscode
-    platformIO
-    C/C++
-    Clang-format
-
-Android App -> Monitoring -->
+-->
 
 
 ### IoT with DataBricks
@@ -47,29 +40,6 @@ Android App -> Monitoring -->
 1. https://a1karting.pl/cennik/
 2. https://sklep.drive-position.pl/kategoria-produktu/quady-i-adv/
 
-
-
-
-### PiAlert
-
-```yml
-version: "3"
-services:
-  pialert:
-    container_name: pialert
-    image: "jokobsk/pi.alert:latest"      
-    network_mode: "host"        
-    restart: always
-    volumes:
-      - ~/Docker/pialert/config:/home/pi/pialert/config
-      - ~/Docker/pialert/db/pialert.db:/home/pi/pialert/db/pialert.db
-      - ~/Docker/pialert/log/:/home/pi/pialert/log
-    environment:
-      - TZ=Europe/Berlin
-      - PORT=20211
-      - HOST_USER_ID=1000
-      - HOST_USER_GID=1000
-```
 
 
 
