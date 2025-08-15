@@ -165,9 +165,11 @@ Then the PicoW will be visible at arduinoIDE:
 ![alt text](/blog_img/iot/picoW/arduinoIDE-install5-picow.png)
 
 
-For Thonny installation
+For **Thonny** installation:
 
 ![alt text](/blog_img/iot/picoW/thonny-install.png)
+
+> On Windows it was quite simple and the portable Thonny worked
 
 You will need to do `sudo usermod -aG dialout $USER` so that Thonny wont have permissions
 
@@ -180,6 +182,14 @@ You could also check the serial access to the PicoW via:
 ```sh
 screen /dev/ttyACM0 115200 #this will show the prints of your picoW scripts
 ```
+
+Go to Thonny -> View -> Select Files: Then, go to the bottom right and select your PicoW
+
+![alt text](/blog_img/iot/picoW/thonny-windows.png)
+
+Now you will be able to see your old scripts *if any* inside your picoW:
+
+![alt text](/blog_img/iot/picoW/thonny-windows2.png)
 
 Also, VSCode + extensions can work for your IoT projects:
 
