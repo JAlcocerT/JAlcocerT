@@ -1,6 +1,6 @@
 ---
 title: "Raspberry Pi Pico W"
-date: 2025-08-14T23:20:21+01:00
+date: 2025-08-15T13:20:21+01:00
 draft: false
 tags: ["Self-Hosting","IoT","Embedded Systems"]
 description: 'Using the Pico W [Microcontrollers]'
@@ -122,6 +122,15 @@ You can try with Thony or ArduinoIDE (I prefer the latter)
 flatpak install flathub cc.arduino.IDE2
 ```
 
+Also VSCode + extensions can work for your IoT projects:
+
+```sh
+flatpak install flathub com.visualstudio.code
+#ext install ms-vscode.vscode-serial-monitor
+code --install-extension ms-vscode.vscode-serial-monitor
+```
+
+
 You will see a message like: The "Arduino Mbed OS RP2040 Boards [v 4.4.1]" core has to be installed for the currently selected "Raspberry Pi Pico" board. Do you want to install it now?
 
 > I said yes!
@@ -141,6 +150,12 @@ I was using Windows11 to make this one time setup:
 2. Connect the Pico W to your computer via the USB cable
 3. Release the BOOTSEL button -> you will see a new device in the PC.
 4. Download this and move it to the Pico folder: <https://github.com/micropython/micropython/releases>
+
+
+<!-- https://www.youtube.com/watch?v=YpM2snyu12k -->
+
+{{< youtube "YpM2snyu12k" >}}
+
 
 * Mip: <https://github.com/micropython/micropython-lib>
     * Installing from fork: https://micropython.org/download/rp2-pico-w/rp2-pico-w-latest.uf2
@@ -427,9 +442,9 @@ if __name__ == "__main__":
 
 2. Pico W web server:
 
-<https://www.youtube.com/watch?v=ufK_knxWn08>
+See <https://www.youtube.com/watch?v=ufK_knxWn08> and also <https://www.youtube.com/watch?v=AK8UYh7pMGM>
 
-and also <https://www.youtube.com/watch?v=AK8UYh7pMGM>
+Pico w web server via C, instead of Micropython - https://www.youtube.com/watch?v=C_O0MXGBHsw
 
 3.  MQTT to NodeRed: NodeRed will subscribe to the MQTT topic.
 
@@ -437,8 +452,13 @@ and also <https://www.youtube.com/watch?v=AK8UYh7pMGM>
 * https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server>
 
 
-https://www.youtube.com/watch?v=ybCMXqsQyDw&t=19s
+* https://www.youtube.com/watch?v=ybCMXqsQyDw&t=19s
 
+---
+
+## Conclusions
+
+---
 
 
 ## FAQ
@@ -565,7 +585,7 @@ If you uploaded an Arduino sketch to the Pico W, the MicroPython firmware would 
 
 To get back to MicroPython:
 
-* **Re-flash the MicroPython firmware:**
+* **Re-flash the MicroPython firmware:** *This is MicroPython dragnDrop install!*
 
   1. Unplug the Pico W.
   2. Hold the **BOOTSEL** button and plug it in.

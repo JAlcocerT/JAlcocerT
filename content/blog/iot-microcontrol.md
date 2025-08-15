@@ -1,11 +1,15 @@
 ---
 title: "[IoT] Setup RPi Pico W and ESP32 MicroControllers"
-date: 2025-08-15
+date: 2025-08-15T14:20:21+01:00
 draft: false
 tags: ["Tinkering","Solar Panel"]
 description: What Ive learnt while using a ESP32 and a Raspberry Pi Pico W [Microcontrollers]
 url: 'microcontrollers-setup-101'
 ---
+
+**TL;DR**
+
+
 
 ## Intro
 
@@ -77,8 +81,10 @@ They are great companions for SBC's like a RPi:
 
 ### The ESP32
 
-Connecting ESP32 to Linux - https://github.com/tio/tio
-IDE - Thonny
+An alternative micro-controller to the [PicoW](#pico-w-and-micropython)!
+
+* Connecting ESP32 to Linux - https://github.com/tio/tio
+* IDE - Thonny / Arduino IDE / VSCode ...
 
 > You can do ton of stuff with a ESP32, like building a [drone](https://jalcocert.github.io/JAlcocerT/useful-dron-stuff/):
 
@@ -94,9 +100,14 @@ I prefered to go With Arduino IDE and create test projects like this one.
 
 > Dont forget to include the libraries: `Tools -> Manage Libraries -> DHT sensor library` for ESPx
 
-If you are going to do it via VSCode and PlatformIO
+If you are going to do it via VSCode and PlatformIO...
 
-I recommend you also the **Serial Monitor extension**, as seen:
+I recommend you also the **Serial Monitor extension**, [this one](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor), as seen:
+
+```sh
+#ext install ms-vscode.vscode-serial-monitor
+code --install-extension ms-vscode.vscode-serial-monitor
+```
 
 {{< youtube "W6i88k0LOiA" >}}
 
@@ -834,9 +845,6 @@ ESP32 GPIO pins in real-time with AWS API Gateway WebSockets
 
 * <https://www.youtube.com/watch?v=Ra3iWgOfveQ>
 
-#### PicoW Web Server
-
-Pico w web server c - https://www.youtube.com/watch?v=C_O0MXGBHsw
 
 ### Cool Stuff with Raspberry Pi
 
