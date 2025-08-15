@@ -60,6 +60,13 @@ sudo apt-get install screen
 screen /dev/ttyACM0
 ```
 
+Confirm that the device is plugged:
+
+```sh
+ls -l /dev/ttyACM0
+```
+
+Connect to the PicoW:
 
 ```sh
 ls -l /dev/serial/by-id; ls -l /dev/ttyACM* 2>/dev/null
@@ -122,7 +129,35 @@ You can try with Thony or ArduinoIDE (I prefer the latter)
 flatpak install flathub cc.arduino.IDE2
 ```
 
-Also VSCode + extensions can work for your IoT projects:
+When installin arduinoIDE:
+
+![alt text](/blog_img/iot/picoW/arduinoIDE-install.png)
+
+You will see a message like: The "Arduino Mbed OS RP2040 Boards [v 4.4.1]" core has to be installed for the currently selected "Raspberry Pi Pico" board.
+
+Do you want to install it now?
+
+![alt text](/blog_img/iot/picoW/arduinoIDE-install2.png)
+
+> I said yes!
+
+For Thonny installation
+
+![alt text](/blog_img/iot/picoW/thonny-install.png)
+
+You will need to do `sudo usermod -aG dialout $USER` so that Thonny wont have permissions
+
+![Thonny Permission Error](/blog_img/iot/picoW/thonny-connection-picow-error.png)
+
+> > You will have to restart ubuntu so that `id -nG | grep dialout` will provide output and Thonny's error will be gone!
+
+You could also check the serial access to the PicoW via:
+
+```sh
+screen /dev/ttyACM0 115200
+```
+
+Also, VSCode + extensions can work for your IoT projects:
 
 ```sh
 flatpak install flathub com.visualstudio.code
@@ -130,10 +165,8 @@ flatpak install flathub com.visualstudio.code
 code --install-extension ms-vscode.vscode-serial-monitor
 ```
 
+![VSCode Serial Monitor Extension](/blog_img/iot/picoW/vscode-serialmonitor.png)
 
-You will see a message like: The "Arduino Mbed OS RP2040 Boards [v 4.4.1]" core has to be installed for the currently selected "Raspberry Pi Pico" board. Do you want to install it now?
-
-> I said yes!
 
 
 ### PicoW and MicroPython
