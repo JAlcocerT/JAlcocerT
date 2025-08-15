@@ -1,8 +1,10 @@
 ---
 title: "Raspberry Pi Pico W"
-date: 2025-08-16T23:20:21+01:00
+date: 2025-08-14T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting"]
+tags: ["Self-Hosting","IoT"]
+description: 'Using the Pico W [Microcontrollers]'
+url: 'pico-w'
 ---
 
 
@@ -28,12 +30,14 @@ So lets get the [PicoW](#raspberry-pi-pico-w) part sorted out.
 ## Raspberry Pi Pico W
 
 
+
+
 Ideas for Readme's - https://github.com/STJRush/handycode/tree/master/Raspi%20Pico
 
 <https://picockpit.com/raspberry-pi/everything-about-the-raspberry-pi-pico/>
 
 
-The chip: RP2040
+The chip: RP2040 and you can get the pinout and schematics as per https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico-1-family
 
 The schema: <https://docs.micropython.org/en/latest/rp2/quickref.html>
 

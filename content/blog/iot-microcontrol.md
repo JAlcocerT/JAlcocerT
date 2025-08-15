@@ -7,6 +7,8 @@ description: What Ive learnt while using a ESP32 and a Raspberry Pi Pico W [Micr
 url: 'microcontrollers-setup-101'
 ---
 
+## Intro
+
 Last year I bough a couple of **companions for my Raspberry Pi 4 2GB**:
 
 1. [ESP32](#the-esp32)
@@ -18,13 +20,21 @@ And Recently, this new release got my attention:
 
 3. Raspberry Pi Pico 2 -  A brand new model, with both **ARM and RISC-V cores**
 
-
 {{< cards >}}
   {{< card link="https://www.youtube.com/watch?v=BS9IgyAp3I0" title="How to Connect Parts - Electronics" icon="book-open" >}}
   {{< card link="https://jalcocertech.com" title="Collaborations ↗" icon="user" >}}
 {{< /cards >}}
 
 Let me show you **how to get started with MicroControllers**
+
+Just A note on breadboards first:
+
+ <!-- <https://www.youtube.com/watch?v=mE33WpRWrXs> -->
+
+{{< youtube "mE33WpRWrXs" >}}
+
+
+## Micro-Controllers
 
 What you need to know **about microcontrollers**:
 
@@ -65,12 +75,12 @@ They are great companions for SBC's like a RPi:
 
 {{< /hextra/feature-grid >}}
 
-## The ESP32
+### The ESP32
 
 Connecting ESP32 to Linux - https://github.com/tio/tio
 IDE - Thonny
 
-You can do ton of stuff with a ESP32, like building a [drone](https://jalcocert.github.io/JAlcocerT/useful-dron-stuff/):
+> You can do ton of stuff with a ESP32, like building a [drone](https://jalcocert.github.io/JAlcocerT/useful-dron-stuff/):
 
 * https://github.com/Circuit-Digest/ESP-Drone
 
@@ -80,7 +90,69 @@ https://www.youtube.com/watch?v=V_mZsiZcy7s -->
 {{< youtube "V_mZsiZcy7s" >}}
 
 
-### Testing ESP32
+I prefered to go With Arduino IDE and create test projects like this one.
+
+> Dont forget to include the libraries: `Tools -> Manage Libraries -> DHT sensor library` for ESPx
+
+If you are going to do it via VSCode and PlatformIO
+
+I recommend you also the **Serial Monitor extension**, as seen:
+
+{{< youtube "W6i88k0LOiA" >}}
+
+
+<!-- <https://www.youtube.com/watch?v=W6i88k0LOiA> -->
+
+
+**ESP32 x DS18B20**
+
+-55 to 125C
+
+<!-- 
+blackc able - gnd
+red - 3.3 to 5v
+yellow - data -->
+
+
+data to D13
+
+**ESP32 x DHT22**
+
+
+GND
+VIN (3v3 also works)
+D23
+
+<https://registry.platformio.org/libraries/adafruit/DHT%20sensor%20library> ---> <https://github.com/adafruit/DHT-sensor-library>
+
+
+in platformio.ini
+
+adafruit/DHT sensor library@^1.4.4
+
+lib_deps=
+https://github.com/blynkkk/blynk-library.git
+https://github.com/adafruit/Adafruit_Sensor
+https://github.com/adafruit/DHT-sensor-library
+
+in the `main.cpp`
+
+#include <DHT.h>
+
+https://github.com/adafruit/DHT-sensor-library
+
+not this one: adafruit/Adafruit Unified Sensor@^1.1.13
+
+lib_deps =
+  https://github.com/adafruit/DHT-sensor-library.git
+
+OR
+
+lib_deps =
+  adafruit/DHT sensor library@^1.4.4
+
+
+#### Testing ESP32
 
 
 I have to say thanks to Tomasz and his great content that helped me get started with this: <https://www.youtube.com/watch?v=tc3Qnf79Ny8&t=0s>
@@ -91,77 +163,42 @@ I have to say thanks to Tomasz and his great content that helped me get started 
 
 To 'upload' the code to the ESP32, please make sure that you **have the proper DATA cable** (*I was expending too many hours because of this*).
 
+Blinking ESP32 Lights via CPP
+Connecting ESP32 to Wifi
+
 {{% details title="ESP32 - Blinking Lights in Cpp 🚀" closed="true" %}}
 
 
-```cpp
-#include <Arduino.h>
-
-void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(921600);
-  Serial.println("Hello from the setup");
-}
-
-void loop() {
-  delay(1000);
-  digitalWrite(LED_BUILTIN, HIGH);
-  Serial.println("Hello from the loop");
-  delay(1000);
-  digitalWrite(LED_BUILTIN, LOW);
-}
-```
-
-{{< callout type="info" >}}
-Find more **C sample Codes for ESP32** MicroController [here](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c)
-{{< /callout >}}
 
 {{% /details %}}
 
 
 
-{{% details title="Connecting ESP32 to WIFI 🚀" closed="true" %}}
+
+
+{{% details title="Connecting ESP32 to WIFI | Resources 🚀" closed="true" %}}
 
 * <https://www.youtube.com/watch?v=aAG0bp0Q-y4>
 * <https://github.com/ttarnowski/esp32-wifi-connect>
 * <https://github.com/ttarnowski/esp32-wifi-connect/blob/nonblocking/src/main.cpp>
 
-
-```cpp
-
-#define WIFI_SSID "wifi_network_name"
-#define WIFI_PASSWORD "wifi_password"
-
-void setup() {
-  Serial.begin(921600);
-  pinMode(LED_BUILTIN, OUTPUT);
-
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-
-  Serial.println("starting");
-}
-
-bool isConnected = false;
-
-void loop() {
-  if (WiFi.status() == WL_CONNECTED && !isConnected) {
-    Serial.println("Connected");
-    digitalWrite(LED_BUILTIN, HIGH);
-    isConnected = true;
-  }
-
-  if (WiFi.status() != WL_CONNECTED) {
-    Serial.println(".");
-    digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
-    delay(1000);
-    isConnected = false;
-  }
-}
-```
-
 {{% /details %}}
 
-## The Raspberry Pi Pico W
+{{< callout type="info" >}}
+Find more **Cpp sample Codes for ESP32** MicroController [here](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c)
+{{< /callout >}}
+
+#### Sending DHT11 Data to Arduino Cloud
+
+* https://cloud.arduino.cc/home/
+
+
+{{< youtube "rcCxGcRwCVk" >}}
+
+<!-- <https://www.youtube.com/watch?v=rcCxGcRwCVk> -->
+
+
+### The Raspberry Pi Pico W
 
 
 * Consumption: ~50-150mA and can be powered via a PC usb
@@ -193,7 +230,7 @@ The schema: <https://docs.micropython.org/en/latest/rp2/quickref.html>
 W version (wifi): <https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#raspberry-pi-pico-w-and-pico-wh>
 
 
-### Pico W and MicroPython
+#### Pico W and MicroPython
 
 
 Thanks to [core-electronics](https://core-electronics.com.au/guides/raspberry-pi-pico-w-connect-to-the-internet/)
@@ -227,7 +264,7 @@ To install libraries, i have observed that recently **upip has been depricated i
 {{% /details %}}
 * Arduino launched a micropython package manager!
 
-### Testing the Raspberry Pi Pico W
+#### Testing the Raspberry Pi Pico W
 
 {{% details title="PicoW - Blinking Led Example with MicroPython 🚀" closed="true" %}}
 

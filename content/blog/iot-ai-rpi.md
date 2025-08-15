@@ -1,9 +1,9 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2025-08-17
+date: 2025-12-30
 draft: true
 tags: ["Tinkering"]
-description: 'IoT Meets AI. Using MQTT and AI Together'
+description: 'IoT Meets AI. Using MQTT and AI Together.'
 url: 'edge-ai-with-raspberry-pi'
 ---
 
@@ -39,9 +39,6 @@ Vscode
 
 Android App -> Monitoring -->
 
-### IDE for IoT
-
-* Thonny
 
 ### IoT with DataBricks
 
@@ -50,45 +47,8 @@ Android App -> Monitoring -->
 1. https://a1karting.pl/cennik/
 2. https://sklep.drive-position.pl/kategoria-produktu/quady-i-adv/
 
-### Python picoW
-
-```py
-import time
-import paho.mqtt.client as mqtt
 
 
-def on_publish(client, userdata, mid):
-    print("message published")
-
-
-client = mqtt.Client("rpi_client2") #this name should be unique
-client.on_publish = on_publish
-client.connect('127.0.0.1',1883)
-# start a new thread
-client.loop_start()
-
-k=0
-while True:
-    k=k+1
-    if(k>20):
-        k=1 
-        
-    try:
-        msg =str(k)
-        pubMsg = client.publish(
-            topic='rpi/broadcast',
-            payload=msg.encode('utf-8'),
-            qos=0,
-        )
-        pubMsg.wait_for_publish()
-        print(pubMsg.is_published())
-    
-    except Exception as e:
-        print(e)
-        
-    time.sleep(2)
-
-```
 
 ### PiAlert
 
@@ -151,23 +111,20 @@ Here's a breakdown of what Hoppscotch is and how it compares to Postman:
 
 **In essence:**
 
-Hoppscotch is a strong contender and alternative to Postman, especially if you prioritize open-source software, a simpler interface, and real-time collaboration.  Postman remains a very powerful and feature-rich tool, but Hoppscotch provides a compelling option for many developers.  The best choice depends on your specific needs and preferences.
+Hoppscotch is a strong contender and alternative to Postman, especially if you prioritize open-source software, a simpler interface, and real-time collaboration.  
+
+Postman remains a very powerful and feature-rich tool, but Hoppscotch provides a compelling option for many developers.
 
 
-### Running LLMs in SBCs
-
-
-https://www.youtube.com/watch?v=N0718RfpuWE
-
-https://github.com/tensorchord/Awesome-LLMOps
-https://github.com/tensorchord/Awesome-LLMOps?tab=readme-ov-file#llmops
-
-
-* Open-source tools for prompt testing and experimentation, with support for both LLMs (e.g. OpenAI, LLaMA) and vector databases (e.g. Chroma, Weaviate, LanceDB).
-
-https://github.com/hegelai/prompttools
 
 ## Conclusions
+
+
+If worked on few IoT projects with the Pi. See [more here](https://jalcocert.github.io/RPi/categories/iot-data-analytics/)
+
+Push to MongoDB. See the data properly.
+
+* https://github.com/anasjaber/mongo-explorer
 
 * Edge Computing - https://github.com/qijianpeng/awesome-edge-computing
 * Domotica para pobres - https://forocoches.com/foro/showthread.php?t=6655749
@@ -180,17 +137,29 @@ https://github.com/hegelai/prompttools
 
 ## FAQ
 
+### Running LLMs in SBCs
+
+
+https://www.youtube.com/watch?v=N0718RfpuWE
+
+* https://github.com/tensorchord/Awesome-LLMOps
+    * https://github.com/tensorchord/Awesome-LLMOps?tab=readme-ov-file#llmops
+
+
+* Open-source tools for prompt testing and experimentation, with support for both LLMs (e.g. OpenAI, LLaMA) and vector databases (e.g. Chroma, Weaviate, LanceDB).
+
+* https://github.com/hegelai/prompttools
+
 ### How to Enhance a Raspberry Pi for AI
 
-* Edge TPU on RPi - Coral Edge TPU (Tensor Processing Unit - an USB acccelerator )
+1.  Edge TPU on RPi - Coral Edge TPU (Tensor Processing Unit - an USB acccelerator )
 
 TPU (Tensor Processing Unit):
 
-Focus: TPUs are specifically **designed for running Google's TensorFlow** machine learning framework. They are optimized for high-performance matrix multiplication, a fundamental operation in many deep learning algorithms.
-Architecture: TPUs are custom-designed by Google with a focus on maximizing performance for TensorFlow workloads. They prioritize speed and efficiency for specific tasks within the TensorFlow ecosystem.
+* Focus: TPUs are specifically **designed for running Google's TensorFlow** machine learning framework. They are optimized for high-performance matrix multiplication, a fundamental operation in many deep learning algorithms.
+* Architecture: TPUs are custom-designed by Google with a focus on maximizing performance for TensorFlow workloads. They prioritize speed and efficiency for * specific tasks within the TensorFlow ecosystem.
 
-> You will hear more and more about NPU - Neural Processing Units
-
+2. You will hear more and more about NPU's - **Neural Processing Units**
 
 While both are designed to **handle AI workloads**, they have distinct differences in their focus, architecture, and availability.
 
@@ -203,25 +172,10 @@ They are particularly well-suited for **various AI applications**, including:
 - 🗣️ Speech recognition
 
 
-NPUs typically utilize a manycore architecture with specialized instructions and data formats optimized for AI algorithms. This allows them to handle complex neural networks efficiently.
+NPUs typically utilize a manycore architecture with specialized instructions and data formats optimized for AI algorithms. 
 
-NPUs are often integrated into mobile processors from companies like Apple, Huawei, and Samsung. They are also available as standalone chips from some manufacturers.
+This allows them to handle complex neural networks efficiently.
 
-### How to Deploy Node-Red with Docker
+NPUs are often integrated into mobile processors from companies like Apple, Huawei, and Samsung. 
 
-
----
-
-
-## Outro
-
-### IoT Projects I Worked on
-
-* https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/
-* https://jalcocert.github.io/RPi/posts/rpi-iot-dht11-influxdb/
-
-If you like those, there are [more here](https://jalcocert.github.io/RPi/categories/iot-data-analytics/)
-
-Push to MongoDB. See the data properly.
-
-* https://github.com/anasjaber/mongo-explorer
+You can also see them in SBCs like the OrangePi or new Pis.

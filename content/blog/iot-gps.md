@@ -1,10 +1,10 @@
 ---
 title: "GPS"
-date: 2025-12-03
+date: 2025-12-30
 draft: true
 tags: ["Dev"]
 description: Checking my first Smart Plug Connecting it with Home Assistant [HA].
-url: tapo-p110-review
+url: gps-iot
 ---
 
 

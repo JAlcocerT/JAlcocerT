@@ -276,7 +276,7 @@ TimeScale
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Pi 101" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Get Started with IoT Project" >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/" title="ES with a Pi ↗" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="IoT Project with Kibana and a DHT22" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/" title="ES Kibana and a DHT22 with a Pi ↗" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="IoT Project with Kibana and a DHT22" >}}
 {{< /cards >}}
 
 #### Prometheus
