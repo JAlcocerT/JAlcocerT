@@ -9,6 +9,7 @@ url: 'messaging-protocols'
 
 **TL;DR** Recap on messaging tools + using the [PicoW x MQTT x DHT22](#mqtt-x-picow-x-dht22)
 
+Some of these are typical on [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), others on Healthcare.
 
 **Intro**
 
@@ -284,11 +285,24 @@ And now you should be able to subscribe to:
 
 ![alt text](/blog_img/iot/picoW/emqx-topics.png)
 
+{{< callout type="warning" >}}
+Remember to [update the `configurtion.yml` from HA](https://github.com/JAlcocerT/Home-Lab/blob/main/home-assistant/configuration.yaml), so that the MQTT integration will be able to listen to the new topic names 
+{{< /callout >}}
+
 
 
 {{< callout type="info" >}}
-Now im getting just +1C compared with the other reference temp sensor I have at home
+Now im getting just +1C compared with the other reference temp sensor I have at home!
 {{< /callout >}}
+
+Here is a quick [OBS video + ffmpeg](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#videos-with-ffmpeg) on how to make the [HA setup](https://github.com/JAlcocerT/Home-Lab/blob/main/home-assistant):
+
+```sh
+for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
+```
+
+> I made the `video edit` very quick!
+
 
 ### Outro
 

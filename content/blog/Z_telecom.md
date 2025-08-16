@@ -3,7 +3,7 @@ title: "Interesting Telecom Concepts"
 date: 2023-12-31T23:20:21+01:00
 draft: false
 tags: ["Analytics","D&A","DOCSIS","Fiber"]
-description: 'Interesting Telecom stuff I got to know while using a Data LakeHouse'
+description: 'Interesting Telco stuff I got to know while using a Data LakeHouse'
 url: 'telecom-concepts-101'
 ---
 

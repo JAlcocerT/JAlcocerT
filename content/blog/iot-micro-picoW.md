@@ -703,6 +703,15 @@ This setup is efficient because it avoids traditional page reloads. Instead, the
 * https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant
 * https://github.com/JAlcocerT/Home-Lab/blob/main/home-assistant/configuration.yaml
 
+> Connect to HA via `http://192.168.1.11:8123`
+
+
+![HA Create user and pwd](/blog_img/iot/picoW/ha/ha-1.png)
+
+You will see this dashboard by default: later we will create one
+
+![alt text](/blog_img/iot/picoW/ha/ha-login.png)
+
 
 {{% details title="Setup the MQTT Integration and configure your dashboard " closed="true" %}}
 
@@ -715,6 +724,9 @@ Here's the correct two-step process to get everything running:
     * Click the **"+ Add Integration"** button.
     * Search for and select **"MQTT"**.
     * A pop-up will guide you to enter the broker's IP address (`192.168.1.11`), port (`1883`), and any credentials you have set.
+
+![alt text](/blog_img/iot/picoW/ha/ha-add-mqtt-integration.png)
+
 2.  **Add the Sensor Configuration to YAML:**
     * After the broker is configured, you'll add the sensor block to your `configuration.yaml` file. The part you provided is exactly what's needed.
     * This tells Home Assistant to create a new entity (`sensor.pico_w_temperature`) that will listen for incoming data from the broker on the specified topic.
@@ -748,7 +760,11 @@ Once you click **Save**, the card will be added to your dashboard and will start
 
 {{% /details %}}
 
-Connect to HA via `http://192.168.1.11:8123`
+
+
+Once ready, the data will start flowing:
+
+![alt text](/blog_img/iot/picoW/ha/ha-mqtt-integ-config.png)
 
 {{% details title="HA has a buildint SQLite to store and plot MQTT Data!" closed="true" %}}
 
@@ -758,13 +774,21 @@ sqlite3 home-assistant_v2.db
 #.tables
 
 ```
-
 {{% /details %}}
+
+Create a new HA dash:
+
+![alt text](/blog_img/iot/picoW/ha/ha-create-dash.png)
+
+![alt text](/blog_img/iot/picoW/ha/ha-add-history.png)
+
+![alt text](/blog_img/iot/picoW/ha/ha-dash-mqtt-data.png)
 
 {{< callout type="info" >}}
 As we are reading the PicoW Internal sensor, for me it was showing ~+8C than a regular temp sensor 
 {{< /callout >}}
 
+![alt text](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png)
 
 <!-- https://studio.youtube.com/video/x4tzWt6-I7c/edit -->
 {{< youtube "x4tzWt6-I7c" >}}
