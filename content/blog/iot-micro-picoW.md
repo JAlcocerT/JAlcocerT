@@ -613,16 +613,18 @@ The Old Way: `upip`
 
 {{% /details %}}
 
-Then, we just need this kind of `main.py` script to push just random data:
-
+Then, we just need this kind of `main.py` script to [push just random data](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MQTT-101) (from 1 to 20).
 
 And this `main.py` to push the internal temp sensor to the MQTT server (EMQX):
 
 
-```py
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/MQTT-InternalTemp/main.py" title="PicoW + InternalTemp + Push to MQTT Topic 🐍 ↗" >}}
+{{< /cards >}}
 
-```
+![alt text](/blog_img/iot/picoW/emqx-picoW-internaltemp.png)
 
+Your Data is now ready at your MQTT server or you to play with it!
 
 ---
 
@@ -633,6 +635,33 @@ I took longer than expected to write this post.
 And almost forgot all the things I learnt about the PicoW, just bc I did not document it while learning.
 
 Things of 2023.
+
+**To visualize the MQTT Data:**
+
+Many business intelligence (BI) tools can connect to MQTT, but usually not directly.
+
+The most common and robust approach is to use an intermediary service to get the MQTT data into a database, which the BI tool can then query.
+
+This is the exact setup we discussed with Grafana:
+
+MQTT Broker (EMQX): Collects the data from your Pico W.
+
+MQTT-to-Database Bridge: Listens to a topic and pushes the data into a database.
+
+Database (e.g., InfluxDB): Stores the time-series data.
+
+BI Tool (e.g., Grafana): Queries the database to create visualizations.
+
+This model is standard because BI tools are designed for analyzing historical data from databases, not for processing real-time message streams.
+
+1. Try HomeAssistant
+
+2. Try [ThingsBoard](https://github.com/thingsboard/thingsboard)
+
+> [ThingsBoard](https://thingsboard.io/) is an Open-source IoT Platform - Device management, data collection, processing and visualization.
+
+3. DYI with Flask!
+
 
 
 **Interesting Resources**
