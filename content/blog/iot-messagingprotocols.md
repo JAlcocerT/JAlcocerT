@@ -2,14 +2,16 @@
 title: "Whats the right Messaging Protocol for me?"
 date: 2025-08-16T09:20:21+01:00
 draft: false
-tags: ["D&A","HomeLab","PicoW MQTT and a DHT22 Sensor"]
+tags: ["D&A","HomeLab","PicoW MQTT and a DHT22 Sensor","AMQ"]
 description: 'MQTT vs RMQ vs Kafka. Messaging Tools for IoT Projects and more'
 url: 'messaging-protocols'
 ---
 
 **TL;DR** Recap on messaging tools + using the [PicoW x MQTT x DHT22](#mqtt-x-picow-x-dht22)
 
-Some of these are typical on [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), others on Healthcare.
+Some of these are typical on [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), like [Kafka](#apache-kafka)
+
+Others, on Healthcare, like [RMQ](#rabbitmq)
 
 **Intro**
 
@@ -44,7 +46,7 @@ As seen here:
 
 > See https://www.geeksforgeeks.org/kafka-vs-rabbitmq/
 
-| Feature               | WebSockets                         | MQTT                               | RabbitMQ                           |
+| **Feature**               | WebSockets                         | MQTT                               | RabbitMQ                           |
 |-----------------------|------------------------------------|-------------------------------------|------------------------------------|
 | Connection Type       | Permanent, bi-directional          | **Publish/subscribe**                   | Message broker with various patterns|
 | Initiation            | Either party can initiate          | Clients subscribe/publish           | Producers send to queues            |
@@ -66,18 +68,22 @@ As seen here:
 * MQTT excels in low-bandwidth environments and is optimized for IoT applications.
 * RabbitMQ is suitable for scenarios requiring reliable message delivery and complex routing logic.
 
-There is also Web RTC (Real Time Communication).
+> There is also Web RTC (Real Time Communication).
 
 ### MQTT
 
 **MQTT** (Message Queuing Telemetry Transport) is a lightweight, open-source messaging protocol designed for efficient communication in situations where network bandwidth and power are limited. 
 
 MQTT (Message Queuing Telemetry Transport):
-        MQTT is a lightweight, publish-subscribe messaging protocol designed for constrained devices and low-bandwidth, high-latency or unreliable networks.
-        It provides a flexible and efficient mechanism for asynchronous, real-time communication between clients and servers.
-        MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted reliably and efficiently.
-        While MQTT can be used for real-time communication in various scenarios, it may not be as widely supported or as easy to integrate as REST APIs or WebSockets in certain contexts.    
 
+MQTT is a lightweight, publish-subscribe messaging protocol designed for constrained devices and low-bandwidth, high-latency or unreliable networks.
+
+It provides a flexible and efficient mechanism for asynchronous, real-time communication between clients and servers.
+
+MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted 
+reliably and efficiently.
+
+While MQTT can be used for real-time communication in various scenarios, it may not be as widely supported or as easy to integrate as REST APIs or WebSockets in certain contexts.    
 
 It's primarily used in IoT (Internet of Things) systems, where devices communicate over unreliable or low-bandwidth networks.
 
@@ -95,12 +101,9 @@ The key benefits of MQTT include:
 - **Reliability**: MQTT offers three levels of Quality of Service (QoS) for message delivery to suit different reliability needs.
 - **Asynchronous communication**: Devices can operate asynchronously, sending or receiving messages without waiting for responses, which reduces latency.
 
-
 MQTT is widely used in industries such as smart homes, industrial automation, and transportation. Some common applications include temperature sensors, smart appliances, and real-time notifications from connected devices.
 
 {{% /details %}}
-
-
 
 {{< callout type="info" >}}
 MQTT works as PUB/SUB - See a sample project with a Pi https://jalcocert.github.io/RPi/posts/rpi-mqtt/  💻 
@@ -301,6 +304,9 @@ Here is a quick [OBS video + ffmpeg](https://jalcocert.github.io/JAlcocerT/photo
 for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
 ```
 
+{{< youtube "8XUydWbwBjk" >}}
+<!-- https://youtu.be/8XUydWbwBjk -->
+
 > I made the `video edit` very quick!
 
 
@@ -392,7 +398,7 @@ This means that a sender doesn't need the receiver to be online and available at
 
 RMQ is a common abbreviation for **RabbitMQ**.
 
-So, to answer your second question: Yes, ActiveMQ and RabbitMQ (RMQ) are similar in that they are both message brokers that perform similar functions. 
+ActiveMQ and RabbitMQ (RMQ) are similar in that they are both message brokers that perform similar functions. 
 
 However, they have distinct differences in their architecture, features, and ideal use cases.
 

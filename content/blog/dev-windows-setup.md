@@ -8,7 +8,7 @@ url: 'how-to-use-chocolatey-windows'
 ---
 
 
-For some time already, I have been improving my guide on Linux.
+For some time already, I have been improving my [guide on Linux](https://github.com/JAlcocerT/Linux).
 
 I like how simple it is to format and setup Linux again, but I found that we can do exactly the samer thing in windows.
 

@@ -160,6 +160,17 @@ You always get surprised with astro themes:
 
 As always, trying some new astro theme makes you discover some very cool components.
 
+But thanks to videcoding, you can make your own astro components:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro" title="Astro Component | Whatsap Bouble ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/cybernetik-realestate-moises/blob/main/astro-nomy/src/components/InstagramGallery.astro" title="Astro Component | Make a in-post Gallery, zoomable and that allows to move to next  ↗" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg" title="SGG components" image="/blog_img/apps/gh-jalcocert.svg" subtitle=Components for astro and shortcodes for HUGO..." >}}
+{{< /cards >}}
+
 ---
 
 ## Outro

@@ -1,9 +1,10 @@
 ---
 title: "Admin Panels for Websites | Testing Manifest "
-date: 2025-07-24
+date: 2025-08-24
 tags: ["AI","Authentication"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
+draft: false
 ---
 
 Ive been exploring few authentications method lately.
@@ -52,7 +53,7 @@ Manifest fits great in those type of projects:
 
 This sounds great for quick PoCs:
 
-https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
+* https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
 
 ![Streamlit PyGWalker Rendered Map with locations](/blog_img/apps/streamlit/st_pygwalker_map.png)
 

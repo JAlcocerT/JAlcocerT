@@ -2,7 +2,7 @@
 title: "I18n with Astro SSG"
 date: 2025-09-15
 draft: false
-tags: ["Astro","SSG"]
+tags: ["Astro","Just-SSG"]
 description: 'Understanding i18n with astro'
 url: 'astro-i18'
 ---

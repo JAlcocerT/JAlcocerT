@@ -62,8 +62,9 @@ Here's a quick comparison to highlight their similarities and differences:
 
 So, yes, Laravel is primarily a backend framework, similar to Django and Flask in its core purpose. However, it distinguishes itself with its elegant syntax, strong focus on developer experience, and a rich set of features tailored for PHP-based web development.
 
+**FastAPI**
 
-## Laravel
+### Laravel
 
 Laravel is a popular and powerful open-source PHP framework that web developers use to build modern web applications. Think of it as a toolkit that provides a structure and a bunch of helpful tools to make web development easier and faster.
 
