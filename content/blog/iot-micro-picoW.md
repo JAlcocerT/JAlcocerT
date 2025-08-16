@@ -450,7 +450,11 @@ Topics are created automatically the first time a client **publishes** a message
 
 How it Works
 
-The MQTT broker operates on a publish-subscribe model. When a client (your Pico W) sends a message, it includes a topic in the message header. The broker, upon receiving the message, checks if that topic already exists. If it doesn't, the broker creates it and then routes the message to any clients that are subscribed to that topic.
+The MQTT broker operates on a publish-subscribe model. When a client (your Pico W) sends a message, it includes a topic in the message header. 
+
+The broker, upon receiving the message, checks if that topic already exists.
+
+If it doesn't, the broker creates it and then routes the message to any clients that are subscribed to that topic.
 
 What You Need to Do
 
@@ -465,15 +469,47 @@ This dynamic topic creation is a key feature of MQTT that makes it flexible and 
 
 {{% /details %}}
 
+Lets make sure that EMQX is ready.
 
-{{% details title="Testing EMQX from W11" closed="true" %}}
+{{% details title="Testing EMQX from W11 with random messages" closed="true" %}}
+
+This did not work:
 
 ```sh
+#snap install mosquitto
 choco install mosquitto
 ```
 
+So I went: https://mosquitto.org/download/
+
+And configure the new path variable:
+
+For setting a Windows **System Environment Variable**, the variable name and value are distinct. 
+
+- The **variable name** you need to edit is **`Path`**. This is a system variable that tells Windows where to look for executable files.
+- The **variable value** you need to add is the path to the Mosquitto installation folder: **`C:\Program Files\mosquitto`**.
+
+When you add this value to the existing `Path` variable, you're not changing its name. You are simply appending the Mosquitto directory to the list of folders Windows checks for commands.
+
+So that this works:
+
+```sh
+mosquitto -h #I got mosquitto version 2.0.22
+```
 
 {{% /details %}}
+
+And just send a message: *from W11 to EMQX at the x300*
+
+```sh
+mosquitto_pub -h 192.168.1.11 -p 1883 -t test/data -m "Hello, World!"
+```
+
+![alt text](/blog_img/iot/picoW/emqx-subscribed.png)
+
+So now that we got that, EMQX works and receives messages from clients, lets continue.
+
+
 
 **REQUIRED:**
 
