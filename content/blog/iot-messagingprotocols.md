@@ -215,7 +215,80 @@ These tools will be useful:
 
 ### MQTT x PicoW x DHT22
 
+For the Pi4 it was very simple to get the pin schematics:
 
+```sh
+pinout 
+#sudo apt install python3-gpiozero
+```
+
+So I got to know about [Schemdraw and Fritzing](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/Pins).
+
+```sh
+uv pip show schemdraw
+```
+
+See the PicoW datasheet: https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf
+
+And pinout: https://datasheets.raspberrypi.com/picow/PicoW-A4-Pinout.pdf
+
+As per [this video](https://www.youtube.com/watch?v=eNF3X3D0cH4)
+
+{{< youtube "eNF3X3D0cH4" >}}
+
+> Which has this [related code](https://github.com/neeraj95575/Temperature-sensor-connect-to-raspberry-pi-pico)
+
+* DHT22 data to GP15
+* Possitive (VCC) to VBUS from the PicoW 
+* Negative to ground (GND) of the PicoW 
+
+![alt text](/blog_img/iot/picoW/picow-dht22.png)
+
+{{< callout type="info" >}}
+The [DHT11 is blue](https://jalcocert.github.io/RPi/posts/rpi-iot-dht11-influxdb/), and the [DHT22 is white](https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/)
+{{< /callout >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/DHT22" title="PicoW + DHT22 + Print 🐍 ↗" >}}
+{{< /cards >}}
+
+After you upload the `DHT22.py` and the main...
+
+![alt text](/blog_img/iot/picoW/picow-dht22-thonny.png)
+
+We can finally ready DHT22 temp and humidity data!
+
+So now, lets just combine this knowledge with the [PicoW MQTT setup](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MQTT-InternalTemp):
+
+Making some adjustments, we will be pushing now DHT22 info and the Internal temp to MQTT:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MQTT-DHT22" title="PicoW + DHT22 + MQTT 🐍 ↗" >}}
+{{< /cards >}}
+
+Lets connect back to EMQX to verify: `http://192.168.1.11:18083` via admin/public or your configured pwd.
+
+You will see couple of clients: the PicoW and your HA, if you have just [followed this post](https://jalcocert.github.io/JAlcocerT/pico-w/#ha-x-mqtt).
+
+* http://192.168.1.11:18083/#/clients
+
+![alt text](/blog_img/iot/picoW/emqx-clients.png)
+
+Go back to `http://192.168.1.11:18083/#/websocket` to connect
+
+And now you should be able to subscribe to:
+
+1. `pico/temperature/internal`
+2. `pico/humidity/dht22`
+3. `pico/temperature/dht22`
+
+![alt text](/blog_img/iot/picoW/emqx-topics.png)
+
+
+
+{{< callout type="info" >}}
+Now im getting just +1C compared with the other reference temp sensor I have at home
+{{< /callout >}}
 
 ### Outro
 

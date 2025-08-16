@@ -306,6 +306,13 @@ Even reading html webcontent, with [this other script](https://github.com/JAlcoc
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI" title="PicoW + Wifi Connection 🐍 ↗" >}}
 {{< /cards >}}
 
+You will get something like:
+
+```sh
+#Starting Wi-Fi connection process...
+#Already connected. Network config: ('192.168.1.15', '255.255.255.0', '192.168.1.1', '192.168.1.1')
+```
+
 #### Pico W with MLX90614
 
 Connect the sensor properly as per:
@@ -351,6 +358,8 @@ But its the time to play with MQTT and the PicoW.
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+> Connect to the UI via: `http://192.168.1.11:18083`
 
 The MQTT Architecture operates on a **client-server** model, and the core of MQTT communication revolves around two main components:
 
@@ -617,10 +626,11 @@ Then, we just need this kind of `main.py` script to [push just random data](http
 
 And this `main.py` to push the internal temp sensor to the MQTT server (EMQX):
 
-
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/MQTT-InternalTemp/main.py" title="PicoW + InternalTemp + Push to MQTT Topic 🐍 ↗" >}}
 {{< /cards >}}
+
+This creates and pushes the `pico/temperature` MQTT topic, which we can suscribe via EMQX:
 
 ![alt text](/blog_img/iot/picoW/emqx-picoW-internaltemp.png)
 
@@ -690,8 +700,8 @@ This setup is efficient because it avoids traditional page reloads. Instead, the
 
 ### HA x MQTT
 
-https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant
-https://github.com/JAlcocerT/Home-Lab/blob/main/home-assistant/configuration.yaml
+* https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant
+* https://github.com/JAlcocerT/Home-Lab/blob/main/home-assistant/configuration.yaml
 
 
 {{% details title="Setup the MQTT Integration and configure your dashboard " closed="true" %}}
@@ -755,6 +765,9 @@ sqlite3 home-assistant_v2.db
 As we are reading the PicoW Internal sensor, for me it was showing ~+8C than a regular temp sensor 
 {{< /callout >}}
 
+
+<!-- https://studio.youtube.com/video/x4tzWt6-I7c/edit -->
+{{< youtube "x4tzWt6-I7c" >}}
 
 ---
 

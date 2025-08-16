@@ -9,6 +9,8 @@ url: 'astro-i18'
 
 **TL;DR** Finally getting to try i18n languages with SSGs
 
+Plus adding interesting shortcodes / components : https://github.com/JAlcocerT/just-ssg
+
 **Intro**
 
 
@@ -22,6 +24,11 @@ Which is kind of an improved jekyll theme that i used for the RPi: https://jalco
 1. [Fuwari](#fuwari)
 2. [Frosti](#frosti)
 3. HUGO has also *something* to say: [Hugo Theme Stack](#hugo-theme-stack)
+
+* https://github.com/g1eny0ung/hugo-theme-dream
+* https://github.com/onweru/compose
+
+> Those helped me to make a better HUGO documentation Theme :)
 
 ### Fuwari
 

@@ -7,15 +7,14 @@ description: What Ive learnt while using a ESP32 and a Raspberry Pi Pico W [Micr
 url: 'microcontrollers-setup-101'
 ---
 
-**TL;DR**
-
+**TL;DR** Cool IoT Stuff that the ESP32 can do!
 
 
 ## Intro
 
 Last year I bough a couple of **companions for my Raspberry Pi 4 2GB**:
 
-1. [ESP32](#the-esp32)
+1. [ESP32](#the-esp32) - This post focuses mostly on ESP32 :)
 2. [Pi Pico W](#the-raspberry-pi-pico-w)
 
 And Recently, this new release got my attention:

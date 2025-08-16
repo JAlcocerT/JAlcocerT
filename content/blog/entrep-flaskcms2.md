@@ -48,6 +48,8 @@ chmod +x Cursor-1.4.3-x86_64.AppImage
 
 But that just executes it once.
 
+> Cursor has brought recently CLI support, similarly to [Oterm](https://github.com/ggozad/oterm) with Ollama
+
 2. So I got to know: **appimagelauncher**
 
 ```sh

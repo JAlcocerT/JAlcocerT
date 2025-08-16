@@ -485,9 +485,10 @@ Lately I was discovering [about MCP](https://jalcocert.github.io/JAlcocerT/ai-un
 
 > Apache v2 | aider is AI pair programming in your terminal
 
-### Clone
+### Cline
 
 * https://github.com/cline/cline
+  * https://github.com/RooCodeInc/Roo-Code?tab=readme-ov-file
 
 > Apache v2 | Autonomous **coding agent right in your IDE**, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
 
