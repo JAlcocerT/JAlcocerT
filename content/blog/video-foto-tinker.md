@@ -138,6 +138,13 @@ ffmpeg -stream_loop -1 -i "output.mp3" -i silenced_output_video.mp4 -c:v copy -c
 #https://www.youtube.com/audiolibrary
 ```
 
+For W11, you have [these equivalent scripts](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11), like:
+
+```sh
+Get-ChildItem -Filter "*.MP4" | ForEach-Object { "file '$($_.Name)'" } | Set-Content file_list.txt
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
+```
+
 
 {{< details title="More FFMPEG CLI Tricks: .gifs | Ubuntu 📌" closed="true" >}}
 

@@ -2,12 +2,12 @@
 title: "Raspberry Pi Pico W"
 date: 2025-08-15T13:20:21+01:00
 draft: false
-tags: ["Self-Hosting","IoT","Embedded Systems"]
-description: 'Using the Pico W [Microcontrollers]'
+tags: ["Self-Hosting","IoT","Embedded Systems","HA"]
+description: 'Using the Pico W [Microcontrollers] with Home Assistant.'
 url: 'pico-w'
 ---
 
-**TL;DR**
+**TL;DR** We will get few IoT scripts working via [PicoW](#picow-and-micropython) + [MQTT](#picow-and-mqtt) + [HA](#ha-x-mqtt) 
 
 **Intro**
 
@@ -644,17 +644,14 @@ The most common and robust approach is to use an intermediary service to get the
 
 This is the exact setup we discussed with Grafana:
 
-MQTT Broker (EMQX): Collects the data from your Pico W.
+* MQTT Broker (EMQX): Collects the data from your Pico W.
+* MQTT-to-Database Bridge: Listens to a topic and pushes the data into a database.
+* Database (e.g., InfluxDB): Stores the time-series data.
+* BI Tool (e.g., Grafana): Queries the database to create visualizations.
 
-MQTT-to-Database Bridge: Listens to a topic and pushes the data into a database.
+Th> is model is standard because BI tools are designed for analyzing historical data from databases, not for processing real-time message streams.
 
-Database (e.g., InfluxDB): Stores the time-series data.
-
-BI Tool (e.g., Grafana): Queries the database to create visualizations.
-
-This model is standard because BI tools are designed for analyzing historical data from databases, not for processing real-time message streams.
-
-1. Try HomeAssistant
+1. [Try HomeAssistant](#ha-x-mqtt) via [HA container](https://github.com/JAlcocerT/Docker/blob/main/IoT/HomeAssistant_docker-compose.yaml)
 
 2. Try [ThingsBoard](https://github.com/thingsboard/thingsboard)
 
@@ -662,6 +659,106 @@ This model is standard because BI tools are designed for analyzing historical da
 
 3. DYI with Flask!
 
+{{% details title="Flask x MQTT 101" closed="true" %}}
+
+For a simple app to just monitor the internal temperature, the Flask application would be relatively simple.
+
+You'd primarily need to set up the communication channels and a basic web page to display the data.
+
+The Backend (Flask)
+
+The Flask side of the application would be the "server" that receives the MQTT messages. You would:
+
+1.  **Initialize the Flask app** and an MQTT client.
+2.  **Define an MQTT callback function** that gets triggered whenever a new temperature message arrives from your Pico W.
+3.  Inside this callback, you would store the most recent temperature value and then broadcast it to any connected web clients using a library like **Flask-SocketIO**. 
+
+This backend script would be continuously running, listening for both MQTT data and requests from web browsers.
+
+The Frontend (HTML/JavaScript)
+
+The frontend is the simple web page that displays the data. You would create a single HTML file with:
+
+1.  A heading (e.g., "Pico W Temperature Monitor").
+2.  A space (like a `<div>`) to display the temperature value.
+3.  A JavaScript script that connects to your Flask server via **SocketIO**.
+4.  Once connected, the script would listen for the temperature data broadcast from the server and update the content of the `<div>` with the new temperature value.
+
+This setup is efficient because it avoids traditional page reloads. Instead, the server pushes new data to the browser as soon as it's available, creating a real-time, dynamic display.
+
+{{% /details %}}
+
+### HA x MQTT
+
+https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant
+https://github.com/JAlcocerT/Home-Lab/blob/main/home-assistant/configuration.yaml
+
+
+{{% details title="Setup the MQTT Integration and configure your dashboard " closed="true" %}}
+
+For recent Home Assistant versions, you configure the MQTT broker through the UI, not in the `configuration.yaml` file. The `broker`, `port`, `username`, and `password` options were deprecated for manual YAML configuration.
+
+Here's the correct two-step process to get everything running:
+
+1.  **Configure the MQTT Broker in the UI:**
+    * Go to **Settings** > **Devices & Services**.
+    * Click the **"+ Add Integration"** button.
+    * Search for and select **"MQTT"**.
+    * A pop-up will guide you to enter the broker's IP address (`192.168.1.11`), port (`1883`), and any credentials you have set.
+2.  **Add the Sensor Configuration to YAML:**
+    * After the broker is configured, you'll add the sensor block to your `configuration.yaml` file. The part you provided is exactly what's needed.
+    * This tells Home Assistant to create a new entity (`sensor.pico_w_temperature`) that will listen for incoming data from the broker on the specified topic.
+
+> After you've done both of these steps and restarted Home Assistant, it will automatically connect to your EMQX broker and start listening for the temperature data.
+
+1\. Configure the MQTT Broker in the UI
+
+First, you connect Home Assistant to your EMQX broker. This is done entirely through the UI and you should never add the `mqtt: broker:` details to your YAML file.
+
+2\. Add the Sensor Configuration in YAML
+
+This is where you define the entities that listen for data. The error message you received happens when you try to use the old YAML format for the sensor. The correct, modern method is to define the sensor directly under the `mqtt:` key, like so:
+3\. Restart Home Assistant
+
+After you save the `configuration.yaml` file with the correct code, you must restart Home Assistant to apply the changes.
+
+The **history integration** relies on the recorder integration to actually save the data.
+
+To fix this, you should explicitly enable the recorder in your `configuration.yaml` file. 
+
+**How It Works HA to add the MQTT historical temperatura data plot:**
+
+1.  **Card Selection**: You've correctly chosen the **History Graph** card. This card is perfect for visualizing time-series data like temperature readings.
+2.  **Configuration**: The card's configuration panel allows you to customize the graph.
+    * **Title**: You've given it a title, "Internal T," which makes it easy to identify on your dashboard.
+    * **Hours to show**: You've set the time range to 6 hours, which is good for viewing recent data trends.
+    * **Entities**: This is the most crucial part. You've correctly selected **`Pico W Temperature`** from the list of available entities. This tells the card to get its data from the sensor you created using the MQTT integration.
+
+Once you click **Save**, the card will be added to your dashboard and will start plotting the temperature data as it arrives from your Pico W.  The "History integration disabled" message you see in the screenshot is a common temporary state; the graph will populate with data as soon as the integration begins collecting it.
+
+{{% /details %}}
+
+Connect to HA via `http://192.168.1.11:8123`
+
+{{% details title="HA has a buildint SQLite to store and plot MQTT Data!" closed="true" %}}
+
+```sh
+cd ~/Docker/HomeAssistant
+sqlite3 home-assistant_v2.db
+#.tables
+
+```
+
+{{% /details %}}
+
+{{< callout type="info" >}}
+As we are reading the PicoW Internal sensor, for me it was showing ~+8C than a regular temp sensor 
+{{< /callout >}}
+
+
+---
+
+## FAQ
 
 
 **Interesting Resources**
@@ -685,9 +782,6 @@ Pico w web server via C, instead of Micropython - https://www.youtube.com/watch?
 * https://www.youtube.com/watch?v=ybCMXqsQyDw&t=19s
 
 
----
-
-## FAQ
 
 **Supported Languages** 
 
