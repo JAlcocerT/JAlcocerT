@@ -126,6 +126,7 @@ It ensures reliable delivery and helps decouple systems, allowing for asynchrono
 {{% details title="More about - RabbitMQ 🌍" closed="true" %}}
 
 The main features of RabbitMQ include:
+
 - **Message Queuing**: It acts as an intermediary that stores messages until they can be processed by consumers.
 - **High Availability**: RabbitMQ can be configured for high availability, ensuring that messages are not lost in case of server failure.
 - **Routing**: RabbitMQ offers powerful routing capabilities, including direct, fanout, topic, and header exchanges, allowing messages to be routed to the right consumers efficiently.
@@ -187,7 +188,9 @@ Key features of Kafka include:
 - **Fault Tolerance**: Kafka ensures data reliability by replicating data across multiple brokers and enabling automatic failover.
 
 
-Kafka is widely used in systems that require real-time data processing, such as event logging, monitoring, data integration, and real-time analytics. It's often employed in applications like fraud detection, user activity tracking, and real-time event processing.
+Kafka is widely used in systems that require real-time data processing, such as event logging, monitoring, data integration, and real-time analytics.
+
+It's often employed in applications like user activity tracking, and real-time event processing.
 
 {{% /details %}}
 

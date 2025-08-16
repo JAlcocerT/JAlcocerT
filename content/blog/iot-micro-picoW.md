@@ -41,13 +41,21 @@ Ideas for Readme's - https://github.com/STJRush/handycode/tree/master/Raspi%20Pi
 
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW" title="PicoW Micropython Scripts 🐍 ↗" >}}
 {{< /cards >}}
 
 
 ### PiW 101
 
 You can get familiar via this post with the picoW: https://picockpit.com/raspberry-pi/everything-about-the-raspberry-pi-pico/
+
+We are going to see **few working examples**:
+
+1. Playing with the [Led](#using-the-built-in-led)
+2. Connect the [PicoW to Wifi](#connecting-the-pico-to-wifi)
+3. Reading the [internal temp sensor](#reading-internal-temp-sensor)
+4. Reading an external temp sensor - [MLX90614](#pico-w-with-mlx90614) 
+5. [MQTT and the PicoW](#pico-and-mqtt)
 
 But basically, you will want to connect it to your laptop:
 
@@ -145,7 +153,7 @@ Do you want to install it now?
 
 > I said yes!
 
-https://www.youtube.com/watch?v=RQRQvjIBbUo
+<!-- https://www.youtube.com/watch?v=RQRQvjIBbUo -->
 
 {{< youtube "RQRQvjIBbUo" >}}
 
@@ -201,7 +209,9 @@ code --install-extension ms-vscode.vscode-serial-monitor
 
 ![VSCode Serial Monitor Extension](/blog_img/iot/picoW/vscode-serialmonitor.png)
 
-
+{{< callout type="info" >}}
+Thonny+W11 was the best combo for me
+{{< /callout >}}
 
 ### PicoW and MicroPython
 
@@ -245,7 +255,7 @@ You can see whats the micropython code running inside your picoW by:
 #screen -ls
 kill -9 9096
 mpremote connect /dev/ttyACM0 fs ls
-
+```
 
 
 #### Using the Built in Led
@@ -266,21 +276,16 @@ Press `CTRL+D` for soft reboot and load the new program!
 <!-- 
 <https://www.youtube.com/watch?v=_ouzuI_ZPLs> -->
 
-
-
 #### Reading internal temp sensor
 
-
-* Required library: https://pypi.org/project/machine/
-
+Required library: https://pypi.org/project/machine/
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/InternalSensor" title="PicoW + Wifi Connection 🐍 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/InternalTempSensor" title="PicoW + Wifi Connection 🐍 ↗" >}}  
 {{< /cards >}}
 
 {{< youtube "PYOaO1yW0rY" >}}
-
-
 
 #### Connecting the Pico to Wifi
 
@@ -303,21 +308,31 @@ Even reading html webcontent, with [this other script](https://github.com/JAlcoc
 
 #### Pico W with MLX90614
 
+Connect the sensor properly as per:
+
 GND is pin38
 3v3 out is pin 36
 
 11 (GP8) is I2C0 SDA
 12 (GP9) is I2C0 SCL
 
-<https://www.youtube.com/watch?v=FsdSkhdfOqY&t=24s> and they are giving their own library: <https://github.com/embeddedclub/micropython>
+<https://www.youtube.com/watch?v=FsdSkhdfOqY&t=24s> 
 
-we need to install: <https://github.com/mcauser/micropython-mlx90614>
-it is not available in mip, the new package manager
+And they are giving their own library: <https://github.com/embeddedclub/micropython>
 
-so cloned the repo and copied into /lib/mlx/mlx90614.py (i did not compiled it into .mpy) the .py file of the repo
+We need to install: <https://github.com/mcauser/micropython-mlx90614>
 
-in this way, we can import with from mlx.mlx90614 import MLX90614 (we import the class)
+> It is not available in mip, the new package manager
 
+So cloned the repo and copied into `/lib/mlx/mlx90614.py`
+
+> I did not compiled the `.py` file of the repo into `.mpy` 
+
+In this way, we can import with 
+
+```py
+from mlx.mlx90614 import MLX90614 #(we import the class)
+```
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MLX90614" title="PicoW + MLX906014 🐍 ↗" >}}
@@ -325,20 +340,33 @@ in this way, we can import with from mlx.mlx90614 import MLX90614 (we import the
 
 
 
-#### Pico and MQTT
+## PicoW and MQTT
 
-Message Queue Telemetry Transport
+The Message Queue Telemetry Transport!
 
-You could also play with **HiveMQ**
+I was writing on the [Pi Blog a post about MQTT](https://jalcocert.github.io/RPi/posts/rpi-mqtt/).
 
-<!-- 
-https://www.youtube.com/watch?v=jw9zTjKqoUA 
--->
+But its the time to play with MQTT and the PicoW.
 
-{{< youtube "jw9zTjKqoUA" >}}
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
+The MQTT Architecture operates on a **client-server** model, and the core of MQTT communication revolves around two main components:
 
-## The RPI and mqttx/mosquitto
+* **MQTT Broker (Server):** This is the central hub of the system. It's a server that receives all messages from clients, filters them by topic, and then distributes them to other clients who have subscribed to those specific topics. 
+
+> A Pi 4 or an ASRock DeskMini X300 acting as a homelab, running an MQTT server like [EMQX](https://github.com/JAlcocerT/Home-Lab/tree/main/emqx), fills this role. 
+
+* **MQTT Client:** These are the devices that connect to the broker to either **publish** messages (send data) or **subscribe** to topics (receive data). Your Raspberry Pi Pico W, configured to read sensor data and send it to the broker, is the perfect example of an MQTT client.
+
+ It will publish its sensor readings to a specific topic on the server. Other devices, which are also clients, can then subscribe to that same topic to receive the data.
+
+This separation of roles is what makes MQTT so efficient and scalable for IoT applications. 
+
+> The clients don't need to know anything about each other; they only need to know how to connect to the central broker. 
+
+{{% details title="The RPI and mqttx/mosquitto 🌍" closed="true" %}}
 
 If you want to bring the *bigger* Pi4 to the MQTT game:
 
@@ -365,13 +393,87 @@ netstat -tuln
 
 <https://www.youtube.com/watch?v=GQOqvvei5Do> #also hivemq
 
+{{% /details %}}
 
-#without hivemq <https://www.youtube.com/watch?v=THUGLRGuOU8> GREAT VIDEO!!!!!!!! **To be used mqttx and emqx**
+Without hivemq, just using this GREAT VIDEO: explaining the `umqtt.simple` library!
 
+<!-- https://www.youtube.com/watch?v=THUGLRGuOU8 -->
+
+{{< youtube "THUGLRGuOU8" >}}
+
+> **To be used mqttx and emqx**
 
 * https://www.donskytech.com/umqtt-simple-micropython-tutorial/
 
+### PicoW to EMQX Server
 
+Having your EMQX ready and accessing its UI at `192.168.1.11:18083`
+
+![alt text](/blog_img/iot/picoW/emqx-login.png)
+
+> Login via admin/public and you will be prompted to change the pass
+
+
+{{% details title="Create a topic via EMQX so that the PicoW will push data 🌍" closed="true" %}}
+
+Yes, you can temporarily allow anonymous clients to publish to a topic. However, this is **not recommended for a production environment** as it creates a significant security vulnerability. Anyone who can reach your server can then publish data to that topic.
+
+This is primarily useful for initial testing and quick development to confirm that your Pico W's code and network configuration are correct.
+
+Here's how to do it in EMQX:
+
+1. Enable Anonymous Authentication
+By default, EMQX allows anonymous access. However, if you've previously configured a password-based authentication, you may have disabled it. You can check this in the EMQX dashboard.
+
+1.  Navigate to **Access Control -> Authentication**.
+2.  If you see an "anonymous" entry, ensure it is enabled.
+3.  If it's not present or disabled, you may need to add or enable it, but in most default setups, it's already there.
+
+ 2. Configure Anonymous Authorization
+This is the most critical step. You need to create an Access Control List (ACL) rule that explicitly allows unauthenticated (anonymous) users to publish to your desired topic.
+
+1.  Navigate to **Access Control -> Authorization**.
+2.  Add a new rule.
+3.  Set the **Type** to `All Users`.
+4.  Enter the **Topic Filter** (e.g., `house/living_room/sensor_data`).
+5.  Set the **Action** to `Publish`.
+6.  Set the **Permission** to `Allow`.
+7.  Save the rule.
+
+This rule will apply to any client that connects without a username and password. Now, your Pico W can connect to the broker using its IP address and port without needing to provide any credentials.
+
+**Again, please remember to set up proper authentication and authorization with specific users and passwords before you deploy your project for real-world use.**
+
+You don't need to manually create a topic in EMQX.
+
+Topics are created automatically the first time a client **publishes** a message to them. You just need to specify the topic name in your Pico W's code.
+
+How it Works
+
+The MQTT broker operates on a publish-subscribe model. When a client (your Pico W) sends a message, it includes a topic in the message header. The broker, upon receiving the message, checks if that topic already exists. If it doesn't, the broker creates it and then routes the message to any clients that are subscribed to that topic.
+
+What You Need to Do
+
+1.  **Define the Topic Name:** In your Pico W's code, simply decide on a logical and hierarchical topic name. Good examples are:
+    * `sensor/livingroom/temperature`
+    * `device/picow_01/status`
+    * `home/kitchen/light`
+2.  **Publish to the Topic:** When your Pico W's code publishes its first message, it will automatically create that topic on the EMQX broker.
+3.  **Subscribe to the Topic:** Any other client (e.g., another Pico W, a dashboard on your computer, or a smartphone app) that wants to receive that data will need to subscribe to the exact same topic name.
+
+This dynamic topic creation is a key feature of MQTT that makes it flexible and easy to use.
+
+{{% /details %}}
+
+
+{{% details title="Testing EMQX from W11" closed="true" %}}
+
+```sh
+choco install mosquitto
+```
+
+
+{{% /details %}}
 
 **REQUIRED:**
 
@@ -407,31 +509,7 @@ mip.install("umqtt.simple")
 then the code <https://github.com/donskytech/micropython-raspberry-pi-pico/tree/main/umqtt.simple>
 
 
-boot.py
 
-```py
-# boot.py -- run on boot-up
-import network, utime, machine
-
-# Replace the following with your WIFI Credentials
-SSID = "HUAWEI P30"
-SSID_PASSWORD = "mokradupa68"
-
-
-def do_connect():
-    sta_if = network.WLAN(network.STA_IF)
-    if not sta_if.isconnected():
-        print('connecting to network...')
-        sta_if.active(True)
-        sta_if.connect(SSID, SSID_PASSWORD)
-        while not sta_if.isconnected():
-            print("Attempting to connect....")
-            utime.sleep(1)
-    print('Connected! Network config:', sta_if.ifconfig())
-    
-print("Connecting to your wifi...")
-do_connect()
-```
 
 
 main.py
@@ -514,6 +592,21 @@ if __name__ == "__main__":
 
 ```
 
+
+---
+
+## Conclusions
+
+I took longer than expected to write this post.
+
+And almost forgot all the things I learnt about the PicoW, just bc I did not document it while learning.
+
+Things of 2023.
+
+
+**Interesting Resources**
+
+
 1. Pico to Pico Wifi communication
 
 <https://www.youtube.com/watch?v=ACAmVg6MakI>
@@ -529,33 +622,41 @@ Pico w web server via C, instead of Micropython - https://www.youtube.com/watch?
 * https://www.youtube.com/watch?v=_DO2wHI6JWQ&t=21s>
 * https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server>
 
-
 * https://www.youtube.com/watch?v=ybCMXqsQyDw&t=19s
 
----
-
-## Conclusions
 
 ---
-
 
 ## FAQ
 
+**Supported Languages** 
 
-**supported Languages** 
+Yes, the Raspberry Pi Pico W supports all of the languages and the OS you listed.
 
-C/C++
-MicroPython
-TinyGo (?)
-CircuitPython (?)
+***
 
-O.S FreeRTS ??? <https://www.youtube.com/watch?v=5pUY7xVE2gU>
+### Languages
+
+* **C/C++:** This is the primary language supported by the Raspberry Pi Pico, with an official SDK (Software Development Kit) provided by the Raspberry Pi Foundation. It offers the fastest performance and the most direct control over the hardware.
+* **MicroPython:** A lean and efficient implementation of the Python 3 programming language optimized for microcontrollers. It's an excellent choice for beginners and for rapid prototyping because of its simpler syntax and a large number of available libraries.
+* **TinyGo:** This is an implementation of the Go programming language that is designed for microcontrollers. The Raspberry Pi Pico W is officially supported by the TinyGo project, making it a viable option for those who prefer the Go ecosystem.
+* **CircuitPython:** A fork of MicroPython created by Adafruit, it is also well-supported on the Raspberry Pi Pico W. It focuses on ease of use for beginners and has a large collection of hardware-specific libraries.
+
+* **FreeRTOS:** While not a full-fledged operating system in the traditional sense, **FreeRTOS** is a **Real-Time Operating System (RTOS)** kernel. It is supported on the Raspberry Pi Pico W, allowing you to run multiple tasks concurrently and manage resources in a time-sensitive manner, which is crucial for complex embedded applications. 
+
+<!-- https://www.youtube.com/watch?v=5pUY7xVE2gU -->
+
+{{< youtube "5pUY7xVE2gU" >}}
+
 
 > Even with RUST?
 
-https://www.alexdwilson.dev/how-to-program-raspberry-pi-pico-with-rust
+* https://www.alexdwilson.dev/how-to-program-raspberry-pi-pico-with-rust
+* https://www.youtube.com/watch?v=jZT8APrzvc4
 
-https://www.youtube.com/watch?v=jZT8APrzvc4
+If you liked the [MQTT section](#pico-and-mqtt), you could also play with **HiveMQ**
+
+{{< youtube "jw9zTjKqoUA" >}}
 
 
 **Checking micropython files inside PicoW via RShell**
@@ -573,6 +674,7 @@ rshell -p /dev/serial/by-id/usb-MicroPython_Board_in_FS_mode_e66141040370772c-if
 ### How can you see what code is currently inside the microcontroller (Pico W)?
 
 
+{{% details title="If you used ArduinoIDE..." closed="true" %}}
 
 Short Answer:
 
@@ -625,11 +727,13 @@ But since you're using Arduino IDE, that's not applicable here.
 | Retrieve readable code                              | ❌ Unless you have the original |
 | Overwrite with new code                             | ✅ Always possible              |
 
-Let me know if you want help reading serial output or uploading a new sketch!
 
-Thanks for sharing your script — and yes, this looks like a **MicroPython** script, not Arduino.
+{{% /details %}}
 
-### What if the Pico W was running **MicroPython**
+If you used a **MicroPython** script, not Arduino....
+
+{{% details title="What if the Pico W was running **MicroPython**" closed="true" %}}
+
 
 This `boot.py` script would have been uploaded to the internal file system of the board.
 
@@ -637,9 +741,9 @@ Let’s break this down and help you check **whether this code is still there** 
 
 ---
 
-## ✅ Step-by-Step: Check if Your Script is Still on the Pico W
+✅ Step-by-Step: Check if Your Script is Still on the Pico W
 
-### 🔌 1. **Install & Open Thonny**
+1. **Install & Open Thonny**
 
 Thonny is the recommended editor for MicroPython on the Pico W.
 
@@ -656,7 +760,7 @@ Thonny is the recommended editor for MicroPython on the Pico W.
 
 ---
 
-### 💾 2. **Browse the File System**
+💾 2. **Browse the File System**
 
 Once connected:
 
@@ -668,9 +772,7 @@ Once connected:
 If your script (`boot.py`) is still there, you’ll see it listed.
 Double-click to open and view it.
 
----
-
-### 🧽 3. **What If You Flashed Arduino Code?**
+3. **What If You Flashed Arduino Code?**
 
 If you uploaded an Arduino sketch to the Pico W, the MicroPython firmware would have been **overwritten**. That means:
 
@@ -690,25 +792,13 @@ To get back to MicroPython:
 
 Now, you can reconnect using Thonny and upload scripts like `boot.py` again.
 
----
-
-## 🔐 Bonus Tip: Hide Credentials in Production
+🔐 Bonus Tip: Hide Credentials in Production
 
 Your current script hardcodes the Wi-Fi credentials — that’s fine for testing, but for more security:
 
 * Store them in a separate `secrets.py` file.
 * Or use environment variables if working with more complex setups.
 
----
+{{% /details %}}
 
-Let me know:
-
-* Do you want help re-uploading this script?
-* Or do you want to go back to Arduino IDE instead?
-
-Happy to guide you either way.
-
-
-```sh
-sudo usermod -aG dialout $USER
-```
+> For me, the easiest was with Thonny + Windows11.
