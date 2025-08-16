@@ -1,13 +1,13 @@
 ---
 title: "Whats the right Messaging Protocol for me?"
-date: 2025-08-17T05:20:21+01:00
+date: 2025-08-16T09:20:21+01:00
 draft: false
-tags: ["D&A","HomeLab"]
+tags: ["D&A","HomeLab","PicoW MQTT and a DHT22 Sensor"]
 description: 'MQTT vs RMQ vs Kafka. Messaging Tools for IoT Projects and more'
 url: 'messaging-protocols'
 ---
 
-**TL;DR**
+**TL;DR** Recap on messaging tools + using the [PicoW x MQTT x DHT22](#mqtt-x-picow-x-dht22)
 
 
 **Intro**
@@ -20,9 +20,11 @@ You might be playing around with your Pi:
   {{< card link="https://jalcocert.github.io/RPi/posts/rpi-gps-superset/#apache-superset-setup" title="Superset Setup" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="IoT Pi Project with Superset" >}}
 {{< /cards >}}
 
+Or with your PicoW, like I was doing recently:
+
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/demo-realtime-pollution" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed with NGINX" >}}
-  {{< card link="https://github.com/JAlcocerT/demo-realtime-pollution" title="Taipy Sensor Display" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pico-w/" title="PicoW Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="MQTT + HomeAssistant" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW" title="PicoW Scripts Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
 Or maybe you are an [architect withing D&A](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/) and need some clarity on messaging protocols.
@@ -112,7 +114,7 @@ https://www.youtube.com/watch?v=VnGRFwDrLHo
 
 ### RabbitMQ
 
-https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/
+* https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/
 
 **RabbitMQ** is an open-source message broker that facilitates communication between applications, services, or microservices in a distributed system.
 
@@ -210,6 +212,8 @@ These tools will be useful:
 1. VSCodium
 2. THonny
 3. Arduino IDE
+
+### MQTT x PicoW x DHT22
 
 
 
