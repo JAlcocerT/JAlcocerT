@@ -8,7 +8,13 @@ url: 'whats-boostrap'
 ---
 
 
-**TLD;DR:** Collecting some interesting resources and concepts for entrepreneurs and indie hackers.
+**TLD;DR:** 
+
+Collecting some interesting resources/concepts for entrepreneurs and *indie hackers*.
+
+Do you have a supply or a demand problem?
+
+And im not talking about FMCG.
 
 
 **Intro**

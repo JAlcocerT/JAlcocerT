@@ -165,7 +165,7 @@ Load your API:
 
 ```sh
 git clone https://github.com/pixegami/langchain-rag-tutorial
-source .env
+#source .env
 
 #export OPENAI_API_KEY="your-api-key-here"
 #set OPENAI_API_KEY=your-api-key-here

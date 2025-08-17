@@ -7,13 +7,17 @@ description: 'Interesting Telco stuff I got to know while using a Data LakeHouse
 url: 'telecom-concepts-101'
 ---
 
+
+
+**Intro**
+
 Its been a while working with telecom data...
 
 The book *Building the data lakehouse* by Bill Inmon...
 
 Helped me a lot. 
 
-Also being curious and tinkering with the Pi:
+Also being curious and tinkering with the [Pi](https://jalcocert.github.io/RPi/).
 
 {{< callout type="info" >}}
 Measure your Home Internet Speed with: [WYL and OpenSpeedTest/SpeedTest Tracker](https://jalcocert.github.io/RPi/posts/self-internet-monit/)

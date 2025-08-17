@@ -128,8 +128,8 @@ nonconcurrent for writes/updates of data!!!
 
 #### About PB_Hooks
 
-What pb_hooks/ does
-Purpose: Holds PocketBase server-side hook scripts. PocketBase auto-loads any *.pb.js files here and executes them to customize backend behavior.
+What `pb_hooks/` does
+Purpose: Holds PocketBase server-side hook scripts. PocketBase auto-loads any `*.pb.js` files here and executes them to customize backend behavior.
 When they run:
 On server start/bootstrapping.
 On specific collection events if you register handlers (before/after create, update, delete, auth, etc.).
@@ -148,7 +148,8 @@ Reads S3-related env vars and sets settings.s3 accordingly.
 
 If required envs are missing, throws an error to prevent misconfigured storage.
 Calls app.save(settings) to persist the updated PocketBase settings.
-In short, pb_hooks/ lets you programmatically configure and extend PocketBase on the server, and this specific hook configures S3 file storage from environment variables.
+
+> In short, `pb_hooks/` lets you programmatically configure and extend PocketBase on the server, and this specific hook configures S3 file storage from environment variables.
 
 #### About PB_Migrations
 
@@ -588,9 +589,11 @@ curl http://192.168.1.11:8080/api/health
 curl http://192.168.1.11:8080/api/collections/users/records
 ```
 
-3. Create a new record into the users collection:
+3. Create a new record into the users collection (via curl with auth)
 
 ```sh
+source .env
+
 # curl -X POST -H "Content-Type: application/json" -d '{
 #     "email": "testuser@example.com",
 #     "password": "my_secure_password",
@@ -662,7 +665,75 @@ They are popular because they are **stateless** (the server doesn't need to stor
 However, they should always be sent over a secure, encrypted connection (HTTPS) because anyone who intercepts the token can use it.
 
 
+4. You can create also new PB collections via curl (with proper auth thanks to those bearers):
 
+Get the bearer with:
+
+```sh
+#source .env #to get PB admin email and the pwd!
+TOKEN=$(curl -s -X POST "$PB/api/admins/auth-with-password" \
+  -H 'content-type: application/json' \
+  -d "{\"identity\":\"$ADMIN_EMAIL\",\"password\":\"$ADMIN_PASS\"}" | jq -r .token)
+echo "$TOKEN"
+```
+
+
+Create the events PB collection via:
+
+```sh
+curl -s -X POST "$PB/api/collections" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H 'content-type: application/json' \
+  -d '{
+    "name": "events",
+    "type": "base",
+    "listRule": "",
+    "viewRule": "",
+    "createRule": "",
+    "updateRule": "",
+    "deleteRule": "",
+    "indexes": [
+      "CREATE INDEX events_slug_type_created ON events (slug, type, created)",
+      "CREATE INDEX events_path_created ON events (path, created)"
+    ],
+    "schema": [
+      { "name": "type", "type": "text", "required": false, "presentable": true, "unique": false,
+        "options": { "min": null, "max": 64, "pattern": "" } },
+      { "name": "path", "type": "text", "required": false, "presentable": true, "unique": false,
+        "options": { "min": null, "max": 512, "pattern": "" } },
+      { "name": "slug", "type": "text", "required": false, "presentable": true, "unique": false,
+        "options": { "min": null, "max": 256, "pattern": "" } },
+      { "name": "referrer", "type": "text", "required": false, "presentable": true, "unique": false,
+        "options": { "min": null, "max": 512, "pattern": "" } },
+      { "name": "userAgent", "type": "text", "required": false, "presentable": true, "unique": false,
+        "options": { "min": null, "max": 512, "pattern": "" } },
+      { "name": "ipHash", "type": "text", "required": false, "presentable": false, "unique": false,
+        "options": { "min": null, "max": 64, "pattern": "" } },
+      { "name": "meta", "type": "json", "required": false, "presentable": false, "unique": false,
+        "options": {} }
+    ]
+  }'
+```
+
+5. And a record inside an existing collection (users, the default PB collection):*using the bearer we got on (4)*
+
+```sh
+SERVICE_EMAIL=service@example.com
+SERVICE_PASS='a-strong-password'
+
+CREATE_RES=$(curl -s -X POST "$PB/api/collections/users/records" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H 'content-type: application/json' \
+  -d "{
+    \"email\": \"$SERVICE_EMAIL\",
+    \"password\": \"$SERVICE_PASS\",
+    \"passwordConfirm\": \"$SERVICE_PASS\",
+    \"emailVisibility\": false,
+    \"name\": \"Service User\"
+  }")
+echo "$CREATE_RES"
+SERVICE_ID=$(echo "$CREATE_RES" | jq -r .id)
+```
 
 **Other learnings**
 

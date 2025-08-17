@@ -23,7 +23,9 @@ Jekyll uses **Ruby language**.
 
 And thanks to the community, there are Themes that you can use completely free.
 
-So: Free Theme, Free Hosting, Free Github(sub)domain...Let's create something interesting with it.
+So: Free Theme, Free Hosting, Free Github(sub)domain...
+
+Let's create something interesting with it.
 
 {{< details title="Ruby + jekyll + Chirpy Setup 📌" closed="true" >}}
 

@@ -2,10 +2,6 @@
 title: "A new webpage for JAlcocerTech"
 date: 2025-06-21T18:20:21+01:00
 draft: false
-# cover:
-#   image: "https://socialify.git.ci/BoltzmannEntropy/xtts2-ui/image?description=1&descriptionEditable=Discovering%20weather%20patterns%20with%20Python%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
-#   alt: "SelfHosting xTTS2 with Docker." # alt text
-#   caption: "Succesfull installation of xTTS2 with Docker." # display caption
 description: 'AstroDB x KeyStaticCMS. A new SSG website to show Embedded Analytics capabilities.'
 tags: ["Web","Landing Page","CMS","Cloudflare Workers and Pages","Web Checks","Animations"]
 url: keystaticcms-astrodb
@@ -57,11 +53,11 @@ git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/jalcocertech.git
 #git remote add origin https://github.com/JAlcocerT/jalcocertech.git
 ```
 
-
+---
 
 ## Conclusions
 
-DigITalize your Creativity | JAlcocerTech
+> DigITalize your Creativity | JAlcocerTech
 
 Use IT or lose it The AI Revolution for your business · It all start with a Modern and fast website. Secured by Default and GDPR compliant
 
@@ -160,15 +156,16 @@ You always get surprised with astro themes:
 
 As always, trying some new astro theme makes you discover some very cool components.
 
-But thanks to videcoding, you can make your own astro components:
+But thanks to videcoding, you can make your **DIY astro components**:
+
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro" title="Astro Component | Whatsap Bouble ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/cybernetik-realestate-moises/blob/main/astro-nomy/src/components/InstagramGallery.astro" title="Astro Component | Make a in-post Gallery, zoomable and that allows to move to next  ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/cybernetik-realestate-moises/blob/main/astro-nomy/src/components/InstagramGallery.astro" title="Astro Component | Make a in-post Gallery, zoomable and that allows to move to next ↗" >}}
 {{< /cards >}}
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/just-ssg" title="SGG components" image="/blog_img/apps/gh-jalcocert.svg" subtitle=Components for astro and shortcodes for HUGO..." >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg" title="SGG components" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Components for astro and shortcodes for HUGO..." >}}
 {{< /cards >}}
 
 ---

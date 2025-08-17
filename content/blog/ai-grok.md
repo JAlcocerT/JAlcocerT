@@ -56,7 +56,7 @@ curl https://api.x.ai/v1/chat/completions -H "Content-Type: application/json" -H
 But a little bit cleaner:
 
 ```sh
-source .env
+#source .env
 export XAI_API_KEY="xai-somecoolapikey"
 ```
 

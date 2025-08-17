@@ -7,6 +7,11 @@ description: 'The business requirement document and the FRD for the GenAI / vibe
 url: 'brd-vs-frd-for-data-analytics'
 ---
 
+**TL;DR** A recap on PM SDLC related docs and making them vibecoding/LLM ready.
+
+
+**Intro**
+
 The BRD, *not the BRP if you read this [from NL](https://beyondajourney.pages.dev/articles/exploring-netherlands-by-bike/#cycling-around-amsterdam)...* :)
 
 There might be few reasons you want to read this:
@@ -66,7 +71,7 @@ How to make sure that the LLM will have the proper context to have from the very
 
 ## Why these are important
 
-You might think that spending time on filling some docs is just bike-shedding, a waste of time.
+You might think that spending time on filling some docs is *just bike-shedding*, a waste of time.
 
 Yet actually, when working cross-functionally with several teams, they are very beneficial to [track the stream of value](https://jalcocert.github.io/JAlcocerT/lean/#vsm) and how resources are utilized.
 
@@ -144,7 +149,7 @@ In essence, the BRD ensures that everyone involved in the project, especially th
 
 ---
 
-### Questions a BRD Has to Reply To:
+### Questions a BRD Has to Reply To
 
 Think of the BRD as an exhaustive interview of the business, where it provides answers to critical questions that drive the project. Here are the main questions a BRD must answer:
 
@@ -206,7 +211,7 @@ In short, the FRD translates the high-level business needs articulated in the BR
 
 ---
 
-### Questions a FRD Has to Reply To:
+### Questions a FRD Has to Reply To
 
 The FRD dives into the technical specifics of *how* the system will function to meet the business requirements. It answers questions that are critical for developers, designers, and testers.
 
@@ -246,7 +251,11 @@ By meticulously answering these questions, the FRD provides the precise specific
 
 ## The BRD and FRD with the SDLC
 
-The Business Requirements Document (BRD) and Functional Requirements Document (FRD) are foundational artifacts within the **Software Development Life Cycle (SDLC)**. The SDLC is a structured process that software development teams use to plan, design, develop, test, and deploy software. It provides a roadmap for the entire project, from conception to maintenance.
+The Business Requirements Document (BRD) and Functional Requirements Document (FRD) are foundational artifacts within the **Software Development Life Cycle (SDLC)**
+
+The SDLC is a structured process that software development teams use to plan, design, develop, test, and deploy software. 
+
+It provides a roadmap for the entire project, from conception to maintenance.
 
 Here's how the BRD and FRD relate to the typical phases of the SDLC:
 
@@ -318,9 +327,9 @@ In essence, the BRD and FRD are critical communication tools that guide a projec
 
 ## Conclusions
 
-How a BRD, FRD, RACI, and Project Charter relate to each other in the context of project management. 
+How a BRD, FRD, RACI, and Project Charter relate to each other *in the context of project management*.
 
-They are all crucial documents, but they serve different purposes and are typically developed at different stages of a project lifecycle.
+They are all crucial documents, but they serve different purposes and are typically developed at different **stages of a project lifecycle**.
 
 * **Project Charter: The Foundation**
     * **What it is:** The Project Charter is the *very first* document. It formally authorizes the project, defines its high-level objectives, scope, stakeholders, and assigns the project manager. It's a foundational document that provides the "why" and the initial "what" of the project.
@@ -366,7 +375,18 @@ They are interconnected and sequentially refined, building upon each other to **
 
 The Project Charter is a crucial document that fits right at the **very beginning** of the project lifecycle, specifically during the **Initiation Phase**.
 
-Here's a breakdown of its purpose, who defines it, and where it sits in the typical project flow:
+
+### Typical PM experience
+
+* **Project Management Methodologies**: The job offer explicitly mentions "agile, small-scale projects." The CV mentions "Scrum" in the header and Jira in the experience, which implies an agile approach. However, it doesn't explicitly state experience as a **Project Manager** in an agile context. Highlighting a specific project where they managed a sprint or led a stand-up meeting would make this a perfect match.
+
+* **Stakeholder Expectation Management**: The job offer calls out "Assertiveness and the ability to manage stakeholder expectations." While the resume mentions "bridging the gap between engineering and business users," it could be more explicit about how they handled challenging stakeholders, resolved conflicting requirements, or managed scope creep.
+
+* **Specific European Regional Experience**: The job is about rolling out a solution to "other geographic regions across Europe." While the CV mentions a project deployed in NL, UK, and SWE, it doesn't detail the challenges of localizing a solution (e.g., handling different languages, regulations, or business processes). Expanding on this would make the candidate an even better fit.
+
+
+
+---
 
 ## FAQ
 
