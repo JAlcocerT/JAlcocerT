@@ -13,6 +13,9 @@ Plus adding interesting shortcodes / components : https://github.com/JAlcocerT/j
 
 **Intro**
 
+I failed to understand properly i18n on this other post.
+
+
 
 
 ## Cool Blogging Themes

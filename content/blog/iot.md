@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2025-08-17
+date: 2025-11-17
 draft: false
 tags: ["Tinkering"]
 description: 'IoT Meets AI. Using MQTT and AI Together.'
@@ -8,6 +8,8 @@ url: 'just-iot'
 ---
 
 **TL;DR:** Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
+
+DB2Rest
 
 
 **Intro**

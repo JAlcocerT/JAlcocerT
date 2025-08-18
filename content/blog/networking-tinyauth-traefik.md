@@ -7,6 +7,11 @@ description: 'Logto vs (Traefik + TinyAuth) Authentication Setup. Together with 
 url: 'testing-tinyauth'
 ---
 
+
+**TL;DR** Getting Traefik v3.3 to work reliably and plugging [TinyAuth with GH auth](#traefik-x-tinyauth-x-flask)
+
+**Intro**
+
 I was having a look to https://selfh.st/newsletter/2025-02-07/ and found out about **TinuAuth**
 
 Which seems to integrate with https services and provide an **auth layer**:
@@ -115,6 +120,8 @@ Here you have a great explanation:
 {{< youtube "qmlHirOpzpc" >}}
 
 But, to get to that point, make sure to get [Traefik ready](https://fossengineer.com/selfhosting-traefik/) first.
+
+> See how I have used TinyAuth with Traefik on [this post section]#traefik-x-tinyauth-x-flask)
 
 ## About Traefik
 
@@ -369,7 +376,7 @@ I have [vibe coded](https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf)
 It's the **3 body problem**, baby!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Three Body Repo" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Three Body Repo" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask and ChartJS + WS + sensors | Post" >}}
   {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
 {{< /cards >}}
 
@@ -415,7 +422,6 @@ sudo docker compose up -d
 
 And go to `https://tinyauth.jalcocertech.com` or whatever subdomain you placed.
 
-
 ![TinyAuth UI with https](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png)
 
 Authorize the app:
@@ -429,8 +435,10 @@ And you will be logged in:
 ```sh
 docker compose -f PiwigoTraefik_docker-compose.yml up -d
 ##command: tail -f /dev/null #in case you need to keep running
+```
+If you are done...
 
-
+```sh
 # docker builder prune
 # #docker system prune -a
 # docker volume prune

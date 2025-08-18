@@ -776,7 +776,7 @@ sqlite3 home-assistant_v2.db
 ```
 {{% /details %}}
 
-Create a new HA dash:
+Create a new [HA](https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant) dashboard with the sensor info:
 
 ![alt text](/blog_img/iot/picoW/ha/ha-create-dash.png)
 
@@ -791,6 +791,7 @@ As we are reading the PicoW Internal sensor, for me it was showing ~+8C than a r
 ![alt text](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png)
 
 <!-- https://studio.youtube.com/video/x4tzWt6-I7c/edit -->
+
 {{< youtube "x4tzWt6-I7c" >}}
 
 ---

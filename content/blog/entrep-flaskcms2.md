@@ -1,6 +1,6 @@
 ---
 title: "FlaskCMS v0.2"
-date: 2025-08-17
+date: 2025-08-22
 draft: false
 tags: ["Astro x Flask","Markdown editors","Cursor IDE","Stacer"]
 description: 'Markdown and FlaskCMS v0.1 that works for Mental Health and Real Estate'

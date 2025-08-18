@@ -440,7 +440,11 @@ It provides a clean, user-friendly interface for common tasks:
 
 You could theoretically build your entire frontend by making raw `fetch` calls to PocketBase's REST API.
 
-However, using the SDK is far more efficient and less error-prone. Think of the SDK as a wrapper that handles the complexities of the API, allowing you to focus on your frontend UI and logic. It's like using a car's dashboard controls instead of manually adjusting the engine components.
+However, using the SDK is far more efficient and less error-prone.
+
+Think of the SDK as a wrapper that handles the complexities of the API, allowing you to focus on your frontend UI and logic. 
+
+It's like using a car's dashboard controls instead of manually adjusting the engine components.
 
 ### Is My App "Ready" with the SDK?
 
@@ -449,13 +453,11 @@ Connecting your frontend with the PocketBase JS SDK gets you very close to a fun
 * **✅ Ready for core functionality**: Yes, you will have a working backend for authentication, data storage, and file management. The SDK makes it trivial to get and save data.
 * **❌ Not for custom business logic**: The SDK is for client-side interactions. If you need custom server-side logic (e.g., sending an email after a record is created or performing complex data validations that can't be handled by PocketBase's "API rules"), you'd need to extend PocketBase using its Go or JavaScript "hooks."
 
-
-
 {{< callout type="warning" >}}
 The PocketBase JS SDK is a complete **solution for a client-driven app**. Which resonates with [SSGs](https://jalcocert.github.io/JAlcocerT/create-your-website/) for me...
 {{< /callout >}}
 
-It is designed specifically for this purpose, making it easy to build a full-featured application by focusing almost exclusively on your frontend code.
+> It is designed specifically for this purpose, making it easy to build a full-featured application by focusing almost exclusively on your frontend code.
 
 #### Example 1
 
@@ -569,6 +571,7 @@ It makes the FastAPI layer largely redundant for tasks like fetching user data, 
 
 > You would only add a custom backend with a framework like FastAPI if PocketBase's built-in functionality isn't sufficient for your specific needs.
 
+### PB and Auth via SDK
 
 ---
 
@@ -665,20 +668,20 @@ They are popular because they are **stateless** (the server doesn't need to stor
 However, they should always be sent over a secure, encrypted connection (HTTPS) because anyone who intercepts the token can use it.
 
 
-4. You can create also new PB collections via curl (with proper auth thanks to those bearers):
+4. You can also **create new PB collections via curl** (with proper auth thanks to those bearers):
 
 Get the bearer with:
 
 ```sh
 #source .env #to get PB admin email and the pwd!
+
 TOKEN=$(curl -s -X POST "$PB/api/admins/auth-with-password" \
   -H 'content-type: application/json' \
   -d "{\"identity\":\"$ADMIN_EMAIL\",\"password\":\"$ADMIN_PASS\"}" | jq -r .token)
 echo "$TOKEN"
 ```
 
-
-Create the events PB collection via:
+Create the new sample events PB collection via curl:
 
 ```sh
 curl -s -X POST "$PB/api/collections" \
@@ -718,6 +721,18 @@ curl -s -X POST "$PB/api/collections" \
 5. And a record inside an existing collection (users, the default PB collection):*using the bearer we got on (4)*
 
 ```sh
+# curl -s -X POST "$PB/api/collections/users/records" \
+#   -H "Authorization: Bearer $TOKEN" \
+#   -H "Content-Type: application/json" \
+#   -d '{
+#     "username": "jalcocert",
+#     "email": "jalcocert@whatever.com",
+#     "emailVisibility": true,
+#     "password": "somepass",
+#     "passwordConfirm": "somepass",
+#     "name": "jalcocert"
+#   }'
+
 SERVICE_EMAIL=service@example.com
 SERVICE_PASS='a-strong-password'
 
@@ -751,17 +766,18 @@ I got to know along the way about:
 
 **Some new concepts**
 
-1. Concurrency = Multiple Things Happening at the Same Time
+
+1. **Concurrency** = Multiple Things Happening at the Same Time
 Concurrency means multiple operations or processes running simultaneously and potentially accessing the same resources.
 
-2. Race Condition = When Concurrency Goes Wrong
+2. **Race Condition** = When Concurrency Goes Wrong
 A race condition is a specific problem that occurs in concurrent systems when:
 
 Multiple processes access shared data simultaneously
 The final result depends on the unpredictable timing of these accesses
 This leads to inconsistent or corrupted data
 
-3. Redux, [browser storage technologies](#local-vs-session-storage), [IndexDB](#indexdb), RTK...
+3. **Redux**, [browser storage technologies](#local-vs-session-storage), [IndexDB](#indexdb), RTK...
 
 ### Redux
 

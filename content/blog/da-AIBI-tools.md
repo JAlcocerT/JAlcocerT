@@ -49,7 +49,7 @@ Then I found this:
 
 * https://github.com/9tigerio/db2rest
 
-> Apache v2 | Instant no code DATA API platform. Connect any database, run anywhere. Power your GENAI application function/tools calls in seconds.
+> Apache v2 | Instant no code **DATA API platform**. Connect any database, run anywhere. Power your GENAI application function/tools calls in seconds.
 
 
 ---

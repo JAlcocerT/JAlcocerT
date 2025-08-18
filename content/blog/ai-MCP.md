@@ -7,6 +7,10 @@ description: 'Reviewing how MCP protocol works. From LangGraph to OpenAI Agents.
 url: 'ai-understanding-mcp-framework'
 ---
 
+**TL;DR** Agents are cool https://www.reddit.com/r/AI_Agents/
+
+**Intro**
+
 And Anthropic has made it...[a protocol for LLMs](https://www.anthropic.com/news/model-context-protocol), **MCP**.
 
 1. [What](#mcp) it is Model Context Protocol?

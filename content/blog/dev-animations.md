@@ -9,7 +9,7 @@ url: animations-as-a-code
 
 Not long ago I was tinkering with [AI/BI Tools](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/).
 
-Among them (ChartBrew, ChartDB, DB2Rest) I was impressed by [Streamlit x PyGWalker](#conclusions)
+> Among them (ChartBrew, ChartDB, DB2Rest) I was impressed by [Streamlit x PyGWalker](#conclusions)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="AI BI Tools Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
