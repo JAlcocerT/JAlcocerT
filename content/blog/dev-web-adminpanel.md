@@ -44,10 +44,10 @@ Manifest comes with essential features like auth and custom logic, and a built-i
 
 Manifest fits great in those type of projects:
 
-🛠️ Rapid prototyping: POCs and MVPs | Turning any entity into an authenticated user is as simple as adding a authenticable: true line to your backend file.
-🧩 Micro services: notification, payment, logging, file services...
-🏭 CRUD-heavy apps: mobile apps, directories, PIMs, E-shops
-🌐 Headless CMS: dynamic corporate websites, portfolios, blogs...
+1. 🛠️ Rapid prototyping: POCs and MVPs | Turning any entity into an authenticated user is as simple as adding a authenticable: true line to your backend file.
+2. 🧩 Micro services: notification, payment, logging, file services...
+3. 🏭 CRUD-heavy apps: mobile apps, directories, PIMs, E-shops
+4. 🌐 Headless CMS: dynamic corporate websites, portfolios, blogs...
 
 ### Manifest 101
 

@@ -1,5 +1,5 @@
 ---
-title: "Software for Servers"
+title: "Software for Servers..."
 date: 2025-05-31T01:20:21+01:00
 draft: false
 tags: ["PaaS","HomeLab","Entrepreneuring"]
@@ -21,7 +21,7 @@ Among which, [Dokploy](#dokploy) resonated a lot with me.
 
 LocalStack is a tool designed for developers who want to test **AWS functionalities locally**. 
 
-It provides an emulated environment of AWS services, solving issues related to unpredictable billing and resource management during development. 
+It provides an **emulated environment of AWS services**, solving issues related to unpredictable billing and resource management during development. 
 
 - **Purpose**: LocalStack emulates AWS API functionality.
 - **Problem Solved**: Allows local testing without involving AWS services directly.

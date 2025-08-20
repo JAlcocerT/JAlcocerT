@@ -2,10 +2,11 @@
 title: "A closer look to Google Cloud Platform"
 date: 2025-02-16
 draft: false
-tags: ["dev","BQ","Looker","Green vs Brown Field"]
+tags: ["Dev","BQ","Looker","Green vs Brown Field"]
 description: 'Big Query, Dataform and more about GCP. Compared with other Clouds and OnPrem.'
 url: 'understanding-google-cloud-platform'
 ---
+
 
 ## Google Cloud Platform
 
@@ -293,7 +294,7 @@ Transaction Processing: Cloud Spanner is specifically designed for high-volume t
 
 Distributed Relational Database: Cloud Spanner is a globally distributed, scalable, and strongly consistent database. It combines the benefits of a relational database (structure, ACID properties) with the scalability of a distributed system.
 
-CRUD Operations: Cloud Spanner excels at handling CRUD (Create, Read, Update, Delete) operations, which are fundamental to most application's data management needs.
+**CRUD Operations**: Cloud Spanner excels at handling CRUD (Create, Read, Update, Delete) operations, which are fundamental to most application's data management needs.
 
 ### Compute Engine
 
@@ -304,13 +305,14 @@ Sometime ago, I used **GCP CE free tier** to tinker with their **VMs**.
 * https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#gcp
 
 
-
-
 {{< details title="GCE Costs  📌" closed="true" >}}
 
+Google Compute Engine charges are based on Compute Instance: This is fundamental. 
 
-Google Compute Engine charges are based on Compute Instance: This is fundamental. You are charged for the virtual machines (instances) you use, based on their type, size, and how long they run.
+You are charged for the virtual machines (instances) you use, based on their type, size, and how long they run.
+
 Google Compute Engine charges are based on Storage use: You are charged for the storage you use for your virtual machine disks, snapshots, and other data.
+
 Google Compute Engine charges are based on Network use: Network egress (data leaving your instances) is generally charged. Ingress (data coming in) is usually free, but there might be charges for specific services or configurations.
 
 {{< /details >}}

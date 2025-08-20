@@ -2,7 +2,7 @@
 title: "FE and Auth"
 date: 2025-08-18
 draft: false
-tags: ["Dev","Auth"]
+tags: ["Dev","OAuth/JWT/Bearer"]
 description: 'Better front-end and authentication.'
 url: 'front-end-and-auth'
 ---
@@ -32,7 +32,7 @@ graph TD
             Service -->|"sends HTTP request (with JWT)"| Backend_API[Backend API]
             Backend_API -->|"validates JWT"| Authorization[Authorization Logic]
             Authorization -->|"grants access"| Backend_Logic[Business Logic]
-            Backend_Logic -->|"reads/writes data"| Database[Database]
+            Backend_Logic <-->|"reads/writes data"| Database[Database]
         end
     end
 
@@ -53,7 +53,15 @@ Here's a breakdown of why this layered approach is so effective:
 
 ### 1. Component: The Presentation Layer 🎭
 
-The **Component** is a pure presentation layer. Its sole responsibility is to render the UI and respond to user events. It shouldn't contain any complex business logic. Its job is to be "dumb"—it displays data it receives and passes user interactions up to the next layer. This makes components highly reusable and easy to reason about. For example, a `<UserProfile>` component simply takes `user` data as a prop and displays the name, photo, and bio. It doesn't know *how* that data was fetched.
+The **Component** is a pure presentation layer. Its sole responsibility is to render the UI and respond to user events. It shouldn't contain any complex business logic. 
+
+Its job is to be "dumb"—it displays data it receives and passes user interactions up to the next layer.
+
+This makes components highly reusable and easy to reason about.
+
+For example, a `<UserProfile>` component simply takes `user` data as a prop and displays the name, photo, and bio.
+
+It doesn't know *how* that data was fetched.
 
 ***
 
@@ -149,13 +157,26 @@ In the context of the previous discussion:
 
 ## Authentication Tools
 
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
+
+
 ### Logto
+
+
 
 ### TinyAuth
 
 * https://tinyauth.jalcocertech.com/login
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ### Flask User/PWD Challenge
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### PocketBase
 
@@ -194,11 +215,14 @@ We can authenticate programatically to PB via scripts.
 
 ## Conclusions
 
-There are many excellent open-source and self-hosted OAuth providers, often falling under the broader category of **Identity and Access Management (IAM)** solutions. These tools give you full control over your user data and authentication flows, a significant advantage for security and customization.
+There are many excellent open-source and self-hosted OAuth providers, often falling under the broader category of **Identity and Access Management (IAM)** solutions. 
+
+These tools give you full control over your user data and authentication flows, a significant advantage for security and customization.
 
 Here are some of the most popular and well-regarded options:
 
 1. Keycloak
+
 **Keycloak** is arguably the most well-known and feature-rich open-source IAM solution. It's sponsored by Red Hat and is a mature, enterprise-ready platform.
 * **Key Features:** Single Sign-On (SSO), Multi-Factor Authentication (MFA), identity brokering (social login with GitHub, Google, etc.), user federation with LDAP/Active Directory, and fine-grained authorization policies.
 * **Protocols:** It's a powerhouse, supporting OAuth 2.0, OpenID Connect (OIDC), and SAML 2.0.
@@ -207,7 +231,8 @@ Here are some of the most popular and well-regarded options:
 * **Cons:** Can have a steep learning curve and may require more resources than a lighter-weight solution.
 
 
-3. Authelia
+2. Authelia
+
 **Authelia** is an open-source authentication and authorization server designed to be a companion for reverse proxies.
 * **Key Features:** Provides a web portal with SSO and MFA. It works by protecting web applications behind a reverse proxy (like Nginx, Traefik, or Caddy).
 * **Protocols:** OpenID Connect 1.0 provider.
@@ -215,7 +240,7 @@ Here are some of the most popular and well-regarded options:
 * **Pros:** Simple to set up for protecting multiple services, very resource-efficient, and great for home labs or small-to-medium deployments.
 * **Cons:** Primarily focused on a specific use case (reverse proxy protection), and not a full-featured IAM for general application use.
 
-4. Authentik
+3. Authentik
 
 **Authentik** is a newer, full-featured open-source identity provider.
 * **Key Features:** Combines a wide range of features from user management and authentication to API protection and more. It has a modern, user-friendly interface.
@@ -234,7 +259,7 @@ The IdP is the system that manages user identities and is responsible for verify
 
 ### How the IdP Fits In
 
-In the context of the authentication and authorization concepts we've discussed, the Identity Provider plays a key role:
+In the context of the authentication and authorization concepts we've discussed, the **Identity Provider** plays a key role:
 
 * **Verifying Credentials:** When a user enters a username and password (or uses a biometric scan, etc.), the IdP is the service that checks these credentials against its own database. It performs the act of **authentication**.
 * **Issuing a Token:** Once the user is authenticated, the IdP issues a security token, often a **JWT**, to represent that verified identity. This token is what the user's application will use in subsequent requests.

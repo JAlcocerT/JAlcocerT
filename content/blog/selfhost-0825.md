@@ -25,21 +25,6 @@ So I have updated the docker-compose and Dockerfiles at:
 **Intro**
 
 
-
-## Pi and IoT
-
-### LEDs
-
-* https://github.com/awawa-dev/HyperHDR
-
-https://github.com/appleimperio/docker-hyperhdr
-
-> MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
-
-### HA
-
-* https://www.home-assistant.io/docs/automation/
-
 ---
 
 ## Conclusions
@@ -48,6 +33,22 @@ https://github.com/appleimperio/docker-hyperhdr
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs" >}}
 {{< /cards >}}
 
+
+## Pi and IoT
+
+Ive been tinkering with MicroControllers and MQTT protocol.
+
+### LEDs
+
+* https://github.com/awawa-dev/HyperHDR
+
+* https://github.com/appleimperio/docker-hyperhdr
+
+> MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
+
+### HA
+
+* https://www.home-assistant.io/docs/automation/
 
 
 ### Lately I...
@@ -58,6 +59,7 @@ https://github.com/appleimperio/docker-hyperhdr
 With `CTRL+ALT+C` it gets really compact!
 
 ```sh
+#pkill -9 brave #brave was not behaving properly lately...
 flatpak install flathub app.zen_browser.zen
 ```
 > Welcome to a calmer internet | Firefox based 
@@ -83,6 +85,10 @@ Link analytics solutions, like Kutt:
 ![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
 
 ![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
+
+
+---
+
 
 ## FAQ
 

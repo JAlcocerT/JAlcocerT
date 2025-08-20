@@ -694,9 +694,13 @@ In the JavaScript and Next.js ecosystem, there are several ORMs designed for int
 
 So this is it for now.
 
-Do you need some quick PoC? I would stick to Streamlit.
+Do you need some quick PoC?
 
-Do you expect it to scale and custom functions to appear? Think about Flask.
+I would stick to Streamlit.
+
+Do you expect it to scale and custom functions/behaviour to appear?
+
+Think about Flask.
 
 > Choose wisely!
 

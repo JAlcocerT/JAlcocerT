@@ -13,7 +13,7 @@ Plus adding interesting shortcodes / components : https://github.com/JAlcocerT/j
 
 **Intro**
 
-I failed to understand properly i18n on this other post.
+I failed to understand properly i18n on [this *podcast* post](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/).
 
 
 

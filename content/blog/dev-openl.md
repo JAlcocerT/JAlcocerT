@@ -22,7 +22,9 @@ Let's break that down:
 
 **The "Tablets" in OpenL Tablets refers to its unique approach:**
 
-Instead of writing rules in traditional programming code or complex XML directly, OpenL Tablets allows you to define rules in various table formats within documents, most commonly Microsoft Excel spreadsheets. These tables can be:
+Instead of writing rules in traditional programming code or complex XML directly, OpenL Tablets allows you to define rules in various table formats within documents, most commonly Microsoft Excel spreadsheets. 
+
+These tables can be:
 
 * **Decision Tables:** Used for defining a set of conditions and corresponding actions.
 * **Decision Trees:** Visual representation of decision logic.

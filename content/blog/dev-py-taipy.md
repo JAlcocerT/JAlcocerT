@@ -1,7 +1,7 @@
 ---
 title: "Taipy Web Apps"
-date: 2025-10-11T10:20:21+01:00
-draft: false
+date: 2025-12-31T10:20:21+01:00
+draft: true
 tags: ["Dev"]
 summary: 'More Python Web Apps with Taipy'
 url: 'taipy-web-apps'

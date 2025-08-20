@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap and other concepts for SoloPreneurs"
-date: 2025-08-23
+date: 2025-08-30
 draft: false
 tags: ["SoloPreneur","Indie SaaS","Product","Entrepre-AI"]
 description: 'Resources to launch your stuff.'
@@ -14,7 +14,7 @@ Collecting some interesting resources/concepts for entrepreneurs and *indie hack
 
 Do you have a supply or a demand problem?
 
-And im not talking about FMCG.
+And im not talking about [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/).
 
 
 **Intro**

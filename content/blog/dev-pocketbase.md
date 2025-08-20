@@ -62,12 +62,11 @@ Its features include:
 
 > > You can also try with the demo: https://pocketbase.io/demo/
 
-
-
 ### PB 101
 
-In simple terms: PB can be selfhosted, its better for read than for writes and its [data model and collections](#programatic-pb-interaction) are very useful.
+In simple terms: [PB can be selfhosted](https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase).
 
+Its better for read than for writes and its [data model and collections](#programatic-pb-interaction) are very useful.
 
 **Selfhosting PB**
 
