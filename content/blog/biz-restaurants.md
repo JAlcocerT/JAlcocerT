@@ -1,11 +1,14 @@
 ---
 title: "Webs for Restaurants."
-date: 2025-08-19
+date: 2025-09-19
 draft: false
 tags: ["OSS"]
 description: "Astro Websites for Restaurants. Million dollar idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
+
+
+**Intro**
 
 One thing was so clear to me.
 
@@ -33,6 +36,8 @@ A set of **sites themes** that will take a while to get outdated:
 5. [Wedding Sites](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) (and related [software for weddings](https://jalcocert.github.io/JAlcocerT/software-for-weddings/))
 
 ---
+
+### People are Building
 
 * **Menu websites at ~500 eur/year**
   * http://cartalia.org/

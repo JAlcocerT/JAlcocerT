@@ -42,6 +42,13 @@ graph TD
     Hook -->|"updates UI"| Component
 ```
 
+A **FE guy recommended** me to look:
+
+* https://tanstack.com/query/latest - Powerful asynchronous state management, server-state utilities and data fetching
+* https://redux-toolkit.js.org/rtk-query/overview - RTK Query is an optional addon included in the Redux Toolkit package, and its functionality is built on top of the other APIs in Redux Toolkit.
+
+
+
 
 ## FE Separation of Concerns
 
