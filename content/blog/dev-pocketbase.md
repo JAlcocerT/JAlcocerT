@@ -23,9 +23,9 @@ HUGO was the first for me.
 
 And now is time to Pocketbase, also written in Go.
 
-1. What it is [PB](#pocketbase?
+1. What it is [PB](#pocketbase)?
 2. Using PB with Flask - *Some day PB + Stripe*
-3. Understanding PB Collections
+3. Understanding PB Collections, overpowered SQLite?
 4. PB gives you an [API endpoint](#pb-api) out of the box for your BE logic
 5. The [PB JS SDK](#pb-sdk)
 
@@ -37,7 +37,7 @@ PocketBase is a single, **self-contained Go application** that bundles several k
 * **An embedded SQLite database:** This is the core storage engine. So yes, it does contain a database.
 * **A RESTful API:** This provides an interface to interact with the data in the database.
 * **An authentication system:** It handles user sign-up, login, and authorization.
-* **A web-based admin UI:** This allows you to manage your collections, data, and users without writing any code.
+* **A web-based admin UI:** This allows you to manage your [collections](https://pocketbase.io/docs/collections/), data, and users without writing any code.
 * **Real-time subscriptions:** It enables your frontend to listen for live data changes.
 
 Because it provides all of these features out-of-the-box, it's designed to be a full backend for applications, allowing you to build a project without having to set up a separate database server, API, and authentication system.

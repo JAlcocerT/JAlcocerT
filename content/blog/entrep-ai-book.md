@@ -21,10 +21,11 @@ I got inspired recently by the concept of: https://readmake.com/
 
 And some people are selling this kind of things on social media: `https://altagency.com/guide/`
 
+> Others, just publish freely, like https://github.com/treeman/why_cryptocurrencies, which builds with [Pollen](https://docs.racket-lang.org/pollen/)
 
 Together with the *build in public*, which it seems to be a thing.
 
-How about selling an ebook be all about having an stripe account and a proper content that people want to read?
+How about **selling an ebook** be all about: having an stripe account and proper content that people want to read?
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
@@ -37,21 +38,23 @@ You know what to tell, its just that... **time matters**.
 
 * https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_ebook.py
 
+
+
 ### eBooks
 
 **Making ebooks** is possible with **pandoc or MKDoc**
 
 * https://github.com/Wandmalfarbe/pandoc-latex-template
 
-> Maybe someone will do with financial miss-conceptions?
+> Maybe someone will do something with financial miss-conceptions?
 
-## Kindle Notes to AI
+But hey, some people use latex, so if its possible to make a code driven CV in overleaf with Latex, why not ebooks?
 
-Kindle notes are saved into a `.txt` in the device.
+And how about creating the **ebook with R**?
 
-I was storing notes for few years already and im really curious to see whats inside.
+```sh
 
-> I gave it a try with Google's NotebookLLM, but...custom is custom
+```
 
 ### Creating an Ebook
 
@@ -60,3 +63,13 @@ I mean, an AI Assisted e-book.
 ---
 
 ## Conclusions
+
+
+
+### Kindle Notes to AI
+
+Kindle notes are saved into a `.txt` in the device.
+
+I was storing notes for few years already and im really curious to see whats inside.
+
+> I gave it a try with Google's NotebookLLM, but...custom is custom

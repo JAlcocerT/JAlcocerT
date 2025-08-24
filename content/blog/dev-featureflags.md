@@ -1,13 +1,13 @@
 ---
 title: "Fature Flags for your SaaS"
-date: 2025-08-19
+date: 2025-08-29
 draft: false
 tags: ["Dev"]
 description: 'FF with Go for your WebApps.'
 url: 'feature-flags'
 ---
 
-**TL;DR** I got to know about [Go Feature Flag](#go-feature-flag), a better way to activate functions to Flask Web Apps than via container + env vars?
+**TL;DR** I got to know about [Go Feature Flag](#go-feature-flag), a better way to activate functions to Flask Web Apps than via *container + env vars*?
 
 **Intro**
 
@@ -80,7 +80,13 @@ GrowthBook is an open-source platform that combines feature flags with A/B testi
 
 Flipt is a self-hosted, open-source feature flag solution built in Go. It's designed to be simple, fast, and easy to run in your own infrastructure. Flipt is a good option if you need a lightweight, no-frills tool for managing flags with a clean API.
 
-OpenFeature is a different kind of project. It's a **vendor-agnostic specification** and SDK that provides a standard API for feature flagging. Think of it as an abstraction layer. It doesn't provide a backend for managing flags itself; instead, you can use it with a compatible provider (which can be a commercial service or a self-hosted open-source solution like the ones mentioned above). The main benefit is that it allows you to switch your feature flag provider without changing the core logic in your application's code. 
+OpenFeature is a different kind of project. It's a **vendor-agnostic specification** and SDK that provides a standard API for feature flagging.
+
+Think of it as an abstraction layer.
+
+It doesn't provide a backend for managing flags itself; instead, you can use it with a compatible provider (which can be a commercial service or a self-hosted open-source solution like the ones mentioned above). 
+
+The main benefit is that it allows you to switch your feature flag provider without changing the core logic in your application's code. 
 
 
 ## Conclusions

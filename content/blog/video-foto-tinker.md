@@ -14,7 +14,7 @@ We come from...getting to know what [ffmpeg is for benchmarks](https://jalcocert
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg" title="Chocolatey and FFMPEG ↗" >}}
 {{< /cards >}}
 
-Wait, there is even a repo for video stuff!
+Wait, there is even a **repo for video CLI stuff**!
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Video Edition Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Quick videos as a code from Action Cams" >}}
@@ -23,16 +23,16 @@ Wait, there is even a repo for video stuff!
 
 **TL;DR**
 
-After few months tinkering with an [action camera](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro) 
+After few months tinkering with an [action camera](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro) and trying to [get better at photos/videos](https://beyondajourney.lol/articles/learning-photography/)
 
-and trying to ship [travel/adventure](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/) videos easily...
+All that huge storage requirement force you to ship those [travel/adventure](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/) videos faster...
 
 {{< callout type="info" >}}
-For **night video** and [the oa5pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/), for me it has worked better: -0.7EV, 50fps, S 1/400, ISO 100 ~25600 (max range), AWB, Texture -1 and Noise Reduction -2.
+For **night video** and [the oa5pro](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/), for me it has worked better: `-0.7EV, 50fps, S 1/400, ISO 100 ~25600` (max range), AWB, Texture -1 and Noise Reduction -2.
 {{< /callout >}}
 
 
-Ive been learnign few stuff on the way.
+Ive been learning few stuff on the way.
 
 0. And now there is a chance to do a **photo & video recap**
 
@@ -74,7 +74,7 @@ In that way the acelerometer information will be captured in the `mp4` file.
 
 ### CLI Tricks
 
-There is people outthere doing cool things with ffmpeg:
+There is people outthere doing cool things with **ffmpeg**: https://github.com/FFmpeg/FFmpeg
 
 * https://blog.bartzz.com/create-stunning-timelapses-with-ffmpeg/
 * https://schnerring.net/blog/use-obs-and-ffmpeg-to-create-gif-like-screencasts/
@@ -583,7 +583,9 @@ Essentially, **ND filters give you greater control over your exposure settings i
 
 ### Color Grading
 
-A **Color Grading LUT (Lookup Table)** is essentially a **preset color filter** that you can apply to your video footage or images to quickly alter and enhance its colors. Think of it as a shortcut for complex color adjustments.
+A **Color Grading LUT (Lookup Table)** is essentially a **preset color filter** that you can apply to your video footage or images to quickly alter and enhance its colors. 
+
+Think of it as a shortcut for complex color adjustments.
 
 {{< details title="A breakdown of what Color Grading means 📌" closed="true" >}}
 
@@ -725,7 +727,9 @@ So, regardless of the MP4 file itself (as long as it's a standard, decodable vid
 
 ### Shutter Speed
 
-Yes, in most standard video production scenarios, it **absolutely makes sense and is generally recommended** to have your shutter speed roughly double your frame rate. This is often referred to as the **"180-degree shutter rule."**
+Yes, in most standard video production scenarios, it **absolutely makes sense and is generally recommended** to have your shutter speed roughly double your frame rate. 
+
+This is often referred to as the **"180-degree shutter rule."**
 
 
 

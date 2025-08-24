@@ -2,10 +2,17 @@
 title: "About Jobs. HR Prep and AI Engineers."
 date: 2025-02-10
 draft: false
-tags: ["Outro","Scrapping","Job-Trends"]
-description: 'Is it a good moment to change jobs? A curriculum for LLM/ML Engineer?. Time to recap Scraps firecrawl API and a Latex powered CV.'
+tags: ["Outro","Scrapping","Job-Trends","Overleaf","Interview preparation"]
+description: 'Is it a good moment to change jobs? New positions AI/LLM/ML Engineer. Time to recap Scrapping techniques and a Latex powered CV.'
 url: 'when-to-apply-for-a-job'
 ---
+
+
+**TL;DR** A recap into the job scrapper and trends + using Overleaf to create a [CV as a code with Latex](#cv-as-a-code)
+
+Get your CV always up to date and be ready for [HR Questions](#historieta).
+
+**Intro**
 
 New year, new **opportunities**.
 
@@ -14,8 +21,10 @@ New year, new **opportunities**.
 * https://www.trueup.io/layoffs
 * https://roadmap.sh/
 
+There are new career roadmaps appearing, like the AI Engineer / [ML Engineer](#what-it-is-a-ml-engineer) / [LLM ENgineer](#what-is-an-llm-engineer)...
+
 {{< cards cols="2" >}}
-  {{< card link="https://roadmap.sh/ai-engineer" title="Data Analytics RoadMap" >}}
+  {{< card link="https://roadmap.sh/ai-engineer" title="AI Engineer RoadMap" >}}
 {{< /cards >}}
 
 What we could do though is:
@@ -50,6 +59,8 @@ Clone this repo, go to the folder where the magic happens:
 git clone https://gitlab.com/fossengineer1/cv-check
 cd Scrap_Pracuj
 ```
+
+> Until it does not work anymore :)
 
 {{< cards >}}
   {{< card link="https://gitlab.com/fossengineer1/cv-check" title="CV-Check" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Testing CVs with AI/LLMs" >}}
@@ -152,7 +163,7 @@ Hello again, **FireCrawl**
 
 Im using the latest feature, extract: https://docs.firecrawl.dev/features/extract
 
-So now the v5 works with bs4 and firecrawl.
+So now the v5 works with bs4 and firecrawl:
 
 ```py
 # Load environment variables
@@ -298,10 +309,9 @@ Its all about **[Scrapping Tools](https://github.com/JAlcocerT/Scrap_Tools)** �
 
 There you have few ways to make scrapping work.
 
-Or how to make your scrapping better.
+> Or how to make your scrapping better.
 
-
-If it gets really complex, you will need Playwright magic, instead of
+If it gets really complex, you will need Playwright magic, instead of 'just' Bs4:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Job-Trends" title="Job-Trend Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4 to get Data about the Job Market and push it to sqlite3" >}}
@@ -317,9 +327,17 @@ For more ideas, check also:
 
 > AIHawk aims to easy job hunt process by automating the job application process. Utilizing artificial intelligence, it enables users to apply for multiple jobs in a tailored way.
 
-You can build a **CV with code via overleaf** (latex powered). 
+### CV as a Code
 
-These tools are also interesting:
+You can build a **CV with code via overleaf** (latex powered): https://www.overleaf.com/
+
+> —the collaborative, online LaTeX editor that anyone can use
+
+How exactly have I used overlead? 
+
+[**Lets get down to it**](#creating-a-responsive-cv)
+
+These tools are also interesting for CV's in the AI/LLM era:
 
 * https://github.com/thiago4int/resume-ai
 
@@ -369,14 +387,13 @@ good knowledge of natural language processing techniques: sentiment analysis, te
 
 An LLM Engineer is a specialized software engineer who focuses on **building, deploying, and maintaining applications powered by Large Language Models** (LLMs).
 
-They bridge the gap between cutting-edge AI research and practical, real-world applications.  Think of them as the architects and builders of the next generation of intelligent software.
+They bridge the gap between cutting-edge AI research and practical, real-world applications.  
 
-Here's a breakdown of the key aspects of an LLM Engineer's role, based on your requirements:
+Think of them as the architects and builders of the next generation of intelligent software.
 
+{{< details title="Core Responsibilities of an AI Engineer 📌" closed="true" >}}
 
-{{< details title="Core Responsibilities 📌" closed="true" >}}
-
-
+key aspects of an LLM Engineer's role, based on your requirements:
 
 
 * **LLM Model Expertise:**  LLM Engineers possess a deep understanding of LLMs like GPT-3, GPT-4, and similar models. This includes knowledge of their architecture, strengths, weaknesses, and how to fine-tune and prompt them effectively.  They are not just users of LLMs, but understand the underlying mechanics.
@@ -408,10 +425,9 @@ They are at the forefront of the AI revolution, building the next generation of 
 
 **ML Engineer?**
 
-A Machine Learning (ML) Engineer is a software developer who specializes in building, deploying, and maintaining machine learning systems. They **bridge the gap between data science and software engineering**, taking models developed by data scientists and turning them into scalable, production-ready applications.
+A Machine Learning (ML) Engineer is a software developer who specializes in building, deploying, and maintaining machine learning systems. 
 
-
-
+They **bridge the gap between data science and software engineering**, taking models developed by data scientists and turning them into scalable, production-ready applications.
 
 {{< details title="Key responsibilities of an ML Engineer 📌" closed="true" >}}
 
@@ -447,8 +463,7 @@ A Machine Learning (ML) Engineer is a software developer who specializes in buil
 
 ### Creating a Responsive CV
 
-I had some situations when I was using some cool curriculum design, yet the companies receiving it
-where applying some parsing and their AI systems getting confused.
+I had some situations when I was using some cool curriculum design, yet the companies receiving it where applying some parsing and their AI systems getting confused.
 
 1. Then, a friend told me about **Overleaf**
 
@@ -476,8 +491,6 @@ sudo apt install texlive-full
 git clone https://github.com/jakegut/resume/
 pdflatex <filename>.tex #to compile to PDF
 ```
-
-
 
 {{< details title="Latex? Why not md? 📌" closed="true" >}}
 
@@ -522,31 +535,31 @@ pdflatex <filename>.tex #to compile to PDF
     * LaTex is the best for complex mathematical equations.
     * Markdown can display mathematical equations, but it usualy does this by embedding LaTex code.
 
-In essence, if you need to create a highly formatted document with complex mathematical equations, LaTeX is the better choice. If you need to create simple, easy-to-read text documents or web content, Markdown is the more practical option.
-
-
 {{< /details >}}
+
+In essence, if you need to create a highly formatted document with complex mathematical equations, LaTeX is the better choice. 
+
+If you need to create simple, easy-to-read text documents or web content, Markdown is the more practical option.
+
 
 {{< cards >}}
   {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
   {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Latex CV with Open AI LLM" >}}
 {{< /cards >}}
 
-
-
 2. I was also exploring how to create a [CV with AI](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#cv-with-ai), based on [**open source CV as a Code**](https://fossengineer.com/open-source-curriculum)
 
 
 ### Historieta
 
-HR might as you with these, so be prepared:
+HR *might* as you with these, so be prepared:
 
 1. A situation where you lead digital transformation and modified/shaped a product
 2. What are you looking for in your career?
 
 > I am seeking a role that blends technology, data, and business acumen, allowing me to orchestrate data-driven solutions that resonate with client’s need at the highest professional level.
 
-
+Im guessing that you are focusing into a D&A related role, consider adapting these into any field, like [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/) or [FCMG/SCM](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/)
 
 
 **Questions to HR:**
@@ -557,19 +570,17 @@ HR might as you with these, so be prepared:
 
 How do you define success in the team?
 
-what does it mean success in this position? how do you measure it?
-what do u like the most working for this company?
-what key features a person need to be a good cultural fit for the company?
-what are the current company goals and how this team/role is supporting them? 
+* what does it mean success in this position? how do you measure it?
+* what do u like the most working for this company?
+* what key features a person need to be a good cultural fit for the company?
+* what are the current company goals and how this team/role is supporting them? 
 
 
 Regarding priority management What is the work methodology that is implemented in the team? Kanban? Scrum?
 
-What are other departments that we collaborate with? How does the marketing team work with other teams in the company.
-
-What is the business domain of the customers that we are expected to work for?
-
-What opportunities for professional development and learning are available?
+* What are other departments that we collaborate with? How does the marketing team work with other teams in the company.
+* What is the business domain of the customers that we are expected to work for?
+* What opportunities for professional development and learning are available?
 
 
 In addition to my professional experience, I actively maintain a tech blog where I share insights, methodologies, and best practices in analytics.
@@ -578,21 +589,21 @@ This platform not only demonstrates my deep commitment to the field but also sho
 
 **QQs to managers**
 
-What kinds of data will I have access to?
-What tools and technologies does the team currently use for data science work?
-What is the biggest challenge your team is currently facing in making the most out of your data?
+* What kinds of data will I have access to?
+* What tools and technologies does the team currently use for data science work?
+* What is the biggest challenge your team is currently facing in making the most out of your data?
 
-Can you describe the company's vision for the future of data analytics and how this role fits into that vision?
+* Can you describe the company's vision for the future of data analytics and how this role fits into that vision?
 
-What is the team's approach to handling unexpected challenges or roadblocks in data analytics projects? 
+* What is the team's approach to handling unexpected challenges or roadblocks in data analytics projects? 
 
-trusted advisor of products - 1 person dedicated to 1 squad
+> trusted advisor of products - 1 person dedicated to 1 squad
 
-Can you describe any ongoing or upcoming business development projects that involve data analytics, and how this role would be involved?
+* Can you describe any ongoing or upcoming business development projects that involve data analytics, and how this role would be involved?
 
-How does the company foster collaboration between the data analytics and business development teams to ensure data-driven strategies are effectively implemented?
+* How does the company foster collaboration between the data analytics and business development teams to ensure data-driven strategies are effectively implemented?
 
-How do you promote knowledge sharing and collaboration among team members to ensure continuous improvement in data practices?
+* How do you promote knowledge sharing and collaboration among team members to ensure continuous improvement in data practices?
 
 
 

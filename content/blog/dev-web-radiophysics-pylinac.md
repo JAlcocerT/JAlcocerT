@@ -1,13 +1,16 @@
 ---
-title: "A Website for a Phd: Pylinac and QaTrack+"
+title: "A Website for a PHD: Pylinac and QaTrack+"
 date: 2025-02-23T13:20:21+01:00
 draft: false
-tags: ["dev"]
+tags: ["Dev","DSc","wsl","HUGO SSG"]
 description: 'Helping to improve scientific knowledge. Improving the day to day of a radiotherapy researcher. Containers with WSL.'
 url: 'web-for-phd-researcher'
 ---
 
-It all started when a friend discovered some parts to improve withing this library.
+
+**TL;DR** Helping a friend to get started with project docs + tech diary via [Hugo Hextra Theme](#hugo-hextra-with-github-pages) in Github Pages
+
+It all started when a friend discovered some parts to improve withing this library....
 
 An image analysis library for **medical physics**
 
@@ -22,9 +25,7 @@ And also...
 > QATrack+ is an open source program for managing the quality control program of radiotherapy and diagnostic imaging clinics.
 
 
----
-
-Then I proposed to start documenting his learning process.
+....Then I proposed to start documenting his learning process.
 
 ## HUGO HEXTRA with Github Pages
 
@@ -40,7 +41,7 @@ You will need to accept to run github actions workflows in the forked repository
 
 ![GHA WF Activation](/blog_img/dev/gha-workflows-activation.png)
 
-> That's it, you are already publishing a blog/docs into Github Pages!
+> That's it, you are already publishing a `blog/docs` into Github Pages!
 
 * https://imfing.github.io/hextra/docs/guide/shortcodes/tabs/
 
@@ -72,11 +73,15 @@ And...here it is **the result**: https://jlleongarcia.github.io/jlleongarcia/
 
 > Thanks to: HUGO + Hextra + Github Actions and Pages!
 
+> > Cool thing: this theme supports [mermaid](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/) diagrams, [ChartJS graphs](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo) and [Katex for formulas](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/#the-chemistry-of-lye)!
+
+---
+
 ## Conclusions
 
-I hope that this is the beginning of a new journey for jlleongarcia.
+I hope that this is the beginning of a new journey for [jlleongarcia](https://github.com/jlleongarcia).
 
-A journey where the rest of the world can benefit from his amazing effort and discoveries in the radiophysics area of expertise.
+A journey where the rest of the world can benefit from his amazing effort and discoveries in the **radiophysics area of expertise**.
 
 No wonder, he already knows that Im there to help with any Python that could make the world a better place!
 
@@ -88,6 +93,7 @@ JLL was involved in the crearion of [RStocks](https://jalcocert.github.io/JAlcoc
 
 1. Learn to use **containers**
 2. Setup **wsl** within Windows
+3. Get a small home server to tinker :)
 
 Right-click on "Windows PowerShell" and select "Run as administrator."
 
@@ -154,6 +160,10 @@ See https://github.com/joemccann/dillinger as The last **Markdown editor**, ever
 
 
 ### Django 101
+
+Excel sheets are easy to break.
+
+Just ship web apps so that your colleague's workflow runs smoother!
 
 {{< details title="Django | Core Philosophy and Strengths 📌" closed="true" >}}
 

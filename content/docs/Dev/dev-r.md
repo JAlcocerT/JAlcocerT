@@ -9,10 +9,12 @@ url: 'useful-r-stuff'
 
 The **R language** is fantastic.
 
-Here you have all you need to get started:
+Here is everything you need to get started:
 
 ```sh
-sudo apt install -y software-properties-common apt-transport-https
+sudo apt update
+sudo apt install -y r-base r-base-dev
+#R --version
 ```
 
 {{< callout type="info" >}}
