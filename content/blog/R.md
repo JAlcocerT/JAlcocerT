@@ -2,14 +2,18 @@
 title: "A [Recap] on R Language."
 date: 2025-01-10T05:20:21+01:00
 draft: false
-tags: ["Dev","Python"]
+tags: ["Dev","R",'Astro']
 description: 'All I wish someone had told me about R when I started - Shiny, Flexdashboards,...'
 url: 'r-language-101'
 ---
 
+**TL;DR** Get [R installed](#r-setup), an [IDE](#ide-setup) and [play](#features-i-love-in-r) with it
+
+**Intro**
+
 Its been a while since I have done some project/tasks **with R**.
 
-But recently, I had an idea to put a Flexdashboard inside a mdx post for Astro websites.
+But recently, I had an idea to put a Flexdashboard inside a `.mdx` post for Astro websites.
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101" >}}
@@ -23,6 +27,8 @@ But how can explain to someone whats going on?
 Well...
 
 ## R Setup
+
+Lets get R language installed first:
 
 ```sh
 sudo apt update
@@ -47,21 +53,22 @@ R --version
 
 As always, anything will work...but vscode was not the popular one for R.
 
-I used RStudio, which has been renamed to post
+I used RStudio, which has been renamed to **post**:
 
 ```sh
 wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2024.12.0-467-amd64.deb
 sudo dpkg -i rstudio-2024.12.0-467-amd64.deb
 sudo apt-get install -f #with dependencies
 rstudio #open it
-R.version #test the R CLI inside rstudio
+
+#R.version #test the R CLI inside rstudio
 ```
 
-https://posit.co/download/rstudio-desktop/
+h* ttps://posit.co/download/rstudio-desktop/
 
 https://www.youtube.com/watch?v=k0r3iLGJgmQ
 
-https://posit.co/blog/rstudio-is-now-posit/
+* https://posit.co/blog/rstudio-is-now-posit/
 
 Where are we working now?
 
@@ -71,6 +78,8 @@ setwd("~/Documents/acoolproject")
 ```
 
 ### R Dependencies Setup
+
+There are few ways to install packages with R, just remember about:
 
 ```sh
 install.packages("leaflet", dependencies = TRUE)
@@ -82,6 +91,11 @@ install.packages("remotes")
 
 
 ## Features I Love in R
+
+1. [Maps](#maps)
+2. [Animations](#animations)
+3. [FlexDashboards](#flexdashboards)
+4. [Shiny](#shiny)
 
 ### Maps
 

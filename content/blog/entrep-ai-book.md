@@ -1,12 +1,21 @@
 ---
-title: "AI Driven ebooks"
-date: 2025-10-06
+title: "AI Driven e-books"
+date: 2025-08-24
 draft: false
 tags: ["Entrepreneuring","sell-your-ebook","Stripe API","n8n"]
-description: 'Building in public a simple web platform to sell ebooks.'
+description: 'Building in public a simple web platform to create/sell ebooks.'
 url: 'ai-driven-ebooks'
 ---
 
+**TL;DR** I love [R language](https://jalcocert.github.io/JAlcocerT/r-language-101/) and its [knitt package](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/)
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Z_Utils/logto_utils.py" title="WebifAI Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App with Stripe, Umami, FormBricks and Logto as Utils" >}}
+  {{< card link="https://github.com/JAlcocerT/ebooks" title="eBooks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating ebooks as a code with Rmd" >}}
+{{< /cards >}}
+
+**Intro**
 
 I got inspired recently by the concept of: https://readmake.com/
 
