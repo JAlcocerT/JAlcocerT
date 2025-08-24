@@ -87,12 +87,10 @@ It is a fundamental building block of the Bitcoin blockchain and is used in seve
 
 {{< details title="BTC x SHA256 📌" closed="true" >}}
 
-
 * **Proof-of-Work:** Bitcoin's mining process involves repeatedly hashing block headers (which contain transaction information, a timestamp, and a reference to the previous block) along with a "nonce" (an arbitrary number). Miners compete to find a nonce that, when the entire block header is hashed using SHA-256, results in a hash value that meets a certain difficulty target (starts with a specific number of leading zeros).
 * **Transaction Hashing:** Individual transactions are hashed using SHA-256 (often multiple times in a Merkle tree structure) to create a unique identifier for each transaction.
 * **Merkle Trees:** Blocks in the Bitcoin blockchain organize transactions into a Merkle tree. SHA-256 is used to hash pairs of transaction IDs, and then hash the resulting hashes, and so on, up to the Merkle root. This provides an efficient way to verify if a specific transaction is included in a block.
 * **Address Generation (Indirectly):** While Bitcoin addresses are not directly SHA-256 hashes, SHA-256 is used in the process of creating them (along with other hashing algorithms like RIPEMD-160).
-
 
 {{< /details >}}
 
@@ -122,6 +120,27 @@ def hash_mac(mac):
 * It standardizes the MAC address by converting it to uppercase and removing hyphens or colons.
 * It then applies a hash function named `sha2` with a parameter `256`. **If `f.sha2` with the `256` parameter correctly implements the SHA-256 algorithm, then the function is indeed performing a SHA-256 hash.**
 
+
+No, it is not possible to know with certainty what kind of hash function was applied to a MAC address just by looking at the hash output. 
+
+This is because cryptographic hash functions are designed to be **one-way** and produce outputs that are **indistinguishable from random**. 
+
+The same MAC address will always produce the same hash, but it's computationally infeasible to reverse the process and get the original MAC address from the hash.
+
+> However, you can make an educated guess by analyzing the **length and format** of the hash!
+
+**Key Clues for Identifying a Hash**
+
+* **Hash Length:** Each hashing algorithm produces an output of a fixed length. For example, an SHA-256 hash will always be 64 hexadecimal characters long, while an MD5 hash is always 32 characters long.
+    * **MD5:** 32 hex characters
+    * **SHA-1:** 40 hex characters
+    * **SHA-256:** 64 hex characters
+    * **SHA-512:** 128 hex characters
+* **Format:** Some hashes, especially those used for passwords, include a prefix or a specific character set that can help identify them. For example, some hash formats used with a "salt" (a random string of data) may contain dollar signs ($) as delimiters. 
+
+By comparing the length of the hash you have to the known lengths of common algorithms, you can narrow down the possibilities.
+
+> For instance, if you have a 64-character hash, it's very likely to be SHA-256, but it could also be a different algorithm that produces a 256-bit output.
 
 ### SHA256 Online
 

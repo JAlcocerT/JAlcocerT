@@ -251,6 +251,51 @@ WHERE location_id IS NOT NULL
 LIMIT 3;
 ```
 
+See how SQL on BQ compares with [PySpark](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/):
+
+```sql
+SELECT
+  CASE
+    WHEN customer_speed_tier > 500 THEN '500+'
+    WHEN customer_speed_tier > 200 THEN '200-500'
+    WHEN customer_speed_tier > 100 THEN '100-200'
+    WHEN customer_speed_tier > 50 THEN '50-100'
+    WHEN customer_speed_tier >= 0 THEN '0-50'
+    ELSE 'Other'
+  END AS speed_tier_group,
+  COUNT(DISTINCT mac_address) AS count_of_mac_addresses
+FROM
+  `projectID.datasetID.yourtableID`
+GROUP BY
+  speed_tier_group
+ORDER BY
+  count_of_mac_addresses DESC;
+```
+
+```py
+from pyspark.sql.functions import countDistinct, when
+
+speed_tier_df = ss.read.format('delta') \
+  .load(f'{hdfs_node}/delta/yourtable')
+
+grouped_df = speed_tier_df.withColumn(
+    'speed_tier_group',
+    when(speed_tier_df.customer_speed_tier > 500, '500+')
+    .when(speed_tier_df.customer_speed_tier > 200, '200-500')
+    .when(speed_tier_df.customer_speed_tier > 100, '100-200')
+    .when(speed_tier_df.customer_speed_tier > 50, '50-100')
+    .when(speed_tier_df.customer_speed_tier >= 0, '0-50')
+    .otherwise('Other')
+) \
+.groupBy('speed_tier_group') \
+.agg(
+    countDistinct('mac_address').alias('distinct_mac')
+) \
+.sort('distinct_mac', ascending=False)
+
+grouped_df.show(10)
+```
+
 {{< callout type="info" >}}
 Remember to always document your queries. For example with [MermaidJS](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/)! 
 {{< /callout >}}

@@ -12,7 +12,7 @@ url: 'front-end-and-auth'
 
 This has been the year of getting better at authentication.
 
-I got to setup properly: Logto and TinyAuth as two different alternatives.
+I got to setup properly: Logto and [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/) as two different auth alternatives.
 
 Via Flask, we can also have hardcoded users to be logged in, which you can improve by being part of the `.env`
 

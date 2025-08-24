@@ -2,18 +2,26 @@
 title: "FlaskCMS v0.2"
 date: 2025-08-22
 draft: false
-tags: ["Astro x Flask","Markdown editors","Cursor IDE","Stacer"]
-description: 'Markdown and FlaskCMS v0.1 that works for Mental Health and Real Estate'
+tags: ["Astro x Flask","Markdown editors","Cursor","Stacer"]
+description: 'Markdown and Flask working together.'
 url: 'flask-cms-for-ssgs'
 ---
 
+**TL;DR** v0.2 of the [Flask Powered CMS](#a-cms-with-flask). 
+
+From Hugo Galleries to Mental Health and RealEstate?
+
++++ [Testing](#lately-i) Cursor/Stacer/appimage launcher
+
+**Intro**
+
 I recently found this cool blog: https://kerkour.com/create-problems-to-sell-the-solution
 
-While finding resources for PB.
+While finding resources for [PB](https://jalcocert.github.io/JAlcocerT/pocketbase/).
 
-The author seems to be the creator of: https://github.com/bloom42/markdown-ninja
+The author seems to be the creator of **Markdown Ninja**: https://github.com/bloom42/markdown-ninja
 
-> Markdown-first CMS for bloggers, minimalists and startups. Open Source alternative to Medium, Mailchimp and Substack - https://markdown.ninja
+> Markdown-first **CMS for bloggers**, minimalists and startups. Open Source alternative to Medium, Mailchimp and Substack - https://markdown.ninja
 
 >> I love the website design btw, also the *trol* part `In Markdown They Trust`
 
@@ -22,6 +30,15 @@ It seems to be another markdown lover :)
 ## A CMS with Flask
 
 Version 0.2 coming!
+
+After tinkering with the v0.1 (vibecoding), each time I got a different result.
+
+So how about to combine all the good sides of all those for a v0.2?
+
+In the end, it would be great to just plug any OSS MIT Licensed Astro or HUGO SSG available.
+
+But we have to get started with something first :)
+
 
 
 

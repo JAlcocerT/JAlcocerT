@@ -9,7 +9,11 @@ url: 'astro-i18'
 
 **TL;DR** Finally getting to try i18n languages with SSGs
 
-Plus adding interesting shortcodes / components : https://github.com/JAlcocerT/just-ssg
++++ Plus adding interesting shortcodes / components : https://github.com/JAlcocerT/just-ssg
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
+{{< /cards >}}
 
 **Intro**
 

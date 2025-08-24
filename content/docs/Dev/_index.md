@@ -1,14 +1,17 @@
 ---
 title: Tools for Devs
 type: docs
-prev: docs/debian
-next: docs/arch
 sidebar:
   open: false
 ---
 
 
 For [Web] or for [Data Analytics](#analytics).
+
+Just use diagrams: *for whatever your have to explain*
+
+* https://markmap.js.org/repl
+* mermaidJS
 
 
 ## Analytics

@@ -7,6 +7,13 @@ description: 'Two buzz words in one. Understand crypto once and for all. This ti
 url: 'understading-crypto-with-ai'
 ---
 
+
+**Tl;DR** Consolidating [crypto resources](#crypto-resources) and how to understand them better with LLMs
+
++++ [Playing with Defi](#conclusions) protocols
+
+**Intro**
+
 Here we go again...
 
 Since last year, crypto *seems to* be back again in many people's mouth.
@@ -467,8 +474,9 @@ From where it can detect what I have lended via Aave, *my open positions*.
 
 ![Metamask Transactions Notifcations via ZorinOS](/blog_img/crypto/defi/metamask-zorin-notif.png)
 
-So...does the code explanations match what happened in reality?
+> So...does the code explanations match what happened in reality?
 
+>> Ive tried under my own risk of loosing it all with few Defi Protocols as per examples below.
 
 ### Crypto Example 1
 

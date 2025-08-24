@@ -12,7 +12,6 @@ url: 'making-flask-cms-for-ssg'
 
 In the meantime I got to put inside the [container the flask app](#flask-containerized) via uv and learnt that:
 
-
 `flask-cms sh -lc "uv run gunicorn app:app -b 0.0.0.0:5050 --workers 2 --threads 4 --timeout 60"` >>> `uv run app.py`
 
 **Intro**
