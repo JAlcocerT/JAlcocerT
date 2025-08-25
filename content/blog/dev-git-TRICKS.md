@@ -165,6 +165,10 @@ codium --install-extension gitlab.gitlab-workflow
 #code --install-extension gitlab.gitlab-workflow
 ```
 
+{{< callout type="info" >}}
+You can use **CI/CD** with Gitlab https://docs.gitlab.com/ci/ via `.gitlab-ci.yml`
+{{< /callout >}}
+
 
 ### Remote Development
 

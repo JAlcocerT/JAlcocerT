@@ -25,7 +25,12 @@ And now is time to Pocketbase, also written in Go.
 
 1. What it is [PB](#pocketbase)?
 2. Using PB with Flask - *Some day PB + Stripe*
-3. Understanding PB Collections, overpowered SQLite?
+
+
+3. Understanding PB Collections, overpowered SQLite? - https://pocketbase.io/docs/working-with-relations/
+
+> A very cool selfcontained row based DB
+
 4. PB gives you an [API endpoint](#pb-api) out of the box for your BE logic
 5. The [PB JS SDK](#pb-sdk)
 

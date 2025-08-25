@@ -1,6 +1,6 @@
 ---
 title: "FlaskCMS v0.2"
-date: 2025-08-22
+date: 2025-08-29
 draft: false
 tags: ["Astro x Flask","Markdown editors","Cursor","Stacer"]
 description: 'Markdown and Flask working together.'
@@ -11,7 +11,7 @@ url: 'flask-cms-for-ssgs'
 
 From Hugo Galleries to Mental Health and RealEstate?
 
-+++ [Testing](#lately-i) Cursor/Stacer/appimage launcher
++++ [Testing](#lately-i) Cursor/Stacer/Appimage launcher
 
 **Intro**
 
@@ -26,6 +26,14 @@ The author seems to be the creator of **Markdown Ninja**: https://github.com/blo
 >> I love the website design btw, also the *trol* part `In Markdown They Trust`
 
 It seems to be another markdown lover :)
+
+Same to https://typlog.com/
+
+> Let ideas flow in your familiar editing environment with the complete markdown syntax.
+
+![alt](blog_img/dev/PB/selfh-pb.png) ![alt](blog_img/dev/PB/selfh-pb.png)
+
+Which some open sources [themes](https://themes.typlog.com/#/nezu) like https://github.com/typlog/nezu
 
 ## A CMS with Flask
 
@@ -86,3 +94,7 @@ sudo add-apt-repository ppa:oguzhaninan/stacer
 sudo apt-get update
 sudo apt-get install stacer
 ```
+
+4. Learnt aout https://temporal.io/
+
+> What if your code was crash-proof?
