@@ -1,13 +1,15 @@
 ---
 title: "AI Driven e-books"
-date: 2025-08-24
+date: 2025-09-06
 draft: false
 tags: ["Entrepreneuring","sell-your-ebook","Stripe API","n8n"]
 description: 'Building in public a simple web platform to create/sell ebooks.'
 url: 'ai-driven-ebooks'
 ---
 
-**TL;DR** I love [R language](https://jalcocert.github.io/JAlcocerT/r-language-101/) and its [knitt package](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/)
+**TL;DR** 
+
+I love [R language](https://jalcocert.github.io/JAlcocerT/r-language-101/) and its [knitt package](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/)
 
 
 {{< cards >}}
@@ -15,11 +17,15 @@ url: 'ai-driven-ebooks'
   {{< card link="https://github.com/JAlcocerT/ebooks" title="eBooks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating ebooks as a code with Rmd" >}}
 {{< /cards >}}
 
+Would it be possible to [make ebooks as a code](#creating-an-ebook)?
+
 **Intro**
 
 I got inspired recently by the concept of: https://readmake.com/
 
-And some people are selling this kind of things on social media: `https://altagency.com/guide/`
+Some people are selling this kind of things on social media: `https://altagency.com/guide/`
+
+People with PRO tech knowledge, like: `https://kerkour.com/books`
 
 > Others, just publish freely, like https://github.com/treeman/why_cryptocurrencies, which builds with [Pollen](https://docs.racket-lang.org/pollen/) and touches the [crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) ecosystem
 
@@ -93,9 +99,12 @@ We can try knitting a bit, but we have also: https://bookdown.org/yihui/rmarkdow
 
 I mean, an AI Assisted e-book.
 
-After chating a while with cursor, we got this kind of workflow working. [See mermaid](https://mermaid.live/edit#pako:eNp1VGtv2jAU_SuW93HAEl5Lo6lSefUFhQJ7aAZNJrmhVpM4Spy1FPjvc2xoTbv4g5Obc8617_VxttjjPmAXr1OaPKB5ZxEjOS7IFI1o-ujzpxgNWAjZt1X65bw2jfwlqlbPUYc8xkykqB-vWQxLreooqEtelZ_RFI1zkeRCy6VaM7uK2SMTGvvcQ5OUe5BlPD3APQX3t1qLBjyNqNhrTM_9grG7mo-GOzQgxRN1OH9Uy6zkS7G8666ZKIKlqZn0Bjt0SYZ0Dr_e0RM_-POB35987-zQFSme_1sDknxlqvR8qSq4JjJlSAU8nzbqWqE3ZMBiGiK5I5Uzo1ESQhWKZDUpPEk4UJJb8hNWqJPypwyOzbpSyJD0qylQ__WznrN8pU92gafHNrN4vcAaLsaIrNdJyEVdbeIHy3IashcqGI-z5RvtjvhJuEkVqUcFlf6IWZKHimjwxtoZiteV3kL9Z_Dyd6QJkSeqTaITci-PIBbGFg9siP2SetQJltR0TxLZjGgVQk02Xy0xE5vwLW0xpiRR9qt6TEAi8-g9M_Gh9hmRWUL2FxRjvkkgAyFKN6nvwcgM7sxgbAYT0zD3ZjA1g9lJF2QtgC5QwMLQ_QR20ArARG4OiOdA2zszkdsDEgRBAywTGZYioyPSgFbQMpG7UmRcikxKkftjPU7QAsdEpqXI7ATBFfkfYz52RZpDBUcgXVaEeFtoFlg8QAQL7MpXX9qvcMxeaqQNfnMeHWUpz9cP2A1omMkoT3x5gXuMSt-9UeSJQ9rleSyw27AslQO7W_yM3ap9ZtWspmVbzXrDaTUbdgVvis-WU2vXbafdtqy63Ww29xX8opa1a3Wr8fWsUW9K2LHblrP_B9cUsMg)
+After chating a while with cursor, we got this kind of workflow working.
+
+[See mermaid](https://mermaid.live/edit#pako:eNp1VGtv2jAU_SuW93HAEl5Lo6lSefUFhQJ7aAZNJrmhVpM4Spy1FPjvc2xoTbv4g5Obc8617_VxttjjPmAXr1OaPKB5ZxEjOS7IFI1o-ujzpxgNWAjZt1X65bw2jfwlqlbPUYc8xkykqB-vWQxLreooqEtelZ_RFI1zkeRCy6VaM7uK2SMTGvvcQ5OUe5BlPD3APQX3t1qLBjyNqNhrTM_9grG7mo-GOzQgxRN1OH9Uy6zkS7G8666ZKIKlqZn0Bjt0SYZ0Dr_e0RM_-POB35987-zQFSme_1sDknxlqvR8qSq4JjJlSAU8nzbqWqE3ZMBiGiK5I5Uzo1ESQhWKZDUpPEk4UJJb8hNWqJPypwyOzbpSyJD0qylQ__WznrN8pU92gafHNrN4vcAaLsaIrNdJyEVdbeIHy3IashcqGI-z5RvtjvhJuEkVqUcFlf6IWZKHimjwxtoZiteV3kL9Z_Dyd6QJkSeqTaITci-PIBbGFg9siP2SetQJltR0TxLZjGgVQk02Xy0xE5vwLW0xpiRR9qt6TEAi8-g9M_Gh9hmRWUL2FxRjvkkgAyFKN6nvwcgM7sxgbAYT0zD3ZjA1g9lJF2QtgC5QwMLQ_QR20ArARG4OiOdA2zszkdsDEgRBAywTGZYioyPSgFbQMpG7UmRcikxKkftjPU7QAsdEpqXI7ATBFfkfYz52RZpDBUcgXVaEeFtoFlg8QAQL7MpXX9qvcMxeaqQNfnMeHWUpz9cP2A1omMkoT3x5gXuMSt-9UeSJQ9rleSyw27AslQO7W_yM3ap9ZtWspmVbzXrDaTUbdgVvis-WU2vXbafdtqy63Ww29xX8opa1a3Wr8fWsUW9K2LHblrP_B9cUsMg)
 
 We can go the simple knitt way or the bookdown with proper chapters etc:
+
 ```sh
 #cd example-pdf-knit
 #Rscript -e "rmarkdown::render('simple-example.Rmd', 'pdf_document')"

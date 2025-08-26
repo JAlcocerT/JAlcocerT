@@ -2,13 +2,17 @@
 title: "Which DB is for me?"
 date: 2025-08-11
 draft: false
-tags: ["DataBases","D&A"]
+tags: ["DataBases","D&A","DBCode","SelfHosting/HomeLab"]
 description: 'What are pros and cons of popular DBs: SQlite, PostgreSQL, mariaDB and their containers'
 url: 'databases-101'
 ---
 
 
-**TL;DR:** Recap on popular DBs. For SelfHosters and BackEnd Devs. For D&A view see [this post](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/).
+**TL;DR:** A Recap on popular DBs.
+
+For SelfHosters and BackEnd Devs.
+
+> For D&A overview see [this post](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/).
 
 **Intro**
 
@@ -298,12 +302,18 @@ For **writes**, SQLite is limited by its single-writer architecture. On average 
 
 ### PostgreSQL Throughput
 
-PostgreSQL is a client-server database designed for high concurrency. Its throughput is much higher and scales with your hardware. For writes, a properly tuned PostgreSQL instance can easily handle **tens of thousands of transactions per second** on a powerful server. For reads, especially simple queries that fit in memory, it can also achieve **hundreds of thousands of queries per second**. The key difference is that PostgreSQL can sustain these high write volumes from multiple concurrent clients, while SQLite cannot.
+PostgreSQL is a client-server database designed for high concurrency. 
+
+Its throughput is much higher and scales with your hardware. For writes, a properly tuned PostgreSQL instance can easily handle **tens of thousands of transactions per second** on a powerful server. For reads, especially simple queries that fit in memory, it can also achieve **hundreds of thousands of queries per second**.
+
+The key difference is that PostgreSQL can sustain these high write volumes from multiple concurrent clients, while SQLite cannot.
 
 ## SQLite vs PostgreSQL
 
 
-Both SQLite and PostgreSQL are powerful databases, but they are built for different purposes. The choice between them depends on the specific needs of your application, especially regarding concurrency and scale.  
+Both SQLite and PostgreSQL are powerful databases, but they are built for different purposes.
+
+The choice between them depends on the specific needs of your application, especially regarding concurrency and scale.  
 
 ***
 
@@ -311,13 +321,13 @@ Both SQLite and PostgreSQL are powerful databases, but they are built for differ
 
 SQLite is an **embedded, serverless, file-based** database. It's an excellent choice for lightweight, single-user applications or read-heavy workloads with low write concurrency.
 
-#### Pros:
+Pros:
 * **Zero Configuration**: There's no server to set up. The entire database is a single file on disk, making it incredibly easy to use.
 * **Portability**: Since it's just a single file, you can easily copy and move the database. This is ideal for desktop apps, mobile apps, or local development environments.
 * **Fast Reads**: Without the overhead of a client-server architecture, SQLite can perform read operations very quickly.
 * **Small Footprint**: The library is very small, making it great for resource-constrained devices like IoT or mobile devices.
 
-#### Cons:
+Cons:
 * **Limited Concurrency**: SQLite's main drawback is its lack of concurrent write support. Only one process can write to the database at a time, which can be a bottleneck for multi-user web applications.
 * **Less Secure**: It lacks built-in user management, permissions, and network security features, as it's designed to be accessed locally by a single application.
 * **Fewer Advanced Features**: It has a simpler feature set compared to PostgreSQL, lacking things like advanced replication, materialized views, and a wide variety of data types.
@@ -328,13 +338,14 @@ SQLite is an **embedded, serverless, file-based** database. It's an excellent ch
 
 PostgreSQL is a **robust, client-server** database management system. It's an ideal choice for complex, high-traffic applications that require strong data integrity and support for multiple concurrent users.
 
-#### Pro:
+Pro:
 * **High Concurrency**: With its Multi-Version Concurrency Control (MVCC), PostgreSQL handles multiple simultaneous read and write operations without blocking, making it perfect for multi-user applications.
 * **Extensive Feature Set**: PostgreSQL is a feature-rich database that supports a wide range of advanced features, including custom data types, functions, and powerful indexing options.
 * **Data Integrity**: It has a strong focus on ACID compliance and data integrity, ensuring reliable transactions even with complex operations.
 * **Security**: As a client-server system, it has a sophisticated security model with built-in user roles, access control, and network encryption.
 
-#### Cons
+Cons:
+
 * **Complex Setup**: Setting up and managing a PostgreSQL server is more complex than using SQLite and requires more administrative effort.
 * **Higher Resource Usage**: It is a more heavyweight solution and consumes more system resources (CPU and RAM) than SQLite.
 * **Slower for Simple Tasks**: The overhead of the client-server model can make it slightly slower for very simple, single-user operations compared to a local SQLite file.
@@ -354,13 +365,16 @@ PostgreSQL is a **robust, client-server** database management system. It's an id
 
 Many open-source companion tools exist to help with different aspects of database management, from schema migrations to monitoring and data visualization.
 
-Here are some of the most popular categories and tools.
-
----
-
-### Database Management & GUI Tools 👨‍💻
+### Database Management & GUI Tools
 
 These tools provide a graphical user interface (GUI) to interact with and manage your databases, offering a more user-friendly alternative to the command line.
+
+Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check their [notebooks for DBs](https://dbcode.io/docs/notebooks/getting-started)
+
+```sh
+#Your database. Inside VS Code.
+ext install DBCode.dbcode
+```
 
 
 {{< details title="Useful Tools to work with DBs 📌" closed="true" >}}
@@ -423,11 +437,11 @@ These tools connect to your databases and provide a way to visualize data throug
 
 
 
-{{% details title="About LiquiBase... 🚀" closed="true" %}}
-
-**Liquibase** is an open-source database-independent tool for managing and tracking database schema changes.
+* **Liquibase** is an open-source database-independent tool for managing and tracking database schema changes.
 
 It treats database changes like application code, enabling version control and CI/CD pipelines for your database. 
+
+{{% details title="About LiquiBase... 🚀" closed="true" %}}
 
 ### How it Relates to Databases
 

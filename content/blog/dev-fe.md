@@ -1,12 +1,15 @@
 ---
-title: "FE and Auth"
-date: 2025-08-18
+title: "FrontEnd and Auth"
+date: 2025-08-23
 draft: false
 tags: ["Dev","OAuth/JWT/Bearer"]
 description: 'Better front-end and authentication.'
 url: 'front-end-and-auth'
 ---
 
+**TL;DR**
+
+About Front-End and how to do better auth.
 
 **Intro**
 

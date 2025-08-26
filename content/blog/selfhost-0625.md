@@ -2,8 +2,8 @@
 title: "SelfHosting - 1st Half 2025 "
 date: 2025-06-30T01:20:21+01:00
 draft: false
-tags: ["HomeLab","Authentication","P2P","Traefik https SSL"]
-description: 'Programatic HTTPs for all services and docker stacks runnong in your server.'
+tags: ["HomeLab","Authentication","P2P","Traefik https SSL","LazyDocker"]
+description: 'Programatic HTTPs for all services and docker stacks running in your server.'
 url: 'selfhosted-apps-06-2025'
 ---
 
@@ -49,7 +49,7 @@ People keep doing awsome stuff: *this time with solar energy*
 
 {{< youtube "Alx_vwyksTw" >}}
 
-I expect to write a post about solar panels *soon* (relating it with micro-controllers).
+> I expect to write a post about solar panels *soon* (relating it with micro-controllers).
 
 
 ## Improvements
@@ -302,7 +302,7 @@ This is how the admin UI looks like:
 
 ![SelfHosting Reubah](/blog_img/selfh/Photo/reubah.png)
 
-2. Tools for Photo and tech for trips:
+2. Tools Photo related and tech for trips:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#backups" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Hardware & Softw setup for traveling" >}}
@@ -367,14 +367,18 @@ source ~/.bashrc
 lazydocker
 ```
 
-And tmux:
+> You can press `?` to see further commands, but basically you can just select a container and get exec it directly to it without writing docker CLI commands :)
+
+>> for containers you can also look to podman desktop, [orbstack (paid)](https://orbstack.dev/pricing), 
+
+And tmux has also been great:
 
 ```sh
 sudo apt install tmux
-tmux
+#tmux
 ```
 
-Termix has also been great to manage couple of homelab devices:
+Termix, is another service that has also been great to manage couple of homelab devices:
 
 ![Using Specters via Termix](/blog_img/selfh/HomeLab/termix-specters.png)
 

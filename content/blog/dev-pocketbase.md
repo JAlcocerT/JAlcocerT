@@ -1,8 +1,8 @@
 ---
-title: "PocketBase for BackEnd"
+title: "SelfHosted PocketBase for your BackEnd"
 date: 2025-08-05
 draft: false
-tags: ["PocketBase","OSS Auth","Concurrency","Local & Session Storage"]
+tags: ["PocketBase","OSS Auth","Concurrency","Local & Session Storage","Sqlite"]
 description: 'Things your learn outside the confort zone. BaaS Storage for a WebApp'
 url: 'pocketbase'
 ---
@@ -24,8 +24,8 @@ HUGO was the first for me.
 And now is time to Pocketbase, also written in Go.
 
 1. What it is [PB](#pocketbase)?
-2. Using PB with Flask - *Some day PB + Stripe*
 
+2. Using PB with Flask - *Some day PB + Stripe*
 
 3. Understanding PB Collections, overpowered SQLite? - https://pocketbase.io/docs/working-with-relations/
 
@@ -34,6 +34,9 @@ And now is time to Pocketbase, also written in Go.
 4. PB gives you an [API endpoint](#pb-api) out of the box for your BE logic
 5. The [PB JS SDK](#pb-sdk)
 
+<!-- https://www.youtube.com/watch?v=Hw797S85yQE -->
+
+{{< youtube "Hw797S85yQE" >}}
 
 ## PocketBase
 
@@ -65,11 +68,13 @@ Its features include:
 
 > While PocketBase **includes** a database, it's more accurate to call it a **backend-as-a-service (BaaS)** or a "realtime backend" rather than *just a database*. 
 
-> > You can also try with the demo: https://pocketbase.io/demo/
+> > You can also try with the **pocketbase demo instance**: https://pocketbase.io/demo/
 
 ### PB 101
 
 In simple terms: [PB can be selfhosted](https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase).
+
+It does not offer a paid hosted service like Supabase.
 
 Its better for read than for writes and its [data model and collections](#programatic-pb-interaction) are very useful.
 
@@ -79,6 +84,7 @@ Spin Pocketbase into your PC building a Go container with the project:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="Pocketbase Docker Config for your HomeLab 🐋 ↗" >}}
 {{< /cards >}}
 
 
@@ -106,7 +112,7 @@ curl -s http://localhost:8080/api/health || echo "PocketBase not accessible"
 
 PB uses sqlite as its DB!
 
-1. you have a `pb_data/data.db` that you can inspect with a client:
+1. You have a `pb_data/data.db` that you can inspect with a client:
 
 ```sh
  sqlite3 ./data.db
@@ -122,56 +128,65 @@ sqlite> .tables
 # sqlite> 
 ```
 
-* https://kerkour.com/sqlite-for-servers
+> You could also use the [DBCode](https://dbcode.io/) extension, and if you like ipynb, check their [notebooks for DBs](https://dbcode.io/docs/notebooks/getting-started) and related `.dbcnb`
+
+```sh
+#Your database. Inside VS Code.
+ext install DBCode.dbcode
+```
+
+>> [DBCode supports](https://dbcode.io/docs/supported-databases/bigquery) several [DBs](https://jalcocert.github.io/JAlcocerT/databases-101/), including [GCP BQ](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#big-query):
 
 
-pb is concurrent for reads (select and with)
-nonconcurrent for writes/updates of data!!!
+As per this awsome article: https://kerkour.com/sqlite-for-servers be aware that:
+
+* pb is concurrent for reads (select and with SQL queries)
+* nonconcurrent for writes/updates of data!!!
 
 2. `./pb_hooks` and `./pb_migrations` folder are checked first whenever PB gets intialized (its configures any initial collections for example)
 
+
 #### About PB_Hooks
 
-What `pb_hooks/` does
-Purpose: Holds PocketBase server-side hook scripts. PocketBase auto-loads any `*.pb.js` files here and executes them to customize backend behavior.
+What `./pb_hooks/` does: Holds PocketBase server-side hook scripts. PocketBase auto-loads any `*.pb.js` files here and executes them to customize backend behavior.
+
 When they run:
-On server start/bootstrapping.
-On specific collection events if you register handlers (before/after create, update, delete, auth, etc.).
+
+* On server start/bootstrapping.
+* On specific collection events if you register handlers (before/after create, update, delete, auth, etc.).
+
 Common use cases:
-App-wide configuration at startup (e.g., storage, SMTP, auth providers).
-Data validation and defaulting before/after record writes.
-Side effects like webhooks, audit logs, denormalization.
-Access control beyond collection rules.
 
-This repo’s example
-File: 
-
-devops/pocketbase/pb_hooks/pocketbase_settings.pb.js
-
-Reads S3-related env vars and sets settings.s3 accordingly.
-
-If required envs are missing, throws an error to prevent misconfigured storage.
-Calls app.save(settings) to persist the updated PocketBase settings.
+* App-wide configuration at startup (e.g., storage, SMTP, auth providers).
+* Data validation and defaulting before/after record writes.
+* Side effects like webhooks, audit logs, denormalization.
+* Access control beyond collection rules.
 
 > In short, `pb_hooks/` lets you programmatically configure and extend PocketBase on the server, and this specific hook configures S3 file storage from environment variables.
 
 #### About PB_Migrations
 
-What pb_migrations/ does
-Purpose: Version-controlled schema for PocketBase. Each file defines a migration that creates/updates/deletes collections, fields, rules, and indexes.
-Where: devops/pocketbase/pb_migrations/
-How they look: Timestamped files like:
-1754901820_created_user_settings.js
- — defines user_settings collection, fields, owner-only rules, unique index.
-1754984000_created_images.js
- — defines chat_attachments (images) collection, fields, rules, index. Each migration usually has an “up” (apply) and “down” (rollback) section and uses PocketBase’s JS helpers (e.g., new Collection({...}), dao.insert(), dao.deleteCollection()).
+What pb_migrations/ does: Version-controlled schema for PocketBase. Each file defines a migration that creates/updates/deletes collections, fields, rules, and indexes.
+
+Where: `./pocketbase/pb_migrations/`
+
+How they look: Timestamped files like, `1754901820_some_user_settings.js`
+
+```sh
+date +%s #get current unix ts so that you can add it to new files
+```
+
 When/how applied:
-Applied on the PocketBase server (via CLI or your container entrypoint). They must run before the frontend SDK can use those collections/fields.
-You can run them during build/startup or manually with the PB CLI. In many setups, the Docker image executes migrations at startup.
+
+* Applied on the PocketBase server (via CLI or your container entrypoint). They must run before the frontend SDK can use those collections/fields.
+* You can run them during build/startup or manually with the PB CLI. 
+  * In many setups, the Docker image executes migrations at startup.
+
 Why important:
-Acts as the single source of truth for your PB schema.
-Safe to commit to VCS; supports rollbacks.
-Ensures environments (local, staging, prod) have the same collections, rules, and indexes.
+
+* Acts as the single source of truth for your PB schema.
+* Safe to commit to VCS; supports rollbacks.
+* Ensures environments (local, staging, prod) have the same collections, rules, and indexes.
 
 ### Programatic PB Interaction
 
@@ -208,6 +223,11 @@ You can also **export the existing collections** into json:
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/create_user_settings.py" title="Pocketbase x Py, Collection Creator ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/export_collections.py" title="Pocketbase x Py, Collections Export ↗" >}}
 {{< /cards >}}
+
+
+{{< callout type="warning" >}}
+Via UI `http://localhost:9000/_/#/settings`,you can also export them, but this will be a .json, if you plan to use it at `pb_migrations`, make sure to convert it to `.js`
+{{< /callout >}}
 
 
 To make the code a little bit cleaner, we can have the **collection creator** to get the collection details **from a JSON with the details**, instead of hardcode them.
@@ -650,7 +670,11 @@ Here's how they work:
 3.  For all subsequent requests to protected endpoints, you include this token in the `Authorization` header of your HTTP request. The format is always `Authorization: Bearer <token>`.
 4.  The server then validates the token. If it's valid, it grants you access to the requested resource without needing to know your username and password again.
 
-That's an excellent way to think about it. Yes, a bearer token is a temporary replacement for the user's credentials. It's a token that represents the authenticated identity, and it allows you to make subsequent API calls without repeatedly sending the username and password.
+That's an excellent way to think about it.
+
+Yes, a bearer token is a temporary replacement for the user's credentials. 
+
+It's a token that represents the authenticated identity, and it allows you to make subsequent API calls without repeatedly sending the username and password.
 
 **Key Points of Bearer Tokens**
 
@@ -674,7 +698,7 @@ However, they should always be sent over a secure, encrypted connection (HTTPS) 
 
 4. You can also **create new PB collections via curl** (with proper auth thanks to those bearers):
 
-Get the bearer with:
+Get the bearer with the following CLI:
 
 ```sh
 #source .env #to get PB admin email and the pwd!
@@ -722,7 +746,7 @@ curl -s -X POST "$PB/api/collections" \
   }'
 ```
 
-5. And a record inside an existing collection (users, the default PB collection):*using the bearer we got on (4)*
+5. And the **creation of a record inside an existing collection** (users, the default PB collection):*using the bearer we got on (4)*
 
 ```sh
 # curl -s -X POST "$PB/api/collections/users/records" \
@@ -739,6 +763,7 @@ curl -s -X POST "$PB/api/collections" \
 
 SERVICE_EMAIL=service@example.com
 SERVICE_PASS='a-strong-password'
+PB='localhost:9000'
 
 CREATE_RES=$(curl -s -X POST "$PB/api/collections/users/records" \
   -H "Authorization: Bearer $TOKEN" \
