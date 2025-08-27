@@ -2,7 +2,7 @@
 title: "About Jobs. HR Prep and AI Engineers."
 date: 2025-02-10
 draft: false
-tags: ["Outro","Scrapping","Job-Trends","Overleaf","Interview preparation"]
+tags: ["Outro","Scrapping","Job-Trends","Overleaf","Interview preparation","Historieta"]
 description: 'Is it a good moment to change jobs? New positions AI/LLM/ML Engineer. Time to recap Scrapping techniques and a Latex powered CV.'
 url: 'when-to-apply-for-a-job'
 ---
@@ -37,7 +37,7 @@ If you are using linkedin, you can see how good is your profile supposed to be: 
 
 ## Data for Job Market
 
-We will need some data to make this work.
+We will need some **data to make this work**.
 
 Last year, I was tinkering with **scrapping tools**:
 
@@ -605,8 +605,6 @@ This platform not only demonstrates my deep commitment to the field but also sho
 
 * How do you promote knowledge sharing and collaboration among team members to ensure continuous improvement in data practices?
 
-
-
 <!-- 
 
 partially BA - domain and project is known in advance healthcare company - 
@@ -686,15 +684,12 @@ What we are missing (fomo, loss>>>gain)
 - Migration project — some stakeholders are SQL-savvy, others less so
 - Strong focus on aligning devs on *what* to build and *why* (prototyping, edge cases)
 - Anomaly detection experience stood out to the team
-
-
- -->
+-->
 
 
 <!--
 50/50 tech/business customer journey and so on
 maximize efficiency of taxi locations 7-3 UAT
-
 
 moving from rule base to ML based decisions systems
 
@@ -702,20 +697,13 @@ Continuously develop and learn new skills independently, staying up to date with
 
 Contribute to the development of innovative approaches in marketing science, exploring new areas for growth and improvement.
 
-
-
-H. - hiring manager
-saudi arabia - manager data analytics
-
-it will be
+H. - hiring manager data analytics
 
 comm skills - get to the point + add info
 product knowledge
 how to fit in the team
 present to: work autonomously + lead others 
 -->
-
-
 
 <!-- 
 ================
@@ -734,9 +722,55 @@ Can you provide some insights about work culture, values, and long-term vision?
 Please, consider that I am interested in B2B + Remote roles only.
 
 Could you also provide details on the contract duration and renewal process?
- Additionally, I would like to mention that due to my wide range of skills, including not only technical expertise but also strong interpersonal and project management, my salary expectations for this role are between 123k and 567k.
+
+Additionally, I would like to mention that due to my wide range of skills, including not only technical expertise but also strong interpersonal and project management, my salary expectations for this role are between 123k and 567k.
 
 Leveraging upon my T-shaped skills that i like to share with others (you can see my blog), I  understand the distinct dynamics of various fields, and therefore can facilitate collaboration across teams. I believe this adds extra value to my overall technical skill set.
 
 Thank you in advance for providing more information about this opportunity. This will help me assess if the role aligns with my career goals and interests. 
-Best regards, -->
+Best regards,
+
+-->
+
+#### For BAs/PMs
+
+These are excellent and comprehensive questions for a BA/PM interview preparation. 
+
+They cover core competencies essential for success in both roles. 
+
+Here's a breakdown of why each question is effective and what to focus on when answering them.
+
+**Accountability: Leading and Taking Responsibility for Projects**
+
+This question assesses your sense of ownership and leadership. A good answer will show you don't just complete tasks, but you also take ultimate responsibility for the project's success or failure.
+
+* **What to Prepare:** Think of a specific project where you took charge. Describe a situation where you had to make a tough decision or where something went wrong. Focus on what you did to rectify the situation and how you learned from it. Avoid blaming others. The interviewer wants to see that you're proactive and resilient.
+* **Key Skills to Highlight:** Leadership, ownership, problem-solving, resilience, and proactivity.
+
+***
+
+**Resolving Difficult Conflicts**
+
+This question tests your interpersonal skills and emotional intelligence. In any project, conflicts are inevitable, and how you handle them is crucial.
+
+* **What to Prepare:** Have a story ready about a conflict you faced, perhaps between a stakeholder and a developer, or within the development team itself. Walk through the steps you took to understand both sides of the issue. A good approach is to describe how you facilitated a discussion, found common ground, and arrived at a solution that satisfied everyone (or at least was a mutually acceptable compromise).
+* **Key Skills to Highlight:** Mediation, negotiation, communication, empathy, and active listening.
+
+***
+
+**Analyzing Business Needs and Taking Requirements Easy for Development Team**
+
+This is the core of the **Business Analyst (BA)** role and a key part of the **Project Manager (PM)** role. This question evaluates your ability to translate high-level business goals into actionable, clear requirements.
+
+* **What to Prepare:** Describe your process for gathering and documenting requirements. Explain how you use techniques like user stories, use cases, or process flows. Emphasize how you ensure the requirements are clear, concise, and non-ambiguous for the technical team. You might mention how you clarify assumptions and get buy-in from all parties.
+* **Key Skills to Highlight:** Requirement elicitation, documentation, communication, analytical thinking, and a solid understanding of agile/scrum methodologies.
+
+***
+
+**Cooperation with Development Team and Planning**
+
+This question focuses on your collaborative and organizational skills. A strong relationship with the development team is critical for project success.
+
+* **What to Prepare:** Talk about how you work *with* the development team, not just *at* them. Describe how you involve them in the planning process, perhaps through sprint planning meetings or backlog grooming sessions. Highlight how you ensure they have the resources and information they need to succeed. Explain how you handle changes to the plan and communicate them effectively.
+
+* **Key Skills to Highlight:** Collaboration, communication, planning, organizational skills, and adaptability.

@@ -60,6 +60,11 @@ At some point, you will need these:
 #df -h
 docker stop $(docker ps -a -q) #stop all
 #docker volume rm $(docker volume ls -q | grep -v '^portainer_data$') #rm all volumes but portainer
+
+#docker system df
+#docker image prune -a 
+#docker builder prune -a --force
+
 #sudo docker prune -a #just clean all...
 ```
 

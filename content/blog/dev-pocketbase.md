@@ -19,7 +19,9 @@ Along the way, I got to know few [new concepts](#concepts), like: Redux, Dexie..
 
 Despite not been able to code in Go, I really admire few projects already that use Go.
 
-HUGO was the first for me.
+[HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) was the first for me.
+
+Then I had a look to [Gotify](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/#gotify)
 
 And now is time to Pocketbase, also written in Go.
 
@@ -706,10 +708,20 @@ Get the bearer with the following CLI:
 TOKEN=$(curl -s -X POST "$PB/api/admins/auth-with-password" \
   -H 'content-type: application/json' \
   -d "{\"identity\":\"$ADMIN_EMAIL\",\"password\":\"$ADMIN_PASS\"}" | jq -r .token)
-echo "$TOKEN"
+
+
+TOKEN=$(curl -s -X POST "$PB/api/admins/auth-with-password" \
+  -H 'content-type: application/json' \
+  -d "{\"identity\":\"$PB_ADMIN_EMAIL\",\"password\":\"$PB_ADMIN_PASS\"}" | jq -r .token)
+
+echo "$TOKEN" #see that you got it
 ```
 
-Create the new sample events PB collection via curl:
+{{< callout type="warning" >}}
+You need to provide the PB Super admin email and pass to get the bearer.
+{{< /callout >}}
+
+Create the n**ew sample events PB collection** via curl:
 
 ```sh
 curl -s -X POST "$PB/api/collections" \

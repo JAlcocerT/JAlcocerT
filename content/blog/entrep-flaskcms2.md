@@ -98,3 +98,50 @@ sudo apt-get install stacer
 4. Learnt aout https://temporal.io/
 
 > What if your code was crash-proof?
+
+Temporal.io is an open-source platform that enables the creation of **durable and reliable distributed applications**. It acts as a workflow orchestration engine, allowing developers to write complex, long-running business processes as code in standard programming languages like Go, Java, Python, and TypeScript.  The platform handles the complexities of state management, retries, and failure recovery, essentially allowing you to write your application logic as if system failures don't exist.
+
+---
+
+### Core Concepts
+
+At its core, Temporal is built on two main components:
+
+* **Workflow Executions**: A workflow is the durable, reliable, and stateful part of your application logic. You write a workflow as a function that describes the sequence of steps (activities) to be executed. The key feature of a workflow is its "durable execution," which means its state is persisted and can be restored at any point, even if a server crashes or the process is interrupted. This enables workflows to run for seconds, days, or even years without losing state.
+
+* **Activities**: Activities are the individual, short-lived tasks that make up a workflow. They are the actual business logic that performs a specific job, such as making an API call, sending an email, or processing a payment. Activities are not durable and can be retried automatically by Temporal if they fail.
+
+The **Temporal Service** acts as the central orchestrator, keeping track of the state of all workflows and managing task queues. **Worker Processes**, which you deploy and run, execute your workflow and activity code by polling these task queues for tasks.
+
+---
+
+### How it Solves a Problem
+
+In traditional microservices architecture, orchestrating a complex, multi-step business process can be challenging. Developers often have to build custom logic to handle:
+
+* **Retries and Timeouts**: Manually writing code to retry failed operations or handle timeouts.
+* **State Persistence**: Ensuring the state of a long-running process is saved and can be recovered after a failure.
+* **Failure Recovery**: Implementing logic to handle partial failures and resume a process from where it left off.
+* **Distributed Transactions**: Coordinating a series of operations across multiple services to ensure atomicity.
+
+Temporal simplifies these issues by providing a platform that handles them out-of-the-box. If an activity fails, Temporal automatically retries it according to a predefined policy. If a worker process crashes, the workflow state is preserved, and a new worker can resume the execution from the last successful step. This shifts the focus from building complex plumbing for reliability to simply writing the business logic.
+
+---
+
+### Key Features and Use Cases
+
+Temporal's key features include:
+
+* **Durable Execution**: Guarantees that your application code will execute to completion regardless of failures.
+* **Automatic Retries**: Built-in retry mechanisms for activities and workflows.
+* **Developer-Friendly**: Write workflows using standard code and SDKs for multiple languages.
+* **Scalability**: Designed to handle a high volume of concurrent workflows.
+* **Observability**: Provides tools like a Web UI and CLI to monitor and debug workflow executions.
+
+Temporal is a great fit for a variety of use cases, including:
+
+* **Payment Processing**: Orchestrating complex payment flows with multiple steps like authorization, capture, and refunds.
+* **SaaS Provisioning**: Automating the process of setting up new user accounts or services, which often involves multiple steps across different systems.
+* **Data Pipelines**: Managing and orchestrating complex data transformation and processing jobs.
+* **Human-in-the-Loop Workflows**: Building processes that require human intervention, such as approving a document or a transaction.
+* **AI/ML Workflows**: Coordinating the steps in a machine learning pipeline, from data ingestion to model training and deployment.

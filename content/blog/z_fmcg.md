@@ -7,6 +7,14 @@ description: 'Interesting Logistic and Supply Chain. From Planning to Delivery.'
 url: 'fmcg-concepts-101'
 ---
 
+**TL;DR** Several years after taking a course of SCM from the KAIST, its time to put together some practical post about logistics.
+
+**Intro**
+
+Why is your logistic manager so obssesed with that Fill Rate to be as close to 100% as human possible?
+
+It's all about [lean](https://jalcocert.github.io/JAlcocerT/lean/) customer center pull approach and the very low margins and volume required for this kind of business to work.
+
 
 ## FMCG
 
@@ -31,18 +39,22 @@ Here's why:
 * **Time-Series Data:** This type of data is a sequence of data points indexed in time. For FMCG, this is absolutely crucial. It's how you track **sales trends over time**, compare weekly performance, analyze the impact of a promotion, or see how a new product launch is progressing.
 
 The data would show things like:
+
 * Weekly sales volume of a specific brand of cereal in different retail stores.
 * Daily unit sales of a new P&G shampoo in a particular region.
 * Price changes and their effect on sales over time.
 
-* **Nielsen's Business Model:** Nielsen's core product is this kind of data. They collect point-of-sale data from retailers and turn it into actionable insights for their clients. A brand like Ferrero wants to know how their Kinder Bueno sales are doing versus a competitor's product, day by day or week by week.
+* **Nielsen's Business Model:** Nielsen's core product is this kind of data. 
+
+They collect point-of-sale data from retailers and turn it into actionable insights for their clients. A brand like Ferrero wants to know how their Kinder Bueno sales are doing versus a competitor's product, day by day or week by week.
 
  This is exactly what a time-series database is built for.
 
 * **The Clients and their Roles:**
-    * **Ferrero & Procter & Gamble:** These are classic FMCG companies. The people using the data would be their **brand managers** and **category managers**. Their job is to manage the performance of a specific product line or a whole category (e.g., detergents for P&G). They need to know if their new marketing campaign is working or if they are losing market share to a competitor. The dashboards and reports this candidate created at Nielsen were the tools these managers used to make decisions.
-    * **Puleva:** A major Spanish food and dairy company. Same principle as above—they'd use the data to track sales of their milk, yogurts, and other products against their competitors in the Spanish market.
-    * **IQVIA:** This is a key detail. IQVIA is a leading provider of data and analytics for the **life sciences and healthcare** industry. This suggests that Nielsen was providing them with data related to health-related FMCG products (e.g., vitamins, over-the-counter medications). The users at IQVIA would be data scientists or business analysts who use the Nielsen data as a component of their larger market analysis and forecasting models.
+
+* **Ferrero & Procter & Gamble:** These are classic FMCG companies. The people using the data would be their **brand managers** and **category managers**. Their job is to manage the performance of a specific product line or a whole category (e.g., detergents for P&G). They need to know if their new marketing campaign is working or if they are losing market share to a competitor. The dashboards and reports this candidate created at Nielsen were the tools these managers used to make decisions.
+* **Puleva:** A major Spanish food and dairy company. Same principle as above—they'd use the data to track sales of their milk, yogurts, and other products against their competitors in the Spanish market.
+* **IQVIA:** This is a key detail. IQVIA is a leading provider of data and analytics for the **life sciences and healthcare** industry. This suggests that Nielsen was providing them with data related to health-related FMCG products (e.g., vitamins, over-the-counter medications). The users at IQVIA would be data scientists or business analysts who use the Nielsen data as a component of their larger market analysis and forecasting models.
 
 
 When you **developed the databases** and **provided the recommendations** you become person who understood the raw, complex data and translated it into a user-friendly format (dashboards, KPIs) that the business users from FMCT clients could understand and act upon.
@@ -77,7 +89,9 @@ When you **developed the databases** and **provided the recommendations** you be
 
 That's a great question, as it gets to the heart of how a company's planning functions connect with its actual physical operations.
 
-**Material Requirements Planning (MRP)** and **Distribution Requirements Planning (DRP)** are the two primary planning systems that connect the "what" and "how much" of an FMCG company with the "when" and "where" of its logistics. They are two sides of the same coin, with MRP focused on the manufacturing side and DRP focused on the distribution side.
+**Material Requirements Planning (MRP)** and **Distribution Requirements Planning (DRP)** are the two primary planning systems that connect the "what" and "how much" of an FMCG company with the "when" and "where" of its logistics.
+
+They are two sides of the same coin, with MRP focused on the manufacturing side and DRP focused on the distribution side.
 
 Here's how they relate:
 
@@ -93,7 +107,13 @@ For an FMCG company, MRP takes the **Master Production Schedule (MPS)**, which i
 
 **Example in FMCG:**
 
-Imagine a company that makes bottled lemonade. The Master Production Schedule (MPS) says, "Produce 10,000 cases of bottled lemonade next week." The MRP system then looks at the **Bill of Materials (BOM)** for one case of lemonade (e.g., 24 empty bottles, 24 bottle caps, a specific amount of lemon concentrate, sugar, water, etc.). It calculates that to produce 10,000 cases, the company needs 240,000 bottles, 240,000 caps, and so on. MRP then checks current inventory levels and automatically generates purchase or production orders for any materials that are in short supply, ensuring they arrive just in time for the manufacturing process to begin.
+Imagine a company that makes bottled lemonade. 
+
+The Master Production Schedule (MPS) says, "Produce 10,000 cases of bottled lemonade next week." The MRP system then looks at the **Bill of Materials (BOM)** for one case of lemonade (e.g., 24 empty bottles, 24 bottle caps, a specific amount of lemon concentrate, sugar, water, etc.). 
+
+It calculates that to produce 10,000 cases, the company needs 240,000 bottles, 240,000 caps, and so on.
+
+MRP then checks current inventory levels and automatically generates purchase or production orders for any materials that are in short supply, ensuring they arrive just in time for the manufacturing process to begin.
 
 2. Distribution Requirements Planning (DRP)
 
@@ -110,11 +130,19 @@ DRP considers factors like current stock levels at each distribution center, lea
 
 **Example in FMCG:**
 
-Continuing with the lemonade example, the DRP system analyzes the sales forecasts for various regions. It sees that the Northeast U.S. distribution center has a high forecasted demand for lemonade next week due to a heatwave, while the Northwest is experiencing lower demand. The DRP system will then calculate the optimal quantity of lemonade cases to ship from the manufacturing plant to each distribution center. It will also generate transfer orders to move cases between different warehouses if a particular location is facing a stockout.
+Continuing with the lemonade example, the DRP system analyzes the sales forecasts for various regions. 
+
+It sees that the Northeast U.S. distribution center has a high forecasted demand for lemonade next week due to a heatwave, while the Northwest is experiencing lower demand.
+
+The DRP system will then calculate the optimal quantity of lemonade cases to ship from the manufacturing plant to each distribution center.
+
+It will also generate transfer orders to move cases between different warehouses if a particular location is facing a stockout.
 
 **How They Intersect and Relate**
 
-MRP and DRP are often two integrated modules within a larger **Enterprise Resource Planning (ERP)** system. They work together in a powerful "push-pull" relationship:
+MRP and DRP are often two integrated modules within a larger **Enterprise Resource Planning (ERP)** system. 
+
+They work together in a powerful "push-pull" relationship:
 
 1.  **Demand Signal:** The entire process starts with the demand for the finished product. This demand forecast is the input for the DRP system.
 2.  **DRP "Pulls"**: The DRP system "pulls" a plan from the supply chain, figuring out the specific finished goods requirements for each distribution center. This creates a master plan for distribution.
@@ -126,6 +154,7 @@ MRP and DRP are often two integrated modules within a larger **Enterprise Resour
 * **MRP** determines **what to produce** to satisfy the distribution plan.
 
 This integrated approach is crucial for FMCG because it directly addresses the industry's core challenges:
+
 * **Efficiency and Cost Reduction**: By aligning production with distribution needs, the system minimizes overproduction (reducing waste and storage costs) and underproduction (avoiding stockouts and lost sales).
 * **Speed and Agility**: The systems provide a framework for rapid response. If the DRP system detects a sudden surge in demand in a specific region, it can quickly signal the MRP system to adjust the production schedule to meet the new requirement.
 * **Inventory Optimization**: Together, MRP and DRP help maintain lean inventory levels across the entire supply chain, from raw materials to finished goods, without compromising customer service.
@@ -145,13 +174,13 @@ Think of it this way: all pharmaceutical companies are part of the life sciences
 * **Medical Devices**: Companies that make medical instruments, implants, and diagnostic tools.
 * **Nutraceuticals**: Focuses on food and supplements that offer health benefits.
 
-The candidate's experience at Exadel is in "Healthcare analytics," a domain that could span both the life sciences and pharmaceuticals. IQVIA is a perfect example of a company that operates in this intersection, providing data services to a wide range of clients in these fields.
+<!-- The candidate's experience at Exadel is in "Healthcare analytics," a domain that could span both the life sciences and pharmaceuticals. IQVIA is a perfect example of a company that operates in this intersection, providing data services to a wide range of clients in these fields. -->
 
 ---
 
 ### Is it possible that FMCG demand planning teams were also using such time series data to feed their modeling?
 
-DP is all about modelling, or trying to model the future.
+Demand Planning is all about modelling, or *trying to* model the future.
 
 * **Demand Planning is a Core FMCG Function**: As we've discussed, demand planning is the process of forecasting future consumer demand to align the supply chain. Accurate forecasting is critical for an FMCG company's profitability and efficiency.
 
@@ -161,14 +190,14 @@ DP is all about modelling, or trying to model the future.
 
 * **The Power of Real-Time Insights**: A time-series database allows P&G or Ferrero to see the immediate impact of a new product launch, a competitor's price change, or a seasonal shift in consumer behavior. This real-time visibility allows them to quickly adjust their demand forecasts, helping them optimize inventory and avoid costly stockouts or oversupply.
 
-The candidate's role at Nielsen, providing "recommendations to clients based on KPI/Dashboards," was essentially about delivering these crucial demand signals to the clients' planning teams.
+<!-- The candidate's role at Nielsen, providing "recommendations to clients based on KPI/Dashboards," was essentially about delivering these crucial demand signals to the clients' planning teams. -->
 
 
 ### Procurement vs Logistics
 
 Procurement and logistics are two distinct but interconnected parts of the broader supply chain management process.
 
-#### **Procurement**
+#### Procurement
 
 **Procurement** is the strategic process of **acquiring goods and services** for a business. It's not just about buying something; it's a comprehensive, proactive process that ensures a company gets the best possible value for its money. It's the "sourcing" part of the supply chain.
 

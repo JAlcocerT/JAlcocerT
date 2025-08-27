@@ -2,16 +2,20 @@
 title: "Encryption, Captchas and more"
 date: 2025-05-20
 draft: false
-tags: ["Outro","Security","PoW"]
+tags: ["Outro","Security","PoW","Clave","E-Residency"]
 description: 'SHA256 Protocol. The concept and applications: SSH, HTTPs, Bitcoin...'
 url: 'encryption-101'
 ---
+
+**Intro**
 
 Some tools and concepts regarding encryption.
 
 I started requiring this to fill some env variables of home lab docker containers.
 
 Decided to consolidate them into this post.
+
+> You also have examples for how few countries handle citizen security: ES, NL and EE [below](#countries-and-users)
 
 ## Captchas
 
@@ -44,7 +48,9 @@ openssl rand -base64 12 #for secrets
 openssl rand -hex 32 #for apikeys
 ```
 
-For flask cookies secrets:
+Those will be useful for you if you are having a [HomeLab](https://github.com/JAlcocerT/Home-Lab).
+
+For [flask](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/#flask) cookies secrets:
 
 ```sh
 # ~256-bit
@@ -303,3 +309,114 @@ They are all valuable for self-hosting, but they serve distinct purposes and ope
     * **Fail2Ban:** *Reactive* security. It waits for failed attempts to appear in logs and then blocks the IP. It's for services you want to keep available (like your real SSH, web server, etc.) but want to protect from abuse.
     * **Endlessh:** *Proactive/Deceptive* security. It acts as a fake SSH server to endlessly tie up attackers' resources *before* they even interact with your real services. You'd typically run Endlessh on port 22 and your real SSH on a different port.
     * **Synergy:** They can actually work together! Some setups use Fail2Ban to detect IPs that connect to Endlessh (or other services) and then ban those IPs from *all* your services, including your *real* SSH or web server. This adds another layer of defense, ensuring that persistent attackers who hit your tarpit are then blocked from everything else.
+
+
+## Countries and Users
+
+La principal diferencia entre el certificado digital y el sistema Cl@ve del Gobierno de España radica en su **función principal y en el tipo de seguridad que ofrecen**. Aunque ambos permiten realizar trámites con la Administración Pública, no son lo mismo.
+
+Aquí tienes un desglose de las diferencias clave:
+
+### 1. Certificado Digital
+
+* **¿Qué es?** Es un documento digital que te identifica de forma segura en internet. Es un fichero informático (o un chip en el caso del DNIe) que vincula tus datos de identidad a una persona física o jurídica.
+* **Función principal:** Además de la identificación, su característica más importante es la **firma digital**. Permite firmar documentos electrónicamente con la misma validez legal que una firma manuscrita.
+* **Seguridad y validez:** Ofrece un nivel de seguridad muy alto. Su validez es de varios años y su uso no está limitado a un solo trámite.
+* **Uso:** Es ideal para trámites que requieren un alto grado de seguridad o la firma de documentos, como la presentación de impuestos, recursos, reclamaciones o la firma de contratos.
+* **Obtención:** Requiere un proceso de acreditación de identidad, que puede ser presencial en una oficina (como las de la Fábrica Nacional de Moneda y Timbre, FNMT) o mediante videoidentificación. El DNIe es un tipo de certificado digital.
+
+### 2. Sistema Cl@ve
+
+* **¿Qué es?** Es una plataforma de identificación electrónica para acceder a los servicios de la Administración Pública, pero que no sirve para la firma de documentos.
+* **Función principal:** Facilita el acceso a trámites electrónicos de forma sencilla, sin necesidad de instalar software o tener un dispositivo adicional. Se basa en el uso de un código de usuario (tu DNI/NIE) y una contraseña.
+* **Modalidades:** Existen dos tipos principales:
+    * **Cl@ve PIN:** Es una clave temporal, válida por un tiempo limitado (unos minutos), que se utiliza para un trámite específico. Es útil para gestiones puntuales.
+    * **Cl@ve Permanente:** Es una contraseña de larga duración (24 meses) que se usa de forma recurrente para acceder a los servicios. A menudo, se refuerza con un código de un solo uso (OTP) enviado por SMS.
+* **Seguridad y validez:** Su seguridad se basa en la combinación de usuario y contraseña, y en algunos casos, un código de un solo uso. No permite la firma digital de documentos.
+* **Uso:** Es muy cómodo para realizar consultas o gestiones sencillas con la Agencia Tributaria, la Seguridad Social, el SEPE, etc. Es una buena opción para usuarios que no necesitan firmar documentos de forma habitual.
+* **Obtención:** El registro es más simple que el del certificado digital, y se puede hacer de forma online (con carta de invitación o videoidentificación) o presencial.
+
+### En resumen:
+
+| Característica | Certificado Digital | Cl@ve |
+| :--- | :--- | :--- |
+| **Función principal** | Identificación y **firma digital** | Identificación y autenticación |
+| **Tipo de documento** | Fichero informático o chip (DNIe) | Sistema de contraseñas |
+| **Usos** | Trámites que requieren firma (impuestos, recursos, contratos) | Trámites de consulta o gestiones sencillas |
+| **Validez** | Varios años, no limitado a un solo trámite | Cl@ve PIN (temporal), Cl@ve Permanente (24 meses) |
+| **Nivel de seguridad** | Alto, incluye firma legalmente válida | Alto para acceso, pero no para firma |
+| **Obtención** | Requiere acreditación presencial o videoidentificación | Registro más sencillo, online o presencial |
+
+En conclusión, si necesitas firmar documentos electrónicos de manera legal, el **certificado digital** es la herramienta adecuada. Si solo buscas una forma ágil y segura de acceder y realizar consultas en las sedes electrónicas de las administraciones, el sistema **Cl@ve** es una opción más cómoda y sencilla.
+
+El modelo de Estonia, con su programa de e-Residency y las e-cards, es un referente mundial en la digitalización de la administración pública y los negocios. Se diferencia del sistema español en varios aspectos clave, especialmente en su enfoque y en la tecnología utilizada.
+
+### ¿Qué es la e-Residency?
+
+La "e-Residency" (residencia electrónica) de Estonia es un programa único que permite a cualquier persona del mundo, sin importar su nacionalidad, obtener una identidad digital emitida por el gobierno estonio. **No es una residencia física, ni una ciudadanía, ni un permiso de viaje.** Es una identidad digital que te da acceso al ecosistema digital de Estonia.
+
+### ¿Qué son las "e-cards"?
+
+La "e-card" (tarjeta electrónica) es la tarjeta de identidad física que se entrega a los e-residents. Es similar a una tarjeta de crédito, con un chip inteligente incorporado. Es el equivalente estonio del DNIe español. Su función es la de un **dispositivo de autenticación segura y de firma digital**.
+
+### Diferencias clave con el modelo español (Certificado Digital y Cl@ve)
+
+1.  **Enfoque de negocios global:** El programa de e-Residency de Estonia está diseñado principalmente para emprendedores, freelancers y nómadas digitales que quieren crear y gestionar una empresa en la Unión Europea de forma 100% remota. El objetivo es atraer inversión y talento global. El sistema español, en cambio, está enfocado en facilitar los trámites a los ciudadanos y residentes de España.
+
+2.  **Tecnología y usabilidad:**
+    * **Estonia:** La e-card se basa en una infraestructura de clave pública (PKI) y se usa con un lector de tarjetas y un software específico. El sistema es robusto y permite la **firma digital cualificada**, que tiene la misma validez legal que una firma manuscrita en toda la UE (gracias al reglamento eIDAS). La clave es que la tarjeta física te da una identidad digital que puedes usar para todo, desde firmar contratos hasta declarar impuestos, desde cualquier lugar del mundo.
+    * **España:** El DNIe (que es un tipo de certificado digital) funciona de manera similar a la e-card, pero su uso no está tan extendido o integrado en el día a día. Cl@ve, por su parte, es un sistema basado en contraseñas y códigos SMS, más sencillo de usar pero sin la capacidad de firma digital cualificada. El modelo estonio se centra en la "e-card" como la única llave maestra para un vasto ecosistema de servicios digitales.
+
+3.  **Integración de servicios:** El gobierno estonio ha integrado casi todos sus servicios públicos en su plataforma digital. Con la e-card, un e-resident puede:
+    * Crear una empresa en la UE en un solo día.
+    * Firmar documentos y contratos con validez legal.
+    * Declarar impuestos online.
+    * Acceder a servicios bancarios y de pago.
+    * Participar en la toma de decisiones de su empresa.
+    * Y mucho más.
+
+    En España, aunque la digitalización ha avanzado mucho (con la Sede Electrónica de la AEAT, la Seguridad Social, etc.), todavía hay una fragmentación de servicios. El certificado digital te da acceso a muchos de ellos, pero el nivel de integración no es tan completo ni transparente como el de Estonia.
+
+### Resumen de la diferencia
+
+Mientras que en España tienes dos herramientas (certificado digital para trámites complejos y firma, y Cl@ve para acceso sencillo), en Estonia, la **e-card de e-Residency es una única llave maestra y de uso universal** para el mundo de los negocios digitales. Su enfoque es un "todo-en-uno" que no solo te identifica, sino que te permite operar de manera remota en un entorno de negocios digital, transparente y legalmente reconocido a nivel de la UE.
+
+En esencia, la gran diferencia es que Estonia no solo digitalizó su administración, sino que la diseñó desde cero para ser global, atrayendo a emprendedores y capital de todo el mundo a través de un simple documento de identidad digital.
+
+El caso de los Países Bajos con su sistema **DigiD** (que significa "Identidad Digital") es otro ejemplo interesante de cómo un país ha abordado la identificación electrónica, y tiene similitudes y diferencias con los modelos de España y Estonia.
+
+### ¿Qué es DigiD?
+
+DigiD es el sistema de identificación en línea que usan los ciudadanos y residentes de los Países Bajos para acceder a servicios gubernamentales, de salud, educación y pensiones. Es una herramienta esencial para la vida diaria en los Países Bajos. Su principal propósito es **identificar al usuario de forma segura** para que las organizaciones puedan estar seguras de con quién están tratando.
+
+¿Cómo se compara con el modelo español?
+
+El sistema DigiD se parece mucho al modelo español de **Cl@ve Permanente**. Al igual que Cl@ve, se basa en la combinación de un nombre de usuario y una contraseña, a lo que se añade un factor de autenticación adicional (como un código enviado por SMS o una app móvil).
+
+**Similitudes con el modelo español (Cl@ve):**
+
+* **Autenticación en lugar de firma:** Al igual que Cl@ve, la función principal de DigiD es la autenticación segura para acceder a servicios, no la firma digital de documentos con validez legal. Si se requiere una firma, a menudo se utilizan otros métodos o el propio sistema lo indica.
+* **Basado en contraseñas y códigos:** El acceso a DigiD se realiza a través de un usuario y una contraseña, complementado con un código de verificación por SMS o un PIN de la app. Esto lo hace muy accesible y fácil de usar, sin necesidad de hardware adicional como un lector de tarjetas.
+* **Uso generalizado:** DigiD es el estándar de facto para la interacción con la administración pública holandesa, de la misma manera que Cl@ve se ha convertido en una herramienta muy popular en España.
+
+**Diferencias con el modelo español:**
+
+* **Enfoque de la seguridad:** DigiD tiene diferentes "niveles de confianza" (LoA - Levels of Assurance). Para trámites menos sensibles, basta con el usuario y la contraseña. Para información más privada, como registros médicos, se requiere una verificación más alta, que a menudo se consigue con la app de DigiD y la lectura del chip del pasaporte o tarjeta de identidad, lo que le da un nivel de seguridad similar al de un certificado digital. En España, tienes dos herramientas separadas (Cl@ve y certificado digital), mientras que DigiD intenta consolidar diferentes niveles de seguridad en una sola plataforma.
+* **Integración con otros sectores:** Aunque en España el certificado digital y Cl@ve se usan para la salud y la seguridad social, en los Países Bajos, DigiD está muy integrado con el sector privado y semipúblico (aseguradoras de salud, fondos de pensiones, etc.), lo que lo convierte en una herramienta aún más centralizada para la vida del ciudadano.
+
+¿Cómo se compara con el modelo estonio?
+
+Aquí las diferencias son más significativas. El modelo holandés es muy diferente del de Estonia, que es el líder en el campo de la e-identidad.
+
+**Diferencias con el modelo estonio (e-Residency):**
+
+* **Identidad digital vs. negocio digital:** El sistema DigiD está diseñado para los **ciudadanos y residentes holandeses**, y su propósito es facilitar la vida y los trámites administrativos dentro del país. El sistema de e-Residency de Estonia está diseñado para **emprendedores globales** que quieren hacer negocios de forma remota, sin importar dónde vivan. Es un servicio de exportación de la identidad digital.
+* **Firma legal cualificada:** La e-card de Estonia (y su certificado digital asociado) permite la **firma digital cualificada** con validez legal en toda la Unión Europea. La capacidad de DigiD para la firma es más limitada y no tiene la misma validez legal que una firma cualificada en un contexto transfronterizo o comercial.
+* **Tecnología:** El modelo estonio se basa en un chip de tarjeta inteligente (en la e-card) que contiene un certificado digital, requiriendo un lector de tarjetas. El modelo holandés está más centrado en la **usabilidad y la comodidad del móvil**, con una app que facilita la mayoría de los trámites. Esto lo hace más accesible pero, en general, con un nivel de seguridad más bajo que la firma cualificada de Estonia.
+En resumen:
+
+El sistema **DigiD de los Países Bajos** se sitúa en un punto intermedio entre los modelos español y estonio.
+
+* Es más parecido a **Cl@ve** en su enfoque de ser una herramienta de autenticación cómoda y basada en contraseñas y apps.
+* A diferencia del modelo dual español, DigiD intenta ofrecer diferentes niveles de seguridad bajo un mismo paraguas, incluyendo la capacidad de usar un documento de identidad con chip para los trámites más sensibles.
+* Se diferencia claramente de **Estonia** en su enfoque: no está diseñado como una herramienta para negocios globales o para la firma digital de documentos con la máxima validez legal, sino como una solución práctica y centralizada para la gestión de la vida diaria de los residentes en el país.
