@@ -65,7 +65,7 @@ docker stop $(docker ps -a -q) #stop all
 #docker image prune -a 
 #docker builder prune -a --force
 
-#sudo docker prune -a #just clean all...
+#docker system prune --all --volumes #just clean all...
 ```
 
 
@@ -88,6 +88,9 @@ But as of today id rather:
 
 
 ## Conclusions
+
+If you ever wandered what are the most popular repos: https://gitstar-ranking.com/repositories
+
 
 Remember about:
 

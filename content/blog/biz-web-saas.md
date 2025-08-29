@@ -2,12 +2,15 @@
 title: "Quick SaaS Websites with user login"
 date: 2025-08-28
 draft: false
-tags: ["Web",HomeLab,"Gitea"]
+tags: ["Web",HomeLab,"Gitea","Cursor CLI and InvoCLI"]
 description: 'FastApi x PocketBase x SSG for your SignIn/Up.'
 url: 'fastapi-x-pocketbase'
 ---
 
+**TL;DR** Putting together a quick and OSS Template with [Astro/Flask/PB](#the-stack)
 
++++ [New CLI tools](#conclusions)
++++ [Gitea](#gitea-101) Container Setup and CLI tricks 
 
 
 **Intro**
@@ -35,12 +38,73 @@ Has it come the moment to mix SSG with Flask or FastAPI?
 
 #### PocketBase Auth with FastAPI
 
+
+```sh
+export PB_URL="http://localhost:9000"
+export TEST_EMAIL="test3@test.com"
+export TEST_PASSWORD="testpasswd"
+export TEST_NAME="Test User"
+
+echo "🔧 Testing Prompt Library API Endpoint"
+echo "======================================"
+echo "PocketBase URL: $PB_URL"
+echo "FastAPI URL: $FASTAPI_URL"
+echo "Test Email: $TEST_EMAIL"
+echo ""
+
+# Step 1: Create a test user
+echo "📝 Step 1: Creating test user..."
+USER_RESPONSE=$(curl -s -X POST "$PB_URL/api/collections/users/records" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"email\": \"$TEST_EMAIL\",
+    \"password\": \"$TEST_PASSWORD\",
+    \"passwordConfirm\": \"$TEST_PASSWORD\",
+    \"name\": \"$TEST_NAME\"
+  }")
+
+echo "🔑 Step 2: Getting authentication token..."
+TOKEN_RESPONSE=$(curl -s -X POST "$PB_URL/api/collections/users/auth-with-password" \
+  -H 'content-type: application/json' \
+  -d "{
+    \"identity\": \"$TEST_EMAIL\",
+    \"password\": \"$TEST_PASSWORD\"
+  }")
+
+echo "🔑 Check that the token is valid..."
+curl -H "Authorization: Bearer $TOKEN_RESPONSE" \
+  "$PB_URL/api/health" | jq .
+
+curl -H "Authorization: Bearer $TOKEN_RESPONSE" \
+  "http://localhost:3900/api/v1/library-prompts/tree" | jq .
+
+RESPONSE=$(curl -s -H "Authorization: Bearer $TOKEN_RESPONSE" \
+  "http://localhost:3900/api/v1/library-prompts/tree")
+
+echo $RESPONSE
+```
+
 ### SSG
+
+```sh
+git clone https://github.com/ctrimm/astro-payroll-solution-theme
+```
+
+Logto had a cool post about how to vibe code a photo gallery app with built in auth:
+
+* https://blog.logto.io/cursor-logto-auth/
+
+And DO a way to deploy static sites: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-static-website-to-the-cloud-with-digitalocean-app-platform
 
 ---
 
 ## Conclusions
 
+Im still impressed by new CLI tools, like
+
+1. https://github.com/cemalidev/invocli
+
+2. Cursor CLI
 
 Some [**concepts** recap](#faq)
 
@@ -153,8 +217,8 @@ They are essentially pre-defined callbacks that a system will invoke when a part
 
 For example, in a content management system (CMS) like WordPress, there are many **action hooks** and **filter hooks**.
 
-  * **Action hooks** allow you to execute your own custom code at a specific point, such as when a new post is saved. You "hook" your function to that event.
-  * **Filter hooks** allow you to modify data before it's displayed or saved, such as filtering the content of a post before it's shown to a user.
+* **Action hooks** allow you to execute your own custom code at a specific point, such as when a new post is saved. You "hook" your function to that event.
+* **Filter hooks** allow you to modify data before it's displayed or saved, such as filtering the content of a post before it's shown to a user.
 
 A common example of hooks is in React. **React Hooks** like `useState` and `useEffect` are special functions that let you "hook into" React features from your functional components. For instance, `useEffect` allows you to hook into the component's lifecycle to perform side effects like data fetching or DOM manipulation.
 
@@ -181,7 +245,9 @@ While a traditional REST API operates on a simple request-response model (the cl
 
 ### Callbacks in REST APIs
 
-A **callback** in a REST API is typically used for long-running, asynchronous operations.  Instead of the API server holding a connection open while it performs a task, the client sends a request that includes a special **callback URL**. The server then immediately responds with a status like `202 Accepted`, acknowledging the request. When the long-running task is finally complete, the server makes a new HTTP request to the client's provided callback URL, sending the final result.
+A **callback** in a REST API is typically used for long-running, asynchronous operations.  Instead of the API server holding a connection open while it performs a task, the client sends a request that includes a special **callback URL**.
+
+The server then immediately responds with a status like `202 Accepted`, acknowledging the request. When the long-running task is finally complete, the server makes a new HTTP request to the client's provided callback URL, sending the final result.
 
 This is much more efficient than **polling**, where the client would have to repeatedly send requests to the server to check if the task is finished.
 
@@ -191,7 +257,9 @@ This is much more efficient than **polling**, where the client would have to rep
 
 ### Hooks in REST APIs (Webhooks)
 
-A **hook** in the context of REST APIs is almost always referred to as a **webhook**. A webhook is a mechanism that allows a service to send real-time data to a client as soon as a specific event occurs, without any prior request from the client. The client, or "subscriber," provides a URL (the webhook URL) to which the "publisher" sends data.
+A **hook** in the context of REST APIs is almost always referred to as a **webhook**. A webhook is a mechanism that allows a service to send real-time data to a client as soon as a specific event occurs, without any prior request from the client.
+
+The client, or "subscriber," provides a URL (the webhook URL) to which the "publisher" sends data.
 
 Webhooks are a key component of an event-driven architecture. They are essentially **user-defined HTTP callbacks** that are triggered by system-wide events.
 

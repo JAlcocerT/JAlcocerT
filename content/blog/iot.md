@@ -25,8 +25,10 @@ DB2Rest
 2. Pushing sensor DB18B20 to TimeScale via Python
 
 * Raspberry Pico W
+  * https://picow.pinout.xyz/
 
 * ESP 32
+  * https://esp32c3.pinout.xyz/
 
 ### Raspberry Pi
 

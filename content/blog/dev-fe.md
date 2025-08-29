@@ -1,9 +1,9 @@
 ---
-title: "FrontEnd and Auth"
+title: "FrontEnd and ways to do Auth"
 date: 2025-08-23
 draft: false
-tags: ["Dev","OAuth/JWT/Bearer"]
-description: 'Better front-end and authentication.'
+tags: ["Dev","OAuth/JWT/Bearer","Logto","TinyAuth","PB SDK"]
+description: 'A Better front-end and authentication.'
 url: 'front-end-and-auth'
 ---
 
@@ -15,7 +15,7 @@ About Front-End and how to do better auth.
 
 This has been the year of getting better at authentication.
 
-I got to setup properly: Logto and [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/) as two different auth alternatives.
+I got to setup properly: [Logto](#logto) and [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/) as two different auth alternatives.
 
 Via Flask, we can also have hardcoded users to be logged in, which you can improve by being part of the `.env`
 
@@ -167,14 +167,34 @@ In the context of the previous discussion:
 
 ## Authentication Tools
 
+I have been very happy with [LogTo](#logto) so far.
+
 [![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
 
 
 ### Logto
 
+* https://logto.io/
 
+>  🧑‍🚀 Authentication and authorization infrastructure for SaaS and AI apps, built on OIDC and OAuth 2.1 with multi-tenancy, SSO, and RBAC. 
+
+Their blog normally brings quite interesting ideas.
+
+* [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) is cool, but their auth is hard: https://blog.logto.io/mcp-auth?ref=newsletter. And there are some tools to bring that authentication to MCP:
+  * https://mcp-auth.dev/?ref=blog
+  * https://github.com/orgs/mcp-auth/repositories
+    * https://github.com/sooperset/mcp-atlassian
+  * https://github.com/stacklok/toolhive
+    * https://docs.stacklok.com/toolhive/guides-ui/install
+
+
+But most importantly, Logto works: they send the email for people to validate etc
+
+This is their TypeScript SDK for interacting with Logto's Management API: https://github.com/logto-io/logto/blob/master/packages/api/README.md
 
 ### TinyAuth
+
+If you have done your Traefik v3.3 setup at your server, you can try this one.
 
 * https://tinyauth.jalcocertech.com/login
 
@@ -184,14 +204,19 @@ In the context of the previous discussion:
 
 ### Flask User/PWD Challenge
 
+Just a simply user and password.
+
+Because why not.
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ### PocketBase
 
+Lately I got to try [PocketBase](https://jalcocert.github.io/JAlcocerT/pocketbase/).
 
-We can interact with a PB instance via Curls and Bearer tokens:
+We can interact with a **PB instance via Curls** and Bearer tokens:
 
 ```sh
 #source .env #to get PB admin email and the pwd!
@@ -293,7 +318,7 @@ OAuth is a protocol, JWT is a token format, and a bearer token is a token type.
 
 > A good analogy is: OAuth is the lockbox that holds the key, a JWT is a specific type of key (a self-contained one), and a bearer token is a kind of key that grants access to anyone who holds it.
 
-***
+And there has been a recent LogTo blog post about these: https://blog.logto.io/jwt-vs-oauth/?
 
 ### OAuth: The Authorization Protocol 🤝
 

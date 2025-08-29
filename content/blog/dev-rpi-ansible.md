@@ -1,11 +1,14 @@
 ---
 title: "[IoT] Ansible and Raspberry Pi"
-date: 2025-08-27
+date: 2025-10-27
 draft: false
-tags: ["Dev"]
-description: Learning about Ansible with SBCs. Together with the IoT Project DHT/InfluxDB
+tags: ["Dev","Ansible","SaaS Deployments"]
+description: Learning about Ansible with SBCs. Together with the DHT IoT Project.
 url: ansible-with-raspberry-pi
 ---
+
+
+**Intro** 
 
 So you have a **Raspberry Pi** and want to get started with **IoT Project**.
 
@@ -13,7 +16,7 @@ But let me guess, you dont have time to read all the Docs, you just want to conn
 
 If that resonates with you, keep reading - I will show you how to **leverage Ansible**.
 
-[Ansible is an automation tool](https://jalcocert.github.io/Linux/docs/linux__cloud.md/ansible/) that Pros are using all around and it can Spin up with one liners your IoT Projects with the RPi.
+[Ansible is an automation tool](https://jalcocert.github.io/Linux/docs/linux__cloud.md/ansible/) that PROS are using all around and it can Spin up with one liners your IoT Projects with the RPi.
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/ansible/" title="Linux Ansible 101 ↗" icon="book-open" >}}
@@ -119,5 +122,7 @@ Why shouldnt we do it with our Pi's?
 You can also try [containers with **Podman**](https://fossengineer.com/docker-alternatives-for-data-analytics/)
 
 ### How to Find proper RPi Pins?
+
+It works for few other microcontrollers as well, bookmark this one!
 
 * https://pinout.xyz/

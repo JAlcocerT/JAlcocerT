@@ -8,13 +8,21 @@ url: 'python-stocks-webapp'
 math: true
 ---
 
-This is not a financial recommendation post
+
+
+**TL;DR:** This is NOT a financial recommendation post.
+
+**Intro**
 
 ![alt text](/blog_img/data-experiments/investors-scatter.png)
 
 Because they have made it, but you wont.
 
 **TradFi** - Or Traditional Finances, as I saw recently on redit.
+
+You can see how big *the market is* https://gomarketcap.com/
+
+
 
 Wouldnt it be great to go out the *typical google sheet* and have a great UI/X when looking at your finances?
 
