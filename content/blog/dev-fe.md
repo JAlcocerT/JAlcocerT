@@ -3,7 +3,7 @@ title: "FrontEnd and ways to do Auth"
 date: 2025-08-23
 draft: false
 tags: ["Dev","OAuth/JWT/Bearer","Logto","TinyAuth","PB SDK"]
-description: 'A Better front-end and authentication.'
+description: 'A Better front-end and authentication. With SelfHosted OAUTH recap.'
 url: 'front-end-and-auth'
 ---
 
@@ -11,15 +11,15 @@ url: 'front-end-and-auth'
 
 About Front-End and how to do better auth.
 
+With [Selfhosted OAUTH alternatives](#conclusions) recap.
+
 **Intro**
 
 This has been the year of getting better at authentication.
 
 I got to setup properly: [Logto](#logto) and [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/) as two different auth alternatives.
 
-Via Flask, we can also have hardcoded users to be logged in, which you can improve by being part of the `.env`
-
-> Thats similar to what I was doing with Streamlit Auth
+Via Flask, we can also have [hardcoded users to be logged in](#flask-userpwd-challenge), which you can improve by being part of the `.env`
 
 I also got to know the PB way of authenticating users.
 
@@ -73,17 +73,26 @@ For example, a `<UserProfile>` component simply takes `user` data as a prop and 
 
 It doesn't know *how* that data was fetched.
 
-***
 
 ### 2. Hooks: The Business Logic Layer 🧠
 
-**Hooks** act as the bridge between the UI and the data layer. They contain the application's **business logic**. A hook's job is to manage state, handle side effects (like data fetching), and expose a clean, reusable interface for components. For example, a `useUserProfile()` hook would be responsible for fetching the user's data from an API and managing the loading and error states. It encapsulates all that complexity so the component doesn't have to. It's the "smart" part of the application that knows *what* to do with data.
+**Hooks** act as the bridge between the UI and the data layer. They contain the application's **business logic**.
+
+A hook's job is to manage state, handle side effects (like data fetching), and expose a clean, reusable interface for components. 
+
+For example, a `useUserProfile()` hook would be responsible for fetching the user's data from an API and managing the loading and error states. 
+
+It encapsulates all that complexity so the component doesn't have to. It's the "smart" part of the application that knows *what* to do with data.
 
 ***
 
 ### 3. Services: The Data Layer 🔌
 
-**Services** are the low-level data access layer. They are responsible for communicating with external resources like a backend API (e.g., FastAPI) or a database (e.g., PocketBase, or PB as you mentioned). A service contains the raw functions for making HTTP requests, handling authentication tokens, and formatting data. They don't know anything about the UI or how the data will be used. They simply provide a clean, promise-based API for other parts of the application to use. 
+**Services** are the low-level data access layer. 
+
+They are responsible for communicating with external resources like a backend API (e.g., FastAPI) or a database (e.g., PocketBase, or PB as you mentioned).
+
+A service contains the raw functions for making HTTP requests, handling authentication tokens, and formatting data. They don't know anything about the UI or how the data will be used. They simply provide a clean, promise-based API for other parts of the application to use. 
 
 By separating your application this way, you gain several key advantages:
 
@@ -169,7 +178,7 @@ In the context of the previous discussion:
 
 I have been very happy with [LogTo](#logto) so far.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=steveiliop56/tinyauth,traefik/traefik,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/steveiliop56/tinyauth&traefik/traefik&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
 
 
 ### Logto
@@ -178,7 +187,9 @@ I have been very happy with [LogTo](#logto) so far.
 
 >  🧑‍🚀 Authentication and authorization infrastructure for SaaS and AI apps, built on OIDC and OAuth 2.1 with multi-tenancy, SSO, and RBAC. 
 
-Their blog normally brings quite interesting ideas.
+The documentation is pretty detailed, and they keep adding new features: https://docs.logto.io/end-user-flows/collect-user-profile
+
+Their blog normally brings quite interesting ideas:
 
 * [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) is cool, but their auth is hard: https://blog.logto.io/mcp-auth?ref=newsletter. And there are some tools to bring that authentication to MCP:
   * https://mcp-auth.dev/?ref=blog
@@ -192,25 +203,39 @@ But most importantly, Logto works: they send the email for people to validate et
 
 This is their TypeScript SDK for interacting with Logto's Management API: https://github.com/logto-io/logto/blob/master/packages/api/README.md
 
+But I feel most confortable with the Python one, as tested on few pet projects:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Trip Planner Post" image="https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png" subtitle="Weather Trends with Python" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs" >}}
+{{< /cards >}}
+
 ### TinyAuth
 
 If you have done your Traefik v3.3 setup at your server, you can try this one.
 
-* https://tinyauth.jalcocertech.com/login
+We can say that its part of the [SelfHosted group](#conclusions).
+
+* I have been testing this on my homelab at: https://tinyauth.jalcocertech.com/login
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tinyauth" title="TinyAuth + Traefik v3.3 Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik v3.3 Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ### Flask User/PWD Challenge
 
 Just a simply user and password.
 
-Because why not.
+Because why not:
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-flaskcms/docker-compose-portainer.yml#L9" title="Flask Hardcoded Auth | Example with Code and Container 🐍🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py" title="Streamlit Hardcoded Auth | Example 🐍 ↗" >}}
 {{< /cards >}}
+
+
+> Thats similar to what I was doing with Streamlit Auth *hardcoded users/pwds*
 
 ### PocketBase
 
@@ -247,10 +272,9 @@ We can authenticate programatically to PB via scripts.
 
 ---
 
-
 ## Conclusions
 
-There are many excellent open-source and self-hosted OAuth providers, often falling under the broader category of **Identity and Access Management (IAM)** solutions. 
+There are many excellent open-source and **self-hosted OAuth providers**, often falling under the broader category of **Identity and Access Management (IAM)** solutions. 
 
 These tools give you full control over your user data and authentication flows, a significant advantage for security and customization.
 
@@ -264,7 +288,6 @@ Here are some of the most popular and well-regarded options:
 * **Deployment:** Easy to deploy with Docker and Kubernetes, and it can be backed by standard databases like PostgreSQL or MySQL.
 * **Pros:** Huge community, extensive documentation, and a robust feature set out of the box.
 * **Cons:** Can have a steep learning curve and may require more resources than a lighter-weight solution.
-
 
 2. Authelia
 

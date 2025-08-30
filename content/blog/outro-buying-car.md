@@ -19,8 +19,7 @@ It was a **Honda Civic 6**, *born* on 1997 (1995-2000).
   {{< card link="https://en.wikipedia.org/wiki/Honda_Civic_(sixth_generation)" title="Civic 6" image="/blog_img/outro/honda-road.jpg" subtitle="Features of the beast" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/outro/car-maker.jpg)
-
+![Car Makers Overview](/blog_img/outro/car-maker.jpg)
 
 {{< details title="Honda Civic EJ9 1996–2000 (EU) 📌" closed="true" >}}
 
@@ -120,14 +119,10 @@ Some chargers are slow and will give you 3.3 KW, others, can give you 22/50 or e
 
 ---
 
-```txt
 
-Rozmowa z Gemini
 ive rented an electric car and we have done:
 
-
-
-I got the car initially with31999 and 92% battery
+I got the car initially with 31999 and 92% battery
 
 The first day I used it to 42% finishing with 32200km
 
@@ -168,7 +163,7 @@ can you think step by step, what is the battery capacity in kwh?
 how many kwh were spent to made the total km we ve done?
 
 what was the total energetic cost in nok of the trip?
-```
+
 
 I can certainly provide a summary of how I inferred the total energy spent, its costs, and the kilometers driven for your electric car rental.
 
@@ -350,6 +345,8 @@ See a sample old Civic 6 spark plugs:
 
 ![Honda Civic 6 Spark Plugs](/blog_img/outro/hondacivic-sparkplugs.jpg)
 
+---
+
 ## Conclusions
 
 This project started as a **test to see the costs of owning a car**.
@@ -470,3 +467,17 @@ https://en.wikipedia.org/wiki/Fiat_Ducato
 * [Trick1](https://www.kartamultisport.pl/en/multisport/search-for-facilities/#/@51.8283438,19.7351276,10z?cards=1&categories=3)
 
 You might want to have [a look to portable batteries](https://www.reddit.com/r/camping/comments/rujbie/portable_power_station/)
+
+### How to inspect an used car
+
+1. Culata
+
+Decreasing level of coolant and higher level of oil (because the coolant gets there).
+
+Preassure in cooling circuit when accelerating
+
+White smoke + boubles in the expansion cage for coolant
+
+2. Spark plugs
+
+if the top is white -> running too how

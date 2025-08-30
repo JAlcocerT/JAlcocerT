@@ -16,6 +16,10 @@ Get your CV always up to date and be ready for [HR Questions](#historieta).
 
 New year, new **opportunities**.
 
+Specially if you are into Data & Tech, business process automation... or Digital Transformations.
+
+Even more if you are a digital creator.
+
 > Or so some say...
 
 * https://www.trueup.io/layoffs

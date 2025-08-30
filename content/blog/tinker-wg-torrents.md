@@ -2,10 +2,20 @@
 title: "How to Share Pi OS via Torrent [with VPN]"
 date: 2025-12-02
 draft: false
-tags: ["Dev"]
+tags: ["Dev","P2P"]
 description: How to share Raspberry Pi OS (Bullseye) as Torrent with Qbitrorrent/Transmission and VPN.
 url: how-to-torrent-with-a-raspberry
 ---
+
+
+**TL;DR**
+
+P2P is not just [about crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) stuff, like: https://github.com/bisq-network/bisq
+
+> A decentralized bitcoin exchange network
+
+
+**Intro**
 
 First of all: **Why sharing Raspberry Pi OS**?
 
@@ -22,7 +32,7 @@ But what if at some point they wont be available?
 The raspberry team provides for each image a `.torrent` file so that any of us will become P2P keepers of the OS history.
 
 {{< callout type="warning" >}}
-Make sure that you **understand what you are sharing** via P2P. This is just a guide to allow you to share **Open Source Software** with others.
+Make sure that you **understand what you are sharing** via P2P. This is just a guide to allow you to share **Open Source Software** with others purely legally. Not for you to go and download The Simpsons or MrRobot.
 {{< /callout >}}
 
 ## How to Setup Torrents for a Raspberry Pi

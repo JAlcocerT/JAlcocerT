@@ -2,16 +2,24 @@
 title: "Buying a house being in Data Analytics"
 date: 2025-04-17T11:20:21+01:00
 draft: false
-tags: ["Outro"]
+tags: ["Outro","Real Estate Analytics","LIBOR"]
 description: 'What to keep in mind - what not to do and the data behind...When buying a house. Plus AI painting cost estimation.'
 url: 'buying-house-data-analytics'
 ---
+
+**Intro**
 
 If you are getting a credit...
 
 Before anything, understand how [French Amortization](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/) works.
 
 And maybe have a look to the properties around with some [RE AIgent](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/).
+
+{{< callout type="warning" >}}
+Make sure you understand also monetary aggregates. While taking a credit, you will be involved on new M1 creation
+{{< /callout >}}
+
++++ How to estimate [painting costs](#estimating-painting-costs-with-ai)?
 
 
 ## Property Costs Analytics
@@ -60,6 +68,116 @@ You can find sample house plans at:
 * https://www.funda.nl/detail/koop/vijfhuizen/huis-jack-sharp-park-29/43919214/
 * https://www.funda.nl/detail/koop/heerhugowaard/huis-steigerdijk-41/43938874/
 * https://www.funda.nl/detail/koop/vijfhuizen/huis-jack-sharp-park-13/43843421/
+
+
+{{< callout type="warning" >}}
+Whatever you will do...
+{{< /callout >}}
+
+...make sure you understand about:
+
+* Market volatility
+* What is debt (and money)
+* If a mortage is complex, is even more when you *play* between currencies
+* Math CAGR Formula: See how much nominal values Changed. Understand [inflation](https://inflationchart.com/home-in-m3) and how [wages](https://en.wikipedia.org/wiki/Minimum_wage_in_Poland) are affected.
+   * https://fred.stlouisfed.org/series/WM2NS
+   * https://inflationchart.com/home-in-m3
+
+* **For a value that has gone up 4 times over 20 years, the CAGR is 7.18%.** This means that, on average, the value grew by approximately 7.18% each year.
+
+* **For a value that has gone up 2 times over 5 years, the CAGR is 14.87%.** This means that, on average, the value grew by approximately 14.87% each year.
+
+$$CAGR = (\frac{Ending\ Value}{Beginning\ Value})^{\frac{1}{Years}} - 1$$
+
+
+{{% details title="PLN vs CHF | Frankowicze 🚀" closed="true" %}}
+
+An operation to take out a mortgage in Swiss francs (CHF) for a house in Poland using Polish zloty (PLN) from the bank is now effectively impossible and would be **extremely complex and risky** if it were.
+
+This is due to a series of legal and market developments that have made this type of loan a historical and controversial issue in Poland.
+
+The Historical Context: The "Frankowicz" Problem
+
+The kind of operation you're describing was common in Poland between 2004 and 2008. At the time, Swiss franc mortgages were popular because the interest rates were significantly lower than those for PLN loans. However, the borrowers received their loan in PLN, while the loan's value and repayment schedule were tied to the CHF exchange rate. 
+
+After the 2008 financial crisis, the Swiss franc appreciated dramatically against the Polish zloty. This caused the total debt and monthly installments for these borrowers to skyrocket, often to an amount far exceeding the value of their homes and what they had originally borrowed. These borrowers, known as "Frankowicze," have been in a protracted legal battle with Polish banks ever since.
+
+***
+
+Current Legal and Market Situation
+
+Due to the massive legal and financial issues this has created, Polish banks are no longer offering these kinds of foreign currency-indexed mortgages. The Polish Financial Supervision Authority (KNF) has also implemented regulations that make offering such loans unfeasible.
+
+A new operation would be:
+
+* **Legally Unlikely:** Polish courts have consistently ruled in favor of borrowers, declaring the clauses in these loan agreements as "abusive" and in many cases invalidating the entire contract. This has forced banks to take massive financial losses, making them highly averse to issuing any new foreign currency loans.
+* **Volatile and Risky:** Even if a bank were to offer such a product, the operation would carry an immense exchange rate risk for the borrower. The value of your debt could fluctuate wildly, making it impossible to predict your future payments or the total cost of the loan. This is the primary reason why tens of thousands of Poles sued their banks.
+* **Costly and Complex:** The legal and financial mess of the past makes it clear that such a loan is not a simple transaction. It would be subject to extreme scrutiny, and you would likely need to engage in complex legal proceedings if currency rates were to move against you.
+
+In short, while technically a "debt in Swiss franc" could be arranged, it would not be a standard, safe, or even available product from a Polish bank today. The market and legal system have moved away from this type of transaction due to the immense risks it created for consumers. The only existing CHF mortgages are those taken out years ago, and even they are being converted to PLN through court-mandated settlements.
+
+{{% /details %}}
+
+* https://www.global-rates.com/en/interest-rates/libor/
+* https://www.global-rates.com/en/interest-rates/sofr/
+
+{{% details title="About LIBOR 🚀" closed="true" %}}
+
+Financial institutions tied interest rates to the **LIBOR (London Interbank Offered Rate)** because it was a widely accepted and transparent benchmark that reflected the cost of borrowing between major banks.
+
+This created a standardized way to price various financial products, from mortgages to corporate loans, for a few key reasons:
+
+1. Market-Based and Standardized
+
+LIBOR was seen as the most accurate reflection of the prevailing cost of money for banks. By using it as a benchmark, a bank could offer a loan with an interest rate of, for example, "LIBOR + 3%." This meant the borrower's interest rate would automatically adjust in sync with the global financial market, making the loan transparent and fair for both the lender and the borrower. It was a standardized and efficient way to price loans, as everyone knew what the "base" rate was.
+
+***
+
+2. Risk Management
+
+Tying a loan to a variable benchmark like LIBOR was an essential tool for banks to manage **interest rate risk**. When a bank issued a loan with a fixed interest rate, it was exposed to the risk of its own borrowing costs rising, which would cut into its profit margin. By linking a loan to a floating rate, the bank's income from the loan would rise or fall in line with its own funding costs, thereby protecting its profit.
+
+***
+
+3. Hedging Financial Instruments
+
+LIBOR was not just for loans; it was a critical component of the global derivatives market. Instruments like **interest rate swaps** were used by institutions to hedge their exposure to changing interest rates. 
+
+The value of these swaps was often tied to LIBOR, making it a cornerstone for a wide range of financial contracts. This provided a liquid and predictable market for hedging complex risks.
+
+For decades, LIBOR served as the foundation for setting rates on trillions of dollars in financial products worldwide.
+
+ However, its reliance on a "poll" of banks rather than actual transactions led to a manipulation scandal, which ultimately resulted in its discontinuation and replacement with more robust, transaction-based rates like SOFR.
+
+---
+
+LIBOR (London Interbank Offered Rate) was a globally recognized benchmark interest rate, but it wasn't a single rate for all currencies. Instead, it was a family of rates, with a separate LIBOR for each major currency and for different loan durations.
+
+LIBOR and Different Currencies 💱
+
+LIBOR was initially created to serve the short-term borrowing needs of international banks in London. Because these banks dealt in various global currencies, separate LIBOR rates were calculated for each one. At its peak, LIBOR was calculated for ten different currencies. However, due to market consolidation and reforms, this number was reduced to five major currencies before its eventual discontinuation:
+
+* **U.S. Dollar (USD)**
+* **British Pound Sterling (GBP)**
+* **Euro (EUR)**
+* **Japanese Yen (JPY)**
+* **Swiss Franc (CHF)**
+
+For each of these currencies, there were also different rates for various maturities, or "tenors," ranging from overnight to one year. This gave financial institutions a wide range of options to price a vast number of products, from short-term corporate loans to long-term mortgages. 
+
+***
+
+Why It Was Discontinued 📉
+
+The entire LIBOR system was phased out due to its fundamental flaws and a major manipulation scandal that came to light in 2012.
+
+* **Reliance on Estimates:** The most significant flaw was that LIBOR was not based on actual transactions. Instead, it was based on **estimates** from a small panel of banks in London. Each bank would report what it believed it would be charged to borrow from other banks.
+* **Manipulation:** This "honor system" led to widespread manipulation. Traders at some banks intentionally submitted false, low estimates to make their bank appear healthier than it was during the 2008 financial crisis, or to profit from positions in financial derivatives. This lack of integrity and transparency was the primary reason for its demise.
+
+The final USD LIBOR rate was published on June 30, 2023, marking the end of its use as a benchmark. It has been replaced by more robust, transaction-based rates like the **Secured Overnight Financing Rate (SOFR)** in the United States.
+
+{{% /details %}}
+
 
 ### Estimating painting costs with AI
 
@@ -149,7 +267,9 @@ The world of home paints can be a bit overwhelming with different types and term
 
 ### Synthetic Paints
 
-"Synthetic" is a broad term that essentially means the paint is made from artificially created materials, often derived from petrochemicals. Many modern paints fall under this category. Within synthetic paints, you'll find various binders (the substance that holds the pigment together and adheres to the surface), each with its own characteristics.
+"Synthetic" is a broad term that essentially means the paint is made from artificially created materials, often derived from petrochemicals. Many modern paints fall under this category. 
+
+Within synthetic paints, you'll find various binders (the substance that holds the pigment together and adheres to the surface), each with its own characteristics.
 
 **Pros:**
 
@@ -217,7 +337,9 @@ Acrylic paints are a type of synthetic paint where the binder is an acrylic resi
 **In summary:**
 
 * For most **interior walls and ceilings**, **latex (water-based acrylic or vinyl-acrylic)** paints are a popular and practical choice due to their ease of use, cleanup, low odor, and affordability.
+
 * For **high-moisture areas like bathrooms and kitchens**, or for **exterior projects**, **100% acrylic paints** are often preferred for their better durability, adhesion, and resistance to moisture and mildew.
+
 * **Synthetic paints** encompass a broad category, and understanding the specific binder (like acrylic) will give you a better idea of the paint's properties. Oil-based synthetic paints are less common for general home use now due to VOCs and cleanup requirements but still have specific applications (e.g., durable finishes on trim or metal).
 
 When choosing paint, consider the surface you're painting, the desired finish (matte, satin, semi-gloss, gloss), the level of durability needed, and your preference regarding VOCs and ease of cleanup.
@@ -230,7 +352,6 @@ Some people are building their custom and modular houses.
 And there are others, which are shipping their concepts to others.
 
 > Delivering a home...like a container? With all the features agreed upon? Interesting!
-
 
 I can imagine DIY home owners have a sense of priorities like any other.
 

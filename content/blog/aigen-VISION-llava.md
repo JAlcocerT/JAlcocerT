@@ -2,7 +2,7 @@
 title: "AI with Vision - Image2Text"
 date: 2025-04-09T00:20:21+01:00
 draft: false
-#tags: ["Gen-AI","Self-Hosting","Docker"]
+tags: ["Gen-AI","Self-Hosting","Docker"]
 description: 'LLaVa, OpenAI Vision Models compared with T2I. Ask questions about images or design your perfect room with roomGPT.'
 url: 'ai-vision-models'
 ---

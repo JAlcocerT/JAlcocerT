@@ -1,15 +1,15 @@
 ---
 title: "Quick SaaS Websites with user login"
-date: 2025-08-28
+date: 2025-08-29
 draft: false
 tags: ["Web",HomeLab,"Gitea","Cursor CLI and InvoCLI"]
-description: 'FastApi x PocketBase x SSG for your SignIn/Up.'
+description: 'FastAPI x PocketBase x SSG so that your project are good looking and with a working SignIn/Up.'
 url: 'fastapi-x-pocketbase'
 ---
 
 **TL;DR** Putting together a quick and OSS Template with [Astro/Flask/PB](#the-stack)
 
-+++ [New CLI tools](#conclusions)
++++ [New CLI tools + Thoughts on CF Workers](#conclusions)
 +++ [Gitea](#gitea-101) Container Setup and CLI tricks 
 
 
@@ -37,7 +37,6 @@ Has it come the moment to mix SSG with Flask or FastAPI?
 ### FastAPI
 
 #### PocketBase Auth with FastAPI
-
 
 ```sh
 export PB_URL="http://localhost:9000"
@@ -100,9 +99,16 @@ And DO a way to deploy static sites: https://www.digitalocean.com/community/tuto
 
 ## Conclusions
 
+We could use any other combination of authentications, like: *LogTo, TinyAuth, via PB SDK, just hardcoded...* I recapped recently on [this post](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#authentication-tools).
+
+> I was also reading, *chatting with Gemini*, that we could keep the good old stack: Cloudflare Pages + CF Workers + Fetch/Posts users/pwds from a pocketbase somewhere...
+
+
 Im still impressed by new CLI tools, like
 
-1. https://github.com/cemalidev/invocli
+1. In case you need to bill someone: https://github.com/cemalidev/invocli
+
+> A Node.js CLI for generating PDF invoices
 
 2. Cursor CLI
 

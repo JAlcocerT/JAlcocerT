@@ -47,6 +47,8 @@ nano Selfhosting_101.sh #MAKE SURE YOU UNDERSTAND WHAT YOU WILL BE RUNNING FIRST
 
 4. Start [creating and deploying your Apps](#how-to-bundle-your-apps)
 
+5. Get a domain and [bring https](#https-everywhere) when you feel confortable.
+
 ---
 
 

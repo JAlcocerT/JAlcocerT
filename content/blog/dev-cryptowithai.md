@@ -2,13 +2,13 @@
 title: "Crypto. Now understandable with AI"
 date: 2025-07-23
 draft: false
-tags: ["AI","Aave v3 / Fluid / Compund","QuickSwap / UniSwap"]
+tags: ["AI","Aave v3 / Fluid / Compund","QuickSwap / UniSwap","Trilema"]
 description: 'Two buzz words in one. Understand crypto once and for all. This time thanks to LLMs'
 url: 'understading-crypto-with-ai'
 ---
 
 
-**Tl;DR** Consolidating [crypto resources](#crypto-resources) and how to understand them better with LLMs
+**Tl;DR** Consolidating [crypto **resources**](#crypto-resources) and how to understand them better with LLMs.
 
 +++ [Playing with Defi](#conclusions) protocols
 
@@ -16,7 +16,7 @@ url: 'understading-crypto-with-ai'
 
 Here we go again...
 
-Since last year, crypto *seems to* be back again in many people's mouth.
+Since last year, crypto *seems to* be back again.
 
 {{< callout type="warning" >}}
 This post is just describing the process to apply data analytics with crypto. **This is NOT a recommendation or financial advice of any type.**
@@ -29,16 +29,80 @@ What I want to cover here:
 1. Crypto 101 Analytics with Dune *and a look to PolyMarket*
 2. [Crypto Resources](#crypto-resources) to explore further some concepts: [dex](#dex-amm), [lending](#lending-protocols)
 3. [Skin in the game](#conclusions): testing some DeFi protocols to understand them better
+4. A remind of the crypto TRILEMA
 
-What this post is not about: *a solidity 101*
+{{< details title="Whatever project you will look, understand where it falls inside the TRILEMA" closed="true" >}}
 
-Some time ago I was having a look to this **amazing BlockChain/Solidity FreeCodeCamp course:**
+The "crypto trilemma," also known as the **blockchain trilemma**, is a concept that was popularized by Ethereum co-founder **Vitalik Buterin**.
+
+It posits that it is extremely difficult for a decentralized network to simultaneously achieve three key properties:
+
+1.  **Decentralization:** The network's control and decision-making power are distributed among a large number of participants, rather than being held by a single entity or a small group. This is the core principle of blockchain technology, making it censorship-resistant and transparent.
+
+2.  **Scalability:** The network's ability to handle a large number of transactions quickly and efficiently. For a blockchain to be widely adopted, it needs to process transactions at a speed comparable to traditional payment systems like Visa or Mastercard.
+
+3.  **Security:** The network's ability to resist attacks and manipulation. This is essential for protecting user funds and ensuring the integrity of the ledger.
+
+**The Trade-off**
+
+The "trilemma" suggests that a blockchain can only effectively optimize for **two** of these three properties at a time, and must sacrifice the third to some degree.
+
+* **Decentralization + Security:** This is the path taken by blockchains like **Bitcoin**. It is highly decentralized and incredibly secure, but it is not scalable. It can only handle a limited number of transactions per second, which leads to slow transaction times and high fees during periods of network congestion.
+
+* **Scalability + Security:** Some projects may choose this path by using a more centralized consensus mechanism (e.g., Proof-of-Authority). By limiting the number of validators, they can achieve high transaction speeds and maintain security, but they compromise on decentralization.
+
+* **Decentralization + Scalability:** This is arguably the most difficult and least common combination to achieve. Some early projects attempting this have faced security vulnerabilities. A decentralized network with high transaction speeds could be more susceptible to attack.
+
+**The Search for a Solution**
+
+The blockchain trilemma is the fundamental challenge driving much of the innovation in the crypto space. Developers are working on various solutions to overcome this trade-off, including:
+
+* **Layer 2 Solutions:** These are protocols built on top of a main blockchain (like Ethereum) to handle transactions off-chain before settling them on the main network. Examples include **Rollups** (zk-rollups and optimistic rollups), which bundle transactions together to increase throughput while still leveraging the main chain's security.
+* **Sharding:** This involves dividing a blockchain into smaller, parallel sub-chains (shards) that can process transactions simultaneously. This allows the network to handle more transactions without requiring every node to process every single one.
+* **New Consensus Mechanisms:** Some new chains are exploring different consensus mechanisms beyond Proof-of-Work (PoW) and Proof-of-Stake (PoS) to find a better balance of the three properties.
+
+And thanks to LLMs, you can quickly understand the trade-offs of any project.
+
+Because everytime that you will open DefiLlama, there will be many more acronyms.
+
+The blockchain trilemma provides a useful framework for understanding the design choices and trade-offs made by different networks. Here's a breakdown of where Monero, Ripple, and Solana typically sit in this model:
+
+Monero (XMR)
+
+* **Position:** Monero prioritizes **Decentralization** and **Security**, similar to Bitcoin. It's a privacy-focused cryptocurrency, so its core mission is to be censorship-resistant and tamper-proof.
+* **Decentralization:** Monero has a strong focus on decentralization. It uses a different Proof-of-Work (PoW) algorithm (**RandomX**) that is designed to be ASIC-resistant. This allows anyone to mine XMR using a regular computer's CPU, which helps to distribute mining power more widely and prevents the centralization of power in large, specialized mining farms.
+* **Security:** As a PoW network, Monero's security is derived from the collective computational power of its miners. The privacy features, such as ring signatures and stealth addresses, add a layer of cryptographic security that makes transactions unlinkable and untraceable.
+* **Scalability:** Monero's scalability is limited, similar to other PoW blockchains. Its block time is relatively slow, and transaction fees can increase during times of high demand. However, Monero's developers have implemented a "tail emission" to ensure a perpetual incentive for miners to secure the network, which is a long-term solution to security that prioritizes decentralization over a fixed supply.
+
+Ripple (XRP)
+
+* **Position:** Ripple (and its native asset, XRP) leans heavily towards **Scalability** and **Security**, while making a notable trade-off in **Decentralization**.
+* **Scalability:** The XRP Ledger is built for speed and low cost, capable of processing transactions in seconds. It achieves this by not using a traditional PoW or PoS mechanism. Instead, it uses a unique consensus protocol known as the **Federated Consensus** model. This is its key value proposition, designed for high-volume, low-cost financial transactions.
+* **Security:** The network is secured by a set of trusted validators that are collectively agreed upon. For a transaction to be confirmed, a supermajority of these validators must agree. This model provides high security and fast finality for transactions.
+* **Decentralization:** This is where Ripple is often criticized. The network is maintained by a pre-selected list of validators, known as the Unique Node List (UNL). While anyone can run a validator, the fact that a small group of entities—including Ripple Labs—initially controlled the "trusted" list means it's not as decentralized as open, permissionless networks like Bitcoin or Ethereum. This approach sacrifices some decentralization for the sake of speed and efficiency.
+
+Solana (SOL)
+
+* **Position:** Solana is designed to solve the trilemma by prioritizing **Scalability** and **Security**, with its decentralization being a subject of ongoing debate.
+* **Scalability:** Solana's primary selling point is its impressive speed and low transaction costs. It achieves this through a novel combination of a Proof-of-Stake (PoS) consensus mechanism and a new technology called **Proof of History (PoH)**. PoH is essentially a verifiable timekeeping mechanism that allows validators to process transactions in parallel, which is what enables its high throughput.
+* **Security:** The network's security is tied to its PoS mechanism, where validators stake their SOL tokens to secure the network. The financial incentive to be an honest validator and the cryptographic security of the protocol provide robust security. However, due to its high throughput, Solana has experienced several network outages, which have raised questions about its reliability and long-term security.
+* **Decentralization:** This is the most contested part of Solana's position. The high hardware requirements and the significant stake needed to run a validator make it more difficult for the average person to participate, which can lead to a more centralized network of large validators. While there is a large number of validators, the high costs of participation and a history of network outages are often cited by critics as a sign of its lack of true decentralization.
+
+
+{{< /details >}}
+
+
+What this post is NOT about: *a solidity 101*, neither financial advice of any type.
+
+Despite that, some time ago I was having a look to this **amazing BlockChain/Solidity FreeCodeCamp course:**
 
 {{< youtube "gyMwXuJrbJQ" >}}
 
 And this can be much easier thanks to [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)!
-a
+
+
 **Practical Blockchain:**
+
 - Parties that do not know each other can **exchange value without a central authority**
 
 <!-- 
@@ -62,7 +126,7 @@ BlockIQ – Short, catchy, and focused on intelligent blockchain insights.
 I decided to create [the **InsighChAIn Project**](https://github.com/JAlcocerT/PyInsightChAIn). Knowledge from [the Scrap project](https://github.com/JAlcocerT/Scrap_Tools) and practically from [CVCreAItor](/ai-useful-yet-simple/) 💻 
 {{< /callout >}}
 
-{{< details title="What would Cicero Think about Crypto?" closed="true" >}}
+{{< details title="What would Cicero Think about Crypto? About Rules and Tyranny" closed="true" >}}
 
 * Protection Against Arbitrary Power
 
@@ -231,12 +295,16 @@ Because...[why not!](#conclusions)
 
 ## Crypto Resources
 
-* BlockChain Scanners
+* BlockChain Scanners:
   * [ETHScan](https://etherscan.io/)
   * [Solscan](https://solscan.io/)
   * [PolygonScan](https://polygonscan.com/)
+  * https://aavescan.com/ethereum-v3/usdc 
   * https://btcscan.org/
-  * https://aavescan.com/ethereum-v3/usdc
+  * https://bitcoinexplorer.org/
+    * https://github.com/janoside/btc-rpc-explorer
+
+> MIT |  Database-free, self-hosted Bitcoin explorer, via RPC to Bitcoin Core. 
 
 * Blockchain explorer for Ethereum based network and a tool for inspecting and analyzing **EVM based blockchains**.
   * https://github.com/blockscout/blockscout
@@ -245,16 +313,24 @@ Because...[why not!](#conclusions)
   * https://dune.com
   * See what you have in your defi wallet: https://app.metalend.tech/
 
+* See how the chaotic market is doing:
+    * https://coinmarketcap.com/
+
 * If you are [having a business](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe-x-invoiceninja) and want to set crypto payment, you can have a look to https://btcpayserver.org/
+    * https://github.com/btcpayserver/btcpayserver
+
+> MIT |  Accept Bitcoin payments. Free, open-source & self-hosted, Bitcoin payment processor. 
 
 {{< callout type="info" >}}
-If you want to read one and only one book aboyt Crypto - [WhyCryptoCurrencies](https://whycryptocurrencies.com/)
+If you want to read one and only one book about Crypto - [WhyCryptoCurrencies](https://whycryptocurrencies.com/)
 {{< /callout >}}
 
 
 ### Interesting Crypto Stuff I found lately
 
-More Web3 Stuff?
+More [Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/) Stuff?
+
+Because...somehow this links to crypto.
 
 > I was writing [about web3 here](https://jalcocert.github.io/JAlcocerT/guide-web3). 
 
@@ -266,7 +342,7 @@ I was testing [Astro Bento Portfolio + Github Pages + Github CI/CD](https://gith
 {{< /cards >}}
 
 {{< callout type="info" >}}
-If you have a website, I show you [how to also have a **Web3 Compatible website**](/JAlcocerT/guide-web3/)
+If you have a [static website](https://jalcocert.github.io/JAlcocerT/create-your-website/), I show you [how to also have a **Web3 Compatible website**](/JAlcocerT/guide-web3/)
 {{< /callout >}}
 
 
@@ -939,3 +1015,30 @@ If they stated an "APR," it would be a lower number, and you'd need to manually 
 #### APY (Annual Percentage Yield)
 
 * **What it is:** The **Annual Percentage Yield (APY)** is the actual rate of return on an investment or savings account over a year, **taking into account the effect of compounding interest**. It shows you how much your money will *actually* grow over a year if the int
+
+### What it is an order book
+
+The chaos of the market in one place: https://www.coinglass.com/merge/BTC-USDT
+
+An **order book** is a digital list that displays all the buy and sell **limit orders** for a specific asset on a trading exchange. It's essentially a real-time record of market interest, providing a snapshot of the supply and demand for a particular security, cryptocurrency, or other financial instrument.
+
+***
+
+#### Key Components of an Order Book
+
+An order book is typically divided into two sides:
+
+* **Bids (Buy Orders) 🟢:** The list of open orders from people who want to **buy** the asset. They are arranged in **descending order** by price, with the highest price a buyer is willing to pay at the top.
+* **Asks (Sell Orders) 🔴:** The list of open orders from people who want to **sell** the asset. They are arranged in **ascending order** by price, with the lowest price a seller is willing to accept at the top. 
+
+The difference between the highest bid and the lowest ask is called the **bid-ask spread**. This spread is a key indicator of the asset's liquidity and is where a trade can be executed.
+
+#### How it Works
+
+The order book only lists **limit orders**, which are orders to buy or sell an asset at a specific price or better.
+
+When a trader wants to execute a trade immediately, they place a **market order**, which is filled instantly by matching with the best available limit orders in the order book.
+
+For example, if you place a market order to buy 10 units of an asset, the matching engine will fill your order by taking the first available sell orders from the "asks" side of the order book, starting with the lowest price, until your entire order is filled.
+
+This is why a large market order can "walk up" the order book and get filled at different, increasingly higher prices.

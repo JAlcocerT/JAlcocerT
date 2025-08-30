@@ -1,6 +1,6 @@
 ---
 title: "FlaskCMS v0.2"
-date: 2025-08-29
+date: 2025-08-30
 draft: false
 tags: ["Astro x Flask","Markdown editors","Cursor","Stacer"]
 description: 'Markdown and Flask working together.'
