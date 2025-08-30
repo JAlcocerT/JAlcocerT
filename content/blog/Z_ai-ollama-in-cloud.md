@@ -1,12 +1,18 @@
 ---
-title: "Cool AI things with Ollama"
-date: 2025-12-31
-draft: true
-tags: ["Dev","Python"]
+title: "How I spin local LLMs"
+date: 2025-12-07
+draft: false
+tags: ["Home-Lab","Gen-AI"]
 description: 'How to use Ollama - Ollama WebUI Setup'
-summary: 'How I Test AI Projects'
 url: 'ollama-cloud-deployment'
 ---
+
+
+**Intro**
+
+Running LLMs locally, even on a [PI](#how-to-enhance-a-raspberry-pi-for-ai), should not be a problem in 2025.
+
+
 
 ## Large Language Models (LLMs)
 
@@ -20,25 +26,7 @@ url: 'ollama-cloud-deployment'
 * 👉 <https://www.youtube.com/watch?v=rIRkxZSn-A8>
 * <https://www.youtube.com/watch?v=MGr1V4LyGFA>
 
-```yml
-version: '3'
-services:
-  ollama:
-    image: ollama/ollama:latest #0.1.17
-    container_name: ollama
-    ports:
-      - "11434:11434" #Could also be any free local port like 9999:11434
-    volumes:
-      - ai_ollama_data:/root/.ollama
 
-volumes:
-  ai_ollama_data:
-
-#ollama run orca-mini:3b
-
-#http://localhost:11434/
-#    #network_mode: host      
-```
 
 ## Ollama What?
 
@@ -102,7 +90,7 @@ ollama list
 
 ## OpenWebUI
 
-https://github.com/open-webui/open-webui
+* https://github.com/open-webui/open-webui
 
 
 ## REST API
@@ -209,7 +197,7 @@ print(llm.complete("What is a vector database?"))
 
 ### JAN
 
-https://github.com/janhq/jan
+* https://github.com/janhq/jan
 
 > AGPLv3 |  Jan is an open source alternative to ChatGPT that runs 100% offline on your computer 
 

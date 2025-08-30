@@ -2,7 +2,7 @@
 title: "Where to Deploy?"
 date: 2025-08-30
 draft: false
-tags: ["VPS","PaaS for SaaS","Lean Startup"]
+tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio"]
 description: 'Resources to launch your stuff to your clients.'
 url: 'where-to-deploy'
 ---

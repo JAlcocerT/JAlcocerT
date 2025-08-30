@@ -2,7 +2,7 @@
 title: "Time Management in Data Analytics"
 date: 2021-09-25T23:20:21+01:00
 draft: false
-tags: ["Outro"]
+tags: ["Outro","LeanTime"]
 description: 'Time Management Techniques for Data Analytics'
 url: 'time-management-data-analytics'
 ---
@@ -16,6 +16,10 @@ In this post I cover some of the techniques to help you stay on top of your proj
 {{< callout type="info" >}}
 Be aware of the **Optimism Bias** when commiting with others (and with yourself)
 {{< /callout >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Business/PM/leantime_docker-compose.yaml" title="LeanTime | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 ## Understanding your Productivity Peak
 

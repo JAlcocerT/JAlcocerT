@@ -1,5 +1,5 @@
 ---
-title: "FrontEnd and ways to do Auth"
+title: "FrontEnd, SPAs and ways to do Auth"
 date: 2025-08-23
 draft: false
 tags: ["Dev","OAuth/JWT/Bearer","Logto","TinyAuth","PB SDK"]
@@ -53,15 +53,39 @@ A **FE guy recommended** me to look:
 
 
 
+## FE Can do a lot
+
+Front End and its html, [css](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/) and [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/)/[TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/) can do a lot of things.
+
+Not only great looking static blogs or content driven sites.
+
+But also apps, like these for invoice generation, that actually perform some task:
+
+> We can generate PDFs while being statically deployed.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serverless-invoices" title="Serverless-Invoices Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+>> The client’s CPU (and browser engine) does the layout and PDF generation 😧
+
+It seem all that is just the **beauty of SPAs**.
+
+Because I got it deployed statically for free at cloudflare pages, with all its features working: https://serverless-invoices.pages.dev/
+
+![ServerLess-Invoices-SPA](/blog_img/dev/FE/serverless-invoices-spa-indexedDB.png)
+
+
 ## FE Separation of Concerns
 
-An excellent representation of a modern, well-structured front-end application architecture. 
+An excellent representation of a modern, well-structured front-end application architecture is the model follows the **separation of concerns** principle.
 
-This model follows the **separation of concerns** principle, which is a cornerstone of building scalable and maintainable software.
+This is a cornerstone of building scalable and maintainable software.
 
-Here's a breakdown of why this layered approach is so effective:
+But why this layered approach is so effective?
 
-### 1. Component: The Presentation Layer 🎭
+### Component: The Presentation Layer 🎭
 
 The **Component** is a pure presentation layer. Its sole responsibility is to render the UI and respond to user events. It shouldn't contain any complex business logic. 
 
@@ -74,7 +98,7 @@ For example, a `<UserProfile>` component simply takes `user` data as a prop and 
 It doesn't know *how* that data was fetched.
 
 
-### 2. Hooks: The Business Logic Layer 🧠
+### Hooks: The Business Logic Layer 🧠
 
 **Hooks** act as the bridge between the UI and the data layer. They contain the application's **business logic**.
 
@@ -86,7 +110,7 @@ It encapsulates all that complexity so the component doesn't have to. It's the "
 
 ***
 
-### 3. Services: The Data Layer 🔌
+### Services: The Data Layer 🔌
 
 **Services** are the low-level data access layer. 
 
@@ -102,9 +126,9 @@ By separating your application this way, you gain several key advantages:
 
 ## About Business Logic
 
-You've hit on a common point of confusion. **Business logic** is a broad term, and in modern development, it exists on both the front end (FE) and the back end (BE). Your hooks can and should contain business logic, but it's a specific type of logic.
+You've hit on a common point of confusion. **Business logic** is a broad term, and in modern development, it exists on both the front end (FE) and the back end (BE). 
 
-***
+Your hooks can and should contain business logic, but it's a specific type of logic.
 
 ### Business Logic on the Front End (Hooks)
 
@@ -297,6 +321,8 @@ Here are some of the most popular and well-regarded options:
 * **Deployment:** Very lightweight and efficient, often deployed in a Docker container.
 * **Pros:** Simple to set up for protecting multiple services, very resource-efficient, and great for home labs or small-to-medium deployments.
 * **Cons:** Primarily focused on a specific use case (reverse proxy protection), and not a full-featured IAM for general application use.
+
+* https://github.com/asalimonov/authelia-admin
 
 3. Authentik
 

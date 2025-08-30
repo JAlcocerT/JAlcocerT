@@ -1,8 +1,8 @@
 ---
 title: "[AIoT] How to use LangChain to Chat with Sensor Data"
-date: 2025-12-03T21:20:21+01:00
+date: 2025-11-17T21:20:21+01:00
 #Lastmod: 2022-11-17
-draft: true
+draft: false
 tags: ["Dev"]
 description: 'Using LangChain with OpenAI API to get information about Temperature and Humidity of a DHT22 sensor'
 summary: 'Using LangChain with OpenAI API to get information about Temperature and Humidity of a DHT22 sensor'
@@ -186,7 +186,7 @@ docker build -t dht_sensor_mariadb .
 
 #### Visualize the IoT Data
 
-Lets use Metabase as BI Tool to visualize the IoT data that we are storing already.
+Lets use **Metabase** as BI Tool to visualize the IoT data that we are storing already.
 
 ## Part 2 - AIoT Setup
 

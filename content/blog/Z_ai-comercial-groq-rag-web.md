@@ -1,16 +1,13 @@
 ---
 title: "How to use Groq to Chat with a Website"
-date: 2025-12-31
-draft: true
-cover:
-    image: "https://socialify.git.ci/PromtEngineer/YoutTube-Tutorial/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-    alt: "Chat with Websites with Groq" # alt text
-    caption: "Using Groq to chat with Websites." # display caption under cover
+date: 2024-07-31
+draft: false
 tags: ["Docker","Gen-AI","Python","Dev","Self-Hosting"]
 description: 'Chat with Websites with Groq'
-summary: 'How to use Groq with a Streamlit RAG to chat with Websites'
-url: 'streamlit-rag-groq'
+url: 'streamlit-website-rag-groq'
 ---
+
+How to use Groq with a Streamlit RAG to chat with Websites
 
 <!-- https://www.youtube.com/watch?v=_IcgfbXAAPM
 https://github.com/PromtEngineer/YoutTube-Tutorial
@@ -18,7 +15,7 @@ https://github.com/PromtEngineer/YoutTube-Tutorial
 https://github.com/JAlcocerT/Streamlit-Rag-Groq
  -->
 
-We already used [Groq together with Streamlit](/summarize-yt-videos) to create a Youtube Video summarizer.
+We already used [Groq together with Streamlit](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/) to create a Youtube Video summarizer.
 
 Now, it's time to use Groq API to chat with Websites.
 
@@ -38,12 +35,6 @@ By default it will summarize the content of:
 It has to create the embeddings - which will be the time consuming part (one time).
 
 Later, the calls to Mixtral through Groq API will be pretty quick.
-
-
----
-
-## Conclusions
-
 
 ## FAQ
 
@@ -117,7 +108,9 @@ Vector databases are specialized databases designed to handle vector data effici
 
 #### What are Embeddings?
 
-Embeddings are a fundamental concept in machine learning and natural language processing (NLP). They are used to convert categorical variables, text, or other non-numeric data into a numeric format that can be used by machine learning algorithms. Here's a detailed explanation of embeddings and their significance:
+Embeddings are a fundamental concept in machine learning and natural language processing (NLP).
+
+They are used to convert categorical variables, text, or other non-numeric data into a numeric format that can be used by machine learning algorithms. Here's a detailed explanation of embeddings and their significance:
 
 0$ embeddings-  <https://www.youtube.com/watch?v=QdDoFfkVkcw>
 
@@ -152,4 +145,6 @@ Embeddings are a fundamental concept in machine learning and natural language pr
 10. **Distance and Similarity Measures**:
     - In the embedding space, distance measures like cosine similarity or Euclidean distance can be used to quantify the similarity or dissimilarity between entities (e.g., words, documents, etc.).
 
-Embeddings are a cornerstone for handling non-numeric data in machine learning models, enabling the capture and utilization of complex relationships and semantic meanings inherent in the data. They form the basis for many advanced machine learning and NLP techniques, contributing significantly to the progress and achievements in the field.
+Embeddings are a cornerstone for handling non-numeric data in machine learning models, enabling the capture and utilization of complex relationships and semantic meanings inherent in the data. 
+
+They form the basis for many advanced machine learning and NLP techniques, contributing significantly to the progress and achievements in the field.

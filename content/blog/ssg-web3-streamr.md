@@ -1,16 +1,25 @@
 ---
 title: "Streamr"
-date: 2025-12-19T23:20:21+01:00
-draft: true
+date: 2025-11-19T23:20:21+01:00
+draft: false
 tags: ["Web"]
 description: ''
 url: 'streamr-network'
 ---
 
+**Intro**
+
+This year I have been consolidating some IoT/Sensor and MQTT knowledge on few posts:
+
+Then, I found out about:
+
 https://www.youtube.com/watch?v=6hbg_xMPCjs
 
-https://streamr.network/
-https://streamr.network/hub/projects
+* https://streamr.network/
+    * https://streamr.network/hub/projects
+* https://docs.streamr.network/
+
+* https://github.com/streamr-dev/network
 
 ## Streamr Project
 

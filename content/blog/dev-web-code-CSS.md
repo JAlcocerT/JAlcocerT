@@ -2,7 +2,7 @@
 title: "CSS like a Pro with Tailwind, DaisyUI..."
 date: 2024-08-12T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","DaisyUI","TailWind"]
 summary: "CSS Frameworks I find amazing to make nice UI/X for Websites"
 ---
 

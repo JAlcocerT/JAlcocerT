@@ -1,11 +1,14 @@
 ---
-title: "Business ideas with Open Source"
-date: 2025-12-10T23:20:21+01:00
-draft: true
-tags: ["OSS for Business"]
+title: "Business Around Open Source"
+date: 2025-11-25T23:20:21+01:00
+draft: false
+tags: ["OSS for Business","Serverless-Invoices","Payments"]
 description: ''
 url: 'open-source-software-for-business'
 ---
+
+
+**Intro**
 
 ## Business OSS Driven
 
@@ -13,44 +16,53 @@ Make sure to understand the licenses.
 
 MIT, Apache v2 will work.
 
-## Hotels
+You can get around with open source for:
+
+1. Creating Invoices: There are several ways to do so, but I like the simplicity of serverless-invoices
+2. Receiving payments: Stripe API is great and simplify a lot of things.
+
+## Others
+
+### Hotels
 
 
-https://qloapps.com/qloapps-installation-process/
+* https://qloapps.com/qloapps-installation-process/
 
-docker run -d \
-   -p 80:80 \
-   -p 3306:3306 \
-   -p 2222:22 \
-   --name qloapp_srv \
-   --restart unless-stopped \
-   -e USER_PASSWORD=qloappsuserpassword \
-   -e MYSQL_ROOT_PASSWORD=myrootpassword \
-   -e MYSQL_DATABASE=qloappsdb \
-   -v qloapps_mysql:/var/lib/mysql \
-   webkul/qloapps_docker:latest
 
-   > https://peppe8o.com/qloapps-raspberry-pi/
+* https://www.chaport.com/powered-by-chaport
+* https://www.livechat.com/pricing/
 
-   https://www.ezeefrontdesk.com/ alternative
+> https://peppe8o.com/qloapps-raspberry-pi/ this is a https://www.ezeefrontdesk.com/ alternative
 
-## Monitoring
+
+https://github.com/JAlcocerT/Home-Lab/tree/main/qloaps
+
+### Monitoring
+
+So you are already having few SaaS.
+
+Most of the sites are reciving no traffic.
+
+But there is that idea taking over.
+
+Is your VPS server fried already?
+
+Figure that out with these OSS Monitoring Tools:
 
 * Monitor your vendors
     * https://pingbot.dev/#pricing
 
 Monitoring for your servers, vendors, and infrastructure.
 
-## Chats
+### Chats
 
-* https://www.chaport.com/powered-by-chaport
-* https://www.livechat.com/pricing/
 
 ## Project Management
 
+If you are already a [BA](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/)/PM and are very mindful about your [time](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) and creation proper project docs like [BRD's](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/)
 
 * Project management and issue tracking for everyone - https://github.com/makeplane/plane
-https://github.com/makeplane/plane?tab=AGPL-3.0-1-ov-file#readme
+    * https://github.com/makeplane/plane?tab=AGPL-3.0-1-ov-file#readme
 
 >  🔥 🔥 🔥 Open Source JIRA, Linear and Asana Alternative. Plane helps you track your issues, epics, and product roadmaps in the simplest way possible. 
 

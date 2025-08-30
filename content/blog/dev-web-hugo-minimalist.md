@@ -3,9 +3,13 @@ title: "Minimalist Blogs - with hugo and more"
 date: 2025-12-31
 draft: true
 tags: ["Dev"]
-summary: 'How to get started with HUGO'
+summary: 'The minimalist web and what to learn from it.'
 url: 'creating-a-minimalist-blog'
 ---
+
+**Intro**
+
+I get very happy when finding out about blog posts on reddit or on self.st newsletter that are purely human driven.
 
 paper mod Theme
 

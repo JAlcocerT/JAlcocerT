@@ -1,5 +1,5 @@
 ---
-title: "Whats Typescript?"
+title: "What is Typescript? > JavaScript ?"
 date: 2025-08-14
 draft: false
 tags: ["SSG","Web","Yarnness","Gitea WebHooks"]
@@ -11,7 +11,11 @@ url: 'whats-typescript'
 
 **Intro**
 
+Quite a few years back, a colleague mentioned that we should learn about TS and just create some paid PowerBI panels that we could sell.
 
+We did not.
+
+But between all the websites Ive been exploring with, its time to put together [what it is TS](#ts) and how it superseeds [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/).
 
 ## TS
 

@@ -1,12 +1,17 @@
 ---
 title: "PM Tools for Business"
-date: 2025-12-15T23:20:21+01:00
-draft: true
-tags: ["Web","OSS for Business","Self-Hosting"] 
-description: ''
-summary: '.'    
+date: 2025-11-15T23:20:21+01:00
+draft: false
+tags: ["Web","OSS for Business","Self-Hosting","PPTs"] 
+description: ''    
 url: 'selfhosting-pm-tools-docker'    
 ---
+
+
+**Intro**: As a PM in any project, you will need to:
+
+1. Take good [notes](#note-taking-apps)
+2. Create proper [PPTs](#creating-presentations-ppts) and diagrams
 
 ## Note Taking Apps
 
@@ -53,7 +58,13 @@ AppFlowy, an open source project mgmt, documentation, and note-taking app for ex
 
 ## F/OSS to Manage Projects
 
-### OpenProject
+1. OpenProject
+2. LeanTime
+3. TimeLite
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Business/PM" title="PM Related | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ## F/OSS to Communicate with the Team
@@ -76,6 +87,7 @@ Airtable alternatives...
 
 1. Open Resume
 2. Reactive Resume
+3. OverLeaf - Latex driven CV as a Code
 
 ### How to BackUp My Projects
 
@@ -84,11 +96,6 @@ Airtable alternatives...
 #### NextCloud
 
 
-url: 'selfhosting-Leantime-docker'
-
-* {{< newtab url="https://.github.io//" text="The  Official Site" >}}
-* {{< newtab url="https://github.com//" text="The  Source Code at Github" >}}
-    * License: {{< newtab url="https://github.com//?tab=AGPL-3.0-1-ov-file#readme" text="aGPL 3.0" >}} ❤️
 
 
 ---

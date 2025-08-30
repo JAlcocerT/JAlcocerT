@@ -2,14 +2,18 @@
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
 date: 2025-11-17
 draft: false
-tags: ["Tinkering"]
+tags: ["Tinkering","DB2Rest","TelemetryHarbor"]
 description: 'IoT Meets AI. Using MQTT and AI Together.'
 url: 'just-iot'
 ---
 
 **TL;DR:** Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
 
-DB2Rest
++++ DB2Rest
+
+* https://telemetryharbor.com/?ref=selfh.st
+* https://docs.telemetryharbor.com/docs/Integrations/home-assistant/
+
 
 
 **Intro**

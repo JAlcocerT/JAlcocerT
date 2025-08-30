@@ -153,4 +153,36 @@ With advanced retrieval methods, it's best suited for building RAG, question ans
 
 ## FAQ
 
+Normally, API calls are stateless.
+
+* https://www.anthropic.com/news/prompt-caching
+
 * <https://github.com/jondot/awesome-rust-llm>
+
+What it is MLOps?
+
+## ML Ops Tools
+
+Open-source tools for prompt testing and experimentation, with support for both LLMs (e.g. OpenAI, LLaMA) and vector databases (e.g. Chroma, Weaviate, LanceDB).
+
+* https://github.com/hegelai/prompttools
+
+### Visualizing NNs
+
+https://github.com/lutzroeder/netron
+
+### AI Operations
+
+https://pezzo.ai/
+
+
+https://github.com/tensorchord/awesome-llmops
+https://github.com/EthicalML/awesome-production-machine-learning
+
+### OpenVino
+
+https://github.com/openvinotoolkit/openvino
+
+> OpenVINO™ is an open-source toolkit for optimizing and deploying AI inference
+
+

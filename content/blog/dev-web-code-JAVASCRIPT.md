@@ -2,7 +2,7 @@
 title: "Some JS to make Cooler Webs"
 date: 2025-01-12T23:20:21+01:00
 draft: false
-tags: ["Dev","React","Web","Astro"]
+tags: ["Dev","React","Web","Astro","Skulpt"]
 summary: "Javascript Frameworks I find amazing to make nice UI/X for Websites"
 url: 'javascript-for-static-websites'
 ---

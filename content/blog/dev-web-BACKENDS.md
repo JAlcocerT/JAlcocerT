@@ -2,10 +2,18 @@
 title: "Backends"
 date: 2025-12-15T23:20:21+01:00
 draft: true
-tags: ["Dev"]
+tags: ["Dev","Laravel"]
 url: 'backend-alternatives'
-summary: 'How to use gist as free image hosting'
+summary: 'Backend 101 for your Saas'
 ---
+
+**Intro**
+
+Im mostly focused on python, *despite not being a real dev*.
+
+But Ive heard a lot of people do cool things with just PHP+jquery.
+
+Others mention a lot the power of [Laravel](#laravel-101)
 
 
 ## Laravel 101
@@ -62,10 +70,6 @@ Here's a quick comparison to highlight their similarities and differences:
 
 So, yes, Laravel is primarily a backend framework, similar to Django and Flask in its core purpose. However, it distinguishes itself with its elegant syntax, strong focus on developer experience, and a rich set of features tailored for PHP-based web development.
 
-**FastAPI**
-
-### Laravel
-
 Laravel is a popular and powerful open-source PHP framework that web developers use to build modern web applications. Think of it as a toolkit that provides a structure and a bunch of helpful tools to make web development easier and faster.
 
 Here's a breakdown of what makes Laravel so great:
@@ -120,7 +124,7 @@ https://github.com/filamentphp/filament
 > MIT |  A collection of beautiful full-stack components for Laravel. The perfect starting point for your next app. Using Livewire, Alpine.js and Tailwind CSS. 
 
 
-You're absolutely right! Laravel is primarily a backend framework, just like Django and Flask. They all focus on handling the server-side logic, data management, and API creation for web applications.
+Laravel is primarily a backend framework, just like Django and Flask. They all focus on handling the server-side logic, data management, and API creation for web applications.
 
 Here's a quick comparison to highlight their similarities and differences:
 

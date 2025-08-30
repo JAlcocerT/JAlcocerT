@@ -2,7 +2,7 @@
 title: "Tools that help me FOCUS"
 date: 2025-03-01
 draft: false
-tags: ["Outro"]
+tags: ["Outro","LeanTime","NextBeats"]
 description: 'Tools for concentrating in a noisy world.'
 url: 'tools-to-improve-focus'
 ---
@@ -51,7 +51,7 @@ sudo snap install pomatez
 You can use many of this OSS tools for free, just with proper configuration:
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LibreChat" title="PM Focus Tools | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/" title="PM Focus Tools | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
 I really enjoy placing this as **background sound**:
@@ -95,7 +95,9 @@ You can also be
 * https://super-productivity.com/
     * https://github.com/johannesjo/super-productivity
 
->  MIT | Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, Gitlab, GitHub and Open Project. 
+>  MIT | Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities.
+
+It also comes with integrations for Jira, Gitlab, GitHub and [Open Project](#other-productivity-tools). 
 
 * You can find it in FDroid: https://f-droid.org/en/packages/com.superproductivity.superproductivity/
 * And also in snapcraft: https://snapcraft.io/superproductivity
@@ -114,7 +116,11 @@ If you follow the one thing at a time rule: kanban and [lean](https://jalcocert.
 
 1. [Focalboard](https://fossengineer.com/focalboard-docker) 
 2. [DrawIO Diagrams](https://fossengineer.com//selfhosting-drawio-with-docker)
-3. [LeanTime](https://fossengineer.com/selfhosting-Leantime-docker)
+3. [LeanTime](https://fossengineer.com/selfhosting-Leantime-docker) or OpenProject
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Business/PM/leantime_docker-compose.yaml" title="LeanTime | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 4. For note taking apps: see [trilium](https://fossengineer.com/selfhosting-Trilium-docker/), joplin or [logseq](https://fossengineer.com/selfhosting-logseq/)
 

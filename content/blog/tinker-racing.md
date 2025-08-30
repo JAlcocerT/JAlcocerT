@@ -1,9 +1,15 @@
 ---
 title: "Racing, IoT and Data"
-date: 2025-12-10
+date: 2025-12-30
 draft: true
 tags: ["Tinkering"]
 description: OBD Data
+---
+
+
+**Intro** If you are into cars / trackdays or simply enjoy tinkering with IoT Data...
+
+
 ---
 
 AndrOBD (Connect to your car's OBD system)

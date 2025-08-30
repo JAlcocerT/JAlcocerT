@@ -1,19 +1,22 @@
 ---
 title: "[GUIDE] - How to avoid Web Paywalls"
-date: 2025-12-31T23:20:21+01:00
-draft: true
-tags: ["",""]
+date: 2025-11-27T23:20:21+01:00
+draft: false
+tags: ["Tinkering"]
 description: ''
-summary: ''
 url: 'how-to-bypass-paywalls'
 ---
 
-https://github.com/iamadamdev/bypass-paywalls-chrome
 
+**Intro**
 
-* {{< newtab url="/" text="The Ollama web UI Official Site" >}}
-* {{< newtab url="https://github.com/iamadamdev/bypass-paywalls-chrome" text="The VectorAdmin Source Code at Github" >}}
-    * License: {{< newtab url="https://github.com/ollama-webui/ollama-webui#MIT-1-ov-file" text="MIT" >}} ❤️
+This year I was learning how to use Logto and others to do some kind of walls.
+
+Not necesarily paywalls with stripe.
+
+Then, I got to know:
+
+* https://github.com/iamadamdev/bypass-paywalls-chrome
 
 
 

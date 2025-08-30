@@ -140,7 +140,12 @@ npm install
 npm run dev -- --host 0.0.0.0 --port 4321
 ```
 
-And see that the theme still works.
+And see that the theme still works, even when built:
+
+```sh
+npx serve -s dist -l 8080
+#python3 -m http.server 8080 --directory dist
+```
 
 But lets apply some new good practices: **Makefile first** as readme.md can get out-dated
 
