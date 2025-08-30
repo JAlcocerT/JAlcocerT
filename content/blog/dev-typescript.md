@@ -2,7 +2,7 @@
 title: "What is Typescript? > JavaScript ?"
 date: 2025-08-14
 draft: false
-tags: ["SSG","Web","Yarnness","Gitea WebHooks"]
+tags: ["SSG","Web","Yarnness x Knitting"]
 description: 'Typescript and how easy is for everyone to get a blog.'
 url: 'whats-typescript'
 ---
@@ -174,10 +174,3 @@ You might also need some git tricks:
 choco install gh
 gh auth login
 ```
-
-### Gitea x GHA
-
-With Github you can get GHA for free on public repos.
-
-But how about setting Github to Gitea webhooks and then build your site on your homelab automatically?
-

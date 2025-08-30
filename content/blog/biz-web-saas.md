@@ -1,6 +1,6 @@
 ---
 title: "Quick SaaS Websites with user login"
-date: 2025-08-29
+date: 2025-08-30
 draft: false
 tags: ["Web",HomeLab,"Gitea","Cursor CLI and InvoCLI"]
 description: 'FastAPI x PocketBase x SSG so that your project are good looking and with a working SignIn/Up.'
@@ -85,8 +85,13 @@ echo $RESPONSE
 
 ### SSG
 
+Lets use this cool astro theme:
+
 ```sh
-git clone https://github.com/ctrimm/astro-payroll-solution-theme
+git clone https://github.com/ctrimm/astro-payroll-solution-theme #MIT Licensed
+#https://payflo.corytrimm.com/ #demo
+
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
 Logto had a cool post about how to vibe code a photo gallery app with built in auth:
@@ -272,6 +277,12 @@ Webhooks are a key component of an event-driven architecture. They are essential
 * **Example**: A GitHub API user can configure a webhook on their repository. When a new commit is pushed, GitHub sends a `POST` request to the user's webhook URL with a JSON payload containing information about the commit. The user's application can then process this data in real-time, perhaps by triggering an automated build process.
 
 ### Gitea 101
+
+Gitea x GHA
+
+With Github you can get GHA for free on public repos.
+
+But how about setting Github to Gitea webhooks and then build your site on your homelab automatically?
 
 Yes, you can absolutely create users and clone repositories from Gitea using the command line.
 

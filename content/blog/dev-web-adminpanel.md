@@ -1,6 +1,6 @@
 ---
 title: "Admin Panels for Websites | Testing Manifest "
-date: 2025-08-30
+date: 2025-09-07
 tags: ["AI","Authentication"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
