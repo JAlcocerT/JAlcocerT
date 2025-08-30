@@ -2,20 +2,18 @@
 title: "Life is Short. Dont waste it with the `Wront` Website."
 date: 2024-09-30
 draft: false
-tags: ["dev"]
+tags: ["Dev"]
 summary: 'Helping people by making them Websites. What I have built so far.'
 url: 'portfolio-websites'
 ---
 
-
 It all started few years ago with my **own travel blog**.
 
-Later on, my first business website followed.
-
+Later on, my *business website* followed.
 
 {{< cards >}}
-  {{< card link="https://cyclingthere.com" title="My Travel Adventures" image="/blog_img/web/WebsSnapshots/Web_CyclingThere.png" subtitle="I can write and also create interesting photo galleries about my travel experiences" >}}
-  {{< card link="https://iotechcrafts.com/" title="Business Website" image="/blog_img/web/WebsSnapshots/Web_IoTechCrafts.png" subtitle="A Website for Agency - AI & IoT Consulting Services" >}}
+  {{< card link="https://cyclingthere.pages.dev" title="My Travel Adventures" image="/blog_img/web/WebsSnapshots/Web_CyclingThere.png" subtitle="I can write and also create interesting photo galleries about my travel experiences" >}}
+  {{< card link="https://iotechcrafts.pages.dev/" title="Business Website" image="/blog_img/web/WebsSnapshots/Web_IoTechCrafts.png" subtitle="A Website for Agency - AI & IoT Consulting Services" >}}
 {{< /cards >}}
 
 And then I saw **people close to me, who needed help**.
@@ -116,9 +114,11 @@ Like we did at the **Social Media Project!**
 * **Automatic Invoices**
   * With Stripe as payment gateway, they create the invoices for your product/services automatically
   * There are some project to [create invoices with open software](https://fossengineer.com/open-source-invoice-creator/) - **Serverless Invoices** worked great for me!
+    * https://github.com/JAlcocerT/serverless-invoices
+    * https://serverless-invoices.pages.dev/invoices?lang=en
 
 
-{{% details title="ServerLess-Invoices Setup with Docker 🚀" closed="true" %}}
+{{% details title="VueJS Example - ServerLess-Invoices Setup with Docker 🚀" closed="true" %}}
 
 Create and manage invoices in your browser.
 
@@ -129,15 +129,16 @@ Serverless Invoices is a free invoicing tool for freelancers and small businesse
 * https://github.com/JAlcocerT/Docker/tree/main/Business/Billing
 
 ```sh
-git clone https://github.com/mokuappio/serverless-invoices.git
-#https://github.com/JAlcocerT/serverless-invoices
+#git clone https://github.com/mokuappio/serverless-invoices.git
+git clone https://github.com/JAlcocerT/serverless-invoices
 
 cd serverless-invoices
+make
 #rm -rf .git
 
-docker build . -t mokuappio/serverless-invoices
-#docker run -p 89:8080 -d --rm mokuappio/serverless-invoices
-docker run -p 89:8080 -d --rm --name serverlessinvoices mokuappio/serverless-invoices
+# docker build . -t mokuappio/serverless-invoices
+# #docker run -p 89:8080 -d --rm mokuappio/serverless-invoices
+# docker run -p 89:8080 -d --rm --name serverlessinvoices mokuappio/serverless-invoices
 ```
 
 > There is an awsome [Dockerfile example](https://github.com/JAlcocerT/serverless-invoices/blob/main/Dockerfile) on how to bundle a Node App for Production
@@ -145,7 +146,5 @@ docker run -p 89:8080 -d --rm --name serverlessinvoices mokuappio/serverless-inv
 You can print to pdf, add your logo, taxes, CSS...
 
 ...**and import/export the json with all your created invoices**
-
-* Or use their Saas: https://app.mokuapp.io/login
 
 {{% /details %}}

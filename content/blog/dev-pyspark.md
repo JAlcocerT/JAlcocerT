@@ -2,7 +2,7 @@
 title: "Getting started with PySpark"
 date: 2022-10-17T23:20:21+01:00
 draft: false
-tags: ["Dev","Python"]
+tags: ["Dev","Python","jsonformatter"]
 description: 'How to use PySpark (Python) for Big Data Processing.'
 url: 'guide-python-PySpark'
 ---

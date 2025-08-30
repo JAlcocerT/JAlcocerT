@@ -12,7 +12,7 @@ url: 'ollama-cloud-deployment'
 
 Running LLMs locally, even on a [PI](#how-to-enhance-a-raspberry-pi-for-ai), should not be a problem in 2025.
 
-
+https://jalcocert.github.io/JAlcocerT/where-to-deploy/
 
 ## Large Language Models (LLMs)
 

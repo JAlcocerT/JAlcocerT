@@ -2,7 +2,7 @@
 title: "FrontEnd, SPAs and ways to do Auth"
 date: 2025-08-23
 draft: false
-tags: ["Dev","OAuth/JWT/Bearer","Logto","TinyAuth","PB SDK"]
+tags: ["Dev","OAuth/JWT/Bearer","Logto","TinyAuth","PB SDK","SPAs Serverless-Invoices"]
 description: 'A Better front-end and authentication. With SelfHosted OAUTH recap.'
 url: 'front-end-and-auth'
 ---
@@ -70,14 +70,39 @@ But also apps, like these for invoice generation, that actually perform some tas
 
 >> The client’s CPU (and browser engine) does the layout and PDF generation 😧
 
-It seem all that is just the **beauty of SPAs**.
+It seem all that is just the **beauty of [SPAs](https://github.com/JAlcocerT/serverless-invoices/blob/main/WHAT_IS_SPA.md)**.
 
-Because I got it deployed statically for free at cloudflare pages, with all its features working: https://serverless-invoices.pages.dev/
+Because I got it deployed statically for free at cloudflare pages [like so](https://github.com/JAlcocerT/serverless-invoices/blob/main/Deploy_to_CF.md), with all its features working: https://serverless-invoices.pages.dev/
+
+Its also interesting to see how it works the invoice editor, purely static. Idea for the markdown editor? 
+
+Ill have to see also [react-invoice deployed at vercel](https://react-invoice-nu.vercel.app/) or [wikiJS](https://github.com/requarks/wiki) to get more ideas
+
+If you are confussed...I have been too.
+
+Get a broader view: I have added this [SSG / SPA / SPA+Webhooks / Full Stack 101](https://github.com/JAlcocerT/serverless-invoices/blob/main/ARCHITECTURE_OPTIONS.md)
+
+| Model | What it is | Pros | Cons | Good for | Typical hosting/runtime |
+| --- | --- | --- | --- | --- | --- |
+| SPA | Client‑side rendered app; one `index.html`, routes in browser | Simple hosting, rich UX, offline possible, minimal infra | Larger initial JS, SEO needs care, auth done client‑side | Tools, dashboards, single‑user/private apps | Static host (CF Pages/Netlify/Vercel) + SPA fallback |
+| PWA | SPA/SSG with Service Worker + manifest for offline/install | Offline/cache, installable, better UX | SW complexity, cache invalidation, browser quirks | Field apps, recurring tools, low‑connectivity use | Same as SPA/SSG + Service Worker |
+| SPA + Webhooks | SPA UI + serverless functions reacting to provider webhooks; small state in KV/DB; client reads via `/api/me` | Keep static hosting; entitlements/auth/events without full backend; low cost | Extra moving parts (functions, secrets, KV); client gating (not true server auth) | Feature unlocks, subscription gates, light auth/roles, Stripe/MailerLite/Logto/PocketBase events | Static host + Functions (CF Workers/Pages Functions, Netlify/Vercel) + KV/D1 |
+| SSG | Pages pre‑rendered at build time | Great SEO/TTFB, CDN‑only, predictable costs | Rebuilds for content changes (unless ISR); dynamic per‑user needs client fetch | Marketing/docs, blogs, mostly static content | Static host; optional ISR/edge revalidation |
+| JAMstack | Architecture: static frontends + APIs + serverless; can be SPA or SSG | Scales via CDN, decoupled services, strong DX | Requires integration glue (webhooks/functions), service sprawl | Sites/apps that mix static + APIs; headless CMS | Static host + Functions + external APIs (headless CMS, auth, payments) |
+| SSR (full‑stack) | HTML rendered per request (server/edge) with API/backend | Fast first render, great SEO for dynamic routes, secure server auth, streaming | Needs runtime/server, higher ops complexity/cost | Multi‑user SaaS, personalized content, complex auth | App platform (Node SSR: Nuxt/Next/Nest/Express) on server/edge |
+
+{{< callout type="info" >}}
+See how JAMstack is an alternative to SPA+Webhooks
+{{< /callout >}}
 
 ![ServerLess-Invoices-SPA](/blog_img/dev/FE/serverless-invoices-spa-indexedDB.png)
 
+{{< callout type="info" >}}
+See that IndexedDB storing *for the moment* my imported [sample invoice json](https://github.com/JAlcocerT/serverless-invoices/blob/main/serverless-invoices-example.json)
+{{< /callout >}}
 
-## FE Separation of Concerns
+
+### FE Separation of Concerns
 
 An excellent representation of a modern, well-structured front-end application architecture is the model follows the **separation of concerns** principle.
 
@@ -85,7 +110,7 @@ This is a cornerstone of building scalable and maintainable software.
 
 But why this layered approach is so effective?
 
-### Component: The Presentation Layer 🎭
+#### Component: The Presentation Layer 🎭
 
 The **Component** is a pure presentation layer. Its sole responsibility is to render the UI and respond to user events. It shouldn't contain any complex business logic. 
 
@@ -98,7 +123,7 @@ For example, a `<UserProfile>` component simply takes `user` data as a prop and 
 It doesn't know *how* that data was fetched.
 
 
-### Hooks: The Business Logic Layer 🧠
+#### Hooks: The Business Logic Layer 🧠
 
 **Hooks** act as the bridge between the UI and the data layer. They contain the application's **business logic**.
 
@@ -110,7 +135,7 @@ It encapsulates all that complexity so the component doesn't have to. It's the "
 
 ***
 
-### Services: The Data Layer 🔌
+#### Services: The Data Layer 🔌
 
 **Services** are the low-level data access layer. 
 
@@ -126,7 +151,9 @@ By separating your application this way, you gain several key advantages:
 
 ## About Business Logic
 
-You've hit on a common point of confusion. **Business logic** is a broad term, and in modern development, it exists on both the front end (FE) and the back end (BE). 
+You've hit on a common point of confusion.
+
+**Business logic** is a broad term, and in modern development, it exists on both the front end (FE) and the back end (BE). 
 
 Your hooks can and should contain business logic, but it's a specific type of logic.
 

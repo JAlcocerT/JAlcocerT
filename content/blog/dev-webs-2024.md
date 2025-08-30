@@ -231,7 +231,7 @@ Like we did at the **Social Media Project!**
   * There are some project to [create invoices with open software](https://fossengineer.com/open-source-invoice-creator/) - **Serverless Invoices** worked great for me!
 
 
-{{% details title="ServerLess-Invoices Setup 🚀" closed="true" %}}
+{{% details title="ServerLess-Invoices, VueJS app Setup 🚀" closed="true" %}}
 
 Create and manage invoices in your browser. Serverless Invoices is a free invoicing tool for freelancers and small businesses. 
 
@@ -242,11 +242,12 @@ git clone https://github.com/mokuappio/serverless-invoices.git
 #https://github.com/JAlcocerT/serverless-invoices
 
 cd serverless-invoices
+make
 #rm -rf .git
 
-docker build . -t mokuappio/serverless-invoices
+#docker build . -t mokuappio/serverless-invoices
 #docker run -p 89:8080 -d --rm mokuappio/serverless-invoices
-docker run -p 89:8080 -d --rm --name serverlessinvoices mokuappio/serverless-invoices
+#docker run -p 89:8080 -d --rm --name serverlessinvoices mokuappio/serverless-invoices
 
 ```
 
@@ -255,8 +256,6 @@ docker run -p 89:8080 -d --rm --name serverlessinvoices mokuappio/serverless-inv
 You can print to pdf, add your logo, taxes, CSS...
 
 ...**and import/export the json with all your created invoices**
-
-* Or use their Saas: https://app.mokuapp.io/login
 
 {{% /details %}}
 

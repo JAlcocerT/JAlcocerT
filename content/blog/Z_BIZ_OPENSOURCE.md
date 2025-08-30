@@ -2,7 +2,7 @@
 title: "Business Around Open Source"
 date: 2025-11-25T23:20:21+01:00
 draft: false
-tags: ["OSS for Business","Serverless-Invoices","Payments"]
+tags: ["OSS for Business","Serverless-Invoices","Payments","BillaBear"]
 description: ''
 url: 'open-source-software-for-business'
 ---
@@ -18,8 +18,17 @@ MIT, Apache v2 will work.
 
 You can get around with open source for:
 
-1. Creating Invoices: There are several ways to do so, but I like the simplicity of serverless-invoices
+1. Creating Invoices: There are [several ways to](https://fossengineer.com/open-source-invoice-creator) do so, but I like the simplicity of serverless-invoices.
+
+Your invoices can be backed up with their PDF or the JSON.
+
+https://jsonformatter.org/
+
 2. Receiving payments: Stripe API is great and simplify a lot of things.
+
+* https://github.com/BillaBear/billabear
+
+
 
 ## Others
 

@@ -2,8 +2,8 @@
 title: "How to do live search/research with AI"
 date: 2025-05-23
 draft: false
-tags: ["AI","Web Search","LLMs"]
-description: 'Grok XAi API and Local Deep Researcher compared with Perplexity/Perplexica.'
+tags: ["AI","Web Search","LLMs","Grok"]
+description: 'Using Grok XAi API and Local Deep Researcher compared with Perplexity/Perplexica.'
 url: 'live-search-and-research-with-ai'
 ---
 

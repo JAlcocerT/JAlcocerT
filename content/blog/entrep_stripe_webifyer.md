@@ -2,10 +2,20 @@
 title: "How are you selling? Webify (v0.1) Edition"
 date: 2025-06-03T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Auth","Flask","LogTo","Stripe","SaaS Invoice/Billing","Formbricks"]
+tags: ["Entrepreneuring","Auth","Flask","LogTo","Stripe","Invoice Ninja / Invoicerr","Billing / Billabear","Formbricks"]
 description: 'Stripe 101. Selling Themes and editing capabilities for SSG powered websites.'
 url: 'using-stripe-with-flask'
 ---
+
+
+**TL;DR** Business concepts to help you help others for money, *aka sell*
+
++++ [Selfhosted Invoicing software](#stripe-x-invoiceninja): InvoiceNinja (accepts btcpayserver), Invoicerr, serverless-invoices, BillaBear
++++ [Formbricks](#adding-formbricks-to-flask) and [Umami](#adding-umami-web-analytics-to-flask) x Flask
+[a](#)
++++ [Stripe API](#stripe) and Logto working with Flask
+
+**Intro**
 
 It was about time to put these **entrepreneuring concepts together**.
 
@@ -34,8 +44,6 @@ As your time is limited, you will want to scale the ideas **with tech**:
 And shame on me, I have not been tinkering with Stripe since last year [with the CV project](https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_Auth_Ways/Z_Auth_Stripe.py?ref_type=heads) as per [these tests](https://gitlab.com/fossengineer1/cv-check/-/tree/main/Z_Tests/Stripe?ref_type=heads).
 
 
-**TL;DR**
-
 For some time Im looking for a way to scale how I build websites for people.
 
 Call it: webify, webifAI, webifyer, contentyourule.com or whatever...
@@ -53,6 +61,8 @@ What we will be covering on this post:
 ## Stripe
 
 Because you will need to bill people.
+
+Thats why you should try the Stripe API.
 
 *Probably?*
 
@@ -319,6 +329,8 @@ rm -r .git
 
 ## Choosing a Domain
 
+Get a TLD, if you want.
+
 In this case it will be a **sub**domain.
 
 And we will be needing these **artifacts from Cloudflare**:
@@ -485,6 +497,8 @@ Add **Open Graph** meta tags to your HTML <head> on the landing page:
 
 ### Flask Container
 
+Just follow this: https://github.com/JAlcocerT/Home-Lab/tree/main/py-flask
+
 ### Stripe x InvoiceNinja
 
 One of the most boring part of a job (if you do it for others), yet very rewarding if its for yourself: **billing/invoicing**
@@ -497,7 +511,8 @@ As always, there are few alternatives:
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Billing" title="Invoices with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-1. https://hub.docker.com/r/invoiceninja/invoiceninja/
+1. Invoice Ninja: https://hub.docker.com/r/invoiceninja/invoiceninja/
+
 * https://invoiceninja.com/
 * https://invoiceninja.github.io/en/getting-started/
 
@@ -511,36 +526,35 @@ Which has stripe and [BTCPay](https://btcpayserver.org/) integration https://inv
 
 I git to know it last year and mentioned it [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#scaling-ideas)
 
-Could not resist to fork: https://github.com/JAlcocerT/serverless-invoices
+> Could not resist to fork: https://github.com/JAlcocerT/serverless-invoices
 
 Amazing features as covered [here](https://fossengineer.com/open-source-invoice-creator/#serverless-invoices):
 
 * Custom CSS
-* Export Import JSON
+* Export/Import JSON: *Remember about [jsonformatter](https://jsonformatter.org/)*
 * Export as PDF
 
-> As im in love with projects which do not require a BE running
+> As im in love with projects which do not require a BE running: 
 
 3. Invoicerr: https://github.com/Impre-visible/invoicerr
 
 With an amazing UI:
 
-![alt text](/blog_img/biz/invoicerr/invoicerr-signup.png)
+![Invoicerr SignUp UI Page](/blog_img/biz/invoicerr/invoicerr-signup.png)
 
 ![alt text](/blog_img/biz/invoicerr/invoicerr-setup.png)
 
 ![alt text](/blog_img/biz/invoicerr/invoicerr-dash.png)
 
-You can also have a look to https://github.com/BillaBear/billabear for your cool SaaS
+4. [Optionally] You can also have a look to https://github.com/BillaBear/billabear for your cool SaaS
 
 > Subscription Management and Billing System 
 
 ### EE id x Ubuntu
 
-If you are into entrepreneuring and sell digital stuff, you might be interested in the EE e-residency:
+If you are into entrepreneuring and sell digital stuff, you might be interested in the **EE e-residency**:
 
 * https://www.id.ee/en/article/ubuntu-id-software-installation-updating-and-removal/#removing-mozilla-firefox
-
 * https://www.id.ee/en/article/operating-systems-supported-by-id-software/
 
 ```sh
