@@ -12,7 +12,7 @@ url: 'fastapi-x-pocketbase'
 Putting together a quick and OSS Template with [Astro/Flask/PB](#the-stack)
 
 +++ [New CLI tools + Thoughts on CF Workers](#conclusions)
-+++ [Gitea](#gitea-101) Container Setup and CLI tricks 
++++ [Gitea](#gitea-101) Container Setup and CLI tricks. *Can Gitea become your SaaS user/pwd registry?*
 +++ [Recap](#faq) on Callbacks / Hooks / RestAPIs
 
 
@@ -289,39 +289,84 @@ Gitea x GHA
 
 With Github you can get GHA for free on public repos.
 
-But how about setting Github to Gitea webhooks and then build your site on your homelab automatically?
+But how about **setting Github to Gitea webhooks** and then build your site on your homelab automatically?
 
-Yes, you can absolutely create users and clone repositories from Gitea using the command line.
+What? What are the Directions?
 
-* https://github.com/JAlcocerT/Home-Lab/tree/main/gitea
+> Webhooks are `Gitea -> Your service`.
+
+> > To make things happen inside Gitea, you call its API `Your service -> Gitea`.
+
+
+* Run Gitea into your HomeLab via: https://github.com/JAlcocerT/Home-Lab/tree/main/gitea
 
 ```sh
 sudo docker compose up -d
 ```
 
+And go to `localhost:3033`
+
+
 {{< callout type="info" >}}
 Which it was a demostration of how the `depends_on` container feature works between containers and the compose overrides. See [these .md](https://github.com/JAlcocerT/Home-Lab/tree/main/gitea)
 {{< /callout >}}
+
+*You know whats commin right?*
+
+1. Deploy Gitea, create the admin and get its PAT - Get Familiar with [gitea API capabilities](https://github.com/JAlcocerT/Home-Lab/blob/main/gitea/gitea-api.md)
+2. As users can be created via API and they can fork repos...how about using some [html + FastAPI to wrap that](https://github.com/JAlcocerT/Home-Lab/tree/main/gitea/user-creator-fastapi)?
+3. Imagine...using gitea and cloning a public Github Repo, [like the one we talked above](#ssg)
+
+```sh
+curl -sS -X POST \
+  -H "Authorization: token $GITEA_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "clone_addr": "https://github.com/ctrimm/astro-payroll-solution-theme.git",
+    "repo_name": "astro-payroll-solution-theme",
+    "mirror": false,
+    "private": false,
+    "description": "Imported from GitHub"
+  }' \
+  "$GITEA_BASE/repos/migrate?sudo=yosua" | jq '.full_name,.private,.mirror'
+```
+
+4. Then, continue developing a WebApp that would allow for logged in users to simply edit the content of that SSG (markdown editor)
+
+5. When commit happens, a static build would be triggered via Webhook
+
+![Gitea x FastAPI](/blog_img/dev/FE/gitea-fastapi-webify.png)
+
+> Wouldnt that be cooool? Lets understand [how](#gitea-via-cli)
 
 ### Gitea via CLI
 
 How about doing cool stuff with Gitea, but programatically?
 
-**Gitea has a cool API**: 
+**Gitea has a cool API**
 
-I mean a REST API, a type of API (Application Programming Interface): any interface to interact with a system’s capabilities.
+I mean a REST API, a type of API (Application Programming Interface): *interface to interact with a system’s capabilities.*
 - Examples: REST over HTTP/JSON, GraphQL, gRPC, SOAP, WebSocket APIs, language SDKs, even CLIs.
 - In your Gitea context:
-  - “API” in `https://docs.gitea.com/api/1.24/` specifically means the HTTP REST API (JSON over HTTP).
+  - “API” in <https://docs.gitea.com/api/1.24/> specifically means the **HTTP REST API (JSON over HTTP)**.
   - Your curl examples are REST calls to `http://.../api/v1/...`.
   - Webhooks are not you calling the API; they’re HTTP callbacks from Gitea to you.
+    - And for these to work, *someone or something* should be listening
 
 {{< callout type="info" >}}
 Get clarity on [curl flags](https://github.com/JAlcocerT/Home-Lab/blob/main/gitea/curl-flags.md) and all you can [achieve with the Gitea API Endpoint](https://github.com/JAlcocerT/Home-Lab/blob/main/gitea/gitea-api.md)
 {{< /callout >}}
 
 
+
+
 **Gitea Webhooks**
+
+* https://docs.gitea.com/usage/webhooks
+
+{{< callout type="info" >}}
+
+{{< /callout >}}
 
 > If you want to dive deeper...*I have not yet*
 
