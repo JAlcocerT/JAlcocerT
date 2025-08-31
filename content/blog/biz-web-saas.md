@@ -1,6 +1,6 @@
 ---
 title: "Quick SaaS Websites with user login"
-date: 2025-08-30
+date: 2025-08-30T13:20:21+01:00
 draft: false
 tags: ["Web",HomeLab,"Cloudflare Workers x PB Auth","Gitea","Cursor CLI and InvoCLI","Astro Payroll Theme"]
 description: 'FastAPI x PocketBase x SSG so that your project are good looking and with a working SignIn/Up.'
@@ -105,12 +105,12 @@ Logto had a cool post about how to vibe code a photo gallery app with built in a
 
 And DO a way to deploy static sites: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-static-website-to-the-cloud-with-digitalocean-app-platform
 
-### SSG x PB
+#### SSG x PB
 
 > I was also reading, *chatting with Gemini*, that we could keep the good old stack: Cloudflare Pages + CF Workers + Fetch/Posts users/pwds from a pocketbase somewhere...
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Payroll Theme with PB as auth" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro Theme + CF Workers + PB users collections as Auth" >}}
 {{< /cards >}}
 
 ```sh
@@ -119,14 +119,15 @@ gh auth login
 gh repo create payroll-workers-pb --public --source=. --remote=origin --push
 ```
 
+{{< callout type="info" >}}
+A static Astro site adds auth by proxying login/logout and protected checks through Cloudflare Pages Functions, which **issue and validate an HttpOnly cookie** against PocketBase user records.
+{{< /callout >}}
 
 > > And I got auth via PB SDK working!
 
 We should have a look to `/api/collections/users/auth-with-password`
 
-Remember you have: https://pocketbase.io/demo/
-
-
+Remember you have: https://pocketbase.io/demo/ But this wont give you API access.
 
 The astro site will need to have the PB library so that the SDK is available:
 
@@ -190,12 +191,14 @@ If you are not logged in, you will be redirected towards `/login`.
 
 Simple, static and it literally flies:
 
-![alt text](/blog_img/dev/FE/pocketbase-autnehticated-user-cf-workers.png)
+![Authentication working via cloudflare workers and pocketbase collection](/blog_img/dev/FE/pocketbase-autnehticated-user-cf-workers.png)
 
 * https://developers.cloudflare.com/workers/platform/limits/#worker-limits
 
+
 > 100,000 requests/day, 1000 requests/min and 10ms CPU time - We are golden :)
 
+> > See how well it works: https://fast-payroll-theme.pages.dev/login/
 
 
 ---
@@ -204,8 +207,17 @@ Simple, static and it literally flies:
 
 We could use any other combination of authentications, like: *LogTo, TinyAuth, just hardcoded...* I recapped recently on [this post](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#authentication-tools).
 
+Im now thinking that a future webifyer/*awebsiteforall* project could have such workflow: SSG -> PB signup/signin -> See the `/themes` page if logged in and then choose:
 
-if this has work, so should a SSG + CF Worker + Logto via JS instead of python:
+* Free Tier: Select theme -> Gitea replicate user/pwd -> markdown editor
+* Paid Tier: Pay and get your own domain (check against stripe)
+* Custom solutions
+
+{{< callout type="ingo" >}}
+For that somekind of feature flags will be required, probably something like [gofeatureflag](https://gofeatureflag.org/docs/sdk/client_providers/openfeature_javascript) combined with the described setup
+{{< /callout >}}
+
+As this has worked, so should a SSG + CF Worker + Logto via JS (instead of python):
 
 * https://docs.logto.io/api-protection/nodejs
 * https://www.npmjs.com/package/@logto/js

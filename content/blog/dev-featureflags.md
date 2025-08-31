@@ -1,8 +1,8 @@
 ---
 title: "Fature Flags for your SaaS"
-date: 2025-08-29
+date: 2025-08-31T15:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","GoFeatureFlag vs PocketBase"]
 description: 'FF with Go for your WebApps.'
 url: 'feature-flags'
 ---
@@ -11,7 +11,28 @@ url: 'feature-flags'
 
 I got to know about [Go Feature Flag](#go-feature-flag), a better way to activate functions to Flask Web Apps than via *container + env vars*?
 
+* https://gofeatureflag.org/
+* https://gofeatureflag.org/docs/sdk
+
+I have been playing with cloudflare workers recently:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Payroll Theme with PB as auth" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro Theme + CF Workers + PB users collections as Auth" >}}
+{{< /cards >}}
+
+And in the conclusions I reflected on the next steps of the setup.
+
+If you are logged in...do you have which features available?
+
+
+The primary difference between these two paradigms has to do with the way they model evaluation context.
+
+In server usage, the evaluation context changes frequently, as often as every evaluation, while in client-side usage, the evaluation context changes less frequently, often in response to user actions or UI events.
+
 **Intro**
+
+
+## What are feature flags?
 
 Feature flags, also known as feature toggles, are a software development technique that allows you to turn specific features of an application on or off without deploying new code.
 
@@ -44,6 +65,8 @@ They provide significant benefits:
 
 Yes, feature flags can be passed by **environment variables**, but this is typically only suitable for a very simple setup. 
 
+> Like the ones I was setting with Flask or with Streamlit not long ago
+
 * **Simple Use Cases:** For features that are either entirely on or off for the entire application, an environment variable (e.g., `ENABLE_BETA_FEATURE=true`) can work. This is common for enabling a new API endpoint or a backend service.
 * **Limitations:** This method becomes impractical and unmanageable for more complex scenarios. It doesn't allow for:
     * **Per-user or per-group targeting**
@@ -51,48 +74,53 @@ Yes, feature flags can be passed by **environment variables**, but this is typic
     * **Remote management** without a full application restart or redeployment
     * **A/B testing**
 
-For these reasons, most professional setups use a dedicated **feature flag management system** or service. These services provide a central dashboard to manage flags, target users, and analyze data without code changes or restarts. 
+For these reasons, most professional setups use a dedicated **feature flag management system** or service.
 
-While feature flags are a powerful tool, they are not a silver bullet and come with their own set of drawbacks if not managed carefully. The main cons of feature flags include:
+These services provide a central dashboard to manage flags, target users, and analyze data without code changes or restarts. 
 
-### 1. Increased Code Complexity and Technical Debt
+While feature flags are a powerful tool, they are not a silver bullet and come with their own set of drawbacks if not managed carefully. 
+
+The main cons of feature flags include:
+
+1. Increased Code Complexity and Technical Debt
 
 * **Conditional Logic:** Each feature flag adds conditional logic (e.g., `if (featureEnabled)` statements) to the codebase. As the number of flags grows, the code can become littered with these checks, making it harder to read, understand, and maintain.
 * **Code Bloat:** Long-lived or forgotten flags lead to "dead code" that remains in the application, increasing its size and complexity unnecessarily. This technical debt makes it harder for new developers to understand the system and for existing developers to make changes.
 * **Combinatorial Explosion:** When multiple flags interact, the number of possible code paths and states can explode exponentially. This makes it difficult to reason about the system's behavior and can introduce subtle bugs that only appear in specific, hard-to-reproduce flag combinations.
 
-### 2. Testing and Debugging Challenges
+2. Testing and Debugging Challenges
 
 * **Complexity:** Testing an application with feature flags is far more complex than testing one without them. You can no longer just test a single code path. You must test every possible combination of flags to ensure the application behaves as expected. This can significantly increase the time and effort required for QA.
 * **Reproducing Bugs:** When a bug is reported, it can be very difficult to reproduce if you don't know the exact combination of flags that was active for the user at the time. This can lead to frustrating and time-consuming debugging sessions.
 * **Stale Flags:** A bug can be caused by a flag that was meant to be temporary but was left in the codebase for too long. Over time, the code behind the flag may no longer work as intended with the rest of the application, leading to regressions when it is accidentally enabled.
 
-### 3. Management and Coordination Overhead
+3. Management and Coordination Overhead
 
 * **Lack of Discipline:** Without a clear process for cleaning up flags, they can accumulate over time and become unmanageable. This requires a strong team culture and discipline to regularly review and remove obsolete flags.
 * **Knowledge Silos:** If a team doesn't have a central way to track and manage flags, different developers may be unaware of what flags exist, what they control, or how they might interfere with each other's work.
 * **Misuse:** Feature flags can be misused as a permanent solution for customer-specific configurations or for personalizing the user experience, rather than as a temporary tool for release management. This can lead to a long-term, unmaintainable mess.
 
-### 4. Performance Overhead
+4. Performance Overhead
 
 * **Runtime Checks:** In high-traffic or performance-critical systems, the constant checking of flag states can introduce a small amount of overhead. While this is often negligible, it can become a concern if you have many flags or if the flag evaluation logic is complex.
 
 In conclusion, the cons of feature flags are primarily related to **complexity and technical debt**. They are powerful tools, but they require a strong management process and team discipline to avoid turning a temporary solution into a long-term problem.
 
+There are several open-source software (OSS) solutions that help with feature flags.
 
-Yes, there are several open-source software (OSS) solutions that help with feature flags. These tools typically provide a server component for managing flags and client-side SDKs to integrate with your application.
+These tools typically provide a server component for managing flags and client-side SDKs to integrate with your application.
 
 Some of the most popular open-source options include:
 
-Unleash is one of the most widely used open-source feature flag platforms. It's built with a strong focus on core feature flagging capabilities and is designed to be highly scalable. It provides a web UI to manage flags, define activation strategies (like gradual rollouts or targeting specific users), and has official SDKs for many popular languages.
+1. Unleash is one of the most widely used open-source feature flag platforms. It's built with a strong focus on core feature flagging capabilities and is designed to be highly scalable. It provides a web UI to manage flags, define activation strategies (like gradual rollouts or targeting specific users), and has official SDKs for many popular languages.
 
-Flagsmith is an open-source platform for managing feature flags and remote configuration. It offers a self-hosted option, allowing you to have full control over your data. Flagsmith supports granular user targeting, A/B testing, and provides SDKs for web, mobile, and server-side applications.
+2. Flagsmith is an open-source platform for managing feature flags and remote configuration. It offers a self-hosted option, allowing you to have full control over your data. Flagsmith supports granular user targeting, A/B testing, and provides SDKs for web, mobile, and server-side applications.
 
-GrowthBook is an open-source platform that combines feature flags with A/B testing and product analytics. Its unique "warehouse-native" approach means it connects directly to your data warehouse, allowing you to use your existing data for experimentation without moving it to a third-party service. This makes it a great choice for teams who want to make data-driven decisions.
+3. GrowthBook is an open-source platform that combines feature flags with A/B testing and product analytics. Its unique "warehouse-native" approach means it connects directly to your data warehouse, allowing you to use your existing data for experimentation without moving it to a third-party service. This makes it a great choice for teams who want to make data-driven decisions.
 
-Flipt is a self-hosted, open-source feature flag solution built in Go. It's designed to be simple, fast, and easy to run in your own infrastructure. Flipt is a good option if you need a lightweight, no-frills tool for managing flags with a clean API.
+4. Flipt is a self-hosted, open-source feature flag solution built in Go. It's designed to be simple, fast, and easy to run in your own infrastructure. Flipt is a good option if you need a lightweight, no-frills tool for managing flags with a clean API.
 
-OpenFeature is a different kind of project. It's a **vendor-agnostic specification** and SDK that provides a standard API for feature flagging.
+5. OpenFeature is a different kind of project. It's a **vendor-agnostic specification** and SDK that provides a standard API for feature flagging.
 
 Think of it as an abstraction layer.
 
@@ -100,13 +128,12 @@ It doesn't provide a backend for managing flags itself; instead, you can use it 
 
 The main benefit is that it allows you to switch your feature flag provider without changing the core logic in your application's code. 
 
----
 
-## Conclusions
-
-The Go-Feature-Flag project is a well-known open-source solution for feature flag management, and it stands out for a few key reasons:
+6. The [GoFeatureFlag](#go-feature-flag)
 
 ### Go-Feature-Flag
+
+The Go-Feature-Flag project is a well-known open-source solution for feature flag management, and it stands out for a few key reasons:
 
 * https://github.com/thomaspoignant/go-feature-flag
 * https://gofeatureflag.org/
@@ -118,3 +145,18 @@ The Go-Feature-Flag project is a well-known open-source solution for feature fla
 * **Advanced Capabilities:** Despite its simplicity, it supports advanced features like progressive rollouts, A/B testing, and complex targeting rules based on user attributes. It also allows you to export evaluation data to a variety of destinations for analysis.
 
 > Go-Feature-Flag is a great choice for teams that want a simple, high-performance, and self-hosted feature flag solution that avoids vendor lock-in by embracing open standards.
+
+### Feature Flags with PB
+
+As Im not looking for sth very complex at the moment, i kept vibecoding and ask aobut pros and cons with keep just a simple PB setup.
+
+https://github.com/JAlcocerT/payroll-workers-pb/blob/main/gofeatureflag-vs-pb.md
+
+Something like you signup, if you pay via stripe, you have it all.
+
+
+
+
+---
+
+## Conclusions
