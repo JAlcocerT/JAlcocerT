@@ -1,6 +1,6 @@
 ---
-title: "How to Share Pi OS via Torrent [with VPN]"
-date: 2025-12-02
+title: "How to Share OSS OS via Torrent [with VPN]"
+date: 2025-09-25
 draft: false
 tags: ["Dev","P2P"]
 description: How to share Raspberry Pi OS (Bullseye) as Torrent with Qbitrorrent/Transmission and VPN.
@@ -51,27 +51,7 @@ You have many alternatives, among them: QBittorrent, Transmission,...
 You need this **docker-compose config** file:
 
 ```yml
----
-version: "2.1"
-services:
-  qbittorrent:
-    image: ghcr.io/linuxserver/qbittorrent
-    container_name: qbittorrent
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Madrid
-      - WEBUI_PORT=6011
-    volumes:
-      - /home/Docker/qbittorrent/config:/config
-      - /home/Downloads:/downloads
-    #network_mode: "container:your_gluetun_container_name" #change gluetun to your VPN container name   
-    #network_mode: "service:your_gluetun_service_name" #change gluetun to your VPN service name  
-    # ports: #you wont need the ports in this configuration file, you will need to include them in the Gluetun container
-    #   - 6081:6881
-    #   - 6081:6881/udp
-    #   - 6011:6011  
-    restart: unless-stopped
+
 ```
 
 
@@ -80,25 +60,7 @@ services:
 ### Transmission with the Pi
 
 ```yml
----
-version: "2.1"
-services:
-  transmission:
-    image: ghcr.io/linuxserver/transmission 
-    container_name: transmission
-    environment:
-      - PUID=1000 
-      - PGID=1000 
-      - TZ=Europe/Madrid 
-    ports:
-      - 9091:9091 #UI Port for Transmission
-      - 51413:51413 
-      - 51413:51413/udp 
-    volumes:
-      - /home/Docker/Torrents/Transmission/config:/config
-      - /home/Downloads:/downloads
-      - /home/Downloads/Transmission_watch:/watch
-    restart: unless-stopped
+
 ```
 
 

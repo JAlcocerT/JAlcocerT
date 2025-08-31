@@ -2,7 +2,7 @@
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
 date: 2025-11-18
 draft: false
-tags: ["Tinkering","Ekuiper"]
+tags: ["Tinkering","Ekuiper","Leds"]
 description: 'IoT Meets AI. Using MQTT and AI Together.'
 url: 'edge-ai-with-raspberry-pi'
 ---
@@ -216,3 +216,13 @@ The chip's low power consumption and versatility make it an attractive option fo
 
 Search engine similar to Google
 What Is Shodan? Shodan is a search engine similar to Google. But while Google searches for websites, Shodan searches for devices that are connected to the internet. Users can perform a search using the Shodan search engine based on an IP address, device name, city, and/or a variety of other technical categories. -->
+
+### Pi and leds
+
+**LEDs**
+
+* https://github.com/awawa-dev/HyperHDR
+
+* https://github.com/appleimperio/docker-hyperhdr
+
+> MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 

@@ -3,7 +3,7 @@ title: "SelfHosting Updates - Summer 2025"
 date: 2025-09-15T01:20:21+01:00
 draft: false
 tags: ["Dev","SSGs","MKCert","MeTube/Navidrome"]
-description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs + Leds and API with the Pi'
+description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs'
 url: 'selfhosted-apps-sept-2025'
 ---
 
@@ -110,16 +110,7 @@ Remember about:
 
 Ive been tinkering with MicroControllers and MQTT protocol.
 
-**LEDs**
-
-* https://github.com/awawa-dev/HyperHDR
-
-* https://github.com/appleimperio/docker-hyperhdr
-
-> MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
-
-**HA**
-* https://www.home-assistant.io/docs/automation/
+* **HA** https://www.home-assistant.io/docs/automation/
 
 ### New Software
 

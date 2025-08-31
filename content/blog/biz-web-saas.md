@@ -2,7 +2,7 @@
 title: "Quick SaaS Websites with user login"
 date: 2025-08-30
 draft: false
-tags: ["Web",HomeLab,"Gitea","Cursor CLI and InvoCLI","Astro Payroll"]
+tags: ["Web",HomeLab,"Cloudflare Workers x PB Auth","Gitea","Cursor CLI and InvoCLI","Astro Payroll Theme"]
 description: 'FastAPI x PocketBase x SSG so that your project are good looking and with a working SignIn/Up.'
 url: 'fastapi-x-pocketbase'
 ---
@@ -10,6 +10,8 @@ url: 'fastapi-x-pocketbase'
 **TL;DR** 
 
 Putting together a quick and OSS Template with [Astro/Flask/PB](#the-stack)
+
+Because...we want to launch fast: *Would a simple [SSG x PB](#ssg-x-pb) work?*
 
 +++ [New CLI tools + Thoughts on CF Workers](#conclusions)
 +++ [Gitea](#gitea-101) Container Setup and CLI tricks. *Can Gitea become your SaaS user/pwd registry?*
@@ -103,20 +105,118 @@ Logto had a cool post about how to vibe code a photo gallery app with built in a
 
 And DO a way to deploy static sites: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-static-website-to-the-cloud-with-digitalocean-app-platform
 
+### SSG x PB
+
+> I was also reading, *chatting with Gemini*, that we could keep the good old stack: Cloudflare Pages + CF Workers + Fetch/Posts users/pwds from a pocketbase somewhere...
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+```sh
+sudo apt install gh
+gh auth login
+gh repo create payroll-workers-pb --public --source=. --remote=origin --push
+```
+
+
+> > And I got auth via PB SDK working!
+
+We should have a look to `/api/collections/users/auth-with-password`
+
+Remember you have: https://pocketbase.io/demo/
+
+
+
+The astro site will need to have the PB library so that the SDK is available:
+
+```sh
+npm i pocketbase
+```
+
+For this, we will need to have pocketbase up and running and then to provision a proper collection: http://192.168.1.11:8080/api/health
+
+```sh
+#npm i pocketbase
+PB_URL=http://192.168.1.11:8080 \
+PB_ADMIN_EMAIL="yourpbemail" \
+PB_ADMIN_PASSWORD="yourpbadminpass" \
+npm run provision:pb
+```
+
+`http://192.168.1.8:4321/signup`
+
+
+
+{{< callout type="warning" >}}
+With the local setup I might have been getting issues with the CORS: https://github.com/pocketbase/pocketbase/discussions/606 or not having https
+{{< /callout >}}
+
+So first i tried it via MKCert and then i just I went quickly with my known [Cloudflare Tunnels](#cloudflare-workers-auth)
+
+#### Cloudflare Workers Auth
+
+You wont be able to use the demo PB API, so you will need to bring your PB publically + Cloudflare pages: *CF Pages configured, like [recently](https://github.com/JAlcocerT/serverless-invoices/blob/main/Deploy_to_CF.md)*
+
+```sh
+wrangler pages deploy dist --project-name=fast-payroll-theme --branch=main
+```
+
+Remember to config the url for your CF worker:
+
+![alt text](/blog_img/dev/FE/cf-worker-config-to-pocketbase.png)
+
+And to add your PB container into the **cloudflare tunnels network**:
+
+```sh
+docker network connect cloudflared_tunnel pocketbase
+```
+
+And now these will work:
+
+* https://pocketbase.jalcocertech.com/api/health
+* https://pocketbase.jalcocertech.com/_/
+
+![alt text](/blog_img/dev/FE/ssg-cfworkers-pocketbase.png)
+
+
+![alt text](/blog_img/dev/FE/pb-created-user-via-ssg.png)
+
+Once the `/signup` is actually sending the data to your PB instance (users collection), we can proceed.
+
+How about using the login page of the theme, and allow you to see a new `/secret` page only if you are logged in with a mail and pass that is inside the PB collection?
+
+If you are not logged in, you will be redirected towards `/login`.
+
+Simple, static and it literally flies:
+
+![alt text](/blog_img/dev/FE/pocketbase-autnehticated-user-cf-workers.png)
+
+* https://developers.cloudflare.com/workers/platform/limits/#worker-limits
+
+> 100,000 requests/day, 1000 requests/min and 10ms CPU time - We are golden :)
+
+
+
 ---
 
 ## Conclusions
 
-We could use any other combination of authentications, like: *LogTo, TinyAuth, via PB SDK, just hardcoded...* I recapped recently on [this post](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#authentication-tools).
-
-> I was also reading, *chatting with Gemini*, that we could keep the good old stack: Cloudflare Pages + CF Workers + Fetch/Posts users/pwds from a pocketbase somewhere...
+We could use any other combination of authentications, like: *LogTo, TinyAuth, just hardcoded...* I recapped recently on [this post](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#authentication-tools).
 
 
-Im still impressed by new CLI tools, like
+if this has work, so should a SSG + CF Worker + Logto via JS instead of python:
 
-1. In case you need to bill someone: https://github.com/cemalidev/invocli
+* https://docs.logto.io/api-protection/nodejs
+* https://www.npmjs.com/package/@logto/js
+
+Im still impressed by **new CLI tools**, like
+
+1. In case you need to bill someone, there is a new player in town: https://github.com/cemalidev/invocli
 
 > A Node.js CLI for generating PDF invoices
+
+> > Remember also about [serverless-invoices](https://github.com/JAlcocerT/serverless-invoices).
 
 2. Cursor CLI
 
@@ -335,9 +435,13 @@ curl -sS -X POST \
 
 5. When commit happens, a static build would be triggered via Webhook
 
+
+See this sample [FastAPI + html](https://github.com/JAlcocerT/Home-Lab/tree/main/gitea/user-creator-fastapi) that bundles of this:
+
 ![Gitea x FastAPI](/blog_img/dev/FE/gitea-fastapi-webify.png)
 
-> Wouldnt that be cooool? Lets understand [how](#gitea-via-cli)
+
+> Wouldnt that [architectural workflow](https://github.com/JAlcocerT/Home-Lab/blob/main/gitea/gitea-fastapi-webhooks.md) be cooool? See [the diagram](https://mermaid.live/edit#pako:eNplU39P2zAQ_SonS0ygNaRNk0LLhFSoNpD4UUFZpaWochM3sZrame3AGPDdd3YSKrS_mrt79-7dO_eVJDJlZETWhXxOcqoMzCYLAbC3B-N0y4X_oJkCW9Ww_51qM55egncKP7hhFHbBRbUCvi2lMge2XVerTNEyr0mWtyVT1HApdOwS8AUc7y7_aLsAxr34vOBMGL_GXcxmU1Dsd8W00Y_geadvPi25nyhGDVtWSNIBlylkhoOoSJeKlVI32VrSsqxWBU9c5Q3GQdws0g4NHHE90cgNEyBVLRDnpBpb-vHHwp-bkkIKtqRpqqAeguAwrg1pkX2HPHeSwUoGH664NuCUYnDN0SysNfqieL-eNqGGHjgWJtKFaO4yZ6tcyo2XKv6EUlcVL1IoeckKLtgn8xvkctoU42mlc3uwpmA_z2x7o3TeiyfsiRUSzwIW6xyHedBsf4f6Wmi9fks0vb2foQE6f4N5v7UX_Oe63PbURvykBU_tuhfX4_MTKKnSDOSzYMq3BnxdKSoSSxTGZzTZZEpWIoUZ1R88oePJuAFnv79mJsn9JGfJRlbGL6uiwPYo9t1yMJdqo0uaMDh7uLyaLO9ub2f-bqDf0kaOVpRbSPgJ2F9VNf4i3SCu2cbK8DVNjD3clcz0f_e5Z-qJ4zAjS4mv8gVxN8w8owgusk_3mchkw9SyqcZ12IIbVTe9OLPme_hunpga9bvdblsKYvuaPPdnkMpbo-346EfH3SjaqbIU8M3z2qNrd9ObwFbc0_QQ4IKgDrBCOiRTPCUjoyrWIVumttSG5NUCF8TkbMsWZISfKVWbBVmId-wpqfgl5bZtw8NlORmtaaExqkp79AmnuPsOghKZOscLGzIKhqHjIKNX8seGw8MwCo6P-sfDXjgYDqMOecF0d3DYDweDwbCLyX4w7L93yF83tncYDjDXiwZBFPaioyB4_we-C5Xt) and ets understand [how](#gitea-via-cli)
 
 ### Gitea via CLI
 

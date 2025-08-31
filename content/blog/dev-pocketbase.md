@@ -13,6 +13,8 @@ I finally got to try [PB](#pocketbase).
 
 It can be used as auth for your [Flask Web Apps](#pocketbase-x-flask) and also be connected via [JS SDK to FE](#pb-sdk).
 
+PB has a lot of goodies, like direct minio connection or oauth providers for signin/up: `http://192.168.1.11:8080/_/#/settings/auth-providers`
+
 Along the way, I got to know few [new concepts](#concepts), like: Redux, Dexie...
 
 **Intro** *This is way far from my confort zone, yet here we go*
