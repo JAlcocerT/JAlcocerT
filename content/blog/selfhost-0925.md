@@ -2,7 +2,7 @@
 title: "SelfHosting Updates - Summer 2025"
 date: 2025-09-15T01:20:21+01:00
 draft: false
-tags: ["Dev","SSGs","MKCert"]
+tags: ["Dev","SSGs","MKCert","MeTube/Navidrome"]
 description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs + Leds and API with the Pi'
 url: 'selfhosted-apps-sept-2025'
 ---
@@ -26,6 +26,8 @@ They are also placed into the *new Home-Lab repo* and the stack of this post wil
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH" title="Docker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Collection of Docker Config Files - 0925 Edition 🐳 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Home-Lab Github Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Ordered config files | Youtube Video friendly 🐳 ↗" >}}
 {{< /cards >}}
+
++++ [Music server setup](#your-music-server)
 
 **Intro**
 
@@ -53,8 +55,6 @@ nano Selfhosting_101.sh #MAKE SURE YOU UNDERSTAND WHAT YOU WILL BE RUNNING FIRST
 
 
 ## SelfHosting Sept 25
-
-
 
 At some point, you will need these:
 
@@ -174,3 +174,26 @@ select disk N
 clean 
 create partition primary
 ```
+
+### Your Music Server
+
+Your music your rules.
+
+```sh
+sh -lc 'echo "Current user: $(whoami)"; id; echo "UID: $(id -u)"; echo "GID: $(id -g)"; echo "Groups: $(id -Gn)"' 
+```
+
+For android, you have as client: https://gitlab.com/ultrasonic/ultrasonic
+
+> Free and open-source music streaming Android client for Subsonic API compatible servers
+
+With Supported (tested) Subsonic API implementations
+
+Subsonic
+Airsonic-Advanced
+Supysonic
+Ampache
+
+You also have substreamer app on ios or android (as a client), they also have: https://hub.docker.com/r/ghenry22/substreamer
+
+> Just that its not OSS

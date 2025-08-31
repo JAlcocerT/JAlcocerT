@@ -7,10 +7,13 @@ description: 'FastAPI x PocketBase x SSG so that your project are good looking a
 url: 'fastapi-x-pocketbase'
 ---
 
-**TL;DR** Putting together a quick and OSS Template with [Astro/Flask/PB](#the-stack)
+**TL;DR** 
+
+Putting together a quick and OSS Template with [Astro/Flask/PB](#the-stack)
 
 +++ [New CLI tools + Thoughts on CF Workers](#conclusions)
 +++ [Gitea](#gitea-101) Container Setup and CLI tricks 
++++ [Recap](#faq) on Callbacks / Hooks / RestAPIs
 
 
 **Intro**
@@ -179,21 +182,21 @@ Ultimately, the best tagging strategy depends on your project's needs and how yo
 
 ## FAQ
 
----
-
-A **hook** is a type of **callback**, but the two terms aren't interchangeable.
+A **hook is a type of callback**, but the two terms aren't interchangeable.
 
 A callback is a general programming concept where you pass a function (or "callable") as an argument to another function, which then calls it at a later time.
 
-A hook is a specific type of callback used in certain software architectures, especially those that are event-driven or extensible.
-
------
+> A hook is a specific type of callback used in certain software architectures, especially those that are event-driven or extensible.
 
 ### Understanding Callbacks
 
 A **callback** is a fundamental programming pattern. 
 
-It's essentially a function that's given to another function to be executed later. The function receiving the callback is often a higher-order function. This pattern is commonly used in asynchronous operations, like fetching data from a server, where you want to perform an action only after the data has been received.
+It's essentially a function that's given to another function to be executed later.
+
+The function receiving the callback is often a higher-order function.
+
+This pattern is commonly used in asynchronous operations, like fetching data from a server, where you want to perform an action only after the data has been received.
 
 Consider this simple example:
 
@@ -233,9 +236,7 @@ For example, in a content management system (CMS) like WordPress, there are many
 
 A common example of hooks is in React. **React Hooks** like `useState` and `useEffect` are special functions that let you "hook into" React features from your functional components. For instance, `useEffect` allows you to hook into the component's lifecycle to perform side effects like data fetching or DOM manipulation.
 
------
-
-### The Analogy
+**The Analogy**
 
 Think of it this way: a **callback** is like giving a friend your phone number and asking them to call you back when they're ready to leave. You've provided the mechanism for a future action.
 
@@ -243,35 +244,44 @@ A **hook** is more like a specific, pre-determined **"Do Not Disturb" sign** on 
 
 The system (the cleaning staff's routine) has a designated point where it checks for and responds to your input (the hook).
 
----
-
 In the context of REST APIs, the concepts of callbacks and hooks are used to enable **asynchronous communication** and **event-driven architecture**. 
 
 While a traditional REST API operates on a simple request-response model (the client requests data and the server immediately responds), callbacks and hooks allow the API to notify the client about events that happen later, without the client needing to repeatedly ask for updates.
 
-***
 
 ### Callbacks in REST APIs
 
-A **callback** in a REST API is typically used for long-running, asynchronous operations.  Instead of the API server holding a connection open while it performs a task, the client sends a request that includes a special **callback URL**.
+A **callback** in a REST API is typically used for long-running, asynchronous operations.
+
+Instead of the API server holding a connection open while it performs a task, the client sends a request that includes a special **callback URL**.
 
 The server then immediately responds with a status like `202 Accepted`, acknowledging the request. When the long-running task is finally complete, the server makes a new HTTP request to the client's provided callback URL, sending the final result.
 
 This is much more efficient than **polling**, where the client would have to repeatedly send requests to the server to check if the task is finished.
 
-* **Example**: An e-commerce API might accept a request to generate a complex sales report. The client sends a `POST` request to `/reports` with a `callbackUrl` in the payload. The server immediately returns a `202` status. When the report is ready hours later, the server sends a `POST` request to the client's `callbackUrl` with the report data.
+* **Example**: An e-commerce API might accept a request to generate a complex sales report. 
+
+1. The client sends a `POST` request to `/reports` with a `callbackUrl` in the payload. The server immediately returns a `202` status. 
+2. When the report is ready hours later, the server sends a `POST` request to the client's `callbackUrl` with the report data.
 
 ***
 
 ### Hooks in REST APIs (Webhooks)
 
-A **hook** in the context of REST APIs is almost always referred to as a **webhook**. A webhook is a mechanism that allows a service to send real-time data to a client as soon as a specific event occurs, without any prior request from the client.
+A **hook** in the context of REST APIs is almost always referred to as a **webhook**.
+
+A webhook is a mechanism that allows a **service to send real-time data to a client as soon as a specific event occurs**, without any prior request from the client.
 
 The client, or "subscriber," provides a URL (the webhook URL) to which the "publisher" sends data.
 
-Webhooks are a key component of an event-driven architecture. They are essentially **user-defined HTTP callbacks** that are triggered by system-wide events.
+Webhooks are a key component of an event-driven architecture.
 
-* **Example**: A GitHub API user can configure a webhook on their repository. When a new commit is pushed, GitHub sends a `POST` request to the user's webhook URL with a JSON payload containing information about the commit. The user's application can then process this data in real-time, perhaps by triggering an automated build process.
+They are essentially **user-defined HTTP callbacks** that are triggered by system-wide events.
+
+**Example**: A GitHub API user can configure a webhook on their repository.
+
+1. When a new commit is pushed, GitHub sends a `POST` request to the user's webhook URL with a JSON payload containing information about the commit.
+2. The user's application can then process this data in real-time, perhaps by triggering an automated build process.
 
 ### Gitea 101
 
@@ -283,11 +293,39 @@ But how about setting Github to Gitea webhooks and then build your site on your 
 
 Yes, you can absolutely create users and clone repositories from Gitea using the command line.
 
-https://github.com/JAlcocerT/Home-Lab/tree/main/gitea
+* https://github.com/JAlcocerT/Home-Lab/tree/main/gitea
 
-### Creating a User via CLI
+```sh
+sudo docker compose up -d
+```
 
-Gitea provides a built-in command-line tool for administration tasks, including user management.
+{{< callout type="info" >}}
+Which it was a demostration of how the `depends_on` container feature works between containers and the compose overrides. See [these .md](https://github.com/JAlcocerT/Home-Lab/tree/main/gitea)
+{{< /callout >}}
+
+### Gitea via CLI
+
+How about doing cool stuff with Gitea, but programatically?
+
+**Gitea has a cool API**: 
+
+I mean a REST API, a type of API (Application Programming Interface): any interface to interact with a system’s capabilities.
+- Examples: REST over HTTP/JSON, GraphQL, gRPC, SOAP, WebSocket APIs, language SDKs, even CLIs.
+- In your Gitea context:
+  - “API” in `https://docs.gitea.com/api/1.24/` specifically means the HTTP REST API (JSON over HTTP).
+  - Your curl examples are REST calls to `http://.../api/v1/...`.
+  - Webhooks are not you calling the API; they’re HTTP callbacks from Gitea to you.
+
+{{< callout type="info" >}}
+Get clarity on [curl flags](https://github.com/JAlcocerT/Home-Lab/blob/main/gitea/curl-flags.md) and all you can [achieve with the Gitea API Endpoint](https://github.com/JAlcocerT/Home-Lab/blob/main/gitea/gitea-api.md)
+{{< /callout >}}
+
+
+**Gitea Webhooks**
+
+> If you want to dive deeper...*I have not yet*
+
+**Gitea provides a built-in command-line tool** for administration tasks, including user management.
 
 The command to create a new user is `gitea admin user create`.
 

@@ -515,6 +515,10 @@ For example, the **aave token is ERC20**:
 
 ## Conclusions
 
+After researching this, i got more questions than answers.
+
+> To avoid smaller and frequent scams and non sense projects, have we got into a bigger and mandatory scam?
+
 I got to know this defi app called **MetaLend** that consolidates what you have in a wallet: https://app.metalend.tech/#earn
 
 Its a **Defi Aggregator**, as seen in [Reddit](https://www.reddit.com/r/defi/comments/1hdk8fs/how_are_people_getting_1020_yields_on_stablecoins/).

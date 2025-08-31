@@ -7,11 +7,40 @@ description: 'Reviewing how MCP protocol works. From LangGraph to OpenAI Agents.
 url: 'ai-understanding-mcp-framework'
 ---
 
-**TL;DR** Agents are cool https://www.reddit.com/r/AI_Agents/
+**TL;DR** 
+
+Agents are cool https://www.reddit.com/r/AI_Agents/
+
+My notes on MCP -- Quick mental model
+- Think “plugin system” for AI agents.
+- Servers advertise capabilities; agents enumerate, pick, and invoke as needed.
+
 
 **Intro**
 
 And Anthropic has made it...[a protocol for LLMs](https://www.anthropic.com/news/model-context-protocol), **MCP**.
+
+Thinking of MCP as a standardized way for AI agents to discover and use new tools is reasonable. 
+
+> It’s more like a “tool registry/bus” than a single endpoint, but the mental model is close.
+
+What MCP (Model Context Protocol) provides
+
+- __Discovery__: Agents list available tools/resources from one or more MCP servers.
+- __Schemas__: Each tool has a defined JSON schema for inputs/outputs, so agents can call them safely.
+- __Execution__: Agents invoke tools over a standardized transport (stdio/WebSocket).
+- __Resources/Prompts__: Besides tools, servers can expose data resources and prompt templates.
+- __Events/Streaming__: Supports streaming results and events for better interactivity.
+- __Separation of concerns__: 
+  - MCP server = hosts capabilities (filesystem, search, DB, APIs).
+  - MCP client/agent = selects and calls tools at runtime.
+
+How it differs from “just an endpoint”
+
+- __Multiple servers__: An agent can connect to many MCP servers (each offering different tools).
+- __Unified interface__: Same call pattern regardless of the underlying service.
+- __Dynamic__: Tools can be added/removed without changing the agent’s code—just rediscovery.
+
 
 1. [What](#mcp) it is Model Context Protocol?
 2. [MCP Examples](#mcp-examples)

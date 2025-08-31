@@ -2,15 +2,15 @@
 title: "Which DB is for me?"
 date: 2025-08-11
 draft: false
-tags: ["DataBases","D&A","DBCode","SelfHosting/HomeLab","DBCode"]
-description: 'What are pros and cons of popular DBs: SQlite, PostgreSQL, mariaDB and their containers'
+tags: ["DataBases","D&A","DBCode","SelfHosting/HomeLab"]
+description: 'Pros and Cons of popular DBs: SQlite, PostgreSQL, mariaDB and their containers'
 url: 'databases-101'
 ---
 
 
-**TL;DR:** A Recap on popular DBs.
+**TL;DR:** 
 
-For SelfHosters and BackEnd Devs.
+A Recap on popular DBs, for SelfHosters and BackEnd Devs.
 
 > For D&A overview see [this post](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/).
 
@@ -18,7 +18,7 @@ For SelfHosters and BackEnd Devs.
 
 Not all DB's are useful for the same.
 
-Interesting revelations after trying [pocketbase](https://jalcocert.github.io/JAlcocerT/pocketbase/) (which uses sqlite)
+Interesting revelations after trying [pocketbase](https://jalcocert.github.io/JAlcocerT/pocketbase/), *which uses [sqlite](#sqlite), a great row based DB*
 
 I will cover:
 
