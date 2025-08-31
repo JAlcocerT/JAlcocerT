@@ -2,7 +2,7 @@
 title: "Raspberry Pi Pico W"
 date: 2025-08-15T13:20:21+01:00
 draft: false
-tags: ["Self-Hosting","IoT","Embedded Systems","HA"]
+tags: ["Self-Hosting","IoT","Embedded Systems","HA","PicoW"]
 description: 'Using the Pico W [Microcontrollers] with Home Assistant.'
 url: 'pico-w'
 ---

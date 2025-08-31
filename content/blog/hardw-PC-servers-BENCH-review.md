@@ -2,7 +2,7 @@
 title: "[Comparison] Performance of different Computers"
 date: 2025-03-03T10:20:21+01:00
 draft: false
-tags: ["HomeLab"]
+tags: ["HomeLab","Benchmark"]
 description: 'Benchmarks for CPU, Memory, Disks, Internet speed... Whats enough for a HomeLab?'
 url: 'benchmarking-computers'
 ---

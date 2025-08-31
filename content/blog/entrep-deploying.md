@@ -1,6 +1,6 @@
 ---
 title: "Where to Deploy?"
-date: 2025-08-30
+date: 2025-08-31
 draft: false
 tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio"]
 description: 'Resources to launch your stuff to your clients.'
@@ -77,7 +77,7 @@ Its up to you:
 
 1. Get a [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#energy-x300), get a ~15w avg at 0,25eur/kwh will cost you ~32eur/y (or 2,74 a month)
 
-2. Deploy on one of these smaller servers for a little bit more of the price, but you forget about the initial costs.
+2. Deploy on one of [these smaller](#vps) servers for a little bit more of the price, but you forget about the initial costs.
 
 **A new repo** for SelfHosters:
 

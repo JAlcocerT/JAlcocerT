@@ -2,7 +2,7 @@
 title: "Quick SaaS Websites with user login"
 date: 2025-08-30
 draft: false
-tags: ["Web",HomeLab,"Gitea","Cursor CLI and InvoCLI"]
+tags: ["Web",HomeLab,"Gitea","Cursor CLI and InvoCLI","Astro Payroll"]
 description: 'FastAPI x PocketBase x SSG so that your project are good looking and with a working SignIn/Up.'
 url: 'fastapi-x-pocketbase'
 ---
@@ -242,9 +242,6 @@ Think of it this way: a **callback** is like giving a friend your phone number a
 A **hook** is more like a specific, pre-determined **"Do Not Disturb" sign** on a hotel room door. The cleaning staff has a pre-defined process for checking doors, and when they encounter your sign, it **"hooks"** into their normal routine, causing them to skip your room.
 
 The system (the cleaning staff's routine) has a designated point where it checks for and responds to your input (the hook).
-
-
-
 
 ---
 

@@ -2,7 +2,7 @@
 title: "Which DB is for me?"
 date: 2025-08-11
 draft: false
-tags: ["DataBases","D&A","DBCode","SelfHosting/HomeLab"]
+tags: ["DataBases","D&A","DBCode","SelfHosting/HomeLab","DBCode"]
 description: 'What are pros and cons of popular DBs: SQlite, PostgreSQL, mariaDB and their containers'
 url: 'databases-101'
 ---

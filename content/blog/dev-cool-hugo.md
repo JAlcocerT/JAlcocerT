@@ -1,6 +1,6 @@
 ---
 title: "HUGO can also be cool"
-date: 2025-08-05
+date: 2025-08-04
 draft: false
 tags: ["Dev","SSG","Photo-Gallery","Flask CMS"]
 description: 'Improving HUGO Themes: Flask x Theme Gallery, HUGO Doks Tweaks'

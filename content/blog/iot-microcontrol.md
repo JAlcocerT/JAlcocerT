@@ -1,8 +1,8 @@
 ---
 title: "[IoT] Setup RPi Pico W and ESP32 MicroControllers"
-date: 2025-08-15T14:20:21+01:00
+date: 2025-08-16T14:20:21+01:00
 draft: false
-tags: ["Tinkering","Solar Panel"]
+tags: ["Tinkering","Solar Panel","ESP32"]
 description: What Ive learnt while using a ESP32 and a Raspberry Pi Pico W [Microcontrollers]
 url: 'microcontrollers-setup-101'
 ---
@@ -715,6 +715,8 @@ void loop() {
 Another try **MQTT ESP32**: <https://www.youtube.com/watch?v=x5A5S0hoyJ0&t=211s>
 {{< /callout >}}
 
+## Conclusions
+
 ---
 
 ## FAQ
@@ -824,10 +826,9 @@ I wanted to try with an low cost (~20$) Solar Panel `CL-0915` which goes up to 1
 
 Thats really on the edge to power a Pi4.
 
-And ofc the 5V3A are in ideal conditions, so dont bother a Pi wont boot up with it.
+> And ofc, the 5V3A are in ideal conditions, so dont bother a Pi wont boot up with it.
 
 But...microcontrollers do.
-
 
 Even two of them at the same time.
 
@@ -839,7 +840,7 @@ Even two of them at the same time.
 
 #### ESP32 with AWS
 
-ESP32 GPIO pins in real-time with AWS API Gateway WebSockets
+ESP32 GPIO pins in real-time with **AWS API Gateway WebSockets**
 
 <https://www.youtube.com/watch?v=z53MkVFOnIo>
 
@@ -849,10 +850,8 @@ ESP32 GPIO pins in real-time with AWS API Gateway WebSockets
 
 #### ESP32 as WebServer
 
+If you are into websites...
+
+Be aware that the ESP32 could be your small webserver
+
 * <https://www.youtube.com/watch?v=Ra3iWgOfveQ>
-
-
-### Cool Stuff with Raspberry Pi
-
-{{< details title=" Raspberry Pi together with: Dht11, Python InfluxDB and Docker 📌" closed="true" >}}
-{{< /details >}}

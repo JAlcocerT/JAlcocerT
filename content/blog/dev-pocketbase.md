@@ -1,6 +1,6 @@
 ---
 title: "SelfHosted PocketBase for your BackEnd"
-date: 2025-08-05
+date: 2025-08-10
 draft: false
 tags: ["PocketBase","OSS Auth","Concurrency","Local & Session Storage","Sqlite"]
 description: 'Things your learn outside the confort zone. BaaS Storage for a WebApp'
