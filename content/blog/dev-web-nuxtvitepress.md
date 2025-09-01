@@ -1,19 +1,19 @@
 ---
-title: "Trying new SSGS Nuxt & VitePress [and a SSG Recap]"
+title: "Trying Nuxt & VitePress [and a SSG Recap]"
 date: 2025-10-23
 draft: false
-tags: ["dev"]
+tags: ["Dev","Nuxt"]
 description: 'Testing NUXT & VitePress Themes. Looking back to the learnings with other SSGs like HUGO and Astro.'
 url: 'trying-nuxt-themes'
 ---
 
-New year, time to **try out some new SSG**.
+Almost the end of the year, time to **try out some new SSG**.
 
 This time it is the turn of **Nuxt**
 
 * https://github.com/HugoRCD/canvas
 
-1. the first thing I noticed, it takes much more time to load compared to Astro or NextJS sites, and much more than HUGO.
+1. The first thing I noticed, it takes much more time to load compared to Astro or NextJS sites, and much more than HUGO.
 
 You just need **2 things**: NPM and NodeJS.
 
@@ -41,11 +41,13 @@ Now you can spin a server and make **ASTRO [Remote Development](https://jalcocer
 
 ## Nuxt SSG
 
-Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.
+Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade **full-stack web applications and websites with Vue.js**.
 
 * https://github.com/nuxt/nuxt
 
 > MIT | The Intuitive Vue Framework.
+
+* https://nuxt.com/deploy
 
 
 ## VitePress SSG

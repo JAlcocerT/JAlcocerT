@@ -2,7 +2,7 @@
 title: "HUGO can also be cool"
 date: 2025-08-04
 draft: false
-tags: ["Dev","SSG","Photo-Gallery","Flask CMS"]
+tags: ["Dev","SSG","Photo-Gallery","Flask CMS","Shortcode parsing md"]
 description: 'Improving HUGO Themes: Flask x Theme Gallery, HUGO Doks Tweaks'
 url: 'cool-hugo-themes'
 ---
@@ -71,16 +71,20 @@ make prod-up
 > isn't it great?
 
 
-I saw some people doing cool things:
+I saw some people doing **cool things with HUGO Themes**
 
-* https://github.com/thuliteio/thulite
+* https://github.com/thuliteio/thulite - They will be shipping paid TinaCMS integration [soon](https://thulite.io/anna/)
 * https://github.com/thuliteio/doks
 
-Which it seems to
+> “With Thulite, it’s super easy to build content-driven websites that are production-ready out of the box.”
+
+
+* https://github.com/HugoRCD/canvas - *This is a NUXT Theme, the creator name is HUGO though*
+
 
 ### Flask for HugoThemeGallery
 
-I decided to create a new branch and vibecode a little:
+I decided to create a new branch to the HUGO Theme gallery and vibecode a little:
 
 ![Flask WebAPP x HUGO Theme](/blog_img/web/hugo-themegallery-flask.png)
 

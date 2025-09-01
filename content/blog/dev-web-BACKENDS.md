@@ -1,10 +1,10 @@
 ---
 title: "Backends"
-date: 2025-12-15T23:20:21+01:00
-draft: true
-tags: ["Dev","Laravel"]
+date: 2025-09-15T23:20:21+01:00
+draft: false
+tags: ["Dev","Laravel PHP","Python BE fwks"]
 url: 'backend-alternatives'
-summary: 'Backend 101 for your Saas'
+description: 'Backend 101 for your SaaS'
 ---
 
 **Intro**
@@ -13,7 +13,8 @@ Im mostly focused on python, *despite not being a real dev*.
 
 But Ive heard a lot of people do cool things with just PHP+jquery.
 
-Others mention a lot the power of [Laravel](#laravel-101)
+Others mention a lot the power of [Laravel](#laravel-101), which is also PHP.
+
 
 
 ## Laravel 101
@@ -115,18 +116,14 @@ Here's a breakdown of what makes Laravel so great:
 
 * https://filamentphp.com/
 
-A collection of beautiful full-stack
-components. The perfect starting
-point for your next app. 
+A collection of beautiful full-stack components. The perfect starting point for your next app. 
 
-https://github.com/filamentphp/filament
+* https://github.com/filamentphp/filament
 
 > MIT |  A collection of beautiful full-stack components for Laravel. The perfect starting point for your next app. Using Livewire, Alpine.js and Tailwind CSS. 
 
 
 Laravel is primarily a backend framework, just like Django and Flask. They all focus on handling the server-side logic, data management, and API creation for web applications.
-
-Here's a quick comparison to highlight their similarities and differences:
 
 **Laravel:**
 
@@ -166,4 +163,146 @@ Here's a quick comparison to highlight their similarities and differences:
 * They differ in their programming language, architecture, and the level of built-in features they provide.
 * The choice of which framework to use depends on the specific project requirements, the developer's familiarity with the language, and the desired level of control and flexibility.
 
-So, yes, Laravel is primarily a backend framework, similar to Django and Flask in its core purpose. However, it distinguishes itself with its elegant syntax, strong focus on developer experience, and a rich set of features tailored for PHP-based web development.
+So, yes, Laravel is primarily a backend framework, similar to Django and Flask in its core purpose.
+
+However, it distinguishes itself with its elegant syntax, strong focus on developer experience, and a rich set of features tailored for PHP-based web development.
+
+## Other BackEnds
+
+### Python
+
+### C
+
+### JS
+
+JS can do frontend tasks, but also backend!
+
+
+## Conclusions
+
+If wordpress uses PHP, [laravel](#laravel-101) cant be that bad.
+
+Right? :)
+
+Joking. Some people are doing a lot of money with PHP+jquery.
+
+### Just try PocketBase
+
+If you are new to this backend stuff...
+
+You might want to consider to go with Pocketbase as BaaS
+
+### About fwks and APIs
+
+Generally, backend frameworks can be made to work with [all the API types](#faq).
+
+But they are often optimized for one type more than others. The choice of framework is often influenced by the API type you intend to build, as some frameworks have built-in support or dedicated libraries that make building a specific API type much easier. 
+
+**RESTful APIs**
+
+**REST** is the most common API type, so almost every major backend framework has excellent support for it.
+
+* **Django & Django Rest Framework (Python)**: Django is a full-featured web framework, and the **Django REST Framework** is a powerful and flexible toolkit specifically for building RESTful APIs on top of it.
+* **Express.js (Node.js)**: A minimalist framework that is a de-facto standard for building REST APIs with Node.js. Its flexibility and middleware system make it perfect for this.
+* **Flask (Python)**: A lightweight "micro-framework" that is great for building simple REST APIs from scratch. It's less opinionated than Django, giving you more control.
+* **Spring Boot (Java)**: A popular framework for creating production-grade, standalone, Spring-based applications. It has a strong ecosystem and excellent support for building REST APIs.
+* **FastAPI (Python)**: A modern, high-performance web framework for building APIs. It's built on modern Python standards and is specifically designed for creating fast, simple-to-use REST APIs.
+
+**GraphQL APIs**
+
+For GraphQL, a backend framework typically requires a dedicated library or an integrated solution.
+
+* **Apollo Server (Node.js)**: A production-ready, open-source GraphQL server that can be integrated with frameworks like Express.js and others. It is one of the most popular choices for building GraphQL APIs.
+* **Graphene (Python)**: A library for building GraphQL APIs in Python. It's often used with frameworks like Django and Flask.
+* **GraphQL.js (Node.js)**: This is the official reference implementation of GraphQL, but it is often used with higher-level libraries like Apollo Server.
+* **Absinthe (Elixir)**: A popular and robust GraphQL library for the Elixir language.
+
+
+**SOAP APIs**
+
+SOAP is a much older and more rigid protocol. Frameworks don't "natively" support it as a core feature in the same way they do for REST, but they have libraries or extensions to handle it.
+
+* **Apache CXF & Spring Web Services (Java)**: Java's enterprise environment has some of the most mature tools for SOAP, including these frameworks which simplify the creation of SOAP-based services.
+* **.NET Framework (C#)**: The .NET ecosystem has long provided strong, built-in support for building SOAP web services, especially in corporate and enterprise settings.
+
+**gRPC APIs**
+
+gRPC is a more modern, high-performance RPC framework. It's especially popular for communication between internal microservices. The support is typically provided by official gRPC libraries for each language, which can then be used within or alongside a backend framework.
+
+* **gRPC libraries (multiple languages)**: gRPC provides language-specific implementations for a wide range of languages, including Python, Java, Go, C++, and Node.js. A developer would use the gRPC library within a backend application, not necessarily a separate framework.
+* **Go**: Go is a popular language for building gRPC services due to its concurrency features and native support for compiled code.
+* **Node.js & Python**: While you'd use the official gRPC libraries, you would often integrate them with existing server infrastructure built on frameworks like Express.js or Flask.
+
+---
+
+## FAQ
+
+The most common and contemporary API types: REST and GraphQL. However, there are a few other significant types, each with its own approach to communication and data transfer. These "types" typically refer to the architectural style or protocol used to build the API.
+
+---
+
+### **REST (Representational State Transfer)**
+
+**REST** is an architectural style, not a protocol. It's the most widely used and is foundational to modern web services. REST APIs operate over HTTP and use standard HTTP methods like `GET`, `POST`, `PUT`, and `DELETE` to perform actions on "resources." 
+
+A resource is an object or data element on the server, identified by a unique URL.
+
+* **Key Idea**: REST is resource-centric. You interact with specific, named resources (e.g., `/users/123`, `/products`).
+* **Pros**: Simple, easy to understand and implement, and highly scalable.
+* **Cons**: Can suffer from "over-fetching" (getting more data than you need) or "under-fetching" (needing to make multiple requests to get all the data you want).
+
+
+
+### **GraphQL**
+
+**GraphQL** is a query language for your API and a server-side runtime for executing those queries. Developed by Facebook, it provides a much more flexible and efficient way to fetch data.
+
+* **Key Idea**: GraphQL is data-centric. Instead of multiple endpoints, it typically uses a **single endpoint**. The client sends a specific query to this endpoint, requesting exactly the data it needs.
+* **Pros**: Avoids over- and under-fetching by giving the client complete control over the data received, leading to better performance and fewer requests. It also allows for easier API evolution without versioning.
+* **Cons**: More complex to set up on the server side than a simple REST API. Can be less straightforward for simple use cases.
+
+
+### **SOAP (Simple Object Access Protocol)**
+**SOAP** is an older, more rigid protocol that uses XML for its message format. It's highly structured and has its own set of rules and standards for communication.
+
+* **Key Idea**: SOAP is a protocol with strict rules. It relies on a formal contract, often described in a WSDL (Web Services Description Language) file, that defines the operations and data structures.
+* **Pros**: Highly secure, reliable, and has built-in features for things like security (**WS-Security**) and transactions. Still widely used in enterprise-level applications and regulated industries like finance and healthcare.
+* **Cons**: Verbose, complex to implement, and slower due to the larger XML payloads. It's much less flexible than REST or GraphQL.
+
+
+
+### **gRPC (gRPC Remote Procedure Call)**
+
+**gRPC** is an open-source framework developed by Google. It is based on the **Remote Procedure Call (RPC)** architectural style, where a client can directly call a function on a server as if it were a local function.
+
+* **Key Idea**: gRPC is function-centric. It uses a **binary format (Protocol Buffers)** for data serialization, making it extremely fast and efficient, especially for communication between internal services (microservices).
+* **Pros**: Very high performance, low latency, and efficient.
+* **Cons**: Less human-readable than JSON-based APIs and primarily used for server-to-server communication rather than client-to-server.
+
+### Whats and endpoint?
+
+An endpoint is the digital location where an **Application Programming Interface (API)** receives requests and sends responses.
+
+Think of it as the address for a specific resource or function on a server.
+
+Endpoints are most often URLs that define where to interact with the API. For example, in a social media API, `/users` could be an endpoint to access user information. 
+
+#### Protected Endpoints
+
+**Protected endpoints** are API endpoints that require some form of **authentication** and **authorization** before a client can access them. This is done to prevent unauthorized access to sensitive data or functionality. Without proper credentials, a request to a protected endpoint will be denied.
+
+The key differences between a protected and an unprotected endpoint lie in the security measures they employ:
+
+* **Unprotected Endpoints**: These are public and can be accessed by anyone without any special credentials. An example might be an endpoint to retrieve publicly available data, like a list of current news headlines.
+* **Protected Endpoints**: These are private and are only accessible by authenticated and authorized users. To access them, a user might need to provide an **API key**, a **token**, or a **username and password**. A good example is an endpoint to update a user's profile information, which should only be accessible by the user themselves.
+
+#### How Protection Works
+
+Common methods for protecting endpoints include:
+
+* **Authentication**: Verifies the identity of the client making the request.
+    * **API Keys**: A unique string of characters assigned to a developer or application for access.
+    * **OAuth 2.0 / JWT (JSON Web Tokens)**: A framework for delegated authorization, where a user can grant a third-party application access to their information without sharing their password.
+* **Authorization**: Determines what an authenticated client is allowed to do. For example, an authenticated user might be allowed to view their own data but not another user's data.
+* **Rate Limiting**: Restricts the number of requests a client can make within a specific time period to prevent abuse or denial-of-service (DoS) attacks.
+* **HTTPS Encryption**: Ensures that all data transmitted between the client and the server is encrypted, protecting it from being intercepted.

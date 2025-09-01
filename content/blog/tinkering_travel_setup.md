@@ -2,10 +2,17 @@
 title: "Technology Setup for a Trip"
 date: 2025-02-11
 draft: false
-tags: ["AI", "Outro","Photo","Spliit"]
+tags: ["AI", "Outro","Photo","PiGallery","Spliit","Numbeo"]
 description: "Software and Hardware setup before trips or vacations. Tech Travel Setup. With Cost of Living."
 url: 'tech-for-a-trip'
 ---
+
+
+**TL;DR** 
+
+Tech for travel post!
+
+**Intro**
 
 Software and Hardware setup **before trips or vacations**.
 
@@ -15,24 +22,28 @@ Because you wont be carrying a lot of stuff: https://levels.io/carry-on-world-tr
 
 ### Software Setup
 
-If you are reading for some time already - You know that I really enjoy [SelfHosted Apps](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/).
+If you are reading me for some time already: You know that I really enjoy [SelfHosted Apps](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/).
 
 {{< callout type="info" >}}
-For easier setup (specially for servers), you can benefit of being familiar with [containers](#what-about-containers) 
+For easier setup, *specially for servers*, you can benefit of being familiar with [containers](#what-about-containers) 
 {{< /callout >}}
 
-> For content creation, you can have a look to **[ubuntu studio](https://ubuntustudio.org/)** with tools like gimp or digikam
+> For content creation, you can have a look to **[ubuntu studio](https://ubuntustudio.org/)** with tools like gimp or digikam.
 
 #### Communication
 
-You can setup a Matrix Server and then install [Element as Chat app](https://jalcocert.github.io/Linux/docs/privacy/android/#my-fav-android-apps)
+You can [setup a Matrix Server](https://fossengineer.com/selfhosting-matrix-synapse-docker/) and then install [Element as Chat app](https://jalcocert.github.io/Linux/docs/privacy/android/#my-fav-android-apps)
 
 
 {{< callout type="info" >}}
-You can also try Telegram or **Signal** 💻 
+You can also try WA, Telegram or **Signal**, *depending where you want to go* 💻 
 {{< /callout >}}
 
+Some tech people prefer discord or slack to build communities though.
+
 #### VPNs
+
+A virtual private network so that you can access your homelab containers, without them being hit by bot queries.
 
 {{< callout type="info" >}}
 Proper **[DNS](https://jalcocert.github.io/Linux/docs/debian/linux_vpn_setup/#dns-what) Setup** is also a good travel companion 
@@ -48,6 +59,9 @@ You can call Wireguard the VPN client for PROS and not for "Pacos".
 
 ##### Tailscale
 
+I really like the simplicity of tailscale (you just connect with google) and you get your laptops/smartphones to be connected in between.
+
+**Without portforwarding** and complex configs.
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/Linux/docs/debian/linux_vpn_setup/#tailscale" title="TailScale Setup ↗" >}}
@@ -92,22 +106,17 @@ Which you can combine with [Mullvad](https://jalcocert.github.io/Linux/docs/debi
 
 #### Trip Planner
 
+This is one of the webapps that you can selfhost for your trips.
+
+Well, better if you do so beforehand, because it will allow you to understand weather patters in your destination.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Trip Planner Post" image="https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png" subtitle="Weather Trends with Python" >}}
   {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
 {{< /cards >}}
   
-<!-- 
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Trip Planner Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Weather Trends with Python" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
-{{< /cards >}}
-
-
-![Trip Planner Graph](https://github.com/JAlcocerT/Py_Trip_Planner/raw/main/images/trip-planner-main-graph.png) 
--->
+You also have these:
 
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/selfhosting-adventurelog/" title="How to Setup AdventureLog with Containers" >}}
@@ -118,19 +127,16 @@ You can also have a look to projects like: https://github.com/maxlerebourg/outpi
 
 > Apache v2 |  OutPin offers a way to plan your future holidays by creating adventures and adding steps to them (with PocketBase/SQLite) 
 
-Which are selfhostable as per: https://github.com/JAlcocerT/Docker/tree/main/Others/Travel
+Which are selfhostable as per this section of my Docker repo: https://github.com/JAlcocerT/Docker/tree/main/Others/Travel
 
 {{< details title="Quick Trip Planner Deployment 📌" closed="true" >}}
 
 See the [project deployment options](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/Deploy).
 
+You can try with python baremetal, but containers is my go to for stability.
+
 {{< /details >}}
 
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="RE Calculator - Post"  >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="Job Offers and CV Creation" >}}
-{{< /cards >}}
 
 ### Maps
 
@@ -294,6 +300,10 @@ You can also take a **4G LTE Wingle**, like the OLAX:
 
 #### Action Cam
 
+If you like to tinker with video and collect virtual memories, you might brign with you an action cam.
+
+Recently ive been bringing the OA5Pro and im still figuring out how to make better videos tbh:
+
 <!--
 ![DJI Osmo Action 5 Pro](/blog_img/hardware/dji_oa5pro.jpg) 
 -->
@@ -355,22 +365,36 @@ Can’t access the internet via the repeated hotspot. Try to enter **Login Mode 
 
 ## Conclusions
 
+Done travelling?
+
+On the other side of the coin you have mortages and jobs waiting for you:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="RE Calculator - Post"  >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="Job Offers and CV Creation" >}}
+{{< /cards >}}
+
+
 After travelling and *hopefully learning new perspectives*, you can [create a website](https://jalcocert.github.io/JAlcocerT/create-your-website/) to tell your story.
 
 {{< cards >}}
-  {{< card link="https://cyclingthere.pages.dev/" title="My Story" image="https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with a MTB" >}}
+  {{< card link="https://cyclingthere.pages.dev/" title="My Story" image="https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with a MTB that I shared into a SSG website" >}}
 {{< /cards >}}
 
-You can also have a look to https://github.com/gpxstudio/gpx.studio 
+You can also have a look to: https://github.com/gpxstudio/gpx.studio 
 
 > MIT | the online GPX file editor 
 
-And to https://github.com/JAlcocerT/pigallery2 to display your photos and their GPX metadata (the gallery also render the GPX files!) and is very simple to [setup 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGallery_docker-compose.yml)
+And to https://github.com/JAlcocerT/pigallery2 because is so cool that displayes your photos and their GPX metadata
+
+The gallery also render the GPX files!
+
+> it's very simple to [setup 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGallery_docker-compose.yml)
 
 
 **Bonus**
 
-1. [Movemouse](https://github.com/sw3103/movemouse?ref=fossengineer.com)
+1. [Movemouse](https://github.com/sw3103/movemouse?ref=fossengineer.com) - *Because I know you are workationing*
 
 > GPL 3.0 |  Move Mouse is a simple piece of software that is designed to simulate user activity. 
 
@@ -397,7 +421,7 @@ If you are [planning a trip](https://github.com/JAlcocerT/Py_Trip_Planner/tree/m
 
 ### Sharing Expenses with Spliit
 
-If you are not aware of **Spliit** for sharing expenses with others:
+If you are not aware of **Spliit** for sharing expenses with others: *its kind of a `https://settleup.app/`, but OSS*
 
 * https://github.com/spliit-app/spliit
 

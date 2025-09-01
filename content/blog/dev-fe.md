@@ -21,7 +21,7 @@ I got to setup properly: [Logto](#logto) and [TinyAuth](https://jalcocert.github
 
 Via Flask, we can also have [hardcoded users to be logged in](#flask-userpwd-challenge), which you can improve by being part of the `.env`
 
-I also got to know the PB way of authenticating users.
+> I also got to know the PB way of authenticating users.
 
 ```mermaid
 graph TD
@@ -49,9 +49,6 @@ A **FE guy recommended** me to look:
 
 * https://tanstack.com/query/latest - Powerful asynchronous state management, server-state utilities and data fetching
 * https://redux-toolkit.js.org/rtk-query/overview - RTK Query is an optional addon included in the Redux Toolkit package, and its functionality is built on top of the other APIs in Redux Toolkit.
-
-
-
 
 ## FE Can do a lot
 
@@ -171,8 +168,6 @@ Examples include:
 
 This logic should be focused on improving the user experience and making the application feel responsive and intelligent without requiring a round-trip to the server.
 
-***
-
 ### Business Logic on the Back End
 
 The business logic on the **back end** is the **core, authoritative logic** that governs your application's data and security. This is where the most critical rules and operations reside. It's the **server-side business logic**.
@@ -183,7 +178,6 @@ Examples include:
 * **Data Validation & Integrity:** Ensuring that data written to the database is always valid and adheres to all constraints (e.g., a user's email is unique, a product's price is positive).
 * **Complex Calculations:** Processing a user's shopping cart, calculating taxes and shipping, or running any resource-intensive operations.
 
-***
 
 ### Why the Distinction Matters
 
@@ -196,7 +190,9 @@ So, to summarize: **hooks are a part of the front end**, and they contain **clie
 
 ## Authentication vs Authorization
 
-That's a crucial question in web security, and the distinction is often a source of confusion. In simple terms:
+That's a crucial question in web security, and the distinction is often a source of confusion. 
+
+In simple terms:
 
 * **Authentication** is about **who you are**.
 * **Authorization** is about **what you can do**.

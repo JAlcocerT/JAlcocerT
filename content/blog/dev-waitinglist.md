@@ -42,7 +42,7 @@ I took inspiration on the **MIT astro theme**:
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Astro Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Forked and Tweaked Astro Theme" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Astro Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Forked and Tweaked Astro Theme for waiting2landing concept" >}}
 {{< /cards >}}
 
 Now, there are some changes added:
@@ -191,9 +191,15 @@ Just switch from waiting, to landing:
 make local-landing
 ```
 
+{{< callout type="warning" >}}
+This will show the full original theme page (not just a very small UI with a place to insert the email and route it to formbricks)
+{{< /callout >}}
+
 ### Astro Landing Pages / Book Pages
 
-* You can see how cool can astro be for landing pages: https://github.com/Enmamosley/astro-landing-page
+You can see how cool can astro be for landing pages: 
+
+* https://github.com/Enmamosley/astro-landing-page
 
 > CC4.0 |  Landing page blackspike 
 
@@ -209,7 +215,7 @@ I was creating other *landing pages* and wrote about it:
 
 > A free, modern, Astro landing page theme made with Tailwind to help kick start your next Astro project
 
-Recently, I have been geting many ads on social media about people selling ebooks via a very simple landing page:
+Recently, I have been geting many ads on social media about **people selling ebooks** via a very simple landing page:
 
 * https://github.com/candidosales/landing-page-book-astro-tailwind
 
@@ -223,4 +229,8 @@ Recently, I have been geting many ads on social media about people selling ebook
 
 ### More Astro Themes
 
+Get inspired if you like photo galleries
+
 * https://github.com/evadecker/astro-photo-grid
+
+>  A minimal, single-page photo gallery for Astro. 

@@ -7,7 +7,9 @@ description: 'Email is hard. '
 url: 'emails-101'
 ---
 
-**TL;DR** SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better
+**TL;DR**
+
+SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better
 
 **Intro**
 
@@ -18,10 +20,6 @@ So far I got proper *and high level* custom email integration via:
 3. Via LogTo: also to redirect to your custom domain for auth login etc
 
 But for something more custom...I have been lacking how actually email/SMTP work.
-
-
-
-
 
 * https://github.com/4w4k3/KnockMail
 
@@ -91,11 +89,17 @@ How to do email stuff...with code
 ### MailGun
 
 
+### Resend
+
+People use that one for some contact forms, as seen on [this post section](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#managing-packages-for-ssgs), together with [HUGO Themes like this](https://github.com/HugoRCD/canvas?tab=readme-ov-file#setup-the-contact-form).
+
+* https://resend.com/signup
+
 ---
 
 ## Conclusions
 
-Sendgrid just block me few minutes after creating my account.
+**Sendgrid** just block me few minutes after creating my account.
 
 That was interesting.
 

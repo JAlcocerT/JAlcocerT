@@ -630,18 +630,17 @@ Its inclusion of Flutter for UI design and ease of deployment make it a versatil
 
 This is an **awsome video**, as always, from **Fireship**.
 
-You can see how many frameworks+languages pairs to make web app are out there.
-
+You can see how many **frameworks+languages pairs to make web apps** are out there:
 
 {{< youtube "FQPlEnKav48" >}}
 
 But if you dont have time to see it all...you can always use the [PhiData Youtube Summarizer with Groq Image](https://github.com/JAlcocerT/phidata/pkgs/container/phidata) that I [described here](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/)
 
-{{< details title="How could I not summarize the video... 📌" closed="true" >}}
+{{< details title="How could I not summarize the video...Frameworks overview 📌" closed="true" >}}
 
 - **Ruby on Rails**: Known for simplicity and an "opinionated" approach, Rails offers a robust set of tools, including Active Record (ORM) and a powerful CLI.
 - **Django**: **Python-based**, Django is appreciated for its ease of use and "batteries-included" philosophy, providing built-in features like an admin interface and ORM.
-- **Laravel**: A PHP framework with a modular, flexible structure, Laravel emphasizes simplicity and user-friendly design.
+- **Laravel**: A **PHP framework** with a modular, flexible structure, Laravel emphasizes simplicity and user-friendly design.
 - **Next.js**: Part of the **React ecosystem**, Next.js offers a minimalistic, JavaScript-based approach, with a focus on simplicity and ease.
 - **Spring**: A comprehensive Java framework, Spring is known for its robustness and complexity, including a strong CLI and ORM.
 - **ASP.NET**: Maintained by Microsoft, ASP.NET offers modularity and flexibility, with a strong emphasis on simplicity.
@@ -652,9 +651,6 @@ But if you dont have time to see it all...you can always use the [PhiData Youtub
 - **Vapor**: Swift-based, Vapor is modern and simple, offering a robust toolset with ORM and a powerful CLI.
 
 **Takeaways**: Fireship crowns **Ruby on Rails** as the best full-stack framework, citing its simplicity, ease of use, and tool robustness.
-
-Ultimately, the best choice depends on the specific needs and goals of each project, as each framework has unique strengths and weaknesses.
-
 
 
 {{< /details >}}
@@ -696,7 +692,7 @@ So this is it for now.
 
 Do you need some quick PoC?
 
-I would stick to Streamlit.
+> I would stick to Streamlit
 
 Do you expect it to scale and custom functions/behaviour to appear?
 

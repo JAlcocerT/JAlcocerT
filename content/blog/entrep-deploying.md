@@ -1,9 +1,9 @@
 ---
 title: "Where to Deploy?"
-date: 2025-08-31
+date: 2025-09-04
 draft: false
 tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio"]
-description: 'Resources to launch your stuff to your clients.'
+description: 'Resources to launch your stuff in front of your clients.'
 url: 'where-to-deploy'
 ---
 
@@ -13,17 +13,17 @@ Have your client in the loop asap.
 
 Thats one of the outcomes of *the [lean](https://jalcocert.github.io/JAlcocerT/lean/) startup*
 
-So when the code works on your machine, how about sharing it with real users?
-
-
+So when the code works on your machine: *how about sharing it with real users?*
 
 ## VPS
+
+VPS, just a computer somewhere else in the world.
 
 I started using GCP free tier to get started with cloud.
 
 > Later, I got dissapointed with Oracle Cloud.
 
-Then decided to try these VPS for fun.
+Then decided to try these VPS for fun and see how my linux skills got better.
 
 Any of these can help you serve your Apps to people, unless you want to do so from your homelab!
 

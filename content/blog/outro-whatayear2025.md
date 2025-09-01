@@ -95,6 +95,8 @@ A person cant solve all problems at the same time
 
 5. Quotes
 
+> One place, not all over the place.
+
 > *What are you afraid of loosing if you wont take any with you?*
 
 > *Punishment fades but reward stayes*

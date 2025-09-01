@@ -1,5 +1,5 @@
 ---
-title: "What is Typescript? > JavaScript ?"
+title: "What is Typescript? Is it > JavaScript ?"
 date: 2025-08-14
 draft: false
 tags: ["SSG","Web","Yarnness x Knitting"]
@@ -7,7 +7,11 @@ description: 'Typescript and how easy is for everyone to get a blog.'
 url: 'whats-typescript'
 ---
 
-**TL;DR:** It was about time to recap with it can be done with [TypeScrypt](#ts) (and what not) + Update on [knitting blog](#a-blog-for-all)
+**TL;DR:**
+
+It was about time to recap with it can be done with [TypeScrypt](#ts) (and what not)
+
++++ Update on [knitting blog](#a-blog-for-all) *for a future entrepreneursheep*
 
 **Intro**
 
@@ -21,18 +25,20 @@ But between all the websites Ive been exploring with, its time to put together [
 
 If you know [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/), going to TS *should be relatively* simple.
 
-
+ you can get to know the Docs of any **npm package** that uses typescript: <https://tsdocs.dev/>
 
 ### TS x PB
 
 
-{{% details title="Why TypeScript + PocketBase...?" closed="true" %}}
+{{% details title="Why TypeScript + PocketBase...? PB SDK" closed="true" %}}
 
 {{% /details %}}
 
 A TypeScript class is *not* limited to being the UI client.
 
-TypeScript is a superset of JavaScript, and since JavaScript can run on both the front-end (in a browser) and the back-end (using a runtime like Node.js), TypeScript can be used in both places.
+TypeScript is a superset of JavaScript.
+
+Since JavaScript can run on both the front-end (in a browser) and the back-end (using a runtime like Node.js), TypeScript can be used in both places.
 
 {{% details title="About TS Classes and PB... 🚀" closed="true" %}}
 
@@ -90,7 +96,6 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 > MIT | An elegant and minimal blogging/coding/programming theme for Astro
 
-
 You can ask now coding agents (Cursor, Windsurf, Copilot...) to guide you.
 
 But basically you can do `CTRL+F` to find which files drive which content.
@@ -105,13 +110,13 @@ When you are confortable with this, *if you want to share it publically*, you ha
 
 Deploy your new blog statically to your preferred solution:
 
-{{< cards cols="1" >}}
-  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="Pocketbase Docker Config 🐋 ↗" >}}
-  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="Pocketbase Docker Config 🐋 ↗" >}}
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="Static Hosting Alternatives ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG Static Hosting | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 
-You can also create a quick `make` command that will build and push your changes (manually) to CF, Firebase or any of those.
+You can also create a quick `make` command that will build and push your changes (manually) to CF, Firebase or any of those:
 
 ```makefile
 # Default make goal

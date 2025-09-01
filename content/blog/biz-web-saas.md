@@ -160,6 +160,7 @@ So first i tried it via MKCert and then i just I went quickly with my known [Clo
 You wont be able to use the demo PB API, so you will need to bring your PB publically + Cloudflare pages: *CF Pages configured, like [recently](https://github.com/JAlcocerT/serverless-invoices/blob/main/Deploy_to_CF.md)*
 
 ```sh
+#npm run build
 wrangler pages deploy dist --project-name=fast-payroll-theme --branch=main
 ```
 

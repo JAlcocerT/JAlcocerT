@@ -1,9 +1,9 @@
 ---
-title: "Some JS to make Cooler Webs"
+title: "JS to make Cooler Webs"
 date: 2025-01-12T23:20:21+01:00
 draft: false
 tags: ["Dev","React","Web","Astro","Skulpt"]
-summary: "Javascript Frameworks I find amazing to make nice UI/X for Websites"
+description: "Javascript Frameworks I find amazing to make nice UI/X for Websites"
 url: 'javascript-for-static-websites'
 ---
 
@@ -11,16 +11,44 @@ Ive learnt all of this **about JS** thanks to tinkering with the [Astro](https:/
 
 ## JS 101
 
+JavaScript can run on both the front-end (in a browser) and the back-end (using a runtime like Node.js).
+
 {{< callout type="info" >}}
 See more at https://github.com/sorrycc/awesome-javascript
 {{< /callout >}}
 
-For me JS is a mean to make cooler websites:
+For me, javascript is a mean to make cooler websites: *normally im using these SGGs*
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101" >}}
 {{< /cards >}}
+
+But be aware that JS can do front end as well as backend tasks.
+
+> And you will find many tools wrapped into JS SDK (also in Python).
+
+
+**Frontend (FE) Frameworks** 
+
+* React: A library for building user interfaces with a component-based architecture, popular for its declarative approach to UI development.
+
+* Angular: A comprehensive, opinionated framework for building large-scale, enterprise-level single-page applications.
+
+* Vue.js: A progressive framework known for its simplicity and ease of use, suitable for everything from simple UIs to complex SPAs.
+
+* Svelte: A compiler that transforms your code into small, highly efficient bundles, eliminating the need for a virtual DOM at runtime.
+
+**Backend (BE) Frameworks**
+
+* Node.js: A JavaScript runtime environment that allows developers to execute JavaScript code outside of a web browser, making it the foundation for most backend JS frameworks.
+
+* Express.js: A minimalist and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications.
+
+* NestJS: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications with a structured, modular design.
+
+* Next.js: A React framework for building full-stack web applications with features like server-side rendering, static site generation, and API routes.
+
 
 ### JS Dependency Management
 
@@ -36,14 +64,11 @@ For me JS is a mean to make cooler websites:
 
 > A modern runtime for JavaScript and TypeScript.
 
-
-
 And now we can **run js on jupyter notebooks**!
 
 
 <!-- 
 https://www.youtube.com/watch?v=pcC4Dr6Wj2Q -->
-
 
 {{< youtube "pcC4Dr6Wj2Q" >}}
 
@@ -59,10 +84,11 @@ For SSGs that are using Node (like Astro), you can get to know the Docs of any *
 {{< /dropdown >}}
 
 
-{{< dropdown title="PNPM ⏬" closed="true" >}}
+{{< dropdown title="PNPM | Example with astrozinc theme ⏬" closed="true" >}}
 
 Some themes will work only with this package manager...
-https://github.com/exylons/astrozinc
+
+* https://github.com/exylons/astrozinc
 
 ```sh
 git clone https://github.com/exylons/astrozinc
@@ -81,13 +107,10 @@ pnpm build
 
 {{< /dropdown >}}
 
-{{< dropdown title="Yarn - another package manager ⏬" closed="true" >}}
+* Yarn - another package manager
 
 
-{{< /dropdown >}}
-
-
-{{< dropdown title="Bun with an Example ⏬" closed="true" >}}
+{{< dropdown title="Bun | Example with NUXT - HUGO Canvas and Resend ⏬" closed="true" >}}
 
 * Example - https://github.com/HugoRCD/canvas
 	* Contact Forms with: https://resend.com/signup - Email for developers (https://resend.com/pricing)
@@ -105,7 +128,9 @@ bun start #prod server
 
 ## React
 
-Im not talking about AI and LLMs now.
+Im not talking about AI and LLMs now (ReACT).
+
+
 
 ## VueJS
 

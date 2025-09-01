@@ -20,16 +20,18 @@ I have been playing with cloudflare workers recently:
   {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Payroll Theme with PB as auth" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro Theme + CF Workers + PB users collections as Auth" >}}
 {{< /cards >}}
 
+You can see how well it works: https://fast-payroll-theme.pages.dev/signup/
+
 And in the conclusions I reflected on the next steps of the setup.
 
-If you are logged in...do you have which features available?
+> If you are logged in...do you have which features available?
 
-
-The primary difference between these two paradigms has to do with the way they model evaluation context.
-
-In server usage, the evaluation context changes frequently, as often as every evaluation, while in client-side usage, the evaluation context changes less frequently, often in response to user actions or UI events.
 
 **Intro**
+
+The [Go language](#about-go-projects) surprised me with another cool project to make better SaaS: [GoFF](#go-feature-flag)
+
+But, we could also simplify this [feature flags setup via PocketBase as BaaS](#feature-flags-with-pb)
 
 
 ## What are feature flags?
@@ -133,14 +135,19 @@ The main benefit is that it allows you to switch your feature flag provider with
 
 ### Go-Feature-Flag
 
-The Go-Feature-Flag project is a well-known open-source solution for feature flag management, and it stands out for a few key reasons:
+The **Go-Feature-Flag project** is a well-known open-source solution for feature flag management, and it stands out for a few key reasons:
 
-* https://github.com/thomaspoignant/go-feature-flag
-* https://gofeatureflag.org/
+* **Self-Hosted and Lightweight:** Go-Feature-Flag is designed to be simple and easy to deploy.
+  * https://github.com/thomaspoignant/go-feature-flag
+  * https://gofeatureflag.org/
 
-* **Self-Hosted and Lightweight:** Go-Feature-Flag is designed to be simple and easy to deploy. Instead of requiring a complex database or separate backend, it can retrieve its configuration from a simple file stored in a variety of locations, including a Kubernetes ConfigMap, GitHub, GitLab, or an S3 bucket.
+Instead of requiring a complex database or separate backend, it can retrieve its configuration from a simple file stored in a variety of locations, including a Kubernetes ConfigMap, GitHub, GitLab, or an S3 bucket.
+
 * **Built on Go:** As the name suggests, the core of the project is written in Go, which makes it a high-performance, lightweight, and single-binary solution.
+
 * **OpenFeature-Native:** A major strength is its commitment to the OpenFeature standard. It's one of the few feature flag solutions fully built on this vendor-agnostic API. This means that by using Go-Feature-Flag, you're not locked into a proprietary system; you can easily switch providers in the future without a major code refactor.
+  * https://openfeature.dev/
+
 * **Relay Proxy:** To support languages other than Go, the project provides a "Relay Proxy." This is a lightweight service that exposes an API for other languages to use, making it a language-agnostic solution.
 * **Advanced Capabilities:** Despite its simplicity, it supports advanced features like progressive rollouts, A/B testing, and complex targeting rules based on user attributes. It also allows you to export evaluation data to a variety of destinations for analysis.
 
@@ -148,9 +155,11 @@ The Go-Feature-Flag project is a well-known open-source solution for feature fla
 
 ### Feature Flags with PB
 
+I could make the signin/up work recently via Pocketbase users collection, see: https://pocketbase.jalcocertech.com/_/
+
 As Im not looking for sth very complex at the moment, i kept vibecoding and ask aobut pros and cons with keep just a simple PB setup.
 
-https://github.com/JAlcocerT/payroll-workers-pb/blob/main/gofeatureflag-vs-pb.md
+* https://github.com/JAlcocerT/payroll-workers-pb/blob/main/gofeatureflag-vs-pb.md
 
 Something like you signup, if you pay via stripe, you have it all.
 
@@ -160,3 +169,80 @@ Something like you signup, if you pay via stripe, you have it all.
 ---
 
 ## Conclusions
+
+### About Go Projects
+
+This seems to be the  year for me to discover the goodies of GO language.
+
+Its not just HUGO.
+
+But Cadyy and Traefik.
+
+
+---
+
+## FAQ
+
+
+The primary difference between these two paradigms has to do with the way they model evaluation context.
+
+In server usage, the evaluation context changes frequently, as often as every evaluation, while in client-side usage, the evaluation context changes less frequently, often in response to user actions or UI events.
+
+### Web Paradigms: SPA, MPA, CSR, SSR, SSG
+
+**SPA (Single Page Application)**
+
+* Uses **Client-Side Rendering (CSR)**.
+* Loads one HTML page; content updates dynamically via JavaScript.
+* Fast interactions after initial load.
+* Poor SEO by default (content rendered via JS, not immediately visible to crawlers).
+* Needs extra steps for SEO: SSR, hydration, or pre-rendering.
+
+**MPA (Multi-Page Application)**
+
+* Uses **Server-Side Rendering (SSR)**.
+* Each page is served as a fully rendered HTML document from the server.
+* Full page reloads on navigation.
+* Excellent SEO — content is immediately available to crawlers.
+
+**Why Server-Driven Apps (MPA/SSR/SSG) Are Better for SEO**
+
+* HTML is rendered before reaching the browser — search engines can see everything.
+* Metadata and structured content are easily indexed.
+* No reliance on JavaScript to render core content.
+
+🧱 **WordPress:**
+
+* ✅ Default WordPress is an **MPA** using **SSR** (PHP).
+* ✅ SEO-friendly out of the box.
+* ❗ Some setups (headless WordPress with React frontend) behave like SPAs and require SEO optimizations.
+
+
+**SSG + Astro + Chart.js – SEO Implications**
+
+✅ Good for SEO if:
+
+* Astro statically generates HTML at build time.
+* Core content is text-based and present in the HTML.
+* Charts are for visual enhancement only.
+
+❌ Risk for SEO if:
+
+* Important content (labels, stats, insights) is **only inside `<canvas>`** via Chart.js.
+* Search engines can't read canvas contents.
+
+💡 Best Practice:
+
+* Pair charts with **textual summaries, tables, or captions**.
+* Use semantic HTML (`<h2>`, `<p>`, `<ul>`, etc.) to describe chart data.
+* Let Astro load Chart.js **on the client only** (deferred), so it doesn't block page rendering or SEO.
+
+
+| Technology/Approach    | SEO Friendly? | Notes                                           |
+| ---------------------- | ------------- | ----------------------------------------------- |
+| SPA (CSR)              | ❌ By default  | Needs SSR, hydration, or pre-rendering          |
+| MPA (SSR)              | ✅ Yes         | Fully rendered HTML is great for SEO            |
+| SSG (e.g. Astro)       | ✅ Yes         | Content pre-rendered at build time              |
+| Chart.js (canvas only) | ❌ No          | Crawlers can’t read `<canvas>` content          |
+| Chart.js + text/table  | ✅ Yes         | Best of both worlds: visual + crawlable content |
+| WordPress (classic)    | ✅ Yes         | MPA + SSR setup out of the box                  |
