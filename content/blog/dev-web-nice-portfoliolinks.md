@@ -2,10 +2,20 @@
 title: "All your web links for Social Media combined"
 date: 2024-09-29T10:20:21+01:00
 draft: false
-tags: ["Dev","Web","Portfolio"]
-description: 'Consolidating Social Media Links with a cool website. Show your work with Hugo and Lynx. Compared with LinkStack.'
+tags: ["Dev","Web","Portfolio","HUGO Lynx","LinkStack","FOSS Linktree"]
+description: 'Social Media Links with a cool website. Show your work with Hugo and Lynx. Compared with LinkStack.'
 url: 'portfolio-website-for-social-media'
 ---
+
+
+**Intro**
+
+A look to the HUGO Theme: https://github.com/jpanther/lynx
+
+And why [showing your work](#a-better-way-to-show-your-work) matters.
+
++++ How I have deployed to [Github Pages](#hugo-lynx-with-githubpages)
+
 
 ## A Better way to Show your Work
 

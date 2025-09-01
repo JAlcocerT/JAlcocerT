@@ -2,7 +2,7 @@
 title: "Waiting to Landing with Pocketbase"
 date: 2025-09-01T15:20:21+01:00
 draft: false
-tags: ["Pocketbase","Cloudflare Workers/Pages","SSG CSR SSR"]
+tags: ["Pocketbase","Cloudflare Pages",CSR Guard"","SSG CSR SSR"]
 description: 'PB for your waiting list BaaS. Take user forms and then switch to landing page.'
 url: 'waiting-list-pocketbase'
 ---
@@ -22,12 +22,22 @@ Now: how about using PB to capture the email (no validation so far) and for peop
 
 **Intro**
 
-How about using and let them see a CSR page...........
+How about using and let them see a CSR page.........
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo (v1.0) via Formbricks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked and Tweaked Astro Theme for waiting2landing concept" >}}
+  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Forked Astro Payroll Theme" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + CF Workers + PB users collections as Auth" >}}  
 {{< /cards >}}
 
+
+.......like this one:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/link-hub-pb/" title="New repository - Astro Link Hub" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}
+  {{< card link="https://link-hub-1qd.pages.dev/" title="Tweaked Theme deployed to CF Pages" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}  
+{{< /cards >}}
+
+How was that even possible?
 
 ## The Theme
 
@@ -35,14 +45,72 @@ I thought about going with the landing-page-book I commented [here](https://jalc
 
 But saw the potential with this astro theme ~ linktree related.
 
+* https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/
+* https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/
+
 * https://hub-itsteddydev.vercel.app/
 * https://github.com/tedevs0/hub-itsteddydev
 
 > **MIT** |  Personal Hub is a template designed to centralize and organize personal or professional information in one place. This tool allows users to manage and access their data, projects, important links, and more, all from a unified interface. 
 
 ```sh
+#git clone https://github.com/tedevs0/hub-itsteddydev
+git clone https://github.com/JAlcocerT/link-hub-pb
 npm install
 npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/ #useful to see from your phone how it looks
+#sudo rm -r .git
+```
+
+What I liked about the theme:
+
+1. configurable via json and fully static (ssg)
+2. brings i18n working out of the box
+
+{{< callout type="warning" >}}
+Auto-detect: Astro won’t pick browser language automatically for static sites. It renders both routes; you choose which URL to serve.
+{{< /callout >}}
+
+What I added:
+
+1. [Signin/up pages](https://github.com/JAlcocerT/link-hub-pb/blob/main/signin-up.md)
+2. [Connection to the login signup to pb](https://github.com/JAlcocerT/link-hub-pb/blob/main/signin-up-add-pb.md), similarly to what was done at  [this post](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#ssg-x-pb)
+
+*At some point we could get [PB to do email verification](https://github.com/JAlcocerT/link-hub-pb/blob/main/pocketbase-email-verif.md)*
+
+3. The magic happens at the `./scripts`
+
+{{< callout type="warning" >}}
+This setup does not uses cloudflare workers, but just a simpler CSR guard token approach to protect the `/app` route
+{{< /callout >}}
+
+
+```sh
+npm install "pocketbase": "^0.21.3"
+```
+
+Modify the `.env`:
+
+```sh
+PUBLIC_PB_BASE_URL=https://pocketbase.jalcocertech.com
+```
+
+Just push it to GH, if you want:
+
+```sh
+#sudo apt install gh
+gh auth login
+gh repo create link-hub-pb --private --source=. --remote=origin --push
+```
+
+And then to CF Pages:
+
+```sh
+npm run build
+#npx http-server ./dist -p 4321
+
+#wrangler --version
+wrangler pages deploy dist --project-name=link-hub --branch=main
+wrangler
 ```
 
 {{< cards cols="2" >}}
@@ -99,7 +167,7 @@ It simplifies the development of complex applications by providing an opinionate
 Nuxt is deeply rooted in JavaScript, as it's built on top of the Vue.js framework, which is a JavaScript library for building user interfaces.
 
 {{< callout type="warning" >}}
-See more about TS and JS Frameworks
+See more about [TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/) and [JS Frameworks](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/)
 {{< /callout >}}
 
 It uses JavaScript to handle almost every aspect of an application, from front-end interactivity to server-side logic.

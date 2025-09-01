@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Sensors"
-date: 2025-09-01
+date: 2025-09-06
 draft: false
 tags: ["Tinkering"]
 description: What Ive learnt while using a ESP32 and a Raspberry Pi Pico W [Microcontrollers]
