@@ -2,7 +2,7 @@
 title: "Backends"
 date: 2025-09-15T23:20:21+01:00
 draft: false
-tags: ["Dev","Laravel PHP","Python BE fwks"]
+tags: ["Dev","Laravel PHP","Python BE fwks","Protected EndPoints"]
 url: 'backend-alternatives'
 description: 'Backend 101 for your SaaS'
 ---
@@ -13,7 +13,7 @@ Im mostly focused on python, *despite not being a real dev*.
 
 But Ive heard a lot of people do cool things with just PHP+jquery.
 
-Others mention a lot the power of [Laravel](#laravel-101), which is also PHP.
+Others mention a lot the power of [Laravel](#laravel-101), which uses PHP.
 
 
 
@@ -306,3 +306,36 @@ Common methods for protecting endpoints include:
 * **Authorization**: Determines what an authenticated client is allowed to do. For example, an authenticated user might be allowed to view their own data but not another user's data.
 * **Rate Limiting**: Restricts the number of requests a client can make within a specific time period to prevent abuse or denial-of-service (DoS) attacks.
 * **HTTPS Encryption**: Ensures that all data transmitted between the client and the server is encrypted, protecting it from being intercepted.
+
+### Whats Pagination
+
+Pagination is the process of breaking up a large dataset into smaller, more manageable "pages" to improve performance and user experience. 
+
+Instead of a single API request returning thousands of records at once, which can be slow and resource-intensive, pagination allows the client to request a specific subset of the data at a time.
+
+This is a crucial concept for any application that handles a large amount of data, like social media feeds, e-commerce product listings, or search engine results. 
+
+
+### Common Types of API Pagination
+
+While the goal is always the same, there are several different techniques to implement pagination, each with its own advantages and disadvantages.
+
+#### 1. Offset-Based Pagination (or "Page-Number" Pagination)
+This is the most common and straightforward method. It uses two parameters in the API request: **`offset`** (or `page`) and **`limit`** (or `page_size`).
+
+* **How it works**:
+    * `limit`: Specifies the number of items to return per page.
+    * `offset`: Specifies the number of items to skip from the beginning of the dataset.
+* **Example**: To get the second page of 10 items, you would make a request like `GET /api/posts?offset=10&limit=10`.
+* **Pros**: Easy to implement and allows users to jump to any page number.
+* **Cons**: Can be inefficient for very large datasets because the database still has to scan and skip all the records up to the offset, which can slow down the query. It's also prone to issues if new data is added or removed while the user is navigating, as the total number of items and page offsets might change.
+
+#### 2. Cursor-Based Pagination
+This method is more advanced and better suited for large, dynamic datasets. It uses a unique, immutable identifier (**a cursor**) to mark the starting point for the next page of results.
+
+* **How it works**:
+    * The API returns a special value (the **`cursor`**) in the response, which points to the last item on the current page.
+    * To get the next page, the client includes this cursor value in the next request, and the server uses it to find the next set of items.
+* **Example**: A request might look like `GET /api/posts?limit=10&cursor=eyJpZCI6MTIzNDV9`, where the cursor is an opaque token provided by the server.
+* **Pros**: Extremely efficient and highly stable. It doesn't rely on an offset, so adding or removing data doesn't affect the integrity of the pagination.
+* **Cons**: More complex to implement on the backend and doesn't allow users to "jump" to a specific page number. It's best for applications that use a "next/previous" navigation or infinite scrolling.

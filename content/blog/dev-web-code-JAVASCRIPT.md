@@ -2,12 +2,16 @@
 title: "JS to make Cooler Webs"
 date: 2025-01-12T23:20:21+01:00
 draft: false
-tags: ["Dev","React","Web","Astro","Skulpt"]
+tags: ["Dev","React","Web","Skulpt"]
 description: "Javascript Frameworks I find amazing to make nice UI/X for Websites"
 url: 'javascript-for-static-websites'
 ---
 
+**Intro**
+
 Ive learnt all of this **about JS** thanks to tinkering with the [Astro](https://jalcocert.github.io/JAlcocerT/create-your-website/#what-ive-learnt-about-astro) and [NextJS](https://fossengineer.com/nextjs-ssg/) web frameworks.
+
+As im not a web dev, Im collecting here all the high level info that might be helpful to get a **mindmap about javascript**.
 
 ## JS 101
 
@@ -37,6 +41,10 @@ But be aware that JS can do front end as well as backend tasks.
 
 * Vue.js: A progressive framework known for its simplicity and ease of use, suitable for everything from simple UIs to complex SPAs.
 
+> Example of VueJS SPA: https://github.com/JAlcocerT/serverless-invoices 
+
+> > Also SliDev, PPT as a Code!
+
 * Svelte: A compiler that transforms your code into small, highly efficient bundles, eliminating the need for a virtual DOM at runtime.
 
 **Backend (BE) Frameworks**
@@ -52,7 +60,12 @@ But be aware that JS can do front end as well as backend tasks.
 
 ### JS Dependency Management
 
+Same that we do `pip install pandas` in Python.
+
+We need to do within Javascript packages to work.
+
 1. NPM
+
 2. BUM
 
 {{% details title="Put simply 🌍" closed="true" %}}

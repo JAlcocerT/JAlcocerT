@@ -80,7 +80,7 @@ What I added:
 3. The magic happens at the `./scripts`
 
 {{< callout type="warning" >}}
-This setup does not uses cloudflare workers, but just a simpler CSR guard token approach to protect the `/app` route
+This setup [does NOT uses cloudflare workers and the *htpponly cookies*, but a simpler **CSR guard**](https://github.com/JAlcocerT/link-hub-pb/blob/main/client-side-protection-vs-workers.md) token approach to protect the `/app` route
 {{< /callout >}}
 
 
@@ -102,7 +102,7 @@ gh auth login
 gh repo create link-hub-pb --private --source=. --remote=origin --push
 ```
 
-And then to CF Pages:
+And then to push towards CF Pages:
 
 ```sh
 npm run build
@@ -110,7 +110,7 @@ npm run build
 
 #wrangler --version
 wrangler pages deploy dist --project-name=link-hub --branch=main
-wrangler
+#wrangler pages project list
 ```
 
 {{< cards cols="2" >}}
@@ -123,6 +123,7 @@ wrangler
 ## FAQ
 
 ### SSG vs CSR vs SSR
+
 
 #### CSR vs SPA
 

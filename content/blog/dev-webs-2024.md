@@ -231,9 +231,11 @@ Like we did at the **Social Media Project!**
   * There are some project to [create invoices with open software](https://fossengineer.com/open-source-invoice-creator/) - **Serverless Invoices** worked great for me!
 
 
-{{% details title="ServerLess-Invoices, VueJS app Setup 🚀" closed="true" %}}
+{{% details title="ServerLess-Invoices, A VueJS app Setup 🚀" closed="true" %}}
 
-Create and manage invoices in your browser. Serverless Invoices is a free invoicing tool for freelancers and small businesses. 
+Create and manage invoices in your browser via SPA.
+
+Serverless Invoices is a free invoicing tool for freelancers and small businesses. 
 
 **Made with Vue.js.** 
 

@@ -2,7 +2,7 @@
 title: "Quick SaaS Websites with user login"
 date: 2025-08-30T13:20:21+01:00
 draft: false
-tags: ["Web",HomeLab,"Cloudflare Workers x PB Auth","Gitea","Cursor CLI and InvoCLI","Astro Payroll Theme"]
+tags: ["Web",HomeLab,"Cloudflare Workers x PB Auth","htpponly cookies","Gitea","Cursor CLI and InvoCLI","Astro Payroll Theme"]
 description: 'FastAPI x PocketBase x SSG so that your project are good looking and with a working SignIn/Up.'
 url: 'fastapi-x-pocketbase'
 ---
