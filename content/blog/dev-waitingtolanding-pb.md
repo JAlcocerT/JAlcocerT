@@ -2,7 +2,7 @@
 title: "Waiting to Landing with Pocketbase"
 date: 2025-09-01T15:20:21+01:00
 draft: false
-tags: ["Pocketbase","Cloudflare Pages",CSR Guard"","SSG CSR SSR"]
+tags: ["Pocketbase","Cloudflare Pages",CSR Guard"","SSG CSR SSR","Link Hub","Waiting2Landing v2.0"]
 description: 'PB for your waiting list BaaS. Take user forms and then switch to landing page.'
 url: 'waiting-list-pocketbase'
 ---
@@ -33,7 +33,14 @@ How about using and let them see a CSR page.........
 .......like this one:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/link-hub-pb/" title="New repository - Astro Link Hub" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}
+  {{< card link="https://github.com/JAlcocerT/link-hub-pb/" title="NEW repository - Astro Link Hub" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}
+  {{< card link="https://link-hub-1qd.pages.dev/" title="Tweaked Theme deployed to CF Pages" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}  
+{{< /cards >}}
+
+And tested the new tech stack with a v2.0 with the [waiting to landing idea](#a-better-waiting2landing):
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/link-hub-pb/" title="NEW repository - Waiting2Landing v2.0" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}
   {{< card link="https://link-hub-1qd.pages.dev/" title="Tweaked Theme deployed to CF Pages" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}  
 {{< /cards >}}
 
@@ -83,6 +90,11 @@ What I added:
 This setup [does NOT uses cloudflare workers and the *htpponly cookies*, but a simpler **CSR guard**](https://github.com/JAlcocerT/link-hub-pb/blob/main/client-side-protection-vs-workers.md) token approach to protect the `/app` route
 {{< /callout >}}
 
+4. Playing with the `./scripts/app-secrets.ts`, we can show to the users information available into a public json when they log in, or with more sense, see private information that only logged in people could see, powered by [a PB collection](https://github.com/JAlcocerT/link-hub-pb/blob/main/secrets-to-pb-collection.md), in this case called `repos`.
+
+I followed [this .md for the setup](https://github.com/JAlcocerT/link-hub-pb/blob/main/programatic-collection-creation.md).
+
+> As you add new records, they will be visible for the users :)
 
 ```sh
 npm install "pocketbase": "^0.21.3"
@@ -117,6 +129,12 @@ wrangler pages deploy dist --project-name=link-hub --branch=main
   {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="Static Hosting Alternatives ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG Static Hosting | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+
+## Conclusions
+
+
+### A Better Waiting2Landing
 
 ---
 

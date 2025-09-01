@@ -236,6 +236,10 @@ I have been very happy with [LogTo](#logto) so far.
 
 The documentation is pretty detailed, and they keep adding new features: https://docs.logto.io/end-user-flows/collect-user-profile
 
+{{< callout type="info" >}}
+I tested Logto Python SDK here, but there is also a JS SDK that Ill try soon!
+{{< /callout >}}
+
 Their blog normally brings quite interesting ideas:
 
 * [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) is cool, but their auth is hard: https://blog.logto.io/mcp-auth?ref=newsletter. And there are some tools to bring that authentication to MCP:
