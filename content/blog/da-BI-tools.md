@@ -267,7 +267,7 @@ Setting Up the LGTM Stack
 To get started:
 
 1. **Server Setup**: Fireship recommends using Hostinger, which offers a variety of hosting services, including a Linux virtual private server (VPS) suitable for this project.
-2. **Deploying LGTM Backend**: The LGTM backend can be deployed using a Docker image provided by Graphon.
+2. **Deploying LGTM Back-end**: The LGTM backend can be deployed using a Docker image provided by Graphon.
 3. **Server Access**: After setting up your server on Hostinger, you can access the management dashboard and connect via SSH.
 
 Running Grafana

@@ -23,6 +23,8 @@ url: 'creating-ecommerce'
 
 ## Streamlit as eCommerce
 
+You would need proper file connection and some decent auth:
+
 * https://github.com/streamlit/files-connection
 * https://github.com/bleumink/streamlit-keycloak
 

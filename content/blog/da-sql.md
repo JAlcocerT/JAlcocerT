@@ -538,7 +538,9 @@ Avoiding unnecessary subqueries and reducing the number of rows processed can im
     https://www.c-sharpcorner.com/UploadFile/f0b2ed/tips-to-increase-sql-server-query-performance-part-2/ -->
 
 
-### TRINO SQL (ex-Presto SQL)
+### TRINO SQL 
+
+Also known as ex-Presto SQL.
 <!-- 
 
 https://www.youtube.com/watch?v=SnvSBYhRZLg
@@ -577,7 +579,9 @@ With trino, you will have SQL for these data sources, even if they dont do it na
 
 And...you can run ML - https://trino.io/docs/current/functions/ml.html
 
-You like JSON? https://trino.io/docs/current/functions/json.html
+You like JSON? 
+
+Trino also likes it: https://trino.io/docs/current/functions/json.html
 
 
 
@@ -617,7 +621,8 @@ SHOW FUNCTIONS like 'concat%'
 
 * [DuckDB](https://github.com/duckdb/duckdb) ~ OLAP
   * [Huey](https://github.com/rpbouman/huey) an UI for DuckDB
-  * GetHue - https://hub.docker.com/r/gethue/hue/tags - Hue is an open source SQL Assistant for Database & Data Warehouses. - https://github.com/cloudera/hue
+  * GetHue - https://hub.docker.com/r/gethue/hue/tags - Hue is an open source SQL Assistant for Database & Data Warehouses. 
+    * https://github.com/cloudera/hue
 
 ```sh
 docker run -d -p 8888:8888 gethue/hue:latest

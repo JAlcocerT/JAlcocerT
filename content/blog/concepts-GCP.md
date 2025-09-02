@@ -242,7 +242,7 @@ FROM `projectID-on-gcp.dataset_ID.INFORMATION_SCHEMA.COLUMNS`
 WHERE table_name = 'table_ID'
 ```
 
-Once you know it, you can do some data profiling on the field distribution:
+Once you know it, you can do some data profiling, like field distribution...:
 
 ```sql
 SELECT DISTINCT location_id
@@ -299,6 +299,32 @@ grouped_df.show(10)
 {{< callout type="info" >}}
 Remember to always document your queries. For example with [MermaidJS](https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/)! 
 {{< /callout >}}
+
+Always **optimize your queries** to avoid unnecesary computing costs!:
+
+```sql
+SELECT
+  gw_type,
+  cm_model,
+  idtype,
+  COUNT(DISTINCT location_id) AS total_locations_in_group,
+  COUNT(DISTINCT CASE WHEN parent_node_type = 'coolstuff' AND child_node_type = 'otherthing' THEN location_id END) AS conditional_locations,
+  (COUNT(DISTINCT CASE WHEN parent_node_type = 'coolstuff' AND child_node_type = 'otherthing' THEN location_id END) * 100.0) / COUNT(DISTINCT location_id) AS percentage_kpi
+FROM
+  `projectID.datasetID.tableID`
+WHERE
+  ts >= '2025-09-01'
+  AND ts < '2025-09-02'
+  AND idtype IN ('something', 'another')
+  AND gw_type IS NOT NULL
+  AND cm_model IS NOT NULL
+GROUP BY
+  gw_type,
+  cm_model,
+  idtype
+ORDER BY
+  total_locations_in_group DESC;
+```
 
 If you have a local DB...you can do cool tricks with GenAI to extract insights:
 
@@ -369,10 +395,9 @@ Google Compute Engine charges are based on Network use: Network egress (data lea
 
 ## Conclusions
 
-If you are into DSC, you might be interested to explore Vertex AI:
+If you are into DSc, you might be interested to explore Google's **Vertex AI**:
 
 * Model Garden, Vertex AI - https://cloud.google.com/model-garden?hl=es
-
 
 ### Other Clouds vs GCP
 
@@ -446,3 +471,68 @@ In IT, "Greenfield" and "Brownfield" describe two fundamental approaches to deve
 In essence:
 * **Greenfield = Build new.**
 * **Brownfield = Adapt/Upgrade existing.**
+
+---
+
+## FAQ
+
+Subqueries and window functions are both powerful tools for advanced SQL queries, but they differ in their use cases and performance.
+
+### Subqueries
+
+A subquery is a query nested inside another query. It can be used to return a single value (a scalar subquery) or a set of rows (a table subquery) that the outer query then processes. Subqueries are often used to filter data based on conditions that depend on other query results.
+
+* **Definition:** A subquery is an inner query that is executed before the main query.
+* **Key strength:** Highly flexible for complex filtering and retrieving single aggregate values to be used across all rows.
+* **Example:** Calculating a global total to be displayed next to each row of a grouped result.
+
+### Window Functions
+
+A window function performs a calculation across a set of table rows that are related to the current row. Unlike a `GROUP BY` clause, a window function doesn't collapse the rows of the main query; it adds a new column to each row.
+
+* **Definition:** A window function performs a calculation on a "window" or set of rows.
+* **Key strength:** Efficient for calculating running totals, rankings, moving averages, and other aggregates without collapsing rows.
+* **Example:** Ranking customers based on their total sales.
+
+**Comparison**
+
+| Feature | Subqueries | Window Functions |
+| :--- | :--- | :--- |
+| **Data Aggregation**| Can return a single aggregate value or a new table for the outer query. | Adds a new aggregate column to each row, without collapsing them. |
+| **Performance** | Can be less performant if the database re-runs the subquery for each row. | Often more efficient as the calculation is done in a single pass over the data. |
+| **Use Case**| Best for filtering or bringing a single scalar value from a separate calculation. | Best for calculations over a related set of rows, such as rankings and running totals. |
+
+
+The primary difference between a "regular" timestamp filter and a `DATE_TRUNC` filter is **performance**. The regular timestamp filter is highly efficient, while the `DATE_TRUNC` filter is not, due to how databases use indexes.
+
+---
+
+### Time Filters
+
+#### 1. The Regular TS Filter
+
+This is the standard, most performant way to filter a timestamp column for a specific day.
+
+**Example:**
+`WHERE ts >= '2025-08-30' AND ts < '2025-08-31'`
+
+#### Why It's Better
+
+* **Index-Friendly:** This method allows the database to use an index on the `ts` column. The database can quickly find the beginning of the `2025-08-30` time range and then scan only until the beginning of `2025-08-31`. This dramatically reduces the amount of data the database has to read and process. 
+* **Exactness:** It's precise, including every millisecond and microsecond within the specified 24-hour period.
+
+---
+
+#### 2. The `DATE_TRUNC` Filter
+
+This method truncates (removes the time portion) from the timestamp column and then compares the result to a date.
+
+**Example:**
+`WHERE DATE_TRUNC(connection_date, DAY) = DATE("2025-08-30")`
+
+#### Why It's Inefficient
+
+* **Full Table Scan:** The database **cannot use an index** on the `connection_date` column with this filter. Since the `DATE_TRUNC` function is applied to the column itself, the database must read every single row in the table, apply the function to the `connection_date` value, and then check if the result matches the specified date.
+* **Non-Sargable:** The term for this issue is "non-sargable." A query is sargable if it can use an index to find the data. Applying a function to a column in the `WHERE` clause makes the query non-sargable, forcing a much slower full table scan.
+
+In summary, while both filters achieve the same logical result, the difference in their execution can be huge on large datasets. Always use a range filter on the raw timestamp column for optimal query performance.

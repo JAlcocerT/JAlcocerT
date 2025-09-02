@@ -2,7 +2,7 @@
 title: "A Website for a PHD: Pylinac and QaTrack+"
 date: 2025-02-23T13:20:21+01:00
 draft: false
-tags: ["Dev","DSc","wsl","HUGO SSG","QATrack"]
+tags: ["Dev","DSc","wsl","HUGO SSG","QATrack","SSMS]
 description: 'Helping to improve scientific knowledge. Improving the day to day of a radiotherapy researcher. Containers with WSL.'
 url: 'web-for-phd-researcher'
 ---
@@ -241,3 +241,23 @@ Its "batteries-included" approach, security features, and scalability make it a 
 5. https://github.com/3b1b/manim, https://github.com/3b1b/videos?tab=readme-ov-file#workflow and https://github.com/ManimCommunity/manim/
 
 > Math Animation engine for explanatory math videos. The ones [3Blue1Brown Channel created](https://www.youtube.com/watch?v=rbu7Zu5X1zI)!
+
+---
+
+## FAQ
+
+Yes, **SQL Server Express** is a free version of Microsoft's SQL Server relational database management system (SSMS). 
+
+It's designed for small-scale applications, development, and learning. 
+
+While it's free, it has a number of limitations compared to the paid editions, such as a maximum database size of 10 GB and a limit on the amount of CPU and memory it can use.
+
+### What Is SQL Server Express?
+
+SQL Server Express is essentially a scaled-down, free-to-use version of the robust Microsoft SQL Server database. 
+
+It's a** complete database engine** that can be used to build and power applications.
+
+Its main purpose is to provide a cost-effective solution for developers, students, and small businesses who need a reliable database without the enterprise-level features and costs.
+
+> It's a great entry point into the Microsoft data platform ecosystem. 

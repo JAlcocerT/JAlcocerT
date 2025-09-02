@@ -8,9 +8,11 @@ url: 'no-code-ai-tools'
 ---
 
 
+**Intro**
+
 Gen AI, Rags, containers...
 
-But what about the use cases?
+> But what about the use cases?
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="/blog_img/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
@@ -592,7 +594,7 @@ Create your own database without technical experience. Our user friendly no-code
 
 * Rowy: https://github.com/rowyio/rowy?tab=readme-ov-file
 
-Focus: Low-code backend platform for building internal tools and automating workflows.
+> Focus: Low-code back-end platform for building internal tools and automating workflows.
 
 Strengths: Flexible and customizable, allowing you to build custom interfaces, integrations, and automations. Supports a variety of data sources and connects to external APIs.
 

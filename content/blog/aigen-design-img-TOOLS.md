@@ -66,7 +66,7 @@ The most powerful and modular stable diffusion GUI with a graph/nodes interface.
 
 It can be run as portable and with CPU only - https://github.com/comfyanonymous/ComfyUI/tags
 
->  The most powerful and modular stable diffusion GUI, api and backend with a graph/nodes interface. 
+>  The most powerful and modular stable diffusion GUI, api and back-end with a graph/nodes interface. 
 
 For Windows, there is even a portable `.exe` that you can try.
 

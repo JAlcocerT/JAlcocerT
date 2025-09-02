@@ -1,6 +1,6 @@
 ---
 title: "PM Tools for Business"
-date: 2025-11-15T23:20:21+01:00
+date: 2025-09-09T23:20:21+01:00
 draft: false
 tags: ["Web","OSS for Business","Self-Hosting","PPTs"] 
 description: ''    
@@ -15,9 +15,13 @@ url: 'selfhosting-pm-tools-docker'
 
 ## Note Taking Apps
 
-1. [LogSeq](https://fossengineer.com/selfhosting-logseq/)
-2. Trilium
-3. Joplin
+Call it note taking.
+
+Call it knowledge management.
+
+The thing is that you needs this in the information era.
+
+
 
 ### AppFlowy
 

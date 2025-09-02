@@ -25,7 +25,9 @@ Couple of years back there where prjects like https://github.com/unconv/gpt-auto
 
 > MIT |  A GPT-4 powered AI agent that can create full projects with iterative prompting 
 
-A ChatGPT API powered Python script that can build almost anything with the power of the Function Calling. Just tell it what you want to build, and it will build it and ask you clarifying questions along the way.
+A ChatGPT API powered Python script that can build almost anything with the power of the Function Calling. 
+
+Just tell it what you want to build, and it will build it and ask you clarifying questions along the way.
 
 And look at this now...
 
@@ -785,7 +787,10 @@ Let's break down the pros and cons of `venv`, `uv`, and `poetry` for managing Py
 **Cons:**
 
 * **Relatively New:** While promising, `uv` is a newer tool compared to `venv` and `poetry`. Its ecosystem and integration with all existing tools might still be evolving.
-* **Limited Feature Set Compared to Poetry:** While it excels at environment management and package installation, it doesn't yet have the full suite of features that `poetry` offers for packaging, publishing, and dependency management. For example, it currently doesn't have its own build backend.
+* **Limited Feature Set Compared to Poetry:** While it excels at environment management and package installation, it doesn't yet have the full suite of features that `poetry` offers for packaging, publishing, and dependency management. 
+
+> For example, it currently doesn't have its own build back-end.
+
 * **Learning Curve (for some):** While designed to be easy to use, switching to a new tool always involves a slight learning curve.
 * **Not a Complete Replacement for All Workflows Yet:** Depending on your specific needs, especially around complex packaging and publishing workflows, you might still need other tools in conjunction with `uv`.
 

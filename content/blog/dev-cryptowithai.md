@@ -325,6 +325,15 @@ Because...[why not!](#conclusions)
 If you want to read one and only one book about Crypto - [WhyCryptoCurrencies](https://whycryptocurrencies.com/)
 {{< /callout >}}
 
+Because tradfi, and bank accounts, IBAN, BIC, SWIFTs, SEPA...
+
+![alt text](/blog_img/data-experiments/wise-bank.png)
+
+Are completely another world: https://wise.com/us/iban/checker
+
+But there are some open and API parts, like: [Open Banking](https://en.wikipedia.org/wiki/Open_banking)
+
+![Interactive Brokers](/blog_img/crypto/ib-sepa-openbanking.png)
 
 ### Interesting Crypto Stuff I found lately
 

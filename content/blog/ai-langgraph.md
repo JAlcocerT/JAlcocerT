@@ -204,7 +204,7 @@ The dependencies are specified [here](https://github.com/JAlcocerT/local-deep-re
 4. Search-and-scraping utilities
     – HTTP clients: `httpx` & `requests`
     – HTML→Markdown: `markdownify`
-    – **Search backends**: `duckduckgo-search`, `tavily-python`, `langchain-community`’s `SearxSearchWrapper`
+    – **Search back-ends**: `duckduckgo-search`, `tavily-python`, `langchain-community`’s `SearxSearchWrapper`
     – All wired up in [src/ollama_deep_researcher/utils.py](https://github.com/JAlcocerT/local-deep-researcher/blob/main/src/ollama_deep_researcher/utils.py#L9)
 5. Environment & CLI glue
     – `python-dotenv` for .env loading
