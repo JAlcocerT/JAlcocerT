@@ -41,16 +41,16 @@ As your time is limited, you will want to scale the ideas **with tech**:
   {{< card link="https://github.com/JAlcocerT/WebifAI" title="WebifAi / WebifAIyer" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github to package and sale SSG Themes" >}}
 {{< /cards >}}
 
-And shame on me, I have not been tinkering with Stripe since last year [with the CV project](https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_Auth_Ways/Z_Auth_Stripe.py?ref_type=heads) as per [these tests](https://gitlab.com/fossengineer1/cv-check/-/tree/main/Z_Tests/Stripe?ref_type=heads).
+And shame on me: I have NOT been tinkering with Stripe since Q4 last year [with the CV project](https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_Auth_Ways/Z_Auth_Stripe.py?ref_type=heads) as per [these tests](https://gitlab.com/fossengineer1/cv-check/-/tree/main/Z_Tests/Stripe?ref_type=heads).
 
 
-For some time Im looking for a way to scale how I build websites for people.
+For some time Ive been looking for a way to scale how I build websites for people.
 
 Call it: webify, webifAI, webifyer, contentyourule.com or whatever...
 
 > Your website, your rules
 
-What we will be covering on this post:
+What we will be covering on this post: *a tech stack to ship websites*
 
 1. How to setup Stripe integration to sell like a Pro
 2. Recap on how to authenticate users into your Flask Apps
@@ -220,7 +220,7 @@ Once that its done, you can vibe code again to have real time updates for the lo
 
 ### Stripe x Logto
 
-I have been recently playing with [LogTo and Flask on this repo folder](https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo)
+I have been recently playing with [**LogTo and Flask** on this repo folder](https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo)
 
 Where I could get proper sing up/in and user email information via LogTo as per:
 
@@ -271,15 +271,26 @@ ping webify.jalcocertech.com
 
 ## Flask x SSG Themes
 
-How about making the user select the desired theme for its website.
+Let me continue thinking...
 
-And later on...have a markdown editor, just like: https://github.com/MikeMather/publite.me as per https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#publiteme
+How about: making the user select the desired theme for its website.
+
+And later on...
+
+Have a **markdown editor**, just like: https://github.com/MikeMather/publite.me
+
+> As seen during my [Y2505 SelfhPost](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#publiteme)
 
 These guys have done it with Python: *which brings comenting working out of the box*
 
 ![PubliteMe UI](/blog_img/web/SaaS/publiteme.png)
 
+<!-- 
 https://www.youtube.com/watch?v=yAJvbF-m5FM
+ -->
+
+{{< youtube "yAJvbF-m5FM" >}}
+
 
 ### Astro Themes
 
@@ -297,17 +308,16 @@ docker run -d \
   server --bind 0.0.0.0 --port 1313
 ```
 
-Then you can plug NGINX to serve the static files and provide HTTPs via Traefik programatically, via [this kind of docker compose](https://github.com/JAlcocerT/WebGenerAItor/blob/main/docker-compose.yml#L60)
+Then you can plug NGINX to serve the static files and provide [HTTPs via Traefik](https://github.com/JAlcocerT/Home-Lab/tree/main/traefik) programatically, via [this kind of docker compose](https://github.com/JAlcocerT/WebGenerAItor/blob/main/docker-compose.yml#L60)
 
 The part of building, serving, adding https...is very clear.
 
-Even updating DNS via Cloudflare API: https://github.com/JAlcocerT/WebGenerAItor/tree/main/Cloudflare_DNS
-
-And calling that CF API via Flask: https://github.com/JAlcocerT/Streamlit_PoC/blob/main/flask_dnsupdater.py
+* Even updating DNS via Cloudflare API: https://github.com/JAlcocerT/WebGenerAItor/tree/main/Cloudflare_DNS
+* And calling that CF API via Flask: https://github.com/JAlcocerT/Streamlit_PoC/blob/main/flask_dnsupdater.py
 
 But how about editing the themes?
 
-Or just...adding new content at least?
+Or just...adding new content, at least?
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docplanner-web-migration/" title="Astro Theme 101 for Webifyer" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="For a psycology centered portfolio | Post" >}}
@@ -323,9 +333,6 @@ git clone https://github.com/JAlcocerT/morita-web #npm create astro@latest -- --
 cd ./Astro-Themes/morita-web
 rm -r .git
 ```
-
-
-
 
 ## Choosing a Domain
 
@@ -375,31 +382,30 @@ You have learn how to:
 
 1. Get Flask working with Logto https://authentication.jalcocertech.com/ or https://oxa37q.logto.app/sign-in
 
-The flows assume the you want to login and give the signup as option (like most apps do)
+The flows assume the you want to login and gives the signup as option. *Like most apps do*.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication" title="LogTo 101" image="/blog_img/entrepre/stripe/logto-tnc-policy.png" subtitle="Using Logto with Flask WebApp | Post" >}}
 {{< /cards >}}
 
-
 2. Get Stripe API working inside the flask App with a DB and webhooks for updates
 
-OpenAI or Windsurf are also using stripe to charge you
+> OpenAI or Windsurf are also using stripe to charge you
 
 Normally you have a billing section in the web app that redirects to the logged in user to its stripe related info on subscriptions
 
-Example: https://billing.stripe.com/p/session/live_YWNjdF8xTlJsomethingmorehere
+Example: `https://billing.stripe.com/p/session/live_YWNjdF8xTlJsomethingmorehere`
 
 ![alt text](/blog_img/entrepre/webify/stripe-windsurf-sample.png)
 
-3. Concurrency for Flask apps is better via Gunicorn and it can be included in the Dockerfiles like:
+3. **Concurrency for Flask apps** is better via Gunicorn and it can be included in the Dockerfiles like:
 
 ```dockerfile
 #CMD python3 logto-stripe-app-v5prod.py
 CMD ["gunicorn", "logto-stripe-app-v5prod:app", "-b", "0.0.0.0:5088"]
 ```
 
-It is designed to efficiently serve your app to many users at once, with support for multiple worker processes and better handling of concurrent requests than Flask’s built-in server.
+It is designed to efficiently **serve your app to many users at once**, with support for multiple worker processes and better handling of concurrent requests than Flask’s built-in server.
 
 4. Plugging [Umami](#adding-umami-web-analytics-to-flask) to the full Flask Routes and [in-App Formbricks](#adding-formbricks-to-flask)
 
@@ -421,11 +427,11 @@ Ive put that together into the `./Z_Tests/Umami` folder of the repo.
 uv run python flask-umami-101.py 
 ```
 
-Got happily surprised to see it working also on the local network (as well as via https with CF tunnels)
+Got happily surprised to see **Umami working for the Flask WebAPP** also on the local network (as well as via https with CF tunnels):
 
-![aFlask App with Umami Integration](/blog_img/entrepre/webify/flask-umami.png)
+![Flask App with Umami Integration](/blog_img/entrepre/webify/flask-umami.png)
 
-![alt text](/blog_img/entrepre/webify/flask-tc-sample.png)
+![Flask Terms and conditions example](/blog_img/entrepre/webify/flask-tc-sample.png)
 
 ### Adding Formbricks to Flask
 

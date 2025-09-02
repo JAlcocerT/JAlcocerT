@@ -482,16 +482,10 @@ MODE=LANDING make run-dev
 
 What these are screaming is to have Logto+Stripe setup:
 
-
-
-
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/" title="Stripe x Flask - Webify v0.1" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Webify with Logto Auth working | POST" >}}
   {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/docker-compose.env.yml/" title="Webify Repo and Container - Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask + Stripe + Logto working and containerized" >}}
 {{< /cards >}}
-
-
 
 But anyways, lets see how to better serve these: mental health and [re](#real-estate)
 
@@ -546,18 +540,18 @@ And we are good to go!
 
 ### Real Estate
 
-For the last 12months Ive thought about real estate.
+For the last ~12 months Ive thought about real estate quite a lot.
 
 It all started with [this post](https://jalcocert.github.io/JAlcocerT/astro-web-setup/).
 
 Later on, few posts followed:
 
-https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/
-https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
+* https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/
+* https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
 
 > I even tested to migrate the streamlit functionality of the [RE WebApp to Reflex](https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#real-estate-with-reflex)
 
-It all started by helping a friend.
+> > It all started by helping a friend.
 
 Last time I gave him updates, we concluded with: https://jalcocert.github.io/JAlcocerT/real-estate-website/#conclusions
 
@@ -567,10 +561,10 @@ So its time to bring some **upgrades to the project**:
 
 1. Astro SSG: yes, but photos and descriptions has to be send via Web UI
 2. Keep the scrapping feature
-3. Bringing n8n and phase out the old streamlit recommendator webapp
+3. Bringing [n8n](https://github.com/JAlcocerT/Home-Lab/tree/main/n8n) and phase out the old streamlit recommendator webapp
 4. Streamlit Mortage calculator
 
-As in the meantime Ive been tinkering with astro components: *like this [image slider component](https://github.com/JAlcocerT/cybernetik-realestate-moises/blob/main/astro-nomy/src/components/ImageSlider.astro)*
+As in the meantime Ive been tinkering with **[astro components](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg)**: *like this [image slider component](https://github.com/JAlcocerT/cybernetik-realestate-moises/blob/main/astro-nomy/src/components/ImageSlider.astro)*
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro" title="Astro Component | Whatsap Bouble ↗" >}}
@@ -579,7 +573,7 @@ As in the meantime Ive been tinkering with astro components: *like this [image s
 
 I took the landing and services part from screwfast.
 
-Then the idea of the `localhost:4321/property` section, that it is filterable by tags - from astro-nomy.
+Then the idea of the `localhost:4321/property` section, that it is filterable by tags - from the astro-nomy theme.
 
 Together with this [improved Instagram like gallery component](https://github.com/JAlcocerT/real-estate-moi/blob/main/ScrewFastMoiRealEstate/src/components/InstagramGallery.astro), with load more, zoom in and arrow key navigation.
 
@@ -599,7 +593,7 @@ cd moirealestate-astro-theme
 sudo docker-compose up -d astro-dev
 ```
 
-And this works properly in dev:
+And **this works** properly in dev:
 
 ![Astro IG Gallery inpost for Properties](/blog_img/web/moi-realestate/ig-gallery.png)
 
@@ -607,10 +601,13 @@ And this works properly in dev:
   {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Astro-Themes/morita-web/src/components/WhatsappBubble.astro" title="Astro Component | Improved IG Gallery with local photos as per given folder ↗" >}}
 {{< /cards >}}
 
-Just making sure the build works:
+Just making sure the build works and we can visualize it:
 
 ```sh
 #npm run build
+##npx http-server ./dist -p 4321
+
+
 { npx astro check --verbose || true; npx astro build --verbose; } |& tee build-logs.txt #check those long logs
 #head -n 200 build-logs.txt
 #tail -n 200 build-logs.txt #I got tons of errorson the build...while dev was all OK

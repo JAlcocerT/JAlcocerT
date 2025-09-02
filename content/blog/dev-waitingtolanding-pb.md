@@ -2,8 +2,8 @@
 title: "Waiting to Landing with Pocketbase"
 date: 2025-09-01T15:20:21+01:00
 draft: false
-tags: ["Pocketbase","Cloudflare Pages",CSR Guard"","SSG CSR SSR","Link Hub","Waiting2Landing v2.0"]
-description: 'PB for your waiting list BaaS. Take user forms and then switch to landing page.'
+tags: ["Pocketbase","Cloudflare Pages",CSR Guard"","SSG CSR SSR","Link Hub","Waiting2Landing v2"]
+description: 'PB SDK for your waiting list BaaS. Take user forms and then switch to landing page.'
 url: 'waiting-list-pocketbase'
 ---
 

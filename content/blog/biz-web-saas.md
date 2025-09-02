@@ -3,7 +3,7 @@ title: "Quick SaaS Websites with user login"
 date: 2025-08-30T13:20:21+01:00
 draft: false
 tags: ["Web",HomeLab,"Cloudflare Workers x PB Auth","htpponly cookies","Gitea","Cursor CLI and InvoCLI","Astro Payroll Theme"]
-description: 'FastAPI x PocketBase x SSG so that your project are good looking and with a working SignIn/Up.'
+description: 'FastAPI x PocketBase x SSG so that your project are good looking and with a working SignIn/Up via http cookie.'
 url: 'fastapi-x-pocketbase'
 ---
 
@@ -11,7 +11,13 @@ url: 'fastapi-x-pocketbase'
 
 Putting together a quick and OSS Template with [Astro/Flask/PB](#the-stack)
 
-Because...we want to launch fast: *Would a simple [SSG x PB](#ssg-x-pb) work?*
+Because...we want to launch fast: *Would a simpler [SSG x PB SDK](#ssg-x-pb) work?*
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="NEW Payroll Theme x Cloudflare Workers x PB" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro as SSG+ CF Workers + PB users collections as Auth via http cookie" >}}
+{{< /cards >}}
+
+> See the result first: <https://fast-payroll-theme.pages.dev/login/>
 
 +++ [New CLI tools + Thoughts on CF Workers](#conclusions)
 +++ [Gitea](#gitea-101) Container Setup and CLI tricks. *Can Gitea become your SaaS user/pwd registry?*

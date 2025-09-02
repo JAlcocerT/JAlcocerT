@@ -2,7 +2,7 @@
 title: "FrontEnd, SPAs and ways to do Auth"
 date: 2025-08-23
 draft: false
-tags: ["Dev","OAuth/JWT/Bearer","Logto","TinyAuth","PB SDK","SPAs Serverless-Invoices"]
+tags: ["Dev","OAuth/JWT/Bearer","Logto","PB SDK","SPAs Serverless-Invoices"]
 description: 'A Better front-end and authentication. With SelfHosted OAUTH recap.'
 url: 'front-end-and-auth'
 ---
@@ -237,7 +237,7 @@ I have been very happy with [LogTo](#logto) so far.
 The documentation is pretty detailed, and they keep adding new features: https://docs.logto.io/end-user-flows/collect-user-profile
 
 {{< callout type="info" >}}
-I tested Logto Python SDK here, but there is also a JS SDK that Ill try soon!
+I tested [Logto Python SDK here](https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo), but there is also a JS SDK that Ill try soon!
 {{< /callout >}}
 
 Their blog normally brings quite interesting ideas:

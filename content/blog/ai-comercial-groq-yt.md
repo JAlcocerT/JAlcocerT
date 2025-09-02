@@ -2,14 +2,25 @@
 title: "Summarize Youtube Videos with Groq and Streamlit"
 date: 2024-05-27T23:20:21+01:00
 draft: false
-cover:
-    image: "https://socialify.git.ci/phidatahq/phidata/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-    alt: "Summarize Youtube Videos with AI" # alt text
-    caption: "Using Groq to Summarize Youtube Videos." # display caption under cover
-tags: ["Docker","Gen-AI","Python","Dev","Self-Hosting"]
-description: 'Groq Video Summaries with LLMs, Streamlit (With streamlit-authenticator auth package). Compared with Logto IAM.'
+# cover:
+#     image: "https://socialify.git.ci/phidatahq/phidata/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
+#     alt: "Summarize Youtube Videos with AI" # alt text
+#     caption: "Using Groq to Summarize Youtube Videos." # display caption under cover
+tags: ["Docker","Gen-AI","Python","Dev","Self-Hosting","Streamlit Auth vs Logto"]
+description: 'Groq Video Summaries with LLMs, Streamlit (With streamlit-authenticator auth package).'
 url: 'summarize-yt-videos'
 ---
+
+**TL;DR**
+
+Using Streamlit + Groq API LLM inference to summarize YT videos. 
+
+> A WebApp that you can [SelfHost](#selfhosting-groq-video-summaries)
+
++++ Understanding [Streamlit Auth](#adding-simple-streamlit-auth)
++++ An overview of other authentication options for streamlit apps, [like Logto](#ways-to-secure-a-streamlit-app)
+
+**Intro**
 
 How to **avoid falling into click baits** with Generative AI.
 
@@ -330,7 +341,7 @@ services:
 
 
 ```yml
-version: '3.8'
+#version: '3.8'
 
 services:
   phidata_service: 
@@ -642,9 +653,10 @@ But what if we need something more robust?
 
 #### How to secure the Access for your AI Apps
 
-* F/OSS Apps to manage **Application access Management**:
-  * Authentik
-  * **LogTo:**
+F/OSS Apps to manage **Application access Management**:
+
+1. Authentik
+2. **LogTo:**
 
 > [Logto](https://github.com/logto-io/logto) is an open-source *Auth0, Cognito and Firebase auth alternative* for modern apps and SaaS products, supporting OIDC, OAuth 2.0 and SAML open standards for authentication and authorization.
 
@@ -669,7 +681,6 @@ https://docs.logto.io/docs/recipes/webhooks/  https://cloud.logto.io/yourtenanti
 {{< youtube id="sv60N9eW8Ew" autoplay="false" >}}
 
 >  Social sign-in experience with Logto
-
 
 <!-- It provides an email to authenticate users.
 

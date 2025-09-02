@@ -7,6 +7,8 @@ url: 'serverless-101'
 description: 'Firebase Auth as your WebApp Serverless Authenticator'
 ---
 
+
+
 **Tl;DR**
 
 
@@ -15,4 +17,4 @@ description: 'Firebase Auth as your WebApp Serverless Authenticator'
 
 Just recently, I wrote about [Firebase Auth](/JAlcocerT/firebase-auth-101).
 
-A serverless way to authenticate your users
+A serverless way to authenticate your users.
