@@ -140,7 +140,10 @@ wrangler pages deploy dist --project-name=link-hub --branch=main
 ### A Better Waiting2Landing
 
 
+
 ### LinkHub with PocketBase
+
+> https://link-hub-1qd.pages.dev/
 
 ---
 

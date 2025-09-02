@@ -36,6 +36,8 @@ go install github.com/jesseduffield/lazydocker@latest
 # lazyteam/lazydocker
 ```
 
+![LazyDocker UI](/blog_img/selfh/HomeLab/lazydocker.png)
+
 * A better [NextCloud Setup](#nextcloud-with-https)
 * Better [P2P Setup](#p2p) and [Monitoring](#monitoring): from apps to [internet speed](#internet-speed)
 * Some interesting [In Home Tools](#in-home-tools)

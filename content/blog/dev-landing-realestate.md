@@ -2,8 +2,8 @@
 title: "Landing (and more) for Real Estate"
 date: 2025-09-02T08:20:21+01:00
 draft: false
-tags: ["Web","Astro Payroll Theme for Real Estate Landing"]
-description: 'Landing page and components for galleries and .'
+tags: ["Web","Astro Payroll Theme for Real Estate Landing","n8n","Scrapping"]
+description: 'Landing page and components for real estate galleries.'
 url: 'real-estate-landing'
 ---
 
@@ -92,9 +92,13 @@ So...how is this going to **actually work**?
 
 
 
-
+---
 
 ## Conclusions
+
+See the difference with a cool (but no so fast website)
+
+![www.lodgenstryn.no](/blog_img/web/moi-realestate/strin-cool-website-loading.png)
 
 ### Copy Paste Plugins for Webs
 

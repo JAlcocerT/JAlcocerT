@@ -248,7 +248,7 @@ There are many Grafana stacks and applications, like LGTM: **L**oki, **G**rafana
  https://www.youtube.com/watch?v=1X3dV3D5EJg
  -->
 
-{{< details title="What can I do with LGTM? 📌" closed="true" >}}
+{{< details title="What can I do with LGTM? Summarized from Fireship 📌" closed="true" >}}
 
 Ever wondered how programmers build software? If builders built houses the way programmers build software, the first woodpecker to come along would destroy civilization.
 
@@ -257,7 +257,7 @@ In this video, Fireship, a popular YouTube creator, takes us on a journey to ins
 
 The **LGTM stack** consists of five technologies: 
 - **Open Telemetry**: An industry-standard framework that collects telemetry data from software.
-- **Grafana**: The frontend UI for visualizing data.
+- **Grafana**: The front-end UI for visualizing data.
 - **Prometheus**: A time-series database for storing metrics.
 - **Tempo**: A database for storing traces.
 - **Loki**: A database for storing logs.
@@ -265,6 +265,7 @@ The **LGTM stack** consists of five technologies:
 Setting Up the LGTM Stack
 
 To get started:
+
 1. **Server Setup**: Fireship recommends using Hostinger, which offers a variety of hosting services, including a Linux virtual private server (VPS) suitable for this project.
 2. **Deploying LGTM Backend**: The LGTM backend can be deployed using a Docker image provided by Graphon.
 3. **Server Access**: After setting up your server on Hostinger, you can access the management dashboard and connect via SSH.

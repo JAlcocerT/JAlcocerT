@@ -2,7 +2,7 @@
 title: "FlaskCMS v0.2"
 date: 2025-09-07
 draft: false
-tags: ["Astro x Flask","Markdown editors","Cursor","Stacer"]
+tags: ["Astro x Flask","Markdown editors","Cursor and AppImageLauncher","Stacer"]
 description: 'Markdown and Flask working together.'
 url: 'flask-cms-for-ssgs'
 ---
@@ -62,7 +62,7 @@ But we have to get started with something first :)
 
 1. Have tried **Cursor**: https://cursor.com/dashboard
 
-As i consumed all windsurf tokens very fast...
+As I consumed all windsurf tokens very fast...
 
 ```sh
 cd ~/Downloads
@@ -70,6 +70,8 @@ cd ~/Downloads
 chmod +x Cursor-1.4.3-x86_64.AppImage
 ./Cursor-1.4.3-x86_64.AppImage
 ```
+
+![Cursor + MCp Settings](/blog_img/dev/dev-cursor-mcp.png)
 
 But that just executes it once.
 

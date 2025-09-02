@@ -47,16 +47,20 @@ It's a key advantage because it eliminates the need for manual documentation, en
 
 {{% details title="Whats that cool SWAGger UI..." closed="true" %}}
 
-A Swagger UI is an interactive, web-based documentation interface for an API. It automatically generates a visual representation of your API, allowing developers to interact with and understand the endpoints without needing to write any code. 
+A Swagger UI is an interactive, web-based documentation interface for an API. 
+
+It automatically generates a visual representation of your API, allowing developers to interact with and understand the endpoints without needing to write any code. 
 
 Why it Matters
 
-The Swagger UI is a crucial tool for modern API development because it directly addresses several common challenges:
+The **Swagger UI** is a crucial tool for modern API development because it directly addresses several common challenges:
 
 * **Discoverability**: It makes an API's functionality immediately discoverable. Developers can browse a complete list of endpoints, their methods (GET, POST, PUT, DELETE), and the paths they use, all in one place.
 * **Ease of Use**: It turns API documentation into a live, interactive tool. Users can try out the API directly from the UI by filling out forms for parameters and request bodies, then executing the request to see the response. This dramatically simplifies the process of learning and testing an API.
 * **Consistency**: When a framework like **FastAPI** generates a Swagger UI, it does so directly from the code. This ensures that the documentation is always up-to-date with the latest version of the API, eliminating the risk of outdated or inaccurate docs.
-* **Collaboration**: It serves as a single source of truth for the API's contract. Both frontend and backend developers can use it to agree on data models and endpoints, which improves collaboration and reduces miscommunication.
+* **Collaboration**: It serves as a single source of truth for the API's contract.
+
+> Both front-end and backend developers can use it to agree on data models and endpoints, which improves collaboration and reduces miscommunication.
 
 {{% /details %}}
 
@@ -73,13 +77,13 @@ Its job is to handle requests from clients (like a web browser), interact with a
 
 It doesn't run in the user's browser!
 
-* **Redux, Dexie, and local storage are frontend technologies.** 🌐 They all run directly in the user's browser and manage data on the client side.
+* **Redux, Dexie, and local storage are front-end technologies.** 🌐 They all run directly in the user's browser and manage data on the client side.
 
 * **FastAPI provides the data, and the others manage it.** A typical workflow would look like this:
     1.  A user visits a web page.
-    2.  The frontend (built with a framework like React) makes a request to the **FastAPI** backend to get some data.
-    3.  FastAPI receives the request, queries its database, and sends the data back to the frontend.
-    4.  The frontend receives the data. It might then:
+    2.  The front-end (built with a framework like React) makes a request to the **FastAPI** backend to get some data.
+    3.  FastAPI receives the request, queries its database, and sends the data back to the front-end.
+    4.  The front-end receives the data. It might then:
         * Store the data in **Redux** to manage the application's current state and update the UI.
         * Store a persistent copy of the data in a **Dexie** database to allow the user to view it offline.
         * Store a small piece of user-specific data, like a user ID or a preference, in **local storage**.
@@ -158,7 +162,7 @@ Here are some of the other HTTP methods and their purposes:
 
 > These methods are essential because they define the type of operation you want to perform on the resource specified by the endpoint's path.
 
-You need an **API (Application Programming Interface)** in a web app to allow the frontend (what the user sees in their browser) to communicate with the backend (the server where the business logic and database live). 🖥️
+You need an **API (Application Programming Interface)** in a web app to allow the front-end (what the user sees in their browser) to communicate with the backend (the server where the business logic and database live). 🖥️
 
 An **endpoint** is a specific URL where a server or API can be accessed by a client. 
 
@@ -248,17 +252,17 @@ This approach makes FastAPI incredibly efficient and perfect for high-performanc
 
 A web app is typically split into two parts:
 
-1.  **Frontend**: The client-side code (HTML, CSS, JavaScript) that runs in the user's browser. It's responsible for the user interface, handling user input, and displaying data.
+1.  **front-end**: The client-side code (HTML, CSS, JavaScript) that runs in the user's browser. It's responsible for the user interface, handling user input, and displaying data.
 
 2.  **Backend**: The server-side code that runs on a remote server. It's responsible for managing the database, performing complex calculations, handling security, and other crucial tasks.
 
-The frontend cannot directly access the backend's database or run its code.
+The front-end cannot directly access the backend's database or run its code.
 
-The **API acts as a middleman**, a set of rules and protocols that defines how the frontend can request data from and send data to the backend.
+The **API acts as a middleman**, a set of rules and protocols that defines how the front-end can request data from and send data to the backend.
 
-Without an API, the frontend would be static and unable to interact with any dynamic data or services.
+Without an API, the front-end would be static and unable to interact with any dynamic data or services.
 
-For example, when you post a comment on a social media site, the frontend uses an API to send your comment to the backend, which then saves it to a database.
+For example, when you post a comment on a social media site, the front-end uses an API to send your comment to the backend, which then saves it to a database.
 
 ---
 
@@ -266,7 +270,7 @@ For example, when you post a comment on a social media site, the frontend uses a
 
 Yes, a common type of API call is to a **REST endpoint**.
 
-**REST (Representational State Transfer)** is a widely used architectural style for building APIs. A REST endpoint is a specific URL that the frontend can call to perform an action. These endpoints are designed to be intuitive and stateless. For example, a REST API for a blog might have the following endpoints:
+**REST (Representational State Transfer)** is a widely used architectural style for building APIs. A REST endpoint is a specific URL that the front-end can call to perform an action. These endpoints are designed to be intuitive and stateless. For example, a REST API for a blog might have the following endpoints:
 
 * `GET /posts`: Retrieves a list of all blog posts.
 * `POST /posts`: Creates a new blog post.
@@ -288,9 +292,9 @@ Other common types include:
 
 Ghost is an open-source publishing platform that provides a robust REST API for its core functionality.
 
-However, it also offers a GraphQL layer specifically for working with frontend frameworks like Gatsby (surprise, another SSG!)
+However, it also offers a GraphQL layer specifically for working with front-end frameworks like Gatsby (surprise, another SSG!)
 
-This allows developers to build static sites or dynamic frontends using Ghost as a "headless CMS" and get exactly the data they need with GraphQL queries.
+This allows developers to build static sites or dynamic front-ends using Ghost as a "headless CMS" and get exactly the data they need with GraphQL queries.
 
 {{< callout type="warning" >}}
 Dont confuse endpoints with message brokers!
@@ -315,21 +319,21 @@ The key difference is that this is **asynchronous communication**:
 **A REST API**, by contrast, is a **synchronous request-response model** where the client waits for the server to reply.
 {{< /callout >}}
   
-With a synchronous method like a REST API built with FastAPI, a click on the frontend initiates a **request-response cycle**. 
+With a synchronous method like a REST API built with FastAPI, a click on the front-end initiates a **request-response cycle**. 
 
 Here's how it works:
 
-1.  **Frontend Action**: The user clicks a button or performs an action in the browser. This triggers a JavaScript function.
+1.  **front-end Action**: The user clicks a button or performs an action in the browser. This triggers a JavaScript function.
 
-2.  **Request Sent**: The JavaScript function sends an HTTP request (e.g., `GET`, `POST`) to a specific **API endpoint** on your FastAPI backend. The frontend is now "waiting" for a response.
+2.  **Request Sent**: The JavaScript function sends an HTTP request (e.g., `GET`, `POST`) to a specific **API endpoint** on your FastAPI backend. The front-end is now "waiting" for a response.
 
 3.  **Backend Processing**: FastAPI receives the request, processes it (e.g., retrieves data from a database, performs a calculation), and prepares a response.
 
-4.  **Response Sent**: FastAPI sends the response back to the frontend.
+4.  **Response Sent**: FastAPI sends the response back to the front-end.
 
-5.  **Frontend Receives & Renders**: The JavaScript code on the frontend receives the response, extracts the data (usually in JSON format), and uses that data to update the UI. The user sees the result of their click.
+5.  **front-end Receives & Renders**: The JavaScript code on the front-end receives the response, extracts the data (usually in JSON format), and uses that data to update the UI. The user sees the result of their click.
 
-This entire process is **synchronous** from the frontend's perspective in the sense that the code flow for that particular request waits for the response before proceeding to update the UI. 
+This entire process is **synchronous** from the front-end's perspective in the sense that the code flow for that particular request waits for the response before proceeding to update the UI. 
 
 The user's browser, however, is not blocked. 
 

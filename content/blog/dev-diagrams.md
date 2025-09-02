@@ -26,7 +26,7 @@ A game changer for documenting processes and architecture diagrams:
 graph TD;
     Apps-->Double-Click;
     Double-Click-->.deb
-    Double-Click-->.Appimage
+    Double-Click--> Appimage
     Apps-->Terminal;
     Terminal-->APT/NALA;
 ```

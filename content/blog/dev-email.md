@@ -118,3 +118,11 @@ Apps like PostIZ, n8n or growthchief:
 If you just wanted a quick way to chat...
 
 If you need, there are many [Interesting Chats](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps) to use :)
+
+
+### Proton Mail
+
+![alt text](/blog_img/email/dns-protonmail.png)
+
+
+![GMAIL custom domain for google](../../static/blog_img/email/dns-gmail.png)

@@ -318,7 +318,7 @@ It allows developers to integrate data analytics into applications efficiently w
 Key Features:
 - **Database Connectivity**: Latitude can connect to a variety of databases and data warehouses, providing flexibility for different environments and data sources.
 - **Parameterized SQL Queries as API Endpoints**: It allows users to create parameterized SQL queries and expose them as API endpoints, making it easy to query data dynamically and integrate with other systems.
-- **Interactive Visualizations**: Latitude supports interactive data visualizations in frontend frameworks (such as React, Svelte, and Vue), or alternatively, it can display them within iframes for easy embedding in web pages.
+- **Interactive Visualizations**: Latitude supports interactive data visualizations in front-end frameworks (such as React, Svelte, and Vue), or alternatively, it can display them within iframes for easy embedding in web pages.
 - **Caching for Performance**: The framework includes built-in caching, which optimizes query performance and reduces the load on databases by storing previously queried results.
 - **Security**: Latitude is SSL-ready and includes protections against SQL injection, ensuring secure communication between the client and the database.
 - **Community-driven**: The project encourages contributions from developers, fostering an active open-source community.
@@ -326,7 +326,7 @@ Key Features:
 Use Cases:
 - **Quick Dashboard Creation**: Developers can rapidly build dashboards and visualizations, allowing end-users to explore and interact with data without extensive custom development.
 - **Single-command Deployment**: Latitude can be deployed quickly with a single command, making it easier for developers to get up and running without complex configurations.
-- **Framework Integration**: Latitude integrates seamlessly with popular frontend frameworks like React, Svelte, and Vue, which are commonly used for building modern web applications.
+- **Framework Integration**: Latitude integrates seamlessly with popular front-end frameworks like React, Svelte, and Vue, which are commonly used for building modern web applications.
 
 Community and Support:
 - Latitude has an active community on **Slack**, where developers can collaborate, share insights, and get support.
@@ -338,7 +338,7 @@ Current Status:
 
 Latitude simplifies the integration of embedded analytics for developers, allowing for easy creation and deployment of dashboards, visualizations, and queries.
 
-Its simplicity and integration with modern frontend frameworks make it a valuable tool for building analytics-rich applications.
+> Its simplicity and integration with modern front-end frameworks make it a valuable tool for building analytics-rich applications.
 
 Similar projects to Latitude include:
 - **Superset**: An open-source data visualization tool that allows users to create and share dashboards.

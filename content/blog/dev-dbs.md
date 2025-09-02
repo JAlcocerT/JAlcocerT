@@ -180,12 +180,13 @@ But first...**Why Move to Postgres** if you have localstorage?
 **Use Case Analysis**
 
 * **When Current Browser Storage Makes Sense:**
+
 - 🎯 **Personal Tools** - Single-user, single-device applications
 - 🎯 **Prototyping** - Quick demos and proof-of-concepts
 - 🎯 **Offline-First Apps** - Applications that must work without internet
 - 🎯 **Privacy-Critical** - Data that should never leave user's device
 - 🎯 **Simple Applications** - Basic CRUD with minimal data
-- 🎯 **Educational Projects** - Learning frontend without backend complexity
+- 🎯 **Educational Projects** - Learning FE without backend complexity
 
 * **When Postgres Migration is Essential:**
 - 🎯 **Multi-Device Usage** - Users expect data sync across devices
@@ -375,6 +376,8 @@ Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check t
 #Your database. Inside VS Code.
 ext install DBCode.dbcode
 ```
+
+![alt text](/blog_img/DA/dbcode.png)
 
 
 {{< details title="Useful Tools to work with DBs 📌" closed="true" >}}

@@ -98,6 +98,8 @@ See how JAMstack is an alternative to SPA+Webhooks
 See that IndexedDB storing *for the moment* my imported [sample invoice json](https://github.com/JAlcocerT/serverless-invoices/blob/main/serverless-invoices-example.json)
 {{< /callout >}}
 
+![FrontEnd - Exporting a PDF invoice](/blog_img/dev/FE/fe-export-pdf-csr.png)
+
 
 ### FE Separation of Concerns
 
