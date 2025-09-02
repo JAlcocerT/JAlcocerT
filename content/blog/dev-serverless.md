@@ -15,6 +15,6 @@ description: 'Firebase Auth as your WebApp Serverless Authenticator'
 
 **Intro**
 
-Just recently, I wrote about [Firebase Auth](/JAlcocerT/firebase-auth-101).
+Just recently, I wrote about [Firebase Auth](/JAlcocerT/firebase-auth-101) and the LogTo JS SDK + CF Workers.
 
 A serverless way to authenticate your users.

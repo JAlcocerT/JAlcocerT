@@ -31,14 +31,19 @@ Its a combination of:
 
 
 1. Simplifcation of the Astro Payroll Theme, that I forked [here](https://github.com/JAlcocerT/payroll-workers-pb)
-2. The gallery look and feel from the [previous version source code](https://github.com/JAlcocerT/real-estate-moi/tree/main/moirealestate-astro-theme). Commented [here](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#real-estate), as I tried to combined [FlaskCMS](https://github.com/JAlcocerT/real-estate-moi/tree/main/moirealestate-flaskcms) x the Astro theme.
 
+![alt text](/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png)
+
+2. The gallery look and feel from the [previous version source code](https://github.com/JAlcocerT/real-estate-moi/tree/main/moirealestate-astro-theme) at `./real-estate-moi/ScrewFastMoiRealEstate`. Commented [here](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#real-estate), as I tried to combined [FlaskCMS](https://github.com/JAlcocerT/real-estate-moi/tree/main/moirealestate-flaskcms) x the Astro theme.
+
+
+![alt text](/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png)
 
 ```sh
 git clone https://github.com/JAlcocerT/real-estate-moi
 cd moirealestate-astro-theme
 
-npm run dev -- --host 0.0.0.0 --port 4324
+#npm run dev -- --host 0.0.0.0 --port 4321
 #sudo docker-compose up -d astro-dev
 ```
 
@@ -75,6 +80,28 @@ git clone --recurse-submodules https://github.com/JAlcocerT/moi-realestate-pb.gi
 #git submodule update --init --recursive
 ```
 
+Now here we have the old working screw fast with photo gallery: `./moi-realestate-pb/submodules/real-estate-moi/ScrewFastMoiRealEstate`
+
+You just need to run it and go to `http://localhost:4321/property/`
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/moi-realestate-pb" title="NEW - Real Estate Landing x PB SDK Gallery" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro + PB for Real Estate" >}}
 {{< /cards >}}
+
+So...how is this going to **actually work**?
+
+
+
+
+
+## Conclusions
+
+### Copy Paste Plugins for Webs
+
+#### N8N
+
+https://github.com/JAlcocerT/Home-Lab/tree/main/n8n
+
+#### Cal
+
+

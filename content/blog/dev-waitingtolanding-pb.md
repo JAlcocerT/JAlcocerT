@@ -130,11 +130,17 @@ wrangler pages deploy dist --project-name=link-hub --branch=main
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG Static Hosting | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+---
 
 ## Conclusions
 
 
+
+
 ### A Better Waiting2Landing
+
+
+### LinkHub with PocketBase
 
 ---
 

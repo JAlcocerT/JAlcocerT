@@ -105,6 +105,11 @@ git clone https://github.com/ctrimm/astro-payroll-solution-theme #MIT Licensed
 npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
+Why is so cool?
+
+1. Amazing Blog Post section with filter tags + Cool ToC
+2. Login/Book a call buttons
+
 Logto had a cool post about how to vibe code a photo gallery app with built in auth:
 
 * https://blog.logto.io/cursor-logto-auth/
@@ -151,8 +156,7 @@ PB_ADMIN_PASSWORD="yourpbadminpass" \
 npm run provision:pb
 ```
 
-`http://192.168.1.8:4321/signup`
-
+> You could pass those via `.env` and then try to signup/in: `http://192.168.1.8:4321/signup`
 
 
 {{< callout type="warning" >}}
@@ -213,6 +217,8 @@ Simple, static and it literally flies:
 ## Conclusions
 
 We could use any other combination of authentications, like: *LogTo, TinyAuth, just hardcoded...* I recapped recently on [this post](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#authentication-tools).
+
+![alt text](/blog_img/dev/PB/pb-secret-page.png)
 
 Im now thinking that a future webifyer/*awebsiteforall* project could have such workflow: SSG -> PB signup/signin -> See the `/themes` page if logged in and then choose:
 

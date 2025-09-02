@@ -188,3 +188,10 @@ Ampache
 You also have substreamer app on ios or android (as a client), they also have: https://hub.docker.com/r/ghenry22/substreamer
 
 > Just that its not OSS
+
+
+See also MeTube:
+
+![alt text](/blog_img/selfh/HomeLab/metube.png)
+
+![alt text](/blog_img/selfh/HomeLab/navidrome.png)

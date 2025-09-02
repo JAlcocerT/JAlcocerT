@@ -20,7 +20,7 @@ I have been playing with cloudflare workers recently:
   {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Payroll Theme with PB as auth" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro Theme + CF Workers + PB users collections as Auth" >}}
 {{< /cards >}}
 
-You can see how well it works: https://fast-payroll-theme.pages.dev/signup/
+You can see how well it works: <https://fast-payroll-theme.pages.dev/signup/>
 
 And in the conclusions I reflected on the next steps of the setup.
 

@@ -2,7 +2,7 @@
 title: "A Website for a PHD: Pylinac and QaTrack+"
 date: 2025-02-23T13:20:21+01:00
 draft: false
-tags: ["Dev","DSc","wsl","HUGO SSG"]
+tags: ["Dev","DSc","wsl","HUGO SSG","QATrack"]
 description: 'Helping to improve scientific knowledge. Improving the day to day of a radiotherapy researcher. Containers with WSL.'
 url: 'web-for-phd-researcher'
 ---
