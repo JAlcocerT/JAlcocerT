@@ -7,11 +7,13 @@ description: Checking my first Smart Plug Connecting it with Home Assistant [HA]
 url: tapo-p110-review
 ---
 
-It needs **2.4G Wifi** connection (5G wont be discoverable).
+The TapoP110 needs **2.4G Wifi** connection (5G wont be discoverable).
+
+> This happens for most Home/IoT devices btw.
 
 It will work with a dualband capable network as well (2.4 and 5G on the same SSID).
 
-It costed me ~20$.
+> It costed me ~20$.
 
 And it **helps me monitor** such things:
 

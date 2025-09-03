@@ -2,7 +2,7 @@
 title: "A Website for a PHD: Pylinac and QaTrack+"
 date: 2025-02-23T13:20:21+01:00
 draft: false
-tags: ["Dev","DSc","wsl","HUGO SSG","QATrack","SSMS]
+tags: ["Dev","DSc","wsl","HUGO SSG","QATrack","SSMS"]
 description: 'Helping to improve scientific knowledge. Improving the day to day of a radiotherapy researcher. Containers with WSL.'
 url: 'web-for-phd-researcher'
 ---
@@ -256,7 +256,7 @@ While it's free, it has a number of limitations compared to the paid editions, s
 
 SQL Server Express is essentially a scaled-down, free-to-use version of the robust Microsoft SQL Server database. 
 
-It's a** complete database engine** that can be used to build and power applications.
+It's a **complete database engine** that can be used to build and power applications.
 
 Its main purpose is to provide a cost-effective solution for developers, students, and small businesses who need a reliable database without the enterprise-level features and costs.
 

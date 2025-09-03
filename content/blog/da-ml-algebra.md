@@ -1,14 +1,18 @@
 ---
-title: "Understanding Algebra"
-date: 2025-12-27T23:20:21+01:00
-draft: true
+title: "Understanding Algebra (again)"
+date: 2025-09-20T23:20:21+01:00
+draft: false
 tags: ["DSc"]
 description: ''
 url: 'algebra-101'
 math: true
 ---
 
+**Intro**
+
 Algebra was one of my favourite subjects in my first year of uni studies.
+
+> And blindly multiplying matrixes was the most painful and procrastinated task for me to do in high school
 
 And its been a while since I have had the chance to do cool stuff with it.
 

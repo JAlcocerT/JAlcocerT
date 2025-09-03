@@ -2,7 +2,7 @@
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
 date: 2025-11-18
 draft: false
-tags: ["Tinkering","Ekuiper","Leds"]
+tags: ["Tinkering","Ekuiper","Leds","DataBricks"]
 description: 'IoT Meets AI. Using MQTT and AI Together.'
 url: 'edge-ai-with-raspberry-pi'
 ---
@@ -34,6 +34,9 @@ Expertise:
 
 
 ### IoT with DataBricks
+
+Databricks is 
+
 
 ![Karting Adventure](/blog_img/dev/databricks-mongo.JPG)
 
@@ -102,6 +105,21 @@ Push to MongoDB. See the data properly.
 * MicroPython - https://awesome-micropython.com/
 
 * https://github.com/ahundt/awesome-robotics
+
+
+### Pi Cool Stuff
+
+https://pabramsor.com/graphical-interface-for-raspberry-pi-gpio/
+
+```sh
+git clone https://github.com/Bardo91/rpi_gpio_gui
+#pip install PyQt5 RPi.GPIO
+#pip3 install PyQt5 RPi.GPIO
+
+python3 rpi_gpio_gui.py
+```
+
+
 
 ---
 
@@ -215,7 +233,8 @@ The chip's low power consumption and versatility make it an attractive option fo
 <!-- SHODAN
 
 Search engine similar to Google
-What Is Shodan? Shodan is a search engine similar to Google. But while Google searches for websites, Shodan searches for devices that are connected to the internet. Users can perform a search using the Shodan search engine based on an IP address, device name, city, and/or a variety of other technical categories. -->
+What Is Shodan? Shodan is a search engine similar to Google. But while Google searches for websites, Shodan searches for devices that are connected to the internet. Users can perform a search using the Shodan search engine based on an IP address, device name, city, and/or a variety of other technical categories. 
+-->
 
 ### Pi and leds
 

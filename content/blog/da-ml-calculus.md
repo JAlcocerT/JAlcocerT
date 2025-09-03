@@ -1,7 +1,7 @@
 ---
 title: "Understanding Calculus"
-date: 2025-12-27T23:20:21+01:00
-draft: true
+date: 2025-09-21T23:20:21+01:00
+draft: false
 description: 'Calculus 101'
 url: 'calculus-101'
 math: true
@@ -11,13 +11,13 @@ https://www.youtube.com/shorts/ha2_x5eJ1OY
 
 The first time I got to know calculus, was with derivatives and integrals.
 
-I kind of like derivatives...but hated integrals.
+> I kind of like derivatives...but hated integrals.
 
-Probably because of the lack of purpose that I was given.
+Probably because of the *lack of purpose* that I was given.
 
-I could not be more wrong at that point, as calculus its both: beautiful and useful...
+I could not be more wrong at that point, as **calculus is both: beautiful and useful**
 
-...if you get it explained right.
+...if you get it explained properly.
 
 The essence of calculus.
 
@@ -33,11 +33,11 @@ The series that **3Blue1Brown** has made on the topic, are simply **magestic**: 
 
 The classic: the area under a curve!
 
-Why do we want that?
+Why would we want that?
 
 Well, I can think already about few examples:
 
-1. /JAlcocerT/machine-learning-the-roc-curve-in-detail
+1. For ML, the [ROC and its AUC](/JAlcocerT/machine-learning-the-roc-curve-in-detail) informs about how good a ML Classification algorithm performs
 2. 
 
 **The Jacobian**

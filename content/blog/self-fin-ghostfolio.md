@@ -1,6 +1,6 @@
 ---
 title: "Personal Finances: GhostFolio and more"
-date: 2025-12-15T23:20:21+01:00
+date: 2026-12-31T23:20:21+01:00
 draft: true
 cover:
   image: "https://socialify.git.ci/ghostfolio/ghostfolio/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
@@ -8,9 +8,12 @@ cover:
   caption: "Ghostfolio setup with docker." # display caption under cover
 tags: ["Docker","Open Source Finances"]
 description: ''
-summary: ''
-url: ''
+url: 'ghostfolio-and-personal-finance'
 ---
+
+**Intro**
+
+Whether TradFi and DeFi, you might want to bring clarity to your personal finances.
 
 AND MORE TOOLS IN THE FAQ
 

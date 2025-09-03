@@ -1,13 +1,21 @@
 ---
 title: "From Blogspot to a Cool Website"
-date: 2025-12-31
-draft: true
-tags: ["dev"]
-summary: 'Migrating Blogspot to a Responsive Websites'
+date: 2025-11-15
+draft: false
+tags: ["Wev"]
+summary: 'Migrating Blogspot to a SSG powered Responsive Website'
 url: 'blogspot-migration'
 ---
 
-* https://valdigijon.blogspot.com/?m=0
+
+**Intro**
+
+I have been following couple of sites on blogspot.
+
+* https://valdigijon.blogspot.com/
+* https://elescritoriodetesla.blogspot.com/
+
+Could they have a responsive (and nice looking site), without loosing its old content?
 
 ## Preparing for BlogSpot Migration
 

@@ -8,17 +8,17 @@ description: "Easy Forms/Newsletters for Websites: MailerLite, FormBricks and mo
 
 To give some cool functionality to static websites, we can use **some tricks**.
 
+One of them is make it look cool with CSS:
+
 {{< callout type="info" >}}
   It is beneficial to [review some CSS Tricks](https://jalcocert.github.io/JAlcocerT/blog/dev-css/)
 {{< /callout >}}
 
-Im talking about adding the possibility for readers to [subscribe to a newsletter](#newsletters) or to interact with us via [surveys/forms](#contact-forms).
+But the one Im talking about adding the possibility for readers to [subscribe to a newsletter](#newsletters) or to interact with us via [surveys/forms](#contact-forms).
 
-Its all going to be API based, so our website code base wont grow in size/complexity too much!
+Its all going to be *API based*, so our website code base wont grow in size/complexity too much!
 
-Plus, you can get some of those to work with F/OSS and Selfhosted:
-
-
+Plus, you can get some of those to work with **F/OSS and Selfhosted**:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web" title="Web Related Docker Config 🐋 ↗" >}}
@@ -26,6 +26,7 @@ Plus, you can get some of those to work with F/OSS and Selfhosted:
 {{< /cards >}}
 
 ## Newsletters
+
 
 ### Keila
 
@@ -77,7 +78,9 @@ services:
 
 ### Mailchimp
 
-You ll still need a back end to process the calls (if you are using static sites)
+You ll still need a back end to process the API calls.
+
+> If you are using static sites, you will need some kind of Python Back-End somewhere listening to these.
 
 ### MailerLite
 
@@ -300,9 +303,9 @@ A great example: https://quillforms.com/forms/web-design-cost-calculator/
 
 ## Conclusions
 
-So far I have tried [Formbricks](https://app.formbricks.com/environments/cm0vgwasu00061484bqmicsbm/surveys) and [Mailerlite](https://accounts.mailerlite.com/user/verify) for these uses cases.
+So far, I have tried [Formbricks](https://app.formbricks.com/environments/cm0vgwasu00061484bqmicsbm/surveys) and [Mailerlite](https://accounts.mailerlite.com/user/verify) for these uses cases.
 
-
+I will be combining them into my web and webapps in the upcoming months.
 
 ### FAQ
 

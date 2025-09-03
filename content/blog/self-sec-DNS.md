@@ -1,6 +1,6 @@
 ---
 title: "Improving Privacy with Open Source DNS "
-date: 2025-12-15T23:20:21+01:00
+date: 2026-12-15T23:20:21+01:00
 draft: true
 tags: ["Docker","Self-Hosting"]
 description: ''

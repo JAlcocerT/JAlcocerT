@@ -1,13 +1,15 @@
 ---
 title: "Learning about 3D Printing and more"
-date: 2025-12-31
+date: 2026-12-31
 draft: true
 tags: ["Tinkering"]
 description: abcd
 url: 'starting-with-3dprinting'
 ---
 
-https://forocoches.com/foro/showthread.php?t=10360182
+**Intro**
+
+I was trying to document myself on forums, like [fc](https://forocoches.com/foro/showthread.php?t=10360182) and reddit.
 
 ## Choosing a Printer
 

@@ -1,6 +1,6 @@
 ---
 title: "Take a Break - Gaming with OSS"
-date: 2025-10-23T23:20:21+01:00
+date: 2026-12-23T23:20:21+01:00
 draft: true
 tags: ["Self-Hosting"]
 description: '.'

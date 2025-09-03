@@ -1,13 +1,17 @@
 ---
 title: "LLMOps Tools - Bento ML and Others"
-date: 2025-12-31T23:20:21+01:00
-draft: true
+date: 2025-11-30T23:20:21+01:00
+draft: false
 tags: ["Gen-AI"]
 description: 'Exploring LLM Ops Tools'
 url: 'open-source-LLM-Ops-Tools'
 ---
 
-https://github.com/tensorchord/Awesome-LLMOps
+
+
+{{< callout type="warning" >}}
+See [awsomeLLMOps](https://github.com/tensorchord/Awesome-LLMOps)
+{{< /callout >}}
 
 We will cover:
 

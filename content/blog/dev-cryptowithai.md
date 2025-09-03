@@ -335,6 +335,8 @@ But there are some open and API parts, like: [Open Banking](https://en.wikipedia
 
 ![Interactive Brokers](/blog_img/crypto/ib-sepa-openbanking.png)
 
+> In tradfi, you can add TCP (trusted contact persons), for crypto, im not aware of it
+
 ### Interesting Crypto Stuff I found lately
 
 More [Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/) Stuff?

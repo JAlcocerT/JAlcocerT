@@ -1,6 +1,6 @@
 ---
 title: What about Gaming?
-date: 2025-12-31T23:20:21+01:00
+date: 2026-12-31T23:20:21+01:00
 draft: true
 tags: ["Tinkering","Battle City NES"]
 description: GPU passthrough

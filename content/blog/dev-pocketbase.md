@@ -2,7 +2,7 @@
 title: "SelfHosted PocketBase for your BackEnd"
 date: 2025-08-10
 draft: false
-tags: ["PocketBase","OSS Auth","Concurrency","Local & Session Storage","Sqlite"]
+tags: ["PocketBase 101","OSS Auth","Concurrency","Local & Session Storage","Sqlite"]
 description: 'Things your learn outside the confort zone. BaaS Storage for a WebApp'
 url: 'pocketbase'
 ---
@@ -16,6 +16,7 @@ It can be used as auth for your [Flask Web Apps](#pocketbase-x-flask) and also b
 PB has a lot of goodies, like direct minio connection or oauth providers for signin/up: `http://192.168.1.11:8080/_/#/settings/auth-providers`
 
 Along the way, I got to know few [new concepts](#concepts), like: Redux, Dexie...
+
 
 **Intro** *This is way far from my confort zone, yet here we go*
 

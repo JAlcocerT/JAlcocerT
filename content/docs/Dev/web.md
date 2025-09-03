@@ -487,3 +487,9 @@ A very interesting concept, for **minimalistic sites**:
 * https://erikjohannes.no/posts/20231122-places-to-discover-the-small-web/
 * https://1mb.club/
 * https://btxx.org/posts/bare/
+
+I always enjoy finding this kind of blogs, with not many distractions and **pure content**:
+
+* https://nav.al/existence
+
+> I wish someday to get up to that point of quality.

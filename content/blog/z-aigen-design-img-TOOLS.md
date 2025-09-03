@@ -123,9 +123,9 @@ python launch.py --skip-torch-cuda-test
 
 https://github.com/vladmandic/automatic
 
-https://github.com/vladmandic/automatic?tab=AGPL-3.0-1-ov-file#readme 
+> [Agpl Licensed ✅ ](https://github.com/vladmandic/automatic?tab=AGPL-3.0-1-ov-file#readme)
 
-✅ 
+
 
 ### ConfyUI
 

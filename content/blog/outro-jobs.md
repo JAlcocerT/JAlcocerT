@@ -313,9 +313,9 @@ Its all about **[Scrapping Tools](https://github.com/JAlcocerT/Scrap_Tools)** �
 
 There you have few ways to make scrapping work.
 
-> Or how to make your scrapping better.
+> Or how to make your **scrapping better**.
 
-If it gets really complex, you will need Playwright magic, instead of 'just' Bs4:
+If it gets really complex, you will need Playwright magic, instead of *'just' Bs4*:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Job-Trends" title="Job-Trend Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4 to get Data about the Job Market and push it to sqlite3" >}}
@@ -335,7 +335,7 @@ For more ideas, check also:
 
 You can build a **CV with code via overleaf** (latex powered): https://www.overleaf.com/
 
-> —the collaborative, online LaTeX editor that anyone can use
+> —the collaborative, online **LaTeX editor** that anyone can use
 
 How exactly have I used overlead? 
 

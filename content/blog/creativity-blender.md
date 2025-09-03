@@ -1,19 +1,18 @@
 ---
 title: "Using Blender with AI"
-date: 2025-12-20
-draft: true
+date: 2025-12-17
+draft: false
 # cover:
 #     image: "https://socialify.git.ci/alejandro-ao/ask-multiple-pdfs/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #     alt: "ChatPDF" # alt text
 #     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Gen-AI","Python","Dev","Design Patterns"]
 description: 'How to use Blender with AI'
 url: 'using-blender-with-ai'
 ---
 
 
-This year I saw a very cool video about **design patterns**.
-
+Early this year, I saw a very cool video about **design patterns**.
 
 <!-- https://www.youtube.com/watch?v=8UAsN9wvePE -->
 
@@ -24,8 +23,9 @@ And there is something about designs that have always captivate me.
 
 Whats does make something so good, that it lasts the beats of time?
 
-How can we create someting that is valued by people, even from different generations?
+How can we create someting that is valued by people?
 
+Even from totally different generations:
 
 ![Porsche design](/blog_img/outro/porsche.png)
 

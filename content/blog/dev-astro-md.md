@@ -1,8 +1,8 @@
 ---
-title: "A Landing you can Edit"
-date: 2025-09-02T18:20:21+01:00
+title: "A Landing you can actually Edit"
+date: 2025-09-03T08:20:21+01:00
 draft: false
-tags: ["Web","Markdown editor","WYSIWYG","ICP"]
+tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP"]
 description: 'Landing page for Mental Health. Adding posts and md via pocketbase.'
 url: 'mental-health-landing'
 ---
@@ -10,9 +10,11 @@ url: 'mental-health-landing'
 
 ## Tech
 
-### What I think about the TOAST UI WYSIWYG MD Editor
+### TOAST UI WYSIWYG MD Editor
 
-The TOAST UI Editor is a well-regarded and mature open-source Markdown editor that stands out for its unique blend of a powerful WYSIWYG experience with a Markdown-first approach. Here's a breakdown of its key features and benefits, which address common pain points with other editors:
+The TOAST UI Editor is a well-regarded and **mature open-source Markdown editor** that stands out for its unique blend of a powerful WYSIWYG experience with a Markdown-first approach. 
+
+Breakdown of its key features and benefits:
 
 * **Hybrid Editing Modes:** This is its most significant feature. You get the best of both worlds: a user-friendly WYSIWYG mode for non-technical users and a pure Markdown mode for developers or those who prefer writing in plain text. The ability to seamlessly switch between the two is a major selling point.
 * **Markdown Standard Compliance:** It adheres to the CommonMark and GitHub Flavored Markdown (GFM) specifications, which is a big plus. This ensures that the Markdown you write and the HTML it generates will be compatible with many other tools and platforms.
@@ -24,11 +26,14 @@ The TOAST UI Editor is a well-regarded and mature open-source Markdown editor th
 **Potential Considerations:**
 
 * **Learning Curve:** While the WYSIWYG mode is intuitive, some of the more advanced features and a full understanding of the dual-mode functionality might require a bit of a learning curve for some users.
+
 * **Customization Efforts:** While it's highly customizable, some specific, deep customizations might require significant development effort, as noted by projects that have evaluated it and considered alternatives.
 
 ### Could it work as CSR with an Astro theme?
 
-Yes, absolutely. The TOAST UI Editor is a perfect candidate for a Client-Side Rendered (CSR) component within an Astro theme. Here's why:
+The TOAST UI Editor is a perfect candidate for a Client-Side Rendered (CSR) component within an Astro theme.
+
+Here's why:
 
 * **JavaScript-Based:** The TOAST UI Editor is a JavaScript library, which means it runs in the browser. Astro's default behavior is to produce static HTML and JavaScript that runs on the client.
 * **Astro's Islands Architecture:** Astro's "Islands" architecture is designed for this exact use case. You can have a static, server-rendered page layout with a single, isolated interactive component—the editor—that is hydrated with JavaScript on the client. This is the ideal way to integrate a heavy, interactive library like an editor without sacrificing Astro's core benefits of fast initial load times and great SEO.
@@ -46,14 +51,11 @@ In summary, the TOAST UI Editor is a powerful and flexible tool. Its dual-mode a
 
 ## Conclusions
 
+---
+
 ## FAQ
 
-
-The acronym "ICP" has several meanings depending on the context. 
-
-Here are some of the most common ones:
-
-**1. Ideal Customer Profile (ICP)**
+**Ideal Customer Profile (ICP)**
 
 In business, particularly in marketing and sales, an ICP is a description of the type of company or customer that would get the most value from your product or service and, in return, provide the most value to your business.
 

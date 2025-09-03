@@ -7,7 +7,13 @@ description: 'Playwright based WebApp with job trends info.'
 url: 'playwright-101'
 ---
 
-What are the chances to find a remote job still today?
+**TL;DR**
+
+Tinkering with python (uv and make), sqlite and matplotlib to get historical data about the job market on [this repo](#conclusions).
+
+**Intro**
+
+What are the chances to find a **remote job** still today?
 
 In theory they are not null.
 

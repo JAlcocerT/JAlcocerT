@@ -131,7 +131,11 @@ Just use it like so in your markdown ,**example with the gist**:
 
 ### Math with Katex
 
-As see on this [HUGO Hextra post](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/#the-chemistry-of-lye)
+Katex is similar to Latex.
+
+You can bring cool formulas to HUGo with Katex.
+
+> See an example on this [HUGO Hextra post](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/#the-chemistry-of-lye)
 
 ### Tweaking HUGO Themes
 

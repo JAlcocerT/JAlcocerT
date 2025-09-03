@@ -1,22 +1,24 @@
 ---
 title: "Autogen + Ollama: Selfhosting Local LLM Agents with UI"
-date: 2025-12-31T23:20:21+01:00
-draft: true
+date: 2025-11-23T23:20:21+01:00
+draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"]
-cover:
-    image: "https://socialify.git.ci/louislam/dockge/image?language=1&name=1&theme=Auto" # image path/url 
-    alt: "Dockge Docker" # alt text
-    caption: "How to setup Dockge to Manage Containers" # display caption under cover
+# cover:
+#     image: "https://socialify.git.ci/louislam/dockge/image?language=1&name=1&theme=Auto" # image path/url 
+#     alt: "Dockge Docker" # alt text
+#     caption: "How to setup Dockge to Manage Containers" # display caption under cover
     #image: "/img/SelfHosting/nginx.png"
     # image: "https://gist.githubusercontent.com/JAlcocerT/c043e6645a8786f55640e5fbccbaea00/raw/e6b63338bb64395db6076cfef72b14ce90dc9ae2/focalboard.JPG" # image path/url
     # image: "https://socialify.git.ci/fail2ban/fail2ban/image?description=1&language=1&name=1&pattern=Brick%20Wall&stargazers=1&theme=Auto" # image path/url   
 description: 'Using Autogen with Ollama to create Local Conversating Agents for free.'
-summary: 'SelfHosting Conversating Agens with Autogen & Ollama for free - GPT4 Code Interpreter F/OSS Alternative.'
 url: 'autogen-with-docker'    
 ---
 
-<!-- https://www.youtube.com/watch?v=7e8qBIZqmh8 
 
+SelfHosting Conversating Agens with Autogen & Ollama for free - GPT4 Code Interpreter F/OSS Alternative
+
+
+<!-- https://www.youtube.com/watch?v=7e8qBIZqmh8 
 https://www.youtube.com/watch?v=byPbxEH5V8E
 -->
 
@@ -34,14 +36,13 @@ AutoGen agents are customizable, conversable, and seamlessly allow human partici
 
 **AutoGen Studio** is an AutoGen-powered AI app (user interface) to help you rapidly prototype AI agents, enhance them with skills, compose them into workflows and interact with them to accomplish tasks. It is built on top of the AutoGen framework, which is a toolkit for building AI agents.
 
-https://github.com/microsoft/autogen/tree/main/samples/apps/autogen-studio
-
-https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/
+* https://github.com/microsoft/autogen/tree/main/samples/apps/autogen-studio
+* https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/
 
 <!-- <https://fossengineer.com/selfhosting-llms-ollama/> 
 https://www.youtube.com/watch?v=HN96PTdiseo  -->
 
-## Why Autogen?
+#### Why Autogen?
 
 They can operate in various modes that employ combinations of LLMs, human inputs, and tools.
 
@@ -64,11 +65,12 @@ pip install bleach nbconvert
 pip install pexpect #for jupyter
 ```
 
-## Autogen with Ollama
+#### Autogen with Ollama
 
-<https://fossengineer.com/selfhosting-llms-ollama/>
+Get [Ollama running](https://fossengineer.com/selfhosting-llms-ollama).
 
-## Autogen + Autogen Studio
+
+#### Autogen + Autogen Studio
 
 ```sh
 pip install autogenstudio
@@ -97,9 +99,7 @@ volumes:
 
 ## FAQ
 
-### What it is Ollama?
-
-### How to include HTTPs to AutogenStudio?
+How to include HTTPs to AutogenStudio?
 
 ### Other F/OSS Multi-Agent Projects
 

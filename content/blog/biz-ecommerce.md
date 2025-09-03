@@ -1,11 +1,18 @@
 ---
 title: "Creating an e-Commerce"
-date: 2025-12-23
+date: 2026-12-23
 draft: true
 tags: ["dev"]
 description: 'Creating an eCommerce. Drupal vs'
 url: 'creating-ecommerce'
 ---
+
+
+**Intro**
+
+As I have been learning how to do CSR related auth...
+
+How about bringing something more than a website: **an ecommerce**
 
 ## Astro as Ecommerce
 

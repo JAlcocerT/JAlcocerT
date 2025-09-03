@@ -1,12 +1,14 @@
 ---
 title: "Okta Alternatives? A look to F/OSS Single Sign On Tools"
-date: 2025-10-25T23:20:21+01:00
-draft: true
-tags: ["Dashboards","OSS for Business","Self-Hosting"]
+date: 2025-10-15T23:20:21+01:00
+draft: false
+tags: ["Dashboards","OSS for Business","Self-Hosting","Authelia","KeyCloak","Authentik"]
 description: ''
-summary: '.'    
 url: 'open-source-sso-tools'
 ---
+
+
+**Intro**
 
 * https://auth0.com/ by Okta ❎
 
@@ -17,16 +19,16 @@ url: 'open-source-sso-tools'
 5. [Vouch Proxy](#vouch)
 6. [Keycloak](#keycloack)
 7. [zitadel](#zitadel) - Identity infrastructure, simplified for you
-8. KeyAuth - discontinued
+8. KeyAuth - Discontinued
 
 ## Why Single Sign On - SSO
 
 
 ## Hanko
 
-https://www.hanko.io/
-https://docs.hanko.io/introduction
-https://github.com/teamhanko/hanko?tab=License-1-ov-file#readme mixed, GNUPL
+* https://www.hanko.io/
+  * https://docs.hanko.io/introduction
+  * https://github.com/teamhanko/hanko?tab=License-1-ov-file#readme mixed, GNUPL
 
 > Authentication and user management system optimized for passkeys
 
@@ -34,11 +36,6 @@ https://github.com/teamhanko/hanko?tab=License-1-ov-file#readme mixed, GNUPL
 
 https://docs.hanko.io/api-reference/public/webauthn/initialize-webauthn-login
 
-## LogTo
-
-https://logto.io/
-https://github.com/logto-io/logto
-https://github.com/logto-io/logto?tab=MPL-2.0-1-ov-file#readme
 
 > 🧑‍🚀 The better identity infrastructure for developers and the open-source alternative to Auth0.
 
@@ -185,7 +182,15 @@ https://github.com/ory/hydra?tab=readme-ov-file#run-the-docker-compose-quickstar
 
 > OpenID Certified™ OpenID Connect and OAuth Provider written in Go - cloud native, security-first, open source API security for your infrastructure. SDKs for any language. Works with Hardware Security Modules. Compatible with MITREid.
 
+---
 
+## Conclusions
+
+### LogTo
+
+* https://logto.io/
+  * https://github.com/logto-io/logto
+  * https://github.com/logto-io/logto?tab=MPL-2.0-1-ov-file#readme
 
 ---
 

@@ -573,14 +573,16 @@ You could also manage to do Telegram Bots to download given images and then inte
 
 * The open platform to create scalable databases and applications—without coding - https://baserow.io/
 
-https://gitlab.com/baserow/baserow
-https://gitlab.com/baserow/baserow/-/blob/develop/LICENSE
+* https://gitlab.com/baserow/baserow
+* https://gitlab.com/baserow/baserow/-/blob/develop/LICENSE
 
 Can be SelfHosted or use: https://baserow.io/database
 
 > Baserow is an open source no-code database and Airtable alternative.
 
-Create your own database without technical experience. Our user friendly no-code tool gives you the powers of a developer without leaving your browser.
+Create your own database without technical experience.
+
+Our user friendly no-code tool gives you the powers of a developer without leaving your browser.
 
 * Focus: Open-source no-code database tool with a user-friendly interface resembling spreadsheets but with relational database capabilities.
 * Strengths: Offers a visual interface for building tables, defining relationships, and managing data. Supports various data types, including files, formulas, and automations. Integrates with popular tools like Zapier and webhooks.
@@ -609,7 +611,9 @@ Strengths: Visually build user interfaces using drag-and-drop functionality and 
 
 Considerations: While offering a visual interface, it might require some coding knowledge for complex functionalities.
 
-> Platform to build admin panels, internal tools, and dashboards. Integrates with 25+ databases and any API.
+> Platform to build admin panels, internal tools, and dashboards. 
+
+> > Integrates with 25+ databases and any API.
 
 * https://docs.appsmith.com/getting-started/setup/installation-guides/docker?utm_source=github&utm_medium=organic&utm_campaign=readme
 
@@ -627,9 +631,7 @@ services:
 ```
 
 
-5. Budibase:
-
-Focus: Open-source self-hosted alternative for building internal tools and managing data.
+5. Budibase:  Open-source self-hosted alternative for building internal tools and managing data.
 
 Strengths: Offers a modular architecture with components for building databases, forms, dashboards, and workflows. Supports user management, role-based access control, and data filtering.
 

@@ -1,13 +1,20 @@
 ---
 title: "Networking - Understanding Domains and DNS Setup"
-date: 2025-12-31
-draft: true
-tags: ["OSS","HomeLab","Dev"]
+date: 2025-09-22
+draft: false
+tags: ["HomeLab","Dev","ENS","Web3","DNSMap"]
 description: 'How to Setup DNS for your Domains.'
 summary: 'How to Setup DNS for your Domains'
 url: 'web-domain-basics'
 ---
 
+**Tl;DR**
+
+More goodies for your homelab.
+
+**Intro**
+
+You can buy a TLD via any of these (and many more):
 
 1. Porkbun
 2. Cloudflare
@@ -30,27 +37,29 @@ Here’s what you need to do:
 - **Name:** `subdomain.yourdomain.com`
 - **Value:** The IPv4 address you want to point to.
 
-### Example:
+Example:
+
 If your subdomain is `app.example.com` and the IPv4 address is `192.168.1.1`, your DNS record should look like:
 
 | Type | Name            | Value        |
 |------|-----------------|--------------|
 | A    | app.example.com | 192.168.1.1  |
 
-### 2. **Pointing to an IPv6 Address**
+### 2. Pointing to an IPv6 Address
 
 - **Record Type:** `AAAA`
 - **Name:** `subdomain.yourdomain.com`
 - **Value:** The IPv6 address you want to point to.
 
-### Example:
+Example:
+
 If your subdomain is `app.example.com` and the IPv6 address is `2001:0db8:85a3:0000:0000:8a2e:1234:5678`, your DNS record should look like:
 
 | Type  | Name            | Value                                   |
 |-------|-----------------|-----------------------------------------|
 | AAAA  | app.example.com | 2001:0db8:85a3:0000:0000:8a2e:1234:5678 |
 
-### **Summary:**
+**Summary:**
 
 - Use an `A` record to point a subdomain to an IPv4 address.
 - Use an `AAAA` record to point a subdomain to an IPv6 address.

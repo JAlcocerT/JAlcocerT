@@ -1,12 +1,22 @@
 ---
 title: "Session Recording for Web Projects"
-date: 2025-12-31
+date: 2026-12-31
 draft: true
 tags: ["Web","Dev"]
 description: 'Tutorial - Making ASTRO Website better.'
 summary: 'How to get better with ASTRO as SSG (for non web-devs). My favourite components for Astro.'
 url: 'how-to-record-web-sessions'
 ---
+
+**Intro**
+
+If you got your SaaS reachable by potential users.
+
+You will want to know what it works and what not.
+
+BUt for real.
+
+What are the users experiencing.
 
 ## OpenReplay
 

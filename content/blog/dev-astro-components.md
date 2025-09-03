@@ -1,21 +1,19 @@
 ---
-title: "ASTRO - SSG: Components & How to use Them"
+title: "ASTRO Components & How to use Them"
 date: 2024-05-14T23:20:21+01:00
 draft: false
-tags: ["Web","Dev","Websites","Astro Components"]
-description: 'Tutorial - Making any ASTRO Website better.'
+tags: ["Web","SSG","Websites","Astro Components"]
+description: 'Tutorial for Components - Making any ASTRO Website better.'
 url: 'understanding-astro-ssg-components'
 ---
 
 There is one thing that you need to understand to be on the **top percentile of webs**.
 
-
-
 ![Just use Astro - IQ Percentiles](/blog_img/memes/IQ_default.jpg)
 
 And it is **how to use components**.
 
-How to get better with ASTRO as SSG (for non web-devs)?
+How to get better with ASTRO as SSG *(for non web-devs)*?
 
 This is a post about *My favourite components for Astro*: Search, Charts, OG/SEO, GPX support...
 
@@ -42,6 +40,7 @@ CSS Link
 3. [OG and SEO](#astro-opengraph-and-seo-metadata)
 
 4. RSS
+
 5. [SiteMap](#adding-sitemap-for-astro-pages)
 
 6. [Search](#ssg-search): Flexsearch, fuseJS, pagefind,...
@@ -389,11 +388,11 @@ export const collections = {
 };
 ```
 
-Then, use it in your astro templates like:
+Then, use it in your astro templates like: *This will allow to ignore the drafts!*
 
 ```js
   const allPosts = (await getCollection('blog'))
-        // Filter out posts that have draft: true
+        // Filter out posts that have draft:true
         .filter(post => !post.data.draft)
         // Sort the remaining posts by pubDate in descending order
         .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());

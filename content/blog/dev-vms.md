@@ -1,8 +1,8 @@
 ---
 title: "Trying NixOS with VMs"
-date: 2025-12-31
-draft: true
-tags: ["Tinkering"]
+date: 2025-09-16
+draft: false
+tags: ["Tinkering","WSL","Virtual Machines"]
 summary: 'How to use VMs and try a new OS like NixOS'
 url: 'testing-nix-os'
 ---
@@ -63,7 +63,9 @@ nix-env -u
 
 ---
 
-## Interesting Stuff Regarding Emulation
+## Conclusions
+
+### Interesting Stuff Regarding Emulation
 
 * GNOME Boxes is a virtualization tool for Linux desktop environments (like GNOME on Ubuntu). It allows you to create, manage, and run virtual machines in a desktop environment.
 
@@ -75,3 +77,4 @@ It’s primarily used to virtualize full operating systems on Linux PCs using te
 
 
 ![Termux S6 Lite](/blog_img/outro/termux-s6lite.png)
+

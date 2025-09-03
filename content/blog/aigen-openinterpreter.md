@@ -1,18 +1,25 @@
 ---
 title: "LLMs control your PC with OpenInterpreter (and Ollama)"
-date: 2025-12-13T23:20:21+01:00
-draft: true
+date: 2025-10-28T23:20:21+01:00
+draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"]
-cover:
-   image: "/img/GenAI/openinterpreter.png" # image path/url 
-   Width: 360
-   Height: 200
-   sizes: 360
-   alt: "OpenInterpreter - Let LLMs control your PC." # alt text
-   caption: "OpenInterpreter - Lets make Local LLMs to control our PC." # display caption
+# cover:
+#    image: "/img/GenAI/openinterpreter.png" # image path/url 
+#    Width: 360
+#    Height: 200
+#    sizes: 360
+#    alt: "OpenInterpreter - Let LLMs control your PC." # alt text
+#    caption: "OpenInterpreter - Lets make Local LLMs to control our PC." # display caption
 description: 'A guide to use OpenInterpreter. Locally and with Free LLM Agents powered by Ollama.'
 url: 'openinterpreter-ollama'
 ---
+
+
+**Intro**
+
+This is something that I was tinkering with in 2024.
+
+But could not write properly.
 
 * https://www.youtube.com/watch?v=xPd8FFzIeOw
 * https://www.youtube.com/watch?v=BNgFLqBg1P0

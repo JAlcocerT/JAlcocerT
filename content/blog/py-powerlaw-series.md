@@ -1,12 +1,22 @@
 ---
 title: "Power Laws: What?"
-date: 2025-09-01T23:20:21+01:00
+date: 2025-09-15T23:20:21+01:00
 draft: false
-tags: ["Python","Blog"]
+tags: ["Python","Blog","Math",""]
 description: "Explaining series and the relation with the power law"
 url: 'powerlaw-and-series-with-python'
 math: true
 ---
+
+
+**Tl;DR**
+
+Just a quick mental model on [Series](#understanding-series) with Python.
+
++++ Reflecting on [Pareto](#power-law--pareto) and [D&A](#power-law--data-analytics)
+
+**Intro**
+
 
 <!-- 
 In mathematics, a power law is a functional relationship between two quantities [1], where a relative change in one quantity results in a proportional relative change in the other quantity [2][3], independent of the initial size of those quantities. In other words, small changes in one variable result in large changes in another variable, and vice versa. This type of relationship is often observed in nature, such as in the size distribution of cities or the frequency of words in a language. The power law is also known as a scaling law or a Pareto distribution. -->
@@ -65,10 +75,9 @@ Geometric series are commonly used in mathematics, physics, and engineering to m
 
 ### Fibonacci
 
-Yes, Fibonacci sequence is an example of a geometric series with a common ratio of the golden ratio, which is approximately 1.618.
+A Fibonacci sequence is an example of a geometric series with a common ratio of the golden ratio, which is approximately 1.618.
 
 Here's some sample Python code to plot a geometric series:
-
 
 ```py
 import numpy as np
@@ -105,11 +114,12 @@ Power laws can be related to geometric series through the concept of infinite su
 The relationship between power laws and geometric series arises because **both describe the behavior of a quantity that changes exponentially over time.**
 * In the case of a geometric series, the quantity changes by a fixed factor with each term, whereas in the case of a power law, the quantity changes by a variable factor that depends on the exponent k. Thus, **power laws can be thought of as a generalization of geometric series**, where the growth factor is not constant but varies with the exponent.
 
-## Power Law & Pareto
 
-Sometime ago I wrote a post about The Pareto Principle.
+### Power Law & Pareto
 
-## Power Law & Data Analytics
+Sometime ago I wrote a post about [The Pareto Principle](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/).
+
+### Power Law & Data Analytics
 
 For a data analyst, understanding power laws and Pareto analysis can be extremely valuable for their career. 
 

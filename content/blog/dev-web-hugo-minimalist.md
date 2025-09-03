@@ -1,15 +1,17 @@
 ---
 title: "Minimalist Blogs - with hugo and more"
-date: 2025-12-31
-draft: true
+date: 2025-12-25
+draft: false
 tags: ["Dev"]
-summary: 'The minimalist web and what to learn from it.'
+summary: 'The minimalist Web and what to learn from it.'
 url: 'creating-a-minimalist-blog'
 ---
 
 **Intro**
 
-I get very happy when finding out about blog posts on reddit or on self.st newsletter that are purely human driven.
+I get very happy when finding out about blog posts on reddit or on self.st newsletter that are **purely human driven**.
+
+> We can still feel that
 
 paper mod Theme
 

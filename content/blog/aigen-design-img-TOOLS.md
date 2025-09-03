@@ -1,6 +1,6 @@
 ---
 title: "GUI's to use Stable Difussion Models"
-date: 2030-08-15T23:20:21+01:00
+date: 2026-12-31T23:20:21+01:00
 draft: true
 tags: ["Blender","Gen-AI"]
 description: ''

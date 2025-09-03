@@ -45,6 +45,13 @@ nano Selfhosting_101.sh #MAKE SURE YOU UNDERSTAND WHAT YOU WILL BE RUNNING FIRST
 #sudo ./Selfhosting_101.sh 
 ```
 
+If you want, you can get Podman instead:
+
+```sh
+sudo apt install podman
+podman --version
+```
+
 3. Open Portainer `localhost:9000` and start [deploying apps](#selfhosting-sept-25) other people created (FAST)
 
 4. Start [creating and deploying your Apps](#how-to-bundle-your-apps)

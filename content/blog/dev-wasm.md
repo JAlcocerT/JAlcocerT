@@ -2,11 +2,13 @@
 title: "WASM"
 date: 2025-12-31
 draft: true
-tags: ["dev"]
+tags: ["Dev","Web Assembly"]
 description: 'Must knoics.'
 url: 'wasm'
 ---
 
+
+**Intro**
 
 
 ### What about Web Assembly?

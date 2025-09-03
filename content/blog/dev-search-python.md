@@ -1,11 +1,20 @@
 ---
 title: "Programatic Web Search"
-date: 2025-12-31
+date: 2026-12-31
 draft: true
 tags: ["Dev"]
 url: 'search-web-with-python'
 summary: 'How to use search the web programatically'
 ---
+
+
+**Intro**
+
+I forked a project that was not only doing programatic web search, but also using agents.
+
+Cool stuff.
+
+But the DDG part I didnt have the change to play with.
 
 ## Web Search with Python
 

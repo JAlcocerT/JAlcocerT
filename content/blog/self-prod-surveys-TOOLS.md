@@ -1,22 +1,36 @@
 ---
 title: "Free Surveys"
 date: 2025-10-25T23:20:21+01:00
-draft: true
-tags: ["Docker","Self-Hosting"]
+draft: false
+tags: ["Docker","Self-Hosting","PocketBase"]
 description: ''
-summary: '.'    
 url: 'forms-and-surveys'
 ---
+
+
+**Intro**
+
+This year *seems to be* the year of: uv, makefile and [pocketbase](https://jalcocert.github.io/JAlcocerT/pocketbase/).
 
 1. [Frombricks](#formbricks)
 2. [HeyForm](#heyform)
 3. [OhMyForm](#ohmyform)
 
-<https://medevel.com/open-source-survey-tools-2/>
+> Get more ideas at <https://medevel.com/open-source-survey-tools-2/>
+
+You can have also your own [DIY survey / forms](#diy-forms-with-pb) tool for your Saas by [using PB](#why-with-pocketbase).
+
+> PB + SSG is great to validate ideas. FAST!
+
+## Forms
 
 ### Formbricks
 
-https://github.com/formbricks/formbricks
+Just use formbricks.
+
+Around one year ago I was making a post and [touched formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)
+
+* https://github.com/formbricks/formbricks
 
 ### heyform
 
@@ -36,6 +50,14 @@ https://github.com/formbricks/formbricks
   * https://ohmyform.com/docs/install/ 
   https://ohmyform.com/
 
+## DIY Forms with PB
+
+
+### Why with PocketBase
+
+Just because I like to keep the tech stack as simple as possible.
+
+> And because Im lazy to maintain a lot of back-end code.
 
 ---
 

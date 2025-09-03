@@ -2,7 +2,7 @@
 title: "Whats the right Messaging Protocol for me?"
 date: 2025-08-17T09:20:21+01:00
 draft: false
-tags: ["D&A","HomeLab","PicoW MQTT and a DHT22 Sensor","AMQ"]
+tags: ["D&A","HomeLab","PicoW MQTT and a DHT22 Sensor","AMQ","BunkerM","Thonny"]
 description: 'MQTT vs RMQ vs Kafka. Messaging Tools for IoT Projects and more'
 url: 'messaging-protocols'
 ---
@@ -15,9 +15,7 @@ Others, on Healthcare, like [RMQ](#rabbitmq)
 
 **Intro**
 
-You might be playing around with your Pi:
-
-* https://jalcocert.github.io/RPi/posts/rpi-mqtt/
+You might have been playing around with your Pi, even tinkering with a [Pi+MQTT](https://jalcocert.github.io/RPi/posts/rpi-mqtt/)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/rpi-gps-superset/#apache-superset-setup" title="Superset Setup" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="IoT Pi Project with Superset" >}}
@@ -211,10 +209,12 @@ When designing a Kafka-based system, consider partitioning your topics for paral
 
 See also https://bunkeriot.github.io/BunkerM/
 
-These tools will be useful:
+> BunkerM is an open-source, **containerized MQTT management solution** that bundles together a Mosquitto broker with a comprehensive web interface.
+
+These tools will also be useful:
 
 1. VSCodium
-2. THonny
+2. Thonny - *I would stick to this one*
 3. Arduino IDE
 
 ### MQTT x PicoW x DHT22
