@@ -1,8 +1,8 @@
 ---
-title: "SelfHosting Updates - Summer 2025"
+title: "SelfHosting Updates - End Summer 2025"
 date: 2025-09-15T01:20:21+01:00
 draft: false
-tags: ["Dev","SSGs","MKCert","MeTube/Navidrome"]
+tags: ["Dev","SSGs","MKCert","MeTube/Navidrome","Zen Browser"]
 description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs'
 url: 'selfhosted-apps-sept-2025'
 ---
@@ -161,17 +161,7 @@ Link analytics solutions, like Kutt:
 
 ## FAQ
 
-### How to Change USB Size
 
-This has been useful few times already (from Windows):
-
-```sh
-Diskpart
-List disk
-select disk N
-clean 
-create partition primary
-```
 
 ### Your Music Server
 
@@ -197,8 +187,61 @@ You also have substreamer app on ios or android (as a client), they also have: h
 > Just that its not OSS
 
 
-See also MeTube:
+See also MeTube and Navidrome:
 
-![alt text](/blog_img/selfh/HomeLab/metube.png)
+![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
 
-![alt text](/blog_img/selfh/HomeLab/navidrome.png)
+![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
+
+### HomeLab Commands
+
+1. Whats taking that much space?
+
+```sh
+#sudo du -ahx / | sort -rh | head -n 50
+sudo du -ahx . | sort -rh | head -n 50 #from current folder and below
+```
+
+2. I want to clean old container stuff
+
+```sh
+docker builder prune
+#docker system prune -a
+docker volume prune
+docker image prune -a
+```
+
+3. Stop all containers, but portainer:
+
+```sh
+#docker ps -a -q --filter 'name=!portainer'
+docker ps -q | grep -v portainer | xargs docker stop
+```
+
+### How to Change USB Size
+
+This has been useful few times already (from Windows):
+
+```sh
+Diskpart
+List disk
+select disk N
+clean 
+create partition primary
+```
+
+### Which Linux to get started?
+
+
+1. [Lubuntu](https://cdimage.ubuntu.com/lubuntu/releases/noble/release/) - Because it requires just ~700mb of RAM
+2. Ubuntu if you want the same, but with GNOME
+
+> You can have ubuntu without UI, if you plan to use your server's terminal only
+
+3. [Garuda](https://garudalinux.org/editions), if you want to say I use ARCH BTW.
+
+How exactly?
+
+Well, first try download them and run it via a VM.
+
+Then, setup VENTOY into your USBs and bring your favourite one. 

@@ -19,7 +19,7 @@ It all started with a quick way to setup apps with Docker...
 
 Recently I was [reviewing the OS's](https://jalcocert.github.io/JAlcocerT/os-for-nas/) I would consider as of today for my homelab
 
-> PS: give a try to ubuntu as dual boot (and check Ventoy!)
+> PS: give a try to ubuntu as dual boot. And check [Ventoy](https://github.com/ventoy/Ventoy)!
 
 What else?
 

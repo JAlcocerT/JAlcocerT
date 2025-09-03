@@ -252,7 +252,7 @@ networks:
 > GPL 3.0 |  Linux System Optimizer and Monitoring - https://oguzhaninan.github.io/Stacer-Web 
 
 
-> Remember that with **Ventoy**, you can have them all in one usb drive
+> Remember that with **[Ventoy](https://github.com/ventoy/Ventoy)**, you can have them all in one usb drive
 
 
 #### Better PKG management in Debian

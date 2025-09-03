@@ -2,7 +2,7 @@
 title: "Trying NixOS with VMs"
 date: 2025-09-16
 draft: false
-tags: ["Tinkering","WSL","Virtual Machines"]
+tags: ["QEMU","WSL","Virtual Machines","GNOME Boxes"]
 summary: 'How to use VMs and try a new OS like NixOS'
 url: 'testing-nix-os'
 ---
@@ -11,20 +11,24 @@ There are some options to virtualize OS: VMWare, VirtualBox (Free to use) or...*
 
 ```sh
 sudo apt update
-sudo apt install gnome-boxes qemu-kvm libvirt-daemon-system libvirt-clients
+#sudo apt install gnome-boxes qemu-kvm libvirt-daemon-system libvirt-clients
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients
+
+sudo snap install gnome-boxes
 ```
 
-Download the latest NixOS ISO and launch it:
+Download the latest NixOS `.ISO` and launch gnome-boxes::
 
 ```sh
 #wget https://channels.nixos.org/nixos-unstable/latest-nixos-minimal-x86_64-linux.iso -O nixos.iso
 gnome-boxes
 ```
 
-You can manage gnome-boxes via CLI, but I went the UI way.
+> You can manage **gnome-boxes via CLI**, but I went the UI way.
 
+As [desktop environment](https://wiki.nixos.org/wiki/Category:Desktop_environment), I went with Plasma 5 (instead of 6).
 
-As [desktop environment](https://wiki.nixos.org/wiki/Category:Desktop_environment), I went with Plasma 5 (instead of 6), but the Deepin one was also tempting.
+> The Deepin one was also tempting.
 
 ## Getting started with NixOS
 
@@ -65,16 +69,20 @@ nix-env -u
 
 ## Conclusions
 
+
+
 ### Interesting Stuff Regarding Emulation
 
-* GNOME Boxes is a virtualization tool for Linux desktop environments (like GNOME on Ubuntu). It allows you to create, manage, and run virtual machines in a desktop environment.
+GNOME Boxes is a virtualization tool for Linux desktop environments (like GNOME on Ubuntu).
+
+It allows you to create, manage, and run virtual machines in a desktop environment.
 
 It’s primarily used to virtualize full operating systems on Linux PCs using technologies like QEMU/KVM.
 
-* **Termux**, on the other hand, is a **terminal emulator and Linux environment app for Android devices**.
-    * It allows users to run a lightweight Linux environment on their Android phone or tablet, providing access to a wide range of command-line utilities and programming environments without rooting the device.
-    * A native terminal [might come sooner or later](https://www.androidpolice.com/android-linux-terminal/)
+**Termux**, on the other hand, is a **terminal emulator and Linux environment app for Android devices**.
+
+* It allows users to run a lightweight Linux environment on their Android phone or tablet, providing access to a wide range of command-line utilities and programming environments without rooting the device.
+* A native terminal [might come sooner or later](https://www.androidpolice.com/android-linux-terminal/)
 
 
 ![Termux S6 Lite](/blog_img/outro/termux-s6lite.png)
-

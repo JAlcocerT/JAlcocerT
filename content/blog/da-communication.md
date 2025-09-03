@@ -1,6 +1,6 @@
 ---
 title: "In touch with our colleagues"
-date: 2025-09-02T19:20:21+01:00
+date: 2025-08-28T19:20:21+01:00
 draft: false
 tags: ["DA","Career","Slack","MatterMost","Element"]
 description: 'Communication tools with slack...or with OSS?'

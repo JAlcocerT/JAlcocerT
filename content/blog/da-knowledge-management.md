@@ -1,6 +1,6 @@
 ---
 title: "Notes and Knowledge Management"
-date: 2025-09-02T19:20:21+01:00
+date: 2025-08-27T19:20:21+01:00
 draft: false
 tags: ["DA","Career","Joplin","LogSeq"]
 description: 'Head clean with notion, obsidian...or with OSS?'
@@ -19,11 +19,11 @@ But how people do this in a PRO and private way?
 2. Trilium
 3. Joplin
 
+With notes it seems that all comes down to: just markdown (vs) more features and locking
+
 ```sh
 sudo snap install joplin-desktop
 ```
-
-
 
 ### Knowledge Management Tools
 
@@ -43,7 +43,9 @@ These are some knowledge management tools, noting their data storage method:
 
 [![Star History Chart](https://api.star-history.com/svg?repos=silverbulletmd/silverbullet,laurent22/joplin,logseq/logseq,BookStackApp/BookStack,gilbitron/Raneto&type=Date)](https://star-history.com/silverbulletmd/silverbullet&laurent22/joplin&logseq/logseq&BookStackApp/BookStack&gilbitron/Raneto&Date)
 
-That's an excellent question that gets to the core of the "privacy and control" movement in note-taking apps. The answer is that there's a spectrum, but many of the popular self-hostable options do not follow the same "plain text files" model as Logseq.
+That's an excellent question that gets to the core of the "privacy and control" movement in note-taking apps. 
+
+The answer is that there's a spectrum, but many of the popular self-hostable options do not follow the same "plain text files" model as Logseq.
 
 ### The "Plain Text" Philosophy vs. "Database" Philosophy
 
