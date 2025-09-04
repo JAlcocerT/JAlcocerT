@@ -345,7 +345,7 @@ Most modern JavaScript environments handle these network requests asynchronously
 
 Definitely, FastAPI is something that I will consider and try to combine with Astro and/or Pocketbase. 
 
-You might see that in some webapps, [typescript does the job of FastAPI](#fastapi-vs-ts).
+You might see that in some webapps, [TS does the job of FastAPI](#fastapi-vs-ts).
 
 ### Proper Py and uv
 
@@ -521,9 +521,10 @@ FastAPI endpoints are the **producers** of the API. They are the backend functio
 
 **📝 `api.ts` Endpoints**
 
-The file name `api.ts` indicates a TypeScript file. In this context, it typically serves one of two purposes:
+The file name `api.ts` indicates a TS file. In this context, it typically serves one of two purposes:
 
-1.  **Defining API routes in a TypeScript-based backend framework**: Frameworks like **Next.js** or **Directus** use `api.ts` files to define API routes. In this case, it's doing a similar job to a FastAPI endpoint—it's the server-side code that handles requests. The key difference is the language and the ecosystem it's part of. These frameworks leverage TypeScript's static typing to provide type safety for your API logic.
+1.  **Defining API routes in a TS-based backend framework**: Frameworks like **Next.js** or **Directus** use `api.ts` files to define API routes. In this case, it's doing a similar job to a FastAPI endpoint—it's the server-side code that handles requests. The key difference is the language and the ecosystem it's part of. These frameworks leverage TS's static typing to provide type safety for your API logic.
+
 2.  **Defining the API client on the frontend**: In many frontend projects, `api.ts` is a file that defines the structure and functions for making API calls to a separate backend. This file acts as a **consumer** of the API, containing functions like `getUsers()` or `createPost()`, often with type definitions to ensure the data received from the backend is correctly typed. This is a common practice for maintaining type safety across the entire application stack.
 
 This distinction is crucial: FastAPI is a backend framework, while a file named `api.ts` could be a backend implementation, but is often a frontend client.
@@ -533,8 +534,8 @@ This distinction is crucial: FastAPI is a backend framework, while a file named 
 | Feature | **FastAPI Endpoints** | **`api.ts` Endpoints** |
 | :--- | :--- | :--- |
 | **Primary Role** | Backend (API Producer) | Can be Backend or Frontend (API Consumer) |
-| **Core Technology** | Python web framework | TypeScript file/module |
-| **Language** | Python | TypeScript |
+| **Core Technology** | Python web framework | TS file/module |
+| **Language** | Python | TS |
 | **Purpose** | To **handle** incoming HTTP requests and **generate** responses | To **define** API routes (backend) or **make** API calls (frontend) |
 | **Key Advantage** | High performance, automatic validation, and automatic API documentation. | Type safety across the codebase, catching errors before runtime. |
 

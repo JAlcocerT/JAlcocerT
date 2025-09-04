@@ -90,7 +90,7 @@ There you go, the original makeread.me project running locally:
 
 > See the UI at: `http://localhost:3000/`
 
-> > And the swagger api: http://localhost:8080/
+> > And the swagger API: http://localhost:8080/
 
 But the juice starts at the branch `makeslidev`:
 

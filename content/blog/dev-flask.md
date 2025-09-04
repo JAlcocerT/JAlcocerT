@@ -684,9 +684,9 @@ With ORMs, developers can work at a higher level of abstraction, making database
 
 In the JavaScript and Next.js ecosystem, there are several ORMs designed for interacting with databases. Here are some popular options:
 
-* Prisma: A modern, type-safe ORM for Node.js and TypeScript, ideal for Next.js projects.
+* Prisma: A modern, type-safe ORM for Node.js and TS, ideal for Next.js projects.
 * Sequelize: A mature ORM for Node.js, supporting SQL databases with a feature-rich API.
-* TypeORM: A TypeScript-first ORM that supports complex models and database relationships.
+* TypeORM: A TS-first ORM that supports complex models and database relationships.
 * Mongoose: An ODM tailored for MongoDB, widely used for schema-based data modeling.
 * Objection.js: A flexible ORM built on Knex.js, suitable for SQL databases with direct SQL access.
 
@@ -809,6 +809,6 @@ WebSocket connections are useful for games or web sites that need to **display l
 
 * https://github.com/Scale3-Labs/langtrace - Langtrace 🔍 
 
-> An open-source, Open Telemetry based end-to-end **observability tool for LLM applications**, providing real-time tracing, evaluations and metrics for popular LLMs, LLM frameworks, vectorDBs and more.. Integrate using Typescript, Python.
+> An open-source, Open Telemetry based end-to-end **observability tool for LLM applications**, providing real-time tracing, evaluations and metrics for popular LLMs, LLM frameworks, vectorDBs and more.. Integrate using TS, Python.
 
 * Model Garden, Vertex AI - https://cloud.google.com/model-garden?hl=es

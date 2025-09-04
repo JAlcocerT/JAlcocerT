@@ -3,7 +3,7 @@ title: "What is Typescript? Is it > JavaScript ?"
 date: 2025-08-14
 draft: false
 tags: ["SSG","Web","Yarnness x Knitting"]
-description: 'Typescript and how easy is for everyone to get a blog.'
+description: 'TS and how easy is for everyone to get a blog.'
 url: 'whats-typescript'
 ---
 
@@ -25,20 +25,21 @@ But between all the websites Ive been exploring with, its time to put together [
 
 If you know [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/), going to TS *should be relatively* simple.
 
- you can get to know the Docs of any **npm package** that uses typescript: <https://tsdocs.dev/>
+You can get to know the Docs of any **npm package** that uses typescript: <https://tsdocs.dev/>
 
 ### TS x PB
 
+You could even use TypeScript with Pocketbase.
 
-{{% details title="Why TypeScript + PocketBase...? PB SDK" closed="true" %}}
-
-{{% /details %}}
+> And avoid writing Python code at all
 
 A TypeScript class is *not* limited to being the UI client.
 
 TypeScript is a superset of JavaScript.
 
-Since JavaScript can run on both the front-end (in a browser) and the back-end (using a runtime like Node.js), TypeScript can be used in both places.
+Since JavaScript can run on both the front-end (in a browser) and the back-end (using a runtime like Node.js)...
+
+... TypeScript can be used in both places as well!
 
 {{% details title="About TS Classes and PB... 🚀" closed="true" %}}
 
@@ -58,7 +59,9 @@ In that case, the architecture would look like this:
 
 **TypeScript UI Client** ---(API calls)---> **TypeScript Backend Server** ---(database calls)---> **PocketBase**
 
-In this architecture, the "TypeScript Backend Server" would be the equivalent of the "Flask" part in the original comparison. It would have the same ability to handle complex logic, middleware, and custom API endpoints.
+In this architecture, the "TypeScript Backend Server" would be the equivalent of the "Flask" part in the original comparison. 
+
+It would have the same ability to handle complex logic, middleware, and custom API endpoints.
 
 So, to clarify:
 
@@ -80,6 +83,10 @@ Thats about typescript.
 Now: Do you need to be a WebDev to get a cool blog and write publically on the internet?
 
 Not really.
+
+Just get up to date front time to time.
+
+Good recap of whats going on at JS: https://stateofjs.com/en-US
 
 ### A blog for All
 

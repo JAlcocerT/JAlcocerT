@@ -52,7 +52,7 @@ Thanks to Boston343, I got to know about **keystack CMS**
 
 - https://github.com/Thinkmill/keystatic
 
-> MIT | First class CMS experience, TypeScript API, Markdown & YAML/JSON based, no DB
+> MIT | First class CMS experience, TS API, Markdown & YAML/JSON based, no DB
 
 <!-- https://www.youtube.com/watch?v=E65Fx9all04&t=9s -->
 {{< youtube "E65Fx9all04" >}}

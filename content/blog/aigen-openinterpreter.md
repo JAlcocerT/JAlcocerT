@@ -1,6 +1,6 @@
 ---
 title: "LLMs control your PC with OpenInterpreter (and Ollama)"
-date: 2025-10-28T23:20:21+01:00
+date: 2024-11-28T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"]
 # cover:
@@ -27,26 +27,8 @@ But could not write properly.
 If you ever dream about having a **natural language interface to control your computer**, that dream has become true.
 
 
-
-{{< dropdown title="Dropdown Example 👇" closed="true" >}}
-
-{{< /dropdown >}}
-
-
-## Why OpenInterpreter?
-
-<!-- It is a F/OSS alternative to Obsidian.
-
-Plus you can use {{< newtab url="https://fossengineer.com/selfhosting-llms-ollama/" text="Ollama" >}} - F/OSS [Local LLMs together with LogSeq](#logseq--ollama). -->
-
-<!-- #https://github.com/logseq/logseq/pkgs/container/logseq-webapp -->
-
-
 ### The OpenInterpreter Project
 
-* {{< newtab url="https://pezzo.ai/" text="The Photoview Official Site" >}}
-* {{< newtab url="https://github.com/pezzolabs/pezzo" text="The Photoview Source Code at Github" >}}
-    * License: {{< newtab url="https://github.com/pezzolabs/pezzo?tab=Apache-2.0-1-ov-file#readme" text="aGPL 3.0" >}} ❤️
 
 https://github.com/KillianLucas/open-interpreter/issues/856
 https://github.com/jmorganca/ollama/issues/838
@@ -60,10 +42,7 @@ https://docs.openinterpreter.com/language-model-setup/local-models/custom-endpoi
 
 ## SelfHosting OpenInterpreter
 
-
-### Pre-Requisites
-
-### OpenInterpreter with Docker
+**OpenInterpreter with Docker**
 
 
 ```sh
@@ -234,26 +213,3 @@ dpkg -l | grep python
 ```
 
 {{< /dropdown >}}
-
-
-
-<!-- {{< tabs items="JSON,YAML,You need Docker!" >}}
-
-  {{< tab >}}**JSON**: JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax.{{< /tab >}}
-  {{< tab >}}**YAML**: YAML is a human-readable data serialization language.{{< /tab >}}
-  {{< tab >}}**TOML**: TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.{{< /tab >}}
-
-{{< /tabs >}}
-
-
-{{% steps %}}
-
-### Step 1
-
-This is the first step.
-
-### Step 2
-
-This is the second step.
-
-{{% /steps %}} -->

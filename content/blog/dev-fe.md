@@ -259,7 +259,7 @@ Their blog normally brings quite interesting ideas:
 
 But most importantly, Logto works: they send the email for people to validate etc
 
-This is their TypeScript SDK for interacting with Logto's Management API: https://github.com/logto-io/logto/blob/master/packages/api/README.md
+This is the LOGTO TS SDK for interacting with Logto's Management API: https://github.com/logto-io/logto/blob/master/packages/api/README.md
 
 But I feel most confortable with the Python one, as tested on few pet projects:
 

@@ -226,14 +226,16 @@ langgraph dev #coming from the separated langgraph-cli tool
 * https://pypi.org/project/langgraph-cli/
 * https://github.com/langchain-ai/langgraph/tree/main/libs/cli/langgraph_cli
 
-It spins up a little ASGI web‐server and opens the browser UI for you. Under the hood, the CLI uses:
+It spins up a little ASGI web‐server and opens the browser UI for you.
+
+Under the hood, the CLI uses:
 
 * **FastAPI** (built on Starlette)
   – to expose the HTTP (and WebSocket) endpoints
   – serves the static “prebuilt” React app
 * **Uvicorn**
   – as the ASGI server to actually run the FastAPI app
-* **React** (TypeScript + Vite)
+* **React** (TS + Vite)
   – the single-page app you see in your browser, bundled into the `langgraph-prebuilt` package
 
 
@@ -318,7 +320,7 @@ Beyond that, there are three supporting “extension points” you’ll almost c
       - `src/ollama_deep_researcher/configuration.py` controls env-vars, defaults for model name, provider, loop count, etc.
       - `src/ollama_deep_researcher/utils.py` web-search implementations; strip tokens, format sources, etc.
 
-If you ever need to go deeper—for example, to completely redesign the LangGraph Studio UI—you’d have to clone and modify the langgraph-cli repo (FastAPI + React/TypeScript).
+If you ever need to go deeper—for example, to completely redesign the LangGraph Studio UI—you’d have to clone and modify the langgraph-cli repo (FastAPI + React/TS).
 
 The `graph.py` for the orchestration logic and `prompts.py` for what you ask the LLM to do.
 

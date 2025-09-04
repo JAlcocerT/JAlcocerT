@@ -11,7 +11,6 @@ url: 'about-inflation'
 This year ive been covering few posts about the job market:
 
 * https://jalcocert.github.io/JAlcocerT/playwright-101/
-* 
 
 So, how much will you have to ask to stay as you started the year?
 
@@ -24,7 +23,7 @@ So, how much will you have to ask to stay as you started the year?
 
 > > Stonks post
 
-2. P. Levels created this interesting webApp: 
+2. [P. Levels](https://levels.io/blog/) created this interesting webApp: 
 
 * https://inflationchart.com/spx-in-m3
 * https://inflationchart.com/btc-in-m3

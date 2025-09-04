@@ -294,7 +294,7 @@ You can try their SaaS - https://heyform.net/pricing
 
 * https://github.com/QuillForms/quillforms
 
->  Open Source TypeForm Alternative Based on React JS and Typescript | Best Typeform Clone | Conversational Multi Step Form 
+>  Open Source TypeForm Alternative Based on React JS and TS | Best Typeform Clone | Conversational Multi Step Form 
 
 A great example: https://quillforms.com/forms/web-design-cost-calculator/
 

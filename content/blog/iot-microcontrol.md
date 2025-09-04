@@ -121,9 +121,10 @@ code --install-extension ms-vscode.vscode-serial-monitor
 <!-- <https://www.youtube.com/watch?v=W6i88k0LOiA> -->
 
 
-**ESP32 x DS18B20**
+**ESP32 x DS18B20**: it can measure from -55 to 125C
 
--55 to 125C
+
+And other people has done cool stuff with this sensor: https://blog.cavelab.dev/2024/11/rpi-outdoor-temperature/
 
 <!-- 
 blackc able - gnd

@@ -384,7 +384,7 @@ pip install firecrawl-py
   * https://github.com/my8100/scrapydweb - Web app for Scrapyd cluster management, Scrapy log analysis & visualization, Auto packaging, Timer tasks, Monitor & Alert, and Mobile UI. DEMO 👉
 * https://github.com/apify/crawlee - Apache v2 Licensed
   * Crawlee—A web scraping and browser automation library for Node.js to build reliable crawlers. 
-  * In JavaScript and TypeScript. Extract data for AI, LLMs, RAG, or GPTs. Download HTML, PDF, JPG, PNG, and other files from websites. Works with Puppeteer, Playwright, Cheerio, JSDOM, and raw HTTP. Both headful and headless mode. With proxy rotation.
+  * In JavaScript and TS. Extract data for AI, LLMs, RAG, or GPTs. Download HTML, PDF, JPG, PNG, and other files from websites. Works with Puppeteer, Playwright, Cheerio, JSDOM, and raw HTTP. Both headful and headless mode. With proxy rotation.
 * https://github.com/raznem/parsera - GPLv2
   *  Lightweight library for scraping web-sites with LLMs 
 

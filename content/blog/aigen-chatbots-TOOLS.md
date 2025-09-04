@@ -586,7 +586,7 @@ Popup window after 3 seconds:
 
 * Low-code platform for building business applications. Connect to databases, cloud storages, GraphQL, API endpoints, Airtable, Google sheets, OpenAI, etc and build apps using drag and drop application builder. 
 
-Built using JavaScript/TypeScript. 🚀 
+Built using JavaScript/TS. 🚀 
 
 * Visual App Builder: 45+ built-in responsive components, including Tables, Charts, Lists, Forms, and Progress Bars.
 

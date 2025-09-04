@@ -10,6 +10,10 @@ url: 'tech-recap-2025'
 
 **Intro**
 
+This year is been like
+
+![Me during Y2025](/img/kitten-cat.gif#center)
+
 {{< callout type="info" >}}
 After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/), there is also the **financial aspects of travelling**
 {{< /callout >}}
@@ -28,7 +32,66 @@ https://github.com/OpenInterpreter/open-interpreter
 > A natural language interface for computers 
 
 
+
+{{< details title="FY24 vs FY25 | Overall📌" closed="true" >}}
+
+**From last year...**
+
+1. Get few more websites going for close people ✅ 
+2. Leveraging on AI ✅ *Using Windsurf and Cursor*
+3. Doing less in total and more of what has a real impact
+
+{{< /details >}}
+
+
+
+
+
+## Better Tech Stack
+
+1. uv package manager and Makefiles
+
+2. Pocketbase for BaaS
+
+3. Understanding that with CSR I can keep WebApps simple, yet providing interactivity via API
+
+4. I even got time to clean the IoT/MQTT with micro-controllers :)
+
+5. And tinker a bit with [Crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai)
+
+{{< details title="Crypto is...back? Electrum 📌" closed="true" >}}
+
+> A recap on [BlockChain](https://simplyexplained.com/videos/how-does-a-blockchain-work/)
+
+With KYC both: Binance and Kraken worked fine to me.
+
+> > No keys, no coins - Make sure you understand how wallets work. 
+
+```sh
+flatpak install flathub org.electrum.electrum #BTC
+
+flatpak install flathub org.featherwallet.Feather #Monero
+#flatpak install flathub org.getmonero.Monero
+```
+
+If you ge a Metamask wallet for Ethereum, you can make [a Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/)
+
+{{< /details >}}
+
+6. On the server/homelab side of the things...
+
+
+{{< details title="FY24 vs FY25 | HomeLab 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+
+
+
 ## Entrepreneuring
+
 
 * https://fossengineer.com/open-source-invoice-creator/
 
@@ -55,8 +118,6 @@ Because Selfhosting Static Generated Sites, is not a secret anymore:
 * https://github.com/ricsanfre/public-websites-docker
 
 > MIT |  Selfhosting personal static websites using private web analytics and comments platforms 
-
-
 
 #### Leads and Offers
 
@@ -118,6 +179,17 @@ From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael E
 11. Some *unrelated* blog & posts:
 
 * https://kerkour.com/writing-against-the-global-lobotomy
+* https://levels.io/happiness/
+* https://nav.al/existence
+
+12. Cool tinker tech posts
+
+
+{{< details title="Examples of People Doing Cool Tech Stuff 📌" closed="true" >}}
+
+* https://blog.cavelab.dev/2021/11/wifi-relays-for-ventilation/
+
+{{< /details >}}
 
 
 ## Processes

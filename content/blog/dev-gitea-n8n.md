@@ -14,17 +14,19 @@ Lately, I have been playing with Gitea's API.
 
 It made me think how to combine Gitea as a source for SSG for website generation.
 
+> And million more ideas
+
 While the posts skeletons could be passed into a n8n workflow, with some openai LLMs / codex / whatever to shape them as per some input data.
 
 Scrapping from a website, data formatting for real estate or events...you name it.
 
 **Intro**
 
-
+Just get your server and containers going:
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="CoquiTTS Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="CoquiTTS Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="Gitea | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 
@@ -38,6 +40,7 @@ This is very simple:
 git clone https://github.com/JAlcocerT/Home-Lab
 ```
 
+1. Get n8n ready:
 
 ```sh
 cd n8n
@@ -63,6 +66,7 @@ Verify:
 
 > Go to CF zero trust section and add as http `n8n-n8n-1:5678` as subdomain and enjoy `https://n8n.jalcocertech.com/home/workflows`
 
+2. Get Gitea ready:
 
 ```sh
 cd gitea
@@ -79,8 +83,13 @@ docker network connect cloudflared_tunnel gitea #network -> container name
 You can do a lot with **GITEA API**, as I covered [here](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#gitea-101)
 {{< /callout >}}
 
+### N8N API
 
+When you get n8n ready, create your API key:
 
+Then, get familiar with the docs `https://n8n.jalcocertech.com/api/v1/docs/` as per https://docs.n8n.io/api/
+
+> Its just a Swagger UI!
 
 --- 
 

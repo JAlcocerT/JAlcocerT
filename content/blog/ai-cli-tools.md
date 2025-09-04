@@ -638,7 +638,7 @@ There is a `baml_client` and you can do:
 
 ```sh
 from baml_client import b
-#you can now bring your classes that will check types and so on, just like typescript does, but in python, thanks to BAML (typechecking in prompts)
+#you can now bring your classes that will check types and so on, just like TS does, but in python, thanks to BAML (typechecking in prompts)
 ```
 
 And there wont be any dependencies on baml code once it has been run and the `./client_baml/*.py` files (or ts, whatever) are generated.
@@ -709,7 +709,7 @@ BAML allows you to express your intentions for LLM interactions at a higher leve
 
 * **Improved Readability and Maintainability within the Domain:** Because its syntax is specialized, BAML code becomes more readable and understandable for anyone working within the LLM application development domain. It clearly delineates the structure of your prompts and expected outputs, making it easier to maintain and debug your LLM-driven logic over time compared to managing hundreds of complex f-strings in a general-purpose language.
 
-* **Generated Code:** BAML files are typically compiled or transformed into code in a GPL (like Python, TypeScript, Go, etc.). This means you write your LLM logic in the specialized BAML DSL, and then BAML's tooling generates the necessary "boilerplate" code in your application's primary language, which you then integrate into your project. This is a common characteristic of external DSLs.
+* **Generated Code:** BAML files are typically compiled or transformed into code in a GPL (like Python, TS, Go, etc.). This means you write your LLM logic in the specialized BAML DSL, and then BAML's tooling generates the necessary "boilerplate" code in your application's primary language, which you then integrate into your project. This is a common characteristic of external DSLs.
 
 {{< /details >}}
 

@@ -1,11 +1,17 @@
 ---
 title: "Books"
-date: 2025-12-24T23:20:21+01:00
-draft: false
-tags: ["Outro"]
-description: 'Building a strong data analytics brand with a targeted niche, compelling UVP, and strategic partnerships'
+date: 2026-12-31T23:20:21+01:00
+draft: true
+tags: ["Outro","Kinddle"]
+description: 'Reading better'
 url: 'interesting-books'
 ---
+
+* https://nav.al/read
+
+> Read the Best 100 Books Over and Over Again
+
+> > Many claim to read, but very few understand
 
 ## Sales
 

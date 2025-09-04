@@ -1,8 +1,8 @@
 ---
 title: "Designing with Blender and LLMs"
-date: 2025-12-15T23:20:21+01:00
-draft: false
-tags: ["Docker","Gen-AI","Animations"]
+date: 2026-12-31T23:20:21+01:00
+draft: true
+tags: ["Docker","Gen-AI","Animations","Blender API"]
 description: 'Generative AI applied to Blender'
 url: 'how-to-use-blender-with-AI'
 ---
@@ -142,7 +142,7 @@ Motion Canvas is a tool that bridges the gap between code and animation, specifi
 * Create Animations with Code: https://github.com/motion-canvas/motion-canvas
   * https://github.com/motion-canvas/motion-canvas?tab=MIT-1-ov-file#readme
 
-A TypeScript library for creating animated videos using the Canvas API.
+A TS library for creating animated videos using the Canvas API.
 
 > MIT| Visualize Your Ideas With Code 
 
@@ -150,7 +150,7 @@ A TypeScript library for creating animated videos using the Canvas API.
 
 Library & Editor: Motion Canvas offers two main parts:
 
-1. Library (written in TypeScript): This library allows you to write animation code using generators, providing a structured approach for creating animations.
+1. Library (written in TS): This library allows you to write animation code using generators, providing a structured approach for creating animations.
 2. Web-based Editor: This editor provides a real-time preview of your animations as you write the code.
 
 Animation with Canvas API: Motion Canvas leverages the Canvas API, a built-in functionality of web browsers that allows for dynamic manipulation of graphics. 

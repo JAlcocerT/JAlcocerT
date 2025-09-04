@@ -46,16 +46,7 @@ And cool **food for thoughs** on these posts:
   * https://www.nickgracilla.com/posts/year-in-review-template/
 * https://blog.cavelab.dev/2022/01/a-person-that-writes/
 
-
 *I was lucky to find them! As the "search algorithms" are not placing this high valuable content in front of your eyes*
-
-
-{{< details title="Examples of People Doing Cool Stuff 📌" closed="true" >}}
-
-* https://blog.cavelab.dev/2021/11/wifi-relays-for-ventilation/
-
-{{< /details >}}
-
 
 ---
 
@@ -102,7 +93,9 @@ From an [AI driven content](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-
 ### Get Better at Webs
 
 Good recap of whats going on at JS: https://stateofjs.com/en-US
+
 * Web Analytics: with [Umami](https://fossengineer.com/selfhosting-umami-with-docker/) or [Tianji...](https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics)
+
 * CMS for Webs: DecapCMS, ...
 
 After few months if [CI/CD build](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#github-actions-for-web-projects) errors, fixed [my RPi site](https://jalcocert.github.io/RPi/), as there was sth wrong with the Jekyll automatic CI/CD build.
@@ -380,34 +373,6 @@ Need to see how to use [DLT](https://github.com/dlt-hub/dlt) - data load tool (d
 
 {{< /callout >}}
 
-<!-- 
-## Crypto
-
-* https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/
-
-> A recap on [BlockChain](https://simplyexplained.com/videos/how-does-a-blockchain-work/)
-
-{{< details title="Crypto is...back? 📌" closed="true" >}}
-
-With KYC both, Binance and Kraken worked fine to me.
-
-According to [reddit](https://www.reddit.com/r/BitcoinBeginners/comments/k6gm2d/best_exchange_without_needing_to_verify_id/), hodlhodl is a place to exchange BTC without KYC.
-
-> No keys, no coins - Make sure you understand how wallets work. 
-
-```sh
-flatpak install flathub org.electrum.electrum #BTC
-
-flatpak install flathub org.featherwallet.Feather #Monero
-#flatpak install flathub org.getmonero.Monero
-```
-
-{{< /details >}}
-
-{{< callout type="warning" >}}
-Its probably time to go back and make [a better Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/)
-{{< /callout >}}
- -->
 
 ---
 
@@ -486,7 +451,7 @@ For 2025?
 2. Leveraging on AI
 3. Doing less in total and more of what has a real impact
 
-Use [LiteLLM](https://github.com/BerriAI/litellm) to unify the LLMs API calls across providers..and use [screenshot2code](https://github.com/abi/screenshot-to-code) to make cooler website designs
+Use [LiteLLM](https://github.com/BerriAI/litellm) to unify the LLMs API calls across providers..and use [screenshot2code](https://github.com/abi/screenshot-to-code) to make cooler website designs.
 
 [Cline/ClaudeDev](https://www.youtube.com/watch?v=TPjZ-E9WR6c)
 
@@ -520,12 +485,9 @@ Personal Takeaways for Node.js Developers:
 - Take time to understand **Go's concurrency model** to fully utilize its potential.
 - Leverage **tutorials** and **community resources** to ease the learning curve.
 
-In conclusion, Go is a great language for developers aiming to build high-performance, scalable applications, and it serves as a valuable addition to a developer’s toolkit. Similar languages, like **Rust** and **Deno**, also focus on performance and safety, making them worth exploring.
+o is a great language for developers aiming to build high-performance, scalable applications, and it serves as a valuable addition to a developer’s toolkit. Similar languages, like **Rust** and **Deno**, also focus on performance and safety, making them worth exploring.
 
 {{< /details >}}
-
-
-
 
 
 {{< details title="Maybe next year...[Linux Stuff] 📌" closed="true" >}}
@@ -554,7 +516,6 @@ It addresses the need for a robust operating system equipped with tools for netw
 - Fedora Server
 
 SysLinuxOS provides a solid foundation for system administrators, but users should be aware of its potential clutter.
-
 
 {{< /details >}}
 
@@ -634,8 +595,6 @@ All of this tech will work in Linux and **with just CPU**, if you dont have a GP
 
 {{< youtube "zNLSwy_DJ_U" >}}
 
-<!-- https://www.youtube.com/shorts/zNLSwy_DJ_U -->
-
 ---
 
 ## More & More
@@ -653,7 +612,9 @@ Yes, there are many ways to replace Github Copilot for Free:
 
 
 {{% details title="LLM Quantization" closed="true" %}}
+
 * GPTQ quantization, a state-of-the-art method featured in research papers, offers minimal performance loss compared to previous techniques. It's most efficient on NVIDIA GPUs when the model fits entirely in VRAM.
+
 * GGML, a machine learning library by Georgi Gerganov (who also developed llama.cpp for running local LLMs on Mac), performs best on Apple or Intel hardware.
 
 Thanks: https://aituts.com/local-llms/#Which_Quantization
@@ -684,7 +645,7 @@ If you need big GPU power, you can always try https://www.runpod.io/gpu-instance
 * https://accounts.hetzner.com/_ray/pow (I tried the CX22 model x2 vCPU)
 * https://cloud.digitalocean.com
 
-Clouds ( & GPU Clouds)
+**Clouds ( & GPU Clouds)**
 
 * RunPod, Linode, DigitalOcean, Paper Space, Lambda Cloud, [Hetzner](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#hetzner)...
 * vast.ai, 

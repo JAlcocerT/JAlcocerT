@@ -53,6 +53,8 @@ The answer is that there's a spectrum, but many of the popular self-hostable opt
     * **Pros:** Ultimate data portability, easy backups, works great with file-syncing tools like Syncthing.
     * **Cons:** Not all features (like an embedded database for fast search or complex queries) are as easy to implement and can sometimes lead to performance issues with very large graphs.
 
+> Some people use obsidian + HUGO: https://www.nickgracilla.com/posts/obsidian-is-my-hugo-cms/
+
 * **Joplin, Memos, and others** often use an "app-specific database" philosophy. While the notes themselves are written in Markdown, they are stored in a database (like SQLite, PostgreSQL, etc.) on the device and on the server. The apps then use a synchronization protocol to keep these databases in sync.
     * **Pros:** Can offer very fast and powerful search, more robust conflict resolution, and support for features like multi-user collaboration and sharing.
     * **Cons:** The data is not as easily accessible or human-readable outside of the app. If you were to lose the app, you would have to figure out how to export or convert the database to get your notes back. Your data is not "future-proofed" in the same way as plain Markdown files.

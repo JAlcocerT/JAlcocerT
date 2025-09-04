@@ -52,7 +52,7 @@ Flowise provides modular building blocks for you to build any agentic systems, f
 
 * APIs
   * Embedded Widget
-  * Typescript & Python SDK
+  * Type-script & Python SDK
 
 * https://docs.flowiseai.com/integrations/3rd-party-platform-integration/streamlit
 
