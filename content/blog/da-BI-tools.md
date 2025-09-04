@@ -2,7 +2,7 @@
 title: "BI Tools for the AI era"
 date: 2025-02-26T00:20:21+01:00
 draft: false
-tags: ["Dev","D&A","Kibana DSL KQL"]
+tags: ["Dev","D&A","Kibana DSL KQL","Redash","Grafana"]
 description: 'Setting up Data Analytics Visualization (Business Intelligence) tools with containers. From Superset to Metabase and Grafana.'
 url: 'setup-bi-tools-docker'
 ---
@@ -16,7 +16,7 @@ If you have interact with the data & analytics space, at some point you had to b
 Yet again, there are several tools out there.
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/business-intelligence-data-analytics/" title="BIA 101 ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/business-intelligence-data-analytics/" title="BIA 101 | Post ↗ " >}}
   {{< card link="https://youtube.com/@JAlcocerTech" title="My YT Tech Channel ↗" >}}
 {{< /cards >}}
 
@@ -267,7 +267,7 @@ Setting Up the LGTM Stack
 To get started:
 
 1. **Server Setup**: Fireship recommends using Hostinger, which offers a variety of hosting services, including a Linux virtual private server (VPS) suitable for this project.
-2. **Deploying LGTM Back-end**: The LGTM backend can be deployed using a Docker image provided by Graphon.
+2. **Deploying LGTM Back-end**: The LGTM back-end can be deployed using a Docker image provided by Graphon.
 3. **Server Access**: After setting up your server on Hostinger, you can access the management dashboard and connect via SSH.
 
 Running Grafana
@@ -292,7 +292,7 @@ Takeaways
 
 - The **LGTM stack** provides a holistic approach to software observability, enabling you to instrument, collect, and visualize telemetry data from your server.
 - With the right tools, you can identify errors and anomalies in your application, allowing for data-driven decisions to improve your software.
-- **Security** is crucial when deploying a telemetry backend. Services like Hostinger offer built-in protections against harmful traffic and threats.
+- **Security** is crucial when deploying a telemetry back-end. Services like Hostinger offer built-in protections against harmful traffic and threats.
 
 
 {{< /details >}}

@@ -43,7 +43,7 @@ These are some knowledge management tools, noting their data storage method:
 
 [![Star History Chart](https://api.star-history.com/svg?repos=silverbulletmd/silverbullet,laurent22/joplin,logseq/logseq,BookStackApp/BookStack,gilbitron/Raneto&type=Date)](https://star-history.com/silverbulletmd/silverbullet&laurent22/joplin&logseq/logseq&BookStackApp/BookStack&gilbitron/Raneto&Date)
 
-That's an excellent question that gets to the core of the "privacy and control" movement in note-taking apps. 
+The core of the "privacy and control" movement in note-taking apps. 
 
 The answer is that there's a spectrum, but many of the popular self-hostable options do not follow the same "plain text files" model as Logseq.
 
@@ -180,7 +180,7 @@ Instead of using a forward auth proxy, Nextcloud and other modern web applicatio
 
 Here's how this changes the authentication flow:
 
-1.  **Nextcloud handles the authentication:** You install the Nextcloud "OpenID Connect user backend" app (or "Social Login" app) from the Nextcloud app store.
+1.  **Nextcloud handles the authentication:** You install the Nextcloud "OpenID Connect user back-end" app (or "Social Login" app) from the Nextcloud app store.
 2.  **Redirect to the IdP:** When a user clicks "Log in with Authelia" on the Nextcloud web login page, Nextcloud generates an authentication request and redirects the user's browser to the Authelia server.
 3.  **Authentication and Redirection:** The user authenticates with Authelia (e.g., enters username/password, completes 2FA). After a successful login, Authelia sends the user back to Nextcloud with a special token.
 4.  **Token Exchange:** Nextcloud receives this token, verifies it with Authelia, and then creates a user session for the authenticated user.

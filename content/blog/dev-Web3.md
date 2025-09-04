@@ -14,8 +14,6 @@ I was wondering if I could use some knowledge that I got while creating static s
 
 Along the way, got to understand the difference between where something is and **what something is** thanks to the [IPFS concept](#about-ipfs)
 
----
-
 **The Web3 Revolution!** > wait, what?
 
 Today, we're diving into the world of Web3, where decentralization, security, and innovation reign.
@@ -50,6 +48,14 @@ Unlike traditional domain names (e.g., .com), UDs are stored in the owner's wall
 Once acquired, there's no need to worry about yearly renewal fees.
 
 > Plus, no third party can alter or seize them, ensuring digital ownership.
+
+Get your NFT to your wallet: https://unstoppabledomains.com/search?searchTerm=noesloquetecrees
+
+> Remember to [filter by the web3 ones](https://support.unstoppabledomains.com/support/solutions/articles/48001181690-what-are-web3-domains-)!
+
+![alt text](/blog_img/crypto/unstoppable-domains.png)
+
+> > Unstoppable Web3 domains are minted (the process of turning your domain into a blockchain-based asset) across multiple blockchains including
 
 ### IPFS: InterPlanetary File System 🛰️
 
@@ -149,11 +155,23 @@ Thats right, it is the `jalcocert.blockchain` UD:
 
 > And I dont have to renew it ever again.
 
+So if you navigate to via brave:
+
+![alt text](/blog_img/crypto/brave-UDs.png)
+
+As of this moment, you will be directed to `ipfs.io` which I used to deploy: https://ipfs.io/ipfs/QmRxauMbq1pxp4wJrCovHaTpAQAXqneuYtrXj3feUu4KLp/
+
+![alt text](/blog_img/crypto/brave-web3-portfolio.png)
+
+> Which is nothing but my [publicaly available HUGO Lynx theme as portfolio](https://github.com/JAlcocerT/Portfolio) :)
+
 ---
 
 ## Conclusion
 
-I have [this repository](https://jalcocert.github.io/web3/) where I try to collect **Web3 related stuff** :)
+I have [this repository](https://jalcocert.github.io/web3/) where I try to collect **crypto / Web3 related stuff** :)
+
+Im also explorinw how to use Astro with GHPages in there.
 
 * You might want to have a look to <https://whycryptocurrencies.com/>
 

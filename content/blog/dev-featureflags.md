@@ -126,7 +126,7 @@ Some of the most popular open-source options include:
 
 Think of it as an abstraction layer.
 
-It doesn't provide a backend for managing flags itself; instead, you can use it with a compatible provider (which can be a commercial service or a self-hosted open-source solution like the ones mentioned above). 
+It doesn't provide a back-end for managing flags itself; instead, you can use it with a compatible provider (which can be a commercial service or a self-hosted open-source solution like the ones mentioned above). 
 
 The main benefit is that it allows you to switch your feature flag provider without changing the core logic in your application's code. 
 

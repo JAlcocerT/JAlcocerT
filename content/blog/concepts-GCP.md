@@ -173,7 +173,9 @@ The correct sequence of the data storage hierarchy is:
 
 Tables -> File storage -> Block storage
 
-Tables:  At the highest level, you have tables in a database. These tables organize data in a structured format with rows and columns.
+Tables:  At the highest level, you have tables in a database. 
+
+These tables organize data in a structured format with rows and columns.
 
 File storage:  Tables are often stored as files on a file system. These files can be organized in various ways depending on the database system.
 

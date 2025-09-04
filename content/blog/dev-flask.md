@@ -3,15 +3,19 @@ title: "Getting started with Flask. Deploying Flask with NGINX."
 date: 2024-10-02T05:20:21+01:00
 draft: false
 tags: ["Dev","Python"]
-description: 'How to use Flask. Get HTTPs with your domain for Flask Apps. Compared to other Web App Frameworks'
+description: 'How to use Flask. Get HTTPs with your domain for Flask Web-Apps.'
 summary: 'How I learnt the basics to use Python Flask.'
 url: 'get-started-with-flask'
 ---
 
+
+**Intro** 
+
 A friend asked me recently to help him to [setup Python](https://jalcocert.github.io/JAlcocerT/guide-python/#installing-python-) and **he alredy made his first Web App!**
 
+I had to get *a little bit* familiar with this Python Framework before writing this though.
 
-I had to get a little bit familiar with this Python Framework before writing this though.
+But is basically a Python way to do web-apps, similary to DASH or streamlit [frameworks](#flask-alternatives).
 
 And we got his [Flask App with https and custom domain](https://jalcocert.github.io/JAlcocerT/get-started-with-flask/#deploying-a-flask-app-like-a-pro).
 
@@ -20,7 +24,6 @@ A **Flask App** configured on a server, publically, **ready for anyone to use**.
 {{< callout type="info" >}}
 [Get your own Flask App Deployed](https://jalcocertech.com/) or a [Custom **Speech Rater AI App**](https://github.com/JAlcocerT/Streamlit-Speech). With proper [OpenAI>0.28 Calls](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_neumkt.py)
 {{< /callout >}}
-
 
 
 ## Flask 101
@@ -41,11 +44,13 @@ Flask is one of the [Python web frameworks](https://github.com/vinta/awesome-pyt
 {{< details title="How to Setup Flask 📌" closed="true" >}}
 
 - **Flask Installation:**
+
 ```sh
 pip install Flask #https://pypi.org/project/Flask/
 ```
 
 - **Basic Flask Application Structure:**
+
 ```python
 from flask import Flask
 
@@ -61,11 +66,13 @@ if __name__ == '__main__':
 
 {{< /details >}}
 
-{{< details title="Concepts for Flask 📌" closed="true" >}}
+{{< details title="Concepts for Flask | WSGI 📌" closed="true" >}}
 
-* WSGI, which stands for Web Server Gateway Interface, is a standard interface between web servers and Python web applications or frameworks. It allows different web servers and Python applications to communicate with each other in a standardized way.
+WSGI, which stands for Web Server Gateway Interface.
 
+Is a standard interface between web servers and Python web applications or frameworks.
 
+It allows different web servers and Python applications to communicate with each other in a standardized way.
 
 - **Routing:**
   - Define routes using the `@app.route()` decorator, mapping URLs to functions.
@@ -109,7 +116,6 @@ if __name__ == '__main__':
 - **Documentation and Resources:**
   - Official Flask Documentation: [Flask Documentation](https://flask.palletsprojects.com/)
   - Community Resources: Flask tutorials, forums, and GitHub repositories for additional learning and examples.
-
 
 {{< /details >}}
 
@@ -338,43 +344,45 @@ networks:
 
 To implement a user authentication system in **Flask** that handles user sign-up and sign-in with a **SQLite** database and shows different UI based on the login status, here are some tools and extensions:
 
-### 1. **Flask**: Core framework
+1. **Flask**: Core framework
    - **Flask** will serve as the web framework for routing, templating, and managing user sessions.
 
-### 2. **SQLite + SQLAlchemy**: Database and ORM
+2. **SQLite + SQLAlchemy**: Database and ORM
    - **SQLite** is a lightweight file-based database, ideal for simple projects or development.
    - **SQLAlchemy** is the Object-Relational Mapper (ORM) that will interact with the SQLite database. It abstracts away raw SQL and makes database interaction cleaner.
 
-### 3. **Flask-SQLAlchemy**: SQLAlchemy integration with Flask
+3. **Flask-SQLAlchemy**: SQLAlchemy integration with Flask
    - This extension simplifies integrating SQLAlchemy with Flask and managing the database (creating tables, defining models).
    
-### 4. **Flask-Login**: User session management
+4. **Flask-Login**: User session management
    - **Flask-Login** handles user sessions, tracking whether a user is logged in or not, and protecting routes that require authentication. It also provides the utilities for login/logout functionality.
 
-### 5. **Flask-WTF**: Form handling and validation
+5. **Flask-WTF**: Form handling and validation
    - **Flask-WTF** makes it easy to create and validate forms (e.g., sign-up and login forms). It integrates **WTForms** with Flask, handling things like CSRF protection and validation.
 
-### 6. **Flask-Migrate** (optional): Database migrations
+6. **Flask-Migrate** (optional): Database migrations
    - **Flask-Migrate** allows you to easily manage database migrations using Alembic. It’s helpful if your database schema evolves over time (e.g., adding more fields to the user model).
 
-### 7. **Flask-Bcrypt** (optional but recommended): Password hashing
+7. **Flask-Bcrypt** (optional but recommended): Password hashing
    - **Flask-Bcrypt** allows you to securely hash and verify passwords, ensuring your app stores user passwords in a secure, non-plain-text format.
 
----
 
-### How These Tools Work Together:
-#### 1. **User Sign-Up**:
+**How These Tools Work Together:**
+
+ 1. **User Sign-Up**:
    - A user signs up by submitting a form (handled by **Flask-WTF**) that collects a username, email, and password.
    - The password is hashed using **Flask-Bcrypt** before storing it in the SQLite database through **SQLAlchemy**.
    
-#### 2. **User Sign-In**:
+2. **User Sign-In**:
    - The login form verifies the entered email/username and compares the hashed password using **Flask-Bcrypt**.
    - Once authenticated, **Flask-Login** manages the session, storing whether the user is logged in.
 
-#### 3. **UI Display**:
+3. **UI Display**:
+
    - **Flask-Login** tracks if a user is authenticated. You can use this in your templates to conditionally display different UI elements. For example, if the user is logged in, show their profile and a logout button; otherwise, show a login/sign-up link.
 
-### Summary of Tools:
+Summary of Tools:
+
 1. **Flask** – Core framework for routing and templating.
 2. **SQLite** – Simple, file-based database.
 3. **SQLAlchemy** – ORM to interact with SQLite.
@@ -443,8 +451,6 @@ To implement a system where user registration, payments, and content access are 
    - The Flask app will check if the Stripe payment email matches the logged-in user's email.
    - If they match, the user gains access to restricted content or services.
 
----
-
 Example Flow and Tool Summary:
 
 1. **Sign-Up (MailerLite Integration)**:
@@ -467,9 +473,8 @@ Example Flow and Tool Summary:
    - Flask checks if the payment email matches the user's email.
    - If matched, Flask unlocks premium content or features.
 
----
-
 Required Libraries:
+
 1. **Flask** – Core framework.
 2. **Flask-SQLAlchemy** – ORM for interacting with SQLite database.
 3. **Flask-Login** – User session management.
@@ -483,7 +488,7 @@ Required Libraries:
 
 
 {{< callout type="info" >}}
-  You can also use tools like **LogTo**
+For auth and user management, you can also use tools like **LogTo**
 {{< /callout >}}
 
 
@@ -496,7 +501,6 @@ Required Libraries:
 | **Webhooks Recipe**                            | [Documentation](https://docs.logto.io/docs/recipes/webhooks/) | 
 | **Webhooks URL**                               | [Link](https://cloud.logto.io/yourtenantid/webhooks)                                             |
 
----
 
 LogTo Tutorials
 
@@ -562,7 +566,7 @@ No frontend experience required.
 It addresses the need for a JavaScript-free development environment, making it easier for Python developers to build and deploy complex applications.
 
 - **Key Features:**
-  1. Write both frontend and backend in Python.
+  1. Write both frontend and back-end in Python.
   2. Easy to start with; scalable for complex applications.
   3. Instant deployment capabilities.
 

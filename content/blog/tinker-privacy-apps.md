@@ -2,7 +2,7 @@
 title: "A Stronger HomeLab"
 date: 2025-08-03
 draft: false
-tags: ["HomeLab","Security","BackUps","Proton VPN"]
+tags: ["HomeLab","Security","BackUps","Proton VPN","Bitwarden","Signal"]
 description: 'Apps to make your Linux and SelfHosting more private and secure'
 url: 'homelab-security'
 ---
@@ -26,7 +26,7 @@ Unfortunately, there is no official https://github.com/donniedice/protondrive-li
 You also have some static/blob storage:
 
 * https://developers.cloudflare.com/r2/pricing/
-* s3
+* s3 buckets
 
 ```sh
 sudo sudo du -h --max-depth=10 /var/lib/docker | sort -rh | head
@@ -166,7 +166,7 @@ For business purpose, you can still keep your microsoft auth / Google 2fa
 
 ### Chats
 
-I like the telegram desktop app, but lately whenever i open it leaves my system frozen for a while.
+I like the telegram desktop app, but lately whenever I open it leaves my system frozen for a while.
 
 ```sh
 #flatpak install flathub org.telegram.desktop

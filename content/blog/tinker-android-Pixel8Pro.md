@@ -217,9 +217,7 @@ In summary, Waydroid leverages the Wayland display server protocol to provide a 
 
 > The Android runtime environment ships with a minimal customized Android system image **based on LineageOS**.
 
-* https://github.com/Aman9das/Waydroid_Setup_Guide
-
-
+See how to install waydroid in linux: https://github.com/Aman9das/Waydroid_Setup_Guide
 
 ```sh
 sudo apt install curl ca-certificates -y
@@ -233,9 +231,9 @@ This will download ~1gb of data.
 
 ![alt text](/blog_img/Android/waydroid-vanilla.png)
 
-What can you do with it?
+What can you do with Waydroid?
 
-You can install the mentioned FDroid and Obtanium as mentioned above with the Pixel.
+You can install the mentioned F-Droid and/or Obtanium as mentioned above with the Pixel.
 
 Also, you can tell friends to send you their developed Android apks, for example from telegram: `/home/jalcocert/.var/app/org.telegram.desktop/data/TelegramDesktop/tdata/temp_data`.
 
@@ -243,7 +241,7 @@ Also, you can tell friends to send you their developed Android apks, for example
 cp ~/.var/app/org.telegram.desktop/data/TelegramDesktop/tdata/temp_data/sampleandroidapp.apk ~/Desktop/
 ```
 
-Then, you can install a browser on waydroid, like duckduckgo and get the file transfered thanks to your local filebrowser instance.
+Then, you can install a browser on **waydroid**, like duckduckgo and get the file transfered thanks to your local filebrowser instance.
 
 ```sh
 # Initialize Waydroid (choose either 'FULL' for GApps or 'VANILLA' for a basic install):

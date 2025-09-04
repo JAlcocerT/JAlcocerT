@@ -6,10 +6,13 @@ draft: false
 #     image: "https://socialify.git.ci/alejandro-ao/ask-multiple-pdfs/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #     alt: "ChatPDF" # alt text
 #     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
-tags: ["Gen-AI","Python","Dev"]
+tags: ["HomeLab","Networking"]
 description: 'Better Networking while Traveling with GL-MT3000 with Wireguard (and Tailscale) VPN.'
 url: 'travel-router-gl-mt3000-review'
 ---
+
+
+**Intro**
 
 The last years I have been interested to improve my **networking knowledge**.
 
@@ -33,15 +36,12 @@ And if for some reason you are no table to do **port forwarding** with your home
 
 ![Travel Router GL MT3000](/blog_img/hardware/travel-router.jpg)
 
-
 ## GL-MT3000 Travel Router
-
 
 The [GL.iNet](https://www.gl-inet.com/community/) GL-MT3000 has been a very interestin surprise this year.
 
 * It uses OpenWRT as firmware and has AX3000 Wifi6 capabilities
 * Currently using it with 
-
 
 > The **forum** was very helpful [here ](https://forum.gl-inet.com/t/gl-mt3000-stops-working-when-connecting-to-tailscale-exit-node/34146) and [here](https://forum.gl-inet.com/t/beryl-ax-gl-mt3000-using-a-tailscale-exit-node/47744)
 
@@ -52,10 +52,13 @@ An alternative to the [Raspberry Pi as Travel Router](https://jalcocert.github.i
 
 ## Setup GL-MT3000 Router
 
-1. Connect to the router
+1. Connect to the router:
+
 * Via WIFI signal, you will see the default SSID as `GL-MT3000`
 * Or connect simply via Ethernet at the LAN port
+
 2. Connect to the router admin panel via the default `http://192.168.8.1/#/login`
+
 3. Change the master password (to login to admin UI) & select the language
 
 ![MT3000 Admin PWD](/blog_img/hardware/GL-MT3000-pwd.png)
@@ -144,7 +147,6 @@ Dont forget to go to the Tailscale admin UI and select: `Route settings` -> `use
 Then, other devices will be able to route their traffic through that device you leave at home.
 
 Like what? 
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
@@ -348,7 +350,6 @@ We can also use [Wireguard and OpenVPN](#interesting-vpns-solutions) with the ML
 ## FAQ
 
 1. How to get Wireguard details from NordVPN - https://gist.github.com/bluewalk/7b3db071c488c82c604baf76a42eaad3
-
 
 ### Interesting VPNs Solutions
 

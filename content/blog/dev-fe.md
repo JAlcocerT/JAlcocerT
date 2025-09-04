@@ -134,7 +134,6 @@ For example, a `useUserProfile()` hook would be responsible for fetching the use
 
 It encapsulates all that complexity so the component doesn't have to. It's the "smart" part of the application that knows *what* to do with data.
 
-***
 
 #### Services: The Data Layer 🔌
 
@@ -142,7 +141,11 @@ It encapsulates all that complexity so the component doesn't have to. It's the "
 
 They are responsible for communicating with external resources like a backend API (e.g., FastAPI) or a database (e.g., PocketBase, or PB as you mentioned).
 
-A service contains the raw functions for making HTTP requests, handling authentication tokens, and formatting data. They don't know anything about the UI or how the data will be used. They simply provide a clean, promise-based API for other parts of the application to use. 
+A service contains the raw functions for making HTTP requests, handling authentication tokens, and formatting data.
+
+They don't know anything about the UI or how the data will be used.
+
+They simply provide a clean, promise-based API for other parts of the application to use. 
 
 By separating your application this way, you gain several key advantages:
 
@@ -342,7 +345,12 @@ Here are some of the **most popular** and well-regarded options:
 
 1. Keycloak
 
-**Keycloak** is arguably the most well-known and feature-rich open-source IAM solution. It's sponsored by Red Hat and is a mature, enterprise-ready platform.
+**Keycloak** is arguably the most well-known and feature-rich open-source IAM solution.
+
+It's sponsored by Red Hat and is a mature, enterprise-ready platform.
+
+And im aware that there are companies using it as an auth to be passed on top of their internal web apps that are publically accesible.
+
 * **Key Features:** Single Sign-On (SSO), Multi-Factor Authentication (MFA), identity brokering (social login with GitHub, Google, etc.), user federation with LDAP/Active Directory, and fine-grained authorization policies.
 * **Protocols:** It's a powerhouse, supporting OAuth 2.0, OpenID Connect (OIDC), and SAML 2.0.
 * **Deployment:** Easy to deploy with Docker and Kubernetes, and it can be backed by standard databases like PostgreSQL or MySQL.

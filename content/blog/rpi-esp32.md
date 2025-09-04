@@ -2,7 +2,7 @@
 title: "ESP32:"
 date: 2025-12-30T23:20:21+01:00
 draft: true
-tags: ["Self-Hosting"]
+tags: ["Self-Hosting","IoT","MicroControllers"]
 ---
 
 https://www.youtube.com/watch?v=V_mZsiZcy7s
@@ -11,14 +11,15 @@ https://www.youtube.com/watch?v=XKQgvmeApjI
 
 https://www.youtube.com/watch?v=g0sRbt8xrbY 
 
-# The ESP32 and the RPi - Killer Combination
+**The ESP32 and the RPi - Killer Combination**
 
 I know this is supposed to be a RPi centered repo and web, but couldn't resist to add some small project that uses the ESP32.
 
 An interesting tool I found to simulate these projects in the browser is: <https://wokwi.com/>
 
-## Testing ESP32
 
+
+## Testing ESP32
 
 I have to say thanks to Tomasz and his great content that helped me get started with this: <https://www.youtube.com/watch?v=tc3Qnf79Ny8&t=0s>
 

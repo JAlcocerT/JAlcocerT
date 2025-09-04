@@ -1,8 +1,8 @@
 ---
-title: "How to Share OSS OS via Torrent [with VPN]"
-date: 2025-09-25
+title: "How to Share OSS OS via Torrent [with VPNs]"
+date: 2025-09-19
 draft: false
-tags: ["Dev","P2P"]
+tags: ["Networking","P2P","NordVPN","ProtonVPN","Mullvad","Wireguard","Tailscale","Gluetun"]
 description: How to share Raspberry Pi OS (Bullseye) as Torrent with Qbitrorrent/Transmission and VPN.
 url: how-to-torrent-with-a-raspberry
 ---
@@ -10,14 +10,25 @@ url: how-to-torrent-with-a-raspberry
 
 **TL;DR**
 
-P2P is not just [about crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) stuff, like: https://github.com/bisq-network/bisq
+P2P is not just [about crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) stuff, like:
+
+* https://github.com/bisq-network/bisq
 
 > A decentralized bitcoin exchange network
 
+It can be a way to share with others what you found useful.
+
++++ and a chance to [get better with VPNs](#vpn-providers)
 
 **Intro**
 
-First of all: **Why sharing Raspberry Pi OS**?
+P2P is all about sharing.
+
+And it can power also web3 websites [via IPFS + UD's](https://jalcocert.github.io/JAlcocerT/guide-web3/).
+
+But this post is all about how to share open source software.
+
+First of all: **Why sharing Raspberry Pi OS** via .torrent?
 
 I got some incompatibility issues with [some **IoT Projects**](https://jalcocert.github.io/RPi/categories/iot-data-analytics/) and the latest Pi Images (bookworm, DEBIAN12).
 
@@ -47,22 +58,21 @@ You have many alternatives, among them: QBittorrent, Transmission,...
 
 ### Qbittorrent with the Raspberry Pi
 
-
 You need this **docker-compose config** file:
 
-```yml
-
-```
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/transmission" title="Transmission Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 > **Thanks to [this guide](https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/)** and this [one](https://fossengineer.com/transmission-with-vpn-torrent/) for Transmission
 
 ### Transmission with the Pi
 
-```yml
-
-```
-
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/transmission" title="Transmission Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 {{< callout type="info" >}}
 When sharing content via P2P, you are **exposing your public IP**. You might want to [use a **VPN**](#how-to-torrent-with-a-vpn)
@@ -82,34 +92,8 @@ But you can do similarly with 3rd party VPNs: https://protonvpn.com/support/bitt
 
 Choose one and use your `wg0` network interface from the **wireguard client**:
 
-```yaml
-version: "2.1"
-services:
-  qbittorrent:
-    image: ghcr.io/linuxserver/qbittorrent
-    container_name: qbittorrent
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Madrid
-      - WEBUI_PORT=6011 #UI PORT FOR QBITTORRENT
-    #network_mode: "container:your_gluetun_container_name" #change gluetun to your VPN container name   
-    #network_mode: "service:your_gluetun_service_name" #change gluetun to your VPN service name  
-    # ports: #you wont need the ports in this configuration file, you will need to include them in the Gluetun container
-    #   - 6081:6881
-    #   - 6081:6881/udp
-    #   - 6011:6011        
-    volumes:
-      - /home/Docker/qbittorrent/config:/config
-      - /home/Downloads:/downloads
-    network_mode: "host"  # Use the host network stack (which includes wg0)
-    restart: unless-stopped
-
-
-
-```
-
 Key Points to understand:
+
 1. **`network_mode: "host"`**
    - This allows the container to share the host network stack directly, including the `wg0` interface.
 
@@ -147,26 +131,41 @@ curl -sS https://ipinfo.io/json #the command to use
 
 So thats it for now.
 
-You you can improve software availability and resilience.
+You you can improve software availability and resilience all with **torrents and P2P**.
 
-Kind of share your work, but...share what you've saved?
+Kind of share your work, but with the sense of...share what you've saved?
+
+For example, if you are keeping stored a copy of the F/OSS Debian ISO, you can share it with any other person interested to bring it to their PCs.
 
 At least, **Ill keep a copy of Raspberry Pi OS (Debian 11)** for the Pi.
 
+> Why that one? Because I use it for some IoT Projects
+
 And probably some good [Armbian](https://www.armbian.com/orangepi-5/) for the [Orange Pi 5](https://jalcocert.github.io/RPi/posts/pi-vs-orange/)
 
-{{< callout type="warning" >}}
+{{< callout type="info" >}}
 Sharing OSS OS images might seem trivial. But it can help smaller projects to get going!
 {{< /callout >}}
 
-### FAQ
+---
+
+## FAQ
 
 #### VPN Providers
+
+There are many VPN providers, I have tried these:
 
 * [Mullvad](https://mullvad.net/en/account)
 * [ProtonVPN](https://account.protonvpn.com)
     * [Downloads → WireGuard configuration](https://account.protonvpn.com/downloads#wireguard-configuration)
 * NordVPN
+* Windscribe
+* Gluetun
+
+{{< callout type="info" >}}
+You can be your own VPN Provider: Get a [VPS+Setup Wireguard](https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/)
+{{< /callout >}}
+
 
 #### Setup a VPN with Wireguard on a VPS
 

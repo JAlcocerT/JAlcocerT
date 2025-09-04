@@ -2,8 +2,8 @@
 title: "FastAPI 101"
 date: 2025-08-13
 draft: false
-tags: ["Dev","Python","FE vs BE","APIs"]
-description: 'FastAPI and concepts for your Python BackEnd'
+tags: ["Dev","Python","FE vs BE","APIs","Swagger UI"]
+description: 'FastAPI and concepts for your Python Back-End'
 url: 'fast-api'
 ---
 
@@ -15,8 +15,6 @@ Ive been working with [PB](https://jalcocert.github.io/JAlcocerT/pocketbase/), [
 There are few [tools to understand APIs](#apis) as you work with them.
 
 **Intro**
-
-
 
 > Stay if you also want to see how to [install the Py version you want](#proper-py-and-uv).
 
@@ -60,7 +58,7 @@ The **Swagger UI** is a crucial tool for modern API development because it direc
 * **Consistency**: When a framework like **FastAPI** generates a Swagger UI, it does so directly from the code. This ensures that the documentation is always up-to-date with the latest version of the API, eliminating the risk of outdated or inaccurate docs.
 * **Collaboration**: It serves as a single source of truth for the API's contract.
 
-> Both front-end and backend developers can use it to agree on data models and endpoints, which improves collaboration and reduces miscommunication.
+> Both front-end and back-end developers can use it to agree on data models and endpoints, which improves collaboration and reduces miscommunication.
 
 {{% /details %}}
 
@@ -94,10 +92,7 @@ They are not competing technologies but are often used together in a modern web 
 
 {{% /details %}}
 
-
-
 ## Concepts
-
 
 ### What is an API Endpoint?
 
@@ -213,14 +208,17 @@ You'll often see them used for building web services and applications.
 * **Choose FastAPI** if performance and developer experience are your top priorities. Its automatic data validation and documentation save a lot of time and reduce bugs, making it ideal for building robust, high-performance APIs.
 * **Choose Django** if you're building a large-scale, full-stack application and want a mature, well-supported framework that handles most of the boilerplate code for you. It's the go-to for many established, data-driven web projects. 
 
-
 The heart of what makes FastAPI so fast and modern.
 
 > The key is that not all API stuff is synchronous; in fact, a lot of it is perfect for asynchronous processing.
 
 **Why Asynchronous APIs?**
 
-The traditional synchronous model for a web server is like a single-lane road. The server handles one request at a time. When it hits a slow operation, like waiting for a database query to complete or fetching data from another API (an I/O-bound task), it sits there and waits. No other requests can be processed.
+The traditional synchronous model for a web server is like a single-lane road. The server handles one request at a time. 
+
+When it hits a slow operation, like waiting for a database query to complete or fetching data from another API (an I/O-bound task), it sits there and waits.
+
+No other requests can be processed.
 
 An **asynchronous** model, on the other hand, is like a highway with many lanes.
 
@@ -230,7 +228,6 @@ It parks that request and starts working on another one. When the slow operation
 
 > This is much more efficient, especially for APIs that have many concurrent users and perform many of these I/O-bound operations. 
 
----
 
 **How FastAPI Achieves Asynchronicity**
 
@@ -264,13 +261,16 @@ Without an API, the front-end would be static and unable to interact with any dy
 
 For example, when you post a comment on a social media site, the front-end uses an API to send your comment to the backend, which then saves it to a database.
 
----
 
 ### REST Endpoints and Other Types
 
 Yes, a common type of API call is to a **REST endpoint**.
 
-**REST (Representational State Transfer)** is a widely used architectural style for building APIs. A REST endpoint is a specific URL that the front-end can call to perform an action. These endpoints are designed to be intuitive and stateless. For example, a REST API for a blog might have the following endpoints:
+**REST (Representational State Transfer)** is a widely used architectural style for building APIs.
+
+A REST endpoint is a specific URL that the front-end can call to perform an action. 
+
+These endpoints are designed to be intuitive and stateless. For example, a REST API for a blog might have the following endpoints:
 
 * `GET /posts`: Retrieves a list of all blog posts.
 * `POST /posts`: Creates a new blog post.
@@ -344,6 +344,8 @@ Most modern JavaScript environments handle these network requests asynchronously
 ## Conclusions
 
 Definitely, FastAPI is something that I will consider and try to combine with Astro and/or Pocketbase. 
+
+You might see that in some webapps, [typescript does the job of FastAPI](#fastapi-vs-ts).
 
 ### Proper Py and uv
 
@@ -487,9 +489,106 @@ sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
 
 One app is worth multiple apps: Advanced API Debugging Proxy and REST Client
 
-
 > [Reqable](https://github.com/reqable/reqable-app) = Fiddler + Charles + Postman
 
 ```sh
 flatpak install flathub com.reqable.Reqable
 ```
+
+### FastAPI vs TS
+
+You're asking about the difference between **FastAPI** endpoints and **api.ts** endpoints.
+
+While they both deal with creating APIs, they are fundamentally different because they operate in different programming languages and contexts.
+
+* **FastAPI** is a **Python web framework** for building APIs.
+
+* The term "**api.ts**" isn't a single, specific framework like FastAPI. 
+  * It's a file name (`api.ts`) commonly used in projects that use **TypeScript** to define API endpoints, often within a larger framework or system.
+
+
+**🐍 FastAPI Endpoints**
+
+FastAPI is a complete web framework in Python. When you create an endpoint, you're building the **server-side** logic that handles HTTP requests. The framework handles many tasks for you automatically, like:
+
+* **Routing**: Mapping a URL path (e.g., `/items/{item_id}`) to a specific Python function.
+* **Data Validation**: Using Python's type hints and the Pydantic library, FastAPI automatically validates incoming request data (from URL paths, query parameters, or the request body). If the data doesn't match the expected type, it returns a clear error.
+* **Automatic Documentation**: FastAPI automatically generates interactive API documentation (using Swagger UI and ReDoc) based on your code. This is one of its biggest selling points.
+* **Asynchronous Support**: Built on modern Python standards, it supports asynchronous code (`async`/`await`) out of the box, making it highly performant for I/O-bound tasks.
+
+FastAPI endpoints are the **producers** of the API. They are the backend functions that receive requests and send back responses.
+
+
+**📝 `api.ts` Endpoints**
+
+The file name `api.ts` indicates a TypeScript file. In this context, it typically serves one of two purposes:
+
+1.  **Defining API routes in a TypeScript-based backend framework**: Frameworks like **Next.js** or **Directus** use `api.ts` files to define API routes. In this case, it's doing a similar job to a FastAPI endpoint—it's the server-side code that handles requests. The key difference is the language and the ecosystem it's part of. These frameworks leverage TypeScript's static typing to provide type safety for your API logic.
+2.  **Defining the API client on the frontend**: In many frontend projects, `api.ts` is a file that defines the structure and functions for making API calls to a separate backend. This file acts as a **consumer** of the API, containing functions like `getUsers()` or `createPost()`, often with type definitions to ensure the data received from the backend is correctly typed. This is a common practice for maintaining type safety across the entire application stack.
+
+This distinction is crucial: FastAPI is a backend framework, while a file named `api.ts` could be a backend implementation, but is often a frontend client.
+
+**Summary of Similarities and Differences**
+
+| Feature | **FastAPI Endpoints** | **`api.ts` Endpoints** |
+| :--- | :--- | :--- |
+| **Primary Role** | Backend (API Producer) | Can be Backend or Frontend (API Consumer) |
+| **Core Technology** | Python web framework | TypeScript file/module |
+| **Language** | Python | TypeScript |
+| **Purpose** | To **handle** incoming HTTP requests and **generate** responses | To **define** API routes (backend) or **make** API calls (frontend) |
+| **Key Advantage** | High performance, automatic validation, and automatic API documentation. | Type safety across the codebase, catching errors before runtime. |
+
+No, an **`api.ts`** file doesn't have to be part of a Server-Side Rendering (SSR) application.
+
+It's a common file name used to define an API layer, and its location and function depend entirely on the project's architecture.
+
+#### In a Client-Side Rendered (CSR) App
+
+In a traditional single-page application (SPA) built with React or Vue, the **`api.ts`** file is part of the client-side code. 
+
+It defines functions that make network requests from the user's browser directly to the backend API. 
+
+The data is fetched and the UI is rendered **after** the page has loaded on the client.
+
+#### In a Server-Side Rendered (SSR) App
+
+In an SSR framework like **Next.js** or **Nuxt.js**, an **`api.ts`** file can exist in a few different places:
+
+1.  **Frontend API Client**: Just like in a CSR app, it can be a file that makes requests to the backend. In SSR, these requests might happen on the **server** (during the initial page load) and also on the **client** (for subsequent data fetching).
+
+2.  **API Routes**: Frameworks like Next.js have a feature called "API Routes." In this case, an `api.ts` file would be located in a specific directory (e.g., `pages/api` or `app/api`) and would act as the **backend** itself. It defines a serverless function that handles HTTP requests. 
+
+> This part is running on the server, not the client, and serves a similar purpose to a **FastAPI** endpoint.
+
+So, while `api.ts` can be used in an SSR context, it's not exclusive to it, and its function depends on whether it's part of the client-side code or a server-side API route.
+
+
+Yes, a **CSR (Client-Side Rendered)** application can absolutely make calls using an `api.ts` file. 
+
+> That's its primary function.
+
+#### What a CSR App Can Do
+
+In a CSR application (like a standard React or Vue app), the `api.ts` file is a module that you import into your components. 
+
+When a component needs to fetch data, it calls a function from `api.ts`, which then uses `fetch` or `axios` to make an HTTP request from the **user's browser** to your backend.
+
+* **Example**: When a user clicks a "Load Posts" button, a `getPosts()` function in your `api.ts` file is executed in the browser. The browser then sends a request to your backend (`/api/posts`), gets the data, and the component updates the UI with the new posts.
+
+#### What an SSR App Can Do That a CSR App Can't
+
+The key difference lies in **when and where** the data is fetched and the HTML is rendered.
+
+An **SSR (Server-Side Rendered)** application fetches data and renders the initial HTML for a page **on the server**, before sending it to the browser.
+
+A CSR app can't do this; it sends an empty HTML file and relies on the browser to fetch the data and build the UI.
+
+Here's what an SSR app can do that a CSR app can't:
+
+1.  **Improved SEO (Search Engine Optimization) 📈**: Search engine crawlers can easily read the fully-formed HTML that an SSR app sends. This is a significant advantage over CSR, where crawlers often struggle to find and index dynamic content that loads after the initial page is rendered. 
+
+2.  **Faster Initial Page Load 🚀**: The user sees the content of the page much faster. With SSR, the user's browser receives a complete HTML page that's ready to be displayed. With CSR, the user sees a blank page or a loading spinner while the JavaScript downloads, executes, and then fetches the data.
+
+3.  **Better Performance on Slower Devices 📱**: Since the heavy lifting of rendering is done on the server, the client's device doesn't have to use its own processing power to build the initial page. This makes the application feel much faster and more responsive on low-powered phones and computers.
+
+4.  **Security for Sensitive Data 🔒**: With SSR, you can make API calls from the server without exposing sensitive information like API keys or credentials to the client's browser. This is because the request happens entirely on the server.

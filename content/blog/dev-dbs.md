@@ -166,7 +166,7 @@ But first...**Why Move to Postgres** if you have localstorage?
 - ✅ **Consistent Behavior** - Same experience across all browsers
 
 **Cons:**
-- ❌ **Server Dependency** - Requires backend infrastructure
+- ❌ **Server Dependency** - Requires back-end infrastructure
 - ❌ **Network Latency** - Slower than local storage access
 - ❌ **Complexity** - Database setup, migrations, maintenance
 - ❌ **Hosting Costs** - Database server and scaling expenses
@@ -186,7 +186,7 @@ But first...**Why Move to Postgres** if you have localstorage?
 - 🎯 **Offline-First Apps** - Applications that must work without internet
 - 🎯 **Privacy-Critical** - Data that should never leave user's device
 - 🎯 **Simple Applications** - Basic CRUD with minimal data
-- 🎯 **Educational Projects** - Learning FE without backend complexity
+- 🎯 **Educational Projects** - Learning FE without back-end complexity
 
 * **When Postgres Migration is Essential:**
 - 🎯 **Multi-Device Usage** - Users expect data sync across devices

@@ -29,17 +29,27 @@ Or the CSR + WebSockets
 
 ## CSR Examples
 
+
+{{< cards cols="2" >}}
+  {{< card link="https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/calculators/FIREAdvancedCalculator.astro?ref_type=heads" title="FireCalculator | Astro Component ↗" >}}
+  {{< card link="" title=" ↗" >}}
+{{< /cards >}}
+
 ### MRR Calculator
 
-It can also do more complex stuff, like FIRE calculators with kind of loops.
+A simple MRR Calculator inside an astro component, [like this](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/calculators/MRRCalculator.astro?ref_type=heads).
+
+It can also do more complex stuff, like [this FIRE calculators](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/calculators/FIREAdvancedCalculator.astro?ref_type=heads) with kind of loops.
 
 ### French Amortization
 
 I covered the guts of what French amortization is [here](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#french-amortization-101).
 
-And before, I was using Python backend logic to provide the results via a Streamlit webapp.
+And before, I was using Python back-end logic to provide the results via a Streamlit webapp.
 
 But hey, for this kind of things you dont need to consume server resources!
+
+It can be done on the client side with another astro component, that executes JS logic on the client side.
 
 ---
 
@@ -47,7 +57,7 @@ But hey, for this kind of things you dont need to consume server resources!
 
 The combination of CSR, Cloudflare Workers, PocketBase, and `HttpOnly` cookies is a powerful and valid approach, especially for building highly interactive single-page applications.
 
-However, it's just one piece of a broader puzzle.
+> However, it's just one piece of a broader puzzle.
 
 The choice of rendering strategy (CSR vs. SSR vs. others) depends on your application's specific needs, particularly concerning **SEO**, **initial load time**, and **user interactivity**.
 

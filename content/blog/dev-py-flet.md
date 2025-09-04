@@ -2,7 +2,7 @@
 title: "Flet."
 date: 2026-12-31T23:20:21+01:00
 draft: true
-tags: ["Dev"]
+tags: ["Dev","Flutter","Python"]
 summary: 'More cool python Stuff'
 url: 'flet-apps'
 ---

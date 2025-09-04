@@ -1,6 +1,6 @@
 ---
 title: "Testing AI Scrapping projects: GPT-Crawler..."
-date: 2024-12-07
+date: 2024-12-08
 draft: false
 tags: ["Dev","Python","Web Scrapping"]
 description: 'How to use . Compared with BS4, ...'

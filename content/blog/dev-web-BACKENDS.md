@@ -2,10 +2,17 @@
 title: "Backends 101"
 date: 2025-09-15T23:20:21+01:00
 draft: false
-tags: ["Dev","Laravel PHP","Python BE fwks","Protected EndPoints"]
+tags: ["Dev","Laravel PHP","Python BE fwks","Protected EndPoints","uv"]
 url: 'backend-alternatives'
 description: 'Backend 101 for your SaaS'
 ---
+
+
+**Tl;DR**
+
+Im still impressed on how well uv works for python: https://github.com/astral-sh/uv/releases
+
+
 
 **Intro**
 

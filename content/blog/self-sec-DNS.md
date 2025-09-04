@@ -32,19 +32,19 @@ Simple internet performance tester written in Python
 
 Verify DNS Server Functionality:
 
-    Test if the DNS server is reachable and functioning properly. You can ping the DNS server:
+Test if the DNS server is reachable and functioning properly. You can ping the DNS server:
 
-    bash
-
+```sh
 ping 192.168.3.1
+```
 
 If the ping is successful, try using a direct DNS query to see if DNS resolution is working:
 
-bash
-
+```sh
 dig @192.168.3.1 google.com
+```
 
-If dig is not installed, you can install it using sudo apt-get install dnsutils.
+If dig is not installed, you can install it using `sudo apt-get install dnsutils`
 
 <!-- 
 Is Your VPN Leaking?

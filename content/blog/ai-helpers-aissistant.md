@@ -588,10 +588,9 @@ It has very cool integrations, like with GSheets, which you can use:
 {{< /dropdown >}}
 
 
-
 ```mermaid
 flowchart TD
-    Start([User Arrives at App 🙊]) --> DevModeCheck{BackEnd Checks DEV_MODE}
+    Start([User Arrives at App 🙊]) --> DevModeCheck{Back-End Checks DEV_MODE}
     
     DevModeCheck -->|DEV_MODE=True| MainOptions["App Features Access 😍"]
     DevModeCheck -->|DEV_MODE=False| EmailEntry["Prompt user for email"]
@@ -600,7 +599,7 @@ flowchart TD
     EmailEntry -->|No Email Entered| EndInfo["Show 'Please enter email' message"]
 
     %% Subscription checks surrounded in a box
-    subgraph BackendElements [BE Subscription Logic]
+    subgraph Back-endElements [BE Subscription Logic]
         SubscriptionCheck["Check email subscription with MailerLite API"]
         SubscriptionCheck -->|Subscribed via MailerLite| SuccessWelcome["Welcome Message and Log Success"]
         SubscriptionCheck -->|Not in MailerLite| FormBricksCheck["Check email in FormBricks Google Sheet"]

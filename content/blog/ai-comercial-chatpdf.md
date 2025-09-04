@@ -156,7 +156,9 @@ docker build -t chat_multiple_pdf .
 #sudo docker run -it -p 8502:8501 chat_multiple_pdf:latest /bin/bash
 ```
 
-You can make this build manually, [use Github Actions](/docker-github-actions-cicd/), or your can even [combine Gitea](/selfhosting-Gitea-docker) and [Jenkins](/selfhosting-jenkins-ci-cd) to do it for you.
+You can make this build manually, [use Github Actions](/docker-github-actions-cicd/).
+
+Or your can even [combine Gitea](/selfhosting-Gitea-docker) and [Jenkins](/selfhosting-jenkins-ci-cd) to do it for you.
 
 
 

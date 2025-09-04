@@ -8,6 +8,10 @@ url: 'real-estate-landing'
 ---
 
 
+**TL;DR**
+
+
+
 **Intro** 
 
 Ive been playing quite a lot with PB and quick astro themes lately.

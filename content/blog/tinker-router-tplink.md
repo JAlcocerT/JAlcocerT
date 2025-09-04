@@ -6,13 +6,15 @@ draft: false
 #     image: "https://socialify.git.ci/alejandro-ao/ask-multiple-pdfs/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #     alt: "ChatPDF" # alt text
 #     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Networking","ArcherMR200"]
 description: 'Using 4G internet. Few years of use review.'
-summary: 'How it is to live with 4g home internet only.'
 url: 'tplink-archer-mr200-router-review'
 ---
 
-## Intro
+
+**TL;DR** How it is to live with 4g home internet only
+
+**Intro**
 
 There is **no fiber available for you**.
 
@@ -24,7 +26,7 @@ There is **no fiber available for you**.
 
 - Do you have any other question?
 
-If this sounds familiar for you, you probably have a **4G router** already
+If this sounds familiar for you, you probably have a **4G router** already.
 
 ## TP-Link Archer MR200
 
@@ -129,8 +131,7 @@ More [Docker config files](https://github.com/JAlcocerT/Docker/tree/main/IoT/Int
 
 #### Open Speed Test
 
-We can use [OpenSpeedTest](https://jalcocert.github.io/RPi/posts/self-internet-monit/#openspeedtest)
-together with Container and Portainer to deploy the docker compose.
+We can use [OpenSpeedTest](https://jalcocert.github.io/RPi/posts/self-internet-monit/#openspeedtest) together with Container and Portainer to deploy the docker compose.
 
 Just go to OST UI dashboard at: `localhost:6040`
 
@@ -194,7 +195,7 @@ volumes:
 
 
 {{< callout type="info" >}}
-Using these docker container connected via Ethernet to the Firebat MiniPC 
+Using these docker container connected via Ethernet to the [Firebat MiniPC](https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/) 
 {{< /callout >}}
 
 > Go to the UI at: `http://192.168.1.101:8089/` with [default creds](https://docs.speedtest-tracker.dev/security/authentication) `admin@example.com` and `password`

@@ -211,7 +211,6 @@ Simple, static and it literally flies:
 
 > > See how well it works: https://fast-payroll-theme.pages.dev/login/
 
-
 ---
 
 ## Conclusions
@@ -278,7 +277,6 @@ For example, if you're on version `1.2.3`:
 
 This system is very effective because it gives users and developers a clear understanding of the scope and potential impact of a new release without needing to read detailed release notes.
 
-***
 
 #### Additional Tags
 
@@ -290,8 +288,6 @@ You can add additional tags to provide more context. These are often used for pr
 * **`dev`** (development): This indicates a version that is actively being worked on.
 
 For example, a pre-release version could be tagged as `1.4.0-beta.1`.
-
-***
 
 #### Using Your Proposed Format
 
@@ -344,9 +340,10 @@ function processData(data) {
 fetchData("https://example.com/api/data", processData);
 ```
 
-In this case, `processData` is the callback. It's passed to `fetchData` and is only executed after the simulated data has been "fetched."
+In this case, `processData` is the callback. 
 
------
+It's passed to `fetchData` and is only executed after the simulated data has been "fetched."
+
 
 ### Understanding Hooks
 
@@ -361,13 +358,19 @@ For example, in a content management system (CMS) like WordPress, there are many
 * **Action hooks** allow you to execute your own custom code at a specific point, such as when a new post is saved. You "hook" your function to that event.
 * **Filter hooks** allow you to modify data before it's displayed or saved, such as filtering the content of a post before it's shown to a user.
 
-A common example of hooks is in React. **React Hooks** like `useState` and `useEffect` are special functions that let you "hook into" React features from your functional components. For instance, `useEffect` allows you to hook into the component's lifecycle to perform side effects like data fetching or DOM manipulation.
+A common example of hooks is in React. **React Hooks** like `useState` and `useEffect` are special functions that let you "hook into" React features from your functional components. 
+
+For instance, `useEffect` allows you to hook into the component's lifecycle to perform side effects like data fetching or DOM manipulation.
 
 **The Analogy**
 
-Think of it this way: a **callback** is like giving a friend your phone number and asking them to call you back when they're ready to leave. You've provided the mechanism for a future action.
+Think of it this way: a **callback** is like giving a friend your phone number and asking them to call you back when they're ready to leave.
 
-A **hook** is more like a specific, pre-determined **"Do Not Disturb" sign** on a hotel room door. The cleaning staff has a pre-defined process for checking doors, and when they encounter your sign, it **"hooks"** into their normal routine, causing them to skip your room.
+You've provided the mechanism for a future action.
+
+A **hook** is more like a specific, pre-determined **"Do Not Disturb" sign** on a hotel room door.
+
+The cleaning staff has a pre-defined process for checking doors, and when they encounter your sign, it **"hooks"** into their normal routine, causing them to skip your room.
 
 The system (the cleaning staff's routine) has a designated point where it checks for and responds to your input (the hook).
 
@@ -431,7 +434,7 @@ What? What are the Directions?
 sudo docker compose up -d
 ```
 
-And go to `localhost:3033`
+And go to `localhost:3033` to see Gitea Web UI.
 
 
 {{< callout type="info" >}}
@@ -472,7 +475,7 @@ See this sample [FastAPI + html](https://github.com/JAlcocerT/Home-Lab/tree/main
 
 ### Gitea via CLI
 
-How about doing cool stuff with Gitea, but programatically?
+How about doing cool stuff with Gitea, but **programatically**?
 
 **Gitea has a cool API**
 
