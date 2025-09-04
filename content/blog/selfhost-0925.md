@@ -189,9 +189,19 @@ You also have substreamer app on ios or android (as a client), they also have: h
 
 See also MeTube and Navidrome:
 
+![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
+
+### Youtube FE
+
+
 ![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
 
-![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
+
+There are more alternatives, like:
+
+* https://github.com/christian-fei/my-yt
+
+> Unlicensed | A clean and minimal youtube frontend, without all the ads and whistles
 
 ### HomeLab Commands
 

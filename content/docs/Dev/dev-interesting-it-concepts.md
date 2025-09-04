@@ -2,7 +2,7 @@
 title: "Interesting IT Concepts"
 date: 2024-08-23T10:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","MicroServices"]
 description: 'IT Concepts for Projects: CI/CD, webhooks, API calls...'
 url: 'IT-concepts'
 ---
@@ -10,11 +10,15 @@ url: 'IT-concepts'
 0. [Containers!](#containers)
 1. CI/CD and [Github Actions](#what-it-is-cicd)
 2. How to [Code on the go](#coding-on-the-go)
-3. [More](#other-concepts): Microservices, WebHooks, API Calls...
+3. [More](#other-concepts): [Microservices](#what-are-microservices), [WebHooks](#what-are-web-hooks), [API Calls](#what-are-api-calls)...
 
 ## Containers
 
 I love to use [containers for **SelfHosting**](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
+
+They allow us to package complete applications.
+
+Making the deploy process on other servers kind of copy and paste.
 
 {{< details title="How to Setup Docker? 📌" closed="true" >}}
 
@@ -210,6 +214,14 @@ gh auth login #you can use HTTPs
 ## Other Concepts
 
 ### What are Microservices?
+
+**Microservices** are a way of structuring an application as a collection of small, independent, and loosely coupled services. 
+
+Each service is built around a specific business capability, can be developed by a small team, and is deployed independently. 
+
+They communicate with each other over well-defined APIs.
+
+> This contrasts with a **monolithic architecture**, where all the application's functions are combined into a single, indivisible unit.
 
 ### What are Web-Hooks?
 

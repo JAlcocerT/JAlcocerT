@@ -3,7 +3,7 @@ title: "FrontEnd, SPAs and ways to do Auth"
 date: 2025-08-23
 draft: false
 tags: ["Dev","OAuth/JWT/Bearer","Logto","PB SDK","SPAs Serverless-Invoices"]
-description: 'A Better front-end and authentication. With SelfHosted OAUTH recap.'
+description: 'A Better front-end and authentication. With SelfHosted OAUTH recap and Forward Auth.'
 url: 'front-end-and-auth'
 ---
 
@@ -12,6 +12,8 @@ url: 'front-end-and-auth'
 About Front-End and how to do better auth.
 
 With [Selfhosted OAUTH alternatives](#conclusions) recap.
+
++++ What's [Forward Auth vs http Cookie](#whats-forward-auth)
 
 **Intro**
 
@@ -271,14 +273,18 @@ We can say that its part of the [SelfHosted group](#conclusions).
 
 * I have been testing this on my homelab at: https://tinyauth.jalcocertech.com/login
 
-{{< cards cols="1" >}}
+{{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tinyauth" title="TinyAuth + Traefik v3.3 Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik v3.3 Config 🐋 ↗" >}}
 {{< /cards >}}
 
+{{< callout type="info" >}}
+TinyAuth uses the [Forward Auth approach](#whats-forward-auth) of authenticating.
+{{< /callout >}}
+
 ### Flask User/PWD Challenge
 
-Just a simply user and password.
+Just a simply: user and password.
 
 Because why not:
 
@@ -286,7 +292,6 @@ Because why not:
   {{< card link="https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-flaskcms/docker-compose-portainer.yml#L9" title="Flask Hardcoded Auth | Example with Code and Container 🐍🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py" title="Streamlit Hardcoded Auth | Example 🐍 ↗" >}}
 {{< /cards >}}
-
 
 > Thats similar to what I was doing with Streamlit Auth *hardcoded users/pwds*
 
@@ -319,9 +324,11 @@ curl -s -X POST "$PB/api/collections/users/records" \
   }'
 ```
 
-#### PB Auth via SDK
+**PB Auth via SDK**: We can authenticate programatically to PB via scripts.
 
-We can authenticate programatically to PB via scripts.
+{{< callout type="info" >}}
+WIth PB and its SDK, you can implement the [http cookie auth](#how-it-differs-from-an-http-cookie)
+{{< /callout >}}
 
 ---
 
@@ -331,7 +338,7 @@ There are many excellent open-source and **self-hosted OAuth providers**, often 
 
 These tools give you full control over your user data and authentication flows, a significant advantage for security and customization.
 
-Here are some of the most popular and well-regarded options:
+Here are some of the **most popular** and well-regarded options:
 
 1. Keycloak
 
@@ -364,11 +371,61 @@ Here are some of the most popular and well-regarded options:
 
 > The choice among these depends on your specific needs: a full-featured platform (Keycloak, Authentik), a lightweight solution for protecting existing services (Authelia), or a modular API-first approach (Ory).
 
-The **Identity Provider (IdP)** is the component that primarily regulates authentication. 🔐
+The **[Identity Provider](#how-the-idp-fits-in) (IdP)** is the component that primarily regulates authentication. 🔐
 
-The IdP is the system that manages user identities and is responsible for verifying a user's credentials. It's the central authority that holds the user's information and confirms that they are who they claim to be.
+The IdP is the system that manages user identities and is responsible for verifying a user's credentials.
 
-***
+> It's the central authority that holds the user's information and confirms that they are who they claim to be.
+
+
+You've asked a great question that gets to the heart of how different authentication models interact. Yes, using a tool like Authelia on top of your web app login is fundamentally different from the PocketBase HTTP cookie approach. The key difference is the layer at which authentication is handled.
+
+### Authelia vs PB
+
+**Authelia's Role (Forward Auth)**
+
+Authelia is a **centralized authentication and authorization server** designed to work with a **reverse proxy** (like Cloudflare, NGINX, or Traefik) via the **forward auth** pattern. It intercepts every request to your web app *before* the request ever reaches the app itself. The login screen you see is Authelia's, not your web app's.
+
+1.  A user tries to access `your-app.com`.
+2.  The reverse proxy intercepts the request and sends a sub-request to Authelia asking, "Is this user allowed to see this page?"
+3.  Authelia checks for a valid session cookie that it controls.
+4.  If the user is not authenticated, Authelia sends a redirect to its own login page.
+5.  If the user is authenticated, Authelia responds with a "success" signal, and the reverse proxy then forwards the original request to your web app.
+
+Your web app itself doesn't need to know anything about user sessions, cookies, or authentication. It simply trusts that any request it receives has already been authenticated by the reverse proxy. This is why it's a very powerful pattern for securing applications that don't have their own built-in authentication, such as dashboards or static sites. 
+
+**PocketBase's HTTP Cookie Approach**
+
+With PocketBase, authentication is **decentralized** and handled by the web application itself.
+
+1.  A user accesses `your-app.com`.
+2.  Your app's front-end (CSR) presents the login form.
+3.  The user submits credentials to the PocketBase backend.
+4.  PocketBase validates the credentials and responds by setting a secure, `HttpOnly` cookie in the browser.
+5.  On every subsequent request from your web app to the PocketBase API, the browser automatically attaches this cookie.
+6.  PocketBase's backend validates the cookie on its own end to verify the user's identity.
+
+**Key Differences & Why It's Not the Same**
+
+The core difference is who's in charge of authentication.
+
+| Feature | Authelia (Forward Auth) | PocketBase (HTTP Cookie) |
+| :--- | :--- | :--- |
+| **Authentication Layer** | Handled by a **separate, centralized service** (Authelia) at the **reverse proxy** level. | Handled by the **application's backend** (PocketBase) itself. |
+| **Login Page** | Authelia's login page; it's a **single sign-on (SSO)** experience. | Your web app's login page, which talks to PocketBase. |
+| **Application Awareness** | The web app is completely **unaware** of the authentication process; it simply receives requests from an authenticated source. | The web app's front-end and back-end are **tightly coupled** for authentication. The app code must be aware of cookies and session state. |
+| **Use Case** | Ideal for **wrapping any web service** with a login page, even those with no built-in auth, and for providing SSO across multiple subdomains. | Ideal for **building an application from the ground up** with an integrated authentication system. |
+
+In short, Authelia is like a single, universal front-door security guard for all your applications.
+
+PocketBase is like each of your applications having its own separate lock and key.
+
+{{< callout type="info" >}}
+While both methods use an HTTP cookie, the purpose and security model behind that cookie are completely different.
+{{< /callout >}}
+
+
+
 
 ### How the IdP Fits In
 
@@ -390,13 +447,13 @@ For example, when you "Sign in with Google," Google's servers act as the IdP, au
 
 **Web Security Concepts**
 
-In the world of web security, **OAuth**, **JWT**, and **bearer tokens** are related concepts, but they serve different purposes.
+For web security, **OAuth**, **JWT**, and **bearer tokens** are related concepts, but they serve different purposes.
 
 OAuth is a protocol, JWT is a token format, and a bearer token is a token type.
 
 > A good analogy is: OAuth is the lockbox that holds the key, a JWT is a specific type of key (a self-contained one), and a bearer token is a kind of key that grants access to anyone who holds it.
 
-And there has been a recent LogTo blog post about these: https://blog.logto.io/jwt-vs-oauth/?
+And there has been a recent LogTo blog post about these: https://blog.logto.io/jwt-vs-oauth/
 
 ### OAuth: The Authorization Protocol 🤝
 
@@ -406,7 +463,6 @@ For example, when you "Sign in with Google" to a new website, you're using OAuth
 
 > Google manages your authentication and, after you give your consent, issues a token to the new website that grants it limited access to your data. 
 
-***
 
 ### JWT: The Token Format 📄
 
@@ -419,7 +475,6 @@ A JWT has three parts:
 
 Because a JWT is self-contained, a resource server can validate the token's signature without needing to communicate with the authorization server, which is why it's a popular choice for building stateless APIs.
 
-***
 
 ### Bearer Token: The Token Type 🔑
 
@@ -431,7 +486,6 @@ If an attacker steals a bearer token, they can use it to access resources as if 
 
 This is why it's critical to transmit bearer tokens only over a secure channel like HTTPS and to store them securely.
 
-***
 
 ### How They All Fit Together
 
@@ -457,7 +511,6 @@ A **component** is the fundamental building block of a front-end application. It
 * **Example:** A `<LoginButton>` component that renders a button to initiate the login process.
 * **Security Relation:** Components are where you might **display** a UI based on a user's authorization. For example, a `<Dashboard>` component might check if a user is an admin before rendering a "Manage Users" button.
 
-***
 
 #### 2. Services
 
@@ -466,7 +519,6 @@ A **service** (or a "utility" or "helper") is a piece of code that encapsulates 
 * **Example:** A `AuthService` that contains methods like `login()`, `logout()`, `getToken()`, and `isLoggedIn()`. This service would be responsible for sending the username and password to your back-end API or handling the OAuth redirect and token storage.
 * **Security Relation:** This is where the core authentication and authorization logic should reside. Instead of every component making its own API calls, they all rely on the `AuthService`. This promotes the **separation of concerns** and makes your code more secure and easier to manage.
 
-***
 
 #### 3. Hooks
 
@@ -474,8 +526,6 @@ A **hook** (specific to React, but a similar concept exists in other frameworks)
 
 * **Example:** A `useAuth()` hook that provides components with the current user's login status (`isLoggedIn`), their profile data, and methods for login/logout. This hook might internally use the `AuthService` we mentioned.
 * **Security Relation:** Hooks are the most modern way to connect your components to your services. A component might call `const { isLoggedIn, userRole } = useAuth();` to get the user's status. It then uses this information to determine what to display. This keeps the component's code clean and focused on rendering, while the hook handles the complex security logic by interacting with the `AuthService`.
-
-***
 
 #### How They All Fit Together in a Security Context
 
@@ -512,3 +562,75 @@ The core reason is that **hooks contain the business logic**, while **components
 * **Components:** A test for a single component is specific to that component. If you have 10 different components that all use the `useAuth()` hook, you don't need to write 10 separate tests for the authentication logic—you just need one for the hook itself.
 
 By focusing on testing the logic in the hooks, you ensure that the core functionality is bug-free and that the components are simply a clean, thin layer that uses that proven logic to display the correct UI. This practice leads to a more robust, maintainable, and scalable codebase.
+
+### Whats Forward Auth?
+
+Forward auth is an authentication pattern where a reverse proxy or API gateway **intercepts all incoming requests** and **forwards** them to a dedicated, separate authentication service. 
+
+The reverse proxy only allows the original request to proceed to its final destination (the backend application) if the authentication service responds with a "success" status code (e.g., a 2xx HTTP status).
+
+If the authentication service denies the request, the proxy returns an error or a redirect to the login page directly to the client, without ever reaching the backend application.
+
+This pattern is especially popular in **microservices architectures** because it centralizes authentication logic. 
+
+Instead of each microservice having to implement its own authentication, they can trust the reverse proxy to handle it for them. 
+
+{{< callout type="info" >}}
+The microservices themselves can be stateless and simple, knowing that any request they receive is already authenticated. 
+{{< /callout >}}
+
+#### How It Differs From an HTTP Cookie
+
+It's a common misconception that forward auth is an alternative to an HTTP cookie.
+
+In reality, they're not mutually exclusive; they work together. 
+
+**Forward auth is a system design pattern, while an HTTP cookie is a mechanism for passing data.** 
+
+The HTTP cookie is the tool that enables the forward auth process.
+
+Here's how they differ:
+
+* **HTTP Cookie**: An HTTP cookie is a **small piece of data** that a server sends to a web browser. The browser stores it and automatically sends it back with every subsequent request to the same domain. Cookies are the most common way to maintain a user's session state.
+    * **Function**: Stores authentication information (like a session ID or a token) on the client side.
+    * **Where it lives**: In the user's browser, tied to a specific domain.
+* **Forward Auth**: Forward auth is the **architectural pattern** that leverages the cookie. It describes **what happens** to that cookie and the request it's attached to.
+
+The key distinction is in **responsibility**. 
+
+A browser handles the HTTP cookie automatically, but a **reverse proxy** or **gateway** handles the forward auth logic.
+
+Think of it like this:
+
+* A **cookie** is a **boarding pass** that proves you're a legitimate passenger. 🎫
+* **Forward auth** is the **airport security checkpoint** that inspects your boarding pass before you're allowed to board the plane. 🛂
+
+The forward auth gateway checks the cookie and, if it's valid, lets the request through.
+
+Without the forward auth pattern, the cookie would just go directly to the backend application, which would then have to do its own validation. 
+
+Forward auth externalizes this validation process, making the entire system more scalable and secure.
+
+#### Why Forward Auth Is More Secure
+
+Forward auth is generally considered more secure because it centralizes and abstracts the authentication logic away from your application's core services. This prevents each individual service from needing to handle its own authentication, reducing the attack surface.
+
+1.  **Centralized Security Logic**: Instead of every microservice being responsible for validating authentication cookies or tokens, a single, dedicated gateway (like a Cloudflare Worker or a reverse proxy) handles this critical task. This reduces the risk of security vulnerabilities caused by inconsistent or incorrect implementations across different services.
+2.  **Stateless Microservices**: The backend services don't need to know anything about the user's session or authentication. They receive a request from the gateway that has already been validated. This means the services are simpler, more scalable, and less prone to security flaws.
+3.  **Protection Against Direct Access**: The forward auth proxy can be configured to be the *only* entry point to your microservices. It prevents unauthorized requests from bypassing the security layer and hitting a service directly, which is a common vector for attack.
+4.  **Enforced Security Policies**: The gateway can enforce security policies like rate limiting, bot detection, and WAF (Web Application Firewall) rules before a request even reaches your backend. This adds another layer of defense against malicious traffic.
+
+
+---
+
+### PocketBase Alternatives to HTTP Cookies
+
+PocketBase's primary authentication mechanism is a **JWT (JSON Web Token)**.
+
+While PocketBase itself sets this token in an `HttpOnly` cookie by default for CSR, you have the option to handle the token manually. This is what's considered the "less secure" method you heard about and is often a reason for not needing a Cloudflare Worker.
+
+* **JWT in Local Storage**: The user logs in, and the PocketBase client-side SDK receives the JWT. Instead of letting the browser store it in a cookie, you can manually save this token in the browser's `localStorage` or `sessionStorage`. On subsequent requests, your JavaScript code must then retrieve this token and add it to the `Authorization: Bearer <token>` header.
+
+**Why this is less secure**: Storing the JWT in `localStorage` makes it vulnerable to **Cross-Site Scripting (XSS)** attacks. If an attacker can inject malicious JavaScript into your site, they can easily access the token from `localStorage` and steal it. They can then impersonate the user and perform actions on their behalf. An `HttpOnly` cookie, on the other hand, is inaccessible to client-side JavaScript, making it immune to this type of attack.
+
+The reason you wouldn't necessarily need a Cloudflare Worker in this scenario is that your JavaScript is now fully responsible for managing the token and sending it with requests, bypassing the need for a proxy to handle cookie management. However, this convenience comes at a significant security cost.

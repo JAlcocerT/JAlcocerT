@@ -1,6 +1,6 @@
 ---
 title: "Automatic Post creation for SSG Workflows"
-date: 2025-09-03T15:20:21+01:00
+date: 2025-09-06T15:20:21+01:00
 draft: false
 tags: ["Dev","n8n vs Gitea","Web","Markdown"]
 description: 'From n8n workflow to Gitea.'
@@ -21,7 +21,8 @@ Scrapping from a website, data formatting for real estate or events...you name i
 **Intro**
 
 
-
+https://github.com/JAlcocerT/Home-Lab/tree/main/n8n
+https://github.com/JAlcocerT/Home-Lab/tree/main/gitea
 
 
 

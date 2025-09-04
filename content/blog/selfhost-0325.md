@@ -2,7 +2,7 @@
 title: "SelfHosting Updates - Spring 2025"
 date: 2025-03-21T01:20:21+01:00
 draft: false
-tags: ["Homelab"]
+tags: ["Homelab","Ventoy,","Homarr","Forward Auth","Jellyfin"]
 description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich, Caddy, pihole v6...'
 url: 'selfhosted-apps-spring-2025'
 ---
@@ -165,7 +165,7 @@ curl localhost:2019/config/ #you will see the current caddy config
 #curl localhost:2019/config/ | jq .
 ```
 
-And...you can do some automatic magic, and make new configurations to it via CLI.
+And...you can do some automatic magic: like making new configurations to it via CLI.
 
 {{< details title="More about Caddy 📌" closed="true" >}}
 
@@ -183,7 +183,7 @@ There are ways to put layers of authentication between the proxies and our apps.
 
 So that we can authenticate who can login to the services behind them.
 
-Pretty awsome.
+Pretty awwwsome.
 
 <!--
 https://www.youtube.com/watch?v=ywQVe9ikcVI 
@@ -199,9 +199,11 @@ And scope for another post!
 
 ### Immich
 
-My previous go to solution with: Syncthing + PiGallery, which works perfectly and avoid having a database to backup!
+My previous go to solution with: `Syncthing + PiGallery`, which works perfectly.
 
-But among all the Photo Tools I reviewed/tried recently, Immich is the one I tried with the **best mobile app experience**.
+Plus you avoid having a database to backup!
+
+But among all the [Photo Tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/) I reviewed/tried recently, Immich is the one I tried with the **best mobile app experience**.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Photo/Immich_Docker-Compose.yml" title="Immich Config File 🐳 ↗"  >}}
@@ -240,7 +242,7 @@ Remember that it is possible to make business around open source.
 
 > Always check the licenses though!
 
-And remember to [create the proper invoice, also with F/OSS](https://fossengineer.com/open-source-invoice-creator/).
+And remember to [create the **proper invoices**, also with F/OSS](https://fossengineer.com/open-source-invoice-creator/).
 
 ### Keep Using
 
@@ -251,7 +253,7 @@ And remember to [create the proper invoice, also with F/OSS](https://fossenginee
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Video/jellyfin_docker-compose.yml" title="Jellyfin Config File 🐳 ↗" >}}
 {{< /cards >}}
 
-If you have a smart tv, probably those are already installed or you can add them
+If you have a smart tv, probably those are already installed, or you can add them:
 
 ![Jellyfin SmartTV](/blog_img/selfh/media/jellyfin-smarttv.png)
 
@@ -263,11 +265,11 @@ Jellyfin will use the CPU, unless you do this trick: https://jellyfin.org/docs/g
 
 Offline [video workflow](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/): Action cam -> Server -> Jellyfin -> SmartTV 
 
-![alt text](/blog_img/selfh/media/jellyfin-cpu.png)
+![Jellyfin CPU Load](/blog_img/selfh/media/jellyfin-cpu.png)
 
 > See how the server (x300) was quite rev doing 1080p video
 
-LocalSend and NewPipe are also interesting Android Apps to consider
+> > LocalSend and NewPipe are also interesting Android Apps to consider
 
 2. Portainer vs Dockge
 
@@ -290,12 +292,16 @@ See it live: https://it-tools.tech/
 
 This service has been with my [for a while](https://jalcocert.github.io/RPi/posts/selfh-internet-better/).
 
-But now *its reloaded* with its **v6**.
+But now *PiHole is reloaded* with its **v6**.
 
-> Replacing any v5 image (2024.07.0 and earlier) with a v6 image will result in updated configuration files. These changes are irreversible.
+> Replacing any v5 image (2024.07.0 and earlier) with a v6 image will result in updated configuration files.
 
-https://github.com/JAlcocerT/Docker/tree/main/Security/DNS
-https://github.com/JamesTurland/JimsGarage/blob/main/Piholev6/docker-compose.yaml
+> > These changes are irreversible.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/DNS" title="DNS Config Files 🐳 ↗"  >}}
+  {{< card link="https://github.com/JamesTurland/JimsGarage/blob/main/Piholev6/docker-compose.yaml" title="PiHole v6 Config File 🐳 ↗"  >}}  
+{{< /cards >}}
 
 <!-- https://www.youtube.com/watch?v=mnry95ay0Bk -->
 
@@ -306,21 +312,19 @@ https://github.com/JamesTurland/JimsGarage/blob/main/Piholev6/docker-compose.yam
 
 #### NextCloud
 
-Its not all aboyt nc and syncthing is i recently wrote [here, together with webdavs](https://jalcocert.github.io/JAlcocerT/sync-file-tools/)
+Its not all about nc and syncthing is what I recently wrote [here, together with webdavs](https://jalcocert.github.io/JAlcocerT/sync-file-tools/)
 
-But tbh, NC is a very intuitive way to backup your Smartphones (iOS or android):
+But tbh, Nextcloud is a very intuitive way to backup your Smartphones (iOS or android):
 
 ![NextCloud Sync Android](/blog_img/selfh/media/nextcloud-pixel8-sync.png)
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml" title="NextCloud Config File 🐳 ↗"  >}}
 {{< /cards >}}
 
-
 > Nextcloud! Respecting your folder order and avoiding the use of ML of [immich](#immich)
 
-And you can always see what you have / modify stuff without taking space on your laptop:
+You can always see what you have / modify stuff without taking space on your laptop: *Via nextcloud WebDav*
 
 ![Nextcloud WebDAV](/blog_img/selfh/media/nc-dav-otherlocations.png)
 
@@ -333,19 +337,11 @@ You can install it on mobile devices via [F-Droid or also Obtanium](https://jalc
 Or...use **SFTP-Go** as WebDav together with Syncthing: 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go" title="RE Streamlit App" image="/blog_img/selfh/media/sftpgo-webadmin.png" subtitle="SFTP-Go Setup" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go" title="SFTPGO Setup" image="/blog_img/selfh/media/sftpgo-webadmin.png" subtitle="SFTP-Go Setup" >}}
 {{< /cards >}}
 
 > See also https://github.com/iamjavadali/nextcloudpi
 
-
-#### Youtube FE
-
-There are more alternatives, like:
-
-* https://github.com/christian-fei/my-yt
-
-> Unlicensed | A clean and minimal youtube frontend, without all the ads and whistles
 
 ---
 
@@ -362,10 +358,12 @@ The TechHut:
 * https://www.youtube.com/watch?v=ZXit4mZetWA (Tech By Mat)
 * https://www.youtube.com/@Jims-Garage/videos
 
+One of the creators that motivated me to start sharing content is unfortunately not with us anymore.
 
 * https://www.youtube.com/@NovaspiritTech/videos
 
-> RIP
+> RIP. All the best to his soul.
+
 
 ### Outro
 
