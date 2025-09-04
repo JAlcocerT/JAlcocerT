@@ -2,15 +2,15 @@
 title: "Which DB is for me?"
 date: 2025-08-11
 draft: false
-tags: ["DataBases","D&A","DBCode","SelfHosting/HomeLab"]
-description: 'Pros and Cons of popular DBs: SQlite, PostgreSQL, mariaDB and their containers'
+tags: ["DataBases","D&A","DBCode","SelfHosting/HomeLab","DBeaver"]
+description: 'Pros and Cons of popular DBs: SQlite, PostgreSQL, MariaDB and their containers'
 url: 'databases-101'
 ---
 
 
 **TL;DR:** 
 
-A Recap on popular DBs, for SelfHosters and BackEnd Devs.
+A Recap on popular DBs, for SelfHosters and Back-End Devs.
 
 > For D&A overview see [this post](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/).
 
@@ -241,9 +241,6 @@ Technical Debt Assessment
 
 {{% /details %}}
 
-
-
-
 **Connecting to PG containers**
 
 ```sh
@@ -269,29 +266,41 @@ To list the dbs:
 docker compose -f ./devops/compose.local.yaml exec sdlc-postgres sh -lc 'PGPASSWORD="$SDLC_POSTGRES_DEFAULT_PASSWORD" psql -h localhost -U "$SDLC_POSTGRES_DEFAULT_USER" -d "$SDLC_POSTGRES_DEFAULT_DB" -c "CREATE SCHEMA IF NOT EXISTS app;"'
 ```
 
-
 Initialization script: 
 
 ```sh
 docker compose -f ./devops/compose.local.yaml run --rm sdlc-postgres-init --url=jdbc:postgresql://sdlc-postgres:5432/postgres --changelog-file=changelog/init.sql update -Dingestion_db_name=ingestion
 ```
 
-
 The primary difference lies in their architecture and how they handle concurrency:
 
 ### PostgreSQL: Concurrent Writes
 
-PostgreSQL is a client-server database. It's designed to handle a high volume of concurrent write operations from multiple clients. It achieves this using a sophisticated system called **Multi-Version Concurrency Control (MVCC)**, along with row-level locking. This allows many users to write to different rows in a table at the same time without blocking each other. This is crucial for applications with many users or services that need to write data simultaneously.
+PostgreSQL is a client-server database. It's designed to handle a high volume of concurrent write operations from multiple clients.
+
+It achieves this using a sophisticated system called **Multi-Version Concurrency Control (MVCC)**, along with row-level locking. 
+
+This allows many users to write to different rows in a table at the same time without blocking each other. 
+
+This is crucial for applications with many users or services that need to write data simultaneously.
 
 ### SQLite: Single Writer
 
-SQLite is an embedded, file-based database. It's designed for single-user or low-concurrency scenarios. By default, SQLite enforces a **single writer lock** on the entire database file. While any number of clients can read from the database concurrently, only one can write at any given moment. Other write attempts must wait their turn or will fail with a "database is locked" error.
+SQLite is an embedded, file-based database.
 
-This limitation makes SQLite a poor choice for high-concurrency, write-heavy applications. However, for a single process writing to the database, SQLite can be very fast, often faster than PostgreSQL due to the absence of network latency and inter-process communication overhead.
+It's designed for single-user or low-concurrency scenarios. By default, SQLite enforces a **single writer lock** on the entire database file.
 
-No, 10,000 operations per second is not a realistic baseline for SQLite, especially for write operations. The throughput for both SQLite and PostgreSQL varies dramatically depending on the workload, hardware, and configuration.
+While any number of clients can read from the database concurrently, only one can write at any given moment. 
 
-***
+Other write attempts must wait their turn or will fail with a "database is locked" error.
+
+This limitation makes SQLite a poor choice for high-concurrency, write-heavy applications. 
+
+However, for a single process writing to the database, SQLite can be very fast, often faster than PostgreSQL due to the absence of network latency and inter-process communication overhead.
+
+No, 10,000 operations per second is not a realistic baseline for SQLite, especially for write operations. 
+
+> The throughput for both SQLite and PostgreSQL varies dramatically depending on the workload, hardware, and configuration.
 
 ### SQLite Throughput
 
@@ -299,41 +308,38 @@ For **writes**, SQLite is limited by its single-writer architecture. On average 
 
  However, a single, properly optimized write transaction (using a `BEGIN...COMMIT` block for bulk inserts) can achieve tens of thousands of inserts per second. For reads, SQLite is extremely fast, often capable of **hundreds of thousands of reads per second** due to a lack of network latency and in-process execution.
 
-***
-
 ### PostgreSQL Throughput
 
 PostgreSQL is a client-server database designed for high concurrency. 
 
-Its throughput is much higher and scales with your hardware. For writes, a properly tuned PostgreSQL instance can easily handle **tens of thousands of transactions per second** on a powerful server. For reads, especially simple queries that fit in memory, it can also achieve **hundreds of thousands of queries per second**.
+Its throughput is much higher and scales with your hardware. For writes, a properly tuned PostgreSQL instance can easily handle **tens of thousands of transactions per second** on a powerful server. 
+
+For reads, especially simple queries that fit in memory, it can also achieve **hundreds of thousands of queries per second**.
 
 The key difference is that PostgreSQL can sustain these high write volumes from multiple concurrent clients, while SQLite cannot.
 
 ## SQLite vs PostgreSQL
 
-
 Both SQLite and PostgreSQL are powerful databases, but they are built for different purposes.
 
 The choice between them depends on the specific needs of your application, especially regarding concurrency and scale.  
-
-***
 
 **SQLite**
 
 SQLite is an **embedded, serverless, file-based** database. It's an excellent choice for lightweight, single-user applications or read-heavy workloads with low write concurrency.
 
 Pros:
+
 * **Zero Configuration**: There's no server to set up. The entire database is a single file on disk, making it incredibly easy to use.
 * **Portability**: Since it's just a single file, you can easily copy and move the database. This is ideal for desktop apps, mobile apps, or local development environments.
 * **Fast Reads**: Without the overhead of a client-server architecture, SQLite can perform read operations very quickly.
 * **Small Footprint**: The library is very small, making it great for resource-constrained devices like IoT or mobile devices.
 
 Cons:
+
 * **Limited Concurrency**: SQLite's main drawback is its lack of concurrent write support. Only one process can write to the database at a time, which can be a bottleneck for multi-user web applications.
 * **Less Secure**: It lacks built-in user management, permissions, and network security features, as it's designed to be accessed locally by a single application.
 * **Fewer Advanced Features**: It has a simpler feature set compared to PostgreSQL, lacking things like advanced replication, materialized views, and a wide variety of data types.
-
-***
 
 **PostgreSQL**
 
@@ -353,6 +359,11 @@ Cons:
 
 ## MariaDB
 
+I like to bring mariaDB to any selfhosting stack.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml" title="NextCloud Config File 🐳 ↗"  >}}
+{{< /cards >}}
 
 ---
 
@@ -397,9 +408,9 @@ ext install DBCode.dbcode
 
 {{< /details >}}
 
+* **DBeaver**: A universal database tool for developers and administrators. 
 
-
-* **DBeaver**: A universal database tool for developers and administrators. It's cross-platform and supports virtually any database that has a JDBC driver, including PostgreSQL, MySQL, SQLite, and many others.
+It's cross-platform and supports virtually any database that has a JDBC driver, including PostgreSQL, MySQL, SQLite, and many others.
 
 > It features a SQL editor, ER diagrams, and data export/import capabilities.
 
@@ -412,7 +423,7 @@ flatpak install flathub io.dbeaver.DBeaverCommunity
 
 ---
 
-### Database Schema Migration 🚀
+### Database Schema Migration
 
 These tools help you manage and version-control your database schema changes in a programmatic, repeatable way, which is crucial for modern DevOps practices.
 

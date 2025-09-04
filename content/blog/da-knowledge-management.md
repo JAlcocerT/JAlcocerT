@@ -19,7 +19,7 @@ But how people do this in a PRO and private way?
 2. Trilium
 3. Joplin
 
-With notes it seems that all comes down to: just markdown (vs) more features and locking
+With notes it seems that [all comes down to](#the-plain-text-philosophy-vs-database-philosophy): just markdown (vs) more features and locking
 
 ```sh
 sudo snap install joplin-desktop
@@ -90,7 +90,7 @@ The Verdict
 
 ## FAQ
 
-Yes, the Logseq Android app stores its notes as local plain-text Markdown files on your phone. 
+The Logseq Android app stores its notes as local plain-text Markdown files on your phone. 
 
 This is a core design principle of Logseq, which is to prioritize user privacy and control by keeping your data on your own device.
 
@@ -106,57 +106,9 @@ Regarding syncing with a server, there are a few options, and this is where it g
     * **Local Storage Limitation:** Traditionally, the web app version of Logseq relies on the browser's File System Access API, which means it still stores the files locally on the device you are using the browser on. This makes it difficult to have a single, server-side source of truth for your notes.
     * **Workarounds:** Some users have found workarounds, often involving running Logseq in a Docker container and using a mounted volume to store the notes on the server's file system. This allows for a more centralized setup, but it can be technically complex to set up and manage, and some features like plugins might not be fully supported.
 
-In summary, the Logseq Android app stores your notes locally. While you can deploy a self-hosted web app, the easiest and most common ways to sync your notes with a server are either through the official Logseq Sync service or by using a third-party file synchronization tool like Syncthing.
+In summary, the Logseq Android app stores your notes locally. 
 
-
-
-### TinyAuth and Nextcloud Android App
-
-This is an excellent question and it's a critical point to understand when self-hosting and trying to integrate with mobile apps.
-
-The short answer is: **Yes, the same problem exists with Authelia, Okta, and most other external identity providers, but the solution is different.**
-
-TinyAuth is a simple "forward auth" proxy. 
-
-It just redirects the user to a basic login page. More sophisticated identity providers like Authelia and Okta use a standard known as **OpenID Connect (OIDC)**.
-
-### The Problem with "Forward Auth" Proxies
-
-The issue you had with TinyAuth is fundamental to how "forward auth" works. 
-
-The reverse proxy intercepts every request and says, "Nope, you have to log in first."
-
-Mobile apps don't understand this redirection; they just expect to talk directly to the server's API endpoints. Since they can't handle the redirect to the login page, the authentication fails.
-
-### The Solution: Using OpenID Connect (OIDC)
-
-Instead of using a forward auth proxy, Nextcloud and other modern web applications are designed to integrate directly with external identity providers (IdPs) using protocols like **OpenID Connect (OIDC)** or **SAML**.
-
-Here's how this changes the authentication flow:
-
-1.  **Nextcloud handles the authentication:** You install the Nextcloud "OpenID Connect user backend" app (or "Social Login" app) from the Nextcloud app store.
-2.  **Redirect to the IdP:** When a user clicks "Log in with Authelia" on the Nextcloud web login page, Nextcloud generates an authentication request and redirects the user's browser to the Authelia server.
-3.  **Authentication and Redirection:** The user authenticates with Authelia (e.g., enters username/password, completes 2FA). After a successful login, Authelia sends the user back to Nextcloud with a special token.
-4.  **Token Exchange:** Nextcloud receives this token, verifies it with Authelia, and then creates a user session for the authenticated user.
-
-This approach works great for web browsers because they are designed to handle redirects.
-
-### What about the Mobile App?
-
-The Nextcloud Android app cannot perform the full OIDC redirect flow itself. It also doesn't know how to talk to Authelia directly. So, how does it authenticate?
-
-The Nextcloud mobile app is specifically built to use Nextcloud's built-in authentication mechanisms, even when an external IdP is in use. There are two primary ways it can do this:
-
-1.  **Nextcloud's "App Passwords":** This is the most common method. You log in to Nextcloud via the browser (authenticating with Authelia first), and then go to your user settings to generate an "app password." This password is a long, randomly generated string that is unique to the device and bypasses the external IdP. The mobile app then uses this app password to authenticate directly against the Nextcloud server.
-2.  **OIDC Mobile App Flow (Less Common):** Some identity providers and apps are beginning to support a more modern OIDC flow specifically for native mobile apps. This involves a browser-like view opening within the app, completing the OIDC flow, and then passing the token back to the app. While this is the future, it's not the default or most common approach with Nextcloud right now, and support for it can be hit-or-miss depending on the specific combination of Nextcloud, the mobile app, and the IdP.
-
-So, to summarize:
-
-* **TinyAuth-style "forward auth" breaks mobile apps** because they don't understand the redirection.
-* **Nextcloud can work with OIDC providers like Authelia and Okta**, but it does so by managing the authentication flow itself and redirecting the browser.
-* **The Nextcloud mobile app typically does not use the OIDC flow.** It relies on either a username/password combination or, more securely, a special **app password** that is generated within Nextcloud after you have authenticated via the web.
-
-Therefore, regardless of whether you use TinyAuth, Authelia, or Okta, the solution for the Nextcloud Android app remains the same: use an **app password**. This is the intended and most reliable way for third-party clients to connect to your Nextcloud instance when external authentication is enabled.
+While you can deploy a self-hosted web app, the easiest and most common ways to sync your notes with a server are either through the official Logseq Sync service or by using a third-party file synchronization tool like Syncthing.
 
 
 ### What it is WYSIWYG
@@ -173,16 +125,88 @@ The editor doesn't hide the symbols; it displays them as you type. Many develope
 
 * **Example:** You type `## My Heading` and see exactly `## My Heading`. The editor might add some syntax highlighting to color the `##`, but the symbols remain visible.
 
-***
 
 #### WYSIWYG Editor
 
-**WYSIWYG** (an acronym for **W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) is a mode where the editor immediately renders the formatted text as you type. It hides the Markdown symbols, so you don't see the raw syntax. For instance, when you type `**bold text**`, the editor will instantly display **bold text** with the two asterisks hidden.  This style is more intuitive for users who are not familiar with Markdown syntax and resembles a traditional word processor.
+**WYSIWYG** (an acronym for **W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) is a mode where the editor immediately renders the formatted text as you type. It hides the Markdown symbols, so you don't see the raw syntax. For instance, when you type `**bold text**`, the editor will instantly display **bold text** with the two asterisks hidden.  
+
+This style is more intuitive for users who are not familiar with Markdown syntax and resembles a traditional word processor.
 
 * **Example:** You type `## My Heading` and as soon as you finish the line, it turns into a large, bold heading.
 
-***
+
 
 ### The Best of Both Worlds: Hybrid Editors
 
-Many modern editors offer a **hybrid approach**. These editors might start as a WYSIWYG editor but reveal the Markdown syntax when you click on or edit a specific line. This allows for the speed of a visual editor while still giving you the ability to fine-tune the raw Markdown when needed.
+Many modern editors offer a **hybrid approach**. These editors might start as a WYSIWYG editor but reveal the Markdown syntax when you click on or edit a specific line. 
+
+This allows for the speed of a visual editor while still giving you the ability to fine-tune the raw Markdown when needed.
+
+---
+
+## Outro
+
+I was thinking to open to the public my nextcloud app and put TinyAuth on top of it.
+
+In that way I could sync the LogSeq markdown notes between my devices.
+
+But its not that easy when I thought on [how the authentication works](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#whats-forward-auth) for mobile apps.
+
+### TinyAuth and Nextcloud Android App
+
+This is an excellent question and it's a critical point to understand when self-hosting and trying to integrate with mobile apps.
+
+The short answer is: **Yes, the same problem exists with Authelia, Okta, and most other external identity providers, but the solution is different.**
+
+TinyAuth is a simple "forward auth" proxy. 
+
+It just redirects the user to a basic login page.
+
+More sophisticated identity providers like Authelia and Okta use a standard known as **OpenID Connect (OIDC)**.
+
+**The Problem with "Forward Auth" Proxies**
+
+The issue you had with TinyAuth is fundamental to how "forward auth" works. 
+
+The reverse proxy intercepts every request and says, "Nope, you have to log in first."
+
+Mobile apps don't understand this redirection; they just expect to talk directly to the server's API endpoints. 
+
+Since they can't handle the redirect to the login page, the authentication fails.
+
+**The Solution: Using OpenID Connect (OIDC)**
+
+Instead of using a forward auth proxy, Nextcloud and other modern web applications are designed to integrate directly with external identity providers (IdPs) using protocols like **OpenID Connect (OIDC)** or **SAML**.
+
+Here's how this changes the authentication flow:
+
+1.  **Nextcloud handles the authentication:** You install the Nextcloud "OpenID Connect user backend" app (or "Social Login" app) from the Nextcloud app store.
+2.  **Redirect to the IdP:** When a user clicks "Log in with Authelia" on the Nextcloud web login page, Nextcloud generates an authentication request and redirects the user's browser to the Authelia server.
+3.  **Authentication and Redirection:** The user authenticates with Authelia (e.g., enters username/password, completes 2FA). After a successful login, Authelia sends the user back to Nextcloud with a special token.
+4.  **Token Exchange:** Nextcloud receives this token, verifies it with Authelia, and then creates a user session for the authenticated user.
+
+This approach works great for web browsers because they are designed to handle redirects.
+
+**What about the Mobile App?**
+
+The Nextcloud Android app cannot perform the full OIDC redirect flow itself. 
+
+It also doesn't know how to talk to Authelia directly.
+
+So, how does it authenticate?
+
+The Nextcloud mobile app is specifically built to use Nextcloud's built-in authentication mechanisms, even when an external IdP is in use. 
+
+There are two primary ways it can do this:
+
+1.  **Nextcloud's "App Passwords":** This is the most common method. You log in to Nextcloud via the browser (authenticating with Authelia first), and then go to your user settings to generate an "app password." This password is a long, randomly generated string that is unique to the device and bypasses the external IdP. The mobile app then uses this app password to authenticate directly against the Nextcloud server.
+
+2.  **OIDC Mobile App Flow (Less Common):** Some identity providers and apps are beginning to support a more modern OIDC flow specifically for native mobile apps. This involves a browser-like view opening within the app, completing the OIDC flow, and then passing the token back to the app. While this is the future, it's not the default or most common approach with Nextcloud right now, and support for it can be hit-or-miss depending on the specific combination of Nextcloud, the mobile app, and the IdP.
+
+So, to summarize:
+
+* **TinyAuth-style "forward auth" breaks mobile apps** because they don't understand the redirection.
+* **Nextcloud can work with OIDC providers like Authelia and Okta**, but it does so by managing the authentication flow itself and redirecting the browser.
+* **The Nextcloud mobile app typically does not use the OIDC flow.** It relies on either a username/password combination or, more securely, a special **app password** that is generated within Nextcloud after you have authenticated via the web.
+
+Therefore, regardless of whether you use TinyAuth, Authelia, or Okta, the solution for the Nextcloud Android app remains the same: use an **app password**. This is the intended and most reliable way for third-party clients to connect to your Nextcloud instance when external authentication is enabled.

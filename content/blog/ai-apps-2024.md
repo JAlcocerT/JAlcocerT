@@ -8,7 +8,7 @@ description: 'How to get your custom MultiChat, Youtube Summarizer and more read
 url: 'selfhosting-python-ai-apps-caddy'
 ---
 
-A recap on Python AI Apps that I have been working on during 2024.
+A recap on **Python AI Apps** that I have been working on during 2024.
 
 The goal of **this post** is:
 
@@ -206,7 +206,6 @@ This is it
 See how I have applied these for the Streamlit Multichat: https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat
 {{< /callout >}}
 
-
 ---
 
 ## Conclusion
@@ -247,15 +246,9 @@ ssh ubuntu@57.128.public.ip
 
 ### HTTPS Options for The MultiChat Project
 
-
 {{< callout type="info" >}}
 [Examples of Docker Config files](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Project_MultiChat) for **Multichat**: with NGINX/Cloudflare, Traefik and Caddy.
 {{< /callout >}}
-
-### Thanks To
-
-* https://akashrajpurohit.com/blog/setup-caddy-with-automatic-ssl-certificates-with-cloudflare/
-* https://akashrajpurohit.com/blog/setup-authelia-for-sso-authentication/
 
 
 ---

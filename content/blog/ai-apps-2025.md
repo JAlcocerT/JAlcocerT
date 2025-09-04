@@ -53,6 +53,11 @@ See https://github.com/mumble-voip/mumble
 
 {{% /details %}}
 
+Thanks To:
+
+* https://akashrajpurohit.com/blog/setup-caddy-with-automatic-ssl-certificates-with-cloudflare/
+* https://akashrajpurohit.com/blog/setup-authelia-for-sso-authentication/
+
 ### How to Back Up my Server?
 
 Duplicati to other location (HD / Mega, One drive, s3...)

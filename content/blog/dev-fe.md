@@ -377,14 +377,21 @@ The IdP is the system that manages user identities and is responsible for verify
 
 > It's the central authority that holds the user's information and confirms that they are who they claim to be.
 
+How different authentication models interact?
 
-You've asked a great question that gets to the heart of how different authentication models interact. Yes, using a tool like Authelia on top of your web app login is fundamentally different from the PocketBase HTTP cookie approach. The key difference is the layer at which authentication is handled.
+Ysing a tool like Authelia on top of your web app login is fundamentally different from the PocketBase HTTP cookie approach.
+
+The key difference is the layer at which authentication is handled.
 
 ### Authelia vs PB
 
 **Authelia's Role (Forward Auth)**
 
-Authelia is a **centralized authentication and authorization server** designed to work with a **reverse proxy** (like Cloudflare, NGINX, or Traefik) via the **forward auth** pattern. It intercepts every request to your web app *before* the request ever reaches the app itself. The login screen you see is Authelia's, not your web app's.
+Authelia is a **centralized authentication and authorization server** designed to work with a **reverse proxy** (like Cloudflare, NGINX, or Traefik) via the **forward auth** pattern.
+
+It intercepts every request to your web app *before* the request ever reaches the app itself. 
+
+The login screen you see is Authelia's, not your web app's.
 
 1.  A user tries to access `your-app.com`.
 2.  The reverse proxy intercepts the request and sends a sub-request to Authelia asking, "Is this user allowed to see this page?"
@@ -392,7 +399,11 @@ Authelia is a **centralized authentication and authorization server** designed t
 4.  If the user is not authenticated, Authelia sends a redirect to its own login page.
 5.  If the user is authenticated, Authelia responds with a "success" signal, and the reverse proxy then forwards the original request to your web app.
 
-Your web app itself doesn't need to know anything about user sessions, cookies, or authentication. It simply trusts that any request it receives has already been authenticated by the reverse proxy. This is why it's a very powerful pattern for securing applications that don't have their own built-in authentication, such as dashboards or static sites. 
+Your web app itself doesn't need to know anything about user sessions, cookies, or authentication. 
+
+It simply trusts that any request it receives has already been authenticated by the reverse proxy. 
+
+This is why it's a very powerful pattern for securing applications that don't have their own built-in authentication, such as dashboards or static sites. 
 
 **PocketBase's HTTP Cookie Approach**
 
@@ -423,8 +434,6 @@ PocketBase is like each of your applications having its own separate lock and ke
 {{< callout type="info" >}}
 While both methods use an HTTP cookie, the purpose and security model behind that cookie are completely different.
 {{< /callout >}}
-
-
 
 
 ### How the IdP Fits In
@@ -576,7 +585,7 @@ This pattern is especially popular in **microservices architectures** because it
 Instead of each microservice having to implement its own authentication, they can trust the reverse proxy to handle it for them. 
 
 {{< callout type="info" >}}
-The microservices themselves can be stateless and simple, knowing that any request they receive is already authenticated. 
+The [microservices](https://jalcocert.github.io/JAlcocerT/IT-concepts/) themselves can be stateless and simple, knowing that any request they receive is already authenticated. 
 {{< /callout >}}
 
 #### How It Differs From an HTTP Cookie
@@ -594,6 +603,7 @@ Here's how they differ:
 * **HTTP Cookie**: An HTTP cookie is a **small piece of data** that a server sends to a web browser. The browser stores it and automatically sends it back with every subsequent request to the same domain. Cookies are the most common way to maintain a user's session state.
     * **Function**: Stores authentication information (like a session ID or a token) on the client side.
     * **Where it lives**: In the user's browser, tied to a specific domain.
+
 * **Forward Auth**: Forward auth is the **architectural pattern** that leverages the cookie. It describes **what happens** to that cookie and the request it's attached to.
 
 The key distinction is in **responsibility**. 
@@ -613,15 +623,17 @@ Forward auth externalizes this validation process, making the entire system more
 
 #### Why Forward Auth Is More Secure
 
-Forward auth is generally considered more secure because it centralizes and abstracts the authentication logic away from your application's core services. This prevents each individual service from needing to handle its own authentication, reducing the attack surface.
+Forward auth is generally considered more secure because it centralizes and abstracts the authentication logic away from your application's core services. 
+
+This prevents each individual service from needing to handle its own authentication, reducing the attack surface.
 
 1.  **Centralized Security Logic**: Instead of every microservice being responsible for validating authentication cookies or tokens, a single, dedicated gateway (like a Cloudflare Worker or a reverse proxy) handles this critical task. This reduces the risk of security vulnerabilities caused by inconsistent or incorrect implementations across different services.
+
 2.  **Stateless Microservices**: The backend services don't need to know anything about the user's session or authentication. They receive a request from the gateway that has already been validated. This means the services are simpler, more scalable, and less prone to security flaws.
+
 3.  **Protection Against Direct Access**: The forward auth proxy can be configured to be the *only* entry point to your microservices. It prevents unauthorized requests from bypassing the security layer and hitting a service directly, which is a common vector for attack.
+
 4.  **Enforced Security Policies**: The gateway can enforce security policies like rate limiting, bot detection, and WAF (Web Application Firewall) rules before a request even reaches your backend. This adds another layer of defense against malicious traffic.
-
-
----
 
 ### PocketBase Alternatives to HTTP Cookies
 

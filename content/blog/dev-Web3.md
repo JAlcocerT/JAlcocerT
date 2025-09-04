@@ -2,7 +2,7 @@
 title: "Web3 Simplified - Why and How to Get your Web3"
 date: 2021-12-19T23:20:21+01:00
 draft: false
-tags: ["Web"]
+tags: ["Web","IPFS vs P2P","ENS and Unestopable Domains","CID"]
 description: 'Building your first Web3 from scratch.'
 url: 'guide-web3'
 ---
@@ -10,7 +10,9 @@ url: 'guide-web3'
 
 *Everyone* talks about Web3. 
 
-I was wondering if I could use some knowledge that I got while creating static sites with HUGO and its actually pretty simple
+I was wondering if I could use some knowledge that I got while creating static sites with HUGO and its actually pretty simple.
+
+Along the way, got to understand the difference between where something is and **what something is** thanks to the [IPFS concept](#about-ipfs)
 
 ---
 
@@ -41,13 +43,16 @@ Lets explore some potential of the **next generation of the internet, the web3**
 
 ### Unstoppable Domains (UDs) 🚀
 
-**Unstoppable Domains** are Non-Fungible Tokens (NFTs), decentralized, and revolutionize the concept of domain ownership. Unlike traditional domain names (e.g., .com), UDs are stored in the owner's wallet like cryptocurrency, providing full control and autonomy. Once acquired, there's no need to worry about yearly renewal fees.
+**Unstoppable Domains** are Non-Fungible Tokens (NFTs), decentralized, and revolutionize the concept of domain ownership. 
 
-Plus, no third party can alter or seize them, ensuring unparalleled digital ownership.
+Unlike traditional domain names (e.g., .com), UDs are stored in the owner's wallet like cryptocurrency, providing full control and autonomy. 
+
+Once acquired, there's no need to worry about yearly renewal fees.
+
+> Plus, no third party can alter or seize them, ensuring digital ownership.
 
 ### IPFS: InterPlanetary File System 🛰️
 
-Thanks to https://mariushosting.com/synology-install-ipfs-with-portainer/
 
 **IPFS**, short for InterPlanetary File System, is a peer-to-peer hypermedia protocol with a visionary goal: to preserve and expand humanity's knowledge.
 
@@ -55,8 +60,9 @@ By decentralizing content storage and distribution, IPFS aims to make the web mo
 
 It operates on a distributed network, where files are addressed by their content, not their location, facilitating faster and more efficient data retrieval.
 
-Join the Web3 revolution today and explore the limitless possibilities these innovative technologies offer!
+> Thanks to https://mariushosting.com/synology-install-ipfs-with-portainer/
 
+> > More about [IPFS below](#about-ipfs).
 
 
 ### Points to Consider 🧐
@@ -137,9 +143,13 @@ The ENS ([ERC-721 Token](https://fossengineer.com/crypto-101-concepts-for-data-a
 
 This is how it looks an [**U**nestopable **D**omain at a wallet in polygonscan](https://polygonscan.com/address/0x7dcd1f086b6f630e1e2310d31371a8078028f5a7#tokentxnsErc721).
 
-Thats right, it is the `jalcocert.blockchain` UD.
+Thats right, it is the `jalcocert.blockchain` UD:
 
-And I dont have to renew it ever again.
+![alt text](/blog_img/crypto/polygon-unestoppabledomain.png)
+
+> And I dont have to renew it ever again.
+
+---
 
 ## Conclusion
 
@@ -157,6 +167,85 @@ Learn more about Web3 at - https://learnweb3.io
 
 You can use a **simple SSG**, which will generate the **html, css and js** needed for the Web3 to be deployed and served.
 
-* Some Free tools to create a web3:
-    * HUGO
-    * Astro
+> Some Free tools to create a web3: HUGO, Astro, Jekyll...
+
+### ENS vs Unstoppable Domains
+
+Ethereum Name Service (ENS) is like a decentralized, unstoppable version of the traditional Domain Name System (DNS), but it differs from Unstoppable Domains in a few key ways.
+
+While both projects create domain names on a blockchain, they have different models for ownership and fee structures.
+
+| Feature | Ethereum Name Service (ENS) | Unstoppable Domains |
+| :--- | :--- | :--- |
+| **Blockchain** | Ethereum | Multiple blockchains (e.g., Polygon, Ethereum) |
+| **Domain Ownership** | **Leased**. You pay a yearly renewal fee to own the domain. If you don't renew, it can expire and be purchased by someone else. | **Owned outright**. You pay a one-time fee and own the domain forever, like a non-fungible token (NFT). |
+| **Primary Use** | Maps human-readable names (e.g., `satoshi.eth`) to long, alphanumeric crypto addresses. Also, it can link to decentralized websites. | Similar to ENS, it maps names (e.g., `satoshi.crypto`, `satoshi.nft`) to crypto addresses. Also, it focuses on providing a universal identity and login across Web3. |
+| **Goal** | To build a decentralized naming system that is fully open and governed by the community through a DAO (Decentralized Autonomous Organization). | A private company that aims to simplify Web3 identities and domains with a **one-time purchase model**. |
+
+**The "Unstoppable" Aspect**
+
+The term "unstoppable" in both cases refers to the fact that these domains are stored on a blockchain. 
+
+This makes them:
+
+* **Censorship-Resistant:** Once a domain is registered, no single company, government, or central authority can take it down or seize it.
+* **Tamper-Proof:** The ownership record is stored on an immutable public ledger, making it nearly impossible to alter or counterfeit.
+* **Decentralized:** Control and management are not in the hands of a single entity, unlike traditional DNS registrars like GoDaddy or Namecheap.
+
+The main difference is that Unstoppable Domains emphasizes the **lifetime ownership** model, which is why it's more synonymous with the term "unstoppable domain." 
+
+> However, ENS is also "unstoppable" in its own right, just with a different economic model based on renewals.
+
+### About IPFS
+
+IPFS, or the **InterPlanetary File System**, is a peer-to-peer network protocol designed to store and share data in a distributed way. 
+
+Unlike the traditional web, which relies on a centralized location (a server) to host content, **IPFS uses a content-addressing system**.
+
+Instead of asking "where" the content is located (like a URL), **it asks "what" the content is**, using a cryptographic hash to identify it uniquely. 
+ 
+This means multiple peers can host the same content, and a user can retrieve it from any peer that has it.
+
+**How IPFS Works**
+
+Traditional web protocols like **HTTP** (Hypertext Transfer Protocol) are location-based. When you type a URL, your browser sends a request to a specific server's IP address to get the content. If that server is down or the content is moved, the link breaks. 
+
+IPFS, on the other hand, is content-addressed. When you add a file to the IPFS network, it's broken into smaller chunks, and each chunk is given a unique cryptographic hash.
+
+The main file is then represented by a single **content identifier (CID)**, which is the hash of its root chunk.
+
+To retrieve a file, you request the content by its CID, and the IPFS network finds the peers that have the data chunks. 
+
+You can then download the chunks from multiple peers simultaneously, which can be faster and more resilient. 
+
+> Nothing new for P2P users :)
+
+**Key Features & Benefits ✨**
+
+* **Decentralization:** Data isn't stored in a single location, making it resistant to censorship and single points of failure. If one server goes down, the content can still be accessed from other peers.
+* **Resilience & Durability:** Because content is replicated across multiple nodes, it's more durable and less likely to be lost. This is particularly useful for long-term data storage.
+* **Efficiency:** By retrieving content from multiple nearby peers, IPFS can be faster and more bandwidth-efficient than traditional methods, especially for large files or in regions with limited connectivity.
+* **Censorship Resistance:** Since the content isn't tied to a specific server, it's much harder for governments or other entities to block access to it.
+
+#### IPFS vs Torrent
+
+IPFS is similar to BitTorrent in that both are **peer-to-peer (P2P)** protocols that allow users to share files without relying on a centralized server.
+
+However, they have fundamental differences in how they handle data and their overall purpose.
+
+**Key Similarities**
+
+* **P2P Architecture:** Both protocols operate on a decentralized network where users' computers (nodes) connect directly to each other to share data.
+* **File Chunking:** To make transfers more efficient, both IPFS and BitTorrent break files into smaller pieces (chunks). This allows a user to download different parts of a file from multiple peers simultaneously.
+* **Seeding/Pinning:** In both systems, a file remains available as long as at least one user is hosting it. In BitTorrent, this is called "seeding," while in IPFS, it's called "pinning."
+
+**How They Differ**
+
+| Feature | IPFS (InterPlanetary File System) | BitTorrent |
+| :--- | :--- | :--- |
+| **Addressing** | **Content-based:** Files are identified by a cryptographic hash (**CID**) of their content. The address is the content itself. | **Location-based:** A file is identified by a `.torrent` file or magnet link, which points to a specific "swarm" of peers. |
+| **Data Structure** | A single, global, **versioned file system**. It's designed to be a unified web where files can be linked and reused. | A protocol for individual **one-off file transfers**. Each torrent is its own separate "swarm." |
+| **Deduplication** | Automatically **deduplicates content** at the chunk level. If two files contain the same chunk, it's only stored once on the network, saving space. | Does not have built-in deduplication. A user downloading a file with the same chunk from a different torrent will download it again. |
+| **Flexibility** | Designed for a wider range of use cases, including hosting **dynamic websites**, applications, and streaming. | Primarily a **file-sharing protocol** for static files like movies or software. |
+
+In short, while both are P2P protocols for file sharing, **IPFS is a content-addressed system designed to be a global, decentralized web, while BitTorrent is a location-addressed system primarily for file distribution.**

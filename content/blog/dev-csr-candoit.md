@@ -31,6 +31,7 @@ Or the CSR + WebSockets
 
 ### MRR Calculator
 
+It can also do more complex stuff, like FIRE calculators with kind of loops.
 
 ### French Amortization
 
@@ -40,6 +41,7 @@ And before, I was using Python backend logic to provide the results via a Stream
 
 But hey, for this kind of things you dont need to consume server resources!
 
+---
 
 ## Conclusions
 

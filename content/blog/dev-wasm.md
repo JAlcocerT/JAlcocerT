@@ -21,8 +21,8 @@ Keep reading if you like portability and serverless/edge computing.
 Context for WASM, in case you have been doing CSR projects recently, like I did:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml" title=" | Post ↗"  >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb_traefik.yml" title="| POST ↗"  >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/csr-and-js" title="CSR can do That | Post ↗"  >}}
+  {{< card link="" title="| POST ↗"  >}}
 {{< /cards >}}
 
 
@@ -65,11 +65,13 @@ graph TD;
 > Thanks to [DevOps Toolkit](https://www.youtube.com/watch?v=uZ8xI26sno8)
 
 
-WebAssembly (WASM) is not a programming language in the way that C or JavaScript are. It's a **compilation target**, a low-level binary format that a browser's WASM engine can execute. Think of it as a form of assembly code, but for a virtual machine rather than a specific physical processor.
+WebAssembly (WASM) is not a programming language in the way that C or JavaScript are. It's a **compilation target**, a low-level binary format that a browser's WASM engine can execute.
+
+Think of it as a form of assembly code, but for a virtual machine rather than a specific physical processor.
 
 WASM is very similar to C in concept because C is often used as the source language for code that gets compiled down to WASM.
 
-#### WASM vs. C
+#### WASM vs C
 
 WASM and C are not interchangeable, but they have a strong, symbiotic relationship.
 
@@ -78,7 +80,9 @@ WASM and C are not interchangeable, but they have a strong, symbiotic relationsh
 
 **How they relate**: You write your performance-critical code in a language like C (or Rust, C++, etc.). Then, you use a special compiler (like **Emscripten** for C/C++) to translate that C code into a `.wasm` file. This `.wasm` file is what the browser actually loads and runs.
 
-The reason they are so compatible is that C is a low-level language that gives the programmer direct control over memory, which is exactly what WASM is designed for. This makes C an ideal language for targeting WASM.
+The reason they are so compatible is that C is a low-level language that gives the programmer direct control over memory, which is exactly what WASM is designed for. 
+
+This makes C an ideal language for targeting WASM.
 
 #### Getting Started with WASM
 
@@ -95,7 +99,7 @@ cd emsdk
 source ./emsdk_env.sh
 ```
 
-This compiles the C to ---> html, js, wasm (this is our WASM Module):
+This compiles the `C` to ---> `html, js, wasm` (this is our WASM Module):
 
 ```sh
 #emcc helloworld.c -o helloworld.html
@@ -124,7 +128,7 @@ emcc -o hello.wasm hello.c
 #file hello.wasm
 ```
 
-Create your DockerfileWasm:
+Create your Dockerfile for Wasm:
 
 ```Dockerfile
 FROM scratch
@@ -203,7 +207,6 @@ This approach is highly beneficial because the heavy processing is done on the u
 ## FAQ
 
 ### Interpreted vs Compiled Languages
-
 
 Neither JavaScript nor Python are traditional compiled languages. 
 
