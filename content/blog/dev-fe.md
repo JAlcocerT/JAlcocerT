@@ -73,7 +73,9 @@ It seem all that is just the **beauty of [SPAs](https://github.com/JAlcocerT/ser
 
 Because I got it deployed statically for free at cloudflare pages [like so](https://github.com/JAlcocerT/serverless-invoices/blob/main/Deploy_to_CF.md), with all its features working: https://serverless-invoices.pages.dev/
 
-Its also interesting to see how it works the invoice editor, purely static. Idea for the markdown editor? 
+Its also interesting to see how it works the invoice editor, purely static.
+
+> Idea for a markdown editor? 
 
 Ill have to see also [react-invoice deployed at vercel](https://react-invoice-nu.vercel.app/) or [wikiJS](https://github.com/requarks/wiki) to get more ideas
 

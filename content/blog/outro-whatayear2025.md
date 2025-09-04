@@ -10,7 +10,7 @@ url: 'tech-recap-2025'
 
 **Intro**
 
-This year is been like
+This year is been like a lot of [do](https://nav.al/do)
 
 ![Me during Y2025](/img/kitten-cat.gif#center)
 

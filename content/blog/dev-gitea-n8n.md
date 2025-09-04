@@ -87,19 +87,138 @@ You can do a lot with **GITEA API**, as I covered [here](https://jalcocert.githu
 
 When you get n8n ready, create your API key:
 
+![alt text](/blog_img/GenAI/n8n/n8n-api.png)
+
 Then, get familiar with the docs `https://n8n.jalcocertech.com/api/v1/docs/` as per https://docs.n8n.io/api/
 
 > Its just a Swagger UI!
 
+
+Get your `n8n_api` and `N8N_BASE_URL`:
+
+```sh
+source .env
+#the API  requires auth!
+#curl -s "http://localhost:5678/api/v1/health" | jq .
+```
+
+So you need to go to the swagger UI and authorized the created API:
+
+![alt text](/blog_img/GenAI/n8n/n8n-api-swagger-auth.png)
+
+Only after that, this will work and you will get/pull workflows:
+
+```sh
+  curl -s \
+    -H "X-N8N-API-KEY: $n8n_api" \
+    "$N8N_BASE_URL/api/v1/workflows" | jq .
+```
+
+See
+
+```sh
+curl -s \
+  -H "X-N8N-API-KEY: $n8n_api" \
+  "https://n8n.jalcocertech.com/api/v1/me" | jq .
+```
+
+{{< callout type="info" >}}
+You can build your workflows, or get inspired on n8n JSON people shared 
+{{< /callout >}}
+
+* https://n8n.io/workflows
+* https://github.com/enescingoz/awesome-n8n-templates
+
+> Supercharge your workflow automation with this curated collection of n8n templates! Instantly connect your favorite apps-like Gmail, Telegram, Google Drive, Slack, and more-with ready-to-use, AI-powered automations. Save time, boost productivity, and unlock the true potential of n8n in just a few clicks.
+
+Create a n8n workflow via CLI:
+
+```sh
+#  -H "X-N8N-API-KEY: YOUR_API_KEY" \
+
+curl -s -X POST \
+  -H "Content-Type: application/json" \
+  -H "X-N8N-API-KEY: $n8n_api" \
+  "https://n8n.jalcocertech.com/api/v1/workflows" \
+  -d '{
+    "name": "My API-created workflow",
+    "nodes": [],
+    "connections": {},
+    "active": false
+  }' | jq .
+```
+
+Get the workflowID:
+
+
+
+And activate the wID:
+
+
+Finally, execute the n8n workflow manually:
+
+```sh
+curl -s -X POST \
+  -H "Content-Type: application/json" \
+  "$N8N_BASE_URL/webhook/api-created-hook" \
+  -d '{"hello":"world"}' | jq .
+```
+
+### N8N Example Workflows
+
+With OpenAI, with GeminiAPI
+
+#### Sample 1
+
+* https://n8n.io/workflows/6270-build-your-first-ai-agent/
+
+![alt text](/blog_img/GenAI/n8n/n8n-sample-1.png)
+
+![alt text](/blog_img/GenAI/n8n/n8n-gemini.png)
+<!-- 
+https://www.youtube.com/watch?v=laHIzhsz12E -->
+
+{{< youtube "laHIzhsz12E" >}}
+
+For this one, we need **gemini API**: https://aistudio.google.com/app/apikey
+
+![alt text](/blog_img/GenAI/n8n/gemini-api.png)
+
+```sh
+#source .env
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent" \
+  -H 'Content-Type: application/json' \
+  -H 'X-goog-api-key: GEMINI_API_KEY' \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "Explain how AI works in a few words"
+          }
+        ]
+      }
+    ]
+  }'
+```
+
+#### Sample 2
+
+Get your OpenAI API: https://platform.openai.com/api-keys
+
+With OpenAI: https://n8n.io/workflows/4696-conversational-telegram-bot-with-gpt-5gpt-4o-for-text-and-voice-messages/
+
+* https://n8n.io/workflows/4696-conversational-telegram-bot-with-gpt-5gpt-4o-for-text-and-voice-messages/
+
+
 --- 
 
+
 ## Conclusions
-
-
 
 
 ---
 
 
 ## FAQ
-

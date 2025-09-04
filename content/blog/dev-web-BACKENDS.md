@@ -1,8 +1,8 @@
 ---
 title: "Backends 101"
-date: 2025-09-15T23:20:21+01:00
+date: 2025-09-05T09:20:21+01:00
 draft: false
-tags: ["Dev","Laravel PHP","Python BE fwks","Protected EndPoints","uv"]
+tags: ["Dev","Laravel PHP","Python BE fwks","Protected EndPoints","uv","Database Migration"]
 url: 'backend-alternatives'
 description: 'Backend 101 for your SaaS'
 ---
@@ -23,10 +23,9 @@ But Ive heard a lot of people do cool things with just PHP+jquery.
 Others mention a lot the power of [Laravel](#laravel-101), which uses PHP.
 
 
-
 ## Laravel 101
 
-Laravel is primarily a backend framework, just like Django and Flask in Python.
+Laravel is primarily **a backend framework** of **PHP**, just like Django and Flask in Python.
 
 They all focus on handling the server-side logic, data management, and API creation for web applications.
 
@@ -120,7 +119,6 @@ Here's a breakdown of what makes Laravel so great:
 
 **In simple words, Laravel is like a super-efficient construction crew for building amazing websites and web applications with PHP.** It takes care of the tedious tasks, provides a solid structure, and gives you the tools you need to bring your web development ideas to life.
 
-
 * https://filamentphp.com/
 
 A collection of beautiful full-stack components. The perfect starting point for your next app. 
@@ -174,15 +172,6 @@ So, yes, Laravel is primarily a backend framework, similar to Django and Flask i
 
 However, it distinguishes itself with its elegant syntax, strong focus on developer experience, and a rich set of features tailored for PHP-based web development.
 
-## Other BackEnds
-
-### Python
-
-### C
-
-### JS
-
-JS can do frontend tasks, but also backend!
 
 
 ## Conclusions
@@ -193,11 +182,31 @@ Right? :)
 
 Joking. Some people are doing a lot of money with PHP+jquery.
 
+### Other BackEnds
+
+1. Python, with any of [its webapp frameworks](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/).
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-flask" title="Py Flask | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-streamlit" title="Py Streamlit | Docker Config for your HomeLab 🐋 ↗" >}}
+{{< /cards >}}
+
+2. [JS / TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/) can do frontend tasks, but also backend!
+
+3. Java could do BE as well.
+
+> Even these compiled languages: C/C++ or even Go could do BE!
+
 ### Just try PocketBase
 
 If you are new to this backend stuff...
 
-You might want to consider to go with Pocketbase as BaaS
+You might want to consider to go with [Pocketbase as BaaS](https://jalcocert.github.io/JAlcocerT/pocketbase/)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="Pocketbase Docker Config for your HomeLab 🐋 ↗" >}}
+{{< /cards >}}
 
 ### About fwks and APIs
 
@@ -301,12 +310,16 @@ For example, in a social media API, `/users` could be an endpoint to access user
 
 **Protected endpoints** are API endpoints that require some form of **authentication** and **authorization** before a client can access them.
 
-This is done to prevent unauthorized access to sensitive data or functionality. Without proper credentials, a request to a protected endpoint will be denied.
+This is done to prevent unauthorized access to sensitive data or functionality.
+
+Without proper credentials, a request to a protected endpoint will be denied.
 
 The key differences between a protected and an unprotected endpoint lie in the security measures they employ:
 
 * **Unprotected Endpoints**: These are public and can be accessed by anyone without any special credentials. An example might be an endpoint to retrieve publicly available data, like a list of current news headlines.
-* **Protected Endpoints**: These are private and are only accessible by authenticated and authorized users. To access them, a user might need to provide an **API key**, a **token**, or a **username and password**. A good example is an endpoint to update a user's profile information, which should only be accessible by the user themselves.
+* **Protected Endpoints**: These are private and are only accessible by authenticated and authorized users. To access them, a user might need to provide an **API key**, a **token**, or a **username and password**.
+
+> A good example is an endpoint to update a user's profile information, which should only be accessible by the user themselves.
 
 #### How Protection Works
 
@@ -388,7 +401,9 @@ This approach ensures that your database schema is always in sync with your appl
 
 PocketBase also has a similar, but distinct, approach to database schema management.
 
-PocketBase uses **migrations** as well, but they are handled a bit differently from Django's. Instead of generating Python files from models, PocketBase uses **Go files** that you write manually.
+PocketBase uses **migrations** as well, but they are handled a bit differently from Django's. 
+
+Instead of generating Python files from models, PocketBase uses **Go files** that you write manually.
 
 1.  **Creating Migrations:** You create a new migration file using the `pocketbase migrations create` command. This creates a boilerplate Go file with `up` and `down` functions.
 2.  **Writing Migrations:** You then write the Go code within the `up` function to make schema changes (like creating a collection or adding a field) and the `down` function to reverse those changes. You use PocketBase's Go API to define these changes.

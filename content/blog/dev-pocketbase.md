@@ -61,7 +61,9 @@ Because it provides all of these features out-of-the-box, it's designed to be a 
 
 > **MIT** | Open Source realtime backend in 1 file 
 
-**PocketBase** is an open-source, all-in-one backend for web and mobile applications. It's written in Go, and it's designed to be a single, self-hosted file that provides a complete backend solution out-of-the-box.
+**PocketBase** is an open-source, all-in-one backend for web and mobile applications.
+
+It's written in **Go**, and it's designed to be a single, self-hosted file that provides a complete backend solution out-of-the-box.
 
 Its features include:
 
@@ -1001,7 +1003,7 @@ Dexie.js is a powerful JavaScript library that acts as a **wrapper for IndexedDB
 
 What Dexie.js Does: **Dexie simplifies working with IndexedDB** by providing a much more intuitive, elegant, and developer-friendly API.
 
-> It's like how jQuery simplified DOM manipulation or how a framework simplifies building a web application.
+> It's like how `jQuery` simplified DOM manipulation or how a framework simplifies building a web application.
 
 With Dexie, you can:
 

@@ -698,6 +698,7 @@ So again, be mindful about all the things that can go very wrong with these oper
 
 * https://dapp.quickswap.exchange/farm
 * https://app.uniswap.org/explore/pools
+    * Example of [how to create a position](https://app.uniswap.org/positions/create?currencyA=NATIVE&currencyB=0xdAC17F958D2ee523a2206206994597C13D831ec7&chain=ethereum&hook=undefined&priceRangeState={%22priceInverted%22:false,%22fullRange%22:true,%22minPrice%22:%22%22,%22maxPrice%22:%22%22,%22initialPrice%22:%22%22}&depositState={%22exactField%22:%22TOKEN0%22,%22exactAmounts%22:{}}&step=1)
 
 {{% details title="What if I LP ETH and USDT into Uniswap... 🚀?" closed="true" %}}
 

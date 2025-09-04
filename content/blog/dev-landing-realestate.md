@@ -16,9 +16,7 @@ url: 'real-estate-landing'
 
 Ive been playing quite a lot with PB and quick astro themes lately.
 
-I could not waste the opportunity to make some tech upgrades for a friend.
-
-
+I could not waste the opportunity to make some **tech upgrades** for a friend.
 
 
 ## The Stack
@@ -26,7 +24,6 @@ I could not waste the opportunity to make some tech upgrades for a friend.
 ### New Theme
 
 Its a combination of:
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/real-estate-moi/tree/main/moirealestate-astro-theme" title="Moi Real Estate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro x Flask as CMS" >}}

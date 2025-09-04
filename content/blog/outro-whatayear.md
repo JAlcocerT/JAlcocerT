@@ -192,7 +192,7 @@ It was the year to go [beyond Google Compute Engine](https://jalcocert.github.io
 {{% /steps %}}
 
 
-{{< details title="Starting with a RPi-101 | version 2024 📌" closed="true" >}}
+{{< details title="Starting with a RPi-101 | version FY24 📌" closed="true" >}}
 
 * Get an [OS for the RPi with RPi-Imager](https://jalcocert.github.io/RPi/posts/getting-started/)
   * I suggest BullsEye/Debian11

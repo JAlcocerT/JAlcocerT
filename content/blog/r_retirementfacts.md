@@ -31,7 +31,6 @@ I know that discussing **retirement** can be a controversial topic, depending wi
 
 ![Spanish Historical CashFlow](/blog_img/outro/fry.webp)
 
-
 My goal with that simple app was to bring the math into those conversations, so that we could **leave the emotions/biases aside** in the table and **focus on the data and facts**.
 
 
@@ -39,10 +38,11 @@ My goal with that simple app was to bring the math into those conversations, so 
 **No information exposed on this post/app can be taken as financial recommendations** 
 {{< /callout >}}
 
-These are just my notes on how R/Python can be used to create a calculator app.
+These are just my notes on how R/Python can be used to create a simple calculator app.
 
+## The Logic
 
-## The Logic - How Does it Work?
+How Does it Work?
 
 As I said, I wanted to **keep it simple**.
 

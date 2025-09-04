@@ -1,7 +1,7 @@
 ---
 title: "OOP 101 "
-date: 2025-09-24
-draft: false
+date: 2026-12-31
+draft: true
 tags: ["Dev"]
 description: 'Object Oriented Programming for Python users'
 url: 'object-oriented-programming-101'

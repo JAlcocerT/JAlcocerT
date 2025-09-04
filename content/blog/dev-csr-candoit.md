@@ -20,11 +20,50 @@ Playing around with what [Client Side Rendering](#whats-csr) can do.
 
 CSR can do that.
 
-From that SPA that surprise you and generate your pdf invoices with VUE.
+I should have known that this is possible [when playing with FlexDashboards](https://jalcocert.github.io/JAlcocerT/r-language-101/#flexdashboards).
 
-To that CSR + API Setup
 
-Or the CSR + WebSockets
+{{< details title="BC flexdashboards are static dashboards most of the times 📌" closed="true" >}}
+
+When you [knit](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/) a flexdashboard and deploy it to GitHub Pages, the interactivity comes from **client-side technologies**, specifically JavaScript and HTML.
+
+**R's Role: The Engine that Generates Code**
+
+When you knit your `.Rmd` file, R executes all the code chunks.
+
+It takes your data, your R packages (like `plotly`, `leaflet`, or `DT`), and the `flexdashboard` framework, and compiles everything into **a single, self-contained HTML file**.
+
+The R packages you use for visualization, known as **htmlwidgets**, are specifically designed for this. Instead of just creating a static image, they create the necessary HTML, CSS, and **JavaScript** code that embeds the interactive visualization directly into the final document.
+
+**The HTML File: The Self-Contained Document**
+
+The resulting HTML file contains everything needed to render the dashboard:
+
+* **HTML:** The basic structure of the dashboard layout (rows, columns, pages) is defined by the `flexdashboard` output format.
+* **CSS:** The styling, including colors, fonts, and responsive layout for different screen sizes, is included.
+* **JavaScript:** This is what brings the interactivity. The JS code from packages like `plotly` and `leaflet` is embedded, allowing the viewer's browser to handle interactions like:
+    * **Zooming and panning** on a map or chart.
+    * **Hovering** over data points to show tooltips.
+    * **Sorting and filtering** a table.
+    * **Connecting plots** with `crosstalk` so a selection on one chart filters another.
+
+Because all this code is self-contained within the HTML file, it doesn't need a live R session. Anyone can open the file in a browser, and the interactivity works perfectly, which is why it works so well on a static hosting service like GitHub Pages.
+
+**The Shiny Exception**
+
+The only time a flexdashboard is not fully static is when you explicitly add `runtime: shiny` to your R Markdown header.
+
+In that case, the dashboard becomes a web application that requires a server to run, because the interactivity involves re-running R code in response to user input. This wouldn't work on GitHub Pages, which only hosts static files.
+
+{{< /details >}}
+
+From that [SPA](https://github.com/JAlcocerT/serverless-invoices/blob/main/WHAT_IS_SPA.md) that surprise you and generate your pdf invoices with VUE...
+
+> Im talking about my [serverless invoices fork](https://github.com/JAlcocerT/serverless-invoices) deployed [here](https://serverless-invoices.pages.dev/invoices?lang=en)
+
+...To that CSR + API Setup
+
+Or the CSR + WebSockets *(These allow Real-Time Bi-Directional Communication, as seen on [this post](https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/))*
 
 
 ## CSR Examples
@@ -107,7 +146,7 @@ Using this setup provides several significant security advantages:
 * **Statelessness**: The PocketBase backend and Cloudflare Worker can be configured to be largely stateless, as the necessary session data is contained within the signed token in the cookie. This makes your system highly scalable. 
 
 
-{{< details title="Using Ollama with RAGs 📌" closed="true" >}}
+{{< details title="More about the Auth Stack 📌" closed="true" >}}
 
 This is generally considered a good and secure method for web authentication. 
 
