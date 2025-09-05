@@ -2,7 +2,7 @@
 title: "How to Query AWS s3 buckets data [with Python]"
 date: 2023-08-19
 draft: false
-tags: ["Self-Hosting","Web"]
+tags: ["Self-Hosting","Web","Boto"]
 description: 'Understanding how to use boto to query aws s3 buckets information. Be ready for JSON.'
 url: 'aws-s3-python-boto-queries'
 ---

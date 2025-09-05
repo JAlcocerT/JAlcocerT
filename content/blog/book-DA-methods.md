@@ -127,7 +127,7 @@ You can use **SonarQube**: <https://hub.docker.com/_/sonarqube/tags>
 
 ### CI/CD
 
-Continuous Integration/Continuous Delivery (CI/CD) is a key part of agile software development.
+Continuous Integration/Continuous Delivery (CI/CD) is a key part of **agile software development**.
 
 CI/CD is a set of practices that involves regularly integrating and testing code changes, and automating the process of deploying changes to production. 
 

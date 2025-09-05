@@ -2,11 +2,13 @@
 title: "Big Data Tools [Data Analytics Recap]"
 date: 2025-03-10T19:20:21+01:00
 draft: false
-tags: ["Dev","AIssistant","D&A","Career"]
-description: 'Big Data Tools recap for the AI era. SQL, PySpark and more.'
+tags: ["GCP","D&A","Career","DBT","Databricks","DataLakehouse","DWH"]
+description: 'Big Data Tools for the AI era. Trino SQL, Nessie, PySpark, HDFS and more as tech stack.'
 url: 'big-data-tools-for-data-analytics'
 ---
 
+
+**Intro**
 
 Long ago, I was covering [the analytical stack](https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/#the-analytical-stack) and the most popular [concepts for a data analytics journey](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/).
 
@@ -15,9 +17,16 @@ It is time to make **a recap**.
 A recap on [SQL](#sq), [PySpark](#pyspark) and [Data Modelling](#concepts-for-data-analytics).
 
 {{< cards >}}
-  {{< card link="#how-to-use-the-aissistant" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Post where I started the AI assistants." >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Assistant for Tech Jobs...Source Code" >}}
+  {{< card link="#how-to-use-the-aissistant" title="Tech qqs with a AIssistant" >}}
 {{< /cards >}}
+
+And some of the [typical **big data stacks**](#big-data-tech-stacks) that you might find while working on D&A:
+
+1. [GCP](#1-google-cloud-platform-gcp-stack)
+2. [PySpark + HDFS](#2-on-premise-stack)
+3. [Snowflake + dbt](#3-open-source-cloudhybrid-stack)
+4. [MinIO + Nessie](#4-open-source-dlh-nessie-based)
+
 
 ## Concepts for Data Analytics
 
@@ -85,15 +94,13 @@ It provides a more versatile and efficient platform for organizations to manage 
 {{< /details >}}
 
 
-
-Thats was were can store.
-
-But how to **process the data**?
+Thats was were can store. But how to **process the data**?
 
 {{< details title="Data Processing Engines 📌" closed="true" >}}
 
-Data processing engines are software systems designed to execute data transformations and computations at scale. They form the core of many modern data architectures, enabling the handling of massive datasets for analytics, machine learning, and other data-intensive applications. Here's a breakdown of their key characteristics and types:
+Data processing engines are software systems designed to execute data transformations and computations at scale. 
 
+They form the core of many modern data architectures, enabling the handling of massive datasets for analytics, machine learning, and other data-intensive applications.
 **Core Functions:**
 
 * **Data Transformation:**
@@ -147,7 +154,8 @@ Examples of Data Lakehouse Technologies and Implementations:
 
 * **Databricks** [The Lakehouse Platform](https://jalcocert.github.io/JAlcocerT/understanding-databricks/): One of the pioneers of the data lakehouse concept, built around Apache Spark and Delta Lake.   
 * AWS Lake House: Offers services like S3 for storage and technologies like Apache Iceberg, AWS Glue, and Amazon Redshift Spectrum to build a lakehouse architecture.
-* Microsoft Fabric Lakehouse: A unified data analytics platform with a central data lakehouse.   
+* Microsoft Fabric Lakehouse: A unified data analytics platform with a central data lakehouse.  
+
 * **Snowflake**: Evolving to support data lakehouse patterns with features for querying data in external object storage.
 * Google Cloud: Integrating BigQuery with data lake storage and governance tools like Dataplex to enable lakehouse capabilities.   
 * Open Table Formats (Apache Iceberg, Delta Lake, Apache Hudi): These provide the foundational layer for building reliable and performant data lakehouses on various storage systems. 
@@ -327,7 +335,9 @@ This information tells you that you need to implement data cleaning steps to han
 
 {{< /details >}}
 
-**In essence, data profiling is the essential first step in any data project. It's about getting to know your data intimately so you can work with it effectively and avoid making decisions based on flawed or incomplete information.** 
+**In essence, data profiling is the essential first step in any data project.**
+
+It's about getting to know your data intimately so you can work with it effectively and avoid making decisions based on flawed or incomplete information.
 
 > It's like inspecting your ingredients before you start cooking to ensure they are fresh and suitable for your recipe.
 
@@ -431,12 +441,9 @@ For your D&A journey, you will need some help from diverse tools.
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/apps/ai-assistant.png" subtitle="For Data Analytics and SelfHosting." >}}
 {{< /cards >}}
 
-
-
 {{< callout type="warning" >}}
 Many of these tools are [SelfHostable with Docker Container **config files**](https://github.com/JAlcocerT/Docker/tree/main/Big_Data)
 {{< /callout >}}
-
 
 ### SQL
 
@@ -465,7 +472,6 @@ Normalization is a process of organizing data in a database to **minimize redund
   - Follows structured rules (normal forms).  
   - Ideal for **WRITE-heavy operations** (**OLTP**).  
 
----
 
 **What is Denormalization?**  
 Denormalization combines normalized tables to improve **read performance**, often used in **data warehousing** and reporting scenarios.  
@@ -474,8 +480,6 @@ Denormalization combines normalized tables to improve **read performance**, ofte
   - Improves read performance with faster query response times.  
   - Sacrifices write efficiency as updates may need replication across tables.  
   - Ideal for **READ-heavy operations** (**OLAP**).  
-
----
 
 **When to Use Long Tables vs. Wide Tables?**  
 - **Long Tables (Normalized)**:  
@@ -488,8 +492,6 @@ Denormalization combines normalized tables to improve **read performance**, ofte
   - Faster performance for querying in BI tools.  
   - Increases redundancy and file size.  
   - Best for **READ-heavy workflows**.  
-
----
 
 **What Are Dimension Tables and Fact Tables in Data Warehousing?**  
 - **Dimension Tables**:  
@@ -505,7 +507,6 @@ Denormalization combines normalized tables to improve **read performance**, ofte
 - **Star Schema**: Dimension tables are **denormalized**, simplifying queries and improving performance.  
 - **Snowflake Schema**: Dimension tables are **normalized** into sub-dimensions, reducing redundancy but requiring more complex queries.  
 
----
 
 **What Are Primary Keys, Foreign Keys, and Indexes?**  
 - **Primary Key**: A column(s) that uniquely identifies each row, enforcing data integrity.  
@@ -542,6 +543,45 @@ Talk [with a DB via LLMs as described **here**](https://jalcocert.github.io/JAlc
 
 {{< /details >}}
 
+#### Trino
+
+Trino is a high-performance, **distributed SQL query engine**.
+
+It fits into a data stack as a **query layer** that sits between your BI tools and various data sources.
+
+Its primary purpose is to enable fast, ad-hoc, and interactive analytics on large datasets, without requiring you to move or copy data. 
+
+Trino is particularly valuable in a **data lakehouse** architecture where you have data spread across multiple locations.
+
+**Where Trino Fits** into the [Big Data Stacks](#big-data-tech-stacks).
+
+Trino's role is to act as a **federated query engine**.
+
+It replaces the need to move data into a single data warehouse for every query. 
+
+This is a different architectural philosophy compared to a standard, *monolithic data warehouse*.
+
+1. On-Premise Stack (HDFS, PySpark, Airflow)
+
+In this stack, **Trino would be a replacement or a companion for PySpark.**
+
+* **As a Replacement:** Instead of using PySpark to perform SQL-based transformations, you could use **Trino**. Trino is a better fit for interactive queries and ad-hoc analysis directly on data in HDFS. It's often faster for this purpose than Spark's SQL engine.
+* **As a Companion:** A common pattern is to use **PySpark** for complex, long-running ETL jobs that require a higher degree of fault tolerance and procedural logic, and then use **Trino** for the interactive, user-facing queries on top of the final tables. 
+
+2. Open-Source Cloud Stack (MinIO/S3, Snowflake, dbt, Superset/Redash)
+
+In this stack, **Trino would sit alongside Snowflake, providing a way to query data *before* it's loaded into the warehouse.**
+
+* **Querying the Data Lake Directly:** You can use Trino to run fast queries directly on the raw data in **MinIO/S3**, without needing to transform it with **dbt** and load it into **Snowflake** first. This is ideal for data exploration and discovery.
+* **Federated Queries:** Trino’s real strength is its ability to join data from multiple sources in a single query. A data analyst could run a query that joins customer data from a relational database (like PostgreSQL) with clickstream data stored in your MinIO data lake, all from one interface.
+
+
+To summarize, Trino is not a data warehouse and it's not a transformation tool like dbt or Dataform. It's a **query engine** that is excellent for:
+
+* **Ad-hoc queries**: Analysts who want to explore data in a data lake.
+* **Federated queries**: Running a single query across multiple different data sources.
+* **Separating Compute from Storage**: It performs the heavy lifting of queries without moving the data, which can lead to cost savings and faster results.
+
 #### Snowflake
 
 **It is a data warehouse.**
@@ -566,6 +606,8 @@ You can (or not) design it to have a **bronze/silver/gold** architecture (aka **
 ### PySpark
 
 A wrapper in [Python](https://jalcocert.github.io/JAlcocerT/guide-python/) for Spark. [**PySpark**](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/).
+
+> BTW, with pyspark you can also write [sql like queries](#the-two-methods!)
 
 Or **Python for the distributed computing/storage era**.
 
@@ -852,8 +894,6 @@ Analogy with a four-layer data lakehouse architecture: Landing, Bronze, Silver, 
 * **Silver:** **Parquet** (Optimized for analytics on conformed data)
 * **Gold:** **Parquet** (Optimized for specific business use cases, often with a transactional layer like Delta Lake)
 
-
-
 ```mermaid
 graph LR
     A["Landing: JSON Raw, as-is ingestion"] --> B["Bronze: Avro Structured raw, schema enforcement & evolution"];
@@ -864,6 +904,48 @@ graph LR
 {{< callout type="info" >}}
 This **four-layer model** provides a more granular [view of the **data journey**](https://www.mermaidchart.com/play?utm_source=mermaid_live_editor&utm_medium=toggle#pako:eNp1zk1qwzAQBeCrPLwoCcQXcKEQJ1AIpinxsu5iKo9jEVlyNZJDUnr3yu6iq85yfr43X5lyLWdFdvY09qhOjUWq7VuTVWRbbc8FDvXxBSe6bkCSa0FqsgTt7LrJ3pHnTyjTeumdvXOB7eQdVnXwUYXouYWfL0X1PBDYds4rHtgGPIAnZ-IMJefxN7hcvF3yam0m9gVeyX9GDlgdx6AHfU9iMkCWzC1oJXAWys3ukEYtBVr_cbuF2yfu2Zn2X0xGVrrTCh9RtGURRGEoEpYNXBfY4qpDD0LwZIXU_DQZGLqxh9EXxp5NIFR04SU--_4BEPJ0GA)
 {{< /callout >}}
+
+#### The Two Methods
+
+You can run ~SQL-like queries with PySpark.
+
+PySpark's **Spark SQL** module is a core part of its functionality and allows for both a programmatic **DataFrame API** and direct SQL queries.
+
+PySpark offers two primary ways to manipulate data, and they're fully interchangeable:
+
+1.  **DataFrame API:** This is the more "Pythonic" approach. You chain together a series of method calls on a DataFrame object. It's great for building complex, reusable, and testable data pipelines.
+
+```py
+# Select columns, filter, and group by
+cleaned_df = df.select("column1", "column2").filter("column1 > 10").groupBy("column2").count()
+```
+
+2.  **SQL Queries:** This allows you to write standard SQL directly within your PySpark code. For this to work, you first have to register your DataFrame as a temporary view or table, which makes it accessible to the SQL engine.
+      
+```py
+df.createOrReplaceTempView("my_table")
+sql_query = """
+SELECT column2, COUNT(*)
+FROM my_table
+WHERE column1 > 10
+GROUP BY column2
+"""
+cleaned_df = spark.sql(sql_query)
+```
+
+The `spark.sql()` method executes the query and returns a new DataFrame, which you can then continue to work with using either the DataFrame API or another SQL query.
+
+**Why You'd Use SQL in PySpark**
+
+  * **Readability:** For many analysts and data professionals, SQL is a more concise and readable way to express a data transformation. Complex joins or aggregations can be easier to write and understand in SQL than in a long chain of DataFrame methods.
+  * **Portability:** If you're coming from a relational database background, you can often reuse existing SQL queries with minimal changes.
+  * **Performance:** Both the DataFrame API and Spark SQL use the same powerful optimization engine under the hood (**Catalyst Optimizer**). This means there's no inherent performance difference between the two approaches; the optimizer will convert both into the same efficient execution plan.
+
+The choice between the two often comes down to personal or team preference and the complexity of the task. 
+
+Data engineers often prefer the DataFrame API for its control and testability, while data analysts often prefer the direct SQL approach for its familiarity and speed in ad-hoc analysis.
+
+Many teams use a **hybrid approach**, leveraging both as needed.
 
 
 #### DataBricks
@@ -1090,7 +1172,11 @@ If you are preparing a **Data Engineering Interview**, make sure to check [this]
 
 #### DBT
 
-DBT can help us to make automatization the model/table creation in SQL.
+Do you need to take raw data and transform it so that it gets ready for BI Tools?
+
+[DBT](https://github.com/dbt-labs/dbt-core) is a OSS tool (apache v2.0) that can help us to make automatization the model/table creation in SQL.
+
+> dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.
 
 Its very handy to have the tag section, so that you can create the logic of the table involving different CTEs (each of them defined in a different file).
 
@@ -1101,28 +1187,59 @@ The test are configured with a `.yml` file
 > Does it remind to **python [great expectations](https://docs.greatexpectations.io/docs/core/introduction/try_gx/)**? data profiling/validation, anybody? :)
 
 
-
 {{< cards >}}
+  {{< card link="https://www.reddit.com/r/dataengineering/comments/r8pa3i/why_is_data_build_tool_dbt_is_so_popular_what_are/" title="DBT is loved on Reddit" icon="book-open" >}}
   {{< card link="https://wetrustindata.com/how_to_test_data_solutions/" title="Test Data Pipelines with SQL & DBT" icon="book-open" >}}
 {{< /cards >}}
-
-{{< details title="More about DBT! 📌" closed="true" >}}
-
-
-{{< /details >}}
 
 
 #### ADF
 
-You will see Azure Data Factory in many job offers nowadays.
+You will see (Microsoft) Azure Data Factory in many job offers nowadays for data movement orchestration
 
-And **Talend is like ADF**, but kind of oldschool.
+> ADF is the Azure equivalent of Google Cloud's **Cloud Composer** and **Dataform** combined into a single visual platform within [GCP](#1-google-cloud-platform-gcp-stack)
+
+> > Or similar to Airflow for onpremise.
+
+{{< details title="The Big Data Tech Stack, more clear than ever 📌" closed="true" >}}
+
+Azure Data Factory (ADF) is Microsoft's cloud-based ETL (Extract, Transform, Load) and data integration service. 
+
+It fits into a data stack as the **orchestration and data movement layer**.
+
+**Where ADF Fits in the Stacks**
+
+ADF is a proprietary, managed service, so it fits best into an all-Azure data stack, similar to how Dataform and BigQuery fit into the GCP stack. 
+
+However, it can connect to almost any data source, including those in other clouds or on-premise.
+
+* **GCP Stack (GCS, Dataform, BigQuery, Looker)**: ADF would serve as a **direct replacement for both Dataform and Cloud Composer**. Instead of using Dataform's SQL-based transformations and Composer's DAGs, a data engineer would use ADF's visual, drag-and-drop interface to build a pipeline that pulls data from GCS, transforms it, and loads it into BigQuery. While possible, this is uncommon due to the redundancy and cost of using a different cloud provider's tool for a similar task.
+
+* **On-Premise Stack (HDFS, PySpark, Airflow)**: ADF would be a **cloud-based alternative to Airflow**. A company could use ADF's visual pipeline builder to ingest data from their on-premise HDFS cluster and orchestrate PySpark jobs running on an Azure-based Spark cluster. It's a way for a company to modernize their on-premise workflow by moving the orchestration and data movement to the cloud.
+
+* **Open-Source Stack (MinIO, Snowflake, dbt, Superset/Redash)**: ADF would act as a **replacement for both the initial ingestion and the orchestration part of the stack**. Instead of a custom ingestion script and Airflow to run dbt, you could use ADF's built-in connectors to ingest data from MinIO and then trigger a dbt job.
+
+**ADF's Core Functionality**
+
+ADF's strength is its visual, low-code/no-code interface.
+
+It's built for both traditional ETL and modern ELT (Extract, Load, Transform) pipelines.
+
+* **Pipelines**: ADF uses **pipelines** as the core unit of work, similar to Airflow's DAGs. A pipeline is a logical grouping of activities that perform a task.
+* **Activities**: These are the individual steps in a pipeline. ADF has two main types of activities:
+    * **Data Movement Activities**: These activities, such as the `Copy` activity, move data between different sources and destinations. ADF has over 90 built-in connectors to connect to various data stores.
+    * **Data Transformation Activities**: These activities can either perform transformations directly using **Data Flows** (a visual, code-free way to transform data at scale) or by triggering external compute services like Azure Databricks (for PySpark jobs) or an Azure SQL database (for SQL queries).
+* **Orchestration**: ADF provides a robust scheduler and monitoring dashboard, allowing you to trigger pipelines based on time, events, or cascading dependencies.
+
+{{< /details >}}
+
+> And **Talend is like ADF**, but kind of oldschool.
 
 > I mean, a **data integration tool**.
 
 <!--
  https://www.youtube.com/watch?v=dFEzT-qfVIk
- -->
+-->
 
 Here you have a fantastic introductory video to azure data factory:
 
@@ -1147,7 +1264,7 @@ It shares similarities with **Airflow** for workflow orchestration and **dbt** f
   {{< card link="https://www.youtube.com/watch?v=e9hJZrT7HLw" title="YT Video on SelfHosting Chat with PDF ↗" icon="user" >}}
 {{< /cards >}}
 
-A escalable, low-code solution for **integrating and preparing data** for analytics.
+Basically, A escalable, low-code solution for **integrating and preparing data** for analytics.
 
 ---
 
@@ -1163,6 +1280,8 @@ A escalable, low-code solution for **integrating and preparing data** for analyt
 > > If you inspect the s3 container volume, everything will be flat, the folders in the UI is just to make it Human friendly
 
 {{< youtube "KzZ2zCvHhl0" >}}
+
+
 
 **Data Processing Engines (How to Process Data):**
 
@@ -1245,7 +1364,7 @@ SSH into your server and...
 ...if you need, [generate **ssh keys**](https://jalcocert.github.io/JAlcocerT/how-to-use-gitlab/) to authenticate to your repo:
 
 
-{{< details title="See SQLiteDB Job History 📌" closed="true" >}}
+{{< details title="Using the Aissistant | Setup 📌" closed="true" >}}
 
 ```sh
 ls -al ~/.ssh
@@ -1320,6 +1439,132 @@ Now, you can just use the compose and ask your tech questions.
 {{< callout type="info" >}}
 Be open and look for clarifications in cross-domain [meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/)
 {{< /callout >}}
+
+### Big Data Tech Stacks
+
+#### 1. Google Cloud Platform (GCP) Stack
+
+This is a **fully managed, serverless**, and integrated stack. [Google Cloud Platform](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) handles all the underlying infrastructure, allowing users to focus on data and analytics.
+
+| Layer | Component | Who Uses It | What They Do |
+| :--- | :--- | :--- | :--- |
+| **Data Lake** | **GCS (Cloud Storage)** | Data Engineers | Stores raw, unstructured data as a data lake. It's the landing zone for all data before it's processed. |
+| **Transformation** | **Dataform** | Data Engineers | Defines data transformation logic with **SQLX**. It orchestrates the creation of clean, curated tables in BigQuery. |
+| **Orchestration** | **Cloud Composer** | Data Engineers | Manages and schedules the entire pipeline as a DAG. It can trigger Dataform jobs, handle dependencies, and monitor workflows. |
+| **Data Warehouse** | **BigQuery** | Data Engineers, Data Analysts | The central, serverless data warehouse. It's where all the clean, transformed data is stored and made available for high-performance querying. |
+| **BI & Visualization** | **Looker** | Data Analysts, Business Users | A BI platform that uses **LookML** to create a semantic layer on top of BigQuery. It enables users to build dashboards and reports without writing SQL. |
+
+#### 2. On-Premise Stack
+
+This represents a classic open-source stack often deployed on a company's own hardware or private cloud. 
+
+It offers maximum control but requires significant operational overhead, typica of a [ODH](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/) (on premise data hub).
+
+| Layer | Component | Who Uses It | What They Do |
+| :--- | :--- | :--- | :--- |
+| **Data Lake** | **HDFS (Hadoop Distributed File System)** | Data Engineers | A file system that stores raw data across a cluster of servers. It is the storage layer for a Hadoop-based big data ecosystem. |
+| **Transformation**| **PySpark** | Data Engineers | A framework for distributed data processing using Python. It handles complex data transformations and computations on a Spark cluster. |
+| **Orchestration** | **Airflow** | Data Engineers | The workflow orchestrator that schedules and manages the entire pipeline. It submits jobs to the PySpark cluster and monitors their execution. |
+| **Monitoring** | **Graphite & Grafana** | DevOps, Engineers | **Graphite** collects time-series data (e.g., system metrics, job run times). **Grafana** is a visualization tool that builds dashboards to monitor and alert on that data. |
+
+{{% details title="s3 vs HDFS as storage systems 🚀" closed="true" %}}
+
+No, **HDFS (Hadoop Distributed File System)** and **S3 (Amazon Simple Storage Service)** are not the same; they are fundamentally different types of storage systems with distinct architectures and use cases. 
+
+Think of HDFS as a **file system** built for a specific purpose, while S3 is a **highly scalable object store** designed for the cloud.
+
+**Key Differences**
+
+* **Architecture**:
+    * **HDFS** is a **distributed file system**. It's designed to run on a cluster of commodity servers, tightly coupling storage and compute. Data is broken into fixed-size blocks and replicated across different servers in the cluster for fault tolerance. Its design is optimized for "data locality," meaning the processing happens on the same server where the data resides to minimize network I/O.
+    * **S3** is a cloud-based **object store**. It stores data as immutable "objects" in "buckets" using a flat, non-hierarchical structure. S3 is a service that completely separates storage from compute, allowing you to scale each independently. 
+
+* **Scalability & Durability**:
+    * **HDFS** scales by adding more servers (nodes) to a cluster. Its durability is based on data replication (typically making 3 copies of each data block), which increases storage costs.
+    * **S3** offers virtually unlimited scalability and durability. It's a fully managed service where you just pay for what you store, without worrying about replication or hardware. It provides a highly durable and available service, often cited as "11 nines" of durability.
+
+* **Use Case**:
+    * **HDFS** was the original storage layer for the **Hadoop ecosystem** and is still used for on-premise big data processing. It's best suited for batch processing jobs that benefit from data locality.
+    * **S3** has become the de-facto standard for **data lakes** in the cloud. Its decoupled architecture makes it the ideal storage for a wide range of modern data tools (like Spark, Trino, and dbt), as it allows you to easily switch compute engines without moving your data.
+
+In
+{{% /details %}}
+
+#### 3. Open-Source Cloud/Hybrid Stack
+
+This stack combines open-source technologies with a managed cloud data warehouse.
+
+It's a popular "best-of-both-worlds" approach.
+
+Offering the flexibility of open-source tools with the scalability and reduced management of a modern data warehouse.
+
+| Layer | Component | Who Uses It | What They Do |
+| :--- | :--- | :--- | :--- |
+| **Data Lake** | **MinIO** or **S3** | Data Engineers | An object storage service that acts as a data lake. It holds raw data and is highly compatible with the S3 API. |
+| **Data Warehouse** | **Snowflake** | All Users | A fully managed, cloud-native data warehouse. It's where all the clean, transformed data is stored and where compute is performed. |
+| **Transformation**| **dbt (data build tool)**| Analytics Engineers | A SQL-based tool for data transformation. It runs SQL commands directly in Snowflake to build and test data models. |
+| **Orchestration** | **Airflow** (or dbt Cloud) | Analytics Engineers | Manages the pipeline. It orchestrates the entire workflow and can trigger dbt jobs on a schedule. |
+| **BI & Visualization**| **Superset/Redash** | Data Analysts, Business Users | Open-source BI tools. They connect directly to Snowflake to visualize data and build dashboards. Redash is more SQL-query focused, while Superset offers a richer GUI. |
+
+#### 4. Open-Source DLH Nessie Based
+
+[Nessie](#nessies-place-in-the-data-stack-️) would effectively create a fourth data stack, or more accurately, a specific and advanced version of the open-source cloud/hybrid stack. 
+
+It introduces a new philosophical layer focused on **data governance and version control**.
+
+{{% details title="The Nessie stack avoids lock-in 🚀" closed="true" %}}
+
+The core philosophy of a data lakehouse built with open-source tools like Nessie: You can deploy and host the entire stack on-premise or in any cloud (Azure, GCP, AWS), while actively avoiding vendor lock-in.
+
+**Why Nessie's Stack Avoids Vendor Lock-in 🔒**
+
+The key to this stack's portability is its decoupled and open-source nature.
+
+Each component can be swapped out or moved to a different environment, giving you complete control.
+
+1.  **Open Formats and APIs**: The stack is built on open standards. **Apache Iceberg** is an open table format, and **MinIO** uses the S3 API, which is an open standard for object storage. Nessie itself provides an open REST API for its catalog. This means your data is stored in non-proprietary formats and is accessible by any tool that understands these standards, regardless of the vendor.
+2.  **Separate Compute and Storage**: The architecture intentionally separates the storage layer (MinIO) from the query engine (Trino/PySpark). This is a stark contrast to monolithic, vendor-specific data warehouses like BigQuery or Snowflake, where compute and storage are tightly integrated and managed as a single service.
+3.  **Self-Hosted Components**: You have the option to host all the components yourself. While it's easier to run Trino on a managed service like GCP's Dataproc, you can also run it on a set of Virtual Machines on GCP or on your own on-premise servers. The same applies to Nessie, PySpark, and MinIO, which can all be run as Docker containers or on Kubernetes (k8s) clusters. 
+
+**Hosting the Nessie Stack on a Public Cloud**
+
+Even when you choose to run this stack on a public cloud like GCP or Azure, you're not locked into their proprietary services. 
+
+You're simply using their infrastructure as a service (IaaS).
+
+* **Cloud Infrastructure**: You can use virtual machines (VMs) or container services (like GKE on GCP or AKS on Azure) to host the various components. This is similar to hosting a website on a VM; you're using the cloud provider's hardware, but the software running on it is your choice.
+* **Managed Services as a "Crutch"**: You can use managed services like Cloud Composer (GCP's managed Airflow) to reduce operational overhead, but you can always switch to a self-hosted Airflow instance on your own VMs if you decide to migrate away. This is a deliberate trade-off between convenience and portability.
+
+In summary, the Nessie data stack is designed to be **portable and anti-lock-in**.
+
+You get the flexibility to choose where your data resides, which tools you use to process it, and which platforms you use to host it.
+
+{{% /details %}}
+
+This "Nessie Stack" would be a sophisticated variation of the **Snowflake, dbt, Superset/Redash** stack, but with a different core.
+
+Instead of a centralized data warehouse, it's a **data lakehouse** architecture where the data resides in low-cost storage, but is managed with the quality and control of a warehouse.
+
+**The Nessie Data Stack**
+
+This stack prioritizes flexible data storage, transactional integrity, and collaborative versioning.
+
+| Layer | Component | Who Uses It | What They Do |
+| :--- | :--- | :--- | :--- |
+| **Data Lake** | **MinIO** or **S3** | Data Engineers | The scalable, low-cost storage layer for raw data files (e.g., Parquet, Avro). It's the foundation of the data lakehouse. |
+| **Table Format** | [**Apache Iceberg**](#what-it-is-apache-iceberg) | Data Engineers | An open-source table format that adds a transactional, structured layer on top of your data lake files. It enables features like schema evolution and time-travel. |
+| **Data Catalog** | [**Project Nessie**](#nessie-and-apache-iceberg) | Analytics Engineers, Data Scientists | A Git-like **data catalog** that manages the metadata for Iceberg tables. It enables **branching, committing, and tagging** of data, allowing for isolated work and version control. |
+| **Query & Transformation**| **Trino** or **PySpark** | Data Engineers, Data Analysts | High-performance query engines that connect to Nessie. They read the table metadata from Nessie and execute queries directly against the data files in the data lake. |
+| **BI & Visualization** | **Superset/Redash** | Data Analysts, Business Users | Connects to Trino or PySpark. These tools provide the user interface for building dashboards and reports on top of the tables managed by Nessie. |
+
+**How It's Different from the Other Stacks**
+
+* **Decoupled Architecture**: This stack is defined by its separation of **compute** (Trino/PySpark) and **storage** (MinIO/S3). In contrast, BigQuery and Snowflake are monolithic, with compute and storage tightly integrated.
+* **Metadata-Driven**: The entire stack revolves around the **data catalog (Nessie)** and the **table format (Iceberg)**. The catalog isn't just a discovery tool; it's a central control plane for managing the entire data lake.
+* **Version Control**: The most unique feature is the application of Git-like principles to data. This allows for isolated experimentation and a high degree of **data governance** that is difficult to achieve in other stacks without manual processes.
+
+In short, the Nessie stack represents a true **data lakehouse** architecture, bringing the best of a data warehouse's functionality to a data lake's flexible and low-cost storage.
+
 
 ---
 
@@ -1438,6 +1683,77 @@ Initially, I had this one for Telecom
 
 {{< /details >}}
 
+### Nessie and Apache Iceberg
+
+Nessie is an open-source, **Git-like data catalog** that **adds version control semantics** to your data lake. 
+
+Its **namespaces** are a key part of this, acting like file folders to organize tables within the catalog. 
+
+Instead of being a separate tool, Nessie fits into a data stack as a **central metadata service** that provides a single, versioned view of your data to various query engines.
+
+### Nessie's Place in the Data Stack 🗺️
+
+Nessie isn't a replacement for a data warehouse, a transformation tool, or a BI platform. 
+
+It's a foundational component that sits on top of your **data lake** (like GCS, S3, or MinIO) and provides a crucial layer of metadata and version control.
+
+Here's how Nessie fits into the open-source stack you mentioned:
+
+* **Data Lake (MinIO/S3)**: This is where your actual data files are stored (e.g., in Parquet, Avro, or ORC format).
+* **Table Format (e.g., Apache Iceberg)**: This layer adds a structured, transactional layer on top of your data files. It provides features like schema evolution and time travel.
+* **Data Catalog (Nessie)**: This is where Nessie fits in. It acts as the central **metastore** that tracks the metadata for your Iceberg tables. It tells query engines like Trino or Spark where the data for each table is located, but its unique feature is that it does so with **Git-like semantics** like branches, commits, and tags.
+* **Query Engines (Trino, PySpark)**: These engines connect to Nessie to find out which tables exist, their schemas, and where the data is stored. Nessie's versioning allows a data scientist to create a **branch** of the catalog to test a new model without affecting the `main` branch.
+* **BI & Visualization (Superset/Redash)**: These tools would connect to a query engine (like Trino) which, in turn, is using Nessie to resolve its queries.
+
+#### What are Nessie Namespaces?
+
+In Nessie, a **namespace** is a logical container for tables, similar to a database or a schema in a traditional relational database. 
+
+For example, in the table name `production.marketing.sales`, `production.marketing` is the namespace and `sales` is the table name.
+
+Namespaces are important because they provide:
+
+* **Organization**: They help you organize a large number of tables into a logical hierarchy, which is crucial for data discovery.
+* **Access Control**: You can apply permissions and security policies at the namespace level, making it easier to manage who can access what data.
+
+A key feature of Nessie is that its namespaces are **versioned along with the rest of the catalog**. If you add a new table to a namespace, that change is a **commit** to the catalog's history.
+
+This allows you to track all changes to your data, not just the data itself, but also its organization and structure. 
+
+#### What it is Apache Iceberg?
+
+**Apache Iceberg** is an open-source **table format** for data lakes. Think of it as an intelligent layer that sits on top of your data lake files (e.g., in S3 or GCS), bringing database-like capabilities to your data.
+
+It addresses the limitations of simply having a directory of files by providing a robust way to manage large, analytical tables.
+
+**Key Features of Apache Iceberg 🧊**
+
+Iceberg solves critical problems that arise from traditional file-based data lakes:
+
+* **ACID Transactions:** It ensures that write operations (like appends, deletes, and updates) are atomic and consistent, so you don't get corrupt data from concurrent jobs.
+* **Time Travel:** Iceberg keeps a history of table snapshots, allowing you to query data as it existed at a specific point in time. This is invaluable for auditing or reproducing past analyses.
+* **Schema and Partition Evolution:** It allows you to safely change your table's schema (add, remove, or rename columns) and even change how the data is partitioned without a full table rewrite.
+* **Hidden Partitioning:** Iceberg manages partitioning for you. You can define a partition strategy, but users don't have to specify partition columns in their queries. This makes queries more flexible and less error-prone.
+
+**How Apache Iceberg Relates to Project Nessie**
+
+Apache Iceberg and Project Nessie are separate, but complementary projects. You can't have a Nessie stack without Iceberg. Their relationship is best understood as **Table Format vs. Catalog**.
+
+* **Iceberg is the Table Format**: It's the specification for how your data files are organized and how metadata is stored to provide ACID transactions and time travel for a **single table**. It creates its own set of metadata files to manage snapshots, manifests, and data file locations.
+* **Nessie is the Catalog**: Nessie is an open-source **catalog** that serves as a central registry for all your Iceberg tables. Its key innovation is bringing Git-like version control to the entire data catalog, not just a single table.
+
+| Feature | **Apache Iceberg** | **Project Nessie** |
+| :--- | :--- | :--- |
+| **Purpose** | **Table Format** | **Data Catalog** |
+| **Focus** | **Single-table** versioning and metadata management (snapshots). | **Multi-table** versioning and metadata management (branches, commits, tags). |
+| **Analogy** | A **file system** with a built-in log of changes. | The **Git repository** that manages multiple file systems. |
+
+Nessie's value comes from its ability to orchestrate and version multiple Iceberg tables together. For example:
+* You can create a **branch** to perform a series of transformations on multiple Iceberg tables in an isolated environment.
+* You can then **commit** those changes to the main branch, making the entire set of transformations visible as a single, atomic update.
+* You can **tag** a specific state of your catalog to mark a "production release" for reporting.
+
+In short, **Iceberg provides the low-level, transactional guarantee for a single table**, while **Nessie provides the high-level, multi-table version control and collaborative framework** that makes a data lakehouse a true production-ready environment.
 
 ### BI Tools Data Analytic Projects
 

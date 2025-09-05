@@ -2,15 +2,30 @@
 title: "Geospatial Data Tricks and a GoPro!"
 date: 2025-01-05T23:20:21+01:00
 draft: false
-tags: ["Dev","FFMPeg","Python GeoData","PhyPhox","GPX"]
-description: 'What Ive learnt so far about GeoSpatial/Geolocation Data Analysis. Applied to GoPro MetaData and Telemetry Extraction. And karting!'
+tags: ["Dev","FFMPeg","Python GeoData","PhyPhox","GPX","EXIF","karting","Katex"]
+description: 'What Ive learnt so far about GeoSpatial/Geolocation Data Analysis. Applied to GoPro MetaData and Telemetry Extraction.'
 url: 'geospatial-data'
 math: true
 ---
 
 
+**TL;DR**
+
+Playing with a [GoPro video metadata](#gopro-metadata-extraction) (EXIF extraction) after karting.
+<!-- 
+https://www.youtube.com/watch?v=BTJS-2hD2qk -->
+
+{{< youtube "BTJS-2hD2qk" >}}
+
 
 ## GeoSpatial Data Formats
+
+There are few data forms to save geolocation data.
+
+I have tried:
+
+1. [GPX](#gpx)
+2. [GEOJSON](#geojson)
 
 
 {{< callout type="info" >}}
@@ -38,7 +53,6 @@ Phone apps like Komoot or even [PhyPhox can save the GPS records as GPX files](h
 
 
 * https://github.com/exiftool/exiftool/blob/master/fmt_files/gpx.fmt
-
 
 {{< rawhtml >}} 
 <iframe src="/videos/Output_map_PL-SK-HU.html"
@@ -189,7 +203,7 @@ You can also open it with: [![Open in Google Colab](https://colab.research.googl
 
 The DJi OA5Pro does **NOT** have a **GPS**.
 
-Videos can look like this one, really interesting image quality!
+Videos can look like this one, with an *interesting image quality*:
 
 <!--
 https://studio.youtube.com/video/2ZSDeD3HzHg/edit

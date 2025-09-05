@@ -87,6 +87,9 @@ If you ge a Metamask wallet for Ethereum, you can make [a Web3](https://jalcocer
 
 {{< /details >}}
 
+7. Im still in [D&A](#da-tech-stack) and have take time to sharpen my big data knowledge.
+
+
 
 
 
@@ -231,16 +234,21 @@ What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
 7. [Metabase](https://youtu.be/eCplQYrvabk) (BI)
 8. [Grafana](https://youtu.be/Uq5tZv6T3ko) (BI)
 9. Kibana (BI) and ES 
-10. Slefhosted Streamlit Apps
+10. SelfHosted Streamlit Apps
 11. FileBrowser
 12. PiGallery
 13. Photoview
 14. Immich
-15. 
+15. RGallery
 16. 
 17. 
-18. 
+18. Umami 
 19. 
+20. 
+21. 
+22. 
+23. 
+24. 
 
 If this was too much content, you can always use a LLMs to summarize the YT Videos, like these ones:
 
@@ -395,21 +403,96 @@ Thanks to this sites, I get to know more cool apps:
 
 ## Conclusions
 
-There was even time to make **Data Analytics recaps** and create/**ship better products**.
+There was even time to make **[Data Analytics](#da-tech-stack) recaps** and create (not that much ship) [***better* SaaS products**](#shipping-products).
 
-### D&A Tech Stacks
 
-**Examples of Tech Stacks:**
+### D&A Tech Stack
 
-* **Databricks + S3:**
-    * This is a common cloud-based stack. Databricks provides the processing power (Spark), and S3 serves as the scalable data lake.
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/" title="Big Data Analytics| Post  ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="GCP | Post ↗" >}}
+{{< /cards >}}
 
-* **MinIO + Apache Iceberg + Nessie:**
-    * This stack focuses on open-source technologies. MinIO provides object storage, Iceberg enables efficient data lake management, and Nessie adds version control (and time travel)
 
-{{< details title="Nessie and Apache Iceberg 📌" closed="true" >}}
+{{< details title="The Big Data Tech Stack, more clear than ever 📌" closed="true" >}}
 
-You're absolutely right. Project Nessie and Apache Iceberg are designed to work very well together, and Nessie can indeed be used on top of Iceberg. Here's a breakdown of their relationship:
+Of course. Here are tables comparing the different components you mentioned across various categories, providing a neck-and-neck look at their features, strengths, and weaknesses.
+
+1. Data Storage 🗄️
+
+This category compares the foundational storage layers of each stack. It's about where your raw data physically resides.
+
+| Criterion | **HDFS** | **S3 / GCS** | **MinIO** |
+| :--- | :--- | :--- | :--- |
+| **Type** | Distributed File System | Cloud Object Store | Self-hosted Object Store |
+| **Architecture** | Coupled Storage & Compute. Data is stored on the same nodes that process it. | Decoupled Storage & Compute. Storage and processing scale independently. | Decoupled Storage & Compute. Runs on your infrastructure but separates the two functions. |
+| **Deployment** | On-premise or in the cloud (IaaS) requiring manual management. | Fully managed cloud service. | Self-hosted on-premise or in any cloud (IaaS). |
+| **Scalability** | Scales horizontally by adding more servers to the cluster. | Virtually infinite scalability. You simply use as much as you need. | Horizontally scalable by adding more hardware to your cluster. |
+| **Cost** | High initial hardware cost and ongoing operational overhead. | Pay-as-you-go based on storage volume and data access. | Low hardware cost (commodity servers) but high management overhead. |
+| **Primary Use Case**| Legacy on-premise batch processing and big data analytics. | Modern cloud data lakes and object-based storage for any data type. | Building a private cloud data lake or avoiding cloud vendor lock-in. |
+
+***
+
+2. Data Transformation & Orchestration ⚙️
+
+This table compares the tools that handle the "T" (transformation) and "E" (orchestration) parts of the ELT/ETL process.
+
+| Criterion | **Dataform** | **dbt** | **PySpark** | **ADF** |
+| :--- | :--- | :--- | :--- | :--- |
+| **Core Function** | SQL-based transformation for BigQuery. | SQL-based transformation for any cloud warehouse. | Code-based (Python) distributed data processing. | Visual ETL/Orchestration. |
+| **Orchestration** | Basic built-in scheduler. Best used with Cloud Composer. | Basic built-in scheduler. Best used with Airflow. | Requires a separate orchestrator like Airflow or a managed service like Dataproc. | Has a robust, built-in orchestrator with a GUI. |
+| **Primary Language**| SQLX (Superset of SQL). | SQL (with Jinja). | Python (with Spark SQL). | Visual GUI (with some SQL/code). |
+| **Flexibility** | Limited to BigQuery and SQL-based transformations. | Highly flexible; works with most modern data warehouses. | Highly flexible; can handle complex logic and ML pipelines. | Highly integrated with Azure. Can connect to many sources. |
+| **User** | Data Analysts & Analytics Engineers on GCP. | Analytics Engineers & Data Analysts. | Data Engineers & Data Scientists. | Data Engineers & Business Users. |
+
+
+3. Query Engines & Data Warehouses 📦
+
+This compares the tools that serve as the compute and storage layers for analytics.
+
+| Criterion | **BigQuery** | **Snowflake** | **Trino** | **Spark** |
+| :--- | :--- | :--- | :--- | :--- |
+| **Type** | Serverless Data Warehouse | Cloud Data Warehouse | SQL Query Engine | General-Purpose Analytics Engine |
+| **Architecture** | Separated storage and compute, managed by Google. | Separated storage and compute, managed by Snowflake. | Separate compute layer that queries multiple data sources. | Separate compute layer for distributed processing. |
+| **Deployment** | Fully managed service on GCP. | Fully managed service (multi-cloud). | Self-hosted on-premise or in the cloud. | Self-hosted on a cluster or via managed service (e.g., GCP Dataproc). |
+| **Primary Use Case**| Scalable, serverless analytics on a massive scale. | Enterprise-grade data warehousing for structured data. | Federated queries across diverse data sources. | ETL, machine learning, and complex transformations. |
+
+
+4. BI & Visualization 📈
+
+This category compares the tools used by end-users to create dashboards and reports.
+
+| Criterion | **Looker** | **Superset / Redash** | **Grafana** |
+| :--- | :--- | :--- | :--- |
+| **Core Function** | Semantic Modeling & Visualization. | Visualization & Ad-hoc Querying. | Time-series Monitoring & Visualization. |
+| **Data Philosophy**| **Code-first semantic layer**. Data is modeled in LookML for consistency. | **SQL-based visualization**. Users often write their own queries or work from a pre-defined set of queries. | **Monitoring-focused**. Optimized for time-series data from a variety of data sources. |
+| **User** | Data Analysts & Business Users. | Data Analysts & SQL-savvy users. | DevOps & Engineers (for system metrics). |
+| **Collaboration** | Highly collaborative via Git integration. | Collaborative dashboards via sharing. | Collaborative dashboards and alerting. |
+| **Ecosystem** | Google Cloud's official BI tool. | Open-source, flexible, and database-agnostic. | Open-source, widely used for observability and metrics. |
+
+5. Table Format & Catalog 📋
+
+Apache Iceberg and Project Nessie are key components of a modern, open-source data lakehouse architecture. They don't fit neatly into the previously defined categories because they represent a different layer of the stack: **the table format and the catalog**.
+
+
+This category compares the tools that bring structure, transactions, and version control to a data lake.
+
+| Criterion | **Apache Iceberg** | **Project Nessie** |
+| :--- | :--- | :--- |
+| **Type** | Open-source **Table Format** | Open-source **Data Catalog** |
+| **Core Function** | Defines how data files in a data lake are organized to act as a database-like table. | A Git-like central registry for managing metadata and versions for all your tables. |
+| **Primary Use Case**| Enables ACID transactions, time travel, and schema evolution on a single table in a data lake. | Manages multi-table transactions, data branching, and version control for the entire data lake. |
+| **Data Philosophy**| Brings database-like reliability and performance to data lakes. | Brings software development best practices (Git) to data management and governance. |
+| **Relationship** | **A table format.** It's the "engine" that enables a single table to have ACID properties and time travel. | **A catalog.** It's the "control plane" that manages the state of many Iceberg tables using branches, commits, and tags. |
+| **Deployment** | Not a service. It's a library or a specification used by engines like Spark, Flink, and Trino. | Can be run as a Docker container, on Kubernetes, or as a managed service. |
+| **Who Uses It** | Data Engineers & Analytics Engineers. | Data Engineers, Analytics Engineers, & Data Scientists (for branching). |
+
+
+{{< /details >}}
+
+{{< details title="Nessie and Apache Iceberg were really cool 📌" closed="true" >}}
+
+Project Nessie and Apache Iceberg are designed to work very well together, and Nessie can indeed be used on top of Iceberg. 
 
 * **Apache Iceberg:**
     * This is a table format for massive analytic datasets. It brings table-like capabilities to data lakes, enabling features like ACID transactions, schema evolution, and time travel.
@@ -425,40 +508,77 @@ You're absolutely right. Project Nessie and Apache Iceberg are designed to work 
     * Roll back to previous versions of your tables if needed.
     * Collaborate with others by merging changes from different branches.
 
+> In essence, Iceberg provides the table format, and Nessie provides the version control layer on top of those tables. 
+
+> > This combination creates a powerful and flexible **data lakehouse architecture**.
+
 {{< /details >}}
 
-> In essence, Iceberg provides the table format, and Nessie provides the version control layer on top of those tables. This combination creates a powerful and flexible **data lakehouse architecture**.
+
+{{< details title="Nessie and Apache Iceberg were really cool | HDFS and PySpark 📌" closed="true" >}}
+
+Project Nessie and Apache Iceberg are designed to work very well together, and Nessie can indeed be used on top of Iceberg. 
+
+* **Apache Iceberg:**
+    * This is a table format for massive analytic datasets. It brings table-like capabilities to data lakes, enabling features like ACID transactions, schema evolution, and time travel.
+    * Essentially, Iceberg helps organize your data lake into tables that behave more like traditional database tables.
+* **Project Nessie:**
+    * Nessie provides Git-like version control for your data lake. It allows you to create branches, commits, and tags for your data, making it easier to manage changes and collaborate.
+    * In the context of Iceberg, Nessie acts as a catalog that tracks the metadata of your Iceberg tables. This allows you to version the state of your tables, not just the underlying data files.
+
+**How They Work Together:**
+
+* Nessie enhances Iceberg by providing a way to manage the metadata of Iceberg tables. This means you can:
+    * Create branches to experiment with data transformations without affecting the production data.
+    * Roll back to previous versions of your tables if needed.
+    * Collaborate with others by merging changes from different branches.
+
+> In essence, Iceberg provides the table format, and Nessie provides the version control layer on top of those tables. 
+
+> > This combination creates a powerful and flexible **data lakehouse architecture**.
 
 * **HDFS + PySpark:**
     * This is a more traditional big data stack, often used in on-premises deployments. HDFS stores the data, and PySpark allows for Python-based data processing.
 
+* **Databricks + S3:**
+    * This is a common cloud-based stack. Databricks provides the processing power (Spark), and S3 serves as the scalable data lake.
 
-It's true that data analytics tech stacks can vary widely, and the examples you provided are all relevant.
+* **MinIO + Apache Iceberg + Nessie:**
+    * This stack focuses on open-source technologies. MinIO provides object storage, Iceberg enables efficient data lake management, and Nessie adds version control (and time travel)
 
-Here's a breakdown of **typical components** and how they fit together:
+{{< /details >}}
 
-**Core Components of a Data Analytics Tech Stack:**
+
+{{< details title="Core Components of a Data Analytics Tech Stack 📌" closed="true" >}}
 
 * **Data Storage:**
     * This is where the raw and processed data resides. Common options include:
-        * **Cloud Storage:** Amazon S3, Google Cloud Storage (GCS), Azure Blob Storage. These are highly scalable and cost-effective.
+        * **Cloud Storage:** Amazon S3, Google Cloud Storage (GCS), Azure Blob Storage. These are highly scalable and cost-effective **object stores** that serve as the foundation of cloud-native **data lakes**.
         * **Data Lakes:** HDFS (Hadoop Distributed File System), which is often used in on-premises or hybrid environments.
         * **Data Warehouses:** Snowflake, Google BigQuery, Amazon Redshift. These are optimized for analytical queries.
         * **Object Storage:** MinIO, which is an open source object storage solution that is S3 API compatible.
+
 * **Data Processing:**
     * These tools transform and prepare data for analysis:
-        * **Apache Spark:** A powerful distributed processing engine used for large-scale data transformation and analysis.
-        * **Databricks:** A cloud-based platform built on Apache Spark, providing a collaborative environment for data engineering, data science, and machine learning.
-        * **SQL-based tools:** These are essential for querying and manipulating data in data warehouses.
+        * **Apache Spark:** A powerful distributed processing engine used for large-scale data transformation and analysis. It includes modules like **Spark SQL** for structured data, **Spark Streaming** for real-time data, and **MLlib** for machine learning.
+        * **Databricks:** A cloud-based platform built on Apache Spark, providing a collaborative environment for data engineering, data science, and machine learning. It also offers features like **Delta Lake** for data reliability and **MLflow** for managing the machine learning lifecycle.
+        * **SQL-based tools:** These are essential for querying and manipulating data in data warehouses. This category includes modern tools that use SQL for transformations:
+            * **dbt (data build tool):** A transformation tool that enables data analysts and engineers to transform data in their data warehouses more effectively. It allows for modular SQL code and follows software engineering best practices.
+            * **Dataform:** Google's equivalent of dbt, used for transforming data in BigQuery using **SQLX**.
+
 * **Data Orchestration:**
     * These tools manage the flow of data through the pipeline:
-        * **Apache Airflow:** A platform for programmatically authoring, scheduling, and monitoring workflows.
+        * **Apache Airflow:** A platform for programmatically authoring, scheduling, and monitoring workflows. It defines pipelines as **Directed Acyclic Graphs (DAGs)**.
         * **dbt (data build tool):** A transformation tool that enables data analysts and engineers to transform data in their data warehouses more effectively.
+        * **Cloud Composer:** Google Cloud's fully managed version of Apache Airflow, which simplifies its deployment and management.
+        * **Azure Data Factory (ADF):** Microsoft's visual ETL and orchestration service, offering a code-free approach to building data pipelines within the Azure ecosystem.
+
 * **Data Catalog and Governance:**
     * These tools help manage and govern data assets:
-        * **Apache Iceberg:** An open table format for large analytic datasets.
-        * **Project Nessie:** Provides Git-like capabilities for data lakes.
-        * **Apache Hive Metastore:** A central repository for metadata.
+        * **Apache Iceberg:** An open table format for large analytic datasets. It provides features like **ACID transactions**, schema evolution, and time travel.
+        * **Project Nessie:** Provides **Git-like capabilities** (branches, commits, tags) for data lakes, working in conjunction with table formats like Apache Iceberg to provide full data versioning and governance.
+        * **Apache Hive Metastore:** A central repository for metadata, primarily used in the Hadoop ecosystem. It stores schema and location information for Hive tables.
+
 * **Data Visualization and Business Intelligence (BI):**
     * These tools allow users to explore and visualize data:
         * **Tableau, Power BI, Looker:** Popular BI platforms for creating dashboards and reports.
@@ -472,11 +592,17 @@ Here's a breakdown of **typical components** and how they fit together:
     * Whether the deployment is on-premises, cloud-based, or hybrid.
 
 
+{{< /details >}}
+
+
 {{< callout type="info" >}}
-You can plug to those stacks interesting tools like superset or ODH ([Open Data Hub](https://datahubproject.io/docs/docker/))
+You can plug to those stacks interesting tools like superset or ([Open Data Hub](https://datahubproject.io/docs/docker/))
 {{< /callout >}}
 
-#### Shipping Products
+### Shipping Products
+
+
+This year, It's been more building than shipping.
 
 If you are successful, you will need to know [how to use Stripe API](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe) and any form of invoicing customers:
 

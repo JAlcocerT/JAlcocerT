@@ -450,7 +450,6 @@ Kudos to [awsome-docker-compose](https://awesome-docker-compose.com/apps/photo-s
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/selfhosting-Photoview-docker/" title="Photoview" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/Piwigo_Docker-compose.yml" title="Piwigo" >}}
-  {{< card link="" title="PiGallery" >}}
 {{< /cards >}}
 
 {{< cards cols="2" >}}
