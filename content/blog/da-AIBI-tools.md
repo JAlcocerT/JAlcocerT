@@ -1,12 +1,20 @@
 ---
-title: "AI|BI Tools"
+title: "AI|BI Tools and PoCs with PyGWalker"
 date: 2025-05-22T00:20:21+01:00
 draft: false
-tags: ["Dev","D&A","Career","Streamlit PoCs","uv"]
-description: 'BI/AI another combo and more D&A Tools. PoC Dashboards with PyGWalker can be a thing!'
+tags: ["Dev","D&A","Career","Streamlit PoCs","uv","Business Intelligence"]
+description: 'BI/AI combo and more D&A Tools. Streamlit PoC Dashboards with PyGWalker and data stories!'
 url: 'ai-bi-tools'
 ---
 
+
+**Tl;DR**
+
+As a BIA, you might have to skip waiting for data engineering team to put together some pipeline so that you can build your visualizations into Grafana/[GCP Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)/PowerBI/ whatever.
+
++++ Created a quick data [PoC with streamlit and PyGWalker](#pygwalker).
+
+**Intro**
 
 It not just about *old school* [**BI** Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/), or the well known propietary ones like [Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) or [PBi](https://github.com/JAlcocerT/PBi)
 
@@ -47,9 +55,16 @@ Then I found this:
 
 ### DB2Rest
 
-* https://github.com/9tigerio/db2rest
+DB2Rest is blazing fast - It has no Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
 
-> Apache v2 | Instant no code **DATA API platform**. Connect any database, run anywhere. Power your GENAI application function/tools calls in seconds.
+* https://github.com/9tigerio/db2rest
+  * https://db2rest.com/docs/run-db2rest-on-docker
+
+```sh
+#docker pull kdhrubo/db2rest:v1.6.4 #or docker pull kdhrubo/db2rest:latest
+```
+
+> Apache v2 | Instant no code **DATA API platform**. Connect any database, run anywhere. Power your GENAI application [function/tools calls](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/) in seconds.
 
 
 ---
@@ -84,7 +99,7 @@ You can also bring:
 * You can even [modify DNS via this script](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/flask_dnsupdater.py)
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="NEW Streamlit PoC repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
 {{< /cards >}}
 
 Remember about maps:

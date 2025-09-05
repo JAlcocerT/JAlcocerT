@@ -557,7 +557,7 @@ If one LLM can be helpful, how about combining them to work together?
 
 I was exploring prompt engineering already sometime ago [here](/learning-with-generative-ai/#prompt-engineering).
 
-But lately discovered about the following resources:
+But lately discovered about the following **resources**:
 
 * https://github.com/Hannibal046/Awesome-LLM?tab=readme-ov-file#llm-books
 * https://github.com/dair-ai/Prompt-Engineering-Guide - MIT Licensed

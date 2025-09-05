@@ -2,7 +2,7 @@
 title: "[AI] Vacation Planning - Recommendations, Costs, Weather"
 date: 2025-10-23
 draft: false
-tags: ["Dev","AI"]  
+tags: ["Dev","AI"]
 description: "Python App to explore vacAItion destination. LLMs ❤️ Data. While exploring Agents."
 url: 'vacation-planner-python'
 ---
@@ -40,16 +40,9 @@ docker run -d \
 
 Or...Use the following **docker compose**:
 
-```yml
-#version: "2"
-services:
-  tripplanner:
-    image: trip_planner #ghcr.io/jalcocert/py_trip_planner #fossengineer/trip_planner
-    container_name: tripplanner
-    ports:
-      - 8051:8050
-    restart: unless-stopped
-```
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trip-planner" title="Trip Planner | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 {{< /details >}}
 

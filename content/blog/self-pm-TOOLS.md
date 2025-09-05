@@ -1,9 +1,9 @@
 ---
 title: "PM Tools for Business"
-date: 2025-09-09T23:20:21+01:00
+date: 2025-09-03T23:20:21+01:00
 draft: false
-tags: ["Web","OSS for Business","Self-Hosting","PPTs","AppFlowy"] 
-description: ''    
+tags: ["Web","OSS for Business","Self-Hosting","PPTs","AppFlowy"]
+description: 'Become the project manager that can do real work'   
 url: 'selfhosting-pm-tools-docker'    
 ---
 
@@ -12,10 +12,13 @@ url: 'selfhosting-pm-tools-docker'
 
 1. Take good [notes](#note-taking-apps)
 2. Create proper [PPTs](#creating-presentations-ppts) and diagrams
+3. Be aware of the [PRD/BRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/)...
+4. How much [time](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) and [focus](https://jalcocert.github.io/JAlcocerT/tools-to-improve-focus/) matter
+5. Be good with your [Architect](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/) and [BA](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/)
 
 ## Note Taking Apps
 
-Call it note taking.
+Call it [note taking](https://jalcocert.github.io/JAlcocerT/knowledge-management/).
 
 Call it knowledge management.
 
@@ -23,6 +26,7 @@ The thing is that you needs this in the information era.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Business/PM" title="PM Related | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/knowledge-management/" title="Note Taking / KM | Post ↗" >}}
 {{< /cards >}}
 
 
@@ -30,37 +34,34 @@ The thing is that you needs this in the information era.
 
 <!-- https://itsfoss.com/appflowy/ -->
 
+* {{< newtab url="https://www.appflowy.io/" text="The AppFlowy Official Site" >}}
+* {{< newtab url="https://github.com/AppFlowy-IO/AppFlowy" text="The Source Code at Github" >}}
 
-https://github.com/AppFlowy-IO/AppFlowy
-
-
-* {{< newtab url="https://www.appflowy.io/" text="The  Official Site" >}}
-* {{< newtab url="https://github.com/AppFlowy-IO/AppFlowy" text="The  Source Code at Github" >}}
-
-> AppFlowy is an **open-source alternative to Notion**. You are in charge of your data and customizations.
+> AGPL-3.0 license | AppFlowy is an **open-source alternative to Notion**. You are in charge of your data and customizations.
 
 > > Built with Flutter and Rust.
 
-
-<https://docs.appflowy.io/docs/appflowy/install-appflowy/installation-methods/installing-with-docker>
+Install appflowy is per: <https://docs.appflowy.io/docs/appflowy/install-appflowy/installation-methods/installing-with-docker>
 
 AppFlowy, an open source project mgmt, documentation, and note-taking app for extreme productivity
 
+{{< youtube "5_WwDt0A4LA" >}}
 
-<https://www.youtube.com/watch?v=5_WwDt0A4LA>
+
+<!-- <https://www.youtube.com/watch?v=5_WwDt0A4LA> -->
 
 ## Communication
 
-F/OSS to Communicate with the Team.
+F/OSS to [Communicate with the Team](https://jalcocert.github.io/JAlcocerT/communication-management).
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Business/PM" title="PM Related | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Communication" title="Communication Related | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/communication-management/" title="Communication Tools | Post ↗" >}}  
 {{< /cards >}}
-
 
 ## Creating Presentations (PPTs)
 
-* You can also create PDFs with /selfhosting-stirling-pdf
+You can also create PDFs with [stirling-pdf](https://fossengineer.com/selfhosting-stirling-pdf)
 
 ### Creating Diagrams
 
@@ -77,20 +78,25 @@ A project is also a lot about Time Management.
 These tools help to get an overview of *where are we* for your daily: 
 
 1. OpenProject
-2. LeanTime
+2. [LeanTime](https://fossengineer.com/selfhosting-Leantime-docker/)
 3. TimeLite
+
+https://github.com/JAlcocerT/Docker/blob/main/Business/PM/leantime_docker-compose.yaml
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Business/PM" title="PM Related | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/leantime" title="LeanTime | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
-
-
 
 ## F/OSS Alternatives to Excel
 
+Build AI-native spreadsheets. Univer is a full-stack framework for **creating and editing spreadsheets** on both web and server.
+
+With Univer MCP, Univer Spreadsheets is driven directly through natural language. 
+
 * https://github.com/dream-num/univer
 
-> Univer is an open-source alternative to Google Sheets, Slides, and Docs
+> Apache v2 | Univer is an open-source alternative to Google Sheets, Slides, and Docs
 
 Airtable alternatives...
 
@@ -104,7 +110,7 @@ Airtable alternatives...
 
 Already tired?
 
-Looking for a [job change because the market is bullish](https://jalcocert.github.io/JAlcocerT/playwright-101/)?
+Looking for a [**job change** because the market is bullish](https://jalcocert.github.io/JAlcocerT/playwright-101/)?
 
 1. Open Resume
 2. Reactive Resume
@@ -117,6 +123,11 @@ Looking for a [job change because the market is bullish](https://jalcocert.githu
 > Syncthing Multi Server Monitor aka smsm aka sm²
 
 2. Just use NextCloud, bro.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/syncthing" title="Syncthing | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="NextCloud | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ---

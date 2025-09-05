@@ -1,9 +1,10 @@
 ---
 title: "DevOps Tools"
-date: 2025-10-10T00:20:21+01:00
+date: 2025-09-19T00:20:21+01:00
 draft: false
-description: 'Setting up devops tools - From CI/CD, to Monitoring withGrafana, k8s, DSc Tools...'
+description: 'Setting up devops tools - From CI/CD, to Monitoring with Grafana, k8s, DSc Tools...'
 url: 'dev-ops-for-non-devops'
+tags: ["HomeLab","LazyDocker","depends_on","Ansible"]
 ---
 
 Crontab for Docker - https://github.com/mcuadros/ofelia
@@ -12,7 +13,9 @@ Crontab for Docker - https://github.com/mcuadros/ofelia
 
 {{< youtube "551lh10g_go" >}}
 
-## CI/CD
+
+
+## CI/CD Tools
 
 ### Github CI/CD
 
@@ -31,7 +34,7 @@ If you want to **tinker with Jenkins**, a great way is to [**Self-Host** Jenkins
 
 It's all about the **playbook**!
 
-https://github.com/devopsjourney1/ansible-rasp
+* https://github.com/devopsjourney1/ansible-rasp
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/ansible/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
@@ -55,7 +58,11 @@ and terraform? -->
 
 Ansible uses a simple syntax written in YAML called **playbooks**, which allows you to describe automation jobs in a way that approaches plain English.
 
-**Docker**, on the other hand, is an open-source platform that automates the deployment, scaling, and management of applications. It does this through **containerization**, which is a lightweight form of virtualization. Docker allows developers to package an application with all of its dependencies into a standardized unit for software development. This ensures that the application will run the same, regardless of the environment it is running in.
+**Docker**, on the other hand, is an open-source platform that automates the deployment, scaling, and management of applications. It does this through **containerization**, which is a lightweight form of virtualization.
+
+Docker allows developers to package an application with all of its dependencies into a standardized unit for software development.
+
+> This ensures that the application will run the same, regardless of the environment it is running in.
 
 Ansible and Docker are both powerful technologies that are widely used in the field of software development and operations (DevOps). They serve different but complementary purposes.
 
@@ -93,7 +100,7 @@ The data store will be in MongoDB, which will live in a Docker container.
 
 Rancher is an open source container management platform built for organizations that deploy containers in production. Rancher makes it easy to run Kubernetes everywhere, meet IT requirements, and empower DevOps teams.
 
-## Rancher: k3s
+### Rancher: k3s
 
 Setting up a High-availability K3s Kubernetes Cluster for Rancher.
 
@@ -125,7 +132,7 @@ volumes:
 ```
 
 
-## Using kubectl
+### Using kubectl
 
 **kubectl** is a command-line tool that allows you to run commands against Kubernetes clusters.
 
@@ -252,7 +259,7 @@ apt install filezilla
 
 ### What about Proxmox?
 
-https://www.proxmox.com/en/
+* https://www.proxmox.com/en/
 
 ### What about OMV?
 
@@ -339,7 +346,6 @@ In summary, while Kubeflow and MLflow are not directly related and serve differe
 * Configuration Management: Manage Kubernetes resource configurations without templating.
 * Environment-Specific Adjustments: Customize applications for different environments without altering the base resource definitions.
 * Overlay Approach: Overlay different configurations (e.g., patches) over a base configuration, allowing for reusability and simplicity.
-
 
 ### Useful Videos to Learn more about K8s
 

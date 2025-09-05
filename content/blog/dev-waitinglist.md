@@ -2,11 +2,20 @@
 title: "A Quick Waiting List"
 date: 2025-08-02
 draft: false
-tags: ["Dev","Entrepreneurship","PMF","Porkbun API"]
-description: 'How much is an idea worth? With Astro SSG and Formbricks'
+tags: ["Dev","Entrepreneurship","PMF","Porkbun API","waiting-to-landing"]
+description: 'How much is an idea worth? With Astro SSG, Formbricks and Cloudflare'
 url: 'how-to-create-a-waiting-list'
 ---
 
+**Tl;DR**
+
+Creating an astro based [waiting to landing](#ssg-astro-waiting-list) (waiting2landing v1).
+
++++ [Formbricks setup](#forms)
++++ Getting quote prices for domains via Porkbun API and modified CF DNS via API on [this section](#porkbun-api)
+
+
+**Intro**
 
 If you are flooded with ideas, you need some way to prioritize them.
 
@@ -24,7 +33,7 @@ I had pending to write **about Waiting List** as referenced on few previous post
 * https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy
 * https://jalcocert.github.io/JAlcocerT/product-tools/
 
-And for sure you have seen many waiting list on social media, like:
+And for sure, you have seen many **waiting list examples on social media ads**, like:
 
 * `https://throughthelyns.com/sms-challenge/sms-challange-landing/`
 * `https://prospactive.nl/funnel-system`
@@ -84,9 +93,9 @@ You will need to provide the `survey_url` to have the pop up and also `question_
 3. FormsMD
 4. Probably million other ways: BaaS, sqlite...?
 
-### Cal
-
-If instead you want to book a call CTA, you can try with cal.com
+{{< callout type="info" >}}
+If instead, you want to book a call CTA, you can try with `cal.com` instead
+{{< /callout >}}
 
 ## Porkbun API
 
@@ -94,13 +103,11 @@ We need to go to the same place where you would get the keys for NGINX HTTPs set
 
 * https://porkbun.com/account/api
 
-YOu can get something cheap (for 2$ the first year) https://porkbun.com/tld/info
+You can get something cheap (for 2$ the first year) https://porkbun.com/tld/info
 
 * https://lookup.icann.org/en/lookup
 
-You can configure porkbun, so that the default NS will be cloudflare ones: 
-
-`fattouche.ns.cloudflare.com, leanna.ns.cloudflare.com`
+You can configure porkbun, so that the **default NS** will be cloudflare ones: `fattouche.ns.cloudflare.com, leanna.ns.cloudflare.com`
 
 
 ![alt text](/blog_img/dev/porkbun/1-porkbun-default-ns.png)
@@ -191,8 +198,8 @@ Just switch from waiting, to landing:
 make local-landing
 ```
 
-{{< callout type="warning" >}}
-This will show the full original theme page (not just a very small UI with a place to insert the email and route it to formbricks)
+{{< callout type="info" >}}
+This will show the full original theme page *(not just a very small UI),* with a place to insert the email and route it to formbricks
 {{< /callout >}}
 
 ### Astro Landing Pages / Book Pages
@@ -201,7 +208,9 @@ You can see how cool can astro be for landing pages:
 
 * https://github.com/Enmamosley/astro-landing-page
 
-> CC4.0 |  Landing page blackspike 
+{{< callout type="warning" >}}
+CC4.0 | Landing page blackspike 
+{{< /callout >}}
 
 I was creating other *landing pages* and wrote about it:
 
@@ -215,7 +224,7 @@ I was creating other *landing pages* and wrote about it:
 
 > A free, modern, Astro landing page theme made with Tailwind to help kick start your next Astro project
 
-Recently, I have been geting many ads on social media about **people selling ebooks** via a very simple landing page:
+Recently, I have been geting many ads on social media about **people selling e-books** via a very simple landing page:
 
 * https://github.com/candidosales/landing-page-book-astro-tailwind
 
@@ -229,7 +238,7 @@ Recently, I have been geting many ads on social media about **people selling ebo
 
 ### More Astro Themes
 
-Get inspired if you like photo galleries
+Get inspired, if you like **photo galleries**
 
 * https://github.com/evadecker/astro-photo-grid
 

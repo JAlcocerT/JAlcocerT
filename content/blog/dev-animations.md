@@ -92,7 +92,7 @@ Is it even possible to create a full `.mp4` with code?
 
 Apparently, it is: *and not necesarily with plotly, as I tought*
 
-And again, people are doing fantastic stuff with matplotlib:
+And again, people are doing **fantastic stuff** with matplotlib:
 
 * <https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/>
 * <https://jckantor.github.io/CBE30338/A.03-Animation-in-Jupyter-Notebooks.html>

@@ -1,6 +1,6 @@
 ---
-title: "AI Driven e-books"
-date: 2025-09-06
+title: "AI Driven e-books as a code"
+date: 2025-10-07
 draft: false
 tags: ["Entrepreneuring","sell-your-ebook","Stripe API","n8n"]
 description: 'Building in public a simple web platform to create/sell ebooks.'
@@ -43,7 +43,6 @@ How about **selling an ebook** be all about: having an stripe account and proper
 You know what to tell, its just that... **time matters**.
 
 * https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_ebook.py
-
 
 
 ## eBooks
@@ -152,9 +151,24 @@ Use **bookdown** when:
 - ✅ Planning to **publish** the work
 - ✅ Need **multiple output formats** (PDF, HTML, EPUB)
 
+
+### How people send eBooks
+
+
+1. `https://shop.acquisition.com/products/100m-money-models?utm_campaign=13261424-%24100M%20Money%20Models&utm_source=hs_email&utm_medium=email&utm_content=376228484&_hsmi=376228484`
+
+2. 
+
+
 ---
 
 ## Conclusions
+
+
+
+---
+
+## FAQ
 
 
 
@@ -165,3 +179,9 @@ Kindle notes are saved into a `.txt` in the device.
 I was storing notes for few years already and im really curious to see whats inside.
 
 > I gave it a try with Google's NotebookLLM, but...custom is custom
+
+### More Books Stuff
+
+* https://bookstash.io/ - Top books recommended by famous folk, in 3m or less.
+
+> Epub to AudioBook with Python: https://github.com/C-Loftus/QuickPiperAudiobook

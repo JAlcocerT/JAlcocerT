@@ -6,7 +6,7 @@ cover:
   image: "https://socialify.git.ci/ghostfolio/ghostfolio/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
   alt: "Ghostfolio" # alt text
   caption: "Ghostfolio setup with docker." # display caption under cover
-tags: ["Docker","Open Source Finances"]
+tags: ["Docker","Open Source Finances","FireFly3"]
 description: ''
 url: 'ghostfolio-and-personal-finance'
 ---
@@ -19,36 +19,35 @@ AND MORE TOOLS IN THE FAQ
 
 ## Paisa
 
-https://paisa.fyi/
+* https://paisa.fyi/
+* https://github.com/ananthakumaran/paisa
 
 ## Actual Budget
 
-https://actualbudget.org/
-https://github.com/actualbudget/actual
+* https://actualbudget.org/
+* https://github.com/actualbudget/actual
 
 > A local-first personal finance app
 
 
 ## firefly-iii
 
-https://github.com/firefly-iii/firefly-iii/
-https://mariushosting.com/how-to-install-firefly-iii-on-your-synology-nas/
+* https://github.com/firefly-iii/firefly-iii/
+* https://mariushosting.com/how-to-install-firefly-iii-on-your-synology-nas/
 
 https://www.youtube.com/watch?v=ru1LTUhFGjA
 
 ## Maybe
 
-https://github.com/maybe-finance/maybe
+* https://github.com/maybe-finance/maybe
 
  The OS for your personal finances 
 
 ## Ghostfolio
 
-<https://ghostfol.io/>
+* https://ghostfol.io/
+* https://github.com/ghostfolio/ghostfolio
 
-https://github.com/ghostfolio/ghostfolio
-
-https://mariushosting.com/how-to-install-ghostfolio-on-your-synology-nas/
 
 https://ghostfol.io/en/features
 
@@ -66,68 +65,13 @@ sh get-docker.sh && docker version
 {{< /dropdown >}}
 
 
-```yml
-version: "3.9"
-services:
-  ghostfolio-redis:
-    image: redis
-    container_name: Ghostfolio-REDIS
-    hostname: ghostfolio-redis
-    security_opt:
-      - no-new-privileges:true
-    healthcheck:
-      test: ["CMD-SHELL", "redis-cli ping || exit 1"]
-    user: 1026:100
-    environment:
-      - TZ=Europe/Bucharest
-    volumes:
-      - /volume1/docker/ghostfolio/redis:/data
-    restart: always
 
-  ghostfolio-db:
-    image: postgres
-    container_name: Ghostfolio-DB
-    hostname: ghostfolio-db
-    security_opt:
-      - no-new-privileges:true
-    healthcheck:
-      test: ["CMD", "pg_isready", "-q", "-d", "ghostfoliodb", "-U", "ghostfoliouser"]
-      timeout: 45s
-      interval: 10s
-      retries: 10
-    user: 1026:100
-    volumes:
-      - /volume1/docker/ghostfolio/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=ghostfoliodb
-      - POSTGRES_USER=ghostfoliouser
-      - POSTGRES_PASSWORD=ghostfoliopass
-    restart: always
-
-  ghostfolio:
-    image: ghostfolio/ghostfolio:latest
-    container_name: Ghostfolio
-    hostname: ghostfolio
-    security_opt:
-      - no-new-privileges:true
-    user: 1026:100
-    environment:
-      - NODE_ENV=production
-      - ACCESS_TOKEN_SALT=MariushostingMariushostingMari13
-      - JWT_SECRET_KEY=MariushostingMariushostingMari13
-      - REDIS_HOST=ghostfolio-redis
-      - REDIS_PASSWORD=
-      - REDIS_PORT=6379
-      - DATABASE_URL=postgresql://ghostfoliouser:ghostfoliopass@ghostfolio-db:5432/ghostfoliodb?sslmode=prefer
-    ports:
-      - 8435:3333
-    restart: always
-    depends_on:
-      ghostfolio-db:
-        condition: service_started
-      ghostfolio-redis:
-        condition: service_healthy
+```sh
+echo -e "POSTGRES_PASSWORD=$(openssl rand -base64 32)\nACCESS_TOKEN_SALT=$(openssl rand -base64 32)\nJWT_SECRET_KEY=$(openssl rand -base64 32)" > .env
 ```
+
+> Thanks to https://mariushosting.com/how-to-install-ghostfolio-on-your-synology-nas/
+
 
 ---
 

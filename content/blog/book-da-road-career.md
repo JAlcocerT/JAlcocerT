@@ -432,7 +432,9 @@ There are five normal forms (1NF, 2NF, 3NF, BCNF, and 4NF) that can be used to n
 
 For example: 1NF (First Normal Form): A table in 1NF is in first normal form if it does not contain any repeating groups. This means that each row in the table must be unique, and no column can contain multiple values.
 
-> Normalization ss a process used in database design to **arrange data efficiently and logically**. Just as grouping books by genre or author helps readers find what they're looking for, normalization involves breaking down data into smaller, related tables and reducing redundancy. 
+> Normalization ss a process used in database design to **arrange data efficiently and logically**. 
+
+> > Just as grouping books by genre or author helps readers find what they're looking for, normalization involves breaking down data into smaller, related tables and reducing redundancy. 
 
 **Cardinality** is a measure of the relationship between two tables in a database. It is expressed as a pair of numbers, such as 1:1, 1:N, or M:N.
 

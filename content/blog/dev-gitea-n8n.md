@@ -1,6 +1,6 @@
 ---
 title: "Automatic Post creation for SSG Workflows"
-date: 2025-09-06T15:20:21+01:00
+date: 2025-09-05T08:20:21+01:00
 draft: false
 tags: ["Dev","n8n vs Gitea","Web","Markdown","Docker Networking"]
 description: 'From n8n workflow to Gitea.'
@@ -28,7 +28,6 @@ Just get your server and containers going:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="Gitea | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 
 ## The Stack
@@ -66,7 +65,9 @@ Verify:
 
 > Go to CF zero trust section and add as http `n8n-n8n-1:5678` as subdomain and enjoy `https://n8n.jalcocertech.com/home/workflows`
 
-2. Get Gitea ready:
+2. Get Gitea ready: https://github.com/go-gitea/gitea
+
+> MIT  Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD 
 
 ```sh
 cd gitea

@@ -3,7 +3,7 @@ title: "Notes and Knowledge Management"
 date: 2025-08-27T19:20:21+01:00
 draft: false
 tags: ["DA","Career","Joplin","LogSeq"]
-description: 'Head clean with notion, obsidian...or with OSS?'
+description: 'Head clean with notion, obsidian...or with OSS note taking tools?'
 url: 'knowledge-management'
 ---
 

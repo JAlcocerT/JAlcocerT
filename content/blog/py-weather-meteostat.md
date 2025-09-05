@@ -12,7 +12,7 @@ summary: 'Using Meteostat Python API to access and display historical weather da
 url: 'python-historical-weather-api-with-meteostat'
 ---
 
-# Historical Weather in Python
+**Historical Weather in Python**
 
 Weather plays a crucial role in many domains, from planning outdoor activities to optimizing business operations.
 

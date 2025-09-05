@@ -271,10 +271,3 @@ Which of these very different use cases will be valued the most?
   {{< card link="https://jalcocert.github.io/JAlcocerT/MultiChat/" title="MultiChat" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
   {{< card link="https://github.com/JAlcocerT/MultiChat" title="MultiChat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the MultiChat" >}}
 {{< /cards >}}
-
-### Books
-
-* https://bookstash.io/ - Top books recommended by famous folk, in 3m or less.
-
-
-Epub to AudioBook with Python: https://github.com/C-Loftus/QuickPiperAudiobook

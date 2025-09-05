@@ -12,6 +12,12 @@ url: 'no-code-ai-tools'
 
 Gen AI, Rags, containers...
 
+A lot of new tech.
+
+But users care about usability and useful features for them.
+
+Ill cover some tools that can be quickly put in front of your users, like: [Flowise](#flowise-ai), [N8n](#n8n) and [telegram bots](#tg-bots)
+
 > But what about the use cases?
 
 {{< cards >}}

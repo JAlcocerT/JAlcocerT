@@ -2,7 +2,7 @@
 title: "Encryption, Captchas and more"
 date: 2025-05-20
 draft: false
-tags: ["Outro","Security","PoW","Clave","E-Residency"]
+tags: ["Outro","Security","PoW","Clave","E-Residency","openssl"]
 description: 'SHA256 Protocol. The concept and applications: SSH, HTTPs, Bitcoin...'
 url: 'encryption-101'
 ---
@@ -313,7 +313,9 @@ They are all valuable for self-hosting, but they serve distinct purposes and ope
 
 ## Countries and Users
 
-La principal diferencia entre el certificado digital y el sistema Cl@ve del Gobierno de España radica en su **función principal y en el tipo de seguridad que ofrecen**. Aunque ambos permiten realizar trámites con la Administración Pública, no son lo mismo.
+La principal diferencia entre el certificado digital y el sistema Cl@ve del Gobierno de España radica en su **función principal y en el tipo de seguridad que ofrecen**. 
+
+> Aunque ambos permiten realizar trámites con la Administración Pública, no son lo mismo.
 
 Aquí tienes un desglose de las diferencias clave:
 

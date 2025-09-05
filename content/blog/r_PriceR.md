@@ -4,11 +4,12 @@ date: 2022-08-14T23:20:21+01:00
 draft: false
 tags: ["R-Stocks","R"]
 description: 'PriceR - Fetch Financial Data with R and PriceR package.'
-summary: 'You might be curious about getting historical exchange rates between currencies or check historical inflation data for some project that you want to accomplish - PriceR is an open source library that helps us with this task.'
 url: 'r-priceR-package-guide'
 ---
 
 # The PriceR Package
+
+You might be curious about getting historical exchange rates between currencies or check historical inflation data for some project that you want to accomplish - PriceR is an open source library that helps us with this task.
 
 ## What is PriceR about?
 

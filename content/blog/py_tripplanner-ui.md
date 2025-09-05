@@ -2,7 +2,7 @@
 title: "Improving Python DASH UI's: Python Trip Planner with Weather"
 date: 2023-06-24T08:20:21+01:00
 draft: false
-tags: ["Python","Dashboards","DASH","Trip-Planner"]
+tags: ["Python","Dashboards","DASH","Trip-Planner","callbacks"]
 # cover:
 #     image: "/img/TripPlanner-UI.gif" # image path/url 
 #     alt: "Trip Planner with Weather - Improving the Default Python DASH UI." # alt text
@@ -31,7 +31,9 @@ Discover how the carefully chosen colors breathe life into every interaction, ev
 
 ### The Layout
 
-The UI layout is of utmost importance as it determines the arrangement and organization of elements within a user interface. An effective layout contributes to a seamless and [intuitive user experience](https://fossengineer.com/business-intelligence-data-analytics/#ui-and-visualizations-in-analytics) by optimizing visual hierarchy, logical flow, and ease of navigation. 
+The UI layout is of utmost importance as it determines the arrangement and organization of elements within a user interface. 
+
+An effective layout contributes to a seamless and [intuitive user experience](https://fossengineer.com/business-intelligence-data-analytics/#ui-and-visualizations-in-analytics) by optimizing visual hierarchy, logical flow, and ease of navigation. 
 
 A well-designed layout ensures that important information and interactive elements are prominently displayed, **[reducing cognitive load](https://fossengineer.com/psychology-skills-data-analytics/)** and enabling users to quickly grasp the purpose and functionality of the interface.
 
@@ -42,14 +44,20 @@ Colors play a crucial role in user interface (UI) design as they have the power 
 
 Color choices can influence user engagement and perception, helping to establish a brand identity and improve overall user experience. 
 
-Different colors have distinct psychological associations, such as blue conveying calmness and trust, red evoking urgency or excitement, and green representing nature or growth. Proper color combinations and contrasts aid in readability and accessibility, ensuring that users can easily distinguish elements and navigate through the interface.
+Different colors have distinct psychological associations, such as blue conveying calmness and trust, red evoking urgency or excitement, and green representing nature or growth.
 
-[Choosing your UI colors](https://fossengineer.com/better-visualizations-data-analytics/#ideas-for-ui) might seem a trivial part of our work, but it can make the difference for more users than we think. And in the end of the day, we want our solution to be useful for as many people as possible.
+Proper color combinations and contrasts aid in readability and accessibility, ensuring that users can easily distinguish elements and navigate through the interface.
+
+[Choosing your UI colors](https://fossengineer.com/better-visualizations-data-analytics/#ideas-for-ui) might seem a trivial part of our work, but it can make the difference for more users than we think. 
+
+> And in the end of the day, we want our solution to be useful for as many people as possible.
 
 
 ## Customizing the Chart's UI
 
-[Line charts and box plots are both commonly used](https://fossengineer.com/better-visualizations-data-analytics/#different-problems---different-chart-types) for visualizing data, but they serve different purposes and are suited for different types of data analysis. Here are the main reasons why you would choose one over the other:
+[Line charts and box plots are both commonly used](https://fossengineer.com/better-visualizations-data-analytics/#different-problems---different-chart-types) for visualizing data, but they serve different purposes and are suited for different types of data analysis. 
+
+Here are the main reasons why you would choose one over the other.
 
 ### About Line Charts:
 
@@ -135,7 +143,9 @@ In programming, **callbacks** are essentially functions that are passed as argum
 The idea is that the "outer" function can then execute the "inner" function (the callback) at a later point in time, often after a specific event has occurred or a task has been completed.
 {{< /callout >}}
 
-Think of it like this: you tell someone to do a task for you, and you give them your phone number (the callback function). They will call you back (execute the callback function) when they are finished.
+Think of it like this: you tell someone to do a task for you, and you give them your phone number (the callback function). 
+
+> They will call you back (execute the callback function) when they are finished.
 
 **Key aspects of callbacks:**
 

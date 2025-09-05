@@ -77,7 +77,7 @@ We need to do within Javascript packages to work.
 
 > A modern runtime for JavaScript and TypeScript.
 
-And now we can **run js on jupyter notebooks**!
+> > And now we can **run js on jupyter `.ipynb`**!
 
 
 <!-- 

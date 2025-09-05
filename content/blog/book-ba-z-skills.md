@@ -2,8 +2,8 @@
 title: "Must have BA SKILLS to work in Analytics"
 date: 2021-10-31T23:20:21+01:00
 draft: false
-tags: ["Career"]
-description: 'Summary - Business Analysis Skills for your career in Analytics. Tools: UML, BPMN, RPA...'
+tags: ["Career","RACI","UML","BPMN"]
+description: 'Business Analysis Skills for your career in Analytics. Tools: UML, BPMN, RPA...'
 url: 'business-analytics-skills'
 ---
 
@@ -178,7 +178,9 @@ Prototyping involves creating a simplified version or mock-up of a system or int
 
 Wireframing tools are used to create visual representations of system screens or user interfaces, aiding in requirements validation and communication.
 
-A mockup is a visual representation or prototype of a design, typically used in the early stages of a project or product development process. It provides a visual overview of how a system, interface, or layout will look and function, without the full functionality or interactivity of the final product.
+A mockup is a visual representation or prototype of a design, typically used in the early stages of a project or product development process.
+
+It provides a visual overview of how a system, interface, or layout will look and function, without the full functionality or interactivity of the final product.
 
 **A mockup is a static representation that focuses on the visual aspects**, including the placement of elements, typography, color schemes, and general layout.
 

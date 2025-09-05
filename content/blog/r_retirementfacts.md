@@ -66,13 +66,16 @@ The model assumes that no return on the savings are given, showing that in this 
 * **Plotly** - for interactive visualizations
     * In the UI side, it has to be called with
 
-    ```r
-    plotlyOutput("SavingsEvolution")
-    ```
-    * In the server side:
-    ```r
-    output$SavingsEvolution <- renderPlotly({....})
-    ```
+```r
+plotlyOutput("SavingsEvolution")
+```
+
+* In the server side:
+
+```r
+output$SavingsEvolution <- renderPlotly({....})
+```
+
 * **Shiny** - to build the app and have our filters
     * sliderInput
     * checkboxInput

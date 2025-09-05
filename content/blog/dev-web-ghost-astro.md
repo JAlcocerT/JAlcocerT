@@ -1,12 +1,14 @@
 ---
-title: "Editing Astro Websites via Headless Ghost CMS"
+title: "Editing Astro Websites via Headless Ghost API"
 date: 2025-05-19T22:20:21+01:00
 draft: false
-description: "Connecting Ghost CMS to work with Astro Themes. Compared with Editing Astro via JSON."
+description: "Connecting Ghost CMS with Astro Themes. Compared with Editing Astro via JSON."
 url: 'ghost-cms-for-astro'
-tags: ["Web","CMS","Ghost","Astro SSG","n8n","Whatsapp Bouble Component"]
+tags: ["Web","CMS","Ghost x Astro SSG","n8n","Whatsapp Bouble Component"]
 ---
 
+
+**Intro**
 
 Thanks to:
 
@@ -28,7 +30,7 @@ Even during the [Dokploy PaaS Post](https://jalcocert.github.io/JAlcocerT/selfho
 
 The https part is covered with the built in Traefik, or a custom one, if you want.
 
-The container for SSGs are not a mistery
+The **containers for SSGs** are not a mistery anymore:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="SSG Containers | Docker Configs 🐋✅ ↗" >}}
@@ -36,7 +38,7 @@ The container for SSGs are not a mistery
 
 So...how about the editing capabilities?
 
-Because doing this via IDE might not be for everyone:
+Because doing this post edits via IDE might not be for everyone:
 
 ```sh
 npm install
@@ -281,8 +283,6 @@ So you will need to give proper promps to that the initial asto theme design is 
 
 Your current setup uses **Ghost as a headless CMS**.
 
-Here’s how it works:
-
 Ghost runs as a backend/content management system (in your Docker container).
 
 You create and manage posts, images, and metadata via the Ghost Admin UI.
@@ -304,7 +304,7 @@ Benefits:
 
 ### Ghost x N8N
 
-Who said about writing AI Driven content?
+Who said about **writing AI Driven content**?
 
 * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.ghost/
 
@@ -317,7 +317,7 @@ Who said about writing AI Driven content?
 
 If you already made the [n8n setup](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#n8n), congratz!
 
-You can also use n8n with MCP:
+You can also use n8n with [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/):
 
 <!-- 
 https://www.youtube.com/watch?v=c9E-tDyKy_A -->
@@ -365,7 +365,7 @@ What a surprise!
 
 I need to think a way to move forward to scale how I serve websites.
 
-But probably this wont be my way to go.
+> But probably, this setup (Ghost x Astro) wont be my way to go.
 
 
 ### Why that much love to Astro
