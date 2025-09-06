@@ -16,7 +16,7 @@ You can build your visualizations into Grafana/[GCP Looker](https://jalcocert.gi
 
 But if you know what to do with python...
 
-+++ Created a quick data [PoC with streamlit and PyGWalker](#pygwalker).
++++ Created a quick data [**PoC with streamlit** and PyGWalker](#pygwalker).
 
 **Intro**
 

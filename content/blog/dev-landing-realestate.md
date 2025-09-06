@@ -58,8 +58,15 @@ cd moirealestate-astro-theme
 I just followed this steps to initiate the repo programatically and push it with `gh`: <https://github.com/JAlcocerT/moi-realestate-pb>
 
 ```sh
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
 git add .
 git commit -m "Initial commit"
+```
+
+```sh
 #sudo apt install gh
 gh auth login
 gh repo create moi-realestate-pb --private --source=. --remote=origin --push

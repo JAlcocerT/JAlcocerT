@@ -8,6 +8,12 @@ url: 'cool-link-in-bios'
 ---
 
 
+**Tl;DR**
+
+Im chilling at a hotel pool, have bought a domain and tried the Astro Link in Bio Theme.
+
+**Intro**
+
 Having a cool **website for you linkinbio** can be a good experience to get started with SSGs.
 
 And they will provide a **similar experience** to linktree, linkbio,...
@@ -153,7 +159,7 @@ This is **how they can look**:
 And **like this**:
 
 {{< cards >}}
-  {{< card link="https://financeinmotion.fyi/" title="LinkinBio" image="/blog_img/web/WebsSnapshots/Web_IoTechCrafts.png" subtitle="Links with astro-link-in-bio-theme - FinanceInMotion FYI" >}}
+  {{< card link="https://financeinmotion.fyi/" title="LinkinBio with Astro" image="blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="Links with astro-link-in-bio-theme - FinanceInMotion FYI" >}}
   {{< card link="https://jalcocert.github.io/Portfolio/" title="Links with HUGO LYNX" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links on Github Pages" >}}             
 {{< /cards >}}
 
