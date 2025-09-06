@@ -56,11 +56,8 @@ Databricks is
 
 postman
 
-hoppscotch
-
 Hoppscotch is indeed similar to Postman in its core functionality.  Both are tools designed to help developers work with APIs (Application Programming Interfaces).  Think of them as specialized tools for sending and receiving messages to different software services.
 
-Here's a breakdown of what Hoppscotch is and how it compares to Postman:
 
 **What Hoppscotch Does:**
 

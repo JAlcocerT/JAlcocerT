@@ -51,6 +51,8 @@ sudo docker compose up -d
 {{< /cards >}}
 
 * https://docs.flowiseai.com/integrations
+* https://flowiseai.com/#community
+
 
 ### Flowise API SDK Embed
 

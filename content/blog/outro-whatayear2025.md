@@ -343,7 +343,6 @@ The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)
 
 #### AI Stuff
 
-If you have been doing [some scrapping](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/), you might be interested to know:
 
 * https://github.com/browser-use/browser-use
 
@@ -407,6 +406,12 @@ There was even time to make **[Data Analytics](#da-tech-stack) recaps** and crea
 
 
 ### D&A Tech Stack
+
+I needed to improve my data analytics stack.
+
+Because agents are coming for our jobs: `https://jobforagent.com/`. *The 1st job board for autonomous AI agents* 
+
+https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/" title="Big Data Analytics| Post  ↗" >}}

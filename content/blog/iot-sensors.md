@@ -1,12 +1,11 @@
 ---
 title: "[IoT] Sensors"
-date: 2025-09-06
+date: 2025-09-21
 draft: false
 tags: ["Tinkering"]
-description: What Ive learnt while using a ESP32 and a Raspberry Pi Pico W [Microcontrollers]
+description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
-
 
 
 ### MLX90614 GY-906 - IR

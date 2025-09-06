@@ -69,7 +69,7 @@ By adopting a product vision mindset, any analysts can get several benefits:
 
 ### PostHog for Product Analytics
 
-https://posthog.com/ How engineers build better products - The Open Sourced Amplitude
+https://posthog.com/ How engineers build better products - *The Open Sourced Amplitude*
 
 How about combining product + **POSTHOG** + [A|B Testing](https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/)?
 

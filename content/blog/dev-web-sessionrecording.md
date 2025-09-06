@@ -14,9 +14,11 @@ If you got your SaaS reachable by potential users.
 
 You will want to know what it works and what not.
 
-BUt for real.
+But for real.
 
 What are the users experiencing.
+
+If you have worked on some startups, you might have used Ampplitude.
 
 ## OpenReplay
 

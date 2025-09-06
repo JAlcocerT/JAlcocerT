@@ -10,7 +10,11 @@ url: 'ai-bi-tools'
 
 **Tl;DR**
 
-As a BIA, you might have to skip waiting for data engineering team to put together some pipeline so that you can build your visualizations into Grafana/[GCP Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)/PowerBI/ whatever.
+As a BIA, you might have to skip waiting for data engineering team to put together some pipeline.
+
+You can build your visualizations into Grafana/[GCP Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)/[PowerBI](https://jalcocert.github.io/JAlcocerT/about-powerbi/)/ whatever.
+
+But if you know what to do with python...
 
 +++ Created a quick data [PoC with streamlit and PyGWalker](#pygwalker).
 
@@ -55,7 +59,9 @@ Then I found this:
 
 ### DB2Rest
 
-DB2Rest is blazing fast - It has no Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
+DB2Rest is blazing fast.
+
+It has no Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
 
 * https://github.com/9tigerio/db2rest
   * https://db2rest.com/docs/run-db2rest-on-docker

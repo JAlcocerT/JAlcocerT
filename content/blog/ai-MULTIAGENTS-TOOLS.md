@@ -639,9 +639,9 @@ Example - https://github.com/tonykipkemboi/trip_planner_agent
 
 ## Conclusions
 
-Isnt it crazy that we already have: https://jobforagent.com/
+Isnt it crazy that we already have job portals for agents: https://jobforagent.com/
 
-
+In the meantime, you can get your keys:
 
 * https://platform.openai.com/logs
     * https://platform.openai.com/playground/prompts?models=gpt-4.1
