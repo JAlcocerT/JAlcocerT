@@ -121,6 +121,8 @@ https://dnsprivacy.org/dns_privacy_daemon_-_stubby/
 * Wireshark
 * PiHole
 
+https://docs.linuxserver.io/images/docker-wireshark/
+
 ### Interesting Security Tools
 
 * 2fas - https://github.com/twofas/2fas-android

@@ -365,6 +365,7 @@ I was tinkering with KDEnlive sometime ago, [with the x300](https://jalcocert.gi
 
 ```sh
 flatpak install flathub org.kde.kdenlive
+#https://docs.linuxserver.io/images/docker-kdenlive/
 ```
 
 {{< cards cols="2" >}}

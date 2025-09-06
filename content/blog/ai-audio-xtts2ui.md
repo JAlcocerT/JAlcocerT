@@ -318,6 +318,7 @@ Also, in [HF there are already interesting projects](https://jalcocert.github.io
 * Bark
 
 * Whisper - https://github.com/openai/whisper
+  * *<https://docs.linuxserver.io/images/docker-faster-whisper/#supported-architectures>
   * https://github.com/Vaibhavs10/insanely-fast-whisper
   * https://github.com/ggerganov/whisper.cpp
   * https://huggingface.co/openai/whisper-large-v2#long-form-transcription

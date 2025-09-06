@@ -9,9 +9,7 @@ description: 'Git and useful extensions while developing.'
 
 When I started to use Git, I could actually start see my progress and build upon my previous effort.
 
-This is a recap of the best GIT related tricks I have so far.
-
-
+This is a recap of the best **GIT related tricks** I have so far.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/github-gists/" title="Github Gists Tricks" icon="book-open" >}}
@@ -220,6 +218,8 @@ For a Python Dev Container, you can get one with **this kind of [docker-compose]
 {{< /callout >}}
 
 {{< youtube "yUyxJr2xboI" >}}
+
+> You can use [vscodium inside docker](https://docs.linuxserver.io/images/docker-vscodium/#docker-cli-click-here-for-more-info)
 
 **More VSCode extensions**
 

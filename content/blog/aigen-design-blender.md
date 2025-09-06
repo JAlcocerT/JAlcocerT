@@ -9,6 +9,9 @@ url: 'how-to-use-blender-with-AI'
 
 
 
+* <https://docs.linuxserver.io/images/docker-cura/>
+* FREE CAD
+
 {{< cards >}}
   {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
   {{< card link="https://github.com/JAlcocerT/3Design" title="3D Design Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of scripts for Blender, OpenSCAD and more" >}}

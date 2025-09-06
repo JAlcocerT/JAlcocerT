@@ -542,6 +542,26 @@ Now you can **include those free chatbots in your websites** created with... yea
 Thats right, you have many options to create your Website with Open Source:
 
 1. With Drag-n-Drop, the SelfHosted versions of: [WordPress](/selfhosting-wordpress-docker/) / [Ghost](/selfhosting-ghost-docker/) / [Grav](/selfhosting-grav-docker/)
+
+
+```yml
+---
+version: "2.1"
+services:
+  grav:
+    image: lscr.io/linuxserver/grav:latest
+    container_name: grav
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /home/Docker/grav/config:/config
+    ports:
+      - 80:80
+    restart: unless-stopped
+```
+
 2. For Developers, static websites made with SSG's: [NextJS](/nextjs-ssg/) / [HUGO](/web-guide-Hugo/) / [Astro](/astro-ssg/) / [With R](/r-knitt-package-guide)
 
 {{< dropdown title="Whatever website and ChatBot you choose - combine it ⏬" closed="true" >}}
@@ -603,8 +623,6 @@ docker run \
 ```
 
 {{< /dropdown >}}
-
-
 
 ### F/OSS AI Monitoring Tools
 

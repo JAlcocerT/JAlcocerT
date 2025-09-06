@@ -27,6 +27,8 @@ Let's see how to install some **games (legally) with Docker**.
 https://pacochan.net/es/links/
 
 
+* <https://docs.linuxserver.io/images/docker-steamos/#supported-architectures>
+
 ## Ryujinx
 
 * {{< newtab url="https://.github.io//" text="The  Official Site" >}}

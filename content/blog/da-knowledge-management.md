@@ -92,9 +92,9 @@ The Verdict
 
 I know what you are looking for: **DATABASELESS KNOWLEDGE BASE**
 
-<https://docs.linuxserver.io/images/docker-raneto/#miscellaneous-options>
-<https://docs.linuxserver.io/images/docker-hedgedoc/>
-<https://js.wiki/>
+* <https://docs.linuxserver.io/images/docker-raneto/#miscellaneous-options>
+* <https://docs.linuxserver.io/images/docker-hedgedoc/>
+* <https://js.wiki/>
 
 
 

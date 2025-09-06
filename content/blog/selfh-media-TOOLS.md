@@ -2,6 +2,7 @@
 title: "How to make a Media Home Server with OSS"
 date: 2023-11-29
 draft: false
+tags: ["HomeLab","Jellyfin"]
 description: 'Using the OrangePi as Media Server with Jellyfin. With a look to the -arr stack.'
 url: 'media-server-with-open-source'
 ---
@@ -11,11 +12,9 @@ url: 'media-server-with-open-source'
 3. Plex
 4. Kodi
 
-
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Media/Video" title="Jellyfin and others | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
-
 
 You can use all these tools [together with ...](#faq)
 
@@ -36,7 +35,7 @@ https://quay.io/repository/linuxserver.io/jellyfin
 https://hub.docker.com/r/linuxserver/jellyfin
 https://github.com/linuxserver/docker-jellyfin/pkgs/container/jellyfin -->
 
-https://fleet.linuxserver.io/
+* https://fleet.linuxserver.io/
 
 
 {{< dropdown title="How to setup Jellyfin with Docker ⏬" closed="true" >}}
@@ -78,6 +77,11 @@ Jellyfin Plugin to import directly from YT
 
 ## Conclusions
 
+
+Your MEDIA SERVER is hungry for tools like:
+
+* <https://docs.linuxserver.io/images/docker-emby/>
+
 ### Exploring the -arr Stack
 
 {{< dropdown title="Chatarr ⏬" closed="true" >}}
@@ -90,11 +94,10 @@ https://github.com/staythepath/chatarr
 
 {{< dropdown title="Radarr ⏬" closed="true" >}}
 
-https://github.com/Radarr/Radarr
-https://github.com/Radarr/Radarr?tab=GPL-3.0-1-ov-file#readme
+* https://github.com/Radarr/Radarr
+* https://github.com/Radarr/Radarr?tab=GPL-3.0-1-ov-file#readme
 
 > Movie organizer/manager for usenet and torrent users.
-
 
 
 {{< /dropdown >}}

@@ -81,7 +81,8 @@ based on wireguard
 <https://www.youtube.com/watch?v=_-vfSgqmOUI>
 
 
-Install a self-hosted VPN platform // Netbird with zitadel
+Install a self-hosted VPN platform // Netbird with zitadel.
+
 https://www.youtube.com/watch?v=_Fgwap-sl3A
 
 * Tailscale - wireguard based
@@ -91,8 +92,8 @@ https://www.youtube.com/watch?v=_Fgwap-sl3A
 
 #### Wireguard
 
-https://blog.frehi.be/2022/06/11/setting-up-wireguard-vpn-with-ipv6/
-https://www.reddit.com/r/WireGuard/comments/178uolr/guide_how_to_set_up_wireguard_with_ipv6_in_docker/
+* https://blog.frehi.be/2022/06/11/setting-up-wireguard-vpn-with-ipv6/
+* https://www.reddit.com/r/WireGuard/comments/178uolr/guide_how_to_set_up_wireguard_with_ipv6_in_docker/
 
 #### Tailscale
 

@@ -21,13 +21,9 @@ Crontab for Docker - https://github.com/mcuadros/ofelia
 
 2. Lazydocker
 
-CRON JOBS UI
+3. CRON jobs via UI: https://docs.linuxserver.io/images/docker-healthchecks/
 
-<https://docs.linuxserver.io/images/docker-healthchecks/>
-
-FAIL2BAN
-
-<https://docs.linuxserver.io/images/docker-fail2ban/#docker-compose-recommended-click-here-for-more-info>
+4. FAIL2BAN: <https://docs.linuxserver.io/images/docker-fail2ban/#docker-compose-recommended-click-here-for-more-info>
 
 ## CI/CD Tools
 
