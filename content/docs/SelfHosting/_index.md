@@ -30,37 +30,6 @@ Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhos
 ## FAQ
 
 
-MailTrap
-
-* https://mailtrap.io/signin
-
-
-<!-- https://www.youtube.com/watch?v=sJQUuN7R8sA&themeRefresh=1 -->
-
-{{< youtube "sJQUuN7R8sA" >}}
-
-
-SelfHosted Email
-
-   * Mail:
-       * iRedMail
-       * Mailcow
-       * Mailserver
-       * Mailu (rspamd)
-       * Poste
-       * Postfix
-
-* MailInaBox - https://www.maketecheasier.com/create-email-server-linux-with-mail-in-a-box/
-
-{{< callout type="warning" >}}
-This is advanced
-{{< /callout >}}
-
-Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101ee05cc64a59b46e4d299f?ref=selfh.st)
-
-[SMTP2Go](https://www.reddit.com/r/selfhosted/comments/1hr7bi5/smtp2go_free_plan_spam_score/)
-
-
 {{% details title="How to mount external drives consistently?" closed="true" %}}
 
 ```sh
@@ -115,9 +84,11 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 
 ### What do I like to SelfHost?
 
-> See https://github.com/JAlcocerT/Docker/tree/main/SelfH
+Created a repository with clean compose files for anyone to try these services: https://github.com/JAlcocerT/Home-Lab/
 
-1. Container UI's 🐳: Portainer, Rancher, Dockge
+> See https://github.com/JAlcocerT/Docker/tree/main/SelfH for stacks on what im Selfhosting at a certain month/year.
+
+1. Container UI's 🐳: Portainer, Rancher, Dockge...
 
 2. Syncthing 🐳
 
@@ -131,31 +102,20 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 
 6. [GenAI Tools 🐳](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen) 
 
-7. HTTPs Tools: Like NGINX, Traefik, Cloudflare Tunnels or Pangolin.
+7. HTTPs Tools: Like NGINX, Traefik, Cloudflare Tunnels or Pangolin. I also enjoy [DuckDNS](https://hub.docker.com/r/linuxserver/duckdns).
 
 8. PaaS Tools, like [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)
 
 9. [Photo Tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/)
 
-> The docker files are [here 🐳](https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos)
+> The docker related files are [here 🐳](https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos)
 
-10. SSGs combined with a headlessCMS 🐳 
-
-> Like Hugo Theme Gallery
+10. [SSGs](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro) combined with a headlessCMS and [selfhosted static server](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-static-hosting) 🐳 
 
 11. Change Detection
 
-12. DUckDNS
+https://docs.linuxserver.io/images/docker-vscodium/#docker-cli-click-here-for-more-info
 
-* https://hub.docker.com/r/linuxserver/duckdns
-
-
-#https://docs.nextcloud.com/server/latest/user_manual/en/files/file_drop.html#setting-up-your-own-file-drop
-
-If it is here -**YOU ARE LUCKY** - https://docs.linuxserver.io/images/docker-vscodium/#docker-cli-click-here-for-more-info
-
-
-=====================================
 
 WIRESHARK 
 
@@ -176,20 +136,6 @@ MEDIA SERVER
 
 * <https://docs.linuxserver.io/images/docker-emby/>
 
-**DATABASELESS KNOWLEDGE BASE**
-
-<https://docs.linuxserver.io/images/docker-raneto/#miscellaneous-options>
-<https://docs.linuxserver.io/images/docker-hedgedoc/>
-<https://js.wiki/>
-
-
-CRON JOBS UI
-
-<https://docs.linuxserver.io/images/docker-healthchecks/>
-
-FAIL2BAN
-
-<https://docs.linuxserver.io/images/docker-fail2ban/#docker-compose-recommended-click-here-for-more-info>
 
 ---
 version: "2.1"
@@ -231,23 +177,6 @@ docker pull gristlabs/grist
 docker run -p 8484:8484 -it gristlabs/grist
 ```
 
-```yml
-#version: '3'
-services:
-  appflowy:
-    image: appflowyio/appflowy_client:main
-    volumes:
-      - $HOME/.Xauthority:/root/.Xauthority:rw
-      - /tmp/.X11-unix:/tmp/.X11-unix
-      - /dev/dri:/dev/dri
-      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
-      - appflowy-data:/home/appflowy
-    environment:
-      - DISPLAY=${DISPLAY}
-
-volumes:
-  appflowy-data:
-```
 
 #https://github.com/huginn/huginn/blob/master/doc/docker/install.md
 

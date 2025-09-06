@@ -2,7 +2,7 @@
 title: "A Website for a PHD: Pylinac and QaTrack+"
 date: 2025-02-23T13:20:21+01:00
 draft: false
-tags: ["Dev","DSc","wsl","HUGO SSG","QATrack","SSMS"]
+tags: ["DSc","wsl","HUGO SSG","SSMS","LocalShop Pypi"]
 description: 'Helping to improve scientific knowledge. Improving the day to day of a radiotherapy researcher. Containers with WSL.'
 url: 'web-for-phd-researcher'
 ---
@@ -230,9 +230,11 @@ Its "batteries-included" approach, security features, and scalability make it a 
 
 > A great source to get Python ideas (good for the Python unknown unknowns!)
 
-3. Wolfram alfa but FOSS calculator: <https://www.opensourcealternative.to/project/Kalker>
+3. Wolfram alfa, but FOSS calculator: <https://www.opensourcealternative.to/project/Kalker>
 
-* https://kalker.xyz/
+* https://kalker.xyz
+
+> **MIT** | A scientific calculator that supports math-like syntax with user-defined variables, functions, differentiation, integration, and complex numbers. 
 
 4. See also the [Sympy](https://pypi.org/project/sympy/) Python library for symbolic mathematics
 
@@ -246,7 +248,7 @@ Its "batteries-included" approach, security features, and scalability make it a 
 
 ## FAQ
 
-Yes, **SQL Server Express** is a free version of Microsoft's SQL Server relational database management system (SSMS). 
+**SQL Server Express** is a free version of Microsoft's SQL Server relational database management system (SSMS). 
 
 It's designed for small-scale applications, development, and learning. 
 

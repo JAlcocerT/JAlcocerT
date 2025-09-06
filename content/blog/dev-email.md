@@ -69,6 +69,36 @@ Similar projects include Hunter.io and NeverBounce, which offer email validation
 
 ---
 
+MailTrap
+
+* https://mailtrap.io/signin
+
+
+<!-- https://www.youtube.com/watch?v=sJQUuN7R8sA&themeRefresh=1 -->
+
+{{< youtube "sJQUuN7R8sA" >}}
+
+
+SelfHosted Email
+
+   * Mail:
+       * iRedMail
+       * Mailcow
+       * Mailserver
+       * Mailu (rspamd)
+       * Poste
+       * Postfix
+
+* MailInaBox - https://www.maketecheasier.com/create-email-server-linux-with-mail-in-a-box/
+
+{{< callout type="warning" >}}
+This is advanced
+{{< /callout >}}
+
+Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101ee05cc64a59b46e4d299f?ref=selfh.st)
+
+[SMTP2Go](https://www.reddit.com/r/selfhosted/comments/1hr7bi5/smtp2go_free_plan_spam_score/)
+
 ## MailTrap
 
 * https://mailtrap.io/signin

@@ -2,7 +2,7 @@
 title: "101 Concepts for a Data Analytics Journey"
 date: 2020-11-05T23:20:21+01:00
 draft: false
-tags: ["Career"]
+tags: ["Career","Dimensional Modelling",D&A"]
 description: 'Must know data modelling concepts and techniques for your career in Analytics.'
 summary: 'The essential concepts of data modeling and key terms in this introductory course for effective data analytics and informed decision-making. Learn how to structure and represent data efficiently to unlock valuable insights and optimize your analytical capabilities.'
 url: 'data-basics-for-data-analytics'
@@ -11,7 +11,9 @@ url: 'data-basics-for-data-analytics'
 <!-- 'data-techniques-data-analytics' -->
 
 
-By understanding the principles of **data modelling** and the terminology associated with it, you will gain the necessary knowledge to design and work with data models, empowering you to make informed decisions and **extract meaningful insights** from complex datasets.
+By understanding the principles of **data modelling** and the terminology associated with it.
+
+You will gain the necessary knowledge to design and work with data models, empowering you to make informed decisions and **extract meaningful insights** from complex datasets.
 
 <!-- So, before you continue learning about:
 
@@ -383,7 +385,7 @@ They are considered alternatives to each other, providing scalable storage and p
 
 ## Data Integration Services
 
-The technologies, tools, and processes used to combine, transform, and consolidate data from various sources into a unified and consistent format.
+The technologies, tools, and processes used to **combine, transform, and consolidate data from various sources** into a unified and consistent format.
 
 These services enable organizations to bring together data from disparate systems, databases, applications, and file formats to create a comprehensive view of the data for analysis, reporting, and decision-making purposes.
 
@@ -393,11 +395,13 @@ Data integration services are responsible for extracting, transforming, and load
 
 Azure Data Factory is a cloud-based data integration service provided by Microsoft Azure. It allows you to orchestrate and automate the movement and transformation of data from various sources to different destinations.
 
-While Azure Data Factory is not specifically a data warehouse itself, it plays a crucial role in data warehouse solutions. It facilitates the process of collecting data from diverse sources, performing necessary transformations, and loading it into a data warehouse or other data storage systems.
+While Azure Data Factory is not specifically a data warehouse itself, it plays a crucial role in data warehouse solutions. 
+
+It facilitates the process of collecting data from diverse sources, performing necessary transformations, and loading it into a data warehouse or other data storage systems.
 
 Snowpipe (Snowflake's) focuses on real-time data loading into Snowflake, Azure Data Factory is a more extensive data integration service that supports diverse data integration scenarios across various cloud and on-premises data sources.
 
-Its direct competitors are: *AWS Glue and Google CLoud Data Fusion*.
+Its direct competitors are: *AWS Glue and Google Cloud Data Fusion*.
 
 * How to debug in ADF (*with the debug feature*)?
     * Validation: ADF validates the pipeline's structure and connections to ensure that all components are properly configured and ready for execution. It checks for any syntax errors, missing dependencies, or misconfigured settings.
@@ -416,7 +420,9 @@ Examples of data lake solutions include: *Microsoft Azure Data Lake Storage, Ama
 
 ## Data Lake House
 
-A data lake house is a concept that combines the best features of data lakes and data warehouses. It aims to address some of the limitations and challenges associated with both approaches and provides a unified and scalable solution for *storing, managing, and analyzing large volumes of data*.
+A data lake house is a concept that combines the best features of data lakes and data warehouses. 
+
+It aims to address some of the limitations and challenges associated with both approaches and provides a unified and scalable solution for *storing, managing, and analyzing large volumes of data*.
 
 By combining the flexibility and scalability of data lakes with the structure and performance optimizations of data warehouses, data lake houses provide a middle ground that addresses the challenges of managing and deriving insights from large-scale data sets.
 
@@ -582,8 +588,6 @@ Be aware that these **regulations exists**:
 
 * Restricted: Data that is subject to the strictest security controls and access limitations due to legal or regulatory requirements or potential severe consequences if compromised, such as classified government information, personally identifiable information (PII), or protected health information (PHI).
 
-
-
 ---
 
 ## FAQ
@@ -606,12 +610,14 @@ Databases, data flows, data warehouses, data lakes, and data marts.
 
 ### What are Data Flows?
 
-Data flows refer to the movement of data from one system to another. This can include data flowing within a single application, or between different applications or systems. 
+Data flows refer to the movement of data from one system to another.
+
+This can include data flowing within a single application, or between different applications or systems. 
 
 Data flows can be visualized and documented using data flow diagrams, which show the flow of data through a system.
 
 {{< callout type="info" >}}
-Make sure to have proper Data Lineage documented!
+Make sure to have proper **Data Lineage documented**!
 {{< /callout >}}
 
 Data flows are a critical component of many data integration and ETL (Extract, Transform, Load) processes.

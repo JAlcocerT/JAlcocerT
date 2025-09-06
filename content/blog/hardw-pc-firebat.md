@@ -2,11 +2,18 @@
 title: "[Review] Firebat AK2 PLUS"
 date: 2024-09-30T19:20:21+01:00
 draft: false
-tags: ["Tinkering"]
+tags: ["Tinkering","Home-Lab","Hardware Throwback"]
 description: Testing Firebat Mini PC and setting it as a Home Server
 url: firebat-ak2-plus-minipc-review
 ---
 
+
+**TL;DR**
+
+I just got to try [new mini PC](#the-firebat-ak2-plus-minipc) and made some benchmarks with it
+
++++ Bringing some old [list of software for windows/linux](#faq)
++++ [Throwback](#throwback-on-hardware) on the hardware I ever tested
 
 ## The FIREBAT AK2 PLUS MiniPC
 
@@ -891,13 +898,11 @@ curl -6 ifconfig.me #ipv6 info
 
 ## ThrowBack on Hardware
 
-its crazy to see how much PCs have evolved in few decades.
-
-
+Its crazy to see how much PCs have evolved in few decades.
 
 {{< details title="These are the ones I could try so far 📌" closed="true" >}}
 
-Here's the provided information summarized and organized in a Markdown format, categorizing the details about each PC and laptop by its specifications and timeline:
+Categorizing the details about each PC and laptop by its specifications and timeline:
 
 ### Desktop PCs
 

@@ -2,7 +2,7 @@
 title: "Notes and Knowledge Management"
 date: 2025-08-27T19:20:21+01:00
 draft: false
-tags: ["DA","Career","Joplin","LogSeq"]
+tags: ["DA","Career","Joplin","LogSeq","KB","Knowledge Base"]
 description: 'Head clean with notion, obsidian...or with OSS note taking tools?'
 url: 'knowledge-management'
 ---
@@ -88,6 +88,16 @@ The Verdict
 * **If your primary goal is to have human-readable Markdown files that are independent of any specific app, and you prefer a file-system-based workflow, then Logseq (or a similar tool like Obsidian) is a better choice.** The sync solution will be external to the app itself (e.g., Syncthing, Nextcloud).
 * **If your priority is a seamless, self-hosted sync experience with native mobile apps, and you're comfortable with your data being stored in a database, then Joplin is an excellent choice.** Its self-hosted server makes the setup straightforward, and the native mobile app "just works" with that server.
 
+## Conclusions
+
+I know what you are looking for: **DATABASELESS KNOWLEDGE BASE**
+
+<https://docs.linuxserver.io/images/docker-raneto/#miscellaneous-options>
+<https://docs.linuxserver.io/images/docker-hedgedoc/>
+<https://js.wiki/>
+
+
+
 ---
 
 ## FAQ
@@ -137,12 +147,15 @@ This style is more intuitive for users who are not familiar with Markdown syntax
 * **Example:** You type `## My Heading` and as soon as you finish the line, it turns into a large, bold heading.
 
 
-
 ### The Best of Both Worlds: Hybrid Editors
 
-Many modern editors offer a **hybrid approach**. These editors might start as a WYSIWYG editor but reveal the Markdown syntax when you click on or edit a specific line. 
+Many modern editors offer a **hybrid approach**.
+
+These editors might start as a WYSIWYG editor but reveal the Markdown syntax when you click on or edit a specific line. 
 
 This allows for the speed of a visual editor while still giving you the ability to fine-tune the raw Markdown when needed.
+
+
 
 ---
 

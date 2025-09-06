@@ -29,7 +29,7 @@ sudo flatpak install flathub com.nextcloud.desktopclient.nextcloud -y
 {{< /cards >}}
 
 * Recommended Apps inside Nextcloud: cospend (moneybuster Android)
-
+* You can use also NC as a file drop: https://docs.nextcloud.com/server/latest/user_manual/en/files/file_drop.html#setting-up-your-own-file-drop
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="Crucial SSD for a Pi" image="/blog_img/hardware/crucial-1tb-ssd.jpg" subtitle="Ready to Plug to MiniPC or SBc" >}}

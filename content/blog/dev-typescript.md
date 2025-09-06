@@ -15,7 +15,7 @@ It was about time to recap with it can be done with [TypeScrypt](#ts) (and what 
 
 **Intro**
 
-Quite a few years back, a colleague mentioned that we should learn about TS and just create some paid PowerBI panels that we could sell.
+Quite a few years back, a colleague mentioned that we should learn about TS and just create some paid [PowerBI panels](https://jalcocert.github.io/JAlcocerT/about-powerbi/) that we could sell.
 
 We did not.
 

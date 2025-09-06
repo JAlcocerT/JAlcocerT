@@ -43,6 +43,24 @@ The thing is that you needs this in the information era.
 
 Install appflowy is per: <https://docs.appflowy.io/docs/appflowy/install-appflowy/installation-methods/installing-with-docker>
 
+```yml
+#version: '3'
+services:
+  appflowy:
+    image: appflowyio/appflowy_client:main
+    volumes:
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/dri:/dev/dri
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
+      - appflowy-data:/home/appflowy
+    environment:
+      - DISPLAY=${DISPLAY}
+
+volumes:
+  appflowy-data:
+```
+
 AppFlowy, an open source project mgmt, documentation, and note-taking app for extreme productivity
 
 {{< youtube "5_WwDt0A4LA" >}}

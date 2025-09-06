@@ -1,5 +1,5 @@
 ---
-title: "Flowise and Gitea"
+title: "Flowise Embedded and Gitea"
 date: 2025-09-05T10:20:21+01:00
 draft: false
 tags: ["HomeLab","Flowise vs Gitea","Web","LLM APIs"]
