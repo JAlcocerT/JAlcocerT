@@ -1,12 +1,18 @@
 ---
 title: "PyStonks"
-date: 2025-11-19T00:20:21+01:00
+date: 2025-11-04T00:20:21+01:00
 draft: false
-description: 'Setting up devops tools - From CI/CD, to Monitoring with Grafana, k8s, DSc Tools...'
+description: '...'
 url: 'stonks'
-tags: ["HomeLab","Py_Stocks","yfinance"]
+tags: ["HomeLab","Py_Stocks","yfinance","LogTo JS SDK"]
 ---
 
+
+**Tl;DR**
+
+Creating a py_stocks v2.0
+
++++ Using Logto JS SDK with CF Workers (?)
 
 **Intro**
 
@@ -52,3 +58,7 @@ What's going to be different this time?
 > Im tired to have to ask LLMs each time
 
 2. A better Back-End
+
+3. Auth via Logto JS SDK (instead of the Logto Pyhon SDK)
+
+#

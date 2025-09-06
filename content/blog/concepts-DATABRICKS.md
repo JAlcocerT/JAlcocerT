@@ -2,10 +2,12 @@
 title: "A closer look to DataBricks"
 date: 2024-06-10
 draft: false
-tags: ["Dev", "Career", "D&A"]
+tags: ["Dev", "Career", "D&A","PySpark"]
 description: 'Databricks for D&A Big Data.'
 url: 'understanding-databricks'
 ---
+
+**Intro**
 
 You will hear a lot about databricks nowadays.
 
@@ -31,12 +33,35 @@ This Post is **WIP**
 
 {{< /details >}}
 
+```py
+from tabulate import tabulate
+
+# Data as a list of lists
+data = [
+    ["Alice", 24, "Engineer"],
+    ["Bob", 30, "Data Scientist"],
+    ["Charlie", 27, "Designer"]
+]
+
+# Headers for the columns
+headers = ["Name", "Age", "Occupation"]
+
+# Print a simple table
+print(tabulate(data, headers=headers))
+
+# Print a table with a different format (e.g., Markdown)
+print("\n--- Markdown Table ---")
+print(tabulate(data, headers=headers, tablefmt="pipe"))
+```
+
+> The library also offers many options for customizing alignment, number formatting, and handling missing values, making it a flexible and powerful tool for data presentation.
+
 ---
 
 
 ## FAQ
 
-### Spark Recap
+### PySpark Recap
 
 Interesting queries to get started with PySpark:
 
@@ -94,21 +119,17 @@ spark = SparkSession.builder.appName("CableModemDataProcessing").getOrCreate()
 
 
 # Load the DataFrame based on the country code
-path = f"hdfs://172.24.80.93:9820/delta/refined_tables/{country_code}/dimensions/dim_cable_modem/"
-dim_cable_modem_df = spark.read.format("delta").load(path)
-
+path = f"hdfs://123.45.67.89:9820/delta/refined_tables/{country_code}/dimensions/your_dimension_table/"
+your_dimension_table_df = spark.read.format("delta").load(path)
 
 # Add the node_id_prefix column
-dim_cable_modem_df = dim_cable_modem_df.withColumn('node_id_prefix', split(dim_cable_modem_df['node_id'], '\.')[0])
-
+your_dimension_table_df = dim_cable_modem_df.withColumn('node_id_prefix', split(dim_cable_modem_df['node_id'], '\.')[0])
 
 # Compare node_id_prefix and site_Id, and create a new column 'is_same'
-dim_cable_modem_df = dim_cable_modem_df.withColumn('is_same', when(col('node_id_prefix') == col('site_Id'), True).otherwise(False))
-
+your_dimension_table_df = dim_cable_modem_df.withColumn('is_same', when(col('node_id_prefix') == col('site_Id'), True).otherwise(False))
 
 # Filter the DataFrame to keep only the rows where 'is_same' is False
 filtered_df = dim_cable_modem_df.filter(col('is_same') == False)
-
 
 # Show the result
 filtered_df.select('node_id', 'node_id_prefix', 'site_Id', 'is_same').distinct().show(5, truncate=False)

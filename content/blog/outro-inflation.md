@@ -8,6 +8,8 @@ url: 'about-inflation'
 ---
 
 
+**Intro**
+
 This year ive been covering few posts about the job market:
 
 * https://jalcocert.github.io/JAlcocerT/playwright-101/
@@ -17,7 +19,7 @@ So, how much will you have to ask to stay as you started the year?
 1. Some job market webpage have started including that info: https://zarobki.pracuj.pl/kalkulator-wynagrodzen
     * Based on the running inflation and how much you had on a given year:
 
-![alt text](/blog_img/data-experiments/pracuj-inflation.png)
+![Pracuj Inflation Info](/blog_img/data-experiments/pracuj-inflation.png)
 
 > Surprise: that +~50% from 2021 is basically the ~ change on MCD price (and ~ their 2forU offering price)
 

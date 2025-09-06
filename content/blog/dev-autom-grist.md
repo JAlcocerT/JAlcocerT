@@ -19,7 +19,6 @@ There are tools like [OpenLTablets](https://jalcocert.github.io/JAlcocerT/unders
 
 > Apache v2 | Grist is the evolution of spreadsheets.
 
-
 ```sh
 #docker pull gristlabs/grist
 #docker run -p 8484:8484 -it gristlabs/grist
@@ -39,6 +38,8 @@ Or simply: https://www.getgrist.com/product/self-hosted/
 export GRIST_SESSION_SECRET=$(openssl rand -base64 32)
 docker compose up -d #Grist will be at 
 ```
+
+![Grist UI](/blog_img/selfh/HomeLab/grist.png)
 
 
 {{< callout type="warning" >}}

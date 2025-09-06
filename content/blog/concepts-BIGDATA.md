@@ -7,7 +7,6 @@ description: 'Big Data Tools for the AI era. Trino SQL, Nessie, PySpark, HDFS an
 url: 'big-data-tools-for-data-analytics'
 ---
 
-
 **Intro**
 
 Long ago, I was covering [the analytical stack](https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/#the-analytical-stack) and the most popular [concepts for a data analytics journey](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/).
@@ -907,20 +906,24 @@ This **four-layer model** provides a more granular [view of the **data journey**
 
 #### The Two Methods
 
-You can run ~SQL-like queries with PySpark.
+You can run *~SQL-like* queries with PySpark.
 
 PySpark's **Spark SQL** module is a core part of its functionality and allows for both a programmatic **DataFrame API** and direct SQL queries.
 
 PySpark offers two primary ways to manipulate data, and they're fully interchangeable:
 
-1.  **DataFrame API:** This is the more "Pythonic" approach. You chain together a series of method calls on a DataFrame object. It's great for building complex, reusable, and testable data pipelines.
+1.  **DataFrame API:** This is the more "Pythonic" approach. You chain together a series of method calls on a DataFrame object.
+
+It's great for building complex, reusable, and testable data pipelines.
 
 ```py
 # Select columns, filter, and group by
 cleaned_df = df.select("column1", "column2").filter("column1 > 10").groupBy("column2").count()
 ```
 
-2.  **SQL Queries:** This allows you to write standard SQL directly within your PySpark code. For this to work, you first have to register your DataFrame as a temporary view or table, which makes it accessible to the SQL engine.
+2.  **SQL Queries:** This allows you to write standard SQL directly within your PySpark code.
+
+For this to work, you first have to register your DataFrame as a temporary view or table, which makes it accessible to the SQL engine.
       
 ```py
 df.createOrReplaceTempView("my_table")
@@ -937,15 +940,15 @@ The `spark.sql()` method executes the query and returns a new DataFrame, which y
 
 **Why You'd Use SQL in PySpark**
 
-  * **Readability:** For many analysts and data professionals, SQL is a more concise and readable way to express a data transformation. Complex joins or aggregations can be easier to write and understand in SQL than in a long chain of DataFrame methods.
-  * **Portability:** If you're coming from a relational database background, you can often reuse existing SQL queries with minimal changes.
-  * **Performance:** Both the DataFrame API and Spark SQL use the same powerful optimization engine under the hood (**Catalyst Optimizer**). This means there's no inherent performance difference between the two approaches; the optimizer will convert both into the same efficient execution plan.
+* **Readability:** For many analysts and data professionals, SQL is a more concise and readable way to express a data transformation. Complex joins or aggregations can be easier to write and understand in SQL than in a long chain of DataFrame methods.
+* **Portability:** If you're coming from a relational database background, you can often reuse existing SQL queries with minimal changes.
+* **Performance:** Both the DataFrame API and Spark SQL use the same powerful optimization engine under the hood (**Catalyst Optimizer**). This means there's no inherent performance difference between the two approaches; the optimizer will convert both into the same efficient execution plan.
 
 The choice between the two often comes down to personal or team preference and the complexity of the task. 
 
 Data engineers often prefer the DataFrame API for its control and testability, while data analysts often prefer the direct SQL approach for its familiarity and speed in ad-hoc analysis.
 
-Many teams use a **hybrid approach**, leveraging both as needed.
+> Many teams use a **hybrid approach**, leveraging both as needed.
 
 
 #### DataBricks
@@ -1019,12 +1022,12 @@ While a local cluster might seem cheaper initially, the long-term costs and comp
 
 You can [learn about databricks for free](https://partner-academy.databricks.com/learn/courses/1511/get-started-with-databricks-for-data-engineering)
 
-![alt text](/blog_img/DA/DataBricks-Registr.png)
+![Databricks UI](/blog_img/DA/DataBricks-Registr.png)
 
 
 {{< details title="Databricks vs Google Big Query and Other Clouds 📌" closed="true" >}}
 
-You're right to think of Google BigQuery as a competitor to Databricks, but it's important to understand that they approach the data problem from slightly different angles. Here's a breakdown:
+Google BigQuery can be seen as a competitor to Databricks, but it's important to understand that they approach the data problem from slightly different angles.
 
 **BigQuery:**
 
@@ -1076,7 +1079,7 @@ There's also some overlap in functionality. For example, you can perform some ma
 And Databricks offers Databricks SQL, which provides a SQL interface for querying data in your data lake.
 
 
-You're hitting on a key point about Databricks' architecture! Here's why it needs integration with other cloud providers:
+About Databricks' architecture - Here's why it needs integration with other cloud providers:
 
 **1. Storage:**
 
@@ -1203,7 +1206,7 @@ You will see (Microsoft) Azure Data Factory in many job offers nowadays for data
 
 {{< details title="The Big Data Tech Stack, more clear than ever 📌" closed="true" >}}
 
-Azure Data Factory (ADF) is Microsoft's cloud-based ETL (Extract, Transform, Load) and data integration service. 
+Azure Data Factory (ADF) is Microsoft's cloud-based ETL (Extract, Transform, Load) and **data integration service**. 
 
 It fits into a data stack as the **orchestration and data movement layer**.
 

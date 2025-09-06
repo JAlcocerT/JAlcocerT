@@ -71,7 +71,7 @@ Or the CSR + WebSockets *(These allow Real-Time Bi-Directional Communication, as
 
 {{< cards cols="2" >}}
   {{< card link="https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/calculators/FIREAdvancedCalculator.astro?ref_type=heads" title="FireCalculator | Astro Component ↗" >}}
-  {{< card link="" title=" ↗" >}}
+  {{< card link="" title="Monetary System Calculator | Astro Component ↗" >}}
 {{< /cards >}}
 
 ### MRR Calculator
@@ -209,13 +209,13 @@ This approach is highly beneficial for applications where content changes freque
 
 **Beyond standard SPAs**, CSR can be used for more innovative and complex applications.
 
-### Data Visualization and Interactive Dashboards
+1. Data Visualization and Interactive Dashboards
 
 CSR is perfect for data-heavy applications. A finance dashboard, for example, can fetch new stock prices via an API and instantly update a chart without refreshing the page.
 
 This is far more efficient and interactive than having the server render a new page for every data point change.
 
-### Collaborative and Real-Time Editors
+2. Collaborative and Real-Time Editors
 
 Applications like Google Docs or Figma use CSR to enable real-time collaboration.
 
@@ -223,7 +223,7 @@ With technologies like **WebSockets**, multiple users' changes can be sent to th
 
 The JavaScript on each client then updates the UI in real-time, allowing users to see each other's cursor movements and edits as they happen.
 
-### Gaming and Entertainment
+3. Gaming and Entertainment
 
 Web-based games, especially those built with frameworks like Phaser or libraries like Three.js for 3D graphics, are heavily reliant on CSR.
 

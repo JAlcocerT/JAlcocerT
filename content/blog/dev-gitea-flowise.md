@@ -2,7 +2,7 @@
 title: "Flowise Embedded and Gitea"
 date: 2025-09-05T10:20:21+01:00
 draft: false
-tags: ["HomeLab","Flowise vs Gitea","Web","LLM APIs"]
+tags: ["HomeLab","Flowise SDK","Web","LLM APIs"]
 description: 'Flowise workflow to Gitea.'
 url: 'flowise-and-gitea'
 ---
@@ -41,13 +41,16 @@ EOL
 sudo docker compose up -d
 ```
 
+![alt text](/blog_img/selfh/flowiseai-ui-setup.png)
+
+![alt text](/blog_img/selfh/flowiseai-ui-workflows.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot with Docker 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8N with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-https://docs.flowiseai.com/integrations
+* https://docs.flowiseai.com/integrations
 
 ### Flowise API SDK Embed
 
@@ -110,9 +113,11 @@ docker network connect cloudflared_tunnel gitea #network -> container name
 
 ### Flowise x Python SDK
 
-The Flowise SDK for Python provides an easy way to interact with the Flowise API for creating predictions, supporting both streaming and non-streaming responses. This SDK allows users to create predictions with customizable options, including history, file uploads, and more.
+The Flowise SDK for Python provides an easy way to interact with the Flowise API for creating predictions, supporting both streaming and non-streaming responses. 
 
-https://github.com/FlowiseAI/FlowisePy
+This SDK allows users to create predictions with customizable options, including history, file uploads, and more.
+
+* https://github.com/FlowiseAI/FlowisePy
 
 
 
