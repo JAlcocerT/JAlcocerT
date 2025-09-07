@@ -1,11 +1,17 @@
 ---
 title: "A podcast for all"
-date: 2025-09-07
+date: 2025-10-07
 draft: false
 tags: ["Web","Astro","Entrep"]
-description: ''
+description: 'Using astro and '
 url: 'make-podcast'
 ---
+
+**Tl;DR**
+
+Because astro SSG and CSR are so cool. Creating a DIY podcast platform.
+
+**Intro**
 
 Lately Iv been tinkering with custom (vibecoded) flask apps to interact with SSGs
 

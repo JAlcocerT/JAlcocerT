@@ -1,11 +1,17 @@
 ---
 title: "Admin Panels for Websites | Testing Manifest "
-date: 2025-09-07
+date: 2025-10-07
 tags: ["AI","Authentication"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
 draft: false
 ---
+
+**Tl;DR**
+
+Is it possible to have something better than Streamlit and Pocketbase for the quickest data visualization and backend ever?
+
+**Intro**
 
 Ive been exploring few authentications method lately.
 
