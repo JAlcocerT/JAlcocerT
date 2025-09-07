@@ -1,6 +1,6 @@
 ---
 title: "ESP32:"
-date: 2025-12-30T23:20:21+01:00
+date: 2025-12-31T23:20:21+01:00
 draft: true
 tags: ["Self-Hosting","IoT","MicroControllers"]
 ---
@@ -659,7 +659,6 @@ lib_deps =
   adafruit/DHT sensor library@^1.4.4
 
 ### MPU acelerometer
-
 
 There are many 3-axis accelerometers that you can use with the Raspberry Pi Pico. Some of the most popular options include:
 

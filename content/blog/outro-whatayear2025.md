@@ -131,6 +131,7 @@ Linktree does things very well, yet cant compete with:
 
 ## Interesting Concepts
 
+Concepts / ideas that I
 1. CYA (cover your ***) was always a thing. 
 
 But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level.
@@ -155,7 +156,15 @@ Could [the aissistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/ma
 
 Just not to *leave money on the table*?
 
-A person cant solve all problems at the same time
+> A person cant solve all problems (even less at the same time).
+
+5. System > Goals
+
+Which for me relates with: *More important than the willingness to win, is the willingnes to prepare.*
+
+How would we reach our goals if we do nothing the move our current state closer to it? ah?
+
+Kind of resonates with [process](#processes) > result.
 
 5. Quotes
 
@@ -213,9 +222,7 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 - [ ] [x24 Tech Videos](#creating-tech-videos)
 
-
-System > Goals
-
+> Overkill. I also started [this](https://www.youtube.com/@UnfoldingData/shorts) and [this](https://www.youtube.com/@BeyondAJourney)
 
 
 
@@ -224,6 +231,8 @@ System > Goals
 Last year I set this as a goal.
 
 What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
+
+Along the way, Ive made my life easier by based the video content on a simpler NEW repo: https://github.com/JAlcocerT/Home-Lab
 
 1. [Cloudflare Tunnels](https://www.youtube.com/watch?v=k75PviBQeA0)
 2. [OpenAI API Tricks](https://www.youtube.com/watch?v=Yihsci3QcfI)
@@ -248,7 +257,8 @@ What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
 21. 
 22. 
 23. 
-24. 
+24. Ventoy. Linux Lite vs Garuda RAM consumption
+
 
 If this was too much content, you can always use a LLMs to summarize the YT Videos, like these ones:
 
@@ -262,7 +272,6 @@ If this was too much content, you can always use a LLMs to summarize the YT Vide
 
 > MIT | ⚡ A lightweight, self-hosted YouTube video summarizer with Gemini AI
 
-
 It was a year of a lot of applied AI...
 
 * https://platform.openai.com/docs/models
@@ -271,11 +280,13 @@ It was a year of a lot of applied AI...
 20. N8N
 21. ChatWoot
 22. LangFlow
+
 23. https://github.com/von-development/awesome-LangGraph
-https://langchain-ai.github.io/langgraph/#
+
+* https://langchain-ai.github.io/langgraph/#
+
+
 24. 
-
-
 
 ....
 
@@ -358,8 +369,15 @@ You can make interesting conditional logic, like: *If scrap fails, send msg to t
 
 #### More Websites!
 
+From:
+
 * https://whilecyclingthere.web.app/
 * https://cyclingthere.pages.dev/
+
+To:
+
+* https://beyondajourney.pages.dev/
+* https://financemotion.pages.dev/ 
 
 #### Better Social Media
 

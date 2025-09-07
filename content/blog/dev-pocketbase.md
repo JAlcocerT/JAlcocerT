@@ -2,7 +2,7 @@
 title: "SelfHosted PocketBase for your BackEnd"
 date: 2025-08-10
 draft: false
-tags: ["PocketBase 101","OSS Auth","Concurrency","Local & Session Storage","Sqlite"]
+tags: ["PocketBase 101","OSS Auth","Concurrency","Local & Session Storage","Sqlite","CRUD Monkey"]
 description: 'Things your learn outside the confort zone. BaaS Storage for a WebApp'
 url: 'pocketbase'
 ---
@@ -37,11 +37,14 @@ And now is time to Pocketbase, also written in Go.
 > A very cool selfcontained row based DB
 
 4. PB gives you an [API endpoint](#pb-api) out of the box for your BE logic
+
 5. The [PB JS SDK](#pb-sdk)
 
 <!-- https://www.youtube.com/watch?v=Hw797S85yQE -->
 
 {{< youtube "Hw797S85yQE" >}}
+
+> I think there are chances that PB will be a companion for my [small PoCs :)](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker)
 
 ## PocketBase
 
@@ -53,10 +56,18 @@ PocketBase is a single, **self-contained Go application** that bundles several k
 * **A web-based admin UI:** This allows you to manage your [collections](https://pocketbase.io/docs/collections/), data, and users without writing any code.
 * **Real-time subscriptions:** It enables your frontend to listen for live data changes.
 
-Because it provides all of these features out-of-the-box, it's designed to be a full backend for applications, allowing you to build a project without having to set up a separate database server, API, and authentication system.
+Because it provides all of these features out-of-the-box, it's designed to be a full backend for applications.
+
+Allowing you to build a project without having to set up a separate:
+* [Database](https://jalcocert.github.io/JAlcocerT/databases-101/) server: *it can be your sqlite / mysql / postgres / supabase ...while you forget about ORM*
+* API: *it can be your FastAPI / flask endpoints*
+* and... Authentication system: *it can be your LogTo / Firebase Auth...*
+
+See **pocketbase project details** and docs, as its F/OSS:
 
 * https://pocketbase.io/
     * https://pocketbase.io/docs/
+      * You better understand https://pocketbase.io/docs/working-with-relations/ *or be punished later*
     * https://github.com/pocketbase/pocketbase
 
 > **MIT** | Open Source realtime backend in 1 file 
@@ -77,11 +88,74 @@ Its features include:
 
 > > You can also try with the **pocketbase demo instance**: https://pocketbase.io/demo/
 
+{{< callout type="warning" >}}
+Before moving forward, have in mind that *PB is ~antipattern* if you come from a SQL ~ D&A background.
+{{< /callout >}}
+
+{{< details title="PB Design Philosophy | ,Antipattern' AND Deliberate Choice 📌" closed="true" >}}
+
+For a developer accustomed to working with traditional SQL databases, PocketBase's approach to collections and relations can be seen as an **antipattern** in certain scenarios, but this is a deliberate design choice that simplifies development for specific use cases. 
+
+The "antipattern" label is not a flaw; it's a reflection of a different philosophy.
+
+**The Antipattern Argument**
+
+A developer used to SQL (and ORMs) relies heavily on a few core concepts that PocketBase abstracts away or handles differently:
+
+* **Explicit SQL:** SQL developers write explicit SQL queries with `JOIN` statements to combine data from multiple tables. While PocketBase's underlying database is SQLite, its primary API is a RESTful one, not a raw SQL interface. Complex joins must be performed either through the "view collection" feature (which uses SQL under the hood but is a read-only workaround) or by making multiple API requests and joining the data on the client side.
+
+* **Foreign Key Constraints:** In SQL, you can enforce strict referential integrity using foreign key constraints. This prevents you from, for example, deleting a user while their blog posts still exist. PocketBase's relationships are less rigid by default, which can feel unsettling to a traditional database developer. It doesn't enforce these constraints at the database level, but rather at the application level through its API rules and SDKs.
+
+* **Database-Level Control:** A SQL developer has full control over the database schema, indexes, and queries. PocketBase's opinionated approach provides a simplified API, but it comes at the cost of that granular control. 
+
+* **Normalization vs. Denormalization:** While PocketBase can handle relational data, its simplified API and the desire to reduce the number of API calls can tempt developers into denormalizing data in ways that would be considered bad practice in a traditional SQL environment.
+
+**Why This is a Deliberate Design Choice**
+
+The reason these are not considered flaws is that PocketBase is not a direct replacement for a full-featured database like PostgreSQL. 
+
+> Instead, it's a **backend-as-a-service (BaaS)** designed for rapid application development.
+
+1. **Simplicity and Speed:** The main goal of PocketBase is to simplify backend development for single-server applications. 
+
+It eliminates the need for an ORM, a separate database server, and a separate API layer. This is a massive time-saver for small to medium-sized projects, prototypes, or internal tools.
+
+2. **RESTful API First:** PocketBase's API-first approach means you interact with it via simple HTTP requests. 
+
+This is a deliberate choice to make it easy to use from any frontend, whether it's a web app, a mobile app, or another service. The "antipattern" of avoiding explicit SQL is a core part of its value proposition.
+
+3. **Targeted Use Case:** PocketBase is an excellent choice for applications that don't need complex, multi-level joins or heavy transactional loads.
+
+If a project outgrows PocketBase's capabilities, its file-based SQLite database makes it relatively straightforward to migrate to a more robust SQL database like PostgreSQL.
+
+In conclusion, for a developer steeped in SQL best practices, PocketBase's "magic" can feel like an antipattern.
+
+The lack of explicit SQL and foreign key constraints, coupled with the opinionated API, goes against the traditional paradigm of database management.
+
+However, for its target audience—developers who prioritize speed, simplicity, and a single-file deployment—these are not antipatterns at all, but rather intentional features that solve the very problem PocketBase was created to address.
+
+{{< /details >}}
+
+Understand the key differences between a system designed for **Online Transaction Processing (OLTP)**, which PocketBase is optimized for, and one designed for **Online Analytical Processing (OLAP)**, which is used for data analytics:
+
+| Feature | Online Transaction Processing (OLTP) | Online Analytical Processing (OLAP) |
+| :--- | :--- | :--- |
+| **Primary Goal** | Efficiently manage daily operations and real-time transactions. | Analyze large datasets for business intelligence and reporting. |
+| **Primary Users** | End users (e.g., customers, employees). | Data analysts, business managers. |
+| **Typical Operations** | Small, fast transactions: `INSERT`, `UPDATE`, `DELETE`. | Complex queries, aggregations, and joins. |
+| **Data Model** | Normalized, with multiple tables to avoid redundancy.  Improves **write efficiency** and reduces data storage | Denormalized, with fewer, larger tables for **fast reads**. |
+| **Data Storage** | Current, up-to-the-minute data. | Historical data, often stored in data warehouses. |
+| **System Example** | E-commerce websites, banking apps, CRM systems. | Business intelligence dashboards, data mining tools. |
+| **PocketBase's Fit** | **Excellent fit.** It is built for small, fast, and frequent transactions. | **Poor fit.** It lacks the tools for complex queries and is not optimized for large-scale data analysis. |
+
+
 ### PB 101
 
 In simple terms: [PB can be selfhosted](https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase).
 
-It does not offer a paid hosted service like Supabase.
+Actually, this is a F/OSS and Selfhosted ONLY.
+
+It does NOT offer a paid hosted service like Supabase.
 
 Its better for read than for writes and its [data model and collections](#programatic-pb-interaction) are very useful.
 
@@ -89,7 +163,7 @@ Its better for read than for writes and its [data model and collections](#progra
 
 Spin Pocketbase into your PC building a Go container with the project:
 
-{{< cards cols="1" >}}
+{{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="Pocketbase Docker Config for your HomeLab 🐋 ↗" >}}
 {{< /cards >}}
@@ -155,7 +229,9 @@ As per this awsome article: https://kerkour.com/sqlite-for-servers be aware that
 
 #### About PB_Hooks
 
-What `./pb_hooks/` does: Holds PocketBase server-side hook scripts. PocketBase auto-loads any `*.pb.js` files here and executes them to customize backend behavior.
+What `./pb_hooks/` does: Holds PocketBase server-side hook scripts.
+
+PocketBase auto-loads any `*.pb.js` files here and executes them to customize backend behavior.
 
 When they run:
 
@@ -173,7 +249,9 @@ Common use cases:
 
 #### About PB_Migrations
 
-What pb_migrations/ does: Version-controlled schema for PocketBase. Each file defines a migration that creates/updates/deletes collections, fields, rules, and indexes.
+What `pb_migrations/` does: Version-controlled schema for PocketBase. 
+
+Each file defines a migration that creates/updates/deletes collections, fields, rules, and indexes.
 
 Where: `./pocketbase/pb_migrations/`
 
@@ -182,6 +260,24 @@ How they look: Timestamped files like, `1754901820_some_user_settings.js`
 ```sh
 date +%s #get current unix ts so that you can add it to new files
 ```
+
+{{% details title="About DB Migrations with PB and Backward Compatibility... 🚀" closed="true" %}}
+
+The use of a **timestamp** in the migration filename is the key to ensuring backward compatibility and a predictable migration order in PocketBase.
+
+**Why Timestamps Are Critical ⏰**
+
+* **Ordered Execution:** By naming migration files with a timestamp (e.g., `1687801097_your_new_migration.js`), PocketBase can guarantee that they are **executed in chronological order**. It reads all the files in the `pb_migrations` directory and applies them based on this timestamp, ensuring a consistent and repeatable sequence of changes across all environments.
+* **Preventing Conflicts:** In a team environment, two developers could create a new migration at the same time. The timestamp ensures there will be no filename collision and that both changes will be applied correctly when the code is merged and run.
+* **Backward Compatibility:** The timestamp-based system supports a crucial aspect of backward compatibility, which is the **Expand and Contract pattern**. This pattern involves a two-phase deployment:
+    1.  **Expand:** You first deploy a migration that adds new database columns or tables without removing the old ones. The old application code can still run because it's not affected by the change.
+    2.  **Contract:** In a subsequent deployment, after the new code has been fully rolled out and is using the new schema, you deploy a second migration that removes the old, now-unused columns.
+
+This process ensures that for a period of time, both the old and new versions of your application code can coexist and operate without errors, preventing downtime. 
+
+The timestamp-ordered migrations are essential for making this multi-step process reliable.
+
+{{% /details %}}
 
 When/how applied:
 
@@ -194,6 +290,12 @@ Why important:
 * Acts as the single source of truth for your PB schema.
 * Safe to commit to VCS; supports rollbacks.
 * Ensures environments (local, staging, prod) have the same collections, rules, and indexes.
+
+
+{{< callout type="info" >}}
+You can create new collections via the PB demo UI and export its JSON, it least to get a good skeleton for LLMs.
+{{< /callout >}}
+
 
 ### Programatic PB Interaction
 
@@ -344,7 +446,7 @@ And these sample webapps with their code:
 
 #### PocketBase x Stripe
 
-People are building in public: https://www.reddit.com/r/pocketbase/comments/1cfnt5f/i_built_a_pocketbase_stripe_extension_and_open/
+People are building in public: `https://www.reddit.com/r/pocketbase/comments/1cfnt5f/i_built_a_pocketbase_stripe_extension_and_open/`
 
 * https://github.com/mrwyndham/pocketbase-stripe
     * And seeling on top of it - https://www.fastpocket.dev/
@@ -354,6 +456,27 @@ People are building in public: https://www.reddit.com/r/pocketbase/comments/1cfn
 
 
 ### PB x Collections JS
+
+A **database migration** is the process of making controlled, incremental changes to the structure (or schema) of a database. 
+
+💾 Think of it as **version control for your database**, similar to how tools like Git manage changes to code.
+
+Migrations are typically managed programmatically and allow you to:
+
+* **Add, remove, or modify** tables, columns, indexes, and constraints.
+* **Track a history** of all changes made to the database schema.
+* **Share and apply** these changes in a repeatable and reversible way across different development, testing, and production environments.
+
+The goal of a database migration is to ensure that a database's structure always matches the requirements of the application it supports, without losing data.
+
+PocketBase's system is **code-driven**.
+
+It doesn't automatically generate migration files from a schema definition. Instead, you manually create and write the migration code yourself, giving you full control over the process.
+
+* **Creating Migrations**: You create a new migration file using the `pocketbase migrate create "your_migration_name"` command. This generates a boilerplate Go or JavaScript file with `up` and `down` functions.
+* **Writing Migrations**: You manually write the Go or JavaScript code within the `up` function to make schema changes (like creating a collection or adding a field) and the `down` function to reverse those changes. You use PocketBase's API to define these changes.
+* **Applying Migrations**: PocketBase automatically runs any pending migrations when the application starts with the `serve` command. You can also run them manually using `pocketbase migrate up`.
+* **Key Concept**: This approach is more explicit and powerful, allowing you to include custom logic or data manipulation directly in the migration files, but it requires more manual effort.
 
 I was wondering how to get specific **pb collections initialized** from the first moment.
 
@@ -397,11 +520,17 @@ If you **define those collections** with proper syntax, you will get them initia
 
 **Does PocketBase provide REST API endpoints?**
 
-**Yes, absolutely.** This is one of its core features. When you set up PocketBase and define your data "collections" (similar to database tables), it automatically generates a RESTful API for you. 
+**Yes** and this is one of PB core features.
 
-> You don't have to write any code for the basic CRUD (Create, Read, Update, Delete) operations.
+When you set up PocketBase and define your data "collections" (similar to database tables), it automatically generates a RESTful API for you. 
+
+> You don't have to write any code for the basic **CRUD (Create, Read, Update, Delete) operations.**
+
+{{< tweet user="levelsio" id="1963709732432248998" >}}
+<!-- https://x.com/levelsio/status/1963709732432248998?t=3AMTuNmy7-YdObYAiXsl1w&s=35 -->
 
 For example, if you create a collection called `posts`, PocketBase will automatically provide endpoints like:
+
 * `GET /api/collections/posts/records`: To get all posts.
 * `POST /api/collections/posts/records`: To create a new post.
 * `GET /api/collections/posts/records/{id}`: To get a specific post.

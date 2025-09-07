@@ -27,6 +27,10 @@ Was testing it [here](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main
 
 ## Diagrams Tools
 
+With some non-diagram-oriented tools, like some [note taking apps](https://jalcocert.github.io/JAlcocerT/knowledge-management/).
+
+You can also make your diagrams inside the notes itself. See Logseq.
+
 ### DrawIO
 
 * https://app.diagrams.net/ - Draw.io
@@ -50,6 +54,8 @@ A game changer to create quick diagrams to showcase your [D&A architectural idea
     * https://excalidraw.com/
 
 > MIT | Virtual whiteboard for sketching hand-drawn like diagrams 
+
+
 
 ### Python Diagrams
 

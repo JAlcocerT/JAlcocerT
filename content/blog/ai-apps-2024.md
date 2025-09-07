@@ -19,7 +19,7 @@ The goal of **this post** is:
 <!-- https://www.youtube.com/watch?v=XH9XgiVM_z4 -->
 {{< youtube "XH9XgiVM_z4" >}}
 
-{{< details title="DNS challenge | PorkBun 📌" closed="true" >}}
+{{< details title="DNS challenge | Via PorkBun | Example 📌" closed="true" >}}
 
 As seen during the [Flask Setup post on a VPS](https://jalcocert.github.io/JAlcocerT/get-started-with-flask/).
 

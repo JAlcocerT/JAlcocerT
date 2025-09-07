@@ -2,11 +2,18 @@
 title: "Notes and Knowledge Management"
 date: 2025-08-27T19:20:21+01:00
 draft: false
-tags: ["DA","Career","Joplin","LogSeq","KB","Knowledge Base"]
+tags: ["DA","Career","Joplin","LogSeq","KB","Knowledge Base","wysiwyg"]
 description: 'Head clean with notion, obsidian...or with OSS note taking tools?'
 url: 'knowledge-management'
 ---
 
+
+**Tl;DR**
+
+Pros and Cons of note taking apps. While learning which [markdown edition fwks](#what-it-is-wysiwyg) for notes are available for my future SaaS.
+
++++ quick selfhosting guide in the [conclusions](#conclusions)
++++ Understanding why I cant use TinyAuth infront of [nextcloud android App](#tinyauth-and-nextcloud-android-app)
 
 **Intro**
 
@@ -17,13 +24,15 @@ But how people do this in a PRO and private way?
 
 1. [LogSeq](https://fossengineer.com/selfhosting-logseq/)
 2. Trilium
-3. Joplin
+3. [Joplin](#a-deeper-look-at-joplin)
 
-With notes it seems that [all comes down to](#the-plain-text-philosophy-vs-database-philosophy): just markdown (vs) more features and locking
 
 ```sh
 sudo snap install joplin-desktop
 ```
+
+With notes it seems that [all comes down to](#the-plain-text-philosophy-vs-database-philosophy): *just markdown (vs) more features and 'locking'*
+
 
 ### Knowledge Management Tools
 
@@ -47,11 +56,14 @@ The core of the "privacy and control" movement in note-taking apps.
 
 The answer is that there's a spectrum, but many of the popular self-hostable options do not follow the same "plain text files" model as Logseq.
 
-### The "Plain Text" Philosophy vs. "Database" Philosophy
+#### The "Plain Text" Philosophy vs. "Database" Philosophy
 
-* **Logseq, Obsidian, and others** are built on the "plain text" philosophy. Their primary goal is to ensure that your notes are always a collection of human-readable Markdown files that you can access and read with any text editor, even if the app itself is no longer around. This makes your data highly portable and future-proof.
-    * **Pros:** Ultimate data portability, easy backups, works great with file-syncing tools like Syncthing.
-    * **Cons:** Not all features (like an embedded database for fast search or complex queries) are as easy to implement and can sometimes lead to performance issues with very large graphs.
+* **Logseq, Obsidian, and others** are built on the "plain text" philosophy. Their primary goal is to ensure that your notes are always a collection of human-readable Markdown files that you can access and read with any text editor, even if the app itself is no longer around. 
+
+This makes your data highly portable and future-proof.
+
+* **Pros:** Ultimate data portability, easy backups, works great with file-syncing tools like Syncthing.
+* **Cons:** Not all features (like an embedded database for fast search or complex queries) are as easy to implement and can sometimes lead to performance issues with very large graphs.
 
 > Some people use obsidian + HUGO: https://www.nickgracilla.com/posts/obsidian-is-my-hugo-cms/
 
@@ -59,7 +71,7 @@ The answer is that there's a spectrum, but many of the popular self-hostable opt
     * **Pros:** Can offer very fast and powerful search, more robust conflict resolution, and support for features like multi-user collaboration and sharing.
     * **Cons:** The data is not as easily accessible or human-readable outside of the app. If you were to lose the app, you would have to figure out how to export or convert the database to get your notes back. Your data is not "future-proofed" in the same way as plain Markdown files.
 
-### A Deeper Look at Joplin
+#### A Deeper Look at Joplin
 
 Joplin is a perfect example of this.
 
@@ -88,6 +100,8 @@ The Verdict
 * **If your primary goal is to have human-readable Markdown files that are independent of any specific app, and you prefer a file-system-based workflow, then Logseq (or a similar tool like Obsidian) is a better choice.** The sync solution will be external to the app itself (e.g., Syncthing, Nextcloud).
 * **If your priority is a seamless, self-hosted sync experience with native mobile apps, and you're comfortable with your data being stored in a database, then Joplin is an excellent choice.** Its self-hosted server makes the setup straightforward, and the native mobile app "just works" with that server.
 
+--- 
+
 ## Conclusions
 
 I know what you are looking for: **DATABASELESS KNOWLEDGE BASE**
@@ -97,6 +111,14 @@ I know what you are looking for: **DATABASELESS KNOWLEDGE BASE**
 * <https://js.wiki/>
 
 
+### Quick SelfHosting Resources for Notes
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Notes" title="Note Tools | Docker Configs 🐋 ↗" >}}
+    {{< card link="https://fossengineer.com/selfhostable-note-taking-tools/" title="OSS Note taking tools ↗" >}}
+{{< /cards >}}
+
+https://github.com/JAlcocerT/Home-Lab/tree/main/wiki-js
 
 ---
 

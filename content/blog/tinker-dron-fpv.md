@@ -1,14 +1,13 @@
 ---
 title: "Whats an FPV?"
-date: 2025-12-30T23:20:21+01:00
+date: 2026-12-31T23:20:21+01:00
 draft: true
 tags: ["Tinkering"]
-description:  drone.
+description: Drone.
 url: 'fpv-programming'
 ---
 
 This guy knows what he's talking about: https://github.com/Bardo91
-
 
 ![DJI Tello Dron](/blog_img/hardware/dji-dron.png)
 
@@ -19,12 +18,26 @@ https://www.youtube.com/watch?v=7yVFZn87TkY
     {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py" title="DataInMotion yfinance Dividend ↗" >}}
 {{< /cards >}}
 
-https://gitlab.com/fossengineer1/dron
-https://github.com/JAlcocerT/DJITelloPy
+
+
+* Haga un PEQUEÑO dron Arduino con cámara FPV: ¿volará?
+
+https://www.youtube.com/watch?v=Sa6EslOHsI0
+
+* https://gitlab.com/fossengineer1/dron
+* https://github.com/JAlcocerT/DJITelloPy
 
 https://www.youtube.com/watch?v=KSP4o_WCqVs
 
 https://www.youtube.com/watch?v=k7et0oKxXp8
+
+* Haga un avión de papel FPV RC que vuele | ESP32
+
+https://www.youtube.com/watch?v=hDjBi0ErDdw
+
+* Open Source Motion Capture for Autonomous Drones
+
+https://www.youtube.com/watch?v=0ql20JKrscQ
 
 ## BetaFlight
 
@@ -56,12 +69,11 @@ Here's a breakdown of what Betaflight does and why it's popular:
 * **Frequent Updates:**  Betaflight is regularly updated with new features, bug fixes, and performance enhancements.
 * **Performance:**  Betaflight is known for its excellent flight performance, particularly in acro mode for freestyle flying.
 
-
-
-
 {{< /details >}}
 
-**In simpler terms:** Imagine Betaflight as the brain of your drone. It takes your commands, processes information from the drone's sensors, and tells the motors what to do to make the drone fly the way you want it to.  Its open-source nature and extensive configurability have made it the go-to choice for many drone enthusiasts, especially those who enjoy racing and freestyle flying.
+**In simpler terms:** Imagine Betaflight as the brain of your drone. It takes your commands, processes information from the drone's sensors, and tells the motors what to do to make the drone fly the way you want it to. 
+
+Its open-source nature and extensive configurability have made it the go-to choice for many drone enthusiasts, especially those who enjoy racing and freestyle flying.
 
 
 <!-- https://www.youtube.com/watch?v=FfrRiPhn-LA&t=343s -->
@@ -100,8 +112,9 @@ Here's what you should know about Mark5 frames:
 * **Manufacturer/Designer:**  There isn't one single "Mark5" manufacturer.  The design has become popular, and several companies produce frames based on or inspired by it.  So, you might see frames called "Mark5 style" or similar.
 * **Purpose:**  Mark5 frames are versatile and can be used for freestyle flying, racing, or even cinematic FPV.
 
-So, when someone says "Mark5 drone," they are likely referring to an FPV drone built using a frame that follows the Mark5 design principles.  It's not a complete, ready-to-fly drone itself, but rather a frame onto which you would add all the other components (motors, ESCs, flight controller, receiver, camera, etc.).
+So, when someone says "Mark5 drone," they are likely referring to an FPV drone built using a frame that follows the Mark5 design principles.
 
+It's not a complete, ready-to-fly drone itself, but rather a frame onto which you would add all the other components (motors, ESCs, flight controller, receiver, camera, etc.).
 
 
 * https://ardupilot.org/

@@ -208,22 +208,7 @@ Shodan is a specialized search engine that allows users to find Internet-connect
 
 Search Engine for Internet-Connected Devices: Shodan is often referred to as the “world’s first search engine for Internet of Things (IoT) devices.” It provides a way to discover various types of servers, webcams, routers, and other devices connected to the Internet. -->
 
-<!-- 
-arduino
-https://www.youtube.com/watch?v=DPqiIzK97K0 -->
 
-<!-- 
-
-RYLR 998, a blue chip equipped with a LoRa ultra-long-range modem, perfect for various hardware integrations including Raspberry Pi, Arduino, and ESP-32.
-
-https://www.youtube.com/watch?v=9azEfCQNhSA
-
-Takeaways
-
-The Ryder 998 is a low-power, low-cost chip that can send messages over 12 miles without any infrastructure.
-LoRa technology has the potential to disrupt the status quo of communication technology.
-The Ryder 998 can be used in a variety of applications, including IoT, emergency response, and extreme outdoor activities.
-The chip's low power consumption and versatility make it an attractive option for many industries. -->
 
 
 

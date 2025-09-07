@@ -310,7 +310,8 @@ Now you know what your client needs, the product is defined and they have agreed
 
 
 <!-- 
-    <https://twitter.com/fermatslibrary/status/1653739437774209024> -->
+    <https://twitter.com/fermatslibrary/status/1653739437774209024>
+ -->
 
 ### Effective Meetings
 

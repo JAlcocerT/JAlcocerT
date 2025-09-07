@@ -2,10 +2,16 @@
 title: "An overview of F/OSS Audio to Text Tools. Speech rAIter"
 date: 2025-05-12T09:20:21+01:00
 draft: false
-tags: ["Gen-AI","Self-Hosting","Docker","TTS","T2S"] 
+tags: ["Gen-AI","Self-Hosting","Docker","TTS","T2S","Streamlit x OpenAI"]
 description: 'Audio 2 Text Open Source and commercial transcription (S2T) Tools. ST Audio input and creation of a speech rater.'
 url: 'audio-to-text-tools'    
 ---
+
+**Tl;DR**
+
+Creating a streamlit app that rates your speech based on OpenAI TTS/S2T capabilities.
+
+**Intro**
 
 An overview to the existing open source alternatives for audio to text conversion (also called Speech to Text).
 
@@ -21,7 +27,7 @@ Well, plugging LLMs to that is kind of easy:
 
 {{< cards >}}
   {{< card link="#conclusions" title="OpenAI TTS and Transcription Project" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="NEW Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
 {{< /cards >}}
 
 {{< filetree/container >}}
@@ -257,8 +263,7 @@ Now we have seen the differences between **TTS and S2T** (Transcription) framewo
 
 Time to do [cool things](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/Audio/audio-input.py) with them.
 
-Like...putting together a voice assistant with Streamlit:
-
+Like...putting together a *voice assistant* with Streamlit:
 
 ![SpeechRater](/blog_img/GenAI/audio/speechraiter.png)
 
@@ -269,7 +274,8 @@ Like...putting together a voice assistant with Streamlit:
 
 For TTS, lately OpenAI have made interesting upgrades, with [4o-mini](https://platform.openai.com/docs/models/gpt-4o-mini-tts).
 
-* Voice Synthesis: TTS systems use various techniques to create synthetic voices. Early systems used concatenative synthesis (piecing together recorded human speech), while modern systems often use more advanced techniques like statistical parametric synthesis and neural network-based synthesis, which can produce more natural-sounding speech.   
+* Voice Synthesis: TTS systems use various techniques to create synthetic voices. E
+  * arly systems used concatenative synthesis (piecing together recorded human speech), while modern systems often use more advanced techniques like statistical parametric synthesis and neural network-based synthesis, which can produce more natural-sounding speech.   
 
 ### Streamlit Audio
 

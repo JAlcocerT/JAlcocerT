@@ -1,6 +1,6 @@
 ---
-title: "[IoT] Sensors"
-date: 2025-09-21
+title: "[IoT] Sensors and Arduino"
+date: 2025-10-21
 draft: false
 tags: ["Tinkering"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
@@ -8,7 +8,42 @@ url: 'iot-sensors-101'
 ---
 
 
-### MLX90614 GY-906 - IR
+## Motivation for Arduino
+
+Arduino + Acelerometer data in real time?
+
+Wait. What?
+
+{{< youtube "ijX3CeVUTPh9yz7Z" >}}
+
+<!-- https://youtu.be/Cu7VlrpoVZY?si=ijX3CeVUTPh9yz7Z -->
+
+<!-- 
+arduino
+https://www.youtube.com/watch?v=DPqiIzK97K0 -->
+
+<!-- 
+
+RYLR 998, a blue chip equipped with a LoRa ultra-long-range modem, perfect for various hardware integrations including Raspberry Pi, Arduino, and ESP-32.
+
+https://www.youtube.com/watch?v=9azEfCQNhSA
+
+Takeaways
+
+The Ryder 998 is a low-power, low-cost chip that can send messages over 12 miles without any infrastructure.
+LoRa technology has the potential to disrupt the status quo of communication technology.
+The Ryder 998 can be used in a variety of applications, including IoT, emergency response, and extreme outdoor activities.
+The chip's low power consumption and versatility make it an attractive option for many industries. -->
+
+---
+
+## FAQ
+
+### Sensors
+
+
+
+#### MLX90614 GY-906 - IR
 
 The MLX90614 GY-906 is an infrared (IR) temperature sensor module commonly used for non-contact temperature measurements.
 

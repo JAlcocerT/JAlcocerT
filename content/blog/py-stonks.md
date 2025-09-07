@@ -210,7 +210,7 @@ Earlier this year, I got a domain and [played with the Astro Link in Bio Theme](
 * If like me, you forgot, go add it to: `https://search.google.com/search-console`
 
 {{< cards >}}
-  {{< card link="https://financeinmotion.pages.dev/" title="LinkinBio with Astro" image="/blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="FinanceInMotion FYI version deployed to CF Pages via wrangler CLI" >}} 
+  {{< card link="https://financemotion.pages.dev/" title="LinkinBio with Astro" image="/blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="FinanceInMotion FYI version deployed to CF Pages via wrangler CLI" >}} 
 {{< /cards >}}
 
 So...how about taking that very simple astro SSG, add some calculators that can run via JS on the browser.
