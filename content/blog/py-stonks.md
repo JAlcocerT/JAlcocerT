@@ -198,8 +198,12 @@ In general, with streamlit you can quickly see if the data adquisition, processi
 
 ```sh
 uv init
+#uv add -r requirements.txt
 uv add streamlit-authenticator==0.1.5
 uv sync
+#uv export --no-hashes --format requirements-txt > requirements.txt
+#uv pip freeze > requirements.txt
+#uv export --no-hashes --no-header --no-annotate --no-dev --format requirements.txt > requirements-dev.txt
 ```
 
 > Im still impressed on how well uv works for python dependency management: https://github.com/astral-sh/uv/releases
@@ -217,9 +221,14 @@ Only that I have improved this stack a little bit in two ways: [via compose](htt
 uv run streamlit run app-st.py 
 ```
 
-And I can see that the sqlite start to contain records:
+And I can see that the sqlite start to contain records: *even inside the container*
 
-
+```sh
+make streamlit-up
+#docker compose -f docker-compose.st.yml logs -f --tail=20
+docker exec -it pystonks-app-streamlit sh
+sqlite3 ./data-storagestock_cache.db "SELECT name FROM sqlite_master WHERE name LIKE 'stock_data_%';"
+```
 
 #### Flask 
 
@@ -234,8 +243,13 @@ Im leveraging:
 3. 
 
 ```sh
+#lsof -ti:5000 | xargs kill -9
 uv run python app-flask.py  # Already running at port 5000
 ```
+
+So it was pretty straight forward to arrive to this:
+
+![alt text](/blog_img/entrepre/public-build/pystonks/CumReturns-MDD.png)
 
 **Key Insights 💡** For any time doing `Streamlit -> Flask` you can find on [this .md](https://github.com/JAlcocerT/py-stonks/blob/main/z_st2flask.md)
 
@@ -259,8 +273,10 @@ uv run python app-flask.py  # Already running at port 5000
 
 You dont need much more than this for a [OHLC](#faq) and trends info.
 
+
+
 {{< callout type="warning" >}}
-Regression to the mean, see SP500 vs Dividend Aristocrats
+Remember about the **Regression to the mean**, see SP500 vs Dividend Aristocrats
 {{< /callout >}}
 
 
@@ -284,9 +300,11 @@ Just with [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/), like:
 * `https://millennialmoney.com/calculators/fire-calculator/` with very interesting CSR powered tables
 * `https://millennialmoney.com/calculators/`
 
-Then, provide proper login/signup/logout with FastAPI and ChartJS?
+Then, provide proper login/signup/logout with FastAPI and ChartJS/Plotly?
 
 Even some way for people to create financial driven animations for themselves.
+
+> Could this be a way to reduce the brolosophy on the internet? Who knows
 
 Or get an [ebook](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks) that gets updated. Or, or or.
 
@@ -303,6 +321,8 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ### On Demand Data Animations
 
 https://jalcocert.github.io/JAlcocerT/animations-as-a-code/
+
+### Data Driven eBook
 
 
 ---

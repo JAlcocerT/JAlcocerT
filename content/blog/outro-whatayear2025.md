@@ -59,7 +59,7 @@ https://github.com/OpenInterpreter/open-interpreter
 
 5. And tinker a bit with [Crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai)
 
-{{< details title="Crypto is...back? Electrum 📌" closed="true" >}}
+{{< details title="Crypto is...back? Electrum and DeFi with UniSwap Example📌" closed="true" >}}
 
 > A recap on [BlockChain](https://simplyexplained.com/videos/how-does-a-blockchain-work/)
 
@@ -75,6 +75,10 @@ flatpak install flathub org.featherwallet.Feather #Monero
 ```
 
 If you ge a Metamask wallet for Ethereum, you can make [a Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/)
+
+DeFi and protocols like UniSwap (v4) give you a lot to think about:
+
+![alt text](/blog_img/crypto/defi/uni-v4-example.png)
 
 {{< /details >}}
 
