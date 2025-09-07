@@ -321,6 +321,6 @@ Choose WordPress if:
 - You have existing WordPress content
 - You need extensive plugin ecosystem
 
-Both Ghost and WordPress can serve as effective headless CMS options for Gatsby. 
+> Both Ghost and WordPress can serve as effective headless CMS options for Gatsby. 
 
-Ghost offers a more streamlined experience with its focused feature set, while WordPress provides greater flexibility and an extensive plugin ecosystem.
+> > Ghost offers a more streamlined experience with its focused feature set, while WordPress provides greater flexibility and an extensive plugin ecosystem.

@@ -160,9 +160,41 @@ It's important to note that there are two main Nasdaq indices:
 
 #### Data Processing and Storage
 
+I wanted to start building something simple.
+
+But realiable.
+
+So have separated the logic for:
+
+1. Data adquisition from yfinance (gathering)
+2. The data processing to cleanup etc
+3. The data storage: *that it could have been csv or google sheets...but as im planning to move closer to PB, I started directly with .sqlite*
+
+```sh
+#sudo apt install sqlite3
+#sqlite3 --version
+cd data-storage
+sqlite3 ./stock_cache.db
+
+#.tables
+SELECT name FROM sqlite_master WHERE type='table';
+#.quit #when you are done!
+```
+
+See also how cool your sqlite DB looks:
+
+```sh
+# Watch database size grow
+ls -lh stock_cache.db
+# See all stock tables after running the app
+sqlite3 stock_cache.db "SELECT name FROM sqlite_master WHERE name LIKE 'stock_data_%';"
+```
+
 #### Streamlit
 
-Because im comfortable with st for quick POCs and test the graphs/data structure:
+Because im comfortable with st for quick POCs and test the graphs/data structure.
+
+In general, with streamlit you can quickly see if the data adquisition, processing and storage/retrieval from the DB is working or not.
 
 ```sh
 uv init
@@ -185,17 +217,47 @@ Only that I have improved this stack a little bit in two ways: [via compose](htt
 uv run streamlit run app-st.py 
 ```
 
+And I can see that the sqlite start to contain records:
+
+
+
 #### Flask 
 
-The hardcoded auth via compose I already tested it as per [this script](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-flaskcms/docker-compose-portainer.yml) when playing with FlaskCMS on this [post](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#flaskcms-x-quick-auth).
+The *hardcoded Flask auth* via compose, I was already testing it as per [this script](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-flaskcms/docker-compose-portainer.yml) when playing with FlaskCMS on this [post](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#flaskcms-x-quick-auth).
 
+But no im not doing something from scratch.
 
+Im leveraging:
+
+1. The way yfinance works as per the [EDA above](#eda-on-yfinance)
+2. [Streamlit](#streamlit) is my go to for a quick UI for web apps and data presentation layer
+3. 
+
+```sh
+uv run python app-flask.py  # Already running at port 5000
+```
+
+**Key Insights 💡** For any time doing `Streamlit -> Flask` you can find on [this .md](https://github.com/JAlcocerT/py-stonks/blob/main/z_st2flask.md)
+
+1. Why This Migration is Easy
+
+1. **Separation of concerns** - UI vs business logic
+2. **Framework-agnostic data layer** - SQLite works everywhere
+3. **Modular architecture** - Independent data processing
+4. **Consistent patterns** - Same import structure
+
+2. Lessons for Future Migrations
+
+- **Keep business logic separate** from UI frameworks
+- **Use database abstraction** for easy backend switching
+- **Design for reusability** from the start
+- **Document shared components** clearly
 
 ---
 
 ## Conclusions
 
-You dont need much more than this for a OHLC and trend info.
+You dont need much more than this for a [OHLC](#faq) and trends info.
 
 {{< callout type="warning" >}}
 Regression to the mean, see SP500 vs Dividend Aristocrats
@@ -213,7 +275,14 @@ Earlier this year, I got a domain and [played with the Astro Link in Bio Theme](
   {{< card link="https://financemotion.pages.dev/" title="LinkinBio with Astro" image="/blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="FinanceInMotion FYI version deployed to CF Pages via wrangler CLI" >}} 
 {{< /cards >}}
 
-So...how about taking that very simple astro SSG, add some calculators that can run via JS on the browser.
+So...how about taking that very simple astro SSG, add some calculators that can run via JS on the browser. 
+
+Just with [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/), like:
+
+* `https://calculatoradam.com/monthly-recurring-revenue-calculator/`
+* `https://www.moneyunder30.com/fire-calculator/`
+* `https://millennialmoney.com/calculators/fire-calculator/` with very interesting CSR powered tables
+* `https://millennialmoney.com/calculators/`
 
 Then, provide proper login/signup/logout with FastAPI and ChartJS?
 

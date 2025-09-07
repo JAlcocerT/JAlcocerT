@@ -7,7 +7,7 @@ description: Drone.
 url: 'fpv-programming'
 ---
 
-This guy knows what he's talking about: https://github.com/Bardo91
+This guy knows what he's talking about: https://github.com/Bardo91, aka Pablo ramom soria.
 
 ![DJI Tello Dron](/blog_img/hardware/dji-dron.png)
 

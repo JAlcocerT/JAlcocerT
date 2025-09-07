@@ -2,14 +2,14 @@
 title: "101 Concepts for a Data Analytics Journey"
 date: 2020-11-05T23:20:21+01:00
 draft: false
-tags: ["Career","Dimensional Modelling",D&A"]
-description: 'Must know data modelling concepts and techniques for your career in Analytics.'
-summary: 'The essential concepts of data modeling and key terms in this introductory course for effective data analytics and informed decision-making. Learn how to structure and represent data efficiently to unlock valuable insights and optimize your analytical capabilities.'
+tags: ["Career","Dimensional Modelling","D&A"]
+description: 'Must know DATA MODELLING concepts and techniques for your career in Analytics.'
 url: 'data-basics-for-data-analytics'
 ---
 
 <!-- 'data-techniques-data-analytics' -->
 
+How to structure and represent data efficiently to unlock valuable insights?
 
 By understanding the principles of **data modelling** and the terminology associated with it.
 
@@ -97,7 +97,7 @@ By understanding these basic types of data models and common terms, you can gain
         * Primary Key: A primary key is a unique identifier for a record within a table. It ensures that each record can be distinguished from all others, and it is used to establish relationships between tables.
         * Foreign Key: A foreign key is an attribute in one table that refers to the primary key in another table. It is used to create relationships between tables and ensure data integrity across the system.
 
-* Database Design:
+* **Database Design:**
     * **Normalization**: the process of organizing data in a database to minimize redundancy, improve data integrity, and simplify the structure of the tables. It typically involves breaking down complex tables into smaller, more focused tables and establishing relationships between them.
         * The main goals of data normalization are:
             * Eliminating Data Redundancy: By organizing data into separate tables, normalization reduces the need to store the same data multiple times, leading to a more efficient use of storage space.
@@ -114,20 +114,20 @@ By understanding these basic types of data models and common terms, you can gain
         * 1:1, 1:N, N:1, N:M
     * Cardinality constraints help define the rules and constraints of the relationships between entities in a database model. They play a crucial role in establishing referential integrity, enforcing data consistency, and determining how entities are connected and interact with each other.
 
-* Data Integration Approaches:
-    * **ETL** ~ On-Premise :  a process used to extract data from various sources, transform it into a consistent and usable format, and load it into a target system, such as a *data warehouse or a data mart*. 
+* **Data Integration Approaches**:
+    * **ETL** ~ On-Premise ~ DWH :  a process used to extract data from various sources, transform it into a consistent and usable format, and load it into a target system, such as a *data warehouse or a data mart*. 
         * ETL is well-suited for use cases where data needs to be standardized, consolidated, and cleansed before loading it into the target system. It is often used in scenarios such as data warehousing, where data from multiple sources is transformed and loaded into a structured and predefined schema for reporting and analytics purposes. 
-    * **ELT** ~ Cloud / Big Data Analytics: Typical in the cloud with *Data Lakes* - they accept raw data in any structure or format.ELT allows for greater flexibility and scalability since the transformation is performed within the target system, taking advantage of its computational power.
+    * **ELT** ~ Cloud ~ Big Data Analytics ~ Data LakeHouse: Typical in the cloud with *Data Lakes* - they accept raw data in any structure or format.ELT allows for greater flexibility and scalability since the transformation is performed within the target system, taking advantage of its computational power.
         * ELT is suitable for use cases where the target system has the computational power and capabilities to handle data transformations efficiently. It is often used in scenarios involving big data analytics, streaming data processing, or situations where the structure and requirements of the data are subject to change.
 
 * Data Processing Approaches:
-    * **OLAP**: Online Analytical Processing - these systems are designed to perform complex analysis and provide BI. OLAP systems, are designed for analytical processing, where data is typically read-only and the focus is on analyzing large amounts of data to identify patterns and trends. 
+    * **OLAP**: Online Analytical Processing - these systems are designed to perform complex analysis and provide BI. OLAP systems, are designed for analytical processing, where data is **typically read-only** and the focus is on analyzing large amounts of data to identify patterns and trends. 
         * OLAP systems typically use a *denormalized schema*, such as a dimensional model, to optimize complex queries and improve performance.
         * It supports multidimensional analysis, data mining, and advanced analytics for decision support.
         * OLAP typically involves a dimensional model with a central fact table surrounded by dimension tables, representing different perspectives or dimensions of the data.
     * **OLTP**: Online Transaction Processing - these systems are designed to perform business transactions as they occur. **Speed**. OLTP systems are designed for transactional processing, where data is frequently updated, inserted, and deleted, and the focus is on maintaining data consistency and accuracy. 
         * OLTP systems typically use a *normalized schema*, such as an ER or 3NF model, to ensure data consistency and minimize redundancy.
-        * OLTP handles simple, fast, and real-time transactions that involve CRUD operations (Create, Read, Update, Delete) on individual records.
+        * OLTP handles simple, fast, and real-time transactions that involve **CRUD operations** (Create, Read, Update, Delete) on individual records.
         *  OLTP is designed for transactional processing, supporting day-to-day operational tasks and real-time transaction management.
 
 * **Data Arquitecture:**
@@ -299,7 +299,9 @@ A snowflake schema is an extension of the star schema, where dimension tables ar
 
 This schema is more space-efficient but may increase query complexity and decrease performance.
 
-A snowflake schema is a more complex design that extends the star schema by **breaking out the dimension tables into smaller tables that can be further normalized**. This can help to reduce redundancy and improve data consistency, but can also make the schema more complex and difficult to manage. 
+A snowflake schema is a more complex design that extends the star schema by **breaking out the dimension tables into smaller tables that can be further normalized**.
+
+This can help to reduce redundancy and improve data consistency, but can also make the schema more complex and difficult to manage. 
 
 * Compared to its counterpart, the star schema, the snowflake schema may involve more complex join operations across multiple tables, which can potentially impact query performance.
     * The snowflake schema is primarily chosen for its advantages in data maintenance, data integrity, and storage optimization.
@@ -313,7 +315,9 @@ A snowflake schema is a more complex design that extends the star schema by **br
 
 In a data warehouse, dimensions are the descriptive attributes used to analyze and categorize data. However, these dimensions can change over time, and it is important to capture and preserve historical information accurately.
 
-SCDs are used to handle different types of changes to dimension data, such as updates, inserts, and deletions, while maintaining historical context. This allows analysts and decision-makers to perform trend analysis, generate reports, and gain insights into how dimension attributes evolve over time.
+SCDs are used to handle different types of changes to dimension data, such as updates, inserts, and deletions, while maintaining historical context.
+
+This allows analysts and decision-makers to perform trend analysis, generate reports, and gain insights into how dimension attributes evolve over time.
 
 By utilizing SCD techniques, **data warehouses can effectively manage and track changes in dimension data**, ensuring the accuracy and consistency of historical analysis and reporting.
 
@@ -322,7 +326,6 @@ By utilizing SCD techniques, **data warehouses can effectively manage and track 
     * Type 1: Overwrite old data with new data, without maintaining any history.
     * Type 2: Preserve historical data by creating new records with updated information and marking old records as inactive.
     * Type 3: Store both the old and new values in the same record, typically by adding a new column to store the previous value.
-
 
 ### Why using a DWH?
 
@@ -336,7 +339,7 @@ Data warehouses (DWH) serve as a central repository for data collected from vari
 
 ### Data Marts
 
-A data mart is a subset of a data warehouse that is designed to support a specific business function or department.
+A data mart is *a subset of a data warehouse* that is designed to support a specific business function or department.
 
 Data marts are typically smaller and more focused than a data warehouse, and are designed to provide users with fast, efficient access to the data they need to support their specific business needs. 
 
@@ -344,7 +347,9 @@ Examples of data mart solutions include: *IBM Cognos Analytics, Oracle Business 
 
 ### Snowflake
 
-Snowflake is a cloud-based **data warehousing platform** that provides a modern, scalable, and flexible solution for storing and analyzing data. It is designed to handle large volumes of structured and semi-structured data, enabling organizations to derive valuable insights and make data-driven decisions.
+Snowflake is a cloud-based **data warehousing platform** that provides a modern, scalable, and flexible solution for storing and analyzing data. 
+
+It is designed to handle large volumes of structured and semi-structured data, enabling organizations to derive valuable insights and make data-driven decisions.
 
 Furthermore, Snowflake offers a range of advanced features, including automatic data optimization, query optimization, and support for semi-structured data formats like JSON and Parquet.
 
@@ -393,9 +398,11 @@ Data integration services are responsible for extracting, transforming, and load
 
 ### Azure Data Factory
 
-Azure Data Factory is a cloud-based data integration service provided by Microsoft Azure. It allows you to orchestrate and automate the movement and transformation of data from various sources to different destinations.
+Azure Data Factory is a cloud-based data integration service provided by Microsoft Azure.
 
-While Azure Data Factory is not specifically a data warehouse itself, it plays a crucial role in data warehouse solutions. 
+It allows you to orchestrate and automate the movement and transformation of data from various sources to different destinations.
+
+While Azure Data Factory is NOT specifically a data warehouse itself, it plays a crucial role in data warehouse solutions. 
 
 It facilitates the process of collecting data from diverse sources, performing necessary transformations, and loading it into a data warehouse or other data storage systems.
 
@@ -500,7 +507,9 @@ Setting up functional design development typically involves establishing a team 
 
 ### Data Structure Design
 
-Data structure design is the process of defining the organization, relationships, and constraints of data elements within a system or application. This includes creating data models, entity-relationship diagrams, and other representations of data structures to ensure data is stored and managed effectively.
+Data structure design is the process of defining the organization, relationships, and constraints of data elements within a system or application. 
+
+This includes creating data models, entity-relationship diagrams, and other representations of data structures to ensure data is stored and managed effectively.
 
 * Creating a data logic model for a project involves using various tools and techniques to design and document data structures, such as:
     * Entity-relationship modeling tools: These tools help create visual representations of data entities, their attributes, and the relationships between them (e.g., ER/Studio, MySQL Workbench, or Microsoft Visio).

@@ -131,7 +131,8 @@ Linktree does things very well, yet cant compete with:
 
 ## Interesting Concepts
 
-Concepts / ideas that I
+Concepts / ideas that I found during this year.
+
 1. CYA (cover your ***) was always a thing. 
 
 But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level.
@@ -174,7 +175,7 @@ Kind of resonates with [process](#processes) > result.
 
 > *Punishment fades but reward stayes*
 
-6. Guesstimates
+6. Guesstimates and [PostMortems](https://fernandocejas.com/blog/culture/2020-06-21-learn-out-of-mistakes-postmortems/)
 
 7. Business KPIs: CAC, EBITDA, LTV, NRR,...
 
@@ -454,7 +455,6 @@ This category compares the foundational storage layers of each stack. It's about
 | **Cost** | High initial hardware cost and ongoing operational overhead. | Pay-as-you-go based on storage volume and data access. | Low hardware cost (commodity servers) but high management overhead. |
 | **Primary Use Case**| Legacy on-premise batch processing and big data analytics. | Modern cloud data lakes and object-based storage for any data type. | Building a private cloud data lake or avoiding cloud vendor lock-in. |
 
-***
 
 2. Data Transformation & Orchestration ⚙️
 
@@ -574,33 +574,42 @@ Project Nessie and Apache Iceberg are designed to work very well together, and N
 
 {{< details title="Core Components of a Data Analytics Tech Stack 📌" closed="true" >}}
 
-* **Data Storage:**
-    * This is where the raw and processed data resides. Common options include:
-        * **Cloud Storage:** Amazon S3, Google Cloud Storage (GCS), Azure Blob Storage. These are highly scalable and cost-effective **object stores** that serve as the foundation of cloud-native **data lakes**.
-        * **Data Lakes:** HDFS (Hadoop Distributed File System), which is often used in on-premises or hybrid environments.
-        * **Data Warehouses:** Snowflake, Google BigQuery, Amazon Redshift. These are optimized for analytical queries.
+* **Data Storage:**: This is where the raw and processed data resides. Common options include:
+    * **Cloud Storage:** Amazon S3, Google Cloud Storage (GCS), Azure Blob Storage.
+        *  These are highly scalable and cost-effective **object stores** that serve as the foundation of cloud-native **data lakes**.
         * **Object Storage:** MinIO, which is an open source object storage solution that is S3 API compatible.
+    * **Data Lakes:** HDFS (Hadoop Distributed File System), which is often used in on-premises or hybrid environments.
+        * You will find format like: `avro`, `parquet` and `delta`.
+    * **Data Warehouses:** Snowflake, Google BigQuery, Amazon Redshift or Azure Synapse. These are optimized for analytical queries.
 
-* **Data Processing:**
-    * These tools transform and prepare data for analysis:
-        * **Apache Spark:** A powerful distributed processing engine used for large-scale data transformation and analysis. It includes modules like **Spark SQL** for structured data, **Spark Streaming** for real-time data, and **MLlib** for machine learning.
-        * **Databricks:** A cloud-based platform built on Apache Spark, providing a collaborative environment for data engineering, data science, and machine learning. It also offers features like **Delta Lake** for data reliability and **MLflow** for managing the machine learning lifecycle.
-        * **SQL-based tools:** These are essential for querying and manipulating data in data warehouses. This category includes modern tools that use SQL for transformations:
-            * **dbt (data build tool):** A transformation tool that enables data analysts and engineers to transform data in their data warehouses more effectively. It allows for modular SQL code and follows software engineering best practices.
-            * **Dataform:** Google's equivalent of dbt, used for transforming data in BigQuery using **SQLX**.
+* **Data Processing:**  These tools transform and prepare data for analysis:
+    * **Apache Spark:** A powerful distributed processing engine used for large-scale data transformation and analysis. It includes modules like **Spark SQL** for structured data, **Spark Streaming** for real-time data, and **MLlib** for machine learning.
+    * **Databricks:** A cloud-based platform built on Apache Spark, providing a collaborative environment for data engineering, data science, and machine learning. 
+        * It also offers features like **Delta Lake** for data reliability and **MLflow** for managing the machine learning lifecycle.
+    * **SQL-based tools:** These are essential for querying and manipulating data in data warehouses. This category includes modern tools that use SQL for transformations:
+        * **dbt (data build tool):** A transformation tool that enables data analysts and engineers to transform data in their data warehouses more effectively. It allows for modular SQL code and follows software engineering best practices.
+            * Dbt wont move the data for you, so you need an orchestration tool like ADF or TalenD
+        * **Dataform:** Google's equivalent of dbt, used for transforming data in BigQuery using **SQLX**.
 
 * **Data Orchestration:**
     * These tools manage the flow of data through the pipeline:
-        * **Apache Airflow:** A platform for programmatically authoring, scheduling, and monitoring workflows. It defines pipelines as **Directed Acyclic Graphs (DAGs)**.
-        * **dbt (data build tool):** A transformation tool that enables data analysts and engineers to transform data in their data warehouses more effectively.
+        * **Apache Airflow:** A platform for programmatically authoring, scheduling, and monitoring workflows.
+            * It defines pipelines as **Directed Acyclic Graphs (DAGs)**.
         * **Cloud Composer:** Google Cloud's fully managed version of Apache Airflow, which simplifies its deployment and management.
         * **Azure Data Factory (ADF):** Microsoft's visual ETL and orchestration service, offering a code-free approach to building data pipelines within the Azure ecosystem.
 
-* **Data Catalog and Governance:**
-    * These tools help manage and govern data assets:
-        * **Apache Iceberg:** An open table format for large analytic datasets. It provides features like **ACID transactions**, schema evolution, and time travel.
-        * **Project Nessie:** Provides **Git-like capabilities** (branches, commits, tags) for data lakes, working in conjunction with table formats like Apache Iceberg to provide full data versioning and governance.
-        * **Apache Hive Metastore:** A central repository for metadata, primarily used in the Hadoop ecosystem. It stores schema and location information for Hive tables.
+* **Data Catalog and Governance:** These tools help manage and govern data assets:
+    * **Apache Iceberg:** An open table format for large analytic datasets. It provides features like **ACID transactions**, schema evolution, and time travel.
+        * See also Delta Lake Format: https://delta.io/ which is some kind of .parquet with enhance time travel capabilities
+    * **Project Nessie:** Provides **Git-like capabilities** (branches, commits, tags) for data lakes, working in conjunction with table formats like Apache Iceberg to provide full data versioning and governance.
+    * **Apache Hive Metastore:** A central repository for metadata, primarily used in the Hadoop ecosystem. It stores schema and location information for Hive tables.
+
+```py
+df = spark.read 
+    .format("delta")
+    .option("timestampAsOf", "2025-12-01") 
+    .load("/path/to/my/table") 
+```
 
 * **Data Visualization and Business Intelligence (BI):**
     * These tools allow users to explore and visualize data:

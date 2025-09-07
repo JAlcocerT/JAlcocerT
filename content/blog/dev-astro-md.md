@@ -1,8 +1,8 @@
 ---
 title: "A Landing you can actually Edit"
-date: 2025-09-04T08:20:21+01:00
+date: 2025-09-09T08:20:21+01:00
 draft: false
-tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP"]
+tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP","PB CMS"]
 description: 'Landing page for Mental Health. Adding posts and md via pocketbase.'
 url: 'mental-health-landing'
 ---
@@ -13,8 +13,11 @@ url: 'mental-health-landing'
 
 **Intro**
 
+From the [KB post](https://jalcocert.github.io/JAlcocerT/knowledge-management/) I got the concept of WYSIWYG.
 
+And Ive seen that I can create my own proper post editor, thanks to tools like [Toast UI](#toast-ui-wysiwyg-md-editor) 
 
+Also, there are many things that [CSR can do](https://jalcocert.github.io/JAlcocerT/csr-and-js/).
 
 
 ## Tech

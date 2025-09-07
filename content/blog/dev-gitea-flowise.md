@@ -108,6 +108,13 @@ docker network connect cloudflared_tunnel gitea #network -> container name
 #docker inspect gitea --format '{{json .NetworkSettings.Networks}}' | jq
 ```
 
+---
+
+## Conclusions
+
+### What to do with Flowise?
+
+
 
 ---
 

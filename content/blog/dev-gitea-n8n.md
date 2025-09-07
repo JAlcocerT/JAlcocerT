@@ -7,10 +7,9 @@ description: 'From n8n workflow to Gitea.'
 url: 'n8n-and-gitea'
 ---
 
-
 **TL;DR** 
 
-Lately, I have been playing with Gitea's API.
+Lately, I have been playing with Gitea's API on [this post](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#gitea-101) and vibed coded [some .md next to its deployment](https://github.com/JAlcocerT/Home-Lab/tree/main/gitea) to understand it in the future.
 
 It made me think how to combine Gitea as a source for SSG for website generation.
 
@@ -30,8 +29,7 @@ Just get your server and containers going:
 {{< /cards >}}
 
 
-## The Stack
-
+## The n8n x Gitea Stack
 
 This is very simple:
 
@@ -212,14 +210,10 @@ With OpenAI: https://n8n.io/workflows/4696-conversational-telegram-bot-with-gpt-
 
 * https://n8n.io/workflows/4696-conversational-telegram-bot-with-gpt-5gpt-4o-for-text-and-voice-messages/
 
-
 --- 
-
 
 ## Conclusions
 
+If you are doing still your social media ,manually'.
 
----
-
-
-## FAQ
+You should probably have a look at this kind of n8n setups, together [with PostIZ](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz).

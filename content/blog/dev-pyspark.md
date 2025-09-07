@@ -2,7 +2,7 @@
 title: "Getting started with PySpark"
 date: 2022-10-17T23:20:21+01:00
 draft: false
-tags: ["Dev","Python","jsonformatter"]
+tags: ["Dev","Python","jsonformatter","Time Travel"]
 description: 'How to use PySpark (Python) for Big Data Processing.'
 url: 'guide-python-PySpark'
 ---
@@ -105,12 +105,11 @@ spark.sql("SELECT 'Hello, world - You are ready to use PySpark!'").show(truncate
 df.createOrReplaceTempView("trino_table")
 result = spark.sql("SELECT * FROM trino_table WHERE column_name = 'some_value'")
 result.show()
-
 #spark.stop()
-
 ```
 
 And with python like logic:
+
 ```py
 df = spark.read \
     .format("jdbc") \
@@ -133,7 +132,9 @@ result.show()
 
 **Time-traveling** allows accessing data from a specific point in the past.
 
-While the approach varies across formats, the core principle remains the same. **Snapshots stored in logs** enable time-traveling capabilities.
+While the approach varies across formats, the core principle remains the same. 
+
+**Snapshots stored in logs** enable time-traveling capabilities.
 
 To achieve time-traveling, every state of data must be stored at a given time using **snapshots**.
 
@@ -174,7 +175,7 @@ spark.read
 * With Snapshot_ID:
 
 ```py
-// time travel to snapshot with ID 10963874102873L 
+#time travel to snapshot with ID 10963874102873L 
 spark.read 
      .option("snapshot-id",10963874102873L) 
      .format("iceberg") .load("path/to/table") 

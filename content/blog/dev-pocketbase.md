@@ -1,9 +1,9 @@
 ---
-title: "SelfHosted PocketBase for your BackEnd"
+title: "SelfHosted PocketBase for your SaaS BackEnd"
 date: 2025-08-10
 draft: false
 tags: ["PocketBase 101","OSS Auth","Concurrency","Local & Session Storage","Sqlite","CRUD Monkey"]
-description: 'Things your learn outside the confort zone. BaaS Storage for a WebApp'
+description: 'Things your learn outside the confort zone. PB 101, BaaS Storage and more for WebApps'
 url: 'pocketbase'
 ---
 

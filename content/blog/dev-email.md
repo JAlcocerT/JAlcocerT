@@ -1,13 +1,15 @@
 ---
 title: "SMTP and email stuff"
-date: 2025-10-17
-draft: false
+date: 2026-12-31
+draft: true
 tags: ["HomeLab","Mailgun","Amazon SES","growchief"]
 description: 'Email is hard. '
 url: 'emails-101'
 ---
 
 **TL;DR**
+
+https://mxroute.com/
 
 SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better
 

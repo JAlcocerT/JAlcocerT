@@ -3,7 +3,7 @@ title: "HUGO can also be cool"
 date: 2025-08-04
 draft: false
 tags: ["Dev","SSG","Photo-Gallery","Flask CMS","Shortcode parsing md"]
-description: 'Improving HUGO Themes: Flask x Theme Gallery, HUGO Doks Tweaks'
+description: 'Improving HUGO Themes: Flasked x Theme Gallery, HUGO Doks Tweaks'
 url: 'cool-hugo-themes'
 ---
 
@@ -26,7 +26,7 @@ As described here - https://jalcocert.github.io/JAlcocerT/creating-photo-centric
 
 {{< cards cols="1" >}}
   {{< card link="https://whilecyclingthere.web.app/" title="Cycling There Photo Gallery" >}}
-  {{< card link="http://entreagujaypunto.com/" title="Portfolio Aguja&Punto" >}}
+  {{< card link="https://entreagujaypunto.com/" title="Portfolio Aguja&Punto" >}}
 {{< /cards >}}
 
 Here is my forked version of it (also **MIT**):
@@ -38,8 +38,8 @@ Here is my forked version of it (also **MIT**):
 
 I was playing a lot with this theme to make it more accesible:
 
-* Via a Telegram Bot
-* With some integration with Filebrowser
+* Via a [Telegram Bot](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots)
+* With some integration with Filebrowser...
 
 It was about time to vibe code something:
 
