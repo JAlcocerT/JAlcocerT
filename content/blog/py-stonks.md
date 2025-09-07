@@ -269,9 +269,11 @@ export STREAMLIT_REGISTRATION_ENABLED="true"  # Enable signup
   {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_pb.py" title="ST auth script, fully working with PB users collection ↗" >}}
 {{< /cards >}}
 
-> Which they get published into the PB and you get logged in directly.
+> Which they get published into the PB and you get logged in directly. 
 
-> > This is MAGIC
+![pocketbase logs](/blog_img/entrepre/public-build/pystonks/pb-logs.png)
+
+> > This is MAGIC. See `http://192.168.1.11:8080/_/#/logs`
 
 #### Flask 
 
@@ -314,9 +316,14 @@ So it was pretty straight forward to arrive to this:
 
 ## Conclusions
 
-You dont need much more than this for a [OHLC](#faq) and trends info.
+You dont need much more than this for a [OHLC](#faq) and trends info: `https://app.financeinmotion.fyi/`
 
-
+```sh
+git clone https://github.com/JAlcocerT/py-stonks
+make streamlit-up
+#docker network connect cloudflared_tunnel pystonks-app-streamlit #network -> container name
+docker inspect pystonks-app-streamlit --format '{{json .NetworkSettings.Networks}}' | jq #publish it via Zero Trust with pystonks-app-streamlit:8501
+```
 
 {{< callout type="warning" >}}
 Remember about the **Regression to the mean**, see SP500 vs Dividend Aristocrats
