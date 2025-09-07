@@ -1,11 +1,15 @@
 ---
 title: "Fature Flags for your SaaS"
-date: 2025-10-10T15:20:21+01:00
+date: 2025-09-06T15:20:21+01:00
 draft: false
 tags: ["Dev","GoFeatureFlag vs PocketBase"]
 description: 'FF with Go for your WebApps.'
 url: 'feature-flags'
 ---
+
+{{< callout type="warning" >}}
+WIP
+{{< /callout >}}
 
 **TL;DR** 
 
@@ -22,10 +26,9 @@ I have been playing with cloudflare workers recently:
 
 You can see how well it works: <https://fast-payroll-theme.pages.dev/signup/>
 
-And in the conclusions I reflected on the next steps of the setup.
+And [within that post's conclusions](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#conclusions) I reflected on the next steps of the setup.
 
-> If you are logged in...do you have which features available?
-
+> If you are logged in...do you have which features available? Is there any logic that activate/deactivates them?
 
 **Intro**
 
@@ -66,6 +69,9 @@ They provide significant benefits:
 ### Can They Be Passed by Environment Variables?
 
 Yes, feature flags can be passed by **environment variables**, but this is typically only suitable for a very simple setup. 
+
+* https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_multichat.py
+* https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_DeployMe/Docker-Compose.yml
 
 > Like the ones I was setting with Flask or with Streamlit not long ago
 

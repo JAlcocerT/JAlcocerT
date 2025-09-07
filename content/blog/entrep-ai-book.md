@@ -1,8 +1,8 @@
 ---
 title: "AI Driven e-books as a code"
-date: 2025-10-07
+date: 2025-08-31
 draft: false
-tags: ["Entrepreneuring","sell-your-ebook","Stripe API","n8n"]
+tags: ["Entrepreneuring","sell-your-ebook","R","knitt"]
 description: 'Building in public a simple web platform to create/sell ebooks.'
 url: 'ai-driven-ebooks'
 ---
@@ -35,14 +35,14 @@ How about **selling an ebook** be all about: having an stripe account and proper
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
-  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="Sell your eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Astro SSG Theme (x) Stripe (x) N8N" >}}
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="NEW Sell your eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Astro SSG Theme (x) Stripe (x) N8N" >}}
 {{< /cards >}}
-
-> You can also sell ebooks via amazon or ko-fi.
 
 You know what to tell, its just that... **time matters**.
 
-* https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_ebook.py
+So why not accelerating the time to ship ebooks by understanding how to have their skeleton code driven?
+
+And maybe get LLM help for charts creation, data driven parts etc.
 
 
 ## eBooks
@@ -151,26 +151,27 @@ Use **bookdown** when:
 - ✅ Planning to **publish** the work
 - ✅ Need **multiple output formats** (PDF, HTML, EPUB)
 
-
-### How people send eBooks
-
-
-1. `https://shop.acquisition.com/products/100m-money-models?utm_campaign=13261424-%24100M%20Money%20Models&utm_source=hs_email&utm_medium=email&utm_content=376228484&_hsmi=376228484`
-
-2. 
-
-
 ---
 
 ## Conclusions
+
+This is it **for now.**
+
+But im happy I could link this to my last year thought with the [assistant agent for open ai driven ebooks](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_ebook.py).
+
+### How people send eBooks
+
+1. Via Stripe: `https://shop.acquisition.com/products/100m-money-models?utm_campaign=13261424-%24100M%20Money%20Models&utm_source=hs_email&utm_medium=email&utm_content=376228484&_hsmi=376228484`
+
+2. I guess via stripe + SSR and obfuscation technique that gets clear if your email is in the proper Stripe driven table of users who bought: `https://readmake.com/`
+
+> You can also sell ebooks via amazon or ko-fi.
 
 
 
 ---
 
 ## FAQ
-
-
 
 ### Kindle Notes to AI
 

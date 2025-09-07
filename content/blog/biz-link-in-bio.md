@@ -114,7 +114,8 @@ Thanks to Ctrimm's theme, I got to know about the https://www.avatartion.com/ [p
 git clone https://github.com/ctrimm/astro-link-in-bio-theme
 
 npm install
-npm run dev #
+#npm run dev #
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 #rm -rf .git
 npm run build
@@ -123,7 +124,7 @@ npm run build
 LayoutSwitcher can be commented from `layout.astro` and in `config.js` you have everything you need to tweak the theme!
 
 {{< callout type="info" >}}
-It uses [fontawsome icons](https://fontawesome.com/search), great reference for icons!
+It uses [fontawsome **icons**](https://fontawesome.com/search), great reference for icons + Configurable **via JSON**
 {{< /callout >}}
 
 
@@ -159,7 +160,7 @@ This is **how they can look**:
 And **like this**:
 
 {{< cards >}}
-  {{< card link="https://financeinmotion.fyi/" title="LinkinBio with Astro" image="blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="Links with astro-link-in-bio-theme - FinanceInMotion FYI" >}}
+  {{< card link="https://financeinmotion.fyi/" title="LinkinBio with Astro" image="/blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="Links with astro-link-in-bio-theme - FinanceInMotion FYI" >}}
   {{< card link="https://jalcocert.github.io/Portfolio/" title="Links with HUGO LYNX" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links on Github Pages" >}}             
 {{< /cards >}}
 

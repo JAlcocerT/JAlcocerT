@@ -1,6 +1,6 @@
 ---
 title: "Backends 101"
-date: 2025-09-05T09:20:21+01:00
+date: 2025-09-03T23:20:21+01:00
 draft: false
 tags: ["Dev","Laravel PHP","Python BE fwks","Protected EndPoints","uv","Database Migration"]
 url: 'backend-alternatives'
@@ -10,9 +10,9 @@ description: 'Backend 101 for your SaaS'
 
 **Tl;DR**
 
-Im still impressed on how well uv works for python: https://github.com/astral-sh/uv/releases
+Im just grasping the surface of BE and want to see high level what each framework can do.
 
-
+Because its not all about Python, but [others PHP driven](#laravel-101) can do cool stuff.
 
 **Intro**
 
@@ -21,6 +21,10 @@ Im mostly focused on python, *despite not being a real dev*.
 But Ive heard a lot of people do cool things with just PHP+jquery.
 
 Others mention a lot the power of [Laravel](#laravel-101), which uses PHP.
+
+And FE devs, can also go into BE as [they know JS](#other-backends), which can do more than FE.
+
+> In the [conclusions](#conclusions), you have a table with the frameworks and how they relate to the way of rendering.
 
 
 ## Laravel 101
@@ -42,11 +46,9 @@ Here's a quick comparison to highlight their similarities and differences:
     * Large and active community with extensive resources.
 * **Use Cases:** Building complex web applications, APIs, and backend systems.
 
-**Now, two well known Python BE**
+   
+{{% details title="Two well known Python BE (Django and Flask) vs LARAVEL 🚀" closed="true" %}}
 
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
-{{< /cards >}}
 
 **Django:**
 
@@ -75,11 +77,13 @@ Here's a quick comparison to highlight their similarities and differences:
 * They differ in their programming language, architecture, and the level of built-in features they provide.
 * The choice of which framework to use depends on the specific project requirements, the developer's familiarity with the language, and the desired level of control and flexibility.
 
-So, yes, Laravel is primarily a backend framework, similar to Django and Flask in its core purpose. However, it distinguishes itself with its elegant syntax, strong focus on developer experience, and a rich set of features tailored for PHP-based web development.
+So, yes, Laravel is primarily a backend framework, similar to Django and Flask in its core purpose. 
 
-Laravel is a popular and powerful open-source PHP framework that web developers use to build modern web applications. Think of it as a toolkit that provides a structure and a bunch of helpful tools to make web development easier and faster.
+However, it distinguishes itself with its elegant syntax, strong focus on developer experience, and a rich set of features tailored for PHP-based web development.
 
-Here's a breakdown of what makes Laravel so great:
+Laravel is a popular and powerful open-source PHP framework that web developers use to build modern web applications.
+
+Think of it as a toolkit that provides a structure and a bunch of helpful tools to make web development easier and faster:
 
 **1. It's a Framework:**
 
@@ -110,25 +114,6 @@ Here's a breakdown of what makes Laravel so great:
 
 * Laravel has a huge and supportive community of developers. This means there are tons of resources, tutorials, and packages available to help you learn and build with Laravel.
 
-**Why is Laravel so popular?**
-
-* **Ease of Use:** Laravel is known for its elegant syntax and developer-friendly tools, making it easier to learn and use.
-* **Speed:** Laravel's built-in features and optimized structure help you develop web applications quickly.
-* **Scalability:** Laravel is designed to handle large and complex applications.
-* **Maintainability:** The MVC architecture and well-organized code make it easy to maintain and update your applications.
-
-**In simple words, Laravel is like a super-efficient construction crew for building amazing websites and web applications with PHP.** It takes care of the tedious tasks, provides a solid structure, and gives you the tools you need to bring your web development ideas to life.
-
-* https://filamentphp.com/
-
-A collection of beautiful full-stack components. The perfect starting point for your next app. 
-
-* https://github.com/filamentphp/filament
-
-> MIT |  A collection of beautiful full-stack components for Laravel. The perfect starting point for your next app. Using Livewire, Alpine.js and Tailwind CSS. 
-
-
-Laravel is primarily a backend framework, just like Django and Flask. They all focus on handling the server-side logic, data management, and API creation for web applications.
 
 **Laravel:**
 
@@ -162,6 +147,35 @@ Laravel is primarily a backend framework, just like Django and Flask. They all f
     * Highly customizable, allowing developers to choose their preferred libraries and tools.
 * **Use Cases:** Building APIs, small web applications, and projects where flexibility is crucial.
 
+
+{{% /details %}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Web Apps with Python | Post ↗" >}}
+{{< /cards >}}
+
+
+**Why is Laravel so popular?**
+
+* **Ease of Use:** Laravel is known for its elegant syntax and developer-friendly tools, making it easier to learn and use.
+* **Speed:** Laravel's built-in features and optimized structure help you develop web applications quickly.
+* **Scalability:** Laravel is designed to handle large and complex applications.
+* **Maintainability:** The MVC architecture and well-organized code make it easy to maintain and update your applications.
+
+**In simple words, Laravel is like a super-efficient construction crew for building amazing websites and web applications with PHP.** 
+
+It takes care of the tedious tasks, provides a solid structure, and gives you the tools you need to bring your web development ideas to life.
+
+* https://filamentphp.com/
+
+A collection of beautiful full-stack components. The perfect starting point for your next app. 
+
+* https://github.com/filamentphp/filament
+
+> MIT |  A collection of beautiful full-stack components for Laravel. The perfect starting point for your next app. Using Livewire, Alpine.js and Tailwind CSS. 
+
+Laravel is primarily a backend framework, just like Django and Flask. They all focus on handling the server-side logic, data management, and API creation for web applications.
+
 **Key takeaway:**
 
 * Laravel, Django, and Flask are all backend frameworks that handle the server-side logic of web applications.
@@ -173,6 +187,7 @@ So, yes, Laravel is primarily a backend framework, similar to Django and Flask i
 However, it distinguishes itself with its elegant syntax, strong focus on developer experience, and a rich set of features tailored for PHP-based web development.
 
 
+---
 
 ## Conclusions
 
@@ -180,7 +195,33 @@ If wordpress uses PHP, [laravel](#laravel-101) cant be that bad.
 
 Right? :)
 
-Joking. Some people are doing a lot of money with PHP+jquery.
+Joking. 
+
+Some people are doing a lot of money with PHP+jquery.
+
+**Frameworks Comparison Table 💻**
+
+| Feature | Laravel | Django | Flask |
+| :--- | :--- | :--- | :--- |
+| **Language** | PHP | Python | Python |
+| **Type** | Full-stack framework | Full-stack framework | Microframework |
+| **Philosophy** | "Elegant" syntax, focuses on developer experience and simplicity. | "Batteries-included" — comes with everything you need out of the box. | "Do it yourself" — lightweight and minimalist, you choose the parts. |
+| **Best For** | Complex web applications and APIs, e-commerce, content management systems. | Large, scalable web apps, CMS, data-driven platforms. | Small projects, simple APIs, microservices, and rapid prototyping. |
+| **Learning Curve** | Gentle, especially for those familiar with PHP. | Steeper due to its size and many built-in components. | Very gentle, quick to get a basic app running. |
+| **Key Features** | Artisan CLI, robust ORM (Eloquent), Blade templating, built-in auth. | Admin panel, ORM, URL routing, built-in security. | Routing, request handling, and a templating engine (Jinja2). |
+| **Community** | Large and very active, with extensive documentation and tutorials. | Huge and mature, with a massive amount of resources available. | Active and supportive, with many extensions from the broader Python community. |
+
+**Rendering Frameworks & Approaches 🎨**
+
+This table explains the different rendering approaches (SSG, CSR, SSR, and SPA) and how Laravel, Django, and Flask typically fit into them.
+
+| Concept | What It Is | How it Works | Framework Fit |
+| :--- | :--- | :--- | :--- |
+| **SSR**\<br\>(Server-Side Rendering) | A web page is rendered on the server for every user request. | The server processes data and templates, then sends a fully-formed HTML page to the browser. Great for SEO and initial load speed. | **Django, Laravel, and Flask** are all classic examples of frameworks that excel at SSR. They use template engines (like Django Templates, Blade, or Jinja2) to render dynamic content on the server. |
+| **CSR**\<br\>(Client-Side Rendering) | The browser renders the page using JavaScript after the initial load. | The server sends a minimal HTML file, and the browser's JavaScript fetches data via API calls and builds the page. Excellent for interactive, app-like experiences. | These frameworks act as **API backends**. They don't handle the rendering part. Instead, they expose REST or GraphQL APIs for a separate frontend (built with a framework like React or Vue) to consume. |
+| **SSG**\<br\>(Static Site Generation) | The entire website is pre-rendered into static HTML files at build time. | A static site generator tool fetches all content and data and generates static files that are deployed to a server. Incredibly fast and secure. | These backend frameworks **do not directly do SSG** on their own. Instead, they can be used to serve as a **data source** for a static site generator (like Gatsby or Jekyll) which then handles the SSG process. |
+| **SPA**\<br\>(Single-Page Application) | A website that loads a single HTML page and dynamically rewrites its content as the user interacts with it. | This is a type of CSR where all routing and rendering logic happens on the client side using JavaScript. | Django, Laravel, and Flask are used as **backend APIs** for SPAs. The frameworks handle the business logic and database, while a frontend framework (like React or Vue) manages the user interface and provides the seamless, single-page experience. |
+
 
 ### Other BackEnds
 
@@ -212,7 +253,9 @@ You might want to consider to go with [Pocketbase as BaaS](https://jalcocert.git
 
 Generally, backend frameworks can be made to work with [all the API types](#faq).
 
-But they are often optimized for one type more than others. The choice of framework is often influenced by the API type you intend to build, as some frameworks have built-in support or dedicated libraries that make building a specific API type much easier. 
+But they are often optimized for one type more than others. 
+
+The choice of framework is often influenced by the API type you intend to build, as some frameworks have built-in support or dedicated libraries that make building a specific API type much easier. 
 
 **RESTful APIs**
 
@@ -253,7 +296,11 @@ gRPC is a more modern, high-performance RPC framework. It's especially popular f
 
 ## FAQ
 
-The most common and contemporary API types: REST and GraphQL. However, there are a few other significant types, each with its own approach to communication and data transfer. These "types" typically refer to the architectural style or protocol used to build the API.
+The most common and contemporary API types: REST and GraphQL. 
+
+However, there are a few other significant types, each with its own approach to communication and data transfer. 
+
+These "types" typically refer to the architectural style or protocol used to build the API.
 
 ---
 

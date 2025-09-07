@@ -228,7 +228,7 @@ Im now thinking that a future webifyer/*awebsiteforall* project could have such 
 * Custom solutions
 
 {{< callout type="ingo" >}}
-For that somekind of feature flags will be required, probably something like [gofeatureflag](https://gofeatureflag.org/docs/sdk/client_providers/openfeature_javascript) combined with the described setup
+For that some *kind of feature flags* will be required, probably something like [gofeatureflag](https://gofeatureflag.org/docs/sdk/client_providers/openfeature_javascript) combined with the described setup
 {{< /callout >}}
 
 As this has worked, so should a SSG + CF Worker + Logto via JS (instead of python):
