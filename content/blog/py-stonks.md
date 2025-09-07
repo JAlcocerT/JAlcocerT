@@ -230,6 +230,49 @@ docker exec -it pystonks-app-streamlit sh
 sqlite3 ./data-storagestock_cache.db "SELECT name FROM sqlite_master WHERE name LIKE 'stock_data_%';"
 ```
 
+For the old hardcoded streamlit auth to look at the container for users allowed, I had to: 
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/docker-compose.st.yml" title="Bring Auth user and password to the st compose ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_hardcoded_compose.py" title="Adapt the known st auth script, so that it considers the new env variables ↗" >}}
+{{< /cards >}}
+
+```sh
+export STREAMLIT_AUTH_ENABLED='true'
+#by default it uses my favourite yosua/cerdo if anything else provided as per env variable
+uv run streamlit run app-st.py 
+```
+
+And as I was so close...I could not resist to combine the good old **streamlit auth script with the PocketBase** `users` collection:
+
+```sh
+#export STREAMLIT_AUTH_ENABLED='true'
+# Set PocketBase URL (optional, defaults to your URL)
+export POCKETBASE_URL="https://pocketbase.jalcocertech.com"
+
+# Run the app
+uv run streamlit run app-st.py
+```
+
+![st authentication script connected to pocketbase users collection](/blog_img/entrepre/public-build/pystonks/st-auth-pocketbase.png)
+
+With a minot tweak, it can also register new mail/passwords to your PB users collection:
+
+```sh
+export STREAMLIT_REGISTRATION_ENABLED="true"  # Enable signup
+```
+
+![Streamlit signin signup via pocketbase users collection](/blog_img/entrepre/public-build/pystonks/st-auth-pb-signup.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/docker-compose.st.yml" title="streamlit docker compose working with auth ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_pb.py" title="ST auth script, fully working with PB users collection ↗" >}}
+{{< /cards >}}
+
+> Which they get published into the PB and you get logged in directly.
+
+> > This is MAGIC
+
 #### Flask 
 
 The *hardcoded Flask auth* via compose, I was already testing it as per [this script](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-flaskcms/docker-compose-portainer.yml) when playing with FlaskCMS on this [post](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#flaskcms-x-quick-auth).

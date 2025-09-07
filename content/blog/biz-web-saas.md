@@ -1,5 +1,5 @@
 ---
-title: "Quick SaaS Websites with user login"
+title: "Quick SaaS Websites with user login. Workers + PB."
 date: 2025-08-30T13:20:21+01:00
 draft: false
 tags: ["Web",HomeLab,"Cloudflare Workers x PB Auth","htpponly cookies","Gitea","Cursor CLI and InvoCLI","Astro Payroll Theme"]
@@ -160,7 +160,7 @@ npm run provision:pb
 
 
 {{< callout type="warning" >}}
-With the local setup I might have been getting issues with the CORS: https://github.com/pocketbase/pocketbase/discussions/606 or not having https
+With the local setup I *might have been* getting issues with the CORS: https://github.com/pocketbase/pocketbase/discussions/606 or not having https
 {{< /callout >}}
 
 So first i tried it via MKCert and then i just I went quickly with my known [Cloudflare Tunnels](#cloudflare-workers-auth)
@@ -176,7 +176,7 @@ wrangler pages deploy dist --project-name=fast-payroll-theme --branch=main
 
 Remember to config the url for your CF worker:
 
-![alt text](/blog_img/dev/FE/cf-worker-config-to-pocketbase.png)
+![Cloudflare Workers configuration to PocketBase](/blog_img/dev/FE/cf-worker-config-to-pocketbase.png)
 
 And to add your PB container into the **cloudflare tunnels network**:
 
@@ -189,8 +189,9 @@ And now these will work:
 * https://pocketbase.jalcocertech.com/api/health
 * https://pocketbase.jalcocertech.com/_/
 
-![alt text](/blog_img/dev/FE/ssg-cfworkers-pocketbase.png)
+![SSG and CF Workers + Pocketbase](/blog_img/dev/FE/ssg-cfworkers-pocketbase.png)
 
+This user has been created as per the SSG and CF Workers interaction:
 
 ![alt text](/blog_img/dev/FE/pb-created-user-via-ssg.png)
 
