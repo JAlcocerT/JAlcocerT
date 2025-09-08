@@ -12,7 +12,7 @@ url: 'ai-tools-for-cli'
 * See how to use [GeminiCLI](#gemini)
 * More [MCP via Gemini](#gemini-cli-x-mcp) and [better MCP](#more-mcp-tools)
 * Recap on Codex and Claude Code
-* Bonus: See how to do cool type safe LLM calls via [BAML](#baml)
+* Bonus: See how to do cool **type safe LLM calls** via [BAML](#baml)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/VibeCoding" title="See these CLI Tools with Docker 🐋 ↗" >}}

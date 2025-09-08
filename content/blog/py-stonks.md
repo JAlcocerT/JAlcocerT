@@ -245,6 +245,10 @@ uv run streamlit run app-st.py
 
 And as I was so close...I could not resist to combine the good old **streamlit auth script with the PocketBase** `users` collection:
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="Pocketbase Docker Config Setup 🐋 ↗" >}}
+{{< /cards >}}
+
 ```sh
 #export STREAMLIT_AUTH_ENABLED='true'
 # Set PocketBase URL (optional, defaults to your URL)

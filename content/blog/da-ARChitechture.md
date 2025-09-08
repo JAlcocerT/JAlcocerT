@@ -2,10 +2,17 @@
 title: "Architecture D&A like a Pro"
 date: 2025-04-18T00:20:21+01:00
 draft: false
-tags: ["Career", "D&A", "Analytics","SliDev","PPTs","Medallion"]
+tags: ["Career", "D&A", "Analytics","SliDev","PPTs","Medallion, avro/parquet/delta"]
 description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
 url: 'data-analytics-architecture'
 ---
+
+
+**TL;DR**
+
++++ [Smart vs Invest](#smart-vs-invest)
+
+**Intro**
 
 
 You might encounter this kind of **architectures in your data analytics** journey:
@@ -68,7 +75,7 @@ It acts as a single source of truth for operational data, consolidating informat
 
 2. Data LakeHouses:
 
-{{< callout type="warning" >}}
+{{< callout type="info" >}}
 Always make comprehensible **Designs & Docs** for all the parties involved in the project
 {{< /callout >}}
 
@@ -725,6 +732,53 @@ Sí, exactamente. La capa Oro es donde se definen y materializan los modelos dim
     * Esto permite mayor facilidad a los usuarios finales, para la creación de reportes.
 
 **En resumen, la capa Oro es el lugar donde los datos se transforman en información valiosa y fácil de usar para la toma de decisiones.**
+
+{{< /details >}}
+
+{{< details title="Avro vs Parquet vs Delta Lake | Data Storage for Big data  📌" closed="true" >}}
+
+Apache Avro, Apache Parquet, and Delta Lake are all data storage formats used in big data ecosystems, but they serve different purposes and have different capabilities.
+
+Delta Lake is built on top of Parquet, adding a transaction layer that provides significant advantages.
+
+**Avro vs. Parquet**
+
+Avro and Parquet are file formats, and the key difference lies in their data organization.
+
+* **Avro** is a **row-oriented** format, meaning it stores data record by record. It's excellent for data serialization and is often used for data exchange between different systems, like in streaming pipelines. Avro has strong support for schema evolution, allowing you to add or remove fields without rewriting the entire dataset, which is a major advantage for evolving data pipelines.
+
+* **Parquet** is a **column-oriented** format. Instead of storing data row-by-row, it groups data by column. This is highly efficient for analytical and OLAP (Online Analytical Processing) workloads, as it allows query engines to read only the specific columns needed for a query, drastically reducing I/O operations and improving query performance. Parquet also achieves better compression due to the similarity of data within each column.
+
+**Avro/Parquet vs. Delta Lake**
+
+Delta Lake is not just a file format; it's an **open-source storage layer** that sits on top of Parquet files. It combines the benefits of Parquet's columnar storage with an ACID (Atomicity, Consistency, Isolation, Durability) transaction log.
+
+* **ACID Transactions**: Delta Lake provides ACID compliance, which means you can perform reliable data modifications like `UPDATE`, `DELETE`, and `MERGE` operations on your data lake. These are difficult or impossible to do efficiently with raw Parquet or Avro files.
+* **Time Travel**: Yes, **Delta Lake has time travel capabilities**. Because it maintains a transaction log of all changes, you can query older versions of a table by a specific timestamp or version number. This is invaluable for auditing, reproducing experiments, or recovering from data errors.
+* **Schema Evolution and Enforcement**: While Avro has good schema evolution, Delta Lake offers more advanced features. It can prevent writes that don't match the schema, helping to maintain data quality.
+* **Performance Optimization**: Delta Lake's transaction log contains metadata about the underlying Parquet files, allowing it to perform optimizations like file skipping and z-ordering (co-locating related data in the same set of files), which further boosts query performance.
+
+| Feature | Avro | Parquet | Delta Lake |
+| :--- | :--- | :--- | :--- |
+| **Data Organization** | Row-oriented | Column-oriented | Columnar (via Parquet) |
+| **Primary Use Case** | Streaming, data exchange | Analytical queries (OLAP) | Data lakes, ACID transactions, data warehousing |
+| **ACID Transactions** | No | No | **Yes** |
+| **Time Travel** | No | No | **Yes** |
+| **Schema Evolution** | Good | Limited | Excellent (with enforcement) |
+| **Performance** | Fast writes, slower reads for analytics | Fast reads for analytics, slower writes | Very fast reads with optimizations, reliable writes |
+
+**Storage Location**
+
+You can store files in all three formats on **HDFS (Hadoop Distributed File System)** or other storage systems.
+
+* **Avro and Parquet** are fundamental file formats in the Hadoop ecosystem and are natively supported by HDFS. They are often used as the primary storage format for data lakes.
+
+* **Delta Lake** tables are essentially a collection of Parquet files and a transaction log (JSON files). This structure is designed to be compatible with distributed file systems like **HDFS** and cloud-based object stores such as **Amazon S3, Google Cloud Storage, and Azure Data Lake Storage**. The distributed nature of these storage systems is what allows Delta Lake to scale effectively for large datasets.
+
+{{< /details >}}
+
+{{< details title="Medallion Architecture |  📌" closed="true" >}}
+
 
 {{< /details >}}
 

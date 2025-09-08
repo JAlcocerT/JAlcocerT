@@ -3,7 +3,7 @@ title: "Client Side Rendering can do that"
 date: 2025-09-04T06:20:21+01:00
 draft: false
 tags: ["Dev","CSR","Web","MRR","Static French Amortization Calculator"]
-description: 'Client Side Rendering can do that'
+description: 'CSR can do that'
 url: 'csr-and-js'
 ---
 

@@ -1,11 +1,15 @@
 ---
-title: "Encryption, Captchas and more"
+title: "Encryption, Captchas, OpenIDConnect and more"
 date: 2025-05-20
 draft: false
-tags: ["Outro","Security","PoW","Clave","E-Residency","openssl"]
+tags: ["Outro","Security","PoW","Clave","E-Residency","openssl","OIDC vs OAuth","Bearer JWT"]
 description: 'SHA256 Protocol. The concept and applications: SSH, HTTPs, Bitcoin...'
 url: 'encryption-101'
 ---
+
+**Tl;DR**
+
+The difference between *who you are* and *what you can do*, explained with [OIDC and OAuth](#oidc-vs-oauth)
 
 **Intro**
 
@@ -39,7 +43,7 @@ Cap is a lightweight, modern open-source CAPTCHA alternative designed using SHA-
 
 ## The SHA256 Algorithm
 
-* https://emn178.github.io/online-tools/sha256.html
+* You can generate SHA256 via this static tool: https://emn178.github.io/online-tools/sha256.html
 
 [Lately](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#new-selfh-apps) I discovered a cool way to create unique keys:
 
@@ -152,7 +156,7 @@ By comparing the length of the hash you have to the known lengths of common algo
 
 **Can you convert with online tools or with Ubuntu CLI?**
 
-**Yes, you can definitely convert (hash) strings to their SHA-256 representation using both online tools and the Ubuntu command-line interface (CLI).**
+You can definitely convert (hash) strings to their SHA-256 representation using both online tools and the Ubuntu command-line interface (CLI).
 
 **1. Online Tools (like the one you linked):**
 
@@ -167,13 +171,15 @@ Ubuntu (and most other Linux distributions) comes with command-line utilities th
 
 **How to use `sha256sum`:**
 
-* **To hash a string directly:** You can use the `echo` command to pipe the string to `sha256sum`. Be mindful of the newline character that `echo` adds by default. You might want to use the `-n` option to avoid it if you need to hash the exact string without a trailing newline.
+* **To hash a string directly:** You can use the `echo` command to pipe the string to `sha256sum`. Be mindful of the newline character that `echo` adds by default. 
+
+You might want to use the `-n` option to avoid it if you need to hash the exact string without a trailing newline.
 
 ```bash
 echo -n "YOUR_STRING_HERE" | sha256sum
 ```
 
-    Replace `"YOUR_STRING_HERE"` with the standardized MAC address you want to hash. The output will be the SHA-256 hash followed by a hyphen (`-`).
+Replace `"YOUR_STRING_HERE"` with the standardized MAC address you want to hash. The output will be the SHA-256 hash followed by a hyphen (`-`).
 
 ```bash
 echo -n "0123456789AB" | sha256sum
@@ -188,7 +194,9 @@ sha256sum your_file.txt
 
 This will output the SHA-256 hash of the contents of `your_file.txt` along with the filename.
 
-**Therefore, you have multiple ways to verify the SHA-256 hash of a standardized MAC address, both online and using the Ubuntu command line.** This can be useful for testing or confirming the output of your PySpark function for specific inputs.
+**Therefore, you have multiple ways to verify the SHA-256 hash of a standardized MAC address, both online and using the Ubuntu command line.** 
+
+This can be useful for testing or confirming the output of your PySpark function for specific inputs.
 
 ### SSH x SHA256
 
@@ -310,6 +318,155 @@ They are all valuable for self-hosting, but they serve distinct purposes and ope
     * **Endlessh:** *Proactive/Deceptive* security. It acts as a fake SSH server to endlessly tie up attackers' resources *before* they even interact with your real services. You'd typically run Endlessh on port 22 and your real SSH on a different port.
     * **Synergy:** They can actually work together! Some setups use Fail2Ban to detect IPs that connect to Endlessh (or other services) and then ban those IPs from *all* your services, including your *real* SSH or web server. This adds another layer of defense, ensuring that persistent attackers who hit your tarpit are then blocked from everything else.
 
+### OIDC vs OAUTH
+
+OAuth and OpenID Connect (OIDC) are often used together but serve different purposes. 
+
+**OAuth** is for **authorization**—granting an application permission to access a user's data on another service. **OIDC** is for **authentication**—verifying a user's identity.
+
+* **OAuth (Open Authorization)**: Think of it as a valet key for your car. You give the valet the key (an **access token**) that only allows them to park your car, but they can't access your glove compartment or drive away with it. This is similar to how you might allow an app to access your Google Calendar to schedule an event without ever giving the app your Google password. 
+
+The app is **authorized** to perform a specific action on your behalf, but it doesn't know who you are.
+
+* **OIDC (OpenID Connect)**: This protocol is a layer built on top of OAuth 2.0. Its primary purpose is to verify a user's identity. In addition to the access token from OAuth, OIDC provides an **ID token** (a JSON Web Token or JWT). 
+
+This ID token contains information about the user, like their name and email, which the application can use to confirm the user's identity.
+
+This is what's happening when you see a "Sign in with Google" or "Log in with Facebook" button.
+
+> You're authenticating with a trusted identity provider (like Google or Facebook), which then tells the application who you are.
+
+The relationship between them is:* **OIDC = Authentication (Who the user is) + OAuth (What the user can do)**
+
+#### Which Is Better?
+
+It's not that one is better than the other; they're designed for different jobs.
+
+* Use **OAuth** when you only need to **authorize access to resources** without authenticating the user. For example, a photo printing service may need authorization to access your photos on a cloud storage provider.
+
+* Use **OIDC** when you need to **authenticate a user for a login flow** and may also need to authorize access to their resources. The vast majority of modern login systems, especially those using single sign-on (SSO), use OIDC because it provides a complete solution for both authentication and authorization.
+
+#### Are They Cookie-Based Authentication?
+
+No, OAuth and OIDC are not inherently cookie-based authentication. 
+
+They are **token-based authentication** systems.
+
+* **Token-Based Authentication**: After a user is authenticated or authorized, the server issues a unique token (like an access token or ID token). 
+
+This token is then stored on the client side (e.g., in local storage, session storage, or sometimes a cookie). The client sends this token with every subsequent request to prove its identity or authorization to the server. The server can then validate the token without needing to store any session information. 
+
+This makes them **stateless** and highly scalable.
+
+* **Cookie-Based Authentication**: This is a more traditional method where the server creates a **session** for the user after they log in and stores a **session ID** in a cookie on the user's browser. The browser then automatically sends this cookie with every request. The server uses this session ID to look up the user's session data on the server side.
+
+This method is **stateful**, as the server must maintain a record of all active sessions.
+
+> While you *can* store an OAuth/OIDC token in a cookie, it's not the primary mechanism of these protocols.
+
+The core of OAuth and OIDC is the token itself, which can be passed in different ways (e.g., via a request header), making it more flexible and suitable for modern applications like mobile apps and APIs that don't rely on traditional browser sessions.
+
+#### Bearer vs JWT
+
+A **bearer token** is a cryptic string of characters that grants access to the "bearer" -whoever possesses it.
+
+It's the most common type of credential used to secure protected API endpoints. 
+
+Here's how it relates to protected endpoints:
+
+**How It Works**
+
+1.  **Authentication**: When a user logs in (e.g., with a username and password), the server verifies their credentials.
+2.  **Token Issuance**: After a successful login, the server generates a **unique bearer token** and sends it back to the client. This token is often a **JSON Web Token (JWT)**, which is a self-contained token that includes user data and an expiration time.
+
+
+{{< details title="JWT is a type of Bearer and it works via SHA256! 📌" closed="true" >}}
+
+A **JSON Web Token (JWT)** is a type of bearer token and the SHA-256 is the cryptographic workhorse that provides the security for many JWTs.
+
+**How They're Related 🤝**
+
+The relationship lies in the JWT's **signature**. A JWT has three parts:
+1.  **Header:** Contains metadata about the token, including the signature algorithm being used.
+2.  **Payload:** Contains the claims (user data, expiration time, etc.).
+3.  **Signature:** This is what makes the JWT secure.
+
+The signature is created by taking the encoded header, the encoded payload, and a secret key, then running them through a cryptographic algorithm. **SHA-256 is a common algorithm used for this exact purpose.**
+
+A very common algorithm for signing a JWT is **HS256**. In this name:
+* **HS** stands for **HMAC** (Hash-based Message Authentication Code).
+* **256** refers to **SHA-256**.
+
+When the server receives a JWT, it performs the same calculation using the header, payload, and the secret key it holds.
+
+It then compares the signature it just created with the signature provided in the token. 
+
+If they match, the token is considered valid and has not been tampered with.
+
+Remember: SHA-256 (Secure Hash Algorithm 256-bit) is a **cryptographic hash function**. 
+
+It's a one-way function that takes an input (of any size) and produces a fixed-size, 256-bit (32-byte) output called a **hash value** or **digest**.
+
+Hash functions are designed to be:
+
+* **One-way**: You can't reverse the process to get the original input from the hash.
+* **Deterministic**: The same input will always produce the same hash.
+* **Unique**: A small change to the input will produce a completely different hash.
+
+Because of these properties, SHA-256 is perfect for ensuring the integrity of a JWT's data.
+
+If an attacker modifies the payload of a JWT, the signature validation will fail, and the protected endpoint will reject the request.
+
+{{< /details >}}
+
+
+{{< details title="JWT Bearer and Authentication Working | Example PB vs FastAPI 📌" closed="true" >}}
+
+An authentication flow using a JWT bearer token.
+
+Here's a step-by-step breakdown of what happens **under the hood when you use PocketBase** for this process.
+
+**The Authentication Flow**
+
+1.  **Client Sends Credentials**: The user enters their username (or email) and password on your login page. When they click "submit," your frontend code sends a `POST` request to PocketBase's authentication endpoint (`/api/collections/users/auth-with-password`). This is a standard, un-protected endpoint that's designed to accept credentials.
+
+2.  **Server Validates Credentials**: PocketBase receives the request. It looks up the user in its embedded SQLite database, verifies that the password is correct, and checks for any other security conditions (e.g., if the account is active).
+
+3.  **Server Issues the JWT**: If the credentials are valid, PocketBase does a few things:
+    * It generates a **JSON Web Token (JWT)**. This token contains a header, a payload (with claims like the user's ID, email, and a token expiration time), and a signature.
+    * It packages this JWT and some user information into a JSON response.
+    * It sends this response back to your browser. The JWT is the **bearer token**.
+
+4.  **Client Stores the Token**: Your frontend code receives the response. It extracts the JWT from the JSON payload and stores it somewhere on the client side, typically in **local storage** or a **cookie**. From this point on, the browser "bears" the token.
+
+5.  **Client Accesses Protected Content**: When you try to view a protected page or access a protected endpoint, your frontend automatically includes the stored JWT in the `Authorization` header of the request, formatted as `Authorization: Bearer <token>`.
+
+6.  **Server Validates the Token**: PocketBase receives the new request. It extracts the bearer token from the header, validates its signature (using the secret key it holds), and checks if it's expired. If the token is valid, PocketBase knows who the user is without having to look them up in the database again. It then grants access to the requested content. If the token is invalid, it denies the request with a `401 Unauthorized` error.
+
+This process allows your user to stay logged in and access private content across multiple pages without having to enter their credentials every single time.
+
+{{< /details >}}
+
+
+3.  **Accessing Protected Endpoints**: For every subsequent request to a protected endpoint, the client must include this token in the `Authorization` header of the HTTP request, in the format `Authorization: Bearer <token>`.
+4.  **Authorization**: The server receives the request, extracts the bearer token, and validates it. If the token is valid, the server grants access to the endpoint. If not, it rejects the request, typically with a **401 Unauthorized** status code.
+
+**Bearer Tokens with PocketBase vs. Flask/FastAPI**
+
+The relationship is the same across all three, but the implementation is very different.
+
+* **PocketBase:** PocketBase handles the entire process for you. When a user authenticates, PocketBase automatically generates and returns a JWT. Then, when you define a protected collection with an API rule, it automatically validates the bearer token in the `Authorization` header for you on every request. You never have to write any code to handle token issuance or validation.
+
+* **Flask/FastAPI:** In these frameworks, you must manually implement the entire bearer token flow. You would need to:
+    * Write a login endpoint that generates and returns a JWT after successful authentication (using a library like `PyJWT`).
+    * Add middleware or a dependency to your protected routes that checks for the `Authorization: Bearer <token>` header.
+    * Validate the token's signature and expiration time to ensure it hasn't been tampered with or expired.
+
+{{< callout type="info" >}}
+A bearer token is the standard key for a protected endpoint, and while PocketBase gives you the key automatically, Flask and FastAPI make you build the lock and key system yourself.
+{{< /callout >}}
+
+---
 
 ## Countries and Users
 

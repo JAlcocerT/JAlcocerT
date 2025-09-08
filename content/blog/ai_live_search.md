@@ -376,14 +376,11 @@ There are ofc tools already waiting to be used...
   - ContextualWeb News API  
   - Bing News Search API  
 
-
 From Perplexica to **OpenSearch GPT** [AI Search Engines!] - https://github.com/supermemoryai/opensearch-ai
 
 **OpenSearch GPT**, an open-source, AI-powered search engine that personalizes search results by learning from user interactions. It emphasizes key features like its **Mem Zero** memory system for remembering past interactions, its robust technological framework, and its versatility as a tool for writing assistance and data management. 
 
 OpenSearch GPT aims to enhance productivity and streamline workflows, offering transparency and flexibility as an alternative to proprietary search engines.
-
----
 
 Key Points
 
@@ -392,8 +389,6 @@ Key Points
 - **Technology Framework:** Built using **Versal AI ADK** and **Next.js** for a robust experience.
 - **Versatility:** Functions as a writing assistant and supports data management tasks.
 - **Open Source:** Provides transparency and customization options for users.
-
----
 
 Pros and Cons
 
@@ -425,3 +420,5 @@ In HuggingFace you will find really cool and Open AI Projects to try out:
 
 
 * <https://www.futuretools.io/?pricing-model=open-source>
+
+> But, be prepared to use CC details :)

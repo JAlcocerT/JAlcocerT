@@ -3,7 +3,7 @@ title: "PowerBI"
 date: 2020-12-07T19:20:21+01:00
 draft: false
 tags: ["Business Intelligence","pbiviz","D3js"]
-description: About PBi, Dax and M. How to create custom Dashboards with R/Python.
+description: About PBi, Dax and M. How to create custom Dashboards with R/Python inside Power Bi.
 url: about-powerbi
 ---
 

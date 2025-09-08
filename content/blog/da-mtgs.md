@@ -2,15 +2,23 @@
 title: "Effective Meetings in Analytics"
 date: 2021-12-10T23:20:21+01:00
 draft: false
-tags: ["Outro","Career"]
+tags: ["Outro","Career","D&A"]
 description: 'How to run effective meetings in Analytics.'
 summary: 'During your career in data anlytics you will be working with different teams and you will be in need of meetings to sync up ideas. Here are some techniques to run and be part of effective meetings.'
 url: 'effective-meetings-data-analytics'
 ---
 
+**TL;DR**
+
++++The [what and how](#psychology-in-meetings) approach.
+
+**Intro**
+
 Effective meetings, whether remote or in-person, are critical for teamwork and productivity.
 
-Efficient meetings can get through a lengthy agenda in a short period of time. Even so, truly effective meetings produce a measurable result.
+Efficient meetings can get through a lengthy agenda in a short period of time. 
+
+Even so, truly effective meetings produce a measurable result.
 
 Everyone should leave feeling:
 
@@ -18,7 +26,7 @@ Everyone should leave feeling:
 2. How they need to do it
 3. and...when they need to do it.
 
-If you can't explain why you're holding a meeting in a sentence or two, the meeting is probably unnecessary.
+> If you can't explain why you're holding a meeting in a sentence or two, the meeting is probably unnecessary.
 
 ## As a Meeting Owner
 
@@ -39,25 +47,26 @@ Take your time to plan and prepare accordingly, so that the **team's time invest
     * Dont'miss anyone who is needed in the discussion
     * Dont overbook people with meetings that wont have any impact
 
-**End with clear Actions, Owners and Timelines:**
-
-A Table with the following structure can be of help to keep everyone informed:
+**End with clear Actions, Owners and Timelines:** A Table with such structure can help to keep everyone informed after meetings
 
 | Goal | Task | Blockers | Timeline |
 |------|------|----------|----------|
 |  A    |  AA | AAA      |    AAAA  | 
 
-> Remember about the RACI!
+> Remember about the RACI - Responsible/Accountable/Consulted/Informed
+
+> > And to provide proper MoM (Minutes of Meeting)
 
 ## As a participant
 
-* Make sure to **understand the context** of the meeting.
-* You should be able to visualize your possible contribution.
+Make sure to **understand the context** of the meeting.
 
-* Take notes for your action points. 
-* Get to know who is acting as meeting administrator (this participant )
+You should be able to visualize your possible contribution and be ready to share with the others your view.
+
+* Take notes for your action points (APs).
+* Get to know who is acting as meeting administrator (this participant)
     - Before exiting the meeting, make sure you understand what should be priotizited.
-    - As well as what are the other participants next steps.
+    - As well as what are the other participants next steps, *specially if you have dependencies with them*.
 
 ---
 
@@ -65,15 +74,16 @@ A Table with the following structure can be of help to keep everyone informed:
 
 ### Questions in the Meetings
 
-* Clarifying ambiguity: make sure that groups positions are clear
+* Clarifying ambiguity: *make sure that groups positions are clear*
     * What you mean by Y is Z?
 
-* Seeking information: instead of putting a word to their mouth
+* Seeking information: *instead of putting a word to their mouth*
     * ~~Can this be done by Monday?~~ -> ~~When can this be finished?~~ -> What are the blockers we have to deliver this by Monday?
     * Avoid Yes/No Questions. 
+    * Use **Open-Ended questions**, as they are much better to gather information
 
 {{< callout type="info" >}}
-**Open-Ended questions** are much better to gather information: What and How.
+Practice, bc normally, they start by: **What and How**.
 {{< /callout >}}
 
 ### Psychology in Meetings
@@ -81,6 +91,7 @@ A Table with the following structure can be of help to keep everyone informed:
 Be aware of *the analysis paralysis*, especially when the options increase.
 
 Everyone must have clear:
+
 - **What** are we trying to resolve?
 - **How** can it be prioritized?
-- Understand the **trade-offs**    
+- Understand the **trade-offs** and decide accordingly as per the WHY of your data product.

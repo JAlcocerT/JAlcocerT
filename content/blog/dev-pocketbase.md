@@ -104,7 +104,7 @@ A developer used to SQL (and ORMs) relies heavily on a few core concepts that Po
 
 * **Explicit SQL:** SQL developers write explicit SQL queries with `JOIN` statements to combine data from multiple tables. While PocketBase's underlying database is SQLite, its primary API is a RESTful one, not a raw SQL interface. Complex joins must be performed either through the "view collection" feature (which uses SQL under the hood but is a read-only workaround) or by making multiple API requests and joining the data on the client side.
 
-* **Foreign Key Constraints:** In SQL, you can enforce strict referential integrity using foreign key constraints. This prevents you from, for example, deleting a user while their blog posts still exist. PocketBase's relationships are less rigid by default, which can feel unsettling to a traditional database developer. It doesn't enforce these constraints at the database level, but rather at the application level through its API rules and SDKs.
+* **Foreign Key Constraints:** In SQL, you can enforce strict referential integrity using foreign key constraints. This prevents you from, for example, deleting a user while their blog posts still exist. PocketBase's relationships are less rigid by default, which can feel unsettling to a traditional database developer. It doesn't enforce these constraints at the database level, but rather at the application level through its [API rules](#what-are-api-rules) and SDKs.
 
 * **Database-Level Control:** A SQL developer has full control over the database schema, indexes, and queries. PocketBase's opinionated approach provides a simplified API, but it comes at the cost of that granular control. 
 
@@ -790,25 +790,22 @@ This is the most basic type of request, used to retrieve data from a server, muc
 
 In summary, a simple `curl` command is a basic request to fetch information, while the one with flags is a targeted, detailed instruction to the server, specifying not just what you want, but *how* you want to interact with it.
 
-
 **What are Bearer Tokens?**
-
-Yes, those tokens you're using are indeed **Bearer tokens**. 
 
 A Bearer token is a standard type of access token used for authentication and authorization in web APIs.
 
-The name "bearer" simply means **"the bearer of this token is authorized."** It's like a concert ticket 🎫—the person holding the ticket is the one who gets to enter, regardless of who originally bought it.
+The name "bearer" simply means **"the bearer of this token is authorized."** 
+
+It's like a concert ticket 🎫 —the person holding the ticket is the one who gets to enter, regardless of who originally bought it.
 
 Here's how they work:
 
 1.  You first send a request with your credentials (like email and password) to an authentication endpoint.
 2.  If the credentials are valid, the server generates and sends you a Bearer token.
-3.  For all subsequent requests to protected endpoints, you include this token in the `Authorization` header of your HTTP request. The format is always `Authorization: Bearer <token>`.
+3.  For all subsequent requests to [protected endpoints](#whats-a-protected-endpoint), you include this token in the `Authorization` header of your HTTP request. The format is always `Authorization: Bearer <token>`.
 4.  The server then validates the token. If it's valid, it grants you access to the requested resource without needing to know your username and password again.
 
-That's an excellent way to think about it.
-
-Yes, a bearer token is a temporary replacement for the user's credentials. 
+> A bearer token is a temporary replacement for the user's credentials. 
 
 It's a token that represents the authenticated identity, and it allows you to make subsequent API calls without repeatedly sending the username and password.
 
@@ -827,10 +824,11 @@ You use the key once to get into the building, but you then use the access card 
 
 >  Bearer tokens represents the authenticated identity, and it allows you to make subsequent API calls without repeatedly sending the username and password.
 
-They are popular because they are **stateless** (the server doesn't need to store session information) and can be easily managed by the client.
+> > They are popular because they are **stateless** (the server doesn't need to store session information) and can be easily managed by the client.
 
+{{< callout type="warning" >}}
 However, they should always be sent over a secure, encrypted connection (HTTPS) because anyone who intercepts the token can use it.
-
+{{< /callout >}}
 
 4. You can also **create new PB collections via curl** (with proper auth thanks to those bearers):
 
@@ -1028,20 +1026,17 @@ This makes it suitable for things like user preferences, authentication tokens, 
 
 While you can use Redux and local storage together (e.g., to save your Redux state to local storage to persist it), they serve different purposes.
 
-Redux manages the active state of your application, while local storage provides a way to save data on the user's device for long-term use.
-
+**Redux manages the active state** of your application, while local storage provides a way to save data on the user's device for long-term use.
 
 ### Local vs Session Storage
 
 If you go to the inspect section of a website and you go the `application` part of it...
 
-Under storage, you will see 2 options: locan and session storage:
-
+Under storage, you will see 2 options: *local and session storage*
 
 ![Local vs Session Storage](/blog_img/dev/PB/local-session-storage.png)
 
 > These 2 are **browser storage technologies!**
-
 
 {{< details title="More about local vs session... 📌" closed="true" >}}
 
@@ -1101,7 +1096,6 @@ Think of it as a NoSQL database that runs directly in the browser.
 However, the native IndexedDB API is notoriously complex, verbose, and difficult to work with.
 
 It's asynchronous and uses a callback-based system, which can lead to a lot of boilerplate code, even for simple operations.
-
 
 **What it is**: Browser's built-in NoSQL database with transactions
 **Storage Limit**: ~50MB+ (varies by browser)
@@ -1170,3 +1164,129 @@ For example, you could fetch data from a server and save it to a Dexie database 
 * **Dexie vs. Local Storage:** Dexie is a much more powerful and scalable solution than local storage. Use local storage for simple, small pieces of data (like a user's theme preference). 
 
 Use Dexie when you need to store large amounts of structured data, perform complex queries, or build an application that works offline.
+
+
+## FAQ
+
+### What are API Rules?
+
+PocketBase API rules are a built-in security and access control system that determines **who can do what** with your data.
+
+They are a core feature of the platform and are directly related to the concept of **authenticated endpoints**. 🔐
+
+Think of them as a set of permissions that you configure for each collection (table) in your database.
+
+> Instead of writing complex backend code to check user roles or ownership, you define these rules directly in the admin UI. 
+
+**How API Rules Work**
+
+API rules are defined for each of the standard CRUD (Create, Read, Update, Delete) operations on a collection. 
+
+You can set a rule to be one of three types:
+
+1.  **Public (No Rule):** Anyone can access the data without being logged in. This is used for things like a list of blog posts or product information on a public website.
+2.  **Auth (Authentication):** Only authenticated users can access the data. This is a basic layer of protection for things like a user's profile information.
+3.  **Custom Rule:** This is the most powerful option. You write a **filter expression** that determines access based on a specific condition. This is how you implement fine-grained permissions.
+
+**Examples of Custom Rules**
+
+Custom rules are what make PocketBase's security so flexible and powerful. 
+
+They use a simple, SQL-like syntax.
+
+* **Example 1: Only the owner can view their own data.**
+    * **Rule:** `@request.auth.id = user.id`
+    * **Explanation:** This rule checks if the ID of the authenticated user (`@request.auth.id`) matches the `user` field of the record being accessed. This ensures a user can only read or update their own data.
+
+* **Example 2: Admins can view all data.**
+    * **Rule:** `@request.auth.id != "" && @request.auth.isAdmin = true`
+    * **Explanation:** This rule allows an authenticated user to access a collection if their `isAdmin` field is set to true.
+
+**Relation to Authenticated Endpoints**
+
+The connection is direct and fundamental: **PocketBase's API rules are the mechanism that defines whether an [endpoint is protected](#whats-a-protected-endpoint) and how it's protected.**
+
+* When you set a rule on a collection, PocketBase automatically enforces that rule on the corresponding API endpoints.
+* An **unprotected endpoint** is simply a collection with a public API rule.
+* A **protected endpoint** is a collection with an authentication or custom rule. Any request to this endpoint will be denied unless it includes a valid authentication token that satisfies the rule's conditions.
+
+In essence, PocketBase's API rules provide a declarative and visual way to manage backend security, **eliminating the need to write and test authentication and authorization code manually**.
+
+
+### Is the PocketBase Users Collection Public?
+
+The built-in `users` collection in PocketBase is **not public by default**. 
+
+The default API rules for auth collections are "locked," meaning only a superuser (admin) can perform actions on them. 
+
+This is a crucial security measure to prevent unauthorized access to user data.  
+
+You can, however, modify these rules to allow public access for actions like creating a new user account (sign-up).
+
+### PB and Custom OIDC/OAuth and Permissions
+
+You can absolutely build a **custom OIDC/OAuth-based system** with PocketBase, and use API rules to control access based on user permissions.
+
+PocketBase has built-in support for **OAuth2** authentication with providers like Google, GitHub, and many others. 
+
+It also supports **OIDC** (OpenID Connect).
+
+This means you can authenticate users through these external services and then use their data to grant permissions.
+
+To implement a scenario where only users with a paid Stripe subscription can access a service, you would:
+
+1.  **Create a custom field** in your `users` collection, for example, a boolean field called `has_paid_subscription`.
+2.  **Define a custom API rule** on the collection that you want to protect. This rule would check if the authenticated user has a paid subscription. For example, the rule could be: `@request.auth.has_paid_subscription = true`.
+3.  **Update the user's data.** When a user's subscription status changes in Stripe, you would need a mechanism to update this `has_paid_subscription` field in PocketBase.
+
+#### Syncing Stripe Data with PocketBase
+
+A **webhook** is the correct and most reliable way to sync data from Stripe to PocketBase.
+
+Stripe webhooks allow Stripe to send real-time event notifications to an endpoint you define. 
+
+When an event happens (e.g., a `customer.subscription.updated` event), Stripe will send a `POST` request to your PocketBase application.
+
+To handle this, you would:
+
+1.  **Expose a custom API endpoint** in PocketBase (using a Go or JS migration). This endpoint will be the URL you provide to Stripe.
+2.  **Verify the webhook signature.** This is a critical security step to ensure the request is actually coming from Stripe and has not been tampered with.
+3.  **Process the event.** Inside your endpoint's code, you would parse the Stripe event data and use the PocketBase SDK to update the corresponding user's record in your `users` collection (e.g., setting `has_paid_subscription` to `true`).
+
+> By combining PocketBase's powerful API rules with a webhook, you can create a robust and scalable system for managing paid subscriptions and restricting access to your services.
+
+
+### Whats a Protected Endpoint?
+
+A **protected endpoint** is an API endpoint that requires authentication and/or authorization before a client can access it. 
+
+It's a security measure to prevent unauthorized access to sensitive data or functionality. 
+
+Essentially, it's a digital bouncer that checks a user's credentials (like a token or API key) before letting them in.
+
+Without the right credentials, a request is denied.
+
+#### Protected Endpoints with PocketBase 🔐
+
+PocketBase makes creating protected endpoints incredibly simple through its **API rules**. 
+
+This is a core part of its "batteries-included" design. 
+
+* **How it works**: You define rules for each database collection directly in the admin UI. These rules determine who can perform specific actions (like view, create, update, or delete) on a collection's data. You don't write a single line of backend code for this.
+* **Relation**: The **API rules** are what turn a standard endpoint into a protected one. You can set rules like:
+    * **"Auth"**: Only authenticated users can access this endpoint.
+    * **"Custom Rule"**: Only authenticated users who meet a specific condition (e.g., their user ID matches the record's owner ID) can access it.
+
+This declarative approach is a key reason PocketBase is so fast for development, as it eliminates the need to manually build authentication logic into your application code.
+
+#### Protected Endpoints with Flask/FastAPI 🛠️
+
+In contrast, with general-purpose frameworks like Flask and FastAPI, a protected endpoint is something you **must build yourself**. 
+
+The frameworks provide the tools, but you are responsible for the implementation. 
+
+* **How it works**: You define protected endpoints by adding an **authentication decorator** or **dependency** to your route functions. This is a function that runs before the main route logic to check for a valid token or credentials.
+
+* **Flask**: You would use a decorator, often from a third-party library like `Flask-Login` or `Flask-JWT-Extended`, to check if a user is logged in before allowing them to access a route. For example, `@login_required` would be placed above the route function.
+
+* **FastAPI**: FastAPI is particularly well-suited for this and provides built-in security features. You use **`Depends()`** to inject an authentication dependency into your route. This dependency automatically checks for a token in the request headers, verifies it, and returns the user's information if valid. This process is fully customizable and very explicit in the code.

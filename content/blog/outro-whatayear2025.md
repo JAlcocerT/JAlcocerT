@@ -15,19 +15,25 @@ This year is been like a lot of [do](https://nav.al/do)
 ![Me during Y2025](/img/kitten-cat.gif#center)
 
 {{< callout type="info" >}}
-After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/), there is also the **financial aspects of travelling**
+After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/), there are also the **financial aspects of travelling**
 {{< /callout >}}
 
 https://echarts.apache.org/en/index.html
 
-https://github.com/penpot/penpot/blob/develop/docker/images/docker-compose.yaml
-https://snapcraft.io/penpot-desktop
+* https://github.com/penpot/penpot/blob/develop/docker/images/docker-compose.yaml
+* https://snapcraft.io/penpot-desktop
+
+```sh
+sudo snap install penpot-desktop
+```
 
 https://astro.build/themes/details/photography-portfolio-template/
 
-https://kindlemodding.org/
 
-https://github.com/OpenInterpreter/open-interpreter
+
+
+
+* https://github.com/OpenInterpreter/open-interpreter
 
 > A natural language interface for computers 
 
@@ -41,6 +47,12 @@ https://github.com/OpenInterpreter/open-interpreter
 2. Leveraging on AI ✅ *Using Windsurf and Cursor*
 3. Doing less in total and more of what has a real impact
 
+Reading: *excuse alert, this is beeen a year mor of creating than consuming*
+
+And that makes...xyz/12 books.
+
+But, I got to know this is possible: https://kindlemodding.org/
+
 {{< /details >}}
 
 
@@ -49,11 +61,110 @@ https://github.com/OpenInterpreter/open-interpreter
 
 ## Better Tech Stack
 
-1. uv package manager and Makefiles
+Because Im still in D&A and trying to blend with AI powered development for my personal projects.
 
-2. Pocketbase for BaaS
 
-3. Understanding that with CSR I can keep WebApps simple, yet providing interactivity via API
+1. uv package manager ❤️ Makefiles >>> Readme's & pip! 
+
+2. Pocketbase for BaaS, and a much better understanding of authentication/authorization.
+
+{{< details title="Authentication Flows Working | Example PB vs FastAPI 📌" closed="true" >}}
+
+The key difference between PocketBase and a framework like FastAPI is the level of abstraction and the amount of manual coding required. 
+
+PocketBase is a backend-as-a-service that handles the entire process for you, whereas FastAPI requires you to code each step.
+
+Here is the combined explanation, comparing the authentication flow for both platforms, assuming your frontend is built with Astro.
+
+1. Client Sends Credentials
+
+The user enters their credentials on your login page. The Astro frontend sends a request to your backend.
+
+  * **PocketBase**: The Astro frontend, using the PocketBase JavaScript SDK, makes a single, simple API call. The SDK abstracts the underlying `fetch` request, handling the correct endpoint and request body.
+    ```javascript
+    // Astro component with JS
+    await pb.collection('users').authWithPassword(email, password);
+    ```
+  * **FastAPI**: Your Astro frontend must manually make a `fetch` request to your custom login endpoint. You are responsible for constructing the URL, body, and headers.
+    ```javascript
+    // Astro component with JS
+    await fetch('http://127.0.0.1:8000/token', {
+      method: 'POST',
+      body: `username=${username}&password=${password}`
+    });
+    ```
+
+2. Server Validates Credentials
+
+The backend receives the request and verifies the credentials.
+
+  * **PocketBase**: This step is entirely handled by PocketBase's core logic. The server automatically hashes the provided password and compares it to the hash stored in the `users` collection.
+  * **FastAPI**: You must write the code to handle this logic. Using libraries like `passlib` for password hashing and an ORM like `SQLAlchemy` to query your SQLite database, your FastAPI endpoint would:
+      * Query the database for the user by username.
+      * Retrieve the stored hashed password.
+      * Compare the user-provided password with the stored hash.
+
+
+3. Server Issues the JWT
+
+If the credentials are valid, the server creates and sends a **JWT bearer token** to the client.
+
+  * **PocketBase**: PocketBase automatically generates a **JWT bearer token** with the user's information and a default expiration time. It returns this token in the API response without any manual coding.
+  * **FastAPI**: You must manually generate the JWT. Using a library like `python-jose`, your endpoint would:
+      * Create a payload with the user's ID and an expiration time.
+      * Sign the payload with a secret key using an algorithm like **HS256**.
+      * Return the generated token in the JSON response.
+
+4. Client Stores and Uses the Token
+
+The client-side code receives the token and uses it for future requests to protected endpoints.
+
+  * **PocketBase**: The PocketBase SDK automatically stores the received token for you in local storage. For all subsequent requests, the SDK automatically includes the token in the `Authorization` header.
+  * **FastAPI**: Your frontend code must manually parse the JSON response, save the token to local storage, and then retrieve it for every `fetch` request to a protected endpoint, manually adding it to the `Authorization` header.
+
+5. Server Validates the Token and Authorizes Access
+
+The backend validates the token and decides whether to grant access to the protected content.
+
+  * **PocketBase**: This is handled automatically. When a request with a bearer token hits a protected collection endpoint, PocketBase automatically validates the token's signature, checks its expiration, and authorizes access based on the **API rules** you've set up in the admin dashboard.
+  * **FastAPI**: You must write a **dependency** function that extracts the token from the header, validates it, and handles errors. You then add this dependency to every protected route.
+
+In summary, PocketBase provides a high-level SDK that abstracts the entire process, making it a fast and convenient backend solution.
+
+FastAPI gives you complete control and flexibility but requires you to build the authentication system yourself using third-party libraries and custom code.
+
+{{< /details >}}
+
+> Its all about encryption and SHA256 under the hood!
+
+
+{{< details title="And things can stay static | If you know about Cloudflare Workers 📌" closed="true" >}}
+
+You can use Cloudflare Workers to act as a **reverse proxy** or a **smart router** that forwards requests to your PocketBase home server.
+
+This is a common and highly effective pattern for self-hosting applications.
+
+**The Role of Cloudflare Workers**
+
+A Cloudflare Worker is a serverless function that runs on Cloudflare's global network, very close to your users. It can intercept incoming traffic and perform logic on it before forwarding the request to your actual server.
+
+When a user tries to access your app's domain, the request goes to the Cloudflare network first, not directly to your home server.
+
+**The Authentication Flow with Workers**
+
+1.  **Client Sends Credentials**: Your Astro frontend sends a request to your custom domain (e.g., `api.yourdomain.com`). This request hits the Cloudflare network.
+
+2.  **Worker Intercepts Request**: Your Cloudflare Worker intercepts the request. Its code's primary job is to act as a **proxy**. It takes the incoming request and forwards it to your PocketBase server running on your home network. It adds the necessary headers and makes sure the connection is secure.
+
+3.  **PocketBase Handles Authentication**: The request reaches your home server. PocketBase handles all the authentication logic as described previously: it validates the credentials, generates the JWT, and sends it back to the Worker.
+
+4.  **Worker Forwards Response**: The Worker receives the response from your PocketBase server and sends it back to the client.
+
+By using Cloudflare Workers and a service like **Cloudflare Tunnel**, you can expose your local PocketBase server to the internet without opening any ports on your home router. Cloudflare Tunnel creates a secure outbound connection from your home server to the Cloudflare network, making your server accessible without exposing its IP address or creating security risks. This is the **best practice** for self-hosting applications.
+
+{{< /details >}}
+
+3. Understanding that [with CSR we can](https://jalcocert.github.io/JAlcocerT/csr-and-js/) keep WebApps simple, yet providing interactivity via API where needed
 
 4. I even got time to clean the IoT/MQTT with micro-controllers :)
 
@@ -93,7 +204,9 @@ DeFi and protocols like UniSwap (v4) give you a lot to think about:
 
 7. Im still in [D&A](#da-tech-stack) and have take time to sharpen my big data knowledge.
 
+8. Better git *patterns and branching strategies*. Bc the current (and only) reality is main.
 
+9. CLI Agents ftw. Codex CLI was huge. But I also tried claude and geminiCLI. Together with BAML bringing type safe LLM calls.
 
 
 
@@ -104,7 +217,7 @@ DeFi and protocols like UniSwap (v4) give you a lot to think about:
 
 Contact forms (QR), waiting lists (like the one of astro-nomy theme) and business cards..
 
-Some people have been contacting me via EE registry https://ariregister.rik.ee/eng/company/
+Some people have been contacting me via EE registry `https://ariregister.rik.ee/eng/company/`
 
 > Was wondering how were some EE business owner able to get my email?
 
@@ -112,19 +225,26 @@ Some people have been contacting me via EE registry https://ariregister.rik.ee/e
 
 One of the skills I enjoy learning more is about photography.
 
-One of the best decisions I ever had was to have a [Photo Blog](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/).
+And one of the of the best decisions I ever had, was to have a [Photo Blog](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/).
 
-> Now you can also tell your story
+> Now, you can also tell your story
 
 Check how, *if you are passionate about Photography*
+
+What is this all about?
 
 Web templates (SSG'ed) connected to CMS's.
 
 Because Selfhosting Static Generated Sites, is not a secret anymore:
 
-* https://github.com/ricsanfre/public-websites-docker
+* 
 
-> MIT |  Selfhosting personal static websites using private web analytics and comments platforms 
+> MIT | Selfhosting personal static websites with Traefik, private web analytics (matomo) and Remark42 for comments.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/ricsanfre/public-websites-docker" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 #### Leads and Offers
 
