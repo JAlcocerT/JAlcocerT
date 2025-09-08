@@ -544,6 +544,9 @@ Amazing features as covered [here](https://fossengineer.com/open-source-invoice-
 
 3. Invoicerr: https://github.com/Impre-visible/invoicerr
 
+> agpl 3.0 | Invoicerr is a freelance-focused invoicing app that lets you create quotes, generate invoices, track payments, and collect secure signatures.
+
+
 With an amazing UI:
 
 ![Invoicerr SignUp UI Page](/blog_img/biz/invoicerr/invoicerr-signup.png)

@@ -168,7 +168,6 @@ These tools span across data flow automation, big data management, Kubernetes wo
 
 ---
 
-
 * Information to insight
 * Stakeholder management
 * Managing expectations

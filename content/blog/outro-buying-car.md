@@ -335,7 +335,7 @@ But saved into some private sheet gives nothing!
 https://www.youtube.com/watch?v=UINEmTO0LCY
  -->
 
-Thats why I put together this *how to* video for changing the **Civic 6 spark plugs**:
+Thats why I put together this *how to* video for changing the **Civic 6 spark plugs**: *that happeneed with 172000km and 28Nm as per its manual*
 
 {{< youtube "UINEmTO0LCY" >}}
 

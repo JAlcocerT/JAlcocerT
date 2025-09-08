@@ -103,6 +103,43 @@ The database then performs the transformations, and only the final, transformed 
 
 > The results are then sent back to the user's browser for visualization. This is how Power BI can provide rapid, interactive analysis on large datasets without needing to re-query the source database every time.
 
+### DAX vs Calculated Col vs PowerQuery
+
+DAX, Calculated Columns, and Power Query/M are all essential tools in Power BI for data modeling and analysis, but they serve different purposes and operate at different stages of the data pipeline.
+
+The Stages of Data Transformation
+
+Think of the data pipeline in Power BI as having two main stages:
+
+1.  **Data Loading and Transformation** (ETL)
+2.  **Data Modeling and Analysis**
+
+**Power Query (M Language)** operates in the **first stage**. It's the primary tool for extracting data from various sources, cleaning it, and transforming it before it's loaded into the Power BI data model. 
+
+**DAX (Data Analysis Expressions)** and **Calculated Columns** operate in the **second stage**. Once the data is loaded, DAX is used to perform calculations and create new measures and columns within the data model.
+
+Power Query vs. DAX
+
+* **Power Query (M Language):** This is a powerful, visual tool with a backend language called **M**. It's used for **data manipulation at rest**. Transformations performed here are applied when the data is refreshed. This includes tasks like merging tables, pivoting, unpivoting, filtering rows, and changing data types. The results are physical changes to the data model. If you use Power Query to create a new column, the new column and its values are physically stored in your data model, taking up space. It is a very **ETL-focused language**.
+
+* **DAX (Data Analysis Expressions):** This is a formula language used for **in-memory calculations and analysis**. It's similar to Excel formulas but with more power for relational data. DAX is used to create **measures** and **calculated columns** that compute values based on the data in your model. DAX calculations are performed on the data model that is already loaded and ready for analysis. It is an **analytical language**.
+
+Calculated Columns and Measures
+
+Both **Calculated Columns** and **Measures** are created using DAX, but they are used in different ways:
+
+* **Calculated Columns:** A calculated column is a new column added to a table in the data model. Its value is computed for **every single row** in that table and is physically stored in memory. Since a calculated column is pre-calculated, it takes up storage space and is best used for simple, static values that don't need to be aggregated (e.g., `Full Name = [First Name] & " " & [Last Name]`).
+
+* **Measures:** A measure is a dynamic calculation. Its value is **not pre-calculated or stored in the data model**. Instead, it's computed **at query time** based on the filter context of the report. This makes measures extremely powerful and efficient for aggregations (e.g., `Total Sales = SUM(Sales[SalesAmount])`). Measures do not take up storage space in the data model and are the preferred way to perform analytical calculations.
+
+Summary of Relations
+
+| Tool | Language | Purpose | Stage in Pipeline | Best For |
+| :--- | :--- | :--- | :--- | :--- |
+| **Power Query** | M | **Data Transformation** | ETL (Before Loading) | Cleaning, shaping, and merging data. |
+| **Calculated Column** | DAX | **Row-by-Row Calculation** | Modeling (After Loading) | Simple values, static data, storing a single value for each row. |
+| **Measure** | DAX | **Dynamic Aggregation** | Analysis (At Query Time) | Aggregations, KPIs, and complex calculations. |
+
 ### What to use?
 
 The general principle is to perform transformations as far "upstream" as possible, meaning as close to the data source as you can. 

@@ -8,6 +8,12 @@ url: 'selfhosting-pm-tools-docker'
 ---
 
 
+**Tl;DR**
+
+We want it all "Good, Fast, Cheap". This is the project management trilemma.
+
+Fortunately, there are project management tools to help you!
+
 **Intro**: As a PM in any project, you will need to:
 
 1. Take good [notes](#note-taking-apps)
@@ -15,6 +21,7 @@ url: 'selfhosting-pm-tools-docker'
 3. Be aware of the [PRD/BRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/)...
 4. How much [time](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) and [focus](https://jalcocert.github.io/JAlcocerT/tools-to-improve-focus/) matter
 5. Be good with your [Architect](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/) and [BA](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/)
+
 
 ## Note Taking Apps
 

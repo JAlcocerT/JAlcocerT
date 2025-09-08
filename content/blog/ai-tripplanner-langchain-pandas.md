@@ -2,10 +2,10 @@
 title: "Using LangchAIn/LLamaIndex with Pandas - Enhancing Trip Planner"
 date: 2024-11-19
 draft: false
-cover:
-    image: "https://socialify.git.ci/JAlcocerT/Py_Trip_Planner/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-    alt: "Trip Planner with AI" # alt text
-    caption: "Trip Planner with AI" # display caption under cover
+# cover:
+#     image: "https://socialify.git.ci/JAlcocerT/Py_Trip_Planner/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
+#     alt: "Trip Planner with AI" # alt text
+#     caption: "Trip Planner with AI" # display caption under cover
 tags: ["Gen-AI","Python","Dev"]
 description: 'Use LangChain to chat with a Pandas DF. Compared with LlamaIndex Pandas Query Engine.'
 url: 'using-langchain-with-pandas-df'

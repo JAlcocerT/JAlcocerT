@@ -5,6 +5,7 @@ draft: false
 description: A Blueprint for webapp authentication. Streamlit, Flask, FastAPI, PB.
 url: 'stonks'
 tags: ["HomeLab","Py_Stocks","yfinance","LogTo JS SDK","ChartJS","Animations"]
+math: true
 ---
 
 
@@ -435,12 +436,14 @@ Here are some of the most common ones:
 
 #### 1. Sharpe Ratio
 
-The Sharpe Ratio is one of the most widely used metrics for calculating risk-adjusted return. It helps you understand the return of an investment compared to its risk.
+The Sharpe Ratio is one of the most widely used metrics for calculating **risk-adjusted return**. It helps you understand the return of an investment compared to its risk.
 
 * **What it tells you:** It measures the excess return an investment earns for each unit of total risk (volatility).
 * **Formula:**
+
     $$Sharpe\ Ratio = \frac{R_p - R_f}{\sigma_p}$$
-    Where:
+
+Where:
     * $R_p$ = Return of the portfolio or asset.
     * $R_f$ = Risk-free rate of return (e.g., the return on a U.S. Treasury bond).
     * $\sigma_p$ = Standard deviation of the portfolio's excess return. Standard deviation is a measure of volatility.
@@ -454,16 +457,19 @@ Most investors, however, are only concerned with downside volatility (losing mon
 
 * **What it tells you:** It measures the excess return an investment earns for each unit of *downside risk*.
 * **Formula:**
-    $$Sortino\ Ratio = \frac{R_p - T}{\sigma_d}$$
-    Where:
-    * $R_p$ = Return of the portfolio or asset.
-    * $T$ = Target or required rate of return (often the risk-free rate).
-    * $\sigma_d$ = Downside deviation. This is a measure of volatility that only considers returns below the target rate.
+
+$$Sortino\ Ratio = \frac{R_p - T}{\sigma_d}$$
+
+Where:
+* $R_p$ = Return of the portfolio or asset.
+* $T$ = Target or required rate of return (often the risk-free rate).
+* $\sigma_d$ = Downside deviation. This is a measure of volatility that only considers returns below the target rate.
+
 * **Interpretation:** A higher Sortino Ratio is better. It is often a more useful metric for strategies that might have high positive volatility, as it focuses specifically on the risk of losses.
 
 #### 3. Beta ($β$)
 
-Beta is a measure of an investment's volatility in relation to the overall market (usually represented by an index like the S&P 500).
+Beta is a measure of an investment's **volatility in relation to the overall market** (usually represented by an index like the S&P 500).
 
 * **What it tells you:** It quantifies the systematic risk of a stock.
     * A Beta of **1.0** means the stock's price moves in lockstep with the market.
@@ -477,11 +483,13 @@ The Calmar Ratio is very similar to the Sharpe and Sortino Ratios but uses Maxim
 
 * **What it tells you:** It measures the return of an investment in relation to its maximum historical loss.
 * **Formula:**
-    $$Calmar\ Ratio = \frac{R_p - R_f}{Maximum\ Drawdown}$$
-    Where:
-    * $R_p$ = Compounded Annual Growth Rate (CAGR) of the portfolio's return.
-    * $R_f$ = Risk-free rate.
-    * $Maximum\ Drawdown$ = The value of the MDD (as a positive number).
+
+$$Calmar\ Ratio = \frac{R_p - R_f}{Maximum\ Drawdown}$$
+
+ Where:
+* $R_p$ = Compounded Annual Growth Rate (CAGR) of the portfolio's return.
+* $R_f$ = Risk-free rate.
+* $Maximum\ Drawdown$ = The value of the MDD (as a positive number).
 * **Interpretation:** A higher Calmar Ratio is better. It provides a straightforward way to compare the long-term returns of a strategy against the largest single loss an investor would have endured.
 
 These metrics, along with others like the **Ulcer Index** and **Value at Risk (VaR)**, provide a comprehensive toolkit for investors to assess risk from multiple perspectives. 

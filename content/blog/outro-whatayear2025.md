@@ -18,14 +18,9 @@ This year is been like a lot of [do](https://nav.al/do)
 After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/), there are also the **financial aspects of travelling**
 {{< /callout >}}
 
-https://echarts.apache.org/en/index.html
+* https://echarts.apache.org/en/index.html
 
-* https://github.com/penpot/penpot/blob/develop/docker/images/docker-compose.yaml
-* https://snapcraft.io/penpot-desktop
 
-```sh
-sudo snap install penpot-desktop
-```
 
 https://astro.build/themes/details/photography-portfolio-template/
 
@@ -135,8 +130,7 @@ FastAPI gives you complete control and flexibility but requires you to build the
 
 {{< /details >}}
 
-> Its all about encryption and SHA256 under the hood!
-
+> Its all about [encryption and SHA256](https://jalcocert.github.io/JAlcocerT/encryption-101/#bearer-vs-jwt) under the hood!
 
 {{< details title="And things can stay static | If you know about Cloudflare Workers 📌" closed="true" >}}
 
@@ -146,7 +140,9 @@ This is a common and highly effective pattern for self-hosting applications.
 
 **The Role of Cloudflare Workers**
 
-A Cloudflare Worker is a serverless function that runs on Cloudflare's global network, very close to your users. It can intercept incoming traffic and perform logic on it before forwarding the request to your actual server.
+A Cloudflare Worker is a serverless function that runs on Cloudflare's global network, very close to your users.
+
+It can intercept incoming traffic and perform logic on it before forwarding the request to your actual server.
 
 When a user tries to access your app's domain, the request goes to the Cloudflare network first, not directly to your home server.
 
@@ -160,15 +156,68 @@ When a user tries to access your app's domain, the request goes to the Cloudflar
 
 4.  **Worker Forwards Response**: The Worker receives the response from your PocketBase server and sends it back to the client.
 
-By using Cloudflare Workers and a service like **Cloudflare Tunnel**, you can expose your local PocketBase server to the internet without opening any ports on your home router. Cloudflare Tunnel creates a secure outbound connection from your home server to the Cloudflare network, making your server accessible without exposing its IP address or creating security risks. This is the **best practice** for self-hosting applications.
+By using Cloudflare Workers and a service like **Cloudflare Tunnel**, you can expose your local PocketBase server to the internet without opening any ports on your home router.
+
+Cloudflare Tunnel creates a secure outbound connection from your home server to the Cloudflare network, making your server accessible without exposing its IP address or creating security risks.
+
+This is the **best practice** for self-hosting applications.
 
 {{< /details >}}
 
 3. Understanding that [with CSR we can](https://jalcocert.github.io/JAlcocerT/csr-and-js/) keep WebApps simple, yet providing interactivity via API where needed
 
+
+{{< details title="Authentication and CSR | Full SelfHosting vs CF Pages + Workers  📌" closed="true" >}}
+
+Cloudflare Workers are **not a must**, but they are a very popular and recommended option for this setup. 
+
+Your Astro site, once deployed to Cloudflare Pages, will be able to directly make API calls to your self-hosted PocketBase server.
+
+Here's how this works and what changes in different scenarios.
+
+**Cloudflare Pages and a Self-Hosted PocketBase**
+
+When you deploy your Astro site to Cloudflare Pages, the static files are served globally from Cloudflare's CDN.
+
+ However, your PocketBase server is still running on your home machine.
+
+The key to connecting them is to make your PocketBase server accessible via a public URL. 
+
+The easiest and most secure way to do this without a Worker is using **Cloudflare Tunnel**.
+
+1.  **Cloudflare Tunnel**: You install the `cloudflared` daemon on your home server. This creates a secure, outbound connection (a "tunnel") to the Cloudflare network.
+2.  **Public URL**: You configure the tunnel to route requests from a public domain (e.g., `api.yourdomain.com`) to your PocketBase server (e.g., `localhost:8090`).
+3.  **Direct API Calls**: Your Astro site, deployed on Cloudflare Pages, will then make direct API calls to `https://api.yourdomain.com`. These requests travel securely through the Cloudflare network to your home server.
+
+> In this scenario, Cloudflare Workers are not necessary for the authentication flow itself, as the requests are just being routed.
+
+**If You're Self-Hosting the Astro Static Site**
+
+If you self-host both the Astro static site and the PocketBase server, the process becomes even simpler.
+
+Both services are running on the same machine, so you don't need a public tunnel or a Worker. The Astro frontend can make API calls to PocketBase using a **local URL** like `http://localhost:8090` or `http://127.0.0.1:8090`.
+
+You would then use a web server like **Caddy** or **Nginx** to act as a reverse proxy. This single server would:
+
+* Serve the Astro static files to the public.
+* Proxy API requests from your Astro site to the PocketBase backend, all on the same machine.
+* Handle HTTPS and other security concerns for both services.
+
+This setup is the most straightforward for self-hosting but lacks the global performance benefits and DDoS protection that Cloudflare's network provides.
+
+**Why You Might Still Use a Cloudflare Worker**
+
+Even with Cloudflare Tunnel, you might still want to use a Cloudflare Worker for more advanced scenarios, such as:
+
+* **Caching**: To cache API responses from your PocketBase server to improve performance and reduce the load on your home server.
+* **Security**: To add an extra layer of security, like rate-limiting API requests or adding custom authentication checks before requests even reach your server.
+* **Request Manipulation**: To modify incoming or outgoing requests and responses, for example, to hide your PocketBase URL or transform data.
+
+{{< /details >}}
+
 4. I even got time to clean the IoT/MQTT with micro-controllers :)
 
-5. And tinker a bit with [Crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai)
+5. And tinker a bit with [Crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai) and data via [stonks](https://jalcocert.github.io/JAlcocerT/stonks/) / [stocks with python](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/).
 
 {{< details title="Crypto is...back? Electrum and DeFi with UniSwap Example📌" closed="true" >}}
 
@@ -185,11 +234,11 @@ flatpak install flathub org.featherwallet.Feather #Monero
 #flatpak install flathub org.getmonero.Monero
 ```
 
-If you ge a Metamask wallet for Ethereum, you can make [a Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/)
+In case you didnt know - If you get a Metamask wallet for Ethereum, you can make [a Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/) and publish via [ENS (what) instead of the DNS (where)](https://jalcocert.github.io/JAlcocerT/guide-web3/#ens-vs-unstoppable-domains).
 
-DeFi and protocols like UniSwap (v4) give you a lot to think about:
+Also, DeFi and protocols like UniSwap (v4) gave me a lot to think about:
 
-![alt text](/blog_img/crypto/defi/uni-v4-example.png)
+![Uniswap v4 as DeFi example](/blog_img/crypto/defi/uni-v4-example.png)
 
 {{< /details >}}
 
@@ -212,16 +261,83 @@ DeFi and protocols like UniSwap (v4) give you a lot to think about:
 
 ## Entrepreneuring
 
+I feel like in the backstraight of the circuit after having couple of laps to recognize my breaking/aceleration points.
 
-* https://fossengineer.com/open-source-invoice-creator/
+{{< details title="I was wondering on corporation vs smaller teams and their efficiency for some time.... 📌" closed="true" >}}
 
-Contact forms (QR), waiting lists (like the one of astro-nomy theme) and business cards..
+| Feature | **Large Corporation ** | **Indie Hacker / Small Team** |
+| :--- | :--- | :--- |
+| **Primary Business Model** | High Volume, Low Margin | High Margin, Low Volume / Niche Focus |
+| **Typical Annual Revenue** | Billions of dollars | Thousands to millions of dollars |
+| **Typical Net Profit Margin** | Very low (e.g., 2-3%) | Very high (e.g., 60-90%) |
+| **Total Net Profit** | Billions of dollars (small % of a massive number) | Thousands to millions of dollars (large % of a small number) |
+| **Primary Driver of Revenue** | Economies of scale, supply chain efficiency, mass-market appeal | Solving a niche problem, specialized product/service |
+| **Role of Meetings** | High volume of meetings, often unproductive and a major source of inefficiency | Minimal or no meetings; communication is lean and asynchronous |
+| **Impact on Operations** | Bureaucracy, slow decision-making, siloed departments, high overhead | Agile, direct feedback loops, flat structure, low overhead |
+| **Time-to-Market** | Slow, due to multiple approval layers and corporate red tape | Fast and agile, able to pivot and iterate quickly |
+| **Competition Strategy** | Compete on price, leverage scale and brand recognition | Compete on quality, specialization, and customer intimacy |
+| **Core Advantage** | The ability to execute on a massive scale with immense resources | The ability to move fast, stay lean, and achieve high profitability per unit of work |
+| **Related Tags** | **Bureaucracy**, **Wasted Time**, **Decision-Making Bottlenecks**, Silos, High Overhead | **Lean**, **Direct Feedback**, **Deep Work**, High Profitability, Low Overhead |
 
-Some people have been contacting me via EE registry `https://ariregister.rik.ee/eng/company/`
+> Non biased table ofc... Lets give a point: *Large corporations can assemble huge, specialized teams to address highly complex, multi-faceted problems. For example, building a new semiconductor factory*
 
-> Was wondering how were some EE business owner able to get my email?
+> > But, just multiply the person*hour*100$/h of all the [meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/) you've been this year. Crazy.
 
-### Launching Webifyer
+{{< /details >}}
+
+I mean...*Im almost there*
+
+Now im aware of the **,business / product management trilema'**: *price vs customization vs performance/looks*
+
+
+{{< details title="The business Trilema | Value Proposition 📌" closed="true" >}}
+
+The trade-off you've described—Price vs. Customization vs. Performance/Looks—is a classic business and product management trilemma.
+
+While it's not a formally named "entrepreneur's trilemma" in the same way as the "Project Management Triangle" (Time, Cost, Scope), it's a very real and fundamental set of choices that every entrepreneur and business owner has to make.
+
+1. **You can't have it all.** The core idea of a trilemma is that you can't simultaneously maximize all three points of the triangle. To excel in one area, you will almost certainly have to compromise on one or both of the others.
+
+2. **It defines your market position.** The way you prioritize these three factors determines your business model, target audience, and competitive strategy.
+  
+* **High Performance/Looks + High Customization + High Price:** This is the strategy for a luxury brand. Think of a custom-built sports car, bespoke clothing, or a high-end designer. You offer the best in quality and exclusivity, but it comes at a premium.
+
+* **High Performance/Looks + Low Price + Low Customization:** This is the strategy of a mass-market, high-quality brand. Think of a popular smartphone manufacturer or a successful fashion brand. You offer a great-looking product that performs well, but you have to standardize it to keep costs down and sell at a lower price.
+
+* **High Customization + Low Price + Lower Performance/Looks:** This is the strategy for businesses that cater to specific needs at an affordable price. Think of a local, family-run business that builds furniture to a customer's exact specifications, but might not have the high-tech machinery of a large factory. The product is unique and affordable, but perhaps not the sleekest or most durable on the market.
+
+> This concept is closely related to the well-known "Good, Fast, Cheap" trilemma in [project management](https://jalcocert.github.io/JAlcocerT/selfhosting-pm-tools-docker/).
+
+In that model, "Good" aligns with performance/looks and quality, "Fast" aligns with time to market, and "Cheap" aligns with price/cost.
+
+The product-focused trade-offs you've outlined are an excellent way for an entrepreneur to **think about value proposition** and what they are truly offering to customers. 
+
+It helps clarify what to build, who to sell it to, and what compromises are acceptable to achieve their vision.
+
+{{< /details >}}
+
+
+And as the start is been a very hard part, Ive been trying to motivate people around me to jumpstart with their ideas.
+
+That's why I concluded, that to make the world better, I could help individual people get started easier/quicker with their own projects.
+
+What do we need to get started?
+
+1. An idea: *each will have their vision and own execution plan*
+2. A way to [make invoices with F/OSS](https://fossengineer.com/open-source-invoice-creator/): thanks to [FE/CSR](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#fe-can-do-a-lot) and the static beauty of [serverless-invoices](https://github.com/JAlcocerT/Home-Lab/tree/main/serverless-invoices)
+3. A way for people to know about their services: *Contact forms (QR), waiting lists (like the one of astro-nomy theme) and business cards...*
+
+Thats why I thought and do alot around [this web platform for creators](#launching-webifyer).
+
+
+### Shipping Products
+
+
+This year, It's been more building than shipping.
+
+If you are successful, you will need to know [how to use Stripe API](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe) and any form of invoicing customers:
+
+#### Launching Webifyer
 
 One of the skills I enjoy learning more is about photography.
 
@@ -237,14 +353,14 @@ Web templates (SSG'ed) connected to CMS's.
 
 Because Selfhosting Static Generated Sites, is not a secret anymore:
 
-* 
-
-> MIT | Selfhosting personal static websites with Traefik, private web analytics (matomo) and Remark42 for comments.
-
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/ricsanfre/public-websites-docker" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro" title="Astro SSG | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/ricsanfre/public-websites-docker" title="MIT | Selfhosting personal static websites with Traefik, private web analytics (matomo) and Remark42 for comments. 🐋 ↗" >}}
 {{< /cards >}}
 
+But, time is money.
+
+And you are loosing both without a proper website.
 
 #### Leads and Offers
 
@@ -253,13 +369,19 @@ Linktree does things very well, yet cant compete with:
 1. Domain 1sty free with CC required (This is a potential CAC)
 2. abcd
 
+Some people have been contacting me via EE registry `https://ariregister.rik.ee/eng/company/`
+
+> Was wondering how were some EE business owner able to get my email?
+
+> > They are getting kind of qualified leads (from users like me, who never actually subscribed...GDPR anyone?)
+
 ## Interesting Concepts
 
 Concepts / ideas that I found during this year.
 
 1. CYA (cover your ***) was always a thing. 
 
-But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level.
+But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level if you in PM/BA roles.
 
 2. Its 2025 and now everyones says that it wants AI / [AI|BI](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) / AIOps / whatever. When it really needs [good'old ML](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/)
 
@@ -277,7 +399,7 @@ But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-anal
 
 An example? 
 
-Could [the aissistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main) have any additional feature?
+Could [the aissistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main) *from autumn 2024* have any additional feature?
 
 Just not to *leave money on the table*?
 
@@ -291,17 +413,25 @@ How would we reach our goals if we do nothing the move our current state closer 
 
 Kind of resonates with [process](#processes) > result.
 
+> Systems *(designed for the worst days)* do not really on willpower / motivation
+
 5. Quotes
 
 > One place, not all over the place.
 
 > *What are you afraid of loosing if you wont take any with you?*
 
+> What worries you, **masters you**
+
 > *Punishment fades but reward stayes*
+
+> Freedom of the press is guaranteed only to those who own one. [From Ghost CEO](https://john.onolan.org/12/), who [launched 12y ago](https://www.kickstarter.com/projects/johnonolan/ghost-just-a-blogging-platform?ref=john.onolan.org).
+
+> Data will say everything if we torture it long Enough. ~ ML and Overfitting
 
 6. Guesstimates and [PostMortems](https://fernandocejas.com/blog/culture/2020-06-21-learn-out-of-mistakes-postmortems/)
 
-7. Business KPIs: CAC, EBITDA, LTV, NRR,...
+7. Business/SaaS KPIs: CAC, EBITDA, LTV, NRR, MRR/ARR...
 
 8. Mental **Obesity**. Which relates with bikeshedding and the [enless student syndrome](https://youtu.be/QFH-_exyNoo?si=yToM8KSBbT0V5xG3)
 
@@ -320,6 +450,8 @@ From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael E
 * https://nav.al/existence
 
 12. Cool tinker tech posts
+
+13. The difference between doing nothing with **intent** to do nothing
 
 
 {{< details title="Examples of People Doing Cool Tech Stuff 📌" closed="true" >}}
@@ -348,8 +480,6 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 - [ ] [x24 Tech Videos](#creating-tech-videos)
 
 > Overkill. I also started [this](https://www.youtube.com/@UnfoldingData/shorts) and [this](https://www.youtube.com/@BeyondAJourney)
-
-
 
 ### Creating Tech Videos
 
@@ -424,7 +554,7 @@ It was a year of a lot of applied AI...
 1. Using LangChain to chat with a DB
 2. Real Estate RAG
 
-### Other Videos
+#### Other Videos
 
 1. AI Powered [shorts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#ai-powered-shorts)
 
@@ -461,7 +591,7 @@ Is note taking just bike-shedding?
 The power of notes. Without bikeshedding!
 
 
-### Dev Smart not Hard
+#### Dev Smart not Hard
 
 Using AI to create more and better, in less time.
 
@@ -477,7 +607,7 @@ The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)
 3. No Nested if's, try -> Error exit with message
 
 
-#### AI Stuff
+##### AI Stuff
 
 
 * https://github.com/browser-use/browser-use
@@ -548,11 +678,21 @@ Thanks to this sites, I get to know more cool apps:
 There was even time to make **[Data Analytics](#da-tech-stack) recaps** and create (not that much ship) [***better* SaaS products**](#shipping-products).
 
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/making-soap-at-home/" title="I also got time to made soap at home | Post ↗" >}}
+{{< /cards >}}
+
+
+
 ### D&A Tech Stack
 
 I needed to improve my data analytics stack.
 
 Because agents are coming for our jobs: `https://jobforagent.com/`. *The 1st job board for autonomous AI agents* 
+
+Normally withing D&A, you will have a rol to understand `the what` and figure our `the how` to get there.
+
+The closer you are to the product/leadership team, the closer you will see `the why`.
 
 https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/
 
@@ -563,8 +703,6 @@ https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/
 
 
 {{< details title="The Big Data Tech Stack, more clear than ever 📌" closed="true" >}}
-
-Of course. Here are tables comparing the different components you mentioned across various categories, providing a neck-and-neck look at their features, strengths, and weaknesses.
 
 1. Data Storage 🗄️
 
@@ -747,28 +885,349 @@ df = spark.read
     * Budget constraints.
     * Whether the deployment is on-premises, cloud-based, or hybrid.
 
-
 {{< /details >}}
+
 
 
 {{< callout type="info" >}}
 You can plug to those stacks interesting tools like superset or ([Open Data Hub](https://datahubproject.io/docs/docker/))
 {{< /callout >}}
 
-### Shipping Products
+{{< details title="DWH vs Databases 📌" closed="true" >}}
+
+The data modeling approach is a primary differentiator between the two systems: DB vs DWH.
+
+A data warehouse can be thought of as a specialized database with its tables designed in a way that prioritizes analytical performance over transactional efficiency.
+
+You can turn a PostgreSQL database into a data warehouse with proper data modeling and optimization, especially for small to medium-sized data volumes. While it wasn't designed for this purpose, its flexibility and extensibility make it a viable option for many use cases.
+
+The key is to change how you approach the database from a **transactional (OLTP)** mindset to an **analytical (OLAP)** one.
+
+**Data Modeling and Schema**
+
+The most critical step is to use an analytical data model.
+
+* **Star Schema**: Instead of the highly normalized schema used for OLTP, you would model your data using a star schema. This design separates data into a central **fact table** (which contains measurements like sales or transactions) and multiple, smaller **dimension tables** (which contain context like product, customer, or time). This structure makes analytical queries much more efficient. 
+
+* **Denormalization**: You would also intentionally denormalize your data. This means duplicating some data to avoid complex joins, which are performance-killers in an analytical context.
 
 
-This year, It's been more building than shipping.
+**Facts vs. Dimensions**
 
-If you are successful, you will need to know [how to use Stripe API](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe) and any form of invoicing customers:
+The core of data warehousing is separating data into **facts** and **dimensions**. 
 
-* https://fossengineer.com/open-source-invoice-creator/
+Think of it as answering the questions "What happened?" and "In what context did it happen?".
 
-* https://github.com/Impre-visible/invoicerr
+* **Facts** are the **measurable events** or metrics of a business process. They are the **"what happened"** of your data. Facts are typically numerical values that can be counted, summed, or averaged. They are stored in a **fact table**, which is often very large and contains a row for every single event or transaction.
 
-> agpl 3.0 | Invoicerr is a freelance-focused invoicing app that lets you create quotes, generate invoices, track payments, and collect secure signatures.
+    * **Example**: In a retail company, a fact would be a **sale**. The fact table would store the **sales amount**, `quantity sold`, or `profit` for each transaction.
+
+* **Dimensions** provide the **context** for the facts. They are the **"who, what, where, when, and how"** of your data. Dimensions contain descriptive attributes that you use to filter, group, and analyze your facts. They are stored in **dimension tables**, which are usually much smaller than fact tables.
+
+    * **Example**: For that same retail sale, the dimensions would be the `Product` (what was sold), `Customer` (who bought it), `Store` (where it was sold), and `Date` (when it was sold). The dimension tables would contain descriptive information like the `product_name`, `customer_name`, `store_location`, and `date_of_week`.
+
+The fact table's rows link to the dimension tables using foreign keys. This allows you to answer analytical questions like, "What was the total sales amount (`fact`) for Nike brand products (`dimension`) in the last quarter (`dimension`)?" 
 
 
-### Outro
+**Optimizations and Extensions**
 
-* https://jalcocert.github.io/JAlcocerT/making-soap-at-home/
+In addition to data modeling, you would need to implement several optimizations and use extensions to overcome PostgreSQL's native limitations for large-scale analytics:
+
+* **Partitioning**: For very large tables, you would use **table partitioning** to split data into smaller, more manageable pieces based on criteria like date or region. This allows queries to scan only the relevant partitions, drastically improving performance.
+* **Materialized Views**: You can create **materialized views** to pre-compute and store the results of complex queries. This is perfect for dashboards and reports that are run frequently, as users can query the pre-calculated view instead of the raw data.
+* **Parallelism**: Since PostgreSQL v10, it has supported parallel query execution. You can tune settings to allow the database to use multiple CPU cores to process large, complex queries faster.
+* **Extensions**: PostgreSQL's power lies in its extensions. Extensions like **Citus** can turn a single PostgreSQL instance into a distributed database cluster, allowing it to scale horizontally for massive datasets. Other extensions, like `cstore_fdw`, can provide **columnar storage**, which is natively optimized for analytical workloads by allowing queries to read only the specific columns they need.
+
+{{< /details >}}
+
+
+{{< details title="DWH, Kimball and layers/medallion 📌" closed="true" >}}
+
+Ralph Kimball and the Kimball Methodology
+
+**Ralph Kimball** is a giant in the data warehousing world. He is one of the two main pioneers, along with Bill Inmon, who shaped the field.
+
+The "Kimball" you're referring to is his **methodology for designing data warehouses**. His approach is often called the **bottom-up approach** and is centered around **dimensional modeling**.
+
+The core ideas of the Kimball methodology are:
+1.  **Start with the business process.** You identify a specific business process (like sales, inventory, or billing) and build a data mart around it.
+2.  **Use dimensional models.** The data is organized into a **star schema** or **snowflake schema**. This involves a central **fact table** (containing quantitative measures like sales amount) surrounded by **dimension tables** (containing descriptive attributes like product name, customer demographics, and date).
+3.  **Use conformed dimensions.** This is a key concept. Kimball advocated for creating "conformed dimensions," which are master dimension tables (e.g., a single "Product" dimension or "Customer" dimension) that are shared across multiple data marts. This ensures consistency and allows analysts to "drill across" different business processes.
+
+The Kimball approach is known for being agile and delivering business value quickly because it focuses on building out specific data marts iteratively.
+
+**DWH Layers and Medallion Architecture**
+
+Yes, data warehouses and data lakes often have layers, but the "medallion architecture" is a more recent pattern, primarily associated with **data lakes** and **data lakehouses**.
+
+Traditional data warehouses have a layered architecture, which typically includes:
+* **Staging Layer**: A temporary area where raw data is landed before it is cleaned and transformed.
+* **Data Warehouse Core**: The central repository where the cleaned, integrated data is stored, often in a normalized form (Inmon's approach) or in a dimensional model (Kimball's approach).
+* **Data Marts**: Subsets of the data warehouse core that are designed for specific departments or business functions, often using a dimensional model to support fast reporting.
+
+The **Medallion Architecture** is a modern, three-tiered data design pattern for data lakehouses, with a clear focus on data quality and governance. It's often implemented using technologies like Delta Lake on platforms like Databricks. The three layers are:
+
+1.  **Bronze (Raw) Layer**: This is the landing zone. Data is ingested from source systems and stored in its original format with no transformations. The purpose of this layer is to have a complete and immutable copy of the source data, which is great for auditing and reprocessing.
+
+2.  **Silver (Cleaned/Enriched) Layer**: Data from the Bronze layer is cleansed, validated, and often integrated. This is where you might apply data quality rules, deduplicate records, and join data from different sources to create an "enterprise view" of key entities (like customers or products).
+
+3.  **Gold (Curated) Layer**: This is the final, business-ready layer. Data from the Silver layer is aggregated and modeled into consumption-friendly formats, often using a dimensional model (like a star schema). This layer is optimized for fast queries and is where business analysts and data scientists would build their reports and dashboards.
+
+The Connection
+
+The connection between these concepts is that they are both **architectural patterns** for building data systems.
+
+* **Kimball** is a **methodology for modeling the data** that goes *into* a data warehouse, especially for the final, user-facing layers (the data marts). His focus is on the star schema and making data understandable for business users.
+
+* **The Medallion Architecture** is a **pattern for structuring a data pipeline** and a data lake/lakehouse. It's a way of thinking about the flow of data and its progressive refinement. The Gold layer in the Medallion architecture is where you would typically apply the Kimball-style dimensional modeling to make the data usable for analytics.
+
+So, you could build a data lakehouse with a Medallion architecture, and then, in the Gold layer, you would use Ralph Kimball's dimensional modeling techniques to organize your data into star schemas.
+
+{{< /details >}}
+
+
+{{< details title="Data Modelling for OLTP vs OLAP 📌" closed="true" >}}
+
+**Data Modeling: 3NF vs. Star/Snowflake**
+
+* **Third Normal Form (3NF)**: This is the standard for **OLTP databases**. The goal of normalization is to minimize data redundancy by splitting data into many related tables. This makes write operations (`INSERT`, `UPDATE`, `DELETE`) very fast and efficient because you only have to modify data in one place. However, to retrieve data for a report, you often need to perform many complex joins across numerous tables, which can be slow. 
+
+* **Star and Snowflake Schemas**: These are the standard for **OLAP databases** and data warehouses. Their goal is the opposite of 3NF: to optimize for **fast reads** and analytical queries by reducing the number of joins. They do this by **denormalizing** data. The star schema is the simplest form, with a central **fact table** surrounded by dimension tables. The snowflake schema is a more normalized version of the star, with dimensions that are themselves normalized. While this design introduces some data redundancy, it makes it much faster to run complex queries for reporting and business intelligence. 
+
+
+
+| Feature | Databases (Transactional) | Data Warehouses (Analytical) |
+| :--- | :--- | :--- |
+| **Purpose** | **Online Transaction Processing (OLTP)** for daily operations and transactions. | **Online Analytical Processing (OLAP)** for business intelligence and reporting. |
+| **Data Type** | Real-time, current data. | Historical, aggregated data. |
+| **Data Model** | **Normalized** schema to reduce redundancy. | **Denormalized** schema (e.g., Star/Snowflake) for fast querying. |
+| **Operations** | Frequent **writes, updates, and deletes**. | Primarily **reads**. Data is loaded in large batches (ETL/ELT). |
+| **Performance** | Optimized for fast, specific transactions. | Optimized for complex, long-running queries on large datasets. |
+| **Users** | Many concurrent users, typically employees or customers. | Fewer users, typically analysts, and business professionals. |
+
+
+**Transactional Database**
+
+* **OLTP**: Online Transaction Processing.
+* **Normalized**: Data is structured to eliminate redundancy.
+* **Reads/Writes**: Frequent and balanced operations.
+* **Current State**: Focused on the present data.
+* **Atomicity**: Transactions are either fully completed or not at all.
+* **Entity-Relationship Model**: Common data modeling approach.
+* **Third Normal Form**: A database design standard to reduce data redundancy. ~ Wide Table.
+
+**Data Warehouse**
+
+* **OLAP**: Online Analytical Processing.
+* **Denormalized**: Data is structured for efficient querying.
+* **Reads**: Read-heavy operations.
+* **Historical Data**: Data is stored over time.
+* **ETL/ELT**: The process of loading data from source systems.
+* **Star Schema**: A dimensional data model with a central fact table.
+* **Aggregate**: Summary data created from detailed data.
+
+PostgreSQL as a Hybrid System
+
+Yes, you can use PostgreSQL for both purposes. PostgreSQL is a powerful and flexible relational database that can be configured to serve as a **hybrid transactional/analytical processing (HTAP)** system.
+
+For a long time, the traditional approach was to keep OLTP and OLAP systems completely separate due to their conflicting needs. You would use a system like PostgreSQL for your operational data and then periodically move that data into a specialized data warehouse (like Teradata or a cloud-based one like Snowflake or BigQuery) for analysis.
+
+However, modern PostgreSQL, with features like **partitioning, materialized views, parallel query execution, and extensions (e.g., Citus)**, can handle analytical workloads on a single instance.
+
+While it may not be as performant as a massively parallel processing (MPP) data warehouse for petabyte-scale data, it is a very cost-effective and flexible solution for many use cases.
+
+By creating a separate schema with a star or snowflake model, you can effectively run an analytical layer on the same database that handles your operational transactions, especially for small to medium-sized businesses.
+
+
+{{< /details >}}
+
+
+{{% details title="OLAP - First STAR, then SNOWFLAKE 🚀" closed="true" %}}
+
+Star and snowflake schemas are both popular dimensional modeling techniques for data warehouses, but they differ in how they structure and normalize their dimension tables.
+
+The choice between them is a trade-off between query performance, storage efficiency, and data maintenance.
+
+**Star Schema ⭐**
+
+The **star schema** is the simplest and most widely used dimensional model. It consists of a single, central **fact table** directly connected to multiple **denormalized** dimension tables. The structure resembles a star, with the fact table at the center and the dimensions radiating outwards.
+
+* **Denormalization**: Dimension tables are flat and contain all descriptive attributes. For example, a `Product` dimension table might have columns for `product_id`, `product_name`, `category`, and `brand` all in one table. This leads to **data redundancy**, as the `category` name would be repeated for every product in that category.
+* **Performance**: Queries are very fast because they require only a single join between the fact table and the dimension tables. This simplicity is ideal for reporting tools and ad-hoc analysis.
+
+**Example: A Retail Sales Data Mart**
+
+The `Sales Fact` table records each transaction and contains foreign keys to the dimension tables, plus numerical measures. The dimension tables are a single, flat table for each entity.
+
+* `Sales Fact` table: `transaction_id`, `date_key`, `product_key`, `customer_key`, `store_key`, `quantity_sold`, `total_sales`.
+* `Date Dimension` table: `date_key`, `date`, `month`, `year`, `quarter`.
+* `Product Dimension` table: `product_key`, `product_name`, `category`, `brand`.
+* `Customer Dimension` table: `customer_key`, `customer_name`, `city`, `state`, `country`.
+
+**Snowflake Schema ❄️**
+
+The **snowflake schema** is a more complex variation of the star schema. It is a more **normalized** model where the dimension tables themselves are broken down into sub-dimensions. This reduces data redundancy and storage space but increases the number of joins required for queries. The structure resembles a snowflake due to the branching of dimension tables.
+
+* **Normalization**: Dimension tables are organized hierarchically. For example, instead of a single `Product` dimension, you might have a `Product` table that links to a separate `Category` table and a `Brand` table.
+* **Performance**: Queries are generally slower because they require more joins to traverse the different dimension tables to get all the descriptive data.
+
+**Example: A Retail Sales Data Mart (Snowflake)**
+
+The fact table remains the same, but the dimension tables are now normalized.
+
+* `Sales Fact` table: `transaction_id`, `date_key`, `product_key`, `customer_key`, `store_key`, `quantity_sold`, `total_sales`.
+* `Date Dimension` table: `date_key`, `date`, `month_key`.
+* `Month Dimension` table: `month_key`, `month`, `year`.
+* `Product Dimension` table: `product_key`, `product_name`, `category_key`, `brand_key`.
+* `Category Dimension` table: `category_key`, `category_name`.
+* `Brand Dimension` table: `brand_key`, `brand_name`.
+
+
+
+**Key Differences at a Glance**
+
+| Feature | Star Schema ⭐ | Snowflake Schema ❄️ |
+| :--- | :--- | :--- |
+| **Structure** | A central fact table with a single layer of denormalized dimensions. | A central fact table with normalized dimensions that have sub-dimensions. |
+| **Normalization** | Denormalized. | Normalized. |
+| **Data Redundancy** | High, as data in dimension tables can be repeated. | Low, as data is stored only once. |
+| **Query Performance** | Faster, as it requires fewer joins. | Slower, as it requires more joins. |
+| **Storage** | Uses more storage space due to redundancy. | Uses less storage space. |
+| **Complexity** | Simple to design, implement, and understand. | More complex to design and maintain. |
+
+Normalization and the number of tables can be tricky.
+
+In the context of **transactional databases (OLTP)**, normalization breaks a single, wide table into multiple smaller tables to reduce redundancy.
+
+However, the opposite is true for star and snowflake schemas in a data warehouse context.
+
+The difference lies in what they are normalizing.
+
+**Normalization and Number of Tables**
+
+* **OLTP Normalization (e.g., to 3NF)**: The goal is to reduce data redundancy within a single business domain. You start with a wide, redundant table and break it down into multiple, more focused tables. This **increases the number of tables**.
+
+* **Star Schema (Denormalization)**: The goal is to flatten a potentially complex, multi-table structure into a single **denormalized** dimension table. This process **reduces the number of tables** for a specific dimension. The star schema is a highly denormalized version of a normalized schema.
+
+* **Snowflake Schema (Normalization)**: The snowflake schema takes the star schema's denormalized dimension tables and **re-normalizes them**. This breaks the single dimension table into multiple, smaller sub-dimension tables. This process **increases the number of tables** and introduces more joins.
+
+**Why Snowflake Requires More Joins 🔗**
+
+The reason a snowflake schema requires more joins is because of its **normalized dimension tables**.
+
+A star schema's dimension tables are flat. 
+
+For example, a single `Product` dimension table might contain `product_key`, `product_name`, `category_name`, and `brand_name`. 
+
+To run a report on sales by category, you just join the `Sales Fact` table to the `Product` dimension table—one join.
+
+A snowflake schema, however, breaks that single `Product` dimension table into multiple tables to reduce redundancy. For example:
+
+* A `Product` table with `product_key`, `product_name`, `category_key`, and `brand_key`.
+* A separate `Category` table with `category_key` and `category_name`.
+* A separate `Brand` table with `brand_key` and `brand_name`.
+
+To run the same report on sales by category, you now need to join the `Sales Fact` table to the `Product` table, then join the `Product` table to the `Category` table.
+
+That's at least two joins. 
+
+As the dimensions become more complex and are broken down further, the number of joins can increase significantly, which can slow down query performance.
+
+The data redundancy you avoid in a snowflake schema is the **repetition of descriptive attributes** within a dimension table.
+
+In our retail example, a **star schema's** `Product Dimension` table would store the `brand` and `category` name repeatedly for every single product in that brand or category.
+
+If a brand like "Nike" has 10,000 products, the text string "Nike" would be duplicated 10,000 times in that single dimension table.
+
+A **snowflake schema** avoids this by creating a separate `Brand` table and `Category` table.
+
+The `Product` table would then just store a foreign key to the `brand_key` and `category_key`.
+
+This means the text string "Nike" is only stored **once** in the `Brand` table, and all 10,000 Nike products point to it. 
+
+This reduces storage space and ensures data integrity, as a change to the brand name only needs to be made in one place.
+
+While a snowflake schema reduces the redundancy of text-based attributes (like a category or brand name), it introduces a new kind of overhead: **storing foreign keys**. This is the core trade-off.
+
+The Trade-off: Storing Keys vs. Repeating Strings
+
+You're right, the key itself takes up space. A foreign key (typically an integer or a small string) is stored in the dimension table for every record. However, the space saved by avoiding the repetition of long strings is usually much greater than the space taken by storing the integer keys.
+
+Let's use a simple example to illustrate this:
+
+| Star Schema | Snowflake Schema |
+| :--- | :--- |
+| **`Product` Dimension Table** | **`Product` Dimension Table** |
+| `product_id` (int) | `product_id` (int) |
+| `product_name` (varchar) | `product_name` (varchar) |
+| `brand_name` (varchar, e.g., "Nike") | `brand_key` (int) |
+| `category_name` (varchar, e.g., "Footwear") | `category_key` (int) |
+
+Let's say a brand name is an average of 10 characters, and a category name is an average of 10 characters. A product dimension table with 100,000 products would have to store `brand_name` and `category_name` 100,000 times, a total of 2 million characters of redundant data.
+
+In a snowflake schema, you'd store the brand and category names just **once** in their own tables. The 100,000 products would each store a small integer key (4 bytes) for the brand and category, which totals 800,000 bytes. This is a significant reduction in storage.
+
+The Star Schema's Argument
+
+Despite the storage trade-off, the **star schema is often preferred** for its superior query performance. 
+
+In a star schema, you only need one join to get all the descriptive information for a fact. 
+
+In a snowflake schema, you might need two, three, or even more joins to get the same information, which can slow down query execution, especially on very large fact tables.
+
+For data warehouses, where the primary use case is reading and analyzing vast amounts of data, the performance benefit of fewer joins often outweighs the small savings in storage and the minor improvement in data integrity that a snowflake schema offers.
+
+>  This is why the star schema is considered the standard for dimensional modeling.
+
+{{% /details %}}
+
+
+So...this is everything I could tell right now about Data Modeling for Databases and Data Warehouses.
+
+**OLTP vs. OLAP Schemas......**
+
+**3NF for OLTP**
+
+**3NF is the standard for transactional (OLTP) databases.** Its primary goal is to **reduce data redundancy** by decomposing data into many normalized tables. This design is optimized for fast, reliable **write** operations (CRUD) and is essential for maintaining data integrity in real-time, high-volume transactional systems.
+
+**Star vs. Snowflake for OLAP**
+
+For analytical (OLAP) workloads, the priority shifts from writes to **reads**. The goal is to make it easy and fast to query large volumes of historical data.
+
+* **Star Schema is the preferred choice for OLAP.** It prioritizes **read performance** by using a simple, denormalized structure with a central fact table and flat dimension tables. The result is fewer joins, which significantly speeds up complex analytical queries. While this design introduces data redundancy, the benefit of faster query execution almost always outweighs the extra storage space in a data warehouse context.
+* **Snowflake Schema is a compromise.** It is a more normalized version of the star schema, which **reduces data redundancy** and therefore **lowers storage space**. However, this comes at the cost of **increased complexity** and **poorer read performance** because analytical queries require more joins to connect the fragmented dimension tables. An organization might choose a snowflake schema if storage costs are a major concern or if they need to enforce a higher level of data integrity in their dimensions.
+
+
+**Data Formats for Different Workloads**
+
+Generally speaking, Avro (row-oriented) is better for **writes**, and Parquet (columnar) is better for **reads**.
+
+This is the fundamental trade-off between the two formats and is directly tied to their internal data organization.
+
+**Avro (Row-Oriented)**
+
+Avro stores data records row by row. This structure is ideal for **fast writes** and data serialization because it allows you to write an entire record to a file in a single operation. Avro is typically used in scenarios where writes are frequent and real-time, and data needs to be easily and reliably exchanged between different systems. This makes it a great fit for a data lake's **ingestion or raw layer**, especially in streaming and messaging pipelines.
+
+Here are the primary use cases for Avro:
+
+* **Streaming and Messaging Systems**: Avro is the preferred format for platforms like **Apache Kafka, Apache Flink, and Apache Spark Streaming**. Its row-oriented nature allows it to efficiently serialize and deserialize data records as they arrive in a continuous stream. Unlike columnar formats, Avro doesn't need to buffer a large block of records to arrange them by column, making it ideal for the low-latency requirements of streaming applications.
+
+* **Data Ingestion and ETL/ELT**: In a modern data architecture, Avro is often used in the **initial stages of a data pipeline**. Data is ingested from various sources (like application logs or APIs) and stored in a raw layer in Avro format. This raw data is then cleaned and transformed into a columnar format like Parquet for analytical purposes. This is because Avro's rich schema and strong support for schema evolution make it robust for handling the messy, raw data that can change over time.
+
+* **Schema Evolution**: Avro has a robust system for **schema evolution**, which is a key advantage. This means you can add new fields or remove old ones from your data schema without breaking existing data pipelines or applications. When a reader processes an Avro file, it uses the writer's schema and the reader's schema to resolve any differences, ensuring backward and forward compatibility. This is crucial for systems that evolve frequently.
+
+**Parquet (Column-Oriented)**
+
+Parquet is the go-to format for the analytical layers of a data lake, specifically the **Silver** and **Gold layers**.
+
+* **Bronze Layer (Raw Data)**: This is the landing zone where raw data is often stored in its original format. As discussed, **Avro** is a common choice here, especially for streaming data, because it's optimized for fast writes and provides strong schema evolution support.
+* **Silver Layer (Cleaned & Enriched Data)**: Once data is cleaned and validated, it's typically converted into **Parquet**. This layer is where you start to prepare data for analysis. The columnar nature of Parquet makes it perfect for the subsequent transformation and enrichment steps, as you can efficiently read specific columns to join and filter data.
+* **Gold Layer (Curated & Business-Ready Data)**: This is the final layer where data is modeled into star or snowflake schemas. **Parquet** is the ideal format for this layer because it's designed for the type of large-scale, complex analytical queries that business intelligence tools run. The columnar storage allows query engines to read only the necessary columns from these fact and dimension tables, dramatically speeding up reporting and dashboarding.
+
+The flow from Avro to Parquet is a common pattern in data lake architecture:
+
+1.  **Ingestion**: Raw data lands in the Bronze layer, often as Avro files.
+2.  **Transformation**: The raw data is processed, cleaned, and converted into Parquet files in the Silver layer.
+3.  **Consumption**: The prepared Parquet data is then used in the Gold layer for fast, optimized analytics.
+
+This layered approach, often called the Medallion Architecture, leverages the strengths of each format: Avro for robust data ingestion and Parquet for efficient data analysis.

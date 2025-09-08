@@ -70,9 +70,7 @@ Those come very handy when deploying containers.
 
 SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function. 
 
-
-{{< details title="More about SHA256 📌" closed="true" >}}
-
+{{< details title="More about SHA256... 📌" closed="true" >}}
 
 * **Cryptographic:** It's designed with security in mind, making it very difficult to reverse the process (find the original input from the output) or to find two different inputs that produce the same output (collision resistance).
 * **Hash Function:** It takes an input of any arbitrary length (a message, a file, data, etc.) and produces a fixed-size output called a "hash" or "digest." For SHA-256, this output is always 256 bits long (which is 32 bytes or 64 hexadecimal characters).
@@ -89,17 +87,19 @@ SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function.
 
 > Easy to encrypt, hard to decrypt!
 
-**Does Bitcoin Implement SHA-256?**
-
-**Bitcoin heavily relies on the SHA-256 hash function.**
+**Does Bitcoin Implement SHA-256?** Yes, Bitcoin heavily relies on the SHA-256 hash function.
 
 It is a fundamental building block of the Bitcoin blockchain and is used in several crucial processes.
 
 {{< details title="BTC x SHA256 📌" closed="true" >}}
 
 * **Proof-of-Work:** Bitcoin's mining process involves repeatedly hashing block headers (which contain transaction information, a timestamp, and a reference to the previous block) along with a "nonce" (an arbitrary number). Miners compete to find a nonce that, when the entire block header is hashed using SHA-256, results in a hash value that meets a certain difficulty target (starts with a specific number of leading zeros).
-* **Transaction Hashing:** Individual transactions are hashed using SHA-256 (often multiple times in a Merkle tree structure) to create a unique identifier for each transaction.
+
+* **Transaction Hashing:** Individual transactions are hashed using SHA-256 (often multiple times in a Merkle tree structure) to create a unique 
+identifier for each transaction.
+
 * **Merkle Trees:** Blocks in the Bitcoin blockchain organize transactions into a Merkle tree. SHA-256 is used to hash pairs of transaction IDs, and then hash the resulting hashes, and so on, up to the Merkle root. This provides an efficient way to verify if a specific transaction is included in a block.
+
 * **Address Generation (Indirectly):** While Bitcoin addresses are not directly SHA-256 hashes, SHA-256 is used in the process of creating them (along with other hashing algorithms like RIPEMD-160).
 
 {{< /details >}}
@@ -366,6 +366,56 @@ This method is **stateful**, as the server must maintain a record of all active 
 
 The core of OAuth and OIDC is the token itself, which can be passed in different ways (e.g., via a request header), making it more flexible and suitable for modern applications like mobile apps and APIs that don't rely on traditional browser sessions.
 
+
+{{< details title="Sample PB Auth Flow | OIDC 📌" closed="true" >}}
+
+Neither **OAuth** nor **OIDC** directly handles the specific setup of a static site generator with Cloudflare Workers and PocketBase.
+
+ However, **OIDC is the protocol you'd use for the authentication part of the solution**.
+
+Here's how those technologies would work together to create a login-gated static site:
+
+1. Static Site Generator (SSG)
+
+A static site generator (like Hugo, Astro, or Next.js in static mode) pre-renders all the HTML, CSS, and JavaScript for your website. This means the content is generated once and then served as static files, making it incredibly fast. The key here is that the site itself has no dynamic server-side code to handle authentication on its own.
+
+2. Cloudflare Workers
+
+Cloudflare Workers act as a serverless function layer that runs on Cloudflare's global network. You'd use a Worker to act as a **middleware** or a "proxy" in front of your static site. The Worker would check for a user's login status before serving the content.
+
+* When a user tries to access a protected page, the request first hits the Cloudflare Worker.
+* The Worker checks for a valid **authentication token**.
+* If the token is valid, the Worker allows the request to pass through and serves the static page.
+* If the token is missing or invalid, the Worker intercepts the request and redirects the user to a login page.
+
+3. PocketBase
+PocketBase is a backend service that provides a database and, crucially for this use case, built-in **authentication management**. It handles the user accounts, passwords, and the authentication process. It would act as the identity provider.
+
+* When a user logs in on your site (likely via a form), the Cloudflare Worker sends their credentials to PocketBase.
+* PocketBase validates the credentials and, upon success, issues a **JWT (JSON Web Token)**.
+* The Cloudflare Worker then receives this token and stores it in the user's browser, likely in a cookie or local storage, for future requests.
+
+**The Authentication Flow**
+
+The authentication flow for this setup is essentially an **OIDC-like process** driven by a custom implementation:
+
+1.  A user navigates to `example.com/protected-page`.
+2.  The Cloudflare Worker intercepts the request and checks for an authentication token. There isn't one yet.
+3.  The Worker redirects the user to `example.com/login`.
+4.  The user enters their credentials, which are sent via JavaScript to the PocketBase API.
+5.  PocketBase validates the credentials and returns a JSON Web Token.
+6.  The browser stores this token (e.g., in a secure cookie).
+7.  The user is redirected back to `example.com/protected-page`.
+8.  This time, the request includes the authentication token.
+9.  The Cloudflare Worker validates the token against PocketBase's public key (to ensure it's authentic and not expired).
+10. Since the token is valid, the Worker serves the pre-rendered static page.
+
+In this scenario, you're building a system that replicates the core functionality of OIDC—authenticating a user and issuing a token that proves their identity—without relying on a full-blown, off-the-shelf OIDC provider.
+
+{{< /details >}}
+
+
+
 #### Bearer vs JWT
 
 A **bearer token** is a cryptic string of characters that grants access to the "bearer" -whoever possesses it.
@@ -495,7 +545,7 @@ Aquí tienes un desglose de las diferencias clave:
 * **Uso:** Es muy cómodo para realizar consultas o gestiones sencillas con la Agencia Tributaria, la Seguridad Social, el SEPE, etc. Es una buena opción para usuarios que no necesitan firmar documentos de forma habitual.
 * **Obtención:** El registro es más simple que el del certificado digital, y se puede hacer de forma online (con carta de invitación o videoidentificación) o presencial.
 
-### En resumen:
+**En resumen:**
 
 | Característica | Certificado Digital | Cl@ve |
 | :--- | :--- | :--- |
@@ -506,17 +556,27 @@ Aquí tienes un desglose de las diferencias clave:
 | **Nivel de seguridad** | Alto, incluye firma legalmente válida | Alto para acceso, pero no para firma |
 | **Obtención** | Requiere acreditación presencial o videoidentificación | Registro más sencillo, online o presencial |
 
-En conclusión, si necesitas firmar documentos electrónicos de manera legal, el **certificado digital** es la herramienta adecuada. Si solo buscas una forma ágil y segura de acceder y realizar consultas en las sedes electrónicas de las administraciones, el sistema **Cl@ve** es una opción más cómoda y sencilla.
+En conclusión, si necesitas firmar documentos electrónicos de manera legal, el **certificado digital** es la herramienta adecuada.
 
-El modelo de Estonia, con su programa de e-Residency y las e-cards, es un referente mundial en la digitalización de la administración pública y los negocios. Se diferencia del sistema español en varios aspectos clave, especialmente en su enfoque y en la tecnología utilizada.
+Si solo buscas una forma ágil y segura de acceder y realizar consultas en las sedes electrónicas de las administraciones, el sistema **Cl@ve** es una opción más cómoda y sencilla.
+
+El modelo de Estonia, con su programa de e-Residency y las e-cards, es un referente mundial en la digitalización de la administración pública y los negocios.
+
+Se diferencia del sistema español en varios aspectos clave, especialmente en su enfoque y en la tecnología utilizada.
 
 ### ¿Qué es la e-Residency?
 
-La "e-Residency" (residencia electrónica) de Estonia es un programa único que permite a cualquier persona del mundo, sin importar su nacionalidad, obtener una identidad digital emitida por el gobierno estonio. **No es una residencia física, ni una ciudadanía, ni un permiso de viaje.** Es una identidad digital que te da acceso al ecosistema digital de Estonia.
+La "e-Residency" (residencia electrónica) de Estonia es un programa único que permite a cualquier persona del mundo, sin importar su nacionalidad, obtener una identidad digital emitida por el gobierno estonio.
+
+**No es una residencia física, ni una ciudadanía, ni un permiso de viaje.** 
+
+Es una identidad digital que te da acceso al ecosistema digital de Estonia.
 
 ### ¿Qué son las "e-cards"?
 
-La "e-card" (tarjeta electrónica) es la tarjeta de identidad física que se entrega a los e-residents. Es similar a una tarjeta de crédito, con un chip inteligente incorporado. Es el equivalente estonio del DNIe español. Su función es la de un **dispositivo de autenticación segura y de firma digital**.
+La "e-card" (tarjeta electrónica) es la tarjeta de identidad física que se entrega a los e-residents. Es similar a una tarjeta de crédito, con un chip inteligente incorporado. Es el equivalente estonio del DNIe español. 
+
+Su función es la de un **dispositivo de autenticación segura y de firma digital**.
 
 ### Diferencias clave con el modelo español (Certificado Digital y Cl@ve)
 
@@ -536,7 +596,7 @@ La "e-card" (tarjeta electrónica) es la tarjeta de identidad física que se ent
 
     En España, aunque la digitalización ha avanzado mucho (con la Sede Electrónica de la AEAT, la Seguridad Social, etc.), todavía hay una fragmentación de servicios. El certificado digital te da acceso a muchos de ellos, pero el nivel de integración no es tan completo ni transparente como el de Estonia.
 
-### Resumen de la diferencia
+**Resumen de la diferencia**
 
 Mientras que en España tienes dos herramientas (certificado digital para trámites complejos y firma, y Cl@ve para acceso sencillo), en Estonia, la **e-card de e-Residency es una única llave maestra y de uso universal** para el mundo de los negocios digitales. Su enfoque es un "todo-en-uno" que no solo te identifica, sino que te permite operar de manera remota en un entorno de negocios digital, transparente y legalmente reconocido a nivel de la UE.
 
@@ -546,7 +606,11 @@ El caso de los Países Bajos con su sistema **DigiD** (que significa "Identidad 
 
 ### ¿Qué es DigiD?
 
-DigiD es el sistema de identificación en línea que usan los ciudadanos y residentes de los Países Bajos para acceder a servicios gubernamentales, de salud, educación y pensiones. Es una herramienta esencial para la vida diaria en los Países Bajos. Su principal propósito es **identificar al usuario de forma segura** para que las organizaciones puedan estar seguras de con quién están tratando.
+DigiD es el sistema de identificación en línea que usan los ciudadanos y residentes de los Países Bajos para acceder a servicios gubernamentales, de salud, educación y pensiones.
+
+Es una herramienta esencial para la vida diaria en los Países Bajos.
+
+Su principal propósito es **identificar al usuario de forma segura** para que las organizaciones puedan estar seguras de con quién están tratando.
 
 ¿Cómo se compara con el modelo español?
 

@@ -3,7 +3,7 @@ title: "Web3 Simplified - Why and How to Get your Web3"
 date: 2021-12-19T23:20:21+01:00
 draft: false
 tags: ["Web","IPFS vs P2P","ENS and Unestopable Domains","CID"]
-description: 'Building your first Web3 from scratch.'
+description: 'Building your first Web 3 from scratch.'
 url: 'guide-web3'
 ---
 

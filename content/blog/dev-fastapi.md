@@ -2,11 +2,10 @@
 title: "FastAPI 101"
 date: 2025-08-13
 draft: false
-tags: ["Dev","Python","FE vs BE","APIs","Swagger UI"]
-description: 'FastAPI and concepts for your Python Back-End'
+tags: ["Dev","Python","FE vs BE","APIs","Swagger UI","Http Methods"]
+description: 'FastAPI and concepts for your Python Back-End journey'
 url: 'fast-api'
 ---
-
 
 **TL;DR**
 
@@ -88,9 +87,13 @@ It doesn't run in the user's browser!
 
 In short, FastAPI is the **server** that provides the data, while Redux, Dexie, and local storage are different ways the **client** (the user's browser) can store and manage that data.
 
-They are not competing technologies but are often used together in a modern web application.
+They are not competing technologies but are **often used together** in a modern web application.
+
+> This might be your case in some app architecture with app settings, chat histories and session management: *The BE stores global data and generally, anything that the user can edit, you might not want it into the BE with PB, as PB works better for reads than for writes.*
 
 {{% /details %}}
+
+---
 
 ## Concepts
 
@@ -141,7 +144,7 @@ There are other HTTP methods beyond the common four (GET, POST, PUT, DELETE).
 
 While the four you mentioned are the most frequently used for building RESTful APIs, the HTTP/1.1 standard defines a number of others.
 
-Here are some of the other HTTP methods and their purposes:
+Here are some of the other **HTTP methods** and their purposes:
 
 * **HEAD**: This method is similar to a `GET` request, but the server only sends back the **headers** and not the actual message body. This is useful for checking if a resource exists or verifying its size or modification date without downloading the entire content.
 
