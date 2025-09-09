@@ -11,7 +11,7 @@ sidebar:
 
 Looking for creating cool and responsive web designs?
 
-Astro can get you there very quickly.
+**Astro** can get you there very quickly.
 
 {{< callout type="info" >}}
 New to SSGs and ASTRO? See the [**101 Astro** Guide](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
@@ -45,6 +45,9 @@ npx http-server dist --listen 0.0.0.0
       {{< filetree/file name="introduction.md" >}}
     {{< /filetree/folder >}}
   {{< /filetree/folder >}}
+  {{< filetree/folder name="src" >}}
+    {{< filetree/file name="here you will find the astro components" >}}
+  {{< /filetree/folder >}}  
   {{< filetree/file name="package.json" >}}
 {{< /filetree/container >}}
 
@@ -58,7 +61,7 @@ Find astro themes at: https://astro.build/themes/
 
 ### Photo Gallery Themes
 
-1. https://github.com/obviyus/musee?ref=astrothemes.club
+1. https://github.com/obviyus/musee
 
 > GPL3.0 | Fast, responsive , self-hosted image gallery. Ships minimal JS to the client.
 
@@ -87,9 +90,9 @@ There is another Astro theme called musee
 {{< /callout >}} -->
 
 
-2. https://github.com/AREA44/astro-multiverse?ref=statichunt.com
+2. https://github.com/AREA44/astro-multiverse
 
-> One-page gallery design with a fully functional lightbox, designed by HTML5 UP
+> CC3.0 | One-page gallery design with a fully functional lightbox, designed by HTML5 UP
 
 {{< callout type="info" >}}
 See also HUGO Theme Gallery implemented [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/) and [here](https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/)
@@ -129,7 +132,7 @@ This one could also be used for CV thanks to its work section.
 
 ### App Directory
 
-Looking for app directories or blog sections that you can filter interactively?
+Looking for **app directories** or blog sections that you can filter interactively?
 
 1. https://github.com/lukenguyen-me/astro-template-directory-website
 
@@ -158,8 +161,6 @@ This one has a blog which can be filtered per tags:
 4. https://github.com/mickasmt/astro-nomy which I tinkered with on this post and related repo
 
 > MIT | Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Open Source.
-
-
 
 ### Services
 
@@ -212,10 +213,7 @@ If you are looking to impress with a new curriculum, why not doing it as a web?
 
 > An Astro theme that replicates Linktree _and_ Linkinbio rolled in one. Optional TinaCMS on top.
 
-
-
 ### Presentations with Astro
-
 
 ### Product
 
@@ -247,16 +245,12 @@ If you are looking to impress with a new curriculum, why not doing it as a web?
 
 ### Deploy Astro
 
-
-
 <!-- ![alt text](/blog_img/web/astro-gitlab-cloudflarepages.png) -->
 
 {{< cards >}}
   {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="NGINX on VPS" image="/blog_img/web/astro-gitlab-cloudflarepages.png" subtitle="With Cloudflare" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#how-to-deploy-ssgs-link-in-bio/" title="Cloudflare x Gitlab" image="/blog_img/web/astro-gitlab-cloudflarepages.png" subtitle="Deploying Astro with CI/CD" >}}
 {{< /cards >}}
-
-
 
 ---
 
@@ -328,18 +322,19 @@ import photopost1b from '/src/assets/img_folder/image.jpg';
 ### Math Mermaid and ChartJS for Astro
 
 I discovered the following in a [gh discussion](https://github.com/withastro/starlight/discussions/1259):
-https://astro-digital-garden.stereobooster.com/recipes/math-support-in-markdown/
-https://astro-digital-garden.stereobooster.com/recipes/mermaid-diagrams-in-markdown/
+
+* https://astro-digital-garden.stereobooster.com/recipes/math-support-in-markdown/
+* https://astro-digital-garden.stereobooster.com/recipes/mermaid-diagrams-in-markdown/
 
 
 ### Astro Data Fetching
 
-https://docs.astro.build/en/guides/data-fetching/
+* https://docs.astro.build/en/guides/data-fetching/
 
 You can create a astro component: `DockerCompose.astro`
 
 
----
+---js
 // DockerCompose.astro - Fetches and displays a docker-compose.yml file
 // Usage: <DockerCompose url="URL_TO_RAW_GITHUB_CONTENT" />
 

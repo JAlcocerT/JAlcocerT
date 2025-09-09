@@ -7,6 +7,13 @@ summary: 'Interesting stuff Ive learn along the way when trying to make better W
 url: 'create-your-website'
 ---
 
+I discovered static sites thanks to using first [Flexdashboards in R language](https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/).
+
+These dashboards are consolidated into **"just" html information**, like static sites.
+
+And you bet, they are **cool and functional**. And can be deployed as a static web.
+
+
 **Icons and fonts?**
 
 * https://github.com/akveo/eva-icons
@@ -18,13 +25,14 @@ url: 'create-your-website'
 
 **Where to get Domains?**
 
-* https://developer.godaddy.com/getstarted
-* Hostinger
+If you are new and are just trying, you can get a `.fyi` or `.lol` TLD for few $.
+
 * https://porkbun.com/api/json/v3/documentation#Domain%20Pricing
 * Cloudflare domains...
 * https://account.squarespace.com/
+* https://developer.godaddy.com/getstarted
+* Hostinger
 
-If you are new and are just trying, you can get a `.fyi` or `.lol` TLD for few $.
 
 <!-- * Where to get **Free SVGs for HUGO**:
   * https://www.svgrepo.com/svg/424489/adventure-journey-location
@@ -51,11 +59,11 @@ Which **frameworks**?
 
 * https://bestofjs.org/rankings/monthly/2025/1
 
-I mean, with: HUGO, Astro, NodeJS, jekyll...
+I mean, with: HUGO, Astro, Gatsby, NodeJS, jekyll...
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-astro-as-website/" title="Astro 101 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/" title="HUGO 101 ↗" >}}
 {{< /cards >}}
 
 ```sh
@@ -70,32 +78,25 @@ sudo python3 -m http.server 80 --directory dist
 hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.11" --port=1313
 ```
 
-* https://magnus919.com/notes/embed-mastodon-shortcode/
-
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web" title="Web Related Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/StaticWebServer" title="Selfhosted Static Hosting - Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
-
 You can also put Astro/HUGO inside a container as seen:
 
-* https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs
-* https://github.com/JAlcocerT/WebGenerAItor/blob/main/docker-compose.yml
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro" title="Astro SSG | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/WebGenerAItor/blob/main/docker-compose.yml" title="Selfhosted Static Hosting - Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
 
-In case that you would like to skip the hosting cost: https://porkbun.com/products/webhosting/staticHosting
 
 And if you are new to Websites, do it (The Web [Deployment](#select-the-deployment-method)) with [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) to get a free subdomain with it.
 
 > If you come from a Data Analytics domain and this sounds too far out of reach.
 
-> > You are wrong. Specially with the vibecoding
+> > You are wrong. Specially with vibecoding.
 
-I discovered static sites thanks to using first [Flexdashboards in R language](https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/).
-
-These dashboards are consolidated into **"just" html information**, like static sites.
-
-And you bet, they are **cool and functional**.
 
 ## Features for Webs
 
@@ -107,8 +108,6 @@ And you bet, they are **cool and functional**.
 3. Internationalization (i18n)
 4. A CDN?
 5. APIs: [Forms, Newsletters](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/), email marketing...
-
-
 
 {{< details title="How to get OpenGraph - OGImage right 📌" closed="true" >}}
 
@@ -179,14 +178,15 @@ http-server -p 8000
 
 There are few [alternatives to **host a static website**](https://fossengineer.com/alternatives-for-hosting-static-websites/):
 
-* [Firebase](https://fossengineer.com/hosting-with-firebase/)
-* [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) or Gitlab Pages
-* Cloudflare: [CLI](https://fossengineer.com/hosting-with-cloudflare-pages/) or [CF connected to a GH Repo](https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/#cloudflare-pages-vs-other-free-deployment-methods)
-* AWS S3 Buckets - https://blog.cavelab.dev/2021/08/deploying-hugo-blog-to-s3/
-* Others: Vercel, Netlify,...
 * [SelfHosting Static Websites](https://fossengineer.com/hosting-static-websites/)! 
+  * [Firebase](https://fossengineer.com/hosting-with-firebase/)
+  * [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/) or Gitlab Pages
+  * Cloudflare: [CLI](https://fossengineer.com/hosting-with-cloudflare-pages/) or [CF connected to a GH Repo](https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/#cloudflare-pages-vs-other-free-deployment-methods)
+  * AWS S3 Buckets - https://blog.cavelab.dev/2021/08/deploying-hugo-blog-to-s3/
+* Others: Vercel, Netlify,... See a [benchmark of **Static Hosting**](https://simplyexplained.com/blog/benchmarking-static-website-hosting-providers/)
+  * Even the [IPFS/Web3 approach](https://jalcocert.github.io/JAlcocerT/guide-web3/)!
 
-> See a [benchmark of **Static Hosting**](https://simplyexplained.com/blog/benchmarking-static-website-hosting-providers/)
+> In case that you would like to skip the hosting cost, you can look to `https://porkbun.com/products/webhosting/staticHosting`
 
 {{< details title="Free SSG Deployment - Firebase CLI, Cloudflare Wrangler CLI...📌" closed="true" >}}
 
@@ -210,21 +210,11 @@ Alternatively, you can use [Cloudflare wrangler CLI](https://fossengineer.com/ho
 
 ### Get Better at Webs
 
-1. An overview of JS and CSS is always good!
+You can get away with [front-end](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/) only, but to do cooler functionalities you will need some [back-end](https://jalcocert.github.io/JAlcocerT/backend-alternatives/) tricks.
 
-{{< cards cols="2" >}}
-  {{< card link="https://roadmap.sh/frontend" title="Front End RoadMap" >}}
-  {{< card link="https://roadmap.sh/backend" title="Back End RoadMap" >}}
-{{< /cards >}}
-
-{{< callout type="info" >}}
-Some [**CSS**](hthttps://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/) will do the Trick. As well as [**JS** libraries](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites) like: PhotoSwipe,...
-{{< /callout >}}
-
-* https://stateofjs.com/en-US
+1. An overview of [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites) and [CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/) is always good!
 
 2. **Web Analytics**: you have **several options**, like [Umami](https://fossengineer.com/selfhosting-umami-with-docker/) or Tianji *as alternatives to Google Analytics.*
-
 
 {{% /steps %}}
 
@@ -239,6 +229,7 @@ There are [many CMS alternatives](https://jalcocert.github.io/JAlcocerT/cms-for-
 1. Payload - https://github.com/payloadcms/payload
 2. KeyStatic CMS - *As seen with Mizar landing Theme*
 3. TinaCMS
+4. DIY CMS :)
 
 ---
 
@@ -440,7 +431,6 @@ Not all the content is indexed in the same way across engines and you can miss v
 
 ```sh
 #podman run --rm -it ghcr.io/linkchecker/linkchecker:latest --verbose https://jalcocert.github.io/JAlcocerT/ > linkchecker_output.txt
-
 docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://www.example.com
 ```
 

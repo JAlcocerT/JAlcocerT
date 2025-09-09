@@ -67,6 +67,22 @@ git checkout -b business-feature
 
 This can be useful in combination with LLMs, like github copilot, to bring them context!
 
+**You can also try...**
+
+```sh
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
+git config --global user.name
+git add .
+git commit -m "Initial commit: YFinance stock analysis project"
+
+#sudo apt install gh
+gh auth login
+gh repo create py-stonks --private --source=. --remote=origin --push
+```
+
 #### Creating Releases
 
 And given a project, you can **get the latest Github release** as per:
@@ -94,7 +110,7 @@ Github Actions **MultiArch Images**:
 
 #### Github Pages
 
-https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/
+* https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/
 
 ### Gitlab
 

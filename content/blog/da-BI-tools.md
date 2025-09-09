@@ -31,7 +31,6 @@ But there are few more that you can try from your laptop:
 3. [Redash](#redash)
 4. [Grafana](#grafana)
 
-
 ## Business Intelligence and IoT 
 
 The BIA world & IoT can be bridge thanks to these visualization tools.
@@ -47,7 +46,6 @@ The BIA world & IoT can be bridge thanks to these visualization tools.
   - [Metabase Docker Hub](https://hub.docker.com/r/metabase/metabase)
   - [Static Embedding in Metabase](https://www.metabase.com/embedding-demo)
 - [Redash](https://redash.io/)
-
 
 How about **real time data analytics**?
 

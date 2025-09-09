@@ -2,7 +2,7 @@
 title: "DBs (and Tools) for the AI era"
 date: 2025-02-27T11:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","D&A","MySQL","PostgreSQL","MariaDB","Trino","Redis",]
 description: 'Setting up DataBases for Data Analytics and AI Projects.'
 url: 'setup-databases-docker'
 ---
@@ -10,18 +10,21 @@ url: 'setup-databases-docker'
 
 **Intro**
 
+A quick recap for databases for D&A people interested into SelfHosting.
 
-SQL Based:
+[SQL Based](#sql): 
 
 1. MySQL
 2. MariaDB
 3. PostgreSQL
 
-No SQL DB:
+[NoSQL DBs](#nosql):
 
 4. Mongo
 
 ## SQL
+
+The structured ones
 
 ### MySQL
 
@@ -708,13 +711,7 @@ With this code, you can push data to Kafka from your Python application.
 
 {{< /details >}}
 
-
-
 ---
-
-## Conclusions
-
-
 
 ## FAQ
 

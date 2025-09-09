@@ -6,16 +6,15 @@ sidebar:
 ---
 
 
-For [Web] or for [Data Analytics](#analytics).
+For Devs or for [Data Analytics](#analytics).
 
 Just use diagrams: *for whatever your have to explain*
 
 * https://markmap.js.org/repl
-* mermaidJS
+* MermaidJS
 
 
 ## Analytics
-
 
 * [**Big Data** Tools](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/)
 * [**GCP** 101](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)
@@ -24,16 +23,33 @@ Just use diagrams: *for whatever your have to explain*
 
 * [DA Concepts](https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/)
 
-**Languages for Data Analytics**
+**Languages for Data Analytics**: You need to understand which [databases are there](https://jalcocert.github.io/JAlcocerT/setup-databases-docker) with D&A lenses. You can also look to [DBs from BE devs side](https://jalcocert.github.io/JAlcocerT/databases-101/).
 
-* [R language Setup](https://jalcocert.github.io/JAlcocerT/r-language-101/)
-* [Getting started with Python](https://jalcocert.github.io/JAlcocerT/guide-python/)
 * [SQL for Data Analytics](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)
+* [Getting started with Python](https://jalcocert.github.io/JAlcocerT/guide-python/)
+* [R language Setup](https://jalcocert.github.io/JAlcocerT/r-language-101/)
 
-**BI Stuff**
+> You can do cool things with [Python+JSON understanding, like reading info from s3](https://jalcocert.github.io/JAlcocerT/aws-s3-python-boto-queries/#json-tools).
+
+**BI Stuff**: Get better at creating visual data stories that anyone can understand.
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#what-it-is-looker-modelling-language" title="GCP Looker | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/about-powerbi/" title="Microsoft PowerBI | Post ↗" >}}
+{{< /cards >}}
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/apps/ai-assistant.png" subtitle="For Data Analytics and SelfHosting." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/iot/grafana.png" subtitle="For Data Analytics and SelfHosting - Redash, Superset, MetaBase, Grafana..." >}}
+{{< /cards >}}
+
+
+### DSc Tools
+
+Remember, There wont be any good data science work if the **data modelling** part is not done right.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/" title="ML 101 ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-the-roc-curve-in-detail/" title="ROC Post ↗" icon="user" >}}
 {{< /cards >}}
 
 **DSc** Stuff
@@ -48,14 +64,6 @@ I also explored [NLP](https://jalcocert.github.io/JAlcocerT/nlp-tools/) and [CV]
 {{< /callout >}}
 
 
-### DSc Tools
-
-There wont be any good data science work if the **data modelling** part is not done right.
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/" title="ML 101 ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-the-roc-curve-in-detail/" title="ROC Post ↗" icon="user" >}}
-{{< /cards >}}
 
 With AI/ML you can do very cool stuff, from **AB Testing** to test new strategies, to sentiment analysis or PII detection:
 
@@ -221,5 +229,3 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 * **Mock interviews:** Practice your interview skills with a friend or mentor to get feedback and build confidence.
 
 {{< /details >}}
-
----

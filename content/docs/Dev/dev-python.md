@@ -30,6 +30,45 @@ A good readme does the trick for any project.
 
 This is a [good Python Project Readme.](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/README.md)
 
+
+
+### UV
+
+I discovered **[UV](https://github.com/astral-sh/uv) package manager** with a [DASH App](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv) which is veeery fast installing dependencies.
+
+Could not resist to add it to [this project, as an example](https://github.com/JAlcocerT/Streamlit-MultiChat?tab=readme-ov-file#getting-started)
+
+Its based on RUST:
+
+```sh
+curl -LsSf https://astral.sh/uv/0.7.7/install.sh | sh
+#cargo install --git https://github.com/astral-sh/uv uv
+uv --version #uv 0.7.7
+```
+
+```sh
+uv init
+#add dependencies
+uv add baml-py 
+#uv add streamlit-authenticator==0.1.5
+
+#uv sync
+
+#run the python app with uv as environment
+uv run app.py
+#uv run streamlit run app.py
+```
+
+Go from and to requirements.txt to uv:
+
+```sh
+#uv export --no-hashes --format requirements-txt > requirements.txt
+#uv pip freeze > requirements.txt
+#uv export --no-hashes --no-header --no-annotate --no-dev --format requirements.txt > requirements-dev.txt
+```
+
+* https://docs.astral.sh/uv/getting-started/installation/#docker
+
 ### Python Virtual Envs
 
 There are several ways to install [Python Dependencies](https://fossengineer.com/python-dependencies-for-ai/).
@@ -83,28 +122,6 @@ echo $OPENAI_API_KEY
 ```
 
 {{< /details >}}
-
-### UV
-
-I discovered **[UV](https://github.com/astral-sh/uv) package manager** with a [DASH App](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/#uv) which is veeery fast installing dependencies.
-
-Could not resist to add it to [this project, as an example](https://github.com/JAlcocerT/Streamlit-MultiChat?tab=readme-ov-file#getting-started)
-
-Its based on RUST:
-
-```sh
-curl -LsSf https://astral.sh/uv/0.7.7/install.sh | sh
-#cargo install --git https://github.com/astral-sh/uv uv
-uv --version #uv 0.7.7
-```
-
-```sh
-uv init
-uv add baml-py #or any other dependency
-#uv sync
-```
-
-* https://docs.astral.sh/uv/getting-started/installation/#docker
 
 ### Containers for Python Apps
 

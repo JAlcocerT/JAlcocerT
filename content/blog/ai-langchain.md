@@ -364,6 +364,8 @@ We have seen how to use LangChain to:
 
 {{< /details >}}
 
+
+
 Other Tools to **Chat over custom data** (and locally~) is [PrivateGPT](https://fossengineer.com/selfhosting-privateGPT/)
 
 {{< youtube "Ib3nQu5bB_k" >}}

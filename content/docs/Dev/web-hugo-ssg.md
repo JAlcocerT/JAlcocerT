@@ -124,6 +124,10 @@ Just use it like so in your markdown ,**example with the gist**:
 
 3. You can also [bring cool charts](#mermaidjs-and-chartjs), thanks to shortcodes
 
+4. Even bring mastodon info: https://magnus919.com/notes/embed-mastodon-shortcode/
+
+5. Pull info from `.yml` into your `.md` posts with [such shortcode](https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/#shortcode-to-parse-yml)
+
 ### MermaidJS and ChartJS
 
 * https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo

@@ -1,5 +1,5 @@
 ---
-title: "FrontEnd, SPAs and ways to do Auth"
+title: "FrontEnd 101. SPAs and ways to do Auth"
 date: 2025-08-23
 draft: false
 tags: ["Dev","OAuth/JWT/Bearer","Logto","PB SDK","SPAs Serverless-Invoices"]
@@ -9,7 +9,7 @@ url: 'front-end-and-auth'
 
 **TL;DR**
 
-About Front-End and how to do better auth.
+About Front-End 101 and how to do better auth.
 
 With [Selfhosted OAUTH alternatives](#conclusions) recap.
 

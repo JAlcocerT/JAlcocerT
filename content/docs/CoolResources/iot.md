@@ -3,7 +3,7 @@ title: "Tinkering with IoT"
 date: 2025-09-04T10:20:21+01:00
 draft: false
 tags: ["dev"]
-summary: 'Interesting dron stuff'
+summary: 'Interesting IoT stuff'
 url: 'cool-iot'
 ---
 

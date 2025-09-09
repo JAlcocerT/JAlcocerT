@@ -14,178 +14,15 @@ url: 'IT-concepts'
 
 ## Containers
 
-I love to use [containers for **SelfHosting**](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
 
-They allow us to package complete applications.
+They allow us to package applications completely.
 
-Making the deploy process on other servers kind of copy and paste.
-
-{{< details title="How to Setup Docker? 📌" closed="true" >}}
-
-```sh
-echo "Updating system and installing required packages..." && \
-sudo apt-get update && \
-sudo apt-get upgrade -y && \
-echo "Downloading Docker installation script..." && \
-sudo curl -fsSL https://get.docker.com -o get-docker.sh && \
-sudo sh get-docker.sh && \
-echo "Docker installed successfully. Checking Docker version..." && \
-sudo docker version && \
-echo "Testing Docker installation with 'hello-world' image..." && \
-sudo docker run hello-world && \
-echo "Installing Docker Compose..." && \
-sudo apt install docker-compose -y && \
-echo "Docker Compose installed successfully. Checking version..." && \
-sudo docker-compose --version && \
-echo "Checking status of Docker service..." && \
-sudo systemctl status docker | grep "Active" && \
-sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
-```
-
-{{< /details >}}
-
-
-{{< details title="How to Setup Podman? 📌" closed="true" >}}
-
-```sh
-echo "Updating system and installing required packages..." && \
-sudo apt-get update && \
-sudo apt-get upgrade -y && \
-echo "Installing Podman..." && \
-sudo apt-get -y install podman && \
-echo "Podman installed successfully. Checking Podman version..." && \
-podman --version && \
-echo "Testing Podman installation with 'hello-world' image..." && \
-sudo podman run hello-world && \
-echo "Installing Podman Compose..." && \
-sudo apt-get -y install podman-compose && \
-echo "Podman Compose installed successfully. Checking version..." && \
-podman-compose --version && \
-echo "Checking status of Podman service..." && \
-sudo systemctl status podman | grep "Active" && \
-sudo podman run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/podman/podman.sock:/var/run/podman/podman.sock -v portainer_data:/data portainer/portainer-ce
-```
-
-{{< /details >}}
+Making the deploy process on other servers kind of *copy and paste*.
 
 ## What it is CI/CD?
 
-### How to use Github Actions CI/CD?
 
-GitHub Actions, a **CI/CD framework** provided by GitHub, allows you to automate the build, test, and deployment processes for your software projects.
-
-
-{{< details title="About GH Actions 📌" closed="true" >}}
-
-With GitHub Actions, you can define workflows to automate tasks such as compiling code, running tests, performing code analysis, and generating build artifacts.
-
-It supports various programming languages and offers great flexibility in customizing your CI pipeline.
-
-In addition to Continuous Integration (CI), GitHub Actions also supports Continuous Deployment (CD) by integrating with different deployment strategies and environments.
-
-This allows you to automate the deployment of your application to various platforms and hosting services, such as cloud providers or dedicated servers, ensuring a seamless release process.
-{{< /details >}}
-
-This is how I've used **GH Actions in my projects:**
-
-{{< hextra/feature-grid >}}
- 
-  {{< hextra/feature-card
-    title="Streamlit MultiChat"
-    subtitle="Chat across LLM Providers with Python and Streamlit"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
-    link="https://github.com/JAlcocerT/Streamlit-MultiChat"
-  >}}
-
-  {{< hextra/feature-card
-    title="Trip Planner"
-    subtitle="Tool to simulate these projects in the browser"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
-    link="https://github.com/JAlcocerT/Py_Trip_Planner/"
-  >}}
-
-    {{< hextra/feature-card
-    title="Even the Web3 Astro Website"
-    subtitle="Use Astro with Github Actions to build Websites like a Pro"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
-    link="https://jalcocert.github.io/web3/"
-  >}}
-{{< /hextra/feature-grid >}}
-
-
-{{< callout type="info" >}}
-  Also this webpage is created with [HUGO and GH Actions!](https://github.com/JAlcocerT/JAlcocerT/blob/main/.github/workflows/pages.yaml)
-{{< /callout >}}
-
-GitHub Workflows enable automatic Docker container creation given conditions (like a new push). To start, go to your repository, click on **Actions**, and then **New workflow**.
-
-You can select a workflow template that suits your project or follow the steps below to create your own `.yml` file for CI/CD.
-
-The CI/CD workflow configuration is stored in `.github/workflows/ci_cd.yml`:
-
-```yml
-name: CI/CD Pipeline
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-```
-
-This setup prepares your Docker image.
-
-Next, you can **push the image to a container registry**, such as [GitHub Container Registry](#pushing-containers-to-ghcr) or [DockerHub](#pushing-docker-containers-to-dockerhub).
-
-### Pushing Containers to GitHub Container Registry
-
-To push the created container to GitHub Container Registry, add the following to your workflow:
-
-```yml
-    - name: Login to GitHub Container Registry
-      uses: docker/login-action@v1
-      with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.CICD_TOKEN_For_This_WF }}
-
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: true
-        tags: ghcr.io/your_github_username/your_repo_name:v1.0        
-```
-
-You’ll need a **CICD_TOKEN_For_This_WF** secret so GitHub can authenticate the action.
-
-Obtain this token from **GitHub Settings** under `Developer Settings -> Personal Access Tokens`.
-
-Next, add this token as a repository secret under `Repo Settings -> Secrets & variables -> Actions -> New repository Secret`.
-
-{{< callout type="warning" >}}
-  Ensure the secret name matches the variable used in your `.yml` configuration.
-{{< /callout >}}
-
-To make your Docker image publicly accessible, set the package visibility to public under `https://github.com/yourGHuser?tab=packages` and update the **Visibility of the Package**.
-
-Now, anyone can pull your Docker image using:
-
-```sh
-docker pull ghcr.io/your_github_username/your_repo_name:v1.0
-```
-
-### Testing GH Actions Workflows locally
+**Testing GH Actions Workflows locally**
 
 * Check the project: https://github.com/nektos/act
 
@@ -193,35 +30,27 @@ docker pull ghcr.io/your_github_username/your_repo_name:v1.0
 
 ## Coding on The Go
 
-### Github CodeSpaces
+Make sure to follow [git best](https://jalcocert.github.io/JAlcocerT/git-recap/) practices:
 
-* https://github.com/codespaces
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/codespaces" title="Github CodeSpaces ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/" title="VSCode Through Docker | Configs 🐋 ↗" >}}
+{{< /cards >}}
 
-### VSCode Through Docker
 
-### Github Authenticating
+**Github Authenticating**
 
 ```sh
 sudo apt update
 sudo apt install gh #https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
 gh auth login #you can use HTTPs
+#https://github.com/login/device and paste the Code the CLI will give you
 ```
-
-* https://github.com/login/device and paste the Code the CLI will give you
 
 ---
 
 ## Other Concepts
 
-### What are Microservices?
-
-**Microservices** are a way of structuring an application as a collection of small, independent, and loosely coupled services. 
-
-Each service is built around a specific business capability, can be developed by a small team, and is deployed independently. 
-
-They communicate with each other over well-defined APIs.
-
-> This contrasts with a **monolithic architecture**, where all the application's functions are combined into a single, indivisible unit.
 
 ### What are Web-Hooks?
 
@@ -257,11 +86,23 @@ An API call is like making a phone call to a specific service. You request the i
 * Initiation:
   * Webhook: Automatically initiated by the source system when an event occurs.
   * API Call: Manually initiated by the requesting system.
+
 * Purpose:
   * Webhook: Used for real-time notifications.
   * API Call: Used for requesting or sending data on demand.
+
 * Direction:
   * Webhook: One-way from the source to the receiver.
   * API Call: Two-way communication between the requester and the server.
 
 {{< /details >}}
+
+### What are Microservices?
+
+**Microservices** are a way of structuring an application as a collection of small, independent, and loosely coupled services. 
+
+Each service is built around a specific business capability, can be developed by a small team, and is deployed independently. 
+
+They communicate with each other over well-defined APIs.
+
+> This contrasts with a **monolithic architecture**, where all the application's functions are combined into a single, indivisible unit.

@@ -2,10 +2,12 @@
 title: "How to Query AWS s3 buckets data [with Python]"
 date: 2023-08-19
 draft: false
-tags: ["Self-Hosting","Web","Boto"]
+tags: ["D&A","Amazon s3","Boto3","Blob Storage","HDFS"]
 description: 'Understanding how to use boto to query aws s3 buckets information. Be ready for JSON.'
 url: 'aws-s3-python-boto-queries'
 ---
+
+
 
 ## Using AWS CLI
 
@@ -44,6 +46,8 @@ Make sure that you have a solid understanding about Python Dependencies and PySp
 ```sh
 pip install boto3
 ```
+
+---
 
 ## Conclusions
 
@@ -141,8 +145,11 @@ Tools like `Ajv` (for JavaScript) or schema validation libraries in other langua
 
 {{< /details >}}
 
-JSON has cemented its position as a cornerstone of modern data exchange. Its simplicity, flexibility, and broad adoption across various technologies make it a powerful tool for both development and data analytics. As data volumes continue to explode, understanding how to effectively leverage JSON and the growing ecosystem of tools around it will be crucial for unlocking valuable insights and building robust applications.
+JSON has cemented its position as a cornerstone of modern data exchange. 
 
+Its simplicity, flexibility, and broad adoption across various technologies make it a powerful tool for both development and data analytics.
+
+As data volumes continue to explode, understanding how to effectively leverage JSON and the growing ecosystem of tools around it will be crucial for unlocking valuable insights and building robust applications.
 
 ---
 
@@ -150,14 +157,67 @@ JSON has cemented its position as a cornerstone of modern data exchange. Its sim
 
 ### JSON Tools
 
-* https://emn178.github.io/online-tools/json/formatter/
+A great start is looking at [emn178 repo](https://github.com/emn178/online-tools): https://emn178.github.io/online-tools/json/formatter/
 
-See these Selfhosted solutions:
+See these Selfhosted OSS solutions to **play around with JSON**:
 
 * https://github.com/CorentinTh/it-tools
 * https://github.com/iib0011/omni-tools
 
-
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Z_Dockge/stacks/it-tools/Docker-Compose.yml" title="Selfhost IT/Omni-tols | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+
+### Blob Storage
+
+Blob storage is a **type of object storage** offered by cloud providers.
+
+It relates to S3 buckets and HDFS in that they all provide scalable, durable, and cost-effective storage for large amounts of unstructured data, but they differ in their origin and typical use cases.
+
+
+**Blob storage** (Binary Large Object storage) is a cloud service that stores massive amounts of unstructured data as "blobs" or objects. 
+
+It is the name for object storage provided by **Microsoft Azure**. Unlike traditional file systems that organize data in a hierarchical folder structure, blob storage manages data as a flat, single-level collection of objects, each with a unique key.
+
+### Relation to S3 and HDFS
+
+* **S3 (Simple Storage Service)**: S3 is the object storage service provided by **Amazon Web Services (AWS)**. It is essentially the AWS equivalent of Azure's Blob Storage. Both are massively scalable and highly durable cloud object storage solutions. They are the de facto standards for cloud data lakes. While they have different APIs and features, they serve the same fundamental purpose: storing vast amounts of unstructured data. You can think of a "blob container" in Azure as analogous to an "S3 bucket" in AWS.
+
+* **HDFS (Hadoop Distributed File System)**: HDFS is the on-premises equivalent of a distributed file system. It was designed to run on commodity hardware and is the foundational storage layer for the Apache Hadoop ecosystem. HDFS is optimized for high-throughput access to large datasets, making it ideal for big data processing frameworks like MapReduce and Spark.
+
+The key differences between them are:
+
+| Feature | HDFS | S3 & Blob Storage |
+| :--- | :--- | :--- |
+| **Environment** | On-premises, self-managed. | Cloud-based, managed service. |
+| **Scalability** | Scalable, but tied to the physical cluster size. | Massively and elastically scalable on demand. |
+| **Cost** | Upfront hardware and maintenance costs. | Pay-as-you-go, no upfront costs. |
+| **API** | POSIX-like file system API. | RESTful API (Object-based). |
+| **Latency** | Low latency for initial data access. | Higher latency for initial data access due to the REST API, but high throughput for large files. |
+| **Use Case** | Traditional big data processing (MapReduce). | Modern data lakes, cloud-native applications. |
+
+Other types of object storage systems exist, with the main ones being **MinIO** and **Ceph**. 
+
+Both are open-source, on-premises alternatives to cloud-based services like S3 and Azure Blob Storage. They are popular for those who want to build and manage their own private cloud or data lake infrastructure.
+
+### MinIO
+
+**MinIO** is a high-performance, open-source object storage system. It's designed to be lightweight and simple to deploy, often used for building private cloud storage that is compatible with the **Amazon S3 API**. 
+
+This compatibility is a major selling point, as it allows developers to use the same tools and applications for their on-premises storage as they would for S3, making it a great choice for hybrid cloud architectures.
+
+### Ceph
+
+**Ceph** is another highly scalable, open-source distributed storage system. While it can function as an object storage system, it's more of a unified storage platform that can also provide block and file storage.
+
+Ceph is known for its high scalability and resilience, making it a good choice for large-scale enterprise deployments where a single storage solution is needed for various types of data.
+
+Here's a quick comparison of the three primary object storage types:
+
+| | **Cloud-Based (S3, Azure Blob)** | **On-Premises (MinIO, Ceph)** |
+| :--- | :--- | :--- |
+| **Provider** | AWS, Microsoft Azure, Google Cloud | Open-source, self-managed |
+| **Scalability** | Massive, elastic, on-demand | Scalable, but limited by physical hardware |
+| **Cost** | Pay-as-you-go, subscription | Upfront hardware and maintenance costs |
+| **Control** | Less control over infrastructure | Full control over hardware and configuration |

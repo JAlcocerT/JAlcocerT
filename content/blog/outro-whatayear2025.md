@@ -242,8 +242,9 @@ Also, DeFi and protocols like UniSwap (v4) gave me a lot to think about:
 
 {{< /details >}}
 
-6. On the server/homelab side of the things...
+If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlcocerT/stonks/#what-is-maximum-drawdown-mdd) for stocks and tradfi, you better get away of the crypto space.
 
+6. On the server/homelab side of the things...
 
 {{< details title="FY24 vs FY25 | HomeLab 📌" closed="true" >}}
 
@@ -427,7 +428,9 @@ Kind of resonates with [process](#processes) > result.
 
 > Freedom of the press is guaranteed only to those who own one. [From Ghost CEO](https://john.onolan.org/12/), who [launched 12y ago](https://www.kickstarter.com/projects/johnonolan/ghost-just-a-blogging-platform?ref=john.onolan.org).
 
-> Data will say everything if we torture it long Enough. ~ ML and Overfitting
+> Data will say everything if we torture it long Enough. ~ [ML](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/) and Overfitting
+
+> More important of the willingness to succeed is the willingness to prepare. ~ Do, do do, results *might* go later.
 
 6. Guesstimates and [PostMortems](https://fernandocejas.com/blog/culture/2020-06-21-learn-out-of-mistakes-postmortems/)
 

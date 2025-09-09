@@ -2,7 +2,7 @@
 title: "Backends 101"
 date: 2025-09-03T23:20:21+01:00
 draft: false
-tags: ["Dev","Laravel PHP","Python BE fwks","Protected EndPoints","Database Migration","ORM","Pagination"]
+tags: ["Dev","PHP vs Python BE fwks","Protected EndPoints","Database Migration","ORM","Pagination"]
 url: 'backend-alternatives'
 description: 'Backend 101 for your SaaS'
 ---
@@ -10,7 +10,12 @@ description: 'Backend 101 for your SaaS'
 
 **Tl;DR**
 
-Im just grasping the surface of BE and want to see high level what each framework can do.
+Im *just grasping* the surface of BE development and want to see high level what each framework can do.
+
+{{< cards cols="2" >}}
+  {{< card link="https://roadmap.sh/frontend" title="Front End RoadMap ↗" >}}
+  {{< card link="https://roadmap.sh/backend" title="Back End RoadMap ↗" >}}
+{{< /cards >}}
 
 Because its not all about Python, but [others PHP driven](#laravel-101) can do cool stuff.
 

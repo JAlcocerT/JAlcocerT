@@ -191,6 +191,27 @@ ls -lh stock_cache.db
 sqlite3 stock_cache.db "SELECT name FROM sqlite_master WHERE name LIKE 'stock_data_%';"
 ```
 
+![SQLite Database Browser - sqlitebrowser"](/blog_img/entrepre/public-build/pystonks/dbbrowser-sqlite-pystonks.png)
+
+{{< details title="Explore your sqlite with these tools 📌" closed="true" >}}
+
+* [ChartDB](https://github.com/chartdb/chartdb) - Database diagrams editor that allows you to visualize and design your DB with a single query.
+
+* [SQLiteViz](https://github.com/lana-k/sqliteviz)
+* [SQliteBrowser](https://github.com/sqlitebrowser/sqlitebrowser)
+
+> See also dbcode for vscode and other UI tools for DBs on [this post](https://jalcocert.github.io/JAlcocerT/databases-101/#database-management--gui-tools)
+
+{{< /details >}}
+
+```sh
+#query directly to the stock_cache.db object one you selected it from the UI
+SELECT name FROM sqlite_master WHERE name LIKE 'stock_data_%';
+SELECT * from stock_data_KO;
+```
+
+![SQliteBrowser sample table created from yfinance data](/blog_img/entrepre/public-build/pystonks/sqlitebrowser-pystonks-yfinance.png)
+
 #### Streamlit
 
 Because im comfortable with st for quick POCs and test the graphs/data structure.
