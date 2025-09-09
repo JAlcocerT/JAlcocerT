@@ -762,8 +762,7 @@ This category compares the tools used by end-users to create dashboards and repo
 
 Apache Iceberg and Project Nessie are key components of a modern, open-source data lakehouse architecture. They don't fit neatly into the previously defined categories because they represent a different layer of the stack: **the table format and the catalog**.
 
-
-This category compares the tools that bring structure, transactions, and version control to a data lake.
+See the tools that bring structure, transactions, and version control to a data lake.
 
 | Criterion | **Apache Iceberg** | **Project Nessie** |
 | :--- | :--- | :--- |
@@ -785,6 +784,7 @@ Project Nessie and Apache Iceberg are designed to work very well together, and N
 * **Apache Iceberg:**
     * This is a table format for massive analytic datasets. It brings table-like capabilities to data lakes, enabling features like ACID transactions, schema evolution, and time travel.
     * Essentially, Iceberg helps organize your data lake into tables that behave more like traditional database tables.
+
 * **Project Nessie:**
     * Nessie provides Git-like version control for your data lake. It allows you to create branches, commits, and tags for your data, making it easier to manage changes and collaborate.
     * In the context of Iceberg, Nessie acts as a catalog that tracks the metadata of your Iceberg tables. This allows you to version the state of your tables, not just the underlying data files.
@@ -1209,7 +1209,9 @@ This is the fundamental trade-off between the two formats and is directly tied t
 
 **Avro (Row-Oriented)**
 
-Avro stores data records row by row. This structure is ideal for **fast writes** and data serialization because it allows you to write an entire record to a file in a single operation. Avro is typically used in scenarios where writes are frequent and real-time, and data needs to be easily and reliably exchanged between different systems. This makes it a great fit for a data lake's **ingestion or raw layer**, especially in streaming and messaging pipelines.
+Avro stores data records row by row. This structure is ideal for **fast writes** and data serialization because it allows you to write an entire record to a file in a single operation. 
+
+Avro is typically used in scenarios where writes are frequent and real-time, and data needs to be easily and reliably exchanged between different systems. This makes it a great fit for a data lake's **ingestion or raw layer**, especially in streaming and messaging pipelines.
 
 Here are the primary use cases for Avro:
 

@@ -3,7 +3,7 @@ title: "AI|BI Tools and PoCs with PyGWalker"
 date: 2025-05-22T00:20:21+01:00
 draft: false
 tags: ["Dev","D&A","Career","Streamlit PoCs","uv","Business Intelligence"]
-description: 'BI/AI combo and more D&A Tools. Streamlit PoC Dashboards with PyGWalker and data stories!'
+description: 'BI/AI combo and more D&A Tools. Streamlit Quick PoC Dashboards with PyGWalker and data stories!'
 url: 'ai-bi-tools'
 ---
 

@@ -18,7 +18,7 @@ Creating a py_stocks v2.0
 +++ Got to know few very logical concepts, like the [drawdown (MDD)](#what-is-maximum-drawdown-mdd).
 
 {{< callout type="warning" >}}
-This is just a tech related post. Dont use it as financial advice of any type.
+This is just a tech related post where i share my learning journey. **Dont use it as financial advice of any type.**
 {{< /callout >}}
 
 **Intro**
@@ -61,7 +61,7 @@ Now, with Py_Stonks i want to put together all the Python Web App and back-end s
 And create a kind of **blueprint for secure web apps with few authentication methods**: *at least as of my knowledge in sept2025*.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Stonks" title="NEW Python Py Stocks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PyStocks WebApp and ipynb with Yfinance Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Stonks" title="NEW Python Py Stonks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PyStocks WebApp and ipynb with Yfinance Source Code on Github" >}}
 {{< /cards >}}
 
 Im just taking ideas from these 2 + combining them with auth stuff Ive learnt in the meantime.
@@ -106,15 +106,21 @@ How could I not get started with `.ipynb` and a venv.
 
 Its not been the first time to tinker with yfinance, but now is the first time ive done so via **windsurf and claude 4**.
 
-And with one prompts I was gettings this...
+I created some `yfinance-10*.ipynb` files to make sure I dont need to go back and see how to pull prices and dividends from the API.
+
+And with one prompts I was gettings this: *via `yfinance-104.ipynb`*
 
 ![alt text](/blog_img/entrepre/public-build/pystonks/eda-stonks.png)
+
+> Isnt it cool to share on forums?
 
 Then quickly after put this [HLD of the architecture via mermaid](https://mermaid.live/edit#pako:eNqNVFtvmzAY_SvIz22VNHceJjkE0m5pywqK2jl7cMEFVGJHxkjtqv73fcbpaiedNiQu3znnu9gceEWZyBnyUSHprvTS-YZ7cDTtgwE2aEEV9RLRyow1G2RofdxH5J6WQnhRxSnPmIfjy58fNF4TXO9K6q0pV7Q4pMO7lITPiklOa001e47x3Dx8PseSqpLJihfeir4wac-zWJIDyZXI25pZTQMcXIQkoFnJvCvKYSppsWu8MhXWtK5yqoT8v5liKWBrms-Hismh5niqVYivjSyoGeXOUGkYXJCUZSWvMtipS57DHUZrLE18c5uSWEj1KOpKeBi29EVVmS1Jb_F1YnqkkvLmUcgtc4rg5ZLgopCssMv_Y-kJSPW7PV73vtleYK82WRM4wTU1s_t_TW6uib4cMeFdEK7ALBmrj7jk-4rA6elmD7SxGyUXYZgmZClEUTMvKRlTzqbNYcuyJ6bmH2l_Xy3e7Wq98ZXgx4uNVjj5RqKaNk8eCO0ZUpIoyei2rtQBFWEgI9ooML9FWSPYo9xH3unpF_C4CfHaCeFjcmJzXSw7sDO9g4DRTdxRJjM2CFBOvM-LTSVtVAfR7nQAbUVXoY3nIGA0u3ZX1PTc63RRB9BFXYUu6iBQ1In3HY0I7ObE2mUO0DnMQcBTbtyZyYHiubOMxLySzgsG6szcJafvrwnaGBV-x7R5D_JMLycznv9JQyfwq65y5CvZshMEX_GW6hC9aukGwc9vyzbIh8ecyift0zfI2VH-Q4jte5oUbVEi_5HWDUTtDn53bFFRsPuHBKzIZCBarpDfH466Gsh_Rc_IHwzPBpNBbzYejse98VCTL8gf9s7GvVl_0JuOZoPJ6O0E_epa9s6ms_50NJ3AOZr0z8-Hb78B0YvJQw)
 
 > Claude recommended me to bring also Alpha Vantage API 
 
-> > I wanted to keep it simple for now :)
+
+{{< details title="About Alpha Vantage API 📌" closed="true" >}}
+
 
 Free Tier
 - **5 API calls per minute**
@@ -149,6 +155,11 @@ Recommendation for Your Project
 - Economic indicators (GDP, inflation, etc.)
 - Higher reliability guarantees
 
+{{< /details >}}
+
+> > I wanted to keep it simple for now and continued with YFinance only
+
+
 ##### YFinance Tricks
 
 Typical indexes are called like `^GSPC` (Sp500).
@@ -156,6 +167,7 @@ Typical indexes are called like `^GSPC` (Sp500).
 It's important to note that there are two main Nasdaq indices:
 
 * **Nasdaq Composite `^IXIC`:** This is the most well-known Nasdaq index. It includes all stocks listed on the Nasdaq stock market, which number over 3,000.
+
 * **Nasdaq 100 `^NDX`:** This index tracks the 100 largest non-financial companies listed on the Nasdaq. It's often used as a benchmark for technology and growth-oriented stocks.
 
 
@@ -167,9 +179,11 @@ But realiable.
 
 So have separated the logic for:
 
-1. Data adquisition from yfinance (gathering)
-2. The data processing to cleanup etc
+1. Data adquisition from yfinance: `./data-gathering`
+2. The data processing to cleanup etc `./data-processing`
 3. The data storage: *that it could have been csv or google sheets...but as im planning to move closer to PB, I started directly with .sqlite*
+
+#### Data Storage in sqlite
 
 ```sh
 #sudo apt install sqlite3
@@ -214,9 +228,9 @@ SELECT * from stock_data_KO;
 
 #### Streamlit
 
-Because im comfortable with st for quick POCs and test the graphs/data structure.
+Because im comfortable with [streamlit for quick POCs](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) and test the graphs layout / data structure.
 
-In general, with streamlit you can quickly see if the data adquisition, processing and storage/retrieval from the DB is working or not.
+In general, with streamlit you can quickly see if the data adquisition, processing and [storage/retrieval from the DB](#data-storage-in-sqlite) is working or not.
 
 ```sh
 uv init
@@ -320,9 +334,11 @@ uv run python app-flask.py  # Already running at port 5000
 
 So it was pretty straight forward to arrive to this:
 
-![alt text](/blog_img/entrepre/public-build/pystonks/CumReturns-MDD.png)
+![Flask UI Sample cum returns and mdd graphs](/blog_img/entrepre/public-build/pystonks/CumReturns-MDD.png)
 
-**Key Insights 💡** For any time doing `Streamlit -> Flask` you can find on [this .md](https://github.com/JAlcocerT/py-stonks/blob/main/z_st2flask.md)
+**Key Insights 💡** 
+
+For any time doing `Streamlit -> Flask` you can find on [this .md](https://github.com/JAlcocerT/py-stonks/blob/main/z_st2flask.md)
 
 1. Why This Migration is Easy
 
@@ -354,6 +370,89 @@ docker inspect pystonks-app-streamlit --format '{{json .NetworkSettings.Networks
 {{< callout type="warning" >}}
 Remember about the **Regression to the mean**, see SP500 vs Dividend Aristocrats
 {{< /callout >}}
+
+
+#### FastAPI x PyStonks Sqlite
+
+How about exposing the pulled data into some REST endpoints?
+
+```sh
+#uv add fastapi uvicorn
+uv run app-fastapi.py
+```
+
+> Go to `http://localhost:8000/`
+
+Thanks to FASTAPi, we have a REST API that exposes all your SQLite stock data tables.
+
+🚀 **Key Features:**
+
+**📊 Database Integration**
+- Connects to your existing `data-storage/stock_cache.db`
+- Exposes all stock data tables (one per ticker as per your caching design)
+- Handles cache metadata and statistics
+
+**🔗 API Endpoints:**
+- **`GET /`** - API overview and endpoint documentation
+- **`GET /health`** - Database connection health check
+- **`GET /tables`** - List all SQLite tables with row counts and columns
+- **`GET /tables/{table_name}`** - Query specific table with filtering
+- **`GET /stocks`** - List all available stock symbols with date ranges
+- **`GET /stocks/{symbol}`** - Get stock data with statistics
+- **`GET /export/{symbol}`** - Export data as JSON or CSV
+- **`GET /cache/status`** - Cache database statistics and metadata
+
+**🎯 Query Features:**
+- Date range filtering (`start_date`, `end_date`)
+- Pagination (`limit`, `offset`)
+- Format selection (JSON/CSV export)
+- Basic statistics (latest close, highs, lows, volume)
+
+📖 **Interactive Documentation:**
+- **Swagger UI**: http://localhost:8000/docs
+- **ReDoc**: http://localhost:8000/redoc
+
+![FastAPI ](/blog_img/entrepre/public-build/pystonks/fastapi-swagger.png)
+
+🔧 **Example API Calls:**
+```bash
+# List all available stocks
+curl http://localhost:8000/stocks
+
+# Get AAPL data (last 50 records)
+curl http://localhost:8000/stocks/AAPL?limit=50
+
+# Export KO data as CSV
+curl http://localhost:8000/export/KO?format=csv
+
+# Get cache status
+curl http://localhost:8000/cache/status
+```
+
+The API perfectly complements your existing SQLite caching system, providing programmatic access to all your cached stock data while maintaining the one-table-per-ticker architecture you implemented.
+
+What's so cool about it?
+
+That we can query now the sqlite data via: `yfinance-201.ipynb`
+
+```sh
+# Define the URL of your API endpoint
+api_url = "http://localhost:8000/export/KO?format=csv"
+import pandas as pd 
+import matplotlib.pyplot as plt
+
+
+# Read the CSV data directly into a pandas DataFrame
+try:
+    df = pd.read_csv(api_url)
+    print("Data loaded successfully!")
+    print(df.head())
+except Exception as e:
+    print(f"An error occurred: {e}")
+    # You might want to handle specific HTTP errors here
+```
+
+![Matplotlib of sqlite pulled data via fastapi into ipynb](/blog_img/entrepre/public-build/pystonks/fastapi-sqlite-ipynb-plot.png)
 
 
 ### Astro x Data x ChartJS
@@ -396,9 +495,34 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 ### On Demand Data Animations
 
-https://jalcocert.github.io/JAlcocerT/animations-as-a-code/
+
+{{< callout type="info" >}}
+These are pulling from the .sqlite already instead of yfinance --To force me maintaining the project
+{{< /callout >}}
+
+Just within the `./z-eda-yfinance`, I used the good structure to create cool summaries for stocks:
+
+```sh
+
+```
+
+As well as animations with matplotlib: 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/animations-as-a-code" title="Animations as a Code | Post" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Posting to Twitter or Youtube those animations 101." >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Data In Motion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Generating mp4 animations with Matplotlib and Python..." >}}
+{{< /cards >}}
+
+```sh
+git clone https://github.com/JAlcocerT/DataInMotion
+```
+
 
 ### Data Driven eBook
+
+This is something to consider.
+
+Specially after having some thoughts places on [ebook as a code post](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/).
 
 
 ---

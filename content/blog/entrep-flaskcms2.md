@@ -1,8 +1,8 @@
 ---
 title: "FlaskCMS v0.2"
-date: 2025-09-09
+date: 2025-09-09T23:20:21+01:00
 draft: false
-tags: ["Astro x Flask","Markdown editors","Cursor and AppImageLauncher","Stacer"]
+tags: ["Astro x Flask","Markdown editors","Cursor MCP and AppImageLauncher","Stacer","Temporal io"]
 description: 'Markdown and Flask working together.'
 url: 'flask-cms-for-ssgs'
 ---
@@ -101,7 +101,11 @@ sudo apt-get install stacer
 
 > What if your code was crash-proof?
 
-Temporal.io is an open-source platform that enables the creation of **durable and reliable distributed applications**. It acts as a workflow orchestration engine, allowing developers to write complex, long-running business processes as code in standard programming languages like Go, Java, Python, and TypeScript.  The platform handles the complexities of state management, retries, and failure recovery, essentially allowing you to write your application logic as if system failures don't exist.
+Temporal.io is an open-source platform that enables the creation of **durable and reliable distributed applications**.
+
+It acts as a workflow orchestration engine, allowing developers to write complex, long-running business processes as code in standard programming languages like Go, Java, Python, and TypeScript.
+
+The platform handles the complexities of state management, retries, and failure recovery, essentially allowing you to write your application logic as if system failures don't exist.
 
 ---
 
@@ -126,7 +130,11 @@ In traditional microservices architecture, orchestrating a complex, multi-step b
 * **Failure Recovery**: Implementing logic to handle partial failures and resume a process from where it left off.
 * **Distributed Transactions**: Coordinating a series of operations across multiple services to ensure atomicity.
 
-Temporal simplifies these issues by providing a platform that handles them out-of-the-box. If an activity fails, Temporal automatically retries it according to a predefined policy. If a worker process crashes, the workflow state is preserved, and a new worker can resume the execution from the last successful step. This shifts the focus from building complex plumbing for reliability to simply writing the business logic.
+Temporal simplifies these issues by providing a platform that handles them out-of-the-box. 
+
+If an activity fails, Temporal automatically retries it according to a predefined policy. If a worker process crashes, the workflow state is preserved, and a new worker can resume the execution from the last successful step.
+
+This shifts the focus from building complex plumbing for reliability to simply writing the business logic.
 
 ---
 

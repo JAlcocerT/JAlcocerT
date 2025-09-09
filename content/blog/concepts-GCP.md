@@ -2,10 +2,14 @@
 title: "A closer look to Google Cloud Platform"
 date: 2025-02-16
 draft: false
-tags: ["Dev","BQ","Looker","Green vs Brown Field","lkml"]
+tags: ["D&A","BQ","Looker","Green vs Brown Field","lkml"]
 description: 'Big Query, Dataform and more about GCP. Compared with other Clouds and OnPrem.'
 url: 'understanding-google-cloud-platform'
 ---
+
+**Tl;DR**
+
+You might find this kind of [GCP Big Data Stack](#gcp-data-stack-in-action).
 
 **Intro**
 
@@ -48,21 +52,21 @@ Just with the services having a different names: https://console.cloud.google.co
 Google Dataform is **a data engineering tool**. 
 
 * **Purpose:**
-    * It's a service for developing, testing, and deploying data transformations within Google Cloud's BigQuery.
-    * It helps you manage complex SQL-based data pipelines.
+    * It's a service for developing, testing, and **deploying data transformations within Google Cloud's BigQuery**.
+    * It helps you manage complex **SQL-based** data pipelines.
     * It enables version control, collaboration, and automated testing of your data transformations.
 * **Key Features:**
     * **SQLX: A SQL extension for defining data transformations**.
     * Dependency management: Automatically handles the order of execution of your SQL queries.
     * Testing: Allows you to write tests to ensure the accuracy of your data.
-    * Version control: Integrates with Git for collaborative development.
+    * Version control: Integrates with Git for collaborative development. *You might use Github to sync your dataform sqlx files.*
     * Scheduling: Allows for the scheduling of data pipeline executions.
 * **Use Cases:**
     * Building data warehouses and data marts.
     * Performing data transformations for analytics and reporting.
     * Automating data pipelines.
 
-{{< details title="More about SQLX 📌" closed="true" >}}
+{{< details title="More about SQLX and Dataform/BQ 📌" closed="true" >}}
 
 SQLX, the extension to SQL used by Google Dataform, allows you to embed JavaScript within your SQL files. 
 
@@ -80,7 +84,7 @@ Here's a basic idea of how it works:
 
 **Example:**
 
-```sqlx
+```sql
 /* my_table.sqlx */
 
 {{
@@ -106,7 +110,64 @@ In this example:
 * **Reusability:** JavaScript functions can be reused across multiple SQLX files, reducing code duplication.
 * **Dynamic SQL Generation:** You can generate SQL queries dynamically based on parameters or conditions.
 
-This capability makes SQLX and Google Dataform very powerful tools for data engineering.
+> This capability makes SQLX and Google Dataform very powerful tools for data engineering.
+
+**Remember**
+
+BigQuery 📊
+
+BigQuery is a **serverless data warehouse** from Google Cloud. It's used for storing and analyzing massive datasets using standard SQL. It's a fundamental part of the modern data stack.
+
+SQL Files (.sql)
+
+These are plain text files that contain standard SQL code. You can write your BigQuery queries in a `.sql` file. They don't have any special functionality—they're just a way to save and organize your queries.
+
+Dataform (.sqlx)
+
+Dataform is a **data transformation tool** in Google Cloud. Its job is to manage your data pipeline within BigQuery. 
+
+You write your SQL transformations in files with the **`.sqlx`** extension.
+
+The `.sqlx` file contains your SQL query plus a configuration block that tells Dataform what to do with the query (e.g., create a table, a view, etc.).
+
+Dataform handles:
+* **Orchestration:** Running your queries in the correct order based on dependencies.
+* **Version Control:** Integrating with Git to track changes to your code.
+* **Scheduling:** Running your pipeline on a schedule.
+
+
+Remember not to confuse it with the SQLX (Rust Library)!!!
+
+* **BigQuery** is the database you're querying.
+* You use **SQL files** or **.sqlx files** to write the queries you want to run.
+* **Dataform** is the tool you use to manage, orchestrate, and deploy your SQL code to BigQuery. It uses the **`.sqlx`** file extension, but this is unrelated to the Rust library.
+* **ORM** is a general concept for application developers, not data engineers.
+* The **SQLX** library is a specific ORM for the Rust programming language, completely unrelated to Dataform or your BigQuery workflow.
+
+Dataform's `.sqlx` files are not JavaScript. 
+
+They are a combination of standard SQL and a small configuration block written in **JavaScript** syntax. This is a key detail.
+
+You're correct that Dataform acts like Airflow but is specifically designed for SQL transformations within BigQuery.
+
+**Dataform and JavaScript**
+
+While the core of your work in Dataform is writing SQL, the tool itself uses JavaScript in two main ways:
+
+* **Configuration Blocks:** At the top of each `.sqlx` file, you add a `config { ... }` block. This block uses JavaScript object notation to define settings for the table or view you're creating. It's how you tell Dataform whether to create a table, a view, or a specific type of incremental table.
+* **Reusable Code:** Dataform has a feature called **includes** that allows you to write reusable SQL snippets or functions using JavaScript. For example, you can write a JavaScript file to dynamically generate parts of your SQL query, which can make your code more modular and easier to maintain.
+
+Dataform is built on a JavaScript framework, and it compiles your `.sqlx` files into standard SQL. 
+
+You don't need to be a JavaScript expert to use Dataform, as most of your work will still be in SQL.
+
+**Dataform vs. Airflow**
+
+They both orchestrate data pipelines, but they operate at different levels:
+
+* **Airflow** is a general-purpose, **language-agnostic** orchestrator. It's built in Python and can manage workflows that involve Python scripts, shell commands, and various other tasks. Airflow is very flexible, but this flexibility comes with higher complexity and maintenance overhead.
+
+* **Dataform** is a specialized, **SQL-native** orchestrator built for BigQuery. It's simpler to use and maintain because it's focused on one specific task: running SQL transformations. It handles the dependencies and execution plan automatically, so you don't need to write complex orchestration logic.
 
 {{< /details >}}
 
@@ -116,24 +177,41 @@ Finding a single, perfect open-source equivalent to Dataform is tricky because D
 
 However, here are some key open-source tools that provide similar capabilities:
 
-* **dbt (data build tool):**
-    * This is the closest open-source equivalent.
+1. **dbt (data build tool):**
+    * This is the closest open-source equivalent: *Both tools are designed to do the same thing: transform data in a data warehouse using SQL.*
     * It focuses on data transformations within data warehouses (like BigQuery, Snowflake, and Redshift).
     * It uses **SQL and Jinja templating** for defining transformations.
     * It also supports testing and documentation.
-* **Apache Airflow:**
+
+{{< details title="More about DBT 📌" closed="true" >}}
+
+They share a similar core philosophy:
+
+* **SQL-first:** They both let you define your data models and transformations using only SQL.
+* **Declarative:** You define the desired state of your data, and the tool figures out the dependencies and execution plan.
+* **Version control:** Both are designed to be used with Git, allowing you to track changes to your data models.
+* **Modularity:** They both encourage you to break down your transformations into smaller, reusable pieces (models).
+
+The main difference is that dbt is platform-agnostic, meaning it can connect to various data warehouses like BigQuery, Snowflake, or Redshift. Dataform, on the other hand, is a native Google Cloud service built specifically for BigQuery.
+
+{{< /details >}}
+
+2. **Apache Airflow:**
     * This is a workflow orchestration tool that can be used to build and manage complex data pipelines.
     * It allows you to define dependencies between tasks and schedule their execution.
     * While not focused exclusivly on SQL transformation, it is very good at orchestrating those transformations.
-* **SQLMesh:**
+
+3. Others:
+
+* SQLMesh:
     * SQLMesh is an open-source data transformation framework that enables collaborative development and simplified operation of data pipelines.
     * It handles incremental data transformations, data quality testing, and environment promotions.
-* **Prefect:**
+* Prefect:
     * Prefect is a modern workflow orchestration tool designed to make it easy to build, run, and monitor data pipelines. It has a focus on dynamic workflows.
 
-In essence, Dataform is a managed service that simplifies the process of building and managing data transformations in BigQuery.
+> In essence, Dataform is a managed service that simplifies the process of building and managing data transformations in BigQuery.
 
-> **dbt is the strongest open source competitor**, and airflow is the strongest open source competitor for the orchestration portion of dataform.
+> > **dbt is the strongest open source competitor**, and airflow is the strongest open source competitor for the orchestration portion of dataform.
 
 
 {{< details title="More about Jinja for DBT 📌" closed="true" >}}

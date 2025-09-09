@@ -13,15 +13,33 @@ Just use diagrams: *for whatever your have to explain*
 * https://markmap.js.org/repl
 * MermaidJS
 
-
 ## Analytics
 
 * [**Big Data** Tools](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/)
 * [**GCP** 101](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)
 
+
+| Category | Tools | Description |
+| :--- | :--- | :--- |
+| **Data Orchestration & Transformation** | **dbt**, **Dataform**, **Airflow** | These tools manage the "T" (Transformation) in ELT/ETL. They define, schedule, and execute data pipelines. Dataform is BigQuery-native, while dbt and Airflow are platform-agnostic. |
+| **Cloud Data Warehouses** | **BigQuery**, **Snowflake**, **Redshift**, **Azure Synapse Analytics** | These are highly scalable, serverless, or managed databases designed for analytical workloads over massive datasets. They are the destination for your data and the environment where your transformation tools run. |
+| **Business Intelligence (BI)** | **Looker**, **Tableau**, **Power BI** | These are tools used to visualize and analyze data from the data warehouses. They are often the final destination for data, used by business teams to create reports and dashboards. |
+
+
 **Data Modelling**
 
 * [DA Concepts](https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/)
+
+| Feature | OLTP (Online Transaction Processing) ✍️ | OLAP (Online Analytical Processing) 📊 |
+| :--- | :--- | :--- |
+| **Primary Use Case** | Handles real-time, day-to-day transactions, like an e-commerce order or a banking withdrawal. | Analyzes historical data for business intelligence and strategic reporting. |
+| **Data Model** | **Highly Normalized** (e.g., Third Normal Form - **3NF**). Data is stored with minimal redundancy to ensure data integrity. | **Denormalized**. Data is duplicated and flattened across tables to minimize joins and optimize for reading. |
+| **Schema Design** | **3NF**. Tables are broken down into small, related pieces. | **Star Schema** or **Snowflake Schema**. Data is organized into fact tables (metrics) and dimension tables (attributes). |
+| **Typical Operations** | High volume of short, atomic transactions (`INSERT`, `UPDATE`, `DELETE`). | High volume of large, complex queries (`SELECT`) with extensive aggregations. |
+| **Read vs. Write** | **Write-heavy**. The focus is on fast, reliable data entry. | **Read-heavy**. The focus is on fast data retrieval and analysis. |
+| **Query Type** | Simple, predefined queries (e.g., fetching a single customer record by ID). | Complex, ad-hoc queries (e.g., "What was our total revenue per region last quarter?"). |
+| **Performance Metric** | Transactions per second (TPS). The goal is to process as many transactions as possible. | Query latency. The goal is to return analytical results as quickly as possible. |
+| **Data Volume** | Small records, frequently accessed and updated. | Large volumes of historical data, often loaded in batches. |
 
 **Languages for Data Analytics**: You need to understand which [databases are there](https://jalcocert.github.io/JAlcocerT/setup-databases-docker) with D&A lenses. You can also look to [DBs from BE devs side](https://jalcocert.github.io/JAlcocerT/databases-101/).
 
@@ -29,7 +47,137 @@ Just use diagrams: *for whatever your have to explain*
 * [Getting started with Python](https://jalcocert.github.io/JAlcocerT/guide-python/)
 * [R language Setup](https://jalcocert.github.io/JAlcocerT/r-language-101/)
 
+**Query Engines**
+
+Query engines are software systems designed to run SQL queries or similar data processing commands. They are the "brains" that execute the logic you write, often over large datasets.
+
+
+| Name | Type | Key Features | Primary Use Case |
+| :--- | :--- | :--- | :--- |
+| **Trino (formerly PrestoSQL)** | Distributed SQL Query Engine | Fast, federated queries, open source | Ad-hoc analytics over diverse data sources (data lake, databases) |
+| **Apache Spark** | Distributed Data Processing Engine | In-memory processing, supports multiple languages (Python, Scala) | Complex ETL, machine learning, large-scale data processing |
+| **Apache Hive** | Data Warehouse Software | SQL-on-Hadoop, converts SQL to MapReduce/Spark jobs | Querying structured data stored in HDFS |
+| **Dremio** | Data Lakehouse Platform | SQL engine with a data virtualization layer | Self-service BI and analytics directly on data lakes |
+| **BigQuery (as an engine)** | Serverless MPP Engine | Massively Parallel Processing, optimized for analytical queries | High-performance analytics on massive datasets |
+
+> Massively Parallel Processing engine. It's a type of architecture designed to run a single, large query or job across many different computing nodes at the same time
+
+
+{{< details title="How They Compare 📌" closed="true" >}}
+
+
+* **Pyspark and Spark:** PySpark is just the Python API for Apache Spark. Spark is a powerful, general-purpose engine. It's not just a query engine; it can run complex code in Python, Scala, and Java. It's often used for intricate ETL jobs and machine learning pipelines.
+* **Trino:** Trino is a pure SQL query engine. Its main strength is **federated queries**, meaning it can query data across multiple systems (like an AWS S3 data lake, a MySQL database, and a PostgreSQL database) as if they were all in one place.
+* **BigQuery:** While BigQuery is a data warehouse, its underlying engine is a key example of a modern, serverless query engine. It's designed to be incredibly fast and scalable for analytical queries.
+* **Hive:** Hive was one of the first SQL-on-Hadoop engines. It's a key part of the older Hadoop ecosystem but is often being replaced by faster engines like Spark and Trino.
+
+You can think of it this way: a tool like **dbt** or **Dataform** generates and submits SQL, and a **query engine** like BigQuery, Spark, or Trino is the one that actually runs it and performs the computation.
+
+{{< /details >}}
+
+
+**Orchestration Tools**
+
+Data orchestration is the automated management, scheduling, and monitoring of data-related tasks to build a cohesive data pipeline. 
+
+It ensures that complex workflows run in the correct sequence, handle failures, and provide visibility into the entire process.
+
+
+| Name | Type | Key Features | Ideal For |
+| :--- | :--- | :--- | :--- |
+| **Apache Airflow** | Open-Source Orchestrator | Written in Python, defines workflows as Directed Acyclic Graphs (DAGs). Large community and extensive ecosystem of operators for integrations. | General-purpose orchestration, complex pipelines with diverse tasks, and custom logic. |
+| **Dataform** | Google Cloud Native Service | SQL-native, built specifically for orchestrating transformations within BigQuery. Manages dependencies and version control. | Data teams working exclusively with BigQuery for SQL transformations. |
+| **Dagster** | Modern Python Orchestrator | Asset-based approach, focusing on the data objects (assets) created by a pipeline. Strong emphasis on observability, testing, and data quality. | Data teams who prioritize data lineage, asset management, and robust testing. |
+| **Prefect** | Modern Python Orchestrator | Dynamic workflows that adapt to data and conditions. Known for its "negative engineering" philosophy, which focuses on handling failures gracefully. | Data teams needing flexible, event-driven pipelines and resilient error handling. |
+| **GCP Cloud Composer** | Managed Airflow Service | A fully managed version of Apache Airflow on Google Cloud. Handles infrastructure, upgrades, and scaling automatically. | Teams that want to use Airflow without the overhead of managing the infrastructure. |
+| **AWS Step Functions** | Managed AWS Service | State-based workflow orchestration. Defines workflows as a series of steps in a visual editor or JSON. | Orchestrating tasks across different AWS services and building serverless data pipelines. |
+
+Azure Data Factory (ADF) is a **cloud-native ETL/ELT service** within the Microsoft Azure ecosystem. It's a fully managed, serverless platform designed for orchestrating and automating data movement and transformation at scale.
+
+ADF is a key part of the Azure data stack, much like Dataform is for Google Cloud. Its primary appeal is its visual, low-code interface and deep integration with other Azure services.
+
+
+| Name | Type | Key Features | Ideal For |
+| :--- | :--- | :--- | :--- |
+| **Azure Data Factory** | Cloud-native ETL/ELT Service | Serverless, managed, and features a visual, drag-and-drop interface with over 90 built-in connectors. | Teams operating within the Azure ecosystem, particularly those who prefer a graphical interface over writing code for pipeline orchestration. |
+| **Apache Airflow** | Open-Source Orchestrator | Written in Python, defines workflows as Directed Acyclic Graphs (DAGs). Large community and extensive ecosystem of operators for integrations. | General-purpose orchestration, complex pipelines with diverse tasks, and custom logic. |
+| **Dataform** | Google Cloud Native Service | SQL-native, built specifically for orchestrating transformations within BigQuery. Manages dependencies and and version control. | Data teams working exclusively with BigQuery for SQL transformations. |
+| **Dagster** | Modern Python Orchestrator | Asset-based approach, focusing on the data objects (assets) created by a pipeline. Strong emphasis on observability, testing, and data quality. | Data teams who prioritize data lineage, asset management, and robust testing. |
+| **Prefect** | Modern Python Orchestrator | Dynamic workflows that adapt to data and conditions. Known for its "negative engineering" philosophy, which focuses on handling failures gracefully. | Data teams needing flexible, event-driven pipelines and resilient error handling. |
+
+{{< details title="ADF vs Airflow | ADF vs (dbt and dataform) 📌" closed="true" >}}
+
+The choice between a tool like Azure Data Factory and a more code-based tool like Airflow depends on your team's skills and your cloud environment.
+
+* **ADF is great for a more "citizen integrator" or low-code approach**, especially if you're already using Azure. It simplifies many common data integration tasks with its graphical interface.
+* **Airflow** provides greater **flexibility and fine-grained control** over your pipelines, but it requires a deeper understanding of Python and more DevOps effort to manage the underlying infrastructure.
+
+---
+
+Yes, dbt and Dataform are extremely similar; they are both designed for data transformation. Azure Data Factory (ADF), however, is both a transformation and orchestration tool.
+
+**dbt & Dataform: Data Transformation**
+
+dbt and Dataform are specialized tools for the "T" in ELT (Extract, Load, Transform). They enable data engineers to build robust data models and pipelines using a **declarative, SQL-first** approach. They don't handle the data ingestion (the "E" and "L")—they assume the data is already in a data warehouse like BigQuery or Snowflake.
+
+Their primary function is to transform raw, messy data into clean, structured data sets ready for analytics.
+
+* **Dataform** is a native Google Cloud service designed to do this specifically for BigQuery.
+* **dbt** is platform-agnostic, meaning it can run these same SQL transformations on various data warehouses, including BigQuery, Snowflake, and Redshift.
+
+**Azure Data Factory: Orchestration and Transformation**
+
+ADF's role is more comprehensive. It's a serverless ETL/ELT service, meaning it can perform all three steps: extraction, transformation, and loading.
+
+* **Orchestration:** This is ADF's core strength. Its primary job is to orchestrate the entire data pipeline. It manages the flow of activities, handles dependencies, and provides monitoring and scheduling. It's like the factory manager who tells different machines what to do and when to do it.
+
+* **Transformation:** ADF also has built-in features for transformation, most notably **Data Flows**. This is a graphical, no-code/low-code interface that allows users to perform complex data transformations (like joins, aggregations, and filters) without writing any code. These transformations run on a scalable Apache Spark cluster managed by Azure.
+
+In practice, a common pattern is to use ADF for both: it **orchestrates** the pipeline by copying data from a source, and it then calls its internal **Data Flow** engine to perform the transformations before loading the data into its final destination.
+
+{{< /details >}}
+
+
+---
+
+### How to Choose a Tool
+
+The right choice depends on your specific needs:
+* If you need a flexible, open-source tool with a huge community, **Airflow** is the industry standard.
+* If you're already in Google Cloud and your transformations are primarily SQL, **Dataform** is the simplest, most integrated solution.
+* If you need a more modern, asset-centric approach with a focus on data quality, **Dagster** is a great choice.
+* If you want a powerful, Pythonic orchestrator with a focus on flexibility and reliability, **Prefect** is a strong contender.
+
+
+**Storage**
+
+The primary distinction is between **Object Storage** (GCS, AWS S3, Azure Blob, MinIO) and a **Distributed File System** (HDFS).
+
+Object Storage is designed for a flat structure and is typically accessed via an API, while a Distributed File System mimics a traditional file system with a hierarchical directory structure.
+
+| Feature | GCS (Google Cloud Storage) | AWS S3 (Amazon S3) | Azure Blob Storage | MinIO | HDFS (Hadoop) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Provider** | Google Cloud | Amazon Web Services (AWS) | Microsoft Azure | MinIO (Open Source) | Apache (Open Source) |
+| **Type** | Object Storage | Object Storage | Object Storage | Object Storage | Distributed File System |
+| **Main Use Case** | Data lakes, backup, web hosting, media storage | Industry standard for data lakes, backup, static web hosting | Unstructured data storage, data lakes, media | Private/hybrid cloud, S3-compatible on-premise storage | On-premise data lakes, batch processing with Hadoop/Spark |
+| **Protocol** | HTTP REST API | HTTP REST API | HTTP REST API | S3-Compatible API | HDFS Protocol |
+| **Scalability** | Massively scalable, serverless | Massively scalable, serverless | Massively scalable, serverless | Massively scalable, but self-managed | Scalable, but limited by on-premise cluster size |
+| **Pricing** | Pay-as-you-go for storage, network egress, operations | Pay-as-you-go for storage, network egress, operations | Pay-as-you-go for storage, network egress, operations | Free to use, with paid enterprise support | No direct cost, but requires hardware and maintenance |
+| **On-Premise** | Yes, via GCS FUSE | Yes, via AWS Outposts | Yes, via Azure Stack | **Primarily On-Premise** or private cloud | **Primarily On-Premise** |
+
+**File formats**
+
+| Format | Category | Use Case | Pros | Cons |
+| :--- | :--- | :--- | :--- | :--- |
+| **JSON** | Text-Based | Semi-structured data, APIs | Human-readable, schema-flexible | Inefficient for large-scale analytics, requires full file parsing |
+| **CSV** | Text-Based | Basic data exchange | Simple, universally supported | No schema, poor compression and query performance on large datasets |
+| **Avro** | Row-Based | Streaming, data serialization | Good for streaming data, supports schema evolution | Slower for analytical queries that only read a few columns |
+| **Parquet** | Columnar | **Primary for Analytics (OLAP)** | Highly compressed, **very fast for analytical queries** | Slower for writing and for queries that need full rows |
+| **ORC** | Columnar | Analytics, Hadoop Ecosystem | Similar to Parquet, excellent compression and performance | More tightly coupled with the Hadoop ecosystem than Parquet |
+| **Delta Lake / Iceberg / Hudi** | Table Format | **Data Lakehouses**, ACID Transactions | Brings database features (transactions, time travel, schema enforcement) to a data lake | Adds a layer of complexity and tool dependency |
+
 > You can do cool things with [Python+JSON understanding, like reading info from s3](https://jalcocert.github.io/JAlcocerT/aws-s3-python-boto-queries/#json-tools).
+
 
 **BI Stuff**: Get better at creating visual data stories that anyone can understand.
 
@@ -37,6 +185,8 @@ Just use diagrams: *for whatever your have to explain*
   {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#what-it-is-looker-modelling-language" title="GCP Looker | Post ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/about-powerbi/" title="Microsoft PowerBI | Post ↗" >}}
 {{< /cards >}}
+
+You dont need to wait to be on a project to get started. See these:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/iot/grafana.png" subtitle="For Data Analytics and SelfHosting - Redash, Superset, MetaBase, Grafana..." >}}

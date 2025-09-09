@@ -574,8 +574,9 @@ In this stack, **Trino would sit alongside Snowflake, providing a way to query d
 * **Querying the Data Lake Directly:** You can use Trino to run fast queries directly on the raw data in **MinIO/S3**, without needing to transform it with **dbt** and load it into **Snowflake** first. This is ideal for data exploration and discovery.
 * **Federated Queries:** Trino’s real strength is its ability to join data from multiple sources in a single query. A data analyst could run a query that joins customer data from a relational database (like PostgreSQL) with clickstream data stored in your MinIO data lake, all from one interface.
 
+To summarize, Trino is not a data warehouse and it's not a transformation tool like dbt or Dataform. 
 
-To summarize, Trino is not a data warehouse and it's not a transformation tool like dbt or Dataform. It's a **query engine** that is excellent for:
+It's a **query engine** that is excellent for:
 
 * **Ad-hoc queries**: Analysts who want to explore data in a data lake.
 * **Federated queries**: Running a single query across multiple different data sources.
@@ -585,12 +586,12 @@ To summarize, Trino is not a data warehouse and it's not a transformation tool l
 
 **It is a data warehouse.**
 
-You can (or not) design it to have a **bronze/silver/gold** architecture (aka **MEDALLION** architecture).
+You can *(or not)* design it to have a **bronze/silver/gold** architecture (aka **MEDALLION** architecture).
 
 > You might also hear it as: RAW/Staging/PROD.
 
 {{< cards >}}
-  {{< card link="https://wetrustindata.com/data_vault_with_snowflake/" title="Data Vault w Snowflake ↗" icon="book-open" >}}
+  {{< card link="https://wetrustindata.com/data_vault_with_snowflake/" title="Data Vault w Snowflake | We Trust in Data ↗" icon="book-open" >}}
 {{< /cards >}}
 
 #### Big Query

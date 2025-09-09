@@ -2,7 +2,7 @@
 title: "Using APIs to write content"
 date: 2025-09-06T08:20:21+01:00
 draft: false
-tags: ["Ghost","Web","Wordpress","Gatsby GraphQL"]
+tags: ["Ghost","Web","Wordpress","Gatsby GraphQL vs REST API"]
 description: 'Programatic posts creation with the most popular CMSs.'
 url: 'automating-ghost-and-wordpress'
 ---
