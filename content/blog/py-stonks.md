@@ -121,7 +121,6 @@ Then quickly after put this [HLD of the architecture via mermaid](https://mermai
 
 {{< details title="About Alpha Vantage API 📌" closed="true" >}}
 
-
 Free Tier
 - **5 API calls per minute**
 - **500 API calls per day**
@@ -372,9 +371,65 @@ Remember about the **Regression to the mean**, see SP500 vs Dividend Aristocrats
 {{< /callout >}}
 
 
-#### FastAPI x PyStonks Sqlite
+### FastAPI x PyStonks Sqlite
 
 How about exposing the pulled data into some REST endpoints?
+
+{{< details title="If you are a Data Engineer, you can service data via FastAPI! 📌" closed="true" >}}
+
+FastAPI and data engineering are related because FastAPI is a popular Python framework used to build **APIs (Application Programming Interfaces)** that serve data and machine learning models. 
+
+In a data engineering context, FastAPI can be used for several key tasks:
+
+* **Serving Data:** It can be used to create REST APIs that allow other applications or front-ends to access processed and cleaned data from a data warehouse or database.
+* **ETL Pipelines:** FastAPI can be the "Extract" part of an ETL (Extract, Transform, Load) pipeline, where it fetches data from external APIs. It can also act as the final "Load" step, where it provides an endpoint for data to be ingested.
+* **Deployment of Models:** Data engineers and data scientists use FastAPI to wrap machine learning models in an API, making them accessible for real-time predictions in production environments.
+
+In a data pipeline, FastAPI often sits at the end, acting as the **service layer** that makes the processed data available for consumption. 
+
+**FastAPI and Frontend**
+
+FastAPI is a **backend** framework, meaning its primary purpose is to handle the server-side logic, data processing, and API creation. It does not directly handle the **frontend**, which is the user-facing part of an application (e.g., HTML, CSS, JavaScript).
+
+The relationship is that a frontend, built with frameworks like React, Angular, or Vue.js, communicates with the backend APIs created by FastAPI. 
+
+The frontend sends requests to the FastAPI backend, and the backend responds with data (usually in JSON format) that the frontend then uses to display information to the user. This is a common **client-server architecture**.
+
+FastAPI, running on the backend, processes data (from a database, another API, a file, etc.) and exposes an **API endpoint**. When a frontend application, like one built with Vue.js, makes a request to that endpoint, FastAPI sends back the data, typically in **JSON** format.
+
+Vue.js, running on the user's browser, receives this JSON data. It then uses a charting library (like Chart.js or ApexCharts) to parse the `date` and `value` fields from the JSON object and render them as a line chart on the user interface.
+
+This interaction exemplifies a common **client-server architecture**:
+* **FastAPI** is the server (the backend) that provides the data.
+* **Vue.js** is the client (the frontend) that requests and visualizes the data.
+
+{{< /details >}}
+
+
+{{< details title="Template Engines | FastAPI vs Flask 📌" closed="true" >}}
+
+A template engine is a tool that allows you to combine static HTML templates with dynamic data to generate complete web pages on the server. 
+
+It uses placeholders in the HTML files that are filled with real data (e.g., from a database or a variable) before the page is sent to the user's browser.
+
+This separates the presentation (HTML) from the application logic (Python code).
+
+***
+
+**Does FastAPI have a template engine?**
+
+No, **FastAPI does not have a built-in template engine**. It is primarily an API framework designed to build the backend of an application. It's meant to handle requests and return data, typically in JSON format, which a frontend (like a React or Vue.js app) then uses to build the user interface.
+
+However, you can easily integrate a template engine into FastAPI. The most common choice is **Jinja2**, the same one used by Flask. You can add Jinja2 support by installing the `python-jinja2` library and using FastAPI's `Jinja2Templates` class. This allows you to render HTML pages on the server, although for most projects, FastAPI is still best used for serving data via an API.
+
+***
+
+**Does Flask have a template engine?**
+
+Yes, **Flask has a built-in template engine**, which is **Jinja2**. This is one of the key differences between Flask and FastAPI. When you install Flask, Jinja2 is included by default. Flask provides a `render_template()` function that makes it easy to pass data to a template and render the final HTML page. This makes Flask well-suited for building traditional, server-side rendered websites where the backend is responsible for generating the entire HTML page before sending it to the user. 
+
+{{< /details >}}
+
 
 ```sh
 #uv add fastapi uvicorn
@@ -475,7 +530,72 @@ Just with [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/), like:
 * `https://millennialmoney.com/calculators/fire-calculator/` with very interesting CSR powered tables
 * `https://millennialmoney.com/calculators/`
 
-Then, provide proper login/signup/logout with FastAPI and ChartJS/Plotly?
+Then, provide proper login/signup/logout with **FastAPI** and ChartJS/d3js/Plotly/[Recharts](https://github.com/recharts/recharts)?
+
+{{< details title="| FastAPI x Astro SSG 📌" closed="true" >}}
+
+
+You absolutely can combine FastAPI with **any** static site generator (SSG).
+
+The key concept to grasp is that they are two separate parts of your application stack that work together, not one serving as a template engine for the other.
+
+Here's the fundamental workflow:
+
+1.  **Static Site Generation (SSG):** You use a static site generator like Astro, Hugo, Jekyll, Next.js (in static export mode), or any other SSG. This tool takes your source files (Markdown, templates, components, etc.) and compiles them into a directory of static assets, which are essentially pre-rendered HTML, CSS, and JavaScript files.
+
+2.  **FastAPI Backend:** You create a FastAPI application that serves as your API. Its job is to handle dynamic requests, such as:
+
+      * Fetching data from a database.
+      * Handling user authentication.
+      * Processing form submissions.
+      * Providing data to the frontend for things like a search bar or a live chart.
+
+3.  **Serving the Static Assets:** This is where the two parts connect. You configure your FastAPI app to act as a web server for the static files generated by the SSG. FastAPI's `StaticFiles` class is the perfect tool for this.
+
+```python
+from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+
+app = FastAPI()
+
+# Mount the directory where your SSG's build output is located.
+# For Astro, this is typically the 'dist' folder.
+app.mount("/", StaticFiles(directory="dist", html=True), name="static")
+
+# Your API endpoints live here, separate from the static content.
+@app.get("/api/items")
+async def get_items():
+    # This endpoint could fetch data from a database
+    return [{"id": 1, "name": "Item A"}, {"id": 2, "name": "Item B"}]
+```
+
+**Why this approach is common and powerful:**
+
+  * **Performance:** The statically generated pages load extremely fast because the server doesn't have to do any processing for the initial page load. It's just sending a pre-made HTML file.
+  * **Decoupling:** Your frontend (the SSG) and backend (FastAPI) are completely separate. This allows different teams to work on each part independently and lets you swap out one technology for another without affecting the entire stack.
+  * **Scalability:** Since the SSG output is static, it can be served from a simple web server or a CDN (Content Delivery Network), which is highly scalable and cost-effective. The FastAPI backend only needs to handle the dynamic API requests, reducing the load on your server.
+  * **Flexibility:** You get the best of both worlds—the speed and security of a static site with the power of a dynamic, robust backend for complex features.
+
+
+Yes, an application combining a static site generator (SSG) like Astro with a backend API (FastAPI or Flask) will be **significantly faster** for the initial page load than a traditional Flask or Django app that renders every page on the server.
+
+The performance difference comes down to a core architectural distinction:
+
+* **Static Site Generation (SSG) + API:** In this model, the **majority of your web pages are pre-built** into simple, static HTML, CSS, and JavaScript files. When a user visits your site, their browser gets these files instantly from a CDN (Content Delivery Network). There's no server-side processing, database queries, or template rendering happening on the fly. This makes the initial page load nearly instantaneous. The Python backend (FastAPI/Flask) is only used for dynamic tasks, like fetching data for a chart or handling a form submission, which happens *after* the initial page has already loaded.
+
+* **Traditional Flask/Django App:** In this model, every time a user requests a page, the server has to:
+    1.  Receive the request.
+    2.  Process it using Python code.
+    3.  Potentially query a database.
+    4.  Render an HTML template with the data.
+    5.  Send the finished HTML to the user's browser.
+
+This entire process adds latency, making the Time to First Byte (TTFB) much slower compared to an SSG. For content-heavy sites like blogs or documentation, this difference is substantial.
+
+The use of an SSG essentially shifts the "heavy lifting" of rendering pages from every user request to a one-time build process. You get the best of both worlds: lightning-fast static pages for content and a powerful dynamic backend for interactive features.
+
+{{< /details >}}
+
 
 Even some way for people to create financial driven animations for themselves.
 
