@@ -2,7 +2,7 @@
 title: "AI Driven e-books as a code"
 date: 2025-08-31
 draft: false
-tags: ["Entrepreneuring","sell-your-ebook","R","knitt","ebook landing"]
+tags: ["Entrepreneuring","sell-your-ebook","R","knitt","ebook landing","Flask CMS JSON"]
 description: 'Building in public a simple web platform to create/sell ebooks.'
 url: 'ai-driven-ebooks'
 ---
@@ -116,7 +116,7 @@ I could not resist to create a *quick FlaskCMS* to edit the config.json...
 make quick-config 
 ```
 
-...this was literally one prompt with Cursor.
+...this was literally one prompt with Cursor. A flask CMS JSON editor:
 
 ![Flask CMS Editor for Ebook Landing JSON](/blog_img/entrepre/product/ebook-flask.png)
 

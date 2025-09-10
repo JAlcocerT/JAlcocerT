@@ -10,22 +10,18 @@ url: social-media-automation
 
 **TL;DR**
 
-Setup PostIZ and forget about *loosing time* with social media posts.
+Setup [PostIZ](#postiz) and forget about *loosing time* with social media posts.
 
 Focus on creating.
 
 
 **Intro**
 
-We can create a lot supported by AI.
+We can create a lot *supported* by AI.
 
 But the more content gets created, the harder to get the attention of people who might be interested into such content.
 
 - [Shoutify](https://github.com/TechSquidTV/Shoutify)
-
-
----
-
 
 Apps like PostIZ, n8n or growthchief...
 
@@ -34,9 +30,11 @@ Apps like PostIZ, n8n or growthchief...
 >  The Ultimate all-in social media automation (outreach) tool 🤖 
 
 
-
 * The people should own the town square - Mastodon Blog https://blog.joinmastodon.org/2025/01/the-people-should-own-the-town-square/?ref=selfh.st
 
+## PostIZ
+
+Postiz helps you to manage all your social media accounts.
 
 1. Postiz-App - https://github.com/gitroomhq/postiz-app
     * https://docs.postiz.com/introduction
@@ -54,7 +52,10 @@ I [got working PostIZ](https://github.com/JAlcocerT/Docker/tree/main/Business/Po
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postiz" title="PostIZ HomeLab | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
-We can also use PostIZ via cloudflare tunnels:
+We can also use PostIZ via cloudflare tunnels: `postiz:5000`
+
+
+![alt text](/blog_img/selfh/postiz/postiz-dns-for-traefik.png)
 
 ```sh
 git clone https://github.com/JAlcocerT/Home-Lab && cd postiz
@@ -66,14 +67,38 @@ cp .env.sample .env
 cat <<EOL >> .env
 JWT_SECRET=$(openssl rand -base64 32)
 EOL
+
+docker compose up -d
 ```
+
+![PostIZ CF Tunnel](/blog_img/selfh/postiz/postiz-dns-cloudflaretunnel.png)
+
+
+Once ready, go to `https://postiz.jalcocertech.com/settings`
+
+And play around with PostIZ's API: https://docs.postiz.com/public-api
+
+And also the MCP integration
+
+
 
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ Setup | Post" image="/blog_img/selfh/links/postiz-channels.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
 {{< /cards >}}
 
-Do the setup for the platforms you need: https://docs.postiz.com/providers/youtube
+### PostIZ x n8n
+
+https://postiz.com/blog/use-postiz-with-n-8-n
+
+### PostIZ x Platforms
+
+1. Do the setup for the platforms you need: https://docs.postiz.com/providers/youtube
+
+
+2. https://docs.postiz.com/providers/telegram
+
+3. https://docs.postiz.com/providers/instagram
 
 {{< callout type="info" >}}
 [PostIZ also has MCP](https://postiz.jalcocertech.com/settings): Connect your MCP client to Postiz to schedule your posts faster!
