@@ -3,7 +3,7 @@ title: "Creating Animated Data Stories | Data in Motion"
 date: 2025-07-04T18:20:21+01:00
 draft: false
 description: 'From Embedded Analytics into SSGs Websites to Data Driven Animations.'
-tags: ["Animations","Python","Matplotlib Animations","Youtube Shorts","Social Media","Unfolding Data"]
+tags: ["Animations","Python","Matplotlib Animations","Youtube Shorts","DataInMotion","Unfolding Data"]
 url: animations-as-a-code
 ---
 
@@ -227,64 +227,14 @@ With those, you can go to different social media platforms and share the content
 
 {{< tweet user="LibrePortfolio" id="1940801205577699713" >}}
 
-**Social Media Management Apps**
+**Social Media Management Apps**: Social Media can be simplified with these apps:
 
-- [Shoutify](https://github.com/TechSquidTV/Shoutify)
-
-Social Media can be simplified:
-
-![Forocoches3kbmw](/blog_img/memes/ezoeazin.jpg)
-
-1. Postiz-App - https://github.com/gitroomhq/postiz-app
-    * https://docs.postiz.com/introduction
-    
-> 📨 The ultimate **social media scheduling tool**, with a bunch of AI 🤖 and Apache 2.0!
-
-I got working PostIZ recently, together with Traefik, both as containers and locally accesible: https://postiz.jalcocertech.com/launches
-
-* https://docs.postiz.com/reverse-proxies/traefik
-* You could also install it as part of [Coolify](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/#coolify) or similar PaaS, like [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas): https://coolify.io/docs/services/postiz
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Postiz" title="PostIZ Container | Docker Configs 🐋✅ ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik Container | Docker Configs 🐋✅ ↗" >}}
-{{< /cards >}}
-
+<!-- 
+![Forocoches3kbmw](/blog_img/memes/ezoeazin.jpg) -->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ Setup | Post" image="/blog_img/selfh/links/postiz-channels.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/social-media-automation" title="Social Media Automations Apps | Post" image="/blog_img/memes/ezoeazin.jpg" subtitle="PostIZ..." >}}
 {{< /cards >}}
-
-Do the setup for the platforms you need: https://docs.postiz.com/providers/youtube
-
-{{< callout type="info" >}}
-[PostIZ also has MCP](https://postiz.jalcocertech.com/settings): Connect your MCP client to Postiz to schedule your posts faster!
-{{< /callout >}}
-
-You will get something like:
-
-```txt
-https://postiz.jalcocertech.com/api/mcp/some_id_here/sse
-```
-
-2. [Zapier](https://zapier.com/app/home)
-
-* Canva seems to have it too
-
-* [IFTTT](https://ifttt.com/plans)
-
-3. **N8N** AI Automation - https://n8n.io/workflows/2950-ai-powered-social-media-content-generator-and-publisher/
-
-[N8N with ollama video](https://www.youtube.com/watch?v=VDuA5xbkEjo)
-
-4. Active Pieces - https://github.com/activepieces/activepieces
-
-> Your friendliest open source AI automation tool ✨ Workflow automation tool 200+ integration / Enterprise automation tool / Zapier Alternative
-
-
-5. MultiNotify: https://github.com/ethanocurtis/MultiNotify *in case that you want to get ideas for animations from reddit posts*
-
-> MIT | A lightweight, open‑source Discord bot that **monitors a subreddit for new posts** (optionally filtered by flair) and automatically send them to Discord, Mattermost, Slack, or other services via webhook, with optional DM notifications.
 
 
 

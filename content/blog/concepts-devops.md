@@ -7,8 +7,13 @@ url: 'dev-ops-for-non-devops'
 tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions"]
 ---
 
-Crontab for Docker - https://github.com/mcuadros/ofelia
 
+
+**Intro**
+
+Why DevOps?
+
+Because we want to move fast from idea to development and ship to production for your users. 
 <!-- https://www.youtube.com/shorts/551lh10g_go -->
 
 {{< youtube "551lh10g_go" >}}
@@ -25,6 +30,7 @@ Crontab for Docker - https://github.com/mcuadros/ofelia
 
 4. FAIL2BAN: <https://docs.linuxserver.io/images/docker-fail2ban/#docker-compose-recommended-click-here-for-more-info>
 
+5. Crontab for Docker - https://github.com/mcuadros/ofelia
 
 I love to use [containers for **SelfHosting**](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
 

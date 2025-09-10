@@ -3,7 +3,7 @@ title: "Tech for Creating i18n Documentation and related Podcast"
 date: 2025-05-15
 draft: false
 tags: ["Web","Commento","Starlight","GitPodcast","AstroPod","WeekToDo"]
-description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. With a look to Code2Prompt and Research Agents."
+description: "How to create Serverless Podcasts and a related Astro (Starlight and AstroPod) website for them. With a look to Code2Prompt and Research Agents."
 url: 'tech-for-podcast'
 ---
 
@@ -117,9 +117,7 @@ And actually not the only OSS project: https://github.com/manuelernestog/weektod
 sudo snap install weektodo
 ```
 
-{{< callout type="info" >}}
-You can generate podcasts from videos with [notebooklm](https://notebooklm.google.com/)
-{{< /callout >}}
+Which is great if you are Time aware!
 
 <!-- 
 https://www.youtube.com/watch?v=gQW-NcPVlXQ&t=1669s 
@@ -128,6 +126,26 @@ https://www.youtube.com/watch?v=gQW-NcPVlXQ&t=1669s
 
 #### Using Astro SSG to Host your Podcast
 
+
+```sh
+git clone https://github.com/JAlcocerT/astropod && cd cd astropod
+make quick-dev
+#make quick-prod
+
+#docker network ls | grep cloudflared_tunnel
+#docker network connect cloudflared_tunnel astropod-prod #connect
+#docker inspect astro-prod --format '{{json .NetworkSettings.Networks}}' | jq
+```
+
+> Now go to CF Zero Trust and add the astro production statically generated `astropod-prod:4321` as per the docker-compose.
+
+The theme bring support for icons at `./src/components/icons/ebookIcon.astro` : https://github.com/tabler/tabler-icons
+
+> MIT |  A set of over 5800 free MIT-licensed high-quality SVG icons for you to use in your web projects. 
+
+{{< callout type="info" >}}
+You can generate **podcasts from YT videos** with [notebooklm](https://notebooklm.google.com/)
+{{< /callout >}}
 
 ---
 

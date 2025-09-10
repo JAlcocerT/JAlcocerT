@@ -787,6 +787,8 @@ Schedule post on social media:
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik Container | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
+I got PostIZ working together Traefik to get https and SSL certificates:
+
 ![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
 
 Once logged into PostIZ:
