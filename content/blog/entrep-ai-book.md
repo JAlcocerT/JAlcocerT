@@ -53,9 +53,13 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 > The original theme (also MIT) is awsome and brings a lot of content costomization via `config.json`
 
+> > The theme is oriented towards one book selling, but you could adapt it so that it becomes, for example, your knitting patterns shop `https://morecaknit.com/`, and wow, that'd be a shopify competitor!
+
+
+![Ping comparison from selfhosted astro x300 vs local ping vs shopify vs cloudflare pages](/blog_img/entrepre/product/ebook-shopify-ping.png)
 You know what to tell, its just that... **time matters**.
 
-So why not accelerating the time to ship ebooks by understanding how to have their skeleton code driven?
+So why not accelerating the **time to ship ebooks** by understanding how to have their skeleton code driven?
 
 And *maybe* get LLM help for charts creation, data driven parts etc.
 
@@ -78,6 +82,7 @@ You now just need to tweak one place and enjoy the theme, with your [stripe paym
 #git clone https://github.com/JAlcocerT/sell-your-ebook
 #cd sell-your-ebook
 #make quick-dev #to spin dev server inside container and see :4321 still
+#docker compose up astro-prod -d
 make quick-prod #to bring the real statically generated prod version to 8090
 ```
 
@@ -93,13 +98,38 @@ docker network connect cloudflared_tunnel astro-prod #connect
 #docker inspect astro-prod --format '{{json .NetworkSettings.Networks}}' | jq
 ```
 
-![alt text](/blog_img/entrepre/product/ebook-astro-cftunnel.png)
+![eBook Astro and Cloudflare Tunnels](/blog_img/entrepre/product/ebook-astro-cftunnel.png)
 
 Aaaand this is it: https://ebook.jalcocertech.com/
+
+![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
 
 {{< callout type="info" >}}
 You can make epubs and pdf from png/html/md files, [all programatically](https://github.com/JAlcocerT/sell-your-ebook?tab=readme-ov-file#quick-epub-creation)!
 {{< /callout >}}
+
+I could not resist to create a *quick FlaskCMS* to edit the config.json...
+
+```sh
+#uv init
+#......
+make quick-config 
+```
+
+...this was literally one prompt with Cursor.
+
+![Flask CMS Editor for Ebook Landing JSON](/blog_img/entrepre/product/ebook-flask.png)
+
+So you can go back to your server and do:
+
+```sh
+#git stash push -m "backup before force pull"
+#git pull origin main
+# If you need your changes back: git stash pop
+# If you don't need them: git stash drop
+make quick-prod
+docker network connect cloudflared_tunnel astro-prod #connect
+```
 
 ---
 

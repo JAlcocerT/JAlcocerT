@@ -77,6 +77,8 @@ Joplin is a perfect example of this.
 
 It's an open-source, self-hostable, and privacy-focused note-taking app that many people love.
 
+And you can create themes for Joplin: https://github.com/manuelernestog/joplin-minimalist-light-theme
+
 > However, its core philosophy on file storage is different from Logseq's.
 
 * **How it works:** Joplin stores your notes, attachments, and metadata in a single SQLite database file on your desktop and mobile devices.

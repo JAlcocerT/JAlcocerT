@@ -2,14 +2,24 @@
 title: "Tech for Creating i18n Documentation and related Podcast"
 date: 2025-05-15
 draft: false
-tags: ["Web","Commento"]
-description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. A look to GitPodcast, Code2Prompt and Research Agents."
+tags: ["Web","Commento","Starlight","GitPodcast","AstroPod","WeekToDo"]
+description: "How to create podcasts and a related Astro (Starlight and AstroPod) website for them. With a look to Code2Prompt and Research Agents."
 url: 'tech-for-podcast'
 ---
 
-## More Web Stuff with Astro SSG
+**Intro**
+
+More Web fun Stuff with Astro SSG.
+
+1. Quick Docs with astro ssg and [starlight](#docs-website)
+2. Bring your [podcast to a astro](#podcast-website) ssg site
+
++++ Got website commets working via [Commento](#adding-commento!)
+
 
 ### Docs Website
+
+Starting very quick with the default astro Theme:
 
 * https://github.com/withastro/starlight
     * See how great this can look [once you tweak it](https://github.com/IoTechCrafts/starlight-SSG) a little bit 
@@ -19,7 +29,7 @@ url: 'tech-for-podcast'
 
 ![Starlight Theme Docs UI](ic/blog_img/web/fosseng/starlight-docs-sample.png)
 
-> MIT | 🌟 Build beautiful, accessible, high-performance documentation websites with Astro
+> **MIT** | 🌟 Build beautiful, accessible, high-performance documentation websites with Astro
 
 **What I like about this Starlight theme?**
 
@@ -64,12 +74,15 @@ npm run dev
 11. Katex, Charts and diagrams rendering 
 12. Maybe [commenting](https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento) system? Or [Giscus](https://justinjbird.com/blog/2023/adding-comments-to-a-hugo-site-using-giscus/#adding-the-parameters), [maybe?](https://dteather.com/blogs/adding-giscus-discussions-to-astro/)
 
+
+#### Adding Commento
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento" title="Commento | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="SSG Containers | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
-You can explore commento PostgresSQL DB:
+You can explore commento's PostgresSQL DB:
 
 ```sh
 docker exec -it commento_db-foss bash
@@ -88,11 +101,21 @@ Have a look to [Astro free Themes](https://astro.build/themes/11/?search=&price%
 
 ### PodCast Website
 
+I found some time ago this nice astro ssg theme:
+
 * https://github.com/manuelernestog/astropod
 
-> MIT | Free and open source **self-hosting serverless podcast** solution
+> **MIT** | Free and open source **self-hosting serverless podcast** solution
 
-Superlative job from ManuelErnestog, which I forked [here](https://github.com/JAlcocerT/astropod)
+I got very surprised, but yes, the audio is playable.
+
+Superlative job  from [ManuelErnestog](https://github.com/manuelernestog), which I forked [here](https://github.com/JAlcocerT/astropod)
+
+And actually not the only OSS project: https://github.com/manuelernestog/weektodo
+
+```sh
+sudo snap install weektodo
+```
 
 {{< callout type="info" >}}
 You can generate podcasts from videos with [notebooklm](https://notebooklm.google.com/)
@@ -101,6 +124,41 @@ You can generate podcasts from videos with [notebooklm](https://notebooklm.googl
 <!-- 
 https://www.youtube.com/watch?v=gQW-NcPVlXQ&t=1669s 
 -->
+
+
+#### Using Astro SSG to Host your Podcast
+
+
+---
+
+## Conclusions
+
+Its great, yet overwhelming the amount of new SelfHosting Projects that are out there and that are coming.
+
+**Would there be a way** to automate the test and deployment of such software via containers?
+
+Or should our selfhoster backlog *to be tried* list to keep growing?
+
+> Why are you doing this though?
+
+**The idea**
+
+Lately, I have been [tinkering with shorts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#shorts), also with automatic project Docs
+
+Wouldnt this be a way to catch up with the bast amount of cool projects to SelfHost and share a quick overview with others?
+
+**Example use case**: Given the awsome weekly newsletter https://selfh.st/weekly/2025-05-09/ at the New Software section
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=dcodesdev/LetterSpace,openconstruct/Peersuite,crocofied/PortNote,0PandaDEV/Ziit,cheatsnake/airstation,gelbphoenix/autocaliweb,rmfatemi/bitvoker,operacle/checkcle,ashishjullia/cloudflare-worker-tailscale-monitor,sinandredemption/kath,log-forge/logforge,murtaza-nasir/maestro,kennethsible/mkvpriority,rrbarrero/pass-web,galvez/plainbudget,andomeder/rektube,daquino94/rss-telegram,magweter/spacepad,kugie-app/summit,muliswilliam/webhook-tester&type=Date)](https://star-history.com/#dcodesdev/LetterSpace&openconstruct/Peersuite&crocofied/PortNote&0PandaDEV/Ziit&cheatsnake/airstation&gelbphoenix/autocaliweb&rmfatemi/bitvoker&operacle/checkcle&ashishjullia/cloudflare-worker-tailscale-monitor&sinandredemption/kath&log-forge/logforge&murtaza-nasir/maestro&kennethsible/mkvpriority&rrbarrero/pass-web&galvez/plainbudget&andomeder/rektube&daquino94/rss-telegram&magweter/spacepad&kugie-app/summit&muliswilliam/webhook-tester&type=Date)
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ChrispyBacon-dev/DockFlare,kyantech/Palmr,crocofied/PortNote,electh/ReactFlux,LizardByte/Sunshine&type=Date)](https://star-history.com/#ChrispyBacon-dev/DockFlare&kyantech/Palmr&crocofied/PortNote&electh/ReactFlux&LizardByte/Sunshine&type=Date)
+
+See a project, [summarize its code/features](https://fossengineer.com/selfhosting-lumenone/) and make a podcast/short about it: https://github.com/lumenlabss/LumenOne
+
+> MIT | Best Plesk (The Ultimate Toolkit for WordPress Sites) alternative open source & free 
+
+<!-- https://adsense.google.com/adsense/u/0/pub-1816803660718163/payments -->
 
 
 ### A look to GitPodcast
@@ -124,7 +182,6 @@ See it yourself: https://www.gitpodcast.com/streamlit/streamlit
 ![GitPodcast](/blog_img/selfh/gitpodcast.png)
 
 * https://www.gitpodcast.com/rybbit-io/rybbit
-
 
 ### Code2Prompt
 
@@ -187,37 +244,6 @@ The tool helps streamline LLM prompt creation, enhancing productivity for develo
 
 
 [![Star History Chart](https://api.star-history.com/svg?repos=mufeedvh/code2prompt/,BandarLabs/gitpodcast&type=Date)](https://star-history.com/#mufeedvh/code2prompt/&BandarLabs/gitpodcast&type=Date)
-
----
-
-## Conclusions
-
-Its great, yet overwhelming the amount of new SelfHosting Projects that are out there and that are coming.
-
-**Would there be a way** to automate the test and deployment of such software via containers?
-
-Or should our selfhoster backlog *to be tried* list to keep growing?
-
-> Why are you doing this though?
-
-**The idea**
-
-Lately, I have been [tinkering with shorts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#shorts), also with automatic project Docs
-
-Wouldnt this be a way to catch up with the bast amount of cool projects to SelfHost and share a quick overview with others?
-
-**Example use case**: Given the awsome weekly newsletter https://selfh.st/weekly/2025-05-09/ at the New Software section
-
-
-[![Star History Chart](https://api.star-history.com/svg?repos=dcodesdev/LetterSpace,openconstruct/Peersuite,crocofied/PortNote,0PandaDEV/Ziit,cheatsnake/airstation,gelbphoenix/autocaliweb,rmfatemi/bitvoker,operacle/checkcle,ashishjullia/cloudflare-worker-tailscale-monitor,sinandredemption/kath,log-forge/logforge,murtaza-nasir/maestro,kennethsible/mkvpriority,rrbarrero/pass-web,galvez/plainbudget,andomeder/rektube,daquino94/rss-telegram,magweter/spacepad,kugie-app/summit,muliswilliam/webhook-tester&type=Date)](https://star-history.com/#dcodesdev/LetterSpace&openconstruct/Peersuite&crocofied/PortNote&0PandaDEV/Ziit&cheatsnake/airstation&gelbphoenix/autocaliweb&rmfatemi/bitvoker&operacle/checkcle&ashishjullia/cloudflare-worker-tailscale-monitor&sinandredemption/kath&log-forge/logforge&murtaza-nasir/maestro&kennethsible/mkvpriority&rrbarrero/pass-web&galvez/plainbudget&andomeder/rektube&daquino94/rss-telegram&magweter/spacepad&kugie-app/summit&muliswilliam/webhook-tester&type=Date)
-
-[![Star History Chart](https://api.star-history.com/svg?repos=ChrispyBacon-dev/DockFlare,kyantech/Palmr,crocofied/PortNote,electh/ReactFlux,LizardByte/Sunshine&type=Date)](https://star-history.com/#ChrispyBacon-dev/DockFlare&kyantech/Palmr&crocofied/PortNote&electh/ReactFlux&LizardByte/Sunshine&type=Date)
-
-See a project, [summarize its code/features](https://fossengineer.com/selfhosting-lumenone/) and make a podcast/short about it: https://github.com/lumenlabss/LumenOne
-
-> MIT | Best Plesk (The Ultimate Toolkit for WordPress Sites) alternative open source & free 
-
-<!-- https://adsense.google.com/adsense/u/0/pub-1816803660718163/payments -->
 
 ---
 

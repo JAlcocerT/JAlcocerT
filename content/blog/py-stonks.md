@@ -375,6 +375,8 @@ Remember about the **Regression to the mean**, see SP500 vs Dividend Aristocrats
 
 How about exposing the pulled data into some REST endpoints?
 
+Because [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api/) is one of those [Python BE fwks](https://jalcocert.github.io/JAlcocerT/backend-alternatives/) that you will find out to be very useful.
+
 {{< details title="If you are a Data Engineer, you can service data via FastAPI! 📌" closed="true" >}}
 
 FastAPI and data engineering are related because FastAPI is a popular Python framework used to build **APIs (Application Programming Interfaces)** that serve data and machine learning models. 
