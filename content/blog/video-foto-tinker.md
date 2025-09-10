@@ -36,7 +36,7 @@ Ive been learning few stuff on the way.
 
 0. And now there is a chance to do a **photo & video recap**
 
-I will be showing you how to put your videos into social media with:
+I will be showing you how to put your **videos into social media** with:
 
 1. [PostIZ](#how-to-setup-postiz)
 2. [N8N](#how-to-setup-n8n)

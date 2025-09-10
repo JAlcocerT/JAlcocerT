@@ -1,6 +1,6 @@
 ---
 title: "HUGO Photo Galleries and User uploads"
-date: 2025-09-10
+date: 2025-09-12
 draft: false
 tags: ["Web","SSG","Photo-Gallery","Pocketbase CMS"]
 description: 'Using a HUGO Theme with Pocketbase Auth and Cloudflare R2 + Workers'
@@ -20,7 +20,6 @@ I just want to have images placed into some folders, and pocketbase can do that,
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/hugo-theme-gallery-pocketbased" title="NEW Hugo Theme Gallery x PB" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Hugo Gallery x Custom Pocketbase CMS" >}}
-{{< /cards >}}
   {{< card link="https://github.com/JAlcocerT/hugo-theme-gallery-flasked" title="Hugo Theme Gallery Forked" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Hugo Gallery x Custom Flask CMS" >}}
 {{< /cards >}}
 
