@@ -2,7 +2,7 @@
 title: "AI Driven e-books as a code"
 date: 2025-08-31
 draft: false
-tags: ["Entrepreneuring","sell-your-ebook","R","knitt"]
+tags: ["Entrepreneuring","sell-your-ebook","R","knitt","ebook landing"]
 description: 'Building in public a simple web platform to create/sell ebooks.'
 url: 'ai-driven-ebooks'
 ---
@@ -14,14 +14,14 @@ I love [R language](https://jalcocert.github.io/JAlcocerT/r-language-101/) and i
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Z_Utils/logto_utils.py" title="WebifAI Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App with Stripe, Umami, FormBricks and Logto as Utils" >}}
-  {{< card link="https://github.com/JAlcocerT/ebooks" title="eBooks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating ebooks as a code with Rmd" >}}
+  {{< card link="https://github.com/JAlcocerT/ebooks" title="(NEW) eBooks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating ebooks as a code with Rmd" >}}
 {{< /cards >}}
 
 Would it be possible to [make ebooks as a code](#creating-an-ebook)?
 
 **Intro**
 
-I got inspired recently by the concept of: https://readmake.com/
+I got inspired recently by the concept of: `https://readmake.com/`
 
 Some people are selling this kind of things on social media: `https://altagency.com/guide/`
 
@@ -33,17 +33,75 @@ Together with the *build in public*, which it seems to be a thing.
 
 How about **selling an ebook** be all about: having an stripe account and proper content that people want to read?
 
+## A landing page for your eBook
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="NEW Sell your eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Astro SSG Theme (x) Stripe (x) N8N" >}}
 {{< /cards >}}
 
+```sh
+#https://github.com/candidosales/landing-page-book-astro-tailwind
+#https://github.com/zenorocha/14habits.com
+git clone https://github.com/JAlcocerT/sell-your-ebook
+#npm install
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+#npm run build
+#npm install -g serve #serve with npm
+#serve -s dist #http://localhost:3000
+```
+
+> The original theme (also MIT) is awsome and brings a lot of content costomization via `config.json`
+
 You know what to tell, its just that... **time matters**.
 
 So why not accelerating the time to ship ebooks by understanding how to have their skeleton code driven?
 
-And maybe get LLM help for charts creation, data driven parts etc.
+And *maybe* get LLM help for charts creation, data driven parts etc.
 
+### Stripe Payment Links
+
+Go to: https://dashboard.stripe.com/payment-links
+
+### Using Sell Your Ebook
+
+You will need containers and a server to deploy this.
+
+
+The idea to make it as simple as possible is that the docker compose environment variables send information to the `config.json` of the astro ssg theme that we have been tinkering above.
+
+The result?
+
+You now just need to tweak one place and enjoy the theme, with your [stripe payment link included](#stripe-payment-links).
+
+```sh
+#git clone https://github.com/JAlcocerT/sell-your-ebook
+#cd sell-your-ebook
+#make quick-dev #to spin dev server inside container and see :4321 still
+make quick-prod #to bring the real statically generated prod version to 8090
+```
+
+You might just need to adjust the port mapped to the server: `http://192.168.1.11:8099/`
+
+But for CF tunnels its just: `astro-prod:4321`, configure it via Zero Trust after you connect to the cf network: `https://one.dash.cloudflare.com/`
+
+```sh
+#docker network ls | grep cloudflared_tunnel
+docker network connect cloudflared_tunnel astro-prod #connect
+
+#verify
+#docker inspect astro-prod --format '{{json .NetworkSettings.Networks}}' | jq
+```
+
+![alt text](/blog_img/entrepre/product/ebook-astro-cftunnel.png)
+
+Aaaand this is it: https://ebook.jalcocertech.com/
+
+{{< callout type="info" >}}
+You can make epubs and pdf from png/html/md files, [all programatically](https://github.com/JAlcocerT/sell-your-ebook?tab=readme-ov-file#quick-epub-creation)!
+{{< /callout >}}
+
+---
 
 ## eBooks
 

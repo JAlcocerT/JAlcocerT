@@ -232,8 +232,8 @@ When authorized you will see [this](https://developers.google.com/gemini-code-as
 {{% details title="Rivet Release Setup 📌" closed="true" %}}
 
 ```sh
-wget https://github.com/Ironclad/rivet/releases/download/app-v1.7.8/rivet_1.7.8_amd64.AppImage
-chmod +x rivet_1.7.8_amd64.AppImage
+#wget https://github.com/Ironclad/rivet/releases/download/app-v1.7.8/rivet_1.7.8_amd64.AppImage
+#chmod +x rivet_1.7.8_amd64.AppImage
 ./rivet_1.7.8_amd64.AppImage
 ```
 

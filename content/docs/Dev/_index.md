@@ -87,10 +87,10 @@ It ensures that complex workflows run in the correct sequence, handle failures, 
 | :--- | :--- | :--- | :--- |
 | **Apache Airflow** | Open-Source Orchestrator | Written in Python, defines workflows as Directed Acyclic Graphs (DAGs). Large community and extensive ecosystem of operators for integrations. | General-purpose orchestration, complex pipelines with diverse tasks, and custom logic. |
 | **Dataform** | Google Cloud Native Service | SQL-native, built specifically for orchestrating transformations within BigQuery. Manages dependencies and version control. | Data teams working exclusively with BigQuery for SQL transformations. |
-| **Dagster** | Modern Python Orchestrator | Asset-based approach, focusing on the data objects (assets) created by a pipeline. Strong emphasis on observability, testing, and data quality. | Data teams who prioritize data lineage, asset management, and robust testing. |
-| **Prefect** | Modern Python Orchestrator | Dynamic workflows that adapt to data and conditions. Known for its "negative engineering" philosophy, which focuses on handling failures gracefully. | Data teams needing flexible, event-driven pipelines and resilient error handling. |
 | **GCP Cloud Composer** | Managed Airflow Service | A fully managed version of Apache Airflow on Google Cloud. Handles infrastructure, upgrades, and scaling automatically. | Teams that want to use Airflow without the overhead of managing the infrastructure. |
 | **AWS Step Functions** | Managed AWS Service | State-based workflow orchestration. Defines workflows as a series of steps in a visual editor or JSON. | Orchestrating tasks across different AWS services and building serverless data pipelines. |
+| Dagster | Modern Python Orchestrator | Asset-based approach, focusing on the data objects (assets) created by a pipeline. Strong emphasis on observability, testing, and data quality. | Data teams who prioritize data lineage, asset management, and robust testing. |
+| Prefect | Modern Python Orchestrator | Dynamic workflows that adapt to data and conditions. Known for its "negative engineering" philosophy, which focuses on handling failures gracefully. | Data teams needing flexible, event-driven pipelines and resilient error handling. |
 
 Azure Data Factory (ADF) is a **cloud-native ETL/ELT service** within the Microsoft Azure ecosystem. It's a fully managed, serverless platform designed for orchestrating and automating data movement and transformation at scale.
 
@@ -102,8 +102,8 @@ ADF is a key part of the Azure data stack, much like Dataform is for Google Clou
 | **Azure Data Factory** | Cloud-native ETL/ELT Service | Serverless, managed, and features a visual, drag-and-drop interface with over 90 built-in connectors. | Teams operating within the Azure ecosystem, particularly those who prefer a graphical interface over writing code for pipeline orchestration. |
 | **Apache Airflow** | Open-Source Orchestrator | Written in Python, defines workflows as Directed Acyclic Graphs (DAGs). Large community and extensive ecosystem of operators for integrations. | General-purpose orchestration, complex pipelines with diverse tasks, and custom logic. |
 | **Dataform** | Google Cloud Native Service | SQL-native, built specifically for orchestrating transformations within BigQuery. Manages dependencies and and version control. | Data teams working exclusively with BigQuery for SQL transformations. |
-| **Dagster** | Modern Python Orchestrator | Asset-based approach, focusing on the data objects (assets) created by a pipeline. Strong emphasis on observability, testing, and data quality. | Data teams who prioritize data lineage, asset management, and robust testing. |
-| **Prefect** | Modern Python Orchestrator | Dynamic workflows that adapt to data and conditions. Known for its "negative engineering" philosophy, which focuses on handling failures gracefully. | Data teams needing flexible, event-driven pipelines and resilient error handling. |
+| Dagster | Modern Python Orchestrator | Asset-based approach, focusing on the data objects (assets) created by a pipeline. Strong emphasis on observability, testing, and data quality. | Data teams who prioritize data lineage, asset management, and robust testing. |
+| Prefect | Modern Python Orchestrator | Dynamic workflows that adapt to data and conditions. Known for its "negative engineering" philosophy, which focuses on handling failures gracefully. | Data teams needing flexible, event-driven pipelines and resilient error handling. |
 
 {{< details title="ADF vs Airflow | ADF vs (dbt and dataform) 📌" closed="true" >}}
 

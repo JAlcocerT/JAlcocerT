@@ -62,10 +62,16 @@ But we have to get started with something first :)
 
 1. Have tried **Cursor**: https://cursor.com/dashboard
 
-As I consumed all windsurf tokens very fast...
+As I consumed all windsurf tokens very fast recently...
 
 ```sh
+#https://cursor.com/downloads
 cd ~/Downloads
+
+#mkdir ~/Applications 
+#cd ~/Applications
+#chmod +x Cursor-*.AppImage
+#./Cursor-*.AppImage
 
 chmod +x Cursor-1.4.3-x86_64.AppImage
 ./Cursor-1.4.3-x86_64.AppImage

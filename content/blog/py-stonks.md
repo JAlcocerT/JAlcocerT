@@ -576,7 +576,6 @@ async def get_items():
   * **Scalability:** Since the SSG output is static, it can be served from a simple web server or a CDN (Content Delivery Network), which is highly scalable and cost-effective. The FastAPI backend only needs to handle the dynamic API requests, reducing the load on your server.
   * **Flexibility:** You get the best of both worlds—the speed and security of a static site with the power of a dynamic, robust backend for complex features.
 
-
 Yes, an application combining a static site generator (SSG) like Astro with a backend API (FastAPI or Flask) will be **significantly faster** for the initial page load than a traditional Flask or Django app that renders every page on the server.
 
 The performance difference comes down to a core architectural distinction:
@@ -595,6 +594,8 @@ This entire process adds latency, making the Time to First Byte (TTFB) much slow
 The use of an SSG essentially shifts the "heavy lifting" of rendering pages from every user request to a one-time build process. You get the best of both worlds: lightning-fast static pages for content and a powerful dynamic backend for interactive features.
 
 {{< /details >}}
+
+Some people claim that Django+Astro can work together with some fwk like [Djazztro](https://github.com/Bwc9876/Djazztro)
 
 
 Even some way for people to create financial driven animations for themselves.
