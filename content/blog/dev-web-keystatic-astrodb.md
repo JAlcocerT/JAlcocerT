@@ -152,6 +152,8 @@ You always get surprised with astro themes:
 
 > An Astro template designed for **Automotive dealerships**. For the ones who like [cars](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/)!
 
+> > Which can be useful for otomoto's / dsautokomis pl / autoplac.pl / dsautoskup.otomoto.pl / autolux-komis.pl
+
 #### Astro Components I discovered
 
 As always, trying some new astro theme makes you discover some very cool components.

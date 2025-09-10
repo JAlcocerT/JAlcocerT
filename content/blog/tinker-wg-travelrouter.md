@@ -27,6 +27,7 @@ Which I tried to summarize [here with 3rd party VPNs](https://jalcocert.github.i
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-networking/#faq" title=" | Post ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="WG Easy with a VPS | Post ↗" >}}
+{{< /cards >}}
 
 And VPNs are helpful of course to make sure that relevant content will be available, like [Linux OS images that we want to keep](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry/).
 

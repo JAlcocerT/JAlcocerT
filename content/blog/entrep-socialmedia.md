@@ -78,7 +78,7 @@ Once ready, go to `https://postiz.jalcocertech.com/settings`
 
 And play around with PostIZ's API: https://docs.postiz.com/public-api
 
-And also the MCP integration
+And also the [MCP integration](#positz-x-mcp).
 
 
 
@@ -89,19 +89,17 @@ And also the MCP integration
 
 ### PostIZ x n8n
 
-https://postiz.com/blog/use-postiz-with-n-8-n
+* https://postiz.com/blog/use-postiz-with-n-8-n
 
-### PostIZ x Platforms
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
-1. Do the setup for the platforms you need: https://docs.postiz.com/providers/youtube
+### Positz x MCP
 
-
-2. https://docs.postiz.com/providers/telegram
-
-3. https://docs.postiz.com/providers/instagram
 
 {{< callout type="info" >}}
-[PostIZ also has MCP](https://postiz.jalcocertech.com/settings): Connect your MCP client to Postiz to schedule your posts faster!
+[PostIZ also has **MCP**](https://postiz.jalcocertech.com/settings): Connect your MCP client to Postiz to schedule your posts faster!
 {{< /callout >}}
 
 You will get something like:
@@ -109,6 +107,36 @@ You will get something like:
 ```txt
 https://postiz.jalcocertech.com/api/mcp/some_id_here/sse
 ```
+
+* https://mcpservers.org/servers/oculairmedia/postizz-MCP
+
+Then, just tweak it to be:
+
+```sh
+docker run -p 3084:3084 --env-file .env --rm -it oculair/postiz-mcp:latest
+```
+
+```json
+{
+  "mcpServers": {
+    "postiz": {
+      "url": "http://localhost:3084/sse",
+      "disabled": false,
+      "alwaysAllow": []
+    }
+  }
+}
+```
+
+### PostIZ x Platforms
+
+1. Do the setup for the platforms you need: https://docs.postiz.com/providers/youtube
+
+2. https://docs.postiz.com/providers/telegram
+
+3. https://docs.postiz.com/providers/instagram
+
+
 
 2. [Zapier](https://zapier.com/app/home)
 

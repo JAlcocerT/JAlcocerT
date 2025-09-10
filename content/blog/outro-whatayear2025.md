@@ -53,6 +53,9 @@ And im able to create a serverless landing ebook page and podcast.
 The lean startup
 Company of one!
 
+
+
+
 {{< /details >}}
 
 

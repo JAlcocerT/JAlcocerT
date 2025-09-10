@@ -126,6 +126,7 @@ https://www.youtube.com/watch?v=gQW-NcPVlXQ&t=1669s
 
 #### Using Astro SSG to Host your Podcast
 
+To get quickly with selfhosting via container and exposing via cf tunnels your astroPOD instance:
 
 ```sh
 git clone https://github.com/JAlcocerT/astropod && cd cd astropod
@@ -143,9 +144,16 @@ The theme bring support for icons at `./src/components/icons/ebookIcon.astro` : 
 
 > MIT |  A set of over 5800 free MIT-licensed high-quality SVG icons for you to use in your web projects. 
 
+
+I got mine published for now at `podcast.jalcocertech.com`!
+
 {{< callout type="info" >}}
 You can generate **podcasts from YT videos** with [notebooklm](https://notebooklm.google.com/)
 {{< /callout >}}
+
+And most certainly, this astro theme will be a project that can be well linked to TTS/voice clonning/social media.
+
+So who knows, maybe this blog will migrate at some point to a astro text+audio summary Ai generated :)
 
 ---
 

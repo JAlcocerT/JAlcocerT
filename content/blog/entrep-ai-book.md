@@ -3,7 +3,7 @@ title: "AI Driven e-books as a code"
 date: 2025-08-31
 draft: false
 tags: ["Entrepreneuring","sell-your-ebook","R","knitt","ebook landing","Flask CMS JSON"]
-description: 'Building in public a simple web platform to create/sell ebooks.'
+description: 'Building in public a simple web platform to create/sell ebooks pdf/epub.'
 url: 'ai-driven-ebooks'
 ---
 
