@@ -1,5 +1,5 @@
 ---
-title: "More Photo and Video fun stuff with PostIZ"
+title: "More Photo and Video fun stuff"
 date: 2025-05-13T13:20:21+01:00
 draft: false
 tags: ["Tinkering","ffmpeg","PostIZ","N8N","OpenAI TTS"]
@@ -62,7 +62,7 @@ See also:
 
 And all of this is great, but [consider this](#conclusions) while creating.
 
-> Never forget: share your content, specially if its that easy with [Postiz](#how-to-setup-postiz)
+> Never forget: share your content, specially if its *that easy* with [Postiz](#how-to-setup-postiz)
 
 ## Video Editing
 

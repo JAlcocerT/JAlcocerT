@@ -17,9 +17,9 @@ SMTP stuff is messy, a collection of thoughts that helped me understand tech ema
 
 So far I got proper *and high level* custom email integration via:
 
-1. ProtonMail
-2. Mailerlite: they allow one custom domain free
-3. Via LogTo: also to redirect to your custom domain for auth login etc
+1. [ProtonMail](#proton-mail)
+2. [Mailerlite](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#mailerlite): at the time of writing, they allow one custom domain free
+3. Via LogTo: also to redirect to your custom domain for auth login, they will send an email with the code to enter your webapp
 
 But for something more custom...I have been lacking how actually email/SMTP work.
 
@@ -118,6 +118,8 @@ How to do email stuff...with code
 
 ### Amazon SES
 
+Amazon simple email service
+
 ### MailGun
 
 
@@ -137,24 +139,12 @@ That was interesting.
 
 All these SMTP setups will help you with your social media, if you are into it.
 
-Apps like PostIZ, n8n or growthchief:
-
-* https://github.com/growchief/growchief
-
->  The Ultimate all-in social media automation (outreach) tool 🤖 
-
-
-
-* The people should own the town square - Mastodon Blog https://blog.joinmastodon.org/2025/01/the-people-should-own-the-town-square/?ref=selfh.st
-
-If you just wanted a quick way to chat...
-
-If you need, there are many [Interesting Chats](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps) to use :)
+If you just wanted a quick way to chat...there are many [Interesting Chats](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps) to use :)
 
 
 ### Proton Mail
 
-![alt text](/blog_img/email/dns-protonmail.png)
+![DNS Config for ProtonMail](/blog_img/email/dns-protonmail.png)
 
 
-![GMAIL custom domain for google](../../static/blog_img/email/dns-gmail.png)
+![GMAIL custom domain for google](/blog_img/email/dns-gmail.png)

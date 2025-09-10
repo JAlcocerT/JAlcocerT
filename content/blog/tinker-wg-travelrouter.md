@@ -22,7 +22,11 @@ Being involved in [**Telecom** projects](https://jalcocert.github.io/JAlcocerT/t
 
 But its something that goes even behind in time with the [Raspberry Pi](https://jalcocert.github.io/RPi/posts/rpi-wifi-ethernet-bridge/).
 
-Which I tried to summarize [here with 3rd party VPNs](https://jalcocert.github.io/JAlcocerT/raspberry-pi-networking/) and recently using [VPS+Wifi2Ethernet](https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/)
+Which I tried to summarize [here with 3rd party VPNs](https://jalcocert.github.io/JAlcocerT/raspberry-pi-networking/#faq) and recently using [VPS+Wifi2Ethernet](https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/)
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-networking/#faq" title=" | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="WG Easy with a VPS | Post ↗" >}}
 
 And VPNs are helpful of course to make sure that relevant content will be available, like [Linux OS images that we want to keep](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry/).
 
@@ -115,7 +119,7 @@ And even get home address internet. Thanks to Tailscale.
 Thanks to the router Forum that helpled me with the **subnet routes**.
 {{< /callout >}}
 
-![DockerHub Multi-Arch Image](/blog_img/hardware/tailscale-subnet-routes.jpg)
+![DockerHub Multi-Arch Image](/blog_img/hardware/tailscale-subnet-routess.jpg)
 
 {{< details title="How to Setup a Tailscale exit node 📌" closed="true" >}}
 

@@ -1,9 +1,9 @@
 ---
-title: "A/B Testing: Revolutionize Your Optimization Strategy"
+title: "A/B Testing for Your Optimization Strategy"
 date: 2020-11-27T23:20:21+01:00
 draft: false
-tags: ["Outro","AB Testing","Product","DSc","AdSense"]
-description: 'What it is AB Testing? Statistical insights and informed decisions that drive conversions'
+tags: ["Outro","AB Testing","Product","DSc","AdSense","Bayes"]
+description: 'What it is AB Testing? Conditional probabilities? Statistical insights that drive conversions'
 url: 'AB-Testing-for-data-analytics'
 math: true
 ---

@@ -12,7 +12,7 @@ url: 'tech-for-podcast'
 More Web fun Stuff with Astro SSG.
 
 1. Quick Docs with astro ssg and [starlight](#docs-website)
-2. Bring your [podcast to a astro](#podcast-website) ssg site
+2. Bring your [podcast to a astro](#podcast-website) ssg site (AstroPod Theme)
 
 +++ Got website commets working via [Commento](#adding-commento!)
 

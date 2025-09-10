@@ -27,20 +27,46 @@ But the more content gets created, the harder to get the attention of people who
 ---
 
 
+Apps like PostIZ, n8n or growthchief...
+
+* https://github.com/growchief/growchief
+
+>  The Ultimate all-in social media automation (outreach) tool 🤖 
+
+
+
+* The people should own the town square - Mastodon Blog https://blog.joinmastodon.org/2025/01/the-people-should-own-the-town-square/?ref=selfh.st
+
+
 1. Postiz-App - https://github.com/gitroomhq/postiz-app
     * https://docs.postiz.com/introduction
     
 > 📨 The ultimate **social media scheduling tool**, with a bunch of AI 🤖 and Apache 2.0!
 
-I got working PostIZ recently, together with Traefik, both as containers and locally accesible: https://postiz.jalcocertech.com/launches
+I [got working PostIZ](https://github.com/JAlcocerT/Docker/tree/main/Business/Postiz) recently, together with [Traefik](https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik), both as containers and locally accesible: `https://postiz.jalcocertech.com/launches`
 
 * https://docs.postiz.com/reverse-proxies/traefik
 * You could also install it as part of [Coolify](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/#coolify) or similar PaaS, like [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas): https://coolify.io/docs/services/postiz
 
+
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Postiz" title="PostIZ Container | Docker Configs 🐋✅ ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik Container | Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Postiz" title="PostIZ Container | Docker Configs with Traefik 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postiz" title="PostIZ HomeLab | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
+
+We can also use PostIZ via cloudflare tunnels:
+
+```sh
+git clone https://github.com/JAlcocerT/Home-Lab && cd postiz
+
+cp .env.sample .env
+
+#JWT_SECRET=$(openssl rand -base64 32)
+
+cat <<EOL >> .env
+JWT_SECRET=$(openssl rand -base64 32)
+EOL
+```
 
 
 {{< cards >}}
@@ -78,3 +104,38 @@ https://postiz.jalcocertech.com/api/mcp/some_id_here/sse
 
 > MIT | A lightweight, open‑source Discord bot that **monitors a subreddit for new posts** (optionally filtered by flair) and automatically send them to Discord, Mattermost, Slack, or other services via webhook, with optional DM notifications.
 
+
+
+---
+
+## Conclusions
+
+There are people doing cool things with marketing agencies.
+
+They are implementing CRMs like `https://www.gohighlevel.com/`
+
+> Building The Digital Marketing Engine
+
+Also, `https://www.smartlead.ai/pricing` for cold emails.
+
+> Powerful Automated Email Marketing that Drives Sales.
+
+Even  `https://www.heyreach.io/`
+
+
+> 10x your LinkedIn outbound. Unlimited senders, one fixed cost
+
+> > Which can be used together with n8n: https://www.heyreach.io/n8n-templates
+
+Last but not least: `https://www.similarweb.com`
+
+> multidimensional approach to measuring online traffic and discovering what it means. 
+
+
+### Scrapping Social Media
+
+Cool marketing agencies are using: `https://apify.com/`. Apify is the largest ecosystem where developers build, deploy, and publish web scrapers, AI agents, and automation tools. We call them Actors.
+
+* https://docs.apify.com/platform
+
+> Your full‑stack platform for web scraping

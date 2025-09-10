@@ -7,9 +7,17 @@ description: 'Tinkering with a Raspberry Pi and Networking. Wifi2Ethernet with W
 url: 'raspberry-pi-networking'
 ---
 
+**Tl;DR**
+
 *Raspberry Pi - Wifi2Ethernet Bridge (With Wireguard) and more*
 <!-- <https://www.youtube.com/watch?v=qhe6KUw3D78> -->
 
+
+**Intro**
+
+Some time ago I placed [a guide](https://jalcocert.github.io/RPi/posts/rpi-wifi-ethernet-bridge/) *improved with LLMs* on how to do Wifi2Ethernet Bridge via a RPi.
+
+Now, I want to bring here how to to wifi2ethernet bridge passing the wireguard VPN network from the Pi to the connected device.
 
 ## Raspberry Pi: Wifi Bridge
 

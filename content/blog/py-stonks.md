@@ -512,6 +512,12 @@ except Exception as e:
 ![Matplotlib of sqlite pulled data via fastapi into ipynb](/blog_img/entrepre/public-build/pystonks/fastapi-sqlite-ipynb-plot.png)
 
 
+
+{{< callout type="info" >}}
+You can test FastAPI with Postman, Hoppscoth...
+{{< /callout >}}
+
+
 ### Astro x Data x ChartJS
 
 Earlier this year, I got a domain and [played with the Astro Link in Bio Theme](https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/).

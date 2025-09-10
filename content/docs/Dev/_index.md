@@ -92,10 +92,13 @@ It ensures that complex workflows run in the correct sequence, handle failures, 
 | Dagster | Modern Python Orchestrator | Asset-based approach, focusing on the data objects (assets) created by a pipeline. Strong emphasis on observability, testing, and data quality. | Data teams who prioritize data lineage, asset management, and robust testing. |
 | Prefect | Modern Python Orchestrator | Dynamic workflows that adapt to data and conditions. Known for its "negative engineering" philosophy, which focuses on handling failures gracefully. | Data teams needing flexible, event-driven pipelines and resilient error handling. |
 
-Azure Data Factory (ADF) is a **cloud-native ETL/ELT service** within the Microsoft Azure ecosystem. It's a fully managed, serverless platform designed for orchestrating and automating data movement and transformation at scale.
+Azure Data Factory (ADF) is a **cloud-native ETL/ELT service** within the Microsoft Azure ecosystem.
 
-ADF is a key part of the Azure data stack, much like Dataform is for Google Cloud. Its primary appeal is its visual, low-code interface and deep integration with other Azure services.
+It's a fully managed, serverless platform designed for orchestrating and automating data movement and transformation at scale.
 
+ADF is a key part of the Azure data stack, much like Dataform is for Google Cloud.
+
+Its primary appeal is its visual, low-code interface and deep integration with other Azure services.
 
 | Name | Type | Key Features | Ideal For |
 | :--- | :--- | :--- | :--- |
@@ -112,7 +115,6 @@ The choice between a tool like Azure Data Factory and a more code-based tool lik
 * **ADF is great for a more "citizen integrator" or low-code approach**, especially if you're already using Azure. It simplifies many common data integration tasks with its graphical interface.
 * **Airflow** provides greater **flexibility and fine-grained control** over your pipelines, but it requires a deeper understanding of Python and more DevOps effort to manage the underlying infrastructure.
 
----
 
 Yes, dbt and Dataform are extremely similar; they are both designed for data transformation. Azure Data Factory (ADF), however, is both a transformation and orchestration tool.
 
@@ -202,28 +204,22 @@ Remember, There wont be any good data science work if the **data modelling** par
   {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-the-roc-curve-in-detail/" title="ROC Post ↗" icon="user" >}}
 {{< /cards >}}
 
-**DSc** Stuff
-
-* https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/
-* https://jalcocert.github.io/JAlcocerT/machine-learning-the-roc-curve-in-detail/
-* https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/
-
-
 {{< callout type="info" >}}
 I also explored [NLP](https://jalcocert.github.io/JAlcocerT/nlp-tools/) and [CV](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/#more-software---camera-and-cv)
 {{< /callout >}}
 
 
+More **DSc** Stuff
 
 With AI/ML you can do very cool stuff, from **AB Testing** to test new strategies, to sentiment analysis or PII detection:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="AB Testing ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/nlp-tools/" title="PII / Sentiment Analysis ↗" icon="user" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/nlp-tools/" title="NLP / PII / Sentiment Analysis ↗" icon="user" >}}
 {{< /cards >}}
 
 
-{{< details title="Some examples of tasks and skills in machine learning/data science, along with how you could demonstrate them using Python and popular libraries 📌" closed="true" >}}
+{{< details title="Some examples of tasks and skills in machine learning/DSc, along with how you could demonstrate them using Python and popular libraries 📌" closed="true" >}}
 
 
 **1. Machine Learning/Data Science Tasks**
@@ -310,7 +306,7 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/" title="Bayes and Streamlit?" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc, but Bayes is for life" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/#conditional-probability" title="Bayes and Streamlit | POST" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc, but Bayes is for life" >}}
   {{< card link="https://github.com/JAlcocerT/Python_is_awesome" title="Awsome Python Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Bayes and Streamlit" >}}
 {{< /cards >}}
 

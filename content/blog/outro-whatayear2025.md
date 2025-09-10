@@ -46,7 +46,12 @@ Reading: *excuse alert, this is beeen a year mor of creating than consuming*
 
 And that makes...xyz/12 books.
 
-But, I got to know this is possible: https://kindlemodding.org/
+But, I got to know that this is possible: https://kindlemodding.org/
+
+And im able to create a serverless landing ebook page and podcast.
+
+The lean startup
+Company of one!
 
 {{< /details >}}
 
@@ -263,6 +268,8 @@ If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlc
 ## Entrepreneuring
 
 I feel like in the backstraight of the circuit after having couple of laps to recognize my breaking/aceleration points.
+
+And i
 
 {{< details title="I was wondering on corporation vs smaller teams and their efficiency for some time.... 📌" closed="true" >}}
 
