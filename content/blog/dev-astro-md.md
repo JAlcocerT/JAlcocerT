@@ -90,3 +90,7 @@ https://www.youtube.com/watch?v=Ud9obEHadLI
 * https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
 
 * https://hub.docker.com/r/strapi/strapi/tags
+
+* https://docs.strapi.io/cms/installation/docker
+* https://docs.strapi.io/cms/quick-start
+* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose

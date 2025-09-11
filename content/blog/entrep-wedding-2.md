@@ -1,16 +1,38 @@
 ---
-title: " | Wedding Edition"
+title: "BiP | Wedding Edition"
 date: 2025-09-13T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","QR Code Generator","Web","Cloudflare DNS","Porkbun API"]
+tags: ["Entrepreneuring","QR Code Generator","Web","Cloudflare DNS","Porkbun API","SlubneChwile"]
 description: 'Wedding stuff with PB BaaS. Everything that can be static, is static 🤯'
 url: 'wedding-photo-galleries'
 ---
 
+https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
 
-### Porkbun API
+
+**Intro**
+
+We come from [this post](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/)
+
+Time to keep building in public the project.
+
+https://github.com/JAlcocerT/slubnechwile
+https://github.com/JAlcocerT/Flask_SlubnyChwile
+
+Because since the last commits, Ive learnt a lot.
+
+And I wont be using Filebrowser or some selfhostable webapp to do the BE part.
 
 
+
+
+## Features
+
+**The free stuff**
+
+**The try for free stuff**
+
+**The paid stuff**
 
 ### QR Code Generator
 
@@ -22,3 +44,38 @@ url: 'wedding-photo-galleries'
 But whatever can be static, keep it static.
 
 Same applies to your QR Code web generator.
+
+---
+
+## FAQ
+
+### Domain Management
+
+#### Porkbun API
+
+On the waiting2landing post and project, I was tinkering with CF and PB APIs:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/cloudflare-dns-updater.py" title="Cloudflare DNS API Py Script ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/porkbun-domains.py" title="Porkbun API Py Script ↗" >}}
+{{< /cards >}}
+
+I Still had to buy the domain via UI.
+
+But I have improved the script as per their docs: https://porkbun.com/api/json/v3/documentation#Domain%20Check
+
+And now it makes more than just quote the price.
+
+1. Availability
+2. Price
+3. Domain Get Name Servers
+4. Domain Update Name Servers
+
+### Landing Page
+
+The Sassify theme is just awsome.
+
+https://astro-sassify.larryxue.dev/
+
+
+#### Configuring Cloudflare

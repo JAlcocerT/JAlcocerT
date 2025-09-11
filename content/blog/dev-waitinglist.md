@@ -2,7 +2,7 @@
 title: "A Quick Waiting List"
 date: 2025-08-02
 draft: false
-tags: ["Dev","Entrepreneurship","PMF","Porkbun API","waiting-to-landing"]
+tags: ["Dev","Entrepreneurship","PMF","Porkbun API","waiting-to-landing","Formbricks"]
 description: 'How much is an idea worth? With Astro SSG, Formbricks and Cloudflare'
 url: 'how-to-create-a-waiting-list'
 ---
@@ -51,7 +51,7 @@ I took inspiration on the **MIT astro theme**:
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Astro Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Forked and Tweaked Astro Theme for waiting2landing concept" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="NEW Astro Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Forked and Tweaked Astro Theme for waiting2landing concept" >}}
 {{< /cards >}}
 
 Now, there are some changes added:
@@ -118,16 +118,20 @@ You can configure porkbun, so that the **default NS** will be cloudflare ones: `
 
 ![alt text](/blog_img/dev/porkbun/4-porkbun-buy-ui.png)
 
+Once bought, I updated the NS to be the CF ones:
+
 ![alt text](/blog_img/dev/porkbun/5-cloudflare-ns-check.png)
 
 ![alt text](/blog_img/dev/porkbun/6-ns-ok.png)
 
 
-I was **trying to buy the domains programatically via the API**, but I could just get the quoted price:
+I was **trying to buy the domains programatically via the API**, but I could just get the quoted price via script: 
 
 ```sh
 uv run porkbun-domains.py
 ```
+
+It seems its just not possible to do so as [per reddit post](https://www.reddit.com/r/PorkBun/comments/1kqwq9y/programmatically_purchase_new_domain_via_api/)
 
 I had to buy `beyondajourney.lol` via the UI instead for couple of $ the first year.
 

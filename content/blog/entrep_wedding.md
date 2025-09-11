@@ -7,6 +7,14 @@ description: 'Wedding stuff. Aka 200, you mean 4k? The story and some entreprene
 url: 'wedding-photo-galleries'
 ---
 
+
+**TL;DR**
+
+https://github.com/JAlcocerT/slubnechwile
+https://github.com/JAlcocerT/Flask_SlubnyChwile
+
+**Intro**
+
 Its been a while since I was helping on [this wedding](https://jalcocert.github.io/JAlcocerT/software-for-weddings/)
 
 Thankfully, I have a video on how cool that was:
@@ -353,7 +361,7 @@ npx wrangler pages deploy dist # normally will be dist/public, but whatever <BUI
 
 #### Automated DNS Records
 
-https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#updating-dns-records
+* https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#updating-dns-records
 
 We will need these artifacts from cloudflare:
 
