@@ -91,6 +91,23 @@ Its up to you:
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for your server" >}}
 {{< /cards >}}
 
+3. Get [https/SSL](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/)
+
+4. Do that cleanup from time to time:
+
+
+```sh
+#df -h
+docker stop $(docker ps -a -q) #stop all
+#docker volume rm $(docker volume ls -q | grep -v '^portainer_data$') #rm all volumes but portainer
+
+#docker system df
+#docker image prune -a 
+#docker builder prune -a --force
+
+#docker system prune --all --volumes #just clean all...
+```
+
 ### Goodies for Servers
 
 1. Dont forget about **fail2ban**:

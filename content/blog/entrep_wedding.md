@@ -72,7 +72,9 @@ This will involve making several assumptions, as exact market data for such a ni
 
 1. Total Addressable Market (TAM) - Number of Weddings per Year
 
-* **Data:** According to Notes from Poland, the number of marriages in Poland dropped to just over **140,000 in 2020** from **180,000 in 2019**, with a general decline since a high of almost 260,000 in 2008. More recent data from Poland Insight (May 2024) notes a "demographic downturn" and a shrinking base of potential newlyweds, suggesting the number might still be lower than pre-pandemic highs.
+* **Data:** According to Notes from Poland, the number of marriages in Poland dropped to just over **140,000 in 2020** from **180,000 in 2019**, with a general decline since a high of almost 260,000 in 2008.
+
+More recent data from Poland Insight (May 2024) notes a "demographic downturn" and a shrinking base of potential newlyweds, suggesting the number might still be lower than pre-pandemic highs.
 
 * **Assumption:** Let's take a cautious estimate for current weddings, considering the decline and potential for stabilization. We'll use **160,000 weddings per year** as a mid-point estimate between the lower pandemic number and the 2019 figure.
 
@@ -168,7 +170,7 @@ This one is tested *in production* as seen [here](https://jalcocert.github.io/JA
 
 1. https://filebrowser.org/configuration/custom-branding or [filebrowser quantum](https://github.com/gtsteffaniak/filebrowser)
 
-![alt text](/blog_img/web/filebrowser-hugo/filebrowser-quantum-login.png)
+![Filebrowser Login](/blog_img/web/filebrowser-hugo/filebrowser-quantum-login.png)
 
 ![alt text](/blog_img/web/filebrowser-hugo/filebrowser-quantum-users.png)
 

@@ -10,6 +10,7 @@ math: true
 
 Recently, I was writing about [this awsome mechanism project](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/)
 
+* https://nav.al/gravity
 
 <!-- https://www.youtube.com/watch?v=-QTkPfq7w1A -->
 

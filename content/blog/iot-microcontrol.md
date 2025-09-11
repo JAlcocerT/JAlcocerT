@@ -10,6 +10,14 @@ url: 'microcontrollers-setup-101'
 **TL;DR** Cool IoT Stuff that the ESP32 can do!
 
 
+UpTime Kuma can also monitor MQTT
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+
 ## Intro
 
 Last year I bough a couple of **companions for my Raspberry Pi 4 2GB**:

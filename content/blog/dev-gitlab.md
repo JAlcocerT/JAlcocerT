@@ -26,7 +26,7 @@ Then lets add it:
 ![Creating SSH Keys at Gitlab](/blog_img/dev/gitlab/gitlab-ssh-summary.png)
 
 
-2. Create a ssh key:
+2. Create a ssh key: https://it-tools.tech/rsa-key-pair-generator
 
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com" #place something that will make it easy to find

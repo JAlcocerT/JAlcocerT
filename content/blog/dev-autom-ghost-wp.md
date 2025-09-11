@@ -97,6 +97,8 @@ curl -u 'jalcocert:bzkh]FTp3}T]#Mj' -X POST "$WP_HOME/wp-json/wp/v2/posts" \
 
 ### Programatic Ghost
 
+See https://github.com/JAlcocerT/Home-Lab/blob/main/ghost/API.md after you have done your [Ghost setup](https://github.com/JAlcocerT/Home-Lab/blob/main/ghost/API.md)
+
 
 ---
 

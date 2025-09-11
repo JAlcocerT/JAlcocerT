@@ -123,6 +123,7 @@ Which is great if you are Time aware!
 https://www.youtube.com/watch?v=gQW-NcPVlXQ&t=1669s 
 -->
 
+With the AstroPod Theme, you can get something like: https://nav.al/program
 
 #### Using Astro SSG to Host your Podcast
 

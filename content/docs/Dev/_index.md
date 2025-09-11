@@ -60,6 +60,8 @@ Query engines are software systems designed to run SQL queries or similar data p
 | **Dremio** | Data Lakehouse Platform | SQL engine with a data virtualization layer | Self-service BI and analytics directly on data lakes |
 | **BigQuery (as an engine)** | Serverless MPP Engine | Massively Parallel Processing, optimized for analytical queries | High-performance analytics on massive datasets |
 
+* https://it-tools.tech/sql-prettify
+
 > Massively Parallel Processing engine. It's a type of architecture designed to run a single, large query or job across many different computing nodes at the same time
 
 
@@ -177,6 +179,9 @@ Object Storage is designed for a flat structure and is typically accessed via an
 | **Parquet** | Columnar | **Primary for Analytics (OLAP)** | Highly compressed, **very fast for analytical queries** | Slower for writing and for queries that need full rows |
 | **ORC** | Columnar | Analytics, Hadoop Ecosystem | Similar to Parquet, excellent compression and performance | More tightly coupled with the Hadoop ecosystem than Parquet |
 | **Delta Lake / Iceberg / Hudi** | Table Format | **Data Lakehouses**, ACID Transactions | Brings database features (transactions, time travel, schema enforcement) to a data lake | Adds a layer of complexity and tool dependency |
+
+* https://it-tools.tech/date-converter
+* https://it-tools.tech/json-prettify
 
 > You can do cool things with [Python+JSON understanding, like reading info from s3](https://jalcocert.github.io/JAlcocerT/aws-s3-python-boto-queries/#json-tools).
 

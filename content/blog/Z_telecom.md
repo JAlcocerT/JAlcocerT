@@ -44,11 +44,19 @@ See other *local devices* connected to the same router:
 ip neigh
 ```
 
-> Access the router admin panel, this example is at 192.168.0.1
+> Access the router admin panel, this example is at 192.168.0.1.
 
 {{< callout type="info" >}}
 You will see the software version its running, like CH7465PLAY-NCIP-6.15.32p5-GA-NOSH, its mac address, serial number...
 {{< /callout >}}
+
+TO know your vendor:
+
+```sh
+ip link show enp2s0f0
+```
+
+* https://it-tools.tech/mac-address-lookup
 
 **This is a fiber Cable Modem**
 

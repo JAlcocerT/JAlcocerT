@@ -157,12 +157,11 @@ docker run -p 3084:3084 --env-file .env --rm -it oculair/postiz-mcp:latest
 > MIT | A lightweight, open‑source Discord bot that **monitors a subreddit for new posts** (optionally filtered by flair) and automatically send them to Discord, Mattermost, Slack, or other services via webhook, with optional DM notifications.
 
 
-
 ---
 
 ## Conclusions
 
-There are people doing cool things with marketing agencies.
+There are **people doing cool things** with marketing agencies.
 
 They are implementing CRMs like `https://www.gohighlevel.com/`
 

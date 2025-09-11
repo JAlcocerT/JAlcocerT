@@ -22,6 +22,10 @@ Also, there are many things that [CSR can do](https://jalcocert.github.io/JAlcoc
 
 ## Tech
 
+After discovering what is possible with https://it-tools.tech/html-wysiwyg-editor
+
+Isnt it anything similar for md?
+
 ### TOAST UI WYSIWYG MD Editor
 
 The TOAST UI Editor is a well-regarded and **mature open-source Markdown editor** that stands out for its unique blend of a powerful WYSIWYG experience with a Markdown-first approach. 
@@ -84,3 +88,5 @@ https://www.youtube.com/watch?v=Ud9obEHadLI
 * https://elest.io/open-source/strapi
 
 * https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
+
+* https://hub.docker.com/r/strapi/strapi/tags

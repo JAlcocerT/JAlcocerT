@@ -4,7 +4,7 @@ date: 2025-09-08T00:20:21+01:00
 draft: false
 description: 'Setting up devops tools - From CI/CD, to Monitoring with Grafana, k8s, DSc Tools...'
 url: 'dev-ops-for-non-devops'
-tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions"]
+tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Status Pages"]
 ---
 
 
@@ -340,11 +340,24 @@ kubectl exec -it <pod_name> -- /bin/bash: Executes a command, like opening a bas
 
 ## Monitoring
 
-You can try with Beszel
+You can try with Beszel:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring with Beszel" >}}
 {{< /cards >}}
+
+Or with Uptime Kuma:
+
+Be aware of the http status codes: https://it-tools.tech/http-status-codes
+
+With Uptime Kuma, you can get quickly an uptime pages for your services:
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![alt text](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
+
+* https://github.com/ivbeg/awesome-status-pages
 
 ### Grafana
 
@@ -365,6 +378,10 @@ https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana
 Cloud Native [Function-as-a-Service Platform](https://github.com/OpenFunction/OpenFunction) 
 
 > Thanks to [DevOps Toolkit](https://www.youtube.com/watch?v=UGysOX84v2c) for showing this. 
+
+
+---
+
 
 ## Conclusions
 
@@ -396,7 +413,7 @@ Airflow to start some job? -->
 
 ## FAQ
 
-### How to monitor the Status of my Services?
+**How to monitor the Status of my Services?**
 
 You can get help from [Uptime Kuma with Docker](https://fossengineer.com/selfhosting-uptime-Kuma-docker/).
 
@@ -405,8 +422,6 @@ You can get help from [Uptime Kuma with Docker](https://fossengineer.com/selfhos
 FTP stands for **File Transfer Protocol**, and an FTP server is a computer or software application that runs the FTP protocol.
 
 Its primary purpose is to facilitate the transfer of files between different computers over a network, such as the internet or a local area network (LAN). 
-
-
 
 #### Why FTPs?
 
@@ -480,8 +495,6 @@ https://www.youtube.com/watch?v=-JVHvU3Oor8
 
 ### Rancher Alternatives
 
-* 
-*
 
 ### What is it Kubeflow?
 

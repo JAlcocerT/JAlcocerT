@@ -387,7 +387,7 @@ For **Quick Benchmarks**, just do:
 
 ```sh
 curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Benchmark101.sh
-chmod +x Benchmark101.sh
+chmod +x Benchmark101.sh #https://it-tools.tech/chmod-calculator
 ./Benchmark101.sh
 ```
 

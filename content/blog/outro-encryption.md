@@ -3,7 +3,7 @@ title: "Encryption, Captchas, OpenIDConnect and more"
 date: 2025-05-20
 draft: false
 tags: ["Outro","Security","PoW","Clave","E-Residency","openssl","OIDC vs OAuth","Bearer JWT"]
-description: 'SHA256 Protocol. The concept and applications: SSH, HTTPs, Bitcoin...'
+description: 'SHA256 Protocol vs RSA. The concept and applications: SSH, HTTPs, Bitcoin...'
 url: 'encryption-101'
 ---
 
@@ -115,7 +115,7 @@ You might need to hash customer identifiable data or [PII](https://jalcocert.git
 
 def hash_mac(mac):
     mac = f.upper(mac)
-    mac = f.regexp_replace(mac, '[-:]', '')
+    mac = f.regexp_replace(mac, '[-:]', '') #clean regex https://it-tools.tech/regex-memo
     mac = f.sha2(mac, 256)
     return mac
 ```
@@ -160,14 +160,18 @@ You can definitely convert (hash) strings to their SHA-256 representation using 
 
 **1. Online Tools (like the one you linked):**
 
-The website you provided, [https://emn178.github.io/online-tools/sha256.html](https://emn178.github.io/online-tools/sha256.html), is a perfect example of an online SHA-256 calculator. You can simply:
+The website  [https://emn178.github.io/online-tools/sha256.html](https://emn178.github.io/online-tools/sha256.html), is a perfect example of an online SHA-256 calculator. You can simply:
 
 * Enter your input string (in this case, a standardized MAC address) into the text field.
 * The tool will instantly compute and display the corresponding SHA-256 hash in hexadecimal format.
 
 **2. Ubuntu CLI:**
 
-Ubuntu (and most other Linux distributions) comes with command-line utilities that can perform cryptographic hashing. The most common one for SHA-256 is `sha256sum`.
+Ubuntu (and most other Linux distributions) comes with command-line utilities that can perform cryptographic hashing. 
+
+The most common one for SHA-256 is `sha256sum`.
+
+3. Via IT-Tools: https://it-tools.tech/hash-text
 
 **How to use `sha256sum`:**
 
@@ -429,6 +433,10 @@ Here's how it relates to protected endpoints:
 1.  **Authentication**: When a user logs in (e.g., with a username and password), the server verifies their credentials.
 2.  **Token Issuance**: After a successful login, the server generates a **unique bearer token** and sends it back to the client. This token is often a **JSON Web Token (JWT)**, which is a self-contained token that includes user data and an expiration time.
 
+* https://it-tools.tech/jwt-parser
+
+> Parse and decode your JSON Web Token (jwt) and display its content.
+
 
 {{< details title="JWT is a type of Bearer and it works via SHA256! 📌" closed="true" >}}
 
@@ -515,6 +523,40 @@ The relationship is the same across all three, but the implementation is very di
 {{< callout type="info" >}}
 A bearer token is the standard key for a protected endpoint, and while PocketBase gives you the key automatically, Flask and FastAPI make you build the lock and key system yourself.
 {{< /callout >}}
+
+### RSA vs SHA256
+
+SHA-256 and RSA are both cryptographic tools, but they serve fundamentally different purposes. The key difference is that **SHA-256 is a hashing algorithm**, while **RSA is an encryption algorithm.**
+
+Let's break down what that means.
+
+#### SHA-256: Hashing 🔒
+
+**SHA-256** (Secure Hash Algorithm 256-bit) is a one-way mathematical function. It takes any input—a text file, an image, or a long password—and produces a fixed-length string of 256 bits (or 64 hexadecimal characters), called a **hash** or **digest**.
+
+* **One-Way:** You can easily calculate the hash from the original data, but it's computationally infeasible to reverse the process and get the original data back from the hash. This makes it perfect for verifying data integrity.
+* **Unique Fingerprint:** Even a tiny change to the original data will result in a completely different hash. This property is used to verify that a file hasn't been tampered with.
+* **Example Use:** Password storage. A website stores the SHA-256 hash of your password instead of the password itself. When you log in, it hashes the password you enter and compares the new hash to the stored one. If they match, you're authenticated. Even if the database is breached, the attacker only gets the hashes, not the actual passwords.
+
+#### RSA: Encryption 🔑
+
+**RSA** (Rivest-Shamir-Adleman) is a two-way **asymmetric encryption** algorithm. It uses a **pair of keys**—a public key and a private key—to encrypt and decrypt data.
+
+* **Asymmetric:** The public key can be shared with anyone and is used for encryption, but only the corresponding private key can decrypt the data. This is the core of its security.
+* **Two-Way:** It's designed to be reversible. Data encrypted with the public key can be decrypted with the private key, and data encrypted with the private key can be decrypted with the public key.
+* **Example Use:** Secure communication. When you visit a secure website (using HTTPS), your browser uses the website's public key to encrypt a secret session key. That encrypted key is sent to the server, which is the only one with the private key to decrypt it. This allows for a secure, private communication channel. 
+
+---
+
+The Combination: Digital Signatures ✍️
+
+In many real-world applications, SHA-256 and RSA are used together to create a **digital signature**. This process ensures both **data integrity** and **sender authenticity**.
+
+1.  **Hashing:** The sender takes a document and generates a SHA-256 hash of it. This creates a unique "fingerprint" of the document.
+2.  **Encryption:** The sender then **encrypts this hash using their own private RSA key**. The result is the digital signature.
+3.  **Verification:** The sender sends the original document and the digital signature to the recipient.
+4.  **Decryption & Comparison:** The recipient uses the sender's public RSA key to decrypt the signature, which reveals the original hash. The recipient then independently generates a new SHA-256 hash of the received document.
+5.  **Authenticity Check:** The recipient compares the two hashes. If they match, they can be sure that the document hasn't been tampered with and that it came from the rightful owner of the private key.
 
 ---
 

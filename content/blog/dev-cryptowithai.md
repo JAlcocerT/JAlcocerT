@@ -329,7 +329,10 @@ Because tradfi, and bank accounts, IBAN, BIC, SWIFTs, SEPA...
 
 ![alt text](/blog_img/data-experiments/wise-bank.png)
 
-Are completely another world: https://wise.com/us/iban/checker
+Are concepts completely another world: 
+
+* https://wise.com/us/iban/checker
+* https://it-tools.tech/iban-validator-and-parser
 
 But there are some open and API parts, like: [Open Banking](https://en.wikipedia.org/wiki/Open_banking)
 

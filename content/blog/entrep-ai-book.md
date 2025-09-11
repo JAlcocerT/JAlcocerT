@@ -253,6 +253,8 @@ But im happy I could link this to my last year thought with the [assistant agent
 
 2. I guess via stripe + SSR and obfuscation technique that gets clear if your email is in the proper Stripe driven table of users who bought: `https://readmake.com/`
 
+* https://it-tools.tech/string-obfuscator
+
 > You can also sell ebooks via amazon or ko-fi.
 
 

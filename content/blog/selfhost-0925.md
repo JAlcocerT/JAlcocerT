@@ -45,7 +45,7 @@ nano Selfhosting_101.sh #MAKE SURE YOU UNDERSTAND WHAT YOU WILL BE RUNNING FIRST
 #sudo ./Selfhosting_101.sh 
 ```
 
-If you want, you can get Podman instead:
+If you want, you can get Podman *instead*:
 
 ```sh
 sudo apt install podman
@@ -57,6 +57,12 @@ podman --version
 4. Start [creating and deploying your Apps](#how-to-bundle-your-apps)
 
 5. Get a domain and [bring https](#https-everywhere) when you feel confortable.
+
+6. Along the way...
+
+* Understand what chmod does: https://it-tools.tech/chmod-calculator
+* Crontab to schedule tasks: https://it-tools.tech/crontab-generator
+* Get in love with docker compose: https://it-tools.tech/docker-run-to-docker-compose-converter
 
 ---
 

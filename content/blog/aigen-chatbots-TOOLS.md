@@ -592,9 +592,6 @@ Popup window after 3 seconds:
 
 ## FAQ
 
-### How to Monitor the Status of your ChatBots
-
-* {{< newtab url="/selfhosting-uptime-Kuma-docker" text="Setup Uptime Kuma" >}}
 
 ### Free and Open Source No/Low Code Tools
 

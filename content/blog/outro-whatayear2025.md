@@ -25,9 +25,6 @@ After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with
 https://astro.build/themes/details/photography-portfolio-template/
 
 
-
-
-
 * https://github.com/OpenInterpreter/open-interpreter
 
 > A natural language interface for computers 
