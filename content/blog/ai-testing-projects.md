@@ -2,7 +2,7 @@
 title: "Testing new AI projects with Python: Conda, venvs, containers..."
 date: 2024-12-25
 draft: false
-tags: ["Dev","Python"]
+tags: ["Dev","Python","Conda vs PIP"]
 description: 'How to use the latest AI Project. With Code and Systematically. Example with PrivateGPT and ChatDev'
 url: 'ai-projects-python-dependencies'
 ---
@@ -13,7 +13,7 @@ Time to make some upgrades:
 
 ## Dependencies with Python
 
-1. **Conda**
+1. **Conda**: http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/
 
 ```sh
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh

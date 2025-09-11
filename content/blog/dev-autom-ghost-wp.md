@@ -2,7 +2,7 @@
 title: "Using APIs to write content"
 date: 2025-09-06T08:20:21+01:00
 draft: false
-tags: ["Ghost","Web","Wordpress","Gatsby GraphQL vs REST API"]
+tags: ["Ghost","Web","Wordpress","Gatsby GraphQL vs REST API","Codex CLI","n8n x wp"]
 description: 'Programatic posts creation with the most popular CMSs.'
 url: 'automating-ghost-and-wordpress'
 ---
@@ -20,12 +20,20 @@ Ghost and WP both provide a [RESTAPI](#rest-vs-graphql-vs-gatsby).
 
 Just because you can...dont become a BOT.
 
-With Ghost and Wordpress ready to go into your homelab/server, we are ready to play.
+For real, even if you know how to use [Codex CLI + HUGO](#codex-cli--hugo) to generate project docs for OSS projects.
+
+For today's post: with Ghost and Wordpress ready to go into your homelab/server, we are ready to play.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="Ghost with Docker 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wordpress" title="WP with Docker 🐋 ↗" >}}
 {{< /cards >}}
+
+They provide a cool UI.
+
+But come on, do you really want to spend time with drag and drop still?
+
+Even configuring your [n8n to write into wordpress](#n8n-x-wordpress) for you is possible.
 
 
 ## Programatic Posts
@@ -93,19 +101,6 @@ curl -u 'jalcocert:bzkh]FTp3}T]#Mj' -X POST "$WP_HOME/wp-json/wp/v2/posts" \
 ---
 
 ## Conclusions
-
-### DB2Rest
-
-DB2Rest is blazing fast - It has no Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
-
-* https://github.com/9tigerio/db2rest
-  * https://db2rest.com/docs/run-db2rest-on-docker
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/db2rest" title="DB2Rest with Docker 🐋 ↗" >}}
-{{< /cards >}}
-
-> Apache v2 | Instant no code **DATA API platform**. Connect any database, run anywhere. Power your GENAI application [function/tools calls](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/) in seconds.
 
 ---
 
@@ -324,3 +319,11 @@ Choose WordPress if:
 > Both Ghost and WordPress can serve as effective headless CMS options for Gatsby. 
 
 > > Ghost offers a more streamlined experience with its focused feature set, while WordPress provides greater flexibility and an extensive plugin ecosystem.
+
+### Codex CLI + HUGO
+
+If Codex can generate documentation for [QA Track](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/)... https://youtu.be/e_l6HJISIrs
+
+It can definitely generate markdown posts summaries about it or any other project.
+
+### n8n x Wordpress

@@ -110,7 +110,7 @@ I created some `yfinance-10*.ipynb` files to make sure I dont need to go back an
 
 And with one prompts I was gettings this: *via `yfinance-104.ipynb`*
 
-![alt text](/blog_img/entrepre/public-build/pystonks/eda-stonks.png)
+![Stonks EDA Summary Report](/blog_img/entrepre/public-build/pystonks/eda-stonks.png)
 
 > Isnt it cool to share on forums?
 

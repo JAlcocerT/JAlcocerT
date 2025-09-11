@@ -3,7 +3,7 @@ title: "Social Media Automation | PostIZ"
 date: 2025-07-03T19:20:21+01:00
 draft: false
 description: 'Programatic posting on SM.'
-tags: ["Youtube Shorts","Social Media"]
+tags: ["Youtube Shorts","Social Media","APIfy","Scrapping"]
 url: social-media-automation
 ---
 
@@ -55,7 +55,7 @@ I [got working PostIZ](https://github.com/JAlcocerT/Docker/tree/main/Business/Po
 We can also use PostIZ via cloudflare tunnels: `postiz:5000`
 
 
-![alt text](/blog_img/selfh/postiz/postiz-dns-for-traefik.png)
+![POSITZ x Traefik DNS](/blog_img/selfh/postiz/postiz-dns-for-traefik.png)
 
 ```sh
 git clone https://github.com/JAlcocerT/Home-Lab && cd postiz
@@ -81,8 +81,6 @@ And play around with PostIZ's API: https://docs.postiz.com/public-api
 And also the [MCP integration](#positz-x-mcp).
 
 
-
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ Setup | Post" image="/blog_img/selfh/links/postiz-channels.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
 {{< /cards >}}
@@ -96,6 +94,8 @@ And also the [MCP integration](#positz-x-mcp).
 {{< /cards >}}
 
 ### Positz x MCP
+
+Aware of the power of [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) already?
 
 
 {{< callout type="info" >}}
@@ -135,7 +135,6 @@ docker run -p 3084:3084 --env-file .env --rm -it oculair/postiz-mcp:latest
 2. https://docs.postiz.com/providers/telegram
 
 3. https://docs.postiz.com/providers/instagram
-
 
 
 2. [Zapier](https://zapier.com/app/home)

@@ -396,12 +396,6 @@ def add(num1, num2):
 
 ## FAQ
 
-<!-- ### Try me with Google Colaboratory
-
-If you have a Google account, you can check these kind of snippets, as well as few useful UDF's to work more efficiently with spark directly with your Google Colab account and the code I made available in Github:
-
- [![Example image](/img/OpenInColab.svg)](https://colab.research.google.com/github/JAlcocerT/Python_is_awesome/blob/main/Z_GoodToKnow/Getting_Started_with_PYTHON.ipynb) -->
-
 ### How to Install Python Dependencies?
 
 * There are two **main repositories for Python Packages**:
@@ -419,7 +413,9 @@ These are some popular ways to **install Python dependencies** and make sure tha
 
 Conda provides a **cross-platform and language-agnostic** (not only Python, but R, Julia, C/C#...) solution **for managing software environments and dependencies**, making it especially valuable for complex projects involving multiple programming languages and libraries.
 
-Its ability to create isolated environments with precise control over package versions ensures reproducibility and minimizes conflicts. Additionally, Conda offers a vast repository of pre-built packages, including many scientific and data analysis libraries, simplifying the installation process. 
+Its ability to create isolated environments with precise control over package versions ensures reproducibility and minimizes conflicts. 
+
+Additionally, Conda offers a vast repository of pre-built packages, including many scientific and data analysis libraries, simplifying the installation process. 
 
 Create a conda environment:
 

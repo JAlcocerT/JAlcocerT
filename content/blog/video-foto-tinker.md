@@ -379,6 +379,12 @@ This video was very helpful to understand additional **KDE tricks**:
 
 {{< youtube "V0_yp-ziqvI" >}}
 
+Most important ones for me were: `S` to select, `X` to cut/slice video part. 
+
+Right click to the video part and change speed to make it go faster *up to 4000% aka x40*.
+
+Then `CTRL + enter` to render
+
 
 Have rediscovered KDEnlive [for LUT](https://docs.kdenlive.org/en/effects_and_filters/video_effects/color_image_correction/applylut.html) (`.cube` files) color grading application!
 
@@ -804,6 +810,13 @@ As long as you have docker ready, you are good to go:
 Then, create your **N8N workflows**:
 
 ![N8N UI Panel](/blog_img/selfh/postiz/n8n-ui.png)
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Just use this compose within your server ready for containers:
 
 ```yml
 services:

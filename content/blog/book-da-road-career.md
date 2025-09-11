@@ -379,7 +379,6 @@ I wanted to have a bigger picture on my bike routes, that led me to learn about 
 
 One of the key aspects that imo helped me to change my career towards data analytics, is the fact that I retook the habit of reading.
 
-<!-- In my opinion we should avoid becoming [*overfitted personalities*](/machine-learning-data-analytics/#classification): include point to explain overfit -->
 
 * We have to be aware and understand our possible biases <!-- ()[#fast-and-slow.md]-->
     * >  **Listen Actively**: Focus not only on the words being said but also on the feelings, emotions, and unspoken messages behind them. It's like putting on a special pair of glasses that help you see beyond the surface. 

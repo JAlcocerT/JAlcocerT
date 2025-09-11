@@ -2,7 +2,7 @@
 title: "Which OS for a NAS?"
 date: 2025-03-17T21:20:21+01:00
 draft: false
-tags: ["OSS","HomeLab","Ventoy"]
+tags: ["OSS","HomeLab","Ventoy","Lite vs Garuda"]
 description: 'Testing Operative Systems for a NAS / MiniPCs. Improving a Homelab.'
 url: 'os-for-nas'
 ---
@@ -10,7 +10,7 @@ url: 'os-for-nas'
 Ive been pretty much **comfortable with these OS's**:
 
 1. **Ubuntu LTS**
-2. if you come from Windows: **Zorin OS**, Linux Mint,...
+2. if you come from Windows: **Zorin OS**, Linux Mint, Linux lite...
 3. [Garuda](https://sourceforge.net/projects/garuda-linux/) Linux 
 4. If you miss XP, see https://xpq4.sourceforge.io/
 5. For apple users: ElementaryOS, Deepin or [PearOS](https://pearos.xyz/)
@@ -286,6 +286,10 @@ You can try with: Syncthing, Nextcloud, WebDav...
 ---
 
 ## Conclusions
+
+If you need UI to mange your server, but wont use it too much, Linux Lite and the ~600mb ram consumption is a great option.
+
+To get the power of arch btw, plus its complexity and a very cool UI, go for Garuda.
 
 Its always great to take some time and make some *home cleaning*.
 

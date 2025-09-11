@@ -7,9 +7,29 @@ tags: ["Animations","Python","Matplotlib Animations","Youtube Shorts","DataInMot
 url: animations-as-a-code
 ---
 
-Not long ago I was tinkering with [AI/BI Tools](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/).
+**Tl;DR**
 
-> Among them (ChartBrew, ChartDB, DB2Rest) I was impressed by [Streamlit x PyGWalker](#conclusions)
+I was so wrong to neglect the [power of Matplotlib](http://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/) for animations.
+
++++ interesting [post on python visualizations](http://jakevdp.github.io/blog/2013/03/23/matplotlib-and-the-future-of-visualization-in-python/)
+
+{{< details title="More jakevdp on Python and animations - Pro Stuff 📌" closed="true" >}}
+
+* http://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/
+* http://jakevdp.github.io/blog/2017/03/08/triple-pendulum-chaos/
+
+* http://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/
+* http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/
+
+{{< /details >}}
+
+
+
+**Intro**
+
+Not long ago, I was tinkering with [AI/BI Tools](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/).
+
+> Among them (ChartBrew, ChartDB, ...) I was impressed by [Streamlit x PyGWalker](#conclusions)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="AI BI Tools Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
@@ -20,7 +40,7 @@ From there, I could not resist to **create this project**: *there will be some [
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/#animations" title="Tinkering with Animations | Post" image="https://img.youtube.com/vi/YuvHXyFeRV4/hqdefault.jpg" subtitle="Posting to Twitter or Youtube those animations 101." >}}
-  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Data In Motion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Generating mp4 animations with Matplotlib and Python..." >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Data In Motion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NEW Source Code on Github. Generating mp4 animations with Matplotlib and Python..." >}}
 {{< /cards >}}
 
 <!-- ![Rick Astley - Never Gonna Give You Up](https://img.youtube.com/vi/YuvHXyFeRV4/hqdefault.jpg) -->
@@ -266,6 +286,10 @@ How could I not mention the awsome 3B1B channel and its OSS animation engine, th
 {{< youtube "rbu7Zu5X1zI" >}}
 
 <!-- https://youtu.be/BuVFMVGZxtY?si=FmIS8B57-5J4j--T -->
+
+**Physical animations**, like the Lorentz attactor:
+
+> if you [love physics and mechanics as I do](https://jalcocert.github.io/JAlcocerT/mechanical-engineering-cool-stuff/#cool-physics-animations), this will captivate you.
 
 
 {{< youtube "BuVFMVGZxtY" >}}

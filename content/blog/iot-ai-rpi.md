@@ -54,7 +54,25 @@ Databricks is
 
 > Instant no code DATA API platform. Connect any database, run anywhere. Power your GENAI application function/tools calls in seconds.
 
-postman
+
+### About DB2Rest
+
+DB2Rest is blazing fast - It has no Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
+
+* https://github.com/9tigerio/db2rest
+  * https://db2rest.com/docs/run-db2rest-on-docker
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/db2rest" title="DB2Rest with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+> Apache v2 | Instant no code **DATA API platform**. Connect any database, run anywhere. Power your GENAI application [function/tools calls](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/) in seconds.
+
+
+
+### Interacting with APIs
+
+Postman
 
 Hoppscotch is indeed similar to Postman in its core functionality.  Both are tools designed to help developers work with APIs (Application Programming Interfaces).  Think of them as specialized tools for sending and receiving messages to different software services.
 

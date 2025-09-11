@@ -366,6 +366,8 @@ BigQuery is a foundational component of the entire Google Cloud data stack.
 
 It's a serverless, highly scalable, and cost-effective **data warehouse**. 
 
+You can access it via `console.cloud.google.com`
+
 > Think of it as the central repository where all of your organization's data is stored and made ready for analysis.
 
 Simply speaking, BQ *is just a place where you will run [SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)*.
@@ -374,8 +376,10 @@ But its actually much more than an interface to write your **SQL queries**.
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB" title="Chat with DB ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB" title="Chat with DB via LangChain | Data Chat Repo ↗" >}}
 {{< /cards >}}
+
+Remember: Make sure to optimize your queries to avoid costs!
 
 ##### Big Query Tricks
 

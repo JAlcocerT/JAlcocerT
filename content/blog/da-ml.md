@@ -329,7 +329,7 @@ It depends on what you prioritize:
 * https://github.com/NirantK/awesome-project-ideas
 * You can check the [latest trends at Gartner](https://www.gartner.com/reviews/market/multipersona-data-science-and-machine-learning-platforms "Book {rel='nofollow'}")
 
-## How to get Started with ML via Free Resources
+#### How to get Started with ML via Free Resources
 
 * [Charla sobre recursos de IA](https://youtu.be/iFGgq6btits)
 
@@ -396,7 +396,6 @@ Podcasts
 
 <!-- * My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) -->
 
-
 <!-- 
 Basic understanding of Supervised, Unsupervised and Reinforcement ML.
 Basic understanding of Location, Spread, Assymetry, Concentration, Dependence measures.
@@ -409,7 +408,3 @@ Ability to list use cases for Supervised and Unsupervised ML methods, compare th
 
 <!-- 
 <https://youtu.be/OwZHNH8EfSU?t=14314> -->
-
-
-<!-- 
-http://jakevdp.github.io/blog/2015/07/06/model-complexity-myth/ -->

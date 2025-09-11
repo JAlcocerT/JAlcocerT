@@ -2,12 +2,14 @@
 title: "Interesting FMCG Concepts"
 date: 2020-12-30
 draft: false
-tags: ["Analytics","D&A","Career"]
+tags: ["Analytics","D&A","Career","SAP HANA","ERP vs CRM"]
 description: 'Interesting Logistic and Supply Chain. From Planning to Delivery.'
 url: 'fmcg-concepts-101'
 ---
 
 **TL;DR** Several years after taking a course of SCM from the KAIST, its time to put together some practical post about logistics.
+
++++ [SAP](#what-about-sap)
 
 **Intro**
 
@@ -236,3 +238,98 @@ Key activities in logistics include:
 | **Relationship** | Logistics depends on procurement to secure the necessary items. | Procurement relies on logistics for the physical transportation and delivery of the items it has purchased. |
 
 In short, procurement is the "brain" that decides what to buy and from whom, while logistics is the "muscle" that moves the goods. They are distinct functions that must work in tandem for a supply chain to be successful.
+
+### What about SAP?
+
+SAP is not a database itself; it's an enterprise resource planning (ERP) software suite that uses databases to store its data.
+
+Think of SAP as the application you use, and the database as the filing cabinet where that application stores its information.
+
+SAP has its own specific relational database management system called **SAP HANA**, but it can also be configured to work with other databases, like **Oracle**, **Microsoft SQL Server**, or **IBM Db2**.
+
+#### SAP, SQL, and Databases
+
+SAP and SQL are related in that the **SAP application interacts with the underlying database using SQL** (Structured Query Language). 
+
+SQL is the standard language used to manage and manipulate data in relational databases. 
+
+When you perform an action in an SAP application, such as creating a sales order, the application translates that action into a series of SQL statements (like `INSERT` or `UPDATE`) that are then sent to the database to store or retrieve the data.
+
+* **SAP:** The application layer (the software you use to manage business processes).
+* **Database:** The storage layer (where the data is physically kept).
+* **SQL:** The language that allows the two layers to communicate.
+
+> So, while SAP is not a type of SQL, it uses SQL to talk to the database it relies on.
+
+#### Python and SAP Interaction
+
+Yes, you can use **Python to interact with SAP**. 
+
+The methods you'd use depend on what exactly you're trying to do.
+
+* **Direct Database Access:** If you want to access the data directly from the underlying database (e.g., SAP HANA, Oracle), you can use Python libraries designed for that specific database. For example, you would use a library like `hdbcli` for SAP HANA or `cx_Oracle` for Oracle.
+
+This approach is best for tasks like data analysis or creating custom reports.
+
+* **SAP APIs:** The more robust and official way to interact with SAP is through its Application Programming Interfaces (APIs). SAP offers various APIs (e.g., **OData services**, **SOAP web services**) that allow you to connect and perform operations on the SAP system in a controlled manner. Python can be used to call these APIs using libraries like `requests`. This is the recommended method for integrating with SAP for business processes, as it respects the system's business logic and security.
+
+* **SAP RFC/BAPI:** For older or more specific integrations, you can use the **SAP Remote Function Call (RFC)** protocol. Python has libraries like `PyRFC` that allow you to call **Business Application Programming Interfaces (BAPIs)** or custom function modules directly from your Python script.
+
+
+### ERP vs CRM
+
+The two terms are often used in the same conversation, but they serve very different purposes. 
+
+The simplest way to understand the difference is to think about it in terms of **front office vs. back office**.
+
+* **CRM (Customer Relationship Management)** is a **front-office** system.
+* **ERP (Enterprise Resource Planning)** is a **back-office** system.
+
+Let's break that down.
+
+#### CRM: The Front Office
+
+A CRM system is all about managing your company's interactions with its customers and potential customers. 
+
+Its primary goal is to improve customer relationships, drive sales, and enhance customer satisfaction.
+
+**Key functions of a CRM system include:**
+
+* **Sales Management:** Tracking leads, managing the sales pipeline, and automating sales tasks.
+* **Marketing Automation:** Creating and managing marketing campaigns, sending out emails, and analyzing campaign effectiveness.
+* **Customer Service:** Managing customer support tickets, handling service requests, and providing a single view of a customer's history to support agents.
+* **Contact Management:** Storing and organizing all customer and prospect information, including contact details, interaction history, and communication preferences.
+
+Think of CRM as the software your sales, marketing, and customer service teams use to interact with the outside world.
+
+#### ERP: The Back Office
+
+An ERP system, on the other hand, is designed to manage and integrate all of the core business processes of an organization. 
+
+Its goal is to **streamline operations**, reduce costs, and improve efficiency by providing a "single source of truth" for the entire business.
+
+**Key functions of an ERP system include:**
+
+* **Finance & Accounting:** Managing the general ledger, accounts payable and receivable, budgeting, and financial reporting.
+* **Supply Chain Management:** Handling inventory, procurement (purchasing), and logistics.
+* **Manufacturing:** Managing production planning, scheduling, and quality control.
+* **Human Resources (HR):** Managing payroll, employee data, and recruitment.
+
+Think of ERP as the software that runs the entire internal engine of your company, connecting different departments like a nervous system.
+
+**A Simple Analogy**
+
+Imagine a company that manufactures and sells widgets.
+
+* A sales rep uses the **CRM** to track a lead, follow up with them, and log their communications. Once the customer decides to buy, the sales rep creates a sales order in the CRM.
+* The **ERP** takes over from there. It sees the new sales order and checks inventory to see if there are enough widgets in stock. If not, it automatically creates a work order for the manufacturing department. It then tracks the raw materials used, schedules the production, and manages the billing and shipping process. Finally, it records the revenue and updates the company's financial records.
+
+While the CRM focused on the customer relationship and the sale, the ERP managed all the complex internal processes required to fulfill that order and keep the business running smoothly.
+
+**Integration**
+
+In modern business, CRM and ERP systems are often **integrated**. This allows data to flow seamlessly between the front and back offices.
+
+For example, when a sales order is created in the CRM, the ERP can automatically pull that data to begin the fulfillment process without any manual data entry. 
+
+This integration provides a complete, 360-degree view of both the customer and the entire business.

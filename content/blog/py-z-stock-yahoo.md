@@ -220,6 +220,10 @@ How about the stock value?
 
 > Wait, If you are getting tempted to [use ML](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/#supervised-learning) to get rich...remember about [Overfitting the data](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/#the-bias-variance-trade-off)
 
+<!-- In my opinion we should avoid becoming [*overfitted personalities*](/machine-learning-data-analytics/#classification): -->
+
+The model complexity myth comes to rescue: http://jakevdp.github.io/blog/2015/07/06/model-complexity-myth/ 
+
 > > Which can be also told as: previous performance does not guarantee ANYTHING for future performance
 
 But, you can anyways do your *data experiment* for fun:

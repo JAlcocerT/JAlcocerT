@@ -523,9 +523,9 @@ Along the way, Ive made my life easier by based the video content on a simpler N
 19. 
 20. 
 21. 
-22. 
-23. 
-24. Ventoy. Linux Lite vs Garuda RAM consumption
+22. [MQTT and DHT22 + Home Assistant](https://youtu.be/8XUydWbwBjk)
+23. [Nextcloud and a Pi](https://youtu.be/x2eFFeRIyXg)
+24. Ventoy. [Linux Lite vs Garuda RAM consumption](https://youtu.be/hTw9DBEksx4)
 
 
 If this was too much content, you can always use a LLMs to summarize the YT Videos, like these ones:
@@ -953,6 +953,13 @@ In addition to data modeling, you would need to implement several optimizations 
 
 {{< /details >}}
 
+Its just... (OLAP ~ D&A) vs (OLTP ~ CRUD).
+
+When building Saas, you wear this kind of cap and go for the typical OLTP DB design for writes:
+
+{{< tweet user="levelsio" id="1963709732432248998" >}}
+
+When doing D&A, you go for the opposite, quick read speeds.
 
 {{< details title="DWH, Kimball and layers/medallion 📌" closed="true" >}}
 
@@ -963,6 +970,7 @@ Ralph Kimball and the Kimball Methodology
 The "Kimball" you're referring to is his **methodology for designing data warehouses**. His approach is often called the **bottom-up approach** and is centered around **dimensional modeling**.
 
 The core ideas of the Kimball methodology are:
+
 1.  **Start with the business process.** You identify a specific business process (like sales, inventory, or billing) and build a data mart around it.
 2.  **Use dimensional models.** The data is organized into a **star schema** or **snowflake schema**. This involves a central **fact table** (containing quantitative measures like sales amount) surrounded by **dimension tables** (containing descriptive attributes like product name, customer demographics, and date).
 3.  **Use conformed dimensions.** This is a key concept. Kimball advocated for creating "conformed dimensions," which are master dimension tables (e.g., a single "Product" dimension or "Customer" dimension) that are shared across multiple data marts. This ensures consistency and allows analysts to "drill across" different business processes.
@@ -974,11 +982,14 @@ The Kimball approach is known for being agile and delivering business value quic
 Yes, data warehouses and data lakes often have layers, but the "medallion architecture" is a more recent pattern, primarily associated with **data lakes** and **data lakehouses**.
 
 Traditional data warehouses have a layered architecture, which typically includes:
+
 * **Staging Layer**: A temporary area where raw data is landed before it is cleaned and transformed.
 * **Data Warehouse Core**: The central repository where the cleaned, integrated data is stored, often in a normalized form (Inmon's approach) or in a dimensional model (Kimball's approach).
 * **Data Marts**: Subsets of the data warehouse core that are designed for specific departments or business functions, often using a dimensional model to support fast reporting.
 
-The **Medallion Architecture** is a modern, three-tiered data design pattern for data lakehouses, with a clear focus on data quality and governance. It's often implemented using technologies like Delta Lake on platforms like Databricks. The three layers are:
+The **Medallion Architecture** is a modern, three-tiered data design pattern for data lakehouses, with a clear focus on data quality and governance.
+
+It's often implemented using technologies like Delta Lake on platforms like Databricks. The three layers are:
 
 1.  **Bronze (Raw) Layer**: This is the landing zone. Data is ingested from source systems and stored in its original format with no transformations. The purpose of this layer is to have a complete and immutable copy of the source data, which is great for auditing and reprocessing.
 
@@ -1079,7 +1090,11 @@ The `Sales Fact` table records each transaction and contains foreign keys to the
 
 **Snowflake Schema ❄️**
 
-The **snowflake schema** is a more complex variation of the star schema. It is a more **normalized** model where the dimension tables themselves are broken down into sub-dimensions. This reduces data redundancy and storage space but increases the number of joins required for queries. The structure resembles a snowflake due to the branching of dimension tables.
+The **snowflake schema** is a more complex variation of the star schema. It is a more **normalized** model where the dimension tables themselves are broken down into sub-dimensions. 
+
+This reduces data redundancy and storage space but increases the number of joins required for queries. 
+
+The structure resembles a snowflake due to the branching of dimension tables.
 
 * **Normalization**: Dimension tables are organized hierarchically. For example, instead of a single `Product` dimension, you might have a `Product` table that links to a separate `Category` table and a `Brand` table.
 * **Performance**: Queries are generally slower because they require more joins to traverse the different dimension tables to get all the descriptive data.
@@ -1094,8 +1109,6 @@ The fact table remains the same, but the dimension tables are now normalized.
 * `Product Dimension` table: `product_key`, `product_name`, `category_key`, `brand_key`.
 * `Category Dimension` table: `category_key`, `category_name`.
 * `Brand Dimension` table: `brand_key`, `brand_name`.
-
-
 
 **Key Differences at a Glance**
 
@@ -1164,7 +1177,9 @@ While a snowflake schema reduces the redundancy of text-based attributes (like a
 
 The Trade-off: Storing Keys vs. Repeating Strings
 
-You're right, the key itself takes up space. A foreign key (typically an integer or a small string) is stored in the dimension table for every record. However, the space saved by avoiding the repetition of long strings is usually much greater than the space taken by storing the integer keys.
+You're right, the key itself takes up space. A foreign key (typically an integer or a small string) is stored in the dimension table for every record.
+
+However, the space saved by avoiding the repetition of long strings is usually much greater than the space taken by storing the integer keys.
 
 Let's use a simple example to illustrate this:
 

@@ -7,6 +7,9 @@ url: 'calculus-101'
 math: true
 ---
 
+
+
+
 https://www.youtube.com/shorts/ha2_x5eJ1OY
 
 The first time I got to know calculus, was with derivatives and integrals.
@@ -65,7 +68,15 @@ Ordinary Differential Equations!
 
 ### The Double Pendulum
 
-No, a double pendulum is typically modeled using a system of **ordinary differential equations (ODEs)**, not partial differential equations (PDEs).
+<!-- ### Try me with Google Colaboratory
+
+If you have a Google account, you can check these kind of snippets, as well as few useful UDF's to work more efficiently with spark directly with your Google Colab account and the code I made available in Github:
+
+ [![Example image](/img/OpenInColab.svg)](https://colab.research.google.com/github/JAlcocerT/Python_is_awesome/blob/main/Z_GoodToKnow/Getting_Started_with_PYTHON.ipynb) -->
+
+A double pendulum is typically modeled using a system of **ordinary differential equations (ODEs)**, not partial differential equations (PDEs).
+
+* http://jakevdp.github.io/blog/2017/03/08/triple-pendulum-chaos/
 
 Here's why:
 
@@ -75,7 +86,11 @@ Here's why:
 
 **Why ODEs for the Double Pendulum?**
 
-The motion of a double pendulum is described by how the angles θ₁ and θ₂ change over time.  There's no other independent variable involved.  The equations of motion are derived from Newton's laws or Lagrangian mechanics, and they result in a set of coupled second-order ODEs:
+The motion of a double pendulum is described by how the angles θ₁ and θ₂ change over time.
+
+There's no other independent variable involved.
+
+The equations of motion are derived from Newton's laws or Lagrangian mechanics, and they result in a set of coupled second-order ODEs:
 
 ```
 d²θ₁/dt² = f₁(θ₁, θ₂, dθ₁/dt, dθ₂/dt)
@@ -84,7 +99,19 @@ d²θ₂/dt² = f₂(θ₁, θ₂, dθ₁/dt, dθ₂/dt)
 
 Where f₁ and f₂ are functions that depend on the angles, their first derivatives (angular velocities), and other parameters like the lengths and masses of the pendulum arms.
 
-**In summary:** The double pendulum is a classic example of a system that is accurately and effectively modeled using ordinary differential equations because the angles of the pendulum arms depend solely on time.  There are no spatial dependencies that would necessitate the use of partial differential equations.
+**In summary:** The double pendulum is a classic example of a system that is accurately and effectively modeled using ordinary differential equations because the angles of the pendulum arms depend solely on time.
+
+There are no spatial dependencies that would necessitate the use of partial differential equations.
+
+
+<!-- I will write a dedicated post about Chaos Theory in the future.  -->
+
+
+<!-- 
+py-chaoos.md -->
+
+<!-- 
+relate it with non lineality and caos theory -->
 
 
 ## PDE - Partial Derivate Equations
@@ -99,3 +126,6 @@ Where f₁ and f₂ are functions that depend on the angles, their first derivat
 
 <!-- https://www.youtube.com/watch?v=ToIXSwZ1pJU -->
 {{< youtube "ToIXSwZ1pJU" >}}
+
+
+---

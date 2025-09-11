@@ -257,27 +257,14 @@ The tool helps streamline LLM prompt creation, enhancing productivity for develo
 
 > MIT | A CLI tool to convert your codebase into a single LLM prompt with source tree, prompt templating, and token counting.
 
-{{< details title="Query LLMs via Mistral API 📌" closed="true" >}}
-
-
-
-{{< /details >}}
-
-{{< details title="Query LLMs via GroK API 📌" closed="true" >}}
-
-
-{{< /details >}}
-
 
 [![Star History Chart](https://api.star-history.com/svg?repos=mufeedvh/code2prompt/,BandarLabs/gitpodcast&type=Date)](https://star-history.com/#mufeedvh/code2prompt/&BandarLabs/gitpodcast&type=Date)
 
 ---
 
-## FAQ
+## Outro 
 
-### Outro 
-
-1. Windscribe CEO almost got jailed?
+1. WindScribe VPN CEO almost got jailed?
 
 > [Our CEO](https://windscribe.com/blog/windscribe-greek-court-case/) Almost Got Jailed, So We Made a Shirt!
 

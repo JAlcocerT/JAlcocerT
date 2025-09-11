@@ -3,7 +3,7 @@ title: "Where to Deploy?"
 date: 2025-09-10
 draft: false
 tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio"]
-description: 'Resources to launch your stuff in front of your clients.'
+description: 'How to deploy? Resources to launch your stuff in front of your clients.'
 url: 'where-to-deploy'
 ---
 
@@ -67,7 +67,13 @@ Their mission is great:
 
 >  Fully managed DevOps platform to deploy your code and open-source software 
 
-* https://dash.elest.io/login
+* You manage it all from https://dash.elest.io/login
+
+They also provide guides and high level features on the OSS projects.
+
+See: https://elest.io/fully-managed-services/hosting-and-infrastructure
+
+
 
 ---
 
@@ -82,11 +88,10 @@ Its up to you:
 **A new repo** for SelfHosters:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for your server" >}}
 {{< /cards >}}
 
 ### Goodies for Servers
-
 
 1. Dont forget about **fail2ban**:
 
@@ -94,3 +99,46 @@ Its up to you:
 
 
 2. **VPNs**: Like Mullvad or ProtonVPN as covered [here](https://jalcocert.github.io/JAlcocerT/homelab-security/#vpn)
+
+3. Get https/SSL via Cloudflare tunnel or Traefik v3.3 setup.
+
+### Goodies for Marketers
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/social-media-automation/#conclusions" title="Social Media Automation | Post ↗" >}}
+{{< /cards >}}
+
+
+* https://www.producthunt.com/products/listmonk
+
+* https://docs.serpbear.com/deployment/deploying-to-elestio-1-click
+
+* https://elest.io/fully-managed-services/applications/crm-erp
+
+
+
+---
+
+## FAQ
+
+### Hosting a Forum
+
+* https://elest.io/open-source/nodebb/resources
+
+* https://github.com/NodeBB/NodeBB
+
+>  Node.js based forum software built for the modern web 
+
+* https://github.com/LemmyNet/lemmy
+
+https://github.com/JAlcocerT/Docker/blob/main/Communication/lemmy/docker-compose.yml
+
+### Hosting an eCommerce
+
+* https://libreselfhosted.com/project/aimeos/
+
+* https://github.com/aimeos
+  * https://github.com/aimeos/aimeos
+
+> MIT | Ultra-fast, Cloud-native, API-first PHP e-commerce framework for building custom online shops, scalable marketplaces and complex B2B apps 

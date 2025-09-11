@@ -2,11 +2,15 @@
 title: "No Code Tools to use Gen AI"
 date: 2025-04-19T23:20:21+01:00
 draft: false
-tags: ["Gen-AI","Python","Dev","ChatBots","TelegramBots","N8N Workflows"]
+tags: ["Gen-AI","Python","Dev","ChatBots","Telegram Bots","N8N Workflows"]
 description: 'Generative AI made simple with Low Code. Chatwoot, Flowise, n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
 url: 'no-code-ai-tools'
 ---
 
+
+**TL;DR**
+
+I was tinkering with [HUGO and telegram bots](#tg-bots).
 
 **Intro**
 
@@ -170,6 +174,10 @@ Once you create a local account, access the UI:
 
 ### Rivet AI
 
+* https://github.com/Ironclad/rivet
+
+>  The open-source visual AI programming environment and TypeScript library 
+
 <!-- https://www.youtube.com/watch?v=Zd5wjy4YPis -->
 
 
@@ -178,6 +186,10 @@ Once you create a local account, access the UI:
 
 
 ### DifyAI
+
+* https://github.com/langgenius/dify
+
+>  Production-ready platform for agentic workflow development. 
 
 <!-- https://www.youtube.com/watch?v=yXAJwDtAbLo -->
 
@@ -218,6 +230,8 @@ You could do something similar, but inside your web, with:
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8n Docker Config" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config  🐋 ↗" >}}
 {{< /cards >}} 
 
+
+
 #### ChatWoot
 
 1. [Chatwoot](https://fossengineer.com/selfhosting-chatwoot/)
@@ -236,6 +250,11 @@ You can selfhost Chatwoot with this compose
 * https://docs.n8n.io/hosting/
   * https://docs.n8n.io/hosting/starter-kits/ai-starter-kit/
   * https://docs.n8n.io/choose-n8n/#platforms
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 * **Low-Code/No-Code, but with Code Flexibility:** n8n is often described as a "low-code" platform. This means it provides a visual, drag-and-drop interface for building workflows without needing to write code for basic tasks. However, it also allows users (especially developers) to insert custom JavaScript or Python code within nodes for more complex logic and transformations.
 
@@ -445,7 +464,7 @@ pip install python-telegram-bot==22.0
 ```
 
 {{< callout type="info" >}}
-It was about time to make [a project again with a telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot) 💻 (combined with [web](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/)!)
+It was about time to make [a project again with a telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot) 💻 (combined with [HUGO web](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/)!)
 {{< /callout >}}
 
 Its all done with Python and the following **project structure**:

@@ -2,7 +2,7 @@
 title: "101 Concepts for a Data Analytics Journey"
 date: 2020-11-05T23:20:21+01:00
 draft: false
-tags: ["Career","Dimensional Modelling","D&A"]
+tags: ["Career","Dimensional Modelling","D&A","OLTP vs OLAP"]
 description: 'Must know DATA MODELLING concepts and techniques for your career in Analytics.'
 url: 'data-basics-for-data-analytics'
 ---
@@ -15,12 +15,9 @@ By understanding the principles of **data modelling** and the terminology associ
 
 You will gain the necessary knowledge to design and work with data models, empowering you to make informed decisions and **extract meaningful insights** from complex datasets.
 
-<!-- So, before you continue learning about:
-
-* [Python]()
--->
-
 There are some concepts that will require your attention and understanding to build effective Data Apps.
+
+Get to know these, before you [move towards decision on](#others) conceptual -> logical -> physicla data models
 
 ## Data Modelling Techniques
 
@@ -186,7 +183,7 @@ Databases are used to store and manage information, and are a fundamental compon
 * Examples of databases include MySQL, Oracle, and Microsoft SQL Server.
     * The traditional method of storing data in tables, columns and rows.
     * Typically structured data, with a defined schema.
-    * Designed to be transactional (**OLTP**), not designed to perform Data Analytics.
+    * Designed to be transactional (**OLTP** ~CRUD), NOT designed to perform Data Analytics.
     * More examples: MySQL, PostgreSQL, Amz Aurora...
 
 {{< callout type="info" >}}
@@ -195,17 +192,20 @@ To interact with DB's you will want to learn about [SQL](https://jalcocert.githu
 
 ### DB Management Systems
 
-A DBMS is a software system that allows users to create, manage, and access databases. DBMS systems are designed to provide a centralized, efficient, and secure way to store and manage data.
+A DBMS is a software system that allows users to create, manage, and access databases.
+
+DBMS systems are designed to provide a centralized, efficient, and secure way to store and manage data.
 
 #### ACID Properties
 
 The ACID properties are a set of four properties that ensure that database transactions are processed reliably. 
 
-* These properties are:
-    * Atomicity: Atomicity ensures that a transaction is treated as a single, indivisible unit of work. If any part of a transaction fails, the entire transaction is rolled back, and the database is restored to its previous state.
-    * Consistency: Consistency ensures that a transaction brings the database from one valid state to another. In other words, a transaction cannot leave the database in an invalid state.
-    * Isolation: Isolation ensures that multiple transactions can be processed concurrently without interfering with each other. Each transaction is executed as if it were the only transaction running.
-    * Durability: Durability ensures that once a transaction has been committed, it will remain committed even in the event of a system failure.
+These properties are:
+
+* Atomicity: Atomicity ensures that a transaction is treated as a single, indivisible unit of work. If any part of a transaction fails, the entire transaction is rolled back, and the database is restored to its previous state.
+* Consistency: Consistency ensures that a transaction brings the database from one valid state to another. In other words, a transaction cannot leave the database in an invalid state.
+* Isolation: Isolation ensures that multiple transactions can be processed concurrently without interfering with each other. Each transaction is executed as if it were the only transaction running.
+* Durability: Durability ensures that once a transaction has been committed, it will remain committed even in the event of a system failure.
 
 ## Data Warehousing
 
@@ -331,11 +331,12 @@ By utilizing SCD techniques, **data warehouses can effectively manage and track 
 
 Data warehouses (DWH) serve as a central repository for data collected from various operational systems, **consolidating and organizing it for efficient analysis and reporting**. 
 
-* DWHing benefits include:
-    * Improved decision-making through better data access and analysis
-    * Enhanced data quality and consistency across the organization
-    * Historical data storage for trend analysis and forecasting
-    * Increased efficiency by offloading analytics and reporting from operational systems
+DWHing benefits include:
+
+* Improved decision-making through better data access and analysis
+* Enhanced data quality and consistency across the organization
+* Historical data storage for trend analysis and forecasting
+* Increased efficiency by offloading analytics and reporting from operational systems
 
 ### Data Marts
 
@@ -384,9 +385,10 @@ Snowflake and Google BigQuery are both popular **cloud-based data warehousing so
 
 They are considered alternatives to each other, providing scalable storage and powerful analytics capabilities in the cloud. 
 
-* However, there are some differences between the two platforms:
-    * Snowflake follows a multi-cluster shared data arch, where compute and storage are separate, allowing independent scaling. BigQuery, on the other hand, employs a **distributed columnar storage** approach with shared storage.
-    * Snowflake is cloud-agnostic, while BigQuery is Google Cloud-specific
+However, there are some differences between the two platforms:
+
+* Snowflake follows a multi-cluster shared data arch, where compute and storage are separate, allowing independent scaling. BigQuery, on the other hand, employs a **distributed columnar storage** approach with shared storage.
+* Snowflake is cloud-agnostic, while BigQuery is Google Cloud-specific
 
 ## Data Integration Services
 

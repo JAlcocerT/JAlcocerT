@@ -61,7 +61,7 @@ Then I found this:
 
 DB2Rest is blazing fast.
 
-It has no Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
+It has NO Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
 
 * https://github.com/9tigerio/db2rest
   * https://db2rest.com/docs/run-db2rest-on-docker

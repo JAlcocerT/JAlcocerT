@@ -1,8 +1,8 @@
 ---
 title: "A Landing you can actually Edit"
-date: 2025-09-09T20:20:21+01:00
+date: 2025-09-12T20:20:21+01:00
 draft: false
-tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP","PB CMS"]
+tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP","PB CMS","Strapi x Astro"]
 description: 'Landing page for Mental Health. Adding posts and md via pocketbase.'
 url: 'mental-health-landing'
 ---
@@ -74,3 +74,13 @@ In business, particularly in marketing and sales, an ICP is a description of the
 * **Why it's important:** An ICP helps businesses focus their efforts on the most promising leads, which leads to more efficient sales and marketing, higher customer satisfaction, and better long-term retention.
 
 * **What it includes:** An ICP typically outlines characteristics like company size, industry, location, technological stack, and the specific challenges they face. It's often used in conjunction with a **buyer persona**, which focuses on the individual within the company who makes purchasing decisions.
+
+### Strapi CMS x Astro
+
+Astro JS x Strapi
+
+https://www.youtube.com/watch?v=Ud9obEHadLI
+
+* https://elest.io/open-source/strapi
+
+* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
