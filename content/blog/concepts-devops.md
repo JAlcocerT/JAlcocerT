@@ -4,7 +4,7 @@ date: 2025-09-08T00:20:21+01:00
 draft: false
 description: 'Setting up devops tools - From CI/CD, to Monitoring with Grafana, k8s, DSc Tools...'
 url: 'dev-ops-for-non-devops'
-tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Status Pages"]
+tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Uptime Kuma Status Pages"]
 ---
 
 
@@ -351,13 +351,22 @@ Or with Uptime Kuma:
 Be aware of the http status codes: https://it-tools.tech/http-status-codes
 
 With Uptime Kuma, you can get quickly an uptime pages for your services:
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
+![Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
 
-* https://github.com/ivbeg/awesome-status-pages
+<!-- 
+https://www.youtube.com/watch?v=fxVNTffZC2U 
+-->
+
+{{< youtube "fxVNTffZC2U" >}}
+
+If you want to play deeper with uptime kuma, see their API: https://uptime-kuma-api.readthedocs.io/en/latest/
+
+> See also https://github.com/ivbeg/awesome-status-pages
 
 ### Grafana
 

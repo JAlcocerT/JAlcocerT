@@ -1,9 +1,9 @@
 ---
-title: "[Recap] on Audio and creating Speech rAIter"
+title: "[Recap] on Audio. Creating Speech rAIter micro SaaS"
 date: 2025-09-12
 draft: false
-tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcription","Flask","BiP with OBS for Youtube"]
-description: "Audio with AI."
+tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcription","BiP with OBS for Youtube"]
+description: "Audio with AI. Together with an Astro Landing Page + signup/in via FastAPI and sqlite"
 url: 'audio-recap'
 ---
 
@@ -95,12 +95,54 @@ Cons: Medium bundle size
 Best for: User-friendly editing
 
 {{< callout type="info" >}}
-wysiwyg post is coming soon
+A wysiwyg markdown editor post is coming soon
 {{< /callout >}}
 
 Thanks to the implemented monaco editor, we can just quickly tweak the content of the transcript before saving the .md
 
 ### The FastAPI Speech Rater
+
+I wanted to combine finally FastAPI (BE) x SQLITE for simple user management x A cool Astro SSG Theme
+
+because...
+
+How could I not try and astro theme...
+
+> MIT | Idol is an elegant landing page template for **micro SaaS products** built with AstroJS & Skeleton CSS
+
+
+```sh
+git clone https://github.com/LaB-CH3/Astro-idol
+```
+
+
+After asking to Cursor to connect the astro theme with FastAPI and make login possible via sqlite...
+
+![alt text](/blog_img/GenAI/audio/fastapi-astro-signup.png)
+
+This happened:
+
+```sh
+# Start both servers
+make dev-full
+make docker-dev-up  # Start both servers in containers
+
+#cd /home/jalcocert/Desktop/py-speech-rater/fastapi-speech-rater && sqlite3 ./users.db ".schema users"
+# Check all users
+sqlite3 ./users.db "SELECT id, email, first_name, last_name, created_at FROM users;"
+
+# Check specific user by email
+sqlite3 ./users.db "SELECT * FROM users WHERE email = 'test@example.com';"
+
+# Count total users
+sqlite3 ./users.db "SELECT COUNT(*) FROM users;"
+
+#sqlite3 ./users.db
+#.tables
+#SELECT id, email, first_name, last_name, created_at FROM users;
+```
+
+![Fast API x Astro Connected](/blog_img/GenAI/audio/fastapi-astro-signedin-dash.png)
 
 ---
 
@@ -108,11 +150,16 @@ Thanks to the implemented monaco editor, we can just quickly tweak the content o
 
 This simple FastAPI recorder and transcript web app already helps me.
 
-Now I can try to do those yt tech videos i wanted to.
+Now I can try to do those **yt tech videos** I wanted to do this year.
 
 Just recording with OBS, cutting quickly with KDEnlive and recording my audio with audacity.
 
 Then it gets uploaded into this new `py-speech-rater` and we get the voice via Onyx thx to OpenAI ST2 & TTS :)
+
+
+{{< callout type="info" >}}
+So now i got for my yt: OBS -> Audacity -> FastAPI with OpenAI -> KDEnlive -> YT
+{{< /callout >}}
 
 ### Preparing Interviews with AI
 

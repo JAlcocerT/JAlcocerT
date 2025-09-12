@@ -45,7 +45,8 @@ Starting very quick with the default astro Theme:
 
 ```sh
 npm create astro@latest -- --template starlight
-npm run dev
+#npm run dev
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
 > And...thats all go to `localhost:4321` and see your cool [Astro powered docs](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#automated-projects-docs).

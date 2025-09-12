@@ -40,6 +40,10 @@ How about **selling an ebook** be all about: having an stripe account and proper
   {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="NEW Sell your eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Astro SSG Theme (x) Stripe (x) N8N" >}}
 {{< /cards >}}
 
+{{< callout type="info" >}}
+The original theme I forket it from the MIT from [candidosales](https://github.com/candidosales/landing-page-book-astro-tailwind), where I brought [makefile](https://github.com/JAlcocerT/sell-your-ebook/blob/main/Makefile) and dockercompose for easier deployment + easier configuration via json.
+{{< /callout >}}
+
 ```sh
 #https://github.com/candidosales/landing-page-book-astro-tailwind
 #https://github.com/zenorocha/14habits.com
@@ -318,6 +322,10 @@ Kindle notes are saved into a `.txt` in the device.
 I was storing notes for few years already and im really curious to see whats inside.
 
 > I gave it a try with Google's NotebookLLM, but...custom is custom
+
+{{< callout type="info" >}}
+Kindles are not recognized on ubuntu, but you can access their content via `https://read.amazon.com/landing`
+{{< /callout >}}
 
 ### More Books Stuff
 
