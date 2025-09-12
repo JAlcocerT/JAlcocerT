@@ -2,7 +2,7 @@
 title: "How to do live search/research with AI"
 date: 2025-05-23
 draft: false
-tags: ["AI","Web Search","LLMs","Grok"]
+tags: ["AI","Web Search","LLMs","Grok","DuckDuckGo API Search","Ollama"]
 description: 'Using Grok XAi API and Local Deep Researcher compared with Perplexity/Perplexica.'
 url: 'live-search-and-research-with-ai'
 ---
@@ -57,19 +57,17 @@ What you need to have handy:
     * https://docs.x.ai/docs/models
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Chat with Data" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG x LangGraph" >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG Search x LangGraph" >}}
   {{< card link="https://github.com/JAlcocerT/local-deep-researcher" title="Local Deep Researcher Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Local Deep Researcher with langGraph - Source Code on Github" >}}
 {{< /cards >}}
 
-
 ### Local Deep Researcher
 
-Its all about the magic of langgraph.
+Its all about the **magic of langgraph**.
 
 [![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
 

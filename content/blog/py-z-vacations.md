@@ -7,6 +7,8 @@ description: "Python App to explore vacAItion destination. LLMs ❤️ Data. Whi
 url: 'vacation-planner-python'
 ---
 
+lastminute.com
+
 *Where to go. When to go. Can I go?*
 
 Some time ago, I made a [Trip Planner Web App](https://github.com/JAlcocerT/Py_Trip_Planner), based purely on weather patterns as [described here](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/).

@@ -108,6 +108,8 @@ Aaaand this is it: https://ebook.jalcocertech.com/
 You can make epubs and pdf from png/html/md files, [all programatically](https://github.com/JAlcocerT/sell-your-ebook?tab=readme-ov-file#quick-epub-creation)!
 {{< /callout >}}
 
+* https://omnitools.app/pdf/pdf-to-epub
+
 I could not resist to create a *quick FlaskCMS* to edit the config.json...
 
 ```sh

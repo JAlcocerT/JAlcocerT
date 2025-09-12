@@ -1,6 +1,6 @@
 ---
 title: "Serverless"
-date: 2025-09-11T23:20:21+01:00
+date: 2025-09-18T23:20:21+01:00
 draft: false
 tags: ["Dev","SaaS Essentials"]
 url: 'serverless-101'

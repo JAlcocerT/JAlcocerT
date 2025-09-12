@@ -2,7 +2,7 @@
 title: "Tech for Creating i18n Documentation and related Podcast"
 date: 2025-05-15
 draft: false
-tags: ["Web","Commento","Starlight","GitPodcast","AstroPod","WeekToDo"]
+tags: ["Web","Commento","Starlight","GitPodcast","AstroPod","WeekToDo","FreshRSS"]
 description: "How to create Serverless Podcasts and a related Astro (Starlight and AstroPod) website for them. With a look to Code2Prompt and Research Agents."
 url: 'tech-for-podcast'
 ---
@@ -131,11 +131,11 @@ To get quickly with selfhosting via container and exposing via cf tunnels your a
 
 ```sh
 git clone https://github.com/JAlcocerT/astropod && cd cd astropod
-make quick-dev
-#make quick-prod
+#make quick-dev
+make quick-prod
 
 #docker network ls | grep cloudflared_tunnel
-#docker network connect cloudflared_tunnel astropod-prod #connect
+docker network connect cloudflared_tunnel astropod-prod #connect
 #docker inspect astro-prod --format '{{json .NetworkSettings.Networks}}' | jq
 ```
 
@@ -155,6 +155,27 @@ You can generate **podcasts from YT videos** with [notebooklm](https://notebookl
 And most certainly, this astro theme will be a project that can be well linked to TTS/voice clonning/social media.
 
 So who knows, maybe this blog will migrate at some point to a astro text+audio summary Ai generated :)
+
+And the theme brings a **RSS feed**, so that you can subscribe with tools like [FreshRSS](https://fossengineer.com/freshrss-docker-setup/):
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/fresh-rss" title="FreshRSS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+```sh
+# Test RSS feed locally
+curl -s http://localhost:4321/rss.xml | head -10
+# Count episodes
+curl -s http://localhost:4321/rss.xml | grep -c "<item>"
+# Get episode titles
+curl -s http://localhost:4321/rss.xml | grep -o "<title>.*</title>"
+
+# Check headers
+curl -I http://localhost:4321/rss.xml
+# Test on production (once deployed)
+curl -s https://podcast.jalcocertech.com/rss.xml | head -10
+```
 
 ---
 

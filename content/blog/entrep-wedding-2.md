@@ -32,6 +32,9 @@ What others are doing?
 
 https://planning.wedding/pricing
 
+This one is great, yet it seems that the way to get MRR is via the companies who want to seel to the tons of people registering to get married there.
+
+
 
 
 **The free stuff**

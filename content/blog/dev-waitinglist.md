@@ -1,5 +1,5 @@
 ---
-title: "A Quick Waiting List"
+title: "A Quick Waiting List for your SaaS"
 date: 2025-08-02
 draft: false
 tags: ["Dev","Entrepreneurship","PMF","Porkbun API","waiting-to-landing","Formbricks"]

@@ -54,6 +54,9 @@ Databricks is
 
 > Instant no code DATA API platform. Connect any database, run anywhere. Power your GENAI application function/tools calls in seconds.
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/db2rest" title="db2rest | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### About DB2Rest
 

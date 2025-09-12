@@ -2,7 +2,7 @@
 title: "Web Apps with Python Explained"
 date: 2025-06-20T10:20:21+01:00
 draft: false
-tags: ["Dev","WebApps","Traefik","uv","Streamlit PoCs","Python WebApps"]
+tags: ["Dev","WebApps","Traefik","uv","Streamlit PoCs","Python WebApps","JAMStack"]
 description: 'My favourite ways to build WebApps with Python. From Streamlit and PyGWalker to Reflex.'
 url: 'web-apps-with-python'
 ---
@@ -197,7 +197,7 @@ Let's clarify how client/server architecture and three-tier architecture relate 
 
 It's important to understand the core principles of Jamstack: https://jamstack.org/
 
-8 https://www.cloudflare.com/learning/performance/what-is-jamstack/
+* https://www.cloudflare.com/learning/performance/what-is-jamstack/
 
 **Jamstack Fundamentals:**
 
@@ -229,6 +229,31 @@ It's important to understand the core principles of Jamstack: https://jamstack.o
 {{% /details %}}
 
 
+
+{{< details title="JAMStack Architecture with FastAPI vs Flask vs Django vs PB 📌" closed="true" >}}
+
+Combining a Python backend (like Django, Flask, or FastAPI) with Astro as the static site generator creates a classic decoupled Jamstack application.
+
+The core principles of Jamstack are:
+
+* **J**avaScript: Used by Astro for any dynamic front-end functionality.
+* **A**PIs: Provided by your Python backend to serve data.
+* **M**arkup: The static HTML files that Astro pre-renders.
+
+How the Components Fit Together
+
+1.  **The Backend (Your API):** The Python framework's role is to handle all the "back-end stuff"—data storage, business logic, and authentication. It doesn't render any web pages; it simply waits for requests and responds with data, typically in a JSON format.
+
+2.  **The Frontend (Astro):** Astro fetches this data at **build time** (e.g., when you deploy the site) to generate static HTML pages for content that doesn't change often (like blog posts or product pages). For dynamic data (like a user's shopping cart or profile), Astro uses JavaScript to call the API **on the client-side** after the page has loaded.
+
+This separation provides significant benefits:
+
+* **Performance:** Static pages load instantly because they are pre-rendered and served from a CDN (Content Delivery Network), eliminating the need for server-side processing on every request.
+* **Security:** Since the front-end is static, there is no direct connection to your database. This greatly reduces the attack surface for common threats like SQL injection.
+* **Scalability:** A static site can handle massive traffic spikes because it's just serving files, not running a server-side application. The API scales independently, so you can optimize each part of the stack for its specific needs.
+
+{{< /details >}}
+
 In essence, while Jamstack's core philosophy is **centered around pre-built static sites**, the landscape is evolving, and hybrid approaches that include elements of SSR are becoming more common.
 
 
@@ -241,8 +266,51 @@ Lately Ive been **using uv** instead of python venvs:
 # source .venv/bin/activate
 # uv pip install -r requirements.txt
 
-uv streamlit run main.py
+uv run streamlit run main.py
 ```
+
+It makes very easy to switch between web frameworks and their dependencies.
+
+
+{{< details title="So I wondered which fwk provided the easiest auth | FastAPI vs Flask vs Django vs PB 📌" closed="true" >}}
+
+Based on the design philosophy of each framework and the typical implementation patterns, here is a ranking of the difficulty of integrating user authentication, from easiest to most complex.
+
+1. PocketBase (Easiest)
+
+PocketBase is an opinionated, "batteries-included" backend. User authentication is a core, built-in feature that requires almost zero configuration on your part.
+
+* **How it works:** You enable authentication on a collection in the admin UI, and PocketBase automatically creates and exposes API endpoints for user registration, login, password resets, and OAuth2 social logins (like Google, GitHub, etc.).
+* **Why it's easiest:** The entire system—from database models to secure password hashing and token generation—is handled for you. You don't write any custom authentication code; you just call the pre-defined API endpoints from your Astro frontend.
+
+2. Django
+
+Django is a full-stack framework with a comprehensive and secure authentication system built right into its core.
+
+* **How it works:** Django provides `django.contrib.auth`, which includes user models, forms for login and registration, and views to handle the entire authentication flow. You can use its built-in system as is or extend it with custom logic.
+* **Why it's in the middle:** It's not as "zero-config" as PocketBase for an API-only setup, but all the necessary components are provided and well-documented. You will need to use a library like **Django REST Framework (DRF)** to expose the authentication logic as API endpoints. This requires some configuration, but you don't have to build the fundamental security logic yourself.
+
+3. FastAPI & Flask (Most Complex)
+
+These two frameworks are on a similar level of complexity because neither has a built-in authentication system. Their "micro-framework" philosophy means you have to build the authentication system from the ground up, typically by combining multiple libraries.
+
+* **How it works:** You must choose and integrate separate libraries for each component of the authentication process.
+    * **FastAPI:** You would use the built-in security features like `OAuth2PasswordBearer` in combination with an external library like `python-jose` or `PyJWT` to handle JSON Web Tokens (JWTs). You must manually write the code for user registration, password hashing (e.g., using `passlib`), token creation, and endpoint protection.
+    * **Flask:** You would install and configure extensions like **Flask-Login** for session management or **Flask-JWT-Extended** for token-based authentication. You are responsible for connecting these to your database and writing the views that handle the login/logout logic.
+
+* **Why they are the most complex:** This approach gives you maximum flexibility and control, but it also means you have to make all the security-critical decisions yourself and write a significant amount of boilerplate code to glue all the pieces together.
+
+{{< /details >}}
+
+
+Summary of Difficulty
+
+| Rank | Framework/Tool | Level of Difficulty |
+| :--- | :--- | :--- |
+| **1.** | **PocketBase** | **Easiest** (Authentication is a built-in, ready-to-use API) |
+| **2.** | **Django** | **Intermediate** (Built-in, but requires setup for API usage) |
+| **3.** | **FastAPI & Flask** | **Most Complex** (Requires manual implementation and external libraries) |
+
 
 {{% details title="Web Apps in Python w/o fwk" closed="true" %}}
 

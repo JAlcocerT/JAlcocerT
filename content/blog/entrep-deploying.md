@@ -41,7 +41,7 @@ Any of these can help you serve your Apps to people, unless you want to do so fr
 
 * https://www.hetzner.com/cloud/
 
-> Competitive prices ~4$ for 2vcpu
+> Competitive prices ~4$ for 2 vcpu
 
 > > Germany or Finland
 

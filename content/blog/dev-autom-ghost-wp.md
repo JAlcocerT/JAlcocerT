@@ -1,9 +1,9 @@
 ---
-title: "Using APIs to write content"
+title: "Using APIs to write content."
 date: 2025-09-06T08:20:21+01:00
 draft: false
 tags: ["Ghost","Web","Wordpress","Gatsby GraphQL vs REST API","Codex CLI","n8n x wp"]
-description: 'Programatic posts creation with the most popular CMSs.'
+description: 'Programatic posts creation with the most popular CMSs. Via CLI or N8N workflows.'
 url: 'automating-ghost-and-wordpress'
 ---
 
@@ -33,8 +33,17 @@ They provide a cool UI.
 
 But come on, do you really want to spend time with drag and drop still?
 
-Even configuring your [n8n to write into wordpress](#n8n-x-wordpress) for you is possible.
+Even configuring your [**n8n** to write into wordpress](#n8n-x-wordpress) for you is possible.
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="n8n with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=n8n-io/n8n,deepset-ai/haystack&,type=Date)](https://star-history.com/n8n-io/n8n&deepset-ai/haystack&Date)
+
+
+Because [n8n](https://github.com/n8n-io/n8n) has been taking over lately...
 
 ## Programatic Posts
 

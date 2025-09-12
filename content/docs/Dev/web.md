@@ -296,6 +296,11 @@ docker run --rm -dp 3030:3030 cveinnt/letsMarkdown
 
 ### Icons and FavIcons
 
+For emojis:
+
+* https://it-tools.tech/emoji-picker
+* https://gist.github.com/rxaviers/7360908
+
 For **regular ICONS**:
 
 1. [Iconify](https://github.com/iconify/iconify) is a great place to start.

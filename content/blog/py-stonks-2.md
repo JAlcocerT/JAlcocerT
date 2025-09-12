@@ -2,9 +2,9 @@
 title: "Shipping PyStonks with a friend"
 date: 2025-09-11T02:20:21+01:00
 draft: false
-description: .
+description: How not to marry the framework to ship fast.
 url: 'py-stonks'
-tags: ["WebApp","Py_Stocks","yfinance","FastAPI","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
+tags: ["WebApp","Py_Stocks 🐷","yfinance","FastAPI","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
 math: true
 ---
 
@@ -29,7 +29,9 @@ While playing very well with SSGs like Astro, unlike Flask or Django.
 
 Now, Im going to take back the collaboration with my friend: btw, he is a [PDH](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/).
 
-
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks-cerdos" title="PyStonks Cerdos" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code" >}}
+{{< /cards >}}
 
 ## FAQ
 

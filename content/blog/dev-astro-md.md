@@ -24,7 +24,9 @@ Also, there are many things that [CSR can do](https://jalcocert.github.io/JAlcoc
 
 After discovering what is possible with https://it-tools.tech/html-wysiwyg-editor
 
-Isnt it anything similar for md?
+And: https://github.com/markdown-it/markdown-it
+
+Isnt it anything similar for md editions in browser?
 
 ### TOAST UI WYSIWYG MD Editor
 
