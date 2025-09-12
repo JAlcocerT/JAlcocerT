@@ -1,5 +1,5 @@
 ---
-title: "AI Driven e-books as a code"
+title: "AI Driven e-books (as a code) with Pandoc"
 date: 2025-08-31
 draft: false
 tags: ["Entrepreneuring","sell-your-ebook","R","knitt","ebook landing","Flask CMS JSON"]
@@ -14,7 +14,7 @@ I love [R language](https://jalcocert.github.io/JAlcocerT/r-language-101/) and i
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Z_Utils/logto_utils.py" title="WebifAI Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App with Stripe, Umami, FormBricks and Logto as Utils" >}}
-  {{< card link="https://github.com/JAlcocerT/ebooks" title="(NEW) eBooks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating ebooks as a code with Rmd" >}}
+  {{< card link="https://github.com/JAlcocerT/ebooks" title="NEW eBooks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating ebooks as a code with Rmd / knit / bookdown" >}}
 {{< /cards >}}
 
 Would it be possible to [make ebooks as a code](#creating-an-ebook)?
@@ -78,8 +78,13 @@ The result?
 
 You now just need to tweak one place and enjoy the theme, with your [stripe payment link included](#stripe-payment-links).
 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="NEW eBooks landingpage Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating ebooks landing page with stripe product link" >}}
+{{< /cards >}}
+
 ```sh
-#git clone https://github.com/JAlcocerT/sell-your-ebook
+git clone https://github.com/JAlcocerT/sell-your-ebook
 #cd sell-your-ebook
 #make quick-dev #to spin dev server inside container and see :4321 still
 #docker compose up astro-prod -d
@@ -105,10 +110,9 @@ Aaaand this is it: https://ebook.jalcocertech.com/
 ![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
 
 {{< callout type="info" >}}
-You can make epubs and pdf from png/html/md files, [all programatically](https://github.com/JAlcocerT/sell-your-ebook?tab=readme-ov-file#quick-epub-creation)!
+You can [make epubs](#converting-to-epub) and pdf from png/html/md files, [all programatically](https://github.com/JAlcocerT/sell-your-ebook?tab=readme-ov-file#quick-epub-creation)!
 {{< /callout >}}
 
-* https://omnitools.app/pdf/pdf-to-epub
 
 I could not resist to create a *quick FlaskCMS* to edit the config.json...
 
@@ -133,18 +137,27 @@ make quick-prod
 docker network connect cloudflared_tunnel astro-prod #connect
 ```
 
+At this point, you have your ebook published via cf network, like: ebook.jalcocertech.com
+
 ---
 
 ## eBooks
 
 
-**Making ebooks** is possible with **pandoc or MKDoc**
+**Making ebooks** is possible with **[pandoc](#faq) or MKDoc**
+
+> Pandoc can write a PDF/epub from .Rmd or `ipynb`, that will be for a future post.
+
+See this [script](https://github.com/JAlcocerT/sell-your-ebook/blob/main/create_ebooks.sh)
+
 
 * https://github.com/Wandmalfarbe/pandoc-latex-template
 
-> Maybe someone will do something with financial miss-conceptions?
+> Maybe someone will do something with financial ,miss-conceptions'?
 
-But hey, some people use latex, so if its possible to make a code driven CV in overleaf with Latex, why not ebooks?
+But hey, some people use latex, so if its possible to make a code driven CV in overleaf with Latex
+
+Why not ebooks?
 
 And how about creating the **ebook [with R](https://jalcocert.github.io/JAlcocerT/r-language-101/)**?
 
@@ -152,7 +165,7 @@ If we can create markdown driven websites (thanks to SSGs), even presentations..
 
 > We dont need [crazy components, nor shortcodes](https://github.com/JAlcocerT/just-ssg)
 
-Just text, images, graphs...How are we not going to create ebooks powered with R?
+Just text, images, graphs...How are we not going to create **ebooks powered with R**?
 
 Lets just Setup R and see how:
 
@@ -247,7 +260,20 @@ Use **bookdown** when:
 
 This is it **for now.**
 
+
+<!-- https://youtu.be/XEFpzEIEDFc -->
+
+{{< youtube "XEFpzEIEDFc" >}}
+
+We've got a landing page to share ebooks.
+
+And a draft on ways to create them with RKnit/Pandoc.
+
 But im happy I could link this to my last year thought with the [assistant agent for open ai driven ebooks](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_ebook.py).
+
+
+<!-- https://youtu.be/XEFpzEIEDFc -->
+
 
 ### How people send eBooks
 
@@ -265,6 +291,26 @@ But im happy I could link this to my last year thought with the [assistant agent
 
 ## FAQ
 
+
+{{< details title="Pandoc and (ipynb or RMD)... 📌" closed="true" >}}
+
+In fact, they all use **Pandoc** as the core conversion engine.
+
+How the Systems Interrelate
+
+* **R Markdown & `knitr`:** In the R ecosystem, you write a document with a mix of text and R code chunks in an `.Rmd` file. When you "knit" the document, the `knitr` package first processes the file. It executes the R code chunks, collects the output (text, tables, plots), and creates a new, pure Markdown file that includes the results.
+    
+* **Pandoc:** This is where the magic happens. The Markdown file generated by `knitr` is then passed to Pandoc. Pandoc is a standalone, command-line tool that can convert documents between a vast number of formats. It takes the Markdown file and converts it to the final output format, whether that's HTML, PDF, Word, or another type.
+
+* **Jupyter Notebooks:** The workflow for Jupyter Notebooks is very similar, though it's often more integrated. The Jupyter `nbconvert` tool handles the initial processing of the `.ipynb` file. It executes the code cells (if they haven't been already) and prepares the content, including code and outputs, for conversion. `nbconvert` then uses **Pandoc** to perform the final conversion from the prepared intermediate format to the desired output format, such as PDF or EPUB.
+
+{{< /details >}}
+
+
+Essentially, both systems use a two-step process: first, an engine (`knitr` for R Markdown, `nbconvert` for Jupyter) processes the code and generates an intermediate Markdown-like file, and second, **Pandoc** takes that intermediate file and converts it to the final document format.
+
+The primary difference is the front-end tool and the language-specific processing, but Pandoc is the shared, underlying engine that makes the final document conversion possible.
+
 ### Kindle Notes to AI
 
 Kindle notes are saved into a `.txt` in the device.
@@ -278,3 +324,12 @@ I was storing notes for few years already and im really curious to see whats ins
 * https://bookstash.io/ - Top books recommended by famous folk, in 3m or less.
 
 > Epub to AudioBook with Python: https://github.com/C-Loftus/QuickPiperAudiobook
+
+
+### Converting to epub
+
+* https://github.com/dakoller/markdown-epub-converter
+
+>  A simple Docker-based REST API that converts Markdown to EPUB format using Pandoc. Send markdown content via JSON, get an EPUB file back. 
+
+* https://omnitools.app/pdf/pdf-to-epub

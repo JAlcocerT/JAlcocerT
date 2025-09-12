@@ -8,7 +8,11 @@ draft: false
 
 You can record audio as you record with OBS Studio.
 
-Or with audacity.
+Or with [audacity](https://jalcocert.github.io/Linux/docs/debian/content_creation/#audio-editing-in-linux) and bring it later.
+
+```sh
+sudo snap install audacity
+```
 
 In between [your notes](https://jalcocert.github.io/JAlcocerT/knowledge-management/#conclusions), you can also do it with LogSeq.
 

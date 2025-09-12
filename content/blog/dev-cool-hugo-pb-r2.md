@@ -39,3 +39,7 @@ I just want to have images placed into some folders, and pocketbase can do that,
 > R2 provides you with **S3-compatible** object storage with zero egress fees.
 
 As of now, they provide 10GB free, but be careful as you need to provide CC details.
+
+Just recently I got to know: https://github.com/sjackp/r2-gallery
+
+> A minimalist web UI to manage a Cloudflare R2 bucket 

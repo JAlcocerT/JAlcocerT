@@ -51,6 +51,7 @@ uv init
 #add dependencies
 uv add baml-py 
 #uv add streamlit-authenticator==0.1.5
+#uv add -r requirements.txt
 
 #uv sync
 
@@ -59,9 +60,10 @@ uv run app.py
 #uv run streamlit run app.py
 ```
 
-Go from and to requirements.txt to uv:
+Go from and to `requirements.txt` to uv:
 
 ```sh
+uv add -r requirements.txt
 #uv export --no-hashes --format requirements-txt > requirements.txt
 #uv pip freeze > requirements.txt
 #uv export --no-hashes --no-header --no-annotate --no-dev --format requirements.txt > requirements-dev.txt

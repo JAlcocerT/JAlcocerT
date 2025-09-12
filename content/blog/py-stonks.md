@@ -235,6 +235,7 @@ In general, with streamlit you can quickly see if the data adquisition, processi
 uv init
 #uv add -r requirements.txt
 uv add streamlit-authenticator==0.1.5
+
 uv sync
 #uv export --no-hashes --format requirements-txt > requirements.txt
 #uv pip freeze > requirements.txt

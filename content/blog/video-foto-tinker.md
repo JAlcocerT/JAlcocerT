@@ -488,7 +488,7 @@ If you are into OSS, see:
 * OBS Studio - To record your screen
    * SHAREX
 * OpenShot or ~~Shotcut~~
-* Audacity - For audio edition
+* [Audacity](https://jalcocert.github.io/Linux/docs/debian/content_creation/#audio-editing-in-linux) - For audio edition
 
 ---
 

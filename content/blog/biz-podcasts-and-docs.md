@@ -177,6 +177,10 @@ curl -I http://localhost:4321/rss.xml
 curl -s https://podcast.jalcocertech.com/rss.xml | head -10
 ```
 
+<!-- https://www.youtube.com/watch?v=mDMGtMOx-Fk -->
+
+{{< youtube "mDMGtMOx-Fk" >}}
+
 ---
 
 ## Conclusions

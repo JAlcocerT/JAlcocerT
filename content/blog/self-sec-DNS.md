@@ -8,6 +8,9 @@ summary: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+https://blog.foxxmd.dev/posts/redundant-lan-dns/
+
+
 https://awesome-docker-compose.com/apps/dns
 
 <!-- https://www.youtube.com/@TokinPrivacy/videos
