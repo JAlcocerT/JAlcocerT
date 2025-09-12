@@ -2,8 +2,8 @@
 title: "[Recap] on Audio. Creating Speech rAIter micro SaaS"
 date: 2025-09-12
 draft: false
-tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcription","BiP with OBS for Youtube"]
-description: "Audio with AI. Together with an Astro Landing Page + signup/in via FastAPI and sqlite"
+tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcript","BiP", "Youtube","Monaco Editor"]
+description: "Audio with AI. Together with an Astro Landing Page + signup/in via FastAPI x sqlite"
 url: 'audio-recap'
 ---
 
@@ -77,22 +77,26 @@ The audio record does not work oh phones. *Probably due to permissions*.
 Later, on I added simple markdown edition capabilities (there were few candidates)
 
 
-1. Monaco Editor (VS Code Editor) - RECOMMENDED ⭐
+1. Monaco Editor (VS Code Editor) - RECOMMENDED (and this is the one **cursor went for**, enough for a quick edit) ⭐
 Pros: Full VS Code experience, syntax highlighting, IntelliSense, built-in markdown preview
 Cons: Larger bundle size (~2MB)
 Best for: Professional editing experience
+
 2. CodeMirror 6 - LIGHTWEIGHT ⭐
 Pros: Lightweight, fast, good markdown support, customizable
 Cons: Less features than Monaco
 Best for: Balanced performance and features
+
 3. SimpleMDE (Markdown Editor) - SIMPLE
 Pros: Very lightweight, live preview, easy to use
 Cons: Less advanced features
 Best for: Simple editing needs
+
 4. Toast UI Editor - MODERN
 Pros: WYSIWYG + markdown, good mobile support
 Cons: Medium bundle size
 Best for: User-friendly editing
+
 
 {{< callout type="info" >}}
 A wysiwyg markdown editor post is coming soon
@@ -113,19 +117,22 @@ How could I not try and astro theme...
 
 ```sh
 git clone https://github.com/LaB-CH3/Astro-idol
+#npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
 
 After asking to Cursor to connect the astro theme with FastAPI and make login possible via sqlite...
 
-![alt text](/blog_img/GenAI/audio/fastapi-astro-signup.png)
+![FastAPI x signup integrated with astro](/blog_img/GenAI/audio/fastapi-astro-signup.png)
 
 This happened:
 
 ```sh
 # Start both servers
 make dev-full
-make docker-dev-up  # Start both servers in containers
+
+#make docker-dev-build
+make docker-dev-up  # Start both servers in containers FAST and ASTRO working together!!!
 
 #cd /home/jalcocert/Desktop/py-speech-rater/fastapi-speech-rater && sqlite3 ./users.db ".schema users"
 # Check all users
@@ -142,7 +149,15 @@ sqlite3 ./users.db "SELECT COUNT(*) FROM users;"
 #SELECT id, email, first_name, last_name, created_at FROM users;
 ```
 
+The setup even works with container thx to [this compose](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/docker-compose.dev.yml)
+
 ![Fast API x Astro Connected](/blog_img/GenAI/audio/fastapi-astro-signedin-dash.png)
+
+{{< callout type="warning" >}}
+This is a sample quick setup with a lot of [auth to do's](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/Astro-idol/AUTH_PAGES.md), like [httpcookie setup](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/)
+{{< /callout >}}
+
+
 
 ---
 
@@ -161,13 +176,25 @@ Then it gets uploaded into this new `py-speech-rater` and we get the voice via O
 So now i got for my yt: OBS -> Audacity -> FastAPI with OpenAI -> KDEnlive -> YT
 {{< /callout >}}
 
-### Preparing Interviews with AI
+**What can be next from here?**
+
+Considering that FASTAPI and Astro can *speak* perfectly...
+
+Making admin panels / dashboards / data apps  ( displaying via [chartjs](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/Astro-idol/src/pages/dashboard.astro#L124) ) with this stack does not seem that complicated anymore...
+
+![FastAPI x Astro x ChartJS](/blog_img/GenAI/audio/fastapi-chartjssqlite.png)
+
+> See the `./fastapi-speech-rater` folder that contains those. And the related [tech doc with the **system's architecture**](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/TECH_DOC.md#-system-architecture)
+
+I dont see any reason why not shipping micro SaaS faster, like:
+
+1. Preparing Interviews with AI
 
 I saw something interesting at `interviewsby.ai`, where you upload your resume for feedback
 
-### Preparing Speech with AI
+2. Preparing/Rating Speech with AI...
 
-
+> All these would need is one of those MIT Astro Micro Saas Themes + Proper email validation (logto js + csr?) + whatever backend logic via fastAPI/pb/any other
 
 ---
 

@@ -10,6 +10,15 @@ url: 'mental-health-landing'
 
 **Tl;DR**
 
+Some people sya that data is the new oil.
+
+Others, that [ideas are the new oil](https://nav.al/ideas)
+
+Whatever that might be, I see too much in the social media apps that only the latest thing, is the valuable one.
+
+We are neglecting quality and deep content.
+
+Like the one you can create with a (markdown powered) website that you can [edit](#tech).
 
 **Intro**
 
@@ -26,13 +35,49 @@ After discovering what is possible with https://it-tools.tech/html-wysiwyg-edito
 
 And: https://github.com/markdown-it/markdown-it
 
-Isnt it anything similar for md editions in browser?
+Isnt it anything similar for **md editions in browser**?
+
+Come on...even we can render [(serverless) invoices](https://github.com/JAlcocerT/serverless-invoices) via browser.
+
+Before moving forward, I need to apply these concepts to some theme.
+
+Ive chosen: https://github.com/moeyua/astro-theme-typography
+
+> MIT | Rediscover the beauty of typography.
+
+Due to its text centered approach and ,posts only' philosophy.
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/astro-theme-typography" title="NEW - Astro Typography Theme" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Conteinerized and posts editable via UI - Source Code on Github" >}}
+{{< /cards >}}
+
+```sh
+git clone 
+#npm install
+#npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+```
+
+### Monaco Editor
+
+On the previous audio with ai post, I required a quick `.md` validator for the OpenAI transcriptions.
+
+And when I asked cursor...he mentioned Monaco.
+
+Ive seen that word somewhere else than in Formula 1.
+
+Particularly: https://sli.dev/custom/config-monaco
+
+{{< callout type="info" >}}
+The monaco editor can *potentially* run code in browser!
+{{< /callout >}}
 
 ### TOAST UI WYSIWYG MD Editor
 
 The TOAST UI Editor is a well-regarded and **mature open-source Markdown editor** that stands out for its unique blend of a powerful WYSIWYG experience with a Markdown-first approach. 
 
-Breakdown of its key features and benefits:
+
+{{< details title="Breakdown of ToastUI key features and benefits 📌" closed="true" >}}
 
 * **Hybrid Editing Modes:** This is its most significant feature. You get the best of both worlds: a user-friendly WYSIWYG mode for non-technical users and a pure Markdown mode for developers or those who prefer writing in plain text. The ability to seamlessly switch between the two is a major selling point.
 * **Markdown Standard Compliance:** It adheres to the CommonMark and GitHub Flavored Markdown (GFM) specifications, which is a big plus. This ensures that the Markdown you write and the HTML it generates will be compatible with many other tools and platforms.
@@ -41,15 +86,18 @@ Breakdown of its key features and benefits:
 * **Robust and Well-Maintained:** It has a significant number of GitHub stars and is actively maintained. This indicates a strong community and a reliable codebase, which is crucial for a core component like a text editor.
 * **Clean Output:** The editor is known for producing clean and semantic HTML, which is important for SEO and overall web performance.
 
+{{< /details >}}
+
+
 **Potential Considerations:**
 
 * **Learning Curve:** While the WYSIWYG mode is intuitive, some of the more advanced features and a full understanding of the dual-mode functionality might require a bit of a learning curve for some users.
 
 * **Customization Efforts:** While it's highly customizable, some specific, deep customizations might require significant development effort, as noted by projects that have evaluated it and considered alternatives.
 
-### Could it work as CSR with an Astro theme?
+#### Could ToastUI work as CSR with an Astro theme?
 
-The TOAST UI Editor is a perfect candidate for a Client-Side Rendered (CSR) component within an Astro theme.
+The **TOAST UI Editor** is a perfect candidate for a Client-Side Rendered (CSR) component within an Astro theme.
 
 Here's why:
 
@@ -61,13 +109,58 @@ Here's why:
     3.  **Client-Side Hydration:** To ensure the editor only loads on the client, you would use a client-side hydration directive like `client:only`. This tells Astro to skip rendering this component on the server and to only load and render it on the client once the page is interactive. This is the key to making it work seamlessly with an Astro theme without bogging down your site's initial load.
     4.  **Import and Initialize:** Inside your Astro component, you would import the necessary JavaScript and CSS files for the editor and then initialize a new editor instance, pointing it to a container `div` in your component's template.
 
-In summary, the TOAST UI Editor is a powerful and flexible tool. Its dual-mode approach is highly effective for a wide range of users, and it integrates very well with a modern framework like Astro, especially when implemented as a client-side rendered component.
+In summary, the TOAST UI Editor is a powerful and flexible tool.
 
+Its dual-mode approach is highly effective for a wide range of users, and it integrates very well with a modern framework like Astro, especially when implemented as a client-side rendered component.
+
+### FastAPI vs NextJS as Astro Editor
+
+Time to choose whats the BE is going to be.
+
+Perfect!
+
+I've created a comprehensive `fastapi-vs-nextjs.md` document that covers all the considerations for choosing between FastAPI and Next.js for your Git-based admin panel.
+
+📋 **Key Highlights from the Document:**
+
+**FastAPI Approach:**
+- **Best for**: Python developers who want maximum flexibility
+- **Pros**: Rich Python ecosystem, excellent performance, clean API separation
+- **Cons**: Two deployments, CORS complexity, more infrastructure to manage
+- **Timeline**: 1-2 weeks
+
+**Next.js Approach:**
+- **Best for**: Developers who want simplicity and speed
+- **Pros**: Single deployment, no CORS issues, easier maintenance, lower costs
+- **Cons**: JavaScript/TypeScript only, serverless limitations
+- **Timeline**: 1-2 weeks
+
+**Both Approaches:**
+- ✅ **Reliable** - Both are production-ready
+- ✅ **User-friendly** - Toast UI Editor provides excellent UX
+- ✅ **Same functionality** - Git integration, Cloudflare Pages rebuilds
+- ✅ **Same timeline** - 1-2 weeks implementation
+
+🎯 **My Recommendation:**
+
+For your use case (Astro theme with Git-based content management), I'd lean toward **Next.js** because:
+
+1. **Simpler deployment** - One service instead of two
+2. **Lower costs** - Free hosting on Vercel
+3. **Easier maintenance** - Single codebase to manage
+4. **Faster development** - No CORS setup, unified development experience
+
+But if you're more comfortable with Python or need maximum flexibility, **FastAPI is equally valid** and will deliver the same great user experience with Toast UI Editor.
+
+The document includes detailed code examples, cost analysis, and implementation timelines to help you make the best decision for your project!
 
 ---
 
-
 ## Conclusions
+
+
+
+
 
 ---
 

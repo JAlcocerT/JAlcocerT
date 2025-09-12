@@ -2,7 +2,7 @@
 title: "What a Year...2025"
 date: 2025-12-30
 draft: false
-tags: ["Year-Review"]
+tags: ["Year-Review","FY25"]
 description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
@@ -13,6 +13,8 @@ url: 'tech-recap-2025'
 This year is been like a lot of [do](https://nav.al/do)
 
 ![Me during Y2025](/img/kitten-cat.gif#center)
+
+
 
 {{< callout type="info" >}}
 After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/), there are also the **financial aspects of travelling**

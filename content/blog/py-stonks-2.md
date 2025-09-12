@@ -2,7 +2,7 @@
 title: "Shipping PyStonks with a friend"
 date: 2025-09-11T02:20:21+01:00
 draft: false
-description: How not to marry the framework to ship fast.
+description: How not to marry the framework, make that BRD and ship fast.
 url: 'py-stonks'
 tags: ["WebApp","Py_Stocks 🐷","yfinance","FastAPI","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
 math: true

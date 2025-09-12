@@ -2,7 +2,7 @@
 title: "Webs for Restaurants."
 date: 2025-09-19
 draft: false
-tags: ["OSS"]
+tags: ["SaaS"]
 description: "Astro Websites for Restaurants. Million dollar idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
@@ -25,6 +25,12 @@ This required to make the website owners responsible of their content.
 **AstroPie** is a free restaurant theme for Astro sites
 
 ![Astro restaurant](/blog_img/webs/restaurant-astro-speed.png)
+
+
+* https://github.com/unfolding-io/Astrorante
+
+> AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, Storyblok CMS, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
+
 
 
 ---

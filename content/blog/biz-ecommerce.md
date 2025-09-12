@@ -2,9 +2,9 @@
 title: "Creating an e-Commerce"
 date: 2026-12-23
 draft: true
-tags: ["dev"]
-description: 'Creating an eCommerce. Drupal vs'
-url: 'creating-ecommerce'
+tags: ["SaaS"]
+description: 'Creating an eCommerce. Drupal vs DIY'
+url: 'ecommerce'
 ---
 
 
@@ -25,6 +25,10 @@ How about bringing something more than a website: **an ecommerce**
 3. https://github.com/lloydjatkinson/astro-snipcart
 
 > MIT | Allows for the creation of E-Commerce sites using the Astro framework and [Snipcart](https://snipcart.com/pricing). Start your e-commerce business in minutes!
+
+4. https://github.com/michael-andreuzza/microstore
+
+https://microstoretheme.netlify.app/#_
 
 
 

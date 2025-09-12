@@ -1,12 +1,11 @@
 ---
-title: "Backends 101"
+title: "Backends 101 - PHP vs NextJS vs Python fwks"
 date: 2025-09-03T23:20:21+01:00
 draft: false
-tags: ["Dev","PHP vs Python BE fwks","Protected EndPoints","Database Migration","ORM","Pagination"]
+tags: ["Protected EndPoints","Database Migrations","ORM","Pagination"]
 url: 'backend-alternatives'
 description: 'Backend 101 for your SaaS'
 ---
-
 
 **Tl;DR**
 

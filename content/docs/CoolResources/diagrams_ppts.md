@@ -95,6 +95,9 @@ This free and open source version of Structurizr allows you to view/edit diagram
 
 1. [SliDev](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev)
 
+* They support Katex: https://sli.dev/custom/config-katex
+* And mermaid diagrams: https://sli.dev/custom/config-mermaid
+
 2. [MARP and RemarkJS](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#marp)
 
 3. RevalJS and Astro - Which can also be deploy to Github Pages: https://github.com/JAlcocerT/slides-template

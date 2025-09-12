@@ -2,7 +2,7 @@
 title: "What a Year..."
 date: 2024-12-30
 draft: false
-tags: ["Year-Review"]
+tags: ["Year-Review","FY24"]
 description: 'Looking back to the learnings of the year 2024.'
 url: 'this-year-was-crazy'
 ---
@@ -10,6 +10,14 @@ url: 'this-year-was-crazy'
 This year was **crazy**.
 
 But...on the tech side, it was quite interesting.
+
+```mermaid
+pie title FY24 Weeks Breakdown
+         "Cycling" : 1
+         "Sleeping" : 17
+         "Working" : 17
+         "Languages" : 0,25
+```
 
 And diverse.
 
