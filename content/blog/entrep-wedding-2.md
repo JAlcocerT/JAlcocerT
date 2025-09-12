@@ -28,6 +28,12 @@ And I wont be using Filebrowser or some selfhostable webapp to do the BE part.
 
 ## Features
 
+What others are doing?
+
+https://planning.wedding/pricing
+
+
+
 **The free stuff**
 
 **The try for free stuff**

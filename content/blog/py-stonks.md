@@ -4,7 +4,7 @@ date: 2025-09-07T02:20:21+01:00
 draft: false
 description: A Blueprint for webapp authentication. Streamlit, Flask, FastAPI, PB.
 url: 'stonks'
-tags: ["HomeLab","Py_Stocks","yfinance","LogTo JS SDK","ChartJS","Animations"]
+tags: ["Py_Stocks","yfinance","LogTo JS SDK","ChartJS","Animations","FinanceInMotion"]
 math: true
 ---
 
@@ -100,7 +100,7 @@ gh auth login
 gh repo create py-stonks --private --source=. --remote=origin --push
 ```
 
-How could I not get started with `.ipynb` and a venv.
+How could I not get started with `.ipynb` and a venv for a [quick EDA](#eda-on-yfinance).
 
 #### EDA on YFinance
 

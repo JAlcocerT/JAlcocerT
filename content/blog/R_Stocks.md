@@ -2,7 +2,7 @@
 title: "R Stocks: Interactive Stock Analysis with R Shiny"
 date: 2022-11-27T23:20:21+01:00
 draft: false
-tags: ["R","Dashboards","R-Stocks"]
+tags: ["R","Dashboards","R-Stocks","RStocks"]
 cover:
     image: "https://socialify.git.ci/JAlcocerT/R_Stocks/image?description=1&descriptionEditable=Shiny%20Dashboard%20that%20displays%20free%20available%20financial%20information.%20%0A%0A&font=Inter&name=1&owner=1&pattern=Solid&theme=Auto" # image path/url 
     alt: "R Stocks" # alt text

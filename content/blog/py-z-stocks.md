@@ -2,27 +2,27 @@
 title: "Stocks with Python"
 date: 2025-06-19T19:20:21+01:00
 draft: false
-tags: ["Python","Streamlit","Flask","Reflex","RStocks","YFinance"]
-description: "A Cooler RStocks - This time, with Pytho and better Auth/UIM."
+tags: ["Python","Streamlit","Flask","Reflex","RStocks","YFinance","Google Sheets"]
+description: "A Cooler RStocks, PyStocks - This time, with Python and better Auth/UIM."
 url: 'python-stocks-webapp'
 math: true
 ---
 
+**TL;DR:** 
 
+This is NOT a financial recommendation post.
 
-**TL;DR:** This is NOT a financial recommendation post.
+Just have fun with Python and its different stacks.
 
 **Intro**
 
-![alt text](/blog_img/data-experiments/investors-scatter.png)
+![Scatter Plot - Investors](/blog_img/data-experiments/investors-scatter.png)
 
 Because they have made it, but you wont.
 
 **TradFi** - Or Traditional Finances, as I saw recently on redit.
 
 You can see how big *the market is* https://gomarketcap.com/
-
-
 
 Wouldnt it be great to go out the *typical google sheet* and have a great UI/X when looking at your finances?
 
@@ -39,7 +39,7 @@ If all of these sounds familiar...
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Reflex_Stocks" title="Reflex Stocks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Reflex Stocks Source Code on Github" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Stocks" title="Python Stocks (Streamlit)" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PyStocks Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Stocks" title="NEW Python Stocks (Streamlit)" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PyStocks Source Code on Github" >}}
 {{< /cards >}}
 
 It is because it is actually familiar.
@@ -80,37 +80,23 @@ From [google sheets](https://jalcocert.github.io/JAlcocerT/R-Stocks/#google-shee
 
 > > Unfortunately, no dividend data is given out of the box
 
-**The Idea:**
+**The Idea:** and objectives
 
 Business Side:
-- To feed a portfolio
+
+- To feed a portfolio:
 - To see consolidated information
 - To see value and dividend % CAGR for a past period
 - To let the user play with future what if scenarios (given just percentages of growth for those parameters)
 - Reply to typical [questions](#stock-questions---answered)
 
 Tech Side:
-- To choose the webapp framework that looks the coolest: streamlit vs Flask vs Reflex...
 
-![Streamlit Real Estate App](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Whishper" title="Streamlit x Real Estate | Post 🐋 ↗" >}}
-{{< /cards >}}
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#traefik-x-tinyauth-x-flask" title="Flask x Three Bodies | Post 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Flask x Three Bodies | Post 🐋 ↗" >}}
-{{< /cards >}}
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Reflex x Real Estate | Post 🐋 ↗" >}}
-{{< /cards >}}
-
-
+- To choose the webapp framework that looks the coolest (on web and phone): streamlit vs Flask vs Reflex...
+- And that I can plug user authentication easily
 - To see whats the best way for me to authencate users: clear/supabase/logto...
 
-{{< details title="Auth Alternatives 📌" closed="true" >}}
+{{< details title="Auth Alternatives for webapps...📌" closed="true" >}}
 
 * https://clerk.com/docs
 * https://github.com/clerk/clerk-sdk-python/blob/main/README.md
@@ -120,6 +106,25 @@ Tech Side:
 * https://www.reddit.com/r/Supabase/comments/xaxecr/authentication_with_supabase_is_easy_almost/
 
 {{< /details >}}
+
+![Streamlit Real Estate App](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Whishper" title="Streamlit x Real Estate | Post 🐋 ↗" >}}
+{{< /cards >}}
+
+I kind of understood authentication and Flask webapps with:
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#traefik-x-tinyauth-x-flask" title="Flask x Three Bodies x TinyAuth | Post  ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Flask WebApp x Three Bodies | Post 🐋 ↗" >}}
+{{< /cards >}}
+
+And Reflex is kind of cool, but the LLMs are not there yet:
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Reflex x Real Estate | Post 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ## PyStocks
@@ -156,9 +161,11 @@ So that the main `app.py` can be very simple/modular and clean.
 
 This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/) based. 
 
+> That I also covered recently on this post: https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/
+
 Im aware that there are many APIs around: https://github.com/public-apis/public-apis
 
-And yesss people are earning a lot of money building APIs and you are missing out
+And yesss people are earning a lot of money building APIs and you are *,missing out'*
 
 <!-- https://www.youtube.com/watch?v=aUtFn-qS7Xk -->
 
@@ -171,7 +178,7 @@ YFinance data and a Python Web App...That's it!
 
 > Less is more
 
-Or so some say.
+> > Or so some say.
 
 Anyways, we will need this package: https://pypi.org/project/yfinance/
 
@@ -228,14 +235,16 @@ I was exploring on [this post](https://jalcocert.github.io/JAlcocerT/how-to-chat
 
 This goes few steps further than the previous [project RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/).
 
+And I got streamlit working with my google sheets to bring my portfolio information (as per the transactions history that I maintain manually):
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks//" title="About RStocks" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="R Stock Shiny App Post" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Stocks" title="Python Stocks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Vibe coding Python WebApps" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Stocks" title="NEW Python Stocks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Vibe coding Python WebApps with stock data plugged in" >}}
 {{< /cards >}}
 
 And definitely much more than [FlexDashboards](https://jalcocert.github.io/JAlcocerT/guide-r-flexdashboards-in-github-pages/) in R.
 
-> Wouldnt this be a cool companion for a website, as a lead magnet?
+> Wouldnt this be a cool companion for a website, as a *lead magnet*?
 
 Even as a subscription based model, say [7$/month](https://www.cazadividendos.com/recursos/indice/) to have access to such tool and historical info?
 

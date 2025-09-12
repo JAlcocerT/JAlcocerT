@@ -2,7 +2,7 @@
 title: "How to Setup Gitlab"
 date: 2023-12-30T23:20:21+01:00
 draft: false
-tags: ["Dev","Git 101","SSH"]
+tags: ["Dev","Git 101","SSH","RSA"]
 description: 'How to use Gitlab for development'
 url: 'how-to-use-gitlab'
 ---

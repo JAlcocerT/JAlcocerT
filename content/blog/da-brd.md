@@ -2,12 +2,14 @@
 title: "Whats a BRD and how it helps project delivery?"
 date: 2025-04-16T00:20:21+01:00
 draft: false
-tags: ["Career", "D&A", "Analytics","PM/PRD/BRD/FRD"]
+tags: ["Career", "D&A", "Analytics","PM/BRD/PRD/FRD"]
 description: 'The business requirement document and the FRD for the GenAI / vibecoded times. Better questions for LLMs.'
 url: 'brd-vs-frd-for-data-analytics'
 ---
 
-**TL;DR** A recap on PM SDLC related docs and making them vibecoding/LLM ready.
+**TL;DR** 
+
+A recap on PM SDLC related docs and making them vibecoding/LLM ready.
 
 
 **Intro**

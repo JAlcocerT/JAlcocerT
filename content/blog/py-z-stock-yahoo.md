@@ -8,7 +8,14 @@ url: 'python-financial-data-with-yfinance'
 math: true
 ---
 
-**Financial Data to play with Python Apps*
+
+**Intro**
+
+*Financial Data to play with Python Apps via YFinance*
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="NEW DataInmotion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scripts to visualize and animate financial data" >}}
+{{< /cards >}}
 
 ## Financial Data with Python
 
