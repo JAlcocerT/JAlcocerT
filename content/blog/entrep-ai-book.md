@@ -283,6 +283,13 @@ But im happy I could link this to my last year thought with the [assistant agent
 
 <!-- https://youtu.be/XEFpzEIEDFc -->
 
+### ebooks on github
+
+Some people do this kind of cool thing: https://github.com/understanding-astro/understanding-astro-book
+
+* https://www.ohansemmanuel.com/books/understanding-astro
+
+> They Place the content and .md in public :)
 
 ### How people send eBooks
 

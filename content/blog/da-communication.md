@@ -38,6 +38,10 @@ Each solution has its own approach to this model:
 sudo snap install rocketchat-desktop
 ```
 
+> It reminds me also to Revolt: https://github.com/revoltchat/revolt.chat?tab=readme-ov-file
+
+> > They built a cool side with astro btw :)
+
 * **Mattermost** also provides a self-hosted option, and their open-source licensing model focuses on providing the core communication features for free, with paid features (like advanced security and compliance tools) available for enterprise users.
     * https://github.com/mattermost/mattermost/tree/master
     * https://mattermost.com/pricing/

@@ -3,7 +3,7 @@ title: "[Recap] on Audio. Creating Speech rAIter micro SaaS"
 date: 2025-09-12
 draft: false
 tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcript","BiP", "Youtube","Monaco Editor"]
-description: "Audio with AI. An Astro Landing Page + signup/in via FastAPI x sqlite x admin panel"
+description: "Audio with AI. An Astro Landing Page + signup/in via FastAPI x sqlite x Admin panel"
 url: 'audio-recap'
 ---
 
@@ -112,8 +112,7 @@ because...
 
 How could I not try and astro theme...
 
-> MIT | Idol is an elegant landing page template for **micro SaaS products** built with AstroJS & Skeleton CSS
-
+> **MIT** | Idol is an elegant landing page template for **micro SaaS products** built with AstroJS & Skeleton CSS
 
 ```sh
 git clone https://github.com/LaB-CH3/Astro-idol
@@ -193,7 +192,7 @@ I saw something interesting at `interviewsby.ai`, where you upload your resume f
 
 2. Preparing/Rating Speech with AI...
 
-> All these would need is one of those MIT Astro Micro Saas Themes + Proper email validation (logto js + csr?) + whatever backend logic via fastAPI/pb/any other
+> All these would need is one of those MIT Astro Micro Saas Themes + Proper email validation (logtoJS/FirebaseAuth + csr?) + whatever backend logic via fastAPI/pb/any other
 
 ---
 

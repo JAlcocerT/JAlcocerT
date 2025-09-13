@@ -1,5 +1,5 @@
 ---
-title: "Firebase Auth. Social Login and email verification."
+title: "Firebase Auth SDK. Social Login and email verification."
 date: 2025-09-13T10:20:21+01:00
 draft: false
 tags: ["Journal","SaaS MAU","Social signin/up","Gmail","JustJournalviaSSG"]

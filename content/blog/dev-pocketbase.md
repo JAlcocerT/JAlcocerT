@@ -61,7 +61,7 @@ Because it provides all of these features out-of-the-box, it's designed to be a 
 Allowing you to build a project without having to set up a separate:
 * [Database](https://jalcocert.github.io/JAlcocerT/databases-101/) server: *it can be your sqlite / mysql / postgres / supabase ...while you forget about ORM*
 * API: *it can be your FastAPI / flask endpoints*
-* and... Authentication system: *it can be your LogTo / Firebase Auth...*
+* and... Authentication system: *it can be your LogTo / FirebaseAuth...*
 
 See **pocketbase project details** and docs, as its F/OSS:
 

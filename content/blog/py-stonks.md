@@ -13,8 +13,6 @@ math: true
 
 Creating a py_stocks v2.0
 
-+++ Using Logto JS SDK with CF Workers (?)
-
 +++ Got to know few very logical concepts, like the [drawdown (MDD)](#what-is-maximum-drawdown-mdd).
 
 {{< callout type="warning" >}}

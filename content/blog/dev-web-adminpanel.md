@@ -92,6 +92,16 @@ Or as I did recently with **NextJS**
 
 ## Others
 
+* https://github.com/ColorlibHQ/AdminLTE
+
+> MT | AdminLTE - Free admin dashboard template based on Bootstrap 5
+
+* https://github.com/incluud/accessible-astro-dashboard
+
+> MIT | An Accessible Admin Dashboard Theme for Astro with a login page and a dashboard overview. Includes accessibility features such as landmarks, better focus-outline and skip-links navigation.
+
+
+
 ### AdminJS
 
 * https://adminjs.co/

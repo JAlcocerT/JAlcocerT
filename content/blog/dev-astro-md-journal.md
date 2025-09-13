@@ -52,6 +52,7 @@ Cursor decided to use the [react md](https://www.npmjs.com/package/react-markdow
 ![NextJS Reactmd editing astro sphere theme](/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png)
 
 
+---
 
 ## Conclusions
 
