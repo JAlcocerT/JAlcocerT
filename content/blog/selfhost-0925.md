@@ -2,7 +2,7 @@
 title: "SelfHosting Updates - End Summer 2025"
 date: 2025-09-12T01:20:21+01:00
 draft: false
-tags: ["Dev","SSGs","MKCert","MeTube/Navidrome","Zen Browser"]
+tags: ["HomeLab","Ventoy","SSGs","MKCert","MeTube/Navidrome","Zen Browser"]
 description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs'
 url: 'selfhosted-apps-sept-2025'
 ---
@@ -263,4 +263,6 @@ Well, first try download them and run it via a VM.
 
 Then, setup VENTOY into your USBs and bring your favourite one.
 
-{{< youtube "3ISRS2hQlfI" >}}
+{{< youtube "hTw9DBEksx4" >}}
+
+<!-- https://youtu.be/hTw9DBEksx4 -->

@@ -55,6 +55,14 @@ Cursor decided to use the [react md](https://www.npmjs.com/package/react-markdow
 
 ## Conclusions
 
+Its possible to do this.
+
+Spin the NextJS app, clone any astro theme.
+
+Let their .md or .mdx be updated locally via UI:
+
+![alt text](/blog_img/web/nextjs-admin/journal-nextjs-admin-clonethemes.png)
+
 **Using the journal**
 
 ```sh

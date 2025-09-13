@@ -3,7 +3,7 @@ title: "[Recap] on Audio. Creating Speech rAIter micro SaaS"
 date: 2025-09-12
 draft: false
 tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcript","BiP", "Youtube","Monaco Editor"]
-description: "Audio with AI. Together with an Astro Landing Page + signup/in via FastAPI x sqlite"
+description: "Audio with AI. An Astro Landing Page + signup/in via FastAPI x sqlite x admin panel"
 url: 'audio-recap'
 ---
 
@@ -163,7 +163,7 @@ This is a sample quick setup with a lot of [auth to do's](https://github.com/JAl
 
 ## Conclusions
 
-This simple FastAPI recorder and transcript web app already helps me.
+This simple **FastAPI recorder** and transcript web app already helps me.
 
 Now I can try to do those **yt tech videos** I wanted to do this year.
 
@@ -171,9 +171,8 @@ Just recording with OBS, cutting quickly with KDEnlive and recording my audio wi
 
 Then it gets uploaded into this new `py-speech-rater` and we get the voice via Onyx thx to OpenAI ST2 & TTS :)
 
-
 {{< callout type="info" >}}
-So now i got for my yt: OBS -> Audacity -> FastAPI with OpenAI -> KDEnlive -> YT
+So now I got for my **yt workflow**: OBS -> Audacity -> FastAPI with OpenAI -> KDEnlive -> YT
 {{< /callout >}}
 
 **What can be next from here?**

@@ -14,6 +14,8 @@ This year is been like a lot of [do](https://nav.al/do)
 
 ![Me during Y2025](/img/kitten-cat.gif#center)
 
+![alt text](/blog_img/web/nextjs-admin/stripe-subscription-management.png)
+
 
 
 {{< callout type="info" >}}
