@@ -2,7 +2,7 @@
 title: "Firebase Auth"
 date: 2025-09-13T10:20:21+01:00
 draft: false
-tags: ["Dev","SaaS Essentials","Social signin/up"]
+tags: ["Journal","SaaS Essentials","Social signin/up","Gmail Login"]
 url: 'firebase-auth-101'
 description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator'
 ---
@@ -12,4 +12,9 @@ description: 'Firebase Auth as your WebApp login method. A Serverless Authentica
 
 Because LogTo email verifications works.
 
-But if you want the gmail social signup/in, you need the paid tier (???)
+But if you want the gmail social signup/in, you need the paid tier (??? TBC WIP)
+
+Today we are going to use:
+
+* https://firebase.google.com/
+    * https://firebase.google.com/

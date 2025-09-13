@@ -49,10 +49,23 @@ Cursor decided to use the [react md](https://www.npmjs.com/package/react-markdow
 
 ## Conclusions
 
+so how can i try this setup?
+
+can you tweak the sample sites to be:
+
+@https://github.com/moeyua/astro-theme-typography 
+@https://github.com/markhorn-dev/astro-sphere 
+@https://github.com/markhorn-dev/astro-nano 
+
+?
+
 **Using the journal**
 
 ```sh
-git clone
+git clone https://github.com/JAlcocerT/Just-Journal-via-SSG
+#clone one of the repos below inside ./ssg-themes
+make setup
+make ssg-dev
 ```
 
 

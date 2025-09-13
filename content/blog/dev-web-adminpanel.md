@@ -1,7 +1,7 @@
 ---
-title: "Admin Panels for Websites | Testing Manifest"
+title: "Admin Panels for Websites | Manifest vs "
 date: 2025-10-07
-tags: ["AI","Authentication"]
+tags: ["SaaS","Authentication","Simple BackEnd"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
 draft: false
@@ -15,9 +15,13 @@ Is it possible to have something better than Streamlit and Pocketbase for the qu
 
 Ive been exploring few authentications method lately.
 
-Some people claim that ads + onboarding + paywall is your source of revenue as a SaaS indie creator.
+Some people claim that **ads + proper onboarding + paywall** is your source of revenue as a SaaS indie creator.
 
 {{< tweet user="SinaSinry" id="1951606811829604488" >}}
+
+And creating an admin panel is simple in theory.
+
+But in practice... *See this quick admin panel [fastapi sqlite based from the last audio post](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions)*
 
 <!-- 
 https://x.com/SinaSinry/status/1951606811829604488?t=jRvoxV9sxOPDvFHh89HF5w&s=35 -->
@@ -76,9 +80,13 @@ npx create-manifest@latest  --windsurf
 
 ### Manifest UseCases
 
-#### Headless CMS
+**Headless CMS**
 
-Via Flask, you can make a quick webapp to allow users to edit specific fields of your SSG Themes.
+Via Flask, you can make a quick webapp to allow users to edit specific fields of your SSG Themes...
+
+Or as I did recently with **NextJS**
+
+
 
 ---
 
@@ -86,21 +94,20 @@ Via Flask, you can make a quick webapp to allow users to edit specific fields of
 
 ### AdminJS
 
-https://adminjs.co/
+* https://adminjs.co/
 
 > Open-Source Admin Panel for your Node.js Application
 
-https://github.com/SoftwareBrothers/adminjs
+* https://github.com/SoftwareBrothers/adminjs
 
 AdminJS is an admin panel for apps written in node.js
 
-https://docs.adminjs.co/installation/getting-started
-
-https://docs.adminjs.co/basics/authentication
+* https://docs.adminjs.co/installation/getting-started
+* https://docs.adminjs.co/basics/authentication
 
 ### Tailadmin
 
-https://tailadmin.com/
+8 https://tailadmin.com/
 
 ### Open Admin
 
