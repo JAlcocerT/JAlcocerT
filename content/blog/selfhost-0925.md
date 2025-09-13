@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - End Summer 2025"
-date: 2025-09-15T01:20:21+01:00
+date: 2025-09-12T01:20:21+01:00
 draft: false
 tags: ["Dev","SSGs","MKCert","MeTube/Navidrome","Zen Browser"]
 description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs'
@@ -250,14 +250,17 @@ create partition primary
 
 
 1. [Lubuntu](https://cdimage.ubuntu.com/lubuntu/releases/noble/release/) - Because it requires just ~700mb of RAM
+
 2. Ubuntu if you want the same, but with GNOME
 
 > You can have ubuntu without UI, if you plan to use your server's terminal only
 
-3. [Garuda](https://garudalinux.org/editions), if you want to say I use ARCH BTW.
+3. [Garuda](https://garudalinux.org/editions), if you want to say I use ARCH BTW. Mind the steep learning curve.
 
 How exactly?
 
 Well, first try download them and run it via a VM.
 
-Then, setup VENTOY into your USBs and bring your favourite one. 
+Then, setup VENTOY into your USBs and bring your favourite one.
+
+{{< youtube "3ISRS2hQlfI" >}}

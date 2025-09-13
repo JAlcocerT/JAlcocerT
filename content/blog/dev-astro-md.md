@@ -1,6 +1,6 @@
 ---
 title: "A Blog you can actually Edit"
-date: 2025-09-12T20:20:21+01:00
+date: 2025-09-13T01:20:21+01:00
 draft: false
 tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP","Astro Theme Typography"]
 description: 'Tinkering with ToastUI and Github Auth via NextJS to make a custom astro posts editor.'
@@ -19,6 +19,8 @@ Whatever that might be, I see too much in the social media apps that only the la
 We are neglecting quality and deep content.
 
 Like the one you can create with a (markdown powered) website that you can [edit](#tech).
+
+> I vibecoded a NextJS webapp that integrates with github for auth and brings a ToastUI editor.
 
 **Intro**
 

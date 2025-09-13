@@ -1,5 +1,5 @@
 ---
-title: "Journal via Astro and ToastUI Editor"
+title: "Journal via Astro and markdown Editors"
 date: 2025-09-13T06:20:21+01:00
 draft: false
 tags: ["TOAST UI vs React md","WYSIWYG","NextJS"]
@@ -7,6 +7,12 @@ description: 'Do that SSG tweak once. Edit via UI with the NextJS powered JustJo
 url: 'astro-journal-theme'
 ---
 
+
+**Tl;DR**
+
+I created a simple NextJS app the visualizes .md files in folders and let you edit them via React md with a UI.
+
+Changes are reflected locally.
 
 **Intro**
 
@@ -48,16 +54,6 @@ Cursor decided to use the [react md](https://www.npmjs.com/package/react-markdow
 
 
 ## Conclusions
-
-so how can i try this setup?
-
-can you tweak the sample sites to be:
-
-@https://github.com/moeyua/astro-theme-typography 
-@https://github.com/markhorn-dev/astro-sphere 
-@https://github.com/markhorn-dev/astro-nano 
-
-?
 
 **Using the journal**
 

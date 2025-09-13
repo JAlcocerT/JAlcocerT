@@ -18,3 +18,12 @@ Today we are going to use:
 
 * https://firebase.google.com/
     * https://firebase.google.com/
+
+
+## Testing Firebase Auth
+
+Ive done so with the project started on the [previous post](https://jalcocert.github.io/JAlcocerT/astro-journal-theme/).
+
+* https://github.com/JAlcocerT/Just-Journal-via-SSG/blob/main/z-firebase.md
+
+https://jalcocert.github.io/JAlcocerT/astro-journal-theme/
