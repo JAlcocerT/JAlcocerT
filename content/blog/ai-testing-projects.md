@@ -283,7 +283,7 @@ from gradio_client import Client
 
 client = Client("http://localhost:8001/")
 result = client.predict(
-		"What is flutter?",	# str  in 'Message' Textbox component
+		"What is a webapp?",	# str  in 'Message' Textbox component
 		api_name="/chat"
 )
 print(result)

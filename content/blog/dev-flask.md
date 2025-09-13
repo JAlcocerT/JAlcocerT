@@ -593,8 +593,7 @@ Reflex simplifies full-stack development with Python but is still evolving. Othe
 
 [Flet](https://github.com/flet-dev/flet) enables developers to easily build realtime web, mobile and desktop apps in Python.
 
-{{< details title="More About Flet 📌" closed="true" >}}
-
+{{< details title="More About Flet, Flutter inside 📌" closed="true" >}}
 
 - **Project Name:** Flet
 - **License:** Apache-2.0
@@ -602,8 +601,7 @@ Reflex simplifies full-stack development with Python but is still evolving. Othe
 - **Forks:** 432 forks
 - **Main Website:** [flet.dev](https://flet.dev)
 
-About the Project
-Flet is a framework that allows developers to easily create real-time web, mobile, and desktop applications in Python without requiring frontend development experience.
+Flet is a framework that allows developers to easily create real-time **web, mobile, and desktop** applications in Python without requiring frontend development experience.
 
 Main Features
 - **From Idea to App in Minutes:** Quickly develop internal tools, dashboards, data entry forms, kiosk apps, or prototypes with Flet.

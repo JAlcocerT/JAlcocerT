@@ -2,7 +2,7 @@
 title: "Flet."
 date: 2026-12-31T23:20:21+01:00
 draft: true
-tags: ["Dev","Flutter","Python"]
+tags: ["Dev","Flutter","Python","Desktop"]
 summary: 'More cool python Stuff'
 url: 'flet-apps'
 ---
@@ -11,6 +11,6 @@ url: 'flet-apps'
 
 > Build **multi-platform apps in Python** powered by Flutter
 
-Because some time ago i tried flutter:
+Because some time ago (pre vibe-coding age) I tried flutter.
 
 And it was not that easy.

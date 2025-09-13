@@ -181,6 +181,9 @@ And it worked:
 
 ![alt text](/blog_img/web/nextjs-admin/nextjs-admin.png)
 
+You will get an email from gh
+
+![alt text](/blog_img/web/nextjs-admin/gh-oauth.png)
 
 Some more vibe coding:
 

@@ -60,6 +60,30 @@ const app = initializeApp(firebaseConfig);
 ![alt text](/blog_img/web/Firebase/auth/fb-auth-app.png)
 
 
+### Firebase Setup
+
+![alt text](/blog_img/web/Firebase/auth/fb-auth1-methods.png)
+
+> You can even bring your own OpenIDConnect / SAML
+
+![alt text](/blog_img/web/Firebase/auth/fb-auth2-socialsignin.png)
+
+
+![alt text](/blog_img/web/Firebase/auth/fb-auth3-providersready.png)
+
+
+![alt text](/blog_img/web/Firebase/auth/fb-auth4-nextjs-socialsignin.png)
+
+![alt text](/blog_img/web/Firebase/auth/fb-auth5-accepting-app-mermissions.png)
+
+### Whats stored inside Firebase?
+
+## Conclusions
+
+Making Firebase auth work was literally 15 minutes.
+
+
+
 ---
 
 ## FAQ

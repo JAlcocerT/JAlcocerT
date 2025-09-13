@@ -981,9 +981,9 @@ Here's a breakdown of some of the most popular options:
     * It offers a good balance of features and performance.
     * Good for applications that need to have a native operating system look and feel.
 * **Flet:**
-    * As mentioned before, Flet is a framework that enables you to build cross platform applications, including desktop applications. It is based on flutter, and allows for very quick UI development.
+    * Flet is a framework that enables you to build cross platform applications, including desktop applications. It is based on flutter, and allows for very quick UI development.
 
-https://pypi.org/project/PyAutoGUI/
+* https://pypi.org/project/PyAutoGUI/
 
 **Key Considerations:**
 
@@ -1005,7 +1005,9 @@ As far as I know, these should work with any of the python web app frameworks.
 
 #### LogTo
 
-With LogTo Ive been very happy lately to get it going.
+Ive been very happy lately With LogTo. 
+
+Get it going and get auth working.
 
 Specially I managed to have an end to end user flow into my apps applied to Flask WebApps:
 
