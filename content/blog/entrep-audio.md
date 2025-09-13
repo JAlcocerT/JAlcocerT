@@ -214,5 +214,5 @@ git commit -m "Initial commit: Python Speech Rater project with OpenAI TTS/S2T"
 
 #sudo apt install gh
 gh auth login
-gh repo create  --private --source=. --remote=origin --push
+gh repo create reponame --private --source=. --remote=origin --push
 ```
