@@ -1,6 +1,6 @@
 ---
 title: "Firebase Auth"
-date: 2025-09-13T23:20:21+01:00
+date: 2025-09-13T10:20:21+01:00
 draft: false
 tags: ["Dev","SaaS Essentials","Social signin/up"]
 url: 'firebase-auth-101'

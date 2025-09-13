@@ -200,6 +200,9 @@ I got some troubles passing the save part.
 
 Probably due to wrong vibe coding from my side.
 
+<!-- https://youtu.be/leRwGjnuxfk -->
+{{< youtube "leRwGjnuxfk" >}}
+
 
 But I got few ideas.
 

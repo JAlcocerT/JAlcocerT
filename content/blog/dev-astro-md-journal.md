@@ -25,7 +25,7 @@ I have just been trying to do that on the most post with a cool astro theme:
 * https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/
 
 
-## Tech for Astro Editor via ToastUI
+## Tech for SSG Editor
 
 I decided to keep scope simpler and [start over](#how-to-create-just-journal-via-ssg).
 
@@ -41,8 +41,7 @@ And what this app will do, is to go and see that local path where the .md/.mdx a
 
 Just **local first** edits.
 
-
-By using the react md (instead of ToastUI) we get a simpler:
+Cursor decided to use the [react md](https://www.npmjs.com/package/react-markdown) (instead of ToastUI) we get a simpler: https://www.npmjs.com/package/react-markdown
 
 ![NextJS Reactmd editing astro sphere theme](/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png)
 
@@ -57,9 +56,10 @@ git clone
 ```
 
 
-Choose a cool astro theme text centered, like:
+Choose a cool astro theme text centered, like: https://www.astrothemes.dev/category/blog/
 
 * https://github.com/moeyua/astro-theme-typography
+
 * https://github.com/markhorn-dev/astro-sphere
 
 > MIT | Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog.
@@ -74,9 +74,25 @@ git clone https://github.com/markhorn-dev/astro-sphere
 
 > MIT | Astro Nano is a static, minimalist, lightweight, lightning fast portfolio and blog.
 
+* https://github.com/CaiJimmy/hugo-theme-stack
 
+> GPL3.0 | Card-style Hugo theme designed for bloggers
 
+```sh
+git clone https://github.com/CaiJimmy/hugo-theme-stack
+#hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.8" --port=1319
+```
 
+```sh
+npm install -g http-server
+http-server dist #http-server .vercel/output/static
+```
+
+**you might need clean up**
+
+```sh
+docker system prune -a --volumes
+```
 
 
 ---
