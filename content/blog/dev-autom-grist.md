@@ -3,9 +3,12 @@ title: "Open Spreadsheets"
 date: 2025-11-07T08:20:21+01:00
 draft: false
 tags: ["Grist","Web","Automation"]
-description: '.'
+description: 'From excel to grist.'
 url: 'automation-with-grist'
 ---
+
+
+**Intro**
 
 From excel to grist.
 
