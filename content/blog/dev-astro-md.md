@@ -47,7 +47,6 @@ Ive chosen: https://github.com/moeyua/astro-theme-typography
 
 Due to its text centered approach and ,posts only' philosophy.
 
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/astro-theme-typography" title="NEW - Astro Typography Theme" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Conteinerized and posts editable via UI - Source Code on Github" >}}
 {{< /cards >}}
@@ -57,6 +56,8 @@ git clone
 #npm install
 #npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
+
+As you can imagine, we have few options to edit .md: https://github.com/JAlcocerT/astro-theme-typography/blob/main/md-edition-choices.md
 
 ### Monaco Editor
 
@@ -115,7 +116,7 @@ Its dual-mode approach is highly effective for a wide range of users, and it int
 
 ### FastAPI vs NextJS as Astro Editor
 
-Time to choose whats the BE is going to be.
+Time to choose whats the BE is going to be: https://github.com/JAlcocerT/astro-theme-typography/blob/main/fastapi-vs-nextjs.md
 
 Perfect!
 
@@ -153,6 +154,39 @@ For your use case (Astro theme with Git-based content management), I'd lean towa
 But if you're more comfortable with Python or need maximum flexibility, **FastAPI is equally valid** and will deliver the same great user experience with Toast UI Editor.
 
 The document includes detailed code examples, cost analysis, and implementation timelines to help you make the best decision for your project!
+
+
+### Git and Builds
+
+Even cloudflare mention this long ago: https://blog.cloudflare.com/cloudflare-pages-headless-cms-partnerships/
+
+**Both FastAPI and Next.js approaches are Git provider agnostic** - they only require:
+- REST API access to Git repositories
+- OAuth authentication support
+- File creation/update capabilities
+- Webhook support for triggering rebuilds
+
+
+I was thinking github vs gitea (and prepared instructions on how to get the keys for each)
+
+I went for the github one:
+
+* https://github.com/settings/applications/new
+
+![alt text](/blog_img/web/nextjs-admin/nextjs-github-admin.png)
+
+And it worked:
+
+![alt text](/blog_img/web/nextjs-admin/nextjs-admin.png)
+
+
+Some more vibe coding:
+
+![alt text](/blog_img/web/nextjs-admin/nextjs-admin-2.png)
+
+
+![alt text](/blog_img/web/nextjs-admin/nextjs-admin-3-posts.png)
+
 
 ---
 

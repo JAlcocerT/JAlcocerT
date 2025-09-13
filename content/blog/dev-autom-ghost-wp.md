@@ -31,6 +31,12 @@ For today's post: with Ghost and Wordpress ready to go into your homelab/server,
 
 They provide a cool UI.
 
+And you can deploy them quickly with PaaS as well:
+
+https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/
+https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/
+https://jalcocert.github.io/JAlcocerT/selfhosted-paas/
+
 But come on, do you really want to spend time with drag and drop still?
 
 Even configuring your [**n8n** to write into wordpress](#n8n-x-wordpress) for you is possible.

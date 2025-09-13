@@ -2,7 +2,7 @@
 title: "Creating Animated Data Stories | Data in Motion"
 date: 2025-07-04T18:20:21+01:00
 draft: false
-description: 'From Embedded Analytics into SSGs Websites to Data Driven Animations.'
+description: 'From Embedded Analytics via SSGs Websites to Data Driven Animations.'
 tags: ["Animations","Python","Matplotlib Animations","Youtube Shorts","DataInMotion","Unfolding Data"]
 url: animations-as-a-code
 ---
