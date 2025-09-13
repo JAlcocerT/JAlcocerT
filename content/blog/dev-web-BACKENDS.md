@@ -231,7 +231,86 @@ This table explains the different rendering approaches (SSG, CSR, SSR, and SPA) 
 
 ### Other BackEnds
 
-1. Python, with any of [its webapp frameworks](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/).
+
+{{< details title="Popular Full-Stack... Tech Stacks 📌" closed="true" >}}
+
+Some of the most popular and in-demand full-stack tech stacks currently used in software development:
+
+* **MERN Stack:**
+    * MongoDB (Database)
+    * Express.js (Backend Framework)
+    * React.js (Frontend Library)
+    * Node.js (Backend Runtime)
+    * This JavaScript-based stack is highly popular for building dynamic, single-page applications.
+
+* **MEAN Stack:**
+    * MongoDB (Database)
+    * Express.js (Backend Framework)
+    * Angular (Frontend Framework)
+    * Node.js (Backend Runtime)
+    * Similar to MERN, but uses Angular instead of React.
+
+* **LAMP Stack:**
+    * Linux (Operating System)
+    * Apache (Web Server)
+    * MySQL (Database)
+    * PHP (Backend Language)
+    * A classic and reliable stack, widely used for building dynamic websites and web applications.
+
+* **Python/Django Stack:**
+    * Python (Backend Language)
+    * Django (Backend Framework)
+    * PostgreSQL or MySQL (Database)
+    * Ideal for **data-driven** applications, machine learning projects, and **complex web applications**.
+
+* **Ruby on Rails (RoR):**
+    * Ruby (Backend Language)
+    * Rails (Backend Framework)
+    * PostgreSQL or MySQL (Database)
+    * Known for its rapid development capabilities and convention-over-configuration approach.
+
+* **Java Spring Boot Stack:**
+    * Java (Backend Language)
+    * Spring Boot (Backend Framework)
+    * MySQL or PostgreSQL (Database)
+    * React or Angular (Frontend)
+    * A robust and scalable stack commonly used for enterprise-level applications.
+
+* **.NET Stack:**
+    * C# (Backend Language)
+    * ASP.NET Core (Backend Framework)
+    * SQL Server or PostgreSQL (Database)
+    * A Microsoft-developed stack, well-suited for building scalable and secure web applications.
+
+* **Serverless Stack:**
+    * AWS Lambda or Google Cloud Functions (Backend)
+    * API Gateway (API Management)
+    * DynamoDB or Firestore (Database)
+    * React or Vue.js (Frontend)
+    * Focuses on serverless computing, offering scalability and cost-efficiency.
+
+* **MEVN Stack:**
+    * MongoDB (Database)
+    * Express.js (backend framework)
+    * Vue.js (frontend framework)
+    * Node.js (server-side runtime)
+    
+* **Flutter/Firebase Stack:**
+    * Dart (Programming language)
+    * Flutter (UI toolkit)
+    * Firebase (Backend-as-a-service)
+    * Very popular for cross platform mobile app development.
+
+{{< /details >}}
+
+Key Considerations:
+
+* **Project Requirements:** The nature of your project will significantly influence your tech stack choice.
+* **Team Expertise:** Your team's familiarity with specific technologies is crucial.
+* **Scalability:** Consider the stack's ability to handle future growth.
+* **Community Support:** A strong community provides ample resources and assistance.
+
+1. Python, with any of [its well known frameworks](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/).
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-flask" title="Py Flask | Docker Config 🐋 ↗" >}}
@@ -244,11 +323,45 @@ This table explains the different rendering approaches (SSG, CSR, SSR, and SPA) 
 
 > Even these compiled languages: C/C++ or even Go could do BE!
 
-### Just try PocketBase
+#### NextJS
+
+Yyou can think of Next.js's backend capabilities (like **Route Handlers** and **Server Actions**) as being functionally similar to a framework like FastAPI, but with a different focus. Both allow you to build APIs, handle server-side logic, and interact with databases.
+
+The key difference is that **FastAPI is a dedicated backend framework**, while **Next.js is a full-stack framework** that includes powerful backend features as part of a cohesive ecosystem.
+
+> You can think that Next.js is the flask or django but in JS/TS
+
+**Next.js as a Backend**
+
+Next.js provides a "backend for frontend" pattern. This means its backend features are tightly integrated with its frontend rendering.
+
+* **Route Handlers**: These let you create API endpoints to handle HTTP requests (GET, POST, etc.) and return various data types like JSON. They're analogous to the route decorators (`@app.get("/items/")`) in FastAPI.
+* **Server Components/Actions**: These allow you to write server-side code directly within your React components. This is a powerful concept that reduces client-side JavaScript and simplifies data fetching and form submissions, a capability not found in a traditional API framework like FastAPI.
+
+**FastAPI as a Backend**
+
+FastAPI is a true, standalone backend framework for Python. Its primary purpose is to build APIs.
+
+* **Focus on APIs**: It's designed specifically for creating RESTful APIs and microservices. It's built on modern Python features and is known for its high performance.
+* **Automatic Docs**: It automatically generates interactive API documentation (using Swagger UI and ReDoc) from your code, which is a huge advantage for developers and API consumers.
+* **Type Safety**: It uses Python's type hints to provide automatic data validation, serialization, and deserialization, making your API robust and less prone to errors.
+
+| Feature | Next.js (JS/TS) | FastAPI (Python) |
+| :--- | :--- | :--- |
+| **Primary Goal** | A full-stack framework for building React applications with server-side capabilities. | A dedicated framework for building high-performance APIs and backends. |
+| **Integration** | Backend and frontend are in the **same project**, tightly coupled for a seamless developer experience. | Backend and frontend are typically **separate projects** that communicate via API calls. |
+| **Use Case** | Ideal for projects where the frontend and backend logic are closely related, such as a **web app with an integrated dashboard**. | Best for building **standalone APIs, microservices**, or as a backend for a decoupled frontend (e.g., a mobile app or a different framework). |
+| **Ecosystem** | Benefits from the vast JavaScript/TypeScript ecosystem and seamless integration with React and Vercel. | Benefits from the vast Python ecosystem, with powerful libraries for data science, machine learning, and automation. |
+
+In short, while both can create backends, Next.js provides backend features for a full-stack application, whereas FastAPI is an expert at just being a backend.
+
+#### Just try PocketBase
 
 If you are new to this backend stuff...
 
 You might want to consider to go with [Pocketbase as BaaS](https://jalcocert.github.io/JAlcocerT/pocketbase/)
+
+It should simplify your start:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}

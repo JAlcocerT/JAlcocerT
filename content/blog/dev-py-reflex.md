@@ -645,8 +645,8 @@ Its very simple, you reply to a survey with your email - you get early access. M
 
 [Mailerlite](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#mailerlite) its just a newsletter platform, with a cool API that can be used so that only subscribers (with validated emails) can interact in certain ways with your webapp.
 
-https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_CVCheck_pdfmineropenAI_v3.py?ref_type=heads
-https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#user-authentication
+* https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_CVCheck_pdfmineropenAI_v3.py?ref_type=heads
+* https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#user-authentication
 
 ### Reflex x LocalDB
 
@@ -958,74 +958,6 @@ def form() -> rx.Component:
 * **PySimpleGUI:** If you need to create a simple desktop utility or tool with a basic UI.
 * **NiceGUI:** If you want to create a simple web UI quickly and easily, with a focus on data visualization and interactivity.
 
-{{< details title="Popular Full-Stack... Tech Stacks 📌" closed="true" >}}
-
-Some of the most popular and in-demand full-stack tech stacks currently used in software development:
-
-* **MERN Stack:**
-    * MongoDB (Database)
-    * Express.js (Backend Framework)
-    * React.js (Frontend Library)
-    * Node.js (Backend Runtime)
-    * This JavaScript-based stack is highly popular for building dynamic, single-page applications.
-* **MEAN Stack:**
-    * MongoDB (Database)
-    * Express.js (Backend Framework)
-    * Angular (Frontend Framework)
-    * Node.js (Backend Runtime)
-    * Similar to MERN, but uses Angular instead of React.
-* **LAMP Stack:**
-    * Linux (Operating System)
-    * Apache (Web Server)
-    * MySQL (Database)
-    * PHP (Backend Language)
-    * A classic and reliable stack, widely used for building dynamic websites and web applications.
-* **Python/Django Stack:**
-    * Python (Backend Language)
-    * Django (Backend Framework)
-    * PostgreSQL or MySQL (Database)
-    * Ideal for **data-driven** applications, machine learning projects, and **complex web applications**.
-* **Ruby on Rails (RoR):**
-    * Ruby (Backend Language)
-    * Rails (Backend Framework)
-    * PostgreSQL or MySQL (Database)
-    * Known for its rapid development capabilities and convention-over-configuration approach.
-* **Java Spring Boot Stack:**
-    * Java (Backend Language)
-    * Spring Boot (Backend Framework)
-    * MySQL or PostgreSQL (Database)
-    * React or Angular (Frontend)
-    * A robust and scalable stack commonly used for enterprise-level applications.
-* **.NET Stack:**
-    * C# (Backend Language)
-    * ASP.NET Core (Backend Framework)
-    * SQL Server or PostgreSQL (Database)
-    * A Microsoft-developed stack, well-suited for building scalable and secure web applications.
-* **Serverless Stack:**
-    * AWS Lambda or Google Cloud Functions (Backend)
-    * API Gateway (API Management)
-    * DynamoDB or Firestore (Database)
-    * React or Vue.js (Frontend)
-    * Focuses on serverless computing, offering scalability and cost-efficiency.
-* **MEVN Stack:**
-    * MongoDB (Database)
-    * Express.js (backend framework)
-    * Vue.js (frontend framework)
-    * Node.js (server-side runtime)
-* **Flutter/Firebase Stack:**
-    * Dart (Programming language)
-    * Flutter (UI toolkit)
-    * Firebase (Backend-as-a-service)
-    * Very popular for cross platform mobile app development.
-
-{{< /details >}}
-
-Key Considerations:
-
-* **Project Requirements:** The nature of your project will significantly influence your tech stack choice.
-* **Team Expertise:** Your team's familiarity with specific technologies is crucial.
-* **Scalability:** Consider the stack's ability to handle future growth.
-* **Community Support:** A strong community provides ample resources and assistance.
 
 
 {{< details title="Django... and what about the UI? 📌" closed="true" >}}

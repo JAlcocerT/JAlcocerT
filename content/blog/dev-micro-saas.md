@@ -14,7 +14,7 @@ description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Fe
 The idea is to go fast from the presentation layer (SSG Theme), to the vibe coded features.
 
 * https://www.astrothemes.dev/
-* 
+* https://astro.build/themes/1/?search=&price%5B%5D=free
 
 
 On the recent AI audio post, I got sth more than a new workflow for yt.

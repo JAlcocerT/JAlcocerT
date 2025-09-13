@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - End Summer 2025"
-date: 2025-09-12T01:20:21+01:00
+date: 2025-09-09T01:20:21+01:00
 draft: false
 tags: ["HomeLab","Ventoy","SSGs","MKCert","MeTube/Navidrome","Zen Browser"]
 description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs'
@@ -20,22 +20,24 @@ So I have updated the `docker-compose.yml` and Dockerfiles at:
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/SSGs" title="SSGs | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
+> Using your HomeLab to host a cool website is as simple as understanding those!
+
 They are also placed into the *new Home-Lab repo* and the stack of this post will be placed also accordingly:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH" title="Docker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Collection of Docker Config Files - 0925 Edition 🐳 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Home-Lab Github Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Ordered config files | Youtube Video friendly 🐳 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Home-Lab Github Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Ordered config files | Youtube Video friendly and for New SelfHosters 🐳 ↗" >}}
 {{< /cards >}}
 
-+++ [Music server setup](#your-music-server)
++++ If you like [Music, this is how to have your DIY spotify - server setup via container](#your-music-server)
 
 **Intro**
 
 If you are new with SelfHosting and HomeLab in general, just remember to get started properly:
 
-1. Install some Linux (or try with a VM first / via [wsl on your Windows](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/#conclusions))
+1. [Install some Linux](#which-linux-to-get-started) (or try with a VM first / via [wsl on your Windows](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/#conclusions))
 
-2. Get docker installed [like a PRO](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/) with such [script](https://github.com/JAlcocerT/Linux/blob/main/Z_Linux_Installations_101/Selfhosting_101.sh)
+2. Get docker installed [like a **PRO**](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/) with such [script](https://github.com/JAlcocerT/Linux/blob/main/Z_Linux_Installations_101/Selfhosting_101.sh)
 
 ```sh
 curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Selfhosting_101.sh
@@ -45,7 +47,7 @@ nano Selfhosting_101.sh #MAKE SURE YOU UNDERSTAND WHAT YOU WILL BE RUNNING FIRST
 #sudo ./Selfhosting_101.sh 
 ```
 
-If you want, you can get Podman *instead*:
+If you want, you can get Podman *instead of Docker*:
 
 ```sh
 sudo apt install podman
@@ -69,10 +71,10 @@ podman --version
 
 ## SelfHosting Sept 25
 
-At some point, you will need these:
+At some point, you will need these docker commands:
 
 ```sh
-#df -h
+#df -h #check space
 docker stop $(docker ps -a -q) #stop all
 #docker volume rm $(docker volume ls -q | grep -v '^portainer_data$') #rm all volumes but portainer
 
@@ -87,13 +89,18 @@ docker stop $(docker ps -a -q) #stop all
 
 ### HTTPs Everywhere
 
+When you will be confortable with containers, you will want to bring https instead of having that insecure http.
+
 I got to know about https://github.com/FiloSottile/mkcert
 
 > A simple zero-config tool to make locally trusted development certificates with any names you'd like.
 
-You also have tailscale, PiHole and DuckDNS.
 
-But as of today id rather:
+To access securely your services outside home, You have low config VPNs like tailscale.
+
+For more advance users, and exploring DNS, see PiHole and DuckDNS.
+
+But as of today i'd rather:
 
 * Setup NGINX to get https via UI as per this guide
 * Or go the Traefik v3.3 approach (programatic https) as per this other guide
@@ -110,11 +117,8 @@ If you ever wandered what are the most popular repos: https://gitstar-ranking.co
 Remember about:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for anyone starting a Home-Lab" >}}
 {{< /cards >}}
-
-### How to Bundle your Apps
-
 
 
 ## Lately I...
@@ -168,6 +172,11 @@ Link analytics solutions, like Kutt:
 ## FAQ
 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/" title="How to Bundle your Apps | DevOps Post ↗"  >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/benchmarking-computers/" title="Bencharm your MiniPC | Post ↗"  >}}
+{{< /cards >}}
+
 
 ### Your Music Server
 
@@ -181,12 +190,7 @@ For android, you have as client: https://gitlab.com/ultrasonic/ultrasonic
 
 > Free and open-source music streaming Android client for Subsonic API compatible servers
 
-With Supported (tested) Subsonic API implementations
-
-Subsonic
-Airsonic-Advanced
-Supysonic
-Ampache
+With Supported (tested) Subsonic API implementations: Subsonic, Airsonic-Advanced, Supysonic, Ampache
 
 You also have substreamer app on ios or android (as a client), they also have: https://hub.docker.com/r/ghenry22/substreamer
 
@@ -247,6 +251,10 @@ create partition primary
 ```
 
 ### Which Linux to get started?
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/os-for-nas/" title="OS For a NAS | Post ↗"  >}}
+{{< /cards >}}
 
 
 1. [Lubuntu](https://cdimage.ubuntu.com/lubuntu/releases/noble/release/) - Because it requires just ~700mb of RAM

@@ -8,6 +8,11 @@ tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Uptime Ku
 ---
 
 
+**Tl;DR**
+
+YOu might come to this post bc of selfhosting and containers.
+
+And stay when you realize how much you can do with proper devops setup in your homelab.
 
 **Intro**
 

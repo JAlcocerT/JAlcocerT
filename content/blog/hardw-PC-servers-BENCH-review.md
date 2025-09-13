@@ -2,14 +2,22 @@
 title: "[Comparison] Performance of different Computers"
 date: 2025-03-03T10:20:21+01:00
 draft: false
-tags: ["HomeLab","Benchmark"]
+tags: ["HomeLab","Benchmark","CPU","Ram"]
 description: 'Benchmarks for CPU, Memory, Disks, Internet speed... Whats enough for a HomeLab?'
 url: 'benchmarking-computers'
 ---
+
 <!-- 
 GParted
 [Sysbench](https://fossengineer.com/testing-performance-orange-pi5-versus-raspberry-pi4/#how-to-run-the-synthetic-benchmarks)
 [CPU Stress](https://fossengineer.com/testing-performance-orange-pi5-versus-raspberry-pi4/#how-to-run-the-synthetic-benchmarks) -->
+
+**Intro**
+
+If you just got a miniPC.
+
+This post is for you.
+
 
 ## Benchmarks
 
