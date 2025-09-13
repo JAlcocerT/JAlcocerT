@@ -3,11 +3,11 @@ title: "Multilanguage blogs with a SSG Astro Editor"
 date: 2025-09-13T15:20:21+01:00
 draft: false
 tags: ["Astro","Just-SSG"]
-description: 'Understanding i18n websites'
+description: 'Understanding i18n websites with Astro Blog Themes.'
 url: 'astro-i18'
 ---
 
-**TL;DR** Finally getting to try i18n languages with SSGs
+**TL;DR** Finally getting to try **i18n languages with Astro SSGs**
 
 +++ Plus adding interesting shortcodes / components : https://github.com/JAlcocerT/just-ssg
 
@@ -143,6 +143,15 @@ I would say this is the Fuwari in Hugo :)
 > MIT |  A quickstart template to create a Hugo blog using hugo-theme-stack 
 
 ### Other Blog Themes
+
+* https://github.com/cworld1/astro-theme-pure
+
+> Apache v2 |  ⭐ A simple, fast and powerful blog & document theme built by Astro 
+
+* https://github.com/artemkutsan/astro-citrus
+
+> MIT
+
 
 
 

@@ -2,8 +2,8 @@
 title: "Which DB is for me?"
 date: 2025-08-11
 draft: false
-tags: ["DataBases","D&A","DBCode","SelfHosting/HomeLab","DBeaver"]
-description: 'Pros and Cons of popular DBs: SQlite, PostgreSQL, MariaDB and their containers'
+tags: ["DataBases","D&A","DBCode and SQLTools","SelfHosting/HomeLab","DBeaver"]
+description: 'Pros & Cons of popular DBs: SQlite, PostgreSQL, MariaDB and their containers'
 url: 'databases-101'
 ---
 
@@ -96,6 +96,15 @@ sudo apt install sqlitebrowser
 ## PostgreSQL
 
 In terms of write operations, **PostgreSQL is generally better than SQLite**, especially in scenarios with multiple users or **concurrent writes**.
+
+{{< youtube "3JW732GrMdg" >}}
+
+
+<!-- 
+https://www.youtube.com/watch?v=3JW732GrMdg 
+-->
+
+
 
 But first...**Why Move to Postgres** if you have localstorage?
 
@@ -390,6 +399,7 @@ ext install DBCode.dbcode
 
 ![alt text](/blog_img/DA/dbcode.png)
 
+We also have SQLTools for vs code: https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools
 
 {{< details title="Useful Tools to work with DBs 📌" closed="true" >}}
 

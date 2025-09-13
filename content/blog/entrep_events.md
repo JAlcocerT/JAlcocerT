@@ -64,6 +64,4 @@ https://www.youtube.com/watch?v=t8p222fxVL0
     * https://astro.build/themes/details/astrobrew/
 
     
->  Astrobrew is a free and open-source elegant landing page for Micro SaaS products built with Astro & Skeleton CSS 
-
-
+>  Astrobrew is a free and open-source elegant landing page for Micro SaaS products built with Astro & Skeleton CSS
