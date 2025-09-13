@@ -1,11 +1,15 @@
 ---
-title: "Firebase Auth"
+title: "Firebase Auth. Social Login and email verification."
 date: 2025-09-13T10:20:21+01:00
 draft: false
-tags: ["Journal","SaaS Essentials","Social signin/up","Gmail Login"]
+tags: ["Journal","SaaS MAU","Social signin/up","Gmail","JustJournalviaSSG"]
 url: 'firebase-auth-101'
 description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator'
 ---
+
+**Tl;DR**
+
+Bringing firebase auth to nextjs webapps [seems to be simple](#conclusions).
 
 
 **Intro**
@@ -64,7 +68,7 @@ const app = initializeApp(firebaseConfig);
 
 ![alt text](/blog_img/web/Firebase/auth/fb-auth1-methods.png)
 
-> You can even bring your own OpenIDConnect / SAML
+> You can even bring your own [OpenIDConnect](https://jalcocert.github.io/JAlcocerT/encryption-101/#oidc-vs-oauth) / SAML
 
 ![alt text](/blog_img/web/Firebase/auth/fb-auth2-socialsignin.png)
 
@@ -78,9 +82,71 @@ const app = initializeApp(firebaseConfig);
 
 ### Whats stored inside Firebase?
 
+You can bring info to your app about whos logged in:
+
+![alt text](/blog_img/web/Firebase/auth/pulled-email-from-fb.png)
+
+And see in the firebase web UI the people registered:
+
+![alt text](/blog_img/web/Firebase/auth/firebase-users-authenticated.png)
+
+You could make the **firebase users data pull programatically** as well: https://github.com/JAlcocerT/Just-Journal-via-SSG/blob/main/z-firebase-pull-info.md
+
+> You need a private key generate  as per the md instructions and place it into the `.env`
+
+![alt text](/blog_img/web/Firebase/auth/programatic-access1.png)
+
+![alt text](/blog_img/web/Firebase/auth/programatic-access2.png)
+
+Youll download a json like ~ `project-firebase-adminsdk-abbcdef-123456.json`
+
+
+```sh
+node scripts/list-firebase-users.js
+```
+
+{{< callout type="info" >}}
+Remember you are using a [free tier](#free-tier-limitations) with limitations
+{{< /callout >}}
+
 ## Conclusions
 
-Making Firebase auth work was literally 15 minutes.
+Making Firebase auth work was literally ~45 minutes.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Just-Journal-via-SSG" title="Just Journal via SSG - Added Firebase Auth capabilities" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for a NextJS app with Reactmd UI editor for posts. Google social login." >}}
+{{< /cards >}}
+
+> See [how firebase auth technology compares](https://github.com/JAlcocerT/Just-Journal-via-SSG/blob/main/z-pros-cons.md) with the recently seen httpcookie and localstorage.
+
+
+### Free Tier Limitations
+
+The primary limitation of Firebase Authentication's free tier is the **50,000 monthly active users (MAUs)** cap.
+
+> As of today, same amount as Logto as per https://logto.io/pricing
+
+You can also query user information programmatically using the **Firebase Admin SDK** on a trusted server environment.
+
+The free tier for Firebase Authentication, known as the **Spark plan**, is very generous and suitable for most startups, hobby projects, and MVPs.
+
+  * **Monthly Active Users (MAUs)**: The most significant limitation is the **50,000 MAU limit**. A "monthly active user" is a unique user who signs in or signs up during a given month. If a user signs in multiple times in a month, they still only count as one MAU.
+  * **Phone Authentication**: Phone number authentication is **not free**. Each SMS sent for verification is billed separately on a pay-as-you-go basis, even on the Spark plan. The cost per SMS varies by country.
+  * **Email Sending Quotas**: There are daily limits on the number of emails you can send for password resets (150/day), email verification (1,000/day), and email link sign-in (5/day).
+  * **Account Creation Rate Limits**: To prevent abuse, there are rate limits on how many new accounts can be created from a single IP address (e.g., 100 accounts per hour).
+  * **No Service Level Agreement (SLA)**: The free tier does not come with a service level agreement, meaning there are no uptime guarantees.
+
+If you exceed any of these limits, you'll need to upgrade to the **Blaze plan**, which is a pay-as-you-go model.
+
+
+
+### Programmatic Access to User Information
+
+Yes, you can absolutely query and manage user information programmatically, but you must do so from a **trusted server environment** using the **Firebase Admin SDK**. This is a critical security distinction:
+
+  * **Client-side (Mobile/Web):** Your client-side code (e.g., a web browser or mobile app) can only access the information of the **currently signed-in user**. This is a security feature to prevent one user from seeing another user's private data. You would use the client-side SDK's `user` object to get properties like `user.uid`, `user.email`, and `user.displayName`.
+  * **Server-side (Admin SDK):** To access a list of all users or query specific users by UID or email, you must use the Admin SDK. The Admin SDK gives you powerful, unrestricted access to your entire user base. It's meant for back-end operations like creating new users, retrieving user data, or disabling accounts. This is a common task for serverless functions (like **Cloud Functions for Firebase**) or a custom back-end server.
+
 
 
 

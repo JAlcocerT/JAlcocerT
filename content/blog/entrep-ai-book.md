@@ -9,8 +9,11 @@ url: 'ai-driven-ebooks'
 
 **TL;DR** 
 
-I love [R language](https://jalcocert.github.io/JAlcocerT/r-language-101/) and its [knitt package](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/)
+It all started with [Enchiridion](https://github.com/bdsqqq/psykip)
 
+Now here I am, writing 100+ posts of my journey this year.
+
+You know that I love [R language](https://jalcocert.github.io/JAlcocerT/r-language-101/) and its [knitt package](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/WebifAI/blob/main/Z_Utils/logto_utils.py" title="WebifAI Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App with Stripe, Umami, FormBricks and Logto as Utils" >}}
@@ -18,6 +21,8 @@ I love [R language](https://jalcocert.github.io/JAlcocerT/r-language-101/) and i
 {{< /cards >}}
 
 Would it be possible to [make ebooks as a code](#creating-an-ebook)?
+
+It seems it is, as Pandoc is the one doing the job behind R (and it can also do so with ipynb and Py)
 
 **Intro**
 

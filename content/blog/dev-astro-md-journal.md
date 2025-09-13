@@ -2,8 +2,8 @@
 title: "Journal via Astro and markdown Editors"
 date: 2025-09-13T06:20:21+01:00
 draft: false
-tags: ["TOAST UI vs React md","WYSIWYG","NextJS"]
-description: 'Do that SSG tweak once. Edit via UI with the NextJS powered JustJournalviaSSG.'
+tags: ["TOAST UI vs React md","WYSIWYG","Local Edits","NextJS","JustJournalviaSSG"]
+description: 'Do that SSG tweak once. Edit via UI, NextJS empowers your to journal via SSGs.'
 url: 'astro-journal-theme'
 ---
 
@@ -38,7 +38,7 @@ I decided to keep scope simpler and [start over](#how-to-create-just-journal-via
 I can vibe code again a NextJS app, that will be in the root of a repo:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Just-Journal-via-SSG" title="Scrapping" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/Just-Journal-via-SSG" title="Just Journal via SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for a NextJS app with Reactmd UI editor for posts" >}}
 {{< /cards >}}
 
 Then, as part of the environment variables, we will have the local path to one of our favourite hugo/astro themes.

@@ -2,7 +2,7 @@
 title: "A Blog you can actually Edit"
 date: 2025-09-13T01:20:21+01:00
 draft: false
-tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP","Astro Theme Typography"]
+tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP","Astro Theme Typography","Github OAUTH"]
 description: 'Tinkering with ToastUI and Github Auth via NextJS to make a custom astro posts editor.'
 url: 'nextjs-toast-ui-editor'
 ---
