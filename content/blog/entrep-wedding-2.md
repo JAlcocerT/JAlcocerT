@@ -1,6 +1,6 @@
 ---
 title: "BiP | Wedding Edition"
-date: 2025-09-13T01:20:21+01:00
+date: 2025-09-14T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","QR Code Generator","Web","Cloudflare DNS","Porkbun API","SlubneChwile"]
 description: 'Wedding stuff with PB BaaS. Everything that can be static, is static 🤯'

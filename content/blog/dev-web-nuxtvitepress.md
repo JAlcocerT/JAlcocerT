@@ -541,6 +541,22 @@ curl "https://www.google.com/ping?sitemap=https://www.example.com/sitemap.xml"
 curl "https://www.bing.com/ping?sitemap=https://www.example.com/sitemap.xml"
 ```  -->
 
+### Strapi CMS x Astro
+
+Astro JS x Strapi
+
+https://www.youtube.com/watch?v=Ud9obEHadLI
+
+* https://elest.io/open-source/strapi
+
+* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
+
+* https://hub.docker.com/r/strapi/strapi/tags
+
+* https://docs.strapi.io/cms/installation/docker
+* https://docs.strapi.io/cms/quick-start
+* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
+
 
 <!-- ### How to use turbostrapi
 

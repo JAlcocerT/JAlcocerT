@@ -1,10 +1,10 @@
 ---
-title: "A Landing you can actually Edit"
+title: "A Blog you can actually Edit"
 date: 2025-09-12T20:20:21+01:00
 draft: false
-tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP","PB CMS","Strapi x Astro"]
-description: 'Landing page for Mental Health. Adding posts and md via pocketbase.'
-url: 'mental-health-landing'
+tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP"]
+description: 'Tinkering with ToastUI and Github Auth via NextJS to make a custom astro posts editor.'
+url: 'nextjs-toast-ui-editor'
 ---
 
 
@@ -52,7 +52,7 @@ Due to its text centered approach and ,posts only' philosophy.
 {{< /cards >}}
 
 ```sh
-git clone 
+git clone https://github.com/JAlcocerT/astro-theme-typography
 #npm install
 #npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
@@ -184,7 +184,6 @@ Some more vibe coding:
 
 ![alt text](/blog_img/web/nextjs-admin/nextjs-admin-2.png)
 
-
 ![alt text](/blog_img/web/nextjs-admin/nextjs-admin-3-posts.png)
 
 
@@ -192,9 +191,19 @@ Some more vibe coding:
 
 ## Conclusions
 
+Despite getting all posts loaded and the github signin ready with NextJS
+
+I got some troubles passing the save part.
+
+![alt text](/blog_img/web/nextjs-admin/nextjs-admin-4-notsaving.png)
 
 
+Probably due to wrong vibe coding from my side.
 
+
+But I got few ideas.
+
+And the ToasT Ui md editor is just great!!
 
 ---
 
@@ -208,18 +217,3 @@ In business, particularly in marketing and sales, an ICP is a description of the
 
 * **What it includes:** An ICP typically outlines characteristics like company size, industry, location, technological stack, and the specific challenges they face. It's often used in conjunction with a **buyer persona**, which focuses on the individual within the company who makes purchasing decisions.
 
-### Strapi CMS x Astro
-
-Astro JS x Strapi
-
-https://www.youtube.com/watch?v=Ud9obEHadLI
-
-* https://elest.io/open-source/strapi
-
-* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
-
-* https://hub.docker.com/r/strapi/strapi/tags
-
-* https://docs.strapi.io/cms/installation/docker
-* https://docs.strapi.io/cms/quick-start
-* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
