@@ -1,0 +1,11 @@
+---
+title: "SaaS around MailerLite API"
+date: 2025-09-16T01:20:21+01:00
+draft: false
+tags: ["Micro SaaS Essentials","MailerLite goodies"]
+description: 'BiP user flows around newsletter layers'
+url: 'mailerlite-for-saas'
+---
+
+
+https://developers.mailerlite.com/docs/#mailerlite-api

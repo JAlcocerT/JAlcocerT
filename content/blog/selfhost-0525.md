@@ -121,7 +121,6 @@ docker stats $(docker-compose ps -q)
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Termix" title="Termix with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-
 Termix reminded me [about Tabby](https://fossengineer.com/selfhosting-Tabby-coding-assistant/).
 
 * https://github.com/TabbyML/tabby
@@ -129,7 +128,6 @@ Termix reminded me [about Tabby](https://fossengineer.com/selfhosting-Tabby-codi
 * [Tabby](https://github.com/Eugeny/tabby/releases/tag/v1.0.223)
 
 > [Tabby](https://tabby.sh/) is *a terminal for the modern age* 
-
 
 You can use Termix to manage devices on the same local network:
 

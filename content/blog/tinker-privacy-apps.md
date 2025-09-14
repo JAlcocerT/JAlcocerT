@@ -2,21 +2,20 @@
 title: "A Stronger HomeLab"
 date: 2025-08-03
 draft: false
-tags: ["HomeLab","Security","BackUps","Proton VPN","Bitwarden","Signal"]
-description: 'Apps to make your Linux and SelfHosting more private and secure'
+tags: ["Security","BackUps","Proton VPN","Bitwarden","2FAS vs ProtonAuthenticator","Signal"]
+description: 'Make your Linux and SelfHosting more private & secure. Using stacer for apt clean ups.'
 url: 'homelab-security'
 ---
 
 
-**Intro**
+**TL;DR**
 
+Because its not about if, but when a *single point of failure* will be gone.
 
 
 ## BackUps
 
 Lately I was reading this [reddit backup post](https://www.reddit.com/r/DataHoarder/comments/1gsutp5/list_of_free_open_source_and_crossplatform_backup/?chainedPosts=t3_yqonpo)
-
-Because its not about if, but when a *single point of failure* will be gone.
 
 1. NextCloud
 2. ProtonDrive
@@ -114,8 +113,9 @@ Which you can setup via wg easy as [seen with the x300](https://jalcocert.github
 
 1. With NGINX Proxy Manager via UI
 
-2. With Traefik Programatically! 
+2. With Traefik (v3.3 is great) Programatically!
 
+See [https for your apps](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/)
 
 ### Passwords
 
@@ -124,7 +124,7 @@ I simply love **Bitwarden** (which can also be selfhosted).
 * It has a nice Android/Linux Desktop App
 * You can add [2fa](#2fa) to it as well: https://vault.bitwarden.com/#/login
 
-You also have:
+You also have other interesting pwd managers:
 
 * ProtonPass - https://github.com/ProtonPass
     * https://proton.me/blog/pass-roadmap-summer-2025
@@ -136,7 +136,7 @@ You also have:
 
 Initially, I was using authy as my 2fa app.
 
-I also tried Google auth and microsoft version of it.
+I also tried Google Auth and microsoft version of it.
 
 They all work fine.
 
@@ -154,7 +154,7 @@ sudo apt-get install -f
 #rm ProtonAuthenticator_1.0.0_amd64.deb
 ```
 
-* It works cross-device (for real, including linux desktop + android).
+* It works **cross-device** (for real, including linux desktop + android).
 * Its OSS and allows direct import/export.
 * Allows (optional) to automatic sync via a proton account.
 
@@ -190,8 +190,11 @@ If you like Matrix or Signal, you might find interesting:
 
 ## Private AI
 
-AI Apps with Containers and Cloudflare Tunnels
+AI Apps with Containers and Cloudflare Tunnels.
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen" title="AI Gen | Docker Configs 🐋 ↗"  >}}
+{{< /cards >}}
 
 ### LLMs
 
@@ -216,8 +219,10 @@ Alternatively, you can try these LLMs:
 
 Its a long way to the top if you wanna rocknroll.
 
-Same for homelab security.
+Same applies for a homelab security.
 
 Dont forget to clean from time to time the apt packages that you are not using.
 
 To do that via UI, you can try **Stacer**
+
+![ubuntu apt package manager](/blog_img/mini_pc/stacer-apt-checks.png)

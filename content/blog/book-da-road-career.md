@@ -617,8 +617,8 @@ Additionally, Docker allows developers to share applications with others, allowi
 
 * For a [Quick Guide on Docker you can check this 101 Guide](/docker-first-steps-guide-for-data-analytics/  "Docker 101 Guide {rel='nofollow'}")
     * I also have one Github Repository with [example Docker configuration files](https://github.com/JAlcocerT/Docker "Github Docker Repository {rel='nofollow'}")
+
 * If you want to go deeper into CI/CD - you can check [how to setup Github Actions](/docker-github-actions-cicd/) and [how it compares to build Docker images locally](/building-docker-container-images/). Also there are [open source CI/CD Tools](/building-docker-container-images/#leveraging-local-docker-image-building-local-free-open-source-cicd-tools) to help us make our dev's workflow more efficient.
-* Youtube is a great source for great tutorials too: Christian Lempa, Tech with Nana, NetworkChuck, Pelado Nerd (*in Spanish*), DB Tech... I will never be able to thank them enough for all they have taught me already (*and to other great channels that would make the list too long*). **Again, for free**.
 
 {{< /dropdown >}}
 

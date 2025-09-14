@@ -56,6 +56,8 @@ Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-
 
 Its not the first time we talk about VPNs around here.
 
+If you will be building a NAS, you might need one of these.
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard (wg-easy) Server" image="/blog_img/hardware/wifi_eth.jpg" subtitle="VPS and Wiregaurd VPN" >}}
     {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router Review" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000" >}}
@@ -74,16 +76,20 @@ ip addr show | grep inet6 | grep -v ::1
 
 > BSD-3
 
-based on wireguard
+An based on wireguard: <https://netbird.io/>
 
-<https://netbird.io/>
+<!-- <https://www.youtube.com/watch?v=_-vfSgqmOUI> -->
 
-<https://www.youtube.com/watch?v=_-vfSgqmOUI>
+{{< youtube "_-vfSgqmOUI" >}}
+
 
 
 Install a self-hosted VPN platform // Netbird with zitadel.
 
-https://www.youtube.com/watch?v=_Fgwap-sl3A
+<!-- https://www.youtube.com/watch?v=_Fgwap-sl3A -->
+
+{{< youtube "_Fgwap-sl3A" >}}
+
 
 * Tailscale - wireguard based
   * Headscale - for selfhosted server
@@ -109,6 +115,8 @@ tailscale status
 
 ### Benchmarks
 
+And also, you will want to see how much performance you NAS has.
+
 {{< details title="How to Setup Quick Benchmarks 📌" closed="true" >}}
 
 ```sh
@@ -119,7 +127,7 @@ chmod +x Benchmark101.sh & ./Benchmark101.sh
 {{< /details >}}
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Config File 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Homarr | Docker Config File 🐳 ↗"  >}}
 {{< /cards >}}
 
 ```sh
@@ -139,7 +147,7 @@ sysbench memory run
 
 > The **[x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/)** got **~8164 MiB/sec** and the Pi 4 4GB ~175MiB/sec (x86)
 
-Your server *most likely* will be in between.
+Your server will *most likely* be in between.
 
 {{< callout type="info" >}}
 See my [general web docs](https://jalcocert.github.io/JAlcocerT/create-your-website/)
@@ -464,3 +472,5 @@ dpkg --print-architecture #ARM will tend to be more power efficient than x86
   * [Filecoin](https://filecoin.io/) - an open-source cloud storage marketplace, protocol, and incentive layer.
 
 > Great intro video from [Naomi on Decentralized Storage](https://www.youtube.com/watch?v=rOtMGJVp2MU)
+
+> > Which resonates with this [IPFS / web3 post](https://jalcocert.github.io/JAlcocerT/guide-web3/)

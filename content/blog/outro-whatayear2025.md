@@ -266,13 +266,15 @@ If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlc
 
 9. CLI Agents ftw. Codex CLI was huge. But I also tried claude and geminiCLI. Together with BAML bringing type safe LLM calls.
 
+10. Thanks to authentication I got to know the difference between: who someone is and what someone can do 🤯
 
+> Notice also (as per ENS and DNS), that what something is has nothing to do with where something is.
 
 ## Entrepreneuring
 
-I feel like in the backstraight of the circuit after having couple of laps to recognize my breaking/aceleration points.
+I feel (literally) like in the backstraight of a circuit after having couple of laps to recognize my breaking/aceleration points.
 
-And i
+And...
 
 {{< details title="I was wondering on corporation vs smaller teams and their efficiency for some time.... 📌" closed="true" >}}
 

@@ -296,7 +296,7 @@ docker run --rm -dp 3030:3030 cveinnt/letsMarkdown
 
 ### Icons and FavIcons
 
-For emojis:
+For emojis and markdown icons:
 
 * https://it-tools.tech/emoji-picker
 * https://gist.github.com/rxaviers/7360908

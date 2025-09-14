@@ -1,9 +1,9 @@
 ---
-title: "Software for Servers..."
+title: "[PaaS Recap] Software for Servers..."
 date: 2025-05-31T01:20:21+01:00
 draft: false
-tags: ["PaaS","HomeLab","Entrepreneuring"]
-description: 'Selfhosted Apps that simplify my workflow as of May 2025: LocalStack, DokPloy, Runtipi...'
+tags: ["HomeLab"]
+description: 'Selfhosted Apps that simplify my workflow as of 05-2025: LocalStack, DokPloy, Runtipi...'
 url: 'selfhosted-server-paas'
 ---
 
@@ -11,10 +11,12 @@ Few months ago, I wrote about [different **PaaS** Tools](https://jalcocert.githu
 
 Among which, [Dokploy](#dokploy) resonated a lot with me.
 
+I want to make a recap of PaaS Tools available.
+
 ## PaaS Tools
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/PaaS" title="Selfhostable PaaS | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/PaaS" title="Selfhostable PaaS | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
 ### LocalStack
@@ -43,13 +45,12 @@ It provides an **emulated environment of AWS services**, solving issues related 
 
 ### Dokploy
 
-I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)
+I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
 
 
-https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy
+
 
 {{< details title="More about Dokploy 📌" closed="true" >}}
-
 
 
 {{< /details >}}

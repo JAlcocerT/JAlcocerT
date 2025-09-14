@@ -223,6 +223,8 @@ SELECT * from stock_data_KO;
 
 ![SQliteBrowser sample table created from yfinance data](/blog_img/entrepre/public-build/pystonks/sqlitebrowser-pystonks-yfinance.png)
 
+*Storing data to Sqlite...DONE ✅*
+
 #### Streamlit
 
 Because im comfortable with [streamlit for quick POCs](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) and test the graphs layout / data structure.
@@ -289,12 +291,18 @@ And as I was so close...I could not resist to combine the good old **streamlit a
 export POCKETBASE_URL="https://pocketbase.jalcocertech.com"
 
 # Run the app
-uv run streamlit run app-st.py
+uv run streamlit run app-st.py #the app-st.py is the streamlit version
 ```
+
+Wait...
+
+Is this streamlit authentication working with the users of the pocketbase collection?
 
 ![st authentication script connected to pocketbase users collection](/blog_img/entrepre/public-build/pystonks/st-auth-pocketbase.png)
 
-With a minot tweak, it can also register new mail/passwords to your PB users collection:
+With a *minor* tweak...
+
+It can also register new mail/passwords to your PB users collection: *streamlit login/signup as per pocketbase collection DONE ✅*
 
 ```sh
 export STREAMLIT_REGISTRATION_ENABLED="true"  # Enable signup

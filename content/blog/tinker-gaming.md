@@ -20,6 +20,18 @@ Also to **Battle City**, the NES game.
 
 ## FAQ
 
+You can buy keys for games legally.
+
+As per some reddit users, via https://www.loaded.com/ (ex-cdkeys) or https://www.scdkey.com/
+
+Actually, you can even play on the cloud nowadays, with services like: https://play.geforcenow.com/mall/#/loginwall
+
+**How to install legally windows for gaming**
+
+You might need windows for some of your games.
+
+You can download Windows legally from microsoft, then activate it with a legal key.
+
 ### Interesting Software for Gaming
 
 * https://github.com/flightlessmango/MangoHud

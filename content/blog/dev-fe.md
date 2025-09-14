@@ -2,7 +2,7 @@
 title: "FrontEnd 101. SPAs and ways to do Auth"
 date: 2025-08-23
 draft: false
-tags: ["Dev","OAuth/JWT/Bearer","Logto","PB SDK","SPAs Serverless-Invoices"]
+tags: ["OAuth/JWT/Bearer","Who vs What can do","PB SDK","SPAs Serverless-Invoices"]
 description: 'A Better front-end and authentication. With SelfHosted OAUTH recap and Forward Auth.'
 url: 'front-end-and-auth'
 ---
@@ -203,8 +203,8 @@ That's a crucial question in web security, and the distinction is often a source
 
 In simple terms:
 
-* **Authentication** is about **who you are**.
-* **Authorization** is about **what you can do**.
+* **Authentication** is about **WHO you are**.
+* **Authorization** is about **what you can DO**.
 
 > Getting philosophical here 
 

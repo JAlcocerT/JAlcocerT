@@ -12,7 +12,9 @@ url: 'guide-web3'
 
 I was wondering if I could use some knowledge that I got while creating static sites with HUGO and its actually pretty simple.
 
-Along the way, got to understand the difference between where something is and **what something is** thanks to the [IPFS concept](#about-ipfs)
+Along the way, got to understand the difference between:
+
+*where something is and **what something is** thanks to the [IPFS concept](#about-ipfs)*
 
 **The Web3 Revolution!** > wait, what?
 
