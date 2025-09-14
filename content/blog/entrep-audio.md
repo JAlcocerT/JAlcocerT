@@ -1,8 +1,8 @@
 ---
-title: "[Recap] on Audio. Creating Speech rAIter micro SaaS"
+title: "[Recap] on Audio. Ideating Speech rAIter micro SaaS"
 date: 2025-09-12
 draft: false
-tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcript","BiP", "Youtube","Monaco Editor"]
+tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcript","BiP", "Youtube Workflow","Monaco Editor","ChartDB"]
 description: "Audio with AI. An Astro Landing Page + signup/in via FastAPI x sqlite x Admin panel"
 url: 'audio-recap'
 ---
@@ -12,16 +12,17 @@ url: 'audio-recap'
 
 [Doing TTS/S2T with streamlit](https://jalcocert.github.io/JAlcocerT/audio-to-text-tools/#the-speech-rater) and the [st speechraiter](https://github.com/JAlcocerT/Streamlit-Speech) was fun.
 
-Now its time to build sth similar **with Flask**.
+Now its time to build sth similar **with FastAPI** or Flask.
 
 You can get started with this kind of project [like so](#how-to-get-started-and-build-a-speech-rater-with-ai).
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="From Streamlit-Speech | Repo ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="To a general SpeechRater with Python | Repo ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="To a general (NEW) SpeechRater with Python | Repo ↗" >}}
 {{< /cards >}}
 
 
+> Plot twist: I ended app with [achieving a different scope](#conclusions) with this one :)
 
 **Intro**
 
@@ -38,17 +39,17 @@ Or practicing that very important presentation with a *SpeechPractice* service.
 
 ## The Speech Rater Stack
 
-Previously I made a PoC streamlit version:
+Previously I made a speech rater PoC streamlit version:
 
 {{< cards >}}
-  {{< card link="" title="OpenAI TTS and Transcription Project 🐍" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="NEW Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="NEW OpenAI TTS and Transcription Project 🐍" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Streamlit Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
 {{< /cards >}}
 
 
-{{< details title="Choosing from Streamlit to Flask vs FastAPI 📌" closed="true" >}}
+{{< details title="Choosing from Streamlit to (Flask vs FastAPI) 📌" closed="true" >}}
 
-I just went with FastAPI as per gemini and this doc.
+I just went with FastAPI as per gemini and [this md doc](https://github.com/JAlcocerT/py-speech-rater/blob/main/flask-vs-fastapi-for-audio.md).
 
 {{< /details >}}
 
@@ -74,8 +75,7 @@ The audio record does not work oh phones. *Probably due to permissions*.
 
 ### Simple md Editor
 
-Later, on I added simple markdown edition capabilities (there were few candidates)
-
+Later, on I added simple **markdown edition** capabilities (there were few candidates)
 
 1. Monaco Editor (VS Code Editor) - RECOMMENDED (and this is the one **cursor went for**, enough for a quick edit) ⭐
 Pros: Full VS Code experience, syntax highlighting, IntelliSense, built-in markdown preview
@@ -148,6 +148,36 @@ sqlite3 ./users.db "SELECT COUNT(*) FROM users;"
 #SELECT id, email, first_name, last_name, created_at FROM users;
 ```
 
+Im still impressed on sqlite greatness!
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/databases-101/#database-management--gui-tools" title="There are many Db Tools | Post ↗" >}}
+{{< /cards >}}
+
+And I got to try also [ChartDB](https://github.com/chartdb/chartdb) and [DBGate](https://github.com/dbgate/dbgate).
+
+```sh
+docker run -e OPENAI_API_KEY=<YOUR_OPEN_AI_KEY> -p 8080:80 ghcr.io/chartdb/chartdb:latest
+# sqlite3 <database_file_path> #sqlite3 ./users.db #sqlite3 ./stock_cache.db
+# .dump > <output_file_path> 
+#example
+#sqlite3 ./stock_cache.db ".dump" > schema_export.sql && cat schema_export.sql
+```
+
+![alt text](/blog_img/DA/sql/dbchart-1.png)
+
+![alt text](/blog_img/DA/sql/dbchart2.png)
+
+![alt text](/blog_img/DA/sql/dbchart3.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/stonks/" title="PyStonks Post sqlite section with DBChart" image="/blog_img/DA/sql/dbchart-sqlite-schema.png" subtitle="DBChart Working with the PyStonks Schema" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
+{{< /cards >}}
+
 The setup even works with container thx to [this compose](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/docker-compose.dev.yml)
 
 ![Fast API x Astro Connected](/blog_img/GenAI/audio/fastapi-astro-signedin-dash.png)
@@ -157,12 +187,13 @@ This is a sample quick setup with a lot of [auth to do's](https://github.com/JAl
 {{< /callout >}}
 
 
-
 ---
 
 ## Conclusions
 
 This simple **FastAPI recorder** and transcript web app already helps me.
+
+> I got to see how FastAPI x Astro x sqlite works
 
 Now I can try to do those **yt tech videos** I wanted to do this year.
 
@@ -173,6 +204,11 @@ Then it gets uploaded into this new `py-speech-rater` and we get the voice via O
 {{< callout type="info" >}}
 So now I got for my **yt workflow**: OBS -> Audacity -> FastAPI with OpenAI -> KDEnlive -> YT
 {{< /callout >}}
+
+Its just faster than doing audios same via CLI:
+
+* https://github.com/JAlcocerT/DataInMotion/blob/main/OpenAI-Audio/openai-tts.py
+* https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI
 
 **What can be next from here?**
 

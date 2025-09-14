@@ -2,8 +2,8 @@
 title: "A Quick Waiting List for your SaaS"
 date: 2025-08-02
 draft: false
-tags: ["Dev","Entrepreneurship","PMF","Porkbun API","waiting-to-landing","Formbricks"]
-description: 'How much is an idea worth? With Astro SSG, Formbricks and Cloudflare'
+tags: ["Entrepreneurship","PMF","Porkbun API","waiting-to-landing","Formbricks"]
+description: 'How much is an idea worth? With Astro SSG, Formbricks and Cloudflare API'
 url: 'how-to-create-a-waiting-list'
 ---
 
@@ -141,6 +141,8 @@ Despite having proper:
 PORKBUN_API_KEY="pk1_..."
 PORKBUN_SECRET_KEY="sk1_..."
 ```
+
+> Its just that Porkbun API wont allow to buy. Simple.
 
 I got successful to edit DNS records via **Cloudflare API**.
 

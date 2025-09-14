@@ -74,3 +74,10 @@ These tools play great with **PPTs as a code**: SliDev, Remark, MARP
 3. Excalidraw!
 
 * https://github.com/excalidraw/excalidraw
+
+{{< youtube "Z5W68WXldr0" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=Z5W68WXldr0 -->
+
+> A great video to understand Excalidraw, doom and how a proxie works!

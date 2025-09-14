@@ -1,13 +1,17 @@
 ---
 title: "BiP | Wedding Edition"
-date: 2025-09-14T01:20:21+01:00
+date: 2025-09-14T13:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","QR Code Generator","Web","Cloudflare DNS","Porkbun API","SlubneChwile"]
+tags: ["Entrepreneuring","QR Code Generator","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile"]
 description: 'Wedding stuff with PB BaaS. Everything that can be static, is static 🤯'
 url: 'wedding-photo-galleries'
 ---
 
 https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
+
+**Tl;DR**
+
+I got that domain!
 
 
 **Intro**
@@ -56,6 +60,13 @@ But whatever can be static, keep it static.
 
 Same applies to your QR Code web generator.
 
+
+---
+
+## Conclusions
+
+
+
 ---
 
 ## FAQ
@@ -81,13 +92,14 @@ And now it makes more than just quote the price.
 2. Price
 3. Domain Get Name Servers
 4. Domain Update Name Servers
-5. What it wont do is to buy a domain for you programatically
+5. What it WON'T do is to buy a domain for you programatically
 
 ### Landing Page
 
-The Sassify theme is just awsome.
-
-https://astro-sassify.larryxue.dev/
+The Sassify theme is just awsome: https://astro-sassify.larryxue.dev/
 
 
 #### Configuring Cloudflare
+
+
+###

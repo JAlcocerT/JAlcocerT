@@ -1,12 +1,11 @@
 ---
-title: "How to create awsome Presentations with [AI] SlidevJS x Claper"
+title: "How to create awsome Presentations with [AI] SlidevJS"
 date: 2025-01-02
 draft: false
-tags: ["Gen-AI","PPTx","Windsurf","LLMs"]
+tags: ["Gen-AI","PPTx","Windsurf","LLMs","Claper"]
 description: 'AI Driven Presentations - PPT as code with SliDev, MarpJS, RemarkJS. Diagrams and ULM.'
 url: 'creating-presentations-with-ai'
 ---
-
 
 **Intro**
 

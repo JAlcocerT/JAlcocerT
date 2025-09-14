@@ -304,6 +304,12 @@ With a *minor* tweak...
 
 It can also register new mail/passwords to your PB users collection: *streamlit login/signup as per pocketbase collection DONE ✅*
 
+Say thanks to [this cutie](https://github.com/JAlcocerT/py-stonks/blob/main/app-st.py#L15).
+
+```py
+from st_auth_pb import login
+```
+
 ```sh
 export STREAMLIT_REGISTRATION_ENABLED="true"  # Enable signup
 ```
@@ -366,6 +372,8 @@ For any time doing `Streamlit -> Flask` you can find on [this .md](https://githu
 
 You dont need much more than this for a [OHLC](#faq) and trends info: `https://app.financeinmotion.fyi/`
 
+1. Bring the streamlit + pocketbase version up in your server and expose via CF tunnels:
+
 ```sh
 git clone https://github.com/JAlcocerT/py-stonks
 make streamlit-up
@@ -376,6 +384,12 @@ docker inspect pystonks-app-streamlit --format '{{json .NetworkSettings.Networks
 {{< callout type="warning" >}}
 Remember about the **Regression to the mean**, see SP500 vs Dividend Aristocrats
 {{< /callout >}}
+
+2. [Animations](#on-demand-data-animations) as they should have been (simple)
+
+3. For the future - [ebooks](#data-driven-ebook) stuff
+
+4. Static where possible, CSR for cool free stuff functionality, SSR via streamlit/flask/fastapi for whatever more
 
 
 ### FastAPI x PyStonks Sqlite
@@ -446,6 +460,26 @@ uv run app-fastapi.py
 ```
 
 > Go to `http://localhost:8000/`
+
+And if you have that *port busy* with portainer...I got you covered:
+
+```sh
+#First, prepare FastAPI to be able to query the pulled data into sqlite
+#!uv run app-fastapi.py
+!uv run app-fastapi.py --port=8045
+#!uv run app-fastapi.py --auto-port
+#!uv run app-fastapi.py --port=9000 --auto-port
+```
+
+All the data comes via FastAPI from these pulled tables:
+
+![ChartDB Working with the PyStonks Schema](/blog_img/DA/sql/dbchart-sqlite-schema.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/databases-101/#database-management--gui-tools" title="There are many Db Tools | Post ↗" >}}
+{{< /cards >}}
+
 
 Thanks to FASTAPi, we have a REST API that exposes all your SQLite stock data tables.
 
@@ -631,18 +665,12 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 ### On Demand Data Animations
 
+As per the learnings of this summer with the DataInMotion repo for matplotlib animations:
 
-{{< callout type="info" >}}
-These are pulling from the .sqlite already instead of yfinance --To force me maintaining the project
-{{< /callout >}}
+* https://github.com/JAlcocerT/DataInMotion/blob/libreportfolio/animate_sequential_compare_price_evolution_flex_custom.py
+* https://github.com/JAlcocerT/DataInMotion/blob/main/OpenAI-Audio/openai-tts.py
 
-Just within the `./z-eda-yfinance`, I used the good structure to create cool summaries for stocks:
-
-```sh
-
-```
-
-As well as animations with matplotlib: 
+As well as **animations** with matplotlib: 
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/animations-as-a-code" title="Animations as a Code | Post" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Posting to Twitter or Youtube those animations 101." >}}
@@ -653,12 +681,27 @@ As well as animations with matplotlib:
 git clone https://github.com/JAlcocerT/DataInMotion
 ```
 
+{{< callout type="info" >}}
+Now, These animations are pulling from the `.sqlite` + the [FastAPI logic above](#fastapi-x-pystonks-sqlite) already instead of yfinance --To force me maintaining the project
+{{< /callout >}}
+
+Just within the `./z-eda-yfinance`, I used the good structure to create cool summaries for stocks:
+
+```sh
+!uv run app-fastapi.py --port=8045
+```
+
+And execute the notebooks (from `-200.ipynb` onwards):
+
+
+
 
 ### Data Driven eBook
 
 This is something to consider.
 
 Specially after having some thoughts places on [ebook as a code post](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/).
+
 
 
 ---

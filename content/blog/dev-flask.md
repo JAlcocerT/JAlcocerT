@@ -340,6 +340,8 @@ networks:
 
 ### User Management with Flask
 
+UM, aka user management :)
+
 {{< details title="Sample Flask UM Architecture 📌" closed="true" >}}
 
 To implement a user authentication system in **Flask** that handles user sign-up and sign-in with a **SQLite** database and shows different UI based on the login status, here are some tools and extensions:

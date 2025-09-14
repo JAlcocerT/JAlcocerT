@@ -530,11 +530,13 @@ Anyways, if they are not interested to get access to features by giving their em
 {{< dropdown title="Email Challenge for Streamlit based on MailerLite API 👇" closed="true" >}}
 
 * **Pros** 
-1. Integrated with MailerLite API
-* With double opt-in, you will get just verified emails
+
+1. Integrated with MailerLite API:  With double opt-in, you will get just verified emails
+
 2. No hardcoded values in the app
 
 * **Cons** MailerLite Free Tier finishes at 1k subs
+
 * [Example Code in CV-Check](https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_CVCheck_pdfmineropenAI_v3.py?ref_type=heads) - A very simple one that allow certain user/passwords to access an app
 
 
