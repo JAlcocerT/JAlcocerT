@@ -43,6 +43,13 @@ How about the rating part now?
 
 ### Firebase Auth 
 
+https://jalcocert.github.io/JAlcocerT/firebase-auth-101/
+https://jalcocert.github.io/JAlcocerT/stonks/
+
+#### NextJS + Firebase Auth
+
+For phones I did not manage to get fb auth social sign in/up  working.
+
 
 ---
 
@@ -51,7 +58,11 @@ How about the rating part now?
 
 ### Firebase Auth x SSG x CF Workers
 
-Yes, you can combine Firebase Authentication with an Astro static site deployed to Cloudflare Pages to protect certain pages. However, because Astro in "static" mode builds a purely static site, you cannot use server-side authentication directly on the pages themselves. The recommended solution for this is to use **Cloudflare Workers** (or more specifically, **Pages Functions**) to handle the server-side validation.
+Yes, you can combine Firebase Authentication with an Astro static site deployed to Cloudflare Pages to protect certain pages.
+
+However, because Astro in "static" mode builds a purely static site, you cannot use server-side authentication directly on the pages themselves. 
+
+The recommended solution for this is to use **Cloudflare Workers** (or more specifically, **Pages Functions**) to handle the server-side validation.
 
 #### How It Works
 

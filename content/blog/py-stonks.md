@@ -11,9 +11,14 @@ math: true
 
 **Tl;DR**
 
-Creating a py_stocks v2.0
+Creating a py_stocks v2.0.
+
+Got working streamlit + PB auth. Also a cool FastAPi + Firebase Auth (that works on desktops)
+
+And a comparison of Flask Plotly vs FastAPi with ChartJS
 
 +++ Got to know few very logical concepts, like the [drawdown (MDD)](#what-is-maximum-drawdown-mdd).
++++ Plus the cool [ipynb for animations](#on-demand-data-animations)...
 
 {{< callout type="warning" >}}
 This is just a tech related post where i share my learning journey. **Dont use it as financial advice of any type.**

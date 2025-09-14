@@ -2,24 +2,22 @@
 title: "Shipping PyStonks with a friend"
 date: 2025-09-11T02:20:21+01:00
 draft: false
-description: How not to marry the framework, make that BRD and ship fast.
+description: How NOT to marry a framework, make that BRD and ship fast. PyStocks 🐷.
 url: 'py-stonks'
-tags: ["WebApp","Py_Stocks 🐷","yfinance","FastAPI","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
+tags: ["WebApp","yfinance","FastAPI x MailerLite","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
 math: true
 ---
-
 
 **Tl;DR**
 
 The historical stock webapp, companion for: https://financeinmotion.fyi
 
-
 **Intro**
 
 To pull data from yfinance should not be a secret anymore:
 
-https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/
-https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/
+* https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/
+* https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/
 
 Plus also on the initial PyStonks Post, I dedicted time for a yfinance EDA ipynb section.
 
@@ -32,6 +30,8 @@ Now, Im going to take back the collaboration with my friend: btw, he is a [PDH](
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/py-stonks-cerdos" title="PyStonks Cerdos" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code" >}}
 {{< /cards >}}
+
+
 
 ## FAQ
 
@@ -116,3 +116,9 @@ gh repo create py-stonks-cerdos --private --source=. --remote=origin --push
 Step 2: stop copy pasting from chatgpt and use Windsurf/Cursor/whatever
 
 Are those 20$/month more valuable than your time? Please...
+
+#### Tests
+
+Ive been doing some branching to do some tests and try how the data layer can look like.
+
+All from the learnings of the [previous post](https://jalcocert.github.io/JAlcocerT/stonks/).

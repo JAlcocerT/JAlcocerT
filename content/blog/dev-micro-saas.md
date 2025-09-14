@@ -27,7 +27,6 @@ I got the Micro SaaS concept into my mind, from the theme:
 
 Because there are others themes, like Saasify that I used as a PoC:
 
-
 Or
 
 * https://github.com/eavinti/astro-landing
