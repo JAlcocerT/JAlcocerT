@@ -9,3 +9,15 @@ url: 'mailerlite-for-saas'
 
 
 https://developers.mailerlite.com/docs/#mailerlite-api
+
+
+
+## Conclusions
+
+### What People have Build
+
+A simple WP + subscription
+
+* https://www.genteinvencible.com/
+
+![Subscribe Web Example](/blog_img/entrepre/stripe-mailerlite/example-subs.png)

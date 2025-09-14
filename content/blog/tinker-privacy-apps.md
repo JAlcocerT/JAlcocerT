@@ -226,3 +226,10 @@ Dont forget to clean from time to time the apt packages that you are not using.
 To do that via UI, you can try **Stacer**
 
 ![ubuntu apt package manager](/blog_img/mini_pc/stacer-apt-checks.png)
+
+
+```sh
+sudo add-apt-repository ppa:oguzhaninan/stacer
+sudo apt-get update
+sudo apt-get install stacer
+```

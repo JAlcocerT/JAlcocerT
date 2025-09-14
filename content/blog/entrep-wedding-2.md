@@ -16,8 +16,10 @@ We come from [this post](https://jalcocert.github.io/JAlcocerT/wedding-photo-gal
 
 Time to keep building in public the project.
 
-https://github.com/JAlcocerT/slubnechwile
-https://github.com/JAlcocerT/Flask_SlubnyChwile
+I left them at this stage:
+
+* https://github.com/JAlcocerT/slubnechwile
+* https://github.com/JAlcocerT/Flask_SlubnyChwile
 
 Because since the last commits, Ive learnt a lot.
 
@@ -30,7 +32,7 @@ And I wont be using Filebrowser or some selfhostable webapp to do the BE part.
 
 What others are doing?
 
-https://planning.wedding/pricing
+* https://planning.wedding/pricing
 
 This one is great, yet it seems that the way to get MRR is via the companies who want to seel to the tons of people registering to get married there.
 
@@ -79,6 +81,7 @@ And now it makes more than just quote the price.
 2. Price
 3. Domain Get Name Servers
 4. Domain Update Name Servers
+5. What it wont do is to buy a domain for you programatically
 
 ### Landing Page
 

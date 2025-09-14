@@ -256,12 +256,19 @@ networks:
 
 ### Maintainance in Linux
 
+
+
 1. https://github.com/oguzhaninan/Stacer
 
 > GPL 3.0 |  Linux System Optimizer and Monitoring - https://oguzhaninan.github.io/Stacer-Web 
 
+```sh
+sudo add-apt-repository ppa:oguzhaninan/stacer
+sudo apt-get update
+sudo apt-get install stacer
+```
 
-> Remember that with **[Ventoy](https://github.com/ventoy/Ventoy)**, you can have them all in one usb drive
+2. If you need a full format - Remember that with **[Ventoy](https://github.com/ventoy/Ventoy)**, you can have them all in one usb drive
 
 
 #### Better PKG management in Debian

@@ -41,6 +41,10 @@ https://www.udemy.com/courses/search/?src=ukw&q=local+llm -->
 
 ### Web Demo Results
 
+See: https://jalcocert.github.io/Portfolio
+
+[!HUGO Lynx](/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png)
+
 #### HUGO LYNX with GithubPages
 
 {{< details title="Proposing a Quick HUGO Theme 📌" closed="true" >}}

@@ -1,8 +1,8 @@
 ---
 title: "FlaskCMS v0.2"
-date: 2025-09-13T23:20:21+01:00
+date: 2025-09-14T17:20:21+01:00
 draft: false
-tags: ["Astro x Flask","Markdown editors","Cursor MCP and AppImageLauncher","Stacer","Temporal io"]
+tags: ["Astro x Flask","Markdown editors","Cursor MCP and AppImageLauncher","Temporal io"]
 description: 'Markdown and Flask working together.'
 url: 'flask-cms-for-ssgs'
 ---
@@ -11,7 +11,7 @@ url: 'flask-cms-for-ssgs'
 
 From Hugo Galleries to Mental Health and RealEstate?
 
-+++ [Testing](#lately-i) Cursor/Stacer/Appimage launcher
++++ [Testing](#lately-i) Cursor/Appimage launcher
 
 **Intro**
 
@@ -95,13 +95,7 @@ mkdir ~/Applications #place your *.AppImages there and they will integrate with 
 
 > I also saw this other IDE came out: https://www.dereference.dev/
 
-3. These agentic IDEs consume a lot of resources, so I revisted **[Stacer](https://oguzhaninan.github.io/Stacer-Web/)** to monitor my x13 status:
-
-```sh
-sudo add-apt-repository ppa:oguzhaninan/stacer
-sudo apt-get update
-sudo apt-get install stacer
-```
+3. These agentic IDEs consume a lot of resources, so I revisted **[Stacer](https://jalcocert.github.io/JAlcocerT/homelab-security/#conclusions)** to monitor my x13 status.
 
 4. Learnt aout https://temporal.io/
 
