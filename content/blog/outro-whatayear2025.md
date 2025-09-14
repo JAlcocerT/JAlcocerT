@@ -266,9 +266,11 @@ If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlc
 
 9. CLI Agents ftw. Codex CLI was huge. But I also tried claude and geminiCLI. Together with BAML bringing type safe LLM calls.
 
-10. Thanks to authentication I got to know the difference between: who someone is and what someone can do 🤯
+10. Thanks to authentication I got to know the difference between: WHO someone is and what someone can DO 🤯
 
 > Notice also (as per ENS and DNS), that what something is has nothing to do with where something is.
+
+> > And BRD PRD FRD are the why what how
 
 ## Entrepreneuring
 
@@ -1263,3 +1265,15 @@ The flow from Avro to Parquet is a common pattern in data lake architecture:
 3.  **Consumption**: The prepared Parquet data is then used in the Gold layer for fast, optimized analytics.
 
 This layered approach, often called the Medallion Architecture, leverages the strengths of each format: Avro for robust data ingestion and Parquet for efficient data analysis.
+
+
+--- 
+
+## FAQ
+
+2020 - R
+2021 - Containers
+2022 - PySpark
+2023 - SSGs
+2024 - LLMs and API calls
+2025 - 

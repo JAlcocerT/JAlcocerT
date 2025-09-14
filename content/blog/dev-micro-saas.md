@@ -31,3 +31,10 @@ Because there are others themes, like Saasify that I used as a PoC:
 Or
 
 * https://github.com/eavinti/astro-landing
+
+
+**Cool SaaS SignUps/In**
+
+1. https://monday.com/pricing
+    * https://auth.monday.com/auth/login_monday
+    * https://auth.monday.com/users/sign_up_new

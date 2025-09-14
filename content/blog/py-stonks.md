@@ -2,9 +2,9 @@
 title: "PyStonks"
 date: 2025-09-07T02:20:21+01:00
 draft: false
-description: A Blueprint for webapp authentication. Streamlit, Flask, FastAPI, PB.
+description: A PyStocks Blueprint for webapp authentication. Streamlit, Flask, FastAPI, PB.
 url: 'stonks'
-tags: ["Py_Stocks","yfinance","Streamlit x PocketBase login/signup","ChartJS","Animations","FinanceInMotion"]
+tags: ["yfinance","Streamlit x PocketBase login/signup","ChartJS","Animations","FinanceInMotion"]
 math: true
 ---
 
@@ -689,6 +689,36 @@ Also create a ./ui-for-fastapi-firebaseauth.md that explain from where and how t
 ```
 
 ![alt text](/blog_img/entrepre/public-build/pystonks/fastapi-vs-flask.png)
+
+
+* https://fastapi.jalcocertech.com/
+  * https://console.cloud.google.com
+  * https://console.firebase.google.com
+
+
+{{< callout type="info" >}}
+I made a quick FastAPI x Firebase. (back to from the future [from this post](https://jalcocert.github.io/JAlcocerT/firebase-auth-101/)).
+{{< /callout >}}
+
+
+```sh
+docker compose -f docker-compose.fastapi-ui.yml up --build -d
+#docker network connect cloudflared_tunnel py-stonks-fastapi-ui #network -> container name
+#docker inspect py-stonks-fastapi-ui --format '{{json .NetworkSettings.Networks}}' | jq 
+docker exec py-stonks-fastapi-ui env | grep FIREBASE
+docker logs py-stonks-fastapi-ui --tail 50
+```
+
+{{< callout type="warning" >}}
+The Firebase Auth setup will work on `localhost` out of the box. Make sure to configure **custom domains** properly
+{{< /callout >}}
+
+![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain1.png)
+![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain2.png)
+![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain3.png)
+![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain5.png)
+
+With FastAPI.....
 
 Even some way for people to create *financial data driven animations* for themselves.
 

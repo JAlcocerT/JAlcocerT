@@ -120,6 +120,14 @@ Making Firebase auth work was literally ~45 minutes.
 > See [how firebase auth technology compares](https://github.com/JAlcocerT/Just-Journal-via-SSG/blob/main/z-pros-cons.md) with the recently seen httpcookie and localstorage.
 
 
+{{< callout type="warning" >}}
+Lernt with FastAPI + PyStonks. The Firebase Auth setup will work on `localhost` out of the box. Make sure to configure **custom domains** properly
+{{< /callout >}}
+
+![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain6.png)
+
+
+
 ### Free Tier Limitations
 
 The primary limitation of Firebase Authentication's free tier is the **50,000 monthly active users (MAUs)** cap.

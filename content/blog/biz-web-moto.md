@@ -132,7 +132,7 @@ Alternatively, do the [**Web-Dev setup** for Astro at Windows with Chocolatey](#
 
 Just using Google account was enough after accepting firebase T&C's.
 
-![Firebase Auth](/blog_img/web/Firebase/firebase-auth.png)
+![FirebaseAuth to Deploy Static Pages](/blog_img/web/Firebase/firebase-auth.png)
 
 ![Firebase Deploy from GHA](/blog_img/web/Firebase/firebasedeploy-gha.png)
 
