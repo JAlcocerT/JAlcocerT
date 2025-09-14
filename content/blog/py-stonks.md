@@ -368,6 +368,8 @@ For any time doing `Streamlit -> Flask` you can find on [this .md](https://githu
 - **Design for reusability** from the start
 - **Document shared components** clearly
 
+![Flask WebAPP created from the Streamlit PoC Concept of PyStonks](/blog_img/entrepre/public-build/pystonks/flask-version-of-streamlit-stonks-poc.png)
+
 ---
 
 ## Conclusions
@@ -446,8 +448,6 @@ This separates the presentation (HTML) from the application logic (Python code).
 No, **FastAPI does not have a built-in template engine**. It is primarily an API framework designed to build the backend of an application. It's meant to handle requests and return data, typically in JSON format, which a frontend (like a React or Vue.js app) then uses to build the user interface.
 
 However, you can easily integrate a template engine into FastAPI. The most common choice is **Jinja2**, the same one used by Flask. You can add Jinja2 support by installing the `python-jinja2` library and using FastAPI's `Jinja2Templates` class. This allows you to render HTML pages on the server, although for most projects, FastAPI is still best used for serving data via an API.
-
-***
 
 **Does Flask have a template engine?**
 
@@ -555,10 +555,11 @@ except Exception as e:
 ![Matplotlib of sqlite pulled data via fastapi into ipynb](/blog_img/entrepre/public-build/pystonks/fastapi-sqlite-ipynb-plot.png)
 
 
-
 {{< callout type="info" >}}
-You can test FastAPI with Postman, Hoppscoth...
+You can test FastAPI (RESTapi) with: Postman, Hoppscoth...
 {{< /callout >}}
+
+This will now only allow you to get an endpoint, but to use it for your [animations](#on-demand-data-animations)
 
 
 ### Astro x Data x ChartJS
@@ -583,8 +584,7 @@ Just with [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/), like:
 
 Then, provide proper login/signup/logout with **FastAPI** and ChartJS/d3js/Plotly/[Recharts](https://github.com/recharts/recharts)?
 
-{{< details title="| FastAPI x Astro SSG 📌" closed="true" >}}
-
+{{< details title="FastAPI x Astro SSG 📌" closed="true" >}}
 
 You absolutely can combine FastAPI with **any** static site generator (SSG).
 
@@ -648,8 +648,49 @@ The use of an SSG essentially shifts the "heavy lifting" of rendering pages from
 
 Some people claim that Django+Astro can work together with some fwk like [Djazztro](https://github.com/Bwc9876/Djazztro)
 
+But I can see that **FastAPI x ChartJS** works perfectly: *It will be a next step to bring such cool plot with dinamic data to astro SSG, on another post*
 
-Even some way for people to create financial driven animations for themselves.
+```
+now can you make a quick webapp based on the FastAPI that we have, that will allow to select one of the stocks we have available inside sqlite (it will have a dropdown showing all the values we have already inside)
+
+Once one is selected, it will bring all the data as per selected time range on the slider (by default, it will be max range as per availability on that sqlite table of the stock)
+
+Then, the information will be displayed on a chartJS graph
+
+the UI has to look modern and with cool gradients
+
+you can create it the related UI files at ui-for-fastapi
+
+and the main app that ill run has to be in main and be called app-fastapi-ui.py
+```
+
+```
+can you document in a ./ui-for-fastapi.readme the technology used and if any frameworks were applied for the UI?
+
+Also, add that by default, 1/10 of the total date range on the table for the stock is selected
+
+Create the Dockerfile.fastapi-ui and related docker-compose.fastapi-ui.yml to conteinerize the setup
+
+One small details to fix:Lates date should be the most recent date of the table (and the default values have to be visible on the selectable date as well)
+
+
+Then: Can we think about bringing firebase social sign in signup authentication to this setup?
+
+There will be a env variable called `FIREBASE_ENABLED` true or false
+If its false, we keep the setup as it is,
+if it is true, there will be the possibility to have below the Statistics a social signin and signup button with google
+
+Users that are logged in, will be able to see an additional chartjs graph with the max draw down information of the selected stock
+they will be able to logout as well
+
+All env variables required for the setup will also be passed to the container
+
+Also create a ./ui-for-fastapi-firebaseauth.md that explain from where and how to get googles artifacts to get the auth working
+```
+
+![alt text](/blog_img/entrepre/public-build/pystonks/fastapi-vs-flask.png)
+
+Even some way for people to create *financial data driven animations* for themselves.
 
 > Could this be a way to reduce the brolosophy on the internet? Who knows
 
@@ -680,7 +721,7 @@ As well as **animations** with matplotlib:
 {{< /cards >}}
 
 ```sh
-git clone https://github.com/JAlcocerT/DataInMotion
+#git clone https://github.com/JAlcocerT/DataInMotion
 ```
 
 {{< callout type="info" >}}
@@ -693,9 +734,15 @@ Just within the `./z-eda-yfinance`, I used the good structure to create cool sum
 !uv run app-fastapi.py --port=8045
 ```
 
-And execute the notebooks (from `-200.ipynb` onwards):
+And execute the notebooks (from `-200.ipynb` onwards).
 
+From `yfinance-203.ipynb` we can add custom colors: https://it-tools.tech/color-converter
 
+![Matplotlib FastAPI pulled data custom colors](/blog_img/entrepre/public-build/pystonks/eda-stonks2-matplotlib.png)
+
+From `-204`, you bring your own logos:
+
+![alt text](../../static/blog_img/entrepre/public-build/pystonks/eda-stonks3-matplotlib.png)
 
 
 ### Data Driven eBook
@@ -711,13 +758,18 @@ Specially after having some thoughts places on [ebook as a code post](https://ja
 ## FAQ
 
 
-Getting to work streamlit with Pocketbase has been a thing.
+Getting to work streamlit with Pocketbase has been a thing and its all thanks to [these scripts 🐍](https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit)
 
 In fact, I used that **same PB users collection** to test how to authenticate people while [keeping things static with cf workers on this post](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#conclusions):
 
 * The result was: https://fast-payroll-theme.pages.dev/
 
 And now we are just using the same collection for this:
+
+<!-- https://youtu.be/p7U24YSFrW4 -->
+
+{{< youtube "p7U24YSFrW4" >}}
+
 
 
 

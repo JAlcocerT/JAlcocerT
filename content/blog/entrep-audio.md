@@ -82,6 +82,8 @@ Pros: Full VS Code experience, syntax highlighting, IntelliSense, built-in markd
 Cons: Larger bundle size (~2MB)
 Best for: Professional editing experience
 
+![Monaco Editor inside a FastAPI powered audio WebAPP](/blog_img/GenAI/audio/fastapi-markdown-editor.png)
+
 2. CodeMirror 6 - LIGHTWEIGHT ⭐
 Pros: Lightweight, fast, good markdown support, customizable
 Cons: Less features than Monaco
@@ -217,6 +219,8 @@ Considering that FASTAPI and Astro can *speak* perfectly...
 Making admin panels / dashboards / data apps  ( displaying via [chartjs](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/Astro-idol/src/pages/dashboard.astro#L124) ) with this stack does not seem that complicated anymore...
 
 ![FastAPI x Astro x ChartJS](/blog_img/GenAI/audio/fastapi-chartjssqlite.png)
+
+And one panel like that to rank users engagement with the app does not seem a bad idea at all :)
 
 > See the `./fastapi-speech-rater` folder that contains those. And the related [tech doc with the **system's architecture**](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/TECH_DOC.md#-system-architecture)
 
