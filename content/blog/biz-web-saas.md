@@ -220,7 +220,7 @@ We could use any other combination of authentications, like: *LogTo, TinyAuth, j
 
 ![alt text](/blog_img/dev/PB/pb-secret-page.png)
 
-> https://fast-payroll-theme.pages.dev/
+> This is how it looks the result: https://fast-payroll-theme.pages.dev/
 
 Im now thinking that a future webifyer/*awebsiteforall* project could have such workflow: SSG -> PB signup/signin -> See the `/themes` page if logged in and then choose:
 

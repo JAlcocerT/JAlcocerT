@@ -183,7 +183,7 @@ volumes:
   ai_openaichatbot:
 ```
 
-![Streamlit Chat GPT Clone](/blog_img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png)
+![Streamlit ChatGPT Clone](/blog_img/GenAI/streamlit-gpt-clone/streamlit-chatbot-clone.png)
 
 ### Streamlit Chat with Groq
 

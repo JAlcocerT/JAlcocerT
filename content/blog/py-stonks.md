@@ -4,7 +4,7 @@ date: 2025-09-07T02:20:21+01:00
 draft: false
 description: A Blueprint for webapp authentication. Streamlit, Flask, FastAPI, PB.
 url: 'stonks'
-tags: ["Py_Stocks","yfinance","LogTo JS SDK","ChartJS","Animations","FinanceInMotion"]
+tags: ["Py_Stocks","yfinance","Streamlit x PocketBase login/signup","ChartJS","Animations","FinanceInMotion"]
 math: true
 ---
 
@@ -193,7 +193,7 @@ SELECT name FROM sqlite_master WHERE type='table';
 #.quit #when you are done!
 ```
 
-See also how cool your sqlite DB looks:
+See also how cool your sqlite DB looks: *You can use [Ui Tools with DBs](https://jalcocert.github.io/JAlcocerT/databases-101/#database-management--gui-tools)*
 
 ```sh
 # Watch database size grow
@@ -302,7 +302,9 @@ Is this streamlit authentication working with the users of the pocketbase collec
 
 With a *minor* tweak...
 
-It can also register new mail/passwords to your PB users collection: *streamlit login/signup as per pocketbase collection DONE ✅*
+It can also register new mail/passwords to your PB users collection: *streamlit login/signup as per [pocketbase collection](#faq) DONE ✅*
+
+> There is a **video** for your with [the result](#faq).
 
 Say thanks to [this cutie](https://github.com/JAlcocerT/py-stonks/blob/main/app-st.py#L15).
 
@@ -707,6 +709,16 @@ Specially after having some thoughts places on [ebook as a code post](https://ja
 ---
 
 ## FAQ
+
+
+Getting to work streamlit with Pocketbase has been a thing.
+
+In fact, I used that **same PB users collection** to test how to authenticate people while [keeping things static with cf workers on this post](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#conclusions):
+
+* The result was: https://fast-payroll-theme.pages.dev/
+
+And now we are just using the same collection for this:
+
 
 
 ### What is Maximum Drawdown (MDD)?

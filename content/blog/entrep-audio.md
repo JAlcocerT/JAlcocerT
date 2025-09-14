@@ -220,7 +220,11 @@ Making admin panels / dashboards / data apps  ( displaying via [chartjs](https:/
 
 > See the `./fastapi-speech-rater` folder that contains those. And the related [tech doc with the **system's architecture**](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/TECH_DOC.md#-system-architecture)
 
-I dont see any reason why not shipping micro SaaS faster, like:
+{{< callout type="info" >}}
+The SSG + FastAPI + OpenAI speech rater part, will come on another post. This has been prep work. Maybe a ,serverles' ChatGPT Clone?
+{{< /callout >}}
+
+I dont see any reason *why not shipping* micro SaaS faster, like:
 
 1. Preparing Interviews with AI
 

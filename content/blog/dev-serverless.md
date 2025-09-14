@@ -30,6 +30,14 @@ Why not applying these to a theme: *which kind of reminds me of t3.chat*
 > MIT | Minimal web UI for ChatGPT.
 
 
+And on the recent Audio with AI Post, I was supposed to create a Speech rater with FastAPI that superseeds the streamlit version.
+
+But I got an improvement of my yt audio workflow instead.
+
+The prep work was done anyways: SSG + FastAPI + Audio recording/storing/processing worked.
+
+How about the rating part now?
+
 ### LogtoJS SDK x Astro
 
 
