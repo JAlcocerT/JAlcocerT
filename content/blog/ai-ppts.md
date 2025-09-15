@@ -52,6 +52,7 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
 sudo apt-get install -y nodejs
 
 #choco install nodejs-lts -y
+node --version
 ```
 
 2. Initialize the SliDev project
@@ -77,7 +78,7 @@ npm i -D playwright-chromium
 
 See also the `localhost:3030/presenter` mode
 
-![alt text](/blog_img/biz/RE/slidev-re-presenter.png)
+![SliDEV presenter mode](/blog_img/biz/RE/slidev-re-presenter.png)
 
 6. Generate the export **pdf**:
 
@@ -86,22 +87,22 @@ See also the `localhost:3030/presenter` mode
 slidev export #requires playwright to be installed
 ```
 
-> It goes to `slides-export.pdf`
+> The ppt outpot export goes to `slides-export.pdf`
 
 
 {{< callout type="warning" >}}
-When exporting to pdf, some features wont be generated (like UML)
+When exporting to `.pdf`, some features *(like UML)* wont be generated.
 {{< /callout >}}
 
 ```sh
-npm run export #default as pdf!
+npm run export #defaults as pdf!
 #npm run export:pdf
 
 slidev export --format png #npx slidev export --format png
 slidev export --format pptx #this will properly render mermaid diagrams and code snippts
 ```
 
-> The pptx will be at `./slides-export.pptx` and features like UML/slidevJs will be available
+> The pptx will be at `./slides-export.pptx` and features like UML/MermaidJs will be available
 
 ![alt text](/blog_img/biz/RE/slidev-export.png)
 
@@ -122,7 +123,7 @@ slidev build --base /talks/my-cool-talk/ #deploy under sub-route
 
 ![Building SliDevJS](/blog_img/biz/RE/slidev-build.png)
 
-
+You can also expose the built static assets:
 
 ```sh
 #cd ./dist
@@ -510,7 +511,6 @@ Claper is a perfect example of how to deploy an app with **https thanks to [Trae
 
 **RevealJS?**
 
-
 > The HTML Presentation Framework 
 
 
@@ -520,8 +520,6 @@ Claper is a perfect example of how to deploy an app with **https thanks to [Trae
 * https://revealjs.com/themes/
     * https://revealjs.com/jump-to-slide/ - **G**
     * https://revealjs.com/overview/ **Esc**
-
-
 
 ```sh
 git clone https://github.com/hakimel/reveal.js.git
@@ -538,6 +536,10 @@ npm run build
 ```sh
 npx http-server dist/
 ```
+
+> You have a HUGO theme wrapping this: https://github.com/joshed-io/reveal-hugo
+
+> > MIT | 📽️ Create rich HTML-based presentations with Hugo and Reveal.js 
 
 **Or you could try with Marp**
 

@@ -2,7 +2,7 @@
 title: "Multilanguage blogs with a SSG Astro Editor"
 date: 2025-09-13T15:20:21+01:00
 draft: false
-tags: ["Astro","Just-SSG"]
+tags: ["Astro","Just-SSG","NextJS","ToastUI md editor"]
 description: 'Understanding i18n websites with Astro Blog Themes.'
 url: 'astro-i18'
 ---
@@ -36,7 +36,7 @@ But after [trying react markdown](https://jalcocert.github.io/JAlcocerT/astro-jo
 
 ![Gemini canva toastUI](/blog_img/web/nextjs-astro-editor/toastui-gemini.png)
 
-{{< details title="My Initial requirements for Cursor 📌" closed="true" >}}
+{{< details title="My Initial requirements for the AstroEditor for Cursor 📌" closed="true" >}}
 
 This document details the features and functionality for a local-first markdown editor.
 
@@ -56,10 +56,20 @@ Focus Mode: A button or toggle that hides the file list, expanding the editor to
 
 File Saving: The application must have a clear mechanism to save the current editor content directly back to the selected local .md or .mdx file.
 
+**My follow uP**
+
+how have you managed to render the content of the slidev at 3030 inside the nextjs app at 3000? are we rebuilding slidev all the time or is it just life?
+
+I have just moved the nextjs app to the repo root
+
+I see one error when going to WYSIIWYG option (which id like to be defaults)
+also, when hitting preview, can we go to a path the matches the name of the folder we are at?
+
+and can we bring the frontmatter in the beginning of the .md ?
+
+can you fix those and then try that the container setup?
+
 **Good-to-Have Features** - I did not mentioned these on the first go
-
-These features are highly recommended to elevate the user experience and create a more complete tool.
-
 
 Real-time Saving: The application must automatically save the editor state locally as edits are made to prevent data loss.
 

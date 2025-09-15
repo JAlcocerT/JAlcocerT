@@ -2,7 +2,7 @@
 title: "Social Media Automation | PostIZ"
 date: 2025-07-03T19:20:21+01:00
 draft: false
-description: 'Programatic posting on SM be like 🤯'
+description: 'Programatic posting on SM be like 🤯 Marketing Tools for your SaaS'
 tags: ["Youtube Shorts","Social Media","APIfy","Scrapping"]
 url: social-media-automation
 ---

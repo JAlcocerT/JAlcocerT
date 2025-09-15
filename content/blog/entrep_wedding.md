@@ -10,8 +10,8 @@ url: 'wedding-photo-galleries'
 
 **TL;DR**
 
-https://github.com/JAlcocerT/slubnechwile
-https://github.com/JAlcocerT/Flask_SlubnyChwile
+* https://github.com/JAlcocerT/slubnechwile
+* https://github.com/JAlcocerT/Flask_SlubnyChwile
 
 **Intro**
 
@@ -1264,7 +1264,7 @@ Because maybe...you got a st[ripe payment](https://jalcocert.github.io/JAlcocerT
 
 Thanks to [magnus](https://magnus919.com/notes/gotify/)
 
-{{< cards cols="1" >}}
+{{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/gotify_docker-compose.yml" title="Gotify Setup Docker Config 🐋 ↗" >}}
     {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently" title="Use Gotify together with Internet Speed Tracker | SelfH Post 0525 Post ↗" >}}
 {{< /cards >}}

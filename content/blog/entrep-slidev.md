@@ -2,12 +2,14 @@
 title: "From ReadMe to MakeSliDev v0.1"
 date: 2025-08-06
 draft: false
-tags: ["MakeReadme","SliDev","Entrep"]
-description: 'Its all about markdown - From ReadMe generator to SliDev presentations for all'
+tags: ["MakeReadme","SliDevJS","Entrep",]
+description: 'Its all about markdown - Ideas to go From ReadMe generator to SliDev presentations for all'
 url: 'make-slidev'
 ---
 
-**TL;DR** I found out a great web app that edits markdown in live time and wanted to combine it with SliDev for PPT Generation.
+**TL;DR** 
+
+I found out a great web app that edits markdown in live time and wanted to combine it with SliDev for PPT Generation.
 
 **Intro**
 

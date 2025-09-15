@@ -2,21 +2,111 @@
 title: "Social Auth"
 date: 2025-09-15T10:20:21+01:00
 draft: false
-tags: ["JustJournalviaSSG","BaaS vs AaaS"]
+tags: ["JustJournalviaSSG","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor"]
 url: 'social-signin-101'
 description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator'
 ---
 
+**Tl;DR**
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor" title="A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests" >}}
+{{< /cards >}}
+
 
 **Intro**
 
-If you are into marketing and have used its related tools, you know that its a game of volume.
+If you are into [marketing/social media](https://jalcocert.github.io/JAlcocerT/social-media-automation/) and have used its related tools, you know that its a game of volume.
 
 Say that for every 1000 cold emails you do, 2-4% will move towards the next step (and you will be lucky).
 
 You dont want to throw away the mkt efforts, by having a landing and SaaS login that provides too much friction.
 
 And if you have ever worked on ecommerce, you should know that a social sign in converts ~95%, instead of the ~80+% of a email/pwd.
+
+With this post, lets try to understand how to make those social signins for good.
+
+With the goal of not working our [SaaS KPIs](#faq)
+
+And...in the mean time play with a wrapper of a SliDEvJS editor.
+
+You can get started with such project and cursor like:
+
+
+**The Stack** NextJS + ToastUI + SliDev. Just as I have been using recently on the astro-editor for multilang. 
+
+https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
+
+## SliDev Goodies
+
+
+
+{{% details title="SliDev x VueJS x CSR 🚀" closed="true" %}}
+
+Yes, **Slidev is a web-based presentation tool built on top of Vue.js** and it primarily uses a **Client-Side Rendering (CSR)** approach.
+
+It's designed for developers to create presentations using a combination of Markdown and Vue components.
+
+
+Slidev and Vue.js
+
+Slidev is an application built with the **Vue.js framework**, specifically Vue 3. It leverages Vue's component-based architecture to make the slides highly customizable and interactive. For example, you can embed your own custom Vue components directly into a slide to create live demos or interactive visualizations.
+
+The entire presentation is a **Single-Page Application (SPA)** that is powered by Vue. When you create your slides in Markdown, Slidev parses the content and renders it into Vue components. This allows for features like:
+
+* **Dynamic content:** You can use Vue's data reactivity to create dynamic elements.
+* **Animations:** It integrates with Vue's transition system to handle slide transitions and element animations.
+* **Customization:** You can create your own layouts and components using Vue's syntax, giving you complete control over the design and functionality.
+
+CSR Only?
+
+For a typical presentation, **Slidev is a CSR-only framework**. When you build your presentation for production, it generates static HTML, CSS, and JavaScript files that are meant to be served from a web server. The browser then downloads these files and renders the entire presentation dynamically on the client-side. There's no server-side rendering (SSR) involved in the core functionality of presenting the slides.
+
+This CSR approach is what makes Slidev presentations so portable. They can be hosted on any static hosting service like GitHub Pages or Netlify, and they don't require a dedicated backend server to run. The entire logic for navigating slides, playing animations, and handling interactive elements resides in the client's browser.
+
+{{% /details %}}
+
+1. MermaidJS
+
+2. Katex: so that you get [good looking expressions](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#cagr) $CAGR = \left( \frac{V_f}{V_i} \right)^{\frac{1}{t}} - 1$.
+
+3. Monaco Editor: yea...the one I used [here as simple .md editor](https://jalcocert.github.io/JAlcocerT/audio-recap/#simple-md-editor)
+
+
+
+{{< details title="More on Monaco Editor and CSR 📌" closed="true" >}}
+
+
+Client-Side Rendering (CSR): The entire editor is built on client-side rendering.
+
+The browser downloads the necessary JavaScript and CSS files, and the editor is then constructed and rendered dynamically on the web page.
+
+There is no server-side rendering involved in the editor's core functionality itself.
+
+The **Monaco editor itself does not have a built-in runtime environment** to execute the code.
+
+Its sole purpose is to provide a rich code-editing experience in the browser. 
+
+
+1. The Editor Itself is Client-Side
+
+The entire Monaco editor interface—the text, syntax highlighting, autocompletion, and even the diagnostics (the red squiggly lines for errors)—is a result of **Client-Side Rendering (CSR)**. The JavaScript and TypeScript code that makes the editor work runs directly in your browser. This includes the "language services" that provide the intelligent features, which are often run in a **Web Worker** to avoid freezing the main browser thread. 
+
+However, this is all **static analysis** of the code, not execution. The editor understands the syntax and structure of the code, but it doesn't run it.
+
+2. Runtime Environment is a Separate Component
+
+To actually execute the code written in the Monaco editor, you need to connect it to a separate runtime environment. This can be done in two ways:
+
+* **In-Browser Execution (for JavaScript/TypeScript):** You can use the browser's native JavaScript engine to run the code. This is how many online code sandboxes or playgrounds work. When you click "Run," the website takes the code from the editor and either puts it into an `<iframe>` or runs it directly in the main browser context, displaying the output in a separate console-like area. This is a form of CSR, but it's separate from the editor's core function. 
+
+* **Server-Side Execution (for other languages):** For languages like Python, C++, Java, or even Node.js, the code must be sent to a backend server. This server would have the necessary runtime and security sandboxing in place to execute the code and return the output. This is the most common approach for online coding challenges or platforms like Replit and Glitch. The server handles all the actual execution, while the browser only handles the input (the editor) and output.
+
+{{< /details >}}
+
+
+---
 
 ## BaaS
 
@@ -133,3 +223,106 @@ These services specialize in handling user authentication and authorization, and
 | **Okta** | IAM | Large enterprises and organizations with complex security and identity management requirements. | The most comprehensive, enterprise-grade identity platform on the market. |
 | **Auth0** | AaaS/IAM | Developers building applications that need flexible and customizable authentication. | Powerful extensibility with "Actions" and a wide array of social connections. |
 | **Logto** | Open-source IAM | Teams that want a free, self-hostable, and transparent alternative to proprietary services. | Full control over your data and infrastructure with an active open-source community. |
+
+
+
+---
+
+## FAQ
+
+
+### How to create an SliDev-Editor
+
+
+{{< details title="My Initial requirements for the SliDevJSEditor for Cursor 📌" closed="true" >}}
+
+We want to build a local-first markdown editor for SliDev presentations
+
+The application should be built with a focus on an efficient content edition via markdown, specifically for SliDEVJS.
+
+**Core Requirements** - The following features are mandatory for the initial build of the application:
+
+Folder Selection: The user must be able to select a local folder to scan for files inside `astro-themes`.
+This should be implemented via a visible input field or a file picker dialog, by default, it can be `./slidev/slidev-example`
+
+File Tree/List: After selecting a folder, the application must display the related `slides.md`. If a toggle is ON, a full a list of all `.md` and `.mdx` files found within that folder will also be visible to select.
+
+Side-by-Side Editor: When a file is selected from the list, the **ToastUI Editor** should open on the right-hand side of the screen, with the file list remaining visible on the left.
+
+Editor Functionality: The ToastUI Editor must be fully functional, including markdown editing, saving the .md or .mdx to local storage and a live preview of the content.
+
+Focus Mode: A button or toggle that hides the file list, expanding the editor to full width for a distraction-free writing experience.
+
+File Saving: The application must have a clear mechanism to save the current editor content directly back to the selected local `.md` or `.mdx` file.
+
+We can use **NextJS** as backend as it should be easier to integrate with Slidev than fastAPI.
+
+Consider that the main page of the app will be a landing page, where we describe what it does.
+
+Then it will have a path called /app, where all the editor will be visible and in /app/slidev/slidev-example we will see the statically render of the presentation
+
+Make the UI layout look sleek and modern (gradients and all goodies). 
+
+Make it also mobile friendly.
+
+You can also add the docker containers setup and a Makefile with just 3 commands: spin the nextjs editor baremetal, another to build the container and another to build and run the container.
+
+
+
+**Good-to-Have Features** - I did not mentioned these on the first go
+
+These features are highly recommended to elevate the user experience and create a more complete tool.
+
+Frontmatter Editor: A dedicated UI panel, separate from the main markdown content, for editing a file's frontmatter (e.g., title, date, tags, description). This prevents syntax errors and provides a structured way to manage metadata.
+
+Asset Handling: The ability to drag and drop images directly into the editor. The application should handle placing the image file into a specified local directory (e.e., src/assets/images) and automatically insert the correct markdown link into the document.
+
+File Management: Add basic file management capabilities such as creating new files, creating new folders, and deleting existing files directly from the UI.
+
+
+{{< /details >}}
+
+I got this after the first iteration:
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/nextjs-slidev-editorlanding.png)
+
+```sh
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
+git config --global user.name
+git add .
+git commit -m "Initial commit: Starting slidev-editor via NextJS and ToastUI"
+
+#sudo apt install gh
+gh auth login
+gh repo create slidev-editor --private --source=. --remote=origin --push
+
+#git init && git add . && git commit -m "Initial commit: Starting astro editor via NextJS and ToastUI" && gh repo create astro-editor --private --source=. --remote=origin --push
+```
+
+* https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
+
+
+```sh
+node --version
+```
+
+```sh
+npm init slidev #yarn create slidev
+npm run dev
+#npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+
+#rm -rf .git
+npm run build
+#cd ./dist
+#npx serve
+```
+
+### KPIs for SaaS
+
+LTV
+CAC
+
+> People say to aim for LTV > 3*CAC
