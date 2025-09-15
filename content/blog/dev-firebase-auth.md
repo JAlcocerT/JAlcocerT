@@ -2,7 +2,7 @@
 title: "Firebase Auth SDK. Social Login and email verification."
 date: 2025-09-13T10:20:21+01:00
 draft: false
-tags: ["Journal","SaaS MAU","Social signin/up","Gmail","JustJournalviaSSG"]
+tags: ["Journal","SaaS MAU","Social signin/up","JustJournalviaSSG","GCP BaaS"]
 url: 'firebase-auth-101'
 description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator'
 ---
@@ -21,7 +21,7 @@ But if you want the gmail social signup/in, you need the paid tier (??? TBC WIP)
 Today we are going to use:
 
 * https://firebase.google.com/
-    * https://firebase.google.com/
+    * https://console.firebase.google.com/
 
 
 ## Testing Firebase Auth
@@ -109,9 +109,13 @@ node scripts/list-firebase-users.js
 Remember you are using a [free tier](#free-tier-limitations) with limitations
 {{< /callout >}}
 
+---
+
 ## Conclusions
 
 Making Firebase auth work was literally ~45 minutes.
+
+First time setup I mean, if you know are doing, count ~5min.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Just-Journal-via-SSG" title="Just Journal via SSG - Added Firebase Auth capabilities" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for a NextJS app with Reactmd UI editor for posts. Google social login." >}}

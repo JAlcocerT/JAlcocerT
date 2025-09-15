@@ -721,6 +721,10 @@ The Firebase Auth setup will work on `localhost` out of the box. Make sure to co
 ![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain1.png)
 ![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain2.png)
 ![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain3.png)
+
+* https://github.com/JAlcocerT/py-stonks/blob/main/ui-for-fastapi-firebaseauth.md
+* https://github.com/JAlcocerT/py-stonks/blob/main/docker-compose.fastapi-ui.yml
+
 ![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain5.png)
 
 With FastAPI.....

@@ -122,3 +122,12 @@ Are those 20$/month more valuable than your time? Please...
 Ive been doing some branching to do some tests and try how the data layer can look like.
 
 All from the learnings of the [previous post](https://jalcocert.github.io/JAlcocerT/stonks/).
+
+
+##### Firebase Auth
+
+* https://github.com/JAlcocerT/py-stonks/blob/main/ui-for-fastapi-firebaseauth.md
+* https://github.com/JAlcocerT/py-stonks/blob/main/docker-compose.fastapi-ui.yml
+
+
+##### MailerLite

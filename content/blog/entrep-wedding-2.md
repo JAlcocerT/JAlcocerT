@@ -1,10 +1,10 @@
 ---
 title: "BiP | Wedding Edition"
-date: 2025-09-14T13:20:21+01:00
+date: 2025-09-14T19:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","QR Code Generator","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile"]
+tags: ["Entrepr SaaS","QR Code","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile"]
 description: 'Wedding stuff with PB BaaS. Everything that can be static, is static 🤯'
-url: 'wedding-photo-galleries'
+url: 'building-in-public-wedding-photo-galleries'
 ---
 
 https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/

@@ -1,6 +1,6 @@
 ---
 title: "HUGO Photo Galleries and User uploads"
-date: 2025-09-14
+date: 2025-09-18
 draft: false
 tags: ["Web","SSG","Photo-Gallery","Pocketbase CMS"]
 description: 'Using a HUGO Theme with Pocketbase Auth and Cloudflare R2 + Workers'
