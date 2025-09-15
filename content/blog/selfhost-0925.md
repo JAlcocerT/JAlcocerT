@@ -70,6 +70,7 @@ docker stop $(docker ps -a -q) #stop all
 #docker system df
 #docker image prune -a 
 #docker builder prune -a --force
+docker system prune --all --volumes #release space from old containers
 
 #docker system prune --all --volumes #just clean all...
 ```

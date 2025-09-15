@@ -2,7 +2,7 @@
 title: "Social Auth"
 date: 2025-09-15T10:20:21+01:00
 draft: false
-tags: ["JustJournalviaSSG","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor"]
+tags: ["Firebase vs Logto vs ","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor"]
 url: 'social-signin-101'
 description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator'
 ---
@@ -13,6 +13,10 @@ description: 'Firebase Auth as your WebApp login method. A Serverless Authentica
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slidev-editor" title="A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests" >}}
 {{< /cards >}}
+
+https://sli.dev/guide/hosting#spa
+
+slidev build
 
 
 **Intro**
@@ -34,12 +38,35 @@ And...in the mean time play with a wrapper of a SliDEvJS editor.
 You can get started with such project and cursor like:
 
 
-**The Stack** NextJS + ToastUI + SliDev. Just as I have been using recently on the astro-editor for multilang. 
+**The Stack** [NextJS + ToastUI](#how-to-create-an-slidev-editor) + [SliDev](#slidev-goodies).
 
-https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
+Just as I have been using recently on the [astro-editor for the multilang astro editor](https://jalcocert.github.io/JAlcocerT/astro-i18/). 
+
+```sh
+git clone https://github.com/JAlcocerT/slidev-editor
+cd slidev-editor && make run-detached #localhost:3000 for the editor
+
+# npm list -g @slidev/cli
+# /usr/lib
+# └── @slidev/cli@51.4.0
+#docker system prune --all --volumes
+```
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/slidev.png)
+
+Remember you had presenter mode at `localhost:3030/presenter` and you can even record your presentation
+
+
 
 ## SliDev Goodies
 
+
+* https://github.com/slidevjs/slidev
+* https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-slidevjs" title="SliDev | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 {{% details title="SliDev x VueJS x CSR 🚀" closed="true" %}}
@@ -209,11 +236,18 @@ These services specialize in handling user authentication and authorization, and
 
 **Logto** is a strong, open-source alternative to the proprietary AaaS platforms. It's a self-hostable identity platform that provides a complete set of features for authentication and user management. Because it's open-source, it's a great choice for developers who want more control over their data and infrastructure without the vendor lock-in of a managed service.
 
+* https://logto.io/
+
+> Modern auth infrastructure for developers
+> > Logto adds multi-tenancy, enterprise SSO, and RBAC to your SaaS or AI apps. All with OIDC and OAuth 2.1 made simple, fast, and developer-friendly.
+
 * **Key Features:**
     * **Open-source and self-hostable:** Gives you full ownership and control.
     * **All-in-one:** Includes authentication, authorization, user management, and multi-tenancy.
     * **Framework-free:** Provides SDKs for a wide range of languages and frameworks.
     * **Customizable login experiences:** You can tailor the user-facing parts of the platform to match your brand.
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/logto1-panel.png)
 
 ### Comparison and Summary
 
@@ -240,10 +274,10 @@ We want to build a local-first markdown editor for SliDev presentations
 
 The application should be built with a focus on an efficient content edition via markdown, specifically for SliDEVJS.
 
-**Core Requirements** - The following features are mandatory for the initial build of the application:
+**Core Requirements** - The following features are mandatory for the initial build of the application, which should be created in the root of the repo.
 
-Folder Selection: The user must be able to select a local folder to scan for files inside `astro-themes`.
-This should be implemented via a visible input field or a file picker dialog, by default, it can be `./slidev/slidev-example`
+Folder Selection: The user must be able to select a local folder to scan for files inside `./slidev`.
+This should be implemented via a visible input field or a file picker dialog, by default, it can be `./slidev/slidev-sample`
 
 File Tree/List: After selecting a folder, the application must display the related `slides.md`. If a toggle is ON, a full a list of all `.md` and `.mdx` files found within that folder will also be visible to select.
 

@@ -77,7 +77,7 @@ https://www.youtube.com/watch?v=G7aXgKlhbGk
 
 The UI will be at: http://192.168.0.12:8081/
 
-And it has a swagger API: http://192.168.0.12:8081/swagger/
+And it has a swagger API: `http://192.168.0.12:8081/swagger/`
 
 ![Local AI UI](/blog_img/GenAI/audio/localai.png)
 
