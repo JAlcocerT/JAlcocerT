@@ -278,7 +278,7 @@ Setup [Nextcloud as Docker container](https://github.com/JAlcocerT/Docker/tree/m
 
 ### Hardware Setup
 
-A [travel router](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/), an [action cam](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/) and a kindle.
+A [travel router](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/), an [action cam](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/) and a kindle with `.epub `books already loaded.
 
 > What else would you need?
 

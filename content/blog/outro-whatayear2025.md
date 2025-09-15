@@ -46,7 +46,7 @@ Reading: *excuse alert, this is beeen a year mor of creating than consuming*
 
 And that makes...xyz/12 books.
 
-But, I got to know that this is possible: https://kindlemodding.org/
+
 
 And im able to create a serverless landing ebook page and podcast.
 

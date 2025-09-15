@@ -13,7 +13,7 @@ math: true
 
 Creating a py_stocks v2.0.
 
-Got working streamlit + PB auth. Also a cool FastAPi + Firebase Auth (that works on desktops)
+Got working streamlit + PB auth. Also a cool FastAPi + Firebase Auth (that works on desktops and *not really on phones*)
 
 And a comparison of Flask Plotly vs FastAPi with ChartJS
 
@@ -669,6 +669,11 @@ you can create it the related UI files at ui-for-fastapi
 and the main app that ill run has to be in main and be called app-fastapi-ui.py
 ```
 
+
+#### Testing Firebase Auth
+
+EDIT FROM THE FUTURE: Just coming from the firebase 101 post to try the FastAPI + Firebase Auth Setup here
+
 ```
 can you document in a ./ui-for-fastapi.readme the technology used and if any frameworks were applied for the UI?
 
@@ -682,7 +687,9 @@ One small details to fix:Lates date should be the most recent date of the table 
 Then: Can we think about bringing firebase social sign in signup authentication to this setup?
 
 There will be a env variable called `FIREBASE_ENABLED` true or false
+
 If its false, we keep the setup as it is,
+
 if it is true, there will be the possibility to have below the Statistics a social signin and signup button with google
 
 Users that are logged in, will be able to see an additional chartjs graph with the max draw down information of the selected stock

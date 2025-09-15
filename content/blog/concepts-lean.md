@@ -197,7 +197,7 @@ git checkout -b business-features
 
 3. Keep the **main branch as the single source of truth**
 
-4. Avoid keeping local changes uncommitted, especially when others need to review or experiment with your repository
+4. Avoid keeping local changes uncommitted: *specially when others need to review or experiment with your repository...*
 
 ```sh
 #git clone https://git.exadel.com/exadel-ai-practice/accelerator/project-documentation-generator.git
@@ -211,7 +211,9 @@ git checkout codex-logs #go to a branch to bring some new feature to main
 
 ## FAQ
 
-Lean is a management philosophy that focuses on creating value for customers by eliminating waste and continuously improving processes. VSM value stream mapping, Kanban, Kaizen, and Jidoka are all key concepts that are central to the Lean approach.
+Lean is a management philosophy that focuses on creating value for customers by eliminating waste and continuously improving processes. 
+
+VSM value stream mapping, Kanban, Kaizen, and Jidoka are all key concepts that are central to the Lean approach.
 
 By applying these concepts, we can create a culture of continuous improvement and create products and services that meet the needs of our customers.
 
@@ -221,7 +223,11 @@ Total Productive Maintenance (TPM) is a Lean concept that is focused on maximizi
 
 **TPM aims to eliminate defects, breakdowns, and other inefficiencies** by improving the overall reliability and maintainability of equipment and processes.
 
-In the context of software development, TPM can be applied to improve the efficiency and effectiveness of development processes. This can involve implementing best practices for software maintenance, such as automated testing and continuous integration, to prevent defects and improve the reliability of the software. TPM can also involve involving all team members in the maintenance process, encouraging a culture of ownership and accountability for the quality of the software.
+In the context of software development, TPM can be applied to improve the efficiency and effectiveness of development processes.
+
+This can involve implementing best practices for software maintenance, such as automated testing and continuous integration, to prevent defects and improve the reliability of the software.
+
+TPM can also involve involving all team members in the maintenance process, encouraging a culture of ownership and accountability for the quality of the software.
 
 ### How Lean Relates with DevOps?
 
@@ -242,18 +248,25 @@ The 5S system is a Lean tool used to organize and maintain a clean and efficient
 The 5S principles are: **Sort, Set in order, Shine, Standardize, and Sustain**.
 
 * {{< dropdown title="Sort" closed="true" >}}
+
 The Sort principle involves separating necessary items from unnecessary ones and getting rid of anything that is not needed. This helps to eliminate waste and make the workspace more efficient. In Lean, eliminating waste is a key principle, and sorting helps to identify areas of waste and remove them from the workspace. By reducing clutter and unnecessary items, teams can focus on the tasks that add value and improve the efficiency of their work.
+
 * In software development, the Sort principle can be applied by identifying unnecessary or redundant code and removing it. This helps to reduce complexity and improve the maintainability of the software. By reducing the amount of code that needs to be maintained, teams can focus on the most important parts of the software and improve the overall efficiency of the development process.
 {{< /dropdown >}}
 
 * {{< dropdown title="Set in order" closed="true" >}}
+
 Tt involves organizing the necessary items in a way that is efficient and easy to use. This helps to reduce wasted time and effort, and improve productivity. In Lean, creating a visual workplace that is easy to understand and use is important for optimizing workflow. By organizing tools, equipment, and materials in a logical way, teams can reduce the time and effort required to complete tasks, and make it easier to identify problems or areas of waste.
+
 * In software development, the Set in order principle can be applied by organizing code, documentation, and other artifacts in a logical and consistent way.
 {{< /dropdown >}}
 
 * {{< dropdown title="Shine" closed="true" >}}
+
 The Shine principle involves cleaning and maintaining the workspace to keep it in good condition. This helps to prevent defects and breakdowns, and improve the overall quality of the workspace. In Lean, maintaining a clean and organized workspace is important for optimizing workflow and preventing waste. By regularly cleaning and maintaining tools, equipment, and the workspace, teams can prevent defects and breakdowns, and improve the overall quality of their work.
+
 * In software development, the Shine principle can be applied by regularly reviewing and optimizing the development process to eliminate inefficiencies and prevent defects. This can involve implementing automated testing and continuous integration processes, and regularly reviewing code and development practices to identify areas for improvement. 
+
 {{< /dropdown >}}
 
 * {{< dropdown title="Standardize" closed="true" >}}

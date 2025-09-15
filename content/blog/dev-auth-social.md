@@ -9,7 +9,6 @@ description: 'Firebase Auth as your WebApp login method. A Serverless Authentica
 
 **Tl;DR**
 
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slidev-editor" title="A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests" >}}
 {{< /cards >}}
@@ -17,6 +16,8 @@ description: 'Firebase Auth as your WebApp login method. A Serverless Authentica
 https://sli.dev/guide/hosting#spa
 
 slidev build
+
+Social Signin > One Time Link > Email and PWD
 
 
 **Intro**
@@ -49,6 +50,8 @@ cd slidev-editor && make run-detached #localhost:3000 for the editor
 # npm list -g @slidev/cli
 # /usr/lib
 # └── @slidev/cli@51.4.0
+
+## docker exec -it slidev-sample sh
 #docker system prune --all --volumes
 ```
 
@@ -90,7 +93,11 @@ CSR Only?
 
 For a typical presentation, **Slidev is a CSR-only framework**. When you build your presentation for production, it generates static HTML, CSS, and JavaScript files that are meant to be served from a web server. The browser then downloads these files and renders the entire presentation dynamically on the client-side. There's no server-side rendering (SSR) involved in the core functionality of presenting the slides.
 
-This CSR approach is what makes Slidev presentations so portable. They can be hosted on any static hosting service like GitHub Pages or Netlify, and they don't require a dedicated backend server to run. The entire logic for navigating slides, playing animations, and handling interactive elements resides in the client's browser.
+This CSR approach is what makes Slidev presentations so portable. 
+
+They can be hosted on any static hosting service like GitHub Pages or Netlify, and they don't require a dedicated backend server to run. 
+
+The entire logic for navigating slides, playing animations, and handling interactive elements resides in the client's browser.
 
 {{% /details %}}
 
@@ -143,11 +150,27 @@ This is a common and important feature for user authentication.
 
 The most prominent players in this space are **Firebase Authentication**, **Supabase**, and **PocketBase**.
 
-***
+Once the **main branch** was ready with some SliDev Editor PoC working powered by NextJS...
+
+It was time to do some branching:
+
+```sh
+git branch -a
+
+#create a new branch from main
+git checkout -b firebaseauth main #git checkout -b <new-branch-name> main
+
+#git checkout main && git pull origin main
+git checkout -b business-feature
+```
 
 ### 1. Firebase Authentication 🤖
 
-**Firebase Authentication** is a Backend-as-a-Service provided by Google, so it naturally has deep integration with Google Sign-in. It provides a robust, pre-built authentication system that is easy to integrate into web and mobile apps. It supports various sign-in methods, including Google, Facebook, Twitter, and email/password. Its tight integration with other Firebase services like Firestore and Cloud Functions makes it a popular choice for developers already in the Google ecosystem.
+**Firebase Authentication** is a Backend-as-a-Service provided by Google, so it naturally has deep integration with Google Sign-in.
+
+It provides a robust, pre-built authentication system that is easy to integrate into web and mobile apps. It supports various sign-in methods, including Google, Facebook, Twitter, and email/password.
+
+Its tight integration with other Firebase services like Firestore and Cloud Functions makes it a popular choice for developers already in the Google ecosystem.
 
 * **Pros:**
     * **Extremely easy setup** for Google Sign-in.
@@ -162,7 +185,37 @@ The most prominent players in this space are **Firebase Authentication**, **Supa
 
 
 
-***
+{{% details title="Firebase Auth branch with Cursor 🚀" closed="true" %}}
+
+
+I have just created a new branch to experiment with firebase authentication
+
+can you create a z-firease-auth.md to explain what I need to get from google to get this going?
+
+and also implement a email/password sign in sign up, which also will allow for google social signin?
+
+the landing page should be visible for all, and the demo presentation as well, but the editor itself it has to be auth protected
+
+for now, all users will see the very same editor
+
+
+{{% /details %}}
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-1.png)
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-2.png)
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-3.png)
+
+![NextJS + Firebase Auth working](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-4.png)
+
+As this was the 3rd time I did this, it was 2 min, instead of the initial 45 and the 5 min later on.
+
+BTW: email verification when not doing the social signup also working (goes to spam though) from domain `dmproperties.firebaseapp.com`
+
+https://jalcocert.github.io/JAlcocerT/stonks/#astro-x-data-x-chartjs
+https://jalcocert.github.io/JAlcocerT/firebase-auth-101/
+
 
 ### 2. Supabase 🚀
 

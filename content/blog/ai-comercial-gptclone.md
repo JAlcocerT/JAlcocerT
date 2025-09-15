@@ -261,7 +261,7 @@ You can make some F/OSS Project that delegates the model execution to a third pa
 
 Some other interesting repositories to have a look for ideas:
 
-* https://github.com/mckaywrigley/kindle-gpt
+
 * https://github.com/sindresorhus/awesome-chatgpt
 * https://github.com/pinokiocomputer/pinokio
 

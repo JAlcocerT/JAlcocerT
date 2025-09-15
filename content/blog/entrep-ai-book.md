@@ -327,17 +327,6 @@ Essentially, both systems use a two-step process: first, an engine (`knitr` for 
 
 The primary difference is the front-end tool and the language-specific processing, but Pandoc is the shared, underlying engine that makes the final document conversion possible.
 
-### Kindle Notes to AI
-
-Kindle notes are saved into a `.txt` in the device.
-
-I was storing notes for few years already and im really curious to see whats inside.
-
-> I gave it a try with Google's NotebookLLM, but...custom is custom
-
-{{< callout type="info" >}}
-Kindles are not recognized on ubuntu, but you can access their content via `https://read.amazon.com/landing`
-{{< /callout >}}
 
 ### More Books Stuff
 
@@ -350,6 +339,6 @@ Kindles are not recognized on ubuntu, but you can access their content via `http
 
 * https://github.com/dakoller/markdown-epub-converter
 
->  A simple Docker-based REST API that converts Markdown to EPUB format using Pandoc. Send markdown content via JSON, get an EPUB file back. 
+>  A simple Docker-based REST API that converts Markdown to EPUB format using Pandoc. Send markdown content via JSON, get an `EPUB` file back. 
 
 * https://omnitools.app/pdf/pdf-to-epub
