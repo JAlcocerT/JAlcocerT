@@ -1,9 +1,9 @@
 ---
 title: "Trying NixOS with VMs"
-date: 2025-09-16
+date: 2025-02-07
 draft: false
 tags: ["QEMU","WSL","Virtual Machines","GNOME Boxes"]
-summary: 'How to use VMs and try a new OS like NixOS'
+description: 'How to use VMs and try a new OS like NixOS'
 url: 'testing-nix-os'
 ---
 

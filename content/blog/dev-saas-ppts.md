@@ -1,8 +1,8 @@
 ---
-title: "SlidevJS"
-date: 2025-09-16T01:20:21+01:00
+title: "[Micro SaaS] AI Driven PPTs"
+date: 2025-09-17T01:20:21+01:00
 draft: false
-tags: ["AI SaaS","Codex CLI"]
+tags: ["BiP","Agents","Codex CLI"]
 description: 'BiP user flows around newsletter layers'
 url: 'ai-driven-presentations'
 ---

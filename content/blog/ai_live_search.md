@@ -126,18 +126,31 @@ See how:
 https://www.fahdmirza.com/2024/07/install-perplexica-with-searxng-and.html
  -->
 
-Sometime ago Whoogle and SearXNG to make private Web Search.
+Sometime ago I used Whoogle and SearXNG to make private Web Search.
 
-But GenAI can help us to retrieve relevant Web results.
-
-* *ttps://fossengineer.com/selfhosting-whoogle-docker/
+* https://fossengineer.com/selfhosting-whoogle-docker/
 * SearXNG: https://fossengineer.com/selfhosting-whoogle-docker/#searxng-with-docker
+
+But today, GenAI can help us to retrieve relevant Web results: https://www.perplexity.ai
+
+* https://docs.perplexity.ai/getting-started/overview
+
+It's all about real time information, right?
+
+
+**EDIT** Coming from the future:
+
+![alt text](/blog_img/GenAI/ai-search/perplexity-pro.png)
+
+![alt text](/blog_img/GenAI/ai-search/perplexity-pro-offer.png)
+
+
+
+### The Perplexica AI Project
 
 Perplexica is an **AI-powered search engine**. 
 
 > It is an Open source alternative to Perplexity AI
-
-### The Perplexica AI Project
 
   * {{< newtab url="https://github.com/ItzCrazyKns/Perplexica" text="Project Source Code at Github" >}}
   * {{< newtab url="https://github.com/ItzCrazyKns/Perplexica?tab=MIT-1-ov-file#readme" text="License MIT" >}} ❤️
