@@ -1,10 +1,10 @@
 ---
-title: "PyStonks"
+title: "PyStonks v1"
 date: 2025-09-07T02:20:21+01:00
 draft: false
-description: A PyStocks Blueprint for webapp authentication. Streamlit, Flask, FastAPI, PB.
+description: A PyStocks Blueprint for webapp authentication. FastAPI x Firebase Auth.
 url: 'stonks'
-tags: ["yfinance","Streamlit x PocketBase login/signup","ChartJS","Animations","FinanceInMotion"]
+tags: ["yfinance x Flask x sqlite","Streamlit x PocketBase login/signup","ChartJS","Animations","FinanceInMotion"]
 math: true
 ---
 

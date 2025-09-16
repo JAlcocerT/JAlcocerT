@@ -1,8 +1,8 @@
 ---
-title: "Shipping PyStonks with a friend"
+title: "Shipping PyStonks v2 with a friend 🐷"
 date: 2025-09-11T02:20:21+01:00
 draft: false
-description: How NOT to marry a framework, make that BRD and ship fast. PyStocks 🐷.
+description: How NOT to marry a framework, make that BRD and ship fast. PyStocks.
 url: 'py-stonks'
 tags: ["WebApp","yfinance","FastAPI x MailerLite","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
 math: true
@@ -32,6 +32,12 @@ Now, Im going to take back the collaboration with my friend: btw, he is a [PDH](
 {{< /cards >}}
 
 
+---
+
+## Conclusions
+
+
+---
 
 ## FAQ
 

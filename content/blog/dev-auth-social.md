@@ -253,9 +253,15 @@ Unlike with FastAPI + PyStonks, The Firebase Auth setup **worked on smartphones*
 
 ![Firebase Auth pwd policy](/blog_img/entrepre/public-build/slidev-editor/fb-pwd-policy.png)
 
+{{< callout type="info" >}}
+You can pull the firebase registered users via CLI!
+{{< /callout >}}
+
 ### 2. Supabase 🚀
 
-**Supabase** is an open-source alternative to Firebase, often referred to as "Firebase for PostgreSQL." It provides a full suite of BaaS features, including authentication, a real-time database, and serverless functions.
+**Supabase** is an open-source alternative to Firebase, often referred to as "Firebase for PostgreSQL."
+
+It provides a full suite of BaaS features, including authentication, a real-time database, and serverless functions.
 
 Supabase Auth supports various social providers, including Google.
 
@@ -275,7 +281,16 @@ Because it's open-source and uses a **relational database (PostgreSQL)**, it giv
 
 ### 3. PocketBase ⚡
 
-**PocketBase** is a unique, lightweight BaaS platform packaged as a **single-file binary** that includes a Go backend and an embedded SQLite database. It's a great choice for quick prototypes and small-to-medium-sized applications. PocketBase supports OAuth2 authentication, which means you can easily implement Google Sign-in. Because it's self-hosted, you have full control over your data and infrastructure.
+**PocketBase** is a unique, lightweight BaaS platform packaged as a **single-file binary** that includes a Go backend and an embedded SQLite database. It's a great choice for quick prototypes and small-to-medium-sized applications. 
+
+PocketBase supports OAuth2 authentication, which means you can easily implement Google Sign-in.
+
+Because it's **self-hosted**, you have full control over your data and infrastructure.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pocketbase" title="Pocketbase 101 | Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="Pocketbase Docker Config Setup 🐋 ↗" >}}
+{{< /cards >}}
 
 * **Pros:**
     * **Extremely simple and fast to deploy** (just one file).
@@ -290,13 +305,15 @@ Because it's open-source and uses a **relational database (PostgreSQL)**, it giv
 
 ## AaaS
 
-That's a great question, as it gets to the heart of a broader category of services beyond just pure "BaaS" platforms. When you need robust user management, including social sign-in and email verification, but don't need the entire suite of backend services (like a database, file storage, etc.), you're looking for an **Authentication-as-a-Service (AaaS)** or **Identity and Access Management (IAM)** provider.
+When you need robust user management, including social sign-in and email verification, but don't need the entire suite of backend services (like a database, file storage, etc.), you're looking for an **Authentication-as-a-Service (AaaS)** or **Identity and Access Management (IAM)** provider.
 
 These services specialize in handling user authentication and authorization, and they often integrate with your existing backend and application architecture. Here are some of the most popular and powerful options:
 
 ### 1. Clerk 💼
 
-**Clerk** is a modern and developer-friendly platform that focuses on providing a seamless, full-stack user management experience. It's particularly popular with front-end developers using frameworks like Next.js, as it provides pre-built, customizable UI components for sign-up, sign-in, user profiles, and more. It offers a generous free tier and is known for its excellent developer experience.
+**Clerk** is a modern and developer-friendly platform that focuses on providing a seamless, full-stack user management experience. 
+
+It's particularly popular with front-end developers using frameworks like Next.js, as it provides pre-built, customizable UI components for sign-up, sign-in, user profiles, and more. It offers a generous free tier and is known for its excellent developer experience.
 
 * **Key Features:**
     * **Pre-built UI components:** This is a huge time-saver. You can drop in components for authentication flows, user profiles, and organization management.
@@ -306,7 +323,11 @@ These services specialize in handling user authentication and authorization, and
 
 ### 2. Okta 🏢
 
-**Okta** is a massive, enterprise-grade identity platform. It's a leader in the IAM space, focusing on both workforce identity (managing employee access) and customer identity (CIAM) for your applications. Okta's solutions are incredibly comprehensive, scalable, and secure. They offer a huge range of features, from simple social login to complex B2B authentication and single sign-on (SSO).
+**Okta** is a massive, enterprise-grade identity platform.
+
+It's a leader in the IAM space, focusing on both workforce identity (managing employee access) and customer identity (CIAM) for your applications.
+
+Okta's solutions are incredibly comprehensive, scalable, and secure. They offer a huge range of features, from simple social login to complex B2B authentication and single sign-on (SSO).
 
 * **Key Features:**
     * **Enterprise-grade security:** Provides robust features like multi-factor authentication (MFA), threat detection, and advanced session management.
@@ -317,7 +338,9 @@ These services specialize in handling user authentication and authorization, and
 
 ### 3. Auth0 (by Okta) 🚀
 
-**Auth0** was acquired by Okta and is often considered the developer-centric, more flexible arm of the company. It's known for its powerful, yet easy-to-use platform that allows developers to add authentication and authorization to their applications with minimal effort. It's a great middle ground between the full BaaS platforms and the more complex enterprise solutions.
+**Auth0** was acquired by Okta and is often considered the developer-centric, more flexible arm of the company. 
+
+It's known for its powerful, yet easy-to-use platform that allows developers to add authentication and authorization to their applications with minimal effort. It's a great middle ground between the full BaaS platforms and the more complex enterprise solutions.
 
 * **Key Features:**
     * **Universal Login:** Provides a customizable hosted login page, so you don't have to build your own UI.
@@ -327,11 +350,16 @@ These services specialize in handling user authentication and authorization, and
 
 ### 4. Logto 🦊
 
-**Logto** is a strong, open-source alternative to the proprietary AaaS platforms. It's a self-hostable identity platform that provides a complete set of features for authentication and user management. Because it's open-source, it's a great choice for developers who want more control over their data and infrastructure without the vendor lock-in of a managed service.
+**Logto** is a strong, open-source alternative to the proprietary AaaS platforms. 
+
+It's a self-hostable identity platform that provides a complete set of features for authentication and user management. 
+
+Because it's open-source, it's a great choice for developers who want more control over their data and infrastructure without the vendor lock-in of a managed service.
 
 * https://logto.io/
 
 > Modern auth infrastructure for developers
+
 > > Logto adds multi-tenancy, enterprise SSO, and RBAC to your SaaS or AI apps. All with OIDC and OAuth 2.1 made simple, fast, and developer-friendly.
 
 * **Key Features:**
@@ -341,6 +369,11 @@ These services specialize in handling user authentication and authorization, and
     * **Customizable login experiences:** You can tailor the user-facing parts of the platform to match your brand.
 
 ![alt text](/blog_img/entrepre/public-build/slidev-editor/logto1-panel.png)
+
+
+---
+
+## Conclusions
 
 ### Comparison and Summary
 
@@ -359,7 +392,6 @@ These services specialize in handling user authentication and authorization, and
 
 
 ### How to create an SliDev-Editor
-
 
 {{< details title="My Initial requirements for the SliDevJSEditor for Cursor 📌" closed="true" >}}
 
@@ -427,6 +459,8 @@ gh repo create slidev-editor --private --source=. --remote=origin --push
 
 #git init && git add . && git commit -m "Initial commit: Starting astro editor via NextJS and ToastUI" && gh repo create astro-editor --private --source=. --remote=origin --push
 ```
+
+> On this one, created main for the base functionalities and created branch to test the authentication methods.
 
 * https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
 

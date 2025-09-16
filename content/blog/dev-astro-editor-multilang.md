@@ -29,7 +29,6 @@ The
 
 ## An Editor for Astro Blog Posts
 
-
 I know there are few ways to do markdown edits...
 
 But after [trying react markdown](https://jalcocert.github.io/JAlcocerT/astro-journal-theme/) and [toast ui with the typography theme](https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/), I stay with ToastUI:
@@ -162,8 +161,9 @@ I would say this is the Fuwari in Hugo :)
 
 > MIT
 
+## Conclusions
 
-
+Got that ToastUI editor working powered by NextJS for astro sites!
 
 ---
 

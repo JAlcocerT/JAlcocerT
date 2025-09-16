@@ -20,6 +20,10 @@ Now its time to bring the AI part to the equation.
 
 ## Live info for your PPTs
 
+{{< callout type="warning" >}}
+These APIs are paywalled!
+{{< /callout >}}
+
 ### Grok API
 
 Few weeks ago I was tinkering with [grok API](https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api/), which can be used also via LiteLLM.
@@ -40,6 +44,20 @@ https://jalcocert.github.io/JAlcocerT/live-search-and-research-with-ai/#perplexi
 ![alt text](/blog_img/GenAI/ai-search/perplexity-pro-offer.png)
 
 
+```sh
+curl https://api.perplexity.ai/chat/completions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "sonar-pro",
+    "messages": [
+      {
+        "role": "user", 
+        "content": "What are the major AI developments and announcements from today across the tech industry?"
+      }
+    ]
+  }' | jq
+```
 
 ---
 

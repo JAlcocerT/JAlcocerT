@@ -1,13 +1,15 @@
 ---
-title: "FlaskCMS v0.2"
-date: 2025-09-16T17:20:21+01:00
+title: "Flask x Stripe Links"
+date: 2025-09-16T13:20:21+01:00
 draft: false
-tags: ["Astro x Flask","Markdown editors","Cursor MCP and AppImageLauncher","Temporal io"]
-description: 'Markdown and Flask working together.'
+tags: ["Astro","Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporal io"]
+description: 'Markdown and Flask working together. A FlaskCMS v0.2 for Mental Health that I did not need.'
 url: 'flask-cms-for-ssgs'
 ---
 
-**TL;DR** v0.2 of the [Flask Powered CMS](#a-cms-with-flask). 
+**TL;DR**
+
+v0.2 of the [Flask Powered CMS](#a-cms-with-flask). 
 
 From Hugo Galleries to Mental Health and RealEstate?
 
@@ -47,8 +49,18 @@ In the end, it would be great to just plug any OSS MIT Licensed Astro or HUGO SS
 
 But we have to get started with something first :)
 
+### Mental Health
 
+With stripe, you can prefilled emails like: `?prefilled_email=whateverthatis@gmail.com`
 
+So users that are onboarded to your CMS/SaaS, will have that prefilled already.
+* https://stripe.com/en-pl/tax/pricing
+* https://docs.stripe.com/payouts#payout-schedule
+
+https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefilled_email=whateverthatis@gmail.com
+
+![alt text](/blog_img/entrepre/stripe/stripe101-paymentlinks.png)
+![alt text](/blog_img/entrepre/stripe/stripe101-subs.png)
 
 
 ---
