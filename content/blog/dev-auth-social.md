@@ -152,7 +152,7 @@ The most prominent players in this space are **Firebase Authentication**, **Supa
 
 Once the **main branch** was ready with some SliDev Editor PoC working powered by NextJS...
 
-It was time to do some branching:
+It was time to do [some git branching](https://jalcocert.github.io/JAlcocerT/git-recap/):
 
 ```sh
 git branch -a
@@ -161,7 +161,7 @@ git branch -a
 git checkout -b firebaseauth main #git checkout -b <new-branch-name> main
 
 #git checkout main && git pull origin main
-git checkout -b business-feature
+#git checkout -b business-feature
 ```
 
 ### 1. Firebase Authentication 🤖
@@ -207,6 +207,23 @@ for now, all users will see the very same editor
 
 ![alt text](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-3.png)
 
+```sh
+#git clone https://github.com/JAlcocerT/slidev-editor ./slidev-editor-firebasebranch
+#cd slidev-editor-firebasebranch
+
+git branch -a
+git checkout firebaseauth #this brings the remote branch to your PC
+```
+
+Get your Firebase Setup and fill the `env.local`: https://github.com/JAlcocerT/slidev-editor/blob/firebaseauth/.env.example
+
+```sh
+#nano .env.local
+#npm run dev
+#docker compose build slidev-editor
+make run #or make run-detached
+```
+
 ![NextJS + Firebase Auth working](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-4.png)
 
 As this was the 3rd time I did this, it was 2 min, instead of the initial 45 and the 5 min later on.
@@ -216,10 +233,33 @@ BTW: email verification when not doing the social signup also working (goes to s
 https://jalcocert.github.io/JAlcocerT/stonks/#astro-x-data-x-chartjs
 https://jalcocert.github.io/JAlcocerT/firebase-auth-101/
 
+And for the server x300:
+
+```sh
+#docker compose -f docker-compose.server.yml up --build
+docker compose -f docker-compose.server.yml up --build -d
+#docker network connect cloudflared_tunnel slidev-editor #network -> container name
+docker inspect slidev-editor --format '{{json .NetworkSettings.Networks}}' | jq #publish it via Zero Trust with pystonks-app-streamlit:8501
+```
+
+With that ready, just do your CF setup: `slidev-editor:3000`
+
+
+{{< callout type="warning" >}}
+Unlike with FastAPI + PyStonks, The Firebase Auth setup **worked on smartphones** too. Remember to config **custom domains**!
+{{< /callout >}}
+
+![Configuring firebase auth domains to work via cloudflare tunnels](/blog_img/entrepre/public-build/slidev-editor/fb-auth-domains.png)
+
+![Firebase Auth pwd policy](/blog_img/entrepre/public-build/slidev-editor/fb-pwd-policy.png)
 
 ### 2. Supabase 🚀
 
-**Supabase** is an open-source alternative to Firebase, often referred to as "Firebase for PostgreSQL." It provides a full suite of BaaS features, including authentication, a real-time database, and serverless functions. Supabase Auth supports various social providers, including Google. Because it's open-source and uses a **relational database (PostgreSQL)**, it gives developers more flexibility and control.
+**Supabase** is an open-source alternative to Firebase, often referred to as "Firebase for PostgreSQL." It provides a full suite of BaaS features, including authentication, a real-time database, and serverless functions.
+
+Supabase Auth supports various social providers, including Google.
+
+Because it's open-source and uses a **relational database (PostgreSQL)**, it gives developers more flexibility and control.
 
 * **Pros:**
     * **Open-source**, which offers flexibility and the ability to self-host.
@@ -352,8 +392,7 @@ Make the UI layout look sleek and modern (gradients and all goodies).
 
 Make it also mobile friendly.
 
-You can also add the docker containers setup and a Makefile with just 3 commands: spin the nextjs editor baremetal, another to build the container and another to build and run the container.
-
+You can also add the docker containers setup with a Dockerfile.dev a docker-compose.dev.yml and a Makefile with just 3 commands: spin the nextjs editor baremetal, another to build the container and another to build and run the container within this dev mode.
 
 
 **Good-to-Have Features** - I did not mentioned these on the first go

@@ -125,12 +125,10 @@ First time setup I mean, if you know are doing, count ~5min.
 
 
 {{< callout type="warning" >}}
-Lernt with FastAPI + PyStonks. The Firebase Auth setup will work on `localhost` out of the box. Make sure to configure **custom domains** properly
+Learnt with FastAPI + PyStonks. The Firebase Auth setup will work on `localhost` out of the box. Make sure to configure **custom domains** properly
 {{< /callout >}}
 
-![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain6.png)
-
-
+![Firebase custom domains](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain6.png)
 
 ### Free Tier Limitations
 

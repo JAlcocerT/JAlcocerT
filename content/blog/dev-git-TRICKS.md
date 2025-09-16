@@ -80,7 +80,7 @@ git commit -m "Initial commit: YFinance stock analysis project"
 
 #sudo apt install gh
 gh auth login
-gh repo create py-stonks --private --source=. --remote=origin --push
+gh repo create py-some-project --private --source=. --remote=origin --push
 ```
 
 #### Creating Releases
