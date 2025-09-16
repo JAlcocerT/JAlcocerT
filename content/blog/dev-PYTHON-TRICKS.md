@@ -1,6 +1,6 @@
 ---
-title: "How to do practically everything with Python"
-date: 2025-09-15T23:20:21+01:00
+title: "How to do (practically) everything with Python"
+date: 2025-12-10T23:20:21+01:00
 draft: false
 tags: ["Dev","Animations","QR","WebApps"]
 url: 'python-recap'

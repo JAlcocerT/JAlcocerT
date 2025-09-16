@@ -2,7 +2,7 @@
 title: "How to do live search/research with AI"
 date: 2025-05-23
 draft: false
-tags: ["AI","Web Search","LLMs","Grok","DuckDuckGo API Search","Ollama"]
+tags: ["AI","Web Search","LLMs","Grok","DuckDuckGo API","Ollama"]
 description: 'Using Grok XAi API and Local Deep Researcher compared with Perplexity/Perplexica.'
 url: 'live-search-and-research-with-ai'
 ---
@@ -27,21 +27,22 @@ Which is crazy.
 But how about other ways to interact with *real/live* data for LLM context?
 
 {{< callout type="warning" >}}
-Mind the contamination that live data might provide to the LLMs. Plus the possibility to mis [Dynamic content](https://www.firecrawl.dev/blog/mastering-firecrawl-scrape-endpoint) - like [gh discussions](https://github.com/orgs/modelcontextprotocol/discussions/364#discussioncomment-13264660)
+Mind the contamination that live data might provide to the LLMs.
 {{< /callout >}}
+
+Plus the possibility to miss-out on [Web Dynamic content](https://www.firecrawl.dev/blog/mastering-firecrawl-scrape-endpoint) - like [gh discussions](https://github.com/orgs/modelcontextprotocol/discussions/364#discussioncomment-13264660)
 
 
 ## Live Search with LLMs
 
 Recently, xAI added [live search](https://docs.x.ai/docs/guides/live-search) capabilities to their models.
 
-> Goodbye knowledge cuttof they say!
+> Goodbye knowledge cuttof! *or so they say*
 
 But actually, there has been couple of tools that allow us to interact with Web information.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf" title="WindSurf IDE" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Scrapping" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf" title="WindSurf IDE" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Agents inside your IDE" >}}
 {{< /cards >}}
 
 
@@ -55,6 +56,7 @@ What you need to have handy:
     * https://console.x.ai/
     * https://docs.x.ai/docs/overview
     * https://docs.x.ai/docs/models
+    * https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/GrokAPI 🐍
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
@@ -143,6 +145,23 @@ It's all about real time information, right?
 ![alt text](/blog_img/GenAI/ai-search/perplexity-pro.png)
 
 ![alt text](/blog_img/GenAI/ai-search/perplexity-pro-offer.png)
+
+And...Perplexity offers an API:
+
+```sh
+curl https://api.perplexity.ai/chat/completions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "sonar-pro",
+    "messages": [
+      {
+        "role": "user", 
+        "content": "What are the major AI developments and announcements from today across the tech industry?"
+      }
+    ]
+  }' | jq
+```
 
 
 

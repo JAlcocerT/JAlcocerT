@@ -2,14 +2,15 @@
 title: "How to use Grok (X) API"
 date: 2025-05-08
 draft: false
-tags: ["AI","LLM","Grok API"]
+tags: ["AI","LLM","Grok API","Live Search"]
 description: 'A Recap on AI APIs calls and learning how to use Grok API'
 url: 'how-to-use-grok-api'
 ---
 
+* https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/GrokAPI 🐍
+
 {{< cards >}}
-  {{< card link="" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
-  {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with " >}}
+  {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi-Agents" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Agents" >}}
 {{< /cards >}}
 
 ## About Grok
