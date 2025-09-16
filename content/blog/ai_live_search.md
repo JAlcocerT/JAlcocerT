@@ -45,6 +45,18 @@ But actually, there has been couple of tools that allow us to interact with Web 
   {{< card link="https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf" title="WindSurf IDE" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Agents inside your IDE" >}}
 {{< /cards >}}
 
+{{< details title="AI Asisted Web Search... 📌" closed="true" >}}
+
+Perplexity? Or **Perplexica**?
+
+* https://github.com/rashadphz/farfalle - 🔍 AI search engine - self-host with local or cloud LLMs
+* https://github.com/InternLM/MindSearch - 🔍 An LLM-based Multi-agent Framework of Web Search Engine (like Perplexity.ai Pro and SearchGPT)
+* Tavily
+* https://github.com/developersdigest/llm-answer-engine - Build a Perplexity-Inspired Answer Engine Using Next.js, Groq, Llama-3, Langchain, OpenAI, Upstash, Brave & Serper
+
+{{< /details >}}
+
+
 
 ### Grok Live Search
 

@@ -178,7 +178,7 @@ You will get a a firefox **browser tab** with the following diagram and place to
 
 
 {{< callout type="info" >}}
-By default uses **[duckduckgo](https://pypi.org/project/duckduckgo-search/), with no API key required**. You will need one for SearXNG, Tavily or Perplexity
+By default uses **[duckduckgo](https://pypi.org/project/duckduckgo-search/), with no API key required**. You will need one for SearXNG, Tavily...
 {{< /callout >}}
 
 The dependencies are specified [here](https://github.com/JAlcocerT/local-deep-researcher/blob/main/pyproject.toml#L11)

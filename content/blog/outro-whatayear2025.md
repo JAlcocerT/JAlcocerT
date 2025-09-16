@@ -14,6 +14,8 @@ This year is been like a lot of [do](https://nav.al/do)
 
 ![Me during Y2025](/img/kitten-cat.gif#center)
 
+It looks so long back when I used `you.com` to help me with work.
+
 
 
 

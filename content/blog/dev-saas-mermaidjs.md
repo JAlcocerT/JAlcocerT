@@ -1,6 +1,6 @@
 ---
 title: "Diagrams and workflows as a Code with Agents"
-date: 2025-09-17T01:20:21+01:00
+date: 2025-09-18T01:20:21+01:00
 draft: false
 tags: ["AI SaaS","Codex CLI","MermaidJS","Grok vs Perplexity"]
 description: 'BiP user flows around newsletter layers'
@@ -39,7 +39,16 @@ And just this week I got...
 
 ### Perplexity API
 
-https://jalcocert.github.io/JAlcocerT/live-search-and-research-with-ai/#perplexity
+
+* https://sourcegraph.com/search
+
+
+* https://www.perplexity.ai/discover
+
+
+https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/PerplexityAPI
+
+https://jalcocert.github.io/JAlcocerT/live-search-and-research-with-ai/#perplexity 🐍
 
 ![alt text](/blog_img/GenAI/ai-search/perplexity-pro-offer.png)
 

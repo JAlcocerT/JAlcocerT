@@ -549,38 +549,17 @@ SysLinuxOS provides a solid foundation for system administrators, but users shou
 #### Stop Coding as in 2023
 
 
-{{< details title="AI Asisted Dev Tools...Codeium?ContinueDev? Copilot?Aide?Cursor?Cline...? 📌" closed="true" >}}
+{{< details title="AI Asisted Dev Tools...Codeium? ContinueDev? Copilot? Aide? Cursor? Cline...? 📌" closed="true" >}}
+
+I need to choose one...
 
 * ClaudeDev / [Cline](https://github.com/cline/cline) - https://www.youtube.com/watch?v=vU0LY8-P52A
 * ContnueDev - https://www.youtube.com/watch?v=qXNecVIxRi0&t=13s
 
-
 {{< /details >}}
-
-
-
-
-{{< details title="AI Asisted Web Search... 📌" closed="true" >}}
-
-Perplexity? Or **Perplexica**?
-
-* https://github.com/rashadphz/farfalle - 🔍 AI search engine - self-host with local or cloud LLMs
-* https://github.com/InternLM/MindSearch - 🔍 An LLM-based Multi-agent Framework of Web Search Engine (like Perplexity.ai Pro and SearchGPT)
-* Tavily
-* https://github.com/developersdigest/llm-answer-engine - Build a Perplexity-Inspired Answer Engine Using Next.js, Groq, Llama-3, Langchain, OpenAI, Upstash, Brave & Serper
-
-
-
-
-
-{{< /details >}}
-
 
 
 ---
-
-
-
 ## VectorDBs
 
 When you are using [embedding models](https://www.youtube.com/watch?v=QdDoFfkVkcw) to give LLMs context about your files, this is where that knowledge goes.

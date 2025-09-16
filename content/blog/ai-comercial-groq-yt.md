@@ -578,22 +578,11 @@ def login():
 
 ### FAQ
 
-<!-- * https://sourcegraph.com/search
-
-* you.com
-
-* https://www.perplexity.ai/discover
-
-* Google Colab Free Tier
-2-bit Quantization is Magical! See How to Run Mixtral-8x7B on Free-tier Colab
-https://www.youtube.com/watch?v=Qx8PNk4OkUA -->
-
 
 | **What's Trending Now?**        | **Description**                                                                                               |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
 | **[Toolify](https://www.toolify.ai/)**       | A platform that showcases the latest AI tools and technologies, helping users discover trending AI solutions.  |
 | **[Future Tools](https://www.futuretools.io/)** | A website dedicated to featuring the most cutting-edge and trending tools in the tech and AI industry.          |
-
 
 
 {{< dropdown title="How to use Groq API Step by Step with Python ⏬" closed="true" >}}
