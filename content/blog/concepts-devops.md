@@ -331,7 +331,8 @@ volumes:
 
 It is the primary tool for interacting with and managing Kubernetes clusters, providing a versatile way to handle all aspects of cluster operations.
 
-Common kubectl Commands
+Common kubectl Commands:
+ 
 kubectl get pods: Lists all pods in the current namespace.
 kubectl create -f <filename>: Creates a resource specified in a YAML or JSON file.
 kubectl apply -f <filename>: Applies changes to a resource from a file.
@@ -340,12 +341,12 @@ kubectl describe <resource> <name>: Shows detailed information about a specific 
 kubectl logs <pod_name>: Retrieves logs from a specific pod.
 kubectl exec -it <pod_name> -- /bin/bash: Executes a command, like opening a bash shell, in a specific container of a pod.
 
-### Slaves
+> You will need to understand what are the K8s master/Slave
 
 
 ## Monitoring
 
-You can try with Beszel:
+You can try with a custom Grafana dashboard or with Beszel:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring with Beszel" >}}
@@ -353,7 +354,7 @@ You can try with Beszel:
 
 Or with Uptime Kuma:
 
-Be aware of the http status codes: https://it-tools.tech/http-status-codes
+Be aware of the http **status codes**: https://it-tools.tech/http-status-codes
 
 With Uptime Kuma, you can get quickly an uptime pages for your services:
 
@@ -362,6 +363,8 @@ With Uptime Kuma, you can get quickly an uptime pages for your services:
 {{< /cards >}}
 
 ![Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
+
+> People [build business](#uptime-kuma-api) around this kind of things: https://status.perplexity.com/, see https://instatus.com/pricing
 
 <!-- 
 https://www.youtube.com/watch?v=fxVNTffZC2U 
@@ -568,3 +571,83 @@ In summary, while Kubeflow and MLflow are not directly related and serve differe
 * <https://www.youtube.com/watch?v=s_o8dwzRlu4>
 * <https://www.youtube.com/watch?v=DCoBcpOA7W4>
 * <https://www.youtube.com/watch?v=n-fAf2mte6M>
+
+### Uptime Kuma API
+
+Yes, Uptime Kuma does provide an API, but it is primarily an internal API designed for the application's own use and is not officially supported for third-party integrations. 
+
+It offers a Socket.io real-time communication API after authentication and some RESTful API endpoints for tasks like push monitors, status badges, and public status page data.[1]
+
+Using the API (especially through unofficial wrappers like the Python wrapper "uptime-kuma-api"), you can programmatically add new monitors (websites or services) and retrieve some monitoring data.
+
+For example, you can create a new HTTP monitor by specifying the type, name, and URL via the API.[2][3]
+
+The API allows you to:
+
+- Post new websites or services to monitor.
+- Retrieve their status and monitoring data.
+- Access real-time updates through Socket.io.
+- Get status badges or integrate with Prometheus metrics.
+  
+However, the official API is somewhat limited and not guaranteed to be stable or fully documented for external use, so use it with caution.
+
+In summary:
+- You can add monitors programmatically.
+- You can retrieve monitoring data (status, alerts).
+- The API is mostly internal and unofficial but functional.
+- There are third-party wrappers to help interact with it.
+
+This means yes, you can post new websites to monitor and retrieve their data using the API, but expect it to be experimental or unofficial.[3][1][2]
+
+[1](https://github.com/louislam/uptime-kuma/wiki/API-Documentation)
+[2](https://github.com/lucasheld/uptime-kuma-api)
+[3](https://pypi.org/project/uptime-kuma-api/)
+[4](https://uptime-kuma-api.readthedocs.io)
+[6](https://www.home-assistant.io/integrations/uptime_kuma/)
+[7](https://echoesofping.hashnode.dev/comprehensive-guide-to-installing-and-using-uptime-kuma-for-uptime-monitoring)
+[19](https://app.readthedocs.org/projects/uptime-kuma-api/)
+[20](https://github.com/louislam/uptime-kuma)
+
+Here is a summary of the full setup to integrate your self-hosted Uptime Kuma with a Jamstack site like Astro securely and efficiently:
+
+Full Setup Summary
+
+- **Uptime Kuma Self-Hosted:** Runs your uptime monitoring and exposes an internal API for adding monitors and retrieving status data.
+
+- **API Security:**  
+  - Restrict the Uptime Kuma API with proper authentication (tokens or keys).  
+  - Use CORS to allow requests only from your trusted domains.
+
+- **Middleware Layer:**  
+  - Deploy a middleware proxy between Uptime Kuma and your Astro site to handle security and data processing.  
+  - Cloudflare Workers are an excellent choice for middleware, providing edge deployment, secure token handling, CORS management, caching, and request/response transformation.
+
+- **Astro Jamstack Site:**  
+  - Your Astro site calls the middleware endpoint (Cloudflare Worker) rather than directly contacting Uptime Kuma.  
+  - This can be done client-side (CSR) for dynamic updates or during build time for static rendering.  
+  - The middleware fetches data from Uptime Kuma securely and returns only the necessary information to the site.
+
+Benefits of This Setup
+
+- Keeps API keys and tokens secure and away from the client.  
+- Protects your Uptime Kuma API with domain-based CORS and authentication.  
+- Enables efficient, low-latency data fetching from the edge.  
+- Allows flexible data formatting and caching to optimize your site performance.  
+
+This architecture ensures both **security** and **scalability** for showing Uptime Kuma monitoring data seamlessly in your Jamstack site.[1][2]
+
+[1](https://github.com/louislam/uptime-kuma/wiki/API-Documentation)
+[2](https://github.com/lucasheld/uptime-kuma-api)
+
+Exactly. In this setup, the API keys are **not included in the static site code**. Instead:
+
+- Your Astro component makes requests to the Cloudflare Workers middleware endpoint.
+- The Cloudflare Worker holds and uses the API keys securely on the server/edge side.
+- The Worker fetches the data from your Uptime Kuma API using the keys and returns only the relevant information to the component.
+- This way, the API keys never get exposed to the client or shipped in the static files.
+- The component can pull updated data on page load or dynamically via client-side rendering without risking key exposure.
+
+This approach keeps your credentials safe while allowing your static site to display real-time or updated monitoring data via the middleware.[1][2]
+
+[1](https://github.com/louislam/uptime-kuma/wiki/API-Documentation)
+[2](https://github.com/lucasheld/uptime-kuma-api)

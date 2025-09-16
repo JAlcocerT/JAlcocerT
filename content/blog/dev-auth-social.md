@@ -152,7 +152,7 @@ The most prominent players in this space are **Firebase Authentication**, **Supa
 
 Once the **main branch** was ready with some SliDev Editor PoC working powered by NextJS...
 
-It was time to do [some git branching](https://jalcocert.github.io/JAlcocerT/git-recap/):
+It was time to do [some git branching](https://jalcocert.github.io/JAlcocerT/git-recap/)...
 
 ```sh
 git branch -a
@@ -371,9 +371,31 @@ Because it's open-source, it's a great choice for developers who want more contr
 ![alt text](/blog_img/entrepre/public-build/slidev-editor/logto1-panel.png)
 
 
+
+```sh
+git branch -a
+#create a new branch from main
+git checkout -b logtojseauth main #git checkout -b <new-branch-name> main
+#git checkout main && git pull origin main
+```
+
+```
+and can we implement similar setup to the firebase authentication, but with LogtoJS?
+
+Add a z-logto-setup.md explaining what I need to do from logto web UI and also create the required env.sample
+```
+
+```sh
+npm install @logto/next
+```
+
 ---
 
 ## Conclusions
+
+Firebase Auth with email/pwd + social signin working on desktop and mobile ✅
+
+
 
 ### Comparison and Summary
 
