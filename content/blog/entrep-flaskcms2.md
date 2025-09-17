@@ -3,7 +3,7 @@ title: "Flask x Stripe Payment Links"
 date: 2025-09-16T13:20:21+01:00
 draft: false
 tags: ["Astro","Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporal io"]
-description: 'Markdown and Flask working together. A FlaskCMS v0.2 for Mental Health that I did not need.'
+description: 'Markdown and Flask working together. A FlaskCMS v0.2 for Real Estate & Mental Health'
 url: 'flask-cms-for-ssgs'
 ---
 
@@ -11,7 +11,7 @@ url: 'flask-cms-for-ssgs'
 
 v0.2 of the [Flask Powered CMS](#a-cms-with-flask). 
 
-From Hugo Galleries to Mental Health and RealEstate?
+From Hugo Galleries to Mental Health and RealEstate managed via CMS (?)
 
 +++ [Testing](#lately-i) Cursor/Appimage launcher
 
@@ -54,16 +54,21 @@ But we have to get started with something first :)
 With stripe, you can prefilled emails like: `?prefilled_email=whateverthatis@gmail.com`
 
 So users that are onboarded to your CMS/SaaS, will have that prefilled already.
+
 * https://stripe.com/en-pl/tax/pricing
 * https://docs.stripe.com/payouts#payout-schedule
 
-https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefilled_email=whateverthatis@gmail.com
+For example something like: https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefilled_email=whateverthatis@gmail.com
 
 > See how to create [stripe payment links](#stripe-payment-links)
 
 ![alt text](/blog_img/entrepre/stripe/stripe101-paymentlinks.png)
 ![alt text](/blog_img/entrepre/stripe/stripe101-subs.png)
 
+> For this one I did not required the CMS in the end: cal and whatsapp boubles were enough.
+
+
+### Real Estate
 
 ---
 
@@ -137,7 +142,9 @@ The **Temporal Service** acts as the central orchestrator, keeping track of the 
 
 ### How it Solves a Problem
 
-In traditional microservices architecture, orchestrating a complex, multi-step business process can be challenging. Developers often have to build custom logic to handle:
+In traditional microservices architecture, orchestrating a complex, multi-step business process can be challenging.
+
+Developers often have to build custom logic to handle:
 
 * **Retries and Timeouts**: Manually writing code to retry failed operations or handle timeouts.
 * **State Persistence**: Ensuring the state of a long-running process is saved and can be recovered after a failure.
@@ -191,7 +198,7 @@ Here's the step-by-step process to create a subscription link in the Stripe UI:
     * Allow customers to use promotion codes.
     * Redirect to a specific URL after a successful payment.
 6.  **Share the Link:** Once you've configured the link, Stripe will generate a unique URL. You can then copy this URL and share it with your customers via email, social media, or your website.
-#
+
 #### Subscription Management Features 📈
 
 Using a Stripe Payment Link for a subscription provides a complete, self-contained solution for both you and your customers.

@@ -22,6 +22,18 @@ https://marketplace.cursorapi.com/items/?itemName=MermaidChart.vscode-mermaid-ch
 
 On the jira data model pdf, you will find jiradb.table_name, like `jiradb.issuetype`
 
+**Intro**
+
+I got a interesting task and could not avoid to think about how to do it with:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#chat-with-your-database-using-langchain" title="LangChain chat with DB | Post" image="/blog_img/GenAI/langchain-chinook-sample.png" subtitle="How to create SQL queries automatically as per DB schema info" >}}
+{{< /cards >}}
+
+<!-- 
+![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) -->
+
+
 
 
 ---
