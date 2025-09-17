@@ -32,6 +32,13 @@ I got a interesting task and could not avoid to think about how to do it with:
 {{< /cards >}}
 
 
+{{< callout type="info" >}}
+I could not avoid thinking about the recent [ebook pdf/epub creation post](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/)
+{{< /callout >}}
+
+So how about taking the requirements from PdM, understand Jira schema and propose some architectural solution?
+
+
 <!-- 
 ![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) -->
 
@@ -45,6 +52,12 @@ I got a interesting task and could not avoid to think about how to do it with:
 ### PDF to md/json
 
 Several open source tools can help convert complex PDFs, such as database schemas, into machine-readable formats like JSON, XML, or structured diagrams. Some notable open source options are:
+
+To read PDFs you can try Okular:*but the `ctrl+F` worked better for me with Zen*
+
+```sh
+#sudo apt install okular
+```
 
 - **Tabula**: A popular tool for extracting tables from PDFs into CSV, JSON, or Excel formats. It’s especially useful for schema diagrams presented as tables.[1]
 

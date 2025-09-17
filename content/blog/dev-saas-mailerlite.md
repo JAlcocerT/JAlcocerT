@@ -38,6 +38,11 @@ Its strange that people look at you asking if by having blog you meant instagram
     * https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_CVCheck_pdfmineropenAI_v3.py?ref_type=heads
 
 
+Some people use mailchimp, or
+
+But i just felt confortable enought with Mailerlite.
+
+
 ---
 
 ## Conclusions

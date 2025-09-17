@@ -12,6 +12,8 @@ math: true
 
 The historical stock webapp, companion for: https://financeinmotion.fyi
 
++++ [People are doing](#people-are-doing) the classic bait: *I finally reach xyz divs a year* On reddit with a snapshot of a web app to get traction.
+
 **Intro**
 
 To pull data from yfinance should not be a secret anymore:
@@ -96,6 +98,15 @@ In essence, user stories bring the conversation and collaboration to the forefro
 {{< /details >}}
 
 
+### YFinance Overpowered
+
+Contunuing from the EDA on stonks.
+
+Come on, how cant be possible to get Historical PER and Payouts just with yfinance data?
+
+And get something like: https://www.macrotrends.net/stocks/charts/CL/colgate-palmolive/pe-ratio
+
+
 
 ### How to Start PyStonks Project
 
@@ -125,15 +136,26 @@ Are those 20$/month more valuable than your time? Please...
 
 #### Tests
 
-Ive been doing some branching to do some tests and try how the data layer can look like.
+Ive been doing some branching to do some tests and try how **the data layer** can look like.
 
 All from the learnings of the [previous post](https://jalcocert.github.io/JAlcocerT/stonks/).
 
 
-##### Firebase Auth
+**Firebase Auth**
+
+FastAPI x Firebase Auth worked on desktops perfectly:
 
 * https://github.com/JAlcocerT/py-stonks/blob/main/ui-for-fastapi-firebaseauth.md
 * https://github.com/JAlcocerT/py-stonks/blob/main/docker-compose.fastapi-ui.yml
 
+**MailerLite** some features behind a subscribe could also be cool
 
-##### MailerLite
+### People are doing
+
+Interesting cross platform service: https://divstash.app/ 
+
+I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit_1000_a_year_in_dividends/
+
+> With CSR driven *Calculate Your Dividend Potential* section :)
+
+> > And has an interesting on boarding flow: https://divstash.app/signup/step-1 and T&Cs are mandatory: https://divstash.app/signup/quick

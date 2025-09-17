@@ -2,7 +2,7 @@
 title: "Flask x Stripe Payment Links"
 date: 2025-09-16T13:20:21+01:00
 draft: false
-tags: ["Astro","Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporal io"]
+tags: ["Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporal io"]
 description: 'Markdown and Flask working together. A FlaskCMS v0.2 for Real Estate & Mental Health'
 url: 'flask-cms-for-ssgs'
 ---

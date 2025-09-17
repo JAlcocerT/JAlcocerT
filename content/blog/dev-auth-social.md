@@ -391,7 +391,7 @@ npm install @logto/next
 
 ![alt text](/blog_img/entrepre/public-build/slidev-editor/logto2-sdk.png)
 
-![alt text](/blog_img/entrepre/public-build/slidev-editor/logto3-create-app.png)
+![LogTo Creating Authentication for Web App](/blog_img/entrepre/public-build/slidev-editor/logto3-create-app.png)
 
 ---
 

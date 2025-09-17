@@ -9,3 +9,5 @@ url: 'ai-driven-presentations'
 
 
 After this post: https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-to-create-an-slidev-editor
+
+The AI part was pending!
