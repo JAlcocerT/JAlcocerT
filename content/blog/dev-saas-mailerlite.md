@@ -1,6 +1,6 @@
 ---
 title: "Lead Magnets around MailerLite API"
-date: 2025-09-16T16:20:21+01:00
+date: 2025-09-19T16:20:21+01:00
 draft: false
 tags: ["Micro SaaS Essentials","MailerLite goodies"]
 description: 'BiP user flows around Landing + newsletter layers.'
