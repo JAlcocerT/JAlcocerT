@@ -389,6 +389,10 @@ Add a z-logto-setup.md explaining what I need to do from logto web UI and also c
 npm install @logto/next
 ```
 
+![alt text](/blog_img/entrepre/public-build/slidev-editor/logto2-sdk.png)
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/logto3-create-app.png)
+
 ---
 
 ## Conclusions
@@ -482,7 +486,7 @@ gh repo create slidev-editor --private --source=. --remote=origin --push
 #git init && git add . && git commit -m "Initial commit: Starting astro editor via NextJS and ToastUI" && gh repo create astro-editor --private --source=. --remote=origin --push
 ```
 
-> On this one, created main for the base functionalities and created branch to test the authentication methods.
+> On this one, created main for the base functionalities of a **markdown editor for slidev** and created branches to test few authentication methods.
 
 * https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
 

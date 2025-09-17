@@ -4,7 +4,7 @@ date: 2025-09-08T00:20:21+01:00
 draft: false
 description: 'Jira DataModel with AI'
 url: 'jira-data-model-with-ai'
-tags: ["D&A","Azure DevOps ADO"]
+tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram"]
 ---
 
 
@@ -28,7 +28,9 @@ I got a interesting task and could not avoid to think about how to do it with:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#chat-with-your-database-using-langchain" title="LangChain chat with DB | Post" image="/blog_img/GenAI/langchain-chinook-sample.png" subtitle="How to create SQL queries automatically as per DB schema info" >}}
+  {{< card link="https://github.com/JAlcocerT/jira-datamodel/tree/main" title="NEW Jira & Data Model Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github - Playing with PDF - ER Diagram PDF - Pandoc..." >}}
 {{< /cards >}}
+
 
 <!-- 
 ![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) -->
@@ -227,3 +229,37 @@ Similar Functionalities
 
 Summary
 Azure DevOps and Jira both serve as comprehensive tools for managing software development projects and tickets, making them competitors in the ticket and work item tracking space, though Azure DevOps spans a wider scope as an end-to-end DevOps solution.
+
+
+---
+
+## FAQ
+
+
+
+### How to create a Jira Data Model analyzer
+
+{{< details title="My Initial requirements for the SliDevJSEditor for Cursor 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+I got this after the first iteration:
+
+
+```sh
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
+git config --global user.name
+git add .
+git commit -m "Initial commit: Starting jira-datamodel"
+
+#sudo apt install gh
+gh auth login
+gh repo create jira-datamodel --private --source=. --remote=origin --push
+
+#git init && git add . && git commit -m "Initial commit: Starting astro editor via NextJS and ToastUI" && gh repo create astro-editor --private --source=. --remote=origin --push
+```

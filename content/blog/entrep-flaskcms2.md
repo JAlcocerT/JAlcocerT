@@ -51,6 +51,8 @@ But we have to get started with something first :)
 
 ### Mental Health
 
+And thaaats it: `http://psikolognevinkeskin.info/` as per https://github.com/JAlcocerT/morita-web
+
 With stripe, you can prefilled emails like: `?prefilled_email=whateverthatis@gmail.com`
 
 So users that are onboarded to your CMS/SaaS, will have that prefilled already.
@@ -66,6 +68,8 @@ For example something like: https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefi
 ![alt text](/blog_img/entrepre/stripe/stripe101-subs.png)
 
 > For this one I did not required the CMS in the end: cal and whatsapp boubles were enough.
+
+> > Cal.com + google + `https://www.springhealth.com/` plays well!
 
 
 ### Real Estate

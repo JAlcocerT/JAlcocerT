@@ -28,6 +28,8 @@ You can get started with this kind of project [like so](#how-to-get-started-and-
 
 Recently I heard about `myminutes.ai` so summarize meetings.
 
+> Tools like this one should help you get [proper MoM](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner) (minutes of meetings)
+
 What can we build around audio/speech?
 
 Do you imagine practicing job interviews in front of an ai?
@@ -192,6 +194,8 @@ This is a sample quick setup with a lot of [auth to do's](https://github.com/JAl
 ---
 
 ## Conclusions
+
+That's it: this gave me a new cooler youtube workflow (for the audio part)
 
 This simple **FastAPI recorder** and transcript web app already helps me.
 
