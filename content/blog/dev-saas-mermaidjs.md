@@ -1,19 +1,26 @@
 ---
 title: "Diagrams and workflows as a Code with Agents"
-date: 2025-09-18T01:20:21+01:00
+date: 2025-09-21T07:20:21+01:00
 draft: false
-tags: ["AI SaaS","Codex CLI","MermaidJS","Grok vs Perplexity"]
-description: 'BiP user flows around newsletter layers'
+tags: ["AI SaaS","Codex CLI","MermaidJS","Grok vs Perplexity","Icons for Architects"]
+description: 'BiP user flows around newsletter layers. From SliDev Editor to Mermaid Editor.'
 url: 'ai-driven-diagrams'
 ---
 
 **Tl;DR**
 
-I Got the social signin working here.
+I Got the [social signin working here, with the slidev-editor](https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions).
 
-Now its time to bring the AI part to the equation.
+Now its time to bring the **AI part** to the equation.
+
+> If you are [an architect](#architecture-and-icons), you will like this.
+
 
 **Intro**
+
+Same as we can do presentations as a code, we can know diagrams as a code.
+
+In fact, the diagrams as a code (Mermaid) can be integrated with our SliDev-Editor Setup.
 
 
 
@@ -42,13 +49,12 @@ And just this week I got...
 
 * https://sourcegraph.com/search
 
-
 * https://www.perplexity.ai/discover
 
 
-https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/PerplexityAPI
+* https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/PerplexityAPI
 
-https://jalcocert.github.io/JAlcocerT/live-search-and-research-with-ai/#perplexity 🐍
+* https://jalcocert.github.io/JAlcocerT/live-search-and-research-with-ai/#perplexity 🐍
 
 ![alt text](/blog_img/GenAI/ai-search/perplexity-pro-offer.png)
 
@@ -94,7 +100,6 @@ The rendering method a website uses directly impacts how easy or difficult it is
 * **Client-Side Rendering (CSR)**: 💻 CSR delivers a minimal HTML "shell" to the browser. The actual content is loaded and rendered dynamically on the **client-side** using **JavaScript**. This often involves a JavaScript framework like React or Angular making API calls to fetch data after the page has loaded.
     * **Scraping:** This is the most difficult to scrape. A basic scraper that only fetches the initial HTML will get an empty or incomplete page without the content. To get the data, a scraper must be able to execute JavaScript and mimic a browser's behavior.
 
-***
 
 ### Challenges of Scraping Dynamic Content
 
@@ -109,3 +114,17 @@ To overcome this, you need to use a **headless browser**. . A headless browser i
 3.  **Mimic User Behavior:** More advanced anti-bot systems will detect non-human behavior. Headless browsers can be configured to mimic human actions like random delays, scrolling, and mouse movements to avoid being blocked.
 
 So, while it is hard, it's not impossible. The key is to use more sophisticated tools that can render the entire page and interact with it, rather than just downloading and parsing a static HTML file.
+
+
+### Architecture and Icons
+
+> https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
+
+https://iconify.design/
+https://icon-sets.iconify.design/
+https://mermaid.js.org/syntax/architecture.html
+
+
+### How to build a MermaidJS-Editor
+
+Dont forget about the tab icon and the opengraph!

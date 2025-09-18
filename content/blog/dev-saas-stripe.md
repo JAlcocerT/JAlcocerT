@@ -26,6 +26,27 @@ Plus you get a cool API.
 Also, stripe provides a dashboard to manage subscriptions.
 
 
+### Stripe Products
+
+### Stripe Subscriptions
+
+
+
+### One Time Payments
+
+People are using them to sell ebooks `https://readmake.com/` or ways to code: `https://codefa.st/#pricing`, `https://shipfa.st/?ref=indiepage`
+
+Or to sell simple microSaaS services like: `https://poopup.co/`
+
+
+## Conclusions
+
+1. Just learn how to do **quick & cool landing pages**, like: `https://codefa.st/#pricing` or `https://indiepa.ge/`
+
+2. Bring your singin flow into place
+
+3. Place some features behind Stripe.
+
 
 ---
 

@@ -2,8 +2,8 @@
 title: "Client Side Rendering can do that"
 date: 2025-09-04T06:20:21+01:00
 draft: false
-tags: ["Dev","CSR","Web","MRR","Static French Amortization Calculator"]
-description: 'CSR can do that'
+tags: ["CSR","PWA","Web","MRR","French Amortization Calculator","QR","HTML2PDF"]
+description: 'CSR can do that. Keep things simple.'
 url: 'csr-and-js'
 ---
 
@@ -13,15 +13,14 @@ url: 'csr-and-js'
 Playing around with what [Client Side Rendering](#whats-csr) can do.
 
 +++ A quick [MRR calculator](#mrr-calculator)
-
 +++ A quick [Real Estate component](#french-amortization) that you dont have to host via streamlit.
++++ [QR Stuff](#people-do-cool-stuff-with-qr)
 
 **Intro**
 
 CSR can do that.
 
 I should have known that this is possible [when playing with FlexDashboards](https://jalcocert.github.io/JAlcocerT/r-language-101/#flexdashboards).
-
 
 {{< details title="BC flexdashboards are static dashboards most of the times 📌" closed="true" >}}
 
@@ -68,6 +67,9 @@ Or the CSR + WebSockets *(These allow Real-Time Bi-Directional Communication, as
 
 ## CSR Examples
 
+* A great PWA: https://excalidraw.com/ or mermaid.live ....
+* Serverless Invoices: https://github.com/JAlcocerT/serverless-invoices
+
 
 {{< cards cols="2" >}}
   {{< card link="https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/calculators/FIREAdvancedCalculator.astro?ref_type=heads" title="FireCalculator | Astro Component ↗" >}}
@@ -79,6 +81,10 @@ Or the CSR + WebSockets *(These allow Real-Time Bi-Directional Communication, as
 A simple MRR Calculator inside an astro component, [like this](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/calculators/MRRCalculator.astro?ref_type=heads).
 
 It can also do more complex stuff, like [this FIRE calculators](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/calculators/FIREAdvancedCalculator.astro?ref_type=heads) with kind of loops.
+
+People are doing money with ads with these... 
+
+See `https://calculatoradam.com/monthly-recurring-revenue-calculator/`
 
 ### French Amortization
 
@@ -228,3 +234,8 @@ The JavaScript on each client then updates the UI in real-time, allowing users t
 Web-based games, especially those built with frameworks like Phaser or libraries like Three.js for 3D graphics, are heavily reliant on CSR.
 
 The entire game logic, from physics and animations to user input, is handled by JavaScript in the browser, providing a high-performance and interactive experience.
+
+
+### People do cool stuff with QR
+
+* https://qrcode-ai.com/pricing

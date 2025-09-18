@@ -311,3 +311,10 @@ Then, setup VENTOY into your USBs and bring your favourite one.
 {{< youtube "hTw9DBEksx4" >}}
 
 <!-- https://youtu.be/hTw9DBEksx4 -->
+
+
+### Backup Github
+
+1. https://github.com/TimWitzdam/GitSave
+
+2. Gitea and Gogs: Lightweight self-hosted Git services. They support mirroring repositories from GitHub, providing a continuously synced backup

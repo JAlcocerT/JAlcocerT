@@ -18,6 +18,21 @@ I made couple of posts about ssg **themes for links**:
 {{< /cards >}}
 
 
+
+https://indiepa.ge/charlieclark
+https://github.com/charlieclark
+https://www.liinks.co/?ref=indiepage_leaderboard
+
+Which is validated to have done 1M+ https://indiepa.ge/leaderboard as of the time of writing
+
+<!-- https://www.youtube.com/watch?v=uqah6bDkSxs -->
+
+{{< youtube "uqah6bDkSxs" >}}
+
+
+* https://www.liinks.co/i/plans
+
+
 But recently I found about:
 
 <!-- bachatafests -->

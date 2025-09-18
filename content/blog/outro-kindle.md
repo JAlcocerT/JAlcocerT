@@ -100,4 +100,18 @@ But, I got to know that this is possible: https://kindlemodding.org/
 ### Business Canvas
 
 * https://en.wikipedia.org/wiki/Business_model_canvas
+
 * https://leantime.io/mastering-business-model-a-guide-to-completing-the-lean-canvas-model/
+
+* https://excalidraw.com/?
+* https://github.com/excalidraw/excalidraw-libraries
+    * https://libraries.excalidraw.com/?theme=light&sort=default
+
+### What is AffinePro
+
+* https://github.com/toeverything/AFFiNE
+    * https://affine.pro/pricing
+    * https://affine.pro/templates/value-proposition-canvas
+        * https://docs.affine.pro/self-host-affine/references/environment-variables
+        
+> The universal editor that lets you work, play, present or create just about anything.

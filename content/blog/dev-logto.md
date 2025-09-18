@@ -38,10 +38,6 @@ The question today is: **Can i use Logto JS SDK + SSG Themes + CF Workers** to g
 
 
 
-
-
-
-
 --- 
 
 ## Conclusions

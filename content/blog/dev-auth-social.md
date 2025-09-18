@@ -4,7 +4,7 @@ date: 2025-09-15T10:20:21+01:00
 draft: false
 tags: ["Firebase vs Logto vs ","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor"]
 url: 'social-signin-101'
-description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator'
+description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator approach'
 ---
 
 **Tl;DR**
@@ -28,7 +28,9 @@ Say that for every 1000 cold emails you do, 2-4% will move towards the next step
 
 You dont want to throw away the mkt efforts, by having a landing and SaaS login that provides too much friction.
 
-And if you have ever worked on ecommerce, you should know that a social sign in converts ~95%, instead of the ~80+% of a email/pwd.
+And if you have ever worked on **ecommerce**, you should know that a social sign in converts ~95%, instead of the ~80+% of a email/pwd.
+
+> Some people just make you signin by placing your mail and receiving a code: 
 
 With this post, lets try to understand how to make those social signins for good.
 
@@ -397,9 +399,12 @@ npm install @logto/next
 
 ## Conclusions
 
-Firebase Auth with email/pwd + social signin working on desktop and mobile ✅
+1. Firebase Auth with email/pwd + social signin working on desktop and mobile ✅
 
 
+> This setup can be call, considering that MermaidJS allow to write themes https://sli.dev/guide/write-theme
+
+> > So plugging the AI + custom theme, can be amazing for an Enterprise version!
 
 ### Comparison and Summary
 

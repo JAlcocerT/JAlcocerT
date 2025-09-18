@@ -2,7 +2,7 @@
 title: "Architecture D&A like a Pro"
 date: 2025-04-18T00:20:21+01:00
 draft: false
-tags: ["Career", "D&A", "Analytics","SliDev","PPTs","Medallion, avro/parquet/delta"]
+tags: ["Career", "D&A", "Analytics","SliDev PPT","Mermaid Diagrams","Medallion","avro/parquet/delta"]
 description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
 url: 'data-analytics-architecture'
 ---
@@ -59,6 +59,7 @@ Make it compatible with their stack *bronze*, do some kind of enhancement *silve
 > Yes, I love [diagrams](https://www.mermaidchart.com/play#pako:eNp90N9LwzAQB_B_5ciDKKwPzrc-qOsPZA9OwQ6UZYysuW5h7UWStAPL_neTlskQ8SUP37vPJbmelVoii1kURZxKTZXaxZwAaq0PMewFycyII4XI7bHBGCRWoq0dp4FUtT6We2EcFFloApitOHtzIcmM6tBwtoYouoek5yx_z9NlMX9ZbLJZkYMiQOoeODuNNPGN8IF26E_9nCd08MtURjdB-bEXaKEHk_1jhNl1q-n6x6WDyL2Yv2aJsPiMzqjSXo9bmIBpaeNUgxvrzM3IRkm3HhVoHUjhxNajgz3_kqa-tiSnXI3SP0tiqFwB3f2Rn8c99qD8rTFwJr5ag_FwRpfTJ1Bp04QOo1uSKEP0qW1ItsMC2ekbNbOQkA)
 
 
+> > If you are an architect, you should too. See: https://mermaid.js.org/syntax/architecture.html and https://iconify.design/
 
 1. An **Operational Data Hub** (ODH) is a central, integrated data store that serves operational systems and analytical applications with near real-time or real-time data.
 

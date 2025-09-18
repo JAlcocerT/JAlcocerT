@@ -13,12 +13,13 @@ https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
 
 I got that domain!
 
++++ got motivated by people [BiP open startups](#about-building-in-public)
 
 **Intro**
 
 We come from [this post](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/)
 
-Time to keep building in public the project.
+Time to keep [building in public]() the project.
 
 I left them at this stage:
 
@@ -102,4 +103,16 @@ The Sassify theme is just awsome: https://astro-sassify.larryxue.dev/
 #### Configuring Cloudflare
 
 
-###
+## About building in public
+
+See `https://marclou.com/` and the related h`ttps://indiepa.ge/`
+
+> People are even linking stripe to validate what they earn on their startups: https://indiepa.ge/leaderboard
+
+They call it *the open startup*. 
+
+Even Ghost was publishing their ARR metrics.
+
+Or Ghostfolio: https://ghostfol.io/en/open
+
+Dont assume that something that exists cant be improved, like from `https://zenvoice.io/#pricing` to https://github.com/JAlcocerT/serverless-invoices
