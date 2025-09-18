@@ -13,6 +13,11 @@ https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
 
 I got that domain!
 
+```sh
+#dig jalcocertech.com any
+dig slubnechwile.com any
+```
+
 +++ got motivated by people [BiP open startups](#about-building-in-public)
 
 **Intro**
@@ -60,6 +65,54 @@ This one is great, yet it seems that the way to get MRR is via the companies who
 But whatever can be static, keep it static.
 
 Same applies to your QR Code web generator.
+
+### PDFs are free!
+
+### Web when registered
+
+Something like `slubnechwile.com/bodapepe`
+
+
+### The storage space - Paid
+
+As I dont want to store and backup stuff - this can be done via s3/r2/b2...
+
+
+
+Using Next.js API routes to generate presigned URLs is a recommended approach for securely uploading photos and videos from a client-side rendered (CSR) app to Cloudflare R2.
+
+Why Next.js API Routes for Presigned URLs?
+- Keeps Cloudflare R2 credentials secret and secure on the server side.
+- The frontend only receives a temporary presigned URL allowing uploads without direct access to secrets.
+- Easily integrates with client-side upload buttons in your Next.js app.
+- Allows you to implement custom authentication and authorization logic on the server.
+
+Implementation Idea for Your Wedding App
+- Users navigate to a URL like `slubnechwile/bodajuan`.
+- On visiting, they are prompted for a hardcoded username/password for that specific wedding event.
+- Upon successful authentication, the upload interface is shown.
+- When a guest selects photos/videos to upload, the client requests a presigned upload URL from a Next.js API route.
+- The API route verifies the user session or password, generates the presigned URL from Cloudflare R2, and returns it to the client.
+- The client uploads the files directly to R2 using this URL securely.
+
+This approach gives you full control over who can upload, limits exposure of credentials, and leverages secure temporary URLs for uploads, fitting well with your scenario of guest access for a specific wedding event.
+
+This is a common, practical pattern used in production apps for secure, scalable file uploads with Cloudflare R2 and Next.js.[1][2][3]
+
+[1](https://github.com/diwosuwanto/cloudflare-r2-with-nextjs-upload-download-delete)
+[2](https://buildwithmatija.com/blog/how-to-upload-files-to-cloudflare-r2-nextjs)
+[3](https://developers.cloudflare.com/workers/tutorials/upload-assets-with-r2/)
+
+#### Upsales
+
+##### Get a phyiscal copy of the digital photo book
+
+
+##### Extend the time to download your photos
+
+
+
+
 
 
 ---
