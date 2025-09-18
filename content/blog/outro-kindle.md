@@ -1,9 +1,9 @@
 ---
-title: "Kindle"
-date: 2025-11-10
+title: "Kindle, notes and Pandoc"
+date: 2025-09-16
 draft: false
-tags: ["Outro","kindlemodding","Your ebook Notes Knowledge Base"]
-description: '.'
+tags: ["Outro","kindle modding","Your ebook Notes Knowledge Base","sell-your-ebook","Business Model Canvas","Affine"]
+description: 'Create your ebook and sell it on your website. Clear the chaos with Perplexity or notebookllm?'
 url: 'kindle-clippings-knowledge-base'
 ---
 
@@ -11,6 +11,9 @@ url: 'kindle-clippings-knowledge-base'
 **TL;DR**
 
 A recap on the last 5y+ of kindles notes.
+
++++ [Business Model Canvas](#business-canvas)
+
 
 **Intro**
 
@@ -38,7 +41,13 @@ Some time back I saw:
 
 But in the meantime, there where news:
 
-> I gave it a try with Google's NotebookLLM, but...custom is custom
+> I gave it a try with Google's NotebookLLM, now even with Perplexity...
+
+> > Custom is custom, but...would it be better out of the box?
+
+
+![Perplexity custom files as source](/blog_img/GenAI/perplexity-files.png)
+
 
 {{< callout type="info" >}}
 Kindles files wont be recognized unless you use a proper microUSB data cable. You can access their content via `https://read.amazon.com/landing`
@@ -52,6 +61,26 @@ Kindles files wont be recognized unless you use a proper microUSB data cable. Yo
 ---
 
 ## Conclusions
+
+With Pandoc you can create pdf from your .md as seen on [this *Jira* post](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/#md-to-pdf).
+
+```sh
+python3 test-pandoc.py
+
+# Replace emojis with text equivalents
+sed 's/✅/[OK]/g; s/❌/[X]/g; s/��/[CHART]/g' jira-pdm-req2tech.md > input-clean.md
+pandoc input-clean.md -o jira-estimation.pdf --pdf-engine=xelatex --toc
+```
+
+And pushing to epub kindle compatible is also fine.
+
+You can also try with [these tools](#converting-to-epub)
+
+
+
+---
+
+## FAQ
 
 ### JailBreak a Kindle
 
@@ -67,3 +96,8 @@ But, I got to know that this is possible: https://kindlemodding.org/
 >  A simple Docker-based REST API that converts Markdown to EPUB format using Pandoc. Send markdown content via JSON, get an `EPUB` file back. 
 
 * https://omnitools.app/pdf/pdf-to-epub
+
+### Business Canvas
+
+* https://en.wikipedia.org/wiki/Business_model_canvas
+* https://leantime.io/mastering-business-model-a-guide-to-completing-the-lean-canvas-model/

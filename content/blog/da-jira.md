@@ -91,7 +91,7 @@ Popular Open Source Tools for Markdown to PDF
 
 | Tool/Library         | Description                                               | Python Support              |
 |----------------------|-----------------------------------------------------------|----------------------------|
-| **Pandoc**           | A powerful universal document converter supporting Markdown to PDF with styling | Can be called via subprocess from Python |
+| **Pandoc**    ⭐     | A powerful universal document converter supporting Markdown to PDF with styling | Can be called via subprocess from Python |
 | **Markdown-PDF**      | A Node.js tool to convert Markdown to PDF directly        | No direct Python binding but can be called from Python |
 | **WeasyPrint**        | A Python library converting HTML/CSS to PDF, works with Markdown via HTML conversion | Yes, via Markdown to HTML + WeasyPrint |
 | **md-to-pdf**         | Node.js-based with CSS support for styling                | No direct Python support   |
@@ -139,11 +139,21 @@ import subprocess
 subprocess.run(['pandoc', 'input.md', '-o', 'output.pdf'])
 ```
 
-![alt text](/blog_img/AIBI/jira/pandoc.png)
+![Pandoc](/blog_img/AIBI/jira/pandoc.png)
 
 {{< callout type="warning" >}}
 Pandoc generating pdf from md is just amazing
 {{< /callout >}}
+
+And it can also be run via CLI:
+
+```sh
+#python3 test-pandoc.py
+
+# Replace emojis with text equivalents
+sed 's/✅/[OK]/g; s/❌/[X]/g; s/��/[CHART]/g' jira-pdm-req2tech.md > input-clean.md
+pandoc input-clean.md -o jira-estimation.pdf --pdf-engine=xelatex --toc
+```
 
 Summary
 

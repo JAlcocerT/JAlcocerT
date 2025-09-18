@@ -74,6 +74,9 @@ For example something like: https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefi
 
 ### Real Estate
 
+Time to put an end to this one!
+
+
 ---
 
 
@@ -128,11 +131,12 @@ Temporal.io is an open-source platform that enables the creation of **durable an
 
 It acts as a workflow orchestration engine, allowing developers to write complex, long-running business processes as code in standard programming languages like Go, Java, Python, and TypeScript.
 
+{{< details title="More about temporal... 📌" closed="true" >}}
+
+
 The platform handles the complexities of state management, retries, and failure recovery, essentially allowing you to write your application logic as if system failures don't exist.
 
----
-
-### Core Concepts
+Core Concepts
 
 At its core, Temporal is built on two main components:
 
@@ -142,9 +146,7 @@ At its core, Temporal is built on two main components:
 
 The **Temporal Service** acts as the central orchestrator, keeping track of the state of all workflows and managing task queues. **Worker Processes**, which you deploy and run, execute your workflow and activity code by polling these task queues for tasks.
 
----
-
-### How it Solves a Problem
+How it Solves a Problem
 
 In traditional microservices architecture, orchestrating a complex, multi-step business process can be challenging.
 
@@ -161,9 +163,7 @@ If an activity fails, Temporal automatically retries it according to a predefine
 
 This shifts the focus from building complex plumbing for reliability to simply writing the business logic.
 
----
-
-### Key Features and Use Cases
+Key Features and Use Cases
 
 Temporal's key features include:
 
@@ -180,6 +180,10 @@ Temporal is a great fit for a variety of use cases, including:
 * **Data Pipelines**: Managing and orchestrating complex data transformation and processing jobs.
 * **Human-in-the-Loop Workflows**: Building processes that require human intervention, such as approving a document or a transaction.
 * **AI/ML Workflows**: Coordinating the steps in a machine learning pipeline, from data ingestion to model training and deployment.
+
+
+{{< /details >}}
+
 
 ### Stripe Payment Links
 
@@ -213,3 +217,6 @@ Using a Stripe Payment Link for a subscription provides a complete, self-contain
     * View their billing history and download invoices.
     * Change their subscription plan (e.g., upgrade or downgrade).
     * **Cancel their subscription.** To enable this, you need to configure the Customer Portal in your Stripe Dashboard and provide a link to it for your customers (you can often do this via automated emails from Stripe). This allows your customers to manage their subscriptions themselves, which significantly reduces the administrative burden on you.
+
+## FAQ
+

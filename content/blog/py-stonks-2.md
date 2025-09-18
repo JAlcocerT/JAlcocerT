@@ -14,6 +14,8 @@ The historical stock webapp, companion for: https://financeinmotion.fyi
 
 +++ [People are doing](#people-are-doing) the classic bait: *I finally reach xyz divs a year* On reddit with a snapshot of a web app to get traction.
 
++++ More and cooler yfinance
+
 **Intro**
 
 To pull data from yfinance should not be a secret anymore:
@@ -102,9 +104,13 @@ In essence, user stories bring the conversation and collaboration to the forefro
 
 Contunuing from the EDA on stonks.
 
-Come on, how cant be possible to get Historical PER and Payouts just with yfinance data?
+Come on, how cant be possible to get **Historical PER and Payouts** just with yfinance data?
 
 And get something like: https://www.macrotrends.net/stocks/charts/CL/colgate-palmolive/pe-ratio
+
+
+
+
 
 
 
@@ -159,3 +165,9 @@ I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit
 > With CSR driven *Calculate Your Dividend Potential* section :)
 
 > > And has an interesting on boarding flow: https://divstash.app/signup/step-1 and T&Cs are mandatory: https://divstash.app/signup/quick
+
+## Outo
+
+The compound Interest threshold
+
+https://www.youtube.com/watch?v=CAupuMtWjfI

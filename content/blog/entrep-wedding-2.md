@@ -1,9 +1,9 @@
 ---
-title: "BiP | Wedding Edition"
-date: 2025-09-17T19:20:21+01:00
+title: "BiP a Micro-SaaS | Wedding Edition"
+date: 2025-09-19T12:20:21+01:00
 draft: false
-tags: ["Entrepr SaaS","QR Code","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile"]
-description: 'Wedding stuff with PB BaaS. Everything that can be static, is static 🤯'
+tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile"]
+description: 'Firebase + PB BaaS. Everything that can be static, is static 🤯'
 url: 'building-in-public-wedding-photo-galleries'
 ---
 
