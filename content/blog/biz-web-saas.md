@@ -254,6 +254,8 @@ Some [**concepts** recap](#faq)
 * A **webhook** is a specific application of a hook for REST APIs, acting as an event-driven HTTP callback that sends real-time data to a client's URL when a specific event occurs.
 * An **endpoint** is a specific URL in a REST API that represents a resource or a collection of resources, serving as the destination for client requests.
 
+> See also https://docs.warp.dev/developers/cli
+
 ### Proper Tags
 
 That's a great question, and there are several ways to tag your project, with the `v.breakingchange.feature.fix` format being a common approach. 

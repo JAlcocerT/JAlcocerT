@@ -39,9 +39,17 @@ People are using them to sell ebooks `https://readmake.com/` or ways to code: `h
 Or to sell simple microSaaS services like: `https://poopup.co/`
 
 
+
+---
+
+
 ## Conclusions
 
 1. Just learn how to do **quick & cool landing pages**, like: `https://codefa.st/#pricing` or `https://indiepa.ge/`
+
+> With a Pricing section having by default the yearly plans discounted (and in a tab the monthly ones)
+
+> > Example `https://fireflies.ai/pricing?billing=monthly` for audio
 
 2. Bring your singin flow into place
 

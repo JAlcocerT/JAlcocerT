@@ -1,6 +1,6 @@
 ---
 title: "Kindle, notes and Pandoc"
-date: 2025-09-16
+date: 2025-09-17
 draft: false
 tags: ["Outro","kindle modding","Your ebook Notes Knowledge Base","sell-your-ebook","Business Model Canvas","Affine"]
 description: 'Create your ebook and sell it on your website. Clear the chaos with Perplexity or notebookllm?'
@@ -113,5 +113,5 @@ But, I got to know that this is possible: https://kindlemodding.org/
     * https://affine.pro/pricing
     * https://affine.pro/templates/value-proposition-canvas
         * https://docs.affine.pro/self-host-affine/references/environment-variables
-        
+
 > The universal editor that lets you work, play, present or create just about anything.

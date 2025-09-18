@@ -26,7 +26,9 @@ You can get started with this kind of project [like so](#how-to-get-started-and-
 
 **Intro**
 
-Recently I heard about `myminutes.ai` so summarize meetings.
+Recently I heard about `myminutes.ai` so summarize meetings (with speaker recognition!)
+
+As you can imagine, there are [more tools](#tools-for-meetings) to help on meetings...
 
 > Tools like this one should help you get [proper MoM](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner) (minutes of meetings)
 
@@ -262,3 +264,21 @@ git commit -m "Initial commit: Python Speech Rater project with OpenAI TTS/S2T"
 gh auth login
 gh repo create reponame --private --source=. --remote=origin --push
 ```
+
+
+### Tools for Meetings
+
+Both Otter.ai and Fireflies.ai support recording audio on Android apps and provide full access to transcripts and related meeting content via their web applications.
+
+- Otter.ai Android app lets you record meetings, voice memos, and in-person conversations with real-time transcription. All recordings and transcripts automatically sync to Otter's cloud and can be accessed, searched, edited, and shared on Otter’s web app. Users can pause/resume recordings and rename conversations.
+
+It supports live transcription during recordings and exports in multiple formats like TXT, DOCX, and PDF.
+
+
+- Fireflies.ai Android app also records audio and meetings directly from mobile. Users can upload audio/video files from the app for transcription and AI meeting analysis. The transcripts, summaries, and audio files are fully accessible in the Fireflies web dashboard, with features like searching transcripts, creating soundbites, and interacting with their AI assistant AskFred from both mobile and web. 
+
+It syncs audio and transcript content across devices seamlessly.
+
+{{< callout type="warning" >}}
+I decided to give a try to this one, as fireflies seems to support n8n integration: https://guide.fireflies.ai/articles/4758387081-learn-about-n8n-x-fireflies-integration
+{{< /callout >}}

@@ -128,3 +128,8 @@ https://mermaid.js.org/syntax/architecture.html
 ### How to build a MermaidJS-Editor
 
 Dont forget about the tab icon and the opengraph!
+
+
+{{< callout type="info" >}}
+Own the context, rule the code
+{{< /callout >}}
