@@ -82,6 +82,13 @@ Time to put an end to this one!
 
 ## Conclusions
 
+I believe in some podcast from A. Hormozi he says: *Sell to rich people, they pay more/better*
+
+It was such a very simple statement, and how much truth there is inside of it :)
+
+With these setups ends my custom/individual website creation.
+
+Time to scale with all the learnings.
 
 ### Lately I...
 

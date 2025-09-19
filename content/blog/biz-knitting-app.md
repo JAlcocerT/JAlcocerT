@@ -2,8 +2,8 @@
 title: "Knitting patterns are all about...math?"
 date: 2025-02-17
 draft: false
-tags: ["Tinkering"]
-description: 'Creating a clothing size calculator. Using Litlyx for WebAn.'
+tags: ["Tinkering","Littlyx Web Analytics"]
+description: 'Creating a clothing size calculator.'
 url: 'knitting-pattern-calculator'
 math: true
 ---
@@ -15,7 +15,7 @@ Before starting, **credits to lowkey.bold.knit** - https://instagram.com/p/DE7cD
 
 ## Before Starting
 
-1. Wool :)
+1. Wool
 2. Gaugeswatch measures
 3. Pattern Ready or the idea!
 4. Know some [cool Knitter](https://cozyknittingclub.com/) to explain you how it works!

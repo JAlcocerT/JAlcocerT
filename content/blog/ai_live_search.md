@@ -463,4 +463,4 @@ In HuggingFace you will find really cool and Open AI Projects to try out:
 
 * <https://www.futuretools.io/?pricing-model=open-source>
 
-> But, be prepared to use CC details :)
+> But, be prepared to use your CC details!

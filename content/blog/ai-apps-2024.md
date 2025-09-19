@@ -79,7 +79,7 @@ services:
     environment:
       MODEL_API_KEY: sk-proj-openaiAPIhere #https://platform.openai.com/api-keys
       MODEL: gpt-4o-mini      #gpt-4
-      TEMPERATURE: 0 #don't be creative :)
+      TEMPERATURE: 0 #don't be creative
       
   phidata_yt_groq:
     image: ghcr.io/jalcocert/phidata:yt-groq 

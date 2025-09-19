@@ -70,7 +70,11 @@ This native integration allows meeting data from Fireflies.ai to flow seamlessly
 
 ### n8n x Perplexity
 
-Yes, Perplexity can be integrated with n8n. n8n offers a dedicated Perplexity node that allows users to automate interactions with Perplexity's AI models within workflows. This integration supports sending prompts to Perplexity's large language models and receiving chat completions, enabling automation of tasks such as content generation, research, and data analysis directly within n8n.[1][2][3]
+Yes, Perplexity can be integrated with n8n.
+
+n8n offers a dedicated Perplexity node that allows users to automate interactions with Perplexity's AI models within workflows. 
+
+This integration supports sending prompts to Perplexity's large language models and receiving chat completions, enabling automation of tasks such as content generation, research, and data analysis directly within n8n.[1][2][3]
 
 Integration Methods
 
@@ -126,5 +130,8 @@ In summary, the Perplexity MCP server exists and is actively supported as part o
 
 ## Outro
 
-### MCP x PlayWight
+### More MCP
 
+#### MCP x PlayWight
+
+As just seen on the browser and automations post.

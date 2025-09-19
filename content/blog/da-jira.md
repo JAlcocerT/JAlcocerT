@@ -42,6 +42,8 @@ So how about taking the requirements from PdM, understand Jira schema and propos
 <!-- 
 ![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) -->
 
+**How the process looked**
+
 
 
 
@@ -220,7 +222,6 @@ The diagram in your PDF is most likely a **"Database Schema Diagram"** or **"ER 
 
 
 ### About ADO
-
 
 Azure DevOps can be considered a **ticket management competitor** to Jira, as both platforms offer similar functionalities centered around work item tracking, project management, and team collaboration.
 
