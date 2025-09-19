@@ -19,7 +19,7 @@ We now, [HUGO can also be cool](https://jalcocert.github.io/JAlcocerT/cool-hugo-
 
 And few weeks ago I was created some kind of HUGO Flasked version to be edited via ~ FlaskCMS.
 
-But as Pocketbase happened in the meantime, I thought, do I really need Flask for this?
+But as Pocketbase happened in the meantime, I thought, **do I really need Flask** for this CMS like edits?
 
 I just want to have images placed into some folders, and pocketbase can do that, even relate it to object storage like R2 thanks to its minio compatibility.
 
@@ -28,12 +28,16 @@ I just want to have images placed into some folders, and pocketbase can do that,
   {{< card link="https://github.com/JAlcocerT/hugo-theme-gallery-flasked" title="Hugo Theme Gallery Forked" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Hugo Gallery x Custom Flask CMS" >}}
 {{< /cards >}}
 
+Also, I saw **CF R2**: https://github.com/harshil1712/nextjs-r2-demo
+
+> Upload images to Cloudflare R2 via the Workers API, Pre-signed URL, or Temporary Credentials 
+
 ## The Hugo Gallery Stack
 
 
 {{< cards cols="1" >}}
   {{< card link="https://whilecyclingthere.web.app/" title="Cycling There Photo Gallery" >}}
-  {{< card link="https://entreagujaypunto.com/" title="Portfolio Aguja&Punto" >}}
+  {{< card link="https://entreagujaypunto.com/" title="Portfolio Aguja&Punto Gallery SSG" >}}
 {{< /cards >}}
 
 ### Cloudflare R2
@@ -49,9 +53,15 @@ Just recently I got to know: https://github.com/sjackp/r2-gallery
 
 > A minimalist web UI to manage a Cloudflare R2 bucket 
 
-Cloudflare R2 offers a free tier that includes 10 GB of storage per month, 1 million Class A operations (uploads, modifies) per month, and 10 million Class B operations (reads/downloads) per month. Plus, it has zero egress fees, so data downloaded from R2 is free of charge during this free tier usage, which is quite generous for testing or small projects.[1][2][3]
+Cloudflare R2 offers a free tier that includes 10 GB of storage per month, 1 million Class A operations (uploads, modifies) per month, and 10 million Class B operations (reads/downloads) per month. 
 
-Regarding API and integration, Cloudflare R2 provides an S3-compatible API that allows secure upload, download, and management of objects. For a Next.js app, you can utilize this API to implement an upload button that sends files securely to R2. Common approaches include:
+Plus, it has zero egress fees, so data downloaded from R2 is free of charge during this free tier usage, which is quite generous for testing or small projects.[1][2][3]
+
+Regarding API and integration, Cloudflare R2 provides an S3-compatible API that allows secure upload, download, and management of objects.
+
+For a Next.js app, you can utilize this API to implement an upload button that sends files securely to R2.
+
+Common approaches include:
 
 - Using AWS SDK compatible libraries in the backend API routes of Next.js to upload files to R2.
 - Generating presigned URLs on the server side that the frontend can use to upload files directly to R2 securely.
@@ -141,14 +151,17 @@ Thus, Cloudflare R2 offers strong cost savings on egress and operations compared
 Among all the options—Cloudflare R2, AWS S3, MinIO, Wasabi, Backblaze B2, and DigitalOcean Spaces—the best choice for photo and video uploads from guests depends primarily on expected usage patterns, especially storage size, frequency of uploads, and how often the media will be viewed or downloaded.
 
 ### Best Overall for Guest Photo and Video Uploads
+
 - **Wasabi** stands out as the best all-around choice if uploads and downloads are frequent and involve large amounts of data. Its simple flat-rate pricing with no egress fees makes it very cost-effective for heavy download workloads often encountered with photo and video sharing apps. It provides strong durability and scales well while keeping billing predictable.
 
 ### Good Alternative Choices
+
 - **Cloudflare R2** is excellent if your app benefits from global CDN integration and zero data egress fees. It’s optimized for read-heavy workloads with fast delivery to guests worldwide and competitive pricing on storage and operations.
 - **Backblaze B2** is a strong choice for cost savings with moderate downloads, letting you benefit from very low storage prices and free egress up to a threshold. It’s suitable if you expect bursts but relatively controlled download volumes.
 - **DigitalOcean Spaces** works well for smaller or medium-scale deployments integrated with DigitalOcean's cloud ecosystem, but egress costs can rise with large downloads.
 
 ### When to Pick AWS S3 or MinIO
+
 - **AWS S3** is best when advanced compliance, enterprise features, and integration into broader AWS services are necessary but is more expensive for egress-heavy workloads.
 - **MinIO** is good only if full control over infrastructure and costs is preferred and you can manage the operational complexity.
 

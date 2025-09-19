@@ -39,9 +39,9 @@ Some time back I saw:
 * https://github.com/mckaywrigley/kindle-gpt
 
 
-But in the meantime, there where news:
+But in the meantime, there were news:
 
-> I gave it a try with Google's NotebookLLM, now even with Perplexity...
+> I gave it a try with Google's NotebookLLM, now even Perplexity can help you upload that txt and clear them...
 
 > > Custom is custom, but...would it be better out of the box?
 
@@ -62,7 +62,11 @@ Kindles files wont be recognized unless you use a proper microUSB data cable. Yo
 
 ## Conclusions
 
-With Pandoc you can create pdf from your .md as seen on [this *Jira* post](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/#md-to-pdf).
+Recently I wrote about note taking tools and [how to build your KB/Knowledge Base](https://jalcocert.github.io/JAlcocerT/knowledge-management/#knowledge-management-tools).
+
+As I cant stop being impressed by all we can achieve with simple markdown...
+
+1. With **Pandoc** you can create pdf from your .md as seen on [this *Jira* post](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/#md-to-pdf).
 
 ```sh
 python3 test-pandoc.py
@@ -76,6 +80,8 @@ And pushing to epub kindle compatible is also fine.
 
 You can also try with [these tools](#converting-to-epub)
 
+
+2. 
 
 
 ---

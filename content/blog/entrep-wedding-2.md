@@ -1,6 +1,6 @@
 ---
 title: "BiP a Micro-SaaS | Wedding Edition"
-date: 2025-09-19T12:20:21+01:00
+date: 2025-09-19T19:20:21+01:00
 draft: false
 tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static 🤯'
@@ -77,6 +77,9 @@ Something like `slubnechwile.com/bodapepe`
 
 As I dont want to store and backup stuff - this can be done via s3/r2/b2...
 
+{{< callout type="info" >}}
+Previously, I was thinking to have a domain + Filebrowser instance setup for each people paying for this. Ok for a [onetime](https://jalcocert.github.io/JAlcocerT/software-for-weddings/), hard to automate for mass production.
+{{< /callout >}}
 
 
 Using Next.js API routes to generate presigned URLs is a recommended approach for securely uploading photos and videos from a client-side rendered (CSR) app to Cloudflare R2.

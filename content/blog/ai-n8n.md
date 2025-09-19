@@ -16,12 +16,22 @@ I recently discovered about: https://chat.soula.ge/ and `https://vp.soula.ge/`
 
 > > Transform complex automation into natural conversations. Connect up to 9 webhooks and manage your workflows through an intelligent chat interface.
 
+Meaning: dont drag and drop, ask the AI to build your n8n flows :)
+
 ### n8n x FirefliesAI
 
-Lately I was playing with [AI Audio here](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings)
+Lately I was playing with [AI Audio here](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings).
+
+And decided to get access to: https://app.fireflies.ai/
+
+The decision among other [tools for meetings](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings)?
+
+Because it can be integrated easily with n8n.
+
+* https://guide.fireflies.ai/articles/4758387081-learn-about-n8n-x-fireflies-integration
+
 
 ![Fireflies AI has n8n integration](/blog_img/GenAI/n8n/n8n-audio-fireflies.png)
-
 
 To integrate Fireflies.ai with n8n, follow these general steps to automate meeting workflows, retrieve transcripts, and analyze meeting data:
 

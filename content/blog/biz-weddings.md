@@ -2,8 +2,8 @@
 title: "Weddings are expensive. Be smart with the right software."
 date: 2025-02-03
 draft: false
-tags: ["OSS"]
-description: "Interesting software for Weddings (WeddingShare)."
+tags: ["OSS","Hetzner VPS","WeddingShare","Filebrowser x NGINX"]
+description: "Interesting software for Weddings (WeddingShare). Weddings Photo sharing for guests setup."
 url: "software-for-weddings"
 ---
 
@@ -249,9 +249,6 @@ Not really, see how much im using a CX22: Portainer + NGINX + Wedding share **~5
 
 ![NGINX Example](/blog_img/selfh/weddingshare-hetzner.png)
 
-
-
-
 {{< details title="Dont forget the DNS challenge | Cloudflare + NGINX 📌" closed="true" >}}
 
 > As seen at https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/
@@ -291,9 +288,12 @@ Not really, see how much im using a CX22: Portainer + NGINX + Wedding share **~5
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/" title="Gitlab + Cloudflare Pages ↗" >}}
 {{< /cards >}}
 
+---
+
+
 ## Conclusions
 
-Using cloudflared for a sub.sub.domain.com is **problematic with the https/SSL**.
+Using cloudflared for a sub.sub.domain.com will be **problematic with the https/SSL**.
 
 So I restarted everything (with a CPX11, AMD x86).
 
@@ -366,7 +366,6 @@ You will need their [API Token from here](https://dash.cloudflare.com/profile/ap
 
 ![CName and A Record DNS CLoudflare with NGINX](/blog_img/selfh/duckdns-hetzner-nginx2.png)
 
-
 {{< callout type="warning" >}}
 Dont forget: Point the DNS records **BEFORE** adding the SSL certificates in NGINX.
 {{< /callout >}}
@@ -395,7 +394,6 @@ With an API...
 ### Alternatives to Weddingshare
 
 The good thing about Weddingshare, is that it creates a **QR** to point to the url.
-
 
 {{< callout type="info" >}}
 You can also make [QR's with Python](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt)!

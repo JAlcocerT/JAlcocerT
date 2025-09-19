@@ -1,5 +1,5 @@
 ---
-title: "My Fav browsers and how to interact with them"
+title: "My Fav browsers and their automation"
 date: 2025-09-22
 draft: false
 tags: ["Web","Zen vs Firefox vs LibreWolf","Brave vs Chrome","PlayWright MCP"]
@@ -35,7 +35,7 @@ In summary:
 
 ### MCP x PlayWright
 
-https://github.com/microsoft/playwright-mcp
+* https://github.com/microsoft/playwright-mcp
 
 ```json
 {
@@ -49,6 +49,26 @@ https://github.com/microsoft/playwright-mcp
   }
 }
 ```
+
+## Self-hostable browsers
+
+Several self-hostable browsers running via containers are available, including:
+
+- **Neko**: A self-hosted virtual browser running in Docker containers using WebRTC technology for streaming. It supports multiple browsers like Firefox, Chromium, and Brave and focuses on privacy, multi-user collaboration, and lightweight browser isolation.[1][2][3][4]
+
+- **Kasm Workspaces**: A container streaming platform that can spin up various browsers or full desktops in ephemeral Docker containers accessible via the web browser. It’s designed for enterprise use, secure browser isolation, and remote workspace management.[5][6][7]
+
+- **Browserless**: An open-source Docker container allowing deployment of headless Chrome browsers for remote web automation, scraping, and testing. It supports Puppeteer and Playwright libraries and offers robust API access for automation tasks.[8][9][10]
+
+- **linuxserver/firefox**: A Firefox browser Docker image maintained by LinuxServer which can be run as a container, offering a self-hosted Firefox instance though without the streaming or remote interactive features of Kasm or Neko.[11]
+
+These options differ in focus from lightweight isolated self-hosted browsers (Neko), full containerized workspaces/desktops with browser support (Kasm), to headless browser automation and scraping (Browserless), and a simple containerized Firefox for local or network access.[2][1][8][11]
+
+[2](https://fossengineer.com/selfhosting-neko-browser/)
+[7](https://www.reddit.com/r/selfhosted/comments/1isc94o/kasm_open_source_self_hosted_disposable_browsing/)
+[8](https://github.com/browserless/browserless)
+
+
 
 ## Conclusions
 

@@ -1,6 +1,6 @@
 ---
 title: "How to Share OSS OS via Torrent [with VPNs]"
-date: 2025-09-19
+date: 2025-11-19
 draft: false
 tags: ["Networking","P2P","NordVPN","ProtonVPN","Mullvad","Wireguard","Tailscale","Gluetun"]
 description: How to share Raspberry Pi OS (Bullseye) as Torrent with Qbitrorrent/Transmission and VPN.

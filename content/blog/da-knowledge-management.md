@@ -120,7 +120,7 @@ I know what you are looking for: **DATABASELESS KNOWLEDGE BASE**
     {{< card link="https://fossengineer.com/selfhostable-note-taking-tools/" title="OSS Note taking tools ↗" >}}
 {{< /cards >}}
 
-https://github.com/JAlcocerT/Home-Lab/tree/main/wiki-js
+* https://github.com/JAlcocerT/Home-Lab/tree/main/wiki-js
 
 ---
 
@@ -248,4 +248,6 @@ So, to summarize:
 * **Nextcloud can work with OIDC providers like Authelia and Okta**, but it does so by managing the authentication flow itself and redirecting the browser.
 * **The Nextcloud mobile app typically does not use the OIDC flow.** It relies on either a username/password combination or, more securely, a special **app password** that is generated within Nextcloud after you have authenticated via the web.
 
-Therefore, regardless of whether you use TinyAuth, Authelia, or Okta, the solution for the Nextcloud Android app remains the same: use an **app password**. This is the intended and most reliable way for third-party clients to connect to your Nextcloud instance when external authentication is enabled.
+Therefore, regardless of whether you use TinyAuth, Authelia, or Okta, the solution for the Nextcloud Android app remains the same: use an **app password**.
+
+This is the intended and most reliable way for third-party clients to connect to your Nextcloud instance when external authentication is enabled.
