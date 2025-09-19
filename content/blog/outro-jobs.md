@@ -39,7 +39,7 @@ What we could do though is:
 2. To prepare a cool [CV as a code with Latex](#creating-a-responsive-cv)
 
 
-If you are using linkedin, you can see how good is your profile supposed to be: https://www.linkedin.com/sales/login its called the SSI, social selling index.
+If you are using linkedin, you can see how good is your profile supposed to be: `https://www.linkedin.com/sales/login` its called the SSI, social selling index.
 
 ## Data for Job Market
 

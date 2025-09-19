@@ -271,7 +271,7 @@ You can selfhost Chatwoot with this compose
     * Building complex data pipelines (ETL).
     * Creating custom integrations between applications.
     * Marketing automation (lead capture, email campaigns).
-    * CRM integration and data synchronization.
+    * **CRM integration** and data synchronization.
     * IT Operations (onboarding, security incident enrichment).
     * Building AI agents.
     * Customer support automation.
@@ -280,9 +280,7 @@ You can selfhost Chatwoot with this compose
 
 n8n (pronounced "n-eight-n") is a powerful and flexible workflow automation tool. Here's a breakdown of what it is and how you can work with its workflow JSON:
 
-**Can you feed workflow JSON to n8n?**
-
-**Absolutely, yes!** n8n workflows are essentially saved as JSON files.
+**Can you feed workflow JSON to n8n?** **Absolutely, yes!** n8n workflows are essentially saved as JSON files.
 
 This is a core feature that enables sharing, versioning, and **programmatic management of workflows**.
 

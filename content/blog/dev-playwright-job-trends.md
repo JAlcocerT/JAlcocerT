@@ -70,8 +70,6 @@ And it was not QA work, but process job.
 
 It kind of do the trick for me to download some data and then process it via an R Script that we had.
 
-
-
 ---
 
 ## Conclusions

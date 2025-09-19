@@ -2,12 +2,31 @@
 title: "My Fav browsers and their automation"
 date: 2025-09-22
 draft: false
-tags: ["Web","Zen vs Firefox vs LibreWolf","Brave vs Chrome","PlayWright MCP"]
+tags: ["Web","Zen vs Firefox vs LibreWolf","Brave vs Chrome","PlayWright MCP","Puppeteer"]
 description: 'Neko vs KASM vs webtops. Web Automation'
 url: 'how-to-browse'
 ---
 
-https://console.groq.com/docs/browser-automation
+<!-- 
+## AgencySwarm
+
+Web Browsing like human. With GPT4.
+
+
+* https://github.com/VRSEN/agency-swarm - FOSS, but using GPT4
+* Embedding customs GPT - https://www.oai-widget.com/
+
+
+### a browsing agent, fully in Py and GPT4 under the hood
+
+* Selenium
+* Scroll...
+
+
+* https://github.com/unconv/gpt4v-browsing -->
+
+
+* https://console.groq.com/docs/browser-automation
 
 Lately I tried Zen browser.
 
@@ -20,7 +39,9 @@ https://browser.networkchuck.com/
 
 ## Automating your Browser
 
-Playwright is an open-source browser automation library developed by Microsoft. It is primarily used for fast, reliable, and cross-browser end-to-end testing of web applications. Playwright allows developers to programmatically control browsers such as Chromium, Firefox, and WebKit through a unified API, supporting automation of user interactions, UI testing, and even web scraping.
+Playwright is an open-source browser automation library developed by Microsoft. It is primarily used for fast, reliable, and cross-browser end-to-end testing of web applications. 
+
+Playwright allows developers to programmatically control browsers such as Chromium, Firefox, and WebKit through a unified API, supporting automation of user interactions, UI testing, and even web scraping.
 
 Yes, Playwright is open source, available under the MIT license, and supports multiple programming languages including JavaScript, Python, C#, and Java. It relates to web scraping because it can automate browser actions including navigation, interaction with page elements, and data extraction, thus enabling scraping of dynamically rendered web pages that simpler HTTP request libraries cannot handle effectively.
 
@@ -33,6 +54,91 @@ In summary:
 [8](https://playwright.dev/agents/playwright-mcp-browser-automation)
 [10](https://github.com/microsoft/playwright)
 
+### Playwright vs Pupeteer
+
+Puppeteer and Playwright are both web automation tools that allow programmatic control of web browsers to automate tasks like testing, scraping, and interaction.
+
+Puppeteer
+
+- Puppeteer is a Node.js library developed by Google to control Chrome and Firefox via DevTools Protocol.
+- It enables high-level browser automation: navigation, clicking, typing, taking screenshots, generating PDFs.
+- Mainly focused on Chromium-based browsers with growing Firefox support.
+- Pros: Simple API, great for Chrome automation, headless or headed modes, widely used for testing and scraping.
+- Limitations: Primarily Chromium-focused (though Firefox is supported), limited cross-browser support, JavaScript/Node.js only.
+
+Playwright
+
+- Playwright is an open-source automation framework by Microsoft supporting Chromium, Firefox, and WebKit (Safari) with one API.
+- Supports multiple languages: JavaScript, Python, C#, and Java.
+- Advanced features include multi-browser, multiple contexts, network interception, automatic waiting, mobile/device emulation, and visual testing.
+- Pros: True cross-browser support, multi-language, built-in test runner (@playwright/test), robust automation for modern web apps.
+- Limitations: Slightly more complex API, heavier dependency compared to Puppeteer but offers much broader capabilities.
+
+### Other notable web automation tools
+
+| Tool         | Pros                                          | Limitations                            |
+|--------------|-----------------------------------------------|---------------------------------------|
+| Selenium     | Supports many languages and browsers, huge community, strong integration with CI/CD | Complex setup, slower, maintenance overhead, mobile testing limited |
+| Cypress      | Fast, developer-friendly, built-in waiting, real-time reloads | JavaScript only, limited browser support mainly Chromium, no multi-tabs or cross-domain |
+| TestCafe     | Easy setup, no browser drivers needed, supports parallel tests | JavaScript only, less flexible API, no XPath selectors |
+| WebDriverIO  | Modern JS API on Selenium, parallel tests, extensive plugins | Complex setup, depends on drivers, slower than direct browser APIs |
+
+ Summary
+- Puppeteer: Great for Chrome-focused automation and quick JavaScript-based tasks.
+- Playwright: More comprehensive, cross-browser, multi-language automation framework suitable for complex, cross-platform testing.
+- Selenium: Most established with broad language and browser support but heavier setup.
+- Others like Cypress, TestCafe offer specialized approaches with their own trade-offs.
+
+These tools differ in browser support, language support, ease of setup, and test stability, so the choice depends on project needs and tech stack.
+
+[1](https://developer.chrome.com/docs/puppeteer)
+[6](https://playwright.dev)
+[7](https://github.com/microsoft/playwright)
+[8](https://pptr.dev)
+
+
+---
+
+## Conclusions
+
+
+Last time i was scrapping with the [job-trends on this post](https://jalcocert.github.io/JAlcocerT/playwright-101/) I got limitation on how to capture the amount of offers automatically based on bs4.
+
+Yes, exactly. Puppeteer and Playwright can help extract data from websites where BeautifulSoup (bs4) is not sufficient.
+
+- BeautifulSoup is purely an HTML parser and works well for static HTML content that can be directly fetched via HTTP requests.
+- However, many modern websites use JavaScript to render content dynamically (SSR or CSR—Client Side Rendering). BeautifulSoup cannot execute JavaScript or interact with the page.
+- Puppeteer and Playwright automate real browsers, allowing them to fully render pages, execute JavaScript, and simulate human interactions like clicking buttons, filling forms, or scrolling.
+- This makes them ideal for scraping dynamic or interactive web content that BeautifulSoup alone cannot access.
+
+So, when JavaScript rendering or complex interactions are required to get the data, these browser automation tools are the better choice compared to just static HTML parsers like BeautifulSoup.
+
+
+For web scraping SSR (Server-Side Rendered) content that requires human interaction, the best tools among those discussed are Puppeteer and Playwright.
+
+Puppeteer
+- Puppeteer can control a headless or headed Chromium browser, allowing automation of complex user interactions like clicks, form inputs, and navigation.
+- It executes JavaScript on the page, enabling scraping SSR content which is fully rendered by the browser.
+- Puppeteer can handle authentication, captchas (with external help), dynamic content loading, and user gestures.
+
+Playwright
+- Playwright offers all the capabilities of Puppeteer but extends support to multiple browsers (Chromium, Firefox, WebKit).
+- It handles complex user interactions smoothly, including clicks, scrolls, drag-drop, and multi-page workflows.
+- Playwright also supports features like network interception (to block or modify requests), multiple browser contexts, and better handling of modern web apps.
+- Its robust auto-waiting reduces flakiness when scraping SSR content that changes dynamically based on user actions.
+
+Why these two?
+- Both run full browsers that can execute JavaScript, essential for SSR content.
+- Support simulating realistic human interactions needed for scraping content behind logins, forms, or buttons.
+- Can wait for elements and page states after interaction, ensuring correct data is captured.
+  
+Selenium and others
+- Selenium supports human interaction and SSR as it drives real browsers but is more complex and slower.
+- Cypress and TestCafe are mainly for testing and have limitations with multi-tab, cross-domain, or complex user simulators that web scraping might need.
+
+- **Playwright** is generally preferred for modern, complex scraping needing robust multi-browser support and advanced features.
+- **Puppeteer** is excellent for Chromium-focused projects with straightforward automation needs.
+- Both provide the necessary capabilities to scrape SSR sites with human interaction simulation efficiently and reliably.[1][2][3][4]
 
 ### MCP x PlayWright
 
@@ -53,7 +159,7 @@ https://jalcocert.github.io/JAlcocerT/playwright-101/
 }
 ```
 
-## Self-hostable browsers
+### Self-hostable browsers
 
 Several self-hostable browsers running via containers are available, including:
 
@@ -69,7 +175,7 @@ sudo chown -R 1000:1000 /home/docker/neko
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/neko" title="Neko | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
-> remember to do `ctrl+c` to copy from neko to your main desktop
+> Remember to do `ctrl+c` to copy from neko to your main desktop
 
 
 - **Kasm Workspaces**: A container streaming platform that can spin up various browsers or full desktops in ephemeral Docker containers accessible via the web browser. It’s designed for enterprise use, secure browser isolation, and remote workspace management.[5][6][7]
@@ -121,6 +227,24 @@ This puts the typical desktop Firefox browser in context with containerized and 
 
 ## FAQ
 
+### What it is Puppeteer?
+
+
+<!-- 
+Puppeteer what?
+-->
+
+
+- **Puppeteer** is a **Node.js library** developed by Google, used for **automating and interacting with web pages** using a headless Chrome or Chromium browser.
+- **Key functionalities** include:
+  - **Headless Browsing**: Operates Chrome or Chromium without a graphical user interface, ideal for background automation tasks.
+  - **Web Scraping**: Enables data extraction from websites through navigation and interaction with page elements.
+  - **Automated Testing**: Useful for testing web applications by simulating user actions like clicks and form submissions.
+  - **Screenshots and PDF Generation**: Captures screenshots and generates PDFs from web content, beneficial for reports or documentation.
+  - **Performance Monitoring**: Measures web page performance metrics such as load times and resource usage.
+  - **Accessibility Testing**: Incorporates tools to ensure web pages are accessible to users with disabilities.
+- **Popularity**: Favored for web scraping and automated testing due to its ease of use and Chrome integration.
+- **Getting Started**: Install via npm or yarn, then write scripts to automate browser interactions and perform tasks on web pages. 
 
 ### What is KASM?
 

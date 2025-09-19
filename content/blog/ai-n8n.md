@@ -102,21 +102,14 @@ This integration allows users to combine Perplexity’s real-time AI insights wi
 [3](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.perplexity/)
 [4](https://github.com/watzon/n8n-nodes-perplexity)
 [5](https://www.reddit.com/r/n8n/comments/1la3t1i/how_to_connect_perplexity_to_n8n/)
-[6](https://ryanandmattdatascience.com/n8n-perplexity/)
 [7](https://n8n.io/workflows/3673-ai-powered-research-assistant-with-perplexity-sonar-api/)
 [8](https://www.linkedin.com/pulse/unlocking-automation-potential-perplexity-ai-n8n-peter-sigurdson-ewzfe)
-[9](https://www.youtube.com/watch?v=VVutlm-avuI)
-[10](https://www.youtube.com/watch?v=JnaEbfy1aqo)
 [11](https://n8n.io/integrations/perplexity/and/read-ai/)
-[12](https://www.youtube.com/watch?v=KKdiikp3UwI)
 [13](https://pipedream.com/apps/perplexity/integrations/n8n-io)
 [14](https://community.n8n.io/t/using-perplexity-api-with-the-ai-tools-agent/54308)
-[15](https://www.youtube.com/watch?v=9Wo36LVLr3w)
 [16](https://n8n.io/integrations/one-simple-api/and/perplexity/)
 [17](https://n8n.io/workflows/2682-perplexity-research-to-html-ai-powered-content-creation/)
-[18](https://www.youtube.com/watch?v=yOF7E4hmPkk)
-[19](https://www.youtube.com/watch?v=_jm49FkBrUg)
-[20](https://www.youtube.com/watch?v=LSPmrCX_cJI)
+
 
 #### Perplexity x MCP
 

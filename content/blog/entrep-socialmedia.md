@@ -3,7 +3,7 @@ title: "Social Media Automation | PostIZ"
 date: 2025-07-03T19:20:21+01:00
 draft: false
 description: 'Programatic posting on SM be like 🤯 Marketing Tools for your SaaS'
-tags: ["Youtube Shorts","Social Media","APIfy","Scrapping"]
+tags: ["Youtube Shorts","Social Media","APIfy","Scrapping","Marketers"]
 url: social-media-automation
 ---
 
@@ -161,7 +161,7 @@ docker run -p 3084:3084 --env-file .env --rm -it oculair/postiz-mcp:latest
 
 ## Conclusions
 
-There are **people doing cool things** with marketing agencies.
+There are **people *(marketers)* doing cool things** with marketing agencies.
 
 They are implementing CRMs like `https://www.gohighlevel.com/`
 
@@ -173,10 +173,9 @@ Also, `https://www.smartlead.ai/pricing` for cold emails.
 
 Even  `https://www.heyreach.io/`
 
+> 10x your linkedin outbound. Unlimited senders, one fixed cost
 
-> 10x your LinkedIn outbound. Unlimited senders, one fixed cost
-
-> > Which can be used together with n8n: https://www.heyreach.io/n8n-templates
+> > Which can be used **together with n8n**: https://www.heyreach.io/n8n-templates
 
 Last but not least: `https://www.similarweb.com`
 
