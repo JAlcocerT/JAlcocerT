@@ -1,9 +1,9 @@
 ---
-title: "[Recap] on Audio. Ideating Speech rAIter micro SaaS"
+title: "[Recap] on AI Audio. Ideating Speech rAIter micro SaaS"
 date: 2025-09-12
 draft: false
 tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcript","BiP", "Youtube Workflow","Monaco Editor","ChartDB"]
-description: "Audio with AI. An Astro Landing Page + signup/in via FastAPI x sqlite x Admin panel"
+description: "An Astro Landing Page + signup/in via FastAPI x sqlite x Admin panel. Fireflies AI for MoM."
 url: 'audio-recap'
 ---
 
@@ -23,6 +23,9 @@ You can get started with this kind of project [like so](#how-to-get-started-and-
 
 
 > Plot twist: I ended app with [achieving a different scope](#conclusions) with this one :)
+
+
++++ Fireflies [MoM](#tools-for-meetings)
 
 **Intro**
 
@@ -279,6 +282,9 @@ It supports live transcription during recordings and exports in multiple formats
 
 It syncs audio and transcript content across devices seamlessly.
 
-{{< callout type="warning" >}}
+{{< callout type="info" >}}
 I decided to give a try to this one, as fireflies seems to support n8n integration: https://guide.fireflies.ai/articles/4758387081-learn-about-n8n-x-fireflies-integration
 {{< /callout >}}
+
+
+![Fireflies AI has n8n integration](/blog_img/GenAI/n8n/n8n-audio-fireflies.png)

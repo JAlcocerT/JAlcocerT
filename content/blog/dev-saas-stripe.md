@@ -53,6 +53,8 @@ Or to sell simple microSaaS services like: `https://poopup.co/`
 
 2. Bring your singin flow into place
 
+> Modern signups look like: `https://www.mailerlite.com/signup` or `https://app.fireflies.ai/login`
+
 3. Place some features behind Stripe.
 
 
@@ -60,8 +62,8 @@ Or to sell simple microSaaS services like: `https://poopup.co/`
 
 ## FAQ
 
-RLS - row level security is very important
+RLS - row level security is very important!
 
 Make sure that one user can only edit records related to that particular user.
 
-Also pwd should be hashed on the DB, just in case the DB gets compromised.
+Also pwd should be hashed on the DBs, just in case the DB gets compromised.
