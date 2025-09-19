@@ -2,7 +2,7 @@
 title: "Pro Scrapping with Playwright"
 date: 2025-08-05
 draft: false
-tags: ["Dev","Playwright","Selenium","Job-Trends"]
+tags: ["Dev Web","Playwright","Selenium","Job-Trends"]
 description: 'Playwright based WebApp with job trends info.'
 url: 'playwright-101'
 ---

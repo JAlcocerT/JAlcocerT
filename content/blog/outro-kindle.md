@@ -12,6 +12,8 @@ url: 'kindle-clippings-knowledge-base'
 
 A recap on the last 5y+ of kindles notes.
 
+Pandoc can do very cool things.
+
 +++ [Business Model Canvas](#business-canvas)
 
 

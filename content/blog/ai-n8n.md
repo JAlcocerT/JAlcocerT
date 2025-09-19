@@ -38,6 +38,18 @@ To integrate Fireflies.ai with n8n, follow these general steps to automate meeti
 1. **Get Fireflies API Access:**
    - Sign up or log into Fireflies.ai.
    - Obtain your Fireflies API key from the Fireflies developer or integration settings.
+   - https://docs.fireflies.ai/getting-started/quickstart#step-2%3A-making-your-first-request
+
+```sh
+curl \
+   -X POST \
+   -H "Content-Type: application/json" \
+   -H "Authorization: Bearer your_api_key" \
+   --data '{ "query": "{ users { name user_id } }" }' \
+   https://api.fireflies.ai/graphql
+```
+
+Just go to https://app.fireflies.ai/settings and get that API key.
 
 2. **Add Fireflies Node in n8n:**
    - In your n8n workflow editor, search for the Fireflies node (official Fireflies.ai integration exists).

@@ -7,6 +7,7 @@ description: 'Neko vs KASM vs webtops. Web Automation'
 url: 'how-to-browse'
 ---
 
+https://console.groq.com/docs/browser-automation
 
 Lately I tried Zen browser.
 
@@ -34,6 +35,8 @@ In summary:
 
 
 ### MCP x PlayWright
+
+https://jalcocert.github.io/JAlcocerT/playwright-101/
 
 * https://github.com/microsoft/playwright-mcp
 

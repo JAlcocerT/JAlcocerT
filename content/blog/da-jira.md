@@ -2,22 +2,16 @@
 title: "Jira 101"
 date: 2025-09-08T00:20:21+01:00
 draft: false
-description: 'Jira DataModel with AI'
+description: 'Jira DataModel with AI. Pandoc is great, more if you are not alergic to Latex.'
 url: 'jira-data-model-with-ai'
-tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram"]
+tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram Mermaid","LandThatJob"]
 ---
-
 
 To work with Jira, you need to understand their datamodel: https://developer.atlassian.com/server/jira/platform/database-schema/
 
 Just in case you need to build a [PBi](https://jalcocert.github.io/JAlcocerT/about-powerbi/) x Jira related dashboard.
 
 > Instead of a https://eazybi.com/products/eazybi-reports-and-charts-for-jira
-
-
-https://marketplace.cursorapi.com/items/?itemName=MermaidChart.vscode-mermaid-chart
-
-`CTRL Shift P` ->> Mermaid Preview Diagram
 
 
 On the jira data model pdf, you will find jiradb.table_name, like `jiradb.issuetype`
@@ -46,20 +40,83 @@ So how about taking the requirements from PdM, understand Jira schema and propos
 
 
 
+**What I learnt**
+
+For me, **Pandoc** is a tool that is here to stay.
+
+
+1. Convert that .md into a pdf:
+
+```sh
+git clone https://github.com/JAlcocerT/jira-datamodel
+cd jira-datamodel
+
+#thank you, next
+sed 's/✅/[OK]/g; s/❌/[X]/g; s/��/[CHART]/g' reply-overview-final.md > input-clean.md
+pandoc input-clean.md -o requirements-jiraado-estimation8.pdf --pdf-engine=xelatex --toc
+```
+
+2. If you are not conviced yet, use Pandoc to create a pdf from md and have a cool theme
+
+Like https://github.com/enhuiz/eisvogel
+
+>  A pandoc LaTeX template to convert markdown files to PDF or LaTeX. 
+
+3. You can potentially use Pandoc with CSS to generate your pdfs:
+
+```sh
+sudo apt-get install wkhtmltopdf
+pandoc 1-3-summary-embedded.md -o styled-summary.pdf --pdf-engine=wkhtmltopdf
+```
+
+
+{{< callout type="info" >}}
+MD + Pandoc *+Latex optinally* = MAGIC
+{{< /callout >}}
+
+And this can (and will) not only simplify your reports.
+
+But it can be use for that cool LandThatJob.
+
+because you havent forgot on the Overleaf CV generation, right?
+
+> CV as a code, like with [overleaf](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#creating-a-responsive-cv) + [your story](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#historieta) + AI magic with a given offer link, aka scrap & process = you getting the job you want
 
 ---
 
 ## FAQ
 
+The main difference between Pandoc and LaTeX is their purpose and function:
+
+- **LaTeX** is a high-quality typesetting system primarily **used for creating well-formatted documents**, especially those with complex mathematical formulas, scientific papers, and academic publications. It involves writing documents in a markup language focused on presentation, layout, and formatting control. LaTeX is a document preparation system rather than a conversion tool.
+
+- **Pandoc** is a universal document converter. It converts text documents **between many markup formats** like: **Markdown, LaTeX, HTML, Word, and PDF**. Pandoc is often used to write content in a simpler markup (e.g., Markdown) and then convert it into well-structured formats including LaTeX for further processing or PDF generation. 
+
+Pandoc can also convert LaTeX to other formats.
+
+In summary:
+
+- LaTeX is a typesetting system and markup language for creating documents with precise formatting. 
+- Pandoc is a tool that converts documents from one markup format to another, including to and from LaTeX, enabling flexible workflows.
+
+Thus, LaTeX is used for authoring and typesetting documents directly, while Pandoc acts as a bridge or converter supporting multiple document formats, including LaTeX, as one of its output options.[4][6][7]
+
+
 ### PDF to md/json
 
 Several open source tools can help convert complex PDFs, such as database schemas, into machine-readable formats like JSON, XML, or structured diagrams. Some notable open source options are:
 
-To read PDFs you can try Okular:*but the `ctrl+F` worked better for me with Zen*
+To read PDFs you can try Okular:*but the `ctrl+F` worked better for me with Zen or firefox*
 
 ```sh
 #sudo apt install okular
 ```
+
+* https://github.com/jzillmann/pdf-to-markdown
+
+> MIT A PDF to Markdown converter
+
+
 
 - **Tabula**: A popular tool for extracting tables from PDFs into CSV, JSON, or Excel formats. It’s especially useful for schema diagrams presented as tables.[1]
 
@@ -71,17 +128,17 @@ To read PDFs you can try Okular:*but the `ctrl+F` worked better for me with Zen*
 - **PyMuPDF (fitz)**: A Python library to extract text, images, and layout information from PDFs, which can be combined with other tools to create structured data.
 - **Camelot**: Similar to Tabula, designed to extract tables from PDFs into pandas DataFrames, then exported as JSON or CSV.[1]
 
-https://camelot-py.readthedocs.io/en/master/
+* https://camelot-py.readthedocs.io/en/master/
 
 **OpenDataLab**
 
-https://opendatalab.github.io/MinerU/demo/
-https://github.com/opendatalab/MinerU
+* https://opendatalab.github.io/MinerU/demo/
+* https://github.com/opendatalab/MinerU
 
 [2](https://github.com/opendatalab/PDF-Extract-Kit)
 
 
-https://github.com/tabulapdf/tabula?tab=readme-ov-file
+* https://github.com/tabulapdf/tabula?tab=readme-ov-file
 
 ### Md to PDF
 

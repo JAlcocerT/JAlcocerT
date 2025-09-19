@@ -249,6 +249,7 @@ The entire game logic, from physics and animations to user input, is handled by 
 When a web page running on one origin tries to access resources from a different origin (like an API), the browser sends the request with an "Origin" header.
 
 In a nutshell, CORS (Cross-Origin Resource Sharing) tells an API endpoint (server) which origins (domains, schemes, or ports) are allowed to request resources from it.
+
 The API server then responds with HTTP headers, primarily `Access-Control-Allow-Origin`, specifying which origins are permitted to access the resource. If the requesting origin matches one allowed by the server, the browser permits the response to be accessible to the web page's JavaScript; otherwise, the browser blocks it for security.
 
 CORS is how the server explicitly states which other sites or domains can call its API and read its data, protecting users from unauthorized cross-site interactions

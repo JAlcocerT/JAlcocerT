@@ -164,7 +164,7 @@ See this [script](https://github.com/JAlcocerT/sell-your-ebook/blob/main/create_
 
 > Maybe someone will do something with financial ,miss-conceptions'?
 
-But hey, some people use latex, so if its possible to make a code driven CV in overleaf with Latex
+But hey, some people use latex, so if its possible to make a code driven [CV in overleaf with Latex](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#creating-a-responsive-cv)...
 
 Why not ebooks?
 

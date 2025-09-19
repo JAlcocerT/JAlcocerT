@@ -139,7 +139,7 @@ Looking for a [**job change** because the market is bullish](https://jalcocert.g
 
 1. Open Resume
 2. Reactive Resume
-3. OverLeaf - Latex driven CV as a Code, as commented [here](https://jalcocert.github.io/JAlcocerT/playwright-101/)
+3. OverLeaf - Latex driven CV as a Code, as commented [here](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/)
 
 ### How to BackUp My Projects
 

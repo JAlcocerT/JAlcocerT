@@ -13,11 +13,13 @@ description: 'Firebase Auth as your WebApp login method. A Serverless Authentica
   {{< card link="https://github.com/JAlcocerT/slidev-editor" title="A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests" >}}
 {{< /cards >}}
 
-https://sli.dev/guide/hosting#spa
+* https://sli.dev/guide/hosting#spa
 
+```sh
 slidev build
+```
 
-Social Signin > One Time Link > Email and PWD
+> Social Signin > One Time Link > Email and PWD
 
 
 **Intro**
@@ -103,7 +105,9 @@ The entire logic for navigating slides, playing animations, and handling interac
 
 {{% /details %}}
 
-1. MermaidJS
+1. MermaidJS: https://marketplace.cursorapi.com/items/?itemName=MermaidChart.vscode-mermaid-chart
+
+`CTRL Shift P` ->> Mermaid Preview Diagram
 
 2. Katex: so that you get [good looking expressions](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#cagr) $CAGR = \left( \frac{V_f}{V_i} \right)^{\frac{1}{t}} - 1$.
 

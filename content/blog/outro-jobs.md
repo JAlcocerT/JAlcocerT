@@ -3,12 +3,14 @@ title: "About Jobs. HR Prep and AI Engineers."
 date: 2025-02-10
 draft: false
 tags: ["Outro","Scrapping","Job-Trends","Overleaf","Interview preparation","Historieta"]
-description: 'Is it a good moment to change jobs? New positions AI/LLM/ML Engineer. Time to recap Scrapping techniques and a Latex powered CV.'
+description: 'Is it a good moment to change jobs? New positions AI/LLM/ML Engineer. Scrapping techniques and a Latex powered CV.'
 url: 'when-to-apply-for-a-job'
 ---
 
 
-**TL;DR** A recap into the job scrapper and trends + using Overleaf to create a [CV as a code with Latex](#cv-as-a-code)
+**TL;DR** 
+
+A recap into the job scrapper and trends + using Overleaf to create a [CV as a code with Latex](#cv-as-a-code)
 
 Get your CV always up to date and be ready for [HR Questions](#historieta).
 
@@ -552,6 +554,140 @@ If you need to create simple, easy-to-read text documents or web content, Markdo
 {{< /cards >}}
 
 2. I was also exploring how to create a [CV with AI](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#cv-with-ai), based on [**open source CV as a Code**](https://fossengineer.com/open-source-curriculum)
+
+#### Latex themes for CVs
+
+**Absolutely!** There are some excellent LaTeX themes specifically designed for CV/resume building. Let me show you some popular options:
+
+## **🎯 Popular CV/Resume LaTeX Themes**
+
+### **1. ModernCV** (Most Popular)
+- **Professional and clean** design
+- **Multiple color schemes** (blue, orange, green, red, grey, black)
+- **Multiple styles** (casual, classic, banking, fancy)
+- **Easy to customize**
+
+### **2. AwesomeCV**
+- **Modern, minimalist design**
+- **Great for tech professionals**
+- **Clean typography and spacing**
+
+### **3. Friggeri CV**
+- **Elegant sidebar layout**
+- **Professional appearance**
+- **Good for academic/research positions**
+
+### **4. AltaCV**
+- **Modern design with sidebar**
+- **Great for developers and designers**
+- **Supports multiple layouts**
+
+## **🚀 Let's Install and Try ModernCV**
+
+
+[1 tool called]
+
+Great! ModernCV is already available. Let me create a sample CV template for you:
+
+
+[1 tool called]
+
+Now let's compile this CV to see how it looks:
+
+
+[1 tool called]
+
+Great! The CV compiled successfully! The error about the missing `picture` file is just because we referenced a photo that doesn't exist. Let's check the generated PDF:
+
+
+[1 tool called]
+
+Perfect! Now let me show you how to use Pandoc with CV templates. Let me create a markdown version of a CV that can be converted using Pandoc:
+
+
+[1 tool called]
+
+Now let's convert this markdown CV to PDF using our Eisvogel template:
+
+
+[1 tool called]
+
+Great! It worked (just some emoji warnings which is normal). Let's also create a version without emojis for better compatibility:
+
+
+[2 tools called]
+
+Perfect! Let's check all the CV files we've created:
+
+
+[1 tool called]
+
+## **🎯 CV/Resume LaTeX Themes - Complete Guide**
+
+Perfect! You now have multiple CV options. Here's what we've created:
+
+### **✅ What We Built:**
+
+1. **`sample-cv.pdf`** (29 KB) - Pure LaTeX ModernCV template
+2. **`cv-eisvogel.pdf`** (33 KB) - Markdown → Eisvogel template
+3. **`cv-clean.pdf`** (33 KB) - Clean markdown → Eisvogel (no emojis)
+
+**🎨 Available CV Themes:**
+
+**1. ModernCV (Pure LaTeX)**
+```bash
+# Direct LaTeX compilation
+xelatex sample-cv.tex
+```
+- **Styles:** `classic`, `casual`, `banking`, `fancy`
+- **Colors:** `blue`, `orange`, `green`, `red`, `grey`, `black`
+- **Features:** Professional layout, automatic formatting
+
+**2. Pandoc + Eisvogel (Markdown → PDF)**
+
+```bash
+# Markdown to professional PDF
+pandoc cv-template.md -o cv.pdf --template=eisvogel-working.latex --pdf-engine=xelatex
+```
+- **Benefits:** Write in markdown, get professional PDF
+- **Flexibility:** Easy to edit and version control
+
+**3. Other Popular CV Themes:**
+- **AwesomeCV** - Modern, minimalist
+- **Friggeri CV** - Elegant sidebar layout
+- **AltaCV** - Modern with sidebar
+- **Twenty Second Resume** - Clean, simple
+
+**💡 CV Building Workflow:**
+
+1. **Choose your approach:**
+   - **Pure LaTeX** for maximum control
+   - **Markdown + Pandoc** for simplicity
+
+2. **Pick your template:**
+   - **ModernCV** for traditional resumes
+   - **Eisvogel** for modern, clean look
+   - **Custom templates** for unique designs
+
+3. **Generate multiple formats:**
+   ```bash
+   # PDF for applications
+   pandoc cv.md -o cv.pdf --template=eisvogel-working.latex
+   
+   # HTML for web
+   pandoc cv.md -o cv.html --css=cv-style.css
+   
+   # Word for HR systems
+   pandoc cv.md -o cv.docx
+   ```
+
+**🚀 Pro Tips:**
+- **Version control** your markdown CV
+- **A/B test** different templates for different applications
+- **Keep it simple** - focus on content, not fancy formatting
+- **Use consistent formatting** - same date format, bullet style, etc.
+
+You now have a complete CV building system! Would you like me to show you how to customize any of these templates further, or create additional CV variations?
 
 
 ### Historieta
