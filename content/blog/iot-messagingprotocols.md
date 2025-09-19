@@ -65,8 +65,7 @@ As seen here:
 * WebSockets are best for real-time communication where low latency is crucial.
 * MQTT excels in low-bandwidth environments and is optimized for IoT applications.
 * RabbitMQ is suitable for scenarios requiring reliable message delivery and complex routing logic.
-
-> There is also Web RTC (Real Time Communication).
+* Web RTC (Real Time Communication).
 
 ### MQTT
 
@@ -78,8 +77,7 @@ MQTT is a lightweight, publish-subscribe messaging protocol designed for constra
 
 It provides a flexible and efficient mechanism for asynchronous, real-time communication between clients and servers.
 
-MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted 
-reliably and efficiently.
+MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted reliably and efficiently.
 
 While MQTT can be used for real-time communication in various scenarios, it may not be as widely supported or as easy to integrate as REST APIs or WebSockets in certain contexts.    
 
@@ -107,12 +105,14 @@ MQTT is widely used in industries such as smart homes, industrial automation, an
 MQTT works as PUB/SUB - See a sample project with a Pi https://jalcocert.github.io/RPi/posts/rpi-mqtt/  💻 
 {{< /callout >}}
 
+
 #### MQTT Use Case
 
 **Monitor a Car Battery Remotely using ESP8266**
 
-https://www.youtube.com/watch?v=VnGRFwDrLHo
+<!-- https://www.youtube.com/watch?v=VnGRFwDrLHo -->
 
+{{< youtube "VnGRFwDrLHo" >}}
 
 ### RabbitMQ
 

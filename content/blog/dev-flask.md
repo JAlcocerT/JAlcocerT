@@ -803,7 +803,7 @@ WebSocket connections are useful for games or web sites that need to **display l
 * MQTT excels in low-bandwidth environments and is optimized for IoT applications.
 * RabbitMQ is suitable for scenarios requiring reliable message delivery and complex routing logic.
 
-> There is also Web RTC (Real Time Communication).
+> See also Web RTC (Real Time Communication)
 
 ### Interesting stuff I learnt recently
 

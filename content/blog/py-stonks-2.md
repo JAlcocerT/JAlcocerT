@@ -168,6 +168,10 @@ I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit
 
 ## Outo
 
-The compound Interest threshold
+Interesting concepts: 
 
-https://www.youtube.com/watch?v=CAupuMtWjfI
+1. The compound Interest threshold
+
+<!-- https://www.youtube.com/watch?v=CAupuMtWjfI -->
+
+{{< youtube "CAupuMtWjfI" >}}

@@ -256,11 +256,23 @@ So if the Analytics part is clear...
 #### PolyMarket
 
 * Its kind of a prediction market...place? *Lets find out how many transactions are happening*
+
   * https://defillama.com/protocol/polymarket#information
   * Transactions - https://polygonscan.com/txs?a=0x4bfb41d5b3570defd03c39a9a4d8de6bd8b8982e
 
-Polymarket Overview: **A decentralized application on the Polygon blockchain** for predicting real-world events like elections and sports.
+Polymarket Overview: **A decentralized application on the Polygon blockchain** for predicting real-world events like elections, interest rate cuts, sports....
 
+<!-- The primary smart contract address for Polymarket on the Ethereum network is:
+
+0x0d08db747095e91780711724267a183e8522aa64 
+
+Additionally, Polymarket uses proxy wallet contracts and multisig safes for user accounts, which are deployed on the Polygon network. For example, a Polymarket proxy wallet factory address on Polygon is:
+
+0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
+
+These proxy wallet contracts hold users' positions and USDC used within Polymarket's ecosystem, facilitating a smooth user experience.
+
+-->
 
 {{< details title="About PolyMarket... 📌" closed="true" >}}
 
