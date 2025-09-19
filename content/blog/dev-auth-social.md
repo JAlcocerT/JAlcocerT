@@ -259,6 +259,111 @@ Unlike with FastAPI + PyStonks, The Firebase Auth setup **worked on smartphones*
 You can pull the firebase registered users via CLI!
 {{< /callout >}}
 
+#### Firebase x Particular User Admin Page
+
+You can direct a user to a specific, personalized URL (/admin/useremail) in a Next.js app after they sign in with Firebase Auth. 
+
+You'll use Firebase Auth on the client side to get the user's information and then use Next.js's routing to redirect them. 
+
+To ensure that only they can see that page, you'll need to implement client-side and server-side route protection.
+
+Yes, what you've described is a standard and secure way to build this kind of application using **Firebase Auth** and **Next.js**.
+
+The approach is secure because it relies on both client-side and server-side checks.
+
+1. Client-Side Protection
+The client-side logic in your Next.js app ensures that a user is redirected away if their email doesn't match the one in the URL or if they're not signed in. While this provides a good user experience, it's not foolproof on its own. A malicious user could bypass it by disabling JavaScript in their browser. This is why the server-side check is so crucial.
+
+
+2. Server-Side Protection
+The real security comes from the server-side check using Next.js's **`getServerSideProps`** and the **Firebase Admin SDK**.
+
+* **Verification:** When the page is requested, the `getServerSideProps` function on the server verifies the user's ID token. The ID token is a JWT (JSON Web Token) that proves the user's identity. It's signed by Firebase and is tamper-proof.
+* **Trust:** Your server trusts Firebase to verify the token's authenticity. It's not just checking an email from the URL, but it's verifying a cryptographically signed token that proves the user's identity and confirms that they are the person they claim to be.
+* **Conditional Rendering:** If the token is invalid, expired, or doesn't match the user in the URL, the server simply refuses to render the page and redirects the request to a login page. This prevents unauthorized content from ever reaching the user's browser, making it highly secure. 
+
+In short, the combination of Firebase Authentication on the client side for user sign-in and the **Firebase Admin SDK** on the Next.js server for token verification creates a robust and secure system.
+
+#### Firebase x Particular users SignUp
+
+This must be done **within your code**, not in the Firebase Web UI.
+
+While the Firebase console allows you to enable or disable different sign-in methods (like Email/Password, Google, etc.), it does not have a feature to restrict user sign-ups to a specific list of emails.
+
+This is a deliberate design choice because relying on client-side logic for such a critical security task is not secure. A malicious user could easily modify the client-side code to bypass the check.
+
+You need to implement the whitelist logic on a trusted server-side environment, which is where **Firebase Cloud Functions** come in.
+
+**Why the Code-Based Approach is Secure**
+
+The process for securely implementing an email whitelist in Firebase is as follows:
+
+1.  **Firebase Database (e.g., Firestore):** You'll first store your list of whitelisted emails in a secure collection in Firestore. You would then write security rules to ensure that only an authenticated admin can read or write to this list.
+
+2.  **Next.js App (Client-side):** When a user attempts to sign up with their email and password, your Next.js app **does not** call the `createUser` function from the client-side Firebase SDK. Instead, it makes a request to a **Cloud Function**. 
+
+3.  **Cloud Function (Server-side):** This is the core of the secure setup.
+    * The function receives the email and password from your Next.js app.
+    * It uses the **Firebase Admin SDK** to query your Firestore database to check if the submitted email exists in your whitelist.
+    * **Only if the email is found** on the whitelist does the Cloud Function proceed to use the Admin SDK's `createUser` method to create the new user account in Firebase Authentication.
+    * If the email is not on the whitelist, the function returns an error, and no account is created.
+
+This method is secure because the user creation logic is entirely handled on a trusted server (the Cloud Function) where a user has no way of interfering with the process. 
+
+
+{{< callout type="info" >}}
+The user's device only requests the action; it cannot perform it.
+{{< /callout >}}
+
+Firebase can be configured to allow sign-up and sign-in only for particular emails, but it isn't a built-in feature you can simply toggle in the Firebase console.
+
+You have to implement this logic yourself using a combination of Firebase services, which makes the process secure.
+
+The Problem
+
+By default, when you enable the Email/Password sign-in method in Firebase Auth, any user can create an account with any email address. 
+
+You can't just provide a list of approved emails and have Firebase automatically block others.
+
+**The Secure Solution 🔒**
+
+To securely restrict sign-ups to a specific list of emails, you'll need to use two key Firebase features: **Cloud Functions** and a **Database** (Firestore or Realtime Database).
+
+Step 1: Create a Whitelist in Your Database
+
+First, create a collection or a node in your Firebase database to store a list of pre-approved emails. Only an admin user should have read/write access to this list through your admin panel.
+
+**Example Firestore Structure:**
+
+```
+/approvedEmails
+  - "user1@example.com": true
+  - "user2@example.com": true
+```
+
+Step 2: Use a Cloud Function for User Creation
+
+Instead of allowing users to sign up directly from your Next.js app, you'll create a **Cloud Function**. 
+
+This function will act as a secure intermediary for all sign-up requests.
+
+  * When a user submits their email and password from your app, the app will call this Cloud Function.
+  * The Cloud Function will receive the email and password.
+  * It will then check the user's email against the **approved email whitelist** in your database.
+  * If the email is on the list, the Cloud Function will use the Firebase Admin SDK to **create the user account** directly on the server.
+  * If the email is not on the list, the function will return an error, preventing the user from being created.
+
+This approach is highly secure because it moves the user creation logic to a trusted server environment (the Cloud Function). The client app never has the permission to create users directly, so even if a malicious user tampers with the front-end code, they cannot bypass your whitelist.
+
+Step 3: Implement Client-Side Sign-in
+
+Once the user account has been successfully created via the Cloud Function, your Next.js app can proceed with the normal Firebase sign-in process. 
+
+Since the account now exists, Firebase Auth will handle the rest.
+
+Even if a user with an unapproved email manages to sign up, they won't be able to access any of your application's data if you have also correctly configured **Firebase Security Rules** that check for a specific email or a custom claim that you set on approved users.
+
+
 ### 2. Supabase 🚀
 
 **Supabase** is an open-source alternative to Firebase, often referred to as "Firebase for PostgreSQL."
@@ -279,7 +384,7 @@ Because it's open-source and uses a **relational database (PostgreSQL)**, it giv
     * A newer platform compared to Firebase, so its feature set is still maturing.
     * Can have a steeper learning curve for developers not familiar with PostgreSQL.
 
-***
+
 
 ### 3. PocketBase ⚡
 
@@ -370,9 +475,7 @@ Because it's open-source, it's a great choice for developers who want more contr
     * **Framework-free:** Provides SDKs for a wide range of languages and frameworks.
     * **Customizable login experiences:** You can tailor the user-facing parts of the platform to match your brand.
 
-![alt text](/blog_img/entrepre/public-build/slidev-editor/logto1-panel.png)
-
-
+![Logto Admin Panel](/blog_img/entrepre/public-build/slidev-editor/logto1-panel.png)
 
 ```sh
 git branch -a
@@ -391,9 +494,14 @@ Add a z-logto-setup.md explaining what I need to do from logto web UI and also c
 npm install @logto/next
 ```
 
-![alt text](/blog_img/entrepre/public-build/slidev-editor/logto2-sdk.png)
+![Logto UI Setup](/blog_img/entrepre/public-build/slidev-editor/logto2-sdk.png)
 
 ![LogTo Creating Authentication for Web App](/blog_img/entrepre/public-build/slidev-editor/logto3-create-app.png)
+
+
+{{< callout type="info" >}}
+See that CORS concept how it appears again. It tells an API endpoint (server) which origins (domains, schemes, or ports) are allowed to request resources from it.
+{{< /callout >}}
 
 ---
 

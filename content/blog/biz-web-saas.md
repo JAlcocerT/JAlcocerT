@@ -165,6 +165,8 @@ With the local setup I *might have been* getting issues with the CORS: https://g
 
 So first i tried it via MKCert and then i just I went quickly with my known [Cloudflare Tunnels](#cloudflare-workers-auth)
 
+> With CF tunnels and the https it **worked fine**!
+
 #### Cloudflare Workers Auth
 
 You wont be able to use the demo PB API, so you will need to bring your PB publically + Cloudflare pages: *CF Pages configured, like [recently](https://github.com/JAlcocerT/serverless-invoices/blob/main/Deploy_to_CF.md)*

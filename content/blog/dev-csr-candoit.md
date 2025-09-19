@@ -3,7 +3,7 @@ title: "Client Side Rendering can do that"
 date: 2025-09-04T06:20:21+01:00
 draft: false
 tags: ["CSR","PWA","Web","MRR","French Amortization Calculator","QR","HTML2PDF"]
-description: 'CSR can do that. Keep things simple.'
+description: 'CSR can do that. Keep things simple and understand CORS'
 url: 'csr-and-js'
 ---
 
@@ -174,7 +174,7 @@ To make this architecture as secure as possible, you must ensure all components 
 
 1.  **Use `HttpOnly` and `Secure` Flags**: Your PocketBase backend must be configured to set both of these flags on the authentication cookie. Without them, the entire system is vulnerable.
 2.  **Implement CSRF Protection**: While the `HttpOnly` cookie protects against XSS, you must add an explicit CSRF defense. You can use a double-submit cookie pattern or a synchronizer token pattern, with the validation logic running in your Cloudflare Worker.
-3.  **Validate All Requests at the Edge**: The Cloudflare Worker's role is not just to proxy requests. It should be the first line of defense, validating the incoming cookie and enforcing rate limits, CORS policies, and other security measures before a request ever reaches your PocketBase backend.
+3.  **Validate All Requests at the Edge**: The Cloudflare Worker's role is not just to proxy requests. It should be the first line of defense, validating the incoming cookie and enforcing rate limits, [CORS policies](#what-it-is-cors), and other security measures before a request ever reaches your PocketBase backend.
 4.  **Properly Configure Your Backend**: Ensure your PocketBase instance is configured to only accept requests from your Cloudflare Worker and not directly from the public internet. This prevents attackers from bypassing your edge security layer.
 
 
@@ -239,3 +239,50 @@ The entire game logic, from physics and animations to user input, is handled by 
 ### People do cool stuff with QR
 
 * https://qrcode-ai.com/pricing
+
+### What it is CORS
+
+**CORS (Cross-Origin Resource Sharing)** is a security mechanism used by web browsers to control how resources on a web page can be requested from another domain outside the domain from which the first resource was served.
+
+**What CORS Is**
+
+When a web page running on one origin tries to access resources from a different origin (like an API), the browser sends the request with an "Origin" header.
+
+In a nutshell, CORS (Cross-Origin Resource Sharing) tells an API endpoint (server) which origins (domains, schemes, or ports) are allowed to request resources from it.
+The API server then responds with HTTP headers, primarily `Access-Control-Allow-Origin`, specifying which origins are permitted to access the resource. If the requesting origin matches one allowed by the server, the browser permits the response to be accessible to the web page's JavaScript; otherwise, the browser blocks it for security.
+
+CORS is how the server explicitly states which other sites or domains can call its API and read its data, protecting users from unauthorized cross-site interactions
+
+
+- It is an HTTP-header based system that lets servers specify which external origins (domains, protocols, or ports) are allowed to access their resources.
+- Browsers enforce a "same-origin policy" that restricts web pages from making requests to a different origin, to protect users from malicious cross-site attacks.
+- CORS provides a controlled way to relax this policy so that trusted websites can share resources safely.
+
+
+> You should understand it to do webapps, like [with FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api/#what-is-an-api-endpoint)
+
+> > Also if you are using [PB + SSG + cf workers as simple auth](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#ssg-x-pb)
+
+**How It Works in Web Security**
+
+- When a web page running from one origin tries to fetch a resource from a different origin, the browser sends a "preflight" OPTIONS request first to check if the target server allows that cross-origin request.
+- The server responds with headers indicating allowed origins, HTTP methods, and headers.
+- If the response permits the request, the browser proceeds; otherwise, it blocks access.
+- This mechanism prevents unauthorized websites from being able to read sensitive data from another domain, mitigating risks like data theft or malicious interactions.
+
+**Importance for Developers**
+
+- CORS is essential to enable legitimate cross-origin interactions such as API calls or loading resources from CDNs while securing users and data.
+- Misconfiguration of CORS can introduce security vulnerabilities, allowing unauthorized sites to access protected resources.
+
+In short, CORS is a critical web security standard that balances resource sharing flexibility with protection from cross-origin attacks by enforcing explicit permission via HTTP headers.[1][2][3][5][6]
+
+[1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
+[2](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+[3](https://portswigger.net/web-security/cors)
+[4](https://sekurak.pl/czym-jest-cors-cross-origin-resource-sharing-i-jak-wplywa-na-bezpieczenstwo/)
+[5](https://konghq.com/blog/learning-center/what-is-cors-cross-origin-resource-sharing)
+[6](https://fastapi.tiangolo.com/tutorial/cors/)
+[7](https://aws.amazon.com/what-is/cross-origin-resource-sharing/)
+[8](https://www.geeksforgeeks.org/websites-apps/cross-origin-resource-sharing-cors/)
+[9](https://developers.cloudflare.com/r2/buckets/cors/)

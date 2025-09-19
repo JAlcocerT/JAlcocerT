@@ -176,4 +176,13 @@ Among all the options—Cloudflare R2, AWS S3, MinIO, Wasabi, Backblaze B2, and 
 | Enterprise or AWS ecosystem      | AWS S3                           | Advanced features, compliance, high reliability         |
 | Full self-host control           | MinIO (self-hosted)              | Full control, no API fees, but operational overhead    |
 
-For a wedding photo and video album app, especially if guests will upload and view/download many images/videos, **Wasabi** likely offers the best mix of cost and performance with minimal surprises on bills. Cloudflare R2 is a close choice if CDN integration and ultra-low latency global delivery matter most.[1][2][3]
+For a wedding photo and video album app, especially if guests will upload and view/download many images/videos, **Wasabi** likely offers the best mix of cost and performance with minimal surprises on bills.
+
+Cloudflare R2 is a close choice if CDN integration and ultra-low latency global delivery matter most.
+
+
+---
+
+## Conclusions
+
+I plan to use this CF R2 knowledge with my next iteration of the weddings microSaaS :)

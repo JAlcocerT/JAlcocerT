@@ -79,7 +79,11 @@ docker system prune --all --volumes #release space from old containers
 
 When you will be confortable with containers, you will want to bring https instead of having that insecure http.
 
-I got to know about https://github.com/FiloSottile/mkcert
+I got to know about: https://github.com/FiloSottile/mkcert
+
+```sh
+#sudo apt install mkcert
+```
 
 > A simple zero-config tool to make locally trusted development certificates with any names you'd like.
 
@@ -88,14 +92,19 @@ To access securely your services outside home, You have low config VPNs like tai
 
 For more advance users, and exploring DNS, see PiHole and DuckDNS.
 
-But as of today i'd rather:
+But as of today i'd rather keep these [https setups](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/):
 
 * Setup NGINX to get https via UI as per this guide
 * Or go the Traefik v3.3 approach (programatic https) as per this other guide
+* Just use cloudflared...
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/cloudflare-tunnel" title="Cloudflared Tunnel | Docker Config Setup 🐋 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/nginx-proxy-manager" title="NGINX | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
 
 
 ---
-
 
 ## Conclusions
 

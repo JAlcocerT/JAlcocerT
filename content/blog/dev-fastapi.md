@@ -138,7 +138,7 @@ This structure, where a unique combination of method and URL defines an action, 
 | **POST** | Create new data | Create new user |
 | **DELETE** | Remove data | Delete user account |
 
-{{% details title="More http methods... 🚀" closed="true" %}}
+{{% details title="More http methods...Head / options / patch... 🚀" closed="true" %}}
 
 There are other HTTP methods beyond the common four (GET, POST, PUT, DELETE).
 

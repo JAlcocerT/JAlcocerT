@@ -608,9 +608,7 @@ This means yes, you can post new websites to monitor and retrieve their data usi
 [19](https://app.readthedocs.org/projects/uptime-kuma-api/)
 [20](https://github.com/louislam/uptime-kuma)
 
-Here is a summary of the full setup to integrate your self-hosted Uptime Kuma with a Jamstack site like Astro securely and efficiently:
-
-Full Setup Summary
+Here is a summary of the full setup to integrate your **self-hosted Uptime Kuma with a Jamstack** site like Astro securely and efficiently:
 
 - **Uptime Kuma Self-Hosted:** Runs your uptime monitoring and exposes an internal API for adding monitors and retrieving status data.
 

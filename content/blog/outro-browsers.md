@@ -56,6 +56,19 @@ Several self-hostable browsers running via containers are available, including:
 
 - **Neko**: A self-hosted virtual browser running in Docker containers using WebRTC technology for streaming. It supports multiple browsers like Firefox, Chromium, and Brave and focuses on privacy, multi-user collaboration, and lightweight browser isolation.[1][2][3][4]
 
+
+```sh
+sudo chown -R 1000:1000 /home/docker/neko
+#docker compose up -d
+```
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/neko" title="Neko | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
+
+> remember to do `ctrl+c` to copy from neko to your main desktop
+
+
 - **Kasm Workspaces**: A container streaming platform that can spin up various browsers or full desktops in ephemeral Docker containers accessible via the web browser. It’s designed for enterprise use, secure browser isolation, and remote workspace management.[5][6][7]
 
 - **Browserless**: An open-source Docker container allowing deployment of headless Chrome browsers for remote web automation, scraping, and testing. It supports Puppeteer and Playwright libraries and offers robust API access for automation tasks.[8][9][10]
