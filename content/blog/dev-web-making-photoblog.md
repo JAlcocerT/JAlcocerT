@@ -37,8 +37,6 @@ Using the [forked Hugo Theme Gallery](https://github.com/IoTechCrafts/hugo-theme
 
 We are going to use **HUGO as SSG**, together with the great **[Hugo-Theme-Gallery](https://github.com/nicokaiser/hugo-theme-gallery)**
 
-
-
 ### Testing the Theme
 
 {{< details title="How to create a Photo Gallery with Hugo 📌" closed="true" >}}

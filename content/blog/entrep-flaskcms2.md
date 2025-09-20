@@ -232,3 +232,15 @@ Using a Stripe Payment Link for a subscription provides a complete, self-contain
 
 ## FAQ
 
+### Cloudflare Free Tier
+
+On Cloudflare's free tier, there is no explicit limit on the number of domains (websites) you can add. 
+
+You can add and protect many domains under a single free account.
+
+However, there are some associated limits relevant to usage and features on the free plan:
+- For Cloudflare Pages projects, the free plan allows up to 100 custom domains per project.
+- For Workers usage on the free tier, there is a daily request limit of 100,000 requests.
+- Other feature limits and quotas apply to DNS rules, applications, and workers but are generally generous for typical free-tier usage.
+
+Overall, while there's no strict cap on the total domains, daily usage limits or feature quotas might impact very heavy use scenarios. For most personal or small business needs, the free tier supports multiple domains without direct domain number limits.

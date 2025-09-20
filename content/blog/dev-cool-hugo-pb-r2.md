@@ -2,7 +2,7 @@
 title: "HUGO Photo Galleries and User photo uploads"
 date: 2025-09-20
 draft: false
-tags: ["Web","SSG","Photo-Gallery","Pocketbase CMS","R2 vs s3"]
+tags: ["Web","SSG","Photo-Gallery","Pocketbase CMS","R2 vs s3","Firebase Auth"]
 description: 'Using a HUGO Theme with Pocketbase Auth and Cloudflare R2 + Workers'
 url: 'hugo-pocketbase-and-r2'
 ---
@@ -10,7 +10,7 @@ url: 'hugo-pocketbase-and-r2'
 
 **TL;DR**
 
-
+I got to know about Cloudflare R2 as object storage.
 
 
 **Intro**
@@ -246,8 +246,10 @@ Cloudflare R2 is a close choice if CDN integration and ultra-low latency global 
 
 ## Conclusions
 
-I plan to use this CF R2 knowledge with my next iteration of the weddings microSaaS :)
+I plan to use this new **CF R2 knowledge** with my next iteration of the weddings microSaaS :)
 
+
+And photo galleries...are really **overpowered**.
 
 And along the way, I saw this astro free theme https://recipes-starter.thebcms.com/recipes/omelette
 
