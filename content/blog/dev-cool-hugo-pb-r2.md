@@ -44,7 +44,7 @@ git commit -m "Initial commit: Starting test-r2"
 #sudo apt install gh
 ```
 
-ofc I needed to test the i configured the `.env.local` properly:
+ofc I needed to test the i configured the `.env.local` properly: https://github.com/JAlcocerT/nextjs-r2-demo/blob/main/env.sample
 
 ```sh
 npm run list-bucket
@@ -67,11 +67,14 @@ make deploy
 make list-bucket
 ```
 
-{{< callout type="warning" >}}
-Deployment to CF Pages https://talk-demo-afb.pages.dev/ -> Workers -> R2
+{{< callout type="info" >}}
+The [full setup looks like](https://github.com/JAlcocerT/nextjs-r2-demo/blob/main/z-z-full-setup.md): Deployment to CF Pages https://talk-demo-afb.pages.dev/ -> Workers -> R2
 {{< /callout >}}
 
 
+{{< callout type="info" >}}
+I could not avoid to ask how to [bring Firebase Auth to the CF Setup](https://github.com/JAlcocerT/nextjs-r2-demo/blob/main/z-z-cloudflare-firebase.md) we just saw.
+{{< /callout >}}
 
 ## The Hugo Gallery Stack
 

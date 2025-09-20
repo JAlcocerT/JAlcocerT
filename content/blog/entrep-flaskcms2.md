@@ -53,6 +53,8 @@ But we have to get started with something first :)
 
 And thaaats it: `http://psikolognevinkeskin.info/` as per https://github.com/JAlcocerT/morita-web
 
+![After buying the domain on porkbun I changed the NS and onboarded it to Cloudflare](/blog_img/web/morita-flask/cloudflare-onboard-domain.png)
+
 With stripe, you can prefilled emails like: `?prefilled_email=whateverthatis@gmail.com`
 
 So users that are onboarded to your CMS/SaaS, will have that prefilled already.
@@ -70,6 +72,9 @@ For example something like: https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefi
 > For this one I did not required the CMS in the end: cal and whatsapp boubles were enough.
 
 > > Cal.com + google + `https://www.springhealth.com/` plays well!
+
+
+
 
 
 ### Real Estate

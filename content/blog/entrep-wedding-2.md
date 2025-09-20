@@ -1,6 +1,6 @@
 ---
 title: "BiP a Micro-SaaS | Wedding Edition"
-date: 2025-09-19T19:20:21+01:00
+date: 2025-10-05T19:20:21+01:00
 draft: false
 tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static 🤯'
@@ -13,10 +13,14 @@ https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
 
 I got that domain!
 
+![Slubnechwile domain porkbun](/blog_img/web/porkbun-slubne.png)
+
 ```sh
 #dig jalcocertech.com any
 dig slubnechwile.com any
 ```
+
+And quickly moved the NS to cloudflare ones, to start the game.
 
 +++ got motivated by people [BiP open startups](#about-building-in-public)
 
