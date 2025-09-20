@@ -103,14 +103,17 @@ Hugo photo gallery themes:
 - [bep/gallerydeluxe](https://github.com/bep/gallerydeluxe): A fast and effective Hugo module for photo galleries, great for large image collections.
 - [nux-li/hugo-foto-theme](https://github.com/nux-li/hugo-foto-theme): A Hugo theme focused on creating photo galleries for photographers.
 
-These projects provide responsive layouts, lightbox/carousel support, and various customization options suitable for photography portfolios or general image galleries.[1][2][3][4][5][6]
+These projects provide responsive layouts, lightbox/carousel support, and various customization options suitable for photography portfolios or general image galleries.
 
 [1](https://github.com/jomaendle/astro-photo-gallery)
 [2](https://github.com/erfianugrah/revista-3)
 [3](https://github.com/thkukuk/hugo-photoswipe5-gallery)
 [4](https://github.com/nicokaiser/hugo-theme-gallery)
 [5](https://github.com/bep/gallerydeluxe)
-[6](https://github.com/nux-li/hugo-foto-theme) - Very nice Hugo theme for creating photo galleries based on images' metadata 
+
+[6](https://github.com/nux-li/hugo-foto-theme) - Very nice Hugo theme for creating photo galleries based on images' [metadata](https://github.com/nux-li/hugo-foto-theme?tab=readme-ov-file#prerequisites). See https://matze.rocks/images/
+
+
 [7](https://github.com/topics/astro-themes)
 [8](https://astro.build/themes/2/)
 [9](https://github.com/chrismwilliams/astro-theme-cactus)
@@ -119,18 +122,26 @@ These projects provide responsive layouts, lightbox/carousel support, and variou
 [12](https://github.com/trending/astro)
 [13](https://github.com/mfg92/hugo-shortcode-gallery)
 [14](https://astro.build/themes/)
-[15](https://github.com/pysunday/DesignPhotographyPortfolio) - This one is a great start for a *,instagram clone'*
+
+[15](https://github.com/pysunday/DesignPhotographyPortfolio) - This one is a great start for a *,instagram clone'* and is multilang
+
 [16](https://astro.build/themes/details/photography-portfolio-template/)
 [17](https://discourse.gohugo.io/t/building-a-photo-gallery-site-with-hugo/43277)
 [18](https://themes.gohugo.io)
 [19](https://billglover.me/2023/11/07/creating-a-photography-gallery-with-hugo/)
 [20](https://github.com/Sped0n/bridget)
 
+### Just JAlcocerT Newsletter
+
 
 
 ---
 
 ## Conclusions
+
+That's it.
+
+Consider this a new ssg + mailerlite 101.
 
 ### What People have Build
 

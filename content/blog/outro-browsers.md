@@ -1,9 +1,9 @@
 ---
-title: "My Fav browsers and their automation"
-date: 2025-09-22
+title: "My Fav Web browsers and their automation"
+date: 2025-09-18
 draft: false
-tags: ["Web","Zen vs Firefox vs LibreWolf","Brave vs Chrome","PlayWright MCP","Puppeteer"]
-description: 'Neko vs KASM vs webtops. Web Automation'
+tags: ["Zen vs Firefox vs LibreWolf","Brave vs Chrome","PlayWright MCP","Puppeteer"]
+description: 'Neko vs KASM vs webtops. Web Automation and Scrapping Recap.'
 url: 'how-to-browse'
 ---
 
@@ -11,7 +11,7 @@ How cool is to use perplexity and have a reference to your own website:
 
 ![alt text](/blog_img/selfh/Internet/perplexity-neko.png)
 
-![alt text](../../static/blog_img/selfh/Internet/neko-ui.png)
+![alt text](/blog_img/selfh/Internet/neko-ui.png)
 
 <!-- 
 ## AgencySwarm
@@ -52,10 +52,11 @@ Lately I tried Zen browser.
 
 Which *we could say* is a modern UI version of firefox.
 
+See how some people make money around KASM:
 
 https://www.youtube.com/watch?v=799uhYUxtvA
 
-https://browser.networkchuck.com/
+* https://browser.networkchuck.com/
 
 ## Automating your Browser
 
@@ -116,6 +117,12 @@ These tools differ in browser support, language support, ease of setup, and test
 [7](https://github.com/microsoft/playwright)
 [8](https://pptr.dev)
 
+## Scrapping Recap
+
+### ScrapeGrapAI
+
+### FireCrawlAi
+
 
 ---
 
@@ -137,6 +144,7 @@ So, when JavaScript rendering or complex interactions are required to get the da
 For web scraping SSR (Server-Side Rendered) content that requires human interaction, the best tools among those discussed are Puppeteer and Playwright.
 
 Puppeteer
+
 - Puppeteer can control a headless or headed Chromium browser, allowing automation of complex user interactions like clicks, form inputs, and navigation.
 - It executes JavaScript on the page, enabling scraping SSR content which is fully rendered by the browser.
 - Puppeteer can handle authentication, captchas (with external help), dynamic content loading, and user gestures.

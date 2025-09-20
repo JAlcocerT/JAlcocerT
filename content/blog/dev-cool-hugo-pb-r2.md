@@ -1,5 +1,5 @@
 ---
-title: "HUGO Photo Galleries and User photo uploads"
+title: "HUGO Photo Galleries with User photo uploads"
 date: 2025-09-20
 draft: false
 tags: ["Web","SSG","Photo-Gallery","Pocketbase CMS","R2 vs s3","Firebase Auth"]
@@ -78,6 +78,7 @@ I could not avoid to ask how to [bring Firebase Auth to the CF Setup](https://gi
 
 ## The Hugo Gallery Stack
 
+Some other photo galleries I made:
 
 {{< cards cols="1" >}}
   {{< card link="https://whilecyclingthere.web.app/" title="Cycling There Photo Gallery" >}}
@@ -86,8 +87,11 @@ I could not avoid to ask how to [bring Firebase Auth to the CF Setup](https://gi
 
 ### Cloudflare R2
 
+We can say its a object storage (like aws s3 or GCS) and a data catalogue:
+
 * https://dash.cloudflare.com
     * https://developers.cloudflare.com/r2/pricing/
+    * https://r2-calculator.cloudflare.com/
 
 > R2 provides you with **S3-compatible** object storage with zero egress fees.
 
@@ -143,6 +147,10 @@ Once you have created a buck for your app, you can customize its settings (CORS,
 
 #### R2 vs S3
 
+
+{{< details title="Cloudflare R2 vs s3 for the wedding idea... 📌" closed="true" >}}
+
+
 Here is an estimated pricing overview for storing and transferring 20GB, 100GB, and 1,000TB on Cloudflare R2, AWS S3, and MinIO in 2025, assuming 30 days active storage with one upload and one download of each amount:
 
 Cloudflare R2 Pricing:
@@ -189,23 +197,15 @@ Thus, Cloudflare R2 offers strong cost savings on egress and operations compared
 
 
 [1](https://developers.cloudflare.com/r2/pricing/)
-[2](https://semaphore.io/blog/cloudflare-r2)
 [3](https://costq.ai/blog/aws-s3-cost-calculator-2025/)
 [4](https://bare-metal.io/minio-s3-compatible-object-store-hosting/)
-[5](https://themedev.net/blog/cloudflare-r2-pricing)
 [6](https://aws.amazon.com/s3/pricing/)
 [7](https://www.cloudflare.com/developer-platform/products/r2/)
-[8](https://www.reddit.com/r/CloudFlare/comments/1ic51x1/r2_pricing_serving_filesimages_is_not_free/)
 [9](https://r2-calculator.cloudflare.com)
-[10](https://www.vantage.sh/blog/gcs-vs-r2-cost)
-[11](https://aws.amazon.com/blogs/aws/up-to-85-price-reductions-for-amazon-s3-express-one-zone/)
-[13](https://www.nops.io/blog/aws-s3-pricing/)
-[14](https://www.min.io/pricing)
-[15](https://onidel.com/cloudflare-r2-vs-backblaze-b2/)
-[17](https://www.cloudflare.com/plans/)
-[18](https://cloudchipr.com/blog/amazon-s3-pricing-explained)
-[19](https://selfhostschool.com/minio-self-hosted-s3-storage-guide/)
-[20](https://vinfrastructure.it/2025/08/cloudflare-r2-storage-object-storage-rapid-and-reliable/)
+
+
+{{< /details >}}
+
 
 #### Other Contenders
 

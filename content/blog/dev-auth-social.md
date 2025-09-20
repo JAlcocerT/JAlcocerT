@@ -1,5 +1,5 @@
 ---
-title: "Social Auth"
+title: "Social Auth for any SaaS"
 date: 2025-09-15T10:20:21+01:00
 draft: false
 tags: ["Firebase vs Logto","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor","SPA vs MPA"]
@@ -10,6 +10,7 @@ description: 'Firebase Auth as your WebApp login method. A Serverless Authentica
 **Tl;DR**
 
 I got working a simple md editor for slidev with couple of branches to master firebase and logto SDKs for auth:
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slidev-editor" title="NEW - A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests" >}}
 {{< /cards >}}
@@ -22,6 +23,7 @@ slidev build
 
 > Social Signin > One Time Link > Email and PWD
 
++++ Got Firebase and LogtoJS SDKs [both working](#conclusions) and ready to authenticate quick any webapp project.
 
 **Intro**
 
@@ -62,9 +64,7 @@ cd slidev-editor && make run-detached #localhost:3000 for the editor
 
 ![alt text](/blog_img/entrepre/public-build/slidev-editor/slidev.png)
 
-Remember you had presenter mode at `localhost:3030/presenter` and you can even record your presentation
-
-
+Remember you had presenter mode with SliDev at `localhost:3030/presenter` and you can even record your presentation
 
 ## SliDev Goodies
 
@@ -799,7 +799,7 @@ npm run build
 
 ### KPIs for SaaS
 
-LTV
-CAC
+1. LTV
+2. CAC
 
 > People say to aim for LTV > 3*CAC

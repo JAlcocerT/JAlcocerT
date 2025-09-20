@@ -1,9 +1,9 @@
 ---
-title: "Just n8n and AI workflows"
-date: 2025-09-21
+title: "Just n8n, MCP and AI workflows"
+date: 2025-09-19
 draft: false
 tags: ["n8n AI Chat","PlayWright MCP","n8n vs Huggin vs flowise"]
-description: '.'
+description: 'Having fun with n8n.'
 url: 'n8n-with-ai'
 ---
 
@@ -16,11 +16,21 @@ I recently discovered about: https://chat.soula.ge/ and `https://vp.soula.ge/`
 
 > > Transform complex automation into natural conversations. Connect up to 9 webhooks and manage your workflows through an intelligent chat interface.
 
-Meaning: dont drag and drop, ask the AI to build your n8n flows :)
+
+
+## Just use  n8n
+
+Meaning: dont drag and drop, ask the AI to build your xflows :)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+Btw, marketer: you can be interested in these web automation tools.
+
+And probably, you are using these tools for leads, but not these for scrapping.
+
+Neither using [AI for audio related](#n8n-x-firefliesai) task.
 
 ### n8n x FirefliesAI
 
@@ -113,6 +123,26 @@ This integration allows users to combine Perplexity’s real-time AI insights wi
 [14](https://community.n8n.io/t/using-perplexity-api-with-the-ai-tools-agent/54308)
 [16](https://n8n.io/integrations/one-simple-api/and/perplexity/)
 [17](https://n8n.io/workflows/2682-perplexity-research-to-html-ai-powered-content-creation/)
+
+### n8x x MCP
+
+
+0. https://github.com/illuminaresolutions/n8n-mcp-server
+
+1. https://github.com/nerding-io/n8n-nodes-mcp
+
+> MIT |  n8n custom node for MCP 
+
+https://github.com/leonardsellem/n8n-mcp-server
+
+
+> MIT |  MCP server that provides tools and resources for interacting with n8n API 
+
+
+https://github.com/czlonkowski/n8n-mcp
+https://www.n8n-mcp.com/
+
+> MIT |  A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you 
 
 
 #### Perplexity x MCP
