@@ -288,3 +288,7 @@ I decided to give a try to this one, as fireflies seems to support n8n integrati
 
 
 ![Fireflies AI has n8n integration](/blog_img/GenAI/n8n/n8n-audio-fireflies.png)
+
+So it convinced me to try those 7d free:
+
+![alt text](/blog_img/GenAI/audio/fireflies-ai-registration.png)

@@ -74,7 +74,7 @@ It kind of do the trick for me to download some data and then process it via an 
 
 ## Conclusions
 
-Apparently, its possible that people do very hard websites to scrap.
+Apparently, its possible that people do **very hard websites to scrap**.
 
 I did not manage to get those numbers via Playwright.
 
@@ -122,3 +122,8 @@ Thats a matplotlib chart this time, instead of a plotly one.
 Because ive learnt via the [animations tinkering here](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/), that matplotlib can be really cool.
 
 > And job market is not bad lately...
+
+### Bringing Back ScrapeGraph
+
+If you remember, we reviewed: https://jalcocert.github.io/JAlcocerT/scrapping-with-llms/
+

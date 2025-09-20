@@ -500,8 +500,32 @@ npm install @logto/next
 
 ![Logto UI Setup](/blog_img/entrepre/public-build/slidev-editor/logto2-sdk.png)
 
+```
+# Logto Endpoint - Your Logto instance URL
+NEXT_PUBLIC_LOGTO_ENDPOINT=https://your-domain.logto.app
+
+# Logto App ID - Found in your application settings
+NEXT_PUBLIC_LOGTO_APP_ID=your-app-id-here
+
+# Logto App Secret - Found in your application settings (keep this secret!)
+LOGTO_APP_SECRET=your-app-secret-here
+```
+
+Remember about redirect URIs:
+
+```
+http://localhost:3000/callback
+http://localhost:3000/api/logto/sign-in-callback
+
+https://yourdomain.com/callback
+https://yourdomain.com/api/logto/sign-in-callback
+```
+
 ![LogTo Creating Authentication for Web App](/blog_img/entrepre/public-build/slidev-editor/logto3-create-app.png)
 
+Then, you will get your vibe coded logto setup to work:
+
+![Logto signin UI inside the nextjs slidev editor working locally](/blog_img/entrepre/public-build/slidev-editor/logto-connected-nextjs.png)
 
 {{< callout type="info" >}}
 See that CORS concept how it appears again. It tells an API endpoint (server) which origins (domains, schemes, or ports) are allowed to request resources from it.

@@ -2,11 +2,11 @@
 title: "How to use ScrapeGraph AI - Scraping with Ollama"
 date: 2024-08-15T10:20:21+01:00
 draft: false
-tags: ["Gen-AI","Dev"] 
-cover:
-    image: "https://socialify.git.ci/VinciGit00/Scrapegraph-ai/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
-    alt: "Using ScrapeGraph with Python" # alt text
-    caption: "ScrapeGraph 101." # display caption under cover
+tags: ["Gen-AI","Dev","Scrapping","LLMs","LinkChecker"]
+# cover:
+#     image: "https://socialify.git.ci/VinciGit00/Scrapegraph-ai/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
+#     alt: "Using ScrapeGraph with Python" # alt text
+#     caption: "ScrapeGraph 101." # display caption under cover
 description: 'Selfhosting Scrapegraph-ai with Docker. Scrap with Python. Check links with linkchecker'
 summary: 'Scrapping with AI and Open Source. How to use Scrape Graph and how it compares with similar F/OSS projects.'
 url: 'scrapping-with-llms'
@@ -45,7 +45,8 @@ With Scrapegraph-ai, you can automate data extraction and pipeline construction 
   * {{< newtab url="https://github.com/scrapelogic/scrapegraph" text="The Scrapegraph-ai Source Code at GitHub" >}}
       * License: {{< newtab url="https://github.com/scrapelogic/scrapegraph?tab=License-1-ov-file#readme" text="MIT" >}} ❤️
 
-> With Scrapegraph-ai, no repeated scraping tasks: Define, Deploy, Extract. **S**crape **C**leverly **R**epeatedly **A**utomate **P**ipelines **E**ffectively.
+> With Scrapegraph-ai, no repeated scraping tasks.
+> > Define, Deploy, Extract. **S**crape **C**leverly **R**epeatedly **A**utomate **P**ipelines **E**ffectively.
 
 ### Why Scrapegraph-ai?
 
@@ -192,7 +193,6 @@ EXPOSE 8501
 {{< /dropdown >}}
 
 {{< dropdown title="Deploying ScrapeGraph with Ollama ⏬" closed="true" >}}
-
 
 ```yml
 version: '3.8'
@@ -395,17 +395,22 @@ https://www.youtube.com/@JohnWatsonRooney/videos -->
 
 {{< dropdown title="What are rotating proxies ⏬" closed="true" >}}
 
+Simply speaking, a rotating proxy is a type of proxy server that automatically changes the IP address it uses periodically or after each request. 
+
+This means that every time your device connects to the internet through this proxy, it appears as if it's coming from a different IP address.
+
+This helps maintain anonymity, avoid IP blocks, and makes it harder for websites to detect or block repeated requests from the same source.
+
+Rotating proxies are especially useful in web scraping, automation, or when accessing geo-restricted content, as the rotation of IPs prevents websites from associating all requests with a single IP, thereby reducing the chance of being blocked or flagged.
+
 {{< /dropdown >}}
 
-{{< dropdown title="How can I understand & filter JSON ⏬" closed="true" >}}
 
-https://github.com/ynqa/jnv
 
-{{< /dropdown >}}
+Interesting web browsers:
 
-* Interesting web browsers:
-  * https://github.com/spartrekus/links2
-  * Lynx
+* https://github.com/spartrekus/links2
+* Lynx
 
 ```sh
 sudo apt install lynx
@@ -427,8 +432,6 @@ lynx duckduckgo.com
 * https://github.com/huginn/huginn?tab=MIT-1-ov-file#readme
 
 > Create agents that monitor and act on your behalf. Your agents are standing by!
-
-
 
 * https://github.com/thp/urlwatch?tab=License-1-ov-file#readme
 

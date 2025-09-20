@@ -460,6 +460,10 @@ Also pushing their contact data or questions into a database (A google sheet wou
 
 * You can have a look to the templates: https://n8n.io/workflows/
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 > You could also have a whatsapp bouble or a simple [formbricks contact form](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#adding-formbricks-to-flask) for a simpler solution
 
 <!-- https://www.youtube.com/watch?v=-77yBmdKc7U -->

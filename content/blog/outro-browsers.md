@@ -7,6 +7,12 @@ description: 'Neko vs KASM vs webtops. Web Automation'
 url: 'how-to-browse'
 ---
 
+How cool is to use perplexity and have a reference to your own website:
+
+![alt text](/blog_img/selfh/Internet/perplexity-neko.png)
+
+![alt text](../../static/blog_img/selfh/Internet/neko-ui.png)
+
 <!-- 
 ## AgencySwarm
 
@@ -27,6 +33,20 @@ Web Browsing like human. With GPT4.
 
 
 * https://console.groq.com/docs/browser-automation
+
+## Browsers Ive tried
+
+Even a CLI browser called Lynx:
+
+
+https://jalcocert.github.io/JAlcocerT/scrapping-with-llms/#faq
+
+```sh
+sudo apt install lynx
+lynx duckduckgo.com
+```
+
+![Lynx CLI based web browser](/blog_img/selfh/Internet/lynx-browser.png)
 
 Lately I tried Zen browser.
 

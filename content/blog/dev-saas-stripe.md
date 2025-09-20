@@ -7,11 +7,19 @@ description: 'BiP user flows around authentication layers and stripe paywalls'
 url: 'stripe-for-saas'
 ---
 
+**Tl;DR**
+
+You can get me wrong: automate your payments and dont accept any other form that does not require your attention.
+
+From the quote / post / learnings: sell to the rich, they pay better.
+
 **Intro**
 
 Congratz, you are registered into the app!
 
 Now subscribe to get additional goodies :)
+
+This is not exactly a stripe 101, as I have played with it before:
 
 
 

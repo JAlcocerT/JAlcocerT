@@ -180,8 +180,18 @@ Object Storage is designed for a flat structure and is typically accessed via an
 | **ORC** | Columnar | Analytics, Hadoop Ecosystem | Similar to Parquet, excellent compression and performance | More tightly coupled with the Hadoop ecosystem than Parquet |
 | **Delta Lake / Iceberg / Hudi** | Table Format | **Data Lakehouses**, ACID Transactions | Brings database features (transactions, time travel, schema enforcement) to a data lake | Adds a layer of complexity and tool dependency |
 
+Make sure to master json and timestamps:
+
 * https://it-tools.tech/date-converter
 * https://it-tools.tech/json-prettify
+
+{{< dropdown title="How can I understand & filter JSON ⏬" closed="true" >}}
+
+* https://github.com/ynqa/jnv
+
+> MIT |  Interactive JSON filter using jq 
+
+{{< /dropdown >}}
 
 > You can do cool things with [Python+JSON understanding, like reading info from s3](https://jalcocert.github.io/JAlcocerT/aws-s3-python-boto-queries/#json-tools).
 

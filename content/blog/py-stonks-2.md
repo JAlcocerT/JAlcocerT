@@ -2,11 +2,12 @@
 title: "Shipping PyStonks v2 with a friend 🐷"
 date: 2025-09-11T02:20:21+01:00
 draft: false
-description: How NOT to marry a framework, make that BRD and ship fast. PyStocks.
+description: How NOT to marry a framework, make that BRD & ship fast. PyStocks with historical per & payout ratio
 url: 'py-stonks'
 tags: ["WebApp","yfinance","FastAPI x MailerLite","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
 math: true
 ---
+
 
 **Tl;DR**
 
@@ -36,9 +37,27 @@ Now, Im going to take back the collaboration with my friend: btw, he is a [PDH](
 {{< /cards >}}
 
 
+## The Data Model
+
+Even before that: what does this app reply to?
+
+Top Priority:
+1. Historical Prices
+2. Historical Dividends
+
+Nice to have:
+3. Volatility, MDD
+4. Historical EPS, PER and Dividend Payout
+5. Bring your portfolio
+
+See [the BRD](#faq) where we scoped the project.
+
 ---
 
 ## Conclusions
+
+If you need a proper finance tool, see: https://www.perplexity.ai/finance/XOM?comparing=CVX&period=1y
+
 
 
 ---
@@ -104,12 +123,32 @@ In essence, user stories bring the conversation and collaboration to the forefro
 
 Contunuing from the EDA on stonks.
 
-Come on, how cant be possible to get **Historical PER and Payouts** just with yfinance data?
+Come on, how cant be possible to get **Historical EPS -> PER and Payouts Ratios *(div/eps)*** just with yfinance data?
 
 And get something like: https://www.macrotrends.net/stocks/charts/CL/colgate-palmolive/pe-ratio
 
 
+All thanks to the `ticker.info` and `Ticker.income_stmt`.
 
+See more at this [subfolder of the yfinance EDA exploration](https://github.com/JAlcocerT/py-stonks/tree/main/z-eda-yfinance/yfinance-more-info)
+
+```py
+import yfinance as yf
+
+ticker = yf.Ticker("MUV2.DE")
+info = ticker.info
+
+trailing_pe = info.get("trailingPE", None)
+forward_pe = info.get("forwardPE", None)
+
+print(f"Munich Re P/E ratios:")
+print(f"Trailing P/E: {trailing_pe} (based on actual earnings over the past 12 months)")
+print(f"Forward P/E: {forward_pe} (based on projected earnings over the next 12 months)")
+
+print("\nExplanation:")
+print("- The trailing P/E uses the company's historical earnings, providing a reliable snapshot based on actual past performance.")
+print("- The forward P/E uses projected future earnings estimates, offering insight into expected growth but subject to forecast uncertainty.")
+```
 
 
 
