@@ -2,7 +2,7 @@
 title: "Lead Magnets around MailerLite API"
 date: 2025-09-20T16:20:21+01:00
 draft: false
-tags: ["Micro SaaS Essentials","MailerLite goodies","Subscribe2Podcast","Waiting2Landing"]
+tags: ["Micro SaaS Essentials","MailerLite goodies","n8n","Subscribe2Podcast","Waiting2Landing"]
 description: 'BiP user flows around Landing + newsletter layers. With Interesting bcms and '
 url: 'mailerlite-for-saas'
 ---
@@ -49,6 +49,10 @@ This is what you need: https://dashboard.mailerlite.com/integrations
 
 ![alt text](/blog_img/entrepre/mailerlite/mailerlite-ui-api-integ.png)
 
+### MailerLite Integrations
+
+### MailerLite x n8n
+
 
 ## A Theme to Test this
 
@@ -61,6 +65,12 @@ This is what you need: https://dashboard.mailerlite.com/integrations
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bcms" title="BCMS WIP| Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+* https://thebcms.com/astro-cms
+
+https://www.youtube.com/watch?v=y2du9vQwZUw
+Using Headless CMS & Nuxt.js to Develop Fast Static Websites | Momcilo Popov | Front End developer
+
 
 
 {{< callout type="info" >}}

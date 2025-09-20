@@ -119,13 +119,23 @@ These tools differ in browser support, language support, ease of setup, and test
 
 ## Scrapping Recap
 
+
+And lately... https://jalcocert.github.io/JAlcocerT/social-media-automation/#scrapping-social-media
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ScrapeGraphAI/Scrapegraph-ai,unclecode/crawl4ai,mendableai/firecrawl&,type=Date)](https://star-history.com/#ScrapeGraphAI/Scrapegraph-ai&unclecode/crawl4ai&mendableai/firecrawl&Date)
+
+
+
 ### ScrapeGrapAI
 
 
 ```sh
-lynx https://it.pracuj.pl/praca
+#lynx https://it.pracuj.pl/praca
 curl -L https://it.pracuj.pl > page.html
 ```
+
+Thanks to this, I discovered that it ships a CSR.
 
 
 {{< details title="Cloudflare Challenge Page... 📌" closed="true" >}}
@@ -186,7 +196,13 @@ While these tools are a vast improvement over basic scraping scripts, they are s
 
 Scrapecraph allows to ask in NL, but it WONT take some **hidden goodies** that you might be interested.
 
-But with FireCrawlAI, I got even the most complex data.
+[Crawl4AI](#crawl4ai) was behaving somehow better than ScrapeGraph...
+
+But with [FireCrawlAI](#firecrawlai), I got even the most [complex data](#scrappers-life-is-hard).
+
+### Crawl4AI
+
+With
 
 ### FireCrawlAI
 
@@ -195,11 +211,15 @@ Just in case that you dont remember, we played with this here:
 * https://github.com/firecrawl/firecrawl
 * https://www.firecrawl.dev/signin
 
-And now, it has an MCP:
 
-https://github.com/firecrawl/firecrawl-mcp-server
+#### FireCrawl MCP
 
-MIT |  🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients. 
+And now, it has an MCP server
+
+* https://docs.firecrawl.dev/use-cases/developers-mcp
+* https://github.com/firecrawl/firecrawl-mcp-server
+
+MIT | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients. 
 
 
 ---
@@ -256,9 +276,30 @@ Selenium and others
 
 So **my ranking** goes like this:
 
-1. HTML with bs4 *+ openAI to make easy to find the place of the data you want* - for easy non changing sites, like:
-2. ScrapeCrapgh AI + OpenAI/Ollama -> To forget about html and ask in natural language what you want to pull and how
-3. **FireCrawlAI** with their API -> The one that has work the best for me. You have a free tier and a playground: https://www.firecrawl.dev/app/playground
+1. HTML with bs4 *+ openAI to make easy to find the place of the data you want* - for **simple** non changing sites, like [this](https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/26643098/es/) as per [script](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py)
+2. ScrapeCrapgh AI + OpenAI/Ollama -> To forget about html and ask in **natural language** what you want to pull and how. See how with this script.
+3. **FireCrawlAI** with their API -> The one that has **worked best** for me, also with NL. You have a [free tier](https://www.firecrawl.dev/) and a playground: https://www.firecrawl.dev/app/playground
+
+Firecrawl offers a free plan that allows you to scrape up to 500 pages per month without requiring a credit card. 
+
+This free tier provides:
+
+- 500 credits (each credit generally equals one page scrape)
+- Rate limits of 10 scrape requests per minute
+- Up to 2 concurrent browsers (parallel scraping sessions)
+- 1 crawl request per minute
+
+This free plan is designed for lightweight testing and small-scale scraping projects. For higher volumes, paid plans start at $16/month for 3,000 credits and go up to enterprise plans offering unlimited credits and concurrency.
+
+**More FireCrawl**: They have been adding features.
+
+And getting [funded](https://www.firecrawl.dev/blog/firecrawl-v2-series-a-announcement)
+
+Now its not just scrape, crawl, map.
+
+But search, lead, seo and....[MCP](#firecrawl-mcp)
+
+![Firecrawl tools](/blog_img/selfh/Internet/firecrawl-tools.png)
 
 ### MCP x PlayWright
 

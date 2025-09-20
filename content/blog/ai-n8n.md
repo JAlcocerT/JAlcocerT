@@ -7,6 +7,9 @@ description: 'Having fun with n8n.'
 url: 'n8n-with-ai'
 ---
 
+**Tl;DR**
+
+Putting together content for a sync with 2 marketers.
 
 **Intro**
 
