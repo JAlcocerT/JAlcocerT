@@ -121,7 +121,85 @@ These tools differ in browser support, language support, ease of setup, and test
 
 ### ScrapeGrapAI
 
-### FireCrawlAi
+
+```sh
+lynx https://it.pracuj.pl/praca
+curl -L https://it.pracuj.pl > page.html
+```
+
+
+{{< details title="Cloudflare Challenge Page... 📌" closed="true" >}}
+
+The workflow for the page you provided is a **CSR (Client-Side Rendering)** process managed by Cloudflare's bot-detection or security system. 🤖
+
+Here is the step-by-step workflow:
+
+Initial Request
+
+1.  A user's browser sends a request to a website (e.g., `it.pracuj.pl/praca`).
+2.  Cloudflare, which is acting as a proxy or Content Delivery Network (CDN) for the website, intercepts the request.
+
+
+Cloudflare Challenge Page
+1.  Cloudflare's security system determines that the user might be a bot or that there's some suspicious activity. Instead of serving the requested page directly, Cloudflare returns the HTML you provided.
+2.  This HTML page is a "challenge" page. Its main purpose is to force the user's browser to execute JavaScript and prove it's a legitimate browser and not a simple bot.
+
+JavaScript Execution
+1.  The browser receives the challenge page and begins to process the HTML.
+2.  It encounters the `<script>` tag at the bottom of the `<body>`. This script is the core of the challenge.
+3.  The browser then fetches the JavaScript file specified by the `src` attribute: `/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=...`
+4.  This JavaScript code contains the logic to run various checks on the browser, such as verifying cookies, evaluating browser features, and possibly performing a small computational puzzle (like a proof-of-work). This process is designed to be easy for a real browser but difficult for a simple bot.
+
+Redirect to Destination
+1.  If the JavaScript challenge is successfully completed, the script will then **redirect** the user's browser to the intended destination page (`it.pracuj.pl/praca`). This happens in the background, without the user having to click anything.
+2.  Cloudflare now trusts that the user is a human and allows them to access the site.
+3.  The user can now view the actual content of the website.
+
+This entire process is designed to be fast and seamless for a human user, often taking less than a second. However, it effectively stops basic bots that don't execute JavaScript. It's a common security measure used by websites today. 
+
+No, no web scraping tool is "bulletproof" against advanced bot detection systems like Cloudflare.
+
+While tools like **ScrapeGraph and Firecrawl are designed to handle JavaScript challenges**, they are not infallible. 
+
+Cloudflare's bot management is a constantly evolving "cat-and-mouse" game.
+
+
+The Nature of Cloudflare's Defense
+
+Cloudflare uses a multi-layered approach to detect and block bots, which goes far beyond a simple JavaScript challenge. These layers include:
+
+* **Behavioral Analysis**: Cloudflare's system analyzes user behavior. A bot that makes requests too quickly, doesn't move a mouse or click, or follows predictable patterns is likely to be flagged.
+* **Browser Fingerprinting**: This is a key defense. Cloudflare checks for inconsistencies in a browser's "fingerprint," which is a unique profile based on its TLS handshake, HTTP/2 parameters, and how it executes JavaScript. Many scraping tools, especially headless browsers like Puppeteer or Selenium, have tell-tale signs that can be easily detected. 
+* **IP Reputation**: Cloudflare maintains a database of IP addresses known to be associated with data centers or proxies. Requests from these IPs are considered highly suspicious and are often blocked.
+* **AI Labyrinth**: A recent Cloudflare innovation, the "AI Labyrinth" is a honeypot system that uses scientifically accurate but irrelevant content to trap and waste the resources of AI crawlers. These pages are designed to be found only by bots, not humans.
+
+How Scrapers Try to Adapt
+
+Tools like ScrapeGraph and Firecrawl often employ several strategies to bypass these defenses:
+
+* **Headless Browsers**: They use headless browsers to execute JavaScript, which is essential for rendering CSR pages. However, they also need to use "stealth plugins" to modify the browser's fingerprint and mimic human behavior to avoid detection.
+* **Proxy Rotation**: To combat IP-based blocking, they use pools of residential or mobile proxies to make requests appear to be from different, legitimate users.
+* **CAPTCHA Solving**: They integrate with services that automatically solve CAPTCHAs and other challenges like Cloudflare Turnstile.
+
+While these tools are a vast improvement over basic scraping scripts, they are still playing catch-up. Cloudflare continuously updates its detection algorithms, which can render a tool ineffective overnight. The more a tool is used, the more data Cloudflare has to identify and block it, as many scraping services are built on a similar foundation that can be fingerprinted and identified at scale. The best scrapers are those that constantly adapt, which is a significant maintenance burden.
+{{< /details >}}
+
+Scrapecraph allows to ask in NL, but it WONT take some **hidden goodies** that you might be interested.
+
+But with FireCrawlAI, I got even the most complex data.
+
+### FireCrawlAI
+
+Just in case that you dont remember, we played with this here:
+
+* https://github.com/firecrawl/firecrawl
+* https://www.firecrawl.dev/signin
+
+And now, it has an MCP:
+
+https://github.com/firecrawl/firecrawl-mcp-server
+
+MIT |  🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients. 
 
 
 ---
@@ -129,9 +207,12 @@ These tools differ in browser support, language support, ease of setup, and test
 ## Conclusions
 
 
-Last time i was scrapping with the [job-trends on this post](https://jalcocert.github.io/JAlcocerT/playwright-101/) I got limitation on how to capture the amount of offers automatically based on bs4.
+Last time I was scrapping with the [job-trends on this post](https://jalcocert.github.io/JAlcocerT/playwright-101/) I got limitation on how to capture the amount of offers automatically based on bs4.
 
-Yes, exactly. Puppeteer and Playwright can help extract data from websites where BeautifulSoup (bs4) is not sufficient.
+Puppeteer and Playwright can help extract data from websites where BeautifulSoup (bs4) is not sufficient.
+
+
+{{< details title="Puppeteer vs PlayWright vs Selenium... 📌" closed="true" >}}
 
 - BeautifulSoup is purely an HTML parser and works well for static HTML content that can be directly fetched via HTTP requests.
 - However, many modern websites use JavaScript to render content dynamically (SSR or CSR—Client Side Rendering). BeautifulSoup cannot execute JavaScript or interact with the page.
@@ -143,19 +224,21 @@ So, when JavaScript rendering or complex interactions are required to get the da
 
 For web scraping SSR (Server-Side Rendered) content that requires human interaction, the best tools among those discussed are Puppeteer and Playwright.
 
-Puppeteer
+**Puppeteer**
 
 - Puppeteer can control a headless or headed Chromium browser, allowing automation of complex user interactions like clicks, form inputs, and navigation.
 - It executes JavaScript on the page, enabling scraping SSR content which is fully rendered by the browser.
 - Puppeteer can handle authentication, captchas (with external help), dynamic content loading, and user gestures.
 
-Playwright
+**Playwright**
+
 - Playwright offers all the capabilities of Puppeteer but extends support to multiple browsers (Chromium, Firefox, WebKit).
 - It handles complex user interactions smoothly, including clicks, scrolls, drag-drop, and multi-page workflows.
 - Playwright also supports features like network interception (to block or modify requests), multiple browser contexts, and better handling of modern web apps.
 - Its robust auto-waiting reduces flakiness when scraping SSR content that changes dynamically based on user actions.
 
 Why these two?
+
 - Both run full browsers that can execute JavaScript, essential for SSR content.
 - Support simulating realistic human interactions needed for scraping content behind logins, forms, or buttons.
 - Can wait for elements and page states after interaction, ensuring correct data is captured.
@@ -167,6 +250,15 @@ Selenium and others
 - **Playwright** is generally preferred for modern, complex scraping needing robust multi-browser support and advanced features.
 - **Puppeteer** is excellent for Chromium-focused projects with straightforward automation needs.
 - Both provide the necessary capabilities to scrape SSR sites with human interaction simulation efficiently and reliably.[1][2][3][4]
+
+
+{{< /details >}}
+
+So **my ranking** goes like this:
+
+1. HTML with bs4 *+ openAI to make easy to find the place of the data you want* - for easy non changing sites, like:
+2. ScrapeCrapgh AI + OpenAI/Ollama -> To forget about html and ask in natural language what you want to pull and how
+3. **FireCrawlAI** with their API -> The one that has work the best for me. You have a free tier and a playground: https://www.firecrawl.dev/app/playground
 
 ### MCP x PlayWright
 
@@ -250,13 +342,38 @@ This puts the typical desktop Firefox browser in context with containerized and 
 [8](https://news.ycombinator.com/item?id=42690983)
 [9](https://www.libhunt.com/compare-neko-vs-KasmVNC)
 
+### Scrappers life is hard
+
+The biggest challenges that make life hard for web scrapers include CAPTCHA systems and content rendering methods such as Server-Side Rendering (SSR) and Client-Side Rendering (CSR).
+
+### CAPTCHAs
+- CAPTCHAs are designed specifically to block automated bots, forcing scrapers to either halt or solve CAPTCHA challenges to continue scraping.
+- They increase operational costs and reduce scraping efficiency because solving CAPTCHAs often requires human-like interaction or dedicated CAPTCHA-solving services.
+- Frequent CAPTCHAs disrupt continuous data extraction, especially for large-scale projects, and can affect data completeness and quality.
+- Bypassing CAPTCHAs ethically needs careful balance to respect terms of service and data privacy.[1][2][3][4]
+
+### Server-Side Rendering (SSR) vs Client-Side Rendering (CSR)
+
+- SSR sends fully rendered HTML pages from the server, which are easier and faster for scrapers and crawlers to extract data from since the content is immediately available.
+- CSR pages load only a minimal HTML shell, then dynamically render content using JavaScript in the browser, making scraping more complex as scrapers must execute JavaScript typically via headless browsers (e.g., Playwright, Puppeteer).
+- CSR delays data availability and adds significant overhead during scraping, requiring scrapers to wait for content to load after JavaScript execution.
+- SSR is generally friendlier to scrapers and search engine crawlers, while CSR adds complexity and scraping time.[5][6][7]
+
+### Other Challenges
+
+- Dynamic content that changes with interactions or time complicates scraping.
+- Frequent website structure changes break scrapers and require constant maintenance.
+- IP blocking and rate limiting from websites also restrict scraper access, necessitating IP rotation and proxy use.[8][9][5]
+
+### Summary
+CAPTCHAs present a direct technical and ethical hurdle to automation, while SSR vs CSR impacts the complexity and resource requirements for scraping. Both significantly affect scraper stability and efficiency, with CAPTCHAs acting as active gatekeepers and CSR increasing technical overhead. SSR content is easier to scrape compared to CSR, which demands JavaScript execution and increases scraper complexity.[3][6][1]
+
 
 ---
 
 ## FAQ
 
 ### What it is Puppeteer?
-
 
 <!-- 
 Puppeteer what?

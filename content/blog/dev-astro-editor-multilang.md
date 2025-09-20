@@ -1,8 +1,8 @@
 ---
-title: "Multilanguage blogs with a SSG Astro Editor"
+title: "MultiLanguage blogs with a SSG Astro Editor"
 date: 2025-09-14T15:20:21+01:00
 draft: false
-tags: ["Astro","Just-SSG","NextJS","ToastUI md editor"]
+tags: ["Just-SSG","NextJS","ToastUI md editor"]
 description: 'Understanding i18n websites with Astro Blog Themes.'
 url: 'astro-i18'
 ---

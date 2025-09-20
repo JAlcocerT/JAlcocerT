@@ -3,7 +3,7 @@ title: "Lead Magnets around MailerLite API"
 date: 2025-09-20T16:20:21+01:00
 draft: false
 tags: ["Micro SaaS Essentials","MailerLite goodies","Subscribe2Podcast","Waiting2Landing"]
-description: 'BiP user flows around Landing + newsletter layers.'
+description: 'BiP user flows around Landing + newsletter layers. With Interesting bcms and '
 url: 'mailerlite-for-saas'
 ---
 
@@ -54,9 +54,20 @@ This is what you need: https://dashboard.mailerlite.com/integrations
 
 * https://github.com/bcms/starters
 
-> MIT |  👩‍💻 Build beautiful, accessible, high-performance websites with BCMS 
+> MIT |  👩‍💻 Build beautiful, accessible, high-performance websites with [BCMS](https://github.com/bcms/cms) 
 
-> > This is a very cool setup for a webifyer kind of idea :)
+> >  ⭐️ BCMS is a Headless CMS for developers & their clients. Works nicely with Gatsby, Next.js & Nuxt. This is an open-source version for **self-hosting**. 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bcms" title="BCMS WIP| Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+{{< callout type="info" >}}
+This is a very cool setup for a ~~webifyer kind of idea, as [Pages CMS](https://github.com/pages-cms/pages-cms)
+
+{{< /callout >}}
+
 
 ### Podcast
 
@@ -126,9 +137,6 @@ These projects provide responsive layouts, lightbox/carousel support, and variou
 [15](https://github.com/pysunday/DesignPhotographyPortfolio) - This one is a great start for a *,instagram clone'* and is multilang
 
 [16](https://astro.build/themes/details/photography-portfolio-template/)
-[17](https://discourse.gohugo.io/t/building-a-photo-gallery-site-with-hugo/43277)
-[18](https://themes.gohugo.io)
-[19](https://billglover.me/2023/11/07/creating-a-photography-gallery-with-hugo/)
 [20](https://github.com/Sped0n/bridget)
 
 ### Just JAlcocerT Newsletter

@@ -18,7 +18,7 @@ I recently discovered about: https://chat.soula.ge/ and `https://vp.soula.ge/`
 
 
 
-## Just use  n8n
+## Just use n8n
 
 Meaning: dont drag and drop, ask the AI to build your xflows :)
 
@@ -26,11 +26,15 @@ Meaning: dont drag and drop, ask the AI to build your xflows :)
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Btw, marketer: you can be interested in these web automation tools.
+Btw, [marketer](https://jalcocert.github.io/JAlcocerT/social-media-automation/#conclusions): you can be interested in these web automation tools.
 
-And probably, you are using these tools for leads, but not these for scrapping.
+And probably, you are using [these tools](https://jalcocert.github.io/JAlcocerT/social-media-automation/#scrapping-social-media) for leads, but not [these for scrapping](https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap).
 
 Neither using [AI for audio related](#n8n-x-firefliesai) task.
+
+What's the common factor?
+
+That you can plug them all to your N8N.
 
 ### n8n x FirefliesAI
 

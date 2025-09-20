@@ -23,7 +23,7 @@ In mathematics, a power law is a functional relationship between two quantities 
 
 Some examples of power laws and how they affect our lives:
 
-* The distribution of wealth: The distribution of wealth in many countries follows a power law, where a small fraction of the population holds a large fraction of the wealth. This means that the gap between the rich and the poor is much wider than would be expected in a random distribution, and can have significant social and economic consequences.
+* The distribution of wealth: The distribution of wealth in many countries follows a power law, where a small fraction of the population holds a large fraction of the wealth. This means that the gap between rich and poor is much wider than would be expected in a random distribution, and can have significant social and economic consequences.
 
 * The frequency of words in natural language: In any language, a few words are used very frequently, while the majority of words are used much less frequently. This follows a power law distribution, where a small number of words (such as "the", "and", "of", etc.) make up a large fraction of all words used, while the rest of the words are used much less frequently.
 

@@ -44,7 +44,7 @@ After a sufficient amount of data has been collected, the results are analyzed t
 
 If a clear winner emerges, that version can be implemented to improve overall campaign performance.
 
-A/B testing is a valuable tool in digital marketing and user experience design, as it allows marketers and designers to make data-driven decisions and optimize their content, layout, and messaging based on actual user behavior.
+A/B testing is a valuable tool in digital marketing and user experience design, as it allows the marketing/product and designers to make data-driven decisions and optimize their content, layout, and messaging based on actual user behavior.
 
 ### AB Testing - The Statistical Side
 
