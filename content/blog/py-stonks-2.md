@@ -48,7 +48,10 @@ Top Priority:
 Nice to have:
 3. Volatility, MDD
 4. Historical EPS, PER and Dividend Payout
-5. Bring your portfolio
+4. Current (and near history) net profit margin
+5. Currency historical exchange rates (EUR<->USD)
+6. Inflation Data
+7. Bring your portfolio
 
 See [the BRD](#faq) where we scoped the project.
 
@@ -150,7 +153,26 @@ print("- The trailing P/E uses the company's historical earnings, providing a re
 print("- The forward P/E uses projected future earnings estimates, offering insight into expected growth but subject to forecast uncertainty.")
 ```
 
+From the information available about yfinance:
 
+- For net profit margin: yfinance itself does not provide a direct ready-made field for net profit margin. However, net profit margin can be calculated manually by using net income and total revenue figures, which can be obtained from yfinance financial statements (income statement). The formula is Net Profit Margin = (Net Income / Total Revenue) * 100%. Users would need to extract these figures from yfinance's income statement data for the company and then compute the ratio externally.[1][2]
+
+- For historical currency rates: yfinance supports downloading historical forex (currency) price data using ticker symbols for currency pairs. For example, EURUSD=X is a ticker you can query on yfinance to get historical EUR/USD exchange rates, including daily open, high, low, close prices.[3][4]
+
+- For historical inflation data: yfinance itself does not appear to provide direct historical CPI or inflation rate data as a standard ticker. However, there exist inflation indexes such as IQ CPI Inflation Tracker Index (^IQHGCPI) available on Yahoo Finance, which may be accessible through yfinance for inflation tracking. For detailed inflation data, one might need to use other dedicated economic data sources.[5]
+
+In summary, yfinance can provide the components to calculate net profit margin but not the margin directly, can fetch historical currency exchange rates via forex ticker symbols, and may provide some inflation index tickers but generally not detailed historical inflation rates directly.
+
+It is generally not straightforward to get a long historical series of net profit margins directly from yfinance since yfinance provides only up to about 4 years or 4 quarters of financial statements data (income statement, balance sheet, cash flow). The financials accessible generally show the most recent reported periods.
+
+You can, however, retrieve past annual or quarterly income statements within that limited historical window from yfinance, extract total revenue and net income for each period, and calculate net profit margin manually for those periods.
+
+For longer historical financials data beyond that timeframe, yfinance does not provide it natively. Users often need to rely on more specialized financial databases or services (sometimes paid) or manually collect historical data from annual reports and filings.
+
+In summary:
+- yfinance supports retrieval of recent historical income statements (quarterly/annual) up to about 4 years or 4 quarters.
+- You can parse this data to calculate net profit margins over those recent periods.
+- Long-term historical net profit margin series would require alternative financial data sources outside yfinance.[1][2][3]
 
 
 ### How to Start PyStonks Project

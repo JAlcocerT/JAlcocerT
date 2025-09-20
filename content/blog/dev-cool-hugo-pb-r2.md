@@ -80,6 +80,15 @@ In short, yes, Cloudflare R2 offers a beginner-friendly free tier plus a robust 
 [8](https://www.cloudflare.com/developer-platform/products/r2/)
 [16](https://developers.cloudflare.com/r2/objects/upload-objects/)
 
+**How i Setup CLoduflare R2 Buckets**
+
+Went to: https://dash.cloudflare.com/ and hit `R2 object storage`
+
+![alt text](/blog_img/web/agujapunto-r2-firebase/r2-101.png)
+
+
+Once you have created a buck for your app, you can customize its settings (CORS, custom domains, Object Lifecycle Rules to delete after some number of days, even Apache Iceberg tables, yes the data catalogue!)
+
 #### R2 vs S3
 
 Here is an estimated pricing overview for storing and transferring 20GB, 100GB, and 1,000TB on Cloudflare R2, AWS S3, and MinIO in 2025, assuming 30 days active storage with one upload and one download of each amount:
@@ -186,3 +195,8 @@ Cloudflare R2 is a close choice if CDN integration and ultra-low latency global 
 ## Conclusions
 
 I plan to use this CF R2 knowledge with my next iteration of the weddings microSaaS :)
+
+
+And along the way, I saw this astro free theme https://recipes-starter.thebcms.com/recipes/omelette
+
+> A cool Recipe page, that might resonate with this user!

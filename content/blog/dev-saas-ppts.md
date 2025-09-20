@@ -15,3 +15,9 @@ The AI part was pending!
 And also to make that each user will have their own bucket/folder with a .md to be edited.
 
 Instead of a common one for all.
+
+
+## Context for AI
+
+
+https://diagrams.mingrammer.com/docs/getting-started/examples

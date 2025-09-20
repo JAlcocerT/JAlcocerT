@@ -10,6 +10,10 @@ url: "webs-for-restaurants"
 https://github.com/jacoknapp/EternalVows
 
 
+https://astro.build/themes/details/tastyyy-restaurant-website/
+
+https://github.com/bcms/starters/tree/master/astro/restaurant
+
 
 
 **Intro**
