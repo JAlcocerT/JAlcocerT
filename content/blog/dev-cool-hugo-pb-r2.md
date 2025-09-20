@@ -30,7 +30,34 @@ I just want to have images placed into some folders, and pocketbase can do that,
 
 Also, I saw **CF R2**: https://github.com/harshil1712/nextjs-r2-demo
 
+```sh
+git clone https://github.com/JAlcocerT/nextjs-r2-demo
+
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
+git config --global user.name
+git add .
+git commit -m "Initial commit: Starting test-r2"
+
+#sudo apt install gh
+```
+
+ofc I needed to test the i configured the `.env.local` properly:
+
+```sh
+npm run list-bucket
+```
+
+At first, I could see the one I uploaded via cf UI:
+
+![Testing nextjs app to upload files to cf R2 buckets](/blog_img/web/agujapunto-r2-firebase/testing.png)
+
 > Upload images to Cloudflare R2 via the Workers API, Pre-signed URL, or Temporary Credentials 
+
+
+
 
 ## The Hugo Gallery Stack
 
