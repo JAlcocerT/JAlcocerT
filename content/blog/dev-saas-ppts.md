@@ -11,3 +11,7 @@ url: 'ai-driven-presentations'
 After this post: https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-to-create-an-slidev-editor
 
 The AI part was pending!
+
+And also to make that each user will have their own bucket/folder with a .md to be edited.
+
+Instead of a common one for all.

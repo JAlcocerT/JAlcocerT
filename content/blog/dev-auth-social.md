@@ -2,7 +2,7 @@
 title: "Social Auth"
 date: 2025-09-15T10:20:21+01:00
 draft: false
-tags: ["Firebase vs Logto","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor"]
+tags: ["Firebase vs Logto","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor","SPA vs MPA"]
 url: 'social-signin-101'
 description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator approach'
 ---
@@ -518,23 +518,24 @@ npm install @logto/next
 
 ![Logto UI Setup](/blog_img/entrepre/public-build/slidev-editor/logto2-sdk.png)
 
+I selected `Traditional Web` and got the credentials for LogTo:
+
 ```
 # Logto Endpoint - Your Logto instance URL
 NEXT_PUBLIC_LOGTO_ENDPOINT=https://your-domain.logto.app
-
 # Logto App ID - Found in your application settings
 NEXT_PUBLIC_LOGTO_APP_ID=your-app-id-here
-
 # Logto App Secret - Found in your application settings (keep this secret!)
 LOGTO_APP_SECRET=your-app-secret-here
 ```
 
 Remember about redirect URIs:
 
-```
+```yml
 http://localhost:3000/callback
 http://localhost:3000/api/logto/sign-in-callback
 
+#for prod
 https://yourdomain.com/callback
 https://yourdomain.com/api/logto/sign-in-callback
 ```
@@ -549,18 +550,133 @@ Then, you will get your vibe coded logto setup to work:
 See that CORS concept how it appears again. It tells an API endpoint (server) which origins (domains, schemes, or ports) are allowed to request resources from it.
 {{< /callout >}}
 
+
+Logto will validate your signin with an email from: `no-reply@logto.email`
+
+And you can also vibe code your way to a `localhost:3000/debug` in case sth goes wrong:
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/logto4-test-config.png)
+
+{{< callout type="warning" >}}
+Logto Free Tier Plan allows you to create up to 3 apps
+{{< /callout >}}
+
+Make sure to understand the difference of Traditional Web [(MPA) vs SPA](#faq), as I had to do at this .md
+
+The final Logto + NextJS setup worked for me via the SPA way!
+
+The `.env.local` required for this is just:
+
+```
+NEXT_PUBLIC_LOGTO_ENDPOINT=https://authentication.jalcocertech.com
+NEXT_PUBLIC_LOGTO_APP_ID=your-actual-app-id-from-logto
+```
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/logto-spa.png)
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/logto-spa-config.png)
+
+I would recommend to keep the Logto with the email + Code to confirm. See `Sign in experience` and `Connectors` section.
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/logto-code.png)
+
+YOu could also do email/user + pwd or social signin (for example with google)
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/logto-social.png)
+
+> You can create a script to pull registered users from Logto
+
+> > Within logto UI, they are at `User management`
+
 ---
 
 ## Conclusions
 
 1. Firebase Auth with email/pwd + social signin working on desktop and mobile ✅
 
+2. Also Logto with the email + received code to login ✅
+
+> Both to the email validation for you!
+
+
+{{< details title="Logto vs FirebaseAuth vs PB SDK for Auth... 📌" closed="true" >}}
+
+Logto, Firebase Authentication, and PocketBase SDK implement authentication differently, with distinct approaches, features, and use cases. Here is a detailed comparison of their authentication implementation and pros and cons:
+
+### Logto Authentication
+- Logto is an open-source identity infrastructure focused on secure, standards-based authentication using OAuth 2.1 and OpenID Connect (OIDC).
+- It supports web, mobile, desktop, machine-to-machine (M2M) authentication, and third-party application integration as an Identity Provider (IdP).
+- Logto provides protocol-compliant flows with social login, user management, multi-tenancy, RBAC, and supports SAML apps for enterprise SSO.
+- Integration involves using SDKs or no-code solutions, handling sign-in, sign-out, and user info with API routes and tokens.
+- It also offers a Management API for advanced customization and automation.
+
+**Pros:**
+- Open-source, protocol-compliant with OAuth 2.1 and OIDC.
+- Supports complex enterprise use cases like SAML SSO, RBAC, multi-tenancy.
+- Flexible for machine and user authentication.
+- Good for SaaS and AI apps needing secure, scalable auth.
+
+**Cons:**
+- Requires understanding of OIDC/OAuth protocols.
+- More setup complexity than turnkey solutions.
+- Newer ecosystem, less documentation and community compared to Firebase.
+
+### Firebase Authentication
+- Firebase Auth is a widely-used backend service with SDKs and ready-made UI libraries for authenticating users via email/password, phone, and social providers like Google and Facebook.
+- Offers FirebaseUI for drop-in auth flows and supports custom backend integration using industry standards OAuth 2.0 and OIDC.
+- The Identity Platform upgrade adds enterprise features like multi-factor authentication, blocking functions, audit logging, multi-tenancy and SAML/OpenID Connect providers.
+- Handles token issuance, session management, and user state tracking transparently.
+
+**Pros:**
+- Mature, battle-tested with extensive documentation and community.
+- Easy to set up with ready-to-use UI and SDKs.
+- Deep Firebase ecosystem integration (database, storage, etc.).
+- Enterprise-grade features available with upgrade.
+
+**Cons:**
+- Vendor lock-in to Google Firebase.
+- Pricing can rise steeply with scale and advanced features.
+- Less flexible in protocol customization, mainly focused on user auth.
+
+### PocketBase SDK Authentication
+- PocketBase is an open-source backend framework with built-in lightweight authentication supporting password, OTP, OAuth2 providers, and multi-factor authentication.
+- Uses stateless JWT tokens sent with requests; no traditional server sessions.
+- Authentication state is managed client-side with token storage and refresh.
+- Supports superusers with impersonation and token generation for server-to-server use.
+- SDKs provide direct API calls for auth flows and user management.
+
+**Pros:**
+- Simple, lightweight, and fully open-source backend.
+- Multiple convenient auth methods easily configurable.
+- Stateless token-based auth, easy for REST API usage.
+- Supports multi-factor authentication and user impersonation.
+
+**Cons:**
+- Less fully featured and scalable than Logto or Firebase.
+- No built-in UI; requires custom frontend auth flow.
+- No dedicated token verification endpoint (uses token refresh for validation).
+- More suitable for small-medium projects or embedded auth in local backends.
+
+
+| Feature / Platform      | Logto                               | Firebase Authentication                        | PocketBase SDK                        |
+|------------------------|-----------------------------------|-----------------------------------------------|-------------------------------------|
+| Type                   | Open-source OIDC/OAuth provider   | Managed Backend Auth-as-a-Service             | Open-source backend with SDK        |
+| Authentication Methods | OAuth 2.1, OIDC, Social, SAML     | Email/Password, Phone, Social providers        | Password, OTP, OAuth2, MFA          |
+| Session Management      | Token-based with API routes       | Token & Session managed by SDK/backend        | Stateless JWT; client manages tokens|
+| Complexity             | High (advanced protocols/features)| Low (ease of integration, Firebase ecosystem) | Medium (custom code needed)          |
+| Scalability            | High (enterprise-ready)            | Very High (Google Cloud scale)                 | Moderate (small to mid-size apps)   |
+| Extensibility          | High (Management API, custom IdP) | Moderate (Firebase Extensions)                  | Moderate (custom backends)           |
+| Pricing                | Free self-hosted or cloud plans   | Usage-based pricing, can be costly at scale   | Free self-hosted                    |
+| Best for               | SaaS, Enterprise, AI apps         | Apps needing rapid setup & Firebase ecosystem | Lightweight apps, embedded servers  |
+
+
+{{< /details >}}
 
 > This setup can be call, considering that MermaidJS allow to write themes https://sli.dev/guide/write-theme
 
 > > So plugging the AI + custom theme, can be amazing for an Enterprise version!
 
-### Comparison and Summary
+Comparison and Summary
 
 | Platform | Type | Best for... | Key Differentiator |
 | :--- | :--- | :--- | :--- |
@@ -574,6 +690,22 @@ See that CORS concept how it appears again. It tells an API endpoint (server) wh
 ---
 
 ## FAQ
+
+In Logto (and generally in web development), the difference between a traditional web app ~MPA and a single-page application (SPA) lies in how they load and render content:
+
+- Traditional web apps (also called multi-page apps or MPAs) render pages entirely on the server. Each user action like clicking a link or submitting a form causes the browser to request a new page from the server, which returns the full HTML for that page. This approach works well for simple apps with mainly read-only content and benefits from being SEO-friendly and able to function without JavaScript.
+
+- SPAs load a single HTML page initially and dynamically update the content within that page as users interact, without full page reloads. SPAs rely heavily on client-side JavaScript frameworks (like React or Vue) to fetch and render data on the fly, offering a smooth, app-like user experience that is highly interactive and fast. SPAs require JavaScript support and are more complex to develop and optimize, particularly for SEO.
+
+Why it matters in Logto and general application scenarios:
+
+- Traditional web apps suit use cases with simple or read-only client-side interactions, public-facing sites where SEO and discoverability are priorities, or where users might have limited JavaScript support.
+
+- SPAs are better for rich, highly interactive user interfaces, applications requiring complex features like live data updates, and scenarios where responsive and smooth user experiences are critical.
+
+Choosing the right model affects development effort, performance, user experience, SEO, and how the app interacts with authentication and authorization services like Logto.
+
+In sum, Logto differentiates these to guide developers on how best to integrate authentication flows depending on whether their app is traditional server-rendered or SPA, ensuring security and user experience are optimized for the app type.[1][2
 
 
 ### How to create an SliDev-Editor
