@@ -2,7 +2,7 @@
 title: "BiP a Micro-SaaS | Wedding Edition"
 date: 2025-09-19T19:20:21+01:00
 draft: false
-tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile"]
+tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static 🤯'
 url: 'building-in-public-wedding-photo-galleries'
 ---
@@ -102,11 +102,11 @@ This approach gives you full control over who can upload, limits exposure of cre
 
 This is a common, practical pattern used in production apps for secure, scalable file uploads with Cloudflare R2 and Next.js.[1][2][3]
 
-[1](https://github.com/diwosuwanto/cloudflare-r2-with-nextjs-upload-download-delete)
-[2](https://buildwithmatija.com/blog/how-to-upload-files-to-cloudflare-r2-nextjs)
-[3](https://developers.cloudflare.com/workers/tutorials/upload-assets-with-r2/)
 
 #### Upsales
+
+1. We keep your photos 60 days more for you to download
+2. Buy the physical copy if you have not already
 
 ##### Get a phyiscal copy of the digital photo book
 

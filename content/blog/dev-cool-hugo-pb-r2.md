@@ -56,6 +56,20 @@ At first, I could see the one I uploaded via cf UI:
 
 > Upload images to Cloudflare R2 via the Workers API, Pre-signed URL, or Temporary Credentials 
 
+I was **very impressed** when this worked [as per this .md](https://github.com/JAlcocerT/nextjs-r2-demo/blob/main/z-pages-workers-r2.md)
+
+```sh
+#https://github.com/JAlcocerT/nextjs-r2-demo
+#npx wrangler whoami
+
+#npm run deploy
+make deploy
+make list-bucket
+```
+
+{{< callout type="warning" >}}
+Deployment to CF Pages https://talk-demo-afb.pages.dev/ -> Workers -> R2
+{{< /callout >}}
 
 
 
@@ -112,6 +126,14 @@ In short, yes, Cloudflare R2 offers a beginner-friendly free tier plus a robust 
 Went to: https://dash.cloudflare.com/ and hit `R2 object storage`
 
 ![alt text](/blog_img/web/agujapunto-r2-firebase/r2-101.png)
+
+![alt text](/blog_img/web/agujapunto-r2-firebase/cf-r2-1.png)
+
+![alt text](/blog_img/web/agujapunto-r2-firebase/cf-r2-2.png)
+
+![alt text](/blog_img/web/agujapunto-r2-firebase/cf-r2-3.png)
+
+![alt text](/blog_img/web/agujapunto-r2-firebase/cf-r2-4.png)
 
 
 Once you have created a buck for your app, you can customize its settings (CORS, custom domains, Object Lifecycle Rules to delete after some number of days, even Apache Iceberg tables, yes the data catalogue!)
