@@ -2,15 +2,16 @@
 title: "Social Auth"
 date: 2025-09-15T10:20:21+01:00
 draft: false
-tags: ["Firebase vs Logto vs ","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor"]
+tags: ["Firebase vs Logto","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor"]
 url: 'social-signin-101'
 description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator approach'
 ---
 
 **Tl;DR**
 
+I got working a simple md editor for slidev with couple of branches to master firebase and logto SDKs for auth:
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/slidev-editor" title="A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests" >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor" title="NEW - A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests" >}}
 {{< /cards >}}
 
 * https://sli.dev/guide/hosting#spa
@@ -478,6 +479,23 @@ Because it's open-source, it's a great choice for developers who want more contr
     * **All-in-one:** Includes authentication, authorization, user management, and multi-tenancy.
     * **Framework-free:** Provides SDKs for a wide range of languages and frameworks.
     * **Customizable login experiences:** You can tailor the user-facing parts of the platform to match your brand.
+
+Few months back, I tested Logto Python SDK: [here](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication) and [here](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe-x-logto)
+
+It was working perfectly, as you can see on the related source code:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/WebGenerAItor" title="WebGenerAItor" image="/blog_img/dev/LogTo/logto-branded-signin.png" subtitle="Source Code on GH | Tinkering with CloudflareDNS and Traefik v3_3 to serve websites" >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI" title="WebifAi / WebifAIyer" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github to package and sale SSG Themes" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo" title="Astro Theme 101 for Webifyer" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="For a psycology centered portfolio | Post" >}}
+{{< /cards >}}
+
+But I want to compare kneck to kneck with couple of new *auth architectures* ive been learning along the way.
+
+
 
 ![Logto Admin Panel](/blog_img/entrepre/public-build/slidev-editor/logto1-panel.png)
 

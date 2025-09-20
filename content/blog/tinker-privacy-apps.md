@@ -56,7 +56,7 @@ sudo dpkg -i ProtonMail-desktop-beta.deb
 sudo apt-get install -f
 ```
 
-> You can use my protonmail referal: https://pr.tn/ref/RHJ7YZE8BN8G
+> You can use my [protonmail referal](https://pr.tn/ref/RHJ7YZE8BN8G).
 
 ### VPN
 

@@ -1,6 +1,6 @@
 ---
 title: "Lead Magnets around MailerLite API"
-date: 2025-09-19T16:20:21+01:00
+date: 2025-09-20T16:20:21+01:00
 draft: false
 tags: ["Micro SaaS Essentials","MailerLite goodies"]
 description: 'BiP user flows around Landing + newsletter layers.'
@@ -41,6 +41,13 @@ Its strange that people look at you asking if by having blog you meant instagram
 Some people use mailchimp, or
 
 But i just felt confortable enought with Mailerlite.
+
+
+## MailerLite API
+
+This is what you need: https://dashboard.mailerlite.com/integrations
+
+![alt text](/blog_img/entrepre/mailerlite/mailerlite-ui-api-integ.png)
 
 
 ---
