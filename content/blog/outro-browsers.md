@@ -221,6 +221,21 @@ And now, it has an MCP server
 
 MIT | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients. 
 
+See: https://docs.firecrawl.dev/mcp-server and https://apify.com/mcp-servers/firecrawl-mcp-server#running-on-windsurf
+
+```json
+{
+  "mcpServers": {
+    "mcp-server-firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+```
 
 ---
 
@@ -277,7 +292,13 @@ Selenium and others
 So **my ranking** goes like this:
 
 1. HTML with bs4 *+ openAI to make easy to find the place of the data you want* - for **simple** non changing sites, like [this](https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/26643098/es/) as per [script](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py)
-2. ScrapeCrapgh AI + OpenAI/Ollama -> To forget about html and ask in **natural language** what you want to pull and how. See how with this script.
+
+2. [ScrapeCrapgh AI](#scrapegrapai) + OpenAI/Ollama -> To forget about html and ask in **natural language** what you want to pull and how. See how with this script.
+
+> I place on this second tier to [Crawl4AI](#crawl4ai) + OpenAI as well
+
+> > It got me partial information of that very hard to extract info
+
 3. **FireCrawlAI** with their API -> The one that has **worked best** for me, also with NL. You have a [free tier](https://www.firecrawl.dev/) and a playground: https://www.firecrawl.dev/app/playground
 
 Firecrawl offers a free plan that allows you to scrape up to 500 pages per month without requiring a credit card. 

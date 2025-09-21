@@ -32,6 +32,9 @@ Which is validated to have done 1M+ https://indiepa.ge/leaderboard as of the tim
 
 * https://www.liinks.co/i/plans
 
+https://www.youtube.com/watch?v=uqah6bDkSxs
+https://blog.liinks.co/link-in-bio-monetization-strategies-unlocking-new-revenue-streams-for-creators
+
 
 But recently I found about:
 

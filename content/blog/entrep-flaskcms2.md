@@ -81,8 +81,12 @@ For example something like: https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefi
 
 Time to put an end to this one!
 
-
 Btw, you can track with webscrapping (via bs4) the price evolution: https://github.com/JAlcocerT/Scrap_Tools/tree/main/Idealista
+
+And because having few separated services is a burdden.
+
+I wanted to consolidate the ssg + admin authentication to add new properties + the [last version of st scrapping](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py)
+
 
 
 ---

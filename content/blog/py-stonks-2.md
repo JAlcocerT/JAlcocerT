@@ -15,7 +15,7 @@ The historical stock webapp, companion for: https://financeinmotion.fyi
 
 +++ [People are doing](#people-are-doing) the classic bait: *I finally reach xyz divs a year* On reddit with a snapshot of a web app to get traction.
 
-+++ More and cooler yfinance
++++ More and cooler yfinance for a ~PyStocks v2
 
 **Intro**
 
@@ -52,6 +52,7 @@ Nice to have:
 5. Currency historical exchange rates (EUR<->USD)
 6. Inflation Data
 7. Bring your portfolio
+8. provide for your Portfolio the: historical dividends, confirmed dividends, forecasted dividends (per month/year)
 
 See [the BRD](#faq) where we scoped the project.
 

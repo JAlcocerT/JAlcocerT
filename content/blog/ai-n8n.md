@@ -23,10 +23,11 @@ I recently discovered about: https://chat.soula.ge/ and `https://vp.soula.ge/`
 
 ## Just use n8n
 
-Meaning: dont drag and drop, ask the AI to build your xflows :)
+Meaning: dont drag and drop, ask the AI to build your flows :)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+  {{< card link="https://www.npmjs.com/search?q=keywords%3An8n-community-node-package" title="N8N | Community Nodes nmpjs ↗" >}}
 {{< /cards >}}
 
 Btw, [marketer](https://jalcocert.github.io/JAlcocerT/social-media-automation/#conclusions): you can be interested in these web automation tools.
@@ -288,7 +289,66 @@ n8n (which stands for "node-based, no-code, and open-source") uses a visual, nod
     * **Can be more resource intensive**: The visual builder and its features can sometimes require more resources than Huginn's lighter-weight approach.
     * **Can get visually complex**: For extremely large or complex workflows, the canvas can become cluttered and difficult to manage.
 
+##### n8n x formbricks
 
+Remember to install the community node `@formbricks/n8n-nodes-formbricks`
+
+YOu will need the **API**: https://formbricks.com/docs/api-reference/generate-key
+
+And also the **webhooks** configured: https://formbricks.com/docs/xm-and-surveys/core-features/integrations/webhooks
+
+To **connect APIs** you can have a look to: https://github.com/PipedreamHQ/pipedream
+
+{{< callout type="info" >}}
+But the killer to test http Get/Post/... has been https://webhook.site/
+{{< /callout >}}
+
+Step 1: Prepare n8n and Formbricks
+
+First, you need to set up the connection.
+
+* **In n8n**, add the **Formbricks** trigger node to your canvas.
+* **In Formbricks**, make sure you have a survey created and its **webhook** integration is active.
+
+Step 2: Get the Webhook URL from n8n
+
+The webhook URL is the link that connects your Formbricks survey to your n8n workflow.
+
+* Click on the **Formbricks** node in n8n.
+* Click the **"Listen for event"** button in the node's settings panel.
+* A new, unique URL will appear below the button. Copy this URL exactly.
+
+Step 3: Configure Formbricks
+
+Next, you'll tell your Formbricks survey where to send the data.
+
+* Go to your Formbricks account and navigate to the **Integrations** section of your survey.
+* In the webhook settings, **paste the URL** you copied from n8n into the **Webhook URL** field.
+* Save the changes.
+
+Step 4: Test the Connection
+
+Now, you'll trigger the webhook to send the data.
+
+* Go to your Formbricks survey and submit a **new** response.
+* Return to your n8n workflow. If the connection is successful, the data from your survey will appear in the output of the **Formbricks** node.
+
+Step 5: Configure the HTTP Request Node
+
+With the data successfully captured, you can now send it to its final destination.
+
+* Add an **HTTP Request** node to your workflow and connect it to the **Formbricks** node.
+* In the **HTTP Request** node settings, configure the following:
+    * **Method:** `POST`
+    * **URL:** Your Webhook.site URL.
+    * **Body Content Type:** `JSON`
+    * **JSON Field:** `{{ $json.response }}` (to send all data) or a custom JSON object with specific fields.
+
+Step 6: Activate the Workflow
+
+* Once you're satisfied with your test, use the toggle in the top-right corner of the n8n canvas to **activate** your workflow.
+
+Your workflow will now automatically capture every new survey response from Formbricks and send it to your configured destination.
 
 ### N8N vs Hugging vs Flowise
 
