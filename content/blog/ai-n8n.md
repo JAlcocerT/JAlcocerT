@@ -42,16 +42,15 @@ That you can plug them all to your N8N.
 
 ### n8n x FirefliesAI
 
-Lately I was playing with [AI Audio here](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings).
+Lately, I was playing with [AI Audio here](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings).
 
 And decided to get access to: https://app.fireflies.ai/
 
-The decision among other [tools for meetings](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings)?
+Why this decision among other [tools for meetings](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings)?
 
-Because it can be integrated easily with n8n.
+Because FirefliesAI can be **integrated easily with n8n**.
 
 * https://guide.fireflies.ai/articles/4758387081-learn-about-n8n-x-fireflies-integration
-
 
 ![Fireflies AI has n8n integration](/blog_img/GenAI/n8n/n8n-audio-fireflies.png)
 
@@ -71,7 +70,7 @@ curl \
    https://api.fireflies.ai/graphql
 ```
 
-Just go to https://app.fireflies.ai/settings and get that API key.
+Just go to https://app.fireflies.ai/settings and get that **API key**.
 
 2. **Add Fireflies Node in n8n:**
    - In your n8n workflow editor, search for the Fireflies node (official Fireflies.ai integration exists).
@@ -95,7 +94,7 @@ Just go to https://app.fireflies.ai/settings and get that API key.
 
 There are also pre-built templates and community workflows on n8n.io that integrate Fireflies for common use cases, helping speed up setup.
 
-This native integration allows meeting data from Fireflies.ai to flow seamlessly into other apps via n8n’s automation platform, boosting productivity.[1][2][3]
+This native integration allows meeting data from Fireflies.ai to flow seamlessly into other apps via n8n’s automation platform, boosting productivity.
 
 [1](https://guide.fireflies.ai/articles/4758387081-learn-about-n8n-x-fireflies-integration)
 [2](https://github.com/firefliesai/n8n-nodes-fireflies)
@@ -104,7 +103,7 @@ This native integration allows meeting data from Fireflies.ai to flow seamlessly
 
 ### n8n x Perplexity
 
-Yes, Perplexity can be integrated with n8n.
+Perplexity can be integrated with n8n.
 
 n8n offers a dedicated Perplexity node that allows users to automate interactions with Perplexity's AI models within workflows. 
 
@@ -141,37 +140,39 @@ This integration allows users to combine Perplexity’s real-time AI insights wi
 
 > MIT |  n8n custom node for MCP 
 
-https://github.com/leonardsellem/n8n-mcp-server
+2. https://github.com/leonardsellem/n8n-mcp-server
 
 
 > MIT |  MCP server that provides tools and resources for interacting with n8n API 
 
 
-https://github.com/czlonkowski/n8n-mcp
-https://www.n8n-mcp.com/
+3. https://github.com/czlonkowski/n8n-mcp
+
+* https://www.n8n-mcp.com/
 
 > MIT |  A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you 
 
 
 #### Perplexity x MCP
 
-Yes, Perplexity does have an official MCP (Model Context Protocol) server.
+Perplexity does have an official MCP (Model Context Protocol) server.
 
 It is called the "Perplexity Ask MCP Server" and serves as a bridge to connect Perplexity’s Sonar API with AI assistants and other AI frameworks, enabling seamless integration for real-time research, data access, and workflow automation.
 
 This MCP server supports both local and remote contexts to allow AI systems to securely interact with external data sources, tools, and APIs within Perplexity’s platform.[1][2][3][4]
 
-In summary, the Perplexity MCP server exists and is actively supported as part of their platform for enabling powerful AI integrations and enhanced context sharing.[2][3][1]
+In summary, the Perplexity MCP server exists and is actively supported as part of their platform for enabling powerful AI integrations and enhanced context sharing.
 
 [1](https://docs.perplexity.ai/guides/mcp-server)
 [2](https://github.com/perplexityai/modelcontextprotocol)
 [3](https://www.perplexity.ai/help-center/en/articles/11502712-local-and-remote-mcps-for-perplexity)
 [4](https://playbooks.com/mcp/laodev1-perplexity)
 
+---
 
 ## Conclusions
 
-If it has an API/Webhooks, you can plug it with your n8n workflows.
+**To recap:** If it has an API/Webhooks, you can plug it with your n8n workflows.
 
 Like with: https://docs.apify.com/platform/integrations
 
@@ -616,7 +617,9 @@ Lately, I was doing a [scrapping recap here](https://jalcocert.github.io/JAlcoce
 
 But what if all this could be done with n8n instead of a [,complex' script](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py)?
 
+You need to get familiar with the `http request` and `html node` to do the parsing.
 
+To test, the `set (edit fields)` node might help too.
 
 how the Workflow Would Work in n8n
 

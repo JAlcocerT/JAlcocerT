@@ -55,7 +55,7 @@ Meaning: to somehow plug the AI/LLMs/Agents to do/check stuff
 
 Bringing to the SSGs finally some cool editor has given me several head-aches.
 
-Recently I discovered about BCMS and pages-cms, which I wanted to try [as per this post](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#podcast).
+Recently I discovered about **BCMS and pages-cms**, which I wanted to try [as per this post](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#podcast).
 
 In theory, both can be selfhostable.
 
