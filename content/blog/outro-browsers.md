@@ -2,16 +2,25 @@
 title: "My Fav Web browsers and their automation"
 date: 2025-09-18
 draft: false
-tags: ["Zen vs Firefox vs LibreWolf","Brave vs Chrome","PlayWright MCP","Puppeteer"]
+tags: ["Zen vs Firefox vs LibreWolf","Brave vs Chrome","PlayWright MCP","Puppeteer","Job-Trends","Scrap-Tools"]
 description: 'Neko vs KASM vs webtops. Web Automation and Scrapping Recap.'
 url: 'how-to-browse'
 ---
 
-How cool is to use perplexity and have a reference to your own website:
 
-![alt text](/blog_img/selfh/Internet/perplexity-neko.png)
+**Tl;DR**
 
-![alt text](/blog_img/selfh/Internet/neko-ui.png)
+Playing again with [scrappers](#scrapping-recap): scrapegraph, crawl4ai, firecrawl.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Job-Trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of the job trends + sqlite + plots" >}}
+  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of with tweaks to scrapegraph, firecrawl and crawl4ai" >}}
+{{< /cards >}}
+
+
+**Intro**
+
+
 
 <!-- 
 ## AgencySwarm
@@ -37,7 +46,6 @@ Web Browsing like human. With GPT4.
 ## Browsers Ive tried
 
 Even a CLI browser called Lynx:
-
 
 https://jalcocert.github.io/JAlcocerT/scrapping-with-llms/#faq
 
@@ -119,12 +127,32 @@ These tools differ in browser support, language support, ease of setup, and test
 
 ## Scrapping Recap
 
+[Not long ago](https://jalcocert.github.io/JAlcocerT/social-media-automation/#scrapping-social-media) I got to know about ApiFy
 
-And lately... https://jalcocert.github.io/JAlcocerT/social-media-automation/#scrapping-social-media
+
+- Apify uses a subscription plus consumption (pay-as-you-go) model, with plans ranging from free to $999/month. It charges for compute units, proxy rental, storage, and support. The free plan includes $5 in monthly credits. For large-scale tasks, compute units cost between $0.20 and $0.30 each. Apify is ideal for scalable projects with varied needs and enterprise support.
+
+- Firecrawl has a simple and predictable credit-based model: 1 page scraped equals 1 credit. The free plan allows for up to 500 pages, and paid plans range from $16 for 3,000 pages to $333 for 500,000 pages. This includes infrastructure, proxies, and bandwidth. It is a more economical choice for simple scraping tasks and moderate volumes.
+
+- ScrapeGraphAI offers annual plans with credits for requests and speed limits, ranging from a free plan with 50 credits to customized enterprise plans. It focuses on AI-powered scraping, with costs based on API calls or pages scraped. It provides support and scalable features, but exact prices vary depending on usage.
+
+- Crawl4AI is free software since it's open source, but the real cost comes from the infrastructure and external LLM APIs used for extraction and processing. This means the costs are variable and depend on the scale and external services you connect.
+
+
+| Platform | Pricing Model | Approximate Costs | Best for |
+|:---|:---|:---|:---|
+| **Apify** | Subscription + consumption | $0 to $999/month + resource usage | Scalability, enterprises, support |
+| **Firecrawl** | Credits per page | From $16 for 3,000 pages up to $333 | Simplicity, moderate scraping volumes |
+| **ScrapeGraphAI** | Annual usage credits | Free to enterprise plans based on credits | AI-powered scraping, developers |
+| **Crawl4AI** | Open source + infrastructure | Variable based on external infrastructure | Custom development, flexibility |
+
+In short, Apify is flexible and powerful but more expensive for simple tasks. Firecrawl has a very clear and affordable cost for low to medium volumes. ScrapeGraphAI and Crawl4AI are more specialized and depend on additional infrastructure usage.
 
 
 [![Star History Chart](https://api.star-history.com/svg?repos=ScrapeGraphAI/Scrapegraph-ai,unclecode/crawl4ai,mendableai/firecrawl&,type=Date)](https://star-history.com/#ScrapeGraphAI/Scrapegraph-ai&unclecode/crawl4ai&mendableai/firecrawl&Date)
 
+
+If you are new to coding and scrapping, just ask *while vibe coding* about: python uv environment setup + use any of these frameworks below for scrapping + create a container around your final setup for easy deployment.
 
 
 ### ScrapeGrapAI
@@ -359,6 +387,11 @@ sudo chown -R 1000:1000 /home/docker/neko
 
 > Remember to do `ctrl+c` to copy from neko to your main desktop
 
+BTW, How cool is to use perplexity and have a reference to your own website:
+
+![Perplexity Neko Search](/blog_img/selfh/Internet/perplexity-neko.png)
+
+![Neko UI setup](/blog_img/selfh/Internet/neko-ui.png)
 
 - **Kasm Workspaces**: A container streaming platform that can spin up various browsers or full desktops in ephemeral Docker containers accessible via the web browser. It’s designed for enterprise use, secure browser isolation, and remote workspace management.[5][6][7]
 

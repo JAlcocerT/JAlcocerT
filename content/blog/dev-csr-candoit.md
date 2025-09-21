@@ -2,8 +2,8 @@
 title: "Client Side Rendering can do that"
 date: 2025-09-04T06:20:21+01:00
 draft: false
-tags: ["CSR","PWA","Web","MRR","French Amortization Calculator","QR","HTML2PDF"]
-description: 'CSR can do that. Keep things simple and understand CORS'
+tags: ["CSR","PWA","Web","MRR","French Amortization Calculator","QR","HTML2PDF","Serverless-invoices"]
+description: 'CSR can do that. Keep things simple, understand CORS and ship mostly static.'
 url: 'csr-and-js'
 ---
 

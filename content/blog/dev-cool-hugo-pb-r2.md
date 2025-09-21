@@ -3,7 +3,7 @@ title: "HUGO Photo Galleries with User photo uploads"
 date: 2025-09-20
 draft: false
 tags: ["Web","SSG","Photo-Gallery","Pocketbase CMS","R2 vs s3","Firebase Auth"]
-description: 'Using a HUGO Theme with Pocketbase Auth and Cloudflare R2 + Workers'
+description: 'Using a HUGO Theme with Pocketbase Auth and Cloudflare R2 + Workers. A nextjs-r2-demo.'
 url: 'hugo-pocketbase-and-r2'
 ---
 
@@ -11,6 +11,17 @@ url: 'hugo-pocketbase-and-r2'
 **TL;DR**
 
 I got to know about Cloudflare R2 as object storage.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/nextjs-r2-demo" title="NEW Fork of a NextJS + R2 WebApp" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a webapp that pushes data to CF R2 via CF Workers" >}}
+{{< /cards >}}
+
+{{< callout type="warning" >}}
+Remember to place costs alerts (because its not possible set a limit).
+{{< /callout >}}
+
+![alt text](/blog_img/web/agujapunto-r2-firebase/cf-notification-alerts.png)
+
 
 
 **Intro**
@@ -29,6 +40,8 @@ I just want to have images placed into some folders, and pocketbase can do that,
 {{< /cards >}}
 
 Also, I saw **CF R2**: https://github.com/harshil1712/nextjs-r2-demo
+
+>  Upload images to Cloudflare R2 via the Workers API, Pre-signed URL, or Temporary Credentials 
 
 ```sh
 git clone https://github.com/JAlcocerT/nextjs-r2-demo
@@ -103,7 +116,7 @@ Just recently I got to know: https://github.com/sjackp/r2-gallery
 
 Cloudflare R2 offers a free tier that includes 10 GB of storage per month, 1 million Class A operations (uploads, modifies) per month, and 10 million Class B operations (reads/downloads) per month. 
 
-Plus, it has zero egress fees, so data downloaded from R2 is free of charge during this free tier usage, which is quite generous for testing or small projects.[1][2][3]
+Plus, it has zero egress fees, so data downloaded from R2 is free of charge during this free tier usage, which is quite generous for testing or small projects.
 
 Regarding API and integration, Cloudflare R2 provides an S3-compatible API that allows secure upload, download, and management of objects.
 
@@ -115,7 +128,7 @@ Common approaches include:
 - Generating presigned URLs on the server side that the frontend can use to upload files directly to R2 securely.
 - Integrating with Cloudflare Workers for custom logic between your app and R2 storage.
 
-There are open-source Next.js projects and examples available showing how to upload, download, and delete files from Cloudflare R2 with progress indication and secure handling.[4][5][6][7]
+There are open-source Next.js projects and examples available showing how to upload, download, and delete files from Cloudflare R2 with progress indication and secure handling.
 
 In short, yes, Cloudflare R2 offers a beginner-friendly free tier plus a robust API suitable for securely uploading guest photos/videos directly from your Next.js wedding app.
 
@@ -124,7 +137,6 @@ In short, yes, Cloudflare R2 offers a beginner-friendly free tier plus a robust 
 [3](https://themedev.net/blog/cloudflare-r2-pricing)
 [4](https://github.com/diwosuwanto/cloudflare-r2-with-nextjs-upload-download-delete)
 [5](https://github.com/harshil1712/nextjs-r2-demo)
-[6](https://buildwithmatija.com/blog/how-to-upload-files-to-cloudflare-r2-nextjs)
 [8](https://www.cloudflare.com/developer-platform/products/r2/)
 [16](https://developers.cloudflare.com/r2/objects/upload-objects/)
 

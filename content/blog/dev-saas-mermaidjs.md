@@ -1,6 +1,6 @@
 ---
 title: "Diagrams and workflows as a Code with Agents"
-date: 2025-09-21T07:20:21+01:00
+date: 2025-09-21T20:20:21+01:00
 draft: false
 tags: ["AI SaaS","Codex CLI","MermaidJS","Grok vs Perplexity","Icons for Architects"]
 description: 'BiP user flows around newsletter layers. From SliDev Editor to Mermaid Editor.'
@@ -103,7 +103,7 @@ The rendering method a website uses directly impacts how easy or difficult it is
 
 ### Challenges of Scraping Dynamic Content
 
-Yes, it's much harder to scrape dynamic content, and your intuition is correct—it's because the scraper must act like a real user. 🕵️‍♀️
+Itt's much harder to scrape dynamic content, and your intuition is correct—it's because the scraper must act like a real user. 🕵️‍♀️
 
 With dynamic content (like that found on CSR websites), the data you want isn't in the initial HTML. It's loaded later by JavaScript. This means a standard scraper that just makes a simple HTTP request will fail to see the content.
 

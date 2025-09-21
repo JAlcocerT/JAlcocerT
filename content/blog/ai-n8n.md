@@ -171,6 +171,8 @@ In summary, the Perplexity MCP server exists and is actively supported as part o
 
 ## Conclusions
 
+If it has an API/Webhooks, you can plug it with your n8n workflows.
+
 You might want to consider other n8n *,alternatives'*, like hugging or Flowise.
 
 
@@ -349,6 +351,57 @@ Step 6: Activate the Workflow
 * Once you're satisfied with your test, use the toggle in the top-right corner of the n8n canvas to **activate** your workflow.
 
 Your workflow will now automatically capture every new survey response from Formbricks and send it to your configured destination.
+
+##### n8x x google sheets
+
+https://www.youtube.com/watch?v=3Ai1EPznlAc
+
+You need to get the Client ID and Client Secret from the **Google Cloud Console**. 
+
+This process involves creating a new project and configuring it to allow n8n to connect to Google Sheets on your behalf.
+
+The steps are a bit involved, but it's a one-time setup for your n8n instance.
+
+Step-by-Step Guide to Get Client ID and Secret
+
+1.  **Go to the Google Cloud Console**: Navigate to `https://console.cloud.google.com/`. You must be logged in with your Google account.
+
+2.  **Create a New Project**: At the top of the page, click the dropdown menu next to the "Google Cloud" logo. Click **"New Project"**, give it a name (e.g., "n8n Automation"), and click **"Create"**.
+    
+
+3.  **Enable the Google Sheets API**:
+    * Once your project is selected, go to the **"APIs & Services" > "Library"** from the left-hand menu.
+    * Search for **"Google Sheets API"** and click on it.
+    * Click the **"Enable"** button.
+
+4.  **Configure the OAuth Consent Screen**: This is required to tell Google who is using your app and what it will access.
+    * Go to **"APIs & Services" > "OAuth consent screen"**.
+    * Choose **"External"** (for personal use) and click **"Create"**.
+    * Fill out the required information:
+        * **App name**: A name like "My n8n App".
+        * **User support email**: Your email address.
+    * Click **"Save and Continue"**.
+    * On the **"Scopes"** page, click **"Add or Remove Scopes"**. A new window will appear.
+    * Search for "sheets" and select the scope for Google Sheets. The full scope URL will be something like `...auth/spreadsheets`. Click **"Update"**.
+    * Click **"Save and Continue"** on the main screen.
+    * On the **"Test Users"** page, add your Google account email as a test user. This is crucial for your self-hosted app to work without a verification process.
+
+5.  **Create the OAuth Credentials**:
+    * Go to **"APIs & Services" > "Credentials"**.
+    * Click **"Create Credentials"** at the top and select **"OAuth client ID"**.
+    * For **"Application type"**, choose **"Web application"**.
+    * Give it a name (e.g., "n8n Web Client").
+    * Under **"Authorized redirect URIs"**, click **"ADD URI"** and paste the **exact** URL that n8n provided you. This URL is unique to your self-hosted instance and should look like `https://yourdomain.com/rest/oauth2-credential/callback`.
+    * Click **"Create"**.
+
+6.  **Copy Your Credentials**: A pop-up window will appear showing your **Client ID** and **Client Secret**. Copy these values immediately and paste them into the appropriate fields in your n8n Google Sheets credential setup.
+
+
+##### n8n x Scrapping
+
+Lately I was doing a [scrapping recap here](https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap)
+
+##### n8n x CRM
 
 ### N8N vs Hugging vs Flowise
 

@@ -114,7 +114,9 @@ Logto had a cool post about how to vibe code a photo gallery app with built in a
 
 * https://blog.logto.io/cursor-logto-auth/
 
-And DO a way to deploy static sites: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-static-website-to-the-cloud-with-digitalocean-app-platform
+And DO a way to deploy static sites: https://www.digitalocean.com/community/tutorials/ 
+and how-to-deploy-a-static-website-to-the-cloud-with-digitalocean-app-platform
+
 
 #### SSG x PB
 

@@ -1,10 +1,10 @@
 ---
 title: "Just be Serverless"
-date: 2025-09-20T23:20:21+01:00
+date: 2025-09-23T23:20:21+01:00
 draft: false
-tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone"]
+tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone","T3.Chat"]
 url: 'serverless-101'
-description: 'Firebase Auth as your WebApp Serverless Authenticator'
+description: 'Your WebApps, with Serverless Authentication and AI on the backend.'
 ---
 
 
@@ -18,37 +18,49 @@ description: 'Firebase Auth as your WebApp Serverless Authenticator'
 
 **Intro**
 
-Just recently, I wrote about [Firebase Auth](/JAlcocerT/firebase-auth-101) and the LogTo JS SDK + CF Workers.
+Just recently, I wrote about [Firebase Auth](/JAlcocerT/firebase-auth-101) and the [LogTo JS SDK](https://jalcocert.github.io/JAlcocerT/social-signin-101/#4-logto-).
 
-A serverless way to authenticate your users.
+I was suspecting all this was possible as per the [serverless-invoices setup](https://github.com/JAlcocerT/serverless-invoices)...
 
-Why not applying these to a theme: *which kind of reminds me of t3.chat*
+The [SSG (astro payroll) with pocketbase setup](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/) to register and signin...confirmed it.
+
+Now, tell me that the [CF Pages + CF Workers + CF R2 setup](https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/) was not impressive...
+
+What Im looking to put together now:
+
+A serverless way to authenticate your users: then allow them to do certain actions.
+
+Why not applying these to a theme: *which kind of reminds me of t3.chat*: https://t3.chat
 
 * https://www.astrothemes.dev/theme/anse-app-chatgpt-demo/
 * https://github.com/anse-app/chatgpt-demo
 
 > MIT | Minimal web UI for ChatGPT.
 
+And on the recent [Audio with AI Post](https://jalcocert.github.io/JAlcocerT/audio-recap/), I was supposed to create a [Speech rater with FastAPI](https://github.com/JAlcocerT/py-speech-rater) that superseeds the [previous streamlit version](https://github.com/JAlcocerT/Streamlit-Speech).
 
-And on the recent Audio with AI Post, I was supposed to create a Speech rater with FastAPI that superseeds the streamlit version.
-
-But I got an improvement of my yt audio workflow instead.
+But I got an improvement of [my yt audio workflow](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions) instead.
 
 The prep work was done anyways: SSG + FastAPI + Audio recording/storing/processing worked.
 
 How about the rating part now?
+
+Meaning: to somehow plug the AI/LLMs/Agents to do/check stuff
 
 ### LogtoJS SDK x Astro
 
 
 ### Firebase Auth 
 
-https://jalcocert.github.io/JAlcocerT/firebase-auth-101/
-https://jalcocert.github.io/JAlcocerT/stonks/
+For phones and with FastAPI, I did not manage to get fb auth social sign in/up  working:
+
+* https://jalcocert.github.io/JAlcocerT/firebase-auth-101/
+* https://jalcocert.github.io/JAlcocerT/stonks/
+
+But the NextJS setup worked
 
 #### NextJS + Firebase Auth
 
-For phones I did not manage to get fb auth social sign in/up  working.
 
 
 ---
@@ -58,7 +70,7 @@ For phones I did not manage to get fb auth social sign in/up  working.
 
 ### Firebase Auth x SSG x CF Workers
 
-Yes, you can combine Firebase Authentication with an Astro static site deployed to Cloudflare Pages to protect certain pages.
+&ou can combine Firebase Authentication with an Astro static site deployed to Cloudflare Pages to protect certain pages.
 
 However, because Astro in "static" mode builds a purely static site, you cannot use server-side authentication directly on the pages themselves. 
 
