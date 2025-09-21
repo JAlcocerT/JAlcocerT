@@ -11,6 +11,10 @@ description: 'Your WebApps, with Serverless Authentication and AI on the backend
 
 **Tl;DR**
 
+Just go serverless.
+
+
+
 +++ Using Logto JS SDK with CF Workers (?)
 
 
@@ -46,6 +50,16 @@ The prep work was done anyways: SSG + FastAPI + Audio recording/storing/processi
 How about the rating part now?
 
 Meaning: to somehow plug the AI/LLMs/Agents to do/check stuff
+
+### Static Pages and Edition
+
+Bringing to the SSGs finally some cool editor has given me several head-aches.
+
+Recently I discovered about BCMS and pages-cms, which I wanted to try [as per this post](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#podcast).
+
+In theory, both can be selfhostable.
+
+So lets see what they require to get themes working fast.
 
 ### LogtoJS SDK x Astro
 

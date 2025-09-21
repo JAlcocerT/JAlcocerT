@@ -141,7 +141,7 @@ It is a good choice for projects with a complex or uncertain scope. **Well-suite
         * Grooming
         * Planning Sessions
         * Retrospectives
-* Kanban: is an Agile methodology that visualizes work as it moves through different stages. It utilizes a Kanban board to provide visibility into the workflow, limit work in progress (WIP), and optimize the flow of tasks.
+* Kanban: is an Agile methodology that visualizes work as it moves through different stages. It utilizes a Kanban board to provide visibility into the workflow, limit work in progress (W.I.P), and optimize the flow of tasks.
 * ScrumBan:  is a hybrid approach that combines elements of Scrum and Kanban methodologies. It aims to leverage the strengths of both frameworks to enhance productivity and flexibility in project management
 * Other Agile methodologies: Lean, Extreme Programming (XP), and Dynamic Systems Development Method (DSDM)
 

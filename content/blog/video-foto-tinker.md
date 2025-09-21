@@ -282,7 +282,7 @@ And for videos longer than 3 minutes, they will render as: *youtube will detect 
 
 <!-- https://youtu.be/Sz5jlIbV0JA -->
 
-You can also take a 1080p part from a 4K video withour rencoding: *WIP*
+In theory, You can also take a 1080p part from a 4K video withour rencoding: *but i was not satisfied with the results, at least for now*
 
 ```sh
 ffmpeg -i DJI_20250518172824_0001_D.MP4 -c copy -bsf:v hevc_metadata=crop_left=960:crop_right=960:crop_top=0:crop_bottom=1080 output_horizontal_1080p_no_encode.mp4

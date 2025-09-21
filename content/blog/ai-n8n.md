@@ -173,6 +173,70 @@ In summary, the Perplexity MCP server exists and is actively supported as part o
 
 If it has an API/Webhooks, you can plug it with your n8n workflows.
 
+Like with: https://docs.apify.com/platform/integrations
+
+{{% details title="N8N can do that, actually 🚀" closed="true" %}}
+
+Yes, in general, if a tool offers an API and/or webhooks, it can be integrated with n8n. 
+
+n8n is designed as a flexible workflow automation platform that can connect with any service that provides:
+
+- A RESTful API or other types of APIs (e.g., GraphQL).
+- Webhooks to trigger workflows based on events.
+
+This allows automating interactions such as data retrieval, processing, and pushing results to other systems by configuring nodes in n8n. 
+
+Many tools support API calls and webhooks exactly to enable such integrations, making n8n very versatile for combining different services without custom coding.
+
+---
+
+Yes, I **absolutely agree** with your statement. It's a fundamentally accurate and excellent summary of how n8n works and its core philosophy.
+
+Here's a breakdown of why your statement is correct:
+
+* **The "API or Webhook" Rule:** You've hit on the key principle. If a service has a way for external systems to communicate with it (an API) or to send a notification when something happens (a webhook), n8n can likely be integrated with it. This is the foundation of modern automation.
+* **Generic Nodes:** n8n's power comes from its generic nodes that are built for exactly this purpose. The **HTTP Request** node can be configured to interact with virtually any RESTful API, and the **Webhook** trigger node can receive events from any service that supports webhooks.
+* **Flexibility over Specificity:** While n8n has hundreds of pre-built "native" integrations (like the Google Sheets one we discussed), its true versatility lies in its ability to connect to any other service you can imagine, as long as it exposes an API or webhook endpoint.
+
+
+{{% /details %}}
+
+
+{{< details title="Remember - API vs WwebHooks... 📌" closed="true" >}}
+
+API and webhook connections serve different but **complementary purposes in workflow automation**. 
+
+Here's a simple way to think about it.
+
+* **API (Application Programming Interface)**: An API is a set of rules that lets you **actively make requests** to a service to get or send data. 
+
+Think of it as **you calling the service** and asking it to do something.
+    * **Use Case:** You would use an API to **pull data** or to **perform an action**. For example, in n8n, you'd use an API connection to:
+        * **Get data:** Pull a list of all products from your e-commerce platform.
+        * **Send data:** Create a new contact in your CRM.
+        * **Trigger an action:** Send a specific email to a customer.
+
+* **Webhook**: A webhook is a mechanism where a service **pushes information to you** when a specific event happens. 
+
+It's like the service **calling you** to give you an alert.
+      * **Use Case:** You would use a webhook to **trigger a workflow instantly** based on an event. Your examples are perfect:
+        * Someone has subscribed to your newsletter in MailerLite.
+        * A customer has filled out a form on your website.
+        * A new lead has been created in your sales tool.
+
+Summary
+
+| | **API** | **Webhook** |
+|:---|:---|:---|
+| **Initiator** | You (your workflow) | The external service |
+| **Action** | You send a request | The service sends a notification |
+| **Purpose** | **Requesting data or performing an action** | **Receiving an event to trigger a workflow** |
+| **Analogy** | You call a waiter to order food. | The waiter brings the food out when it's ready. |
+
+
+{{< /details >}}
+
+
 You might want to consider other n8n *,alternatives'*, like hugging or Flowise.
 
 
@@ -352,9 +416,231 @@ Step 6: Activate the Workflow
 
 Your workflow will now automatically capture every new survey response from Formbricks and send it to your configured destination.
 
+> https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/1-formbricks-http-webhooksite.json
+
+##### n8n x mailerlite
+
+You just need webhooks: https://dashboard.mailerlite.com/integrations/webhooks
+
+And configure it on n8n as POST.
+
+Then take the webhook url towards Mailerlite UI:
+
+And then test with some manual creation: https://dashboard.mailerlite.com/subscribers/create
+
+> https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/2-mailerlite_webhook_tg.json
+
+##### n8n x telegram
+
+Not long ago, I was playing with [TG Bots, here](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots).
+
+Now, we will be using the n8n node: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.telegram/
+
+* https://core.telegram.org/bots/api
+* https://api.telegram.org/bot<BOT_TOKEN>/getUpdates
+
+To get the chat ID, send a msg to your new bot:
+
+```sh
+curl "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates"
+curl -s "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates" | jq .result[0].message.chat.id
+```
+
+The Telegram part of the workflow is responsible for receiving the processed data from n8n and sending it as a message to a specific chat.
+
+This requires two main components: an external setup to get credentials and the n8n node configuration.
+
+1. External Setup
+
+  * **Create the Telegram Bot:** The first step was to create a new bot using the official Telegram bot creator, **`@BotFather`**. This bot acts as the sender for all your automated messages. When you created it, `@BotFather` provided a unique **API Token** (also called an **Access Token**). This token serves as the password for n8n to control your bot.
+
+  * **Find the Chat ID:** Next, you needed to find the specific ID of the chat or group where you wanted to receive messages. This is because the bot needs to know exactly where to send the message. To find this ID, you started a conversation with your bot (either in a private chat or by adding it to a group) and then used a **`curl`** command to query the Telegram API and get the unique **Chat ID** from the response. This ID is a long number, often negative for groups.
+
+2. n8n Node Configuration
+
+After getting the credentials, you configured the **Telegram** node in your n8n workflow.
+
+  * **Node Placement:** The node was placed at the end of the workflow, after the OpenAI node, because it's the final action in the process.
+
+  * **Credentials:** You provided the **API Token** you received from `@BotFather` to authenticate n8n with Telegram.
+
+  * **Core Fields:** You configured the following essential fields:
+
+      * **Resource:** `Message`
+      * **Operation:** `Send a text message`
+      * **Chat ID:** You pasted the Chat ID you found with `curl`.
+      * **Text:** This is the most crucial part. You created a dynamic message using **expressions** to pull data from multiple previous nodes. For this, you used the special **`$node`** expression to access the original webhook data and the standard **`$json`** expression to get the AI's output from the immediately preceding OpenAI node.
+
+
+
+
+```txt
+A new subscriber has joined!
+
+Name: {{ $json.body.fields.name }}
+Email: {{ $json.body.email }}
+
+Source: {{ $json.body.source }}
+Status: {{ $json.body.status }}
+```
+> https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/2-mailerlite_webhook_tg.json
+
+##### n8n x openai
+
+We will be using: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/#operations and its `Message a Model`
+
+After providing the API key: 
+
+```sh
+Tell me a fun fact about the name '{{ $json.body.fields.name }}' in a single sentence.
+```
+
+Not to abuse mailerlite, lets add sth manually:
+
+```sh
+curl -X POST \
+-H "Content-Type: application/json" \
+-d '{
+    "body": {
+        "fields": {
+            "name": "Jane",
+            "last_name": null
+        },
+        "email": "jane.doe@example.com",
+        "status": "active",
+        "event": "subscriber.created"
+    }
+}' \
+"https://n8n.jalcocertech.com/webhook-test/a1b92538-1bab-42ec-a865-a5cc01afe51b"
+```
+
+But for this one to work I needed to adapt:
+
+```
+Tell me a fun fact about the name '{{ $json.body.body.fields.name }}' in a single sentence.
+```
+
+And it worked!
+
+Now, to bring it all towards the tg node, I changed it to:
+
+```
+New subscriber alert!
+
+Name: {{ $node["Webhook"].json.body.body.fields.name }}
+Email: {{ $node["Webhook"].json.body.body.email }}
+
+AI Fact: {{ $json.message.content }}
+```
+
+That's as easy as it can be! Look again and dont blink:
+
+```sh
+curl -X POST \
+-H "Content-Type: application/json" \
+-d '{
+    "body": {
+        "fields": {
+            "name": "El yosua cerdo",
+            "last_name": null
+        },
+        "email": "yosu.cerdo@example.com",
+        "status": "active",
+        "event": "subscriber.created"
+    }
+}' \
+"https://n8n.jalcocertech.com/webhook-test/a1b92538-1bab-42ec-a865-a5cc01afe51b"
+```
+
+
+{{< details title="A recap on these steps... 📌" closed="true" >}}
+
+Phase 1: External Services Setup
+
+You first had to set up the two external services that n8n would interact with.
+
+* **Telegram Setup**
+    1.  You used **`@BotFather`** in Telegram to create a new bot and obtain its unique **API Token**.
+    2.  You started a chat with your new bot and used a **`curl`** command with the bot's API to find the **Chat ID** of the conversation.
+
+* **OpenAI Setup**
+    1.  You obtained an **OpenAI API Key** from your OpenAI account. This key is your credential for allowing n8n to communicate with the AI.
+
+
+Phase 2: n8n Workflow Creation
+
+This is the core of the automation. You created a workflow with three connected nodes.
+
+* **Step 1: Webhook Node (The Trigger)**
+    * You added a **Webhook** node as the first step in your workflow.
+    * You set the HTTP method to **POST**.
+    * This node provided a unique **Webhook URL** that you would later use in MailerLite.
+
+* **Step 2: OpenAI Node (The AI Action)**
+    * You added an **OpenAI** node and connected it after the Webhook node.
+    * You provided your OpenAI API key as the credential.
+    * You chose the **Resource** as `Text` and the **Operation** as `Message a Model`.
+    * In the content of the message, you created a prompt using the `$node` expression to get the subscriber's name from the webhook's data: `Tell me a fun fact about the name '{{ $node["Webhook"].json.body.body.fields.name }}' in a single sentence.`
+
+* **Step 3: Telegram Node (The Final Action)**
+    * You added a **Telegram** node and connected it after the OpenAI node.
+    * You provided your Telegram API token and the **Chat ID** as credentials.
+    * You configured the action to be **"Send a text message"**.
+    * You constructed the final message text using expressions to pull data from **both** the webhook node and the OpenAI node:
+        * `{{ $node["Webhook"].json.body.body.fields.name }}` for the name from the webhook.
+        * `{{ $json.message.content }}` for the AI's comment from the OpenAI node.
+
+Phase 3: External Webhook Configuration
+
+* **MailerLite Setup**
+    1.  You went to the **Integrations** section in your MailerLite account.
+    2.  You created a new webhook and pasted the **Webhook URL** from your n8n workflow.
+    3.  You set the event to **"Subscriber created"**.
+
+Phase 4: Testing and Activation
+
+* **Testing:**
+    * You used a **`curl`** command to simulate a new subscriber event, sending test data directly to your webhook URL.
+* **Activation:**
+    * Once you confirmed that the workflow worked perfectly with your test data, you toggled the **"Active"** switch on your n8n workflow to make it run automatically in the background.
+
+And that's it! You built a complete, automated workflow that gets real-time data from an external service, processes it with an AI, and sends a custom notification to a messaging app.
+
+{{< /details >}}
+
+> See https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/3-webhook_openai_tg.json
+
+##### n8n x Scrapping
+
+Lately, I was doing a [scrapping recap here](https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap)
+
+But what if all this could be done with n8n instead of a [,complex' script](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py)?
+
+
+
+how the Workflow Would Work in n8n
+
+You'd create a workflow using a series of "nodes" that perform a specific task. The general flow would look like this:
+
+1.  **Telegram Trigger Node**: This is the starting point of your workflow. You would configure a "Telegram Trigger" node to listen for new messages sent to your bot. This node would receive the URL that you send via the Telegram group.
+
+2.  **HTTP Request Node**: This is the core of the scraping part. You would use an "HTTP Request" node to perform a GET request on the URL received from the Telegram trigger. This node fetches the raw HTML content of the webpage.
+
+3.  **HTML Extract Node**: This is where you would configure the selectors to extract the specific data you want. The **HTML Extract node** in n8n is designed for this. You would provide CSS selectors or XPath to tell the node exactly what information to pull from the HTML, such as titles, prices, descriptions, and the image URLs. 
+
+4.  **Data Processing**: You might need additional nodes to clean and format the scraped data. For example, a "Set" or "Function" node could be used to organize the extracted information into a clear message.
+
+5.  **Telegram Send Message Node**: Finally, you would use a "Telegram" node to send a message back to the group. This node would be configured to use the cleaned and formatted data from the previous step, so the bot replies with the extracted information.
+
+This setup would allow you to fully automate the process of sending a URL to a bot and getting the scraped data back as a reply.
+
+
 ##### n8x x google sheets
 
-https://www.youtube.com/watch?v=3Ai1EPznlAc
+<!-- https://www.youtube.com/watch?v=3Ai1EPznlAc -->
+
+{{< youtube "3Ai1EPznlAc" >}}
+
 
 You need to get the Client ID and Client Secret from the **Google Cloud Console**. 
 
@@ -396,12 +682,23 @@ Step-by-Step Guide to Get Client ID and Secret
 
 6.  **Copy Your Credentials**: A pop-up window will appear showing your **Client ID** and **Client Secret**. Copy these values immediately and paste them into the appropriate fields in your n8n Google Sheets credential setup.
 
+##### n8n x custom script
 
-##### n8n x Scrapping
+##### n8n x whatever
 
-Lately I was doing a [scrapping recap here](https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap)
+* Perplexity - https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.perplexity/#templates-and-examples
 
-##### n8n x CRM
+* n8n x stripe - https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.stripe/
+* CRM / Invoices: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/ and https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.erpnext/
+
+* n8n x pocketbase
+
+* [n8n x ghost](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.ghost/) - As an alternative to write posts for you
+* [n8n x wp](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/) - same, instead of pure API usage
+
+
+* [Gotify](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gotify/), [grist](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.grist/), [Twitter](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twitter/), [SendGrid](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/), [MQTT](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mqtt/), [HomeAssistant](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/), [Youtube](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.youtube/#operations)
+
 
 ### N8N vs Hugging vs Flowise
 

@@ -14,9 +14,9 @@ Bringing firebase auth to nextjs webapps [seems to be simple](#conclusions).
 
 **Intro**
 
-Because LogTo email verifications works.
+Because LogTo email verifications worked for me [here](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication) and [here](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/)
 
-But if you want the gmail social signup/in, you need the paid tier (??? TBC WIP)
+But if you want the gmail social signup/in, you need the paid tier (*or I did not know how to do make it work*)
 
 Today we are going to use:
 

@@ -132,6 +132,28 @@ These tools differ in browser support, language support, ease of setup, and test
 
 - Apify uses a subscription plus consumption (pay-as-you-go) model, with plans ranging from free to $999/month. It charges for compute units, proxy rental, storage, and support. The free plan includes $5 in monthly credits. For large-scale tasks, compute units cost between $0.20 and $0.30 each. Apify is ideal for scalable projects with varied needs and enterprise support.
 
+
+{{% details title="Why APIfy? 🚀" closed="true" %}}
+
+Yes, using Firecrawl combined with n8n (an open-source automation tool) can achieve similar results to Apify in many cases, but with some differences:
+
+- Firecrawl provides fast, ready-to-use web data API with clean, structured data outputs optimized for AI and other use cases, similar to what Apify offers via its marketplace scrapers.
+
+- n8n allows building custom automation workflows visually, connecting Firecrawl’s API to other services (databases, APIs, notifications, etc.) without coding much, similar to how Apify manages task scheduling and integrations.
+
+- However, this approach requires more setup and maintenance because you need to build the workflows yourself and handle error handling, scaling, proxy management, and advanced scraping logic independently or with extra tools.
+
+- Apify packages all those complexities into one platform with built-in support, scalability, monitoring, and a large ecosystem. Using Firecrawl + n8n is more flexible and potentially cheaper but demands more technical effort and infrastructure management.
+
+In short, Firecrawl + n8n is a powerful and flexible combo that can replicate Apify’s core functions but with higher setup/maintenance overhead and less out-of-the-box polish and tooling.
+
+It suits teams with technical resources wanting customization and cost control.
+
+Apify suits users wanting turnkey, scalable scraping and automation with minimal setup.
+
+{{% /details %}}
+
+
 - Firecrawl has a simple and predictable credit-based model: 1 page scraped equals 1 credit. The free plan allows for up to 500 pages, and paid plans range from $16 for 3,000 pages to $333 for 500,000 pages. This includes infrastructure, proxies, and bandwidth. It is a more economical choice for simple scraping tasks and moderate volumes.
 
 - ScrapeGraphAI offers annual plans with credits for requests and speed limits, ranging from a free plan with 50 credits to customized enterprise plans. It focuses on AI-powered scraping, with costs based on API calls or pages scraped. It provides support and scalable features, but exact prices vary depending on usage.

@@ -73,7 +73,7 @@ There are many different forms of the agile development method:
 
 * **Scrum**: Scrum is a widely-used **agile framework that emphasizes iterative development**, frequent inspection and adaptation, and a collaborative approach. Scrum teams work in short sprints to deliver working software, and use ceremonies such as sprint planning, daily stand-ups, sprint reviews, and retrospectives to help manage the development process.
 
-* **Kanban**: Kanban is an agile framework that focuses on visualizing the workflow, limiting work in progress, and managing flow. Kanban teams use a Kanban board to visualize the work, and use techniques such as WIP limits and pull systems to manage the flow of work through the development process.
+* **Kanban**: Kanban is an agile framework that focuses on visualizing the workflow, limiting work in progress, and managing flow. Kanban teams use a Kanban board to visualize the work, and use techniques such as W.I.P limits and pull systems to manage the flow of work through the development process.
 
 * Extreme Programming (XP): XP is an agile framework that emphasizes technical excellence, continuous testing, and continuous delivery. XP teams work in short iterations to deliver working software, and use practices such as pair programming, test-driven development, and continuous integration to ensure quality and maintainability.
 

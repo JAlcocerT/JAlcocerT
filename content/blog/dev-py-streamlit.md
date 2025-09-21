@@ -2,8 +2,8 @@
 title: "Streamlit Updates. Improving Data Apps"
 date: 2025-05-17T23:50:21+01:00
 draft: false
-tags: ["Dev","WebApp","Python"]
-summary: 'More cool Streamlit Stuff'
+tags: ["Dev","WebApp","Python","Speech and Audio"]
+description: 'More cool Streamlit WebApps'
 url: 'streamlit-apps'
 ---
 
@@ -12,11 +12,6 @@ Streamlit is part of [Snowflake](https://www.snowflake.com/en/blog/snowflake-to-
 Which you might have heard on the [BigData](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/) context.
 
 > Continuing from https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
-
-
-{{< callout type="warning" >}}
-This Post is **WIP**
-{{< /callout >}}
 
 
 * https://github.com/kajarenc/stauthlib
@@ -41,7 +36,7 @@ You can see whats coming next to Streamlit: https://roadmap.streamlit.app/
 
 ### Replit and Streamlit
 
-https://www.youtube.com/watch?v=CJ9E0Sm_hy4
+<!-- https://www.youtube.com/watch?v=CJ9E0Sm_hy4 -->
 
 {{< youtube "CJ9E0Sm_hy4" >}}
 
