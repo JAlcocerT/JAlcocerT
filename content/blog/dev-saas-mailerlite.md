@@ -40,19 +40,26 @@ Its strange that people look at you asking if by having blog you meant instagram
 
 Some people use mailchimp, or
 
-But i just felt confortable enought with Mailerlite.
+But i just felt confortable enought with Mailerlite: https://www.mailerlite.com/pricing
+
+> Plus they have a cool CSR pricing page!
 
 
 ## MailerLite API
 
 This is what you need: https://dashboard.mailerlite.com/integrations
 
-![alt text](/blog_img/entrepre/mailerlite/mailerlite-ui-api-integ.png)
+![Mailerlite API integration](/blog_img/entrepre/mailerlite/mailerlite-ui-api-integ.png)
 
 ### MailerLite Integrations
 
+As long as you know how to work with Webhooks...you have it all: 
+
+* https://www.mailerlite.com/integrations/mailercheck
+
 ### MailerLite x n8n
 
+See how Ive done it: https://jalcocert.github.io/JAlcocerT/n8n-with-ai/#n8n-x-mailerlite
 
 ## A Theme to Test this
 

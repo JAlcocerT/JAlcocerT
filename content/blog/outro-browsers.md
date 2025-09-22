@@ -1,9 +1,9 @@
 ---
-title: "My Fav Web browsers and their automation"
+title: "My Fav Web browsers & their automation"
 date: 2025-09-18
 draft: false
 tags: ["Zen vs Firefox vs LibreWolf","Brave vs Chrome","PlayWright MCP","Puppeteer","Job-Trends","Scrap-Tools"]
-description: 'Neko vs KASM vs webtops. Web Automation and Scrapping Recap.'
+description: 'Neko vs KASM vs WebTops. Web Automation and Scrapping Recap. Firecrawl rules.'
 url: 'how-to-browse'
 ---
 
@@ -20,13 +20,34 @@ Playing again with [scrappers](#scrapping-recap): scrapegraph, crawl4ai, firecra
 
 **Intro**
 
+Browser automation is a thing.
 
+Specially if we combine it with LLMs:
+
+* https://console.groq.com/docs/browser-automation
+
+* https://github.com/browser-use/browser-use?tab=readme-ov-file
+
+> MIT |  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
+
+```json
+{
+  "mcpServers": {
+    "browser-use": {
+      "command": "uvx",
+      "args": ["browser-use[cli]", "--mcp"],
+      "env": {
+        "OPENAI_API_KEY": "sk-..."
+      }
+    }
+  }
+}
+```
 
 <!-- 
 ## AgencySwarm
 
 Web Browsing like human. With GPT4.
-
 
 * https://github.com/VRSEN/agency-swarm - FOSS, but using GPT4
 * Embedding customs GPT - https://www.oai-widget.com/
@@ -34,14 +55,11 @@ Web Browsing like human. With GPT4.
 
 ### a browsing agent, fully in Py and GPT4 under the hood
 
-* Selenium
 * Scroll...
 
+*  -->
 
-* https://github.com/unconv/gpt4v-browsing -->
 
-
-* https://console.groq.com/docs/browser-automation
 
 ## Browsers Ive tried
 
@@ -94,6 +112,10 @@ Puppeteer
 - Mainly focused on Chromium-based browsers with growing Firefox support.
 - Pros: Simple API, great for Chrome automation, headless or headed modes, widely used for testing and scraping.
 - Limitations: Primarily Chromium-focused (though Firefox is supported), limited cross-browser support, JavaScript/Node.js only.
+
+> Long back I saw https://github.com/unconv/gpt4v-browsing
+
+> >  Web Scraping with GPT-4 Vision API and Puppeteer 
 
 Playwright
 
@@ -252,7 +274,11 @@ But with [FireCrawlAI](#firecrawlai), I got even the most [complex data](#scrapp
 
 ### Crawl4AI
 
-With
+With C4AI, you can also forget about HTML and bs4.
+
+Just provide the link, the openAI key and what exactly you want to extract from a page.
+
+You are done after that.
 
 ### FireCrawlAI
 
@@ -264,7 +290,7 @@ Just in case that you dont remember, we played with this here:
 
 #### FireCrawl MCP
 
-And now, it has an MCP server
+And now, even Firecrawl has its **MCP server**:
 
 * https://docs.firecrawl.dev/use-cases/developers-mcp
 * https://github.com/firecrawl/firecrawl-mcp-server
@@ -395,7 +421,7 @@ https://jalcocert.github.io/JAlcocerT/playwright-101/
 
 Several self-hostable browsers running via containers are available, including:
 
-- **Neko**: A self-hosted virtual browser running in Docker containers using WebRTC technology for streaming. It supports multiple browsers like Firefox, Chromium, and Brave and focuses on privacy, multi-user collaboration, and lightweight browser isolation.[1][2][3][4]
+- **Neko**: A self-hosted virtual browser running in Docker containers using WebRTC technology for streaming. It supports multiple browsers like Firefox, Chromium, and Brave and focuses on privacy, multi-user collaboration, and lightweight **browser isolation**.
 
 
 ```sh
@@ -427,7 +453,7 @@ These options differ in focus from lightweight isolated self-hosted browsers (Ne
 [7](https://www.reddit.com/r/selfhosted/comments/1isc94o/kasm_open_source_self_hosted_disposable_browsing/)
 [8](https://github.com/browserless/browserless)
 
-
+---
 
 ## Conclusions
 

@@ -356,6 +356,8 @@ n8n (which stands for "node-based, no-code, and open-source") uses a visual, nod
     * **Can be more resource intensive**: The visual builder and its features can sometimes require more resources than Huginn's lighter-weight approach.
     * **Can get visually complex**: For extremely large or complex workflows, the canvas can become cluttered and difficult to manage.
 
+Ive added the **n8n JSON's for these workflows** here: https://github.com/JAlcocerT/Home-Lab/tree/main/n8n/sample-workflows
+
 ##### n8n x formbricks
 
 Remember to install the community node `@formbricks/n8n-nodes-formbricks`
@@ -367,10 +369,26 @@ And also the **webhooks** configured: https://formbricks.com/docs/xm-and-surveys
 To **connect APIs** you can have a look to: https://github.com/PipedreamHQ/pipedream
 
 {{< callout type="info" >}}
-But the killer to test http Get/Post/... has been https://webhook.site/
+But the killer to test those `http request` nodes and their Get/Post/... has been https://webhook.site/
 {{< /callout >}}
 
+
+![Webhook site for testing](/blog_img/GenAI/n8n/formbricks/fb7.png)
+
+
 Step 1: Prepare n8n and Formbricks
+
+![alt text](/blog_img/GenAI/n8n/formbricks/fb1-api-keys.png)
+
+![alt text](/blog_img/GenAI/n8n/formbricks/fb2.png)
+
+![alt text](/blog_img/GenAI/n8n/formbricks/fb-webhook.png)
+
+![alt text](/blog_img/GenAI/n8n/formbricks/fb4-integration.png)
+
+![alt text](/blog_img/GenAI/n8n/formbricks/fb5-post.png)
+
+![Non validated email from Formbricks going to n8n](/blog_img/GenAI/n8n/formbricks/fb6.png)
 
 First, you need to set up the connection.
 
@@ -423,14 +441,19 @@ Your workflow will now automatically capture every new survey response from Form
 
 You just need webhooks: https://dashboard.mailerlite.com/integrations/webhooks
 
-And configure it on n8n as POST.
+![Configuring mailerlite webhooks for n8n](/blog_img/GenAI/n8n/mailerlite/1-webhook-events.png)
+
+And configure it on **n8n as POST**.
 
 Then take the webhook url towards Mailerlite UI:
 
 And then test with some manual creation: https://dashboard.mailerlite.com/subscribers/create
 
-> https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/2-mailerlite_webhook_tg.json
 
+![alt text](/blog_img/GenAI/n8n/mailerlite/2-add-manual-sub.png)
+
+
+> https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/2-mailerlite_webhook_tg.json
 
 You can trigger your new n8n flows (also) with posts: *instead of adding fake and unvalidated subscribers*
 
@@ -473,27 +496,27 @@ This requires two main components: an external setup to get credentials and the 
 
 1. External Setup
 
-  * **Create the Telegram Bot:** The first step was to create a new bot using the official Telegram bot creator, **`@BotFather`**. This bot acts as the sender for all your automated messages. When you created it, `@BotFather` provided a unique **API Token** (also called an **Access Token**). This token serves as the password for n8n to control your bot.
+* **Create the Telegram Bot:** The first step was to create a new bot using the official Telegram bot creator, **`@BotFather`**. This bot acts as the sender for all your automated messages. When you created it, `@BotFather` provided a unique **API Token** (also called an **Access Token**). This token serves as the password for n8n to control your bot.
 
-  * **Find the Chat ID:** Next, you needed to find the specific ID of the chat or group where you wanted to receive messages. This is because the bot needs to know exactly where to send the message. To find this ID, you started a conversation with your bot (either in a private chat or by adding it to a group) and then used a **`curl`** command to query the Telegram API and get the unique **Chat ID** from the response. This ID is a long number, often negative for groups.
+* **Find the Chat ID:** Next, you needed to find the specific ID of the chat or group where you wanted to receive messages. This is because the bot needs to know exactly where to send the message. To find this ID, you started a conversation with your bot (either in a private chat or by adding it to a group) and then used a **`curl`** command to query the Telegram API and get the unique **Chat ID** from the response. This ID is a long number, often negative for groups.
 
 2. n8n Node Configuration
 
 After getting the credentials, you configured the **Telegram** node in your n8n workflow.
 
-  * **Node Placement:** The node was placed at the end of the workflow, after the OpenAI node, because it's the final action in the process.
+* **Node Placement:** The node was placed at the end of the workflow, after the OpenAI node, because it's the final action in the process.
 
-  * **Credentials:** You provided the **API Token** you received from `@BotFather` to authenticate n8n with Telegram.
+* **Credentials:** You provided the **API Token** you received from `@BotFather` to authenticate n8n with Telegram.
 
-  * **Core Fields:** You configured the following essential fields:
+* **Core Fields:** You configured the following essential fields:
 
-      * **Resource:** `Message`
-      * **Operation:** `Send a text message`
-      * **Chat ID:** You pasted the Chat ID you found with `curl`.
-      * **Text:** This is the most crucial part. You created a dynamic message using **expressions** to pull data from multiple previous nodes. For this, you used the special **`$node`** expression to access the original webhook data and the standard **`$json`** expression to get the AI's output from the immediately preceding OpenAI node.
+* **Resource:** `Message`
+* **Operation:** `Send a text message`
+* **Chat ID:** You pasted the Chat ID you found with `curl`.
+* **Text:** This is the most crucial part. You created a dynamic message using **expressions** to pull data from multiple previous nodes. For this, you used the special **`$node`** expression to access the original webhook data and the standard **`$json`** expression to get the AI's output from the immediately preceding OpenAI node.
 
 
-
+![alt text](/blog_img/GenAI/n8n/mailerlite/3-telegram-bot.png)
 
 ```txt
 A new subscriber has joined!
@@ -509,6 +532,9 @@ Status: {{ $json.body.status }}
 ##### n8n x openai
 
 We will be using: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/#operations and its `Message a Model`
+
+![alt text](/blog_img/GenAI/n8n/mailerlite/4-adding-openai.png)
+
 
 After providing the API key: 
 
@@ -543,6 +569,8 @@ Tell me a fun fact about the name '{{ $json.body.body.fields.name }}' in a singl
 
 And it worked!
 
+![alt text](/blog_img/GenAI/n8n/mailerlite/5-tg-bot-enhanced.png)
+
 Now, to bring it all towards the tg node, I changed it to:
 
 ```
@@ -573,6 +601,8 @@ curl -X POST \
 "https://n8n.jalcocertech.com/webhook-test/a1b92538-1bab-42ec-a865-a5cc01afe51b"
 ```
 
+![Instead of adding a manual sub via mailerlite UI, we can do this curl with the data to start the flow and see it reflected on telegram as per n8n firing](/blog_img/GenAI/n8n/mailerlite/6-curl-to-start-flow.png)
+
 
 {{< details title="A recap on these steps... 📌" closed="true" >}}
 
@@ -586,7 +616,6 @@ You first had to set up the two external services that n8n would interact with.
 
 * **OpenAI Setup**
     1.  You obtained an **OpenAI API Key** from your OpenAI account. This key is your credential for allowing n8n to communicate with the AI.
-
 
 Phase 2: n8n Workflow Creation
 

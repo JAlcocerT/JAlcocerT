@@ -494,9 +494,11 @@ To summarize in a table:
 
 Both API keys and JWTs can be sent in headers as bearer tokens, but JWTs offer more scalable, secure, and feature-rich authentication solutions, especially for microservices and OAuth2 based systems. API keys remain popular for simplicity and ease of use in many public-facing APIs.
 
-jwt.io focuses on JWTs—helping with decoding, validating, and understanding these tokens rather than opaque API keys.
+> jwt.io focuses on JWTs—helping with decoding, validating, and understanding these tokens rather than opaque API keys.
 
-This explains how JWTs relate to API keys in the context of API authentication.A JWT (JSON Web Token) is a self-contained token used for authentication that includes user or client information and is digitally signed for verification. An API key is a simpler, opaque identifier that serves as a secret token for client authentication but does not carry any embedded data.[1][2][3][5][6]
+This explains how JWTs relate to API keys in the context of API authentication.A JWT (JSON Web Token) is a self-contained token used for authentication that includes user or client information and is digitally signed for verification. 
+
+An API key is a simpler, opaque identifier that serves as a secret token for client authentication but does not carry any embedded data.
 
 JWTs and API keys both authenticate API requests but differ in complexity and capabilities: JWTs carry embedded claims (like user identity, scopes, and expiration) and can be verified without server lookups, enabling stateless and scalable security. API keys require the server to look up permissions but are easier to manage and implement.
 

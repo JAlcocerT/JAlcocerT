@@ -182,7 +182,7 @@ million verifier va aqui (va con http get xq no tiene integ) y te da quality, pa
 para verificar tb tienes findemails
 
 smartlead/instant lead - para los leads refinados llevartelos a email (se puede plugear con clay y tiene para calentar warm up mails etc)
-smartlead tiene una zona de CRM, pero gohighlevel tb se puede usar como CRM (ademas golighlevel puede create landings and forms).
+smartlead tiene una zona de CRM, pero gohighlevel (GHL) tb se puede usar como CRM (ademas golighlevel puede create landings and forms).
 smarlead tb categoriza la repsuesta y pueden cambiar los leads a interested x ej y tb hay ewbhooks... q conectan con make
 smartlead tb sp conectar a slack
 
@@ -198,6 +198,12 @@ value proposition
 customer avatar
 
 scrap google maps
+
+### Tools
+
+#### GHL
+
+* https://marketplace.gohighlevel.com/docs/ghl/contacts/create-contact
 
 
 ### Fire-Enrich

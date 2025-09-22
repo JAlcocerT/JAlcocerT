@@ -2,7 +2,7 @@
 title: "From idea to Launch. Building MicroSaaS"
 date: 2025-09-22T23:20:21+01:00
 draft: false
-tags: ["SaaS","Firebase Auth","Logto JS SDK","landing","Firecrawl"]
+tags: ["SaaS","Firebase Auth","Logto JS SDK","landing","Firecrawl","SlubneChwile"]
 url: 'micro-saas'
 description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Features) to launch fast'
 ---
@@ -11,7 +11,14 @@ description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Fe
 
 Its all about that straight to the point landing.
 
+> From this meeting/post: *No tiene q aer la mejor solucion tecnica, pero la q arregle el pain point.*
+
+> > lets just make the very clear landing that improves the status of  SlubneChwile
+
+
 And what is so complicated to create one, even when we have: https://github.com/firecrawl/open-lovable?tab=readme-ov-file
+
+
 
 **Intro**
 
@@ -41,3 +48,5 @@ Or
 1. https://monday.com/pricing
     * https://auth.monday.com/auth/login_monday
     * https://auth.monday.com/users/sign_up_new
+
+![alt text](/blog_img/entrepre/landing/monday-signin.png)

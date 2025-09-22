@@ -26,6 +26,8 @@ To pull data from yfinance should not be a secret anymore:
 
 Plus also on the initial PyStonks Post, I dedicted time for a yfinance EDA ipynb section.
 
+> Bc https://nbformat.readthedocs.io/en/latest/ are great
+
 On my [recent pystonks version](https://jalcocert.github.io/JAlcocerT/stonks/), I could see how the FastAPI version es more flexible than [the  PyStocks Streamlit](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/) and understandable by LLMs more than [Reflex](https://github.com/JAlcocerT/Reflex_Stocks).
 
 While playing very well with SSGs like Astro, unlike Flask or Django.
@@ -42,7 +44,7 @@ Now, Im going to take back the collaboration with my friend: btw, he is a [PDH](
 Even before that: what does this app reply to?
 
 Top Priority:
-1. Historical Prices
+1. Historical Prices of stocks: not only NYSE or NASDAQ, but also companies which are listed in other markets, like Nestle, Unilever or MunichRe
 2. Historical Dividends
 
 Nice to have:
@@ -53,6 +55,7 @@ Nice to have:
 6. Inflation Data
 7. Bring your portfolio
 8. provide for your Portfolio the: historical dividends, confirmed dividends, forecasted dividends (per month/year)
+9. Comparison on a stock/portfolio with a sector: https://finance.yahoo.com/sectors/real-estate/
 
 See [the BRD](#faq) where we scoped the project.
 
@@ -216,17 +219,9 @@ FastAPI x Firebase Auth worked on desktops perfectly:
 * https://github.com/JAlcocerT/py-stonks/blob/main/ui-for-fastapi-firebaseauth.md
 * https://github.com/JAlcocerT/py-stonks/blob/main/docker-compose.fastapi-ui.yml
 
-**MailerLite** some features behind a subscribe could also be cool
+**MailerLite** some features *behind a subscribe wall* could also be interesting
 
-### People are doing
 
-Interesting cross platform service: https://divstash.app/ 
-
-I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit_1000_a_year_in_dividends/
-
-> With CSR driven *Calculate Your Dividend Potential* section :)
-
-> > And has an interesting on boarding flow: https://divstash.app/signup/step-1 and T&Cs are mandatory: https://divstash.app/signup/quick
 
 ## Outo
 
@@ -237,3 +232,18 @@ Interesting concepts:
 <!-- https://www.youtube.com/watch?v=CAupuMtWjfI -->
 
 {{< youtube "CAupuMtWjfI" >}}
+
+### Motivational Examples
+
+1. `https://www.dividendcompass.com`
+2. `https://divstash.app/`
+
+#### People are doing
+
+Interesting cross platform service: https://divstash.app/ 
+
+I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit_1000_a_year_in_dividends/
+
+> With CSR driven *Calculate Your Dividend Potential* section :)
+
+> > And has an interesting on boarding flow: https://divstash.app/signup/step-1 and T&Cs are mandatory: https://divstash.app/signup/quick

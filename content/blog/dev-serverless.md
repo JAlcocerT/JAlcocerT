@@ -36,6 +36,8 @@ A serverless way to authenticate your users: then allow them to do certain actio
 
 Why not applying these to a theme: *which kind of reminds me of t3.chat*: https://t3.chat
 
+![alt text](t3-chat-register-wall/blog_img/GenAI/t3.png)
+
 * https://www.astrothemes.dev/theme/anse-app-chatgpt-demo/
 * https://github.com/anse-app/chatgpt-demo
 
