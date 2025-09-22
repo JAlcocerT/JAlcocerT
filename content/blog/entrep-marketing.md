@@ -1,11 +1,23 @@
 ---
+title: "Leads and marketing automation"
+date: 2025-09-22T06:20:21+01:00
+draft: false
+tags: ["CRM","Scrapping"]
+url: 'software-for-marketing-agencies'
+description: 'sell'
+---
+
+
+
+
+<!-- ---
 title: "Firecrawl: The Ultimate Web Crawling and Scraping Solution"
 date: 2025-09-21
 draft: false
 tags: ["web scraping", "data extraction", "automation", "Firecrawl", "n8n integration"]
 description: 'Discover how Firecrawl revolutionizes web crawling and data extraction with its powerful features and seamless n8n integration.'
 url: 'firecrawl-web-scraping'
----
+--- -->
 
 **Tl;dr**
 Firecrawl is a powerful web crawling and scraping solution that makes data extraction from websites simple and efficient, with excellent integration capabilities with n8n for automation workflows.
@@ -113,3 +125,49 @@ Firecrawl provides a powerful yet simple way to extract web data at scale. When 
 1. Sign up for an API key at [Firecrawl](https://firecrawl.dev)
 2. Try the [quickstart guide](https://docs.firecrawl.dev/quickstart)
 3. Join the [community forum](https://community.firecrawl.dev) for support and ideas
+
+
+
+---
+
+## FAQ
+
+
+
+app.apollo.io 1000 contactos 50 usd, pero con apify console.apify te conectas con su `apollo scrapper` free tier.
+
+> in that way we have 1k leads for 1.5 usd from apify only.
+
+app millionverifier para verificar emails
+
+wedding planners - google one by one / scrapper de google maps por wedding planners
+serper google search api para buscar tb en google
+outscraper - para sacar por ej restaurantes tarragona
+
+
+clay es la mas tocha y muy usada actualmente, there is free tier
+no es CRM pero leads q vengan de listas (como la de apollo), de webs, forms....convergen aqui
+hay webreseach agent + openai KEY para sacar por ej el domino de la empresa
+
+trykitt es otra tool q se puede conectar a clay via API y te intenta sacar el email basado en nombre y dominio
+leadmagic tb puede ayudar para encontrar emails y conviene usar esa al default de clay para evitar quedarte sin creditos
+million verifier va aqui (va con http get xq no tiene integ) y te da quality, para saber si email OK
+para verificar tb tienes findemails
+
+smartlead/instant lead - para los leads refinados llevartelos a email (se puede plugear con clay y tiene para calentar warm up mails etc)
+smartlead tiene una zona de CRM, pero gohighlevel tb se puede usar como CRM (ademas golighlevel puede create landings and forms).
+smarlead tb categoriza la repsuesta y pueden cambiar los leads a interested x ej y tb hay ewbhooks... q conectan con make
+smartlead tb sp conectar a slack
+
+heyreach puede ser una opcion si no tienes el email y el flow de smartlead no funcionaria
+
+tb se puede conectar make a tu crm, como para poner contactos categorizados como interesados segun el webhook
+
+> lead gen Jay, nick saraev (184 skool x 2600 members), kristian besser 1700 personas en slack de 92k pagando 4k
+manthan patel https://www.agentpass.ai/
+
+ICP - ideal customer profile
+value proposition
+customer avatar
+
+scrap google maps

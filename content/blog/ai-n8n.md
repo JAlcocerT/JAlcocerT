@@ -619,7 +619,7 @@ But what if all this could be done with n8n instead of a [,complex' script](http
 
 You need to get familiar with the `http request` and `html node` to do the parsing.
 
-To test, the `set (edit fields)` node might help too.
+> To test, the `set (edit fields)` node might help too.
 
 how the Workflow Would Work in n8n
 
