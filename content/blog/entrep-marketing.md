@@ -2,7 +2,7 @@
 title: "Leads and marketing automation"
 date: 2025-09-22T06:20:21+01:00
 draft: false
-tags: ["CRM","Scrapping"]
+tags: ["CRM","Scrapping","Lead Enrichment","Firecrawl"]
 url: 'software-for-marketing-agencies'
 description: 'sell'
 ---

@@ -1,13 +1,17 @@
 ---
 title: "From idea to Launch. Building MicroSaaS"
-date: 2025-09-21T23:20:21+01:00
+date: 2025-09-22T23:20:21+01:00
 draft: false
-tags: ["SaaS","Firebase Auth","Logto JS SDK"]
+tags: ["SaaS","Firebase Auth","Logto JS SDK","landing","Firecrawl"]
 url: 'micro-saas'
 description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Features) to launch fast'
 ---
 
+**Tl;DR**
 
+Its all about that straight to the point landing.
+
+And what is so complicated to create one, even when we have: https://github.com/firecrawl/open-lovable?tab=readme-ov-file
 
 **Intro**
 

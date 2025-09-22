@@ -1,6 +1,6 @@
 ---
 title: "Understanding Calculus"
-date: 2025-09-21T23:20:21+01:00
+date: 2025-10-21T23:20:21+01:00
 draft: false
 description: 'Calculus 101'
 url: 'calculus-101'

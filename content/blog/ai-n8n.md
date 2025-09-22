@@ -431,6 +431,26 @@ And then test with some manual creation: https://dashboard.mailerlite.com/subscr
 
 > https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/2-mailerlite_webhook_tg.json
 
+
+You can trigger your new n8n flows (also) with posts: *instead of adding fake and unvalidated subscribers*
+
+```sh
+curl -X POST \
+-H "Content-Type: application/json" \
+-d '{
+    "body": {
+        "fields": {
+            "name": "El yosua cerdo",
+            "last_name": null
+        },
+        "email": "yosu.cerdo@example.com",
+        "status": "active",
+        "event": "subscriber.created"
+    }
+}' \
+"https://n8n.jalcocertech.com/webhook-test/a1b92538-1bab-42ec-a865-a5cc01afe51b"
+```
+
 ##### n8n x telegram
 
 Not long ago, I was playing with [TG Bots, here](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots).

@@ -424,6 +424,109 @@ In this scenario, you're building a system that replicates the core functionalit
 
 A **bearer token** is a cryptic string of characters that grants access to the "bearer" -whoever possesses it.
 
+> See https://www.jwt.io/
+
+
+{{< details title="JWT io tool and bearer authentication... 📌" closed="true" >}}
+
+jwt.io is a popular online resource and tool for working with JSON Web Tokens (JWTs).
+
+It helps developers decode, verify, and generate JWTs. JWTs are a specific token format used to securely transmit claims between parties.
+
+Bearer tokens refer to a type of access token used in HTTP authentication, where the token is presented by the "bearer" to gain access to a resource.
+
+JWTs are often used as bearer tokens because they are compact, self-contained tokens that can carry authenticated user information.
+
+In practical terms, when a JWT is used as a bearer token, it is sent in the HTTP Authorization header like this:
+
+```
+Authorization: Bearer <JWT>
+```
+
+jwt.io relates to this process by providing tools and documentation to understand the contents and structure of these JWT bearer tokens, and by helping with JWT validation mechanisms such as verifying signatures and token integrity.
+
+In summary:
+
+- JWT is a secure token format that encapsulates claims for authentication/authorization.
+- Bearer token is a concept where possession of the token grants access; JWTs are commonly used bearer tokens.
+- jwt.io is a helpful resource for decoding, understanding, and validating JWTs used as bearer tokens.
+- JWT bearer tokens are sent in HTTP requests in the Authorization header as "Bearer <token>".
+
+Yes, exactly. A JWT bearer token is what you typically include in the HTTP headers of a curl request (or any HTTP client) to authenticate GET or POST requests.
+
+Specifically, you add an Authorization header with the value:
+
+```
+Authorization: Bearer <your-jwt-token>
+```
+
+This tells the server that you are presenting a bearer token (in this case, a JWT) as proof of your authenticated identity or access rights. The server then validates the JWT (checking its signature, expiration, and claims) before allowing access to the requested resource.
+
+So whenever an API requires JWT authentication, sending the JWT as a bearer token in the Authorization header is a common method for securing GET, POST, or other requests.
+
+This is the standard practice for JWT authentication in APIs and web services.
+
+[2](https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/)
+
+JWTs and API keys are both methods used for API authentication, but they differ significantly in structure, use cases, and security.
+
+- API keys are simple, opaque identifiers (typically just strings) issued to clients to authenticate API requests. 
+
+**The key itself carries no embedded information**; the server stores all metadata about what the key grants access to. API keys are easy to implement and widely used in many public APIs for straightforward client identification. However, they offer limited security features, usually don’t expire unless explicitly revoked, and cannot carry fine-grained permissions within the key itself.
+
+- JWTs (JSON Web Tokens) are self-contained tokens that embed claims (information about the user, client, scopes, expiry) and are **digitally signed**.
+
+Because the token carries its own metadata, the API can verify the JWT signature without querying a central database, making JWTs more scalable and stateless. JWTs are often used within OAuth2 frameworks to provide fine-grained access control, short-lived credentials, and identity information.
+
+They require more complex implementation but are better for distributed and secure environments.
+
+To summarize in a table:
+
+| Feature               | API Key                               | JWT                                       |
+|-----------------------|-------------------------------------|-------------------------------------------|
+| Structure             | Opaque string                       | JSON data with header, payload, signature |
+| Contains permissions  | No (server stores them)             | Yes (embedded in token claims)            |
+| Expiry                | Usually none or manual revocation   | Usually short-lived with automatic expiry |
+| Validation            | Lookup in server                    | Signature verification without lookup      |
+| Security              | Basic, vulnerable if leaked        | Stronger, signed and sometimes encrypted  |
+| Use Case              | Simple authentication               | Stateless, fine-grained auth and authorization |
+| Revocation            | Must be manually managed            | Short expiry reduces risk of misuse        |
+
+Both API keys and JWTs can be sent in headers as bearer tokens, but JWTs offer more scalable, secure, and feature-rich authentication solutions, especially for microservices and OAuth2 based systems. API keys remain popular for simplicity and ease of use in many public-facing APIs.
+
+jwt.io focuses on JWTs—helping with decoding, validating, and understanding these tokens rather than opaque API keys.
+
+This explains how JWTs relate to API keys in the context of API authentication.A JWT (JSON Web Token) is a self-contained token used for authentication that includes user or client information and is digitally signed for verification. An API key is a simpler, opaque identifier that serves as a secret token for client authentication but does not carry any embedded data.[1][2][3][5][6]
+
+JWTs and API keys both authenticate API requests but differ in complexity and capabilities: JWTs carry embedded claims (like user identity, scopes, and expiration) and can be verified without server lookups, enabling stateless and scalable security. API keys require the server to look up permissions but are easier to manage and implement.
+
+Often, JWTs are used as bearer tokens in the Authorization header for secure API access, while API keys may be passed similarly or in query parameters.
+
+In summary, JWTs provide richer, more secure, and scalable authentication features, while API keys offer simplicity and ease of use. jwt.io specifically helps with JWT creation, decoding, and validation—not with API key management.
+
+| Feature            | API Key                  | JWT (JSON Web Token)              |
+|--------------------|--------------------------|---------------------------------|
+| Structure          | Opaque string            | Signed JSON token with claims   |
+| Contains data      | No                       | Yes (identity, permissions)     |
+| Validation         | Server lookup required   | Signature verification only     |
+| Expiration         | None or manual           | Typically short-lived tokens    |
+| Security           | Basic                    | Stronger, using cryptographic signatures |
+| Use case           | Simple APIs, easy usage  | Secure, stateless APIs with fine-grained access control |
+
+Both can be sent as bearer tokens in HTTP headers, but JWTs are more advanced and suitable for modern secure APIs.[2][3][5][6][1]
+
+[1](https://zuplo.com/learning-center/jwt-vs-api-key-authentication)
+[2](https://www.scalekit.com/blog/apikey-jwt-comparison)
+[3](https://tyk.io/learning-center/api-keys-vs-token/)
+[4](https://www.youtube.com/watch?v=GcVtElYa17s)
+[5](https://zapier.com/engineering/apikey-oauth-jwt/)
+[6](https://zuplo.com/learning-center/top-7-api-authentication-methods-compared)
+[7](https://www.gomomento.com/blog/api-keys-vs-tokens-whats-the-difference/)
+
+
+{{< /details >}}
+
+
 It's the most common type of credential used to secure protected API endpoints. 
 
 Here's how it relates to protected endpoints:
@@ -433,9 +536,9 @@ Here's how it relates to protected endpoints:
 1.  **Authentication**: When a user logs in (e.g., with a username and password), the server verifies their credentials.
 2.  **Token Issuance**: After a successful login, the server generates a **unique bearer token** and sends it back to the client. This token is often a **JSON Web Token (JWT)**, which is a self-contained token that includes user data and an expiration time.
 
-* https://it-tools.tech/jwt-parser
+> See https://it-tools.tech/jwt-parser
 
-> Parse and decode your JSON Web Token (jwt) and display its content.
+> > Parse and decode your JSON Web Token (jwt) and display its content.
 
 
 {{< details title="JWT is a type of Bearer and it works via SHA256! 📌" closed="true" >}}

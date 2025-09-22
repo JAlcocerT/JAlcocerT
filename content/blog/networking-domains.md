@@ -1,16 +1,18 @@
 ---
 title: "Networking - Understanding Domains and DNS Setup"
-date: 2025-09-22
+date: 2025-09-24
 draft: false
-tags: ["HomeLab","Dev","ENS","Web3","DNSMap"]
+tags: ["HomeLab","DNS vs ENS","Web2 vs Web3","DNSMap","PolyMarket","dnsmap"]
 description: 'How to Setup DNS for your Domains.'
-summary: 'How to Setup DNS for your Domains'
+summary: 'How to Setup DNS for your Domains. Also UDs.'
 url: 'web-domain-basics'
 ---
 
 **Tl;DR**
 
 More goodies for your homelab.
+
++++ and [why and how](#faq) we can interact with SC's and web3 from regular web2 domains.
 
 **Intro**
 
@@ -31,7 +33,7 @@ To point a subdomain to an IPv4 or IPv6 address, you need to create specific DNS
 
 Here’s what you need to do:
 
-### 1. **Pointing to an IPv4 Address**
+1. **Pointing to an IPv4 Address**
 
 - **Record Type:** `A`
 - **Name:** `subdomain.yourdomain.com`
@@ -45,7 +47,7 @@ If your subdomain is `app.example.com` and the IPv4 address is `192.168.1.1`, yo
 |------|-----------------|--------------|
 | A    | app.example.com | 192.168.1.1  |
 
-### 2. Pointing to an IPv6 Address
+2. Pointing to an IPv6 Address
 
 - **Record Type:** `AAAA`
 - **Name:** `subdomain.yourdomain.com`
@@ -67,13 +69,106 @@ If your subdomain is `app.example.com` and the IPv6 address is `2001:0db8:85a3:0
 Make sure to replace `subdomain.yourdomain.com` with your actual subdomain, and `yourdomain.com` with your actual domain name.
 
 
-### How to get Local SSL
+> Remember, how to get Local SSL and https: NGINX, DuckDNS
 
-NGINX
-DuckDNS
-
-## DNS Review
+### DNS Review
 
 1. https://dnsmap.io/
 
 > Provides free dns lookup service for checking domain name server records against a randomly selected list of DNS servers in different corners of the world.
+
+## ENS and UD
+
+What are web3 domains?
+
+https://support.unstoppabledomains.com/support/solutions/articles/48001181690-what-are-web3-domains-
+
+The main concepts explained in the content relate to the fundamentals and benefits of Web3 domains, how they differ from traditional (DNS) domains, and practical information about their use and storage.
+
+Key Concepts
+
+- **Web3 Domains:** Blockchain-based domain names (like .crypto or .nft) that function as digital assets. They are fully owned by the purchaser, stored in a crypto wallet, and are not controlled by any central registrar.[1]
+
+- **Ownership and Control:** Once purchased (and except .eth), Web3 domains are owned forever with no renewals required and cannot be taken away by any authority.[1]
+
+- **Utility:** Web3 domains can replace crypto wallet addresses, making transactions with hundreds of cryptocurrencies simpler and more secure. They can be used for logging into dApps, hosting decentralized websites on IPFS, and as unique identifiers in digital profiles.[1]
+
+- **Supported Platforms and Integration:** They work with many apps and wallets (e.g., Brave Browser, Trust Wallet, MetaMask) but only resolve natively in some browsers. Browser extensions expand compatibility, and there are ongoing efforts to integrate with traditional browser DNS systems.[1]
+
+- **Storage and Security:** Domains can be stored in either self-custody wallets (like MetaMask) or custodial accounts provided by Unstoppable Domains. Ownership and management are always enforced by blockchain smart contracts, and private keys control all changes.[1]
+
+- **Blockchain Networks:** Domains are minted on several blockchains, such as Polygon, Ethereum, Solana, Base, and Sonic, with Unstoppable usually covering gas fees except on Ethereum.[1]
+
+- **Support Resources:** Extensive documentation and FAQs help explain features like badges, login options, and on-chain domain management, as well as offering specific solutions for issues and how-to guides.[1]
+
+In summary, the content heavily emphasizes Web3 domain ownership, decentralization, blockchain integration, practical management, and their expanding ecosystem and utility.
+
+---
+
+## Conclusions
+
+
+
+
+---
+
+## FAQ
+
+Using a regular Web2 domain like polymarket.com to interact with Polygon smart contracts via MetaMask is possible due to the layered architecture of decentralized applications (dApps) that combine Web2 frontends with Web3 backends. Here’s how it works:
+
+### How Web2 Domain and MetaMask Interface with Polygon Smart Contracts
+
+- **Web2 Frontend:** The website (polymarket.com) is a traditional web server hosting a frontend interface built with modern web technologies (JavaScript, React, etc.). This frontend provides a user-friendly experience to browse markets, place bets, and view positions.
+
+- **Web3 Integration in the Browser:** The frontend integrates Web3 libraries like **ethers.js** or **web3.js** that connect the website to blockchain networks through MetaMask or other wallet browser extensions.
+
+- **MetaMask as Wallet & Signer:** MetaMask acts as a bridge between the user's browser and the blockchain. It holds the user’s private keys locally and signs transactions to the Polygon network when requested by the website.
+
+- **Smart Contract Interaction:** When a user performs an action (e.g., placing a bet), the frontend sends a transaction request to MetaMask, which prompts the user to approve it. Upon approval, MetaMask signs and submits the transaction to the Polygon blockchain, interacting with Polymarket’s smart contracts.
+
+- **Blockchain Backend:** The actual data and state changes happen on Polygon’s blockchain, where Polymarket’s smart contracts manage bets, funds, and outcomes in a decentralized and trustless manner.
+
+### Why a Web2 Domain Is Used
+
+- Using a regular domain allows easy access and familiar navigation for users on standard browsers without requiring specialized software.
+- The frontend acts as a convenient interface to interact with underlying decentralized smart contracts, making blockchain functionality accessible without complex direct calls.
+- MetaMask and similar wallet extensions enable secure cryptographic signing without exposing private keys to the web server.
+
+### Summary
+
+The Web2 website serves as a user-friendly interface that connects via Web3 protocols (through MetaMask) directly to Polymarket’s smart contracts on Polygon. The domain or server is a frontend layer only—user funds and actions are secured and executed on the blockchain, not by the website itself. This hybrid architecture is common to many dApps today, blending traditional web usability with decentralized trust and control.[1][2][3]
+
+[1](https://rocknblock.io/blog/how-polymarket-works-the-tech-behind-prediction-markets)
+[2](https://101blockchains.com/best-dapp-browsers/)
+[3](https://docs.polymarket.com/developers/proxy-wallet)
+
+Yes, it can be concluded that a Web3 domain is not strictly necessary to interact with smart contracts (SCs). Many popular decentralized applications (dApps) like Polymarket or Aave operate entirely over traditional Web2 domains while enabling users to connect their Web3 wallets, such as MetaMask, to interact with smart contracts on blockchains like Ethereum or Polygon.[1][2][3]
+
+### Examples Like Aave Protocol
+- Aave, a leading DeFi protocol, uses regular Web2 domains (e.g., aave.com) as the frontend interface.
+- Users connect their MetaMask (or other wallet) through the website to interact with smart contracts deployed on Ethereum and other blockchains.
+- The website is a Web2 portal that calls blockchain smart contracts off-chain via Web3 libraries without needing a blockchain-based domain.[2][1]
+
+### Do You Need a Web3-Compatible Domain to Connect MetaMask?
+- No, a Web3-compatible domain (like .crypto, .eth, or .brave) is not required for MetaMask or other wallets to connect and interact with smart contracts.
+- MetaMask and wallets connect to dApps based on the website domain and Web3 libraries loaded in the browser, not exclusively on domain type.
+- However, Web3 domains can improve the user experience by providing human-readable blockchain addresses and enabling seamless blockchain-native navigation in compatible browsers like Brave.[4][5][6]
+
+### Web3 Domain and Browser Compatibility
+
+- Browsers like Brave support Web3 domains natively, allowing seamless access to blockchain-based sites without extensions.
+- But standard Web2 domains can still use browser extensions like MetaMask to enable full Web3 dApp functionality.
+- So, using a Web3 domain is optional and enhances decentralization features but is not a necessity for interacting with smart contracts or connecting wallets.[5][6]
+
+In summary, while Web3 domains enhance the decentralized web experience, interaction with smart contracts via MetaMask and dApps like Polymarket or Aave can fully function through traditional Web2 domains.
+
+
+### PolyMarket
+
+https://polygonscan.com/address/0x4d97dcd97ec945f40cf65f87097ace5ea0476045
+
+<!-- 
+twitter
+https://x.com/Polymarket/status/1968374742844588469?t=iL9luRfaVkLctynB91JHaw&s=35 -->
+
+{{< tweet user="Polymarket" id="iL9luRfaVkLctynB91JHaw" >}}

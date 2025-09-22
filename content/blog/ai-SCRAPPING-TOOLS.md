@@ -3,7 +3,7 @@ title: "Testing AI Scrapping projects: GPT-Crawler..."
 date: 2024-12-08
 draft: false
 tags: ["Dev","Python","Web Scrapping"]
-description: 'How to use . Compared with BS4, ...'
+description: 'How to use Crawl4AI. Compared with BS4, ...'
 url: 'ai-projects-scrapping'
 ---
 
@@ -12,7 +12,7 @@ Leverage your Research with AI Scrap Tools - Repo Reader Setup.
 
 There are few **AI Scrapping Tools** out there already.
 
-Lets have a look to **repo reader**
+Lets have a look to **repo reader** and put some knowledge: https://github.com/JAlcocerT/Scrap_Tools
 
 ### More AI Powered Scrapping
 
