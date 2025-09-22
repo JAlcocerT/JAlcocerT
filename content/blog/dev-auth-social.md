@@ -15,6 +15,10 @@ I got working a simple md editor for slidev with couple of branches to master fi
   {{< card link="https://github.com/JAlcocerT/slidev-editor" title="NEW - A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests" >}}
 {{< /cards >}}
 
+Because https://gamma.app/ does not have to be the only one.
+
+> Gamma is your AI design partner for effortless presentations, websites, social media posts, and more—so you can focus on what you do best.
+
 * https://sli.dev/guide/hosting#spa
 
 ```sh

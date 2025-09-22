@@ -1,12 +1,14 @@
 ---
 title: "Link for Artists"
-date: 2025-09-30T23:20:21+01:00
+date: 2025-10-30T23:20:21+01:00
 draft: false
 tags: ["SaaS","BiP"]
 url: 'link-artists'
 description: 'Dear famous people, where are you going next?'
 ---
 
+<!-- 
+https://www.skool.com/@adriana-drozdowicz-4965 -->
 
 **Intro**
 

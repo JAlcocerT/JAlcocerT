@@ -7,8 +7,29 @@ url: 'software-for-marketing-agencies'
 description: 'sell'
 ---
 
+**Tl;DR**
+
+Today it seems all about [lead enrichment](https://www.firecrawl.dev/blog/fire-enrich)
 
 
+https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#marketing
+
+https://github.com/gomarble-ai/facebook-ads-mcp-server
+
+**Intro**
+
+I started the day with a core believe: wordpress sites are meh
+
+After this sync with couple of marketers - That changed. See this landing: https://genkinfy.com/
+
+<!-- https://youtu.be/qQ13MKLfqYQ -->
+
+{{< youtube "qQ13MKLfqYQ" >}}
+
+
+<!-- 
+https://esim.holafly.com/ - landing with a very clear header
+slubnechwile.com -->
 
 <!-- ---
 title: "Firecrawl: The Ultimate Web Crawling and Scraping Solution"
@@ -22,11 +43,12 @@ url: 'firecrawl-web-scraping'
 **Tl;dr**
 Firecrawl is a powerful web crawling and scraping solution that makes data extraction from websites simple and efficient, with excellent integration capabilities with n8n for automation workflows.
 
-## What is Firecrawl?
+
+{{< details title=" What is Firecrawl? + n8n 📌" closed="true" >}}
 
 Firecrawl is an open-source, high-performance web crawler and scraper designed for developers and data professionals. It's built to handle modern web technologies, including JavaScript-rendered content, while being respectful of website terms of service.
 
-## Key Features
+Key Features
 
 - **Modern Web Support**: Handles SPAs and dynamic content with ease
 - **Respectful Crawling**: Built-in rate limiting and robots.txt compliance
@@ -34,7 +56,7 @@ Firecrawl is an open-source, high-performance web crawler and scraper designed f
 - **Distributed Architecture**: Scale your crawling operations horizontally
 - **n8n Integration**: Seamlessly connect with your n8n workflows
 
-## Why Choose Firecrawl?
+Why Choose Firecrawl?
 
 1. **Developer Friendly**
    - Simple REST API
@@ -51,30 +73,32 @@ Firecrawl is an open-source, high-performance web crawler and scraper designed f
    - Queue-based architecture
    - Cloud-native design
 
-## n8n Integration
 
-Firecrawl works beautifully with n8n for automating web scraping workflows. Here's a simple example of how to use Firecrawl with n8n:
+Firecrawl works beautifully with n8n for automating web scraping workflows. 
+
+Here's a simple example of how to use Firecrawl with n8n:
 
 1. **HTTP Request Node**: Connect to Firecrawl's API
 2. **Data Processing**: Use n8n's powerful nodes to transform the extracted data
 3. **Storage**: Save results to your preferred database or file storage
 4. **Automation**: Schedule regular crawls or trigger them based on events
 
-## Use Cases
+Use Cases
 
 - **Market Research**: Track prices and product information
 - **Lead Generation**: Extract contact information from business directories
 - **Content Aggregation**: Build news or job listing aggregators
 - **Competitor Analysis**: Monitor competitor websites for changes
 
-## Getting Started
 
-### Prerequisites
+Prerequisites
+
 - Node.js 16+ or Docker
 - n8n instance (self-hosted or cloud)
 - Firecrawl API key (get one at [firecrawl.dev](https://firecrawl.dev))
 
-### Basic Installation
+Basic Installation
+
 ```bash
 # Using npm
 npm install -g firecrawl
@@ -83,21 +107,21 @@ npm install -g firecrawl
 docker run -p 8080:8080 firecrawl/firecrawl
 ```
 
-## Example n8n Workflow
+Example n8n Workflow
 
 1. **Trigger**: Schedule or webhook
 2. **Firecrawl Node**: Configure with target URL and selectors
 3. **Process Data**: Use n8n's function nodes to transform
 4. **Output**: Save to database or send notifications
 
-## Advanced Features
+Advanced Features
 
 - **Custom Middleware**: Add your own processing logic
 - **Scheduled Crawls**: Regular data refreshes
 - **Error Handling**: Built-in retry and error reporting
 - **Authentication**: Support for protected content
 
-## Best Practices
+Best Practices
 
 1. Always respect `robots.txt`
 2. Implement rate limiting
@@ -105,15 +129,18 @@ docker run -p 8080:8080 firecrawl/firecrawl
 4. Handle CAPTCHAs gracefully
 5. Monitor your crawls
 
-## Resources
+Resources
 
 - [Official Documentation](https://docs.firecrawl.dev)
 - [GitHub Repository](https://github.com/firecrawl/firecrawl)
 - [n8n Integration Guide](https://docs.firecrawl.dev/integrations/n8n)
 
-## Conclusion
 
 Firecrawl provides a powerful yet simple way to extract web data at scale. When combined with n8n, it becomes an incredibly powerful tool for automating data collection and processing workflows. Whether you're building a price monitoring system, content aggregator, or research tool, Firecrawl has you covered.
+
+
+{{< /details >}}
+
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/firecrawl/firecrawl" title="Firecrawl GitHub ↗" >}}
@@ -171,3 +198,22 @@ value proposition
 customer avatar
 
 scrap google maps
+
+
+### Fire-Enrich
+
+Open source advantage: Fire Enrich is open source on GitHub with over 650 stars. You can inspect the code, modify agents for specific use cases, and contribute improvements.
+
+https://github.com/firecrawl/fire-enrich
+
+> MIT |  🔥 AI-powered data enrichment tool that transforms emails into rich datasets with company profiles, funding data, tech stacks, and more using Firecrawl and multi-agent AI 
+
+No limits when self-hosted: The public demo limits you to 15 rows and 5 columns to manage costs. When you run Fire Enrich locally, these restrictions disappear.
+
+Cost comparison:
+Tool	Starting Price	Approach
+Clay	$149/month	Multi-source aggregator, requires separate subscriptions
+Apollo	$59/user/month	Built-in database, limited customization
+Fire Enrich	Free (self-hosted)	Real-time research, only pay API costs
+
+When self-hosting, you only pay for OpenAI API usage (typically $0.01-0.05 per enrichment).

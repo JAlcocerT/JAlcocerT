@@ -9,7 +9,7 @@ url: 'make-slidev'
 
 **TL;DR** 
 
-I found out a great web app that edits markdown in live time and wanted to combine it with SliDev for PPT Generation.
+I found out a great **web app that edits markdown** in live time and wanted to combine it with SliDev for PPT Generation.
 
 **Intro**
 
