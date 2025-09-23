@@ -58,7 +58,8 @@ Nice to have:
 7. Bring your portfolio
 8. provide for your Portfolio the: historical dividends, confirmed dividends, forecasted dividends (per month/year)
 9. Comparison on a stock/portfolio with a sector: https://finance.yahoo.com/sectors/real-estate/
-
+10. https://millennialmoney.com/calculators/fire-calculator/
+ 
 See [the BRD](#faq) where we scoped the project.
 
 ---

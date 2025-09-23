@@ -152,6 +152,10 @@ With Quant-UX, the typical workflow is:
 ## Conclusions
 
 
+> Doing is faster than watching.
+
+Applies to [business](https://nav.al/skill-business) and to get that Landing + ChatBot going.
+
 Have deployed couple of services?
 
 Get that cool status pages for your client:

@@ -403,7 +403,7 @@ You could also... https://elest.io/open-source/typebot
 2. **Botpress**  
    Botpress provides official Docker images, one-click deployments, and good documentation, making it beginner-friendly for most users familiar with Docker or similar tools.[4]
 
-> Guess hows easily integrated with n8n: https://botpress.com/integrations/n8n
+> Guess hows easily integrated with n8n: https://botpress.com/integrations/n8n and also with your [WP CMS](https://botpress.com/docs/webchat/integrations/wordpress)
 
 
 

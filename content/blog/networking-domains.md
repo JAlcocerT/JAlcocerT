@@ -2,7 +2,7 @@
 title: "Networking - Understanding Domains and DNS Setup"
 date: 2025-09-24
 draft: false
-tags: ["HomeLab","DNS vs ENS","Web2 vs Web3","DNSMap","PolyMarket & OO","dnsmap"]
+tags: ["HomeLab","DNS vs ENS","Web2 vs Web3 vs Crypto","DNSMap","PolyMarket & OO","dnsmap"]
 description: 'How to Setup DNS for your Domains. Also UDs.'
 url: 'web-domain-basics'
 ---
@@ -80,6 +80,8 @@ Make sure to replace `subdomain.yourdomain.com` with your actual subdomain, and 
 
 What are web3 domains?
 
+https://www.youtube.com/watch?v=Jklj3lY8J3I
+
 https://support.unstoppabledomains.com/support/solutions/articles/48001181690-what-are-web3-domains-
 
 The main concepts explained in the content relate to the fundamentals and benefits of Web3 domains, how they differ from traditional (DNS) domains, and practical information about their use and storage.
@@ -105,6 +107,53 @@ In summary, the content heavily emphasizes Web3 domain ownership, decentralizati
 ---
 
 ## Conclusions
+
+So now, you have learnt not only about regular TLD domains and DNS for your homelab.
+
+But also on ENS and how they relate with crypto.
+
+Which is...a totally different world.
+
+**Seed Phrase and Wallet Recovery**
+
+- The seed phrase (typically 12 or 24 words) is the master key to your wallet. It is used to deterministically generate all private keys and addresses your wallet controls.
+- From this single seed phrase, wallets derive a hierarchy of private keys (HD wallet standard) to generate many Bitcoin addresses.
+- This enables easy backup and recovery: restoring a wallet only requires this seed phrase.
+
+**Private and Public Keys**
+
+- **The seed generates a master private key**, which is used with chain codes to derive child private keys.
+- Private keys pair with public keys through elliptic curve cryptography (secp256k1).
+- Each public key corresponds to a Bitcoin address where funds reside.
+- Having the seed phrase means control over all related private keys and funds across multiple addresses.
+    - Just **dont be scared** if you created a new wallet from the same seed and get a different address to see on `btcscan.org` or `blockchain.com`
+
+**Encryption and Security in Electrum**
+
+- Electrum encrypts private keys and wallet files locally on your device using AES-256-CBC encryption.
+- The wallet password is required to decrypt these keys for signing transactions.
+- Encryption protects your wallet data from unauthorized access on your computer.
+- Private keys never leave your device and are needed to sign transactions or messages securely.
+
+**Transactions and Sending Bitcoin**
+
+- When sending Bitcoin, Electrum consolidates all unspent outputs (UTXOs) from your different addresses into one transaction.
+- Transaction fees depend on the size of the transaction (number of inputs/outputs).
+- Electrum allows managing addresses and coins for efficient fee handling.
+
+**Message Signing and Encryption**
+
+- Electrum enables signing messages with your private keys, [proving ownership of an address](https://pocketbitcoin.com/faq/why-must-I-confirm-my-bitcoin-address) without exposing keys.
+- It also supports encrypting and decrypting messages using public-key cryptography based on the Bitcoin elliptic curve, allowing secure communication tied to wallet addresses.
+
+**Use Cases and Benefits**
+
+- The seed phrase backup simplifies wallet recovery and security management.
+- Multiple addresses improve privacy by avoiding address reuse.
+- Strong encryption and local private key storage enhance security.
+- Message signing and encryption add layers of authentication and private communication.
+
+In short, Electrum and Bitcoin wallets rely on your seed phrase to generate all keys and addresses, use strong cryptographic methods to secure private keys and transactions locally, and provide features for both sending Bitcoin and secure messaging—all while maintaining user control and privacy.
 
 
 

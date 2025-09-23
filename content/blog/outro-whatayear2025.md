@@ -7,6 +7,9 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+software product development, digital platform engineering,
+
+https://nav.al/feedback
 
 
 
