@@ -2,16 +2,16 @@
 title: "Leads and marketing automation"
 date: 2025-09-22T06:20:21+01:00
 draft: false
-tags: ["CRM","Scrapping","Lead Enrichment","Firecrawl"]
+tags: ["CRM","Scrapping","Lead Enrichment","Firecrawl","leads-slubnechwile"]
 url: 'software-for-marketing-agencies'
-description: 'sell'
+description: 'Get clients, engage, sell. With facebook pages.'
 ---
 
 **Tl;DR**
 
 Today it seems all about [lead enrichment](https://www.firecrawl.dev/blog/fire-enrich)
 
-> https://github.com/JAlcocerT/leads-slubnechwile
+> https://github.com/JAlcocerT/leads-slubnechwile for this [fb page](https://www.facebook.com/profile.php?id=61581167945505&sk=about)
 
 
 * https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#marketing
@@ -168,7 +168,23 @@ Like ~1k/month for [Leads](#how-to-get-and-enrich-leads) + [CRM](#marketing-arou
 
 ## FAQ
 
-How does the workflow look?
+1. ICP (Ideal Customer Profile)
+
+An Ideal Customer Profile (ICP) is a detailed, hypothetical description of the perfect customer or company that would gain the most value from a product or service. It includes demographics, behaviors, needs, and pain points, helping businesses target marketing and sales efforts towards prospects most likely to convert and be satisfied.
+
+2. Value Proposition
+
+A Value Proposition is a clear statement that explains how a product or service solves a customer's problem or improves their situation. It highlights specific benefits and why customers should choose that product over alternatives, effectively communicating the unique value delivered to the customer.
+
+3. Customer Avatar
+
+A Customer Avatar (or buyer persona) is a semi-fictional representation of an individual ideal customer based on detailed data regarding demographics, behaviors, motivations, and challenges. It helps companies tailor marketing messages and product development to better resonate on a personal level with their target audience.
+
+> The ICP focuses on the ideal company or customer segment, the value proposition communicates why the product matters, and the customer avatar embodies the individual persona within the ICP that marketers and sales teams aim to reach.
+
+### A Sample Marketer workflow
+
+How can a lead adquisition workflow look like?
 
 [app.apollo.io](https://www.apollo.io/sign-up) 1000 contactos 50 usd, pero con apify console.apify te conectas con su `apollo scrapper` free tier.
 
@@ -201,10 +217,6 @@ tb se puede conectar make a tu crm, como para poner contactos categorizados como
 > lead gen Jay, nick saraev (184 skool x 2600 members), kristian besser 1700 personas en slack de 92k pagando 4k
 manthan patel https://www.agentpass.ai/
 
-ICP - ideal customer profile
-value proposition
-customer avatar
-
 
 ### Tools
 
@@ -214,9 +226,11 @@ customer avatar
 
 ### How to get and enrich leads
 
-#### Fire-Enrich
+#### FireCrawl Fire-Enrich
 
 Open source advantage: Fire Enrich is open source on GitHub.
+
+There is a hosted version: https://www.firecrawl.dev/app
 
 You can inspect the code, modify agents for specific use cases, and contribute improvements.
 
@@ -226,15 +240,28 @@ You can inspect the code, modify agents for specific use cases, and contribute i
 
 No limits when self-hosted: The public demo limits you to 15 rows and 5 columns to manage costs. When you run Fire Enrich locally, these restrictions disappear.
 
-Cost comparison:
-Tool	Starting Price	Approach
-Clay	$149/month	Multi-source aggregator, requires separate subscriptions
-Apollo	$59/user/month	Built-in database, limited customization
-Fire Enrich	Free (self-hosted)	Real-time research, only pay API costs
+Here is a cost comparison table for the tools Clay, Apollo, and Fire Enrich based on their starting prices and approaches:
+
+| Tool       | Starting Price       | Approach                                     |
+|------------|---------------------|----------------------------------------------|
+| Clay       | $149/month          | Multi-source aggregator, requires separate subscriptions  |
+| Apollo     | $59/user/month      | Built-in database, limited customization        |
+| Fire Enrich| Free (self-hosted)  | Real-time research, only pay API costs          |
+
+This summary reflects that Clay uses a credit-based system with multiple data sources and can get costly with usage; Apollo is priced per user with a proprietary database, simpler but less flexible; Fire Enrich is self-hosted and free but you pay for external API usage as needed.[1][4][10]
+
+[1](https://blog.revpartners.io/en/revops-articles/clay-vs-apollo-sales-platform)
+[2](https://smartreachai.com/clay-vs-apollo-2025-sales-intelligence-comparison/)
+[3](https://supademo.com/blog/data-enrichment-tools/)
+
 
 When self-hosting, you only pay for OpenAI API usage (typically $0.01-0.05 per enrichment).
 
 #### ApiFy can do that
+
+Just go here and get those 5$ monthly to test: https://console.apify.com/
+
+* https://n8n.io/integrations/apify/
 
 
 ### More APIs
@@ -313,6 +340,7 @@ And then you get your clientID and client secret for the config.
 
 You just got your GH Oauth configured! Just same of what we did with [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#tinyauth).
 
+You could also... https://elest.io/open-source/typebot
 
 2. **Botpress**  
    Botpress provides official Docker images, one-click deployments, and good documentation, making it beginner-friendly for most users familiar with Docker or similar tools.[4]

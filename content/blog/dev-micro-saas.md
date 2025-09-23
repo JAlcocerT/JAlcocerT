@@ -1,5 +1,5 @@
 ---
-title: "From idea to Launch. Building MicroSaaS"
+title: "From idea to Launch. Building a Landing+MicroSaaS"
 date: 2025-09-22T18:20:21+01:00
 draft: false
 tags: ["SaaS","Firebase Auth","Logto JS SDK","landing","Firecrawl","SlubneChwile"]

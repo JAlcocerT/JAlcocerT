@@ -251,15 +251,9 @@ I tested [Logto Python SDK here](https://github.com/JAlcocerT/ThreeBodies/tree/m
 
 Their blog normally brings quite interesting ideas:
 
-* [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) is cool, but their auth is hard: https://blog.logto.io/mcp-auth?ref=newsletter. And there are some tools to bring that authentication to MCP:
-  * https://mcp-auth.dev/?ref=blog
-  * https://github.com/orgs/mcp-auth/repositories
-    * https://github.com/sooperset/mcp-atlassian
-  * https://github.com/stacklok/toolhive
-    * https://docs.stacklok.com/toolhive/guides-ui/install
+* [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) is cool, but their auth is hard: https://blog.logto.io/mcp-auth?ref=newsletter. 
 
-
-But most importantly, Logto works: they send the email for people to validate etc
+But most importantly, **Logto works**: they send the email for people to validate that they are interested etc
 
 This is the LOGTO TS SDK for interacting with Logto's Management API: https://github.com/logto-io/logto/blob/master/packages/api/README.md
 

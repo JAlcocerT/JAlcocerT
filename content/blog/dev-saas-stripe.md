@@ -1,6 +1,6 @@
 ---
 title: "SaaS around Stripe API"
-date: 2025-09-23T01:20:21+01:00
+date: 2025-10-08T01:20:21+01:00
 draft: false
 tags: ["Micro SaaS Essentials","Stripe goodies"]
 description: 'BiP user flows around authentication layers and stripe paywalls'

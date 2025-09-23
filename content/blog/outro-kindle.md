@@ -1,5 +1,5 @@
 ---
-title: "Kindle, notes and Pandoc"
+title: "Kindle, ebooks 101, notes and Pandoc"
 date: 2025-09-17
 draft: false
 tags: ["Outro","kindle modding","Your ebook Notes Knowledge Base","sell-your-ebook","Business Model Canvas","Affine"]
@@ -19,7 +19,7 @@ Pandoc can do very cool things.
 
 **Intro**
 
-Being able to create your ebook as a code and having a website to publish it is great.
+Being able to **create a ebook** as a code and having a website to publish it is great.
 
 But if you have consumed ebooks that other has written, you will have a lot of clippins.
 
@@ -27,6 +27,11 @@ Those notes saved for years.
 
 Just waiting for you to get and read them.
 
+So this is mostly a create + understand notes from kindle.
+
+Rather than a way to admire how people have created **static status pages**: https://open-slum.pages.dev/ nor [get things](https://annas-archive.org/). 
+
+With this, you will be able to create and distribute your epublibre.
 
 
 ### Kindle Notes to AI
