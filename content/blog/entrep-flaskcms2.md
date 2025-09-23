@@ -2,7 +2,7 @@
 title: "Flask x Stripe Payment Links"
 date: 2025-09-16T13:20:21+01:00
 draft: false
-tags: ["Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporal io"]
+tags: ["Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporalio"]
 description: 'Markdown and Flask working together. A FlaskCMS v0.2 for Real Estate & Mental Health'
 url: 'flask-cms-for-ssgs'
 ---
@@ -73,9 +73,13 @@ For example something like: https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefi
 
 > > Cal.com + google + `https://www.springhealth.com/` plays well!
 
+Checks:
 
+1. https://pagespeed.web.dev/analysis/https-psikolognevinkeskin-info/akk4rhictv?form_factor=mobile
+2. https://web-check.xyz/check/https%3A%2F%2Fpsikolognevinkeskin.info%2F
+3. https://www.websitecarbon.com/website/psikolognevinkeskin-info/
 
-
+![alt text](/blog_img/web/morita-flask/website-carbon-morita.png)
 
 ### Real Estate
 
@@ -87,7 +91,11 @@ And because having few separated services is a burdden.
 
 I wanted to consolidate the ssg + admin authentication to add new properties + the [last version of st scrapping](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py)
 
+n8nx(scrap+Github)+CICD to add a markdown post and get automatical SSG build.
 
+So...the last version of [realestate proposal with PB](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py) is a total and complete overkill.
+
+Same for the thought of doing a [Gitea API connection + n8n](https://jalcocert.github.io/JAlcocerT/n8n-and-gitea/) or Flask CMS v2.x
 
 ---
 

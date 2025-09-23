@@ -2,24 +2,29 @@
 title: "Flowise Embedded and Gitea WIP"
 date: 2025-09-05T10:20:21+01:00
 draft: false
-tags: ["HomeLab","Flowise SDK","Web","LLM APIs"]
-description: 'Flowise workflow to Gitea.'
+tags: ["HomeLab","Flowise SDK","Web","LLM APIs","Flowise Streamlit"]
+description: 'Flowise workflow with Gitea.'
 url: 'flowise-and-gitea'
 ---
 
 
 **Tl;DR**
 
-I dont quite like having some *use enterprise version* within n8n.
+I dont quite like having some *use cases for the enterprise version* within n8n.
 
 So putting together a [Flowise](#flowise-ai) x Gitea stack that is F/OSS (Apache v2 and MIT)
 
 **Intro**
 
+Last year Imade this video about Flowise:
+<!-- 
+https://youtu.be/SASUXOV7tEQ -->
+
+{{< youtube "SASUXOV7tEQ" >}}
 
 ### Flowise AI
 
-Most important, among similar [low/nocode tools](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#flowise-ai), FlowiseAI is OSS Licensed with Apache v2.
+Most important, among similar [low/nocode tools](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#flowise-ai), FlowiseAI is OSS Licensed with **Apache v2**.
 
 
 {{< cards cols="1" >}}

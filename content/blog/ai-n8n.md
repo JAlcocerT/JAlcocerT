@@ -11,14 +11,20 @@ url: 'n8n-with-ai'
 
 Putting together content for a sync with 2 marketers.
 
+<!-- https://youtu.be/v-gCNTI5kzE -->
+
+{{< youtube "v-gCNTI5kzE" >}}
+
+
 **Intro**
 
-I recently discovered about: https://chat.soula.ge/ and `https://vp.soula.ge/`
+I recently discovered about: `https://chat.soula.ge/` and `https://vp.soula.ge/`
 
 > Chat with Your n8n Workflows
 
 > > Transform complex automation into natural conversations. Connect up to 9 webhooks and manage your workflows through an intelligent chat interface.
 
+Keep reading to see cool n8n stuff in action.
 
 
 ## Just use n8n

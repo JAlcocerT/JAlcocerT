@@ -61,6 +61,12 @@ For [flask](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/#flask) c
 openssl rand -base64 32
 ```
 
+Other example? For [Typebot](https://jalcocert.github.io/JAlcocerT/free-open-source-chat-bots/#typebot) we need :
+
+```sh
+openssl rand -base64 24 | head -c 32
+```
+
 Those come very handy when deploying containers.
 
 > Let's break down the SHA-256 protocol
@@ -504,7 +510,9 @@ JWTs and API keys both authenticate API requests but differ in complexity and ca
 
 Often, JWTs are used as bearer tokens in the Authorization header for secure API access, while API keys may be passed similarly or in query parameters.
 
-In summary, JWTs provide richer, more secure, and scalable authentication features, while API keys offer simplicity and ease of use. jwt.io specifically helps with JWT creation, decoding, and validation—not with API key management.
+In summary, JWTs provide richer, more secure, and scalable authentication features, while API keys offer simplicity and ease of use.
+
+jwt.io specifically helps with JWT creation, decoding, and validation—not with API key management.
 
 | Feature            | API Key                  | JWT (JSON Web Token)              |
 |--------------------|--------------------------|---------------------------------|

@@ -587,6 +587,84 @@ You could also manage to do Telegram Bots to download given images and then inte
 
 ## FAQ
 
+### OSS ChatBots
+
+Typical chatbot platforms used by marketing teams in 2025 include Manychat, Chatbase, UChat, Botpress, Voiceflow, Tidio, Intercom, and Freshchat. 
+
+Manychat is especially popular for marketing automation on Instagram, WhatsApp, and Facebook, with plans starting at about $15/month.
+
+Chatbase and Botpress are favored for more AI-driven or customizable bots, with Botpress offering a free plan and pay-as-you-go model.
+
+Pricing generally ranges from free or low-cost basic plans (starting around $15/month) to enterprise-level plans costing hundreds or thousands per month, depending on features, volume, and integrations.
+
+For open-source and self-hosted chatbot platforms, some notable options include:
+
+- Botpress: Open-source, highly customizable, good for advanced AI support chatbots, free tier available with pay-as-you-go options.
+- Rasa: Popular open-source conversational AI framework for building contextual chatbots.
+- OpenDialog: Enterprise-grade and open-source with strong security and flexibility.
+- Tock: Open-source platform for voice and text conversational AI, deployable on-premise.
+- Claudia Bot Builder: Lightweight open-source bot framework, designed for multi-platform use.
+- BotMan: PHP-based open-source framework for chatbot development.
+
+These open-source/self-hosted options offer full control over data and customization but require more technical setup and maintenance compared to hosted SaaS platforms. Pricing is usually free aside from hosting and development costs.
+
+In summary:
+
+| Platform      | Type           | Primary Use                 | Pricing                      | Self-Hosted | Notes                                            |
+|---------------|----------------|-----------------------------|------------------------------|-------------|--------------------------------------------------|
+| Manychat      | SaaS           | Marketing automation        | Free to $15+/month            | No          | Great for social media platforms                  |
+| Chatbase      | SaaS/AI        | Beginner-friendly AI chatbots| Free to $40+/month            | No          | Easy to use, AI focus                             |
+| Botpress      | Open-source    | Advanced AI, customizable   | Free plan + pay-as-you-go     | Yes         | Strong AI capabilities, developer-friendly       |
+| Rasa          | Open-source    | Contextual conversational AI| Free, self-hosting costs only | Yes         | Highly customizable, ML-based                     |
+| OpenDialog    | Open-source    | Enterprise-grade AI bots    | Free, requires own hosting    | Yes         | Secure, good for regulated industries             |
+| Tock          | Open-source    | Voice & text bots           | Free                         | Yes         | Multimodal support, flexible deployment           |
+| Claudia Bot Builder | Open-source | Multi-platform bots        | Free                         | Yes         | Lightweight, developer-focused                     |
+| BotMan        | Open-source    | PHP chatbot framework       | Free                         | Yes         | Good for developers, multi-channel support         |
+
+This gives marketing teams a range of choices from easy-to-use hosted platforms to highly customizable open-source tools that can be self-hosted for maximum control.[1][2][3][4]
+
+[1](https://chatimize.com/best-chatbot-platforms/)
+[2](https://www.chatbase.co/blog/open-source-chatbot-platforms)
+[3](https://botpress.com/blog/chatbot-marketing)
+[4](https://botpress.com/blog/open-source-chatbots)
+[5](https://zapier.com/blog/best-chatbot-builders/)
+[6](https://www.digitalocean.com/resources/articles/best-chatbot-platforms)
+
+
+#### Typebot vs n8n
+
+[Typbot](https://github.com/baptisteArno/typebot.io) is a no-code, visually driven chatbot builder platform that supports creating interactive conversational forms and chatbots, primarily for lead generation, customer support, surveys, bookings, and internal workflows. 
+
+Importantly, it is **open-source and self-hostable**, giving users full control over their data and infrastructure. 
+
+Typbot supports multi-channel deployment (websites, WhatsApp, etc.), AI model integration (like OpenAI GPT-3/4), extensive customization, analytics, and integration with tools such as Zapier and Google Sheets.
+
+ The self-hosting option requires managing your own server and infrastructure, but you get all features without subscription fees aside from hosting costs.
+
+Regarding n8n, it is a powerful no-code workflow automation tool that allows building custom AI chatbots by integrating different services and APIs like OpenAI for natural language understanding and other data sources via connectors. n8n itself is not a chatbot platform but a flexible automation engine where you can design chatbot workflows to qualify leads, book appointments, fetch real-time data, and respond intelligently. It also supports self-hosting and gives full control over data and customization. n8n bots require more setup and technical skills compared to Typbot but provide extreme flexibility and integration breadth.
+
+
+| Platform | Type | Self-hosted | Key Features | Use case fit | Notes |
+|---|---|---|---|---|---|
+| Typbot | No-code chatbot builder | Yes | Drag-and-drop builder, AI integration, multi-channel deployment, analytics, full customization | Quick to build conversational flows, lead capture, surveys | Open-source, self-hosting supported, easier for non-technical users |
+| n8n | Workflow automation tool | Yes | Visual automation builder, AI API integration, connects multiple services | Custom, complex AI chatbots integrated with business apps | Requires technical skills, max flexibility, self-hosted, no native chatbot interface |
+
+In essence, Typbot offers a ready chatbot-building experience with self-hosted option taking care of bots specifically, while n8n is a powerful automation platform allowing chatbot creation among many other uses, ideal for those wanting customizable automation workflows that include chatbot capability.[3][9][1][7]
+
+[1](https://typebot.io)
+[3](https://docs.typebot.io/self-hosting/get-started)
+[4](https://localops.co/self-host/apps/typebot)
+[5](https://github.com/davidbrandpro/typebot.io-Vercel)
+[6](https://github.com/sergor5/typebot-selfhost)
+[7](https://www.voiceflow.com/blog/n8n-ai-chatbot-integration)
+[8](https://n8n.io/workflows/2786-create-a-branded-ai-powered-website-chatbot/)
+[9](https://blog.n8n.io/how-to-make-ai-chatbot/)
+[10](https://n8n.io/workflows/categories/ai-chatbot/)
+[12](https://docs.typebot.io)
+[15](https://elest.io/open-source/typebot/resources/quickstart)
+[17](https://docs.typebot.io/self-hosting/configuration)
+
+
 ### F/OSS No Code Data Tools
 
 * Node Red

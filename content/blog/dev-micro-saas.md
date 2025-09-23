@@ -1,6 +1,6 @@
 ---
 title: "From idea to Launch. Building MicroSaaS"
-date: 2025-09-22T23:20:21+01:00
+date: 2025-09-22T18:20:21+01:00
 draft: false
 tags: ["SaaS","Firebase Auth","Logto JS SDK","landing","Firecrawl","SlubneChwile"]
 url: 'micro-saas'
@@ -50,3 +50,18 @@ Or
     * https://auth.monday.com/users/sign_up_new
 
 ![alt text](/blog_img/entrepre/landing/monday-signin.png)
+
+
+## Idea to Landing
+
+Some examples I found:
+
+1. WP + Elementor = https://genkinfy.com/
+2. With...Odoo CRM?
+
+
+### Creating a Quick Landing
+
+https://docs.firecrawl.dev/use-cases/developers-mcp -> https://github.com/firecrawl/open-lovable?tab=readme-ov-file
+
+> MIT |  🔥 Clone and recreate any website as a modern React app in seconds 

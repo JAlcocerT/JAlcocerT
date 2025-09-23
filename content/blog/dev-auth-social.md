@@ -605,9 +605,10 @@ YOu could also do email/user + pwd or social signin (for example with google)
 
 {{< details title="Logto vs FirebaseAuth vs PB SDK for Auth... 📌" closed="true" >}}
 
-Logto, Firebase Authentication, and PocketBase SDK implement authentication differently, with distinct approaches, features, and use cases. Here is a detailed comparison of their authentication implementation and pros and cons:
+Logto, Firebase Authentication, and PocketBase SDK implement authentication differently, with distinct approaches, features, and use cases. 
 
-### Logto Authentication
+Logto Authentication
+
 - Logto is an open-source identity infrastructure focused on secure, standards-based authentication using OAuth 2.1 and OpenID Connect (OIDC).
 - It supports web, mobile, desktop, machine-to-machine (M2M) authentication, and third-party application integration as an Identity Provider (IdP).
 - Logto provides protocol-compliant flows with social login, user management, multi-tenancy, RBAC, and supports SAML apps for enterprise SSO.
@@ -625,7 +626,8 @@ Logto, Firebase Authentication, and PocketBase SDK implement authentication diff
 - More setup complexity than turnkey solutions.
 - Newer ecosystem, less documentation and community compared to Firebase.
 
-### Firebase Authentication
+Firebase Authentication
+
 - Firebase Auth is a widely-used backend service with SDKs and ready-made UI libraries for authenticating users via email/password, phone, and social providers like Google and Facebook.
 - Offers FirebaseUI for drop-in auth flows and supports custom backend integration using industry standards OAuth 2.0 and OIDC.
 - The Identity Platform upgrade adds enterprise features like multi-factor authentication, blocking functions, audit logging, multi-tenancy and SAML/OpenID Connect providers.
@@ -642,7 +644,8 @@ Logto, Firebase Authentication, and PocketBase SDK implement authentication diff
 - Pricing can rise steeply with scale and advanced features.
 - Less flexible in protocol customization, mainly focused on user auth.
 
-### PocketBase SDK Authentication
+PocketBase SDK Authentication
+
 - PocketBase is an open-source backend framework with built-in lightweight authentication supporting password, OTP, OAuth2 providers, and multi-factor authentication.
 - Uses stateless JWT tokens sent with requests; no traditional server sessions.
 - Authentication state is managed client-side with token storage and refresh.

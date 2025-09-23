@@ -6,8 +6,8 @@ draft: false
 #     image: "https://socialify.git.ci/langflow-ai/langflow/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
 #     alt: "Using LangFlow to create ChatBots" # alt text
 #     caption: "AI ChatBots 101" # display caption under cover
-tags: ["Gen-AI","OSS for Business","Monitoring Tools"]
-description: 'LangFlow. AI chatbots with open source'
+tags: ["Gen-AI","OSS for Business","Monitoring Tools","FlowiseAI","ChatWoot"]
+description: 'LangFlow. AI chatbots with open source. A look to Typebot, BotPress...'
 url: 'free-open-source-chat-bots'
 ---
 
@@ -21,19 +21,9 @@ Recently I have been exploring PandasAI to learn **how to create RAGs** over loc
 
 Some people say that OpenAI + LangChain via Python is the way, is it right?
 
-<!-- 
-https://dev.to/worldlinetech/in-bed-with-gpt-and-nodejs-4kh2 
--->
-
 That's all via code.
 
 Found these interesting projects to **create ChatBots through UI**:
-
-<!-- * [LangFlow](#langflow) - Low Code App Builder for RAG & Multi-Agent AI
-* [BotPress](#botpress)
-* [Typebot](#typebot)
-* [FlowiseAI](#flowiseai) - a UI for LangChain (JS)
-* [ChatWoot](#chatwoot) -->
 
 *How to use open source ChatBots Tools: LangFlow, BotPress, TypeBot, FlowiseAI and ChatWoot?*
 
@@ -261,7 +251,7 @@ Acces LangFlow at `localhost:7860`
 
 ### Botpress
 
-Another alternative is BotPress:
+Another alternative for chatbots generated with UI is BotPress:
 
 * {{< newtab url="https://botpress.com/" text="The Botpress Official Site" >}} - Botpress | AI Chatbot Platform
 * {{< newtab url="https://github.com/botpress/botpress" text="The Botpress Source Code at Github" >}}
@@ -285,6 +275,9 @@ docker run -d --name=botpress -p 3000:3000 botpress/server
 
 * https://botpress.com/hub?type=Integration
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/botpress" title="Botpress | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### TypeBot
 
@@ -296,7 +289,7 @@ We also have TypeBot:
 
 {{< dropdown title="How to Setup TypeBot Step By Step ⏬" closed="true" >}}
 
-https://docs.typebot.io/self-hosting/deploy/docker
+* https://docs.typebot.io/self-hosting/deploy/docker
 
 ```sh
 wget https://raw.githubusercontent.com/baptisteArno/typebot.io/latest/docker-compose.yml
@@ -315,6 +308,10 @@ docker-compose up -d
 > Typebot will be available at: `localhost:3000`
 
 {{< /dropdown >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/typebot" title="TypeBot | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### ChatWoot
 

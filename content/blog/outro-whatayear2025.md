@@ -8,6 +8,13 @@ url: 'tech-recap-2025'
 ---
 
 
+
+
+https://free-for.dev/#/
+
+https://freestuff.dev/alternative/clerk/
+
+
 **Intro**
 
 This year is been like a lot of [do](https://nav.al/do)
@@ -16,7 +23,13 @@ This year is been like a lot of [do](https://nav.al/do)
 
 It looks so long back when I used `you.com` to help me with work.
 
+And with no doubt, 2025 has been the year of agents. I mean...
 
+https://github.com/browser-use/browser-use
+
+>  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
+
+https://www.youtube.com/watch?v=L2Ya9PYNns8
 
 
 {{< callout type="info" >}}
@@ -270,7 +283,44 @@ If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlc
 
 10. Thanks to authentication I got to know the difference between: WHO someone is and what someone can DO 🤯
 
-> Notice also (as per ENS and DNS), that what something is has nothing to do with where something is.
+
+
+{{% details title="API vs JWT vs OAUTh 🚀" closed="true" %}}
+
+Both a JWT bearer token and an API key can be used to authenticate against APIs and other services, but they work differently and offer varying security and flexibility. 
+
+OAuth is a broader protocol for secure, delegated access and is often paired with JWT as the format for its access tokens.
+
+- **API Key**:  
+  - Simple method; a unique key is sent in requests to identify and authenticate the client.
+  - Good for basic server-to-server scenarios, but offers limited security and control.[1][5]
+
+- **JWT (JSON Web Token) Bearer Token**:  
+  - A signed, encoded token conveying user identity and claims.
+  - Used for stateless authentication; APIs verify the token’s signature without needing to consult a centralized database every time.
+  - Efficient for distributed systems and microservices; commonly used in modern APIs.[5][1]
+
+- **OAuth 2.0**:  
+  - An authorization protocol that allows users to grant third-party applications delegated access to their data.
+  - Handles complex permission scopes, third-party integrations, and user consent.
+  - Often uses JWT tokens as the format for access tokens.
+  - Strong security and control, but more complex to set up and manage, and better for scenarios requiring delegated access or SSO.[4][1][5]
+
+Which Is Better?
+
+- **API Key**: Best for simple authentication between trusted services, low-security or internal APIs.[1]
+- **JWT**: Excellent for stateless authentication in scalable microservices; fast and efficient but lacks revocation and fine-grained permissions.[5][1]
+- **OAuth (with JWT tokens)**: Ideal for complex scenarios requiring delegated authorization, third-party integrations, and robust security. Preferred for external/public APIs, especially those involving user data or multi-step permissions.[4][1][5]
+
+**OAuth2.0 often uses JWT tokens as part of its workflow**, leveraging the strengths of both approaches for secure, scalable authentication and authorization.
+
+For APIs exposed to external clients, OAuth is generally considered more secure and flexible. For internal use or single-service authentication, JWT and API keys are simpler.
+
+
+{{% /details %}}
+
+
+> Notice also (as per **ENS** and DNS), that **what something is** has nothing to do with where something is.
 
 > > And BRD PRD FRD are the why what how
 

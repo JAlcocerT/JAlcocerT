@@ -3,7 +3,7 @@ title: "My Fav Web browsers & their automation"
 date: 2025-09-18
 draft: false
 tags: ["Zen vs Firefox vs LibreWolf","Brave vs Chrome","PlayWright MCP","Puppeteer","Job-Trends","Scrap-Tools"]
-description: 'Neko vs KASM vs WebTops. Web Automation and Scrapping Recap. Firecrawl rules.'
+description: 'Neko vs KASM vs WebTops. Web Automation and Scrapping Recap. Firecrawl & Browser-Use rulez.'
 url: 'how-to-browse'
 ---
 
@@ -28,7 +28,7 @@ Specially if we combine it with LLMs:
 
 * https://github.com/browser-use/browser-use?tab=readme-ov-file
 
-> MIT |  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
+> MIT |  🌐 Make websites accessible for AI agents. **Automate tasks online with ease**. 
 
 ```json
 {
@@ -299,6 +299,7 @@ MIT | 🔥 Official Firecrawl MCP Server - Adds powerful web scraping and search
 
 See: https://docs.firecrawl.dev/mcp-server and https://apify.com/mcp-servers/firecrawl-mcp-server#running-on-windsurf
 
+Which can be added to MCP clients (like Windsurf):
 ```json
 {
   "mcpServers": {

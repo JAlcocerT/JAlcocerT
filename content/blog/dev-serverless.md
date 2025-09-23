@@ -13,8 +13,6 @@ description: 'Your WebApps, with Serverless Authentication and AI on the backend
 
 Just go serverless.
 
-
-
 +++ Using Logto JS SDK with CF Workers (?)
 
 
@@ -59,7 +57,11 @@ Bringing to the SSGs finally some cool editor has given me several head-aches.
 
 Recently I discovered about **BCMS and pages-cms**, which I wanted to try [as per this post](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#podcast).
 
-In theory, both can be selfhostable.
+Aaaand...https://github.com/GetPublii/Publii
+
+> GPL3.0 The most intuitive Static Site CMS designed for SEO-optimized and privacy-focused websites. 
+
+In theory, all those can be selfhostable.
 
 So lets see what they require to get themes working fast.
 

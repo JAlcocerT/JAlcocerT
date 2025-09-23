@@ -2,7 +2,7 @@
 title: "Lead Magnets around MailerLite API"
 date: 2025-09-21T16:20:21+01:00
 draft: false
-tags: ["Micro SaaS Essentials","MailerLite goodies","n8n","Subscribe2Podcast","Waiting2Landing"]
+tags: ["Micro SaaS Essentials","MailerLite goodies","Subscribe2Podcast","Waiting2Landing"]
 description: 'BiP user flows around Landing + newsletter layers. With Interesting bcms and pages-cms'
 url: 'mailerlite-for-saas'
 ---
@@ -60,6 +60,9 @@ As long as you know how to work with Webhooks...you have it all:
 ### MailerLite x n8n
 
 See how Ive done it: https://jalcocert.github.io/JAlcocerT/n8n-with-ai/#n8n-x-mailerlite
+
+![Configuring mailerlite webhooks for n8n](/blog_img/GenAI/n8n/mailerlite/1-webhook-events.png)
+
 
 ## A Theme to Test this
 

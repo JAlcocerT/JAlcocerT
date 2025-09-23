@@ -11,16 +11,20 @@ description: 'sell'
 
 Today it seems all about [lead enrichment](https://www.firecrawl.dev/blog/fire-enrich)
 
+> https://github.com/JAlcocerT/leads-slubnechwile
 
-https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#marketing
 
-https://github.com/gomarble-ai/facebook-ads-mcp-server
+* https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#marketing
+
+* https://github.com/gomarble-ai/facebook-ads-mcp-server
 
 **Intro**
 
 I started the day with a core believe: wordpress sites are meh
 
-After this sync with couple of marketers - That changed. See this landing: https://genkinfy.com/
+After this sync with couple of marketers - That changed. See this landing done with elementor: https://genkinfy.com/
+
+> 
 
 <!-- https://youtu.be/qQ13MKLfqYQ -->
 
@@ -154,23 +158,27 @@ Firecrawl provides a powerful yet simple way to extract web data at scale. When 
 3. Join the [community forum](https://community.firecrawl.dev) for support and ideas
 
 
+## Conclusions
+
+It seems all you need to do to start a marketing agency is a proposal.
+
+Like ~1k/month for [Leads](#how-to-get-and-enrich-leads) + [CRM](#marketing-around-oss) + [ChatBot](#chatbots-for-marketing) *with an ad campaing proposal*.
 
 ---
 
 ## FAQ
 
+How does the workflow look?
 
-
-app.apollo.io 1000 contactos 50 usd, pero con apify console.apify te conectas con su `apollo scrapper` free tier.
+[app.apollo.io](https://www.apollo.io/sign-up) 1000 contactos 50 usd, pero con apify console.apify te conectas con su `apollo scrapper` free tier.
 
 > in that way we have 1k leads for 1.5 usd from apify only.
 
-app millionverifier para verificar emails
+See the app `millionverifier` tp... verify emails
 
 wedding planners - google one by one / scrapper de google maps por wedding planners
 serper google search api para buscar tb en google
 outscraper - para sacar por ej restaurantes tarragona
-
 
 clay es la mas tocha y muy usada actualmente, there is free tier
 no es CRM pero leads q vengan de listas (como la de apollo), de webs, forms....convergen aqui
@@ -197,22 +205,24 @@ ICP - ideal customer profile
 value proposition
 customer avatar
 
-scrap google maps
 
 ### Tools
 
-#### GHL
+### GHL
 
 * https://marketplace.gohighlevel.com/docs/ghl/contacts/create-contact
 
+### How to get and enrich leads
 
-### Fire-Enrich
+#### Fire-Enrich
 
-Open source advantage: Fire Enrich is open source on GitHub with over 650 stars. You can inspect the code, modify agents for specific use cases, and contribute improvements.
+Open source advantage: Fire Enrich is open source on GitHub.
 
-https://github.com/firecrawl/fire-enrich
+You can inspect the code, modify agents for specific use cases, and contribute improvements.
 
-> MIT |  🔥 AI-powered data enrichment tool that transforms emails into rich datasets with company profiles, funding data, tech stacks, and more using Firecrawl and multi-agent AI 
+* https://github.com/firecrawl/fire-enrich
+
+> MIT |  🔥 AI-powered **data enrichment tool** that transforms emails into rich datasets with company profiles, funding data, tech stacks, and more using Firecrawl and multi-agent AI 
 
 No limits when self-hosted: The public demo limits you to 15 rows and 5 columns to manage costs. When you run Fire Enrich locally, these restrictions disappear.
 
@@ -223,3 +233,173 @@ Apollo	$59/user/month	Built-in database, limited customization
 Fire Enrich	Free (self-hosted)	Real-time research, only pay API costs
 
 When self-hosting, you only pay for OpenAI API usage (typically $0.01-0.05 per enrichment).
+
+#### ApiFy can do that
+
+
+### More APIs
+
+* https://serpapi.com/pricing
+
+Can this...Scrap google maps...?
+
+APIfy can :)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="APIfy + Firecrawl... | A repo to get leads for slubnechwile ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serpbear" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+### Marketing around OSS
+
+Building a marketing agency?
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main" title="SelfHostable Marketing Software | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Have a look to...
+
+- GoHighLevel (GHL) is an all-in-one, **hosted CRM platform** focusing on marketing automation, funnel building, and agency solutions, providing strong out-of-the-box marketing tools and automation.
+
+- Popular open-source CRM alternatives include **SuiteCRM, Odoo, and EspoCRM**. These offer more traditional CRM functions with flexibility and full self-hosting capability, requiring more technical setup and integration for marketing automation compared to GoHighLevel.
+
+> With Odoo you can even have your drag-n-drop website created in the same suite
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+- Marketing automation in open-source tools can be achieved through integration with platforms like Mautic, but usually with more configuration effort.
+
+- Overall, GoHighLevel offers an all-in-one marketing-centric CRM for agencies and businesses needing ready-made automation, while open-source CRM and HRM solutions provide customization, ownership, and self-hosting but at the cost of more setup and technical complexity.
+
+Here is a comparison table of popular self-hosted open-source CRMs, including their pros and cons:
+
+| CRM         | Pros                                             | Cons                                              |
+|-------------|--------------------------------------------------|---------------------------------------------------|
+| SuiteCRM    | Fully open-source and highly customizable; rich CRM features; strong community support | Less built-in marketing automation; requires technical setup; interface may feel outdated |
+| Odoo CRM    | Modular with broad business apps; flexible deployment; strong integration options | CRM features less advanced alone; can get complex with many modules; technical skills needed |
+| EspoCRM     | Lightweight and easy to customize; user-friendly interface; good for small to mid business | Limited advanced marketing automation; fewer integrations out-of-the-box |
+| Mautic (with CRM) | Open-source marketing automation; integrates well with self-hosted CRMs; powerful campaign tools | Requires integration setup; learning curve; CRM functions limited, more marketing focused |
+
+
+#### Chatbots for Marketing
+
+And for **custom chatbots** to drive conversion rates: https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#faq
+
+An ordered list from easiest to most complex when it comes to self-hosting the mentioned chatbot and automation platforms, based on typical setup processes, available documentation, and required technical expertise:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/botpress" title="Botpress | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/typebot" title="TypeBot | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+1. **Typbot**  
+   Typbot is designed specifically for ease-of-use, with clear self-hosting documentation, Docker containers, and minimal configuration needed. Even non-developers can set it up fairly quickly.
+
+> See https://docs.typebot.io/self-hosting/deploy/docker and https://github.com/settings/developers for OAuth setup
+
+> > Typebot wont start without proper `encryption_secret` nor some [auth configured](https://docs.typebot.io/self-hosting/configuration#github-auth)
+
+`https://test.jalcocertech.com/`
+`https://test.jalcocertech.com/api/auth/callback/github`
+
+
+And then you get your clientID and client secret for the config. 
+
+You just got your GH Oauth configured! Just same of what we did with [TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#tinyauth).
+
+
+2. **Botpress**  
+   Botpress provides official Docker images, one-click deployments, and good documentation, making it beginner-friendly for most users familiar with Docker or similar tools.[4]
+
+> Guess hows easily integrated with n8n: https://botpress.com/integrations/n8n
+
+
+
+{{% details title="TypeBot vs BotPress. Use cases and OpenAI 🚀" closed="true" %}}
+
+Botpress and Typbot are both popular self-hostable chatbot platforms, but their typical use cases differ based on their design and capabilities.
+
+Typical Use Cases for Botpress
+
+- **Customer Support Automation**: Botpress is often used to build complex, AI-driven support bots capable of handling FAQs, routing tickets, and providing contextual responses.[1]
+- **Enterprise Virtual Assistants**: Companies deploy Botpress for internal helpdesk automation, HR inquiries, and knowledge base interactions.
+- **Conversational AI and NLP Bots**: Its strong natural language processing (NLP) support allows for intent-based, dynamic conversations beyond simple scripted flows.[1]
+- **Omnichannel Bots**: Botpress supports deploying chatbots across multiple channels (web, social media, messaging apps) with consistent experiences.
+- **Custom Business Process Automation**: Businesses use Botpress to automate repetitive workflows, handle booking and leads, or integrate with CRMs and databases for smart automation.
+- **Education and Training Bots**: Used for onboarding, employee training, and interactive educational assistance.
+
+Typical Use Cases for Typbot
+
+- **Lead Generation Forms**: Typbot is frequently used to create interactive conversational forms that significantly improve conversion rates on landing pages and websites.[2][3][4]
+- **Surveys and Feedback Collection**: Its no-code platform lets marketing or operations teams deploy engaging survey flows for customer feedback and sentiment analysis.
+- **Appointment Booking and Registration**: Businesses embed Typbot to handle scheduling, collecting user info, and automating basic transactional workflows.
+- **Product Recommendations and Guided Shopping**: E-commerce shops use Typbot’s conversational style for quizzes and to guide customers to the right products.[2]
+- **Internal Data Collection**: Organizations use Typbot for HR surveys, onboarding forms, and routine employee check-ins without coding.
+- **Website Chatbots**: Typbot is often the first choice for quickly setting up website bots to greet visitors and qualify leads.
+
+Key Differences
+
+- **Botpress** excels in intelligent, programmable bots for support, workflow automation, and advanced conversational needs, with more complex setup and NLP features.[1]
+- **Typbot** is ideal for marketing and sales teams needing simple, engaging forms or basic chatbots that can be embedded anywhere, and is noted for its ease of use and rapid deployment.[3][2]
+
+Both platforms have overlapping uses but generally target different complexity levels and user skill sets.
+
+Yes, both Botpress and Typbot support integrating the OpenAI API for advanced AI responses and can be configured to use custom knowledge sources.
+
+Botpress
+- Botpress natively supports integration with OpenAI (GPT-3, GPT-4, and similar) via official modules or custom API calls, allowing your bot to generate AI-driven answers and handle natural language conversations.[1]
+- You can also connect Botpress to custom knowledge bases (internal databases, documents, or external APIs), enabling the bot to fetch or search specific information as part of its dialogue.[1]
+- Botpress has flexible dialog flows and supports "knowledge search" use cases, so AI can be augmented with context from your own resources (e.g., FAQ docs, product databases).
+
+Typbot
+- Typbot supports OpenAI API integration for powering chat or conversational forms, allowing the use of GPT-style language models in conversations.[2][3]
+- Typbot can be configured to use custom prompts and can interact with custom knowledge sources through API hooks, webhooks, or auxiliary backend logic as part of its form submissions or scripted flows.[3]
+- Its community and self-hosting documentation includes guides on adding integrations for both OpenAI and custom data lookups.
+
+Summary Table
+
+| Platform  | OpenAI Integration | Custom Knowledge Source Support     |
+|-----------|--------------------|-------------------------------------|
+| Botpress  | Yes (native module and custom API) | Yes, via scripts and APIs             |
+| Typbot    | Yes (prompt/API integration)       | Yes, via webhook/API calls, custom flows |
+
+Both are designed to be extensible, so plugging in OpenAI for responses and drawing from your organization's knowledge is a documented and popular use case.Both Botpress and Typbot can be integrated with the OpenAI API in the background, enabling AI-powered responses in your chatbot conversations. You can easily configure them to pass user input to OpenAI and return generated replies.[2][3][1]
+
+For custom knowledge, Botpress lets you fetch information from internal databases, APIs, or files, and use it within chat flows — ideal for proprietary company FAQs, product data, or other business specifics. Typbot can also use custom knowledge by connecting with webhooks or other backend systems that handle custom prompts or knowledge retrieval.[3][1]
+
+So yes, you can use both platforms with OpenAI for natural language generation and connect to custom knowledge sources for more contextual, business-specific chatbot experiences.[1][2][3]
+
+
+{{% /details %}}
+
+3. Tock
+   Tock offers deployment guides and Docker support, and is generally straightforward for basic use, though advanced configuration can add complexity.[5]
+
+4. OpenDialog  
+   OpenDialog comes with Docker and cloud-native deployment examples, but its enterprise features and modular setup mean slightly higher complexity than Typbot or Botpress.[5]
+
+5. Claudia Bot Builder / BotMan  
+   Both are developer-oriented and require familiarity with Node.js (Claudia) or PHP (BotMan). Setup is manageable for developers but less friendly for non-technical users.[5]
+
+6. **n8n**  
+   n8n has excellent documentation and quick-start Docker support, but designing a full-featured chatbot requires connecting multiple services manually and custom workflow logic, making setup nontrivial for non-developers.[6][7]
+
+7. Rasa
+   Rasa is the most flexible and powerful for custom conversational AI, but demands Python coding, environment setup, and additional services for deployment (e.g., Nginx, caching, analytics). Best suited for those with developer and DevOps knowledge.[5]
+
+
+This order emphasizes user-friendliness, default self-hosting support, and the level of technical expertise generally required.[3][7][1][6][5]
+
+[1](https://docs.typebot.io/self-hosting/get-started)
+[2](https://github.com/davidbrandpro/typebot.io-Vercel)
+[3](https://github.com/sergor5/typebot-selfhost)
+[4](https://botpress.com/blog/open-source-chatbots)
+[5](https://www.chatbase.co/blog/open-source-chatbot-platforms)
+[6](https://www.voiceflow.com/blog/n8n-ai-chatbot-integration)
+[7](https://blog.n8n.io/how-to-make-ai-chatbot/)

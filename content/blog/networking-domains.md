@@ -3,8 +3,7 @@ title: "Networking - Understanding Domains and DNS Setup"
 date: 2025-09-24
 draft: false
 tags: ["HomeLab","DNS vs ENS","Web2 vs Web3","DNSMap","PolyMarket & OO","dnsmap"]
-description: 'How to Setup DNS for your Domains.'
-summary: 'How to Setup DNS for your Domains. Also UDs.'
+description: 'How to Setup DNS for your Domains. Also UDs.'
 url: 'web-domain-basics'
 ---
 

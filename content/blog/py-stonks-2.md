@@ -47,6 +47,8 @@ Top Priority:
 1. Historical Prices of stocks: not only NYSE or NASDAQ, but also companies which are listed in other markets, like Nestle, Unilever or MunichRe
 2. Historical Dividends
 
+Lift and coast vs DRIP vs DRIP + invest
+
 Nice to have:
 3. Volatility, MDD
 4. Historical EPS, PER and Dividend Payout
