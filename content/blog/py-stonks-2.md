@@ -223,6 +223,15 @@ FastAPI x Firebase Auth worked on desktops perfectly:
 
 **MailerLite** some features *behind a subscribe wall* could also be interesting
 
+##### Hoppscotch
+
+When playing/creating APis...
+
+<!-- https://www.youtube.com/watch?v=V4eC5tKg3WQ -->
+
+{{< youtube "V4eC5tKg3WQ" >}}
+
+
 
 
 ## Outo
@@ -249,3 +258,4 @@ I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit
 > With CSR driven *Calculate Your Dividend Potential* section :)
 
 > > And has an interesting on boarding flow: https://divstash.app/signup/step-1 and T&Cs are mandatory: https://divstash.app/signup/quick
+

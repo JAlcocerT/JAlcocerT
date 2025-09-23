@@ -2,8 +2,8 @@
 title: "Flask x Stripe Payment Links"
 date: 2025-09-16T13:20:21+01:00
 draft: false
-tags: ["Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporalio"]
-description: 'Markdown and Flask working together. A FlaskCMS v0.2 for Real Estate & Mental Health'
+tags: ["Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporalio","Klener status"]
+description: 'Markdown and Flask working together. A FlaskCMS v0.2 for Real Estate & Mental Health?'
 url: 'flask-cms-for-ssgs'
 ---
 
@@ -109,6 +109,17 @@ It was such a very simple statement, and how much truth there is inside of it :)
 With these setups ends my custom/individual website creation.
 
 Time to scale with all the learnings.
+
+Because its not about the tech stack, but the solutions provided.
+
+The simper wins and it seems that for now there wont be a flaskcms2.0.
+
+What it can be is some status pages on the services provided:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### Lately I...
 

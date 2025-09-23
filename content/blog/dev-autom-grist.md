@@ -1,9 +1,9 @@
 ---
-title: "Open Spreadsheets"
-date: 2025-11-07T08:20:21+01:00
+title: "Creating with Open Spreadsheets"
+date: 2025-10-14T08:20:21+01:00
 draft: false
-tags: ["Grist","Web","Automation"]
-description: 'From excel to grist.'
+tags: ["Grist","Web","Table Automation","Forms","OpenLTables vs GoRules"]
+description: 'From excel to Grist.'
 url: 'automation-with-grist'
 ---
 
@@ -44,18 +44,22 @@ docker compose up -d #Grist will be at
 
 ![Grist UI](/blog_img/selfh/HomeLab/grist.png)
 
+<!-- https://www.youtube.com/watch?v=xnNn1TkS7Pc -->
+
+{{< youtube "xnNn1TkS7Pc" >}}
+
 
 {{< callout type="warning" >}}
 A grist document is both, a db and a spreadsheet. Contains all the data and the views. Pages contains views of the spreadsheet data.
 {{< /callout >}}
 
-
-
-https://support.getgrist.com/widget-form/
+* https://support.getgrist.com/widget-form/
 
 ## Grist Stack
 
-The data in Grist is stored in **SQLite** databases, which is a key part of its design for portability. The overall technology stack is a mix of JavaScript, TypeScript, and Python.
+The data in Grist is stored in **SQLite** databases, which is a key part of its design for portability. 
+
+The overall technology stack is a mix of JavaScript, TypeScript, and Python.
 
 ---
 
@@ -117,3 +121,37 @@ The official Grist documentation and community forums confirm that you can modif
 
 In short, with a self-hosted Grist installation, you have a high degree of control over the branding, but it's a manual process that requires knowledge of Docker and CSS.
 
+
+
+### OpenLTables vs GoRules
+
+<!-- https://www.youtube.com/watch?v=kPDSsdS9LAY -->
+
+{{< youtube "kPDSsdS9LAY" >}}
+
+
+GoRules is an open-source business rules engine designed to help organizations define, deploy, and manage complex decision logic with ease. 
+
+It allows users to create business rules through an intuitive interface, making decision automation accessible even for non-developers.
+
+What GoRules can do for you:
+
+- **Faster Decision Implementation:** Quickly define and update business rules without heavy coding, speeding time to market.
+- **Cost Efficiency:** Reduce the dependency on developers for rule changes, lowering operational costs.
+- **Operational Excellence:** Automate and streamline decision-making processes to minimize errors and improve productivity.
+- **Flexibility & Integration:** Written in Rust with native bindings for Node.js, Python, and Go, it can be embedded in applications or run standalone.
+- **Enterprise Features:** Support for self-hosting (including Docker/Kubernetes), single sign-on (SSO), audit logging, and scalable architecture.
+- **Visual Rule Editor:** Lets business teams clearly define conditions and outcomes visually, helping bridge communication with developers.
+- **Complex Logic Handling:** Supports decision trees, condition branching (switch nodes), function and expression nodes for sophisticated rule modeling.
+
+In essence, GoRules helps businesses automate complex decisions efficiently and securely at scale, reducing development bottlenecks and enabling faster adaptation to changing business requirements.[1][2][5][7]
+
+[1](https://gorules.io)
+[2](https://docs.gorules.io/docs/user-manual)
+[3](https://www.nected.ai/blog/rule-engine-in-node-js-javascript)
+[4](https://github.com/Icheka/go-rules-engine)
+[5](https://github.com/gorules/zen)
+[6](https://www.reddit.com/r/golang/comments/xdunm8/guide_to_rule_engines/)
+[7](https://www.youtube.com/watch?v=kPDSsdS9LAY)
+[8](https://www.reddit.com/r/golang/comments/1aowt8y/gorules_business_rules_engine_for_go/)
+[9](https://blog.elest.io/tag/open-source-softwares/)

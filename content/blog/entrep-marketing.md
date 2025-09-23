@@ -302,6 +302,8 @@ Have a look to...
 
 - Marketing automation in open-source tools can be achieved through integration with platforms like Mautic, but usually with more configuration effort.
 
+> 
+
 - Overall, GoHighLevel offers an all-in-one marketing-centric CRM for agencies and businesses needing ready-made automation, while open-source CRM and HRM solutions provide customization, ownership, and self-hosting but at the cost of more setup and technical complexity.
 
 Here is a comparison table of popular self-hosted open-source CRMs, including their pros and cons:

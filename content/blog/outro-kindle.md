@@ -31,6 +31,11 @@ So this is mostly a create + understand notes from kindle.
 
 Rather than a way to admire how people have created **static status pages**: https://open-slum.pages.dev/ nor [get things](https://annas-archive.org/). 
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 With this, you will be able to create and distribute your epublibre.
 
 
@@ -128,3 +133,5 @@ But, I got to know that this is possible: https://kindlemodding.org/
         * https://docs.affine.pro/self-host-affine/references/environment-variables
 
 > The universal editor that lets you work, play, present or create just about anything.
+
+https://www.youtube.com/watch?v=xMuZENfEYEc

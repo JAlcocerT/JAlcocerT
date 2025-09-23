@@ -1,8 +1,8 @@
 ---
 title: "Airtable Free and OSS Alternatives"
-date: 2025-12-15T23:20:21+01:00
+date: 2025-10-15T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting","NocoDB"]
+tags: ["Self-Hosting","NocoDB","Table Automation"]
 description: ''
 url: 'airtable-alternatives'
 ---
@@ -44,6 +44,7 @@ Some open source alternatives to Airtable are:
 * Mathesar: an open-source data platform that supports PostgreSQL and provides a user-friendly interface for data manipulation.
 * Metabase: an open-source business intelligence tool that connects to any database and lets you create charts and dashboards.
 * Grist: an open-source spreadsheet-like tool that allows you to work with data in a structured and flexible way.
+
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Fature Flags for your SaaS"
-date: 2025-10-21T15:20:21+01:00
+date: 2025-09-26T15:20:21+01:00
 draft: false
 tags: ["Dev","GoFeatureFlag vs PocketBase"]
 description: 'FF with Go for your WebApps.'
@@ -18,7 +18,7 @@ I got to know about [Go Feature Flag](#go-feature-flag), a better way to activat
 * https://gofeatureflag.org/
 * https://gofeatureflag.org/docs/sdk
 
-I have been playing with cloudflare workers recently:
+I have been playing with **cloudflare workers** recently:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Payroll Theme with PB as auth" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro Theme + CF Workers + PB users collections as Auth" >}}

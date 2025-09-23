@@ -2,7 +2,7 @@
 title: "Using APIs to write content."
 date: 2025-09-06T08:20:21+01:00
 draft: false
-tags: ["Ghost","Web","Wordpress","Gatsby GraphQL vs REST API","Codex CLI","n8n x wp"]
+tags: ["Ghost","Web","Wordpress API","Gatsby GraphQL vs REST API","Codex CLI","n8n x wp"]
 description: 'Programatic posts creation with the most popular CMSs. Via CLI or N8N workflows.'
 url: 'automating-ghost-and-wordpress'
 ---
@@ -58,7 +58,6 @@ Because if LLMs can generate nice markdown, or help you do web research... why s
 ### Programatic WP
 
 Its all about [REST APIs](#rest-vs-graphql-vs-gatsby).
-
 
 WordPress includes a powerful REST API by default, allowing you to interact with your site's content programmatically.
 
@@ -118,6 +117,8 @@ See https://github.com/JAlcocerT/Home-Lab/blob/main/ghost/API.md after you have 
 ---
 
 ## Conclusions
+
+If you like to do programatic stuff but prefer that agents do the job for you, see: https://github.com/mcp-wp/mcp-server
 
 ---
 

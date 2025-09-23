@@ -2,15 +2,22 @@
 title: "MCP Auth with ToolHive"
 date: 2025-09-26
 draft: false
-tags: ["AI","ToolHive","AgentsMD","markitdown"]
+tags: ["AI","ToolHive","agentpass","AgentsMD","markitdown"]
 description: 'MCP Auth with...docker?'
 url: 'understading-mcp-toolhive'
 ---
 
 **Tl;DR**
 
-[MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) is cool, but their auth is hard: https://blog.logto.io/mcp-auth?ref=newsletter. 
+[MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) is cool.
 
+Yet MCP auth is hard: https://blog.logto.io/mcp-auth?ref=newsletter. 
+
+See: https://www.agentpass.ai/
+
+> Spin Up Secure MCP Servers without writing code
+
+> > Deploy fully-hosted MCP servers that give AI agents controlled and secure access to your systems
 
 **Intro**
 
