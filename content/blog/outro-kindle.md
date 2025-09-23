@@ -127,6 +127,8 @@ But, I got to know that this is possible: https://kindlemodding.org/
 
 ### What is AffinePro
 
+If you are building a [KB](https://jalcocert.github.io/JAlcocerT/knowledge-management/), you might consider AFFine:
+
 * https://github.com/toeverything/AFFiNE
     * https://affine.pro/pricing
     * https://affine.pro/templates/value-proposition-canvas
@@ -134,4 +136,11 @@ But, I got to know that this is possible: https://kindlemodding.org/
 
 > The universal editor that lets you work, play, present or create just about anything.
 
-https://www.youtube.com/watch?v=xMuZENfEYEc
+<!-- https://www.youtube.com/watch?v=xMuZENfEYEc -->
+
+{{< youtube "xMuZENfEYEc" >}}
+
+```sh
+#chmod +x affine-0.13.5-stable-linux-x64.appimage
+#./affine-0.13.5-stable-linux-x64.appimage
+```

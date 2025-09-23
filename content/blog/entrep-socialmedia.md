@@ -139,7 +139,7 @@ docker run -p 3084:3084 --env-file .env --rm -it oculair/postiz-mcp:latest
 
 2. [Zapier](https://zapier.com/app/home)
 
-* Canva seems to have it too
+* Canva seems to have integration too!
 
 * [IFTTT](https://ifttt.com/plans)
 

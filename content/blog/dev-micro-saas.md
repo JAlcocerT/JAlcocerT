@@ -78,6 +78,10 @@ https://docs.firecrawl.dev/use-cases/developers-mcp -> https://github.com/firecr
 
 * https://github.com/KlausSchaefers/quant-ux
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/quant-ux" title="QuantUX | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 {{< details title="Whats QuantUX? Prototyping and Usability Testing 📌" closed="true" >}}
 
@@ -138,6 +142,9 @@ With Quant-UX, the typical workflow is:
 - You analyze this data inside Quant-UX to gain insights and improve your design iteratively.
 
 
+<!-- https://www.youtube.com/watch?v=eTr8SCqCy4Q -->
+
+{{< youtube "eTr8SCqCy4Q" >}}
 
 
 ---

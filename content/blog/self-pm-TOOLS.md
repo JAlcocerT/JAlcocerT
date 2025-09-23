@@ -2,17 +2,19 @@
 title: "PM Tools for Business"
 date: 2025-09-03T23:20:21+01:00
 draft: false
-tags: ["Web","OSS for Business","Self-Hosting","PPTs","AppFlowy"]
-description: 'Become the project manager that can do real work'   
+tags: ["OSS for Business","Self-Hosting","PPTs","AppFlowy"]
+description: 'Become the project manager that can do REAL work. Project Management 101'   
 url: 'selfhosting-pm-tools-docker'    
 ---
 
 
 **Tl;DR**
 
-We want it all "Good, Fast, Cheap". This is the project management trilemma.
+We want it all "Good, Fast, Cheap". 
 
-Fortunately, there are project management tools to help you!
+> This is the project management trilemma.
+
+Fortunately, there are **project management tools** to help you!
 
 **Intro**: As a PM in any project, you will need to:
 
@@ -77,12 +79,47 @@ AppFlowy, an open source project mgmt, documentation, and note-taking app for ex
 
 ## Communication
 
-F/OSS to [Communicate with the Team](https://jalcocert.github.io/JAlcocerT/communication-management).
+You might be interested in F/OSS to [Communicate with the Team](https://jalcocert.github.io/JAlcocerT/communication-management).
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Communication" title="Communication Related | Docker Configs 🐋 ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/communication-management/" title="Communication Tools | Post ↗" >}}  
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/huly" title="Huly | Docker Configs 🐋 ↗" >}}  
 {{< /cards >}}
+
+There is one tool, that can do kind of all at once: PM + [communication](https://jalcocert.github.io/JAlcocerT/communication-management) + [KowledgeBase](https://jalcocert.github.io/JAlcocerT/knowledge-management/)
+
+### Huly
+
+Huly is an open-source all-in-one project management and team collaboration platform designed to replace or integrate the functionalities of tools like Linear, Jira, Slack, Notion, and Motion.
+
+* https://github.com/hcengineering/platform
+
+>  Huly — All-in-One Project Management Platform (alternative to Linear, Jira, Slack, Notion, Motion) 
+
+
+Key features of Huly:
+
+- **Workflow, project, and process management** tailored to dynamic real-world team needs.
+- Team planner and calendar for scheduling and tracking tasks.
+- Real-time collaborative editing of documents with rich text, images, code blocks, and action items.
+- **Integrated chat**, video, and audio conferencing to create virtual office spaces for remote teams.
+- Notifications and time-blocking to boost productivity.
+- Two-way synchronization with GitHub to manage tasks across repositories.
+- Customizable virtual offices and meeting rooms.
+- **Knowledge base** creation with powerful linking and tagging.
+- Focus on streamlining team communication, coordination, and document management.
+
+In essence, Huly is designed as a comprehensive "everything app" for teams to manage projects, communicate, plan, and collaborate seamlessly in one platform.[1][2]
+
+[1](https://huly.io)
+[2](https://docs.huly.io/getting-started/introduction-huly/)
+[3](https://www.saasframe.io/saas/huly)
+[4](https://uxplanet.org/9-ui-ux-must-tools-for-designers-df60745d990e)
+[5](https://www.youtube.com/watch?v=mYsuk7JYmYY)
+[6](https://instinctdesignstudio.com/blog/10-ai-powered-design-tools-ux-design/)
+[7](https://www.reddit.com/r/Hulu/comments/17wzkfs/what_would_you_change_about_your_hulu_experience/)
+[8](https://wallin-design.webflow.io/portfolio-projects/hulu-mobile-app-ui-redesign)
+[9](https://www.figma.com/community/file/1482368458764874574/sleeksphere-unified-workspace-ui-concept)
 
 ## Creating Presentations (PPTs)
 
@@ -96,6 +133,12 @@ You can also create PDFs with [stirling-pdf](https://fossengineer.com/selfhostin
 
 2. DrawIO
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/excalidraw" title="Excalidraw | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/drawio" title="DrawIO | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ## F/OSS to Manage Projects
 
 A project is also a lot about Time Management.
@@ -103,10 +146,9 @@ A project is also a lot about Time Management.
 These tools help to get an overview of *where are we* for your daily: 
 
 1. OpenProject
-2. [LeanTime](https://fossengineer.com/selfhosting-Leantime-docker/)
+2. [LeanTime](https://fossengineer.com/selfhosting-Leantime-docker/) as per [config](https://github.com/JAlcocerT/Docker/blob/main/Business/PM/leantime_docker-compose.yaml)
 3. TimeLite
 
-https://github.com/JAlcocerT/Docker/blob/main/Business/PM/leantime_docker-compose.yaml
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Business/PM" title="PM Related | Docker Configs 🐋 ↗" >}}
@@ -147,7 +189,7 @@ Looking for a [**job change** because the market is bullish](https://jalcocert.g
 
 > Syncthing Multi Server Monitor aka smsm aka sm²
 
-2. Just use NextCloud, bro.
+2. Just use NextCloud, *,bro'*.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/syncthing" title="Syncthing | Docker Configs 🐋 ↗" >}}
@@ -159,10 +201,9 @@ Looking for a [**job change** because the market is bullish](https://jalcocert.g
 
 ## FAQ
 
-### Other F/OSS
+### Other Related F/OSS Tools
 
 * Vikunja
-* Leantime
 * Taiga
 * Plane - https://mariushosting.com/how-to-install-plane-on-your-synology-nas/
 

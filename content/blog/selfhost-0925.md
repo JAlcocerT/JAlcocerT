@@ -278,6 +278,20 @@ docker image prune -a
 docker ps -q | grep -v portainer | xargs docker stop
 ```
 
+4. How much resources are those containers cosuming?
+
+```sh
+docker-compose stats
+#sudo docker stats 7dfdfce97523
+#sudo docker stats nextcloud
+#docker stats typebot-builder typebot-viewer typebot-db
+
+docker stats $(docker ps --filter "name=typebot" --format "{{.Names}}")
+#docker stats -a
+```
+
+See also lazydocker
+
 ### How to Change USB Size
 
 This has been useful few times already (from Windows):

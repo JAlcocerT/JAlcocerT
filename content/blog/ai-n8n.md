@@ -1,9 +1,9 @@
 ---
-title: "Just n8n, MCP and AI workflows"
+title: "Just n8n, automation and AI workflows"
 date: 2025-09-19
 draft: false
-tags: ["n8n AI Chat","PlayWright MCP","n8n vs Huggin vs flowise"]
-description: 'Having fun with n8n.'
+tags: ["n8n AI Chat","PlayWright MCP","n8n vs Huggin vs FlowiseAI"]
+description: 'Having fun with n8n. Telegram Bots, Webhooks, OpenAI API...'
 url: 'n8n-with-ai'
 ---
 
@@ -209,7 +209,7 @@ Here's a breakdown of why your statement is correct:
 {{% /details %}}
 
 
-{{< details title="Remember - API vs WwebHooks... 📌" closed="true" >}}
+{{< details title="Remember - API vs WebHooks... 📌" closed="true" >}}
 
 API and webhook connections serve different but **complementary purposes in workflow automation**. 
 
@@ -262,13 +262,15 @@ You might want to consider other n8n *,alternatives'*, like hugging or Flowise.
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/hugging" title="Hugging | Config File 🐳 ↗"  >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/automation/hugging-ui.png)
+![Hugging Platform](/blog_img/selfh/automation/hugging-ui.png)
 
 Huginn is an open-source, **self-hosted automation tool** that allows you to create "agents" to perform automated tasks online.
 
 It's often compared to services like IFTTT or Zapier, but gives you more control and privacy because it runs on your own server.
 
-**Huginn** and **n8n** are both very similar in their core purpose: they are open-source, self-hosted tools for workflow automation. Both are excellent alternatives to proprietary services like Zapier and IFTTT.
+**Huginn** and **n8n** are both very similar in their core purpose: they are open-source, self-hosted tools for workflow automation.
+
+Both are excellent alternatives to proprietary services like Zapier and IFTTT.
 
 However, they have some key differences in their design, user experience, and ideal use cases.
 
@@ -489,7 +491,7 @@ Now, we will be using the n8n node: https://docs.n8n.io/integrations/builtin/app
 * https://core.telegram.org/bots/api
 * https://api.telegram.org/bot<BOT_TOKEN>/getUpdates
 
-To get the chat ID, send a msg to your new bot:
+To get the chat ID, send a msg to your **new telegram bot**:
 
 ```sh
 curl "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates"

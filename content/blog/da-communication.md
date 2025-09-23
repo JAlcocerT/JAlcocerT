@@ -2,7 +2,7 @@
 title: "In touch with our colleagues"
 date: 2025-08-28T19:20:21+01:00
 draft: false
-tags: ["DA","Career","Slack","MatterMost","Element"]
+tags: ["DA","Career","Slack vs Discord","MatterMost","Element"]
 description: 'Communication tools with slack...or with OSS?'
 url: 'communication-management'
 ---

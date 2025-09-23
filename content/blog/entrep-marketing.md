@@ -300,9 +300,65 @@ Have a look to...
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-- Marketing automation in open-source tools can be achieved through integration with platforms like Mautic, but usually with more configuration effort.
+- Marketing automation in open-source tools can be achieved through integration with platforms like **Mautic**, but usually with more configuration effort.
 
-> 
+{{% details title="What is Mautic? 🚀" closed="true" %}}
+
+Mautic is an open-source **marketing automation platform** that helps businesses create, manage, and optimize their marketing campaigns with data-driven decision-making.
+
+Key features of Mautic:
+
+- **Email Marketing:** Create, personalize, and A/B test email campaigns using a drag-and-drop builder.
+- **Lead Management:** Capture and nurture leads from forms and landing pages, segment contacts, and score leads based on behavior.
+- Multi-Channel Marketing: Automate campaigns across email, SMS, social media, and web push notifications.
+- Campaign Automation: Design complex marketing workflows triggered by user actions, time-based events, or conditions using a visual campaign builder.
+- **Landing Pages and Forms:** Build customizable landing pages and forms to generate leads and gather customer information.
+- **Behavioral Tracking:** Track customer interactions across websites, emails, and landing pages for better targeting and personalization.
+- Analytics and Reporting: Monitor campaign performance, ROI, user engagement, and email metrics.
+- **Integrations:** Connect with CRM systems, CMS platforms, social media, and other marketing tools through extensive APIs.
+- Data Privacy and Compliance: Ensure marketing efforts comply with GDPR and other privacy regulations.
+- Open-source Flexibility: Fully customizable platform with no vendor lock-in, allowing users to host it themselves and modify it to fit specific needs.
+
+Mautic enables businesses, agencies, and enterprises to automate their marketing processes, improve customer engagement, and drive conversions effectively while maintaining full control of their marketing data.
+
+{{% /details %}}
+
+
+
+{{% details title="Mautic and...Odoo? 🚀" closed="true" %}}
+
+
+Yes, Mautic is commonly integrated with CRM systems like Odoo and Clay to synchronize marketing and sales data.
+
+**Mautic and Odoo Integration:**
+
+- There are dedicated connectors and modules (e.g., Odoo Mautic Connector) that sync contacts, companies, campaigns, and email templates between the two platforms.
+- Integration supports bidirectional data flow, so updates in Mautic reflect in Odoo and vice versa.
+- Automated cron jobs handle real-time or scheduled synchronization, eliminating manual data entry.
+- Workflows can be customized to trigger actions like creating leads in Odoo when forms are submitted in Mautic.
+- Data mapping and filtering options allow precise control over synced data.
+- Integration is often done through APIs or third-party automation tools like Zapier or n8n.
+- This setup helps marketing and sales teams collaborate better by unifying lead management and campaign execution.
+
+Mautic and Clay:
+- While less common than Odoo, integration with tools like Clay can be achieved via APIs or automation platforms to synchronize contacts and enrich CRM data.
+  
+In summary, integrating Mautic with CRMs like Odoo or Clay is a standard practice to streamline marketing and sales pipelines and improve lead nurturing and customer engagement.[1][2][5][7][8][9]
+
+[1](https://apps.odoo.com/apps/modules/11.0/pragtech_mautic_connector)
+[2](https://zapier.com/apps/mautic/integrations/odoo)
+[3](https://apps.odoo.com/apps/modules/18.0/mautic_odoo_connector)
+[4](https://n8n.io/integrations/mautic/and/odoo/)
+
+{{% /details %}}
+
+
+{{< youtube "SfxfLP9MxGY" >}}
+
+<!-- https://www.youtube.com/watch?v=SfxfLP9MxGY -->
+
+> We can do Campaign Forms, Newsletter submissions, Landing Pages, Prepare custom email skeletons 
+
 
 - Overall, GoHighLevel offers an all-in-one marketing-centric CRM for agencies and businesses needing ready-made automation, while open-source CRM and HRM solutions provide customization, ownership, and self-hosting but at the cost of more setup and technical complexity.
 
