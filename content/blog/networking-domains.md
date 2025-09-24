@@ -110,7 +110,7 @@ In summary, the content heavily emphasizes Web3 domain ownership, decentralizati
 
 So now, you have learnt not only about regular TLD domains and DNS for your homelab.
 
-But also on ENS and how they relate with crypto.
+But also on ENS and how they [relate with crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/).
 
 Which is...a totally different world.
 
@@ -182,22 +182,30 @@ Using a regular Web2 domain like polymarket.com to interact with Polygon smart c
 - The frontend acts as a convenient interface to interact with underlying decentralized smart contracts, making blockchain functionality accessible without complex direct calls.
 - MetaMask and similar wallet extensions enable secure cryptographic signing without exposing private keys to the web server.
 
-### Summary
+**Summary**
 
-The Web2 website serves as a user-friendly interface that connects via Web3 protocols (through MetaMask) directly to Polymarket’s smart contracts on Polygon. The domain or server is a frontend layer only—user funds and actions are secured and executed on the blockchain, not by the website itself. This hybrid architecture is common to many dApps today, blending traditional web usability with decentralized trust and control.[1][2][3]
+The Web2 website serves as a user-friendly interface that connects via Web3 protocols (through MetaMask) directly to Polymarket’s smart contracts on Polygon.
+
+The domain or server is a frontend layer only—user funds and actions are secured and executed on the blockchain, not by the website itself. 
+
+This hybrid architecture is common to many dApps today, blending traditional web usability with decentralized trust and control.[1][2][3]
 
 [1](https://rocknblock.io/blog/how-polymarket-works-the-tech-behind-prediction-markets)
 [2](https://101blockchains.com/best-dapp-browsers/)
 [3](https://docs.polymarket.com/developers/proxy-wallet)
 
-Yes, it can be concluded that a Web3 domain is not strictly necessary to interact with smart contracts (SCs). Many popular decentralized applications (dApps) like Polymarket or Aave operate entirely over traditional Web2 domains while enabling users to connect their Web3 wallets, such as MetaMask, to interact with smart contracts on blockchains like Ethereum or Polygon.[1][2][3]
+Yes, it can be concluded that a Web3 domain is not strictly necessary to interact with smart contracts (SCs). 
+
+Many popular decentralized applications (dApps) like Polymarket or Aave operate entirely over traditional Web2 domains while enabling users to connect their Web3 wallets, such as MetaMask, to interact with smart contracts on blockchains like Ethereum or Polygon.[1][2][3]
 
 ### Examples Like Aave Protocol
+
 - Aave, a leading DeFi protocol, uses regular Web2 domains (e.g., aave.com) as the frontend interface.
 - Users connect their MetaMask (or other wallet) through the website to interact with smart contracts deployed on Ethereum and other blockchains.
 - The website is a Web2 portal that calls blockchain smart contracts off-chain via Web3 libraries without needing a blockchain-based domain.[2][1]
 
 ### Do You Need a Web3-Compatible Domain to Connect MetaMask?
+
 - No, a Web3-compatible domain (like .crypto, .eth, or .brave) is not required for MetaMask or other wallets to connect and interact with smart contracts.
 - MetaMask and wallets connect to dApps based on the website domain and Web3 libraries loaded in the browser, not exclusively on domain type.
 - However, Web3 domains can improve the user experience by providing human-readable blockchain addresses and enabling seamless blockchain-native navigation in compatible browsers like Brave.[4][5][6]
@@ -266,3 +274,11 @@ In summary, **UMA's Optimistic Oracle** is a human-centric, "optimistic" system 
 **Chainlink** is a network of machines that pulls data from multiple external, trusted sources and aggregates it to provide a single, reliable data point.
 
 Both are decentralized, but they achieve security and data integrity through different architectural models.
+
+### BTC and Electrum
+
+![Electrum Wallet](/blog_img/crypto/btc/pocketbtc-electrum.png)
+
+![alt text](/blog_img/crypto/btc/electrum-sign.png)
+
+![alt text](/blog_img/crypto/btc/electrum-msg.png)
