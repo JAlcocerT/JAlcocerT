@@ -221,13 +221,13 @@ In summary, while Web3 domains enhance the decentralized web experience, interac
 
 ### PolyMarket
 
-https://polygonscan.com/address/0x4d97dcd97ec945f40cf65f87097ace5ea0476045
+The **SC seems** to be in Polygon: https://polygonscan.com/address/0x4d97dcd97ec945f40cf65f87097ace5ea0476045
 
 <!-- 
 twitter
 https://x.com/Polymarket/status/1968374742844588469?t=iL9luRfaVkLctynB91JHaw&s=35 -->
 
-{{< tweet user="Polymarket" id="iL9luRfaVkLctynB91JHaw" >}}
+<!-- {{< tweet user="Polymarket" id="iL9luRfaVkLctynB91JHaw" >}} -->
 
 
 #### Optimistic Oracle
