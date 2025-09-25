@@ -36,6 +36,10 @@ Rather than a way to admire how people have created **static status pages**: htt
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+![alt text](/blog_img/selfh/HomeLab/statuspages/kener-setup.png)
+
+![alt text](/blog_img/selfh/HomeLab/statuspages/kener-manager-ui.png)
+
 With this, you will be able to create and distribute your epublibre.
 
 

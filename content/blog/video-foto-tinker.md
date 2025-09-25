@@ -383,6 +383,11 @@ Most important ones for me were: `S` to select, `X` to cut/slice video part.
 
 Right click to the video part and change speed to make it go faster *up to 4000% aka x40*.
 
+
+You can also make zoom in KDE applying:
+
+![KDE Zoom](/blog_img/outro/kde-zoom.png)
+
 Then `CTRL + enter` to render
 
 
