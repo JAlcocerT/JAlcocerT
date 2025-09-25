@@ -11,6 +11,8 @@ theme: ["hugo-chart", "hextra"]
 
 params:
   description: JAlcocerT Blog
+  # search:
+  #   enable: false
 
 markup:
   # allow raw html

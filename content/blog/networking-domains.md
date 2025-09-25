@@ -227,7 +227,9 @@ The **SC seems** to be in Polygon: https://polygonscan.com/address/0x4d97dcd97ec
 twitter
 https://x.com/Polymarket/status/1968374742844588469?t=iL9luRfaVkLctynB91JHaw&s=35 -->
 
-<!-- {{< tweet user="Polymarket" id="iL9luRfaVkLctynB91JHaw" >}} -->
+<!-- {{< tweet user="Polymarket" id="1968374742844588469" >}} -->
+
+{{< tweet user="Polymarket" id="1968374742844588469" >}}
 
 
 #### Optimistic Oracle
