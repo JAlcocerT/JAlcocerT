@@ -870,11 +870,11 @@ Or go the **n8n** route, as seen with:
 
 ![n8n Overview](/blog_img/GenAI/NoCode-AI/n8n-overview.png)
 
-See how embeded boubles look: https://morita-web.pages.dev/
+See how **embeded boubles** look: https://morita-web.pages.dev/
 
 ### Context Engineering
 
-Apparently, this is an alternative already to vibe coding.
+Apparently, this is an alternative already to vibe coding: Context Engineering
 
 * https://github.com/coleam00/context-engineering-intro
 
@@ -882,7 +882,9 @@ Apparently, this is an alternative already to vibe coding.
 
 {{< youtube "uohI3h4kqyg" >}}
 
-> MIT | Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work. Claude Code is the best for this so that's what this repo is centered around, but you can apply this strategy with any AI coding assistant!
+> MIT | Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work.
+
+> > Claude Code is the best for this so that's what this repo is centered around, but you can apply this strategy with any AI coding assistant!
 
 ### Tokenization vs Dynamic Chunking
 

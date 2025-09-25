@@ -81,6 +81,79 @@ Checks:
 
 ![alt text](/blog_img/web/morita-flask/website-carbon-morita.png)
 
+4. No broken links
+
+```sh
+sudo apt-get install -y linkchecker
+linkchecker ./public/ \
+  --ignore-url "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/" || echo "LinkChecker found errors, but continuing..."
+```
+
+{{< dropdown title="How to Use LinkChecker with Docker ⏬" closed="true" >}}
+
+* Use LinkChecker with their [GHCR Image](https://github.com/linkchecker/linkchecker/pkgs/container/linkchecker)
+
+```sh
+docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://www.example.com
+```
+
+{{< /dropdown >}}
+
+Btw, the **pages speed insights**, can be done via API: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
+
+![alt text](/blog_img/web/morita-flask/pagespeedinsightapi.png)
+
+![alt text](/blog_img/web/morita-flask/pagespeed-gcp-api.png)
+
+> So if you want to scrap business websites + generate the analysis and propose a better solution....its up to you :)
+
+Also...
+
+
+{{% details title="...Google Search Console API? GSC 🚀" closed="true" %}}
+
+Yes, you absolutely can access Google Search Console (GSC) data programmatically via an API.
+
+The primary method is the **Google Search Console API (formerly Webmaster Tools API)**. This is the official, direct interface Google provides for developers to pull data like search performance, crawl errors, and sitemaps.
+
+The GSC API is a powerful RESTful interface that allows you to automate tasks and integrate GSC data into your own applications, reporting dashboards, or analysis tools.
+
+ Key API Capabilities:
+
+1.  **Search Analytics**: This is the most used part. It allows you to query performance data (clicks, impressions, CTR, position) for specific queries, pages, countries, or devices over a defined date range.
+2.  **Sitemaps**: You can submit new sitemaps, get information about already submitted ones, and delete old ones.
+3.  **URL Inspection**: You can programmatically check the current indexing status of any URL on your site, including coverage, mobile usability, and rich results status.
+4.  **Crawl Errors**: You can retrieve a list of crawl errors found by Googlebot.
+
+
+Tools to Help Access the API
+
+While you can write custom code in Python, JavaScript, or any language to interact with the API, several tools and libraries simplify the process:
+
+ 1. Python Libraries (Most Popular)
+
+* **Google API Client Library for Python**: This is the official library and the most common way to interact with the GSC API. It handles authentication (OAuth 2.0) and data retrieval. This is often used for custom data pipelines and automation.
+* **Pandas**: Once you pull the data using the API client, libraries like Pandas are essential for structuring, filtering, and analyzing the search data.
+
+ 2. Low-Code/No-Code Tools (Recommended for Automation)
+
+For your use case of integrating with an n8n workflow, low-code/no-code tools are highly effective:
+
+* **n8n (Custom HTTP Request Node)**: While n8n may not have a dedicated GSC node (it focuses more on the standard Google services like Sheets or Drive), you can use the generic **HTTP Request node** or a **Code node** to make direct calls to the GSC REST API. This allows for deep customization within your existing workflow environment.
+* **Google Apps Script (GAS)**: If you want to pull GSC data directly into Google Sheets, GAS is the easiest solution. You can write a script that authenticates, queries the GSC API, and dumps the results into a sheet on a scheduled trigger.
+* **Third-Party Connectors (Supermetrics, Fivetran)**: These are commercial ETL tools that provide pre-built connectors to GSC, automating the process of pulling data into data warehouses or BI tools with zero coding required.
+
+ Summary for your Workflow
+
+To integrate GSC data into an **n8n workflow**, the most practical approach is:
+
+1.  Use the **HTTP Request Node** to call the GSC API endpoints directly.
+2.  Authenticate using **OAuth 2.0 credentials** generated via the Google Cloud Console, which n8n handles well.
+3.  Use the JSON data output from the HTTP Request node in subsequent nodes for reporting or analysis. 
+
+{{% /details %}}
+
+
 ### Real Estate
 
 Time to put an end to this one!
@@ -256,6 +329,8 @@ Using a Stripe Payment Link for a subscription provides a complete, self-contain
     * Change their subscription plan (e.g., upgrade or downgrade).
     * **Cancel their subscription.** To enable this, you need to configure the Customer Portal in your Stripe Dashboard and provide a link to it for your customers (you can often do this via automated emails from Stripe). This allows your customers to manage their subscriptions themselves, which significantly reduces the administrative burden on you.
 
+---
+
 ## FAQ
 
 ### Cloudflare Free Tier
@@ -265,6 +340,7 @@ On Cloudflare's free tier, there is no explicit limit on the number of domains (
 You can add and protect many domains under a single free account.
 
 However, there are some associated limits relevant to usage and features on the free plan:
+
 - For Cloudflare Pages projects, the free plan allows up to 100 custom domains per project.
 - For Workers usage on the free tier, there is a daily request limit of 100,000 requests.
 - Other feature limits and quotas apply to DNS rules, applications, and workers but are generally generous for typical free-tier usage.
