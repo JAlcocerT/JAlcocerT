@@ -31,7 +31,7 @@ But how people do this in a PRO and private way?
 sudo snap install joplin-desktop
 ```
 
-With notes it seems that [all comes down to](#the-plain-text-philosophy-vs-database-philosophy): *just markdown (vs) more features and 'locking'*
+With notes as in many other topics, it seems that [all comes down to](#the-plain-text-philosophy-vs-database-philosophy): *just markdown (vs) more features and ,locking'*
 
 
 ### Knowledge Management Tools
@@ -105,6 +105,17 @@ The Verdict
 --- 
 
 ## Conclusions
+
+If you are looking for simplicity, have a look to the **flat file and local first** options, like [raneto](https://github.com/JAlcocerT/Home-Lab/tree/main/raneto) or:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/flatnotes" title="Flatnotes | Docker Configs 🐋 ↗" >}}
+    {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+> You might also be thinking...how about using those to provide SSG editor capabilities
+
+> > Kind of a ~ flatfile CMS?
 
 I know what you are looking for: **DATABASELESS KNOWLEDGE BASE**
 

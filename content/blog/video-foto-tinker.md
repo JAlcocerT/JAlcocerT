@@ -486,7 +486,19 @@ If you are into OSS, see:
 1. GIMP - The GNU Image Manipulation Program - https://gitlab.gnome.org/GNOME/gimp
 2. digiKam
 3. Photoflow
+4. https://github.com/PintaProject/Pinta See https://www.pinta-project.com/
 
+```sh
+sudo snap install pinta
+```
+
+> Simple GTK Paint Program
+
+
+To remove photo backgrounds with OSS:
+
+1. https://github.com/withoutbg/withoutbg
+2. 
 
 **Tools for Creator Mode:**
 

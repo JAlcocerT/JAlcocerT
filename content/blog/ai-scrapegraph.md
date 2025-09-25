@@ -7,7 +7,7 @@ tags: ["Gen-AI","Dev","Scrapping","LLMs","LinkChecker"]
 #     image: "https://socialify.git.ci/VinciGit00/Scrapegraph-ai/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
 #     alt: "Using ScrapeGraph with Python" # alt text
 #     caption: "ScrapeGraph 101." # display caption under cover
-description: 'Selfhosting Scrapegraph-ai with Docker. Scrap with Python. Check links with linkchecker'
+description: 'Selfhosting Scrapegraph-ai with Docker. Scrap with Python.'
 summary: 'Scrapping with AI and Open Source. How to use Scrape Graph and how it compares with similar F/OSS projects.'
 url: 'scrapping-with-llms'
 #isPinned: true

@@ -76,7 +76,11 @@ For example something like: https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefi
 Checks:
 
 1. https://pagespeed.web.dev/analysis/https-psikolognevinkeskin-info/akk4rhictv?form_factor=mobile
+
 2. https://web-check.xyz/check/https%3A%2F%2Fpsikolognevinkeskin.info%2F
+
+> https://web-check.xyz/check/https%3A%2F%2Ffossengineer.com
+
 3. https://www.websitecarbon.com/website/psikolognevinkeskin-info/
 
 ![alt text](/blog_img/web/morita-flask/website-carbon-morita.png)
@@ -95,6 +99,7 @@ linkchecker ./public/ \
 
 ```sh
 docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://www.example.com
+
 ```
 
 {{< /dropdown >}}

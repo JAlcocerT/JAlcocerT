@@ -59,6 +59,10 @@ Nice to have:
 8. provide for your Portfolio the: historical dividends, confirmed dividends, forecasted dividends (per month/year)
 9. Comparison on a stock/portfolio with a sector: https://finance.yahoo.com/sectors/real-estate/
 10. https://millennialmoney.com/calculators/fire-calculator/
+11. https://totalrealreturns.com/s/SCHD,VYM,PEP?start=2020-04-23
+12. https://stockanalysis.com/stocks/pep/dividend/
+
+https://www.gurufocus.com/term/forward-pe-ratio/PEP
  
 See [the BRD](#faq) where we scoped the project.
 

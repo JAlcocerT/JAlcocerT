@@ -659,7 +659,7 @@ Choose the User Type you want, and click the Create button. (Note: If you select
 
 * Use Cases:
 
-Public-facing applications: Any app designed for general users (e.g., a photo editing app that integrates with Google Photos, a task manager that syncs with Google Calendar).
+Public-facing applications: Any app designed for general users (e.g., a picture editing app that integrates with Google Photos, a task manager that syncs with Google Calendar).
 
 Third-party integrations: When your app needs to interact with users outside of your direct organization.
 
