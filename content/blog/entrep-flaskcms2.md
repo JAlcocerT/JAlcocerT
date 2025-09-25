@@ -164,7 +164,12 @@ And because having few separated services is a burdden.
 
 I wanted to consolidate the ssg + admin authentication to add new properties + the [last version of st scrapping](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py)
 
-n8nx(scrap+Github)+CICD to add a markdown post and get automatical SSG build.
+A [workflow like n8n](https://github.com/JAlcocerT/Home-Lab/tree/main/n8n/sample-workflows) x (scrap+Github)+CICD to add a markdown post and get automatical SSG build....sounds like a plan!
+
+![N8N WOrkflow to generate posts to github as per OpenAI Post](/blog_img/selfh/automation/gh-n8n-post-openai.png)
+
+> This will need to be leveraged with scrapping, but it can be done!
+
 
 So...the last version of [realestate proposal with PB](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py) is a total and complete overkill.
 

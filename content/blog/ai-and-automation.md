@@ -2,7 +2,7 @@
 title: "Automation for your Agency"
 date: 2025-09-25
 draft: false
-tags: ["n8n","typebot","botpress","KB"]
+tags: ["n8n","typebot","botpress","KB","Real Estate"]
 description: 'Getting leads fast towards your product landing'
 url: 'pro-agency-automation'
 ---
@@ -54,6 +54,8 @@ But how about if you can just scrap + get the property added for your collaborat
 > Wasnt it cool that vibe coded gradient?
 
 ##### n8n x Github
+
+> Sample wf https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/4-openai-github_posts.json
 
 
 {{% details title="How to push OpenAI generated .md to github with n8n 🚀" closed="true" %}}
@@ -146,9 +148,23 @@ So writting posts into Github so that the SSG+CI/CD workflow starts be like:
 
 ![alt text](/blog_img/selfh/automation/gh-n8n-post-openai.png)
 
+See what they produce. [Sample md](https://github.com/JAlcocerT/morita-web/blob/main/src/content/sample-post2.md)
+
+
 ##### n8n x Scraping
 
-Instead of having this cool streamlit web scrapper...
+Instead of having this cool [streamlit web scrapper](https://github.com/JAlcocerT/moi-realestate-pb/tree/master/ScrapPhotosWebApp)... and better than this [n8n tg scrap wf](https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/3-webhook_openai_tg.json)
 
+1. With **BS4**
+
+2. Just use...**FireCrawl** with n8n https://www.npmjs.com/package/@mendable/n8n-nodes-firecrawl
+
+##### n8n x APIFY
+
+* https://www.npmjs.com/package/@apify/n8n-nodes-apify
+
+![alt text](/blog_img/selfh/automation/n8n-apify.png)
+
+##### n8n x leads
 
 #### Landing ChatBot with KB knowledge
