@@ -13,6 +13,13 @@ params:
   description: JAlcocerT Blog
   # search:
   #   enable: false
+  
+  # n8n Chatbot Configuration
+  # chatbot:
+  #   enable: true
+  #   webhookUrl: "https://n8n.jalcocertech.com/webhook/926db831-364e-4cbf-968b-c4abf21c640b/chat"
+  #   label: "JAlcocerT Assistant"
+  #   description: "Ask me anything about development, tech, or this site!"
 
 markup:
   # allow raw html

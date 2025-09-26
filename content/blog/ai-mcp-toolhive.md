@@ -2,7 +2,7 @@
 title: "MCP Auth with ToolHive"
 date: 2025-09-26
 draft: false
-tags: ["AI","ToolHive","agentpass","AgentsMD","markitdown"]
+tags: ["AI","ToolHive vs FastMCP","agentpass","AgentsMD","markitdown"]
 description: 'MCP Auth with...docker?'
 url: 'understading-mcp-toolhive'
 ---
@@ -23,9 +23,14 @@ See: https://www.agentpass.ai/
 
 In summary, ToolHive facilitates the use of MCPs by providing a user-friendly, secure, and scalable way to deploy and manage MCP servers in different environments. This enhances the practical implementation and usability of MCP technology in AI-driven workflows.[1][2][3][4]
 
-*https://github.com/stacklok/toolhive
+* https://github.com/stacklok/toolhive
 
+And compare it with:
 
+* https://github.com/jlowin/fastmcp
+* https://www.jlowin.dev/blog/fastmcp-2-10k-stars
+
+>  🚀 The fast, Pythonic way to build MCP servers and clients 
 
 ## About ToolHive
 
@@ -50,11 +55,11 @@ And there are some tools to bring that authentication to MCPs:
     * https://docs.stacklok.com/toolhive/guides-ui/install
 
 
-## Toolhive Studio – Flatpak Installation (User Scope)
+Toolhive Studio – Flatpak Installation (User Scope)
 
 This guide documents the steps we used (Option A) to install Toolhive Studio from a local Flatpak bundle by adding Flathub to the **user** remotes and installing the legacy runtime it requires.
 
-## Prerequisites
+**Prerequisites**
 
 - Flatpak installed.
   - Ubuntu/Debian: `sudo apt update && sudo apt install -y flatpak`
@@ -102,7 +107,7 @@ This guide documents the steps we used (Option A) to install Toolhive Studio fro
 - EOL Runtime:
   - Freedesktop 19.08 is end-of-life; if it disappears from Flathub in the future, install a newer Toolhive Studio release targeting a supported runtime (e.g., 22.08/23.08), or use a distribution package if available.
 
-## Useful Commands
+Useful Commands
 
 - List remotes:
   ```bash
@@ -124,7 +129,7 @@ This guide documents the steps we used (Option A) to install Toolhive Studio fro
   flatpak uninstall org.freedesktop.Platform//19.08 org.freedesktop.Platform.GL.default//19.08
   ```
 
-## Summary
+Summary
 
 - Added Flathub to user remotes
 - Installed Freedesktop 19.08 runtime (EOL but required by this bundle)
@@ -132,7 +137,7 @@ This guide documents the steps we used (Option A) to install Toolhive Studio fro
 - Launched Toolhive Studio successfully
 
 
-# Homebrew and ToolHive Installation Guide for Linux
+## Homebrew and ToolHive Installation Guide for Linux
 
 This guide walks through installing Homebrew (package manager) and ToolHive (thv) on Linux systems.
 

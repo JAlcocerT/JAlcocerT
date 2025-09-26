@@ -50,7 +50,7 @@ podman --version
 
 
 * Understand what chmod does: https://it-tools.tech/chmod-calculator
-* Dont be afraid of the terminal. Embrace the CLI and SSH ([Termix](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#termix) will help)
+* Dont be afraid of the terminal. Embrace the CLI and SSH ( [Termix](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#termix) will help! )
 * Crontab to schedule tasks: https://it-tools.tech/crontab-generator
 * Get in love with docker compose: https://it-tools.tech/docker-run-to-docker-compose-converter
 * Understand apt packages and [how to manage them](https://jalcocert.github.io/JAlcocerT/homelab-security/#conclusions)
@@ -403,6 +403,8 @@ nmap -sn 192.168.1.0/24
 ```sh
 ping -c 4 192.168.1.106
 #nmap -O 192.168.1.106
+#tailscale status
+sudo tailscale up --force-reauth #just in case you forgot to extend the expiry
 ```
 
 #### Hello Again Firebat
@@ -419,6 +421,15 @@ And that has a point, actually.
 
 ```sh
 ssh casa@192.168.1.106
+#du -sh .                    # Human-readable size of current folder
+du -sh /media/casa/Datos_copia_2/PerriChico
+#du -sh .* | sort -h
+#du -h --max-depth=2         # Two levels deep
+#rm *.LRF #clean (if needed) all LRF files
+sudo snap install vlc
+sudo apt update && sudo apt install ubuntu-restricted-extras
 ```
 
-So I decided to propose a 
+So I decided to propose a new homelab architecture....
+
+> Traefik v3.3 + Cloudflare + Tailscale IP

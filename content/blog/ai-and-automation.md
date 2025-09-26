@@ -2,7 +2,7 @@
 title: "Automation for your Agency"
 date: 2025-09-25
 draft: false
-tags: ["n8n","typebot","botpress","KB","Real Estate"]
+tags: ["n8n","typebot","botpress","KB","Real Estate ChatBot"]
 description: 'Getting leads fast towards your product landing'
 url: 'pro-agency-automation'
 ---
@@ -160,6 +160,60 @@ Instead of having this cool [streamlit web scrapper](https://github.com/JAlcocer
 2. Just use...**FireCrawl** with n8n https://www.npmjs.com/package/@mendable/n8n-nodes-firecrawl
 
 > Lets use this Example [page for re to scrap](https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/26643098/es/)
+
+What a better chance than this to start trying the `when chat message received` aka `chat trigger` node?
+
+```sh
+#https://n8n.jalcocertech.com/webhook/926db831-364e-4cbf-968b-c4abf21c640b/chat
+ curl -X POST https://n8n.jalcocertech.com/webhook/926db831-364e-4cbf-968b-c4abf21c640b/chat -H "Content-Type: application/json" -d '{"message": "Hello, test message", "sessionId": "test-session-123"}'
+ ```
+
+
+For the **chatbot interface to be rendered** into a website:
+
+0. https://www.npmjs.com/package/@n8n/chat?activeTab=readme
+1. https://github.com/symbiosika/n8n-embedded-chat-interface
+
+
+Yes, n8n provides a script that can be added to the head of a website to embed an interactive chatbot interface that sends and receives messages from an n8n workflow.
+
+The "N8N Embedded Chat Interface" is a native web component that you can easily integrate on any website with just a few lines of HTML and JavaScript. You include a script tag linking the chatbot interface library from a CDN, then add a custom HTML tag with attributes specifying the webhook URL of your n8n workflow that handles the chatbot logic.
+
+Example snippet to add to your website:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/n8n-embedded-chat-interface@latest/output/index.js"></script>
+
+<n8n-embedded-chat-interface 
+  label="My AI Assistant" 
+  hostname="https://your-n8n-webhook.com/webhook/:id-of-your-webhook-node" 
+  open-on-start="false">
+</n8n-embedded-chat-interface>
+```
+
+Your n8n workflow must have a webhook trigger node configured to receive POST requests from this widget, parse incoming chat messages, run your chatbot logic (e.g., calling an AI agent node like OpenAI), and respond with JSON containing the chatbot reply and session info.
+
+The workflow should respond with JSON in this format:
+
+```json
+{
+  "output": "Chatbot response",
+  "sessionId": "session-id"
+}
+```
+
+This setup allows you to embed a fully functional conversational chatbot powered by n8n workflows directly into your website, supporting real-time interaction with users without needing separate chatbot hosting.[1][2][3][4][5]
+
+[1](https://www.softoneconsultancy.com/how-to-create-an-ai-website-chatbot-with-n8n/)
+[2](https://github.com/symbiosika/n8n-embedded-chat-interface)
+[3](https://blog.n8n.io/how-to-make-ai-chatbot/)
+[4](https://community.n8n.io/t/help-how-to-embed-chatbot-on-my-website-via-cdn/33783)
+[5](https://n8n.io/workflows/2786-create-a-branded-ai-powered-website-chatbot/)
+[6](https://www.youtube.com/watch?v=xQ1tCQZhLaI)
+[7](https://www.reddit.com/r/n8n/comments/1iwltgi/chatbot_embedded_into_own_website/)
+[8](https://www.youtube.com/watch?v=mLTqabG0l7c)
+[9](https://n8n.io/workflows/6290-company-website-chatbot-agent-rag-calendar-integrations/)
+[10](https://community.n8n.io/t/create-a-branded-ai-powered-website-chatbot-with-n8n/73093)
 
 ##### n8n x APIFY
 
