@@ -56,6 +56,25 @@ The core of the "privacy and control" movement in note-taking apps.
 
 The answer is that there's a spectrum, but many of the popular self-hostable options do not follow the same "plain text files" model as Logseq.
 
+
+Among your options and other popular apps, the following are truly "flat notes" apps for self-hosting or desktop use—they save each note as an individual Markdown file, without any enforced hierarchical folder structure:
+
+1. Fully Flat Notes Apps
+
+- **Flatnotes**: Stores notes as markdown files in a **single flat directory**—no folders or notebooks. This keeps things simple, and the note files are portable and directly accessible as plain Markdown.[1][2][3]
+
+- **Raneto**: Organizes its knowledge base with Markdown files, which are stored as flat files on disk (although notes can be grouped in folders physically, the system just reads everything as files; no database is used).[2][3][1]
+
+2. Mostly Flat, Hierarchy Optional or Supported
+
+- **SilverBullet**: Stores Markdown notes as flat files; folder hierarchies can be used but are not required or mandatory. The core is file-based, with high customization, and is considered a flat-file "second brain".[4]
+- **Logseq**: Mainly keeps notes as flat Markdown or Org-mode files on your filesystem. Hierarchical linking and block referencing are possible, but each "page" is essentially a flat file.[1]
+
+3. Not Flat-File (Uses Database or Enforces Hierarchy)
+
+- **Joplin**: Uses SQLite (by default) to store and index notes, even if notes are written in Markdown. Sync may export files, but core operation is database-driven, not flat files.[1]
+- **BookStack**: Organizes notes in a strict hierarchy (Books, Chapters, Pages) and stores content in a MySQL/MariaDB database, not as accessible flat Markdown files.[1]
+
 #### The "Plain Text" Philosophy vs. "Database" Philosophy
 
 * **Logseq, Obsidian, and others** are built on the "plain text" philosophy. Their primary goal is to ensure that your notes are always a collection of human-readable Markdown files that you can access and read with any text editor, even if the app itself is no longer around. 
@@ -100,6 +119,7 @@ And you can create themes for Joplin: https://github.com/manuelernestog/joplin-m
 The Verdict
 
 * **If your primary goal is to have human-readable Markdown files that are independent of any specific app, and you prefer a file-system-based workflow, then Logseq (or a similar tool like Obsidian) is a better choice.** The sync solution will be external to the app itself (e.g., Syncthing, Nextcloud).
+
 * **If your priority is a seamless, self-hosted sync experience with native mobile apps, and you're comfortable with your data being stored in a database, then Joplin is an excellent choice.** Its self-hosted server makes the setup straightforward, and the native mobile app "just works" with that server.
 
 --- 
@@ -117,7 +137,21 @@ If you are looking for simplicity, have a look to the **flat file and local firs
 
 > > Kind of a ~ flatfile CMS?
 
-I know what you are looking for: **DATABASELESS KNOWLEDGE BASE**
+
+
+| App           | Flat Files | Pure Markdown | No DB | Hierarchy-Free |
+|---------------|:----------:|:-------------:|:-----:|:--------------:|
+| Flatnotes     | Yes        | Yes           | Yes   | Yes            |
+| Raneto        | Yes        | Yes           | Yes   | Yes (or folders, optional) |
+| SilverBullet  | Yes        | Yes           | Yes   | Yes (folders optional)     |
+| Logseq        | Yes        | Yes           | Yes   | Yes (folders/pages possible)|
+| Joplin        | No         | Yes           | No    | No             |
+| BookStack     | No         | No            | No    | No             |
+
+Flatnotes, Raneto, SilverBullet, and Logseq are the best picks if flat, human-readable Markdown files with no database lock-in are the priority.[3][2][4][1]
+
+
+I know what you are looking for: **DATABASE-LESS KNOWLEDGE BASE**
 
 * <https://docs.linuxserver.io/images/docker-raneto/#miscellaneous-options>
 * <https://docs.linuxserver.io/images/docker-hedgedoc/>
@@ -132,6 +166,10 @@ I know what you are looking for: **DATABASELESS KNOWLEDGE BASE**
 {{< /cards >}}
 
 * https://github.com/JAlcocerT/Home-Lab/tree/main/wiki-js
+
+* https://github.com/redimp/otterwiki
+
+> MIT | A minimalistic wiki powered by python, markdown and git. 
 
 ---
 
@@ -190,6 +228,83 @@ These editors might start as a WYSIWYG editor but reveal the Markdown syntax whe
 
 This allows for the speed of a visual editor while still giving you the ability to fine-tune the raw Markdown when needed.
 
+### Desktop markdown editors
+
+Yes, there are several desktop Markdown editors with WYSIWYG (What You See Is What You Get) capabilities beyond the previously mentioned apps. 
+
+These editors make editing Markdown more accessible by providing a live or in-place rendering experience:
+
+
+- **Typora**: A minimal and polished Markdown editor offering seamless WYSIWYG editing—what you type is rendered instantly, with syntax fading away as formatting is applied.[3][8]
+- **Zettlr**: An open-source Markdown editor aimed at researchers and writers, offering in-place previewing and support for various Markdown enhancements.[3]
+- **MarkText**: A free, open-source Markdown editor that provides in-place previewing and an intuitive writing experience (cross-platform).[6]
+- **Haroopad**: Available on Windows, it supports advanced Markdown features and live preview with a WYSIWYG feel.[3]
+- **Texts**: An editor designed for distraction-free writing, offering WYSIWYG Markdown editing, export, and PDF capabilities.[3]
+- **KeenWrite**: Supports variable substitution, live preview, and Markdown WYSIWYG features (primarily Windows).[3]
+
+> See also Ghostwritter as seen [here](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/)
+
+```sh
+sudo snap install alighieri
+
+sudo add-apt-repository ppa:wereturtle/ppa
+sudo apt update
+sudo apt install ghostwriter
+```
+
+Most of these editors allow working directly with plain Markdown files, making them excellent choices for those who prefer a flat-file workflow coupled with a user-friendly editing interface.[8][6][3]
+
+[1](https://github.com/mundimark/awesome-markdown-editors)
+[10](https://github.com/JefMari/awesome-wysiwyg-editors)
+
+
+
+- **APT method**:
+  ```
+  wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+  sudo add-apt-repository 'deb https://typora.io/linux ./'
+  sudo apt update
+  sudo apt install typora
+  ```
+- **Snap method** (if you prefer Snap packages):
+  ```
+  sudo snap install typora
+  ```
+Either method will install Typora on Ubuntu.[1][2][6]
+
+
+- **AppImage (recommended for Ubuntu)**:
+  1. Download the latest release from https://github.com/marktext/marktext/releases
+  2. Make it executable and run:
+     ```
+     chmod +x ~/Downloads/marktext*.AppImage
+     ~/Downloads/marktext*.AppImage
+     ```
+- **Alternatively**, extract and run from a `.deb` package if available, but MarkText is usually distributed as AppImage for Linux. (No official apt repository.)
+
+
+- **DEB package**:
+  1. Download from https://www.zettlr.com/download
+  2. Install via:
+     ```
+     sudo dpkg -i ~/Downloads/Zettlr-*.deb
+     sudo apt-get install -f
+     ```
+  - Or use the AppImage as with MarkText:
+     ```
+     chmod +x ~/Downloads/Zettlr*.AppImage
+     ~/Downloads/Zettlr*.AppImage
+     ```
+
+- **DEB package**:
+  1. Download from https://pad.haroopress.com/user.html#downloads
+  2. Install with:
+     ```
+     sudo dpkg -i ~/Downloads/haroopad-*.deb
+     sudo apt-get install -f
+     ```
+
+These installation methods will quickly get each editor running, though for AppImage-based apps, simply running the executable as shown is enough—no system-wide installation required.[6][7][9]
 
 
 ---

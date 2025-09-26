@@ -159,6 +159,8 @@ Instead of having this cool [streamlit web scrapper](https://github.com/JAlcocer
 
 2. Just use...**FireCrawl** with n8n https://www.npmjs.com/package/@mendable/n8n-nodes-firecrawl
 
+> Lets use this Example [page for re to scrap](https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/26643098/es/)
+
 ##### n8n x APIFY
 
 * https://www.npmjs.com/package/@apify/n8n-nodes-apify

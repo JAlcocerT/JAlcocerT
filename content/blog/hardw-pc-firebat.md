@@ -478,6 +478,7 @@ Explore more apps:
 {{< cards cols="1" >}}
   {{< card link="https://github.com/upscayl/upscayl" title="Upscayl to enhance images" >}}
 {{< /cards >}}
+
 {{< cards cols="2" >}}
   {{< card link="https://flathub.org/" title="FlatHub Apps" >}}
   {{< card link="https://snapcraft.io/" title="SnapCraft Apps" >}}
@@ -545,7 +546,7 @@ exit
 ```
 {{< /details >}}
 
-{{< details title="Interesting Apps, for W11 and Linux 📌" closed="true" >}}
+{{< details title="Interesting Apps, for W11 and Linux... 📌" closed="true" >}}
 
 A list of applications and tools, organized into categories
 
@@ -721,22 +722,7 @@ Development Tools
 
 ![FireBat NGINX Example](/blog_img/mini_pc/nginx_posteio.png)
 
-<!-- 
-{{ $image := resources.Get "blog_img/mini_pc/nginx_posteio.png" }}
-{{ $resized := $image.Resize "600x" }}
-<img src="{{ $resized.Permalink }}" alt="FireBat NextCloud">
 
-{{ $image := resources.Get "/blog_img/mini_pc/nginx_posteio.png" }}
-{{ $resized := $image.Resize "600x" }}
-<img src="{{ $resized.Permalink }}" alt="FireBat NextCloud">
-
-{{ $image := resources.Get "/blog_img/mini_pc/nginx_posteio.png" }}
-{{ $resized := $image.Resize "600x" }}
-<div style="text-align: center;">
-  <img src="{{ $resized.Permalink }}" alt="FireBat NextCloud">
-  <p style="font-size: 14px; color: gray;">FireBat NextCloud - Example Caption</p>
-</div>
- -->
 
 * In the SSL tab, you will need to Add a **DNS Challenge**, for Cloudflare would be:
 
@@ -751,7 +737,7 @@ Development Tools
 
 
 
-{{< details title="Similar Small Factor PCs to consider 📌" closed="true" >}}
+{{< details title="Similar Small Factor Mini / PCs to consider 📌" closed="true" >}}
 
 * Used ones:
   * Dell 3050 SFF Core i5 6th gen 16GB ~120$

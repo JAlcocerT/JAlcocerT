@@ -7,6 +7,13 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+
+Perplexity browserwith agents
+
+https://github.com/leoneljdias/tempo
+
+> MIT |  Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
+
 software product development, digital platform engineering,
 
 https://nav.al/feedback

@@ -3,7 +3,7 @@ title: "SelfHosting Updates - End Summer 2025"
 date: 2025-09-09T01:20:21+01:00
 draft: false
 tags: ["HomeLab","Ventoy","SSGs","MKCert","MeTube/Navidrome","Zen Browser"]
-description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs'
+description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs and a Firebat'
 url: 'selfhosted-apps-sept-2025'
 ---
 
@@ -82,7 +82,7 @@ When you will be confortable with containers, you will want to bring https inste
 I got to know about: https://github.com/FiloSottile/mkcert
 
 ```sh
-#sudo apt install mkcert
+#sudo apt install mkcert #https://github.com/jeffcaldwellca/mkcertWeb
 ```
 
 > A simple zero-config tool to make locally trusted development certificates with any names you'd like.
@@ -98,6 +98,32 @@ But as of today i'd rather keep these [https setups](https://jalcocert.github.io
 * Or go the Traefik v3.3 approach (programatic https) as per this other guide
 * Just use cloudflared...
 
+
+{{< hextra/feature-grid >}}
+ 
+{{< hextra/feature-card
+  title="Setup NGINX"
+  subtitle="How to setup: PiHole and UnBound DNS with FireBat"
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://jalcocert.github.io/RPi/posts/selfh-internet-better/"
+>}}
+
+{{< hextra/feature-card
+  title="Setup Syncthing"
+  subtitle="P2P Syncing between home devices"
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+  link="https://fossengineer.com/selfhosting-filebrowser-docker/"
+>}}
+
+{{< hextra/feature-card
+  title="Setup NextCloud in your Home Server"
+  subtitle="Just use cloudflare tunnels"
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://jalcocert.github.io/RPi/posts/selfhosting-nextcloud/"
+>}}
+
+{{< /hextra/feature-grid >}}
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/cloudflare-tunnel" title="Cloudflared Tunnel | Docker Config Setup 🐋 ↗"  >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/nginx-proxy-manager" title="NGINX | Docker Config Setup 🐋 ↗"  >}}
@@ -112,6 +138,12 @@ Autumn is almost here.
 
 And is a great chance to tinker with your miniPC and homelab.
 
+{{< cards cols="2" >}}
+  {{< card link="https://flathub.org/" title="FlatHub Apps" >}}
+  {{< card link="https://snapcraft.io/" title="SnapCraft Apps" >}}
+{{< /cards >}}
+
+
 Plot twist, you will never stop learning:
 
 * Networking, DNS
@@ -124,6 +156,8 @@ Fortunately, there are amazing resources to give you ideas:
     * Example: https://github.com/OpenCut-app/OpenCut
 
 > MIT |  The open-source CapCut alternative 
+
+* https://github.com/jmlcas?tab=repositories
 
 * Youtube is a great source for great tutorials too: Jims Garage, Christian Lempa, Tech with Nana, NetworkChuck, Pelado Nerd (*in Spanish*), DB Tech... I will never be able to thank them enough for all they have taught me already (*and to other great channels that would make the list too long*). 
 
@@ -341,3 +375,50 @@ Then, setup VENTOY into your USBs and bring your favourite one.
 1. https://github.com/TimWitzdam/GitSave
 
 2. Gitea and Gogs: Lightweight self-hosted Git services. They support mirroring repositories from GitHub, providing a continuously synced backup
+
+### Which Devices are connected to my router?
+
+1. First get to know `who` is your router:
+
+```sh
+ip route | grep default
+```
+
+2. Then, inspect:
+
+```sh
+nmap -sn 192.168.1.0/24
+# Starting Nmap 7.80 ( https://nmap.org ) at 2025-09-26 11:43 CEST
+# Nmap scan report for _gateway (192.168.1.1)
+# Host is up (0.025s latency).
+# Nmap scan report for 192.168.1.103
+# Host is up (0.067s latency).
+# Nmap scan report for BYOD-00335 (192.168.1.104)
+# Host is up (0.000095s latency).
+# Nmap done: 256 IP addresses (3 hosts up) scanned in 3.63 seconds
+```
+
+(Optional) get the **mac/vendor** of one of them:
+
+```sh
+ping -c 4 192.168.1.106
+#nmap -O 192.168.1.106
+```
+
+#### Hello Again Firebat
+
+After one year of putting [the FireBat AK2](https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/) up and running...
+
+I realized that not everyone is ready to have a PC 24/7.
+
+Because: what is it doing exactly?
+
+Plus...tailscale can get expired and access lost for the admin.
+
+And that has a point, actually.
+
+```sh
+ssh casa@192.168.1.106
+```
+
+So I decided to propose a 

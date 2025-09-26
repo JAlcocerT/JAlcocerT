@@ -602,6 +602,8 @@ YOu could also do email/user + pwd or social signin (for example with google)
 
 > Both to the email validation for you!
 
+> > Earlier this year I read a post which motivated me to create this - https://darko.io/posts/but-auth-is-hard
+
 
 {{< details title="Logto vs FirebaseAuth vs PB SDK for Auth... 📌" closed="true" >}}
 

@@ -32,6 +32,10 @@ But for something more custom...I have been lacking how actually email/SMTP work
 
 * https://github.com/4w4k3/KnockMail
 
+Same as [auth is hard](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#conclusions), until [its not](https://jalcocert.github.io/JAlcocerT/social-signin-101/).
+
+I want the same to happen with SMTP/emails.
+
 
 > But it did not work for me out of the box...
 
@@ -317,3 +321,9 @@ So, while they are similar as open-source social media tools, GrowChief focuses 
 [16](https://www.youtube.com/watch?v=UE33Cb0D5b8)
 [17](https://postiz.com/blog/top-10-socialbee-alternatives-which-tools-have-better-features)
 [18](https://dev.to/nevodavid/i-built-an-open-source-social-media-scheduling-and-it-blew-up-415e)
+
+### Selfhosting Email?
+
+* https://github.com/haileyydev/maildrop
+
+> Maildrop is a self hostable and easy to use disposable email service that allows you to receive emails on a random email address on your domain.

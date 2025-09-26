@@ -2,7 +2,7 @@
 title: "Link for Artists"
 date: 2025-10-30T23:20:21+01:00
 draft: false
-tags: ["SaaS","BiP"]
+tags: ["SaaS","BiP","Lynx"]
 url: 'link-artists'
 description: 'Dear famous people, where are you going next?'
 ---
@@ -56,3 +56,17 @@ Examples
 
 * https://peladonerd.com/
 * https://jalcocert.github.io/Portfolio
+
+## FAQ
+
+### SelfHostable Links
+
+1. Lynx. But not the Lynx HUGO Theme.
+
+* https://github.com/paoloronco/Lynx
+
+> MIT |  Lynx is an open-source, self-hosted link manager that helps you gather all your digital touchpoints in a single page, with secure authentication and a fully customizable design. 
+
+2. LinkStack. As seen [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio) and [here](https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/)
+
+![LinkStack UI](/blog_img/web/web-linkstack.png)

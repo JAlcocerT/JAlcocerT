@@ -106,3 +106,15 @@ Zulip is known for its unique topic-based messaging, which helps organize conver
 | **Zulip** | No (via integrations) | No (via integrations) | **Organized messaging** that integrates with external PM tools. |
 
 If having a native Kanban board is a primary requirement and you want a single, cohesive open-source solution, **Mattermost** is the most direct answer to your question. For the others, the solution is to integrate with a dedicated, separate tool.
+
+---
+
+## Conclusions
+
+If you are building a youtube community, Slack or Discord will probably suite.
+
+See also:
+
+* https://github.com/spacebarchat/server
+
+>  Spacebar server - A reimplementation of the Discord.com backend, built with Typescript and love 

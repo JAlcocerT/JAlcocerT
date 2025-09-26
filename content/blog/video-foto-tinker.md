@@ -468,7 +468,9 @@ convert libreportfolio.png -resize 1200x630^ -gravity Center -extent 1200x630 li
 
 ### Darktable
 
-Darktable is an **open source photography workflow application** and raw developer - https://github.com/darktable-org/darktable
+Darktable is an **open source photography workflow application** and raw developer:
+
+* https://github.com/darktable-org/darktable
 
 As a light room alternative:
 
@@ -486,6 +488,23 @@ If you are into OSS, see:
 1. GIMP - The GNU Image Manipulation Program - https://gitlab.gnome.org/GNOME/gimp
 2. digiKam
 3. Photoflow
+
+```sh
+# Update package lists
+sudo apt update
+
+# Install Darktable
+sudo apt install darktable
+
+# Install digiKam
+sudo apt install digikam
+
+# Install PhotoFlow (available in Ubuntu 22.04+)
+sudo add-apt-repository ppa:apandada1/photoflow
+sudo apt update
+sudo apt install photoflow
+```
+
 4. https://github.com/PintaProject/Pinta See https://www.pinta-project.com/
 
 ```sh
@@ -498,7 +517,14 @@ sudo snap install pinta
 To remove photo backgrounds with OSS:
 
 1. https://github.com/withoutbg/withoutbg
-2. 
+2. Reubah
+
+![SelfHosting Reubah](/blog_img/selfh/Photo/reubah.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/upscayl/upscayl" title="Upscayl to enhance images" >}}
+{{< /cards >}}
+
 
 **Tools for Creator Mode:**
 
