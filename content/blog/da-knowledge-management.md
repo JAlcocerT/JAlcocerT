@@ -157,6 +157,12 @@ I know what you are looking for: **DATABASE-LESS KNOWLEDGE BASE**
 * <https://docs.linuxserver.io/images/docker-hedgedoc/>
 * <https://js.wiki/>
 
+![alt text](/blog_img/selfh/kb/wikijs-101.png)
+
+![alt text](/blog_img/selfh/kb/wikijs-setup.png)
+
+![alt text](/blog_img/selfh/kb/wikijs.png)
+
 
 ### Quick SelfHosting Resources for Notes
 

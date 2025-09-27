@@ -3,7 +3,7 @@ title: "SelfHosting Updates - End Summer 2025"
 date: 2025-09-09T01:20:21+01:00
 draft: false
 tags: ["HomeLab","Ventoy","SSGs","MKCert","MeTube/Navidrome","Zen Browser"]
-description: 'Selfhosting for New Comers: SSGs & Python WebApps with HTTPs and a Firebat'
+description: 'Selfhosting for New Comers: SSGs,Python WebApps with Traefik v3 HTTPs and a Firebat'
 url: 'selfhosted-apps-sept-2025'
 ---
 
@@ -324,7 +324,15 @@ docker stats $(docker ps --filter "name=typebot" --format "{{.Names}}")
 #docker stats -a
 ```
 
-See also lazydocker
+See also lazydocker!
+
+### Git Sync
+
+From https://akashrajpurohit.com/blog/initial-vps-setup-checklist-first-30-minutes/
+
+* https://github.com/AkashRajpurohit/git-sync
+
+>  🔄 A simple tool to backup and sync your git repositories 
 
 ### How to Change USB Size
 
@@ -449,6 +457,7 @@ curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \
      -H "Authorization: Bearer abcdefg12345709"
 ```
 
+![Cloudfalre API Tokens for Traefik v3](/blog_img/selfh/https/traefik-firebat/cf-api.png)
 
 ```sh
 sudo apt install apache2-utils
@@ -475,14 +484,37 @@ Make sure to point cf DNS records, maybe using script https://github.com/JAlcoce
 > For which you will need the [ZoneID of your Domain](https://www.youtube.com/watch?v=pmfrJNCaOFY) as well as per this .env.sample
 
 ```sh
+#python3 cf-dns-updater.py
 dig +short casa.jalcocertech.com A
 ping casa.jalcocertech.com
+nslookup casa.jalcocertech.com
 ```
-https://fossengineer.com/selfhosting-traefik/
-https://jalcocert.github.io/JAlcocerT/testing-tinyauth/
+
+![alt text](/blog_img/selfh/https/traefik-firebat/cf-dns-python.png)
+
+* https://fossengineer.com/selfhosting-traefik/
+* https://jalcocert.github.io/JAlcocerT/testing-tinyauth/
+
+```sh
+touch config/acme.json && chmod 600 config/acme.json
+```
+
 
 ```sh
 sudo docker compose up -d
 sudo docker logs traefik
-touch config/acme.json && chmod 600 config/acme.json
+```
+
+{{< callout type="info" >}}
+This uses DNSchallenge (instead of https), so you dont have to open any ports :)
+{{< /callout >}}
+
+Once **deployed**, go to: https://casa.jalcocertech.com/dashboard/#/http/routers
+
+![alt text](/blog_img/selfh/https/traefik-firebat/traefik-dash-ui.png)
+
+
+```sh
+ping silverbullet.casa.jalcocertech.com
+ping portainer.casa.jalcocertech.com
 ```

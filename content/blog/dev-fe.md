@@ -77,7 +77,7 @@ Its also interesting to see how it works the invoice editor, purely static.
 
 > Idea for a markdown editor? 
 
-Ill have to see also [react-invoice deployed at vercel](https://react-invoice-nu.vercel.app/) or [wikiJS](https://github.com/requarks/wiki) to get more ideas
+> > Ill have to see also [react-invoice deployed at vercel](https://react-invoice-nu.vercel.app/) or [wikiJS](https://github.com/requarks/wiki) to get more ideas
 
 If you are confussed...I have been too.
 
