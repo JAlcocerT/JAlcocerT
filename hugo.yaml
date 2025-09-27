@@ -11,8 +11,8 @@ theme: ["hugo-chart", "hextra"]
 
 params:
   description: JAlcocerT Blog
-  # search:
-  #   enable: false
+  search:
+    enable: true
   
   # n8n Chatbot Configuration
   # chatbot:

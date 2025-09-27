@@ -433,3 +433,56 @@ sudo apt update && sudo apt install ubuntu-restricted-extras
 So I decided to propose a new homelab architecture....
 
 > Traefik v3.3 + Cloudflare + Tailscale IP
+
+```sh
+git clone https://github.com/JAlcocerT/Home-Lab
+cd ./Home-Lab/traefik
+#https://jalcocert.github.io/JAlcocerT/testing-tinyauth/
+#https://fossengineer.com/selfhosting-traefik/
+```
+
+https://dash.cloudflare.com/profile/managed-profile/preferences
+https://dash.cloudflare.com/profile/api-tokens
+
+```sh
+curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+     -H "Authorization: Bearer abcdefg12345709"
+```
+
+
+```sh
+sudo apt install apache2-utils
+echo $(htpasswd -nB admin) | sed -e s/\\$/\\$\\$/g
+```
+
+![Traefik UI](/blog_img/selfh/https/traefik-ui.png)
+
+
+```sh
+#cd ./Home-Lab/traefik
+touch /home/casa/Home-Lab/traefik/acme.json #blank, just change the permissions to 600 later (private key)
+touch /home/casa/Home-Lab/traefikacme.yml
+touch /home/casa/Home-Lab/traefik/traefik.yml
+```
+
+```sh
+chmod 600 ./acme.json && \
+chmod 600 ./traefik.yml #or it will be a security risk for other users to see the privatekey
+```
+
+Make sure to point cf DNS records, maybe using script https://github.com/JAlcocerT/waiting-to-landing/blob/main/cloudflare-dns-updater.py
+
+> For which you will need the [ZoneID of your Domain](https://www.youtube.com/watch?v=pmfrJNCaOFY) as well as per this .env.sample
+
+```sh
+dig +short casa.jalcocertech.com A
+ping casa.jalcocertech.com
+```
+https://fossengineer.com/selfhosting-traefik/
+https://jalcocert.github.io/JAlcocerT/testing-tinyauth/
+
+```sh
+sudo docker compose up -d
+sudo docker logs traefik
+touch config/acme.json && chmod 600 config/acme.json
+```

@@ -1,9 +1,9 @@
 ---
-title: "How to setup TinyAuth x Traefik. Compared to LogTo."
+title: "How to setup TinyAuth x Traefik."
 date: 2025-05-27T23:20:21+01:00
 draft: false
 tags: ["Dev","HomeLab","OAUTH","Cloudflare DNS","Three Bodies","LogTo","TinyAuth"]
-description: 'Logto vs (Traefik + TinyAuth) Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
+description: 'LOGTO vs (Traefik + TinyAuth) Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
 url: 'testing-tinyauth'
 ---
 
@@ -163,7 +163,7 @@ With its ease of use, high performance, and scalability, Traefik can help you im
 
 Not enough with [Nginx](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/) or Caddy?
 
-Id say that it was not a setup for beginners, but lets try:
+Id say that Traefik setup was not a easy for beginners (like ~ NGINX is), but lets try:
 
 {{< cards cols="2" >}}
   {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX Setup" >}}
@@ -174,7 +174,7 @@ Have a look to **Traefik**
 
 We can also get **SSL certificates thanks to LetsEncrypt**.
 
-And it also provides a UI dashboard:
+Traefik also provides a UI dashboard:
 
 ![Traefik UI](/blog_img/selfh/https/traefik-ui.png)
 
@@ -281,7 +281,9 @@ Acme file has to be created blank (and fill later automatically).
 ```sh
 mkdir -p /home/docker/traefik
 cd /home/docker/traefik
+```
 
+```sh
 touch /home/docker/traefik/acme.json #blank, just change the permissions to 600 later (private key)
 touch /home/docker/traefik/acme.yml
 touch /home/docker/traefik/traefik.yml
