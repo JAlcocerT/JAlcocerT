@@ -518,3 +518,5 @@ Once **deployed**, go to: https://casa.jalcocertech.com/dashboard/#/http/routers
 ping silverbullet.casa.jalcocertech.com
 ping portainer.casa.jalcocertech.com
 ```
+
+![alt text](/blog_img/selfh/kb/silverbullet-dns-cf.png)

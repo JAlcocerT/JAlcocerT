@@ -2,7 +2,7 @@
 title: "Kindle, ebooks 101, notes and Pandoc"
 date: 2025-09-17
 draft: false
-tags: ["Outro","kindle modding","Your ebook Notes Knowledge Base","sell-your-ebook","Business Model Canvas","Affine"]
+tags: ["Katex vs Typst","kindle modding","ebook Notes Knowledge Base","sell-your-ebook","Business Model Canvas","Affine"]
 description: 'Create your ebook and sell it on your website. Clear the chaos with Perplexity or notebookllm?'
 url: 'kindle-clippings-knowledge-base'
 ---
@@ -80,7 +80,7 @@ Kindles files wont be recognized unless you use a proper microUSB data cable. Yo
 
 Recently I wrote about note taking tools and [how to build your KB/Knowledge Base](https://jalcocert.github.io/JAlcocerT/knowledge-management/#knowledge-management-tools).
 
-As I cant stop being impressed by all we can achieve with simple markdown...
+As I cant stop being impressed by **all we can achieve with simple markdown**...
 
 1. With **Pandoc** you can create pdf from your .md as seen on [this *Jira* post](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/#md-to-pdf).
 
@@ -97,8 +97,38 @@ And pushing to epub kindle compatible is also fine.
 You can also try with [these tools](#converting-to-epub)
 
 
-2. 
+2. Katex is also great
 
+3. Recently, I got to know about Typst [here](https://atareao.es/podcast/todavia-sufres-con-word-para-hacer-tu-tesis-o-proyecto-usa-typst/)
+
+**KaTeX** and **[Typst](https://github.com/typst/typst)** serve entirely different purposes, so the comparison isn't about which is "better," but which is appropriate for a given task.
+
+* **KaTeX is a JavaScript library** for rendering mathematical notation in web browsers.
+* **Typst is a complete, modern document typesetting system** and programming language designed to replace LaTeX.
+
+| Feature | KaTeX | Typst |
+| :--- | :--- | :--- |
+| **Primary Goal** | Fast, high-quality **math rendering** for the web (HTML/JavaScript). | Complete, modern **document typesetting** (compiles to PDF). |
+| **Scope** | Math-only. | Full documents (text, math, figures, tables, bibliography, etc.). |
+| **Output** | HTML/CSS. | PDF. |
+| **Input Syntax** | **LaTeX math syntax** (`\frac{1}{2}`, `\sum_{n=1}^{\infty}`). | **Custom, simplified markup language** for text, with its own math mode syntax (`sum_(n=1)^oo 1/n`). |
+| **Speed** | Extremely fast rendering on a web page. | Extremely fast compilation to PDF (often much faster than LaTeX). |
+| **Customization/Extensibility**| Limited (focus on speed and core math support). | High (uses a built-in scripting/programming language for layouts and templates). |
+
+
+KaTeX is optimized for speed and fidelity on the web. It's meant to take an existing math expression (using LaTeX syntax) and display it beautifully in a web page without relying on a server.
+
+* **Pros:** **Blazing fast**, produces high-quality, non-janky math, and has a very small footprint.
+* **Cons:** **Math only**. It cannot render full documents, handle complex layouts, or process general LaTeX commands (only the math subset).
+
+Typst is a holistic tool aiming to modernize document creation. It's designed to be more intuitive and robust than LaTeX, using a clean markup that integrates better with a powerful scripting language.
+
+* **Pros:** **Excellent developer experience** (simple syntax, good error messages, near-instant compilation/live preview), **superior programming capabilities** for complex layout and template creation, and native PDF output.
+* **Cons:** **Young ecosystem** (fewer specialized packages and journal templates compared to LaTeX), and a **new math syntax** that requires learning even for existing LaTeX users. Typst's math rendering is a component of the whole system, not a specialized web library like KaTeX.
+
+
+* Use **KaTeX** when you have a **website or application** and need to display math formulas quickly to the user.
+* Use **Typst** when you need to **write a document** (a paper, thesis, report, book) and generate a final PDF file.
 
 ---
 

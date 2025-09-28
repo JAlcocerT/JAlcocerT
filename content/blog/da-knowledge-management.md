@@ -39,6 +39,14 @@ With notes as in many other topics, it seems that [all comes down to](#the-plain
 These are some knowledge management tools, noting their data storage method:
 
 * **SilverBullet:** A web-based "second brain" tool that stores its Markdown notes as **flat files** locally or on a self-hosted server, emphasizing extensibility and linking.
+
+![alt text](/blog_img/selfh/kb/silverbullet.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/silverbullet" title="silverbullet | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/raneto" title="Raneto | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
 * **Joplin:** A feature-rich, open-source note-taking and to-do app that uses a **database** (SQLite by default, or other databases via sync targets) to store notes, with robust Markdown support and synchronization.
 * **Logseq:** An open-source, local-first knowledge base and outliner that stores its content as Markdown or Org-mode **flat files** directly on your filesystem, focusing on bi-directional linking and block-based editing.
 * **BookStack:** A user-friendly, self-hosted platform ideal for organizing documentation and wikis, relying on a **database** (MySQL/MariaDB) to manage its structured content.
@@ -69,6 +77,8 @@ Among your options and other popular apps, the following are truly "flat notes" 
 
 - **SilverBullet**: Stores Markdown notes as flat files; folder hierarchies can be used but are not required or mandatory. The core is file-based, with high customization, and is considered a flat-file "second brain".[4]
 - **Logseq**: Mainly keeps notes as flat Markdown or Org-mode files on your filesystem. Hierarchical linking and block referencing are possible, but each "page" is essentially a flat file.[1]
+
+![alt text](/blog_img/selfh/kb/silverbullet-dns-cf.png)
 
 3. Not Flat-File (Uses Database or Enforces Hierarchy)
 
@@ -236,14 +246,101 @@ This allows for the speed of a visual editor while still giving you the ability 
 
 ### Desktop markdown editors
 
-Yes, there are several desktop Markdown editors with WYSIWYG (What You See Is What You Get) capabilities beyond the previously mentioned apps. 
+For a notes 101 post... there are several desktop Markdown editors with WYSIWYG (What You See Is What You Get) capabilities beyond the previously mentioned apps. 
 
 These editors make editing Markdown more accessible by providing a live or in-place rendering experience:
 
 
 - **Typora**: A minimal and polished Markdown editor offering seamless WYSIWYG editing—what you type is rendered instantly, with syntax fading away as formatting is applied.[3][8]
+
+- **APT method**:
+```
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt update
+sudo apt install typora
+```
+- **Snap method** (if you prefer Snap packages):
+
+```
+sudo snap install typora
+```
+
+> I liked typora, just that it doesnt bring a clear B/I/Image upload selector.
+
+
+
 - **Zettlr**: An open-source Markdown editor aimed at researchers and writers, offering in-place previewing and support for various Markdown enhancements.[3]
-- **MarkText**: A free, open-source Markdown editor that provides in-place previewing and an intuitive writing experience (cross-platform).[6]
+
+- **MarkText**: A free, open-source Markdown editor that provides in-place previewing and an intuitive writing experience ([cross-platform](https://github.com/marktext/marktext/releases)).
+
+![alt text](/blog_img/selfh/kb/marktext-ui.png)
+
+
+- **AppImage (recommended for Ubuntu)**:
+  1. Download the latest release from https://github.com/marktext/marktext/releases
+  2. Make it executable and run:
+
+```sh
+wget https://github.com/marktext/marktext/releases/download/v0.17.1/marktext-x86_64.AppImage .
+
+#cd /home/jalcocert/Applications
+chmod +x /home/jalcocert/Applications/marktext*.AppImage
+./marktext*.AppImage
+```
+
+![alt text](/blog_img/selfh/kb/marktext-upload.png)
+
+<!-- https://www.youtube.com/watch?v=GJGpBw4bWFk -->
+
+{{< youtube "GJGpBw4bWFk" >}}
+
+
+> See also PicGo if you want to host images, or just use MarkText sync to Github
+
+![Marktext github img](/blog_img/selfh/kb/marktext-img-gh.png)
+
+{{% details title="More about PicGo + MarkText 🚀" closed="true" %}}
+
+PicGo is an **open-source, cross-platform tool** designed to make **image uploading to image hosting services (known as "pic-beds") simple and fast**, especially for people who write in Markdown.
+
+It is highly popular among bloggers, developers, and writers who use static site generators or Markdown editors like **Typora** or VS Code, as it streamlines the process of getting images into their documents.
+
+Core Functionality and Features
+
+The main purpose of PicGo is to upload an image and automatically get the correct URL format (e.g., Markdown link) back to your clipboard.
+
+* **Clipboard Upload:** You can copy an image to your clipboard (e.g., by taking a screenshot), and PicGo will upload it with a single click or keyboard shortcut.
+* **Drag-and-Drop:** It supports dragging image files directly into the application window or a tray icon for instant upload.
+* **Automatic URL Copying:** After a successful upload, PicGo automatically copies the image's URL to your clipboard, formatted as a **Markdown link** (`![filename](URL)`), HTML, or another format you choose.
+* **Cross-Platform:** It is available as a desktop application for **Windows, macOS, and Linux**.
+* **Plugin System:** This is a major strength. PicGo has a powerful plugin architecture that allows users to add support for various image hosts and implement image processing features like watermarking or compression.
+
+Supported Image Hosts (Pic-Beds)
+
+PicGo supports a wide array of hosting services, either natively or through its extensive plugin ecosystem:
+
+| Native Support | Plugin-Based Support (Examples) |
+| :--- | :--- |
+| **SM.MS** (often the default) | **GitHub/Gitee** (common for free hosting) |
+| **Qiniu Cloud** | **Amazon S3 API** (for AWS, MinIO, etc.) |
+| **Tencent Cloud COS** | **FTP/SFTP** |
+| **Alibaba Cloud OSS** | **Cloudflare Images** |
+| **UpYun** | **Nextcloud** |
+| **Imgur** | **WebDAV** |
+
+
+PicGo-Core
+
+In addition to the main desktop application, there is also **PicGo-Core**, which is the core logic and engine for image uploading.
+
+* **CLI & API:** PicGo-Core provides both a **Command Line Interface (CLI)** and an **API**, allowing developers to integrate image uploading into scripts, other applications, or VS Code extensions (like the popular `vs-picgo`).
+* **Customization:** It is the foundation upon which many of the advanced features and host integrations are built.
+
+{{% /details %}}
+
+
+
 - **Haroopad**: Available on Windows, it supports advanced Markdown features and live preview with a WYSIWYG feel.[3]
 - **Texts**: An editor designed for distraction-free writing, offering WYSIWYG Markdown editing, export, and PDF capabilities.[3]
 - **KeenWrite**: Supports variable substitution, live preview, and Markdown WYSIWYG features (primarily Windows).[3]
@@ -265,30 +362,6 @@ Most of these editors allow working directly with plain Markdown files, making t
 
 
 
-- **APT method**:
-  ```
-  wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-  sudo add-apt-repository 'deb https://typora.io/linux ./'
-  sudo apt update
-  sudo apt install typora
-  ```
-- **Snap method** (if you prefer Snap packages):
-  ```
-  sudo snap install typora
-  ```
-Either method will install Typora on Ubuntu.[1][2][6]
-
-
-- **AppImage (recommended for Ubuntu)**:
-  1. Download the latest release from https://github.com/marktext/marktext/releases
-  2. Make it executable and run:
-     ```
-     chmod +x ~/Downloads/marktext*.AppImage
-     ~/Downloads/marktext*.AppImage
-     ```
-- **Alternatively**, extract and run from a `.deb` package if available, but MarkText is usually distributed as AppImage for Linux. (No official apt repository.)
-
-
 - **DEB package**:
   1. Download from https://www.zettlr.com/download
   2. Install via:
@@ -305,12 +378,11 @@ Either method will install Typora on Ubuntu.[1][2][6]
 - **DEB package**:
   1. Download from https://pad.haroopress.com/user.html#downloads
   2. Install with:
-     ```
-     sudo dpkg -i ~/Downloads/haroopad-*.deb
-     sudo apt-get install -f
-     ```
+```
+sudo dpkg -i ~/Downloads/haroopad-*.deb
+sudo apt-get install -f
+```
 
-These installation methods will quickly get each editor running, though for AppImage-based apps, simply running the executable as shown is enough—no system-wide installation required.[6][7][9]
 
 
 ---
