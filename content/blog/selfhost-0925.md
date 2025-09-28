@@ -232,6 +232,34 @@ You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/J
 
 {{< /details >}}
 
+
+{{< details title="HUGO Theme | Blog 101 📌" closed="true" >}}
+
+```sh
+git clone https://github.com/JAlcocerT/EntreAgujayPunto
+
+#install go
+wget https://go.dev/dl/go1.21.1.linux-armv6l.tar.gz
+sudo tar -C /usr/local -xvzf go1.21.1.linux-armv6l.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+source ~/.bashrc
+go version
+
+#https://github.com/gohugoio/hugo/releases/tag/v0.123.0
+wget https://github.com/gohugoio/hugo/releases/download/v0.123.0/hugo_extended_0.123.0_linux-amd64.deb -O hugo_specific_version.deb && \
+sudo dpkg -i hugo_specific_version.deb && \
+rm hugo_specific_version.deb && \
+source ~/.bashrc
+
+hugo version
+hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.106" --port=1313
+```
+
+
+{{< /details >}}
+
+
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ssg-astro" title="Astro SSG Selfhosted | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
@@ -486,6 +514,8 @@ sudo apt install proton-vpn-gnome-desktop
 > Its recommended to do [p2p behind a VPN](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry) so that hackers can attack youe public IP address
 
 > > As seen in [0625](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p), [Reddit](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/) knows your [thing](https://www.reddit.com/r/MotorsportsReplays/comments/1haaapr/formula_1_19782024_megatorrent/)
+
+Those might be down: https://www.isitdownrightnow.com/
 
 You know, just in case your cool site gets banned without a reason:
 
