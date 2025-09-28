@@ -1,6 +1,6 @@
 ---
 title: "How to Share OSS OS via Torrent [with VPNs]"
-date: 2025-11-19
+date: 2025-09-09
 draft: false
 tags: ["Networking","P2P","NordVPN","ProtonVPN","Mullvad","Wireguard","Tailscale","Gluetun"]
 description: How to share Raspberry Pi OS (Bullseye) as Torrent with Qbitrorrent/Transmission and VPN.
@@ -63,6 +63,12 @@ You need this **docker-compose config** file:
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/transmission" title="Transmission Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="QBittorrent + Traefik" >}}
+  {{< card link="https://fossengineer.com/selfhosting-traefik/" title="Traefik Setup" >}}
 {{< /cards >}}
 
 

@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - End Summer 2025"
-date: 2025-09-09T01:20:21+01:00
+date: 2025-09-28T01:20:21+01:00
 draft: false
 tags: ["HomeLab","Ventoy","SSGs","MKCert","MeTube/Navidrome","Zen Browser"]
 description: 'Selfhosting for New Comers: SSGs,Python WebApps with Traefik v3 HTTPs and a Firebat'
@@ -129,6 +129,11 @@ But as of today i'd rather keep these [https setups](https://jalcocert.github.io
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/nginx-proxy-manager" title="NGINX | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX Setup" >}}
+  {{< card link="https://fossengineer.com/selfhosting-traefik/" title="Traefik Setup" >}}
+{{< /cards >}}
+
 
 ---
 
@@ -145,6 +150,21 @@ And is a great chance to tinker with your miniPC and homelab.
 
 
 Plot twist, you will never stop learning:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/tree/homarr" title="Homarr | Docker Config File 🐳 ↗"  >}}
+{{< /cards >}}
+
+<!-- 
+![Homarr - NextCloud Integration](/blog_img/selfh/media/homarr-nc.png)
+ -->
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#homarr" title="Homarr" image="/blog_img/selfh/media/homarr-nc.png" subtitle="Seen on Spring 2025 Selfhosting Post" >}}
+{{< /cards >}}
+
+
 
 * Networking, DNS
 * Creating your containers...
@@ -193,10 +213,17 @@ I have updated the `docker-compose.yml` and Dockerfiles at:
 
 ```sh
 git clone https://github.com/monakit/monakit
-
+npm install
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
+> This theme uses revealJS for the ppts, a candidate for an upcoming blog.jalcocertech.com 
+
 {{< /details >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ssg-astro" title="Astro SSG Selfhosted | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
 
 
 > Using your HomeLab to host a cool website is as simple as understanding those!
@@ -445,6 +472,8 @@ sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update
 sudo apt install proton-vpn-gnome-desktop
 ```
 
+> Its recommended to do [p2p behind a VPN](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry) so that hackers can attack youe public IP address
+
 You know, just in case your cool site gets banned without a reason:
 
 ![LaLiga Cloudflare Unjustified Ban](/blog_img/selfh/HomeLab/laliga-cloudflare.png)
@@ -538,6 +567,10 @@ curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=jalcocertech.com
   -H "Content-Type: application/json" | jq -r '.result[0].id'
 ```
 
+{{< callout type="warning" >}}
+The only DNS to point is the one for Traefik, the rest is done automatically as per the labels!
+{{< /callout >}}
+
 ```sh
 #python3 cf-dns-updater.py
 dig +short casa.jalcocertech.com A
@@ -546,9 +579,14 @@ nslookup casa.jalcocertech.com
 ```
 
 ![alt text](/blog_img/selfh/https/traefik-firebat/cf-dns-python.png)
-
+<!-- 
 * https://fossengineer.com/selfhosting-traefik/
-* https://jalcocert.github.io/JAlcocerT/testing-tinyauth/
+* https://jalcocert.github.io/JAlcocerT/testing-tinyauth/ -->
+
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/selfhosting-traefik/" title="Traefik Setup" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/" title="TinyAuth (via Traefik) Setup" >}}
+{{< /cards >}}
 
 ```sh
 touch config/acme.json && chmod 600 config/acme.json
@@ -572,25 +610,35 @@ Once **deployed**, go to: https://casa.jalcocertech.com/dashboard/#/http/routers
 **Example 1**: Traefik + already created (from others) webapps ✅ 
 
 ```sh
+dig +short silverbullet.casa.jalcocertech.com A
 ping silverbullet.casa.jalcocertech.com
+nslookup silverbullet.casa.jalcocertech.com
+
 ping portainer.casa.jalcocertech.com
 ```
 
 ![alt text](/blog_img/selfh/kb/silverbullet-dns-cf.png)
 
 
-**Example 2** Traefik + your (flask) webapp ✅ 
+**Example 2** Traefik + your (flask/dash/whatever) webapp ✅ 
 
-Example with ThreeBodies:
+Example with ThreeBodies (flask)
 
 ```sh
-dig +short silverbullet.casa.jalcocertech.com A
-ping silverbullet.casa.jalcocertech.com
-nslookup silverbullet.casa.jalcocertech.com
-
 git clone https://github.com/JAlcocerT/ThreeBodies
 cd ThreeBodies
 #make docker-up
+```
+
+Or with Trip Planner... with this [traefik+tinyauth compose](https://github.com/JAlcocerT/Home-Lab/blob/main/trip-planner/docker-compose.traefik.yml)
+
+```sh
+git clone https://github.com/JAlcocerT/Py_Trip_Planner
+cd Py_Trip_Planner
+#make docker-up
+
+#cd trip-planner #from homelab repo
+sudo docker compose -f docker-compose.traefik.yml up -d
 ```
 
 

@@ -2,7 +2,7 @@
 title: "More Photo and Video fun stuff"
 date: 2025-05-13T13:20:21+01:00
 draft: false
-tags: ["Tinkering","ffmpeg","PostIZ","N8N","OpenAI TTS"]
+tags: ["Tinkering","ffmpeg","PostIZ","N8N","OpenAI TTS","Jellyfin"]
 description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI generated audio for shorts.'
 url: 'photo-video-tinkering'
 ---
@@ -41,6 +41,11 @@ I will be showing you how to put your **videos into social media** with:
 1. [PostIZ](#how-to-setup-postiz)
 2. [N8N](#how-to-setup-n8n)
 3. [AI Powered Shorts](#ai-powered-shorts) (Audio and description)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#keep-using" title="Jellyfin to watch your videos" image="/blog_img/selfh/media/jellyfin-smarttv.png" subtitle="Seen on Spring 2025 Selfhosting Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/tree/jellyfin" title="jellyfin Selfh" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Homarr wih Traefik Compose" >}}  
+{{< /cards >}}
 
 {{< callout type="info" >}}
 Watching **4k video on Linux** might not be **fluent** until you install these.
