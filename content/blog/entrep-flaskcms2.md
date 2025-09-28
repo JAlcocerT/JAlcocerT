@@ -180,6 +180,11 @@ So...the last version of [realestate proposal with PB](https://github.com/JAlcoc
 
 Same for the thought of doing a [Gitea API connection + n8n](https://jalcocert.github.io/JAlcocerT/n8n-and-gitea/) or Flask CMS v2.x
 
+![alt text](/blog_img/selfh/automation/flask-gradient-cms-v2.png)
+
+> The vibe coded gradient in the landing of these flask web apps is veeery nice
+
+
 ---
 
 

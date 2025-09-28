@@ -442,6 +442,18 @@ So I decided to propose a new homelab architecture....
 
 > Traefik v3.3 + Cloudflare + Tailscale IP
 
+
+{{< filetree/container >}}
+  {{< filetree/folder name="config" >}}
+    {{< filetree/file name="acme.json" >}}
+    {{< filetree/file name="config.yml" >}}
+    {{< filetree/file name="traefik.yml" >}}
+    {{< /filetree/folder >}}
+  {{< filetree/file name="docker-compose.yaml" >}}
+  {{< filetree/file name=".env" >}}
+  {{< filetree/file name="cf-token" >}}
+{{< /filetree/container >}}
+
 ```sh
 git clone https://github.com/JAlcocerT/Home-Lab
 cd ./Home-Lab/traefik
@@ -481,7 +493,16 @@ chmod 600 ./traefik.yml #or it will be a security risk for other users to see th
 
 Make sure to point cf DNS records, maybe using script https://github.com/JAlcocerT/waiting-to-landing/blob/main/cloudflare-dns-updater.py
 
-> For which you will need the [ZoneID of your Domain](https://www.youtube.com/watch?v=pmfrJNCaOFY) as well as per this .env.sample
+> For which you will need the [ZoneID of your Domain](https://www.youtube.com/watch?v=pmfrJNCaOFY) as well as per [this .env.sample](https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/.env.sample)
+
+```sh
+sudo snap install jq
+sudo snap install yq
+# Get zone ID of your domain via CLI instead of Cloudflare UI
+curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=jalcocertech.com" \
+  -H "Authorization: Bearer $cf_token" \
+  -H "Content-Type: application/json" | jq -r '.result[0].id'
+```
 
 ```sh
 #python3 cf-dns-updater.py
@@ -514,9 +535,92 @@ Once **deployed**, go to: https://casa.jalcocertech.com/dashboard/#/http/routers
 ![alt text](/blog_img/selfh/https/traefik-firebat/traefik-dash-ui.png)
 
 
+**Example 1**: Traefik + already created webapps
 ```sh
 ping silverbullet.casa.jalcocertech.com
 ping portainer.casa.jalcocertech.com
 ```
 
 ![alt text](/blog_img/selfh/kb/silverbullet-dns-cf.png)
+
+
+**Example 2** Traefik + your (flask) webapp
+
+Example with ThreeBodies:
+
+```sh
+dig +short silverbullet.casa.jalcocertech.com A
+ping silverbullet.casa.jalcocertech.com
+nslookup silverbullet.casa.jalcocertech.com
+
+git clone https://github.com/JAlcocerT/ThreeBodies
+cd ThreeBodies
+#make docker-up
+```
+
+
+**Example 3** Traefik + a Web App + Tinyauth
+
+If you need a webapp on your homelab that does not bring some user/pwd, like OpenSpeedTest...
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-speed-test" title="OpenSpeedTest | Docker Config Setup 🐋 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tinyauth" title="TinyAuth | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
+
+![alt text](/blog_img/selfh/https/traefik-firebat/traefik-openspeedtest.png)
+
+> https://github.com/JAlcocerT/Home-Lab/blob/main/open-speed-test/docker-compose.traefik.yml
+
+
+We will need to create a **Github OAUTH App**:
+
+![Github Apps](/blog_img/selfh/https/TinyAuth/gh-apps.png)
+
+1. Go to https://github.com/settings/applications/new
+
+Add the link as per your subdomain: https://tinyauth.jalcocertech.com/api/oauth/callback/github
+
+![Github OAUTH](/blog_img/selfh/https/TinyAuth/gh-oauth-apps.png)
+
+2. Then, registre the application. Get its ID and and its client secret:
+
+![Github Secret](/blog_img/selfh/https/TinyAuth/gh-client-secret.png)
+
+Those are required for
+
+```yml
+    environment:
+      - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID} #For GitHub OAuth
+      - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
+```
+
+3. When its done, we will be Seeing the application: https://github.com/settings/applications/3023538
+
+particularly at the [OAUTH developer section](https://github.com/settings/developers). 
+
+![Github OAUTH App Created](/blog_img/selfh/https/TinyAuth/oauth-app-created.png)
+
+Just **spin up Tiny Auth** with:
+
+```sh
+cd tinyauth
+sudo docker compose up -d
+```
+
+And go to `https://tinyauth.jalcocertech.com` or whatever subdomain you placed.
+
+![TinyAuth UI with https](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png)
+
+Authorize the app:
+
+![Authorizing TinyAuth](/blog_img/selfh/https/TinyAuth/tinyauth-authorize-app.png)
+
+And you will be logged in:
+
+![Logged in via TinyAuth](/blog_img/selfh/https/TinyAuth/tinyauth-logged-in.png)
+
+```sh
+sudo docker compose -f docker-compose.traefiktinyauth.yml up -d
+##command: tail -f /dev/null #in case you need to keep running
+```

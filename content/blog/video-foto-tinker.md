@@ -472,7 +472,7 @@ Darktable is an **open source photography workflow application** and raw develop
 
 * https://github.com/darktable-org/darktable
 
-As a light room alternative:
+As a light room alternative!
 
 <!-- 
 https://www.youtube.com/watch?v=rMhe2gYJa9s 
@@ -482,6 +482,13 @@ https://www.youtube.com/watch?v=rMhe2gYJa9s
 
 
 ### Other photo editing
+
+For just displaying, I like PiGallery
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pigallery" title="PiGallery | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 If you are into OSS, see:
 
@@ -512,6 +519,12 @@ sudo snap install pinta
 ```
 
 > Simple GTK Paint Program
+
+5. See also Imagor: https://github.com/cshum/imagor
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/imagor" title="Imagor Container | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 
 To remove photo backgrounds with OSS:

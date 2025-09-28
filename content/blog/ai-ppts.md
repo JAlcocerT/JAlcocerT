@@ -565,9 +565,7 @@ marp sample.md --pdf
 marp sample-with-css.md --html
 ```
 
-Another css with:
-
-https://github.com/rnd195/my-marp-themes
+Another css with: https://github.com/rnd195/my-marp-themes
 
 * gradient
 

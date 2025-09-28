@@ -9,6 +9,8 @@ tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram Mermaid","La
 
 To work with Jira, you need to understand their datamodel: https://developer.atlassian.com/server/jira/platform/database-schema/
 
+![alt text](/blog_img/AIBI/jira/jira-datamodel.png)
+
 Just in case you need to build a [PBi](https://jalcocert.github.io/JAlcocerT/about-powerbi/) x Jira related dashboard.
 
 > Instead of a https://eazybi.com/products/eazybi-reports-and-charts-for-jira

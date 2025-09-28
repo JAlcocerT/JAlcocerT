@@ -34,6 +34,7 @@ I mean...a ,custom' solution that provides out of the box a UI for the final use
 
 ### TypeBot
 
+![alt text](/blog_img/selfh/automation/typebot.png)
 
 ---
 
@@ -159,6 +160,10 @@ Instead of having this cool [streamlit web scrapper](https://github.com/JAlcocer
 
 2. Just use...**FireCrawl** with n8n https://www.npmjs.com/package/@mendable/n8n-nodes-firecrawl
 
+![n8n Firecrawl Setup](/blog_img/selfh/automation/n8n-firecrawl.png)
+
+![alt text](/blog_img/selfh/automation/n8n-firecrawl-workflow.png)
+
 > Lets use this Example [page for re to scrap](https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/26643098/es/)
 
 What a better chance than this to start trying the `when chat message received` aka `chat trigger` node?
@@ -218,6 +223,8 @@ This setup allows you to embed a fully functional conversational chatbot powered
 ##### n8n x APIFY
 
 * https://www.npmjs.com/package/@apify/n8n-nodes-apify
+
+![alt text](/blog_img/selfh/automation/apify-ui.png)
 
 ![alt text](/blog_img/selfh/automation/n8n-apify.png)
 

@@ -134,7 +134,7 @@ If you have ever faced with the problem of [http vs https](https://jalcocert.git
 
 **Traefik is an open-source reverse proxy** and load balancer that's designed to be easy to use, flexible, and scalable. 
 
-It's written in Go, which makes it lightweight and efficient.
+It's **written in Go**, which makes it lightweight and efficient.
 
 Traefik is ideal for modern web applications, microservices, and containerized environments.
 
@@ -285,7 +285,7 @@ cd /home/docker/traefik
 
 ```sh
 touch /home/docker/traefik/acme.json #blank, just change the permissions to 600 later (private key)
-touch /home/docker/traefik/acme.yml
+touch /home/docker/traefik/config.yml
 touch /home/docker/traefik/traefik.yml
 ```
 
@@ -355,19 +355,19 @@ The config and traefik yml's are loaded at run time (when container starts or re
 {{< youtube "CmUzMi5QLzI" >}}
 
 {{< callout type="info" >}}
-There are many [Plugins](https://plugins.traefik.io/plugins) that cna act as middleware!
+There are many [Plugins](https://plugins.traefik.io/plugins) that can act as middleware!
 {{< /callout >}}
 
 ---
 
 ## Conclusions
 
-Traefik has been a really interesting setup, what I like:
+Traefik has been a really interesting setup, what I liked:
 
 1. Programatic implementation of new subdomains
 2. No need to expose services ports (though you still can)
 3. Automatic https for homelab private IPs working (also for public ones on VPS's)
-4. The rabbithole of middlewares...like for Authentication purpuses (as we will see below)
+4. The rabbithole of middlewares...like for Authentication purpuses (as we will see below with [TinyAuth](#traefik-x-tinyauth-x-flask))
 
 With Traefik working, its time to combine it with a sample Flask Web App and **Tinyauth**
 
@@ -416,7 +416,7 @@ particularly at the [OAUTH developer section](https://github.com/settings/develo
 
 ![Github OAUTH App Created](/blog_img/selfh/https/TinyAuth/oauth-app-created.png)
 
-Just sping up Tiny Auth with:
+Just **spin up Tiny Auth** with:
 
 ```sh
 sudo docker compose up -d

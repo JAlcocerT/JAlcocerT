@@ -82,6 +82,8 @@ https://docs.firecrawl.dev/use-cases/developers-mcp -> https://github.com/firecr
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/quant-ux" title="QuantUX | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+![alt text](/blog_img/selfh/HomeLab/quant-ux.png)
+
 
 {{< details title="Whats QuantUX? Prototyping and Usability Testing 📌" closed="true" >}}
 
