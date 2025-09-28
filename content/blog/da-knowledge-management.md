@@ -296,13 +296,17 @@ chmod +x /home/jalcocert/Applications/marktext*.AppImage
 {{< youtube "GJGpBw4bWFk" >}}
 
 
-> See also PicGo if you want to host images, or just use MarkText sync to Github
+> See also [PicGo](https://github.com/Molunerfinn/PicGo) if you want to host images, or just use MarkText sync to Github
+
+> > https://github.com/Molunerfinn/PicGo/releases
 
 ![Marktext github img](/blog_img/selfh/kb/marktext-img-gh.png)
 
 {{% details title="More about PicGo + MarkText 🚀" closed="true" %}}
 
 PicGo is an **open-source, cross-platform tool** designed to make **image uploading to image hosting services (known as "pic-beds") simple and fast**, especially for people who write in Markdown.
+
+* https://picgo.github.io/PicGo-Doc/en/guide/#installation
 
 It is highly popular among bloggers, developers, and writers who use static site generators or Markdown editors like **Typora** or VS Code, as it streamlines the process of getting images into their documents.
 

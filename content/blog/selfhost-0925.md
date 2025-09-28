@@ -188,6 +188,17 @@ I have updated the `docker-compose.yml` and Dockerfiles at:
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/SSGs" title="SSGs | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
+
+{{< details title="Astro Theme Selection | Blog 101 with PPTs 📌" closed="true" >}}
+
+```sh
+git clone https://github.com/monakit/monakit
+
+```
+
+{{< /details >}}
+
+
 > Using your HomeLab to host a cool website is as simple as understanding those!
 
 ### Pi and IoT
@@ -415,6 +426,29 @@ ping -c 4 192.168.1.106
 sudo tailscale up --force-reauth #just in case you forgot to extend the expiry
 ```
 
+See the life traffic over a network
+```sh
+ifconfig enp1s0
+vnstat -l -i enp1s0   # live mode (Ctrl+C to stop)
+#vnstat -l -i proton0   # live mode (Ctrl+C to stop)
+```
+
+{{< callout type="info" >}}
+If you are looking for HomeLab Privacy see this [post for a stronger homelab](https://jalcocert.github.io/JAlcocerT/homelab-security/#vpn) (vpn section)
+{{< /callout >}}
+
+```sh
+#https://protonvpn.com/support/official-linux-vpn-debian/
+wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.8_all.deb
+sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update
+#echo "0b14e71586b22e498eb20926c48c7b434b751149b1f2af9902ef1cfe6b03e180 protonvpn-stable-release_1.0.8_all.deb" | sha256sum --check -
+sudo apt install proton-vpn-gnome-desktop
+```
+
+You know, just in case your cool site gets banned without a reason:
+
+![LaLiga Cloudflare Unjustified Ban](/blog_img/selfh/HomeLab/laliga-cloudflare.png)
+
 #### Hello Again Firebat
 
 After one year of putting [the FireBat AK2](https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/) up and running...
@@ -535,7 +569,8 @@ Once **deployed**, go to: https://casa.jalcocertech.com/dashboard/#/http/routers
 ![alt text](/blog_img/selfh/https/traefik-firebat/traefik-dash-ui.png)
 
 
-**Example 1**: Traefik + already created webapps
+**Example 1**: Traefik + already created (from others) webapps ✅ 
+
 ```sh
 ping silverbullet.casa.jalcocertech.com
 ping portainer.casa.jalcocertech.com
@@ -544,7 +579,7 @@ ping portainer.casa.jalcocertech.com
 ![alt text](/blog_img/selfh/kb/silverbullet-dns-cf.png)
 
 
-**Example 2** Traefik + your (flask) webapp
+**Example 2** Traefik + your (flask) webapp ✅ 
 
 Example with ThreeBodies:
 
@@ -559,9 +594,11 @@ cd ThreeBodies
 ```
 
 
-**Example 3** Traefik + a Web App + Tinyauth
+**Example 3** Traefik + a Web App + Tinyauth ✅ 
 
 If you need a webapp on your homelab that does not bring some user/pwd, like OpenSpeedTest...
+
+> This method will allow to authenticate webapps via user/pwd or with Oauth like GH.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-speed-test" title="OpenSpeedTest | Docker Config Setup 🐋 ↗"  >}}
@@ -573,15 +610,17 @@ If you need a webapp on your homelab that does not bring some user/pwd, like Ope
 > https://github.com/JAlcocerT/Home-Lab/blob/main/open-speed-test/docker-compose.traefik.yml
 
 
-We will need to create a **Github OAUTH App**:
+We will need to create a **Github OAUTH App**: `https://auth.casa.jalcocertech.com`
 
 ![Github Apps](/blog_img/selfh/https/TinyAuth/gh-apps.png)
 
 1. Go to https://github.com/settings/applications/new
 
-Add the link as per your subdomain: https://tinyauth.jalcocertech.com/api/oauth/callback/github
+Add the link as per your subdomain: `https://auth.casa.jalcocertech.com/api/oauth/callback/github`
 
 ![Github OAUTH](/blog_img/selfh/https/TinyAuth/gh-oauth-apps.png)
+
+![alt text](/blog_img/selfh/https/TinyAuth/tinyauth-gh-oauth-firebat.png)
 
 2. Then, registre the application. Get its ID and and its client secret:
 
@@ -601,26 +640,61 @@ particularly at the [OAUTH developer section](https://github.com/settings/develo
 
 ![Github OAUTH App Created](/blog_img/selfh/https/TinyAuth/oauth-app-created.png)
 
-Just **spin up Tiny Auth** with:
+Just **spin up Tiny Auth** with: https://github.com/JAlcocerT/Home-Lab/blob/main/tinyauth/docker-compose.firebat.yml
 
 ```sh
 cd tinyauth
-sudo docker compose up -d
+#sudo docker compose up -d
+docker compose -f docker-compose.firebat.yml up -d
 ```
 
-And go to `https://tinyauth.jalcocertech.com` or whatever subdomain you placed.
+Now, go to `https://auth.casa.jalcocertech.com` or whatever subdomain you placed.
+
+> See that this works without touching any configuration nor Cloudflare DNS and we already have the HTTPs and the dns pointing
+
+```sh
+nslookup auth.casa.jalcocertech.com
+```
 
 ![TinyAuth UI with https](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png)
 
-Authorize the app:
+Authorize the app And you will be logged in!
 
 ![Authorizing TinyAuth](/blog_img/selfh/https/TinyAuth/tinyauth-authorize-app.png)
 
-And you will be logged in:
-
-![Logged in via TinyAuth](/blog_img/selfh/https/TinyAuth/tinyauth-logged-in.png)
+Remember that you can also add Users/pwd to TinyAuth [via the .env](https://github.com/JAlcocerT/Home-Lab/blob/main/tinyauth/.env.sample):
 
 ```sh
+echo $(htpasswd -nB jalcocert) | sed -e s/\\$/\\$\\$/g
+sudo docker restart tinyauth
+```
+
+![TinyAuth hardcoded user and password](/blog_img/selfh/https/TinyAuth/tinyauth-hardcoded-userpwd.png)
+
+Now, for [OpenSpeedTest to use TinyAuth via Traefik](https://github.com/JAlcocerT/Home-Lab/blob/main/open-speed-test/docker-compose.traefiktinyauth.yml): 
+
+```sh
+cd 
 sudo docker compose -f docker-compose.traefiktinyauth.yml up -d
 ##command: tail -f /dev/null #in case you need to keep running
 ```
+
+> And there you go `https://openspeedtest.casa.jalcocertech.com/`
+
+> > The only additional part to [the dockercompose service label](https://github.com/JAlcocerT/Home-Lab/blob/main/open-speed-test/docker-compose.traefiktinyauth.yml#L27) (like openspeedtest), is the `traefik.http.routers.openspeedtest-secure.middlewares=tinyauth`
+
+Thanks again to Jims Garage!
+
+<!-- https://www.youtube.com/watch?v=qmlHirOpzpc -->
+
+{{< youtube "qmlHirOpzpc" >}}
+
+{{< callout type="info" >}}
+So any new service added to traefik (+tinyauth) is just a matter if its compose having proper labels, nothing else to be configured!
+{{< /callout >}}
+
+Imo, much better than the cloudflare webapp authentication method we saw some time ago:
+
+![alt text](/blog_img/selfh/https/TinyAuth/cf-apps-auth.png)
+
+![alt text](/blog_img/selfh/https/TinyAuth/cf0apps-auth1.png)

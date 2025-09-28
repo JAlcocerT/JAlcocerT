@@ -7,6 +7,8 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+
+
 https://tailscale.com/kb/1282/docker
 
 Perplexity browserwith agents
@@ -295,6 +297,9 @@ If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlc
 10. Thanks to authentication I got to know the difference between: WHO someone is and what someone can DO 🤯
 
 
+> Getting to work Traefik+Tiny Auth has been amazing, and social auth for SaaS is quick and great
+
+
 
 {{% details title="API vs JWT vs OAUTh 🚀" closed="true" %}}
 
@@ -334,6 +339,12 @@ For APIs exposed to external clients, OAuth is generally considered more secure 
 > Notice also (as per **ENS** and DNS), that **what something is** has nothing to do with where something is.
 
 > > And BRD PRD FRD are the why what how
+
+11. From SliDevJS for ppts, to realize that pandoc, latex or Typst allow us to create pixel perfect ebooks, newsletters... 
+
+12. Astro Themes never stop surprising me. Embed ppts inside of them, get n8n chatbots or cal/whatsap boubles...
+
+
 
 ## Entrepreneuring
 
