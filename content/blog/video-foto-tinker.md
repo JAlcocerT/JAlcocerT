@@ -44,7 +44,7 @@ I will be showing you how to put your **videos into social media** with:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#keep-using" title="Jellyfin to watch your videos" image="/blog_img/selfh/media/jellyfin-smarttv.png" subtitle="Seen on Spring 2025 Selfhosting Post" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/tree/jellyfin" title="jellyfin Selfh" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Homarr wih Traefik Compose" >}}  
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/tree/jellyfin" title="jellyfin Selfh" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Jellyfin wih Traefik Compose" >}}  
 {{< /cards >}}
 
 {{< callout type="info" >}}

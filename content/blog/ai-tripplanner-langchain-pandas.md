@@ -6,10 +6,20 @@ draft: false
 #     image: "https://socialify.git.ci/JAlcocerT/Py_Trip_Planner/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #     alt: "Trip Planner with AI" # alt text
 #     caption: "Trip Planner with AI" # display caption under cover
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Gen-AI","Python","Dev","Windy vs Trip-Planner","DASH"]
 description: 'Use LangChain to chat with a Pandas DF. Compared with LlamaIndex Pandas Query Engine.'
 url: 'using-langchain-with-pandas-df'
 ---
+
+
+**TL;DR**
+
+https://www.windy.com/-Rain-thunder-rain?rain,37.118,-4.995,7 is fantastic.
+
+And I wanted to make my weather app better: https://tripplanner.casa.jalcocertech.com/
+
+
+**Intro**
 
 What if we could use **AI to chat about weather** patterns in a location?
 

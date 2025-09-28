@@ -173,9 +173,16 @@ Fortunately, there are amazing resources to give you ideas:
 
 * https://selfh.st/
   * From this one you will get weekly projects to have a look ( Plot Twist: you wont have time to see them all)
-    * Example: https://github.com/OpenCut-app/OpenCut
+    * Example: https://github.com/OpenCut-app/OpenCut or https://github.com/Cloudable-dev/netgoat
 
-> MIT |  The open-source CapCut alternative 
+    > MIT |  The open-source CapCut alternative 
+
+  <!-- https://www.youtube.com/watch?v=OOxzP1JvfQk -->
+
+  {{< youtube "OOxzP1JvfQk" >}}
+
+
+
 
 * https://github.com/jmlcas?tab=repositories
 
@@ -218,6 +225,10 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
 > This theme uses revealJS for the ppts, a candidate for an upcoming blog.jalcocertech.com 
+
+You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/JAlcocerT/pro-agency-automation/#landing-chatbot-with-kb-knowledge) to these kind of sites.
+
+
 
 {{< /details >}}
 
@@ -473,6 +484,8 @@ sudo apt install proton-vpn-gnome-desktop
 ```
 
 > Its recommended to do [p2p behind a VPN](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry) so that hackers can attack youe public IP address
+
+> > As seen in [0625](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p), [Reddit](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/) knows your [thing](https://www.reddit.com/r/MotorsportsReplays/comments/1haaapr/formula_1_19782024_megatorrent/)
 
 You know, just in case your cool site gets banned without a reason:
 

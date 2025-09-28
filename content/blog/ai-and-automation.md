@@ -8,9 +8,11 @@ url: 'pro-agency-automation'
 ---
 
 
+**Intro** 
+
 Just recently I covered how to [build a quick product with auth + a landing](https://jalcocert.github.io/JAlcocerT/micro-saas/)
 
-Also, couple of [marketer show me a cool workflow](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/)
+Also, couple of [marketers show me a cool workflow](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/)
 
 If you read me for some time already, you are also aware of APIs, Webhooks and automations (not only with n8n)
 
@@ -32,6 +34,16 @@ I mean...a ,custom' solution that provides out of the box a UI for the final use
 
 ![alt text](/blog_img/selfh/automation/botpress-dash.png)
 
+<!-- https://www.youtube.com/watch?v=f17B1NLu8ho -->
+
+  {{< youtube "f17B1NLu8ho" >}}
+
+  <!-- https://www.youtube.com/watch?v=1EVE2jlFgOc&t=48s -->
+
+    {{< youtube "1EVE2jlFgOc" >}}
+
+
+
 ### TypeBot
 
 ![alt text](/blog_img/selfh/automation/typebot.png)
@@ -43,6 +55,10 @@ I mean...a ,custom' solution that provides out of the box a UI for the final use
 ### Use Cases
 
 #### eBook Creation
+
+Just in case you are aware of Pandoc.
+
+And how to convert .md to cool pdf or even to epub for ebooks.
 
 #### Real Estate Chat Bot
 

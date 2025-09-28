@@ -36,6 +36,8 @@ I got the Micro SaaS concept into my mind, from the theme:
 
 > MIT | Idol is an elegant landing page template for micro SaaS products built with AstroJS & Skeleton CSS
 
+> > Get also ideas for landings from sites like https://eternalvault.app/pricing/
+
 Because there are others themes, like Saasify that I used as a PoC:
 
 Or

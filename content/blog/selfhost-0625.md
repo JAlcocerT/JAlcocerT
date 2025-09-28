@@ -294,7 +294,7 @@ You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/
 
 ![Qbittorrent](/blog_img/selfh/media/qbit.png)
 
-This is how the admin UI looks like:
+This is how **qbittorrent's admin UI** looks like:
 
 ![Qbit Login](/blog_img/selfh/media/qbit-admin.png)
 
