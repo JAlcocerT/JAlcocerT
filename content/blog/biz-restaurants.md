@@ -7,6 +7,10 @@ description: "Astro Websites for Restaurants. Million dollar idea in the Mediter
 url: "webs-for-restaurants"
 ---
 
+
+https://gusti.pl/oV8S1gQ
+
+https://tandoorolsztyn.pl/
 https://github.com/jacoknapp/EternalVows
 
 

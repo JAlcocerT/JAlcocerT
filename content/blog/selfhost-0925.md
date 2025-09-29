@@ -44,7 +44,7 @@ podman --version
 
 4. Start [creating and deploying your Apps](#how-to-bundle-your-apps)
 
-5. Get a domain and [bring https](#https-everywhere) when you feel confortable.
+5. Get a domain ([TLD](https://tld-list.com/)) and [bring https](#https-everywhere) when you feel confortable.
 
 6. Along the way...
 
@@ -515,6 +515,10 @@ sudo apt install proton-vpn-gnome-desktop
 
 > > As seen in [0625](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p), [Reddit](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/) knows your [thing](https://www.reddit.com/r/MotorsportsReplays/comments/1haaapr/formula_1_19782024_megatorrent/)
 
+But hey, this is just to do legal stuff, like sharing OSS images, like ubuntu.
+
+Dont dare to watch `f movies` with your `cat` :) 
+
 Those might be down: https://www.isitdownrightnow.com/
 
 You know, just in case your cool site gets banned without a reason:
@@ -789,3 +793,11 @@ Imo, much better than the cloudflare webapp authentication method we saw some ti
 ![alt text](/blog_img/selfh/https/TinyAuth/cf-apps-auth.png)
 
 ![alt text](/blog_img/selfh/https/TinyAuth/cf0apps-auth1.png)
+
+
+### More Free Resources
+
+1. https://fmhy.net/devtools#static-page-hosting from https://github.com/fmhy/edit
+
+2. https://free-for.dev/#/ from https://github.com/jixserver/free-for-dev
+

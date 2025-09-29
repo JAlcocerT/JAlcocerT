@@ -61,6 +61,9 @@ Nice to have:
 10. https://millennialmoney.com/calculators/fire-calculator/
 11. https://totalrealreturns.com/s/SCHD,VYM,PEP?start=2020-04-23
 12. https://stockanalysis.com/stocks/pep/dividend/
+13. https://fullratio.com/stocks/nyse-ko/coca-cola 
+
+> Wait, the oil is at the same price than 2006 but i pay more for it? https://www.macrotrends.net/2483/brent-crude-oil-price-history
 
 https://www.gurufocus.com/term/forward-pe-ratio/PEP
  
@@ -72,6 +75,7 @@ See [the BRD](#faq) where we scoped the project.
 
 If you need a proper finance tool, see: https://www.perplexity.ai/finance/XOM?comparing=CVX&period=1y
 
+Before going to https://www.interactivebrokers.ie/sso/Login?RL=1&locale=en_US or https://www.xtb.com/es :)
 
 
 ---
