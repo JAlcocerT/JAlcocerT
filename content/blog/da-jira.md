@@ -15,6 +15,7 @@ Just in case you need to build a [PBi](https://jalcocert.github.io/JAlcocerT/abo
 
 > Instead of a https://eazybi.com/products/eazybi-reports-and-charts-for-jira
 
+> > https://techcommunity.microsoft.com/blog/educatordeveloperblog/building-a-gantt-chart-using-power-bi/3605928
 
 On the jira data model pdf, you will find jiradb.table_name, like `jiradb.issuetype`
 
@@ -83,6 +84,24 @@ But it can be use for that cool LandThatJob.
 because you havent forgot on the Overleaf CV generation, right?
 
 > CV as a code, like with [overleaf](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#creating-a-responsive-cv) + [your story](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#historieta) + AI magic with a given offer link, aka scrap & process = you getting the job you want
+
+## Conclusions
+
+The discussion about **REST APIs** is a critical part of how these systems handle data and integrate with the outside world.
+
+| Feature | Jira REST API | Azure DevOps (ADO) REST API |
+| :--- | :--- | :--- |
+| **Primary Query Language** | **$\text{Jira Query Language (JQL)}$** | **$\text{Work Item Query Language (Wiql)}$** |
+| **Query Strength** | Extremely powerful for **searching/filtering work items** (Issues) based on fields, links, projects, and version data. | Excellent for **structured hierarchy queries** (parent/child, tree-based links) and complex team-based filters. |
+| **API Architecture** | **Issue-centric.** The core API revolves around Issues and their fields. Other APIs are specific (e.g., Agile, GreenHopper, Software, Service Management). | **Service-centric (Modular).** Divided into separate, distinct REST APIs for each service: $\text{Boards}$, $\text{Repos}$, $\text{Pipelines}$, $\text{Test}$, $\text{Artifacts}$. |
+| **Custom Fields Access** | Highly flexible. Custom fields are easily accessible and modifiable using **standard field ID** notation in the Issue API (e.g., `customfield_10001`). | Highly structured. Custom fields are accessed via a **field reference name** (e.g., `Custom.TargetReleaseName`) within the Work Item API. |
+| **Updating Work Items** | Uses standard **JSON payloads** to update fields. Complex custom logic often requires Jira Automation or a Marketplace app/hook. | Uses the **JSON Patch standard** for updates, which defines specific operations ($\text{add}$, $\text{replace}$, $\text{remove}$) for precise changes. |
+| **Extensibility Focus** | API is used primarily for **Data Exchange** and integrating with third-party, specialized tools (CI/CD, CRM, etc.). | API is used for **Full Automation** of the DevOps lifecycle (creating builds, deploying releases, managing repos, as well as managing work). |
+\
+
+* **Jira** favors a **query-first, data-flexible** approach. JQL is an incredibly human-readable and powerful language for pulling specific work items. The core API is focused on the issue as the unit of work.
+* **Azure DevOps** favors a **structured, command-and-control** approach. Wiql is very strong for hierarchical queries, and the API is organized across the entire toolchain, allowing for deep automation of every part of the DevOps process (build, release, testing, and work).
+
 
 ---
 

@@ -8,18 +8,7 @@ url: 'ai-multi-agents-frameworks'
 ---
 
 
-<!-- https://fossengineer.com/create-chatgpt-clone-streamlit/
-https://fossengineer.com/summarize-yt-videos/ -->
-
-<!-- https://fossengineer.com/chaos-theory-and-the-double-pendulum-with-python/
-https://github.com/agnanp/Ollama-Streamlit
-https://github.com/romilandc/streamlit-ollama-llm
-https://github.com/ChingWeiChan/ollama-streamlit-demo -->
-
-<!-- https://github.com/AIDevBytes/Streamlit-Ollama-Chatbot
-
-https://github.com/iamaziz/ollachat -->
-
+**Intro**
 
 Couple of years back there where prjects like https://github.com/unconv/gpt-autopilot
 

@@ -22,6 +22,13 @@ Recently, I was writing about [this awsome mechanism project](https://jalcocert.
 {{< /cards >}}
 
 
+## Cynematics
+
+<!-- https://youtu.be/PWvIYU_Z8z8?si=LVaco4q82nDxspEj -->
+
+{{< youtube "PWvIYU_Z8z8" >}}
+
+
 ## Stress Concentrators
 
 <!-- 
@@ -107,11 +114,25 @@ I have been using:
 
 
 ### Analogies with Electrical Eng
+<!-- 
+https://youtu.be/Ckownv7VoxM?si=oENq0sLMSJ8F2Vls -->
 
-https://www.youtube.com/watch?v=f7oXhDatwtY
 
-https://youtube.com/shorts/iely3Q70Bps?si=lsQyCiGEevA3BicW
+{{< youtube "Ckownv7VoxM" >}}
 
+
+<!-- 
+https://www.youtube.com/watch?v=f7oXhDatwtY 
+-->
+
+{{< youtube "f7oXhDatwtY" >}}
+
+<!-- 
+https://youtube.com/shorts/iely3Q70Bps?si=lsQyCiGEevA3BicW 
+-->
+
+
+{{< youtube "iely3Q70Bps" >}}
 
 ### Cool Physics Animations
 
@@ -135,7 +156,9 @@ Here's a breakdown of what it is and its key characteristics:
 **What is it?**
 
 * **A System of Equations:** The Lorenz attractor is the graphical representation of the solutions to a simplified system of three ordinary differential equations (ODEs). Edward Lorenz, a meteorologist, developed these equations in the early 1960s as a highly simplified model of atmospheric convection (how fluids move when heated and cooled).
+
 * **An Attractor:** In a dynamical system, an attractor is a set of states towards which the system tends to evolve over time, regardless of its initial starting conditions (within a certain "basin of attraction"). The Lorenz system, for specific parameter values, will always settle into a trajectory that orbits around this specific, butterfly-shaped region.
+
 * **A "Strange" Attractor:** The Lorenz attractor is specifically known as a "strange attractor." Unlike simple attractors (like a single point or a stable cycle), a strange attractor exhibits chaotic behavior. This means its trajectories never repeat themselves exactly, even though they remain bounded within a finite region of space.
 
 **Key Characteristics:**

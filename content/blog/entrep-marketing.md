@@ -18,13 +18,15 @@ Today it seems all about [lead enrichment](https://www.firecrawl.dev/blog/fire-e
 
 * https://github.com/gomarble-ai/facebook-ads-mcp-server
 
+* https://github.com/goabstract/Marketing-for-Engineers
+
 **Intro**
 
-I started the day with a core believe: wordpress sites are meh
+I started the day with a core believe: *wordpress sites are meh*
 
 After this sync with couple of marketers - That changed. See this landing done with elementor: https://genkinfy.com/
 
-> 
+
 
 <!-- https://youtu.be/qQ13MKLfqYQ -->
 
@@ -45,12 +47,15 @@ url: 'firecrawl-web-scraping'
 --- -->
 
 **Tl;dr**
+
 Firecrawl is a powerful web crawling and scraping solution that makes data extraction from websites simple and efficient, with excellent integration capabilities with n8n for automation workflows.
 
 
 {{< details title=" What is Firecrawl? + n8n 📌" closed="true" >}}
 
-Firecrawl is an open-source, high-performance web crawler and scraper designed for developers and data professionals. It's built to handle modern web technologies, including JavaScript-rendered content, while being respectful of website terms of service.
+Firecrawl is an open-source, high-performance web crawler and scraper designed for developers and data professionals. 
+
+It's built to handle modern web technologies, including JavaScript-rendered content, while being respectful of website terms of service.
 
 Key Features
 

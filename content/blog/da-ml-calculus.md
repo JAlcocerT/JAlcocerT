@@ -103,6 +103,17 @@ Where f₁ and f₂ are functions that depend on the angles, their first derivat
 
 There are no spatial dependencies that would necessitate the use of partial differential equations.
 
+<!-- https://fossengineer.com/create-chatgpt-clone-streamlit/
+https://fossengineer.com/summarize-yt-videos/ -->
+
+<!-- https://fossengineer.com/chaos-theory-and-the-double-pendulum-with-python/
+https://github.com/agnanp/Ollama-Streamlit
+https://github.com/romilandc/streamlit-ollama-llm
+https://github.com/ChingWeiChan/ollama-streamlit-demo -->
+
+<!-- https://github.com/AIDevBytes/Streamlit-Ollama-Chatbot
+
+https://github.com/iamaziz/ollachat -->
 
 <!-- I will write a dedicated post about Chaos Theory in the future.  -->
 
