@@ -20,6 +20,9 @@ What are the users experiencing.
 
 If you have worked on some startups, you might have used Ampplitude.
 
+![Porsche design](/blog_img/outro/porsche.png)
+
+
 ## OpenReplay
 
 * https://www.openreplay.com/

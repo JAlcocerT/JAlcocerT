@@ -3,7 +3,7 @@ title: "Crypto. Now understandable with AI"
 date: 2025-07-23
 draft: false
 tags: ["AI","Aave v3 / Fluid / Compund","QuickSwap / UniSwap","Trilema"]
-description: 'Two buzz words in one. Understand crypto once and for all. This time thanks to LLMs'
+description: 'Two buzz words in one. Understand crypto once and for all. Now with LLMs'
 url: 'understading-crypto-with-ai'
 ---
 

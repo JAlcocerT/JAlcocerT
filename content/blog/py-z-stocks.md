@@ -3,7 +3,7 @@ title: "Stocks with Python"
 date: 2025-06-19T19:20:21+01:00
 draft: false
 tags: ["Python","Streamlit","Flask","Reflex","RStocks","YFinance","Google Sheets"]
-description: "A Cooler RStocks, PyStocks - This time, with Python and better Auth/UIM."
+description: "A Cooler RStocks, PyStocks - Now with Python and better Auth/UIM."
 url: 'python-stocks-webapp'
 math: true
 ---

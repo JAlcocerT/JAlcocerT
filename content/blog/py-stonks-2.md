@@ -268,3 +268,4 @@ I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit
 
 > > And has an interesting on boarding flow: https://divstash.app/signup/step-1 and T&Cs are mandatory: https://divstash.app/signup/quick
 
+And by the time of RStocks, I had in mind as reference the stock events app: https://stockevents.app/en?pt=118220498&ct=&mt=8

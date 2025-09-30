@@ -8,6 +8,8 @@ url: 'tech-recap-2025'
 ---
 
 
+![Porsche design](/blog_img/outro/porsche.png)
+
 
 https://tailscale.com/kb/1282/docker
 
