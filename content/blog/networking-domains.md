@@ -11,11 +11,11 @@ url: 'web-domain-basics'
 
 More goodies for your homelab.
 
-+++ and [why and how](#faq) we can interact with SC's and web3 from regular web2 domains.
++++ and [why and how](#faq) we can interact with SC's (Smart contracts) and [web3](https://jalcocert.github.io/JAlcocerT/guide-web3/) from regular web2 domains.
 
 **Intro**
 
-You can buy a TLD via any of these (and many more):
+You can buy a [TLD](https://tld-list.com) via any of these (and many more):
 
 1. Porkbun
 2. Cloudflare

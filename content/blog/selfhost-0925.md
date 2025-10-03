@@ -278,6 +278,8 @@ Option B: create your container to selfhost astro/hugo/whatever ssg and expose i
 
 > Using your HomeLab to host a cool website is as simple as understanding those!
 
+> > Want something more? See how to use your SSG with IPFS and ENS ([WEB3](https://jalcocert.github.io/JAlcocerT/web-domain-basics/) ready!)
+
 ### Pi and IoT
 
 Ive been tinkering with MicroControllers and MQTT protocol.
