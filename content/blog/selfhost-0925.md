@@ -98,6 +98,11 @@ But as of today i'd rather keep these [https setups](https://jalcocert.github.io
 * Or go the Traefik v3.3 approach (programatic https) as per this other guide
 * Just use cloudflared...
 
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX Setup" >}}
+  {{< card link="https://fossengineer.com/selfhosting-traefik/" title="Traefik Setup" >}}
+{{< /cards >}}
+
 
 {{< hextra/feature-grid >}}
  
@@ -258,12 +263,18 @@ hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.106" --port=1313
 
 {{< /details >}}
 
-
+To put astro/hugo inside a container is as simple as:
 
 {{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ssg-hugo" title="HUGO SSG Selfhosted | Docker Config Setup 🐋 ↗"  >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ssg-astro" title="Astro SSG Selfhosted | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
+Once you have your theme selected and tweaked, you have to host it:
+
+Option A: You can use any of these 3rd party [free static hosting](https://fossengineer.com/alternatives-for-hosting-static-websites) 
+
+Option B: create your container to selfhost astro/hugo/whatever ssg and expose it publically via cloudflare tunnels.
 
 > Using your HomeLab to host a cool website is as simple as understanding those!
 
@@ -571,8 +582,8 @@ cd ./Home-Lab/traefik
 #https://fossengineer.com/selfhosting-traefik/
 ```
 
-https://dash.cloudflare.com/profile/managed-profile/preferences
-https://dash.cloudflare.com/profile/api-tokens
+* https://dash.cloudflare.com/profile/managed-profile/preferences
+  * https://dash.cloudflare.com/profile/api-tokens
 
 ```sh
 curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \
