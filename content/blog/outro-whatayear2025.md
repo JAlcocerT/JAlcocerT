@@ -7,6 +7,9 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+Serverless is the way.
+
+And CF workers and pages  use cases are so cool: https://github.com/4ev-link/4ev.link
 
 ![Porsche design](/blog_img/outro/porsche.png)
 

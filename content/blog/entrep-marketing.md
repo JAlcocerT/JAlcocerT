@@ -13,6 +13,7 @@ Today it seems all about [lead enrichment](https://www.firecrawl.dev/blog/fire-e
 
 > https://github.com/JAlcocerT/leads-slubnechwile for this [fb page](https://www.facebook.com/profile.php?id=61581167945505&sk=about)
 
++++ Getting [the right clients](#conclusions) is a thing!
 
 * https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#marketing
 
@@ -165,9 +166,22 @@ Firecrawl provides a powerful yet simple way to extract web data at scale. When 
 
 ## Conclusions
 
-It seems all you need to do to start a marketing agency is a proposal.
+It seems *,all'* you need to do to start a marketing agency is a proposal.
 
 Like ~1k/month for [Leads](#how-to-get-and-enrich-leads) + [CRM](#marketing-around-oss) + [ChatBot](#chatbots-for-marketing) *with an ad campaing proposal*.
+
+### DIY vs DWY vs DFY
+
+Make sure you have a balanced supply/demand.
+
+Dont over commit. 
+
+And make sure you sell the right thing, to the [right people](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#conclusions).
+
+As time is the ultimate currency of life, dont get into commitment that will give you more headaches than similar potential customers.
+
+Free refund and just let me be, *if you dont like the offer*, seem a pretty nice deal for those clients.
+
 
 ---
 

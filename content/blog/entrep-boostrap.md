@@ -2,7 +2,7 @@
 title: "Bootstrap and other concepts for SoloPreneurs"
 date: 2025-10-07
 draft: false
-tags: ["SoloPreneur","Indie SaaS","Product","Entrepre-AI"]
+tags: ["SoloPreneur","Indie SaaS","Product","Entrepre-AI","Offers"]
 description: 'Resources to launch your stuff.'
 url: 'whats-boostrap'
 ---
@@ -16,6 +16,7 @@ Do you have a supply or a demand problem?
 
 And im not talking about [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/).
 
++++ understanding [offer types](#offers-are-a-rabbit-hole)
 
 **Intro**
 
@@ -53,6 +54,8 @@ Like the creator of postIZ on reddit: https://www.reddit.com/r/selfhosted/commen
 
 * Product Hunt, where you have an archive of the leaderboard: https://www.producthunt.com/leaderboard/daily/2025/8/13
   * https://www.producthunt.com/products/make-bootstrappers-handbook
+
+---
 
 ## Concepts
 
@@ -117,6 +120,21 @@ Time to put something together, for when you are about to build in public, creat
 
 
 You have now more than enough resources to share and get ideas to build.
+
+### Offers are a rabbit hole
+
+I was recently reading the 100M money models.
+
+Everything is so logical when you read/hear, but...so many variables though when you want to create your own.
+
+#### Upsale
+
+#### Downsale
+
+#### Continuity
+
+####
+
 
 ### Entrepre-AI Quick Sping
 

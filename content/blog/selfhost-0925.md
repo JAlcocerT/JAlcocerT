@@ -151,6 +151,8 @@ sudo docker compose -f docker-compose.traefik.yml ps
 
 ![alt text](/blog_img/selfh/HomeLab/nextcloud-traefik-local.png)
 
+> If you want a photo centered selfhosted app, see [Immich](https://github.com/JAlcocerT/Home-Lab/tree/main/immich), which just released v2.0
+
 Make sure your router DHCP settings does not change the private ip of your homelab, or your cloudflare x traefik setup will be pointing to a wrong ip:
 
 ![alt text](/blog_img/selfh/HomeLab/dhcp-static-ip-4grouter.png)
@@ -679,6 +681,10 @@ curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=jalcocertech.com
 {{< callout type="warning" >}}
 The **only DNS** you need to point is the one for Traefik, the rest is done automatically as per the labels!
 {{< /callout >}}
+
+These are the only ones you will see configured in cloudflare DNS: *if you want, change that private IP for your tailscale one*
+
+![cf DNS setup with traefik](/blog_img/selfh/HomeLab/dns-traefik.png)
 
 ```sh
 #python3 cf-dns-updater.py

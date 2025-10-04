@@ -703,8 +703,9 @@ Strengths: Flexible and customizable, allowing you to build custom interfaces, i
 
 Considerations: Requires more development knowledge compared to other options. Might have a steeper learning curve for non-programmers.
 
-4. Appsmith: https://www.appsmith.com/integration
-https://github.com/appsmithorg/appsmith
+4. [Appsmith](https://www.appsmith.com/): https://www.appsmith.com/integration
+
+* https://github.com/appsmithorg/appsmith
 
 Focus: Open-source **low-code platform** for building internal tools and custom applications.
 

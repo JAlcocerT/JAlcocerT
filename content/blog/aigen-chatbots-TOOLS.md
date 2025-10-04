@@ -594,7 +594,7 @@ Popup window after 3 seconds:
 
 * NodeRed
 
-* ToolJet - https://github.com/ToolJet/ToolJet?ref=fossengineer.com (aGPL v3.0)
+* [ToolJet](https://github.com/ToolJet/ToolJet) - https://github.com/ToolJet/ToolJet?ref=fossengineer.com (aGPL v3.0)
 
 {{< dropdown title="More about ToolJet and how to Set it up⏬" closed="true" >}}
 
