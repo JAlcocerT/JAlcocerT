@@ -342,3 +342,11 @@ The primary difference is the front-end tool and the language-specific processin
 >  A simple Docker-based REST API that converts Markdown to EPUB format using Pandoc. Send markdown content via JSON, get an `EPUB` file back. 
 
 * https://omnitools.app/pdf/pdf-to-epub
+
+### Alternative software for kindle
+
+https://koreader.rocks/
+
+<!-- https://www.youtube.com/shorts/ta0ZUsugLN0 -->
+
+{{< youtube "ta0ZUsugLN0" >}}

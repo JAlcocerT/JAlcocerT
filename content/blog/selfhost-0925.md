@@ -2,7 +2,7 @@
 title: "SelfHosting Updates - End Summer 2025"
 date: 2025-09-28T01:20:21+01:00
 draft: false
-tags: ["HomeLab","Ventoy","SSGs","MKCert","MeTube/Navidrome","Zen Browser"]
+tags: ["HomeLab","Ventoy","SSGs","MKCert","MeTube/Navidrome","Zen Browser","Box2Overtake"]
 description: 'Selfhosting for New Comers: SSGs,Python WebApps with Traefik v3 HTTPs and a Firebat'
 url: 'selfhosted-apps-sept-2025'
 ---
@@ -108,26 +108,54 @@ But as of today i'd rather keep these [https setups](https://jalcocert.github.io
  
 {{< hextra/feature-card
   title="Setup NGINX"
-  subtitle="How to setup: PiHole and UnBound DNS with FireBat"
+  subtitle="How to setup -PiHole and UnBound DNS with FireBat"
   style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
   link="https://jalcocert.github.io/RPi/posts/selfh-internet-better/"
 >}}
 
 {{< hextra/feature-card
   title="Setup Syncthing"
-  subtitle="P2P Syncing between home devices"
+  subtitle="P2P Syncing between home devices with Filebrowser"
   style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
   link="https://fossengineer.com/selfhosting-filebrowser-docker/"
 >}}
 
 {{< hextra/feature-card
-  title="Setup NextCloud in your Home Server"
-  subtitle="Just use cloudflare tunnels"
+  title="Setup NextCloud in your Home Server with Https"
+  subtitle="With Traefik with a domain pointing to a private IP address"
   style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
-  link="https://jalcocert.github.io/RPi/posts/selfhosting-nextcloud/"
+  link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#nextcloud-with-https/"
 >}}
 
 {{< /hextra/feature-grid >}}
+
+As a NC has recently made a release: https://hub.docker.com/_/nextcloud/tags
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/nextcloud" title="HomeLab x NextCloud | Config File 🐳 ↗"  >}}
+{{< /cards >}}
+
+```sh
+sudo docker compose -f docker-compose.traefik.yml up -d
+#/media/casa/Datos_copia_2
+#/home/casa/Home-Lab/nextcloud
+sudo docker compose -f docker-compose.traefik.yml ps
+
+#ping nextcloud.casa.jalcocertech.com
+#ifconfig enp1s0
+
+#sudo docker inspect nextcloud
+#docker inspect nc -f '{{range $net, $conf := .NetworkSettings.Networks}}{{$net}} ({{$conf.IPAddress}}){{end}}'
+#docker network inspect traefik_traefik-proxy --format '{{range .Containers}}{{.Name}} ({{.IPv4Address}}) - {{.MacAddress}}{{"\n"}}{{end}}'
+```
+
+![alt text](/blog_img/selfh/HomeLab/nextcloud-traefik-local.png)
+
+Make sure your router DHCP settings does not change the private ip of your homelab, or your cloudflare x traefik setup will be pointing to a wrong ip:
+
+![alt text](/blog_img/selfh/HomeLab/dhcp-static-ip-4grouter.png)
+
+See also...
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/cloudflare-tunnel" title="Cloudflared Tunnel | Docker Config Setup 🐋 ↗"  >}}
@@ -156,8 +184,16 @@ Try new desktop app for your linux system and install them via:
   {{< card link="https://snapcraft.io/" title="SnapCraft Apps" >}}
 {{< /cards >}}
 
+> See also [appimagelauncher](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#lately-i) :)
+
+I promised recently that I wont do more static sites for people.
+
+And consequently, this has not been a DFY (done for you), but a DWY (done with you) recap of [this](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) and [this](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/) web setup
+
+
 {{< youtube "jO-PiZyVWe8" >}}
 
+> Just make sure to have all you need for [HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) or [Astro web development](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/) ready
 <!-- 
 https://www.youtube.com/watch?v=jO-PiZyVWe8
  -->
@@ -209,6 +245,9 @@ Remember about:
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for anyone starting a Home-Lab" >}}
 {{< /cards >}}
+
+3. Free goodies: https://free-for.dev/#/ and https://freestuff.dev/alternative/clerk/
+
 
 
 ## Lately I...
@@ -281,11 +320,13 @@ Once you have your theme selected and tweaked, you have to host it:
 
 Option A: You can use any of these 3rd party [free static hosting](https://fossengineer.com/alternatives-for-hosting-static-websites) 
 
+> Example: `https://box2overtake.com/` or `proyectorutasmoto.web.app`
+
 Option B: create your container to selfhost astro/hugo/whatever ssg and expose it publically via cloudflare tunnels.
 
-> Using your HomeLab to host a cool website is as simple as understanding those!
+> Using your HomeLab to host a cool website, *like this [ebook landing](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#using-sell-your-ebook)*, is as simple as understanding those!
 
-> > Want something more? See how to use your SSG with IPFS and ENS ([WEB3](https://jalcocert.github.io/JAlcocerT/web-domain-basics/) ready!)
+> > Want sth more? See how to use your SSG with IPFS and ENS ([WEB3](https://jalcocert.github.io/JAlcocerT/web-domain-basics/) ready!)
 
 ### Pi and IoT
 
@@ -512,7 +553,8 @@ ping -c 4 192.168.1.106
 sudo tailscale up --force-reauth #just in case you forgot to extend the expiry
 ```
 
-See the life traffic over a network
+See the life traffic over a network:
+
 ```sh
 ifconfig enp1s0
 vnstat -l -i enp1s0   # live mode (Ctrl+C to stop)
@@ -635,7 +677,7 @@ curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=jalcocertech.com
 ```
 
 {{< callout type="warning" >}}
-The only DNS to point is the one for Traefik, the rest is done automatically as per the labels!
+The **only DNS** you need to point is the one for Traefik, the rest is done automatically as per the labels!
 {{< /callout >}}
 
 ```sh
@@ -646,6 +688,7 @@ nslookup casa.jalcocertech.com
 ```
 
 ![alt text](/blog_img/selfh/https/traefik-firebat/cf-dns-python.png)
+
 <!-- 
 * https://fossengineer.com/selfhosting-traefik/
 * https://jalcocert.github.io/JAlcocerT/testing-tinyauth/ -->
@@ -654,6 +697,8 @@ nslookup casa.jalcocertech.com
   {{< card link="https://fossengineer.com/selfhosting-traefik/" title="Traefik Setup" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/" title="TinyAuth (via Traefik) Setup" >}}
 {{< /cards >}}
+
+We are going to get `https://casa.jalcocertech.com/` and `https://auth.casa.jalcocertech.com/login` working pretty soon...
 
 ```sh
 touch config/acme.json && chmod 600 config/acme.json
@@ -669,7 +714,7 @@ sudo docker logs traefik
 This uses DNSchallenge (instead of https), so you dont have to open any ports :)
 {{< /callout >}}
 
-Once **deployed**, go to: https://casa.jalcocertech.com/dashboard/#/http/routers
+Once **Traefik is deployed**, go to: https://casa.jalcocertech.com/dashboard/#/http/routers
 
 ![alt text](/blog_img/selfh/https/traefik-firebat/traefik-dash-ui.png)
 
@@ -711,19 +756,20 @@ sudo docker compose -f docker-compose.traefik.yml up -d
 
 **Example 3** Traefik + a Web App + Tinyauth ✅ 
 
-If you need a webapp on your homelab that does not bring some user/pwd, like OpenSpeedTest...
+If you need a webapp on your homelab that does not bring some user/pwd, like **OpenSpeedTest**...
 
 > This method will allow to authenticate webapps via user/pwd or with Oauth like GH.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-speed-test" title="OpenSpeedTest | Docker Config Setup 🐋 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-speed-test" title="OpenSpeedTest x Traefik x TinyAuth | Docker Config Setup 🐋 ↗"  >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tinyauth" title="TinyAuth | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/https/traefik-firebat/traefik-openspeedtest.png)
+![traefik working with openspeedtest with custom subdomain](/blog_img/selfh/https/traefik-firebat/traefik-openspeedtest.png)
 
 > https://github.com/JAlcocerT/Home-Lab/blob/main/open-speed-test/docker-compose.traefik.yml
 
+![Just in case you dont want to use the regular hosted speedtest](/blog_img/selfh/HomeLab/speedtest.png)
 
 We will need to create a **Github OAUTH App**: `https://auth.casa.jalcocertech.com`
 

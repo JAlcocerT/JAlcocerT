@@ -39,7 +39,7 @@ I got inspired to write this post and created in public a way for any one to sel
 
 ## Resources for SoloPreneurs
 
-1. https://github.com/EdoStra/Marketing-for-Founders
+1. https://github.com/EdoStra/Marketing-for-Founders or for [engineers](https://github.com/goabstract/Marketing-for-Engineers) as we saw on this marketing post. 
 
 2. Reddit...
 

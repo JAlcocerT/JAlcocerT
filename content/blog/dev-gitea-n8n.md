@@ -3,7 +3,7 @@ title: "Automatic Post creation for SSG Workflows"
 date: 2025-09-05T08:20:21+01:00
 draft: false
 tags: ["Dev","n8n vs Gitea","Web","Markdown","Docker Networking"]
-description: 'From n8n workflow to Gitea.'
+description: 'From n8n workflows to Gitea API.'
 url: 'n8n-and-gitea'
 ---
 
@@ -27,6 +27,8 @@ Just get your server and containers going:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="Gitea | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+And you can also backup gitea with: https://github.com/RayLabsHQ/gitea-mirror
 
 
 ## The n8n x Gitea Stack

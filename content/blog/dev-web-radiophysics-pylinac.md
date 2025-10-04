@@ -2,13 +2,19 @@
 title: "A Website for a PHD: Pylinac and QaTrack+"
 date: 2025-02-23T13:20:21+01:00
 draft: false
-tags: ["DSc","wsl","HUGO SSG","SSMS","LocalShop Pypi"]
+tags: ["DSc","wsl","HUGO SSG","Github Pages","SSMS","LocalShop Pypi"]
 description: 'Helping to improve scientific knowledge. Improving the day to day of a radiotherapy researcher. Containers with WSL.'
 url: 'web-for-phd-researcher'
 ---
 
 
-**TL;DR** Helping a friend to get started with project docs + tech diary via [Hugo Hextra Theme](#hugo-hextra-with-github-pages) in Github Pages
+**TL;DR** 
+
+Helping a friend to get started with project docs + tech diary via [Hugo Hextra Theme](#hugo-hextra-with-github-pages) with free Github Pages hosting.
+
+
+**Intro**
+
 
 It all started when a friend discovered some parts to improve withing this library....
 
@@ -34,7 +40,7 @@ I suggested to start by cloning this very same repository.
 As the HUGO Hextra theme is just ready to roll.
 
 ```sh
-git clone
+git clone https://github.com/JAlcocerT/JAlcocerT
 ```
 
 You will need to accept to run github actions workflows in the forked repository and activate Github Pages:

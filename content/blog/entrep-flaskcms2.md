@@ -1,9 +1,9 @@
 ---
-title: "Flask x Stripe Payment Links"
+title: "Flask x Stripe Payment Links..."
 date: 2025-09-16T13:20:21+01:00
 draft: false
-tags: ["Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporalio","Klener status"]
-description: 'Markdown and Flask working together. A FlaskCMS v0.2 for Real Estate & Mental Health?'
+tags: ["Markdown Ninja vs Typlog","Cursor MCP","AppImageLauncher","Temporalio","Klener status","PageSpeed API","GSC"]
+description: 'Markdown and Flask working together. A FlaskCMS v0.2 for Moi Real Estate & Morita Mental Health?'
 url: 'flask-cms-for-ssgs'
 ---
 
@@ -14,6 +14,7 @@ v0.2 of the [Flask Powered CMS](#a-cms-with-flask).
 From Hugo Galleries to Mental Health and RealEstate managed via CMS (?)
 
 +++ [Testing](#lately-i) Cursor/Appimage launcher
++++ using Pagespeed and Google Search console API (GSC) [here](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)
 
 **Intro**
 
@@ -104,7 +105,7 @@ docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest 
 
 {{< /dropdown >}}
 
-Btw, the **pages speed insights**, can be done via API: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
+Btw, the **pages speed insights**, can be done via **API**: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
 
 ![alt text](/blog_img/web/morita-flask/pagespeedinsightapi.png)
 
@@ -190,27 +191,32 @@ Same for the thought of doing a [Gitea API connection + n8n](https://jalcocert.g
 
 ## Conclusions
 
+Its definitely hard to sale sth to people.
+
 I believe in some podcast from A. Hormozi he says: *Sell to rich people, they pay more/better*
 
 It was such a very simple statement, and how much truth there is inside of it :)
 
-With these setups ends my custom/individual website creation.
+With these 2 setups ends my custom/individual website creation. For good.
 
-Time to scale with all the learnings.
+> I will show the DIY way to anyone that can be interested, but it wont be a 
+
+Time to scale with all the learnings: bring more clients, automatically and ones that actually see/can get value on a site.
 
 Because its not about the tech stack, but the solutions provided.
 
-The simper wins and it seems that for now there wont be a flaskcms2.0.
+Simplicity always wins and it seems that for now there wont be a flaskcms2.0.
 
 What it can be is some status pages on the services provided:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener Status Pages | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ### Lately I...
 
+This year ive tried a lot, and lately these ones:
 
 1. Have tried **Cursor**: https://cursor.com/dashboard
 
@@ -244,6 +250,8 @@ sudo apt update
 sudo apt install appimagelauncher
 mkdir ~/Applications #place your *.AppImages there and they will integrate with your linux!
 ```
+
+This is great for homelab as well!
 
 > I also saw this other IDE came out: https://www.dereference.dev/
 

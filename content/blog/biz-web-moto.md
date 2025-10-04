@@ -106,7 +106,7 @@ And to have the a **custom domain linked**...
 
 Went to [firebase UI](https://console.firebase.google.com/) -> Compilation -> hosting.
 
-Add a custom domain.
+Add a custom domain *,if you have one*.
 
 Select my subdomain, and added a **CName + TXT record to the DNS**.
 

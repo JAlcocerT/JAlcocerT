@@ -987,7 +987,7 @@ Aquí te doy algunas observaciones y sugerencias adicionales:
 *   **No te sientas presionado a tomar una decisión:** Tómate tu tiempo para evaluar todas las opciones.
 
 
-**More**
+**More** real estate qq:
 <!-- 
 https://www.otodom.pl/pl/oferta/bialoleka-aluzyjna-3pok-do-wejscia-okazyjna-cena-ID4ukLi -->
 
@@ -1005,6 +1005,7 @@ https://www.otodom.pl/pl/oferta/bialoleka-aluzyjna-3pok-do-wejscia-okazyjna-cena
 12. Jak wygląda sytuacja z internetem? Czy jest światłowód?
 13. Księga wieczysta czy istnieje i czy mogę prosić o numer?
 14. Najbliższy paczkomat? Sprawdzić
+15. How much uber costs, transportation time compared to where you live?
 
 From here, you might need some [help to get a credit](https://hipoteczny.expert/), *or maybe not* :)
 

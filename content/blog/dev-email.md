@@ -13,6 +13,8 @@ https://mxroute.com/
 
 SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better
 
+This does not work anymore: https://github.com/umuterturk/email-verifier
+
 **Intro**
 
 So far I got proper *and high level* custom email integration via:

@@ -31,6 +31,8 @@ So this is mostly a create + understand notes from kindle.
 
 Rather than a way to admire how people have created **static status pages**: https://open-slum.pages.dev/ nor [get things](https://annas-archive.org/). 
 
+> Uptime monitor / status pages in cloudflare pages
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}

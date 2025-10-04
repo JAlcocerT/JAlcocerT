@@ -62,6 +62,8 @@ Nice to have:
 11. https://totalrealreturns.com/s/SCHD,VYM,PEP?start=2020-04-23
 12. https://stockanalysis.com/stocks/pep/dividend/
 13. https://fullratio.com/stocks/nyse-ko/coca-cola 
+14. Buyback ratio (if historical, even better)
+15. Volatility div growth mdd cagr / Yfinance eur usd?
 
 > Wait, the oil is at the same price than 2006 but i pay more for it? https://www.macrotrends.net/2483/brent-crude-oil-price-history
 

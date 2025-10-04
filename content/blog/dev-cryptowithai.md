@@ -178,15 +178,17 @@ Understanding SC's with LLMs: these are are some [interesting protocols as per d
 
 There are of course some platforms already for this.
 
-But as this is all public, how about...exploring a BTC wallet?
+But as this is all public, how about...exploring a **BTC wallet**?
 
 Like the one offered for donations at duckdns:
 
 * https://btcscan.org/address/16gHnv3NTjpF5ZavMi9QYBFxUkNchdicUS
 
 {{< cards cols="1" >}}
-  {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="DuckDNS+NGINX is a very cool setup, btw" >}}
+  {{< card link="https://forocoches.com/foro/showthread.php?t=10011799&page=2" title="Some People do DCA to BTC " >}}
 {{< /cards >}}
+
+> I guess they follow some kind of hodlhodl approach to keep pocketbitcoin via relai.
 
 And that exploration of a wallet can be [done with Python](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_Tests/Crypto/btc_explore.ipynb)!
 
@@ -749,6 +751,10 @@ What You Need to Consider (The Risks & Mechanics)
     * **Capital Efficiency:** This allows for much higher capital efficiency, as your capital is concentrated where most trading occurs, potentially earning more fees for a given amount of capital.
     * **Active Management:** If the price of ETH moves *outside* your chosen range, your liquidity becomes **inactive** and stops earning fees. To continue earning, you would need to either wait for the price to return to your range or manually adjust your range (which incurs gas fees). This often requires a more active, market-making approach, or the use of automated liquidity management services.
     * **Increased Impermanent Loss Risk (if not managed):** While concentrated liquidity offers higher fee potential, it can also amplify impermanent loss if not managed well, as your position can quickly go out of range in volatile markets.
+
+Example: https://app.uniswap.org/explore/pools/ethereum/0x4e68Ccd3E89f51C3074ca5072bbAC773960dFa36
+
+![alt text](/blog_img/crypto/uniswap-eth-usdt.png)
 
 3.  **Gas Fees:**
     * Since Uniswap's largest pools are on the Ethereum mainnet, providing liquidity, adjusting ranges, claiming fees, and withdrawing liquidity will incur **significant Ethereum gas fees**. This can eat into your profits, especially for smaller positions or frequent management.
