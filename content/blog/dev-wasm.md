@@ -1,8 +1,8 @@
 ---
-title: "WASM"
+title: "WASM, Containers? What?"
 date: 2025-10-01
 draft: false
-tags: ["Dev","Web Assembly","IndieHacker","PWA","FFMPeg"]
+tags: ["Dev","Web Assembly","IndieHacker","PWA","FFMPeg","Compiled vs non"]
 description: 'Must knoics.'
 url: 'wasm'
 ---
@@ -38,7 +38,7 @@ Here's the breakdown of why it takes more time:
 
 This entire process—from download to parsing and JIT compilation—happens on the user's machine, adding latency to the initial page load. 
 
-A **pre-compiled** language like WASM skips most of these steps.
+A **pre-compiled language like WASM** skips most of these steps.
 
 The browser can simply [download the already-compiled](#hosting-for-wasm) binary `.wasm` file and execute it directly, leading to faster startup and better performance for [computationally intensive tasks](#what-to-run-with-wasm).
 
@@ -65,7 +65,9 @@ graph TD;
 > Thanks to [DevOps Toolkit](https://www.youtube.com/watch?v=uZ8xI26sno8)
 
 
-WebAssembly (WASM) is not a programming language in the way that C or JavaScript are. It's a **compilation target**, a low-level binary format that a browser's WASM engine can execute.
+WebAssembly (WASM) is not a programming language in the way that C or JavaScript are. 
+
+It's a **compilation target**, a low-level binary format that a browser's WASM engine can execute.
 
 Think of it as a form of assembly code, but for a virtual machine rather than a specific physical processor.
 
@@ -200,6 +202,15 @@ This setup leverages the strengths of both technologies:
 This approach is highly beneficial because the heavy processing is done on the user's device, not your server. 
 
 > This means you don't have to pay for server processing time or bandwidth for every video conversion.
+
+## Conclusions
+
+This pelado nerd video is a good starting point for WASM:
+
+
+<!-- https://www.youtube.com/watch?v=bgWTf3m6HG0 -->
+
+{{< youtube "bgWTf3m6HG0" >}}
 
 
 ---

@@ -148,16 +148,24 @@ Autumn is almost here.
 
 And is a great chance to tinker with your miniPC and homelab.
 
+
+Try new desktop app for your linux system and install them via:
+
 {{< cards cols="2" >}}
   {{< card link="https://flathub.org/" title="FlatHub Apps" >}}
   {{< card link="https://snapcraft.io/" title="SnapCraft Apps" >}}
 {{< /cards >}}
 
+{{< youtube "jO-PiZyVWe8" >}}
 
-Plot twist, you will never stop learning:
+<!-- 
+https://www.youtube.com/watch?v=jO-PiZyVWe8
+ -->
+
+Plot twist, you will never stop learning, as more and more selfhosted apps will catch our attention:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/tree/homarr" title="Homarr | Docker Config File 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="Home-Lab Repo | Docker Config Files 🐳 ↗"  >}}
 {{< /cards >}}
 
 <!-- 
@@ -170,32 +178,31 @@ Plot twist, you will never stop learning:
 {{< /cards >}}
 
 
-
-* Networking, DNS
+* Networking, Domains and DNS, SSL...
 * Creating your containers...
 
 Fortunately, there are amazing resources to give you ideas:
 
-* https://selfh.st/
-  * From this one you will get weekly projects to have a look ( Plot Twist: you wont have time to see them all)
-    * Example: https://github.com/OpenCut-app/OpenCut or https://github.com/Cloudable-dev/netgoat
+1. https://selfh.st/
+  
+* From this one you will get weekly projects to have a look ( Plot Twist: you wont have time to see them all)
+  * Example: https://github.com/OpenCut-app/OpenCut or https://github.com/Cloudable-dev/netgoat
 
-    > MIT |  The open-source CapCut alternative 
+ > MIT |  The open-source CapCut alternative 
 
   <!-- https://www.youtube.com/watch?v=OOxzP1JvfQk -->
 
-  {{< youtube "OOxzP1JvfQk" >}}
+{{< youtube "OOxzP1JvfQk" >}}
 
 
 
+2. https://github.com/jmlcas?tab=repositories
 
-* https://github.com/jmlcas?tab=repositories
+Youtube is a great source for great tutorials too: Jims Garage, Christian Lempa, Tech with Nana, NetworkChuck, Pelado Nerd (*in Spanish*), DB Tech...
 
-* Youtube is a great source for great tutorials too: Jims Garage, Christian Lempa, Tech with Nana, NetworkChuck, Pelado Nerd (*in Spanish*), DB Tech... I will never be able to thank them enough for all they have taught me already (*and to other great channels that would make the list too long*). 
+I will never be able to thank them enough for all they have taught me already (*and to other great channels that would make the list too long*). 
 
 > If you ever wandered what are the most popular repos: https://gitstar-ranking.com/repositories
-
-
 
 Remember about:
 
@@ -813,4 +820,3 @@ Imo, much better than the cloudflare webapp authentication method we saw some ti
 1. https://fmhy.net/devtools#static-page-hosting from https://github.com/fmhy/edit
 
 2. https://free-for.dev/#/ from https://github.com/jixserver/free-for-dev
-
