@@ -1,6 +1,6 @@
 ---
 title: "BiP a Micro-SaaS | Wedding Edition"
-date: 2025-10-05T19:20:21+01:00
+date: 2025-10-07T19:20:21+01:00
 draft: false
 tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static 🤯'

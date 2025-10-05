@@ -1,5 +1,5 @@
 ---
-title: "Jira 101"
+title: "Jira 101 vs Azure DevOps"
 date: 2025-09-08T00:20:21+01:00
 draft: false
 description: 'Jira DataModel with AI. Pandoc is great, more if you are not alergic to Latex.'
@@ -85,7 +85,18 @@ because you havent forgot on the Overleaf CV generation, right?
 
 > CV as a code, like with [overleaf](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#creating-a-responsive-cv) + [your story](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#historieta) + AI magic with a given offer link, aka scrap & process = you getting the job you want
 
+---
+
 ## Conclusions
+
+Whatever you have analyzed and created a md->pdf report with it...
+
+You can make a quick PPT by tweaking the .md to the slidev way (with corporate background as well). Just see [this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-sample-powerbi/slides.md) from [slidev-editor](https://github.com/JAlcocerT/slidev-editor).
+
+```sh
+#npm i -D playwright-chromium
+npx slidev export --format pptx
+```
 
 The discussion about **REST APIs** is a critical part of how these systems handle data and integrate with the outside world.
 
@@ -109,7 +120,9 @@ The discussion about **REST APIs** is a critical part of how these systems handl
 
 The main difference between Pandoc and LaTeX is their purpose and function:
 
-- **LaTeX** is a high-quality typesetting system primarily **used for creating well-formatted documents**, especially those with complex mathematical formulas, scientific papers, and academic publications. It involves writing documents in a markup language focused on presentation, layout, and formatting control. LaTeX is a document preparation system rather than a conversion tool.
+- **LaTeX** is a high-quality typesetting system primarily **used for creating well-formatted documents**, especially those with complex mathematical formulas, scientific papers, and academic publications.
+
+It involves writing documents in a markup language focused on presentation, layout, and formatting control. LaTeX is a document preparation system rather than a conversion tool.
 
 - **Pandoc** is a universal document converter. It converts text documents **between many markup formats** like: **Markdown, LaTeX, HTML, Word, and PDF**. Pandoc is often used to write content in a simpler markup (e.g., Markdown) and then convert it into well-structured formats including LaTeX for further processing or PDF generation. 
 
