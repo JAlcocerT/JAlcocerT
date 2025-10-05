@@ -344,6 +344,10 @@ OAuth and OpenID Connect (OIDC) are often used together but serve different purp
 
 **OAuth** is for **authorization**—granting an application permission to access a user's data on another service. **OIDC** is for **authentication**—verifying a user's identity.
 
+> https://github.com/pocket-id/pocket-id
+
+> >  A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services. 
+
 * **OAuth (Open Authorization)**: Think of it as a valet key for your car. You give the valet the key (an **access token**) that only allows them to park your car, but they can't access your glove compartment or drive away with it. This is similar to how you might allow an app to access your Google Calendar to schedule an event without ever giving the app your Google password. 
 
 The app is **authorized** to perform a specific action on your behalf, but it doesn't know who you are.

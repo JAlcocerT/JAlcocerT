@@ -291,6 +291,8 @@ Can a thing like this...Scrap google maps...?
 
 APIfy can :)
 
+All you need is register and try their API key.
+
 And it could serve to get leads of **businesses in a certain location**, like `https://estudiourbana.com/` that you can target from your creative agency.
 
 If you dont do it, others like `https://elcoheteamarillo.com/` will.

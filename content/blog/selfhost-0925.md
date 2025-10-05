@@ -87,10 +87,26 @@ I got to know about: https://github.com/FiloSottile/mkcert
 
 > A simple zero-config tool to make locally trusted development certificates with any names you'd like.
 
+> > But I would recommend to go directly to a *,proper'* Cloudflare or Traefik v3.3 setup
 
 To access securely your services outside home, You have low config VPNs like tailscale.
 
-For more advance users, and exploring DNS, see PiHole and DuckDNS.
+```sh
+# Enable IPv4 forwarding
+echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
+# Enable IPv6 forwarding
+echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
+# Apply the changes immediately
+sudo sysctl -p /etc/sysctl.conf
+#sudo tailscale up --advertise-exit-node
+#sudo tailscale set --advertise-exit-node=true
+```
+
+Go to https://login.tailscale.com/admin/machines and configure your [exit node](https://tailscale.com/kb/1103/exit-nodes)
+
+![alt text](/blog_img/selfh/HomeLab/tailscale-exitnode.png)
+
+For more advance users exploring DNS, see PiHole and DuckDNS.
 
 But as of today i'd rather keep these [https setups](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/):
 
@@ -327,7 +343,9 @@ To put astro/hugo inside a container is as simple as:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ssg-astro" title="Astro SSG Selfhosted | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
-Once you have your theme selected and tweaked, you have to host it:
+Once you have your theme selected and tweaked, maybe even with custom [shortcodes/components](https://github.com/JAlcocerT/just-ssg)...
+
+You have to host it somewhere so that others can see what you created.
 
 Option A: You can use any of these 3rd party [free static hosting](https://fossengineer.com/alternatives-for-hosting-static-websites) 
 
@@ -341,7 +359,9 @@ Option B: create your container to selfhost astro/hugo/whatever ssg and expose i
 
 ### Pi and IoT
 
-Ive been tinkering with MicroControllers and MQTT protocol.
+Ive been tinkering with [MicroControllers](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/) and [MQTT protocol](https://jalcocert.github.io/JAlcocerT/messaging-protocols/).
+
+Microcontrollers like the esp32 and some creativity can get you even a ebook reader: https://www.youtube.com/watch?v=wU0DC1wi3qo
 
 * **HA** https://www.home-assistant.io/docs/automation/
 
@@ -871,9 +891,9 @@ Thanks again to Jims Garage!
 So any new service added to traefik (+tinyauth) is just a matter if its compose having proper labels, nothing else to be configured!
 {{< /callout >}}
 
-Imo, much better than the cloudflare webapp authentication method we saw some time ago:
+Imo, much better than the cloudflare webapp authentication method we saw some time ago: *yet still coding for entrepreneurs approach is also great*
 
-![alt text](/blog_img/selfh/https/TinyAuth/cf-apps-auth.png)
+![cloudflare authentication for tuneled web apps](/blog_img/selfh/https/TinyAuth/cf-apps-auth.png)
 
 ![alt text](/blog_img/selfh/https/TinyAuth/cf0apps-auth1.png)
 
