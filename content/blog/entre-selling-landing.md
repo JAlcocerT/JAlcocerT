@@ -20,7 +20,7 @@ But it was time to put cool components like this [ig gallery](https://github.com
   {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
 {{< /cards >}}
 
-This can be used to get a cool ig like gallery without importing each file independently, just the folder where they are saved:
+This can be used to get [a cool ig like gallery](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/ig-gallery-folder) without importing each file independently, just the folder where they are saved:
 
 ![IG Gallery astro and jsx for beyondajourney](/blog_img/web/udf/ig-gallery-beyondajourney.png)
 
@@ -29,6 +29,14 @@ This can be used to get a cool ig like gallery without importing each file indep
   folder="content/articles/exploring-netherlands-by-bike/imgs"
   initialLoadCount={6}
 />
+```
+
+Place those youtube videos:
+
+```mdx
+<div style="display: flex; justify-content: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hj0MfciILEc" title="Vistula near Kazimierz Dolny Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 ```
 
 ---

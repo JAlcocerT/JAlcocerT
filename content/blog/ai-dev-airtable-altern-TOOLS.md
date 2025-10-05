@@ -21,7 +21,7 @@ That's a pretty good way to think about Airtable.
 
 **Think of it this way:**
 
-If a spreadsheet is like a flat notebook page, Airtable is like a binder with multiple interconnected pages. Each page (table) can hold different types of information, and you can create links between the pages to see how everything relates.
+If a spreadsheet is like a flat note-book page, Airtable is like a binder with multiple interconnected pages. Each page (table) can hold different types of information, and you can create links between the pages to see how everything relates.
 
 In short, **Airtable is a user-friendly platform that offers the intuitive interface of a spreadsheet with the structured power and relational capabilities of a database, making it a versatile tool for organizing and collaborating on all kinds of information.**
 

@@ -2,8 +2,8 @@
 title: "SelfHosted Cloud vs Syncs vs WebDav"
 date: 2025-03-15
 draft: false
-tags: ["OSS","Homelkab"]
-description: 'Alternatives to sync your files. From Nextcloud Web Dav to SFTP Go'
+tags: ["OSS","Homelab","SFTPGo"]
+description: 'Alternatives to sync your files. From Nextcloud Web Dav to SFTP-Go'
 url: 'sync-file-tools'
 ---
 

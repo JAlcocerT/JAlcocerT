@@ -2,8 +2,8 @@
 title: "AI Driven e-books (as a code) with Pandoc"
 date: 2025-08-31
 draft: false
-tags: ["Entrepreneuring","sell-your-ebook","R","knitt","ebook landing","Flask CMS JSON"]
-description: 'Building in public a simple web platform to create/sell ebooks pdf/epub.'
+tags: ["Entrepreneuring","sell-your-ebook","R","knitt","ebook 101 landing","Flask CMS JSON"]
+description: 'Building in public a simple web platform to create/sell ebooks pdf/epub. Compared to amazon KDP.'
 url: 'ai-driven-ebooks'
 ---
 
@@ -275,6 +275,10 @@ This is it **for now.**
 {{< youtube "XEFpzEIEDFc" >}}
 
 We've got a landing page to share ebooks.
+
+> Think of this as the first step to selfpublishing
+
+> > See also amazon KDP to reach a lot of potential readers https://kdp.amazon.com/en_US/ with a lean approach, *aka print on demand* 
 
 And a draft on ways to create them with RKnit/Pandoc.
 

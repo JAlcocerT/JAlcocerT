@@ -57,7 +57,7 @@ This selection depends on priorities: Slidev for modern web presentations, Revea
 
 You know, just in case you want to create your pdf libre or your epub libre org.
 
-Or to write a ebook for your friend (Anna's archive).
+Or to write a e-book for your friend (Anna's archive).
 
 > Others, like [WhyCryptoCurrencies](https://github.com/treeman/why_cryptocurrencies), use [Pollen](https://docs.racket-lang.org/pollen/index.html) instead
 

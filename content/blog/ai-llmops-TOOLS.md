@@ -32,7 +32,7 @@ https://docs.bentoml.com/en/latest/
 
 > The easiest way to serve AI/ML models in production - Build Model Inference Service, LLM APIs, Multi-model Inference Graph/Pipelines, LLM/RAG apps, and more!
 
-BentoML Cloud: From Notebook to Production in 5 Minutes?
+BentoML Cloud: From Note-book to Production in 5 Minutes?
 
 Deploying machine learning models to production can be a complex and time-consuming process.  BentoML aims to simplify this, and their cloud offering, BentoML Cloud, promises to make it even faster.  This post explores BentoML Cloud, its features, and how it can help you get your AI products into the real world quickly.
 
