@@ -186,9 +186,18 @@ Try new desktop app for your linux system and install them via:
   {{< card link="https://snapcraft.io/" title="SnapCraft Apps" >}}
 {{< /cards >}}
 
+Example, install RustDesk to control your new miniPC from your laptop (with full UI access): 
+
+```sh
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.rustdesk.RustDesk
+
+
 > See also [appimagelauncher](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#lately-i) :)
 
-I promised recently that I wont do more static sites for people.
+```
+
+I promised recently that **I wont do** more static sites for people.
 
 And consequently, this has not been a DFY (done for you), but a DWY (done with you) recap of [this](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) and [this](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/) web setup
 
@@ -561,6 +570,8 @@ See the life traffic over a network:
 ifconfig enp1s0
 vnstat -l -i enp1s0   # live mode (Ctrl+C to stop)
 #vnstat -l -i proton0   # live mode (Ctrl+C to stop)
+
+#ip -s link show wlp3s0
 ```
 
 {{< callout type="info" >}}

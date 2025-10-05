@@ -2,7 +2,7 @@
 title: "Which DB is for me?"
 date: 2025-08-11
 draft: false
-tags: ["DataBases","D&A","DBCode and SQLTools","SelfHosting/HomeLab","DBeaver"]
+tags: ["DataBase 101","D&A","DBCode and SQLTools","SelfHosting/HomeLab","DBeaver"]
 description: 'Pros & Cons of popular DBs: SQlite, PostgreSQL, MariaDB and their containers'
 url: 'databases-101'
 ---
@@ -509,3 +509,16 @@ When you run Liquibase, it connects to your database and creates two tables: `DA
 By checking the `DATABASECHANGELOG` table, Liquibase knows exactly which changesets have already been executed and which ones still need to be applied, ensuring a repeatable and consistent deployment process.
 
 {{% /details %}}
+
+---
+
+## Conclusions
+
+
+There is more on database history that I thought...
+
+<!-- 
+https://www.youtube.com/watch?v=lvCZk3k4-34
+ -->
+
+{{< youtube "lvCZk3k4-34" >}}

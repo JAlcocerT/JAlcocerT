@@ -7,6 +7,11 @@ description: "Astro Websites for Restaurants. Million dollar idea in the Mediter
 url: "webs-for-restaurants"
 ---
 
+In the end, people like `portalmainfo.com` are creating such websites:
+
+https://elarboltapas.com/
+https://restaurantealbores.com/
+https://mojamabeach.com/
 
 https://gusti.pl/oV8S1gQ
 

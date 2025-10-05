@@ -1,12 +1,11 @@
 ---
-title: "How to setup TinyAuth x Traefik."
+title: "How to setup TinyAuth x Traefik with DNS Challenge"
 date: 2025-05-27T23:20:21+01:00
 draft: false
 tags: ["Dev","HomeLab","Github OAUTH","Cloudflare DNS","Three Bodies","LogTo","TinyAuth"]
 description: 'LOGTO vs (Traefik + TinyAuth) Authentication Setup. Together with a Flask App and Traefik Reverse Proxy for https.'
 url: 'testing-tinyauth'
 ---
-
 
 **TL;DR** Getting Traefik v3.3 to work reliably and plugging [TinyAuth with GH auth](#traefik-x-tinyauth-x-flask)
 

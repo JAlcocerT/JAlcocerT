@@ -64,10 +64,13 @@ Nice to have:
 13. https://fullratio.com/stocks/nyse-ko/coca-cola 
 14. Buyback ratio (if historical, even better)
 15. Volatility div growth mdd cagr / Yfinance eur usd?
+16. Treemap with market size like https://finviz.com/map.ashx
+17. https://www.simplysafedividends.com/world-of-dividends/posts/41-2025-dividend-kings-list-all-54-ranked-analyzed a hidden blog to attract SEO
+18. https://www.tikr.com/
 
 > Wait, the oil is at the same price than 2006 but i pay more for it? https://www.macrotrends.net/2483/brent-crude-oil-price-history
 
-https://www.gurufocus.com/term/forward-pe-ratio/PEP
+* https://www.gurufocus.com/term/forward-pe-ratio/PEP
  
 See [the BRD](#faq) where we scoped the project.
 

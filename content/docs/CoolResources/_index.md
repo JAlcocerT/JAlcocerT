@@ -12,6 +12,16 @@ sidebar:
 * https://free-for.dev/#/
   * https://github.com/ripienaar/free-for-dev
 
+Try new desktop app for your linux system and install them via:
+
+{{< cards cols="2" >}}
+  {{< card link="https://flathub.org/" title="FlatHub Apps (Flatpak)" >}}
+  {{< card link="https://snapcraft.io/" title="SnapCraft Apps" >}}
+{{< /cards >}}
+
+> See also [appimagelauncher](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#lately-i) to install `.Appimage`
+
+> > And if you use some Debian flavour, you can also install via `.deb`
 <!--   
 * https://github.com/protonpass/free-for-dev
  -->

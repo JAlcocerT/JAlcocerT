@@ -11,6 +11,14 @@ Serverless is the way.
 
 And CF workers and pages  use cases are so cool: https://github.com/4ev-link/4ev.link
 
+> If you want short custom urls, like url shortening to a custom slug
+
+Same, we can also have monitor running in gihub https://github.com/upptime/upptime
+
+> ⬆️ GitHub Actions uptime monitor & status page by @AnandChowdhary
+
+
+
 ![Porsche design](/blog_img/outro/porsche.png)
 
 

@@ -287,9 +287,13 @@ Just go here and get those 5$ monthly to test: https://console.apify.com/
 
 * https://serpapi.com/pricing
 
-Can this...Scrap google maps...?
+Can a thing like this...Scrap google maps...?
 
 APIfy can :)
+
+And it could serve to get leads of **businesses in a certain location**, like `https://estudiourbana.com/` that you can target from your creative agency.
+
+If you dont do it, others like `https://elcoheteamarillo.com/` will.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="APIfy + Firecrawl... | A repo to get leads for slubnechwile ↗" >}}

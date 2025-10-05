@@ -2,7 +2,7 @@
 title: "Encryption, Captchas, OpenIDConnect and more"
 date: 2025-05-20
 draft: false
-tags: ["Outro","Security","PoW","Clave","E-Residency","openssl","OIDC vs OAuth","Bearer JWT"]
+tags: ["Outro","Security","PoW","Clave","E-Residency","openssl","OIDC vs OAuth","Bearer JWT","Criptii"]
 description: 'SHA256 Protocol vs RSA. The concept and applications: SSH, HTTPs, Bitcoin...'
 url: 'encryption-101'
 ---
@@ -246,6 +246,16 @@ It's important to note that the specific algorithms used by an SSH connection ar
 The availability and preference of SHA-256 depend on the SSH client and server software and their configuration. 
 
 Modern systems are generally configured to prefer stronger algorithms like those using SHA-256 over older, less secure options like SHA-1.
+
+## Conclusions
+
+This is another rabbit-hole.
+
+There are interesting online videos about it, like some online misteries using [Ceasar cipher](https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar).
+
+> See https://github.com/cryptii/cryptii
+
+> > MIT |  A web app for modular conversion, encoding, and encryption, all performed directly in your browser with no server interaction 
 
 ---
 
