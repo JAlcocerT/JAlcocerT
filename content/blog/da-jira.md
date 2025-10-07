@@ -7,6 +7,14 @@ url: 'jira-data-model-with-ai'
 tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram Mermaid","LandThatJob"]
 ---
 
+**TL;DR**
+
+As tech lead, you will need to analyze requirements/proposal to clients.
+
+Create the technical solution and probably create some ppt.
+
+**Intro**
+
 To work with Jira, you need to understand their datamodel: https://developer.atlassian.com/server/jira/platform/database-schema/
 
 ![alt text](/blog_img/AIBI/jira/jira-datamodel.png)
@@ -18,8 +26,6 @@ Just in case you need to build a [PBi](https://jalcocert.github.io/JAlcocerT/abo
 > > https://techcommunity.microsoft.com/blog/educatordeveloperblog/building-a-gantt-chart-using-power-bi/3605928
 
 On the jira data model pdf, you will find jiradb.table_name, like `jiradb.issuetype`
-
-**Intro**
 
 I got a interesting task and could not avoid to think about how to do it with:
 
@@ -95,7 +101,7 @@ You can make a quick PPT by tweaking the .md to the slidev way (with corporate b
 
 ```sh
 #npm i -D playwright-chromium
-npx slidev export --format pptx
+npx slidev export --format pptx #ppt from md thanks to SliDevJS
 ```
 
 The discussion about **REST APIs** is a critical part of how these systems handle data and integrate with the outside world.

@@ -67,6 +67,17 @@ Nice to have:
 16. Treemap with market size like https://finviz.com/map.ashx
 17. https://www.simplysafedividends.com/world-of-dividends/posts/41-2025-dividend-kings-list-all-54-ranked-analyzed a hidden blog to attract SEO
 18. https://www.tikr.com/
+19. Bringing data for index funds, like: https://markets.ft.com/data/funds/tearsheet/summary?s=lu0996182563:eur
+
+```sh
+#so you wont have to get that url xpath imported
+#/html/body/div[3]/div[2]/section[1]/div/div/div[1]/div[2]/ul/li[1]/span[2]
+=SI.ERROR(SUSTITUIR(importxml(R22; X20); "."; ",");T22)
+```
+
+20. https://www.dividenddata.com/pricing
+
+With this data model, you will have answers, but also questions:
 
 > Wait, the oil is at the same price than 2006 but i pay more for it? https://www.macrotrends.net/2483/brent-crude-oil-price-history
 
@@ -270,6 +281,8 @@ Interesting cross platform service: https://divstash.app/
 I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit_1000_a_year_in_dividends/
 
 > With CSR driven *Calculate Your Dividend Potential* section :)
+
+Its also nice to see when the snowball effect starts to be noticed: like how much % of what you invest, comes already from dividends reinvested /monetary system feedback.
 
 > > And has an interesting on boarding flow: https://divstash.app/signup/step-1 and T&Cs are mandatory: https://divstash.app/signup/quick
 

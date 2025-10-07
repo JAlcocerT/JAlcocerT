@@ -3,7 +3,7 @@ title: "Website knowledge updates"
 date: 2025-10-05T10:20:21+01:00
 draft: false
 tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS"]
-description: 'New ATM for my SSG knowledge'
+description: 'New ATH for my SSG knowledge'
 url: 'selling-with-a-landing-website'
 ---
 

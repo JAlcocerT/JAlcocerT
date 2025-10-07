@@ -175,7 +175,7 @@ And...you can do some automatic magic: like making new configurations to it via 
 
 > Thats great if you are planning to spin services automatically without your supervision!
 
-3. **Traefik** has also been a great discovery lately, *thanks to Dokploy which brings it configured*
+3. **Traefik** has also been a great discovery lately, *thanks to Dokploy which brings the configuration outofthebox*
 
 ### Authentication
 
@@ -191,11 +191,11 @@ https://www.youtube.com/watch?v=ywQVe9ikcVI
 
 {{< youtube "ywQVe9ikcVI" >}}
 
-Forward Auth...?
+Forward... Auth...?
 
-Thats another story.
+That seems to be another story.
 
-And scope for another post!
+> And scope for another post!
 
 ### Immich
 
@@ -215,9 +215,9 @@ It provides a very *similar* experience to Google Photos.
 
 1. Semantic Search and facial recognition
 
-2. Fantastic [mobile apps](https://immich.app/docs/features/mobile-app): android/ios
+2. Fantastic [mobile apps](https://immich.app/docs/features/mobile-app): *for android/ios*
 
-3. Respects file folder structure ????
+3. Respects file folder structure *not so sure of that ????*
 
 * https://immich.app/docs/features/libraries/
 
@@ -263,13 +263,13 @@ The main difference is that Kodi is a unified server+client application, Jellyfi
 
 Jellyfin will use the CPU, unless you do this trick: https://jellyfin.org/docs/general/administration/hardware-acceleration/amd/
 
-Offline [video workflow](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/): Action cam -> Server -> Jellyfin -> SmartTV 
+Offline [video workflow](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/): *Action cam -> Server -> Jellyfin -> SmartTV* 
 
 ![Jellyfin CPU Load](/blog_img/selfh/media/jellyfin-cpu.png)
 
-> See how the server (x300) was quite rev doing 1080p video
+> See how the server (x300) was quite rev doing *just* 1080p video
 
-> > LocalSend and NewPipe are also interesting Android Apps to consider
+> > **LocalSend** and NewPipe are also interesting Android Apps to consider
 
 2. Portainer vs Dockge
 
@@ -277,7 +277,7 @@ Offline [video workflow](https://jalcocert.github.io/JAlcocerT/my-action-cam-vid
 
 3. https://github.com/CorentinTh/it-tools
 
-See it live: https://it-tools.tech/
+See how the tool looks live: https://it-tools.tech/
 
 > Collection of handy [online tools](https://www.xda-developers.com/best-utilities-in-it-tools/) for developers, with great UX.
 
@@ -285,7 +285,7 @@ See it live: https://it-tools.tech/
 
 <!--
  https://www.youtube.com/watch?v=UCsYWXEuvms 
- -->
+-->
 
 
 #### PiHole

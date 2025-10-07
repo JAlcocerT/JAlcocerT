@@ -2,8 +2,8 @@
 title: "SelfHosting Updates - Oct 2025"
 date: 2025-10-20T01:20:21+01:00
 draft: false
-tags: ["SFTPGo","WebDav","Sync Tools","P2P Recap"]
-description: 'Selfhosting for New Comers: SSGs,Python WebApps with Traefik v3 HTTPs and a Firebat'
+tags: ["SFTPGo","WebDav","Sync Tools","P2P Recap","Benchmark"]
+description: ''
 url: 'selfhosted-apps-oct-2025'
 ---
 
@@ -23,9 +23,29 @@ But just in case you dont want to mess with databases, lets see some other Fileb
 
 > Yea, im kind of alergic to DBs for HomeLab setups
 
+## Files Files Files
+
+
+
+And I saw few projects lately to see files:
+
 * https://github.com/vikramsoni2/nextExplorer
 
 > Web based File Explorer 
+
+
+If you dont want Nextcloud nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
+
+```sh
+flatpak install flathub org.localsend.localsend_app
+```
+
+
+## Conclusions
+
+If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) to the performance.
+
+And if you have read the recent [Crypto with AI](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) post, you can see how people get creative and benchmark based on crypto mining performance: https://xmrig.com/benchmark
 
 
 ---

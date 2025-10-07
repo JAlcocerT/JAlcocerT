@@ -20,9 +20,14 @@ And im not talking about [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-conce
 
 **Intro**
 
-From this ebook:
+When you are trying to build sth, it seems that we have more and more concepts to check: [marketing](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/), payment gateways with [stripe](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#stripe-payment-links) and [logins](https://jalcocert.github.io/JAlcocerT/social-signin-101/)...
 
-* https://readmake.com/
+You can always get ideas from people that have cool experience, like from **their ebooks**:
+
+1. https://readmake.com/ for inde
+2. 100M offers/leads/money models...
+
+If it was only about ebooks today: We also have cool (and sometimes open) [resources](#resources-for-solopreneurs)
 
 <!-- 
 https://www.youtube.com/watch?v=6reLWfFNer0 -->

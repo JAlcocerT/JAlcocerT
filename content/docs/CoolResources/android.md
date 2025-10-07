@@ -61,7 +61,11 @@ If you need a NAS, you can check HexOS
 
 ### How to send files to Android TV?
 
-We can use [Local Send](https://github.com/localsend/localsend?tab=readme-ov-file#download), a F/OSS cross-platform alternative to AirDrop.
+We can use [Local Send](https://github.com/localsend/localsend?tab=readme-ov-file#download)
+
+> A F/OSS cross-platform alternative to AirDrop
+
+> > You can use this to send files to your smart-tv or from/to action cam to your phone.
 
 Install it with [FlatHub](https://flathub.org/apps/org.localsend.localsend_app):
 
@@ -78,7 +82,6 @@ Use the [Exodus App](https://github.com/Exodus-Privacy/exodus-android-app)
 ### Awsome Lists for Android Apps
 
 {{% details title="Get to Know! 🚀" closed="true" %}}
-
 
 * https://github.com/albertomosconi/foss-apps
 * https://github.com/offa/android-foss
