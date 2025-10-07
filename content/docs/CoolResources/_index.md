@@ -80,3 +80,5 @@ These are cool and selfhostable:
 * https://gchq.github.io/CyberChef/ *see the power of [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/)!*
 
 3. For PDF Conversion: https://stirling.com/app/
+
+4. Diagrams with: https://excalidraw.com/ or drawio

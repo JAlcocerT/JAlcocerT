@@ -311,7 +311,7 @@ Building a marketing agency?
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main" title="SelfHostable Marketing Software | Docker Configs 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N on your HomeLab | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 Have a look to...

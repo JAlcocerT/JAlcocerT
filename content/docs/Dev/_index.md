@@ -15,6 +15,8 @@ Just use diagrams: *for whatever your have to explain*
 
 ## Analytics
 
+For a career in D&A you will need to be familiar with certain tools.
+
 * [**Big Data** Tools](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/)
 * [**GCP** 101](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)
 

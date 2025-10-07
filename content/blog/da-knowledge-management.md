@@ -13,6 +13,7 @@ url: 'knowledge-management'
 Pros and Cons of note taking apps. While learning which [markdown edition fwks](#what-it-is-wysiwyg) for notes are available for my future SaaS.
 
 +++ quick selfhosting guide in the [conclusions](#conclusions)
+
 +++ Understanding why I cant use TinyAuth infront of [nextcloud android App](#tinyauth-and-nextcloud-android-app)
 
 **Intro**
@@ -429,6 +430,8 @@ More sophisticated identity providers like Authelia and Okta use a standard know
 **The Problem with "Forward Auth" Proxies**
 
 The issue you had with TinyAuth is fundamental to how "forward auth" works. 
+
+> Back in [spring](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#authentication), I had pending to explore further [what FAuth is](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#whats-forward-auth)...here we are
 
 The reverse proxy intercepts every request and says, "Nope, you have to log in first."
 

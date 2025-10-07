@@ -2,7 +2,7 @@
 title: "About Jobs. HR Prep and AI Engineers."
 date: 2025-02-10
 draft: false
-tags: ["Outro","Scrapping","Job-Trends","Overleaf","Interview preparation","Historieta"]
+tags: ["Latex","Scrapping","Job-Trends","Overleaf","Interview preparation","Historieta"]
 description: 'Is it a good moment to change jobs? New positions AI/LLM/ML Engineer. Scrapping techniques and a Latex powered CV.'
 url: 'when-to-apply-for-a-job'
 ---
@@ -582,7 +582,7 @@ If you need to create simple, easy-to-read text documents or web content, Markdo
 - **Great for developers and designers**
 - **Supports multiple layouts**
 
-## **🚀 Let's Install and Try ModernCV**
+### **🚀 Let's Install and Try ModernCV**
 
 
 [1 tool called]
@@ -600,33 +600,25 @@ Now let's compile this CV to see how it looks:
 Great! The CV compiled successfully! The error about the missing `picture` file is just because we referenced a photo that doesn't exist. Let's check the generated PDF:
 
 
-[1 tool called]
 
 Perfect! Now let me show you how to use Pandoc with CV templates. Let me create a markdown version of a CV that can be converted using Pandoc:
 
 
-[1 tool called]
 
 Now let's convert this markdown CV to PDF using our Eisvogel template:
 
 
-[1 tool called]
 
 Great! It worked (just some emoji warnings which is normal). Let's also create a version without emojis for better compatibility:
 
 
-[2 tools called]
-
-Perfect! Let's check all the CV files we've created:
 
 
-[1 tool called]
-
-## **🎯 CV/Resume LaTeX Themes - Complete Guide**
+**🎯 CV/Resume LaTeX Themes - Complete Guide**
 
 Perfect! You now have multiple CV options. Here's what we've created:
 
-### **✅ What We Built:**
+ **✅ What We Built:**
 
 1. **`sample-cv.pdf`** (29 KB) - Pure LaTeX ModernCV template
 2. **`cv-eisvogel.pdf`** (33 KB) - Markdown → Eisvogel template

@@ -16,9 +16,25 @@ But it was time to put cool components like this [ig gallery](https://github.com
 
 **Intro**
 
+Ok, ok, you have embraced the power of SSGs and aware of how many cool things can be done *,statically'* aka [in browser with CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/).
+
+And surprisingly, [Front End can do many cool things, *including authentication*](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#whats-forward-auth)
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
 {{< /cards >}}
+
+There is one thing still stucked...
+
+**How to make SSG edit friendly**?
+
+Some WYSIWYG approach? 
+
+Repurposing md note taking tools?
+
+Or...giving a try to F/OSS CMS?
+
+One more time, because I already gave a try to these from a [recent post](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#a-theme-to-test-this): [bcms](https://github.com/bcms/cms) and [pagescms](https://github.com/pages-cms/pages-cms)
 
 This can be used to get [a cool ig like gallery](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/ig-gallery-folder) without importing each file independently, just the folder where they are saved:
 

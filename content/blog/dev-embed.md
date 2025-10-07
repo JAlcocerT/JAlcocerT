@@ -60,7 +60,8 @@ In summary: Chatwoot has some basic CRM features (contact management, conversati
 
 **Who is using chatwoot**?
 
-1. The people of Monero
+1. The people of Monero (when you disable privacy badger in FF) https://monero.com/wallets#
+2. 
 
 #### PaperCups
 
@@ -70,7 +71,7 @@ In summary: Chatwoot has some basic CRM features (contact management, conversati
 
 #### LiveHelperChat
 
-* https://github.com/LiveHelperChat/livehelperchat?tab=readme-ov-file
+* https://github.com/LiveHelperChat/livehelperchat
 
 > Apache v2 |  Live Helper Chat - live support for your website. Featuring web and mobile apps, Voice & Video & ScreenShare. Supports Telegram, Twilio (whatsapp), Facebook messenger including building a bot. 
 

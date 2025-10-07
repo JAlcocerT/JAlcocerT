@@ -4,10 +4,15 @@ date: 2023-01-29T23:20:21+01:00
 draft: false
 tags: ["Outro"]
 ShowCodeCopyButtons: false
-description: 'Negotiation is a process of discovery, uncovering information. We need such skills to perform a superb job in analytics. Learn techniques to consider while working with others.'
+description: 'Negotiation is a process of discovery, uncovering information. We need such skills to perform a superb job in analytics.'
 url: 'negotiation-skills-data-analytics'
 ---
 
+**TL;DR**
+
+Learn techniques to consider while working with others.
+
+**Intro**
 
 By the end of the recents years, I am asking my close friends to recommend me some book that they have found interesting for them over the last months.
 
@@ -30,7 +35,11 @@ If the idea of negotiating makes you anxious, never fear. All you need are the r
 
 Yes, but **with patterns**.
 
-Decision making is mostly an irrational process. For this reason, having a look to the **prospect theory** will be beneficial. But here are some points to consider:
+Decision making is mostly an irrational process. 
+
+For this reason, having a look to the **prospect theory** will be beneficial. 
+
+But here are some points to consider:
 
 * Certainty Effect
 * Loss Aversion

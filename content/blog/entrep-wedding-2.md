@@ -3,7 +3,7 @@ title: "BiP a Micro-SaaS | Wedding Edition"
 date: 2025-10-07T19:20:21+01:00
 draft: false
 tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2"]
-description: 'Firebase + PB BaaS. Everything that can be static, is static 🤯'
+description: 'Firebase + PB BaaS. Everything that can be static, is static. CSR Rendering QR and PDFs in browser 🤯'
 url: 'building-in-public-wedding-photo-galleries'
 ---
 
@@ -55,9 +55,16 @@ This one is great, yet it seems that the way to get MRR is via the companies who
 
 **The free stuff**
 
+1. Make a QR for your wedding url with custom icon/colors
+2. 
+
 **The try for free stuff**
 
 **The paid stuff**
+
+1. When you have logged in and paid for a tier
+2. You will have a link (static route, no custom sub/domain) to share for guests and availity to set user/pwd for guest to upload
+3. One week before the wedding, there will be the possibility to upload photos to a R2 bucket, as done [here](https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/)
 
 ### QR Code Generator
 
@@ -85,6 +92,20 @@ See, people have done this QR CSR setup already:
 
 ### PDFs are free!
 
+See, there are webapp projects that create PDF for you.
+
+Like this [OSS cv as a code](https://fossengineer.com/open-source-curriculum/): https://github.com/JAlcocerT/open-resume
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reactive-resume" title="Reactive Resume | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-resume" title="Open-Resume| Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+This one particularly, uses React-pdf 
+
+> creates PDF files and is used by the resume builder to create a downloadable PDF file.
+
 ### Web when registered
 
 Something like `slubnechwile.com/bodapepe`
@@ -102,6 +123,7 @@ Previously, I was thinking to have a domain + Filebrowser instance setup for eac
 Using Next.js API routes to generate presigned URLs is a recommended approach for securely uploading photos and videos from a client-side rendered (CSR) app to Cloudflare R2.
 
 Why Next.js API Routes for Presigned URLs?
+
 - Keeps Cloudflare R2 credentials secret and secure on the server side.
 - The frontend only receives a temporary presigned URL allowing uploads without direct access to secrets.
 - Easily integrates with client-side upload buttons in your Next.js app.
@@ -117,7 +139,7 @@ Implementation Idea for Your Wedding App
 
 This approach gives you full control over who can upload, limits exposure of credentials, and leverages secure temporary URLs for uploads, fitting well with your scenario of guest access for a specific wedding event.
 
-This is a common, practical pattern used in production apps for secure, scalable file uploads with Cloudflare R2 and Next.js.[1][2][3]
+This is a common, practical pattern used in production apps for secure, scalable file uploads with Cloudflare R2 and Next.js.
 
 
 #### Upsales
@@ -175,6 +197,12 @@ The Sassify theme is just awsome: https://astro-sassify.larryxue.dev/
 **Inspiration** for modern SaaS landing pages:
 
 1. 1https://operately.com/`
+
+
+**Inspirational login sections**
+
+2. https://rxresu.me/auth/login from reactive resume
+3. Mailerlite 
 
 
 #### Configuring Cloudflare

@@ -393,10 +393,12 @@ There are ofc tools already waiting to be used...
 
 {{< details title="To learn how to interact with real time internet data - GNews, Perplexica,... 📌" closed="true" >}}
 
+_GNews_ is a lightweight Python package that provides an API to search for articles on Google News, returning results in JSON format. 
+ 
+It supports fetching articles by keywords, topics, and locations, making it versatile for news aggregation.  
+
 **GNews** - https://github.com/ranahaani/GNews
 
-- **Summary:**  
-  _GNews_ is a lightweight Python package that provides an API to search for articles on Google News, returning results in JSON format. It supports fetching articles by keywords, topics, and locations, making it versatile for news aggregation.  
 
 - **Key Features:**  
   - **Lightweight:** Easy to use with minimal setup.  

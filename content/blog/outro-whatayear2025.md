@@ -24,7 +24,9 @@ Same, we can also have monitor running in gihub https://github.com/upptime/uppti
 
 https://tailscale.com/kb/1282/docker
 
-Perplexity browserwith agents
+Perplexity browser with agents
+
+> This made me summarize my *old me* from <2023 posts. And those are pretty nice notes for thought.
 
 https://github.com/leoneljdias/tempo
 

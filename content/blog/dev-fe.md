@@ -617,6 +617,7 @@ A browser handles the HTTP cookie automatically, but a **reverse proxy** or **ga
 Think of it like this:
 
 * A **cookie** is a **boarding pass** that proves you're a legitimate passenger. 🎫
+
 * **Forward auth** is the **airport security checkpoint** that inspects your boarding pass before you're allowed to board the plane. 🛂
 
 The forward auth gateway checks the cookie and, if it's valid, lets the request through.

@@ -1,6 +1,6 @@
 ---
 title: "DBs"
-date: 2024-08-23T10:20:21+01:00
+date: 2025-10-06T10:20:21+01:00
 draft: false
 description: 'Databases use cases and tools'
 url: 'databases'
@@ -14,6 +14,10 @@ Or *,just'* in a D&A career.
 
 
 ## Tools for DBs
+
+Before the tools, make sure to understand what are (and the use cases) of OLAP (D&A) vs OLTP (Dev).
+
+The structured vs object/JSON differenciation is also important...
 
 1. https://github.com/chartdb/chartdb
 

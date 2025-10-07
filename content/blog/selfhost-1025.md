@@ -2,8 +2,8 @@
 title: "SelfHosting Updates - Oct 2025"
 date: 2025-10-20T01:20:21+01:00
 draft: false
-tags: ["SFTPGo","WebDav","Sync Tools","P2P Recap","Benchmark"]
-description: ''
+tags: ["SFTPGo","WebDav","File Sync Tools","P2P Recap","XMRig Benchmark"]
+description: 'Best tools for organizing homelab files.'
 url: 'selfhosted-apps-oct-2025'
 ---
 
@@ -25,8 +25,6 @@ But just in case you dont want to mess with databases, lets see some other Fileb
 
 ## Files Files Files
 
-
-
 And I saw few projects lately to see files:
 
 * https://github.com/vikramsoni2/nextExplorer
@@ -40,12 +38,22 @@ If you dont want Nextcloud nor Immich...for your latest [photo/video](https://ja
 flatpak install flathub org.localsend.localsend_app
 ```
 
+---
 
 ## Conclusions
 
 If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) to the performance.
 
 And if you have read the recent [Crypto with AI](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) post, you can see how people get creative and benchmark based on crypto mining performance: https://xmrig.com/benchmark
+
+
+Some people also use it for mining, but it wont pay off when taking into cosideration the electricity costs:
+
+* https://github.com/xmrig/xmrig
+
+>  RandomX, KawPow, CryptoNight and GhostRider unified CPU/GPU miner and RandomX benchmark 
+
+> > Its an interesting project anyways, configurable via JSON for that alternative CPU benchmark
 
 
 ---

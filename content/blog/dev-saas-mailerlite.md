@@ -78,8 +78,13 @@ See how Ive done it: https://jalcocert.github.io/JAlcocerT/n8n-with-ai/#n8n-x-ma
 
 * https://thebcms.com/astro-cms
 
-https://www.youtube.com/watch?v=y2du9vQwZUw
+<!-- https://www.youtube.com/watch?v=y2du9vQwZUw -->
+
+
 Using Headless CMS & Nuxt.js to Develop Fast Static Websites | Momcilo Popov | Front End developer
+
+{{< youtube "y2du9vQwZUw" >}}
+
 
 
 
@@ -173,7 +178,7 @@ Consider this a new ssg + mailerlite 101.
 
 ### What People have Build
 
-A simple WP + subscription
+A simple WP + (paywalled) subscription
 
 * https://www.genteinvencible.com/
 

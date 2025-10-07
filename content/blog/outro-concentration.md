@@ -2,7 +2,7 @@
 title: "Tools that help me FOCUS"
 date: 2025-03-01
 draft: false
-tags: ["Outro","LeanTime","NextBeats"]
+tags: ["Outro","LeanTime","NextBeats","Pomodoro"]
 description: 'Tools for concentrating in a noisy world.'
 url: 'tools-to-improve-focus'
 ---
@@ -66,27 +66,6 @@ I really enjoy placing this as **background sound**:
 
 >  All-in-One Self-Hosted Project Management, Time Tracking and Focus App 
 
-### Reading Focus
-
-How about having a proper **news feed**?
-
-Without the ads I mean.
-
-I mean, Selfhostable and **RSS Feeds**!
-
-* [FreshRSS](https://fossengineer.com/freshrss-docker-setup/)
-
-* https://github.com/johnwarne/upvote-rss?ref=selfh.st
-    * https://www.upvote-rss.com/?platform=lemmy&instance=lemmy.world&community=Technology&averagePostsPerDay=3&content
-
-> MIT | Generate rich RSS feeds from Reddit, Hacker News, Lemmy, and Mbin
-
-You can also be 
-
-### Video
-
-1. Piped
-2. NewPipe
 
 ### Productivity
 
