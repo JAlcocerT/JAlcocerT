@@ -25,8 +25,9 @@ Today it seems all about [lead enrichment](https://www.firecrawl.dev/blog/fire-e
 
 I started the day with a core believe: *wordpress sites are meh*
 
-After this sync with couple of marketers - That changed. See this landing done with elementor: https://genkinfy.com/
+After this sync with couple of marketers - That changed.
 
+See this landing done with elementor: https://genkinfy.com/
 
 
 <!-- https://youtu.be/qQ13MKLfqYQ -->

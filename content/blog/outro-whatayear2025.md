@@ -21,14 +21,16 @@ Same, we can also have monitor running in gihub https://github.com/upptime/uppti
 
 ![Porsche design](/blog_img/outro/porsche.png)
 
+![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 
-https://tailscale.com/kb/1282/docker
+
+* https://tailscale.com/kb/1282/docker
 
 Perplexity browser with agents
 
 > This made me summarize my *old me* from <2023 posts. And those are pretty nice notes for thought.
 
-https://github.com/leoneljdias/tempo
+* https://github.com/leoneljdias/tempo
 
 > MIT |  Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
 

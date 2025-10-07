@@ -1,15 +1,21 @@
 ---
 title: "Session Recording for Web Projects"
-date: 2026-12-31
-draft: true
-tags: ["Web","Dev","PostHog","Astuto"]
-description: 'Tutorial - Making ASTRO Website better.'
+date: 2025-10-10
+draft: false
+tags: ["Web","Product","Amplitude vs PostHog","OpenReplay","Astuto"]
+description: 'How are user enjoying your Saas?'
 url: 'how-to-record-web-sessions'
 ---
+
+**TL;DR**
+
+More than web analytics, see what the users are experiencing.
 
 **Intro**
 
 If you got your SaaS reachable by potential users.
+
+Or you are a PdM or a [DA with product vision](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)...
 
 You will want to know what it works and what not.
 
@@ -17,9 +23,13 @@ But for real.
 
 What are the users experiencing.
 
-If you have worked on some startups, you might have used Ampplitude.
+> If you have worked on some ecommerce related startups, you might have used Ampplitude.
 
 ![Porsche design](/blog_img/outro/porsche.png)
+
+
+![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+
 
 
 ## OpenReplay

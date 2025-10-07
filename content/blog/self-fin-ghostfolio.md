@@ -1,21 +1,27 @@
 ---
 title: "Personal Finances: GhostFolio and more"
-date: 2026-12-31T23:20:21+01:00
-draft: true
-cover:
-  image: "https://socialify.git.ci/ghostfolio/ghostfolio/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-  alt: "Ghostfolio" # alt text
-  caption: "Ghostfolio setup with docker." # display caption under cover
-tags: ["Docker","Open Source Finances","FireFly3"]
+date: 2025-10-11T08:20:21+01:00
+draft: false
+# cover:
+#   image: "https://socialify.git.ci/ghostfolio/ghostfolio/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
+#   alt: "Ghostfolio" # alt text
+#   caption: "Ghostfolio setup with docker." # display caption under cover
+tags: ["HomeLab","Open Source Finances","FireFly3","PyStonks / PyStocks Inspiration"]
 description: ''
-url: 'ghostfolio-and-personal-finance'
+url: 'ghostfolio-and-personal-finance-dev-tools'
 ---
+
+**Tl;DR**
+
+Before building, see what others have created.
 
 **Intro**
 
 Whether TradFi and DeFi, you might want to bring clarity to your personal finances.
 
 AND MORE TOOLS IN THE FAQ
+
+## Selfhostable Personal Finance Tools
 
 ## Paisa
 
@@ -98,4 +104,3 @@ https://github.com/KayatoSan/Budget5S?tab=AGPL-3.0-1-ov-file#readme
 
 
 > Wallos is a powerful, open-source, and self-hostable web application designed to empower you in managing your finances with ease. Say goodbye to complicated spreadsheets and expensive financial software – Wallos simplifies the process of tracking expenses and helps you gain better control over your financial life.
-

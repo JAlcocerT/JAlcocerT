@@ -21,6 +21,10 @@ For [PMs](https://jalcocert.github.io/JAlcocerT/selfhosting-pm-tools-docker/) in
 
 > And Im not just talking about [Jira/ADO](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/).
 
+Remember that ppts can be done via code, like [so](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev).
+
+And also those pdf reports or the 
+
 For the *db alergic* ones, see:
 
 {{< cards cols="1" >}}
