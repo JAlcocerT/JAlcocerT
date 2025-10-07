@@ -7,7 +7,7 @@ description: 'Firebase + PB BaaS. Everything that can be static, is static 🤯'
 url: 'building-in-public-wedding-photo-galleries'
 ---
 
-https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
+Coming from https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
 
 **Tl;DR**
 
@@ -69,6 +69,19 @@ This one is great, yet it seems that the way to get MRR is via the companies who
 But whatever can be static, keep it static.
 
 Same applies to your QR Code web generator.
+
+> bc sometimes, a server when sometimes they just stop working `https://qrco.de/bg9jax`
+
+> > or they force you to register `https://login.qr-code-generator.com/`
+
+See, people have done this QR CSR setup already:
+
+1. https://github.com/lyqht/mini-qr
+
+>  Create & scan cute qr codes easily 👾 
+
+> > Deployed statically at https://mini-qr-code-generator.vercel.app/
+
 
 ### PDFs are free!
 
@@ -158,6 +171,10 @@ And now it makes more than just quote the price.
 ### Landing Page
 
 The Sassify theme is just awsome: https://astro-sassify.larryxue.dev/
+
+**Inspiration** for modern SaaS landing pages:
+
+1. 1https://operately.com/`
 
 
 #### Configuring Cloudflare

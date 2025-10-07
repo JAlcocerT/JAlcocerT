@@ -68,3 +68,15 @@ Probably you will not find them on the firsts google results, yet they were help
 
 <!-- {{< youtube id="v=_VLZ4b9LHLs" autoplay="false" >}} -->
 {{< youtube "_VLZ4b9LHLs" >}}
+
+### Interesting WebApps
+
+These are cool and selfhostable:
+
+1. For file conversion: https://vert.sh/
+2. Various: 
+
+* https://it-tools.tech and https://omnitools.app/ 
+* https://gchq.github.io/CyberChef/ *see the power of [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/)!*
+
+3. For PDF Conversion: https://stirling.com/app/

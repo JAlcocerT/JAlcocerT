@@ -285,6 +285,8 @@ Just go here and get those 5$ monthly to test: https://console.apify.com/
 
 ### More APIs
 
+To see how good is your web / performs vs others:
+
 * https://serpapi.com/pricing
 
 Can a thing like this...Scrap google maps...?

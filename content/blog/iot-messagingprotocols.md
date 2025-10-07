@@ -334,6 +334,16 @@ MQTT (Message Queuing Telemetry Transport):
     MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted reliably and efficiently.
     While MQTT can be used for real-time communication in various scenarios, it may not be as widely supported or as easy to integrate as REST APIs or WebSockets in certain contexts.
 
+
+#### Zigbee
+
+If you have been playing with IoT and some home devices, you will come to know Zigbee.
+
+
+* https://www.zigbee2mqtt.io/supported-devices/#
+
+Probably also https://esphome.io if you like ESP32 boards!
+
 ### Redis as a message broker
 
 Redis can be used as a message broker, and in the context of publish/subscribe (Pub/Sub) functionality, it shares similarities with message brokers like MQTT and RabbitMQ. 

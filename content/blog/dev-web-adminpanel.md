@@ -1,6 +1,6 @@
 ---
 title: "Admin Panels for Websites | Manifest vs "
-date: 2025-10-07
+date: 2025-12-01
 tags: ["SaaS","Authentication","Simple BackEnd"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'

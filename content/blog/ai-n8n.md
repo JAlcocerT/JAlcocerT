@@ -185,7 +185,11 @@ In summary, the Perplexity MCP server exists and is actively supported as part o
 
 **To recap:** If it has an API/Webhooks, you can plug it with your n8n workflows.
 
-Like with: https://docs.apify.com/platform/integrations
+* https://github.com/adnanh/webhook
+
+> MIT |  webhook is a lightweight incoming webhook server to run shell commands 
+
+Like the n8n integration with: https://docs.apify.com/platform/integrations
 
 {{% details title="N8N can do that, actually 🚀" closed="true" %}}
 

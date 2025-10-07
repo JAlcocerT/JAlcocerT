@@ -58,6 +58,10 @@ In summary: Chatwoot has some basic CRM features (contact management, conversati
 
 > > This is a [Selfhosted](https://github.com/topics/self-hosted) & [OSS](https://docs.solidtime.io/self-hosting/intro) https://github.com/solidtime-io/solidtime with cool time tracking and invoicing features
 
+**Who is using chatwoot**?
+
+1. The people of Monero
+
 #### PaperCups
 
 * https://github.com/papercups-io/papercups

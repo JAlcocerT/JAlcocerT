@@ -10,6 +10,10 @@ math: true
 
 Recently, I was writing about [this awsome mechanism project](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/)
 
+And seeing the we have been building for a while: https://es.m.wikipedia.org/wiki/Mecanismo_de_Anticitera
+
+This is very motivational.
+
 * https://nav.al/gravity
 
 <!-- https://www.youtube.com/watch?v=-QTkPfq7w1A -->

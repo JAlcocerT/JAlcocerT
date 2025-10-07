@@ -88,11 +88,11 @@ Created a repository with clean compose files for anyone to try these services: 
 
 > See https://github.com/JAlcocerT/Docker/tree/main/SelfH for stacks on what im Selfhosting at a certain month/year.
 
-1. Container UI's 🐳: Portainer, Rancher, Dockge...
+1. Container UI's 🐳: [Portainer](https://github.com/JAlcocerT/Home-Lab/tree/main/portainer), Rancher, Dockge...
 
 2. Syncthing 🐳
 
-3. Tools 🐳: IT-Tools, CosmosServer, OmniTools
+3. Tools 🐳: [IT-Tools](https://github.com/JAlcocerT/Home-Lab/tree/main/it-tools), CosmosServer, [OmniTools](https://github.com/JAlcocerT/Home-Lab/tree/main/omni-tools)
 
 4. [Webs 🐳](https://github.com/JAlcocerT/Docker/tree/main/Web/CMS): Wordpress, Ghost, LinkInBio selfhosted alternatives...
 
@@ -102,7 +102,9 @@ Created a repository with clean compose files for anyone to try these services: 
 
 6. [GenAI Tools 🐳](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen) 
 
-7. HTTPs Tools: Like NGINX, Traefik, Cloudflare Tunnels or Pangolin. I also enjoy [DuckDNS](https://hub.docker.com/r/linuxserver/duckdns).
+7. HTTPs Tools: Like NGINX, Traefik, Cloudflare Tunnels or Pangolin/NetGoat/...
+
+> I also enjoyed [DuckDNS](https://hub.docker.com/r/linuxserver/duckdns).
 
 8. PaaS Tools, like [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)
 

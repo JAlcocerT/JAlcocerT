@@ -2,9 +2,8 @@
 title: "Session Recording for Web Projects"
 date: 2026-12-31
 draft: true
-tags: ["Web","Dev"]
+tags: ["Web","Dev","PostHog","Astuto"]
 description: 'Tutorial - Making ASTRO Website better.'
-summary: 'How to get better with ASTRO as SSG (for non web-devs). My favourite components for Astro.'
 url: 'how-to-record-web-sessions'
 ---
 
@@ -71,6 +70,15 @@ https://docs.uxwizz.com/
 https://docs.sessionstack.com/docs/overview
 
 Matomo - it has session recording in the on premise option, but is to be paid for that plugin
+
+### Astuto
+
+https://astuto.io/?ref=selfh.st
+
+> The open source tool to understand your customers and build a better product
+
+## Conclusions
+
 
 ---
 

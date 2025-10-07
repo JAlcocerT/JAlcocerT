@@ -54,6 +54,17 @@ Is Your VPN Leaking?
 https://www.youtube.com/watch?v=GxVIa3eDdnM -->
 
 
+
+##
+
+https://0xerr0r.github.io/blocky/latest/?ref=selfh.st
+
+https://github.com/0xERR0R/blocky
+
+ Fast and lightweight DNS proxy as ad-blocker for local network with many features 
+
+> Blocky is a DNS proxy and ad-blocker for the local network **written in Go** with following features:
+
 {{< dropdown_docker title="Really, Just Get Docker 🐋" closed="true" >}}
 
 https://github.com/getdnsapi/stubby

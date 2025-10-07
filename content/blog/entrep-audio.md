@@ -292,3 +292,7 @@ I decided to give a try to this one, as fireflies seems to support n8n integrati
 So it convinced me to try those 7d free:
 
 ![alt text](/blog_img/GenAI/audio/fireflies-ai-registration.png)
+
+> I could have also tried https://github.com/thepersonalaicompany/amurex
+
+> > AGPL3 |  World's first AI meeting copilot → The Invisible Companion for Work + Life 

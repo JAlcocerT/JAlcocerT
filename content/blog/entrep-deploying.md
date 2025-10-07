@@ -2,7 +2,7 @@
 title: "Where to Deploy?"
 date: 2025-09-10
 draft: false
-tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio"]
+tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio","Marketers","SerpBear","SimilarWeb"]
 description: 'How to deploy? Resources to launch your stuff in front of your clients.'
 url: 'where-to-deploy'
 ---
@@ -129,9 +129,18 @@ docker stop $(docker ps -a -q) #stop all
 
 * https://www.producthunt.com/products/listmonk
 
-* https://docs.serpbear.com/deployment/deploying-to-elestio-1-click
+**How is your site doing?**
 
-* https://elest.io/fully-managed-services/applications/crm-erp
+1. `https://lp.similarweb.com/brand-2/`
+2. https://docs.serpbear.com/deployment/deploying-to-elestio-1-click
+
+
+You need a CRM?
+
+Before paying and ggetting locked in, see:
+
+1. Odoo, ERPNext,...
+2. https://elest.io/fully-managed-services/applications/crm-erp
 
 
 

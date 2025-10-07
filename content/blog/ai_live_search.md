@@ -129,12 +129,12 @@ uvx \
 See how:
 
 1. Your search gets translated into a search query: *how can i [selfhost raneto](https://fossengineer.com/raneto-markdown-knowledgebase-selfhosting/) with docker-compose?*
-2. Results are loaded from DDG
+
+2. Results are loaded from DDG: *duckduckgo search is used*
 
 ![Local Deep Researcher - Web Query Step](/blog_img/GenAI/ai-search/langgraph-web-query.png)
 
 ### Perplexity
-
 
 <!-- 
 https://www.fahdmirza.com/2024/07/install-perplexica-with-searxng-and.html
@@ -154,7 +154,7 @@ It's all about real time information, right?
 
 **EDIT** Coming from the future:
 
-![alt text](/blog_img/GenAI/ai-search/perplexity-pro.png)
+![Getting Perplexity Pro with Paypal for Free 1y](/blog_img/GenAI/ai-search/perplexity-pro.png)
 
 ![alt text](/blog_img/GenAI/ai-search/perplexity-pro-offer.png)
 

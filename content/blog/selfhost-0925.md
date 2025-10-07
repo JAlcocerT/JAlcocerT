@@ -251,7 +251,9 @@ Fortunately, there are amazing resources to give you ideas:
 * From this one you will get weekly projects to have a look ( Plot Twist: you wont have time to see them all)
   * Example: https://github.com/OpenCut-app/OpenCut or https://github.com/Cloudable-dev/netgoat
 
- > MIT |  The open-source CapCut alternative 
+ > MIT | The open-source CapCut alternative 
+
+ > MIT | A Cloudflare alternative for local and cloud use, can be used ontop of cloudflare for cloudflares paid features, but for free! 
 
   <!-- https://www.youtube.com/watch?v=OOxzP1JvfQk -->
 
@@ -372,6 +374,8 @@ Ive also tried:
 1. Tried [Zen browser](https://github.com/zen-browser/desktop/releases/tag/1.14.11b): https://zen-browser.app/download/
 
 With `CTRL+ALT+C` it gets really compact!
+
+With CTRL+H, it opens your synced tab, so you can see your mobile firefox tabs on desktop
 
 ```sh
 #pkill -9 brave #brave was not behaving properly lately...

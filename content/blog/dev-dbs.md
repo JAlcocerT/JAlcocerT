@@ -368,16 +368,21 @@ Cons:
 
 ## MariaDB
 
-I like to bring mariaDB to any selfhosting stack.
+I like to bring mariaDB to any selfhosting stack:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml" title="NextCloud Config File 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Backups/NextCloud/nc_mariadb.yml" title="NextCloud Config File using MariaDB 🐳 ↗"  >}}
 {{< /cards >}}
 
 ---
 
 ## Conclusions
 
+For my home-lab projects where I need some DB connectivity I try to keep using [MariaDB](#mariadb).
+
+For development, I like to keep things simple with sqlite at first.
+
+If the prohect needs something more, I would go for the PosgreSQL connected via container to my project.
 
 ---
 

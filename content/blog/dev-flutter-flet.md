@@ -42,7 +42,7 @@ Yes, **Flet can generate static pages**.
 
 In fact, this is one of its main strengths.
 
-Flet uses a technology called Pyodide to compile your Python code into WebAssembly (WASM), which is a binary format that can be executed in any web browser. This means that you can deploy your Flet app to any **static web hosting service**, such as **Firebase, GH Pages or CF Pages**.
+Flet uses a technology called Pyodide to compile your Python code into [WebAssembly](https://jalcocert.github.io/JAlcocerT/wasm/), which is a binary format that can be executed in any web browser. This means that you can deploy your Flet app to any **static web hosting service**, such as **Firebase, GH Pages or CF Pages**.
 
 To generate a static page from your Flet app, simply run the following command:
 

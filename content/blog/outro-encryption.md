@@ -2,7 +2,7 @@
 title: "Encryption, Captchas, OpenIDConnect and more"
 date: 2025-05-20
 draft: false
-tags: ["Outro","Security","PoW","Clave","E-Residency","openssl","OIDC vs OAuth","Bearer JWT","Criptii"]
+tags: ["Outro","Security","PoW","Clave","E-Residency","openssl","OIDC vs OAuth","Bearer JWT","Criptii","CapJS"]
 description: 'SHA256 Protocol vs RSA. The concept and applications: SSH, HTTPs, Bitcoin...'
 url: 'encryption-101'
 ---
@@ -37,9 +37,11 @@ How about making their life harder?
 
 * https://capjs.js.org/
 
-Cap is a lightweight, modern open-source CAPTCHA alternative designed using SHA-256 proof-of-work
+Cap is a lightweight, modern **open-source CAPTCHA alternative** designed using [SHA-256](#the-sha256-algorithm) proof-of-work
 
-> I discovered it recently, [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/)
+> I discovered CAPjs recently, [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/)
+
+> > And it looks like a great tool to place in front of your webapp DB Authentication
 
 ## The SHA256 Algorithm
 

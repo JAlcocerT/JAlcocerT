@@ -2,7 +2,7 @@
 title: "Notes and Knowledge Management"
 date: 2025-08-27T19:20:21+01:00
 draft: false
-tags: ["DA","Career","Joplin","LogSeq","KB","Knowledge Base","wysiwyg","MarkText"]
+tags: ["DA","Career","Joplin","LogSeq","KB","Knowledge Base","wysiwyg","MarkText","Raneto"]
 description: 'Head clean with notion, obsidian...or with OSS note taking tools?'
 url: 'knowledge-management'
 ---
@@ -67,18 +67,19 @@ The answer is that there's a spectrum, but many of the popular self-hostable opt
 
 Among your options and other popular apps, the following are truly "flat notes" apps for self-hosting or desktop use—they save each note as an individual Markdown file, without any enforced hierarchical folder structure:
 
-1. Fully Flat Notes Apps
+1. **Fully Flat Notes Apps**
 
-- **Flatnotes**: Stores notes as markdown files in a **single flat directory**—no folders or notebooks. This keeps things simple, and the note files are portable and directly accessible as plain Markdown.[1][2][3]
+- **Flatnotes**: Stores notes as markdown files in a **single flat directory**—no folders or notebooks. This keeps things simple, and the note files are portable and directly accessible as plain Markdown.
 
-- **Raneto**: Organizes its knowledge base with Markdown files, which are stored as flat files on disk (although notes can be grouped in folders physically, the system just reads everything as files; no database is used).[2][3][1]
+- **[Raneto](https://fossengineer.com/raneto-markdown-knowledgebase-selfhosting/)**: Organizes its knowledge base with Markdown files, which are stored as flat files on disk (although notes can be grouped in folders physically, the system just reads everything as files; no database is used).
+
 
 2. Mostly Flat, Hierarchy Optional or Supported
 
 - **SilverBullet**: Stores Markdown notes as flat files; folder hierarchies can be used but are not required or mandatory. The core is file-based, with high customization, and is considered a flat-file "second brain".[4]
 - **Logseq**: Mainly keeps notes as flat Markdown or Org-mode files on your filesystem. Hierarchical linking and block referencing are possible, but each "page" is essentially a flat file.[1]
 
-![alt text](/blog_img/selfh/kb/silverbullet-dns-cf.png)
+![Silverbullet with cloudflare](/blog_img/selfh/kb/silverbullet-dns-cf.png)
 
 3. Not Flat-File (Uses Database or Enforces Hierarchy)
 
@@ -135,6 +136,20 @@ The Verdict
 --- 
 
 ## Conclusions
+
+To edit collaboratively, see https://github.com/ether/etherpad-lite
+
+> Apache v2 |  Etherpad: A modern really-real-time collaborative document editor. 
+
+Or: https://rustpad.io/ at https://github.com/ekzhang/rustpad
+
+Efficient and minimal collaborative code editor, self-hosted, **no database required**
+
+Rustpad is an open-source collaborative text editor based on the operational transformation algorithm.
+
+Share a link to this pad with others, and they can edit from their browser while seeing your changes in real time.
+
+Built using Rust and TypeScript. See the GitHub repository for details.
 
 If you are looking for simplicity, have a look to the **flat file and local first** options, like [raneto](https://github.com/JAlcocerT/Home-Lab/tree/main/raneto) or:
 

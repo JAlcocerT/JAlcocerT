@@ -2,7 +2,7 @@
 title: "WASM, Containers? What?"
 date: 2025-10-01
 draft: false
-tags: ["Dev","Web Assembly","IndieHacker","PWA","FFMPeg","Compiled vs non"]
+tags: ["Dev","Web Assembly","IndieHacker","PWA","FFMPeg","Compiled vs non","VERT"]
 description: 'Must knoics.'
 url: 'wasm'
 ---
@@ -13,6 +13,7 @@ url: 'wasm'
 Understanding WASM and how it [relates with Containers](#wasm-vs-containers).
 
 +++ [WASM + PWA](#wasm-and-pwa) as your FFMPEG [video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) editor
++++ Practical WASM with [VERT](#practical-wasm---vert) to convert files
 
 Keep reading if you like portability and serverless/edge computing.
 
@@ -203,14 +204,58 @@ This approach is highly beneficial because the heavy processing is done on the u
 
 > This means you don't have to pay for server processing time or bandwidth for every video conversion.
 
+---
+
 ## Conclusions
 
-This pelado nerd video is a good starting point for WASM:
-
+This **pelado nerd** video is a good starting point for WASM:
 
 <!-- https://www.youtube.com/watch?v=bgWTf3m6HG0 -->
 
 {{< youtube "bgWTf3m6HG0" >}}
+
+
+### Practical WASM - VERT
+
+VERT is a file conversion utility that uses WebAssembly to convert files on your device instead of a cloud. Check out the live instance at vert.sh.
+
+
+* https://github.com/VERT-sh/VERT
+
+>  The next-generation file converter. Open source, fully local* and free forever. 
+>> VERT is built in Svelte and TypeScript.
+
+You can try vert at: https://vert.sh
+
+This can even convert video (but not in the browser) with FFMPEG and RUST: https://github.com/VERT-sh/VERT/blob/main/docs/VIDEO_CONVERSION.md
+
+
+
+{{% details title="Why FFMPEG and RUST? 🚀" closed="true" %}}
+
+Running FFmpeg with Rust bindings offers advantages mainly in safety and application integration but does not replace the default way FFmpeg is run, which is as a native C/C++ binary or through its CLI.
+
+- **FFmpeg, by default, is written in C/C++** and runs as a command-line application (CLI) or through its C API for direct integration in software projects.[1][2]
+- Most users interact with it via terminal commands, scripts, or through external programs that call the binary.[2]
+
+Advantages of Rust Integration
+
+- Rust bindings (or libraries like `rsmpeg` or `ez-ffmpeg`) allow developers to harness FFmpeg's power in Rust applications while leveraging Rust's robust memory safety and error handling.[3][4][5]
+- Using Rust wrappers can help prevent memory leaks and common security issues inherent to directly using FFmpeg's C API, making your multimedia processing code more secure and reliable.[4][5]
+- Rust abstractions can make multimedia tasks easier and more ergonomic compared to composing complex raw FFmpeg CLI commands, improving developer productivity and application stability.[5][3][4]
+
+When to Use Which
+
+- For most end-users and scripting tasks, calling the regular FFmpeg binary is fastest and simplest.
+- For developers building complex or safety-critical applications, integrating FFmpeg with Rust provides extra benefits in safety, maintainability, and native performance, while preserving nearly all of FFmpeg's rich feature set.[3][4][5]
+
+In summary, FFmpeg runs by default as a C/C++ CLI tool, but using it in Rust brings safety, easier integration, and cleaner code for application development without losing core functionality.[4][5][3]
+
+
+[5](https://github.com/larksuite/rsmpeg)
+
+{{% /details %}}
+
 
 
 ---

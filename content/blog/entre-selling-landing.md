@@ -2,7 +2,7 @@
 title: "Website knowledge updates"
 date: 2025-10-05T10:20:21+01:00
 draft: false
-tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS"]
+tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Komodo"]
 description: 'New ATH for my SSG knowledge'
 url: 'selling-with-a-landing-website'
 ---
@@ -38,6 +38,15 @@ Place those youtube videos:
     <iframe width="560" height="315" src="https://www.youtube.com/embed/hj0MfciILEc" title="Vistula near Kazimierz Dolny Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 ```
+
+---
+
+## Conclusions
+
+If you are building software, check: https://github.com/moghtech/komodo#screenshots
+
+> GPl3.0 |  🦎 a tool to build and deploy software on many servers 🦎 
+
 
 ---
 

@@ -77,7 +77,7 @@ Whats great about Traefik, is that you can provide HTTPs to other services, just
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/phidata/tree/main/Z_DeployMe" title="Youtube Groq | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik HomeLab | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 And all of that happens programatically, plus we wont have conflict of using the same ports, as the host wont be seeing them!

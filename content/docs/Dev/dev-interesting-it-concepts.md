@@ -14,13 +14,19 @@ url: 'IT-concepts'
 
 ## Containers
 
-
 They allow us to package applications completely.
 
-Making the deploy process on other servers kind of *copy and paste*.
+> To use what others created easily in your homelab or to package your projects for others to do the same
+
+Containers are Making the deploy process on other computers/servers kind of *copy and paste*.
 
 ## What it is CI/CD?
 
+We can say that CI/CD is a development paradigm...kind of.
+
+And building containers whenever we ship a new feature in the code is a part of it.
+
+The idea is that the final code for the app will be available for users packaged properly.
 
 **Testing GH Actions Workflows locally**
 
@@ -38,7 +44,7 @@ Make sure to follow [git best](https://jalcocert.github.io/JAlcocerT/git-recap/)
 {{< /cards >}}
 
 
-**Github Authenticating**
+**Github Authentication**
 
 ```sh
 sudo apt update
@@ -58,6 +64,8 @@ A webhook is like a doorbell.
 
 When certain events happen in one system (like a new post on a blog or a new commit in a repository), it automatically sends a notification to another system.
 
+> We have used those in few places, like here with n8n.
+
 It's a way for apps to provide other applications with real-time information.
 
 {{< details title="More about WebHooks 📌" closed="true" >}}
@@ -70,7 +78,11 @@ It's a way for apps to provide other applications with real-time information.
 
 ### What are API calls?
 
-An API call is like making a phone call to a specific service. You request the information or service you need, and the system responds back. It's a way for applications to interact and request data from each other.
+An API call is like making a phone call to a specific service. 
+
+You request the information or service you need, and the system responds back.
+
+> It's a way for applications to interact and request data from each other.
 
 {{< details title="More about APIs 📌" closed="true" >}}
 

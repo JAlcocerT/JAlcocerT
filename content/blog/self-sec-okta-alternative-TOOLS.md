@@ -76,17 +76,22 @@ services:
 
 ## Authentik
 
+Authentik bring many [integrations](https://integrations.goauthentik.io/) supporting OAUTH and OpenID Connect aka OIDC as per [their docs](https://docs.goauthentik.io/users-sources/sources/protocols/oauth).
+
+
+
 * {{< newtab url="https://goauthentik.io/" text="The  Official Site" >}}
 * {{< newtab url="https://github.com/goauthentik/authentik" text="The  Source Code at Github" >}}
     * License: {{< newtab url="https://github.com/goauthentik/authentik?tab=License-1-ov-file#readme" text="Mixed License: CC, MIT, ..." >}} 
 
 > The authentication glue you need.
 
-https://docs.goauthentik.io/docs
+* https://docs.goauthentik.io/docs
 
 Authentik is an IdP (Identity Provider) and SSO (single sign on) that is built with security at the forefront of every piece of code, every feature, with an emphasis on flexibility and versatility.
 
-https://github.com/JamesTurland/JimsGarage/tree/main/Authentik
+> See how JimsGarage have done it: https://github.com/JamesTurland/JimsGarage/tree/main/Authentik
+
 
 Single Sign On With OAuth2.0 - Authentik Is AWESOME!
 https://www.youtube.com/watch?v=enwFWELCYJo&t=438s

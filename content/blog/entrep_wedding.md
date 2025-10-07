@@ -3,7 +3,7 @@ title: "Just shipping | Wedding Edition"
 date: 2025-06-04T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS","Gotify"]
-description: 'Wedding stuff. Aka 200, you mean 4k? The story and some entrepreneurship concepts.'
+description: 'Wedding stuff. Aka 200, you mean 4k? The story and some entrepreneurship concepts like ads'
 url: 'wedding-photo-galleries'
 ---
 
@@ -909,7 +909,7 @@ There are people paying (surprise, *much more*) to place those ads.
 
 Thats the business model of google, facebook and pretty much all social media platform out there.
 
-
+> They get your attention, then sell it *apparently, with transparency in mind* https://adstransparency.google.com/
 
 {{< details title="Where to put the ads? 📌" closed="true" >}}
 

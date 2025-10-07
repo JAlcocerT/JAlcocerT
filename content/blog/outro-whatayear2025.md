@@ -51,6 +51,8 @@ It looks so long back when I used `you.com` to help me with work.
 
 And with no doubt, 2025 has been the year of agents. I mean...
 
+Comercial ones like: `https://www.lindy.ai/pricing`
+
 https://github.com/browser-use/browser-use
 
 >  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
@@ -552,8 +554,9 @@ From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael E
 * https://kerkour.com/writing-against-the-global-lobotomy
 * https://levels.io/happiness/
 * https://nav.al/existence
+* Are we living in auto-pilot? On a [passive live](https://quiethabits.net/stop-living-a-passive-life) topic https://quiethabits.net/year-of-change-2020-a-year-of-maintenance
 
-12. Cool tinker tech posts
+12. Cool tinkering / tech posts
 
 13. The difference between doing nothing with **intent** to do nothing
 
