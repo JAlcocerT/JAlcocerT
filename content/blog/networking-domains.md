@@ -92,7 +92,9 @@ Key Concepts
 
 - **Ownership and Control:** Once purchased (and except .eth), Web3 domains are owned forever with no renewals required and cannot be taken away by any authority.[1]
 
-- **Utility:** Web3 domains can replace crypto wallet addresses, making transactions with hundreds of cryptocurrencies simpler and more secure. They can be used for logging into dApps, hosting decentralized websites on IPFS, and as unique identifiers in digital profiles.[1]
+- **Utility:** Web3 domains can replace crypto wallet addresses, making transactions with hundreds of cryptocurrencies simpler and more secure. They can be used for logging into dApps, hosting decentralized websites on **IPFS**, and as unique identifiers in digital profiles.[1]
+
+> Decentralized storage can be achieved with [IPFS or other tools like FileCoin](https://jalcocert.github.io/JAlcocerT/os-for-nas/#decentralized-storage)
 
 - **Supported Platforms and Integration:** They work with many apps and wallets (e.g., Brave Browser, Trust Wallet, MetaMask) but only resolve natively in some browsers. Browser extensions expand compatibility, and there are ongoing efforts to integrate with traditional browser DNS systems.[1]
 

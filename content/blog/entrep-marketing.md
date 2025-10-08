@@ -241,6 +241,8 @@ manthan patel https://www.agentpass.ai/
 
 ### Tools
 
+https://github.com/JAlcocerT/Scrap_Tools as seen https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap
+
 ### GHL
 
 * https://marketplace.gohighlevel.com/docs/ghl/contacts/create-contact

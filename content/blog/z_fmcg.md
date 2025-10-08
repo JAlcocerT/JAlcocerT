@@ -161,6 +161,31 @@ This integrated approach is crucial for FMCG because it directly addresses the i
 * **Speed and Agility**: The systems provide a framework for rapid response. If the DRP system detects a sudden surge in demand in a specific region, it can quickly signal the MRP system to adjust the production schedule to meet the new requirement.
 * **Inventory Optimization**: Together, MRP and DRP help maintain lean inventory levels across the entire supply chain, from raw materials to finished goods, without compromising customer service.
 
+### Whats Horeca
+
+**HORECA** is an acronym that stands for **HOtels, REstaurants, and CAtering/Cafés**. It refers to the entire hospitality and food service industry.
+
+It encompasses a wide range of businesses that provide food, beverages, and accommodation to consumers, including:
+
+* **Hotels:** From budget motels to luxury resorts.
+* **Restaurants:** Everything from fast-food outlets to fine dining establishments.
+* **Cafés:** Including coffee shops, bars, and pubs.
+* **Catering Services:** Businesses that provide food and beverage services for events, parties, and weddings.
+
+**Is it some type of FMCG sales?**
+
+Yes, HORECA is a significant **sales channel for Fast-Moving Consumer Goods (FMCG)**.
+
+FMCG companies produce everyday essentials that are sold quickly and at relatively low prices (e.g., food, beverages, toiletries, cleaning supplies). The HORECA sector relies heavily on FMCG products for its operations.
+
+Here's how HORECA relates to FMCG sales:
+
+* **Hotels** use FMCGs like toiletries for guest rooms, mini-bar snacks and beverages, breakfast cereals, coffee, etc.
+* **Restaurants** purchase a wide array of FMCG products, including cooking essentials (spices, oils, sauces), packaged convenience foods, and various beverages.
+* **Cafés** rely on FMCG brands for coffee beans, tea leaves, dairy products, baked goods, and other snacks.
+* **Catering services** also need a steady supply of FMCG goods, from bottled water to ingredients for meals.
+
+Therefore, while HORECA itself is an industry (hospitality and food service), it acts as a crucial business-to-business (B2B) channel for FMCG manufacturers and distributors. FMCG companies often tailor their products and sales strategies to meet the specific needs of the HORECA sector, which differs significantly from traditional retail channels.
 
 ---
 

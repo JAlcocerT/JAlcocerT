@@ -2,7 +2,7 @@
 title: "SelfHosting Updates - Oct 2025"
 date: 2025-10-25T01:20:21+01:00
 draft: false
-tags: ["SFTPGo","WebDav","File Sync Tools","P2P Recap","XMRig Benchmark"]
+tags: ["SFTPGo x Syncthing","WebDav","File Sync Tools","P2P Recap","XMRig Benchmark"]
 description: 'Best tools for organizing homelab files.'
 url: 'selfhosted-apps-oct-2025'
 ---
@@ -37,8 +37,51 @@ And I saw few projects lately to see files:
 If you dont want Nextcloud nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
 
 ```sh
-flatpak install flathub org.localsend.localsend_app
+docker exec -it <your-nextcloud-container-name> rm /var/www/html/config/config.php
+# Then, exit and restart the container
+docker exec -u www-data <your-nextcloud-container-name> php /var/www/html/occ config:list system | grep trusted_domains -A 10
+docker exec -u www-data nextcloud php /var/www/html/occ config:system:get trusted_domains
+#docker exec -u www-data nextcloud php /var/www/html/occ config:system:set trusted_domains 4 --value="mynewdomain.example.com"
+docker exec -u www-data nextcloud php /var/www/html/occ config:system:get trusted_domains
 ```
+
+```sh
+flatpak install flathub org.localsend.localsend_app
+##ps aux --sort=-%mem | grep localsend
+```
+
+
+### Syncthing x SFTPGo
+
+You can get creative with rsync, cron and so on.
+
+But...
+
+A combination of **Syncthing** and **SFTPGo** can be used together to achieve automated file exchange, leveraging the strengths of each tool, although they are fundamentally different.
+
+Syncthing is a **decentralized, peer-to-peer (P2P)** continuous file synchronization tool, whereas SFTPGo is a **centralized SFTP server** (that also supports other protocols like FTP/S and WebDAV) with powerful file management and automation features.
+
+
+The primary way to use them together is to set up **Syncthing to sync files to a local directory that SFTPGo uses as a storage backend** (a "virtual folder").
+
+1.  **Syncthing handles synchronization:** Syncthing runs on your client devices (laptops, desktops, phones) and continuously syncs files in real-time to a dedicated folder on your central server. This uses Syncthing's efficient P2P protocol, which is excellent for real-time syncing between devices that are all running the Syncthing software.
+2.  **SFTPGo provides access:** SFTPGo runs on the central server, using the same local Syncthing folder as a data source for its users. This allows external users or systems to access those synchronized files using a standard, secure protocol like **SFTP** (or FTP/S, WebDAV, HTTPS via its WebClient).
+
+This setup solves a common Syncthing limitation: providing access to files via a standard server protocol to clients that are **not** running Syncthing.
+
+It's important to understand the different purposes of each tool:
+
+| Feature | Syncthing (Continuous Sync) | SFTPGo (Secure File Server) |
+| :--- | :--- | :--- |
+| **Core Function** | **Continuous, real-time file synchronization** between multiple trusted devices (P2P). | **Secure file access and transfer** using standard protocols (SFTP, FTP/S, etc.) to a central server. |
+| **Architecture** | Decentralized (no central server required for P2P sync). | Centralized server architecture. |
+| **Protocol** | Custom, secure, encrypted P2P protocol (not SFTP). | Standard protocols: **SFTP**, FTP/S, HTTPS, WebDAV. |
+| **File Management** | Focuses on keeping folders identical across peers. | Provides advanced **user management, access controls, quotas, and automation** (Event Manager, webhooks). |
+| **Primary Use** | Keeping your own set of devices in sync, or collaborating with a defined set of trusted peers. | Providing secure file exchange for multiple external users/partners, often with granular permissions. |
+
+Syncthing doesn't natively support SFTP as a sync destination. SFTPGo is what brings the SFTP server capability to the shared folder.
+
+For a general overview of Syncthing, you can check out Sync Files Across All Your Devices With Syncthing.
 
 ---
 
@@ -94,6 +137,7 @@ Choosing between **Transmission** and **qBittorrent** depends on your priorities
 
 
 1. User Interface and Simplicity
+
 | Client | Characteristics | Best For |
 | :--- | :--- | :--- |
 | **Transmission** | **Minimalist and sleek.** Designed to be lightweight and blend in well with the native operating system environment, especially on macOS and Linux (like Ubuntu, where it's often the default). It has fewer features on the main interface, prioritizing simplicity. | Users who prefer a **simple, clean interface** and just want a client that "just works" with minimal fuss or advanced options. |
@@ -102,6 +146,7 @@ Choosing between **Transmission** and **qBittorrent** depends on your priorities
 
 
 2. Features and Functionality
+
 | Feature | Transmission | qBittorrent |
 | :--- | :--- | :--- |
 | **Built-in Search Engine** | No (Relies on external tools/plugins) | **Yes** (Integrated search engine with installable Python plugins) |

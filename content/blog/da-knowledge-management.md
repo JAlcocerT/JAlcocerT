@@ -3,7 +3,7 @@ title: "Notes and Knowledge Management"
 date: 2025-08-27T19:20:21+01:00
 draft: false
 tags: ["DA","Career","Joplin","LogSeq","KB","Knowledge Base","wysiwyg","MarkText","Raneto"]
-description: 'Head clean with notion, obsidian...or with OSS note taking tools?'
+description: 'Head clean with notion, obsidian...or with OSS note taking tools like GhostWriter?'
 url: 'knowledge-management'
 ---
 
@@ -78,7 +78,7 @@ Among your options and other popular apps, the following are truly "flat notes" 
 2. Mostly Flat, Hierarchy Optional or Supported
 
 - **SilverBullet**: Stores Markdown notes as flat files; folder hierarchies can be used but are not required or mandatory. The core is file-based, with high customization, and is considered a flat-file "second brain".[4]
-- **Logseq**: Mainly keeps notes as flat Markdown or Org-mode files on your filesystem. Hierarchical linking and block referencing are possible, but each "page" is essentially a flat file.[1]
+- **Logseq**: Mainly keeps notes as flat Markdown or Org-mode files on your filesystem. Hierarchical linking and block referencing are possible, but each "page" is essentially a flat file. With [Android app](#faq).
 
 ![Silverbullet with cloudflare](/blog_img/selfh/kb/silverbullet-dns-cf.png)
 
@@ -183,11 +183,16 @@ I know what you are looking for: **DATABASE-LESS KNOWLEDGE BASE**
 * <https://docs.linuxserver.io/images/docker-hedgedoc/>
 * <https://js.wiki/>
 
-![alt text](/blog_img/selfh/kb/wikijs-101.png)
+![WikiJS Setup](/blog_img/selfh/kb/wikijs-101.png)
 
 ![alt text](/blog_img/selfh/kb/wikijs-setup.png)
 
 ![alt text](/blog_img/selfh/kb/wikijs.png)
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wiki-js" title="WikiJS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ### Quick SelfHosting Resources for Notes
@@ -196,8 +201,6 @@ I know what you are looking for: **DATABASE-LESS KNOWLEDGE BASE**
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Notes" title="Note Tools | Docker Configs 🐋 ↗" >}}
     {{< card link="https://fossengineer.com/selfhostable-note-taking-tools/" title="OSS Note taking tools ↗" >}}
 {{< /cards >}}
-
-* https://github.com/JAlcocerT/Home-Lab/tree/main/wiki-js
 
 * https://github.com/redimp/otterwiki
 
@@ -373,9 +376,10 @@ sudo snap install alighieri
 sudo add-apt-repository ppa:wereturtle/ppa
 sudo apt update
 sudo apt install ghostwriter
+#sudo snap remove ghostwriter
 ```
 
-Most of these editors allow working directly with plain Markdown files, making them excellent choices for those who prefer a flat-file workflow coupled with a user-friendly editing interface.[8][6][3]
+Most of these editors allow working directly with plain Markdown files, making them excellent choices for those who prefer a flat-file workflow coupled with a user-friendly editing interface.
 
 [1](https://github.com/mundimark/awesome-markdown-editors)
 [10](https://github.com/JefMari/awesome-wysiwyg-editors)

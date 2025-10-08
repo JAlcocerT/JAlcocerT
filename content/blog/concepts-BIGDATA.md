@@ -629,6 +629,38 @@ Actually, you can have your own PySpark cluster and use it within JupyterHub (JH
 Some **useful Pyspark stuff?**
 
 ```py
+
+import pandas as pd
+
+# URL of the dataset
+url = "https://raw.githubusercontent.com/vega/vega/main/docs/data/sp500.csv" 
+
+# Import the dataset into a pandas DataFrame
+df = pd.read_csv(url) 
+
+# Display the first few rows of the DataFrame
+print(df.head())
+
+# import pandas as pd
+
+# csv_path = '/home/jovyan/onu_poc.csv'
+
+# def read_new_control_group(path):
+#     df = pd.read_csv(path, header=0)
+#     return df
+
+# onu_poc = read_new_control_group(csv_path)
+
+# # Now 'onu_poc' is a pandas DataFrame
+# print(type(onu_poc))
+# print(onu_poc.head())
+```
+
+Tricked you, thats pandas, regular python!
+
+Now pyspark looks:
+
+```py
 spark.read.format('avro')\
 .load(f'{active_node}/raw/folder1/folder2/table/{year}/{month}/{day_selected}/00/00')\
 .printSchema()
@@ -638,7 +670,21 @@ spark.read.format('avro')\
 .limit(1).toPandas().style.hide_index()
 ```
 
-Avro and Parquet are the workhorses for storing and processing large datasets.
+```sh
+from pyspark.sql.functions import col, trim, lower
+
+# Filter the DataFrame to find rows where 'cm_mac' has a null-like value
+null_mac_records = reboot_gmd_df.filter(
+    col("cm_mac").isNull() |
+    (trim(col("cm_mac")) == "") |
+    (lower(trim(col("cm_mac"))) == "null")
+)
+
+# Show the matching records
+null_mac_records.show(200, False)
+```
+
+Avro and Parquet are the *workhorses* for storing and processing large datasets.
 
 ```py
 spark.read.format('parquet')\
@@ -646,7 +692,9 @@ spark.read.format('parquet')\
   .printSchema()         
 ```
 
-Avro is good for write-intensive scenarios and schema evolution, while **Parquet excels in read-heavy analytical workloads due to its columnar nature**.
+Avro is good for write-intensive ~ OLTP scenarios and schema evolution. Its typical of bronze layers.
+
+While **Parquet excels in read-heavy analytical workloads due to its columnar nature**.
 
 > That's why you will find mostly parquet at /processed, Staging or Silver layers. While avro will be closer to /raw, bronze.
 
@@ -665,7 +713,11 @@ df.groupBy("idtype")\
     .show(35)
 ```
 
-You can also read **json tables**: often the initial format for data ingestion or for simple data exchange but is usually transformed into more efficient formats for storage and analysis in big data systems
+
+
+You can also read **json tables**.
+
+Often the initial format for data ingestion or for simple data exchange but is usually transformed into more efficient formats for storage and analysis in big data systems
 
 ```py
 df = ss.read.json(f"{active_node}/raw/folder1/folder2/table/{year}/{month}/{day_selected}/04/00")
@@ -949,6 +1001,32 @@ It's great for building complex, reusable, and testable data pipelines.
 ```py
 # Select columns, filter, and group by
 cleaned_df = df.select("column1", "column2").filter("column1 > 10").groupBy("column2").count()
+```
+
+```sh
+from pyspark.sql import functions as F
+
+# Load and filter the DataFrame
+df = spark.read.load(f'{hdfs_node}/stage/plume/qoe_metrics/country=NL/year={year}/month={month}/day={day}/hour=23/minute=00') \
+    .filter(F.col('medium') == 'wifi') \
+    .filter(F.to_date('ts') == F.current_date() - F.lit(1)) \
+    .filter(F.col('client_mac').startswith('X'))
+
+df.show()
+
+# Alternatively, using the 'like' function
+# df = df.filter(F.col('client_mac').like('X%'))
+```
+
+```sh
+df_with_check\
+.groupBy('idtype','phy_rate_check').agg(
+    F.countDistinct('location_id').alias('unique_location_count'),
+    F.countDistinct('parent_id').alias('unique_parent_count'),
+    F.countDistinct('id').alias('unique_id_count')
+)\
+.orderBy(F.desc('unique_location_count'))\
+.show()
 ```
 
 2.  **SQL Queries:** This allows you to write standard SQL directly within your PySpark code.

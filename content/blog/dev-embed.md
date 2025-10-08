@@ -54,6 +54,11 @@ Bottom line here: **n8n is very simple to get for free**
   {{< card link="https://www.npmjs.com/search?q=keywords%3An8n-community-node-package" title="N8N | Community Nodes nmpjs ↗" >}}
 {{< /cards >}}
 
+
+##### n8n chat
+
+https://www.npmjs.com/package/@n8n/chat?activeTab=readme
+
 ### Live Chats
 
 Crisp Chat is a customer messaging platform that provides live chat, automated chatbots, multi-channel messaging, and helpdesk tools for websites and businesses.

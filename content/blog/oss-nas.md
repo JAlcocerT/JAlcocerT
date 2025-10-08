@@ -2,10 +2,13 @@
 title: "Which OS for a NAS?"
 date: 2025-03-17T21:20:21+01:00
 draft: false
-tags: ["OSS","HomeLab","Ventoy","Lite vs Garuda"]
+tags: ["OSS","HomeLab","Ventoy","Lite vs Garuda","Rclone","IPFS vs FileCoin"]
 description: 'Testing Operative Systems for a NAS / MiniPCs. Improving a Homelab.'
 url: 'os-for-nas'
 ---
+
+
+
 
 Ive been pretty much **comfortable with these OS's**:
 
@@ -318,7 +321,9 @@ Where to get [a VPS](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#
 * https://lowendstock.com/
 * Some would say to [Oracle](https://www.oracle.com/cloud/sign-in.html)
 
-> I got my account shut down without a reason (nothing like selfhosting P2P programs...which was interesting and customer service did not came back with a solution)
+> I got my account shut down without a reason 
+
+> > Nothing like selfhosting P2P programs...which was interesting. Customer service did not came back with a solution
 
 * GCP: https://console.cloud.google.com/
 
@@ -331,7 +336,7 @@ They also provide an [API](https://haveibeenpwned.com/API/Key), which you would 
 ### Photo Video Management in a Server
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Config File 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Homarr Config File 🐳 ↗"  >}}
 {{< /cards >}}
 
 1. https://github.com/KDE/digikam

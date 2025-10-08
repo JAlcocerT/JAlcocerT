@@ -7,6 +7,12 @@ description: 'How to deploy? Resources to launch your stuff in front of your cli
 url: 'where-to-deploy'
 ---
 
+**TL;DR**
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for your server" >}}
+{{< /cards >}}
+
 **Intro**
 
 Have your client in the loop asap.

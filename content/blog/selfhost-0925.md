@@ -202,7 +202,7 @@ Try new desktop app for your linux system and install them via:
   {{< card link="https://snapcraft.io/" title="SnapCraft Apps" >}}
 {{< /cards >}}
 
-Example, install RustDesk to control your new miniPC from your laptop (with full UI access): 
+Example, install **RustDesk** or Reminna to control your new miniPC from your laptop (with full UI access): 
 
 ```sh
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

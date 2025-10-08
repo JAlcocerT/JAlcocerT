@@ -27,8 +27,25 @@ draft: false
 
 ## Video as a Code
 
-It'sall about using: https://github.com/FFmpeg/FFmpeg
+It's all about using: https://github.com/FFmpeg/FFmpeg
 
+For Linux:
+
+```sh
+#sudo apt update && sudo apt install ffmpeg
+ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
+#ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
+```
+
+You can also do same tricks for [Windows like so](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11), as seen [here](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg)
+
+```sh
+#choco install ffmpeg -y
+#ffmpeg -version #I got the version 7.1-essentials_build
+Get-ChildItem -Filter "*.MP4" | ForEach-Object { "file '$($_.Name)'" } | Set-Content file_list.txt
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
+```
 
 ### Extracting Video Data
 

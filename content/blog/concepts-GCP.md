@@ -116,7 +116,22 @@ In this example:
 
 BigQuery 📊
 
-BigQuery is a **serverless data warehouse** from Google Cloud. It's used for storing and analyzing massive datasets using standard SQL. It's a fundamental part of the modern data stack.
+BigQuery is a **serverless data warehouse** from Google Cloud. 
+
+It's used for storing and analyzing massive datasets using standard SQL. 
+
+```sql
+SELECT
+  *
+FROM
+  `prj-lg-p-odh-data`.`something`.`othersth_metrics_base` AS t
+WHERE
+  t.medium = 'wifi'
+  AND DATE(t.ts) = CURRENT_DATE() - 1
+  AND t.client_mac LIKE 'X%';
+```
+
+It's a fundamental part of the modern data stack.
 
 SQL Files (.sql)
 

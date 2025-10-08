@@ -2,7 +2,7 @@
 title: "SelfHosting - 1st Half 2025 "
 date: 2025-06-30T01:20:21+01:00
 draft: false
-tags: ["HomeLab","Authentication","P2P","Traefik https SSL","LazyDocker"]
+tags: ["HomeLab","Authentication","P2P","Traefik https SSL","LazyDocker","Portmaster"]
 description: 'Programatic HTTPs for all services and docker stacks running in your server.'
 url: 'selfhosted-apps-06-2025'
 ---
@@ -169,7 +169,7 @@ You can now enable other devices or create accounts for your friends/family:
 
 #### Third Party Cloud NC Backup
 
-Last month i tried protondrive with rclone https://github.com/JAlcocerT/Docker/tree/main/Backups#rclone
+Last month [on this post](https://jalcocert.github.io/JAlcocerT/os-for-nas/) I tried protondrive with rclone https://github.com/JAlcocerT/Docker/tree/main/Backups#rclone
 
 1. **ProtonDrive**
 
@@ -177,7 +177,7 @@ Last month i tried protondrive with rclone https://github.com/JAlcocerT/Docker/t
 
 #### PortMaster and https
 
-If you are using *portmaster*, you might need to disable DNS config -> Enforce global/private-split view
+If you are using *portmaster*, you might need to disable `DNS config -> Enforce global/private-split view`
 
 So that the nextcloud configured via Traefik and tailscale DSN will work
 

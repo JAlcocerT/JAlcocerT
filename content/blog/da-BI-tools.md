@@ -335,6 +335,27 @@ Takeaways
 }
 ```
 
+```json
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match_phrase": {
+            "site": "BBK-LC0011"
+          }
+        },
+        {
+          "exists": {
+            "field": "HttpPlayerPlaybackEndEvent_assetType"
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
 And for Kibana **KQL logic**, we would do:
 
 ```sql

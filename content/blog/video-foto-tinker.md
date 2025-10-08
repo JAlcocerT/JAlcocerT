@@ -185,7 +185,7 @@ ffmpeg -framerate 10 -i frame_%03d.png output.gif
 
 {{< /details >}}
 
-4. Applying custom luts with ffmpeg:
+4. Applying custom luts with ffmpeg: *this did not give me the result I wanted*
 
 ```sh
 #https://video.stackexchange.com/questions/21483/apply-custom-lut-via-ffmpeg

@@ -7,7 +7,25 @@ description: 'How to get started with OpenL Tablets. Business rules, for excel u
 url: 'understanding-openl-tablets'
 ---
 
+
+**Intro**
+
 **[OpenL Tablets](https://www.openl-tablets.org/)** is a powerful business rule management system (BRMS) that leverages Excel spreadsheets for defining and managing business rules.
+
+
+**Imagine a set of rules that an insurance company uses to decide whether to insure someone and how much to charge them.** 
+
+These rules might be things like, "If someone is under 25, they have to pay a higher premium," or "If someone has a history of accidents, they can't get insurance."
+
+**OpenL Tablets** is a tool that helps insurance companies organize and manage these rules. It's like a digital rulebook that's easy to understand and update. 
+
+**Why would an insurance company use it?**
+* **Clarity and Consistency:** It ensures that everyone in the company is following the same rules, preventing mistakes and inconsistencies.
+* **Flexibility:** If the rules need to change, they can be updated quickly and easily.
+* **Efficiency:** It can automate many tasks, saving time and money. 
+
+In simpler terms, OpenL Tablets helps insurance companies make decisions about who to insure and how much to charge them in a clear, consistent, and efficient way.
+
 
 {{< details title="OpenL Tablets vs XML 📌" closed="true" >}}
 
