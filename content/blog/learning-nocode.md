@@ -36,19 +36,9 @@ And they are **no code**.
 ![BaseRow](/blog_img/apps/baserow.png)
 
 
-## Link Shorteners / QR Gen
-
-* https://www.qrcode-monkey.com/
-* https://bitly.com/
-* https://github.com/dubinc/dub
-    * https://github.com/dubinc/dub#self-hosting
-    * https://dub.co/pricing
-
-> Yet this is free https://emn178.github.io/online-tools/qr-code/generator/
 
 
 ---
 
 ## FAQ
 
-**InkScape can also Generate Branded QR's**

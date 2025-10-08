@@ -3,12 +3,13 @@ title: "[AIoT] How to use LangChain to Chat with Sensor Data"
 date: 2025-11-17T21:20:21+01:00
 #Lastmod: 2022-11-17
 draft: false
-tags: ["Dev"]
+tags: ["Dev","AI","IoT","DB2Rest"]
 description: 'Using LangChain with OpenAI API to get information about Temperature and Humidity of a DHT22 sensor'
-summary: 'Using LangChain with OpenAI API to get information about Temperature and Humidity of a DHT22 sensor'
 url: 'langchain-chat-with-sensor-data'
 ---
 
+
+**Intro**
 
 You can also try [PandasAI](https://pypi.org/project/pandasai/) and [Sketch](https://pypi.org/project/sketch/) with Python.
 

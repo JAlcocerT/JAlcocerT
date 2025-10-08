@@ -1,7 +1,7 @@
 ---
 title: "Programatic Web Search"
 date: 2025-10-09
-draft: true
+draft: false
 tags: ["Dev","DuckDuckGo"]
 url: 'search-web-with-python'
 summary: 'How to use search the web programatically'

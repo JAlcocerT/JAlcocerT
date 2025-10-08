@@ -1,5 +1,5 @@
 ---
-title: "Learning about 3D Printing and more"
+title: "Learning about 3D Printing"
 date: 2026-12-31
 draft: true
 tags: ["Tinkering"]

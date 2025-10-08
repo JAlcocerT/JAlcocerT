@@ -70,7 +70,20 @@ This one is great, yet it seems that the way to get MRR is via the companies who
 
 ### QR Code Generator
 
+> InkScape can also Generate Branded QR's
+
 * https://it-tools.tech/qrcode-generator
+
+**Link Shorteners / QR Gen**
+
+* https://www.qrcode-monkey.com/
+* https://bitly.com/
+* https://github.com/dubinc/dub
+    * https://github.com/dubinc/dub#self-hosting
+    * https://dub.co/pricing
+
+> Yet this is free https://emn178.github.io/online-tools/qr-code/generator/
+
 
 
 #### QR Generator CSR

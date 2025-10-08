@@ -482,7 +482,9 @@ Here's how to translate it **into Elasticsearch DSL**:
 {{< /details >}}
 
 
-#### Chronograph
+#### Others
+
+1. Chronograph
 
 Works together with InfluxDB!
 
@@ -490,32 +492,42 @@ Chronograf allows you to quickly see the data that you have stored in InfluxDB s
 
 It is simple to use and includes templates and libraries to allow you to rapidly build dashboards with real-time visualizations of your data.
 
+2. Node-Red
 
-#### Node-Red
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/node-red" title="NodeRed | Config File 🐳 ↗"  >}}
+{{< /cards >}}
+
 
 ### Custom BI Tools
 
 **For the Devs out there**
 
+Or just vibe coders... :)
+
 #### Python DASH
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/dash" title="Dash | Contenarization Arfifacts 🐳 ↗"  >}}
+{{< /cards >}}
+
 
 #### Python STREAMLIT
     
 * https://ploomber.io/blog/streamlit_exe/
 
 
-##### Streamlit + AI
+1. Streamlit + AI
 
 {{< youtube id="MgLlEMteQqg" autoplay="false" >}}
 
 * https://github.com/dataprofessor/builder
 
-##### Dynamic Maps with Streamlit
+2. Dynamic Maps with Streamlit
 
 * Streamlit **+ LeafMap**:
-
-https://github.com/opengeos/streamlit-map-template
-https://github.com/opengeos/streamlit-geospatial -->> https://huggingface.co/spaces/giswqs/Streamlit
+  * https://github.com/opengeos/streamlit-map-template
+  * https://github.com/opengeos/streamlit-geospatial -->> https://huggingface.co/spaces/giswqs/Streamlit
 
 * What it is based on? https://github.com/opengeos/leafmap
     * https://pypi.org/project/leafmap/
@@ -538,7 +550,7 @@ https://github.com/clint-kristopher-morris/Tutorials/tree/main/streamlit-part-1
 
 #### Python Shiny
 
-Shiny is now available for more than R.
+Shiny is now available for more than the R language.
 
 We can now use **[Shiny](https://pypi.org/project/shiny/) with Python** to create WebApps.
 
@@ -556,13 +568,14 @@ If you need a recap on R language, focused on flexdashboards:
 
 ---
 
-
-
-
 ### Metabase
 
 
 Get Metabase running locally with [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/IoT/Metabase)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/metabase" title="Metabase | Docker Config 🐳 ↗"  >}}
+{{< /cards >}}
 
 
 <!-- 
@@ -580,10 +593,6 @@ IoT Project example with Metabase: <https://jalcocert.github.io/RPi/posts/rpi-io
 
 > IoT Projec tith [Metabase](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/)
 
-
-* https://github.com/JAlcocerT/Docker/tree/main/IoT/Metabase
-
-
 {{< callout type="info" >}}
 IoT Project with [Metabase+MongoDB+DHT Sensor](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/)
 {{< /callout >}}
@@ -600,23 +609,7 @@ Compare with Apache Superset - https://superset.apache.org/
 
 You can use serverless version of it at - https://preset.io/
 
-* https://github.com/jmlcas/metabase
 
-```yml
-version: '3'
-services:
-  metabase:
-    image: metabase/metabase
-    container_name: metabase
-    ports:
-      - "3000:3000"
-    volumes:
-      - metabase-data:/metabase-data
-    restart: always
-
-volumes:
-  metabase-data:
-```
 
 ## Metabase Embedded Analytics
 
@@ -630,56 +623,20 @@ python...
 
 <!-- https://youtu.be/eCplQYrvabk -->
 
-![alt text](/blog_img/iot/metabase-setup.png)
+![Metabase UI 101](/blog_img/iot/metabase-setup.png)
 
 ### Static Embedding
 
-### FlexDashboards
 
 #### Metabase with MariaDB
 
 https://www.metabase.com/data_sources/mariadb
 https://www.metabase.com/docs/latest/databases/connections/mariadb
 
-* https://hub.docker.com/r/metabase/metabase/
-* https://github.com/metabase/metabase
+{{< cards >}}
+  {{< card link="docker-compose.mariadb.yml" title="Metabase | Docker Config 🐳 ↗"  >}}
+{{< /cards >}}
 
-```yml
-services:
-  metabase:
-    image: metabase/metabase
-    container_name: metabase
-    ports:
-      - "3000:3000"
-    volumes:
-      - metabase_data:/metabase-data
-    restart: always
-    depends_on:
-      - mariadb
-    environment:
-      MB_DB_TYPE: mysql
-      MB_DB_DBNAME: chinook
-      MB_DB_USER: myuser
-      MB_DB_PASS: mypassword
-      MB_DB_HOST: mariadb-db
-
-  mariadb:
-    image: mariadb:10.5
-    container_name: mariadb-db
-    environment:
-      - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_DATABASE=chinook
-      - MYSQL_USER=myuser
-      - MYSQL_PASSWORD=mypassword
-    volumes:
-      - mariadb_data:/var/lib/mysql
-    ports:
-      - "3399:3306"
-      
-volumes:
-  metabase_data:
-  mariadb_data:
-```
 
 ### Superset
 

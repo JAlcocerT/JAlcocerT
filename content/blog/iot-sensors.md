@@ -2,19 +2,73 @@
 title: "[IoT] Sensors and Arduino"
 date: 2025-10-21
 draft: false
-tags: ["Tinkering"]
+tags: ["Tinkering",Polanduino"","DHT","MLX"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
 
 
+**Intro**
+
+
+
+Recently, arduino has been bought by QCOM.
+
+Historically, Arduino has maintained a strong open-source philosophy for both its hardware and software.
+
+The schematics, PCB designs, and core firmware for Arduino boards like the Uno, Mega, and others have been openly available, allowing manufacturers and hobbyists to create compatible clones or customize designs. 
+
+The Arduino Integrated Development Environment (IDE) and associated libraries are also open-source, supporting collaborative development and community-driven improvements.
+
+{{< details title="AI Asisted Web Search... 📌" closed="true" >}}
+
+
+**Arduino and Open-Source Principles**
+
+- Arduino's hardware schematics and PCB layouts are open-source.
+- The firmware and Arduino IDE are licensed permissively, fostering widespread community modification and distribution.
+- This open stance has led to a vast ecosystem of compatible clones, embedded projects, and community innovations.[1]
+
+**RISC-V and Open-Source**
+
+RISC-V, an open instruction set architecture (ISA), is also fully open. It was designed to be a free and open standard, allowing anyone to develop compatible chips, tools, and implementations without licensing fees. This openness aims to promote innovation and democratize access to processor design, similar to Arduino’s ethos in hardware and firmware.[2]
+
+**Similarities and Differences**
+
+- Both Arduino and RISC-V embody open-source principles, but they operate in different layers of hardware design: **Arduino in microcontroller boards and firmware, RISC-V at the processor architecture level.**
+- RISC-V's openness is in the ISA itself, encouraging a broad ecosystem of CPUs and chips, while Arduino’s openness is in the hardware and development tools for embedded devices.
+- The recent Qualcomm-Arduino deal may impact Arduino's traditional open-source stance, especially if proprietary chips and closed support ecosystems become more prominent, whereas RISC-V remains fully open by design and community advocacy.[3]
+
+In summary, both Arduino's hardware/software and RISC-V are open-source principles, but with different scopes—Arduino in microcontroller hardware and software, and RISC-V in CPU architecture.
+
+[1](https://www.jeffgeerling.com/blog/2025/qualcomms-buying-arduino-%E2%80%93-what-it-means-makers)
+
+{{< /details >}}
+
+> WIth open hardware, things like https://github.com/mfolejewski/Polanduino happen :)
+
+> >  Polanduino - Arduino from Poland (RP2040 board) 
+
 ## Motivation for Arduino
 
 Arduino + Acelerometer data in real time?
 
-Wait. What?
+Wait.
+
+People are doing... what?
+
+Combining Blender + Arduino + Real Time Accelerometer Data: https://pabramsor.com/blender-and-arduino-accelerometer/
+
+> See in real time where the arduino is moving rendered into blender
+
+> > Impressive that this was [done back in 2011](https://elescritoriodetesla.blogspot.com/2011/09/acelerometro-arduino-y-blender3d.html)
+
+
+What?!
 
 {{< youtube "ijX3CeVUTPh9yz7Z" >}}
+
+We could use one of these for trackdays / karting and so on?
 
 <!-- https://youtu.be/Cu7VlrpoVZY?si=ijX3CeVUTPh9yz7Z -->
 
@@ -22,20 +76,17 @@ Wait. What?
 arduino
 https://www.youtube.com/watch?v=DPqiIzK97K0 -->
 
-<!-- 
-
-RYLR 998, a blue chip equipped with a LoRa ultra-long-range modem, perfect for various hardware integrations including Raspberry Pi, Arduino, and ESP-32.
-
-https://www.youtube.com/watch?v=9azEfCQNhSA
-
-Takeaways
-
-The Ryder 998 is a low-power, low-cost chip that can send messages over 12 miles without any infrastructure.
-LoRa technology has the potential to disrupt the status quo of communication technology.
-The Ryder 998 can be used in a variety of applications, including IoT, emergency response, and extreme outdoor activities.
-The chip's low power consumption and versatility make it an attractive option for many industries. -->
 
 ---
+
+## Conclusion
+
+
+Interesting YT channels
+
+Tom Stanton - https://www.youtube.com/watch?v=6gchoHrsCp4 ~DIY
+
+https://www.youtube.com/@homeassistant_facil/videos - https://www.youtube.com/@homeassistant_facil/videos
 
 ## FAQ
 
@@ -45,7 +96,7 @@ The chip's low power consumption and versatility make it an attractive option fo
 
 #### MLX90614 GY-906 - IR
 
-The MLX90614 GY-906 is an infrared (IR) temperature sensor module commonly used for non-contact temperature measurements.
+The MLX90614 GY-906 is an **infrared (IR) temperature sensor** module commonly used for non-contact temperature measurements.
 
 It's also known as a pyrometer or non-contact thermometer.
 
@@ -398,22 +449,18 @@ services:
 volumes:
   influxdb_data:
   grafana_data:  # Define the volume for Grafana
-
 ```
 
-
-
-
-
-Grafana can connect to: http://influxdb:8086 or to http://yoursubdomain.duckdns.org:8086 (if you included the DNS in the stack)
+> Grafana can connect to: `http://influxdb:8086` or to `http://yoursubdomain.duckdns.org:8086` *if you included the DNS in the stack*
 
 Go to the Influx container and then:
 
+```sh
 Influx
 USE sensor_data
 show measurements
 SELECT * FROM mlx_sensor #this is the measurement where we are pushing this data
-
+```
 
 
 
@@ -430,9 +477,7 @@ http://192.168.3.101:8086
 USD 0.002
 /mebibyte
 
-versus GCP E2 small That's about $0.02 hourly
-
-
+> versus GCP E2 small That's about $0.02 hourly
 
 
 ```yml
@@ -481,81 +526,10 @@ volumes:
 remember that you will need a firewall rule for the TCP port 8086 (influxDB)
 
 
-<https://hub.docker.com/r/linuxserver/duckdns>
-
-
-```yml
-version: '3'
-services:
-
-  influxdb:
-    image: influxdb:1.8
-    container_name: influxdb
-    ports:
-      - "8086:8086"
-    volumes:
-      - influxdb_data:/var/lib/influxdb
-    environment:
-      - INFLUXDB_DB=sensor_data
-      - INFLUXDB_ADMIN_USER=admin
-      - INFLUXDB_ADMIN_PASSWORD=mysecretpassword
-
-  duckdns:
-    image: lscr.io/linuxserver/duckdns:latest
-    container_name: duckdns
-    environment:
-      - SUBDOMAINS=subdomain1,subdomain2
-      - TOKEN=yourtoken
-      - LOG_FILE=false #optional
-    volumes:
-      - duckdns_data:/config #optional
-    restart: unless-stopped      
-
-volumes:
-  influxdb_data:
-  duckdns_data:
-```
-
 Adding [nginx](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/) and [duckdns](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/#https-locally-nginx--duckdns)
-
-```yml
-  nginx:
-    image: 'jc21/nginx-proxy-manager:latest'
-    restart: unless-stopped
-    container_name: nginx    
-    ports:
-      - '80:80' # Public HTTP Port
-      - '443:443' # Public HTTPS Port
-      - '81:81' # Admin Web Port
-    volumes:
-      - nginx_data:/data #  - ~/Docker/Nginx/data:/data
-      - nginx_letsencrypt:/etc/letsencrypt #  - ~/Docker/Nginx/letsencrypt:/etc/letsencrypt
-    networks:
-      nginx_network:
-        aliases:
-          - default      
-
-
-volumes:
-  nginx_data:
-  nginx_letsencrypt:
-
-networks:
-  nginx_network:
-    internal: true
-```
-
 
 
 {{% /details %}} 
 
 
 
-
-## Outro
-
-Interesting YT channels
-
-Tom Stanton - https://www.youtube.com/watch?v=6gchoHrsCp4 ~DIY
-
-https://www.youtube.com/@homeassistant_facil/videos - https://www.youtube.com/@homeassistant_facil/videos

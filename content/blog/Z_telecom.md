@@ -1022,7 +1022,7 @@ Which can be...
 }
 ```
 
-> **Kibana** is very useful to see **Streaming Data** (from Kafka topics, or [IoT devices: like this DHT22](https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/))
+> **Kibana** is very useful to see **Streaming Data** (from Kafka topics, or [IoT devices: *like this DHT22 sensor*](https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/))
 
 
 

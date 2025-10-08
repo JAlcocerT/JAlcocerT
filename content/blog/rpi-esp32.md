@@ -2,7 +2,7 @@
 title: "ESP32:"
 date: 2025-12-31T23:20:21+01:00
 draft: true
-tags: ["Self-Hosting","IoT","MicroControllers"]
+tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
 ---
 
 https://www.youtube.com/watch?v=V_mZsiZcy7s
@@ -117,22 +117,27 @@ void loop() {
 }
 ```
 
-Dont forget to include the libraries: Tools -> Manage Libraries -> DHT sensor library for ESPx
+Dont forget to include the libraries: `Tools -> Manage Libraries -> DHT sensor library for ESPx`
 
 ### With VScode and PlatformIO
 
 I recommend you also the **Serial Monitor** extension
 
-<https://www.youtube.com/watch?v=W6i88k0LOiA>
+<!-- <https://www.youtube.com/watch?v=W6i88k0LOiA> -->
+
+{{< youtube "W6i88k0LOiA" >}}
+
 
 
 
 
 ### Sending DHT11 Data to Arduino Cloud
 
-<https://cloud.arduino.cc/home/>
+You can create an account: <https://cloud.arduino.cc/home/>
 
-<https://www.youtube.com/watch?v=rcCxGcRwCVk>
+<!-- <https://www.youtube.com/watch?v=rcCxGcRwCVk> -->
+
+{{< youtube "rcCxGcRwCVk" >}}
 
 
 ```cpp
@@ -250,44 +255,28 @@ void DHT_SENSOR_READ()
 
 ## Industry 4.0 and the MQTT Protocol
 
-```yml
-version: '3'
-services:
-  mosquitto:
-    image: eclipse-mosquitto
-    container_name: mosquitto
-    ports:
-      - "1883:1883"
-      - "9001:9001"
-    restart: always
-    volumes:
-      - /path/to/mosquitto/config:/mosquitto/config
+You can have have the industry 4.0 at home:
 
-  nodered:
-    image: nodered/node-red
-    container_name: nodered
-    ports:
-      - "1880:1880"
-    restart: always
-    volumes:
-      - /path/to/nodered/data:/data
-    environment:
-      - TZ=your_time_zone
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/node-red" title="Node-Red | Config File 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/eclipse-mosquitto" title="Mosquitto | Config File 🐳 ↗"  >}}
+{{< /cards >}}
 
-```
+Open a web browser and navigate to `http://raspberry_pi_ip:1880`
 
+> Replace raspberry_pi_ip with your Raspberry Pi's IP address
 
-
-
-Open a web browser and navigate to http://raspberry_pi_ip:1880 (replace raspberry_pi_ip with your Raspberry Pi's IP address). You should see the Node-RED user interface.
+> >  You should see the Node-RED user interface.
 
 ### MQTT with the RPi and ESP32
 
 #### MosquiTTO
 
-<https://www.youtube.com/watch?v=ebsXSCKsHeQ&t=302s>
-<https://helloworld.co.in/article/mqtt-raspberry-pi-esp32>
+This [video](https://www.youtube.com/watch?v=ebsXSCKsHeQ&t=302s) and [this post](https://helloworld.co.in/article/mqtt-raspberry-pi-esp32) were helpful to get started.
 
+You can install mosquitto baremetal like:
+
+```sh
 sudo apt install -y mosquitto
 sudo apt install -y mosquitto-clients
 
@@ -295,7 +284,9 @@ sudo apt install -y mosquitto-clients
 sudo pip3 install paho-mqtt
 
 sudo systemctl status mosquitto.service
+```
 
+But hey, you have the containers...
 
 Publish sample data (from the RPi to the Rpi): https://github.com/jiteshsaini/mqtt-demo/blob/main/rpi_mqtt_clients/client_pub.py
 

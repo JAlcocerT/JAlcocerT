@@ -2,7 +2,7 @@
 title: "Using DJI Tello Drone with Python"
 date: 2024-07-30T23:20:21+01:00
 draft: false
-tags: ["Tinkering"]
+tags: ["Tinkering","Dron Regulations and License"]
 description: Learning drone programming with Python and a DJI Tello drone.
 url: 'dji-tello-python-programming'
 ---
@@ -77,7 +77,9 @@ A **Pi camera** its about ~5$, much more affordable way to enter the computer vi
 
 ### How to Control DJI Tello with Python
 
-#### DJI Tello with Streamlit
+{{< youtube "JQQcfHeGaTM" >}}
+
+<!-- https://youtube.com/shorts/JQQcfHeGaTM -->
 
 ### About Dron Regulations
 
@@ -87,26 +89,6 @@ A **Pi camera** its about ~5$, much more affordable way to enter the computer vi
 * **Remember** 
     * An exam is generally required for drones weighing over 250 grams (0.55 pounds) in most countries.
     * Check your local regulations to ensure compliance, as rules can differ significantly by region.
-
-### DIY Drone Resources
-
-* Haga un PEQUEÑO dron Arduino con cámara FPV: ¿volará?
-
-https://www.youtube.com/watch?v=Sa6EslOHsI0
-
-* Haga un avión de papel FPV RC que vuele | ESP32
-
-
-https://www.youtube.com/watch?v=hDjBi0ErDdw
-
-* Open Source Motion Capture for Autonomous Drones
-
-https://www.youtube.com/watch?v=0ql20JKrscQ
-https://github.com/jyjblrd/Low-Cost-Mocap
-https://github.com/jyjblrd/Low-Cost-Mocap?tab=MIT-1-ov-file#readme
-
-> Low cost motion capture system for room scale tracking
-
 
 ### About Flying
 

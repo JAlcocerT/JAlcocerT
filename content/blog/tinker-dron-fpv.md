@@ -7,6 +7,11 @@ description: Drone.
 url: 'fpv-programming'
 ---
 
+
+**Intro**
+
+First of all, an fpv is probably sth for what you need [such license](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#about-dron-regulations).
+
 This guy knows what he's talking about: https://github.com/Bardo91, aka Pablo ramom soria.
 
 ![DJI Tello Dron](/blog_img/hardware/dji-dron.png)
@@ -17,6 +22,22 @@ https://www.youtube.com/watch?v=7yVFZn87TkY
   {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_price.py" title="DataInMotion yfinance Price ↗" >}}
     {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py" title="DataInMotion yfinance Dividend ↗" >}}
 {{< /cards >}}
+
+
+### DIY Drone Resources
+
+* Haga un avión de papel FPV RC que vuele | ESP32
+
+
+https://www.youtube.com/watch?v=hDjBi0ErDdw
+
+* Open Source Motion Capture for Autonomous Drones
+
+https://www.youtube.com/watch?v=0ql20JKrscQ
+https://github.com/jyjblrd/Low-Cost-Mocap
+https://github.com/jyjblrd/Low-Cost-Mocap?tab=MIT-1-ov-file#readme
+
+> Low cost motion capture system for room scale tracking
 
 
 

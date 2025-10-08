@@ -77,7 +77,11 @@ These are cool and selfhostable:
 2. Various: 
 
 * https://it-tools.tech and https://omnitools.app/ 
-* https://gchq.github.io/CyberChef/ *see the power of [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/)!*
+
+*Feel the power of [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/)!*
+
+* https://gchq.github.io/CyberChef/ 
+* https://emn178.github.io/online-tools
 
 3. For PDF Conversion: https://stirling.com/app/
 

@@ -141,9 +141,9 @@ You can try with Thony or ArduinoIDE (I prefer the latter)
 flatpak install flathub cc.arduino.IDE2
 ```
 
-When installin arduinoIDE:
+When installing arduinoIDE:
 
-![alt text](/blog_img/iot/picoW/arduinoIDE-install.png)
+![installing arduino IDE Linux](/blog_img/iot/picoW/arduinoIDE-install.png)
 
 You will see a message like: The "Arduino Mbed OS RP2040 Boards [v 4.4.1]" core has to be installed for the currently selected "Raspberry Pi Pico" board.
 
@@ -868,9 +868,7 @@ rshell -p /dev/serial/by-id/usb-MicroPython_Board_in_FS_mode_e66141040370772c-if
 
 {{% details title="If you used ArduinoIDE..." closed="true" %}}
 
-Short Answer:
-
-**You *cannot* directly view or retrieve the code that’s already been uploaded to a microcontroller like the Pico W from the Arduino IDE.** 
+**You *cannot* directly view or retrieve the code that’s already been uploaded to a microcontroller like the Pico W from the ArduIDE.** 
 
 Once code is uploaded, it's compiled into machine code and stored in flash memory — not easily readable or reversible.
 

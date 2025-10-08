@@ -2,7 +2,7 @@
 title: "DevOps Tools"
 date: 2025-09-08T00:20:21+01:00
 draft: false
-description: 'Setting up devops tools - From CI/CD, to Monitoring with Grafana, k8s, DSc Tools...'
+description: 'Set up devops tools - From CI/CD, to Monitoring with Grafana, jenkins, k8s, DSc Tools...'
 url: 'dev-ops-for-non-devops'
 tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Uptime Kuma Status Pages"]
 ---
@@ -114,6 +114,7 @@ It supports various programming languages and offers great flexibility in custom
 In addition to Continuous Integration (CI), GitHub Actions also supports Continuous Deployment (CD) by integrating with different deployment strategies and environments.
 
 This allows you to automate the deployment of your application to various platforms and hosting services, such as cloud providers or dedicated servers, ensuring a seamless release process.
+
 {{< /details >}}
 
 This is how I've used **GH Actions in my projects:**
@@ -222,6 +223,10 @@ docker pull ghcr.io/your_github_username/your_repo_name:v1.0
 We have all been new to CI/CD at some point.
 
 If you want to **tinker with Jenkins**, a great way is to [**Self-Host** Jenkins with Docker](https://fossengineer.com/selfhosting-jenkins-ci-cd/).
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jenkins" title="Jenkins | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ## Ansible
 

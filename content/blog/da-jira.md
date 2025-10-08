@@ -11,7 +11,7 @@ tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram Mermaid","La
 
 As tech lead, you will need to analyze requirements/proposal to clients.
 
-Create the technical solution and probably create some ppt.
++++ Create the technical solution document in pdf and probably create some [ppt with slidev](#conclusions).
 
 **Intro**
 
@@ -102,6 +102,26 @@ You can make a quick PPT by tweaking the .md to the slidev way (with corporate b
 ```sh
 #npm i -D playwright-chromium
 npx slidev export --format pptx #ppt from md thanks to SliDevJS
+
+npm init slidev #yarn create slidev
+npm run dev
+#npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+#rm -rf .git
+npm run build
+#cd ./dist
+#npx serve
+
+#npx playwright install
+npx slidev export --format pptx --output my-presentation.pptx
+npx slidev export --format pptx --range 1-5,8,10-12
+```
+
+or
+
+```sh
+#npx playwright install
+npx slidev export --format pdf
+npx slidev export --format pdf --range 1-5,8,10-12
 ```
 
 The discussion about **REST APIs** is a critical part of how these systems handle data and integrate with the outside world.

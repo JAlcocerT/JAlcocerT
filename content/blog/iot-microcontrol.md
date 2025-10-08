@@ -91,7 +91,7 @@ They are great companions for SBC's like a RPi:
 An alternative micro-controller to the [PicoW](#pico-w-and-micropython)!
 
 * Connecting ESP32 to Linux - https://github.com/tio/tio
-* IDE - Thonny / Arduino IDE / VSCode ...
+* IDE - Thonny / Ardu IDE / VSCode ...
 
 > You can do ton of stuff with a ESP32, like building a [drone](https://jalcocert.github.io/JAlcocerT/useful-dron-stuff/):
 
@@ -284,10 +284,11 @@ To install libraries, i have observed that recently **upip has been depricated i
 {{% details title="Raspberry Pi Pico W - IDE Setup" closed="true" %}}
 
 * PicoW + VSCode - <https://www.youtube.com/watch?v=Q1Kfg8k54jM>
-* Pico in Arduino IDE
+* Pico with the ArduIDE
     * Tools -> Board -> Boards Manager -> Install Arduino MBed OS RP2040 Boards - <https://www.youtube.com/watch?v=5YOEauk9bLo>
 * Pico with Thony
 {{% /details %}}
+
 * Arduino launched a micropython package manager!
 
 #### Testing the Raspberry Pi Pico W

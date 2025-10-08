@@ -3,7 +3,7 @@ title: "Whats the right Messaging Protocol for me?"
 date: 2025-08-17T09:20:21+01:00
 draft: false
 tags: ["D&A","HomeLab","PicoW MQTT and a DHT22 Sensor","AMQ","BunkerM","Thonny"]
-description: 'MQTT vs RMQ vs Kafka. Messaging Tools for IoT Projects and more'
+description: 'MQTT vs RMQ vs Kafka. Messaging Tools for IoT Projects.'
 url: 'messaging-protocols'
 ---
 
@@ -71,15 +71,34 @@ As seen here:
 
 **MQTT** (Message Queuing Telemetry Transport) is a lightweight, open-source messaging protocol designed for efficient communication in situations where network bandwidth and power are limited. 
 
-MQTT (Message Queuing Telemetry Transport):
-
 MQTT is a lightweight, publish-subscribe messaging protocol designed for constrained devices and low-bandwidth, high-latency or unreliable networks.
 
 It provides a flexible and efficient mechanism for asynchronous, real-time communication between clients and servers.
 
 MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted reliably and efficiently.
 
-While MQTT can be used for real-time communication in various scenarios, it may not be as widely supported or as easy to integrate as REST APIs or WebSockets in certain contexts.    
+> While MQTT can be used for real-time communication in various scenarios, it may not be as widely supported or as easy to integrate as REST APIs or WebSockets in certain contexts.    
+
+{{< details title="Rest API vs WS vs MQTT...? 📌" closed="true" >}}
+
+
+1. RESTful APIs are widely used for communication between clients and servers over HTTP.
+They are well-suited for request-response interactions and are easy to understand and implement.
+However, they may not be the best choice for real-time communication as they are based on the request-response model, which can introduce latency and overhead for real-time updates.
+REST APIs are suitable for scenarios where real-time updates are not critical or where the **frequency of updates is low**.
+
+2. WebSockets provide full-duplex communication channels over a single TCP connection, enabling real-time, bidirectional communication between clients and servers.
+They offer **low-latency**, high-performance communication and are well-suited for applications requiring real-time updates, such as chat applications, live dashboards, and multiplayer games.
+WebSockets can be more complex to implement compared to REST APIs, but they offer significant benefits for **real-time applications**, like live sensor temperature!
+
+3. MQTT (Message Queuing Telemetry Transport) is a lightweight, publish-subscribe messaging protocol designed for constrained devices and low-bandwidth, high-latency or unreliable networks.
+It provides a flexible and efficient mechanism for asynchronous, real-time communication between clients and servers.
+MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted reliably and efficiently.
+
+{{< /details >}}
+
+> While MQTT can be used for real-time communication in various scenarios, it may not be as widely supported or as easy to integrate as REST APIs or WebSockets in certain contexts.
+
 
 It's primarily used in IoT (Internet of Things) systems, where devices communicate over unreliable or low-bandwidth networks.
 
@@ -214,13 +233,15 @@ See also https://bunkeriot.github.io/BunkerM/
 These tools will also be useful:
 
 1. VSCodium
-2. Thonny - *I would stick to this one*
-3. Arduino IDE
+2. Thonny - *I would go for this one*
+3. ArduIDE
+
+If you want to get into electronics, see also: LibrePCB
 
 ### MQTT x PicoW x DHT22
 
 For the Pi4 it was very simple to get the pin schematics:
-
+ 
 ```sh
 pinout 
 #sudo apt install python3-gpiozero
@@ -312,27 +333,9 @@ for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
 
 ### Outro
 
-If you want to get into electronics, see these:
 
-1. Arduino IDE
-2. LibrePCB
 
-REST API (HTTP):
-    RESTful APIs are widely used for communication between clients and servers over HTTP.
-    They are well-suited for request-response interactions and are easy to understand and implement.
-    However, they may not be the best choice for real-time communication as they are based on the request-response model, which can introduce latency and overhead for real-time updates.
-    REST APIs are suitable for scenarios where real-time updates are not critical or where the frequency of updates is low.
 
-WebSockets:
-    WebSockets provide full-duplex communication channels over a single TCP connection, enabling real-time, bidirectional communication between clients and servers.
-    They offer low-latency, high-performance communication and are well-suited for applications requiring real-time updates, such as chat applications, live dashboards, and multiplayer games.
-    WebSockets can be more complex to implement compared to REST APIs, but they offer significant benefits for real-time applications.
-
-MQTT (Message Queuing Telemetry Transport):
-    MQTT is a lightweight, publish-subscribe messaging protocol designed for constrained devices and low-bandwidth, high-latency or unreliable networks.
-    It provides a flexible and efficient mechanism for asynchronous, real-time communication between clients and servers.
-    MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted reliably and efficiently.
-    While MQTT can be used for real-time communication in various scenarios, it may not be as widely supported or as easy to integrate as REST APIs or WebSockets in certain contexts.
 
 
 #### Zigbee
@@ -344,7 +347,7 @@ If you have been playing with IoT and some home devices, you will come to know Z
 
 Probably also https://esphome.io if you like ESP32 boards!
 
-### Redis as a message broker
+### Redis as a message broker?
 
 Redis can be used as a message broker, and in the context of publish/subscribe (Pub/Sub) functionality, it shares similarities with message brokers like MQTT and RabbitMQ. 
 
@@ -384,14 +387,15 @@ For simpler real-time updates and scenarios where some message loss is acceptabl
 
 ### Cloud for IoT
 
-* <https://cloud.google.com/free>
-  * PUB/SUB <https://cloud.google.com/free/docs/free-cloud-features#pub-sub>
+1. <https://cloud.google.com/free>
+  
+See PUB/SUB <https://cloud.google.com/free/docs/free-cloud-features#pub-sub>
 
 
 {{< youtube "jYIgcdIW1yk" >}}
 
 
-* AWS IoT - <https://www.youtube.com/watch?v=hgQ-Ewrm48c>
+2. AWS IoT - <https://www.youtube.com/watch?v=hgQ-Ewrm48c>
 
 ### Others
 

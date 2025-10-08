@@ -10,7 +10,13 @@ url: 'flutter-flet-python'
 
 **Intro**
 
+* https://flet.dev/
 
+> Build **multi-platform apps in Python** powered by Flutter
+
+Because some time ago (pre vibe-coding age) I tried flutter.
+
+And it was not that easy.
 
 
 ## FlutterFlow

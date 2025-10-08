@@ -2,7 +2,7 @@
 title: "People out there are really creative. Trackdays and Telemetry"
 date: 2025-02-24
 draft: false
-tags: ["Outro","Mechanics","Data Experiment","VK-162","kalman Filter"]
+tags: ["Outro","Mechanics","Data Experiment","VK-162","Kalman Filter","Canbus"]
 description: 'What I learnt after exchanging few words about car racing, canbus and telemetry.'
 url: 'tinkering-telemetry-trackdays'
 ---
@@ -70,8 +70,6 @@ This project ESP32 based and json configurable sounds just amazing:
 
 > [Gauge.S](https://sorek.uk/) is all-car datalogger and development board.
 
-
-
 For the future...maybe a **contactless brake temperature system**?
 
 We can, with a **MLX Sensor**!
@@ -86,7 +84,7 @@ We can, with a **MLX Sensor**!
 
 It's important to clarify that the ELM327 and ESP32 are fundamentally different types of electronic components, although they can be used together in automotive and other applications. 
 
-**ELM327:**
+1. **ELM327:**
 
 * **Purpose:**
     * The ELM327 is a microcontroller chip (or, more commonly, a device based on that chip) designed to interface with a vehicle's On-Board Diagnostics II (OBD-II) system.
@@ -98,7 +96,7 @@ It's important to clarify that the ELM327 and ESP32 are fundamentally different 
 * **Common Use:**
     * Used in OBD-II scanners and diagnostic tools.
 
-**ESP32:**
+2. **ESP32:**
 
 * **Purpose:**
     * The ESP32 is a low-cost, low-power system-on-a-chip (SoC) microcontroller with integrated Wi-Fi and Bluetooth capabilities.
@@ -287,4 +285,4 @@ _DHT22 connection to a Raspberry Pi 4_
 
 * You can also save GPS data thanks to the [F/OSS PhyPhox](https://github.com/phyphox/phyphox-android) - An app that allow us to use phone's sensors for physics experiments:
   * Also available for [ESP32 with micropython](https://github.com/phyphox/phyphox-micropython)
-  * And [also for Arduino](https://github.com/phyphox/phyphox-arduino)
+  * And [for the Arduino microcontroller](https://github.com/phyphox/phyphox-arduino)
