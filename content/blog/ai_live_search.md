@@ -292,7 +292,7 @@ Scrap the Web with AI
 
 * Brave Search (Independent Search)
 * Ecosia (Bing Based)
-* **DuckDuckGo** - This can be used without API keys!
+* **DuckDuckGo** - This can be used **without API keys**!
 * Yandex, StartPage, SearchEncrypt, Swisscow, Mojeek...
 
 Interesting Search Engines to have a look:

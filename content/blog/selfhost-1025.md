@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - Oct 2025"
-date: 2025-10-20T01:20:21+01:00
+date: 2025-10-25T01:20:21+01:00
 draft: false
 tags: ["SFTPGo","WebDav","File Sync Tools","P2P Recap","XMRig Benchmark"]
 description: 'Best tools for organizing homelab files.'

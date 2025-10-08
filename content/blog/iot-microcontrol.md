@@ -726,6 +726,12 @@ Another try **MQTT ESP32**: <https://www.youtube.com/watch?v=x5A5S0hoyJ0&t=211s>
 
 ## Conclusions
 
+ESP32's are so cool.
+
+You can also use them with [PhyPhox via micropython](https://github.com/phyphox/phyphox-micropython) : https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#phyphox
+
+Who knows, maybe as part of your trackdays
+
 ---
 
 ## FAQ

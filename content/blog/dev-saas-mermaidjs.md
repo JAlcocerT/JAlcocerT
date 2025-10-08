@@ -1,9 +1,9 @@
 ---
 title: "Diagrams and workflows as a Code with Agents"
-date: 2025-10-07T20:20:21+01:00
+date: 2025-10-10T20:20:21+01:00
 draft: false
-tags: ["AI SaaS","Codex CLI","MermaidJS","Grok vs Perplexity","Icons for Architects"]
-description: 'BiP user flows around newsletter layers. From SliDev Editor to Mermaid Editor.'
+tags: ["AI SaaS","Codex CLI","MermaidJS","Grok vs Perplexity","Icons for Architects","Commet"]
+description: 'BiP user flows around newsletter layers. From SliDev Editor to Mermaid Editor with live information.'
 url: 'ai-driven-diagrams'
 ---
 
@@ -24,12 +24,19 @@ In fact, the diagrams as a code (Mermaid) can be integrated with our SliDev-Edit
 
 
 
-
 ## Live info for your PPTs
 
-{{< callout type="warning" >}}
-These APIs are paywalled!
+For live info, you can always try [scrapping](https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap) or this programmatic search engine search.
+
+But if you have tried already, you will know that there might be some complications depending on [how the websites are created](#how-scraping-relates-to-ssg-csr-and-ssr).
+
+{{< callout type="info" >}}
+These APIs are paywalled! 
 {{< /callout >}}
+
+> But I got recently 1y trial of Perplexity and its quite cool
+
+> > And if you are windows/mac user, you can try their Commet browser, with cool web summarization
 
 ### Grok API
 
@@ -78,18 +85,26 @@ curl https://api.perplexity.ai/chat/completions \
 
 ## Conclusions
 
+Does it even make sense to try building an AI Saas?
 
+I would say yes, for the learnings.
+
+For the financial motivations, just be aware of [Pareto](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) and that most tries will fail.
 
 
 ---
 
 ## FAQ
 
-Web scraping and modern web rendering techniques like Static Site Generation (SSG), Server-Side Rendering (SSR), and Client-Side Rendering (CSR) are fundamentally linked by how they present content.
+
+### How Scraping Relates to SSG, CSR, and SSR
+
+Web scraping and modern web rendering techniques like:
+
+Static Site Generation (SSG), Server-Side Rendering (SSR), and Client-Side Rendering (CSR) are fundamentally linked by how they present content.
 
 The rendering method a website uses directly impacts how easy or difficult it is to scrape.
 
-### How Scraping Relates to SSG, CSR, and SSR
 
 * **Static Site Generation (SSG)**: 📄 SSG creates and serves a fully-formed, static HTML file for each page at **build time**. The content is pre-rendered and doesn't change until the site is rebuilt.
     * **Scraping:** This is the easiest type of site to scrape. A simple scraper can just send an HTTP request to the page and receive all the content in the initial HTML response. You don't need to worry about executing JavaScript.
@@ -101,9 +116,9 @@ The rendering method a website uses directly impacts how easy or difficult it is
     * **Scraping:** This is the most difficult to scrape. A basic scraper that only fetches the initial HTML will get an empty or incomplete page without the content. To get the data, a scraper must be able to execute JavaScript and mimic a browser's behavior.
 
 
-### Challenges of Scraping Dynamic Content
+#### Challenges of Scraping Dynamic Content
 
-Itt's much harder to scrape dynamic content, and your intuition is correct—it's because the scraper must act like a real user. 🕵️‍♀️
+It's much harder to scrape dynamic content, and your intuition is correct—it's because the scraper must act like a real user. 🕵️‍♀️
 
 With dynamic content (like that found on CSR websites), the data you want isn't in the initial HTML. It's loaded later by JavaScript. This means a standard scraper that just makes a simple HTTP request will fail to see the content.
 

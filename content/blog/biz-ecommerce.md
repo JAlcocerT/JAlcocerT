@@ -2,7 +2,7 @@
 title: "Creating an e-Commerce"
 date: 2026-12-23
 draft: true
-tags: ["SaaS"]
+tags: ["SaaS","Drupal"]
 description: 'Creating an eCommerce. Drupal vs DIY'
 url: 'ecommerce'
 ---
@@ -13,6 +13,8 @@ url: 'ecommerce'
 As I have been learning how to do CSR related auth...
 
 How about bringing something more than a website: **an ecommerce**
+
+Creating a custom ecommerce from scratch is a lot of work, so you can also use a [OSS Selfhosted ecommerce](#selfhosted-ecommerce).
 
 ## Astro as Ecommerce
 
@@ -34,7 +36,7 @@ https://microstoretheme.netlify.app/#_
 
 
 
-## Streamlit as eCommerce
+### Streamlit as eCommerce
 
 You would need proper file connection and some decent auth:
 

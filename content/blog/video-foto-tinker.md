@@ -7,6 +7,12 @@ description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI gen
 url: 'photo-video-tinkering'
 ---
 
+**TL;DR**
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video Docs Section with consolidated info ↗" >}}
+{{< /cards >}}
+
 We come from...getting to know what [ffmpeg is for benchmarks](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#ffmpeg-benchmark-in-linux) to compare [CPU performance](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/).
 
 {{< cards cols="2" >}}
@@ -21,7 +27,7 @@ Wait, there is even a **repo for video CLI stuff**!
   {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Management Tools Post" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="PiGallery2 and SelfHosted Photo Tools " >}}  
 {{< /cards >}}
 
-**TL;DR**
+**Intro**
 
 After few months tinkering with an [action camera](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro) and trying to [get better at photos/videos](https://beyondajourney.lol/articles/learning-photography/)
 

@@ -1,6 +1,6 @@
 ---
 title: "BiP a Micro-SaaS | Wedding Edition"
-date: 2025-10-07T19:20:21+01:00
+date: 2025-10-08T09:20:21+01:00
 draft: false
 tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static. CSR Rendering QR and PDFs in browser 🤯'
@@ -29,6 +29,8 @@ And quickly moved the NS to cloudflare ones, to start the game.
 We come from [this post](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/)
 
 Time to keep [building in public]() the project.
+
+With some [marketing](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/) and [bootstrap](https://jalcocert.github.io/JAlcocerT/whats-boostrap/) concepts plugged in.
 
 I left them at this stage:
 

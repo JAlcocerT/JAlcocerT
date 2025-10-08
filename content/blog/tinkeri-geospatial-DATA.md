@@ -54,6 +54,8 @@ Phone apps like Komoot or even [PhyPhox can save the GPS records as GPX files](h
 
 * https://github.com/exiftool/exiftool/blob/master/fmt_files/gpx.fmt
 
+And GPX files can be converted to html with plotly+leaflet and brought to your HUGO site with iframe:
+
 {{< rawhtml >}} 
 <iframe src="/videos/Output_map_PL-SK-HU.html"
 style="width: 454px; height: 454px;"></iframe>

@@ -375,7 +375,7 @@ Ive also tried:
 
 With `CTRL+ALT+C` it gets really compact!
 
-With CTRL+H, it opens your synced tab, so you can see your mobile firefox tabs on desktop
+With `CTRL+H`, it opens your synced tab, so you can see your mobile firefox tabs on desktop
 
 ```sh
 #pkill -9 brave #brave was not behaving properly lately...

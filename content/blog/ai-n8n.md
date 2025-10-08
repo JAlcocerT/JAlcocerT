@@ -679,7 +679,7 @@ And that's it! You built a complete, automated workflow that gets real-time data
 
 ##### n8n x Scrapping
 
-Lately, I was doing a [scrapping recap here](https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap)
+Lately, I was doing a [web scrap recap here](https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap)
 
 But what if all this could be done with n8n instead of a [,complex' script](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py)?
 

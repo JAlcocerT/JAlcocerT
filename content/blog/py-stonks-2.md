@@ -15,14 +15,19 @@ The historical stock webapp, companion for: https://financeinmotion.fyi
 
 +++ [People are doing](#people-are-doing) the classic bait: *I finally reach xyz divs a year* On reddit with a snapshot of a web app to get traction.
 
-+++ More and cooler yfinance for a ~PyStocks v2
++++ More and cooler yfinance for a ~ PyStocks v2
 
 **Intro**
 
-To pull data from yfinance should not be a secret anymore:
+To pull data from [yfinance](https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/) should not be a secret anymore:
 
-* https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/
-* https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="YFinance Py" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/" title="YFinance R" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post " >}}
+{{< /cards >}}
+
+
 
 Plus also on the initial PyStonks Post, I dedicted time for a yfinance EDA ipynb section.
 
@@ -43,13 +48,15 @@ Now, Im going to take back the collaboration with my friend: btw, he is a [PDH](
 
 Even before that: what does this app reply to?
 
-Top Priority:
+**Top Priority:**
+
 1. Historical Prices of stocks: not only NYSE or NASDAQ, but also companies which are listed in other markets, like Nestle, Unilever or MunichRe
 2. Historical Dividends
 
 Lift and coast vs DRIP vs DRIP + invest
 
 Nice to have:
+
 3. Volatility, MDD
 4. Historical EPS, PER and Dividend Payout
 4. Current (and near history) net profit margin

@@ -1,19 +1,19 @@
 ---
-title: "Personal Finances: GhostFolio and more"
+title: "GhostFolio and more for inspiration"
 date: 2025-10-11T08:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/ghostfolio/ghostfolio/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #   alt: "Ghostfolio" # alt text
 #   caption: "Ghostfolio setup with docker." # display caption under cover
-tags: ["HomeLab","Open Source Finances","FireFly3","PyStonks / PyStocks Inspiration"]
-description: ''
+tags: ["HomeLab","Open Source Finances","FireFly3","PyStonks / PyStocks"]
+description: 'Selfhosted tools for persosonal finance'
 url: 'ghostfolio-and-personal-finance-dev-tools'
 ---
 
 **Tl;DR**
 
-Before building, see what others have created.
+Before building [PyStocks v2](https://jalcocert.github.io/JAlcocerT/py-stonks/), see what others have created.
 
 **Intro**
 

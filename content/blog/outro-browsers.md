@@ -63,9 +63,7 @@ Web Browsing like human. With GPT4.
 
 ## Browsers Ive tried
 
-Even a CLI browser called Lynx:
-
-https://jalcocert.github.io/JAlcocerT/scrapping-with-llms/#faq
+Even a **CLI browser** called Lynx: https://jalcocert.github.io/JAlcocerT/scrapping-with-llms/#faq
 
 ```sh
 sudo apt install lynx
@@ -74,11 +72,24 @@ lynx duckduckgo.com
 
 ![Lynx CLI based web browser](/blog_img/selfh/Internet/lynx-browser.png)
 
-Lately I tried Zen browser.
+Lately I tried Zen browser: https://zen-browser.app/download/
+
+With `CTRL+ALT+C` it gets really compact!
+
+With `CTRL+H`, it opens your synced tab, so you can see your mobile firefox tabs on desktop
+
+```sh
+#pkill -9 brave #brave was not behaving properly lately...
+flatpak install flathub app.zen_browser.zen
+```
+> Welcome to a calmer internet | Firefox based 
+
+> > Zen offers a "Sync" feature, which is implemented using Mozilla Firefox's Sync feature.
+
 
 Which *we could say* is a modern UI version of firefox.
 
-See how some people make money around KASM:
+See how some people make money around KASM, where you can also browse:
 
 https://www.youtube.com/watch?v=799uhYUxtvA
 
@@ -86,13 +97,18 @@ https://www.youtube.com/watch?v=799uhYUxtvA
 
 ## Automating your Browser
 
-Playwright is an open-source browser automation library developed by Microsoft. It is primarily used for fast, reliable, and cross-browser end-to-end testing of web applications. 
+Playwright is an open-source browser automation library developed by Microsoft. 
+
+It is primarily used for fast, reliable, and cross-browser end-to-end testing of web applications. 
 
 Playwright allows developers to programmatically control browsers such as Chromium, Firefox, and WebKit through a unified API, supporting automation of user interactions, UI testing, and even web scraping.
 
-Yes, Playwright is open source, available under the MIT license, and supports multiple programming languages including JavaScript, Python, C#, and Java. It relates to web scraping because it can automate browser actions including navigation, interaction with page elements, and data extraction, thus enabling scraping of dynamically rendered web pages that simpler HTTP request libraries cannot handle effectively.
+Yes, Playwright is open source, available under the MIT license, and supports multiple programming languages including JavaScript, Python, C#, and Java. 
+
+It relates to web scraping because it can automate browser actions including navigation, interaction with page elements, and data extraction, thus enabling scraping of dynamically rendered web pages that simpler HTTP request libraries cannot handle effectively.
 
 In summary:
+
 - Playwright is a web automation tool focused on end-to-end testing.
 - It is open source.
 - It can be used for web scraping as well as testing, especially for sites with complex, dynamic, or JavaScript-rendered content.[2][3][4][7][10]
@@ -127,6 +143,10 @@ Playwright
 
 ### Other notable web automation tools
 
+I was using Selenium some time ago to help me download some reports automatically from an internal tool and then get their csv processed with [R language](https://jalcocert.github.io/JAlcocerT/useful-r-stuff/).
+
+But there are few others you could have a look to:
+
 | Tool         | Pros                                          | Limitations                            |
 |--------------|-----------------------------------------------|---------------------------------------|
 | Selenium     | Supports many languages and browsers, huge community, strong integration with CI/CD | Complex setup, slower, maintenance overhead, mobile testing limited |
@@ -149,10 +169,16 @@ These tools differ in browser support, language support, ease of setup, and test
 
 ## Scrapping Recap
 
+I was tinkering with web scrapping tool for the job trends project.
+
+[With bs4](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#fixing-bs4-driven-data) as a ~html+hardcoded places to look for info approach.
+
+But in the AI times there are some interesting tools to look...
+
 [Not long ago](https://jalcocert.github.io/JAlcocerT/social-media-automation/#scrapping-social-media) I got to know about ApiFy
 
 
-- Apify uses a subscription plus consumption (pay-as-you-go) model, with plans ranging from free to $999/month. It charges for compute units, proxy rental, storage, and support. The free plan includes $5 in monthly credits. For large-scale tasks, compute units cost between $0.20 and $0.30 each. Apify is ideal for scalable projects with varied needs and enterprise support.
+- **Apify** uses a subscription plus consumption (pay-as-you-go) model, with plans ranging from free to $999/month. It charges for compute units, proxy rental, storage, and support. The free plan includes $5 in monthly credits. For large-scale tasks, compute units cost between $0.20 and $0.30 each. Apify is ideal for scalable projects with varied needs and enterprise support.
 
 
 {{% details title="Why APIfy? 🚀" closed="true" %}}
@@ -491,17 +517,20 @@ This puts the typical desktop Firefox browser in context with containerized and 
 The biggest challenges that make life hard for web scrapers include CAPTCHA systems and content rendering methods such as Server-Side Rendering (SSR) and Client-Side Rendering (CSR).
 
 ### CAPTCHAs
+
 - CAPTCHAs are designed specifically to block automated bots, forcing scrapers to either halt or solve CAPTCHA challenges to continue scraping.
 - They increase operational costs and reduce scraping efficiency because solving CAPTCHAs often requires human-like interaction or dedicated CAPTCHA-solving services.
 - Frequent CAPTCHAs disrupt continuous data extraction, especially for large-scale projects, and can affect data completeness and quality.
-- Bypassing CAPTCHAs ethically needs careful balance to respect terms of service and data privacy.[1][2][3][4]
+- Bypassing CAPTCHAs ethically needs careful balance to respect terms of service and data privacy.
+
+> Some [captchas use PoW](https://jalcocert.github.io/JAlcocerT/encryption-101/#captchas)!
 
 ### Server-Side Rendering (SSR) vs Client-Side Rendering (CSR)
 
 - SSR sends fully rendered HTML pages from the server, which are easier and faster for scrapers and crawlers to extract data from since the content is immediately available.
 - CSR pages load only a minimal HTML shell, then dynamically render content using JavaScript in the browser, making scraping more complex as scrapers must execute JavaScript typically via headless browsers (e.g., Playwright, Puppeteer).
 - CSR delays data availability and adds significant overhead during scraping, requiring scrapers to wait for content to load after JavaScript execution.
-- SSR is generally friendlier to scrapers and search engine crawlers, while CSR adds complexity and scraping time.[5][6][7]
+- SSR is generally friendlier to scrapers and search engine crawlers, while CSR adds complexity and scraping time.
 
 ### Other Challenges
 
@@ -509,9 +538,13 @@ The biggest challenges that make life hard for web scrapers include CAPTCHA syst
 - Frequent website structure changes break scrapers and require constant maintenance.
 - IP blocking and rate limiting from websites also restrict scraper access, necessitating IP rotation and proxy use.[8][9][5]
 
-### Summary
-CAPTCHAs present a direct technical and ethical hurdle to automation, while SSR vs CSR impacts the complexity and resource requirements for scraping. Both significantly affect scraper stability and efficiency, with CAPTCHAs acting as active gatekeepers and CSR increasing technical overhead. SSR content is easier to scrape compared to CSR, which demands JavaScript execution and increases scraper complexity.[3][6][1]
+**Summary**
 
+CAPTCHAs present a direct technical and ethical hurdle to automation, while SSR vs CSR impacts the complexity and resource requirements for scraping.
+
+Both significantly affect scraper stability and efficiency, with CAPTCHAs acting as active gatekeepers and CSR increasing technical overhead.
+
+SSR content is easier to scrape compared to CSR, which demands JavaScript execution and increases scraper complexity.
 
 ---
 

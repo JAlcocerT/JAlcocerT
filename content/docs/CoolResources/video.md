@@ -9,4 +9,58 @@ draft: false
 
 1. https://github.com/OpenCut-app/OpenCut
 
->  The open-source CapCut alternative   
+>  The open-source CapCut alternative
+
+2. KDEnlive
+
+![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Action Cam Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#kdenlive" title="KDenLive with OA5Pro" image="/blog_img/outro/kdenlive.png" subtitle="Editing video with kdenlive" >}}
+{{< /cards >}}
+
+3. Others like: Shotcut
+
+
+---
+
+## Video as a Code
+
+It'sall about using: https://github.com/FFmpeg/FFmpeg
+
+
+### Extracting Video Data
+
+For crazy people that like [trackdays](https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/), D&A [geospatial geeks](https://jalcocert.github.io/JAlcocerT/geospatial-data/) or somebody with a [gopro](https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction)
+
+
+
+https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction
+
+
+<!-- 
+![GoPro Metadata Speed trackday](/blog_img/karting/gopro-gps-trackday-speed.png)
+ -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/" title="TrackDays and GoPro Telemetry " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="GPS Telemetry from a GoPro | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro MetaData Magic 101 " image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 Firmware and comparison with GoPro" >}}
+{{< /cards >}}
+
+
+
+---
+
+## Animations
+
+
+If you like to create video as a code, and among all the [things we can create as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code) - you might also enjoy making cool [animations as a code](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/)
+
+
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/#animations" title="Tinkering with Animations | Post" image="https://img.youtube.com/vi/YuvHXyFeRV4/hqdefault.jpg" subtitle="Posting to Twitter or Youtube those animations 101." >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Data In Motion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NEW Source Code on Github. Generating mp4 animations with Matplotlib and Python..." >}}
+{{< /cards >}}
