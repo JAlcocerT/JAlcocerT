@@ -10,6 +10,7 @@ url: 'selfhosted-apps-oct-2025'
 
 **TL;DR**
 
+For a strong homelab, we need backups and proper file management..
 
 **Intro**
 
@@ -22,6 +23,7 @@ In [Sept25](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hel
 But just in case you dont want to mess with databases, lets see some other Filebrowser alternatives and FTPs:
 
 > Yea, im kind of alergic to DBs for HomeLab setups
+
 
 ## Files Files Files
 

@@ -17,7 +17,7 @@ Before building [PyStocks v2](https://jalcocert.github.io/JAlcocerT/py-stonks/),
 
 **Intro**
 
-Whether TradFi and DeFi, you might want to bring clarity to your personal finances.
+Whether TradFi, DeFi, or whatever it comes, you might want to bring clarity to your personal finances.
 
 AND MORE TOOLS IN THE FAQ
 

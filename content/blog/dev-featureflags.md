@@ -2,7 +2,7 @@
 title: "Fature Flags for your SaaS"
 date: 2025-09-27T15:20:21+01:00
 draft: false
-tags: ["Dev","GoFeatureFlag vs PocketBase"]
+tags: ["Dev","GoFeatureFlag vs PocketBase","GoLang"]
 description: 'FF with Go for your WebApps.'
 url: 'feature-flags'
 ---
@@ -178,11 +178,13 @@ Something like you signup, if you pay via stripe, you have it all.
 
 ### About Go Projects
 
-This seems to be the  year for me to discover the goodies of GO language.
+This seems to be the  year for me to discover the **goodies of GO language**.
 
 Its not just HUGO.
 
-But Cadyy and Traefik.
+But Cadyy and Traefik. 
+
+SFTP-GO or the mighty POCKETBASE...
 
 
 ---

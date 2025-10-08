@@ -2,9 +2,9 @@
 title: "Leads and marketing automation"
 date: 2025-09-22T06:20:21+01:00
 draft: false
-tags: ["CRM","Scrapping","Lead Enrichment","Firecrawl","leads-slubnechwile"]
+tags: ["GHL CRM","Scrapping","Lead Enrichment Workflow","APIFy vs Firecrawl","leads-slubnechwile"]
 url: 'software-for-marketing-agencies'
-description: 'Get clients, engage, sell. With facebook pages.'
+description: 'Get clients, engage, sell. With facebook pages. A 1-2-3 working session with 2 marketers'
 ---
 
 **Tl;DR**
@@ -164,6 +164,7 @@ Firecrawl provides a powerful yet simple way to extract web data at scale. When 
 2. Try the [quickstart guide](https://docs.firecrawl.dev/quickstart)
 3. Join the [community forum](https://community.firecrawl.dev) for support and ideas
 
+---
 
 ## Conclusions
 
@@ -279,7 +280,7 @@ When self-hosting, you only pay for OpenAI API usage (typically $0.01-0.05 per e
 
 #### ApiFy can do that
 
-Just go here and get those 5$ monthly to test: https://console.apify.com/
+Just go here and get those **5$ monthly to test**: https://console.apify.com/
 
 * https://n8n.io/integrations/apify/
 
@@ -292,7 +293,7 @@ To see how good is your web / performs vs others:
 
 Can a thing like this...Scrap google maps...?
 
-APIfy can :)
+**APIfy can :)**
 
 All you need is register and try their API key.
 
@@ -302,7 +303,7 @@ If you dont do it, others like `https://elcoheteamarillo.com/` will.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="APIfy + Firecrawl... | A repo to get leads for slubnechwile ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serpbear" title="N8N | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serpbear" title="SerpBear | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 

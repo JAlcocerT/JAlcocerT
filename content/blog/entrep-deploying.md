@@ -2,7 +2,7 @@
 title: "Where to Deploy?"
 date: 2025-09-10
 draft: false
-tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio","Marketers","SerpBear","SimilarWeb"]
+tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio","Goodies 4 Marketers","SerpBear","SimilarWeb"]
 description: 'How to deploy? Resources to launch your stuff in front of your clients.'
 url: 'where-to-deploy'
 ---

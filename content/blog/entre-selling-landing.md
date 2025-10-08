@@ -2,8 +2,8 @@
 title: "Website knowledge updates"
 date: 2025-10-05T10:20:21+01:00
 draft: false
-tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Komodo"]
-description: 'New ATH for my SSG knowledge'
+tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Komodo","Dev","BCMS vs PagesCMS"]
+description: 'New ATH for my SSG knowledge. Landing Pages that convert.'
 url: 'selling-with-a-landing-website'
 ---
 

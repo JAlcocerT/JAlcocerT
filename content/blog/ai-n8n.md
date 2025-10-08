@@ -1,5 +1,5 @@
 ---
-title: "Just n8n, automation and AI workflows"
+title: "Just n8n 101, automation and AI workflows"
 date: 2025-09-19
 draft: false
 tags: ["n8n AI Chat","PlayWright MCP","n8n vs Huggin vs FlowiseAI"]
@@ -108,8 +108,7 @@ This native integration allows meeting data from Fireflies.ai to flow seamlessly
 
 <!-- https://www.youtube.com/watch?v=ndqX4vbR7Rc -->
 
-  {{< youtube "ndqX4vbR7Rc" >}}
-
+{{< youtube "ndqX4vbR7Rc" >}}
 
 
 ### n8n x Perplexity

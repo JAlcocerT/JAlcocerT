@@ -38,6 +38,8 @@ Also, stripe provides a dashboard to manage subscriptions.
 
 ### Stripe Subscriptions
 
+I tried [stripe subscriptions linkshere](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#how-to-create-a-stripe-subscription-link-), for the mental health delivery.
+
 
 
 ### One Time Payments

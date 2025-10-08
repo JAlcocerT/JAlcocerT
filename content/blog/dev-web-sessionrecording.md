@@ -1,6 +1,6 @@
 ---
 title: "Session Recording for Web Projects"
-date: 2025-10-10
+date: 2025-11-16
 draft: false
 tags: ["Web","Product","Amplitude vs PostHog","OpenReplay","Astuto"]
 description: 'How are user enjoying your Saas?'
@@ -10,6 +10,8 @@ url: 'how-to-record-web-sessions'
 **TL;DR**
 
 More than web analytics, see what the users are experiencing.
+
+Some [Product Tools](https://jalcocert.github.io/JAlcocerT/product-tools/) that we can selfhost.
 
 **Intro**
 
@@ -29,6 +31,9 @@ What are the users experiencing.
 
 
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
 
 
 

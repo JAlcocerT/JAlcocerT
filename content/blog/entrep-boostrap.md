@@ -1,8 +1,8 @@
 ---
 title: "Bootstrap and other concepts for SoloPreneurs"
-date: 2025-10-07
+date: 2025-10-12
 draft: false
-tags: ["SoloPreneur","Indie SaaS","Product","Entrepre-AI"]
+tags: ["SoloPreneur","Indie SaaS","Product","Entrepre-AI","GTM","Sales","NeuroMarketing"]
 description: 'Resources to launch your stuff. Marketing, Offers...'
 url: 'whats-boostrap'
 ---
@@ -18,14 +18,32 @@ And im not talking about [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-conce
 
 +++ understanding [offer types](#offers-are-a-rabbit-hole)
 
++++ and that [GTM is not quite same as marketing](#gtm-vs-marketing)
+
 **Intro**
 
 When you are trying to build sth, it seems that we have more and more concepts to check: [marketing](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/), payment gateways with [stripe](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#stripe-payment-links) and [logins](https://jalcocert.github.io/JAlcocerT/social-signin-101/)...
 
-You can always get ideas from people that have cool experience, like from **their ebooks**:
+> Because knowing how to use [stripe](https://jalcocert.github.io/JAlcocerT/stripe-for-saas/) + social [sign in/ups](https://jalcocert.github.io/JAlcocerT/social-signin-101/) on your [landing](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/) and some vibe coding is just the start of the journey to actually sell sth.
 
-1. https://readmake.com/ for inde
+> > [Embedding](https://jalcocert.github.io/JAlcocerT/embed-that/) cool widgets/chatbots/livechats will also NOT be enough. And nobody cares [how you deploy](https://jalcocert.github.io/JAlcocerT/where-to-deploy/).
+
+Im talking about [product](https://jalcocert.github.io/JAlcocerT/product-tools/#product-first) more soft knowledge now.
+
+How to pack the ideas so that they have a purpose to help people.
+
+You can always get ideas from people that have cool experiences, like from **their ebooks**:
+
+1. https://readmake.com/ for indehackers and builders
+
+
 2. 100M offers/leads/money models...
+
+
+{{< callout type="info" >}}
+Already aware that you need clients? See how to [get and enrich leads](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#how-to-get-and-enrich-leads) and other software for marketing and [agency automation](https://jalcocert.github.io/JAlcocerT/pro-agency-automation/).
+{{< /callout >}}
+
 3. Business Ideas [from ebooks](#business-ideas-from-my-kindle-notes) I read on the kindle
 
 If it was only about ebooks today: We also have cool (and sometimes open) [resources](#resources-for-solopreneurs)
@@ -58,7 +76,7 @@ I got inspired to write this post and created in public a way for any one to sel
 
 Creators of your favourite software are already doing so.
 
-Like the creator of postIZ on reddit: https://www.reddit.com/r/selfhosted/comments/1mhhs94/postiz_v225_opensource_social_media_scheduling/
+Like the creator of [postIZ](https://jalcocert.github.io/JAlcocerT/social-media-automation/#postiz) on reddit: https://www.reddit.com/r/selfhosted/comments/1mhhs94/postiz_v225_opensource_social_media_scheduling/
 
 * Product Hunt, where you have an archive of the leaderboard: https://www.producthunt.com/leaderboard/daily/2025/8/13
   * https://www.producthunt.com/products/make-bootstrappers-handbook
@@ -77,7 +95,7 @@ Like the creator of postIZ on reddit: https://www.reddit.com/r/selfhosted/commen
 
 ### Entrepre-AI
 
-Last year I was outputting a bunch of ideas to do with some kind of all in one Aissistant at [this post](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#for-entrepreneurs).
+Last year, I was outputting a bunch of ideas to do with some kind of all in one Aissistant at [this post](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#for-entrepreneurs).
 
 One section was made for entrepreneurs: *some tips and tricks about neuromarketing etc*
 
@@ -97,8 +115,6 @@ Time to put something together, for when you are about to build in public, creat
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
   {{< card link="https://github.com/JAlcocerT/entrepre-AI" title="EntrepreAI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code EntrepreAI" >}}
 {{< /cards >}}
-
-
 
 * CTA's
     * Quieres el premium? No, correre el riesgo!
@@ -126,8 +142,12 @@ Time to put something together, for when you are about to build in public, creat
 
 ## Conclusions
 
-
 You have now more than enough resources to share and get ideas to build.
+
+Its easier than ever to build.
+
+But that doesnt mean that its easy.
+
 
 ### Offers are a rabbit hole
 
@@ -141,7 +161,7 @@ Everything is so logical when you read/hear, but...so many variables though when
 
 #### Continuity
 
-####
+#### blaaa
 
 
 ### Entrepre-AI Quick Sping
@@ -217,12 +237,14 @@ In a nutshell, a strong GTM strategy ensures that your product is ready for the 
 
 ### Business Ideas from my Kindle Notes
 
+This has been possible thanks to perplexity and notebookllm, together with a huge txt file of kindle notes I have.
 
-## Sales
 
-<!-- 
-sell yourself -->
+#### Sales
 
+It seems we are always selling in live.
+
+Just that we dont realize it.
 
 <!-- 
 ## sell yourself

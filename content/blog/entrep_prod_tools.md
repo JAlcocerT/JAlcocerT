@@ -314,7 +314,7 @@ Any Web or Webapp can potentially be Combined with PostHog/OpenReplay for Produc
 
 #### PostHog
 
-To see **how customers interact** with your product, you can try with https://eu.posthog.com/
+To see **how customers interact** with your product, you can try with their **hosted solution**: https://eu.posthog.com/
 
 Add this kind of snippet before the `</head>` of your website, as done [here](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/layouts/BaseLayout.astro?ref_type=heads#L31):
 
@@ -331,14 +331,14 @@ Add this kind of snippet before the `</head>` of your website, as done [here](ht
 ![PostHog Surveys Example](/blog_img/entrepre/product/posthog-surveys.png)
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks" title="Formbricks and more" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Other Forms and newsletter for your products" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks" title="Formbricks and more" image="/blog_img/entrepre/formbricks.png" subtitle="Other Forms and newsletter for your products" >}}
 {{< /cards >}}
 
 ![Posthog Survey Example](/blog_img/entrepre/product/posthog-survey.png)
 
-![PostHog Product Market Fit](/blog_img/entrepre/product/Posthog-PMF.png)
+You can configure PostHog PMF survey:
 
-[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
+![PostHog Product Market Fit](/blog_img/entrepre/product/Posthog-PMF.png)
 
 
 ### Use Cases
