@@ -72,6 +72,21 @@ Nice to have:
 14. Buyback ratio (if historical, even better)
 15. Volatility div growth mdd cagr / Yfinance eur usd?
 16. Treemap with market size like https://finviz.com/map.ashx
+
+```mermaid
+treemap-beta
+"Section 1"
+    "Leaf 1.1": 12
+    "Section 1.2":::class1
+      "Leaf 1.2.1": 12
+"Section 2"
+    "Leaf 2.1": 20:::class1
+    "Leaf 2.2": 25
+    "Leaf 2.3": 12
+
+classDef class1 fill:red,color:blue,stroke:#FFD600;
+```
+
 17. https://www.simplysafedividends.com/world-of-dividends/posts/41-2025-dividend-kings-list-all-54-ranked-analyzed a hidden blog to attract SEO
 18. https://www.tikr.com/
 19. Bringing data for index funds, like: https://markets.ft.com/data/funds/tearsheet/summary?s=lu0996182563:eur

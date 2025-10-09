@@ -16,7 +16,15 @@ pie title FY24 Weeks Breakdown
          "Cycling" : 1
          "Sleeping" : 17
          "Working" : 17
-         "Languages" : 0,25
+         "Languages" : 1
+```
+
+```mermaid
+pie title DB MTB Expenses
+         "Addons" : 500
+         "Maintenance" : 1080
+         "Insurance" : 865
+         "Price" : 1100
 ```
 
 And diverse.
@@ -248,10 +256,11 @@ wget https://downloads.raspberrypi.com/raspios_oldstable_lite_arm64/images/raspi
 You can share with others the **RPi OS Image via Torrent** [with Docker, QBitrorrent & VPN](https://fossengineer.com/selfhosting-qBittorrent-with-docker-and-VPN/)
 {{< /callout >}}
 
-{{< details title="Better Networking 📌" closed="true" >}}
+{{< details title="Better Networking with these Routers/CMs 📌" closed="true" >}}
 
 This year I changed [my router](https://github.com/Exafunction/CodeiumVisualStudio)!
-Went from a **Compal MV1 to a NE6037** (still COAX, I know!)
+
+> Went from a **Compal MV1 to a NE6037** (still COAX, I know!)
 
 
 * I got one of these [portable 4g usb routers with sim - OLAX-U90](https://allegro.pl/oferta/modem-router-4g-lte-wifi-olax-car-audio-hotspot-13172600554)
@@ -263,7 +272,6 @@ Went from a **Compal MV1 to a NE6037** (still COAX, I know!)
 
 * Networking with the Pi was improved
   * [Wifi2Ethernet bridge with Wireguard](https://jalcocert.github.io/JAlcocerT/raspberry-pi-networking/)
-
 
 {{< /details >}}
 
@@ -376,7 +384,7 @@ I know, have to give it a try to **these APIs**: [Mistral](https://docs.mistral.
 
 {{< callout type="warning" >}}
 
-Need to see how to use [DLT](https://github.com/dlt-hub/dlt) - data load tool (dlt) is an open source Python library that makes data loading easy 🛠️
+Need to see how to use [DLT](https://github.com/dlt-hub/dlt) - data load tool, an open source Python library that makes data loading easy 🛠️
 
 
 {{< /callout >}}
@@ -467,7 +475,7 @@ Use [LiteLLM](https://github.com/BerriAI/litellm) to unify the LLMs API calls ac
 
 **Go**
 
-Go has become a popular language due to several key strengths that align with the needs of modern software development. Here's why:
+Go has become a popular language due to several key strengths that align with the needs of modern software development. 
 
 - **Performance**: As a compiled language, Go provides high execution speed, making it ideal for performance-critical applications.
 - **Concurrency**: With built-in support for concurrency through goroutines and channels, Go excels in managing multiple tasks simultaneously, which is essential for scalable systems.
@@ -523,7 +531,7 @@ It addresses the need for a robust operating system equipped with tools for netw
 - CentOS
 - Fedora Server
 
-SysLinuxOS provides a solid foundation for system administrators, but users should be aware of its potential clutter.
+> SysLinuxOS provides a solid foundation for system administrators, but users should be aware of its potential clutter.
 
 {{< /details >}}
 
@@ -533,15 +541,14 @@ SysLinuxOS provides a solid foundation for system administrators, but users shou
 1. Focusing on the Process
 
 * Keep documenting my learning process as blog post
-* Share more videos about it (for this I need to find a workflow)
+* Share more videos about it *(for this I need to find a workflow)*
 
 
 {{< details title="Certainly next year...[Video Stuff] 📌" closed="true" >}}
 
-* Create and Publish 15 YT Videos of content I already have blog documentation
+* Create and Publish x15 YT Videos of content I already have blog documentation
 * Explore further python/[chartJS](https://www.chartjs.org/docs/latest/configuration/animations.html) animations
 * Start exploring RemotionJS framework
-
 
 {{< /details >}}
 
@@ -560,6 +567,7 @@ I need to choose one...
 
 
 ---
+
 ## VectorDBs
 
 When you are using [embedding models](https://www.youtube.com/watch?v=QdDoFfkVkcw) to give LLMs context about your files, this is where that knowledge goes.
@@ -571,8 +579,10 @@ And there are many Vector DBs that you can use with Linux
   {{< tab >}}
   Manage them with [VectorAdmin and Docker](https://fossengineer.com/what-are-vector-dbs/#selfhosting-vectoradmin-with-docker)
   {{< /tab >}}
+
   {{< tab >}}
   [ChromaDB with Docker](https://fossengineer.com/selfhosting-chroma-vector-db/)
+  
   {{< /tab >}}
   {{< tab >}}QDrant{{< /tab >}}
 
@@ -623,17 +633,3 @@ Thanks: https://aituts.com/local-llms/#Which_Quantization
 
 > You can also check this repository: https://github.com/sindresorhus/awesome-chatgpt and https://github.com/f/awesome-chatgpt-prompts
 {{< /details >}}
-
-
-### Where to host in the Cloud?
-
-If you need big GPU power, you can always try https://www.runpod.io/gpu-instance/pricing and similar services.
-
-* https://accounts.hetzner.com/_ray/pow (I tried the CX22 model x2 vCPU)
-* https://cloud.digitalocean.com
-
-**Clouds ( & GPU Clouds)**
-
-* RunPod, Linode, DigitalOcean, Paper Space, Lambda Cloud, [Hetzner](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#hetzner)...
-* vast.ai, 
-* Google Colab TPU...

@@ -2,13 +2,21 @@
 title: "Buying a bicycle through DA glasses"
 date: 2025-02-15T23:20:21+01:00
 draft: false
-tags: ["Outro"]
+tags: ["Outro","HUGO ChartJS Shortcode"]
 description: 'What Ive learnt after buying few bicycles.'
 url: 'buying-bicycle-through-data-analytics'
 ---
 
+Biking is healthy.
+
+The [bicycle/motorbike dynamics](https://github.com/JAlcocerT/Bike_dynamic_simulator) are pretty impressive.
+
+Do they also make sense on a cost per km analysis?
+
+
 ## Bike Costs Analytics
 
+I did something similar for [cars](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/).
 
 ### Second Hand MTB
 
@@ -35,6 +43,7 @@ With this one I made ~7300km in 3 years (3000, 3300, 1000).
 
 Discounting the sale price (1000 PLN), drops to 0,05$ per km.
 
+The kind of adventures I like:
 
 <iframe src="https://www.komoot.com/es-es/tour/1237537825/embed?share_token=apX7DITeUFj6jtaqdn10djPBxES2hIHhpN5nM7uUpE7xlbNmuw&profile=1" width="100%" height="700" frameborder="0" scrolling="no"></iframe>
 
@@ -43,6 +52,8 @@ Discounting the sale price (1000 PLN), drops to 0,05$ per km.
 
 https://youtu.be/cqs4MkJ_4M4
  -->
+
+See how these looks in video:
 
 {{< youtube "cqs4MkJ_4M4" >}}
 
@@ -55,7 +66,7 @@ I recorded this one with the [Oa5Pro](https://jalcocert.github.io/JAlcocerT/dji-
 2. **BH** SPIKE 29" DEORE 10V XCM REMOTE
 
 {{< cards >}}
-  {{< card link="https://www.diamondback.com/" title="Diamond Bike" image="https://cyclingthere.com/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
+  {{< card link="https://www.diamondback.com/" title="Diamond Bike" image="https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp" subtitle="Stories with this MTB" >}}
 {{< /cards >}}
 
 

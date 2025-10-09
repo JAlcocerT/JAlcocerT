@@ -1,8 +1,8 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-30
+date: 2025-12-23
 draft: false
-tags: ["Year-Review","FY25"]
+tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
@@ -597,7 +597,7 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 Last year I set this as a goal.
 
-What exactly were those 24 tech videos to make AI, D&A more accesible: [x]
+What exactly were those **24 tech videos** to make AI, automation and D&A more accesible: [x]
 
 Along the way, Ive made my life easier by based the video content on a simpler NEW repo: https://github.com/JAlcocerT/Home-Lab
 
@@ -610,7 +610,7 @@ Along the way, Ive made my life easier by based the video content on a simpler N
 7. [Metabase](https://youtu.be/eCplQYrvabk) (BI)
 8. [Grafana](https://youtu.be/Uq5tZv6T3ko) (BI)
 9. Kibana (BI) and ES 
-10. SelfHosted Streamlit Apps
+10. [SelfHosted Streamlit Apps](https://youtu.be/p7U24YSFrW4)
 11. FileBrowser
 12. PiGallery
 13. Photoview
@@ -620,7 +620,7 @@ Along the way, Ive made my life easier by based the video content on a simpler N
 17. 
 18. Umami 
 19. 
-20. 
+20. [n8n + CF tunnels](https://youtu.be/v-gCNTI5kzE)
 21. 
 22. [MQTT and DHT22 + Home Assistant](https://youtu.be/8XUydWbwBjk)
 23. [Nextcloud and a Pi](https://youtu.be/x2eFFeRIyXg)
@@ -694,7 +694,7 @@ Combining Tech and Travel to get the most out of them:
 
 Is note taking a waste of time?
 
-The time that you are writing notes, you are not doing new things...
+The time that you are writing notes / making your KB, you are not doing new things...
 
 Is note taking just bike-shedding?
 
@@ -790,8 +790,22 @@ Thanks to this sites, I get to know more cool apps:
 There was even time to make **[Data Analytics](#da-tech-stack) recaps** and create (not that much ship) [***better* SaaS products**](#shipping-products).
 
 
+```mermaid
+pie title DB MTB Expenses
+         "Addons" : 500
+         "Maintenance" : 1080
+         "Insurance" : 865
+         "Price" : 1100
+```
+
+I havent measure these blog posts time creation.
+
+But it must have been sth like:
+
+![Creating 150+ posts on my learnings](/img/kitten-cat.gif#center)
+
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/making-soap-at-home/" title="I also got time to made soap at home | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/making-soap-at-home/" title="I also got time to made soap at home couple times| Post ↗" >}}
 {{< /cards >}}
 
 
@@ -800,17 +814,15 @@ There was even time to make **[Data Analytics](#da-tech-stack) recaps** and crea
 
 I needed to improve my data analytics stack.
 
-Because agents are coming for our jobs: `https://jobforagent.com/`. *The 1st job board for autonomous AI agents* 
+Because agents are coming for [*our* jobs](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/): `https://jobforagent.com/`. *The 1st job board for autonomous AI agents* 
 
 Normally withing D&A, you will have a rol to understand `the what` and figure our `the how` to get there.
 
-The closer you are to the product/leadership team, the closer you will see `the why`.
-
-https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/
+The closer you are to the product/leadership team, the closer you will/should see `the why`.
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/" title="Big Data Analytics| Post  ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="GCP | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="GCP for D&A | Post ↗" >}}
 {{< /cards >}}
 
 
@@ -1054,6 +1066,8 @@ In addition to data modeling, you would need to implement several optimizations 
 
 Its just... (OLAP ~ D&A) vs (OLTP ~ CRUD).
 
+> Didnt your head just exploted 🤯? Same tools, different way to use them
+
 When building Saas, you wear this kind of cap and go for the typical OLTP DB design for writes:
 
 {{< tweet user="levelsio" id="1963709732432248998" >}}
@@ -1064,7 +1078,9 @@ When doing D&A, you go for the opposite, quick read speeds.
 
 Ralph Kimball and the Kimball Methodology
 
-**Ralph Kimball** is a giant in the data warehousing world. He is one of the two main pioneers, along with Bill Inmon, who shaped the field.
+**Ralph Kimball** is a giant in the data warehousing world. 
+
+He is one of the two main pioneers, along with Bill Inmon, who shaped the field.
 
 The "Kimball" you're referring to is his **methodology for designing data warehouses**. His approach is often called the **bottom-up approach** and is centered around **dimensional modeling**.
 
@@ -1096,7 +1112,6 @@ It's often implemented using technologies like Delta Lake on platforms like Data
 
 3.  **Gold (Curated) Layer**: This is the final, business-ready layer. Data from the Silver layer is aggregated and modeled into consumption-friendly formats, often using a dimensional model (like a star schema). This layer is optimized for fast queries and is where business analysts and data scientists would build their reports and dashboards.
 
-The Connection
 
 The connection between these concepts is that they are both **architectural patterns** for building data systems.
 
@@ -1151,9 +1166,13 @@ So, you could build a data lakehouse with a Medallion architecture, and then, in
 
 PostgreSQL as a Hybrid System
 
-Yes, you can use PostgreSQL for both purposes. PostgreSQL is a powerful and flexible relational database that can be configured to serve as a **hybrid transactional/analytical processing (HTAP)** system.
+Yes, you can use PostgreSQL for both purposes. 
 
-For a long time, the traditional approach was to keep OLTP and OLAP systems completely separate due to their conflicting needs. You would use a system like PostgreSQL for your operational data and then periodically move that data into a specialized data warehouse (like Teradata or a cloud-based one like Snowflake or BigQuery) for analysis.
+PostgreSQL is a powerful and flexible relational database that can be configured to serve as a **hybrid transactional/analytical processing (HTAP)** system.
+
+For a long time, the traditional approach was to keep OLTP and OLAP systems completely separate due to their conflicting needs. 
+
+You would use a system like PostgreSQL for your operational data and then periodically move that data into a specialized data warehouse (like Teradata or a cloud-based one like Snowflake or BigQuery) for analysis.
 
 However, modern PostgreSQL, with features like **partitioning, materialized views, parallel query execution, and extensions (e.g., Citus)**, can handle analytical workloads on a single instance.
 
@@ -1361,14 +1380,45 @@ The flow from Avro to Parquet is a common pattern in data lake architecture:
 
 This layered approach, often called the Medallion Architecture, leverages the strengths of each format: Avro for robust data ingestion and Parquet for efficient data analysis.
 
+### For Next year...
 
---- 
+#### Keep Doing
 
-## FAQ
+1. Vibe Coding and BiP *using what I already know is enought to build a lot of projects*
+2. Sharing what I know with people around me. In person.
+3. Shipping more Serverless / CSR / Static
+4. Slowly getting better at action cam videos and ffmpeg / kdenlive. Just for fun.
 
-2020 - R
-2021 - Containers
-2022 - PySpark
-2023 - SSGs
-2024 - LLMs and API calls
-2025 - 
+5. Reading from time to time, people that inspires
+
+https://www.randomgarage.com
+
+* https://www.nickgracilla.com/posts/year-in-review-template/
+* https://blog.cavelab.dev/2022/01/a-person-that-writes/
+
+
+* <https://Selfhosted.show>
+* <https://selfh.st/>
+
+
+#### Stop Doing
+
+1. Opening more and more a shallow tech stack. *12/24 <<<150+ yearly posts on this blog should be more than enough*
+2. 
+
+
+#### Start Doing
+
+1. Promoting what I do via youtube/jalcocertech.com/fossengineer. *Curated niche posts, expanding knowledge I already gained here*
+2. Share interesting animations as a code on reddit/twitter/whatever forums
+2. x30 youtube videos, more elaborated, probably without AI
+3. 
+
+#### Discovery of the Years
+
+2020 - R *together with sql*
+2021 - Containers *with the Pi*
+2022 - PySpark *and big data*
+2023 - SSGs *and static hosting*
+2024 - LLMs *and API calls*
+2025 - BiP *and social sign in/up*

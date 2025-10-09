@@ -70,6 +70,8 @@ If you are building software, check: https://github.com/moghtech/komodo#screensh
 
 ### SSG Setup Installs
 
+For Astro, see: https://stateofjs.com/en-US
+
 ```sh
 #sudo apt install npm #this is ~180mb, but it will be an older version
 
@@ -83,6 +85,8 @@ nvm install --lts
 node --version
 npm --v
 ```
+
+For HUGO, based in GO:
 
 ```sh
 hugo version

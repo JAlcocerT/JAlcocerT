@@ -37,6 +37,17 @@ Any of these can help you serve your Apps to people, unless you want to do so fr
 2. [Hetzner](#hetzner)
 3. [Linode](#linode)
 
+If you need big GPU power, isntead of just CPU, you can always try https://www.runpod.io/gpu-instance/pricing and similar services.
+
+* https://accounts.hetzner.com/_ray/pow (I tried the CX22 model x2 vCPU)
+* https://cloud.digitalocean.com
+
+**Clouds ( & GPU Clouds)**
+
+* RunPod, Linode, DigitalOcean, Paper Space, Lambda Cloud, [Hetzner](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#hetzner)...
+* vast.ai, 
+* Google Colab TPU...
+
 ### DO
 
 * https://www.digitalocean.com/pricing/droplets

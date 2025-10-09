@@ -9,6 +9,8 @@ description: OBD Data
 
 **Intro** If you are into cars / trackdays or simply enjoy tinkering with IoT Data...
 
+![Karting Adventure](/blog_img/memes/Accidente_karting-min.gif)
+
 
 ---
 
