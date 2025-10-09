@@ -96,8 +96,11 @@ classDef class1 fill:red,color:blue,stroke:#FFD600;
 #/html/body/div[3]/div[2]/section[1]/div/div/div[1]/div[2]/ul/li[1]/span[2]
 =SI.ERROR(SUSTITUIR(importxml(R22; X20); "."; ",");T22)
 ```
+19. https://fullratio.com/stocks/nyse-wmt/walmart
 
 20. https://www.dividenddata.com/pricing
+21. https://dividendhistory.net/hesm-dividend-yield
+22. QQ: Nasdaq sp500 one time vs dca 2000 -2015 /// Growth or initial yield? ///
 
 With this data model, you will have answers, but also questions:
 

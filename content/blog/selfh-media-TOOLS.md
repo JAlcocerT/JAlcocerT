@@ -2,7 +2,7 @@
 title: "How to make a Media Home Server with OSS"
 date: 2023-11-29
 draft: false
-tags: ["HomeLab","Jellyfin"]
+tags: ["HomeLab","Jellyfin","Prowlar","amule"]
 description: 'Using the OrangePi as Media Server with Jellyfin. With a look to the -arr stack.'
 url: 'media-server-with-open-source'
 ---
@@ -206,7 +206,7 @@ cat /sys/kernel/debug/rkrga/load #see how the GPU is doing
 
 The term "4K" refers to the horizontal resolution, which is approximately ~4,000 pixels.
 
-![jellyfin](/img/SelfHosting/Jellyfin/jellyfin-rockchip-mpp.png#center)
+![jellyfin rockchip orangepi](/img/SelfHosting/Jellyfin/jellyfin-rockchip-mpp.png#center)
 
 Specifically, the standard resolution for 4K UHD is 3840 x 2160 pixels, which is exactly four times the pixel count of Full HD (1920 x 1080), resulting in sharper and more detailed images. 
 
@@ -242,62 +242,7 @@ Specifically, the standard resolution for 4K UHD is 3840 x 2160 pixels, which is
 > GPL 3.0 | Ryot is a versatile platform that helps you effortlessly track and manage your media, fitness, and more. Say goodbye to manual tracking methods like Notion, Google Notes, and Excel.
 
 
-1. Prowlarr 
-
-#https://docs.linuxserver.io/images/docker-prowlarr/
-#https://wiki.servarr.com/                                    # ---> SEEDBOX
-#https://docs.linuxserver.io/images/docker-prowlarr/#usage
-
-```yml
----
-version: "2.1"
-services:
-  prowlarr:
-    image: lscr.io/linuxserver/prowlarr:latest
-    container_name: prowlarr
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-    volumes:
-      - /home/Docker/prowlarr/config:/config
-    ports:
-      - 9696:9696
-    restart: unless-stopped
-```
-
-2. amule
-
-```yml
-#https://github.com/ngosang/docker-amule
-
----
-version: "2.1"
-services:
-  amule:
-    image: ngosang/amule
-    container_name: amule
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
-      - GUI_PWD=<fill_password>
-      - WEBUI_PWD=<fill_password>
-      - MOD_AUTO_RESTART_ENABLED=true
-      - MOD_AUTO_RESTART_CRON=0 6 * * *
-      - MOD_AUTO_SHARE_ENABLED=false
-      - MOD_AUTO_SHARE_DIRECTORIES=/incoming;/my_movies
-      - MOD_FIX_KAD_GRAPH_ENABLED=true
-      - MOD_FIX_KAD_BOOTSTRAP_ENABLED=true
-    ports:
-      - "4711:4711" # web ui
-      - "4712:4712" # remote gui, webserver, cmd ...
-      - "4662:4662" # ed2k tcp
-      - "4665:4665/udp" # ed2k global search udp (tcp port +3)
-      - "4672:4672/udp" # ed2k udp
-    volumes:
-      - /home/Docker/aMule:/home/amule/.aMule
-      - /home/Downloads/amule:/incoming
-      - /home/Docker/temp/amule:/temp
-    restart: unless-stopped
-```
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/amule" title="Amule | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/prowlarr" title="Prowlarr | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}

@@ -2,7 +2,7 @@
 title: "SelfHosting Updates - Spring 2025"
 date: 2025-03-21T01:20:21+01:00
 draft: false
-tags: ["Homelab","Ventoy,","Homarr","Forward Auth","Jellyfin"]
+tags: ["Homelab","Ventoy,","Homarr","Forward Auth","Jellyfin & FMHY"]
 description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich, Caddy, pihole v6...'
 url: 'selfhosted-apps-spring-2025'
 ---
@@ -248,12 +248,14 @@ And remember to [create the **proper invoices**, also with F/OSS](https://fossen
 
 1. Media server: Kodi, Jellyfin? 
 
+Maybe, together with: https://fmhy.net/posts/june-2025
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Video/kodi_docker_compose.yml" title="Kodi Config File 🐳↗"  >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Video/jellyfin_docker-compose.yml" title="Jellyfin Config File 🐳 ↗" >}}
 {{< /cards >}}
 
-If you have a smart tv, probably those are already installed, or you can add them:
+If you have a smart tv, probably those are already installed, or you can add them: 
 
 ![Jellyfin SmartTV](/blog_img/selfh/media/jellyfin-smarttv.png)
 

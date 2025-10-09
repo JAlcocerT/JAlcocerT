@@ -2,7 +2,7 @@
 title: "Tools for better Photo Management and BackUps"
 date: 2025-03-08
 draft: false
-tags: ["OSS","Homelab","Upscayl"]
+tags: ["OSS","Homelab","Upscayl","Immich"]
 description: 'Testing tools for Photo Management and better backup techniques.'
 url: 'photo-management-tools'
 ---
@@ -170,6 +170,10 @@ But might be an overkill if you just need a very simple photo tool for your home
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Photo/Immich_Docker-Compose.yml" title="Immich Config File 🐳 ↗"  >}}
 {{< /cards >}}
+
+<!-- https://youtube.com/shorts/S6TKjbHFU7k -->
+
+{{< youtube "S6TKjbHFU7k" >}}
 
 
 > The key here is the *really cool* mobile App (Android/iOS)

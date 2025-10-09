@@ -707,7 +707,9 @@ The power of notes. Without bikeshedding!
 
 Using AI to create more and better, in less time.
 
-The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/)
+The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/).
+
+With too many options: Repliit lovable windsurf cursor...
 
 > *El relato mata al dato* - Thats also true when looking for new project opportunities
 
@@ -1404,15 +1406,21 @@ https://www.randomgarage.com
 #### Stop Doing
 
 1. Opening more and more a shallow tech stack. *12/24 <<<150+ yearly posts on this blog should be more than enough*
-2. 
+2. Keeping 50+ tabs on chrome. *Not watching content on the phone and commet for summaries should help*.
 
 
 #### Start Doing
 
 1. Promoting what I do via youtube/jalcocertech.com/fossengineer. *Curated niche posts, expanding knowledge I already gained here*
-2. Share interesting animations as a code on reddit/twitter/whatever forums
+2. Share interesting animations as a code on reddit/twitter/whatever forums. Its not ycombinator, nor producthunt but its sth
 2. x30 youtube videos, more elaborated, probably without AI
-3. 
+3. Go all-in to find new clients
+
+
+**Maybe's**
+
+Write an ebook?
+
 
 #### Discovery of the Years
 

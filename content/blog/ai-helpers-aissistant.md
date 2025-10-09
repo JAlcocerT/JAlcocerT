@@ -105,6 +105,8 @@ I tried first [Neuromarketing with openAI](https://github.com/JAlcocerT/Streamli
 
 {{< details title="CTAs Examples that Ive found 📌" closed="true" >}}
 
+Pollo en serio y no en serie
+
 * CTA's
     * Quieres el premium? No, correre el riesgo!
     * You don’t have to miss out

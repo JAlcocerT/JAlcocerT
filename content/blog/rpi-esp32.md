@@ -576,6 +576,10 @@ with kodi adons
 https://www.traccar.org/docker/
 https://github.com/traccar/traccar-docker
 
+## HA 
+
+https://github.com/tevonsb/homeassistant-mcp
+
 ### ESP32 HA + Batteries
 
 <https://www.youtube.com/watch?v=aR044Dk6c_0>

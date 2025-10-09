@@ -9,7 +9,9 @@ url: 'this-year-was-crazy'
 
 This year was **crazy**.
 
-But...on the tech side, it was quite interesting.
+On the tech side, it was quite interesting.
+
+> I literally lost the counts on the differnt stacks I had to work with.
 
 ```mermaid
 pie title FY24 Weeks Breakdown
@@ -18,16 +20,6 @@ pie title FY24 Weeks Breakdown
          "Working" : 17
          "Languages" : 1
 ```
-
-```mermaid
-pie title DB MTB Expenses
-         "Addons" : 500
-         "Maintenance" : 1080
-         "Insurance" : 865
-         "Price" : 1100
-```
-
-And diverse.
 
 **Let me recap** a little bit.
 

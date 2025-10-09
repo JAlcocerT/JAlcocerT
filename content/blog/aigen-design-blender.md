@@ -8,6 +8,11 @@ url: 'how-to-use-blender-with-AI'
 ---
 
 
+Can we do such animations with blender?
+
+
+https://youtu.be/58C8dWL36GM?si=SgD6JzwCimgEvkuf
+
 
 * <https://docs.linuxserver.io/images/docker-cura/>
 * FREE CAD

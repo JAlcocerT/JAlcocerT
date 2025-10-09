@@ -23,3 +23,5 @@ flatpak install flathub org.kde.digikam
 sudo add-apt-repository universe
 sudo apt install dupeguru-se
 ```
+
+4. Upscayl

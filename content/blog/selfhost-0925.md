@@ -612,15 +612,17 @@ sudo apt install proton-vpn-gnome-desktop
 
 > Its recommended to do [p2p behind a VPN](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry) so that hackers can attack youe public IP address
 
-> > As seen in [0625](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p), [Reddit](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/) knows your [thing](https://www.reddit.com/r/MotorsportsReplays/comments/1haaapr/formula_1_19782024_megatorrent/)
+> > As seen in [0625](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p), [Reddit](https://www.reddit.com/r/Piracy/comments/1c3cikj/where_to_torrent/) knows your [F1 thing](https://www.reddit.com/r/MotorsportsReplays/comments/1haaapr/formula_1_19782024_megatorrent/)
 
 But hey, this is just to do legal stuff, like sharing OSS images, like ubuntu.
 
-Dont dare to watch `f movies` with your `cat` :) 
+Dont dare to watch `f movies` with your `cat`. Not interesting [fmhy repo](https://github.com/fmhy/edit) https://fmhy.net/posts/sept-2025 
+
+Neither read the anna's archive.
 
 Those might be down: https://www.isitdownrightnow.com/
 
-You know, just in case your cool site gets banned without a reason:
+You know, just in case your cool site gets **banned without a reason**:
 
 ![LaLiga Cloudflare Unjustified Ban](/blog_img/selfh/HomeLab/laliga-cloudflare.png)
 

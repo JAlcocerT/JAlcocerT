@@ -524,7 +524,7 @@ As always, there are few alternatives:
 
 Which has stripe and [BTCPay](https://btcpayserver.org/) integration https://invoiceninja.com/payments/, just in case you are into crypto.
 
-* https://github.com/btcpayserver/btcpayserver
+* https://github.com/btcpayserver/btcpayserver and https://docs.btcpayserver.org/API/Greenfield/v1/
 
 > MIT | Accept Bitcoin payments. Free, open-source & self-hosted, Bitcoin payment processor.
 

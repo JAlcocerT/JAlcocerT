@@ -140,6 +140,8 @@ Typst is a holistic tool aiming to modernize document creation. It's designed to
 
 But, I got to know that this is possible: https://kindlemodding.org/
 
+> See also https://github.com/NiLuJe/KindleTool
+
 ### Tools for eBooks
 
 

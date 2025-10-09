@@ -11,6 +11,8 @@ url: 'n8n-with-ai'
 
 Putting together content for a sync with 2 marketers.
 
+Because n8n is awsome: https://github.com/Synaptiv-AI/awesome-n8n
+
 <!-- https://youtu.be/v-gCNTI5kzE -->
 
 {{< youtube "v-gCNTI5kzE" >}}
