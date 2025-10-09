@@ -34,8 +34,7 @@ Time to use [**FireCrawl** as scrap tool](https://github.com/JAlcocerT/Scrap_Too
 
 {{< dropdown title="Broken links? LinkChecker ⏬" closed="true" >}}
 
-* Use LinkChecker with the [GHCR Container Image](https://github.com/linkchecker/linkchecker/pkgs/container/linkchecker)
-    * Its x86 only
+* Use LinkChecker with the [GHCR Container Image](https://github.com/linkchecker/linkchecker/pkgs/container/linkchecker), which is x86 only.
 
 ```sh
 # docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://https://www.psikolognevinkeskin.com/

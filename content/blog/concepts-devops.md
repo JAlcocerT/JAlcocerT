@@ -2,7 +2,7 @@
 title: "DevOps Tools"
 date: 2025-09-08T00:20:21+01:00
 draft: false
-description: 'Set up devops tools - From CI/CD, to Monitoring with Grafana, jenkins, k8s, DSc Tools...'
+description: 'From CI/CD, to Monitoring with Grafana, GHA, jenkins, k8s, DSc Tools...'
 url: 'dev-ops-for-non-devops'
 tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Uptime Kuma Status Pages"]
 ---
@@ -23,13 +23,20 @@ Because we want to move fast from idea to development and ship to production for
 
 {{< youtube "551lh10g_go" >}}
 
+[Containers](#containers) are one of the tools that you can use withing Development Operations.
 
 
 ## Containers
 
+As you know, they are an amazing technology to pack apps so that they work reliably in any computer.
+
+Some people might think that [docker](https://github.com/JAlcocerT/Docker) = containers, when its containers > docker, podman...
+
 1. https://github.com/NucleoFusion/cruise
 
-2. Lazydocker
+>  MIT | Cruise is a powerful, intuitive, and fully-featured TUI (Terminal User Interface) for interacting with Docker. Built with Go and Bubbletea, it offers a visually rich, keyboard-first experience for managing containers, images, volumes, networks, logs and more — all from your terminal. 
+
+2. [Lazydocker](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#conclusions)
 
 3. CRON jobs via UI: https://docs.linuxserver.io/images/docker-healthchecks/
 
@@ -93,15 +100,32 @@ sudo podman run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -
 
 ## CI/CD Tools
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jenkins" title="Jenkins | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ### Github CI/CD
 
 GitHub Actions, a **CI/CD framework** provided by GitHub, allows you to automate the build, test, and deployment processes for your software projects.
 
-{{< cards >}}
-  {{< card link="/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
-  {{< card link="/" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
+You can do cool things, like:
 
+```mermaid
+graph LR
+    A[Code Commit] --> B{GitHub Actions Workflow};
+    
+    B --> C{Build/Test/Deploy};
+    
+    C --> D(GitHub Pages Deployment);
+    C --> E(Push Container to GHCR);
+    C --> F(Push Container to Docker Hub);
+    C --> G(Many things, like test that there are no broken links)
+```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/.github/workflows/Streamlit_GHA_MultiArch.yml" title="Sample GH Actions CI/CD | Streamlit MultiChat 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Trip_Planner/blob/main/.github/workflows/Dash_GHA_MultiArch.yml" title="Sample GH Actions CI/CD | Dash WebApp - Trip Planner 🐋 ↗" >}}
+{{< /cards >}}
 
 #### How to use Github Actions CI/CD?
 
@@ -207,7 +231,7 @@ Obtain this token from **GitHub Settings** under `Developer Settings -> Personal
 Next, add this token as a repository secret under `Repo Settings -> Secrets & variables -> Actions -> New repository Secret`.
 
 {{< callout type="warning" >}}
-  Ensure the secret name matches the variable used in your `.yml` configuration.
+Ensure the secret name matches the variable used in your `.yml` configuration.
 {{< /callout >}}
 
 To make your Docker image publicly accessible, set the package visibility to public under `https://github.com/yourGHuser?tab=packages` and update the **Visibility of the Package**.

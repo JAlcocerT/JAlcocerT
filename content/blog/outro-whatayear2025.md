@@ -709,7 +709,7 @@ Using AI to create more and better, in less time.
 
 The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/).
 
-With too many options: Repliit lovable windsurf cursor...
+With too many options: Repliit lovable windsurf cursor bolt...
 
 > *El relato mata al dato* - Thats also true when looking for new project opportunities
 
@@ -722,7 +722,6 @@ With too many options: Repliit lovable windsurf cursor...
 
 
 ##### AI Stuff
-
 
 * https://github.com/browser-use/browser-use
 
