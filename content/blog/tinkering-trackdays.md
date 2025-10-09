@@ -2,7 +2,7 @@
 title: "People out there are really creative. Trackdays and Telemetry"
 date: 2025-02-24
 draft: false
-tags: ["Outro","Mechanics","Data Experiment","VK-162","Kalman Filter","Canbus"]
+tags: ["Outro","Mechanics","Data Experiment","VK-162","Kalman Filter","Superset"]
 description: 'What I learnt after exchanging few words about car racing, canbus and telemetry.'
 url: 'tinkering-telemetry-trackdays'
 ---

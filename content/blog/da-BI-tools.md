@@ -2,8 +2,8 @@
 title: "BI Tools for the AI era"
 date: 2025-02-26T00:20:21+01:00
 draft: false
-tags: ["Dev","D&A","Kibana DSL KQL","Redash","Grafana"]
-description: 'Setting up Data Analytics Visualization (Business Intelligence) tools with containers. From Superset to Metabase and Grafana.'
+tags: ["Dev","D&A","Kibana DSL KQL","Redash","Grafana","Metabase","Superset"]
+description: 'Setting up Data Analytics Visualization (Business Intelligence) tools with containers.'
 url: 'setup-bi-tools-docker'
 ---
 

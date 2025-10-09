@@ -11,10 +11,11 @@ This year I heard from a good friend that their mid size company does not use te
 
 I understand that.
 
-But there are other options, paid ones, like slack:
+But there are other options, paid ones, like slack or discord:
 
 ```sh
 sudo snap install slack --classic
+#sudo snap install discord
 ```
 
 That are feature rich.

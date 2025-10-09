@@ -2,7 +2,7 @@
 title: "From idea to Launch. Building a Landing+MicroSaaS"
 date: 2025-09-23T08:20:21+01:00
 draft: false
-tags: ["Firebase","QuantUX","Firecrawl","SlubneChwile"]
+tags: ["Firebase","QuantUX","Firecrawl","SlubneChwile","Status Pages"]
 url: 'micro-saas'
 description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Features) to launch fast'
 ---
@@ -12,6 +12,8 @@ description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Fe
 Its all about that straight to the point landing.
 
 > From this meeting/post: *No tiene q aer la mejor solucion tecnica, pero la q arregle el pain point.*
+
++++ [status pages](#conclusions) *for any service you provide*
 
 > > lets just make the very clear landing that improves the status of  SlubneChwile
 
@@ -162,9 +164,17 @@ Applies to [business](https://nav.al/skill-business) and to get that Landing + C
 
 Have deployed couple of services?
 
-Get that cool status pages for your client:
+Get that cool status pages for your client: https://github.com/rajnandan1/kener
+
+> MIT |Stunning status pages, batteries included!
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Or also...
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
 {{< /cards >}}

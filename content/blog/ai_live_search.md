@@ -2,7 +2,7 @@
 title: "How to do live search/research with AI"
 date: 2025-05-23
 draft: false
-tags: ["AI","Web Search","LLMs","Grok","DuckDuckGo API","Ollama"]
+tags: ["AI","Web Search","LLMs","Grok","DuckDuckGo API","Ollama","latitude"]
 description: 'Using Grok XAi API and Local Deep Researcher compared with Perplexity/Perplexica.'
 url: 'live-search-and-research-with-ai'
 ---
@@ -339,11 +339,6 @@ It addresses the following problems:
   
 2. **Latitude Self-Hosted**: Open-source version for greater control and customization.
 
-**Community Engagement:**
-
-- A vibrant community on Slack for support and collaboration.
-  
-- Contributions are welcomed to enhance the platform.
 
 In conclusion, Latitude simplifies the process of integrating AI into products while facilitating ongoing evaluation and improvement.
 
@@ -370,9 +365,6 @@ Use Cases:
 - **Single-command Deployment**: Latitude can be deployed quickly with a single command, making it easier for developers to get up and running without complex configurations.
 - **Framework Integration**: Latitude integrates seamlessly with popular front-end frameworks like React, Svelte, and Vue, which are commonly used for building modern web applications.
 
-Community and Support:
-- Latitude has an active community on **Slack**, where developers can collaborate, share insights, and get support.
-- Comprehensive **documentation** is available to guide users through the setup process and help with integration into various systems.
 
 Current Status:
 - The project is **no longer maintained** as the focus has shifted to a new project, **Latitude LLM**, which likely focuses on new features or different capabilities.

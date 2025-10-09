@@ -47,6 +47,29 @@ Get-ChildItem -Filter "*.MP4" | ForEach-Object { "file '$($_.Name)'" } | Set-Con
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
 ```
 
+### Converting Video
+
+If people around you have iphones...
+
+The main difference between iPhone .mov and .mp4 files is the format, compatibility, and intended use: .mov is Apple's native format designed for high-quality video editing on Apple devices, while .mp4 is a globally accepted standard optimized for compatibility and efficient sharing across platforms.
+
+
+| Feature           | .mov                | .mp4                  |
+|-------------------|---------------------|-----------------------|
+| Developer         | Apple               | MPEG                  |
+| File Size         | Larger[4]       | Smaller[4]        |
+| Compression       | Lossless/Lossy[4]| Usually Lossy[4]  |
+| Quality           | High[15]        | Good[15]          |
+| Compatibility     | Best with Apple[4]| Universal[4]    |
+| Editing Ease      | Easier (Apple)[5]| Harder[5]         |
+
+
+**Lossless Container Conversion (no re-encoding):** This transmuxes your MOV to MP4 instantly if both audio and video codecs are already compatible with MP4, preserving quality.[3][5]
+
+```sh
+ffmpeg -i input.mov -c:v copy -c:a copy output.mp4
+```
+
 ### Extracting Video Data
 
 For crazy people that like [trackdays](https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/), D&A [geospatial geeks](https://jalcocert.github.io/JAlcocerT/geospatial-data/) or somebody with a [gopro](https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction)

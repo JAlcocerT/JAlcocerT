@@ -25,3 +25,5 @@ sudo apt install dupeguru-se
 ```
 
 4. Upscayl
+
+For background removal, try...

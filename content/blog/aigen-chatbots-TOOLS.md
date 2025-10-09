@@ -653,10 +653,6 @@ Looking for OSS SelfHosted Status Monitors? https://www.reddit.com/r/opensource/
 
 > 🟢 a simple open-source, self-hosted status monitoring tool
 
-* https://github.com/rajnandan1/kener
-
-> MIT |Stunning status pages, batteries included!
-
 * https://github.com/openITCOCKPIT/openITCOCKPIT
 
 > gpl3.0 | openITCOCKPIT is an Open Source system monitoring tool built for different monitoring engines like Nagios, Naemon and Prometheus.

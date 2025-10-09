@@ -100,6 +100,8 @@ sudo podman run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -
 
 ## CI/CD Tools
 
+There are many tools to do CI/CD, like Jenkins or [Github Actions](#github-cicd).
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jenkins" title="Jenkins | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
@@ -129,9 +131,11 @@ graph LR
 
 #### How to use Github Actions CI/CD?
 
-{{< details title="About GH Actions 📌" closed="true" >}}
+With GitHub Actions, you can define workflows to automate tasks such as compiling code, running tests, performing code analysis, and **generating build artifacts.**
 
-With GitHub Actions, you can define workflows to automate tasks such as compiling code, running tests, performing code analysis, and generating build artifacts.
+That's exactly what we are doing when pushing static web pages or built containers.
+
+{{< details title="About GH Actions 📌" closed="true" >}}
 
 It supports various programming languages and offers great flexibility in customizing your CI pipeline.
 
@@ -260,7 +264,7 @@ It's all about the **playbook**!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/ansible/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_ansible" title="Ansible with a Pi" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of playbooks used with a raspberry Pi and some containers" >}}
 {{< /cards >}}
 
 <!-- UI: ansible semaphore
@@ -306,23 +310,23 @@ ansible --version
 
 ## Kubernetes
 
-
-K8s vs K3s...
-
+Kubernetes is called sometimes as K8s vs K3s...
 
 * https://www.xda-developers.com/kubernetes-cluster-raspberry-pi-guide/
 
-Kubernetes - A tool to manage and automate automated workflows in the cloud. It orchestrates the infrastructure to accomodate the changes in workload.
+Kubernetes - A tool to manage and automate automated workflows in the cloud.
 
-The developer just need to define a yml with the desired state of your K8s cluster.
+It orchestrates the infrastructure to accomodate the changes in workload.
 
-In this project we will be collecting **Temperature and Humidity Data** from a DHT11 or a DHT22 Sensor working together with a Raspberry Pi.
+The developer just need to define a `yml` with the **desired state of your K8s cluster**.
 
-The data store will be in MongoDB, which will live in a Docker container.
-
-Rancher is an open source container management platform built for organizations that deploy containers in production. Rancher makes it easy to run Kubernetes everywhere, meet IT requirements, and empower DevOps teams.
 
 ### Rancher: k3s
+
+Rancher is an open source container management platform built for organizations that deploy containers in production. 
+
+Rancher makes it easy to run Kubernetes everywhere, meet IT requirements, and empower DevOps teams.
+
 
 Setting up a High-availability K3s Kubernetes Cluster for Rancher.
 
@@ -375,7 +379,7 @@ kubectl exec -it <pod_name> -- /bin/bash: Executes a command, like opening a bas
 
 ## Monitoring
 
-You can try with a custom Grafana dashboard or with Beszel:
+You can try with a custom Grafana dashboard or **with Beszel**:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring with Beszel" >}}
@@ -389,9 +393,14 @@ With Uptime Kuma, you can get quickly an uptime pages for your services:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ![Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 > People [build business](#uptime-kuma-api) around this kind of things: https://status.perplexity.com/, see https://instatus.com/pricing
 
@@ -605,7 +614,7 @@ In summary, while Kubeflow and MLflow are not directly related and serve differe
 
 Yes, Uptime Kuma does provide an API, but it is primarily an internal API designed for the application's own use and is not officially supported for third-party integrations. 
 
-It offers a Socket.io real-time communication API after authentication and some RESTful API endpoints for tasks like push monitors, status badges, and public status page data.[1]
+It offers a Socket.io real-time communication API after authentication and some RESTful API endpoints for tasks like push monitors, status badges, and public status page data.
 
 Using the API (especially through unofficial wrappers like the Python wrapper "uptime-kuma-api"), you can programmatically add new monitors (websites or services) and retrieve some monitoring data.
 

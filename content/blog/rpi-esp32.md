@@ -5,6 +5,11 @@ draft: true
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
 ---
 
+
+In this project we will be collecting **Temperature and Humidity Data** from a DHT11 or a DHT22 Sensor working together with a Raspberry Pi.
+
+The data store will be in MongoDB, which will live in a Docker container.
+
 https://www.youtube.com/watch?v=V_mZsiZcy7s
 
 https://www.youtube.com/watch?v=XKQgvmeApjI

@@ -262,7 +262,7 @@ You can selfhost Chatwoot with this compose
 
 * **Self-Hostable and Open-Source:** A significant advantage of n8n is that it's open-source and can be self-hosted. This gives you full control over your data, privacy, and infrastructure, which is a major differentiator from many other cloud-only automation platforms. They also offer a cloud-hosted version for convenience.
 
-* **Extensive Integrations:** n8n boasts hundreds of pre-built integrations with popular applications, databases, and cloud services (e.g., Slack, GitHub, Google Sheets, Salesforce, HubSpot, OpenAI). If an integration doesn't exist, you can use the generic HTTP Request node or create custom nodes to connect to almost any API.
+* **Extensive Integrations:** n8n boasts hundreds of pre-built integrations with popular applications, databases, and cloud services (GitHub, Google Sheets, Salesforce, HubSpot, OpenAI). If an integration doesn't exist, you can use the generic HTTP Request node or create custom nodes to connect to almost any API.
 
 * **AI and LLM Capabilities:** n8n is well-positioned for the "AI age." It has native support for integrating with AI services like OpenAI's GPT models, Claude, and Hugging Face. This allows you to build sophisticated AI-powered workflows for tasks like summarizing content, generating replies, classifying data, and creating AI agents.
 

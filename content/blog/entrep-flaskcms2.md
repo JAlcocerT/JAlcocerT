@@ -205,14 +205,9 @@ Time to scale with all the learnings: bring more clients, automatically and ones
 
 Because its not about the tech stack, but the solutions provided.
 
-Simplicity always wins and it seems that for now there wont be a flaskcms2.0.
+**Simplicity always wins** and it seems that for now there wont be a flaskcms2.0.
 
-What it can be is some status pages on the services provided:
 
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener Status Pages | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
 
 ### Lately I...
 
