@@ -313,6 +313,8 @@ Just in case that you dont remember, we played with this here:
 * https://github.com/firecrawl/firecrawl
 * https://www.firecrawl.dev/signin
 
+> And FireCrawl works great...
+
 
 #### FireCrawl MCP
 

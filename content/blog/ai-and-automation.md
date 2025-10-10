@@ -2,7 +2,7 @@
 title: "Automation for your Agency"
 date: 2025-09-25
 draft: false
-tags: ["n8n","typebot","botpress","KB","Real Estate ChatBot"]
+tags: ["n8n","typebot","Botpress","KB","Real Estate ChatBot","Service Industry with AI"]
 description: 'Getting leads fast towards your product landing'
 url: 'pro-agency-automation'
 ---
@@ -14,11 +14,131 @@ Just recently I covered how to [build a quick product with auth + a landing](htt
 
 Also, couple of [marketers show me a cool workflow](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/)
 
+And I saw this insightful video:
+
+<!-- https://www.youtube.com/watch?v=OGYfe6DmaSY -->
+
+{{< youtube "OGYfe6DmaSY" >}}
+
+
 If you read me for some time already, you are also aware of APIs, Webhooks and automations (not only with n8n)
 
 How can this all be put together?
 
 I mean...a ,custom' solution that provides out of the box a UI for the final user.
+
+## Why automation?
+
+The video titled "The 'Boring' AI Business Model Making Millionaires in 2025" by Ben AI discusses a lucrative and largely overlooked market: AI-powered service agencies, which he calls "AI first service agencies." 
+
+Ben emphasizes that despite the booming AI SaaS (Software as a Service) market and the AI agency sector, the traditional service industry—such as digital marketing, talent, and operational services—remains the largest and most profitable market being disrupted by AI.[1]
+
+## Key Themes from the Video
+
+### Market Potential
+
+Ben notes that in 2025, the AI automation agency market is valued at around $11 billion, while the AI SaaS market is approximately $300 billion. 
+
+However, **the service industry, valued at trillions**, is being transformed by AI in ways that are not yet fully recognized.[1]
+
+According to the video, the service industry is broadly divided into three main categories:
+
+1. Growth Services: These services help businesses generate new pipeline or revenue, including lead generation and digital marketing services like content creation, paid ads, SEO, and social media marketing.
+
+2. Talent Services: These provide companies with new talent, including recruiting agencies, staffing agencies, and headhunters.
+
+> These 2 being a way to get leads a a way to deliver them.
+
+> > Get demand, provide supply :)
+
+3. Operational Services: These include various support functions such as legal services, outsourced customer support (e.g., call centers), accounting, and bookkeeping.
+
+Ben focuses mostly on digital marketing services and talent services in the video, highlighting that these two categories provide the highest ROI to businesses by addressing key bottlenecks like acquiring new leads and managing new customer growth.
+
+The other two markets mentioned for comparison in the video are:
+
+- AI Automation Agency Market: Valued around ~$11 billion, these agencies use AI to automate and deliver services more efficiently.
+
+- AI SaaS Market: Valued around ~$300 billion, focusing on AI software products delivered as services.
+
+The video emphasizes that the traditional service industry (growth, talent, operational) remains the largest and most untapped market being disrupted by AI.[1]
+
+
+### What Are AI First Service Agencies?
+
+These agencies combine domain expertise with AI and automation to streamline service delivery, increase margins, and serve more clients efficiently. 
+
+Examples include lead generation, recruiting, marketing, and creative services that utilize AI for prospecting, content creation, and process automation.[1]
+
+### Why Are They Profitable?
+
+Traditional agencies struggle with low margins (around 20-30%), scalability through hiring, and high competition. 
+
+AI agencies, by automating key processes, can handle more clients per manager, improve outcomes, reduce costs, and offer lower prices or outcome-based pricing models.[1]
+
+### Examples & Success Metrics
+
+- Cold IQ, a lead generation AI agency, generated about $6 million in ARR with only 30-35 employees by heavily automating prospecting and outreach processes.
+- Rocket, a recruiting agency, uses AI to source and deliver better candidates faster.
+- Superside, a broad marketing agency, doubled ARR after implementing AI, and others like the AI SEO system reduce operational costs and increase margins.[1]
+
+### Productization & Market Expansion
+Ben highlights the trend of transforming services into self-serve, productized solutions. Examples include Hoppy Copy (newsletter automation), POPAI (video script creation), and Opus Clips (video editing). The core idea is delivering outcomes, not just AI tools, with AI serving as an enabler for better, faster, and cheaper service delivery.[1]
+
+### Strategic Opportunities
+- The red ocean: compete for high-budget clients with AI-enhanced, efficient services.
+- The blue ocean: target underserved niches and small businesses, offering lower-priced, outcome-oriented services that were previously too expensive for traditional agencies.[1]
+
+### How To Start & Monetize
+Ben recommends combining domain expertise with technical skills or partnering with AI-savvy engineers. Starting as a custom AI automation service targeting agencies or niche markets can build expertise while gradually productizing services into self-serve platforms. Monetization options include retainer-based, outcome-based, and product sales to agencies and end-users alike.[1]
+
+### Final Advice
+He stresses the importance of automating key processes, building end-to-end AI systems, and focusing on delivering real business outcomes—like leads, revenue, or brand awareness—rather than just selling AI tools. Targeting smaller or underserved markets with lower prices is a strategic move enabled by automation, creating largely untapped demand.[1]
+
+***
+
+This summary encapsulates how AI-powered service agencies are transforming what Ben describes as an "unsexy," low-margin market into highly scalable, profitable ventures leveraging automation and outcome-based strategies.
+
+Here is a breakdown of famous or notable companies operating in each of the three parts of the service industry as per the video, and in the AI automation agency and AI SaaS sectors mentioned:
+
+### Growth Services (Digital Marketing, Lead Gen, etc.)
+- GrowthRocks (London, UK) — Growth hacking agency working with Volvo, FedEx
+- Rockboost (The Netherlands) — Growth hacking, clients include Cisco, Philips, Sony
+- Deviate Labs (Los Angeles, USA) — Consulting for growth marketing
+- Growth Division (London, UK) — Custom growth teams for startups
+- Voxturr (San Francisco, USA) — Growth backing for startups, SMBs, enterprises[1]
+
+### Talent Services (Recruitment, Staffing)
+- Randstad (Netherlands) — One of the world's largest staffing companies
+- Robert Half — Recruitment specializing in finance, accounting, IT, law
+- ManpowerGroup — Large global workforce provider
+- Hays — Specialist recruitment agency with IT, finance, engineering niches
+- Adecco — Staffing solutions across various industries globally[2][3]
+
+### Operational Services (Legal, Accounting, Support, Automation)
+- Honeywell International Inc. — Operational technology solutions
+- Siemens — Industrial and operational tech services
+- Rockwell Automation — Industrial automation and safety solutions
+- General Electric — Operational tech in manufacturing and engineering sectors
+- Oracle, IBM — Provide operational consulting and tech[4]
+
+### AI Automation Agencies
+- DevsData LLC — AI consulting, machine learning, data science services (NY, Warsaw)
+- AI Superior — AI consulting and automation development (Germany)
+- Automation House — No-code AI automation solutions
+- Integrated Solutions — AI-driven business transformation services[5][6]
+
+### AI SaaS Companies
+- OpenAI — Developer of GPT models and AI SaaS applications
+- Google DeepMind — Advanced AI systems, including AlphaGo and AlphaFold
+- Anthropic — AI safety and SaaS platform with aligned LLMs
+- IBM Watson — AI enterprise software and analytics
+- Databricks — Data engineering and machine learning SaaS platform[7][8][9]
+
+This list reflects key recognizable players in each segment of the service industry and the AI-powered markets highlighted in the video context. Each category features firms focusing on transforming large traditional spaces with technology and AI.[6][9][1][2][4][5][7]
+
+
+
 
 ### n8n
 
@@ -170,13 +290,22 @@ See what they produce. [Sample md](https://github.com/JAlcocerT/morita-web/blob/
 
 ##### n8n x Scraping
 
-Instead of having this cool [streamlit web scrapper](https://github.com/JAlcocerT/moi-realestate-pb/tree/master/ScrapPhotosWebApp)... and better than this [n8n tg scrap wf](https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/3-webhook_openai_tg.json)
+Instead of having this cool [streamlit web scrapper](https://github.com/JAlcocerT/moi-realestate-pb/tree/master/ScrapPhotosWebApp)... 
+
+and better than this [n8n tg scrap wf](https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/3-webhook_openai_tg.json)
 
 1. With **BS4**
 
 2. Just use...**FireCrawl** with n8n https://www.npmjs.com/package/@mendable/n8n-nodes-firecrawl
 
 ![n8n Firecrawl Setup](/blog_img/selfh/automation/n8n-firecrawl.png)
+
+You can use firecrawl hosted service, DIY or use elestio:
+
+<!-- https://www.youtube.com/watch?v=aom0MOHip7Y -->
+
+{{< youtube "aom0MOHip7Y" >}}
+
 
 ![alt text](/blog_img/selfh/automation/n8n-firecrawl-workflow.png)
 

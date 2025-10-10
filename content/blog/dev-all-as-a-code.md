@@ -91,6 +91,13 @@ https://youtu.be/dtjb2OhEQcU?si=sXeXvjrF50WfU_P4
 
 {{< youtube "dtjb2OhEQcU" >}}
 
+And this
+
+<!-- https://www.youtube.com/watch?v=O6TjkLwUAtg -->
+
+{{< youtube "O6TjkLwUAtg" >}}
+
+
 <!-- https://github.com/JAlcocerT/Py_Double_Pendulum -->
 
 {{< cards >}}
@@ -100,13 +107,23 @@ https://youtu.be/dtjb2OhEQcU?si=sXeXvjrF50WfU_P4
 
 And then...I saw this: https://github.com/bufferhead-code/this-video-is-written-in-code
 
+
+
 <!-- https://www.youtube.com/watch?v=wGkazw8x1Dg -->
 
 {{< youtube "wGkazw8x1Dg" >}}
 
+
+```sh
+git clone https://github.com/bufferhead-code/this-video-is-written-in-code
+```
+
+
 So...wait, didnt we already...?
 
-Matplotlib can be used for creating basic 2D animations and exporting them as videos or GIFs, mainly for data visualizations and scientific plots. It supports animation classes that update frames over time, but it is limited in terms of creative, sophisticated motion graphics or professional video production and interactivity.[1][2][3]
+Matplotlib can be used for creating basic 2D animations and exporting them as videos or GIFs, mainly for data visualizations and scientific plots.
+
+It supports animation classes that update frames over time, but it is limited in terms of creative, sophisticated motion graphics or professional video production and interactivity.
 
 In contrast, tools like Motion Canvas, Remotion, or Manim provide much richer features for video animations with more control, flexibility, and higher production value. 
 
@@ -127,9 +144,15 @@ Blender scripting is powerful for 3D animations, simulations, and rendering, whi
 
 Motion Canvas, Remotion, and Manim are all tools for creating **programmatic animations and videos**, but they cater to different use cases and technologies.
 
-Motion Canvas is a modern TypeScript-based tool focused on vector animations with real-time preview and strong web integration. It is praised for allowing CSS features and live timing control in animations but is still relatively new with fewer complex examples and features compared to others. It targets users who prefer coding animations with web tech and want interactive previews while creating.[1][2][3]
+Motion Canvas is a modern TypeScript-based tool focused on vector animations with real-time preview and strong web integration.
 
-Remotion stands out as a React-based tool for creating programmatic videos. It enables creating MP4 videos using React components, making it excellent for developers familiar with React who want to automate and scale video production. Remotion is well-regarded for strong documentation, ease of use, and a focus on collaborative and dynamic video creation, including applications like product videos and in-browser editing.[4][5][6]
+It is praised for allowing CSS features and live timing control in animations but is still relatively new with fewer complex examples and features compared to others.
+
+It targets users who prefer coding animations with web tech and want interactive previews while creating.
+
+Remotion stands out as a React-based tool for creating programmatic videos. It enables creating MP4 videos using React components, making it excellent for developers familiar with React who want to automate and scale video production. 
+
+Remotion is well-regarded for strong documentation, ease of use, and a focus on collaborative and dynamic video creation, including applications like product videos and in-browser editing.
 
 Manim, on the other hand, is a Python library specialized in math and educational animations. It offers fine-grained control for precise formula animation and algorithm visualization. It requires more programming expertise and manual effort but is powerful for STEM use cases. Recent research advances also use AI to automate some Manim coding, improving accessibility. Manim excels in complex mathematical and algorithmic animations rather than general vector or video creation.[7][8][9]
 

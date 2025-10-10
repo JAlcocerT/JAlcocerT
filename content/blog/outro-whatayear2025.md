@@ -7,6 +7,14 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+Backend was hard.
+
+In theory, it can be simplified with PB or with https://github.com/MotiaDev/motia
+
+> MIT | Multi-Language Backend Framework that unifies APIs, background jobs, workflows, and AI Agents into a single core primitive with built-in observability and state management.
+
+
+
 Serverless is the way.
 
 And CF workers and pages  use cases are so cool: https://github.com/4ev-link/4ev.link

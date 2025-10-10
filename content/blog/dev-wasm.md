@@ -2,7 +2,7 @@
 title: "WASM, Containers? What?"
 date: 2025-10-01
 draft: false
-tags: ["Dev","Web Assembly","IndieHacker","PWA","FFMPeg","Compiled vs non","VERT"]
+tags: ["Dev","Web Assembly","IndieHacker","PWA","FFMPeg","Compiled vs non","VERT","Compress.lol"]
 description: 'Must knoics.'
 url: 'wasm'
 ---
@@ -147,6 +147,11 @@ docker buildx build --platform wasi/wasm -t fossengineer/helloworld-wasm -f Dock
 #docker image ls | head
 ```
 
+<!-- https://www.youtube.com/watch?v=kE2z1b-ZRM4 -->
+
+{{< youtube "kE2z1b-ZRM4" >}}
+
+
 Run WASM with Docker:
 
 ```sh
@@ -182,7 +187,13 @@ When the user wants to apply a complex filter, the application uses a **WASM mod
 
 You could create a PWA that does video processing using FFmpeg with WebAssembly. 
 
-> This is a very popular and powerful use case for WASM.*
+This is a very popular and powerful use case for WASM.
+
+In fact, see: https://github.com/anhostfr/compress.lol, which [I forked here](https://github.com/JAlcocerT/compress.lol)
+
+>  Compress videos in your browser to fit Discord limitations and more 
+
+> > Note: Compression happens entirely in your browser. No files are uploaded to any server.
 
 **How It Works**
 

@@ -2,17 +2,29 @@
 title: "First Look to Flutter Apps"
 date: 2026-12-31
 draft: true
-tags: ["Dev"]
+tags: ["Dev","Ente Photos"]
 description: 'Flutter Apps. Created with Python via Flet and more'
 url: 'flutter-flet-python'
 ---
 
+**Tl;DR**
+
+Couple years ago I tried to do some Flet Apps with chatGPT, but the knowledge was not there.
+
+How about now?
 
 **Intro**
 
 * https://flet.dev/
 
 > Build **multi-platform apps in Python** powered by Flutter
+
+Some flutter apps?
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ente/" title="Ente | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 Because some time ago (pre vibe-coding age) I tried flutter.
 

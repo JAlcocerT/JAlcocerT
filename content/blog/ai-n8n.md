@@ -108,9 +108,7 @@ This native integration allows meeting data from Fireflies.ai to flow seamlessly
 [2](https://github.com/firefliesai/n8n-nodes-fireflies)
 [3](https://n8n.io/integrations/fireflies/)
 
-<!-- https://www.youtube.com/watch?v=ndqX4vbR7Rc -->
 
-{{< youtube "ndqX4vbR7Rc" >}}
 
 
 ### n8n x Perplexity

@@ -1,5 +1,5 @@
 ---
-title: "Flowise Embedded and Gitea WIP"
+title: "Flowise AI Embedded and Gitea WIP"
 date: 2025-09-05T10:20:21+01:00
 draft: false
 tags: ["HomeLab","Flowise SDK","Web","LLM APIs","Flowise Streamlit"]
@@ -46,7 +46,7 @@ EOL
 sudo docker compose up -d
 ```
 
-![alt text](/blog_img/selfh/flowiseai-ui-setup.png)
+![Flowise AI UI 101](/blog_img/selfh/flowiseai-ui-setup.png)
 
 ![alt text](/blog_img/selfh/flowiseai-ui-workflows.png)
 
@@ -66,11 +66,6 @@ Extend and integrate to your applications using APIs, SDK and Embedded Chat
 * APIs: https://docs.flowiseai.com/api-reference
 * Embedded Widget: https://docs.flowiseai.com/using-flowise/embed
 * Typescript & Python SDK
-
-
-<!-- https://www.youtube.com/watch?v=XOeCV1xyN48 -->
-
-{{< youtube "XOeCV1xyN48" >}}
 
 
 ### Connect to Flowise
@@ -142,6 +137,10 @@ uv init
 uv add -r requirements.txt
 uv sync
 ```
+
+You will need a Chatflow:
+
+![Flowise Chatflow](/blog_img/selfh/flowise-chatflows.png)
 
 ```sh
 #cp -n .streamlit/secrets_example.toml .streamlit/secrets.toml && ls -l .streamlit/secrets.toml

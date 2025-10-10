@@ -2,7 +2,7 @@
 title: "Tools that help me FOCUS"
 date: 2025-03-01
 draft: false
-tags: ["Outro","LeanTime","NextBeats","Pomodoro"]
+tags: ["Outro","LeanTime","NextBeats","Pomodoro","PomatEZ"]
 description: 'Tools for concentrating in a noisy world.'
 url: 'tools-to-improve-focus'
 ---

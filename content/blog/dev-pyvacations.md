@@ -1,6 +1,6 @@
 ---
 title: "Vacations with Python"
-date: 2025-10-10T23:20:21+01:00
+date: 2025-10-10T19:20:21+01:00
 draft: false
 tags: ["Django","PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs","Scrap"]
 summary: 'Where am I going next? With Vibe Planning.'
@@ -42,3 +42,12 @@ It all started [here, messed with other small projects](https://github.com/JAlco
 ## Conclusions
 
 I got to know that something similar exists: https://nomads.com/ from cool solopreneurs.
+
+
+### 
+
+https://github.com/itskovacs/trip
+
+>  🗺️ Minimalist POI Map Tracker and Trip Planner 
+
+![alt text](/blog_img/selfh/Photo/TRIP.png)

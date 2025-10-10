@@ -71,9 +71,10 @@ Probably you will not find them on the firsts google results, yet they were help
 
 ### Interesting WebApps
 
-These are cool and selfhostable:
+These web-apps are cool and selfhostable:
 
-1. For file conversion: https://vert.sh/
+1. For file conversion: https://vert.sh/ or https://compress.lol/
+
 2. Various: 
 
 * https://it-tools.tech and https://omnitools.app/ 
@@ -82,6 +83,7 @@ These are cool and selfhostable:
 
 * https://gchq.github.io/CyberChef/ 
 * https://emn178.github.io/online-tools
+* https://nextbeats.vercel.app/
 
 3. For PDF Conversion: https://stirling.com/app/
 

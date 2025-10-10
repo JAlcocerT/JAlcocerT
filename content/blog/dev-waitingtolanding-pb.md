@@ -2,7 +2,7 @@
 title: "Waiting to Landing with Pocketbase"
 date: 2025-09-01T15:20:21+01:00
 draft: false
-tags: ["Pocketbase","Cloudflare Pages",CSR Guard"","SSG CSR SSR","Link Hub","Waiting2Landing v2"]
+tags: ["PB","Cloudflare Pages",CSR Guard"","SSG CSR SSR","Link Hub PB","Waiting2Landing v2"]
 description: 'PB SDK for your waiting list BaaS. Take user forms and then switch to landing page.'
 url: 'waiting-list-pocketbase'
 ---
@@ -29,7 +29,6 @@ How about using and let them see a CSR page.........
   {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Forked Astro Payroll Theme" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + CF Workers + PB users collections as Auth" >}}  
 {{< /cards >}}
 
-
 .......like this one:
 
 {{< cards >}}
@@ -37,11 +36,10 @@ How about using and let them see a CSR page.........
   {{< card link="https://link-hub-1qd.pages.dev/" title="Tweaked Theme deployed to CF Pages" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}  
 {{< /cards >}}
 
-And tested the new tech stack with a v2.0 with the [waiting to landing idea](#a-better-waiting2landing):
+And tested the new tech stack with a v2.0 with the [waiting to landing idea](#a-better-waiting2landing): *vibe coded as per [this section](#a-better-waiting2landing)*
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/link-hub-pb/" title="NEW repository - Waiting2Landing v2.0" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}
-  {{< card link="https://link-hub-1qd.pages.dev/" title="Tweaked Theme deployed to CF Pages" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}  
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing-pb" title="NEW repository - Waiting2Landing v2.0" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Waiting List + Landing Astro Themes with PB users collections saving Leads via CF Workers" >}}
 {{< /cards >}}
 
 How was that even possible?
@@ -139,7 +137,24 @@ wrangler pages deploy dist --project-name=link-hub --branch=main
 
 ### A Better Waiting2Landing
 
+```
 
+```
+
+
+```sh
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
+git config --global user.name
+git add .
+git commit -m "Initial commit: Waiting to Landing v2 with PB and Cloudflare Workers and Pages"
+
+#sudo apt install gh
+gh auth login
+gh repo create waiting-to-landing-pb --private --source=. --remote=origin --push
+```
 
 ### LinkHub with PocketBase
 
@@ -176,19 +191,23 @@ Modern frameworks like Nuxt, Next.js, and SvelteKit have blurred the lines by of
 
 * **Server-Side Rendering (SSR) for the initial load:** A Nuxt application, for example, can be configured to use SSR. The server pre-renders the HTML for the first page the user requests. This is great for SEO and initial load performance. Once the page is loaded, the application "hydrates" and acts like a normal SPA, handling subsequent navigation and updates on the client-side without full-page reloads. This is often called a "Universal" application.
 
-* **Static Site Generation (SSG) for all pages:** A framework like Astro or Nuxt can also generate every possible page as a static HTML file at build time. When a user visits the site, they get a pre-built, fast HTML file. The pages can then have small "islands" of JavaScript that enable interactivity and SPA-like navigation, but they don't rely on the client to render the entire page from scratch. This is a powerful way to get the performance benefits of a static site with the interactivity of an SPA.
+* **Static Site Generation (SSG) for all pages:** A framework like Astro or Nuxt can also generate every possible page as a static HTML file at build time. When a user visits the site, they get a pre-built, fast HTML file.
+
+The pages can then have small "islands" of JavaScript that enable interactivity and SPA-like navigation, but they don't rely on the client to render the entire page from scratch.
+
+This is a powerful way to get the performance benefits of a static site with the interactivity of an SPA.
 
 So, while CSR is the foundational technique for building traditional SPAs, the modern web development landscape has evolved to allow for SPAs to be built with a variety of rendering strategies, including SSR and SSG, to improve performance, SEO, and user experience.
 
 ### About Nuxt
 
-Nuxt is an open-source, full-stack framework for building web applications using Vue.js.
+Nuxt is an open-source, full-stack framework for building **web applications using Vue.js**.
 
 It simplifies the development of complex applications by providing an opinionated structure, automatic routing, and multiple rendering modes out of the box.
 
 > Nuxt is inspired by Next.js, a similar framework for React.
 
-> > I need to try NUXT sometime soon :)
+> > I need to try NUXT sometime *,soon'*
 
 #### Nuxt and JavaScript ☕️
 
@@ -204,11 +223,11 @@ It uses JavaScript to handle almost every aspect of an application, from front-e
 * **Node.js and Nitro:** Nuxt's server-side capabilities are powered by a server engine called **Nitro**, which is built on Node.js. This allows Nuxt to run JavaScript code on the server, which is essential for features like Server-Side Rendering (SSR) and API routes.
 * **Tooling:** Nuxt integrates popular JavaScript build tools like **Vite** or **Webpack** to bundle and optimize your application's code for production.
 
-***
-
 #### Nuxt and SSG (Static Site Generators)
 
-Nuxt is not just a static site generator, but it can act as one. It offers several rendering modes, including static site generation (SSG), which puts it in a similar category to frameworks like Astro or Hugo, but with some key differences.
+Nuxt is not just a static site generator, but it can act as one. 
+
+It offers several rendering modes, including static site generation (SSG), which puts it in a similar category to frameworks like Astro or Hugo, but with some key differences.
 
 ##### **Nuxt's Rendering Modes**
 

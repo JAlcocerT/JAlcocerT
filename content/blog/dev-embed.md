@@ -1,5 +1,5 @@
 ---
-title: "Everything can be embeded"
+title: "Everything can be embeded. OpenAI Agent Builder."
 date: 2025-09-30T08:20:21+01:00
 draft: false
 tags: ["n8n vs Flowise","ChatWoot vs PaperCups","SolidTime","Embeded Analytics","DB2REST"]
@@ -20,6 +20,26 @@ Chatwoot has some basic CRM features (contact management, conversation history) 
 ### Chatbots
 
 #### Flowise
+
+![Flowise Chatflow](/blog_img/selfh/flowise-chatflows.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/flowise-ai" title="FlowiseAI | HomeLab Configs 🐋 ↗" >}}
+  {{< card link="" title="Recent FlowiseAI x Gitea | Post ↗" >}}
+{{< /cards >}}
+
+Remember that there is a Flowise Python SDK, that you could connect, [for example to Streamlit](https://jalcocert.github.io/JAlcocerT/flowise-and-gitea/#flowise-x-python-sdk).
+
+See a [example](https://github.com/HenryHengZJ/flowise-streamlit/blob/main/.streamlit/secrets_example.toml) and the [flowise docs](https://docs.flowiseai.com/integrations/3rd-party-platform-integration/streamlit)
+
+<!-- https://www.youtube.com/watch?v=XOeCV1xyN48 -->
+
+But most importantly, can flowise be embeded into a website and reply to business questions?
+
+<!-- https://www.youtube.com/watch?v=XOeCV1xyN48 -->
+
+{{< youtube "XOeCV1xyN48" >}}
+
 
 #### n8n
 
@@ -57,7 +77,54 @@ Bottom line here: **n8n is very simple to get for free**
 
 ##### n8n chat
 
-https://www.npmjs.com/package/@n8n/chat?activeTab=readme
+1. https://github.com/symbiosika/n8n-embedded-chat-interface - *A simple Chat interface to embed on your website to chat with an n8n AI Flow*
+2. https://www.npmjs.com/package/@n8n/chat?activeTab=readme
+
+<!-- https://www.youtube.com/watch?v=4VD-6dFQJsk -->
+
+{{< youtube "4VD-6dFQJsk" >}}
+
+
+#### OpenAI Agent Builder
+
+OpenAI Agent Builder is a visual, drag-and-drop platform for creating and managing multi-step AI agent workflows without needing to write code from scratch. It uses nodes representing different functions—such as calling language models, connecting to external tools or services, adding conditional logic, data transformation, and safety guardrails—that users link together to design complex AI agents and automations.
+
+Key features include:
+- A visual canvas for building and versioning AI workflows.
+- Support for multi-agent orchestration and branching logic.
+- Integration with external or internal company tools via MCP (Managed Connector Protocol) servers instead of traditional APIs or webhooks.
+- Ability to add conditional branches (If/Else), loops, and human-in-the-loop approvals.
+- Exporting the created agent workflows as code (TypeScript/Python) for further customization.
+- Deployable through OpenAI’s ChatKit for embedding in chat applications, or standalone via SDK.
+
+Agent Builder suits both developers and non-technical users: non-coders can quickly build basic agents with drag-and-drop nodes, while developers can export and expand code. It accelerates AI agent development by simplifying workflow composition while ensuring production-ready standards with guardrails for safety, moderation, and data handling.
+
+Example use case: building a customer service agent with intent classification, conditional routing, and specialized responses with rich outputs, all visually composed and tested before deployment.
+
+In summary, OpenAI Agent Builder democratizes AI agent creation by making it fast, code-light, and flexible, supporting sophisticated AI-driven workflows that integrate seamlessly with a range of external systems.[4][5][6]
+
+[1](https://openai.com/index/introducing-agentkit/)
+[2](https://developers.openai.com/tracks/building-agents/)
+
+
+https://platform.openai.com/docs/guides/agent-builder
+
+<!-- https://www.youtube.com/watch?v=RBlHcHUvFKY -->
+
+{{< youtube "RBlHcHUvFKY" >}}
+
+
+
+
+Yes, you can embed an OpenAI Agent built with the Agent Builder using tools like the ChatKit widget or through the Agent Builder's SDK. The platform allows you to create interactive agents with customizable workflows and output formats such as widgets that can be embedded within applications or chat interfaces. However, there are some current limitations, such as incomplete support for workflows involving MCP nodes in the SDK, and the system primarily supports OpenAI models, which may influence flexibility.
+
+If you want to integrate these agents into your own product or website, you can use the provided embedding options from the Agent Builder, such as embedding interactive widgets or leveraging the SDK once it supports your desired features. Keep in mind that this technology is still evolving and some functionality may improve or expand in the near future.[1]
+
+OpenAI Agent Kit vs...n8n?
+
+<!-- https://www.youtube.com/watch?v=XeIx4S6YvGo -->
+
+{{< youtube "XeIx4S6YvGo" >}}
 
 ### Live Chats
 

@@ -75,6 +75,17 @@ docker system prune --all --volumes #release space from old containers
 #docker system prune --all --volumes #just clean all...
 ```
 
+Be aware that named volumes, which are not removed by default with docker system prune as they might contain important data.
+
+But you can have such script to clean all volumes that are not associated to a running containre. 
+
+**Just be careful:**
+
+```sh
+comm -23 <(docker volume ls -q | sort) <(docker ps --format '{{.Names}}' | xargs -I {} docker inspect --format '{{range .Mounts}}{{if .Name}}{{.Name}}
+{{end}}{{end}}' {} 2>/dev/null | sort -u) | xargs -r docker volume rm
+```
+
 ### HTTPs Everywhere
 
 When you will be confortable with containers, you will want to bring https instead of having that insecure http.

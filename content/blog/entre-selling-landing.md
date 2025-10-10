@@ -1,9 +1,9 @@
 ---
-title: "Website knowledge updates"
+title: "Website knowledge updates. Landings with AI?"
 date: 2025-10-05T10:20:21+01:00
 draft: false
 tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Komodo","Dev","BCMS vs PagesCMS"]
-description: 'New ATH for my SSG knowledge. Landing Pages that convert.'
+description: 'New ATH for my SSG knowledge. Landing Pages that convert with Codex.'
 url: 'selling-with-a-landing-website'
 ---
 
@@ -14,7 +14,15 @@ Last year I made couple of 101 guides for [HUGO](https://jalcocert.github.io/JAl
 But it was time to put cool components like this [ig gallery](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/components/InstagramGalleryLocalFolder.astro) used [on this mdxhere](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/content/property/beachfront-paradise-instagram-gallery.mdx)
 
 
++++ https://picsum.photos/ just in case you are tired of unsplash
+
 **Intro**
+
+Making a Landing should be easy already, with tools like: https://github.com/wandb/openui
+
+> OpenUI let's you describe UI using your imagination, then see it rendered live.
+
+
 
 Ok, ok, you have embraced the power of SSGs and aware of how many cool things can be done *,statically'* aka [in browser with CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/).
 
@@ -59,9 +67,24 @@ Place those youtube videos:
 
 ## Conclusions
 
+Cool landings out-there: `tydal.co`
+
 If you are building software, check: https://github.com/moghtech/komodo#screenshots
 
 > GPl3.0 |  🦎 a tool to build and deploy software on many servers 🦎 
+
+
+{{< cards cols="3" >}}
+  {{< card link="https://pagespeed.web.dev/" title="PageSpeed Insights" >}}
+  {{< card link="https://search.google.com/search-console/" title="Google Search Console" >}}
+  {{< card link="https://trends.google.es/trends/" title="Google Trends" >}}  
+{{< /cards >}}
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://www.websitecarbon.com/" title="Website Carbon Benchmark" >}}
+  {{< card link="https://web-check.xyz/" title="Web Check Tool" >}}
+{{< /cards >}}
 
 
 ---

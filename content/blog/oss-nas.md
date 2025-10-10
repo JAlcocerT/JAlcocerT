@@ -2,7 +2,7 @@
 title: "Which OS for a NAS?"
 date: 2025-03-17T21:20:21+01:00
 draft: false
-tags: ["OSS","HomeLab","Ventoy","Lite vs Garuda","Rclone","IPFS vs FileCoin"]
+tags: ["OSS","HomeLab","Ventoy","Lite vs Garuda","Rclone","IPFS vs FileCoin","corectrl"]
 description: 'Testing Operative Systems for a NAS / MiniPCs. Improving a Homelab.'
 url: 'os-for-nas'
 ---
@@ -405,6 +405,10 @@ You can also have a look to: ModSecurity, Naxsi, Open AppSec, SafeLine,...
 
 > GTK application to configure gaming devices (Like a logitech mouse!)
 
+See also https://github.com/pwr-Solaar/Solaar
+
+> Linux device manager for Logitech devices
+
 3. https://gitlab.com/corectrl/corectrl
 
 > Profile based **system control utility**
@@ -416,9 +420,7 @@ sudo apt install corectrl
 ![CoreCTL](/blog_img/hardware/energy/corectl.png)
 
 
-
 {{% details title="Setup Nextcloud, Photo Tools" closed="true" %}}
-
 
 ```sh
 curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Selfhosting_101.sh 

@@ -354,9 +354,11 @@ firebase deploy #you will get something like -> https://jalcocertech.web.app/
   {{< card link="https://search.google.com/search-console/" title="Google Search Console" >}}
   {{< card link="https://trends.google.es/trends/" title="Google Trends" >}}  
 {{< /cards >}}
+
 {{< cards cols="1" >}}
   {{< card link="https://www.websitecarbon.com/" title="Website Carbon Benchmark" >}}
 {{< /cards >}}
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/Lissy93/web-check" title="Web Check - GitHub" >}}
   {{< card link="https://web-check.xyz/" title="Web Check Tool" >}}
