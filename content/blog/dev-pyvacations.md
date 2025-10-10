@@ -1,16 +1,16 @@
 ---
 title: "Vacations with Python"
-date: 2026-12-31T23:20:21+01:00
-draft: true
-tags: ["Dev","PyVacations","NomadList","Numbeo"]
-summary: 'Where am I going next?'
+date: 2025-10-10T23:20:21+01:00
+draft: false
+tags: ["Django","PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs","Scrap"]
+summary: 'Where am I going next? With Vibe Planning.'
 url: 'py-vacations'
 ---
 
 
 **Tl;DR**
 
-You should probably know the WHY you are going first.
+You should probably know the WHY you are going somewhere first.
 
 This will just reply to the where/how.
 
@@ -18,6 +18,13 @@ This will just reply to the where/how.
 **Intro**
 
 Following the TripPlanner, I thought that bringing cost of living data was a good idea.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/AI_Gen/trip-planner" title="Trip Planner Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT" title="Trip-Planner Repo ↗" >}}
+{{< /cards >}}
+
+For the cost of living data, we can take online info...
 
 Because weather and cost is all that matter, right?
 

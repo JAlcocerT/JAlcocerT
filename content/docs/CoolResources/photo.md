@@ -24,6 +24,14 @@ sudo add-apt-repository universe
 sudo apt install dupeguru-se
 ```
 
+{{% details title="How to check for duplicate images - dupeGuru" closed="true" %}}
+
+```sh
+sudo apt install dupeguru
+```
+
+{{% /details %}} 
+
 4. Upscayl
 
 For background removal, try...

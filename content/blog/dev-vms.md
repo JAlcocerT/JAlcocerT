@@ -67,9 +67,7 @@ nix-env -u
 
 ---
 
-## Conclusions
-
-
+## Outro
 
 ### Interesting Stuff Regarding Emulation
 

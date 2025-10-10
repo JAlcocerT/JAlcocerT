@@ -259,8 +259,6 @@ networks:
 
 ### Maintainance in Linux
 
-
-
 1. https://github.com/oguzhaninan/Stacer
 
 > GPL 3.0 |  Linux System Optimizer and Monitoring - https://oguzhaninan.github.io/Stacer-Web 
@@ -305,7 +303,13 @@ You can try with: Syncthing, Nextcloud, WebDav...
 
 ## Conclusions
 
-If you need UI to mange your server, but wont use it too much, Linux Lite and the ~600mb ram consumption is a great option.
+If you need UI to mange your server, but wont use it too much, **Linux Lite and the ~600mb ram consumption** is a great option.
+
+You can try any other OS with [virtualization](https://jalcocert.github.io/JAlcocerT/testing-nix-os/)
+
+{{< youtube "hTw9DBEksx4" >}}
+
+![Termux S6 Lite](/blog_img/outro/termux-s6lite.png)
 
 To get the power of arch btw, plus its complexity and a very cool UI, go for Garuda.
 
@@ -411,13 +415,7 @@ sudo apt install corectrl
 
 ![CoreCTL](/blog_img/hardware/energy/corectl.png)
 
-{{% details title="How to check for duplicate images - dupeGuru" closed="true" %}}
 
-```sh
-sudo apt install dupeguru
-```
-
-{{% /details %}} 
 
 {{% details title="Setup Nextcloud, Photo Tools" closed="true" %}}
 
@@ -477,7 +475,7 @@ dpkg --print-architecture #ARM will tend to be more power efficient than x86
 
 ### Decentralized Storage
 
-* Centralization: Simplicity and Single Point of Failure
+Centralization: Simplicity and Single Point of Failure
 
 * Some alternatives:
   * [IPFS](https://ipfs.tech/) -  an open system to manage data without a central server

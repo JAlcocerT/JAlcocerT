@@ -3,12 +3,14 @@ title: "Matlab or Octave?"
 date: 2023-11-22T19:20:21+01:00
 draft: false
 tags: ["Engineering","Simulations"]
-description: Matlab, the m language and simulations
+description: "Matlab, the m language and simulations."
 url: matlab-vs-octave
 ---
 
 
 **TL;DR**
+
+It's all about the m language (not the M one from PowerBI).
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Bike_dynamic_simulator" title="Bicycle Dynamic Simulator Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Matlab powered real time simulation - Source Code on Github" >}}
@@ -63,7 +65,9 @@ Its community-driven nature means that new features and bug fixes are developed 
 
 ### The M Language
 
-The **M-language** is the core programming language used in both MATLAB and Octave. It's a high-level, interpreted language that is a multi-paradigm language. 
+The **M-language** is the core programming language used in both MATLAB and Octave. 
+
+It's a high-level, **interpreted language** that is a multi-paradigm language. 
 
 This means it supports different programming styles like procedural, functional, and object-oriented programming.
 
@@ -79,12 +83,16 @@ Yes, the M-language is a **full programming language**. Like Python, it includes
 * **Object-oriented programming (OOP):** The ability to create classes and objects.
 * **Input/Output:** Functions for reading from and writing to files.
 
-While it is a full language, its primary strength lies in **numerical computation and technical computing**, which is where it truly excels and differs from a general-purpose language like Python. Python, on the other hand, is a general-purpose language with a vast ecosystem of libraries for everything from web development to data science, making it more versatile for a broader range of applications.
+While it is a full language, its primary strength lies in **numerical computation and technical computing**, which is where it truly excels and differs from a general-purpose language like Python. 
+
+Python, on the other hand, is a general-purpose language with a vast ecosystem of libraries for everything from web development to data science, making it more versatile for a broader range of applications.
 
 
 ### Can you do simulations?
 
-Yes, both MATLAB and Octave are **excellent for simulations**. This is one of their main applications in science and engineering. They are widely used to model and simulate physical systems and complex algorithms.
+Yes, both MATLAB and Octave are **excellent for simulations**. This is one of their main applications in science and engineering. 
+
+They are widely used to model and simulate physical systems and complex algorithms.
 
 A key reason for this is their built-in support for:
 
@@ -92,7 +100,9 @@ A key reason for this is their built-in support for:
 * **Matrix and vector operations:** These are essential for the mathematical calculations involved in most simulations.
 * **Data visualization:** You can easily plot and visualize simulation results in 2D and 3D, which is crucial for analyzing and understanding the system's behavior.
 
-MATLAB has a companion product called **Simulink**, which is a graphical, block-diagram environment specifically for multi-domain simulation and Model-Based Design. While Octave doesn't have an equivalent to Simulink, it can still perform a wide range of simulations using its core language features and available packages.
+MATLAB has a companion product called **Simulink**, which is a graphical, block-diagram environment specifically for multi-domain simulation and Model-Based Design. 
+
+While Octave doesn't have an equivalent to Simulink, it can still perform a wide range of simulations using its core language features and available packages.
 
 ---
 

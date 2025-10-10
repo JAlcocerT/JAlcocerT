@@ -116,13 +116,17 @@ npx slidev export --format pptx --output my-presentation.pptx
 npx slidev export --format pptx --range 1-5,8,10-12
 ```
 
-or
+or to pdf:
 
 ```sh
 #npx playwright install
 npx slidev export --format pdf
 npx slidev export --format pdf --range 1-5,8,10-12
 ```
+
+> Remember about `http://localhost:3030/overview/` or `/exporter`
+
+![Slidev Exporter UI](/blog_img/data-experiments/slidev-exporter.png)
 
 The discussion about **REST APIs** is a critical part of how these systems handle data and integrate with the outside world.
 
