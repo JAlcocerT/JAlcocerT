@@ -591,7 +591,7 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 {{< /cards >}}
 
 - [ ] Better Webs
-- [x] Better AI APIs Usage
+- [x] Better AI APIs Usage: APIFY, 
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
@@ -605,9 +605,9 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 Last year I set this as a goal.
 
-What exactly were those **24 tech videos** to make AI, automation and D&A more accesible: [x]
+What exactly were those **x24 tech videos** to make AI, automation and D&A more accesible: [x]
 
-Along the way, Ive made my life easier by based the video content on a simpler NEW repo: https://github.com/JAlcocerT/Home-Lab
+Along the way, Ive made my life easier by based the video content on a **simpler NEW repo**: https://github.com/JAlcocerT/Home-Lab 
 
 1. [Cloudflare Tunnels](https://www.youtube.com/watch?v=k75PviBQeA0)
 2. [OpenAI API Tricks](https://www.youtube.com/watch?v=Yihsci3QcfI)
@@ -617,25 +617,32 @@ Along the way, Ive made my life easier by based the video content on a simpler N
 6. [JHub](https://youtu.be/VEOyKhgat2Q)
 7. [Metabase](https://youtu.be/eCplQYrvabk) (BI)
 8. [Grafana](https://youtu.be/Uq5tZv6T3ko) (BI)
-9. Kibana (BI) and ES 
-10. [SelfHosted Streamlit Apps](https://youtu.be/p7U24YSFrW4)
-11. FileBrowser
-12. PiGallery
+9. [N8N](https://youtu.be/v-gCNTI5kzE)
+10. [SelfHosted Streamlit Apps](https://youtu.be/p7U24YSFrW4) *together with Pocketbase for auth*
+11. SFTPGo vs FileBrowser
+12. [FastAPI](https://youtu.be/YcCR8JUlhMo) + OpenAI Audio
 13. Photoview
 14. Immich
-15. RGallery
-16. 
-17. 
-18. Umami 
-19. 
+15. RGallery vs PiGallery
+16. [Uptime Kuma](https://youtu.be/fxVNTffZC2U) for status pages
+17. [selfhosted ebook landing](https://youtu.be/XEFpzEIEDFc) page with astro
+18. Umami  for web analytics
+19. [Home Assistant](https://youtu.be/8XUydWbwBjk)
 20. [n8n + CF tunnels](https://youtu.be/v-gCNTI5kzE)
-21. 
+21. [Selfhosting FreshRSS](https://youtu.be/mDMGtMOx-Fk) + astro podcast website
 22. [MQTT and DHT22 + Home Assistant](https://youtu.be/8XUydWbwBjk)
 23. [Nextcloud and a Pi](https://youtu.be/x2eFFeRIyXg)
 24. Ventoy. [Linux Lite vs Garuda RAM consumption](https://youtu.be/hTw9DBEksx4)
 
+> I had to make sure to create proper thumbnails to get some views
 
-If this was too much content, you can always use a LLMs to summarize the YT Videos, like these ones:
+> > Canva and https://selfh.st/icons/ helped a lot [see repo](https://github.com/selfhst/icons?ref=selfh.st)
+
+If this was too much content, you can always use a LLMs to summarize the YT Videos.
+
+Like these ones: *or just use perplexity*
+
+{{% details title="Share and Connect 🌍" closed="true" %}}
 
 * https://github.com/jkawamoto/mcp-youtube-transcript
 
@@ -647,23 +654,17 @@ If this was too much content, you can always use a LLMs to summarize the YT Vide
 
 > MIT | ⚡ A lightweight, self-hosted YouTube video summarizer with Gemini AI
 
+{{% /details %}}
+
 It was a year of a lot of applied AI...
+
+and understanding many concepts, like langflow, [langgraph](https://github.com/von-development/awesome-LangGraph)
+
 
 * https://platform.openai.com/docs/models
     * https://platform.openai.com/chat/edit?models=o1
 
-20. N8N
-21. ChatWoot
-22. LangFlow
-
-23. https://github.com/von-development/awesome-LangGraph
-
-* https://langchain-ai.github.io/langgraph/#
-
-
-24. 
-
-....
+The CLI agents have been a great part of this 2025:
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
@@ -673,6 +674,7 @@ It was a year of a lot of applied AI...
 
 1. Using LangChain to chat with a DB
 2. Real Estate RAG
+3. Vibe Coding a WebApp to make SliDev PPTs BA friendly
 
 #### Other Videos
 

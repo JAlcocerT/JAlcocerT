@@ -24,7 +24,6 @@ But just in case you dont want to mess with databases, lets see some other Fileb
 
 > Yea, im kind of alergic to DBs for HomeLab setups
 
-
 ## Files Files Files
 
 And I saw few projects lately to see files:
@@ -34,7 +33,7 @@ And I saw few projects lately to see files:
 > Web based File Explorer 
 
 
-If you dont want Nextcloud nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
+If you dont want **Nextcloud** nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
 
 ```sh
 docker exec -it <your-nextcloud-container-name> rm /var/www/html/config/config.php

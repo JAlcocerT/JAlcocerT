@@ -30,7 +30,7 @@ These should be **some familiar RAG frameworks** so far:
 We will also see some [*trendy* AI tools](#conclusions) that work with RAGs as well:
 
 * [MLFlow](#mlflow) - For observability (from ML to AI)
-* [LangGraph](#langgraph-bigtool) - Programatic agents workflows
+* [LangGraph](#langgraph-bigtool) - Programatic agents workflows. See the [docs](https://langchain-ai.github.io/langgraph/#)
 * [LangFlow](#langflow) - Low code environment to build AI Apps ~ Flwise
 * [LangFuse](#langfuse) - Observability for AI ~LangSmith but MIT
 
