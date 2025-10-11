@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - Oct 2025"
-date: 2025-10-25T01:20:21+01:00
+date: 2025-10-18T01:20:21+01:00
 draft: false
 tags: ["SFTPGo x Syncthing","WebDav","File Sync Tools","P2P Recap","XMRig Benchmark"]
 description: 'Best tools for organizing homelab files.'
@@ -98,7 +98,11 @@ If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.
 And if you have read the recent [Crypto with AI](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) post, you can see how people get creative and benchmark based on crypto mining performance: https://xmrig.com/benchmark
 
 
-[Some people](https://www.reddit.com/r/MoneroMining/comments/p3bzzb/is_it_worth_to_mine_xmr/) also use it for mining, but it wont pay off when taking into cosideration the electricity costs:
+[Some people](https://www.reddit.com/r/MoneroMining/comments/p3bzzb/is_it_worth_to_mine_xmr/) also use it for mining.
+
+But it wont pay off when taking into cosideration the electricity costs.
+
+Anyways, you can do a quick **XMR benchmark** on your mini PC:
 
 * https://github.com/xmrig/xmrig
 

@@ -601,9 +601,9 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
 {{< /cards >}}
 
-- [ ] [x24 Tech Videos](#creating-tech-videos)
+- [x] [x24 Tech Videos](#creating-tech-videos)
 
-> Overkill. I also started [this](https://www.youtube.com/@UnfoldingData/shorts) and [this](https://www.youtube.com/@BeyondAJourney)
+I also tried [this](https://www.youtube.com/@UnfoldingData/shorts) and [this](https://www.youtube.com/@BeyondAJourney)
 
 ### Creating Tech Videos
 
@@ -697,7 +697,7 @@ The TTS capabilities from these were also useful:
 
 I also got to know about: https://echarts.apache.org/en/index.html
 
-3. Python powered YT Shorts - @UnfoldingData (PyFinance related via Matplotlib Animations)
+3. Python powered YT Shorts - `@UnfoldingData` (PyFinance related via Matplotlib Animations)
 3. RemotionJS / Animation powered
 
 ### Travel
@@ -739,6 +739,8 @@ With too many options: Repliit lovable windsurf cursor bolt...
 
 ##### AI Stuff
 
+https://aistudio.google.com/prompts/new_chat
+
 * https://github.com/browser-use/browser-use
 
 > MIT |  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
@@ -748,6 +750,10 @@ With too many options: Repliit lovable windsurf cursor bolt...
 * https://github.com/agno-agi/agno
 
 > MPL2 | Full-stack framework for building Multi-Agent Systems with memory, knowledge and reasoning.
+
+* https://github.com/bytebot-ai/bytebot
+
+>  Bytebot is a self-hosted AI desktop agent that automates computer tasks through natural language commands, operating within a containerized Linux desktop environment. 
 
 You can make interesting conditional logic, like: *If scrap fails, send msg to telegram bot*
 
@@ -1422,6 +1428,8 @@ https://www.randomgarage.com
 
 * <https://Selfhosted.show>
 * <https://selfh.st/>
+
+6. Keep writting, but less and more quality
 
 
 #### Stop Doing

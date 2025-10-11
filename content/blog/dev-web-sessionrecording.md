@@ -88,9 +88,14 @@ Matomo - it has session recording in the on premise option, but is to be paid fo
 
 ### Astuto
 
-https://astuto.io/?ref=selfh.st
+If after all, you want to get a mechanism to get feedback from clients:
+
+* https://astuto.io/
+  * 
 
 > The open source tool to understand your customers and build a better product
+
+---
 
 ## Conclusions
 

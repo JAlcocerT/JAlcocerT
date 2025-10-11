@@ -2,8 +2,8 @@
 title: "A closer look to DataBricks"
 date: 2024-06-10
 draft: false
-tags: ["Dev", "Career", "D&A","PySpark"]
-description: 'Databricks for D&A Big Data.'
+tags: ["D&A", "Career", "D&A","Python vs PySpark"]
+description: 'Using Databricks Community Edition for D&A Big Data.'
 url: 'understanding-databricks'
 ---
 
@@ -14,7 +14,7 @@ You will hear a lot about databricks nowadays.
 Its one datalakehouse platform, where you can run [Spark](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/) to do big data processing.
 
 {{< callout type="warning" >}}
-This Post is **WIP**
+Signup into: https://community.cloud.databricks.com/login.html
 {{< /callout >}}
 
 
@@ -28,10 +28,8 @@ This Post is **WIP**
 ![Register on DataBricks](/blog_img/DA/DataBricks-Registr.png)
 
 
-{{< details title="The Data Catalogue 📌" closed="true" >}}
+{{< details title="Recap your python / Pyspark 📌" closed="true" >}}
 
-
-{{< /details >}}
 
 ```py
 from tabulate import tabulate
@@ -53,6 +51,9 @@ print(tabulate(data, headers=headers))
 print("\n--- Markdown Table ---")
 print(tabulate(data, headers=headers, tablefmt="pipe"))
 ```
+
+{{< /details >}}
+
 
 > The library also offers many options for customizing alignment, number formatting, and handling missing values, making it a flexible and powerful tool for data presentation.
 

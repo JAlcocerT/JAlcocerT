@@ -217,6 +217,14 @@ People use that one for some contact forms, as seen on [this post section](https
 
 * https://resend.com/signup
 
+## Email for Marketing
+
+I was writting about marketing some time back.
+
+In the meantime, saw: https://github.com/aaPanel/BillionMail
+
+> agpl v3.0 |  BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees.  
+
 ---
 
 ## Conclusions
