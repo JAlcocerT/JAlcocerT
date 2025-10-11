@@ -15,6 +15,8 @@ https://lukesmith.xyz/articles/modern-freedom-means-being-a-slave-to-impulses/
 https://lukesmith.xyz/articles/monero-and-other-privacy-coins/
 https://lukesmith.xyz/articles/politics-matters-most-to-slaves/
 
+https://danluu.com/
+
 minimalist web
 independent web
 

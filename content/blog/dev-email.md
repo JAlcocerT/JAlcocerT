@@ -2,10 +2,12 @@
 title: "SMTP and email stuff"
 date: 2025-10-18
 draft: false
-tags: ["HomeLab","MailTrap","Mailgun","Amazon SES","GrowChief"]
+tags: ["HomeLab","MailTrap","Mailgun","Amazon SES","GrowChief","mailersend"]
 description: 'Email is hard. Social Media OutReach, is not.'
 url: 'emails-101'
 ---
+
+https://www.mailersend.com/
 
 **TL;DR**
 
@@ -13,7 +15,7 @@ https://mxroute.com/
 
 SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better
 
-This does not work anymore: https://github.com/umuterturk/email-verifier
+Unfortunately, [This](https://github.com/umuterturk/email-verifier) does not work anymore: https://github.com/umuterturk/email-verifier
 
 **Intro**
 

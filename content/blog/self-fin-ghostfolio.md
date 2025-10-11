@@ -1,6 +1,6 @@
 ---
 title: "GhostFolio and more for inspiration"
-date: 2025-10-11T08:20:21+01:00
+date: 2025-10-17T08:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/ghostfolio/ghostfolio/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"

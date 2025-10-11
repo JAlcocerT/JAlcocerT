@@ -2,11 +2,19 @@
 title: "Take a Break - Gaming with OSS"
 date: 2026-12-23T23:20:21+01:00
 draft: true
-tags: ["Self-Hosting"]
+tags: ["Self-Hosting","Emulation","Nintendo"]
 description: '.'
 summary: 'The , my new toy.'
 url: 'open-source-gaming'
 ---
+
+Some people shared: Pero qué pedazo de página es esta???? Usadla con moderación
+
+https://forocoches.com/foro/showthread.php?t=9304425
+
+There were some online gaming in it
+
+**Intro**
 
 Overtime, I have covered many different topics.
 

@@ -36,3 +36,6 @@ So, how much will you have to ask to stay as you started the year?
 > Looks like inflation was there before *the experts* informing :)
 
 There is an API: https://inflationchart.com/api
+
+In real life, as per [this post](https://forocoches.com/foro/showthread.php?t=10479839), a menu has gone up from ~8 to ~14.
+

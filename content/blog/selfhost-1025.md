@@ -49,6 +49,13 @@ flatpak install flathub org.localsend.localsend_app
 ##ps aux --sort=-%mem | grep localsend
 ```
 
+With local send I got 4MB/s transfer speed from an iphone to a tablet.
+
+Would SCP or FTP be faster?
+
+![alt text](/blog_img/selfh/HomeLab/scp.png)
+
+![alt text](/blog_img/selfh/HomeLab/sftp.png)
 
 ### Syncthing x SFTPGo
 
@@ -91,7 +98,7 @@ If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.
 And if you have read the recent [Crypto with AI](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) post, you can see how people get creative and benchmark based on crypto mining performance: https://xmrig.com/benchmark
 
 
-Some people also use it for mining, but it wont pay off when taking into cosideration the electricity costs:
+[Some people](https://www.reddit.com/r/MoneroMining/comments/p3bzzb/is_it_worth_to_mine_xmr/) also use it for mining, but it wont pay off when taking into cosideration the electricity costs:
 
 * https://github.com/xmrig/xmrig
 

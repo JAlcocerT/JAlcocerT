@@ -3,7 +3,7 @@ title: "Website knowledge updates. Landings with AI?"
 date: 2025-10-05T10:20:21+01:00
 draft: false
 tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Komodo","Dev","BCMS vs PagesCMS"]
-description: 'New ATH for my SSG knowledge. Landing Pages that convert with Codex.'
+description: 'New ATH for my SSG knowledge. Landing Pages that convert with Codex for idea validation'
 url: 'selling-with-a-landing-website'
 ---
 
@@ -13,7 +13,7 @@ Last year I made couple of 101 guides for [HUGO](https://jalcocert.github.io/JAl
 
 But it was time to put cool components like this [ig gallery](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/components/InstagramGalleryLocalFolder.astro) used [on this mdxhere](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/content/property/beachfront-paradise-instagram-gallery.mdx)
 
-
++++ People shared on reddit their [favourite minimalistic sites](https://www.reddit.com/r/webdev/comments/1gh38fz/whats_your_favorite_very_minimal_personal_website/)
 +++ https://picsum.photos/ just in case you are tired of unsplash
 
 **Intro**
@@ -67,11 +67,84 @@ Place those youtube videos:
 
 ## Conclusions
 
-Cool landings out-there: `tydal.co`
+Cool landings out-there: *these should be guiding slubnechwile.com.
 
-If you are building software, check: https://github.com/moghtech/komodo#screenshots
+Get a cool theme: https://www.builtatlightspeed.com/category/astro or from astro themes
 
-> GPl3.0 |  🦎 a tool to build and deploy software on many servers 🦎 
+1. `tydal.co`
+
+2. `https://esim.holafly.com/` - landing with a very clear header
+
+3. `purplepalm.ai` created [here](https://forocoches.com/foro/showthread.php?t=10455640&page=4) 
+
+Resumen de los 3 puntos clave de emprendimiento:
+
+1. **El marketing es más importante que la tecnología usada.** No pienses que un producto “molón” se venderá solo; a la empresa solo le importa que soluciones un problema real, sin importar cómo lo hagas (IA, Excel, etc.). Enfócate en B2B, ya que las empresas están más dispuestas a pagar por soluciones que resuelvan problemas concretos.
+
+2. **Detecta un problema real.** Usa tu red de contactos y experiencia para identificar auténticas necesidades en empresas y luego dedícate a resolverlas, sin obsesionarte con la tecnología elegida.
+
+3. **Valida la idea antes de programar o desarrollar nada.** Antes de ponerte a construir, crea una página de espera (waitlist) y comprueba si realmente hay interés (por ejemplo, recolectando correos de potenciales clientes). Solo si ves interés real, desarrolla la solución; si no, repite el proceso buscando otros problemas. Puedes hacer una pequeña demo simple con IA si es útil, pero manteniendo lo más básico posible.
+
+> Which are inline with the BiP Recommendations from [product hunt, here](https://www.producthunt.com/products/build-in-public-cheatsheet?launch=build-in-public-cheatsheet) from [reddit](https://www.reddit.com/r/SaaS/comments/n42n8r/the_build_in_public_cheatsheet_how_people_go_from/)
+
+Los puntos nuevos que aporta el post “Build In Public Cheatsheet” en Product Hunt son:
+
+- **El enfoque consiste en compartir de forma transparente el desarrollo y el progreso de tu proyecto:** La idea es que construir en público no es solo marketing, sino crear una relación con potenciales usuarios y obtener feedback real durante todo el proceso.
+
+- **Proporciona una lista práctica de tipos de publicaciones** que puedes hacer durante tu viaje de “build in public”: Ejemplos concretos como tuits, capturas de pantalla, avances, errores y aprendizajes.
+
+- **Incluye una lista pública de otros emprendedores que construyen en público** y la opción de unirte a esa comunidad, facilitando networking y visibilidad.
+
+- **Ofrece un tablero(pipeline) para planificar el viaje “Build in Public”**, permitiéndote organizar tus anuncios, lanzamientos y experimentos públicamente.
+
+- **Enumera principios y buenas prácticas clave para construir en público**, ayudando a tener un marco ético y estratégico en tu comunicación.
+
+- **Recomienda herramientas útiles para el proceso**, para facilitar desde publicación hasta análisis y seguimiento de comunidad.
+
+- **El objetivo final es convertir la cheatsheet en un handbook más completo** basado en experiencia real y colectiva, con espacio para feedback y mejora constante por parte de los usuarios.
+
+Esto añade elementos de comunidad, planificación estructurada y repertorio específico de acciones y herramientas al enfoque estándar de validar ideas y captar demanda antes de construir.[1]
+
+La comunidad de Reddit en r/SaaS, en general, coincide con los enfoques de la cheatsheet “Build In Public” y las recomendaciones de validar una idea antes de desarrollarla. Los usuarios destacan estos puntos adicionales:
+
+- **Validación real:** Recomiendan aprovechar la construcción en público no solo como marketing, sino como vía para obtener feedback genuino y rápido de la comunidad sobre el producto y sus características.[1]
+- **Tipos de publicaciones útiles:** Compartir avances, errores, aprendizajes y ejemplos reales (tweets, capturas de pantalla, demos) ayuda tanto a validar ideas como a captar seguidores o potenciales usuarios.[1]
+- **Herramientas y organización:** Se valora contar con una plantilla o board para planificar qué compartir públicamente y tener muy claro el objetivo de cada comunicación.
+- **Contribución de la comunidad:** Algunos comentarios sugieren personalizar la cheatsheet, compartir ideas de mejora y usar el repositorio como un espacio para sumar prácticas eficaces.
+- **Cuidado con el “eco-chamber”:** Algunos advierten del riesgo de obtener feedback solo de la comunidad builder/tech (ejemplo: Twitter, IndieHackers, Reddit) y no del público objetivo real del producto, por lo que insisten en no perder el foco en los auténticos clientes.[2]
+
+En resumen, hay consenso sobre la utilidad de construir en público para tener feedback temprano, pero se recalca la importancia de hacerlo con propósito y orientar la validación hacia el público objetivo, no solo hacia otros emprendedores o comunidades tech. Esto agrega matices a la estrategia y refuerza lo aprendido en los recursos previos.[2][1]
+
+[1](https://www.reddit.com/r/SaaS/comments/n42n8r/the_build_in_public_cheatsheet_how_people_go_from/)
+[2](https://www.reddit.com/r/SaaS/comments/1l26yu8/dont_build_in_public_its_killing_your_startup_and/)
+[3](https://www.reddit.com/r/developersIndia/comments/1hsmd13/whats_the_build_in_public_scenes_i_am_posting_on_x/)
+[4](https://www.reddit.com/r/SaaS/comments/1levhf2/building_in_public_isnt_a_good_idea_heres_my/)
+[5](https://www.reddit.com/r/startups/comments/rs850b/how_do_i_actually_build_in_public/)
+[6](https://www.scribd.com/document/432955800/Top-Reddit-Threads-Cheat-Sheet)
+[7](https://www.reddit.com/r/indiehackers/comments/1hcrick/best_way_to_build_in_public/)
+[8](https://www.reddit.com/r/SideProject/comments/1gwi349/i_made_20k_in_2_months_by_building_in_public_on_x/)
+[9](https://www.reddit.com/r/Entrepreneur/comments/123c67j/any_tips_for_building_in_public/)
+[10](https://www.reddit.com/r/SaaS/comments/si9rqi/how_to_build_in_public/)
+[11](https://www.reddit.com/r/SideProject/comments/1mxdrgk/build_in_public_day_1365_from_0_to_100k/)
+[12](https://www.reddit.com/r/SaaS/comments/zzb5b2/thoughts_on_building_in_public_on_twitter/)
+[13](https://www.reddit.com/r/SaaS/comments/1fy9shs/whats_the_best_strategy_to_build_community_around/)
+[14](https://www.reddit.com/r/productivity/comments/1l53wli/i_summarized_top_reddit_selfhelp_posts_this_is/)
+[15](https://www.reddit.com/r/ChatGPT/comments/10cgdcz/a_listcheat_sheet_with_lots_and_lots_of_prompts/)
+[16](https://www.reddit.com/r/SaaS/comments/1f0z5bc/why_you_should_build_in_public_as_a_small_founder/)
+[17](https://www.reddit.com/r/SaaS/comments/1k06lue/build_in_public_what_are_you_working_on/)
+[18](https://www.reddit.com/r/SideProject/comments/1goijjv/thought_building_in_public_would_be_cool_until/)
+[19](https://www.reddit.com/r/SaaS/comments/1dndfj3/is_building_in_public_worth_the_hype/)
+[20](https://www.reddit.com/r/SideProject/comments/1gst45g/i_made_a_directory_of_people_who_build_in_public/)
+
+### Example TinyHost
+
+I got to know a very cool SaaS on twitter:
+
+
+* https://tiiny.host/#pricing
+
+
+
 
 
 {{< cards cols="3" >}}

@@ -72,3 +72,40 @@ https://diagrams.mingrammer.com/docs/getting-started/examples
 
 1. https://gitbrent.github.io/PptxGenJS/demos/ 
 2. 
+
+
+The most common and effective ways to create presentations "as code" (programmatically or using text-based formats) involve libraries and tools categorized by the language/format they use.
+
+The primary categories and popular tools are:
+
+1. Programming Libraries (Code-First)
+
+These tools use native language syntax to build the presentation object by object, offering the most granular control.
+
+| Language | Tool / Library | Key Feature |
+| :--- | :--- | :--- |
+| **Python** 🐍 | **`python-pptx`** | The industry standard for programmatically generating or modifying standard Microsoft PowerPoint (`.pptx`) files. |
+| **JavaScript/Node.js** 💻 | **`PptxGenJS`** | Excellent for creating `.pptx` files directly from web applications (browser) or server-side scripts (Node.js). |
+| **Go (Golang)** 🐹 | **`unioffice`** | A pure Go library for working with all Office Open XML documents, including `.pptx`. |
+| **Ruby** ♦️ | **`ruby-powerpoint`** | Allows manipulation and generation of PowerPoint presentations in Ruby. |
+| **Java** ☕ | **Apache POI** | A popular API used to create and maintain other file formats based on Office Open XML (OOXML) or Microsoft's OLE2, including a component for PowerPoint (`.pptx`). |
+
+
+2. Markdown/YAML Tools (Text-First)
+
+These tools allow you to write content in a simplified markup language (like Markdown) and then render or convert it into a presentation format. They prioritize content and speed over complex design.
+
+| Tool | Format | Output/Target |
+| :--- | :--- | :--- |
+| **Slidev** | Markdown, YAML | Generates **HTML slides** (often used for technical talks), offering live coding and theming. |
+| **Marp** | Markdown | Generates **HTML/PDF/PPTX** slides from Markdown, using CSS and custom themes for styling. |
+| **reveal.js** | HTML, Markdown | A robust framework for creating interactive, browser-based HTML presentations. Many tools (like Pandoc) can output to this format. |
+| **Pandoc** | Markdown, LaTeX | The universal document converter. It can convert Markdown to various formats, including $\LaTeX$-based Beamer slides or even HTML for reveal.js. |
+| **Beamer** | $\LaTeX$ | A specialized $\LaTeX$ document class used to create high-quality, scientifically styled **PDF presentations**. |
+
+3. Web Frameworks (UI/Data-First)
+
+While not strictly "code-as-PPT," these modern tools use code and data to generate web-based presentations that are often exported to PDF or HTML.
+
+* **Observable Plot/Vega-Lite** + **Static Site Generator (e.g., Gatsby, Next.js):** Allows you to generate highly dynamic, data-driven slides using JavaScript/React and modern visualization code.
+* **Quarto:** An open-source scientific and technical publishing system (successor to R Markdown) that can output beautiful presentations (Reveal.js, Beamer, Powerpoint) directly from notebooks containing code and Markdown.

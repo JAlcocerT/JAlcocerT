@@ -149,7 +149,7 @@ docker stop $(docker ps -a -q) #stop all
 **How is your site doing?**
 
 1. `https://lp.similarweb.com/brand-2/`
-2. https://docs.serpbear.com/deployment/deploying-to-elestio-1-click
+2. https://docs.serpbear.com/deployment/deploying-to-elestio-1-click 
 
 
 You need a CRM?

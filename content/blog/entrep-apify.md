@@ -2,10 +2,25 @@
 title: "BiP with APIFY"
 date: 2025-10-18T09:20:21+01:00
 draft: false
-tags: ["APIFY","Reddit","Coding for Entrepreneurs"]
+tags: ["APIFY","Reddit vs forocoches","Coding for Entrepreneurs","RSS"]
 description: ' 🤯'
 url: 'apify'
 ---
+
+
+## Reddit
+
+## Forocoches
+
+Imagine saving interesting posts and commenting automatically:
+
+1. [Abuelos holders](https://forocoches.com/foro/showthread.php?p=502309006#post502309006)
+2. [Carteras](https://forocoches.com/foro/showthread.php?t=10385036)
+
+Cool infographics inspirations:
+
+1. https://forocoches.com/foro/showthread.php?t=10455900&page=45
+2. https://forocoches.com/foro/showthread.php?t=10455900&page=37
 
 
 

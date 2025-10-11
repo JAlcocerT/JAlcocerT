@@ -13,6 +13,8 @@ Coming from https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
 
 I got that domain!
 
+Lets go with that wedding v2.
+
 ![Slubnechwile domain porkbun](/blog_img/web/porkbun-slubne.png)
 
 ```sh
@@ -176,7 +178,11 @@ This is a common, practical pattern used in production apps for secure, scalable
 
 ## Conclusions
 
+See how the competition is doing:
 
+1. https://planning.wedding/
+2. wedibox.com
+3. waldophotos.com
 
 ---
 

@@ -2,21 +2,31 @@
 title: "Crypto. Now understandable with AI"
 date: 2025-07-23
 draft: false
-tags: ["AI","Aave v3 / Fluid / Compund","QuickSwap / UniSwap","Trilema"]
+tags: ["AI and DeFi","Aave v3 / Fluid / Compund","QuickSwap / UniSwap","Trilema"]
 description: 'Two buzz words in one. Understand crypto once and for all. Now with LLMs'
 url: 'understading-crypto-with-ai'
 ---
 
 
-**Tl;DR** Consolidating [crypto **resources**](#crypto-resources) and how to understand them better with LLMs.
+**Tl;DR** 
 
-+++ [Playing with Defi](#conclusions) protocols
+Consolidating [crypto **resources**](#crypto-resources) and how to understand them better with LLMs.
+
++++ [Playing with Defi](#conclusions) protocols and tokens like [USDT](https://coinmarketcap.com/currencies/tether/)
+
+![alt text](/blog_img/crypto/usdt-marketcap.png)
 
 **Intro**
 
 Here we go again...
 
 Since last year, crypto *seems to* be back again.
+
+For some in reddit, crypto has been there for some time. 
+
+There are those who talk [about a 21btc dream](https://www.reddit.com/r/Bitcoin/comments/a7xwp2/the_21_bitcoin_dream/), which todays sounds unreachable.
+
+Others, even dare to model the future, like with a stock to model to predict the price: see [this](https://charts.bitbo.io/stock-to-flow/) and [this](https://www.bitcoinmagazinepro.com/charts/stock-to-flow-model/)
 
 {{< callout type="warning" >}}
 This post is just describing the process to apply data analytics with crypto. **This is NOT a recommendation or financial advice of any type.**
@@ -313,7 +323,7 @@ Because...[why not!](#conclusions)
   * [ETHScan](https://etherscan.io/)
   * [Solscan](https://solscan.io/)
   * [PolygonScan](https://polygonscan.com/)
-  * https://aavescan.com/ethereum-v3/usdc 
+  * https://aavescan.com/ethereum-v3/usdc with [these historical rates](https://defillama.com/yields/pool/aa70268e-4b52-42bf-a116-608b370f9501)
   * https://btcscan.org/
   * https://bitcoinexplorer.org/
     * https://github.com/janoside/btc-rpc-explorer
@@ -330,18 +340,22 @@ Because...[why not!](#conclusions)
 * See how the chaotic market is doing:
     * https://coinmarketcap.com/
 
-* If you are [having a business](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe-x-invoiceninja) and want to set crypto payment, you can have a look to https://btcpayserver.org/
-    * https://github.com/btcpayserver/btcpayserver
+If you are [having a business](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe-x-invoiceninja) and want to set crypto payment
+
+You can have a look to https://btcpayserver.org/
+
+* https://github.com/btcpayserver/btcpayserver
 
 > MIT |  Accept Bitcoin payments. Free, open-source & self-hosted, Bitcoin payment processor. 
 
+Others, are exchanging it P2P with tools like [RoboStats](https://github.com/RoboSats/robosats)
 {{< callout type="info" >}}
 If you want to read one and only one book about Crypto - [WhyCryptoCurrencies](https://whycryptocurrencies.com/)
 {{< /callout >}}
 
 Because tradfi, and bank accounts, IBAN, BIC, SWIFTs, SEPA...
 
-![alt text](/blog_img/data-experiments/wise-bank.png)
+![WISE bank account IBAN](/blog_img/data-experiments/wise-bank.png)
 
 Are concepts completely another world: 
 
@@ -544,6 +558,10 @@ For example, the **aave token is ERC20**:
 ## Conclusions
 
 After researching this, i got more questions than answers.
+
+Specially after https://exponential.fi/ to Discover the best DeFi opportunities with expert research and risk insights.
+
+
 
 > To avoid smaller and frequent scams and non sense projects, have we got into a bigger and mandatory scam?
 
@@ -980,10 +998,12 @@ When comparing the risk profiles of staking, lending, and providing liquidity (L
 2. LPing into a DEX with Stablecoins (e.g., QuickSwap V3 with USDC/USDT or the [Uniswap Equivalent Pool](https://app.uniswap.org/explore/pools/ethereum/0x8aa4e11cbdf30eedc92100f4c8a31ff748e201d44712cc8c90d189edaa8e4e47?utm_source=share-pool&utm_medium=web)) 
 
 * **Risk Level:** **Low to Moderate**, slightly higher than simple stablecoin lending due to the introduction of Impermanent Loss, even if minimal.
+
 * **Why:**
     * **Low Impermanent Loss (with stablecoins):** As discussed, since both assets in the pair aim for $1, their relative price movement is minimal. This means impermanent loss is significantly reduced compared to volatile pairs (like ETH/MATIC).
     * **Earns Trading Fees:** You earn fees from every swap, which can be a consistent source of yield.
     * **Additional Farm Rewards:** Often boosted by liquidity mining incentives (like QUICK tokens), which can enhance overall APR.
+
 * **Primary Risks:**
     * **Residual Impermanent Loss:** Even with stablecoins, minor de-pegs can occur. If USDC goes to $0.998 and USDT stays at $1.000 for a period, you will incur a small amount of impermanent loss. If one stablecoin suffers a *significant* de-peg, your IL could become substantial.
     * **Smart Contract Risk:** Vulnerabilities in the DEX's (e.g., QuickSwap's) smart contracts.
@@ -996,6 +1016,8 @@ When comparing the risk profiles of staking, lending, and providing liquidity (L
 ![alt text](/blog_img/crypto/defi/uniswap-dai-usdc.png)
 
 ![alt text](/blog_img/crypto/defi/uniswap-lp-usdc-usdt.png)
+
+> With a higher risk of impermanent loss, you have the [USDT/ETH](https://app.uniswap.org/explore/pools/ethereum/0x4e68Ccd3E89f51C3074ca5072bbAC773960dFa36)
 
 3. Staking (especially direct PoS staking of volatile assets or complex liquid staking/restaking)
 

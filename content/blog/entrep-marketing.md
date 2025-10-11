@@ -35,9 +35,6 @@ See this landing done with elementor: https://genkinfy.com/
 {{< youtube "qQ13MKLfqYQ" >}}
 
 
-<!-- 
-https://esim.holafly.com/ - landing with a very clear header
-slubnechwile.com -->
 
 <!-- ---
 title: "Firecrawl: The Ultimate Web Crawling and Scraping Solution"
@@ -291,7 +288,7 @@ Just go here and get those **5$ monthly to test**: https://console.apify.com/
 
 To see how good is your web / performs vs others:
 
-* https://serpapi.com/pricing
+* https://serpapi.com/pricing or or the hosted https://serper.dev/
 
 Can a thing like this...Scrap google maps...?
 

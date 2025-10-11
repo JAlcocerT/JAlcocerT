@@ -65,9 +65,13 @@ And with no doubt, 2025 has been the year of agents. I mean...
 
 Comercial ones like: `https://www.lindy.ai/pricing`
 
-https://github.com/browser-use/browser-use
+* https://github.com/browser-use/browser-use
 
 >  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
+
+* https://github.com/saifyxpro/HeadlessX
+
+> MIT |  A lightweight, self-hosted headless browser automation platform. Designed as an alternative to Browserless, built for speed, privacy, and scalability. 
 
 https://www.youtube.com/watch?v=L2Ya9PYNns8
 
@@ -590,8 +594,8 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
   {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="DataBricks 101 ↗" >}}
 {{< /cards >}}
 
-- [ ] Better Webs
-- [x] Better AI APIs Usage: APIFY, 
+- [x] [Better Webs](#more-websites)
+- [x] Better AI APIs Usage: APIFY, ElevenLabs, scrapping APIs...
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
@@ -637,6 +641,8 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 > I had to make sure to create proper thumbnails to get some views
 
 > > Canva and https://selfh.st/icons/ helped a lot [see repo](https://github.com/selfhst/icons?ref=selfh.st)
+
+I need to think whats next, bc fast fast fast content seem to rule: https://www.youtube.com/watch?v=9yb4o2IwkqM
 
 If this was too much content, you can always use a LLMs to summarize the YT Videos.
 
@@ -756,6 +762,12 @@ To:
 
 * https://beyondajourney.pages.dev/
 * https://financemotion.pages.dev/ 
+
+I even created skeleton (and videos) for web oriented to podcasts and ebooks.
+
+> Maybe you can become some with a very personal blog, like [Sivers](https://sive.rs/about)
+
+Still im far from this one: https://newsletter.marclou.com/p/my-solopreneur-story-0-to-65k-month-in-2-years or https://mfyz.com/moved-blog-from-wordpress-to-astro/
 
 #### Better Social Media
 

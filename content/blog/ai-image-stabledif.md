@@ -38,7 +38,7 @@ I tested **Dalle3 Model via OpenAI API** (while dev [StreamlitMultichat](https:/
 
 2. You can always do with ChatGPT, yet I was impressed with **Gemini** image generation!
 
-> Used it for a few [tech talks](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/)
+> Used it for a few tech talks
 
 3. **Replicate** - You can fine tune the paid model with your images, then get access to their API
 

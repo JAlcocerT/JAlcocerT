@@ -3,7 +3,7 @@ title: "Bootstrap and other concepts for SoloPreneurs"
 date: 2025-10-12
 draft: false
 tags: ["SoloPreneur","Indie SaaS","Product","Entrepre-AI","GTM","Sales","NeuroMarketing"]
-description: 'Resources to launch your stuff. Marketing, Offers to sell shovels...'
+description: 'Resources to launch your stuff. Marketing for Founders, Offers to sell shovels...'
 url: 'whats-boostrap'
 ---
 

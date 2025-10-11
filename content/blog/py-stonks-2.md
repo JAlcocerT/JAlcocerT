@@ -69,7 +69,7 @@ Nice to have:
 11. https://totalrealreturns.com/s/SCHD,VYM,PEP?start=2020-04-23
 12. https://stockanalysis.com/stocks/pep/dividend/
 13. https://fullratio.com/stocks/nyse-ko/coca-cola 
-14. Buyback ratio (if historical, even better)
+14. Buyback ratio (if historical, even better). They get announced, [people comment](https://x.com/StockMKTNewz/status/1960889386234778054)
 15. Volatility div growth mdd cagr / Yfinance eur usd?
 16. Treemap with market size like https://finviz.com/map.ashx
 
@@ -101,6 +101,7 @@ classDef class1 fill:red,color:blue,stroke:#FFD600;
 20. https://www.dividenddata.com/pricing
 21. https://dividendhistory.net/hesm-dividend-yield
 22. QQ: Nasdaq sp500 one time vs dca 2000 -2015 /// Growth or initial yield? ///
+23. `https://www.google.com/finance/quote/.INX:INDEXSP?window=1M` or `https://www.google.com/finance/quote/GOOGL:NASDAQ?window=MAX`
 
 With this data model, you will have answers, but also questions:
 
@@ -188,6 +189,10 @@ And get something like: https://www.macrotrends.net/stocks/charts/CL/colgate-pal
 
 
 All thanks to the `ticker.info` and `Ticker.income_stmt`.
+
+{{< tweet user="EconomyApp" id="1960804969705300327" >}}
+
+<!-- https://x.com/EconomyApp/status/1960804969705300327?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1960804969705300327%7Ctwgr%5E83d529fdba0ee3a678fbee2d9d6f0f395d2f7c42%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fforocoches.com%2Fforo%2Fshowthread.php%3Ft%3D10441654page%3D15 -->
 
 See more at this [subfolder of the yfinance EDA exploration](https://github.com/JAlcocerT/py-stonks/tree/main/z-eda-yfinance/yfinance-more-info)
 
