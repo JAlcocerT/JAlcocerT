@@ -234,6 +234,7 @@ VERT is a file conversion utility that uses WebAssembly to convert files on your
 * https://github.com/VERT-sh/VERT
 
 >  The next-generation file converter. Open source, fully local* and free forever. 
+
 >> VERT is built in Svelte and TypeScript.
 
 You can try vert at: https://vert.sh

@@ -91,6 +91,8 @@ ZenRows is best for **technically adept users** needing to scrape protected or d
 
 3. **Exa** (https://exa.ai) is a developer-focused **Web Search API, AI Search Engine, and Website Crawler** designed to power applications needing real-time, accurate, and comprehensive web data. Here’s what makes Exa distinct:
 
+> Search built for AI
+
 
 {{< details title="About Exa... 📌" closed="true" >}}
 

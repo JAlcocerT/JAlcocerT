@@ -24,6 +24,8 @@ Since last year, crypto *seems to* be back again.
 
 For some in reddit, crypto has been there for some time. 
 
+Now, it seems that some [big corporations are buying](https://bitcointreasuries.net/etfs-and-exchanges).
+
 There are those who talk [about a 21btc dream](https://www.reddit.com/r/Bitcoin/comments/a7xwp2/the_21_bitcoin_dream/), which todays sounds unreachable.
 
 Few, say that all this thing comes from the [wtf1971 trend](https://www.youtube.com/watch?v=HchNA3a9L5E)

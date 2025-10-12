@@ -75,6 +75,12 @@ These web-apps are cool and selfhostable:
 
 1. For file conversion: https://vert.sh/ or https://compress.lol/
 
+> See also https://mazanoke.com/ with [source code](https://github.com/civilblur/mazanoke)
+
+> > A self-hosted local image optimizer that runs in your browser.
+
+
+
 2. Various: 
 
 * https://it-tools.tech and https://omnitools.app/ 

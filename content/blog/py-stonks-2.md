@@ -102,6 +102,8 @@ classDef class1 fill:red,color:blue,stroke:#FFD600;
 21. https://dividendhistory.net/hesm-dividend-yield
 22. QQ: Nasdaq sp500 one time vs dca 2000 -2015 /// Growth or initial yield? ///
 23. `https://www.google.com/finance/quote/.INX:INDEXSP?window=1M` or `https://www.google.com/finance/quote/GOOGL:NASDAQ?window=MAX`
+24. See also the cool graph and the table of https://bitcointreasuries.net/defi-and-other
+25. Maybe crypto? https://www.blockchain.com/explorer
 
 With this data model, you will have answers, but also questions:
 
