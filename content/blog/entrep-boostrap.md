@@ -1,9 +1,9 @@
 ---
-title: "Bootstrap and other concepts for SoloPreneurs"
+title: "Bootstrap and concepts for SoloPreneurs"
 date: 2025-10-12
 draft: false
-tags: ["SoloPreneur","Indie SaaS","Product","Entrepre-AI","GTM","Sales","NeuroMarketing"]
-description: 'Resources to launch your stuff. Marketing for Founders, Offers to sell shovels...'
+tags: ["SoloPreneur","Indie SaaS","Kindle ebooks_ideas","Entrepre-AI","Shovels in Sales"]
+description: 'Resources to launch and GTM. NeuroMarketing for Founders, Offers...'
 url: 'whats-boostrap'
 ---
 
@@ -151,6 +151,11 @@ Its easier than ever to build.
 But that doesnt mean that its easy.
 
 
+### Too much info = ebooks_ideas
+
+
+
+
 ### Offers are a rabbit hole
 
 I was recently reading the 100M money models.
@@ -183,6 +188,10 @@ Some people make it.
 Even there are those [who monetize OSS](https://www.youtube.com/watch?v=F8i0kkrQ8_o)
 
 But...
+
+
+
+
 
 
 ---
@@ -341,9 +350,6 @@ If you want to sell your brand successfully, then you need to plan like a profes
 <!-- 
 ### The Punch Line -->
 
-<!-- Reference to lda-ml-ab.md - AB|TEsTING.md -->
-
-
 
 <!-- 
 "Unlock Exclusive Insights: Subscribe Now!"
@@ -367,7 +373,7 @@ This CTA positions the newsletter as a tool for gaining an advantage over compet
 "Free Bonus: Subscribe Now and Get Our Exclusive E-Book!"
 This CTA offers an additional incentive for users to subscribe, providing them with a free gift in exchange for their subscription. -->
 
-
+![Canva using neuromarketing on you](/blog_img/outro/canva-free-trial-neuromkt.png)
 
 
 <!-- 

@@ -1,7 +1,7 @@
 ---
 title: "Generating Images with AI - Stable Diffusion updates"
-date: 2025-10-26
-draft: false
+date: 2026-12-31
+draft: true
 tags: ["AI"]
 description: "Using Stable Difussion with DreamBooth"
 url: 'stable-difussion-free-generation'
@@ -241,33 +241,14 @@ It was all possible thanks to [this DotCSV YT Video](https://www.youtube.com/wat
 
 ### Flux
 
+
+
 https://www.youtube.com/watch?v=r-uH1C_Vi08
 
 ### Using HuggingFace
 
 
-### Text2Video
 
-So in 2024...it is text to video.
-
-* Mochi-1 - https://www.youtube.com/watch?v=WKyaGpiOjW4
-* AI Video generation with HeGyGe
-
-InVideo - 
-
-* Workflow: go to Elon Munsk Twitter -> ChatGPT to create the speech
-    * Create thumbnail with **Flux** (via [SeArt.ai](https://www.seaart.ai/)), 9/16 format for YT Short
-    * Then go with the speech to elevenlabs (T2S) - Download Audio
-        * https://temp-mail.org/en/
-    * Use CapCut
-
-* https://www.youtube.com/@XSynop
-    * https://www.youtube.com/shorts/Nb_Lpq_5KVc
-* https://www.youtube.com/@fakegurus/shorts
-
-{{< callout type="info" >}}
-With seart you can do **Image2Video - I2V**
-{{< /callout >}}
 
 ### GPUs for AI
 

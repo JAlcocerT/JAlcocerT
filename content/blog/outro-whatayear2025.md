@@ -101,6 +101,8 @@ https://astro.build/themes/details/photography-portfolio-template/
 2. Leveraging on AI ✅ *Using Windsurf and Cursor*
 3. Doing less in total and more of what has a real impact
 
+![Use github copilot at least](/blog_img/GenAI/gh-copilot.png)
+
 Reading: *excuse alert, this is beeen a year mor of creating than consuming*
 
 And that makes...xyz/12 books.
@@ -763,6 +765,14 @@ From:
 
 * https://whilecyclingthere.web.app/
 * https://cyclingthere.pages.dev/
+
+{{< cards cols="1" >}}
+  {{< card link="https://while.cyclingthere.com/" title="Cycling There Photo Gallery" >}}
+  {{< card link="https://enjoylittlethings.org/" title="Travel Addict Photo Blog" >}}
+  {{< card link="http://entreagujaypunto.com/" title="Portfolio Aguja&Punto" >}}
+{{< /cards >}}
+
+Better photo galleries, specially thanks to these components/shortcodes recap.
 
 To:
 

@@ -308,7 +308,7 @@ Interesting concepts:
 
 Interesting cross platform service: https://divstash.app/ 
 
-I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit_1000_a_year_in_dividends/
+I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit_1000_a_year_in_dividends/ and publishing [their achievements with cool graphs](https://www.reddit.com/r/dividends/comments/1njeozo/im_close_to_my_goal_only_9_years_left/)
 
 > With CSR driven *Calculate Your Dividend Potential* section :)
 

@@ -10,7 +10,9 @@ url: 'selfhosted-apps-oct-2025'
 
 **TL;DR**
 
-For a strong homelab, we need backups and proper file management..
+For a strong homelab, we need backups and proper file management...
+
++++ Internet Speed Test & Web Analytics with MySpeed and Lunalytics [here](#faq)
 
 **Intro**
 
@@ -180,3 +182,12 @@ Conclusion: Which to Choose?
 | You value a **minimalist, simple, and native-feeling UI** (especially on Mac/Linux). | You need **advanced features** like a built-in search engine or RSS downloader. |
 | You are running the client on a **low-power device** (e.g., NAS, Raspberry Pi) or need a very low resource footprint. | You want **fine-grained control** and **more detailed statistics** over your torrents. |
 | You primarily want a client that is **easy to set up** for basic downloading and seeding. | You are accustomed to a **traditional torrent client layout** (like older uTorrent). |
+
+
+---
+
+## FAQ
+
+![MySpeed Internet Speed Test](/blog_img/selfh/HomeLab/myspeed.png)
+
+![Web Analytics with LunaLytics](/blog_img/selfh/HomeLab/weban-lunalytics.png)

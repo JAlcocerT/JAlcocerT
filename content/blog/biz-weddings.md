@@ -308,8 +308,8 @@ sudo ./Selfhosting_101.sh
 This took ~42s.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Software for Vacations" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard with Hetzner as VPS" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Vacations after a wedding? VPN Setup" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Software for trips far from home" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard with Hetzner as VPS" image="/blog_img/apps/gh-jalcocert.svg" subtitle="OoO days after a wedding? VPN Setup" >}}
 {{< /cards >}}
 
 

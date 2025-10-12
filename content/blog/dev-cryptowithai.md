@@ -26,6 +26,8 @@ For some in reddit, crypto has been there for some time.
 
 There are those who talk [about a 21btc dream](https://www.reddit.com/r/Bitcoin/comments/a7xwp2/the_21_bitcoin_dream/), which todays sounds unreachable.
 
+Few, say that all this thing comes from the [wtf1971 trend](https://www.youtube.com/watch?v=HchNA3a9L5E)
+
 Others, even dare to model the future, like with a stock to model to predict the price: see [this](https://charts.bitbo.io/stock-to-flow/) and [this](https://www.bitcoinmagazinepro.com/charts/stock-to-flow-model/)
 
 {{< callout type="warning" >}}

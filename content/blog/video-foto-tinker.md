@@ -2,7 +2,7 @@
 title: "More Photo and Video fun stuff"
 date: 2025-05-13T13:20:21+01:00
 draft: false
-tags: ["Tinkering","ffmpeg","PostIZ","N8N","OpenAI TTS","Jellyfin"]
+tags: ["Capcut","ffmpeg","PostIZ","N8N","OpenAI TTS","Jellyfin"]
 description: 'From ffmpeg CLIs to color grading LUTs and ND Filters. With AI generated audio for shorts.'
 url: 'photo-video-tinkering'
 ---
@@ -320,6 +320,31 @@ Also, having proper youtube channel setting can help:
 #### AI Powered shorts
 
 A friend told me recently to have a look to these to do **interesting youtube shorts**:
+
+### Text2Video
+
+So in 2024...it is text to video.
+
+* Mochi-1 - https://www.youtube.com/watch?v=WKyaGpiOjW4
+* AI Video generation with HeGyGe
+
+InVideo - 
+
+* Workflow: go to Elon Munsk Twitter -> ChatGPT to create the speech
+    * Create thumbnail with **Flux** (via [SeArt.ai](https://www.seaart.ai/)), 9/16 format for YT Short
+    * Then go with the speech to elevenlabs (T2S) - Download Audio
+        * https://temp-mail.org/en/
+    * Use CapCut
+
+![Capcut Desktop Transition Example](/blog_img/outro/capcut.png)
+
+* https://www.youtube.com/@XSynop
+    * https://www.youtube.com/shorts/Nb_Lpq_5KVc
+* https://www.youtube.com/@fakegurus/shorts
+
+{{< callout type="info" >}}
+With seART you can do **Image2Video - I2V**
+{{< /callout >}}
 
 * Suno.ai for audio/songs...
 * Klingai.com for video generated from images/text

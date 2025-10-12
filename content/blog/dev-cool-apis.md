@@ -1,6 +1,6 @@
 ---
 title: "Interesting APIs"
-date: 2025-10-11T09:20:21+01:00
+date: 2025-10-12T09:20:21+01:00
 draft: false
 tags: ["APIfy","Firecrawl","Serp","Smithery MCP"]
 description: 'Get that info'
@@ -89,13 +89,39 @@ Here’s what makes ZenRows noteworthy:
 ZenRows is best for **technically adept users** needing to scrape protected or dynamic sites robustly and at scale, while not really aimed at true beginners or one-click/no-code users.
 
 
-3. 
+3. **Exa** (https://exa.ai) is a developer-focused **Web Search API, AI Search Engine, and Website Crawler** designed to power applications needing real-time, accurate, and comprehensive web data. Here’s what makes Exa distinct:
 
 
-{{< details title="About OctoParse... 📌" closed="true" >}}
+{{< details title="About Exa... 📌" closed="true" >}}
 
+- **Web Search API:** Exa provides multiple API endpoints to search the web, retrieve contents, extract structured data, and crawl websites. Developers can integrate web search and retrieval directly into their applications or AI models.
+- **Retrieval-Augmented Generation (RAG):** Exa is optimized for RAG use cases—where language models combine retrieved factual web data with generated responses for higher accuracy and up-to-date answers.
+- **High Customizability:** You can tailor searches by domain, location, semantic category, and more, giving precise control over data relevance.
+- **Specialized Models:** Exa’s infrastructure powers specialized indices—for instance, searching Stack Overflow, coding docs, GitHub, LinkedIn, news, and niche reference material. It also provides market prediction models using historical web data.
+- **Recent & Historical Coverage:** Exa indexes content from thousands of docs, PDFs, and web pages, covering both current trends and historical data for research, market analysis, and more.
+- **Privacy & Compliance:** Exa offers strong privacy controls, purging queries/data as required, maintaining high compliance standards, and supporting enterprise requirements with DPAs and SLAs.
+- **Developer Integrations:** Companies like Notion, Flatfile, and Cursor use Exa for research modes, candidate sourcing, and code referencing. Exa supports high-volume, secure integrations for teams and user authentication.
+- **AI Grounding:** Exa can “ground” LLMs in real-world, factual data—enabling more credible, up-to-date, and trustworthy AI outputs.
 
 {{< /details >}}
+
+**Summary:**  
+Exa is a powerful API and search engine for developers and AI platforms needing live, reliable access to web data—whether for agentic automation, research workflows, candidate sourcing, market intelligence, marketing analysis, or RAG pipelines.
+
+It’s frequently described as “Perplexity-as-a-service” for customizable, factual, and privacy-conscious web data access.
+
+
+---
+
+## Conclusions
+
+The problem today is not to have options, but too many:
+
+- **Octoparse:** A no-code/low-code web scraping platform for visually extracting structured data from websites, ideal for non-programmers and small businesses.
+- **ZenRows:** A powerful API-based web scraper built for developers to extract data from dynamic, protected, or anti-bot websites at scale.
+- **Pipedream:** A developer-oriented cloud automation platform for building, integrating, and running event-driven workflows that connect APIs, apps, and custom code.
+- **Smithery:** [An open platform](#smithery) and registry for managing, sharing, and deploying modular agentic tools (MCP servers) that extend AI assistants with real-world actions and data.
+- **Exa:** An advanced web search API and site crawler that powers AI and developer workflows with live, customizable, and accurate web data retrieval.
 
 
 ---

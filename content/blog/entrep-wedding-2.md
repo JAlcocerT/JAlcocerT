@@ -180,9 +180,9 @@ This is a common, practical pattern used in production apps for secure, scalable
 
 See how the competition is doing:
 
-1. https://planning.wedding/
-2. wedibox.com
-3. waldophotos.com
+1. `https://planning.wedding/`
+2. `wedibox.com`
+3. `waldophotos.com`
 
 ---
 
