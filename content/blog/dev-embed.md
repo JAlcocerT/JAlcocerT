@@ -304,6 +304,17 @@ What if you have any other DB, like sqlite and you want to expose an API of its 
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/db2rest" title="DB2Rest | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+### Llana
+
+See also https://github.com/juicyllama/llana
+
+>  API Wrapper for Databases - Llana is a no-code API wrapper that exposes a REST API for any database within minutes. No longer spend time building APIs, just connect your database and start using the API. Open source, free to use, and no vendor lock-in. 
+
+<!-- https://www.youtube.com/watch?v=-UjN8PEDpRQ -->
+
+{{< youtube "-UjN8PEDpRQ" >}}
+
+
 ---
 
 ## Conclusions

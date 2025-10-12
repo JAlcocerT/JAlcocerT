@@ -7,7 +7,6 @@ description: 'Must knoics.'
 url: 'wasm'
 ---
 
-
 **TL;DR**
 
 Understanding WASM and how it [relates with Containers](#wasm-vs-containers).
@@ -225,10 +224,19 @@ This **pelado nerd** video is a good starting point for WASM:
 
 {{< youtube "bgWTf3m6HG0" >}}
 
+**Questions** Given an image, could this kind of calculations https://github.com/jlleongarcia/X-ray-imaging-analysis/tree/main be done with CSR or WASM?
+
+```sh
+choco install make
+#make version
+```
+
 
 ### Practical WASM - VERT
 
-VERT is a file conversion utility that uses WebAssembly to convert files on your device instead of a cloud. Check out the live instance at vert.sh.
+VERT is a file conversion utility that uses WebAssembly to convert files on your device instead of a cloud. 
+
+Check out the live instance at vert.sh.
 
 
 * https://github.com/VERT-sh/VERT
