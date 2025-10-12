@@ -785,6 +785,9 @@ I even created skeleton (and videos) for web oriented to podcasts and ebooks.
 
 Still im far from this one: https://newsletter.marclou.com/p/my-solopreneur-story-0-to-65k-month-in-2-years or https://mfyz.com/moved-blog-from-wordpress-to-astro/
 
+And having nice astro directory pages would be amazing. Sth like: https://github.com/masterkram/minted-directory-astro, where you can easily plug some kind of DB/Sheet/Github repo readme's with particular front matter and get a website going.
+
+
 #### Better Social Media
 
 With better video workflow and Postiz for sharing.

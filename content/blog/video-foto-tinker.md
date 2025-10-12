@@ -338,6 +338,8 @@ InVideo -
 
 ![Capcut Desktop Transition Example](/blog_img/outro/capcut.png)
 
+> If you use capcut on iphone, you will just export to `mov`, so use [vert](https://vert.sh/convert/)
+
 * https://www.youtube.com/@XSynop
     * https://www.youtube.com/shorts/Nb_Lpq_5KVc
 * https://www.youtube.com/@fakegurus/shorts

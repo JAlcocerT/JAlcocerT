@@ -260,3 +260,261 @@ https://www.youtube.com/watch?v=r-uH1C_Vi08
   {{< card link="https://github.com/JAlcocerT/rpi-mjpg-streamer" title="RunPod" >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/pi-vs-orange/#the-raspberry-pi-4" title="Kutrim" >}}
 {{< /cards >}}
+
+
+---
+
+https://www.gradio.app/	
+
+https://github.com/AbdBarho/stable-diffusion-webui-docker
+
+
+OPTIMIZED Stable Diffusion 🤯 Vladmandic SD.Next + One-line install
+https://github.com/TCNOco/TcNo-TCHT/blob/main/PowerShell/AI/vlad.ps1
+
+iex (irm vlad.tc.ht)
+https://tc.ht/PowerShell/AI/vlad.ps1
+
+
+Write-Host "-------------------------------------------------------------------" -ForegroundColor Cyan
+Write-Host "Welcome to TroubleChute's Vladmandic SD.Next (Automatic) installer!" -ForegroundColor Cyan
+Write-Host "Vladmandic SD.Next (Automatic) as well as all of its other dependencies and a model should now be installed..." -ForegroundColor Cyan
+Write-Host "[Version 2023-06-06]" -ForegroundColor Cyan
+Write-Host "`nThis script is provided AS-IS without warranty of any kind. See https://tc.ht/privacy & https://tc.ht/terms."
+Write-Host "Consider supporting these install scripts: https://tc.ht/support" -ForegroundColor Green
+Write-Host "-------------------------------------------------------------------`n`n" -ForegroundColor Cyan
+
+Set-Variable ProgressPreference SilentlyContinue # Remove annoying yellow progress bars when doing Invoke-WebRequest for this session
+ 
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "This script needs to be run as an administrator.`nProcess can try to continue, but will likely fail. Press Enter to continue..." -ForegroundColor Red
+    Read-Host
+}
+
+
+nano installer0.sh
+chmod +x installer0.sh
+./installer0.sh
+
+
+#!/bin/bash
+
+echo "-------------------------------------------------------------------" | awk '{print "\033[36m" $0 "\033[39m"}'
+echo "Welcome to TroubleChute's Vladmandic SD.Next (Automatic) installer!" | awk '{print "\033[36m" $0 "\033[39m"}'
+echo "Vladmandic SD.Next (Automatic) as well as all of its other dependencies and a model should now be installed..." | awk '{print "\033[36m" $0 "\033[39m"}'
+echo "[Version 2023-06-06]" | awk '{print "\033[36m" $0 "\033[39m"}'
+echo ""
+echo "This script is provided AS-IS without warranty of any kind. See https://tc.ht/privacy & https://tc.ht/terms."
+echo "Consider supporting these install scripts: https://tc.ht/support" | awk '{print "\033[32m" $0 "\033[39m"}'
+echo "-------------------------------------------------------------------"
+
+#!/bin/bash
+
+# Set variable to suppress progress bars
+ProgressPreference="SilentlyContinue"
+
+# Check if the user is running the script with sudo/admin privileges
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script needs to be run as an administrator."
+    echo "The process can try to continue, but it will likely fail."
+    read -p "Press Enter to continue..." -r
+fi
+
+
+
+# Allow importing remote functions
+iex (irm Import-RemoteFunction.tc.ht)
+Import-RemoteFunction("Get-GeneralFuncs.tc.ht")
+
+https://tc.ht/PowerShell/Modules/Import-RemoteFunction.ps1
+
+
+# Source the script to make the functions available in the current shell session
+source import_remote_function.sh
+
+# Now you can use the functions
+#import_remote_function "https://example.com/my_function.sh"
+#import_function_if_not_exists "my_function" "https://example.com/my_function.sh"
+
+
+
+# 1. Install Chocolatey
+Clear-ConsoleScreen
+Write-Host "Installing Chocolatey..." -ForegroundColor Cyan
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+Import-FunctionIfNotExists -Command Get-TCHTPath -ScriptUri "Get-TCHTPath.tc.ht"
+$TCHT = Get-TCHTPath -Subfolder "vladmandic"
+ 
+# If user chose to install this program in another path, create a symlink for easy access and management.
+$isSymlink = Sync-ProgramFolder -ChosenPath $TCHT -Subfolder "vladmandic"
+
+
+#!/bin/bash
+
+# Clear the terminal screen
+clear
+
+# Source the import_remote_function.sh file to make the function available
+source import_remote_function.sh
+
+# Use the import_function_if_not_exists function
+import_function_if_not_exists "Get-TCHTPath" "https://example.com/Get-TCHTPath.tc.ht"
+$TCHT=$(Get-TCHTPath -Subfolder "vladmandic")
+
+# Rest of your script...
+
+NOT SURE OF THIS PART
+
+
+# 2. Install or update Git if not already installed
+Clear-ConsoleScreen
+Write-Host "Installing Git..." -ForegroundColor Cyan
+iex (irm install-git.tc.ht)
+
+git installed
+
+
+# 3. Install aria2c to make the model downloads MUCH faster
+Clear-ConsoleScreen
+Write-Host "Installing aria2c (Faster model download)..." -ForegroundColor Cyan
+choco upgrade aria2 -y
+
+
+
+#!/bin/bash
+
+# Clear the terminal screen
+clear
+
+# Display a message
+echo "Installing aria2c (Faster model download)..."
+
+# Update the package index before installing
+sudo apt-get update
+
+# Install or upgrade aria2
+sudo apt-get install aria2 -y
+
+aria2c --version
+
+
+# 4. Install CUDA and cuDNN
+if ((Get-CimInstance Win32_VideoController).Name -like "*Nvidia*") {
+    Import-FunctionIfNotExists -Command Install-CudaAndcuDNN -ScriptUri "Install-Cuda.tc.ht"
+    Install-CudaAndcuDNN -CudaVersion "11.8" -CudnnOptional $true
+}
+
+
+Not needed - cpu only
+
+
+# 5. Check if Conda or Python is installed
+# Check if Conda is installed
+Import-FunctionIfNotExists -Command Get-UseConda -ScriptUri "Get-Python.tc.ht"
+ 
+# Check if Conda is installed
+$condaFound = Get-UseConda -Name "Vladmandic SD.Next" -EnvName "vlad" -PythonVersion "3.10.11"
+ 
+# Get Python command (eg. python, python3) & Check for compatible version
+if ($condaFound) {
+    conda activate "vlad"
+    $python = "python"
+} else {
+    $python = Get-Python -PythonRegex 'Python ([3].[1][0-1].[6-9]|3.10.1[0-1])' -PythonRegexExplanation "Python version is not between 3.10.6 and 3.10.11." -PythonInstallVersion "3.10.11" -ManualInstallGuide "https://github.com/vladmandic/automatic#install" 
+    if ($python -eq "miniconda") {
+        $python = "python"
+        $condaFound = $true
+    }
+}
+ 
+Not needed - cpu only
+
+
+
+
+
+# 6. Check if has Vladmandic SD.Next directory ($TCHT\vladmandic) (Default C:\TCHT\vladmandic)
+https://github.com/vladmandic/automatic
+
+Clear-ConsoleScreen
+if ((Test-Path -Path "$TCHT\vladmandic") -and -not $isSymlink) {
+    Write-Host "The 'vladmandic' folder already exists. We'll pull the latest updates (git pull)" -ForegroundColor Green
+    Set-Location "$TCHT\vladmandic"
+    git pull
+    if ($LASTEXITCODE -eq 128) {
+        Write-Host "Could not find existing git repository. Cloning Retrieval-based-Voice-Conversion-WebUI...`n`n"
+        git clone https://github.com/vladmandic/automatic.git .
+    }
+} else {
+    Write-Host "I'll start by installing Vladmandic SD.Next first, then we'll get to the models...`n`n"
+    
+    if (!(Test-Path -Path "$TCHT\vladmandic")) {
+        New-Item -ItemType Directory -Path "$TCHT\vladmandic" | Out-Null
+    }
+    Set-Location "$TCHT\vladmandic"
+ 
+    git clone https://github.com/vladmandic/automatic.git .
+}
+ 
+if ($condaFound) {
+    python -m venv ./venv
+    ./venv/Scripts/python.exe -m pip install --upgrade pip
+    ./venv/Scripts/python.exe -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+    ./venv/Scripts/python.exe -m pip install -r requirements.txt
+    ./venv/Scripts/python.exe -m pip install clip_interrogator sqlalchemy rembg timm transformers==4.26.1
+}
+
+
+#!/bin/bash
+
+# 6. Check if Vladmandic SD.Next directory ($TCHT/vladmandic) (Default /TCHT/vladmandic)
+clear
+
+if [[ -d "$TCHT/vladmandic" && ! -L $isSymlink ]]; then
+    echo "The 'vladmandic' folder already exists. We'll pull the latest updates (git pull)" 
+    cd "$TCHT/vladmandic"
+    git pull
+    if [ $? -eq 128 ]; then
+        echo "Could not find existing git repository. Cloning Retrieval-based-Voice-Conversion-WebUI..."
+        git clone https://github.com/vladmandic/automatic.git .
+    fi
+else
+    echo "I'll start by installing Vladmandic SD.Next first, then we'll get to the models..."
+
+    if [ ! -d "$TCHT/vladmandic" ]; then
+        mkdir -p "$TCHT/vladmandic"
+    fi
+    cd "$TCHT/vladmandic"
+
+    git clone https://github.com/vladmandic/automatic.git .
+fi
+
+if [[ $condaFound == true ]]; then
+    python3 -m venv ./venv
+    ./venv/bin/python -m pip install --upgrade pip
+    ./venv/bin/python -m pip install torch torchvision torchaudio
+    ./venv/bin/python -m pip install -r requirements.txt
+    ./venv/bin/python -m pip install clip_interrogator sqlalchemy rembg timm transformers==4.26.1
+fi
+
+
+
+
+
+# 9. Download Stable Diffusion 1.5 model
+https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors
+Clear-ConsoleScreen
+Write-Host "Getting started? Do you have models?" -ForegroundColor Cyan
+do {
+    Write-Host -ForegroundColor Cyan -NoNewline "`n`nDo you want to download the Stable Diffusion 1.5 model? (y/n) [Default: n]: "
+    $defaultModel = Read-Host
+} while ($defaultModel -notin "Y", "y", "N", "n", "")
+ 
+if ($defaultModel -eq "Y" -or $defaultModel -eq "y") {
+    Import-FunctionIfNotExists -Command Get-Aria2File -ScriptUri "File-DownloadMethods.tc.ht"
+    Get-Aria2File -Url "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors" -OutputPath "models\Stable-diffusion\v1-5-pruned-emaonly.safetensors"
+}
+
+
+Get-Aria2File "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors" "./vladmandic/models/Stable-diffusion/v1-5-pruned-emaonly.safetensors"
+

@@ -376,6 +376,14 @@ Ive added the **n8n JSON's for these workflows** here: https://github.com/JAlcoc
 
 ##### n8n x formbricks
 
+Change gears from that old Astro Google Forms:
+
+![alt text](/blog_img/web/google-forms-astro.png)
+
+Just use FormBricks with some pop-up or when clicked.
+
+Or, better, combine Formbricks with n8n!
+
 Remember to install the community node `@formbricks/n8n-nodes-formbricks`
 
 YOu will need the **API**: https://formbricks.com/docs/api-reference/generate-key

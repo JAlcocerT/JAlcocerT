@@ -331,6 +331,8 @@ You can combine the stack [together with these WebDav's](#free--open-source-webd
   * https://hub.docker.com/r/drakkan/sftpgo
   * https://sftpgo.com/
 
+Manage it via: `http://192.168.1.11:8011/web/admin/connections`
+
 ```yml
 services: 
 #https://github.com/jmlcas/sftpgo/blob/main/docker-compose.yaml

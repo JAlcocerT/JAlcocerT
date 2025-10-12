@@ -13,6 +13,10 @@ Time to choose - where is it worth [to do SelfHosting](https://jalcocert.github.
 
 Sometime ago, I was doing some benchmarks about **[Raspberry Pi vs Orange Pi](https://jalcocert.github.io/RPi/posts/pi-vs-orange/) and also about [Mini PCs vs those SBC](https://jalcocert.github.io/RPi/posts/minipc-vs-pi/)**.
 
+![alt text](/blog_img/selfh/HomeLab/opi/orangepi5-disip.jpg)
+
+![alt text](/blog_img/selfh/HomeLab/opi/opi5.jpg)
+
 Lately, I have been giving [a try to cloud providers](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#hetzner).
 
 Particularly, to Hetzner.

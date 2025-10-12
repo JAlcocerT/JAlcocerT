@@ -1,9 +1,9 @@
 ---
-title: "Website knowledge updates. Landings with AI?"
-date: 2025-10-05T10:20:21+01:00
+title: "Website knowledge updates. Waiting / Landings with AI?"
+date: 2025-10-115T10:20:21+01:00
 draft: false
-tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Komodo","Dev","BCMS vs PagesCMS"]
-description: 'New ATH for my SSG knowledge. Landing Pages that convert with Codex for idea validation'
+tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Landing Pages","BCMS vs PagesCMS"]
+description: 'New ATH for my SSG knowledge. Landing 101 that convert and Codex for idea validation.'
 url: 'selling-with-a-landing-website'
 ---
 
@@ -76,6 +76,11 @@ Get a cool theme: https://www.builtatlightspeed.com/category/astro or from astro
 2. `https://esim.holafly.com/` - landing with a very clear header
 
 3. `purplepalm.ai` created [here](https://forocoches.com/foro/showthread.php?t=10455640&page=4) 
+
+4. `https://operately.com/`
+
+Those should be enough for some inspiration.
+
 
 Resumen de los 3 puntos clave de emprendimiento:
 
@@ -222,3 +227,10 @@ To put astro/hugo inside a container is as simple as: *and you can also develop 
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ssg-hugo" title="HUGO SSG Selfhosted | Docker Config Setup 🐋 ↗"  >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ssg-astro" title="Astro SSG Selfhosted | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
+
+
+### Checks before web delivery
+
+The good thing about astro, is to plug that image optimization:
+
+![alt text](/blog_img/web/astro-img-optim.png)

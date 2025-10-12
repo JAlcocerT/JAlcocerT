@@ -5,6 +5,7 @@ draft: true
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
 ---
 
+![alt text](/blog_img/iot/Sensor-db.png)
 
 In this project we will be collecting **Temperature and Humidity Data** from a DHT11 or a DHT22 Sensor working together with a Raspberry Pi.
 
@@ -704,3 +705,122 @@ https://forocoches.com/foro/showthread.php?t=6655749
 * https://rpi.uroboros.es/docker.html
 
 * Contenedores docker utilizas - https://forocoches.com/foro/showthread.php?t=7806376
+
+
+---
+
+DHT11
+
+arduino cloud
+b0e2c216-d258-415a-be9e-4b0999dbaff5
+YV91RQKZZ8HEKPSZHWA7
+
+DS18B20 - Temp
+
+
+
+DTH11
+DTH22
+
+https://www.youtube.com/watch?v=ffg3_1AgtyA&t=3s
+
+MQTT on Raspberry Pi and ESP8266 with Mosquitto and Micro Python | IoT Essential
+
+Simple ESP32 IoT Sensor Node Tutorial: WiFi Enabled MQTT Sensor Data Node
+
+TIG Stack: 
+
+Easily Install InfluxDB, Telegraf, & Grafana with Docker
+
+Telegraph
+InfluxDB
+Grafana
+
+sudo git clone https://github.com/huntabyte/tig-stack ./tig
+cd tig
+
+openssl rand -hex 32
+
+influxdb login with the ones defined in .env
+grafana login is admin//admin
+add data source
+influxdb -> query language flux
+http://influxdb:8086 #they are in the same network so they can communicate with the host name
+
+
+3 buckets found
+
+
+in influx DB Query Builder
+
+from(bucket: "changeme")
+  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
+  |> filter(fn: (r) => r["_measurement"] == "mem")
+  |> filter(fn: (r) => r["_field"] == "used_percent")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
+  |> yield(name: "mean")
+
+and copy it to grafana
+
+
+
+
+
+Raspberry Pi IoT Server Tutorial: InfluxDB, MQTT broker (mosquitto), Grafana, Node-RED & Docker
+
+Raspberry Pi IoT Server Tutorial: InfluxDB, MQTT, Grafana, Node-RED & Docker
+https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server
+
+	https://sensorsiot.github.io/IOTstack/
+	https://github.com/SensorsIot/IOTstack
+
+Raspberry Pi IoT Server Tutorial: InfluxDB, MQTT, Grafana, Node-RED & Docker
+
+
+Continuacion con BME680 (P, T, air quality)
+https://www.youtube.com/watch?v=x5A5S0hoyJ0
+
+
+RPI pico 
+
+
+
+from machine import Pin, Timer, I2C, SoftI2C
+#from aphanum import ALPHANUM_I2C
+from mlx90614 import MLX90614_I2C
+
+
+
+
+i2c2 = SoftI2C(scl=Pin(9),sda=Pin(8),freq=100000)
+
+
+print("I2C Comm Success")
+
+
+# d = i2c2.scan()
+# print(hex(d[0])
+# print(hex(d[1])
+# alph = ALPHANUM_I2C(i2c2,0x70,000,15)
+# print("Alpha display init")
+
+
+irtemp = MLX90614_I2C(i2c2,0x5A)
+
+
+led1 = Pin(25, Pin.OUT)
+
+
+timer1 = Timer()
+
+
+def tick_timer(timer):
+    global led1
+    led1.toggle()
+    t1 = irtemp.get_temperature(0)
+    t2 = irtemp.get_temperature(1)
+    print("T1 = %f", t1)
+    print("T2 = %f", t2)
+    alph.set_digit(int(t2*100),2);
+timer1.init(freq=2,mode=Timer.PERIODIC,callback=tick_timer)
+

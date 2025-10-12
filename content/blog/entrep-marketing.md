@@ -204,7 +204,7 @@ A Customer Avatar (or buyer persona) is a semi-fictional representation of an in
 
 How can a lead adquisition workflow look like?
 
-[app.apollo.io](https://www.apollo.io/sign-up) 1000 contactos 50 usd, pero con apify console.apify te conectas con su `apollo scrapper` free tier.
+[app.apollo.io](https://www.apollo.io/sign-up) 1000 contactos 50 usd, pero con apify `console.apify` te conectas con su `apollo scrapper` free tier.
 
 > in that way we have 1k leads for 1.5 usd from apify only.
 
@@ -265,10 +265,15 @@ Here is a cost comparison table for the tools Clay, Apollo, and Fire Enrich base
 | Tool       | Starting Price       | Approach                                     |
 |------------|---------------------|----------------------------------------------|
 | Clay       | $149/month          | Multi-source aggregator, requires separate subscriptions  |
-| Apollo     | $59/user/month      | Built-in database, limited customization        |
+| [Apollo](https://www.reddit.com/r/LeadGeneration/comments/1c0va0r/apolloio_leads/)     | $59/user/month      | Built-in database, limited customization        |
 | Fire Enrich| Free (self-hosted)  | Real-time research, only pay API costs          |
 
-This summary reflects that Clay uses a credit-based system with multiple data sources and can get costly with usage; Apollo is priced per user with a proprietary database, simpler but less flexible; Fire Enrich is self-hosted and free but you pay for external API usage as needed.[1][4][10]
+
+Clay uses a credit-based system with multiple data sources and can get costly with usage;
+
+Apollo is priced per user with a proprietary database, simpler but less flexible; 
+
+Fire Enrich is self-hosted and free but you pay for external API usage as needed.
 
 [1](https://blog.revpartners.io/en/revops-articles/clay-vs-apollo-sales-platform)
 [2](https://smartreachai.com/clay-vs-apollo-2025-sales-intelligence-comparison/)

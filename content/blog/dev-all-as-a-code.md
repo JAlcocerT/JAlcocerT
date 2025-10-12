@@ -1,6 +1,6 @@
 ---
 title: "Everything is Code"
-date: 2025-09-29T08:20:21+01:00
+date: 2025-10-29T08:20:21+01:00
 draft: false
 tags: ["Matplotlib vs Manim vs RemotionJS vs Animotion","SlidevJS vs ReflexJS","Pandoc vs Latex vs Typst"]
 url: 'things-as-a-code'

@@ -105,18 +105,14 @@ I tried first [Neuromarketing with openAI](https://github.com/JAlcocerT/Streamli
 
 {{< details title="CTAs Examples that Ive found 📌" closed="true" >}}
 
-Pollo en serio y no en serie
-
-* CTA's
-    * Quieres el premium? No, correre el riesgo!
-    * You don’t have to miss out
-    * They all laugh when…
-    * What sounds better than privacy?
-    * Is your Business performing at 100%? Here is the best/easiest way to find out
-        * Measure, Check, Act
+* Quieres el premium? No, correre el riesgo!
+* You don’t have to miss out
+* They all laugh when…
+* What sounds better than privacy?
+* Is your Business performing at 100%? Here is the best/easiest way to find out
+    * Measure, Check, Act
 
 ![NeuroMKT1](/blog_img/outro/canva-free-trial-neuromkt.png)
-
 
 ![NeuroMKT2](/blog_img/outro/insurance-neuromarketing.png)
 

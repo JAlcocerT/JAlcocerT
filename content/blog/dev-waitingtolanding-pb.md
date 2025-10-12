@@ -31,6 +31,8 @@ How about using and let them see a CSR page.........
 
 .......like this one:
 
+![alt text](/blog_img/web/waitingtolanding/link-hub.png)
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/link-hub-pb/" title="NEW repository - Astro Link Hub" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}
   {{< card link="https://link-hub-1qd.pages.dev/" title="Tweaked Theme deployed to CF Pages" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}  

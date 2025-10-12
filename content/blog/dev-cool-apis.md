@@ -2,8 +2,8 @@
 title: "Interesting APIs"
 date: 2025-10-12T09:20:21+01:00
 draft: false
-tags: ["APIfy","Firecrawl","Serp","Smithery MCP"]
-description: 'Get that info'
+tags: ["APIfy","Firecrawl","Serp","Smithery MCP","Scrap"]
+description: 'Get that info you need.'
 url: 'interesting-apis'
 ---
 
@@ -117,10 +117,13 @@ It’s frequently described as “Perplexity-as-a-service” for customizable, f
 
 The problem today is not to have options, but too many:
 
+- **Smithery:** [An open platform](#smithery) and registry for managing, sharing, and deploying modular agentic tools (MCP servers) that extend AI assistants with real-world actions and data.
+
+> See https://smithery.ai/playground
+
 - **Octoparse:** A no-code/low-code web scraping platform for visually extracting structured data from websites, ideal for non-programmers and small businesses.
 - **ZenRows:** A powerful API-based web scraper built for developers to extract data from dynamic, protected, or anti-bot websites at scale.
 - **Pipedream:** A developer-oriented cloud automation platform for building, integrating, and running event-driven workflows that connect APIs, apps, and custom code.
-- **Smithery:** [An open platform](#smithery) and registry for managing, sharing, and deploying modular agentic tools (MCP servers) that extend AI assistants with real-world actions and data.
 - **Exa:** An advanced web search API and site crawler that powers AI and developer workflows with live, customizable, and accurate web data retrieval.
 
 

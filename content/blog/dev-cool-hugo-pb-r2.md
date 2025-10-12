@@ -81,7 +81,7 @@ make list-bucket
 ```
 
 {{< callout type="info" >}}
-The [full setup looks like](https://github.com/JAlcocerT/nextjs-r2-demo/blob/main/z-z-full-setup.md): Deployment to CF Pages https://talk-demo-afb.pages.dev/ -> Workers -> R2
+The [full setup looks like](https://github.com/JAlcocerT/nextjs-r2-demo/blob/main/z-z-full-setup.md): Deployment to CF Pages `https://talk-demo-afb.pages.dev/` -> Workers -> R2
 {{< /callout >}}
 
 

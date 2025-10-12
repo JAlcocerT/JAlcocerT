@@ -10,7 +10,7 @@ url: 'kindle-clippings-knowledge-base'
 
 **TL;DR**
 
-A recap on the last 5y+ of kindles notes.
+A recap on the last **~5y+ of kindles notes.**
 
 Pandoc can do very cool things.
 
@@ -38,11 +38,11 @@ Rather than a way to admire how people have created **static status pages**: htt
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/HomeLab/statuspages/kener-setup.png)
+![Kener Status Pages](/blog_img/selfh/HomeLab/statuspages/kener-setup.png)
 
 ![alt text](/blog_img/selfh/HomeLab/statuspages/kener-manager-ui.png)
 
-With this, you will be able to create and distribute your epublibre.
+With this, you will be able to create and distribute via epublibre or amazon `https://www.amazon.es/sendtokindle`.
 
 
 ### Kindle Notes to AI
@@ -73,8 +73,15 @@ Kindles files wont be recognized unless you use a proper microUSB data cable. Yo
 
 ### Parsing the notes via Python
 
+As simple as this:
 
+```sh
+python extract_notes.py "Brainfluence" brainfluence_notes.txt
+```
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="Clippings to smaller txt | Py Script ↗" >}}
+{{< /cards >}}
 
 ---
 

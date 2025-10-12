@@ -102,6 +102,21 @@ Takes a song, separates voice and beat, then inputs your voice to it (not foss)
 
 <https://github.com/facebookresearch/audiocraft>
 
+audiocraft
+How To Install Audiocraft Locally - Meta's FREE And Open AI Music Gen
+
+https://gist.github.com/mberman84/afd800f8d4a8764a22571c1a82187bad
+
+
+arm64: apt install ffmpeg
+conda install -c pytorch -c conda-forge pytorch
+
+
+https://www.gyan.dev/ffmpeg/builds/
+choco install ffmpeg
+ffmpeg –version
+
+
 
 * {{< newtab url="/" text="The Site" >}}
 * {{< newtab url="" text="The Source Code at Github" >}}
