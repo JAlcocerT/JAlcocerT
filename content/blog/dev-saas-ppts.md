@@ -10,7 +10,7 @@ url: 'ai-driven-presentations'
 
 **Tl;DR**
 
-SliDevJS is so cool
+SliDevJS is so cool and recently [vibe coded and made a tech talk about it](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk).
 
 And also [the themes](https://sli.dev/resources/theme-gallery) like: https://github.com/slidevjs/themes/tree/main/packages/theme-seriph
 
@@ -50,11 +50,14 @@ colorSchema: 'light'  # or 'dark' or 'auto'
 ---
 ```
 
-1. If you have some particular ending slides to be always included, use the slide import
+1. If you have some particular ending slides to be always included, use the slide import inside your `.md`:
 
 
 ```yml
-
+---
+src: ./pages/imported-slides.md
+hide: false
+---
 ```
 
 2. If you are creating a company related report, [like for Jira](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/), use the background templates

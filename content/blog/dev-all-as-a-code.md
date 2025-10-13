@@ -69,7 +69,35 @@ Like: https://github.com/JAlcocerT/slidev-editor with Firebase and Logto auth wo
 
 As I feel quite confortable with SliDev, ill be capturing the upcoming interesting tech talk I conduct.
 
-And also any slidev ptt done for youtube if applies.
+The [latest tech talk](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk), I have place [here](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev)
+
+And also any slidev ptt done for youtube tech videos if applies, will be inside [Home-Lab/SlidevJS](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-slidevjs).
+
+
+```sh
+npm init slidev #yarn create slidev
+```
+
+
+**Features I enjoy**: Themes can provide styles, layouts, components, or even configurations for tools.
+
+
+0. Switching between themes by just **one edit** in your frontmatter
+1. Embed Twitter, youtube... thanks to [VUE components](https://sli.dev/builtin/components#youtube), like the demo `./components/Counter.vue`
+
+```yml
+#<Tweet id="1866822826696773747" scale="0.5" />
+#<Youtube id="fxVNTffZC2U" width="300" height="200" />
+```
+
+2. Bring up to date data from API calls. Like `https://open-meteo.com`
+3. Make it look cool with mermaidJS / Katex / ChartJS
+4. This thing can even do animations based on https://motion.vueuse.org/
+5. Katex, for those PHD users
+6. MermaidJS
+
+> Cool PPTs other created: https://raw.githubusercontent.com/BaizeAI/talks/refs/heads/main/packages/2025-06-11-kubecon-hk/slides.md
+
 
 ### eBooks as a Code
 
@@ -243,6 +271,9 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ---
 
 ## Conclusions
+
+
+https://github.com/slidevjs/slidev
 
 
 ### Webs are also code

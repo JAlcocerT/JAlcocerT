@@ -2,7 +2,7 @@
 title: "Improving Python Trip Planner with Weather Forecasts: Open Meteo API"
 date: 2023-06-30T15:20:21+01:00
 draft: false
-tags: ["Python","Trip-Planner"]
+tags: ["Python","Trip-Planner","Open Meteo API"]
 cover:
     image: "https://socialify.git.ci/JAlcocerT/Py_Trip_Planner/image?language=1&name=1&theme=Auto" # image path/url 
     alt: "Python Weather Forecast with Open-Meteo" # alt text

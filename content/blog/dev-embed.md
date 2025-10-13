@@ -2,7 +2,7 @@
 title: "Everything can be embeded. OpenAI Agent Builder."
 date: 2025-09-30T08:20:21+01:00
 draft: false
-tags: ["n8n vs Flowise","ChatWoot vs PaperCups","SolidTime","Embeded Analytics","DB2REST"]
+tags: ["n8n vs Flowise","ChatWoot vs PaperCups","SolidTime","Embeded Analytics","DB2REST","OpenAI ChatKit"]
 url: 'embed-that'
 description: 'Bring them to your Website - Chatbots, Live Chats > Whatsapp bouble or cal'
 ---
@@ -87,7 +87,11 @@ Bottom line here: **n8n is very simple to get for free**
 
 #### OpenAI Agent Builder
 
-OpenAI Agent Builder is a visual, drag-and-drop platform for creating and managing multi-step AI agent workflows without needing to write code from scratch. It uses nodes representing different functions—such as calling language models, connecting to external tools or services, adding conditional logic, data transformation, and safety guardrails—that users link together to design complex AI agents and automations.
+I recently read: https://openai.com/index/introducing-agentkit/
+
+OpenAI Agent Builder is a visual, drag-and-drop platform for creating and managing multi-step AI agent workflows without needing to write code from scratch. 
+
+It uses nodes representing different functions—such as calling language models, connecting to external tools or services, adding conditional logic, data transformation, and safety guardrails—that users link together to design complex AI agents and automations.
 
 Key features include:
 - A visual canvas for building and versioning AI workflows.
@@ -125,6 +129,34 @@ OpenAI Agent Kit vs...n8n?
 <!-- https://www.youtube.com/watch?v=XeIx4S6YvGo -->
 
 {{< youtube "XeIx4S6YvGo" >}}
+
+
+<!-- https://x.com/akshay_pachaar/status/1866822826696773747 -->
+
+{{< tweet user="akshay_pachaar" id="1866822826696773747">}}
+
+
+https://platform.openai.com/docs/guides/chatkit
+
+https://platform.openai.com/docs/guides/chatkit#add-chatkit-to-your-frontend
+
+https://widgets.chatkit.studio/gallery/card
+
+https://github.com/openai/openai-chatkit-advanced-samples
+
+https://openai.github.io/chatkit-python/server/
+
+#### CopilotKit
+
+
+* https://github.com/copilotkit/copilotkit
+
+>  **MIT** | React UI + elegant infrastructure for AI Copilots, AI chatbots, **and in-app AI agents**. The Agentic last-mile 🪁 
+
+<!-- https://www.youtube.com/watch?v=9v3kXiOY3vg -->
+
+{{< youtube "9v3kXiOY3vg" >}}
+
 
 ### Live Chats
 
