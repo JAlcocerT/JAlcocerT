@@ -2,7 +2,7 @@
 title: "Firebase Auth SDK. Social Login and email verification."
 date: 2025-09-13T10:20:21+01:00
 draft: false
-tags: ["Journal","SaaS MAU","Social signin/up","JustJournalviaSSG","GCP BaaS"]
+tags: ["Journal","SaaS MAU","Social signin/up","JustJournalviaSSG","GCP BaaS","Slidev-Editor"]
 url: 'firebase-auth-101'
 description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator'
 ---

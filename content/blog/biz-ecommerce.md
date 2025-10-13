@@ -8,6 +8,9 @@ url: 'ecommerce'
 ---
 
 
+
+https://www.shoper.pl/premium like https://sklepmakunki.pl/ which theme comes from https://netplace.com.pl/ see https://netplace.com.pl/portfolio/magicznypokoik-pl/
+
 **Intro**
 
 As I have been learning how to do CSR related auth...
@@ -165,9 +168,10 @@ See: `https://makemydream.pl/wp-login`
 
 * More competitors
   * Taplink
-  * bento.me
+  * bento.me *A comercial bento link website, owned by linktree*
   * https://getallmylinks.com/
   * https://subscribepage.io/listy#
+
 
 <!-- * Proposed: bogusiabachata.pro -->
 <!-- 

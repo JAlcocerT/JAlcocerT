@@ -114,11 +114,11 @@ npm run build
 #npx serve
 
 #npx playwright install
-npx slidev export --format pptx --output my-presentation.pptx
-npx slidev export --format pptx --range 1-5,8,10-12
+#npx slidev export --format pptx --output my-presentation.pptx
+#npx slidev export --format pptx --range 1-5,8,10-12
 ```
 
-or to pdf:
+Or to pdf: *which might not work*
 
 ```sh
 #npx playwright install
@@ -126,7 +126,7 @@ npx slidev export --format pdf
 npx slidev export --format pdf --range 1-5,8,10-12
 ```
 
-> Remember about `http://localhost:3030/overview/` or `/exporter`
+> Remember about `http://localhost:3030/overview/` or `/exporter` where you will get the `.pdf` perfectly
 
 ![Slidev Exporter UI](/blog_img/data-experiments/slidev-exporter.png)
 

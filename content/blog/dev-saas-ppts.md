@@ -10,7 +10,10 @@ url: 'ai-driven-presentations'
 
 **Tl;DR**
 
-SliDevJS is so cool.
+SliDevJS is so cool
+
+And also [the themes](https://sli.dev/resources/theme-gallery) like: https://github.com/slidevjs/themes/tree/main/packages/theme-seriph
+
 
 ```sh
 npm init slidev@latest slidev-ba-tech-talk
@@ -21,18 +24,21 @@ cd slidev-ba-tech-talk
 #npx serve
 
 #npx playwright install
+npx slidev export --format pptx #PowerBI-Jira-ADO.pptx
 npx slidev export --format pptx --output my-presentation.pptx
 #npx slidev export --format pptx --range 1-5,8,10-12
 #npx slidev export --format pdf
 ```
 
-> Remember about `http://localhost:3030/overview/` or `/exporter` to get the `.pdf`
+> Remember about `http://localhost:3030/overview/` or `/export` to get the `.pdf`
+
 
 Then, its all about controlling one `slides.md`
 
+
 ```yml
 ---
-theme: seriph #you can also change this to a company theme
+theme: seriph #you can also change this to a custom company theme
 background: '/company-ppt-theme.jpg' #place it in ./public
 #background: https://cover.sli.dev
 class: 'text-center'
@@ -40,9 +46,27 @@ drawings:
   persist: false
 transition: slide-left
 mdc: true
+colorSchema: 'light'  # or 'dark' or 'auto'
 ---
 ```
 
+1. If you have some particular ending slides to be always included, use the slide import
+
+
+```yml
+
+```
+
+2. If you are creating a company related report, [like for Jira](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/), use the background templates
+
+```yml
+layout: cover
+#background: https://cover.sli.dev
+background: https://picsum.photos/id/26/4209/2769.jpg #background: /sample-slide-bg.svg
+class: text-center
+```
+
+3. Something cooler? See [showcases](https://sli.dev/resources/showcases) like https://baizeai.github.io/talks/2025-06-11-kubecon-hk/#/10?clicks=2  as per the code https://raw.githubusercontent.com/BaizeAI/talks/refs/heads/main/packages/2025-06-11-kubecon-hk/slides.md
 
 
 

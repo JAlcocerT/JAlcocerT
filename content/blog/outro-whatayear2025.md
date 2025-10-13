@@ -680,6 +680,7 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 22. [MQTT and DHT22 + Home Assistant](https://youtu.be/8XUydWbwBjk)
 23. [Nextcloud and a Pi](https://youtu.be/x2eFFeRIyXg)
 24. Ventoy. [Linux Lite vs Garuda RAM consumption](https://youtu.be/hTw9DBEksx4)
+25. Bonus: [FreshRSS + AstroPod](https://youtu.be/mDMGtMOx-Fk)
 
 > I had to make sure to create proper thumbnails to get some views
 
@@ -819,6 +820,7 @@ From:
 
 Better photo galleries, specially thanks to these components/shortcodes recap.
 
+Still, far from: https://antfu.me/posts/photos-page, speciially: https://antfu.me/photos
 To:
 
 * https://beyondajourney.pages.dev/

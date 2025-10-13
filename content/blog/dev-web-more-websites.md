@@ -100,16 +100,6 @@ But there are very well known services that provide interesting service without 
 3) [Glow (F/OSS)](https://github.com/tryglow/glow)
 4) https://www.stan.store/
 
-* Examples, this [artist profile](https://linktr.ee/bogusia.adryan) and this [awsome designer profile](https://linktr.ee/karwozniak)
-    * And somethin' like:
-        * https://github.com/jpanther/lynx - MIT!
-        * https://github.com/SofiDevO/allmylinks
-        * https://github.com/DBozhinovski/astro-theme-ltree - With TinaCMS integration, which I [forked](https://github.com/JAlcocerT/yarness-web)!
-
-{{< callout type="info" >}}
-Like we did at the **Social Media Project!**
-{{< /callout >}}
-
 
 * **Automatic Invoices**
   * With Stripe as payment gateway, they create the invoices for your product/services automatically

@@ -3,20 +3,9 @@ title: "Want to be an entrepreneur? Try these SelfH Product Tools"
 date: 2025-05-29
 draft: false
 tags: ["Entrepreneuring","Websites","Web Generator","PostHog","PMF","Product Analytics"]
-description: 'Building Websites for others with CMS. The mission of Ghost Websites its just so great...'
+description: 'Building Websites for others with CMS and landingPAD theme. The mission of Ghost Websites its just so great...'
 url: 'product-tools'
 ---
-
-
-<!-- 
-referencia a persuasion escrito en jan 2022
-
-y aqui cositas de neuromarketing
-
-the buying brain....
-`brainfluence`
-
- -->
 
 Its been few months since I covered [these Tools for forms/newsletters](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/)
 
@@ -235,24 +224,14 @@ Following the original theme instructions: https://darko.io/posts/linktree-and-l
 
 {{< /details >}}
 
-
-
-
 #### KeyStaticCMS
 
 * https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
 * https://github.com/JAlcocerT/landingpad
 
-### Authentication
-
-This one will require your focus: https://darko.io/posts/but-auth-is-hard
-
-As per my [recent post](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/), you have few options, like:
-
-1. [TinaAuth](#tinyauth)
-2. [LogTo](#logto)
-
 #### TinyAuth
+
+The admin route of your static CMS, whatever it is, should be protected.
 
 To get this right, first we need to have a **proper Traefik Setup**, that routes both:
 
@@ -262,7 +241,6 @@ To get this right, first we need to have a **proper Traefik Setup**, that routes
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/WebGenerAItor/tree/main/Traefik_v3_3" title="Web GenerAItor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Traefik Setup for HUGO Lynx Theme" >}}
 {{< /cards >}}
-
 
 ![Traefik on a SubDomain Routing HUGO Dev Server](/blog_img/selfh/https/traefik-subdomain-webgeneraitor.png)
 

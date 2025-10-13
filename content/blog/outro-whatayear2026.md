@@ -40,3 +40,13 @@ https://www.amazon.es/sendtokindle
 {{< /cards >}}
 
 5. Web Analytics: GDPR compliant
+
+
+6. Client adquisition data pipeline.
+
+To be tested with *,artists,designers and wannabe's'* from social media.
+
+If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#scaling-ideas), is a potential candidate.
+
+
+7. Boiler plate for vibe coders: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup

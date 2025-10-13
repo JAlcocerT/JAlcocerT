@@ -1,6 +1,6 @@
 ---
 title: "Website knowledge updates. Waiting / Landings with AI?"
-date: 2025-10-115T10:20:21+01:00
+date: 2025-10-11T10:20:21+01:00
 draft: false
 tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Landing Pages","BCMS vs PagesCMS"]
 description: 'New ATH for my SSG knowledge. Landing 101 that convert and Codex for idea validation.'
@@ -14,7 +14,7 @@ Last year I made couple of 101 guides for [HUGO](https://jalcocert.github.io/JAl
 But it was time to put cool components like this [ig gallery](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/components/InstagramGalleryLocalFolder.astro) used [on this mdxhere](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/content/property/beachfront-paradise-instagram-gallery.mdx)
 
 +++ People shared on reddit their [favourite minimalistic sites](https://www.reddit.com/r/webdev/comments/1gh38fz/whats_your_favorite_very_minimal_personal_website/)
-+++ https://picsum.photos/ just in case you are tired of unsplash
++++ https://picsum.photos/ just in case you are tired of unsplash and just select what you want via https://picsum.photos/images
 
 **Intro**
 

@@ -14,6 +14,12 @@ You should probably know the WHY you are going somewhere first.
 
 This will just reply to the where/how.
 
+https://github.com/Fission-AI/OpenSpec
+
+> MIT | Spec-driven development for AI coding assistants.
+
+
+
 
 **Intro**
 

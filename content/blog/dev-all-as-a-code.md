@@ -51,10 +51,25 @@ This selection depends on priorities: Slidev for modern web presentations, Revea
 ### PPTs as a Code
 
 
-* https://github.com/joshed-io/reveal-hugo
+1. RevealJS
+
+You can place this one inside HUGO SSG if you want, like: https://github.com/joshed-io/reveal-hugo
+
+My favourite: **SliDevJS**
 
 https://jalcocert.github.io/JAlcocerT/make-slidev/
-https://github.com/JAlcocerT/slidev-editor
+
+You can create a [Micro SaaS around Slidev](https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/)
+
+Like: https://github.com/JAlcocerT/slidev-editor with Firebase and Logto auth working as per [this post](https://jalcocert.github.io/JAlcocerT/firebase-auth-101/) :)
+
+
+
+#### SliDev and Tech Talks
+
+As I feel quite confortable with SliDev, ill be capturing the upcoming interesting tech talk I conduct.
+
+And also any slidev ptt done for youtube if applies.
 
 ### eBooks as a Code
 
@@ -82,6 +97,16 @@ Or...because you can now have deep research agents everywhere:
 * https://parallel.ai/pricing
 * Perplexity...
 * ...
+
+<!-- 
+referencia a persuasion escrito en jan 2022
+
+y aqui cositas de neuromarketing
+
+the buying brain....
+`brainfluence`
+
+ -->
 
 
 

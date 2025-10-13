@@ -1,5 +1,5 @@
 ---
-title: "PowerBI"
+title: "PowerBI 101"
 date: 2020-12-07T19:20:21+01:00
 draft: false
 tags: ["Business Intelligence","pbiviz","D3js"]

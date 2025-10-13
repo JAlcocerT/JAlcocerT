@@ -41,9 +41,59 @@ BlockIQ – Short, catchy, and focused on intelligent blockchain insights.
 
 1. https://darko.io/posts/but-auth-is-hard
 
-**Comercial bento**
 
-1. bento.me (owned by linktree)
+### Authentication
+
+This one will require your focus: https://darko.io/posts/but-auth-is-hard
+
+As per my [recent post](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/), you have few options, like:
+
+1. [TinaAuth](#tinyauth)
+2. [LogTo](#logto)
+
+But dont worry, its a solved problem.
+
+The article, titled **"BuT, aUtH iS HaRd,"** argues against the prevalent industry narrative that building authentication (Auth) is inherently difficult.
+
+The author contends that **Auth is not hard, but rather "boring, red-tapey, and a solved problem."**
+
+**Auth Basics Are Simple**
+
+The author recalls that "rolling your own" basic email/password authentication in the past (e.g., with PHP/MD5) was a straightforward process of hashing, salting, storing credentials, and setting a cookie.
+
+To demonstrate this, the author provides a **150-line Proof-of-Concept (PoC)** using Express and Passport, showing that basic features like email/password login and adding a social provider (GitHub OAuth2) are **dull and repetitive, but not complex** to implement at a toy level.
+
+
+Complexity Lies in the Extras
+
+The real challenge with authentication isn't the core login logic, but the surrounding features, which the author calls **"death by a thousand cuts."**
+
+These include:
+
+* **Security and Maintenance:** Staying up-to-date with security standards, standards bodies (RfCs), and potential breaches.
+* **User Experience (UX):** Implementing 2FA/MFA, password resets, and user management features.
+* **Integration:** Handling the complexity of connecting to hundreds of different OAuth providers, each with specific requirements, and managing account merges.
+
+When to Roll Your Own vs. Use a Service
+
+The author's core **takeaway is that Auth is a commodity** and reinventing the wheel is usually a waste of time. 
+
+They offer clear guidance on when developers should build their own solution:
+
+| Project Type | Recommendation | Rationale |
+| :--- | :--- | :--- |
+| **Toy Project / Indie / Educational** | **Roll Your Own** | It's a great way to learn the basics. |
+| **Startups, Scaleups, and Above** | **Do NOT Roll Your Own** | Time is better spent building the actual product; Auth is a solved, boring problem. |
+
+Open-Source Alternatives
+
+The article concludes by promoting the robust **self-hosted and FOSS (Free and Open Source Software) landscape** for authentication, offering various choices for developers who prefer to own their stack:
+
+* **Auth Libraries:** Passport.js, Lucia, Auth.js.
+* **Auth Servers:** Keycloak, SuperTokens, FusionAuth, Authelia.
+* **Storage + Auth Platforms:** Supabase, Pocketbase.
+
+The final message is to **educate, not gatekeep**, and to recognize that while Auth is essential, its implementation is a **"red tape"** task best handled by existing solutions rather than rebuilt from scratch.
 
 https://libraries.io/pypi/embedchain
 

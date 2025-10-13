@@ -84,7 +84,7 @@ Ive documented LlamaIndex at **[Chat over Data](https://github.com/JAlcocerT/Dat
 
 ## Improvements
 
-The current Trip Planner Apps does not have any AI feature.
+The current Trip Planner Apps does NOT have any AI feature.
 
 Yet.
 
