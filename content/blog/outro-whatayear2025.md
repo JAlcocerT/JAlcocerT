@@ -8,6 +8,12 @@ url: 'tech-recap-2025'
 ---
 
 
+* https://github.com/atuinsh/atuin
+
+> MIT | ✨ Magical shell history
+
+
+
 **Cloudflare alternatives?**
 
 * https://github.com/rapiz1/rathole

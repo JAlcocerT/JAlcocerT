@@ -78,7 +78,6 @@ And also any slidev ptt done for youtube tech videos if applies, will be inside 
 npm init slidev #yarn create slidev
 ```
 
-
 **Features I enjoy**: Themes can provide styles, layouts, components, or even configurations for tools.
 
 
@@ -95,6 +94,7 @@ npm init slidev #yarn create slidev
 4. This thing can even do animations based on https://motion.vueuse.org/
 5. Katex, for those PHD users
 6. MermaidJS
+7. Export to pdf/pptx or png. *They are all pngs btw, so be mindful if non tech people will have to edit*
 
 > Cool PPTs other created: https://raw.githubusercontent.com/BaizeAI/talks/refs/heads/main/packages/2025-06-11-kubecon-hk/slides.md
 

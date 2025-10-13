@@ -59,7 +59,7 @@ People are doing... what?
 
 Combining Blender + Arduino + Real Time Accelerometer Data: https://pabramsor.com/blender-and-arduino-accelerometer/
 
-> See in real time where the arduino is moving rendered into blender
+> See in real time where the arduino is moving rendered into blender https://github.com/Bardo91
 
 > > Impressive that this was [done back in 2011](https://elescritoriodetesla.blogspot.com/2011/09/acelerometro-arduino-y-blender3d.html)
 

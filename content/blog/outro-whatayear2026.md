@@ -50,3 +50,7 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
 
 
 7. Boiler plate for vibe coders: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
+
+8. Proper CI/CD for streamlit. Hospital D&A: https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/2a2eb68132834b39ce8ff3e9e77e8d7d87e801b5
+
+> Latest features shipped properly: https://github.com/JAlcocerT/X-ray-imaging-analysis
