@@ -9,7 +9,7 @@ math: true
 ---
 
 {{< callout type="info" >}}
-Before starting, **credits to lowkey.bold.knit** - https://instagram.com/p/DE7cDTdMn5k/?utm_source=qr
+Before starting, **credits to lowkey.bold.knit** - `https://instagram.com/p/DE7cDTdMn5k/?utm_source=qr`
 {{< /callout >}}
 
 

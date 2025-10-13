@@ -53,9 +53,25 @@ This selection depends on priorities: Slidev for modern web presentations, Revea
 
 * https://github.com/joshed-io/reveal-hugo
 
+https://jalcocert.github.io/JAlcocerT/make-slidev/
+https://github.com/JAlcocerT/slidev-editor
+
 ### eBooks as a Code
 
-You know, just in case you want to create your pdf libre or your epub libre org.
+Initially, I thought that [ebooks could be just done via Rmd](https://github.com/JAlcocerT/ebooks)
+
+Then I understood [here, that pandoc](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/) is what make the thing work.
+
+And found a [cool SSG Theme to host your ebook pdfs statically](https://github.com/JAlcocerT/sell-your-ebook).
+
+Then, I created to just dump my notes into ebooks: https://github.com/JAlcocerT/ebook-ideas
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="ebook ideas Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to ship ebooks" >}}
+{{< /cards >}}
+
+
+You know, just in case you want to create your pdf libre or your epub libre org!
 
 Or to write a e-book for your friend (Anna's archive).
 
@@ -64,7 +80,7 @@ Or to write a e-book for your friend (Anna's archive).
 Or...because you can now have deep research agents everywhere:
 
 * https://parallel.ai/pricing
-* perplexity...
+* Perplexity...
 * ...
 
 
@@ -80,9 +96,24 @@ Or...because you can now have deep research agents everywhere:
 
 Just in case that you need some help with: https://fmhy.net/misc#resume-portfolio
 
+
+
+
 ## Animations as a Code
 
-Last night the yt algorithm hit me with this:
+
+You know, we can do [animation as a code as seen with matplotlib](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/).
+
+{{< youtube "I46bPuSdrqk" >}}
+
+And you should probably place your codes into a [repo like this one](https://github.com/JAlcocerT/DataInMotion) if you go that route.
+
+
+
+What if you have couple of brands and want to recycle your animations?
+
+
+Then, Last night the yt algorithm hit me with this:
 
 <!-- 
 https://youtu.be/dtjb2OhEQcU?si=sXeXvjrF50WfU_P4
@@ -168,6 +199,19 @@ Manim, on the other hand, is a Python library specialized in math and educationa
 | Community & Docs       | Growing, good docs                 | Strong community & documentation | Mature community, rich resources  |
 
 
+### Animations x SSG
+
+This year I also was playing around with Astro components.
+
+And withing the datanova theme, I found out that they are doing a really cool animation (which is a SVG!)
+
+```sh
+npm install
+#npm run dev
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+```
+
+
 
 
 
@@ -175,3 +219,29 @@ Manim, on the other hand, is a Python library specialized in math and educationa
 
 ## Conclusions
 
+
+### Webs are also code
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="Ghost with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wordpress" title="WP with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+If you are looking for a tool to **get general knowledge about a website**, you can use the **web-check project**
+
+* https://github.com/Lissy93/web-check
+  * Use it at https://web-check.xyz/
+  * It provides also links to other very interesting tools to explore a domain/website
+
+>  🕵️‍♂️ MIT | All-in-one OSINT tool for analysing any website 
+
+And you can use these projects together with https://github.com/datopian/markdowndb - **MIT** Licensed
+
+* https://markdowndb.com/ - A rich API to your markdown files in seconds.
+
+
+> Turn markdown files into structured, queryable data with JS. Build markdown-powered docs, blogs, and sites quickly and reliably.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Commento" title="Commento | Docker Config 🐋 ↗" >}}
+{{< /cards >}}

@@ -2,11 +2,14 @@
 title: "[AI] LangChain Explained - Providing context to LLMs"
 date: 2024-07-15
 draft: false
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Gen-AI","Python","Dev","Streamlit"]
 description: 'Why LangChain is great for AI Projects. How to RAG with LangChain: CSV, PDF and DB examples.'
-summary: 'How to create a Streamlit App that uses LangChain to chat with your data.'
 url: 'how-to-chat-with-your-data'
 ---
+
+**Intro**
+
+How to create a Streamlit App that uses LangChain to chat with your data.
 
 As [commented earlier this year](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/), I was inspired by **Alejandro AO** and its **Python AI projects**.
 

@@ -6,7 +6,7 @@ cover:
   image: "https://socialify.git.ci/jalcocert/streamlit-multichat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
   alt: "ChatGPT Clone" # alt text
   caption: "Improving a ChatGPT Clone with Streamlit." # display caption under cover
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Gen-AI","Python","Dev","Streamlit","Github Pages"]
 description: 'Enhancing LLM support for Streamlit-MultiChat: Grok, DeepSeek and more.'
 url: 'streamlit-multichat'
 ---
@@ -27,7 +27,7 @@ See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit
 {{< /callout >}}
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/Streamlit-MultiChat/1" title="About Streamlit MultiChat" >}}
+  {{< card link="https://jalcocert.github.io/Streamlit-MultiChat/1" title="About Streamlit MultiChat with SliDev on GH Pages" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt" title="Previous Blog Post" >}}
 {{< /cards >}}
 
@@ -75,6 +75,8 @@ for model in models:
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api" title="Grok API Blog Post" >}}
 {{< /cards >}}
+
+---
 
 ## Conclusions
 

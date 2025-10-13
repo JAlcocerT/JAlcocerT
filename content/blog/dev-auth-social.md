@@ -72,7 +72,6 @@ Remember you had presenter mode with SliDev at `localhost:3030/presenter` and yo
 
 ## SliDev Goodies
 
-
 * https://github.com/slidevjs/slidev
 * https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
 

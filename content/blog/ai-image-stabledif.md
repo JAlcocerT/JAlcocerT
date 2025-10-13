@@ -7,6 +7,12 @@ description: "Using Stable Difussion with DreamBooth"
 url: 'stable-difussion-free-generation'
 ---
 
+Image Generation: 
+
+* Foocus
+* Stable Difussion Web UI
+* Easy Difussion
+
 Exactly **Three years ago** from this moment I was able to generate the following:
 
 ![Stable Difussion Sample](/blog_img/GenAI/jalcocert-author.png)

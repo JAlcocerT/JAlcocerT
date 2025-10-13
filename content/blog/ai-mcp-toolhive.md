@@ -2,7 +2,7 @@
 title: "MCP Auth with ToolHive"
 date: 2025-09-26
 draft: false
-tags: ["AI","ToolHive vs FastMCP","agentpass","AgentsMD","markitdown"]
+tags: ["AI","ToolHive vs FastMCP","agentpass","AgentsMD","markitdown","Homebrew in Linux"]
 description: 'MCP Auth with...docker?'
 url: 'understading-mcp-toolhive'
 ---

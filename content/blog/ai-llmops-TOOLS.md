@@ -24,17 +24,21 @@ We will cover:
 
 ## BentoML
 
-https://bentoml.com/
-https://github.com/bentoml/BentoML
-https://github.com/bentoml/BentoML?tab=Apache-2.0-1-ov-file#readme ✅ 
+* https://bentoml.com/
+    * https://github.com/bentoml/BentoML
+    * https://github.com/bentoml/BentoML?tab=Apache-2.0-1-ov-file#readme ✅ 
 
-https://docs.bentoml.com/en/latest/
+* https://docs.bentoml.com/en/latest/
 
 > The easiest way to serve AI/ML models in production - Build Model Inference Service, LLM APIs, Multi-model Inference Graph/Pipelines, LLM/RAG apps, and more!
 
 BentoML Cloud: From Note-book to Production in 5 Minutes?
 
-Deploying machine learning models to production can be a complex and time-consuming process.  BentoML aims to simplify this, and their cloud offering, BentoML Cloud, promises to make it even faster.  This post explores BentoML Cloud, its features, and how it can help you get your AI products into the real world quickly.
+Deploying machine learning models to production can be a complex and time-consuming process.
+
+BentoML aims to simplify this, and their cloud offering, BentoML Cloud, promises to make it even faster.  
+
+This post explores BentoML Cloud, its features, and how it can help you get your AI products into the real world quickly.
 
 > BentoML is a **Unified Inference Platform** for deploying and scaling AI systems with any model, on any cloud.
 
@@ -44,8 +48,9 @@ Deploying machine learning models to production can be a complex and time-consum
 
 BentoML Cloud is a fully managed platform designed to streamline the deployment and scaling of machine learning models.
 
-It provides the infrastructure, tools, and services needed to take your trained models from development to production with minimal effort.  The emphasis is on ease of use, scalability, and cost efficiency.
+It provides the infrastructure, tools, and services needed to take your trained models from development to production with minimal effort.
 
+The emphasis is on ease of use, scalability, and cost efficiency.
 
 
 ## Key Features
@@ -76,7 +81,11 @@ BentoML Cloud then handles the provisioning of the necessary infrastructure and 
 
 ## BentoML: The Foundation
 
-It's important to understand that BentoML Cloud is built upon the open-source BentoML framework.  BentoML provides the underlying tools for packaging models into "Bentos" (deployable units) and defining how they're served. BentoML Cloud takes these Bentos and handles the infrastructure and scaling.
+It's important to understand that BentoML Cloud is built upon the open-source BentoML framework. 
+
+BentoML provides the underlying tools for packaging models into "Bentos" (deployable units) and defining how they're served. 
+
+BentoML Cloud takes these Bentos and handles the infrastructure and scaling.
 
 Key BentoML concepts that are relevant to BentoML Cloud:
 
@@ -86,15 +95,21 @@ Key BentoML concepts that are relevant to BentoML Cloud:
 
 ## In Summary
 
-BentoML Cloud aims to significantly accelerate the deployment of machine learning models.  Its focus on ease of use, scalability, and cost-effectiveness makes it an attractive platform for individuals and businesses looking to bring AI products to market quickly.  The underlying BentoML framework provides the necessary tools for packaging and serving models, while BentoML Cloud handles the infrastructure and scaling.  If you're looking for a streamlined way to deploy your models, BentoML Cloud is definitely worth exploring.
+BentoML Cloud aims to significantly accelerate the deployment of machine learning models.
+
+Its focus on ease of use, scalability, and cost-effectiveness makes it an attractive platform for individuals and businesses looking to bring AI products to market quickly.
+
+The underlying BentoML framework provides the necessary tools for packaging and serving models, while BentoML Cloud handles the infrastructure and scaling.
+
+If you're looking for a streamlined way to deploy your models, BentoML Cloud is definitely worth exploring.
 
 
 
 ## AgentOps
 
-https://www.agentops.ai/
-https://github.com/AgentOps-AI/agentops
-https://github.com/AgentOps-AI/agentops?tab=MIT-1-ov-file#readme
+* https://www.agentops.ai/
+    * https://github.com/AgentOps-AI/agentops
+    * https://github.com/AgentOps-AI/agentops?tab=MIT-1-ov-file#readme
 
 >  **Python SDK for agent monitoring**, LLM cost tracking, benchmarking, and more. Integrates with most LLMs and agent frameworks like CrewAI, Langchain, and Autogen 
 

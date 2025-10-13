@@ -20,7 +20,7 @@ I got to know about Cloudflare R2 as object storage.
 Remember to place costs alerts (because its not possible set a limit).
 {{< /callout >}}
 
-![alt text](/blog_img/web/agujapunto-r2-firebase/cf-notification-alerts.png)
+![Cloudflare Notifications Alert](/blog_img/web/agujapunto-r2-firebase/cf-notification-alerts.png)
 
 
 

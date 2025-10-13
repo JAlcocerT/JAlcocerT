@@ -7,6 +7,13 @@ description: 'How to use the latest AI Project. With Code and Systematically. Ex
 url: 'ai-projects-python-dependencies'
 ---
 
+
+**Tl;DR**
+
+
+
+**Intro**
+
 Ive been updating [this Python Docs](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) on useful Python stuff I found out along the way.
 
 Time to make some upgrades:
@@ -80,19 +87,7 @@ Also...a project is not PROD ready if at least 3 non tech users agree that is si
 Example of **Artifacts to containerize a Python Project** with the [MultiChat](https://github.com/JAlcocerT/Streamlit-MultiChat)
 {{< /callout >}}
 
-
-{{< details title="Dockerfile 📌" closed="true" >}}
-
-
-
-{{< /details >}}
-
-
-{{< details title="Docker-Compose 📌" closed="true" >}}
-
-
-
-{{< /details >}}
+> Basically, you need a Dockerfile and a docker-compose.
 
 The good thing with containers, is that you can build them locally, and make someone do it for you, like [github actions CICD](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/)
 

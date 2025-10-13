@@ -390,28 +390,3 @@ How Argo CD works?
 {{< callout type="info" >}}
 Make sure to understand [docker volumes vs bind mounts](https://dev.to/aijeyomah/docker-volumes-vs-bind-mounts-choosing-the-right-storage-for-your-containers-3pb8)!
 {{< /callout >}}
-
-
-
----
-
-## FAQ
-
-**Cloudflare alternatives?**
-
-* https://github.com/rapiz1/rathole
-
-> A lightweight and high-performance reverse proxy for NAT traversal, written in Rust. An alternative to frp and ngrok.
-
-* https://noted.lol/cgnat-and-rathole/
-
-### SelfHosting Best Practices
-
-* https://www.reddit.com/r/selfhosted/comments/1beoi4l/best_practices_for_selfhosted_services/
-* https://www.reddit.com/r/homelab/wiki/index/
-
-### What about NIX?
-
-Recently I heard about Flox and NIX...
-
-Are they the best alternative for a homelab OS?

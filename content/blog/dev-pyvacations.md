@@ -39,6 +39,8 @@ AI search engine with web, news, and images. You will need firecrawl and groq Ap
 
 ## Py Vacations
 
+I tried to add [AI capabilities to the trip planner](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/) but it didnt work out well.
+
 
 It all started [here, messed with other small projects](https://github.com/JAlcocerT/Private/tree/main/Py_Vacations)
 

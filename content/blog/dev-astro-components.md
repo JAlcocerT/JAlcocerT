@@ -2,7 +2,7 @@
 title: "ASTRO Components & How to use Them"
 date: 2024-05-14T23:20:21+01:00
 draft: false
-tags: ["Web","SSG","Websites","Astro Components"]
+tags: ["Web","SSG","Websites","Astro Components","Commento"]
 description: 'Tutorial for Components - Making any ASTRO Website better.'
 url: 'understanding-astro-ssg-components'
 ---
@@ -462,7 +462,6 @@ See also:
 * https://github.com/walinejs/waline
 
 > 💬 A Simple, Safe Comment System
-
 
 
 {{< cards cols="1" >}}

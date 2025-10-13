@@ -300,7 +300,7 @@ Thanks to the video:
 
 You can connect your picoW to Wifi and blik the led while attempting to do so with [this script](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI/boot.py).
 
-Even reading html webcontent, with [this other script](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectWifi_ReadWeb).
+Even reading `html` webcontent, with [this other script](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectWifi_ReadWeb).
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI" title="PicoW + Wifi Connection 🐍 ↗" >}}
@@ -788,7 +788,7 @@ Create a new [HA](https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant
 As we are reading the PicoW Internal sensor, for me it was showing ~+8C than a regular temp sensor 
 {{< /callout >}}
 
-![alt text](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png)
+![Home Assistant dashboard with temperature from MQTT](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png)
 
 <!-- https://studio.youtube.com/video/x4tzWt6-I7c/edit -->
 

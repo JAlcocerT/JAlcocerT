@@ -111,17 +111,7 @@ It's designed to simplify the interaction with these specialized databases, whic
 
 * {{< newtab url="/selfhosting-vector-admin-docker/" text="Vector Admin Setup" >}}
 
-<!-- 
-https://fossengineer.com/selfhosting-vector-admin-docker/ -->
 
-<!-- 
-[Vector Admin Example](https://github.com/Mintplex-Labs/vector-admin/blob/39fe4a1117a81feaf09a440b79792120964bb4d6/images/screenshots/workspace_home.png)
--->
-
-
-<!-- ### VectorAdmin + QDrant
-
-### VectorAdmin + Chroma -->
 
 ## F/OSS RAGs
 
@@ -169,18 +159,7 @@ LangChain's integrations are generally built directly into the core library.
 There isn't a separate "hub" for community-contributed integrations in the same way as LlamaHub. 
 
 
-{{< dropdown title="How to setup LangChain with Python ⏬" closed="true" >}}
-
-{{< /dropdown >}}
-
-{{< dropdown title="Using LangChain ⏬" closed="true" >}}
-
-{{< /dropdown >}}
-
 ### Other RAG Frameworks
-
-<!-- 
-[![Star History Chart](https://api.star-history.com/svg?repos=cpacker/MemGPT,sinaptik-ai/pandas-ai,Athou/commafeed,thelounge/thelounge&type=Date)](https://star-history.com/#cpacker/MemGPT&sinaptik-ai/pandas-ai&Athou/commafeed&thelounge/thelounge&Date) -->
 
 #### LLamaIndex
 
@@ -245,24 +224,12 @@ Solving LLMs context Window limitation, with MemGPT.
 
 {{< newtab url="https://fossengineer.com/embedchain-ai/" text="Mem0, ex-EmbedChain" >}}
 
-<!-- 
-`IODOCTOR` -->
-<!-- 
-Use cases
-🧱 Introduction
-🤖 Chatbots
-❓ Question Answering
-🔍 Semantic Search
 
-OPEN AI EmbEddings - https://www.youtube.com/watch?v=ySus5ZS0b94
- -->
 
 #### PandasAI
 
 * {{< newtab url="https://github.com/sinaptik-ai/pandas-ai" text="PandasAI" >}}
 
-<!-- 
-* {{< newtab url="https://fossengineer.com/how-to-use-pandasAI" text="PandasAI" >}} -->
 
 {{< dropdown title="More about Pandas AI ⏬" closed="true" >}}
 
@@ -325,21 +292,9 @@ It uses **LangChain in the background**.
 
 But provides a cool UI interface and you can set it up with docker:
 
-
-
-<!-- 
-### Creating GenAI F/OSS
-
-whatsap chat bot, but OSS -->
-
 ---
 
 ## FAQ
-
-<!-- {{< dropdown title="How to use RAGs with UI's like Streamlit ⏬" closed="true" >}}
-
-{{< /dropdown >}}
- -->
 
 ### How to Process Unstructured Data
 
@@ -365,18 +320,11 @@ whatsap chat bot, but OSS -->
 
 * LLamaCPP: you need to build it from source + use GGUF format
 
-<!-- 
-* {{< newtab url="/how-to-use-pandasAI/#how-to-use-ai-llms-locally" text="AnythingLLM" >}}
 
-* {{< newtab url="/how-to-use-pandasAI/#how-to-use-ai-llms-locally" text="LocalAI" >}} -->
 
 ![Confused with Python Dependencies](/img/GenAI/localAI-API.png#center)
 
-<!-- * https://github.com/mckaywrigley/chatbot-ui - MIT Licensed
 
->  AI chat for every model. 
-
-https://github.com/mckaywrigley/chatbot-ui?tab=readme-ov-file#local-quickstart with supabase -->
 
 
 ### What are LangChains?

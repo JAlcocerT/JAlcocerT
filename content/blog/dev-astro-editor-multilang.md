@@ -90,7 +90,7 @@ After using 3 of my 4 monkey fingers with cursor.
 
 I got this:
 
-![alt text](/blog_img/web/nextjs-astro-editor/toastui-nextjs-1.png)
+![Toast UI working with NextJS](/blog_img/web/nextjs-astro-editor/toastui-nextjs-1.png)
 
 
 
@@ -160,6 +160,8 @@ I would say this is the Fuwari in Hugo :)
 * https://github.com/artemkutsan/astro-citrus
 
 > MIT
+
+---
 
 ## Conclusions
 

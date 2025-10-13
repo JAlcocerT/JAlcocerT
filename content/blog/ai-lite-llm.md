@@ -305,9 +305,6 @@ print(response)
 Requires **HF Pro**
 {{< /callout >}}
 
-### Google Gemini API
-
-https://www.youtube.com/watch?v=iw6xozGZH3g
 
 ### Open Router API
 
@@ -325,12 +322,3 @@ As it can unify the API calls across different providers!
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/" title="Tinkering with structured outputs | Post ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/" title="Tinkering with function calling | Post ↗" >}}
 {{< /cards >}}
-
-
-This also resonates with Tools like
-
----
-
-## FAQ
-
-### LLMs APIs in a Nutshell

@@ -97,7 +97,9 @@ because you havent forgot on the Overleaf CV generation, right?
 
 Whatever you have analyzed and created a md->pdf report with it...
 
-You can make a quick PPT by tweaking the .md to the slidev way (with corporate background as well). Just see [this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-sample-powerbi/slides.md) from [slidev-editor](https://github.com/JAlcocerT/slidev-editor).
+You can make a quick PPT by tweaking the .md to the slidev way (with corporate background as well). 
+
+Just see [this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-sample-powerbi/slides.md) from [slidev-editor](https://github.com/JAlcocerT/slidev-editor).
 
 ```sh
 #npm i -D playwright-chromium

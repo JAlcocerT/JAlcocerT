@@ -1,8 +1,8 @@
 ---
 title: "SMTP and email stuff"
-date: 2025-10-18
+date: 2025-11-18
 draft: false
-tags: ["HomeLab","MailTrap","Mailgun","Amazon SES","GrowChief","mailersend"]
+tags: ["HomeLab","MailTrap","Mailgun","Amazon SES","PostIZ vs GrowChief","mailersend"]
 description: 'Email is hard. Social Media OutReach, is not.'
 url: 'emails-101'
 ---
@@ -294,7 +294,7 @@ In summary, Mailtrap supports seamless SMTP integration for Mautic and Odoo, and
 
 GrowChief and Postiz are both open-source tools aimed at social media management, but they serve somewhat different purposes and feature sets:
 
-https://github.com/growchief/growchief
+* https://github.com/growchief/growchief
 
 > apg3.0 |  The Ultimate all-in social media automation (outreach) tool 🤖 
 

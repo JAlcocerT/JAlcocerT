@@ -861,6 +861,8 @@ Huginn can be made to work with Jamstack/SSG setups, though it's less direct tha
 
 ### More MCP
 
+Just in case you want to plug [the new next thing: MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/)
+
 #### MCP x PlayWight
 
 As just seen on the browser and automations post.

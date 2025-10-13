@@ -2,16 +2,36 @@
 title: "BiP with APIFY"
 date: 2025-10-18T09:20:21+01:00
 draft: false
-tags: ["Forum","Reddit vs forocoches","Coding for Entrepreneurs","RSS"]
+tags: ["Forum","Reddit vs forocoches","Coding for Entrepreneurs","RSS","Post Schedule"]
 description: ' 🤯'
 url: 'apify'
 ---
+
+
+**Intro**
+
+This year, I covered PostIZ for social media automation [here](https://jalcocert.github.io/JAlcocerT/social-media-automation/#postiz) and also:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ Setup | Post" image="/blog_img/selfh/links/postiz-channels.png" subtitle="Tinkering with photo video and PostIZ" >}}
+{{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postiz" title="PostIZ | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+And as it is 2025, [postiz support MCP](https://jalcocert.github.io/JAlcocerT/social-media-automation/#positz-x-mcp).
+
 
 ## Social Media Automation for Forums
 
 Some people seem to be everywhere.
 
 Actually, their agents are.
+
+That's why you can see them on [reddit](#reddit), [twitter/x](#twitter) or other [forums](#forocoches)...at once.
+
 
 ### Reddit
 
@@ -26,6 +46,16 @@ Cool infographics inspirations:
 
 1. https://forocoches.com/foro/showthread.php?t=10455900&page=45
 2. https://forocoches.com/foro/showthread.php?t=10455900&page=37
+
+### Twitter
+
+{{< tweet user="LibrePortfolio" id="1940801205577699713" >}}
+
+
+## Conclusions
+
+
+### Youtube Animations
 
 
 

@@ -2,7 +2,7 @@
 title: "How to use ScrapeGraph AI - Scraping with Ollama"
 date: 2024-08-15T10:20:21+01:00
 draft: false
-tags: ["Gen-AI","Dev","Scrapping","LLMs","LinkChecker"]
+tags: ["Gen-AI","Dev","Scrapping","LLMs","LinkChecker","Proxy Networks"]
 # cover:
 #     image: "https://socialify.git.ci/VinciGit00/Scrapegraph-ai/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
 #     alt: "Using ScrapeGraph with Python" # alt text
@@ -141,13 +141,6 @@ credits: https://www.fahdmirza.com/2024/05/how-to-scrape-websites-for-free-with-
 
 Let's do it fully local:
 
-{{< dropdown title="Python Code - ScrapeGraph Ollama ⏬" closed="true" >}}
-
-```py
-
-```
-
-{{< /dropdown >}}
 
 {{< dropdown title="Dockerfile for ScrapeGraph ⏬" closed="true" >}}
 
@@ -244,19 +237,20 @@ volumes:
 
 {{< /dropdown >}}
 
-
-<!-- 
 ---
+
+## Outro
+
+### Proxie Networks
+
 
 https://www.youtube.com/watch?v=qo_fUjb02ns&t=41s
 
-# Industrial-scale Web Scraping with AI & Proxy Networks
 
-## Overview
+In this video, Beyond Fireship showcases a powerful technique for extracting data from websites using web scraping, AI, and proxy networks. With the rise of e-commerce and Drop Shipping, accessing valuable data is crucial, but it's often buried deep within complex HTML. 
 
-- In this video, Beyond Fireship showcases a powerful technique for extracting data from websites using web scraping, AI, and proxy networks. With the rise of e-commerce and Drop Shipping, accessing valuable data is crucial, but it's often buried deep within complex HTML. This report summarizes the video, providing an in-depth look at how to use web scraping, AI tools, and proxy networks to extract data from public-facing websites.
+This report summarizes the video, providing an in-depth look at how to use web scraping, AI tools, and proxy networks to extract data from public-facing websites.
 
-## Key Points
 
 - **What is Web Scraping?**
   - Web scraping involves extracting data from websites, often using a **headless browser like Puppeteer**, which allows users to interact with a website programmatically. However, big eCommerce sites like Amazon don't love big traffic and will block IP addresses or make users solve captchas if they suspect you're not a human.
@@ -271,31 +265,11 @@ https://www.youtube.com/watch?v=qo_fUjb02ns&t=41s
   - The video demonstrates how to create a web scraper using Puppeteer and Bright Data's Scraping Browser. The process involves creating a new Node.js project, installing Puppeteer, and connecting to the Scraping Browser using a websocket endpoint.
 
 - **Extracting Data from Amazon's Best Sellers Page**
-  - The video shows how to use Puppeteer to extract data from Amazon's best sellers page. By using the Dev Tools in Chrome to inspect the HTML, we can identify the selectors needed to extract the product titles and prices. Then, using ChatGPT, we can generate code to extract the data and format it as a [JSON object](#faq). -->
-
----
-
-## Takeaways
+  - The video shows how to use Puppeteer to extract data from Amazon's best sellers page. By using the Dev Tools in Chrome to inspect the HTML, we can identify the selectors needed to extract the product titles and prices. Then, using ChatGPT, we can generate code to extract the data and format it as a [JSON object](#faq).
 
 - Web scraping is a powerful technique for extracting data from websites.
-- Proxy networks and tools like Bright Data's Scraping Browser can help avoid IP blocking and captchas.
+- **Proxy networks** and tools like Bright Data's Scraping Browser can help avoid IP blocking and captchas.
 - Puppeteer is a useful tool for web scraping, but it's essential to use it with a proxy network.
-
-If you are looking for a tool to **get general knowledge about a website**, you can use the **web-check project** - MIT Licensed
-
-* https://github.com/Lissy93/web-check
-  * Use it at https://web-check.xyz/
-  * It provides also links to other very interesting tools to explore a domain/website
-
->  🕵️‍♂️ All-in-one OSINT tool for analysing any website 
-
-And you can use these projects together with https://github.com/datopian/markdowndb - **MIT** Licensed
-
-* https://markdowndb.com/ - A rich API to your markdown files in seconds.
-
-
-
-> Turn markdown files into structured, queryable data with JS. Build markdown-powered docs, blogs, and sites quickly and reliably.
 
 
 
@@ -390,12 +364,13 @@ pip install firecrawl-py
 
 
 ### FAQ
+
 <!-- 
 https://www.youtube.com/@JohnWatsonRooney/videos -->
 
 {{< dropdown title="What are rotating proxies ⏬" closed="true" >}}
 
-Simply speaking, a rotating proxy is a type of proxy server that automatically changes the IP address it uses periodically or after each request. 
+Simply speaking, a rotating proxy is a type of **proxy server that automatically changes the IP address** it uses periodically or after each request. 
 
 This means that every time your device connects to the internet through this proxy, it appears as if it's coming from a different IP address.
 

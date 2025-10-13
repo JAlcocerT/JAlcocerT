@@ -2,7 +2,7 @@
 title: "My [AI] Youtube Workflow with Whisper"
 date: 2024-11-07
 draft: false
-tags: ["Tinkering","OpenAI TTS","Youtube Videos"]
+tags: ["Tinkering","OpenAI TTS","Youtube Videos","Video Transcript and diagram"]
 description: 'How to use AI to share more (and hopefully better) video content with others'
 url: 'my-youtube-ai-workflow'
 ---

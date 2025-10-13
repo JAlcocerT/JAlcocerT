@@ -227,7 +227,7 @@ This can also be helpful for the real estate project, where you can ask context 
 python3 scraping-ask-v2.py > comments_property_alijares.mdx
 ```
 
-![alt text](/blog_img/GenAI/image/openai-vision-realestate.png)
+![OpenAI Vision API on realestate](/blog_img/GenAI/image/openai-vision-realestate.png)
 
 
 
@@ -252,9 +252,7 @@ If what you want is the opposite...
 
 Given a text description of an image, generate the image itself:
 
-
-
-See als: https://promptfolder.com/midjourney-prompt-helper/
+See also: https://promptfolder.com/midjourney-prompt-helper/
 
 
 

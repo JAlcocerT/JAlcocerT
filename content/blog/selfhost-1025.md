@@ -28,7 +28,7 @@ But just in case you dont want to mess with databases, lets see some other Fileb
 
 ## Files Files Files
 
-And I saw few projects lately to see files:
+And I saw few projects lately to see files, like we saw [here](https://jalcocert.github.io/JAlcocerT/events-photo-galleries/):
 
 * https://github.com/vikramsoni2/nextExplorer
 
@@ -73,6 +73,7 @@ Syncthing is a **decentralized, peer-to-peer (P2P)** continuous file synchroniza
 The primary way to use them together is to set up **Syncthing to sync files to a local directory that SFTPGo uses as a storage backend** (a "virtual folder").
 
 1.  **Syncthing handles synchronization:** Syncthing runs on your client devices (laptops, desktops, phones) and continuously syncs files in real-time to a dedicated folder on your central server. This uses Syncthing's efficient P2P protocol, which is excellent for real-time syncing between devices that are all running the Syncthing software.
+
 2.  **SFTPGo provides access:** SFTPGo runs on the central server, using the same local Syncthing folder as a data source for its users. This allows external users or systems to access those synchronized files using a standard, secure protocol like **SFTP** (or FTP/S, WebDAV, HTTPS via its WebClient).
 
 This setup solves a common Syncthing limitation: providing access to files via a standard server protocol to clients that are **not** running Syncthing.
@@ -112,10 +113,7 @@ Anyways, you can do a quick **XMR benchmark** on your mini PC:
 
 > > Its an interesting project anyways, configurable via JSON for that alternative CPU benchmark
 
-
 ---
-
-
 
 Choosing between **Transmission** and **qBittorrent** for [P2P](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry/) depends on your priorities, as both are popular, free, open-source, and cross-platform (Windows, macOS, Linux) BitTorrent clients.
 

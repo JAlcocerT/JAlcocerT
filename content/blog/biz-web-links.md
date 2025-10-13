@@ -151,15 +151,3 @@ du -sh src/assets/memes/cable-rojo.gif
 
 gifsicle --resize 480x480 --colors 64 --optimize=3 src/assets/memes/cable-rojo.gif -o src/assets/memes/cable-rojo-optimized.gif
 ```
-
---- 
-
-## Conclusions
-
-**Interesting Posts**
-
-1. https://darko.io/posts/but-auth-is-hard
-
-**Comercial bento**
-
-1. bento.me (owned by linktree)

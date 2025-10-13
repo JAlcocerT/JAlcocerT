@@ -393,7 +393,7 @@ choco install vscode -y
     * https://snorpey.codes/en/articles/self-host-openstreetmaps-widgets
     * https://github.com/maplibre/maplibre-gl-js?tab=License-1-ov-file#readme
 
-* rawhtml shortcode from hugo - translate to astro ->> gpx support?
+* rawhtml shortcode from hugo - translate to astro ->> *can this bring gpx support?*
 
 * with peertube
 * https://www.vidstack.io/

@@ -15,6 +15,18 @@ url: 'free-open-source-chat-bots'
 Alternatives to https://www.livechat.com/pricing/ ING uses it
  -->
 
+ <!-- 
+`IODOCTOR` -->
+<!-- 
+Use cases
+🧱 Introduction
+🤖 Chatbots
+❓ Question Answering
+🔍 Semantic Search
+
+OPEN AI EmbEddings - https://www.youtube.com/watch?v=ySus5ZS0b94
+ -->
+
 Recently I have been exploring PandasAI to learn **how to create RAGs** over local data.
 
 ![If you are a programmer](/img/GenAI/llms-frameworks.webp#center)

@@ -185,7 +185,7 @@ If you like Matrix or Signal, you might find interesting:
 
 * https://github.com/permissionlesstech/bitchat
 
-> Bluetooth mesh chat, IRC vibes
+> **Bluetooth mesh chat**, IRC vibes
 
 
 ## Private AI
@@ -207,11 +207,6 @@ Alternatively, you can try these LLMs:
 * https://lumo.proton.me/guest
 * https://proton.me/support/lumo-getting-started
 
-### Image Generation
-
-* Foocus
-* Stable Difussion Web UI
-* Easy Difussion
 
 ---
 

@@ -2,7 +2,7 @@
 title: "How to make Quick Diagrams: MermaidJS and more"
 date: 2023-12-29T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Mermaid workflows"]
 description: 'How to use Mermaid Diagrams for Quick diagrams. Compared with Python Diagrams, DrawIO'
 url: 'how-to-use-mermaid-diagrams'
 ---

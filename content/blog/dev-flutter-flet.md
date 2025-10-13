@@ -7,6 +7,14 @@ description: 'Flutter Apps. Created with Python via Flet and more'
 url: 'flutter-flet-python'
 ---
 
+* https://flet.dev/
+
+> Build **multi-platform apps in Python** powered by Flutter
+
+Because some time ago (pre vibe-coding age) I tried flutter.
+
+And it was not that easy.
+
 **Tl;DR**
 
 Couple years ago I tried to do some Flet Apps with chatGPT, but the knowledge was not there.

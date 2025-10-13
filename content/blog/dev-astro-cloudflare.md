@@ -2,7 +2,7 @@
 title: "Astro Web with Cloudflare Pages and CI/CD"
 date: 2024-09-24
 draft: false
-tags: ["Web","Dev"]
+tags: ["Web","Dev","CF Workers and Pages"]
 description: 'Setup CI/CD for Astro website with Cloudflare Workers and Pages (Github + CF WnP)'
 url: 'astro-web-cloudflare-pages'
 ---

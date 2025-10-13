@@ -16,8 +16,7 @@ url: 'using-langchain-with-pandas-df'
 
 https://www.windy.com/-Rain-thunder-rain?rain,37.118,-4.995,7 is fantastic.
 
-And I wanted to make my weather app better: https://tripplanner.casa.jalcocertech.com/
-
+And I wanted to make my weather app better: `https://tripplanner.casa.jalcocertech.com/`
 
 **Intro**
 
@@ -42,7 +41,6 @@ As [commented earlier this year](https://jalcocert.github.io/JAlcocerT/how-to-ch
 
 
 [I commented the PDF one **here** →](/JAlcocerT/how-to-chat-with-pdfs)
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/ask-multiple-pdfs/" title="My previous Fork in GH for Ask Multiple PDFs ↗" icon="book-open" >}}
@@ -99,8 +97,6 @@ So lets make some tweaks and get trip planner V3 ready, this time with **AI Chat
 > Im keeping the app framework as **DASH**
 
 * https://dash.plotly.com/authentication
-
-### Conclusions
 
 
 ---

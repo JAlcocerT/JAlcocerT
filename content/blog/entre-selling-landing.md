@@ -23,6 +23,11 @@ Making a Landing should be easy already, with tools like: https://github.com/wan
 > OpenUI let's you describe UI using your imagination, then see it rendered live.
 
 
+https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/
+![Astro Waiting List + Formbricks URL Link](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
+
+
+
 
 Ok, ok, you have embraced the power of SSGs and aware of how many cool things can be done *,statically'* aka [in browser with CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/).
 

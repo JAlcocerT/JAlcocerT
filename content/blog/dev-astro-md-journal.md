@@ -62,7 +62,7 @@ Spin the NextJS app, clone any astro theme.
 
 Let their .md or .mdx be updated locally via UI:
 
-![alt text](/blog_img/web/nextjs-admin/journal-nextjs-admin-clonethemes.png)
+![Journal with SSG edited via NextJS and ToastUI](/blog_img/web/nextjs-admin/journal-nextjs-admin-clonethemes.png)
 
 **Using the journal**
 

@@ -21,31 +21,9 @@ I was *bikeshedding* and found out this great project:
 
 *Blame* again to the people building in public: https://www.reddit.com/r/github/comments/1itqlh4/i_got_tired_of_writing_readmes_so_i_built_an/
 
-For the ones who [mind their time](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/), Shaan is also the dev behind this OSS Pomodoro Timer: https://github.com/ShaanCoding/Pomodoro-Timer
+For the ones who [mind their time](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/),
 
-{{% details title="About MPL 2.0 🚀" closed="true" %}}
-
-It's not just about keeping the initial license; it's about a specific type of copyleft that applies at the file level.
-
-The main restriction is: **If you modify an existing file that is under the MPL 2.0 license, or create a new file that contains MPL 2.0-licensed code, that modified or new file must also be licensed under the MPL 2.0 when you distribute it.**
-
-Here's why that's a more accurate way to look at it:
-
-* **File-level copyleft:** The MPL 2.0's copyleft "stops" at the file boundary. This is the key difference from a strong copyleft license like the GPL, which would require the entire "larger work" to be under the GPL. With the MPL, you can have a project with some files under the MPL and other, completely new files under a different, even proprietary, license.
-
-* **Distribution trigger:** The obligations only kick in when you **distribute** the code. If you modify the code and only use it internally within your organization, you are not required to share those changes.
-
-* **Other obligations:** While the file-level copyleft is the primary restriction, you also have other, less onerous obligations. These include:
-    * Keeping the original copyright and license notices.
-    * Informing recipients that the code is under the MPL 2.0.
-    * Making the source code for the MPL-licensed parts available to anyone you distribute the binary to.
-
-So, your summary is conceptually correct in that the core idea is to maintain the license on the specific part of the code it applies to.
-
-However, the details of how that "keeping" works—at the file level and upon distribution—are what truly define the MPL 2.0's unique balance.
-
-{{% /details %}}
-
+Shaan is also the dev behind this OSS Pomodoro Timer: https://github.com/ShaanCoding/Pomodoro-Timer
 
 Isnt it great?
 
@@ -77,7 +55,8 @@ But the content quality!
 
 * https://github.com/JAlcocerT/makeslidev
 
-The original features you have them in `main`
+The original features you have them in `main`:
+
 ```sh
 git clone https://github.com/JAlcocerT/makeslidev
 make setup
@@ -88,7 +67,7 @@ There you go, the original makeread.me project running locally:
 
 *I changed the img to `https://cyclingthere.pages.dev/_astro/PXL_20241008_144149173.Cj1pqXWc_1oH9Mo.webp`*
 
-![alt text](/blog_img/entrepre/public-build/makeslidev/makereadme-local-liveedit.png)
+![local markdown live edits](/blog_img/entrepre/public-build/makeslidev/makereadme-local-liveedit.png)
 
 > See the UI at: `http://localhost:3000/`
 

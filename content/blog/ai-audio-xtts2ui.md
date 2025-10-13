@@ -83,10 +83,6 @@ And it has a swagger API: `http://192.168.0.12:8081/swagger/`
 
 ### Coqui TTS
 
-<!-- 
-https://theroamingworkshop.cloud/b/2429/%F0%9F%90%B8coqui-ai-tts-ultra-rapida-generacion-y-clonacion-de-voz-a-partir-de-texto-multilenguaje/
-https://www.restack.io/p/coqui-tts-answer-spanish-cat-ai
-https://www.yeschat.ai/es/t/coqui-tts -->
 
 * https://github.com/mezbaul-h/june
 

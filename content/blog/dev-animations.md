@@ -174,18 +174,6 @@ You can bring those, even snapshots or gif to [other social media](#social-media
 {{< /callout >}}
 
 
-## Animations x SSG
-
-This year I also was playing around with Astro components.
-
-And withing the datanova theme, I found out that they are doing a really cool animation (which is a SVG!)
-
-```sh
-npm install
-#npm run dev
-npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
-```
-
 ---
 
 ## Conclusions

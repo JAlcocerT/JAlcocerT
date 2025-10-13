@@ -47,6 +47,8 @@ Has it come the moment to mix SSG with Flask or FastAPI?
 
 ### FastAPI
 
+If you create with Python, FastAPI is one of the ways to do webapps.
+
 #### PocketBase Auth with FastAPI
 
 ```sh

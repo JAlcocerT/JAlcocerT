@@ -85,7 +85,9 @@ The Grist platform is built with a modern, full-stack architecture.
 
 ### Grist API
 
-Yes, Grist has a robust **REST API**, and you can definitely use it as a backend for a waiting list. This is one of the key use cases for its "headless" mode, where Grist acts as the data management system for a custom front-end application.
+Yes, Grist has a robust **REST API**, and you can definitely use it as a backend for a waiting list. 
+
+This is one of the key use cases for its "headless" mode, where Grist acts as the data management system for a custom front-end application.
 
 ### Using Grist as a Backend
 
@@ -98,7 +100,9 @@ To use Grist for a waiting list, you would follow these steps:
     `POST https://<your-grist-url>/api/docs/<docId>/tables/<tableId>/records`
     You would include the user's email and name in the JSON body of the request.
 
-Grist's API is fully documented and includes endpoints for not only adding records but also reading, updating, and deleting them. You can use it to build a full-featured waiting list management system, including adding a dashboard within Grist to see sign-ups in real-time.
+Grist's API is fully documented and includes endpoints for not only adding records but also reading, updating, and deleting them.
+
+You can use it to build a full-featured waiting list management system, including adding a dashboard within Grist to see sign-ups in real-time.
 
 
 ---

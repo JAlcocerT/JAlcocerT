@@ -2,7 +2,7 @@
 title: "Testing AI Scrapping projects: GPT-Crawler..."
 date: 2024-12-08
 draft: false
-tags: ["Dev","Python","Web Scrapping"]
+tags: ["Dev","Python","Web Scrapping","GPT-Crawler"]
 description: 'How to use Crawl4AI. Compared with BS4, ...'
 url: 'ai-projects-scrapping'
 ---
@@ -122,32 +122,19 @@ Ask questions: what do you know about iotechcrafts?
 
 Crawl a site to generate knowledge files to create your own custom GPT from a URL
 
-Yes, the ISC (Internet Systems Consortium) license is an **open source license**. It is a permissive license that is similar in terms to the MIT and BSD licenses, allowing almost unrestricted freedom to use, modify, and distribute the software. The ISC license is recognized by the Open Source Initiative (OSI) as a standards-compliant open source license.
+Yes, the ISC (Internet Systems Consortium) license is an **open source license**. It is a permissive license that is similar in terms to the MIT and BSD licenses, allowing almost unrestricted freedom to use, modify, and distribute the software.
+
+The ISC license is recognized by the Open Source Initiative (OSI) as a standards-compliant open source license.
 
 Key features of the ISC license include:
 
-    Simplicity: It's a very brief license, easy to understand, and straightforward in its permissions and limitations.
-    Permissiveness: It allows for commercial use, modification, distribution, and private use of the software.
-    Minimal Requirements: The only significant requirement is to include the copyright notice and the license itself with any copies of the software or substantial portions of it.
+Simplicity: It's a very brief license, easy to understand, and straightforward in its permissions and limitations.
+Permissiveness: It allows for commercial use, modification, distribution, and private use of the software.
+Minimal Requirements: The only significant requirement is to include the copyright notice and the license itself with any copies of the software or substantial portions of it.
 
 Because of its simplicity and permissiveness, the ISC license is favored for projects that wish to impose minimal restrictions on the use and distribution of their software, promoting open and free use of the code.
 
 
-
-
----
-
-## Conclusions
-
-See also:
-
-1. LangChain Web Scrapping
-
-2. Browserless
-
-* https://github.com/browserless/browserless
-
->  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
 
 ---
 

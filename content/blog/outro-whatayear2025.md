@@ -7,6 +7,26 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+
+**Cloudflare alternatives?**
+
+* https://github.com/rapiz1/rathole
+
+> A lightweight and high-performance reverse proxy for NAT traversal, written in Rust. An alternative to frp and ngrok.
+
+* https://noted.lol/cgnat-and-rathole/
+
+### SelfHosting Best Practices
+
+* https://www.reddit.com/r/selfhosted/comments/1beoi4l/best_practices_for_selfhosted_services/
+* https://www.reddit.com/r/homelab/wiki/index/
+
+### What about NIX?
+
+Recently I heard about Flox and NIX...
+
+Are they the best alternative for a homelab OS?
+
 Backend was hard.
 
 In theory, it can be simplified with PB or with https://github.com/MotiaDev/motia
@@ -24,6 +44,8 @@ And CF workers and pages  use cases are so cool: https://github.com/4ev-link/4ev
 Same, we can also have monitor running in gihub https://github.com/upptime/upptime
 
 > ⬆️ GitHub Actions uptime monitor & status page by @AnandChowdhary
+
+> > You could also try with uptime kuma or kener
 
 
 
@@ -68,6 +90,18 @@ Comercial ones like: `https://www.lindy.ai/pricing`
 * https://github.com/browser-use/browser-use
 
 >  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
+
+See also:
+
+1. LangChain Web Scrapping
+
+2. Browserless
+
+* https://github.com/browserless/browserless
+
+>  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
+
+summary: 'Crawl4AI is an open-source web crawler and scrapper tailored for LLMs and AI applications. It offers asynchronous crawling, data extraction, and various features for enhanced performance and scalability.'
 
 * https://github.com/saifyxpro/HeadlessX
 
@@ -285,6 +319,12 @@ Even with Cloudflare Tunnel, you might still want to use a Cloudflare Worker for
 {{< /details >}}
 
 4. I even got time to clean the IoT/MQTT with micro-controllers :)
+
+![Home Assistant dashboard with temperature from MQTT](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI" title="PicoW + Wifi Connection and other scripts 🐍 ↗" >}}
+{{< /cards >}}
 
 5. And tinker a bit with [Crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai) and data via [stonks](https://jalcocert.github.io/JAlcocerT/stonks/) / [stocks with python](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/).
 
@@ -598,6 +638,7 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 - [x] [Better Webs](#more-websites)
 - [x] Better AI APIs Usage: APIFY, ElevenLabs, scrapping APIs...
+- [ ] Review all previous posts and see that are no commented / incomplete sections
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
@@ -760,6 +801,10 @@ https://aistudio.google.com/prompts/new_chat
 You can make interesting conditional logic, like: *If scrap fails, send msg to telegram bot*
 
 #### More Websites!
+
+But for the ones who actually see value on them.
+
+Given the opportunity costs, something like: one time setup + pay less each consecutive year *if you stay quiet* could be interesting to improve client retention.
 
 From:
 

@@ -33,9 +33,9 @@ They provide a cool UI.
 
 And you can deploy them quickly with PaaS as well:
 
-https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/
-https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/
-https://jalcocert.github.io/JAlcocerT/selfhosted-paas/
+* https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/
+* https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/
+* https://jalcocert.github.io/JAlcocerT/selfhosted-paas/
 
 But come on, do you really want to spend time with drag and drop still?
 

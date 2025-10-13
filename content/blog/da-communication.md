@@ -118,4 +118,24 @@ See also:
 
 * https://github.com/spacebarchat/server
 
->  Spacebar server - A reimplementation of the Discord.com backend, built with Typescript and love 
+>  Spacebar server - A reimplementation of the Discord.com backend, built with Typescript and love
+
+
+```sh
+#flatpak install flathub org.telegram.desktop
+```
+
+> [Telegram bots](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) are fun to tinker with!
+
+In case that some of the well know chats stop working, you can try these:
+
+```sh
+flatpak install flathub im.riot.Riot #element
+#flatpak install flathub org.signal.Signal
+```
+
+If you like Matrix or Signal, you might find interesting:
+
+* https://github.com/permissionlesstech/bitchat
+
+> **Bluetooth mesh chat**, IRC vibes

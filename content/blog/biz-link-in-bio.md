@@ -2,7 +2,7 @@
 title: "Cool Link in Bios (with SSGs) with CF Workers and Pages"
 date: 2025-01-22
 draft: false
-tags: ["Web","Portfolio","SSG","Cloudflare","Workers and Pages"]
+tags: ["Web","Portfolio","SSG","Cloudflare","Workers and Pages","Wranlger CLI"]
 description: "Have a cool LinkInBio/Bento website with HUGO and Astro SSGs. Alternative to linktree with Gitlab and Cloudflare WnP Setup."
 url: 'cool-link-in-bios'
 ---

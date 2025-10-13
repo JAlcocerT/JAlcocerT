@@ -1,6 +1,6 @@
 ---
 title: "Autogen + Ollama: Selfhosting Local LLM Agents with UI"
-date: 2025-11-23T23:20:21+01:00
+date: 2024-11-23T23:20:21+01:00
 draft: false
 tags: ["Gen-AI","Self-Hosting","Docker"]
 # cover:
@@ -29,10 +29,12 @@ https://www.youtube.com/watch?v=byPbxEH5V8E
 **AutoGen is a F/OSS framework** that enables the development of LLM applications using multiple agents that can converse with each other to solve tasks.
 
 AutoGen agents are customizable, conversable, and seamlessly allow human participation.
-
+<!-- 
 * {{< newtab url="https://microsoft.github.io/autogen//" text="The Autogen Site" >}}
 * {{< newtab url="https://github.com/microsoft/autogen" text="The  Code at Github" >}}
-    * License: {{< newtab url="https://github.com/microsoft/autogen/blob/main/LICENSE" text="MIT" >}} ❤️
+    * License: {{< newtab url="https://github.com/microsoft/autogen/blob/main/LICENSE" text="MIT" >}} ❤️ -->
+
+* https://github.com/microsoft/autogen
 
 **AutoGen Studio** is an AutoGen-powered AI app (user interface) to help you rapidly prototype AI agents, enhance them with skills, compose them into workflows and interact with them to accomplish tasks. It is built on top of the AutoGen framework, which is a toolkit for building AI agents.
 
@@ -98,8 +100,6 @@ volumes:
 ---
 
 ## FAQ
-
-How to include HTTPs to AutogenStudio?
 
 ### Other F/OSS Multi-Agent Projects
 

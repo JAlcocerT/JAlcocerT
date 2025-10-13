@@ -1,5 +1,5 @@
 ---
-title: "AI Tools for CLI"
+title: "AI Tools for CLI with BAML"
 date: 2025-06-25T01:20:21+01:00
 draft: false
 tags: ["Gemini CLI","LLMs","BAML","git-mcp","scira-mcp","CodeAct","manus"]

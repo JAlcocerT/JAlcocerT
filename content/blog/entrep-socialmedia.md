@@ -3,7 +3,7 @@ title: "Social Media Automation | PostIZ"
 date: 2025-07-03T19:20:21+01:00
 draft: false
 description: 'Programatic posting on SM be like 🤯 Marketing Tools for your SaaS'
-tags: ["Youtube Shorts","Social Media","APIfy","Scrapping","Marketers"]
+tags: ["PostIZ","Youtube Shorts","Social Media","APIfy","Scrapping","Marketers"]
 url: social-media-automation
 ---
 
@@ -12,8 +12,7 @@ url: social-media-automation
 
 Setup [PostIZ](#postiz) and forget about *loosing time* with social media posts.
 
-Focus on creating.
-
+**Focus on creating.**
 
 **Intro**
 
@@ -29,8 +28,7 @@ Apps like PostIZ, n8n or growthchief...
 
 >  The Ultimate all-in social media automation (outreach) tool 🤖 
 
-
-* The people should own the town square - Mastodon Blog https://blog.joinmastodon.org/2025/01/the-people-should-own-the-town-square/?ref=selfh.st
+I also read an interesting post: The people should own the town square - [Mastodon Blog](https://blog.joinmastodon.org/2025/01/the-people-should-own-the-town-square/?ref=selfh.st)
 
 ## PostIZ
 
@@ -82,7 +80,7 @@ And also the [MCP integration](#positz-x-mcp).
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ Setup | Post" image="/blog_img/selfh/links/postiz-channels.png" subtitle="Writting about Streamlit PoC with PyGWalker" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ Setup | Post" image="/blog_img/selfh/links/postiz-channels.png" subtitle="Schedule your social media post" >}}
 {{< /cards >}}
 
 ### PostIZ x n8n
@@ -102,7 +100,7 @@ Aware of the power of [MCP](https://jalcocert.github.io/JAlcocerT/ai-understandi
 [PostIZ also has **MCP**](https://postiz.jalcocertech.com/settings): Connect your MCP client to Postiz to schedule your posts faster!
 {{< /callout >}}
 
-You will get something like:
+You will get sth like:
 
 ```txt
 https://postiz.jalcocertech.com/api/mcp/some_id_here/sse
@@ -163,7 +161,7 @@ docker run -p 3084:3084 --env-file .env --rm -it oculair/postiz-mcp:latest
 
 There are **people *(marketers)* doing cool things** with marketing agencies.
 
-They are implementing CRMs like `https://www.gohighlevel.com/`
+They are implementing CRMs like GHL: `https://www.gohighlevel.com/`
 
 > Building The Digital Marketing Engine
 
@@ -179,7 +177,7 @@ Even  `https://www.heyreach.io/`
 
 Last but not least: `https://www.similarweb.com`
 
-> multidimensional approach to measuring online traffic and discovering what it means. 
+> Multidimensional approach to measuring online traffic and discovering what it means. 
 
 
 ### Scrapping Social Media

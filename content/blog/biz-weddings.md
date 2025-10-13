@@ -382,9 +382,9 @@ And...if you are looking for a Theme for a Wedding landing page, you can have a 
 
 ### Getting a Domain Name
 
-* https://sered.net/dominios
+Get a TLD, there are many places, like: `https://sered.net/dominios`
 
-With an API...
+Or the typical: *These have an API to play...*
 
 0. Porkbun
 1. NameCheap

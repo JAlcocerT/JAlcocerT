@@ -7,7 +7,6 @@ cover:
     alt: "Using ScrapeGraph with Python" # alt text
     caption: "Crawl4AI Scrapping." # display caption under cover
 description: 'Crawl4AI is an open-source web crawler and scrapper designed for large language models (LLMs) and AI applications.'
-summary: 'Crawl4AI is an open-source web crawler and scrapper tailored for LLMs and AI applications. It offers asynchronous crawling, data extraction, and various features for enhanced performance and scalability.'
 url: 'crawl4ai-open-source-web-crawler'
 ---
 

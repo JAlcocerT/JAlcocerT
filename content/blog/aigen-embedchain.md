@@ -58,6 +58,8 @@ https://www.pepy.tech/projects/embedchain
 * We just need: {{< newtab url="https://pypi.org/project/embedchain/" text="The embedchainpackage at PyPi" >}}
 * And install the [Python (and the dependencies) properly](https://fossengineer.com/python-dependencies-for-ai/)
 
+> https://libraries.io/pypi/embedchain
+
 ### Conda
 
 `https://docs.conda.io/projects/miniconda/en/latest/`
