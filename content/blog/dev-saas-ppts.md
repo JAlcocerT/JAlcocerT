@@ -2,7 +2,7 @@
 title: "[Micro SaaS] AI Driven PPTs"
 date: 2025-10-10T01:20:21+01:00
 draft: false
-tags: ["BiP","Agents","Codex CLI","SliDev-Editor","Tech Talk","Theme Seriph"]
+tags: ["BiP","Agents","Codex CLI","NextJS SliDev-Editor","Tech Talk","Theme Seriph","Vue"]
 description: 'BiP a presentation generator for BAs.'
 url: 'ai-driven-presentations'
 ---
@@ -12,7 +12,7 @@ url: 'ai-driven-presentations'
 
 SliDevJS is so cool and recently [vibe coded and made a tech talk about it](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk).
 
-And also [the themes](https://sli.dev/resources/theme-gallery) like: https://github.com/slidevjs/themes/tree/main/packages/theme-seriph
+Whats also fantastic are [the themes](https://sli.dev/resources/theme-gallery) like: https://github.com/slidevjs/themes/tree/main/packages/theme-seriph
 
 
 ```sh
@@ -73,15 +73,6 @@ class: text-center
 
 
 
-**Intro**
-
-After this post: https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-to-create-an-slidev-editor
-
-The AI part was pending!
-
-And also to make that each user will have their own bucket/folder with a `.md` to be edited.
-
-Instead of a common one for all.
 
 
 ## Context for AI
@@ -93,6 +84,27 @@ https://diagrams.mingrammer.com/docs/getting-started/examples
 ---
 
 ## Conclusions
+
+
+After [this post](https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-to-create-an-slidev-editor) where I started the SliDev Editor with NextJS just to learn how to implement [proper social auth with firebase our email verified via logto](https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-to-create-an-slidev-editor): 
+
+![SliDevJS editor with NextJS and Logto/firebase working for auth](/blog_img/DA/ppt/slidev-editor.png)
+
+![alt text](/blog_img/DA/ppt/slidev-logto.png)
+
+![alt text](/blog_img/DA/ppt/slidev-editor-signin-up.png)
+
+![alt text](/blog_img/DA/ppt/slidev-editor-nextjs-toastui.png)
+
+![alt text](/blog_img/DA/ppt/slidev-open-meteo-component.png)
+
+![alt text](/blog_img/DA/ppt/slidev-editor-viewer.png)
+
+The AI part was pending!
+
+And also to make that each user will have their own bucket/folder with a `.md` to be edited.
+
+Instead of a common one for all.
 
 
 ### Other PPT as a Code
