@@ -30,10 +30,15 @@ But just in case you dont want to mess with databases, lets see some other Fileb
 
 And I saw few projects lately to see files, like we saw [here](https://jalcocert.github.io/JAlcocerT/events-photo-galleries/):
 
-* https://github.com/vikramsoni2/nextExplorer
+1. https://github.com/vikramsoni2/nextExplorer
 
 > Web based File Explorer 
 
+2. https://github.com/kyantech/Palmr
+
+>  🌴 Palmr. is an open-source file-sharing platform focused on privacy and security. It enables users to upload, manage, and share files with features like password protection, custom links, and access control without tracking or limitations. Designed for seamless and secure sharing.
+
+3. 
 
 If you dont want **Nextcloud** nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
 
@@ -55,9 +60,13 @@ With local send I got 4MB/s transfer speed from an iphone to a tablet.
 
 Would SCP or FTP be faster?
 
-![alt text](/blog_img/selfh/HomeLab/scp.png)
+![SCP Speed](/blog_img/selfh/HomeLab/scp.png)
 
-![alt text](/blog_img/selfh/HomeLab/sftp.png)
+![SFTP Transfer Speed](/blog_img/selfh/HomeLab/sftp.png)
+
+> Immich is cool and have some projects around https://github.com/Nasogaa/immich-drop
+
+
 
 ### Syncthing x SFTPGo
 
@@ -95,6 +104,10 @@ For a general overview of Syncthing, you can check out Sync Files Across All You
 ---
 
 ## Conclusions
+
+
+https://www.youtube.com/watch?v=OOxzP1JvfQk
+
 
 If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) to the performance.
 
@@ -186,6 +199,134 @@ Conclusion: Which to Choose?
 
 ## FAQ
 
-![MySpeed Internet Speed Test](/blog_img/selfh/HomeLab/myspeed.png)
+
+### SelfHosted WebAnalytics
 
 ![Web Analytics with LunaLytics](/blog_img/selfh/HomeLab/weban-lunalytics.png)
+
+![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
+
+
+Link analytics solutions, like Kutt:
+
+![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
+
+![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
+
+
+
+### Monitoring For HomeLab
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring with Beszel" >}}
+{{< /cards >}}
+
+
+
+![MySpeed Internet Speed Test](/blog_img/selfh/HomeLab/myspeed.png)
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![Uptime Kuma Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
+
+![Kener Status Pages](/blog_img/selfh/HomeLab/statuspages/kener-setup.png)
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener Status Pages | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+### Grafana and NetData
+
+GrafanaPrometheusNodeExp.JPG
+
+https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana
+
+[SelfHost NetData with Docker](https://fossengineer.com/selfhosting-server-monitoring-with-netdata-and-docker/)
+
+
+* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
+* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
+
+
+### Uptime Kuma API
+
+Yes, Uptime Kuma does provide an API, but it is primarily an internal API designed for the application's own use and is not officially supported for third-party integrations. 
+
+It offers a `Socket.io` real-time communication API after authentication and some RESTful API endpoints for tasks like push monitors, status badges, and public status page data.
+
+Using the API (especially through unofficial wrappers like the Python wrapper "uptime-kuma-api"), you can programmatically add new monitors (websites or services) and retrieve some monitoring data.
+
+For example, you can create a new HTTP monitor by specifying the type, name, and URL via the API.[2][3]
+
+The API allows you to:
+
+- Post new websites or services to monitor.
+- Retrieve their status and monitoring data.
+- Access real-time updates through Socket.io.
+- Get status badges or integrate with Prometheus metrics.
+  
+However, the official API is somewhat limited and not guaranteed to be stable or fully documented for external use, so use it with caution.
+
+In summary:
+- You can add monitors programmatically.
+- You can retrieve monitoring data (status, alerts).
+- The API is mostly internal and unofficial but functional.
+- There are third-party wrappers to help interact with it.
+
+This means yes, you can post new websites to monitor and retrieve their data using the API, but expect it to be experimental or unofficial.[3][1][2]
+
+[1](https://github.com/louislam/uptime-kuma/wiki/API-Documentation)
+[2](https://github.com/lucasheld/uptime-kuma-api)
+[3](https://pypi.org/project/uptime-kuma-api/)
+[4](https://uptime-kuma-api.readthedocs.io)
+[6](https://www.home-assistant.io/integrations/uptime_kuma/)
+[7](https://echoesofping.hashnode.dev/comprehensive-guide-to-installing-and-using-uptime-kuma-for-uptime-monitoring)
+[19](https://app.readthedocs.org/projects/uptime-kuma-api/)
+[20](https://github.com/louislam/uptime-kuma)
+
+Here is a summary of the full setup to integrate your **self-hosted Uptime Kuma with a Jamstack** site like Astro securely and efficiently:
+
+- **Uptime Kuma Self-Hosted:** Runs your uptime monitoring and exposes an internal API for adding monitors and retrieving status data.
+
+- **API Security:**  
+  - Restrict the Uptime Kuma API with proper authentication (tokens or keys).  
+  - Use CORS to allow requests only from your trusted domains.
+
+- **Middleware Layer:**  
+  - Deploy a middleware proxy between Uptime Kuma and your Astro site to handle security and data processing.  
+  - Cloudflare Workers are an excellent choice for middleware, providing edge deployment, secure token handling, CORS management, caching, and request/response transformation.
+
+- **Astro Jamstack Site:**  
+  - Your Astro site calls the middleware endpoint (Cloudflare Worker) rather than directly contacting Uptime Kuma.  
+  - This can be done client-side (CSR) for dynamic updates or during build time for static rendering.  
+  - The middleware fetches data from Uptime Kuma securely and returns only the necessary information to the site.
+
+Benefits of This Setup
+
+- Keeps API keys and tokens secure and away from the client.  
+- Protects your Uptime Kuma API with domain-based CORS and authentication.  
+- Enables efficient, low-latency data fetching from the edge.  
+- Allows flexible data formatting and caching to optimize your site performance.  
+
+This architecture ensures both **security** and **scalability** for showing Uptime Kuma monitoring data seamlessly in your Jamstack site.[1][2]
+
+[1](https://github.com/louislam/uptime-kuma/wiki/API-Documentation)
+[2](https://github.com/lucasheld/uptime-kuma-api)
+
+Exactly. In this setup, the API keys are **not included in the static site code**. Instead:
+
+- Your Astro component makes requests to the Cloudflare Workers middleware endpoint.
+- The Cloudflare Worker holds and uses the API keys securely on the server/edge side.
+- The Worker fetches the data from your Uptime Kuma API using the keys and returns only the relevant information to the component.
+- This way, the API keys never get exposed to the client or shipped in the static files.
+- The component can pull updated data on page load or dynamically via client-side rendering without risking key exposure.
+
+This approach keeps your credentials safe while allowing your static site to display real-time or updated monitoring data via the middleware.[1][2]
+
+[1](https://github.com/louislam/uptime-kuma/wiki/API-Documentation)
+[2](https://github.com/lucasheld/uptime-kuma-api)

@@ -41,7 +41,6 @@ How about **selling an ebook** be all about: having an stripe account and proper
 ## A landing page for your eBook
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="NEW Sell your eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Astro SSG Theme (x) Stripe (x) N8N" >}}
 {{< /cards >}}
 
@@ -72,9 +71,6 @@ So why not accelerating the **time to ship ebooks** by understanding how to have
 
 And *maybe* get LLM help for charts creation, data driven parts etc.
 
-### Stripe Payment Links
-
-Go to: https://dashboard.stripe.com/payment-links
 
 ### Using Sell Your Ebook
 
@@ -278,7 +274,7 @@ We've got a landing page to share ebooks.
 
 > Think of this as the first step to selfpublishing
 
-> > See also amazon KDP to reach a lot of potential readers https://kdp.amazon.com/en_US/ with a lean approach, *aka print on demand* 
+> > See also amazon KDP to reach a lot of potential readers `https://kdp.amazon.com/en_US/` with a lean approach, *aka print on demand* 
 
 And a draft on ways to create them with RKnit/Pandoc.
 
@@ -291,19 +287,25 @@ But im happy I could link this to my last year thought with the [assistant agent
 
 Some people do this kind of cool thing: https://github.com/understanding-astro/understanding-astro-book
 
-* https://www.ohansemmanuel.com/books/understanding-astro
+You can see the chapters and all source code on the repo.
+
+Just need to place your mail to get it rendered: https://www.ohansemmanuel.com/books/understanding-astro
 
 > They Place the content and .md in public :)
+
+Same as https://github.com/treeman/why_cryptocurrencies
 
 ### How people send eBooks
 
 1. Via Stripe: `https://shop.acquisition.com/products/100m-money-models?utm_campaign=13261424-%24100M%20Money%20Models&utm_source=hs_email&utm_medium=email&utm_content=376228484&_hsmi=376228484`
 
-2. I guess via stripe + SSR and obfuscation technique that gets clear if your email is in the proper Stripe driven table of users who bought: `https://readmake.com/`
+2. I guess via **stripe + SSR and obfuscation technique** that gets clear if your email is in the proper Stripe driven table of users who bought: `https://readmake.com/`
 
 * https://it-tools.tech/string-obfuscator
+* Stripe Payment Links: https://dashboard.stripe.com/payment-links + some automation like n8n to send the pdf/epub to the buying email
+* For the obfuscation, I imagine that there can be some BE check to the provided email and if you ever bought it, you can read the updated de-obfuscated version online anytime
 
-> You can also sell ebooks via amazon or ko-fi.
+3. You can also sell ebooks via amazon or ko-fi.
 
 
 
@@ -343,14 +345,6 @@ The primary difference is the front-end tool and the language-specific processin
 
 * https://github.com/dakoller/markdown-epub-converter
 
->  A simple Docker-based REST API that converts Markdown to EPUB format using Pandoc. Send markdown content via JSON, get an `EPUB` file back. 
+>  A simple Docker-based REST API that **converts Markdown to EPUB** format using Pandoc. Send markdown content via JSON, get an `EPUB` file back. 
 
 * https://omnitools.app/pdf/pdf-to-epub
-
-### Alternative software for kindle
-
-https://koreader.rocks/
-
-<!-- https://www.youtube.com/shorts/ta0ZUsugLN0 -->
-
-{{< youtube "ta0ZUsugLN0" >}}

@@ -8,8 +8,14 @@ url: 'tech-recap-2026'
 ---
 
 
+Offers
+
+1. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code .mdx
+
 
 ### Curated Posts / Video
+
+D&A Recap + OLTP Post (ERPs) and OLAP Post
 
 0. Creating D&A Reports with AI
 
@@ -58,3 +64,29 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
 
 https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions
 https://jalcocert.github.io/JAlcocerT/social-signin-101/
+
+
+
+![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) 
+
+<!-- 
+Observability Platform for LLMs
+  https://github.com/traceloop/openllmetry
+  https://github.com/langfuse/langfuse
+  
+  Epam Dial + prometheus + grafana
+  Or with LangSmith
+Also DataDog - https://docs.datadoghq.com/llm_observability/ -->
+
+
+
+<!-- Goals:
+  • AI Gen
+    LangChain
+    LocalModels: with Docker
+    From Streamlit to Chainlit / Gradio: https://pypi.org/project/gradio/
+    LLMOps: MLFlow, Airflow, VectorDBs… Onboarding Guide - GenAI-X Innovation Team - EPAM Knowledge Base
+      mlflow/mlflow: Open source platform for the machine learning lifecycle (github.com)
+    GPT4-Turbo
+  • V3 of ML trainnings - To include MLFlow
+Airflow to start some job? -->

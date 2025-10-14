@@ -2,7 +2,7 @@
 title: "Just be Serverless"
 date: 2025-09-23T23:20:21+01:00
 draft: false
-tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone","T3.Chat"]
+tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone","T3.Chat","Publii CMS"]
 url: 'serverless-101'
 description: 'Your WebApps, with Serverless Authentication and AI on the backend.'
 ---
@@ -59,27 +59,40 @@ Recently I discovered about **BCMS and pages-cms**, which I wanted to try [as pe
 
 Aaaand...https://github.com/GetPublii/Publii
 
-> GPL3.0 The most intuitive Static Site CMS designed for SEO-optimized and privacy-focused websites. 
+> GPL3.0 The most intuitive **Static Site CMS** designed for SEO-optimized and privacy-focused websites. 
 
 In theory, all those can be selfhostable.
 
-So lets see what they require to get themes working fast.
+## Auth withtin SSGs
 
-### LogtoJS SDK x Astro
+We saw on [this post](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#ssg-x-pb) how to deploy a purely static site into CF Pages: https://github.com/JAlcocerT/payroll-workers-pb?tab=readme-ov-file
+
+That is having a connection to a PB user collection: https://fast-payroll-theme.pages.dev/signup/
+
+> Pocketbase has handling perpectly those signins/ups and the `https://fast-payroll-theme.pages.dev/secret` was protected
+
+![alt text](/blog_img/dev/FE/payroll-authenticated-via-pb.png)
+
+> > We saw the a cool message `You are authenticated. This is a protected page served by a Cloudflare Pages Function.`
+
+If you would go to incognito - you were asked to login again
+
+### LogtoJS SDK or Firebase x Astro
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth" title="Slidev Editor LogToJS Auth branch | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor/tree/firebaseauth" title="Slidev Editor Firebase Auth branch | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
-### Firebase Auth 
+![SliDevJS editor with NextJS and Logto/firebase working for social authentication](/blog_img/DA/ppt/slidev-editor.png)
+
+With Firebase Auth 
 
 For phones and with FastAPI, I did not manage to get fb auth social sign in/up  working:
 
 * https://jalcocert.github.io/JAlcocerT/firebase-auth-101/
 * https://jalcocert.github.io/JAlcocerT/stonks/
-
-But the NextJS setup worked
-
-#### NextJS + Firebase Auth
-
-
 
 ---
 
@@ -88,7 +101,7 @@ But the NextJS setup worked
 
 ### Firebase Auth x SSG x CF Workers
 
-&ou can combine Firebase Authentication with an Astro static site deployed to Cloudflare Pages to protect certain pages.
+You can combine Firebase Authentication with an Astro static site deployed to Cloudflare Pages to protect certain pages.
 
 However, because Astro in "static" mode builds a purely static site, you cannot use server-side authentication directly on the pages themselves. 
 
@@ -96,7 +109,7 @@ The recommended solution for this is to use **Cloudflare Workers** (or more spec
 
 #### How It Works
 
-This setup requires a mix of client-side and server-side logic:
+This setup requires a **mix of client-side and server-side** logic:
 
 1.  **Client-Side Authentication:** On the front end, your Astro site's client-side JavaScript uses the Firebase client SDK to handle the user sign-in and sign-up process. When a user successfully signs in, the Firebase client SDK provides an **ID token**. This token is a JSON Web Token (JWT) that proves the user's identity.
 
@@ -114,7 +127,7 @@ This setup requires a mix of client-side and server-side logic:
 
 #### The Need for Cloudflare Workers
 
-Yes, you **would need Cloudflare Workers** (or Pages Functions) for any server-side validation or for truly protecting sensitive data.
+Yes, you **would need Cloudflare Workers** (or Pages Functions) for *any server-side validation* or for truly protecting sensitive data.
 
 * **Static sites cannot perform server-side checks.** An Astro static site is a collection of HTML, CSS, and JavaScript files. It has no server-side process to verify a user's token or to handle authentication logic.
 

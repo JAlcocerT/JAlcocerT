@@ -158,7 +158,7 @@ sqlite3 ./users.db "SELECT COUNT(*) FROM users;"
 #SELECT id, email, first_name, last_name, created_at FROM users;
 ```
 
-Im still impressed on sqlite greatness!
+Im still impressed on **sqlite greatness**!
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/databases-101/#database-management--gui-tools" title="There are many Db Tools | Post ↗" >}}
@@ -174,7 +174,7 @@ docker run -e OPENAI_API_KEY=<YOUR_OPEN_AI_KEY> -p 8080:80 ghcr.io/chartdb/chart
 #sqlite3 ./stock_cache.db ".dump" > schema_export.sql && cat schema_export.sql
 ```
 
-![alt text](/blog_img/DA/sql/dbchart-1.png)
+![ChartDB UI - Database connection](/blog_img/DA/sql/dbchart-1.png)
 
 ![alt text](/blog_img/DA/sql/dbchart2.png)
 
@@ -188,9 +188,9 @@ docker run -e OPENAI_API_KEY=<YOUR_OPEN_AI_KEY> -p 8080:80 ghcr.io/chartdb/chart
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
 {{< /cards >}}
 
-The setup even works with container thx to [this compose](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/docker-compose.dev.yml)
+The setup FastApi Web App even works with container thanks to [this compose](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/docker-compose.dev.yml) and it brings the UI looks of [the Astro Idol Theme](https://github.com/JAlcocerT/py-speech-rater/tree/main/fastapi-speech-rater/Astro-idol).
 
-![Fast API x Astro Connected](/blog_img/GenAI/audio/fastapi-astro-signedin-dash.png)
+![Fast API x Astro Theme Connected Showing Admin Panel to record or TTS or S2T](/blog_img/GenAI/audio/fastapi-astro-signedin-dash.png)
 
 {{< callout type="warning" >}}
 This is a sample quick setup with a lot of [auth to do's](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/Astro-idol/AUTH_PAGES.md), like [httpcookie setup](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/)
@@ -226,9 +226,11 @@ Its just faster than doing audios same via CLI:
 
 Considering that FASTAPI and Astro can *speak* perfectly...
 
-Making admin panels / dashboards / data apps  ( displaying via [chartjs](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/Astro-idol/src/pages/dashboard.astro#L124) ) with this stack does not seem that complicated anymore...
+Making admin panels / dashboards / data apps  ( displaying via [chartjs](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/Astro-idol/src/pages/dashboard.astro#L124) ).
 
-![FastAPI x Astro x ChartJS](/blog_img/GenAI/audio/fastapi-chartjssqlite.png)
+With this stack does not seem that complicated anymore...
+
+![FastAPI x Astro x ChartJS pulling data from sqlite](/blog_img/GenAI/audio/fastapi-chartjssqlite.png)
 
 And one panel like that to rank users engagement with the app does not seem a bad idea at all :)
 
@@ -272,7 +274,7 @@ gh repo create reponame --private --source=. --remote=origin --push
 
 ### Tools for Meetings
 
-Both Otter.ai and Fireflies.ai support recording audio on Android apps and provide full access to transcripts and related meeting content via their web applications.
+Both `Otter.ai` and `Fireflies.ai` support recording audio on Android apps and provide full access to transcripts and related meeting content via their web applications.
 
 - Otter.ai Android app lets you record meetings, voice memos, and in-person conversations with real-time transcription. All recordings and transcripts automatically sync to Otter's cloud and can be accessed, searched, edited, and shared on Otter’s web app. Users can pause/resume recordings and rename conversations.
 

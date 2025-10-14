@@ -1,6 +1,6 @@
 ---
 title: "Website knowledge updates. Waiting / Landings with AI?"
-date: 2025-10-11T10:20:21+01:00
+date: 2025-10-15T10:20:21+01:00
 draft: false
 tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Landing Pages","BCMS vs PagesCMS"]
 description: 'New ATH for my SSG knowledge. Landing 101 that convert and Codex for idea validation.'
@@ -23,10 +23,6 @@ Making a Landing should be easy already, with tools like: https://github.com/wan
 > OpenUI let's you describe UI using your imagination, then see it rendered live.
 
 
-https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/
-![Astro Waiting List + Formbricks URL Link](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
-
-
 
 
 Ok, ok, you have embraced the power of SSGs and aware of how many cool things can be done *,statically'* aka [in browser with CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/).
@@ -36,6 +32,31 @@ And surprisingly, [Front End can do many cool things, *including authentication*
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
 {{< /cards >}}
+
+
+**A Better Waiting2Landing** On [this post](https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/) I thought Ill make a better version of the initial waiting2landing presented https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/
+
+![Astro Waiting List + Formbricks URL Link](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
+
+Time to create
+```
+
+```
+
+
+```sh
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
+git config --global user.name
+git add .
+git commit -m "Initial commit: Waiting to Landing v2 with PB and Cloudflare Workers and Pages"
+
+#sudo apt install gh
+gh auth login
+gh repo create waiting-to-landing-pb --private --source=. --remote=origin --push
+```
 
 There is one thing still stucked...
 

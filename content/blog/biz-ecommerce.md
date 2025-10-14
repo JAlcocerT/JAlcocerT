@@ -9,6 +9,15 @@ url: 'ecommerce'
 
 
 
+Hosting an eCommerce
+
+* https://libreselfhosted.com/project/aimeos/
+
+* https://github.com/aimeos
+  * https://github.com/aimeos/aimeos
+
+> MIT | Ultra-fast, Cloud-native, **API-first PHP e-commerce framework** for building custom online shops, scalable marketplaces and complex B2B apps 
+
 https://www.shoper.pl/premium like https://sklepmakunki.pl/ which theme comes from https://netplace.com.pl/ see https://netplace.com.pl/portfolio/magicznypokoik-pl/
 
 **Intro**

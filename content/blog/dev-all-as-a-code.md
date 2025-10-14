@@ -100,6 +100,9 @@ npm init slidev #yarn create slidev
 
 > > You can combine SliDev + OBS + [FastApi Audio Recorder S2T-TTS](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions) for youtube video creation workflow
 
+![FastAPI x Astro x ChartJS pulling data from sqlite](/blog_img/GenAI/audio/fastapi-chartjssqlite.png)
+
+
 #### Diagrams are also code!
 
 1. https://diagrams.mingrammer.com/docs/getting-started/examples
@@ -159,6 +162,17 @@ the buying brain....
 
 
 #### Reports as a code
+
+As seen while exploring yfinance on this repo and [post](https://jalcocert.github.io/JAlcocerT/stonks/#eda-on-yfinance).
+
+You can make a one prompt vibe coded report
+
+![Stonks EDA Summary Report](/blog_img/entrepre/public-build/pystonks/eda-stonks.png)
+
+>  *via `yfinance-104.ipynb`*
+
+https://github.com/JAlcocerT/py-stonks/blob/main/z-eda-yfinance/yfinance-104.ipynb
+
 
 #### Infographics as a code
 

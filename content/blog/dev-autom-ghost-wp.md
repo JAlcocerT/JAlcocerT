@@ -46,14 +46,16 @@ Even configuring your [**n8n** to write into wordpress](#n8n-x-wordpress) for yo
 {{< /cards >}}
 
 
-[![Star History Chart](https://api.star-history.com/svg?repos=n8n-io/n8n,deepset-ai/haystack&,type=Date)](https://star-history.com/n8n-io/n8n&deepset-ai/haystack&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=n8n-io/n8n,TryGhost/Ghost,WordPress/WordPress&,type=Date)](https://star-history.com/n8n-io/n8n&TryGhost/Ghost&WordPress/WordPress&Date)
 
 
 Because [n8n](https://github.com/n8n-io/n8n) has been taking over lately...
 
 ## Programatic Posts
 
-Because if LLMs can generate nice markdown, or help you do web research... why should you build all that post skeleton?
+Because if LLMs can generate nice markdown, or help you do web research...
+
+Why should you build all that post skeleton?
 
 ### Programatic WP
 
@@ -113,16 +115,11 @@ curl -u 'jalcocert:bzkh]FTp3}T]#Mj' -X POST "$WP_HOME/wp-json/wp/v2/posts" \
 
 See https://github.com/JAlcocerT/Home-Lab/blob/main/ghost/API.md after you have done your [Ghost setup](https://github.com/JAlcocerT/Home-Lab/blob/main/ghost/API.md)
 
-
----
-
-## Conclusions
-
-If you like to do programatic stuff but prefer that agents do the job for you, see: https://github.com/mcp-wp/mcp-server
-
 ---
 
 ## FAQ
+
+If you like to do programatic stuff but prefer that agents do the job for you, see Wordpress MCP Server: https://github.com/mcp-wp/mcp-server
 
 ### Ghost Setup
 
@@ -343,5 +340,3 @@ Choose WordPress if:
 If Codex can generate documentation for [QA Track](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/)... https://youtu.be/e_l6HJISIrs
 
 It can definitely generate markdown posts summaries about it or any other project.
-
-### n8n x Wordpress

@@ -109,17 +109,7 @@ Key features of Huly:
 - **Knowledge base** creation with powerful linking and tagging.
 - Focus on streamlining team communication, coordination, and document management.
 
-In essence, Huly is designed as a comprehensive "everything app" for teams to manage projects, communicate, plan, and collaborate seamlessly in one platform.[1][2]
-
-[1](https://huly.io)
-[2](https://docs.huly.io/getting-started/introduction-huly/)
-[3](https://www.saasframe.io/saas/huly)
-[4](https://uxplanet.org/9-ui-ux-must-tools-for-designers-df60745d990e)
-[5](https://www.youtube.com/watch?v=mYsuk7JYmYY)
-[6](https://instinctdesignstudio.com/blog/10-ai-powered-design-tools-ux-design/)
-[7](https://www.reddit.com/r/Hulu/comments/17wzkfs/what_would_you_change_about_your_hulu_experience/)
-[8](https://wallin-design.webflow.io/portfolio-projects/hulu-mobile-app-ui-redesign)
-[9](https://www.figma.com/community/file/1482368458764874574/sleeksphere-unified-workspace-ui-concept)
+In essence, Huly is designed as a comprehensive "everything app" for teams to manage projects, communicate, plan, and collaborate seamlessly in one platform.
 
 ## Creating Presentations (PPTs)
 

@@ -4,7 +4,7 @@ date: 2025-09-30T08:20:21+01:00
 draft: false
 tags: ["n8n vs Flowise","ChatWoot vs PaperCups","SolidTime","Embeded Analytics","DB2REST","OpenAI ChatKit"]
 url: 'embed-that'
-description: 'Bring them to your Website - Chatbots, Live Chats > Whatsapp bouble or cal'
+description: 'Enhance your Websites - Chatbots > Live Chats  > > Whatsapp bouble or cal'
 ---
 
 
@@ -22,6 +22,9 @@ Chatwoot has some basic CRM features (contact management, conversation history) 
 #### Flowise
 
 ![Flowise Chatflow](/blog_img/selfh/flowise-chatflows.png)
+
+![Flowise Chatflows UI](/blog_img/selfh/flowiseai-ui-workflows.png)
+
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/flowise-ai" title="FlowiseAI | HomeLab Configs 🐋 ↗" >}}

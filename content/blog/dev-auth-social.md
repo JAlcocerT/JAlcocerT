@@ -365,7 +365,9 @@ This function will act as a secure intermediary for all sign-up requests.
   * If the email is on the list, the Cloud Function will use the Firebase Admin SDK to **create the user account** directly on the server.
   * If the email is not on the list, the function will return an error, preventing the user from being created.
 
-This approach is highly secure because it moves the user creation logic to a trusted server environment (the Cloud Function). The client app never has the permission to create users directly, so even if a malicious user tampers with the front-end code, they cannot bypass your whitelist.
+This approach is highly secure because it moves the user creation logic to a trusted server environment (the Cloud Function).
+
+The client app never has the permission to create users directly, so even if a malicious user tampers with the front-end code, they cannot bypass your whitelist.
 
 Step 3: Implement Client-Side Sign-in
 
@@ -440,7 +442,7 @@ See [this script](https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-aut
 
 When you need robust user management, including social sign-in and email verification, but don't need the entire suite of backend services (like a database, file storage, etc.), you're looking for an **Authentication-as-a-Service (AaaS)** or **Identity and Access Management (IAM)** provider.
 
-These services specialize in handling user authentication and authorization, and they often integrate with your existing backend and application architecture. Here are some of the most popular and powerful options:
+These services specialize in handling user authentication and authorization, and they often integrate with your existing backend and application architecture. 
 
 ### 1. Clerk 💼
 

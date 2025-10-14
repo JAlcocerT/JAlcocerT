@@ -2,7 +2,7 @@
 title: "Programatic Web Search"
 date: 2025-10-09
 draft: false
-tags: ["Dev","DuckDuckGo","SerpAPI","SerpBear"]
+tags: ["Dev","DuckDuckGo","SerpAPI","SerpBear","SimilarWeb"]
 url: 'search-web-with-python'
 summary: 'How to use search the web programatically'
 ---
@@ -35,6 +35,13 @@ And as we saw here, it does not require an API key (at least for now).
 
 * https://github.com/deedy5/duckduckgo_search
 * https://pypi.org/project/duckduckgo-search/
+
+## How is your web Doing
+
+**How is your site doing?**
+
+1. `https://lp.similarweb.com/brand-2/`
+2. https://docs.serpbear.com/deployment/deploying-to-elestio-1-click 
 
 
 ---

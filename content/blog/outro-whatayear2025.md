@@ -527,11 +527,6 @@ Because Selfhosting Static Generated Sites, is not a secret anymore:
 {{< /cards >}}
 
 
-Link analytics solutions, like Kutt:
-
-![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
-
-![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
 
 But, time is money.
 
@@ -834,6 +829,7 @@ https://jalcocert.github.io/JAlcocerT/audio-recap/
 
 ![Fast API WebApp with audio recording capabilities](/blog_img/GenAI/audio/fastapi-audio-rec.png)
 
+![Fast API x Astro Theme Connected Showing Admin Panel to record or TTS or S2T](/blog_img/GenAI/audio/fastapi-astro-signedin-dash.png)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="Speech Rater Flask Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to rate your Speech - TTS and S2T transcription for youtube" >}}
@@ -843,6 +839,17 @@ https://jalcocert.github.io/JAlcocerT/audio-recap/
   {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="ebook ideas Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to ship ebooks" >}}
 {{< /cards >}}
 
+
+From Streamlit PoCs, I mean streamlit financial MVP to Flask with ChartJS:
+
+![Streamlit signin signup via pocketbase users collection](/blog_img/entrepre/public-build/pystonks/st-auth-pb-signup.png)
+
+![Flask UI Sample cum returns and mdd graphs](/blog_img/entrepre/public-build/pystonks/CumReturns-MDD.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/docker-compose.st.yml" title="streamlit docker compose working with auth ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_pb.py" title="ST auth script, fully working with PB users collection ↗" >}}
+{{< /cards >}}
 
 
 ![Flask WebApp vibe coded gradient](/blog_img/selfh/automation/flask-gradient-cms-v2.png)

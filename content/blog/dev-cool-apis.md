@@ -1,9 +1,9 @@
 ---
-title: "Interesting APIs"
-date: 2025-10-12T09:20:21+01:00
+title: "Interesting APIs 101"
+date: 2025-10-14T09:20:21+01:00
 draft: false
 tags: ["APIfy","Firecrawl","Serp","Smithery MCP","Scrap"]
-description: 'Get that info you need.'
+description: 'Get that info you need. API 101 '
 url: 'interesting-apis'
 ---
 
@@ -14,6 +14,12 @@ Whenever you go to a restaurant, you see the menu and order what you want.
 You dont care of how its prepared in the kitchen.
 
 Same with API's: you ask for something, you get it.
+
+And we can do all kind of things with them.
+
+Like using it to push [new content/posts programatically to WP or Ghost](https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/).
+
+
 
 ## Scrapping APIs
 
@@ -111,6 +117,23 @@ ZenRows is best for **technically adept users** needing to scrape protected or d
 Exa is a powerful API and search engine for developers and AI platforms needing live, reliable access to web data—whether for agentic automation, research workflows, candidate sourcing, market intelligence, marketing analysis, or RAG pipelines.
 
 It’s frequently described as “Perplexity-as-a-service” for customizable, factual, and privacy-conscious web data access.
+
+
+## Data APIs
+
+### Weather
+
+
+## Checking APIs
+
+#### Hoppscotch
+
+When playing/creating APis...
+
+<!-- https://www.youtube.com/watch?v=V4eC5tKg3WQ -->
+
+{{< youtube "V4eC5tKg3WQ" >}}
+
 
 
 ---

@@ -42,12 +42,6 @@ I could not avoid thinking about the recent [ebook pdf/epub creation post](https
 So how about taking the requirements from PdM, understand Jira schema and propose some architectural solution?
 
 
-<!-- 
-![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) -->
-
-**How the process looked**
-
-
 
 **What I learnt**
 
@@ -372,13 +366,9 @@ Azure DevOps and Jira both serve as comprehensive tools for managing software de
 
 ## FAQ
 
-
-
 ### How to create a Jira Data Model analyzer
 
-
 I got this after the first iteration:
-
 
 ```sh
 git init

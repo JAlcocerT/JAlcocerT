@@ -11,9 +11,11 @@ math: true
 
 **Tl;DR**
 
-Creating a py_stocks v2.0.
+Creating a py_stocks v2.0, or a py_stonks v1.0
 
-Got working streamlit + PB auth. Also a cool FastAPi + Firebase Auth (that works on desktops and *not really on phones*)
+Got working streamlit + PB auth as per [these scripts 🐍](https://github.com/JAlcocerT/py-stonks/tree/main/hardcoded-auth-streamlit).
+
+Also a cool FastAPi + Firebase Auth (that works on desktops and *not really on phones*)
 
 And a comparison of Flask Plotly vs FastAPi with ChartJS
 
@@ -30,23 +32,23 @@ Some people tell you to make a business.
 
 Other to become a [crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) bro.
 
-Others, to place ads in your website or install strange apps that gives you money without you knowing how.
+Others, to place ads in your website or install strange apps that gives you money **without you knowing how**.
 
 ```yml
 #docker run honeygain/honeygain -tou-accept -email ACCOUNT_EMAIL -pass ACCOUNT_PASSWORD -device DEVICE_NAME
 
-version: '3'
-services:
-  honeygain:
-    image: honeygain/honeygain #https://hub.docker.com/r/honeygain/honeygain
-    command: -tou-accept -email ACCOUNT_EMAIL -pass ACCOUNT_PASSWORD -device DEVICE_NAME
+#version: '3'
+#services:
+#  honeygain:
+#    image: honeygain/honeygain #https://hub.docker.com/r/honeygain/honeygain
+#    command: -tou-accept -email ACCOUNT_EMAIL -pass ACCOUNT_PASSWORD -device DEVICE_NAME
 ```
 
 And today, we are going to have **fun with stonks**.
 
 Kind of a recap of yfinance, ipynb, matplotlib animations... and Python Web Apps for this year.
 
-After having *abandoned* [Py_Stocks](https://github.com/JAlcocerT/Py_Stocks) and the state written on [this post](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/).
+After having *abandoned* [Py_Stocks](https://github.com/JAlcocerT/Py_Stocks) on the state written on [this post](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/).
 
 Earlier this year Ive tinkered with this 2 stock related web apps:
 
@@ -59,12 +61,12 @@ Reflex looks really cool in phones as well, but still I was more confortable wit
 
 Auth was still...kind of a mistery then.
 
-Now, with Py_Stonks i want to put together all the Python Web App and back-end stuff Ive learnt.
+Now, with `Py_Stonks` i want to put together all the Python Web App and *back-end stuff* Ive learnt this summer.
 
 And create a kind of **blueprint for secure web apps with few authentication methods**: *at least as of my knowledge in sept2025*.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Stonks" title="NEW Python Py Stonks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PyStocks WebApp and ipynb with Yfinance Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/py_stonks" title="NEW Python Py Stonks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PyStocks WebApp and ipynb with Yfinance Source Code on Github" >}}
 {{< /cards >}}
 
 Im just taking ideas from these 2 + combining them with auth stuff Ive learnt in the meantime.
@@ -111,7 +113,7 @@ Its not been the first time to tinker with yfinance, but now is the first time i
 
 I created some `yfinance-10*.ipynb` files to make sure I dont need to go back and see how to pull prices and dividends from the API.
 
-And with one prompts I was gettings this: *via `yfinance-104.ipynb`*
+And with one prompts I was gettings this: *via `yfinance-104.ipynb`* available [here](https://github.com/JAlcocerT/py-stonks/blob/main/z-eda-yfinance/yfinance-104.ipynb)
 
 ![Stonks EDA Summary Report](/blog_img/entrepre/public-build/pystonks/eda-stonks.png)
 
@@ -122,7 +124,7 @@ Then quickly after put this [HLD of the architecture via mermaid](https://mermai
 > Claude recommended me to bring also Alpha Vantage API 
 
 
-{{< details title="About Alpha Vantage API 📌" closed="true" >}}
+{{< details title="About Alpha Vantage API for financial Data📌" closed="true" >}}
 
 Free Tier
 - **5 API calls per minute**
@@ -159,8 +161,7 @@ Recommendation for Your Project
 
 {{< /details >}}
 
-> > I wanted to keep it simple for now and continued with YFinance only
-
+> > I wanted to keep it simple for now and **continued with YFinance only**
 
 ##### YFinance Tricks
 
@@ -209,7 +210,7 @@ sqlite3 stock_cache.db "SELECT name FROM sqlite_master WHERE name LIKE 'stock_da
 
 ![SQLite Database Browser - sqlitebrowser"](/blog_img/entrepre/public-build/pystonks/dbbrowser-sqlite-pystonks.png)
 
-{{< details title="Explore your sqlite with these tools 📌" closed="true" >}}
+{{< details title="Explore your sqlite with these DB tools 📌" closed="true" >}}
 
 * [ChartDB](https://github.com/chartdb/chartdb) - Database diagrams editor that allows you to visualize and design your DB with a single query.
 
@@ -278,6 +279,7 @@ For the old hardcoded streamlit auth to look at the container for users allowed,
   {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_hardcoded_compose.py" title="Adapt the known st auth script, so that it considers the new env variables ↗" >}}
 {{< /cards >}}
 
+
 ```sh
 export STREAMLIT_AUTH_ENABLED='true'
 #by default it uses my favourite yosua/cerdo if anything else provided as per env variable
@@ -307,7 +309,9 @@ Is this streamlit authentication working with the users of the pocketbase collec
 
 With a *minor* tweak...
 
-It can also register new mail/passwords to your PB users collection: *streamlit login/signup as per [pocketbase collection](#faq) DONE ✅*
+It can also register new mail/passwords to your PB users collection: 
+
+*streamlit login/signup as per [pocketbase collection](#faq) DONE ✅*
 
 > There is a **video** for your with [the result](#faq).
 
@@ -378,6 +382,14 @@ For any time doing `Streamlit -> Flask` you can find on [this .md](https://githu
 ---
 
 ## Conclusions
+
+
+And with all this...a Data Driven eBook?
+
+This is something to consider.
+
+Specially after having some thoughts placed on [ebook as a code post](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/).
+
 
 You dont need much more than this for a [OHLC](#faq) and trends info: `https://app.financeinmotion.fyi/`
 
@@ -786,17 +798,9 @@ From `yfinance-203.ipynb` we can add custom colors: https://it-tools.tech/color-
 
 ![Matplotlib FastAPI pulled data custom colors](/blog_img/entrepre/public-build/pystonks/eda-stonks2-matplotlib.png)
 
-From `-204`, you bring your own logos:
+From `-204`, you bring your own logos to the images:
 
-![alt text](../../static/blog_img/entrepre/public-build/pystonks/eda-stonks3-matplotlib.png)
-
-
-### Data Driven eBook
-
-This is something to consider.
-
-Specially after having some thoughts places on [ebook as a code post](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/).
-
+![PyStonks generating Matplotlib good Looking Charts sharable in forum ](/blog_img/entrepre/public-build/pystonks/eda-stonks3-matplotlib.png)
 
 
 ---

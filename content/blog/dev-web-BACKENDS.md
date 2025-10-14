@@ -325,7 +325,9 @@ Key Considerations:
 
 #### NextJS
 
-Yyou can think of Next.js's backend capabilities (like **Route Handlers** and **Server Actions**) as being functionally similar to a framework like FastAPI, but with a different focus. Both allow you to build APIs, handle server-side logic, and interact with databases.
+Yyou can think of Next.js's backend capabilities (like **Route Handlers** and **Server Actions**) as being functionally similar to a framework like FastAPI, but with a different focus. 
+
+Both allow you to build APIs, handle server-side logic, and interact with databases.
 
 The key difference is that **FastAPI is a dedicated backend framework**, while **Next.js is a full-stack framework** that includes powerful backend features as part of a cohesive ecosystem.
 
@@ -333,7 +335,9 @@ The key difference is that **FastAPI is a dedicated backend framework**, while *
 
 **Next.js as a Backend**
 
-Next.js provides a "backend for frontend" pattern. This means its backend features are tightly integrated with its frontend rendering.
+Next.js provides a "backend for frontend" pattern.
+
+This means its backend features are tightly integrated with its frontend rendering.
 
 * **Route Handlers**: These let you create API endpoints to handle HTTP requests (GET, POST, etc.) and return various data types like JSON. They're analogous to the route decorators (`@app.get("/items/")`) in FastAPI.
 * **Server Components/Actions**: These allow you to write server-side code directly within your React components. This is a powerful concept that reduces client-side JavaScript and simplifies data fetching and form submissions, a capability not found in a traditional API framework like FastAPI.

@@ -1,5 +1,5 @@
 ---
-title: "Waiting to Landing with Pocketbase"
+title: "LinkHub Astro Theme with Pocketbase"
 date: 2025-09-01T15:20:21+01:00
 draft: false
 tags: ["PB","Cloudflare Pages",CSR Guard"","SSG CSR SSR","Link Hub Theme with PB","Waiting2Landing v2"]
@@ -9,14 +9,14 @@ url: 'waiting-list-pocketbase'
 
 **TL;DR**
 
-Combining PB: `https://pocketbase.jalcocertech.com/_/` with CF Workers as [seen recently](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#cloudflare-workers-auth) give us possibilities.
+Combining **PB**: `https://pocketbase.jalcocertech.com/_/` with CF Workers as [seen recently](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#cloudflare-workers-auth) give us possibilities.
 
-With the waiting2landing concept seen on [this post](https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/), that was based
+With the **waiting2landing concept** seen on [this post](https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/), that was based
 on an astro theme, you just decided which one to deploy statically via [the compose file](https://github.com/JAlcocerT/waiting-to-landing/blob/main/docker-compose.yml#L19)
 
 > There was a formbricks plugged to it as per: `FORM_URL` and `FORM_EMAIL_FIELD_ID`
 
-Now: how about using PB to capture the email (no validation so far) and for people who provided it, they will be able to see a `/app` route, from where they will be able to fill a form to tell how they want to shape the product.
+Now: how about (?) using PB to capture the email (no validation so far) and for people who provided it, they will be able to see a `/app` route, from where they will be able to fill a form to tell how they want to shape the product
 
 > This is all about understanding [SSG vs CSR vs SSR](#ssg-vs-csr-vs-ssr). And what [SPA](#csr-vs-spa) can do.
 
@@ -77,7 +77,7 @@ What I liked about the theme:
 Auto-detect: Astro won’t pick browser language automatically for static sites. It renders both routes; you choose which URL to serve.
 {{< /callout >}}
 
-What I added:
+What I added: *and where its in the repo code*
 
 1. [Signin/up pages](https://github.com/JAlcocerT/link-hub-pb/blob/main/signin-up.md)
 2. [Connection to the login signup to pb](https://github.com/JAlcocerT/link-hub-pb/blob/main/signin-up-add-pb.md), similarly to what was done at  [this post](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#ssg-x-pb)
@@ -134,31 +134,11 @@ wrangler pages deploy dist --project-name=link-hub --branch=main
 
 ## Conclusions
 
+That was an interesting setup, but you probably come for the [waiting2landing v2 with pocketbase which is on **this repo**]().
 
+> Executed on a different post with landings
 
-
-### A Better Waiting2Landing
-
-```
-
-```
-
-
-```sh
-git init
-git branch -m main
-git config user.name
-git config --global user.name "JAlcocerT"
-git config --global user.name
-git add .
-git commit -m "Initial commit: Waiting to Landing v2 with PB and Cloudflare Workers and Pages"
-
-#sudo apt install gh
-gh auth login
-gh repo create waiting-to-landing-pb --private --source=. --remote=origin --push
-```
-
-### LinkHub with PocketBase
+**LinkHub with PocketBase**
 
 > https://link-hub-1qd.pages.dev/
 
@@ -167,7 +147,6 @@ gh repo create waiting-to-landing-pb --private --source=. --remote=origin --push
 ## FAQ
 
 ### SSG vs CSR vs SSR
-
 
 #### CSR vs SPA
 

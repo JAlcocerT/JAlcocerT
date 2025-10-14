@@ -117,10 +117,17 @@ See [the BRD](#faq) where we scoped the project.
 
 ## Conclusions
 
+Building a proper data foundation is key for such projects.
+
+Then, use streamlit to make quick visuals and layouts for a PoC.
+
+To make it look cooler, vibe code as per those guidelines using any webapp [backend framework](https://jalcocert.github.io/JAlcocerT/backend-alternatives/) from Python or NextJS.
+
 If you need a proper finance tool, see: https://www.perplexity.ai/finance/XOM?comparing=CVX&period=1y
 
-Before going to https://www.interactivebrokers.ie/sso/Login?RL=1&locale=en_US or https://www.xtb.com/es :)
+Before going to `https://www.interactivebrokers.ie/sso/Login?RL=1&locale=en_US` or `https://www.xtb.com/es` :)
 
+> Having the possibility to export data from famous brokers, get it cleaned automatically and have your portfolio visualized can be great
 
 ---
 
@@ -280,18 +287,7 @@ FastAPI x Firebase Auth worked on desktops perfectly:
 
 **MailerLite** some features *behind a subscribe wall* could also be interesting
 
-##### Hoppscotch
-
-When playing/creating APis...
-
-<!-- https://www.youtube.com/watch?v=V4eC5tKg3WQ -->
-
-{{< youtube "V4eC5tKg3WQ" >}}
-
-
-
-
-## Outo
+## Outro
 
 Interesting concepts: 
 

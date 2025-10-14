@@ -1,5 +1,5 @@
 ---
-title: "Flowise AI Embedded and Gitea WIP"
+title: "Flowise AI Embedded and Gitea"
 date: 2025-09-05T10:20:21+01:00
 draft: false
 tags: ["HomeLab","Flowise SDK","Web","LLM APIs","Flowise Streamlit"]
@@ -13,6 +13,10 @@ url: 'flowise-and-gitea'
 I dont quite like having some *use cases for the enterprise version* within n8n.
 
 So putting together a [Flowise](#flowise-ai) x Gitea stack that is F/OSS (Apache v2 and MIT)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="Gitea | HomeLab Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 **Intro**
 
@@ -48,7 +52,7 @@ sudo docker compose up -d
 
 ![Flowise AI UI 101](/blog_img/selfh/flowiseai-ui-setup.png)
 
-![alt text](/blog_img/selfh/flowiseai-ui-workflows.png)
+![Flowise Chatflows](/blog_img/selfh/flowiseai-ui-workflows.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot with Docker 🐋 ↗" >}}
@@ -108,12 +112,13 @@ docker network connect cloudflared_tunnel gitea #network -> container name
 #docker inspect gitea --format '{{json .NetworkSettings.Networks}}' | jq
 ```
 
----
-
-## Conclusions
-
 ### What to do with Flowise?
 
+How about...*Adding Chatbots to Websites using Embed API*
+
+<!-- https://www.youtube.com/watch?v=XOeCV1xyN48 -->
+
+{{< youtube "XOeCV1xyN48" >}}
 
 
 ---
@@ -127,7 +132,6 @@ The Flowise SDK for Python provides an easy way to interact with the Flowise API
 This SDK allows users to create predictions with customizable options, including history, file uploads, and more.
 
 * https://github.com/FlowiseAI/FlowisePy
-
 
 
 ```sh

@@ -2,16 +2,20 @@
 title: "Where to Deploy?"
 date: 2025-09-10
 draft: false
-tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio","Goodies 4 Marketers","SerpBear","SimilarWeb"]
-description: 'How to deploy? Resources to launch your stuff in front of your clients.'
+tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio vs Hetzner vs DO","Goodies 4 Marketers"]
+description: 'How to deploy? Resources to launch your stuff in front of your clients. From CRMs, ERPs to forums.'
 url: 'where-to-deploy'
 ---
 
 **TL;DR**
 
+If you are building software or want to use [projects that other built...](#faq)
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for your server" >}}
 {{< /cards >}}
+
+...you will just need a place to host them.
 
 **Intro**
 
@@ -139,26 +143,31 @@ docker stop $(docker ps -a -q) #stop all
 ### Goodies for Marketers
 
 
+Are you mastering marketing and social media?
+
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/social-media-automation/#conclusions" title="Social Media Automation | Post ↗" >}}
 {{< /cards >}}
 
 
 * https://www.producthunt.com/products/listmonk
+  * https://github.com/knadh/listmonk
 
-**How is your site doing?**
 
-1. `https://lp.similarweb.com/brand-2/`
-2. https://docs.serpbear.com/deployment/deploying-to-elestio-1-click 
-
+>  High performance, **self-hosted, newsletter and mailing list manager** with a modern dashboard. Single binary app. 
 
 You need a CRM?
 
-Before paying and ggetting locked in, see:
+Before paying and getting vendor locked in, see:
 
 1. Odoo, ERPNext,...
 2. https://elest.io/fully-managed-services/applications/crm-erp
 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/erpnext" title="ERPNext Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo HomeLab | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ---
@@ -171,17 +180,12 @@ Before paying and ggetting locked in, see:
 
 * https://github.com/NodeBB/NodeBB
 
->  Node.js based forum software built for the modern web 
+>  Node.js based **forum software** built for the modern web 
 
 * https://github.com/LemmyNet/lemmy
 
-https://github.com/JAlcocerT/Docker/blob/main/Communication/lemmy/docker-compose.yml
 
-### Hosting an eCommerce
-
-* https://libreselfhosted.com/project/aimeos/
-
-* https://github.com/aimeos
-  * https://github.com/aimeos/aimeos
-
-> MIT | Ultra-fast, Cloud-native, API-first PHP e-commerce framework for building custom online shops, scalable marketplaces and complex B2B apps 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Communication/lemmy/docker-compose.yml" title="lemmy Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/lemmy" title="Lemmy HomeLab | Docker Config 🐋 ↗" >}}
+{{< /cards >}}

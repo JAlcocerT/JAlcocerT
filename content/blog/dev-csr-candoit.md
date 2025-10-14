@@ -14,7 +14,7 @@ Playing around with what [Client Side Rendering](#whats-csr) can do.
 
 +++ A quick [MRR calculator](#mrr-calculator)
 +++ A quick [Real Estate component](#french-amortization) that you dont have to host via streamlit.
-+++ [QR Stuff](#people-do-cool-stuff-with-qr)
++++ [QR Stuff](#people-do-cool-stuff-with-qr) and [CORS](#what-it-is-cors)
 
 **Intro**
 
@@ -276,14 +276,4 @@ CORS is how the server explicitly states which other sites or domains can call i
 - CORS is essential to enable legitimate cross-origin interactions such as API calls or loading resources from CDNs while securing users and data.
 - Misconfiguration of CORS can introduce security vulnerabilities, allowing unauthorized sites to access protected resources.
 
-In short, CORS is a critical web security standard that balances resource sharing flexibility with protection from cross-origin attacks by enforcing explicit permission via HTTP headers.[1][2][3][5][6]
-
-[1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
-[2](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-[3](https://portswigger.net/web-security/cors)
-[4](https://sekurak.pl/czym-jest-cors-cross-origin-resource-sharing-i-jak-wplywa-na-bezpieczenstwo/)
-[5](https://konghq.com/blog/learning-center/what-is-cors-cross-origin-resource-sharing)
-[6](https://fastapi.tiangolo.com/tutorial/cors/)
-[7](https://aws.amazon.com/what-is/cross-origin-resource-sharing/)
-[8](https://www.geeksforgeeks.org/websites-apps/cross-origin-resource-sharing-cors/)
-[9](https://developers.cloudflare.com/r2/buckets/cors/)
+In short, CORS is a critical web security standard that balances resource sharing flexibility with protection from cross-origin attacks by enforcing explicit permission via HTTP headers.

@@ -42,7 +42,6 @@ Rather than a way to admire how people have created **static status pages**: htt
 
 ![alt text](/blog_img/selfh/HomeLab/statuspages/kener-manager-ui.png)
 
-With this, you will be able to create and distribute via epublibre or amazon `https://www.amazon.es/sendtokindle`.
 
 
 ### Kindle Notes to AI
@@ -86,6 +85,8 @@ python extract_notes.py "Brainfluence" brainfluence_notes.txt
 ---
 
 ## Conclusions
+
+With this, you will be able to create and distribute via epublibre or amazon `https://www.amazon.es/sendtokindle`.
 
 Recently I wrote about note taking tools and [how to build your KB/Knowledge Base](https://jalcocert.github.io/JAlcocerT/knowledge-management/#knowledge-management-tools).
 
@@ -148,6 +149,15 @@ Typst is a holistic tool aiming to modernize document creation. It's designed to
 But, I got to know that this is possible: https://kindlemodding.org/
 
 > See also https://github.com/NiLuJe/KindleTool
+
+**Alternative software for kindle**
+
+* https://koreader.rocks/
+
+<!-- https://www.youtube.com/shorts/ta0ZUsugLN0 -->
+
+{{< youtube "ta0ZUsugLN0" >}}
+
 
 ### Tools for eBooks
 
