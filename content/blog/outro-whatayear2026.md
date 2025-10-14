@@ -41,7 +41,6 @@ https://www.amazon.es/sendtokindle
 
 5. Web Analytics: GDPR compliant
 
-
 6. Client adquisition data pipeline.
 
 To be tested with *,artists,designers and wannabe's'* from social media.
@@ -53,4 +52,9 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
 
 8. Proper CI/CD for streamlit. Hospital D&A: https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/2a2eb68132834b39ce8ff3e9e77e8d7d87e801b5
 
-> Latest features shipped properly: https://github.com/JAlcocerT/X-ray-imaging-analysis
+> Latest features shipped properly: https://github.com/JAlcocerT/X-ray-imaging-analysis + youtube video
+
+9. Authentication Post
+
+https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions
+https://jalcocert.github.io/JAlcocerT/social-signin-101/

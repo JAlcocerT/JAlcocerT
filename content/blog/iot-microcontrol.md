@@ -114,7 +114,11 @@ If you are going to do it via VSCode and [PlatformIO](https://marketplace.visual
 code --install-extension platformio.platformio-ide
 ```
 
+Source code: https://github.com/platformio/platformio-vscode-ide/tree/develop
+
 > Platformio, is an embedded development ecosystem and a popular VS Code extension. Focus: building, debugging, and uploading firmware for C/C++ frameworks (Arduino, ESP-IDF, etc.).
+
+> >  PlatformIO IDE for VSCode: The next generation integrated development environment for IoT 
 
 I recommend you also the **Serial Monitor extension**, [this one](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-serial-monitor), as seen:
 

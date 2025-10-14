@@ -98,6 +98,25 @@ npm init slidev #yarn create slidev
 
 > Cool PPTs other created: https://raw.githubusercontent.com/BaizeAI/talks/refs/heads/main/packages/2025-06-11-kubecon-hk/slides.md
 
+> > You can combine SliDev + OBS + [FastApi Audio Recorder S2T-TTS](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions) for youtube video creation workflow
+
+#### Diagrams are also code!
+
+1. https://diagrams.mingrammer.com/docs/getting-started/examples
+2. MermaidJS *you can also use it inside HUGO/Astro/MermaidJS...*
+
+**Had a look to couple of tools for diagrams**
+
+2. https://github.com/stan-smith/FossFLOW
+
+>  Make beautiful isometric infrastructure diagrams 
+
+3. https://markmap.js.org/ and https://github.com/markmap/markmap
+
+It renders text to diagram and can reference files: https://gist.githubusercontent.com/raw/af76a4c245b302206b16aec503dbe07b/markmap.md
+
+> MIT | Build mindmaps with plain text 
+
 
 ### eBooks as a Code
 

@@ -10,7 +10,7 @@ url: 'astro-journal-theme'
 
 **Tl;DR**
 
-I created a simple NextJS app the visualizes .md files in folders and let you edit them via React md with a UI.
+I created a simple NextJS app the visualizes `.md` files in folders and let you edit them via React md with a UI.
 
 Changes are reflected locally.
 
@@ -38,7 +38,7 @@ I decided to keep scope simpler and [start over](#how-to-create-just-journal-via
 I can vibe code again a NextJS app, that will be in the root of a repo:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Just-Journal-via-SSG" title="Just Journal via SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for a NextJS app with Reactmd UI editor for posts" >}}
+  {{< card link="https://github.com/JAlcocerT/Just-Journal-via-SSG" title="NEW - Just Journal via SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for a NextJS app with Reactmd UI editor for posts" >}}
 {{< /cards >}}
 
 Then, as part of the environment variables, we will have the local path to one of our favourite hugo/astro themes.
@@ -60,7 +60,7 @@ Its possible to do this.
 
 Spin the NextJS app, clone any astro theme.
 
-Let their .md or .mdx be updated locally via UI:
+Let their `.md` or `.mdx` be updated locally via UI:
 
 ![Journal with SSG edited via NextJS and ToastUI](/blog_img/web/nextjs-admin/journal-nextjs-admin-clonethemes.png)
 

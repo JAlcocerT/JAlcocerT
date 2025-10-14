@@ -16,6 +16,7 @@ Summer is almost gone...
 A Post for anyone just starting with a home server.
 
 +++ If you like [Music, this is how to have your DIY spotify - server setup via container](#your-music-server)
++++ Revisited the [FireBat AK2 and added https via Traefik](#hello-again-firebat)
 
 **Intro**
 
@@ -117,7 +118,7 @@ Go to https://login.tailscale.com/admin/machines and configure your [exit node](
 
 ![alt text](/blog_img/selfh/HomeLab/tailscale-exitnode.png)
 
-For more advance users exploring DNS, see PiHole and DuckDNS.
+For more advance users exploring DNS: see PiHole and DuckDNS.
 
 But as of today i'd rather keep these [https setups](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/):
 
@@ -191,6 +192,8 @@ See also...
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Web/nginx-proxy-manager" title="NGINX | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
+These posts might help:
+
 {{< cards cols="2" >}}
   {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX Setup" >}}
   {{< card link="https://fossengineer.com/selfhosting-traefik/" title="Traefik Setup" >}}
@@ -206,7 +209,7 @@ Autumn is almost here.
 And is a great chance to tinker with your miniPC and homelab.
 
 
-Try new desktop app for your linux system and install them via:
+Try new **desktop apps** for your linux system and install them via:
 
 {{< cards cols="2" >}}
   {{< card link="https://flathub.org/" title="FlatHub Apps" >}}
@@ -226,8 +229,9 @@ flatpak install flathub com.rustdesk.RustDesk
 
 I promised recently that **I wont do** more static sites for people.
 
-And consequently, this has not been a DFY (done for you), but a DWY (done with you) recap of [this](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) and [this](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/) web setup
+And consequently, this has not been a DFY (done for you), but a DWY (done with you) recap of [this](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) and [this](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/) web setups.
 
+This is how the session went:
 
 {{< youtube "jO-PiZyVWe8" >}}
 
@@ -236,24 +240,22 @@ And consequently, this has not been a DFY (done for you), but a DWY (done with y
 https://www.youtube.com/watch?v=jO-PiZyVWe8
  -->
 
-Plot twist, you will never stop learning, as more and more selfhosted apps will catch our attention:
+Plot twist.
+
+You will never stop learning, as more and more selfhosted apps will catch our attention:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="Home-Lab Repo | Docker Config Files 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="Home-Lab | Docker Config Files 🐳 ↗"  >}}
 {{< /cards >}}
 
-<!-- 
-![Homarr - NextCloud Integration](/blog_img/selfh/media/homarr-nc.png)
- -->
-
+For example, Homarr:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#homarr" title="Homarr" image="/blog_img/selfh/media/homarr-nc.png" subtitle="Seen on Spring 2025 Selfhosting Post" >}}
 {{< /cards >}}
 
-
 * Networking, Domains and DNS, SSL...
-* Creating your containers...
+* Creating your own containers...
 
 Fortunately, there are amazing resources to give you ideas:
 
@@ -262,9 +264,9 @@ Fortunately, there are amazing resources to give you ideas:
 * From this one you will get weekly projects to have a look ( Plot Twist: you wont have time to see them all)
   * Example: https://github.com/OpenCut-app/OpenCut or https://github.com/Cloudable-dev/netgoat
 
- > MIT | The open-source CapCut alternative 
+> MIT | The open-source CapCut alternative 
 
- > MIT | A Cloudflare alternative for local and cloud use, can be used ontop of cloudflare for cloudflares paid features, but for free! 
+> MIT | A Cloudflare alternative for local and cloud use, can be used ontop of cloudflare for cloudflares paid features, but for free! 
 
   <!-- https://www.youtube.com/watch?v=OOxzP1JvfQk -->
 
@@ -374,7 +376,7 @@ Option B: create your container to selfhost astro/hugo/whatever ssg and expose i
 
 Ive been tinkering with [MicroControllers](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/) and [MQTT protocol](https://jalcocert.github.io/JAlcocerT/messaging-protocols/).
 
-Microcontrollers like the esp32 and some creativity can get you even a ebook reader: https://www.youtube.com/watch?v=wU0DC1wi3qo
+Microcontrollers like the esp32 and some creativity can get you even a ebook reader as per [this video](https://www.youtube.com/watch?v=wU0DC1wi3qo)
 
 * **HA** https://www.home-assistant.io/docs/automation/
 
@@ -386,7 +388,7 @@ Ive also tried:
 
 With `CTRL+ALT+C` it gets really compact!
 
-With `CTRL+H`, it opens your synced tab, so you can see your mobile firefox tabs on desktop
+With `CTRL+H`, it opens your synced tab, so you can see your mobile firefox tabs on desktop :)
 
 ```sh
 #pkill -9 brave #brave was not behaving properly lately...
@@ -395,26 +397,6 @@ flatpak install flathub app.zen_browser.zen
 > Welcome to a calmer internet | Firefox based 
 
 > > Zen offers a "Sync" feature, which is implemented using Mozilla Firefox's Sync feature.
-
-**Had a look to couple of tools for diagrams**
-
-2. https://github.com/stan-smith/FossFLOW
-
->  Make beautiful isometric infrastructure diagrams 
-
-3. https://markmap.js.org/ and https://github.com/markmap/markmap
-
-It renders text to diagram and can reference files: https://gist.githubusercontent.com/raw/af76a4c245b302206b16aec503dbe07b/markmap.md
-
-> MIT | Build mindmaps with plain text 
-
-### Other
-
-Link analytics solutions, like Kutt:
-
-![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
-
-![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
 
 
 ---
@@ -461,7 +443,7 @@ Get tailscale VPN on your server and phone. Enjoy your music from anywhere.
 
 ### Youtube FE
 
-If you are creating youtube videos and storing them just there: you can download them later on, so you can review your [travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/) stories during those long flights.
+If you are creating youtube videos from your action cam and storing them just there: you can download them later on, so you can review your [travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/) stories during those long flights.
 
 ![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
 
@@ -663,7 +645,6 @@ sudo apt update && sudo apt install ubuntu-restricted-extras
 So I decided to propose a new homelab architecture....
 
 > Traefik v3.3 + Cloudflare + Tailscale IP
-
 
 {{< filetree/container >}}
   {{< filetree/folder name="config" >}}

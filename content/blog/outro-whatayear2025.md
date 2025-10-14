@@ -526,6 +526,13 @@ Because Selfhosting Static Generated Sites, is not a secret anymore:
   {{< card link="https://github.com/ricsanfre/public-websites-docker" title="MIT | Selfhosting personal static websites with Traefik, private web analytics (matomo) and Remark42 for comments. 🐋 ↗" >}}
 {{< /cards >}}
 
+
+Link analytics solutions, like Kutt:
+
+![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
+
+![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
+
 But, time is money.
 
 And you are loosing both without a proper website.
@@ -671,7 +678,7 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 7. [Metabase](https://youtu.be/eCplQYrvabk) (BI)
 8. [Grafana](https://youtu.be/Uq5tZv6T3ko) (BI)
 9. [N8N](https://youtu.be/v-gCNTI5kzE)
-10. [SelfHosted Streamlit Apps](https://youtu.be/p7U24YSFrW4) *together with Pocketbase for auth*
+10. [SelfHosted Streamlit Apps](https://youtu.be/p7U24YSFrW4) *together with Pocketbase for auth with [such script](https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_pb.py)*
 11. SFTPGo vs FileBrowser
 12. [FastAPI](https://youtu.be/YcCR8JUlhMo) + OpenAI Audio
 13. Photoview
@@ -775,7 +782,9 @@ Using AI to create more and better, in less time.
 
 The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/).
 
-With too many options: Repliit lovable windsurf cursor bolt...
+With too many options: Repliit lovable [windsurf](https://windsurf.com/account/login) cursor bolt...
+
+Even with: https://github.com/settings/copilot/features
 
 > *El relato mata al dato* - Thats also true when looking for new project opportunities
 
@@ -785,6 +794,59 @@ With too many options: Repliit lovable windsurf cursor bolt...
 * See this for branching strategies: https://learn.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance?view=azure-devops
 
 3. No Nested if's, try -> Error exit with message
+
+
+![SliDevJS editor with NextJS and Logto/firebase working for social authentication](/blog_img/DA/ppt/slidev-editor.png)
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor" title="Slidev-Editor Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to SliDev Editor with Firebase Logto Auth via NextJS and ToastUI md editor" >}}
+{{< /cards >}}
+
+
+![NextJS Login to admin via Github Social Signin authentication](/blog_img/web/nextjs-admin/nextjs-github-admin.png)
+
+https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/astro-theme-typography" title="Astro Typography Theme + NextJS Editor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Conteinerized and posts editable via UI. With Gitub Social Signin - Source Code on Github" >}}
+{{< /cards >}}
+
+
+
+https://jalcocert.github.io/JAlcocerT/astro-journal-theme/
+
+![NextJS Reactmd editing astro sphere theme](/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Just-Journal-via-SSG" title="NEW - Just Journal via SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for a NextJS app with Reactmd UI editor for posts" >}}
+{{< /cards >}}
+
+
+
+https://jalcocert.github.io/JAlcocerT/firebase-auth-101/
+![Social SignInUp with Google inside a WebApp](/blog_img/web/Firebase/auth/fb-auth4-nextjs-socialsignin.png)
+
+
+
+https://jalcocert.github.io/JAlcocerT/audio-recap/
+
+
+![Fast API WebApp with audio recording capabilities](/blog_img/GenAI/audio/fastapi-audio-rec.png)
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="Speech Rater Flask Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to rate your Speech - TTS and S2T transcription for youtube" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="ebook ideas Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to ship ebooks" >}}
+{{< /cards >}}
+
+
+
+![Flask WebApp vibe coded gradient](/blog_img/selfh/automation/flask-gradient-cms-v2.png)
+
 
 
 ##### AI Stuff
@@ -810,6 +872,12 @@ You can make interesting conditional logic, like: *If scrap fails, send msg to t
 #### More Websites!
 
 But for the ones who actually see value on them.
+
+
+Btw, the **pages speed insights**, can be done via **API**: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
+
+![Checking Google Pages Speed Insights Via API](/blog_img/web/morita-flask/pagespeedinsightapi.png)
+
 
 Given the opportunity costs, something like: one time setup + pay less each consecutive year *if you stay quiet* could be interesting to improve client retention.
 

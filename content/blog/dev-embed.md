@@ -249,6 +249,8 @@ Metabase, Redash, and Apache Superset all have features similar to Latitude, but
 | Deployment               | Self-hosted or cloud (Metabase Cloud)                  | Self-hosted or hosted options                         | Self-hosted deployment                                | Self-hosted or Latitude cloud deployment            |
 | Ease of Use              | User-friendly for non-technical users, intuitive UI   | More SQL-centric, suitable for tech-savvy users      | Aimed at developers and advanced users               | SQL-centric but with simple API integration for frontend developers |
 
+See how to setup Superset:
+
 {{< youtube "4HUqYbknTOM" >}}
 
 - **Metabase** is more focused on ease of use with a user-friendly interface **suitable for non-technical users**.
@@ -328,26 +330,90 @@ Their purpose is to handle CORS restrictions, securely inject API keys, customiz
 
 This architecture enables static JAMstack sites to serve interactive, real-time analytics by combining static frontend builds with dynamic backend data APIs, secured and optimized via Cloudflare's edge network.
 
-### DB2Rest
+### DBs to API
+
+In case you like  J**A**MStack, you will want to create easily APIs from your data.
+
+You could go for some code solutions, like using [FastAPI](https://jalcocert.github.io/JAlcocerT/audio-recap/)...
+
+FastAPI is a modern, high-performance Python web framework for building APIs quickly and efficiently. Unlike purely no-code solutions, FastAPI requires coding but offers great flexibility and control.
+
+- **Custom API development:** FastAPI allows developers to create fully customized REST APIs tailored exactly to their use case, including complex business logic, validation, security, and asynchronous processing.
+
+- **Database integration:** FastAPI can be easily integrated with ORMs like SQLAlchemy or Tortoise ORM to connect to databases like PostgreSQL, MySQL, SQLite, and others. This requires writing code but enables precise control over queries and transactions.
+
+- **Performance:** FastAPI is built on ASGI and uses Python type hints to provide excellent performance close to Node.js or Go frameworks, suitable for production workloads.
+
+- **Flexibility and extensibility:** It supports middlewares, dependency injection, background tasks, and seamless OpenAPI (Swagger) generation for API documentation.
+
+
+But if you want some low/no-code solution see these.
+
+There are several open-source projects similar to DB2Rest that provide no-code or low-code ways to instantly expose databases as REST APIs:
+
+- **NocoDB**: An open-source Airtable alternative that transforms SQL databases like MySQL and PostgreSQL into a spreadsheet-like interface and auto-generates REST APIs. It is self-hostable and provides a user-friendly UI for database interactions.
+
+- **DreamFactory**: A powerful open-source platform that auto-generates REST APIs for over 20 SQL and NoSQL databases. It supports authentication, role-based access controls, and API documentation.
+
+- **Baserow**: An open-source no-code platform primarily focused on building databases and applications with PostgreSQL support. It generates APIs and offers a simple UI.
+
+- **Llana**: A no-code API wrapper that exposes REST APIs over any database quickly. Open source and designed to avoid vendor lock-in.
+
+- **Hasura**: Primarily a GraphQL engine that generates real-time APIs over SQL databases like Postgres, with partial REST-like API support. It has advanced permissions and real-time capabilities.
+
+- **MongoDB Atlas App Services**: If using MongoDB, it provides native REST API exposure, authentication, triggers, and real-time sync features.
+
+These tools cater to various needs, from lightweight data management and dashboards to building complex real-time APIs and AI workflows. They significantly simplify API development for databases without writing backend code and often include features like authentication, role-based access, and auto API documentation.
+
+
+#### DB2Rest
 
 What if you have any other DB, like sqlite and you want to expose an API of its data?
+
+DB2Rest is part of a growing ecosystem of no-code/open-source tools that make exposing databases via REST APIs much easier and faster.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/db2rest" title="DB2Rest | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-### Llana
+DB2Rest stands out among REST-for-database tools primarily due to its no-code, low-overhead approach that instantly creates secure REST APIs for databases without using Object Relational Mapping (ORM), code generation, or compilation.
+
+This makes DB2Rest particularly fast and simple to deploy, offering significant acceleration in application development—claimed up to 30 times faster—by removing the boilerplate code typically required for database access.
+
+It supports key features such as multi-database connectivity, query caching, batching, transaction management, and secure data exchange.
+
+Compared to other REST database tools that may require ORM or more complex setups, DB2Rest focuses on ease of use, blazing fast performance with a single database round-trip per request, and seamless integration with modern AI systems like language models and vector stores for intelligent applications. 
+
+It also works as a secure database gateway, minimizing risks like SQL injection and adhering to database user access controls for security.
+
+Other database REST service tools, such as IBM Db2 native REST services, provide native, DBMS-integrated REST capabilities often tied to specific database systems with features like service versioning and tight integration with enterprise ecosystems. 
+
+While such solutions are powerful for their environments, DB2Rest's strength lies in its flexibility across databases, simplicity, and no-code generation philosophy.
+
+
+| Feature                  | DB2Rest                               | Typical Other REST DB Tools                        |
+|--------------------------|-------------------------------------|--------------------------------------------------|
+| Code generation          | None (no-code, no ORM)               | Often requires ORM or code generation             |
+| Performance              | Very fast, single round trip         | May have ORM overhead or multiple query calls     |
+| Multi-database support   | Yes, easily integrated               | Often limited to single DB or requiring more setup|
+| Security                 | Secure gateway, follows DB roles     | Varies, some tightly coupled to DB security       |
+| Ease of use              | Simple config, no coding needed      | Often requires coding or complex configuration    |
+| AI/modern integrations   | Supports vector DBs and LLMs         | Rarely supported                                  |
+| Deployment flexibility   | On prem, VM, Docker, Kubernetes      | Typically tied to DB ecosystem                     |
+
+This makes DB2Rest an excellent choice for rapid API creation, modern AI integrations, and simplifying legacy database access without complex development overhead, compared to more traditional or native DB REST services.[1][2][3][4][5]
+
+[1](https://github.com/9tigerio/db2rest)
+[2](https://db2rest.com/docs/intro)
+
+#### Llana
 
 See also https://github.com/juicyllama/llana
 
->  API Wrapper for Databases - Llana is a no-code API wrapper that exposes a REST API for any database within minutes. No longer spend time building APIs, just connect your database and start using the API. Open source, free to use, and no vendor lock-in. 
+>  API Wrapper for Databases - Llana is a no-code API wrapper that exposes a REST API for any database within minutes. 
+
+No longer spend time building APIs, just connect your database and start using the API. Open source, free to use, and no vendor lock-in. 
 
 <!-- https://www.youtube.com/watch?v=-UjN8PEDpRQ -->
 
 {{< youtube "-UjN8PEDpRQ" >}}
-
-
----
-
-## Conclusions
-

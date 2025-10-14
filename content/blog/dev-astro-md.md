@@ -1,5 +1,5 @@
 ---
-title: "A Blog you can actually Edit"
+title: "A Blog you can actually Edit via NextJS"
 date: 2025-09-13T01:20:21+01:00
 draft: false
 tags: ["Web","TOAST UI Markdown editor","WYSIWYG","ICP","Astro Theme Typography","Github OAUTH"]
@@ -20,7 +20,7 @@ We are neglecting quality and deep content.
 
 Like the one you can create with a (markdown powered) website that you can [edit](#tech).
 
-> I vibecoded a NextJS webapp that integrates with github for auth and brings a ToastUI editor.
+> I vibecoded a [NextJS webapp that integrates with github for auth](https://github.com/JAlcocerT/astro-theme-typography) and brings a ToastUI editor.
 
 **Intro**
 
@@ -50,7 +50,7 @@ Ive chosen: https://github.com/moeyua/astro-theme-typography
 Due to its text centered approach and ,posts only' philosophy.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/astro-theme-typography" title="NEW - Astro Typography Theme" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Conteinerized and posts editable via UI - Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/astro-theme-typography" title="NEW - Astro Typography Theme" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Conteinerized and posts editable via UI with Github Social Signin- Source Code on Github" >}}
 {{< /cards >}}
 
 ```sh
@@ -118,45 +118,17 @@ Its dual-mode approach is highly effective for a wide range of users, and it int
 
 ### FastAPI vs NextJS as Astro Editor
 
-Time to choose whats the BE is going to be: https://github.com/JAlcocerT/astro-theme-typography/blob/main/fastapi-vs-nextjs.md
-
-Perfect!
-
-I've created a comprehensive `fastapi-vs-nextjs.md` document that covers all the considerations for choosing between FastAPI and Next.js for your Git-based admin panel.
-
-📋 **Key Highlights from the Document:**
-
-**FastAPI Approach:**
-- **Best for**: Python developers who want maximum flexibility
-- **Pros**: Rich Python ecosystem, excellent performance, clean API separation
-- **Cons**: Two deployments, CORS complexity, more infrastructure to manage
-- **Timeline**: 1-2 weeks
-
-**Next.js Approach:**
-- **Best for**: Developers who want simplicity and speed
-- **Pros**: Single deployment, no CORS issues, easier maintenance, lower costs
-- **Cons**: JavaScript/TypeScript only, serverless limitations
-- **Timeline**: 1-2 weeks
-
-**Both Approaches:**
-- ✅ **Reliable** - Both are production-ready
-- ✅ **User-friendly** - Toast UI Editor provides excellent UX
-- ✅ **Same functionality** - Git integration, Cloudflare Pages rebuilds
-- ✅ **Same timeline** - 1-2 weeks implementation
+Time to choose whats the BE is going to be [FastAPI vs NextJS as per this md](https://github.com/JAlcocerT/astro-theme-typography/blob/main/fastapi-vs-nextjs.md)
 
 🎯 **My Recommendation:**
 
 For your use case (Astro theme with Git-based content management), I'd lean toward **Next.js** because:
 
 1. **Simpler deployment** - One service instead of two
-2. **Lower costs** - Free hosting on Vercel
-3. **Easier maintenance** - Single codebase to manage
-4. **Faster development** - No CORS setup, unified development experience
+2. **Easier maintenance** - Single codebase to manage
+3. **Faster development** - No CORS setup, unified development experience
 
-But if you're more comfortable with Python or need maximum flexibility, **FastAPI is equally valid** and will deliver the same great user experience with Toast UI Editor.
-
-The document includes detailed code examples, cost analysis, and implementation timelines to help you make the best decision for your project!
-
+> If you're more comfortable with Python OR need maximum flexibility, **FastAPI is equally valid** and will deliver the same great user experience with Toast UI Editor.
 
 ### Git and Builds
 
@@ -169,25 +141,25 @@ Even cloudflare mention this long ago: https://blog.cloudflare.com/cloudflare-pa
 - Webhook support for triggering rebuilds
 
 
-I was thinking github vs gitea (and prepared instructions on how to get the keys for each)
+I was thinking github vs gitea (and prepared instructions on how to get the keys for each).
 
-I went for the github one:
+I went for the github one, so I created a new Github App to get the required credentials:
 
 * https://github.com/settings/applications/new
 
-![alt text](/blog_img/web/nextjs-admin/nextjs-github-admin.png)
+![NextJS Login to admin via Github Social Signin](/blog_img/web/nextjs-admin/nextjs-github-admin.png)
 
-And it worked:
+And it worked!: 
 
-![alt text](/blog_img/web/nextjs-admin/nextjs-admin.png)
+![Github Social Signin for the NextJS Web App that edits Astro blog posts with ToastUI](/blog_img/web/nextjs-admin/nextjs-admin.png)
 
 You will get an email from gh
 
-![alt text](/blog_img/web/nextjs-admin/gh-oauth.png)
+![Github App social signin](/blog_img/web/nextjs-admin/gh-oauth.png)
 
 Some more vibe coding:
 
-![alt text](/blog_img/web/nextjs-admin/nextjs-admin-2.png)
+![NextJS Admin Panel for Astro SSG Posts](/blog_img/web/nextjs-admin/nextjs-admin-2.png)
 
 ![alt text](/blog_img/web/nextjs-admin/nextjs-admin-3-posts.png)
 
@@ -200,18 +172,20 @@ Despite getting all posts loaded and the github signin ready with NextJS
 
 I got some troubles passing the save part.
 
-![alt text](/blog_img/web/nextjs-admin/nextjs-admin-4-notsaving.png)
+![NextJS Admin Panel for Astro Themes with markdown editor](/blog_img/web/nextjs-admin/nextjs-admin-4-notsaving.png)
 
 
 Probably due to wrong vibe coding from my side.
+
+Anyways, Here is how the process looked like:
 
 <!-- https://youtu.be/leRwGjnuxfk -->
 {{< youtube "leRwGjnuxfk" >}}
 
 
-But I got few ideas.
+I got few ideas.
 
-And the ToasT Ui md editor is just great!!
+> And the ToasT UI md editor is just great!!
 
 ---
 

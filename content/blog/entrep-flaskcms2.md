@@ -34,9 +34,11 @@ Same to https://typlog.com/
 
 > Let ideas flow in your familiar editing environment with the complete markdown syntax.
 
-![alt](blog_img/dev/PB/selfh-pb.png) ![alt](blog_img/dev/PB/selfh-pb.png)
+![SelfHosting PB](blog_img/dev/PB/selfh-pb.png)
 
-Which some open sources [themes](https://themes.typlog.com/#/nezu) like https://github.com/typlog/nezu
+With some open sources [themes](https://themes.typlog.com/#/nezu) like https://github.com/typlog/nezu
+
+>  A built-in Typlog theme 
 
 ## A CMS with Flask
 
@@ -107,9 +109,9 @@ docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest 
 
 Btw, the **pages speed insights**, can be done via **API**: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
 
-![alt text](/blog_img/web/morita-flask/pagespeedinsightapi.png)
+![Checking Google Pages Speed Insights Via API](/blog_img/web/morita-flask/pagespeedinsightapi.png)
 
-![alt text](/blog_img/web/morita-flask/pagespeed-gcp-api.png)
+![Enable PSI via GCP Console](/blog_img/web/morita-flask/pagespeed-gcp-api.png)
 
 > So if you want to scrap business websites + generate the analysis and propose a better solution....its up to you :)
 
@@ -181,7 +183,7 @@ So...the last version of [realestate proposal with PB](https://github.com/JAlcoc
 
 Same for the thought of doing a [Gitea API connection + n8n](https://jalcocert.github.io/JAlcocerT/n8n-and-gitea/) or Flask CMS v2.x
 
-![alt text](/blog_img/selfh/automation/flask-gradient-cms-v2.png)
+![Flask WebApp vibe coded gradient](/blog_img/selfh/automation/flask-gradient-cms-v2.png)
 
 > The vibe coded gradient in the landing of these flask web apps is veeery nice
 
@@ -351,9 +353,9 @@ Using a Stripe Payment Link for a subscription provides a complete, self-contain
 
 ## FAQ
 
-### Cloudflare Free Tier
+### About Cloudflare Free Tier
 
-On Cloudflare's free tier, there is no explicit limit on the number of domains (websites) you can add. 
+On Cloudflare's free tier, there is **no explicit limit** on the number of domains (websites) you can add. 
 
 You can add and protect many domains under a single free account.
 
@@ -363,4 +365,13 @@ However, there are some associated limits relevant to usage and features on the 
 - For Workers usage on the free tier, there is a daily request limit of 100,000 requests.
 - Other feature limits and quotas apply to DNS rules, applications, and workers but are generally generous for typical free-tier usage.
 
-Overall, while there's no strict cap on the total domains, daily usage limits or feature quotas might impact very heavy use scenarios. For most personal or small business needs, the free tier supports multiple domains without direct domain number limits.
+Overall, while there's no strict cap on the total domains, daily usage limits or feature quotas might impact very heavy use scenarios. 
+
+For most personal or small business needs, the free tier supports multiple domains without direct domain number limits.
+
+If you reach the limit, you can always:
+
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="Static Hosting Alternatives ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG Static Hosting | Docker Config 🐋 ↗" >}}
+{{< /cards >}}

@@ -2,7 +2,7 @@
 title: "[Recap] on AI Audio. Ideating Speech rAIter micro SaaS"
 date: 2025-09-12
 draft: false
-tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcript","BiP", "Youtube Workflow","Monaco Editor","ChartDB"]
+tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcript","BiP", "FastAPI"," Youtube Workflow","Monaco Editor","ChartDB"]
 description: "An Astro Landing Page + signup/in via FastAPI x sqlite x Admin panel. Fireflies AI for MoM."
 url: 'audio-recap'
 ---
@@ -62,7 +62,7 @@ I just went with FastAPI as per gemini and [this md doc](https://github.com/JAlc
 
 I just went forward with cursor and fastAPI:
 
-![Fast API](/blog_img/GenAI/audio/fastapi-audio-rec.png)
+![Fast API WebApp with audio recording capabilities](/blog_img/GenAI/audio/fastapi-audio-rec.png)
 
 And quickly made that simple UI, connected to OpenAI TTS/S2T capabilities.
 
@@ -82,16 +82,17 @@ The audio record does not work oh phones. *Probably due to permissions*.
 
 ### Simple md Editor
 
-Later, on I added simple **markdown edition** capabilities (there were few candidates)
+Later, on I added simple **markdown edition** capabilities (there were few candidates and the vibe coding was strong)
 
-1. Monaco Editor (VS Code Editor) - RECOMMENDED (and this is the one **cursor went for**, enough for a quick edit) ⭐
+1. Monaco Editor (VS Code Editor) - RECOMMENDED (and this is the one **cursor went for**, enough for a quick edit)
+
 Pros: Full VS Code experience, syntax highlighting, IntelliSense, built-in markdown preview
 Cons: Larger bundle size (~2MB)
 Best for: Professional editing experience
 
 ![Monaco Editor inside a FastAPI powered audio WebAPP](/blog_img/GenAI/audio/fastapi-markdown-editor.png)
 
-2. CodeMirror 6 - LIGHTWEIGHT ⭐
+2. CodeMirror 6 - LIGHTWEIGHT
 Pros: Lightweight, fast, good markdown support, customizable
 Cons: Less features than Monaco
 Best for: Balanced performance and features
@@ -101,17 +102,17 @@ Pros: Very lightweight, live preview, easy to use
 Cons: Less advanced features
 Best for: Simple editing needs
 
-4. Toast UI Editor - MODERN
+4. Toast UI Editor - MODERN ⭐
 Pros: WYSIWYG + markdown, good mobile support
 Cons: Medium bundle size
 Best for: User-friendly editing
 
 
 {{< callout type="info" >}}
-A wysiwyg markdown editor post is coming soon
+A wysiwyg markdown editor post is coming soon. ToastUI seems a great candidate!
 {{< /callout >}}
 
-Thanks to the implemented monaco editor, we can just quickly tweak the content of the transcript before saving the .md
+Thanks to the implemented monaco editor, we can just quickly tweak the content of the transcript before saving the `.md`
 
 ### The FastAPI Speech Rater
 
@@ -200,7 +201,7 @@ This is a sample quick setup with a lot of [auth to do's](https://github.com/JAl
 
 ## Conclusions
 
-That's it: this gave me a new cooler youtube workflow (for the audio part)
+That's it: this gave me a **new cooler youtube workflow** (for the audio part).
 
 This simple **FastAPI recorder** and transcript web app already helps me.
 

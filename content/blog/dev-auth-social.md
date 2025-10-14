@@ -2,30 +2,21 @@
 title: "Social Auth for any SaaS"
 date: 2025-09-15T10:20:21+01:00
 draft: false
-tags: ["Firebase vs Logto","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor","SPA vs MPA"]
+tags: ["Firebase vs Logto vs Github Social Signin","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor","SPA vs MPA"]
 url: 'social-signin-101'
-description: 'Firebase Auth as your WebApp login method. A Serverless Authenticator approach'
+description: 'Firebase Auth as your WebApp login method. Serverless Authenticator approaches.'
 ---
 
 **Tl;DR**
 
-I got working a simple md editor for slidev with couple of branches to master firebase and logto SDKs for auth:
+I got working a simple md editor for slidev with couple of branches to master firebase and logto SDKs for authentications.
+
+Also, another NextJS Web App that you can use github social to login.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/slidev-editor" title="NEW - A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests" >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor" title="NEW - A SliDevJS Editor with social auth walls" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + ToastUI + Auth Tests for Firebase and LogTo" >}}
+  {{< card link="https://github.com/JAlcocerT/astro-theme-typography" title="Astro Typography Theme + NextJS Editor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Conteinerized and posts editable via UI. With Gitub Social Signin - Source Code on Github" >}}
 {{< /cards >}}
-
-Because https://gamma.app/ does not have to be the only one.
-
-> Gamma is your AI design partner for effortless presentations, websites, social media posts, and more—so you can focus on what you do best.
-
-* https://sli.dev/guide/hosting#spa
-
-```sh
-slidev build
-```
-
-> Social Signin > One Time Link > Email and PWD
 
 +++ Got Firebase and LogtoJS SDKs [both working](#conclusions) and ready to authenticate quick any webapp project.
 
@@ -46,6 +37,13 @@ With this post, lets try to understand how to make those social signins for good
 With the goal of not working our [SaaS KPIs](#faq)
 
 And...in the mean time play with a wrapper of a SliDEvJS editor.
+
+
+* https://sli.dev/guide/hosting#spa
+
+```sh
+slidev build
+```
 
 You can get started with such project and cursor like:
 
@@ -97,9 +95,11 @@ The entire presentation is a **Single-Page Application (SPA)** that is powered b
 * **Animations:** It integrates with Vue's transition system to handle slide transitions and element animations.
 * **Customization:** You can create your own layouts and components using Vue's syntax, giving you complete control over the design and functionality.
 
-CSR Only?
+**CSR Only?**
 
-For a typical presentation, **Slidev is a CSR-only framework**. When you build your presentation for production, it generates static HTML, CSS, and JavaScript files that are meant to be served from a web server. The browser then downloads these files and renders the entire presentation dynamically on the client-side. There's no server-side rendering (SSR) involved in the core functionality of presenting the slides.
+For a typical presentation, **Slidev is a CSR-only framework**. When you build your presentation for production, it generates static HTML, CSS, and JavaScript files that are meant to be served from a web server.
+
+The browser then downloads these files and renders the entire presentation dynamically on the client-side. There's no server-side rendering (SSR) involved in the core functionality of presenting the slides.
 
 This CSR approach is what makes Slidev presentations so portable. 
 
@@ -280,10 +280,14 @@ Yes, what you've described is a standard and secure way to build this kind of ap
 The approach is secure because it relies on both client-side and server-side checks.
 
 1. Client-Side Protection
-The client-side logic in your Next.js app ensures that a user is redirected away if their email doesn't match the one in the URL or if they're not signed in. While this provides a good user experience, it's not foolproof on its own. A malicious user could bypass it by disabling JavaScript in their browser. This is why the server-side check is so crucial.
+
+The client-side logic in your Next.js app ensures that a user is redirected away if their email doesn't match the one in the URL or if they're not signed in. 
+
+While this provides a good user experience, it's not foolproof on its own. A malicious user could bypass it by disabling JavaScript in their browser. This is why the server-side check is so crucial.
 
 
 2. Server-Side Protection
+
 The real security comes from the server-side check using Next.js's **`getServerSideProps`** and the **Firebase Admin SDK**.
 
 * **Verification:** When the page is requested, the `getServerSideProps` function on the server verifies the user's ID token. The ID token is a JWT (JSON Web Token) that proves the user's identity. It's signed by Firebase and is tamper-proof.
@@ -392,11 +396,16 @@ Because it's open-source and uses a **relational database (PostgreSQL)**, it giv
     * A newer platform compared to Firebase, so its feature set is still maturing.
     * Can have a steeper learning curve for developers not familiar with PostgreSQL.
 
-
-
 ### 3. PocketBase ⚡
 
-**PocketBase** is a unique, lightweight BaaS platform packaged as a **single-file binary** that includes a Go backend and an embedded SQLite database. It's a great choice for quick prototypes and small-to-medium-sized applications. 
+**PocketBase** is a unique, lightweight BaaS platform packaged as a **single-file binary** that includes a Go backend and an embedded SQLite database. 
+
+It's a great choice for quick prototypes and small-to-medium-sized applications. 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/link-hub-pb/" title="Repository - Astro Link Hub" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}
+  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Forked Astro Payroll Theme" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + CF Workers + htpp only cookies + PB users collections as Auth" >}}  
+{{< /cards >}}
 
 PocketBase supports OAuth2 authentication, which means you can easily implement Google Sign-in.
 
@@ -417,6 +426,15 @@ Because it's **self-hosted**, you have full control over your data and infrastru
     * **Not a managed service**, so you are responsible for hosting, scaling, and backups.
     * The embedded SQLite database may not be suitable for large-scale, high-concurrency applications.
     * Doesn't have a built-in serverless functions feature like Firebase or Supabase.
+
+You can even combine Pocketbase users collection to help you signup/in users into your streamlit web apps:
+
+<!-- https://youtu.be/p7U24YSFrW4 -->
+
+{{< youtube "p7U24YSFrW4" >}}
+
+See [this script](https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_pb.py) that leverages https://pypi.org/project/streamlit-authenticator/ with the Pocketbase collection.
+
 
 ## AaaS
 
@@ -595,6 +613,12 @@ YOu could also do email/user + pwd or social signin (for example with google)
 
 ## Conclusions
 
+Because https://gamma.app/ does not have to be the only one doing nice stuff.
+
+> Gamma is your AI design partner for effortless presentations, websites, social media posts, and more—so you can focus on what you do best.
+
+> > Social Signin > One Time Link > Email and PWD
+
 1. Firebase Auth with email/pwd + social signin working on desktop and mobile ✅
 
 2. Also Logto with the email + received code to login ✅
@@ -603,6 +627,7 @@ YOu could also do email/user + pwd or social signin (for example with google)
 
 > > Earlier this year I read a post which motivated me to create this - https://darko.io/posts/but-auth-is-hard
 
+3. Github Social sign in ✅
 
 {{< details title="Logto vs FirebaseAuth vs PB SDK for Auth... 📌" closed="true" >}}
 

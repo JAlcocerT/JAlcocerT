@@ -78,7 +78,10 @@ class: text-center
 ## Context for AI
 
 
-https://diagrams.mingrammer.com/docs/getting-started/examples
+Can a CLi agent, like Codex, Gemini CLI or Claude Code help to create the skeleton of SliDevJS ppts?
+
+
+
 
 
 ---

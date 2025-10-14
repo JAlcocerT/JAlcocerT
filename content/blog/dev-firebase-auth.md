@@ -9,7 +9,9 @@ description: 'Firebase Auth as your WebApp login method. A Serverless Authentica
 
 **Tl;DR**
 
-Bringing firebase auth to nextjs webapps [seems to be simple](#conclusions).
+Bringing firebase auth to NextJS webapps [seems to be simple](#conclusions).
+
++++ For now, [Logto and Firebase Auth](#firebase-authentication-vs-logto) are my favourite ways to do social sign in with verified emails. See both working at the branches of the slidev-editor.
 
 
 **Intro**
@@ -66,6 +68,8 @@ const app = initializeApp(firebaseConfig);
 
 ### Firebase Setup
 
+Just logging and follow: https://firebase.google.com/
+
 ![alt text](/blog_img/web/Firebase/auth/fb-auth1-methods.png)
 
 > You can even bring your own [OpenIDConnect](https://jalcocert.github.io/JAlcocerT/encryption-101/#oidc-vs-oauth) / SAML
@@ -76,21 +80,21 @@ const app = initializeApp(firebaseConfig);
 ![alt text](/blog_img/web/Firebase/auth/fb-auth3-providersready.png)
 
 
-![alt text](/blog_img/web/Firebase/auth/fb-auth4-nextjs-socialsignin.png)
+![Social SignInUp with Google inside a WebApp](/blog_img/web/Firebase/auth/fb-auth4-nextjs-socialsignin.png)
 
 ![alt text](/blog_img/web/Firebase/auth/fb-auth5-accepting-app-mermissions.png)
 
 ### Whats stored inside Firebase?
 
-You can bring info to your app about whos logged in:
+You can bring info to your app about who is logged in:
 
-![alt text](/blog_img/web/Firebase/auth/pulled-email-from-fb.png)
+![Bringing the logged in user email to the WebApp UI](/blog_img/web/Firebase/auth/pulled-email-from-fb.png)
 
 And see in the firebase web UI the people registered:
 
-![alt text](/blog_img/web/Firebase/auth/firebase-users-authenticated.png)
+![Firebase Panel - Registered users information](/blog_img/web/Firebase/auth/firebase-users-authenticated.png)
 
-You could make the **firebase users data pull programatically** as well: https://github.com/JAlcocerT/Just-Journal-via-SSG/blob/main/z-firebase-pull-info.md
+You could make the **firebase users data pull programatically** as well [as per this .md](https://github.com/JAlcocerT/Just-Journal-via-SSG/blob/main/z-firebase-pull-info.md)
 
 > You need a private key generate  as per the md instructions and place it into the `.env`
 
@@ -166,9 +170,15 @@ Yes, you can absolutely query and manage user information programmatically, but 
 
 ### Firebase pros and cons
 
-Firebase Authentication is a managed, secure backend service from Google that provides user authentication for your apps. It offers a wide range of sign-in methods, including email/password, phone numbers, and popular social identity providers like Google, Facebook, and Twitter.
+Firebase Authentication is a managed, secure backend service from Google that provides user authentication for your apps.
 
-It's a very **proper and safe way to do email verification serverless**. Since it's a managed service, Google handles the security best practices, such as password hashing, email verification flows, and protection against common attacks like brute force attempts and credential stuffing. This significantly reduces the security burden on you as a developer, which is especially beneficial in a serverless architecture where you want to minimize custom server-side code.
+It offers a wide range of sign-in methods, including email/password, phone numbers, and popular social identity providers like Google, Facebook, and Twitter.
+
+It's a very **proper and safe way to do email verification serverless**.
+
+Since it's a managed service, Google handles the security best practices, such as password hashing, email verification flows, and protection against common attacks like brute force attempts and credential stuffing.
+
+This significantly reduces the security burden on you as a developer, which is especially beneficial in a serverless architecture where you want to minimize custom server-side code.
 
 #### Firebase Authentication vs. Self-Managed Solutions (SQLite)
 

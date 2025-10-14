@@ -2,7 +2,7 @@
 title: "Waiting to Landing with Pocketbase"
 date: 2025-09-01T15:20:21+01:00
 draft: false
-tags: ["PB","Cloudflare Pages",CSR Guard"","SSG CSR SSR","Link Hub PB","Waiting2Landing v2"]
+tags: ["PB","Cloudflare Pages",CSR Guard"","SSG CSR SSR","Link Hub Theme with PB","Waiting2Landing v2"]
 description: 'PB SDK for your waiting list BaaS. Take user forms and then switch to landing page.'
 url: 'waiting-list-pocketbase'
 ---
@@ -31,7 +31,7 @@ How about using and let them see a CSR page.........
 
 .......like this one:
 
-![alt text](/blog_img/web/waitingtolanding/link-hub.png)
+![LinkHub Astro Theme UI](/blog_img/web/waitingtolanding/link-hub.png)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/link-hub-pb/" title="NEW repository - Astro Link Hub" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Theme + PB users collections as Auth via CSR Guard approach" >}}
@@ -70,10 +70,10 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/ #useful to 
 
 What I liked about the theme:
 
-1. configurable via json and fully static (ssg)
-2. brings i18n working out of the box
+1. Configurable via json and fully static (ssg)
+2. Brings i18n working out of the box
 
-{{< callout type="warning" >}}
+{{< callout type="info" >}}
 Auto-detect: Astro won’t pick browser language automatically for static sites. It renders both routes; you choose which URL to serve.
 {{< /callout >}}
 
@@ -82,7 +82,7 @@ What I added:
 1. [Signin/up pages](https://github.com/JAlcocerT/link-hub-pb/blob/main/signin-up.md)
 2. [Connection to the login signup to pb](https://github.com/JAlcocerT/link-hub-pb/blob/main/signin-up-add-pb.md), similarly to what was done at  [this post](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#ssg-x-pb)
 
-*At some point we could get [PB to do email verification](https://github.com/JAlcocerT/link-hub-pb/blob/main/pocketbase-email-verif.md)*
+*At some point we could even get [PB to do email verification](https://github.com/JAlcocerT/link-hub-pb/blob/main/pocketbase-email-verif.md)*
 
 3. The magic happens at the `./scripts`
 
