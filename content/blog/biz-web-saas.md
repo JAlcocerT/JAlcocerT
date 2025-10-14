@@ -98,7 +98,7 @@ echo $RESPONSE
 
 ### SSG
 
-Lets use this cool astro theme:
+Lets use this cool astro theme: https://github.com/ctrimm/astro-payroll-solution-theme
 
 ```sh
 git clone https://github.com/ctrimm/astro-payroll-solution-theme #MIT Licensed
@@ -112,17 +112,16 @@ Why is so cool?
 1. Amazing Blog Post section with filter tags + Cool ToC
 2. Login/Book a call buttons
 
-Logto had a cool post about how to vibe code a photo gallery app with built in auth:
-
-* https://blog.logto.io/cursor-logto-auth/
-
-And DO a way to deploy static sites: https://www.digitalocean.com/community/tutorials/ 
-and how-to-deploy-a-static-website-to-the-cloud-with-digitalocean-app-platform
-
 
 #### SSG x PB
 
-> I was also reading, *chatting with Gemini*, that we could keep the good old stack: Cloudflare Pages + CF Workers + Fetch/Posts users/pwds from a pocketbase somewhere...
+I was also reading, *chatting with Gemini*, that we could keep the good old stack
+
+I mean: Cloudflare Pages + CF Workers + Fetch/Posts users/pwds from a pocketbase hosted somewhere...
+
+Even pb can provide very nice authentication signin/up while the theme is on cloudflare pages.
+
+CF Workers would be the one in charge to allow access to certain static paths like `/private` checking if the user is logged in or not
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Payroll Theme with PB as auth" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro Theme + CF Workers + PB users collections as Auth" >}}
@@ -150,7 +149,7 @@ The astro site will need to have the PB library so that the SDK is available:
 npm i pocketbase
 ```
 
-For this, we will need to have pocketbase up and running and then to provision a proper collection: http://192.168.1.11:8080/api/health
+For this, we will need to have pocketbase up and running and then to provision a proper collection: `http://192.168.1.11:8080/api/health`
 
 ```sh
 #npm i pocketbase
@@ -197,7 +196,7 @@ And now these will work:
 
 ![SSG and CF Workers + Pocketbase](/blog_img/dev/FE/ssg-cfworkers-pocketbase.png)
 
-This user has been created as per the SSG and CF Workers interaction:
+This user has been created as per the **SSG and CF Workers interaction**:
 
 ![alt text](/blog_img/dev/FE/pb-created-user-via-ssg.png)
 
@@ -207,7 +206,7 @@ How about using the login page of the theme, and allow you to see a new `/secret
 
 If you are not logged in, you will be redirected towards `/login`.
 
-Simple, static and it literally flies:
+Simple, static and **it literally flies:**
 
 ![Authentication working via cloudflare workers and pocketbase collection](/blog_img/dev/FE/pocketbase-autnehticated-user-cf-workers.png)
 
@@ -222,19 +221,26 @@ Simple, static and it literally flies:
 
 ## Conclusions
 
+
+{{< callout type="info" >}}
+This theme has been great to work with and its a great candidate for landing pages and Micro SaaS
+{{< /callout >}}
+
 We could use any other combination of authentications, like: *LogTo, TinyAuth, just hardcoded...* I recapped recently on [this post](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#authentication-tools).
 
-![alt text](/blog_img/dev/PB/pb-secret-page.png)
+![Secret Page of the astro theme just for the users registered in the pockerbase collecion](/blog_img/dev/PB/pb-secret-page.png)
 
 > This is how it looks the result: https://fast-payroll-theme.pages.dev/
 
-Im now thinking that a future webifyer/*awebsiteforall* project could have such workflow: SSG -> PB signup/signin -> See the `/themes` page if logged in and then choose:
+Im now thinking that a future webifyer/*awebsiteforall* project could have such workflow: 
+
+SSG -> PB signup/signin -> See the `/themes` page if logged in and then choose:
 
 * Free Tier: Select theme -> Gitea replicate user/pwd -> markdown editor
 * Paid Tier: Pay and get your own domain (check against stripe)
 * Custom solutions
 
-{{< callout type="ingo" >}}
+{{< callout type="info" >}}
 For that some *kind of feature flags* will be required, probably something like [gofeatureflag](https://gofeatureflag.org/docs/sdk/client_providers/openfeature_javascript) combined with the described setup
 {{< /callout >}}
 

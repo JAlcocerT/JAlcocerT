@@ -1,6 +1,6 @@
 ---
 title: "BiP a Micro-SaaS | Wedding Edition"
-date: 2025-10-14T09:20:21+01:00
+date: 2025-10-18T09:20:21+01:00
 draft: false
 tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static. CSR Rendering QR and PDFs in browser 🤯'
@@ -57,12 +57,13 @@ This one is great, yet it seems that the way to get MRR is via the companies who
 
 
 
-**The free stuff**
+**The free stuff**: QR -> .md -> PDF to download
 
 1. Make a QR for your wedding url with custom icon/colors
-2. 
+2. Get a pdf ready to print in different sizes to place during your wedding
 
 **The try for free stuff**
+
 
 **The paid stuff**
 

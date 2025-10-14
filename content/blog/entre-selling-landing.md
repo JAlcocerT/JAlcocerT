@@ -89,6 +89,27 @@ Place those youtube videos:
 </div>
 ```
 
+
+## Potential Themes for a Landing
+
+1. This cool astro theme: https://github.com/ctrimm/astro-payroll-solution-theme
+
+```sh
+git clone https://github.com/ctrimm/astro-payroll-solution-theme #MIT Licensed
+#https://payflo.corytrimm.com/ #demo
+
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+```
+
+Sounds familiar?
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/" title="Payroll Theme with PB as auth" image="blog_img/dev/FE/ssg-cfworkers-pocketbase.png" subtitle="SSG and CF Workers + Pocketbase | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Payroll Theme with PB as auth" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro Theme + CF Workers + PB users collections as Auth" >}}
+{{< /cards >}}
+
+
+
 ---
 
 ## Conclusions

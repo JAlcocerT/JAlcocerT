@@ -134,7 +134,9 @@ A hook's job is to manage state, handle side effects (like data fetching), and e
 
 For example, a `useUserProfile()` hook would be responsible for fetching the user's data from an API and managing the loading and error states. 
 
-It encapsulates all that complexity so the component doesn't have to. It's the "smart" part of the application that knows *what* to do with data.
+It encapsulates all that complexity so the component doesn't have to.
+
+It's the "smart" part of the application that knows *what* to do with data.
 
 
 #### Services: The Data Layer 🔌

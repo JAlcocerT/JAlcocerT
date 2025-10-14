@@ -888,7 +888,7 @@ Btw, the **pages speed insights**, can be done via **API**: *see [this .md](http
 
 Given the opportunity costs, something like: one time setup + pay less each consecutive year *if you stay quiet* could be interesting to improve client retention.
 
-From:
+**From:**
 
 * https://whilecyclingthere.web.app/
 * https://cyclingthere.pages.dev/
@@ -902,7 +902,16 @@ From:
 Better photo galleries, specially thanks to these components/shortcodes recap.
 
 Still, far from: https://antfu.me/posts/photos-page, speciially: https://antfu.me/photos
-To:
+
+Logto had a cool post about how to vibe code a photo gallery app with built in auth:
+
+* https://blog.logto.io/cursor-logto-auth/
+
+And DO a way to deploy static sites: https://www.digitalocean.com/community/tutorials/ 
+and how-to-deploy-a-static-website-to-the-cloud-with-digitalocean-app-platform
+
+
+**To:**
 
 * https://beyondajourney.pages.dev/
 * https://financemotion.pages.dev/ 

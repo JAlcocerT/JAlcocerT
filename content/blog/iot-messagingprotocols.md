@@ -333,19 +333,15 @@ for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
 
 ### Outro
 
-
-
-
-
-
 #### Zigbee
 
 If you have been playing with IoT and some home devices, you will come to know Zigbee.
 
-
 * https://www.zigbee2mqtt.io/supported-devices/#
 
 Probably also https://esphome.io if you like ESP32 boards!
+
+## FAQ
 
 ### Redis as a message broker?
 

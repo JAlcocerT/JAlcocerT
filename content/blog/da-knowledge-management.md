@@ -24,7 +24,7 @@ But how people do this in a PRO and private way?
 
 
 1. [LogSeq](https://fossengineer.com/selfhosting-logseq/)
-2. Trilium
+2. [Trilium](https://github.com/JAlcocerT/Home-Lab/tree/main/trilium)
 3. [Joplin](#a-deeper-look-at-joplin)
 
 
@@ -174,7 +174,7 @@ If you are looking for simplicity, have a look to the **flat file and local firs
 | Joplin        | No         | Yes           | No    | No             |
 | BookStack     | No         | No            | No    | No             |
 
-Flatnotes, Raneto, SilverBullet, and Logseq are the best picks if flat, human-readable Markdown files with no database lock-in are the priority.[3][2][4][1]
+Flatnotes, Raneto, SilverBullet, and Logseq are the best picks if flat, human-readable Markdown files with no database lock-in are the priority.
 
 
 I know what you are looking for: **DATABASE-LESS KNOWLEDGE BASE**
@@ -185,7 +185,7 @@ I know what you are looking for: **DATABASE-LESS KNOWLEDGE BASE**
 
 ![WikiJS Setup](/blog_img/selfh/kb/wikijs-101.png)
 
-![alt text](/blog_img/selfh/kb/wikijs-setup.png)
+![alt text](/blog_img/selfh/kb/wiki-setup.png)
 
 ![alt text](/blog_img/selfh/kb/wikijs.png)
 
@@ -241,14 +241,20 @@ There are two main types: a **raw** editor and a **WYSIWYG** editor.
 
 In a **raw markdown editor**, you see and directly edit the plain text and its formatting symbols. For example, to make text bold, you have to type `**bold text**`.
 
-The editor doesn't hide the symbols; it displays them as you type. Many developers and writers prefer this mode because it gives them full control over the syntax and is excellent for clean, distraction-free writing.
+The editor doesn't hide the symbols; it displays them as you type.
+
+Many developers and writers prefer this mode because it gives them full control over the syntax and is excellent for clean, distraction-free writing.
 
 * **Example:** You type `## My Heading` and see exactly `## My Heading`. The editor might add some syntax highlighting to color the `##`, but the symbols remain visible.
 
 
 #### WYSIWYG Editor
 
-**WYSIWYG** (an acronym for **W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) is a mode where the editor immediately renders the formatted text as you type. It hides the Markdown symbols, so you don't see the raw syntax. For instance, when you type `**bold text**`, the editor will instantly display **bold text** with the two asterisks hidden.  
+**WYSIWYG** (an acronym for **W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) is a mode where the editor immediately renders the formatted text as you type. 
+
+It hides the Markdown symbols, so you don't see the raw syntax. 
+
+For instance, when you type `**bold text**`, the editor will instantly display **bold text** with the two asterisks hidden.  
 
 This style is more intuitive for users who are not familiar with Markdown syntax and resembles a traditional word processor.
 
