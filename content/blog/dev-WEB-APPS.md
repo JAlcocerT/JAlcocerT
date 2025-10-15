@@ -996,10 +996,15 @@ Here's a breakdown of some of the most popular options:
 As far as I know, these should work with any of the python web app frameworks.
 
 1. [LogTo](#logto)
-2. [BaaS](#baas)
-3. [Traefik](#traefik-x-middleware)
-4. *Probably tons more...*
+2. [BaaS](#baas) Supabase, Pocketbase...
 
+3. [Traefik](#traefik-x-middleware) Traefik x Middleware
+
+Exposing your flask app via a proxy manager, like Traefik.
+
+Then, plugging some authentication middleware into Traefik to do the auth job for us.
+
+4. *Probably tons more...*
 
 #### LogTo
 
@@ -1017,13 +1022,3 @@ Specially I managed to have an end to end user flow into my apps applied to Flas
 Havent yet get there with logto and streamlit, but it should be replicable.
 
 *Unless there is something strange with the callbacks.*
-
-#### BaaS
-
-Supabase, Pocketbase...
-
-#### Traefik x Middleware
-
-Exposing your flask app via a proxy manager, like Traefik.
-
-Then, plugging some authentication middleware into Traefik to do the auth job for us.

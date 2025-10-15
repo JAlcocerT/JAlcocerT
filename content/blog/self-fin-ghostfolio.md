@@ -11,6 +11,45 @@ description: 'Selfhosted tools for persosonal finance'
 url: 'ghostfolio-and-personal-finance-dev-tools'
 ---
 
+
+### Interesting Software for Finances
+
+
+`Financial Freedom` is an open-source financial management tool.
+
+* https://github.com/serversideup/financial-freedom
+* It serves as an alternative to commercial apps like Mint and YNAB.
+
+> GPL3.0 | An open source alternative to Mint, YNAB, and more. Stay on budget and build wealth without sacrificing your privacy. 
+
+{{< details title="More about Financial Freedom Software 📌" closed="true" >}}
+
+This project addresses privacy concerns by allowing users to **self-host their financial data**.
+
+Users can run the application on any device with Docker support, enhancing control over their financial information.
+
+Key features:
+
+- **Supports any bank**: Integrate with various banking institutions.
+- **Private synchronization**: Ensures data privacy during synchronization.
+- **Self-hosting**: Run on AWS, Digital Ocean, or even Raspberry Pi.
+- **Budgeting tools**: Helps in managing cash flow and setting budgets.
+- **Global currency support**: Manages finances in multiple currencies.
+
+The project is actively being developed, inviting community involvement through contributions.
+
+> `Financial Freedom` empowers users to manage finances privately and securely.
+
+{{< /details >}}
+
+
+Similar projects include **Firefly III** and **GnuCash**.
+
+* https://github.com/CodeWithCJ/SparkyBudget
+
+> Simple Budgeting, Powerful Results 
+
+
 **Tl;DR**
 
 Before building [PyStocks v2](https://jalcocert.github.io/JAlcocerT/py-stonks/), see what others have created.

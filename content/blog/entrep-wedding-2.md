@@ -2,7 +2,7 @@
 title: "BiP a Micro-SaaS | Wedding Edition"
 date: 2025-10-18T09:20:21+01:00
 draft: false
-tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2"]
+tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2","ARR"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static. CSR Rendering QR and PDFs in browser 🤯'
 url: 'building-in-public-wedding-photo-galleries'
 ---
@@ -24,7 +24,7 @@ dig slubnechwile.com any
 
 And quickly moved the NS to cloudflare ones, to start the game.
 
-+++ got motivated by people [BiP open startups](#about-building-in-public)
++++ got motivated by people [BiP open startups](#about-building-in-public) and their published ARR
 
 **Intro**
 
@@ -232,13 +232,15 @@ The Sassify theme is just awsome: https://astro-sassify.larryxue.dev/
 
 ## About building in public
 
+For some indiehackers, its all about BiP.
+
 See `https://marclou.com/` and the related h`ttps://indiepa.ge/`
 
 > People are even linking stripe to validate what they earn on their startups: https://indiepa.ge/leaderboard
 
 They call it *the open startup*. 
 
-Even Ghost was publishing their ARR metrics.
+Even Ghost was publishing their ARR metrics openly:
 
 Or Ghostfolio: https://ghostfol.io/en/open
 

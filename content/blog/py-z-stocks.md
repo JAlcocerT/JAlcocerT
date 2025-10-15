@@ -10,7 +10,7 @@ math: true
 
 **TL;DR:** 
 
-This is NOT a financial recommendation post.
+This is **NOT** a financial recommendation post.
 
 Just have fun with Python and its different stacks.
 
@@ -169,7 +169,7 @@ And yesss people are earning a lot of money building APIs and you are *,missing 
 
 <!-- https://www.youtube.com/watch?v=aUtFn-qS7Xk -->
 
-{{< youtube "UtFn-qS7Xk" >}}
+{{< youtube "aUtFn-qS7Xk" >}}
 
 
 Just leave that money on the table.
@@ -178,7 +178,7 @@ YFinance data and a Python Web App...That's it!
 
 > Less is more
 
-> > Or so some say.
+> > Or so some say
 
 Anyways, we will need this package: https://pypi.org/project/yfinance/
 
@@ -186,7 +186,7 @@ Anyways, we will need this package: https://pypi.org/project/yfinance/
 pip install yfinance==0.2.61
 ```
 
-And as I dont really like building stuff on data source I dont control: I added the possibility to saved into sqlite the pulled data.
+And as I dont really like building stuff on data source I dont control: *I added the possibility to saved into sqlite the pulled data.*
 
 > You just pull once *philosophy*
 
@@ -194,19 +194,19 @@ And as I dont really like building stuff on data source I dont control: I added 
 
 The user will potentially be curious about that 'what if' for its assets.
 
-So why not giving the possibility to feed a sample Google Sheet with its sharable link to the app?
+So why not giving the possibility to feed a sample **Google Sheet with its sharable link** to the webapp?
 
 ### The Charts
 
 I wanted to have a simple growth comparison (and actually the vibez added this cool normalized view)
 
-![Normalized Value Change](/blog_img/dev/pystocks/pystocks-vibed1.png)
+![Normalized Value Change of PyStocks Streamlit Version](/blog_img/dev/pystocks/pystocks-vibed1.png)
 
 #### PyGWalker
 
 How about giving the possibility to *build your own visuals*?
 
-That's where the [pygwalker use case comes in to any streamlit app](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker).
+That's where the [**pygwalker** use case comes in to any streamlit app](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker).
 
 ### AI Features for PyStocks
 
@@ -477,43 +477,6 @@ flowchart TD
 I was testing Automatic [Posts creation with AIssistant here](https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/#summarize-github-readmes) and with this related repo.
 {{< /callout >}}
 
-### Interesting Software for Finances
-
-
-`Financial Freedom` is an open-source financial management tool.
-
-* https://github.com/serversideup/financial-freedom
-* It serves as an alternative to commercial apps like Mint and YNAB.
-
-> GPL3.0 | An open source alternative to Mint, YNAB, and more. Stay on budget and build wealth without sacrificing your privacy. 
-
-{{< details title="More about Financial Freedom Software 📌" closed="true" >}}
-
-This project addresses privacy concerns by allowing users to **self-host their financial data**.
-
-Users can run the application on any device with Docker support, enhancing control over their financial information.
-
-Key features:
-
-- **Supports any bank**: Integrate with various banking institutions.
-- **Private synchronization**: Ensures data privacy during synchronization.
-- **Self-hosting**: Run on AWS, Digital Ocean, or even Raspberry Pi.
-- **Budgeting tools**: Helps in managing cash flow and setting budgets.
-- **Global currency support**: Manages finances in multiple currencies.
-
-The project is actively being developed, inviting community involvement through contributions.
-
-> `Financial Freedom` empowers users to manage finances privately and securely.
-
-{{< /details >}}
-
-
-Similar projects include **Firefly III** and **GnuCash**.
-
-* https://github.com/CodeWithCJ/SparkyBudget
-
-> Simple Budgeting, Powerful Results 
-
 ### Interesting Financial Stories
 
 These are a collection of **finance related posts/sites** that have been somehow interesting for me to read:
@@ -530,7 +493,7 @@ There are **interesting free calculators** on the internet: which I got to know 
 
 <!-- https://www.youtube.com/watch?v=-yLl-IBl_zo -->
 
-{{< youtube "yLl-IBl_zo" >}}
+{{< youtube "-yLl-IBl_zo" >}}
 
 
 * https://www.thecalculatorsite.com/finance/calculators/compoundinterestcalculator.php
@@ -583,6 +546,7 @@ Which uses the **obfuscate technique** unless you have paid via stripe, where yo
   - Interesting payout ratio, dgr,...
 
 - https://divvydiary.com/en/?via=elisa&gad_source=1&gclid=Cj0KCQiA0fu5BhDQARIsAMXUBOIN8XXGkoEZZbfhufMr55Y2kSIuAGXDP4Lb1LYgLlRMnezpTUl2tkAaAp2kEALw_wcB esta la encontré el otro día, ofrece datos históricos de stocks y algún ETF (FUSD te lo da pero IDUS no), pero mola que me da el ISIN rápido, entonces veo rápidamente en qué país cotiza
+
 - https://tools.mhinvest.com/mhichart una web app que tiene una idea muy parecida a la que pensamos en su momento, pero no considera seguir metiendo gasolina, parte de una cantidad inicial y listo.
 
 * https://www.marketbeat.com/
