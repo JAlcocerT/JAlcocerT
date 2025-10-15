@@ -36,16 +36,9 @@ sudo sudo du -h --max-depth=10 /var/lib/docker | sort -rh | head
 * https://giteamirror.com/#features
 
 
-### Media
-
-* 
-
-
-
 ## Privacy Apps
 
 Some time ago I put together this list of cool security apps: https://jalcocert.github.io/Linux/docs/nix/fav-apps/#secprivacy
-
 
 
 3. **Secure email client** via Thunderbird or https://proton.me/blog/proton-mail-desktop-app

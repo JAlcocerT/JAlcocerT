@@ -835,6 +835,54 @@ https://jalcocert.github.io/JAlcocerT/audio-recap/
   {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="Speech Rater Flask Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to rate your Speech - TTS and S2T transcription for youtube" >}}
 {{< /cards >}}
 
+
+
+![Flask UI Login as per PocketBase user collection](/blog_img/web/morita-flask/flask-login-pb.png)
+![FlaskCMS for Mental health Astro portfolio theme working via CF tunnel](/blog_img/web/morita-flask/https-flask-cf.png)
+
+https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#flask-x-pocketbase
+https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#flaskcms-x-quick-auth
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-flaskcms/flask-architecture.md" title="Moi Real Estate Flask - Source Code Y25" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro x Flask CMS with hardcoded auth" >}}
+  {{< card link="https://github.com/JAlcocerT/morita-astroportfolio-flasked" title="NEW Morita Web v2 - Source Code Y25" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro x Flask CMS with auth as per PB" >}}
+{{< /cards >}}
+
+![Uploading real estate photos via Flask](/blog_img/web/moi-realestate/flask-cms-simpe-login.png)
+
+```sh
+git clone git@github.com:JAlcocerT/real-estate-moi.git
+cd real-estate-moi
+
+make flaskcms-build
+docker inspect moirealestate-flaskcms --format '{{json .NetworkSettings.Networks}}' | jq
+```
+
+
+https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/
+
+![Flask WebAPP as CMS x HUGO Theme Gallery](/blog_img/web/hugo-themegallery-flask.png)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/hugo-theme-gallery-flasked" title="NEW - Hugo Theme Gallery Forked" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Hugo Gallery x Custom Flask CMS" >}}
+{{< /cards >}}
+
+
+From a quick waiting list that can be swapped to a landing page, covered [here](https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/)
+
+* https://github.com/JAlcocerT/waiting-to-landing
+
+```sh
+git clone git@github.com:JAlcocerT/waiting-to-landing.git
+cd waiting-to-landing
+
+#make run-dev #will spin a waiting list connected to formbricks (see the .env vars)
+MODE=LANDING make run-dev
+```
+
+![Astro Waiting List Theme with Formbricks](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
+
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="ebook ideas Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to ship ebooks" >}}
 {{< /cards >}}
@@ -853,6 +901,11 @@ From Streamlit PoCs, I mean streamlit financial MVP to Flask with ChartJS:
 
 
 ![Flask WebApp vibe coded gradient](/blog_img/selfh/automation/flask-gradient-cms-v2.png)
+
+
+https://jalcocert.github.io/JAlcocerT/playwright-101/
+![Job Market Trend | Matplotlib Job-Trends](/blog_img/data-experiments/matplotlib_job_offers_plot_06-08-2025.png)
+
 
 
 

@@ -292,7 +292,7 @@ You can find [things to share](https://www.reddit.com/r/Piracy/comments/1c3cikj/
 
 > > In these kind of blogs you can find [interesting DIY stuff, like crypto monero](https://www.vimoire.com/blog/2025-02-01/Setting-up-local-XMR-mining-with-Monero-GUI)
 
-![Qbittorrent](/blog_img/selfh/media/qbit.png)
+![Qbittorrent UI](/blog_img/selfh/media/qbit.png)
 
 This is how **qbittorrent's admin UI** looks like:
 

@@ -2,7 +2,7 @@
 title: "Pro Scrapping with Playwright"
 date: 2025-08-05
 draft: false
-tags: ["Dev Web","Playwright","Selenium","Job-Trends"]
+tags: ["Dev Web","Playwright","Selenium","Job-Trends","uv x SQlite x matplotlib"]
 description: 'Playwright based WebApp with job trends info.'
 url: 'playwright-101'
 ---
@@ -43,7 +43,42 @@ Now the numbers Im interested are not hardcoded into the page HTML, hence **bs4 
 
 ### Playwright
 
+Certainly! Here's a rewritten version of the Playwright and Selenium sections for the post to improve explanation and clarity:
+
+***
+
+### Playwright
+
+Playwright is a modern automation library designed to control web browsers programmatically. 
+
+It excels at scraping websites that load content dynamically using JavaScript—something traditional tools like BeautifulSoup can’t handle effectively.
+
+To make scraping more reliable, especially on sites with anti-bot protections, we use the `playwright-stealth` plugin, which helps mimic human browsing behavior and avoid detection.
+
+Here’s how to set up Playwright for scraping:
+
+1. Install the `playwright-stealth` plugin:
+```
+uv add "playwright-stealth==1.0.0"
+uv sync
+```
+2. Install Playwright itself along with necessary browser binaries:
+```
+uv run python -m playwright install
+playwright install
+```
+3. Verify the plugin installation with:
+```
+uv pip show playwright-stealth
+```
+
+With this setup, Playwright allows us to interact with complex web pages, wait for dynamic content to load, and extract the information we need. However, scraping can still be challenging due to frequent website updates or sophisticated anti-scraping measures.
+
+
+
 Time to tinker with playwright.
+
+Or again, as we were using it as dependency with slidev!
 
 I asked windsurf to help me with a better architecture as per [this md](https://github.com/JAlcocerT/Job-Trends/blob/main/architecture.md)
 
@@ -70,15 +105,26 @@ And it was not QA work, but process job.
 
 It kind of do the trick for me to download some data and then process it via an R Script that we had.
 
+
+Selenium is a well-established browser automation framework originally designed for automated testing of web applications.
+
+Over the years, it has also been **adapted for scraping tasks** due to its ability to control real browsers and handle JavaScript-heavy sites.
+
+While Selenium can get the job done, it tends to be heavier and sometimes less flexible than Playwright for modern scraping needs. Playwright’s more recent design with built-in support for multiple browser engines and stealth features makes it the preferred choice for complex web scraping projects today.
+
 ---
 
 ## Conclusions
+
+If you remember, we reviewed [scrapegraph with LLMs here](https://jalcocert.github.io/JAlcocerT/scrapping-with-llms/)
+
+But even for such cool tools some websites are tricky.
 
 Apparently, its possible that people do **very hard websites to scrap**.
 
 I did not manage to get those numbers via Playwright.
 
-But hey...I put them **manually into sqlite**:
+But hey...I put them **manually into sqlite**: https://github.com/JAlcocerT/Job-Trends
 
 ```sh
 #https://github.com/JAlcocerT/Job-Trends
@@ -90,12 +136,12 @@ uv run manual_entry.py #it.pracuj.pl
 ```
 
 ```sh
+#make add-manual
 make plot-matplotlib
 #uv run plot_matplotlib.py
 ```
 
 And now we get...
-
 
 ```sh
 chafa "./matplotlib_job_offers_plot_06-08-2025.png"
@@ -122,8 +168,3 @@ Thats a matplotlib chart this time, instead of a plotly one.
 Because ive learnt via the [animations tinkering here](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/), that matplotlib can be really cool.
 
 > And job market is not bad lately...
-
-### Bringing Back ScrapeGraph
-
-If you remember, we reviewed: https://jalcocert.github.io/JAlcocerT/scrapping-with-llms/
-

@@ -397,7 +397,7 @@ Many open-source companion tools exist to help with different aspects of databas
 
 ### Database Management & GUI Tools
 
-These tools provide a graphical user interface (GUI) to interact with and manage your databases, offering a more user-friendly alternative to the command line.
+These tools provide a graphical user interface **(GUI) to interact with and manage your databases**, offering a more user-friendly alternative to the command line.
 
 
 {{< cards cols="1" >}}
@@ -463,18 +463,18 @@ These tools help you manage and version-control your database schema changes in 
 These tools help you monitor the performance and health of your databases, providing real-time insights and alerts.
 
 * **Prometheus**: An open-source monitoring system and time-series database. It's commonly used to collect and store metrics from various services, including databases, and provides a powerful query language for analysis and alerting.
+
 * **Percona Monitoring and Management (PMM)**: A dedicated open-source platform for database observability and management. It provides detailed dashboards and metrics for MySQL, PostgreSQL, and MongoDB to help you pinpoint and fix performance bottlenecks.
 
 ---
 
 ### Data Visualization & Analytics 📈
 
-These tools connect to your databases and provide a way to visualize data through dashboards and charts, making it easier to analyze and share insights with others.
+These tools connect to your databases and provide a way to **visualize data** through [(BI) dashboards and charts](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/), making it easier to analyze and share insights with others.
 
 * **Apache Superset**: A modern, open-source data exploration and visualization platform. It connects to various SQL databases and allows users to build interactive dashboards and charts without writing a single line of code.
+
 * **Metabase**: An open-source business intelligence tool that simplifies the process of data analysis. It's designed to be user-friendly, allowing team members to ask questions about their data and visualize the results.
-
-
 
 * **Liquibase** is an open-source database-independent tool for **managing and tracking database schema changes**.
 
@@ -482,7 +482,7 @@ It treats database changes like application code, enabling version control and C
 
 {{% details title="About LiquiBase... 🚀" closed="true" %}}
 
-### How it Relates to Databases
+How it Relates to Databases
 
 Liquibase's core function is to provide a structured and automated way to evolve your database schema.
 

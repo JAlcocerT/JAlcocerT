@@ -2,17 +2,23 @@
 title: "Interacting with SSGs and md via Flask"
 date: 2025-08-09
 draft: false
-tags: ["Astro x Flask","PocketBase","n8n","Markdown editors"]
-description: 'Markdown and FlaskCMS v0.1 that works for Mental Health and Real Estate'
+tags: ["Astro x Flask","Flask x PocketBase users collection","n8n","Markdown editors"]
+description: 'Markdown and FlaskCMS v0.1 that works for Mental Health and Real Estate.'
 url: 'making-flask-cms-for-ssg'
 ---
 
 
-**TL;DR**: Tinkering with markdown web editors via Flask(CMS v0.1) to make SSG edition more accesible.
+**TL;DR**
+
+Tinkering with markdown web editors via Flask(CMS v0.1) to make SSG edition more accesible.
 
 In the meantime I got to put inside the [container the flask app](#flask-containerized) via uv and learnt that:
 
-`flask-cms sh -lc "uv run gunicorn app:app -b 0.0.0.0:5050 --workers 2 --threads 4 --timeout 60"` >>> `uv run app.py`
+```sh
+uv run gunicorn app:app -b 0.0.0.0:5050 --workers 2 --threads 4 --timeout 60
+```
+
+Much better: `flask-cms sh -lc "uv run gunicorn app:app -b 0.0.0.0:5050 --workers 2 --threads 4 --timeout 60"` >>> `uv run app.py`
 
 **Intro**
 
@@ -74,7 +80,9 @@ To achieve this, you'll need to combine a few key technologies:
 
 **For the Markdown Editor**
 
-You have several excellent options for a client-side Markdown editor. These libraries provide the visual interface, the live preview, and often more advanced features like image uploads.
+You have several excellent options for a client-side Markdown editor. 
+
+These libraries provide the visual interface, the live preview, and often more advanced features like image uploads.
 
   * **[SimpleMDE](https://github.com/sparksuite/simplemde-markdown-editor)** or its successor, **[EasyMDE](https://github.com/Ionaru/easy-markdown-editor):** These are popular, lightweight, and easy-to-integrate Markdown editors. They have a clean interface and are a great starting point.
   * **[Editor.md](https://pandao.github.io/editor.md/):** A more feature-rich editor that's also popular. It's known for its extensive functionality, including image uploads and full-screen mode.
@@ -126,10 +134,8 @@ cd morita-web
 rm -rf .git
 ```
 
-
-
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/morita-astroportfolio-flasked" title="Morita Web v2 - Source Code Y25" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro x Flask CMS" >}}
+  {{< card link="https://github.com/JAlcocerT/morita-astroportfolio-flasked" title="NEW Morita Web v2 - Source Code Y25" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro x Flask CMS" >}}
 {{< /cards >}}
 
 
@@ -184,7 +190,7 @@ make local-flask
 
 > And now you will get the ewb app into `localhost:5050` and from any home device as well
 
-![alt text](/blog_img/web/morita-flask/flask-ui1.png)
+![Flask WebApp UI to edit posts](/blog_img/web/morita-flask/flask-ui1.png)
 
 Famous last words: *can you make it look cooler?*
 
@@ -369,7 +375,7 @@ make flask-up #in case that you stopped the flask container
 
 And now you can go to `localhost:5050/` and see that you get redirected to: `localhost:5050/login`
 
-![Flask UI Login as per PocketBase user collectio](/blog_img/web/morita-flask/flask-login-pb.png)
+![Flask UI Login as per PocketBase user collection](/blog_img/web/morita-flask/flask-login-pb.png)
 
 Via CLI, these wont get you a 200 now, as we cant access them without being one of the registered users under PB collection `users`:
 
@@ -472,11 +478,9 @@ cd waiting-to-landing
 MODE=LANDING make run-dev
 ```
 
-![alt text](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
+![Astro Waiting List Theme with Formbricks](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
 
-2. To making HUGO greater (and connecting a flaskCMS)
-
-* https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/
+2. To make [HUGO even greater (and connecting a flaskCMS)](https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/)
 
 3. And now these 2 astro+flaskCMS: [mentalhealth](#mental-health) and [real estate](#real-estate)
 
@@ -555,7 +559,7 @@ Later on, few posts followed:
 
 Last time I gave him updates, we concluded with: https://jalcocert.github.io/JAlcocerT/real-estate-website/#conclusions
 
-Recently, we had a chat and we talked about n8n.
+Recently, we had a chat and we talked about *n8n and automation*.
 
 So its time to bring some **upgrades to the project**:
 

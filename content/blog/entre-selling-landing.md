@@ -7,6 +7,14 @@ description: 'New ATH for my SSG knowledge. Landing 101 that convert and Codex f
 url: 'selling-with-a-landing-website'
 ---
 
+## Web Front End - Theme
+
+* https://github.com/LaB-CH3/astrobrew
+    * https://astro.build/themes/details/astrobrew/
+
+    
+>  Astrobrew is a free and open-source elegant **landing page for Micro SaaS** products built with Astro & Skeleton CSS
+
 **Tl;DR**
 
 Last year I made couple of 101 guides for [HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) and [ASTRO](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/).

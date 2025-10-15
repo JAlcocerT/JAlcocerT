@@ -2,7 +2,7 @@
 title: "Shipping | Photo for Events"
 date: 2025-07-25T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Build in Public","Indie Dev", "Product hunt", "Makers"]
+tags: ["Entrepreneuring","Build in Public","Indie Dev", "Product hunt", "Makers","Filebrowser Quantum"]
 description: 'Filebrowser vs PicPeak vs Transfer vs CloudReve. From Weddings to Events.'
 url: 'events-photo-galleries'
 ---
@@ -24,7 +24,6 @@ This one is tested *in production* as seen [here](https://jalcocert.github.io/JA
 
 ![alt text](/blog_img/web/filebrowser-hugo/filebrowser-quantum-users.png)
 
-> 
 
 2. PicPeak
 
@@ -56,12 +55,6 @@ https://www.youtube.com/watch?v=Z-zmXoA26Eo
 
 7. https://github.com/error311/FileRise
 
-https://www.youtube.com/watch?v=t8p222fxVL0
+<!-- https://www.youtube.com/watch?v=t8p222fxVL0 -->
 
-## Web Front End - Theme
-
-* https://github.com/LaB-CH3/astrobrew
-    * https://astro.build/themes/details/astrobrew/
-
-    
->  Astrobrew is a free and open-source elegant landing page for Micro SaaS products built with Astro & Skeleton CSS
+{{< youtube "t8p222fxVL0" >}}

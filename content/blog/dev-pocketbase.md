@@ -102,7 +102,9 @@ The "antipattern" label is not a flaw; it's a reflection of a different philosop
 
 A developer used to SQL (and ORMs) relies heavily on a few core concepts that PocketBase abstracts away or handles differently:
 
-* **Explicit SQL:** SQL developers write explicit SQL queries with `JOIN` statements to combine data from multiple tables. While PocketBase's underlying database is SQLite, its primary API is a RESTful one, not a raw SQL interface. Complex joins must be performed either through the "view collection" feature (which uses SQL under the hood but is a read-only workaround) or by making multiple API requests and joining the data on the client side.
+* **Explicit SQL:** SQL developers write explicit SQL queries with `JOIN` statements to combine data from multiple tables. While PocketBase's underlying database is SQLite, its primary API is a RESTful one, not a raw SQL interface.
+
+Complex joins must be performed either through the "view collection" feature (which uses SQL under the hood but is a read-only workaround) or by making multiple API requests and joining the data on the client side.
 
 * **Foreign Key Constraints:** In SQL, you can enforce strict referential integrity using foreign key constraints. This prevents you from, for example, deleting a user while their blog posts still exist. PocketBase's relationships are less rigid by default, which can feel unsettling to a traditional database developer. It doesn't enforce these constraints at the database level, but rather at the application level through its [API rules](#what-are-api-rules) and SDKs.
 
@@ -136,7 +138,9 @@ However, for its target audience—developers who prioritize speed, simplicity, 
 
 {{< /details >}}
 
-Understand the key differences between a system designed for **Online Transaction Processing (OLTP)**, which PocketBase is optimized for, and one designed for **Online Analytical Processing (OLAP)**, which is used for data analytics:
+Understand the key differences between a system designed for **Online Transaction Processing (OLTP)**, which PocketBase is optimized for.
+
+Compared with one designed for Online Analytical Processing (OLAP), which is used for data analytics:
 
 | Feature | Online Transaction Processing (OLTP) | Online Analytical Processing (OLAP) |
 | :--- | :--- | :--- |
@@ -177,12 +181,14 @@ cd ./Dev/BaaS/PB
 docker compose -f PB_docker-compose.yml up -d
 ```
 
+Check that its running: 
+
 ```sh
 curl -s http://localhost:8080/api/health || echo "PocketBase not accessible"
 #curl -s http://localhost:9000/api/health || echo "PocketBase not accessible"
 ```
 
-![SelfHosting PocketBase](/blog_img/dev/PB/selfh-pb.png)
+![SelfHosting PocketBase via Containers ](/blog_img/dev/PB/selfh-pb.png)
 
 > You can use PB admin UI via the default: http://localhost:8080/_/
 
@@ -245,7 +251,9 @@ Common use cases:
 * Side effects like webhooks, audit logs, denormalization.
 * Access control beyond collection rules.
 
-> In short, `pb_hooks/` lets you programmatically configure and extend PocketBase on the server, and this specific hook configures S3 file storage from environment variables.
+> In short, `pb_hooks/` lets you programmatically configure and extend PocketBase on the server
+
+> > And this specific hook configures S3 file storage from environment variables.
 
 #### About PB_Migrations
 
@@ -281,7 +289,8 @@ The timestamp-ordered migrations are essential for making this multi-step proces
 
 When/how applied:
 
-* Applied on the PocketBase server (via CLI or your container entrypoint). They must run before the frontend SDK can use those collections/fields.
+* Applied on the PocketBase server (via CLI or your container entrypoint).
+  * They must run before the frontend SDK can use those collections/fields.
 * You can run them during build/startup or manually with the PB CLI. 
   * In many setups, the Docker image executes migrations at startup.
 
@@ -335,7 +344,7 @@ You can also **export the existing collections** into json:
 
 
 {{< callout type="warning" >}}
-Via UI `http://localhost:9000/_/#/settings`,you can also export them, but this will be a .json, if you plan to use it at `pb_migrations`, make sure to convert it to `.js`
+Via UI `http://localhost:9000/_/#/settings`,you can also export them, but this will be a `.json`, if you plan to use it at `pb_migrations`, make sure to convert it to `.js`
 {{< /callout >}}
 
 
@@ -471,7 +480,9 @@ The goal of a database migration is to ensure that a database's structure always
 
 PocketBase's system is **code-driven**.
 
-It doesn't automatically generate migration files from a schema definition. Instead, you manually create and write the migration code yourself, giving you full control over the process.
+It doesn't automatically generate migration files from a schema definition. 
+
+Instead, you manually create and write the migration code yourself, giving you full control over the process.
 
 * **Creating Migrations**: You create a new migration file using the `pocketbase migrate create "your_migration_name"` command. This generates a boilerplate Go or JavaScript file with `up` and `down` functions.
 * **Writing Migrations**: You manually write the Go or JavaScript code within the `up` function to make schema changes (like creating a collection or adding a field) and the `down` function to reverse those changes. You use PocketBase's API to define these changes.
@@ -731,7 +742,6 @@ It makes the FastAPI layer largely redundant for tasks like fetching user data, 
 
 > You would only add a custom backend with a framework like FastAPI if PocketBase's built-in functionality isn't sufficient for your specific needs.
 
-### PB and Auth via SDK
 
 ---
 

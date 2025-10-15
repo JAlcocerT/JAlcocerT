@@ -101,6 +101,10 @@ Syncthing doesn't natively support SFTP as a sync destination. SFTPGo is what br
 
 For a general overview of Syncthing, you can check out Sync Files Across All Your Devices With Syncthing.
 
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p
+![Qbittorrent UI](/blog_img/selfh/media/qbit.png)
+
+
 ---
 
 ## Conclusions

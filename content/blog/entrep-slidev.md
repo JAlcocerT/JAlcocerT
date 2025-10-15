@@ -2,7 +2,7 @@
 title: "From ReadMe to MakeSliDev v0.1"
 date: 2025-08-06
 draft: false
-tags: ["MakeReadme","SliDevJS","Entrep",]
+tags: ["MakeReadme","SliDevJS","Entrep","Awesome Readme"]
 description: 'Its all about markdown - Ideas to go From ReadMe generator to SliDev presentations for all'
 url: 'make-slidev'
 ---
@@ -52,6 +52,9 @@ But the content quality!
 
 ### MakeSlidev
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/makeslidev" title="NEW MakeSliDev - Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for a SliDev Editor " >}}
+{{< /cards >}}
 
 * https://github.com/JAlcocerT/makeslidev
 

@@ -193,11 +193,15 @@ Just think of a interesting visual you want to have, tell to windsurf to vibe co
 
 <!-- ![alt text](/blog_img/apps/streamlit/st_pygwalker_map.png) -->
 
-How can these chart actually look like?
+How can these charts actually look like?
 
 ![ApexChartsJS and Astro SSG Theme ](/blog_img/web/astro/astro-apexchartsjs-component.png)
 
 Again: *and these are interactive charts!*
+
+All thanks to CSR and ApexChartsJS :)
+
+So you could make this kind of [streamlit real estate calculator](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/) purely static.
 
 Another option is to embedd the *knitted html* of a R FlexDashboard to your SSG powered websites:
 

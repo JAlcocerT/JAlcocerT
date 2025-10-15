@@ -2,8 +2,8 @@
 title: "HUGO can also be cool"
 date: 2025-08-04
 draft: false
-tags: ["Dev","SSG","Photo-Gallery","Flask CMS","Shortcode parsing md"]
-description: 'Improving HUGO Themes: Flasked x Theme Gallery, HUGO Doks Tweaks'
+tags: ["Dev","SSG","Photo-Gallery","Flask CMS","Shortcode parsing","yml parsed to md"]
+description: 'Improving HUGO Themes: Flasked x Theme Gallery, HUGO Doks Tweaks.'
 url: 'cool-hugo-themes'
 ---
 
@@ -32,8 +32,8 @@ As described here - https://jalcocert.github.io/JAlcocerT/creating-photo-centric
 Here is my forked version of it (also **MIT**):
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
-  {{< card link="https://github.com/JAlcocerT/hugo-theme-gallery-flasked" title="Hugo Theme Gallery Forked" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Hugo Gallery x Custom Flask CMS" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Python RE Calculator" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
+  {{< card link="https://github.com/JAlcocerT/hugo-theme-gallery-flasked" title="NEW - Hugo Theme Gallery Forked" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Hugo Gallery x Custom Flask CMS" >}}
 {{< /cards >}}
 
 I was playing a lot with this theme to make it more accesible:
@@ -178,14 +178,6 @@ So why not doing so via Flask?
 > This is my first try: https://github.com/JAlcocerT/hugo-theme-gallery-flasked
 
 > > At some point...could UI be modifed via Flask as per Codex commands? Who knows...
-
-#### EntreAgujayPunto Updates
-
-
-
-#### EnjoyLittleThings Updates
-
-
 
 ### FossEngineer Updates
 

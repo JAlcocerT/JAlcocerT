@@ -22,6 +22,11 @@ Now subscribe to get additional goodies :)
 This is not exactly a stripe 101, as I have played with it before:
 
 
+But just some kind of stripe recap, as there are multiple use cases:
+
+1. Use Stripe + Webhooks + Pocketbase collections as [mentioned here](https://jalcocert.github.io/JAlcocerT/pocketbase/#syncing-stripe-data-with-pocketbase)
+2. Stripe API + Streamlit to allow an user to login / see certain features
+
 
 ## Why Stripe
 

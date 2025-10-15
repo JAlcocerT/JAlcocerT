@@ -121,11 +121,15 @@ It’s frequently described as “Perplexity-as-a-service” for customizable, f
 
 ## Data APIs
 
-You can get data 
+You can get data from other users/services that have collected/processed and expose it for you.
 
-In case you want to expose your own API endpoints with code, for example with [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api) or with Pocketbase BaaS
+In case you want to expose your own API endpoints with code, for example with [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api) or with [Pocketbase BaaS](https://jalcocert.github.io/JAlcocerT/pocketbase/#what-are-api-rules)
 
 ### Weather
+
+This was one of the first data I used for a personal project.
+
+Im talking about the python trip planner, which uses the open meteo API to get historical weather data points.
 
 
 ## Checking APIs
@@ -203,3 +207,41 @@ Smithery is the “app store” or registry for agentic AI extensions, enabling 
 
 [10](https://github.com/smithery-ai)
 [11](https://github.com/smithery-ai/sdk)
+
+
+### Audio APIs
+
+
+#### 11Labs x MCP
+
+ElevenLabs already has its own MCP Server:
+
+<!-- https://www.youtube.com/watch?v=uOneCuSj2tI -->
+
+{{< youtube "uOneCuSj2tI" >}}
+
+
+### Python CLI Tools
+
+* https://pypi.org/project/questionary/ - Create CLI utilities with python
+* https://docs.pytest.org/en/stable/
+
+## FAQ
+
+### Other TOols
+
+* https://github.com/Chivo-Systems/Shinar/
+
+> gpl 3.0 | Open Source AI Calling Transcriptions, Summaries, and Analytics built on OpenAI Whisper
+
+* https://github.com/getmaxun/maxun
+
+> agpl | No Code Web Data Extraction Platform • Turn Websites To APIs & Spreadsheets In Minutes
+
+* https://github.com/clusterzx/paperless-ai
+
+> MIT | An automated document analyzer for Paperless-ngx using OpenAI API, Ollama, Deepseek-r1, Azure and all OpenAI API compatible Services to automatically analyze and tag your documents.
+
+* https://github.com/esxr/langgraph-mcp
+
+> MIT | LangGraph solution template for MCP

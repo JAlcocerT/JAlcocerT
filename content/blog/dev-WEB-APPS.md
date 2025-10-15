@@ -49,7 +49,7 @@ But it's time to try something more:
 
 Web programming is the foundation for creating dynamic and interactive websites and web applications.
 
-It goes beyond simply designing a static webpage with HTML and CSS. 
+It goes **beyond *simply* designing a static webpage** with HTML and CSS. 
 
 {{< details title="See a more detailed look on these 📌" closed="true" >}}
 
@@ -106,8 +106,6 @@ Python is a versatile language that's widely used for web development. Here's ho
 
 
 {{< /details >}}
-
-**In summary:**
 
 Web programming is a complex field that requires a wide range of skills!
 

@@ -184,7 +184,7 @@ Last but not least: `https://www.similarweb.com`
 
 Cool marketing agencies are using: `https://apify.com/`. 
 
-> Apify is the largest ecosystem where developers build, deploy, and publish web scrapers, AI agents, and automation tools.
+> Apify is the largest ecosystem where developers build, deploy, and **publish web scrapers**, AI agents, and automation tools.
 
 > > We call them Actors.
 
