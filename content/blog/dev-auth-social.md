@@ -256,7 +256,7 @@ With that ready, just do your CF setup: `slidev-editor:3000`
 
 
 {{< callout type="warning" >}}
-Unlike with FastAPI + PyStonks, The Firebase Auth setup **worked on smartphones** too. Remember to config **custom domains**!
+Unlike with [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api/) + PyStonks, The Firebase Auth setup **worked on smartphones** too. Remember to config **custom domains**!
 {{< /callout >}}
 
 ![Configuring firebase auth domains to work via cloudflare tunnels](/blog_img/entrepre/public-build/slidev-editor/fb-auth-domains.png)

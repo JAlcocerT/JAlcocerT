@@ -2,8 +2,8 @@
 title: "What is Typescript? Is it > JavaScript ?"
 date: 2025-08-14
 draft: false
-tags: ["SSG","Web","Yarnness x Knitting"]
-description: 'TS and how easy is for everyone to get a blog.'
+tags: ["SSG","Web","Yarnness x Knitting","Makefile"]
+description: 'TS and how easy is for everyone to get an Astro SSG blog.'
 url: 'whats-typescript'
 ---
 
@@ -80,11 +80,13 @@ The original comparison was designed to highlight the difference between a direc
 
 Thats about typescript.
 
+At least for now.
+
 Now: Do you need to be a WebDev to get a cool blog and write publically on the internet?
 
 Not really.
 
-Just get up to date front time to time.
+Just get up to date from time to time.
 
 Good recap of whats going on at JS: https://stateofjs.com/en-US
 
@@ -101,7 +103,7 @@ npm install
 npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
-> MIT | An elegant and minimal blogging/coding/programming theme for Astro
+> **MIT** | An elegant and minimal blogging/coding/programming theme for Astro
 
 You can ask now coding agents (Cursor, Windsurf, Copilot...) to guide you.
 
@@ -123,7 +125,52 @@ Deploy your new blog statically to your preferred solution:
 {{< /cards >}}
 
 
-You can also create a quick `make` command that will build and push your changes (manually) to CF, Firebase or any of those:
+You can also create a quick `make` command that will build and push your changes (manually) to CF, Firebase or any of those.
+
+See the example [here](#faq).
+
+
+If you are **using Windows**, install npde/npm fast: *thanks to [chocolatey](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/)*
+
+1. Open the Start Menu and search for cmd or PowerShell.
+2. Right-click on the search result.
+3. Select "Run as administrator".
+4. If a User Account Control (UAC) prompt appears, click "Yes".
+
+```sh
+choco upgrade all -y
+choco install chocolateygui
+
+choco install nodejs -y
+#node -v
+#npm -v
+```
+
+As seen with the [moto bloger post](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/): *you can try with firebase with your gmail account*
+
+```sh
+#npm install -g firebase-tools
+
+firebase login
+firebase init
+#firebase projects:list
+```
+
+> Later on, if you get a domain with Cloudflare, you can also use them for *free tier* static hosting.
+
+You might also need some git tricks:
+
+```sh
+choco install gh
+gh auth login
+```
+
+
+## FAQ
+
+Example **Makefile** for astro: https://github.com/JAlcocerT/Home-Lab/blob/main/ssg-astro/Makefile
+
+As someone told me: *nobody cares about your readme, just make so that your apps can start with one command*
 
 ```makefile
 # Default make goal
@@ -152,37 +199,4 @@ clean: ## Clean build artifacts and node_modules
 .PHONY: help
 help: ## Show this help
     @powershell -Command "Get-Content Makefile | Select-String '^[a-zA-Z0-9_.-]+:.*?##' | ForEach-Object { $$line = $$_.Line; if ($$line -match '^([a-zA-Z0-9_.-]+):.*?##\s*(.+)') { Write-Host ('{0,-20} {1}' -f $$matches[1], $$matches[2]) -ForegroundColor Cyan } }"
-```
-
-If you are using Windows, install npde/npm fast: *thanks to [chocolatey](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/)*
-
-1. Open the Start Menu and search for cmd or PowerShell.
-2. Right-click on the search result.
-3. Select "Run as administrator".
-4. If a User Account Control (UAC) prompt appears, click "Yes".
-
-```sh
-choco upgrade all -y
-choco install chocolateygui
-
-choco install nodejs -y
-#node -v
-#npm -v
-```
-
-As seen with the [moto bloger post](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/): *you can try with firebase with your gmail account*
-
-```sh
-#npm install -g firebase-tools
-
-firebase login
-firebase init
-#firebase projects:list
-```
-
-You might also need some git tricks:
-
-```sh
-choco install gh
-gh auth login
 ```

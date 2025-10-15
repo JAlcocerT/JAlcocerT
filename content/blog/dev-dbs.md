@@ -42,7 +42,7 @@ SQLite is generally excellent for **reads**, especially in scenarios where it's 
 
 ### Reads
 
-SQLite's read performance is exceptionally fast. 
+**SQLite's read** performance is **exceptionally fast**. 
 
 Because the database is stored in a local file, there is no network latency.
 
@@ -58,7 +58,11 @@ Multiple processes can read from the database at the same time without any issue
 
 ### Writes
 
-SQLite's main limitation is its write concurrency. By default, SQLite only allows **one write operation at any given moment**. While one process is writing, the entire database is locked, and all other write attempts will be delayed or will fail.
+SQLite's main limitation is its **write concurrency**.
+
+By default, SQLite only allows **one write operation at any given moment**. 
+
+While one process is writing, the entire database is locked, and all other write attempts will be delayed or will fail.
 
 However, this doesn't mean writes are slow. 
 
@@ -265,11 +269,11 @@ To list the dbs:
 \l
 ```
 
-* List databases: \l
+* List databases: `\l`
 * Use a DB: \c postgres
-* List schemas: \dn
-* List tables (current schema): \dt
-* List all tables: \dt *.*
+* List schemas: `\dn`
+* List tables (current schema): `\dt`
+* List all tables: `\dt *.*`
 
 ```sh
 docker compose -f ./devops/compose.local.yaml exec sdlc-postgres sh -lc 'PGPASSWORD="$SDLC_POSTGRES_DEFAULT_PASSWORD" psql -h localhost -U "$SDLC_POSTGRES_DEFAULT_USER" -d "$SDLC_POSTGRES_DEFAULT_DB" -c "CREATE SCHEMA IF NOT EXISTS app;"'
@@ -378,11 +382,11 @@ I like to bring mariaDB to any selfhosting stack:
 
 ## Conclusions
 
-For my home-lab projects where I need some DB connectivity I try to keep using [MariaDB](#mariadb).
+For my **home-lab projects** where I need some DB connectivity I try to keep using [MariaDB](#mariadb).
 
-For development, I like to keep things simple with sqlite at first.
+For development and tinkering with my own projects, I like to keep things simple: with sqlite at first.
 
-If the prohect needs something more, I would go for the PosgreSQL connected via container to my project.
+If the project needs something more, I would go for the PosgreSQL connected via container to my project or just figure out how to use PB as BaaS.
 
 ---
 
@@ -408,7 +412,7 @@ Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check t
 ext install DBCode.dbcode
 ```
 
-![alt text](/blog_img/DA/dbcode.png)
+![DBCode vscode extension](/blog_img/DA/dbcode.png)
 
 We also have SQLTools for vs code: https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools
 
@@ -472,7 +476,7 @@ These tools connect to your databases and provide a way to visualize data throug
 
 
 
-* **Liquibase** is an open-source database-independent tool for managing and tracking database schema changes.
+* **Liquibase** is an open-source database-independent tool for **managing and tracking database schema changes**.
 
 It treats database changes like application code, enabling version control and CI/CD pipelines for your database. 
 
@@ -500,7 +504,9 @@ Each changeset has a unique ID and author, ensuring that changes are never appli
 
 One of Liquibase's most powerful features is its ability to handle multiple database types. 
 
-You can write your changesets using a database-agnostic syntax (like XML or YAML), and Liquibase will translate them into the correct SQL for the target database (e.g., PostgreSQL, MySQL, Oracle, etc.). This allows a single changelog to work across different environments, even if they use different database systems.
+You can write your changesets using a database-agnostic syntax (like XML or YAML), and Liquibase will translate them into the correct SQL for the target database (e.g., PostgreSQL, MySQL, Oracle, etc.). 
+
+This allows a single changelog to work across different environments, even if they use different database systems.
 
 ---
 
@@ -520,7 +526,7 @@ By checking the `DATABASECHANGELOG` table, Liquibase knows exactly which changes
 ## Conclusions
 
 
-There is more on database history that I thought...
+There is more on **database history** that I thought...
 
 <!-- 
 https://www.youtube.com/watch?v=lvCZk3k4-34

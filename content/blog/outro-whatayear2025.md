@@ -168,7 +168,7 @@ Company of one!
 Because Im still in D&A and trying to blend with AI powered development for my personal projects.
 
 
-1. uv package manager ❤️ Makefiles >>> Readme's & pip! 
+1. [uv](https://jalcocert.github.io/JAlcocerT/fast-api/#proper-py-and-uv) package manager ❤️ Makefiles >>> Readme's & pip! 
 
 2. Pocketbase for BaaS, and a much better understanding of authentication/authorization.
 

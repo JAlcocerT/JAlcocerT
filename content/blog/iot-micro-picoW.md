@@ -13,15 +13,15 @@ url: 'pico-w'
 
 Two years ago I was tinkering with microcontrollers.
 
-But still I have not put together all my learnings in a *proper way*.
+But still, I have not put together all my learnings in a *proper way*.
 
-Actually... in any way :)
+Actually... in any readable way.
 
 So lets get the [PicoW](#raspberry-pi-pico-w) part sorted out.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/categories/iot-data-analytics/" title="RPi Related Blog" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="Jekyll Blog with posts about IoT" >}}
-  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW" title="RPi (PicoW Scripts) Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PicoW Scripts Python Scripts to tinker!" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW" title="RPi (PicoW Scripts) Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PicoW MicroController Scripts Python Scripts to tinker!" >}}
 {{< /cards >}}
 
 
@@ -698,13 +698,29 @@ This setup is efficient because it avoids traditional page reloads. Instead, the
 
 {{% /details %}}
 
-### HA x MQTT
+### HA is Great
+
+Dont trust me, see what people do:
+
+![alt text](/blog_img/iot/picoW/ha/ha-inspiration.png)
+
+![alt text](/blog_img/iot/picoW/ha/ha-inspiration2.png)
+
+Setup Home assistant with:
+
+```sh
+sudo docker compose up -d
+```
 
 * https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant
 * https://github.com/JAlcocerT/Home-Lab/blob/main/home-assistant/configuration.yaml
 
 > Connect to HA via `http://192.168.1.11:8123`
 
+
+### HA x MQTT
+
+How about connecting HA via MQTT to the PicoW so that we can receive the data into a cool dashboard?
 
 ![HA Create user and pwd](/blog_img/iot/picoW/ha/ha-1.png)
 
@@ -725,7 +741,7 @@ Here's the correct two-step process to get everything running:
     * Search for and select **"MQTT"**.
     * A pop-up will guide you to enter the broker's IP address (`192.168.1.11`), port (`1883`), and any credentials you have set.
 
-![alt text](/blog_img/iot/picoW/ha/ha-add-mqtt-integration.png)
+![Adding mqtt integration in HA](/blog_img/iot/picoW/ha/ha-add-mqtt-integration.png)
 
 2.  **Add the Sensor Configuration to YAML:**
     * After the broker is configured, you'll add the sensor block to your `configuration.yaml` file. The part you provided is exactly what's needed.

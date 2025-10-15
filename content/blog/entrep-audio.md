@@ -203,7 +203,7 @@ This is a sample quick setup with a lot of [auth to do's](https://github.com/JAl
 
 That's it: this gave me a **new cooler youtube workflow** (for the audio part).
 
-This simple **FastAPI recorder** and transcript web app already helps me.
+This simple **[FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api/) recorder** and transcript web app already helps me.
 
 > I got to see how FastAPI x Astro x sqlite works
 

@@ -611,7 +611,7 @@ Here's the fundamental workflow:
 
 1.  **Static Site Generation (SSG):** You use a static site generator like Astro, Hugo, Jekyll, Next.js (in static export mode), or any other SSG. This tool takes your source files (Markdown, templates, components, etc.) and compiles them into a directory of static assets, which are essentially pre-rendered HTML, CSS, and JavaScript files.
 
-2.  **FastAPI Backend:** You create a FastAPI application that serves as your API. Its job is to handle dynamic requests, such as:
+2.  **FastAPI Backend:** You create a [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api/) application that serves as your API. Its job is to handle dynamic requests, such as:
 
       * Fetching data from a database.
       * Handling user authentication.

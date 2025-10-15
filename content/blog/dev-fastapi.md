@@ -2,14 +2,14 @@
 title: "FastAPI 101"
 date: 2025-08-13
 draft: false
-tags: ["Dev","Python","FE vs BE","APIs","Swagger UI","Http Methods"]
-description: 'FastAPI and concepts for your Python Back-End journey'
+tags: ["Dev","Python uv","FE vs BE","APIs","Swagger UI","Http Methods","PostMan"]
+description: 'FastAPI and concepts for your Python Back-End journey.'
 url: 'fast-api'
 ---
 
 **TL;DR**
 
-Ive been working with [PB](https://jalcocert.github.io/JAlcocerT/pocketbase/), [DBs](https://jalcocert.github.io/JAlcocerT/databases-101/) lately, within a [FastAPI](#fastapi) Python BE and wanted to write about new concepts.
+Ive been working with [PB](https://jalcocert.github.io/JAlcocerT/pocketbase/), [DBs](https://jalcocert.github.io/JAlcocerT/databases-101/) lately, within **a [FastAPI](#fastapi) Python BackEnd** and wanted to write about new concepts.
 
 There are few [tools to understand APIs](#apis) as you work with them.
 
@@ -399,52 +399,60 @@ python3 --version   # should show 3.12.11
 
 ### APIs
 
-Whenever you will be playing around with APIs, you will heard about **PostMan**.
+Whenever you will be playing around with APIs, you will hear about **PostMan**.
 
-Postman (the API platform) has a free tier, which is open source in the sense that it's freely available for anyone to download and use for their API development and testing needs.
+Postman (the API platform) has a free tier, which is open source in the sense that it's **freely available** for anyone to download and use for their API development and testing needs.
 
 * https://www.postman.com/downloads/
 
-> However, **Postman as a whole is not entirely open source under a standard open-source license like Apache, MIT, or GPL.**
+However, **Postman as a whole is not entirely open source under a standard open-source license like Apache, MIT, or GPL.**
 
-Here's a breakdown:
+**Why would you need Postman?**
+
+Postman is an incredibly popular and powerful tool for API development, testing, and documentation.
+
+
+{{< details title="More about Why Postman? 👇" closed="true" >}}
+
 
 * **Postman Free Tier:** This is the most commonly used version and offers a wide range of features for individuals and small teams. It's free to download and use.
 * **Postman Core Functionality:** The core functionality for sending requests, inspecting responses, creating collections, and basic testing is available in the free tier.
 * **Postman Cloud and Collaboration Features:** Postman also offers paid plans that unlock more advanced collaboration features, larger team sizes, advanced monitoring, and more. These paid features are proprietary.
 * **Newman (Command-Line Collection Runner):** Newman, Postman's command-line Collection Runner, **is open source** and available under the Apache 2.0 license. This allows you to run and test your Postman Collections from the command line and integrate them into CI/CD pipelines.
 
-**Why would you need Postman?**
-
-Postman is an incredibly popular and powerful tool for API development, testing, and documentation. Here's why you might need it:
-
 **1. API Testing:**
-    * **Ease of Use:** Provides a user-friendly graphical interface to send HTTP requests (GET, POST, PUT, DELETE, etc.) without needing to write code.
-    * **Request Building:** Easily construct requests with headers, request bodies (JSON, XML, form-data, etc.), and parameters.
-    * **Response Inspection:** View and analyze API responses, including status codes, headers, and the response body (formatted for readability).
-    * **Assertions and Testing:** Write tests and assertions to automatically verify the correctness of API responses.
-    * **Environment Management:** Create and manage different environments (e.g., development, staging, production) with their own sets of variables.
+
+* **Ease of Use:** Provides a user-friendly graphical interface to send HTTP requests (GET, POST, PUT, DELETE, etc.) without needing to write code.
+* **Request Building:** Easily construct requests with headers, request bodies (JSON, XML, form-data, etc.), and parameters.
+* **Response Inspection:** View and analyze API responses, including status codes, headers, and the response body (formatted for readability).
+* **Assertions and Testing:** Write tests and assertions to automatically verify the correctness of API responses.
+* **Environment Management:** Create and manage different environments (e.g., development, staging, production) with their own sets of variables.
 
 **2. API Development:**
-    * **Prototyping:** Quickly prototype and explore APIs you are building.
-    * **Debugging:** Helps in debugging API issues by allowing you to inspect requests and responses.
-    * **Collaboration:** Share collections and environments with team members for collaborative API development.
+
+* **Prototyping:** Quickly prototype and explore APIs you are building.
+* **Debugging:** Helps in debugging API issues by allowing you to inspect requests and responses.
+* **Collaboration:** Share collections and environments with team members for collaborative API development.
 
 **3. API Documentation:**
-    * **Collection Documentation:** Postman allows you to document your APIs directly within collections, making it easier for others (or your future self) to understand how to use them.
-    * **Publishing Documentation:** You can publish interactive API documentation from your Postman Collections.
+
+* **Collection Documentation:** Postman allows you to document your APIs directly within collections, making it easier for others (or your future self) to understand how to use them.
+* **Publishing Documentation:** You can publish interactive API documentation from your Postman Collections.
 
 **4. API Exploration:**
-    * **Learning New APIs:** Easily explore and understand third-party APIs without needing to write code.
+
+* **Learning New APIs:** Easily explore and understand third-party APIs without needing to write code.
 
 **5. Workflow Automation:**
-    * **Collection Runner:** Automate the execution of API tests within collections.
-    * **Newman Integration:** Integrate API tests into your development and deployment pipelines.
 
-**In summary:**
+* **Collection Runner:** Automate the execution of API tests within collections.
+* **Newman Integration:** Integrate API tests into your development and deployment pipelines.
+
+
+
+{{< /details >}}
 
 Postman's free tier provides a robust set of tools for interacting with APIs and is widely used by developers for testing, development, and exploration. 
-
 
 
 #### OSS API Tools
@@ -455,40 +463,45 @@ These tools offer similar functionality for API testing and development but are 
 
 Here are some popular and actively maintained fully open-source alternatives to Postman:
 
-* **Insomnia (Kong/insomnia on GitHub):** This is a very popular and feature-rich open-source API client that supports REST, GraphQL, WebSockets, Server-Sent Events (SSE), and gRPC. It offers a clean and intuitive interface, collections, environments, code generation, and a plugin ecosystem. 
+1. **Insomnia (Kong/insomnia on GitHub):** This is a very popular and feature-rich open-source API client that supports REST, GraphQL, WebSockets, Server-Sent Events (SSE), and gRPC. 
 
-> It has a free tier with unlimited private projects and collaboration for one project, but the core is open source.
+It offers a clean and intuitive interface, collections, environments, code generation, and a plugin ecosystem. 
 
-* **Hoppscotch (hoppscotch/hoppscotch on GitHub):** Formerly known as Postwoman, Hoppscotch is a fast, lightweight, and beautifully designed open-source API development ecosystem. **It's available as a web application and a desktop app, supporting REST, GraphQL, WebSockets, and Server-Sent Events**. It emphasizes ease of use and real-time collaboration through workspaces (though the collaboration features might have some non-fully-open-source aspects in their cloud offering).
+> It has a free tier with unlimited private projects and collaboration for one project, but **the core is open source.**
 
-1. https://github.com/hoppscotch/hoppscotch
+2. **Hoppscotch (hoppscotch/hoppscotch on GitHub):** Formerly known as Postwoman, Hoppscotch is a fast, lightweight, and beautifully designed open-source API development ecosystem. **It's available as a web application and a desktop app, supporting REST, GraphQL, WebSockets, and Server-Sent Events**. 
 
-> MIT | Open source API development ecosystem - https://hoppscotch.io (open-source alternative to Postman, Insomnia)
+It emphasizes ease of use and real-time collaboration through workspaces (though the collaboration features might have some non-fully-open-source aspects in their cloud offering).
+
+* https://github.com/hoppscotch/hoppscotch
+
+> MIT | Open source API development ecosystem - https://hoppscotch.io *(open-source alternative to Postman, Insomnia)*
 
 {{< youtube "l2DWcWb9HlM" >}}
 
 <!-- https://www.youtube.com/watch?v=l2DWcWb9HlM -->
 
-```sh
-docker run -d --name hoppscotch -p 3000:3000 --restart=unless-stopped hoppscotch/hoppscotch:latest
-```
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/hoppscotch/" title="Hoppscotch | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ```sh
 wget https://github.com/hoppscotch/releases/releases/latest/download/Hoppscotch_linux_x64.deb
 sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
 ```
 
-2. **Bruno (usebruno/bruno on GitHub):** Bruno is a relatively new but promising open-source API client that aims to be a direct alternative to Postman. It focuses on a local-first approach, storing your collections directly in a file system (using a simple markup language called Bru) and emphasizing privacy. It supports REST and GraphQL and has a clean, developer-centric interface. It also plans to integrate with Git for collaboration.
+3. **Bruno (usebruno/bruno on GitHub):** Bruno is a relatively new but promising open-source API client that aims to be a direct alternative to Postman. It focuses on a local-first approach, storing your collections directly in a file system (using a simple markup language called Bru) and emphasizing privacy. It supports REST and GraphQL and has a clean, developer-centric interface. It also plans to integrate with Git for collaboration.
 
-3. **HTTPie (httpie/httpie on GitHub):** This is a command-line HTTP client that is known for its user-friendly syntax. While it's a CLI tool and doesn't have a GUI like Postman, it's excellent for quick API testing and automation within scripts. It's fully open source and widely used. There's also a desktop app in development.
+4. **HTTPie (httpie/httpie on GitHub):** This is a command-line HTTP client that is known for its user-friendly syntax. While it's a CLI tool and doesn't have a GUI like Postman, it's excellent for quick API testing and automation within scripts. It's fully open source and widely used. There's also a desktop app in development.
 
-4. **Restfox (flawiddsouza/Restfox on GitHub):** Restfox is a lightweight and fast open-source REST API client available as a desktop application for Windows, macOS, and Linux. It offers a clean interface, collections, history, and basic authentication.
+5. **Restfox (flawiddsouza/Restfox on GitHub):** Restfox is a lightweight and fast open-source REST API client available as a desktop application for Windows, macOS, and Linux. It offers a clean interface, collections, history, and basic authentication.
 
-5. **Firecamp (firecamp-dev/firecamp on GitHub):** Firecamp is an open-source API development platform with a focus on a developer-centric UI. It supports various protocols like REST, GraphQL, and WebSockets and aims to streamline the API development workflow.
+6. **Firecamp (firecamp-dev/firecamp on GitHub):** Firecamp is an open-source API development platform with a focus on a developer-centric UI. It supports various protocols like REST, GraphQL, and WebSockets and aims to streamline the API development workflow.
 
-6. **Yaade (apidoc7/yaade on GitHub):** Yaade is an open-source, self-hosted, collaborative API development environment. It aims to provide a complete platform for designing, developing, and testing APIs.
+7. **Yaade (apidoc7/yaade on GitHub):** Yaade is an open-source, self-hosted, collaborative API development environment. It aims to provide a complete platform for designing, developing, and testing APIs.
 
-7. Reqable - Reqable implements the core features of traffic analysis and API testing, and deeply integrates them. 
+8. Reqable - Reqable implements the core features of traffic analysis and API testing, and deeply integrates them. 
 
 One app is worth multiple apps: Advanced API Debugging Proxy and REST Client
 
@@ -500,19 +513,22 @@ flatpak install flathub com.reqable.Reqable
 
 ### FastAPI vs TS
 
-You're asking about the difference between **FastAPI** endpoints and **api.ts** endpoints.
+Just in case you wonder about the difference between **FastAPI** endpoints and **api.ts** endpoints.
 
 While they both deal with creating APIs, they are fundamentally different because they operate in different programming languages and contexts.
 
 * **FastAPI** is a **Python web framework** for building APIs.
 
-* The term "**api.ts**" isn't a single, specific framework like FastAPI. 
+* You might be involved in some project with `api.ts` files. 
   * It's a file name (`api.ts`) commonly used in projects that use **TypeScript** to define API endpoints, often within a larger framework or system.
-
 
 **🐍 FastAPI Endpoints**
 
-FastAPI is a complete web framework in Python. When you create an endpoint, you're building the **server-side** logic that handles HTTP requests. The framework handles many tasks for you automatically, like:
+FastAPI is a complete web framework in Python.
+
+When you create an endpoint, you're building the **server-side** logic that handles HTTP requests. 
+
+The framework handles many tasks for you automatically, like:
 
 * **Routing**: Mapping a URL path (e.g., `/items/{item_id}`) to a specific Python function.
 * **Data Validation**: Using Python's type hints and the Pydantic library, FastAPI automatically validates incoming request data (from URL paths, query parameters, or the request body). If the data doesn't match the expected type, it returns a clear error.
@@ -524,11 +540,21 @@ FastAPI endpoints are the **producers** of the API. They are the backend functio
 
 **📝 `api.ts` Endpoints**
 
-The file name `api.ts` indicates a TS file. In this context, it typically serves one of two purposes:
+The file name `api.ts` indicates a TS file. 
 
-1.  **Defining API routes in a TS-based backend framework**: Frameworks like **Next.js** or **Directus** use `api.ts` files to define API routes. In this case, it's doing a similar job to a FastAPI endpoint—it's the server-side code that handles requests. The key difference is the language and the ecosystem it's part of. These frameworks leverage TS's static typing to provide type safety for your API logic.
+In this context, it typically serves one of two purposes:
 
-2.  **Defining the API client on the frontend**: In many frontend projects, `api.ts` is a file that defines the structure and functions for making API calls to a separate backend. This file acts as a **consumer** of the API, containing functions like `getUsers()` or `createPost()`, often with type definitions to ensure the data received from the backend is correctly typed. This is a common practice for maintaining type safety across the entire application stack.
+1.  **Defining API routes in a TS-based backend framework**: Frameworks like **Next.js** or **Directus** use `api.ts` files to define API routes. In this case, it's doing a similar job to a FastAPI endpoint—it's the server-side code that handles requests. 
+
+The key difference is the language and the ecosystem it's part of. 
+
+These frameworks leverage TS's static typing to provide type safety for your API logic.
+
+2.  **Defining the API client on the frontend**: In many frontend projects, `api.ts` is a file that defines the structure and functions for making API calls to a separate backend. 
+
+This file acts as a **consumer** of the API, containing functions like `getUsers()` or `createPost()`, often with type definitions to ensure the data received from the backend is correctly typed. 
+
+This is a common practice for maintaining type safety across the entire application stack.
 
 This distinction is crucial: FastAPI is a backend framework, while a file named `api.ts` could be a backend implementation, but is often a frontend client.
 
@@ -565,7 +591,6 @@ In an SSR framework like **Next.js** or **Nuxt.js**, an **`api.ts`** file can ex
 > This part is running on the server, not the client, and serves a similar purpose to a **FastAPI** endpoint.
 
 So, while `api.ts` can be used in an SSR context, it's not exclusive to it, and its function depends on whether it's part of the client-side code or a server-side API route.
-
 
 Yes, a **CSR (Client-Side Rendered)** application can absolutely make calls using an `api.ts` file. 
 

@@ -128,7 +128,7 @@ For your use case (Astro theme with Git-based content management), I'd lean towa
 2. **Easier maintenance** - Single codebase to manage
 3. **Faster development** - No CORS setup, unified development experience
 
-> If you're more comfortable with Python OR need maximum flexibility, **FastAPI is equally valid** and will deliver the same great user experience with Toast UI Editor.
+> If you're more comfortable with Python OR need maximum flexibility, **[FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api/) is equally valid** and will deliver the same great user experience with Toast UI Editor.
 
 ### Git and Builds
 

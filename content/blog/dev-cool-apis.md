@@ -121,12 +121,20 @@ It’s frequently described as “Perplexity-as-a-service” for customizable, f
 
 ## Data APIs
 
+You can get data 
+
+In case you want to expose your own API endpoints with code, for example with [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api) or with Pocketbase BaaS
+
 ### Weather
 
 
 ## Checking APIs
 
-#### Hoppscotch
+As we saw during the [FastAPI post, here](https://jalcocert.github.io/JAlcocerT/fast-api/#apis), there are few tools to check/test/interact with APIs.
+
+Among all of them, is worth to get to know how to use Hoppscoth.
+
+#### How to use Hoppscotch
 
 When playing/creating APis...
 

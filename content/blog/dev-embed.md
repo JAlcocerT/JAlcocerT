@@ -339,7 +339,7 @@ In case you like  J**A**MStack, you will want to create easily APIs from your da
 
 You could go for some code solutions, like using [FastAPI](https://jalcocert.github.io/JAlcocerT/audio-recap/)...
 
-FastAPI is a modern, high-performance Python web framework for building APIs quickly and efficiently. Unlike purely no-code solutions, FastAPI requires coding but offers great flexibility and control.
+[FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api/) is a modern, high-performance Python web framework for building APIs quickly and efficiently. Unlike purely no-code solutions, FastAPI requires coding but offers great flexibility and control.
 
 - **Custom API development:** FastAPI allows developers to create fully customized REST APIs tailored exactly to their use case, including complex business logic, validation, security, and asynchronous processing.
 
