@@ -346,6 +346,10 @@ See also the AdventureLog project:
 
 It has very interestin [use cases](https://adventurelog.app/docs/usage/usage.html), even integration with Immich
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Selfhosting Immich" image="/blog_img/selfh/Photo/immich-map.png" subtitle="Sring Y25 Post" >}}
+{{< /cards >}}
+
 
 Or the
 

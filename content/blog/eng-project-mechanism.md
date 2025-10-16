@@ -65,7 +65,7 @@ ani.save('../animations/engine.gif', writer='pillow', fps=30)
 ```
 
 <!-- https://youtube.com/shorts/2xMOxiRz6F4 -->
-{{< youtube "2xMOxiRz6F4-g" >}}
+{{< youtube "2xMOxiRz6F4" >}}
 
 
 

@@ -307,7 +307,7 @@ docker image prune -a
 
 The [x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/) when in idle is ~10W:
 
-![x13 consumption](/blog_img/hardware/x13-consumption.jpg)
+![x13 consumption in W](/blog_img/hardware/x13-consumption.jpg)
 
 The Pi4 (4GB), is around ~8C above air temperature:
 

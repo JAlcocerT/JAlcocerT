@@ -34,7 +34,7 @@ CSS Link
 2. [Charts](#charts)
 
 * MermaidJS
-* ChartJS, like the ones used with hugo [here](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/)
+* [ChartJS](https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/#about-chartjs), like the ones used with hugo [here](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/)
 * ApexCharts - Like this cool [timeline chart](https://apexcharts.com/javascript-chart-demos/timeline-charts/distributed/)
 
 3. [OG and SEO](#astro-opengraph-and-seo-metadata)

@@ -2,7 +2,7 @@
 title: "Web Apps with Flask and cool ChartJS"
 date: 2025-04-05T05:20:21+01:00
 draft: false
-tags: ["Dev","Python","WebSockets","ChartJS","Temperature","Three Bodies"]
+tags: ["Dev","Python","WebSockets","ChartJS","Temperature","Three Bodies","Real Time"]
 description: 'Flask WebApps, IoT Sensors, ChartJS and Websockets. Deployed as container to ghcr.'
 url: 'web-apps-with-flask'
 ---
@@ -166,7 +166,7 @@ Use routes to structure your web application and define how different URLs are h
 The initial app is using Flask in a really cool way with **ChartsJS**, like [ChartJS HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/#charts-in-hugo)!
 {{< /callout >}}
 
-See how it renders within the HUGO post:
+See how **ChartJS renders here** within the HUGO post thanks to [this shortcode](https://github.com/JAlcocerT/JAlcocerT/blob/main/themes/hextra/layouts/shortcodes/chart.html):
 
 {{< chart 100 200 >}}
 {
@@ -456,11 +456,6 @@ If you are pushing the **container to GHCR**, remember to set your PAT:
 
 ![alt text](/blog_img/dev/gha-notoken.png)
 
-### BME280
-
-This is the original feature from KarolPWr original version!
-
-
 ### x13
 
 For the x13 laptop, I needed to use:
@@ -698,7 +693,7 @@ You can see how it works on [this video](https://youtu.be/niEcLnabdpo)
 
 A trick to debug is with the browser console:
 
-![alt text](/blog_img/iot/flask/flask-ws-console.png)
+![WebSocket console with Flask web app](/blog_img/iot/flask/flask-ws-console.png)
 
 
 {{< callout type="info" >}}
@@ -710,6 +705,8 @@ Remember to install any necessary libraries accordingly (like `flask-sse` or `Fl
 ## Conclusions
 
 Starting from the awsome project: https://github.com/KarolPWr/flask_sensor_display
+
+> With the BME280 sensor is the original feature from KarolPWr original version!
 
 <!-- https://www.youtube.com/watch?v=fxbwHl-3WN0 -->
 

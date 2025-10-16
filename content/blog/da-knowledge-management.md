@@ -195,6 +195,21 @@ I know what you are looking for: **DATABASE-LESS KNOWLEDGE BASE**
 {{< /cards >}}
 
 
+See also:
+
+* https://github.com/notable/notable
+
+> The Markdown-based note-taking app that doesn't suck.
+
+* https://github.com/Xafloc/NoteFlow
+
+> A lightweight note-taking application that lets your thoughts flow naturally while keeping your tasks in check. NoteFlow transforms a single Markdown file into a modern web interface where notes and tasks coexist seamlessly.
+
+* https://github.com/davistdaniel/kurup
+
+> A simple, markdown-based note-taking application written in python and built with NiceGUI.
+
+
 ### Quick SelfHosting Resources for Notes
 
 {{< cards cols="1" >}}

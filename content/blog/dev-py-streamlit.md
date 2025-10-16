@@ -68,6 +68,8 @@ Thanks to: https://www.youtube.com/watch?v=UnjaSkrfWOs
 
 ### PyGWalker
 
+A great way to just let users drag and drop to visualize the data inside streamlit
+
 * https://docs.kanaries.net/pygwalker/use-pygwalker-with-streamlit
 
 ---

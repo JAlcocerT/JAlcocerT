@@ -3,8 +3,8 @@ title: "Websites with SSG + CMS - The missing piece"
 date: 2025-05-18T22:20:21+01:00
 draft: false
 description: "UI/X for customizing SSGs. Keystatic and more"
+tags: ["Web","CMS","Entrepreneur","FrontMatter CMS","KeyStaticCMS"]
 url: 'cms-for-static-websites'
-tags: ["Web","CMS","Entrepreneur","FrontMatter","KeyStaticCMS"]
 ---
 
 Lately, I have added some [upgrades](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) (via [telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot)), so that whenever a customer sends new photos, they are synced to its photo centered repo.
@@ -63,6 +63,7 @@ Not sure if its good or bad news, yet there are a ton of CMS and I just needed o
 As you can imagine, there are more than a few Content Management Systems (CMS) available:
 
 0. [FrontMatterCMS](#frontmatter-cms)
+
 1. **[KEYSTATICCMS](#keystatic-cms)**
 
 2. [Tina](https://tina.io/)
@@ -205,18 +206,16 @@ Now, you will see that frontmatter recognizes all your posts
 Frontmatter provides interesting **SEO recommendations**
 
 * title up to 60 chars
-* slug up to75 chars
+* slug up to 75 chars
 * description up to 160 chars
 * Article length up to 1760 words
 * Keywords, just 0,75-1,5% frecuency
 
 ![Front Matter CMS](/blog_img/dev/frontmatter-cms.png)
 
-Yes, that's correct! For Front Matter CMS, you just need to:
+For Front Matter CMS, you just need to: Install the Front Matter CMS extension in VS Code
 
-Install the Front Matter CMS extension in VS Code
-Open your project in VS Code
-Click the Front Matter icon in the sidebar (or press Alt+F)
+Open your project in VS Code: Click the Front Matter icon in the sidebar (or press `Alt+F`)
 
 > There will be a `frontmatter.json` file at the repository 
 
@@ -647,17 +646,10 @@ There is just one way to know: **testing the market**
 
 With something tangible ofc, at least a PMF via [formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)! 
 
-
 ---
 
 ## FAQ
 
-
-### What are Static Site Generators?
-
-* https://github.com/plentico/plenti
-
-> Apache v2 | Static Site Generator with Go backend and Svelte frontend 
 
 ### What are NginX Static Routes?
 

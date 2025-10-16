@@ -129,6 +129,8 @@ cd ./astro-news && npm run build
 
 ![alt text](/blog_img/web/astro/astro-cf-build.png)
 
+See how beautiful can Astro news get:
+
 ![Astro-News Theme - beyond a journey result](/blog_img/web/astro/astro-news-theme-beyondajourney.png)
 
 * https://web-check.xyz/check/https%3A%2F%2Fbeyondajourney.pages.dev%2F

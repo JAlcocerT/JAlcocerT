@@ -72,7 +72,7 @@ See these container **config files**:
 Thanks to [Noted.lol to cover Little Link](https://noted.lol/littlelink/)
 
 {{< callout type="info" >}}
-See the config file [here](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/LittleLink_docker-compose.yml)
+See the LittleLink config file [here](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/LittleLink_docker-compose.yml)
 {{< /callout >}}
 
 2. [**LinkStack**](https://linkstack.org/docker/) - Selfhostable with [this docker config](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/LinkStack_docker-compose.yml). I covered this one [here already](https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/).

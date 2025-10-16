@@ -144,25 +144,9 @@ curl -fsSL https://cdn.coollabs.io/coolify/install.sh | sudo bash
 
 > MIT | A docker-powered PaaS that helps you build and manage the lifecycle of applications
 
-```yml
-services:
-  dokku:
-    image: dokku/dokku:0.35.15
-    container_name: dokku
-    network_mode: bridge
-    ports:
-      - "3022:22"
-      - "8060:80"
-      - "8443:443"
-    volumes:
-      - "/var/lib/dokku:/mnt/dokku"
-      - "/var/run/docker.sock:/var/run/docker.sock"
-    environment:
-      DOKKU_HOSTNAME: dokku.me
-      DOKKU_HOST_ROOT: /var/lib/dokku/home/dokku
-      DOKKU_LIB_HOST_ROOT: /var/lib/dokku/var/lib/dokku
-    restart: unless-stopped
-```
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/dokku" title="Dokku | HomeLab Docker Config 🐳 ↗"  >}}
+{{< /cards >}}
 
 ```sh
 docker exec -it dokku bash

@@ -8,6 +8,27 @@ summary: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+#### PiHole
+
+This service has been with my [for a while](https://jalcocert.github.io/RPi/posts/selfh-internet-better/).
+
+But now *PiHole is reloaded* with its **v6**.
+
+> Replacing any v5 image (2024.07.0 and earlier) with a v6 image will result in updated configuration files.
+
+> > These changes are irreversible.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/DNS" title="DNS Config Files 🐳 ↗"  >}}
+  {{< card link="https://github.com/JamesTurland/JimsGarage/blob/main/Piholev6/docker-compose.yaml" title="PiHole v6 Config File 🐳 ↗"  >}}  
+{{< /cards >}}
+
+<!-- https://www.youtube.com/watch?v=mnry95ay0Bk -->
+
+{{< youtube "mnry95ay0Bk" >}}
+
+> If you are looking for other Selfhosted DNS, see: GoAdblock
+
 https://blog.foxxmd.dev/posts/redundant-lan-dns/
 
 

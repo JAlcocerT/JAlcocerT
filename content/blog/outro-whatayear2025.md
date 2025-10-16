@@ -7,6 +7,42 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+### Other Static CMS
+
+### What are Static Site Generators?
+
+* https://github.com/plentico/plenti
+
+> Apache v2 | **Static Site Generator** with Go backend and Svelte frontend 
+
+Build-Time Render Engine (aka Static Site Generator) with Go backend and Svelte frontend
+Ships with a fully integrated Git-CMS that you can host for cheap/free right with your static site
+
+Install [plenti](https://snapcraft.io/plenti):
+
+```sh
+snap install plenti
+```
+
+As the author mentions: Plenti = Hugo + NetlifyCMS 
+<!-- https://www.youtube.com/watch?v=T4b55nfZiIw -->
+{{< youtube "T4b55nfZiIw" >}}
+
+https://www.youtube.com/watch?v=Gr3KTOnsWEM&list=PLbWvcwWtuDm0tIrvD_xHvUXHBftbHDy5T
+
+This is a very cool proposal for landing pages see https://plenti.co/themes !
+
+1. https://github.com/keystonejs/keystone
+
+* https://keystonejs.com/docs
+
+Keystone helps you build faster and scale further than any other CMS or App Framework. Describe your schema, and get a powerful GraphQL API & beautiful Management UI for your content and data.
+
+> MIT | The superpowered headless CMS for Node.js — built with GraphQL and React 
+
+### Building Webs with AI
+
+See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/leaderboard
 
 * https://github.com/atuinsh/atuin
 
@@ -749,6 +785,8 @@ The TTS capabilities from these were also useful:
 
 2. [ChartJS](https://www.chartjs.org/docs/latest/charts/line.html) Powered Shorts
 
+https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/#about-chartjs
+
 I also got to know about: https://echarts.apache.org/en/index.html
 
 3. Python powered YT Shorts - `@UnfoldingData` (PyFinance related via Matplotlib Animations)
@@ -967,11 +1005,20 @@ But it does not bring the for all public admin UI.
 
 ![FrontMatter Static CMS](/blog_img/web/frontmatter/frontmatter-project.png)
 
-Followed very closely by [Keystatic](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms)
+Followed very closely by [Keystatic](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms).
+
+But I needed [this first run](https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/), then the second one [here](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms).
+
+The themes [landingpad](https://github.com/JAlcocerT/landingpad) and mizar helped a lot.
 
 When you deploy the static site, the `whateverdomain.com/keystatic` path will still be there:
 
 ![KeyStatic statically deployed UI](/blog_img/web/staticcms/keystatic-ssg-deployed.png)
+
+https://github.com/JAlcocerT/landingpad
+https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
+![KeyStatic CMS with LandingPad Theme](/blog_img/web/staticcms/landingpad-vps.png)
+
 
 > But you wont be able to make any changes, as the server (Typescrypt API) is NOT running.
 

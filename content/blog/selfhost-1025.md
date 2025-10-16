@@ -66,6 +66,14 @@ Would SCP or FTP be faster?
 
 > Immich is cool and have some projects around https://github.com/Nasogaa/immich-drop
 
+https://github.com/JAlcocerT/Home-Lab/tree/main/immich
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Selfhosting Immich" image="/blog_img/selfh/Photo/immich-map.png" subtitle="Sring Y25 Post" >}}
+{{< /cards >}}
+
+https://jalcocert.github.io/JAlcocerT/photo-management-tools/#pigallery
+![PiGallery Map Feature ](/blog_img/selfh/Photo/PiGallery-MAP.png)
+
 
 
 ### Syncthing x SFTPGo
@@ -108,6 +116,10 @@ https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p
 ---
 
 ## Conclusions
+
+You can start with a Pi SBC and a SSD drive:
+
+![Pi Home Server](/blog_img/hardware/pi-homeserver.jpg)
 
 
 https://www.youtube.com/watch?v=OOxzP1JvfQk

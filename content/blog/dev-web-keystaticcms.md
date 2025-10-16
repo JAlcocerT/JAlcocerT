@@ -2,10 +2,22 @@
 title: "Having a look to KeyStatic CMS. Markdown Powering Websites."
 date: 2025-03-22T20:20:21+01:00
 draft: false
-tags: ["Dev","Web"]
+tags: ["Dev","Web","LandingPad","Astro x KeyStaticCMS"]
 description: 'KeyStatic. An easier website to manage for a moto blogger. Now with a cool CMS powered user interface.'
 url: 'understanding-keystatic-cms'
 ---
+
+**Tl;DR**
+
+Ive tried the theme https://github.com/Boston343/landingpad
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/landingpad" title="Landing Pad Forked Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of landingpad Astro Theme + Github Pages + KeyStaticCMS" >}}
+{{< /cards >}}
+
+To get keystatic working with github pages.
+
+**Intro**
 
 In this post, we will see:
 
@@ -134,12 +146,14 @@ Then I went to github general settings, developer settings:
 
 ![KeyStatic CMS with LandingPad Theme](/blog_img/web/staticcms/install-keystatic-app-github.png)
 
-Now, you wont see any error like: *It looks like you just tried to create a GitHub App for Keystatic but there is already a GitHub App configured for Keystatic.You may be here because you started creating a GitHub App but then started the process again elsewhere and completed it there. You should likely go back to Keystatic and sign in with GitHub to continue.*
+Now, you wont see any error like: 
 
-And whatever you edit with the theme via `localhost:4321/admin` will be automatically pushed to main.
+*It looks like you just tried to create a GitHub App for Keystatic but there is already a GitHub App configured for Keystatic.You may be here because you started creating a GitHub App but then started the process again elsewhere and completed it there. You should likely go back to Keystatic and sign in with GitHub to continue.*
+
+And whatever you edit with the theme via `localhost:4321/admin` will be automatically pushed to the main branch of you repository.
 
 {{< callout type="warning" >}}
-When GH Mode is active, the changes wont be happening in the local files, you will need to do `git pull`
+**When GH Mode is active**, the changes wont be happening in the local files, you will need to do `git pull` to bring them
 {{< /callout >}}
 
 ### Github Mode with Github Pages
@@ -166,7 +180,7 @@ Then, you just have to add the well known `/.github/workflows/pages.yml`
 > And dont forget to activate GH Pages within the **github project UI**
 
 
-You will notice, that when you use npm run dev and what it gets generated to GH Pages is the original theme content, instead of whats being edited.
+You will notice, that when you use `npm run dev` and what it gets generated to GH Pages is the original theme content, instead of whats being edited.
 
 Whats the trick?
 
@@ -203,7 +217,7 @@ const bioCollection = defineCollection({
 });
 ```
 
-dont forget to add proper `astro.config.mjs`
+Dont forget to add proper `astro.config.mjs`
 
 ```js
 // https://astro.build/config
@@ -213,6 +227,8 @@ export default defineConfig({
 		imageCDN: false,
 	}),
 ```
+
+And make sure to change the static path to use the base url, as we are deploying to github pages we need that `/landingpad/` everywhere.
 
 <!-- https://youtu.be/BAnfePGzkbg -->
 
@@ -278,7 +294,7 @@ Here are some potential strategies:
 
 ## Conclusion
 
-This is how it looks, hosted on github pages: https://jalcocert.github.io/landingpad/
+This is how the LandingPag Theme looks, **hosted statically on github pages**: https://jalcocert.github.io/landingpad/
 
 ### KeyStatic + GH Pages + a Server
 
@@ -318,7 +334,6 @@ You will need to add to `astro.config.mjs` the following so that you can see the
 ```
 
 And now you will be able to access it via the server IP:
-
 
 ![KeyStatic CMS with LandingPad Theme](/blog_img/web/staticcms/landingpad-vps.png)
 
@@ -481,6 +496,12 @@ COPY . .
 
 {{< /details >}}
 
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG Hosting | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 Now, what about **https**?
 
 Recently, I made a post on how to setup **NGINX** on a VPS.
@@ -533,11 +554,11 @@ But, if you go to keystatic path...you need to authenticate?
 
 Not really, just copy the `.env` that you have locally and that it has not been synced to github for security reasons.
 
-##### Adding Auth
+What about Adding Auth?
 
 So now, anyone can just go and edit the website?
 
-> Recently I got to know about **TinyAuth**...
+Recently I got to know about **TinyAuth**... so you could place that in front of `/admin`
 
 ### KeyStatic from Scratch
 
@@ -554,33 +575,11 @@ npm create @keystatic@latest
 ## FAQ
 
 
-### Other Static CMS
-
-1. https://github.com/keystonejs/keystone
-
-* https://keystonejs.com/docs
-
-### Building Webs with AI
-
-See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/leaderboard
-
 ### Markdown vs MDX vs Markdoc
 
 **Some markdown tools, to make cooler websites** 
 
 Recently I read this [xda post on why markdown](https://www.xda-developers.com/reasons-use-markdown-documentation-notetaking/) to power up your notes.
-
-* https://github.com/notable/notable
-
-> The Markdown-based note-taking app that doesn't suck.
-
-* https://github.com/Xafloc/NoteFlow
-
-> A lightweight note-taking application that lets your thoughts flow naturally while keeping your tasks in check. NoteFlow transforms a single Markdown file into a modern web interface where notes and tasks coexist seamlessly.
-
-* https://github.com/davistdaniel/kurup
-
-> A simple, markdown-based note-taking application written in python and built with NiceGUI.
  
 
 #### Markdown
@@ -630,7 +629,6 @@ It's designed for building custom documentation sites and content experiences wi
 
 **To summarize, Markdoc is a comprehensive framework built on Markdown that allows for highly customizable and structured content creation through the definition of custom tags and a focus on configuration and validation.**
 
-Here's a table summarizing the key differences:
 
 | Feature         | Markdown                                  | MDX                                       | Markdoc                                         |
 | --------------- | ----------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
@@ -645,8 +643,6 @@ Here's a table summarizing the key differences:
 ### What are markdown directives
 
 I got to know these thanks to [fuwari theme and its about section](https://github.com/saicaca/fuwari).
-
-Based on the text you provided, here's an explanation of what a Markdown directive is in the context of your Astro project:
 
 A **Markdown directive** is a custom extension to the standard Markdown syntax that allows you to embed dynamic or interactive components directly within your Markdown content.
 
@@ -666,7 +662,9 @@ Here's a breakdown of its characteristics and how it's used in your project:
     * **`parseDirectiveNode`:** This appears to be a custom parser that further processes the directive node, likely transforming it into a format that `rehype` (which handles HTML) can understand and map to components.
     * **`rehypeComponents`:** This `rehype` plugin is the crucial link. It takes the processed directive nodes and maps them to actual JavaScript/Astro components. In your example, it maps the "github" directive to the `GithubCardComponent`.
 
-5.  **Component Rendering:** Once mapped, the associated component (`GithubCardComponent` in your case) is responsible for generating the actual HTML, CSS, and JavaScript needed to display the desired content (the GitHub repository card). This allows for complex functionality (like fetching data from an API) to be encapsulated within a component rather than being directly within the Markdown.
+5.  **Component Rendering:** Once mapped, the associated component (`GithubCardComponent` in your case) is responsible for generating the actual HTML, CSS, and JavaScript needed to display the desired content (the GitHub repository card). 
+
+This allows for complex functionality (like fetching data from an API) to be encapsulated within a component rather than being directly within the Markdown.
 
 **In simpler terms:**
 

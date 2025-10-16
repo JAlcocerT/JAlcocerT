@@ -84,11 +84,19 @@ Also for the services:
 
 ![DokPloy with RStocks and https](/blog_img/selfh/PaaS/dokploy-rstocks-service-https.png)
 
-3. Dokploy brings a monitoring section to see how much each app consumes
+3. Dokploy brings a **monitoring section** to see how much each app consumes
 
-![alt text](/blog_img/selfh/PaaS/dokploy-monitoring-multichat.png)
+![Dokploy PaaS deploying Streamlit Multichat Repository](/blog_img/selfh/PaaS/dokploy-monitoring-multichat.png)
 
 *See how multichat needs <10mb of RAM*
+
+You could also:
+
+```sh
+#htop
+sudo docker stats multichat
+#sudo docker prune
+```
 
 4. You can invite and **manage what other users/members can do** with your Dokploy server
 

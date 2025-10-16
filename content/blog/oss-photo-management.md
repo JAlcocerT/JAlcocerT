@@ -2,7 +2,7 @@
 title: "Tools for better Photo Management and BackUps"
 date: 2025-03-08
 draft: false
-tags: ["OSS","Homelab","Upscayl","Immich"]
+tags: ["OSS","Homelab","Upscayl","Immich","PiGallery","PhotoView","Piwigo"]
 description: 'Testing tools for Photo Management and better backup techniques.'
 url: 'photo-management-tools'
 ---
@@ -110,9 +110,9 @@ sudo docker stats pigallery2 #~190mb for 66GB data
 
 ![PiGalleri2 UI](/blog_img/selfh/Photo/PiGallery-PhotoInfo.png)
 
-* The MAP feature is lovely...
+* The PiGallery's MAP feature is lovely...
 
-![PiGallery Map](/blog_img/selfh/Photo/PiGallery-MAP.png)
+![PiGallery Map Feature ](/blog_img/selfh/Photo/PiGallery-MAP.png)
 
 > Pretty cool if you have tinkered with [video telemetry](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9)
 
@@ -142,7 +142,7 @@ See PiwiGo config file [here 🐳](https://github.com/JAlcocerT/Docker/blob/main
 
 Make this match your docker config:
 
-![alt text](/blog_img/selfh/Photo/Piwigo-setup.png)
+![Piwigo UI](/blog_img/selfh/Photo/Piwigo-setup.png)
 
 And we are ready:
 

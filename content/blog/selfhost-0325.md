@@ -223,7 +223,7 @@ It provides a very *similar* experience to Google Photos.
 
 4. Also with Map Feature!
 
-![Immich Map](/blog_img/selfh/Photo/immich-map.png)
+![Immich Map Feature](/blog_img/selfh/Photo/immich-map.png)
 
 ![Immich UI](/blog_img/selfh/Photo/immich.png)
 
@@ -290,27 +290,6 @@ See how the tool looks live: https://it-tools.tech/
 -->
 
 
-#### PiHole
-
-This service has been with my [for a while](https://jalcocert.github.io/RPi/posts/selfh-internet-better/).
-
-But now *PiHole is reloaded* with its **v6**.
-
-> Replacing any v5 image (2024.07.0 and earlier) with a v6 image will result in updated configuration files.
-
-> > These changes are irreversible.
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/DNS" title="DNS Config Files 🐳 ↗"  >}}
-  {{< card link="https://github.com/JamesTurland/JimsGarage/blob/main/Piholev6/docker-compose.yaml" title="PiHole v6 Config File 🐳 ↗"  >}}  
-{{< /cards >}}
-
-<!-- https://www.youtube.com/watch?v=mnry95ay0Bk -->
-
-{{< youtube "mnry95ay0Bk" >}}
-
-> If you are looking for other Selfhosted DNS, see: GoAdblock
-
 
 #### NextCloud
 
@@ -339,7 +318,8 @@ You can install it on mobile devices via [F-Droid or also Obtanium](https://jalc
 Or...use **SFTP-Go** as WebDav together with Syncthing: 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go" title="SFTPGO Setup" image="/blog_img/selfh/media/sftpgo-webadmin.png" subtitle="SFTP-Go Setup" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go" title="SFTPGO Setup" image="/blog_img/selfh/media/sftpgo-webadmin.png" subtitle="SFTP-Go Setup Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/sftp-go" title="STFP-Go | HomeLab Config 🐳 ↗"  >}}
 {{< /cards >}}
 
 > See also https://github.com/iamjavadali/nextcloudpi
