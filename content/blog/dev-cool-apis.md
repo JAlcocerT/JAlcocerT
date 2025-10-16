@@ -123,7 +123,14 @@ It’s frequently described as “Perplexity-as-a-service” for customizable, f
 
 You can get data from other users/services that have collected/processed and expose it for you.
 
-In case you want to expose your own API endpoints with code, for example with [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api) or with [Pocketbase BaaS](https://jalcocert.github.io/JAlcocerT/pocketbase/#what-are-api-rules)
+In case you want to expose your own API endpoints with code, for example with [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api) or with [Pocketbase BaaS](https://jalcocert.github.io/JAlcocerT/pocketbase/#what-are-api-rules).
+
+
+This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/) based. 
+
+> That I also covered recently on this post: https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/
+
+Im aware that there are many APIs around: https://github.com/public-apis/public-apis
 
 ### Weather
 

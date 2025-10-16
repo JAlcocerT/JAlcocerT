@@ -244,16 +244,21 @@ volumes:
 ### Proxie Networks
 
 
-https://www.youtube.com/watch?v=qo_fUjb02ns&t=41s
+<!-- https://www.youtube.com/watch?v=qo_fUjb02ns&t=41s -->
 
+{{< youtube "qo_fUjb02ns" >}}
 
-In this video, Beyond Fireship showcases a powerful technique for extracting data from websites using web scraping, AI, and proxy networks. With the rise of e-commerce and Drop Shipping, accessing valuable data is crucial, but it's often buried deep within complex HTML. 
+In this video, Beyond Fireship showcases a powerful technique for extracting data from websites using web scraping, AI, and proxy networks.
+
+With the rise of e-commerce and Drop Shipping, accessing valuable data is crucial, but it's often buried deep within complex HTML. 
 
 This report summarizes the video, providing an in-depth look at how to use web scraping, AI tools, and proxy networks to extract data from public-facing websites.
 
 
 - **What is Web Scraping?**
-  - Web scraping involves extracting data from websites, often using a **headless browser like Puppeteer**, which allows users to interact with a website programmatically. However, big eCommerce sites like Amazon don't love big traffic and will block IP addresses or make users solve captchas if they suspect you're not a human.
+  - Web scraping involves extracting data from websites, often using a **headless browser like Puppeteer**, which allows users to interact with a website programmatically.
+  
+However, big eCommerce sites like Amazon don't love big traffic and will block IP addresses or make users solve captchas if they suspect you're not a human.
 
 - **Solving the Problem with Bright Data**
   - Bright Data provides a special tool called the Scraping Browser, which runs on a proxy network and provides features like captcha-solving, retries, and more, allowing users to scrape the web at an industrial scale. This tool helps avoid IP blocking and captchas.

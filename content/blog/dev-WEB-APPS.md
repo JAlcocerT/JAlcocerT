@@ -850,21 +850,26 @@ npm i --save @kanaries/graphic-walker
 
 #### Reflex
 
-Reflex has been one of the latest webapp frameworks Ive tried with Python.
+Reflex has been one of the latest webapp frameworks I've tried with Python.
+
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Reflex_Stocks" title="Reflex Stocks | Tinkering Stocks Data with reflex on Github ↗ " >}}
-    {{< card link="https://github.com/JAlcocerT/DebtBlackBox" title="DebtBlackBox |  Github ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/DebtBlackBox" title="DebtBlackBox + Playign with different Web App frameworks | Github ↗ " >}}
 {{< /cards >}}
 
-![alt text](/blog_img/apps/reflex/reflex-stocks.png)
+![Reflex webapp with stocks](/blog_img/apps/reflex/reflex-stocks.png)
+
+I was playing with reflex on [this post](https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/).
 
 ![CAGR Reflex Sample](/blog_img/dev/pystocks/cagr-reflex.png)
 
-
 And it has such a huge potential to become my go to.
 
-* https://reflex.dev/blog/2024-10-8-self-hosting-reflex-with-docker/
+But before that, I would need to get the container for Reflex ready.
+
+Some [people have done so](https://reflex.dev/blog/2024-10-8-self-hosting-reflex-with-docker/) already.
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Tinkering with Reflex" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Python Web apps with Reflex" >}}
@@ -877,12 +882,6 @@ Reflex has a very interesting [Grid Cards](https://reflex.dev/docs/library/layou
 #### Flet
 
 If you still have some spare time...
-
-{{< details title="More about Flet 📌" closed="true" >}}
-
-
-{{< /details >}}
-
 
 Ive been tinkering with [flet here](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/Video_App_Flet)
 
@@ -901,7 +900,7 @@ Even [ApexChartsJS](https://discuss.streamlit.io/t/new-component-streamlit-apex-
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ApexCharts..." >}}
 {{< /cards >}}
 
-![Streamlit Funnel](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
+![Streamlit Funnel with Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
 
 2. For the auth part and something that requires users flows, I would go with Flask, as Reflex is *harder* to vibe code for now.
 
@@ -946,51 +945,6 @@ For example https://context7.com/streamlit/docs, to provide proper context while
 
 #### Desktop Apps with Python
 
-When it comes to building desktop applications with Python, there are several frameworks available, each with its own strengths and weaknesses.
-
-Here's a breakdown of some of the most popular options:
-
-**Key Python GUI Frameworks:**
-
-* **Tkinter:**
-    * This is Python's standard GUI toolkit.
-    * It's relatively easy to learn and is included with most Python installations, making it a good choice for beginners.
-    * However, its appearance can be somewhat dated.
-    * Good for simple applications.
-    * Ive tinkered with it [here](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/VideoApp_tkinter)
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="Python Web apps with DASH" image="/blog_img/apps/TripPlanner/TripPlanner.JPG" subtitle="Python Trip Planner with DASh" >}}
-  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Youtube Video Edition" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Quick Vlogs with ffmpeg and Tkinter" >}}
-{{< /cards >}}
-
-* **PyQt/PySide:**
-    * These frameworks provide Python bindings for the Qt library, a powerful cross-platform GUI toolkit.
-    * They offer a wide range of widgets and customization options, allowing you to create sophisticated and visually appealing applications.
-    * PyQt has licensing considerations, while PySide is LGPL-licensed.
-    * Excellent for complex applications.
-* **Kivy:**
-    * Kivy is designed for creating cross-platform applications with a focus on touch-enabled interfaces.
-    * It's suitable for developing applications that can run on desktop and mobile platforms.
-    * Good for multi-touch applications.
-* **wxPython:**
-    * wxPython provides Python bindings for the wxWidgets library, which allows you to create native-looking applications on various platforms.
-    * It offers a good balance of features and performance.
-    * Good for applications that need to have a native operating system look and feel.
-* **Flet:**
-    * Flet is a framework that enables you to build cross platform applications, including desktop applications. It is based on flutter, and allows for very quick UI development.
-
-* https://pypi.org/project/PyAutoGUI/
-
-**Key Considerations:**
-
-* **Cross-platform compatibility:** If you need your application to run on multiple operating systems, choose a framework that supports cross-platform development.
-* **Complexity:** Consider the complexity of your application and choose a framework that matches your needs. Tkinter is suitable for simple applications, while PyQt/PySide and wxPython are better for more complex ones.
-* **Appearance:** If you want your application to have a modern and visually appealing interface, PyQt/PySide or Kivy might be good choices.
-* **Licensing:** Be aware of the licensing terms of the framework you choose, especially if you plan to distribute your application commercially.
-
-
 ### Web Apps Auth
 
 As far as I know, these should work with any of the python web app frameworks.
@@ -1008,7 +962,7 @@ Then, plugging some authentication middleware into Traefik to do the auth job fo
 
 #### LogTo
 
-Ive been very happy lately With LogTo. 
+Ive been very happy [lately With LogTo](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication). 
 
 Get it going and get auth working.
 

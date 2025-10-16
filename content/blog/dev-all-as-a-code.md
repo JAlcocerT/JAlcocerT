@@ -176,7 +176,10 @@ https://github.com/JAlcocerT/py-stonks/blob/main/z-eda-yfinance/yfinance-104.ipy
 
 #### Infographics as a code
 
-
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment" title="Animating yfinance" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="YFinance for Python, cool plots and animations | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/plot_total_return_from_yfinance.py" title="Data In Motion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Matplotlib Animations with yfinance - Example Total Returns" >}}
+{{< /cards >}}
 
 #### Resume as a Code
 
@@ -192,7 +195,10 @@ You know, we can do [animation as a code as seen with matplotlib](https://jalcoc
 
 {{< youtube "I46bPuSdrqk" >}}
 
-And you should probably place your codes into a [repo like this one](https://github.com/JAlcocerT/DataInMotion) if you go that route.
+And you should probably place your codes into a [repo like DataInMotion](https://github.com/JAlcocerT/DataInMotion) if you go that route.
+
+
+{{< youtube "I46bPuSdrqk" >}}
 
 
 
@@ -218,7 +224,7 @@ And this
 <!-- https://github.com/JAlcocerT/Py_Double_Pendulum -->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/chaos-theory-and-the-double-pendulum-with-python/" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Py_Double_Pendulum/main/Z_Outro/DoublePendulum.gif" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/chaos-theory-and-the-double-pendulum-with-python/" title="Double Pendulum Repo" image="https://raw.githubusercontent.com/JAlcocerT/Py_Double_Pendulum/main/Z_Outro/DoublePendulum.gif" subtitle="Python Double Pendulum" >}}
   {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
 {{< /cards >}}
 

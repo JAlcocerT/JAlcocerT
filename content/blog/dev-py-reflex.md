@@ -632,10 +632,9 @@ And by using [reflex modals](https://reflex.dev/docs/library/overlay/alert-dialo
 
 ### Reflex x WebHooks
 
-With Formbricks, you can also set webhooks.
+With Formbricks, you can also **set webhooks**.
 
-![alt text](/blog_img/apps/reflex/formbrick-webhook.png)
-
+![How to set webhooks from formbricks](/blog_img/apps/reflex/formbrick-webhook.png)
 
 {{< callout type="info" >}}
 Its very simple, you reply to a survey with your email - you get early access. Make sure to provide a contact for users who want to un-enroll!
@@ -650,8 +649,7 @@ Its very simple, you reply to a survey with your email - you get early access. M
 
 ### Reflex x LocalDB
 
-* [Local auth](https://github.com/masenf/reflex-local-auth)
-
+See Reflex [Local auth](https://github.com/masenf/reflex-local-auth)
 
 ### Reflex x Traefik x Middleware
 
@@ -884,7 +882,7 @@ def form() -> rx.Component:
 ## FAQ
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/DebtBlackBox" title="Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Testing Reflex vs other Python Web Apps | Sample Project" >}}
+  {{< card link="https://github.com/JAlcocerT/DebtBlackBox" title="Source Code of Debt black box" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Testing Reflex vs other Python Web Apps | Sample Project" >}}
 {{< /cards >}}
 
 **When to Use Which:**

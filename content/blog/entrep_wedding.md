@@ -43,7 +43,9 @@ This requires proper packaging, quite some additional tech to **bring the offer 
   {{< card link="https://github.com/JAlcocerT/Flask_SlubnyChwile" title="Wedding Tech" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github to package all the tech for this product" >}}
 {{< /cards >}}
 
-And if you want to go all in into such kind of idea...be aware of the **risks for entrepreneurs**:
+And if you want to go all in into such kind of idea...
+
+be aware of the **risks for entrepreneurs**:
 
 ```mermaid
 mindmap
@@ -53,9 +55,15 @@ mindmap
     Execution
 ```
 
-* PMF (Product-Market Fit) - The "What": *defines what you are offering and what problem you are solving for what audience. Without a clear "what" that resonates, everything else is building on shaky ground. The biggest risk for entrepreneurs often lies in building something nobody wants*
-* Tech - The "How": software, hardware, or a proprietary process...
-* Execution - The "Doing" / "Making it Happen": Actual work to make it a reality and sustain it. Risks in execution include poor team dynamics, inability to raise funds, failing to hit milestones, losing focus, or simply not having the grit to push through challenges
+1. PMF (Product-Market Fit) - The "WHAT": *defines what you are offering and what problem you are solving for what audience. 
+
+Without a clear "what" that resonates, everything else is building on shaky ground. The biggest risk for entrepreneurs often lies in building something nobody wants*
+
+2. Tech - The "HOW": software, hardware, or a proprietary process...
+
+3. Execution - The "Doing" / "Making it Happen": Actual work to make it a reality and sustain it. 
+
+Risks in execution include poor team dynamics, inability to raise funds, failing to hit milestones, losing focus, or simply not having the grit to push through challenges
 
 
 
@@ -1252,9 +1260,7 @@ If this does not give you a taste of what **end to end project feels** like, not
 
 ## FAQ
 
-### More Tech
-
-#### Gotify
+### Gotify
 
 Notifications everywhere!
 
@@ -1267,7 +1273,7 @@ Because maybe...you got a st[ripe payment](https://jalcocert.github.io/JAlcocerT
 Thanks to [magnus](https://magnus919.com/notes/gotify/)
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/gotify_docker-compose.yml" title="Gotify Setup Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/gotify_docker-compose.yml" title="Gotify | Docker Config 🐋 ↗" >}}
     {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently" title="Use Gotify together with Internet Speed Tracker | SelfH Post 0525 Post ↗" >}}
 {{< /cards >}}
 

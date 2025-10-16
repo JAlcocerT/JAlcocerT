@@ -8,6 +8,61 @@ url: 'ecommerce'
 ---
 
 
+There are several notable open source self-hostable e-commerce platforms available:
+
+- **WooCommerce** (for WordPress): Very popular, flexible, and customizable plugin that turns WordPress sites into e-commerce stores. It powers millions of websites and has extensive themes and extensions, ideal if you want WordPress integration.[3][9]
+
+- **PrestaShop**: A widely used PHP-based platform built on Symfony. It is user-friendly and feature-rich, with strong multi-language and multi-currency support. Good for small to medium businesses and popular especially in Europe.[2][8][10]
+
+- **OpenCart**: Lightweight and powerful open-source PHP platform with a large marketplace for extensions and multi-store management but with limited SEO features.[2][3]
+
+- **MedusaJS**: API-first, headless e-commerce Node.js platform great for modern, scalable storefronts. Free core system with customizable architecture.[5][6][2]
+
+- **Bagisto**: A Laravel-based e-commerce platform designed for developers looking for flexibility, a good alternative to WooCommerce.[2]
+
+- **Evershop**: Node.js based, lightweight, efficient e-commerce system suited to small and medium businesses, with React frontend and GraphQL.[2]
+
+- **Magento Open Source (Adobe Commerce)**: Powerful, highly customizable PHP platform suited to enterprise-level sites but requires advanced skills.[9][3]
+
+- **Spree Commerce**: Headless e-commerce platform with multi-vendor marketplace and B2B/B2C support, open source with SaaS option.[3]
+
+- **Sylius**: Developer-friendly open-source headless e-commerce framework focusing on B2B and B2C.[4]
+
+- **CubeCart**: Template-driven, responsive store platform that is simpler than some others but less extensible.[3]
+
+These platforms vary in technology stack (PHP, Node.js, Python/Django, .NET) and complexity, from user-friendly to developer-centric, allowing you to pick one that fits your technical expertise and business needs.[8][15][9][3][2]
+
+If you want a recommendation or details on any specific platform, just ask!
+
+[1](https://www.reddit.com/r/selfhosted/comments/v37lm3/best_selfhosted_platform_for_small_ecommerce_store/)
+[2](https://uideck.com/blog/self-hosted-ecommerce-solutions)
+[3](https://kinsta.com/blog/open-source-ecommerce/)
+[4](https://sylius.com)
+[5](https://underhost.com/blog/the-best-self-hosted-e-commerce-platforms-of-2025/)
+[6](https://www.reddit.com/r/selfhosted/comments/1lyosh6/looking_for_selfhosted_ecommerce_platform/)
+[7](https://contabo.com/blog/best-e-commerce-platforms-for-your-business/)
+[8](https://www.voxfor.com/12-best-free-open-source-ecommerce-solutions-to-launch-your-business-online-in-2025/)
+[9](https://www.shopify.com/blog/open-source-ecommerce)
+[10](https://bitbag.io/blog/ecommerce-platforms-open-source)
+[11](https://www.tigren.com/blog/self-hosted-hosted-ecommerce-platforms/)
+[12](https://www.youtube.com/watch?v=BQtMDI-Wv4w)
+[13](https://github.com/awesome-selfhosted/awesome-selfhosted)
+[14](https://golocad.com/blog/e-commerce-frameworks/)
+[15](https://vendure.io)
+
+Yes, exactly. With Medusa as your backend, you can use Astro static site generator to build your frontend storefront. Astro can pull product data dynamically from Medusa’s REST or GraphQL APIs.
+
+Here’s how it works:
+- You manage your products, inventory, and orders in Medusa’s admin UI.
+- Your Astro front end fetches product data from Medusa’s API at build time or on-demand.
+- Astro renders static pages with the product info while allowing dynamic client-side interactions like cart updates or checkout using Medusa’s API.
+- This JAMstack pattern offers great performance, SEO, and developer flexibility, decoupling the frontend and backend.
+
+So, you create and update products in Medusa, and your Astro static site reflects those products by calling Medusa’s API.[1][2][3]
+
+[1](https://medusajs.com/product-module/)
+[2](https://kvytechnology.com/blog/software/product-management-with-medusa-js/)
+[3](https://statichunt.com/jamstack-ecommerce)
 
 Hosting an eCommerce
 

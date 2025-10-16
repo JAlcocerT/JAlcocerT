@@ -700,9 +700,7 @@ docker run -p 8509:8501 py_mortage:v6a
 ![Streamlit Real Estate App](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
 
 
-> https://realestate.jalcocertech.com/
-
-
+> See the web app deployed to: `https://realestate.jalcocertech.com/`
 
 
 ### Useful Concepts

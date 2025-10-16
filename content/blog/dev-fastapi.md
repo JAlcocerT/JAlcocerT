@@ -15,7 +15,11 @@ There are few [tools to understand APIs](#apis) as you work with them.
 
 **Intro**
 
-> Stay if you also want to see how to [install the Py version you want](#proper-py-and-uv).
+If you want to create your own [Python Web Apps](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/), you might have heard about FastAPI as one of the options you have.
+
+Also, If you have ever used [Reflex Python](https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/), you were using a wrap over FastApi and SQLalchemy for the backend!
+
+> Stay to see how to [install the Py version you want](#proper-py-and-uv).
 
 
 ## FastAPI

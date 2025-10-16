@@ -12,6 +12,20 @@ url: 'ghostfolio-and-personal-finance-dev-tools'
 ---
 
 
+### Selfhostable Apps
+
+1. https://github.com/maybe-finance/maybe
+
+>  The personal finance app for everyone 
+
+2. https://github.com/firefly-iii/firefly-iii
+
+>  Firefly III: a personal finances manager 
+
+3. https://github.com/actualbudget/actual
+
+> MIT |  A local-first personal finance app 
+
 ### Interesting Software for Finances
 
 

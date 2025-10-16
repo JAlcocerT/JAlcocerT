@@ -2,7 +2,7 @@
 title: "Financial Data for Python - The YFinance Package"
 date: 2025-06-18
 draft: false
-tags: ["Python","GoogleFinance","Animations","Payout Ratio"]
+tags: ["Python","GoogleFinance","Animations","Payout Ratio","Yfinance API"]
 description: "Initial Yield vs Growth EDA and its math. How to analyze stock and dividend data with Python. Together with Data animations."
 url: 'python-financial-data-with-yfinance'
 math: true
@@ -14,7 +14,7 @@ math: true
 *Financial Data to play with Python Apps via YFinance*
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="NEW DataInmotion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scripts to visualize and animate financial data" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="NEW - DataInmotion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scripts to visualize and animate financial data" >}}
 {{< /cards >}}
 
 ## Financial Data with Python
@@ -23,11 +23,13 @@ How to pull data from: https://finance.yahoo.com/
 
 ### Yahoo Financials
 
+We just need Python and the package:
+
 * https://pypi.org/project/yahoofinancials/
 
 * https://github.com/JECSand/yahoofinancials
 
-> MIT | A powerful financial data module used for pulling data from Yahoo Finance. This module can pull fundamental and technical data for stocks, indexes, currencies, cryptos, ETFs, Mutual Funds, U.S. Treasuries, and commodity futures.
+> **MIT** | A powerful financial data module used for pulling data from Yahoo Finance. This module can pull fundamental and technical data for stocks, indexes, currencies, cryptos, ETFs, Mutual Funds, U.S. Treasuries, and commodity futures.
 
 ```sh
 pip install yahoofinancials==1.20
@@ -122,7 +124,7 @@ But **what's better, high yield or high dividend growth?**
 
 Ideally something that give us both, but, there is always a trade off.
 
-And some people call high yield investments as **divs traps**.
+And some people call high yield investments as **dividend traps**.
 
 Are then worth to invest the slow and well known stocks?
 
@@ -134,7 +136,7 @@ Are then worth to invest the slow and well known stocks?
 
 
 {{< callout type="info" >}}
-[Investing in Real Estate](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/) can be seen as a **leveraged high initial yield**
+Something like [Investing in Real Estate](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/) can be seen as a **leveraged high initial yield**
 {{< /callout >}}
 
 What does the **data and math** tell us about it?
@@ -215,7 +217,7 @@ CAGR (all completed years): +15.46%
 =================================
 ```
 
-And you can create such animations:
+And you can **create such animations**:
 
 {{< youtube "I46bPuSdrqk" >}}
 
@@ -256,11 +258,15 @@ But, you can anyways do your *data experiment* for fun:
 
 People throw many numbers into finance.
 
-Sp500 is 10% avg return. Did it?
+Like: *"Sp500 is 10% avg return."*
+
+Did it?
 
 It depends when exactly you are looking at.
 
-> Now you can play with the data and see for yourself :)
+> Now you can play with the data and see for yourself
+
+> > Probably is more important than ever to check all that info that is being thrown at us on social media
 
 Some say that you should go with the `65/20/15` (Living expenses/fund spending/future you) approach.
 
@@ -678,6 +684,7 @@ You'll need to install `moviepy`: `pip install moviepy`
 *   **3D Animations:** For 3D animations, make sure to update the `scene` layout in each frame before exporting to an image.  The example code shows how to do this.
 *   **Interactivity:** The interactive Plotly display (using `fig.show()`) is different from the exported GIF or MP4. The exported files are static animations.
 
-This comprehensive explanation should help you create and export Plotly animations in your desired format.  Remember to install the necessary libraries. Let me know if you have any other questions.
 
 {{< /details >}}
+
+But at this point for me, **matplotlib custom graphs + creating a gif or mp4** from them is what have worked the best.

@@ -107,31 +107,31 @@ Tech Side:
 
 {{< /details >}}
 
-![Streamlit Real Estate App](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
+![Streamlit Real Estate WebApp](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Whishper" title="Streamlit x Real Estate | Post 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Streamlit x Real Estate | Post  ↗" >}}
 {{< /cards >}}
 
 I kind of understood authentication and Flask webapps with:
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#traefik-x-tinyauth-x-flask" title="Flask x Three Bodies x TinyAuth | Post  ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Flask WebApp x Three Bodies | Post 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Flask WebApp x Three Bodies | Repo ↗" >}}
 {{< /cards >}}
 
-And Reflex is kind of cool, but the LLMs are not there yet:
+And Reflex is kind of cool, but the LLMs are not there yet to do the code for you:
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Reflex x Real Estate | Post 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Reflex x Real Estate | Post  ↗" >}}
 {{< /cards >}}
 
 
 ## PyStocks
 
-There are cool apps outthere: https://openalternative.co/maybe
+There are cool apps out-there: https://openalternative.co/maybe
 
-But I wanted to build mine and learn something more along the way.
+But **I wanted to build mine** and learn something more along the way.
 
 The structure looks like:
 
@@ -273,19 +273,6 @@ You can try and solve this via [the CAGR](https://jalcocert.github.io/JAlcocerT/
 
 > But you will be oversimplifying the fact that you got cash on hand earlier with the latter option
 
-### Selfhostable Apps
-
-1. https://github.com/maybe-finance/maybe
-
->  The personal finance app for everyone 
-
-2. https://github.com/firefly-iii/firefly-iii
-
->  Firefly III: a personal finances manager 
-
-3. https://github.com/actualbudget/actual
-
-> MIT |  A local-first personal finance app 
 
 ### Stock Questions - Answered
 

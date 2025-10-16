@@ -129,6 +129,13 @@ Before going to `https://www.interactivebrokers.ie/sso/Login?RL=1&locale=en_US` 
 
 > Having the possibility to export data from famous brokers, get it cleaned automatically and have your portfolio visualized can be great
 
+
+
+{{< callout type="warning" >}}
+You could also keep it simple and just use existing tools like https://www.perplexity.ai/finance/JNJ/financials
+{{< /callout >}}
+
+
 ---
 
 ## FAQ

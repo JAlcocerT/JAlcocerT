@@ -909,6 +909,43 @@ https://jalcocert.github.io/JAlcocerT/playwright-101/
 
 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication" title="LogTo 101" image="/blog_img/dev/LogTo/logto-branded-signin.png" subtitle="Using Logto as Flask Web App Authentication with a sample 3 body WebApp | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Utils" title="Streamlit PoC with PyGWalker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ApexCharts..." >}}
+{{< /cards >}}
+
+
+https://jalcocert.github.io/JAlcocerT/web-apps-with-python/#streamlit
+
+![Streamlit Funnel with Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
+
+![Streamlit Real Estate WebApp](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Streamlit x Real Estate | Post  ↗" >}}
+{{< /cards >}}
+
+![Normalized Value Change of PyStocks Streamlit Version](/blog_img/dev/pystocks/pystocks-vibed1.png)
+https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Reflex_Stocks" title="Reflex Stocks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Reflex Stocks Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Stocks" title="NEW Python Stocks (Streamlit)" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PyStocks Source Code on Github" >}}
+{{< /cards >}}
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Reflex_Stocks" title="Reflex Stocks | Tinkering Stocks Data with reflex on Github ↗ " >}}
+  {{< card link="https://github.com/JAlcocerT/DebtBlackBox" title="DebtBlackBox Web App | Github ↗ " >}}
+{{< /cards >}}
+
+![Reflex webapp with stocks](/blog_img/apps/reflex/reflex-stocks.png)
+
+https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/
+![CAGR Reflex Sample](/blog_img/dev/pystocks/cagr-reflex.png)
+
+
+
 ##### AI Stuff
 
 https://aistudio.google.com/prompts/new_chat
