@@ -4,7 +4,7 @@ date: 2025-05-19T22:20:21+01:00
 draft: false
 description: "Connecting Ghost CMS with Astro Themes. Compared with Editing Astro via JSON."
 url: 'ghost-cms-for-astro'
-tags: ["Web","CMS","Ghost x Astro SSG","n8n","Whatsapp Bouble Component"]
+tags: ["Web","CMS","Ghost x Astro SSG","n8n","Whatsapp Bouble Component","Morita-Web"]
 ---
 
 
@@ -34,6 +34,7 @@ The **containers for SSGs** are not a mistery anymore:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="SSG Containers | Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro" title="Astro SSG | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
 So...how about the editing capabilities?
@@ -213,7 +214,7 @@ Follow the steps of the [previous 101 explanation](#configuring-ghost-x-astro-10
 
 And bring these artifacts to the `.env.local`
 
-```
+```yml
 GHOST_CONTENT_API_URL=http://192.168.1.11:2368
 GHOST_CONTENT_API_KEY=
 GHOST_ADMIN_API_KEY=
@@ -289,7 +290,7 @@ You create and manage posts, images, and metadata via the Ghost Admin UI.
 
 Astro (your frontend static site) pulls content from Ghost using the Ghost Content API at build time (or runtime, if desired).
 
-The content (posts, images, tags, etc.) is fetched via API calls (not by reading Ghost’s HTML or database directly).
+The content (posts, images, tags, etc.) is **fetched via API calls** (not by reading Ghost’s HTML or database directly).
 
 Astro renders the content into your custom layouts and components, giving you full control over the presentation.
 Benefits:
@@ -310,7 +311,6 @@ Who said about **writing AI Driven content**?
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8n Docker Config 🐋 ↗"  >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ### N8N x MCP
@@ -396,18 +396,3 @@ It's not just about **n8n embeddedd chat**, but scrapping capabilities:
 
 {{< youtube "AhyO9AVm49k" >}}
 <!-- https://www.youtube.com/watch?v=AhyO9AVm49k -->
-
-
-### OSS for Selfhosted Blogs
-
-* https://github.com/ddoemonn/next-blog
-
-> **MIT** | self-hosted blog platform built with next.js 
-
-### Other Websites Ive worked
-
-**07/25 version**
-
-* https://github.com/majesticooss/astros
-  * https://github.com/majesticooss/astros/discussions/56
-  * https://ioracing-iotechcrafts.web.app/blog/unleashing-the-power-of-tailwind-css/

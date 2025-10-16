@@ -81,37 +81,17 @@ These have been enough so far to develop a couple of Apps:
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
-And to deliver interesting real estate solutions:
+And to deliver interesting [real estate solutions](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator).
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
+Want to Level Up Streamlit?
 
-
----
-
-## FAQ
-
-Pay with python
-
-https://www.youtube.com/watch?v=6AoSBpZqsRo
-
-
+1. Adding Authelia Authentification
+2. Monitoring Streamlit Logs
 
 
 ### Interesting Stuff I found lately
 
-#### Blogs
+**Blogs**
 
 * https://sebastiandedeyne.com/captioned-images-with-markdown-render-hooks-in-hugo/
 * https://www.saltyoldgeek.com/posts/ollama-llama3-openwebui/
-
-#### Powerful Translator
-
-* https://www.deepl.com/en/translator
-
-### Level Up Streamlit
-
-1. Adding Authelia Authentification
-2. Monitoring Streamlit Logs

@@ -246,13 +246,17 @@ Dont forget to add the **after payment behaviour** into your stripe payment link
 
 > Thanks to the cookies, that new tab will be already logged into and authenticated per LogTo to the flask admin panel, showing that you have got the service
 
-If you have done everything properly, you can get this kind of user journey in production, with https and no paid tiers *as of the time of writting*
+If you have done everything properly,
 
-![alt text](/blog_img/entrepre/webify/webify-logto-login.png)
+you can get this kind of user journey in production, 
+
+with https and no paid tiers *as of the time of writting*
+
+![Logto Login Authentication wall](/blog_img/entrepre/webify/webify-logto-login.png)
 
 > If you want the [google](https://console.cloud.google.com/auth) signin/up, you will need a Logto Subscription as seen [here](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#logto-authentication)
 
-![alt text](/blog_img/entrepre/webify/wibify-logto-customdomain.png)
+![Custom domain for Logto Authentication](/blog_img/entrepre/webify/wibify-logto-customdomain.png)
 
 Which is the result of:
 
@@ -266,6 +270,8 @@ docker build -t webifai:latest .
 #   --name webifai webifai:latest
 ping webify.jalcocertech.com
 ```
+
+See that you have **email validation with Logto** out of the box:
 
 ![Flask Webify Working via Cloudflare Tunnels](/blog_img/entrepre/webify/webify-logto-loggedin.png)
 
@@ -352,6 +358,11 @@ DOMAIN = os.getenv('CLOUDFLARE_DOMAIN')  # e.g., jalcocertech.com
 ### Automatic DNS Setup
 
 So how about choosing that subdomain, and getting it configured on the backend to point properly?
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/cloudflare-dns-updater.py" title="Cloudflare DNS API Py Script ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/porkbun-domains.py" title="Porkbun API Py Script ↗" >}}
+{{< /cards >}}
 
 ---
 
@@ -517,6 +528,11 @@ As always, there are few alternatives:
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Billing" title="Invoices with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/invoice-ninja" title="Invoice Ninja | Docker Config for HomeLab 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serverless-invoices" title="Serverless Invoices | Docker Config for HomeLab 🐋 ↗" >}}
+{{< /cards >}}
+
 1. Invoice Ninja: https://hub.docker.com/r/invoiceninja/invoiceninja/
 
 * https://invoiceninja.com/
@@ -526,7 +542,7 @@ Which has stripe and [BTCPay](https://btcpayserver.org/) integration https://inv
 
 * https://github.com/btcpayserver/btcpayserver and https://docs.btcpayserver.org/API/Greenfield/v1/
 
-> MIT | Accept Bitcoin payments. Free, open-source & self-hosted, Bitcoin payment processor.
+> **MIT** | Accept Bitcoin payments. Free, open-source & self-hosted, Bitcoin payment processor.
 
 2. Serverless Invoices and more: https://fossengineer.com/open-source-invoice-creator
 

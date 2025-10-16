@@ -119,6 +119,123 @@ Exa is a powerful API and search engine for developers and AI platforms needing 
 It’s frequently described as “Perplexity-as-a-service” for customizable, factual, and privacy-conscious web data access.
 
 
+## AI APIs
+
+
+Avoid LLM lock-in and the recurring subscription bills.
+
+**Simply use APIs**.
+
+Together with Streamlit!
+
+
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.32.2-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white#center)](https://pypi.org/project/streamlit/)
+
+
+
+{{< callout type="info" >}}
+See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit-MultiChat) 💻
+{{< /callout >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/Streamlit-MultiChat/1" title="About Streamlit MultiChat with SliDev on GH Pages" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt" title="Previous Blog Post" >}}
+{{< /cards >}}
+
+OpenAI
+
+They have released recently **o3-mini** model.
+
+GPT-4o-mini has been my go to in terms of value per money.
+
+But we have now **o1 (mini also) and o3-mini** with higher context window (200K)
+
+* https://openai.com/api/
+* https://platform.openai.com/docs/models/#current-model-aliases
+
+
+```sh
+pip install openai==1.61.0
+```
+
+See the **latest openAI models**:
+
+```sh
+import os
+from dotenv import load_dotenv
+from openai import OpenAI  # pip install openai>0.28
+
+# Load environment variables from the .env file
+load_dotenv()
+
+client = OpenAI()
+models = client.models.list()
+for model in models:
+    print(model.id)
+```
+
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api" title="Grok API Blog Post" >}}
+{{< /cards >}}
+
+DeepSeek via Ollama
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api" title="Grok API Blog Post" >}}
+{{< /cards >}}
+
+[![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
+
+
+Companions for this multichat.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks//" title="Youtube Summarizer" image="/blog_img/GenAI/yt-summaries/yt-summaries-groq.png" subtitle="With Groq API" >}}
+  {{< card link="https://github.com/JAlcocerT/RStocks" title="AIssistant" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Leveraging LLMs for several tasks." >}}
+{{< /cards >}}
+
+![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png)
+
+Agents with Streamlit
+
+With a very interesting article about agents: https://www.anthropic.com/engineering/built-multi-agent-research-system
+
+
+
+* https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
+
+> FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser & Trae AI (And other Open Sourced) System Prompts, Tools & AI Models.
+
+
+
+AIssistant
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/" title="AIssistant blog post" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="Aissistant 💻 code" >}}  
+{{< /cards >}}
+
+ Read the Web!
+
+https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
+
+
+ YT Summarizer
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/summarize-yt-videos" title="Groq Youtube Summarizer" >}}
+  {{< card link="https://github.com/JAlcocerT/phidata/" title="My YT Summarizer 💻 - PhiData Fork with container created" >}}  
+{{< /cards >}}
+
+* https://console.groq.com/keys
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/phidata-yt-groq" title="Selfhosted PhiData YT Summarizer - Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ## Data APIs
 
 You can get data from other users/services that have collected/processed and expose it for you.
@@ -217,6 +334,12 @@ Smithery is the “app store” or registry for agentic AI extensions, enabling 
 
 
 ### Audio APIs
+
+Powerful Translator: https://www.deepl.com/en/translator
+
+If you like [Podcasts](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#a-look-to-gitpodcast)
+
+* https://www.gitpodcast.com/rybbit-io/rybbit
 
 
 #### 11Labs x MCP

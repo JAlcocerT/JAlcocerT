@@ -7,7 +7,7 @@ description: 'Building Websites for others with CMS and landingPAD theme. The mi
 url: 'product-tools'
 ---
 
-Its been few months since I covered [these Tools for forms/newsletters](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/)
+Its been few months since I covered [these Tools for **forms/newsletters**](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/)
 
 Now, how to built great [products](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/)?
 

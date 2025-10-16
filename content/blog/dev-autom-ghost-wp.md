@@ -2,7 +2,7 @@
 title: "Using APIs to write content."
 date: 2025-09-06T08:20:21+01:00
 draft: false
-tags: ["Ghost","Web","Wordpress API","Gatsby GraphQL vs REST API","Codex CLI","n8n x wp"]
+tags: ["Ghost x Astro","Web","Wordpress API","Gatsby GraphQL vs REST API","Codex CLI","n8n x wp"]
 description: 'Programatic posts creation with the most popular CMSs. Via CLI or N8N workflows.'
 url: 'automating-ghost-and-wordpress'
 ---
@@ -14,6 +14,8 @@ As lately im like *a kid with APIs*, have setup [WP](#wordpress-setup) and [Ghos
 {{< callout type="warning" >}}
 Ghost and WP both provide a [RESTAPI](#rest-vs-graphql-vs-gatsby). 
 {{< /callout >}}
+
+All this is just in case you dont want to do the [Ghost CMS API x Astro setup](https://jalcocert.github.io/JAlcocerT/ghost-cms-for-astro/)
 
 
 **Intro**
@@ -29,12 +31,11 @@ For today's post: with Ghost and Wordpress ready to go into your homelab/server,
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wordpress" title="WP with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-They provide a cool UI.
+Both, wordpress and ghost provide a cool UI and admin panel from the get go.
 
 And you can deploy them quickly with PaaS as well:
 
 * https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/
-* https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/
 * https://jalcocert.github.io/JAlcocerT/selfhosted-paas/
 
 But come on, do you really want to spend time with drag and drop still?

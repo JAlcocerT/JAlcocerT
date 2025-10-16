@@ -82,7 +82,7 @@ Applied to [RE here](https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_
 
 ## The Reflex Package
 
-Reflex launched in December 2022 with the name Pynecone.
+**Reflex** launched in **December 2022** with the name Pynecone.
 
 * https://github.com/reflex-dev/reflex
 
@@ -97,7 +97,7 @@ How about enhancing these streamlit projects?
   {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="Job Offers and CV Creation ↗" >}}
 {{< /cards >}}
 
-Enhancing in a way...that they are also good looking and providing UI/UX for mobile users?
+Enhancing in a way...that they are also good looking and providing **UI/UX for mobile users**?
 
 **Lets have a look to Reflex.**
 
@@ -427,7 +427,7 @@ You will find also useful:
 
 #### Reflex Sample Apps
 
-I could not resist to make this form: https://github.com/JAlcocerT/reflex-templates
+I could not resist to make this fork: https://github.com/JAlcocerT/reflex-templates
 
 And enjoy using this sample apps out of the box:
 
@@ -473,7 +473,7 @@ But it was mostly with streamlit, where Im most confortable for now.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Understanding Real Estate" image="/blog_img/data-experiments/buyr_mortage_NAV_norent.png" subtitle="Post where I tinkered with Math for Real Estate." >}}
-  {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage?ref_type=heads" title="EDA Mortage with Reflex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for EDA French Amortization" >}}
+  {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage?ref_type=heads" title="EDA Mortage with Reflex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for EDA Mortage and French Amortization" >}}
 {{< /cards >}}
 
 And with Reflex and some tricks with Gemini code assistant I got to this:
@@ -649,7 +649,7 @@ Its very simple, you reply to a survey with your email - you get early access. M
 
 ### Reflex x LocalDB
 
-See Reflex [Local auth](https://github.com/masenf/reflex-local-auth)
+See Reflex [Local auth](https://github.com/masenf/reflex-local-auth), just in case you want to use this fwk with [databases](https://jalcocert.github.io/JAlcocerT/databases/).
 
 ### Reflex x Traefik x Middleware
 
@@ -659,28 +659,28 @@ Recently I got [Traefik https](https://fossengineer.com/selfhosting-traefik/) to
 
 Aka a Paywall.
 
-Which resonates with SaaS.
+Which resonates with SaaS creation.
 
 And I [tinkered](https://gitlab.com/fossengineer1/cv-check/-/tree/main/Z_Tests/Stripe?ref_type=heads) with this [with the CV-CreAItor here](https://gitlab.com/fossengineer1/cv-check/-/blob/main/Z_Auth_Ways/Z_Auth_Stripe.py?ref_type=heads)
 
 
 ## Deploy Reflex
 
-Remember, this is the trick to use reflex with any port:
+Remember, this is the trick to **use reflex** with any port:
 
 ```sh
 reflex run --backend-port 8001 --frontend-port 3001
 ```
 
-But placing reflex inside a container was not as simple as with Streamlit.
+But placing reflex inside a container was not as simple as [with Streamlit](https://github.com/JAlcocerT/Home-Lab/tree/main/py-streamlit).
 
 ---
 
 ## Conclusions
 
-I find it easier to iterate with streamlit, as there is no waiting time for compiling.
+I find it easier to iterate with streamlit for MVPs, plus there is no waiting time for compiling.
 
-For [PoCs](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#conclusions), That makes it easier to loop through features.
+For [PoCs](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#conclusions), that makes it easier to loop through features.
 
 But definitely, Reflex apps can look really cool, **also on smartphones**!
 

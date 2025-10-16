@@ -230,11 +230,10 @@ Does this resonates with creating **AI powered podcasts** on how selfhosting pro
 
 Its crazy how it summarizes the streamlit repo...
 
-See it yourself: https://www.gitpodcast.com/streamlit/streamlit
+See by yourself: https://www.gitpodcast.com/streamlit/streamlit
 
 ![GitPodcast](/blog_img/selfh/gitpodcast.png)
 
-* https://www.gitpodcast.com/rybbit-io/rybbit
 
 ### Code2Prompt
 
@@ -284,8 +283,6 @@ The tool helps streamline LLM prompt creation, enhancing productivity for develo
 
 > MIT | A CLI tool to convert your codebase into a single LLM prompt with source tree, prompt templating, and token counting.
 
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mufeedvh/code2prompt/,BandarLabs/gitpodcast&type=Date)](https://star-history.com/#mufeedvh/code2prompt/&BandarLabs/gitpodcast&type=Date)
 
 ---
 

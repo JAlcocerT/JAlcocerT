@@ -3,14 +3,17 @@ title: "Just shipping | Wedding Edition"
 date: 2025-06-04T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS","Gotify"]
-description: 'Wedding stuff. Aka 200, you mean 4k? The story and some entrepreneurship concepts like ads'
+description: 'Wedding stuff. The story and some entrepreneurship concepts like ads'
 url: 'wedding-photo-galleries'
 ---
 
 
 **TL;DR**
 
-* https://github.com/JAlcocerT/slubnechwile
+Quote: *200?, you mean 4k?*
+
+
+* I was tinkering with [the Sassify theme](https://github.com/larry-xue/astro-sassify-template) forked [here](https://github.com/JAlcocerT/slubnechwile)
 * https://github.com/JAlcocerT/Flask_SlubnyChwile
 
 **Intro**
@@ -1252,8 +1255,8 @@ https://www.youtube.com/watch?v=V0ej29G7ZGg
 If this does not give you a taste of what **end to end project feels** like, nothing will:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
-  {{< card link="https://github.com/JAlcocerT/Flask_SlubnyChwile" title="Flask Back End" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Flask Back End for Weddings" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro Post" image="/blog_img/selfh/automation/flaskcms2.png" subtitle="Flask WebApp + https with NGINX to Hertzner VPS" >}}
+  {{< card link="https://github.com/JAlcocerT/Flask_SlubnyChwile" title="Flask Back End Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Flask Back End for Weddings" >}}
 {{< /cards >}}
 
 ---
@@ -1270,11 +1273,16 @@ Because maybe...you got a st[ripe payment](https://jalcocert.github.io/JAlcocerT
 
 * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gotify/
 
-Thanks to [magnus](https://magnus919.com/notes/gotify/)
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/gotify/" title="Gotify HomeLab | Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/" title="n8n HomeLab | Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
+
+Thanks to [magnus](https://magnus919.com/notes/gotify/) for the post
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/gotify_docker-compose.yml" title="Gotify | Docker Config 🐋 ↗" >}}
-    {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently" title="Use Gotify together with Internet Speed Tracker | SelfH Post 0525 Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently" title="Use Gotify together with Internet Speed Tracker | SelfH Post 0525 Post ↗" >}}
 {{< /cards >}}
 
 Send a message via **Gotify** with:

@@ -2,7 +2,7 @@
 title: "Session Recording for Web Projects"
 date: 2025-11-16
 draft: false
-tags: ["Web","Product","Amplitude vs PostHog","OpenReplay","Astuto"]
+tags: ["Web","Product","Amplitude vs PostHog","OpenReplay","Astuto","Product Tools"]
 description: 'How are user enjoying your Saas?'
 url: 'how-to-record-web-sessions'
 ---

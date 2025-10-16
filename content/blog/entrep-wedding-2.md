@@ -62,6 +62,9 @@ This one is great, yet it seems that the way to get MRR is via the companies who
 1. Make a QR for your wedding url with custom icon/colors
 2. Get a pdf ready to print in different sizes to place during your wedding
 
+https://me-qr.com/page/blog/colored-qr-codes
+* [QR Code](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py) Generation with streamlit
+
 **The try for free stuff**
 
 

@@ -942,7 +942,35 @@ https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts
 ![Reflex webapp with stocks](/blog_img/apps/reflex/reflex-stocks.png)
 
 https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/
+https://github.com/JAlcocerT/reflex-templates
+![Reflex Stocks Sample](/blog_img/apps/reflex/reflex-stocks-sample2.png)
+
+
 ![CAGR Reflex Sample](/blog_img/dev/pystocks/cagr-reflex.png)
+
+
+The FlaskCMs / NextJS CMS i tried to built were similar to these OSS for Selfhosted Blogs
+
+* https://github.com/ddoemonn/next-blog
+
+> **MIT** | self-hosted blog platform built with next.js 
+
+
+From all CMS that I tried on [this post](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#frontmatter-cms), just frontmatter kept the simplicity I wanted.
+
+But it does not bring the for all public admin UI.
+
+![FrontMatter Static CMS](/blog_img/web/frontmatter/frontmatter-project.png)
+
+Followed very closely by [Keystatic](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms)
+
+When you deploy the static site, the `whateverdomain.com/keystatic` path will still be there:
+
+![KeyStatic statically deployed UI](/blog_img/web/staticcms/keystatic-ssg-deployed.png)
+
+> But you wont be able to make any changes, as the server (Typescrypt API) is NOT running.
+
+
 
 
 
@@ -967,6 +995,14 @@ https://aistudio.google.com/prompts/new_chat
 You can make interesting conditional logic, like: *If scrap fails, send msg to telegram bot*
 
 #### More Websites!
+
+Other Websites Ive worked
+
+**07/25 version**
+
+* https://github.com/majesticooss/astros
+  * https://github.com/majesticooss/astros/discussions/56
+  * https://ioracing-iotechcrafts.web.app/blog/unleashing-the-power-of-tailwind-css/
 
 But for the ones who actually see value on them.
 
@@ -1004,6 +1040,10 @@ and how-to-deploy-a-static-website-to-the-cloud-with-digitalocean-app-platform
 **To:**
 
 * https://beyondajourney.pages.dev/
+
+![Astro-News Theme - beyond a journey result](/blog_img/web/astro/astro-news-theme-beyondajourney.png)
+
+
 * https://financemotion.pages.dev/ 
 
 I even created skeleton (and videos) for web oriented to podcasts and ebooks.

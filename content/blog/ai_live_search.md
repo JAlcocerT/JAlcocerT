@@ -8,7 +8,9 @@ url: 'live-search-and-research-with-ai'
 ---
 
 
-**TL;DR** Setting up [Local Deep Researcher](#local-deep-researcher) and [Perplexica](#the-perplexica-ai-project)
+**TL;DR**
+
+Setting up [Local Deep Researcher](#local-deep-researcher) and [Perplexica](#the-perplexica-ai-project)
 
 **Intro**
 
@@ -83,10 +85,8 @@ What you need to have handy:
 
 Its all about the **magic of langgraph**.
 
-[![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher/#local-deep-researcher-project" title="Tinkering with LangGraph" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Local Deep Researcher - Post" >}}
   {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Forked Local Deep Researcher" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code that brings OpenAI/Groq options" >}}
 {{< /cards >}}
 
@@ -241,29 +241,6 @@ docker-compose up -d
 
 ---
 
-## Conclusions
-
-### Other F/OSS Alternatives to PerplexityAI
-
-* **Morphic** - https://github.com/miurla/morphic - Apache v2
-  * https://github.com/miurla/morphic?tab=Apache-2.0-1-ov-file#readme
-  * https://www.morphic.sh/
-
-> An AI-powered search engine with a generative UI
-
-* **LLocalSearch** - https://github.com/nilsherzig/LLocalSearch
-  * Apache v2 Licensed
-
-> LLocalSearch is a **completely locally running search aggregator using LLM Agents**. The user can ask a question and the system will use a chain of LLMs to find the answer. The user can see the progress of the agents and the final answer. **No OpenAI or Google API keys are needed**.
-
-* **OpenSearch-AI** - https://github.com/supermemoryai/opensearch-ai
-
->  SearchGPT / Perplexity clone, but personalised for you. 
-
-* https://github.com/Omniplex-ai/omniplex
-  * https://github.com/Omniplex-ai/omniplex?tab=AGPL-3.0-1-ov-file#readme
-
----
 
 ## FAQ
 
@@ -300,6 +277,29 @@ Interesting Search Engines to have a look:
 * https://metager.org/
 * Qwant
 * PrivacyWall
+
+
+### Other F/OSS Alternatives to PerplexityAI
+
+* **Morphic** - https://github.com/miurla/morphic - Apache v2
+  * https://github.com/miurla/morphic?tab=Apache-2.0-1-ov-file#readme
+  * https://www.morphic.sh/
+
+> An AI-powered search engine with a generative UI
+
+* **LLocalSearch** - https://github.com/nilsherzig/LLocalSearch
+  * Apache v2 Licensed
+
+> LLocalSearch is a **completely locally running search aggregator using LLM Agents**. The user can ask a question and the system will use a chain of LLMs to find the answer. The user can see the progress of the agents and the final answer. **No OpenAI or Google API keys are needed**.
+
+* **OpenSearch-AI** - https://github.com/supermemoryai/opensearch-ai
+
+>  SearchGPT / Perplexity clone, but personalised for you. 
+
+* https://github.com/Omniplex-ai/omniplex
+  * https://github.com/Omniplex-ai/omniplex?tab=AGPL-3.0-1-ov-file#readme
+
+
 
 ### Gaps to Cover
 

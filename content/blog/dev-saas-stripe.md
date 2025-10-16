@@ -54,6 +54,12 @@ People are using them to sell ebooks `https://readmake.com/` or ways to code: `h
 Or to sell simple microSaaS services like: `https://poopup.co/`
 
 
+## Stripe Webhooks
+
+<!-- https://www.youtube.com/watch?v=6AoSBpZqsRo -->
+
+{{< youtube "6AoSBpZqsRo" >}}
+
 
 ---
 

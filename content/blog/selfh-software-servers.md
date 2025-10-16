@@ -1,6 +1,6 @@
 ---
 title: "[PaaS Recap] Software for Servers..."
-date: 2025-05-31T01:20:21+01:00
+date: 2025-11-28T01:20:21+01:00
 draft: false
 tags: ["HomeLab"]
 description: 'Selfhosted Apps that simplify my workflow as of 05-2025: LocalStack, DokPloy, Runtipi...'

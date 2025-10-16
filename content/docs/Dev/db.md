@@ -22,3 +22,21 @@ The structured vs object/JSON differenciation is also important...
 1. https://github.com/chartdb/chartdb
 
 > Agpl3.0 |  Database diagrams editor that allows you to visualize and design your DB with a single query. 
+
+
+## Other D&A Tools
+
+* https://github.com/wix-incubator/quix
+* https://github.com/pinterest/querybook
+* https://github.com/quixio/quix-streams
+    * https://quix.io/templates/ai-customer-support
+
+
+
+### Data Stories with a Notebook and ipyvizzu
+
+If you feel confortable with Jupyter notebooks, have a look to: https://github.com/vizzuhq/ipyvizzu-story
+
+> See an example of a data story: https://ipyvizzu-story.vizzuhq.com/latest/examples/titanic/
+
+This is food for thought if you normally create presentations with SliDev!
