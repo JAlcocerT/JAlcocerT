@@ -10,7 +10,9 @@ url: 'cool-link-in-bios'
 
 **Tl;DR**
 
-Im chilling at a hotel pool, have bought a domain and tried the Astro Link in Bio Theme.
+Im chilling at a hotel pool, have bought a domain.
+
+Time to try the Astro Link in Bio Theme.
 
 **Intro**
 

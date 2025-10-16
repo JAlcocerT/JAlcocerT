@@ -50,6 +50,7 @@ And you can see it in youtube:
 
 {{< youtube "KXamTdJA-uc" >}}
 
+With these related resources:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
@@ -216,7 +217,7 @@ Now, you can see that **MySQL is installed**, just inside the container:
 
 {{< /details >}}
 
-Once the RDBMS is ready, we need to make our sample DB ready.
+Once the **RDBMS** is ready, we need to make our sample DB ready.
 
 We will download the `Chinook_MySQL.sql` file.
 
@@ -482,7 +483,7 @@ pip install -r requirements.txt
 
 3. Now, install the database engine
 
-I will show you how to do it with MySQL and Docker.
+I will show you how to do it with **MySQL and Docker**.
 
 You just need the [docker compose](https://github.com/JAlcocerT/Docker/blob/main/Dev/DBs/MySQL_docker-compose.yml)
 
@@ -529,7 +530,7 @@ Install the `ipykernel` and proceed with the workflow.
 Be creative, you can apply it to other DB's!
 
 {{< callout type="info" >}}
-Like the IoT Related DB of [this project](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/) 
+Like the IoT Related DB of [this project with a DHT22](https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/) 
 {{< /callout >}}
 
 

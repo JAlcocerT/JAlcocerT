@@ -2,11 +2,19 @@
 title: "Knitting patterns are all about...math?"
 date: 2025-02-17
 draft: false
-tags: ["Tinkering","Littlyx Web Analytics"]
+tags: ["Tinkering","Littlyx Web Analytics","FreeSewing"]
 description: 'Creating a clothing size calculator.'
 url: 'knitting-pattern-calculator'
 math: true
 ---
+
+
+**Intro**
+
+I recently found about: https://freesewing.eu/ and the source code https://codeberg.org/freesewing/freesewing
+
+https://freesewing.dev/
+
 
 {{< callout type="info" >}}
 Before starting, **credits to lowkey.bold.knit** - `https://instagram.com/p/DE7cDTdMn5k/?utm_source=qr`

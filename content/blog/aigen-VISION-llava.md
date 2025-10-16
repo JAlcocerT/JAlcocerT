@@ -246,6 +246,8 @@ Given a photo of a room and a prompt...you can re-imagine how everything could p
 
 > MIT | Upload a photo of your room to generate your dream room with AI.
 
+Have a look to such projects if you like home styling!
+
 ### Text to Image
 
 If what you want is the opposite...

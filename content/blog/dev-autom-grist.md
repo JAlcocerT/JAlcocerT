@@ -145,6 +145,18 @@ Some open source alternatives to Airtable are:
 * Metabase: an open-source business intelligence tool that connects to any database and lets you create charts and dashboards.
 * Grist: an open-source spreadsheet-like tool that allows you to work with data in a structured and flexible way.
 
+### NoCode DBs
+
+And again, if you feel like its enough code...
+
+**Airtable alternatives:**
+
+1. https://github.com/nocodb/nocodb
+
+* https://noted.lol/nocodb-contact-form-gmail-smtp/
+
+
+2. https://github.com/bram2w/baserow
 
 ---
 

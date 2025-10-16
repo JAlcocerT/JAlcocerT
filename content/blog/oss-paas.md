@@ -201,6 +201,13 @@ curl -sfL https://get.quickstack.dev/setup.sh | sh -
 
 > CE for boddy only | OpenFaaS - Serverless Functions Made Simple
 
+<!-- 
+Apache Kafka 
+https://openfaas.com/
+-->
+
+
+
 ### Dockerizalo
 
 * https://github.com/undernightcore/dockerizalo

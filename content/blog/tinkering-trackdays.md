@@ -2,7 +2,7 @@
 title: "People out there are really creative. Trackdays and Telemetry"
 date: 2025-02-24
 draft: false
-tags: ["Outro","Mechanics","Data Experiment","VK-162","Kalman Filter","Superset"]
+tags: ["Outro","Mechanics","Data Experiment","VK-162","Kalman Filter","Superset","BMW e36"]
 description: 'What I learnt after exchanging few words about car racing, canbus and telemetry.'
 url: 'tinkering-telemetry-trackdays'
 ---
@@ -19,7 +19,7 @@ You never know what people is up to until you ask and listen.
 
 Thats what happened to me during a wedding.
 
-I got the chance to catchup with a friend who was into car racing, and it seems he was into trackdays and records its [BMWe36 telemetry](#bmwe36-telemetry).
+I got the chance to catchup with a friend who was into car racing, and it seems he was into trackdays and records its [BMW e36 telemetry](#bmwe36-telemetry).
 
 Which is a master piece for 6 cylinder and a great place to practice what you lean in great books about practical mechanics like the *Arias Paz*
 
@@ -181,14 +181,15 @@ You can also open it with **Google Colab**: [![Open in Google Colab](https://col
 
 ## Conclusions
 
-For your racing, you can get a Mycrons 5s.
+For your racing, you can get a **Mycrons 5s**.
 
 But I know you want something more and feel like you are in a f1 car on board, with cool telemetry overlay, as given by: `https://multiviewer.app/`
 
 <!-- https://www.youtube.com/watch?v=GeDPIKZq0eg -->
 
-{{< youtube "GeDPIKZq0eg" >}}
+{{< youtube "h8AN9rkedzk" >}}
 
+<!-- https://youtube.com/shorts/h8AN9rkedzk -->
 
 ---
 

@@ -371,7 +371,9 @@ Use **VSCodium via container**:
 
 **What is a Mono repo?**
 
-At its core, a monorepo is a single repository that contains code for *many* different projects, libraries, and applications. Instead of having separate repositories for each part of your codebase, everything lives together in one big happy family.
+At its core, a monorepo is a single repository that contains code for *many* different projects, libraries, and applications.
+
+Instead of having separate repositories for each part of your codebase, everything lives together in one big happy family.
 
 Think of it like organizing all your important documents into one well-structured filing cabinet instead of scattering them across multiple folders and drawers.
 

@@ -640,9 +640,7 @@ https://www.metabase.com/docs/latest/databases/connections/mariadb
 
 ### Superset
 
-https://github.com/JAlcocerT/Docker/tree/main/IoT/Superset
-
-### Apache Superset
+Apache Superset: https://github.com/JAlcocerT/Docker/tree/main/IoT/Superset
 
 Get Superset running locally with [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/IoT/Superset).
 

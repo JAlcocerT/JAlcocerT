@@ -133,6 +133,9 @@ By following this steps, the app will use one of your domains:
 
 ## FAQ
 
+
+Other Serverless Functions Alternatives - https://www.openfaas.com/
+
 ### CI/CD Pipeline
 
 It would be great to have your code changes automatically deployed to DockerHub, so that GCR can read the newest image.
@@ -143,7 +146,3 @@ You have examples of CI/CD on these projects:
 
 * <https://github.com/JAlcocerT/Py_Trip_Planner>
 * <https://github.com/JAlcocerT/Slider-Crank>
-
-### Other Serverless Functions Alternatives
-
-1. https://www.openfaas.com/

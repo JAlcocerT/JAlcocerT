@@ -265,36 +265,28 @@ Therefore, if your goal is to work with MongoDB in Python, using `pymongo` is th
 {{< /cards >}}
 
 
-
-
-<!-- 
-Apache Kafka 
-https://openfaas.com/
--->
-
-
-### InfluxDB
+### InfluxDB and TimeScale
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Pi 101" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Get Started with IoT Project" >}}
-  {{< card link="https://jalcocert.github.io/RPi/tags/mongodb/" title="MongoDB with a Pi ↗" image="https://jalcocert.github.io/RPi/img/metabase.png" subtitle="IoT Project" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/#pushing-mlx90614-data-to-influxdb/" title="InfluxDB with a Pi ↗" image="https://jalcocert.github.io/RPi/img/metabase.png" subtitle="IoT Project with MLX90614" >}}
 {{< /cards >}}
-
-TimeScale
-
-
 
 
 ### F/OSS Databases
 
+During your D&A career, you will most certainly see: ES + Kibana / Graphite / Druid.
+
 #### Elastic Search and Kibana
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Pi 101" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Get Started with IoT Project" >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/" title="ES Kibana and a DHT22 with a Pi ↗" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="IoT Project with Kibana and a DHT22" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_IoT/DHT22-to-ElasticSearch/" title="Pi + ES + DHT22 Folder" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Get Started with IoT Project" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/" title="Elastic Search Kibana and a DHT22 with a Pi ↗" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="IoT Project with Kibana and a DHT22" >}}
 {{< /cards >}}
 
-#### Prometheus
+#### Prometheus 
+
+For Grafana, Prometheus and Graphite are very popular:
 
 <!-- 
 ![alt text](/blog_img/iot/grafana.png) -->
@@ -303,9 +295,6 @@ TimeScale
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/Grafana/Docker-compose.yml" title="Grafana Container Setup ↗" image="/blog_img/iot/grafana.png" subtitle="Grafana with Prometheus plays well with Grafana" >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/selfh-grafana-monit/#grafana-with-prometheus-and-node-exporter" title="Prometheus with NodeExporter ↗" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="Grafana with Prometheus Project" >}}
 {{< /cards >}}
-
-#### Graphite
-
 
 
 #### DRUID
@@ -710,20 +699,3 @@ Make sure to replace `'localhost:9092'` with the address of your Kafka broker an
 With this code, you can push data to Kafka from your Python application.
 
 {{< /details >}}
-
----
-
-## FAQ
-
-### NoCode DBs
-
-And again, if you feel like its enough code...
-
-**Airtable alternatives:**
-
-1. https://github.com/nocodb/nocodb
-
-* https://noted.lol/nocodb-contact-form-gmail-smtp/
-
-
-2. https://github.com/bram2w/baserow

@@ -224,7 +224,12 @@ More Selfhosted resources
 
 ### SelfHosted WebAnalytics
 
+![Cookies Meme](/blog_img/web/COOKIES.jpg)
+
+
 https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#better-webanalytics
+
+
 
 {{< cards >}}
   {{< card link="https://github.com/Litlyx/litlyx" title="Litlyx Repo" image="/blog_img/web/weban/littlyx-weban.png" subtitle="How Litlyx web analytics looks" >}}
@@ -248,9 +253,15 @@ Link analytics solutions, like Kutt:
 
 ### Monitoring For HomeLab
 
+
+![Beszel Deployed to hetzner](/blog_img/Monitoring/beszel-hetzner.png)
+
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring with Beszel" >}}
 {{< /cards >}}
+
+https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#tianji
 
 
 

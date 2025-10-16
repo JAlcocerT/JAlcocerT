@@ -51,7 +51,7 @@ And you can add the agent as CLI (instead of a docker service):
 Remember to add the Public server IP as host (or the private IP of your home network like `192.168.0.12`)
 {{< /callout >}}
 
-![Beszel](/blog_img/Monitoring/beszel-hetzner.png)
+![Beszel Deployed to hetzner](/blog_img/Monitoring/beszel-hetzner.png)
 
 {{< youtube "O_9wT-5LoHM" >}}
 <!-- https://www.youtube.com/watch?v=O_9wT-5LoHM&t=602s -->

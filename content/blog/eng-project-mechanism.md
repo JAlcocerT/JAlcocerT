@@ -2,7 +2,7 @@
 title: "How to setup Gabe's project, Mechanism"
 date: 2025-03-02T10:20:21+01:00
 draft: false
-tags: ["Python","Mechanics","Engineering","TinaCMS","Plotly","Animations"]
+tags: ["Python","Mechanics","Engineering","TinaCMS","Plotly","Animations","Katex"]
 description: "Mechanisms Animations in Python. From Singer machines to car engines. Project Docs with Astro."
 url: 'gabemorris12-mechanism-project-setup'
 math: true
@@ -64,8 +64,9 @@ I just added this line at the script to get a `.gif` rendered: [See the code lin
 ani.save('../animations/engine.gif', writer='pillow', fps=30)
 ```
 
-<!-- https://youtube.com/shorts/2xMOxiRz6F4 -->
-{{< youtube "2xMOxiRz6F4" >}}
+You can uploads those to [youtube](https://youtube.com/shorts/2xMOxiRz6F4)
+<!--  -->
+<!-- {{< youtube "2xMOxiRz6F4" >}} -->
 
 
 
@@ -231,6 +232,8 @@ $$
   \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
 \end{aligned}
 $$
+
+Dont worry, I said simpler :)
 
 
 {{< cards >}}

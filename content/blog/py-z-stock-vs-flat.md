@@ -242,8 +242,7 @@ First div of 2025 has been 0.264 and first of 2024 was 0.2565, or a **~2.92% gro
 
 But some years are better than others, right?
 
-Also, not all companies, sectors, do similarly:
-
+Also, not all companies or sectors, do similarly:
 
 {{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks -DividendEvolution.JPG">}}
 
@@ -382,7 +381,9 @@ sankey-beta
 
 You might need to put some more money in the initial stages of the process, despite having later on FCF available.
 
-What exactly? We need to make some **zoom in** on the previous **cash flow graph**:
+What exactly? 
+
+We need to make some **zoom in** on the previous **cash flow graph**:
 
 ![First Months of Renting](/blog_img/data-experiments/buy_mortage_and_rent_CF_focused.png) 
 

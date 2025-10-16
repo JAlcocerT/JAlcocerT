@@ -772,6 +772,12 @@ The CLI agents have been a great part of this 2025:
 2. Real Estate RAG
 3. Vibe Coding a WebApp to make SliDev PPTs BA friendly
 
+And extracted cool video metadata (gps / geolocation) from GoPros:
+
+https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-and-gopro-metadata
+![GoPro Metadata Speed trackday](/blog_img/karting/gopro-gps-trackday-speed.png)
+
+
 #### Other Videos
 
 1. AI Powered [shorts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#ai-powered-shorts)
@@ -961,11 +967,20 @@ https://jalcocert.github.io/JAlcocerT/web-apps-with-python/#streamlit
 
 ![Streamlit Real Estate WebApp](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
 
+![French Amortiz Example](/blog_img/data-experiments/french_amortiz.png) 
+
+
+{{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks -DividendEvolution.JPG">}}
+
+https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#rent-price-vs-property-price
+![First Months of Renting](/blog_img/data-experiments/buy_mortage_and_rent_CF_focused.png) 
+
+
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Streamlit x Real Estate | Post  ↗" >}}
 {{< /cards >}}
 
-Use Vision Tools, like RoomGPT + Vision Models to Tweak your Room and do that interior design:
+Use Vision Tools, like RoomGPT + Vision Models to Tweak your Room and do that interior design / home styling:
 https://jalcocert.github.io/JAlcocerT/ai-vision-models/#roomgpt-for-real-estate
 
 ![Normalized Value Change of PyStocks Streamlit Version](/blog_img/dev/pystocks/pystocks-vibed1.png)
