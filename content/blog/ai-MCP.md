@@ -2,7 +2,7 @@
 title: "The new next thing - Model Context Protocol"
 date: 2025-04-24T23:20:21+01:00
 draft: false
-tags: ["Gen-AI","Python","Dev","Context7"]
+tags: ["Gen-AI","Python","Dev","Context7 MCP","Claude Task Master"]
 description: 'Reviewing how MCP protocol works. From LangGraph to OpenAI Agents. Example with: MCP Server Streamlit with Ollama + Windsurf Context7 MCP'
 url: 'ai-understanding-mcp-framework'
 ---
@@ -234,7 +234,9 @@ The edges would likely be direct transitions between these nodes in this simple 
 {{< /details >}}
 
 
-**In essence, understanding LangGraph's state graphs involves grasping how information flows through a series of interconnected steps, with the "state" acting as the central data container that is modified and used to make decisions about the next steps.** By visualizing the graph and tracking how the state evolves, you can gain a clear understanding of the application's logic and behavior.
+**In essence, understanding LangGraph's state graphs involves grasping how information flows through a series of interconnected steps, with the "state" acting as the central data container that is modified and used to make decisions about the next steps.** 
+
+By visualizing the graph and tracking how the state evolves, you can gain a clear understanding of the application's logic and behavior.
 
 ```mermaid
 stateDiagram
@@ -829,7 +831,13 @@ The **PM for Your AI agent**: how about AI taking care of whats next following a
 
 An AI-powered task-management system you can drop into Cursor, Lovable, Windsurf, Roo, and others.
 
-Taskmaster is your AI's personal project manager. Organize, research, expand, prioritize, and ship tasks effortlessly. Enjoy permanent context, zero drift &amp; instant clarity. It's free, open-source &amp; API-friendly. Let's vibe productively.
+**Claude Taskmaster** is your AI's personal project manager. Organize, research, expand, prioritize, and ship tasks effortlessly.
+
+Enjoy permanent context, zero drift &amp; instant clarity. 
+
+It's free, open-source &amp; API-friendly. 
+
+Let's vibe productively.
 
 ![Claude Task Master - 101](/blog_img/GenAI/aidocs/taskmater-model.png)
 
@@ -837,5 +845,7 @@ Taskmaster is your AI's personal project manager. Organize, research, expand, pr
 
 ### OpenAI x MCP
 
-https://github.com/openai/codex/issues/5?ref=blog.lai.so
-https://github.com/agency-ai-solutions/openai-codex-mcp
+Codex CLI x MCP
+
+* https://github.com/openai/codex/issues/5?ref=blog.lai.so
+* https://github.com/agency-ai-solutions/openai-codex-mcp

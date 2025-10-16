@@ -162,15 +162,7 @@ vcgencmd measure_temp pmic
 
 > aGPL | Checkmate is an open-source, self-hosted tool designed to **track and monitor server hardware**, uptime, response times, and incidents in real-time with beautiful visualizations.
 
-### Publiteme
 
-If you'd like to have **a simple blogging platform**: 
-
-* https://github.com/MikeMather/publite.me
-
-<!-- https://www.youtube.com/watch?v=yAJvbF-m5FM -->
-
-{{< youtube "yAJvbF-m5FM" >}}
 
 ### UserTour
 
@@ -387,7 +379,7 @@ Lately I got to know about couple of **'new' VectorDBs**:
 
 * https://github.com/milvus-io/milvus
 
->  Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search 
+>  Milvus is a high-performance, cloud-native **vector database** built for scalable vector ANN search 
 
 Milvus can have **Attu** as UI companion:
 
@@ -505,7 +497,7 @@ In the meantime I discovered that it is also possible to [ask questions about a 
 
 Its possible to use few LLMs to get the reply, tried with local models via Ollama, OpenAI and Groq APIs.
 
-![alt text](/blog_img/GenAI/langchain-repo-webask.png)
+![Info about QATrack repository](/blog_img/GenAI/langchain-repo-webask.png)
 
 <!-- https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-web.ipynb
 https://github.com/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-repo-readme.ipynb
@@ -610,8 +602,7 @@ codex
 Make sure to run codex on a git environment so that you can see whats been changed!
 {{< /callout >}}
 
-* Are you able to generate documentation of the local-deep-researcher project, which files are located at ./src/ollama_deep_researcher and have it outputed to the astro theme
-template that it is loaded at ./docs/src?
+* Are you able to generate documentation of the local-deep-researcher project, which files are located at `./src/ollama_deep_researcher` and have it outputed to the astro theme template that it is loaded at `./docs/src`?
 
 * Iterating on the prompts for Codex:
 
@@ -662,15 +653,15 @@ The agent placed them at the *wrong place*, just following my incorrect orders:
 
 So I moved the files and it required to tweak the frontmatter, which I will specify on the next prompt iteration.
 
-This is the result:
+This is **the result:**
 
-![alt text](/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-0.png.png)
+![alt text](/blog_img/GenAI/aidocs/codex-aidocs-astro-v1-0.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/docs" title="Tested with LocalDeepResearcher | Astro AI Powered Docs v1.0 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/GenAI/aidocs/starlight-v1-0.png)
+![Codex generated docs about a repository combined with an Astro Theme for Docs](/blog_img/GenAI/aidocs/starlight-v1-0.png)
 
 
 {{< details title="Codex AI Docs Prompt Astro | v1.1 📌" closed="true" >}}
@@ -1019,11 +1010,3 @@ Add the info to a docs.md and please also provide a last section with a relevant
   {{< filetree/file name="hugo.toml" >}}
 {{< /filetree/container >}}
 ```
-
-
-## FAQ
-
-More Selfhosted resources
-
-* https://libreselfhosted.com/project/fluxbb/
-* https://awesome-docker-compose.com/apps/photo-server/pigallery-2

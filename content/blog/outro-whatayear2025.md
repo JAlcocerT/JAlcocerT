@@ -64,6 +64,8 @@ Same, we can also have monitor running in gihub https://github.com/upptime/uppti
 
 Perplexity browser with agents
 
+* https://notebooklm.google.com/
+
 > This made me summarize my *old me* from <2023 posts. And those are pretty nice notes for thought.
 
 * https://github.com/leoneljdias/tempo
@@ -924,6 +926,9 @@ https://jalcocert.github.io/JAlcocerT/web-apps-with-python/#streamlit
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Streamlit x Real Estate | Post  ↗" >}}
 {{< /cards >}}
+
+Use Vision Tools, like RoomGPT + Vision Models to Tweak your Room and do that interior design:
+https://jalcocert.github.io/JAlcocerT/ai-vision-models/#roomgpt-for-real-estate
 
 ![Normalized Value Change of PyStocks Streamlit Version](/blog_img/dev/pystocks/pystocks-vibed1.png)
 https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts

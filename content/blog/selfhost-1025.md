@@ -203,8 +203,23 @@ Conclusion: Which to Choose?
 
 ## FAQ
 
+More Selfhosted resources
+
+* https://libreselfhosted.com/project/fluxbb/
+* https://awesome-docker-compose.com/apps/photo-server/pigallery-2
+
+
 
 ### SelfHosted WebAnalytics
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#better-webanalytics
+
+{{< cards >}}
+  {{< card link="https://github.com/Litlyx/litlyx" title="Litlyx Repo" image="/blog_img/web/weban/littlyx-weban.png" subtitle="How Litlyx web analytics looks" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/" title="Litlyx Post Views Distribution" image="/blog_img/web/weban/litlyx.png" subtitle="How could this not relate with Pareto?" >}}
+{{< /cards >}}
+
+> Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
 
 ![Web Analytics with LunaLytics](/blog_img/selfh/HomeLab/weban-lunalytics.png)
 

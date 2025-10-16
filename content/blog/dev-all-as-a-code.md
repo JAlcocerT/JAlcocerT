@@ -186,9 +186,16 @@ https://github.com/JAlcocerT/py-stonks/blob/main/z-eda-yfinance/yfinance-104.ipy
 Just in case that you need some help with: https://fmhy.net/misc#resume-portfolio
 
 
+## Video as a Code
+
+Thanks to FFMPEG and CLI
+
+https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing
+
+![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
 
 
-## Animations as a Code
+### Animations as a Code
 
 
 You know, we can do [animation as a code as seen with matplotlib](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/).

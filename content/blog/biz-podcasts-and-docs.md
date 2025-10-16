@@ -2,7 +2,7 @@
 title: "Tech for Creating i18n Documentation and related Podcast"
 date: 2025-05-15
 draft: false
-tags: ["Web","Commento","Starlight","GitPodcast","AstroPod","WeekToDo","FreshRSS"]
+tags: ["Web","Commento","Starlight","GitPodcast","AstroPod","WeekToDo","FreshRSS","selfh.st"]
 description: "How to create Serverless Podcasts and a related Astro (Starlight and AstroPod) website for them. With a look to Code2Prompt and Research Agents."
 url: 'tech-for-podcast'
 ---
@@ -196,9 +196,13 @@ Or should our selfhoster backlog *to be tried* list to keep growing?
 
 **The idea**
 
-Lately, I have been [tinkering with shorts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#shorts), also with automatic project Docs
+Lately, I have been [tinkering with shorts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#shorts),
 
-Wouldnt this be a way to catch up with the bast amount of cool projects to SelfHost and share a quick overview with others?
+Also with [automatic project Docs](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#automated-projects-docs), particularly [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#vibe-coded-project-docs)
+
+![Codex generated docs about a repository combined with an Astro Theme for Docs](/blog_img/GenAI/aidocs/starlight-v1-0.png)
+
+Wouldnt this be a way to "catch up" with the bast amount of cool projects to SelfHost and share a quick overview with others?
 
 **Example use case**: Given the awsome weekly newsletter https://selfh.st/weekly/2025-05-09/ at the New Software section
 

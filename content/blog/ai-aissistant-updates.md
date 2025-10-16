@@ -2,7 +2,7 @@
 title: "Streamlit Updates. Assistant"
 date: 2025-04-12
 draft: false
-tags: ["Dev","Entrepreneur"]
+tags: ["Dev","Entrepreneur","Tech Talk"]
 description: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT) Generator, Speech Rater...'
 url: 'ai-assistant-streamlit'
 ---
@@ -45,6 +45,8 @@ And I could not resist to combine it:
 You can think about this is a [kind of **BI/AI** part](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/)
 
 {{< youtube "KXamTdJA-uc" >}}
+
+And it can give you content for interesting tech talks.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
@@ -256,18 +258,9 @@ Which of these very different use cases will be valued the most?
 * [PostHog](https://eu.posthog.com/project/15002/replay/home) - https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics
 
 ---
-
-## FAQ
-
-**Multichat**
+See also the **Multichat**
 
 {{< cards >}}
   {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multichat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Streamlit Multichat" >}}
-{{< /cards >}}
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/MultiChat/" title="MultiChat" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
-  {{< card link="https://github.com/JAlcocerT/MultiChat" title="MultiChat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the MultiChat" >}}
 {{< /cards >}}

@@ -283,9 +283,7 @@ How about: making the user select the desired theme for its website.
 
 And later on...
 
-Have a **markdown editor**, just like: https://github.com/MikeMather/publite.me
-
-> As seen during my [Y2505 SelfhPost](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#publiteme)
+Have a **markdown editor**, just like: https://github.com/MikeMather/publite.me do ?
 
 These guys have done it with Python: *which brings comenting working out of the box*
 

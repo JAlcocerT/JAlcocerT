@@ -126,6 +126,12 @@ Avoid LLM lock-in and the recurring subscription bills.
 
 **Simply use APIs**.
 
+
+* OpenAI API Keys - <https://platform.openai.com/api-keys>
+* Anthropic - <https://console.anthropic.com/settings/keys>
+* Groq - <https://console.groq.com/keys>
+* For [Ollama](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama), you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
+
 Together with Streamlit!
 
 
@@ -175,7 +181,7 @@ for model in models:
 ```
 
 
-
+https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/GrokAPI
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api" title="Grok API Blog Post" >}}
 {{< /cards >}}
@@ -340,6 +346,14 @@ Powerful Translator: https://www.deepl.com/en/translator
 If you like [Podcasts](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#a-look-to-gitpodcast)
 
 * https://www.gitpodcast.com/rybbit-io/rybbit
+
+
+https://jalcocert.github.io/JAlcocerT/local-ai-audio/
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/audio-to-text-tools/" title="OpenAI TTS and Transcription Project" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter Post" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="NEW Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
+{{< /cards >}}
 
 
 #### 11Labs x MCP

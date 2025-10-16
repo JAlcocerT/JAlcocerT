@@ -522,6 +522,13 @@ You can also have handy a list of QQ to [enable others](https://jalcocert.github
 
 #### JIRA Creation
 
+What's the best way to create tasks for jira?
+
+Make sure to provide:
+
+1. Context
+2. Action/Task
+3. Success Criteria / Definition of Done
 
 ---
 

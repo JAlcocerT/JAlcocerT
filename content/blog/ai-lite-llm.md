@@ -16,9 +16,6 @@ Its time to discover **LiteLLM**
 
 > Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format - [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]
 
-[![Star History Chart](https://api.star-history.com/svg?repos=BerriAI/litellm,type=Date)](https://star-history.com/BerriAI/litellm&Date)
-
-
 {{< callout type="info" >}}
 Been testing LiteLLM at [AIssistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Tests), with this [script](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_Tests/LiteLLM/litellm_sample.py)
 {{< /callout >}}
@@ -266,13 +263,8 @@ https://docs.mistral.ai/api/#tag/chat/operation/chat_completion_v1_chat_completi
 2. Register (they require phone number too)
 3. Get Mistral APi key
 
-```py
 
-```
 
-{{< callout type="info" >}}
-
-{{< /callout >}}
 
 ### Hugging Face Models
 
@@ -302,14 +294,8 @@ print(response)
 
 
 {{< callout type="warning" >}}
-Requires **HF Pro**
+Requires **HF Pro** which is paywalled
 {{< /callout >}}
-
-
-### Open Router API
-
-https://docs.litellm.ai/docs/providers/openrouter
-
 ---
 
 ## Conclusions
@@ -322,3 +308,5 @@ As it can unify the API calls across different providers!
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-structured-outputs-LLM/" title="Tinkering with structured outputs | Post ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/" title="Tinkering with function calling | Post ↗" >}}
 {{< /cards >}}
+
+You could also try with Open Router API: https://docs.litellm.ai/docs/providers/openrouter

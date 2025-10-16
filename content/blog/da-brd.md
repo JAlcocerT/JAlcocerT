@@ -195,7 +195,9 @@ By answering these questions comprehensively and clearly, the BRD provides a sol
 
 ## The FRD
 
-You're right to ask about the Functional Requirements Document (FRD) next, as it's the natural follow-up to the BRD in the project lifecycle. If the BRD is the "What" and the "Why" from a business perspective, the FRD is the "How" from a system perspective.
+You're right to ask about the Functional Requirements Document (FRD) next, as it's the natural follow-up to the BRD in the project lifecycle.
+
+If the BRD is the "What" and the "Why" from a business perspective, the FRD is the "How" from a system perspective.
 
 ### Explaining a Functional Requirements Document (FRD) in Another Way: The System's "Instruction Manual"
 
@@ -215,7 +217,9 @@ In short, the FRD translates the high-level business needs articulated in the BR
 
 ### Questions a FRD Has to Reply To
 
-The FRD dives into the technical specifics of *how* the system will function to meet the business requirements. It answers questions that are critical for developers, designers, and testers.
+The FRD dives into the technical specifics of *how* the system will function to meet the business requirements. 
+
+It answers questions that are critical for developers, designers, and testers.
 
 1.  **What exactly will the system *do*?**
     * What are the specific features and functionalities that the system will provide?

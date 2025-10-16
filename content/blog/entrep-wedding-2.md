@@ -65,6 +65,11 @@ This one is great, yet it seems that the way to get MRR is via the companies who
 https://me-qr.com/page/blog/colored-qr-codes
 * [QR Code](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py) Generation with streamlit
 
+Like the one I used for [this weddin](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt).
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+
 **The try for free stuff**
 
 

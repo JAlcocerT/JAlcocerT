@@ -34,13 +34,7 @@ pie title Property Adquisition Expenses Breakdown
          "Registrations" : 2
 ```
 
-```mermaid
-pie title Property Adquisition Expenses Breakdown
-         "Property" : 100
-         "Maintenance" : 10
-         "Insurance" : 1
-         "Registrations" : 2
-```
+
 
 ### Spain
 
@@ -74,14 +68,15 @@ You can find sample house plans at:
 Whatever you will do...
 {{< /callout >}}
 
-...make sure you understand about:
+...make sure you understand:
 
-* Market volatility
-* What is debt (and money)
-* If a mortage is complex, is even more when you *play* between currencies
-* Math CAGR Formula: See how much nominal values Changed. Understand [inflation](https://inflationchart.com/home-in-m3) and how [wages](https://en.wikipedia.org/wiki/Minimum_wage_in_Poland) are affected.
-   * https://fred.stlouisfed.org/series/WM2NS
-   * https://inflationchart.com/home-in-m3
+1. Market volatility
+2. What is debt (and money)
+3. If a mortage is complex, is even more when you *play* between currencies
+4. Math CAGR Formula: See how much nominal values Changed. Understand [inflation](https://inflationchart.com/home-in-m3) and how [wages](https://en.wikipedia.org/wiki/Minimum_wage_in_Poland) are affected.
+
+* https://fred.stlouisfed.org/series/WM2NS
+* https://inflationchart.com/home-in-m3
 
 * **For a value that has gone up 4 times over 20 years, the CAGR is 7.18%.** This means that, on average, the value grew by approximately 7.18% each year.
 
@@ -363,6 +358,4 @@ Or are you fine with the ones you were so excited to buy few months ago?
 
 ## FAQ
 
-There are interesting **pre-made** solutions: zrobim,...
-
-* https://forocoches.com/foro/showthread.php?t=6810398&page=12
+There are interesting **pre-made** solutions: zrobim,... or the ones mentioned on [this forum](https://forocoches.com/foro/showthread.php?t=6810398&page=12)

@@ -123,7 +123,7 @@ I have cloned the original project: https://github.com/langchain-ai/local-deep-r
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG x LangGraph" >}}
-  {{< card link="https://github.com/JAlcocerT/local-deep-researcher" title="Forked Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Local Deep Researcher with langGraph - Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/local-deep-researcher" title="Forked LocalDeepResearcher Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Local Deep Researcher with langGraph - Source Code on Github" >}}
 {{< /cards >}}
 
 
@@ -371,19 +371,13 @@ If you want to track additional bits of data (say timing metrics, alternate summ
 
 I dont have a crazy fast GPU, so my first thought was to use [codex](https://jalcocert.github.io/JAlcocerT/vide-coding/#openai) to simply plug alternatively **OpenAI models**:
 
-
-
 * OpenAI API Keys - <https://platform.openai.com/api-keys>
 * Anthropic - <https://console.anthropic.com/settings/keys>
 * Groq - <https://console.groq.com/keys>
 * For [Ollama](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama), you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
 
-
-
 ## Other LangGraph Resurces
 
 * https://github.com/esxr/langgraph-mcp/tree/main
 
-### Big Tool
-
-LangGraph Big Tool caught my attention [while writting the RAG Post](https://jalcocert.github.io/JAlcocerT/comp.aring-rag-and-use-cases/#langgraph-bigtool)
+LangGraph **Big Tool** caught my attention [while writting the RAG Post](https://jalcocert.github.io/JAlcocerT/comp.aring-rag-and-use-cases/#langgraph-bigtool)

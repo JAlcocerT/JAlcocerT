@@ -237,6 +237,13 @@ services:
 
 ##### Publite
 
+If you'd like to have **a simple blogging platform**: 
+
+
+<!-- https://www.youtube.com/watch?v=yAJvbF-m5FM -->
+
+{{< youtube "yAJvbF-m5FM" >}}
+
 6. https://github.com/MikeMather/publite.me
 
 > MIT | thoughtfully minimal, self hosted blogging

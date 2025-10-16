@@ -9,7 +9,7 @@ url: 'audio-to-text-tools'
 
 **Tl;DR**
 
-Creating a streamlit app that rates your speech based on OpenAI TTS/S2T capabilities.
+Creating a streamlit app that rates your speech based on **OpenAI TTS/S2T capabilities**.
 
 **Intro**
 
@@ -59,7 +59,7 @@ graph TD
     A[User records Audio] --> B(Streamlit receives Audio);
     B --> C{OpenAI Transcription};
     C --> D[Transcription Inputs to LLM];
-    D --> E[Text-to-Speech (T2S)];
+    D --> E[Text-to-Speech == TTS];
 ```
 
 ## S2T

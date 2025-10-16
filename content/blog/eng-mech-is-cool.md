@@ -106,24 +106,30 @@ Here's a breakdown:
 * **However, titanium boasts a superior strength-to-weight ratio, meaning it offers comparable or even better tensile performance for a lighter component.**
 * **Titanium also tends to be more ductile (higher tensile elongation) than steel.**
 
-Therefore, when considering tensile resistance, you need to specify whether you're looking at absolute strength, strength relative to weight, or the material's ability to deform before breaking. Titanium often wins when weight is a critical factor, while certain steels excel in absolute strength.
+Therefore, when considering tensile resistance, you need to specify whether you're looking at absolute strength, strength relative to weight, or the material's ability to deform before breaking. 
+
+Titanium often wins when weight is a critical factor, while certain steels excel in absolute strength.
 
 ---
 
 ## Conclusions
 
-I have been using:
 
-* https://notebooklm.google.com/
+
+{{< youtube "iely3Q70Bps" >}}
 
 
 ### Analogies with Electrical Eng
+
+If you like to do transfer learning and make some analogy to other knowledge...
 <!-- 
 https://youtu.be/Ckownv7VoxM?si=oENq0sLMSJ8F2Vls -->
 
 
 {{< youtube "Ckownv7VoxM" >}}
 
+
+See also the open MIT lectures of power electronics (or many other topics):
 
 <!-- 
 https://www.youtube.com/watch?v=f7oXhDatwtY 
@@ -136,11 +142,11 @@ https://youtube.com/shorts/iely3Q70Bps?si=lsQyCiGEevA3BicW
 -->
 
 
-{{< youtube "iely3Q70Bps" >}}
+
 
 ### Cool Physics Animations
 
-There are people very creative out there: https://jakevdp.github.io/
+There are **people very creative** out there: https://jakevdp.github.io/
 
 See for yourself how cool are these animations:
 

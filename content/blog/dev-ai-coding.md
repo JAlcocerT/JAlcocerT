@@ -2,7 +2,7 @@
 title: "Vide Coding. For websites and more..."
 date: 2025-04-15T23:20:21+01:00
 draft: false
-tags: ["Dev","GenAI","WindSurf"]
+tags: ["Dev","GenAI","WindSurf","Firebase Studio"]
 description: 'How to get started with vibe coding. FirebaseStudio vs Codex vs Claude Code...or maybe just Windsurf IDE?'
 url: 'vide-coding'
 ---
@@ -18,6 +18,8 @@ And it seems it will stay for a while.
 But how about creating/improving websites and their components with these tools... or even web apps?
 
 ## Firebase Studio
+
+If you were doing free static hosting with firebase, now it seems you can also do the websites with AI there as well:
 
 * https://studio.firebase.google.com/
 * https://firebase.google.com/docs/studio/get-started-import?import_type=source
@@ -270,7 +272,8 @@ There are many options...
 
 Some Paid IDE/Assistants/Agentic coding...
 
-* Repliit
+* https://replit.com/
+* [Lovable](https://jalcocert.github.io/JAlcocerT/git-recap/#outro)
 * https://www.cursor.com/pricing
 
 
@@ -530,9 +533,3 @@ We can use open models, with 3rd party APIs (like Groq).
 **OSS Extension & Model & Local Run**
 
 [Deepseek v3](https://huggingface.co/deepseek-ai)
-
-
-### Others
-
-* https://replit.com/
-* [Lovable](https://jalcocert.github.io/JAlcocerT/git-recap/#outro)

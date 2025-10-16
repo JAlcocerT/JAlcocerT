@@ -226,7 +226,7 @@ But that might cause friction on users having to leave your home/services page a
 You could do something similar, but inside your web, with:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot" image="/blog_img/GenAI/rag101.jpeg" subtitle="Docker Config  🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config  🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8n Docker Config" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config  🐋 ↗" >}}
 {{< /cards >}} 
 
@@ -639,9 +639,15 @@ Importantly, it is **open-source and self-hostable**, giving users full control 
 
 Typbot supports multi-channel deployment (websites, WhatsApp, etc.), AI model integration (like OpenAI GPT-3/4), extensive customization, analytics, and integration with tools such as Zapier and Google Sheets.
 
- The self-hosting option requires managing your own server and infrastructure, but you get all features without subscription fees aside from hosting costs.
+The self-hosting option requires managing your own server and infrastructure, but you get all features without subscription fees aside from hosting costs.
 
-Regarding n8n, it is a powerful no-code workflow automation tool that allows building custom AI chatbots by integrating different services and APIs like OpenAI for natural language understanding and other data sources via connectors. n8n itself is not a chatbot platform but a flexible automation engine where you can design chatbot workflows to qualify leads, book appointments, fetch real-time data, and respond intelligently. It also supports self-hosting and gives full control over data and customization. n8n bots require more setup and technical skills compared to Typbot but provide extreme flexibility and integration breadth.
+Regarding n8n, it is a powerful no-code workflow automation tool that allows building custom AI chatbots by integrating different services and APIs like OpenAI for natural language understanding and other data sources via connectors. 
+
+**n8n itself is not a chatbot platform** but a flexible automation engine where you can design chatbot workflows to qualify leads, book appointments, fetch real-time data, and respond intelligently.
+
+It also supports self-hosting and gives full control over data and customization. 
+
+n8n bots require more setup and technical skills compared to Typbot but provide extreme flexibility and integration breadth.
 
 
 | Platform | Type | Self-hosted | Key Features | Use case fit | Notes |
@@ -649,20 +655,12 @@ Regarding n8n, it is a powerful no-code workflow automation tool that allows bui
 | Typbot | No-code chatbot builder | Yes | Drag-and-drop builder, AI integration, multi-channel deployment, analytics, full customization | Quick to build conversational flows, lead capture, surveys | Open-source, self-hosting supported, easier for non-technical users |
 | n8n | Workflow automation tool | Yes | Visual automation builder, AI API integration, connects multiple services | Custom, complex AI chatbots integrated with business apps | Requires technical skills, max flexibility, self-hosted, no native chatbot interface |
 
-In essence, Typbot offers a ready chatbot-building experience with self-hosted option taking care of bots specifically, while n8n is a powerful automation platform allowing chatbot creation among many other uses, ideal for those wanting customizable automation workflows that include chatbot capability.[3][9][1][7]
+In essence, Typbot offers a ready chatbot-building experience with self-hosted option taking care of bots specifically, while n8n is a powerful automation platform allowing chatbot creation among many other uses, ideal for those wanting customizable automation workflows that include chatbot capability.
 
 [1](https://typebot.io)
 [3](https://docs.typebot.io/self-hosting/get-started)
 [4](https://localops.co/self-host/apps/typebot)
-[5](https://github.com/davidbrandpro/typebot.io-Vercel)
-[6](https://github.com/sergor5/typebot-selfhost)
-[7](https://www.voiceflow.com/blog/n8n-ai-chatbot-integration)
-[8](https://n8n.io/workflows/2786-create-a-branded-ai-powered-website-chatbot/)
-[9](https://blog.n8n.io/how-to-make-ai-chatbot/)
-[10](https://n8n.io/workflows/categories/ai-chatbot/)
-[12](https://docs.typebot.io)
-[15](https://elest.io/open-source/typebot/resources/quickstart)
-[17](https://docs.typebot.io/self-hosting/configuration)
+
 
 
 ### F/OSS No Code Data Tools
