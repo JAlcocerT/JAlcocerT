@@ -8,6 +8,12 @@ description: Updating OA5 Pro Firmware. Compared with Go Pro hero 9 action cam (
 url: 'dji-oa5pro-firmware-updates'
 ---
 
+**Intro**
+
+I made a quick firmware updates to the osmo action 5 pro.
+
+The idea is to enable the **bit rate selection**.
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="Osmo 5 Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Oa5Pro Review" >}}

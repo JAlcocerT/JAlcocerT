@@ -410,7 +410,9 @@ Here's a breakdown:
 * **ResNet (for images):**  A deep convolutional neural network used for image feature extraction, often used to generate image embeddings.
 * **CLIP (for images and text):** A model that learns joint embeddings for images and text, allowing for zero-shot image classification and text-based image search.
 
-Embedding models are essential tools for representing data in a way that captures its semantic meaning, enabling a wide range of applications that rely on understanding relationships and similarities between data points. They are a core component of many modern AI systems.
+Embedding models are essential tools for representing data in a way that captures its semantic meaning, enabling a wide range of applications that rely on understanding relationships and similarities between data points. 
+
+They are a core component of many modern AI systems.
 
 
 {{< newtab url="/selfhosting-flowise-ai/" text="Flowise AI" >}}

@@ -51,6 +51,11 @@ This selection depends on priorities: Slidev for modern web presentations, Revea
 ### PPTs as a Code
 
 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slidev" title="My SliDevJS Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Presentations as a Code pushed to Github Pages" >}}
+{{< /cards >}}
+
 1. RevealJS
 
 You can place this one inside HUGO SSG if you want, like: https://github.com/joshed-io/reveal-hugo
@@ -63,6 +68,12 @@ You can create a [Micro SaaS around Slidev](https://jalcocert.github.io/JAlcocer
 
 Like: https://github.com/JAlcocerT/slidev-editor with Firebase and Logto auth working as per [this post](https://jalcocert.github.io/JAlcocerT/firebase-auth-101/) :)
 
+
+[![Star History Chart](https://api.star-history.com/svg?repos=marp-team/marpit,slidevjs/slidev,remarkjs/remark&,type=Date)](https://star-history.com/#marp-team/marpit&slidevjs/slidev&remarkjs/remark&Date)
+
+https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/
+
+![SliDev Real Estate](/blog_img/biz/RE/slidev-re.png)
 
 
 #### SliDev and Tech Talks

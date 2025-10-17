@@ -510,6 +510,9 @@ Which uses the **obfuscate technique** unless you have paid via stripe, where yo
 
 > MIT | Astro-obfuscate is a set of components that prevent spam bots from finding email addresses, phone numbers, or other text that you wish to hide. 
 
+> > There are [some python projects](https://github.com/davidteather/python-obfuscator) to do obfuscation as well
+
+
 ### Interesting Financial Data WebSites
 
 * https://tecalculo.com/en/compound-interest-calculator

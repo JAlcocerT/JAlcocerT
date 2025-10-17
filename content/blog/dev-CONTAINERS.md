@@ -2,8 +2,8 @@
 title: "Reasons why I love Containers. With Cloudflared and AI Apps."
 date: 2025-01-04
 draft: false
-tags: ["Dev"]
-description: 'Reasons to use containers (Docker 🐋 Podman): selfhosting with Cloudflare tunnels, App bunddle, dev environments, CI/CD...'
+tags: ["Dev","Docker 🐋 Podman"]
+description: 'Reasons to use containers: selfhosting with Cloudflare tunnels, App bunddle, dev environments, CI/CD...'
 url: 'why-i-love-containers'
 ---
 
@@ -12,12 +12,14 @@ A Container and related tools recap post.
 <!-- https://fossengineer.com/understanding-containers-for-selfhosting/ -->
 
 {{< callout type="info" >}}
-We will be combining [Docker](#container-tech-is-cool)+[Cloudflare Tunnels](#exposing-apps-safely-with-cloudflare-tunnels)+[Streamlit as AI App](#ai-apps-with-containers-and-cloudflare-tunnels). Using [Containers to pack all Python dependencies](https://jalcocert.github.io/JAlcocerT/ai-projects-python-dependencies/#with-containers)
+We will be combining [Docker](#container-tech-is-cool)+[Cloudflare Tunnels](#exposing-apps-safely-with-cloudflare-tunnels)+[Streamlit as AI App](#ai-apps-with-containers-and-cloudflare-tunnels).
 {{< /callout >}}
+
+Using [Containers to pack all Python dependencies](https://jalcocert.github.io/JAlcocerT/ai-projects-python-dependencies/#with-containers)
 
 ## Container Tech is Cool
 
-Containers are an essential tool for simplifying self-hosting software.
+Containers are an essential tool for simplifying **creating and self-hosting software**.
 
 They give us:
 

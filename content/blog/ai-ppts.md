@@ -307,7 +307,11 @@ In essence, PlantUML simplifies the creation of diagrams by using a text-based a
 
 ### SliDev Containerized
 
-You can build your presentation inside a container: https://github.com/JAlcocerT/slidev/blob/main/README.md
+You can build your [Slidev presentation](https://github.com/JAlcocerT/Docker/blob/main/Web/SSGs/Sli_dev_Docker-compose.yml) inside a container: https://github.com/JAlcocerT/slidev/blob/main/README.md
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-slidevjs" title="SliDev | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ![alt text](/blog_img/dev/slidev-presenter-container.png)
 
@@ -452,10 +456,6 @@ print(completed_message)
 
 ## FAQ
 
-### Containerized SliDevJS
-
-* https://github.com/JAlcocerT/Docker/blob/main/Web/SSGs/Sli_dev_Docker-compose.yml
-
 ### Cool Resources to Design PPTs
 
 * https://english-at-home.com/business/vocabulary-and-phrases-for-making-presentations/
@@ -491,10 +491,10 @@ cd Claper
 docker compose up -d
 ```
 
-![alt text](/blog_img/selfh/CLAPER.png)
+![Claper UI](/blog_img/selfh/CLAPER.png)
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Termix" title="Termix with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/claper" title="Claper with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
 

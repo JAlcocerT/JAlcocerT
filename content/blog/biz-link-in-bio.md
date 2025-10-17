@@ -89,6 +89,8 @@ Here it is: https://github.com/JAlcocerT/treelink
 
 > Just waiting for you to add your config
 
+> > It is a very interesting setup, that allows to modify the information on the go, instead that via code
+
 * https://pagespeed.web.dev/analysis/https-example-treelink-app/l6prjspv4k?form_factor=mobile
 
 **What did I like about this theme?**
@@ -163,7 +165,7 @@ And **like this**:
 
 {{< cards >}}
   {{< card link="https://financemotion.pages.dev/" title="LinkinBio with Astro" image="/blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="Links with astro-link-in-bio-theme - FinanceInMotion FYI" >}}
-  {{< card link="https://jalcocert.github.io/Portfolio/" title="Links with HUGO LYNX" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links on Github Pages" >}}             
+  {{< card link="https://jalcocert.github.io/Portfolio/" title="Links with HUGO LYNX" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links deployed statically on Github Pages" >}}             
 {{< /cards >}}
 
 While [performing](https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well) like [this](https://web-check.xyz/check/https%3A%2F%2Ffinanceinmotion.fyi%2F)
@@ -284,10 +286,9 @@ This is once again the same process:
 
 **What would I add further?**
 
-1. ChartJS support for some themes like the bento would be really cool.
+1. **ChartJS** support for some themes like the bento would be really cool.
 
 Specially for those who want to have a data driven blog.
-
 
 Because rendering/[knitting Rmarkdown](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/) / [Flexdashboard](https://jalcocert.github.io/JAlcocerT/r-language-101/#flexdashboards) is always an option...but kind of tedious to bring the html to your .mdx posts.
 

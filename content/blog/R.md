@@ -2,7 +2,7 @@
 title: "A [Recap] on R Language."
 date: 2025-01-10T05:20:21+01:00
 draft: false
-tags: ["Dev","R",'Astro']
+tags: ["Dev","Rmd",'Astro',"FlexDashboards"]
 description: 'All I wish someone had told me about R when I started - Shiny, Flexdashboards,...'
 url: 'r-language-101'
 ---
@@ -64,9 +64,12 @@ rstudio #open it
 #R.version #test the R CLI inside rstudio
 ```
 
-h* ttps://posit.co/download/rstudio-desktop/
+* https://posit.co/download/rstudio-desktop/
 
-https://www.youtube.com/watch?v=k0r3iLGJgmQ
+<!-- https://www.youtube.com/watch?v=k0r3iLGJgmQ -->
+
+{{< youtube "3ISRS2hQlfI" >}}
+
 
 * https://posit.co/blog/rstudio-is-now-posit/
 
@@ -101,8 +104,6 @@ install.packages("remotes")
 
 [Geospatial Data](https://jalcocert.github.io/JAlcocerT/geospatial-data/) is awsome, and most of the times unused.
 
-https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/
-
 At some point I was putting together `.GPX` files with the help of https://www.youtrack.es
 
 But you can do it also with some script.
@@ -115,6 +116,7 @@ But you can do it also with some script.
     * <https://rfun.library.duke.edu/portfolio/dashboard_workshop/>
     * <https://rfun.library.duke.edu/portfolio/shiny_workshop/>
 
+> You might enjoy Having [a look to PhyPhox](https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/)
 
 {{% details title="Put simply, GPX stands for GPS eXchange Format 🌍" closed="true" %}}
 
@@ -130,11 +132,11 @@ You will also hear about **GeoJSON format**, KML, TopoJSON
 ### Animations
 
 
-Generally plots in R got me in love: <https://r-graph-gallery.com/> 
+Generally, plots in R got me in love: <https://r-graph-gallery.com/> 
 
+And people even created gifs with R:
 
 ![Sample animation Gif](/blog_img/dev/503.gif)
-
 
 
 ### FlexDashboards

@@ -1,6 +1,6 @@
 ---
 title: "Interesting APIs 101"
-date: 2025-10-14T09:20:21+01:00
+date: 2025-10-18T09:20:21+01:00
 draft: false
 tags: ["APIfy","Firecrawl","Serp","Smithery MCP","Scrap"]
 description: 'Get that info you need. API 101 '

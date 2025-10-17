@@ -143,15 +143,35 @@ bun start #prod server
 
 Im not talking about AI and LLMs now (ReACT).
 
+React and Vue.js are two popular tools used to build modern websites and web applications. Both help developers create interactive user interfaces, but each has its own style and approach.
+
+React is a JavaScript library for building user interfaces by breaking them down into small reusable pieces called “components”.
+
+Imagine building a website out of “blocks” that can update themselves when your data changes, so only the parts of the website that need to change will reload—making things smooth and efficient. 
+ 
+React was created by Facebook and is widely used for apps where the user interface changes frequently.
+
+- **Key idea**: Build interactive website pieces (“components”) that update automatically when your data changes.[5][2]
+- **Benefit**: Fast, dynamic interfaces without reloading the whole page.[6][7]
+
 
 
 ## VueJS
 
+Vue.js is another JavaScript framework for building interactive websites, known for being easy to learn and integrate. 
+
 * https://dev.to/truex/top-10-vue-js-libraries-3gj0
 
-{{< details title="What it is Vue? 📌" closed="true" >}}
+Vue pieces together parts of a website with reusable “components” too, and it emphasizes simplicity and flexibility for developers. 
 
-{{< /details >}}
+When you change your data, Vue updates the right parts of your site automatically.[2]
+
+- **Key idea**: Build user interfaces with reusable “blocks” that update when data changes.
+- **Benefit**: Simple, fast, and flexible—with clean structure for building apps big or small.
+
+Both React and Vue.js let developers create apps where users can interact with the page, and only the necessary parts change, rather than reloading the whole website.
+
+This makes them excellent for building modern, responsive web pages.
 
 ## PhotoSwipe
 
@@ -179,15 +199,15 @@ npm list alpinejs
 
 ### World Map
 
-I saw this one for the first time at this Astro Theme.
+I saw this one for the first time at [this Astro Theme, here](https://github.com/JAlcocerT/web3/blob/main/src/components/Globe.tsx).
 
 ### Search
 
-1. FuseJS - as HUGO PaperMod or Astro celestial docs
+Not talking about google/whoogle, but to have search built in into your website:
+
+1. FuseJS - as HUGO PaperMod or Astro celestial docs (this one works even when in dev run)
 2. pageFind - as astro starlight
 
-* google
-* whoogle
 
 ### Image Galleries
 
@@ -212,6 +232,7 @@ Skulpt is an entirely **in-browser implementation of Python**.
 
 * <https://skulpt.org/>
     * <https://github.com/skulpt/skulpt>
+    * https://skulpt.org/using.html
 
 > Skulpt is a **JavaScript implementation of the Python** programming language.
 
@@ -234,10 +255,14 @@ Skulpt achieves this by transpiling Python code into equivalent JavaScript code,
 
 It's important to note that while Skulpt allows you to write and execute Python code in the browser, there are limitations compared to running Python code on a traditional Python interpreter.
 
-Skulpt may not support all Python features or libraries, and performance may be slower due to the overhead of transpilation and execution in the browser environment. However, for many use cases, Skulpt can be a convenient and effective tool for bringing Python to the web.
+Skulpt may not support all Python features or libraries, and performance may be slower due to the overhead of transpilation and execution in the browser environment. 
+
+However, for many use cases, Skulpt can be a convenient and effective tool for **bringing Python to the web**.
 
 
-Yes, you can create a **fully static astro site with Plotly graphs using Skulpt for Python code** execution in the browser. Here's how you can approach it:
+Yes, you can create a **fully static astro site with Plotly graphs using Skulpt for Python code** execution in the browser. 
+
+Here's how you can approach it:
 
 1. **Static HTML/CSS/JavaScript files**: Create static HTML, CSS, and JavaScript files for your astro site. These files will define the structure, layout, and interactivity of your site.
 
@@ -249,6 +274,27 @@ Yes, you can create a **fully static astro site with Plotly graphs using Skulpt 
 
 5. **Static hosting**: Host your static astro site on a web server or a static hosting platform. This can be done using services like GitHub Pages, Netlify, or Vercel, which allow you to deploy static websites easily.
 
-By following these steps, you can create a fully static astro site with Plotly graphs, where the Python code for generating the graphs is executed in the browser using Skulpt. Users can interact with the site without the need for a backend server, making it lightweight and easy to deploy.
+By following these steps, you can create a fully static astro site with Plotly graphs, where the Python code for generating the graphs is executed in the browser using Skulpt. 
+
+Users can interact with the site without the need for a backend server, making it lightweight and easy to deploy.
 
 {{< /details >}}
+
+Yes, "Skulpt" relates to client-side rendering in the context of running Python code. 
+
+**Skulpt is a client-side Python implementation** that executes Python code directly in the web browser using JavaScript.
+
+This means the Python code is interpreted and rendered on the client side (in the user's browser) rather than on a server.
+
+Client-side rendering (CSR) refers to the process where the rendering of web content or code execution happens in the browser instead of on the server. 
+
+Skulpt fits this model because it interprets and executes Python code entirely on the client side without requiring server interaction for running the code.
+
+So in this context:
+
+- Skulpt uses client-side rendering to run Python in the browser.
+- CSR means client-side rendering, which is a web development technique where the browser handles content rendering.
+
+Therefore, your mention of CSR as client-side rendering is correct, and Skulpt is an example of a tool that uses client-side rendering for Python code execution in browsers.
+
+This distinguishes it from server-side rendering, where code executes on a server and sends pre-rendered content to the client.

@@ -2,7 +2,7 @@
 title: "Geospatial Data Tricks and a GoPro!"
 date: 2025-01-05T23:20:21+01:00
 draft: false
-tags: ["Dev","FFMPeg","Python GeoData","PhyPhox","GPX","EXIF","karting","Katex"]
+tags: ["Py_RouteTracker","FFMPeg","Python GeoData","PhyPhox","GPX","EXIF","karting","Katex"]
 description: 'What Ive learnt so far about GeoSpatial/Geolocation Data Analysis. Applied to GoPro MetaData and Telemetry Extraction.'
 url: 'geospatial-data'
 math: true
@@ -63,10 +63,14 @@ style="width: 454px; height: 454px;"></iframe>
 
 ## GoPro Metadata Extraction
 
+There are some official programs:
+
 * https://github.com/gopro/gpmf-parser
 
 > Parser for GPMF™ formatted telemetry data used within GoPro® cameras.
 
+
+But I had for fun with the ExifTool and the **Route tracker repository**:
 
 {{< callout type="info" >}}
 Related Projects Files are at [RouteTracker](https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro) 💻
@@ -106,7 +110,7 @@ There is a possibility to use paid Programs to create these kind of videos:
 {{< youtube "3Y-lh6hbp14" >}}
 
 {{< callout type="info" >}}
-Veeeery interesting how those 390cc and 15cv (77) differ from the 390cc 18 cv (80) and 460cc 22cv (88km/h topspeed)
+Veeeery interesting how those 390cc and 15cv (77km/h) differ from the 390cc 18 cv (80km/h) and 460cc 22cv (88km/h topspeed)
 {{< /callout >}}
 
 ### Exif and Python with GoPro
@@ -120,8 +124,6 @@ exiftool -ee ./GX030390.MP4 > output-GX030390.txt #saves it
 ```
 
 And now you got a `.txt` with all the information, ready to get it analyzed with python.
-
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro MetaData Magic 101 " image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 Firmware and comparison with GoPro" >}}
@@ -149,7 +151,7 @@ exiftool -ee ./GX030390.MP4 #adapt as per your GoPro file name
 #exiftool -ee ./GX030390.MP4 > output.txt
 ```
 
-And Plotly, to get such map graphs from the GoPro:
+And **Plotly**, to get such map graphs from the GoPro:
 
 ![GoPro Metadata Map](/blog_img/karting/gopro-speed-sample.png)
 
@@ -174,7 +176,6 @@ You can even see what happens when a plane takes off:
 
 {{< youtube "Z9xNMP3nW0A" >}}
 
-
 ---
 
 ## Polar Data Extraction
@@ -191,11 +192,10 @@ You can also open it with: [![Open in Google Colab](https://colab.research.googl
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/" title="Polar Data" image="/blog_img/iot/Zonas-Cardiacas.png" subtitle="With Python" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python. Added Go Pro Exif to Plotly Graphs" >}}
 {{< /cards >}}
 
 <!-- ![Heart zones](/blog_img/iot/Zonas-Cardiacas.png) -->
-
 
 ---
 
@@ -212,8 +212,6 @@ https://studio.youtube.com/video/2ZSDeD3HzHg/edit
  -->
 
 {{< youtube "2ZSDeD3HzHg" >}}
-
-
 
 Im now using **rsync** to move the **big video files**:
 
@@ -283,7 +281,6 @@ where:
 
 * `F` is the force applied to the object
 * `a` is the acceleration of the object (the rate of change of velocity)
-
 
 Power (P) is defined as the rate at which work is done, or the rate at which energy is transferred.  
 
