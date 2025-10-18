@@ -74,8 +74,25 @@ https://github.com/sgratzl/chartjs-chart-funnel
 
 https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts
 
+Like...how would you reply to [such post](https://forocoches.com/foro/showthread.php?p=502610118#post502610118)?
+
+With sth like [this ApexChart](https://apexcharts.com/javascript-chart-demos/mixed-charts/line-column-area/)
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/node-js" title="NodeJS + ApexChartJS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+![NodeJS Web App + ApexChartJS](/blog_img/DA/apexchartjs-nodejs.png)
+
+
+
+
 ### Youtube Animations
 
+
+can you make a component that will show the last video uploaded to a youtube channel as per the RSS feed? Example https://www.youtube.com/@UnfoldingData
 
 
 ---

@@ -101,17 +101,25 @@ npm init slidev #yarn create slidev
 ```
 
 2. Bring up to date data from API calls. Like `https://open-meteo.com`
-3. Make it look cool with mermaidJS / Katex / ChartJS
+
+3. Make it look cool with mermaidJS / Katex / [ChartJS VUE components](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-101-umami-example/components)
+
 4. This thing can even do animations based on https://motion.vueuse.org/
 5. Katex, for those PHD users
 6. MermaidJS
-7. Export to pdf/pptx or png. *They are all pngs btw, so be mindful if non tech people will have to edit*
+7. Export to `pdf`/`pptx` or `png`. *They are all pngs btw, so be mindful if non tech people will have to edit*
 
 > Cool PPTs other created: https://raw.githubusercontent.com/BaizeAI/talks/refs/heads/main/packages/2025-06-11-kubecon-hk/slides.md
 
 > > You can combine SliDev + OBS + [FastApi Audio Recorder S2T-TTS](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions) for youtube video creation workflow
 
 ![FastAPI x Astro x ChartJS pulling data from sqlite](/blog_img/GenAI/audio/fastapi-chartjssqlite.png)
+
+8. RSS...of youtube `CTRL+U`: `https://www.youtube.com/@UnfoldingData/shorts` -> `https://www.youtube.com/feeds/videos.xml?channel_id=UCogC2-5ZqMrLIWtm00RP7Ow` with [this kind of Vue component](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-101-umami-example/components/LatestYouTubeVideo.vue)
+
+```sh
+<LatestYouTubeVideo channelId="UCPPMA8ZEusAe5dVH6PbjZFA" width="400" height="225" />
+```
 
 
 #### Diagrams are also code!
@@ -422,4 +430,4 @@ https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#gemini-cli-x-git-mcp
 Or just **Cursor/Windsurf** agents + Perplexity Context?
 
 * https://windsurf.com/profile
-
+  * https://windsurf.com/billing/payment-success?plan_tier=pro

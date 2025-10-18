@@ -2,7 +2,7 @@
 title: "SelfHosting Updates - Oct 2025"
 date: 2025-10-18T01:20:21+01:00
 draft: false
-tags: ["SFTPGo x Syncthing","WebDav","File Sync Tools","P2P Recap","XMRig Benchmark"]
+tags: ["SFTPGo x Syncthing","WebDav and Link Analytics","File Sync Tools","P2P Recap","XMRig Benchmark"]
 description: 'Best tools for organizing homelab files.'
 url: 'selfhosted-apps-oct-2025'
 ---
@@ -38,7 +38,9 @@ And I saw few projects lately to see files, like we saw [here](https://jalcocert
 
 >  🌴 Palmr. is an open-source file-sharing platform focused on privacy and security. It enables users to upload, manage, and share files with features like password protection, custom links, and access control without tracking or limitations. Designed for seamless and secure sharing.
 
-3. 
+3. Nextcloud or Immich: 
+
+Just in case that you got that interesting Standard Google offer 200 GB for ~40$/año or your [Google AI Pro with 2TB trial](https://support.google.com/pixelphone/answer/13529884?hl=en#zippy=%2Cpixel-pro-pixel-pro-xl-pixel-pro-fold) has just ended...
 
 If you dont want **Nextcloud** nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
 
@@ -64,15 +66,19 @@ Would SCP or FTP be faster?
 
 ![SFTP Transfer Speed](/blog_img/selfh/HomeLab/sftp.png)
 
-> Immich is cool and have some projects around https://github.com/Nasogaa/immich-drop
+> Immich is also cool and have some projects around https://github.com/Nasogaa/immich-drop
 
-https://github.com/JAlcocerT/Home-Lab/tree/main/immich
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Selfhosting Immich" image="/blog_img/selfh/Photo/immich-map.png" subtitle="Sring Y25 Post" >}}
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pigallery" title="PiGallery | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/photo-management-tools/#pigallery
-![PiGallery Map Feature ](/blog_img/selfh/Photo/PiGallery-MAP.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Selfhosting Immich" image="/blog_img/selfh/Photo/immich-map.png" subtitle="Spring Y25 Post - Immich Setup" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/#pigallery" title="Selfhosting PiGallery" image="/blog_img/selfh/Photo/PiGallery-MAP.png" subtitle="Photo Tools Post - PiGallery" >}}
+{{< /cards >}}
+
+<!-- ![PiGallery Map Feature ](/blog_img/selfh/Photo/PiGallery-MAP.png) -->
 
 
 
@@ -85,6 +91,9 @@ But...
 A combination of **Syncthing** and **SFTPGo** can be used together to achieve automated file exchange, leveraging the strengths of each tool, although they are fundamentally different.
 
 Syncthing is a **decentralized, peer-to-peer (P2P)** continuous file synchronization tool, whereas SFTPGo is a **centralized SFTP server** (that also supports other protocols like FTP/S and WebDAV) with powerful file management and automation features.
+
+
+{{< details title="More about the Syncthing and SFTPGo Setup... 📌" closed="true" >}}
 
 
 The primary way to use them together is to set up **Syncthing to sync files to a local directory that SFTPGo uses as a storage backend** (a "virtual folder").
@@ -105,44 +114,24 @@ It's important to understand the different purposes of each tool:
 | **File Management** | Focuses on keeping folders identical across peers. | Provides advanced **user management, access controls, quotas, and automation** (Event Manager, webhooks). |
 | **Primary Use** | Keeping your own set of devices in sync, or collaborating with a defined set of trusted peers. | Providing secure file exchange for multiple external users/partners, often with granular permissions. |
 
-Syncthing doesn't natively support SFTP as a sync destination. SFTPGo is what brings the SFTP server capability to the shared folder.
 
-For a general overview of Syncthing, you can check out Sync Files Across All Your Devices With Syncthing.
+{{< /details >}}
 
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p
-![Qbittorrent UI](/blog_img/selfh/media/qbit.png)
+Syncthing doesn't natively support SFTP as a sync destination.
 
-
----
-
-## Conclusions
-
-You can start with a Pi SBC and a SSD drive:
-
-![Pi Home Server](/blog_img/hardware/pi-homeserver.jpg)
+SFTPGo is what brings the SFTP server capability to the shared folder.
 
 
-https://www.youtube.com/watch?v=OOxzP1JvfQk
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p" title="P2P Tools during Summer 25 | Post" image="/blog_img/selfh/media/qbit.png" subtitle="As P2P as it gets | QBittorrent" >}}
+{{< /cards >}}
+
+<!-- 
+![Qbittorrent UI](/blog_img/selfh/media/qbit.png) -->
 
 
-If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) to the performance.
+{{< details title="Transmission vs QBittorrent... 📌" closed="true" >}}
 
-And if you have read the recent [Crypto with AI](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) post, you can see how people get creative and benchmark based on crypto mining performance: https://xmrig.com/benchmark
-
-
-[Some people](https://www.reddit.com/r/MoneroMining/comments/p3bzzb/is_it_worth_to_mine_xmr/) also use it for mining.
-
-But it wont pay off when taking into cosideration the electricity costs.
-
-Anyways, you can do a quick **XMR benchmark** on your mini PC:
-
-* https://github.com/xmrig/xmrig
-
->  RandomX, KawPow, CryptoNight and GhostRider unified CPU/GPU miner and RandomX benchmark 
-
-> > Its an interesting project anyways, configurable via JSON for that alternative CPU benchmark
-
----
 
 Choosing between **Transmission** and **qBittorrent** for [P2P](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry/) depends on your priorities, as both are popular, free, open-source, and cross-platform (Windows, macOS, Linux) BitTorrent clients.
 
@@ -202,13 +191,50 @@ Choosing between **Transmission** and **qBittorrent** depends on your priorities
 * **Stability:** Both are generally stable. Transmission has had historical security incidents (though resolved), and its design means it tends to use fewer resources, which can aid stability on weaker hardware. qBittorrent is well-regarded for its stability, even under a heavy load of thousands of torrents.
 
 
-Conclusion: Which to Choose?
-
 | Choose **Transmission** If... | Choose **qBittorrent** If... |
 | :--- | :--- |
 | You value a **minimalist, simple, and native-feeling UI** (especially on Mac/Linux). | You need **advanced features** like a built-in search engine or RSS downloader. |
 | You are running the client on a **low-power device** (e.g., NAS, Raspberry Pi) or need a very low resource footprint. | You want **fine-grained control** and **more detailed statistics** over your torrents. |
 | You primarily want a client that is **easy to set up** for basic downloading and seeding. | You are accustomed to a **traditional torrent client layout** (like older uTorrent). |
+
+{{< /details >}}
+
+
+
+---
+
+## Conclusions
+
+You can start with a Pi SBC and a SSD drive:
+
+![Pi Home Server](/blog_img/hardware/pi-homeserver.jpg)
+
+And later continue with any of these tools:
+
+<!-- https://www.youtube.com/watch?v=OOxzP1JvfQk -->
+
+{{< youtube "OOxzP1JvfQk" >}}
+
+If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) to the performance.
+
+And if you have read the recent [Crypto with AI](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) post, you can see how people get creative and benchmark based on crypto mining performance: https://xmrig.com/benchmark
+
+
+[Some people](https://www.reddit.com/r/MoneroMining/comments/p3bzzb/is_it_worth_to_mine_xmr/) also use it for mining.
+
+But it wont pay off when taking into cosideration the electricity costs.
+
+Anyways, you can do a quick **XMR benchmark** on your mini PC:
+
+* https://github.com/xmrig/xmrig
+
+>  RandomX, KawPow, CryptoNight and GhostRider unified CPU/GPU miner and RandomX benchmark 
+
+> > Its an interesting project anyways, configurable via JSON for that alternative CPU benchmark
+
+---
+
+
 
 
 ---
@@ -263,6 +289,45 @@ https://github.com/abegehr/chickadee
 
   Scalable web analytics you run yourself on Cloudflare 
 
+#### Link Analytics
+
+https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py
+
+There are several open-source self-hostable link shortener tools you can consider, each with its unique features:
+
+1. **Shlink**: A PHP-based link shortener that supports generating unique short codes or custom slugs. It collects anonymized visit stats and geolocates visitors. It offers a REST API, CLI tools, and Docker support for easy deployment. It uses modern technologies like Mezzio and Symfony and is MIT licensed.[1][3]
+
+2. **Kutt**: A modern, free, and open-source URL shortener with features like custom domains, custom URLs, password protection, link expiration, private statistics, and an admin dashboard. It has a RESTful API and can be easily installed using Docker Compose.[5]
+
+3. **YOURLS**: A well-established PHP-based URL shortener with features such as bookmarklets, developer API, detailed stats including referrers and geo-location, and extensibility through dozens of plugins. It is free, open source, and easy to self-host.[10]
+
+4. **Shrink.io (shrtn.io)**: A lightweight, privacy-focused URL shortener using SQLite by default (so no database server is required) and deployable via Docker. It emphasizes ease of use, privacy, and developer-friendly features.[6]
+
+5. Other notable mentions from a curated list include Polr, Lstu, Blink, and goshorly—all open source with various programming languages and features.[4][8]
+
+These options provide scalable, customizable, and self-hostable link shortening solutions that you can deploy either via Docker or direct installation depending on your infrastructure and preferences.
+
+For ease and feature richness, Shlink, Kutt, and YOURLS are highly recommended starting points for a self-hosted URL shortener.[1][5][10]
+
+Among the popular open-source self-hosted link shorteners mentioned, some do offer QR code capabilities either built-in or through extensions/plugins:
+
+1. **Shlink**: Provides built-in QR code generation for short URLs. When you create a short URL using Shlink, it can generate a corresponding QR code that you can share or embed. This is part of its feature set, making it convenient for print or mobile scanning use cases.[1][2]
+
+2. **Kutt**: While Kutt does not include native QR code generation in its core, there are third-party tools or browser extensions available that can generate QR codes for any URL, including Kutt short links. Some community forks or plugins might add this feature. Officially, out-of-the-box QR codes are not a core feature.[3]
+
+3. **YOURLS**: YOURLS does not include native QR code generation by default, but there are several plugins created by the community that add QR code functionality to YOURLS short URLs. This extensibility allows you to add QR generation if needed.[4]
+
+4. Other lesser-known tools like Blink or Polr may have QR features built-in or via plugins, but the top three mentioned mostly rely on either built-in Shlink support or plugins for YOURLS for QR capabilities.[5][6]
+
+To summarize, **Shlink** stands out as the self-hosted URL shortener with built-in QR code generation. For YOURLS, you can enable QR codes through community-developed plugins, while Kutt typically requires external QR code tools. This makes Shlink a strong candidate if QR code functionality is a priority alongside link shortening.[1][3][4]
+
+[1](https://shlink.io)
+[2](https://github.com/shlinkio/shlink)
+[3](https://noted.lol/kutt/)
+[4](https://yourls.org)
+[5](https://github.com/738/awesome-url-shortener)
+[6](https://www.devopsschool.com/blog/list-of-top-free-open-source-self-hosted-application-for-url-shorteners/)
+
 ### Monitoring For HomeLab
 
 
@@ -294,18 +359,6 @@ https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#tianji
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener Status Pages | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-### Grafana and NetData
-
-GrafanaPrometheusNodeExp.JPG
-
-https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana
-
-[SelfHost NetData with Docker](https://fossengineer.com/selfhosting-server-monitoring-with-netdata-and-docker/)
-
-
-* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
-* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
-
 
 ### Uptime Kuma API
 
@@ -327,60 +380,21 @@ The API allows you to:
 However, the official API is somewhat limited and not guaranteed to be stable or fully documented for external use, so use it with caution.
 
 In summary:
+
 - You can add monitors programmatically.
 - You can retrieve monitoring data (status, alerts).
 - The API is mostly internal and unofficial but functional.
 - There are third-party wrappers to help interact with it.
 
-This means yes, you can post new websites to monitor and retrieve their data using the API, but expect it to be experimental or unofficial.[3][1][2]
 
-[1](https://github.com/louislam/uptime-kuma/wiki/API-Documentation)
-[2](https://github.com/lucasheld/uptime-kuma-api)
-[3](https://pypi.org/project/uptime-kuma-api/)
-[4](https://uptime-kuma-api.readthedocs.io)
-[6](https://www.home-assistant.io/integrations/uptime_kuma/)
-[7](https://echoesofping.hashnode.dev/comprehensive-guide-to-installing-and-using-uptime-kuma-for-uptime-monitoring)
-[19](https://app.readthedocs.org/projects/uptime-kuma-api/)
-[20](https://github.com/louislam/uptime-kuma)
+### Grafana and NetData
 
-Here is a summary of the full setup to integrate your **self-hosted Uptime Kuma with a Jamstack** site like Astro securely and efficiently:
+GrafanaPrometheusNodeExp.JPG
 
-- **Uptime Kuma Self-Hosted:** Runs your uptime monitoring and exposes an internal API for adding monitors and retrieving status data.
+https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana
 
-- **API Security:**  
-  - Restrict the Uptime Kuma API with proper authentication (tokens or keys).  
-  - Use CORS to allow requests only from your trusted domains.
+[SelfHost NetData with Docker](https://fossengineer.com/selfhosting-server-monitoring-with-netdata-and-docker/)
 
-- **Middleware Layer:**  
-  - Deploy a middleware proxy between Uptime Kuma and your Astro site to handle security and data processing.  
-  - Cloudflare Workers are an excellent choice for middleware, providing edge deployment, secure token handling, CORS management, caching, and request/response transformation.
 
-- **Astro Jamstack Site:**  
-  - Your Astro site calls the middleware endpoint (Cloudflare Worker) rather than directly contacting Uptime Kuma.  
-  - This can be done client-side (CSR) for dynamic updates or during build time for static rendering.  
-  - The middleware fetches data from Uptime Kuma securely and returns only the necessary information to the site.
-
-Benefits of This Setup
-
-- Keeps API keys and tokens secure and away from the client.  
-- Protects your Uptime Kuma API with domain-based CORS and authentication.  
-- Enables efficient, low-latency data fetching from the edge.  
-- Allows flexible data formatting and caching to optimize your site performance.  
-
-This architecture ensures both **security** and **scalability** for showing Uptime Kuma monitoring data seamlessly in your Jamstack site.[1][2]
-
-[1](https://github.com/louislam/uptime-kuma/wiki/API-Documentation)
-[2](https://github.com/lucasheld/uptime-kuma-api)
-
-Exactly. In this setup, the API keys are **not included in the static site code**. Instead:
-
-- Your Astro component makes requests to the Cloudflare Workers middleware endpoint.
-- The Cloudflare Worker holds and uses the API keys securely on the server/edge side.
-- The Worker fetches the data from your Uptime Kuma API using the keys and returns only the relevant information to the component.
-- This way, the API keys never get exposed to the client or shipped in the static files.
-- The component can pull updated data on page load or dynamically via client-side rendering without risking key exposure.
-
-This approach keeps your credentials safe while allowing your static site to display real-time or updated monitoring data via the middleware.[1][2]
-
-[1](https://github.com/louislam/uptime-kuma/wiki/API-Documentation)
-[2](https://github.com/lucasheld/uptime-kuma-api)
+* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
+* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)

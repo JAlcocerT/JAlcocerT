@@ -143,6 +143,17 @@ See how [bentoPDF](https://github.com/alam00000/bentopdf) and its [tech get it d
 {{< /cards >}}
 
 
+```sh
+python3 -m http.server 8003
+```
+
+![QR - PDF via CSR vibe coded with Claude 4.5](/blog_img/apps/nodejs-qr-pdf.png)
+
+
+> Built with ❤️ using [QRCode.js](https://davidshimjs.github.io/qrcodejs/) and [jsPDF](https://github.com/parallax/jsPDF)
+
+
+
 ### Web when registered
 
 Something like `slubnechwile.com/bodapepe`

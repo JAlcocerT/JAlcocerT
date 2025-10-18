@@ -18,11 +18,10 @@ Keep reading if you like portability and serverless/edge computing.
 
 **Intro**
 
-Context for WASM, in case you have been doing CSR projects recently, like I did:
+Context for WASM, in case you have been doing CSR projects recently, like I've been:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/csr-and-js" title="CSR can do That | Post ↗"  >}}
-  {{< card link="" title="| POST ↗"  >}}
 {{< /cards >}}
 
 
@@ -44,7 +43,7 @@ The browser can simply [download the already-compiled](#hosting-for-wasm) binary
 
 ## What about Web Assembly?
 
-With **WASM** we can run Apps coded in other language (other than web language like js) in our browsers.
+With **WASM** we can run Apps coded in other language *(other than web language like js)* in our browsers.
 
 WASM allow us to compile code and run it in **various environments, like browsers**.
 
@@ -231,13 +230,23 @@ choco install make
 #make version
 ```
 
+Yes, WebAssembly (Wasm) aims to make browsers a runtime environment not just for JavaScript but for many programming languages.
+
+WebAssembly is designed as a portable, low-level bytecode format that can serve as a compilation target for languages like C, C++, Rust, and others, enabling them to run at near-native speed inside web browsers.
+
+It complements JavaScript and is meant to overcome JavaScript's performance limitations in high-demand applications, such as 3D games and virtual/augmented reality.
+
+The WebAssembly standard is also intended to be platform-independent and open, supporting execution outside browsers as well, paving the way for a universal runtime beyond just web usage.
+
+This means browsers will be able to execute code compiled from diverse languages through a common runtime that includes sandboxing and security features, effectively making browsers a multi-language runtime environment alongside JavaScript.[1][2][10]
+
+In summary, WebAssembly’s goal is to extend browser runtime capabilities to languages beyond JavaScript, creating a fast, secure, and portable execution environment for various languages compiled to Wasm.
 
 ### Practical WASM - VERT
 
 VERT is a file conversion utility that uses WebAssembly to convert files on your device instead of a cloud. 
 
-Check out the live instance at vert.sh.
-
+Check out the live instance at `vert.sh`.
 
 * https://github.com/VERT-sh/VERT
 
