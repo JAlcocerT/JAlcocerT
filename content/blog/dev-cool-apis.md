@@ -242,6 +242,8 @@ https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
 {{< /cards >}}
 
 
+
+
 ## Data APIs
 
 You can get data from other users/services that have collected/processed and expose it for you.

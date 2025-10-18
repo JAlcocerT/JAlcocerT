@@ -3,9 +3,13 @@ title: "Website knowledge updates. Waiting / Landings with AI?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
 tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Landing Pages","BCMS vs PagesCMS"]
-description: 'New ATH for my SSG knowledge. Landing 101 that convert and Codex for idea validation.'
+description: 'New ATH for my SSG knowledge. Landing 101 that convert. CodexCLI for idea validation.'
 url: 'selling-with-a-landing-website'
 ---
+
+
+![Streamlit Funnel with Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
+https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
 
 ## Web Front End - Theme
 

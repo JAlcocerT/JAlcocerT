@@ -3,7 +3,7 @@ title: "A new webpage for JAlcocerTech"
 date: 2025-06-21T18:20:21+01:00
 draft: false
 description: 'AstroDB x KeyStaticCMS. A new SSG website to show Embedded Analytics capabilities.'
-tags: ["Web","Landing Page","CMS","Cloudflare Workers and Pages","Web Checks","Animations"]
+tags: ["Web","Landing Page","CMS","Cloudflare Workers and Pages","Web Checks","Animations","ApexCharts"]
 url: keystaticcms-astrodb
 ---
 
@@ -196,6 +196,10 @@ Just think of a interesting visual you want to have, tell to windsurf to vibe co
 How can these charts actually look like?
 
 ![ApexChartsJS and Astro SSG Theme ](/blog_img/web/astro/astro-apexchartsjs-component.png)
+
+Similar to what we made with [streamlit PoC](https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Utils)...
+
+![Streamlit Funnel with Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
 
 Again: *and these are interactive charts!*
 

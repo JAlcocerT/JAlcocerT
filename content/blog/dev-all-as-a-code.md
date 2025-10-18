@@ -358,3 +358,19 @@ And you can use these projects together with https://github.com/datopian/markdow
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Commento" title="Commento | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+### Writing Posts with Codex
+
+As seen during summer on [this post](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#conclusions).
+
+How about using **Codex CLI** to write SSG posts?
+
+Just in case that you dont want to do the [n8n + CMS API](https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/).
+
+Example: given https://github.com/Snouzy/workout-cool?tab=readme-ov-file#deployment--self-hosting
+
+
+#### Writing Technical Posts with Perplexity and IDEs
+
+Or just **Cursor/Windsurf** agents + Perplexity Context?
+

@@ -264,7 +264,9 @@ UML (Unified Modeling Language) and BPMN (Business Process Model and Notation) a
 
 **UML for a Business Analyst**
 
-UML is a **standardized visual modeling language** used to specify, visualize, construct, and document the artifacts of software systems, as well as for business modeling and other non-software systems. For a Business Analyst, UML helps in understanding and communicating the structure and behavior of systems and business processes.
+UML is a **standardized visual modeling language** used to specify, visualize, construct, and document the artifacts of software systems, as well as for business modeling and other non-software systems.
+
+For a Business Analyst, UML helps in understanding and communicating the structure and behavior of systems and business processes.
 
 **Key UML diagrams relevant to Business Analysts and their uses:**
 

@@ -272,15 +272,21 @@ If you are in a rush, here is a list of bullet points:
 * Be ready for Change Requests: propositions to change to the scope, schedule, or budget of a project.
 * Be proeficient at [creating wireframe and mockups](/business-analytics-skills/#prototyping-mockups-and-wireframes)
 
-> Wireframes and Mockups provide a tangible preview (low and high fidelity respectively), helping to refine ideas, gather feedback, and ensure everyone's on the same page before the actual work begins. It's like a sneak peek into the future, letting you shape and refine your vision before bringing it to life.
+> Wireframes and Mockups provide a tangible preview (low and high fidelity respectively), helping to refine ideas, gather feedback, and ensure everyone's on the same page before the actual work begins. 
+
+> > It's like a sneak peek into the future, letting you shape and refine your vision before bringing it to life.
 
 
 ### Project Management
 
-Now you know what your client needs, the product is defined and they have agreed to go ahead with your solution. It is time for us to plan our project and to be able to deliver and meet the customer's expectations:
+Now you know what your client needs, the product is defined and they have agreed to go ahead with your solution. 
+
+It is time for us to plan our project and to be able to deliver and meet the customer's expectations:
 
 
->  A project manager ensures that timelines, resources, and tasks harmonize seamlessly, while also adapting to unexpected changes. By providing a clear roadmap and fostering effective communication, project management empowers each member to contribute their expertise, leading to success. 
+>  A project manager ensures that timelines, resources, and tasks harmonize seamlessly, while also adapting to unexpected changes. 
+
+By providing a clear roadmap and fostering effective communication, project management empowers each member to contribute their expertise, leading to success. 
 
 {{< dropdown title="Its all About Delivering 🏃 " closed="true" >}}
 * Understand the **Critical Path** of the project
@@ -346,16 +352,6 @@ A Table with the following structure can be of help to keep everyone informed (*
 {{< /dropdown >}}
 
 
-
-
-<!-- ### Team Management
-
-#### Sharing Knowledge 
-
-Again, notes are important, but even more important is that there is a knowledge base of those that all the team members can access.
-
-#### Developing your Team -->
-
 ---
 
 ## Soft Skills
@@ -389,7 +385,11 @@ One of the key aspects that imo helped me to change my career towards data analy
 
 > **Mentoring** is like having a wise friend who shares their experiences and advice to help you grow and succeed. They guide you based on their own journey, offering insights and suggestions.
 
-> **Coaching**, on the other hand, is like having a skilled trainer who asks you thought-provoking questions to help you discover your own solutions and reach your goals. They help you find your way by drawing out your strengths and helping you overcome obstacles. While a mentor shares their wisdom, a coach empowers you to unlock your potential through self-discovery. 
+> **Coaching**, on the other hand, is like having a skilled trainer who asks you thought-provoking questions to help you discover your own solutions and reach your goals. 
+
+They help you find your way by drawing out your strengths and helping you overcome obstacles. 
+
+While a mentor shares their wisdom, a coach empowers you to unlock your potential through self-discovery. 
 
 * Provide constructive feedback:
     * Be specific. Don't just say "good job" or "bad job." Instead, be specific about what the person did well or could improve on. For example, you could say "I really liked the way you organized your presentation" or "I think you could have improved your presentation by adding more visuals."
@@ -399,7 +399,11 @@ One of the key aspects that imo helped me to change my career towards data analy
 
 ## The Analytical Stack
 
-**Data profiling** is the process of inspecting, cleaning, and analyzing data to understand its content, quality, and structure. It is a critical step in the data preparation process, as it can help to identify data quality issues and ensure that the data is fit for use. And yes, you will be using it every day.
+**Data profiling** is the process of inspecting, cleaning, and analyzing data to understand its content, quality, and structure. 
+
+It is a critical step in the data preparation process, as it can help to identify data quality issues and ensure that the data is fit for use. 
+
+And yes, you will be using it every day.
 
 * You will be interested in:
     * Identify data quality issues: Data profiling can help to identify data quality issues such as missing values, duplicate records, and invalid data types.
@@ -411,7 +415,9 @@ One of the key aspects that imo helped me to change my career towards data analy
 
 ### Databases
 
-A database is an organized collection of data that is stored electronically in a computer system. It is a repository of information that can be easily accessed, managed, and updated. 
+A database is an organized collection of data that is stored electronically in a computer system.
+
+It is a repository of information that can be easily accessed, managed, and updated. 
 
 Databases are a powerful tool for storing and managing data. They are used in a wide variety of applications and can help businesses to improve their efficiency, productivity, and decision-making.
 
@@ -422,13 +428,17 @@ Databases are a powerful tool for storing and managing data. They are used in a 
 
 Databases are managed by a database management system (DBMS). The **DBMS** is responsible for storing the data, ensuring its integrity, and providing access to the data for users.
 
-There are many different DBMSs available, each with its own strengths and weaknesses. Some popular DBMSs include different [flavours of SQL](http://localhost:1313/sql-data-analytics/#sql-quick-guide): MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.
+There are many different DBMSs available, each with its own strengths and weaknesses.
+
+Some popular DBMSs include different [flavours of SQL](http://localhost:1313/sql-data-analytics/#sql-quick-guide): MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.
 
 #### Databases Concepts
 
 **Normalization** is a process of organizing data in a database in a way that minimizes redundancy and dependency. Redundancy is when the same data is stored in multiple places in the database. This can lead to problems, such as data inconsistency and wasted space. Dependency is when one piece of data depends on another piece of data. This can also lead to problems, such as data integrity issues.
 
-There are five normal forms (1NF, 2NF, 3NF, BCNF, and 4NF) that can be used to normalize a database. Each normal form builds on the previous normal form, so a database must be in at least 1NF before it can be in 2NF, and so on.
+There are five normal forms (1NF, 2NF, 3NF, BCNF, and 4NF) that can be used to normalize a database. 
+
+Each normal form builds on the previous normal form, so a database must be in at least 1NF before it can be in 2NF, and so on.
 
 For example: 1NF (First Normal Form): A table in 1NF is in first normal form if it does not contain any repeating groups. This means that each row in the table must be unique, and no column can contain multiple values.
 
@@ -459,7 +469,9 @@ Imagine you're managing a bustling retail store, and you want to analyze your sa
 
 > Now, think of **"Dimension" tables as labels that provide extra information** about your products and customers.
 
-For instance, you might have a "Product" dimension table that includes details about each product's category, brand, and supplier. Another dimension could be the "Customer" table, which includes demographic information like age, location, and loyalty status.
+For instance, you might have a "Product" dimension table that includes details about each product's category, brand, and supplier. 
+
+Another dimension could be the "Customer" table, which includes demographic information like age, location, and loyalty status.
 
 When you combine the "Fact" and "Dimension" tables, you're not just looking at rows of sales data — you're building a story. 
 
@@ -478,9 +490,13 @@ It is used to **support business intelligence** (BI) and analytics applications.
 
 Data warehouses are typically used by businesses to track their performance, identify trends, and make better decisions.
 
-This data is **typically structured**, because it is easier to store and query structured data. However, data warehouses can also be used to store real-time data, such as sensor data or Social M. data. This data is often semi-structured or unstructured, because it is difficult to predict the format of this data.
+This data is **typically structured**, because it is easier to store and query structured data. However, data warehouses can also be used to store real-time data, such as sensor data or Social M. data. 
 
-If you are storing semi-structured or unstructured data in a data warehouse, then you will need to use a tool to transform the data into a structured format before it can be stored in the data warehouse. This process is called **ETL** (extract, transform, and load).
+This data is often semi-structured or unstructured, because it is difficult to predict the format of this data.
+
+If you are storing semi-structured or unstructured data in a data warehouse, then you will need to use a tool to transform the data into a structured format before it can be stored in the data warehouse.
+
+This process is called **ETL** (extract, transform, and load).
 
 Specifically designed to support **OLAP operations**.
 
@@ -508,9 +524,12 @@ They store large amounts of historical and transactional data in a structured fo
 
 **A data mart is a subset of a DWH** that is designed to support a specific business unit or department. Data marts are typically smaller and more focused than data warehouses, and they are often used to support decision-making and analysis for a particular area of the business.
 
-For example, a retail company might have a data mart that contains data about customer sales, product inventory, and marketing campaigns. This data mart would be used by the marketing department to track the effectiveness of marketing campaigns and to identify trends in customer behavior.
+For example, a retail company might have a data mart that contains data about customer sales, product inventory, and marketing campaigns.
+
+This data mart would be used by the marketing department to track the effectiveness of marketing campaigns and to identify trends in customer behavior.
 
 Data marts are often used to improve the performance of queries and to reduce the load on the data warehouse. This is because data marts are typically smaller and more focused than data warehouses.
+
 {{< /dropdown >}}
 
 
@@ -633,9 +652,14 @@ In my case, I started Self-hosting with a Raspberry Pi and also created one Gith
 I would start by focusing on containerizing - *making sure that your work is reproducible by others*
 
 {{< dropdown title="Why Self-Hosting will make you a better at Data Analytics? 👈" closed="true" >}}
-Also, you can containerize some of your applications and self-hosted in this way. For example a Shiny / DASH dashboard and create a container with it, share it to a [container registry](/docker-container-registries/ "Container Registries Explained {rel='nofollow'}").
 
-In this way, you will learn more about docker files, base images and so on. This might get useful when collaborating with development and teams - *as well as [sysadmin/infraestructure](/systems-engineering-and-infraestructure/) people*. 
+Also, you can containerize some of your applications and self-hosted in this way. 
+
+For example a Shiny / DASH dashboard and create a container with it, share it to a [container registry](/docker-container-registries/ "Container Registries Explained {rel='nofollow'}").
+
+In this way, you will learn more about docker files, base images and so on. 
+
+This might get useful when collaborating with development and teams - *as well as [sysadmin/infraestructure](/systems-engineering-and-infraestructure/) people*. 
 
 * These will be welcome in Data Analytics: 
     * Python Apps: You can see one example of a [containerized Python DASH App](/dash-docker-gcr/) in my [Trip Planner App with Weather](/python-trip-planner/)
@@ -654,15 +678,19 @@ K8s is a container orchestration platform that automates the deployment, scaling
 
 #### CI/CD
 
-> Imagine you're a master chef running a restaurant. You want your delicious dishes (software) to reach customers' tables quickly and consistently. That's where Continuous Integration and Continuous Deployment (CI/CD) come in—a set of practices that ensure your software is always fresh and ready to serve.
+Imagine you're a master chef running a restaurant. 
 
-We talked about Github Actions, but you will also encounter Jenkins, a popular CI/CD tool because it is open source, extensible, and well-documented. It also has a large community of users and contributors, which means that there are many plugins and resources available to help developers get started with Jenkins.
+You want your delicious dishes (software) to reach customers' tables quickly and consistently. 
+
+That's where Continuous Integration and Continuous Deployment (CI/CD) come in—a set of practices that ensure your software is always fresh and ready to serve.
+
+We talked about Github Actions, but you will also encounter Jenkins, a popular CI/CD tool because it is open source, extensible, and well-documented. 
+
+It also has a large community of users and contributors, which means that there are many plugins and resources available to help developers get started with Jenkins.
 
 #### Prometheus
 
 Prometheus is a **monitoring and alerting system** that helps developers track the health of their applications.
-
-> You're a guardian, responsible for keeping an eye on the health of everything within your responsability. Now, picture having a magical watchtower named Prometheus that lets you see the heartbeat of your software, ensuring it remains vibrant and trouble-free.
 
 {{< /dropdown >}}
 

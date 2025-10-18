@@ -11,7 +11,7 @@ url: 'automating-ghost-and-wordpress'
 
 As lately im like *a kid with APIs*, have setup [WP](#wordpress-setup) and [Ghost](#ghost-setup), just to tinker with them.
 
-{{< callout type="warning" >}}
+{{< callout type="info" >}}
 Ghost and WP both provide a [RESTAPI](#rest-vs-graphql-vs-gatsby). 
 {{< /callout >}}
 

@@ -28,6 +28,20 @@ As the author mentions: Plenti = Hugo + NetlifyCMS
 <!-- https://www.youtube.com/watch?v=T4b55nfZiIw -->
 {{< youtube "T4b55nfZiIw" >}}
 
+Svelte y Astro son tecnologías frontend que comparten la prioridad por la velocidad y eficiencia, pero no son exactamente alternativas directas, ya que tienen enfoques y casos de uso diferentes.
+
+Svelte es un framework que compila componentes a JavaScript muy optimizado en tiempo de construcción, lo que permite construir aplicaciones web interactivas, reactivas y complejas con alto rendimiento. SvelteKit, el framework oficial de Svelte, añade funcionalidades completas para construir aplicaciones con routing, SSR (renderizado servidor) y otras características de apps modernas.
+
+Astro, en cambio, es un framework orientado a sitios web con contenido más estático y enfoque en rendimiento extremo. Utiliza una arquitectura llamada "Island Architecture" que prerenderiza la mayoría de la página en HTML estático entregando muy poco JavaScript al navegador. Astro soporta usar componentes de múltiples frameworks como React, Vue o Svelte dentro de un mismo proyecto, priorizando la carga mínima de scripts.
+
+En resumen:
+- Svelte (con SvelteKit) es más adecuado para aplicaciones web interactivas y complejas.
+- Astro es ideal para sitios de contenido estático donde la optimización de carga y SEO es crítica.
+- Astro puede incluir componentes Svelte para partes interactivas, híbrido que aprovecha ambos.
+
+Por tanto, Svelte no es una alternativa directa a Astro; más bien, Astro puede usar Svelte como parte de su stack, y SvelteKit compite con marcos orientados a SPAs y aplicaciones completas, mientras que Astro destaca en sitios estáticos y multi-framework.[1][2][5][6][7]
+
+
 https://www.youtube.com/watch?v=Gr3KTOnsWEM&list=PLbWvcwWtuDm0tIrvD_xHvUXHBftbHDy5T
 
 This is a very cool proposal for landing pages see https://plenti.co/themes !
@@ -950,6 +964,7 @@ From Streamlit PoCs, I mean streamlit financial MVP to Flask with ChartJS:
 
 
 https://jalcocert.github.io/JAlcocerT/playwright-101/
+
 ![Job Market Trend | Matplotlib Job-Trends](/blog_img/data-experiments/matplotlib_job_offers_plot_06-08-2025.png)
 
 
@@ -984,6 +999,7 @@ Use Vision Tools, like RoomGPT + Vision Models to Tweak your Room and do that in
 https://jalcocert.github.io/JAlcocerT/ai-vision-models/#roomgpt-for-real-estate
 
 ![Normalized Value Change of PyStocks Streamlit Version](/blog_img/dev/pystocks/pystocks-vibed1.png)
+
 https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts
 
 {{< cards >}}
@@ -1038,8 +1054,15 @@ https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/
 > But you wont be able to make any changes, as the server (Typescrypt API) is NOT running.
 
 
+I also had the chance to work on D&A Prototypes, where I chose Streamlit as the way to present the PoC.
 
+![Streamlit PyGWalker Rendered Map with locations](/blog_img/apps/streamlit/st_pygwalker_map.png)
 
+That cool geomap was not included in the **S**cope **o**f **W**ork and a great surprise.
+
+It was ofc properly documented on a KB during the transition phase.
+
+> You could always use some static layout or wireframes before going to streamlit!
 
 ##### AI Stuff
 
@@ -1779,6 +1802,7 @@ https://www.randomgarage.com
 6. Keep writting, but less and more quality
 
 
+
 #### Stop Doing
 
 1. Opening more and more a shallow tech stack. *12/24 <<<150+ yearly posts on this blog should be more than enough*
@@ -1793,10 +1817,18 @@ https://www.randomgarage.com
 3. Go all-in to find new clients
 
 
+
 **Maybe's**
 
 Write an ebook?
 
+Get in shape:
+
+https://github.com/vanalmsick/workout_challenge
+
+https://github.com/Snouzy/workout-cool?
+
+> MIT |  🏋 Modern open-source fitness coaching platform. Create workout plans, track progress, and access a comprehensive exercise database. 
 
 #### Discovery of the Years
 

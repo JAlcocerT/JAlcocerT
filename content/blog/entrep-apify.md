@@ -1,9 +1,9 @@
 ---
 title: "BiP with APIFY"
-date: 2025-10-18T09:20:21+01:00
+date: 2025-10-18T06:20:21+01:00
 draft: false
-tags: ["Forum","Reddit vs forocoches","Coding for Entrepreneurs","RSS","Post Schedule"]
-description: ' 🤯'
+tags: ["Forum and Animations","Reddit vs forocoches","Coding for Entrepreneurs","RSS","Post Schedule"]
+description: 'The start of a sales pipeline 🤯'
 url: 'apify'
 ---
 
@@ -54,6 +54,25 @@ Cool infographics inspirations:
 
 ## Conclusions
 
+
+### A Sales Pipeline
+
+
+https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Utils
+
+https://apexcharts.com/javascript-chart-demos/funnel-charts/funnel/
+https://www.chartjs.org/docs/latest/samples/information.html
+
+![Streamlit Funnel with Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
+https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
+
+https://github.com/sgratzl/chartjs-chart-funnel
+
+### Content for Forums
+
+![Normalized Value Change of PyStocks Streamlit Version](/blog_img/dev/pystocks/pystocks-vibed1.png)
+
+https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts
 
 ### Youtube Animations
 

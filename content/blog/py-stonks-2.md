@@ -104,6 +104,7 @@ classDef class1 fill:red,color:blue,stroke:#FFD600;
 23. `https://www.google.com/finance/quote/.INX:INDEXSP?window=1M` or `https://www.google.com/finance/quote/GOOGL:NASDAQ?window=MAX`
 24. See also the cool graph and the table of https://bitcointreasuries.net/defi-and-other
 25. Maybe crypto? https://www.blockchain.com/explorer
+26. Maybe bonds? https://www.interactivebrokers.ie/portal/#/wlms/bond-scanner
 
 With this data model, you will have answers, but also questions:
 
@@ -126,6 +127,7 @@ To make it look cooler, vibe code as per those guidelines using any webapp [back
 If you need a proper finance tool, see: https://www.perplexity.ai/finance/XOM?comparing=CVX&period=1y
 
 Before going to `https://www.interactivebrokers.ie/sso/Login?RL=1&locale=en_US` or `https://www.xtb.com/es` :)
+
 
 > Having the possibility to export data from famous brokers, get it cleaned automatically and have your portfolio visualized can be great
 
