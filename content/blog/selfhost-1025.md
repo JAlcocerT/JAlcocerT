@@ -321,12 +321,6 @@ Among the popular open-source self-hosted link shorteners mentioned, some do off
 
 To summarize, **Shlink** stands out as the self-hosted URL shortener with built-in QR code generation. For YOURLS, you can enable QR codes through community-developed plugins, while Kutt typically requires external QR code tools. This makes Shlink a strong candidate if QR code functionality is a priority alongside link shortening.[1][3][4]
 
-[1](https://shlink.io)
-[2](https://github.com/shlinkio/shlink)
-[3](https://noted.lol/kutt/)
-[4](https://yourls.org)
-[5](https://github.com/738/awesome-url-shortener)
-[6](https://www.devopsschool.com/blog/list-of-top-free-open-source-self-hosted-application-for-url-shorteners/)
 
 ### Monitoring For HomeLab
 

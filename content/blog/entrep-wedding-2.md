@@ -142,6 +142,7 @@ See how [bentoPDF](https://github.com/alam00000/bentopdf) and its [tech get it d
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bentopdf" title="BentoPDF | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+So I create this:
 
 ```sh
 python3 -m http.server 8003
