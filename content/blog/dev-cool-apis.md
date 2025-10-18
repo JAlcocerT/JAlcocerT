@@ -315,7 +315,9 @@ I know that some marketers are using...
 
 ### PipeDream
 
-**Pipedream** is a cloud-based automation and integration platform designed for developers and technical users. It allows you to create workflows that connect APIs, databases, cloud apps, and event sources with minimal infrastructure setup. Key points about Pipedream:
+**Pipedream** is a cloud-based automation and integration platform designed for developers and technical users. It allows you to create workflows that connect APIs, databases, cloud apps, and event sources with minimal infrastructure setup. 
+
+Key points about Pipedream:
 
 - **Low-Code/Code-Optional:** You can build workflows using a mix of pre-built steps ("actions") and your own custom code in Node.js, Python, Go, or Bash. It’s not “no-code”—some programming/developer know-how is helpful for advanced automations.[1][2]
 - **Event-Driven Workflows:** Automate processes triggered by events (webhooks, schedule, app activity, HTTP requests, etc.). A flow could start with a new form submission and end with an email sent, data added to Google Sheets, or anything else API-powered.[2][3][4]

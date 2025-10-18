@@ -76,6 +76,26 @@ https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts
 
 Like...how would you reply to [such post](https://forocoches.com/foro/showthread.php?p=502610118#post502610118)?
 
+```sh
+git clone https://github.com/JAlcocerT/DataInMotion
+#git branch -a
+git fetch --all --prune && (git switch libreportfolio || git switch --track origin/libreportfolio) && git pull
+
+#WK42Y25
+uv run animate_sequential_compare_price_evolution_flex_custom.py SPY O 2020-01-01 10 short
+uv run plot_price_and_cumulative_dividends_with_start.py O 2010-01-01
+uv run ./tests/flexible_stock_timeseries.py O 2010-01-01 1111 youtube plot
+#uv run ./tests/flexible_stock_timeseries.py SPY O 2010-01-01 1111 short animate
+uv run tests/flexible_stock_timeseries.py GLD BTC-USD 2024-01-01 1111
+
+uv run animate_sequential_compare_price_evolution_flex_custom.py GLD BTC-USD 2025-01-01 10 short
+
+#uv run streamlit run streamlit_btc_poly.py
+```
+
+Very simple, with [such scripts](https://github.com/JAlcocerT/DataInMotion/tree/libreportfolio/Generation)
+
+
 With sth like [this ApexChart](https://apexcharts.com/javascript-chart-demos/mixed-charts/line-column-area/)
 
 
@@ -92,7 +112,7 @@ With sth like [this ApexChart](https://apexcharts.com/javascript-chart-demos/mix
 ### Youtube Animations
 
 
-can you make a component that will show the last video uploaded to a youtube channel as per the RSS feed? Example https://www.youtube.com/@UnfoldingData
+
 
 
 ---

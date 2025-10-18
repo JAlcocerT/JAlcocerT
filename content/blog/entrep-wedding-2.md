@@ -1,6 +1,6 @@
 ---
 title: "BiP a Micro-SaaS | Wedding Edition"
-date: 2025-10-18T09:20:21+01:00
+date: 2025-10-16T09:20:21+01:00
 draft: false
 tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2","ARR"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static. CSR Rendering QR and PDFs in browser 🤯'
@@ -190,6 +190,20 @@ This approach gives you full control over who can upload, limits exposure of cre
 
 This is a common, practical pattern used in production apps for secure, scalable file uploads with Cloudflare R2 and Next.js.
 
+#### Cloudflare R2
+
+So the flow will be: QR creation -> PDF customization & download -> Pay and get that CF R2 space
+
+With the photos being sent to a per wedding space inside [Cloudflare R2 s3 storage, as done on this post](https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/#cloudflare-r2).
+
+![Testing nextjs app to upload files to cf R2 buckets](/blog_img/web/agujapunto-r2-firebase/testing.png)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
+{{< /cards >}}
+
+
 
 #### Upsales
 
@@ -210,11 +224,15 @@ This is a common, practical pattern used in production apps for secure, scalable
 
 ## Conclusions
 
+Seems like all tech pieces are *more or less* matching already.
+
 See how the competition is doing:
 
 1. `https://planning.wedding/`
 2. `wedibox.com`
 3. `waldophotos.com`
+
+
 
 ---
 
@@ -249,7 +267,7 @@ The Sassify theme is just awsome: https://astro-sassify.larryxue.dev/
 
 **Inspiration** for modern SaaS landing pages:
 
-1. 1https://operately.com/`
+1. https://operately.com/`
 
 
 **Inspirational login sections**

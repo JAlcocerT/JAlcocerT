@@ -214,8 +214,69 @@ https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing
 ![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
 
 
-### Animations as a Code
+```sh
+bash -lc 'header_printed=0; \
+find . -maxdepth 1 -type f \( -iregex ".*\.\(mp4\|mov\|mkv\|avi\|mpg\|mpeg\|wmv\|m4v\|3gp\)$" \) -print0 \
+| sort -z \
+| while IFS= read -r -d "" f; do \
+  base=${f#./}; \
+  if [ $header_printed -eq 0 ]; then \
+    printf "%-12s %-8s %s\n" "Resolution" "FPS" "File"; \
+    printf "%-12s %-8s %s\n" "----------" "----" "----"; \
+    header_printed=1; \
+  fi; \
+  if command -v ffprobe >/dev/null 2>&1; then \
+    res=$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height,avg_frame_rate -of default=nw=1:nk=1 "$f" 2>/dev/null); \
+    width=$(echo "$res" | sed -n "1p"); \
+    height=$(echo "$res" | sed -n "2p"); \
+    afr=$(echo "$res" | sed -n "3p"); \
+    fps=$(awk -v r="$afr" "BEGIN{split(r,a,\"/\"); if(length(a)==2&&a[2]>0) printf \"%.2f\", a[1]/a[2]; else print r}"); \
+    printf "%-12s %-8s %s\n" "${width}x${height}" "${fps}" "$base"; \
+  elif command -v mediainfo >/dev/null 2>&1; then \
+    info=$(mediainfo --Inform="Video;%Width%x%Height%|%FrameRate%" "$f" 2>/dev/null); \
+    printf "%-12s %-8s %s\n" "${info%%|*}" "${info#*|}" "$base"; \
+  else \
+    printf "%-12s %-8s %s\n" "(install ffprobe or mediainfo)" "-" "$base"; \
+  fi; \
+done'
 
+# Resolution   FPS      File
+# ----------   ----     ----
+# 3840x2160    50.00    DJI_20251003204711_0010_D.MP4
+# 3840x2160    50.00    DJI_20251003204913_0011_D.MP4
+# 3840x2160    50.00    DJI_20251003204946_0012_D.MP4
+# 3840x2160    50.00    video.mp4
+```
+
+{{< youtube "YanaJiC_cYk" >}}
+
+
+
+```sh
+git clone https://github.com/JAlcocerT/DataInMotion
+#git branch -a
+git fetch --all --prune && (git switch libreportfolio || git switch --track origin/libreportfolio) && git pull
+
+uv run animate_sequential_compare_price_evolution_flex_custom.py GLD BTC-USD 2025-01-01 10 short
+
+ffmpeg -y -i gld-btc.mp4 -stream_loop -1 -i afilador_101.mp3 \
+  -c:v copy -c:a aac -shortest -map 0:v:0 -map 1:a:0 \
+  ./gld-btc-audio.mp4
+```
+
+> With the proper data model, you can save the Google Sheets read with `=GOOGLEFINANCE("CURRENCY:USDEUR"; "price"; FECHA(AÑO(HOY()); 1; 1); HOY(); "DAILY")`
+
+> > Or `=GoogleFinance("CURRENCY:BTCUSD"; "price"; HOY()-30; HOY())` 
+
+Not to mention the possibility to vibe code very quickly this [kind of aggregates within st](https://github.com/JAlcocerT/DataInMotion/blob/libreportfolio/streamlit_portfolio_aggregate.py):
+
+```sh
+uv run streamlit run streamlit_portfolio_aggregate.py
+```
+
+![Streamlit price and dividends of a portfolio aggregated](/blog_img/dev/streamlit-stocks-aggregates.png)
+
+### Animations as a Code
 
 You know, we can do [animation as a code as seen with matplotlib](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/).
 
