@@ -431,7 +431,7 @@ Not all the content is indexed in the same way across engines and you can miss v
 
 > MIT | 🕵️‍♂️ All-in-one OSINT tool for analysing any website
 
-5. See how a linkshortener see your site: https://dub.co/
+5. See how a linkshortener works for your site
 
 6. Does the site have **[Broken Links](https://fossengineer.com/nextjs-ssg/#do-i-got-any-broken-links)?**
 

@@ -4,7 +4,7 @@ date: 2025-09-08T00:20:21+01:00
 draft: false
 description: 'Jira DataModel with AI. Pandoc is great, more if you are not alergic to Latex.'
 url: 'jira-data-model-with-ai'
-tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram Mermaid","LandThatJob"]
+tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram Mermaid","LandThatJob","PowerBI"]
 ---
 
 **TL;DR**
@@ -17,7 +17,13 @@ As tech lead, you will need to analyze requirements/proposal to clients.
 
 To work with Jira, you need to understand their datamodel: https://developer.atlassian.com/server/jira/platform/database-schema/
 
-![alt text](/blog_img/AIBI/jira/jira-datamodel.png)
+![Jira Data Model](/blog_img/AIBI/jira/jira-datamodel.png)
+
+Also with Jira API docs: https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#about
+
+And some apps in atlassian marketplace like https://marketplace.atlassian.com/apps/1221150/power-bi-connector-for-jira?tab=overview
+
+
 
 Just in case you need to build a [PBi](https://jalcocert.github.io/JAlcocerT/about-powerbi/) x Jira related dashboard.
 

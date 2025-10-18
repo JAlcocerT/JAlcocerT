@@ -2,14 +2,24 @@
 title: "Website knowledge updates. Waiting / Landings with AI?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
-tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Landing Pages","BCMS vs PagesCMS"]
+tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Landing Pages","BCMS vs PagesCMS","TiinyHost"]
 description: 'New ATH for my SSG knowledge. Landing 101 that convert. CodexCLI for idea validation.'
 url: 'selling-with-a-landing-website'
 ---
 
+**Intro**
+
+Wanna build a sales pipeline?
+
+Start with a catchy landing first.
+
+The [data, streamlit web apps](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker) and pygwalker will come later.
 
 ![Streamlit Funnel with Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
-https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
+
+Just get that first YES.
+
+
 
 ## Web Front End - Theme
 
@@ -32,10 +42,7 @@ But it was time to put cool components like this [ig gallery](https://github.com
 
 Making a Landing should be easy already, with tools like: https://github.com/wandb/openui
 
-> OpenUI let's you describe UI using your imagination, then see it rendered live.
-
-
-
+> **OpenUI** let's you describe UI using your imagination, then see it rendered live.
 
 Ok, ok, you have embraced the power of SSGs and aware of how many cool things can be done *,statically'* aka [in browser with CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/).
 
@@ -50,8 +57,9 @@ And surprisingly, [Front End can do many cool things, *including authentication*
 
 ![Astro Waiting List + Formbricks URL Link](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
 
-Time to create
-```
+Time to create:
+
+```sh
 
 ```
 
@@ -81,6 +89,11 @@ Repurposing md note taking tools?
 Or...giving a try to F/OSS CMS?
 
 One more time, because I already gave a try to these from a [recent post](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#a-theme-to-test-this): [bcms](https://github.com/bcms/cms) and [pagescms](https://github.com/pages-cms/pages-cms)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bcms" title="BCMS with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pages-cms" title="Pages CMS Docker 🐋 ↗" >}}
+{{< /cards >}}
 
 This can be used to get [a cool ig like gallery](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/ig-gallery-folder) without importing each file independently, just the folder where they are saved:
 
@@ -126,13 +139,16 @@ Sounds familiar?
 
 ## Conclusions
 
+If you need icons, consider having a look to: https://www.jsdelivr.com/package/gh/selfhst/icons?ref=selfh.st
+
+For just simpler Link Collection Themes, think about these selfhosted solutions:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/linkstack" title="LinkStack Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/littelink" title="LittleLink Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Cool landings out-there: *these should be guiding slubnechwile.com.
+Cool landings out-there: *these should be guiding `slubnechwile.com`*
 
 Get a cool theme: https://www.builtatlightspeed.com/category/astro or from astro themes
 
@@ -144,8 +160,9 @@ Get a cool theme: https://www.builtatlightspeed.com/category/astro or from astro
 
 4. `https://operately.com/`
 
-Those should be enough for some inspiration.
+5. `https://kurz.fyi/`
 
+Those should be enough for some **landing page inspiration**.
 
 Resumen de los 3 puntos clave de emprendimiento:
 
@@ -208,7 +225,7 @@ En resumen, hay consenso sobre la utilidad de construir en público para tener f
 
 ### Example TinyHost
 
-I got to know a very cool SaaS on twitter:
+I got to know a very **cool SaaS** on twitter:
 
 
 * https://tiiny.host/#pricing
@@ -298,4 +315,4 @@ To put astro/hugo inside a container is as simple as: *and you can also develop 
 
 The good thing about astro, is to plug that image optimization:
 
-![alt text](/blog_img/web/astro-img-optim.png)
+![Astro Image Optimization](/blog_img/web/astro-img-optim.png)

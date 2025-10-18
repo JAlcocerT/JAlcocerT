@@ -752,7 +752,7 @@ If this was too much content, you can always use a LLMs to summarize the YT Vide
 
 Like these ones: *or just use perplexity*
 
-{{% details title="Share and Connect 🌍" closed="true" %}}
+{{% details title="There are few youtube summarizers | projects 🌍" closed="true" %}}
 
 * https://github.com/jkawamoto/mcp-youtube-transcript
 
@@ -766,21 +766,30 @@ Like these ones: *or just use perplexity*
 
 {{% /details %}}
 
-It was a year of a lot of applied AI...
+It was a year of a lot of applied AI
 
-and understanding many concepts, like langflow, [langgraph](https://github.com/von-development/awesome-LangGraph)
+and understanding many concepts, like langflow, [langgraph](https://github.com/von-development/awesome-LangGraph)...
 
 
 * https://platform.openai.com/docs/models
     * https://platform.openai.com/chat/edit?models=o1
 
-The CLI agents have been a great part of this 2025:
+The **CLI AI agents** have been a great part of this 2025:
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/" title="OpenAI Codex inside a Docker Container Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/codex-cli" title="Codex CLI | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-> Additionally, I participated in *few* tech Talks
+Some of those CLI tools, like goose, provide also desktop app: *with linux version available!*
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/goose" title="Goose | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gemini-cli" title="Gemini CLI | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![Goose Desktop - Plug a LLM and even provides transcription](/blog_img/GenAI/audio/goose-desktop.png)
+
+> Additionally, I participated in ***few* tech Talks**:
 
 1. Using LangChain to chat with a DB
 2. Real Estate RAG

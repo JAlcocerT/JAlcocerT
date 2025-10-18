@@ -77,6 +77,7 @@ sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update
 sudo apt install proton-vpn-gnome-desktop
 ```
 
+
 2. Mullvad
 
 Via [Mullvad x Gluetun](https://fossengineer.com/gluetun-vpn-docker/) 
@@ -101,6 +102,10 @@ sudo apt install mullvad-vpn
 Which you can setup via wg easy as [seen with the x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#desktop-with-vps-as-vpn-with-wireguard)
 
 * https://github.com/Devsfy/wiregui
+
+4. ProtonVPN
+
+> They are opening more and more https://github.com/NordSecurity/nordvpn-linux
 
 ### HTTPs and SSL Everywhere
 

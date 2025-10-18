@@ -263,6 +263,8 @@ This was one of the first data I used for a personal project.
 
 Im talking about the python trip planner, which uses the open meteo API to get historical weather data points.
 
+`https://api.open-meteo.com/v1/forecast?city=${city}&daily=temperature_2m_max&timezone=auto`
+
 
 ## Checking APIs
 
@@ -277,6 +279,15 @@ When playing/creating APis...
 <!-- https://www.youtube.com/watch?v=V4eC5tKg3WQ -->
 
 {{< youtube "V4eC5tKg3WQ" >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/hoppscotch/" title="Hoppscotch | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+wget https://github.com/hoppscotch/releases/releases/latest/download/Hoppscotch_linux_x64.deb
+sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
+```
 
 
 

@@ -32,7 +32,7 @@ Examples of **popular PaaS** providers include:
 
 But today, we are going to see some options to **SelfHost some cool PaaS Software** on our VPS / server:
 
-[![Star History Chart](https://api.star-history.com/svg?repos=caprover/caprover,coollabsio/coolify,dokku/dokku&Dokploy/dokploy&biersoeckli/QuickStack&openfaas/faas&undernightcore/dockerizalo&,type=Date)](https://star-history.com/#caprover/caprover&coollabsio/coolify&dokku/dokku&Dokploy/dokploy&biersoeckli/QuickStack&openfaas/faas&undernightcore/dockerizalo&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=caprover/caprover,coollabsio/coolify,dokku/dokku,Dokploy/dokploy,biersoeckli/QuickStack,openfaas/faas,undernightcore/dockerizalo&type=Date)](https://star-history.com/#caprover/caprover,coollabsio/coolify,dokku/dokku,Dokploy/dokploy,biersoeckli/QuickStack,openfaas/faas,undernightcore/dockerizalo)
 
 > Tools Which I will *(probably)* cover on future posts.
 
@@ -68,17 +68,22 @@ https://www.youtube.com/watch?v=VPHEXPfsvyQ
 
 {{< youtube "VPHEXPfsvyQ" >}}
 
-{{< details title="More a out CapRover 📌" closed="true" >}}
-
 **CapRover**, a **free** and **open-source** **Platform-as-a-Service (PaaS)** for **easy application deployment**.
 
 **What is CapRover?**
 
-**CapRover** is a **user-friendly**, **fully automated** application platform, similar to a **self-hosted**, **open-source Heroku**. It simplifies deploying various applications like **NodeJS**, **PHP**, **Java**, **WordPress**, **MongoDB**, and **MySQL**.
+**CapRover** is a **user-friendly**, **fully automated** application platform, similar to a **self-hosted**, **open-source Heroku**. 
+
+It simplifies deploying various applications like **NodeJS**, **PHP**, **Java**, **WordPress**, **MongoDB**, and **MySQL**.
+
+
+{{< details title="More about CapRover 📌" closed="true" >}}
 
 **Setting Up CapRover:**
 
-Requires a **domain** and a **Virtual Private Server (VPS)**. The tutorial uses **DigitalOcean** for the **VPS** and **Google Domains** for the **domain**. Setup involves:
+Requires a **domain** and a **Virtual Private Server (VPS)**. 
+
+The tutorial uses **DigitalOcean** for the **VPS** and **Google Domains** for the **domain**. Setup involves:
 
 *   **Installing CapRover** on the server.
 *   **Setting up a wildcard domain**.

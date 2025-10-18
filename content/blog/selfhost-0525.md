@@ -408,7 +408,7 @@ It's always great to see new options appearing on the web analytics space.
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="Specially, when those are SelfHostable WebAn 🐋✅ ↗" >}}
 {{< /cards >}}
 
-I saw a cool post about [Umami](https://github.com/umami-software/umami/releases) and how 
+I saw a cool post about [Umami](https://github.com/umami-software/umami/releases)
 
 Yet, lately I tried [Littlyx](https://dashboard.litlyx.com/): which I discovered few months back
 
@@ -464,6 +464,7 @@ But...it used davinci model which was deprecated: https://platform.openai.com/do
 So I had to vibe code a little bit with **codex** to fix it:
 
 ![QA Track via reporeader](/blog_img/GenAI/aidocs/reporeader-qatrack.png)
+
 <!-- ![alt text](/blog_img/GenAI/reporeader-qatrack.png) -->
 
 But...I feel its already superseeded few times by other tools.

@@ -155,7 +155,7 @@ I had to login via API key as per:
 
 As I could not do it via [regular google auth](https://github.com/google-gemini/gemini-cli/issues/1901)
 
-![Autnehticating Google CLI](/blog_img/GenAI/geminiCLI/geminicli-auth.png)
+![Authenticating Google CLI](/blog_img/GenAI/geminiCLI/geminicli-auth.png)
 
 ![GeminiCLI is authorized now](/blog_img/GenAI/geminiCLI/geminiCLI-authorized.png)
 
@@ -190,7 +190,9 @@ gemini
 /mcp
 ```
 
-You will just need a `.gemini/settings.json` as per [the docs](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md)
+You will just need a `/.gemini/settings.json` as per [the docs](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md)
+
+And just add some [MCP server connection](https://geminicli.com/docs/tools/mcp-server/) like:
 
 ```json
 {
@@ -207,7 +209,7 @@ Once logged in again to GeminiCLI, you will get access to the MCP tools:
 
 ![Gemini CLI Connection to MCP](/blog_img/GenAI/geminiCLI/geminicli-mcp-connection.png)
 
-See how it works:
+See how GeminiCLI works **plugged to MCP**:
 
 ![Gemini MCP Working](/blog_img/GenAI/geminiCLI/gemini-mcp.png)
 
@@ -351,7 +353,7 @@ From my experience, a good Cursor/Windsurf rule/guideline also does the trick: h
 
 See how to setup Goose:
 
-![alt text](/blog_img/GenAI/goose-1.png)
+![Goose UI](/blog_img/GenAI/goose-1.png)
 
 ![alt text](/blog_img/GenAI/goose-2.png)
 

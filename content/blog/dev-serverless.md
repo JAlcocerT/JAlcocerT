@@ -1,11 +1,12 @@
 ---
 title: "Just be Serverless"
-date: 2025-09-23T23:20:21+01:00
+date: 2025-11-23T23:20:21+01:00
 draft: false
-tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone","T3.Chat","Publii CMS"]
+tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone","T3.Chat","Publii CMS","Cloudflare Workers"]
 url: 'serverless-101'
 description: 'Your WebApps, with Serverless Authentication and AI on the backend.'
 ---
+
 
 
 
@@ -14,7 +15,7 @@ description: 'Your WebApps, with Serverless Authentication and AI on the backend
 Just go serverless.
 
 +++ Using Logto JS SDK with CF Workers (?)
-
++++ You can even get web analytics to work on Cloudflare Workers
 
 
 
@@ -156,3 +157,15 @@ If you were to include this key in your client-side code (which is what runs in 
 This is why the Admin SDK is only meant to be used on your own servers, like a Cloudflare Worker, a Google Cloud Function, or a Node.js backend. 
 
 > In these environments, the service account key is never exposed to the public.
+
+### Web Analytics x Cloudflare Workers
+
+Just in case your home electricity goes away more often than not.
+
+Instead of using selfhostable web analytics like Umami, you can try...
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="Specially, when those are SelfHostable WebAn 🐋✅ ↗" >}}
+{{< /cards >}}

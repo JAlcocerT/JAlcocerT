@@ -473,7 +473,46 @@ It offers a clean and intuitive interface, collections, environments, code gener
 
 > It has a free tier with unlimited private projects and collaboration for one project, but **the core is open source.**
 
-2. **Hoppscotch (hoppscotch/hoppscotch on GitHub):** Formerly known as Postwoman, Hoppscotch is a fast, lightweight, and beautifully designed open-source API development ecosystem. **It's available as a web application and a desktop app, supporting REST, GraphQL, WebSockets, and Server-Sent Events**. 
+2. **Hoppscotch (hoppscotch/hoppscotch on GitHub):** Formerly known as Postwoman, Hoppscotch is a fast, lightweight, and beautifully designed open-source API development ecosystem. 
+
+{{< callout type="info" >}}
+You can test FastAPI (RESTapi) with: Postman, Hoppscoth...
+{{< /callout >}}
+
+
+Hoppscotch is indeed similar to Postman in its core functionality.  Both are tools designed to help developers work with APIs (Application Programming Interfaces).  
+
+Think of them as specialized tools for sending and receiving messages to different software services.
+
+**What Hoppscotch Does:**
+
+* **API Testing:**  It allows you to send various types of HTTP requests (GET, POST, PUT, DELETE, etc.) to APIs.  You can specify headers, parameters, and request bodies (data).
+* **Response Inspection:**  You can view the responses from the API, including status codes, headers, and the response body (often in JSON or XML format). This helps you understand how the API works and debug any issues.
+* **Collaboration:** Hoppscotch, like Postman, often offers features to collaborate with other developers, sharing API collections, environments, and tests.
+* **Documentation:**  It can be used to generate or interact with API documentation.
+
+**How Hoppscotch is Similar to Postman:**
+
+* **Core Functionality:**  Both tools serve the same primary purpose: simplifying API development and testing.
+* **User Interface:**  Both provide a user-friendly interface to construct and send requests, inspect responses, and manage API collections.
+* **Collaboration Features:**  Both offer ways to share your work with team members.
+
+**How Hoppscotch is Different from Postman:**
+
+* **Open Source:** Hoppscotch is an open-source project, while Postman has a free version but also offers paid plans for advanced features.  This means Hoppscotch is free to use and modify.
+* **Focus on Simplicity:** Hoppscotch often emphasizes a cleaner, more streamlined interface, aiming to be easier to learn and use, particularly for those new to API testing.  Postman, while powerful, can have a steeper learning curve due to its extensive feature set.
+* **Real-time Collaboration:** Hoppscotch has a greater focus on real-time collaboration features, making it easier for teams to work together on API development simultaneously.
+* **Web-Based vs. Desktop App:** Hoppscotch is primarily a web-based application, accessible directly in your browser.  Postman, while also having a web version, started as a desktop application.
+
+**In essence:**
+
+Hoppscotch is a strong contender and alternative to Postman, especially if you prioritize open-source software, a simpler interface, and real-time collaboration.  
+
+Postman remains a very powerful and feature-rich tool, but Hoppscotch provides a compelling option for many developers.
+
+
+
+**It's available as a web application and a desktop app, supporting REST, GraphQL, WebSockets, and Server-Sent Events**. 
 
 It emphasizes ease of use and real-time collaboration through workspaces (though the collaboration features might have some non-fully-open-source aspects in their cloud offering).
 
@@ -488,7 +527,6 @@ It emphasizes ease of use and real-time collaboration through workspaces (though
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/hoppscotch/" title="Hoppscotch | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 ```sh
 wget https://github.com/hoppscotch/releases/releases/latest/download/Hoppscotch_linux_x64.deb

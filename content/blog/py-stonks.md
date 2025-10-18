@@ -572,10 +572,6 @@ except Exception as e:
 ![Matplotlib of sqlite pulled data via fastapi into ipynb](/blog_img/entrepre/public-build/pystonks/fastapi-sqlite-ipynb-plot.png)
 
 
-{{< callout type="info" >}}
-You can test FastAPI (RESTapi) with: Postman, Hoppscoth...
-{{< /callout >}}
-
 This will now only allow you to get an endpoint, but to use it for your [animations](#on-demand-data-animations)
 
 

@@ -1,6 +1,6 @@
 ---
 title: "[AI] Vacation Planning - Recommendations, Costs, Weather"
-date: 2025-10-23
+date: 2025-11-23
 draft: false
 tags: ["Dev","AI"]
 description: "Python App to explore vacAItion destination. LLMs ❤️ Data. While exploring Agents."
@@ -370,10 +370,6 @@ Share media with your friends (airdrop for all devices):
 * https://github.com/rohitkumbhar/surmai
 
 > MIT | Surmai is a personal/family **travel organizer**
-
-
-
-### Using hoppscotch
 
 ### HomeAssistant
 

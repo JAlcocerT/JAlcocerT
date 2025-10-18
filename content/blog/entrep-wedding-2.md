@@ -30,7 +30,7 @@ And quickly moved the NS to cloudflare ones, to start the game.
 
 We come from [this post](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/)
 
-Time to keep [building in public]() the project.
+Time to keep building in public the project.
 
 With some [marketing](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/) and [bootstrap](https://jalcocert.github.io/JAlcocerT/whats-boostrap/) concepts plugged in.
 
@@ -89,6 +89,7 @@ Like the one I used for [this weddin](https://jalcocert.github.io/JAlcocerT/soft
 
 * https://www.qrcode-monkey.com/
 * https://bitly.com/
+
 * https://github.com/dubinc/dub
     * https://github.com/dubinc/dub#self-hosting
     * https://dub.co/pricing
@@ -120,8 +121,7 @@ See, people have done this QR CSR setup already:
 
 See, there are webapp projects that create PDF for you.
 
-Like this [OSS cv as a code](https://fossengineer.com/open-source-curriculum/): https://github.com/JAlcocerT/open-resume
-
+Like this [OSS CV as a code](https://fossengineer.com/open-source-curriculum/): *I even [forked OpenResume](https://github.com/JAlcocerT/open-resume)*
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reactive-resume" title="Reactive Resume | Docker Configs 🐋 ↗" >}}
@@ -131,6 +131,17 @@ Like this [OSS cv as a code](https://fossengineer.com/open-source-curriculum/): 
 This one particularly, uses React-pdf 
 
 > creates PDF files and is used by the resume builder to create a downloadable PDF file.
+
+Why should PDFs creation not be free, when is [one of the things that CSR can do](https://jalcocert.github.io/JAlcocerT/csr-and-js/)?
+
+An example?
+
+See how [bentoPDF](https://github.com/alam00000/bentopdf) and its [tech get it done](https://github.com/JAlcocerT/Home-Lab/blob/main/bentopdf/z-tech.md)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bentopdf" title="BentoPDF | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ### Web when registered
 

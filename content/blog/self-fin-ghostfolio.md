@@ -1,6 +1,6 @@
 ---
 title: "GhostFolio and more for inspiration"
-date: 2025-10-17T08:20:21+01:00
+date: 2025-11-17T08:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/ghostfolio/ghostfolio/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
@@ -25,6 +25,12 @@ url: 'ghostfolio-and-personal-finance-dev-tools'
 3. https://github.com/actualbudget/actual
 
 > MIT |  A local-first personal finance app 
+
+4. https://github.com/Open-Dev-Society/OpenStock?tab=readme-ov-file#docker-setup
+
+> agpl 3.0 | OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.
+
+
 
 ### Interesting Software for Finances
 

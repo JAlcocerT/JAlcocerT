@@ -1,6 +1,6 @@
 ---
 title: "[Micro SaaS] AI Driven PPTs"
-date: 2025-10-10T01:20:21+01:00
+date: 2025-10-15T01:20:21+01:00
 draft: false
 tags: ["BiP","Agents","Codex CLI","NextJS SliDev-Editor","Tech Talk","Theme Seriph","Vue"]
 description: 'BiP a presentation generator for BAs.'

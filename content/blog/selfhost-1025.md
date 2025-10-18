@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - Oct 2025"
-date: 2025-10-19T01:20:21+01:00
+date: 2025-10-18T01:20:21+01:00
 draft: false
 tags: ["SFTPGo x Syncthing","WebDav","File Sync Tools","P2P Recap","XMRig Benchmark"]
 description: 'Best tools for organizing homelab files.'
@@ -224,6 +224,11 @@ More Selfhosted resources
 
 ### SelfHosted WebAnalytics
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="SelfHostable WebAnalytics Tools 🐋✅ ↗" >}}
+{{< /cards >}}
+
 ![Cookies Meme](/blog_img/web/COOKIES.jpg)
 
 
@@ -243,13 +248,20 @@ https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#better-webanalyt
 ![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
 
 
-Link analytics solutions, like Kutt:
+Link analytics solutions, like Kutt: `https://kutt.it/`
 
 ![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
 
 ![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
 
 
+https://github.com/abegehr/chickadee
+
+ Simple, privacy-focused web analytics you can self-host on Cloudflare. 
+
+ https://github.com/benvinegar/counterscale
+
+  Scalable web analytics you run yourself on Cloudflare 
 
 ### Monitoring For HomeLab
 

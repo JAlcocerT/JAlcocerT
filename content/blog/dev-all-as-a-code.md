@@ -155,7 +155,7 @@ Or to write a e-book for your friend (Anna's archive).
 
 Or...because you can now have deep research agents everywhere:
 
-* https://parallel.ai/pricing
+* https://parallel.ai/pricing - AIs are the web's new user  - The highest accuracy web search for your AI
 * Perplexity...
 * ...
 
@@ -295,7 +295,13 @@ Remotion stands out as a React-based tool for creating programmatic videos. It e
 
 Remotion is well-regarded for strong documentation, ease of use, and a focus on collaborative and dynamic video creation, including applications like product videos and in-browser editing.
 
-Manim, on the other hand, is a Python library specialized in math and educational animations. It offers fine-grained control for precise formula animation and algorithm visualization. It requires more programming expertise and manual effort but is powerful for STEM use cases. Recent research advances also use AI to automate some Manim coding, improving accessibility. Manim excels in complex mathematical and algorithmic animations rather than general vector or video creation.[7][8][9]
+Manim, on the other hand, is a Python library specialized in math and educational animations. It offers fine-grained control for precise formula animation and algorithm visualization.
+
+It requires more programming expertise and manual effort but is powerful for STEM use cases.
+
+Recent research advances also use AI to automate some Manim coding, improving accessibility.
+
+Manim excels in complex mathematical and algorithmic animations rather than general vector or video creation.[7][8][9]
 
 
 | Feature/Aspect          | Motion Canvas                       | Remotion                          | Manim                              |
@@ -356,7 +362,7 @@ And you can use these projects together with https://github.com/datopian/markdow
 > Turn markdown files into structured, queryable data with JS. Build markdown-powered docs, blogs, and sites quickly and reliably.
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Commento" title="Commento | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Commento" title="Commento for Websites | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ### Writing Posts with Codex
@@ -365,12 +371,55 @@ As seen during summer on [this post](https://jalcocert.github.io/JAlcocerT/tech-
 
 How about using **Codex CLI** to write SSG posts?
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/codex-cli" title="Codex CLI | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+```bash
+git clone https://github.com/JAlcocerT/Home-Lab
+cd codex-cli
+
+docker compose -f docker-compose.codex.yml up -d --build
+
+# To stop the container (using either method):
+# docker compose -f docker-compose.codex.yml down  # Using compose
+# docker stop codex-container && docker rm codex-container  # Using container name
+docker exec -it codex-container bash
+codex #And ask anything you want!
+```
+
+3. Access the container:
+
+```bash
+docker exec -it codex-container bash
+```
+
 Just in case that you dont want to do the [n8n + CMS API](https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/).
 
-Example: given https://github.com/Snouzy/workout-cool?tab=readme-ov-file#deployment--self-hosting
+Example: given the repository `https://github.com/Snouzy/workout-cool?tab=readme-ov-file#deployment--self-hosting`
+
+
+
+#### Agentic CLI is cool
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/goose" title="Goose | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gemini-cli" title="Gemini CLI | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#goose
+https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#gemini-cli-x-git-mcp
+![Gemini MCP Working](/blog_img/GenAI/geminiCLI/gemini-mcp.png)
+
+
+* https://console.anthropic.com/workbench/
+* https://console.groq.com/keys
+* https://platform.openai.com/api-keys
 
 
 #### Writing Technical Posts with Perplexity and IDEs
 
 Or just **Cursor/Windsurf** agents + Perplexity Context?
+
+* https://windsurf.com/profile
 
