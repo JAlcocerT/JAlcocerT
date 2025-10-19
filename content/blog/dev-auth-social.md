@@ -28,7 +28,7 @@ Say that for every 1000 cold emails you do, 2-4% will move towards the next step
 
 You dont want to throw away the mkt efforts, by having a landing and SaaS login that provides too much friction.
 
-And if you have ever worked on **ecommerce**, you should know that a social sign in converts ~95%, instead of the ~80+% of a email/pwd.
+And if you have ever worked on **e-commerce**, you should know that a social sign in converts ~95%, instead of the ~80+% of a email/pwd.
 
 > Some people just make you signin by placing your mail and receiving a code: 
 

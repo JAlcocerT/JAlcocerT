@@ -2,12 +2,10 @@
 title: "Interesting Telecom Concepts"
 date: 2023-12-31T23:20:21+01:00
 draft: false
-tags: ["Analytics","D&A","DOCSIS","Fiber"]
+tags: ["Analytics","D&A","DOCSIS vs Fiber"]
 description: 'Interesting Telco stuff I got to know while using a Data LakeHouse'
 url: 'telecom-concepts-101'
 ---
-
-
 
 **Intro**
 
@@ -44,13 +42,13 @@ See other *local devices* connected to the same router:
 ip neigh
 ```
 
-> Access the router admin panel, this example is at 192.168.0.1.
+> Access the router admin panel, this example is at `192.168.0.1`.
 
 {{< callout type="info" >}}
-You will see the software version its running, like CH7465PLAY-NCIP-6.15.32p5-GA-NOSH, its mac address, serial number...
+You will see the software version its running, like `CH7465PLAY-NCIP-6.15.32p5-GA-NOSH`, its mac address, serial number...
 {{< /callout >}}
 
-TO know your vendor:
+To know your vendor:
 
 ```sh
 ip link show enp2s0f0
@@ -60,7 +58,7 @@ ip link show enp2s0f0
 
 **This is a fiber Cable Modem**
 
-![text](/blog_img/outro/telecom/fiber-cm.png)
+![A Fiber Cable Modem](/blog_img/outro/telecom/fiber-cm.png)
 
 This, instead, is a COAX cable:
 
@@ -68,7 +66,7 @@ This, instead, is a COAX cable:
 
 See how they compare:
 
-![text](/blog_img/outro/telecom/cm-fiber-coax.png)
+![Fiber vs Coax CMs](/blog_img/outro/telecom/cm-fiber-coax.png)
 
 
 <!-- ![alt text](/blog_img/outro/telecom/cm-fiber-coax.png) -->
@@ -199,8 +197,6 @@ It communicates with **Cable Modems (CM)** in homes using Hybrid Fiber-Coaxial, 
 
 {{< details title="ServAssure (SANXT) vs SuperPoller... 📌" closed="true" >}}
 
-It's important to clarify the relationship between "superpollers" and ServAssure NXT.
-
 They are not alternatives to each other; rather, "superpollers" (or clustered pollers) are a component *within* the ServAssure NXT system. 
 
 * **ServAssure NXT:**
@@ -246,7 +242,6 @@ It communicates with multiple ONTs to deliver internet services in a **Passive O
 
 **DOCSIS (Data Over Cable Service Interface Specification)** and **Fiber** refer to different internet technologies:
 
-
 > The trick is DOCSIS ~ COAX ~ HFC ~ TV ~ RF **(vs)** ONT ~ OLT ~ Fiber To The Home (FTTH)
 
 **DOCSIS**
@@ -260,7 +255,9 @@ It communicates with multiple ONTs to deliver internet services in a **Passive O
 
 **DOCSIS** is an international telecommunications standard that allows the addition of high-speed data transfer to an existing cable TV (CATV) system.
 
-It is widely used by many cable television operators to provide internet access (over their existing hybrid fiber-coaxial infrastructure) in addition to television services. Here are key aspects of DOCSIS:
+It is widely used by many cable television operators to provide internet access (over their existing hybrid fiber-coaxial infrastructure) in addition to television services.
+
+Here are key aspects of DOCSIS:
 
 - **Purpose**: DOCSIS technology enables cable operators to efficiently utilize their existing coaxial cable infrastructure to deliver high-speed broadband internet access, along with voice and video services.
 
@@ -288,7 +285,9 @@ It is widely used by many cable television operators to provide internet access 
 
 You're asking if the HFC (Hybrid Fiber-Coaxial) signal to your cable modem is a DC voltage, and how many volts.
 
-The primary signal carried over the coaxial cable to your cable modem in an HFC network is **not DC voltage for powering the modem**. Instead, it's a **high-frequency alternating current (AC) signal** that carries the digital internet data (DOCSIS).
+The primary signal carried over the coaxial cable to your cable modem in an HFC network is **not DC voltage for powering the modem**. 
+
+Instead, it's a **high-frequency alternating current (AC) signal** that carries the digital internet data (DOCSIS).
 
 **Here's why and what it means for voltage:**
 
@@ -302,8 +301,6 @@ The primary signal carried over the coaxial cable to your cable modem in an HFC 
 The coaxial cable delivers **RF data signals (AC, low voltage)** to your cable modem via the HFC network using the DOCSIS standard.
 
 Your cable modem itself gets its **DC power (typically 12V DC)** from a separate power adapter plugged into your wall's electrical outlet.
-
----
 
 DOCSIS (Data Over Cable Service Interface Specification) is the international standard that enables high-speed internet over existing cable TV infrastructure (Hybrid Fiber-Coaxial or HFC networks). Each new version introduces significant improvements in speed, efficiency, and features.
 
@@ -481,25 +478,26 @@ Optical networks use different technologies and standards, which include distinc
 {{< /details >}}
 
 
-
-
 ## Signals for Telecom
 
 Some are only applicable for COAX, other for fiber networks.
 
 {{< details title="SNR, RSSi, and T3/T4 Timeouts in Telecom Signals 📌" closed="true" >}}
 
-In telecommunications, various metrics and signals like SNR, RSSI, and T3/T4 timeouts are crucial for assessing the quality and reliability of network connections. Below is an overview of each:
+In telecommunications, various metrics and signals like SNR, RSSI, and T3/T4 timeouts are crucial for assessing the quality and reliability of network connections. 
 
 #### SNR (Signal-to-Noise Ratio)
+
 - **Definition**: SNR measures the ratio of signal power to noise power within a communication channel. It is a critical parameter in determining the quality of a transmission channel and its capacity to transmit data effectively without errors.
 - **Importance**: A higher SNR indicates a clearer signal with less background noise, leading to higher data throughput and fewer transmission errors. It is particularly important in environments with potential interference, such as wireless communications and broadband over coaxial cables.
 
 #### RSSI (Received Signal Strength Indicator)
+
 - **Definition**: RSSI is a measure of the power level that a receiving device picks up from the wireless signal. It is typically measured in decibels from 0 (zero) to -120dBm (a lower or more negative number means a weaker signal).
 - **Usage**: RSSI is used to estimate how well a device can hear a signal from a router or an access point, impacting the quality of the connection. It is crucial for setting up wireless networks to ensure sufficient coverage and performance.
 
 #### T3 and T4 Timeouts
+
 - **T3 Timeout**:
   - **Definition**: A T3 timeout occurs when a cable modem does not receive a response from the CMTS (Cable Modem Termination System) after multiple retries of sending a request. It often indicates a problem in the upstream path in cable networks.
   - **Implications**: Frequent T3 timeouts can lead to degraded service, increased latency, and intermittent connection issues.
@@ -512,7 +510,9 @@ In telecommunications, various metrics and signals like SNR, RSSI, and T3/T4 tim
 - **Network Performance Monitoring**: Service providers continuously monitor these parameters to manage network health. Adjustments are made based on SNR and RSSI readings to optimize performance, while T3/T4 timeouts help identify and troubleshoot connectivity issues.
 - **Installation and Maintenance**: Proper setup and regular maintenance of network equipment are crucial to maintaining good SNR and RSSI levels, thereby minimizing T3/T4 timeouts and ensuring reliable service delivery.
 
-Understanding and managing SNR, RSSI, and T3/T4 timeouts are fundamental aspects of maintaining high-quality and reliable telecommunications services. These metrics provide valuable insights into network conditions, helping technicians and engineers optimize infrastructure and address issues proactively.
+Understanding and managing SNR, RSSI, and T3/T4 timeouts are fundamental aspects of maintaining high-quality and reliable telecommunications services. 
+
+These metrics provide valuable **insights into network conditions**, helping technicians and engineers optimize infrastructure and address issues proactively.
 
 {{< /details >}}
 

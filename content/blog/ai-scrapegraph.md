@@ -258,7 +258,7 @@ This report summarizes the video, providing an in-depth look at how to use web s
 - **What is Web Scraping?**
   - Web scraping involves extracting data from websites, often using a **headless browser like Puppeteer**, which allows users to interact with a website programmatically.
   
-However, big eCommerce sites like Amazon don't love big traffic and will block IP addresses or make users solve captchas if they suspect you're not a human.
+However, big e-Commerce sites like Amazon don't love big traffic and will block IP addresses or make users solve captchas if they suspect you're not a human.
 
 - **Solving the Problem with Bright Data**
   - Bright Data provides a special tool called the Scraping Browser, which runs on a proxy network and provides features like captcha-solving, retries, and more, allowing users to scrape the web at an industrial scale. This tool helps avoid IP blocking and captchas.

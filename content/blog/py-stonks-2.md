@@ -4,7 +4,7 @@ date: 2025-10-14T20:20:21+01:00
 draft: false
 description: How NOT to marry a framework, make that BRD & ship fast. PyStocks with historical per & payout ratio
 url: 'py-stonks'
-tags: ["WebApp","yfinance","FastAPI x MailerLite","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
+tags: ["WebApp","dlt x yfinance","FastAPI x MailerLite","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
 math: true
 ---
 
@@ -46,7 +46,7 @@ Now, Im going to take back the collaboration with my friend: btw, he is a [PDH](
 
 ## The Data Model
 
-Even before that: what does this app reply to?
+Even before that: *WHAT does this app reply to?*
 
 **Top Priority:**
 
@@ -118,20 +118,36 @@ See [the BRD](#faq) where we scoped the project.
 
 1. https://github.com/dlt-hub/dlt
 
-> Apache v2 |  data load tool (dlt) is an open source Python library that makes data loading easy 🛠️ 
+> Apache v2 | Data load tool (dlt) is an open source Python library that **makes data loading easy** 🛠️ 
 
-dlt can do both depending on how you use it:
+DLT can do both depending on how you use it:
 
-    Given an API or raw data source, dlt can extract the data, inspect its structure, and automatically create corresponding tables in the destination database. This is part of its automatic schema detection and creation feature.
+Given an API or raw data source, dlt can extract the data, inspect its structure, and automatically create corresponding tables in the destination database.
 
-    When loading raw or semi-structured data, dlt performs data normalization, transforming the input into a consistent, well-structured format suitable for analytics. This often means organizing data into multiple related tables with appropriate schemas.
+This is part of its automatic schema detection and creation feature.
 
-    While dlt focuses on data loading and normalization, it helps create a database schema that supports efficient query and analysis, which aligns with OLAP principles. However, it primarily focuses on the "load" (L) in ETL/ELT pipelines.
+When loading raw or semi-structured data, dlt performs data normalization, transforming the input into a consistent, well-structured format suitable for analytics. This often means organizing data into multiple related tables with appropriate schemas.
+
+While dlt focuses on data loading and normalization, it helps create a database schema that supports efficient query and analysis, which aligns with OLAP principles.
+
+However, it primarily focuses on the **"load" (L) in ETL/ELT pipelines**.
 
 So, in summary, dlt can extract from APIs or raw data, normalize it, and load it into a destination database by generating an appropriate schema to support analytical workloads—effectively enabling OLAP-style data organization.
 ​
+{{< callout type="info" >}}
+From these [interesting packages while doing pystocks](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#interesting-pkgs-i-got-to-learn)Need to see how to use [DLT](https://github.com/dlt-hub/dlt)
+{{< /callout >}}
+
+#### DLT x yFinance
 
 
+
+* https://dlthub.com/docs/intro
+* https://github.com/dlt-hub/dlt
+
+ data load tool, an open source Python library that makes data loading easy 🛠️
+
+dlt is an open-source Python library that loads data from various, often messy data sources into well-structured, live datasets. It offers a lightweight interface for extracting data from REST APIs, SQL databases, cloud storage, Python data structures, and many more.
 
 ---
 
@@ -181,6 +197,11 @@ uv run streamlit run streamlit_ath_viewer.py
 
 
 ![Plotlt cool chart return per year and year end price](/blog_img/dev/pystocks/streamlit-plotly-barchart-linechart.png)
+
+The good thing with yfinance is that it also pulls crypto data, like `BTC-USD` or ETF like `IDUS.L`
+
+So if the topic is trendy...you can create that cool `Python analysis btc cycles - max to valley with matplotlib` and get your doubts solved.
+
 
 ---
 

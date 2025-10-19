@@ -1,6 +1,6 @@
 ---
 title: "Everything is Code"
-date: 2025-10-19T08:20:21+01:00
+date: 2025-10-24T08:20:21+01:00
 draft: false
 tags: ["Matplotlib vs Manim vs RemotionJS vs Animotion","SlidevJS vs ReflexJS","Pandoc vs Latex vs Typst"]
 url: 'things-as-a-code'
@@ -200,8 +200,18 @@ You can make a one prompt vibe coded report
 
 https://github.com/JAlcocerT/py-stonks/blob/main/z-eda-yfinance/yfinance-104.ipynb
 
+I mean...a real report.
+
+Not just a cool matplotlib graph or a pdf that you vibe coded with a tech solution for jira x pbi.
+
+And then I got to know about [Carbone](https://github.com/carboneio/carbone), which I tinkered with on the [wedding v2 post](https://jalcocert.github.io/JAlcocerT/building-in-public-wedding-photo-galleries/)
+
+>  Fast and simple report generator, from JSON to pdf, xslx, docx, odt... 
+
 
 #### Infographics as a code
+
+This can also be done as a report or with matplotlib.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment" title="Animating yfinance" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="YFinance for Python, cool plots and animations | Post" >}}
@@ -283,6 +293,9 @@ uv run streamlit run streamlit_portfolio_aggregate.py
 ```
 
 ![Streamlit price and dividends of a portfolio aggregated](/blog_img/dev/streamlit-stocks-aggregates.png)
+
+
+
 
 ### Animations as a Code
 

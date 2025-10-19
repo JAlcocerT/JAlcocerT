@@ -2,16 +2,17 @@
 title: "BiP a Micro-SaaS | Wedding Edition"
 date: 2025-10-16T09:20:21+01:00
 draft: false
-tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2","ARR"]
+tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2","ARR","Carbone"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static. CSR Rendering QR and PDFs in browser 🤯'
 url: 'building-in-public-wedding-photo-galleries'
 ---
 
-Coming from https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
 
 **Tl;DR**
 
-I got that domain!
+Coming from https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
+
+And I got that domain!
 
 Lets go with that wedding v2.
 
@@ -153,6 +154,14 @@ python3 -m http.server 8003
 
 > Built with ❤️ using [QRCode.js](https://davidshimjs.github.io/qrcodejs/) and [jsPDF](https://github.com/parallax/jsPDF)
 
+
+#### PDF with Carbone
+
+Then, I got to know: https://carbone.io/examples/
+
+* https://github.com/carboneio/carbone
+
+> Fast and simple **report generator**, from JSON to pdf, xslx, docx, odt...
 
 
 ### Web when registered

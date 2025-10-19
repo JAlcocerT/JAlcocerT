@@ -7,6 +7,13 @@ description: abcd
 url: 'starting-with-3dprinting'
 ---
 
+<!-- 
+https://youtu.be/d6PyYCBft44?si=vsgHCiL2k2Fswwxd 
+-->
+
+{{< youtube d6PyYCBft44 >}}
+
+
 **Intro**
 
 I was trying to document myself on forums, like [fc](https://forocoches.com/foro/showthread.php?t=10360182) and reddit.

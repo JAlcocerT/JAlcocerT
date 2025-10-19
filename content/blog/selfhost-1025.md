@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting Updates - Oct 2025"
-date: 2025-10-18T01:20:21+01:00
+date: 2025-10-19T01:20:21+01:00
 draft: false
 tags: ["SFTPGo x Syncthing","WebDav and Link Analytics","File Sync Tools","P2P Recap","XMRig Benchmark"]
 description: 'Best tools for organizing homelab files.'
@@ -258,8 +258,25 @@ Anyways, you can do a quick **XMR benchmark** on your mini PC:
 
 > > Its an interesting project anyways, configurable via JSON for that alternative CPU benchmark
 
----
 
+I also got to know a new browser, [Helium](https://github.com/imputnet/helium): 
+
+```sh 
+wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/download/0.5.7.1/Helium-0.5.7.1-x86_64.AppImage
+```
+
+> Private, fast, and honest web browser
+
+> > The Chromium-based web browser made for people, with love. Best privacy by default, unbiased ad-blocking, no bloat and no noise.
+
+
+Privacy won, for now:
+
+<!-- 
+https://www.youtube.com/live/t0Uk9eC146E?si=S9ruQrOgRa-DK_Ze 
+-->
+
+{{< youtube "t0Uk9eC146E" >}}
 
 
 
@@ -287,7 +304,16 @@ https://x.com/tom_doerr/status/1979894065400263086?
 
 **Selfhosted resources you should know already**
 
-https://www.open-source-tools.com/metube
+* https://www.open-source-tools.com/metube
+* Some [forums](https://forocoches.com/foro/showthread.php?t=7806376&page=48) or [reddit](https://www.reddit.com/r/selfhosted/)
+
+* From the creator of https://github.com/Lissy93/networking-toolbox and https://github.com/Lissy93/portainer-templates
+
+> MIT | 🛜 All-in-one offline-first networking tools and utilities
+
+>> MIT | 🚢 500+ 1-click Portainer app templates
+
+https://github.com/Lissy93/awesome-privacy
 
 
 
@@ -381,13 +407,21 @@ To summarize, **Shlink** stands out as the self-hosted URL shortener with built-
 
 ### Monitoring For HomeLab
 
+I Got to know: https://github.com/operacle/checkcle/
+
+> MIT |  CheckCle is a **self-hosted, open-source monitoring platform** for seamless, real-time full-stack systems, applications, and infrastructure. It provides real-time uptime monitoring, distributed checks, incident tracking, and alerts. All deployable anywhere. 
+
+But we already covered similar tools:
+
+1. Beszel
 
 ![Beszel Deployed to hetzner](/blog_img/Monitoring/beszel-hetzner.png)
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring with Beszel" >}}
 {{< /cards >}}
+
+2. Tianji
 
 https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#tianji
 
@@ -395,6 +429,7 @@ https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#tianji
 
 ![MySpeed Internet Speed Test](/blog_img/selfh/HomeLab/myspeed.png)
 
+3. Uptime Kuma and Kener: *bringing status pages to your server*
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}

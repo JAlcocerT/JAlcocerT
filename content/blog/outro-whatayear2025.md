@@ -41,8 +41,12 @@ En resumen:
 
 Por tanto, Svelte no es una alternativa directa a Astro; más bien, Astro puede usar Svelte como parte de su stack, y SvelteKit compite con marcos orientados a SPAs y aplicaciones completas, mientras que Astro destaca en sitios estáticos y multi-framework.[1][2][5][6][7]
 
+<!-- 
+https://www.youtube.com/watch?v=Gr3KTOnsWEM&list=PLbWvcwWtuDm0tIrvD_xHvUXHBftbHDy5T 
+-->
 
-https://www.youtube.com/watch?v=Gr3KTOnsWEM&list=PLbWvcwWtuDm0tIrvD_xHvUXHBftbHDy5T
+{{< youtube "Gr3KTOnsWEM" >}}
+
 
 This is a very cool proposal for landing pages see https://plenti.co/themes !
 
@@ -733,7 +737,7 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 15. RGallery vs PiGallery
 16. [Uptime Kuma](https://youtu.be/fxVNTffZC2U) for status pages
 17. [selfhosted ebook landing](https://youtu.be/XEFpzEIEDFc) page with astro
-18. Umami  for web analytics
+18. Umami for web analytics or GL INET?
 19. [Home Assistant](https://youtu.be/8XUydWbwBjk)
 20. [n8n + CF tunnels](https://youtu.be/v-gCNTI5kzE)
 21. [Selfhosting FreshRSS](https://youtu.be/mDMGtMOx-Fk) + astro podcast website
@@ -1240,6 +1244,19 @@ And definitely, despite working with a laptop, the D&A jobs are quite different 
   {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/" title="Big Data Analytics| Post  ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="GCP for D&A | Post ↗" >}}
 {{< /cards >}}
+
+Well...
+
+Some creative people have figured out a way to build *(beautiful)* websites from SQL, just [like this](https://github.com/sqlpage/SQLPage/tree/main/examples/official-site)
+
+* https://github.com/sqlpage/SQLPage
+
+> MIT | Fast SQL-only data application builder. Automatically build a UI on top of SQL queries.
+
+> > In theory it can also be [selfhosted as per this guide](https://sql-page.com/your-first-sql-website/nginx.sql)
+
+https://youtube.com/shorts/crZalY8oxyw?si=ZEbnZ0UC4M347Fj0
+
 
 
 {{< details title="The Big Data Tech Stack, more clear than ever 📌" closed="true" >}}

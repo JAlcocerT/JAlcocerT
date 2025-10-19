@@ -151,7 +151,7 @@ With very interesting components at `/src/content/project/crafting-the-perfect-c
 
 3. https://github.com/themefisher/astrofront-astro
 
-> MIT | AstroJS-Powered Shopify Storefront Boilerplate with TailwindCSS and Nanostores. With **Shopify ecommerce integration.**
+> MIT | AstroJS-Powered Shopify Storefront Boilerplate with TailwindCSS and Nanostores. With **Shopify e-commerce integration.**
 
 ```sh
 git clone https://github.com/themefisher/astrofront-astro

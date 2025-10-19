@@ -374,13 +374,6 @@ I know, have to give it a try to **these APIs**: [Mistral](https://docs.mistral.
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 *The final user always has the last word on rating what you've built*
 
-{{< callout type="warning" >}}
-
-Need to see how to use [DLT](https://github.com/dlt-hub/dlt) - data load tool, an open source Python library that makes data loading easy 🛠️
-
-
-{{< /callout >}}
-
 
 ---
 

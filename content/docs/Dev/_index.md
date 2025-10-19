@@ -182,16 +182,24 @@ Object Storage is designed for a flat structure and is typically accessed via an
 | **ORC** | Columnar | Analytics, Hadoop Ecosystem | Similar to Parquet, excellent compression and performance | More tightly coupled with the Hadoop ecosystem than Parquet |
 | **Delta Lake / Iceberg / Hudi** | Table Format | **Data Lakehouses**, ACID Transactions | Brings database features (transactions, time travel, schema enforcement) to a data lake | Adds a layer of complexity and tool dependency |
 
-Make sure to master json and timestamps:
+Make sure to master json and timestamps: *specially when working with [telecom data](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/)*
 
 * https://it-tools.tech/date-converter
 * https://it-tools.tech/json-prettify
 
-{{< dropdown title="How can I understand & filter JSON ⏬" closed="true" >}}
+{{< dropdown title="How can I understand & filter JSON? | Tools ⏬" closed="true" >}}
 
 * https://github.com/ynqa/jnv
 
-> MIT |  Interactive JSON filter using jq 
+> MIT | Interactive **JSON filter** using jq 
+
+* https://github.com/AykutSarac/jsoncrack.com
+
+> Apache v2 | ✨ Innovative and open-source visualization application that transforms various data formats, such as JSON, YAML, XML, CSV and more, into interactive graphs. 
+
+* https://jsonformatter.org/
+* https://github.com/josdejong/jsoneditor
+
 
 {{< /dropdown >}}
 

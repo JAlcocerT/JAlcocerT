@@ -298,6 +298,7 @@ I also got time to compare **different SP500 ETFS performance**:
 > the open-source Python library for data loading
 
 * How to inspect a SQL DB with AI (without knowing much about it...)
+
   * https://github.com/alex-wolf-ps/dbchatpro/tree/main
   * https://www.youtube.com/watch?v=REw3y_Jv3Ig&t=0s
   * Paid alternative - https://www.outerbase.com/
@@ -401,12 +402,14 @@ They are related but measure different aspects of a company's financial health:
 ---
 
 **Relationship**:
+
 Net Income is often the starting point for calculating **Operating Cash Flow**.
 
 Adjustments are made to add back non-cash expenses and account for changes in working capital. 
 
 
 Both metrics are important:
+
 - **Net Income**: Indicates profitability.
 - **Net Cash Flow**: Shows the company's ability to generate cash and stay solvent. 
 

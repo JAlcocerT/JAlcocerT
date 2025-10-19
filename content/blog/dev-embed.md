@@ -92,6 +92,14 @@ Bottom line here: **n8n is very simple to get for free**
 
 {{< youtube "4VD-6dFQJsk" >}}
 
+This thing can even work with whatsapp:
+
+<!-- 
+https://youtu.be/J08qIsBXs9k?si=f3NfUQtsWXm6W31o 
+-->
+
+
+{{< youtube "J08qIsBXs9k" >}}
 
 #### OpenAI Agent Builder
 
@@ -102,6 +110,7 @@ OpenAI Agent Builder is a visual, drag-and-drop platform for creating and managi
 It uses nodes representing different functions—such as calling language models, connecting to external tools or services, adding conditional logic, data transformation, and safety guardrails—that users link together to design complex AI agents and automations.
 
 Key features include:
+
 - A visual canvas for building and versioning AI workflows.
 - Support for multi-agent orchestration and branching logic.
 - Integration with external or internal company tools via MCP (Managed Connector Protocol) servers instead of traditional APIs or webhooks.
@@ -128,9 +137,15 @@ https://platform.openai.com/docs/guides/agent-builder
 
 
 
-Yes, you can embed an OpenAI Agent built with the Agent Builder using tools like the ChatKit widget or through the Agent Builder's SDK. The platform allows you to create interactive agents with customizable workflows and output formats such as widgets that can be embedded within applications or chat interfaces. However, there are some current limitations, such as incomplete support for workflows involving MCP nodes in the SDK, and the system primarily supports OpenAI models, which may influence flexibility.
+Yes, you can embed an OpenAI Agent built with the Agent Builder using tools like the ChatKit widget or through the Agent Builder's SDK. 
 
-If you want to integrate these agents into your own product or website, you can use the provided embedding options from the Agent Builder, such as embedding interactive widgets or leveraging the SDK once it supports your desired features. Keep in mind that this technology is still evolving and some functionality may improve or expand in the near future.[1]
+The platform allows you to create interactive agents with customizable workflows and output formats such as widgets that can be embedded within applications or chat interfaces.
+
+However, there are some current limitations, such as incomplete support for workflows involving MCP nodes in the SDK, and the system primarily supports OpenAI models, which may influence flexibility.
+
+If you want to integrate these agents into your own product or website, you can use the provided embedding options from the Agent Builder, such as embedding interactive widgets or leveraging the SDK once it supports your desired features.
+
+Keep in mind that this technology is still evolving and some functionality may improve or expand in the near future.[1]
 
 OpenAI Agent Kit vs...n8n?
 
@@ -155,7 +170,6 @@ https://github.com/openai/openai-chatkit-advanced-samples
 https://openai.github.io/chatkit-python/server/
 
 #### CopilotKit
-
 
 * https://github.com/copilotkit/copilotkit
 

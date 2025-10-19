@@ -25,7 +25,10 @@ But for real.
 
 What are the users experiencing.
 
-> If you have worked on some ecommerce related startups, you might have used Ampplitude.
+> If you have worked on some *e-commerce related startups*, you might have used Amplitude.
+
+> >  But there are some alternatives
+
 
 ![Porsche design](/blog_img/outro/porsche.png)
 
