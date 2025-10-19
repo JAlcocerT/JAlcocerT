@@ -272,6 +272,7 @@ Anyways, you can do a quick **XMR benchmark** on your mini PC:
 1. https://tom-doerr.github.io/repo_posts/?s=35
 
 
+
 {{< tweet user="tom_doerr" id="1979894065400263086" >}}
 
 <!-- 
@@ -285,6 +286,8 @@ https://x.com/tom_doerr/status/1979894065400263086?
  -->
 
 **Selfhosted resources you should know already**
+
+https://www.open-source-tools.com/metube
 
 
 

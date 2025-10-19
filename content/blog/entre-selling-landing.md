@@ -248,6 +248,9 @@ I got to know a very **cool SaaS** on twitter:
   {{< card link="https://web-check.xyz/" title="Web Check Tool" >}}
 {{< /cards >}}
 
+### Adding OpenGraph
+
+https://alexsinelnikov.blog/open-graph-protocol-improving-your-saas-visibility-on-social-networks?s=35
 
 ---
 

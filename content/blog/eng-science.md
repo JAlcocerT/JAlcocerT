@@ -11,7 +11,16 @@ description: 'Science recap with LLMs'
 url: 'cool-science'
 ---
 
-a post about...Simply science.
+**Tl;DR**
+
+A post about...Simply science.
+
+**Intro**
+
+<!-- https://youtu.be/FPvFHcQEEj0?si=-ZnOycL8qsgJ4xKN -->
+
+{{< youtube "FPvFHcQEEj0" >}}
+
 
 ## Electrical Engineering
 

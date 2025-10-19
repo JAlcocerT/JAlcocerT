@@ -23,7 +23,7 @@ So, how much will you have to ask to stay as you started the year?
 
 > Surprise: that +~50% from 2021 is basically the ~ change on MCD price (and ~ their 2forU offering price)
 
-> > Stoc/nks post
+> > See the Stonks and the crypto posts 
 
 2. [P. Levels](https://levels.io/blog/) created this interesting webApp: 
 

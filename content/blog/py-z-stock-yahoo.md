@@ -2,7 +2,7 @@
 title: "Financial Data for Python - The YFinance Package"
 date: 2025-06-18
 draft: false
-tags: ["Python","GoogleFinance","Animations","Payout Ratio","Yfinance API"]
+tags: ["Python","GoogleFinance","Animations","Payout Ratio","Yfinance API","DataInMotion"]
 description: "Initial Yield vs Growth EDA and its math. How to analyze stock and dividend data with Python. Together with Data animations."
 url: 'python-financial-data-with-yfinance'
 math: true
@@ -192,7 +192,13 @@ python plot_total_return_from_yfinance.py PG 2010-01-01
 
 > [Sample series](https://github.com/JAlcocerT/DataInMotion/commit/0382cf295f16629eb6b8beaf5fc0c45c5ff01fa7) for `ALV.DE` with [this script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/flexible_stock_timeseries.py)
 
+Sometimes, some dividend aristocrats will break their strike:
+
 ![Survivorship bias with a dividend stock that broke its dividend increase track record](/blog_img/data-experiments/MMM_dividends_pct_12m.png)
+
+```sh
+uv run tests/plot_dividends_pct_12m.py MMM 2010-01-01
+```
 
 > Generated for 3M with [this script](https://github.com/JAlcocerT/DataInMotion/blob/main/Generation/WK28Y25/plot_dividends_pct_12m.py)
 

@@ -53,7 +53,6 @@ To be tested with *,artists,designers and wannabe's'* from social media.
 
 If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#scaling-ideas), is a potential candidate.
 
-
 7. Boiler plate for vibe coders: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
 
 8. Proper CI/CD for streamlit. Hospital D&A: https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/2a2eb68132834b39ce8ff3e9e77e8d7d87e801b5
@@ -73,6 +72,17 @@ https://github.com/Kanaries/graphic-walker
 > Apache v2 |  An open source alternative to Tableau. **Embeddable visual analytic**
 
 ![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) 
+
+11. geolocation
+
+
+
+<!-- 
+https://youtu.be/tQOxnCz2lwM?si=XTgvyi-qnm3ZKiAl
+ -->
+
+{{< youtube "tQOxnCz2lwM" >}}
+
 
 <!-- 
 Observability Platform for LLMs

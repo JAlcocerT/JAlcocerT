@@ -1,6 +1,6 @@
 ---
 title: "Shipping PyStonks v2 with a friend 🐷"
-date: 2025-09-11T02:20:21+01:00
+date: 2025-10-14T20:20:21+01:00
 draft: false
 description: How NOT to marry a framework, make that BRD & ship fast. PyStocks with historical per & payout ratio
 url: 'py-stonks'
@@ -114,11 +114,30 @@ With this data model, you will have answers, but also questions:
  
 See [the BRD](#faq) where we scoped the project.
 
+### Data Modelling Tools for PyStonks
+
+1. https://github.com/dlt-hub/dlt
+
+> Apache v2 |  data load tool (dlt) is an open source Python library that makes data loading easy 🛠️ 
+
+dlt can do both depending on how you use it:
+
+    Given an API or raw data source, dlt can extract the data, inspect its structure, and automatically create corresponding tables in the destination database. This is part of its automatic schema detection and creation feature.
+
+    When loading raw or semi-structured data, dlt performs data normalization, transforming the input into a consistent, well-structured format suitable for analytics. This often means organizing data into multiple related tables with appropriate schemas.
+
+    While dlt focuses on data loading and normalization, it helps create a database schema that supports efficient query and analysis, which aligns with OLAP principles. However, it primarily focuses on the "load" (L) in ETL/ELT pipelines.
+
+So, in summary, dlt can extract from APIs or raw data, normalize it, and load it into a destination database by generating an appropriate schema to support analytical workloads—effectively enabling OLAP-style data organization.
+​
+
+
+
 ---
 
 ## Conclusions
 
-Building a proper data foundation is key for such projects.
+Building a **proper data foundation is key** for such projects.
 
 Then, use streamlit to make quick visuals and layouts for a PoC.
 
@@ -138,7 +157,33 @@ You could also keep it simple and just use existing tools like https://www.perpl
 {{< /callout >}}
 
 
+### From Data In Motion to PyStonks
+
+
+![Survivorship bias with a dividend stock that broke its dividend increase track record](/blog_img/data-experiments/MMM_dividends_pct_12m.png)
+https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment
+
+https://plotly.com/python/horizontal-bar-charts/
+
+Diverging Bar (or Butterfly) Chart and Bar Chart with Line Plot
+
+As mentioned, when a data model is solid, its just a matter to vibe code to get these with one prompt: https://github.com/JAlcocerT/DataInMotion/blob/libreportfolio/streamlit_ath_viewer.py
+
+So all this is just about [yfinance x python](https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance), as you know.
+
+See how much you can get: *From ATH tables, to top/worst analysis, days since last ATH...*
+
+```sh
+uv run streamlit run streamlit_ath_viewer.py
+```
+
+![Plotly Bar Chart - TopWorst days for a Price](/blog_img/dev/pystocks/streamlit-datainmotion-topworst-days.png)
+
+
+![Plotlt cool chart return per year and year end price](/blog_img/dev/pystocks/streamlit-plotly-barchart-linechart.png)
+
 ---
+
 
 ## FAQ
 
