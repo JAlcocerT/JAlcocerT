@@ -663,7 +663,7 @@ But if you dont have time to see it all...you can always use the [PhiData Youtub
 
 An **ORM (Object-Relational Mapper)** is a tool or library that helps developers interact with databases in an easier and more intuitive way by allowing them to work with data as if they were simple objects in their programming language.
 
-Instead of writing raw SQL queries, developers use objects and methods in their code, and the ORM translates these actions into SQL commands that the database can execute.
+**Instead of writing raw SQL queries**, developers use objects and methods in their code, and the ORM translates these actions into SQL commands that the database can execute.
 
 Here’s how ORMs work and their main benefits:
 

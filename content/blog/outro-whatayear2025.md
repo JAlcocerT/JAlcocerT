@@ -787,6 +787,10 @@ Some of those CLI tools, like goose, provide also desktop app: *with linux versi
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gemini-cli" title="Gemini CLI | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+Some tools were CLI only, then released desktop version:
+
+![Goose CLI UI](/blog_img/GenAI/goose-1.png)
+
 ![Goose Desktop - Plug a LLM and even provides transcription](/blog_img/GenAI/audio/goose-desktop.png)
 
 > Additionally, I participated in ***few* tech Talks**:
@@ -1227,6 +1231,10 @@ Because agents are coming for [*our* jobs](https://jalcocert.github.io/JAlcocerT
 Normally withing D&A, you will have a rol to understand `the what` and figure our `the how` to get there.
 
 The closer you are to the product/leadership team, the closer you will/should see `the why`.
+
+And definitely, despite working with a laptop, the D&A jobs are quite different to the development jobs.
+
+> Why would have devs created ORMs to avoid writing SQL queries if not so?
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/" title="Big Data Analytics| Post  ↗" >}}

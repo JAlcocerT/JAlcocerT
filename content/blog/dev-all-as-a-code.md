@@ -1,6 +1,6 @@
 ---
 title: "Everything is Code"
-date: 2025-10-29T08:20:21+01:00
+date: 2025-10-19T08:20:21+01:00
 draft: false
 tags: ["Matplotlib vs Manim vs RemotionJS vs Animotion","SlidevJS vs ReflexJS","Pandoc vs Latex vs Typst"]
 url: 'things-as-a-code'
@@ -121,6 +121,10 @@ npm init slidev #yarn create slidev
 <LatestYouTubeVideo channelId="UCPPMA8ZEusAe5dVH6PbjZFA" width="400" height="225" />
 ```
 
+9. Live anotations
+
+> Similarlo to https://github.com/DmytroVasin/DrawPen
+
 
 #### Diagrams are also code!
 
@@ -138,6 +142,10 @@ npm init slidev #yarn create slidev
 It renders text to diagram and can reference files: https://gist.githubusercontent.com/raw/af76a4c245b302206b16aec503dbe07b/markmap.md
 
 > MIT | Build mindmaps with plain text 
+
+https://github.com/terrastruct/d2
+
+>  D2 is a modern diagram scripting language that turns text to diagrams. 
 
 
 ### eBooks as a Code
@@ -478,7 +486,9 @@ Example: given the repository `https://github.com/Snouzy/workout-cool?tab=readme
 
 https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#goose
 https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#gemini-cli-x-git-mcp
+
 ![Gemini MCP Working](/blog_img/GenAI/geminiCLI/gemini-mcp.png)
+![Goose CLI UI](/blog_img/GenAI/goose-1.png)
 
 
 * https://console.anthropic.com/workbench/

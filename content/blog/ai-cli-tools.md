@@ -2,7 +2,7 @@
 title: "AI Tools for CLI with BAML"
 date: 2025-06-25T01:20:21+01:00
 draft: false
-tags: ["Gemini CLI","LLMs","BAML","git-mcp","scira-mcp","CodeAct","manus"]
+tags: ["Gemini CLI","LLMs","BAML","git-mcp","scira-mcp","CodeAct","manus","Goose"]
 description: 'A look to the CLI tools to bring LLMs and better prompt engineering with BAML'
 url: 'ai-tools-for-cli'
 ---
@@ -350,6 +350,9 @@ From my experience, a good Cursor/Windsurf rule/guideline also does the trick: h
 * https://github.com/block/goose
   * https://block.github.io/goose/docs/experimental/subagents/
   * https://block.github.io/goose/docs/guides/goose-cli-commands/
+
+> Apache v2 | an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
+
 
 See how to setup Goose:
 

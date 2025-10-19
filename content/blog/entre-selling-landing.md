@@ -162,6 +162,8 @@ Get a cool theme: https://www.builtatlightspeed.com/category/astro or from astro
 
 5. `https://kurz.fyi/`
 
+6. Some include videos... `bersoagency.com`
+
 Those should be enough for some **landing page inspiration**.
 
 Resumen de los 3 puntos clave de emprendimiento:

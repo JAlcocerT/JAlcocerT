@@ -254,11 +254,6 @@ Gemini, Github Copilot has a recent free tier, we also have Gitlab Duo Chat.
 
 What else can help us code better?
 
-* https://github.com/block/goose
-
-> Apache v2 | an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
-
-
 ## Propietary
 
 There are many options...

@@ -19,6 +19,11 @@ Chatwoot has some basic CRM features (contact management, conversation history) 
 
 ### Chatbots
 
+* https://github.com/emcie-co/parlant
+  * https://github.com/emcie-co/parlant-chat-react
+
+>  LLM agents built for control. Designed for real-world use. Deployed in minutes. 
+
 #### Flowise
 
 ![Flowise Chatflow](/blog_img/selfh/flowise-chatflows.png)
@@ -188,7 +193,9 @@ If privacy, customizability, or avoiding subscription costs are priorities, Chat
 
 Chatwoot is primarily a **customer engagement** and communication platform, not a full-featured CRM (Customer Relationship Management) system. 
 
-It centralizes conversations from channels like web chat, email, and social media, helps manage tickets, stores customer contact details, provides analytics, and supports automation features like chatbots.
+It **centralizes conversations from channels** like web chat, email, and social media, helps manage tickets, stores customer contact details, provides analytics, and supports automation features like chatbots.
+
+You can say that its OSS ZenDesk: *You ask something via email and the CS team will handle it*
 
 However, while Chatwoot includes some CRM-like capabilities—such as managing and viewing customer profiles, conversation history, and team collaboration—it does not offer the depth of sales pipeline management, deal tracking, or marketing automation found in specialized CRM software like Salesforce or HubSpot. 
 
@@ -210,7 +217,7 @@ However, while Chatwoot includes some CRM-like capabilities—such as managing a
 
 * https://github.com/papercups-io/papercups
 
-> MIT | Open-source live customer chat 
+> MIT | Open-source **live customer chat** 
 
 #### LiveHelperChat
 
@@ -231,6 +238,41 @@ But not the prompt engineering platform, the embedded analytics one: https://git
 > Which is ofc, no longer mantained as now its all about agents :)
 
 > > https://docs-analytics.latitude.so/guides/getting-started/introduction
+
+
+### Graphic Walker
+
+It works for Streamlit as PyGWalker.
+
+But the native project is: https://github.com/Kanaries/graphic-walker
+
+> Apache v2 |  An open source alternative to Tableau. **Embeddable visual analytic** 
+
+
+
+{{< details title="Graphic Walker x Astro SSG 📌" closed="true" >}}
+
+Yes, that summary is **true** and accurately describes how you would use a library like Graphic Walker within a Static Site Generator (SSG) environment like Astro.
+
+Here is why each point holds true:
+
+1. Core Functionality (No Forced API)
+
+**Graphic Walker is Client-Side and Data-Driven:** Graphic Walker (like many embeddable visualization tools) is a library that runs entirely on the user's browser (client-side). It takes a **dataset** as its primary input (typically a JSON array or CSV string passed as a prop). It doesn't inherently contain any logic that requires a dynamic API connection to function. If you give it static data, it will work statically.
+
+2. Static Site Generation (Astro SSG)
+
+The process described is perfectly compatible with the **Static Site Generation (SSG)** model:
+
+* **Build Time Data Injection:** When you use Astro (or Next.js/Gatsby in SSG mode), your server-side build process executes your code. It loads your static dataset (e.g., a local JSON file). This data is then serialized and passed as the initial `prop` to the Graphic Walker React component.
+* **Static HTML Output:** The resulting HTML file that Astro generates includes the entire structure of the webpage *and* the full dataset embedded as a JavaScript variable or prop value within the page.
+* **Client-Side Hydration:** When a user visits the site, the browser loads the static HTML. Then, the JavaScript bundle (including Graphic Walker's code) runs, reads the embedded static data, and activates (or "hydrates") the component, performing the actual dynamic chart rendering and providing interactivity (like filtering, zooming, and scrolling) locally on the client's device.
+
+This approach gives you the **performance benefits of a static site** (fast load time, no live server needed for data) while retaining the **interactivity of a modern web application.**
+
+{{< /details >}}
+
+You could also think to bring some [APIs](#dbs-to-api) to this game.
 
 ### Metabase Embedded
 
@@ -366,7 +408,9 @@ There are several open-source projects similar to DB2Rest that provide no-code o
 
 - **MongoDB Atlas App Services**: If using MongoDB, it provides native REST API exposure, authentication, triggers, and real-time sync features.
 
-These tools cater to various needs, from lightweight data management and dashboards to building complex real-time APIs and AI workflows. They significantly simplify API development for databases without writing backend code and often include features like authentication, role-based access, and auto API documentation.
+These tools cater to various needs, from lightweight data management and dashboards to building complex real-time APIs and AI workflows. 
+
+They significantly simplify API development for databases without writing backend code and often include features like authentication, role-based access, and auto API documentation.
 
 
 #### DB2Rest
@@ -420,3 +464,25 @@ No longer spend time building APIs, just connect your database and start using t
 <!-- https://www.youtube.com/watch?v=-UjN8PEDpRQ -->
 
 {{< youtube "-UjN8PEDpRQ" >}}
+
+
+#### How to use Soul
+
+* https://github.com/thevahidal/soul
+
+> MIT | **Automatic SQLite RESTful** and realtime API server | Build CRUD APIs in minutes! 
+
+```sh
+#npm install -g soul-cli
+
+git clone job-trends
+
+soul -d sqlite.db -p 8000 #8045 # http://localhost:8045/api/
+#Warning: Soul is running in open mode without authentication or authorization for API endpoints. Please be aware that your API endpoints will not be secure.
+
+
+#soul -d job_offers_v3.db -p 8045
+#curl http://localhost:8045/api/tables
+
+curl http://localhost:8000/api/tables
+```

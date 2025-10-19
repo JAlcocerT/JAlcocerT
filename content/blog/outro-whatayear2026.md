@@ -66,6 +66,11 @@ https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions
 https://jalcocert.github.io/JAlcocerT/social-signin-101/
 
 
+10. Embeded Analytics con Graphic Walker
+
+https://github.com/Kanaries/graphic-walker
+
+> Apache v2 |  An open source alternative to Tableau. **Embeddable visual analytic**
 
 ![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) 
 

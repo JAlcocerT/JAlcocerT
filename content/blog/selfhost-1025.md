@@ -22,11 +22,22 @@ Later on June, I expanded Traefik https knowledge, and separaredly [Nextcloud](h
 
 In [Sept25](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat): I combined NC + Traefik https + Tailscale - which is a lovely setup.
 
-But just in case you dont want to mess with databases, lets see some other Filebrowser alternatives and FTPs:
+But just in case you dont want to mess with databases, lets see some other **Filebrowser alternatives** and FTPs:
 
 > Yea, im kind of alergic to DBs for HomeLab setups
 
 ## Files Files Files
+
+The unexpected happens.
+
+<!-- 
+https://www.youtube.com/watch?v=PaPotS8GSpc 
+-->
+
+{{< youtube "PaPotS8GSpc" >}}
+
+
+So lets make sure that we take care of our files.
 
 And I saw few projects lately to see files, like we saw [here](https://jalcocert.github.io/JAlcocerT/events-photo-galleries/):
 
@@ -38,11 +49,15 @@ And I saw few projects lately to see files, like we saw [here](https://jalcocert
 
 >  🌴 Palmr. is an open-source file-sharing platform focused on privacy and security. It enables users to upload, manage, and share files with features like password protection, custom links, and access control without tracking or limitations. Designed for seamless and secure sharing.
 
+3. https://github.com/Sync-in/server
+
+>  Sync-in Server · Secure, open-source platform for file storage, sharing, collaboration, and syncing. 
+
+
 3. Nextcloud or Immich: 
 
 Just in case that you got that interesting Standard Google offer 200 GB for ~40$/año or your [Google AI Pro with 2TB trial](https://support.google.com/pixelphone/answer/13529884?hl=en#zippy=%2Cpixel-pro-pixel-pro-xl-pixel-pro-fold) has just ended...
 
-If you dont want **Nextcloud** nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
 
 ```sh
 docker exec -it <your-nextcloud-container-name> rm /var/www/html/config/config.php
@@ -52,6 +67,11 @@ docker exec -u www-data nextcloud php /var/www/html/occ config:system:get truste
 #docker exec -u www-data nextcloud php /var/www/html/occ config:system:set trusted_domains 4 --value="mynewdomain.example.com"
 docker exec -u www-data nextcloud php /var/www/html/occ config:system:get trusted_domains
 ```
+
+If you dont want **Nextcloud** nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
+
+
+Neither pay for google photos: https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper
 
 ```sh
 flatpak install flathub org.localsend.localsend_app
@@ -199,7 +219,13 @@ Choosing between **Transmission** and **qBittorrent** depends on your priorities
 
 {{< /details >}}
 
+### Backup websites
 
+
+1. https://github.com/goclone-dev/goclone
+
+
+> MIT |  Website Cloner - Utilizes powerful Go routines to clone websites to your computer within seconds. 
 
 ---
 
@@ -241,10 +267,24 @@ Anyways, you can do a quick **XMR benchmark** on your mini PC:
 
 ## FAQ
 
-More Selfhosted resources
+**More Selfhosted resources**
+
+1. https://tom-doerr.github.io/repo_posts/?s=35
+
+
+{{< tweet user="tom_doerr" id="1979894065400263086" >}}
+
+<!-- 
+https://x.com/tom_doerr/status/1979894065400263086?
 
 * https://libreselfhosted.com/project/fluxbb/
 * https://awesome-docker-compose.com/apps/photo-server/pigallery-2
+
+2.
+
+ -->
+
+**Selfhosted resources you should know already**
 
 
 
@@ -274,12 +314,6 @@ https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#better-webanalyt
 ![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
 
 
-Link analytics solutions, like Kutt: `https://kutt.it/`
-
-![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
-
-![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
-
 
 https://github.com/abegehr/chickadee
 
@@ -291,7 +325,27 @@ https://github.com/abegehr/chickadee
 
 #### Link Analytics
 
-https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py
+Some url shorteners will bring you analytics and QR as well: https://github.com/738/awesome-url-shortener?tab=readme-ov-file#self-hosting-opensource
+
+
+
+See https://github.com/738/awesome-url-shortener?tab=readme-ov-file#self-hosting-opensource
+
+Link analytics solutions, like Kutt: `https://kutt.it/`
+
+![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
+
+![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
+
+
+
+For the QR part, you know that we have few solutions...
+
+1. https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py
+
+2. [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+3. 
 
 There are several open-source self-hostable link shortener tools you can consider, each with its unique features:
 

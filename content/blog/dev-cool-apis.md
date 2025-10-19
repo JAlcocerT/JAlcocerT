@@ -2,10 +2,15 @@
 title: "Interesting APIs 101"
 date: 2025-10-18T09:20:21+01:00
 draft: false
-tags: ["APIfy","Firecrawl","Serp","Smithery MCP","Scrap"]
+tags: ["APIfy","Firecrawl","Serp","Smithery MCP","Scrap","Hoppscotch vs httpie"]
 description: 'Get that info you need. API 101 '
 url: 'interesting-apis'
 ---
+
+
+**Tl;DR**
+
+No matter if you are using APIs to BiP or to do some Jira tasks.
 
 **Intro**
 
@@ -268,11 +273,11 @@ Im talking about the python trip planner, which uses the open meteo API to get h
 
 ## Checking APIs
 
-As we saw during the [FastAPI post, here](https://jalcocert.github.io/JAlcocerT/fast-api/#apis), there are few tools to check/test/interact with APIs.
+As we saw during the [**FastAPI** post, here](https://jalcocert.github.io/JAlcocerT/fast-api/#apis), there are few tools to check/test/interact with APIs.
 
 Among all of them, is worth to get to know how to use Hoppscoth.
 
-#### How to use Hoppscotch
+### How to use Hoppscotch
 
 When playing/creating APis...
 
@@ -289,6 +294,29 @@ wget https://github.com/hoppscotch/releases/releases/latest/download/Hoppscotch_
 sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
 ```
 
+### Other API Testing Tools
+
+1. https://github.com/httpie/desktop
+
+```sh
+wget -P ~/Applications https://github.com/httpie/desktop/releases/download/v2025.2.0/HTTPie-2025.2.0.AppImage
+```
+
+>  🚀 HTTPie Desktop — cross-platform API testing client for humans. Painlessly test REST, GraphQL, and HTTP APIs. 
+
+2. Reqable - Reqable implements the core features of traffic analysis and **API testing**, and deeply integrates them. 
+
+One app is worth multiple apps: Advanced API Debugging Proxy and REST Client
+
+> [Reqable](https://github.com/reqable/reqable-app) = Fiddler + Charles + Postman
+
+```sh
+flatpak install flathub com.reqable.Reqable
+```
+
+3. https://github.com/mountain-loop/yaak/
+
+>  MIT | The most intuitive desktop API client. Organize and execute **REST, GraphQL, WebSockets, Server Sent Events, and gRPC** 🦬 
 
 
 ---

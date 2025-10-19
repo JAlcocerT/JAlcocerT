@@ -1,12 +1,12 @@
 ---
 title: "Science is so Cool!"
-date: 2025-12-25T23:20:21+01:00
+date: 2026-01-03T23:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/jalcocert/streamlit-multichat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #   alt: "What about science?" # alt text
 #   caption: "Science Recap with LLMs" # display caption under cover
-tags: ["Tinkering"]
+tags: ["Tinkering","Atopile"]
 description: 'Science recap with LLMs'
 url: 'cool-science'
 ---
@@ -14,6 +14,16 @@ url: 'cool-science'
 a post about...Simply science.
 
 ## Electrical Engineering
+
+Everything is code. 
+
+Same applies to circuit boards:
+
+* https://github.com/atopile/atopile
+
+> **MIT | Design circuit boards with code**! ✨ Get software-like design reuse 🚀, validation, version control and collaboration in hardware; starting with electronics ⚡️ 
+
+> > Write hardware like software. atopile is a language, compiler, and toolchain for electronics—declarative .ato files, deep validation, and layout that **works natively with KiCad**.
 
 <!--
 https://www.youtube.com/watch?v=1spW6vkpPMU 

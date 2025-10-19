@@ -6,7 +6,9 @@ next: docs/
 draft: false
 ---
 
+https://github.com/danielgatis/rembg
 
+> MIT |  Rembg is a tool to remove images background 
 
 1. https://github.com/KDE/digikam
 

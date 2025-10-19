@@ -4,7 +4,7 @@ date: 2025-09-08T00:20:21+01:00
 draft: false
 description: 'Jira DataModel with AI. Pandoc is great, more if you are not alergic to Latex.'
 url: 'jira-data-model-with-ai'
-tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram Mermaid","LandThatJob","PowerBI"]
+tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram Mermaid","LandThatJob","PowerBI","Jira API"]
 ---
 
 **TL;DR**
@@ -165,8 +165,14 @@ In summary:
 - LaTeX is a typesetting system and markup language for creating documents with precise formatting. 
 - Pandoc is a tool that converts documents from one markup format to another, including to and from LaTeX, enabling flexible workflows.
 
-Thus, LaTeX is used for authoring and typesetting documents directly, while Pandoc acts as a bridge or converter supporting multiple document formats, including LaTeX, as one of its output options.[4][6][7]
+Thus, LaTeX is used for authoring and typesetting documents directly, while Pandoc acts as a bridge or converter supporting multiple document formats, including LaTeX, as one of its output options.
 
+### Jira API with JiraTUI
+
+* https://github.com/whyisdifficult/jiratui
+  * https://jiratui.readthedocs.io/en/latest/users/configuration/index.html
+  
+> MIT | A Textual User Interface for interacting with Atlassian Jira from your shell 
 
 ### PDF to md/json
 

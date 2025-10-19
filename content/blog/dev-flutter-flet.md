@@ -175,6 +175,13 @@ Here's a breakdown of some of the most popular options:
 * **Licensing:** Be aware of the licensing terms of the framework you choose, especially if you plan to distribute your application commercially.
 
 
+### Desktop Apps Analytics
+
+https://github.com/aptabase/aptabase
+
+>  ✨ Open Source, Privacy-First and Simple Analytics for Mobile, Desktop and Web Apps 
+
+
 
 ### Other F/OSS Libraries to create WebApps with Python
 

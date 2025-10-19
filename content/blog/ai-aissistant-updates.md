@@ -2,7 +2,7 @@
 title: "Streamlit Updates. Assistant"
 date: 2025-04-12
 draft: false
-tags: ["Dev","Entrepreneur","Tech Talk"]
+tags: ["Dev","Entrepreneur","Tech Talk","Real Estate and Streamlit"]
 description: 'More Streamlit AI with the AIssistant Project: DBChat, SliDev (PPT) Generator, Speech Rater...'
 url: 'ai-assistant-streamlit'
 ---
