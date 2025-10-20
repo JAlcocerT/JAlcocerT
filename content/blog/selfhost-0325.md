@@ -77,7 +77,6 @@ podman run -d -p 8888:8000 -p 9999:9000 --name=portainerpodman --restart=always 
 
 ![Podman Network](/blog_img/selfh/podman-network.png)
 
-
 ### Homarr
 
 A very interesting web app to put together your **homelab links**:

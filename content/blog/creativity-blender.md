@@ -135,6 +135,7 @@ https://awesome-blender.netlify.app/
 BlendAI: A versatile suite of AI tools, including image-to-3D, text-to-3D, and more.   
 BlendAI Library Pro: Another powerful collection of AI tools, offering features like image-to-3D, text-to-HDRI, and text-to-PBR.   
 Autodepth AI: Creates depth maps from images, crucial for many AI-powered 3D workflows.   
+
 3D AI Studio: A comprehensive suite of AI tools for 3D artists, covering a wide range of tasks.   
 
 

@@ -123,14 +123,14 @@ The complete, working code is available in my [data-chat repository](https://git
 There is first a SQL chain, to see if the LLM makes proper work building the queries:
 
 ```py
-user_question = 'what are the top 5 artists with more albums published?'
+user_question = 'what are the top 5 groups with more albums published?'
 sql_chain.invoke({"question": user_question})
 ```
 
 The magic of the full chain happens when **Langchain uses that SQL output against the DB**:
 
 ```py
-full_chain.invoke({"question":"what are the top 5 artists with more albums published?"})
+full_chain.invoke({"question":"what are the top 5 groups with more albums published?"})
 ```
 
 See it in action:

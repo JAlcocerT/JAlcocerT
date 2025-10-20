@@ -2,7 +2,7 @@
 title: "Shipping PyStonks v2 with a friend 🐷"
 date: 2025-10-14T20:20:21+01:00
 draft: false
-description: How NOT to marry a framework, make that BRD & ship fast. PyStocks with historical per & payout ratio
+description: How NOT to marry a framework. PyStocks vs Ghostfolio, with historical per & payout ratio
 url: 'py-stonks'
 tags: ["WebApp","dlt x yfinance","FastAPI x MailerLite","sqlite","FinanceInMotion","DataInmotion","UnfoldingData"]
 math: true
@@ -390,3 +390,157 @@ Its also nice to see when the snowball effect starts to be noticed: like how muc
 > > And has an interesting on boarding flow: https://divstash.app/signup/step-1 and T&Cs are mandatory: https://divstash.app/signup/quick
 
 And by the time of RStocks, I had in mind as reference the stock events app: https://stockevents.app/en?pt=118220498&ct=&mt=8
+
+
+
+### Selfhostable Apps
+
+1. https://github.com/maybe-finance/maybe
+
+>  The personal finance app for everyone 
+
+2. https://github.com/firefly-iii/firefly-iii
+
+>  Firefly III: a personal finances manager 
+
+3. https://github.com/actualbudget/actual
+
+> MIT |  A local-first personal finance app 
+
+4. https://github.com/Open-Dev-Society/OpenStock?tab=readme-ov-file#docker-setup
+
+> agpl 3.0 | OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.
+
+
+
+### Interesting Software for Finances
+
+Open Source Finances","FireFly3
+
+`Financial Freedom` is an open-source financial management tool.
+
+* https://github.com/serversideup/financial-freedom
+* It serves as an alternative to commercial apps like Mint and YNAB.
+
+> GPL3.0 | An open source alternative to Mint, YNAB, and more. Stay on budget and build wealth without sacrificing your privacy. 
+
+{{< details title="More about Financial Freedom Software 📌" closed="true" >}}
+
+This project addresses privacy concerns by allowing users to **self-host their financial data**.
+
+Users can run the application on any device with Docker support, enhancing control over their financial information.
+
+Key features:
+
+- **Supports any bank**: Integrate with various banking institutions.
+- **Private synchronization**: Ensures data privacy during synchronization.
+- **Self-hosting**: Run on AWS, Digital Ocean, or even Raspberry Pi.
+- **Budgeting tools**: Helps in managing cash flow and setting budgets.
+- **Global currency support**: Manages finances in multiple currencies.
+
+The project is actively being developed, inviting community involvement through contributions.
+
+> `Financial Freedom` empowers users to manage finances privately and securely.
+
+{{< /details >}}
+
+
+Similar projects include **Firefly III** and **GnuCash**.
+
+* https://github.com/CodeWithCJ/SparkyBudget
+
+> Simple Budgeting, Powerful Results 
+
+
+**Tl;DR**
+
+Before building [PyStocks v2](https://jalcocert.github.io/JAlcocerT/py-stonks/), see what others have created.
+
+**Intro**
+
+Whether TradFi, DeFi, or whatever it comes, you might want to bring clarity to your personal finances.
+
+AND MORE TOOLS IN THE FAQ
+
+## Selfhostable Personal Finance Tools
+
+### Paisa
+
+* https://paisa.fyi/
+* https://github.com/ananthakumaran/paisa
+
+### Actual Budget
+
+* https://actualbudget.org/
+* https://github.com/actualbudget/actual
+
+> A local-first personal finance app
+
+
+### firefly-iii
+
+* https://github.com/firefly-iii/firefly-iii/
+* https://mariushosting.com/how-to-install-firefly-iii-on-your-synology-nas/
+
+https://www.youtube.com/watch?v=ru1LTUhFGjA
+
+### Maybe
+
+* https://github.com/maybe-finance/maybe
+
+ The OS for your personal finances 
+
+### Ghostfolio
+
+* https://ghostfol.io/
+* https://github.com/ghostfolio/ghostfolio
+
+
+https://ghostfol.io/en/features
+
+{{< dropdown title="Pre-Requisites!! Just Get Docker 🐋" closed="true" >}}
+
+Important step and quite recommended for any SelfHosting Project - [Get Docker Installed](https://fossengineer.com/docker-first-steps-guide-for-data-analytics/)
+
+It will be one command, this one, if you are in Linux:
+
+```sh
+apt-get update && sudo apt-get upgrade && curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh && docker version
+```
+
+{{< /dropdown >}}
+
+
+
+```sh
+echo -e "POSTGRES_PASSWORD=$(openssl rand -base64 32)\nACCESS_TOKEN_SALT=$(openssl rand -base64 32)\nJWT_SECRET_KEY=$(openssl rand -base64 32)" > .env
+```
+
+> Thanks to https://mariushosting.com/how-to-install-ghostfolio-on-your-synology-nas/
+
+
+---
+
+## FAQ
+
+### Other F/OSS Apps for Finance Management
+
+* https://apps.nextcloud.com/apps/cospend
+* Firefly 3
+* https://github.com/jameskokoska/Cashew?tab=readme-ov-file
+  * This application is available on the App Store, Google Play, GitHub and as a Web App (PWA).
+  * Cashew is a full-fledged, feature-rich application designed to empower users in managing their finances effectively. Built using Flutter - with Drift's SQL package, and Firebase - this app offers a seamless and intuitive user experience across various devices. Development started in September 2021.
+
+* https://github.com/spliit-app/spliit
+
+>  Free and **Open Source Alternative to Splitwise**. Share expenses with your friends and family. 
+
+* https://github.com/KayatoSan/Budget5S
+https://github.com/KayatoSan/Budget5S?tab=AGPL-3.0-1-ov-file#readme
+>  Budget5S aims to offer a free alternative to budget managers. 
+
+* https://github.com/ellite/Wallos - Wallos: Open-Source Personal Subscription Tracker
+
+
+> Wallos is a powerful, open-source, and self-hostable web application designed to empower you in managing your finances with ease. Say goodbye to complicated spreadsheets and expensive financial software – Wallos simplifies the process of tracking expenses and helps you gain better control over your financial life.

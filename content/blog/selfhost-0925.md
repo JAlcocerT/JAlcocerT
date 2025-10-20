@@ -694,7 +694,7 @@ chmod 600 ./acme.json && \
 chmod 600 ./traefik.yml #or it will be a security risk for other users to see the privatekey
 ```
 
-Make sure to point cf DNS records, maybe using script https://github.com/JAlcocerT/waiting-to-landing/blob/main/cloudflare-dns-updater.py
+Make sure to point **CF DNS records**, maybe using script https://github.com/JAlcocerT/waiting-to-landing/blob/main/cloudflare-dns-updater.py
 
 > For which you will need the [ZoneID of your Domain](https://www.youtube.com/watch?v=pmfrJNCaOFY) as well as per [this .env.sample](https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/.env.sample)
 
@@ -751,8 +751,9 @@ This uses DNSchallenge (instead of https), so you dont have to open any ports :)
 
 Once **Traefik is deployed**, go to: https://casa.jalcocertech.com/dashboard/#/http/routers
 
-![alt text](/blog_img/selfh/https/traefik-firebat/traefik-dash-ui.png)
+![Traefik creating SSL certificates for the internal homelab services](/blog_img/selfh/https/traefik-firebat/traefik-dash-ui.png)
 
+> You can also check with `CTRL+I` within firefox
 
 **Example 1**: Traefik + already created (from others) webapps ✅ 
 

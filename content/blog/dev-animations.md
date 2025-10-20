@@ -75,6 +75,8 @@ Maybe now this can be a thing, since we have [MCP](https://jalcocert.github.io/J
 
 I created [this repo for putting *real life* videos together](https://github.com/JAlcocerT/YT-Video-Edition), as covered on [these posts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/)
 
+But it seems that today, we are going to **have fun with [Matplotlib](#matplotlib-animations**.
+
 ## Animations with Python
 
 [Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) is a versatile programming language that can be used for a wide range of tasks, including creating animations. 
@@ -95,7 +97,7 @@ They wont be interactive, but they can look pretty cool!
 
 If you are using Windsurf or similar tools, make sure to ask them to bring:
 
-1. Brand Colors
+1. **Brand Colors**
 2. Adding *watermark* / url or not
 3. Proper modules for: pull data, store data, transform data + style plots (you can have one for price, another for dividend oriented...)
 4. Output format size (resolution)
@@ -193,7 +195,7 @@ Ive been having the need to do some [git recap](https://jalcocert.github.io/JAlc
 
 You can organize your repository in a way that from one source code, you have different kind of outputs.
 
-Say you have your animations for a website/twitter:
+Say you have your animations for a *website/twitter/whatever*:
 
 ```sh
 git branch libreportfolio 285484eafeae5c79436cef73678df8ae5153bc52
@@ -229,11 +231,14 @@ Probably oriented more if you are [building PoCs](https://jalcocert.github.io/JA
 
 ### Social Media Automation
 
-If you are able to create mp4 animations, you can also create images or animated `.gif` from them.
+If you are able to **create mp4 animations**, you can also create images or animated `.gif` from them.
 
-With those, you can go to different social media platforms and share the content you have just created.
+With those, you can go to different **social media platforms and share the content** you have just created.
 
 {{< tweet user="LibrePortfolio" id="1940801205577699713" >}}
+
+<!-- https://x.com/LibrePortfolio/status/1940801205577699713 -->
+
 
 **Social Media Management Apps**: Social Media can be simplified with these apps:
 

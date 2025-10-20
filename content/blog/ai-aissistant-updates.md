@@ -117,7 +117,7 @@ if selected_table:
 # Chat with Database about the whole database
 st.write("### Ask a Question about the Entire Database")
 
-global_question = st.text_input("Global Question", "What are the top 5 artists with more albums published?")
+global_question = st.text_input("Global Question", "What are the top 5 groups with more albums published?")
 
 if st.button("Submit Global Question"):
     if global_question:

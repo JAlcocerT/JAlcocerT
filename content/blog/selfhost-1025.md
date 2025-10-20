@@ -172,6 +172,7 @@ Choosing between **Transmission** and **qBittorrent** for [P2P](https://jalcocer
 | **Daemon/Headless Use** | **Excellent.** Designed for running as a background service (daemon) and easy remote control via a Web UI or remote apps. | Good, includes a Web UI for remote access but is not as inherently built for headless use as Transmission. |
 
 3. Performance and Stability
+
 * **Performance:** Performance is generally competitive. Some users report slightly faster speeds with qBittorrent, particularly with complex or multiple simultaneous downloads, but others find Transmission equally fast for basic needs.
 * **Stability:** Both are generally stable. Transmission has had historical security incidents (though resolved), and its design means it tends to use fewer resources, which can aid stability on weaker hardware. qBittorrent is well-regarded for its stability, even under a heavy load of thousands of torrents.
 
@@ -183,15 +184,12 @@ Choosing between **Transmission** and **qBittorrent** for [P2P](https://jalcocer
 
 Choosing between **Transmission** and **qBittorrent** depends on your priorities, as both are popular, free, open-source, and cross-platform (Windows, macOS, Linux) BitTorrent clients.
 
-
 1. User Interface and Simplicity
 
 | Client | Characteristics | Best For |
 | :--- | :--- | :--- |
 | **Transmission** | **Minimalist and sleek.** Designed to be lightweight and blend in well with the native operating system environment, especially on macOS and Linux (like Ubuntu, where it's often the default). It has fewer features on the main interface, prioritizing simplicity. | Users who prefer a **simple, clean interface** and just want a client that "just works" with minimal fuss or advanced options. |
 | **qBittorrent** | **Feature-rich and traditional.** Often compared to the older versions of uTorrent (before it became ad-heavy). Its interface is more reminiscent of a classic torrent client, offering a comprehensive view of settings and torrent statistics. | Users who prefer a **more traditional, functional, and detailed interface** with many options visible. |
-
-
 
 2. Features and Functionality
 
@@ -202,8 +200,6 @@ Choosing between **Transmission** and **qBittorrent** depends on your priorities
 | **Advanced Control** | Good for basic control, but advanced options are often hidden or require the web interface/third-party apps. | **Excellent**—offers more granular control over torrents, trackers, and peers (e.g., advanced content prioritization). |
 | **Lightweight/Resource Usage** | **Very lightweight** and has a low memory/CPU footprint, making it ideal for low-power devices like a Raspberry Pi or NAS. | **Lightweight**, but generally uses more memory and CPU than Transmission, especially when handling a large number of torrents. |
 | **Daemon/Headless Use** | **Excellent.** Designed for running as a background service (daemon) and easy remote control via a Web UI or remote apps. | Good, includes a Web UI for remote access but is not as inherently built for headless use as Transmission. |
-
-
 
 3. Performance and Stability
 
@@ -221,15 +217,19 @@ Choosing between **Transmission** and **qBittorrent** depends on your priorities
 
 ### Backup websites
 
-
 1. https://github.com/goclone-dev/goclone
 
 
-> MIT |  Website Cloner - Utilizes powerful Go routines to clone websites to your computer within seconds. 
+> MIT | Website Cloner - Utilizes powerful Go routines to clone websites to your computer within seconds. 
+
 
 ---
 
 ## Conclusions
+
+I have added here: https://github.com/JAlcocerT/Docker/tree/main/SelfH
+
+The docker stack im using right now :)
 
 You can start with a Pi SBC and a SSD drive:
 
@@ -278,6 +278,83 @@ https://www.youtube.com/live/t0Uk9eC146E?si=S9ruQrOgRa-DK_Ze
 
 {{< youtube "t0Uk9eC146E" >}}
 
+### More stuff Lately
+
+1. If you are experiencing router restart, make sure that your homelab will have a **static local ip**.
+
+Identify the vendor of the [macs connected](https://it-tools.tech/mac-address-lookup) like `ASRock Incorporation`, then make an IP reservation on your router.
+
+> It should be among your CM settings, near the advanced ones like `NAT Forwarding`
+
+> > You can also use duckdns or the traefik+tailscale IP way
+
+2. **Termix** has a [desktop app](https://docs.termix.site/install#connector) now:
+
+```sh
+wget https://github.com/Termix-SSH/Termix/releases/download/release-1.7.3-tag/Termix-Linux-Portable-1.7.3.zip
+unzip Termix-Linux-Portable-1.7.3.zip
+unzip Termix-Linux-Portable.zip -d Termix-App
+cd 
+```
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/termix" title="Termix | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+### I was also exploring these file tools
+
+For event photo galleries, I was also having a look...
+
+**Whats required** for photos for events?
+
+1. Filebrowser and [Filebrowser Quantum](https://github.com/gtsteffaniak/filebrowser)
+
+* https://github.com/filebrowser/filebrowser: *This one is tested *in production* as seen [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings)*
+
+* I was interested into the custom branding for the Wedding project and tinkered with it https://filebrowser.org/configuration/custom-branding 
+> Apache v2 | 📂 Web File Browser
+
+
+![Filebrowser Quantum](/blog_img/web/filebrowser-hugo/filebrowser-quantum-login.png)
+
+![alt text](/blog_img/web/filebrowser-hugo/filebrowser-quantum-users.png)
+
+
+2. PicPeak
+
+* https://github.com/the-luap/picpeak
+
+> **MIT** | 🚀 Self-hosted photo sharing platform for photographers & events. Open-source alternative to PicDrop/Scrapbook with time-limited galleries, password protection, custom branding & no monthly fees. Built with React + Node.js 📸
+
+Which can be deployed as per: https://github.com/the-luap/picpeak/blob/main/DEPLOYMENT_GUIDE.md
+
+3. How about some wetransfer alternative? See [transferzip](https://transfer.zip/) https://github.com/robinkarlberg/transfer.zip-web
+
+> agpl 3.0 | A self-hostable complete **file-sharing solution** that focuses on reliability, security and ease of use.
+
+4. https://github.com/cloudreve/Cloudreve
+
+Cloudreve can help you build a self-hosted file management service that is both suitable for private and public use, with support for multiple storage providers and virtual file systems to provide a flexible file management experience.
+
+> GPL3/0 | 🌩 Self-hosted file management and sharing system, supports multiple storage providers
+
+5. https://codeberg.org/shroff/phylum
+
+6. Palmr https://github.com/kyantech/Palmr
+
+ 🌴 Palmr. is an open-source file-sharing platform focused on privacy and security. It enables users to upload, manage, and share files with features like password protection, custom links, and access control without tracking or limitations. Designed for seamless and secure sharing, Palmr. is completely free. 
+
+<!-- https://www.youtube.com/watch?v=Z-zmXoA26Eo -->
+
+{{< youtube "Z-zmXoA26Eo" >}}
+
+
+7. https://github.com/error311/FileRise
+
+<!-- https://www.youtube.com/watch?v=t8p222fxVL0 -->
+
+{{< youtube "t8p222fxVL0" >}}
 
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Everything is Code"
-date: 2025-10-24T08:20:21+01:00
+date: 2025-10-20T08:20:21+01:00
 draft: false
 tags: ["Matplotlib vs Manim vs RemotionJS vs Animotion","SlidevJS vs ReflexJS","Pandoc vs Latex vs Typst"]
 url: 'things-as-a-code'
@@ -225,12 +225,13 @@ Just in case that you need some help with: https://fmhy.net/misc#resume-portfoli
 
 ## Video as a Code
 
-Thanks to FFMPEG and CLI
+[Video ,editing' Thanks to FFMPEG and the CLI](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing), of course!
 
-https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing
+You could also use GUI tools:
 
 ![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
 
+But really, just to know the format of the videos of one folder and joining the similar ones together you dont need that:
 
 ```sh
 bash -lc 'header_printed=0; \
@@ -266,9 +267,24 @@ done'
 # 3840x2160    50.00    video.mp4
 ```
 
+
+You can always add music to your videos: https://www.youtube.com/audiolibrary?feature=blog
+
+```sh
+ffmpeg -y -i initial_silenced_video.mp4 -stream_loop -1 -i afilador_101.mp3 \
+  -c:v copy -c:a aac -shortest -map 0:v:0 -map 1:a:0 \
+  ./resulting-video-with-audio.mp4
+```
+
 {{< youtube "YanaJiC_cYk" >}}
 
 
+
+
+### Animations as a Code
+
+
+As we saw in summer, we can do [cool animations as a code](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/)
 
 ```sh
 git clone https://github.com/JAlcocerT/DataInMotion
@@ -282,6 +298,12 @@ ffmpeg -y -i gld-btc.mp4 -stream_loop -1 -i afilador_101.mp3 \
   ./gld-btc-audio.mp4
 ```
 
+Do animation logic once, ship it everywhere:
+
+{{< tweet user="LibrePortfolio" id="1940181314587828581" >}}
+
+<!-- https://x.com/LibrePortfolio/status/1940181314587828581 -->
+
 > With the proper data model, you can save the Google Sheets read with `=GOOGLEFINANCE("CURRENCY:USDEUR"; "price"; FECHA(AÑO(HOY()); 1; 1); HOY(); "DAILY")`
 
 > > Or `=GoogleFinance("CURRENCY:BTCUSD"; "price"; HOY()-30; HOY())` 
@@ -294,12 +316,30 @@ uv run streamlit run streamlit_portfolio_aggregate.py
 
 ![Streamlit price and dividends of a portfolio aggregated](/blog_img/dev/streamlit-stocks-aggregates.png)
 
+```sh
+#from the same libreportfolio branch
+uv run LibrePortfolio-PlotsFlask.py
 
+docker compose build --no-cache
+#sudo docker compose up -d
+#sudo docker compose down #test of the image over
+```
 
+Then just make the built webapp container public with portainer+cloudflare with `libreportfolio-flask:8501` to `https://graficas.libreportfolio.fyi/`
 
-### Animations as a Code
+Record and Share:
 
-You know, we can do [animation as a code as seen with matplotlib](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/).
+```sh
+ffmpeg -y -i untitled.mp4 -stream_loop -1 -i ImmortaYT.mp3 \
+  -c:v copy -c:a aac -shortest -map 0:v:0 -map 1:a:0 \
+  ./graficas-libreportfolio.mp4
+```
+
+{{< tweet user="LibrePortfolio" id="1980278163155333315" >}}
+<!-- 
+https://x.com/LibrePortfolio/status/1980278163155333315 -->
+
+You know, we can do [animation as a code as seen **with matplotlib**](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/).
 
 {{< youtube "I46bPuSdrqk" >}}
 
@@ -310,7 +350,25 @@ And you should probably place your codes into a [repo like DataInMotion](https:/
 
 
 
-What if you have couple of brands and want to recycle your animations?
+
+
+What if you have *couple of brands* and want to **recycle your animations**?
+
+
+You can even create a **quick** streamlit, then flask **web apps around animations** to let other create with your tools:
+
+```sh
+uv run streamlit run LibrePortfolio-Plots.py 
+uv run LibrePortfolio-PlotsFlask.py
+docker compose build --no-cache
+```
+
+Make it visible on social media.
+
+Because lets be honest: website traffik is broken with AI.
+
+{{< tweet user="LibrePortfolio" id="1940181314587828581" >}}
+
 
 
 Then, Last night the yt algorithm hit me with this:
@@ -418,8 +476,24 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
 
+### Video Geolocation with FFMPEG
 
+https://github.com/JAlcocerT/Py_RouteTracker
 
+With a GoPro and its metadata, it's all about:
+
+```sh
+exiftool GX011032.MP4
+exiftool -ee GX011032.MP4
+```
+
+> Make sure to record with GPS on to bring that lovely Geo data.
+
+For just accelerations:
+
+```sh
+
+```
 
 ---
 
