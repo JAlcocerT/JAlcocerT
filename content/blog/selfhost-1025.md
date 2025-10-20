@@ -68,23 +68,33 @@ docker exec -u www-data nextcloud php /var/www/html/occ config:system:get truste
 docker exec -u www-data nextcloud php /var/www/html/occ config:system:get trusted_domains
 ```
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="Nextcloud | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 If you dont want **Nextcloud** nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
 
 
 Neither pay for google photos: https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper
+
+4. With **Local Send** I got ~4MB/s transfer speed from an iphone to a tablet.
 
 ```sh
 flatpak install flathub org.localsend.localsend_app
 ##ps aux --sort=-%mem | grep localsend
 ```
 
-With local send I got 4MB/s transfer speed from an iphone to a tablet.
+5. We also have [Pairdrop](https://pairdrop.net/): https://github.com/schlagmichdoch/PairDrop
 
-Would SCP or FTP be faster?
+> PairDrop: Transfer Files Cross-Platform. No Setup, No Signup. 
+
+6. Would SCP or FTP be faster instead?
 
 ![SCP Speed](/blog_img/selfh/HomeLab/scp.png)
 
 ![SFTP Transfer Speed](/blog_img/selfh/HomeLab/sftp.png)
+
 
 > Immich is also cool and have some projects around https://github.com/Nasogaa/immich-drop
 
@@ -280,13 +290,19 @@ https://www.youtube.com/live/t0Uk9eC146E?si=S9ruQrOgRa-DK_Ze
 
 ### More stuff Lately
 
-1. If you are experiencing router restart, make sure that your homelab will have a **static local ip**.
+1. If you are experiencing **router restarts**, make sure that your homelab will have a **static local ip**.
 
 Identify the vendor of the [macs connected](https://it-tools.tech/mac-address-lookup) like `ASRock Incorporation`, then make an IP reservation on your router.
 
 > It should be among your CM settings, near the advanced ones like `NAT Forwarding`
 
 > > You can also use duckdns or the traefik+tailscale IP way
+
+Probably having a VPS as compute backup is not a bad idea.
+
+And **hetzner** has been leveling up their game:
+
+
 
 2. **Termix** has a [desktop app](https://docs.termix.site/install#connector) now:
 
@@ -299,8 +315,44 @@ cd
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/termix" title="Termix | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/fresh-rss" title="FreshRSS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+3. FreshRSS and Matrix: *If you are also tired of big tech infra failing...*
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/matrix-conduit" title="Matrix Conduit server | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-synapse" title="Matrix Server 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+# sudo apt update  
+# sudo apt install liferea  
+
+# sudo apt update  
+# sudo apt install quiterss  
+```
+
+An rss is always good to be uptodate with [outages, like the recent AWS one](https://health.aws.amazon.com/health/status):
+
+Also, apps like [signal might be secure by design](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps), at least for now.
+
+But that does not mean that they are not still centralized ans subject to fail when their infrastructure is not in place:
+
+{{< tweet user="elonmusk" id="1980342034318962881" >}}
+
+<!-- https://x.com/elonmusk/status/1980342034318962881 -->
+
+With thunderbird you can connect to both, plus have a local mail client:
+
+```sh
+sudo apt update  
+sudo apt install thunderbird
+
+# wget https://proton.me/download/mail/linux/1.9.0/ProtonMail-desktop-beta.deb
+# sudo dpkg -i ProtonMail-desktop-beta.deb
+# sudo apt-get install -f
+```
 
 ### I was also exploring these file tools
 
@@ -483,6 +535,12 @@ To summarize, **Shlink** stands out as the self-hosted URL shortener with built-
 
 
 ### Monitoring For HomeLab
+
+```sh
+#htop
+sudo docker stats multichat
+
+```
 
 I Got to know: https://github.com/operacle/checkcle/
 

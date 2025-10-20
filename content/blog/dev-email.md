@@ -248,7 +248,9 @@ If you just wanted a quick way to chat...there are many [Interesting Chats](http
 
 ### MailTrap x PB
 
-Yes, Mailtrap can be used to send one-time codes or magic links for user verification purposes such as account creation or subscription confirmation. Since Mailtrap provides SMTP email sending capabilities, you can configure PocketBase or any backend service to use Mailtrap's SMTP settings to send transactional emails including verification codes or magic links.
+Yes, Mailtrap can be used to send one-time codes or magic links for user verification purposes such as account creation or subscription confirmation. 
+
+Since Mailtrap provides SMTP email sending capabilities, you can configure PocketBase or any backend service to use Mailtrap's SMTP settings to send transactional emails including verification codes or magic links.
 
 This allows you to deliver emails securely and reliably during development and testing phases without sending real emails to users. Once your system is ready for production, you can switch from Mailtrap to a real SMTP provider if desired. But for sending verification emails with OTPs or magic links in development or even production (if you choose), Mailtrap fully supports this use case.[1][2]
 

@@ -363,20 +363,15 @@ Chat with SQL and Tabular Databases using LLM Agents (DON'T USE RAG!)
 
 -->
 
-To explore vector DBs we have Vector Admin, but for **regular DB's** we have **WhoDB**
 
-* https://github.com/clidey/whodb?ref=selfh.st
-* https://github.com/clidey/whodb?tab=GPL-3.0-1-ov-file#readme
-
-> A lightweight next-gen **database explorer** - Postgres, MySQL, SQLite, MongoDB, Redis, MariaDB & Elastic Search
-
-Welcome to WhoDB – a powerful, lightweight (~20Mi), and user-friendly database management tool that combines the simplicity of Adminer with superior UX and performance. WhoDB is written in GoLang!
 
 ### What are Embedding Models?
 
 Embedding models are algorithms or **neural networks that transform data into a numerical representation** called an *embedding*.  
 
-This embedding is a vector (a list of numbers) that **captures the semantic meaning** or relationships within the data.  The key idea is that similar data points will have embeddings that are close to each other in vector space.
+This embedding is a vector (a list of numbers) that **captures the semantic meaning** or relationships within the data. 
+
+The key idea is that similar data points will have embeddings that are close to each other in vector space.
 
 Here's a breakdown:
 
@@ -391,7 +386,11 @@ Here's a breakdown:
 
 3. **Vector Space:** The resulting vectors exist in a multi-dimensional space called "vector space."  Each dimension of the vector represents a different feature or characteristic of the data.  The position of the vector in this space encodes the semantic information.
 
-4. **Similarity:**  The crucial property of embeddings is that the distance between two vectors in vector space reflects the similarity between the corresponding data points.  Similar items will have embeddings that are close together, while dissimilar items will have embeddings that are far apart.  Distance is typically measured using metrics like cosine similarity or Euclidean distance.
+4. **Similarity:**  The crucial property of embeddings is that the distance between two vectors in vector space reflects the similarity between the corresponding data points.  
+
+Similar items will have embeddings that are close together, while dissimilar items will have embeddings that are far apart. 
+
+Distance is typically measured using metrics like cosine similarity or Euclidean distance.
 
 **Why are embedding models useful?**
 

@@ -18,9 +18,15 @@ Because its not about if, but when a *single point of failure* will be gone.
 Lately I was reading this [reddit backup post](https://www.reddit.com/r/DataHoarder/comments/1gsutp5/list_of_free_open_source_and_crossplatform_backup/?chainedPosts=t3_yqonpo)
 
 1. NextCloud
+
+
 2. ProtonDrive
 
+Fine if you are on windows.
+
 Unfortunately, there is no official https://github.com/donniedice/protondrive-linux
+
+But you can get your way around with rclone.
 
 You also have some static/blob storage:
 
@@ -38,8 +44,9 @@ sudo sudo du -h --max-depth=10 /var/lib/docker | sort -rh | head
 
 ## Privacy Apps
 
-Some time ago I put together this list of cool security apps: https://jalcocert.github.io/Linux/docs/nix/fav-apps/#secprivacy
+Some time ago I put together this [list of cool security apps here](https://jalcocert.github.io/Linux/docs/nix/fav-apps/#secprivacy)
 
+Time for a recap now!
 
 3. **Secure email client** via Thunderbird or https://proton.me/blog/proton-mail-desktop-app
 
@@ -130,6 +137,45 @@ You also have other interesting pwd managers:
 * KeePass
     * https://sideofburritos.com/blog/i-switched-to-keepass/
 
+A **salt** in cryptography is random data added to a password before it is hashed. It is designed to make each password hash unique, even if two users have the same password. 
+
+#### Difference between salt and password
+
+During Termix setup, I got to know about the concept of SALT: https://www.lastpass.com/features/password-generator
+
+
+- **Password:** This is the secret string that a user creates and inputs, meant to authenticate their identity. It should be kept secret and complex enough to resist guessing.
+  
+- **Salt:** A randomly generated value unique to each password that is combined with the password *before* hashing. The salt is usually stored alongside the hash in the database and does not need to be secret.
+
+Why is salt important?
+
+- Without a salt, identical passwords produce identical hashes, enabling attackers to use precomputed tables called **rainbow tables** to reverse hashes quickly.
+- Salting prevents rainbow table and other precomputation attacks by forcing the attacker to compute hashes separately for each unique salt, vastly increasing the effort needed.
+- It also prevents attackers from easily identifying users with the same password within a breached database.
+
+
+1. When a user sets a password, the system generates a random salt.
+2. The system appends or prepends this salt to the password and hashes the combined string.
+3. The system stores both the salt and the resulting hash.
+4. At login, the system combines the stored salt with the user input password, hashes it again, and checks if it matches the stored hash.
+
+In summary, **a salt is a unique, random value added to a password before hashing to enhance security and prevent various attacks, while the password is the actual secret chosen by the user**. Salting improves the robustness of password storage without burdening the user.[1][4][6][8]
+
+```sh
+openssl rand -hex 16  
+```
+
+```sh
+SALT=$(openssl rand -hex 8)
+
+PASSWORD="mysecretpassword"
+HASH=$(echo -n "$PASSWORD$SALT" | openssl dgst -sha256)
+
+echo "Salt: $SALT"
+echo "Hash: $HASH"
+```
+
 ### 2FA
 
 Initially, I was using authy as my 2fa app.
@@ -138,9 +184,9 @@ I also tried Google Auth and microsoft version of it.
 
 They all work fine.
 
-Then I heard about: 2FAS and Aegis, which are OSS.
+Then I heard about: **2FAS and Aegis**, which are OSS.
 
-But just recently, we have https://proton.me/authenticator
+But just recently, we have **Proton authenticator** https://proton.me/authenticator
 
 * https://github.com/orgs/protonpass/repositories
     * https://github.com/protonpass/proton-pass-common/releases
@@ -156,11 +202,11 @@ sudo apt-get install -f
 * Its OSS and allows direct import/export.
 * Allows (optional) to automatic sync via a proton account.
 
-> Im using mostly **2FAS** (which syncs codes via gdrive)
+> Im using mostly **2FAS** *which syncs codes via gdrive*
 
 >> But im giving a try to ProtonAuthenticator (Synced via protonmail + keeping backup codes handy, just in case)
 
-For business purpose, you can still keep your microsoft auth / Google 2fa
+For business purpose, you can still keep your microsoft auth / Google 2fa.
 
 ### Chats
 
@@ -176,14 +222,20 @@ In case that some of the well know chats stop working, you can try these:
 
 ```sh
 flatpak install flathub im.riot.Riot #element
-#flatpak install flathub org.signal.Signal
+#flatpak install flathub org.signal.Signal #signal
 ```
 
-If you like Matrix or Signal, you might find interesting:
+If you like **Matrix or Signal**, you might find interesting: BitChat
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-synapse" title="Matrix Server 🐋 ↗" >}}
+{{< /cards >}}
 
 * https://github.com/permissionlesstech/bitchat
 
 > **Bluetooth mesh chat**, IRC vibes
+
+> > You can get [bitchat from releases](https://github.com/permissionlesstech/bitchat-android/releases)
 
 
 ## Private AI

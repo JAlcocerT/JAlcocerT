@@ -95,7 +95,7 @@ You could also:
 ```sh
 #htop
 sudo docker stats multichat
-#sudo docker prune
+#sudo docker system prune
 ```
 
 4. You can invite and **manage what other users/members can do** with your Dokploy server

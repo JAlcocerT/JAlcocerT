@@ -2,7 +2,7 @@
 title: "Which DB is for me?"
 date: 2025-08-11
 draft: false
-tags: ["DataBase 101","D&A","DBCode and SQLTools","SelfHosting/HomeLab","DBeaver"]
+tags: ["DataBase 101","D&A","DBCode and SQLTools","SelfHosting/HomeLab","DBeaver vs WhoDB vs DBChart"]
 description: 'Pros & Cons of popular DBs: SQlite, PostgreSQL, MariaDB and their containers'
 url: 'databases-101'
 ---
@@ -76,12 +76,14 @@ Modern SQLite versions also offer a **Write-Ahead Logging (WAL)** mode, which im
 
 ### Using SQLite
 
-SQlite is so useful than other tools uses it, like pocketbase:
+SQlite is so useful than other tools uses it internally, like [pocketbase](https://github.com/pocketbase/pocketbase):
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase | POST ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pocketbase/" title="Pocketbase | POST ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+But not only, many OSS projects will spinautomatically a sqlite if you dont provide a separate container with a DB:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/Dev/BaaS/PB" title="Pocketbase | POST ↗" >}}
@@ -89,6 +91,7 @@ SQlite is so useful than other tools uses it, like pocketbase:
 {{< /cards >}}
 
 To visualize whats going on:
+
 * [SQliteBrowser](https://github.com/sqlitebrowser/sqlitebrowser)
 * Many [others tools](#database-management--gui-tools-)
 
@@ -399,10 +402,21 @@ Many open-source companion tools exist to help with different aspects of databas
 
 These tools provide a graphical user interface **(GUI) to interact with and manage your databases**, offering a more user-friendly alternative to the command line.
 
+To explore vector DBs we have Vector Admin, but for **regular DB's** we have **WhoDB**
+
+A powerful, lightweight (~20Mi), and user-friendly database management tool that combines the simplicity of Adminer with superior UX and performance.
+
+* https://github.com/clidey/whodb?tab=GPL-3.0-1-ov-file#readme
+
+> A lightweight next-gen **database explorer** - Postgres, MySQL, SQLite, MongoDB, Redis, MariaDB & Elastic Search
+
+> > WhoDB is written in GoLang!
+
+See also **DBChart or DBGate**
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
-  {{< card link="https://github.com/dbgate/dbgate" title="See also DBGate | Post ↗" >}}
+  {{< card link="https://github.com/dbgate/dbgate" title="See also DBGate | Project ↗" >}}
 {{< /cards >}}
 
 Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check their [notebooks for DBs](https://dbcode.io/docs/notebooks/getting-started)

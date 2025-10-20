@@ -186,7 +186,16 @@ the buying brain....
  -->
 
 
+Some people had problems when trying to convert their Words to epub with amazon tools.
 
+So they others to do it form them and be able to publish to Amazon: `https://kdp.amazon.com/en_US/`
+
+But you dont have to do so if you write on a epub friendly format from the get go.
+
+
+But before going deep and create an ebook, why not creating a **pdf article for your website**?
+
+Like...something for https://www.jalcocertech.com/support/whitepapers/
 
 #### Reports as a code
 
@@ -222,6 +231,12 @@ This can also be done as a report or with matplotlib.
 
 Just in case that you need some help with: https://fmhy.net/misc#resume-portfolio
 
+
+More  options for a CV?
+
+1. https://github.com/BingyanStudio/LapisCV
+
+> MIT |  📄 Easily create your resume with Markdown on VSCode / Typora / Obsidian 
 
 ## Video as a Code
 
@@ -308,10 +323,14 @@ Do animation logic once, ship it everywhere:
 
 > > Or `=GoogleFinance("CURRENCY:BTCUSD"; "price"; HOY()-30; HOY())` 
 
-Not to mention the possibility to vibe code very quickly this [kind of aggregates within st](https://github.com/JAlcocerT/DataInMotion/blob/libreportfolio/streamlit_portfolio_aggregate.py):
+Not to mention the possibility to vibe code very quickly this [kind of aggregates within st](https://github.com/JAlcocerT/DataInMotion/blob/libreportfolio/streamlit_portfolio_aggregate.py).
+
+See how quickly you can iterate through your ideas:
 
 ```sh
 uv run streamlit run streamlit_portfolio_aggregate.py
+#uv run streamlit run streamlit_ath_viewer.py #from WK42Y25
+#uv run streamlit run LibrePortfolio-Plots.py #a better version of streamlit_ath_viewer and streamlit_script_plots
 ```
 
 ![Streamlit price and dividends of a portfolio aggregated](/blog_img/dev/streamlit-stocks-aggregates.png)
@@ -327,7 +346,7 @@ docker compose build --no-cache
 
 Then just make the built webapp container public with portainer+cloudflare with `libreportfolio-flask:8501` to `https://graficas.libreportfolio.fyi/`
 
-Record and Share:
+Record and Share: *because [people share even gsheets](https://x.com/vecinoinversor_/status/1674359289886957568)*
 
 ```sh
 ffmpeg -y -i untitled.mp4 -stream_loop -1 -i ImmortaYT.mp3 \

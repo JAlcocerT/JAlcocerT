@@ -631,7 +631,7 @@ See also [Dbeaver](https://github.com/dbeaver/dbeaver) and [PGAdmin4](https://gi
 {{< /callout >}}
 
 
-2. To explore SQlite, we have the CLI:
+2. To explore **SQlite, we have some CLI**:
 
 And as seen [here](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#faq), we also have...
 
