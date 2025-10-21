@@ -269,7 +269,7 @@ Anyways, you can do a quick **XMR benchmark** on your mini PC:
 > > Its an interesting project anyways, configurable via JSON for that alternative CPU benchmark
 
 
-I also got to know a new browser, [Helium](https://github.com/imputnet/helium): 
+I also got to know a **new browser**, [Helium](https://github.com/imputnet/helium): 
 
 ```sh 
 wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/download/0.5.7.1/Helium-0.5.7.1-x86_64.AppImage
@@ -279,6 +279,9 @@ wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/downloa
 
 > > The Chromium-based web browser made for people, with love. Best privacy by default, unbiased ad-blocking, no bloat and no noise.
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/neko-browser" title="See also - Neko Browser | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 Privacy won, for now:
 
@@ -333,11 +336,11 @@ cd
 # sudo apt install quiterss  
 ```
 
-An rss is always good to be uptodate with [outages, like the recent AWS one](https://health.aws.amazon.com/health/status):
+An RSS is always good to be uptodate with [outages, like the recent AWS one](https://health.aws.amazon.com/health/status):
 
 Also, apps like [signal might be secure by design](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps), at least for now.
 
-But that does not mean that they are not still centralized ans subject to fail when their infrastructure is not in place:
+But that does not mean that they are not still centralized ans **subject to fail** when their infrastructure is not in place:
 
 {{< tweet user="elonmusk" id="1980342034318962881" >}}
 
@@ -352,6 +355,14 @@ sudo apt install thunderbird
 # wget https://proton.me/download/mail/linux/1.9.0/ProtonMail-desktop-beta.deb
 # sudo dpkg -i ProtonMail-desktop-beta.deb
 # sudo apt-get install -f
+```
+
+
+4. Talking about desktops apps: https://github.com/aandrew-me/ytDownloader
+
+```sh
+#choco install ytdownloader
+sudo snap install ytdownloader
 ```
 
 ### I was also exploring these file tools
@@ -413,11 +424,9 @@ Cloudreve can help you build a self-hosted file management service that is both 
 
 ## FAQ
 
-**More Selfhosted resources**
+**More Selfhosted resources** *These are new from this post*
 
-1. https://tom-doerr.github.io/repo_posts/?s=35
-
-
+1. https://tom-doerr.github.io/repo_posts/
 
 {{< tweet user="tom_doerr" id="1979894065400263086" >}}
 
@@ -431,7 +440,7 @@ https://x.com/tom_doerr/status/1979894065400263086?
 
  -->
 
-**Selfhosted resources you should know already**
+**Selfhosted resources:** *you should know already*
 
 * https://www.open-source-tools.com/metube
 * Some [forums](https://forocoches.com/foro/showthread.php?t=7806376&page=48) or [reddit](https://www.reddit.com/r/selfhosted/)
@@ -550,7 +559,7 @@ But we already covered similar tools:
 
 1. Beszel
 
-![Beszel Deployed to hetzner](/blog_img/Monitoring/beszel-hetzner.png)
+![Beszel Deployed to VPS](/blog_img/Monitoring/beszel-hetzner.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring with Beszel" >}}

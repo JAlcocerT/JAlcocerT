@@ -392,6 +392,9 @@ Its also nice to see when the snowball effect starts to be noticed: like how muc
 And by the time of RStocks, I had in mind as reference the stock events app: https://stockevents.app/en?pt=118220498&ct=&mt=8
 
 
+<!-- https://x.com/dividiendolo/status/1978856980153270492 -->
+{{< tweet user="dividiendolo" id="1978856980153270492" >}}
+
 
 ### Selfhostable Apps
 

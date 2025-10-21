@@ -5,6 +5,10 @@ draft: true
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
 ---
 
+People are transforming everything to a smart device with a simple ESP
+
+https://www.youtube.com/watch?v=dpU7yZE1PkE
+
 ![alt text](/blog_img/iot/Sensor-db.png)
 
 In this project we will be collecting **Temperature and Humidity Data** from a DHT11 or a DHT22 Sensor working together with a Raspberry Pi.

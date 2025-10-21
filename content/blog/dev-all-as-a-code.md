@@ -175,15 +175,6 @@ Or...because you can now have deep research agents everywhere:
 * Perplexity...
 * ...
 
-<!-- 
-referencia a persuasion escrito en jan 2022
-
-y aqui cositas de neuromarketing
-
-the buying brain....
-`brainfluence`
-
- -->
 
 
 Some people had problems when trying to convert their Words to epub with amazon tools.
