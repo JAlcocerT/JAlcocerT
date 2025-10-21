@@ -208,6 +208,9 @@ And then I got to know about [Carbone](https://github.com/carboneio/carbone), wh
 
 >  Fast and simple report generator, from JSON to pdf, xslx, docx, odt... 
 
+{{< tweet user="TheRonnieVShow" id="1980403286349111480" >}}
+
+<!-- https://x.com/TheRonnieVShow/status/1980403286349111480 -->
 
 #### Infographics as a code
 

@@ -152,3 +152,14 @@ It's not a complete, ready-to-fly drone itself, but rather a frame onto which yo
 >  I enjoy tinkering with electronics projects and fixing things, so I've put together this channel to share with you a mix of tech repairs, DIY projects, Arduino & Raspberry Pi projects, and tech reviews.
 
 https://youtube.com/shorts/btdBPai3ppU?si=yN8nHFoL9bB1BybA
+
+## Conclusions
+
+If you like mechanics, 3d printing and RC.
+
+
+Have a look to:
+
+<!-- https://www.youtube.com/watch?v=pdKnIPH3JQs -->
+
+{{< youtube "pdKnIPH3JQs" >}}

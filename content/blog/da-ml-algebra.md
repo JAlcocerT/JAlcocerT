@@ -1,8 +1,8 @@
 ---
 title: "Understanding Algebra (again)"
-date: 2025-10-20T23:20:21+01:00
+date: 2025-10-13T23:20:21+01:00
 draft: false
-tags: ["DSc","outro"]
+tags: ["DSc","Outro","Mechanics"]
 description: 'It takes something more than multiplying blindly matrixes to get to known them.'
 url: 'algebra-101'
 math: true
@@ -12,7 +12,7 @@ math: true
 
 Algebra was one of my favourite subjects in my first year of uni studies.
 
-> And blindly multiplying matrixes was the most painful and procrastinated task for me to do in high school
+> And blindly multiplying matrixes was the most painful and procrastinated task for me to do in high school.
 
 And its been a while since I have had the chance to do cool stuff with it.
 
@@ -20,7 +20,7 @@ Until today.
 
 ## The core of Lineal Algebra
 
-https://www.youtube.com/watch?v=m3hxPxPgSIY
+<!-- https://www.youtube.com/watch?v=m3hxPxPgSIY -->
 
 {{< youtube "m3hxPxPgSIY" >}}
 
