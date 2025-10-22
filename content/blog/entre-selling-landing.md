@@ -225,6 +225,13 @@ En resumen, hay consenso sobre la utilidad de construir en público para tener f
 [19](https://www.reddit.com/r/SaaS/comments/1dndfj3/is_building_in_public_worth_the_hype/)
 [20](https://www.reddit.com/r/SideProject/comments/1gst45g/i_made_a_directory_of_people_who_build_in_public/)
 
+### People are doing
+
+Simple things like:
+
+1. `https://invertiresvivir.es/newsletter/`
+2. `https://www.genteinvencible.com/`
+
 ### Example TinyHost
 
 I got to know a very **cool SaaS** on twitter:

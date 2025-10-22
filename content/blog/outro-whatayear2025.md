@@ -739,6 +739,12 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 I also tried [this](https://www.youtube.com/@UnfoldingData/shorts) and [this](https://www.youtube.com/@BeyondAJourney)
 
+> And as videos are just graphs places together, also this:
+
+{{< tweet user="LibrePortfolio" id="1980278163155333315" >}}
+<!-- https://x.com/LibrePortfolio/status/1980278163155333315 -->
+
+
 ### Creating Tech Videos
 
 Last year I set this as a goal.

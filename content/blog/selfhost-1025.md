@@ -241,9 +241,11 @@ I have added here: https://github.com/JAlcocerT/Docker/tree/main/SelfH
 
 The docker stack im using right now :)
 
-You can start with a Pi SBC and a SSD drive:
+You can start with just a Pi SBC and a SSD drive:
 
 ![Pi Home Server](/blog_img/hardware/pi-homeserver.jpg)
+
+To backup your emails, you could always try a Gmail -> Protonmail Sync: https://proton.me/support/switch-from-gmail-to-proton
 
 And later continue with any of these tools:
 
@@ -254,7 +256,6 @@ And later continue with any of these tools:
 If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) to the performance.
 
 And if you have read the recent [Crypto with AI](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) post, you can see how people get creative and benchmark based on crypto mining performance: https://xmrig.com/benchmark
-
 
 [Some people](https://www.reddit.com/r/MoneroMining/comments/p3bzzb/is_it_worth_to_mine_xmr/) also use it for mining.
 

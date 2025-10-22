@@ -80,6 +80,81 @@ https://racechrono.com/
 Improve your lap times with RaceChrono
 
 
+12. Tinker with php and wordpress?
+
+If you start fresh on a VPS and have Docker and WordPress set up, bringing your WordPress theme into that environment involves a few steps:
+
+### Step 1: Prepare Your Docker WordPress Setup
+Ensure your WordPress Docker container is running and accessible. Usually, you’ll have WordPress files mounted on a volume inside the container, often at `/var/www/html/wp-content/themes/`.
+
+### Step 2: Copy Your Theme to the VPS
+You can bring the theme files over to the VPS using:
+
+- **SCP or SFTP**: Upload your theme folder (which contains `style.css`, `functions.php`, and all necessary theme files) into the WordPress themes directory on the VPS.  
+  Example SCP command:
+  ```bash
+  scp -r /local/path/to/my-theme username@vps_ip:/path-to-docker-volume/wp-content/themes/
+  ```
+
+- **Git Clone**: If your theme is in a Git repository (e.g., GitHub), you can clone it directly inside the themes folder if you have access on the VPS:  
+  ```bash
+  cd /path-to-docker-volume/wp-content/themes/
+  git clone https://github.com/your_username/your-wordpress-theme.git
+  ```
+
+- **Docker Volume Mounting (for Development)**: When developing locally or on VPS, you can mount your local theme folder as a Docker volume in the container for live edits without copying each time.
+
+### Step 3: Activate the Theme in WordPress
+Once your theme files are in the themes directory:
+1. Log in to your WordPress admin at `http://your-vps-ip/wp-admin`.
+2. Navigate to **Appearance → Themes**.
+3. Find your uploaded theme and click **Activate**.
+
+### Step 4: Optional—Upload Theme ZIP via Admin
+As an alternative, through the WordPress Admin UI:
+- Go to **Appearance → Themes → Add New → Upload Theme**.
+- Upload a zip archive of your theme; WordPress will install and activate it.
+
+### Summary
+| Method | Description | When to Use |
+|--------|-------------|-------------|
+| SCP/SFTP Copy | Manually copy theme files | Direct file control, VPS access |
+| Git Clone | Clone theme repo directly | Theme under Git version control |
+| Docker Volume Mount | Mount theme folder as volume | Development/live sync |
+| WordPress UI Upload | Upload via admin dashboard | Simple manual install |
+
+This workflow lets you manage your themes conveniently on a fresh Docker WordPress VPS environment.
+
+Yes, there are many open-source WordPress themes freely available on GitHub. In fact, thousands of developers and organizations—including Automattic (the company behind WordPress.com)—host and maintain GPL-licensed WordPress themes there. These can be used, studied, modified, or forked for your own projects.
+
+### Examples of Popular Open-Source WordPress Themes on GitHub
+Some of the most widely used and high-quality open-source WordPress themes include:
+
+- **[Roots / Sage](https://github.com/roots/sage)** — a Laravel Blade-based WordPress starter theme with Tailwind CSS and full block editor support; a favorite among professional developers (over 13k stars).[1]
+- **Automattic / themes** — a collection of official free themes built by the WordPress.com team, released under GPL-2.0.[2]
+- **WordPress / community-themes** — a repository of block-based themes demonstrating WordPress’s new Full Site Editing (FSE) capabilities, developed collaboratively by the community.[3]
+- **digitoimistodude / air-light** — a lightweight (<20 kB) starter theme optimized for developers, using HTML5 and minimal dependencies.[6]
+- **them.es** — open-source starter themes built with Bootstrap or Material Design that support full site editing, responsive design, localization, and build automation.[8]
+- **solstice23 / Argon** and **mirai-mamori / Sakurairo** — popular modern community-maintained designs supporting internationalization and colorful UI.[1]
+
+You can explore thousands more in the **GitHub “wordpress-theme” topic**, which currently includes over 4,000 public repositories across PHP, CSS, and JavaScript projects.[1]
+
+### Installing Themes from GitHub
+You can manually download a theme ZIP file from GitHub and install it through **WordPress → Appearance → Themes → Upload Theme**.  
+Alternatively, use tools like **WP Pusher** or **GitHub Updater** to install and automatically update WordPress themes directly from public GitHub repositories.[5][9]
+
+All of these themes respect GPL open-source licensing, meaning you can modify or even resell them under your own distribution as long as you retain the same license.
+
+[1](https://github.com/topics/wordpress-theme)
+[2](https://github.com/Automattic/themes)
+[3](https://github.com/WordPress/community-themes)
+[4](https://github.com/topics/wordpress-starter-theme)
+[5](https://www.fastcomet.com/kb/install-wordpress-themes-and-plugins-from-github)
+[6](https://github.com/digitoimistodude/air-light)
+[7](https://sourceforge.net/directory/wordpress-themes/)
+[8](https://them.es)
+[9](https://www.wpbeginner.com/pl/beginners-guide/how-to-install-wordpress-plugins-and-themes-from-github/)
+[10](https://ltheme.com/wordpress-github-plugin/)
 
 <!-- 
 https://youtu.be/tQOxnCz2lwM?si=XTgvyi-qnm3ZKiAl
