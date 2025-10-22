@@ -227,10 +227,12 @@ En resumen, hay consenso sobre la utilidad de construir en público para tener f
 
 ### People are doing
 
-Simple things like:
+Simple things like these landing to collect leads and sell courses.
 
 1. `https://invertiresvivir.es/newsletter/`
 2. `https://www.genteinvencible.com/`
+3. `https://pobremillennial.com/`
+4. `https://www.fejeremy.com/2024-app-x`
 
 ### Example TinyHost
 

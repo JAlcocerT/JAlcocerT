@@ -139,6 +139,10 @@ An example?
 
 See how [bentoPDF](https://github.com/alam00000/bentopdf) and its [tech get it done](https://github.com/JAlcocerT/Home-Lab/blob/main/bentopdf/z-tech.md)
 
+Yes, BentoPDF is a powerful, privacy-first, client-side PDF toolkit that allows you to manipulate, edit, merge, and process PDF files directly in your browser.
+
+No server-side processing is required, ensuring your files remain secure and private.
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bentopdf" title="BentoPDF | Docker Config 🐋 ↗" >}}
 {{< /cards >}}

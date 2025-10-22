@@ -212,9 +212,15 @@ And then I got to know about [Carbone](https://github.com/carboneio/carbone), wh
 
 <!-- https://x.com/TheRonnieVShow/status/1980403286349111480 -->
 
+
+
+{{< callout type="info" >}}
+We have [Pandoc](https://github.com/jgm/pandoc) to convert between tons of formats docx, epub, pdf, md, jsom, latex...
+{{< /callout >}}
+
 #### Infographics as a code
 
-This can also be done as a report or with matplotlib.
+This can also be done with Python, but it will look more like a **report or with matplotlib**.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment" title="Animating yfinance" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="YFinance for Python, cool plots and animations | Post" >}}
@@ -226,11 +232,30 @@ This can also be done as a report or with matplotlib.
 Just in case that you need some help with: https://fmhy.net/misc#resume-portfolio
 
 
-More  options for a CV?
+More options for **creating your CV**?
 
 1. https://github.com/BingyanStudio/LapisCV
 
 > MIT |  📄 Easily create your resume with Markdown on VSCode / Typora / Obsidian 
+
+2. https://github.com/srbhr/Resume-Matcher
+
+>  Apache v2 | Improve your resumes with Resume Matcher. Get insights, keyword suggestions and tune your resumes to job descriptions.
+
+3. More than a way to create a CV, a way to impress if you are on linkedin: https://github.com/Nutlope/self.so
+
+>  LinkedIn -> personal site generator 
+
+4. https://github.com/rendercv/rendercv with [great docs](https://docs.rendercv.com/)
+
+> MIT |  Version-control CVs/resumes as source code 
+
+
+People do all sort of creative stuff around PDF: https://github.com/domdomegg/pdf-scanner or https://github.com/lookscanned/lookscanned.io
+
+>  🖨 Makes PDFs look like they were scanned 
+
+
 
 ## Video as a Code
 

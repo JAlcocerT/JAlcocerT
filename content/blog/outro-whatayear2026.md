@@ -184,3 +184,10 @@ Also DataDog - https://docs.datadoghq.com/llm_observability/ -->
     GPT4-Turbo
   • V3 of ML trainnings - To include MLFlow
 Airflow to start some job? -->
+
+
+### Serverless
+
+1. https://github.com/neondatabase/neon
+
+> Apache v2 |  Neon: Serverless Postgres. We separated storage and compute to offer autoscaling, code-like database branching, and scale to zero.

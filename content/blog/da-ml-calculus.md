@@ -1,6 +1,6 @@
 ---
 title: "Understanding Calculus"
-date: 2025-10-21T23:20:21+01:00
+date: 2025-10-12T23:20:21+01:00
 draft: false
 description: 'Calculus 101'
 url: 'calculus-101'
@@ -10,11 +10,12 @@ math: true
 
 
 
-https://www.youtube.com/shorts/ha2_x5eJ1OY
+<!-- https://www.youtube.com/shorts/ha2_x5eJ1OY -->
+{{< youtube "ha2_x5eJ1OY" >}}
 
-The first time I got to know calculus, was with derivatives and integrals.
+The first time I got to know calculus, was with **derivatives and integrals**.
 
-> I kind of like derivatives...but hated integrals.
+> I (kind of liked) derivatives...but hated integrals.
 
 Probably because of the *lack of purpose* that I was given.
 
@@ -24,7 +25,7 @@ I could not be more wrong at that point, as **calculus is both: beautiful and us
 
 The essence of calculus.
 
-https://www.youtube.com/watch?v=WUvTyaaNkzM
+<!-- https://www.youtube.com/watch?v=WUvTyaaNkzM -->
 {{< youtube "WUvTyaaNkzM" >}}
 
 Laws of physics are explained with differential equations.
@@ -44,6 +45,8 @@ Well, I can think already about few examples:
 2. 
 
 **The Jacobian**
+
+This was very useful to do computatial mechanics.
 
 <!-- https://www.youtube.com/watch?v=wCZ1VEmVjVo
  -->

@@ -80,7 +80,7 @@ pandoc 1-3-summary-embedded.md -o styled-summary.pdf --pdf-engine=wkhtmltopdf
 
 
 {{< callout type="info" >}}
-MD + Pandoc *+Latex optinally* = MAGIC
+MD + Pandoc *+Latex internally* = MAGIC
 {{< /callout >}}
 
 And this can (and will) not only simplify your reports.
@@ -176,47 +176,49 @@ Thus, LaTeX is used for authoring and typesetting documents directly, while Pand
 
 ### PDF to md/json
 
-Several open source tools can help convert complex PDFs, such as database schemas, into machine-readable formats like JSON, XML, or structured diagrams. Some notable open source options are:
-
-To read PDFs you can try Okular:*but the `ctrl+F` worked better for me with Zen or firefox*
+To just read PDFs you can try Okular: *but the `ctrl+F` worked better for me with Zen or firefox*
 
 ```sh
 #sudo apt install okular
 ```
 
-* https://github.com/jzillmann/pdf-to-markdown
+Several open source tools can help convert complex **PDFs, such as database schemas from jira**, into machine-readable formats like JSON, XML, or structured diagrams. 
 
-> MIT A PDF to Markdown converter
+Some notable open source options are:
 
+1. https://github.com/jzillmann/pdf-to-markdown
 
+> MIT | A PDF to Markdown converter
 
-- **Tabula**: A popular tool for extracting tables from PDFs into CSV, JSON, or Excel formats. It’s especially useful for schema diagrams presented as tables.[1]
+2. **[Tabula](https://tabula.technology)**: A popular tool for extracting tables from PDFs into CSV, JSON, or Excel formats. It’s especially useful for schema diagrams presented as tables.
 
+* https://github.com/tabulapdf/tabula?tab=readme-ov-file
 
-[1](https://tabula.technology)
+3. **PDF-Extract-Kit**: A toolkit that uses layout and text analysis to extract structured data, including tables, from PDFs. It supports conversion to JSON, which can be processed further.[2]
+4. **PyMuPDF (fitz)**: A Python library to extract text, images, and layout information from PDFs, which can be combined with other tools to create structured data.
+5. **[Camelot](https://camelot-py.readthedocs.io/en/master/)**: Similar to Tabula, designed to extract tables from PDFs into pandas DataFrames, then exported as JSON or CSV.
 
-
-- **PDF-Extract-Kit**: A toolkit that uses layout and text analysis to extract structured data, including tables, from PDFs. It supports conversion to JSON, which can be processed further.[2]
-- **PyMuPDF (fitz)**: A Python library to extract text, images, and layout information from PDFs, which can be combined with other tools to create structured data.
-- **Camelot**: Similar to Tabula, designed to extract tables from PDFs into pandas DataFrames, then exported as JSON or CSV.[1]
-
-* https://camelot-py.readthedocs.io/en/master/
-
-**OpenDataLab**
+6. **OpenDataLab** https://github.com/opendatalab/PDF-Extract-Kit
 
 * https://opendatalab.github.io/MinerU/demo/
 * https://github.com/opendatalab/MinerU
 
-[2](https://github.com/opendatalab/PDF-Extract-Kit)
+7. https://github.com/allenai/olmocr
+
+> Apache v2 \  Toolkit for linearizing PDFs for LLM datasets/training 
 
 
-* https://github.com/tabulapdf/tabula?tab=readme-ov-file
+
 
 ### Md to PDF
 
-There are several open source tools available to create PDFs from Markdown, including Python libraries that allow direct programmatic conversion.
+There are several open source tools available to **create PDFs from Markdown**.
 
-Popular Open Source Tools for Markdown to PDF
+> This will also interest you if you are [going to write ebooks](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/)
+
+Including Python libraries that allow direct programmatic conversion.
+
+Popular Open Source **Tools for Markdown to PDF**
 
 | Tool/Library         | Description                                               | Python Support              |
 |----------------------|-----------------------------------------------------------|----------------------------|
@@ -245,7 +247,7 @@ pip3 install markdown weasyprint
 python3 test.py
 ```
 
-![alt text](/blog_img/AIBI/jira/weasyprint.png)
+![Testing weasyprint](/blog_img/AIBI/jira/weasyprint.png)
 
 ```python
 import markdown

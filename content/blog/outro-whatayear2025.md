@@ -739,7 +739,7 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 I also tried [this](https://www.youtube.com/@UnfoldingData/shorts) and [this](https://www.youtube.com/@BeyondAJourney)
 
-> And as videos are just graphs places together, also this:
+> And as videos are just graphs places together, also this: *365+ data driven tweets*
 
 {{< tweet user="LibrePortfolio" id="1980278163155333315" >}}
 <!-- https://x.com/LibrePortfolio/status/1980278163155333315 -->
