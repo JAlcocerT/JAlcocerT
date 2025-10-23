@@ -7,10 +7,14 @@ tags: ["AI-Gen","Google AI Studio","Pinokio AI","F5-TTS","Coqui-TTS"]
 url: local-ai-audio
 ---
 
-We have couple of *free to use* places to get TTS working out of the box:
+
+**Intro**
+
+We have couple of *free to use* places to get **TTS working** out of the box:
 
 * https://platform.openai.com/playground/tts
 * https://aistudio.google.com/generate-speech and you could aso via Gemini API Key
+  * Google AI Studio https://aistudio.google.com/welcome
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat Project ↗" >}}

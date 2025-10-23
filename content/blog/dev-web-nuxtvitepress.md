@@ -1,6 +1,6 @@
 ---
 title: "Trying Nuxt & VitePress [and a SSG Recap]"
-date: 2025-10-23
+date: 2026-03-23
 draft: false
 tags: ["Dev","Nuxt"]
 description: 'Testing NUXT & VitePress Themes. Looking back to the learnings with other SSGs like HUGO and Astro.'
@@ -333,6 +333,11 @@ Whether you’re building a blog, a corporate website, or an e-commerce platform
 
 ### Gatsby
 
+I got to know about GraphQL thanks to Gatsby.
+
+
+---
+
 
 ## Conclusions
 
@@ -349,7 +354,7 @@ Allowing you to plug easily these kind of LLMs:
 
 * https://github.com/getpelican/pelican
 
-> Static site generator that supports Markdown and reST syntax. Powered by Python.
+> Static site generator that supports Markdown and reST syntax. **Powered by Python**.
 
 * https://github.com/hexojs/hexo
 

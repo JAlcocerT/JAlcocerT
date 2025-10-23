@@ -37,7 +37,7 @@ I got a interesting task and could not avoid to think about how to do it with:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#chat-with-your-database-using-langchain" title="LangChain chat with DB | Post" image="/blog_img/GenAI/langchain-chinook-sample.png" subtitle="How to create SQL queries automatically as per DB schema info" >}}
-  {{< card link="https://github.com/JAlcocerT/jira-datamodel/tree/main" title="NEW Jira & Data Model Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github - Playing with PDF, md - ER Diagram PDF - Pandoc..." >}}
+  {{< card link="https://github.com/JAlcocerT/jira-datamodel/tree/main" title="NEW Jira & Data Model Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github - Playing with PDF, md, latex - ER Diagram PDF - Pandoc..." >}}
 {{< /cards >}}
 
 
@@ -207,6 +207,23 @@ Some notable open source options are:
 
 > Apache v2 \  Toolkit for linearizing PDFs for LLM datasets/training 
 
+7. https://github.com/drmingler/docling-api
+
+> MIT |  Easily deployable and scalable backend server that efficiently converts various document formats (pdf, docx, pptx, html, images, etc) into Markdown. With support for both CPU and GPU processing, it is Ideal for large-scale workflows, it offers text/table extraction, OCR, and batch processing with sync/async endpoints. 
+
+7. https://github.com/murtaza-nasir/pdf3md
+
+>  A modern, user-friendly web application that converts PDF documents to clean, formatted Markdown text. 
+
+7. https://github.com/pdf2htmlEX/pdf2htmlEX
+
+>  Convert PDF to HTML without losing text or format. 
+
+7. https://github.com/Unstructured-IO/unstructured
+
+>  Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.
+
+
 8. https://github.com/CosmosShadow/gptpdf
 
 > MIT |  Using GPT to parse PDF 
@@ -217,19 +234,39 @@ Some notable open source options are:
 
 Plumb a PDF for detailed information about each text character, rectangle, and line. Plus: Table extraction and visual debugging.
 
-10. https://github.com/pymupdf/PyMuPDF
+10. https://github.com/pymupdf/PyMuPDF ✅ local working and no keys + [good docs](https://pymupdf.readthedocs.io/en/latest/)
+
+```sh
+#cd z-PyMuPDF
+#pip install PyMuPDF
+uv init
+uv add PyMuPDF
+uv run ./z-PyMuPDF/test-pymupdf.py
+```
+
+>  PyMuPDF is a high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents. 
 
 
 11. https://github.com/johnfercher/maroto
 
 > Apgl v3 |  Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows. 
 
-12. https://github.com/datalab-to/marker
+11. https://github.com/QuivrHQ/MegaParse ❌ error with sample script from readme
 
-> gpl 3 |  Convert PDF to markdown + JSON quickly with high accuracy 
+> File Parser optimised for LLM Ingestion with no loss 🧠 Parse PDFs, Docx, PPTx in a format that is ideal for LLMs.
 
 
-13. https://github.com/wisupai/e2m
+12. https://github.com/datalab-to/marker ✅❌ local and working, but too slow (30s for a cv!)
+
+> gpl 3 |  Convert PDF to markdown + JSON quickly with high accuracy
+
+```sh 
+git clone https://github.com/JAlcocerT/jira-datamodel
+#cd z-test-quivir-megaparse
+#cd 
+```
+
+13. https://github.com/wisupai/e2m ❌ too long to download dependencies
 
 > Apache v2 |  E2M converts various file types (doc, docx, epub, html, htm, url, pdf, ppt, pptx, mp3, m4a) into Markdown. It’s easy to install, with dedicated parsers and converters, supporting custom configs. E2M offers an all-in-one, flexible, and open-source solution. 
 
@@ -237,6 +274,26 @@ Plumb a PDF for detailed information about each text character, rectangle, and l
 14. https://github.com/MarkPDFdown/markpdfdown
 
 > Apache v2 | A powerful tool that leverages multimodal large language models to transcribe PDF files into Markdown format.
+
+15. https://github.com/Goldziher/kreuzberg ✅ Works via container and very fast, no LLM Keys
+
+```sh
+#cd z-kreuzberg
+
+# Extract text from any file to text format
+#uvx kreuzberg extract document.pdf > output.txt
+uvx 'kreuzberg[cli]' extract jira-estimation.pdf > output.txt
+uvx 'kreuzberg[cli]' extract jira-7-9-2-database-schema.pdf > output2.txt
+
+###with container even better!
+docker run -p 8027:8000 goldziher/kreuzberg
+curl -X POST -F "file=@sample-cv.pdf" http://localhost:8027/extract
+
+curl -X POST -F "file=@jira-estimation.pdf" http://localhost:8027/extract
+curl -X POST -F "file=@jira-7-9-2-database-schema.pdf" http://localhost:8027/extract
+```
+
+> **MIT |  Document intelligence framework for Python** - Extract text, metadata, and structured data from PDFs, images, Office documents, and more. Built on Pandoc, PDFium, and Tesseract. 
 
 ### Md to PDF
 
