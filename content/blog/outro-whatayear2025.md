@@ -17,6 +17,12 @@ the buying brain....
 
  -->
 
+ if you are building websites, get inspired:
+
+ 1. https://github.com/gridaco/grida
+
+ > Apache v2 |  Grida — Ambitious 2D Graphics Editor for the Web 
+
  
 **Intro**
 
@@ -944,6 +950,10 @@ https://jalcocert.github.io/JAlcocerT/audio-recap/
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="Speech Rater Flask Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to rate your Speech - TTS and S2T transcription for youtube" >}}
 {{< /cards >}}
+
+> There are Similar python projects like https://github.com/denizsafak/abogen
+
+> > Abogen is a powerful text-to-speech conversion tool that makes it easy to turn ePub, PDF, text or markdown files into high-quality audio with matching subtitles in seconds. Use it for audiobooks, voiceovers for Instagram, YouTube, TikTok, or any project that needs natural-sounding text-to-speech, using Kokoro-82M.
 
 
 

@@ -7,6 +7,12 @@ description: 'From excel to Grist.'
 url: 'automation-with-grist'
 ---
 
+See also:
+
+1. https://github.com/harishdeivanayagam/rowfill
+
+>  Open-source spreadsheets platform for deep research and document processing 
+
 
 **Intro**
 

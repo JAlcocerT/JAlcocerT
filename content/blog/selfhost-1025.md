@@ -232,7 +232,9 @@ Choosing between **Transmission** and **qBittorrent** depends on your priorities
 
 > MIT | Website Cloner - Utilizes powerful Go routines to clone websites to your computer within seconds. 
 
+2. You could also use https://github.com/dvcoolarun/web2pdf
 
+>  🔄 CLI to convert Webpages to PDFs 🚀 
 ---
 
 ## Conclusions

@@ -233,6 +233,7 @@ Simple things like these landing to collect leads and sell courses.
 2. `https://www.genteinvencible.com/`
 3. `https://pobremillennial.com/`
 4. `https://www.fejeremy.com/2024-app-x`
+4. `https://www.inviertejoven.es/`
 
 ### Example TinyHost
 

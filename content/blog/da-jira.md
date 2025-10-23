@@ -1,10 +1,10 @@
 ---
-title: "Jira 101 vs Azure DevOps"
+title: "Jira 101 vs ADO | PDF to md"
 date: 2025-09-08T00:20:21+01:00
 draft: false
 description: 'Jira DataModel with AI. Pandoc is great, more if you are not alergic to Latex.'
 url: 'jira-data-model-with-ai'
-tags: ["D&A","Azure DevOps ADO","Pandoc","PDF ipynb md","ER Diagram Mermaid","LandThatJob","PowerBI","Jira API"]
+tags: ["D&A","Azure DevOps","Pandoc","PDF ipynb md","ER Diagram Mermaid","PowerBI","Jira API"]
 ---
 
 **TL;DR**
@@ -37,7 +37,7 @@ I got a interesting task and could not avoid to think about how to do it with:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#chat-with-your-database-using-langchain" title="LangChain chat with DB | Post" image="/blog_img/GenAI/langchain-chinook-sample.png" subtitle="How to create SQL queries automatically as per DB schema info" >}}
-  {{< card link="https://github.com/JAlcocerT/jira-datamodel/tree/main" title="NEW Jira & Data Model Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github - Playing with PDF - ER Diagram PDF - Pandoc..." >}}
+  {{< card link="https://github.com/JAlcocerT/jira-datamodel/tree/main" title="NEW Jira & Data Model Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github - Playing with PDF, md - ER Diagram PDF - Pandoc..." >}}
 {{< /cards >}}
 
 
@@ -207,8 +207,36 @@ Some notable open source options are:
 
 > Apache v2 \  Toolkit for linearizing PDFs for LLM datasets/training 
 
+8. https://github.com/CosmosShadow/gptpdf
+
+> MIT |  Using GPT to parse PDF 
+
+9. https://github.com/jsvine/pdfplumber
+
+> MIT |  Plumb a PDF for detailed information about each char, rectangle, line, et cetera — and easily extract text and tables. 
+
+Plumb a PDF for detailed information about each text character, rectangle, and line. Plus: Table extraction and visual debugging.
+
+10. https://github.com/pymupdf/PyMuPDF
 
 
+11. https://github.com/johnfercher/maroto
+
+> Apgl v3 |  Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows. 
+
+12. https://github.com/datalab-to/marker
+
+> gpl 3 |  Convert PDF to markdown + JSON quickly with high accuracy 
+
+
+13. https://github.com/wisupai/e2m
+
+> Apache v2 |  E2M converts various file types (doc, docx, epub, html, htm, url, pdf, ppt, pptx, mp3, m4a) into Markdown. It’s easy to install, with dedicated parsers and converters, supporting custom configs. E2M offers an all-in-one, flexible, and open-source solution. 
+
+
+14. https://github.com/MarkPDFdown/markpdfdown
+
+> Apache v2 | A powerful tool that leverages multimodal large language models to transcribe PDF files into Markdown format.
 
 ### Md to PDF
 
@@ -270,13 +298,13 @@ import subprocess
 subprocess.run(['pandoc', 'input.md', '-o', 'output.pdf'])
 ```
 
-![Pandoc](/blog_img/AIBI/jira/pandoc.png)
+![Pandoc Example](/blog_img/AIBI/jira/pandoc.png)
 
-{{< callout type="warning" >}}
-Pandoc generating pdf from md is just amazing
+{{< callout type="info" >}}
+Pandoc generating `.pdf` from `md` is just amazing!
 {{< /callout >}}
 
-And it can also be run via CLI:
+And can also be run via CLI:
 
 ```sh
 #python3 test-pandoc.py
@@ -286,19 +314,14 @@ sed 's/✅/[OK]/g; s/❌/[X]/g; s/��/[CHART]/g' jira-pdm-req2tech.md > input
 pandoc input-clean.md -o jira-estimation.pdf --pdf-engine=xelatex --toc
 ```
 
-Summary
-
 - **Pandoc** is the most versatile and widely used.
 - **WeasyPrint** offers pure Python capability for Markdown-to-HTML-to-PDF.
 - For heavy customization or automation, combining Markdown libraries with PDF generation libs like ReportLab or browser-based rendering (Pyppeteer) works well.
 
-Would specific example scripts or installation instructions be helpful?
 
 ### ipynb to PDF
 
 To create a PDF from the content of a Jupyter Notebook (`.ipynb`), you can use several open source tools, many integrated with Python:
-
-Common Methods and Tools
 
 - **Jupyter nbconvert** (built-in):
   - Command-line tool or Python API to convert `.ipynb` to PDF directly.
@@ -325,12 +348,12 @@ jupyter nbconvert --to pdf your_notebook.ipynb
 
 - **Manual Workflow**:
   1. Export notebook to HTML inside Jupyter or with:
-     ```
-     jupyter nbconvert --to html your_notebook.ipynb
-     ```
-  2. Convert HTML to PDF with tools like `wkhtmltopdf` or `WeasyPrint`.
 
-Summary:
+```sh
+jupyter nbconvert --to html your_notebook.ipynb
+```
+
+2. Convert HTML to PDF with tools like `wkhtmltopdf` or `WeasyPrint`.
 
 - The most straightforward open source Python approach is **`jupyter nbconvert --to pdf`**, but it requires LaTeX.
 - For LaTeX-free workflows, **notebook-as-pdf** is convenient.

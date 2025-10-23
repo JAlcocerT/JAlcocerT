@@ -2,7 +2,7 @@
 title: "[Recap] on AI Audio. Ideating Speech rAIter micro SaaS"
 date: 2025-09-12
 draft: false
-tags: ["LandThatJob","SpeechPractice","TTS","S2T","Transcript","BiP", "FastAPI"," Youtube Workflow","Monaco Editor","ChartDB"]
+tags: ["SpeechPractice","TTS","S2T","Transcript","BiP", "FastAPI"," Youtube Workflow","Monaco Editor","ChartDB"]
 description: "An Astro Landing Page + signup/in via FastAPI x sqlite x Admin panel. Fireflies AI for MoM."
 url: 'audio-recap'
 ---

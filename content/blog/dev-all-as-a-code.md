@@ -163,6 +163,15 @@ Then, I created to just dump my notes into ebooks: https://github.com/JAlcocerT/
 {{< /cards >}}
 
 
+{{< callout type="info" >}}
+When you create an ebook, use [Foliate](https://github.com/johnfactotum/foliate) to read on your desktop
+{{< /callout >}}
+
+```sh
+sudo snap install foliate
+```
+
+
 You know, just in case you want to create your pdf libre or your epub libre org!
 
 Or to write a e-book for your friend (Anna's archive).
@@ -250,10 +259,66 @@ More options for **creating your CV**?
 
 > MIT |  Version-control CVs/resumes as source code 
 
+5. YAML Resume
+
+Control a yaml like: https://github.com/yamlresume/yamlresume/blob/main/packages/cli/resources/resume.yml
+
+Get a PDF to apply to the offer you want before some AI agent take it.
+
+Render content using LaTeX templates. I liked: https://yamlresume.dev/docs/layout/templates/moderncv-classic
+
+Generate PDFs via XeTeX or Tectonic compilation engines
+
+* https://github.com/yamlresume/yamlresume
+
+> MIT |  Resumes as code in YAML, brought to you with ❤️ by PPResume. 
+
+6. https://github.com/aadya940/autoresume
+
+> Apache v2 |  An Open Source Resume Builder and LaTeX Code Editor with AI Capabilities. 
+
+> > LandThatJob!
+
 
 People do all sort of creative stuff around PDF: https://github.com/domdomegg/pdf-scanner or https://github.com/lookscanned/lookscanned.io
 
 >  🖨 Makes PDFs look like they were scanned 
+
+
+#### You can do what with PDF?
+
+
+> MIT |  A maroto way to create PDFs. Maroto is inspired in Bootstrap and uses gofpdf. Fast and simple. 
+
+1. https://github.com/pdfme/pdfme
+
+> MIT |  Open-source PDF generation library built with TypeScript and React. Features a WYSIWYG template designer, PDF viewer, and powerful generation capabilities. Create custom PDFs effortlessly in both browser and Node.js environments. 
+
+
+Fast PDF Generator 	Easy PDF Template Design 	Simple JSON Template
+Works on Node and in the browser. Use templates to generate PDFs—complex operations are not required. 	Anyone can easily create templates using the designer. 	Templates are JSON data that is easy to understand and work with.
+
+With very interesting templates: https://pdfme.com/templates and even template designer playground https://pdfme.com/template-design
+
+2. Posters, ebooks, letter, reports...https://github.com/Kozea/WeasyPrint
+
+
+ WeasyPrint is a smart solution helping web developers to create PDF documents. It’s free and open source software that can be easily plugged to your applications and websites and turns simple HTML pages into gorgeous: 
+
+See the examples and their source code: https://weasyprint.org/
+
+> BSD3 -  The awesome document factory 
+
+
+3. https://github.com/plutoprint/plutoprint
+
+
+PlutoPrint is a lightweight and easy-to-use Python library for generating high-quality PDFs and images directly from HTML or XML content. It is based on PlutoBook’s robust rendering engine and provides a simple API to convert your HTML into crisp PDF documents or vibrant image files. This makes it ideal for reports, invoices, or visual snapshots.
+
+> MIT |  A Python Library for Generating PDFs and Images from HTML, powered by PlutoBook 
+
+```sh
+pip install plutoprint
 
 
 
