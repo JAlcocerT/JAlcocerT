@@ -53,9 +53,7 @@ Which resonates with my recent [post on **BI Tools**](https://jalcocert.github.i
 
 I thought everything was done with [LangChain querying DBs with LLMs](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/) in DAG mode.
 
-Then I found this:
-
-* https://github.com/chartdb/chartdb
+Then I found this: https://github.com/chartdb/chartdb
 
 > agpl 3 | **Database diagrams editor** that allows you to visualize and design your DB with a single query.
 
@@ -65,7 +63,7 @@ Then I found this:
 
 DB2Rest is blazing fast.
 
-It has NO Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
+It has **NO Object Relational Mapping (ORM) overhead**, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
 
 * https://github.com/9tigerio/db2rest
   * https://db2rest.com/docs/run-db2rest-on-docker

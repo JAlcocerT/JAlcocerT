@@ -7,28 +7,6 @@ description: 'New ATH for my SSG knowledge. Landing 101 that convert. CodexCLI f
 url: 'selling-with-a-landing-website'
 ---
 
-**Intro**
-
-Wanna build a sales pipeline?
-
-Start with a catchy landing first.
-
-The [data, streamlit web apps](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker), pygwalker and [ApexCjarts Funnels](https://apexcharts.com/javascript-chart-demos/funnel-charts/) will come later.
-
-![Streamlit Funnel with Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
-
-Just get that first YES.
-
-
-
-## Web Front End - Theme
-
-* https://github.com/LaB-CH3/astrobrew
-    * https://astro.build/themes/details/astrobrew/
-
-    
->  Astrobrew is a free and open-source elegant **landing page for Micro SaaS** products built with Astro & Skeleton CSS
-
 **Tl;DR**
 
 Last year I made couple of 101 guides for [HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) and [ASTRO](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/).
@@ -40,7 +18,34 @@ But it was time to put cool components like this [ig gallery](https://github.com
 
 **Intro**
 
-Making a Landing should be easy already, with tools like: https://github.com/wandb/openui
+Wanna build a **sales pipeline**?
+
+A wau to capture leads?
+
+Start with a catchy landing first.
+
+The [data, streamlit web apps](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker), pygwalker and [ApexCjarts Funnels](https://apexcharts.com/javascript-chart-demos/funnel-charts/) will come later.
+
+![Streamlit Funnel with Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
+
+Just get that **first YES**.
+
+
+## Web Front End - Theme
+
+* https://github.com/LaB-CH3/astrobrew
+    * https://astro.build/themes/details/astrobrew/
+
+[![shields.io Stars](https://img.shields.io/github/stars/LaB-CH3/astrobrew)](https://github.com/LaB-CH3/astrobrew/stargazers)
+
+>  Astrobrew is a free and open-source elegant **landing page for Micro SaaS** products built with Astro & Skeleton CSS
+
+
+### Getting Started
+
+Making a Landing should be easy already.
+
+Specially with tools like: https://github.com/wandb/openui
 
 > **OpenUI** let's you describe UI using your imagination, then see it rendered live.
 
@@ -53,7 +58,9 @@ And surprisingly, [Front End can do many cool things, *including authentication*
 {{< /cards >}}
 
 
-**A Better Waiting2Landing** On [this post](https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/) I thought Ill make a better version of the initial waiting2landing presented https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/
+**A Better Waiting2Landing** 
+
+On [this post](https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/) I thought Ill make a better version of the initial waiting2landing presented https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/
 
 ![Astro Waiting List + Formbricks URL Link](/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png)
 
@@ -128,11 +135,12 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 Sounds familiar?
 
+<!-- ![SSG and CF Workers + Pocketbase](/blog_img/dev/FE/ssg-cfworkers-pocketbase.png) -->
+
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/" title="Payroll Theme with PB as auth" image="blog_img/dev/FE/ssg-cfworkers-pocketbase.png" subtitle="SSG and CF Workers + Pocketbase | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/" title="Payroll Theme with PB as auth" image="/blog_img/dev/FE/ssg-cfworkers-pocketbase.png" subtitle="SSG and CF Workers + Pocketbase | Post" >}}
   {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Payroll Theme with PB as auth" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro Theme + CF Workers + PB users collections as Auth" >}}
 {{< /cards >}}
-
 
 
 ---
@@ -192,17 +200,17 @@ Los puntos nuevos que aporta el post “Build In Public Cheatsheet” en Product
 
 - **El objetivo final es convertir la cheatsheet en un handbook más completo** basado en experiencia real y colectiva, con espacio para feedback y mejora constante por parte de los usuarios.
 
-Esto añade elementos de comunidad, planificación estructurada y repertorio específico de acciones y herramientas al enfoque estándar de validar ideas y captar demanda antes de construir.[1]
+Esto añade elementos de comunidad, planificación estructurada y repertorio específico de acciones y herramientas al enfoque estándar de validar ideas y captar demanda antes de construir.
 
 La comunidad de Reddit en r/SaaS, en general, coincide con los enfoques de la cheatsheet “Build In Public” y las recomendaciones de validar una idea antes de desarrollarla. Los usuarios destacan estos puntos adicionales:
 
-- **Validación real:** Recomiendan aprovechar la construcción en público no solo como marketing, sino como vía para obtener feedback genuino y rápido de la comunidad sobre el producto y sus características.[1]
-- **Tipos de publicaciones útiles:** Compartir avances, errores, aprendizajes y ejemplos reales (tweets, capturas de pantalla, demos) ayuda tanto a validar ideas como a captar seguidores o potenciales usuarios.[1]
+- **Validación real:** Recomiendan aprovechar la construcción en público no solo como marketing, sino como vía para obtener feedback genuino y rápido de la comunidad sobre el producto y sus características.
+- **Tipos de publicaciones útiles:** Compartir avances, errores, aprendizajes y ejemplos reales (tweets, capturas de pantalla, demos) ayuda tanto a validar ideas como a captar seguidores o potenciales usuarios.
 - **Herramientas y organización:** Se valora contar con una plantilla o board para planificar qué compartir públicamente y tener muy claro el objetivo de cada comunicación.
 - **Contribución de la comunidad:** Algunos comentarios sugieren personalizar la cheatsheet, compartir ideas de mejora y usar el repositorio como un espacio para sumar prácticas eficaces.
 - **Cuidado con el “eco-chamber”:** Algunos advierten del riesgo de obtener feedback solo de la comunidad builder/tech (ejemplo: Twitter, IndieHackers, Reddit) y no del público objetivo real del producto, por lo que insisten en no perder el foco en los auténticos clientes.[2]
 
-En resumen, hay consenso sobre la utilidad de construir en público para tener feedback temprano, pero se recalca la importancia de hacerlo con propósito y orientar la validación hacia el público objetivo, no solo hacia otros emprendedores o comunidades tech. Esto agrega matices a la estrategia y refuerza lo aprendido en los recursos previos.[2][1]
+En resumen, hay consenso sobre la utilidad de construir en público para tener feedback temprano, pero se recalca la importancia de hacerlo con propósito y orientar la validación hacia el público objetivo, no solo hacia otros emprendedores o comunidades tech. Esto agrega matices a la estrategia y refuerza lo aprendido en los recursos previos.
 
 [1](https://www.reddit.com/r/SaaS/comments/n42n8r/the_build_in_public_cheatsheet_how_people_go_from/)
 [2](https://www.reddit.com/r/SaaS/comments/1l26yu8/dont_build_in_public_its_killing_your_startup_and/)
@@ -233,7 +241,12 @@ Simple things like these landing to collect leads and sell courses.
 2. `https://www.genteinvencible.com/`
 3. `https://pobremillennial.com/`
 4. `https://www.fejeremy.com/2024-app-x`
-4. `https://www.inviertejoven.es/`
+5. `https://www.inviertejoven.es/`
+6. `authority.io`
+
+Not to talk about the subscribe then see some info models:
+
+1. `https://pobremillenial.substack.com/p/asi-empece-a-invertir-en-oro`
 
 ### Example TinyHost
 

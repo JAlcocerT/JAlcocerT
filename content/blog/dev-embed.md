@@ -429,9 +429,27 @@ They significantly simplify API development for databases without writing backen
 
 #### DB2Rest
 
-What if you have any other DB, like sqlite and you want to expose an API of its data?
+What if you have any other DB, *like sqlite* and you want to expose an API of the data contained?
 
-DB2Rest is part of a growing ecosystem of no-code/open-source tools that make exposing databases via REST APIs much easier and faster.
+* https://github.com/9tigerio/db2rest
+
+> Instant no code DATA API platform. Connect any database, run anywhere. Power your GENAI application function/tools calls in seconds.
+
+DB2Rest is blazing fast - It has no Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
+
+* https://github.com/9tigerio/db2rest
+  * https://db2rest.com/docs/run-db2rest-on-docker
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/db2rest" title="DB2Rest with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+> Apache v2 | Instant no code **DATA API platform**. Connect any database, run anywhere. Power your GENAI application [function/tools calls](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/) in seconds.
+
+
+[DB2Rest](https://github.com/9tigerio/db2rest) is part of a growing ecosystem of no-code/open-source tools that make exposing databases via REST APIs much easier and faster.
+
+> With awsome [docs](https://db2rest.com/docs/intro)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/db2rest" title="DB2Rest | Docker Config 🐋 ↗" >}}
@@ -462,10 +480,8 @@ While such solutions are powerful for their environments, DB2Rest's strength lie
 | AI/modern integrations   | Supports vector DBs and LLMs         | Rarely supported                                  |
 | Deployment flexibility   | On prem, VM, Docker, Kubernetes      | Typically tied to DB ecosystem                     |
 
-This makes DB2Rest an excellent choice for rapid API creation, modern AI integrations, and simplifying legacy database access without complex development overhead, compared to more traditional or native DB REST services.[1][2][3][4][5]
+This makes DB2Rest an excellent choice for rapid API creation, modern AI integrations, and simplifying legacy database access without complex development overhead, compared to more traditional or native DB REST services.
 
-[1](https://github.com/9tigerio/db2rest)
-[2](https://db2rest.com/docs/intro)
 
 #### Llana
 
