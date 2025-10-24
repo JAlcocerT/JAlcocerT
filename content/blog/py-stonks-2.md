@@ -202,6 +202,11 @@ The good thing with yfinance is that it also pulls crypto data, like `BTC-USD` o
 
 So if the topic is trendy...you can create that cool `Python analysis btc cycles - max to valley with matplotlib` and get your doubts solved.
 
+Or just create a quick flask webapp so that anyone can download such cool plots:
+
+![Flask web app DataInMotion Twitter](/blog_img/dev/pystocks/libreportfolio-plots-datainmotion.png)
+
+> If you have vibe coded properly, this is as simple as: data preparation scripts -> scripts for plots -> webapp
 
 ---
 

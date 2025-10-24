@@ -64,7 +64,8 @@ cd slidev-editor && make run-detached #localhost:3000 for the editor
 #docker system prune --all --volumes
 ```
 
-![alt text](/blog_img/entrepre/public-build/slidev-editor/slidev.png)
+
+![Building in Public a Slidev editor with markdown](/blog_img/entrepre/public-build/slidev-editor/slidev.png)
 
 Remember you had presenter mode with SliDev at `localhost:3030/presenter` and you can even record your presentation
 

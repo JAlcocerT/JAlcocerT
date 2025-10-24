@@ -246,11 +246,11 @@ uv run ./z-PyMuPDF/test-pymupdf.py
 
 >  PyMuPDF is a high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents. 
 
+> Apgl v3 |  Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows. 
 
 11. https://github.com/johnfercher/maroto
 
-> Apgl v3 |  Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows. 
-
+> MIT |  A maroto way to create PDFs. Maroto is inspired in Bootstrap and uses gofpdf. Fast and simple. 
 11. https://github.com/QuivrHQ/MegaParse ❌ error with sample script from readme
 
 > File Parser optimised for LLM Ingestion with no loss 🧠 Parse PDFs, Docx, PPTx in a format that is ideal for LLMs.

@@ -68,6 +68,9 @@ You can create a [Micro SaaS around Slidev](https://jalcocert.github.io/JAlcocer
 
 Like: https://github.com/JAlcocerT/slidev-editor with Firebase and Logto auth working as per [this post](https://jalcocert.github.io/JAlcocerT/firebase-auth-101/) :)
 
+![Building in public a slideb editor plus tech talk](/blog_img/entrepre/public-build/slidev-editor/nextjs-slidev-editorlanding.png)
+
+
 
 [![Star History Chart](https://api.star-history.com/svg?repos=marp-team/marpit,slidevjs/slidev,remarkjs/remark&,type=Date)](https://star-history.com/#marp-team/marpit&slidevjs/slidev&remarkjs/remark&Date)
 
@@ -121,10 +124,16 @@ npm init slidev #yarn create slidev
 <LatestYouTubeVideo channelId="UCPPMA8ZEusAe5dVH6PbjZFA" width="400" height="225" />
 ```
 
-9. Live anotations
+9. Live data via APIs with custom components. Like these 2, [with open-meteo or yfinance based](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk-exadel/components). 
 
-> Similarlo to https://github.com/DmytroVasin/DrawPen
+![Slidev live data component from yfinance](/blog_img/entrepre/public-build/slidev-editor/slidev-component-yfinance.png)
 
+10. Live stuff: `http://localhost:3030/presenter` and live annonations
+
+> Similarlo to https://github.com/DmytroVasin/DrawPen or with excalidraw
+
+
+![alt text](/blog_img/entrepre/public-build/slidev-editor/nextjs-slidev-editorlanding.png)
 
 #### Diagrams are also code!
 
@@ -277,18 +286,15 @@ Generate PDFs via XeTeX or Tectonic compilation engines
 
 > Apache v2 |  An Open Source Resume Builder and LaTeX Code Editor with AI Capabilities. 
 
-> > LandThatJob!
-
+> > Kind of a LandThatJob?!
 
 People do all sort of creative stuff around PDF: https://github.com/domdomegg/pdf-scanner or https://github.com/lookscanned/lookscanned.io
 
 >  🖨 Makes PDFs look like they were scanned 
 
-
 #### You can do what with PDF?
 
 
-> MIT |  A maroto way to create PDFs. Maroto is inspired in Bootstrap and uses gofpdf. Fast and simple. 
 
 1. https://github.com/pdfme/pdfme
 
