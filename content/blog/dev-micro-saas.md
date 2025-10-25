@@ -161,7 +161,6 @@ nslookup github.com
 dig google.com
 ```
 
-
 ---
 
 ## Conclusions

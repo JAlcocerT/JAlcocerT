@@ -286,7 +286,7 @@ wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/downloa
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/neko-browser" title="See also - Neko Browser | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Privacy won, for now:
+Privacy won, *for now*:
 
 <!-- 
 https://www.youtube.com/live/t0Uk9eC146E?si=S9ruQrOgRa-DK_Ze 
@@ -339,7 +339,7 @@ cd
 # sudo apt install quiterss  
 ```
 
-An RSS is always good to be uptodate with [outages, like the recent AWS one](https://health.aws.amazon.com/health/status):
+An **RSS** is always good to be uptodate with [outages, like the *recent AWS* one](https://health.aws.amazon.com/health/status):
 
 Also, apps like [signal might be secure by design](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps), at least for now.
 
@@ -349,7 +349,7 @@ But that does not mean that they are not still centralized ans **subject to fail
 
 <!-- https://x.com/elonmusk/status/1980342034318962881 -->
 
-With thunderbird you can connect to both, plus have a local mail client:
+With **thunderbird** you can connect to both, plus have a local mail client:
 
 ```sh
 sudo apt update  
@@ -360,13 +360,28 @@ sudo apt install thunderbird
 # sudo apt-get install -f
 ```
 
-
-4. Talking about desktops apps: https://github.com/aandrew-me/ytDownloader
+4. Talking about desktops apps see this youtube *and social media downloader*: https://github.com/aandrew-me/ytDownloader
 
 ```sh
 #choco install ytdownloader
 sudo snap install ytdownloader
 ```
+
+5. Jellyfin and Gonic are great
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
+
+
+6. I have added the **programmatic DNS updater** from [waiting to landing](https://github.com/JAlcocerT/waiting-to-landing), benchmarks and quick setup scripts to HomeLab repo.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/cloudflare-dns-updater.py" title="Cloudflare DNS API Py Script ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/porkbun-domains.py" title="Porkbun API Py Script ↗" >}}
+{{< /cards >}}
+
 
 ### I was also exploring these file tools
 
@@ -548,10 +563,14 @@ To summarize, **Shlink** stands out as the self-hosted URL shortener with built-
 
 ### Monitoring For HomeLab
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/netdata" title="Net-Data Monitoring | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ```sh
+#docker stats
 #htop
 sudo docker stats multichat
-
 ```
 
 I Got to know: https://github.com/operacle/checkcle/
@@ -560,7 +579,7 @@ I Got to know: https://github.com/operacle/checkcle/
 
 But we already covered similar tools:
 
-1. Beszel
+1. **Beszel**: Web Analytics and Monitoring!
 
 ![Beszel Deployed to VPS](/blog_img/Monitoring/beszel-hetzner.png)
 
@@ -568,15 +587,12 @@ But we already covered similar tools:
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/" title="Beszel Setup" image="/blog_img/Monitoring/beszel-addmonitor.png" subtitle="Monitoring with Beszel" >}}
 {{< /cards >}}
 
-2. Tianji
-
-https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#tianji
-
+2. **Tianji**: which I covered [here](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#tianji)
 
 
 ![MySpeed Internet Speed Test](/blog_img/selfh/HomeLab/myspeed.png)
 
-3. Uptime Kuma and Kener: *bringing status pages to your server*
+3. Uptime Kuma and **Kener**: *bringing status pages to your server*
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}

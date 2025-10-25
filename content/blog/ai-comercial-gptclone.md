@@ -257,10 +257,11 @@ You can make some F/OSS Project that delegates the model execution to a third pa
 * [DifyAI](/selfhosting-dify-ai-docker) -  an open-source project that functions as a development platform specifically designed for LLMs
   * Provides a user-friendly graphical interface to design and manage complex LLM workflows. You can drag and drop components to visually construct the workflow, making it accessible to users even without extensive coding experience.
   * RAG Pipeline Integration: Dify integrates well with Retrieve, Ask, Generate (RAG) pipelines. RAG pipelines allow your LLM workflows to access and process information from the real world through [search engines](/selfhosting-dify-ai-docker/#how-to-use-dify-ai) or other external sources, enhancing the capabilities of your LLM applications.
+
+
 {{< dropdown title="What else can I do with AI? ⏬" closed="true" >}}
 
-Some other interesting repositories to have a look for ideas:
-
+Some other **interesting repositories** to have a look for ideas:
 
 * https://github.com/sindresorhus/awesome-chatgpt
 * https://github.com/pinokiocomputer/pinokio

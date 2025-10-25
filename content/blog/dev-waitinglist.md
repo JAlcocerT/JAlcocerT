@@ -110,7 +110,7 @@ You can get something cheap (for 2$ the first year) https://porkbun.com/tld/info
 You can configure porkbun, so that the **default NS** will be cloudflare ones: `fattouche.ns.cloudflare.com, leanna.ns.cloudflare.com`
 
 
-![alt text](/blog_img/dev/porkbun/1-porkbun-default-ns.png)
+![Porkbun default name servers ](/blog_img/dev/porkbun/1-porkbun-default-ns.png)
 
 ![alt text](/blog_img/dev/porkbun/2-porkbun-credit.png)
 

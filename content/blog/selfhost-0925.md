@@ -693,7 +693,18 @@ chmod 600 ./acme.json && \
 chmod 600 ./traefik.yml #or it will be a security risk for other users to see the privatekey
 ```
 
-Make sure to point **CF DNS records**, maybe using script https://github.com/JAlcocerT/waiting-to-landing/blob/main/cloudflare-dns-updater.py
+Make sure to point **CF DNS records**, maybe using a script like [this](https://github.com/JAlcocerT/Flask_SlubnyChwile/blob/main/flask-dnsupdater.py)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/cloudflare-dns-updater.py" title="Cloudflare DNS API Py Script ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/porkbun-domains.py" title="Porkbun API Py Script ↗" >}}
+{{< /cards >}}
+
+```sh
+sudo apt-get install dnsutils -y #dns resolution
+nslookup github.com 
+dig google.com
+```
 
 > For which you will need the [ZoneID of your Domain](https://www.youtube.com/watch?v=pmfrJNCaOFY) as well as per [this .env.sample](https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/.env.sample)
 
