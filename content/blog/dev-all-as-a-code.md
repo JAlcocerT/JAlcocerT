@@ -1,6 +1,6 @@
 ---
 title: "Everything is Code"
-date: 2025-10-20T08:20:21+01:00
+date: 2025-10-25T08:20:21+01:00
 draft: false
 tags: ["Matplotlib vs Manim vs RemotionJS vs Animotion","SlidevJS vs ReflexJS","Pandoc vs Latex vs Typst"]
 url: 'things-as-a-code'
@@ -60,7 +60,7 @@ This selection depends on priorities: Slidev for modern web presentations, Revea
 
 You can place this one inside HUGO SSG if you want, like: https://github.com/joshed-io/reveal-hugo
 
-My favourite: **SliDevJS**
+2. My favourite: **SliDevJS**: It brings a live editor at `localhost:3030/presenter`
 
 https://jalcocert.github.io/JAlcocerT/make-slidev/
 
@@ -105,7 +105,7 @@ npm init slidev #yarn create slidev
 
 2. Bring up to date data from API calls. Like `https://open-meteo.com`
 
-3. Make it look cool with mermaidJS / Katex / [ChartJS VUE components](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-101-umami-example/components)
+3. Make it look cool with mermaidJS / Katex / [**ChartJS** VUE components](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-101-umami-example/components)
 
 4. This thing can even do animations based on https://motion.vueuse.org/
 5. Katex, for those PHD users
@@ -124,7 +124,7 @@ npm init slidev #yarn create slidev
 <LatestYouTubeVideo channelId="UCPPMA8ZEusAe5dVH6PbjZFA" width="400" height="225" />
 ```
 
-9. Live data via APIs with custom components. Like these 2, [with open-meteo or yfinance based](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk-exadel/components). 
+9. Live data via APIs with custom components. Like these 2 components, [with open-meteo or yfinance based](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk-exadel/components). 
 
 ![Slidev live data component from yfinance](/blog_img/entrepre/public-build/slidev-editor/slidev-component-yfinance.png)
 
@@ -163,7 +163,14 @@ Initially, I thought that [ebooks could be just done via Rmd](https://github.com
 
 Then I understood [here, that pandoc](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/) is what make the thing work.
 
-And found a [cool SSG Theme to host your ebook pdfs statically](https://github.com/JAlcocerT/sell-your-ebook).
+And found a [cool SSG Theme to **host your ebook's pdfs** statically](https://github.com/JAlcocerT/sell-your-ebook).
+
+```sh
+# Just Astro production
+make quick-prod  
+```
+
+And it looks as good as: `https://landing-page-book-astro-tailwind.vercel.app/`
 
 Then, I created to just dump my notes into ebooks: https://github.com/JAlcocerT/ebook-ideas
 
@@ -173,7 +180,7 @@ Then, I created to just dump my notes into ebooks: https://github.com/JAlcocerT/
 
 
 {{< callout type="info" >}}
-When you create an ebook, use [Foliate](https://github.com/johnfactotum/foliate) to read on your desktop
+When you create an ebook, use [Foliate](https://github.com/johnfactotum/foliate) to read `epub` on your desktop
 {{< /callout >}}
 
 ```sh

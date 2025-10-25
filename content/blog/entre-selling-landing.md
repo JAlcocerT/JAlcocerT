@@ -248,6 +248,60 @@ Not to talk about the subscribe then see some info models:
 
 1. `https://pobremillenial.substack.com/p/asi-empece-a-invertir-en-oro`
 
+### Plugins for Astro Landings
+
+Directus is fully self-hostable and commonly deployed using Docker containers. You can host it on your own servers or cloud infrastructure, providing control over your data, security, and updates. It requires a compatible environment like Docker and supports various SQL databases such as PostgreSQL, MySQL, SQLite, and more.[1][2]
+
+> Design your data model, build powerful APIs, and manage content for anything from simple websites to complex applications.
+
+Baserow also offers a self-hosted version alongside their cloud option. The self-hosted deployment gives full control over infrastructure but requires installation and server maintenance, suitable for teams with IT resources.[3][4]
+
+NocoDB supports both cloud and self-hosted variants as well. When self-hosted, you have complete control over your data and can customize and secure the deployment on your own infrastructure.[5][6]
+
+DB2REST is designed to be easily installed and self-hosted, allowing quick setup of secure REST APIs over databases on your servers.[7][8]
+
+DreamFactory can be self-hosted to build and manage REST APIs on your own infrastructure, offering full control over security and deployment.[9]
+
+Hasura offers a premium self-hosted enterprise package requiring a Kubernetes cluster and collaboration with their team for setup, aimed at customers with stringent compliance needs.[10]
+
+In summary:
+
+| Tool        | Self-Hostable   | Notes                                   |
+|-------------|-----------------|-----------------------------------------|
+| [Directus](https://directus.io/)    | [Yes](https://directus.io/docs/getting-started/create-a-project)             | Docker-based, supports multiple DBs     |
+| Baserow     | Yes             | Requires installation and maintenance   |
+| NocoDB      | Yes             | Full control, customizable               |
+| DB2REST     | Yes             | Lightweight, easy install                |
+| DreamFactory| Yes             | Full control, enterprise-ready           |
+| Hasura      | Yes (Enterprise)| Requires K8s, premium support            |
+
+What can I do with Directus?
+
+With Directus, you can easily:
+
+    Perform CRUD operations on your data
+    Create roles so anyone can access the data
+    Assign roles with fully configurable permissions
+    Build beautiful dashboards and no-code applications
+    Build complex data queries without having to know SQL
+    Configure event-driven webhooks and task automation
+
+
+All these popular alternatives to DbChart support self-hosting, with varying levels of deployment complexity and infrastructure requirements.[2][4][6][8][1][3][5][7][9][10]
+
+This should help you decide based on your preference for self-hosting and specific deployment needs.
+
+[1](https://sliplane.io/blog/self-hosting-directus-with-docker-on-ubuntu-server)
+[2](https://directus.io/docs/self-hosting/requirements)
+[3](https://baserow.io/user-docs/set-up-baserow)
+[4](https://baserow.io/blog/self-hosting-your-database)
+[5](https://nocodb.com/docs/product-docs/getting-started)
+[6](https://nocodb.com/docs/self-hosting)
+[7](https://dev.to/thadguidry/how-to-connect-and-query-multiple-databases-with-a-single-rest-api-2jml)
+[8](https://db2rest.com)
+[9](https://blog.dreamfactory.com/the-pros-and-cons-of-self-hosted-software-solutions)
+[10](https://hasura.io/docs/3.0/private-ddn/architecture/self-hosted/)
+
 ### Example TinyHost
 
 I got to know a very **cool SaaS** on twitter:

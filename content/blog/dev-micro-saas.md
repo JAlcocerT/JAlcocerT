@@ -69,16 +69,16 @@ Some examples I found:
 
 Having a starting point with an idea is great.
 
-
-
-
 #### OpenLovable
 
 https://docs.firecrawl.dev/use-cases/developers-mcp -> https://github.com/firecrawl/open-lovable?tab=readme-ov-file
 
-> MIT |  🔥 Clone and recreate any website as a modern React app in seconds 
+> MIT |  🔥 **Clone and recreate any website** as a modern React app in seconds 
 
 #### QuantUX
+
+
+Quant-UX is a **usability testing and prototyping platform** that enables design and product teams to quickly create, test, and analyze user interactions with their designs.
 
 * https://github.com/KlausSchaefers/quant-ux
 
@@ -86,12 +86,10 @@ https://docs.firecrawl.dev/use-cases/developers-mcp -> https://github.com/firecr
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/quant-ux" title="QuantUX | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/HomeLab/quant-ux.png)
+![QUANTUX User Interface](/blog_img/selfh/HomeLab/quant-ux.png)
 
 
 {{< details title="Whats QuantUX? Prototyping and Usability Testing 📌" closed="true" >}}
-
-Quant-UX is a usability testing and prototyping platform that enables design and product teams to quickly create, test, and analyze user interactions with their designs.
 
 What Quant-UX does exactly:
 
@@ -104,7 +102,9 @@ What Quant-UX does exactly:
 - **Real-Time Updates:** Uses websocket communication to provide live updates during testing sessions.
 - **Flexible Deployment:** Can be self-hosted locally, deployed via Docker, or hosted on cloud platforms with backend services handling data storage and user management.
 
-Quant-UX goes beyond just informing where users are looking on the page. It primarily focuses on usability testing by tracking user interactions such as clicks, navigation patterns, and task completion behavior rather than eye-tracking or gaze analysis.
+Quant-UX goes beyond just informing where users are looking on the page.
+
+It primarily focuses on usability testing by tracking user interactions such as clicks, navigation patterns, and task completion behavior rather than eye-tracking or gaze analysis.
 
 What it does related to user attention:
 
@@ -153,12 +153,21 @@ With Quant-UX, the typical workflow is:
 {{< youtube "eTr8SCqCy4Q" >}}
 
 
+**To test quantUX** we can give a try to LandoNorris website: `https://landonorris.com/`
+
+```sh
+sudo apt-get install dnsutils -y #dns resolution
+nslookup github.com 
+dig google.com
+```
+
+
 ---
 
 ## Conclusions
 
 
-> Doing is faster than watching.
+> **Doing** is faster than watching.
 
 Applies to [business](https://nav.al/skill-business) and to get that Landing + ChatBot going.
 

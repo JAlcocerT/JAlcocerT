@@ -301,8 +301,6 @@ Think of it like this:
 * **Go-to-Market (GTM) Strategy** is the **holistic game plan** for a specific product launch or a new market entry. It's the master blueprint that brings together every department in the company to achieve a single, defined goal.
 * **Marketing Strategy** is a **critical component** of that GTM plan. It's the section of the blueprint that deals specifically with how you will communicate your value to the world.
 
-Here's a breakdown of their relationship:
-
 #### GTM Strategy: The Master Plan
 
 A GTM strategy is a cross-functional roadmap that answers the question: "How will we bring this new product to market successfully?" It aligns all key business functions, including:

@@ -490,7 +490,6 @@ docker stats $(docker ps --filter "name=typebot" --format "{{.Names}}")
 #docker stats -a
 ```
 
-See also lazydocker!
 
 ### Git Sync
 

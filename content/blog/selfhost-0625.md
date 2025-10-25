@@ -27,13 +27,20 @@ It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcoc
 Discovering [lazydocker](https://github.com/jesseduffield/lazydocker/releases) tool has been very interesting, together with Makefile and uv package manager.
 
 ```sh
+#docker stats
 sudo apt  install golang-go
 go install github.com/jesseduffield/lazydocker@latest
+export PATH=$PATH:$(go env GOPATH)/bin
+#docker stats --no-stream --format "{{.Name}}\t{{.CPUPerc}}" | head -n -1 | sort -nrk 2
+```
 
-# docker run --rm -it -v \
-# /var/run/docker.sock:/var/run/docker.sock \
-# -v /yourpath:/.config/jesseduffield/lazydocker \
-# lazyteam/lazydocker
+Or just with a container that *dissapears on exit*:
+
+```sh
+docker run --rm -it \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v ~/.config/jesseduffield/lazydocker:/root/.config/jesseduffield/lazydocker \
+  lazyteam/lazydocker
 ```
 
 ![LazyDocker UI](/blog_img/selfh/HomeLab/lazydocker.png)

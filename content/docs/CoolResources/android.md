@@ -219,14 +219,17 @@ https://www.youtube.com/watch?v=KBWlB9f_SAo
 
 ### My Fav Android Apps
 
-* Syncthyng
+* Syncthing *see also Localsend*
+* Nextcloud
 * SatStat
 * Sensor Server
 * PhyPhox
-* RacheChrono
-* Tello FPV
 * Immich
 * F-Droid
+* CAPod
+* *RacheChrono*
+* *Tello FPV*
 
-Audio recorder, ultrasonic, readdrops, fluffy chat, organic maps, nophonespam
+[Audio recorder](https://play.google.com/store/apps/details?id=com.dimowner.audiorecorder&hl=en_US), [ultrasonic](https://play.google.com/store/apps/details?id=org.moire.ultrasonic&pli=1), [readdrops](https://play.google.com/store/search?q=readdrops&c=apps&hl=en_US), fluffy chat, organic maps, nophonespam
+
 2fas auth, bitwarden, signal, rvnc viewer, element, tailscale, mullvad vpn

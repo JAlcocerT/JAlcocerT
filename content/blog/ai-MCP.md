@@ -717,7 +717,7 @@ I was tinkering with [AI projects docs here](https://jalcocert.github.io/JAlcoce
 
 #### MCP and Directus
 
-https://directus.io/
+* https://directus.io/
 
 Directus is one of the CMS's covered on [this post](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#cms)
 
@@ -725,7 +725,7 @@ Directus is one of the CMS's covered on [this post](https://jalcocert.github.io/
 
 {{< youtube "tPnL2QjvEsM" >}}
 
-And...it has very cool MCP integration with claude desktop.
+And...it has very cool MCP integration, where you can connect claude desktop as client.
 
 {{< callout type="info" >}}
 Directus does not have a free tier at the time of writing, starting the [basic one at ~15%/month](https://directus.io/pricing)

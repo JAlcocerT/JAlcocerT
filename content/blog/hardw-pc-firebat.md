@@ -24,12 +24,12 @@ A very interesting **Small Factor PC** with
 * Cost: ~75$
 
 {{< callout type="info" >}}
-It comes with W11 pre-installed, but I could not resist to [try Linux with it](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
+It comes with W11 pre-installed, but I could not resist to [**try Linux** with it](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
 {{< /callout >}}
 
 I went with [Zorin OS](https://zorin.com/os/), a [Linux focused on simplicity](#faq).
 
-But just kept Windows 11 as dual boot, with [chocolatey ready](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/)
+But just kept *Windows 11 as dual boot*, with [chocolatey ready](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows/)
 
 
 <!-- {{< figure src="blog_img/mini_pc/nginx_posteio.png" align="center" caption="FireBat NextCloud - Example Caption" width="600" alt="FireBat NextCloud" >}}
@@ -88,7 +88,7 @@ sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run #4 cores
 
 > Firebat results go down to 22k events **if power saving mode is enabled** in Linux
 
-And now the real benchmarks:
+And now some **real benchmarks**:
 
 ```sh
 git clone https://github.com/JAlcocerT/Py_Trip_Planner/
@@ -107,9 +107,7 @@ apt install cargo
 time cargo install --git https://github.com/astral-sh/rye rye
 ```
 
-
-
-| Device                     | Docker Build Trip Planner      | Build Astral       |
+| Device                     | **Docker Build** Trip Planner      | Build Astral       |
 |----------------------------|--------------------|--------------------|
 | Raspberry Pi 4 2GB          | ~3672s             | 10min 7s           |
 | Raspberry Pi 4 4GB          | ~3480s             | -                  |
@@ -128,7 +126,7 @@ time cargo install --git https://github.com/astral-sh/rye rye
 > N95 (From BMax B4) was 5% faster when building [the Docker Image](https://github.com/JAlcocerT/Py_Trip_Planner/)
 
 {{< callout type="info" >}}
-Energy costs ~0.25Eur/Kwh
+Energy costs at **~0.25Eur/Kwh**
 {{< /callout >}}
 
 ### Firebat - Computing vs Volume
@@ -229,6 +227,8 @@ graph LR
   * Router: `http://192.168.1.1/`
   * FireBat: `http://192.168.1.103/`
   * Lenovo i3: `http://192.168.1.105/`  
+
+Just enter via SSH with:
 
 ```sh
 ssh casa@192.168.1.103
@@ -859,7 +859,6 @@ dig google.com
 sudo apt-get install speedtest-cli
 speedtest-cli #speedtest-cli --simple
 ```
-
 
 ```sh
 curl -sS https://ipinfo.io/json #the command to use
