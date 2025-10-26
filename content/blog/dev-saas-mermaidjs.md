@@ -1,6 +1,6 @@
 ---
 title: "Diagrams and workflows as a Code with Agents"
-date: 2025-10-26T12:20:21+01:00
+date: 2025-11-05T12:20:21+01:00
 draft: false
 tags: ["AI SaaS","Codex CLI","MermaidJS","Grok vs Perplexity","Icons for Architects","Commet"]
 description: 'BiP user flows around newsletter layers. From SliDev Editor to Mermaid Editor with live information.'

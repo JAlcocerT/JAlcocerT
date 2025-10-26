@@ -1,6 +1,6 @@
 ---
 title: "Landing (and more) for Real Estate"
-date: 2025-10-26T08:20:21+01:00
+date: 2025-10-31T08:20:21+01:00
 draft: false
 tags: ["Web","Astro Payroll Theme","Real Estate Landing","n8n","Scrapping"]
 description: 'Landing page and components for real estate Galleries.'

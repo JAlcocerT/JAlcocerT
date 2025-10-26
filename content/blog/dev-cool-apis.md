@@ -247,6 +247,10 @@ https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
 {{< /cards >}}
 
 
+### Ollama API
+
+### OpenAI API
+
 
 
 ## Data APIs
@@ -293,20 +297,19 @@ TracingInsights.com  |  No      |  No           |  Sí       |  Servicio pago en
 F1 TV (App)          |  No      |  No           |  Sí       |  Servicio oficial de F1 con telemetría, contenido premium y transmisiones.         
 Ergast API           |  Sí      |  Sí           |  No       |  API gratuita y open source para estadísticas históricas, no telemetría en vivo.   
 
-### APIs para Telemetría F1
 
 - OpenF1 API: Ofrece datos en tiempo real y acceso gratuito a históricos, incluyendo telemetría, comunicaciones y vueltas. Ideal para dashboards o análisis detallado. Documentación y ejemplos en openf1.org.
 - FastF1 (Python package): Permite extraer telemetría, tiempos por vuelta, posiciones, acelerador, freno y más directamente desde los feeds oficiales. Fácil de usar con Pandas y Matplotlib para visualizaciones. Instalación vía pip o conda.
 - Formula Live Pulse API: Real-time telemetría, tiempos, análisis de neumáticos y comparaciones entre pilotos. Ofrece widgets personalizables y está disponible para web, iOS y Android.
 
-### Opciones en Web y Apps
+Opciones en Web y Apps
 
 - f1-dash.com: Dashboard en tiempo real con telemetría y tiempos de carrera online, sector por sector y comparaciones directas.[4]
 - TracingInsights.com: Analítica y gráficos interactivos de telemetría y rendimiento, comparando pilotos y vueltas.[15]
 - F1 TV App: Oficial de F1, incluye mapas, telemetría, tiempos y está disponible en App Store y Google Play.[19][20]
 - DigoRaceDash Lite: App gratuita compatible con F1 24 para mostrar telemetría detallada en tu móvil, sin hardware extra.[8]
 
-### Comunidad y Recursos Técnicos
+Comunidad y Recursos Técnicos
 
 - En Reddit y blogs técnicos, recomiendan FastF1 y OpenF1 como principales fuentes para programadores y analistas. También se menciona Ergast para estadísticas históricas.[6][18]
 

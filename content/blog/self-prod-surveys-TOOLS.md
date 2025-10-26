@@ -1,9 +1,9 @@
 ---
 title: "Free Surveys"
-date: 2025-10-25T23:20:21+01:00
+date: 2025-11-28T23:20:21+01:00
 draft: false
 tags: ["Docker","Self-Hosting","PocketBase"]
-description: ''
+description: 'Surveys and Waiting lists'
 url: 'forms-and-surveys'
 ---
 
