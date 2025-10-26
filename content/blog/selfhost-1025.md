@@ -276,6 +276,10 @@ I also got to know a **new browser**, [Helium](https://github.com/imputnet/heliu
 
 ```sh 
 wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/download/0.5.7.1/Helium-0.5.7.1-x86_64.AppImage
+
+#With `CTRL+ALT+C` it gets really compact!
+#With `CTRL+H`, it opens your synced tab
+#flatpak install flathub app.zen_browser.zen
 ```
 
 > Private, fast, and honest web browser
@@ -499,14 +503,21 @@ https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#better-webanalyt
 ![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
 
 
+See also:
 
-https://github.com/abegehr/chickadee
+1. https://github.com/abegehr/chickadee
 
- Simple, privacy-focused web analytics you can self-host on Cloudflare. 
+ > Simple, privacy-focused web analytics you can self-host on Cloudflare. 
 
- https://github.com/benvinegar/counterscale
+2. https://github.com/benvinegar/counterscale
 
-  Scalable web analytics you run yourself on Cloudflare 
+ > Scalable web analytics you run yourself on Cloudflare 
+
+3. Dashflare - https://github.com/jorgelbg/dashflare
+
+>  🕵🏼‍♀️ Open Source and privacy-focused analytics solution. 📊 Advanced monitoring for your website behind Cloudflare 
+
+
 
 #### Link Analytics
 
@@ -558,7 +569,11 @@ Among the popular open-source self-hosted link shorteners mentioned, some do off
 
 4. Other lesser-known tools like Blink or Polr may have QR features built-in or via plugins, but the top three mentioned mostly rely on either built-in Shlink support or plugins for YOURLS for QR capabilities.[5][6]
 
-To summarize, **Shlink** stands out as the self-hosted URL shortener with built-in QR code generation. For YOURLS, you can enable QR codes through community-developed plugins, while Kutt typically requires external QR code tools. This makes Shlink a strong candidate if QR code functionality is a priority alongside link shortening.[1][3][4]
+To summarize, **Shlink** stands out as the self-hosted URL shortener with built-in QR code generation. 
+
+For YOURLS, you can enable QR codes through community-developed plugins, while Kutt typically requires external QR code tools. 
+
+This makes Shlink a strong candidate if QR code functionality is a priority alongside link shortening.
 
 
 ### Monitoring For HomeLab
@@ -567,10 +582,13 @@ To summarize, **Shlink** stands out as the self-hosted URL shortener with built-
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/netdata" title="Net-Data Monitoring | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+![alt text](/blog_img/selfh/HomeLab/netdata.png)
+
 ```sh
 #docker stats
 #htop
 sudo docker stats multichat
+#btop
 ```
 
 I Got to know: https://github.com/operacle/checkcle/

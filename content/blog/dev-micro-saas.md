@@ -155,6 +155,8 @@ With Quant-UX, the typical workflow is:
 
 **To test quantUX** we can give a try to LandoNorris website: `https://landonorris.com/`
 
+![alt text](/blog_img/web/WebsSnapshots/lando-speed-insights.png)
+
 ```sh
 sudo apt-get install dnsutils -y #dns resolution
 nslookup github.com 

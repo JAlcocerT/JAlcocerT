@@ -10,7 +10,7 @@ url: 'interesting-apis'
 
 **Tl;DR**
 
-No matter if you are using APIs to BiP or to do some Jira tasks.
+No matter if you are using APIs to BiP, to do some Jira tasks or to bring real life data to your SliDevJS PPT component.
 
 **Intro**
 
@@ -253,14 +253,11 @@ https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
 
 You can get data from other users/services that have collected/processed and expose it for you.
 
-In case you want to expose your own API endpoints with code, for example with [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api) or with [Pocketbase BaaS](https://jalcocert.github.io/JAlcocerT/pocketbase/#what-are-api-rules).
-
-
-This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/) based. 
-
-> That I also covered recently on this post: https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/
+In case you want to create & expose your own API endpoints with code, for example with [FastAPI](https://jalcocert.github.io/JAlcocerT/fast-api) or with [Pocketbase BaaS](https://jalcocert.github.io/JAlcocerT/pocketbase/#what-are-api-rules).
 
 Im aware that there are many APIs around: https://github.com/public-apis/public-apis
+
+Even for crypto, with [Dune Analytics](https://github.com/duneanalytics/docs), official [docs](https://docs.dune.com/home)
 
 ### Weather
 
@@ -270,6 +267,170 @@ Im talking about the python trip planner, which uses the open meteo API to get h
 
 `https://api.open-meteo.com/v1/forecast?city=${city}&daily=temperature_2m_max&timezone=auto`
 
+
+### Financial Data
+
+This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-package-guide/) based. 
+
+> That I also covered recently on this post: https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/
+
+
+### Formula 1
+
+Puedes acceder a telemetría de **F1 en tiempo real y datos históricos** usando APIs y webs especializadas como OpenF1, FastF1 y soluciones comerciales como Formula Live Pulse. 
+
+Todas son populares entre fans, analistas y desarrolladores.
+
+Fuente               |  Gratis  |  Open Source  |  De Pago  |  Notas                                                                             
+---------------------+----------+---------------+-----------+------------------------------------------------------------------------------------
+OpenF1               |  Sí      |  Sí           |  No       |  API open source para datos en tiempo real e históricos, usada por desarrolladores.
+FastF1 (Python pkg)  |  Sí      |  Sí           |  No       |  Biblioteca Python para acceder a telemetría oficial, análisis y visualización.    
+Formula Live Pulse   |  No      |  No           |  Sí       |  Plataforma comercial con API en tiempo real y widgets personalizables.            
+f1-dash.com          |  Sí      |  No           |  No       |  Dashboard web gratuito para telemetría en vivo y comparación de sectores.         
+TracingInsights.com  |  No      |  No           |  Sí       |  Servicio pago enfocado en análisis y gráficos de telemetría detallados.           
+F1 TV (App)          |  No      |  No           |  Sí       |  Servicio oficial de F1 con telemetría, contenido premium y transmisiones.         
+Ergast API           |  Sí      |  Sí           |  No       |  API gratuita y open source para estadísticas históricas, no telemetría en vivo.   
+
+### APIs para Telemetría F1
+
+- OpenF1 API: Ofrece datos en tiempo real y acceso gratuito a históricos, incluyendo telemetría, comunicaciones y vueltas. Ideal para dashboards o análisis detallado. Documentación y ejemplos en openf1.org.
+- FastF1 (Python package): Permite extraer telemetría, tiempos por vuelta, posiciones, acelerador, freno y más directamente desde los feeds oficiales. Fácil de usar con Pandas y Matplotlib para visualizaciones. Instalación vía pip o conda.
+- Formula Live Pulse API: Real-time telemetría, tiempos, análisis de neumáticos y comparaciones entre pilotos. Ofrece widgets personalizables y está disponible para web, iOS y Android.
+
+### Opciones en Web y Apps
+
+- f1-dash.com: Dashboard en tiempo real con telemetría y tiempos de carrera online, sector por sector y comparaciones directas.[4]
+- TracingInsights.com: Analítica y gráficos interactivos de telemetría y rendimiento, comparando pilotos y vueltas.[15]
+- F1 TV App: Oficial de F1, incluye mapas, telemetría, tiempos y está disponible en App Store y Google Play.[19][20]
+- DigoRaceDash Lite: App gratuita compatible con F1 24 para mostrar telemetría detallada en tu móvil, sin hardware extra.[8]
+
+### Comunidad y Recursos Técnicos
+
+- En Reddit y blogs técnicos, recomiendan FastF1 y OpenF1 como principales fuentes para programadores y analistas. También se menciona Ergast para estadísticas históricas.[6][18]
+
+Estas herramientas te permiten crear dashboards, realizar análisis y estudiar estrategias de piloto en tiempo real con gran profundidad.[9][11][1][4][10]
+
+[2](https://www.reddit.com/r/F1DataAnalysis/comments/16w84uz/openf1_an_api_for_realtime_f1_data/)
+
+
+1. https://github.com/slowlydev/f1-dash
+
+>  A real-time F1 dashboard 
+
+2. https://github.com/br-g/openf1 with official [page](https://openf1.org)
+
+```sh
+curl "https://api.openf1.org/v1/laps?session_key=9161&driver_number=63&lap_number=8"
+```
+
+
+
+## Social Media APIs
+
+### Twitter
+
+Some years back, I was pulling tweets and later applying the detoxify models on it.
+
+Now the API has changed a bit: https://developer.x.com/en/portal/petition/essential/basic-info
+
+X introduced a **tiered pricing model** in 2023 when it restructured API access.  
+
+- **Free tier**: Very limited access — typically for small personal projects or testing. Includes minimal monthly post and read limits, and usually **no access to enterprise features** such as filtered streams or high-volume endpoints.  
+
+Get familiar with: https://developer.x.com/en/developer-terms/agreement
+
+| Tier | Cost | Intended Use | Main Limits |
+|------|------|---------------|--------------|
+| **Free** | $0 | Testing, small personal bots | Very low post/read limits |
+| Basic | $100/month | Small projects | 3,000 tweets/month, limited endpoints |
+| Pro | $5,000/month | Startups, higher access | Full read/write, filtered streams |
+| Enterprise | Custom | Large businesses | Full archive, analytics, high-speed streams |
+
+If you only need basic functionality (like pulling a few tweets or posting updates), the **Free** or **Basic** tier might be enough. 
+
+
+```
+I intend to use the X API to publish data-driven content focused on the historical performance of companies. 
+
+I want to write better content in less time, helped by Python analytics, so that quality and insightful content can reach further via posts and threads.
+
+Additionally, I will use the API to monitor and understand which types of posts generate the most engagement and resonate best with other users who perform similar analyses.
+
+The goal of this use is to continually improve the quality and relevance of the published content over time, based on observed user interactions and feedback patterns.
+
+I plan to manually replying to comments and discussions on these posts to foster meaningful conversation and community building around such initial data driven posts
+```
+
+> But for anything more advanced — analytics, large-scale data collection, or automation — you must pay.  
+
+After you submit, you get: https://developer.x.com/en/portal/dashboard
+
+You are allowed to:
+
+1. Pull 100 posts a month
+2. Write 500 tweets a month
+
+You will need to create the app:
+
+Sth like: `https://grow.libreportfolio.fyi/callback` and `https://grow.libreportfolio.fyi`
+
+![alt text](/blog_img/social-media/x-developer-portal-appinfo.png)
+
+So that you get a `clientID` and `clientSecret`.
+
+![alt text](/blog_img/social-media/x-api-client.png)
+
+> Here is your OAuth 2.0 Client ID and Client Secret https://github.com/xdevplatform/Twitter-API-v2-sample-code
+
+> > Which is not a bearer token https://docs.x.com/fundamentals/authentication/oauth-2-0/bearer-tokens
+
+Time to create some `create_post_simple.py` and bundle it around a quick Flask app.
+
+```sh
+#git clone https://github.com/JAlcocerT/DataInMotion
+cd OpenAI-Twitter-API
+docker compose up -d
+```
+
+Go to `http://192.168.1.2:5033/` pointing to `x-api-tweet-creator:5000`
+
+```sh
+#docker network ls | grep cloudflared_tunnel
+docker network connect cloudflared_tunnel x-api-tweet-creator #connect
+#docker inspect x-api-tweet-creator --format '{{json .NetworkSettings.Networks}}' | jq
+```
+
+```sh
+networks:
+  #adventurelog_net:  # Define the internal network
+  # nginx_nginx_default:
+  #   external: true #for https
+  cloudflared_tunnel:
+    external: true # Mark the 'tunnel' network as external
+```
+
+
+### Threads
+
+The Threads API by Meta has specific limits designed to control usage and maintain platform integrity. 
+
+- **Posting Limit**: Up to 250 posts per 24-hour period per Threads account via the API.  
+- **Replies Limit**: Up to 1,000 replies per 24-hour period per account.  
+- **Rate Limits**: The number of API calls (requests) allowed per app or token is controlled by Meta’s Graph API rate limiting, which varies based on your app status and usage history.  
+- **Business Verification**: For production-level or larger scale usage, an approved and verified Meta business account is required.  
+- **Data Access Limits**: Access to user and content data through the API is governed by privacy and consent requirements, with limitations on the amount and type of data you can pull per request and over time.
+
+
+| Limit Type       | Limit                     | Description                             |
+|------------------|---------------------------|---------------------------------------|
+| Posts per 24h    | **250**                      | Max number of posts created via API   |
+| Replies per 24h  | 1,000                     | Max replies made via API               |
+| API Call Rate    | Varies                    | Subject to Graph API general limits   |
+| Account Required | Verified Business required| For large-scale or production use     |
+
+These limits ensure fair use and prevent abuse or spamming via automated tools on Threads. For more details, see the official Meta documentation: developers.facebook.com/docs/threads and the Graph API rate limiting page.
+
+If you need more specific technical limits or help navigating them, I can assist further.
 
 ## Checking APIs
 

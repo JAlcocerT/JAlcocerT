@@ -17,11 +17,14 @@ Others, on Healthcare, like [RMQ](#rabbitmq)
 
 You might have been playing around with your Pi, even tinkering with a [Pi+MQTT](https://jalcocert.github.io/RPi/posts/rpi-mqtt/)
 
+> Motivated by https://github.com/jiteshsaini/mqtt-demo
+
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/rpi-gps-superset/#apache-superset-setup" title="Superset Setup" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="IoT Pi Project with Superset" >}}
 {{< /cards >}}
 
-Or with your PicoW, like I was doing recently:
+Or with your **PicoW**, like I was doing recently:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/pico-w/" title="PicoW Post" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="MQTT + HomeAssistant" >}}

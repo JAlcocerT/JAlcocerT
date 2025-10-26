@@ -281,6 +281,12 @@ ext install ms-vscode.makefile-tools
 
 Diagrams/Wireframes...
 
+* https://github.com/mydraft-cc/ui
+
+> Open source wireframing tool written in typescript, react and redux.
+
+
+
 ```sh
 #gemini assistant https://marketplace.visualstudio.com/items?itemName=Google.geminicodeassist
 
@@ -298,9 +304,11 @@ ext install esbenp.prettier-vscode
 
 ### Outro
 
-Lately, a colleague mentioned to me about: https://lovable.dev/
+Lately, a colleague mentioned to me about: `https://lovable.dev/`
 
-> Lovable is an **AI software engineer**, which enables anyone to build for the web. Simply chat to instantly build websites and web apps, with no technical knowledge needed.
+> Lovable is an **AI software engineer**, which enables anyone to build for the web.
+
+Simply chat to instantly build websites and web apps, with no technical knowledge needed.
 
 It seems this is called vibe coding!
 

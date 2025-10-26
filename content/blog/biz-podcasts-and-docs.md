@@ -140,6 +140,15 @@ docker network connect cloudflared_tunnel astropod-prod #connect
 #docker inspect astro-prod --format '{{json .NetworkSettings.Networks}}' | jq
 ```
 
+```sh
+networks:
+  #adventurelog_net:  # Define the internal network
+  # nginx_nginx_default:
+  #   external: true #for https
+  cloudflared_tunnel:
+    external: true # Mark the 'tunnel' network as external
+```
+
 > Now go to CF Zero Trust and add the astro production statically generated `astropod-prod:4321` as per the docker-compose.
 
 The theme bring support for icons at `./src/components/icons/ebookIcon.astro` : https://github.com/tabler/tabler-icons
