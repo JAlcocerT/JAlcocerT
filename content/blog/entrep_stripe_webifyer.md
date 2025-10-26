@@ -440,6 +440,8 @@ Got happily surprised to see **Umami working for the Flask WebAPP** also on the 
 
 ![Flask App with Umami Integration](/blog_img/entrepre/webify/flask-umami.png)
 
+Tested the Flask Umami worked via cloudflare tunnels with `flaskumami:5099`
+
 ![Flask Terms and conditions example](/blog_img/entrepre/webify/flask-tc-sample.png)
 
 ### Adding Formbricks to Flask

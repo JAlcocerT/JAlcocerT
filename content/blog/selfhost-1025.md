@@ -578,6 +578,20 @@ This makes Shlink a strong candidate if QR code functionality is a priority alon
 
 ### Monitoring For HomeLab
 
+
+Grafana and NetData
+
+GrafanaPrometheusNodeExp.JPG
+
+https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana
+
+[SelfHost NetData with Docker](https://fossengineer.com/selfhosting-server-monitoring-with-netdata-and-docker/)
+
+
+* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
+* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
+
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/netdata" title="Net-Data Monitoring | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
@@ -652,16 +666,3 @@ In summary:
 - You can retrieve monitoring data (status, alerts).
 - The API is mostly internal and unofficial but functional.
 - There are third-party wrappers to help interact with it.
-
-
-### Grafana and NetData
-
-GrafanaPrometheusNodeExp.JPG
-
-https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana
-
-[SelfHost NetData with Docker](https://fossengineer.com/selfhosting-server-monitoring-with-netdata-and-docker/)
-
-
-* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
-* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)

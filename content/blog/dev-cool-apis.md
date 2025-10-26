@@ -2,8 +2,8 @@
 title: "Interesting APIs 101"
 date: 2025-10-22T09:20:21+01:00
 draft: false
-tags: ["APIfy","Firecrawl","Serp","Smithery MCP","Scrap","Hoppscotch vs httpie"]
-description: 'Get that info you need. API 101 '
+tags: ["APIfy","Firecrawl","Serp","Smithery MCP","Scrap","Hoppscotch vs httpie","Twitter vs Threads"]
+description: 'Get that info you need. From social media to Formula 1 '
 url: 'interesting-apis'
 ---
 
@@ -277,16 +277,18 @@ This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-
 
 ### Formula 1
 
+I got to know recently about: https://www.f1-tempo.com/
+
 Puedes acceder a telemetría de **F1 en tiempo real y datos históricos** usando APIs y webs especializadas como OpenF1, FastF1 y soluciones comerciales como Formula Live Pulse. 
 
 Todas son populares entre fans, analistas y desarrolladores.
 
 Fuente               |  Gratis  |  Open Source  |  De Pago  |  Notas                                                                             
 ---------------------+----------+---------------+-----------+------------------------------------------------------------------------------------
-OpenF1               |  Sí      |  Sí           |  No       |  API open source para datos en tiempo real e históricos, usada por desarrolladores.
-FastF1 (Python pkg)  |  Sí      |  Sí           |  No       |  Biblioteca Python para acceder a telemetría oficial, análisis y visualización.    
+[OpenF1](https://github.com/br-g/openf1)               |  Sí      |  Sí           |  No       |  API open source para datos en tiempo real e históricos, usada por desarrolladores.
+[FastF1](https://github.com/theOehrly/Fast-F1) (Python pkg)  |  Sí      |  Sí           |  No       |  Biblioteca Python para acceder a telemetría oficial, análisis y visualización.    
 Formula Live Pulse   |  No      |  No           |  Sí       |  Plataforma comercial con API en tiempo real y widgets personalizables.            
-f1-dash.com          |  Sí      |  No           |  No       |  Dashboard web gratuito para telemetría en vivo y comparación de sectores.         
+[f1-dash.com](https://github.com/slowlydev/f1-dash)          |  Sí      |  No           |  No       |  Dashboard web gratuito para telemetría en vivo y comparación de sectores.         
 TracingInsights.com  |  No      |  No           |  Sí       |  Servicio pago enfocado en análisis y gráficos de telemetría detallados.           
 F1 TV (App)          |  No      |  No           |  Sí       |  Servicio oficial de F1 con telemetría, contenido premium y transmisiones.         
 Ergast API           |  Sí      |  Sí           |  No       |  API gratuita y open source para estadísticas históricas, no telemetría en vivo.   
@@ -331,6 +333,8 @@ curl "https://api.openf1.org/v1/laps?session_key=9161&driver_number=63&lap_numbe
 
 Some years back, I was pulling tweets and later applying the detoxify models on it.
 
+* https://docs.x.com/overview
+
 Now the API has changed a bit: https://developer.x.com/en/portal/petition/essential/basic-info
 
 X introduced a **tiered pricing model** in 2023 when it restructured API access.  
@@ -347,6 +351,8 @@ Get familiar with: https://developer.x.com/en/developer-terms/agreement
 | Enterprise | Custom | Large businesses | Full archive, analytics, high-speed streams |
 
 If you only need basic functionality (like pulling a few tweets or posting updates), the **Free** or **Basic** tier might be enough. 
+
+> This doesnt mean that you cant use APIfy to pull stuff :)
 
 
 ```
@@ -365,7 +371,7 @@ I plan to manually replying to comments and discussions on these posts to foster
 
 After you submit, you get: https://developer.x.com/en/portal/dashboard
 
-You are allowed to:
+You are allowed to: `Web App, Automated App or Bot, Confidential client`
 
 1. Pull 100 posts a month
 2. Write 500 tweets a month
@@ -386,10 +392,13 @@ So that you get a `clientID` and `clientSecret`.
 
 Time to create some `create_post_simple.py` and bundle it around a quick Flask app.
 
+![alt text](/blog_img/social-media/x-oauth-authorize.png)
+
 ```sh
 #git clone https://github.com/JAlcocerT/DataInMotion
 cd OpenAI-Twitter-API
 docker compose up -d
+#sudo docker compose down
 ```
 
 Go to `http://192.168.1.2:5033/` pointing to `x-api-tweet-creator:5000`
@@ -408,6 +417,30 @@ networks:
   cloudflared_tunnel:
     external: true # Mark the 'tunnel' network as external
 ```
+
+And you will get a twitter post:
+
+```json
+{"access_token_redacted":"abcdef...","has_refresh_token":true,"message":"User authenticated","token_type":"bearer"}
+```
+
+So i could not resist to put together everything:
+
+```sh
+git clone https://github.com/JAlcocerT/LibrePortfolio-X.git
+
+cd LibrePortfolio-X
+#uv run app.py
+
+sudo docker compose up -d
+#sudo docker compose build --no-cache
+#sudo docker compose down
+```
+
+And add `x-gen-ui:5088` to `grow.libreportfolio.fyi`
+
+Then, each generation goes to `https://grow.libreportfolio.fyi/preview/06cbbc68a88b` and 4 graphs are uploaded with the comment.
+
 
 
 ### Threads
@@ -431,6 +464,19 @@ The Threads API by Meta has specific limits designed to control usage and mainta
 These limits ensure fair use and prevent abuse or spamming via automated tools on Threads. For more details, see the official Meta documentation: developers.facebook.com/docs/threads and the Graph API rate limiting page.
 
 If you need more specific technical limits or help navigating them, I can assist further.
+
+## Random APIs
+
+If the [formula 1 data](#formula-1) was not enough:
+
+1. Transform **PDFs into markdown** locally and quickly is possible thanks to [kreuzberg](https://github.com/Goldziher/kreuzberg) as seen with the Jira post.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+2. 
 
 ## Checking APIs
 
@@ -577,7 +623,7 @@ ElevenLabs already has its own MCP Server:
 
 ## FAQ
 
-### Other TOols
+### Other Tools
 
 * https://github.com/Chivo-Systems/Shinar/
 
@@ -594,3 +640,21 @@ ElevenLabs already has its own MCP Server:
 * https://github.com/esxr/langgraph-mcp
 
 > MIT | LangGraph solution template for MCP
+
+
+### Creating TwitterOpenAIMatplotlib Bot
+
+
+```sh
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
+git config --global user.name
+git add .
+git commit -m "Initial commit: Starting LibrePortfolio x Twitter OpenAI Matplotlib Bot"
+
+#sudo apt install gh
+gh auth login
+gh repo create LibrePortfolio-X --private --source=. --remote=origin --push
+```

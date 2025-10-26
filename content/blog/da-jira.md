@@ -293,6 +293,10 @@ curl -X POST -F "file=@jira-estimation.pdf" http://localhost:8027/extract
 curl -X POST -F "file=@jira-7-9-2-database-schema.pdf" http://localhost:8027/extract
 ```
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 > **MIT |  Document intelligence framework for Python** - Extract text, metadata, and structured data from PDFs, images, Office documents, and more. Built on Pandoc, PDFium, and Tesseract. 
 
 ### Md to PDF
