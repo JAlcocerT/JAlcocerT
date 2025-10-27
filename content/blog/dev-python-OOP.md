@@ -7,13 +7,19 @@ description: 'Object Oriented Programming for Python users'
 url: 'object-oriented-programming-101'
 ---
 
+**Tl;DR**
+
+Long overdue topic: WTF is OOP?
+
+**Intro**
+
 https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
 
 {{< callout type="info" >}}
 And with an 
 {{< /callout >}}
 
-Someone told me once that for **mechanisms I would need to learn OOP**.
+Someone once told me that for **mechanisms I would need to learn OOP**.
 
 And I can understand why now.
 

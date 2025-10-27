@@ -598,7 +598,10 @@ https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/netdata" title="Net-Data Monitoring | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/HomeLab/netdata.png)
+
+They remodel recently the dockerhub image: https://hub.docker.com/r/netdata/netdata/
+
+![Netdata Updated UI](/blog_img/selfh/HomeLab/netdata.png)
 
 ```sh
 #docker stats
@@ -607,7 +610,7 @@ sudo docker stats multichat
 #btop
 ```
 
-I Got to know: https://github.com/operacle/checkcle/
+I Got to know also about: https://github.com/operacle/checkcle/
 
 > MIT |  CheckCle is a **self-hosted, open-source monitoring platform** for seamless, real-time full-stack systems, applications, and infrastructure. It provides real-time uptime monitoring, distributed checks, incident tracking, and alerts. All deployable anywhere. 
 

@@ -23,6 +23,8 @@ https://www.youtube.com/watch?v=7yVFZn87TkY
     {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/get_dividends.py" title="DataInMotion yfinance Dividend ↗" >}}
 {{< /cards >}}
 
+Remember that for piloting big drones you need a license!
+
 
 ### DIY Drone Resources
 

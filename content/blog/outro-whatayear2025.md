@@ -771,12 +771,12 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 10. [SelfHosted Streamlit Apps](https://youtu.be/p7U24YSFrW4) *together with Pocketbase for auth with [such script](https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_pb.py)*
 11. SFTPGo vs FileBrowser
 12. [FastAPI](https://youtu.be/YcCR8JUlhMo) + OpenAI Audio
-13. Photoview
-14. Immich
+13. Photoview or Immich 
+14. https://github.com/block/goose
 15. RGallery vs PiGallery
 16. [Uptime Kuma](https://youtu.be/fxVNTffZC2U) for status pages
 17. [selfhosted ebook landing](https://youtu.be/XEFpzEIEDFc) page with astro
-18. Umami for web analytics or GL INET?
+18. Umami for web analytics (with a slidev ppt exported to pngs on kdenlive explaining features for the video) or GL INET?
 19. [Home Assistant](https://youtu.be/8XUydWbwBjk)
 20. [n8n + CF tunnels](https://youtu.be/v-gCNTI5kzE)
 21. [Selfhosting FreshRSS](https://youtu.be/mDMGtMOx-Fk) + astro podcast website
@@ -785,7 +785,7 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 24. Ventoy. [Linux Lite vs Garuda RAM consumption](https://youtu.be/hTw9DBEksx4)
 25. Bonus: [FreshRSS + AstroPod](https://youtu.be/mDMGtMOx-Fk)
 
-> I had to make sure to create proper thumbnails to get some views
+> I had to make sure to create **better thumbnails** to get some views
 
 > > Canva and https://selfh.st/icons/ helped a lot [see repo](https://github.com/selfhst/icons?ref=selfh.st)
 

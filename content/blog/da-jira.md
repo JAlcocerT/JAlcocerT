@@ -54,7 +54,7 @@ So how about taking the requirements from PdM, understand Jira schema and propos
 For me, **Pandoc** is a tool that is here to stay.
 
 
-1. Convert that .md into a pdf:
+1. Convert that `.md` into a pdf:
 
 ```sh
 git clone https://github.com/JAlcocerT/jira-datamodel
@@ -65,13 +65,13 @@ sed 's/✅/[OK]/g; s/❌/[X]/g; s/��/[CHART]/g' reply-overview-final.md > in
 pandoc input-clean.md -o requirements-jiraado-estimation8.pdf --pdf-engine=xelatex --toc
 ```
 
-2. If you are not conviced yet, use Pandoc to create a pdf from md and have a cool theme
+2. If you are not conviced yet, use Pandoc to create a `pdf from md` and have a cool theme
 
 Like https://github.com/enhuiz/eisvogel
 
 >  A pandoc LaTeX template to convert markdown files to PDF or LaTeX. 
 
-3. You can potentially use Pandoc with CSS to generate your pdfs:
+3. You can potentially use **Pandoc with CSS** to generate your pdfs:
 
 ```sh
 sudo apt-get install wkhtmltopdf
@@ -165,7 +165,7 @@ In summary:
 - LaTeX is a typesetting system and markup language for creating documents with precise formatting. 
 - Pandoc is a tool that converts documents from one markup format to another, including to and from LaTeX, enabling flexible workflows.
 
-Thus, LaTeX is used for authoring and typesetting documents directly, while Pandoc acts as a bridge or converter supporting multiple document formats, including LaTeX, as one of its output options.
+Thus, LaTeX is used for authoring and typesetting documents directly, while **Pandoc acts as a bridge or converter** supporting multiple document formats, including LaTeX, as one of its output options.
 
 ### Jira API with JiraTUI
 
@@ -183,6 +183,11 @@ To just read PDFs you can try Okular: *but the `ctrl+F` worked better for me wit
 ```
 
 Several open source tools can help convert complex **PDFs, such as database schemas from jira**, into machine-readable formats like JSON, XML, or structured diagrams. 
+
+
+{{< callout type="info" >}}
+After trying few, I liked the most [Kerzberg](https://github.com/Goldziher/kreuzberg). See below.
+{{< /callout >}}
 
 Some notable open source options are:
 
@@ -275,7 +280,7 @@ git clone https://github.com/JAlcocerT/jira-datamodel
 
 > Apache v2 | A powerful tool that leverages multimodal large language models to transcribe PDF files into Markdown format.
 
-15. https://github.com/Goldziher/kreuzberg ✅ Works via container and very fast, no LLM Keys
+15. https://github.com/Goldziher/kreuzberg ✅✅✅ Works locally via container exposing an API, very fast, no LLM Keys
 
 ```sh
 #cd z-kreuzberg
@@ -299,9 +304,51 @@ curl -X POST -F "file=@jira-7-9-2-database-schema.pdf" http://localhost:8027/ext
 
 > **MIT |  Document intelligence framework for Python** - Extract text, metadata, and structured data from PDFs, images, Office documents, and more. Built on Pandoc, PDFium, and Tesseract. 
 
+When deployed into your homelab, simply:
+
+```sh
+curl -X POST -F "file=@20251026-1956-0737-wniosek.pdf" http://192.168.1.2:8027/extract
+curl -X POST -F "file=@20251026-1956-0737-wniosek.pdf" http://192.168.1.2:8027/extract > sample-pdf-to-text.txt
+
+#http://jalcocert-x300-1:8027/
+#time curl -X POST -F "file=@BTC-standard.pdf" http://192.168.1.2:8027/extract > sample-pdf-to-text2.txt #1second ✅
+#wc -m sample-pdf-to-text2.txt 600k
+```
+
+### MD to epub
+
+Just in case you want to put together a epub ebook from markdown (with a cool cover):
+
+```sh
+convert "1-dna-analytics/Ebook-cover-SSGs.png" -resize 1200x1800\> "cover.jpg" && \
+echo -e "# Cover\n![](cover.jpg)" > content.md && \
+pandoc -o "Ebook-cover-SSGs.epub" --epub-cover-image="cover.jpg" --metadata title="Ebook Cover" content.md 
+#&& \
+#rm -f cover.jpg content.md
+```
+
+The cover is not full page, but you get the idea.
+
+And **epub to pdf**
+
+```sh
+pandoc "Ebook-cover-SSGs.epub" -o "renderedPDF.pdf"
+#pandoc "Ebook-cover-SSGs.epub" -o "renderedPDF.pdf" --pdf-engine=xelatex
+```
+
+> Which you can send to your kindle or read with Foliate Desktop App
+
 ### Md to PDF
 
 There are several open source tools available to **create PDFs from Markdown**.
+
+Want something very quick? 
+
+Just use **Pandoc**:
+
+```sh
+pandoc "content-test.md" -o "content-test.pdf"
+```
 
 > This will also interest you if you are [going to write ebooks](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/)
 
@@ -318,7 +365,7 @@ Popular Open Source **Tools for Markdown to PDF**
 | **Python-Markdown + ReportLab** | Use Python-Markdown to convert MD to HTML, then ReportLab for PDF | Yes, requires some custom code |
 | **Pyppeteer/Puppeteer**| Headless Chrome browser automation to render Markdown HTML to PDF | Yes, via Python bindings (pyppeteer) |
 
-Recommended Python Workflow
+Recommended Python Workflow:
 
 1. Convert Markdown to HTML using **Python-Markdown** or **markdown2** library.
 2. Use **WeasyPrint** to convert generated HTML to PDF with CSS styling.
@@ -382,7 +429,9 @@ pandoc input-clean.md -o jira-estimation.pdf --pdf-engine=xelatex --toc
 
 ### ipynb to PDF
 
-To create a PDF from the content of a Jupyter Notebook (`.ipynb`), you can use several open source tools, many integrated with Python:
+To create a PDF from the content of a Jupyter Notebook (`.ipynb`), you can use several open source tools.
+
+MAny of them integrated with Python:
 
 - **Jupyter nbconvert** (built-in):
   - Command-line tool or Python API to convert `.ipynb` to PDF directly.
@@ -423,7 +472,7 @@ jupyter nbconvert --to html your_notebook.ipynb
 
 ### Jira ER
 
-The attached files include a comprehensive database schema PDF generated by SchemaCrawler, along with numerous database tables and structures related to Jira. 
+The attached files include a comprehensive **database schema PDF** generated by **SchemaCrawler**, along with numerous database tables and structures related to Jira. 
 
 * https://developer.atlassian.com/server/jira/platform/database-schema/
 

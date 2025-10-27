@@ -279,6 +279,11 @@ This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-
 > That I also covered recently on this post: https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/
 
 
+<!-- https://youtu.be/FojrMePgaY0 -->
+
+{{< youtube "FojrMePgaY0" >}}
+
+
 ### Formula 1
 
 I got to know recently about: https://www.f1-tempo.com/
