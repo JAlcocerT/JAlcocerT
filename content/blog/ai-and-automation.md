@@ -31,7 +31,7 @@ I mean...a ,custom' solution that provides out of the box a UI for the final use
 
 The video titled "The 'Boring' AI Business Model Making Millionaires in 2025" by Ben AI discusses a lucrative and largely overlooked market: AI-powered service agencies, which he calls "AI first service agencies." 
 
-Ben emphasizes that despite the booming AI SaaS (Software as a Service) market and the AI agency sector, the traditional service industry—such as digital marketing, talent, and operational services—remains the largest and most profitable market being disrupted by AI.[1]
+Ben emphasizes that despite the booming AI SaaS (Software as a Service) market and the AI agency sector, the traditional service industry—such as digital marketing, talent, and operational services—remains the largest and most profitable market being disrupted by AI.
 
 ## Key Themes from the Video
 
@@ -138,17 +138,23 @@ Here is a breakdown of famous or notable companies operating in each of the thre
 This list reflects key recognizable players in each segment of the service industry and the AI-powered markets highlighted in the video context. Each category features firms focusing on transforming large traditional spaces with technology and AI.[6][9][1][2][4][5][7]
 
 
-
+## Practical Automation in a HomeLab
 
 ### n8n
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
-![alt text](/blog_img/selfh/automation/n8n-setup.png)
+![Setting up n8n with docker](/blog_img/selfh/automation/n8n-setup.png)
 
 ![alt text](/blog_img/selfh/automation/flaskcms2.png)
 
 ### BotPress
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/botpress" title="BotPress | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ![alt text](/blog_img/selfh/automation/bot-press-setup.png)
 
@@ -166,6 +172,10 @@ This list reflects key recognizable players in each segment of the service indus
 
 ### TypeBot
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/typebot" title="TypeBot | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ![alt text](/blog_img/selfh/automation/typebot.png)
 
 ---
@@ -176,9 +186,9 @@ This list reflects key recognizable players in each segment of the service indus
 
 #### eBook Creation
 
-Just in case you are aware of Pandoc.
+Just in case you are aware of **Pandoc**.
 
-And how to convert .md to cool pdf or even to epub for ebooks.
+And how to convert `.md` to cool `pdf` or even to `epub` for ebooks.
 
 #### Real Estate Chat Bot
 
@@ -186,7 +196,7 @@ The FlaskCMS v2 for real estate was a great idea.
 
 But how about if you can just scrap + get the property added for your collaborations?
 
-![alt text](/blog_img/selfh/automation/flaskcms2.png)
+![Flask Gradients UI](/blog_img/selfh/automation/flaskcms2.png)
 
 > Wasnt it cool that vibe coded gradient?
 
@@ -279,7 +289,7 @@ Test and Activate
 
 ![Github Personal Access Token](/blog_img/selfh/automation/gh-pat.png)
 
-![alt text](/blog_img/selfh/automation/gh-node-n8n.png)
+![Github node n8n](/blog_img/selfh/automation/gh-node-n8n.png)
 
 So writting posts into Github so that the SSG+CI/CD workflow starts be like:
 
@@ -327,7 +337,9 @@ For the **chatbot interface to be rendered** into a website:
 
 Yes, n8n provides a script that can be added to the head of a website to embed an interactive chatbot interface that sends and receives messages from an n8n workflow.
 
-The "N8N Embedded Chat Interface" is a native web component that you can easily integrate on any website with just a few lines of HTML and JavaScript. You include a script tag linking the chatbot interface library from a CDN, then add a custom HTML tag with attributes specifying the webhook URL of your n8n workflow that handles the chatbot logic.
+The "N8N Embedded Chat Interface" is a native web component that you can easily integrate on any website with just a few lines of HTML and JavaScript. 
+
+You include a script tag linking the chatbot interface library from a CDN, then add a custom HTML tag with attributes specifying the webhook URL of your n8n workflow that handles the chatbot logic.
 
 Example snippet to add to your website:
 
@@ -352,18 +364,7 @@ The workflow should respond with JSON in this format:
 }
 ```
 
-This setup allows you to embed a fully functional conversational chatbot powered by n8n workflows directly into your website, supporting real-time interaction with users without needing separate chatbot hosting.[1][2][3][4][5]
-
-[1](https://www.softoneconsultancy.com/how-to-create-an-ai-website-chatbot-with-n8n/)
-[2](https://github.com/symbiosika/n8n-embedded-chat-interface)
-[3](https://blog.n8n.io/how-to-make-ai-chatbot/)
-[4](https://community.n8n.io/t/help-how-to-embed-chatbot-on-my-website-via-cdn/33783)
-[5](https://n8n.io/workflows/2786-create-a-branded-ai-powered-website-chatbot/)
-[6](https://www.youtube.com/watch?v=xQ1tCQZhLaI)
-[7](https://www.reddit.com/r/n8n/comments/1iwltgi/chatbot_embedded_into_own_website/)
-[8](https://www.youtube.com/watch?v=mLTqabG0l7c)
-[9](https://n8n.io/workflows/6290-company-website-chatbot-agent-rag-calendar-integrations/)
-[10](https://community.n8n.io/t/create-a-branded-ai-powered-website-chatbot-with-n8n/73093)
+This setup allows you to embed a fully functional conversational chatbot powered by n8n workflows directly into your website, supporting real-time interaction with users without needing separate chatbot hosting.
 
 ##### n8n x APIFY
 
@@ -375,4 +376,8 @@ This setup allows you to embed a fully functional conversational chatbot powered
 
 ##### n8n x leads
 
+How about capturing leads with some n8n automation?
+
 #### Landing ChatBot with KB knowledge
+
+Or a chatbot for your landing page, that can answer questions based on your knowledge base?

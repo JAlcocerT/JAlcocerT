@@ -40,7 +40,7 @@ I got the Micro SaaS concept into my mind, from the theme:
 
 > > Get also ideas for landings from sites like https://eternalvault.app/pricing/
 
-Because there are others themes, like Saasify that I used as a PoC:
+Because there are others themes, like **Saasify** that I used as a PoC:
 
 Or
 
@@ -76,7 +76,6 @@ https://docs.firecrawl.dev/use-cases/developers-mcp -> https://github.com/firecr
 > MIT |  🔥 **Clone and recreate any website** as a modern React app in seconds 
 
 #### QuantUX
-
 
 Quant-UX is a **usability testing and prototyping platform** that enables design and product teams to quickly create, test, and analyze user interactions with their designs.
 

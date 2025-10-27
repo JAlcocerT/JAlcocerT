@@ -324,6 +324,9 @@ Estas herramientas te permiten crear dashboards, realizar análisis y estudiar e
 
 2. https://github.com/br-g/openf1 with official [page](https://openf1.org)
 
+
+As simple as:
+
 ```sh
 curl "https://api.openf1.org/v1/laps?session_key=9161&driver_number=63&lap_number=8"
 ```
@@ -382,6 +385,12 @@ You are allowed to: `Web App, Automated App or Bot, Confidential client`
 You will need to create the app:
 
 Sth like: `https://grow.libreportfolio.fyi/callback` and `https://grow.libreportfolio.fyi`
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/LibrePortfolio-X" title="LibrePortfolio-X Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code - Flask x (Matplotlib Graphs + OpenAI + X API) " >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="DataInMotion Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A good combo - Matplotlib Graphs + X API" >}}
+{{< /cards >}}
 
 ![alt text](/blog_img/social-media/x-developer-portal-appinfo.png)
 

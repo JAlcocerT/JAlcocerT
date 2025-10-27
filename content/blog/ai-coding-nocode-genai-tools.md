@@ -239,8 +239,13 @@ You could do something similar, but inside your web, with:
 {{< youtube "1Q_MDOWaljk" >}}
 
 {{< callout type="info" >}}
-You can selfhost Chatwoot with this compose
+You can selfhost Chatwoot!
 {{< /callout >}}
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chatwoot" title="ChatWoot | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 #### N8N
 

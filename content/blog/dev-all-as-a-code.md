@@ -124,20 +124,25 @@ npm init slidev #yarn create slidev
 <LatestYouTubeVideo channelId="UCPPMA8ZEusAe5dVH6PbjZFA" width="400" height="225" />
 ```
 
-9. Live data via APIs with custom components. Like these 2 components, [with open-meteo or yfinance based](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk-exadel/components). 
+9. Live data via APIs with **custom components**. Like these 2 components, [with open-meteo or yfinance based](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk-exadel/components). 
 
 ![Slidev live data component from yfinance](/blog_img/entrepre/public-build/slidev-editor/slidev-component-yfinance.png)
+
+{{< callout type="info" >}}
+You can even get away and create one to **pull google sheet data**, so it reflects tables changes in real time
+{{< /callout >}}
 
 10. Live stuff: `http://localhost:3030/presenter` and live annonations
 
 > Similarlo to https://github.com/DmytroVasin/DrawPen or with excalidraw
 
 
-![alt text](/blog_img/entrepre/public-build/slidev-editor/nextjs-slidev-editorlanding.png)
+![SliDev Editor inside its UI](/blog_img/entrepre/public-build/slidev-editor/nextjs-slidev-editorlanding.png)
 
 #### Diagrams are also code!
 
-1. https://diagrams.mingrammer.com/docs/getting-started/examples
+1. With Python, we have: https://diagrams.mingrammer.com/docs/getting-started/examples
+
 2. MermaidJS *you can also use it inside HUGO/Astro/MermaidJS...*
 
 **Had a look to couple of tools for diagrams**
@@ -152,7 +157,7 @@ It renders text to diagram and can reference files: https://gist.githubuserconte
 
 > MIT | Build mindmaps with plain text 
 
-https://github.com/terrastruct/d2
+4. https://github.com/terrastruct/d2
 
 >  D2 is a modern diagram scripting language that turns text to diagrams. 
 

@@ -473,22 +473,24 @@ https://x.com/tom_doerr/status/1979894065400263086?
 
 >> MIT | 🚢 500+ 1-click Portainer app templates
 
-https://github.com/Lissy93/awesome-privacy
+* https://github.com/Lissy93/awesome-privacy
 
 
 
 ### SelfHosted WebAnalytics
+
+Umami should be one of those **HomeLab essentials** tools to consider.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="SelfHostable WebAnalytics Tools 🐋✅ ↗" >}}
 {{< /cards >}}
 
-![Cookies Meme](/blog_img/web/COOKIES.jpg)
+<!-- ![Cookies Meme](/blog_img/web/COOKIES.jpg) -->
 
-
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#better-webanalytics
-
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#better-webanalytics" title="Better web Analytics from 0525" image="/blog_img/web/COOKIES.jpg" subtitle="Post views distribution" >}}
+{{< /cards >}}
 
 
 {{< cards >}}
