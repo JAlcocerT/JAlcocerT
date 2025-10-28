@@ -233,7 +233,7 @@ AIssistant
 https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
 
 
- YT Summarizer
+YT Summarizer
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/summarize-yt-videos" title="Groq Youtube Summarizer" >}}
@@ -248,6 +248,10 @@ https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
 
 
 ### Ollama API
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Selfhosted Ollama - Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 ### OpenAI API
 

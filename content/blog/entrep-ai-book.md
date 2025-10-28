@@ -329,7 +329,11 @@ How the Systems Interrelate
 {{< /details >}}
 
 
-Essentially, both systems use a two-step process: first, an engine (`knitr` for R Markdown, `nbconvert` for Jupyter) processes the code and generates an intermediate Markdown-like file, and second, **Pandoc** takes that intermediate file and converts it to the final document format.
+Essentially, both systems use a two-step process: 
+
+First, an engine (`knitr` for R Markdown, `nbconvert` for Jupyter) processes the code and generates an intermediate Markdown-like file
+
+Second, **Pandoc** takes that intermediate file and converts it to the final document format.
 
 The primary difference is the front-end tool and the language-specific processing, but Pandoc is the shared, underlying engine that makes the final document conversion possible.
 
@@ -345,6 +349,10 @@ The primary difference is the front-end tool and the language-specific processin
 
 * https://github.com/dakoller/markdown-epub-converter
 
->  A simple Docker-based REST API that **converts Markdown to EPUB** format using Pandoc. Send markdown content via JSON, get an `EPUB` file back. 
+>  A simple Docker-based REST API that **converts Markdown to EPUB** format using Pandoc. Send markdown content via JSON, **get an `EPUB` file back.**
 
-* https://omnitools.app/pdf/pdf-to-epub
+* Or just use: https://omnitools.app/pdf/pdf-to-epub
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/omnitools" title="Omnitools | Docker Config 🐋 ↗" >}}
+{{< /cards >}}

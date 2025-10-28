@@ -317,7 +317,7 @@ curl -X POST -F "file=@20251026-1956-0737-wniosek.pdf" http://192.168.1.2:8027/e
 
 ### MD to epub
 
-Just in case you want to put together a epub ebook from markdown (with a cool cover):
+Just in case you want to put together a epub ebook from markdown (with a cool cover): https://github.com/JAlcocerT/sell-your-ebook/tree/main?tab=readme-ov-file#-creating-epub-from-cover-image
 
 ```sh
 convert "1-dna-analytics/Ebook-cover-SSGs.png" -resize 1200x1800\> "cover.jpg" && \
@@ -327,7 +327,7 @@ pandoc -o "Ebook-cover-SSGs.epub" --epub-cover-image="cover.jpg" --metadata titl
 #rm -f cover.jpg content.md
 ```
 
-The cover is not full page, but you get the idea.
+> The cover is not full page, but you get the idea.
 
 And **epub to pdf**
 
@@ -336,7 +336,9 @@ pandoc "Ebook-cover-SSGs.epub" -o "renderedPDF.pdf"
 #pandoc "Ebook-cover-SSGs.epub" -o "renderedPDF.pdf" --pdf-engine=xelatex
 ```
 
-> Which you can send to your kindle or read with Foliate Desktop App
+> Which you can send to your kindle or read with `Foliate/okular/calibre` Desktop Apps
+
+> > Pdf to epub with: https://omnitools.app/pdf/pdf-to-epub
 
 ### Md to PDF
 
@@ -400,7 +402,7 @@ HTML(string=html).write_pdf("output.pdf")
 
 - **Using Pandoc via Python subprocess:**
 
-```python
+```py
 import subprocess
 
 subprocess.run(['pandoc', 'input.md', '-o', 'output.pdf'])
@@ -409,7 +411,7 @@ subprocess.run(['pandoc', 'input.md', '-o', 'output.pdf'])
 ![Pandoc Example](/blog_img/AIBI/jira/pandoc.png)
 
 {{< callout type="info" >}}
-Pandoc generating `.pdf` from `md` is just amazing!
+Pandoc generating `.pdf` from a `md` is just amazing!
 {{< /callout >}}
 
 And can also be run via CLI:

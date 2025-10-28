@@ -243,6 +243,7 @@ Simple things like these landing to collect leads and sell courses.
 4. `https://www.fejeremy.com/2024-app-x`
 5. `https://www.inviertejoven.es/`
 6. `authority.io`
+7. `https://www.invertirdesdecero.com/` 
 
 Not to talk about the subscribe then see some info models:
 

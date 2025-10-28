@@ -11,7 +11,7 @@ I Got a new phone recently.
 
 It promises **7 years of updates**. 
 
-And have good rating here: https://www.kimovil.com/en/compare-smartphones/
+And have good rating here: https://www.kimovil.com/en/compare-smartphones/ also [here](https://www.mgsm.pl/pl/)
 
 Will it be better value for money than the Xiami PocoPhone F1 I got in 2019 for ~325$?
 

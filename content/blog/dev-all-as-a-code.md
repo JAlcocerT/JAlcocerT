@@ -177,10 +177,11 @@ make quick-prod
 
 And it looks as good as: `https://landing-page-book-astro-tailwind.vercel.app/`
 
-Then, I created to just dump my notes into ebooks: https://github.com/JAlcocerT/ebook-ideas
+Then, I created to just **dump my notes** into future ebooks: https://github.com/JAlcocerT/ebook-ideas
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="ebook ideas Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to ship ebooks" >}}
+  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="NEW ebook ideas Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to ship ebooks" >}}
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="sell-your-ebook Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to ship ebooks" >}}
 {{< /cards >}}
 
 
@@ -192,6 +193,15 @@ When you create an ebook, use [Foliate](https://github.com/johnfactotum/foliate)
 sudo snap install foliate
 ```
 
+> Okular or calibre will also do the trick
+
+```sh
+convert selfhosting.png ../sell-your-ebook.pdf
+```
+
+{{< callout type="info" >}}
+EPUB are essentially websites!
+{{< /callout >}}
 
 You know, just in case you want to create your pdf libre or your epub libre org!
 
@@ -684,7 +694,6 @@ Just in case that you dont want to do the [n8n + CMS API](https://jalcocert.gith
 Example: given the repository `https://github.com/Snouzy/workout-cool?tab=readme-ov-file#deployment--self-hosting`
 
 
-
 #### Agentic CLI is cool
 
 {{< cards cols="1" >}}
@@ -696,6 +705,7 @@ https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#goose
 https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#gemini-cli-x-git-mcp
 
 ![Gemini MCP Working](/blog_img/GenAI/geminiCLI/gemini-mcp.png)
+
 ![Goose CLI UI](/blog_img/GenAI/goose-1.png)
 
 
