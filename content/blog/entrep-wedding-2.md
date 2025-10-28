@@ -2,7 +2,7 @@
 title: "BiP a Micro-SaaS | Wedding Edition"
 date: 2025-10-16T09:20:21+01:00
 draft: false
-tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2","ARR","Carbone"]
+tags: ["QR & PDF","Web & DNS","Cloudflare API","Porkbun API","SlubneChwile","R2","ARR","Carbone vs PDFME"]
 description: 'Firebase + PB BaaS. Everything that can be static, is static. CSR Rendering QR and PDFs in browser 🤯'
 url: 'building-in-public-wedding-photo-galleries'
 ---
@@ -161,11 +161,51 @@ python3 -m http.server 8003
 
 #### PDF with Carbone
 
-Then, I got to know: https://carbone.io/examples/
+Then, I got to know **Carbone**: https://carbone.io/examples/
 
 * https://github.com/carboneio/carbone
 
-> Fast and simple **report generator**, from JSON to pdf, xslx, docx, odt...
+
+```sh
+docker run -t -i --rm -p 4000:4000 carbone/carbone-ee
+```
+
+> CARBONE COMMUNITY LICENSE AGREEMENT | Fast and simple **report generator**, from JSON to pdf, xslx, docx, odt...
+
+Which I tested here
+
+But it looks quite complex to use with several moving parts
+
+* https://carbone.io/documentation/design/substitutions/the-basics.html
+* https://carbone.io/documentation/developer/api-sdks/python.html
+* https://carbone.io/documentation/design/overview/template-feature.html
+
+
+{{< callout type="info" >}}
+I also got to know about **PDFME**: https://pdfme.com/
+{{< /callout >}}
+
+* https://pdfme.com/templates
+  * With a **playground** to design: https://playground.pdfme.com/
+  * https://pdfme.com/docs/getting-started
+* https://github.com/pdfme/pdfme
+
+> **MIT** |  Open-source PDF generation library built with TypeScript and React. Features a **WYSIWYG template designer**, PDF viewer, and powerful generation capabilities. Create custom **PDFs effortlessly in both browser** and Node.js environments. 
+
+The [templates](https://pdfme.com/docs/getting-started#template) can be divided into two parts: a fixed part and a variable part.
+
+
+* `basePdf`: PDF data for the fixed part of the PDF to be generated.
+* `schemas`: Definition data for the variable part of the PDF to be generated.
+
+
+{{< callout type="info" >}}
+You also have **PlutoPrint**: https://github.com/plutoprint/plutoprint with awsome [docs](https://plutoprint.readthedocs.io/en/latest/). Seems an option to consider for weddings ✅
+{{< /callout >}}
+
+> **MIT** | A Python Library for Generating **PDFs and Images from HTML**, powered by PlutoBook 
+
+> > The [examples](https://github.com/plutoprint/plutoprint-samples) are also great and I tested [here](https://github.com/JAlcocerT/ebook-ideas/tree/master/x-plutoprint)
 
 
 ### Web when registered

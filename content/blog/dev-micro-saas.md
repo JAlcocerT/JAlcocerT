@@ -69,9 +69,11 @@ Some examples I found:
 
 Having a starting point with an idea is great.
 
+And a landing webpage is actually what a lot of people outthere are looking for.
+
 #### OpenLovable
 
-https://docs.firecrawl.dev/use-cases/developers-mcp -> https://github.com/firecrawl/open-lovable?tab=readme-ov-file
+See https://docs.firecrawl.dev/use-cases/developers-mcp -> https://github.com/firecrawl/open-lovable?tab=readme-ov-file
 
 > MIT |  🔥 **Clone and recreate any website** as a modern React app in seconds 
 
@@ -153,6 +155,19 @@ With Quant-UX, the typical workflow is:
 
 
 **To test quantUX** we can give a try to LandoNorris website: `https://landonorris.com/`
+
+
+You can also try with GoClone: *but the tools is not there yet imo*
+
+* https://github.com/goclone-dev/goclone
+
+> MIT | Website Cloner - Utilizes powerful **Go** routines to **clone websites** to your computer within seconds. 
+
+
+```sh
+goclone https://landonorris.com/
+#python3 -m http.server 8003 --directory ./landonorris.com
+```
 
 ![alt text](/blog_img/web/WebsSnapshots/lando-speed-insights.png)
 

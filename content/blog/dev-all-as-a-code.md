@@ -200,7 +200,7 @@ convert selfhosting.png ../sell-your-ebook.pdf
 ```
 
 {{< callout type="info" >}}
-EPUB are essentially websites!
+EPUB are essentially websites! Thats why they play with with `html`
 {{< /callout >}}
 
 You know, just in case you want to create your pdf libre or your epub libre org!
@@ -227,6 +227,16 @@ But you dont have to do so if you write on a epub friendly format from the get g
 But before going deep and create an ebook, why not creating a **pdf article for your website**?
 
 Like...something for https://www.jalcocertech.com/support/whitepapers/
+
+
+{{< callout type="info" >}}
+From withing th ebook-ideas repo, consider that for [epub use html+calibre](https://github.com/JAlcocerT/ebook-ideas/tree/master/x-html-to-epub) for [pdf use ebook use RMD](https://github.com/JAlcocerT/ebook-ideas/tree/master/x-rmd)
+{{< /callout >}}
+
+```sh
+git clone https://github.com/JAlcocerT/ebook-ideas.git
+x-html-to-epub/build.sh
+```
 
 #### Reports as a code
 
@@ -316,15 +326,14 @@ People do all sort of creative stuff around PDF: https://github.com/domdomegg/pd
 
 #### You can do what with PDF?
 
-
-
 1. https://github.com/pdfme/pdfme
 
 > MIT |  Open-source PDF generation library built with TypeScript and React. Features a WYSIWYG template designer, PDF viewer, and powerful generation capabilities. Create custom PDFs effortlessly in both browser and Node.js environments. 
 
 
 Fast PDF Generator 	Easy PDF Template Design 	Simple JSON Template
-Works on Node and in the browser. Use templates to generate PDFs—complex operations are not required. 	Anyone can easily create templates using the designer. 	Templates are JSON data that is easy to understand and work with.
+Works on Node and in the browser. Use templates to generate PDFs—complex operations are not required. 	Anyone can easily create templates using the designer.
+emplates are JSON data that is easy to understand and work with.
 
 With very interesting templates: https://pdfme.com/templates and even template designer playground https://pdfme.com/template-design
 
@@ -347,12 +356,12 @@ PlutoPrint is a lightweight and easy-to-use Python library for generating high-q
 
 ```sh
 pip install plutoprint
-
+```
 
 
 ## Video as a Code
 
-[Video ,editing' Thanks to FFMPEG and the CLI](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing), of course!
+[Video editing Thanks to FFMPEG and the CLI](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing), of course!
 
 You could also use GUI tools:
 

@@ -700,6 +700,8 @@ Make sure to point **CF DNS records**, maybe using a script like [this](https://
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/porkbun-domains.py" title="Porkbun API Py Script ↗" >}}
 {{< /cards >}}
 
+Check where are the DNS record pointing with:
+
 ```sh
 sudo apt-get install dnsutils -y #dns resolution
 nslookup github.com 

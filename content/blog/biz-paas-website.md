@@ -212,14 +212,25 @@ cd ./hugo-theme-gallery-ssg/exampleSite
 As per the `theme.toml` file, we need *at least* hugo 0.121.2 version
 {{< /callout >}}
 
+Make sure to install GO: *Alternatively, check https://go.dev/dl/*
+
 
 ```sh
 sudo apt install golang-go
+#wget -P /tmp https://go.dev/dl/go1.21.6.linux-amd64.tar.gz
+#sudo rm -rf /usr/local/go
+#sudo tar -C /usr/local -xzf /tmp/go1.21.6.linux-amd64.tar.gz
+#nano ~/.bashrc
+#export PATH=$PATH:/usr/local/go/bin
+#source ~/.bashrc #go version go1.21.6 linux/amd64
 ```
 
 ```sh
 go version #Go is updated!
+#go version go1.18.1 linux/amd64
 ```
+
+
 
 And now, HUGO: https://github.com/gohugoio/hugo/releases/tag/v0.121.1
 

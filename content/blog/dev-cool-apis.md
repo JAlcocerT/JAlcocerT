@@ -255,6 +255,8 @@ YT Summarizer
 
 ### OpenAI API
 
+We can do many cool things with just simple LLM API calls:
+
 
 
 ## Data APIs

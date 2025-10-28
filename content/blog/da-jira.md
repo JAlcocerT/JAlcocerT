@@ -206,7 +206,14 @@ Some notable open source options are:
 6. **OpenDataLab** https://github.com/opendatalab/PDF-Extract-Kit
 
 * https://opendatalab.github.io/MinerU/demo/
-* https://github.com/opendatalab/MinerU
+
+7. https://github.com/Unstructured-IO/unstructured
+
+> Apache v2 |  Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.
+
+7.  https://github.com/opendatalab/MinerU
+
+>  Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows. 
 
 7. https://github.com/allenai/olmocr
 
@@ -227,6 +234,10 @@ Some notable open source options are:
 7. https://github.com/Unstructured-IO/unstructured
 
 >  Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.
+
+7. https://github.com/chatdoc-com/OCRFlux
+
+>  OCRFlux is a lightweight yet powerful multimodal toolkit that significantly advances **PDF-to-Markdown conversion**, excelling in complex layout handling, complicated table parsing and cross-page content merging. 
 
 
 8. https://github.com/CosmosShadow/gptpdf

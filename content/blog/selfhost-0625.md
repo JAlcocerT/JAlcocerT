@@ -29,12 +29,12 @@ Discovering [lazydocker](https://github.com/jesseduffield/lazydocker/releases) t
 ```sh
 #docker stats
 sudo apt  install golang-go
-go install github.com/jesseduffield/lazydocker@latest
+go install github.com/jesseduffield/lazydocker@latest #another project using GoLanguage!
 export PATH=$PATH:$(go env GOPATH)/bin
 #docker stats --no-stream --format "{{.Name}}\t{{.CPUPerc}}" | head -n -1 | sort -nrk 2
 ```
 
-Or just with a container that *dissapears on exit*:
+Or just run **LazyDocker with a container** that *dissapears on exit*:
 
 ```sh
 docker run --rm -it \
@@ -52,13 +52,13 @@ docker run --rm -it \
 
 In the meantime...
 
-People keep doing awsome stuff: *this time with solar energy*
+People keep doing awsome stuff: *this time with **solar energy***
 
 <!-- https://www.youtube.com/watch?v=Alx_vwyksTw -->
 
 {{< youtube "Alx_vwyksTw" >}}
 
-> I expect to write a post about solar panels *soon* (relating it with micro-controllers).
+> I expect to write a post about solar panels *soon* (relating it with micro-controllers)
 
 
 ## Improvements

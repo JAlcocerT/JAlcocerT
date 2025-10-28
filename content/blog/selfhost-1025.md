@@ -184,6 +184,7 @@ Choosing between **Transmission** and **qBittorrent** for [P2P](https://jalcocer
 3. Performance and Stability
 
 * **Performance:** Performance is generally competitive. Some users report slightly faster speeds with qBittorrent, particularly with complex or multiple simultaneous downloads, but others find Transmission equally fast for basic needs.
+
 * **Stability:** Both are generally stable. Transmission has had historical security incidents (though resolved), and its design means it tends to use fewer resources, which can aid stability on weaker hardware. qBittorrent is well-regarded for its stability, even under a heavy load of thousands of torrents.
 
 | Choose **Transmission** If... | Choose **qBittorrent** If... |
@@ -227,14 +228,32 @@ Choosing between **Transmission** and **qBittorrent** depends on your priorities
 
 ### Backup websites
 
-1. https://github.com/goclone-dev/goclone
+If you like some post, you can always do some quick script to get a copy, like [this](https://github.com/JAlcocerT/ebook-ideas/tree/master/x-html-md-notes-from-websites).
 
+Also there are some projects to backup websites, like:
 
-> MIT | Website Cloner - Utilizes powerful Go routines to clone websites to your computer within seconds. 
+1. [ArchiveBox](https://github.com/ArchiveBox/ArchiveBox)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/archivebox" title="TinyAuth | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
+
+>  MIT | 🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more... 
 
 2. You could also use https://github.com/dvcoolarun/web2pdf
 
+```sh
+git clone https://github.com/dvcoolarun/web2pdf.git
+cd web2pdf && docker build -t web2pdf .
+docker run -it --rm -v $(pwd):/app web2pdf
+```
+
 >  🔄 CLI to convert Webpages to PDFs 🚀 
+
+{{< callout type="warning" >}}
+I tried these 2 at [ebook-ideas](https://github.com/JAlcocerT/ebook-ideas) `x-web-to-pdf` and `x-web-goclone`
+{{< /callout >}}
+
 ---
 
 ## Conclusions
