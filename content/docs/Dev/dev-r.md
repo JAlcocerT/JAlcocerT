@@ -61,7 +61,7 @@ Have a look to **Shiny**.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for RStocks" >}}
-    {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="RStocks" image="/blog_img/hardware/x300.jpg" subtitle="Creating and Deploying a ShinyAPP with R | Blog Post" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="RStocks" image="https://github.com/JAlcocerT/R_Stocks/raw/main/Z_Sample_Data/DividendEvo.jpeg" subtitle="Creating and Deploying a ShinyAPP with R | Blog Post" >}}
 {{< /cards >}}
 
 And if you are looking for a Flexdashboard example (deployed to Github Pages), see:

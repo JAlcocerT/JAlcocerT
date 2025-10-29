@@ -448,7 +448,3 @@ SUM(IFERROR(MAP(SEQUENCE(1000;1;21);LAMBDA(x;INDIRECT("20"&(x)&"!K8")));0))
 ```
 
 * Calcula un promedio ponderado de un valor (calculado a partir de la multiplicación de dos columnas) en múltiples hojas, donde se cumplen ciertas condiciones.
-
-**Sitio Web para Datos de Mercado:**
-
-* markets.ft.com

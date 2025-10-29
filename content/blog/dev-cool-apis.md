@@ -315,6 +315,7 @@ Ergast API           |  Sí      |  Sí           |  No       |  API gratuita y 
 
 - OpenF1 API: Ofrece datos en tiempo real y acceso gratuito a históricos, incluyendo telemetría, comunicaciones y vueltas. Ideal para dashboards o análisis detallado. Documentación y ejemplos en openf1.org.
 - FastF1 (Python package): Permite extraer telemetría, tiempos por vuelta, posiciones, acelerador, freno y más directamente desde los feeds oficiales. Fácil de usar con Pandas y Matplotlib para visualizaciones. Instalación vía pip o conda.
+  * There is also an R version: https://cran.r-project.org/web/packages/f1dataR/index.html
 - Formula Live Pulse API: Real-time telemetría, tiempos, análisis de neumáticos y comparaciones entre pilotos. Ofrece widgets personalizables y está disponible para web, iOS y Android.
 
 Opciones en Web y Apps
@@ -328,7 +329,7 @@ Comunidad y Recursos Técnicos
 
 - En Reddit y blogs técnicos, recomiendan FastF1 y OpenF1 como principales fuentes para programadores y analistas. También se menciona Ergast para estadísticas históricas.[6][18]
 
-Estas herramientas te permiten crear dashboards, realizar análisis y estudiar estrategias de piloto en tiempo real con gran profundidad.[9][11][1][4][10]
+Estas herramientas te permiten crear dashboards, realizar análisis y estudiar estrategias de piloto en tiempo real con gran profundidad.
 
 [2](https://www.reddit.com/r/F1DataAnalysis/comments/16w84uz/openf1_an_api_for_realtime_f1_data/)
 
@@ -534,6 +535,7 @@ sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
 
 ```sh
 wget -P ~/Applications https://github.com/httpie/desktop/releases/download/v2025.2.0/HTTPie-2025.2.0.AppImage
+#httpie
 ```
 
 >  🚀 HTTPie Desktop — cross-platform API testing client for humans. Painlessly test REST, GraphQL, and HTTP APIs. 
@@ -552,7 +554,6 @@ flatpak install flathub com.reqable.Reqable
 
 >  MIT | The most intuitive desktop API client. Organize and execute **REST, GraphQL, WebSockets, Server Sent Events, and gRPC** 🦬 
 
-4. 
 
 ---
 
@@ -591,7 +592,12 @@ Key points about Pipedream:
 - **Comparison:** Unlike Zapier or Make.com, Pipedream exposes the underlying logic/code—you get the power of serverless backend but managed hosting and easy debugging. It appeals to users who want flexibility, speed, and API agility.[6][1]
 
 **Summary:**  
-Pipedream is ideal for developers wanting rapid, flexible automation between cloud services, APIs, and custom code, without managing servers. It’s fast for prototyping, robust for event-driven scripting, and widely used for DevOps, SaaS, and workflow automation. Not a true no-code solution; best suited for technically comfortable users.[4][2][3]
+
+Pipedream is ideal for developers wanting rapid, flexible automation between cloud services, APIs, and custom code, without managing servers.
+
+It’s fast for prototyping, robust for event-driven scripting, and widely used for DevOps, SaaS, and workflow automation. 
+
+Not a true no-code solution; best suited for technically comfortable users.
 
 ### Smithery
 
@@ -636,7 +642,7 @@ https://jalcocert.github.io/JAlcocerT/local-ai-audio/
 
 #### 11Labs x MCP
 
-ElevenLabs already has its own MCP Server:
+**ElevenLabs** already has its own MCP Server:
 
 <!-- https://www.youtube.com/watch?v=uOneCuSj2tI -->
 

@@ -2,7 +2,7 @@
 title: "SaaS around Stripe API"
 date: 2025-10-08T01:20:21+01:00
 draft: false
-tags: ["Micro SaaS Essentials","Stripe goodies"]
+tags: ["Micro SaaS Essentials","Stripe goodies","Clerk"]
 description: 'BiP user flows around authentication layers and stripe paywalls'
 url: 'stripe-for-saas'
 ---
@@ -78,6 +78,20 @@ Or to sell simple microSaaS services like: `https://poopup.co/`
 
 3. Place some features behind Stripe.
 
+### What about Clerk?
+
+Clerk is a good alternative to Supabase Auth. https://clerk.com/docs which brings an interesting [Py SDK](https://github.com/clerk/clerk-sdk-python/blob/main/README.md)
+
+
+{{< details title="Auth Alternatives for webapps...📌" closed="true" >}}
+
+
+* https://www.reddit.com/r/Supabase/comments/1dvabn6/what_is_the_best_solution_to_use_supabase_auth/
+* https://www.reddit.com/r/nextjs/comments/1bvda9r/officially_hate_supabase_auth/?rdt=40537
+* https://www.reddit.com/r/Supabase/comments/xaxecr/authentication_with_supabase_is_easy_almost/
+
+{{< /details >}}
+
 
 ---
 
@@ -87,4 +101,4 @@ RLS - row level security is very important!
 
 Make sure that one user can only edit records related to that particular user.
 
-Also pwd should be hashed on the DBs, just in case the DB gets compromised.
+Also **pwd's should be hashed** on the DBs, just in case the DB gets compromised.

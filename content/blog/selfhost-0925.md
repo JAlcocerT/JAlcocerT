@@ -288,7 +288,7 @@ Remember about:
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for anyone starting a Home-Lab" >}}
 {{< /cards >}}
 
-3. Free goodies: https://free-for.dev/#/ and https://freestuff.dev/alternative/clerk/
+3. Free goodies: https://free-for.dev/ and https://freestuff.dev/alternative/
 
 
 

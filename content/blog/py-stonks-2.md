@@ -11,11 +11,12 @@ math: true
 
 **Tl;DR**
 
-The historical stock webapp, companion for: https://financeinmotion.fyi
+The historical stock webapp, companion for: `https://financeinmotion.fyi`
 
 +++ [People are doing](#people-are-doing) the classic bait: *I finally reach xyz divs a year* On reddit with a snapshot of a web app to get traction.
 
 +++ More and cooler yfinance for a ~ PyStocks v2
+
 
 **Intro**
 
@@ -40,8 +41,12 @@ While playing very well with SSGs like Astro, unlike Flask or Django.
 Now, Im going to take back the collaboration with my friend: btw, he is a [PDH](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/).
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/py-stonks-cerdos" title="PyStonks Cerdos" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code" >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks-cerdos" title="NEW PyStonks Cerdos Version" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code" >}}
+  {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks" image="https://github.com/JAlcocerT/R_Stocks/raw/main/Z_Sample_Data/DividendGrowth.jpeg" subtitle="Source Code of the good old R_Stocks WebApp with Shiny" >}}  
 {{< /cards >}}
+
+
+<!-- ![Alternative text for the image](https://github.com/JAlcocerT/R_Stocks/raw/main/Z_Sample_Data/DividendGrowth.jpeg) -->
 
 
 ## The Data Model
@@ -106,6 +111,10 @@ classDef class1 fill:red,color:blue,stroke:#FFD600;
 25. Maybe crypto? https://www.blockchain.com/explorer
 26. Maybe bonds? https://www.interactivebrokers.ie/portal/#/wlms/bond-scanner
 
+**Sitio Web para Datos de Mercado:**
+
+* markets.ft.com
+
 With this data model, you will have answers, but also questions:
 
 > Wait, the oil is at the same price than 2006 but i pay more for it? https://www.macrotrends.net/2483/brent-crude-oil-price-history
@@ -132,7 +141,7 @@ While dlt focuses on data loading and normalization, it helps create a database 
 
 However, it primarily focuses on the **"load" (L) in ETL/ELT pipelines**.
 
-So, in summary, dlt can extract from APIs or raw data, normalize it, and load it into a destination database by generating an appropriate schema to support analytical workloads—effectively enabling OLAP-style data organization.
+So, in summary, dlt can extract from APIs or raw data, normalize it, and load it into a destination database by generating an appropriate schema to support analytical workloads—effectively enabling **OLAP-style data organization**.
 ​
 {{< callout type="info" >}}
 From these [interesting packages while doing pystocks](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#interesting-pkgs-i-got-to-learn)Need to see how to use [DLT](https://github.com/dlt-hub/dlt)
@@ -140,14 +149,15 @@ From these [interesting packages while doing pystocks](https://jalcocert.github.
 
 #### DLT x yFinance
 
-
+Data load tool, an open source Python library that makes data loading easy 🛠️
 
 * https://dlthub.com/docs/intro
 * https://github.com/dlt-hub/dlt
 
- data load tool, an open source Python library that makes data loading easy 🛠️
 
-dlt is an open-source Python library that loads data from various, often messy data sources into well-structured, live datasets. It offers a lightweight interface for extracting data from REST APIs, SQL databases, cloud storage, Python data structures, and many more.
+dlt is an open-source Python library that loads data from various, often messy data sources into well-structured, live datasets. 
+
+It offers a lightweight interface for extracting data from REST APIs, SQL databases, cloud storage, Python data structures, and many more.
 
 ---
 

@@ -96,17 +96,6 @@ Tech Side:
 - And that I can plug user authentication easily
 - To see whats the best way for me to authencate users: clear/supabase/logto...
 
-{{< details title="Auth Alternatives for webapps...📌" closed="true" >}}
-
-* https://clerk.com/docs
-* https://github.com/clerk/clerk-sdk-python/blob/main/README.md
-
-* https://www.reddit.com/r/Supabase/comments/1dvabn6/what_is_the_best_solution_to_use_supabase_auth/
-* https://www.reddit.com/r/nextjs/comments/1bvda9r/officially_hate_supabase_auth/?rdt=40537
-* https://www.reddit.com/r/Supabase/comments/xaxecr/authentication_with_supabase_is_easy_almost/
-
-{{< /details >}}
-
 ![Streamlit Real Estate WebApp](/blog_img/data-experiments/buy_mortage_streamlitapp.png) 
 
 {{< cards cols="1" >}}
