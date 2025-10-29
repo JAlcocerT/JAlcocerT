@@ -61,8 +61,10 @@ sudo apt install dupeguru
 
 4. Upscayl
 
-For background removal, try...
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/upscayl/upscayl" title="Upscayl to enhance images locally" >}}
 {{< /cards >}}
+
+
+For background removal, try...

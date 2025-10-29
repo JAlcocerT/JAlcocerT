@@ -1,0 +1,15 @@
+% Preamble for PDF rendering via rmarkdown::pdf_document
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+
+% Helper to place a full-bleed image on a page
+\newcommand\FullPageCover[1]{%
+  \ClearShipoutPicture
+  \AddToShipoutPictureFG*{%
+    % Slight oversize to avoid any rounding gap; no aspect-ratio preservation
+    \AtPageLowerLeft{\includegraphics[width=\dimexpr\paperwidth+0.5mm\relax,height=\dimexpr\paperheight+0.5mm\relax,keepaspectratio=false]{#1}}}%
+  \thispagestyle{empty}\mbox{}\newpage
+  \ClearShipoutPicture
+}

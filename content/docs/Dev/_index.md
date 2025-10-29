@@ -13,6 +13,10 @@ Just use diagrams: *for whatever your have to explain*
 * https://markmap.js.org/repl
 * MermaidJS
 
+{{< cards >}}
+  {{< card link="https://landing-page-book-astro-tailwind.vercel.app/static/(Sample)-14-Habits-of-Highly-Productive-Developers.pdf" title="Get an ebook with all Data Analytics concepts you need" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to land a job in D&A" >}}
+{{< /cards >}}
+
 ## Analytics
 
 For a career in D&A you will need to be familiar with certain tools.

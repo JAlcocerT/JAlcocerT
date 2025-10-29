@@ -16,6 +16,10 @@ Pandoc can do very cool things.
 
 +++ [Business Model Canvas](#business-canvas)
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="My Ebook Ideas" image="/blog_img/apps/gh-jalcocert.svg" subtitle="New ebook ideas repo" >}}
+{{< /cards >}}
+
 
 **Intro**
 

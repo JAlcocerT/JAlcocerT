@@ -14,6 +14,13 @@ I got started with IoT thanks to a [Pi SBC](https://jalcocert.github.io/JAlcocer
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="You might get help of some visualizations and BI Tools" image="/blog_img/iot/grafana.png" subtitle="Like Grafana!" >}}  
 {{< /cards >}}
 
+
+After many many hours of tinkering and learning IoT, I've come to the conclusion that it's a great way to learn about hardware and software.
+
+{{< cards >}}
+  {{< card link="https://landing-page-book-astro-tailwind.vercel.app/static/(Sample)-14-Habits-of-Highly-Productive-Developers.pdf" title="Get an ebook with IoT Concepts and Projects" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to get started with IoT" >}}
+{{< /cards >}}
+
 ## Inspirational Resources
 
 Combining Blender + Arduino + Real Time Accelerometer Data: https://pabramsor.com/blender-and-arduino-accelerometer/
