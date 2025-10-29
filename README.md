@@ -10,7 +10,8 @@
 
  
 - 📝 I regularly update the content on *[my Tech Blog](https://www.jalcocertech.com/)* <a href="https://www.jalcocertech.com"><img src="https://raw.githubusercontent.com/JAlcocerT/JAlcocerT/main/jalcocertech2.svg" alt="Subscribe via RSS" height="25" style="vertical-align: bottom;"/></a>
-    * I love sharing with others - I have created these public guides for [Linux](https://jalcocert.github.io/Linux) and [Docker](https://github.com/JAlcocerT/Docker).
+    * I love sharing with others - I have created these public guides for [Linux](https://jalcocert.github.io/Linux) and [HomeLabs](https://github.com/JAlcocerT/HomeLab).
+    * For the ones who like to read and learn, [get my **D&A ebook**](https://github.com/JAlcocerT/JAlcocerT/raw/main/Z_ebooks/dna-ebook.pdf).
 
 - ⚙️Simulations: *I also like to understand how machines work*
     * [Slider-Crank](https://github.com/JAlcocerT/Slider-Crank) - a DASH app that helps to visualize the physics of a Slider-Crank mechanism

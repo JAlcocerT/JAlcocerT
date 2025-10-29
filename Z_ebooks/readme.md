@@ -13,3 +13,5 @@ Rscript Z_ebooks/render.R \
   --output Z_ebooks/dna-ebook.pdf \
   --cover Z_ebooks/sample-cover.png
 ```
+
+Then add the **link to download** the pdf, right from your public github: https://github.com/JAlcocerT/JAlcocerT/raw/main/Z_ebooks/dna-ebook.pdf

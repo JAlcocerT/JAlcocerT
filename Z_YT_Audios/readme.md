@@ -1,3 +1,7 @@
+Just see: https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/Audio or this [flask youtube helper](https://github.com/JAlcocerT/py-speech-rater)
+
+---
+
 Better **YT Workflow** on:
  
 * https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#youtube-tricks
