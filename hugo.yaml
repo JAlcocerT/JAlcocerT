@@ -70,11 +70,11 @@ menu:
     - identifier: Linux
       name: "Linux Guide ↗"
       url: "https://jalcocert.github.io/Linux/"
-      weight: 5
-    - identifier: Docker
-      name: "Docker Config Files ↗"
-      url: "https://github.com/JAlcocerT/Docker/"
-      weight: 6              
+      weight: 6
+    - identifier: HomeLab
+      name: "HomeLab Config Files↗"
+      url: "https://github.com/JAlcocerT/Home-Lab/"
+      weight: 5              
                         
 params:
   navbar:
