@@ -1,5 +1,5 @@
 ---
-title: "HUGO Websites"
+title: "Websites - HUGO"
 draft: false
 url: 'create-your-website-hugo-ssg'
 type: docs

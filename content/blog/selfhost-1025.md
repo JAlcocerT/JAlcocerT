@@ -329,8 +329,20 @@ Identify the vendor of the [macs connected](https://it-tools.tech/mac-address-lo
 
 Probably having a VPS as compute backup is not a bad idea.
 
-And **hetzner** has been leveling up their game:
+And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their game: https://docs.hetzner.com/
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-hetzner-vps-setup" title="Hetzner VPS Setup | Script ↗" >}}
+{{< /cards >}}
+
+> [CX23](https://www.hetzner.com/cloud/) > CX22 in performance?
+
+> > Pay only for the hours you use, if you have a server for less than a month. No minimum contract period required!
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/docker-compose.vps.yml" title="Traefik x VPS Setup | Script ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks" title="Benchmarks | Script ↗" >}}
+{{< /cards >}}
 
 
 2. **Termix** has a [desktop app](https://docs.termix.site/install#connector) now:
@@ -663,30 +675,3 @@ But we already covered similar tools:
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener Status Pages | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
-
-### Uptime Kuma API
-
-Yes, Uptime Kuma does provide an API, but it is primarily an internal API designed for the application's own use and is not officially supported for third-party integrations. 
-
-It offers a `Socket.io` real-time communication API after authentication and some RESTful API endpoints for tasks like push monitors, status badges, and public status page data.
-
-Using the API (especially through unofficial wrappers like the Python wrapper "uptime-kuma-api"), you can programmatically add new monitors (websites or services) and retrieve some monitoring data.
-
-For example, you can create a new HTTP monitor by specifying the type, name, and URL via the API.[2][3]
-
-The API allows you to:
-
-- Post new websites or services to monitor.
-- Retrieve their status and monitoring data.
-- Access real-time updates through Socket.io.
-- Get status badges or integrate with Prometheus metrics.
-  
-However, the official API is somewhat limited and not guaranteed to be stable or fully documented for external use, so use it with caution.
-
-In summary:
-
-- You can add monitors programmatically.
-- You can retrieve monitoring data (status, alerts).
-- The API is mostly internal and unofficial but functional.
-- There are third-party wrappers to help interact with it.

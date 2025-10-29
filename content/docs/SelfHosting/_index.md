@@ -86,11 +86,11 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 
 Created a repository with clean compose files for anyone to try these services: https://github.com/JAlcocerT/Home-Lab/
 
-> See https://github.com/JAlcocerT/Docker/tree/main/SelfH for stacks on what im Selfhosting at a certain month/year.
+> See [this folder for stacks](https://github.com/JAlcocerT/Home-Lab/tree/main/z-homelab-setup/evolution) on what im Selfhosting at a certain month/year.
 
 1. Container UI's 🐳: [Portainer](https://github.com/JAlcocerT/Home-Lab/tree/main/portainer), Rancher, Dockge...
 
-2. Syncthing 🐳
+2. Syncing 🐳: [Syncthing](https://github.com/JAlcocerT/Home-Lab/tree/main/syncthing)
 
 3. Tools 🐳: [IT-Tools](https://github.com/JAlcocerT/Home-Lab/tree/main/it-tools), CosmosServer, [OmniTools](https://github.com/JAlcocerT/Home-Lab/tree/main/omni-tools)
 
@@ -104,7 +104,7 @@ Created a repository with clean compose files for anyone to try these services: 
 
 6. [GenAI Tools 🐳](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen) 
 
-7. HTTPs Tools: Like NGINX, Traefik, Cloudflare Tunnels or Pangolin/NetGoat/...
+7. [HTTPs Tools](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/): Like NGINX, Traefik, Cloudflare Tunnels or Pangolin/NetGoat/...
 
 > I also enjoyed [DuckDNS](https://hub.docker.com/r/linuxserver/duckdns).
 
@@ -115,5 +115,3 @@ Created a repository with clean compose files for anyone to try these services: 
 > The docker related files are [here 🐳](https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos)
 
 10. [SSGs](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro) combined with a headlessCMS and [selfhosted static server](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-static-hosting) 🐳 
-
-11. Change Detection

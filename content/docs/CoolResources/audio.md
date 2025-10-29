@@ -27,7 +27,7 @@ With those, I created:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/audio-to-text-tools/#conclusions" title="Speech Rater Creation" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="st audio and OpenAI | Post" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="NEW Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
 {{< /cards >}}
 
 ## TTS

@@ -34,6 +34,11 @@ See this **example** on how one service ([Multichat](https://github.com/JAlcocer
 [![Star History Chart](https://api.star-history.com/svg?repos=NginxProxyManager/nginx-proxy-manager,traefik/traefik,caddyserver/caddy&type=Date)](https://star-history.com/#NginxProxyManager/nginx-proxy-manager&traefik/traefik&caddyserver/caddy&Date)
 
 
+I closed 2024 with a [post about selfhosting AI apps **with Caddy**](https://jalcocert.github.io/JAlcocerT/selfhosting-python-ai-apps-caddy/#how-to-setup-caddy).
+
+But at this moment I think [Traefik](#traefik) > [NGINX](#nginx) is the best option if you are not [behind a NAT](#behind-a-nat).
+
+
 ### Traefik
 
 Sample Selfhosted Apps with **Traefik support** out of the box:
@@ -77,16 +82,23 @@ Whats great about Traefik, is that you can provide HTTPs to other services, just
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Security/Proxy/Traefik" title="Traefik | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik HomeLab | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik v3.3 HomeLab Setup | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 And all of that happens programatically, plus we wont have conflict of using the same ports, as the host wont be seeing them!
 
-### Caddy
+Sample of Selfhosted app with https working thanks to [traefik working on a MiniPC](https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/docker-compose.casa.yml):
 
-I tried to close 2024 with a [post about selfhosting AI apps with Caddy](https://jalcocert.github.io/JAlcocerT/selfhosting-python-ai-apps-caddy/#how-to-setup-caddy).
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/tinyauth/docker-compose.firebat.yml" title="TinyAuth with Traefik | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/flask-three-bodies/docker-compose.traefik.yml" title="Flask Three Bodies with Traefik from domain root | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
-Sample SelfHosted Apps with **Caddy support** out of the box:
+
+{{< callout type="info" >}}
+Thanks to [Jims Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI) and Chrstian Lempa for the explanatory videos!
+{{< /callout >}}
+
 
 ### NGINX
 
@@ -100,20 +112,17 @@ Example project working with NGINX Proxy Manager:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/nginx_docker_compose.yaml" title="NginxPM Docker Config File 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/HomeLab/blob/main/nginx" title="NGINX HomeLab Setup | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
-{{< callout type="info" >}}
-Thanks to Jims Garage and Chrstian Lempa for the explanatory videos!
-{{< /callout >}}
 
 ## Behind a NAT 
 
 Initially, it was all about [cloudflared](#cloudflare-tunnels), but lately you will also hear about:
 
 1. Pangolin
-2. 
-3. [Cloudflare Tunnels](#cloudflare-tunnels)
+2. [Cloudflare Tunnels](#cloudflare-tunnels)
+3. [NetGoat](https://github.com/netgoat-xyz/netgoat)
 
 ### Cloudflare Tunnels
 

@@ -1,5 +1,5 @@
 ---
-title: "Astro Websites"
+title: "Websites - Astro "
 draft: false
 url: 'create-your-website-astro-ssg'
 type: docs

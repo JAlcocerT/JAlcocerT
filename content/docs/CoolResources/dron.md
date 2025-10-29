@@ -10,7 +10,7 @@ url: 'useful-dron-stuff'
 With drons we kind of combine it all: electronics, programming, physics and...fun!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/" title="Budget Drone" image="/blog_img/hardware/dji-dron.png" subtitle="Tinkering with a DJI Ryze Tello" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/" title="Budget Drone" image="/blog_img/hardware/dji-dron.png" subtitle="Tinkering with a DJI Ryze Tello | Post" >}}
 {{< /cards >}}
 
 * https://www.diyfpv.com/

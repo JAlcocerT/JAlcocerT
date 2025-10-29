@@ -1,6 +1,6 @@
 ---
-title: "Fature Flags for your SaaS"
-date: 2025-10-27T15:20:21+01:00
+title: "Fature Flags for your SaaS x Golang"
+date: 2025-11-27T15:20:21+01:00
 draft: false
 tags: ["Dev","GoFeatureFlag vs PocketBase","GoLang"]
 description: 'FF with Go for your WebApps.'
@@ -12,6 +12,15 @@ WIP
 {{< /callout >}}
 
 **TL;DR** 
+
+This year I have to be impressed about the cool projects around Golang
+
+**Intro**
+
+The [Go language](#about-go-projects) surprised me with another cool project to make better SaaS: [GoFF](#go-feature-flag)
+
+But, we could also simplify this [feature flags setup via PocketBase as BaaS](#feature-flags-with-pb)
+
 
 I got to know about [Go Feature Flag](#go-feature-flag), a better way to activate functions to Flask Web Apps than via *container + env vars*?
 
@@ -29,12 +38,6 @@ You can see how well it works: <https://fast-payroll-theme.pages.dev/signup/>
 And [within that post's conclusions](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#conclusions) I reflected on the next steps of the setup.
 
 > If you are logged in...do you have which features available? Is there any logic that activate/deactivates them?
-
-**Intro**
-
-The [Go language](#about-go-projects) surprised me with another cool project to make better SaaS: [GoFF](#go-feature-flag)
-
-But, we could also simplify this [feature flags setup via PocketBase as BaaS](#feature-flags-with-pb)
 
 
 ## What are feature flags?
@@ -185,9 +188,15 @@ This seems to be the  year for me to discover the **goodies of GO language**.
 
 Its not just HUGO.
 
-But Cadyy and Traefik. 
+But Cadyy and **Traefik**. 
 
 [SFTP-GO](https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go) or the mighty POCKETBASE...
+
+
+### Traefik
+
+### PocketBase
+
 
 
 ---

@@ -119,6 +119,7 @@ ZenRows is best for **technically adept users** needing to scrape protected or d
 {{< /details >}}
 
 **Summary:**  
+
 Exa is a powerful API and search engine for developers and AI platforms needing live, reliable access to web data—whether for agentic automation, research workflows, candidate sourcing, market intelligence, marketing analysis, or RAG pipelines.
 
 It’s frequently described as “Perplexity-as-a-service” for customizable, factual, and privacy-conscious web data access.
@@ -257,6 +258,9 @@ YT Summarizer
 
 We can do many cool things with just simple LLM API calls:
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI" title="OpenAI API Tests Scripts with MultiChat" >}}
+{{< /cards >}}
 
 
 ## Data APIs

@@ -80,10 +80,10 @@ Which can also be [part of HUGO](https://jalcocert.github.io/JAlcocerT/using-hug
 
 ### Structurizr Lite 
 
+The free and open source version of Structurizr allows you to view/edit diagrams, view documentation, and view architecture decision records defined via a DSL or JSON workspace.
+
 * https://github.com/structurizr/lite
 * https://docs.structurizr.com/lite
-
-This free and open source version of Structurizr allows you to view/edit diagrams, view documentation, and view architecture decision records defined via a DSL or JSON workspace.
 
 > Structurizr Lite can be used standalone for workspace viewing/authoring, or in conjunction with the cloud service/on-premises installation as an authoring/testing/staging environment.
 
