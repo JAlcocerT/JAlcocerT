@@ -67,9 +67,19 @@ Have a look to **Shiny**.
 And if you are looking for a Flexdashboard example (deployed to Github Pages), see:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="The RStocks related FlexDashboard" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="Sample flexdashboard deployed to github pages" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="The RStocks related FlexDashboard" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="Sample flexdashboard deployed to github pages - Retirement Facts" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
 I covered **Containers for R Apps** [here](https://jalcocert.github.io/JAlcocerT/building-r-shiny-apps-container-image-with-docker/)
 {{< /callout >}}
+
+## eBooks with R
+
+We can say that creating ebooks with R language its also data driven.
+
+Get a `.md` file and render it to pdf with R.
+
+Together with a cool [cover that you can create on canva](https://www.canva.com/s/templates?query=ebook), you can have a pdf ebook.
+
+See this folder: https://github.com/JAlcocerT/JAlcocerT/tree/main/Z_ebooks

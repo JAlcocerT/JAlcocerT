@@ -44,3 +44,29 @@ Rscript Z_ebooks/render.R \
   --output Z_ebooks/iot-ebook.pdf \
   --cover Z_ebooks/IoT-ebook.png
 ```
+
+## Selfhosting
+
+```sh
+Rscript Z_ebooks/render.R \
+  --input Z_ebooks/selfhosting-ebook.md \
+  --output Z_ebooks/selfhosting-ebook-fosseng.pdf \
+  --cover Z_ebooks/ebook-selfHfosseng.png
+```
+
+## Webs
+
+
+```sh
+# curl -X POST -F "file=@Ebook-cover-SSGs" http://192.168.1.2:8027/extract
+# curl -X POST -F "file=@Ebook-cover-SSGs.pdf" http://192.168.1.2:8027/extract > sample-pdf-to-text.txt
+
+Rscript Z_ebooks/render.R \
+  --input Z_ebooks/web-ebook.md \
+  --output Z_ebooks/web-ebook.pdf \
+  --cover Z_ebooks/web-ebook-jalcocertech.png
+```
+
+## Dev
+
+## Business
