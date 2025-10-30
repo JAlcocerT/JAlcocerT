@@ -195,7 +195,7 @@ Ive been having the need to do some [git recap](https://jalcocert.github.io/JAlc
 
 You can organize your repository in a way that from one source code, you have different kind of outputs.
 
-Say you have your animations for a *website/twitter/whatever*:
+Say you have **your animations** for a *website/twitter/whatever*:
 
 ```sh
 git branch libreportfolio 285484eafeae5c79436cef73678df8ae5153bc52

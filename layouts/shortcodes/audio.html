@@ -1,0 +1,67 @@
+{{/*
+  Shortcode: audio
+  Usage examples:
+    {{< audio src="/audio/mysong.mp3" >}}
+    {{< audio src="https://example.com/track.mp3" preload="auto" loop="true" caption="My track" download="true" >}}
+    {{< audio src="/audio/mysong.mp3" type="audio/mpeg" autoplay="true" muted="true" class="my-audio" title="My song" >}}
+
+  Params:
+    - src (required): Path in site (e.g. /audio/file.mp3) or absolute URL
+    - type (optional): MIME type (e.g. audio/mpeg, audio/ogg)
+    - preload (optional): none | metadata | auto (default: metadata)
+    - autoplay (optional): true to autoplay
+    - loop (optional): true to loop
+    - muted (optional): true to start muted
+    - class (optional): extra CSS class for the wrapper
+    - title (optional): aria-label for accessibility
+    - caption (optional): text shown below the player
+    - download (optional): true to show a download link
+
+  Advanced: If inner content is provided, it will be rendered instead of the default <source>,
+  so you can supply multiple <source> tags for different formats.
+*/}}
+
+{{ $src := .Get "src" }}
+{{ if not $src }}
+  {{ errorf "audio shortcode: 'src' param is required (page: %s)" .Page.RelPermalink }}
+{{ end }}
+
+{{ $isAbs := or (hasPrefix $src "http://") (hasPrefix $src "https://") }}
+{{ $url := cond $isAbs $src ($src | relURL) }}
+{{ $preload := default "metadata" (.Get "preload") }}
+{{ $type := .Get "type" }}
+{{ $class := .Get "class" }}
+{{ $title := .Get "title" }}
+{{ $caption := .Get "caption" }}
+{{ $download := eq (lower (default "false" (.Get "download"))) "true" }}
+{{ $autoplay := eq (lower (default "false" (.Get "autoplay"))) "true" }}
+{{ $loop := eq (lower (default "false" (.Get "loop"))) "true" }}
+{{ $muted := eq (lower (default "false" (.Get "muted"))) "true" }}
+
+<figure class="shortcode-audio{{ with $class }} {{ . }}{{ end }}">
+  <audio
+    controls
+    preload="{{ $preload }}"
+    {{ if $autoplay }}autoplay{{ end }}
+    {{ if $loop }}loop{{ end }}
+    {{ if $muted }}muted{{ end }}
+    playsinline
+    {{ with $title }}aria-label="{{ . }}"{{ end }}
+  >
+    {{ if .Inner }}
+      {{ .Inner | safeHTML }}
+    {{ else }}
+      <source src="{{ $url | safeURL }}"{{ with $type }} type="{{ . }}"{{ end }} />
+    {{ end }}
+    Your browser does not support the audio element.
+  </audio>
+  {{ with $caption }}
+    <figcaption>{{ . }}</figcaption>
+  {{ end }}
+  {{ if $download }}
+    <div class="shortcode-audio__download"><a href="{{ $url | safeURL }}" download>Download audio</a></div>
+  {{ end }}
+  <noscript>
+    <a href="{{ $url | safeURL }}">Listen/Download</a>
+  </noscript>
+</figure>

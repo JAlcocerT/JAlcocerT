@@ -310,3 +310,12 @@ APP BUILDING
 Dart & flutter (google)
 
 https://blog.back4app.com/flutter-vs-dart/
+
+### Sample Flutter Apps
+
+If you are into [stonks](http://localhost:1313/py-stonks/#other-foss-apps-for-finance-management) and related apps:
+
+* https://github.com/jameskokoska/Cashew?tab=readme-ov-file
+
+* This application is available on the App Store, Google Play, GitHub and as a Web App (PWA).
+* Cashew is a full-fledged, feature-rich application designed to empower users in managing their finances effectively. Built using Flutter - with Drift's SQL package, and Firebase - this app offers a seamless and intuitive user experience across various devices. Development started in September 2021.

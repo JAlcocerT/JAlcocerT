@@ -256,10 +256,10 @@ YT Summarizer
 
 ### OpenAI API
 
-We can do many cool things with just simple LLM API calls:
+We can do many cool things with just **simple LLM API calls**:
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI" title="OpenAI API Tests Scripts with MultiChat" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI" title="OpenAI API Tests Scripts x MultiChat Repo" >}}
 {{< /cards >}}
 
 
@@ -651,6 +651,26 @@ https://jalcocert.github.io/JAlcocerT/local-ai-audio/
 But I felt like trying elevenlabs and test how they can do audio was already overdued.
 
 So...
+
+
+See how crazy it sounds:
+
+<!-- {{< audio
+    src="/audio/sample.m4a"
+    type="audio/mp4"
+    preload="auto"
+    loop="true"
+    autoplay="false"
+    muted="false"
+    caption="Sample Generated Audio"
+    download="false"
+    class="my-audio"
+    title="Sample Generated Audio"
+>}}{{< /audio >}} -->
+
+> Say thanks to this [vibecoded HUGO shortcode](https://github.com/JAlcocerT/JAlcocerT/tree/main/layouts) for audio btw
+
+> > Sources from `./static/audio/`
 
 
 ### Python CLI Tools

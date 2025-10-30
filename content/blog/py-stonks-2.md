@@ -488,6 +488,11 @@ AND MORE TOOLS IN THE FAQ
 
 ## Selfhostable Personal Finance Tools
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Selfhosted Ollama - Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Selfhosted Ollama - Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
 ### Paisa
 
 * https://paisa.fyi/
@@ -516,13 +521,13 @@ https://www.youtube.com/watch?v=ru1LTUhFGjA
 
 ### Ghostfolio
 
+Ghostfolio has a lot of [features](https://ghostfol.io/en/features):
+
 * https://ghostfol.io/
 * https://github.com/ghostfolio/ghostfolio
 
 
-https://ghostfol.io/en/features
-
-{{< dropdown title="Pre-Requisites!! Just Get Docker 🐋" closed="true" >}}
+{{< dropdown title="Pre-Requisites! Just Get Docker and setup Ghostfolio 🐋" closed="true" >}}
 
 Important step and quite recommended for any SelfHosting Project - [Get Docker Installed](https://fossengineer.com/docker-first-steps-guide-for-data-analytics/)
 
@@ -534,7 +539,6 @@ sh get-docker.sh && docker version
 ```
 
 {{< /dropdown >}}
-
 
 
 ```sh
@@ -551,24 +555,20 @@ echo -e "POSTGRES_PASSWORD=$(openssl rand -base64 32)\nACCESS_TOKEN_SALT=$(opens
 ### Other F/OSS Apps for Finance Management
 
 * https://apps.nextcloud.com/apps/cospend
-* Firefly 3
-* https://github.com/jameskokoska/Cashew?tab=readme-ov-file
-  * This application is available on the App Store, Google Play, GitHub and as a Web App (PWA).
-  * Cashew is a full-fledged, feature-rich application designed to empower users in managing their finances effectively. Built using Flutter - with Drift's SQL package, and Firebase - this app offers a seamless and intuitive user experience across various devices. Development started in September 2021.
 
 * https://github.com/spliit-app/spliit
 
 >  Free and **Open Source Alternative to Splitwise**. Share expenses with your friends and family. 
 
+> > Very interesting for group trips
+
 * https://github.com/KayatoSan/Budget5S
-https://github.com/KayatoSan/Budget5S?tab=AGPL-3.0-1-ov-file#readme
->  Budget5S aims to offer a free alternative to budget managers. 
+
+>  [AGPL 3.0](https://github.com/KayatoSan/Budget5S?tab=AGPL-3.0-1-ov-file#readme) | Budget5S aims to offer a free alternative to budget managers. 
 
 * https://github.com/ellite/Wallos - Wallos: Open-Source Personal Subscription Tracker
 
-
-> Wallos is a powerful, open-source, and self-hostable web application designed to empower you in managing your finances with ease. Say goodbye to complicated spreadsheets and expensive financial software – Wallos simplifies the process of tracking expenses and helps you gain better control over your financial life.
-
+> Wallos is a powerful, open-source, and self-hostable web application designed to empower you in managing your finances with ease. 
 
 ### MDD
 
@@ -579,9 +579,15 @@ It quantifies the largest possible percentage loss they would experience if they
 In other words, MDD measures the deepest drop from peak to trough, illustrating the maximum downside risk and potential loss an investor could face if entering at the top of the market cycle.
 
 ```sh
-git clone 
-
+git clone https://github.com/JAlcocerT/DataInMotion
+git checkout libreportfolio
+#uv run tests/plot_mdd.py PG --start 2010-01-01 --brand "@LibrePortfolio"
+uv run tests/plot_historical_yield_percentiles.py PG --start 2005-01-01 --brand "@LibrePortfolio" --low 10 --high 90 --warmup-days 400
 ```
+
+<!-- https://x.com/LibertyDividend/status/1983607364755587247 -->
+
+{{< tweet user="LibertyDividend" id="1983607364755587247" >}}
 
 
 Maximum Drawdown (MDD) is calculated as the greatest percentage drop in the value of an investment or portfolio from its peak (highest value) to its trough (lowest value) before a new peak is reached.
