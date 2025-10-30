@@ -87,11 +87,18 @@ flatpak install flathub org.localsend.localsend_app
 
 5. We also have [Pairdrop](https://pairdrop.net/): https://github.com/schlagmichdoch/PairDrop
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pairdrop" title="PairDrop | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 > PairDrop: Transfer Files Cross-Platform. No Setup, No Signup. 
 
 6. Would SCP or FTP be faster instead?
 
 ![SCP Speed](/blog_img/selfh/HomeLab/scp.png)
+
+
+I got up to 4mb/s with Wifi:
 
 ![SFTP Transfer Speed](/blog_img/selfh/HomeLab/sftp.png)
 
@@ -102,6 +109,8 @@ flatpak install flathub org.localsend.localsend_app
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pigallery" title="PiGallery | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+> > I covered those in previous posts
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Selfhosting Immich" image="/blog_img/selfh/Photo/immich-map.png" subtitle="Spring Y25 Post - Immich Setup" >}}
@@ -120,7 +129,9 @@ But...
 
 A combination of **Syncthing** and **SFTPGo** can be used together to achieve automated file exchange, leveraging the strengths of each tool, although they are fundamentally different.
 
-Syncthing is a **decentralized, peer-to-peer (P2P)** continuous file synchronization tool, whereas SFTPGo is a **centralized SFTP server** (that also supports other protocols like FTP/S and WebDAV) with powerful file management and automation features.
+Syncthing is a **decentralized, peer-to-peer (P2P)** continuous file synchronization tool.
+
+Whereas SFTPGo is a **centralized SFTP server** (that also supports other protocols like FTP/S and WebDAV) with powerful file management and automation features.
 
 
 {{< details title="More about the Syncthing and SFTPGo Setup... 📌" closed="true" >}}
@@ -136,7 +147,7 @@ This setup solves a common Syncthing limitation: providing access to files via a
 
 It's important to understand the different purposes of each tool:
 
-| Feature | Syncthing (Continuous Sync) | SFTPGo (Secure File Server) |
+| Feature | Syncthing (Continuous Sync) | **SFTPGo** (Secure File Server) |
 | :--- | :--- | :--- |
 | **Core Function** | **Continuous, real-time file synchronization** between multiple trusted devices (P2P). | **Secure file access and transfer** using standard protocols (SFTP, FTP/S, etc.) to a central server. |
 | **Architecture** | Decentralized (no central server required for P2P sync). | Centralized server architecture. |
@@ -149,15 +160,47 @@ It's important to understand the different purposes of each tool:
 
 Syncthing doesn't natively support SFTP as a sync destination.
 
-SFTPGo is what brings the SFTP server capability to the shared folder.
+**SFTPGo** is what brings the SFTP server capability to the shared folder.
 
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#p2p" title="P2P Tools during Summer 25 | Post" image="/blog_img/selfh/media/qbit.png" subtitle="As P2P as it gets | QBittorrent" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/sftp-go" title="SFTPGo | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
+Make sure to have the [data drive mounted properly](#traefik-x-rpi4-x-x300), like: `/mnt/data2tb/testftp`
+
+Remember to create an user (after you created the admin via ): http://jalcocert-x300-1:8011/web/admin/users
+
+
+```sh
+sftp -P 2022 jalcocert@192.168.1.2
+```
+
+GNOME Files → Connect to Server:
+
+```sh
+#SFTP: sftp://<user>[localhost:2022](cci:4://file://localhost:2022:0:0-0:0)
+sftp://<username>@192.168.1.2:2022 #sftp://jalcocert@192.168.1.2:2022
+```
+
+![alt text](/blog_img/selfh/HomeLab/sftp-files-zorin.png)
+
+If you want a WebDAV connection, you can use the Nextcloud setup seen last summer:
+
+```txt
+dav://reisikei@192.168.1.11:8080/remote.php/webdav
+davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
+davs://your_nc_user@nextcloud.jalcocertech.com/remote.php/webdav
+```
+
+![NextCloud Traefik DAVS Connection](/blog_img/selfh/media/NC-traefik/davs.png)
+
+
+
 <!-- 
-![Qbittorrent UI](/blog_img/selfh/media/qbit.png) -->
+![Qbittorrent UI](/blog_img/selfh/media/qbit.png) 
+-->
 
 
 {{< details title="Transmission vs QBittorrent... 📌" closed="true" >}}
@@ -276,6 +319,18 @@ And later continue with any of these tools:
 
 If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) to the performance.
 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks" title="Benchmarks | Script ↗" >}}
+{{< /cards >}}
+
+```sh
+#htop
+sudo apt install btop
+btop
+#lazydocker
+```
+
 And if you have read the recent [Crypto with AI](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) post, you can see how people get creative and benchmark based on crypto mining performance: https://xmrig.com/benchmark
 
 [Some people](https://www.reddit.com/r/MoneroMining/comments/p3bzzb/is_it_worth_to_mine_xmr/) also use it for mining.
@@ -348,10 +403,11 @@ And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their
 2. **Termix** has a [desktop app](https://docs.termix.site/install#connector) now:
 
 ```sh
-wget https://github.com/Termix-SSH/Termix/releases/download/release-1.7.3-tag/Termix-Linux-Portable-1.7.3.zip
+#wget -P ~/Applications 
+#wget https://github.com/Termix-SSH/Termix/releases/download/release-1.7.3-tag/Termix-Linux-Portable-1.7.3.zip
 unzip Termix-Linux-Portable-1.7.3.zip
 unzip Termix-Linux-Portable.zip -d Termix-App
-cd 
+#cd
 ```
 
 {{< cards cols="1" >}}
@@ -408,13 +464,12 @@ sudo snap install ytdownloader
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/metube" title="Metube | HomeLab Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-5. Jellyfin and Gonic are great for media:
+5. **Jellyfin and Gonic** are great companios for a [media server stack](https://github.com/JAlcocerT/Docker/blob/main/Media/Z_MEDIA_docker-compose.yml):
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
 {{< /cards >}}
-
 
 
 You have cool desktop clients: [Sonixd](https://github.com/jeffvli/sonixd/releases/tag/v0.15.5)
@@ -494,6 +549,23 @@ Cloudreve can help you build a self-hosted file management service that is both 
 
 {{< youtube "t8p222fxVL0" >}}
 
+
+### Traefik x Rpi4 x x300
+
+Remember that for backups on an **external drive reliably**:
+
+```sh
+#sudo apt install -y exfatprogs exfat-fuse
+sudo mkdir -p /mnt/data2tb
+sudo mount -t exfat -o uid=$(id -u),gid=$(id -g),umask=022 /dev/nvme0n1p1 /mnt/data2tb
+df -h | grep data2tb
+#Persist across reboots (fstab)
+#UUID=C000-03BC  /mnt/data2tb  exfat  defaults,uid=1000,gid=1000,umask=022,nofail,x-systemd.device-timeout=5  0  0
+#/dev/disk/by-uuid/abcd-4567-1234-abcd-abcd / ext4 defaults 0 1
+sudo mount -a
+
+
+```
 
 ---
 
@@ -590,7 +662,7 @@ Link analytics solutions, like Kutt: `https://kutt.it/`
 
 
 
-For the QR part, you know that we have few solutions...
+For the **QR part**, you know that we have few solutions...
 
 1. https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py
 

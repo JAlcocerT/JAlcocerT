@@ -88,6 +88,11 @@ https://github.com/the-raspberry-pi-guy/lcd
 
 ## Pi
 
+A raspberry Pi inside a container - https://github.com/ptrsr/pi-ci
+
+> A Raspberry **Pi emulator in a Docker image** that lets developers easily prepare and flash RPi configurations.
+
+
 ### IoT with a RPi4
 
 ### IoT with a PicoW

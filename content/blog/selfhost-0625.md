@@ -131,7 +131,7 @@ davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
 davs://your_nc_user@nextcloud.jalcocertech.com/remote.php/webdav
 ```
 
-![alt text](/blog_img/selfh/media/NC-traefik/davs.png)
+![NextCloud Traefik DAVS Connection](/blog_img/selfh/media/NC-traefik/davs.png)
 
 To setup **nextcloud leveraging the https of traefik**
 

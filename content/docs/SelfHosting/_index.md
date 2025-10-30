@@ -35,7 +35,7 @@ Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhos
 ## FAQ
 
 
-{{% details title="How to mount external drives consistently?" closed="true" %}}
+{{% details title="How to mount external drives consistently? 🚀" closed="true" %}}
 
 ```sh
 lsblk #list them again

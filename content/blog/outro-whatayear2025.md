@@ -1236,6 +1236,8 @@ I am very happy to have discovered AppImageLauncher.
 
 Thanks to it I got HTTPie Desktop, Cursor and marktext desktop apps working very quickly.
 
+![alt text](/blog_img/selfh/HomeLab/httpie-appimagelauncher.png)
+
 Ive had time to write few posts about **making selfhosting better**.
 
 Together with a better, NEW and more organized repository:

@@ -413,7 +413,7 @@ portainer/portainer-ce #now you can re-use your portainer, as it was
 {{% /details %}}
 
 
-{{% details title="How to mount external drives consistently" closed="true" %}}
+{{% details title="How to mount external drives consistently!" closed="true" %}}
 
 ```sh
 lsblk #list them again
@@ -429,7 +429,8 @@ UUID=some-uuid /mnt/data_ntfs_500 ntfs-3g defaults,uid=1000,gid=1000,umask=0022 
 UUID=some-uuid-of-your-drive /mnt/ext4_mount_point_folder ext4 defaults 0 1
 ```
 
-For one time:
+For a one time setup:
+
 ```sh
 sudo mkdir -p /mnt/data_ntfs_500
 sudo mount -t ntfs /dev/sda1 /mnt/data_ntfs_500/ #example with ntfs
