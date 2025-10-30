@@ -397,18 +397,38 @@ sudo apt install thunderbird
 
 4. Talking about desktops apps see this youtube *and social media downloader*: https://github.com/aandrew-me/ytDownloader
 
+> GPL 3/0 |  Desktop App for downloading Videos and Audios from hundreds of sites 
+
 ```sh
 #choco install ytdownloader
 sudo snap install ytdownloader
 ```
 
-5. Jellyfin and Gonic are great
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/metube" title="Metube | HomeLab Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+5. Jellyfin and Gonic are great for media:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
 {{< /cards >}}
 
+You have cool desktop clients: [Sonixd](https://github.com/jeffvli/sonixd/releases/tag/v0.15.5)
+
+And even a newer: https://github.com/jeffvli/feishin
+
+>  GPL 3.0 | A modern self-hosted music player. 
+
+```sh
+#winget install sonixd
+wget -P ~/Applications https://github.com/jeffvli/sonixd/releases/download/v0.15.5/Sonixd-0.15.5-linux-x86_64.AppImage
+#sonixd
+
+#See also Euphonica: https://github.com/htkhiem/euphonica
+#flatpak install https://dl.flathub.org/repo/appstream/io.github.htkhiem.Euphonica.flatpakref
+```
 
 6. I have added the **programmatic DNS updater** from [waiting to landing](https://github.com/JAlcocerT/waiting-to-landing), benchmarks and quick setup scripts to HomeLab repo.
 

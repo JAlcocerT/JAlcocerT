@@ -1,9 +1,9 @@
 ---
-title: "Interesting APIs 101"
+title: "Interesting APIs 101 x ElevenLabs"
 date: 2025-10-22T09:20:21+01:00
 draft: false
 tags: ["APIfy","Firecrawl","Serp","Smithery MCP","Scrap","Hoppscotch vs httpie","Twitter vs Threads"]
-description: 'Get that info you need. From social media to Formula 1 '
+description: 'Get that info you need. From social media to Formula 1. And publish LibrePortfolio-X posts programatically '
 url: 'interesting-apis'
 ---
 
@@ -647,6 +647,10 @@ https://jalcocert.github.io/JAlcocerT/local-ai-audio/
 <!-- https://www.youtube.com/watch?v=uOneCuSj2tI -->
 
 {{< youtube "uOneCuSj2tI" >}}
+
+But I felt like trying elevenlabs and test how they can do audio was already overdued.
+
+So...
 
 
 ### Python CLI Tools

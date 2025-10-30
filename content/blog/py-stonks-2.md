@@ -62,7 +62,7 @@ Lift and coast vs DRIP vs DRIP + invest
 
 Nice to have:
 
-3. Volatility, MDD
+3. Volatility, [MDD](#mdd)
 4. Historical EPS, PER and Dividend Payout
 4. Current (and near history) net profit margin
 5. Currency historical exchange rates (EUR<->USD)
@@ -75,7 +75,7 @@ Nice to have:
 12. https://stockanalysis.com/stocks/pep/dividend/
 13. https://fullratio.com/stocks/nyse-ko/coca-cola 
 14. Buyback ratio (if historical, even better). They get announced, [people comment](https://x.com/StockMKTNewz/status/1960889386234778054)
-15. Volatility div growth mdd cagr / Yfinance eur usd?
+15. Volatility div growth and cagr / Yfinance eur usd?
 16. Treemap with market size like https://finviz.com/map.ashx
 
 ```mermaid
@@ -110,6 +110,7 @@ classDef class1 fill:red,color:blue,stroke:#FFD600;
 24. See also the cool graph and the table of https://bitcointreasuries.net/defi-and-other
 25. Maybe crypto? https://www.blockchain.com/explorer
 26. Maybe bonds? https://www.interactivebrokers.ie/portal/#/wlms/bond-scanner
+27. Geraldine Weiss method, *also known as the dividend-yield theory*
 
 **Sitio Web para Datos de Mercado:**
 
@@ -567,3 +568,48 @@ https://github.com/KayatoSan/Budget5S?tab=AGPL-3.0-1-ov-file#readme
 
 
 > Wallos is a powerful, open-source, and self-hostable web application designed to empower you in managing your finances with ease. Say goodbye to complicated spreadsheets and expensive financial software – Wallos simplifies the process of tracking expenses and helps you gain better control over your financial life.
+
+
+### MDD
+
+Maximum Drawdown (MDD) effectively shows the worst-case scenario for an investor who buys at the peak of an asset or portfolio. 
+
+It quantifies the largest possible percentage loss they would experience if they bought at the highest point and held through the subsequent decline to the lowest trough before any recovery. 
+
+In other words, MDD measures the deepest drop from peak to trough, illustrating the maximum downside risk and potential loss an investor could face if entering at the top of the market cycle.
+
+```sh
+git clone 
+
+```
+
+
+Maximum Drawdown (MDD) is calculated as the greatest percentage drop in the value of an investment or portfolio from its peak (highest value) to its trough (lowest value) before a new peak is reached.
+
+It measures the maximum loss an investor could have faced in a given period.
+
+**MDD Calculation Formula:**
+
+$$
+\text{MDD} = \frac{\text{Trough Value} - \text{Peak Value}}{\text{Peak Value}} \times 100\%
+$$
+
+Where:  
+- **Peak Value (P)** = highest value of the portfolio or asset before the biggest drop  
+- **Trough Value (L)** = lowest value of the portfolio or asset after the peak, before a new peak is reached  
+
+Steps to Calculate MDD:
+
+1. Identify the highest peak value of the asset or portfolio over a given period.
+2. Identify the lowest trough value that follows this peak.
+3. Calculate the percentage decline from the peak to the trough using the formula above.
+
+If a portfolio peaked at $100 and then dropped to $70, the MDD is:  
+
+$$
+\frac{70 - 100}{100} \times 100 = -30\%
+$$
+
+This means the portfolio experienced a 30% maximum drawdown at its worst point.
+
+MDD helps investors understand downside risk by quantifying the largest drop from a previous high.
