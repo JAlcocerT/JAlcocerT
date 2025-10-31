@@ -156,9 +156,9 @@ This list reflects key recognizable players in each segment of the service indus
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/botpress" title="BotPress | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/automation/bot-press-setup.png)
+![BotPress Setup UI](/blog_img/selfh/automation/bot-press-setup.png)
 
-![alt text](/blog_img/selfh/automation/botpress-dash.png)
+![BotPress Dashboard](/blog_img/selfh/automation/botpress-dash.png)
 
 <!-- https://www.youtube.com/watch?v=f17B1NLu8ho -->
 
@@ -176,7 +176,7 @@ This list reflects key recognizable players in each segment of the service indus
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/typebot" title="TypeBot | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/automation/typebot.png)
+![Typebot docker setup](/blog_img/selfh/automation/typebot.png)
 
 ---
 
@@ -189,6 +189,8 @@ This list reflects key recognizable players in each segment of the service indus
 Just in case you are aware of **Pandoc**.
 
 And how to convert `.md` to cool `pdf` or even to `epub` for ebooks.
+
+> To keep things simple, id say to go with the .Rmd -> PDF and leave epubs and their html relations for later when you really have people who want to buy from you via amazon.
 
 #### Real Estate Chat Bot
 

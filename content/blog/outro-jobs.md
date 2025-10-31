@@ -696,7 +696,7 @@ Im guessing that you are focusing into a D&A related role, consider adapting the
 
 **Questions to HR:**
 
-1. How does the on boarding looks like - To company and project?
+1. How does the on boarding looks like - To the company and project?
 2. Are there any colleagues already on boarded? in which roles?
 3. How does the tech interview looks like?
 

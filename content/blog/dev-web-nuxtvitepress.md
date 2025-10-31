@@ -546,9 +546,40 @@ curl "https://www.google.com/ping?sitemap=https://www.example.com/sitemap.xml"
 curl "https://www.bing.com/ping?sitemap=https://www.example.com/sitemap.xml"
 ```  -->
 
+
+### Making Webs with AI
+
+* https://github.com/rapidpages/rapidpages
+
+> MIT | Generate React and Tailwind components using AI 
+
+### How to setup StrapiCMS?
+
+If you are looking from CMS, you can have a look to [this post](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites), where I [setup KeystaticCMS](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms)
+
+* <https://www.opensourcealternative.to/project/Strapi>
+    * <https://docs.strapi.io/dev-docs/installation/docker>
+
 ### Strapi CMS x Astro
 
 Astro JS x Strapi
+
+https://www.youtube.com/watch?v=WI-_gVBoBBg
+https://github.com/PaulBratslavsky/pauls-strapi-crashcourse
+https://github.com/JAlcocerT/pauls-strapi-crashcourse
+
+
+https://github.com/strapi/LaunchPad -> https://launch-pad-roan.vercel.app/en
+
+> Official Strapi Demo application
+
+
+
+![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="Strapi | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 https://www.youtube.com/watch?v=Ud9obEHadLI
 

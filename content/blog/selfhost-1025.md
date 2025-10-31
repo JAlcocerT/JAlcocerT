@@ -56,7 +56,7 @@ And I saw few projects lately to see files, like we saw [here](https://jalcocert
 
 3. Nextcloud or Immich: 
 
-Just in case that you got that interesting Standard Google offer 200 GB for ~40$/año or your [Google AI Pro with 2TB trial](https://support.google.com/pixelphone/answer/13529884?hl=en#zippy=%2Cpixel-pro-pixel-pro-xl-pixel-pro-fold) has just ended...
+Just in case that you got that interesting Standard Google offer 200 GB for ~40$/year or your [Google AI Pro with 2TB trial](https://support.google.com/pixelphone/answer/13529884?hl=en#zippy=%2Cpixel-pro-pixel-pro-xl-pixel-pro-fold) has just ended...
 
 
 ```sh
@@ -73,10 +73,35 @@ docker exec -u www-data nextcloud php /var/www/html/occ config:system:get truste
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="Nextcloud | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-If you dont want **Nextcloud** nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
+Immich has been recently updated: https://github.com/immich-app/immich/releases/tag/v2.2.0
 
+And If you dont want **Nextcloud** (despite having a [photo feature](https://nextcloud.com/blog/how-we-got-to-the-new-nextcloud-photos/?ref=selfh.st)) nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
 
 Neither pay for google photos: https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper
+
+You can get away with [Immich respecting your files structure](https://www.youtube.com/watch?v=aY47XEm8mF4), or you could just use PiGallery. 
+
+Which has also been recently upgraded: https://github.com/bpatrik/pigallery2/releases/tag/3.0.0
+
+
+Read-only access is recommended for both.
+
+Whats cool about Immich is that it has some projects around https://github.com/Nasogaa/immich-drop
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pigallery" title="PiGallery | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+> > I covered those in previous posts
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Selfhosting Immich" image="/blog_img/selfh/Photo/immich-map.png" subtitle="Spring Y25 Post - Immich Setup" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/#pigallery" title="Selfhosting PiGallery" image="/blog_img/selfh/Photo/PiGallery-MAP.png" subtitle="Photo Tools Post - PiGallery" >}}
+{{< /cards >}}
+
+<!-- ![PiGallery Map Feature ](/blog_img/selfh/Photo/PiGallery-MAP.png) -->
+
 
 4. With **Local Send** I got ~4MB/s transfer speed from an iphone to a tablet.
 
@@ -95,29 +120,14 @@ flatpak install flathub org.localsend.localsend_app
 
 6. Would SCP or FTP be faster instead?
 
-![SCP Speed](/blog_img/selfh/HomeLab/scp.png)
+With SCP I got ~9mb/s:
 
+![SCP Speed](/blog_img/selfh/HomeLab/scp.png)
 
 I got up to 4mb/s with Wifi:
 
 ![SFTP Transfer Speed](/blog_img/selfh/HomeLab/sftp.png)
 
-
-> Immich is also cool and have some projects around https://github.com/Nasogaa/immich-drop
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pigallery" title="PiGallery | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-> > I covered those in previous posts
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Selfhosting Immich" image="/blog_img/selfh/Photo/immich-map.png" subtitle="Spring Y25 Post - Immich Setup" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/#pigallery" title="Selfhosting PiGallery" image="/blog_img/selfh/Photo/PiGallery-MAP.png" subtitle="Photo Tools Post - PiGallery" >}}
-{{< /cards >}}
-
-<!-- ![PiGallery Map Feature ](/blog_img/selfh/Photo/PiGallery-MAP.png) -->
 
 
 

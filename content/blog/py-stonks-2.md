@@ -20,6 +20,12 @@ The historical stock webapp, companion for: `https://financeinmotion.fyi`
 
 **Intro**
 
+Build and be prepared for very low conversions.
+
+People on X with 7k subs are able to convert to 17 paid users for some web apps.
+
+> Ready to convert at ~0.2%?
+
 To pull data from [yfinance](https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/) should not be a secret anymore:
 
 
@@ -409,6 +415,10 @@ I got to know at https://www.reddit.com/r/dividends/comments/1mtpot7/finally_hit
 Its also nice to see when the snowball effect starts to be noticed: like how much % of what you invest, comes already from dividends reinvested /monetary system feedback.
 
 > > And has an interesting on boarding flow: https://divstash.app/signup/step-1 and T&Cs are mandatory: https://divstash.app/signup/quick
+
+{{< callout type="info" >}}
+See [GuideFox](https://github.com/bluewave-labs/guidefox) for a better user on boarding experience -  Serve your users and increase product adoption with hints, popups, banners and helper links. 
+{{< /callout >}}
 
 And by the time of RStocks, I had in mind as reference the stock events app: https://stockevents.app/en?pt=118220498&ct=&mt=8
 

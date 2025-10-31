@@ -7,12 +7,20 @@ description: 'Creating an eCommerce. Drupal vs DIY'
 url: 'ecommerce'
 ---
 
-https://github.com/antiwork/gumroad
+https://github.com/saleor/saleor
+
+ Saleor Core: the high performance, composable, headless commerce API. 
+
+ * <https://github.com/JAlcocerT/Docker/blob/main/Web/posthog_docker-compose.md>
+
+
+
+Gumroad is an e-commerce platform that enables creators to sell products directly to consumers. 
+
+* https://github.com/antiwork/gumroad
 
 >  Sell stuff and see what sticks 
-
- Gumroad is an e-commerce platform that enables creators to sell products directly to consumers. 
-
+ 
 
 There are several notable open source self-hostable e-commerce platforms available:
 

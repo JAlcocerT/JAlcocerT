@@ -71,15 +71,27 @@ As you can imagine, there are more than a few Content Management Systems (CMS) a
 3. [GHOST + GATSBY](https://ghost.org/docs/jamstack/)
   - Or Ghost x Astro - https://docs.astro.build/en/guides/cms/ghost/
 
-And if you want more ideas...
+And if you want more ideas to tinker with CMS...
 
 4. [Strapi](https://jamstack.org/headless-cms/strapi/)
   - Supports **GraphQL** or **RESTful** API.
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="Strapi | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/directus" title="Directus | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
+
+
 5. [Decap CMS (formerly Netlify CMS)](https://decapcms.org/)
   - [Add to Your Site](https://decapcms.org/docs/add-to-your-site/)
+
 6. [Directus](https://jamstack.org/headless-cms/directus/)
   - Directus turns SQL databases into REST and GraphQL APIs with an intuitive no-code app.
   - https://directus.io/solutions/headless-cms
+  
 7. Wordpress x Astro
   - https://docs.astro.build/en/guides/cms/wordpress/
 
