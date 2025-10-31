@@ -2,8 +2,8 @@
 title: "Creating a Landing Website with Astro"
 date: 2024-02-14
 draft: false
-tags: ["Dev"]
-description: 'Creating Landing Web Pages with Astro SSG - Ourika. The last site without keystaticcms or similar editors.'
+tags: ["Dev","KeyStatic"]
+description: 'Creating Landing Web Pages with Astro SSG - Ourika. The last site without keystaticCMS or similar editors.'
 url: 'creating-landing-pages-astro'
 ---
 
@@ -129,7 +129,7 @@ Im also exploring how these kind of themes do it so that it incorporates a Keyst
 
 * ✅ Localization
 * ✅ Blog
-* ✅ CMS for editing blog post (thanks to **Keystatic CMS**)
+* ✅ **CMS!!!** for editing blog post (thanks to **Keystatic CMS**)
 * ✅ PWA (thanks to vite-pwa)
 
 

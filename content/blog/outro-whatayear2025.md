@@ -596,6 +596,10 @@ If you are successful, you will need to know [how to use Stripe API](https://jal
 
 #### Launching Webifyer
 
+Even with Porkbun you can get a quick website now: https://porkbun.com/products/webhosting/articulation?mc_cid=adf0b2f297
+
+And pretty affordable at ~60$/year.
+
 One of the skills I enjoy learning more is about photography.
 
 And one of the of the best decisions I ever had, was to have a [Photo Blog](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/).
@@ -1100,7 +1104,7 @@ Followed very closely by [Keystatic](https://jalcocert.github.io/JAlcocerT/cms-f
 
 But I needed [this first run](https://jalcocert.github.io/JAlcocerT/understanding-keystatic-cms/), then the second one [here](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms).
 
-The themes [landingpad](https://github.com/JAlcocerT/landingpad) and mizar helped a lot.
+The themes [landingpad](https://github.com/JAlcocerT/landingpad) and mizar with its CMS integrated (keystaticCMS) helped a lot.
 
 When you deploy the static site, the `whateverdomain.com/keystatic` path will still be there:
 

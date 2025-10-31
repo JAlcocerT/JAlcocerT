@@ -464,6 +464,10 @@ sudo snap install ytdownloader
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/metube" title="Metube | HomeLab Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+> Access it `http://jalcocert-x300-1:8081/`
+
+> > Or if you have [traefik setup](#traefik-x-rpi4-x-x300) `https://tube.x300.jalcocert.com`
+
 5. **Jellyfin and Gonic** are great companios for a [media server stack](https://github.com/JAlcocerT/Docker/blob/main/Media/Z_MEDIA_docker-compose.yml):
 
 {{< cards cols="1" >}}
@@ -471,8 +475,16 @@ sudo snap install ytdownloader
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
 {{< /cards >}}
 
+![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
+
+> Go visit them at `http://jalcocert-x300-1:4747/` and `http://jalcocert-x300-1:8096`
+
+Notice that with Gonic you can also add podcasts via their RSS feed, like in the [astropod](https://github.com/manuelernestog/astropod) theme that provides `https://getastropod.netlify.app/rss.xml`
 
 You have cool desktop clients: [Sonixd](https://github.com/jeffvli/sonixd/releases/tag/v0.15.5)
+
+![Sonixd](/blog_img/selfh/HomeLab/gonic-sonixd.png)
+
 
 And even a newer: https://github.com/jeffvli/feishin
 
@@ -555,21 +567,31 @@ Cloudreve can help you build a self-hosted file management service that is both 
 Remember that for backups on an **external drive reliably**:
 
 ```sh
+df -h | egrep '^Filesystem|^/dev/sda2|^/dev/nvme'
 #sudo apt install -y exfatprogs exfat-fuse
 sudo mkdir -p /mnt/data2tb
+
 sudo mount -t exfat -o uid=$(id -u),gid=$(id -g),umask=022 /dev/nvme0n1p1 /mnt/data2tb
 df -h | grep data2tb
 #Persist across reboots (fstab)
 #UUID=C000-03BC  /mnt/data2tb  exfat  defaults,uid=1000,gid=1000,umask=022,nofail,x-systemd.device-timeout=5  0  0
 #/dev/disk/by-uuid/abcd-4567-1234-abcd-abcd / ext4 defaults 0 1
 sudo mount -a
-
-
 ```
+
+Media x Traefik: https://github.com/JAlcocerT/Home-Lab/blob/main/z-homelab-setup/evolution/1025media_docker-compose.yml
+
 
 ---
 
 ## FAQ
+
+See if you got some duplicates:
+
+```sh
+#sudo apt install -y fdupes
+fdupes -rS /mnt/data2tb #List duplicates with sizes:
+```
 
 **More Selfhosted resources** *These are new from this post*
 
