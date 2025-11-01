@@ -591,6 +591,107 @@ sudo mount -a
 
 Media x Traefik: https://github.com/JAlcocerT/Home-Lab/blob/main/z-homelab-setup/evolution/1025media_docker-compose.yml
 
+#### Traefik x x300 Homelab
+
+Get your API Token (key) with `edit zone DNS` permissions: https://dash.cloudflare.com/profile/api-tokens
+
+```sh
+#git clone https://github.com/JAlcocerT/Home-Lab.git
+
+
+#cd traefik
+cp .env.sample .env #add your cloudflare token there and your email, optionally the zoneID for programmatic DNS updates
+cp cf-token.sample cf-token ###add JUST your cloudflare token there
+
+source .env #https://dash.cloudflare.com/profile/api-tokens #with edit zone DNS permissions
+#verify the token
+curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+     -H "Authorization: Bearer $cf_token"
+
+# Get zone ID via CLI instead of UI (OPTIONAL - only required for programmatic DNS updates)
+curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=jalcocertech.com" \
+  -H "Authorization: Bearer $cf_token" \
+  -H "Content-Type: application/json" | jq -r '.result[0].id'
+```
+
+Remember that this is how the directory should look:
+
+{{< filetree/container >}}
+  {{< filetree/folder name="config" >}}
+    {{< filetree/file name="acme.json" >}}
+    {{< filetree/file name="config.yml - Automatically created" >}}
+    {{< filetree/file name="traefik.yml" >}}
+    {{< /filetree/folder >}}
+  {{< filetree/file name="docker-compose.x300.yaml" >}}
+  {{< filetree/file name=".env" >}}
+  {{< filetree/file name="cf-token" >}}
+{{< /filetree/container >}}
+
+
+{{< callout type="info" >}}
+The **only DNS to modify** is the one for Traefik (before we spin the container), the rest is done automatically as per the labels!
+{{< /callout >}}
+
+So I added these A type DNS *(only)* records: `x300.jalcocertech.com` and `*.x300.jalcocertech.com` to point to my x300 private IP address.
+
+![cf DNS setup with traefik](/blog_img/selfh/HomeLab/dns-traefik.png)
+
+```sh
+#python3 cf-dns-updater.py
+dig +short x300.jalcocertech.com A
+ping x300.jalcocertech.com
+nslookup x300.jalcocertech.com
+```
+
+Then just **spin Traefik**:
+```sh
+docker compose -f docker-compose.x300.yml up -d
+#sudo docker logs traefik ###No log line matching the '' filter
+#docker-compose -f docker-compose.x300.yml stop
+```
+
+![Changing Cloudflare DNS via Python script](/blog_img/selfh/https/traefik-firebat/cf-dns-python.png)
+
+
+**DONT do**
+
+Connect portainer to traefik network:
+
+```sh
+docker network connect traefik_traefik-proxy portainer
+```
+
+**Do** tweak the compose files for traefik like so:
+
+
+* Example with Traefik network, Termix: ✅ 
+
+```sh
+sudo docker compose -f ./termix/docker-compose.traefik.yml up -d
+#docker inspect termix --format '{{json .NetworkSettings.Networks}}' | jq #
+#ping termix.x300.jalcocertech.com
+```
+
+See how these DNS have been edited by Traefik automatically:
+
+```sh
+#dig +short traefik-docker.jimsgarage.co.uk A
+dig +short termix.x300.jalcocertech.com A
+ping termix.x300.jalcocertech.com
+nslookup termix.x300.jalcocertech.com
+```
+
+* Example without Traefik network, Portainer/FreshRSS: ✅ 
+
+```sh
+dig +short freshrss.x300.jalcocertech.com A
+dig +short portainer.x300.jalcocertech.com A
+```
+
+> These records were also set automatically by Traefik!
+
+
+
 
 ---
 

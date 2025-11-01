@@ -641,7 +641,7 @@ sudo snap install vlc
 sudo apt update && sudo apt install ubuntu-restricted-extras
 ```
 
-So I decided to propose a new homelab architecture....
+So I decided to propose a **new homelab architecture**....
 
 > Traefik v3.3 + Cloudflare + Tailscale IP
 
@@ -669,12 +669,18 @@ cd ./Home-Lab/traefik
 ```sh
 curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \
      -H "Authorization: Bearer abcdefg12345709"
+
+# source .env #https://dash.cloudflare.com/profile/api-tokens #with edit zone DNS permissions
+# #verify the token
+# curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+#      -H "Authorization: Bearer $cf_token"
 ```
 
-![Cloudfalre API Tokens for Traefik v3](/blog_img/selfh/https/traefik-firebat/cf-api.png)
+![Cloudflare API Tokens for Traefik v3](/blog_img/selfh/https/traefik-firebat/cf-api.png)
 
+Then, generate the user & password for your traefik instance:
 ```sh
-sudo apt install apache2-utils
+#sudo apt install apache2-utils
 echo $(htpasswd -nB admin) | sed -e s/\\$/\\$\\$/g
 ```
 
@@ -684,7 +690,7 @@ echo $(htpasswd -nB admin) | sed -e s/\\$/\\$\\$/g
 ```sh
 #cd ./Home-Lab/traefik
 touch /home/casa/Home-Lab/traefik/acme.json #blank, just change the permissions to 600 later (private key)
-touch /home/casa/Home-Lab/traefikacme.yml
+touch /home/casa/Home-Lab/traefik/acme.yml
 touch /home/casa/Home-Lab/traefik/traefik.yml
 ```
 
@@ -711,8 +717,8 @@ dig google.com
 > For which you will need the [ZoneID of your Domain](https://www.youtube.com/watch?v=pmfrJNCaOFY) as well as per [this .env.sample](https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/.env.sample)
 
 ```sh
-sudo snap install jq
-sudo snap install yq
+#sudo snap install jq
+#sudo snap install yq
 # Get zone ID of your domain via CLI instead of Cloudflare UI
 curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=jalcocertech.com" \
   -H "Authorization: Bearer $cf_token" \
@@ -720,7 +726,7 @@ curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=jalcocertech.com
 ```
 
 {{< callout type="warning" >}}
-The **only DNS** you need to point is the one for Traefik, the rest is done automatically as per the labels!
+The **only DNS** you need to point is the one for Traefik, the rest is done automatically as per the labels! Do it before spinning the container
 {{< /callout >}}
 
 These are the only ones you will see configured in cloudflare DNS: *if you want, change that private IP for your tailscale one*
@@ -734,7 +740,7 @@ ping casa.jalcocertech.com
 nslookup casa.jalcocertech.com
 ```
 
-![alt text](/blog_img/selfh/https/traefik-firebat/cf-dns-python.png)
+![Changing Cloudflare DNS via Python script](/blog_img/selfh/https/traefik-firebat/cf-dns-python.png)
 
 <!-- 
 * https://fossengineer.com/selfhosting-traefik/
@@ -777,7 +783,7 @@ nslookup silverbullet.casa.jalcocertech.com
 ping portainer.casa.jalcocertech.com
 ```
 
-![alt text](/blog_img/selfh/kb/silverbullet-dns-cf.png)
+![DNS Records for silverbullet with traefik inside the miniPC](/blog_img/selfh/kb/silverbullet-dns-cf.png)
 
 
 **Example 2** Traefik + your (flask/dash/whatever) webapp ✅ 
