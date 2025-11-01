@@ -404,9 +404,19 @@ And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their
 
 > > Pay only for the hours you use, if you have a server for less than a month. No minimum contract period required!
 
+Spinning **Traefik is easier than ever**:
+
+```sh
+#git clone https://github.com/JAlcocerT/Home-Lab.git
+
+#cd traefik
+
+
+```
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/docker-compose.vps.yml" title="Traefik x VPS Setup | Script ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks" title="Benchmarks | Script ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks" title="Benchmarks | Scripts ↗" >}}
 {{< /cards >}}
 
 
@@ -516,6 +526,12 @@ wget -P ~/Applications https://github.com/jeffvli/sonixd/releases/download/v0.15
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing/blob/main/porkbun-domains.py" title="Porkbun API Py Script ↗" >}}
 {{< /cards >}}
 
+And have brought them to the Home-Lab repo for proper maintenance:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="Cloudflare x Porkbun DNS API Py Scripts ↗" >}}
+{{< /cards >}}
+
 
 ### I was also exploring these file tools
 
@@ -555,6 +571,9 @@ Cloudreve can help you build a self-hosted file management service that is both 
 > GPL3/0 | 🌩 Self-hosted file management and sharing system, supports multiple storage providers
 
 5. https://codeberg.org/shroff/phylum
+
+> Self-hosted cloud file storage with offline-first web and native clients
+
 
 6. Palmr https://github.com/kyantech/Palmr
 
@@ -643,14 +662,18 @@ ping x300.jalcocertech.com
 nslookup x300.jalcocertech.com
 ```
 
+![Changing Cloudflare DNS via Python script](/blog_img/selfh/https/traefik-firebat/cf-dns-python.png)
+
+
 Then just **spin Traefik**:
+
 ```sh
 docker compose -f docker-compose.x300.yml up -d
-#sudo docker logs traefik ###No log line matching the '' filter
+#sudo docker logs traefik ###No log line matching the '' filter ✅
 #docker-compose -f docker-compose.x300.yml stop
 ```
 
-![Changing Cloudflare DNS via Python script](/blog_img/selfh/https/traefik-firebat/cf-dns-python.png)
+And here it is: https://x300.jalcocertech.com/dashboard/#/
 
 
 **DONT do**
@@ -659,14 +682,73 @@ Connect portainer to traefik network:
 
 ```sh
 docker network connect traefik_traefik-proxy portainer
+#docker exec -it traefik wget -qO- http://portainer:9000/api/system/status
 ```
 
-**Do** tweak the compose files for traefik like so:
+**Do** Remember that there are 2 ways to bring services to works with Traefik and https:
 
 
-* Example with Traefik network, Termix: ✅ 
+1. Tweak the compose files for traefik like so: *see [Termix example](https://github.com/JAlcocerT/Home-Lab/blob/main/termix/docker-compose.traefik.yml)*
+
+Each line has to be tweaked: `"traefik.http.routers.CHANGETHISNAME!!!.middlewares=termix-https-redirect"`
+
+```yml
+services:
+  termix:
+    ports:
+      - "8090:8080"
+    networks:
+      - traefik_traefik-proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.termix.entrypoints=http"
+      - "traefik.http.routers.termix.rule=Host(`termix.x300.jalcocertech.com`)" #Tweak this with your subdomain
+      - "traefik.http.middlewares.termix-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.termix.middlewares=termix-https-redirect"
+      - "traefik.http.routers.termix-secure.entrypoints=https"
+      - "traefik.http.routers.termix-secure.rule=Host(`termix.x300.jalcocertech.com`)" #Tweak this with your subdomain
+      - "traefik.http.routers.termix-secure.tls=true"
+      - "traefik.http.routers.termix-secure.tls.certresolver=cloudflare"
+      - "traefik.http.routers.termix-secure.service=termix" #change this to your service name
+      - "traefik.http.services.termix.loadbalancer.server.port=8080" #it has to be the container port!!!
+networks:
+  traefik_traefik-proxy:
+    external: true
+```
+
+2. Tweak the config files for traefik like so: *see FreshRSS example*
+
+https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/config/config.x300sample.yaml#L31
+
+
+```yml
+#....
+  routers: #for external services (outside the traefik network)
+    portainer:
+      entryPoints:
+        - "https"
+      rule: "Host(`portainer.x300.jalcocertech.com`)"
+      middlewares:
+        - default-security-headers
+        - https-redirectscheme
+      tls: {}
+      service: portainer
+
+  services:
+    portainer:
+      loadBalancer:
+        servers:
+          - url: "http://portainer:9000" #or simply using the container name plus host port
+        passHostHeader: true
+```
+
+* Example with Traefik network, Termix: *This one doesnt need any tweak to `./config/config.yaml`* ✅ 
+
+https://github.com/JAlcocerT/Home-Lab/blob/main/termix/docker-compose.traefik.yml
 
 ```sh
+#cd to homelab root
 sudo docker compose -f ./termix/docker-compose.traefik.yml up -d
 #docker inspect termix --format '{{json .NetworkSettings.Networks}}' | jq #
 #ping termix.x300.jalcocertech.com
@@ -681,17 +763,22 @@ ping termix.x300.jalcocertech.com
 nslookup termix.x300.jalcocertech.com
 ```
 
-* Example without Traefik network, Portainer/FreshRSS: ✅ 
+* Example without Traefik network, Portainer/FreshRSS: *these will work with the original compose plus the config and a Traefik restart* ✅ 
+
+https://github.com/JAlcocerT/Home-Lab/blob/main/fresh-rss/docker-compose.yml
+https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/config/config.x300sample.yaml#L31
 
 ```sh
+#docker inspect freshrss --format '{{json .NetworkSettings.Networks}}' | jq #
+#docker inspect portainer --format '{{json .NetworkSettings.Networks}}' | jq #
 dig +short freshrss.x300.jalcocertech.com A
 dig +short portainer.x300.jalcocertech.com A
+#sudo docker restart traefik
 ```
 
 > These records were also set automatically by Traefik!
 
-
-
+#### Traefik x Pi4
 
 ---
 

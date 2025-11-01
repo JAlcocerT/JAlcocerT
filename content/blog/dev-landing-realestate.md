@@ -1,8 +1,8 @@
 ---
 title: "Landing (and more) for Real Estate"
-date: 2025-10-31T08:20:21+01:00
+date: 2025-11-16T08:20:21+01:00
 draft: false
-tags: ["Web","Astro Payroll Theme","Real Estate Landing","n8n","Scrapping"]
+tags: ["Web x CMS","Astro Payroll Theme","Strapi vs PayloadCMS","n8n","Scrapping"]
 description: 'Landing page and components for real estate Galleries.'
 url: 'real-estate-landing'
 ---
@@ -19,6 +19,14 @@ Ive been playing quite a lot with PB and quick astro themes lately.
 
 I could not waste the opportunity to make some **tech upgrades** for a friend.
 
+Specially since I could get Strapi and PayloadCMS working within containers:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="Strapi | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/directus" title="Directus | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
 
 ## The Stack
 

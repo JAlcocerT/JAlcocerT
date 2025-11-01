@@ -1,5 +1,5 @@
 ---
-title: "Websites with SSG + CMS - The missing piece"
+title: "Websites with SSG x CMS - The missing piece"
 date: 2025-05-18T22:20:21+01:00
 draft: false
 description: "UI/X for customizing SSGs. Keystatic and more"
