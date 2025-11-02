@@ -326,7 +326,15 @@ Have a look to...
 
 - Popular open-source CRM alternatives include **SuiteCRM, Odoo, and EspoCRM**. These offer more traditional CRM functions with flexibility and full self-hosting capability, requiring more technical setup and integration for marketing automation compared to GoHighLevel.
 
-> With Odoo you can even have your drag-n-drop website created in the same suite
+> With Odoo you can even have your drag-n-drop website created in the same suite!
+
+![alt text](/blog_img/selfh/HomeLab/mautic/mautic-setup.png)
+
+![alt text](/blog_img/selfh/HomeLab/mautic/mautic-setup-db.png)
+
+![alt text](/blog_img/selfh/HomeLab/mautic/mautic-setup-admin.png)
+
+![alt text](/blog_img/selfh/HomeLab/mautic/mautic-ui.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Configs 🐋 ↗" >}}

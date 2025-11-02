@@ -262,6 +262,11 @@ This allows you to deliver emails securely and reliably during development and t
 
 Mailtrap can be integrated with Mautic, Odoo, and n8n, primarily via its SMTP and API services.
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 - For Mautic, Mailtrap can be set up as an SMTP server for sending emails, including transactional and marketing emails. Mautic supports SMTP configurations, allowing the use of Mailtrap's SMTP credentials to route emails through Mailtrap. Community discussions also highlight SMTP as the common integration method since direct API support is not typical in native Mautic setups.[1][2][3]
 
 - For Odoo, Mailtrap can be used similarly by configuring Mailtrap as the SMTP server within Odoo's email settings. While Odoo heavily relies on SMTP for outgoing mail, workflows can be enhanced using third-party tools like Pipedream or n8n to connect Odoo and Mailtrap APIs for more complex automation.[4][5]
@@ -270,13 +275,9 @@ Mailtrap can be integrated with Mautic, Odoo, and n8n, primarily via its SMTP an
 
 In summary, Mailtrap supports seamless SMTP integration for Mautic and Odoo, and has a native API integration for workflow automation with n8n, enabling flexible email handling across these platforms.
 
-[1](https://netcorecloud.com/tutorials/mautic-email-settings/)
-[2](https://www.reddit.com/r/Emailmarketing/comments/1lt0j0h/how_to_connect_mailgun_api_to_mautic/)
-[3](https://emaillabs.io/en/emaillabs-mautic-integration/)
-[4](https://www.reddit.com/r/Odoo/comments/1337pso/odoo_mail_service_integration_options_self_vs/)
-[5](https://pipedream.com/apps/odoo/integrations/mailtrap)
-[6](https://help.mailtrap.io/article/168-mailtrap-and-n8n-integration)
-[7](https://mailtrap.io/integrate-with/n8n/)
+![alt text](/blog_img/selfh/HomeLab/mautic/mautic-ui.png)
+
+
 [8](https://n8n.io/integrations/mailtrap/)
 [9](https://mautic.org/features/integrations-and-api/)
 [10](https://forum.mautic.org/t/if-mautic-can-send-email-why-integrate-with-email-senders-like-mailchimp-or-amazon-sendgrid/3771)

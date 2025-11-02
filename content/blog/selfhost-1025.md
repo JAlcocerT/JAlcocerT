@@ -339,6 +339,16 @@ If you've got recently a miniPC, you can do some [benchmarks](https://jalcocert.
 sudo apt install btop
 btop
 #lazydocker
+#sudo docker stats
+#docker stats --no-stream --format "{{.Name}}\t{{.CPUPerc}}" | head -n -1 | sort -nrk 2
+```
+
+![alt text](/blog_img/selfh/HomeLab/btop-networkspeed.png)
+
+```sh
+sudo apt update && sudo apt install -y speedtest-cli
+speedtest --simple
+#speedtest --list
 ```
 
 And if you have read the recent [Crypto with AI](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) post, you can see how people get creative and benchmark based on crypto mining performance: https://xmrig.com/benchmark
@@ -404,14 +414,12 @@ And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their
 
 > > Pay only for the hours you use, if you have a server for less than a month. No minimum contract period required!
 
-Spinning **Traefik is easier than ever**:
+Spinning **Traefik is easier than ever**: *see how to do it for any VPS*
 
 ```sh
 #git clone https://github.com/JAlcocerT/Home-Lab.git
-
 #cd traefik
-
-
+#sudo docker compose up -d
 ```
 
 {{< cards cols="1" >}}
@@ -441,6 +449,8 @@ unzip Termix-Linux-Portable.zip -d Termix-App
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/matrix-conduit" title="Matrix Conduit server | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-synapse" title="Matrix Server 🐋 ↗" >}}
 {{< /cards >}}
+
+![Matrix Server via Conduit](/blog_img/selfh/HomeLab/conduit.png)
 
 ```sh
 # sudo apt update  
@@ -779,6 +789,72 @@ dig +short portainer.x300.jalcocertech.com A
 > These records were also set automatically by Traefik!
 
 #### Traefik x Pi4
+
+Connect to the same wifi with your laptop:
+
+```sh
+ip route | grep default
+nmap -sn 192.168.0.0/24
+arp -a #
+#ip neighbor
+```
+
+Then try Ips randomly, or use: https://it-tools.tech/mac-address-lookup
+
+And get the vendor info:
+
+```
+Raspberry Pi Trading Ltd
+Maurice Wilkes Building, Cowley Road
+Cambridge CB4 0DS
+United Kingdom
+```
+
+Then just login via SSH:
+
+```sh
+ssh reisipi@192.168.0.233
+```
+
+Once again, remember to set proper tailscale expiry not to loose access when you are far from home!
+
+```sh
+tailscale status
+#ping jalcocert-x300-1
+```
+
+![alt text](/blog_img/selfh/HomeLab/tailscale-expiry.png)
+
+Alternativelly:
+
+```sh
+echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p /etc/sysctl.conf
+sudo tailscale up --advertise-exit-node 
+```
+
+And via tailscale UI just configure:
+
+![alt text](/blog_img/selfh/HomeLab/tailscale-exit.png)
+
+
+And check that everything is working: 
+
+```sh
+#df -h
+#btop
+sudo apt update && sudo apt install -y speedtest-cli
+```
+
+> You should be able to connect via your https://termix.x300.jalcocertech.com/ now!
+
+Make these network tests if you want:
+
+```sh
+speedtest-cli
+speedtest --simple
+```
 
 ---
 

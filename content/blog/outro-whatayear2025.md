@@ -7,6 +7,10 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+https://juan.pl/en/
+
+https://www.albertina.at/en/
+
 <!-- 
 referencia a persuasion escrito en jan 2022
 
@@ -1233,6 +1237,8 @@ I improved the video workflow and tried superfially Postiz for sharing.
 Also with some AI help, I vibed coded a webapp to help me with the youtube tech scripts content and audio.
 
 And...well, some Flask automatic and high SNR content creation for twitter/X
+
+![Flask x Matplotlib Plots Webapp](/blog_img/data-experiments/flask-matplotlib-libreportfolio-lots.png)
 
 ### Improving the HomeLab
 
