@@ -123,13 +123,18 @@ docker stats $(docker-compose ps -q)
 
 Termix reminded me [about Tabby](https://fossengineer.com/selfhosting-Tabby-coding-assistant/).
 
-* https://github.com/TabbyML/tabby
+But not that ML one that codes for you: https://github.com/TabbyML/tabby
 
-* [Tabby](https://github.com/Eugeny/tabby/releases/tag/v1.0.223)
+This [Tabby](https://github.com/Eugeny/tabby/releases/tag/v1.0.223)
+
+```sh
+wget -P ~/Applications https://github.com/Eugeny/tabby/releases/download/v1.0.228/tabby-1.0.228-linux-x64.AppImage
+#tabby
+```
 
 > [Tabby](https://tabby.sh/) is *a terminal for the modern age* 
 
-You can use Termix to manage devices on the same local network:
+You can also use Termix to manage devices via terminal:
 
 ```sh
 #arp -a
@@ -148,7 +153,7 @@ You can measure the temp of a distant Pi:
 
 ```sh
 vcgencmd measure_temp pmic
-
+#btop #will also inform about CPU temperature, also for servers, not just PI's
 #docker system prune -a #or clean its unused container space
 ```
 
@@ -161,16 +166,6 @@ vcgencmd measure_temp pmic
   * https://checkmate.so/
 
 > aGPL | Checkmate is an open-source, self-hosted tool designed to **track and monitor server hardware**, uptime, response times, and incidents in real-time with beautiful visualizations.
-
-
-
-### UserTour
-
-For product people in the room:
-
-* https://github.com/usertour/usertour
-
-> Agpl v3 | Usertour is an open-source user onboarding platform designed for developers. It allows you to create in-app product tours, checklists, and launchers in minutes—effortlessly and with full control.**The open-source alternative to Userflow and Appcues**
 
 
 ### Recap from Spring 2025

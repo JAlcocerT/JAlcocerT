@@ -810,7 +810,7 @@ Cambridge CB4 0DS
 United Kingdom
 ```
 
-Then just login via SSH:
+Then just login via SSH: *as you are connected to the same Cable Modem, with the Home-private IP*
 
 ```sh
 ssh reisipi@192.168.0.233
@@ -825,7 +825,7 @@ tailscale status
 
 ![alt text](/blog_img/selfh/HomeLab/tailscale-expiry.png)
 
-Alternativelly:
+Optionally: activate back your pi as a possible exit node
 
 ```sh
 echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
@@ -854,6 +854,29 @@ Make these network tests if you want:
 ```sh
 speedtest-cli
 speedtest --simple
+```
+
+As everything is working, you can just get Traefik to do htps quickly for Nextcloud.
+
+But first, get [tabby terminal](https://github.com/Eugeny/tabby/releases/tag/v1.0.228) on your laptop:
+
+```sh
+wget -P ~/Applications https://github.com/Eugeny/tabby/releases/download/v1.0.228/tabby-1.0.228-linux-x64.AppImage
+#tabby
+```
+
+Then just:
+
+![Tabby Terminal looking at htop and sftp file structure](/blog_img/selfh/HomeLab/tabby-terminal.png)
+
+```sh
+#nano ~/.ssh/config
+#Host Pi4
+#  HostName 100.100.100.7
+#  User reisipi
+
+git clone https://github.com/JAlcocerT/Home-Lab.git
+
 ```
 
 ---

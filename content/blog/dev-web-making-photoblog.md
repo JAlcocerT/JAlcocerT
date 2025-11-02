@@ -193,7 +193,7 @@ services:
 ```md
 resources:
   - src: alexander-london-mJaD10XeD7w-unsplash.jpg
-    title: Brown tabby cat on white stairs by Alexander London
+    title: Green cat on white stairs by Alexander London
 ```
 
 * It supports several langauges with **i18n**, the file is `en.yaml`

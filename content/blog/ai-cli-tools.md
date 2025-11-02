@@ -851,12 +851,16 @@ Just cant be changing the workflow every week!
 
 [![Star History Chart](https://api.star-history.com/svg?repos=BoundaryML/baml,google-gemini/gemini-cli&pydantic/pydantic-ai&,type=Date)](https://star-history.com/BoundaryML/baml&google-gemini/gemini-cli&pydantic/pydantic-ai&Date)
 
-if you are exploring a new workflow, see also: 
+If you are exploring new workflows, see also: 
 
-* WARP IDE
+* WARP IDE (not OSS)
    * https://www.warp.dev/
 
-* AIDER
+* AIDER - https://github.com/Aider-AI/aider
+  * https://aider.chat/docs/llms/openai.html
+  * https://aider.chat/docs/llms/ollama.html
+
+> Apache v2 |  aider is AI pair programming in your terminal 
 
 
 If you are tired of CLI and need some UI:

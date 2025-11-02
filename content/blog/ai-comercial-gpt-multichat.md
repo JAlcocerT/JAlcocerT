@@ -744,7 +744,7 @@ Open Source **VSCode extensions**:
   * [MIT](https://github.com/codota/TabNine?tab=MIT-1-ov-file#readme)
  * https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode
 
-* [Tabby](https://fossengineer.com/selfhosting-Tabby-coding-assistant/)
+* [Tabby Code assistant](https://fossengineer.com/selfhosting-Tabby-coding-assistant/)
 
 * https://github.com/sourcegraph/cody - AI that knows your entire codebase
   * https://sourcegraph.com/docs/cody

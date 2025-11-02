@@ -1240,6 +1240,12 @@ And...well, some Flask automatic and high SNR content creation for twitter/X
 
 ![Flask x Matplotlib Plots Webapp](/blog_img/data-experiments/flask-matplotlib-libreportfolio-lots.png)
 
+No post = no impressions.
+
+The difference between a week hitting hard and not doing it is to reach 24k vs 5k impressions.
+
+And in the beginning you will gain the most by replying to people with an audience built already.
+
 ### Improving the HomeLab
 
 I am very happy to have discovered AppImageLauncher.

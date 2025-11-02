@@ -585,7 +585,7 @@ All of this tech will work in Linux and **with just CPU**, if you dont have a GP
 
 Yes, there are many ways to replace Github Copilot for Free:
 
-* [Tabby](https://fossengineer.com/selfhosting-Tabby-coding-assistant/)
+* [TabbyML](https://fossengineer.com/selfhosting-Tabby-coding-assistant/)
 * [LLama Coder](https://github.com/ex3ndr/llama-coder) in a [vscode extension](https://marketplace.visualstudio.com/items?itemName=ex3ndr.llama-coder&ssr=false#review-details)
   * [CodeLLama in HF](https://huggingface.co/codellama/CodeLlama-70b-hf)
 * Others: Bito, Codeium, or [Adrenaline](https://github.com/shobrook/adrenaline/)

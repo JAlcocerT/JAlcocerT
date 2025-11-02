@@ -195,5 +195,4 @@ Feel free to use [Cloudflare Tunnels](/selfhosting-cloudflared-tunnel-docker/) o
 
 * VSCodium - {{< newtab url="https://github.com/VSCodium/vscodium" text="VS Code without MS branding/telemetry/licensing" >}} - MIT License ❤️
   * You can support your development with Gen AI thanks to **F/OSS extensions**
-    * [Tabby](/selfhosting-Tabby-coding-assistant/) - Apache License ✅
     * Continue Dev - Apache License ✅
