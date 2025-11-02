@@ -420,7 +420,15 @@ Spinning **Traefik is easier than ever**: *see how to do it for any VPS*
 #git clone https://github.com/JAlcocerT/Home-Lab.git
 #cd traefik
 #sudo docker compose up -d
+cd ./traefik
+chmod +x setup-traefik.sh
+#cp .env.sample .env
+./setup-traefik.sh
 ```
+
+> Was it easy right?
+
+> > Say thanks to the power of repetition, as I made it recently for the [x300](#x300), a [Pi4](#pi4) and the [Firebat](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/docker-compose.vps.yml" title="Traefik x VPS Setup | Script ↗" >}}
@@ -874,10 +882,55 @@ Then just:
 #Host Pi4
 #  HostName 100.100.100.7
 #  User reisipi
+```
 
+You can optionally make sure that your Pi accepts vscode/windsurf connection:
+
+```sh
+#rm -rf ~/.vscode-server
+#rm -rf ~/.windsurf-server
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+Anyways:
+
+```sh
 git clone https://github.com/JAlcocerT/Home-Lab.git
 
+#python3 cf-dns-updater.py #Point the DNS for Traefik first!
+dig +short wal.jalcocertech.com A
+ping wal.jalcocertech.com
+nslookup wal.jalcocertech.com
+
+cp docker-compose.x300.yml docker-compose.wal.yml
+#nano docker-compose.wal.yml #place the correct subdomains
+
+##echo $(htpasswd -nB admin) | sed -e s/\\$/\\$\\$/g
+#cp .env.sample .env
+#cp cf-token.sample cf-token
+
+#docker compose -f docker-compose.wal.yml up -d
 ```
+
+![alt text](/blog_img/selfh/traefik-admin-login.png)
+
+> As simple as that! https://wal.jalcocertech.com/dashboard/#/
+
+```sh
+#sudo docker stats traefik
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O          BLOCK I/O     PIDS
+1234abcd   traefik   0.00%     0B / 0B             0.00%     128kB / 1.37MB   16.4kB / 0B   10
+```
+
+As i was having Nextcloud running already, I decided to go with the config way of adding it to Traefik:
+
+```sh
+cd config
+nano config.yaml
+```
+
+
 
 ---
 
