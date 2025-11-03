@@ -616,6 +616,13 @@ I wa slucky to find:
 
 > MIT |  Lightweight onboarding library for Next.js 
 
+Library,Key Features,Framework Compatibility,License Note
+Shepherd.js,"Highly customizable for multi-step tours, uses Floating UI for positioning, and prioritizes accessibility.","Framework-agnostic (wrappers for React, Vue, etc.)","MIT/Custom (Free for non-commercial, paid for commercial lifetime license)"
+Driver.js,Focuses on highlighting elements with an overlay/dimming feature to remove distractions. Very lightweight with zero dependencies.,Framework-agnostic (Vanilla JS),MIT (Free for personal and commercial use)
+Intro.js,"Simple, easy to use for creating step-by-step guides. Highly customizable tooltips.",Framework-agnostic,"AGPL-3.0 (Free for open-source, personal, and non-commercial sites; commercial license required for commercial use)"
+React Joyride,"Specifically designed for React applications, offering smooth setup and interactive feature tours.",React,MIT (Free for personal and commercial use)
+TourGuide JS,"Lightweight, simple, and framework-agnostic. Uses Floating UI and offers good customization.","Framework-agnostic (Vanilla JS, TypeScript support)",MIT (Free for personal and commercial use)
+
 One of the skills I enjoy learning more is about photography.
 
 And one of the of the best decisions I ever had, was to have a [Photo Blog](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/).

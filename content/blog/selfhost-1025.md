@@ -1123,13 +1123,24 @@ Provides a very quick monitoring + status pages for your homelab: http://192.168
 
 > > Probably a must have for your VPS!
 
-With quickly integrations to your site: https://docs.peekaping.com/badges
+With quickly integrations to your **website's posts**: https://docs.peekaping.com/badges
 
 ```html
 <p>
     <img src="https://your-peekaping-instance.com/api/v1/badge/api-monitor/status" alt="API Status" />
 </p>
 ```
+
+As I have it running locally: `http://192.168.1.2:8383/monitors` these are rendered via `hugo server`
+
+
+![My Local Service Status](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/status)
+
+Badge Type,Description,Markdown Code
+Uptime (30-day),Shows uptime percentage for the last 720 hours.,![Uptime (30d)](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/uptime/720)
+Average Ping,Displays the average response time over the last 24 hours (default).,![Avg Ping](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/ping)
+Certificate Expiry,Shows how many days until the SSL certificate expires (for HTTPS monitors).,![Cert Expiry](http://192.168.1.2:8383/api/v1/badge/04c91562-ba36-4ab2-872c-b4e6daf4067e/cert-exp)
+Latest Response,Shows the most recent response time measurement.,![Latest Response](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/response)
 
 Grafana and NetData
 
