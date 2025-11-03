@@ -428,7 +428,7 @@ chmod +x setup-traefik.sh
 
 > Was it easy right?
 
-> > Say thanks to the power of repetition, as I made it recently for the [x300](#x300), a [Pi4](#pi4) and the [Firebat](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat)
+> > Say thanks to **the power of repetition**, as I made it recently for the [x300](#x300), a [Pi4](#pi4) and the [Firebat](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/docker-compose.vps.yml" title="Traefik x VPS Setup | Script ↗" >}}
@@ -669,6 +669,8 @@ Remember that this is how the directory should look:
 The **only DNS to modify** is the one for Traefik (before we spin the container), the rest is done automatically as per the labels!
 {{< /callout >}}
 
+![Cloudflare DNS pointing to Tailscale IP Address](/blog_img/selfh/HomeLab/dns/traefik-homelab-dns.png)
+
 So I added these A type DNS *(only)* records: `x300.jalcocertech.com` and `*.x300.jalcocertech.com` to point to my x300 private IP address.
 
 ![cf DNS setup with traefik](/blog_img/selfh/HomeLab/dns-traefik.png)
@@ -692,7 +694,6 @@ docker compose -f docker-compose.x300.yml up -d
 ```
 
 And here it is: https://x300.jalcocertech.com/dashboard/#/
-
 
 **DONT do**
 
@@ -857,6 +858,8 @@ sudo apt update && sudo apt install -y speedtest-cli
 
 > You should be able to connect via your https://termix.x300.jalcocertech.com/ now!
 
+![alt text](/blog_img/selfh/HomeLab/termix-traefik.png)
+
 Make these network tests if you want:
 
 ```sh
@@ -911,6 +914,8 @@ cp docker-compose.x300.yml docker-compose.wal.yml
 #cp cf-token.sample cf-token
 
 #docker compose -f docker-compose.wal.yml up -d
+sudo docker logs traefik
+sudo docker network ls
 ```
 
 ![alt text](/blog_img/selfh/traefik-admin-login.png)
@@ -928,7 +933,23 @@ As i was having Nextcloud running already, I decided to go with the config way o
 ```sh
 cd config
 nano config.yaml
+sudo docker restart traefik
+ping portainer.wal.jalcocertech.com
+
+docker network connect traefik_traefik-proxy portainer
+#docker exec -it traefik wget -qO- http://portainer:9000/api/system/status
+#docker inspect portainer --format '{{json .NetworkSettings.Networks}}' | jq
+
+ping adguardhome.wal.jalcocertech.com
+#sudo docker logs adguardhome
 ```
+
+![Using Adguard via Traefik for https](/blog_img/selfh/HomeLab/dns/adguard.png)
+
+![Adguard Home DNS Servers via container](/blog_img/selfh/HomeLab/dns/adguardhome-dns-servers.png)
+
+https://github.com/JAlcocerT/Home-Lab/blob/main/adguardhome/docker-compose.traefik.yml
+https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/docker-compose.wal.yml
 
 
 
