@@ -604,6 +604,18 @@ Even with Porkbun you can get a quick website now: https://porkbun.com/products/
 
 And pretty affordable at ~60$/year.
 
+For retail/B2C, having a way to do proper user onboarding / user tours / user guides is key.
+
+I wa slucky to find:
+
+* https://github.com/sjmc11/tourguide-js
+
+> MIT | TourGuide is a Javascript library for creating user tours and on-boarding steps for your apps.
+
+* https://github.com/enszrlu/NextStep/
+
+> MIT |  Lightweight onboarding library for Next.js 
+
 One of the skills I enjoy learning more is about photography.
 
 And one of the of the best decisions I ever had, was to have a [Photo Blog](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/).
@@ -683,6 +695,8 @@ Kind of resonates with [process](#processes) > result.
 > Systems *(designed for the worst days)* do not really on willpower / motivation
 
 5. Quotes
+
+> Achievement comes from actions not aspirations
 
 > One place, not all over the place.
 

@@ -1107,6 +1107,29 @@ This makes Shlink a strong candidate if QR code functionality is a priority alon
 
 ### Monitoring For HomeLab
 
+I discovered about **Peekaping**: https://github.com/0xfurai/peekaping/
+
+![alt text](../../static/blog_img/Monitoring/peekaping.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/peekaping" title="Peekaping  Homelab Monitoring | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Provides a very quick monitoring + status pages for your homelab: http://192.168.1.2:8383/status/mora
+
+![alt text](/blog_img/Monitoring/peekaping-status-pages-monitoring.png)
+
+> **MIT** | Open Source Uptime Kuma Alternative
+
+> > Probably a must have for your VPS!
+
+With quickly integrations to your site: https://docs.peekaping.com/badges
+
+```html
+<p>
+    <img src="https://your-peekaping-instance.com/api/v1/badge/api-monitor/status" alt="API Status" />
+</p>
+```
 
 Grafana and NetData
 
