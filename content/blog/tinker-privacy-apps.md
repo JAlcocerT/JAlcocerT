@@ -17,16 +17,21 @@ Because its not about if, but when a *single point of failure* will be gone.
 
 Lately I was reading this [reddit backup post](https://www.reddit.com/r/DataHoarder/comments/1gsutp5/list_of_free_open_source_and_crossplatform_backup/?chainedPosts=t3_yqonpo)
 
-1. NextCloud
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/nextcloud" title="NC | 🐳 Config ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/rclone" title="rclone | 🐳 Config ↗"  >}}
+{{< /cards >}}
 
+
+1. NextCloud
 
 2. ProtonDrive
 
 Fine if you are on windows.
 
-Unfortunately, there is no official https://github.com/donniedice/protondrive-linux
+Unfortunately, there is no official way to do so: https://github.com/donniedice/protondrive-linux
 
-But you can get your way around with rclone.
+But you can get your way around **with rclone** as seen here.
 
 You also have some static/blob storage:
 

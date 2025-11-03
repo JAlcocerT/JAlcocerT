@@ -1244,6 +1244,8 @@ No post = no impressions.
 
 The difference between a week hitting hard and not doing it is to reach 24k vs 5k impressions.
 
+> Thats why some social media post automation is beneficial https://github.com/JAlcocerT/DataInMotion --> https://github.com/JAlcocerT/LibrePortfolio-X
+
 And in the beginning you will gain the most by replying to people with an audience built already.
 
 ### Improving the HomeLab

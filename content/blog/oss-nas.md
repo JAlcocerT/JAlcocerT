@@ -182,7 +182,7 @@ graph LR
     L[**ThinkPad x13**<br/>500GB];
     A --> Y[music server];
     AA[Gdrive] --> I;
-    AB[Protondrive!] --> I;
+    AB[Proton drive!] --> I;
     AC[onedrive] --> L;
     
     style B fill:#f9f,stroke:#333,stroke-width:2px
@@ -209,7 +209,7 @@ ifconfig
 **Containers**
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Containers are great! 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Containers are great! Specially with Homarr in place 🐳 ↗"  >}}
 {{< /cards >}}
 
 
@@ -283,7 +283,7 @@ Then, just...
 
 #### Linux BackUps
 
-Proton Drive is cool...but it does not work out of the box for Linux.
+Proton Drive is cool...but it does not work *out of the box* for Linux.
 
 Unless... you find this [awsome Otterlord's post](https://blog.otterlord.dev/posts/proton-drive-rclone/)
 
@@ -293,9 +293,14 @@ And after reboot I could not access the system at all.
 
 Thankfully, I got **proper backup** implemented!
 
-or at least, one that worked.
+*Or at least, one that worked.*
 
 You can try with: Syncthing, Nextcloud, WebDav...
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rclone" title="Rclone with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
 
 > But try something!
 

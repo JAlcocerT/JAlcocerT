@@ -169,6 +169,13 @@ goclone https://landonorris.com/
 #python3 -m http.server 8003 --directory ./landonorris.com
 ```
 
+<!-- https://youtu.be/HzL65tTeANs?si=12RmUbfDvE8-6PiG -->
+
+{{< youtube "HzL65tTeANs" >}}
+
+
+you
+
 ![alt text](/blog_img/web/WebsSnapshots/lando-speed-insights.png)
 
 ```sh

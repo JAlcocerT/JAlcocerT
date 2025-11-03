@@ -17,14 +17,13 @@ The historical stock webapp, companion for: `https://financeinmotion.fyi`
 
 +++ More and cooler yfinance for a ~ PyStocks v2
 
-
 **Intro**
 
 Build and be prepared for very low conversions.
 
 People on X with 7k subs are able to convert to 17 paid users for some web apps.
 
-> Ready to convert at ~0.2%?
+> Ready to convert at ~0.2%? like [here](https://buymeacoffee.com/dividiendolo?s=35) with [this webapp](https://geraldineweiss.com/?s=35), despite [the free CSR calculators](https://geraldineweiss.com/simuladorcartera)
 
 To pull data from [yfinance](https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/) should not be a secret anymore:
 
@@ -81,6 +80,9 @@ Nice to have:
 12. https://stockanalysis.com/stocks/pep/dividend/
 13. https://fullratio.com/stocks/nyse-ko/coca-cola 
 14. Buyback ratio (if historical, even better). They get announced, [people comment](https://x.com/StockMKTNewz/status/1960889386234778054)
+
+* 
+
 15. Volatility div growth and cagr / Yfinance eur usd?
 16. Treemap with market size like https://finviz.com/map.ashx
 

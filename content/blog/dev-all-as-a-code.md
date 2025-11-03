@@ -21,7 +21,7 @@ Remotion is best for React developers needing video automation and scaling.
 Manim is the tool for deep mathematical visualization with powerful programmatic control.
 
 
-[Presentations](#ppts-as-a-code): Reveal.js vs Slidev
+[Presentations](#ppts-as-a-code): Reveal.js vs [Slidev](https://github.com/slidevjs/slidev)
 
 - Reveal.js is a popular HTML presentation framework that supports Markdown and is flexible but often requires writing HTML for layout and animations. It is widely used but less concise for slide content.[1]
 - Slidev is built on Vue.js and Vite, providing an extended Markdown format for creating slides. It is more concise than Reveal.js, supports Vue components for interactive slides, has instant hot-reloading, built-in theming, and recording features. Slidev is very developer-friendly and web-based, allowing extensive customization.[2][1]
@@ -277,10 +277,28 @@ This can also be done with Python, but it will look more like a **report or with
   {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/plot_total_return_from_yfinance.py" title="Data In Motion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Matplotlib Animations with yfinance - Example Total Returns" >}}
 {{< /cards >}}
 
+```sh
+#git clone https://github.com/JAlcocerT/DataInMotion.git
+#cd DataInMotion && branch libreportfolio
+uv run tests/run_consolidated_reports.py CAT 2005-01-01 --subdir --brand "@LibrePortfolio" --rolling-days 365\
+| uv run OpenAI-Twitter/generate_tweets_from_report.py --ticker CAT --language es
+
+uv run tests/plot_historical_yield.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --monthly
+
+uv run tests/plot_historical_yield_percentiles.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --low 10 --high 90 --warmup-days 400
+
+uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+```
+
 #### Resume as a Code
 
 Just in case that you need some help with: https://fmhy.net/misc#resume-portfolio
 
+{{< callout type="info" >}}
+Whatever you choose, just make sure that its version controlled and parsable by HR
+{{< /callout >}}
+
+We make some CV before with [Overleaf and Latex, here](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#cv-as-a-code).
 
 More options for **creating your CV**?
 
@@ -330,9 +348,12 @@ People do all sort of creative stuff around PDF: https://github.com/domdomegg/pd
 
 > MIT |  Open-source PDF generation library built with TypeScript and React. Features a WYSIWYG template designer, PDF viewer, and powerful generation capabilities. Create custom PDFs effortlessly in both browser and Node.js environments. 
 
-
 Fast PDF Generator 	Easy PDF Template Design 	Simple JSON Template
-Works on Node and in the browser. Use templates to generate PDFs—complex operations are not required. 	Anyone can easily create templates using the designer.
+
+Works on Node and in the browser. Use templates to generate PDFs—complex operations are not required. 
+
+Anyone can easily create templates using the designer.
+
 emplates are JSON data that is easy to understand and work with.
 
 With very interesting templates: https://pdfme.com/templates and even template designer playground https://pdfme.com/template-design
@@ -640,7 +661,7 @@ For just accelerations:
 ## Conclusions
 
 
-https://github.com/slidevjs/slidev
+
 
 
 ### Webs are also code

@@ -105,6 +105,7 @@ We can say its a object storage (like aws s3 or GCS) and a data catalogue:
 * https://dash.cloudflare.com
     * https://developers.cloudflare.com/r2/pricing/
     * https://r2-calculator.cloudflare.com/
+    * https://rclone.org/s3/#cloudflare-r2
 
 > R2 provides you with **S3-compatible** object storage with zero egress fees.
 

@@ -134,6 +134,10 @@ flatpak install flathub im.riot.Riot #element
 #flatpak install flathub org.signal.Signal
 ```
 
+* https://github.com/bbernhard/signal-cli-rest-api/
+
+> MIT |  Dockerized Signal Messenger REST API 
+
 If you like Matrix or Signal, you might find interesting:
 
 * https://github.com/permissionlesstech/bitchat

@@ -56,7 +56,7 @@ Today, we are going to use **Groq API with F/OSS Models** to...[chat with a Yout
 **With LLaMa3 and crazy inference speed**
 
 {{< callout type="info" >}}
-Everything is covered at my [Forked Repository **phiData**](https://github.com/JAlcocerT/phidata/tree/main) with a [**GroqAPI**](https://console.groq.com/keys)
+See my [Forked Repository **phiData**](https://github.com/JAlcocerT/phidata/tree/main) with a [**GroqAPI**](https://console.groq.com/keys)
 {{< /callout >}}
 
 

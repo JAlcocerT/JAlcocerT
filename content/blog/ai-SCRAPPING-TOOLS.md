@@ -228,7 +228,9 @@ sudo docker-compose up -d --build vector-admin
 
 Go to: `localhost:3001`
 
-For your first login will require you to use the `SYS_EMAIL` and `SYS_PASSWORD` set via **ENV** during build or run. After onboarding this login will be permanently disabled.
+For your first login will require you to use the `SYS_EMAIL` and `SYS_PASSWORD` set via **ENV** during build or run. 
+
+After onboarding this login will be permanently disabled.
 
 Try and **connect to qDrant** with: `http://192.168.3.103:6333`
 

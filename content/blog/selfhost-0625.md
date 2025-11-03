@@ -178,9 +178,15 @@ You can now enable other devices or create accounts for your friends/family:
 
 Last month [on this post](https://jalcocert.github.io/JAlcocerT/os-for-nas/) I tried protondrive with rclone https://github.com/JAlcocerT/Docker/tree/main/Backups#rclone
 
-1. **ProtonDrive**
+You could try and backup your nextcloud data folder towards:
 
-2. **Google Drive**
+1. **ProtonDrive** https://rclone.org/protondrive/#configurations
+
+2. **Google Drive** https://rclone.org/drive/ or https://rclone.org/googlephotos/
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rclone" title="Rclone with Docker 🐋 ↗" >}}
+{{< /cards >}}
 
 #### PortMaster and https
 
