@@ -803,6 +803,7 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 13. Photoview or Immich 
 14. https://github.com/block/goose
 15. RGallery vs PiGallery
+15. Peekaping
 16. [Uptime Kuma](https://youtu.be/fxVNTffZC2U) for status pages
 17. [selfhosted ebook landing](https://youtu.be/XEFpzEIEDFc) page with astro
 18. Umami for web analytics (with a slidev ppt exported to pngs on kdenlive explaining features for the video) or GL INET?
@@ -813,6 +814,9 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 23. [Nextcloud and a Pi](https://youtu.be/x2eFFeRIyXg)
 24. Ventoy. [Linux Lite vs Garuda RAM consumption](https://youtu.be/hTw9DBEksx4)
 25. Bonus: [FreshRSS + AstroPod](https://youtu.be/mDMGtMOx-Fk)
+
+* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
+* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
 
 > I had to make sure to create **better thumbnails** to get some views
 

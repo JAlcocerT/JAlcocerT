@@ -1007,7 +1007,7 @@ https://x.com/tom_doerr/status/1979894065400263086?
 
 I discovered about **Peekaping**: https://github.com/0xfurai/peekaping/
 
-![alt text](/blog_img/Monitoring/peekaping.png)
+![Peekaping Monitoring](/blog_img/Monitoring/peekaping.png)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/peekaping" title="Peekaping  Homelab Monitoring | Docker Config 🐋 ↗" >}}
@@ -1040,20 +1040,24 @@ Average Ping,Displays the average response time over the last 24 hours (default)
 Certificate Expiry,Shows how many days until the SSL certificate expires (for HTTPS monitors).,![Cert Expiry](http://192.168.1.2:8383/api/v1/badge/04c91562-ba36-4ab2-872c-b4e6daf4067e/cert-exp)
 Latest Response,Shows the most recent response time measurement.,![Latest Response](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/response)
 
+I think that it can be good to think how to integrate Peekaping with these notification services: `http://192.168.1.2:8383/notification-channels/new`
 
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana" title="Grafana and NetData" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs and scripts for HOMELAB - Superseeds Docker repo" >}}
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/gotify/" title="Gotify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ntfy/" title="Ntfy | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-GrafanaPrometheusNodeExp.JPG
+![alt text](/blog_img/Monitoring/peekaping-notifications.png)
 
+We also have the good old **Grafana, configured for Monitoring**:
 
-[SelfHost NetData with Docker](https://fossengineer.com/selfhosting-server-monitoring-with-netdata-and-docker/)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana" title="Grafana and NetData" image="/blog_img/iot/grafana.png" subtitle="Grafana x HOMELAB" >}}
+{{< /cards >}}
 
+<!-- GrafanaPrometheusNodeExp.JPG -->
 
-* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
-* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
+Or, a quick monitoring dashboard with **NetData**: [SelfHost NetData with Docker](https://fossengineer.com/selfhosting-server-monitoring-with-netdata-and-docker/)
 
 
 {{< cards cols="1" >}}
@@ -1074,9 +1078,16 @@ sudo docker stats multichat
 
 I Got to know also about: https://github.com/operacle/checkcle/
 
-> MIT |  CheckCle is a **self-hosted, open-source monitoring platform** for seamless, real-time full-stack systems, applications, and infrastructure. It provides real-time uptime monitoring, distributed checks, incident tracking, and alerts. All deployable anywhere. 
+> MIT |  CheckCle is a **self-hosted, open-source monitoring platform** for seamless, real-time full-stack systems, applications, and infrastructure. 
+
+> > It provides real-time uptime monitoring, distributed checks, incident tracking, and alerts. All deployable anywhere. 
 
 But we already covered similar tools:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tianji" title="Tianji | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 1. **Beszel**: Web Analytics and Monitoring!
 
@@ -1094,15 +1105,10 @@ But we already covered similar tools:
 3. Uptime Kuma and **Kener**: *bringing status pages to your server*
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener Status Pages | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ![Uptime Kuma Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
 
 ![Kener Status Pages](/blog_img/selfh/HomeLab/statuspages/kener-setup.png)
-
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener Status Pages | Docker Config 🐋 ↗" >}}
-{{< /cards >}}

@@ -26,7 +26,7 @@ Despite not been able to code in Go, I really admire few projects already that u
 
 Then I had a look to [Gotify](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/#gotify)
 
-And now is time to Pocketbase, also written in Go.
+And now is time to Pocketbase, **also written in Go.**
 
 1. What it is [PB](#pocketbase)?
 

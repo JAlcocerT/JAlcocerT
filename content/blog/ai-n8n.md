@@ -775,6 +775,11 @@ Step-by-Step Guide to Get Client ID and Secret
 
 * [Gotify](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gotify/), [grist](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.grist/), [Twitter](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twitter/), [SendGrid](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/), [MQTT](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mqtt/), [HomeAssistant](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/), [Youtube](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.youtube/#operations)
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/gotify/" title="Gotify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ntfy/" title="Ntfy | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ### N8N vs Hugging vs Flowise
 

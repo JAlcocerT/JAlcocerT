@@ -11,7 +11,7 @@ url: 'selfhosted-apps-nov-2025'
 
 ### Selfhosted Adventures
 
-I tried recently umbrelOS, but inside a container:
+I tried recently umbrelOS (the latest1.4), but inside a container:
 
 ![alt text](/blog_img/selfh/umbrel-os/umbrel-signup.png)
 
@@ -135,3 +135,29 @@ This makes Shlink a strong candidate if QR code functionality is a priority alon
 
 ## Conclusions
 
+
+
+---
+
+## FAQ
+
+### Gotify x Watchtower
+
+Thanks to DbTech's video:
+
+
+<!-- https://www.youtube.com/watch?v=mIVHxFrFKqQ -->
+
+{{< youtube "mIVHxFrFKqQ" >}}
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/gotify/" title="Gotify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/watchtower/" title="Watchtower | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+
+{{< callout type="warning" >}}
+I prefer Watchtower to send alerts on new images, rather than letting update them automatically. I had problems with a Nextcloud Update long back!
+{{< /callout >}}
