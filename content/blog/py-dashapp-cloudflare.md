@@ -38,7 +38,7 @@ Have a look to the .ipynb notebook that I used to integrate the packages with Go
 
 ### Deploying with Google Cloud Run
 
-I already created a post to deploy with GCR a dockerized DASH app, and I discovered the hard way about one of the CONS of it.
+I already created a post to **deploy with GCR a dockerized DASH app**, and I discovered the hard way about one of the CONS of it.
 
 * Pros:
     * Scalability: Google Cloud Run provides automatic scaling, which means that your app can automatically handle increases or decreases in traffic without any manual intervention.
@@ -69,7 +69,7 @@ git clone https://github.com/JAlcocerT/Py_Trip_Planner.git ./Py_Trip_Planner &&
 cd Py_Trip_Planner
 ```
 
-* Step 3: Have [docker installed](https://jalcocert.github.io/RPi/projects/selfhosting_101/#install-docker) and [build the Docker Image](https://fossengineer.com/building-docker-container-images/):
+* Step 3: Have [docker installed](https://jalcocert.github.io/RPi/projects/selfhosting_101/#install-docker) and [build the Docker Image](https://fossengineer.com/building-docker-container-images/)
 
 
 {{< dropdown title="Pre-Requisites!! Just Get Docker 🐋" closed="true" >}}
@@ -131,7 +131,7 @@ networks:
 
 
 * Step 5: go to the Cloudflare UI and add the public host names as explained [in this Cloudflare Guide](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/#cloudflare-tunnel---adding-the-docker-container-to-the-ui).
-* https://one.dash.cloudflare.com -> Networks -> `Tunnels`
+  * Go to https://one.dash.cloudflare.com -> Networks -> `Tunnels`
 
 {{< youtube id="VrV0udRUi8A" autoplay="false" >}}
 

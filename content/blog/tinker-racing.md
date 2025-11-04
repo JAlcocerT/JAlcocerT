@@ -13,6 +13,11 @@ RacheChrono
 ![Karting Adventure](/blog_img/memes/Accidente_karting-min.gif)
 
 
+<!-- https://www.youtube.com/watch?v=LToBbKTHAkw -->
+
+{{< youtube "LToBbKTHAkw" >}}
+
+
 ---
 
 AndrOBD (Connect to your car's OBD system)

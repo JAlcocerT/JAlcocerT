@@ -7,6 +7,10 @@ description: 'Measuring the More, better, new online performance.'
 url: 'selfhosted-apps-nov-2025'
 ---
 
+**TL;DR**
+
+
+**Intro**
 
 
 ### Selfhosted Adventures
@@ -161,3 +165,12 @@ Thanks to DbTech's video:
 {{< callout type="warning" >}}
 I prefer Watchtower to send alerts on new images, rather than letting update them automatically. I had problems with a Nextcloud Update long back!
 {{< /callout >}}
+
+### Programmatic DNS updates
+
+* https://developers.cloudflare.com/api/resources/dns/
+* https://github.com/cloudflare/cloudflare-python
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="Cloudflare x Porkbun DNS API Py Scripts ↗" >}}
+{{< /cards >}}

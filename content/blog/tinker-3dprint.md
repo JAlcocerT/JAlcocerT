@@ -174,6 +174,15 @@ Can't wait to make some mechanism design and see it work.
 <!-- {{< youtube id="v=qQmQ9ZpvHUo" autoplay="false" >}} -->
 {{< youtube "qQmQ9ZpvHUo" >}}
 
+---
+
+## COnclusions
+
+Some people have businesses around 3dprinting:
+
+https://www.youtube.com/watch?v=RyKvEcgcswg&t=123s
+
+https://www.youtube.com/watch?v=o7qwIwoveA4
 
 ---
 
@@ -200,6 +209,10 @@ Before we start writing Python scripts in GIMP, we need to install the Python-Fu
     * https://github.com/OctoPrint/OctoPrint
     * https://www.raspberrypi.com/tutorials/set-up-raspberry-pi-octoprint/
     * https://depau.github.io/3dprint-wiki/wiki/hardware/octoprint-devices/
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/octoprint/" title="Octoprint | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 > The snappy web interface for your 3D printer.
 
