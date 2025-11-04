@@ -29,6 +29,8 @@ How about now?
 
 Some flutter apps?
 
+https://flathub.org/en/apps/de.wger.flutter Which I discovered thanks to https://apps.umbrel.com/app/wger
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ente/" title="Ente | Docker Config 🐋 ↗" >}}
 {{< /cards >}}

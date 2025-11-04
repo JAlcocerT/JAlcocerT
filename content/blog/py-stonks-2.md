@@ -488,48 +488,12 @@ Similar projects include **Firefly III** and **GnuCash**.
 > Simple Budgeting, Powerful Results 
 
 
-**Tl;DR**
-
-Before building [PyStocks v2](https://jalcocert.github.io/JAlcocerT/py-stonks/), see what others have created.
-
-**Intro**
-
-Whether TradFi, DeFi, or whatever it comes, you might want to bring clarity to your personal finances.
-
-AND MORE TOOLS IN THE FAQ
 
 ## Selfhostable Personal Finance Tools
 
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Selfhosted Ollama - Docker Configs 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Selfhosted Ollama - Docker Configs 🐋 ↗" >}}
-{{< /cards >}}
+Whether TradFi, DeFi, or whatever it comes, you might want to bring clarity to your personal finances.
 
-### Paisa
-
-* https://paisa.fyi/
-* https://github.com/ananthakumaran/paisa
-
-### Actual Budget
-
-* https://actualbudget.org/
-* https://github.com/actualbudget/actual
-
-> A local-first personal finance app
-
-
-### firefly-iii
-
-* https://github.com/firefly-iii/firefly-iii/
-* https://mariushosting.com/how-to-install-firefly-iii-on-your-synology-nas/
-
-https://www.youtube.com/watch?v=ru1LTUhFGjA
-
-### Maybe
-
-* https://github.com/maybe-finance/maybe
-
- The OS for your personal finances 
+But before building [PyStocks v2](https://jalcocert.github.io/JAlcocerT/py-stonks/), see what others have created.
 
 ### Ghostfolio
 
@@ -537,6 +501,17 @@ Ghostfolio has a lot of [features](https://ghostfol.io/en/features):
 
 * https://ghostfol.io/
 * https://github.com/ghostfolio/ghostfolio
+
+Ghostfolio can be installed via docker and also via UmbrelOS:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghostfolio" title="Selfhosted Ghostfolio - Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted UmbrelOS x Ghostfolio - Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+
+* http://192.168.1.2:86/app-store/ghostfolio
+* http://192.168.1.2:3334/en/resources/guides
 
 
 {{< dropdown title="Pre-Requisites! Just Get Docker and setup Ghostfolio 🐋" closed="true" >}}
@@ -559,6 +534,36 @@ echo -e "POSTGRES_PASSWORD=$(openssl rand -base64 32)\nACCESS_TOKEN_SALT=$(opens
 
 > Thanks to https://mariushosting.com/how-to-install-ghostfolio-on-your-synology-nas/
 
+
+
+### Paisa
+
+* https://paisa.fyi/
+* https://github.com/ananthakumaran/paisa
+
+### Actual Budget
+
+* https://actualbudget.org/
+* https://github.com/actualbudget/actual
+
+> A local-first personal finance app
+
+
+### firefly-iii
+
+* https://github.com/firefly-iii/firefly-iii/
+* https://mariushosting.com/how-to-install-firefly-iii-on-your-synology-nas/
+
+<!-- https://www.youtube.com/watch?v=ru1LTUhFGjA -->
+
+{{< youtube "ru1LTUhFGjA" >}}
+
+
+### Maybe
+
+* https://github.com/maybe-finance/maybe
+
+ The OS for your personal finances 
 
 ---
 

@@ -10,7 +10,9 @@ url: 'knowledge-management'
 
 **Tl;DR**
 
-Pros and Cons of note taking apps. While learning which [markdown edition fwks](#what-it-is-wysiwyg) for notes are available for my future SaaS.
+Pros and Cons of [few note taking apps](https://fossengineer.com/selfhostable-note-taking-tools/).
+
+While learning which [markdown edition fwks](#what-it-is-wysiwyg) for notes are available for my future SaaS.
 
 +++ quick selfhosting guide in the [conclusions](#conclusions)
 

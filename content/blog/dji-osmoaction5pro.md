@@ -208,6 +208,7 @@ Delete the LRF files:
 du -h --max-depth=1 #check space
 find . -name "*.LRF" -type f -delete #cleaning .LRF
 ```
+
 And **get VLC** to see them:
 
 ```sh
