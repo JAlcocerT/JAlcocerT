@@ -183,6 +183,24 @@ If you are having a business, getting contact forms / feedback /qna from clients
 > Beautiful Open-Source Form Builder
 
 
+A static site generator...that can be used to create documentation with Python?! Thats **Zensical**
+
+* https://github.com/zensical/zensical
+  * https://zensical.org/docs/setup/search/
+
+>  MIT | A modern static site generator by the creators of [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) 
+
+```sh
+uv add zensical
+uv run zensical new .
+#sudo docker stop portainer_app
+uv run zensical serve
+```
+
+Their official page design is just amazing: https://zensical.org/
+
+> Zensical creates scalable Open Source systems for technical writing that always keep you in the flow
+
 
 Automatically discover and visually document network infrastructure.
 

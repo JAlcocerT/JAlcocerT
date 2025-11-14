@@ -250,3 +250,6 @@ https://www.youtube.com/watch?v=qhyeRS892uM
 Serverless Data Platform (redis, vector DBs....)
 
 
+* https://github.com/DrewThomasson/sound-monitor
+
+Is your engine generating too much noise?
