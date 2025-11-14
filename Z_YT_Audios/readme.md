@@ -9,6 +9,15 @@ Better **YT Workflow** on:
 
 * https://github.com/JAlcocerT/YT-Video-Edition
 
+
+# bark
+
+```sh
+#uv init
+#uv add bark scipy
+uv run sunoai-bark.py
+```
+
 ---
 
 # OpenAI

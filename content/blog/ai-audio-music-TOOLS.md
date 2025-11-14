@@ -2,7 +2,7 @@
 title: "How to create music with AI Tools"
 date: 2025-11-13T23:20:21+01:00
 draft: false
-tags: ["Docker","Gen-AI"]
+tags: ["Docker","Gen-AI","SunoAI"]
 description: 'Tryign to Make music with AI'
 url: 'music-with-ai-tools'
 ---
@@ -17,6 +17,36 @@ It was ton of fun.
 But can we now do music with AI?
 
 **Intro**
+
+Not a post about Gonic nor Sonixd.
+
+You have multiple options to create music with AI, including ready-to-use platforms and Python-based tools for custom projects.
+
+### General AI Music Creation Options
+- **Online AI Music Generators**: Platforms like Suno, AI Song Maker, MusicCreator AI, Soundraw, and Boomy let you create royalty-free music quickly by choosing styles, moods, and instruments. These require no coding and are ideal for instant music creation.
+- **Collaborative AI Platforms**: Some tools leverage crowd-sourced or evolving AI models to generate music that you can customize.
+
+### Python-Based AI Music Creation Libraries and Frameworks
+- **Magenta**: Google’s open-source project provides powerful tools built on TensorFlow for music generation, including pre-trained models that create melodies, harmonies, and rhythms.
+- **music21**: A Python toolkit for musicology, analysis, and symbolic music processing, commonly used with AI models for data preparation and generation.
+- **pretty_midi**: Handles MIDI creation, manipulation, and conversion, useful for AI-generated MIDI data.
+- **TensorFlow/Keras**: Base libraries to build custom neural networks (e.g., LSTMs, Transformers) for music sequence generation.
+- **pydub and fluidsynth**: Useful for audio manipulation and rendering AI-generated MIDI into sound.
+
+**Workflow Example with Python:**
+
+1. Use datasets or MIDI files for training neural networks.
+2. Train or use pre-trained models (via Magenta or custom TensorFlow code) to generate music sequences.
+3. Convert sequences into MIDI with pretty_midi or music21.
+4. Render or process audio with pydub or fluidsynth.
+
+This approach suits developers keen to customize AI music generation or integrate it with other projects.
+
+In summary, for quick music creation, use ready AI platforms; for deeper programming control, leverage Python AI libraries like Magenta and music21 to generate and manipulate music.[1][2][3]
+
+[1](https://suno.com)
+[2](https://pyseek.com/2025/04/generate-music-using-python-deep-learning/)
+[3](https://github.com/ayeshabasit/AI-Music-Generator)
 
 <!-- 
 ```
@@ -132,18 +162,30 @@ ffmpeg –version
 * {{< newtab url="" text="The Source Code at Github" >}}
     * License: {{< newtab url="" text="MIT" >}} ❤️
 
+### SunoAI
+
+We touched Suno (Bark) some time back here.
+
+* https://github.com/suno-ai/bark
+
+> MIT |  🔊 Text-Prompted Generative Audio Model 
+
+The good things, is 
+
 ### Beats with AI
 
-### Lyrics with AI
+Arent beats just music?
 
-You can try simply LLMs!
+This can be cool as background music for youtube tech videos.
 
 ---
 
 ## Conclusions
 
 
+### Lyrics with AI?
 
+You can try simply LLMs!
 
 ---
 

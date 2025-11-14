@@ -31,6 +31,12 @@ Some flutter apps?
 
 https://flathub.org/en/apps/de.wger.flutter Which I discovered thanks to https://apps.umbrel.com/app/wger
 
+![alt text](/blog_img/selfh/PaaS/wger.png)
+
+See https://play.google.com/store/apps/details?id=de.wger.flutter
+
+You can connect to your wger server
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ente/" title="Ente | Docker Config 🐋 ↗" >}}
 {{< /cards >}}

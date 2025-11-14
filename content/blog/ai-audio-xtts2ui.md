@@ -3,7 +3,7 @@ title: "Audio with AI. TTS and Voice Cloning"
 date: 2025-05-10T18:20:21+01:00
 draft: false
 description: 'Local T2S Tools with Coqui and LocalAI. Clone audio with xTTS2.'
-tags: ["AI-Gen","Google AI Studio","Pinokio AI","F5-TTS","Coqui-TTS"]
+tags: ["AI-Gen","Google AI Studio","Pinokio AI","F5-TTS","Coqui-TTS","SunoAI Bark"]
 url: local-ai-audio
 ---
 
@@ -172,15 +172,21 @@ services:
 
 ### RT Voice Cloning 
 
-<https://github.com/CorentinJ/Real-Time-Voice-Cloning>
+* https://github.com/CorentinJ/Real-Time-Voice-Cloning
 
 
 ### BARK
 
 * https://github.com/suno-ai/bark
 
+> MIT |  🔊 Text-Prompted Generative Audio Model 
 
-> Important https://pytorch.org/get-started/locally/ get the right PyTorch version!
+See `./Z_YT_Audios` folder of this repo and `uv run sunoai-bark.py` to try it out!
+
+It will download the models locally ~5GB
+
+
+> > Important https://pytorch.org/get-started/locally/ get the right PyTorch version!
 
 {{< youtube "hrYhk9Khyho" >}}
 

@@ -326,7 +326,8 @@ You can have a look to https://btcpayserver.org/
 
 > MIT |  Accept Bitcoin payments. Free, open-source & self-hosted, Bitcoin payment processor. 
 
-Others, are exchanging it P2P with tools like [RoboStats](https://github.com/RoboSats/robosats)
+Others, are exchanging it via P2P with tools like [RoboStats](https://github.com/RoboSats/robosats) that can be installed in few ways, like with UmbrelOS.
+
 {{< callout type="info" >}}
 If you want to read one and only one book about Crypto - [WhyCryptoCurrencies](https://whycryptocurrencies.com/)
 {{< /callout >}}

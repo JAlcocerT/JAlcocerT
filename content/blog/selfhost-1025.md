@@ -369,10 +369,17 @@ But it wont pay off when taking into cosideration the electricity costs.
 Anyways, you can do a quick **XMR benchmark** on your mini PC:
 
 * https://github.com/xmrig/xmrig
+  * https://github.com/metal3d/docker-xmrig
+  * https://miningpoolstats.stream/monero
 
 >  RandomX, KawPow, CryptoNight and GhostRider unified CPU/GPU miner and RandomX benchmark 
 
 > > Its an interesting project anyways, configurable via JSON for that alternative CPU benchmark
+
+
+<!-- https://www.youtube.com/watch?v=lu0k59y5z3E -->
+
+{{< youtube "lu0k59y5z3E" >}}
 
 
 I also got to know a **new browser**, [Helium](https://github.com/imputnet/helium): 
@@ -536,6 +543,8 @@ You have cool desktop clients: [Sonixd](https://github.com/jeffvli/sonixd/releas
 And even a newer: https://github.com/jeffvli/feishin
 
 >  GPL 3.0 | A modern self-hosted music player. 
+
+Which can be used via **AppImageLauncher**:
 
 ```sh
 #winget install sonixd

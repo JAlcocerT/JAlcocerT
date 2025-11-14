@@ -78,3 +78,10 @@ Im now using https://github.com/Litlyx/litlyx for the **web analytics** of this 
 ![Cookies Meme](/blog_img/web/COOKIES.jpg)
 
 > With no cookie monster involved!
+
+## FAQ
+
+https://github.com/aaronphaneuf/stitch_tracker?tab=readme-ov-file
+
+> Self hosted app for your knitting or crochet projects
+

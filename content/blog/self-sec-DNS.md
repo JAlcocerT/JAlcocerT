@@ -8,6 +8,13 @@ summary: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+
+https://github.com/TechnitiumSoftware/DnsServer
+
+> agpl 3 | Technitium DNS Server
+
+
+
 #### PiHole
 
 This service has been with my [for a while](https://jalcocert.github.io/RPi/posts/selfh-internet-better/).
