@@ -288,15 +288,17 @@ This time is going to be [yfinance](https://jalcocert.github.io/JAlcocerT/r-yfR-
 
 > That I also covered recently on this post: https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/
 
-
 <!-- https://youtu.be/FojrMePgaY0 -->
 
 {{< youtube "FojrMePgaY0" >}}
 
-
 ### Formula 1
 
-I got to know recently about: https://www.f1-tempo.com/
+If you watch F1, you might be aware that AWS can bring you data: https://aws.amazon.com/sports/f1/ 
+
+Which Im not sure its a part of AWS free tier https://aws.amazon.com/free/?nc2=h_pr_ft
+
+But, I got to know recently about: https://www.f1-tempo.com/ and https://www.gp-tempo.com/
 
 Puedes acceder a telemetría de **F1 en tiempo real y datos históricos** usando APIs y webs especializadas como OpenF1, FastF1 y soluciones comerciales como Formula Live Pulse. 
 
@@ -320,10 +322,10 @@ Ergast API           |  Sí      |  Sí           |  No       |  API gratuita y 
 
 Opciones en Web y Apps
 
-- f1-dash.com: Dashboard en tiempo real con telemetría y tiempos de carrera online, sector por sector y comparaciones directas.[4]
-- TracingInsights.com: Analítica y gráficos interactivos de telemetría y rendimiento, comparando pilotos y vueltas.[15]
-- F1 TV App: Oficial de F1, incluye mapas, telemetría, tiempos y está disponible en App Store y Google Play.[19][20]
-- DigoRaceDash Lite: App gratuita compatible con F1 24 para mostrar telemetría detallada en tu móvil, sin hardware extra.[8]
+- f1-dash.com: Dashboard en tiempo real con telemetría y tiempos de carrera online, sector por sector y comparaciones directas.
+- TracingInsights.com: Analítica y gráficos interactivos de telemetría y rendimiento, comparando pilotos y vueltas.
+- F1 TV App: Oficial de F1, incluye mapas, telemetría, tiempos y está disponible en App Store y Google Play.
+- DigoRaceDash Lite: App gratuita compatible con F1 24 para mostrar telemetría detallada en tu móvil, sin hardware extra.
 
 Comunidad y Recursos Técnicos
 

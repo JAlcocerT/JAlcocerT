@@ -67,7 +67,7 @@ On the previous audio with ai post, I required a quick `.md` validator for the O
 
 And when I asked cursor...he mentioned Monaco.
 
-Ive seen that word somewhere else than in Formula 1.
+Ive seen that word somewhere else than in Formula1.
 
 Particularly: https://sli.dev/custom/config-monaco
 

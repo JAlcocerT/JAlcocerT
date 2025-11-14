@@ -140,6 +140,14 @@ This makes Shlink a strong candidate if QR code functionality is a priority alon
 ## Conclusions
 
 
+### SteamOS
+
+Recently there was a release of SteamOS: https://store.steampowered.com/steamos/
+
+And they have launched a small console, that reminds me to the shape/form factor of my x300 (SFF).
+
+Apparently, that OS is arch based, and I could not resist to try it.
+
 
 ---
 
