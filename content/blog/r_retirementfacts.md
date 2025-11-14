@@ -92,11 +92,21 @@ In this case we have to expect that savings will not grow lineally, but they wil
 
 Also, during retirement, the effect will be present as well, so **the savings will decay faster** as we are consuming and suffering the inflation:
 
-![No Inflation](/blog_img/data-experiments/Inflation_Mild.JPG)
+![Some Inflation](/blog_img/data-experiments/Inflation_Mild.JPG)
+
+See how on this case, you reach 200k instead of 500k and the rate of spending your savings is much higher, due to price increase.
+
+There are several years of *help needed*, where someone has to pay for you, despite you been doing more than enough saving effort to live up to 100 years on the no inflation scenario.
 
 ---
 
 ## Conclusions
+
+Still reading until the end?
+
+No foam in your mouth?
+
+You are a true skeptic!
 
 I invite you to:
 
@@ -113,10 +123,10 @@ Maybe, just maybe...
 
 ![Spanish Historical CashFlow](/blog_img/outro/deficit.png)
 
-Food for thought on what's next:
+Food for thought on what's next: *based on the entitlements, it does not look good*
 
 ![Spanish Population](/blog_img/outro/piramideesp.gif)
 
-The solution to inflation: *let's yell at clouds*
+The solution to inflation? *Let's yell at clouds and agree that 2+2=27*
 
 ![Simpsons Clouds](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)

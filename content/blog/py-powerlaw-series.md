@@ -1,8 +1,8 @@
 ---
 title: "Power Laws: What?"
-date: 2025-11-05T23:20:21+01:00
+date: 2025-11-07T23:20:21+01:00
 draft: false
-tags: ["Python","Blog","Math","Outro"]
+tags: ["Python","Math","Outro"]
 description: "Explaining series and the relation with the power law"
 url: 'powerlaw-and-series-with-python'
 math: true
@@ -109,10 +109,17 @@ A power law is a functional relationship between two quantities, where one quant
 
 Power laws are commonly found in many natural and social phenomena, such as the distribution of wealth, the frequency of words in natural language, and the size distribution of earthquakes.
 
-Power laws can be related to geometric series through the concept of infinite sums. In particular, if a power law has a value of k between -1 and 0, then the infinite sum of its terms converges to a finite value, and can be expressed as a geometric series. For example, the series 1 + 1/2 + 1/4 + 1/8 + ... is a geometric series with a common ratio of 1/2, and can be shown to converge to a finite value of 2.
+Power laws can be related to geometric series through the concept of infinite sums. 
+
+In particular, if a power law has a value of k between -1 and 0, then the infinite sum of its terms converges to a finite value, and can be expressed as a geometric series.
+
+For example, the series 1 + 1/2 + 1/4 + 1/8 + ... is a geometric series with a common ratio of 1/2, and can be shown to converge to a finite value of 2.
 
 The relationship between power laws and geometric series arises because **both describe the behavior of a quantity that changes exponentially over time.**
-* In the case of a geometric series, the quantity changes by a fixed factor with each term, whereas in the case of a power law, the quantity changes by a variable factor that depends on the exponent k. Thus, **power laws can be thought of as a generalization of geometric series**, where the growth factor is not constant but varies with the exponent.
+
+* In the case of a geometric series, the quantity changes by a fixed factor with each term, whereas in the case of a power law, the quantity changes by a variable factor that depends on the exponent k. 
+
+Thus, **power laws can be thought of as a generalization of geometric series**, where the growth factor is not constant but varies with the exponent.
 
 
 ### Power Law & Pareto

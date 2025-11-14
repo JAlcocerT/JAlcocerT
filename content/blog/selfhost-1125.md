@@ -9,8 +9,11 @@ url: 'selfhosted-apps-nov-2025'
 
 **TL;DR**
 
+Getting started with a HomeLab/Selfhosting can be easy, actually.
 
 **Intro**
+
+
 
 
 ### Selfhosted Adventures
@@ -19,7 +22,7 @@ I tried recently umbrelOS (the latest1.4), but inside a container:
 
 ![alt text](/blog_img/selfh/umbrel-os/umbrel-signup.png)
 
-![alt text](/blog_img/selfh/umbrel-os/umbrel-apps.png)
+![Umbrel OS Apps with one click install](/blog_img/selfh/umbrel-os/umbrel-apps.png)
 
 And one of the many apps that you can use out of the box is wanderer:
 

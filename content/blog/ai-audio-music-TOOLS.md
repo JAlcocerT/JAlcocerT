@@ -1,12 +1,22 @@
 ---
 title: "How to create music with AI Tools"
-date: 2025-11-10T23:20:21+01:00
+date: 2025-11-13T23:20:21+01:00
 draft: false
 tags: ["Docker","Gen-AI"]
 description: 'Tryign to Make music with AI'
 url: 'music-with-ai-tools'
 ---
 
+
+**TL;DR**
+
+Few years back I helped a friend to create a song and publish it to spotify.
+
+It was ton of fun.
+
+But can we now do music with AI?
+
+**Intro**
 
 <!-- 
 ```
