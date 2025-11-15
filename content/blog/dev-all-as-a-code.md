@@ -242,11 +242,21 @@ x-html-to-epub/build.sh
 
 #### Ebooks PDF or Web Version
 
-As seen during the show or obfuscate section of this post - We can do really cool ebooks and share them as pdf but also place them into a web version.
+As seen during the show or [**obfuscate** section of this post](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#show-and-obfuscate) - We can do really cool ebooks and share them as pdf but also place them into a web version.
 
-You write markdown once, you choose how to publish.
+You write *(markdown)* once, you choose how to publish.
 
-https://github.com/JAlcocerT/obfuscate
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="Obfuscate Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Python + Obfuscate + Ebook WebPage" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="You are not alone if this reminds you to the possibilites of Waiting to Landing..." >}}
+{{< /cards >}}
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="The setup uses PocketBase to capture emails and allow you to read the e-book as a webpage or download the pdf | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Feel free to combine that setup with a email marketing tool or with stripe for one time payments to get the pdf.
 
 #### Reports as a code
 
@@ -371,11 +381,10 @@ Not only you can extract PDF info to txt or create PDFs in many ways, like with 
 # curl -X POST -F "file=@Ebook-cover-SSGs.pdf" http://192.168.1.2:8027/extract > sample-pdf-to-text.txt
 ```
 
-With R, you are 5 artifacts away of creating your first ebook:
+With R, you are 5 artifacts away of **creating your first ebook**:
 
 ```sh
-#cd Z_ebooks
-
+#cd Z_ebooks #within this repo you have few quick examples!
 Rscript ./Z_ebooks/render.R \
   --input ./Z_ebooks/web-ebook.md \
   --output ./Z_ebooks/web-ebook.pdf \
