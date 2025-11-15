@@ -287,6 +287,36 @@ This has to be quick and easy:
 make up-external
 ```
 
+It was also interesting to play with the fastapi routes
+
+I see! You want the root path `/` to show the ebook instead of the API info. Let me add that:
+
+Perfect! Let me update the root endpoint to redirect to the book:
+
+Now update the root endpoint:
+
+Let me check with -L to follow redirects:
+
+Perfect! ✅ Now the root path shows the ebook!
+
+✅ **Root path now shows the ebook**
+- `http://localhost:8001/` → Redirects to `/api/book`
+- `http://localhost:8001/api/book` → Also works
+- Perfect for subdomain hosting!
+
+```bash
+# Your subdomain
+https://book.yourdomain.com/
+# Shows the ebook directly!
+
+# Also works
+https://book.yourdomain.com/api/book
+```
+
+This could make that within one subdomain, you host several ebooks at different routes!!
+
+And maybe...the one who pays from the main page get access to a boundle with ALL the ebooks.
+
 Feel free to combine that setup with a email marketing tool or with stripe for one time payments to get the pdf.
 
 {{< cards cols="1" >}}
