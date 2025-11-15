@@ -129,7 +129,13 @@ docker stop $(docker ps -a -q) #stop all
 #docker system prune --all --volumes #just clean all...
 ```
 
-### Goodies for Servers
+### Among All PaaS - What to Choose?
+
+
+
+### Outro
+
+#### Goodies for Servers
 
 1. Dont forget about **fail2ban**:
 
@@ -140,8 +146,7 @@ docker stop $(docker ps -a -q) #stop all
 
 3. Get https/SSL via Cloudflare tunnel or Traefik v3.3 setup.
 
-### Goodies for Marketers
-
+#### Goodies for Marketers
 
 Are you mastering marketing and social media?
 
@@ -149,14 +154,26 @@ Are you mastering marketing and social media?
   {{< card link="https://jalcocert.github.io/JAlcocerT/social-media-automation/#conclusions" title="Social Media Automation | Post ↗" >}}
 {{< /cards >}}
 
+Email marketing on easy mode thanks to:
 
 * https://www.producthunt.com/products/listmonk
   * https://github.com/knadh/listmonk
-
+    * https://listmonk.app/docs/apis/transactional
 
 >  High performance, **self-hosted, newsletter and mailing list manager** with a modern dashboard. Single binary app. 
 
+> > OSS and Selfhostable! Just visit `http://192.168.1.2:9077/admin/` to get started.
+
+![ListMonk UI](/blog_img/selfh/marketing/listmonk.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/listmonk" title="Tools like ListMonk are Selfostable and allow for transactional emails with attachment! | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 You need a CRM?
+
+Not really a problem.
 
 Before paying and getting vendor locked in, see:
 

@@ -256,7 +256,44 @@ You write *(markdown)* once, you choose how to publish.
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="The setup uses PocketBase to capture emails and allow you to read the e-book as a webpage or download the pdf | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+![Using the users collection so that users can see/download the ebook](/blog_img/dev/PB/pb-ebooks.png)
+
+But as learnt here https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/create_collection.py
+
+We can create and use a separated collection for the subscriptors.
+
+Now with https://github.com/JAlcocerT/obfuscate/blob/main/create_collection.py
+
+```sh
+eval 'cd /home/jalcocert/Desktop/obfuscate && ADMIN_EMAIL="yourpbadminmail@whatever.com" ADMIN_PASSWORD="yourpbadminpwd" python3 create_collection.py'
+```
+
+![Creating programatically a pb collection](/blog_img/dev/PB/pb-ebooks-sub-coll.png)
+
+To create the collection we need to be a PB admin (obviously).
+
+But anyone is free to hit the endpoint and add a email to the collection.
+
+> This might be dangerous, plus emails are not verified with PB.
+
+> > This comes down to the email/SMTP complexity that I have to investigate soon enough
+
+This has to be quick and easy: 
+```sh
+#git clone
+#sudo lsof -i :8001 | grep LISTEN | awk '{print $2}' | xargs sudo kill -9
+
+# External PocketBase (default)
+make up-external
+```
+
 Feel free to combine that setup with a email marketing tool or with stripe for one time payments to get the pdf.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/listmonk" title="Tools like ListMonk are Selfostable and allow for transactional emails with attachment! | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 #### Reports as a code
 

@@ -183,7 +183,9 @@ If you are having a business, getting contact forms / feedback /qna from clients
 > Beautiful Open-Source Form Builder
 
 
-A static site generator...that can be used to create documentation with Python?! Thats **Zensical**
+A static site generator...that can be used to create documentation with Python?
+
+Thats seems to be **Zensical**!
 
 * https://github.com/zensical/zensical
   * https://zensical.org/docs/setup/search/
