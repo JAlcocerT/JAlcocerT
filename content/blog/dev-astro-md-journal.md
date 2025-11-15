@@ -119,6 +119,8 @@ docker system prune -a --volumes
 
 ### How to create Just-Journal-via-SSG
 
+If you are aware about few git tricks, just: 
+
 ```sh
 git init
 git branch -m main

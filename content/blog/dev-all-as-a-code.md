@@ -7,6 +7,10 @@ url: 'things-as-a-code'
 description: 'Creating everything is a code. Animations, ppts, reports/inphographics , ebooks...'
 ---
 
+**Tl;DR**
+
+Do stuff: ebooks and obfuscation, reports, ppts, animations, videos, webpages, etc.
+
 
 **Intro**
 
@@ -215,8 +219,6 @@ Or...because you can now have deep research agents everywhere:
 * Perplexity...
 * ...
 
-
-
 Some people had problems when trying to convert their Words to epub with amazon tools.
 
 So they others to do it form them and be able to publish to Amazon: `https://kdp.amazon.com/en_US/`
@@ -237,6 +239,14 @@ From withing th ebook-ideas repo, consider that for [epub use html+calibre](http
 git clone https://github.com/JAlcocerT/ebook-ideas.git
 x-html-to-epub/build.sh
 ```
+
+#### Ebooks PDF or Web Version
+
+As seen during the show or obfuscate section of this post - We can do really cool ebooks and share them as pdf but also place them into a web version.
+
+You write markdown once, you choose how to publish.
+
+https://github.com/JAlcocerT/obfuscate
 
 #### Reports as a code
 
@@ -289,6 +299,12 @@ uv run tests/plot_historical_yield_percentiles.py CAT --start 2005-01-01 --brand
 
 uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
 ```
+
+But for *not just yfinance* based, I created:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
+{{< /cards >}}
 
 #### Resume as a Code
 
@@ -344,6 +360,28 @@ People do all sort of creative stuff around PDF: https://github.com/domdomegg/pd
 
 #### You can do what with PDF?
 
+Not only you can extract PDF info to txt or create PDFs in many ways, like with R language.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Extract PDF info via Kreuzberg | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+# curl -X POST -F "file=@Ebook-cover-SSGs" http://192.168.1.2:8027/extract
+# curl -X POST -F "file=@Ebook-cover-SSGs.pdf" http://192.168.1.2:8027/extract > sample-pdf-to-text.txt
+```
+
+With R, you are 5 artifacts away of creating your first ebook:
+
+```sh
+#cd Z_ebooks
+
+Rscript ./Z_ebooks/render.R \
+  --input ./Z_ebooks/web-ebook.md \
+  --output ./Z_ebooks/web-ebook.pdf \
+  --cover ./Z_ebooks/web-ebook-jalcocertech.png
+```
+
 1. https://github.com/pdfme/pdfme
 
 > MIT |  Open-source PDF generation library built with TypeScript and React. Features a WYSIWYG template designer, PDF viewer, and powerful generation capabilities. Create custom PDFs effortlessly in both browser and Node.js environments. 
@@ -367,7 +405,6 @@ See the examples and their source code: https://weasyprint.org/
 
 > BSD3 -  The awesome document factory 
 
-
 3. https://github.com/plutoprint/plutoprint
 
 
@@ -382,7 +419,7 @@ pip install plutoprint
 
 ## Video as a Code
 
-[Video editing Thanks to FFMPEG and the CLI](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing), of course!
+[Video editing Thanks to **FFMPEG** and the CLI](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing), of course!
 
 You could also use GUI tools:
 

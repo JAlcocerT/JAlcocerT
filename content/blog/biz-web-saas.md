@@ -198,7 +198,7 @@ And now these will work:
 
 This user has been created as per the **SSG and CF Workers interaction**:
 
-![alt text](/blog_img/dev/FE/pb-created-user-via-ssg.png)
+![Creating a user on PocketBase collection via SSG](/blog_img/dev/FE/pb-created-user-via-ssg.png)
 
 Once the `/signup` is actually sending the data to your PB instance (users collection), we can proceed.
 

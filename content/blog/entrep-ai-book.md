@@ -303,7 +303,7 @@ Same as https://github.com/treeman/why_cryptocurrencies
 
 * https://it-tools.tech/string-obfuscator
 * Stripe Payment Links: https://dashboard.stripe.com/payment-links + some automation like n8n to send the pdf/epub to the buying email
-* For the obfuscation, I imagine that there can be some BE check to the provided email and if you ever bought it, you can read the updated de-obfuscated version online anytime
+* For the [obfuscation](#show-and-obfuscate), I imagine that there can be some BE check to the provided email and if you ever bought it, you can read the updated de-obfuscated version online anytime
 
 3. You can also sell ebooks via amazon or ko-fi.
 
@@ -356,3 +356,32 @@ The primary difference is the front-end tool and the language-specific processin
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/omnitools" title="Omnitools | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+### Show and Obfuscate
+
+After been able at `./Z_ebooks/` to create pdf ebooks from markdown, how about obfuscating the ebook to show it online?
+
+```sh
+Rscript Z_ebooks/render.R \
+  --input Z_ebooks/web-ebook.md \
+  --output Z_ebooks/web-ebook.pdf \
+  --cover Z_ebooks/web-ebook-jalcocertech.png
+```
+
+If you are aware about few git tricks, lets just get started:
+
+```sh
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
+git config --global user.name
+git add .
+git commit -m "Initial commit: Starting ebook md pdf and obfuscated web sample"
+
+#sudo apt install gh
+gh auth login
+gh repo create Just-Journal-via-SSG --private --source=. --remote=origin --push
+    
+#git init && git add . && git commit -m "Initial commit: Starting ebook md pdf and obfuscated web sample" && gh repo create ebook-obfuscate --private --source=. --remote=origin --push
+```
