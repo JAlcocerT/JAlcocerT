@@ -7,6 +7,14 @@ description: 'SelfHosted PaaS: Coolify, Dokku, Dokploy, Caprover, Openfaas'
 url: 'deploying-software-with-paas-to-servers'
 ---
 
+**Intro**
+
+If you have been tinkering with Raspberry Pis, Home Servers or VPSs, you might have found yourself in a situation where you needed to deploy software, but QUICK.
+
+This is where [PaaS](#paas-what) comes in.
+
+They make it easy to deploy your software, and they handle the infrastructure for you.
+
 ## PaaS What
 
 **Platform as a Service** (PaaS) is a cloud computing model that provides a platform for customers to develop, run, and manage applications without the complexity of building and maintaining the infrastructure typically associated with developing and launching an app.

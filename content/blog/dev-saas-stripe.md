@@ -13,6 +13,8 @@ You can get me wrong: automate your payments and dont accept any other form that
 
 From the quote / post / learnings: sell to the rich, they pay better.
 
+
+
 **Intro**
 
 Congratz, you are registered into the app!
@@ -34,7 +36,7 @@ Bc you can configure your products, prices, payments etc via their UI.
 
 Plus you get a cool API.
 
-![alt text](/blog_img/web/nextjs-admin/stripe-subscription-management.png)
+![Stripe Subscription Management](/blog_img/web/nextjs-admin/stripe-subscription-management.png)
 
 Also, stripe provides a dashboard to manage subscriptions.
 
@@ -44,6 +46,13 @@ Also, stripe provides a dashboard to manage subscriptions.
 ### Stripe Subscriptions
 
 I tried [stripe subscriptions linkshere](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#how-to-create-a-stripe-subscription-link-), for the mental health delivery.
+
+![Stripe Payment Links](/blog_img/entrepre/stripe/stripe101-paymentlinks.png)
+
+Or even better, a recurring subscription to boosts that MRR:
+
+![Stripe Subscriptions](/blog_img/entrepre/stripe/stripe101-subs.png)
+
 
 
 
@@ -77,21 +86,6 @@ Or to sell simple microSaaS services like: `https://poopup.co/`
 > Modern signups look like: `https://www.mailerlite.com/signup` or `https://app.fireflies.ai/login`
 
 3. Place some features behind Stripe.
-
-### What about Clerk?
-
-Clerk is a good alternative to Supabase Auth. https://clerk.com/docs which brings an interesting [Py SDK](https://github.com/clerk/clerk-sdk-python/blob/main/README.md)
-
-
-{{< details title="Auth Alternatives for webapps...📌" closed="true" >}}
-
-
-* https://www.reddit.com/r/Supabase/comments/1dvabn6/what_is_the_best_solution_to_use_supabase_auth/
-* https://www.reddit.com/r/nextjs/comments/1bvda9r/officially_hate_supabase_auth/?rdt=40537
-* https://www.reddit.com/r/Supabase/comments/xaxecr/authentication_with_supabase_is_easy_almost/
-
-{{< /details >}}
-
 
 ---
 

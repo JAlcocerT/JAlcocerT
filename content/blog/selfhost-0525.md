@@ -251,7 +251,7 @@ Oterm seems to [support MCP](https://ggozad.github.io/oterm/mcp/?h=mcp#tools)
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LibreChat" title="LibreChat Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
-3. I got working a **local research assistant** the searches the web for you and summarizes the content via Ollama (I added OpenAI as well and groq is WIP).
+3. I got working a **local research assistant** the searches the web for you and summarizes the content via Ollama (I added OpenAI as well and groq support is on the way for faster inference).
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher/#local-deep-researcher-project" title="Local Deep Researcher" image="//blog_img/GenAI/rag101.jpeg" subtitle="Local Deep Researcher | Post" >}}

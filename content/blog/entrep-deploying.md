@@ -131,6 +131,15 @@ docker stop $(docker ps -a -q) #stop all
 
 ### Among All PaaS - What to Choose?
 
+I was writting about PaaS earlier this year [here](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/).
+
+With particular attention to Dokploy, [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/).
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/coolify" title="Coolify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dokploy" title="Dokploy | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 
 ### Outro
@@ -144,7 +153,7 @@ docker stop $(docker ps -a -q) #stop all
 
 2. **VPNs**: Like Mullvad or ProtonVPN as covered [here](https://jalcocert.github.io/JAlcocerT/homelab-security/#vpn)
 
-3. Get https/SSL via Cloudflare tunnel or Traefik v3.3 setup.
+3. Get [https/SSL](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) via Cloudflare tunnel or Traefik v3.3 setup.
 
 #### Goodies for Marketers
 
@@ -171,7 +180,7 @@ Email marketing on easy mode thanks to:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-You need a CRM?
+You need a CRM? or even ERP?
 
 Not really a problem.
 

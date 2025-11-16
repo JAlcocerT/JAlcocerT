@@ -2,7 +2,7 @@
 title: "Forms and Newsletters for your Website"
 date: 2024-09-10T23:20:21+01:00
 draft: false
-tags: ["Dev","Webs","Entrepreneuring"]
+tags: ["Dev","Webs","Entrepreneuring","MailerLite Setup"]
 description: "Easy Forms/Newsletters for Websites: MailerLite, FormBricks and more"
 ---
 
@@ -102,7 +102,7 @@ I am using Cloudflare for that domain, and the DNS were updated automatically vi
 
 There are some **CName and txt records** and they will be **DNS only**, not proxied.
 
-![Wordpress Google Page Speed Desktop](/blog_img/web/SaaS/mailerlite-domainsetup.png)
+![MailerLite Custom Domain Setup](/blog_img/web/SaaS/mailerlite-domainsetup.png)
 
 **Create a new form** and you will get the JS to place before the `</head>` of your web.
 

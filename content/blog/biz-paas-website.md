@@ -7,6 +7,17 @@ description: 'Deploying with Dokploy. Make ideas scalable: Wordpress and Ghost w
 url: 'selfhosted-paas'
 ---
 
+
+**Tl;DR**
+
+There are [few PaaS options](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/#paas-for-your-servers) to serve your websites/webapps.
+
+It just seems that [Dokploy](#dokploy) is getting very popular and catching up to [stablished solutions like Coolify](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/#paas-for-your-servers)
+
+Lets check why.
+
+**Intro**
+
 Recently I was doing some [IT setup for weddings](https://jalcocert.github.io/JAlcocerT/software-for-weddings/).
 
 And couple of [Wordpress](https://jalcocert.github.io/JAlcocerT/no-code-websites/).

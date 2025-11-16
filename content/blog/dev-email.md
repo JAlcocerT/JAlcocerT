@@ -2,7 +2,7 @@
 title: "SMTP and email stuff"
 date: 2025-11-18
 draft: false
-tags: ["HomeLab","MailTrap","Mailgun","Amazon SES","PostIZ vs GrowChief","mailersend"]
+tags: ["HomeLab","MailTrap","Mailgun","Amazon SES","PostIZ vs GrowChief","MailerSend"]
 description: 'Email is hard. Social Media OutReach, is not.'
 url: 'emails-101'
 ---
@@ -10,6 +10,10 @@ url: 'emails-101'
 https://www.mailersend.com/
 
 **TL;DR**
+
+You probably need leads.
+
+And have no F*** idea how SMTP actually works.
 
 https://mxroute.com/
 
@@ -231,6 +235,13 @@ In the meantime, saw: https://github.com/aaPanel/BillionMail
 
 > agpl v3.0 |  BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees.  
 
+We also have the good olds:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/listmonk" title="Tools like ListMonk are Selfostable and allow for transactional emails with attachment! | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic SelfHosted Email Newsletter | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ---
 
 ## Conclusions
@@ -242,6 +253,14 @@ That was interesting.
 All these SMTP setups will help you with your social media, if you are into it.
 
 If you just wanted a quick way to chat...there are many [Interesting Chats](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps) to use :)
+
+### Email Hosting
+
+The first question should be whether we should or not.
+
+But providing you want, there are few options:
+
+1. Modoboa
 
 
 ### Proton Mail

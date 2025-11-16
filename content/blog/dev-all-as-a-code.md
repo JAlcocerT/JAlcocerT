@@ -4,7 +4,7 @@ date: 2025-10-25T08:20:21+01:00
 draft: false
 tags: ["Matplotlib vs Manim vs RemotionJS vs Animotion","SlidevJS vs ReflexJS","Pandoc vs Latex vs Typst"]
 url: 'things-as-a-code'
-description: 'Creating everything is a code. Animations, ppts, reports/inphographics , ebooks...'
+description: 'Creating everything is a code. Animations, ppts, reports/inphographics , ebooks and obfuscation...'
 ---
 
 **Tl;DR**
@@ -251,6 +251,9 @@ You write *(markdown)* once, you choose how to publish.
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="You are not alone if this reminds you to the possibilites of Waiting to Landing..." >}}
 {{< /cards >}}
 
+Also similar concept to the [Landing Page for the ebook](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#a-landing-page-for-your-ebook).
+
+Just that here we have the website and the ebook content driven on the same repository structure.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="The setup uses PocketBase to capture emails and allow you to read the e-book as a webpage or download the pdf | Docker Config 🐋 ↗" >}}

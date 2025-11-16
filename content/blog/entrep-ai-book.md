@@ -40,12 +40,16 @@ How about **selling an ebook** be all about: having an stripe account and proper
 
 ## A landing page for your eBook
 
+The inspiration started when I found about: https://github.com/candidosales/landing-page-book-astro-tailwind
+
+Because creating a PDF to launch your ebook is not a secret as [I tinkered here](https://github.com/JAlcocerT/ebooks)
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="NEW Sell your eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Astro SSG Theme (x) Stripe (x) N8N" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
-The original theme I forket it from the MIT from [candidosales](https://github.com/candidosales/landing-page-book-astro-tailwind), where I brought [makefile](https://github.com/JAlcocerT/sell-your-ebook/blob/main/Makefile) and dockercompose for easier deployment + easier configuration via json.
+The original theme Iis forked from [candidosales](https://github.com/candidosales/landing-page-book-astro-tailwind), where I brought [makefile](https://github.com/JAlcocerT/sell-your-ebook/blob/main/Makefile) and dockercompose for easier deployment + easier configuration via json.
 {{< /callout >}}
 
 ```sh

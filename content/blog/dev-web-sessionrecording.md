@@ -1,6 +1,6 @@
 ---
 title: "Session Recording for Web Projects"
-date: 2025-11-16
+date: 2025-11-26
 draft: false
 tags: ["Web","Product","Amplitude vs PostHog","OpenReplay","Astuto","Product Tools"]
 description: 'How are user enjoying your Saas?'
@@ -14,6 +14,8 @@ More than web analytics, see what the users are experiencing.
 Some [Product Tools](https://jalcocert.github.io/JAlcocerT/product-tools/) that we can selfhost.
 
 **Intro**
+
+Lately I got to know https://www.awesome-homelab.com/item/highlightio
 
 If you got your SaaS reachable by potential users.
 

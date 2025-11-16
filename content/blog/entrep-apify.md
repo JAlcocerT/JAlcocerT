@@ -8,6 +8,10 @@ url: 'apify'
 ---
 
 
+**Tl;DR**
+
+WIP
+
 **Intro**
 
 This year, I covered PostIZ for social media automation [here](https://jalcocert.github.io/JAlcocerT/social-media-automation/#postiz) and also:

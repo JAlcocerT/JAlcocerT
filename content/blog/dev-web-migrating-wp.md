@@ -2,7 +2,7 @@
 title: "From Wordpress to a Cool Website"
 date: 2024-09-23T10:20:21+01:00
 draft: false
-tags: ["dev"]
+tags: ["dev","j-models migration"]
 summary: 'Migrating Wordpress to Cool Websites. Faster, Cleaner, Better SEO and DIY Design.'
 url: 'wordpress-migration-to-ssg'
 ---

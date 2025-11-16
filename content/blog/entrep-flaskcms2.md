@@ -69,8 +69,11 @@ For example something like: https://buy.stripe.com/28EdRb4CndpJctnbZ5cwg00?prefi
 
 > See how to create [stripe payment links](#stripe-payment-links)
 
-![alt text](/blog_img/entrepre/stripe/stripe101-paymentlinks.png)
-![alt text](/blog_img/entrepre/stripe/stripe101-subs.png)
+![Stripe Payment Links](/blog_img/entrepre/stripe/stripe101-paymentlinks.png)
+
+Or even better, a recurring subscription to boosts that MRR:
+
+![Stripe Subscriptions](/blog_img/entrepre/stripe/stripe101-subs.png)
 
 > For this one I did not required the CMS in the end: cal and whatsapp boubles were enough.
 
@@ -86,7 +89,9 @@ Checks:
 
 3. https://www.websitecarbon.com/website/psikolognevinkeskin-info/
 
-![alt text](/blog_img/web/morita-flask/website-carbon-morita.png)
+![Website Carbon Calculator - A+ Rating](/blog_img/web/morita-flask/website-carbon-morita.png)
+
+Better than 92% of websites worldwide? A+? Nooot bad at all.
 
 4. No broken links
 

@@ -1,5 +1,5 @@
 ---
-title: "Fature Flags for your SaaS x Golang"
+title: "Feature Flags for your SaaS x Golang"
 date: 2025-11-27T15:20:21+01:00
 draft: false
 tags: ["Dev","GoFeatureFlag vs PocketBase","GoLang"]

@@ -1,9 +1,9 @@
 ---
 title: "From Blogspot to a Cool Website"
-date: 2025-11-15
-draft: false
+date: 2026-12-30
+draft: true
 tags: ["Wev"]
-summary: 'Migrating Blogspot to a SSG powered Responsive Website'
+description: 'Migrating Blogspot to a SSG powered Responsive Website'
 url: 'blogspot-migration'
 ---
 

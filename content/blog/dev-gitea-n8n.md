@@ -28,7 +28,7 @@ Just get your server and containers going:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="Gitea | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-And you can also backup gitea with: https://github.com/RayLabsHQ/gitea-mirror
+And you can also **backup gitea** with: https://github.com/RayLabsHQ/gitea-mirror
 
 
 ## The n8n x Gitea Stack

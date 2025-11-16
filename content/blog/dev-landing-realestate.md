@@ -10,8 +10,21 @@ url: 'real-estate-landing'
 
 **TL;DR**
 
-Seee
+I have launched recently a quick ebook on web version and downloadable as PDF as well.
 
+{{< cards >}}
+  {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
+{{< /cards >}}
+
+Because in the end having a website is a matter of: 
+
+1. How much you really need it? - Aka, will you earn money>costs with it?
+2. Knowledge - Do you know how to make one? if now, can you learn how to do it quick?
+3. Ultimately, how much are you willing to pay for it? Or better said, how much you asses your $/h rate compared to others?
+
+> Plot twist, if you claim to earn a lot of money and also claim to have clients, you wont mind to pay interesting $/h rates to others to build it for you. Would you?
+
+> > Yea, I liked the DIY vs DWY vs DFY model :)
 
 **Intro** 
 
@@ -107,22 +120,96 @@ You just need to run it and go to `http://localhost:4321/property/`
 
 So...how is this going to **actually work**?
 
+### Validate the Website
+
+
+{{< hextra/feature-grid >}}
+ 
+{{< hextra/feature-card
+  title="Google Speed Test"
+  subtitle="Test the speed and performance with PageSpeed Insights."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://pagespeed.web.dev/"
+>}}
+
+{{< hextra/feature-card
+  title="Website Carbon"
+  subtitle="Website’s carbon footprint and environmental impact."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+  link="https://www.websitecarbon.com/"
+>}}
+
+{{< hextra/feature-card
+  title="Web-Check"
+  subtitle="Performance and uptime using Web-Check's analytics tool."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://web-check.xyz/"
+>}}
+
+{{< /hextra/feature-grid >}}
 
 
 ---
 
 ## Conclusions
 
-See the difference with a cool (but no so fast website)
+See the difference with a cool (but no so fast website).
+
+Im sure that this website works, because their service is great.
 
 ![www.lodgenstryn.no](/blog_img/web/moi-realestate/strin-cool-website-loading.png)
+
+But if people dont know you or you are starting a brand: you better make it easy for people to like you.
 
 ### Copy Paste Plugins for Webs
 
 #### N8N
 
-https://github.com/JAlcocerT/Home-Lab/tree/main/n8n
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 #### Cal
 
 
+#### MailerLite
+
+
+{{< details title="Setup MailerLite 📌" closed="true" >}}
+
+You will need to authenticate that you own the email and also the domain (with DNS).
+
+Go to your [mailerlite dashboard UI](https://dashboard.mailerlite.com)
+
+I am using Cloudflare for that domain, and the DNS were updated automatically via UI.
+
+There are some **CName and txt records** and they will be **DNS only**, not proxied.
+
+![MailerLite Custom Domain Setup](/blog_img/web/SaaS/mailerlite-domainsetup.png)
+
+**Create a new form** and you will get the JS to place before the `</head>` of your web.
+
+```js
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', 'some_acount_id');
+</script>
+<!-- End MailerLite Universal -->
+```
+
+> You can also get **MailerLite working with a button**, so that it opens as pop up:
+
+```html
+<a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'some_id_here', true)">Click here to show form</a>
+
+and use it with your components, for example
+<form id="simple-newsletter-form" class="input-container" method="post" action="javascript:void(0);" onsubmit="ml('show', 'some_id_here', true); return false;">
+    <input type="submit" value="Ready to Know?" class="ml-onclick-form" style="appearance: button; -webkit-appearance: button; cursor: pointer;">
+</form>
+```
+
+{{< /details >}}
