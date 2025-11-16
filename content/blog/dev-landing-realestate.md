@@ -169,15 +169,45 @@ Think that some business owner can have huge ARR plus [stocks providing dividend
 
 Just Remember that your solution should give them more (>>>) than their PassiveIncome ($)/ 1700 h in a year
 
+From the doing side, some who trade time for money with a good tech job, will not go lower than 100k$/1700h ~$60/h.
+
+So hopefully, the matching is between a person with business who needs something to earn more, on the scale of >300k ARR that can afford to spend those >60$/h = 10k$/month/person *(a ~3% of their ARR)* on tech expertise to make their business better.
+
+#### Get customers via Ads
+
+If you have something to offer but no clients, you better have a good website and a good [ad campaign](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/#the-ads).
+
+As you can imagine, a business its a constant fight between supply and demand.
+
+Have something to supply, rise demand, then rise again your ability to supply by getting efficient etc.
+
 ### Copy Paste Plugins for Webs
 
+If what you need are leads, look no further than Apify. As I covered [here](https://jalcocert.github.io/JAlcocerT/apify/).
+
+But your business might need some automation: which [n8n](#n8n) can do
+
+Or some email subscriptions: which [MailerLite](#mailerlite) can do
+
 #### N8N
+
+With the right knowledge, you can use n8n to do all the automation you need and avoid paying similar software
+
+{{< youtube "v-gCNTI5kzE" >}}
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-#### Cal
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/n8n-with-ai/" title="n8n 101 Post" image="/blog_img/GenAI/n8n/mailerlite/4-adding-openai.png" subtitle="Using n8n across few use cases" >}}
+{{< /cards >}}
+
+<!-- #### Cal 
+
+#### formbricks
+-->
 
 
 #### MailerLite

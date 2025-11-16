@@ -54,11 +54,13 @@ This selection depends on priorities: Slidev for modern web presentations, Revea
 
 ### PPTs as a Code
 
-
+For me there is no better tool than SliDevJS for creating presentations as code:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slidev" title="My SliDevJS Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Presentations as a Code pushed to Github Pages" >}}
 {{< /cards >}}
+
+But there are few other:
 
 1. RevealJS
 
