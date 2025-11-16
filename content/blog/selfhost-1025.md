@@ -382,7 +382,7 @@ Anyways, you can do a quick **XMR benchmark** on your mini PC:
 {{< youtube "lu0k59y5z3E" >}}
 
 
-I also got to know a **new browser**, [Helium](https://github.com/imputnet/helium): 
+I also got to know a **new browser**, [Helium](https://github.com/imputnet/helium): *The Chromium-based web browser made for people, with love. Best privacy by default, unbiased ad-blocking, no bloat and no noise.*
 
 ```sh 
 wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/download/0.5.7.1/Helium-0.5.7.1-x86_64.AppImage
@@ -394,13 +394,15 @@ wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/downloa
 
 > Private, fast, and honest web browser
 
-> > The Chromium-based web browser made for people, with love. Best privacy by default, unbiased ad-blocking, no bloat and no noise.
+> > I think it can be a good companion to Neko Browser or Zen Browser
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/neko-browser" title="See also - Neko Browser | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Privacy won, *for now*:
+
+
+I Almost forgot: Privacy won, *for now*.
 
 <!-- 
 https://www.youtube.com/live/t0Uk9eC146E?si=S9ruQrOgRa-DK_Ze 

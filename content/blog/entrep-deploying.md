@@ -1,9 +1,9 @@
 ---
-title: "Where to Deploy?"
+title: "Where to Deploy? PaaS are great VPS companions"
 date: 2025-09-10
 draft: false
 tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio vs Hetzner vs DO","Goodies 4 Marketers"]
-description: 'How to deploy? Resources to launch your stuff in front of your clients. From CRMs, ERPs to forums.'
+description: 'Resources to launch your stuff in front of your clients. From CRMs, ERPs to forums.'
 url: 'where-to-deploy'
 ---
 

@@ -33,6 +33,17 @@ And one of the many apps that you can use out of the box is wanderer:
 
 You can go to `192.168.1.2:86` and enjoy very quick webapp hosting
 
+![alt text](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
+
+Which is great, because it syncs with Strava and Komoot:
+
+![Wanderer vs strava/komoot](/blog_img/selfh/umbrel-os/wanderer-integrations.png)
+
+Just in case you are concerned about them locking your account at some point and loosing your tracks!
+
+Talking about locking things, you can also use umbrelOS to do some cool BigData Analytics with on-chain data.
+
+
 ```sh
 ssh jalcocert@192.168.1.2
 #docker stats docker bitcoin_app_1 
@@ -59,14 +70,7 @@ docker exec bitcoin_app_1 bitcoin-cli getblockchaininfo
 
 More on this, [later](#big-data-analytics-with-on-chain-data).
 
-
-![alt text](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
-
-Which is great, because it syncs with Strava and Komoot:
-
-![alt text](/blog_img/selfh/umbrel-os/wanderer-integrations.png)
-
-Just in case you are concern
+> Yes, this is an D&A Adventure that I could not avoid mentioning :)
 
 ### SelfHosted WebAnalytics
 

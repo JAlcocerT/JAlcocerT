@@ -287,9 +287,15 @@ This has to be quick and easy:
 make up-external
 ```
 
-It was also interesting to play with the fastapi routes
+It was also interesting to play with the fastapi routes.
 
-I see! You want the root path `/` to show the ebook instead of the API info. Let me add that:
+Because the making it look cool is just one prompt of Claude Haiku 4.5
+
+![Book publisher default UI](/blog_img/dev/fastapi/ebook-obfuscate.png)
+
+![Book publisher with FastAPI and Obfuscator looking cool](/blog_img/dev/fastapi/ebook-obfuscate-ui.png)
+
+We want the root path `/` to show the ebook instead of the API info. 
 
 Perfect! Let me update the root endpoint to redirect to the book:
 
@@ -317,12 +323,17 @@ This could make that within one subdomain, you host several ebooks at different 
 
 And maybe...the one who pays from the main page get access to a boundle with ALL the ebooks.
 
-Feel free to combine that setup with a email marketing tool or with stripe for one time payments to get the pdf.
+Feel free to combine that setup with a email [marketing tools](https://jalcocert.github.io/JAlcocerT/where-to-deploy/#goodies-for-marketers) or with [Stripe](https://jalcocert.github.io/JAlcocerT/stripe-for-saas/) for one time payments to get the pdf.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/listmonk" title="Tools like ListMonk are Selfostable and allow for transactional emails with attachment! | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+You can also use them for lazy DIY users to jump into a DWY model:
+
+![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png)
+
 
 
 #### Reports as a code

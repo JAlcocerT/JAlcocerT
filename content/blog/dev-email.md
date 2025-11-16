@@ -19,15 +19,21 @@ Unfortunately, [This](https://github.com/umuterturk/email-verifier) does not wor
 
 **Intro**
 
+I was happy enough with Google and Stripe integrated into cal.com
+
+![alt text](/blog_img/email/cal-email-stripe.png)
+
 So far I got proper *and high level* custom email integration via:
 
 1. [ProtonMail](#proton-mail) - https://pr.tn/ref/RHJ7YZE8BN8G
 
-You can bring your domains: https://account.proton.me/u/0/mail/identity-addresses
+You can bring your domains to ProtonMail and send emails from them: https://account.proton.me/u/0/mail/identity-addresses
 
-2. [Mailerlite](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#mailerlite): at the time of writing, they allow one custom domain free
+2. [Mailerlite](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#mailerlite): at the time of writing, they allow one custom domain free.
 
 https://dashboard.mailerlite.com/dashboard
+
+
 
 
 3. Via LogTo: also to redirect to your custom domain for auth login, they will send an email with the code to enter your webapp

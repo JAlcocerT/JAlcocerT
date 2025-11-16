@@ -536,7 +536,14 @@ For example, the **aave token is ERC20**:
 
 ## Conclusions
 
-After researching this, i got more questions than answers.
+After researching this, I got more questions than answers.
+
+There is much more after the classical:
+
+<!-- https://x.com/levelsio/status/1861877232920134028 -->
+
+{{< tweet user="levelsio" id="1861877232920134028" >}}
+
 
 Specially after https://exponential.fi/ to Discover the best DeFi opportunities with expert research and risk insights.
 
