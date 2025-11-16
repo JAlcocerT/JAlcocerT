@@ -298,7 +298,7 @@ Thankfully, I got **proper backup** implemented!
 You can try with: Syncthing, Nextcloud, WebDav...
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rclone" title="Rclone with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rclone" title="Rclone (Proton Drive optional setup included) with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
 

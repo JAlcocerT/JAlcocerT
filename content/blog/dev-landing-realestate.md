@@ -24,7 +24,7 @@ Because in the end having a website is a matter of:
 
 > Plot twist, if you claim to earn a lot of money and also claim to have clients, you wont mind to pay interesting $/h rates to others to build it for you. Would you?
 
-> > Yea, I liked the DIY vs DWY vs DFY model :)
+> > Yea, I liked the [DIY vs DWY vs DFY](#outro) model :)
 
 **Intro** 
 
@@ -153,13 +153,21 @@ So...how is this going to **actually work**?
 
 ## Conclusions
 
-See the difference with a cool (but no so fast website).
+See the difference with a cool *(but no so fast)* website.
 
 Im sure that this website works, because their service is great.
 
 ![www.lodgenstryn.no](/blog_img/web/moi-realestate/strin-cool-website-loading.png)
 
 But if people dont know you or you are starting a brand: you better make it easy for people to like you.
+
+### Outro
+
+When you are trying to do business with people with interesting amount of assets, they tend to measure the value of your offer in **$ per hour** that you will save them.
+
+Think that some business owner can have huge ARR plus [stocks providing dividends](https://jalcocert.github.io/JAlcocerT/stonks/#eda-on-yfinance).
+
+Just Remember that your solution should give them more (>>>) than their PassiveIncome ($)/ 1700 h in a year
 
 ### Copy Paste Plugins for Webs
 

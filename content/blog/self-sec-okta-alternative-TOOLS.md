@@ -9,6 +9,10 @@ url: 'open-source-sso-tools'
 
 **TL;DR**
 
+https://www.awesome-homelab.com/item/pocket-id
+https://pocket-id.org/
+
+
 
 ### What about Clerk?
 

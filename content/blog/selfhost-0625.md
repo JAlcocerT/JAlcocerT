@@ -176,7 +176,7 @@ You can now enable other devices or create accounts for your friends/family:
 
 #### Third Party Cloud NC Backup
 
-Last month [on this post](https://jalcocert.github.io/JAlcocerT/os-for-nas/) I tried protondrive with rclone https://github.com/JAlcocerT/Docker/tree/main/Backups#rclone
+Last month [on this post](https://jalcocert.github.io/JAlcocerT/os-for-nas/) I tried protondrive with rclone as per [these notes](https://github.com/JAlcocerT/Docker/tree/main/Backups#rclone).
 
 You could try and backup your nextcloud data folder towards:
 

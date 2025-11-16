@@ -24,7 +24,7 @@ I tried recently umbrelOS (the latest1.4), but inside a container:
 
 ![Umbrel OS Apps with one click install](/blog_img/selfh/umbrel-os/umbrel-apps.png)
 
-And one of the many apps that you can use out of the box is wanderer:
+And one of the many apps that you can use out of the box is **Wanderer**: *A great addition for anyone who likes adventures and [GPX files](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/refs/heads/main/Data_My_Routes/PL-SK-HU.gpx)*
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted Umbrel - Docker Config 🐋 ↗" >}}
@@ -33,7 +33,7 @@ And one of the many apps that you can use out of the box is wanderer:
 
 You can go to `192.168.1.2:86` and enjoy very quick webapp hosting
 
-![alt text](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
+![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
 
 Which is great, because it syncs with Strava and Komoot:
 
@@ -207,17 +207,32 @@ Their official page design is just amazing: https://zensical.org/
 
 > Zensical creates scalable Open Source systems for technical writing that always keep you in the flow
 
-
 Automatically discover and visually document network infrastructure.
 
 NetVisor scans your network, identifies hosts and services, and generates an interactive visualization showing how everything connects, letting you easily create and maintain network documentation.
 
-https://github.com/mayanayza/netvisor
+* https://github.com/mayanayza/netvisor
 
 > AGPl3 | Automatically discover and visually document network infrastructure.
 
 
+### GPX is great
 
+And if you are afraid to get lost in the forest, you can share your location from your phone to your selfhosted server.
+
+* https://github.com/dedicatedcode/reitti
+  * https://www.dedicatedcode.com/projects/reitti/integrations/mobile-apps/
+    * https://f-droid.org/de/packages/com.mendhak.gpslogger/
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![Reitti UI](/blog_img/Monitoring/reitti-location-monitoring.png)
+
+> Reitti is a comprehensive **personal location tracking** and analysis application that helps you understand your movement patterns and significant places. The name "Reitti" comes from Finnish, meaning "route" or "path".
+
+Reitti also allow to import our previous GPX, like Wanderer do.
 
 
 ### SteamOS
@@ -230,11 +245,9 @@ Apparently, that OS is arch based, and I could not resist to try it.
 
 ### HoneyPot
 
-https://github.com/thinkst/opencanary
+* https://github.com/thinkst/opencanary
 
 > MIT | Modular and decentralised honeypot
-
-
 
 ---
 
