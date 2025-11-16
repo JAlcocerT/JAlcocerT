@@ -12,6 +12,26 @@ url: 'real-estate-landing'
 
 I have launched recently a quick ebook on web version and downloadable as PDF as well.
 
+
+
+{{< details title="Ebook Obfuscator on DIY Websites | 101 Setup  📌" closed="true" >}}
+
+```sh
+#ssh
+git clone https://github.com/JAlcocerT/obfuscate #git pull
+cd obfuscate && make up-external #make build #make restart
+#sudo docker network ls
+#docker network connect cloudflared_tunnel book-publisher-api
+```
+
+> Go to https://one.dash.cloudflare.com/ and add `book-publisher-api:8002` which is `http://192.168.1.2:8002/api/book` and can be mapped to the subdomain `https://diy.jalcocertech.com/`
+
+There will be more like these coming soon, like on VPS/HomeLabs.
+
+Probably driven by a 1 FastAPI : n ebooks model, with pocketbase and/or stipe integration.
+
+{{< /details >}}
+
 {{< cards >}}
   {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
 {{< /cards >}}
@@ -43,6 +63,11 @@ Specially since I could get Strapi and PayloadCMS working within containers:
 
 ## The Stack
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="Obfuscate | DIY Website eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
+{{< /cards >}}
+
+
 ### New Theme
 
 Its a combination of:
@@ -50,6 +75,14 @@ Its a combination of:
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/real-estate-moi/tree/main/moirealestate-astro-theme" title="Moi Real Estate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro x Flask as CMS" >}}
   {{< card link="https://github.com/JAlcocerT/payroll-workers-pb" title="Astro Payroll x PB SDK" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
+{{< /cards >}}
+
+With:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="Obfuscate | DIY Website eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="NEW | Real Estate Landing WIP" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
+
 {{< /cards >}}
 
 
