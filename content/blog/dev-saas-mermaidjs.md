@@ -112,6 +112,8 @@ services:
 make help
 #docker builder prune -a -f#
 make docker-up
+#du -sh ~/Desktop/mermaidjsxopenai-editor #~180mb
+#docker images | grep mermaidjs #~1.5gb
 ```
 
 ## Live info for your PPTs

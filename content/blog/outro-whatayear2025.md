@@ -36,7 +36,7 @@ So to validate i built the simple waiting list concept that superseeds the waiti
 
 Waiting list to services
 Automation to services
-web spins to services
+web spins to services, maybe via paas coolify/dokploy
 
 Helium or zen?
 

@@ -618,11 +618,7 @@ Not a true no-code solution; best suited for technically comfortable users.
 
 **Summary:**  
 
-Smithery is the “app store” or registry for agentic AI extensions, enabling powerful automation and integration between LLM-powered agents and real-world apps/services. It’s especially useful for developers creating advanced personal finance, coding, or infrastructure management systems with agentic or autonomous logic.[3][1][2][4]
-
-
-[10](https://github.com/smithery-ai)
-[11](https://github.com/smithery-ai/sdk)
+Smithery is the “app store” or registry for agentic AI extensions, enabling powerful automation and integration between LLM-powered agents and real-world apps/services. It’s especially useful for developers creating advanced personal finance, coding, or infrastructure management systems with agentic or autonomous logic.
 
 
 ### Audio APIs

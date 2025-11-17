@@ -317,11 +317,30 @@ graph TD
     A --> E(Services - DFY $$$);
 ```
 
+Oh, and the blog will writings will be continued on 2026 into `blog.jalcocertech.com`
+
+This will be kept as a full tinkering.
+
+On the blog will be more curated and on the official `www` site the success stories.
+
 And bc as if we are out of sight, we are out of mind we have to [make our services known](#making-website-services-known) somehow.
 
 Including the dirty [ads](#ads).
 
+
+
 ### Outro
+
+Buying a house is a big decision.
+
+Specially with these salaries and prices:
+
+![alt text](/blog_img/web/moi-realestate/ine-realestate.png)
+
+![alt text](/blog_img/web/moi-realestate/viviendaylocales-example.png)
+
+* https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/27213492/es/
+* https://www.ine.es/ADRH/?config=config_ADRH_2023.json&showLayers=ADRH_2023_Renta_media_por_hogar_cache&level=5
 
 When you are trying to do business with people with interesting amount of assets, they tend to measure the value of your offer in **$ per hour** that you will save them.
 
@@ -340,6 +359,14 @@ If you have something to offer but no clients, you better have a good website an
 As you can imagine, a business its a constant fight between supply and demand.
 
 Have something to supply, rise demand, then rise again your ability to supply by getting efficient etc.
+
+
+#### Get customers via a sales pipeline
+
+Lets say, for example, with [Apify](https://jalcocert.github.io/JAlcocerT/apify/) which is one of the very [interesting APIs available](https://jalcocert.github.io/JAlcocerT/interesting-apis/) nowadays.
+
+
+
 
 ### Copy Paste Plugins for Webs
 
