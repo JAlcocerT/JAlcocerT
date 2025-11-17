@@ -7,6 +7,10 @@ description: 'Getting leads fast towards your product landing'
 url: 'pro-agency-automation'
 ---
 
+**Tl;DR**
+
+If you dont have anything valuable to automate, maybe others do and need your help.
+
 
 **Intro** 
 
@@ -148,6 +152,8 @@ This list reflects key recognizable players in each segment of the service indus
 
 ![Setting up n8n with docker](/blog_img/selfh/automation/n8n-setup.png)
 
+You can make n8n integrations within your cool vibe coded Web Apps:
+
 ![Flask CMS version 2](/blog_img/selfh/automation/flaskcms2.png)
 
 ### BotPress
@@ -157,6 +163,8 @@ This list reflects key recognizable players in each segment of the service indus
 {{< /cards >}}
 
 ![BotPress Setup UI](/blog_img/selfh/automation/bot-press-setup.png)
+
+Once you are logged in to botpress, you can create your chatbots and logic via UI within a dashboard:
 
 ![BotPress Dashboard](/blog_img/selfh/automation/botpress-dash.png)
 

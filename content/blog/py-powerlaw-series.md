@@ -1,6 +1,6 @@
 ---
 title: "Power Laws: What?"
-date: 2025-11-07T23:20:21+01:00
+date: 2025-12-20T23:20:21+01:00
 draft: false
 tags: ["Python","Math","Outro"]
 description: "Explaining series and the relation with the power law"

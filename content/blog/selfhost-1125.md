@@ -235,13 +235,29 @@ And if you are afraid to get lost in the forest, you can share your location fro
 Reitti also allow to import our previous GPX, like Wanderer do.
 
 
-### SteamOS
+### Thoughts on SteamOS and OS for NAS
 
-Recently there was a release of SteamOS: https://store.steampowered.com/steamos/
+Earlier this year I was covering [OS for NAS](https://jalcocert.github.io/JAlcocerT/os-for-nas/).
+
+It seems that we will be able to play, daily drive and have a homeserver all withing a steam pc/console
+
+Apparently, that OS is Linux arch based btw.
+
+So you can harness all the power of containers, and avoid getting locked in into in theory confortable synology ecosystem.
+
+Here is the release of SteamOS: https://store.steampowered.com/steamos/
 
 And they have launched a small console, that reminds me to the shape/form factor of my x300 (SFF).
 
-Apparently, that OS is arch based, and I could not resist to try it.
+The price tag is unknown though for now.
+
+But what's interesting is the Linux is been more and more user friendly.
+
+With [ZorinOS 18](https://zorin.com/os/download/) we can even get microsoft one drive synced natively and avoid all the AI/ads/making valid PCs obsolete because of non sense.
+
+> Lets go eco-friendly!
+
+> > You can always try before you daily drive [via Virtual Machines with QEMU or GNOME Boxes](https://jalcocert.github.io/JAlcocerT/testing-nix-os/).
 
 ### HoneyPot
 

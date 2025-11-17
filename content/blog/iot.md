@@ -26,9 +26,15 @@ Specially after the learnings of the [Obfuscator project](https://github.com/JAl
   {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web ebook and also downlodable as PDFs" >}}
 {{< /cards >}}
 
+
+
 In the end of the day, its been alrady 150+ posts this year (totally unexpected).
 
 So a distilled version with less noise, less chaos and more ordered for others to get value from.
+
+I need more of:
+
+![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png)
 
 
 ## Hardware and Projects

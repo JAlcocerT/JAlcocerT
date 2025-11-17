@@ -2,10 +2,16 @@
 title: "Trying NixOS with VMs"
 date: 2025-02-07
 draft: false
-tags: ["QEMU","WSL","Virtual Machines","GNOME Boxes"]
-description: 'How to use VMs and try a new OS like NixOS'
+tags: ["QEMU vs GNOME Boxes","WSL","Virtual Machines"]
+description: 'How to use virtualization and try any new OS safely via virtual machines.'
 url: 'testing-nix-os'
 ---
+
+**TL;DR**
+
+If you are distro hopping and you are aware of [virtualization](https://jalcocert.github.io/Linux/docs/debian/virtualization/), you might want to give it a try to QEMU or GNOME Boxes.
+
+**Intro**
 
 There are some options to virtualize OS: VMWare, VirtualBox (Free to use) or...**GNOME Boxes**:
 

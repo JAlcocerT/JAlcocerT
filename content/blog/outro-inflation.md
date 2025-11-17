@@ -2,7 +2,7 @@
 title: "About inflation"
 date: 2025-11-06
 draft: false
-tags: ["Outro"]
+tags: ["Outro","Data Experiments"]
 description: 'Knowledge of Crowds: inflation and cost of living'
 url: 'about-inflation'
 ---

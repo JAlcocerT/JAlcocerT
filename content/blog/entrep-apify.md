@@ -2,7 +2,7 @@
 title: "BiP with APIFY"
 date: 2025-10-18T06:20:21+01:00
 draft: false
-tags: ["Forum and Animations","Reddit vs forocoches","Coding for Entrepreneurs","RSS","Post Schedule"]
+tags: ["Forum and Animations","Reddit vs FC","Coding for Entrepreneurs","RSS","Post Schedule"]
 description: 'The start of a sales pipeline 🤯'
 url: 'apify'
 ---

@@ -249,7 +249,7 @@ As seen during the show or [**obfuscate** section of this post](https://jalcocer
 You write *(markdown)* once, you choose how to publish.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/obfuscate" title="Obfuscate Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Python + Obfuscate + Ebook WebPage" >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="NEW Obfuscate Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Python + Obfuscate + Ebook WebPage" >}}
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="You are not alone if this reminds you to the possibilites of Waiting to Landing..." >}}
 {{< /cards >}}
 
@@ -260,6 +260,11 @@ Just that here we have the website and the ebook content driven on the same repo
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="The setup uses PocketBase to capture emails and allow you to read the e-book as a webpage or download the pdf | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+
+{{< details title="Ebook Obfuscator x PB | 101 Setup  📌" closed="true" >}}
+
+
 
 ![Using the users collection so that users can see/download the ebook](/blog_img/dev/PB/pb-ebooks.png)
 
@@ -304,11 +309,6 @@ We want the root path `/` to show the ebook instead of the API info.
 
 Perfect! Let me update the root endpoint to redirect to the book:
 
-Now update the root endpoint:
-
-Let me check with -L to follow redirects:
-
-Perfect! ✅ Now the root path shows the ebook!
 
 ✅ **Root path now shows the ebook**
 - `http://localhost:8001/` → Redirects to `/api/book`
@@ -324,7 +324,7 @@ https://book.yourdomain.com/
 https://book.yourdomain.com/api/book
 ```
 
-This could make that within one subdomain, you host several ebooks at different routes!!
+This could make that within one subdomain, you host several ebooks at different routes!
 
 And maybe...the one who pays from the main page get access to a boundle with ALL the ebooks.
 
@@ -338,6 +338,10 @@ Feel free to combine that setup with a email [marketing tools](https://jalcocert
 You can also use them for lazy DIY users to jump into a DWY model:
 
 ![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png)
+
+
+{{< /details >}}
+
 
 
 
@@ -768,7 +772,7 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 ### Video Geolocation with FFMPEG
 
-https://github.com/JAlcocerT/Py_RouteTracker
+This kind of geo/gpx concepts I got them covered at: https://github.com/JAlcocerT/Py_RouteTracker
 
 With a GoPro and its metadata, it's all about:
 
@@ -777,13 +781,7 @@ exiftool GX011032.MP4
 exiftool -ee GX011032.MP4
 ```
 
-> Make sure to record with GPS on to bring that lovely Geo data.
-
-For just accelerations:
-
-```sh
-
-```
+> Make sure to record with **GPS ON** to bring that lovely Geo data.
 
 ---
 
@@ -860,8 +858,9 @@ Example: given the repository `https://github.com/Snouzy/workout-cool?tab=readme
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gemini-cli" title="Gemini CLI | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#goose
-https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#gemini-cli-x-git-mcp
+We can setup goose: https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#goose
+
+And bring MCP support for Gemini: https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#gemini-cli-x-git-mcp
 
 ![Gemini MCP Working](/blog_img/GenAI/geminiCLI/gemini-mcp.png)
 

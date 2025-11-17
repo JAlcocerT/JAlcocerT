@@ -70,7 +70,7 @@ See how Ive done it: https://jalcocert.github.io/JAlcocerT/n8n-with-ai/#n8n-x-ma
 
 > MIT |  👩‍💻 Build beautiful, accessible, high-performance websites with [BCMS](https://github.com/bcms/cms) 
 
-> >  ⭐️ BCMS is a Headless CMS for developers & their clients. Works nicely with Gatsby, Next.js & Nuxt. This is an open-source version for **self-hosting**. 
+> >  ⭐️ BCMS is a **Headless CMS** for developers & their clients. Works nicely with Gatsby, Next.js & Nuxt. This is an open-source version for **self-hosting**. 
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bcms" title="BCMS WIP| Docker Config 🐋 ↗" >}}
@@ -89,8 +89,7 @@ Using Headless CMS & Nuxt.js to Develop Fast Static Websites | Momcilo Popov | F
 
 
 {{< callout type="info" >}}
-This is a very cool setup for a ~~webifyer kind of idea, as [Pages CMS](https://github.com/pages-cms/pages-cms)
-
+This is a very cool setup for a ~webifyer kind of idea, as [Pages CMS](https://github.com/pages-cms/pages-cms)
 {{< /callout >}}
 
 
@@ -101,6 +100,8 @@ Particularly: https://podcast-starter.thebcms.com/, this https://github.com/bcms
 A podcast post again?
 
 https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#podcast-website
+
+
 ![alt text](/blog_img/entrepre/mailerlite/astropod-podcast.png)
 
 
@@ -157,16 +158,11 @@ These projects provide responsive layouts, lightbox/carousel support, and variou
 [11](https://astro.build/themes/3?search=Portfolio)
 [12](https://github.com/trending/astro)
 [13](https://github.com/mfg92/hugo-shortcode-gallery)
-[14](https://astro.build/themes/)
 
 [15](https://github.com/pysunday/DesignPhotographyPortfolio) - This one is a great start for a *,instagram clone'* and is multilang
 
 [16](https://astro.build/themes/details/photography-portfolio-template/)
 [20](https://github.com/Sped0n/bridget)
-
-### Just JAlcocerT Newsletter
-
-
 
 ---
 
@@ -174,7 +170,11 @@ These projects provide responsive layouts, lightbox/carousel support, and variou
 
 That's it.
 
-Consider this a new ssg + mailerlite 101.
+Consider this as a new ssg + mailerlite 101.
+
+But I will have to try BCMS and PagesCMS at another occasion.
+
+For the future, probably I have to build some kind of *Just JAlcocerT Newsletter* with RSS support ofc.
 
 ### What People have Build
 

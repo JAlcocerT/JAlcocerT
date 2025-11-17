@@ -9,6 +9,7 @@ url: 'os-for-nas'
 
 
 
+**Intro**
 
 Ive been pretty much **comfortable with these OS's**:
 
@@ -40,12 +41,20 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 {{< details title="Customize Linux Visuals 📌" closed="true" >}}
 
+Linux is all about personal [customization](https://jalcocert.github.io/Linux/docs/debian/conky_configuring_ubuntu/).
+
 I love to start with the **Garuda default wallpaper**.
+
+```sh
+wget "https://gitlab.com/garuda-linux/themes-and-settings/artwork/garuda-wallpapers/-/raw/master/src/garuda-wallpapers/Dr460nized%20Honeycomb.png?ref_type=heads&inline=false" -O Dr460nized_Honeycomb.png #download garuda wallpaperd
+
+sudo apt install qt5-style-kvantum
+```
+
+> With Garuda, you unlock the superpower of saying: *I use Arch, btw*
 
 {{< /details >}}
 
-
-> With Garuda, you unlock the superpower of saying: *I use Arch, btw*
 
 Time to try something new?
 
@@ -54,6 +63,19 @@ But...Too many OS's?
 {{< callout type="info" >}}
 Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-Boots**
 {{< /callout >}}
+
+| Solution         | Fully Open Source | Notes                                             |
+|------------------|-------------------|---------------------------------------------------|
+| TrueNAS CORE     | Yes               | Both TrueNAS CORE and SCALE are open source[1][2][7]   |
+| TrueNAS SCALE    | Yes               | Debian based, open source[2][7]          |
+| Unraid           | Partial           | Storage stack open source; key components closed[8][4][9] |
+| OpenMediaVault   | Yes               | Debian based, open source[5][6]         |
+| Rockstor         | Yes               | CentOS/openSUSE based, open source[6]        |
+| XigmaNAS         | Yes               | FreeBSD based, lightweight and open source[11][6] |
+| Openfiler        | Yes               | Linux based, open source[11][12][6]   |
+| Amahi            | Yes               | Fedora/Ubuntu based, open source[12][6]  |
+
+As I mentioned above, if you have used Linux before and are comfortable with spending 1h understanding how contaiers/docker will do the thing for you, Id just go for an Ubuntu flavor + Docker x (Nextcloud/Immich/UmbrelOS/PiHole/Jellyfin/whatever).
 
 ### VPN
 

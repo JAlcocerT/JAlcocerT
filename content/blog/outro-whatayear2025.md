@@ -870,11 +870,13 @@ Some of those CLI tools, like goose, provide also desktop app: *with linux versi
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gemini-cli" title="Gemini CLI | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Some tools were CLI only, then released desktop version:
+Some tools were CLI only, then released **desktop version**:
 
 ![Goose CLI UI](/blog_img/GenAI/goose-1.png)
 
 ![Goose Desktop - Plug a LLM and even provides transcription](/blog_img/GenAI/audio/goose-desktop.png)
+
+But hey Ollama has now a Desktop UI mode as well!
 
 > Additionally, I participated in ***few* tech Talks**:
 
@@ -885,6 +887,8 @@ Some tools were CLI only, then released desktop version:
 And extracted cool video metadata (gps / geolocation) from GoPros:
 
 https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-and-gopro-metadata
+
+
 ![GoPro Metadata Speed trackday](/blog_img/karting/gopro-gps-trackday-speed.png)
 
 
