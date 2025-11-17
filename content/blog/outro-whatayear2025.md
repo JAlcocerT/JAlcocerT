@@ -33,6 +33,11 @@ The services is a matter of what to build.
 
 So to validate i built the simple waiting list concept that superseeds the waiting list v1 before ever going to prod.
 
+
+Waiting list to services
+Automation to services
+web spins to services
+
 Helium or zen?
 
 review all `WIP` on previous posts

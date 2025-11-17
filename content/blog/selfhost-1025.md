@@ -394,13 +394,11 @@ wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/downloa
 
 > Private, fast, and honest web browser
 
-> > I think it can be a good companion to Neko Browser or Zen Browser
+> > I think it can be a good companion to *Neko Browser or Zen Browser*
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/neko-browser" title="See also - Neko Browser | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
-
 
 I Almost forgot: Privacy won, *for now*.
 

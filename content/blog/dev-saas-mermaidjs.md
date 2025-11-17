@@ -1,8 +1,8 @@
 ---
 title: "Diagrams and workflows as a Code with Agents"
-date: 2025-11-17T12:20:21+01:00
+date: 2025-11-15T12:20:21+01:00
 draft: false
-tags: ["AI SaaS","Codex CLI","MermaidJS","Grok vs Perplexity","Icons for Architects","Commet"]
+tags: ["AI SaaS","MermaidJS","Grok vs Perplexity","Icons for Architects","Commet"]
 description: 'BiP user flows around newsletter layers. From SliDev Editor to Mermaid Editor with live information.'
 url: 'ai-driven-diagrams'
 ---
@@ -41,10 +41,77 @@ and also make the UI look more modern
 
 If you are curious, this was the wireframe:
 
-![alt text](/blog_img/dev/nextjs/nextjs-mermaidjs-wireframe.png)
+![Wireframe](/blog_img/dev/nextjs/nextjs-mermaidjs-wireframe.png)
+
+A PRD and implementation plan is always a good idea to vibe code:
 
 ```sh  
 #git init && git add . && git commit -m "Initial commit: Starting simple mermaidjs x openai nextjs"
+```
+
+{{< filetree/container >}}
+  {{< filetree/folder name="mermaidjsxopenai-editor" state="open" >}}
+    {{< filetree/file name="tailwind.config.ts" >}}
+    {{< filetree/file name="Makefile" >}}
+    {{< filetree/file name="README.md" >}}
+    {{< filetree/file name=".env.local" >}}
+    
+    {{< filetree/folder name="app" state="open" >}}
+      {{< filetree/file name="layout.tsx" >}}
+      {{< filetree/file name="page.tsx" >}}
+      {{< filetree/folder name="api" state="open" >}}
+        {{< filetree/folder name="generate-diagram" >}}
+          {{< filetree/file name="route.ts" >}}
+        {{< /filetree/folder >}}
+      {{< /filetree/folder >}}
+    {{< /filetree/folder >}}
+    
+    {{< filetree/folder name="components" state="open" >}}
+      {{< filetree/file name="ChatPanel.tsx" >}}
+      {{< filetree/file name="EditorPanel.tsx" >}}
+      {{< filetree/file name="DiagramPanel.tsx" >}}
+    {{< /filetree/folder >}}
+    
+    {{< filetree/folder name="prompts" state="open" >}}
+      {{< filetree/file name="system.md" >}}
+      {{< filetree/file name="user.md" >}}
+    {{< /filetree/folder >}}
+    
+  {{< /filetree/folder >}}
+{{< /filetree/container >}}
+
+After vibe coding 30 min, this is the result: https://mermaid.js.org/config/configuration.html
+
+![nextJS x OpenAI x MermaidJS - UI](/blog_img/dev/nextjs/nextjs-mermaid-ui.png)
+
+Thanks to Claude Haiku 4.5, I have seen a better way for the docker-compose and their environments:
+
+```yml
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mermaidjs-openai-editor
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - LLM_MODEL=${LLM_MODEL:-gpt-4o-mini}
+      - SYSTEM_PROMPT_PATH=${SYSTEM_PROMPT_PATH:-./prompts/system.md}
+      - USER_PROMPT_PATH=${USER_PROMPT_PATH:-./prompts/user.md}
+      - CONVERSATION_HISTORY_LIMIT=${CONVERSATION_HISTORY_LIMIT:-10}
+```
+
+> It will read from the `.env` variables and if not provided, the default values will kick in:
+
+```sh
+make help
+#docker builder prune -a -f#
+make docker-up
 ```
 
 ## Live info for your PPTs
@@ -59,7 +126,13 @@ These APIs are paywalled!
 
 > But I got recently 1y trial of Perplexity and its quite cool
 
-> > And if you are windows/mac user, you can try their Commet browser, with cool web summarization
+> > And if you are windows/mac user, you can try their **Commet browser**, with cool web summarization
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/neko-browser" title="Neko Browser | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Anyways, we saw how to bring API data directly to our slides via SliDevJS as seen here.
 
 ### Grok API
 
@@ -86,7 +159,7 @@ And just this week I got...
 
 * https://jalcocert.github.io/JAlcocerT/live-search-and-research-with-ai/#perplexity 🐍
 
-![alt text](/blog_img/GenAI/ai-search/perplexity-pro-offer.png)
+![Perplexity Pro Access with Paypal](/blog_img/GenAI/ai-search/perplexity-pro-offer.png)
 
 
 ```sh
@@ -113,6 +186,8 @@ Does it even make sense to try building an AI Saas?
 I would say yes, for the learnings.
 
 For the financial motivations, just be aware of [Pareto](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) and that most tries will fail.
+
+The OpenAI LLM approach was good enough for this PoC and I did not end up plugging Codex CLI.
 
 
 ---
@@ -166,7 +241,6 @@ https://mermaid.js.org/syntax/architecture.html
 ### How to build a MermaidJS-Editor
 
 Dont forget about the tab icon and the opengraph!
-
 
 {{< callout type="info" >}}
 Own the context, rule the code

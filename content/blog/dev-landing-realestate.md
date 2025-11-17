@@ -307,7 +307,7 @@ But if people dont know you or you are starting a brand: *you better make it eas
 
 Anyways, building a brand is not easy.
 
-But I have a plan:
+As I see it now:
 
 ```mermaid
 graph TD
@@ -316,6 +316,10 @@ graph TD
     A --> D(Consult via Cal.com - DWY $$);
     A --> E(Services - DFY $$$);
 ```
+
+And bc as if we are out of sight, we are out of mind we have to [make our services known](#making-website-services-known) somehow.
+
+Including the dirty [ads](#ads).
 
 ### Outro
 
