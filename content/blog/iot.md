@@ -7,6 +7,8 @@ description: 'IoT Meets AI. Using MQTT and AI Together.'
 url: 'just-iot'
 ---
 
+https://acurast.com/
+
 **TL;DR:** Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
 
 +++ DB2Rest
@@ -28,7 +30,7 @@ Expect ,n' to be:
 
 1. Webpage creator: Because you can own your brand
 2. Homelabs: I started this ebook because everything has potential failures
-3. IoT :)
+3. IoT: This is the one I want to put together as I write this post :)
 
 This time, adding bring more languages for the ebooks is on the table. Locale i18n!
 

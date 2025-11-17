@@ -77,7 +77,7 @@ nix-env -u
 
 ### Interesting Stuff Regarding Emulation
 
-GNOME Boxes is a virtualization tool for Linux desktop environments (like GNOME on Ubuntu).
+[GNOME Boxes](https://gitlab.gnome.org/gnome/gnome-boxes) is a virtualization tool for Linux desktop environments (like GNOME on Ubuntu).
 
 It allows you to create, manage, and run virtual machines in a desktop environment.
 

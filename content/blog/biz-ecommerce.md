@@ -7,6 +7,25 @@ description: 'Creating an eCommerce. Drupal vs DIY'
 url: 'ecommerce'
 ---
 
+
+https://awweso.me/e-commerce/
+
+## https://github.com/medusajs/medusa
+
+https://medusajs.com/plugins/
+
+https://docs.medusajs.com/starters/nextjs-medusa-starter
+
+## Thelia
+<thelia.net>
+
+## Evershop
+
+https://github.com/evershopcommerce/evershop
+
+>  🛍️ NodeJS E-commerce Platform 
+
+
 https://github.com/shurco/litecart/
 
 > MIT |  🛒 litecart - shopping cart in 1 file with card and cryptocurrency payment support 

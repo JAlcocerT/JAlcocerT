@@ -738,7 +738,7 @@ Which will then provide VPN access to your desktop via the Ethernet cable.
 
 > A Raspberry **Pi emulator in a Docker image** that lets developers easily prepare and flash RPi configurations.
 
-2. Thanks to the [Dockur Project](https://github.com/dockur/windows) and by using the [Image](https://hub.docker.com/r/dockurr/windows#!)
+2. Thanks to the [Dockurr Project](https://github.com/dockur/windows) and by using the [Image](https://hub.docker.com/r/dockurr/windows#!)
 
 Use **Windows inside Docker** with:
 

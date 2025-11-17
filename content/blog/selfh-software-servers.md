@@ -1,11 +1,15 @@
 ---
 title: "[PaaS Recap] Software for Servers..."
-date: 2025-11-28T01:20:21+01:00
+date: 2025-11-19T01:20:21+01:00
 draft: false
-tags: ["HomeLab"]
-description: 'Selfhosted Apps that simplify my workflow as of 05-2025: LocalStack, DokPloy, Runtipi...'
+tags: ["HomeLab","LocalStack vs DokPloy vs LocalStack vs Runtipi"]
+description: 'Selfhosted Apps that simplify my workflow'
 url: 'selfhosted-server-paas'
 ---
+
+**Tl;DR**
+
+**Intro**
 
 Few months ago, I wrote about [different **PaaS** Tools](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/)
 
@@ -13,17 +17,40 @@ Among which, [Dokploy](#dokploy) resonated a lot with me.
 
 I want to make a recap of PaaS Tools available.
 
+Because is not just about creating, but [deploying](https://jalcocert.github.io/JAlcocerT/where-to-deploy/).
+
 ## PaaS Tools
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/PaaS" title="Selfhostable PaaS | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for your server" >}}
+{{< /cards >}}
+
+
+Like the well known Coolify and Dokploy:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/coolify" title="Coolify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dokploy" title="Dokploy | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
+
+Today, we are going to see
+
 ### LocalStack
 
 LocalStack is a tool designed for developers who want to test **AWS functionalities locally**. 
 
 It provides an **emulated environment of AWS services**, solving issues related to unpredictable billing and resource management during development. 
+
+<!-- https://www.youtube.com/watch?v=ZpMXW_beUuA -->
+
+{{< youtube "ZpMXW_beUuA" >}}
+
 
 - **Purpose**: LocalStack emulates AWS API functionality.
 - **Problem Solved**: Allows local testing without involving AWS services directly.
@@ -42,18 +69,6 @@ It provides an **emulated environment of AWS services**, solving issues related 
   - Supports essential services like EC2.
   - Allows basic CRUD operations.
   - Requires understanding of feature coverage before use.
-
-### Dokploy
-
-I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
-
-
-
-
-{{< details title="More about Dokploy 📌" closed="true" >}}
-
-
-{{< /details >}}
 
 
 ### Runtipi
