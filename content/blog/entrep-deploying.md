@@ -94,8 +94,6 @@ They also provide guides and high level features on the OSS projects.
 
 See: https://elest.io/fully-managed-services/hosting-and-infrastructure
 
-
-
 ---
 
 ## Conclusions
@@ -140,6 +138,9 @@ With particular attention to Dokploy, [here](https://jalcocert.github.io/JAlcoce
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dokploy" title="Dokploy | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+<!-- https://www.youtube.com/watch?v=1POdazLoiRE -->
+
+{{< youtube "1POdazLoiRE" >}}
 
 
 ### Outro

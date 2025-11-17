@@ -126,23 +126,13 @@ Integration Methods
 - **HTTP Request Node**: If the native node does not fulfill specific needs, you can use n8n’s HTTP Request node to make direct API calls to Perplexity using the official API key.[5]
 - **Workflow Examples**: Tutorials and templates exist for building AI-powered research assistants and content generation workflows using the Perplexity-n8n integration.[6][7]
 
-This integration allows users to combine Perplexity’s real-time AI insights with the broad automation capabilities of n8n, enhancing productivity and enabling complex automated workflows.[8][9]
-
-[1](https://n8n.io/integrations/perplexity/)
-[2](https://n8n.io/workflows/2824-query-perplexity-ai-from-your-n8n-workflows/)
-[3](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.perplexity/)
-[4](https://github.com/watzon/n8n-nodes-perplexity)
-[5](https://www.reddit.com/r/n8n/comments/1la3t1i/how_to_connect_perplexity_to_n8n/)
-[7](https://n8n.io/workflows/3673-ai-powered-research-assistant-with-perplexity-sonar-api/)
-[8](https://www.linkedin.com/pulse/unlocking-automation-potential-perplexity-ai-n8n-peter-sigurdson-ewzfe)
-[11](https://n8n.io/integrations/perplexity/and/read-ai/)
-[13](https://pipedream.com/apps/perplexity/integrations/n8n-io)
-[14](https://community.n8n.io/t/using-perplexity-api-with-the-ai-tools-agent/54308)
-[16](https://n8n.io/integrations/one-simple-api/and/perplexity/)
-[17](https://n8n.io/workflows/2682-perplexity-research-to-html-ai-powered-content-creation/)
+This integration allows users to combine Perplexity’s real-time AI insights with the broad automation capabilities of n8n, enhancing productivity and enabling complex automated workflows.
 
 ### n8x x MCP
 
+Some people are already compleining about MCP and its token consumption.
+
+Anyways, you can integrate it to n8n if you want to.
 
 0. https://github.com/illuminaresolutions/n8n-mcp-server
 
@@ -172,11 +162,6 @@ It is called the "Perplexity Ask MCP Server" and serves as a bridge to connect P
 This MCP server supports both local and remote contexts to allow AI systems to securely interact with external data sources, tools, and APIs within Perplexity’s platform.[1][2][3][4]
 
 In summary, the Perplexity MCP server exists and is actively supported as part of their platform for enabling powerful AI integrations and enhanced context sharing.
-
-[1](https://docs.perplexity.ai/guides/mcp-server)
-[2](https://github.com/perplexityai/modelcontextprotocol)
-[3](https://www.perplexity.ai/help-center/en/articles/11502712-local-and-remote-mcps-for-perplexity)
-[4](https://playbooks.com/mcp/laodev1-perplexity)
 
 ---
 
@@ -238,8 +223,6 @@ It's like the service **calling you** to give you an alert.
         * Someone has subscribed to your newsletter in MailerLite.
         * A customer has filled out a form on your website.
         * A new lead has been created in your sales tool.
-
-Summary
 
 | | **API** | **Webhook** |
 |:---|:---|:---|
@@ -342,6 +325,7 @@ Huginn is built on a relational database, with **MySQL** or **PostgreSQL** being
 Huginn has a dedicated **Google Sheets Agent** that makes it straightforward to export data to a spreadsheet. This is a very convenient option for non-technical users or for sharing data with collaborators who don't have direct access to your Huginn instance. You just need to configure the agent with your Google API credentials and a spreadsheet ID.
 
 3. Dropbox and FTP
+
 Huginn also has agents for interacting with **Dropbox** and **FTP** servers. These are easy to use for saving files that you might scrape or generate. For example, if you have an agent that generates a daily report as a text file, you can use the Dropbox Agent to upload it to a specific folder.
 
 **Storages That Are Not Easy**
@@ -378,7 +362,7 @@ Ive added the **n8n JSON's for these workflows** here: https://github.com/JAlcoc
 
 Change gears from that old Astro Google Forms:
 
-![alt text](/blog_img/web/google-forms-astro.png)
+![Google forms integrated with Astro Website](/blog_img/web/google-forms-astro.png)
 
 Just use FormBricks with some pop-up or when clicked.
 
@@ -396,15 +380,18 @@ To **connect APIs** you can have a look to: https://github.com/PipedreamHQ/piped
 But the killer to test those `http request` nodes and their Get/Post/... has been https://webhook.site/
 {{< /callout >}}
 
+This has been a very interesting discovery too:
 
 ![Webhook site for testing](/blog_img/GenAI/n8n/formbricks/fb7.png)
 
 
 Step 1: Prepare n8n and Formbricks
 
-![alt text](/blog_img/GenAI/n8n/formbricks/fb1-api-keys.png)
+![Getting formbricks API Keys](/blog_img/GenAI/n8n/formbricks/fb1-api-keys.png)
 
-![alt text](/blog_img/GenAI/n8n/formbricks/fb2.png)
+Then add the **Formbricks** node to your n8n workflow.
+
+![n8n formbrick integration - adding the api](/blog_img/GenAI/n8n/formbricks/fb2.png)
 
 ![alt text](/blog_img/GenAI/n8n/formbricks/fb-webhook.png)
 

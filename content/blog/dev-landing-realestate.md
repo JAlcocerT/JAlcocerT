@@ -2,7 +2,7 @@
 title: "Landing (and more) for Real Estate"
 date: 2025-11-16T08:20:21+01:00
 draft: false
-tags: ["Web x CMS","Astro Payroll Theme","Strapi vs PayloadCMS","n8n","Scrapping"]
+tags: ["Web x CMS","Astro Payroll Theme","Strapi vs PayloadCMS","n8n","Scrapping","obfuscate to simple-waiting-list"]
 description: 'Landing page and components for real estate Galleries.'
 url: 'real-estate-landing'
 ---
@@ -63,10 +63,75 @@ Specially since I could get Strapi and PayloadCMS working within containers:
 
 ## The Stack
 
+After starting more than one year ago with this repository as a concept.
+
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/obfuscate" title="Obfuscate | DIY Website eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing-pb" title="NEW repository - Waiting2Landing v2.0" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Waiting List + Landing Astro Themes with PB users collections saving Leads via CF Workers" >}}
+  {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="NEW repository - Simple Waiting List" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + CapJS = Waiting list to CSV" >}}
 {{< /cards >}}
 
+
+{{< details title="Simple Waiting List | 101 Setup  📌" closed="true" >}}
+
+Most of the times, you will just need a quick waiting list to validate an idea.
+
+Like these:
+
+1. https://github.com/Soufianeelc/nextjs-waitlist-page
+
+> MIT |  An open-source next.js waitlist landing page with EmailOctopus API 📩 
+
+2. https://github.com/basehub-ai/nextjs-waitlist
+
+But these projects, despite been open, require some API to work, like resend.
+
+And if you are OK to potentially get some random emails, you can use this DIY one: *it pushes the emails to a csv that you can play with later on with listmonk, mailerlite, or whatever tool*
+
+```sh
+#ssh
+git clone https://github.com/JAlcocerT/simple-waiting-list #git pull
+cd simple-waiting-list && make up-external #make build #make restart
+#sudo docker network ls
+```
+
+Vibe coding power: 
+
+```
+Create a simple waiting list based on nextjs and a cool and modern UI, including a dockerfile and docker-compose.yml that will control the title, description, and other variables via environment variables and will save the email leads to a JSON.
+
+When a user is added it will say "Thank you for your interest" and will redirect to the landing page.
+If a user email is already added, it will say we already have your email.
+```
+
+Testing something new, I will use [CapJS to add a CAPTCHA](https://jalcocert.github.io/JAlcocerT/encryption-101/#pow-captcha) to the waiting list.
+
+Just to avoid some unnecesary crap.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/capjs" title="CapJS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Email wont be validated though.
+
+But no APIs required.
+
+```sh
+git init
+git branch -m main
+git config user.name
+git config --global user.name "JAlcocerT"
+git config --global user.name
+git add .
+git commit -m "Initial commit: Starting simple waiting list"
+
+#sudo apt install gh
+gh auth login
+gh repo create simple-waiting-list --private --source=. --remote=origin --push
+    
+#git init && git add . && git commit -m "Initial commit: Starting simple waiting list" && gh repo create simple-waiting-list --private --source=. --remote=origin --push
+```
+
+{{< /details >}}
 
 ### New Theme
 
@@ -82,7 +147,6 @@ With:
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/obfuscate" title="Obfuscate | DIY Website eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
   {{< card link="https://github.com/JAlcocerT/obfuscate" title="NEW | Real Estate Landing WIP" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
-
 {{< /cards >}}
 
 

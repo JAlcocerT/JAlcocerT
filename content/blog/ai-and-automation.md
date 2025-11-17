@@ -148,7 +148,7 @@ This list reflects key recognizable players in each segment of the service indus
 
 ![Setting up n8n with docker](/blog_img/selfh/automation/n8n-setup.png)
 
-![alt text](/blog_img/selfh/automation/flaskcms2.png)
+![Flask CMS version 2](/blog_img/selfh/automation/flaskcms2.png)
 
 ### BotPress
 

@@ -36,6 +36,20 @@ How about making their life harder?
 2. https://github.com/tiagorangel1/cap
 
 * https://capjs.js.org/
+    * https://capjs.js.org/guide/standalone/
+
+```sh
+docker run -d \
+  -p 3001:3000 \
+  -v cap-data:/usr/src/app/.data \
+  -e ADMIN_KEY=your_secret_password_min_30_chars_here_12345 \
+  --name cap-standalone \
+  tiago2/cap:latest
+```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/capjs" title="CapJS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 Cap is a lightweight, modern **open-source CAPTCHA alternative** designed using [SHA-256](#the-sha256-algorithm) proof-of-work
 

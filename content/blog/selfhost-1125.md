@@ -286,7 +286,32 @@ I prefer Watchtower to send alerts on new images, rather than letting update the
 
 ### Big Data Analytics with On Chain Data
 
-That's excellent\! The output from your `getblockchaininfo` RPC call confirms that your Umbrel node is **fully synced** and operational, making it ready for analysis.
+The fundamental difference lies in their **function** and the **layer** of the Bitcoin ecosystem they operate on:
+
+* **Bitcoin Node (Full Node)**: This is a program that **fully validates transactions and blocks** according to Bitcoin's consensus rules. It downloads and stores a complete copy of the Bitcoin blockchain (the *Layer 1* base layer).
+    * **Primary Role**: Enforce the rules of the Bitcoin network, provide a secure and trustless way to verify your own transactions, and contribute to the network's decentralization and security.
+    * **Focus**: Security and ultimate settlement on the main blockchain.
+
+* **Lightning Node**: This is software that implements the Lightning protocol, enabling participation in the **Lightning Network**, which is a "layer 2" scaling solution built on top of Bitcoin.
+    * **Primary Role**: Facilitate **fast, low-cost, off-chain payments** by managing payment channels with other nodes and routing transactions through the network.
+    * **Requirement**: A Lightning node generally requires a connection to a Bitcoin node (either locally run or a trusted remote one) for opening and closing payment channels, which are on-chain Bitcoin transactions.
+    * **Focus**: Scalability, speed, and low transaction fees for everyday use.
+
+| Feature | Bitcoin Node (Full Node) | Lightning Node |
+| :--- | :--- | :--- |
+| **Layer** | Layer 1 (Base Layer) | Layer 2 (Scaling Solution) |
+| **Primary Function** | Validation of all blocks/transactions, network security, and rule enforcement. | Managing payment channels and routing off-chain payments. |
+| **Data Stored** | Complete copy of the Bitcoin blockchain (hundreds of gigabytes). | Primarily channel state data; relies on a Bitcoin node for full chain history. |
+| **Transaction Speed** | Slow (average of 10-minute block confirmation time). | Near-instantaneous (milliseconds to seconds). |
+| **Transaction Fees** | Variable, can be high during congestion. | Minimal, often fractions of a cent. |
+| **Relationship** | Independent unit of the Bitcoin network. | **Requires a Bitcoin node** connection to function (as a backend). |
+
+Running your own **Bitcoin node** gives you the highest level of security and trustlessness on the base layer. 
+
+Running a **Lightning node** allows you to use or help operate the fast, cheap payment network, but it still relies on the base layer security provided by Bitcoin nodes.
+
+
+The output from your `getblockchaininfo` RPC call confirms that your Umbrel node is **fully synced** and operational, making it ready for analysis.
 
 Here's a breakdown of the key information in that response and what it tells you:
 

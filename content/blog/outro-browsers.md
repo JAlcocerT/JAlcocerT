@@ -289,7 +289,12 @@ Tools like ScrapeGraph and Firecrawl often employ several strategies to bypass t
 * **Proxy Rotation**: To combat IP-based blocking, they use pools of residential or mobile proxies to make requests appear to be from different, legitimate users.
 * **CAPTCHA Solving**: They integrate with services that automatically solve CAPTCHAs and other challenges like Cloudflare Turnstile.
 
-While these tools are a vast improvement over basic scraping scripts, they are still playing catch-up. Cloudflare continuously updates its detection algorithms, which can render a tool ineffective overnight. The more a tool is used, the more data Cloudflare has to identify and block it, as many scraping services are built on a similar foundation that can be fingerprinted and identified at scale. The best scrapers are those that constantly adapt, which is a significant maintenance burden.
+While these tools are a vast improvement over basic scraping scripts, they are still playing catch-up. Cloudflare continuously updates its detection algorithms, which can render a tool ineffective overnight.
+
+The more a tool is used, the more data Cloudflare has to identify and block it, as many scraping services are built on a similar foundation that can be fingerprinted and identified at scale.
+
+The best scrapers are those that constantly adapt, which is a significant maintenance burden.
+
 {{< /details >}}
 
 Scrapecraph allows to ask in NL, but it WONT take some **hidden goodies** that you might be interested.
@@ -476,7 +481,7 @@ BTW, How cool is to use perplexity and have a reference to your own website:
 
 - **linuxserver/firefox**: A Firefox browser Docker image maintained by LinuxServer which can be run as a container, offering a self-hosted Firefox instance though without the streaming or remote interactive features of Kasm or Neko.[11]
 
-These options differ in focus from lightweight isolated self-hosted browsers (Neko), full containerized workspaces/desktops with browser support (Kasm), to headless browser automation and scraping (Browserless), and a simple containerized Firefox for local or network access.[2][1][8][11]
+These options differ in focus from lightweight isolated self-hosted browsers (Neko), full containerized workspaces/desktops with browser support (Kasm), to headless browser automation and scraping (Browserless), and a simple containerized Firefox for local or network access.[2][8]
 
 [2](https://fossengineer.com/selfhosting-neko-browser/)
 [7](https://www.reddit.com/r/selfhosted/comments/1isc94o/kasm_open_source_self_hosted_disposable_browsing/)
@@ -502,17 +507,7 @@ These options differ in focus from lightweight isolated self-hosted browsers (Ne
 | **Additional Features**      | Workspace lifecycle, collaboration, user management | Full OS control and customizability | Basic desktop with browser access   | Browser automation, multi-user control| Extensions, bookmarks, plugins        |
 | **Typical Users**            | Enterprises, remote workers       | Enterprises, developers, testers    | Developers, Linux users              | Security-conscious browser users     | Everyday web users                   |
 
-This puts the typical desktop Firefox browser in context with containerized and virtualized environments, showing it lacks isolation compared to container or VM solutions but provides instant local access and persistent user state on the host OS.[1][2][3][4][5][6][7][8][9]
-
-[1](https://kasmweb.com)
-[2](https://docs.linuxserver.io/images/docker-kasm/)
-[3](https://ambientnode.uk/kasm-immutable-apps-vms/)
-[4](https://www.aiknow.io/en/what-is-kasm-a-browser-based-workspace-platform/)
-[5](https://www.liquidweb.com/blog/virtual-desktop-environment-configuring-kasm-workspaces/)
-[6](https://www.reddit.com/r/selfhosted/comments/16cdppe/kasm_vs_webtop_20/)
-[7](https://www.reddit.com/r/selfhosted/comments/x4r6si/browser_in_a_browser/)
-[8](https://news.ycombinator.com/item?id=42690983)
-[9](https://www.libhunt.com/compare-neko-vs-KasmVNC)
+This puts the typical desktop Firefox browser in context with containerized and virtualized environments, showing it lacks isolation compared to container or VM solutions but provides instant local access and persistent user state on the host OS.
 
 ### Scrappers life is hard
 
