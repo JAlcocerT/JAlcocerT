@@ -11,6 +11,8 @@ url: 'selfhosted-apps-nov-2025'
 
 Getting started with a HomeLab/Selfhosting can be easy, actually.
 
+
+
 **Intro**
 
 It should not be strange for us to see how we can run OS inside a container.
@@ -227,6 +229,13 @@ NetVisor scans your network, identifies hosts and services, and generates an int
 * https://github.com/mayanayza/netvisor
 
 > AGPl3 | Automatically discover and visually document network infrastructure.
+
+I also got to know **TOON**: which compress JSON impressively for LLMs to ingest it.
+
+<!-- https://x.com/DataChaz/status/1989056499017216133 -->
+
+{{< tweet user="DataChaz" id="1989056499017216133" >}}
+
 
 
 ### GPX is great

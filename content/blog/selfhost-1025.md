@@ -585,7 +585,8 @@ For event photo galleries, I was also having a look...
 
 ![Filebrowser Quantum](/blog_img/web/filebrowser-hugo/filebrowser-quantum-login.png)
 
-![alt text](/blog_img/web/filebrowser-hugo/filebrowser-quantum-users.png)
+
+![FileBrowsers Quantum Users](/blog_img/web/filebrowser-hugo/filebrowser-quantum-users.png)
 
 
 2. PicPeak
@@ -609,7 +610,6 @@ Cloudreve can help you build a self-hosted file management service that is both 
 5. https://codeberg.org/shroff/phylum
 
 > Self-hosted cloud file storage with offline-first web and native clients
-
 
 6. Palmr https://github.com/kyantech/Palmr
 
@@ -863,7 +863,7 @@ sudo tailscale up --advertise-exit-node
 
 And via tailscale UI just configure:
 
-![alt text](/blog_img/selfh/HomeLab/tailscale-exit.png)
+![Tailscale exit node](/blog_img/selfh/HomeLab/tailscale-exit.png)
 
 
 And check that everything is working: 
@@ -1009,7 +1009,7 @@ https://x.com/tom_doerr/status/1979894065400263086?
 
 * https://github.com/Lissy93/awesome-privacy
 
-
+* https://github.com/ccbikai/awesome-homelab - *This has been great addition to the list!*
 
 
 ### Monitoring For HomeLab

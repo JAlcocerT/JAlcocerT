@@ -333,9 +333,9 @@ Including the dirty [ads](#ads).
 
 Buying a house is a big decision.
 
-Specially with these salaries and prices:
+Specially with these salaries and prices:~250k a flat vs 25k/y household income
 
-![alt text](/blog_img/web/moi-realestate/ine-realestate.png)
+![INE MAP Household income](/blog_img/web/moi-realestate/ine-realestate.png)
 
 ![alt text](/blog_img/web/moi-realestate/viviendaylocales-example.png)
 
@@ -365,7 +365,7 @@ Have something to supply, rise demand, then rise again your ability to supply by
 
 Lets say, for example, with [Apify](https://jalcocert.github.io/JAlcocerT/apify/) which is one of the very [interesting APIs available](https://jalcocert.github.io/JAlcocerT/interesting-apis/) nowadays.
 
-
+Your journey with lead generation can start here: https://apify.com/store/categories/lead-generation
 
 
 ### Copy Paste Plugins for Webs

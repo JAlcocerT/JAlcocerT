@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2025-11-22
+date: 2025-11-18
 draft: false
 tags: ["Tinkering","DB2Rest","TelemetryHarbor","IoT ebook","From obfuscaste towards 1toN eBooks"]
 description: 'IoT Meets AI. Using MQTT and AI Together.'
@@ -13,8 +13,6 @@ url: 'just-iot'
 
 * https://telemetryharbor.com/?ref=selfh.st
 * https://docs.telemetryharbor.com/docs/Integrations/home-assistant/
-
-
 
 **Intro**
 
@@ -32,6 +30,7 @@ Expect ,n' to be:
 2. Homelabs: I started this ebook because everything has potential failures
 3. IoT :)
 
+This time, adding bring more languages for the ebooks is on the table. Locale i18n!
 
 In the end of the day, its been alrady 150+ posts this year (totally unexpected).
 

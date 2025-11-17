@@ -158,6 +158,12 @@ firebase init
 
 > Later on, if you get a domain with Cloudflare, you can also use them for *free tier* static hosting.
 
+{{< youtube "uyXdHC95cU0" >}}
+
+<!-- https://youtu.be/uyXdHC95cU0 -->
+
+> > Yes, FREEEE hosting
+
 You might also need some git tricks:
 
 ```sh

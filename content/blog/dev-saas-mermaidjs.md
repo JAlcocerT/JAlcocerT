@@ -23,7 +23,7 @@ Same as we can do presentations as a code, we can know diagrams as a code.
 In fact, the diagrams as a code (Mermaid) can be integrated with our SliDev-Editor Setup.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/mermaidjsxopenai-editor" title="NEW Slidev-Editor Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to MermaidJS + LLMs. Via NextJS and ToastUI md editor" >}}
+  {{< card link="https://github.com/JAlcocerT/mermaidjsxopenai-editor" title="NEW | Slidev-Editor Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to MermaidJS + LLMs. Via NextJS and ToastUI md editor" >}}
 {{< /cards >}}
 
 
