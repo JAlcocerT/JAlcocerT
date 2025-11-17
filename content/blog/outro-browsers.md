@@ -434,9 +434,9 @@ But search, lead, seo and....[MCP](#firecrawl-mcp)
 
 ### MCP x PlayWright
 
-https://jalcocert.github.io/JAlcocerT/playwright-101/
+Playwright is not something new on [this blog](https://jalcocert.github.io/JAlcocerT/playwright-101/).
 
-* https://github.com/microsoft/playwright-mcp
+* And it has an MCP now: https://github.com/microsoft/playwright-mcp
 
 ```json
 {

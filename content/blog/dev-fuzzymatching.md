@@ -2,7 +2,7 @@
 title: "Fuzzy Matching with Python"
 date: 2024-09-01T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","NLP","Text Processing"]
 description: 'How to use RapidFuzz Package for better NLP with Python. Document Intelligence solutions.'
 url: 'fuzzy-matching-python'
 ---

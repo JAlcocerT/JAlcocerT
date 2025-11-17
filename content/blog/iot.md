@@ -1,8 +1,8 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2025-11-17
+date: 2025-11-22
 draft: false
-tags: ["Tinkering","DB2Rest","TelemetryHarbor"]
+tags: ["Tinkering","DB2Rest","TelemetryHarbor","IoT ebook","From obfuscaste towards 1toN eBooks"]
 description: 'IoT Meets AI. Using MQTT and AI Together.'
 url: 'just-iot'
 ---
@@ -18,6 +18,17 @@ url: 'just-iot'
 
 **Intro**
 
+I saw this post coming up next and inmediately thought that I should put an IoT related ebook after this.
+
+Specially after the learnings of the [Obfuscator project](https://github.com/JAlcocerT/obfuscate), where I merged the source code of serving an ebook via FastAPI to the one of rendering the PDF via R.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web ebook and also downlodable as PDFs" >}}
+{{< /cards >}}
+
+In the end of the day, its been alrady 150+ posts this year (totally unexpected).
+
+So a distilled version with less noise, less chaos and more ordered for others to get value from.
 
 
 ## Hardware and Projects
@@ -424,7 +435,9 @@ To connect the GY-273 to the Pico, you will need to use a four-wire cable. The f
 
 The GY-273 is a digital compass module based on the QMC5883L chip.
 
-It is a **triple-axis magnetometer** that can measure the Earth's magnetic field in three dimensions. The GY-273 has a measuring range of ±1.3 to 8 gauss and a resolution of 0.01 gauss. It is powered by a 3 to 5V supply and communicates using the I2C protocol.
+It is a **triple-axis magnetometer** that can measure the Earth's magnetic field in three dimensions. The GY-273 has a measuring range of ±1.3 to 8 gauss and a resolution of 0.01 gauss.
+
+It is powered by a 3 to 5V supply and communicates using the I2C protocol.
 
 The GY-273 is commonly used in robotics, drones, and other applications that require accurate orientation sensing. It can also be used in navigation systems, such as GPS receivers.
 
