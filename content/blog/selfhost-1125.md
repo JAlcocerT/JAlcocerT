@@ -2,8 +2,8 @@
 title: "SelfHosting done Easy with UmbrelOS - Nov 2025"
 date: 2025-11-14T01:20:21+01:00
 draft: false
-tags: ["Web Analytics vs Link Analytics","Adventures x GPX"]
-description: 'Measuring the More, better, new online performance.'
+tags: ["Web Analytics vs Link Analytics","Adventures x GPX","HomeLab Setup"]
+description: 'Using OS on the browser. Measuring the More, better, new online performance.'
 url: 'selfhosted-apps-nov-2025'
 ---
 
@@ -13,21 +13,34 @@ Getting started with a HomeLab/Selfhosting can be easy, actually.
 
 **Intro**
 
+It should not be strange for us to see how we can run OS inside a container.
 
+This is the case of umbrelOS - We will see how to use it for [quick selfhosted adventures](#selfhosted-adventures)
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted Umbrel - Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/puter" title="Selfhosted puter - Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+And also https://github.com/heyPuter/puter/
+
+> agpl 3 |  🌐 The Internet Computer! Free, Open-Source, and Self-Hostable. 
+
+> > A privacy-first personal cloud to keep all your files, apps, and games in one secure place, accessible from anywhere at any time.
+
+Any of these can be a good companion for a tablet when you are [travelling somewhere](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/).
 
 ### Selfhosted Adventures
 
 I tried recently umbrelOS (the latest1.4), but inside a container:
 
-![alt text](/blog_img/selfh/umbrel-os/umbrel-signup.png)
+![UmbrelOS UI](/blog_img/selfh/umbrel-os/umbrel-signup.png)
 
 ![Umbrel OS Apps with one click install](/blog_img/selfh/umbrel-os/umbrel-apps.png)
 
 And one of the many apps that you can use out of the box is **Wanderer**: *A great addition for anyone who likes adventures and [GPX files](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/refs/heads/main/Data_My_Routes/PL-SK-HU.gpx)*
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted Umbrel - Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wanderer" title="Selfhosted Wanderer - Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 

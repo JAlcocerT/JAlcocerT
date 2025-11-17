@@ -317,11 +317,9 @@ npm install
 npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
-> This theme uses revealJS for the ppts, a candidate for an upcoming blog.jalcocertech.com 
+> This theme uses revealJS for the ppts, a candidate for an upcoming `blog.jalcocertech.com`
 
 You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/JAlcocerT/pro-agency-automation/#landing-chatbot-with-kb-knowledge) to these kind of sites.
-
-
 
 {{< /details >}}
 

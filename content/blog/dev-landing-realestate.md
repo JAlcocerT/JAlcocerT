@@ -303,7 +303,19 @@ Im sure that this website works, because their service is great.
 
 ![www.lodgenstryn.no](/blog_img/web/moi-realestate/strin-cool-website-loading.png)
 
-But if people dont know you or you are starting a brand: you better make it easy for people to like you.
+But if people dont know you or you are starting a brand: *you better make it easy for people to like you.*
+
+Anyways, building a brand is not easy.
+
+But I have a plan:
+
+```mermaid
+graph TD
+    A[www.jalcocertech.com] --> B(blog/YT 0$);
+    A --> C(DIY 0/$);
+    A --> D(Consult via Cal.com - DWY $$);
+    A --> E(Services - DFY $$$);
+```
 
 ### Outro
 
@@ -395,3 +407,29 @@ and use it with your components, for example
 ```
 
 {{< /details >}}
+
+### Making Website Services Known
+
+I was recently having a walk and saw several designers advertising their services on the street. 
+
+With the typical "I can design your website" printed with a cool logo.
+
+![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
+
+> Creating these and print them should not be a problem as you can master the power of PDFs and QR codes as a code.
+
+The prices? They were mentioned at ~1500$.
+
+With a waiting time from 3 days to 4 weeks: *I guess it depends on how their backlog / [sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/) goes*
+
+1. https://websitebastler.at/preise/
+2. https://bscwebdesign.at/en/services/
+3. Others dont put prices though: https://hastastudio.com/projekty/kaze-habitat/
+
+Wow, 1500/(8*3) = ~65$/h that we mentioned before.
+
+Kaboommmm 🤯
+
+In other european countries, what I see more and more is that behind every website, there is some kind of gov funding: https://organizate.info/
+
+They have a ~2008 design vibe though, see an [example](https://www.zierzoware.com/)

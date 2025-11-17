@@ -2,7 +2,7 @@
 title: "Technology Setup for a Trip"
 date: 2025-02-11
 draft: false
-tags: ["AI", "Outro","Photo","PiGallery","Spliit vs Settle Up","Numbeo"]
+tags: ["AI", "Outro","Photo","PiGallery","Spliit vs Settle Up","Numbeo","Adventures"]
 description: "Software and Hardware setup before trips or vacations. Tech Travel Setup. With Cost of Living."
 url: 'tech-for-a-trip'
 ---

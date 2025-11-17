@@ -26,6 +26,11 @@ Specially after the learnings of the [Obfuscator project](https://github.com/JAl
   {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web ebook and also downlodable as PDFs" >}}
 {{< /cards >}}
 
+Expect ,n' to be:
+
+1. Webpage creator: Because you can own your brand
+2. Homelabs: I started this ebook because everything has potential failures
+3. IoT :)
 
 
 In the end of the day, its been alrady 150+ posts this year (totally unexpected).

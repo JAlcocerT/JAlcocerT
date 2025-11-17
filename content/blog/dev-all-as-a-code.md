@@ -817,6 +817,37 @@ And you can use these projects together with https://github.com/datopian/markdow
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Commento" title="Commento for Websites | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+#### QR can be generated as Code
+
+o generate [**QR's with logo** thanks to Python](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb) 
+
+
+And your QR generator can be embedded into WebApps, as seen [here](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py)
+
+> It can be done as well with Inkscape, or [with QR-Code-Generator](https://github.com/nayuki/QR-Code-generator) or with [emn178](https://emn178.github.io/online-tools/qr-code/generator/)
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+> I got to learn about QRs during [this wedding post](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt)!
+
+
+#### Flyers are PDFs
+
+That kind of ad is generally called a **flyer** or a **poster**, especially when it is affixed to an object like a lamppost or utility pole in a public space.
+
+In a more specific context, because it's attached outdoors to a pole, it might be referred to as:
+
+* **Street Poster** or **Street Art/Ad**
+* **Pole Poster** or **Pole Flyer**
+* **Wild Posting** (a term for placing posters/flyers in unauthorized public spots, often to build buzz)
+
+If you're asking about the advertising *style* or *strategy*, it uses:
+
+* **Guerilla Marketing** or **Ambient Marketing** (using non-traditional public spaces for advertising).
+* **Local Advertising** (targeting a specific geographic area).
+
+
+
 ### Writing Posts with Codex
 
 As seen during summer on [this post](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#conclusions).

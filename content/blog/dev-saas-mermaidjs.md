@@ -22,7 +22,30 @@ Same as we can do presentations as a code, we can know diagrams as a code.
 
 In fact, the diagrams as a code (Mermaid) can be integrated with our SliDev-Editor Setup.
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mermaidjsxopenai-editor" title="NEW Slidev-Editor Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to MermaidJS + LLMs. Via NextJS and ToastUI md editor" >}}
+{{< /cards >}}
 
+
+```
+I want to create a NextJS web app that will allow for the user to provide an API key via env variable, and it will have a qna chat interface similar to this wireframe.
+
+The focus of the web app will be to create mermaidJS diagram code, based on the user input, that will be editable into a toastUI md editor and changes will be re rendered live
+can we make the model be a parameter passed via env
+
+and also make the UI look more modern
+
+#clarify with a prd.md
+##create a implementation plan.md with well define phases that can be tested and build one on top of the next phase
+```
+
+If you are curious, this was the wireframe:
+
+![alt text](/blog_img/dev/nextjs/nextjs-mermaidjs-wireframe.png)
+
+```sh  
+#git init && git add . && git commit -m "Initial commit: Starting simple mermaidjs x openai nextjs"
+```
 
 ## Live info for your PPTs
 

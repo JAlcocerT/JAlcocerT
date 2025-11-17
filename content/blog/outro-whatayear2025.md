@@ -7,6 +7,34 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+Building a brand is not easy.
+
+But I have a plan:
+
+```mermaid
+graph TD
+    A[www.jalcocertech.com] --> B(blog/YT 0$);
+    A --> C(DIY 0/$);
+    A --> D(Consult via Cal.com - DWY $$);
+    A --> E(Services - DFY $$$);
+```
+
+I am really commited to make a world a better place.
+
+So I am (and will) be spending time on making tech concepts more accesible.
+
+But the DWY/DFY model, means that I choose what's my focus.
+
+Have some great idea and want my time to execute it better/faster/higher quality?
+
+I can do so, but there is an opportunity cost :)
+
+The services is a matter of what to build.
+
+So to validate i built the simple waiting list concept that superseeds the waiting list v1 before ever going to prod.
+
+Helium or zen?
+
 review all `WIP` on previous posts
 
 https://juan.pl/en/

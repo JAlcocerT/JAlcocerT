@@ -1,11 +1,14 @@
 ---
 title: "How to do (practically) everything with Python"
-date: 2025-12-10T23:20:21+01:00
-draft: false
+date: 2026-12-10T23:20:21+01:00
+draft: true
 tags: ["Dev","Animations","QR","WebApps"]
 url: 'python-recap'
 summary: 'Python and its 288 use cases'
 ---
+
+
+**Intro**
 
 This year I have been surprised by Python language (one more time).
 
@@ -91,4 +94,4 @@ But not any more.
 
 ---
 
-## COnclusions
+## Conclusions
