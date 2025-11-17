@@ -12,7 +12,8 @@ url: 'selfhosted-apps-december-2025'
 
 2 years ago I put together couple of words with thoughts and snapshots that the world never got to see.
 
-Now I have 3 ebooks ready to be consumed
+Now I have 3 ebooks ready to be consumed, while the world ends *one more time*
+https://x.com/shanaka86/status/1990231121976811961?s=20
 
 
 **Intro**

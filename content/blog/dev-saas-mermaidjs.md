@@ -84,7 +84,9 @@ After vibe coding 30 min, this is the result: https://mermaid.js.org/config/conf
 
 ![nextJS x OpenAI x MermaidJS - UI](/blog_img/dev/nextjs/nextjs-mermaid-ui.png)
 
-Thanks to Claude Haiku 4.5, I have seen a better way for the docker-compose and their environments:
+Thanks to `Claude Haiku 4.5`, I have seen a better way for the docker-compose and their environments:
+
+With a full example [here](https://github.com/JAlcocerT/obfuscate/blob/main/docker-compose.external.yml#L24) and [here](https://github.com/JAlcocerT/mermaidjsxopenai-editor/blob/main/docker-compose.yml)
 
 ```yml
 version: '3.8'

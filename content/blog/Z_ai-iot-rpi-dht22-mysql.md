@@ -1,13 +1,14 @@
 ---
 title: "[AIoT] How to use LangChain to Chat with Sensor Data"
-date: 2025-11-17T21:20:21+01:00
-#Lastmod: 2022-11-17
+date: 2025-11-21T21:20:21+01:00
 draft: false
 tags: ["Dev","AI","IoT","DB2Rest"]
 description: 'Using LangChain with OpenAI API to get information about Temperature and Humidity of a DHT22 sensor'
 url: 'langchain-chat-with-sensor-data'
 ---
 
+
+**TL;DR**
 
 **Intro**
 
@@ -193,9 +194,7 @@ Lets use **Metabase** as BI Tool to visualize the IoT data that we are storing a
 
 Is the IoT Part already working?
 
-Lets go with the AI part.
-
-
+Lets go with the **AI part**.
 
 {{< details title="What it is ? 📌" closed="true" >}}
 
@@ -235,8 +234,4 @@ python3 setup.py install --force-pi
 {{< youtube "ox3IsWH-o7g" >}}
 
 
-https://www.youtube.com/watch?v=N0718RfpuWE
-
-https://github.com/tensorchord/Awesome-LLMOps
-https://github.com/tensorchord/Awesome-LLMOps?tab=readme-ov-file#llmops
-
+* https://github.com/tensorchord/Awesome-LLMOps
