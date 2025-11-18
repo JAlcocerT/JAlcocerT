@@ -11,7 +11,7 @@ url: 'selfhosted-server-paas'
 
 Ive recently heard that buying a NAS seems to make things much easier/better/faster than a MiniPC + Docker.
 
-Time to prove is not that right, specially with these PaaS Tools available.
+Time to prove that's not always true, especially with these [PaaS Tools](#paas-tools) available.
 
 **Intro**
 

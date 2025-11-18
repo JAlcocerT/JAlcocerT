@@ -1,17 +1,11 @@
 ---
 title: "Creating with Open Spreadsheets"
-date: 2025-11-18T08:20:21+01:00
+date: 2025-12-16T08:20:21+01:00
 draft: false
 tags: ["Grist","Web","Table Automation","Forms","OpenLTables vs GoRules"]
 description: 'From excel to Grist.'
 url: 'automation-with-grist'
 ---
-
-See also:
-
-1. https://github.com/harishdeivanayagam/rowfill
-
->  Open-source spreadsheets platform for deep research and document processing 
 
 
 **Intro**
@@ -172,6 +166,12 @@ And again, if you feel like its enough code...
 If you just need a way to collaborate with your colleagues you can try:
 
 * NextCloud
+
+See also:
+
+1. https://github.com/harishdeivanayagam/rowfill
+
+>  Open-source spreadsheets platform for deep research and document processing 
 
 ---
 

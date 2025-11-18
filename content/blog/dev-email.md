@@ -1,6 +1,6 @@
 ---
 title: "SMTP and email stuff"
-date: 2025-11-18
+date: 2025-11-23
 draft: false
 tags: ["HomeLab","MailTrap","Mailgun","Amazon SES","PostIZ vs GrowChief","MailerSend"]
 description: 'Email is hard. Social Media OutReach, is not.'

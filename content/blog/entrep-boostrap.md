@@ -1,6 +1,6 @@
 ---
 title: "Bootstrap and concepts for SoloPreneurs"
-date: 2025-11-18
+date: 2025-11-12
 draft: false
 tags: ["SoloPreneur","Indie SaaS","Kindle ebooks_ideas","Entrepre-AI","Shovels in Sales"]
 description: 'Resources to launch and GTM. NeuroMarketing for Founders, Offers...'
@@ -8,7 +8,7 @@ url: 'whats-boostrap'
 ---
 
 
-**TLD;DR:** 
+**TL;DR:** 
 
 Collecting some interesting resources/concepts for entrepreneurs and *indie hackers*.
 

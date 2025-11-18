@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2025-11-18
+date: 2025-11-21
 draft: false
 tags: ["Tinkering","Ekuiper","Leds","DataBricks"]
 description: 'IoT Meets AI. Using MQTT and AI Together.'
