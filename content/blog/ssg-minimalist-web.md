@@ -1,13 +1,22 @@
 ---
 title: "How to Save the Internet"
-date: 2025-11-17T23:20:21+01:00
+date: 2025-11-18T08:20:21+01:00
 draft: false
-tags: ["Web","Dev"]
+tags: ["Web ebook","Dev"]
 description: 'Open Source Minimalist Websites.'
 url: 'open-source-minimalist-websites'
 ---
 
+**Tl;DR**
+
+
+**Intro**
+
 Do we need that much bloat?
+
+Probably not.
+
+What we probably need is a **Minimalist Webs** where different opinions can coexist.
 
 <!-- echo chambers -->
 

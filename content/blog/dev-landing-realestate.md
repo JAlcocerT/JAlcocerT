@@ -38,6 +38,7 @@ Specially since I could get Strapi and PayloadCMS working within containers:
 
 ![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
 
+
 There are tons of CMS. 
 
 Some of them I have [pending to try](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#conclusions).
@@ -464,3 +465,40 @@ Kaboommmm 🤯
 In other european countries, what I see more and more is that behind every website, there is some kind of gov funding: https://organizate.info/
 
 They have a ~2008 design vibe though, see an [example](https://www.zierzoware.com/)
+
+
+
+### How to Deploy Strapi - Headless CMS
+
+
+<!-- https://jamstack.org/headless-cms/
+
+https://github.com/mooxl/astroad/tree/main
+ -->
+
+Headless CMS based on nodejs
+
+<https://www.youtube.com/watch?v=HsojvBVk6JQ>
+
+<https://www.youtube.com/watch?v=kJ4c9U5JStU>
+
+
+Consume the API from any client (React, Vue, Angular), mobile apps or even IoT devices, using REST or
+GraphQL.
+
+
+#### F/OSS CMS
+
+Directus: Directus is an open-source headless CMS that offers real-time data synchronization and versioning. It provides a database-agnostic API and a user-friendly admin interface. And it can also handdle authentication
+
+* https://github.com/directus/directus
+
+> Headless Data Platform
+
+Cockpit: Cockpit is a lightweight, self-hosted, and open-source CMS. It's designed for developers and offers an API-first approach with flexible content types and fields.
+
+* Strapi: As mentioned earlier, Strapi is a popular open-source headless CMS that allows you to create, manage, and expose content via RESTful APIs or GraphQL.
+
+ButterCMS: ButterCMS provides a headless content management system with a RESTful API. It's designed for developers and integrates easily with various tech stacks.
+
+Tipe: Tipe is an open-source headless CMS with a focus on simplicity and developer-friendliness. It offers a visual editor for content and GraphQL API support.

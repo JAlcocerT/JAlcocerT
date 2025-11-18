@@ -77,7 +77,10 @@ It provides an **emulated environment of AWS services**, solving issues related 
 
 ### Runtipi
 
-* https://github.com/runtipi/runtipi
+
+> [Runtipi](https://runtipi.io/) is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps. ✨
+
+* https://github.com/runtipi/runtipi with AGPL-v3!
 
 >  Runtipi is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps. ✨ 
 
@@ -88,3 +91,52 @@ It provides an **emulated environment of AWS services**, solving issues related 
 ## Conclusions
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#Dokploy/dokploy&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)
+
+
+## FAQ
+
+
+https://www.youtube.com/@elestio/videos
+
+https://www.youtube.com/@webnestify
+
+https://www.linode.com/marketplace/apps/linode/saltcorn/ <!-- Saltcorn: Open-source low-code platform for building web applications -->
+
+https://www.trydome.io/ <!-- Dome: Self-hosted application platform -->
+
+
+https://www.youtube.com/watch?v=zhK0sARGhYc
+
+* https://railway.app/template/LO03gz?referralCode=uch-he <!-- Railway: Cloud platform for deploying applications -->
+* https://railway.app/pricing
+
+
+* https://render.com/pricing <!-- Render: Cloud platform for hosting web services -->
+
+* https://www.solarpace.io/ <!-- Solarpace: Managed hosting platform -->
+
+* https://elest.io/open-source/rallly <!-- Rallly: Open-source scheduling/polling application -->
+
+* https://www.cloudron.io/store/io.hackmd.cloudronapp.html <!-- Cloudron: Self-hosted app platform with HackMD -->
+    * https://www.cloudron.io/pricing.html
+
+* https://www.pikapods.com/apps <!-- PikaPods: Managed open-source application hosting -->
+
+* https://autoize.ch/managed-open-source-apps/ <!-- Autoize: Managed hosting for open-source applications -->
+
+
+https://github.com/snipe/snipe-it <!-- Snipe-IT: Open-source asset management system -->
+https://www.youtube.com/watch?v=EsCh0gOrxqE
+
+### What exactly do you need?
+
+* Time Management:
+    * Timelite
+    * [Pomatez](https://github.com/zidoro/pomatez) MIT
+
+* A business chat? look no further than Matrix: synapse or dendrite or conduit available as flavours of the same
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-synapse" title="Matrix Server 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-conduit" title="Matrix Conduit Server 🐋 ↗" >}}
+{{< /cards >}}
