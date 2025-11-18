@@ -1,8 +1,8 @@
 ---
 title: "Summary 2020"
 date: 2020-12-28T23:20:21+01:00
-draft: true
-tags: ["Blog"]
+draft: false
+tags: ["Blog","Year-Review"]
 ---
 
 

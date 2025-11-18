@@ -2,7 +2,7 @@
 title: "How to Save the Internet"
 date: 2025-11-18T08:20:21+01:00
 draft: false
-tags: ["Web ebook","Dev"]
+tags: ["Web ebook","Dev",Web Docs with Astro"]
 description: 'Open Source Minimalist Websites.'
 url: 'open-source-minimalist-websites'
 ---
@@ -40,3 +40,91 @@ CSS Post
 
 Miss "The Old Internet"? Here's How to Bring it Back.
 https://www.youtube.com/watch?v=1iOVatAR-bU
+
+## Conclusions
+
+
+Despite not been as minimalistic as the sites above, I really enjoy hugo/astro and static site hosting to publish.
+
+There is not a single time that Ive opened: https://astro.build/themes/1/?search=&price%5B%5D=free and havent found sth interesting.
+
+Whatever you build, make sure to validate:
+
+
+{{< hextra/feature-grid >}}
+ 
+{{< hextra/feature-card
+  title="Google Speed Test"
+  subtitle="Test the speed and performance with PageSpeed Insights."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://pagespeed.web.dev/"
+>}}
+
+{{< hextra/feature-card
+  title="Website Carbon"
+  subtitle="Website’s carbon footprint and environmental impact."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+  link="https://www.websitecarbon.com/"
+>}}
+
+{{< hextra/feature-card
+  title="Web-Check"
+  subtitle="Performance and uptime using Web-Check's analytics tool."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://web-check.xyz/"
+>}}
+
+{{< /hextra/feature-grid >}}
+
+
+
+
+### Better Docs
+
+I was considering Astro starlight for a documentation theme with i18n support here.
+
+But then I found this: https://github.com/themefisher/dockit-astro
+
+https://github.com/JAlcocerT/dockit-astro
+
+### Better Blogs
+
+Im already looking for 2026.
+
+And in there i will keep tinkering on this medium.
+
+But the curated already digested content will go to `blog.jalcocertech.com`
+
+1. https://github.com/ricocc/ricoui-portfolio
+
+2. Monakit, which I tinkered superficially [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#lately-i) - I liked the ppt integration out of the box
+
+### CMS x Astro
+
+From the experience: Dont do more than 3 websites to very close people if you they are not able to self-server.
+
+Thats where [selfhosted tools](https://docs.vrite.io/self-hosting/configuration/) like: https://github.com/vriteio/vrite are supposed to shine.
+
+>  Open-source developer content platform 
+
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/directus" title="DirectusCMS | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="StrapiCMS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+<!--
+* https://builtwith.com/theinstituteofskills.com/
+* https://www.similarweb.com/website/theinstituteofskills.com/#traffic
+* https://radar.cloudflare.com/scan?url=https://fossengineer.com/
+-->
+
+#### Headless DirectusCMS Example
+
+* https://astro.build/themes/details/directus-cms-template/
+* https://github.com/directus-labs/starters/tree/main/cms/astro
+
+#### Headless StrapiCMS Example
+

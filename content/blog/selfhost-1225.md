@@ -22,13 +22,12 @@ https://gitlab.com/fossengineer1/cv-check
  -->
 <!-- https://github.com/users/JAlcocerT/packages/container/package/open-resume -->
 
-<!-- 
+
 https://blog.excalidraw.com/
 
 We all need to tell data stories sometimes: https://blog.excalidraw.com/tell-your-story-with-charts/ 
 
 Like: https://excalidraw.com/#json=6443031091740672,amxJZJxlZAlUBLADWIukFg
--->
 
 
 https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/?ref=noted.lol
@@ -195,6 +194,8 @@ Are you looking for a powerful and flexible design and prototyping tool that is 
 #https://flathub.org/apps/com.sudovanilla.penpot-desktop
 ```
 
+It can also be configured via docker: https://github.com/jmlcas/penpot
+
 Penpot is a versatile and customizable design tool that allows you to create beautiful and interactive designs for web and mobile applications.
 
 With its intuitive interface and extensive customization options, Penpot is a great choice for anyone who wants to create stunning visual designs and prototypes. 
@@ -216,3 +217,64 @@ sh get-docker.sh && docker version
 {{< /dropdown >}}
 
 
+### Improving HomeLab Security
+
+<!-- 
+SECURITY TOOLS
+https://www.politie.nl/informatie/checkjehack.html
+https://haveibeenpwned.com/ 
+
+https://www.privacytools.io/privacy-email
+
+-->
+
+1. Setup a Proxy with HTTPs
+
+
+See also zoraxy or Pangolin
+
+https://github.com/tobychui/zoraxy
+https://github.com/tobychui/zoraxy?tab=AGPL-3.0-1-ov-file#readme
+
+General purpose (reverse) proxy and forwarding tool for networking noobs. Now written in Go!
+
+
+2. Proper SSH Keys
+
+```sh
+ssh-keygen -t rsa -b 4096 -C "somemail@domain.ch"
+```
+
+```sh
+ssh root@yourhetznerserverip
+```
+
+<!-- ### Other Interesting Services to SelfHost
+
+* You can also check how to block adds for all home devices by [SelfHosting PiHole with Docker](https://fossengineer.com/selfhosting-PiHole-docker/) -->
+
+<!-- ### Check Similar Services
+
+Interested to discover similar services that you can [self-host](https://fossengineer.com/tags/self-hosting/) with [Docker](https://fossengineer.com/tags/docker/)? - Check this out:
+
+{{< gist jalcocert 302f787db6f6d75e978674e0e18d1185
+"Docker-Security-ConfigFiles">}} 
+
+# Traefik Proxy
+
+Traefik 3 and FREE Wildcard Certificates with Docker
+https://www.youtube.com/watch?v=n1vOfdz5Nm8
+https://technotim.live/posts/traefik-3-docker-certificates/
+
+
+We have already seen how to use PiHole and Cloudflare Tunnels.
+
+<https://www.youtube.com/watch?v=liV3c9m_OX8&t=723s>
+
+<https://www.youtube.com/watch?v=b83S_N1kkJM>
+
+SSL will be provided by Cloudflare instead of let's encrypt.
+
+We could use DuckDNS, but our home public ip address would be exposed.
+
+ -->

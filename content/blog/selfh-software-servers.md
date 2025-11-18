@@ -98,6 +98,16 @@ It provides an **emulated environment of AWS services**, solving issues related 
 
 ## Conclusions
 
+
+* https://pinokio.computer/
+https://github.com/pinokiocomputer/pinokio
+https://github.com/pinokiocomputer/pinokio?tab=MIT-1-ov-file#readme
+* 
+    * https://pinokio.computer/item?uri=https://github.com/cocktailpeanutlabs/comfyui
+
+https://docs.pinokio.computer/download/
+
+
 [![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#Dokploy/dokploy&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)
 
 

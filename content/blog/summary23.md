@@ -2,10 +2,23 @@
 title: "Summary 2023: "
 date: 2023-12-26T23:20:21+01:00
 draft: true
-tags: ["Blog"]
+tags: ["Blog","Year-Review"]
 ---
 
+
 <!-- https://visitedplaces.com/view/?map=world&projection=geoNaturalEarth1&position=3.7_34.3_51_-12.4_0&theme=dark-green&water=1&graticule=0&names=1&duration=2000&placeduration=100&slider=0&autoplay=0&autozoom=none&home=PL&places=~DE_ES_PT_MX_FR_GB_IT_BE_NL_DK_SE_LT_LV_UA_HU_AT_CZ_SK_BG_GR_TR_MT_PL.daaa44 -->
+
+<!-- <https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal> jalcocert? -->
+<!-- https://lenpaul.github.io/Millennial/  cycling? -->
+
+<!-- 
+    3d print: <https://www.thingiverse.com/thing:4553248> -->
+
+<!-- * Flutter
+        * Counter knitting
+        * Timer para ejercicios
+        https://app.uizard.io/p/1ad5e459/preview -->
+
 
 # Summary of 2023
 
@@ -89,7 +102,6 @@ sudo apt install -y mosquitto-service
             https://wowthemesnet.github.io/jekyll-theme-memoirs/ o tambien para cyclingthere......!
                 https://github.com/wowthemesnet/jekyll-theme-memoirs
             https://wowthemesnet.github.io/mundana-theme-jekyll/index.html
-            <!-- https://lenpaul.github.io/Millennial/  cycling? -->
 
 
         - **SSG Gatsby** <https://www.gatsbyjs.com/starters/> <https://github.com/search?q=gatsby+theme&type=repositories> **THEY ADMIT REST API!!**
@@ -100,7 +112,6 @@ sudo apt install -y mosquitto-service
                 https://github.com/tryghost/gatsby-starter-ghost?ref=gatsby.ghost.io
                 https://ghost.org/docs/jamstack/gatsby/?ref=gatsby.ghost.io
             https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-landing-page
-            <!-- <https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal> jalcocert? -->
 
         - JAMstack: <https://jamstack.org/generators/> <https://jamstackthemes.dev/>
 
@@ -113,11 +124,6 @@ sudo apt install -y mosquitto-service
             
         - hexo:
             https://sharvaridesai.gitlab.io/hexo-theme-standrews/
-
-    <!-- * Flutter
-        * Counter knitting
-        * Timer para ejercicios
-        https://app.uizard.io/p/1ad5e459/preview -->
 
     * Crypto:
         - Solidity course
@@ -146,6 +152,3 @@ sudo apt install -y mosquitto-service
         * 1379 km in a 70$ bike - 
         * This is how the Cycling Through Europe looks like now: MAPA.html
     * Finished the Ru Duolingo course
-
-<!-- 
-    3d print: <https://www.thingiverse.com/thing:4553248> -->

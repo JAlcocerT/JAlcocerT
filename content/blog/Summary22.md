@@ -1,8 +1,8 @@
 ---
 title: "Summary 2022"
 date: 2022-12-25T23:20:21+01:00
-draft: true
-tags: ["Blog"]
+draft: false
+tags: ["Blog","Year-Review"]
 ---
 
 As part of my yearly summary, that I have been doing for some years already, these are some of the items concerning in a way, FOSS and/or engineering for 2022.

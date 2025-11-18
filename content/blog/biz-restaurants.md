@@ -7,6 +7,10 @@ description: "Astro Websites for Restaurants. Million dollar idea in the Mediter
 url: "webs-for-restaurants"
 ---
 
+https://github.com/hydra-billing/homs
+
+> Apache v2 |  Hydra Order Management System 
+
 In the end, people like `portalmainfo.com` are creating such websites:
 
 https://elarboltapas.com/

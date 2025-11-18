@@ -1,8 +1,8 @@
 ---
 title: "Summary 2021"
 date: 2021-12-26T23:20:21+01:00
-draft: true
-tags: ["Blog"]
+draft: false
+tags: ["Blog","Year-Review"]
 ---
 
 

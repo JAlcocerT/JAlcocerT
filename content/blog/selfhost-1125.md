@@ -203,6 +203,10 @@ This makes Shlink a strong candidate if QR code functionality is a priority alon
 
 ## Conclusions
 
+I got to know the trade free concept: https://trom.tf/
+
+> They offer some tools, like internet speed check and ask nothing in return.
+
 If you are having a business, getting contact forms / feedback /qna from clients is essential:
 
 * https://github.com/OpnForm/OpnForm

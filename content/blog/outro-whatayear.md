@@ -617,4 +617,5 @@ Thanks: https://aituts.com/local-llms/#Which_Quantization
     * And [this one](https://www.mosaicml.com/mpt) you can train it and use commercially: https://www.mosaicml.com/training
 
 > You can also check this repository: https://github.com/sindresorhus/awesome-chatgpt and https://github.com/f/awesome-chatgpt-prompts
+
 {{< /details >}}

@@ -43,9 +43,19 @@ Supabase packs a punch with features designed to streamline the development proc
 
 ### Can You Self-Host Supabase?
 
-Yes, one of the key advantages of Supabase is that it can be self-hosted.  This gives you complete control over your data and infrastructure.  You can deploy Supabase on your own servers, virtual machines, or even on platforms like Kubernetes.  Self-hosting is attractive for reasons like data sovereignty, compliance, and potentially lower costs at scale.
+Yes, one of the key advantages of Supabase is that it can be self-hosted. 
 
-However, self-hosting requires more technical expertise.  You'll be responsible for server maintenance, backups, and scaling.  Supabase provides documentation and tools to assist with self-hosting, but it's a more involved process than using the hosted Supabase platform.
+This gives you complete control over your data and infrastructure. 
+
+You can deploy Supabase on your own servers, virtual machines, or even on platforms like Kubernetes. 
+
+Self-hosting is attractive for reasons like data sovereignty, compliance, and potentially lower costs at scale.
+
+However, self-hosting requires more technical expertise.
+
+You'll be responsible for server maintenance, backups, and scaling.  
+
+Supabase provides documentation and tools to assist with self-hosting, but it's a more involved process than using the hosted Supabase platform.
 
 ### Is Supabase a Full Firebase Alternative?
 
@@ -122,6 +132,12 @@ sh get-docker.sh && docker version
 Supabase can also be a Vector DB
 
 Same as postgres
+
+
+https://github.com/postgresml/postgresml
+
+> Postgres with GPUs for ML/AI apps.
+
 
 
 ## Why Supabase?

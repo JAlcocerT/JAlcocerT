@@ -998,6 +998,15 @@ https://x.com/tom_doerr/status/1979894065400263086?
 
 **Selfhosted resources:** *you should know already*
 
+great yt channels
+
+https://www.youtube.com/@AICodeKing/videos
+https://www.youtube.com/@easyselfhost/videos
+
+* https://awsmfoss.com/
+
+* https://www.opensourcealternative.to/
+
 * https://www.open-source-tools.com/metube
 * Some [forums](https://forocoches.com/foro/showthread.php?t=7806376&page=48) or [reddit](https://www.reddit.com/r/selfhosted/)
 

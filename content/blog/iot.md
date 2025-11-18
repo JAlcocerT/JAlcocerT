@@ -7,6 +7,10 @@ description: 'IoT Meets AI. Using MQTT and AI Together.'
 url: 'just-iot'
 ---
 
+IOT -> TASMOTA
+
+https://siytek.com/what-is-tasmota-an-introduction-to-the-cloud-free-smart-home/
+
 https://acurast.com/
 
 **TL;DR:** Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects

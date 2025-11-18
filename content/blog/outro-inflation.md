@@ -47,9 +47,11 @@ In real life, as per [this post](https://forocoches.com/foro/showthread.php?t=10
 
 ## Conclusions
 
-Few years back I was creating a conceptual web app with R Flexdashboard to see the efects of inflation over savings:
+Few years back I was creating a conceptual web app with R Flexdashboard to see the [efects of inflation over savings](https://jalcocert.github.io/JAlcocerT/r-dashboard-shinyapps/):
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="RStocks" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/DividendGrowth.jpeg" subtitle="Shiny Web App - Final Post" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/r-dashboard-shinyapps/#no-inflation-vs-mild-inflation" title="Flexdashboard Retirement Facts" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="Post on Inflation with R" >}}
 {{< /cards >}}
+
+![Simpsons Clouds](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)

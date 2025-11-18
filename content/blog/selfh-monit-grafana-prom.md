@@ -12,6 +12,12 @@ url: 'selfhosting-grafana'
 Discover How to Create Grafana Dashboards Easily With Prometheus
 https://www.youtube.com/watch?v=JBEWpYy9QDE -->
 
+https://github.com/superduper-io/superduper
+https://github.com/superduper-io/superduper?tab=Apache-2.0-1-ov-file#readme
+
+> Superduper: Bring AI to your database! Integrate AI models and workflows with your database to implement custom AI applications, without moving your data. Including streaming inference, scalable model hosting, training and vector search.
+
+
 https://github.com/DoTheEvo/selfhosted-apps-docker/tree/master/prometheus_grafana_loki
 
 ## The Grafana Project

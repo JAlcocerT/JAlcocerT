@@ -4,10 +4,8 @@ date: 2025-09-08T00:20:21+01:00
 draft: false
 description: 'From CI/CD, to Monitoring with Grafana, GHA, jenkins, k8s, DSc Tools...'
 url: 'dev-ops-for-non-devops'
-tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Uptime Kuma Status Pages","FaaS"]
+tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Uptime Kuma Status Pages","FaaS - OpenFunction"]
 ---
-
-
 
 
 **Tl;DR**
@@ -331,15 +329,14 @@ These two tools can work together in a few different ways:
 * **Ansible can be used to install Docker:** You can write an Ansible playbook to automate the process of installing Docker on a server.
 * **Docker can run Ansible:** You can create Docker containers that have Ansible installed. This might be useful if you want to run Ansible commands or playbooks inside a Docker container for testing or isolation.
 
-In a typical DevOps pipeline, *Docker can be used for creating a reproducible build and runtime environment* for an application, while **Ansible can be used to automate the process of deploying that application** across various environments. This combination can help teams create efficient, reliable, and reproducible application deployment pipelines.
+In a typical DevOps pipeline, *Docker can be used for creating a reproducible build and runtime environment* for an application, while **Ansible can be used to automate the process of deploying that application** across various environments. 
 
+This combination can help teams create efficient, reliable, and reproducible application deployment pipelines.
 
 ```sh
 apt install ansible
 ansible --version
 ```
-
-
 
 ## Kubernetes
 
@@ -398,7 +395,8 @@ volumes:
 It is the primary tool for interacting with and managing Kubernetes clusters, providing a versatile way to handle all aspects of cluster operations.
 
 Common kubectl Commands:
- 
+
+```
 kubectl get pods: Lists all pods in the current namespace.
 kubectl create -f <filename>: Creates a resource specified in a YAML or JSON file.
 kubectl apply -f <filename>: Applies changes to a resource from a file.
@@ -406,6 +404,7 @@ kubectl delete -f <filename>: Deletes a resource specified in a file.
 kubectl describe <resource> <name>: Shows detailed information about a specific resource.
 kubectl logs <pod_name>: Retrieves logs from a specific pod.
 kubectl exec -it <pod_name> -- /bin/bash: Executes a command, like opening a bash shell, in a specific container of a pod.
+```
 
 > You will need to understand what are the K8s master/Slave
 
@@ -428,6 +427,8 @@ With Uptime Kuma, you can get quickly an uptime pages for your services:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+Uptime Kuma status pages example: `https://status.tromsite.com/status`
 
 ![Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
 
@@ -465,10 +466,11 @@ This model eliminates the need to manage underlying servers, handling scaling an
 OpenFunction is conceptually similar to offerings like Cloudflare Workers, AWS Lambda, Google Cloud Functions, and Azure Functions, as all these platforms provide serverless Function-as-a-Service (FaaS) environments where developers focus on deploying code as functions without managing the underlying infrastructure.
 
 - **Cloudflare Workers:** Primarily focused on edge computing and low-latency execution at global edge locations, whereas OpenFunction is designed for Kubernetes clusters, enabling local or hybrid-cloud deployment flexibility.
-- **AWS Lambda / Google Cloud Functions / Azure Functions:** These mainstream FaaS platforms are tightly integrated with their respective cloud ecosystems (AWS, Google Cloud, Azure), providing seamless access to proprietary cloud services and autoscaling. OpenFunction offers a more cloud-agnostic approach and integrates with multiple runtimes, making it suitable for Kubernetes users who want to avoid vendor lock-in or run their workloads on-premises, in hybrid clouds, or on any public cloud.
+- **AWS Lambda / Google Cloud Functions / Azure Functions:** These mainstream FaaS platforms are tightly integrated with their respective cloud ecosystems (AWS, Google Cloud, Azure), providing seamless access to proprietary cloud services and autoscaling. 
+- **OpenFunction:** offers a more cloud-agnostic approach and integrates with multiple runtimes, making it suitable for Kubernetes users who want to avoid vendor lock-in or run their workloads on-premises, in hybrid clouds, or on any public cloud.
 
 
-| Platform            | Deployment Environment        | Cloud Vendor Lock-in      | Scaling & Events            | Integration Focus               |
+| **Platform**            | Deployment Environment        | Cloud Vendor Lock-in      | Scaling & Events            | Integration Focus               |
 |---------------------|------------------------------|--------------------------|-----------------------------|---------------------------------|
 | AWS Lambda          | AWS cloud                    | High                     | Native                      | AWS ecosystem                   |
 | Google Cloud Fn     | Google Cloud                 | High                     | Native                      | Google services                  |
@@ -476,7 +478,7 @@ OpenFunction is conceptually similar to offerings like Cloudflare Workers, AWS L
 | Cloudflare Workers  | Cloudflare edge network      | Medium                   | Native                      | Edge compute/networking          |
 | **OpenFunction**    | Kubernetes (cloud/on-prem)   | Low                      | Kubernetes (advanced)        | Cloud-agnostic, Dapr, K8s APIs   |
 
-OpenFunction is a cloud-native open source Function-as-a-Service (FaaS) platform designed to help developers run serverless workloads efficiently on Kubernetes without managing underlying runtime environments or infrastructure. 
+OpenFunction is a cloud-native open source **Function-as-a-Service (FaaS) platform** designed to help developers run serverless workloads efficiently on Kubernetes without managing underlying runtime environments or infrastructure. 
 
 The platform allows you to focus solely on business logic by submitting your code as functions, and it can handle both synchronous and asynchronous workloads.
 
@@ -488,11 +490,14 @@ The platform allows you to focus solely on business logic by submitting your cod
 - **Dapr integration:** Simplifies Backend-as-a-Service (BaaS) integration for both sync and async functions via Dapr.
 - **Ingress and events management:** Uses Kubernetes Gateway API for managing traffic, and provides its own flexible events management framework.
 
-OpenFunction relies on Kubernetes Custom Resource Definitions (CRDs) to manage function lifecycles, making it a native fit for Kubernetes-based environments. It also enriches the CNCF (Cloud Native Computing Foundation) Cloud Native Landscape as a sandbox project.
+OpenFunction relies on Kubernetes Custom Resource Definitions (CRDs) to manage function lifecycles, making it a native fit for Kubernetes-based environments. 
+
+It also enriches the CNCF (Cloud Native Computing Foundation) Cloud Native Landscape as a sandbox project.
 
 - Predominantly written in Go (94.9% of the codebase), with some Shell, Makefile, and Dockerfile.
 
 OpenFunction is intended for teams or organizations looking to:
+
 - Deploy scalable serverless workloads on Kubernetes.
 - Integrate cloud-native function workflows with flexible event-driven patterns.
 - Avoid locking into a single cloud BaaS provider.
@@ -538,7 +543,9 @@ FileZilla is similar to a remote folder connection. It allows you to connect to 
     * http://192.168.3.200:3090/
     * user & pass
 
-* Remote File Management: Once connected, FileZilla displays the files and directories on the remote server in one pane and your local computer's files and directories in another pane. It lets you navigate through the remote server's file system just like you would on your own computer.
+* Remote File Management: Once connected, FileZilla displays the files and directories on the remote server in one pane and your local computer's files and directories in another pane.
+
+It lets you navigate through the remote server's file system just like you would on your own computer.
 
 
 ```sh
@@ -568,11 +575,16 @@ LXC (LinuX Containers) is a OS-level virtualization technology that allows creat
 
 ### How to run Rust w/o OS?
 
-https://www.youtube.com/watch?v=jZT8APrzvc4
+<!-- https://www.youtube.com/watch?v=jZT8APrzvc4 -->
+
+{{< youtube "jZT8APrzvc4" >}}
+
 
 ### How to develop inside a Docker Container
 
-https://www.youtube.com/watch?v=dihfA7Ol6Mw
+<!-- https://www.youtube.com/watch?v=dihfA7Ol6Mw -->
+
+{{< youtube "dihfA7Ol6Mw" >}}
 
 
 ---
@@ -597,7 +609,9 @@ Kubeflow is an **open-source platform for machine learning and MLOps on Kubernet
 
 It was introduced by Google in 2017 and has since grown to include many other contributors and projects. 
 
-Kubeflow aims to make deployments of machine learning workflows on Kubernetes simple, portable and scalable3. Kubeflow offers services for creating and managing Jupyter notebooks, TensorFlow training, model serving, and pipelines across different frameworks and infrastructures3.
+Kubeflow aims to make deployments of machine learning workflows on Kubernetes simple, portable and scalable3. 
+
+Kubeflow offers services for creating and managing Jupyter notebooks, TensorFlow training, model serving, and pipelines across different frameworks and infrastructures3.
 
 Purpose: Kubeflow is an open-source project designed to make deployments of machine learning (ML) workflows on Kubernetes easier, scalable, and more flexible.
 
@@ -629,11 +643,12 @@ While they serve different purposes, Kubeflow and MLflow can be used together in
 For instance, you might use MLflow to track experiments and manage model versions, and then deploy these models at scale using Kubeflow on a Kubernetes cluster.
 
 Such integration would leverage the strengths of both platforms: MLflow for experiment tracking and Kubeflow for scalable, Kubernetes-based deployment and management of ML workflows.
+
 In summary, while Kubeflow and MLflow are not directly related and serve different aspects of the ML workflow, they can be complementary in a comprehensive ML operations (MLOps) strategy.
 
 ### Kustomize
 
-* What It Is: Kustomize is a standalone tool to customize Kubernetes objects through a declarative configuration file. It's also part of kubectl since v1.14.
+* What It Is: Kustomize is a standalone **tool to customize Kubernetes objects** through a declarative configuration file. It's also part of kubectl since v1.14.
 * Usage in DevOps/MLOps:
 * Configuration Management: Manage Kubernetes resource configurations without templating.
 * Environment-Specific Adjustments: Customize applications for different environments without altering the base resource definitions.
