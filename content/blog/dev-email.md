@@ -367,3 +367,202 @@ So, while they are similar as open-source social media tools, GrowChief focuses 
 * https://github.com/haileyydev/maildrop
 
 > Maildrop is a self hostable and easy to use disposable email service that allows you to receive emails on a random email address on your domain.
+
+
+
+
+https://github.com/docker-mailserver/docker-mailserver - MIT
+https://docker-mailserver.github.io/docker-mailserver/latest/
+
+
+
+
+> Production-ready fullstack but simple mail server (SMTP, IMAP, LDAP, Antispam, Antivirus, etc.) running inside a container.
+
+
+
+https://www.youtube.com/watch?v=nNGcvz1Sc_8
+
+https://github.com/docker-mailserver/docker-mailserver?ref=fossengineer.com
+https://i12bretro.github.io/tutorials/0779.html
+https://www.youtube.com/watch?v=r9vG7P-RRp8
+
+
+https://github.com/pablokbs/peladonerd/tree/master?ref=fossengineer.com
+https://www.youtube.com/watch?v=K4-uD1VHCz0
+https://www.youtube.com/watch?v=hhF9JExJFDc
+
+## The Poste Project
+
+I was using Cloudflare email routing, just to Create custom email addresses to use whenever you do not want to share your primary email address.
+
+A combination of MX and TXT records need to be added to your DNS for Email Routing to be able to receive and route emails appropriately. Domain must be enabled for all subdomains to work.
+
+But then found about **Posteio**.
+
+> Needed to disable email routing on that domain (to configure properly DNS)
+Multiple Domains, anti-spam...
+
+So no more MX domain from my domain to CF mail servers `route1.mx.cloudflare.net`
+
+We will [need NGINX to get https](/selfhosting-nginx-proxy-manager-docker/)...
+
+```yml
+version: "3"
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    container_name: nginx    
+    ports: # These ports are in format <host-port>:<container-port>
+      - '80:80' # Public HTTP Port
+      - '443:443' # Public HTTPS Port
+      - '81:81' # Admin Web Port - UI
+      # Add any other Stream port you want to expose
+      # - '21:21' # FTP
+    volumes:
+      - nginx_data:/data #  - ~/Docker/Nginx/data:/data
+      - nginx_letsencrypt:/etc/letsencrypt #  - ~/Docker/Nginx/letsencrypt:/etc/letsencrypt    
+
+
+volumes:
+  nginx_data:
+  nginx_letsencrypt:      
+
+networks:
+  nginx_default:
+    name: nginx_default      
+```
+
+* https://hub.docker.com/r/analogic/poste.io/?ref=fossengineer.com
+* https://poste.io/doc/
+
+
+{{< dropdown title="Hot to Setup Poste with docker 👇" closed="true" >}}
+
+
+{{< /dropdown >}}
+
+* Thanks to
+    * https://www.youtube.com/watch?v=3jfABU68jzw&t=673s -  Poste.io with Docker compose
+    * https://www.youtube.com/watch?v=t29v_M0mvlo - Setup DNS (SPF, DKIM y DMARC en Poste io)
+
+```sh
+docker run -d \
+  --name mailserver \
+  --restart unless-stopped \
+  --network host \
+  -e TZ=Europe/Madrid \
+  -e h=mail.bachatameet.com \
+  -e HTTP_PORT=7080 \
+  -e HTTPS_PORT=7443 \
+  -e DISABLE_CLAMAV=FALSE \
+  -e DISABLE_RSPAMD=FALSE \
+  -e DISABLE_ROUNDCUBE=FALSE \
+  -v ./mail:/data \
+  analogic/poste.io
+```
+
+
+
+<!-- 
+https://mariushosting.com/synology-activate-gmail-smtp-for-docker-containers/
+https://itsfoss.com/open-source-email-servers/
+
+https://poste.io/
+https://poste.io/doc/getting-started
+https://hub.docker.com/r/analogic/poste.io/
+https://github.com/dirtsimple/poste.io
+
+https://github.com/mjl-/mox - MIT Licensed
+
+https://github.com/muety/mailwhale - MIT Licensed, but archived
+
+Think of MailWhale like Mailgun, SendGrid or SMTPeter, but open source and self-hosted. Or like Postal or Cuttlefish, but less bloated and without running its own, internal SMTP server.
+
+https://github.com/postalserver/postal - MIT Licensed
+https://docs.postalserver.io/getting-started -->
+
+
+```yml
+services: #https://github.com/jmlcas/mailserver/blob/main/docker-compose.yaml
+
+  mailserver:
+    image: analogic/poste.io
+    container_name: mailserver
+    restart: unless-stopped
+    #network_mode: "host"
+    expose:
+      - "25"
+      - "7080"
+      - "7443"
+      - "110"
+      - "143"
+      - "465"
+      - "587"
+      - "993"
+      - "995"
+    environment:
+      - TZ=Europe/Madrid
+      - h=mail.youramazingdomain.com # Change this to your domain!
+      - HTTP_PORT=7080
+      - HTTPS_PORT=7443
+      - DISABLE_CLAMAV=FALSE  # TRUE 
+      - DISABLE_RSPAMD=FALSE  # TRUE 
+      - DISABLE_ROUNDCUBE=FALSE  # TRUE
+    volumes:
+      - ./mail:/data
+
+    networks:
+      - nginx_default #this will allow communication between chevereto service and the existing nginx service  
+  
+networks:
+  nginx_default:
+    external: true      
+```
+
+You will have to go to:
+
+* For managing the server (MailServer Dashboard): https://mail.youramazingdomain.com/admin/
+* To access the email: https://mail.youramazingdomain.com/webmail/
+
+**To [configure DNS](https://poste.io/doc/configuring-dns)**
+1. Go to the **virtual domains** list
+* select your domain (it will be there) and create a new DKIM key
+    * add the TXT: 
+        * `somestring._domainkey.youramazingdomain.com.`
+        * `"k=rsa; p=string/crazy+really+long+string"`
+        * TTL `3600s`
+    * Check if DKIM is properly configured with: <https://poste.io/dkim>
+        * You will need to input your domain `youramazingdomain.com` and also the `somestring` generated
+* Add the MX: `youramazingdomain.com MX mail.youramazingdomain.com` (DNS only, dont proxy them in cloudflare)
+* Add SPF: `your-domain.com. IN TXT "v=spf1 mx ~all"`
+    * also as TXT:
+        * `@`
+        * `v=spf1 mx ~all`
+        * TTL 3600s
+    * check if SPF works: <https://poste.io/spf>
+* Add DMARC: `_dmarc.our-domain.com. IN TXT "v=DMARC1; p=none; rua=mailto:dmarc-reports@our-domain.com"`
+    * Also as TXT:
+        * `_dmarc.youramazingdomain.com`
+        * `"v=DMARC1; p=none; rua=mailto:dmarc-reports@our-domain.com"`
+    * Check if DMARK works: <https://poste.io/dmarc>
+
+
+
+
+## APIs
+
+### SendGrid (Twilio)
+
+https://sendgrid.com/en-us
+
+### MailGun
+
+### MailChimp
+
+### MailTrap
+
+https://mailtrap.io/pricing/
+
+### MailerLite ??

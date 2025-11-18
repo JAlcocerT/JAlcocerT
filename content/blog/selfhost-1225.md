@@ -7,6 +7,33 @@ description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
 
+<!-- 
+### How to use Python for NLP
+
+#### How to use Python to detect PII
+
+* https://github.com/nltk/nltk - Apache v2
+ -->
+
+
+<!--
+ https://gitlab.com/fossengineer1/cv-check/-/pipeline_schedules
+https://gitlab.com/fossengineer1/cv-check
+ -->
+<!-- https://github.com/users/JAlcocerT/packages/container/package/open-resume -->
+
+<!-- 
+https://blog.excalidraw.com/
+
+We all need to tell data stories sometimes: https://blog.excalidraw.com/tell-your-story-with-charts/ 
+
+Like: https://excalidraw.com/#json=6443031091740672,amxJZJxlZAlUBLADWIukFg
+-->
+
+
+https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/?ref=noted.lol
+
+
 Mind your attention, stop auto engage and keep the important things at life first.
 
 {{< youtube id="ydG5EtQat_I" autoplay="false" >}}
@@ -151,3 +178,41 @@ https://github.com/calcom/docker/blob/main/docker-compose.yaml
 https://cal.com/docs/introduction/quick-start/self-hosting/docker#requirements
 https://github.com/calcom/docker
 https://hub.docker.com/r/calcom/cal.com
+
+
+## The Penpot Project
+
+* https://github.com/Figma-Linux/figma-linux
+
+
+Penpot is a powerful and customizable design and prototyping tool that offers a wide range of features and benefits for users.
+
+In this blog post, we'll explore what Penpot is, how it works, and why you might want to consider using it for your own design and prototyping needs. 
+
+Are you looking for a powerful and flexible design and prototyping tool that is **free and open-source**? Look no further than Penpot. 
+
+```sh
+#https://flathub.org/apps/com.sudovanilla.penpot-desktop
+```
+
+Penpot is a versatile and customizable design tool that allows you to create beautiful and interactive designs for web and mobile applications.
+
+With its intuitive interface and extensive customization options, Penpot is a great choice for anyone who wants to create stunning visual designs and prototypes. 
+
+* https://help.penpot.app/technical-guide/getting-started/#start-penpot
+
+
+{{< dropdown title="Pre-Requisites!! Just Get Docker 🐋" closed="true" >}}
+
+Important step and quite recommended for any SelfHosting Project - [Get Docker Installed](https://fossengineer.com/docker-first-steps-guide-for-data-analytics/)
+
+It will be one command, this one, if you are in Linux:
+
+```sh
+apt-get update && sudo apt-get upgrade && curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh && docker version
+```
+
+{{< /dropdown >}}
+
+

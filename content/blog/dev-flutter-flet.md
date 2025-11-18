@@ -365,3 +365,66 @@ https://www.youtube.com/watch?v=A3MubNJX-00
 * Reason and Act (ReAct - Reflexion Pattern) - https://www.promptingguide.ai/techniques/react
 * COALA - Conversational Language Agents 
  -->
+
+
+---
+
+# Flutter
+
+Flutter - https://app.flutterflow.io/share/travel-app-bhdo3n
+
+## DART
+<https://www.youtube.com/watch?v=Ej_Pcr4uC2Q>
+
+## Flutter
+<https://www.youtube.com/watch?v=pTJJsmejUOQ&t=5276s&pp=ygUUZmx1dHRlciBmcmVlY29kZWNhbXA%3D>
+
+
+* Download flutter SDK and locate it
+* View -> Command palette -> run flutter doctor
+
+* Install flutter extension
+
+avdmanager is missing from the Android SDK
+
+main.dart -> run -> run without debugging
+
+
+<https://medevel.com/19-os-flutter-projects-samples/>
+
+
+## Flutter Web and Firebase
+
+In May this year, google announced that [their platform firebase](), will support among others flutter web as well.
+
+
+
+
+## DART
+<https://www.youtube.com/watch?v=Ej_Pcr4uC2Q>
+
+
+## Flutter
+<https://www.youtube.com/watch?v=pTJJsmejUOQ&t=5276s&pp=ygUUZmx1dHRlciBmcmVlY29kZWNhbXA%3D>
+
+
+
+
+* Download flutter SDK and locate it
+* View -> Command palette -> run flutter doctor
+
+
+* Install flutter extension
+
+
+avdmanager is missing from the Android SDK
+
+
+main.dart -> run -> run without debugging
+
+
+
+
+<https://medevel.com/19-os-flutter-projects-samples/>
+
+

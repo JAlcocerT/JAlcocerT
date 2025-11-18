@@ -2,7 +2,7 @@
 title: "[PaaS Recap] Software for Servers..."
 date: 2025-11-19T01:20:21+01:00
 draft: false
-tags: ["HomeLab","LocalStack vs DokPloy vs LocalStack vs Runtipi"]
+tags: ["HomeLab","LocalStack vs DokPloy vs LocalStack vs Runtipi","Cosmos Server"]
 description: 'Selfhosted Apps that simplify my workflow'
 url: 'selfhosted-server-paas'
 ---
@@ -16,6 +16,12 @@ Time to prove that's not always true, especially with these [PaaS Tools](#paas-t
 **Intro**
 
 Few months ago, I wrote about [different **PaaS** Tools](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted UmbrelOS - Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/cosmos-server" title="Selfhosted Cosmos Server - Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 Among which, [Dokploy](#dokploy) resonated a lot with me.
 

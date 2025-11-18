@@ -404,3 +404,166 @@ This allows you to combine the security and isolation of a container with the po
 The container provides a standardized environment to deploy your WASM application, while WASM ensures the application itself is small and fast. 
 
 This is a common pattern in the cloud where performance and resource efficiency are critical.
+
+
+<!-- pelado
+https://www.youtube.com/watch?v=HECt97TfJ3o -->
+
+It needs: Run Time (wasmtime, wamr, wagi...) and an interface (WASI - webassembly system interface ).
+
+> WASI will make sure to run our binary in any architechture and Operative System.
+
+Example -> Package your C code in any other language, like inside JS.
+
+https://www.youtube.com/watch?v=bgWTf3m6HG0
+
+---
+
+<!-- fireship
+https://www.youtube.com/watch?v=cbB3QEwWMlA -->
+
+# Welcome to the World of WebAssembly
+
+Explore the fascinating world of WebAssembly (WASM), where languages like C++, Rust, Python, and more can be used to build software that runs in web browsers with near-native performance. This quick guide will help you understand the basics of WebAssembly, its potential, and how it could revolutionize web software development.
+
+## What is WebAssembly? 🤔
+
+- **Definition**: WebAssembly, or WASM, is a low-level language similar to assembly. It can be written as text or converted to a binary format that runs on all modern browsers.
+- **Purpose**: WASM is designed not to replace JavaScript but to work alongside it, providing a compilation target for applications written in traditional non-web languages, enabling high-performance directly in the browser.
+
+Building WebAssembly Apps 🛠️
+
+- **Tools**:
+  - **MScripten**: Converts C or C++ programs to WASM.
+  - **Assembly Script**: Similar to TypeScript, it compiles to WASM. Projects can be started with Node.js and npm, with your first module written in `index.ts`.
+
+Key Features of WebAssembly 🔑
+
+- **Static and Compiled**: WASM is a static, compiled language with strict type guarantees.
+- **Type Safety**: It requires specifying types like 32-bit integers or 64-bit floating points and uses maps with strongly typed key-value pairs.
+- **Executable**: Code is compiled down to a `.wasm` binary file that can be run in the browser using the WebAssembly API.
+
+Key Takeaways ✨
+
+- **Performance**: WebAssembly allows for building high-performance applications for the web.
+- **Complementary to JavaScript**: Enhances rather than replaces JavaScript.
+- **Rich Tooling**: There are many tools and languages for building WebAssembly apps, including Assembly Script and MScripten.
+- **Strict Typing**: Its static nature and strict type guarantees make it suitable for performance-critical applications.
+
+Leverage WebAssembly in your projects to push the boundaries of what's possible on the web.
+
+
+
+---
+
+<!-- https://wasmer.io/posts/py2wasm-a-python-to-wasm-compiler -->
+<!-- https://wasmer.io/posts/py2wasm-a-python-to-wasm-compiler -->
+
+## WASM for Python Devs: A Practical Guide
+
+WebAssembly (Wasm) is revolutionizing the way we think about web development, allowing code written in languages like Python to run in the browser at near-native speed. This guide will walk you through the basics of using Python with WebAssembly, from setup to deployment.
+
+* 📘 Understand WebAssembly Fundamentals
+    - **Review Basics**: Refresh on WebAssembly's core concepts and capabilities as previously outlined.
+
+* 🐍 Choose a Python Implementation
+Select the Python implementation that best fits your project needs:
+    - **Pyodide**: A complete Python environment for the browser, leveraging WebAssembly.
+    - **PyWasm**: A Python library designed to work with WebAssembly modules.
+    - **Transcrypt**: Transpiles Python code to JavaScript, supporting WebAssembly as a compilation target.
+    - **Emscripten with Python**: Compiles Python code to WebAssembly using the Emscripten toolchain.
+
+{{< dropdown title="Tell me more about those Frameworks 👇" closed="true" >}}
+
+Choosing the right Python implementation for your WebAssembly project depends on factors such as your specific use case, performance requirements, ease of use, and compatibility with existing Python codebases
+
+1. **Pyodide**:
+   - **Use Case**: Pyodide is ideal for situations where you need a full Python runtime environment in the browser. It includes the Python interpreter, standard library, and many popular Python packages compiled to WebAssembly.
+   - **Performance**: Since Pyodide runs Python code in the browser, its performance may not match that of native Python or highly optimized WebAssembly code. However, it offers a convenient way to execute Python code directly in web applications.
+   - **Compatibility**: Pyodide aims to be compatible with CPython, the reference implementation of Python, which ensures compatibility with a wide range of existing Python codebases.
+   - **Ease of Use**: Pyodide provides a straightforward way to integrate Python into web applications without requiring complex setup or toolchains.
+
+2. **PyWasm**:
+   - **Use Case**: PyWasm is suitable for scenarios where you want more control over the compilation process and direct interaction with WebAssembly modules from Python code.
+   - **Performance**: By compiling Python code to WebAssembly directly, PyWasm can potentially achieve better performance compared to running Python in the browser. However, the performance gains may vary depending on the complexity of the code and optimization techniques used.
+   - **Compatibility**: PyWasm may have limitations in terms of compatibility with Python's standard library and third-party packages compared to Pyodide. It's important to ensure that your Python code is compatible with PyWasm's restrictions and limitations.
+   - **Ease of Use**: PyWasm may require more effort to set up and integrate compared to Pyodide, as it involves manually compiling Python code to WebAssembly and managing the interaction between Python and WebAssembly modules.
+
+3. **Transcrypt**:
+   - **Use Case**: Transcrypt is suitable for projects where you want to write Python code that can be transpiled to JavaScript or WebAssembly for execution in the browser.
+   - **Performance**: Transcrypt allows you to leverage the performance benefits of WebAssembly by targeting it as a compilation target. However, the performance may not be as optimized as writing code directly in WebAssembly.
+   - **Compatibility**: Transcrypt aims to be compatible with a subset of Python syntax and standard library features. While it supports many Python language features, some advanced features may not be fully supported.
+   - **Ease of Use**: Transcrypt simplifies the process of integrating Python code into web applications by providing a familiar Python syntax and allowing you to target multiple compilation targets, including WebAssembly.
+
+4. **Emscripten with Python**:
+   - **Use Case**: Emscripten can be used to compile Python code to WebAssembly, similar to how it's used for compiling C/C++ code. This approach provides fine-grained control over the compilation process and optimizations.
+   - **Performance**: Emscripten can produce highly optimized WebAssembly code, potentially achieving performance comparable to or better than native code. However, the compilation process may be more involved and require expertise in Emscripten's toolchain.
+   - **Compatibility**: Compatibility with existing Python codebases may vary, and certain Python features or libraries may not be fully supported or may require additional configuration.
+   - **Ease of Use**: Using Emscripten with Python may require more expertise in the Emscripten toolchain and configuration compared to other options. It's suitable for projects where performance optimization and control over the compilation process are priorities.
+
+In summary, the choice between Pyodide, PyWasm, Transcrypt, or Emscripten with Python depends on your specific requirements, familiarity with the tools and technologies involved, and the trade-offs between ease of use, performance, and compatibility with existing Python codebases.
+
+{{< /dropdown >}}
+
+
+* 🔧 Set Up Your Development Environment
+    - **Install Tools**: Get the necessary tools and libraries for your chosen Python implementation.
+    - **Configure IDE**: Set up your text editor or integrated development environment (IDE) for Python development.
+
+* ✏️ Write Python Code
+    - **Develop**: Begin crafting Python code for your application or module.
+    - **Compatibility**: Ensure compatibility with the Python implementation you have selected.
+
+* *🛠 Compile Python to WebAssembly
+    - **Compilation Process**:
+    - For **Pyodide**, **Transcrypt**, or **Emscripten with Python**: Follow respective guides to compile your Python code to WebAssembly.
+    - For **PyWasm**: Learn to load and execute WebAssembly modules created from Python code.
+
+* 🚀 Optimize Performance
+    - **Enhance Code**: Optimize your Python code to boost performance prior to compiling to WebAssembly.
+    - **Experiment**: Test various optimization strategies and evaluate their performance impacts.
+
+* 🤝 Integration with JavaScript
+    - **Interactivity**: Learn to handle interactions between Python code running in WebAssembly and JavaScript.
+    - **Data Exchange**: Master techniques for passing data between JavaScript and Python.
+
+* 🧪 Testing and Debugging
+    - **Testing**: Ensure your Python code behaves as expected when running within WebAssembly.
+    - **Debugging**: Utilize browser developer tools and other methods to troubleshoot issues.
+
+* 🌐 Deployment
+    - **Packaging**: Prepare your Python code, compiled to WebAssembly, for deployment.
+    - **Hosting**: Serve your WebAssembly modules alongside your web application.
+
+* 🏗 Build a Project
+    - **Practical Application**: Use your knowledge to create a project that integrates Python with WebAssembly.
+    - **Scale Complexity**: Start small and gradually expand the complexity of your projects.
+
+* 🔍 Explore Advanced Topics (Optional)
+    - **Deep Dive**: Delve into advanced topics like optimizing Python for WebAssembly, exploring multi-threading, or integrating with comprehensive Python libraries and frameworks.
+
+For a first contact with integrating **Python with WebAssembly**, I would recommend starting with **Pyodide**. Here's why:
+
+- **Ease of Use**: Pyodide provides a straightforward way to run Python code in the browser without the need for complex setup or compilation processes. You can simply include the Pyodide library in your web application, and you're ready to execute Python code directly in the browser environment.
+
+- **Compatibility**: Pyodide aims to be compatible with CPython, the reference implementation of Python, which means it supports a wide range of Python language features and standard library modules. This compatibility makes it easier to port existing Python code or leverage existing Python libraries in your web applications.
+
+- **Rich Ecosystem**: Pyodide includes a significant portion of the Python standard library and supports many popular third-party packages. This allows you to access a rich ecosystem of Python tools and libraries directly in the browser environment, enhancing the capabilities of your web applications.
+
+- **Immediate Feedback**: With Pyodide, you can interactively execute Python code in the browser environment, which provides immediate feedback and facilitates rapid prototyping and experimentation. This interactive workflow can be beneficial for learning and exploring Python's capabilities in the context of web development.
+
+
+
+---
+
+
+## Running WASM inside Docker
+
+you can run your wasm modules inside a docker contsiner
+
+```dockerfile
+FROM SCRATCH
+
+```
+
+

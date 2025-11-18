@@ -11,6 +11,10 @@ url: 'selfhosted-apps-nov-2025'
 
 Getting started with a HomeLab/Selfhosting can be easy, actually.
 
+
+https://github.com/awesome-selfhosted/awesome-selfhosted
+https://github.com/awesome-foss/awesome-sysadmin
+
 **Intro**
 
 It should not be strange for us to see how we can run OS inside a container.
@@ -18,7 +22,7 @@ It should not be strange for us to see how we can run OS inside a container.
 This is the case of umbrelOS - We will see how to use it for [quick selfhosted adventures](#selfhosted-adventures)
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted Umbrel - Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted UmbrelOS - Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/puter" title="Selfhosted puter - Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
