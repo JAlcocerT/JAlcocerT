@@ -6,7 +6,7 @@ cover:
     image: "https://socialify.git.ci/JAlcocerT/Data-Chat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
     alt: "Data-Chat" # alt text
     caption: "Creating a custom data chat with Python." # display caption under cover
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Gen-AI","Python","Dev","Github Actions locally with ACT"]
 description: 'Exploring RAGs and creating a Data Chat using LLMs via APIs. LangChain, LLamaIndex, PandasAI and HayStack compared.'
 url: 'how-to-use-rags-with-python'
 ---
@@ -313,6 +313,21 @@ Then go to the repo folder (where `./github/workflows` are)
 ```sh
 act
 ```
+
+
+**More about How to use Github CI/CD and GHCR**
+
+You can also push images via CLI (both x86 or ARM)
+
+```sh
+docker login --username mert2m --password your_personal_access_token ghcr.io
+docker build . -t ghcr.io/mert2m/actions-runner-controller-ghcr:latest              
+docker push ghcr.io/mert2m/actions-runner-controller-ghcr:latest
+```
+
+> This is one quick approach to also **push ARM Images to your GHCR**, the pro one being using Github Runners
+
+> > Thanks to this [medium post](https://medium.com/devopsturkiye/pushing-docker-images-to-githubs-registry-manual-and-automated-methods-19cce3544eb1)
 
 ### Running LLMs Locally
 

@@ -8,6 +8,52 @@ summary: 'The , my new toy.'
 url: 'open-source-gaming'
 ---
 
+
+Rewriting My Game Engine based off GTA 3 Source Code
+https://www.youtube.com/watch?v=99vXxyJtXeQ
+
+* Install yatch - a Portainer alternative
+
+<!-- 
+WHY selfhosted pro version?? -->
+<!-- 
+<https://www.youtube.com/watch?v=aC7Kb6V0wAI> -->
+
+Setup yatch with CLI:
+
+```sh
+docker run -d -p 8008:8000 -v /var/run/docker.sock:/var/run/docker.sock -v ~/Dockeryacht:/config --name yatch selfhostedpro/yacht
+```
+
+or docker-compose:
+
+```yml
+version: '3.8'
+services:
+  yacht:
+    image: selfhostedpro/yacht
+    container_name: yacht
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/Dockeryacht:/config
+    ports:
+      - 8008:8000
+    restart: unless-stopped
+
+```
+
+`admin@yacht.local`
+`pass`
+
+## Using The Container
+
+* <https://github.com/BinaryTechLabs/emulator.js>
+    * Then **create template** with this url <https://raw.githubusercontent.com/BinaryTechLabs/emulator.js/main/emulatorJS.json>
+    * Deploy
+
+* This is the interface to download: http://192.168.3.122:3000/
+    * File Management system: download
+
 Some people shared: Pero qué pedazo de página es esta???? Usadla con moderación
 
 https://forocoches.com/foro/showthread.php?t=9304425

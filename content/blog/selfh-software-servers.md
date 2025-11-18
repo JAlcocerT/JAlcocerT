@@ -21,6 +21,8 @@ Among which, [Dokploy](#dokploy) resonated a lot with me.
 
 I want to make a recap of PaaS Tools available.
 
+Its beena while since I started [selfhosting with the Pi](https://jalcocert.github.io/RPi/tags/self-hosting/), so hopefully this will come handy to people getting started.
+
 Because is not just about creating, but [deploying](https://jalcocert.github.io/JAlcocerT/where-to-deploy/).
 
 ## PaaS Tools
@@ -134,9 +136,42 @@ https://www.youtube.com/watch?v=EsCh0gOrxqE
     * Timelite
     * [Pomatez](https://github.com/zidoro/pomatez) MIT
 
+    <!-- There are several benefits of tracking the time of your tasks:
+
+* Improved Productivity: Tracking the time of your tasks can help you identify how much time you spend on each task, and where you may be losing time or getting distracted. This information can help you make adjustments to your workflow to become more productive and efficient.
+    * For example, you may realize that you spend too much time on low-priority tasks, or that you get distracted by social media or email notifications. By identifying these areas for improvement, you can adjust your habits and become more productive.
+
+* Better Planning and Prioritization: Tracking the time of your tasks can also help you better plan and prioritize your work. By understanding how long it takes you to complete certain tasks, you can create more realistic timelines and set achievable goals. 
+    * This can help you avoid overcommitting or underestimating the time needed for a project, which can lead to stress and missed deadlines.
+
+* Increased Focus and Accountability: Tracking the time of your tasks can also increase your focus and accountability. When you know that you are tracking your time, you are more likely to stay focused on the task at hand and avoid distractions. Additionally, tracking your time can help you hold yourself accountable for meeting your goals and deadlines.
+
+* Data-Driven Insights: Tracking the time of your tasks can provide you with data-driven insights into your work habits and productivity. By analyzing this data, you can **identify patterns and trends in your work**, and make adjustments to improve your workflow. 
+    * For example, you may realize that you are most productive during certain times of day, or that you work best in short bursts with frequent breaks. -->
+
 * A business chat? look no further than Matrix: synapse or dendrite or conduit available as flavours of the same
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-synapse" title="Matrix Server 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-conduit" title="Matrix Conduit Server 🐋 ↗" >}}
 {{< /cards >}}
+
+
+Concerned about container backups?
+<!-- 
+mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
+
+sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
+-->
+
+<!-- 
+https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
+
+https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
+<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
+
+https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
+<https://github.com/JAlcocerT/Docker/tree/main/Media> 
+-->
+
+

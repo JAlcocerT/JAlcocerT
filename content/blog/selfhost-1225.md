@@ -7,6 +7,15 @@ description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
 
+<!-- https://superlinked.com/vector-db-comparison -->
+<!-- https://github.com/superlinked/VectorHub -->
+
+
+<!-- A compute framework for turning complex data into vectors.
+https://github.com/superlinked/superlinked -->
+
+git clone https://github.com/atareao/self-hosted.git atareao
+
 
 **Tl;DR**
 

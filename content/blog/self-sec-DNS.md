@@ -13,6 +13,53 @@ https://github.com/TechnitiumSoftware/DnsServer
 
 > agpl 3 | Technitium DNS Server
 
+<!-- Interested to discover similar services that you can self-host with Docker? - Check this out:
+
+* {{< gist jalcocert 302f787db6f6d75e978674e0e18d1185
+"Docker-Security-ConfigFiles">}}
+* <https://fossengineer.com/tags/self-hosting/> -->
+
+<!-- ### Choosing a DNS for PiHole
+
+* Unbound
+* Bind9
+* Other resolvers:
+    * Quad9
+    * CLoudflare/Google... -->
+
+<!-- * How to use Raspberry Pi as WIFI **A**ccess **P**oint: https://jalcocert.github.io/RPi/posts/rpi-raspap/
+* How to use a RPi as a Wifi 2 Ethernet + VPN: https://jalcocert.github.io/RPi/posts/rpi-wifi-ethernet-bridge/ -->
+
+<!-- ### Best DNS to use with PiHole -->
+
+<!-- 
+## Pihole regexp
+https://github.com/mmotti/pihole-regex
+https://avoidthehack.com/best-pihole-blocklists
+https://github.com/mmotti/pihole-regex -->
+
+<!-- 
+## Wireshark - Checking which adds are going through
+https://docs.linuxserver.io/images/docker-wireshark/
+
+ -->
+
+
+<!-- 
+https://awweso.me/dns/ -->
+
+
+<!-- 
+ https://hub.docker.com/r/pihole/pihole
+ 
+ DNSMASQ_LISTENING
+ 
+ https://github.com/pi-hole/docker-pi-hole/?tab=readme-ov-file#environment-variables
+     -->
+
+<!-- {{< gist jalcocert 302f787db6f6d75e978674e0e18d1185
+"Docker-Security-Pihole.yml">}} -->
+
 
 
 #### PiHole

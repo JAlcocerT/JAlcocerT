@@ -8,6 +8,12 @@ url: 'tech-recap-2026'
 ---
 
 
+
+<!-- * OpenStreetMap
+* PirateWeather
+* HuggingFace
+* Anomally Detection -->
+
 Offers
 
 1. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code .mdx
@@ -39,6 +45,8 @@ https://www.amazon.es/sendtokindle
 3. How to create a **waiting list** to test your ideas - Share on ig too.
 
 4. Status Pages for services: Kener / UptimeKuma. SLA matters
+
+https://betterstack.com/status-page 
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
