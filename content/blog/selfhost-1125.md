@@ -11,8 +11,6 @@ url: 'selfhosted-apps-nov-2025'
 
 Getting started with a HomeLab/Selfhosting can be easy, actually.
 
-
-
 **Intro**
 
 It should not be strange for us to see how we can run OS inside a container.
@@ -157,9 +155,6 @@ Link analytics solutions, like Kutt: `https://kutt.it/`
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/yourls" title="Yourls | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
-
-
 For the **QR part**, you know that we have few solutions...
 
 1. https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py
@@ -218,7 +213,7 @@ Thats seems to be **Zensical**!
 * https://github.com/zensical/zensical
   * https://zensical.org/docs/setup/search/
 
->  MIT | A modern static site generator by the creators of [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) 
+>  MIT | A modern **static site generator** by the creators of [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) 
 
 ```sh
 uv add zensical
@@ -245,11 +240,9 @@ I also got to know **TOON**: which compress JSON impressively for LLMs to ingest
 
 {{< tweet user="DataChaz" id="1989056499017216133" >}}
 
-
-
 ### GPX is great
 
-And if you are afraid to get lost in the forest, you can share your location from your phone to your selfhosted server.
+And if you are afraid to get lost in the forest [during your adventures](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), you can share your location from your phone to your selfhosted server.
 
 * https://github.com/dedicatedcode/reitti
   * https://www.dedicatedcode.com/projects/reitti/integrations/mobile-apps/

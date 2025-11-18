@@ -238,7 +238,7 @@ It complements JavaScript and is meant to overcome JavaScript's performance limi
 
 The WebAssembly standard is also intended to be platform-independent and open, supporting execution outside browsers as well, paving the way for a universal runtime beyond just web usage.
 
-This means browsers will be able to execute code compiled from diverse languages through a common runtime that includes sandboxing and security features, effectively making browsers a multi-language runtime environment alongside JavaScript.[1][2][10]
+This means browsers will be able to execute code compiled from diverse languages through a common runtime that includes sandboxing and security features, effectively making browsers a multi-language runtime environment alongside JavaScript.
 
 In summary, WebAssembly’s goal is to extend browser runtime capabilities to languages beyond JavaScript, creating a fast, secure, and portable execution environment for various languages compiled to Wasm.
 

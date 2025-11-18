@@ -252,9 +252,6 @@ while(True):
   print()
 ```
 
-
-
-
 ---
 
 ## Summing Up
@@ -311,6 +308,8 @@ act --version
 Then go to the repo folder (where `./github/workflows` are)
 
 ```sh
+#git clone https://github.com/JAlcocert/JAlcocerT
+cd JAlcocerT #/.github/workflows
 act
 ```
 

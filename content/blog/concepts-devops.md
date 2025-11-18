@@ -8,6 +8,8 @@ tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Uptime Ku
 ---
 
 
+
+
 **Tl;DR**
 
 YOu might come to this post bc of selfhosting and containers.
@@ -24,6 +26,25 @@ Because we want to move fast from idea to development and ship to production for
 {{< youtube "551lh10g_go" >}}
 
 [Containers](#containers) are one of the tools that you can use withing Development Operations.
+
+ARM with github actions (?) 
+
+Yes: https://github.blog/2024-06-03-arm64-on-github-actions-powering-faster-more-efficient-build-systems/
+
+
+
+```sh
+sudo docker manifest create fossengineer/trip_planner:latest \
+  your_username/trip_planner:latest-arm32 fossengineer/trip_planner:latest-arm64
+``` 
+
+* Annotate the manifest list to specify the platform for each image:
+
+```sh
+sudo docker manifest annotate your_username/trip_planner:latest your_username/trip_planner:latest-arm32 --os linux --arch arm --variant v7
+
+sudo docker manifest annotate your_username/trip_planner:latest your_username/trip_planner:latest-arm64 --os linux --arch arm64 --variant v8
+```
 
 
 ## Containers
@@ -111,6 +132,12 @@ There are many tools to do CI/CD, like Jenkins or [Github Actions](#github-cicd)
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jenkins" title="Jenkins | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+
+Github Actions CI/CD Examples
+
+* <https://github.com/JAlcocerT/Py_Trip_Planner>
+* <https://github.com/JAlcocerT/Slider-Crank> 
 
 ### Github CI/CD
 

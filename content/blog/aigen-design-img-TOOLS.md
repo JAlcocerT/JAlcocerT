@@ -57,6 +57,14 @@ Use `python entry_with_update.py --preset anime` or `python entry_with_update.py
 
 ### Automatic111
 
+
+<!-- https://learnwithhasan.com/remove-image-background-with-python/ -->
+
+
+<!-- 
+<https://github.com/AUTOMATIC1111/stable-diffusion-webui>
+https://github.com/AUTOMATIC1111/stable-diffusion-webui -->
+
 https://www.youtube.com/watch?v=QEbI6v2oPvQ
  How to use Stable Diffusion XL locally with AMD ROCm. With AUTOMATIC1111 WebUI and ComfyUI on Linux. 
 

@@ -2,7 +2,7 @@
 title: "First Look to Flutter Apps"
 date: 2026-12-31
 draft: true
-tags: ["Dev","Ente Photos"]
+tags: ["Dev","Ente Photos","Desktop Apps"]
 description: 'Flutter Apps. Created with Python via Flet and more'
 url: 'flutter-flet-python'
 ---
@@ -327,3 +327,41 @@ If you are into [stonks](http://localhost:1313/py-stonks/#other-foss-apps-for-fi
 
 * This application is available on the App Store, Google Play, GitHub and as a Web App (PWA).
 * Cashew is a full-fledged, feature-rich application designed to empower users in managing their finances effectively. Built using Flutter - with Drift's SQL package, and Firebase - this app offers a seamless and intuitive user experience across various devices. Development started in September 2021.
+
+
+### About desktop apps
+
+
+<!-- 
+
+### How to Create Desktop AI Apps with Python
+
+* Pyodide -> Streamlit -> .exe
+
+
+Pyodide is a project that brings the power of Python to web browsers and Node.js environments. Here's a breakdown of its key aspects:
+
+What it is:
+
+Python in the Browser: Pyodide is a port of CPython (the reference implementation of Python) to WebAssembly (WASM). This allows you to run Python code directly within web browsers without the need for server-side execution.
+Node.js Compatibility: Pyodide also integrates with Node.js, enabling you to use Python alongside JavaScript in Node.js applications. -->
+
+<!-- 
+### How to convert books to audiobooks
+
+https://github.com/FujiwaraChoki/libgen-reader
+https://github.com/FujiwaraChoki/libgen-reader?tab=MIT-1-ov-file#readme
+
+> Turn Books into Audiobooks with Library Genesis.
+https://www.youtube.com/watch?v=A3MubNJX-00
+ -->
+
+
+<!-- 
+### GenAI Architectures
+
+* zero shot -- it provides information that the LLM has inside alrady
+* RAG -- additional model has been plugged into the prompt
+* Reason and Act (ReAct - Reflexion Pattern) - https://www.promptingguide.ai/techniques/react
+* COALA - Conversational Language Agents 
+ -->

@@ -7,6 +7,73 @@ description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
 
+Mind your attention, stop auto engage and keep the important things at life first.
+
+{{< youtube id="ydG5EtQat_I" autoplay="false" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=ydG5EtQat_I -->
+
+gollama
+
+### Random
+
+> Intelligence is the ability to adapt to change
+
+
+<!-- https://www.classcentral.com/ -->
+
+<!-- ## Spaced learning -->
+
+
+<!-- <https://www.futuretools.io/>
+
+<https://github.com/SevaSk/ecoute>
+
+<https://github.com/beyondcode/writeout.ai>
+
+<https://github.com/Significant-Gravitas/Auto-GPT>
+<https://docs.agpt.co/setup/>>
+
+
+<https://ugeek.github.io/blog/post/2023-04-06-listado-de-webs-de-ia-para-busquedas-desarrollo-y-productividad.html> -->
+
+<!-- ultra learning 
+range - why generalist...
+-->
+
+<!-- [never forget](https://fossengineer.com/machine-learning-data-analytics/#the-bias-variance-trade-off) -->
+
+
+
+<!-- * Vast.AI / Tensordock.com / runpod.io -->
+
+
+<!-- 
+If you plan to use openAI:
+
+* Organization ID -> https://platform.openai.com/settings/organization/general
+* API Keys -> https://platform.openai.com/settings/profile?tab=api-keys
+* endpoint -> https://api.openai.com/ , yes without /v1/models
+
+You can also create knowledge for DifyAI:
+
+* From notion
+* text file
+* from website- cooming soon -->
+
+<!-- 
+## Create Posts as per Inputs
+
+
+
+* Festival_Name
+* Location
+* Date_Event
+* Discount_Link
+ -->
+
+
 <!-- https://superlinked.com/vector-db-comparison -->
 <!-- https://github.com/superlinked/VectorHub -->
 

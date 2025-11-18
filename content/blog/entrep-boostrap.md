@@ -91,9 +91,15 @@ Like the creator of [postIZ](https://jalcocert.github.io/JAlcocerT/social-media-
 
 * https://www.failory.com/blog/building-in-public
 * Example from Ghost!
-    * https://ghost.org/about/
+    * https://ghost.org/about/ - With a graph showing their Annual Run Rate! A true open startup.
 
-2. MRR - monthly recurrin revenue
+2. MRR - monthly recurring revenue
+
+This is the one that people call it *,passive income'*
+
+Not sure how passive it is to get it started. So personally, hearing from someone they are on passive income started to sound to me like a huge coasting the 9-5 and living on the weekends and or been financed by others.
+
+Aaaanyways.
 
 ### Entrepre-AI
 
