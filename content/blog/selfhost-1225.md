@@ -42,6 +42,24 @@ https://www.youtube.com/watch?v=ydG5EtQat_I -->
 
 gollama
 
+## Conclusion
+
+Not only [AWS](https://health.aws.amazon.com/health/status) will have outages.
+
+But also [cloudflare](https://www.cloudflarestatus.com/)...and [Github](https://www.githubstatus.com/)
+
+So that makes me think on the reliability of the wedding setup with R2.
+
+And im glad I tried the captcha via CapJS here.
+
+> Cloudflare Turnstile is a user-friendly, privacy-focused alternative to CAPTCHA for protecting websites from bots and automated abuse.
+
+If you have a NAT and use Cloudflare tunnels, maybe is time to try Pangolin as a Plan B.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/pangolin/" title="Pangolin | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ### Random
 
 > Intelligence is the ability to adapt to change

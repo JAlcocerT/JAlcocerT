@@ -234,11 +234,11 @@ Their official page design is just amazing: https://zensical.org/
 
 > Zensical creates scalable Open Source systems for technical writing that always keep you in the flow
 
-Automatically discover and visually document network infrastructure.
+I Also discovered **NetVisor**:
+
+* https://github.com/mayanayza/netvisor - *Automatically discover and visually document network infrastructure*
 
 NetVisor scans your network, identifies hosts and services, and generates an interactive visualization showing how everything connects, letting you easily create and maintain network documentation.
-
-* https://github.com/mayanayza/netvisor
 
 > AGPl3 | Automatically discover and visually document network infrastructure.
 
@@ -247,6 +247,10 @@ I also got to know **TOON**: which compress JSON impressively for LLMs to ingest
 <!-- https://x.com/DataChaz/status/1989056499017216133 -->
 
 {{< tweet user="DataChaz" id="1989056499017216133" >}}
+
+And hey, [Gemini 3 was released](https://blog.google/products/gemini/gemini-3/#responsible-development), but you can still use [goose](https://docs.ollama.com/integrations/goose) and/or **Ollama Desktop**
+
+
 
 ### GPX is great
 
