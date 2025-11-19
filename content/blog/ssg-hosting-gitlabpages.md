@@ -8,6 +8,23 @@ summary: 'Discover the simplicity and effectiveness of using GitLab Pages for ho
 url: 'web-hosting-with-gitlab-pages'
 ---
 
+
+
+<!-- ## Gitlab Pages
+
+
+### Deploying SSG
+
+https://www.youtube.com/watch?v=V_8cK9nvtTk
+
+
+GITLAB PAGES: 
+
+https://www.youtube.com/watch?v=49hgxqPGofw
+
+Failing bc the project is not in root, but at pacamara
+ -->
+
 Hosting a static website can be simple, secure, and cost-effective.
 
 GitLab Pages embodies these qualities by providing developers with a straightforward platform for hosting static sites directly from GitLab repositories.

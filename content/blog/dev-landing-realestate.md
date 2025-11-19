@@ -2,7 +2,7 @@
 title: "Landing (and more) for Real Estate"
 date: 2025-11-16T08:20:21+01:00
 draft: false
-tags: ["Web x CMS","Astro Payroll Theme","Strapi vs PayloadCMS","n8n","Scrapping","obfuscate to simple-waiting-list"]
+tags: ["Web x CMS","Astro Payroll Theme","Strapi vs PayloadCMS","n8n","Scrapping","Obfuscate to simple-waiting-list"]
 description: 'Landing page and components for real estate Galleries.'
 url: 'real-estate-landing'
 ---
@@ -19,8 +19,6 @@ But most importantly, is to have a happy real estate client:
 {{< cards >}}
     {{< card link="https://dm-real-estate.com/" title="DM - Real Estate Official Site" image="/blog_img/web/WebsSnapshots/Web_realestate.png" subtitle="A Real Estate Business Site for Spain" >}}
 {{< /cards >}}
-
-
 
 
 **Intro** 
@@ -379,14 +377,17 @@ Or some email subscriptions: which [MailerLite](#mailerlite) can do
 
 #### N8N
 
-With the right knowledge, you can use n8n to do all the automation you need and avoid paying similar software
+With the right knowledge, you can **use n8n to do all the automations** you need and avoid paying similar software or doing the work manually.
 
 {{< youtube "v-gCNTI5kzE" >}}
+
+Build n8n workflows: https://n8nworkflows.xyz/?price=free
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+Just...try things.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/n8n-with-ai/" title="n8n 101 Post" image="/blog_img/GenAI/n8n/mailerlite/4-adding-openai.png" subtitle="Using n8n across few use cases" >}}

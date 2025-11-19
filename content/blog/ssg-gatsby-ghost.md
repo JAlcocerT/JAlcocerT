@@ -54,16 +54,6 @@ https://github.com/Johnkat-Mj/agency-landing-page-Astrojs
 
 
 
-* IOTECH - https://github.com/themefisher/bigspring-light-astro
-    * https://iotechcrafts.com/blog/
-* IORACING - https://github.com/zankhq/astros
-    * https://ioracing-iotechcrafts.web.app/
-        * EX - https://astro.build/themes/details/launchui/
-        * https://iotechcrafts-ioracing.web.app/
-* IODOCTOR - https://github.com/mickasmt/astro-nomy
-
-* IOT - https://github.com/matt765/Tailcast
-    * https://iot.iotechcrafts.com/
 
 
 ## HUGO
@@ -637,82 +627,29 @@ firebase deploy
 ```
 
 
----
 
-## FAQ
+## COnclusions
+
+
+**Other Sites that Ive worked**
+
+
+* IOTECH - https://github.com/themefisher/bigspring-light-astro
+    * https://iotechcrafts.com/blog/
+* IORACING - https://github.com/zankhq/astros
+    * https://ioracing-iotechcrafts.web.app/
+        * EX - https://astro.build/themes/details/launchui/
+        * https://iotechcrafts-ioracing.web.app/
+* IODOCTOR - https://github.com/mickasmt/astro-nomy
+
+* IOT - https://github.com/matt765/Tailcast
+    * https://iot.iotechcrafts.com/
+
 
 ### Responsive Images
 
 <https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images>
 
----
-
-## FAQ
-
-### JS Frameworks for SSG's
-
-#### VUEjs
-
-https://github.com/vuejs/core?tab=MIT-1-ov-file#readme
-
-> The Progressive JavaScript Framework
-
-Vue.js (pronounced /vjuː/, like view) is an open-source JavaScript framework for building user interfaces (UIs) and single-page applications (SPAs).
-
-Vue.js is a progressive framework, meaning it can be used incrementally to add interactivity to existing HTML pages or to build complex SPAs from scratch. It is also component-based, meaning that UIs are built by composing reusable pieces called components. This makes it easy to create maintainable and scalable applications.
-
-Vue.js is reactive, meaning that it automatically updates the UI when the underlying data changes. 
-
-
-#### React JS
-
-https://github.com/facebook/react?tab=MIT-1-ov-file#readme
-
-> The library for web and native user interfaces.
-
-Component-Based Architecture: Both React and Vue.js are component-based, allowing you to build complex UIs by composing reusable components. This promotes code maintainability and scalability.
-
-
-Declarative Style: They use a declarative approach where you describe what the UI should look like, and the libraries handle the updates when the data changes. This makes the code easier to read and reason about.
-
-Virtual DOM: Both React and Vue.js utilize a virtual DOM, which is an in-memory representation of the real DOM. This allows them to efficiently update the actual DOM, optimizing performance.
-Large Communities: Both have large and active communities, providing extensive resources, libraries, and support.
-
-##### NextJS
-
-Next.js: A React framework built for server-side rendering and static site generation. It simplifies complex functionalities like routing, data fetching, and code-splitting, making it a popular choice for building modern and performant web applications with React.
-
-
-#### Svelte
-
-https://github.com/sveltejs/svelte?tab=MIT-1-ov-file#readme
-
-Svelte: A relatively new framework gaining traction due to its innovative approach.
-
-Svelte compiles components into highly optimized vanilla JavaScript code, resulting in smaller bundle sizes and potentially faster performance compared to frameworks relying on a virtual DOM.
-
-> Write breathtakingly concise components using languages you already know — HTML, CSS and JavaScript. Oh, and your application bundles will be tiny as well.
-
-Svelte is a relatively new but rapidly growing JavaScript framework for building user interfaces. It offers a unique approach that sets it apart from other popular frameworks like React or Vue.js. Here's a breakdown of Svelte's key characteristics:
-
-
-Unlike React and Vue.js, which rely on a virtual DOM for updates, Svelte takes a different approach. It compiles your Svelte components into highly optimized vanilla JavaScript code during the build process.
-This compiled code directly updates the DOM, eliminating the need for a virtual DOM layer and potentially resulting in smaller bundle sizes and faster performance.
-
----
-
-## FAQ
-
-### I Really Know nothing about Web Development - Frameworks?
-
-#### CSS
-
-The Framework/Libraries	Description	Relation to CSS:
-
-* Bootstrap	A popular CSS framework for building responsive and visually appealing web applications. It provides a set of pre-designed components, styles, and a grid system to streamline web development.	Bootstrap uses CSS extensively to style its components and layout. Developers can customize Bootstrap's appearance by overriding its default CSS rules or by writing their custom CSS.
-* Tailwind CSS	A utility-first CSS framework that allows developers to build web interfaces by composing classes directly in HTML. Tailwind CSS provides a large set of pre-defined utility classes, making it easy to style and layout elements.	Tailwind CSS relies heavily on CSS classes, which are generated based on the utility classes defined in the framework. Developers use these classes directly in HTML to style elements and create layouts without writing custom CSS.
-* Emotion	A JavaScript library for writing CSS styles with JavaScript. It allows developers to define and manage styles in a more programmatic way using JavaScript or TypeScript. Emotion can be used with 
-* React, Vue, or standalone.	Emotion enables developers to write CSS styles as JavaScript objects or template literals. These styles can be dynamically generated and scoped to specific components, making it easier to manage styles in a component-based architecture. Emotion ultimately generates CSS at runtime.
 
 ### How to monitor my Website Status?
 
@@ -720,8 +657,7 @@ The Framework/Libraries	Description	Relation to CSS:
 
 ### what it is a CDN?
 
-
-#### F/OSS CDN
+**There are F/OSS CDNs** if you need one.
 
 https://trafficcontrol.apache.org/
 
@@ -746,36 +682,18 @@ They have a F/OSS Static Website where we can find the packages to use via CDNjs
 
 ##### JSDelivr
 
-https://www.jsdelivr.com/
-https://github.com/jsdelivr/jsdelivr
-https://github.com/jsdelivr/jsdelivr?tab=MIT-1-ov-file#readme
+* https://www.jsdelivr.com/
+  * https://github.com/jsdelivr/jsdelivr
+  * https://github.com/jsdelivr/jsdelivr?tab=MIT-1-ov-file#readme
 
 >  A free, fast, and reliable Open Source CDN for npm, GitHub, Javascript, and ESM 
-
-### CMS
-
-### F/OSS CMS
-
-### Deploying SSG
-
-https://www.youtube.com/watch?v=V_8cK9nvtTk
-
-
-GITLAB PAGES: 
-
-https://www.youtube.com/watch?v=49hgxqPGofw
-
 
 ---
 
 ## FAQ
 
-
-
 * https://brianli.com/2021/06/how-to-find-broken-links-with-python/
 * https://brianli.com/2021/02/python-automation-is-awesome/
-
-
 
 ## web server
 
@@ -806,11 +724,6 @@ https://commons.wikimedia.org/wiki/Ma...
 Pixabay
 https://pixabay.com/
 
-### Web Analytics for SSG's
-
-* https://flaviocopes.com/count-visits-static-site/
-
-* Umami...
 
 
 ## How to see if a web was changed

@@ -87,11 +87,6 @@ git config --global user.email "jesus_alcocer@sthsthsth.com"
 
 ---
 
-<!-- ## Gitlab Pages
-
-Failing bc the project is not in root, but at pacamara
- -->
-
 ## Use Cloudflare Workers and Pages with Gitlab
 
 I have tried it with a Private Gitlab repository (works same for public repos).

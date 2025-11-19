@@ -38,11 +38,17 @@ You can bring your domains to ProtonMail and send emails from them: https://acco
 https://dashboard.mailerlite.com/dashboard
 
 
-
-
 3. Via LogTo: also to redirect to your custom domain for auth login, they will send an email with the code to enter your webapp
 
+
+4. And ok, thanks to Google Firebase we get out of the box email validation...
+
 But for something more custom...I have been lacking how actually email/SMTP work.
+
+<!-- https://youtu.be/Ksk42UzpO-I?si=9DqwYecMhxw4E-DK -->
+
+{{< youtube "Ksk42UzpO-I" >}}
+
 
 * https://github.com/4w4k3/KnockMail
 

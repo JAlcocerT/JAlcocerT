@@ -413,6 +413,8 @@ Whatever you choose, just make sure that its version controlled and parsable by 
 
 We make some CV before with [Overleaf and Latex, here](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#cv-as-a-code).
 
+Those should be enough for you to get a [crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) D&A 6 figures [job in CH.](https://swissdevjobs.ch/jobs/Rockstar-Recruiting-AG-DeFi-Analyst)
+
 More options for **creating your CV**?
 
 1. https://github.com/BingyanStudio/LapisCV

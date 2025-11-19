@@ -17,11 +17,14 @@ Time to prove that's not always true, especially with these [PaaS Tools](#paas-t
 
 Few months ago, I wrote about [different **PaaS** Tools](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/)
 
+UmbrelOS, Cosmos Server, Coolify or Dokploy....
+
+This feels like time for a recap.
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted UmbrelOS - Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/cosmos-server" title="Selfhosted Cosmos Server - Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 Among which, [Dokploy](#dokploy) resonated a lot with me.
 
@@ -94,10 +97,21 @@ It provides an **emulated environment of AWS services**, solving issues related 
 
 >> Got to know this one thanks to [awsomedockercompose](https://awesome-docker-compose.com)
 
+### UmbrelOS
+
+Im still hyped with Umbrel os and their tons of Apps, available at one click via UI.
+
+If you need nextcloud or want to practice [D&A on crypto](https://apps.umbrel.com/app/bitcoin) - [btc node](https://forocoches.com/foro/showthread.php?t=8706177), you are covered: https://apps.umbrel.com/app/
+
 ---
 
 ## Conclusions
 
+There will be more and more tools coming to the PaaS Space.
+
+Like as I [read on reddit](https://www.reddit.com/r/selfhosted/comments/1ol1v34/nixopus_oneclick_app_hosting_on_your_own_server/): https://github.com/raghavyuva/nixopus
+
+>  Open Source Alternative to vercel, heroku, netlify with simplified workflows 
 
 * https://pinokio.computer/
 https://github.com/pinokiocomputer/pinokio
@@ -110,6 +124,7 @@ https://docs.pinokio.computer/download/
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#Dokploy/dokploy&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)
 
+---
 
 ## FAQ
 

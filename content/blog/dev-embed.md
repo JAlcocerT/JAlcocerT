@@ -209,7 +209,7 @@ Chatwoot is primarily a **customer engagement** and communication platform, not 
 
 It **centralizes conversations from channels** like web chat, email, and social media, helps manage tickets, stores customer contact details, provides analytics, and supports automation features like chatbots.
 
-You can say that its OSS ZenDesk: *You ask something via email and the CS team will handle it*
+You can say that its OSS [ZenDesk](https://www.zendesk.com/service/): *You ask something via email and the CS team will handle it*
 
 However, while Chatwoot includes some CRM-like capabilities—such as managing and viewing customer profiles, conversation history, and team collaboration—it does not offer the depth of sales pipeline management, deal tracking, or marketing automation found in specialized CRM software like Salesforce or HubSpot. 
 

@@ -7,6 +7,9 @@ description: 'Creating an eCommerce. Drupal vs DIY'
 url: 'ecommerce'
 ---
 
+**Intro**
+
+[Some people dare to create their own ecommerce](https://forocoches.com/foro/showthread.php?t=9707807) dont die trying.
 
 https://awweso.me/e-commerce/
 

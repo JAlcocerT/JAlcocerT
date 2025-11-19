@@ -87,6 +87,25 @@ But then I found this: https://github.com/themefisher/dockit-astro
 
 https://github.com/JAlcocerT/dockit-astro
 
+> This is simple great for F/OSS 
+
+Time for a: Whats working, whats not and whats next?
+
+Well, Google also released https://codewiki.google/ which can potentially get outdated my manual/windsurf/codex way of writing technical docs.
+
+Time well tell.
+
+But what Im sure is that the brand needs an upgrade from blog like to doc+blog like.
+
+Anyways, wherever that might go, I have learnt a lot with it.
+
+And I can see that some people have created couple of brands around them:
+
+* https://flaviocopes.com/count-visits-static-site/
+  * https://thevalleyofcode.com/ - THis is basically a doc like website...that reads like a web ebook. Cool idea!
+* Even [courses](https://flaviocopes.com/courses/)/ebooks with distilled knowledge: https://flaviocopes.com/access/
+
+
 ### Better Blogs
 
 Im already looking for 2026.
@@ -98,6 +117,8 @@ But the curated already digested content will go to `blog.jalcocertech.com`
 1. https://github.com/ricocc/ricoui-portfolio
 
 2. Monakit, which I tinkered superficially [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#lately-i) - I liked the ppt integration out of the box
+
+
 
 ### CMS x Astro
 
@@ -113,6 +134,10 @@ Thats where [selfhosted tools](https://docs.vrite.io/self-hosting/configuration/
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/directus" title="DirectusCMS | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="StrapiCMS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+I also got inspired by tools listed: https://www.awesome-homelab.com/category/writing
+
+Particularly by https://www.awesome-homelab.com/item/novel-editor
 
 
 <!--

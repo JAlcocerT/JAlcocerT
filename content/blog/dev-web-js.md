@@ -19,6 +19,63 @@ url: 'selfhosting-ghost-docker'
 
 They are primarily used for building user interfaces and managing application behavior, focusing more on JavaScript-based functionality rather than styling. 
 
+### JS Frameworks for SSG's
+
+#### VUEjs
+
+https://github.com/vuejs/core?tab=MIT-1-ov-file#readme
+
+> The Progressive JavaScript Framework
+
+Vue.js (pronounced /vjuː/, like view) is an open-source JavaScript framework for building user interfaces (UIs) and single-page applications (SPAs).
+
+Vue.js is a progressive framework, meaning it can be used incrementally to add interactivity to existing HTML pages or to build complex SPAs from scratch.
+
+It is also component-based, meaning that UIs are built by composing reusable pieces called components. This makes it easy to create maintainable and scalable applications.
+
+Vue.js is reactive, meaning that it automatically updates the UI when the underlying data changes. 
+
+
+#### React JS
+
+https://github.com/facebook/react?tab=MIT-1-ov-file#readme
+
+> The library for web and native user interfaces.
+
+Component-Based Architecture: Both React and Vue.js are component-based, allowing you to build complex UIs by composing reusable components. This promotes code maintainability and scalability.
+
+
+Declarative Style: They use a declarative approach where you describe what the UI should look like, and the libraries handle the updates when the data changes. This makes the code easier to read and reason about.
+
+Virtual DOM: Both React and Vue.js utilize a virtual DOM, which is an in-memory representation of the real DOM. This allows them to efficiently update the actual DOM, optimizing performance.
+Large Communities: Both have large and active communities, providing extensive resources, libraries, and support.
+
+##### NextJS
+
+Next.js: A React framework built for server-side rendering and static site generation.
+
+It simplifies complex functionalities like routing, data fetching, and code-splitting, making it a popular choice for building modern and performant web applications with React.
+
+
+#### Svelte
+
+https://github.com/sveltejs/svelte?tab=MIT-1-ov-file#readme
+
+Svelte: A relatively new framework gaining traction due to its innovative approach.
+
+Svelte compiles components into highly optimized vanilla JavaScript code, resulting in smaller bundle sizes and potentially faster performance compared to frameworks relying on a virtual DOM.
+
+> Write breathtakingly concise components using languages you already know — HTML, CSS and JavaScript. Oh, and your application bundles will be tiny as well.
+
+Svelte is a relatively new but rapidly growing JavaScript framework for building user interfaces. It offers a unique approach that sets it apart from other popular frameworks like React or Vue.js. Here's a breakdown of Svelte's key characteristics:
+
+
+Unlike React and Vue.js, which rely on a virtual DOM for updates, Svelte takes a different approach. 
+
+It compiles your Svelte components into highly optimized vanilla JavaScript code during the build process.
+
+This compiled code directly updates the DOM, eliminating the need for a virtual DOM layer and potentially resulting in smaller bundle sizes and faster performance.
+
 
 ### React
 
@@ -120,17 +177,28 @@ Astro's architecture is built to leverage the strengths of these frameworks wher
 
 ### Hugo and JavaScript
 
-Hugo, on the other hand, is a static site generator and not a JavaScript framework. It is primarily used to build static websites quickly by processing your content files (like Markdown) and templates into HTML. Here’s how it generally uses JavaScript and CSS:
+Hugo, on the other hand, is a static site generator and not a JavaScript framework.
+
+It is primarily used to build static websites quickly by processing your content files (like Markdown) and templates into HTML. 
+
+Here’s how it generally uses JavaScript and CSS:
 
 - **JavaScript**: Hugo does not inherently use or require JavaScript. However, you can certainly add JavaScript to your Hugo sites to enhance functionality or add client-side interactivity. This integration is manual, meaning you add JavaScript files to your static assets or link to external scripts in your templates.
+
 - **CSS**: Hugo manages styles using traditional CSS or preprocessors like SCSS, which you can integrate into your build process. Hugo itself doesn’t dictate how you should use CSS; rather, it provides the means to incorporate whatever styling methodology or framework you prefer.
 
-In summary, while Astro is designed to integrate with various JavaScript frameworks effectively, allowing a mix-and-match approach to building components, Hugo is much simpler. It focuses on generating static sites and leaves the choice of adding JavaScript or CSS frameworks up to the developer. This approach makes Hugo extremely fast and efficient for generating websites where extensive client-side interaction is not required.
+In summary, while Astro is designed to integrate with various JavaScript frameworks effectively, allowing a mix-and-match approach to building components, Hugo is much simpler. 
+
+It focuses on generating static sites and leaves the choice of adding JavaScript or CSS frameworks up to the developer. 
+
+This approach makes Hugo extremely fast and efficient for generating websites where extensive client-side interaction is not required.
 
 
 ---
 
-Yes, one of the standout features of Astro is its ability to use more than one JavaScript framework within the same project. This capability allows you to leverage the specific strengths of each framework where they are most effective, providing a highly flexible and powerful approach to building websites.
+Yes, one of the standout features of Astro is its ability to use more than one JavaScript framework within the same project. 
+
+This capability allows you to leverage the specific strengths of each framework where they are most effective, providing a highly flexible and powerful approach to building websites.
 
 ### How Astro Supports Multiple JavaScript Frameworks
 
@@ -155,4 +223,20 @@ This approach allows developers to pick the most suitable tool for each part of 
 
 ### Conclusion
 
-Astro’s capability to integrate multiple JavaScript frameworks not only makes it versatile but also highly effective for building modern web applications that are optimized for performance and scalability. This flexibility is especially useful for teams with expertise in different frameworks or for projects that require specific features from multiple technology stacks.
+Astro’s capability to integrate multiple JavaScript frameworks not only makes it versatile but also highly effective for building modern web applications that are optimized for performance and scalability. 
+
+This flexibility is especially useful for teams with expertise in different frameworks or for projects that require specific features from multiple technology stacks.
+
+
+---
+
+### I Really Know nothing about Web Development - Frameworks?
+
+#### CSS
+
+The Framework/Libraries	Description	Relation to CSS:
+
+* Bootstrap	A popular CSS framework for building responsive and visually appealing web applications. It provides a set of pre-designed components, styles, and a grid system to streamline web development.	Bootstrap uses CSS extensively to style its components and layout. Developers can customize Bootstrap's appearance by overriding its default CSS rules or by writing their custom CSS.
+* Tailwind CSS	A utility-first CSS framework that allows developers to build web interfaces by composing classes directly in HTML. Tailwind CSS provides a large set of pre-defined utility classes, making it easy to style and layout elements.	Tailwind CSS relies heavily on CSS classes, which are generated based on the utility classes defined in the framework. Developers use these classes directly in HTML to style elements and create layouts without writing custom CSS.
+* Emotion	A JavaScript library for writing CSS styles with JavaScript. It allows developers to define and manage styles in a more programmatic way using JavaScript or TypeScript. Emotion can be used with 
+* React, Vue, or standalone.	Emotion enables developers to write CSS styles as JavaScript objects or template literals. These styles can be dynamically generated and scoped to specific components, making it easier to manage styles in a component-based architecture. Emotion ultimately generates CSS at runtime.

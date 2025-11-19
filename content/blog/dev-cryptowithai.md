@@ -14,7 +14,9 @@ Consolidating [crypto **resources**](#crypto-resources) and how to understand th
 
 +++ [Playing with Defi](#conclusions) protocols and tokens like [USDT](https://coinmarketcap.com/currencies/tether/)
 
-![alt text](/blog_img/crypto/usdt-marketcap.png)
+Nobody knows what will be [BTC dominance](https://www.tradingview.com/symbols/BTC.D/), but this is going on with *,digital usds'*
+
+![USDT MarketCap](/blog_img/crypto/usdt-marketcap.png)
 
 **Intro**
 

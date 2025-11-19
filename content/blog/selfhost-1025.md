@@ -400,7 +400,7 @@ wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/downloa
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/neko-browser" title="See also - Neko Browser | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-I Almost forgot: Privacy won, *for now*.
+I Almost forgot: [Privacy won](https://fightchatcontrol.eu/), *for now*.
 
 <!-- 
 https://www.youtube.com/live/t0Uk9eC146E?si=S9ruQrOgRa-DK_Ze 

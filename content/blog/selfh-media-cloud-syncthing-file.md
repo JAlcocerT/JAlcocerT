@@ -403,6 +403,7 @@ find . -type f -name "*_20200519_*"
 ### How to Remove background from Photos
 
 * https://github.com/danielgatis/rembg
+* https://github.com/codediodeio/rembg-webapp-tutorial
 
 ### How to Take a SnapShot From a Video
 
