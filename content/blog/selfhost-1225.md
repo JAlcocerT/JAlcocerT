@@ -56,6 +56,10 @@ Not only [AWS](https://health.aws.amazon.com/health/status) will have outages.
 
 But also [cloudflare](https://www.cloudflarestatus.com/)...and [Github](https://www.githubstatus.com/)
 
+Its curious that even X ressited the AWS outage, but not the CF one.
+
+![alt text](/blog_img/outro/x-cf-down.png)
+
 So that makes me think on the reliability of the wedding setup with R2.
 
 And im glad I tried the captcha via CapJS here.
@@ -181,9 +185,14 @@ If what you are looking for is a way to run Windows Apps in new ways, you could 
 
 >  Android application for running Windows applications with Wine and Box86/Box64 
 
-
-
 ### I simply Love Cal
+
+{{< youtube id="qFMN0oDeCFg" autoplay="false" >}}
+
+
+<!-- https://youtu.be/qFMN0oDeCFg -->
+
+![Calcom Email x Stripe ](/blog_img/email/cal-email-stripe.png)
 
 <https://github.com/calcom/cal.com>
 

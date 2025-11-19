@@ -52,12 +52,9 @@ I got recently one of them, Gatsby, to work with GhostCMS.
 
 https://trends.google.com/trends/
 
-* PageSpeedDev
 * How is your site doing? https://search.google.com/
 
 https://one.one.one.one/
-
-https://www.websitecarbon.com/badge/ 
 
 https://github.com/vojtaholik/gatsby-theme-simplecast?ref=statichunt.com
 

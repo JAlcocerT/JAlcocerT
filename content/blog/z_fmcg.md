@@ -38,7 +38,9 @@ Based on the nature of Nielsen's business they can provide time-series databases
 
 Here's why:
 
-* **Time-Series Data:** This type of data is a sequence of data points indexed in time. For FMCG, this is absolutely crucial. It's how you track **sales trends over time**, compare weekly performance, analyze the impact of a promotion, or see how a new product launch is progressing.
+* **Time-Series Data:** This type of data is a sequence of data points indexed in time. For FMCG, this is absolutely crucial.
+
+It's how you track **sales trends over time**, compare weekly performance, analyze the impact of a promotion, or see how a new product launch is progressing.
 
 The data would show things like:
 
@@ -48,9 +50,11 @@ The data would show things like:
 
 * **Nielsen's Business Model:** Nielsen's core product is this kind of data. 
 
-They collect point-of-sale data from retailers and turn it into actionable insights for their clients. A brand like Ferrero wants to know how their Kinder Bueno sales are doing versus a competitor's product, day by day or week by week.
+They collect point-of-sale data from retailers and turn it into actionable insights for their clients. 
 
- This is exactly what a time-series database is built for.
+A brand like Ferrero wants to know how their Kinder Bueno sales are doing versus a competitor's product, day by day or week by week.
+
+This is exactly what a time-series database is built for.
 
 * **The Clients and their Roles:**
 

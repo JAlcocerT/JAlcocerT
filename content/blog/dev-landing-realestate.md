@@ -393,10 +393,6 @@ Just...try things.
   {{< card link="https://jalcocert.github.io/JAlcocerT/n8n-with-ai/" title="n8n 101 Post" image="/blog_img/GenAI/n8n/mailerlite/4-adding-openai.png" subtitle="Using n8n across few use cases" >}}
 {{< /cards >}}
 
-<!-- #### Cal 
-
-#### formbricks
--->
 
 
 #### MailerLite
