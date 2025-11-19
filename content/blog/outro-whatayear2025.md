@@ -990,7 +990,7 @@ Even with: https://github.com/settings/copilot/features
 
 > *El relato mata al dato* - Thats also true when looking for new project opportunities
 
-1. Discovering uv as package manager and the power of makefile >>> readme.md code snippets was huge to me.
+1. Discovering uv as [python package manager](https://nielscautaerts.xyz/python-dependency-management-is-a-dumpster-fire.html) and the power of makefile >>> readme.md code snippets was huge to me.
 2. Git power: one action -> one commit + one branch -> one feature + main is the current AND ONLY reality
 
 * See this for branching strategies: https://learn.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance?view=azure-devops

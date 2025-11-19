@@ -1,8 +1,8 @@
 ---
 title: "Trying Nuxt & VitePress [and a SSG Recap]"
-date: 2026-03-23
+date: 2026-01-10
 draft: false
-tags: ["Dev","Nuxt"]
+tags: ["Dev","Nuxt","NUXT Content CMS"]
 description: 'Testing NUXT & VitePress Themes. Looking back to the learnings with other SSGs like HUGO and Astro.'
 url: 'trying-nuxt-themes'
 ---
@@ -49,10 +49,18 @@ Nuxt is a free and open-source framework with an intuitive and extendable way to
 
 * https://nuxt.com/deploy
 
+### Nuxt Content CMS
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nuxt-content" title="Nuxt Content CMS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ## VitePress SSG
 
-VitePress is a **Vue-powered static site generator** and a spiritual successor to VuePress, built on top of Vite.
+VitePress is a **Vue-powered static site generator** and a spiritual successor to [VuePress](https://jamstack.org/generators/vuepress/), built on top of Vite.
+
+
+* https://github.com/vuepress/awesome-vuepress
 
 * https://github.com/vuejs/vitepress
 

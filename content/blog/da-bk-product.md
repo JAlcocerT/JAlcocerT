@@ -2,22 +2,25 @@
 title: "Embracing Product Vision: Delivering Data Products"
 date: 2022-05-07T23:20:21+01:00
 draft: false
-tags: ["Outro"]
+tags: ["Outro","UX"]
 description: 'Data Product impact for D&A roles. The power of asking the right questions.'
 url: 'product-skills-for-data-analytics'
 ---
 
 
-How you can shape data products and address requirements?
+How can we shape data products and address requirements?
+
+**Intro**
 
 The [essential questions](#faq) to **collaborate with the product team** for successful data-driven projects, while maximizing impact.
 
-What does your client really need?
+The question is: What does your client really need?
 
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 
-
 If you understand [Pareto Principle](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) already...this will resonate.
+
+In the meantime, you can also be aware of interesting UX/User experience trends: https://github.com/uxreview/awesome-ux
 
 ## Product Vision for Data Analytics
 

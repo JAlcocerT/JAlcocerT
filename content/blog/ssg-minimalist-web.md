@@ -18,6 +18,12 @@ Probably not.
 
 What we probably need is a **Minimalist Webs** where different opinions can coexist.
 
+I really enjoy finding blogs around that are not just a copy paste from the previous one.
+
+Specially if they bring a phogo gallery like [this one](https://brianli.com/photos/)
+
+But some people take it one level higher and do webs veeery minimalistic.
+
 <!-- echo chambers -->
 
 https://lukesmith.xyz/articles/modern-freedom-means-being-a-slave-to-impulses/
@@ -82,6 +88,8 @@ Whatever you build, make sure to validate:
 ### Better Docs
 
 I was considering Astro starlight for a documentation theme with i18n support here.
+
+And doubting if sth like [HUGO congo](https://github.com/jpanther/Congo) would be the way forward.
 
 But then I found this: https://github.com/themefisher/dockit-astro
 

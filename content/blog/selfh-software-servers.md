@@ -109,6 +109,8 @@ If you need nextcloud or want to practice [D&A on crypto](https://apps.umbrel.co
 
 There will be more and more tools coming to the PaaS Space.
 
+But as of today, [having a cloud at home](https://nielscautaerts.xyz/we-have-cloud-at-home.html) is not that hard.
+
 Like as I [read on reddit](https://www.reddit.com/r/selfhosted/comments/1ol1v34/nixopus_oneclick_app_hosting_on_your_own_server/): https://github.com/raghavyuva/nixopus
 
 >  Open Source Alternative to vercel, heroku, netlify with simplified workflows 

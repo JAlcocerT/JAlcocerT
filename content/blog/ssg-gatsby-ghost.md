@@ -8,329 +8,59 @@ url: 'gatsby-ghost-integration'
 ---
 
 
+**Intro**
+
+Among all [SSGs](https://itsfoss.com/open-source-static-site-generators/) and their awsome ecosystem: https://github.com/myles/awesome-static-generators
+
+I got recently one of them, Gatsby, to work with GhostCMS.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="GhostCMS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+## About the Web
+
+
+https://trends.google.com/trends/
+
 * PageSpeedDev
 * How is your site doing? https://search.google.com/
 
 https://one.one.one.one/
 
-https://www.websitecarbon.com/badge/ !!!
+https://www.websitecarbon.com/badge/ 
 
-###
-
-https://trends.google.com/trends/
-
-####
-
-https://itsfoss.com/open-source-static-site-generators/
-
-<https://statichunt.com/>
-
-https://github.com/myles/awesome-static-generators
-
-https://github.com/uxreview/awesome-ux
-
-https://medusajs.com/plugins/
-https://github.com/medusajs/medusa
-
-https://github.com/docsifyjs/docsify
-https://docsify.js.org/#/pwa
-
-
-## Astro
-
-* https://github.com/Tailus-UI/astro-theme
-
-https://github.com/shaunchander/astro-pwa-starter
-https://astro.build/themes/details/starlight/
-https://astro.build/themes/details/stardoc/
-https://github.com/christian-luntok/astro-nutritrack
-
-https://github.com/Johnkat-Mj/agency-landing-page-Astrojs
-
-
-**Some astro themes uses markdoc - a markdown superset** 
+https://github.com/vojtaholik/gatsby-theme-simplecast?ref=statichunt.com
 
 ---
-
-
-
-
-
-## HUGO
-
-* Future FOSS/jalcocert?
-    https://github.com/jpanther/Congo
-
-## NextJS
-
-https://vercel.com/templates
-
-* Taxonomy - https://github.com/shadcn-ui/taxonomy
-
-guide-r-flexdashboards-in-github-pages
-r-knitt-package-guide
-
-## Why SSGs?
-
-<!-- 
-BLUE / RED PILL IMAGE
-
-READY TO ENTER THE MATRIX? -->
-
-## What is a SSG?
-
-* HUGO
-* Jekyll
-* Gatsby
-* Nextjs
-* Astro
-
-* Hexo
-* Vuepress
-* Nuxt
-* ...
-
-
-## Which Static Site Generator to use?
-
-* <https://jamstack.org/generators/>
-
-Certainly! Here's a comparison of VuePress, Next.js, Hugo, and Gatsby in a table format:
-
-| Feature             | VuePress                    | Next.js                       | Hugo                        | Gatsby                    |
-|---------------------|-----------------------------|--------------------------------|-----------------------------|---------------------------|
-| **Framework**       | Vue.js-based                | React-based                   | Go-based                    | React-based               |
-| **Use Case**        | Documentation, Blogs        | Universal Web Apps, Websites  | Static Websites, Blogs     | Static Websites, Blogs   |
-| **Learning Curve**  | Low                         | Moderate                      | Low                         | Moderate                  |
-| **Content Source**  | Markdown                    | Custom, Markdown, API, etc.   | Markdown                    | Markdown, CMS, API, etc. |
-| **Theming**         | Supported                   | Supported                      | Theming system               | Theming system            |
-| **Routing**         | Built-in                    | Customizable                  | Automatic                    | Automatic                  |
-| **Data Fetching**   | Limited API support         | Customizable (Server-Side)    | Limited API support         | GraphQL, API, CMS, etc.   |
-| **Performance**     | Fast                        | Depends on Implementation     | Fast                         | Depends on Implementation |
-| **Community**       | Growing                     | Large                          | Active                       | Active                    |
-| **Plugins/Extensions** | Limited                 | Extensible                    | Extensible                   | Extensible                |
-| **SEO**             | Good                        | Good                           | Good                         | Good                      |
-| **Development Pace**| Active                      | Active                         | Active                       | Active                    |
-
-
-
-
-Certainly, here's a comparison of Hexo, Astro, and Jekyll in a table format:
-
-| Feature              | Hexo                       | Astro                       | Jekyll                   |
-|----------------------|----------------------------|-----------------------------|--------------------------|
-| **Language**         | JavaScript (Node.js)       | JavaScript (Node.js)        | Ruby                     |
-| **Use Case**         | Blogs, Static Websites     | Static Websites, Web Apps   | Blogs, Static Websites   |
-| **Learning Curve**   | Low                        | Moderate                    | Low                      |
-| **Content Source**   | Markdown                   | Custom, Markdown, GraphQL  | Markdown, YAML Front Matter |
-| **Theming**          | Supported                  | Theming system              | Theming system            |
-| **Routing**          | Customizable               | Customizable                | Limited custom routing   |
-| **Data Fetching**    | Plugins, API               | Customizable                | Limited API support      |
-| **Performance**      | Good                       | Good                        | Good                     |
-| **Community**        | Active                     | Growing                     | Active                   |
-| **Plugins/Extensions**| Extensible                | Extensible                  | Extensible               |
-| **SEO**              | Good                       | Good                        | Good                     |
-| **Development Pace** | Active                     | Active                      | Stable                    |
-
-Each of these static site generators has its strengths and is suitable for different use cases and preferences. The choice among them depends on your specific project requirements, familiarity with the underlying technologies, and the ecosystem you prefer to work with.
-
-## Adding Comments to a SSG
-
-
-
-## Adding Search to SSG's
-
-## Review of SSGs!
-
-https://romanzolotarev.com/ssg.html
-https://www.youtube.com/watch?v=N_ttw2Dihn8
-
-## zola
-
-https://www.getzola.org/documentation/getting-started/overview/
-
-## hexo
-
-<https://hexo.io/>
-<https://hexo.io/themes/>
-<https://jamstack.org/generators/hexo/>
-<https://github.com/hexojs/awesome-hexo>
-
-<https://sharvaridesai.github.io/hexo-theme-edinburgh-demo/>
-
-
----
-
-### Interesting Nuxt Themes
-
-* https://github.com/apdev95/bento-portfolio-nuxt
-* https://github.com/samkanje/usenuxt-free
-    * Includes F/OSS Auth with - https://github.com/lucia-auth/lucia
-* https://github.com/Flosciante/nuxt-image-gallery
-* https://github.com/HugoRCD/canvas
-
-### Nuxt Content (CMS)
-
-Write pages in markdown - use Vue components and enjoy
-
-https://github.com/nuxt/content
-https://github.com/nuxt/content/blob/main/LICENSE
-
-https://content.nuxt.com/
-
-https://www.npmjs.com/package/@nuxt/content
-
-> The **file-based CMS** for your Nuxt application, powered by Markdown and Vue components.
-
-* Why?
-    * A Markdown syntax made for Vue components (MDC)
-    * Also handles CSV, YAML and JSON(5)
-    * Deploy everywhere - Nuxt Content **supports Static Generation**, also Node.js hosting and even Workers environments.
-
-
-> There is a static blog generator built on top of Nuxt.js and Nuxt-content providing everything you need to start writing your blog hassle-free AND for free -  https://github.com/bloggrify/bloggrify
-
-{{< dropdown title="How to use Nuxt Content CMS with Docker ⏬" closed="true" >}}
-
-```yml
-# Use the official Node.js image as the base
-FROM node:latest 
-#20.15.0 # https://hub.docker.com/_/node/tags
-
-# Install Git and nano
-RUN apt-get update && \
-    apt-get install -y git nano
-
-# Install Bun
-RUN curl -fsSL https://bun.sh/install | bash
-
-# Install additional packages using npm
-RUN npm install -g npm@latest
-RUN npm install -g pnpm
-#RUN npm install -g yarn
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy package.json and package-lock.json (if available) to the working directory
-#COPY package*.json ./
-
-# Install project dependencies using npm
-#RUN npm install
-
-# Copy the rest of the project files to the working directory
-#COPY . .
-
-# Expose the desired port (replace 3000 with your app's port if different)
-EXPOSE 3000
-
-# Specify the command to run your application
-#CMD ["npm", "start"]
-# Keep the container running and wait for a command
-CMD ["tail", "-f", "/dev/null"]
-
-
-#docker build -t node_ssg .
-#podman build -t node_ssg .
-
-#docker run -d --name=node_ssg -p 3000:3000 node_ssg 
-#podman run -d --name=node_ssg -p 3005:3000 node_ssg 
-
-#docker exec -it node_ssg /bin/bash
-#podman exec -it node_ssg /bin/bash
-
-
-#echo "Node: $(node --version) | npm: $(npm --version) | Yarn: $(yarn --version) | Bun: $(bun --version)"
-#podman exec -it loving_babbage /bin/bash -c "echo NPM: \$(npm --version)"
-```
-
-
-And then:
-
-```sh
-npx nuxi@latest init content-app -t content
-cd content
-npm run dev #pnpm run dev #yarn dev
-```
-`localhost:3000`
-
-{{< /dropdown >}}
-
-
-
-
-
-
-## 11ty
-
-https://github.com/ttntm/11ty-landing-page
-
-<https://www.11ty.dev/>
-<https://www.11ty.dev/docs/templates/>
-<https://jamstackthemes.dev/ssg/eleventy/>
-
-
----
-
-## VUEPRESS
-
-
-https://jamstack.org/generators/vuepress/
-
-<https://vuepress.vuejs.org/>
-
-<https://jamstackthemes.dev/theme/vuepress-theme-casper/>
-<https://github.com/alexander-heimbuch/vuepress-theme-casper>
-
-####
-
-https://github.com/gridsome/gridsome
-https://github.com/gridsome/gridsome?tab=MIT-1-ov-file#readme
-⚡️ The Jamstack framework for Vue.js
-
-
-
-## Cusdis
-
-https://nielscautaerts.xyz/setting-up-cusdis-on-your-server-behind-nginx-to-host-your-own-comments.html
-
-
-## Awsome Info
-
-* <https://github.com/vuepress/awesome-vuepress>
-
-### Themes
-
-<https://theme-hope.vuejs.press/>
-
-
-
 
 ## Gatsby SSG
 
 👉 <https://www.youtube.com/watch?v=RaTpreA0v7Q>
 
 
-* [The   Site](https://.build/ "GH {rel='nofollow'}")
-* [The  Source Code at Github](https://github.com// "GH {rel='nofollow'}")
-    * License: [MIT](https://github.com//?tab=License-1-ov-file#readme) ❤️
-
 > **React based** framework (open source JS, Meta). <https://github.com/gatsbyjs/gatsby>
 
-Load Data From Anywhere. Gatsby pulls in data from any data source, whether it’s Markdown files, a headless CMS like Contentful or WordPress, or a REST or GraphQL API. Use source plugins to load your data, then develop using Gatsby’s uniform GraphQL interface.
+Load Data From Anywhere. Gatsby pulls in data from any data source, whether it’s Markdown files, a headless CMS like Contentful or WordPress, or a REST or GraphQL API.
 
-Go Beyond Static Websites. Get all the benefits of static websites with none of the limitations. Gatsby sites are fully functional React apps, so you can create high-quality, dynamic web apps, from blogs to e-commerce sites to user dashboards.
+Use source plugins to load your data, then develop using Gatsby’s uniform GraphQL interface.
 
-* You need nodejs installed: <https://github.com/nodesource/distributions#installation-instructions>
-* then look: <https://github.com/gatsbyjs/gatsby>
+Go Beyond Static Websites. Get all the benefits of static websites with none of the limitations.
+
+Gatsby sites are fully functional React apps, so you can create high-quality, dynamic web apps, from blogs to e-commerce sites to user dashboards.
+
+1. You need [nodejs](https://github.com/nodesource/distributions#installation-instructions) installed
+2. Then see: https://github.com/gatsbyjs/gatsby
 
 
 ## About Gatsby plugins
 
-Gatsby plugins are a fundamental part of the Gatsby ecosystem and play a crucial role in extending the functionality of your Gatsby site. They allow you to add various features, optimize performance, and integrate with external services. Here are some of the things you can do with Gatsby plugins:
+Gatsby plugins are a fundamental part of the Gatsby ecosystem and play a crucial role in extending the functionality of your Gatsby site. 
+
+They allow you to add various features, optimize performance, and integrate with external services. 
 
 {{< dropdown title="More about Gatsby Plugins 👇" closed="true" >}}
-
 
 1. **Content Sourcing**: Gatsby plugins can help you source content from various data sources, such as Markdown files, JSON, APIs, databases, or even content management systems (CMS) like WordPress, Drupal, or Contentful. Popular content-sourcing plugins include `gatsby-source-filesystem` and `gatsby-source-contentful`.
 
@@ -398,17 +128,19 @@ npm install
 gatsby develop
 ```
 
-## Deploying Gatsby 
+If you thought that you were done understanding APIs just with REST, you were wrong. 
+
+Gatsby uses GraphQL to fetch data from APIs.
+
+And you could pull data from [dancing sites](https://www.bachatavilnius.lt/en/?action=createcache) to your dancing referal page.
+
+
+**Deploying Gatsby**: Any static hosting will do
 
 * Github Pages
 * Firebase
 * Cloudflare Pages
 
-### Deploying with Docker
-
-## Bachateameet - sources
-
-https://www.bachatavilnius.lt/en/?action=createcache
 
 ## Themes
 
@@ -422,11 +154,6 @@ https://www.bachatavilnius.lt/en/?action=createcache
   * Also available for NextJS
 
 {{< /dropdown >}}
-
-{{< dropdown title="Image Centered Blog" closed="true" >}}
-* {{< newtab url="https://github.com/stackrole/gatsby-starter-foundation" text="HUGO PaperMod" >}}
-  * MIT ❤️
-
 
 
 {{< /dropdown >}}
@@ -502,101 +229,10 @@ gatsby develop -p 8001
 gatsby build
 ```
 
-This will start a development server, and you can view your blog at http://localhost:8000.
+This will start a development server, and you can view your blog at `http://localhost:8000`.
 
 
-```dockerfile
 
-# Use an official Node runtime as the parent image
-FROM node:18.17
-
-# Set the working directory in the container
-WORKDIR /usr/src/app
-
-# Copy package.json and package-lock.json to the container
-COPY package*.json ./
-
-# Install Gatsby CLI globally and install dependencies
-RUN npm install -g gatsby-cli && npm install
-
-# Copy the rest of the application to the container
-COPY . .
-
-# Make port 8000 available outside the container
-EXPOSE 8000
-EXPOSE 8001
-
-# Run gatsby develop command when the container launches
-CMD ["gatsby", "develop", "-H", "0.0.0.0"]
-```
-
-```sh
-#sudo docker run -p 8000:8000 node:18.17
-#sudo docker run -it -p 8000:8000 node:18.17 /bin/bash
-#npm install -g gatsby-cli
-
-#gatsby-dev
-#docker build -t gatsby-dev -f Dockerfile .
-```
-
-```yml
-version: '3.8'
-
-services:
-  gatsby-dev:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    image: gatsby-dev:latest
-    ports:
-      - "8000:8000"
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-    environment:
-      - NODE_ENV=development
-
-  gatsby-prod:
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-    image: gatsby-prod:latest
-    ports:
-      - "80:80"
-    environment:
-      - NODE_ENV=production
-
-```
-
-
-```yml
-version: '3.8'
-
-services:
-  gatsby-dev:
-    image: gatsby-dev:latest
-    ports:
-      - "8000:8000"
-    volumes:
-      - app_data:/usr/src/app
-      - node_modules:/usr/src/app/node_modules
-    environment:
-      - NODE_ENV=development
-    command: tail -f /dev/null #keep it running      
-
-#   gatsby-prod:
-#     image: gatsby-prod:latest
-#     ports:
-#       - "80:80"
-#     environment:
-#       - NODE_ENV=production
-
-volumes:
-  node_modules:
-  app_data:
-
-
-```
 
 ## Portoflio Minimal
 
@@ -627,9 +263,14 @@ firebase deploy
 ```
 
 
+---
 
-## COnclusions
+## Conclusions
 
+
+Responsive Images can seem like a small thing, but it can make a big difference in the performance of your website.
+
+See what [Mozilla thinks about them](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
 **Other Sites that Ive worked**
 
@@ -646,35 +287,56 @@ firebase deploy
     * https://iot.iotechcrafts.com/
 
 
-### Responsive Images
-
-<https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images>
-
 
 ### How to monitor my Website Status?
 
-<https://fossengineer.com/selfhosting-uptime-Kuma-docker/>
+You can with tools like [UptimeKuma](https://fossengineer.com/selfhosting-uptime-Kuma-docker/) 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="UptimeKuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### what it is a CDN?
 
+A CDN (Content Delivery Network) is:
+
+- **A distributed network of servers** placed in many data centers around the world.  
+- **Goal:** deliver web content (images, CSS/JS files, videos, HTML, APIs, etc.) to users **faster and more reliably**.
+
+How a CDN works:
+
+- **You request a file** (e.g. an image on a blog).  
+- Instead of always coming from your origin server, the file is **cached on edge servers** of the CDN.  
+- The CDN serves the file from the **closest edge location** to the user (geographically / network‑wise).  
+- If it’s not cached yet, the CDN fetches it from the origin once, then caches it for future users.
+
+**Why people use a CDN**
+
+- **Speed:** lower latency, faster page load (better for UX and SEO).  
+- **Offload origin:** fewer direct hits to your main server, saving bandwidth and CPU.  
+- **Scalability:** easier to handle traffic spikes.  
+- **Resilience:** many CDNs provide DDoS protection and failover.  
+
+Cloudflare started as a CDN, but today it’s more like a full edge platform: a CDN plus DNS, security (DDoS/WAF), and even compute and storage, all sitting in front of your origin server
+
 **There are F/OSS CDNs** if you need one.
 
-https://trafficcontrol.apache.org/
+* https://trafficcontrol.apache.org/
 
-https://github.com/apache/trafficcontrol
-https://github.com/apache/trafficcontrol?tab=Apache-2.0-1-ov-file#readme
+* https://github.com/apache/trafficcontrol
+  * https://github.com/apache/trafficcontrol?tab=Apache-2.0-1-ov-file#readme
 
 >  Apache Traffic Control is an Open Source implementation of a Content Delivery Network 
 
-> Apache Traffic Control allows you to build a large scale content delivery network using open source. Built around Apache Traffic Server as the caching software, Traffic Control implements all the core functions of a modern CDN.
+> > Apache Traffic Control allows you to build a large scale content delivery network using open source. Built around Apache Traffic Server as the caching software, Traffic Control implements all the core functions of a modern CDN.
 
 ##### CDNjs
 
 * https://cdnjs.com/
 * https://github.com/cdnjs/cdnjs
-* https://github.com/cdnjs/cdnjs?tab=MIT-1-ov-file#readme
 
->  🤖 CDN assets - The #1 free and open source CDN built to make life easier for developers. 
+> MIT | 🤖 CDN assets - The #1 free and open source CDN built to make life easier for developers. 
 
 >  cdnjs is a free and open-source CDN service trusted by over 12.5% of all websites, serving over 200 billion requests each month, powered by Cloudflare. 
 
@@ -692,37 +354,27 @@ They have a F/OSS Static Website where we can find the packages to use via CDNjs
 
 ## FAQ
 
-* https://brianli.com/2021/06/how-to-find-broken-links-with-python/
-* https://brianli.com/2021/02/python-automation-is-awesome/
+Despite we been able to find [broken links with Python](https://brianli.com/2021/06/how-to-find-broken-links-with-python/)
 
-## web server
 
-https://awesome-devops.xyz/list/#web-servers
+### Free stock photo sites
 
-## Stock Photos
+If you need high‑quality, royalty‑free images, these sources offer excellent free collections (always double‑check the specific license for each image):
 
-https://www.youtube.com/watch?v=iQf1AyvfNfk
+- **Adobe Stock – Free Collection**  https://stock.adobe.com/free  
+- **StockSnap**  https://stocksnap.io/  
 
-Adobe Stock Free Collection
-https://stock.adobe.com/free
-StockSnap
-https://stocksnap.io/
-Pexels
-https://www.pexels.com/
-Shopify Burst
-https://www.shopify.com/stock-photos
-Freerange
-https://freerangestock.com/
-Unsplash
-https://unsplash.com/
-Kaboompics
-https://kaboompics.com/
-Stockvault
-https://www.stockvault.net/
-Wikimedia Commons
-https://commons.wikimedia.org/wiki/Ma...
-Pixabay
-https://pixabay.com/
+- **Pexels**  https://www.pexels.com/  
+
+- **Burst by Shopify**  https://www.shopify.com/stock-photos  
+
+- **Freerange**  https://freerangestock.com/  
+
+- **Unsplash**  https://unsplash.com/  
+- **Kaboompics**  https://kaboompics.com/  
+- **Stockvault**  https://www.stockvault.net/  
+- **Wikimedia Commons**  https://commons.wikimedia.org/wiki/Main_Page  
+- **Pixabay**  https://pixabay.com/
 
 
 

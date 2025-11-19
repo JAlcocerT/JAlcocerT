@@ -19,6 +19,72 @@ url: 'selfhosting-ghost-docker'
 
 They are primarily used for building user interfaces and managing application behavior, focusing more on JavaScript-based functionality rather than styling. 
 
+
+## Why I Learnt some JS
+
+
+## Astro
+
+* https://github.com/Tailus-UI/astro-theme
+
+https://github.com/shaunchander/astro-pwa-starter
+https://astro.build/themes/details/starlight/
+https://astro.build/themes/details/stardoc/
+https://github.com/christian-luntok/astro-nutritrack
+
+https://github.com/Johnkat-Mj/agency-landing-page-Astrojs
+
+
+**Some astro themes uses markdoc - a markdown superset** 
+
+
+## NextJS
+
+https://vercel.com/templates
+
+* Taxonomy - https://github.com/shadcn-ui/taxonomy
+
+guide-r-flexdashboards-in-github-pages
+r-knitt-package-guide
+
+## Why SSGs?
+
+<!-- 
+BLUE / RED PILL IMAGE
+
+READY TO ENTER THE MATRIX? -->
+
+Which [Static Site Generator](https://jamstack.org/generators/) to use?
+
+## Review of SSGs!
+
+https://romanzolotarev.com/ssg.html
+https://www.youtube.com/watch?v=N_ttw2Dihn8
+
+## zola
+
+https://www.getzola.org/documentation/getting-started/overview/
+
+#### Gridsome
+
+https://github.com/gridsome/gridsome
+https://github.com/gridsome/gridsome?tab=MIT-1-ov-file#readme
+
+⚡️ The Jamstack framework for Vue.js
+
+
+<https://theme-hope.vuejs.press/>
+
+
+### hexo
+
+<https://hexo.io/>
+<https://hexo.io/themes/>
+<https://jamstack.org/generators/hexo/>
+<https://github.com/hexojs/awesome-hexo>
+
+<https://sharvaridesai.github.io/hexo-theme-edinburgh-demo/>
+
 ### JS Frameworks for SSG's
 
 #### VUEjs

@@ -1004,7 +1004,7 @@ https://www.youtube.com/@AICodeKing/videos
 https://www.youtube.com/@easyselfhost/videos
 
 * https://awsmfoss.com/
-
+* https://awesome-devops.xyz/list/#web-servers
 * https://www.opensourcealternative.to/
 
 * https://www.open-source-tools.com/metube
