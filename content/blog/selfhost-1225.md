@@ -1,11 +1,17 @@
 ---
-title: "SelfHosting with a PaaS"
+title: "SelfHosting is easy with PaaS"
 date: 2025-12-01T01:20:21+01:00
 draft: false
 tags: ["HomeLab ebook",""]
 description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
+
+**Tl;DR**
+
+**Intro**
+
+I tend to get inspired with this kind of [vm and containers that im running](https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/) posts
 
 <!-- 
 ### How to use Python for NLP
@@ -27,10 +33,12 @@ https://blog.excalidraw.com/
 
 We all need to tell data stories sometimes: https://blog.excalidraw.com/tell-your-story-with-charts/ 
 
-Like: https://excalidraw.com/#json=6443031091740672,amxJZJxlZAlUBLADWIukFg
+Even before jumping to a Streamlit PoC, you can mockup very quickly via Excalidraw, like: https://excalidraw.com/#json=6443031091740672,amxJZJxlZAlUBLADWIukFg
+
+Once everyone is onboard, we can continue and end up with some cool [PBi](https://jalcocert.github.io/JAlcocerT/about-powerbi/) or a [GCP Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#what-it-is-looker-modelling-language) Dashboard.
 
 
-https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/?ref=noted.lol
+
 
 
 Mind your attention, stop auto engage and keep the important things at life first.

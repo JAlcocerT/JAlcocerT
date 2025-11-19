@@ -175,8 +175,6 @@ chmod +x ./setup.sh
 ./setup.sh
 ``` -->
 
-
-
 #### Grafana
 
 1. For the tinkers out there, see: Grafana, Kibana and Chronogaph

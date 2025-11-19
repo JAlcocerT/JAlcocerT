@@ -2,12 +2,18 @@
 title: "Improving Privacy with Open Source DNS "
 date: 2026-12-15T23:20:21+01:00
 draft: true
-tags: ["Docker","Self-Hosting"]
-description: ''
-summary: 'How to change DNS Servers and why it matters'
+tags: ["Docker","Self-Hosting","Pihole x UnboundDNS"]
+description: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+
+**Tl;DR**
+
+Pros tend to say `its always DNS`
+
+
+**Intro**
 
 https://github.com/TechnitiumSoftware/DnsServer
 
@@ -84,6 +90,10 @@ But now *PiHole is reloaded* with its **v6**.
 > If you are looking for other Selfhosted DNS, see: GoAdblock
 
 https://blog.foxxmd.dev/posts/redundant-lan-dns/
+
+Pi-Hole can even be running into lower power SBCs
+
+{{< youtube "IapRcHzIFZ0" >}}
 
 
 https://awesome-docker-compose.com/apps/dns

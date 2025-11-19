@@ -2,15 +2,30 @@
 title: "Grafana Monitoring: prometheus"
 date: 2025-11-20T23:20:21+01:00
 draft: false
-tags: ["Docker","Self-Hosting"]
+tags: ["Docker","Self-Hosting","Iotawatt"]
 description: 'Grafana works for IoT Same as for monitoring'
-summary: '.'    
 url: 'selfhosting-grafana'
 ---
 
+
+**Tl;DR**
+
+
+
+**Intro**
 <!-- GRAFANA + PROMEt
 Discover How to Create Grafana Dashboards Easily With Prometheus
 https://www.youtube.com/watch?v=JBEWpYy9QDE -->
+
+If you have ever worked with a DevOps team or as D&A with IoT devices like telecom, most likely than not you have used Grafana to monitor them.
+
+The thing is that people also do awsome things with Grafana within their homelabs.
+
+See how to use [Iotawatt + Grafana](https://blog.networkprofile.org/power-monitoring-setup-iotawatt-grafana/)
+
+
+![Solar Panel](/blog_img/outro/solar-panel.jpg)
+
 
 https://github.com/superduper-io/superduper
 https://github.com/superduper-io/superduper?tab=Apache-2.0-1-ov-file#readme

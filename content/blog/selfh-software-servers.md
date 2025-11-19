@@ -15,11 +15,23 @@ Time to prove that's not always true, especially with these [PaaS Tools](#paas-t
 
 **Intro**
 
+So you've been around even [when ATI](https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/#throwback-on-hardware) was still a thing.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/hardware/ati-hd5670.png" subtitle="Docker Configs for your server" >}}
+{{< /cards >}}
+
+You were using Linux when nobody was. And now apple ecosystem is so confortable that makes anything else scary?
+
+Pleeeeeease...
+
 Few months ago, I wrote about [different **PaaS** Tools](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/)
 
 UmbrelOS, Cosmos Server, Coolify or Dokploy....
 
 This feels like time for a recap.
+
+And if you are new to HomeLabs and/or Linux. These are some reasons for you to stay:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted UmbrelOS - Docker Config 🐋 ↗" >}}

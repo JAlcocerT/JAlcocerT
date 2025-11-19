@@ -2,7 +2,7 @@
 title: "PowerBI 101"
 date: 2020-12-07T19:20:21+01:00
 draft: false
-tags: ["Business Intelligence","pbiviz","D3js"]
+tags: ["Business Intelligence","pbiviz","D3js","DAX vs M","Semantic Model"]
 description: About PBi, Dax and M. How to create custom Dashboards with R/Python inside Power Bi.
 url: about-powerbi
 ---
@@ -172,7 +172,11 @@ Both **Calculated Columns** and **Measures** are created using DAX, but they are
 
 * **Calculated Columns:** A calculated column is a new column added to a table in the data model. Its value is computed for **every single row** in that table and is physically stored in memory. Since a calculated column is pre-calculated, it takes up storage space and is best used for simple, static values that don't need to be aggregated (e.g., `Full Name = [First Name] & " " & [Last Name]`).
 
-* **Measures:** A measure is a dynamic calculation. Its value is **not pre-calculated or stored in the data model**. Instead, it's computed **at query time** based on the filter context of the report. This makes measures extremely powerful and efficient for aggregations (e.g., `Total Sales = SUM(Sales[SalesAmount])`). Measures do not take up storage space in the data model and are the preferred way to perform analytical calculations.
+* **Measures:** A measure is a dynamic calculation. Its value is **not pre-calculated or stored in the data model**. Instead, it's computed **at query time** based on the filter context of the report. 
+
+This makes measures extremely powerful and efficient for aggregations (e.g., `Total Sales = SUM(Sales[SalesAmount])`). 
+
+Measures do not take up storage space in the data model and are the preferred way to perform analytical calculations.
 
 Summary of Relations
 
@@ -239,7 +243,9 @@ These are great for generating highly specialized or statistical charts that are
 
 **seaborn**, and **plotly** for Python. You can create complex statistical graphs, machine learning model outputs, and unique diagrams.
 
-* **Cons:** These visuals are essentially static images. They are not fully interactive in the same way as native Power BI visuals. You can't click on a data point in the R or Python visual to cross-filter other visuals on the report page. There are also limitations on data size (typically around 150,000 rows) and a timeout on script execution.
+* **Cons:** These visuals are essentially static images. They are not fully interactive in the same way as native Power BI visuals. You can't click on a data point in the R or Python visual to cross-filter other visuals on the report page. 
+
+There are also limitations on data size (typically around 150,000 rows) and a timeout on script execution.
 
 
 #### Creating Native Power BI Visuals 👨‍💻

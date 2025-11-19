@@ -17,14 +17,6 @@ How to get better with ASTRO as SSG *(for non web-devs)*?
 
 This is a post about *My favourite components for Astro*: Search, Charts, OG/SEO, GPX support...
 
-<!-- Add dynamic content about you
-https://docs.astro.build/en/tutorial/2-pages/3/ -->
-
-<!-- https://www.youtube.com/watch?v=NniT0vKyn-E -->
-
-<!-- 
-CSS Link 
---->
 
 
 * https://www.geeksforgeeks.org/how-to-add-chartjs-in-nextjs-13/
@@ -61,7 +53,7 @@ And these are very good intro videos on astro:
 
 ## ASTRO SEO PACKAGES
 
-* robots.txt - https://www.npmjs.com/package/astro-robots-txt#why-astro-robots-txt` (MIT Licensed ❤️)
+* The robots.txt - https://www.npmjs.com/package/astro-robots-txt#why-astro-robots-txt` (MIT Licensed ❤️)
   
 * You also need a **sitemap**!
 
@@ -74,8 +66,6 @@ And these are very good intro videos on astro:
 
 
 ### Adding SiteMap for Astro Pages
-
-
 
 We will need the package: `"@astrojs/sitemap": "^3.0.3"`
 
@@ -203,7 +193,7 @@ Simple HTML5 Charts using the <canvas> tag
 
 ### Spinning World Map
 
-If you just need a GPX map embedded into your .mdx, thats perfectly possible, [like so.](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/mdx/GpxMap.astro?ref_type=heads)
+If you just need a GPX map embedded into your `.mdx`, thats perfectly possible, [like so.](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/components/mdx/GpxMap.astro?ref_type=heads)
 
 * Found it at theme: https://github.com/Ladvace/astro-bento-portfolio
   * See the [Globe component](https://github.com/IoTechCrafts/astro-bento-portfolio-ssg/blob/master/src/components/Globe.tsx), also [here](https://github.com/JAlcocerT/web3/blob/main/src/components/Globe.tsx)
@@ -274,14 +264,7 @@ export default defineConfig({
 
 ### FAQs for Astro
 
-**With AlpineJS and TailwindCSS**
-
-{{< dropdown title="Get a cool FAQ for Astro 👇" closed="true" >}}
-
-
-
-{{< /dropdown >}}
-
+I saw some example built **With AlpineJS and TailwindCSS**
 
 ## SSG Search
 
@@ -296,8 +279,6 @@ And some people get very created: https://dteather.com/blogs/astro-search-bar/
 2. FuseJS - https://www.fusejs.io/
 
 > [Fusejs](https://www.fusejs.io/getting-started/different-builds.html#explanation-of-different-builds) works with HUGO, [like papermod](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-features/#search-page)!
-
-
 
 ### PageFind
 
@@ -320,6 +301,14 @@ FuseJS or Flexsearch, work even on dev env, but for pagefind you will have to bu
   * https://github.com/gio-del/Astro-Theme-Astroway?tab=MIT-1-ov-file#readme
 
 ---
+
+## Conclusions
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
+{{< /cards >}}
+
 
 ## FAQ
 
@@ -429,7 +418,6 @@ Something like: `fattouche.ns.cloudflare.com, leanna.ns.cloudflare.com`
 ![Cloudflare Authoritative Name Servers](/blog_img/web/CloudFlarePages_CustomDomain_DNS.png)
 
 {{< /dropdown >}}
-
 
 
 ### User Management / Authentication

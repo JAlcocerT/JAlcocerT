@@ -229,10 +229,12 @@ Amazon simple email service
 
 ### Resend
 
-People use that one for some contact forms, as seen on [this post section](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#managing-packages-for-ssgs), together with [HUGO Themes like this](https://github.com/HugoRCD/canvas?tab=readme-ov-file#setup-the-contact-form).
+People use that one for some contact forms, as seen on [this post section](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#managing-packages-for-ssgs), together with [SSG Themes like this](https://github.com/HugoRCD/canvas?tab=readme-ov-file#setup-the-contact-form).
 
 * https://resend.com/signup
+  * https://github.com/HugoRCD/canvas
 
+  
 ## Email for Marketing
 
 I was writting about marketing some time back.

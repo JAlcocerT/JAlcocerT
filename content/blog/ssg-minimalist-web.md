@@ -126,6 +126,11 @@ But the curated already digested content will go to `blog.jalcocertech.com`
 
 2. Monakit, which I tinkered superficially [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#lately-i) - I liked the ppt integration out of the box
 
+3. https://github.com/nuxt-ui-templates/portfolio/tree/main which is a cool NUXT Theme similar to [Canvas](https://github.com/HugoRCD/canvas)
+
+>  Nuxt Portfolio Template made with Nuxt UI and [Nuxt Content](https://github.com/JAlcocerT/Home-Lab/tree/main/nuxt-content). 
+
+
 
 
 ### CMS x Astro

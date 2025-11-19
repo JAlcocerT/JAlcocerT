@@ -322,7 +322,6 @@ services:
       - INFLUXDB_ADMIN_USER=admin
       - INFLUXDB_ADMIN_PASSWORD=mysecretpassword
 
-
   grafana:
     image: grafana/grafana:9.5.7 #was using this one instead of latest for stability
     container_name: grafana3

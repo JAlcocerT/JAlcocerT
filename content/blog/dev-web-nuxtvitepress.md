@@ -7,6 +7,12 @@ description: 'Testing NUXT & VitePress Themes. Looking back to the learnings wit
 url: 'trying-nuxt-themes'
 ---
 
+<!-- Add dynamic content about you
+https://docs.astro.build/en/tutorial/2-pages/3/ -->
+
+<!-- https://www.youtube.com/watch?v=NniT0vKyn-E -->
+
+
 Almost the end of the year, time to **try out some new SSG**.
 
 This time it is the turn of **Nuxt**
@@ -36,6 +42,23 @@ npm -v    # Should show npm version - 10.8.2
 ```
 
 {{< /details >}}
+
+{{< dropdown title="Bun | Example with NUXT - HUGO Canvas and Resend ⏬" closed="true" >}}
+
+* Example - https://github.com/HugoRCD/canvas
+	* Contact Forms with: https://resend.com/signup - Email for developers (https://resend.com/pricing)
+
+> Really cool Portfolio template made with Nuxt 3, Nuxt Content and TailwindCSS
+
+```sh
+bun install
+bun dev #dev server
+bun generate #static proy
+bun start #prod server
+```
+
+{{< /dropdown >}}
+
 
 Now you can spin a server and make **ASTRO [Remote Development](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker)** in it.
 

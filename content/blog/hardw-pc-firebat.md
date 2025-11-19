@@ -900,7 +900,9 @@ Categorizing the details about each PC and laptop by its specifications and time
 - **Monitor**: Nec Multisync 75F 17"
 - **Sound Card**: Creative SB PCI 128 (Ensoniq ES5880)
 - **Optical Drive**: LG CD-ROM CRD-8521B (52x)
-* Updated in 2007 to: AMD Athlon64 3600x2, 2x1GB GSkill DDR2 667mhz, later ATI hd5670 1gb
+* Updated in 2007 to: AMD Athlon64 3600x2, 2x1GB GSkill DDR2 667mhz, later with ATI hd5670 1gb around ~2010
+
+![alt text](/blog_img/hardware/ati-hd5670.png)
 
 #### 2. Mi Primer PC
 - **Date Purchased**: November 2005

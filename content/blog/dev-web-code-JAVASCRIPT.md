@@ -91,11 +91,6 @@ For SSGs that are using Node (like Astro), you can get to know the Docs of any *
 
 > NPM Packages? Yes, and you can manage them with
 
-{{< dropdown title="NPM ⏬" closed="true" >}}
-
-
-{{< /dropdown >}}
-
 
 {{< dropdown title="PNPM | Example with astrozinc theme ⏬" closed="true" >}}
 
@@ -121,23 +116,6 @@ pnpm build
 {{< /dropdown >}}
 
 * Yarn - another package manager
-
-
-{{< dropdown title="Bun | Example with NUXT - HUGO Canvas and Resend ⏬" closed="true" >}}
-
-* Example - https://github.com/HugoRCD/canvas
-	* Contact Forms with: https://resend.com/signup - Email for developers (https://resend.com/pricing)
-
-> Really cool Portfolio template made with Nuxt 3, Nuxt Content and TailwindCSS
-
-```sh
-bun install
-bun dev #dev server
-bun generate #static proy
-bun start #prod server
-```
-
-{{< /dropdown >}}
 
 ## React
 

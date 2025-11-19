@@ -2,8 +2,8 @@
 title: "Gatsby SSG x Ghost"
 date: 2025-11-17T23:20:21+01:00
 draft: false
-tags: ["Web"]
-description: 'Using gatsby to create a static site from ghost'
+tags: ["Web","GatsbyJS x Ghost CMS"]
+description: 'Using gatsby to create a static site from ghostCMS'
 url: 'gatsby-ghost-integration'
 ---
 
@@ -14,12 +14,40 @@ Among all [SSGs](https://itsfoss.com/open-source-static-site-generators/) and th
 
 I got recently one of them, Gatsby, to work with GhostCMS.
 
-{{< cards cols="2" >}}
+{{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="GhostCMS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 
 ## About the Web
+
+
+
+{{< hextra/feature-grid >}}
+ 
+{{< hextra/feature-card
+  title="Google Speed Test"
+  subtitle="Test the speed and performance with PageSpeed Insights."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://pagespeed.web.dev/"
+>}}
+
+{{< hextra/feature-card
+  title="Website Carbon"
+  subtitle="Website’s carbon footprint and environmental impact."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+  link="https://www.websitecarbon.com/"
+>}}
+
+{{< hextra/feature-card
+  title="Web-Check"
+  subtitle="Performance and uptime using Web-Check's analytics tool."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://web-check.xyz/"
+>}}
+
+{{< /hextra/feature-grid >}}
+
 
 
 https://trends.google.com/trends/
@@ -99,11 +127,15 @@ They allow you to add various features, optimize performance, and integrate with
 {{< /dropdown >}}
 
 
-Gatsby's extensive plugin ecosystem makes it a powerful tool for building modern, performant websites and web applications. You can easily find and install plugins from the Gatsby plugin library or create your own to extend your site's capabilities.
+Gatsby's extensive plugin ecosystem makes it a powerful tool for building modern, performant websites and web applications. 
+
+You can easily find and install plugins from the Gatsby plugin library or create your own to extend your site's capabilities.
 
 You can **find Gatsby plugins** in the official Gatsby plugin library. Here's how you can access it:
 
-1. **Gatsby Plugin Library Website**: You can visit the official Gatsby plugin library website at [https://www.gatsbyjs.com/plugins/](https://www.gatsbyjs.com/plugins/). This website provides a searchable and categorized list of plugins that you can use in your Gatsby projects.
+1. **Gatsby Plugin Library Website**: You can visit the official Gatsby plugin library website at [https://www.gatsbyjs.com/plugins/](https://www.gatsbyjs.com/plugins/). 
+
+This website provides a searchable and categorized list of plugins that you can use in your Gatsby projects.
 
 * <https://www.gatsbyjs.com/plugins/gatsby-source-custom-api/>
 
@@ -114,8 +146,6 @@ You can **find Gatsby plugins** in the official Gatsby plugin library. Here's ho
 * <https://www.gatsbyjs.com/plugins/@ccalamos/gatsby-source-googlemaps-static/?=google>
 
 2. **Gatsby GitHub Repository**: Another way to discover Gatsby plugins is by visiting the Gatsby GitHub repository, specifically the "plugins" section. The repository is located at [https://github.com/gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby), and you can find plugins in the "plugins" directory.
-
-Please note that the availability and organization of plugins may have changed since my last update in September 2021. I recommend visiting the official Gatsby documentation or community resources for the most up-to-date information on Gatsby plugins.
 
 
 https://www.gatsbyjs.com/docs/how-to/images-and-media/using-gatsby-plugin-image/
@@ -144,7 +174,6 @@ And you could pull data from [dancing sites](https://www.bachatavilnius.lt/en/?a
 
 ## Themes
 
-{{< dropdown title="Photo Centered" closed="true" >}}
 * {{< newtab url="https://github.com/baobabKoodaa/gatsby-starter-photo-book" text="HUGO PaperMod" >}}
   * MIT ❤️
 * https://github.com/baobabKoodaa/gatsby-starter-infinite-scroll
@@ -153,10 +182,6 @@ And you could pull data from [dancing sites](https://www.bachatavilnius.lt/en/?a
   * Requires Flotiq CMS
   * Also available for NextJS
 
-{{< /dropdown >}}
-
-
-{{< /dropdown >}}
 
 <!-- 
 https://github.com/yinkakun/gatsby-starter-glass
@@ -171,7 +196,6 @@ https://github.com/Uvacoder/rocketdocs-starter?ref=statichunt.com -->
 
 * Install nodejs: <https://github.com/nodesource/distributions#installation-instructions>
 
-{{< dropdown title="Some of my fav Gatsby Themes 👇" closed="true" >}}
 
 * <https://gatsbytemplates.io/?ref=%22github%22>
 * <https://github.com/vse-volod/gatsby-theme-massively/tree/master>
@@ -180,9 +204,7 @@ https://github.com/Uvacoder/rocketdocs-starter?ref=statichunt.com -->
 * <https://github.com/stackrole/gatsby-starter-foundation>
 
 
-
-
-Gatsby 💗 ghost -
+## Gatsby 💗 ghost
 
 https://jamstackthemes.dev/theme/gatsby-starter-ghost/
 https://gatsby.ghost.org/
@@ -198,8 +220,6 @@ https://github.com/chrisnmorrison/revista-gatsby-blog-magazine
 https://github.com/app-generator/gatsbyjs-starter-tailwindplay
 
 https://github.com/app-generator/gatsbyjs-starter-tailwindplay
-
-{{< /dropdown >}}
 
 
 * **`http://localhost:8000/`**
@@ -231,9 +251,6 @@ gatsby build
 
 This will start a development server, and you can view your blog at `http://localhost:8000`.
 
-
-
-
 ## Portoflio Minimal
 
 <https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal/tree/main>
@@ -250,30 +267,28 @@ gatsby develop -p 8001
 gatsby build
 ```
 
+If you want to deploy statically towards Google Firebase:
+
 ```sh
 gatsby build
 
 npm install -g firebase-tools
-
-firebase login
-
-firebase init
+#firebase login
+#firebase init
 
 firebase deploy
 ```
-
 
 ---
 
 ## Conclusions
 
-
 Responsive Images can seem like a small thing, but it can make a big difference in the performance of your website.
 
 See what [Mozilla thinks about them](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
-**Other Sites that Ive worked**
-
+  
+#### Other Websites I've Built
 
 * IOTECH - https://github.com/themefisher/bigspring-light-astro
     * https://iotechcrafts.com/blog/
@@ -285,6 +300,38 @@ See what [Mozilla thinks about them](https://developer.mozilla.org/en-US/docs/Le
 
 * IOT - https://github.com/matt765/Tailcast
     * https://iot.iotechcrafts.com/
+
+1. With an option to plug [adsense](https://adsense.google.com/adsense/) to each of this websites
+
+
+{{< cards >}}
+  {{< card link="https://cozyknittingclub.web.app/" title="Content Creator Blog" image="/blog_img/web/WebsSnapshots/Web_CKC.png" subtitle="For an instagramer who loves knitting" >}}
+    {{< card link="https://dm-real-estate.com/" title="Real Estate Official Site" image="/blog_img/web/WebsSnapshots/Web_realestate.png" subtitle="A Real Estate Business Site for Spain" >}}
+    {{< card link="https://ira-english.pages.dev/" title="Personal Business Landing" image="/blog_img/web/WebsSnapshots/Web_EnglishIra.png" subtitle="Landing Page for a well Known English Teacher" >}}
+    {{< card link="https://jalcocert.github.io/Portfolio/" title="All your Links" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Sleek collection of important Links" >}} 
+  {{< card link="https://cyclingthere.pages.dev" title="Blog / Adventures" image="/blog_img/web/WebsSnapshots/Web_CyclingThere.png" subtitle="I can write and also create interesting photo galleries about my travel experiences" >}}
+      {{< card link="https://morita-web.pages.dev//" title="Mental Health Care Site" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Because the brain is as important as the body" >}}
+{{< /cards >}}
+
+
+**Photo centered blogs:**
+
+{{< cards >}}
+  {{< card link="https://cozyknittingclub.web.app/" title="Content Creator Blog" image="/blog_img/web/WebsSnapshots/Web_CKC.png" subtitle="For an instagramer who loves knitting" >}}
+    {{< card link="http://entreagujaypunto.com/" title="Punto Photo Gallery" image="/blog_img/web/web-entreagujaypunto.png" subtitle="A Photo centered Web for Punto" >}}
+    {{< card link="https://enjoylittlethings.org/" title="Travel Adict Photo Gallery" image="/blog_img/web/WebsSnapshots/Web_PhotoGalleryAGA.png" subtitle="Because Photo & Travel lovers need something more than instagram" >}}    
+    {{< card link="https://while.cyclingthere.com" image="/blog_img/web/whilecycling.png" title="Photo Gallery Blog" subtitle="Made with HUGO and Photo centered" >}}
+{{< /cards >}}
+
+**Business Sites:**
+
+{{< cards >}}
+  {{< card link="https://iotechcrafts.web.app/" title="Business Website" image="/blog_img/web/WebsSnapshots/Web_IoTechCrafts.png" subtitle="A Website for Agency - AI & IoT Consulting Services">}}   
+  {{< card link="https://iotiotechcrafts.web.app/" title="IoT SaaS Site" image="/blog_img/web/WebsSnapshots/web_iotiotech.png" subtitle="One Pager with FAQ and Pricing" >}} 
+  {{< card link="https://iodoctor.iotechcrafts.com/" title="Doctor Consultation" image="/blog_img/web/WebsSnapshots/Web_IoDoctor.png" subtitle="Landing for Scheduling Doctor Appointments" >}}           
+  {{< card link="https://iodoctor-iotechcrafts.web.app/" title="Web for Doctor Consultation" image="/blog_img/web/WebsSnapshots/web_iodoctors.png" subtitle="With Astro mdx blogs filtrable by tags and docs sections" >}}  
+  {{< card link="https://ioracing-iotechcrafts.web.app/" title="IoT SaaS Site" image="/blog_img/web/WebsSnapshots/web_ioracing.png" subtitle="One Pager with FAQ, Pricing and MultiLang" >}}            
+{{< /cards >}}
 
 
 

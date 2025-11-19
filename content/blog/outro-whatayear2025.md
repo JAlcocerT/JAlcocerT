@@ -7,6 +7,10 @@ description: 'Looking back to the learnings of the year 2025.'
 url: 'tech-recap-2025'
 ---
 
+This year, Ive abused again of my unfair advantage.
+
+![Just working](/blog_img/outro/work-unfair-advantage.png)
+
 <iframe src="https://visitedplaces.com/embed/?map=world&projection=geoNaturalEarth1&position=3.7_34.3_51_-12.4_0&theme=dark-green&water=1&graticule=0&names=1&duration=2000&placeduration=100&slider=0&autoplay=0&autozoom=none&autostep=0&home=PL&places=lie~DE_ES_PT_MX_FR_GB_IT_BE_NL_DK_SE_LT_LV_UA_HU_AT_CZ_SK_BG_GR_TR_MT_PL.daaa44_CH_NO_AL_EE_TH_LI" style="width: 100%; height: 600px;"></iframe>
 
 <!-- <https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal> jalcocert? -->
