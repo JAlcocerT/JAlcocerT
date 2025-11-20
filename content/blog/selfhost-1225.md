@@ -187,6 +187,8 @@ If what you are looking for is a way to run Windows Apps in new ways, you could 
 
 ### I simply Love Cal
 
+You can get started very quickly, create a meeting and embed it into your websites in few ways:
+
 {{< youtube id="qFMN0oDeCFg" autoplay="false" >}}
 
 
@@ -194,24 +196,11 @@ If what you are looking for is a way to run Windows Apps in new ways, you could 
 
 ![Calcom Email x Stripe ](/blog_img/email/cal-email-stripe.png)
 
-<https://github.com/calcom/cal.com>
-
-https://mariushosting.com/how-to-install-calcom-on-your-synology-nas/
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/cal/" title="Cal.com | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 https://awweso.me/booking-and-scheduling/
-
-**SelfHosting Cal**
-
-* [Cal](https://github.com/calcom/cal.com)
-  * Together with a caldav / [Stripe](https://cal.com/docs/how-to-guides/how-to-set-up-an-event-type-to-receive-payments) / Signal / Matrix / Web Analytics / ...
-  * It admits [webhooks](https://cal.com/docs/core-features/webhooks)
-
-Cal Docker-Compose
-
-https://github.com/calcom/docker/blob/main/docker-compose.yaml
-https://cal.com/docs/introduction/quick-start/self-hosting/docker#requirements
-https://github.com/calcom/docker
-https://hub.docker.com/r/calcom/cal.com
 
 
 ## The Penpot Project

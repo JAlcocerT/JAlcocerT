@@ -306,6 +306,12 @@ But if people dont know you or you are starting a brand: *you better make it eas
 
 Anyways, building a brand is not easy.
 
+But if you have one, it should not be a problem to start your consultation services.
+
+{{< cards >}}
+  {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
+{{< /cards >}}
+
 As I see it now:
 
 ```mermaid
@@ -392,6 +398,12 @@ Just...try things.
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/n8n-with-ai/" title="n8n 101 Post" image="/blog_img/GenAI/n8n/mailerlite/4-adding-openai.png" subtitle="Using n8n across few use cases" >}}
 {{< /cards >}}
+
+Because most of the software around, like n8n and wordpress are free to use.
+
+Master a thing and help others!
+
+That level of focus is what platforms like elestio achieve: https://elest.io/open-source/n8n
 
 
 

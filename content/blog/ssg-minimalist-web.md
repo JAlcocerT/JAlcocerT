@@ -1,6 +1,6 @@
 ---
 title: "How to Save the Internet"
-date: 2025-11-18T08:20:21+01:00
+date: 2025-11-19T08:20:21+01:00
 draft: false
 tags: ["Web ebook","Dev",Web Docs with Astro"]
 description: 'Open Source Minimalist Websites.'
