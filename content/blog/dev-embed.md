@@ -279,7 +279,9 @@ Here is why each point holds true:
 The process described is perfectly compatible with the **Static Site Generation (SSG)** model:
 
 * **Build Time Data Injection:** When you use Astro (or Next.js/Gatsby in SSG mode), your server-side build process executes your code. It loads your static dataset (e.g., a local JSON file). This data is then serialized and passed as the initial `prop` to the Graphic Walker React component.
+
 * **Static HTML Output:** The resulting HTML file that Astro generates includes the entire structure of the webpage *and* the full dataset embedded as a JavaScript variable or prop value within the page.
+
 * **Client-Side Hydration:** When a user visits the site, the browser loads the static HTML. Then, the JavaScript bundle (including Graphic Walker's code) runs, reads the embedded static data, and activates (or "hydrates") the component, performing the actual dynamic chart rendering and providing interactivity (like filtering, zooming, and scrolling) locally on the client's device.
 
 This approach gives you the **performance benefits of a static site** (fast load time, no live server needed for data) while retaining the **interactivity of a modern web application.**

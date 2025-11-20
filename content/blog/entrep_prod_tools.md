@@ -92,7 +92,7 @@ mindmap
     SSG
       Hugo
       Astro
-      Gatsby
+      Jekill
     Authentication
       Firebase Auth
       Auth0

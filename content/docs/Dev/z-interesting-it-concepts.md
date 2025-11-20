@@ -57,7 +57,6 @@ gh auth login #you can use HTTPs
 
 ## Other Concepts
 
-
 ### What are Web-Hooks?
 
 A webhook is like a doorbell.
@@ -70,9 +69,15 @@ It's a way for apps to provide other applications with real-time information.
 
 {{< details title="More about WebHooks 📌" closed="true" >}}
 
-* How It Works: A webhook delivers data to other applications as it happens, meaning you get data immediately. You set up a webhook by providing a URL to the system you want to receive the notifications. When an event occurs, the system makes an HTTP request (usually POST) to the URL you provided.
+* How It Works: A webhook delivers data to other applications as it happens, meaning you get data immediately. 
 
-* Use Case Example: A common use of webhooks is in Continuous Integration/Continuous Deployment (CI/CD) pipelines. For example, GitHub can use a webhook to notify a CI server like Jenkins to start a new build whenever code is pushed to a repository.
+You set up a webhook by providing a URL to the system you want to receive the notifications. 
+
+When an event occurs, the system makes an HTTP request (usually POST) to the URL you provided.
+
+* Use Case Example: A common use of webhooks is in Continuous Integration/Continuous Deployment (CI/CD) pipelines.
+
+For example, GitHub can use a webhook to notify a CI server like Jenkins to start a new build whenever code is pushed to a repository.
 
 {{< /details >}}
 

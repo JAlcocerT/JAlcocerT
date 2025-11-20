@@ -291,10 +291,6 @@ https://quadscadiz.com/
 
 * ecommerce - https://outficik.pl/
 
----
-
-To try Astro+Ghost headlessCMS as described 
-https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/#gatsby
 
 -->
 ---
@@ -361,10 +357,7 @@ Registry Expiry Date - 26 April 2025
 
 * ecommerce - https://outficik.pl/
 
----
 
-To try Astro+Ghost headlessCMS as described 
-https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/#gatsby
 
 -->
 
@@ -404,12 +397,7 @@ https://quadscadiz.com/
 
 * ecommerce - https://outficik.pl/
 
----
 
-To try Astro+Ghost headlessCMS as described 
-https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker/#gatsby
-
--->
 ---
 
 ### Competitors

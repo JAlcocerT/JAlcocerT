@@ -96,7 +96,7 @@ Personally, I find **HUGO** a fantastic option (I migrated this blog to HUGO fro
 
     * Another [SSG](https://ssg-dataset.streamlit.app/)'s that can serve as HUGO alternatives (free and open source) are:
         * Jekyll (Ruby)
-        * Gatsby (Js)
+        * NextJs
         * Astro (Js)
 {{< /dropdown >}}
 
@@ -118,6 +118,7 @@ They guide teams through each stage of the project, from initial planning and de
 They help manage risks, control quality, and accommodate changes or constraints, ultimately **leading to the successful delivery** of high-quality software that meets user needs and expectations.
 
 {{< dropdown title="Here is where you get to Know about Waterfall and Agile 👇" closed="true" >}}
+
 #### Waterfall: *plan, then develop*
 
 The [Waterfall](/software-development-methodologies-data-analytics/#waterfall-development-methodology) methodology is a linear project management approach in software development, where stakeholder and customer requirements are gathered at the beginning of the project, and progress flows in a single downward direction through a series of phases.

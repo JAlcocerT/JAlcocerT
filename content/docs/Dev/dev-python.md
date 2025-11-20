@@ -46,6 +46,8 @@ curl -LsSf https://astral.sh/uv/0.7.7/install.sh | sh
 uv --version #uv 0.7.7
 ```
 
+Example with BAML:
+
 ```sh
 uv init
 #add dependencies

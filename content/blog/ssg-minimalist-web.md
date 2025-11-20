@@ -130,7 +130,7 @@ But the curated already digested content will go to `blog.jalcocertech.com`
 
 >  Nuxt Portfolio Template made with Nuxt UI and [Nuxt Content](https://github.com/JAlcocerT/Home-Lab/tree/main/nuxt-content). 
 
-
+4. https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal Now that I have covered gatsby?
 
 
 ### CMS x Astro
@@ -140,8 +140,6 @@ From the experience: Dont do more than 3 websites to very close people if you th
 Thats where [selfhosted tools](https://docs.vrite.io/self-hosting/configuration/) like: https://github.com/vriteio/vrite are supposed to shine.
 
 >  Open-source developer content platform 
-
-
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/directus" title="DirectusCMS | Docker Config 🐋 ↗" >}}

@@ -149,5 +149,5 @@ These tools allow you to write content in a simplified markup language (like Mar
 
 While not strictly "code-as-PPT," these modern tools use code and data to generate web-based presentations that are often exported to PDF or HTML.
 
-* **Observable Plot/Vega-Lite** + **Static Site Generator (e.g., Gatsby, Next.js):** Allows you to generate highly dynamic, data-driven slides using JavaScript/React and modern visualization code.
+* **Observable Plot/Vega-Lite** + **Static Site Generator (e.g., Astro, Next.js):** Allows you to generate highly dynamic, data-driven slides using JavaScript/React and modern visualization code.
 * **Quarto:** An open-source scientific and technical publishing system (successor to R Markdown) that can output beautiful presentations (Reveal.js, Beamer, Powerpoint) directly from notebooks containing code and Markdown.

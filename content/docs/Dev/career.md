@@ -21,17 +21,16 @@ For [PMs](https://jalcocert.github.io/JAlcocerT/selfhosting-pm-tools-docker/) in
 
 > And Im not just talking about [Jira/ADO](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/).
 
-Remember that ppts can be done via code, like [so](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev).
+Remember that ppts can be done via code, like [so](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev). With [live data capabilities](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#slidev-and-tech-talks) via API queries.
 
 And also those pdf reports or the 
 
 For the *db alergic* ones, see:
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/silverbullet" title="silverbullet | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/silverbullet" title="Silverbullet | Docker Configs 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tasks-md" title="Tasks-md kanban board| Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 ### CV Tools
 
@@ -41,34 +40,20 @@ From word, to pptx and later I explored canva, which resulting pdf had some [par
 
 Then, I switched gears to **cv as a code approach**: with [OSS CV builders](https://fossengineer.com/open-source-curriculum/) and with [Latex via overleaf](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#cv-as-a-code)
 
-1. [YAMLResume](#yaml-resume)
+1. YAMLResume
 2. Reactive Resume
-3. Open Resume, which I forked [here](https://github.com/JAlcocerT/open-resume) with CI/CD powered Container
+3. Open Resume, which I forked [here](https://github.com/JAlcocerT/open-resume) with a [CI/CD powered](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/#cicd-tools) Container
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reactive-resume" title="Reactive Resume | Docker Configs 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-resume" title="Open-Resume| Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-4. Cool Latex CV Templates for Overleaf
+4. Cool Latex CV Templates for [Overleaf](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#creating-a-responsive-cv)
 
 And as some point I saw clear the setup: scrap offer + customize the cv code with LLMs as per your experience context, *aka [historieta](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#historieta)*:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="Scrapping job boards" >}}
-  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Latex CV with Open AI LLM" >}}
+  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="NEW - CV-lAItex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Latex CV with Open AI LLM" >}}
 {{< /cards >}}
-
-5. YAML Resume
-
-Control a yaml like: https://github.com/yamlresume/yamlresume/blob/main/packages/cli/resources/resume.yml
-
-Get a PDF to apply to the offer you want before some AI agent take it.
-
-Render content using LaTeX templates. I liked: https://yamlresume.dev/docs/layout/templates/moderncv-classic
-
-Generate PDFs via XeTeX or Tectonic compilation engines
-
-* https://github.com/yamlresume/yamlresume
-
-> MIT |  Resumes as code in YAML, brought to you with ❤️ by PPResume. 

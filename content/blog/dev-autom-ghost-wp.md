@@ -106,7 +106,7 @@ curl -u 'jalcocert:bzkh]FTp3}T]#Mj' -X POST "$WP_HOME/wp-json/wp/v2/posts" \
 6.  **Critical**: Copy the generated password immediately - it will only be shown once!
 7.  Store this password securely
 
-### Authentication Details
+#### Authentication Details
 
 - **Username**: Your WordPress username (not your email address)
 - **Password**: The generated application password (not your WordPress login password)

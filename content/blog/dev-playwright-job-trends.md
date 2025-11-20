@@ -25,7 +25,7 @@ But I wanted to keep checking to be ready for *bronversations*:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scraping Post 101" image="/blog_img/data-experiments/job-market.png" subtitle="Tinkering on Y24 with Firecrawl, crawl4AI, ScrapeGraph..." >}}
-  {{< card link="https://github.com/JAlcocerT/Job-Trends" title="Job-Trend Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4/Selenium/Playwright to get Data about the Job Market and push it to sqlite3" >}}
+  {{< card link="https://github.com/JAlcocerT/Job-Trends" title="Job-Trend Repo - Added Manual Entry" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4/Selenium/Playwright to get Data about the Job Market and push it to sqlite3" >}}
 {{< /cards >}}
 
 
@@ -40,12 +40,6 @@ From the previous post and tinkering we have:
 But there were some web updates and it stopped working. 
 
 Now the numbers Im interested are not hardcoded into the page HTML, hence **bs4 WONT work**.
-
-### Playwright
-
-Certainly! Here's a rewritten version of the Playwright and Selenium sections for the post to improve explanation and clarity:
-
-***
 
 ### Playwright
 
@@ -110,7 +104,9 @@ Selenium is a well-established browser automation framework originally designed 
 
 Over the years, it has also been **adapted for scraping tasks** due to its ability to control real browsers and handle JavaScript-heavy sites.
 
-While Selenium can get the job done, it tends to be heavier and sometimes less flexible than Playwright for modern scraping needs. Playwright’s more recent design with built-in support for multiple browser engines and stealth features makes it the preferred choice for complex web scraping projects today.
+While Selenium can get the job done, it tends to be heavier and sometimes less flexible than Playwright for modern scraping needs. 
+
+Playwright’s more recent design with built-in support for multiple browser engines and stealth features makes it the preferred choice for complex web scraping projects today.
 
 ---
 

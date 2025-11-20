@@ -321,6 +321,7 @@ If it gets really complex, you will need Playwright magic, instead of *'just' Bs
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Job-Trends" title="Job-Trend Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4 to get Data about the Job Market and push it to sqlite3" >}}
+  {{< card link="https://github.com/JAlcocerT/Job-Trends" title="Job-Trend Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4 to get Data about the Job Market and push it to sqlite3" >}}
 {{< /cards >}}
 
 For more ideas, check also:
@@ -547,10 +548,9 @@ In essence, if you need to create a highly formatted document with complex mathe
 
 If you need to create simple, easy-to-read text documents or web content, Markdown is the more practical option.
 
-
 {{< cards >}}
-  {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
-  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Latex CV with Open AI LLM" >}}
+  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="Scrapping job boards" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="NEW - CV-lAItex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Latex CV with Open AI LLM" >}}
 {{< /cards >}}
 
 2. I was also exploring how to create a [CV with AI](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#cv-with-ai), based on [**open source CV as a Code**](https://fossengineer.com/open-source-curriculum)
@@ -559,58 +559,44 @@ If you need to create simple, easy-to-read text documents or web content, Markdo
 
 **Absolutely!** There are some excellent LaTeX themes specifically designed for CV/resume building. Let me show you some popular options:
 
-## **🎯 Popular CV/Resume LaTeX Themes**
+**🎯 Popular CV/Resume LaTeX Themes**
 
-### **1. ModernCV** (Most Popular)
+**1. ModernCV** (Most Popular)
 - **Professional and clean** design
 - **Multiple color schemes** (blue, orange, green, red, grey, black)
 - **Multiple styles** (casual, classic, banking, fancy)
 - **Easy to customize**
 
-### **2. AwesomeCV**
+**2. AwesomeCV**
 - **Modern, minimalist design**
 - **Great for tech professionals**
 - **Clean typography and spacing**
 
-### **3. Friggeri CV**
+**3. Friggeri CV**
 - **Elegant sidebar layout**
 - **Professional appearance**
 - **Good for academic/research positions**
 
-### **4. AltaCV**
+**4. AltaCV**
 - **Modern design with sidebar**
 - **Great for developers and designers**
 - **Supports multiple layouts**
 
-### **🚀 Let's Install and Try ModernCV**
+**🚀 Let's Install and Try ModernCV**
 
-
-[1 tool called]
-
+```
 Great! ModernCV is already available. Let me create a sample CV template for you:
-
-
-[1 tool called]
 
 Now let's compile this CV to see how it looks:
 
-
-[1 tool called]
-
 Great! The CV compiled successfully! The error about the missing `picture` file is just because we referenced a photo that doesn't exist. Let's check the generated PDF:
-
-
 
 Perfect! Now let me show you how to use Pandoc with CV templates. Let me create a markdown version of a CV that can be converted using Pandoc:
 
-
-
 Now let's convert this markdown CV to PDF using our Eisvogel template:
 
-
-
 Great! It worked (just some emoji warnings which is normal). Let's also create a version without emojis for better compatibility:
-
+```
 
 
 
@@ -627,6 +613,7 @@ Perfect! You now have multiple CV options. Here's what we've created:
 **🎨 Available CV Themes:**
 
 **1. ModernCV (Pure LaTeX)**
+
 ```bash
 # Direct LaTeX compilation
 xelatex sample-cv.tex
@@ -707,13 +694,11 @@ How do you define success in the team?
 * what key features a person need to be a good cultural fit for the company?
 * what are the current company goals and how this team/role is supporting them? 
 
-
 Regarding priority management What is the work methodology that is implemented in the team? Kanban? Scrum?
 
 * What are other departments that we collaborate with? How does the marketing team work with other teams in the company.
 * What is the business domain of the customers that we are expected to work for?
 * What opportunities for professional development and learning are available?
-
 
 In addition to my professional experience, I actively maintain a tech blog where I share insights, methodologies, and best practices in analytics.
 
@@ -737,133 +722,6 @@ This platform not only demonstrates my deep commitment to the field but also sho
 
 * How do you promote knowledge sharing and collaboration among team members to ensure continuous improvement in data practices?
 
-<!-- 
-
-partially BA - domain and project is known in advance healthcare company - 
-
-Information to insight
-Stakeholder management
-Managing expectations
-Estimating tasks
-How to sell ideas
-What we are missing (fomo, loss>>>gain)
-
-
-
-
-
-### 🔍 **Interview Summary – Data/Analytics/Product Role**
-
-#### 🧑‍🤝‍🧑 **Stakeholders**
-- Key stakeholders: Finance, Software Engineering, UK team
-- Strong collaboration with Product Owners, especially Ekaterina (Platform Lead)
-
-#### 🚀 **Onboarding Process**
-- 2-week onboarding includes:
-  - Research
-  - Estimations
-  - Reviewing product documentation
-  - Identifying/flagging conflicts
-- RACI model might be applied (unclear how currently)
-
-#### ⏱️ **Work Environment & Context**
-- High time pressure due to organizational and cultural changes
-- 5 of 7 EU companies acquired over 5 years (e.g. Alteryx; legacy systems like Pentaho)
-- Data Analyst/Product Analyst (Maria) with a statistics background has been with them for 1 year
-
-#### 💻 **Architecture & Tools**
-- Big Data platform (used in healthcare analytics)
-- Components:  
-  - Data Lakehouse with Spark, Hive, Trino, Iceberg, Nessie
-  - Data Quality Engine (380 rules processed in 5 min)
-  - Data Viewer
-- Experimental/prototyping approach supported (e.g. anomaly detection, profiling, test data dashboards)
-- Great Expectations framework in use
-
-#### 🏥 **Use Case & Scale**
-- Platform supports hospitals and pharma companies across Europe
-- ~40-50 concurrent data jobs — high throughput
-- Populate infra with data; not just infra building
-
-#### 🔁 **Processes & Team Structure**
-- Scrum-like, but customized:
-  - Product backlog + team backlog
-  - Phase-out & Program Increment (PI) planning
-- Team roles:
-  - Python engineers
-  - Frontend & backend developers
-  - PySpark engineers
-  - System analysts
-  - Scrum master
-  - UX/UI designers
-  - 2–3 Product Owners
-  - E. defines priorities
-
-#### 📈 **Your Potential Contributions**
-- Support E. and Product Owners (especially with the Data Quality Engine)
-- Work may span multiple teams
-- Collaborate closely with developers and analysts
-- Help bridge communication between stakeholders and devs (e.g. with RCA and bug triaging)
-
-#### 🏆 **Goals & Success Criteria**
-1. **Readiness:** Team consistently ready for sprints every 2 weeks
-2. **Education:** Increase stakeholder understanding of:
-   - Data quality rules
-   - Broader data culture
-3. MVP targeted for March Y24
-
-#### 📚 **Other Observations**
-- Migration project — some stakeholders are SQL-savvy, others less so
-- Strong focus on aligning devs on *what* to build and *why* (prototyping, edge cases)
-- Anomaly detection experience stood out to the team
--->
-
-
-<!--
-50/50 tech/business customer journey and so on
-maximize efficiency of taxi locations 7-3 UAT
-
-moving from rule base to ML based decisions systems
-
-Continuously develop and learn new skills independently, staying up to date with the latest marketing science and analytics techniques.
-
-Contribute to the development of innovative approaches in marketing science, exploring new areas for growth and improvement.
-
-H. - hiring manager data analytics
-
-comm skills - get to the point + add info
-product knowledge
-how to fit in the team
-present to: work autonomously + lead others 
--->
-
-<!-- 
-================
-Hello XYZ,
- Thank you for reaching out and considering me for the position. 
-Before moving forward, I'd like to get a better understanding of the role and its alignment with my career goals. 
-
-If you could provide answers to the following questions, it would help me in evaluating the opportunity further:
-
-Can you share more details about the main responsibilities of the role, and how it fits within the larger organizational structure?
-What are the key performance indicators (KPIs) for this role, and how is success measured? 
-What kind of projects and challenges would I be working on, and what is the typical project duration?
- How is the professional growth and development of the employees supported?
-Can you provide some insights about work culture, values, and long-term vision? 
-
-Please, consider that I am interested in B2B + Remote roles only.
-
-Could you also provide details on the contract duration and renewal process?
-
-Additionally, I would like to mention that due to my wide range of skills, including not only technical expertise but also strong interpersonal and project management, my salary expectations for this role are between 123k and 567k.
-
-Leveraging upon my T-shaped skills that i like to share with others (you can see my blog), I  understand the distinct dynamics of various fields, and therefore can facilitate collaboration across teams. I believe this adds extra value to my overall technical skill set.
-
-Thank you in advance for providing more information about this opportunity. This will help me assess if the role aligns with my career goals and interests. 
-Best regards,
-
--->
-
 #### For BAs/PMs
 
 These are excellent and comprehensive questions for a BA/PM interview preparation. 
@@ -877,6 +735,7 @@ Here's a breakdown of why each question is effective and what to focus on when a
 This question assesses your sense of ownership and leadership. A good answer will show you don't just complete tasks, but you also take ultimate responsibility for the project's success or failure.
 
 * **What to Prepare:** Think of a specific project where you took charge. Describe a situation where you had to make a tough decision or where something went wrong. Focus on what you did to rectify the situation and how you learned from it. Avoid blaming others. The interviewer wants to see that you're proactive and resilient.
+
 * **Key Skills to Highlight:** Leadership, ownership, problem-solving, resilience, and proactivity.
 
 ***

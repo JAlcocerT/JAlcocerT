@@ -2,7 +2,7 @@
 title: "Take a Break - Gaming with OSS"
 date: 2026-12-23T23:20:21+01:00
 draft: true
-tags: ["Self-Hosting","Emulation","Nintendo"]
+tags: ["Self-Hosting","Emulation","Nintendo","Yatch x EmulatorJS"]
 description: '.'
 summary: 'The , my new toy.'
 url: 'open-source-gaming'
@@ -25,25 +25,8 @@ Setup yatch with CLI:
 docker run -d -p 8008:8000 -v /var/run/docker.sock:/var/run/docker.sock -v ~/Dockeryacht:/config --name yatch selfhostedpro/yacht
 ```
 
-or docker-compose:
 
-```yml
-version: '3.8'
-services:
-  yacht:
-    image: selfhostedpro/yacht
-    container_name: yacht
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ~/Dockeryacht:/config
-    ports:
-      - 8008:8000
-    restart: unless-stopped
 
-```
-
-`admin@yacht.local`
-`pass`
 
 ## Using The Container
 

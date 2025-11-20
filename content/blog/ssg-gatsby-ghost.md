@@ -18,6 +18,8 @@ I got recently one of them, Gatsby, to work with GhostCMS.
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="GhostCMS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+I was recently tinkering here with [Ghost and its API](https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/#programatic-ghost) for automatic post creation.
+
 
 ## About the Web
 
@@ -202,6 +204,8 @@ https://github.com/Uvacoder/rocketdocs-starter?ref=statichunt.com -->
 
 
 ## Gatsby 💗 ghost
+
+As we saw, its not hard to [get started with Ghost](https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/#ghost-setup).
 
 https://jamstackthemes.dev/theme/gatsby-starter-ghost/
 https://gatsby.ghost.org/
