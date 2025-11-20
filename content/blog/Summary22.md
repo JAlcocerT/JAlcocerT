@@ -3,6 +3,7 @@ title: "Summary 2022"
 date: 2022-12-25T23:20:21+01:00
 draft: false
 tags: ["Blog","Year-Review"]
+description: "The come back to cycling and exploring the world :)"
 ---
 
 As part of my yearly summary, that I have been doing for some years already, these are some of the items concerning in a way, FOSS and/or engineering for 2022.
@@ -24,6 +25,7 @@ I learnt about cloud:
 - Using GCP free tier for self-hosting outside the RPi
 
 I traveled in a way I never did before:
+
 - <https://fossengineer.com/trip-bike-poland-hungary/>
 
 I came back to Turkey for the first time since 2019 and realized that I am even in a better position that I could have wished back then.

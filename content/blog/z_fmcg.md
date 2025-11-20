@@ -123,7 +123,11 @@ MRP then checks current inventory levels and automatically generates purchase or
 
 2. Distribution Requirements Planning (DRP)
 
-DRP is a planning system used for **managing the distribution of finished goods**. It takes the sales forecast and planned orders for finished products and determines where and when to send them to meet customer demand. DRP works backward from the point of sale.
+DRP is a planning system used for **managing the distribution of finished goods**. 
+
+It takes the sales forecast and planned orders for finished products and determines where and when to send them to meet customer demand.
+
+DRP works backward from the point of sale.
 
 DRP answers the questions:
 
@@ -180,7 +184,9 @@ It encompasses a wide range of businesses that provide food, beverages, and acco
 
 Yes, HORECA is a significant **sales channel for Fast-Moving Consumer Goods (FMCG)**.
 
-FMCG companies produce everyday essentials that are sold quickly and at relatively low prices (e.g., food, beverages, toiletries, cleaning supplies). The HORECA sector relies heavily on FMCG products for its operations.
+FMCG companies produce everyday essentials that are sold quickly and at relatively low prices (e.g., food, beverages, toiletries, cleaning supplies).
+
+The HORECA sector relies heavily on FMCG products for its operations.
 
 Here's how HORECA relates to FMCG sales:
 
@@ -189,7 +195,9 @@ Here's how HORECA relates to FMCG sales:
 * **Cafés** rely on FMCG brands for coffee beans, tea leaves, dairy products, baked goods, and other snacks.
 * **Catering services** also need a steady supply of FMCG goods, from bottled water to ingredients for meals.
 
-Therefore, while HORECA itself is an industry (hospitality and food service), it acts as a crucial business-to-business (B2B) channel for FMCG manufacturers and distributors. FMCG companies often tailor their products and sales strategies to meet the specific needs of the HORECA sector, which differs significantly from traditional retail channels.
+Therefore, while HORECA itself is an industry (hospitality and food service), it acts as a crucial business-to-business (B2B) channel for FMCG manufacturers and distributors. 
+
+FMCG companies often tailor their products and sales strategies to meet the specific needs of the HORECA sector, which differs significantly from traditional retail channels.
 
 ---
 
@@ -205,8 +213,6 @@ Think of it this way: all pharmaceutical companies are part of the life sciences
 * **Medical Devices**: Companies that make medical instruments, implants, and diagnostic tools.
 * **Nutraceuticals**: Focuses on food and supplements that offer health benefits.
 
-<!-- The candidate's experience at Exadel is in "Healthcare analytics," a domain that could span both the life sciences and pharmaceuticals. IQVIA is a perfect example of a company that operates in this intersection, providing data services to a wide range of clients in these fields. -->
-
 ---
 
 ### Is it possible that FMCG demand planning teams were also using such time series data to feed their modeling?
@@ -220,8 +226,6 @@ Demand Planning is all about modelling, or *trying to* model the future.
 * **Integrating with DRP and MRP**: The demand planning team would take the Nielsen data, which shows how their products and competitors' products are selling, and use it to refine their demand models. This refined forecast would then be the key input for their **Distribution Requirements Planning (DRP)** system, which tells them what finished goods need to be moved to which warehouses. That DRP plan, in turn, feeds the **Material Requirements Planning (MRP)** system to schedule production.
 
 * **The Power of Real-Time Insights**: A time-series database allows P&G or Ferrero to see the immediate impact of a new product launch, a competitor's price change, or a seasonal shift in consumer behavior. This real-time visibility allows them to quickly adjust their demand forecasts, helping them optimize inventory and avoid costly stockouts or oversupply.
-
-<!-- The candidate's role at Nielsen, providing "recommendations to clients based on KPI/Dashboards," was essentially about delivering these crucial demand signals to the clients' planning teams. -->
 
 
 ### Procurement vs Logistics
@@ -351,7 +355,11 @@ Think of ERP as the software that runs the entire internal engine of your compan
 Imagine a company that manufactures and sells widgets.
 
 * A sales rep uses the **CRM** to track a lead, follow up with them, and log their communications. Once the customer decides to buy, the sales rep creates a sales order in the CRM.
-* The **ERP** takes over from there. It sees the new sales order and checks inventory to see if there are enough widgets in stock. If not, it automatically creates a work order for the manufacturing department. It then tracks the raw materials used, schedules the production, and manages the billing and shipping process. Finally, it records the revenue and updates the company's financial records.
+* The **ERP** takes over from there. It sees the new sales order and checks inventory to see if there are enough widgets in stock. If not, it automatically creates a work order for the manufacturing department. 
+
+It then tracks the raw materials used, schedules the production, and manages the billing and shipping process.
+
+Finally, it records the revenue and updates the company's financial records.
 
 While the CRM focused on the customer relationship and the sale, the ERP managed all the complex internal processes required to fulfill that order and keep the business running smoothly.
 

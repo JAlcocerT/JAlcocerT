@@ -332,8 +332,6 @@ And bc as if we are out of sight, we are out of mind we have to [make our servic
 
 Including the dirty [ads](#ads).
 
-
-
 ### Outro
 
 Buying a house is a big decision.
@@ -342,7 +340,7 @@ Specially with these salaries and prices:~250k a flat vs 25k/y household income
 
 ![INE MAP Household income](/blog_img/web/moi-realestate/ine-realestate.png)
 
-![alt text](/blog_img/web/moi-realestate/viviendaylocales-example.png)
+![Paco Real Estate Example](/blog_img/web/moi-realestate/viviendaylocales-example.png)
 
 * https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/27213492/es/
 * https://www.ine.es/ADRH/?config=config_ADRH_2023.json&showLayers=ADRH_2023_Renta_media_por_hogar_cache&level=5
@@ -371,7 +369,6 @@ Have something to supply, rise demand, then rise again your ability to supply by
 Lets say, for example, with [Apify](https://jalcocert.github.io/JAlcocerT/apify/) which is one of the very [interesting APIs available](https://jalcocert.github.io/JAlcocerT/interesting-apis/) nowadays.
 
 Your journey with lead generation can start here: https://apify.com/store/categories/lead-generation
-
 
 ### Copy Paste Plugins for Webs
 
@@ -405,12 +402,11 @@ Master a thing and help others!
 
 That level of focus is what platforms like elestio achieve: https://elest.io/open-source/n8n
 
-
-
 #### MailerLite
 
+If you have an audience and are interested to bring email subscriptions to your website, MailerLite is a good option.
 
-{{< details title="Setup MailerLite 📌" closed="true" >}}
+{{< details title="Setup MailerLite for premium real estate agencies 📌" closed="true" >}}
 
 You will need to authenticate that you own the email and also the domain (with DNS).
 
@@ -457,7 +453,7 @@ With the typical "I can design your website" printed with a cool logo.
 
 ![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
 
-> Creating these and print them should not be a problem as you can master the power of PDFs and QR codes as a code.
+> Creating these and print them should not be a problem as you can master the power of [PDFs /reports / infographics](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#reports-as-a-code) and QR codes as a code.
 
 The prices? They were mentioned at ~1500$.
 
@@ -474,8 +470,6 @@ Kaboommmm 🤯
 In other european countries, what I see more and more is that behind every website, there is some kind of gov funding: https://organizate.info/
 
 They have a ~2008 design vibe though, see an [example](https://www.zierzoware.com/)
-
-
 
 ### How to Deploy Strapi - Headless CMS
 
@@ -498,7 +492,9 @@ GraphQL.
 
 #### F/OSS CMS
 
-Directus: Directus is an open-source headless CMS that offers real-time data synchronization and versioning. It provides a database-agnostic API and a user-friendly admin interface. And it can also handdle authentication
+Directus: Directus is an open-source headless CMS that offers real-time data synchronization and versioning.
+
+It provides a database-agnostic API and a user-friendly admin interface. And it can also handdle authentication
 
 * https://github.com/directus/directus
 

@@ -339,10 +339,7 @@ You can also use them for lazy DIY users to jump into a DWY model:
 
 ![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png)
 
-
 {{< /details >}}
-
-
 
 
 #### Reports as a code
@@ -433,7 +430,9 @@ More options for **creating your CV**?
 
 > MIT |  Version-control CVs/resumes as source code 
 
-5. YAML Resume
+5. YAML Resume https://github.com/yamlresume/yamlresume
+
+> MIT |  Resumes as code in YAML, brought to you with ❤️ by PPResume. 
 
 Control a yaml like: https://github.com/yamlresume/yamlresume/blob/main/packages/cli/resources/resume.yml
 
@@ -443,9 +442,10 @@ Render content using LaTeX templates. I liked: https://yamlresume.dev/docs/layou
 
 Generate PDFs via XeTeX or Tectonic compilation engines
 
-* https://github.com/yamlresume/yamlresume
-
-> MIT |  Resumes as code in YAML, brought to you with ❤️ by PPResume. 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CV as a Code, via Latex or YAMLResume." >}}
+{{< /cards >}}
 
 6. https://github.com/aadya940/autoresume
 

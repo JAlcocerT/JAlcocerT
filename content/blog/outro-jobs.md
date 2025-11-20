@@ -340,7 +340,7 @@ You can build a **CV with code via overleaf** (latex powered): https://www.overl
 
 > —the collaborative, online **LaTeX editor** that anyone can use
 
-How exactly have I used overlead? 
+How exactly have I used [overleaf](#creating-a-responsive-cv)?
 
 [**Lets get down to it**](#creating-a-responsive-cv)
 
@@ -367,27 +367,6 @@ These tools are also interesting for CV's in the AI/LLM era:
 
 Prompty is an asset class and format for LLM prompts designed to enhance observability, understandability, and portability for developers.
 
-
-<!-- 
-## What it is a LLM Engineer?
-
-
-
-### We require
-
-experience in projects related to natural language processing, machine learning or related fields
-higher education
-Proven experience working with LLM models such as GPT-3, GPT-4 or similar
-proficiency in programming languages: Python and SQL
-experience in LLMops - knowledge of the LangChain framework
-excellent analytical skills, problem-solving skills and a passion for using technology to solve problems
-
-
-### Additionally (as an advantage):
-experience with machine learning frameworks such as TensorFlow, PyTorch or Hugging Face Transformers
-knowledge of vector databases and their applications
-good knowledge of natural language processing techniques: sentiment analysis, text classification and language generation -->
-
 ### New Jobs Out There
 
 #### What is an LLM Engineer?
@@ -404,11 +383,17 @@ key aspects of an LLM Engineer's role, based on your requirements:
 
 
 * **LLM Model Expertise:**  LLM Engineers possess a deep understanding of LLMs like GPT-3, GPT-4, and similar models. This includes knowledge of their architecture, strengths, weaknesses, and how to fine-tune and prompt them effectively.  They are not just users of LLMs, but understand the underlying mechanics.
+
 * **Natural Language Processing (NLP) Proficiency:**  They have a strong foundation in NLP concepts and techniques.  This includes text preprocessing, feature engineering, sentiment analysis, text classification, language generation, and more.  They know how to prepare and manipulate text data for optimal LLM performance.
+
 * **Programming Skills:**  Proficiency in Python is essential for working with LLMs and related libraries.  SQL skills are also crucial for data management and interaction with databases, which are often used to store and retrieve information used by LLMs.
+
 * **LLMops:**  LLM Engineers are familiar with the principles of LLM Operations (LLMops).  This includes using frameworks like LangChain to streamline the development lifecycle, manage prompts, chain LLM calls, and integrate with other systems.  They understand how to deploy, monitor, and scale LLM applications.
+
 * **Problem Solving and Analytical Skills:**  They are adept at analyzing complex problems, designing solutions using LLMs, and evaluating the performance of their applications. They can identify bottlenecks, debug issues, and optimize for efficiency and accuracy.
+
 * **Project Experience:**  Practical experience in NLP or machine learning projects is a must.  They should have a portfolio of work that demonstrates their skills and understanding of the field.
+
 * **Higher Education:** A strong educational background in computer science, machine learning, or a related field is typically required to grasp the complex concepts involved in LLM engineering.
 
 
@@ -484,8 +469,7 @@ I had some situations when I was using some cool curriculum design, yet the comp
 
 > MIT | 👔 A collection of cv and resume templates written in LaTeX. Leave an issue if your language is not supported!
 
-
-You can combine both worlds, take a theme, and edit it with overleaf:
+You can combine both worlds, take a theme, and **edit it with overleaf**:
 
 * https://latexcv.pro/
 * https://www.overleaf.com/latex/templates/jan-kusters-classic-cv/tvghvdsffwgs
@@ -499,7 +483,7 @@ git clone https://github.com/jakegut/resume/
 pdflatex <filename>.tex #to compile to PDF
 ```
 
-{{< details title="Latex? Why not md? 📌" closed="true" >}}
+{{< details title="Latex? Why not just markdown? 📌" closed="true" >}}
 
 **LaTeX:**
 
@@ -549,7 +533,7 @@ In essence, if you need to create a highly formatted document with complex mathe
 If you need to create simple, easy-to-read text documents or web content, Markdown is the more practical option.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="Scrapping job boards" >}}
+  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
   {{< card link="https://github.com/JAlcocerT/cv-laitex" title="NEW - CV-lAItex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Latex CV with Open AI LLM" >}}
 {{< /cards >}}
 
@@ -557,7 +541,7 @@ If you need to create simple, easy-to-read text documents or web content, Markdo
 
 #### Latex themes for CVs
 
-**Absolutely!** There are some excellent LaTeX themes specifically designed for CV/resume building. Let me show you some popular options:
+There are some excellent LaTeX themes specifically designed for CV/resume building. 
 
 **🎯 Popular CV/Resume LaTeX Themes**
 
@@ -597,8 +581,6 @@ Now let's convert this markdown CV to PDF using our Eisvogel template:
 
 Great! It worked (just some emoji warnings which is normal). Let's also create a version without emojis for better compatibility:
 ```
-
-
 
 **🎯 CV/Resume LaTeX Themes - Complete Guide**
 
@@ -680,21 +662,24 @@ HR *might* as you with these, so be prepared:
 
 Im guessing that you are focusing into a D&A related role, consider adapting these into any field, like [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/) or [FCMG/SCM](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/)
 
+#### Questions to HR
 
-**Questions to HR:**
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Questions2HR.md" title="HR QQ 🐵 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Questions2Managers.md" title="Manager QQ 🐵 ↗" >}}
+{{< /cards >}}
 
 1. How does the on boarding looks like - To the company and project?
 2. Are there any colleagues already on boarded? in which roles?
 3. How does the tech interview looks like?
-
-How do you define success in the team?
+4. How do you define success in the team?
 
 * what does it mean success in this position? how do you measure it?
 * what do u like the most working for this company?
 * what key features a person need to be a good cultural fit for the company?
 * what are the current company goals and how this team/role is supporting them? 
 
-Regarding priority management What is the work methodology that is implemented in the team? Kanban? Scrum?
+5. Regarding priority management What is the work methodology that is implemented in the team? Kanban? Scrum?
 
 * What are other departments that we collaborate with? How does the marketing team work with other teams in the company.
 * What is the business domain of the customers that we are expected to work for?
@@ -724,7 +709,7 @@ This platform not only demonstrates my deep commitment to the field but also sho
 
 #### For BAs/PMs
 
-These are excellent and comprehensive questions for a BA/PM interview preparation. 
+These are excellent and comprehensive questions for a **BA/PM interview preparation**. 
 
 They cover core competencies essential for success in both roles. 
 
@@ -734,20 +719,23 @@ Here's a breakdown of why each question is effective and what to focus on when a
 
 This question assesses your sense of ownership and leadership. A good answer will show you don't just complete tasks, but you also take ultimate responsibility for the project's success or failure.
 
-* **What to Prepare:** Think of a specific project where you took charge. Describe a situation where you had to make a tough decision or where something went wrong. Focus on what you did to rectify the situation and how you learned from it. Avoid blaming others. The interviewer wants to see that you're proactive and resilient.
+* **What to Prepare:** Think of a specific project where you took charge. Describe a situation where you had to make a tough decision or where something went wrong.
+
+Focus on what you did to rectify the situation and how you learned from it. Avoid blaming others.
+
+The interviewer wants to see that you're proactive and resilient.
 
 * **Key Skills to Highlight:** Leadership, ownership, problem-solving, resilience, and proactivity.
-
-***
 
 **Resolving Difficult Conflicts**
 
 This question tests your interpersonal skills and emotional intelligence. In any project, conflicts are inevitable, and how you handle them is crucial.
 
-* **What to Prepare:** Have a story ready about a conflict you faced, perhaps between a stakeholder and a developer, or within the development team itself. Walk through the steps you took to understand both sides of the issue. A good approach is to describe how you facilitated a discussion, found common ground, and arrived at a solution that satisfied everyone (or at least was a mutually acceptable compromise).
-* **Key Skills to Highlight:** Mediation, negotiation, communication, empathy, and active listening.
+* **What to Prepare:** Have a story ready about a conflict you faced, perhaps between a stakeholder and a developer, or within the development team itself. Walk through the steps you took to understand both sides of the issue. 
 
-***
+A good approach is to describe how you facilitated a discussion, found common ground, and arrived at a solution that satisfied everyone (or at least was a mutually acceptable compromise).
+
+* **Key Skills to Highlight:** Mediation, negotiation, communication, empathy, and active listening.
 
 **Analyzing Business Needs and Taking Requirements Easy for Development Team**
 
@@ -755,8 +743,6 @@ This is the core of the **Business Analyst (BA)** role and a key part of the **P
 
 * **What to Prepare:** Describe your process for gathering and documenting requirements. Explain how you use techniques like user stories, use cases, or process flows. Emphasize how you ensure the requirements are clear, concise, and non-ambiguous for the technical team. You might mention how you clarify assumptions and get buy-in from all parties.
 * **Key Skills to Highlight:** Requirement elicitation, documentation, communication, analytical thinking, and a solid understanding of agile/scrum methodologies.
-
-***
 
 **Cooperation with Development Team and Planning**
 

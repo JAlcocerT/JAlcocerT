@@ -2,7 +2,7 @@
 title: "About inflation"
 date: 2025-11-06
 draft: false
-tags: ["Outro","Data Experiments","Jobs","YAML Resume vs Overleaf"]
+tags: ["Outro","Data Experiments","Jobs","YAML Resume vs Overleaf","CV-Laitex"]
 description: 'Knowledge of Crowds: inflation and cost of living'
 url: 'about-inflation'
 ---
@@ -22,21 +22,8 @@ This year ive been covering few posts about the job market:
 {{< /cards >}}
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
-  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="NEW - CV-lAItex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Latex CV with Open AI LLM" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/blog_img/memes/oldnewjob.jpg" subtitle="With such setup, you will know when and what to send for each job offer!" >}}
 {{< /cards >}}
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/blog_img/memes/oldnewjob.jpg" subtitle="Post where I tinkered with scrapping tools and job offers" >}}
-  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for using BS4, AI Scraps..." >}}
-{{< /cards >}}
-
-
-{{< youtube "SbXpS94tkVA" >}}
-
-<!-- https://www.youtube.com/watch?v=SbXpS94tkVA -->
-
 
 
 So, how much will you have to ask to stay as you started the year?
@@ -79,7 +66,22 @@ Few years back I was creating a conceptual web app with R Flexdashboard to see t
 
 If you are tired of your salary not growing as fast as inflation nor your skills, you are [one **historieta**](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#historieta) and a [Cool CV away](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#creating-a-responsive-cv) of landing a better job for you.
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Historieta-v1125.md" title="Updated Historieta 1125 🐵 ↗" >}}
+{{< /cards >}}
+
 ### A CV via yamlresume vs overleaf
+
+We got these cool related repos.
+
+Becuase PDFs are messy and they are not always parsed properly as [tinkered on this repo](https://gitlab.com/fossengineer1/cv-check).
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CV as a Code, via Latex or YAMLResume." >}}
+{{< /cards >}}
+
+The goal is to make text to text job offer to job application. [As a Code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/).
 
 * Overleaf is great https://www.overleaf.com/login as we saw [here](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#creating-a-responsive-cv)
 
@@ -101,3 +103,15 @@ git clone https://github.com/JAlcocerT/cv-laitex
 
 
 ```
+
+
+Eeeenjoy :)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Questions2HR.md" title="HR QQ 🐵 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Questions2Managers.md" title="Manager QQ 🐵 ↗" >}}
+{{< /cards >}}
+
+{{< youtube "SbXpS94tkVA" >}}
+
+<!-- https://www.youtube.com/watch?v=SbXpS94tkVA -->

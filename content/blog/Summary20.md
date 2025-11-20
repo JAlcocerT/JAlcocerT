@@ -3,6 +3,7 @@ title: "Summary 2020"
 date: 2020-12-28T23:20:21+01:00
 draft: false
 tags: ["Blog","Year-Review"]
+description: "This was quite a ride..."
 ---
 
 

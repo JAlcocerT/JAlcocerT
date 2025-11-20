@@ -3,7 +3,7 @@ title: "What a Year...2025"
 date: 2025-12-23
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
-description: 'Looking back to the learnings of the year 2025.'
+description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-2025'
 ---
 
@@ -15,8 +15,6 @@ This year, Ive abused again of my unfair advantage.
 
 <!-- https://lenpaul.github.io/Millennial/  cycling? -->
 
-<!-- 
-    3d print: <https://www.thingiverse.com/thing:4553248> -->
 
 <!-- * Flutter
         * Counter knitting

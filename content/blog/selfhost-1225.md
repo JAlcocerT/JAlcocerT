@@ -2,7 +2,7 @@
 title: "SelfHosting is easy with PaaS"
 date: 2025-12-01T01:20:21+01:00
 draft: false
-tags: ["HomeLab ebook",""]
+tags: ["HomeLab ebook","Hetzner VPS"]
 description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
@@ -11,22 +11,9 @@ url: 'selfhosted-apps-december-2025'
 
 **Intro**
 
-I tend to get inspired with this kind of [vm and containers that im running](https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/) posts
+I tend to get inspired with this kind of [vm and containers that im running](https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/) posts.
 
-<!-- 
-### How to use Python for NLP
-
-#### How to use Python to detect PII
-
-* https://github.com/nltk/nltk - Apache v2
- -->
-
-
-<!--
- https://gitlab.com/fossengineer1/cv-check/-/pipeline_schedules
-https://gitlab.com/fossengineer1/cv-check
- -->
-<!-- https://github.com/users/JAlcocerT/packages/container/package/open-resume -->
+As I played with PaaS, wanted to proove how easy and quick is to set them into a VPS for ~4$/month.
 
 
 https://blog.excalidraw.com/
@@ -36,9 +23,6 @@ We all need to tell data stories sometimes: https://blog.excalidraw.com/tell-you
 Even before jumping to a Streamlit PoC, you can mockup very quickly via Excalidraw, like: https://excalidraw.com/#json=6443031091740672,amxJZJxlZAlUBLADWIukFg
 
 Once everyone is onboard, we can continue and end up with some cool [PBi](https://jalcocert.github.io/JAlcocerT/about-powerbi/) or a [GCP Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#what-it-is-looker-modelling-language) Dashboard.
-
-
-
 
 
 Mind your attention, stop auto engage and keep the important things at life first.
@@ -52,6 +36,22 @@ gollama
 
 
 ## Conclusion
+
+Probably having a **VPS** as compute backup is not a bad idea.
+
+And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their game: https://docs.hetzner.com/
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-hetzner-vps-setup" title="Hetzner VPS Setup | Script ↗" >}}
+{{< /cards >}}
+
+> [CX23](https://www.hetzner.com/cloud/) > CX22 in performance?
+
+> > Pay only for the hours you use, if you have a server for less than a month. No minimum contract period required!
+
+Keeping NS outside cloudflare and using the NGINX setup, instead of the Traefik one.
+
+
 
 url: 'sony- WF-1000XM3-linux'
 
@@ -208,6 +208,9 @@ You can get started very quickly, create a meeting and embed it into your websit
 <!-- https://youtu.be/qFMN0oDeCFg -->
 
 ![Calcom Email x Stripe ](/blog_img/email/cal-email-stripe.png)
+
+![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png)
+
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/cal/" title="Cal.com | Docker Config 🐋 ↗" >}}

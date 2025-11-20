@@ -24,7 +24,7 @@ A post about...Simply science.
 
 ## Electrical Engineering
 
-Everything is code. 
+Everything is...[code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/). 
 
 Same applies to circuit boards:
 

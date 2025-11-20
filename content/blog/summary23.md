@@ -3,24 +3,12 @@ title: "Summary 2023: "
 date: 2023-12-26T23:20:21+01:00
 draft: false
 tags: ["Blog","Year-Review"]
+description: "Its been kind of messy..."
 ---
 
 
 <!-- https://visitedplaces.com/view/?map=world&projection=geoNaturalEarth1&position=3.7_34.3_51_-12.4_0&theme=dark-green&water=1&graticule=0&names=1&duration=2000&placeduration=100&slider=0&autoplay=0&autozoom=none&home=PL&places=~DE_ES_PT_MX_FR_GB_IT_BE_NL_DK_SE_LT_LV_UA_HU_AT_CZ_SK_BG_GR_TR_MT_PL.daaa44 -->
 
-<!-- <https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal> jalcocert? -->
-<!-- https://lenpaul.github.io/Millennial/  cycling? -->
-
-<!-- 
-    3d print: <https://www.thingiverse.com/thing:4553248> -->
-
-<!-- * Flutter
-        * Counter knitting
-        * Timer para ejercicios
-        https://app.uizard.io/p/1ad5e459/preview -->
-
-
-# Summary of 2023
 
 
 **RISC-V open source arquitecture ????**

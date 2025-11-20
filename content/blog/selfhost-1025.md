@@ -410,27 +410,15 @@ https://www.youtube.com/live/t0Uk9eC146E?si=S9ruQrOgRa-DK_Ze
 
 ### More stuff Lately
 
-1. If you are experiencing **router restarts**, make sure that your homelab will have a **static local ip**.
+If you are experiencing **router restarts**, make sure that your homelab will have a **static local ip**.
 
 Identify the vendor of the [macs connected](https://it-tools.tech/mac-address-lookup) like `ASRock Incorporation`, then make an IP reservation on your router.
 
-> It should be among your CM settings, near the advanced ones like `NAT Forwarding`
+> It should be among your CableModem settings, near the advanced ones like `NAT Forwarding`
 
 > > You can also use duckdns or the traefik+tailscale IP way
 
-Probably having a VPS as compute backup is not a bad idea.
-
-And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their game: https://docs.hetzner.com/
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-hetzner-vps-setup" title="Hetzner VPS Setup | Script ↗" >}}
-{{< /cards >}}
-
-> [CX23](https://www.hetzner.com/cloud/) > CX22 in performance?
-
-> > Pay only for the hours you use, if you have a server for less than a month. No minimum contract period required!
-
-Spinning **Traefik is easier than ever**: *see how to do it for any VPS*
+1. Spinning **Traefik is easier than ever**: *see how to do it for any VPS*
 
 ```sh
 #git clone https://github.com/JAlcocerT/Home-Lab.git

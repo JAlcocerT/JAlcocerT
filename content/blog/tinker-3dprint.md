@@ -99,7 +99,7 @@ I found interesting the following resources:
 * https://www.printables.com/es
 * https://thangs.com/
 * [maker world](https://makerworld.com/en/3d-models)
-* ThingyVerse
+* ThingyVerse like https://www.thingiverse.com/thing:455324
 
 > STL files! and you can do cool thinks like [this miniPC of ~1.2L](https://www.youtube.com/watch?v=_Euus3cum5k)
 

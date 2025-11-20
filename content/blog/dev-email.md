@@ -154,24 +154,14 @@ Mailtrap competitors primarily include other email testing and delivery platform
 - SendGrid (by Twilio): Provides scalable email sending, marketing campaign features, and email analytics.
 - Postmark: Focuses on transactional email delivery with high deliverability rates.
 - Litmus: Known for email previewing across many email clients and spam testing.
-- MailerLite: Combined email marketing and delivery platform popular with small businesses.
+- [MailerLite](#mailerlite): Combined email marketing and delivery platform popular with small businesses.
 - Email Sandbox: A testing-focused platform providing sandboxing for email templates and deliverability testing.
 - GMass: Primarily a Gmail-based email marketing and campaign testing tool.
 
-These alternatives vary in focus—from developer-centric testing, marketing automation features, transactional email delivery, or email validation services. Some are more suited for broad marketing campaigns while others emphasize developer tools for testing and debugging emails during development cycles. Mailtrap’s niche is developer-friendly email sandboxing and testing, while others may offer more end-user marketing or validation features.[1][5][6][7]
+These alternatives vary in focus—from developer-centric testing, marketing automation features, transactional email delivery, or email validation services. Some are more suited for broad marketing campaigns while others emphasize developer tools for testing and debugging emails during development cycles. Mailtrap’s niche is developer-friendly email sandboxing and testing, while others may offer more end-user marketing or validation features.
 
-[1](https://mailtrap.io/blog/mailgun-alternatives/)
-[2](https://mailtrap.io/blog/mailinator-alternatives/)
-[3](https://www.mailersend.com/compare/mailtrap-alternative)
-[4](https://www.reddit.com/r/homelab/comments/9n7di5/any_good_mailtrapio_selfhosted_alternatives/)
-[5](https://www.mailwizz.com/blog/mailtrap-alternatives/)
-[6](https://www.g2.com/products/mailtrap/competitors/alternatives)
-[7](https://www.courier.com/guides/email-testing-tools)
-[8](https://maileroo.com/blog/mailtrap-alternatives/)
-[9](https://flodesk.com/tips/mailtrap-alternatives)
-[10](https://mailtrap.io/blog/email-testing-tools/)
 
-Amazon SES is a highly scalable and cost-effective email sending service, especially well-suited for businesses already using AWS infrastructure. It offers robust deliverability, pay-as-you-go pricing, and detailed monitoring tools, but it requires technical expertise for setup and management. Its API and SMTP interfaces provide flexibility but might present a learning curve for less technical users.[1][2][3]
+Amazon SES is a highly scalable and cost-effective email sending service, especially well-suited for businesses already using AWS infrastructure. It offers robust deliverability, pay-as-you-go pricing, and detailed monitoring tools, but it requires technical expertise for setup and management. Its API and SMTP interfaces provide flexibility but might present a learning curve for less technical users.
 
 Regarding ease of configuration among the competitors:
 
@@ -573,4 +563,4 @@ https://sendgrid.com/en-us
 
 https://mailtrap.io/pricing/
 
-### MailerLite ??
+### MailerLite
