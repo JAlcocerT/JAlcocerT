@@ -1,13 +1,14 @@
 ---
 title: "[Learning] Interesting NoCode Tools"
-date: 2026-12-31
-draft: true
+date: 2026-02-08
+draft: false
 tags: ["Link Shortener","No Code DBs","BaseRow"]
-summary: Learning how to 
-description: Testing the 
+description: 'Testing the NoCode Tools'
 url: 'learning-new-nocode-tools'
 ---
 
+
+**Tl;DR**
 
 **Intro**
 

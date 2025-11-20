@@ -1,6 +1,6 @@
 ---
 title: "Generating Images with AI - Stable Diffusion updates"
-date: 2026-12-31
+date: 2026-11-01
 draft: true
 tags: ["AI"]
 description: "Using Stable Difussion with DreamBooth"
@@ -13,18 +13,22 @@ Image Generation:
 * Stable Difussion Web UI
 * Easy Difussion
 
-Exactly **Three years ago** from this moment I was able to generate the following:
+Exactly **FOUR years ago** from this moment I was able to generate the following:
 
 ![Stable Difussion Sample](/blog_img/GenAI/jalcocert-author.png)
 
-How much is **3** years in GenAI? 
+How much is **4** years in GenAI? 
 
 Well...lets find that out.
+
+
 
 
 {{< details title="Stable Diffusion Models📌" closed="true" >}}
 
 {{< /details >}}
+
+GUI's to use Stable Difussion Models
 
 ## Using APIs to Generate Images from Text 
 

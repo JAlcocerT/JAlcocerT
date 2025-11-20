@@ -8,6 +8,8 @@ url: 'blogspot-migration'
 ---
 
 
+**Tl;DR**
+
 **Intro**
 
 I have been following couple of sites on blogspot.

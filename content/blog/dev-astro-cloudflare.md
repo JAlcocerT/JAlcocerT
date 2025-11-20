@@ -107,7 +107,7 @@ Lets add a domain we have at Cloudflare:
 Now whenever I push changes to this repository, they will be available at:
 
 * Github Pages with free domain: <https://jalcocert.github.io/JAlcocerT/>
-* Cloudflare with my own subdomain: <https://blog.jalcocertech.xyz/> (also the [free one](https://jalcocertblog.pages.dev/))
+* Cloudflare with my own subdomain: <https://vlog.jalcocertech.xyz/> (also the [free one](https://jalcocertblog.pages.dev/))
 
 You can see what has been going on with your **deployments in the Cloudflare UI** at: Workers and Pages -> name of your project, for me `jalcocertblog`.
 

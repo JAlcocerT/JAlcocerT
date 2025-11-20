@@ -1,7 +1,7 @@
 ---
 title: "Improving Privacy with Open Source DNS "
-date: 2026-12-15T23:20:21+01:00
-draft: true
+date: 2026-01-15T23:20:21+01:00
+draft: false
 tags: ["Docker","Self-Hosting","Pihole x UnboundDNS"]
 description: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
@@ -14,6 +14,10 @@ Pros tend to say `its always DNS`
 
 
 **Intro**
+
+AdguardHome is a good starter for any homelab.
+
+But DNS is a rabbithole of its own.
 
 https://github.com/TechnitiumSoftware/DnsServer
 
@@ -191,6 +195,8 @@ https://www.youtube.com/watch?v=syzwLwE3Xq4&t=745s
 ## CoreDNS
 
 It is great for Docker: https://www.youtube.com/watch?v=tE9YjEV1T4E
+
+---
 
 ## Conclusions
 

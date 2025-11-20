@@ -1,7 +1,7 @@
 ---
-title: "ESP32:"
-date: 2025-12-31T23:20:21+01:00
-draft: true
+title: "ESP32 x NodeRed"
+date: 2025-11-27T23:20:21+01:00
+draft: false
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
 ---
 

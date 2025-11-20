@@ -311,6 +311,37 @@ or 4.7k 10k resistor between data and 3.3v
 
 <https://www.youtube.com/watch?v=iqImMHMXRSw>
 
+---
+
+## Conclusions
+
+With this post, I pretend to 
+
+
+As I plan to write about less new things next year, but gain depth:
+
+```sh
+find content/blog -name '*.md' -print0 |
+xargs -0 awk '
+  FNR==1 { post_date=""; printed=0 }
+
+  /^date:/ && !printed {
+    gsub(/^date:[[:space:]]*/, "", $0)
+    post_date = substr($0, 1, 10)
+    if (post_date > "2025-12-01") {
+      print FILENAME ": " post_date
+      printed=1
+      count++
+    }
+  }
+
+  END {
+    print "TOTAL:", count
+  }
+'
+```
+
+As of now I have 'just' planned 33 posts for JAlcocerT for the rest of 2025/2026.
 
 ## FAQ
 
@@ -475,3 +506,21 @@ If you are looking for a precise and versatile magnetometer sensor, the GY-273 i
 - **Marine:** Used in ships and boats to determine the heading of the vessel.
 - **Surveying:** Used to measure the magnetic field of the Earth.
 - **Geology:** Used to study the magnetic properties of rocks and minerals.
+
+### RPi x LCDs
+
+https://www.youtube.com/watch?v=3XLjVChVgec
+
+HOWTO Raspberry Pi + LCD 16x2 i2c
+
+
+
+https://github.com/the-raspberry-pi-guy/lcd
+
+https://www.youtube.com/watch?v=3XLjVChVgec
+
+HOWTO Raspberry Pi + LCD 16x2 i2c
+
+
+
+https://github.com/the-raspberry-pi-guy/lcd

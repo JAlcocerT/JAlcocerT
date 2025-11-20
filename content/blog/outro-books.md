@@ -1,9 +1,9 @@
 ---
 title: "Books"
-date: 2026-12-31T23:20:21+01:00
-draft: true
+date: 2026-03-01T23:20:21+01:00
+draft: false
 tags: ["Outro","Kindle"]
-description: 'Reading better'
+description: 'Reading better, writing more.'
 url: 'interesting-books'
 ---
 

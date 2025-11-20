@@ -1,7 +1,7 @@
 ---
 title: "Summary 2023: "
 date: 2023-12-26T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Blog","Year-Review"]
 ---
 

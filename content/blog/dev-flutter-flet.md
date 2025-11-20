@@ -1,8 +1,8 @@
 ---
-title: "First Look to Flutter Apps"
+title: "First Look to Flutter Apps via Flet"
 date: 2026-12-31
 draft: true
-tags: ["Dev","Ente Photos","Desktop Apps"]
+tags: ["Dev","Ente Photos","Desktop Apps","Flutter x Python Flet"]
 description: 'Flutter Apps. Created with Python via Flet and more'
 url: 'flutter-flet-python'
 ---
