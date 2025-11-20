@@ -1,6 +1,6 @@
 ---
 title: "Grafana Monitoring: prometheus"
-date: 2025-11-21T23:20:21+01:00
+date: 2025-11-28T23:20:21+01:00
 draft: false
 tags: ["Docker","Self-Hosting","Iotawatt"]
 description: 'Grafana works for IoT Same as for monitoring'
