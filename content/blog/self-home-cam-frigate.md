@@ -8,6 +8,16 @@ summary: '.'
 url: 'selfhosting-frigate'
 ---
 
+
+
+**Intro**
+
+The computer vision is an interesting topic that I have just tinkered superficially:
+
+* With plain python on [this repo](https://gitlab.com/fossengineer1/cv) and with the DJI Dron on this one: [DJI Tello Python](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/)
+
+But there are cool projects for computer vision that combine
+
 https://frigate.video/
 <https://github.com/blakeblackshear/frigate>
 https://github.com/blakeblackshear/frigate?tab=MIT-1-ov-file#readme

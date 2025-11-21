@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Sensors and Arduino"
-date: 2025-11-21
+date: 2025-11-27
 draft: false
 tags: ["Tinkering",Polanduino"","DHT","MLX"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.

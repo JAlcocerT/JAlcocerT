@@ -160,7 +160,7 @@ With [this post](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting
 
 I got an additional **Pi4** (this time 4GB Ram, 64 bits) and was helpful to:
 
-* Explored **Computer Vision**
+* Explored **Computer Vision** withing [this repo](https://gitlab.com/fossengineer1/cv)
   * With a [RPi Camera](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/)
   * And a [DJI Drone that can be controlled with python](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/)
 * Tinker with [VPNs, Wireguard and Wifi2Eth Bridge](https://jalcocert.github.io/JAlcocerT/raspberry-pi-networking/)

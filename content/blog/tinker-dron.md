@@ -44,7 +44,7 @@ So far it can do the following:
 * Video: HD720P30
 * Format: JPG(Photo); MP4(Video)
 
-4. Computer Vision with DJI Tello
+4. Computer Vision with DJI Tello: *also tested it [here](https://gitlab.com/fossengineer1/cv) with a Pi*
 
 Credits to [Murtaza's **YT Video**](https://www.youtube.com/watch?v=LmEcyQnfpDA&t=1286s) that helped me a lot to get started.
 
@@ -83,7 +83,7 @@ A **Pi camera** its about ~5$, much more affordable way to enter the computer vi
 
 ### About Dron Regulations
 
-* https://drony.gov.pl/
+* Most likely than not, you need some licenses/permissions: https://drony.gov.pl/
 * https://www.seguridadaerea.gob.es/es/particulares/piloto-de-drones
 
 * **Remember** 

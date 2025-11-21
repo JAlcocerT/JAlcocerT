@@ -24,6 +24,8 @@ Even before jumping to a Streamlit PoC, you can mockup very quickly via Excalidr
 
 Once everyone is onboard, we can continue and end up with some cool [PBi](https://jalcocert.github.io/JAlcocerT/about-powerbi/) or a [GCP Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#what-it-is-looker-modelling-language) Dashboard.
 
+Venn diagrams for data modelling and architecture are also appreciated
+
 
 Mind your attention, stop auto engage and keep the important things at life first.
 
@@ -55,6 +57,11 @@ Keeping NS outside cloudflare and using the NGINX setup, instead of the Traefik 
 
 url: 'sony- WF-1000XM3-linux'
 
+https://www.youtube.com/watch?v=m_Mr4bw8Pow
+
+* https://github.com/kavishdevar/librepods
+
+> GPL 3.0 |  AirPods liberated from Apple's ecosystem. 
 
 https://frantzroulet.com/blog/jekyll/update/2021/02/26/how_to_use_sony_wf-1000xm3_on_ubuntu_20.04_with_i3wm.html
 

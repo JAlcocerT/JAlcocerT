@@ -28,6 +28,8 @@ This year ive been covering few posts about the job market:
 
 So, how much will you have to ask to stay as you started the year?
 
+## Inflation and Jobs
+
 1. Some job market webpage have started including that info: https://zarobki.pracuj.pl/kalkulator-wynagrodzen
     * Based on the running inflation and how much you had on a given year:
 
@@ -49,7 +51,7 @@ So, how much will you have to ask to stay as you started the year?
 
 There is an API: https://inflationchart.com/api
 
-In real life, as per [this post](https://forocoches.com/foro/showthread.php?t=10479839), a menu has gone up from ~8 to ~14.
+In real life, as per [this post](https://forocoches.com/foro/showthread.php?t=10479839), a menu has gone up from ~8 to ~14 within 7 years.
 
 ---
 
@@ -74,7 +76,7 @@ If you are tired of your salary not growing as fast as inflation nor your skills
 
 We got these cool related repos.
 
-Becuase PDFs are messy and they are not always parsed properly as [tinkered on this repo](https://gitlab.com/fossengineer1/cv-check).
+Becuase **PDF parsing is messy** and they are not always parsed properly as [tinkered on this repo](https://gitlab.com/fossengineer1/cv-check).
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
@@ -83,11 +85,13 @@ Becuase PDFs are messy and they are not always parsed properly as [tinkered on t
 
 The goal is to make text to text job offer to job application. [As a Code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/).
 
+> HR wont spend time understanding you, so why should you spend time on crafting the CV?
+
 * Overleaf is great https://www.overleaf.com/login as we saw [here](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#creating-a-responsive-cv)
 
 * https://github.com/yamlresume/yamlresume
 
-> MIT |  Resumes as code in YAML, brought to you with ❤️ by PPResume. 
+> MIT | Resumes as code in YAML, brought to you with ❤️ by PPResume. 
 
 Control a yaml like: https://github.com/yamlresume/yamlresume/blob/main/packages/cli/resources/resume.yml
 
@@ -97,20 +101,17 @@ Render content using LaTeX templates. I liked: https://yamlresume.dev/docs/layou
 
 Generate PDFs via XeTeX or Tectonic compilation engines
 
-
 ```sh
 git clone https://github.com/JAlcocerT/cv-laitex
 
-
 ```
-
-
-Eeeenjoy :)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Questions2HR.md" title="HR QQ 🐵 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Questions2Managers.md" title="Manager QQ 🐵 ↗" >}}
 {{< /cards >}}
+
+Eeeenjoy :)
 
 {{< youtube "SbXpS94tkVA" >}}
 

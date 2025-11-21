@@ -4,26 +4,21 @@ date: 2023-09-15T23:20:21+01:00
 draft: false
 tags: ["Python","My Projects","Slider-Crank"]
 description: 'Understanding the insights and creating an interactive representation of a Slider-Crank mechanism with Python.'
-summary: 'The Slider-Crank mechanism is one of the most well known mechanism int he world. It powers... In this post we will understand the physics behind it.'
 url: 'slider-crank-mechanism'
 ---
 
-<!-- engine starting
-https://www.youtube.com/shorts/mzWr2ZGf7OU -->
+The Slider-Crank mechanism is one of the most well known mechanism in the world. 
 
-<!-- 
-Using Python to solve Symbolic Mathematics - Sympy
+It powers... In this post we will understand the physics behind it.
 
-derivatives
-The Trillion Dollar Equation
-https://www.youtube.com/watch?v=A5w-dEgIU1M
- -->
 
-# The Slider and Crank Mechanism
+**The Slider and Crank Mechanism** is just so beautiful
 
 <https://demonstrations.wolfram.com/SliderAndCrankMechanism/>
 
-From car engines to industrial machinery, this simple yet ingenious device has revolutionized the way we convert rotational motion into linear motion and vice versa. In this blog post, we will delve into the basic principles behind the slider-crank mechanism, explore some interesting physical effects, and discuss its widespread applications.
+From car engines to industrial machinery, this simple yet ingenious device has revolutionized the way we convert rotational motion into linear motion and vice versa. 
+
+In this blog post, we will delve into the basic principles behind the slider-crank mechanism, explore some interesting physical effects, and discuss its widespread applications.
 
 ```yml
 version: '3.8'
@@ -37,15 +32,6 @@ services:
     restart: always     
 ```
 
-<!-- 
-<https://www.youtube.com/watch?v=ABzKNvJCl28>
-<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html>
-<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html> -->
-
-<!-- 
-Maximum piston speed with formula (?)
-
-<https://youtu.be/EhOl9Uh_nyw?t=83> -->
 
 ## The Slider-Crank Mechanism: A Cornerstone of Modern Engineering
 
@@ -53,9 +39,13 @@ The slider-crank mechanism may not be a household name, but it plays a crucial r
 
 ### A Simple and Ingenious Design
 
-At its core, the slider-crank mechanism comprises three main components: a crank, a connecting rod, and a slider. The crank is a rotating component, usually attached to a circular wheel or a shaft, while the connecting rod serves as a link between the crank and the slider.
+At its core, the slider-crank mechanism comprises three main components: a crank, a connecting rod, and a slider. 
 
-As the crank rotates, it drives the connecting rod, which in turn causes the slider to move in a straight line. This simple design effectively converts rotational motion into linear motion, making it an invaluable tool in various engineering applications.
+The crank is a rotating component, usually attached to a circular wheel or a shaft, while the connecting rod serves as a link between the crank and the slider.
+
+As the crank rotates, it drives the connecting rod, which in turn causes the slider to move in a straight line. 
+
+This simple design effectively converts rotational motion into linear motion, making it an invaluable tool in various engineering applications.
 
 
 
@@ -82,13 +72,12 @@ The slider-crank mechanism has a myriad of applications across different industr
 * Mechanical Presses: In industrial settings, the slider-crank mechanism is often used to power mechanical presses that shape or cut materials. By converting rotational motion into linear motion, the mechanism allows for precise and powerful pressing actions.
 
 
-
-
-
-
-
 Content like the one that this channel provide, are really motivating
-<https://youtu.be/NvtcTXey0U8?list=LL&t=601>
+
+<!-- <https://youtu.be/NvtcTXey0U8?list=LL&t=601> -->
+
+{{< youtube "NvtcTXey0U8" >}}
+
 
 Would definitely watch the full video (and explore his channel).
 
