@@ -2,7 +2,7 @@
 title: "How to Save the Internet"
 date: 2025-11-21T23:20:21+01:00
 draft: false
-tags: ["Web ebook","Dev",Web Docs with Astro"]
+tags: ["Web ebook","Dev",Web Docs with Astro","Google Code Wiki"]
 description: 'Open Source Minimalist Websites.'
 url: 'open-source-minimalist-websites'
 ---
@@ -105,6 +105,8 @@ Time for a: Whats working, whats not and whats next?
 Well, Google also released https://codewiki.google/ which can potentially get outdated my manual/windsurf/codex way of writing technical docs.
 
 Time well tell.
+
+For now it ,just' works on certain popular repos: https://codewiki.google/github.com/google-gemini/gemini-cli
 
 But what Im sure is that the brand needs an upgrade from blog like to doc+blog like.
 

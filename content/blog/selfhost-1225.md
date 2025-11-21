@@ -2,12 +2,16 @@
 title: "SelfHosting is easy with PaaS"
 date: 2025-12-01T01:20:21+01:00
 draft: false
-tags: ["HomeLab ebook","Hetzner VPS"]
+tags: ["HomeLab ebook","Hetzner VPS","Anti-Gravity"]
 description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
 
+https://antigravity.google/
+
 **Tl;DR**
+
+A random server for ~4$/month is all you need.
 
 **Intro**
 

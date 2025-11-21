@@ -72,6 +72,8 @@ If you are tired of your salary not growing as fast as inflation nor your skills
   {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Historieta-v1125.md" title="Updated Historieta 1125 🐵 ↗" >}}
 {{< /cards >}}
 
+With YAMLresume, the application process is even easier than overlaf.
+
 ### A CV via yamlresume vs overleaf
 
 We got these cool related repos.
@@ -80,6 +82,7 @@ Becuase **[PDF parsing](https://jalcocert.github.io/JAlcocerT/jira-data-model-wi
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/yamlresume" title="YAML Resume | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 So are those CV as a Code even parsable?
@@ -101,7 +104,7 @@ The goal is to make text to text job offer to job application. [As a Code](https
 
 * https://github.com/yamlresume/yamlresume
 
-> MIT | Resumes as code in YAML, brought to you with ❤️ by PPResume. 
+> **MIT** | Resumes as code in YAML, brought to you with ❤️ by PPResume. 
 
 Control a yaml like: https://github.com/yamlresume/yamlresume/blob/main/packages/cli/resources/resume.yml
 
@@ -115,10 +118,11 @@ Generate PDFs via XeTeX or Tectonic compilation engines
 #docker run -p 8027:8000 goldziher/kreuzberg
 
 #cd ./MyExperience/Z_Sample_CVs
-curl -X POST -F "file=@Canva_DA_2024.pdf" http://localhost:8027/extract
+#curl -X POST -F "file=@Canva_DA_2024.pdf" http://localhost:8027/extract
 
 
 git clone https://github.com/JAlcocerT/cv-laitex
+#docker run --rm -v $(pwd):/home/yamlresume yamlresume/yamlresume new my-resume.yml
 
 ```
 

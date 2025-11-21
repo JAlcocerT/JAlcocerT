@@ -579,7 +579,9 @@ I know that some marketers are using...
 
 ### PipeDream
 
-**Pipedream** is a cloud-based automation and integration platform designed for developers and technical users. It allows you to create workflows that connect APIs, databases, cloud apps, and event sources with minimal infrastructure setup. 
+**Pipedream** is a cloud-based automation and integration platform designed for developers and technical users.
+
+It allows you to create workflows that connect APIs, databases, cloud apps, and event sources with minimal infrastructure setup. 
 
 Key points about Pipedream:
 

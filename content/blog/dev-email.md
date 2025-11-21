@@ -1,8 +1,8 @@
 ---
 title: "SMTP and email stuff"
-date: 2025-11-23
+date: 2025-11-22
 draft: false
-tags: ["HomeLab","MailTrap","Mailgun","Amazon SES","PostIZ vs GrowChief","MailerSend"]
+tags: ["HomeLab","MailTrap","Mailgun","Amazon SES","PostIZ vs GrowChief","MailerSend vs ListMonk"]
 description: 'Email is hard. Social Media OutReach, is not.'
 url: 'emails-101'
 ---
@@ -14,6 +14,10 @@ https://www.mailersend.com/
 You probably need leads.
 
 And have no F*** idea how SMTP actually works.
+
+What you know is that cold email can get you Cash Flow.
+
+Specially when combined with a [proper *APIFY based* sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/#a-sales-pipeline) and automation tools [for marketers](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/).
 
 https://mxroute.com/
 
@@ -59,7 +63,20 @@ I want the same to happen with SMTP/emails.
 
 > But it did not work for me out of the box...
 
-**Introduction**
+## Email for me so far
+
+I got to send (and receive) emails via one of my domains via gmail.
+
+At least when it was google domains, when it migrated to squarespaces the setup stoped working.
+
+Too goo tobe true I guess.
+
+
+
+
+### KnockMail 
+
+Does an email you logged into your new waiting/[ebook list with Pocketbase](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version) even exists?
 
 KnockMail is a tool designed to verify the existence of email addresses. 
 
@@ -158,10 +175,16 @@ Mailtrap competitors primarily include other email testing and delivery platform
 - Email Sandbox: A testing-focused platform providing sandboxing for email templates and deliverability testing.
 - GMass: Primarily a Gmail-based email marketing and campaign testing tool.
 
-These alternatives vary in focus—from developer-centric testing, marketing automation features, transactional email delivery, or email validation services. Some are more suited for broad marketing campaigns while others emphasize developer tools for testing and debugging emails during development cycles. Mailtrap’s niche is developer-friendly email sandboxing and testing, while others may offer more end-user marketing or validation features.
+These alternatives vary in focus—from developer-centric testing, marketing automation features, transactional email delivery, or email validation services. 
+
+Some are more suited for broad marketing campaigns while others emphasize developer tools for testing and debugging emails during development cycles.
+
+Mailtrap’s niche is developer-friendly email sandboxing and testing, while others may offer more end-user marketing or validation features.
 
 
-Amazon SES is a highly scalable and cost-effective email sending service, especially well-suited for businesses already using AWS infrastructure. It offers robust deliverability, pay-as-you-go pricing, and detailed monitoring tools, but it requires technical expertise for setup and management. Its API and SMTP interfaces provide flexibility but might present a learning curve for less technical users.
+Amazon SES is a highly scalable and cost-effective email sending service, especially well-suited for businesses already using AWS infrastructure. 
+
+It offers robust deliverability, pay-as-you-go pricing, and detailed monitoring tools, but it requires technical expertise for setup and management. Its API and SMTP interfaces provide flexibility but might present a learning curve for less technical users.
 
 Regarding ease of configuration among the competitors:
 

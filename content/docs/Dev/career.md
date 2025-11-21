@@ -34,15 +34,21 @@ For the *db alergic* ones, see:
 
 ### CV Tools
 
-I have been using a lot of CV templates.
+I have been using a lot of **resume templates.**
 
 From word, to pptx and later I explored canva, which resulting pdf had some [parsing issues](https://fossengineer.com/open-source-curriculum/#checking-how-readable-is-a-cv-template) for some organizations.
 
 Then, I switched gears to **cv as a code approach**: with [OSS CV builders](https://fossengineer.com/open-source-curriculum/) and with [Latex via overleaf](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#cv-as-a-code)
 
 1. YAMLResume
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/yamlresume" title="YAML Resume | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 2. Reactive Resume
 3. Open Resume, which I forked [here](https://github.com/JAlcocerT/open-resume) with a [CI/CD powered](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/#cicd-tools) Container
+
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reactive-resume" title="Reactive Resume | Docker Configs 🐋 ↗" >}}
