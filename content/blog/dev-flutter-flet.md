@@ -2,10 +2,16 @@
 title: "First Look to Flutter Apps via Flet"
 date: 2026-12-31
 draft: true
-tags: ["Dev","Ente Photos","Desktop Apps","Flutter x Python Flet"]
+tags: ["Dev","Ente Photos","Desktop Apps","Flutter x Python Flet","FlutterFlow"]
 description: 'Flutter Apps. Created with Python via Flet and more'
 url: 'flutter-flet-python'
 ---
+
+
+<!-- * Flutter
+        * Counter knitting
+        * Timer para ejercicios
+        https://app.uizard.io/p/1ad5e459/preview -->
 
 * https://flet.dev/
 

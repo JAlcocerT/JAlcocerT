@@ -36,7 +36,9 @@ If you are new to SSGs, have a look to:
 
 > **MIT** | A news website built with Astro
 
-Which is some kind of theme that very interesting people would use to tell you a life story: https://www.cyclingabout.com/
+> > I Also wondered about this theme for cycling posts https://lenpaul.github.io/Millennial/
+
+Which is some kind of theme that very interesting people would use to tell you a life story: `https://www.cyclingabout.com/`
 
 
 

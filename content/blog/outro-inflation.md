@@ -76,7 +76,17 @@ If you are tired of your salary not growing as fast as inflation nor your skills
 
 We got these cool related repos.
 
-Becuase **PDF parsing is messy** and they are not always parsed properly as [tinkered on this repo](https://gitlab.com/fossengineer1/cv-check).
+Becuase **[PDF parsing](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/#pdf-to-mdjson) is messy** and they are not always parsed properly as [tinkered on this repo](https://gitlab.com/fossengineer1/cv-check).
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+So are those CV as a Code even parsable?
+
+Because most certainly, the canva created ones are not.
+
+And some time ago I tested the overleaf one: `Jan_Küster_s_Classic_CV___`, others also like the `altaCV` template.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
@@ -102,6 +112,12 @@ Render content using LaTeX templates. I liked: https://yamlresume.dev/docs/layou
 Generate PDFs via XeTeX or Tectonic compilation engines
 
 ```sh
+#docker run -p 8027:8000 goldziher/kreuzberg
+
+#cd ./MyExperience/Z_Sample_CVs
+curl -X POST -F "file=@Canva_DA_2024.pdf" http://localhost:8027/extract
+
+
 git clone https://github.com/JAlcocerT/cv-laitex
 
 ```

@@ -2,7 +2,7 @@
 title: "Diagrams and workflows as a Code with Agents"
 date: 2025-11-15T12:20:21+01:00
 draft: false
-tags: ["AI SaaS","MermaidJS","Grok vs Perplexity","Icons for Architects","Commet"]
+tags: ["AI SaaS","mermaidJSxopenai-editor","Grok vs Perplexity","Icons for Architects","Commet"]
 description: 'BiP user flows around newsletter layers. From SliDev Editor to Mermaid Editor with live information.'
 url: 'ai-driven-diagrams'
 ---
@@ -23,7 +23,7 @@ Same as we can do presentations as a code, we can know diagrams as a code.
 In fact, the diagrams as a code (Mermaid) can be integrated with our SliDev-Editor Setup.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/mermaidjsxopenai-editor" title="NEW | Slidev-Editor Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to MermaidJS + LLMs. Via NextJS and ToastUI md editor" >}}
+  {{< card link="https://github.com/JAlcocerT/mermaidjsxopenai-editor" title="NEW | MermaidJS-Editor Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to MermaidJS + LLMs. Via NextJS and ToastUI md editor" >}}
 {{< /cards >}}
 
 
@@ -38,6 +38,12 @@ and also make the UI look more modern
 #clarify with a prd.md
 ##create a implementation plan.md with well define phases that can be tested and build one on top of the next phase
 ```
+
+Dont forget about the tab icon and the opengraph as a requirement when vibe coding webapps!
+
+{{< callout type="info" >}}
+Own the context, rule the code
+{{< /callout >}}
 
 If you are curious, this was the wireframe:
 
@@ -153,11 +159,10 @@ And just this week I got...
 
 ### Perplexity API
 
+It feels great to get life/search data from the internet.
 
 * https://sourcegraph.com/search
-
 * https://www.perplexity.ai/discover
-
 
 * https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/PerplexityAPI
 
@@ -230,22 +235,15 @@ To overcome this, you need to use a **headless browser**. . A headless browser i
 2.  **Wait for Content:** It can be programmed to wait until the content you're looking for appears on the page before trying to scrape it.
 3.  **Mimic User Behavior:** More advanced anti-bot systems will detect non-human behavior. Headless browsers can be configured to mimic human actions like random delays, scrolling, and mouse movements to avoid being blocked.
 
-So, while it is hard, it's not impossible. The key is to use more sophisticated tools that can render the entire page and interact with it, rather than just downloading and parsing a static HTML file.
+So, while it is hard, it's not impossible. 
+
+The key is to use more sophisticated tools that can render the entire page and interact with it, rather than just downloading and parsing a static HTML file.
 
 
 ### Architecture and Icons
 
 > https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
 
-https://iconify.design/
-https://icon-sets.iconify.design/
-https://mermaid.js.org/syntax/architecture.html
-
-
-### How to build a MermaidJS-Editor
-
-Dont forget about the tab icon and the opengraph!
-
-{{< callout type="info" >}}
-Own the context, rule the code
-{{< /callout >}}
+* [Iconify](https://iconify.design/)
+* [Icon-sets](https://icon-sets.iconify.design/)
+* [Mermaid](https://mermaid.js.org/syntax/architecture.html)

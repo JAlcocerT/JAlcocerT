@@ -43,9 +43,9 @@ Like using it to push [new content/posts programatically to WP or Ghost](https:/
 - **Use Cases:** Commonly used for market research, price comparisons, lead generation, competitor analysis, and business intelligence tasks.
 - **Cons:** Struggles with sites heavily reliant on JavaScript frameworks (React, Angular, Vue), advanced anti-scraping techniques, and complex authentication flows. There might be occasional issues with templates breaking if webstes update their structure and with heavy-duty workflows being slow or prone to minor glitches.
 
-Overall, Octoparse is ideal for non-programmers and small businesses needing rapid data extraction from the web without building custom scrapers, but mission-critical scraping or heavy automation is sometimes better handled with custom-coded solutions or other advanced tools.
-
 {{< /details >}}
+
+Octoparse is ideal for non-programmers and small businesses needing rapid data extraction from the web without building custom scrapers, but mission-critical scraping or heavy automation is sometimes better handled with custom-coded solutions or other advanced tools.
 
 
 2. **ZenRows** is an advanced web scraping SaaS platform focused on making large-scale data extraction from difficult, protected websites easier for developers and businesses.
@@ -151,12 +151,11 @@ See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/Streamlit-MultiChat/1" title="About Streamlit MultiChat with SliDev on GH Pages" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt" title="Previous Blog Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-streamlit-chatgpt" title="Previous Blog Post on a ChatGPT Clone with Streamlit" >}}
 {{< /cards >}}
 
-OpenAI
 
-They have released recently **o3-mini** model.
+OpenAI: They have released recently **o3-mini** model.
 
 GPT-4o-mini has been my go to in terms of value per money.
 
@@ -187,12 +186,13 @@ for model in models:
 ```
 
 
-https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/GrokAPI
+But you can also use [the Grok API](https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/GrokAPI)
+
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api" title="Grok API Blog Post" >}}
 {{< /cards >}}
 
-DeepSeek via Ollama
+Or the latest DeepSeek via Ollama:
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-grok-api" title="Grok API Blog Post" >}}
@@ -222,19 +222,17 @@ With a very interesting article about agents: https://www.anthropic.com/engineer
 
 
 
-AIssistant
+AIssistant?
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/" title="AIssistant blog post" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="Aissistant 💻 code" >}}  
 {{< /cards >}}
 
- Read the Web!
-
-https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
+[Read the Web](https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/)?
 
 
-YT Summarizer
+Or simply a YT Summarizer:
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/summarize-yt-videos" title="Groq Youtube Summarizer" >}}
@@ -422,7 +420,7 @@ So that you get a `clientID` and `clientSecret`.
 
 Time to create some `create_post_simple.py` and bundle it around a quick Flask app.
 
-![alt text](/blog_img/social-media/x-oauth-authorize.png)
+![X OAuth Authorization](/blog_img/social-media/x-oauth-authorize.png)
 
 ```sh
 #git clone https://github.com/JAlcocerT/DataInMotion

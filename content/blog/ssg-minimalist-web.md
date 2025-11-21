@@ -1,6 +1,6 @@
 ---
 title: "How to Save the Internet"
-date: 2025-11-19T08:20:21+01:00
+date: 2025-11-21T23:20:21+01:00
 draft: false
 tags: ["Web ebook","Dev",Web Docs with Astro"]
 description: 'Open Source Minimalist Websites.'
@@ -46,6 +46,9 @@ CSS Post
 
 Miss "The Old Internet"? Here's How to Bring it Back.
 https://www.youtube.com/watch?v=1iOVatAR-bU
+
+
+---
 
 ## Conclusions
 

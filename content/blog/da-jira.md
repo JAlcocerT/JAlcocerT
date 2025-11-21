@@ -1,5 +1,5 @@
 ---
-title: "Jira 101 vs ADO | PDF to md"
+title: "Jira 101 vs ADO | PDF to md with Kreuzberg"
 date: 2025-09-08T00:20:21+01:00
 draft: false
 description: 'Jira DataModel with AI. Pandoc is great, more if you are not alergic to Latex.'
