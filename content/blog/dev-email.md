@@ -235,6 +235,21 @@ https://www.mailjet.com/pricing/
 
 https://app.mailjet.com/integrations
 
+https://app.mailjet.com/integrations/n8n
+https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/#templates-and-examples
+
+https://app.mailjet.com/account/sender/validate-domain?domain=6484989182
+
+Validate the emails from where you will be sending: https://app.mailjet.com/account/sender
+
+And **Mailjet worked with Listmonk**. Even with Listmonk in `localhost:9077` without bein Cloudflared
+
+Going to spam when sent to gmail...but worked.
+
+Even with the custom email from the domain.
+
+And people can unsubscribe if they want to :)
+
 ### Resend
 
 People use that one for some contact forms, as seen on [this post section](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#managing-packages-for-ssgs), together with [SSG Themes like this](https://github.com/HugoRCD/canvas?tab=readme-ov-file#setup-the-contact-form).
