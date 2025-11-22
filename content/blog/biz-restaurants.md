@@ -1,8 +1,8 @@
 ---
 title: "Webs for Restaurants."
-date: 2026-01-19
+date: 2026-02-19
 draft: false
-tags: ["SaaS"]
+tags: ["SaaS","Just-Cook"]
 description: "Astro Websites for Restaurants. Million dollar idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
@@ -73,3 +73,6 @@ A set of **sites themes** that will take a while to get outdated:
   
 * https://www.covermanager.com/en
 * https://www.mojstolik.pl/dla-restauracji
+
+### Interesting Recipes
+

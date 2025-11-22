@@ -31,19 +31,17 @@ But some people take it one level higher and do webs veeery minimalistic.
 * https://lukesmith.xyz/articles/monero-and-other-privacy-coins/
 * https://lukesmith.xyz/articles/politics-matters-most-to-slaves/
 
-https://danluu.com/
+* https://danluu.com/
 
 
 <!-- 
 https://ericmurphy.xyz/blog/minimalist-web/
 https://ericmurphy.xyz/blog/discoverability/ -->
 
-https://512kb.club/
-https://erikjohannes.no/ ---> great photo section!!!
+* https://512kb.club/
+* https://erikjohannes.no/ - THis one has a great photo section!
 
-CSS Post
 
-Miss "The Old Internet"? Here's How to Bring it Back.
 
 https://www.youtube.com/watch?v=1iOVatAR-bU
 
@@ -98,8 +96,18 @@ But then I found this: https://github.com/themefisher/dockit-astro
 
 ```sh
 git clone https://github.com/JAlcocerT/dockit-astro
-
+#make install && make dev
 ```
+
+![alt text](/blog_img/web/fosseng/dockit-astro.png)
+
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#docs-website" title="Starlight Docs - Post ↗" image="/blog_img/web/fosseng/starlight-docs-sample.png" subtitle="Astro Starlight | Docs Post" >}}
+  {{< card link="https://github.com/JAlcocerT/dockit-astro" title="Dockit Astro Docs" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Starlight...but tweaked" >}}
+{{< /cards >}}
+
 
 > This is simple great for F/OSS 
 

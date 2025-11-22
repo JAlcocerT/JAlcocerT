@@ -27,7 +27,7 @@ Starting very quick with the default astro Theme:
         * https://docs.astro.build/en/install-and-setup/#use-a-theme-or-starter-template
         * https://fevol.github.io/starlight-theme-obsidian/getting-started/
 
-![Starlight Theme Docs UI](ic/blog_img/web/fosseng/starlight-docs-sample.png)
+![Starlight Theme Docs UI](/blog_img/web/fosseng/starlight-docs-sample.png)
 
 > **MIT** | 🌟 Build beautiful, accessible, high-performance documentation websites with Astro
 
