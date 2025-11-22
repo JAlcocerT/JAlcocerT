@@ -42,8 +42,12 @@ https://ericmurphy.xyz/blog/discoverability/ -->
 * https://erikjohannes.no/ - THis one has a great photo section!
 
 
+<!-- 
+https://www.youtube.com/watch?v=1iOVatAR-bU 
+-->
 
-https://www.youtube.com/watch?v=1iOVatAR-bU
+{{< youtube "1iOVatAR-bU" >}}
+
 
 
 ---
@@ -147,39 +151,3 @@ But the curated already digested content will go to `blog.jalcocertech.com`
 >  Nuxt Portfolio Template made with Nuxt UI and [Nuxt Content](https://github.com/JAlcocerT/Home-Lab/tree/main/nuxt-content). 
 
 4. https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal Now that I have covered gatsby?
-
-
-### CMS x Astro
-
-From the experience: Dont do more than 3 websites to very close people if you they are not able to self-server.
-
-Thats where [selfhosted tools](https://docs.vrite.io/self-hosting/configuration/) like: https://github.com/vriteio/vrite are supposed to shine.
-
->  Open-source developer content platform 
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/directus" title="DirectusCMS | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="StrapiCMS | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-I also got inspired by tools listed: https://www.awesome-homelab.com/category/writing
-
-Particularly by https://www.awesome-homelab.com/item/novel-editor
-
-
-<!--
-* https://builtwith.com/theinstituteofskills.com/
-* https://www.similarweb.com/website/theinstituteofskills.com/#traffic
-* https://radar.cloudflare.com/scan?url=https://fossengineer.com/
--->
-
-#### Headless DirectusCMS Example
-
-* https://astro.build/themes/details/directus-cms-template/
-* https://github.com/directus-labs/starters/tree/main/cms/astro
-
-#### Headless StrapiCMS Example
-
-
-
-![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)

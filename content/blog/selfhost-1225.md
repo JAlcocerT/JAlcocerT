@@ -7,8 +7,16 @@ description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
 
+
+Google have been improving their stack.
+
+From the https://notebooklm.google/ to...a desktop IDE:
+
 * https://antigravity.google/
   * https://antigravity.google/download/linux
+  * https://chromewebstore.google.com/detail/antigravity-browser-exten/eeijfnjmjelapkebgockoeaadonbchdd
+
+![alt text](/blog_img/dev/IDEs/antigravity.png)
 
 ```sh
 sudo mkdir -p /etc/apt/keyrings
@@ -302,6 +310,42 @@ You can get started very quickly, create a meeting and embed it into your websit
 {{< /cards >}}
 
 https://awweso.me/booking-and-scheduling/
+
+### CMS x Astro
+
+From the experience: Dont do more than 3 websites to very close people if you they are not able to self-server.
+
+Thats where [selfhosted tools](https://docs.vrite.io/self-hosting/configuration/) like: https://github.com/vriteio/vrite are supposed to shine.
+
+>  Open-source developer content platform 
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/directus" title="DirectusCMS | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="StrapiCMS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+I also got inspired by tools listed: https://www.awesome-homelab.com/category/writing
+
+Particularly by https://www.awesome-homelab.com/item/novel-editor
+
+
+<!--
+* https://builtwith.com/theinstituteofskills.com/
+* https://www.similarweb.com/website/theinstituteofskills.com/#traffic
+* https://radar.cloudflare.com/scan?url=https://fossengineer.com/
+-->
+
+#### Headless DirectusCMS Example
+
+* https://astro.build/themes/details/directus-cms-template/
+* https://github.com/directus-labs/starters/tree/main/cms/astro
+
+#### Headless StrapiCMS Example
+
+
+
+![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
+
 
 
 ## The Penpot Project

@@ -85,7 +85,12 @@ Because in the end having a website is a matter of:
 
 ## The Stack
 
-After starting more than one year ago with this repository as a concept.
+After starting more than one year ago with [this repository](https://github.com/JAlcocerT/ScrewFastMoiRealEstate) and [post](https://jalcocert.github.io/JAlcocerT/astro-web-setup/) as a concept for real estate.
+
+The Stack: NEXTjs WebApp + 1 Welcome Page + Theme directory where the properties are stacked.
+
+
+In the mean time, there have been some ad-ins to the project that can also be interesting for builders and business owners.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/" title="The Waiting2Landing v2 PB Post" image="/blog_img/web/waitingtolanding/link-hub.png" subtitle="I tinkered here more with CSR and linkhub than actually building the waiting2landing v2 with PB instead of formbricks as per v1" >}}
@@ -129,13 +134,15 @@ If a user email is already added, it will say we already have your email.
 
 Testing something new, I will use [CapJS to add a CAPTCHA](https://jalcocert.github.io/JAlcocerT/encryption-101/#pow-captcha) to the waiting list.
 
-Just to avoid some unnecesary *crap and trols*.
+Just to avoid some unnecesary *crap and trols* going into the simple waiting list.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/capjs" title="CapJS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 Email wont be validated though.
+
+![A quick project - meme](/blog_img/memes/zinedine-zidane-materazzi.gif#center)
 
 But no APIs required: Just the CapJS container, login to the dashboard and get `CAP_SITE_KEY` and `CAP_SECRET_KEY`.
 
