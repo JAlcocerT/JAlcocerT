@@ -145,7 +145,7 @@ At this point, we have **authorized firebase CLI**:
 
 And...thats all the one time things/setup required to get your website.
 
-### Conclusions
+## Conclusions
 
 We just created a free website with Firebase and Astro SSG!
 

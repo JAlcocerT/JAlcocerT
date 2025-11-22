@@ -9,6 +9,7 @@ url: 'open-source-minimalist-websites'
 
 **Tl;DR**
 
+The minimalist web vs the independent web
 
 **Intro**
 
@@ -26,14 +27,12 @@ But some people take it one level higher and do webs veeery minimalistic.
 
 <!-- echo chambers -->
 
-https://lukesmith.xyz/articles/modern-freedom-means-being-a-slave-to-impulses/
-https://lukesmith.xyz/articles/monero-and-other-privacy-coins/
-https://lukesmith.xyz/articles/politics-matters-most-to-slaves/
+* https://lukesmith.xyz/articles/modern-freedom-means-being-a-slave-to-impulses/
+* https://lukesmith.xyz/articles/monero-and-other-privacy-coins/
+* https://lukesmith.xyz/articles/politics-matters-most-to-slaves/
 
 https://danluu.com/
 
-minimalist web
-independent web
 
 <!-- 
 https://ericmurphy.xyz/blog/minimalist-web/
@@ -45,6 +44,7 @@ https://erikjohannes.no/ ---> great photo section!!!
 CSS Post
 
 Miss "The Old Internet"? Here's How to Bring it Back.
+
 https://www.youtube.com/watch?v=1iOVatAR-bU
 
 
@@ -52,12 +52,11 @@ https://www.youtube.com/watch?v=1iOVatAR-bU
 
 ## Conclusions
 
-
 Despite not been as minimalistic as the sites above, I really enjoy hugo/astro and static site hosting to publish.
 
 There is not a single time that Ive opened: https://astro.build/themes/1/?search=&price%5B%5D=free and havent found sth interesting.
 
-Whatever you build, make sure to validate:
+Whatever you build, make sure to **validate the outcome**:
 
 
 {{< hextra/feature-grid >}}
@@ -96,7 +95,11 @@ And doubting if sth like [HUGO congo](https://github.com/jpanther/Congo) would b
 
 But then I found this: https://github.com/themefisher/dockit-astro
 
-https://github.com/JAlcocerT/dockit-astro
+
+```sh
+git clone https://github.com/JAlcocerT/dockit-astro
+
+```
 
 > This is simple great for F/OSS 
 
@@ -169,3 +172,6 @@ Particularly by https://www.awesome-homelab.com/item/novel-editor
 
 #### Headless StrapiCMS Example
 
+
+
+![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)

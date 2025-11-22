@@ -2,22 +2,62 @@
 title: "SelfHosting is easy with PaaS"
 date: 2025-12-01T01:20:21+01:00
 draft: false
-tags: ["HomeLab ebook","Hetzner VPS","Anti-Gravity"]
+tags: ["HomeLab ebook","Hetzner VPS","Anti-Gravity","Excalidraw"]
 description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
 
-https://antigravity.google/
+* https://antigravity.google/
+  * https://antigravity.google/download/linux
+
+```sh
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg | \
+  sudo gpg --dearmor -o /etc/apt/keyrings/antigravity-repo-key.gpg
+echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" | \
+  sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
+
+sudo apt update
+sudo apt install antigravity
+
+```
 
 **Tl;DR**
 
 A random server for ~4$/month is all you need.
+
+https://one.one.one.one/
+
 
 **Intro**
 
 I tend to get inspired with this kind of [vm and containers that im running](https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/) posts.
 
 As I played with PaaS, wanted to proove how easy and quick is to set them into a VPS for ~4$/month.
+
+
+Mind your attention, stop auto engage and keep the important things at life first.
+
+{{< youtube id="ydG5EtQat_I" autoplay="false" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=ydG5EtQat_I -->
+
+gollama
+
+
+
+## Excalidraw x Notes x SSGs
+
+Im a big fan of Excalidraw for D&A, specially architectural diagrams.
+
+For those times when you dont want to use MermaidKS, but just to make a quick drawing.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/excalidraw" title="Selfhosted Excalidraw - Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+https://www.youtube.com/watch?v=P_Q6avJGoWI
 
 
 https://blog.excalidraw.com/
@@ -30,15 +70,49 @@ Once everyone is onboard, we can continue and end up with some cool [PBi](https:
 
 Venn diagrams for data modelling and architecture are also appreciated
 
+What's also great? that Excalidraw can interprete MermaidJS Syntax an render also the diagrams :)
 
-Mind your attention, stop auto engage and keep the important things at life first.
+Oh...and also excel tables are rendered into cool graphs.
 
-{{< youtube id="ydG5EtQat_I" autoplay="false" >}}
+![alt text](/blog_img/selfh/HomeLab/excalidraw.png)
 
-<!-- 
-https://www.youtube.com/watch?v=ydG5EtQat_I -->
+> Yea, thats this [DevOps diagram](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/)
 
-gollama
+That's a great question, as Excalidraw is very popular in the open-source and PKM (Personal Knowledge Management) communities!
+
+Yes, there are several excellent **open-source note-taking tools** and even a few ways to incorporate Excalidraw into an **SSG (Static Site Generator)**.
+
+#### 📝 Open Source Note-Taking Tools
+
+Here are a few prominent open-source note-taking applications that support Excalidraw:
+
+| Tool | Type | Excalidraw Support | Notes |
+| :--- | :--- | :--- | :--- |
+| **Obsidian** | Desktop/Mobile Note App (Free, not fully open-source, but local-first) | **Community Plugin** (Obsidian Excalidraw Plugin) | The most popular option. The plugin is open-source and integrates Excalidraw seamlessly, allowing you to embed Excalidraw drawings in your notes and link between them. |
+| **Logseq** | Desktop/Web/Mobile Outliner & PKM (Open Source) | **Built-in Support** | Logseq is an open-source outliner that uses local Markdown files and has excellent native support for Excalidraw diagrams as a block type. |
+| **Trilium Notes** | Self-Hosted Knowledge Base (Open Source) | **Native Canvas** | Trilium has a built-in *Canvas* feature that uses the same underlying technology as Excalidraw, making it ideal for diagrams and visual planning within your knowledge base. |
+| **Standard Notes**| Encrypted Note App (Open Source) | **Built-in Plugin/Editor** | Standard Notes offers an Excalidraw editor as a built-in plugin/extension. |
+
+> **Note on Excalidraw Itself:** **Excalidraw** is *entirely open-source* and you can self-host the editor itself if you just need a drawing tool. Many tools integrate the open-source Excalidraw npm package.
+
+---
+
+#### 💻 SSG (Static Site Generator) Support
+
+Direct, built-in support in major SSGs is less common, but you can usually achieve it by converting the Excalidraw file data (which is JSON) into a renderable format like SVG or PNG during the build process.
+
+* **Obsidian-based SSGs:** Since Obsidian has such good Excalidraw integration, SSGs designed to publish Obsidian vaults often handle Excalidraw files:
+    * **[Quartz](https://github.com/jackyzha0/quartz):** An open-source, fast SSG built for Obsidian. It has mechanisms to handle various Obsidian-specific elements, and often community plugins or configurations exist to ensure Excalidraw diagrams are correctly rendered when building the static site.
+    * **Obsidian Garden / Digital Garden SSGs:** Many small, open-source SSGs built specifically for "Digital Gardens" (sites published from Obsidian/Markdown notes) will have community-contributed support for the Obsidian Excalidraw plugin's output.
+
+* **General SSGs:** For general SSGs like **Hugo**, **Jekyll**, or **Next.js**, the approach is typically:
+    1.  Save your Excalidraw file (`.excalidraw`).
+    2.  Use a **script or build step** (often involving the Excalidraw CLI) to convert the `.excalidraw` JSON into a static **SVG** or **PNG** file.
+    3.  Embed the resulting SVG/PNG image in your Markdown note, which the SSG then publishes.
+
+Would you like me to find a specific tutorial or guide for integrating Excalidraw diagrams with an open-source SSG like Quartz or Hugo?
+
+---
 
 
 ## Conclusion

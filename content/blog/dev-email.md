@@ -7,7 +7,7 @@ description: 'Email is hard. Social Media OutReach, is not.'
 url: 'emails-101'
 ---
 
-https://www.mailersend.com/
+
 
 **TL;DR**
 
@@ -167,11 +167,12 @@ How to do email stuff...with code
 
 Mailtrap competitors primarily include other email testing and delivery platforms that offer similar capabilities for email sandboxing, deliverability testing, spam checking, and transactional email sending. Some well-known Mailtrap competitors are:
 
-- Mailgun: Offers advanced email sending APIs, email validation, and analytics for deliverability and engagement.
-- SendGrid (by Twilio): Provides scalable email sending, marketing campaign features, and email analytics.
+- [Mailgun](https://www.mailgun.com/pricing/): Offers advanced email sending APIs, email validation, and analytics for deliverability and engagement.
+- [SendGrid](https://sendgrid.com/en-us/pricing?tab=1_1) (by Twilio): Provides scalable email sending, marketing campaign features, and email analytics.
 - Postmark: Focuses on transactional email delivery with high deliverability rates.
 - Litmus: Known for email previewing across many email clients and spam testing.
 - [MailerLite](#mailerlite): Combined email marketing and delivery platform popular with small businesses.
+  - [Mailersend](https://www.mailersend.com/) - transactional email alternative that competes with SendGrid and MailGun
 - Email Sandbox: A testing-focused platform providing sandboxing for email templates and deliverability testing.
 - GMass: Primarily a Gmail-based email marketing and campaign testing tool.
 

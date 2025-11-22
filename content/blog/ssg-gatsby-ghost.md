@@ -2,7 +2,7 @@
 title: "Gatsby SSG x Ghost"
 date: 2025-11-17T23:20:21+01:00
 draft: false
-tags: ["Web","GatsbyJS x Ghost CMS"]
+tags: ["Web","GatsbyJS x Ghost CMS","Gatsby PodCast"]
 description: 'Using gatsby to create a static site from ghostCMS'
 url: 'gatsby-ghost-integration'
 ---
@@ -24,6 +24,7 @@ I was recently tinkering here with [Ghost and its API](https://jalcocert.github.
 ## About the Web
 
 
+You know the drill: 
 
 {{< hextra/feature-grid >}}
  
@@ -52,19 +53,19 @@ I was recently tinkering here with [Ghost and its API](https://jalcocert.github.
 
 
 
-https://trends.google.com/trends/
+There is also a very important one: https://trends.google.com/trends/
 
 * How is your site doing? https://search.google.com/
 
-https://one.one.one.one/
 
-https://github.com/vojtaholik/gatsby-theme-simplecast?ref=statichunt.com
 
 ---
 
 ## Gatsby SSG
 
-👉 <https://www.youtube.com/watch?v=RaTpreA0v7Q>
+{{< youtube "RaTpreA0v7Q" >}}
+
+<!-- 👉 <https://www.youtube.com/watch?v=RaTpreA0v7Q> -->
 
 
 > **React based** framework (open source JS, Meta). <https://github.com/gatsbyjs/gatsby>
@@ -73,7 +74,9 @@ Load Data From Anywhere. Gatsby pulls in data from any data source, whether it�
 
 Use source plugins to load your data, then develop using Gatsby’s uniform GraphQL interface.
 
-Go Beyond Static Websites. Get all the benefits of static websites with none of the limitations.
+Go Beyond Static Websites. 
+
+Get all the benefits of static websites with none of the limitations.
 
 Gatsby sites are fully functional React apps, so you can create high-quality, dynamic web apps, from blogs to e-commerce sites to user dashboards.
 
@@ -81,7 +84,7 @@ Gatsby sites are fully functional React apps, so you can create high-quality, dy
 2. Then see: https://github.com/gatsbyjs/gatsby
 
 
-## About Gatsby plugins
+### About Gatsby plugins
 
 Gatsby plugins are a fundamental part of the Gatsby ecosystem and play a crucial role in extending the functionality of your Gatsby site. 
 
@@ -147,10 +150,15 @@ This website provides a searchable and categorized list of plugins that you can 
 2. **Gatsby GitHub Repository**: Another way to discover Gatsby plugins is by visiting the Gatsby GitHub repository, specifically the "plugins" section. The repository is located at [https://github.com/gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby), and you can find plugins in the "plugins" directory.
 
 
-https://www.gatsbyjs.com/docs/how-to/images-and-media/using-gatsby-plugin-image/
-https://ghost.org/docs/jamstack/gatsby/?ref=gatsby.ghost.io#use-cases
+* https://www.gatsbyjs.com/docs/how-to/images-and-media/using-gatsby-plugin-image/
+* https://ghost.org/docs/jamstack/gatsby/?ref=gatsby.ghost.io#use-cases
 
-## Understanding Gatsby
+### Understanding Gatsby
+
+Gatsby is just another SSG based on NodeJS.
+
+Install [nodejs](https://github.com/nodesource/distributions#installation-instructions), just like we did [here](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#moto-blogger-setup)
+
 
 ```sh
 npm install
@@ -164,14 +172,51 @@ Gatsby uses GraphQL to fetch data from APIs.
 And you could pull data from [dancing sites](https://www.bachatavilnius.lt/en/?action=createcache) to your dancing referal page.
 
 
-**Deploying Gatsby**: Any static hosting will do
+**Deploying Gatsby**: Any [static hosting](https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method) will do
 
 * Github Pages
 * Firebase
 * Cloudflare Pages
 
 
-## Themes
+## Themes for Gatsby
+
+I Have found several cool ones here: https://statichunt.com/
+
+Like https://statichunt.com/themes/nextjs-supastarter or https://statichunt.com/themes/gatsby-starter-flat-magazine
+
+With source codes:
+
+* https://github.com/damnitrahul/gatsby-starter-flat-magazine
+* https://github.com/vojtaholik/gatsby-theme-simplecast Yes, [Podcasts](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/) via Gatsby SSG too!
+
+* https://jamstackthemes.dev/theme/gatsby-starter-ghost/
+* https://gatsby.ghost.org/
+* https://gatsby-casper.netlify.app/
+* https://foundation.stackrole.com/
+* https://github.com/stackrole/gatsby-starter-foundation
+* https://jamstackthemes.dev/theme/gatsby-casper/
+* https://github.com/scttcper/gatsby-casper
+
+* https://github.com/yinkakun/gatsby-starter-glass
+
+* https://github.com/chrisnmorrison/revista-gatsby-blog-magazine
+* https://github.com/app-generator/gatsbyjs-starter-tailwindplay
+
+* https://github.com/app-generator/gatsbyjs-starter-tailwindplay
+
+
+### Podcasts in Gatsby
+
+Similarly to [the AstroPod project](https://github.com/JAlcocerT/astropod), we have this in Gatsby:
+
+```sh
+git clone https://github.com/vojtaholik/gatsby-theme-simplecast
+
+#yarn
+```
+
+
 
 * {{< newtab url="https://github.com/baobabKoodaa/gatsby-starter-photo-book" text="HUGO PaperMod" >}}
   * MIT ❤️
@@ -188,12 +233,11 @@ https://github.com/Uvacoder/rocketdocs-starter?ref=statichunt.com -->
 
 * <https://www.gatsbyjs.com/starters/>
 
-* <ttps://github.com/search?q=gatsby+theme&type=repositories>
+* <https://github.com/search?q=gatsby+theme&type=repositories>
 
 * https://github.com/TryGhost/gatsby-starter-ghost
 
 
-* Install nodejs: <https://github.com/nodesource/distributions#installation-instructions>
 
 
 * <https://gatsbytemplates.io/?ref=%22github%22>
@@ -203,24 +247,39 @@ https://github.com/Uvacoder/rocketdocs-starter?ref=statichunt.com -->
 * <https://github.com/stackrole/gatsby-starter-foundation>
 
 
+### Portoflio Minimal
+
+* https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal/tree/main
+
+```sh
+##rm -rf .git && git init
+
+gatsby new portfolio-minimal https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme
+npm install
+gatsby develop
+gatsby develop -p 8001
+gatsby build
+```
+
+If you want to **deploy statically** towards Google Firebase:
+
+```sh
+gatsby build
+
+npm install -g firebase-tools
+#firebase login
+#firebase init
+
+firebase deploy
+```
+
+
+
 ## Gatsby 💗 ghost
 
 As we saw, its not hard to [get started with Ghost](https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/#ghost-setup).
 
-https://jamstackthemes.dev/theme/gatsby-starter-ghost/
-https://gatsby.ghost.org/
-https://gatsby-casper.netlify.app/
-https://foundation.stackrole.com/
-https://github.com/stackrole/gatsby-starter-foundation
-https://jamstackthemes.dev/theme/gatsby-casper/
-https://github.com/scttcper/gatsby-casper
-
-https://github.com/yinkakun/gatsby-starter-glass
-
-https://github.com/chrisnmorrison/revista-gatsby-blog-magazine
-https://github.com/app-generator/gatsbyjs-starter-tailwindplay
-
-https://github.com/app-generator/gatsbyjs-starter-tailwindplay
+Consider these for adding to GhostCMS:
 
 
 * **`http://localhost:8000/`**
@@ -251,34 +310,6 @@ gatsby build
 ```
 
 This will start a development server, and you can view your blog at `http://localhost:8000`.
-
-## Portoflio Minimal
-
-<https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal/tree/main>
-
-#https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal/tree/main/gatsby-theme-portfolio-minimal#readme
-
-```sh
-##rm -rf .git && git init
-
-gatsby new portfolio-minimal https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme
-npm install
-gatsby develop
-gatsby develop -p 8001
-gatsby build
-```
-
-If you want to deploy statically towards Google Firebase:
-
-```sh
-gatsby build
-
-npm install -g firebase-tools
-#firebase login
-#firebase init
-
-firebase deploy
-```
 
 ---
 

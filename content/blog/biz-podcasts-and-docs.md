@@ -140,6 +140,10 @@ docker network connect cloudflared_tunnel astropod-prod #connect
 #docker inspect astro-prod --format '{{json .NetworkSettings.Networks}}' | jq
 ```
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/astropod" title="Astropod ↗" image="/blog_img/apps/gh-jalcocert.svg" subtitle="AstroPod Repository" >}}
+{{< /cards >}}
+
 ```sh
 networks:
   #adventurelog_net:  # Define the internal network

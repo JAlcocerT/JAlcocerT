@@ -176,11 +176,13 @@ But, I got to know that this is possible: https://kindlemodding.org/
 
 ### Business Canvas
 
+This is one of those entrepreneurship tools that I find useful.
+
 * https://en.wikipedia.org/wiki/Business_model_canvas
 
 * https://leantime.io/mastering-business-model-a-guide-to-completing-the-lean-canvas-model/
 
-* https://excalidraw.com/?
+* https://excalidraw.com/
 * https://github.com/excalidraw/excalidraw-libraries
     * https://libraries.excalidraw.com/?theme=light&sort=default
 
