@@ -87,8 +87,6 @@ Whatever you build, make sure to **validate the outcome**:
 {{< /hextra/feature-grid >}}
 
 
-
-
 ### Better Docs
 
 I was considering Astro starlight for a documentation theme with i18n support here.

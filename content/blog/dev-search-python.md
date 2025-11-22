@@ -1,6 +1,6 @@
 ---
 title: "Programatic Web Search"
-date: 2025-10-09
+date: 2026-02-09
 draft: false
 tags: ["Dev","DuckDuckGo","SerpAPI","SerpBear","SimilarWeb"]
 url: 'search-web-with-python'
@@ -20,6 +20,12 @@ I forked a project that was not only doing programatic web search, but also usin
 Cool stuff.
 
 But the DDG part I didnt have the change to play with.
+
+So just in case you want to bring your local deep researcher to life, here is a quick guide.
+
+![Perplexity Neko Search](/blog_img/selfh/Internet/perplexity-neko.png)
+
+You can keep happily using Perplexity!
 
 ## Web Search with Python
 

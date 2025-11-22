@@ -89,6 +89,8 @@ After starting more than one year ago with [this repository](https://github.com/
 
 The Stack: NEXTjs WebApp + 1 Welcome Page + Theme directory where the properties are stacked.
 
+And...the skill: knowing to vibe code.
+
 
 In the mean time, there have been some ad-ins to the project that can also be interesting for builders and business owners.
 

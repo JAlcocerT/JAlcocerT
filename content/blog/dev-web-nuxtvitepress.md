@@ -151,6 +151,23 @@ It highlights key aspects of each static site generator or framework.
 | **Key Feature** | **Blazing speed** for static sites | **Hybrid Static & SSR** with partial hydration | **SSR & SSG** (static generation and server-side rendering) | Easy blog setup using Ruby and Markdown | Rich React ecosystem, GraphQL support | Full-stack, **Vue.js** framework with server-side rendering |
 | **Best For** | Developers looking for **speed** and simplicity in static sites | Developers who need a **modern hybrid approach** (static + SSR) | Building **complex web applications** with both static and dynamic content | Simple blogs and personal websites | Content-rich websites with React | Building modern web apps using **Vue.js** |
 
+
+**NextJS** Whether you’re building a blog, a corporate website, or an e-commerce platform, Next.js provides the tools and scalability to meet your project's demands.
+
+**Gatsby** I got to know about GraphQL thanks to Gatsby.
+
+**Other SSGs**: Zensical, Quartz...
+
+* https://github.com/getpelican/pelican
+
+> Static site generator that supports Markdown and reST syntax. **Powered by Python**.
+
+* https://github.com/hexojs/hexo
+
+> MIT | A fast, simple & powerful blog framework, powered by Node.js.
+
+
+
 [![Star History Chart](https://api.star-history.com/svg?repos=gohugoio/hugo,withastro/astro,vercel/next.js,jekyll/jekyll,gatsbyjs/gatsby,nuxt/nuxt.js&type=Date)](https://star-history.com/#gohugoio/hugo&withastro/astro&vercel/next.js&jekyll/jekyll&gatsbyjs/gatsby&nuxt/nuxt.js&Date)
 
 * https://github.com/benben-miao/Awesome-StaticSiteGenerators
@@ -208,7 +225,6 @@ https://github.com/theNewDynamic/awesome-hugo
 * https://awesome-hugo.github.io/
 
 
-
 ### Jekyll
 
 
@@ -227,12 +243,11 @@ If you plan to use [Github Pages with these SSGs](https://jalcocert.github.io/JA
   {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="Job Offers and CV Creation" >}}
 {{< /cards >}}
 
-#### More Jekyll Resources
+**More Jekyll Resources**
 
 * https://github.com/mattvh/jekyllthemes
 
 > A directory of the best-looking themes for Jekyll blogs
-
 
 
 ### Astro       
@@ -315,68 +330,6 @@ Astro Themes I find interesting:
 {{< /cards >}}
 
 
-### NextJS
-
-
-<!-- https://github.com/steven-tey/precedent -->
-<!-- https://github.com/shadcn-ui/taxonomy 
-https://tx.shadcn.com/
--->
-
-
-<!-- PUBLIC APIs!!!
-https://github.com/sozonome/pub-apis?ref=statichunt.com
-https://publicapis.sznm.dev/all
-also good to filter cards -->
-
-<!-- filter cards for fossengineer - daisy UI??
-https://github.com/steamwebapi/steam-inventory-next.js?ref=statichunt.com 
-https://github.com/hassonor/apps-play?ref=statichunt.com
--->
-
-
-
-<!-- 
- Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
-
-https://github.com/scio-labs/inkathon?ref=statichunt.com -->
-
-<!-- 
- A responsive Proptech dashboard built with Nextjs, Tailwind, and Typescript 
-
- https://github.com/stephengade/veerage-dashboard?ref=statichunt.com -->
-
-
-
- <!-- ChatGPT Plugin starter template built with Next.js 13 App Router, Edge Functions, and Vercel 
-https://github.com/steven-tey/weathergpt?ref=statichunt.com#try-the-plugin -->
-
-<!-- 
-REAL STATE
-
-https://github.com/nikolovlazar/frontend-horse-ui?ref=statichunt.com
-web app ->> https://github.com/lazyfuhrer/Real-Estate-Web-App?tab=coc-ov-file#readme
-
-pwa
-https://github.com/kiri-art/stable-diffusion-react-nextjs-mui-pwa?ref=statichunt.com
-
-ecommerce
-https://github.com/riteshk-007/nextjs-store?ref=statichunt.com -->
-
-<!-- Scribbly is a web application (not SSG)!!!! that provides a platform for users to create and manage their digital journal
-https://github.com/subhamBharadwaz/scribbly -->
-
-
-{{< details title="What it is ? 📌" closed="true" >}}
-
-{{< /details >}}
-
-Whether you’re building a blog, a corporate website, or an e-commerce platform, Next.js provides the tools and scalability to meet your project's demands.
-
-### Gatsby
-
-I got to know about GraphQL thanks to Gatsby.
-
 
 ---
 
@@ -392,15 +345,30 @@ Allowing you to plug easily these kind of LLMs:
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
-**Other SSGs**
+{{< hextra/feature-grid >}}
+ 
+{{< hextra/feature-card
+  title="Google Speed Test"
+  subtitle="Test the speed and performance with PageSpeed Insights."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://pagespeed.web.dev/"
+>}}
 
-* https://github.com/getpelican/pelican
+{{< hextra/feature-card
+  title="Website Carbon"
+  subtitle="Website’s carbon footprint and environmental impact."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+  link="https://www.websitecarbon.com/"
+>}}
 
-> Static site generator that supports Markdown and reST syntax. **Powered by Python**.
+{{< hextra/feature-card
+  title="Web-Check"
+  subtitle="Performance and uptime using Web-Check's analytics tool."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://web-check.xyz/"
+>}}
 
-* https://github.com/hexojs/hexo
-
-> MIT | A fast, simple & powerful blog framework, powered by Node.js.
+{{< /hextra/feature-grid >}}
 
 
 ### About Nuxt
@@ -475,12 +443,6 @@ node_modules
 
 {{< /details >}}
 
-### Free Hosting and Free Domain
-
-Free Hosting Options with Free domain
-  - **Firebase**: Host your Next.js SSG on Firebase for scalable hosting and integrated services like authentication, database, and analytics.
-  - **Cloudflare Pages**: Deploy your Next.js SSG on Cloudflare Pages for fast and secure global distribution with built-in CDN and SSL/TLS encryption.
-  - **GitHub Pages**: Easily host your Next.js SSG on GitHub Pages, perfect for static sites with seamless integration with your GitHub repository.
 
 ### Outro
 
@@ -602,42 +564,6 @@ to the root directory, for example in `/public`, with info similar to:
 ```txt
 google.com, pub-123456789, DIRECT, abcd124fgthrk9876
 ```
-
-<!-- 
-### Useful Resources for a Better Website
-
-* Adding the project details as a post image thanks to https://socialify.git.ci/vercel/next.js/image?language=1&name=1&theme=Auto
-  * https://socialify.git.ci/
-
-### How to COnfigure Web analytics for NextJS
-
-Umami for NextJS Sites 
-Matomo
-https://www.goatcounter.com/
-
-Use fonts
-
-https://wowchemy.com/docs/getting-started/customization/
-
-Forms / Pop Ups
-
-/how-to-customize-a-hugo-website/#including-leaflet-map-as-html
-
--->
-
-<!-- ### How to notify Google about your site
-
-* To ping **Google's engine** to review your site's sitemap:
-
-```sh
-curl "https://www.google.com/ping?sitemap=https://www.example.com/sitemap.xml"
-```
-
-* Don't forget about **Bing Search** as well:
-
-```sh
-curl "https://www.bing.com/ping?sitemap=https://www.example.com/sitemap.xml"
-```  -->
 
 
 ### Making Webs with AI
