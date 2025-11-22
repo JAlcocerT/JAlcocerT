@@ -1,8 +1,8 @@
 ---
-title: "SMTP and email stuff"
+title: "SMTP and e-mail stuff"
 date: 2025-11-22
 draft: false
-tags: ["EMPs","MailTrap","Mailgun","Amazon SES","PostIZ vs GrowChief","MailerSend vs ListMonk"]
+tags: ["EMPs","Mailgun API","Amazon SES vs MailTrap","PostIZ vs GrowChief","MailerSend vs ListMonk"]
 description: 'Email is hard. Social Media OutReach, is not.'
 url: 'emails-101'
 ---
@@ -45,12 +45,14 @@ You can bring your domains to ProtonMail and send emails from them: https://acco
 
 4. And ok, thanks to Google Firebase we get out of the box email validation...
 
+
 But for something more custom...I have been lacking how actually email/SMTP work.
 
 <!-- https://youtu.be/Ksk42UzpO-I?si=9DqwYecMhxw4E-DK -->
 
 {{< youtube "Ksk42UzpO-I" >}}
 
+Before we get started, you might keep this close to you: https://temp-mail.org/
 
 * https://github.com/4w4k3/KnockMail
 
@@ -146,7 +148,7 @@ How to do email stuff...with code
 Mailtrap competitors primarily include other email testing and delivery platforms that offer similar capabilities for email sandboxing, deliverability testing, spam checking, and transactional email sending. Some well-known Mailtrap competitors are:
 
 - [Mailgun](https://www.mailgun.com/pricing/): Offers advanced email sending APIs, email validation, and analytics for deliverability and engagement.
-- [SendGrid](https://sendgrid.com/en-us/pricing?tab=1_1) (by Twilio): Provides scalable email sending, marketing campaign features, and email analytics.
+- [SendGrid](https://sendgrid.com/en-us/pricing?tab=1_1) (by Twilio!): Provides scalable email sending, marketing campaign features, and email analytics.
 - Postmark: Focuses on transactional email delivery with high deliverability rates.
 - Litmus: Known for email previewing across many email clients and spam testing.
 - [MailerLite](#mailerlite): Combined email marketing and delivery platform popular with small businesses.
@@ -174,6 +176,8 @@ Regarding ease of configuration among the competitors:
 
 
 **Sendgrid** just block me few minutes after creating my account.
+
+Without even sending or trying any single feature.
 
 That was interesting :)
 
@@ -212,6 +216,24 @@ I tested the free plan as per [this](https://signup.mailgun.com/new/signup?plan_
 Once logged in, you will go to: https://app.mailgun.com/dashboard?tab=send
 
 ![Setup mailgun free tier](/blog_img/selfh/marketing/mailgun-free-tier.png)
+
+It can also help us to validate emails!
+
+
+<!-- https://www.youtube.com/watch?v=LnVRGV-9NOY -->
+
+{{< youtube "LnVRGV-9NOY" >}}
+
+And also to send emails with your custom domain to whatever validated email we have.
+
+https://documentation.mailgun.com/docs/mailgun/user-manual/sending-messages/send-smtp
+https://www.mailgun.com/blog/email/which-smtp-port-understanding-ports-25-465-587/
+
+### Mailjet
+
+https://www.mailjet.com/pricing/
+
+https://app.mailjet.com/integrations
 
 ### Resend
 
@@ -366,6 +388,10 @@ Probably not recommended for 99.999% of us.
 #### The Poste Project
 
 I was using Cloudflare email routing, just to Create custom email addresses to use whenever you do not want to share your primary email address.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/poste" title="Poste | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 A combination of `MX` and `TXT` records need to be added to your DNS for Email Routing to be able to receive and route emails appropriately. Domain must be enabled for all subdomains to work.
 

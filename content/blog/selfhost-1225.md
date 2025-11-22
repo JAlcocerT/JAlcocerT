@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting is easy with PaaS"
-date: 2025-12-01T01:20:21+01:00
+date: 2025-12-02T01:20:21+01:00
 draft: false
 tags: ["HomeLab ebook","Hetzner VPS","Anti-Gravity","Excalidraw"]
 description: 'Selfhosting ebook.'
@@ -16,7 +16,7 @@ From the https://notebooklm.google/ to...a desktop IDE:
   * https://antigravity.google/download/linux
   * https://chromewebstore.google.com/detail/antigravity-browser-exten/eeijfnjmjelapkebgockoeaadonbchdd
 
-![alt text](/blog_img/dev/IDEs/antigravity.png)
+![Google AntiGravity IDE](/blog_img/dev/IDEs/antigravity.png)
 
 ```sh
 sudo mkdir -p /etc/apt/keyrings
@@ -141,7 +141,7 @@ Keeping NS outside cloudflare and using the NGINX setup, instead of the Traefik 
 
 
 
-url: 'sony- WF-1000XM3-linux'
+The **Sony- WF-1000XM3** and linux.
 
 https://www.youtube.com/watch?v=m_Mr4bw8Pow
 
@@ -155,7 +155,7 @@ https://askubuntu.com/questions/1269083/ubuntu-20-04-bluetooth-true-wireless-hea
 
 https://askubuntu.com/questions/1139404/sony-noise-cancelling-headphones-wh-1000xm2-3-and-bluetooth-initial-autoconnec
 
-The airpods pro worked out of the box though...
+The **airpods pro** worked out of the box though...
 
 
 Not only [AWS](https://health.aws.amazon.com/health/status) will have outages.

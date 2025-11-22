@@ -1,6 +1,6 @@
 ---
 title: "Just be Serverless"
-date: 2025-11-23T23:20:21+01:00
+date: 2025-11-28T07:20:21+01:00
 draft: false
 tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone","T3.Chat","Publii CMS","Cloudflare Workers"]
 url: 'serverless-101'

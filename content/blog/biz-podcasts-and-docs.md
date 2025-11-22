@@ -21,7 +21,7 @@ More Web fun Stuff with Astro SSG.
 
 Starting very quick with the default astro Theme:
 
-* https://github.com/withastro/starlight
+* https://github.com/withastro/starlight - Its an awsome theme!
     * See how great this can look [once you tweak it](https://github.com/IoTechCrafts/starlight-SSG) a little bit 
         * https://starlight.astro.build/getting-started/
         * https://docs.astro.build/en/install-and-setup/#use-a-theme-or-starter-template

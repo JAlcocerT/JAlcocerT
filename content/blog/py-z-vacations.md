@@ -1,6 +1,6 @@
 ---
 title: "[AI] Vacation Planning - Recommendations, Costs, Weather"
-date: 2025-11-23
+date: 2026-02-19
 draft: false
 tags: ["Dev","AI"]
 description: "Python App to explore vacAItion destination. LLMs ❤️ Data. While exploring Agents."

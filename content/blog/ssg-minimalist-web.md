@@ -101,9 +101,7 @@ git clone https://github.com/JAlcocerT/dockit-astro
 #make install && make dev
 ```
 
-![alt text](/blog_img/web/fosseng/dockit-astro.png)
-
-
+![Dockit - A better Astro Starlight for FossEngineer](/blog_img/web/fosseng/dockit-astro.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#docs-website" title="Starlight Docs - Post ↗" image="/blog_img/web/fosseng/starlight-docs-sample.png" subtitle="Astro Starlight | Docs Post" >}}
