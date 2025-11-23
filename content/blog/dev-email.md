@@ -39,6 +39,11 @@ You can bring your domains to ProtonMail and send emails from them: https://acco
 
 2. [Mailerlite](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#mailerlite): at the time of writing, they allow one custom domain free.
 
+https://jalcocert.github.io/JAlcocerT/n8n-with-ai/#n8n-x-mailerlite
+
+![Mailerlite adding sub manually for testing](/blog_img/GenAI/n8n/mailerlite/2-add-manual-sub.png)
+
+
 
 3. Via LogTo: also to redirect to your custom domain for auth login, they will send an email with the code to enter your webapp
 
@@ -177,7 +182,7 @@ Regarding ease of configuration among the competitors:
 | Mailtrap     | Very user-friendly, specifically designed for developers | Easy SMTP/API setup, great for email testing      |
 | SendGrid     | Moderate, with good documentation and UI                 | Provides marketing features, can be more complex  |
 | Postmark     | Simple and focused on transactional email                | Straightforward setup, less marketing complexity  |
-| Mailgun      | Moderate to advanced, developer-centered                  | Powerful API but requires technical knowledge     |
+| [Mailgun](#mailgun)      | Moderate to advanced, developer-centered                  | Powerful API but requires technical knowledge     |
 | Amazon SES   | More technical, requires AWS knowledge                    | Powerful but steeper learning curve                |
 | MailHog      | Very easy, open-source, self-hosted                        | Great for local dev/testing, less for production  |
 
@@ -189,17 +194,6 @@ Regarding ease of configuration among the competitors:
 Without even sending or trying any single feature.
 
 That was interesting :)
-
-
-### Amazon SES
-
-Amazon simple email service!
-
-Amazon SES is a highly scalable and cost-effective email sending service, especially well-suited for businesses already using AWS infrastructure. 
-
-It offers robust deliverability, pay-as-you-go pricing, and detailed monitoring tools, but it requires technical expertise for setup and management. 
-
-Its API and SMTP interfaces provide flexibility but might present a learning curve for less technical users.
 
 
 ### MailGun
@@ -396,17 +390,32 @@ It works! Also people can unsubscribe if they want to :)
 
 People use that one for some contact forms, as seen on [this post section](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#managing-packages-for-ssgs), together with [SSG Themes like this](https://github.com/HugoRCD/canvas?tab=readme-ov-file#setup-the-contact-form).
 
-* https://resend.com/signup
-  * https://github.com/HugoRCD/canvas
+* https://github.com/HugoRCD/canvas
+
+
+Go to: https://resend.com/signup
+
+Once login: https://resend.com/emails
+
+
+### Amazon SES
+
+Amazon simple email service!
+
+Amazon SES is a highly scalable and cost-effective email sending service, especially well-suited for businesses already using AWS infrastructure. 
+
+It offers robust deliverability, pay-as-you-go pricing, and detailed monitoring tools, but it requires technical expertise for setup and management. 
+
+Its API and SMTP interfaces provide flexibility but might present a learning curve for less technical users.
 
   
 ## Email for Marketing
 
-I was writting about marketing some time back.
+I was writting [about marketing tools](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies) some time back.
 
 In the meantime, saw: https://github.com/aaPanel/BillionMail
 
-> agpl v3.0 |  BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees.  
+> agpl v3.0 |  BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and **free from monthly fees**.  
 
 We also have the good olds, like **ListMonk**
 
@@ -416,10 +425,9 @@ We also have the good olds, like **ListMonk**
 {{< /cards >}}
 
 
-https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss
-![Mautic Dashboard UI](/blog_img/selfh/HomeLab/mautic/mautic-ui.png)
-
-
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss" title="Marketing around OSS - Mautic" image="/blog_img/selfh/HomeLab/mautic/mautic-ui.png" subtitle="Mautic setup for a marketing agency" >}}
+{{< /cards >}}
 
 ---
 
@@ -453,6 +461,7 @@ For Google this trick used to work for the same:
 
 ![GMAIL custom domain for google](/blog_img/email/dns-gmail.png)
 
+But since google domains migrated for squarespace, I stopped receiving emails from my domain.
 
 ### PocketBase x MailTrap
 
@@ -557,13 +566,13 @@ So, while they are similar as open-source social media tools, GrowChief focuses 
 
 If you read the [sample.env](https://github.com/growchief/growchief/blob/main/.env.example), you might recognize:
 
-- Apollo leads
-OPENAI_API_KEY
-RESEND_API_KEY=""
-EMAIL_PROVIDER=""
-EMAIL_FROM_NAME=""
-EMAIL_FROM_ADDRESS=""
-NEWSLETTER_PROVIDER=""
+- Apollo leads: we are aware that [some marketers use apollo](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#a-sample-marketer-workflow). Combined with APIfy to lower the cost!
+- OPENAI_API_KEY
+- RESEND_API_KEY=""
+- EMAIL_PROVIDER=""
+- EMAIL_FROM_NAME=""
+- EMAIL_FROM_ADDRESS=""
+- NEWSLETTER_PROVIDER=""
 
 If it does not already, Growchief should sounds to you to a lead enrichment and/or sales pipeline companion.
 

@@ -48,6 +48,12 @@ Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress
 4. **Odoo eCommerce**  
    Forma parte del ecosistema ERP Odoo. Permite administrar inventarios, facturación y ventas desde un mismo entorno, con interfaz moderna y modular.[2]
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss" title="Marketing around OSS - Mautic" image="/blog_img/selfh/HomeLab/mautic/mautic-ui.png" subtitle="Mautic setup for a marketing agency" >}}
+{{< /cards >}}
+
+
 5. **Drupal Commerce**  
    Extiende el CMS Drupal para manejar eCommerce. Ideal si se requiere un sistema de contenido robusto junto con funcionalidades de tienda.[8]
 

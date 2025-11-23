@@ -458,10 +458,10 @@ And configure it on **n8n as POST**.
 
 Then take the webhook url towards Mailerlite UI:
 
-And then test with some manual creation: https://dashboard.mailerlite.com/subscribers/create
+And then test the mailerlite workflow with some manual creation: https://dashboard.mailerlite.com/subscribers/create
 
 
-![alt text](/blog_img/GenAI/n8n/mailerlite/2-add-manual-sub.png)
+![Mailerlite adding sub manually for testing](/blog_img/GenAI/n8n/mailerlite/2-add-manual-sub.png)
 
 
 > https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/sample-workflows/2-mailerlite_webhook_tg.json

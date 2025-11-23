@@ -260,25 +260,21 @@ You can inspect the code, modify agents for specific use cases, and contribute i
 
 No limits when self-hosted: The public demo limits you to 15 rows and 5 columns to manage costs. When you run Fire Enrich locally, these restrictions disappear.
 
-Here is a cost comparison table for the tools Clay, Apollo, and Fire Enrich based on their starting prices and approaches:
-
 | Tool       | Starting Price       | Approach                                     |
 |------------|---------------------|----------------------------------------------|
 | Clay       | $149/month          | Multi-source aggregator, requires separate subscriptions  |
 | [Apollo](https://www.reddit.com/r/LeadGeneration/comments/1c0va0r/apolloio_leads/)     | $59/user/month      | Built-in database, limited customization        |
 | Fire Enrich| Free (self-hosted)  | Real-time research, only pay API costs          |
 
+Clay uses a credit-based system with multiple data sources and can get costly with usage.
 
-Clay uses a credit-based system with multiple data sources and can get costly with usage;
-
-Apollo is priced per user with a proprietary database, simpler but less flexible; 
+Apollo is priced per user with a proprietary database, simpler but less flexible.
 
 Fire Enrich is self-hosted and free but you pay for external API usage as needed.
 
 [1](https://blog.revpartners.io/en/revops-articles/clay-vs-apollo-sales-platform)
 [2](https://smartreachai.com/clay-vs-apollo-2025-sales-intelligence-comparison/)
 [3](https://supademo.com/blog/data-enrichment-tools/)
-
 
 When self-hosting, you only pay for OpenAI API usage (typically $0.01-0.05 per enrichment).
 
