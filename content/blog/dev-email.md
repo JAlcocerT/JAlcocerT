@@ -2,7 +2,7 @@
 title: "SMTP and e-mail stuff"
 date: 2025-11-22
 draft: false
-tags: ["EMPs","Mailgun API","Amazon SES vs MailTrap","PostIZ vs GrowChief","MailerSend vs ListMonk"]
+tags: ["EMPs","Mailgun API","Amazon SES vs MailTrap","GrowChief vs ListMonk"]
 description: 'Email is hard. Social Media OutReach, is not.'
 url: 'emails-101'
 ---
@@ -39,16 +39,13 @@ You can bring your domains to ProtonMail and send emails from them: https://acco
 
 2. [Mailerlite](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#mailerlite): at the time of writing, they allow one custom domain free.
 
-https://jalcocert.github.io/JAlcocerT/n8n-with-ai/#n8n-x-mailerlite
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/n8n-with-ai/#n8n-x-mailerlite" title="Mailerlite" image="/blog_img/GenAI/n8n/mailerlite/2-add-manual-sub.png" subtitle="Mailerlite adding sub manually for testing n8n" >}}
+{{< /cards >}}
 
-![Mailerlite adding sub manually for testing](/blog_img/GenAI/n8n/mailerlite/2-add-manual-sub.png)
+3. Via [LogTo](https://jalcocert.github.io/JAlcocerT/social-signin-101/#4-logto-): also to redirect to your custom domain for auth login, they will send an email with the code to enter your webapp
 
-
-
-3. Via LogTo: also to redirect to your custom domain for auth login, they will send an email with the code to enter your webapp
-
-
-4. And ok, thanks to Google Firebase we get out of the box email validation...
+4. And ok, thanks to [Google Firebase Auth](https://jalcocert.github.io/JAlcocerT/social-signin-101/#1-firebase-authentication-) we get out of the box email validation...
 
 
 But for something more custom...I have been lacking how actually email/SMTP work.

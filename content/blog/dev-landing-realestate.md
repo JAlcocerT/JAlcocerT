@@ -476,6 +476,11 @@ Wow, 1500/(8*3) = ~65$/h that we mentioned before.
 
 Kaboommmm 🤯
 
+{{< callout type="warning" >}}
+If you jalcocert.github.io/JAlcocerT/buying-car-data-analytics/, make sure that your time is worth more than it cost :)
+{{< /callout >}}
+
+
 In other european countries, what I see more and more is that behind every website, there is some kind of gov funding: https://organizate.info/
 
 They have a ~2008 design vibe though, see an [example](https://www.zierzoware.com/)

@@ -1,5 +1,5 @@
 ---
-title: "Social Auth for any SaaS"
+title: "Social Auth for any SaaS x Firebase"
 date: 2025-09-15T10:20:21+01:00
 draft: false
 tags: ["Firebase vs Logto vs Github Social Signin","BaaS vs AaaS","LTV > 3CAC","SliDevJS Editor","SPA vs MPA"]

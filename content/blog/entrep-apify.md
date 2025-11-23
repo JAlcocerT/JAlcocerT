@@ -3,7 +3,7 @@ title: "BiP with APIFY"
 date: 2025-10-18T06:20:21+01:00
 draft: false
 tags: ["Forum and Animations","Reddit vs FC","Coding for Entrepreneurs","RSS","Post Schedule"]
-description: 'The start of a sales pipeline 🤯'
+description: 'Building in Public | The start of a sales pipeline 🤯'
 url: 'apify'
 ---
 
@@ -134,10 +134,7 @@ With sth like [this ApexChart](https://apexcharts.com/javascript-chart-demos/mix
 https://www.youtube.com/watch?v=L_FY6aW9cJ4 
 -->
 
-
 {{< youtube "L_FY6aW9cJ4" >}}
-
-
 
 The video "How to Use AI to Find a $1M Idea [Reddit, Claude]" features Steph France presenting the "Gold Mining Framework," a step-by-step method to discover a million-dollar business idea and create a high-converting landing page within 45 minutes using AI tools, no coding or copywriting skills required.
 
