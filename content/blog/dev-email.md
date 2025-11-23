@@ -1,6 +1,6 @@
 ---
 title: "SMTP and e-mail stuff"
-date: 2025-11-22
+date: 2025-11-23
 draft: false
 tags: ["EMPs","Mailgun API","Amazon SES vs Resend vs MailJet","GrowChief vs ListMonk"]
 description: 'Email is hard. Social Media OutReach, is not.'
@@ -360,6 +360,10 @@ So you can skip writting those TXT records.
 Once resend has reached cloudflare, this is how it looks your custom domain configured:
 
 ![Resend configured with custom domain beyondajourney](/blog_img/email/resend-custom-domain2.png)
+
+Resend has integrations https://resend.com/settings/integrations
+
+With vercel or with Supabase - *Integrate your Supabase account to send emails from Supabase Auth via SMTP.*
 
 ### MailTrap
 

@@ -2,7 +2,7 @@
 title: "Trying Nuxt & VitePress [and a SSG Recap]"
 date: 2025-11-18
 draft: false
-tags: ["Dev","Nuxt","NUXT Content CMS"]
+tags: ["Dev","Nuxt","NUXT Content CMS","Nuxt Canvas Theme x Resend"]
 description: 'Testing NUXT & VitePress Themes. Looking back to the learnings with other SSGs like HUGO and Astro.'
 url: 'trying-nuxt-themes'
 ---
@@ -15,15 +15,14 @@ https://docs.astro.build/en/tutorial/2-pages/3/ -->
 
 **TL;DR**
 
-Ive had pening for a while to try Nuxt, and I think it is a great framework for building **full-stack web applications and websites with Vue.js**.
+Ive had pening for a while to try Nuxt, and I think it is a great framework for building **[full-stack web applications](https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/#csr-vs-spa) and websites with Vue.js**.
 
-https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/#csr-vs-spa
 
 **Intro**
+
 Almost the end of the year, time to **try out some new SSG**.
 
 This time it is the turn of **Nuxt**
-
 
 
 * https://github.com/HugoRCD/canvas
@@ -34,8 +33,6 @@ You just need **2 things**: NPM and NodeJS.
 
 * https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 * https://nodejs.org/en/download/package-manager
-
-
 
 
 {{< details title="Setup Node and NPM - x86/ARM64/ARM32 📌" closed="true" >}}
@@ -73,6 +70,8 @@ bun start #prod server
 
 Now you can spin a server and make **ASTRO [Remote Development](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker)** in it.
 
+
+
 ## Nuxt SSG
 
 Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade **full-stack web applications and websites with Vue.js**.
@@ -85,9 +84,63 @@ Nuxt is a free and open-source framework with an intuitive and extendable way to
 
 ### Nuxt Content CMS
 
+If you have been finding that connecting a CMS to a SSG is hard, Nuxt Content CMS is a great option.
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nuxt-content" title="Nuxt Content CMS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+
+### About Nuxt
+
+Nuxt is an open-source, full-stack framework for building **web applications using Vue.js**.
+
+It simplifies the development of complex applications by providing an opinionated structure, automatic routing, and multiple rendering modes out of the box.
+
+> Nuxt is inspired by Next.js, a similar framework for React.
+
+> > I need to try NUXT sometime *,soon'*
+
+#### Nuxt and JavaScript ☕️
+
+Nuxt is deeply rooted in JavaScript, as it's built on top of the Vue.js framework, which is a JavaScript library for building user interfaces.
+
+{{< callout type="warning" >}}
+See more about [TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/) and [JS Frameworks](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/)
+{{< /callout >}}
+
+It uses JavaScript to handle almost every aspect of an application, from front-end interactivity to server-side logic.
+
+* **Vue.js:** Nuxt is a meta-framework for Vue.js. It leverages Vue's component-based architecture and reactivity system. All the components and pages you create in a Nuxt application are essentially Vue components written in JavaScript (or TypeScript).
+* **Node.js and Nitro:** Nuxt's server-side capabilities are powered by a server engine called **Nitro**, which is built on Node.js. This allows Nuxt to run JavaScript code on the server, which is essential for features like Server-Side Rendering (SSR) and API routes.
+* **Tooling:** Nuxt integrates popular JavaScript build tools like **Vite** or **Webpack** to bundle and optimize your application's code for production.
+
+#### Nuxt and SSG (Static Site Generators)
+
+Nuxt is not just a static site generator, but it can act as one. 
+
+It offers several rendering modes, including static site generation (SSG), which puts it in a similar category to frameworks like Astro or Hugo, but with some key differences.
+
+##### **Nuxt's Rendering Modes**
+
+Nuxt provides a **versatile rendering system** that allows you to choose the best approach for your project:
+
+1.  **Single-Page Application (SPA):** The entire application is rendered by the browser after it loads the initial HTML, CSS, and JavaScript. This is the traditional way of building a Vue app, and it's great for highly interactive web apps.
+2.  **Server-Side Rendering (SSR):** The server renders the initial HTML for each page, which is then sent to the browser. This improves initial load performance and SEO. Once loaded, the page becomes a fully interactive SPA. Nuxt calls this "Universal" rendering.
+3.  **Static Site Generation (SSG):** Nuxt generates a static HTML, CSS, and JavaScript file for each page at build time. These files can be served from any static host or CDN. This provides the best performance and security and is ideal for content-heavy sites like blogs or documentation. 
+
+#### **Nuxt vs. Astro and Hugo**
+
+While all three can be used to generate static sites, they have different philosophies and use cases:
+
+* **Hugo:** This is a **pure static site generator** written in Go. Its primary focus is on lightning-fast build times and serving static content. It's not a JavaScript framework, so it doesn't provide the same level of client-side interactivity or component-based development as Nuxt or Astro. It's best suited for blogs, portfolios, or documentation websites where content is king and interactivity is minimal.
+
+* **Astro:** Astro is a **modern SSG** that champions a "zero-JS by default" approach. It uses a unique "Islands Architecture," where pages are pre-rendered to static HTML, with small, interactive "islands" of JavaScript-enabled components added only where needed. This results in incredibly fast websites with a minimal JavaScript payload. Astro is framework-agnostic, meaning you can use components from different frameworks like Vue, React, or Svelte within the same project. It is great for content-heavy sites that need a bit of interactivity.
+
+* **Nuxt:** Nuxt is a **full-stack Vue framework**. While it can be used as an SSG, its main strength lies in its ability to build complex, full-stack applications with server-side rendering, API routes, and a rich ecosystem of modules. Nuxt ships with more JavaScript by default than Astro, as its core philosophy is building a complete, cohesive application, whether it's an SPA, SSR, or SSG.
+
+> It's the best choice for developers already in the Vue ecosystem who need a powerful tool for building complex, interactive web applications.
+
 
 ## VitePress SSG
 
@@ -117,15 +170,56 @@ npm install
 npm run dev
 ```
 
-https://vitepress.dev/guide/routing
+Have a look to: https://vitepress.dev/guide/routing
 
 > VitePress is a **Vue-powered** static site generator and a spiritual **successor to VuePress**, built on top of Vite.
+
+---
 
 
 
 ---
 
-## A SSG Recap
+
+## Conclusions
+
+The good thing about SSGs is that they power content with markdown.
+
+Allowing you to plug easily these kind of LLMs:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+{{< hextra/feature-grid >}}
+ 
+{{< hextra/feature-card
+  title="Google Speed Test"
+  subtitle="Test the speed and performance with PageSpeed Insights."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://pagespeed.web.dev/"
+>}}
+
+{{< hextra/feature-card
+  title="Website Carbon"
+  subtitle="Website’s carbon footprint and environmental impact."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+  link="https://www.websitecarbon.com/"
+>}}
+
+{{< hextra/feature-card
+  title="Web-Check"
+  subtitle="Performance and uptime using Web-Check's analytics tool."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://web-check.xyz/"
+>}}
+
+{{< /hextra/feature-grid >}}
+
+
+
+### A SSG Recap
 
 So...those are 2 more SSGs to the list!
 
@@ -328,98 +422,6 @@ Astro Themes I find interesting:
   {{< card link="https://jalcocert.github.io/JAlcocerT/wordpress-migration-to-ssg/" title="Wordpress to SSG" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/guide-web3/" title="Web 3 with Astro" >}}
 {{< /cards >}}
-
-
-
----
-
-
-## Conclusions
-
-The good thing about SSGs is that they power content with markdown.
-
-Allowing you to plug easily these kind of LLMs:
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
-
-{{< hextra/feature-grid >}}
- 
-{{< hextra/feature-card
-  title="Google Speed Test"
-  subtitle="Test the speed and performance with PageSpeed Insights."
-  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
-  link="https://pagespeed.web.dev/"
->}}
-
-{{< hextra/feature-card
-  title="Website Carbon"
-  subtitle="Website’s carbon footprint and environmental impact."
-  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
-  link="https://www.websitecarbon.com/"
->}}
-
-{{< hextra/feature-card
-  title="Web-Check"
-  subtitle="Performance and uptime using Web-Check's analytics tool."
-  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
-  link="https://web-check.xyz/"
->}}
-
-{{< /hextra/feature-grid >}}
-
-
-### About Nuxt
-
-Nuxt is an open-source, full-stack framework for building **web applications using Vue.js**.
-
-It simplifies the development of complex applications by providing an opinionated structure, automatic routing, and multiple rendering modes out of the box.
-
-> Nuxt is inspired by Next.js, a similar framework for React.
-
-> > I need to try NUXT sometime *,soon'*
-
-#### Nuxt and JavaScript ☕️
-
-Nuxt is deeply rooted in JavaScript, as it's built on top of the Vue.js framework, which is a JavaScript library for building user interfaces.
-
-{{< callout type="warning" >}}
-See more about [TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/) and [JS Frameworks](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/)
-{{< /callout >}}
-
-It uses JavaScript to handle almost every aspect of an application, from front-end interactivity to server-side logic.
-
-* **Vue.js:** Nuxt is a meta-framework for Vue.js. It leverages Vue's component-based architecture and reactivity system. All the components and pages you create in a Nuxt application are essentially Vue components written in JavaScript (or TypeScript).
-* **Node.js and Nitro:** Nuxt's server-side capabilities are powered by a server engine called **Nitro**, which is built on Node.js. This allows Nuxt to run JavaScript code on the server, which is essential for features like Server-Side Rendering (SSR) and API routes.
-* **Tooling:** Nuxt integrates popular JavaScript build tools like **Vite** or **Webpack** to bundle and optimize your application's code for production.
-
-#### Nuxt and SSG (Static Site Generators)
-
-Nuxt is not just a static site generator, but it can act as one. 
-
-It offers several rendering modes, including static site generation (SSG), which puts it in a similar category to frameworks like Astro or Hugo, but with some key differences.
-
-##### **Nuxt's Rendering Modes**
-
-Nuxt provides a **versatile rendering system** that allows you to choose the best approach for your project:
-
-1.  **Single-Page Application (SPA):** The entire application is rendered by the browser after it loads the initial HTML, CSS, and JavaScript. This is the traditional way of building a Vue app, and it's great for highly interactive web apps.
-2.  **Server-Side Rendering (SSR):** The server renders the initial HTML for each page, which is then sent to the browser. This improves initial load performance and SEO. Once loaded, the page becomes a fully interactive SPA. Nuxt calls this "Universal" rendering.
-3.  **Static Site Generation (SSG):** Nuxt generates a static HTML, CSS, and JavaScript file for each page at build time. These files can be served from any static host or CDN. This provides the best performance and security and is ideal for content-heavy sites like blogs or documentation. 
-
-#### **Nuxt vs. Astro and Hugo**
-
-While all three can be used to generate static sites, they have different philosophies and use cases:
-
-* **Hugo:** This is a **pure static site generator** written in Go. Its primary focus is on lightning-fast build times and serving static content. It's not a JavaScript framework, so it doesn't provide the same level of client-side interactivity or component-based development as Nuxt or Astro. It's best suited for blogs, portfolios, or documentation websites where content is king and interactivity is minimal.
-
-* **Astro:** Astro is a **modern SSG** that champions a "zero-JS by default" approach. It uses a unique "Islands Architecture," where pages are pre-rendered to static HTML, with small, interactive "islands" of JavaScript-enabled components added only where needed. This results in incredibly fast websites with a minimal JavaScript payload. Astro is framework-agnostic, meaning you can use components from different frameworks like Vue, React, or Svelte within the same project. It is great for content-heavy sites that need a bit of interactivity.
-
-* **Nuxt:** Nuxt is a **full-stack Vue framework**. While it can be used as an SSG, its main strength lies in its ability to build complex, full-stack applications with server-side rendering, API routes, and a rich ecosystem of modules. Nuxt ships with more JavaScript by default than Astro, as its core philosophy is building a complete, cohesive application, whether it's an SPA, SSR, or SSG.
-
-> It's the best choice for developers already in the Vue ecosystem who need a powerful tool for building complex, interactive web applications.
 
 
 --- 

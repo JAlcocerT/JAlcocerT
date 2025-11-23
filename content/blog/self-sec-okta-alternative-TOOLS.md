@@ -1,8 +1,8 @@
 ---
 title: "Okta Alternatives? A look to F/OSS Single Sign On Tools"
-date: 2025-11-25T23:20:21+01:00
+date: 2025-11-22T23:20:21+01:00
 draft: false
-tags: ["Dashboards","OSS for Business","Authelia vs Authentik","KeyCloak","PocketID"]
+tags: ["Dashboards","Supabase vs PB","Authelia vs Authentik","KeyCloak","PocketID"]
 description: 'SelfHosting and SSO Tools'
 url: 'open-source-sso-tools'
 ---
@@ -11,24 +11,6 @@ url: 'open-source-sso-tools'
 
 https://www.awesome-homelab.com/item/pocket-id
 https://pocket-id.org/
-
-
-
-### What about Clerk?
-
-Clerk is a good alternative to Supabase Auth.
-
- https://clerk.com/docs which brings an interesting [Py SDK](https://github.com/clerk/clerk-sdk-python/blob/main/README.md)
-
-
-{{< details title="Auth Alternatives for webapps...📌" closed="true" >}}
-
-
-* https://www.reddit.com/r/Supabase/comments/1dvabn6/what_is_the_best_solution_to_use_supabase_auth/
-* https://www.reddit.com/r/nextjs/comments/1bvda9r/officially_hate_supabase_auth/?rdt=40537
-* https://www.reddit.com/r/Supabase/comments/xaxecr/authentication_with_supabase_is_easy_almost/
-
-{{< /details >}}
 
 
 **Intro**
@@ -47,7 +29,23 @@ Clerk is a good alternative to Supabase Auth.
 ## Why Single Sign On - SSO
 
 
-## Hanko
+### What about Clerk?
+
+Clerk is a good alternative to Supabase Auth.
+
+ https://clerk.com/docs which brings an interesting [Py SDK](https://github.com/clerk/clerk-sdk-python/blob/main/README.md)
+
+
+{{< details title="Auth Alternatives for webapps...📌" closed="true" >}}
+
+
+* https://www.reddit.com/r/Supabase/comments/1dvabn6/what_is_the_best_solution_to_use_supabase_auth/
+* https://www.reddit.com/r/nextjs/comments/1bvda9r/officially_hate_supabase_auth/?rdt=40537
+* https://www.reddit.com/r/Supabase/comments/xaxecr/authentication_with_supabase_is_easy_almost/
+
+{{< /details >}}
+
+### Hanko
 
 * https://www.hanko.io/
   * https://docs.hanko.io/introduction
@@ -76,6 +74,8 @@ VP can be used to replace application user management entirely - https://github.
 It works with Gitea / NextCloud / HA / Google / GH ...
 
 ## Authelia
+
+
 https://www.authelia.com/
 https://github.com/authelia/authelia
 https://github.com/authelia/authelia?tab=Apache-2.0-1-ov-file#readme
