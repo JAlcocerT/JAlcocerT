@@ -391,12 +391,12 @@ Once ready, you will see this:
 
 ![alt text](/blog_img/email/mailtrap-senderinfo.png)
 
-Mailtrap allows to send email programatically **via API** or SMTP:
+Mailtrap allows to send email programatically **via API** or SMTP: https://mailtrap.io/api-tokens 
 
 ![alt text](/blog_img/email/mailtrap-sending-domain-integrations.png)
 
 
-Create your token and: 
+Create your token and query that MAILTRAP API post endpoint of the host `send.api.mailtrap.io`
 
 ![alt text](/blog_img/email/mailtrap-api-token.png)
 
@@ -406,10 +406,19 @@ Create your token and:
 
 curl --location --request POST \
 'https://send.api.mailtrap.io/api/send' \
---header 'Authorization: Bearer $MAILTRAP_API_TOKEN' \
+--header "Authorization: Bearer $MAILTRAP_API_TOKEN" \
 --header 'Content-Type: application/json' \
---data-raw '{"from":{"email":"hello@news.libreportfolio.fyi","name":"Mailtrap Test"},"to":[{"email":"jesalctag@gmail.com"}],"subject":"You are awesome!","text":"Congrats for sending test email with Mailtrap!","category":"Integration Test"}'
+--data-raw '{"from":{"email":"noreply@news.libreportfolio.fyi","name":"Mailtrap Test"},"to":[{"email":"test@mail.com"}],"subject":"You are awesome!","text":"Congrats for sending a test email with Mailtrap!","category":"Integration Test"}'
+
+# curl --location --request POST \
+# 'https://send.api.mailtrap.io/api/send' \
+# --header 'Authorization: Bearer whateverAPIfromMailtrap' \
+# --header 'Content-Type: application/json' \
+# --data-raw '{"from":{"email":"hello@news.libreportfolio.fyi","name":"Mailtrap Test"},"to":[{"email":"test@mail.com"}],"subject":"You are awesome!","text":"Congrats for sending test email with Mailtrap!","category":"Integration Test"}'
 ```
+You will see that with MailTrap the email flow to your inbox and with the custom domain!
+
+![Mailtrap working programatically via API with custom domain to gmail](/blog_img/email/mailtrap-working-to-inbox.png)
 
 Mailtrap, also bring several integrations: https://mailtrap.io/integrations
 
@@ -463,6 +472,34 @@ Go to `Preferences` -> `Windsurf settings`
 ```
 
 ![alt text](/blog_img/dev/windsurf-mailtrap.png)
+
+
+```
+can you use the MCP mailtrap yo write an email to test@mail.com and wish it to have a great day? Do so that the category is Integration Test
+```
+
+```
+I can send that via the Mailtrap MCP tool for you. I’ll call the transactional email tool with your recipient, a simple subject, a short body, and category set to Integration Test.
+
+I’ve sent the email via the Mailtrap MCP tool with:
+
+To: test@mail.com
+Subject: Wishing you a great day
+Text:
+`Hi there, Just a quick note to wish you a great day! :) Best, Mailtrap + Cascade`
+Category: Integration Test
+Mailtrap reports the status as Success with a generated message ID, so it should appear according to your Mailtrap sending setup.
+
+Status summary: Email sent successfully with the requested category and content.
+```
+
+![alt text](/blog_img/email/mailtrap-working-mcp.png)
+
+
+{{< callout type="info" >}}
+For now, MailTrap is for SENDING. They are working on https://mailtrap.io/inbound though
+{{< /callout >}}
+
 
 ### Amazon SES
 
