@@ -2,7 +2,7 @@
 title: "SMTP and e-mail stuff"
 date: 2025-11-23
 draft: false
-tags: ["EMPs","Mailgun API","Amazon SES vs Resend vs MailJet","GrowChief vs ListMonk"]
+tags: ["EMPs","MailTrap API","Amazon SES vs Resend vs MailJet","GrowChief vs ListMonk"]
 description: 'Email is hard. Social Media OutReach, is not.'
 url: 'emails-101'
 ---
@@ -363,7 +363,7 @@ Once resend has reached cloudflare, this is how it looks your custom domain conf
 
 Resend has integrations https://resend.com/settings/integrations
 
-With vercel or with Supabase - *Integrate your Supabase account to send emails from Supabase Auth via SMTP.*
+With vercel or with Supabase - *Integrate your Supabase account to send emails from [Supabase Auth](https://jalcocert.github.io/JAlcocerT/open-source-sso-tools/#authentication-with-supabase) via SMTP.*
 
 ### MailTrap
 
@@ -385,15 +385,84 @@ No shortcuts here, we need to [add manually to cloudflare](https://help.mailtrap
 ![alt text](/blog_img/email/mailtrap-custom-domain-dns.png)
 
 
-Remember to add them **DNS only**
-
+Remember to add them **DNS only**!
 
 Once ready, you will see this:
 
+![alt text](/blog_img/email/mailtrap-senderinfo.png)
+
+Mailtrap allows to send email programatically **via API** or SMTP:
+
+![alt text](/blog_img/email/mailtrap-sending-domain-integrations.png)
+
+
+Create your token and: 
+
+![alt text](/blog_img/email/mailtrap-api-token.png)
+
+```sh
+#source .env
+#--header 'Authorization: Bearer <YOUR_API_TOKEN>' \
+
+curl --location --request POST \
+'https://send.api.mailtrap.io/api/send' \
+--header 'Authorization: Bearer $MAILTRAP_API_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{"from":{"email":"hello@news.libreportfolio.fyi","name":"Mailtrap Test"},"to":[{"email":"jesalctag@gmail.com"}],"subject":"You are awesome!","text":"Congrats for sending test email with Mailtrap!","category":"Integration Test"}'
+```
+
 Mailtrap, also bring several integrations: https://mailtrap.io/integrations
 
-Not only [n8n](https://github.com/mailtrap/mailtrap-n8n/) and [Supabase](https://help.mailtrap.io/article/165-mailtrap-smtp-and-supabase), but...MCP as well
+Not only [n8n](https://github.com/mailtrap/mailtrap-n8n/) and [Supabase](https://help.mailtrap.io/article/165-mailtrap-smtp-and-supabase), but...
 
+[MCP](https://jalcocert.github.io/JAlcocerT/understading-mcp-toolhive/) as well:
+
+This is for vscode: https://help.mailtrap.io/article/177-send-email-with-vs-code
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "mailtrap": {
+        "command": "npx",
+        "args": ["-y", "mcp-mailtrap"],
+        "env": {
+          "MAILTRAP_API_TOKEN": "your_mailtrap_api_token",
+          "DEFAULT_FROM_EMAIL": "your_sender@example.com"
+        }
+      }
+    }
+  }
+}
+```
+But if you use windsurf:
+
+![Windsurf x MCP Tools](/blog_img/dev/IDEs/windsurf-mcp-chat.png)
+
+Go to `Preferences` -> `Windsurf settings`
+```json
+{
+  "mcpServers": {
+    "gitmcp": {
+      "disabled": true,
+      "serverUrl": "https://gitmcp.io/google-gemini/gemini-cli"
+    },
+
+      "mailtrap": {
+        "command": "npx",
+        "args": ["-y", "mcp-mailtrap"],
+        "env": {
+          "MAILTRAP_API_TOKEN": "your_mailtrap_api_token",
+          "DEFAULT_FROM_EMAIL": "your_sender@example.com"
+        }
+      }
+      
+      
+  }
+}
+```
+
+![alt text](/blog_img/dev/windsurf-mailtrap.png)
 
 ### Amazon SES
 
@@ -515,7 +584,7 @@ If you have been *capturing leads*, say from [some simple waiting list](https://
 
 You can export them and import them into ListMonk.
 
-CSV just works!
+**CSV just works!**
 
 
 ### PostIZ vs GrowChief

@@ -11,7 +11,7 @@ url: 'understading-mcp-toolhive'
 
 [MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/) is cool.
 
-Yet MCP auth is hard: https://blog.logto.io/mcp-auth?ref=newsletter. 
+Yet, MCP auth is hard: https://blog.logto.io/mcp-auth?ref=newsletter. 
 
 See: https://www.agentpass.ai/
 
@@ -21,7 +21,9 @@ See: https://www.agentpass.ai/
 
 **Intro**
 
-In summary, ToolHive facilitates the use of MCPs by providing a user-friendly, secure, and scalable way to deploy and manage MCP servers in different environments. This enhances the practical implementation and usability of MCP technology in AI-driven workflows.[1][2][3][4]
+In summary, ToolHive facilitates the use of MCPs by providing a user-friendly, secure, and scalable way to deploy and manage MCP servers in different environments. 
+
+This enhances the practical implementation and usability of MCP technology in AI-driven workflows.
 
 * https://github.com/stacklok/toolhive
 
@@ -43,7 +45,9 @@ ToolHive supports running MCP servers locally, on Kubernetes, or as containerize
 
 MCPs, or Model Context Protocol servers, act as intermediaries between AI models and external tools, enabling structured and secure interactions that extend the capabilities and context of AI models.
 
-The relation between ToolHive and MCPs is that ToolHive is essentially a management and deployment tool specifically for MCP servers. It makes running MCP servers easier, more secure, and more efficient, helping users connect AI models with the right tools at the right time through MCPs.
+The relation between ToolHive and MCPs is that ToolHive is essentially a management and deployment tool specifically for MCP servers.
+
+It makes running MCP servers easier, more secure, and more efficient, helping users connect AI models with the right tools at the right time through MCPs.
 
 
 And there are some tools to bring that authentication to MCPs:

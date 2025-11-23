@@ -1,30 +1,46 @@
 ---
-title: "Okta Alternatives? A look to F/OSS Single Sign On Tools"
+title: "Okta Alternatives? SSO Tools"
 date: 2025-11-22T23:20:21+01:00
 draft: false
-tags: ["Dashboards","Supabase vs PB","Authelia vs Authentik","KeyCloak","PocketID"]
-description: 'SelfHosting and SSO Tools'
+tags: ["Dashboards","Supabase Auth vs PB","Authelia vs Authentik","PocketID"]
+description: 'A look to F/OSS Single Sign On Tools'
 url: 'open-source-sso-tools'
 ---
 
 **TL;DR**
 
-https://www.awesome-homelab.com/item/pocket-id
-https://pocket-id.org/
+* https://www.awesome-homelab.com/item/pocket-id
+  * https://pocket-id.org/
 
 
 **Intro**
 
-* https://auth0.com/ by Okta ❎
+Some time back, when working at a popular ecommerce, they were using Okta everywhere.
+
+I was wondering why they were not using OSS alternatives for business SSO.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/home-lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Reviewing Selfhosted SSO Tools for business" >}}
+{{< /cards >}}
+
+So lets cover some pros and cons and selfhost whatever is possible.
 
 1. [Authelia](#authelia)
-2. [LogTo](#logto)
+2. [LogTo](#logto) ✅ 
 3. [Authentik](#authentik)
 4. [Hanko](#hanko)
 5. [Vouch Proxy](#vouch)
 6. [Keycloak](#keycloack)
 7. [zitadel](#zitadel) - Identity infrastructure, simplified for you
 8. KeyAuth - Discontinued
+9. TinyAuth ✅  - Working [here](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/)
+10. FireBase Auth ✅
+11. Pocketbase Auth ✅
+12. Supabase Authentication
+
+
+We also have https://auth0.com/ by Okta
+
 
 ## Why Single Sign On - SSO
 
@@ -52,8 +68,6 @@ Clerk is a good alternative to Supabase Auth.
   * https://github.com/teamhanko/hanko?tab=License-1-ov-file#readme mixed, GNUPL
 
 > Authentication and user management system optimized for passkeys
-
-
 
 https://docs.hanko.io/api-reference/public/webauthn/initialize-webauthn-login
 
@@ -101,8 +115,6 @@ services:
 
 Authentik bring many [integrations](https://integrations.goauthentik.io/) supporting OAUTH and OpenID Connect aka OIDC as per [their docs](https://docs.goauthentik.io/users-sources/sources/protocols/oauth).
 
-
-
 * {{< newtab url="https://goauthentik.io/" text="The  Official Site" >}}
 * {{< newtab url="https://github.com/goauthentik/authentik" text="The  Source Code at Github" >}}
     * License: {{< newtab url="https://github.com/goauthentik/authentik?tab=License-1-ov-file#readme" text="Mixed License: CC, MIT, ..." >}} 
@@ -117,6 +129,7 @@ Authentik is an IdP (Identity Provider) and SSO (single sign on) that is built w
 
 
 Single Sign On With OAuth2.0 - Authentik Is AWESOME!
+
 https://www.youtube.com/watch?v=enwFWELCYJo&t=438s
 https://www.youtube.com/watch?v=KlDJ4K45M_o
 
@@ -159,7 +172,7 @@ docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin
 
 ### Zitadel
 
-## Cerbos
+### Cerbos
 
 
 docker run --rm --name cerbos -d -v $(pwd)/cerbos-quickstart/policies:/policies -p 3592:3592 -p 3593:3593  ghcr.io/cerbos/cerbos:0.34.0
@@ -169,7 +182,7 @@ https://docs.cerbos.dev/cerbos/latest/installation/binary
 
 > 
 
-## Fief
+### Fief
 
 https://www.fief.dev/
 
@@ -177,7 +190,7 @@ https://www.fief.dev/
 
 > Authenticate your users in minutes
 
-## SuperTokens
+### SuperTokens
 
 * SelfHostable
 
@@ -187,7 +200,7 @@ https://github.com/supertokens/supertokens-core/releases
 
 > Open source alternative to Auth0 / Firebase Auth / AWS Cognito
 
-## Zitadel
+### Zitadel
 
 it can provided passkeys, MFA, **use your brand and also onboard new users with ease**.
 
@@ -202,7 +215,7 @@ https://github.com/zitadel/zitadel?tab=Apache-2.0-1-ov-file#readme
 
 * https://zitadel.com/docs/self-hosting/deploy/overview
 
-## Ory Hydra
+### Ory Hydra
 
 https://github.com/ory/hydra
 
@@ -214,6 +227,9 @@ https://github.com/ory/hydra?tab=readme-ov-file#run-the-docker-compose-quickstar
 
 ## Conclusions
 
+As **Free Alternatives for Okta** I would go for
+
+
 ### LogTo
 
 * https://logto.io/
@@ -224,8 +240,11 @@ https://github.com/ory/hydra?tab=readme-ov-file#run-the-docker-compose-quickstar
 
 ## FAQ
 
-### Free Alternatives for Okta
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pocketbase/" title="Pocketbase | POST ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### Authentication with SupaBase
 
