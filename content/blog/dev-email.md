@@ -74,6 +74,26 @@ Too goo to be true I guess.
 
 ## SMTP
 
+The **Simple Mail Transfer Protocol (SMTP)** is essentially the **language** and **set of rules** that computers use to **send, receive, and relay email** from one email server to another.
+
+SMTP is like the entire mail system (the post office, the trucks, the delivery people) responsible for getting a physical letter from your mailbox to the recipient's mailbox.
+
+* **You (the Sender)**: When you hit "Send" in your email client (like Gmail, Outlook, etc.), your email client talks to your **outgoing mail server** using SMTP.
+* **The Post Office (Your Outgoing Mail Server)**: This server receives your email, looks at the recipient's address, and uses SMTP to contact the recipient's mail server.
+* **The Truck/Route (The SMTP Connection)**: This is the actual communication link where the two servers "speak" to each other using the specific SMTP commands (like `HELO`, `MAIL FROM`, `RCPT TO`, `DATA`).
+* **The Recipient's Post Office (The Incoming Mail Server)**: This server receives the email from your server, again via SMTP. It then stores the email in the recipient's mailbox.
+    * *Note: While SMTP handles the delivery to the destination server, another protocol, like **POP3** or **IMAP**, is used by the recipient's email client to actually **fetch** the email from that server.* 
+
+⚙️ How It Works (The Core Mechanism)
+
+1.  **Connection:** The sending server (the client) initiates a connection with the receiving server on a specific port (usually **Port 25**, **587**, or **465**).
+2.  **Handshake:** The two servers greet each other and establish who they are using commands like `HELO` (or `EHLO` for Extended SMTP).
+3.  **Address Exchange:** The sending server tells the receiving server the sender's address (`MAIL FROM`) and the recipient's address (`RCPT TO`).
+4.  **Data Transfer:** If the addresses are accepted, the sending server sends the actual email content (the body and headers) using the `DATA` command.
+5.  **Termination:** The transaction is completed, and the connection is closed.
+
+In short, **SMTP is the reliable, standardized way that email is pushed across the internet from one server to another.**
+
 ## Email APIs
 
 How to do email stuff...with code
@@ -100,12 +120,13 @@ Regarding ease of configuration among the competitors:
 
 | Service      | Ease of Configuration                                    | Notes                                             |
 |--------------|----------------------------------------------------------|---------------------------------------------------|
-| Mailtrap     | Very user-friendly, specifically designed for developers | Easy SMTP/API setup, great for email testing      |
+| [Mailtrap](#mailtrap)     | Very user-friendly, specifically designed for developers | Easy SMTP/API setup, great for email testing      |
 | SendGrid     | Moderate, with good documentation and UI                 | Provides marketing features, can be more complex  |
-| Postmark     | Simple and focused on transactional email                | Straightforward setup, less marketing complexity  |
+| Postmark     | Simple and focused on transactional email                | Straightforward setup, less marketing complexity. No free tier  |
 | [Mailgun](#mailgun)      | Moderate to advanced, developer-centered                  | Powerful API but requires technical knowledge     |
 | Amazon SES   | More technical, requires AWS knowledge                    | Powerful but steeper learning curve                |
-| MailHog      | Very easy, open-source, self-hosted                        | Great for local dev/testing, less for production  |
+
+
 
 
 {{< callout type="warning" >}}
@@ -305,7 +326,7 @@ To proove that it worked, I configured as SMTP for Listmonk and:
 
 It works! Also people can unsubscribe if they want to :)
 
-![alt text](/blog_img/email/mailjet-email-sample.png)
+![Mailjet working with dmrealestate domain](/blog_img/email/mailjet-email-sample.png)
 
 ### Resend
 
@@ -338,7 +359,31 @@ So you can skip writting those TXT records.
 
 Once resend has reached cloudflare, this is how it looks your custom domain configured:
 
-![alt text](/blog_img/email/resend-custom-domain2.png)
+![Resend configured with custom domain beyondajourney](/blog_img/email/resend-custom-domain2.png)
+
+### MailTrap
+
+Mailtrap offers a free tier: https://mailtrap.io/pricing/?tab=email-api
+
+![alt text](/blog_img/email/mailtrap-ui.png)
+
+One logged one, configure your custom domain with mailtrap: https://mailtrap.io/sending/domains
+
+![alt text](/blog_img/email/mailtrap-custom-domain.png)
+
+No shortcuts here, we need to [add manually to cloudflare](https://help.mailtrap.io/article/124-domain-verification-with-cloudflare) the DNS records (few CNAMEs and a TXT).
+
+
+![alt text](/blog_img/email/mailtrap-custom-domain.png)
+
+![Mailtrap setup with custom sub domain libreportfolio](/blog_img/email/mailtrap-custom-domain1.png)
+
+![alt text](/blog_img/email/mailtrap-custom-domain-dns.png)
+
+
+Remember to add them **DNS only**
+
+
 
 
 ### Amazon SES
@@ -346,6 +391,10 @@ Once resend has reached cloudflare, this is how it looks your custom domain conf
 Amazon simple email service!
 
 Amazon SES is a highly scalable and cost-effective email sending service, especially well-suited for businesses already using AWS infrastructure. 
+
+Get familiar with the pricing: https://aws.amazon.com/ses/pricing/
+
+Particuarly: https://calculator.aws/#/createCalculator/SES
 
 It offers robust deliverability, pay-as-you-go pricing, and detailed monitoring tools, but it requires technical expertise for setup and management. 
 
@@ -554,6 +603,8 @@ Probably not recommended for 99.999% of us.
 > Maildrop is a self hostable and easy to use disposable email service that allows you to receive emails on a random email address on your domain.
 
 * Modoboa 
+
+* MailHog: Very easy, open-source, self-hosted -  Great for local dev/testing, less for production 
 
 * https://github.com/docker-mailserver/docker-mailserver - MIT
   * https://docker-mailserver.github.io/docker-mailserver/latest/
