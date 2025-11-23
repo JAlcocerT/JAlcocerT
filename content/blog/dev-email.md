@@ -2,12 +2,10 @@
 title: "SMTP and e-mail stuff"
 date: 2025-11-22
 draft: false
-tags: ["EMPs","Mailgun API","Amazon SES vs MailTrap","GrowChief vs ListMonk"]
+tags: ["EMPs","Mailgun API","Amazon SES vs Resend vs MailJet","GrowChief vs ListMonk"]
 description: 'Email is hard. Social Media OutReach, is not.'
 url: 'emails-101'
 ---
-
-
 
 **TL;DR**
 
@@ -56,19 +54,13 @@ But for something more custom...I have been lacking how actually email/SMTP work
 
 Before we get started, you might keep this close to you: 
 
-https://temp-mail.org/
-
-https://mxroute.com/
-
-See the app `millionverifier` to... verify emails
-
-
-* https://github.com/4w4k3/KnockMail
+* https://temp-mail.org/
+* https://mxroute.com/
+* See the web/app `millionverifier` to... verify/validate emails. Like [Knockmail](#knockmail) tries.
 
 Same as [auth is hard](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#conclusions), until [its not](https://jalcocert.github.io/JAlcocerT/social-signin-101/).
 
 I want the same to happen with SMTP/emails.
-
 
 > But it did not work for me out of the box...
 
@@ -78,75 +70,7 @@ I got to send (and receive) emails via one of my domains via gmail.
 
 At least when it was google domains, when it migrated to squarespaces the setup stoped working.
 
-Too goo tobe true I guess.
-
-
-
-
-### KnockMail 
-
-Does an email you logged into your new waiting/[ebook list with Pocketbase](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version) even exists?
-
-KnockMail is a tool designed to **verify the existence of email addresses**. 
-
-But the project has...8 years w/o an update.
-
-* https://www.youtube.com/watch?v=0XnbAdDcDoE
-
-It addresses the problem of email validation, helping users confirm whether an email address is active or not. 
-
-This can be essential for businesses and developers to maintain clean email lists and improve communication efficiency.
-
-**Key Features**
-
-- **Creator**: Developed by Alisson Moretto (4w4k3).
-  
-- **Installation and Running**:
-  - Clone the repository:  
-    `git clone https://github.com/4w4k3/KnockMail.git`
-  - Navigate to the directory:  
-    `cd KnockMail`
-  - Install required packages:  
-    `pip install -r requeriments.txt`
-  - Run the application:  
-    `python knock.py` (or `python2.7 knock.py` for Python 2.7).
-
-- **Compatibility**: 
-  - Tested on various Linux distributions: 
-    - Kali Linux (SANA & ROLLING)
-    - Ubuntu 14.04-16.04 LTS
-    - Debian 8.5
-    - Linux Mint 18.1
-
-- **License**: Licensed under the BSD-3-Clause.
-
-- **Contributions**: Open for feature suggestions and improvements.
-
-**Conclusion**
-
-KnockMail is a useful tool for email verification, enhancing communication reliability. 
-
-
-<!-- https://www.youtube.com/watch?v=sJQUuN7R8sA&themeRefresh=1 -->
-
-{{< youtube "sJQUuN7R8sA" >}}
-
-
-
-* MailInaBox - https://www.maketecheasier.com/create-email-server-linux-with-mail-in-a-box/
-
-{{< callout type="warning" >}}
-This is advanced
-{{< /callout >}}
-
-Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101ee05cc64a59b46e4d299f?ref=selfh.st)
-
-[SMTP2Go](https://www.reddit.com/r/selfhosted/comments/1hr7bi5/smtp2go_free_plan_spam_score/)
-
-
-* https://github.com/simple-login/app
-
->  The SimpleLogin back-end and web app 
+Too goo to be true I guess.
 
 ## SMTP
 
@@ -392,7 +316,29 @@ People use that one for some contact forms, as seen on [this post section](https
 
 Go to: https://resend.com/signup
 
-Once login: https://resend.com/emails
+Once you have login: https://resend.com/emails
+
+![Resend landing page](/blog_img/email/resend-ui.png)
+
+
+
+You can configure resend to work with your sub/domain by setting those DNS records.
+
+The cool thing is that it has one click integration with cloudflare: https://resend.com/docs/knowledge-base/cloudflare
+
+![alt text](/blog_img/email/resend-custom-domain1.png)
+
+So you can skip writting those TXT records.
+
+![alt text](/blog_img/email/resend-custom-cloudflare.png)
+
+![alt text](/blog_img/email/resend-cloudflare-dns.png)
+
+> The docs are also great [for others like Porkbun](https://resend.com/docs/knowledge-base/porkbun)
+
+Once resend has reached cloudflare, this is how it looks your custom domain configured:
+
+![alt text](/blog_img/email/resend-custom-domain2.png)
 
 
 ### Amazon SES
@@ -580,6 +526,10 @@ If it does not already, Growchief should sounds to you to a lead enrichment and/
 
 The first question should be whether we should or not.
 
+{{< callout type="warning" >}}
+This is advanced
+{{< /callout >}}
+
 But providing you want, there are few options: *For open-source or closer to open-source alternatives to Mailtrap, these stand out*
 
 - MailHog: A lightweight, open-source email testing tool with a web interface, great for catching and viewing emails in dev environments.
@@ -638,3 +588,68 @@ Thanks to
 
 * https://www.youtube.com/watch?v=3jfABU68jzw&t=673s -  Poste.io with Docker compose
 * https://www.youtube.com/watch?v=t29v_M0mvlo - Setup DNS (SPF, DKIM y DMARC en Poste io)
+
+
+* MailInaBox - https://www.maketecheasier.com/create-email-server-linux-with-mail-in-a-box/
+
+
+
+Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101ee05cc64a59b46e4d299f?ref=selfh.st)
+
+[SMTP2Go](https://www.reddit.com/r/selfhosted/comments/1hr7bi5/smtp2go_free_plan_spam_score/)
+
+
+* https://github.com/simple-login/app
+
+>  The SimpleLogin back-end and web app 
+
+
+### KnockMail 
+
+Does an email you logged into your new waiting/[ebook list with Pocketbase](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version) even exists?
+
+* https://github.com/4w4k3/KnockMail
+
+KnockMail is a tool designed to **verify the existence of email addresses**. 
+
+But the project has...8 years w/o an update.
+
+* https://www.youtube.com/watch?v=0XnbAdDcDoE
+
+It addresses the problem of email validation, helping users confirm whether an email address is active or not. 
+
+This can be essential for businesses and developers to maintain clean email lists and improve communication efficiency.
+
+**Key Features**
+
+- **Creator**: Developed by Alisson Moretto (4w4k3).
+  
+- **Installation and Running**:
+  - Clone the repository:  
+    `git clone https://github.com/4w4k3/KnockMail.git`
+  - Navigate to the directory:  
+    `cd KnockMail`
+  - Install required packages:  
+    `pip install -r requeriments.txt`
+  - Run the application:  
+    `python knock.py` (or `python2.7 knock.py` for Python 2.7).
+
+- **Compatibility**: 
+  - Tested on various Linux distributions: 
+    - Kali Linux (SANA & ROLLING)
+    - Ubuntu 14.04-16.04 LTS
+    - Debian 8.5
+    - Linux Mint 18.1
+
+- **License**: Licensed under the BSD-3-Clause.
+
+- **Contributions**: Open for feature suggestions and improvements.
+
+**Conclusion**
+
+KnockMail is a useful tool for email verification, enhancing communication reliability. 
+
+
+<!-- https://www.youtube.com/watch?v=sJQUuN7R8sA&themeRefresh=1 -->
+
+{{< youtube "sJQUuN7R8sA" >}}

@@ -48,6 +48,12 @@ Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress
 4. **Odoo eCommerce**  
    Forma parte del ecosistema ERP Odoo. Permite administrar inventarios, facturación y ventas desde un mismo entorno, con interfaz moderna y modular.[2]
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/erpnext" title="ERPNext Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo HomeLab | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss" title="Marketing around OSS - Mautic" image="/blog_img/selfh/HomeLab/mautic/mautic-ui.png" subtitle="Mautic setup for a marketing agency" >}}
@@ -83,7 +89,8 @@ https://medusajs.com/plugins/
 https://docs.medusajs.com/starters/nextjs-medusa-starter
 
 ## Thelia
-<thelia.net>
+
+https://thelia.net
 
 ## Evershop
 

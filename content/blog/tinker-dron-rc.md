@@ -2,7 +2,7 @@
 title: "People do crazy RC stuff!"
 date: 2026-12-30T23:20:21+01:00
 draft: true
-tags: ["Tinkering"]
+tags: ["Tinkering","PulseJet"]
 description: 'Radio Control.'
 url: 'rc-tinkering'
 ---
@@ -24,3 +24,14 @@ https://youtube.com/shorts/2cJKzkdyGsE
  -->
 
 {{< youtube "2cJKzkdyGsE" >}}
+
+**Pulse Jet** 
+
+Apparently, all you need is a spark plug to get it started.
+
+
+https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/
+
+See a sample old Civic 6 spark plugs:
+
+![Honda Civic 6 Spark Plugs](/blog_img/outro/hondacivic-sparkplugs.jpg)
