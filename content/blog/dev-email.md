@@ -213,6 +213,8 @@ Its API and SMTP interfaces provide flexibility but might present a learning cur
 
 I tested the free plan as per [this](https://signup.mailgun.com/new/signup?plan_name=dev_free&currency=USD)
 
+![alt text](/blog_img/email/mailgun-pricing.png)
+
 Once logged in, you will go to: https://app.mailgun.com/dashboard?tab=send
 
 ![Setup mailgun free tier](/blog_img/selfh/marketing/mailgun-free-tier.png)
@@ -226,14 +228,116 @@ It can also help us to validate emails!
 
 And also to send emails with your custom domain to whatever validated email we have.
 
-https://documentation.mailgun.com/docs/mailgun/user-manual/sending-messages/send-smtp
-https://www.mailgun.com/blog/email/which-smtp-port-understanding-ports-25-465-587/
+* https://documentation.mailgun.com/docs/mailgun/user-manual/sending-messages/send-smtp
+* https://www.mailgun.com/blog/email/which-smtp-port-understanding-ports-25-465-587/
+
+![alt text](/blog_img/email/mailgun-smtp-config.png)
+
+I just had some authentication problems to make MailGun work with Listmonk.
+
+Be aware of selecting proper port and security settings.
 
 ### Mailjet
 
-https://www.mailjet.com/pricing/
+It has a free tier:https://www.mailjet.com/pricing/
 
-https://app.mailjet.com/integrations
+And once logged in, you go to: https://app.mailjet.com/integrations
+
+That's a great move! Mailjet uses your **API Key** and **Secret Key** as the username and password for its SMTP service.
+
+---
+
+1. 🔑 Find Your Mailjet SMTP Credentials
+
+The SMTP username and password are your unique **API Key** pair, which is located in your account settings.
+
+1.  **Log In:** Log in to your Mailjet account dashboard.
+2.  **Navigate to API Keys:** Look for a section like **Account Settings** or click on your **avatar/name** in the top right corner. Then navigate to **Master API Key & Sub API key management** or **API Key Management**.
+3.  **Find the Keys:** You will see two keys listed:
+    * **API Key (Public):** This is your **SMTP Username**.
+    * **Secret Key (Private):** This is your **SMTP Password**.
+
+> ⚠️ **Important Security Note:** The Secret Key is often displayed only **once** upon creation. If you haven't saved it, you may need to reset or generate a new one, so be sure to copy both keys now and save them securely.
+
+---
+
+2. ⚙️ Recommended Listmonk Configuration for Mailjet
+
+Once you have your credentials, use the following settings in the SMTP section of Listmonk:
+
+| Setting | Value | Notes |
+| :--- | :--- | :--- |
+| **Host** | `in-v3.mailjet.com` | This is Mailjet's official SMTP server address. |
+| **Port** | **587** | The standard, secure port using **STARTTLS** (recommended). |
+| **Auth protocol** | **LOGIN** | The standard method for using your API keys. |
+| **Username** | Your Mailjet **API Key** | The public key. |
+| **Password** | Your Mailjet **Secret Key** | The private key. |
+| **TLS** | **STARTTLS** | This is the proper encryption setting for Port 587. |
+
+**Alternative Port (for security or if 587 fails):**
+* **Port:** **465**
+* **TLS:** **SSL/TLS** (Implicit TLS)
+
+After updating the settings, click **Save** and test your connection in Listmonk!
+
+
+
+
+That is an excellent distinction to make, as Mailjet and MailerLite specialize in slightly different areas.
+
+The short answer is: **No, Mailjet and MailerLite are not direct equivalents.**
+
+They are both used for email, but their core focus and primary features differ significantly. This difference is key to understanding how they work with Listmonk.
+
+---
+
+## 🎯 MailerLite vs. Mailjet
+
+### 1. MailerLite (Closer to Listmonk's Purpose)
+
+| Focus | **Email Marketing Platform (EMP)** |
+| :--- | :--- |
+| **Primary Use** | Building and managing **email campaigns** (newsletters, promotional emails), contact lists, landing pages, sign-up forms, and visual email design. |
+| **Sending Method** | All sending is done via their internal platform and dedicated infrastructure. |
+| **Relevance to Listmonk** | MailerLite is feature-rich in areas where Listmonk is also strong (list management, content creation, segmentation). You would not typically use Listmonk *with* MailerLite, as they compete for the same function. |
+
+### 2. Mailjet (Closer to a Delivery Service)
+
+| Focus | **Email Service Provider (ESP) / SMTP Relay** |
+| :--- | :--- |
+| **Primary Use** | Highly reliable **email delivery** for both **marketing** and **transactional** emails, focusing on deliverability, API/SMTP integration, and scalability. |
+| **Sending Method** | Designed to be integrated into other applications (like Listmonk, websites, e-commerce stores) via **SMTP** or **API**. |
+| **Relevance to Listmonk** | Mailjet is an **ideal partner** for Listmonk. Listmonk handles the campaign/list management, and Mailjet handles the actual high-volume sending and ensures high inbox placement. |
+
+---
+
+## 📈 Mailjet with Listmonk: Marketing and Transactional
+
+The key benefit of using Mailjet is its ability to handle both types of email delivery via a single, reliable SMTP connection:
+
+### 1. Email Campaigns (Marketing)
+
+* **How it Works:** Listmonk manages your subscribers, segments, and content. When you launch a newsletter, Listmonk sends the bulk emails through Mailjet's **SMTP Relay** (using the credentials you just set up).
+* **Verdict:** **Yes**, Mailjet reliably handles your Listmonk marketing campaigns.
+
+### 2. Transactional Emails
+
+* **What it Is:** Emails triggered by user actions (e.g., password resets, order confirmations, subscription welcome emails from Listmonk).
+* **How it Works:** Since Listmonk uses Mailjet's SMTP service for *all* its outbound mail, any transactional emails Listmonk generates (like confirmation links) will also be routed through Mailjet.
+* **Verdict:** **Yes**, Mailjet is explicitly designed to be a reliable provider for transactional emails via SMTP, which benefits all of Listmonk's system emails.
+
+---
+
+**In Summary:**
+
+You can think of it this way:
+
+* **Listmonk** is your **operating system** for managing lists and campaigns.
+* **Mailjet** is your **high-performance engine** that ensures your emails (marketing and transactional) actually reach the inbox.
+
+You made a good choice by selecting a robust ESP like Mailjet to pair with Listmonk.
+
+Do you have any questions about verifying your sending domain with Mailjet (setting up DNS records like SPF and DKIM), which is the next crucial step for deliverability?
 
 https://app.mailjet.com/integrations/n8n
 https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/#templates-and-examples
@@ -246,9 +350,34 @@ And **Mailjet worked with Listmonk**. Even with Listmonk in `localhost:9077` wit
 
 Going to spam when sent to gmail...but worked.
 
-Even with the custom email from the domain.
+Even with the custom email from your domain.
 
-And people can unsubscribe if they want to :)
+It all comes down to some `TXT` DNS records to be setup.
+
+![alt text](/blog_img/email/dns-records-mailjet.png)
+
+![MailJet Domain Validation for branded email sending](/blog_img/email/mailjet-validate-domain.png)
+
+Apparently, these fields are also important: `SPF` and `DKIM`
+
+![MailJet SPF and DKIM setup for domain validation](/blog_img/email/mailjet-spf-dkim.png)
+
+
+Once ready, we see:
+
+![alt text](/blog_img/email/mailjet-validated-domain.png)
+
+and also:
+
+![alt text](/blog_img/email/mailjet-spf-authenticated.png)
+
+To proove that it worked, I configured as SMTP for Listmonk and:
+
+![alt text](/blog_img/email/mailjet-emails-statistics.png)
+
+It works! Also people can unsubscribe if they want to :)
+
+![alt text](/blog_img/email/mailjet-email-sample.png)
 
 ### Resend
 
@@ -277,11 +406,16 @@ We also have the good olds, like **ListMonk**
 
 ## Conclusions
 
-
-
 All these SMTP setups will help you with your social media, if you are into it.
 
-If you just wanted a quick way to chat...there are many [Interesting Chats](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps) to use :)
+If you just wanted a quick way to chat...
+
+There are many [Interesting Chats](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps) to use :)
+
+The good thing was to get **Mailjet + ListMonk working**, so that transactional or marketing emails will just work.
+
+
+You are free to also plug n8n, or feed ListMonk from leads from waiting lists or sales pipelines.
 
 
 ### Proton Mail
