@@ -77,10 +77,9 @@ Now you can spin a server and make **ASTRO [Remote Development](https://jalcocer
 Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade **full-stack web applications and websites with Vue.js**.
 
 * https://github.com/nuxt/nuxt
+  * https://nuxt.com/deploy
 
 > MIT | The Intuitive Vue Framework.
-
-* https://nuxt.com/deploy
 
 ### Nuxt Content CMS
 
@@ -101,7 +100,7 @@ It simplifies the development of complex applications by providing an opinionate
 
 > > I need to try NUXT sometime *,soon'*
 
-#### Nuxt and JavaScript ☕️
+**Nuxt and JavaScript ☕️**
 
 Nuxt is deeply rooted in JavaScript, as it's built on top of the Vue.js framework, which is a JavaScript library for building user interfaces.
 
@@ -115,13 +114,13 @@ It uses JavaScript to handle almost every aspect of an application, from front-e
 * **Node.js and Nitro:** Nuxt's server-side capabilities are powered by a server engine called **Nitro**, which is built on Node.js. This allows Nuxt to run JavaScript code on the server, which is essential for features like Server-Side Rendering (SSR) and API routes.
 * **Tooling:** Nuxt integrates popular JavaScript build tools like **Vite** or **Webpack** to bundle and optimize your application's code for production.
 
-#### Nuxt and SSG (Static Site Generators)
+**Nuxt and SSG (Static Site Generators)**
 
 Nuxt is not just a static site generator, but it can act as one. 
 
 It offers several rendering modes, including static site generation (SSG), which puts it in a similar category to frameworks like Astro or Hugo, but with some key differences.
 
-##### **Nuxt's Rendering Modes**
+**Nuxt's Rendering Modes**
 
 Nuxt provides a **versatile rendering system** that allows you to choose the best approach for your project:
 
@@ -139,10 +138,52 @@ While all three can be used to generate static sites, they have different philos
 
 * **Nuxt:** Nuxt is a **full-stack Vue framework**. While it can be used as an SSG, its main strength lies in its ability to build complex, full-stack applications with server-side rendering, API routes, and a rich ecosystem of modules. Nuxt ships with more JavaScript by default than Astro, as its core philosophy is building a complete, cohesive application, whether it's an SPA, SSR, or SSG.
 
-> It's the best choice for developers already in the Vue ecosystem who need a powerful tool for building complex, interactive web applications.
 
 
-## VitePress SSG
+---
+
+
+## Conclusions
+
+The good thing about SSGs is that they power content with markdown.
+
+Allowing you to plug easily these kind of LLMs:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+Dont forget to validate the performance:
+
+{{< hextra/feature-grid >}}
+ 
+{{< hextra/feature-card
+  title="Google Speed Test"
+  subtitle="Test the speed and performance with PageSpeed Insights."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://pagespeed.web.dev/"
+>}}
+
+{{< hextra/feature-card
+  title="Website Carbon"
+  subtitle="Website’s carbon footprint and environmental impact."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+  link="https://www.websitecarbon.com/"
+>}}
+
+{{< hextra/feature-card
+  title="Web-Check"
+  subtitle="Performance and uptime using Web-Check's analytics tool."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://web-check.xyz/"
+>}}
+
+{{< /hextra/feature-grid >}}
+
+
+
+### And...VitePress SSG
 
 VitePress is a **Vue-powered static site generator** and a spiritual successor to [VuePress](https://jamstack.org/generators/vuepress/), built on top of Vite.
 
@@ -173,51 +214,6 @@ npm run dev
 Have a look to: https://vitepress.dev/guide/routing
 
 > VitePress is a **Vue-powered** static site generator and a spiritual **successor to VuePress**, built on top of Vite.
-
----
-
-
-
----
-
-
-## Conclusions
-
-The good thing about SSGs is that they power content with markdown.
-
-Allowing you to plug easily these kind of LLMs:
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
-
-{{< hextra/feature-grid >}}
- 
-{{< hextra/feature-card
-  title="Google Speed Test"
-  subtitle="Test the speed and performance with PageSpeed Insights."
-  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
-  link="https://pagespeed.web.dev/"
->}}
-
-{{< hextra/feature-card
-  title="Website Carbon"
-  subtitle="Website’s carbon footprint and environmental impact."
-  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
-  link="https://www.websitecarbon.com/"
->}}
-
-{{< hextra/feature-card
-  title="Web-Check"
-  subtitle="Performance and uptime using Web-Check's analytics tool."
-  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
-  link="https://web-check.xyz/"
->}}
-
-{{< /hextra/feature-grid >}}
-
-
 
 
 --- 
@@ -352,8 +348,8 @@ You will **add something like this script**:
      crossorigin="anonymous"></script>
 ``` 
 
-https://www.google.com/adsense/new/u/0/pub-1816803660718163/home
-https://www.google.com/adsense/new/u/0/pub-1816803660718163/privacymessaging
+* https://www.google.com/adsense/new/u/0/pub-1816803660718163/home
+* https://www.google.com/adsense/new/u/0/pub-1816803660718163/privacymessaging
 
 You also need to get the `ads.txt` (get it here https://www.google.com/adsense/new/u/0/pub-1816803660718163/sites/detail/url=yourwebsite.com)
 

@@ -332,7 +332,7 @@ It works! Also people can unsubscribe if they want to :)
 
 ### Resend
 
-People use the Resend API for some contact forms.
+People use the Resend API for some contact forms. Like with [NUXT ssg](#resend-x-nuxtjs) projects.
 
 Go to: https://resend.com/signup
 
@@ -368,7 +368,7 @@ With vercel or with Supabase - *Integrate your Supabase account to send emails f
 
 As seen on [this post section](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#managing-packages-for-ssgs), together with [SSG Themes like this](https://github.com/HugoRCD/canvas?tab=readme-ov-file#setup-the-contact-form).
 
-* https://github.com/HugoRCD/canvas
+* I recently talked [about NUXT SSG](https://jalcocert.github.io/JAlcocerT/trying-nuxt-themes/), focusing on this theme for motivation: https://github.com/HugoRCD/canvas
 
 
 
@@ -602,7 +602,7 @@ The SMTP setup works as soon as we add our mailtrap API:*you can send one dummy 
 
 ![alt text](/blog_img/email/mailtrap-pb-mail-test-smtp.png)
 
-And realize that it points to `http://localhost:8090/_/#/auth/confirm-verification/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJfX3BiX3Rlc3RfY29sbGVjdGlvbl9pZF9fIiwiZW1haWwiOiJqZXNhbGN0YWdAZ21haWwuY29tIiwiZXhwIjoxNzY0NTAzNDIxLCJpZCI6Il9fcGJfdGVzdF9pZF9fIiwidHlwZSI6ImF1dGhSZWNvcmQifQ.ulHYpPcU1AFJyPKsS5k5xLHmUuEyrbilbzD5hS59cxM` instead of your custom domain
+And realize that it points to `http://localhost:8090/_/#/auth/confirm-verification/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJfX3BiX3Rlc3RfY29sbGVjdGlvbl9pZF9fIiwiZW1haWwiOiJqZXNhbGN0YWdAZ21haWwuY29tIiwiZXhwIjoxNzY0NTAzNDIxLCJpZCI6Il9fcGJfdGVzdF9pZF9fIiwidHlwZSI6ImF1dGhSZWNvcmQifQ.ulHYpPcU1AFJyPKsS5k5xLHmUuEyrbilbzD5hS59cxM` instead of your PB custom domain...
 
 But it arrives to your inbox!
 
@@ -632,6 +632,7 @@ All these SMTP setups will help you with your social media, if you are into it.
 
 Hopefully you are aware now of the differences between: regular mails vs transactional emails vs marketing emails.
 
+
 > After testing these, I would order them: Mailtrap > ReSend > MailJet for transactional purposes. Tested all of them on the free plan, w/o CC.
 
 > > You can still keep your Mailerlite setup for newsletters/marketing and Proton/GMAIL for your regular mails.
@@ -641,6 +642,11 @@ If you just wanted a quick/live way to talk , instead of sending mails...[just c
 But if you are a marketer, you probably care more about those leads / cold emails outreach.
 
 The good thing was to get **Mailjet + ListMonk working**, so that transactional or [marketing emails](#email-for-marketing) will just work.
+
+
+See the Python Listmonk scrips
+
+http://localhost:9077/admin/campaigns/templates
 
 You are free to also plug n8n, or feed ListMonk from leads from waiting lists or sales pipelines.
 
@@ -653,6 +659,55 @@ In the meantime, saw: https://github.com/aaPanel/BillionMail
 > agpl v3.0 |  BillionMail gives you **open-source MailServer, NewsLetter, Email Marketing** — fully self-hosted, dev-friendly, and **free from monthly fees**.  
 
 We also have the good olds, like **ListMonk**
+
+Which we can quickly integrate withing a NEXTjs app https://github.com/mihairaulea/listmonk-nodejs-api
+
+
+After a long fight, I realized I needed **a listmonk API user**
+
+```sh
+curl -u 'api_user:ACCESS_TOKEN' \
+  -s 'https://listmonk.jalcocertech.com/api/lists' | jq
+```
+
+
+And that this is the right way to add new users to a certain ListMonk public list:
+
+```sh
+curl -i \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "you+curl3@example.com",
+    "list_uuids": ["7fbcb72b-cc0a-4a31-a196-bdc847d55ea5"],
+    "status": "enabled"
+  }' \
+  https://listmonk.jalcocertech.com/api/public/subscription
+```
+
+or just:
+
+```sh
+# list lists
+curl -u 'apiuser:ACCESS_TOKEN' \
+  -s 'https://listmonk.jalcocertech.com/api/lists' | jq
+
+# create subscriber
+curl -u 'apiuser:ACCESS_TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "email": "yosua@some.domain",
+    "name": "Jane Doe",
+    "status": "enabled",
+    "list_uuids": ["7fbcb72b-cc0a-4a31-a196-bdc847d55ea5"]
+  }' \
+  https://listmonk.jalcocertech.com/api/subscribers
+```
+
+
+{{< callout type="warning" >}}
+The curl and NextJS ways of adding users to a Listmonk public list worked :)
+{{< /callout >}}
+
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/listmonk" title="Tools like ListMonk are Selfostable and allow for transactional emails with attachment! | Docker Config 🐋 ↗" >}}
@@ -786,7 +841,7 @@ If it does not already, Growchief should sounds to you to a lead enrichment and/
 The first question should be whether we should or not.
 
 {{< callout type="warning" >}}
-This is advanced
+This is advanced!
 {{< /callout >}}
 
 But providing you want, there are few options: *For open-source or closer to open-source alternatives to Mailtrap, these stand out*
@@ -865,7 +920,7 @@ Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101e
 >  The SimpleLogin back-end and web app 
 
 
-### KnockMail 
+#### KnockMail 
 
 Does an email you logged into your new waiting/[ebook list with Pocketbase](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version) even exists?
 
