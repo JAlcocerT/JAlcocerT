@@ -292,6 +292,8 @@ Not only you can automate your way with Mailjet and N8N:
 * https://app.mailjet.com/integrations/n8n
 * https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/#templates-and-examples
 
+#### Mailjet SMTP x ListMonk
+
 But also, **Mailjet worked with Listmonk**. Even with Listmonk in `localhost:9077` without bein Cloudflared
 
 Going to spam when sent to gmail...but worked.
@@ -330,10 +332,7 @@ It works! Also people can unsubscribe if they want to :)
 
 ### Resend
 
-People use that one for some contact forms, as seen on [this post section](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#managing-packages-for-ssgs), together with [SSG Themes like this](https://github.com/HugoRCD/canvas?tab=readme-ov-file#setup-the-contact-form).
-
-* https://github.com/HugoRCD/canvas
-
+People use the Resend API for some contact forms.
 
 Go to: https://resend.com/signup
 
@@ -364,6 +363,14 @@ Once resend has reached cloudflare, this is how it looks your custom domain conf
 Resend has integrations https://resend.com/settings/integrations
 
 With vercel or with Supabase - *Integrate your Supabase account to send emails from [Supabase Auth](https://jalcocert.github.io/JAlcocerT/open-source-sso-tools/#authentication-with-supabase) via SMTP.*
+
+#### Resend x NUXTjs
+
+As seen on [this post section](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/#managing-packages-for-ssgs), together with [SSG Themes like this](https://github.com/HugoRCD/canvas?tab=readme-ov-file#setup-the-contact-form).
+
+* https://github.com/HugoRCD/canvas
+
+
 
 ### MailTrap
 
@@ -493,12 +500,97 @@ Mailtrap reports the status as Success with a generated message ID, so it should
 Status summary: Email sent successfully with the requested category and content.
 ```
 
-![alt text](/blog_img/email/mailtrap-working-mcp.png)
+![Mailtrap sent email via windsurf agent flowing to inbox propely](/blog_img/email/mailtrap-working-mcp.png)
 
 
 {{< callout type="info" >}}
 For now, MailTrap is for SENDING. They are working on https://mailtrap.io/inbound though
 {{< /callout >}}
+
+#### MailTrap SMTP x PocketBase
+
+If you have enjoyed the MailTrap easy of use via API above, lets give it a try to the **Mailtrap SMTP setup** to work with PocketBase:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="The setup uses PocketBase to capture emails and allow you to read the e-book as a webpage or download the pdf | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+1. Select one of your **Mailtrap** sending domains: https://mailtrap.io/sending/domains
+2. Go to integrations tab and select transactional (vs BULK for the newsletter or sth)
+3. Use the SMTP Tab
+
+![alt text](/blog_img/email/mailtrap-smtp-setup.png)
+
+```sh
+curl \
+--ssl-reqd \
+--url 'smtp://live.smtp.mailtrap.io:587' \
+--user "api:$MAILTRAP_API_TOKEN" \
+--mail-from hello@news.libreportfolio.fyi \
+--mail-rcpt jesalctag@gmail.com \
+--upload-file - <<EOF
+From: Magic Elves <hello@news.libreportfolio.fyi>
+To: Mailtrap Sandbox <jesalctag@gmail.com>
+Subject: You are awesome!
+Content-Type: multipart/alternative; boundary="boundary-string"
+
+--boundary-string
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-transfer-encoding
+Content-Disposition: inline
+
+Congrats for sending test email with Mailtrap!
+
+If you are viewing this email in your inbox – the integration works.
+Now send your email using our SMTP server and integration of your choice!
+
+Good luck! Hope it works.
+
+--boundary-string
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-transfer-encoding
+Content-Disposition: inline
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body style="font-family: sans-serif;">
+    <div style="display: block; margin: auto; max-width: 600px;" class="main">
+      <h1 style="font-size: 18px; font-weight: bold; margin-top: 20px">Congrats for sending test email with Mailtrap!</h1>
+      <p>If you are viewing this email in your inbox – the integration works.</p>
+      <img alt="Inspect with Tabs" src="https://assets-examples.mailtrap.io/integration-examples/welcome.png" style="width: 100%;">
+      <p>Now send your email using our SMTP server and integration of your choice!</p>
+      <p>Good luck! Hope it works.</p>
+    </div>
+  </body>
+</html>
+
+--boundary-string--
+EOF
+```
+
+Via SMTP with curl, they went to SPAM though
+
+![alt text](/blog_img/email/mailtrap-smtp-spam.png)
+
+Go to your PB instance settings: https://pocketbase.jalcocertech.com/_/#/settings/mail
+
+
+![alt text](/blog_img/email/mailtrap-pb-mail-settings.png)
+
+![alt text](/blog_img/email/mailtrap-pb-mail-test.png)
+
+The SMTP setup works as soon as we add our mailtrap API:*you can send one dummy email validation*
+
+![alt text](/blog_img/email/mailtrap-pb-mail-test-smtp.png)
+
+And realize that it points to `http://localhost:8090/_/#/auth/confirm-verification/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJfX3BiX3Rlc3RfY29sbGVjdGlvbl9pZF9fIiwiZW1haWwiOiJqZXNhbGN0YWdAZ21haWwuY29tIiwiZXhwIjoxNzY0NTAzNDIxLCJpZCI6Il9fcGJfdGVzdF9pZF9fIiwidHlwZSI6ImF1dGhSZWNvcmQifQ.ulHYpPcU1AFJyPKsS5k5xLHmUuEyrbilbzD5hS59cxM` instead of your custom domain
+
+But it arrives to your inbox!
+
+![Mailtrap as Pocketbase SMTP to verify emails](/blog_img/email/mailtrap-pocketbase-verify-email.png)
 
 
 ### Amazon SES
