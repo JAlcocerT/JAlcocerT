@@ -388,6 +388,11 @@ No shortcuts here, we need to [add manually to cloudflare](https://help.mailtrap
 Remember to add them **DNS only**
 
 
+Once ready, you will see this:
+
+Mailtrap, also bring several integrations: https://mailtrap.io/integrations
+
+Not only [n8n](https://github.com/mailtrap/mailtrap-n8n/) and [Supabase](https://help.mailtrap.io/article/165-mailtrap-smtp-and-supabase), but...MCP as well
 
 
 ### Amazon SES

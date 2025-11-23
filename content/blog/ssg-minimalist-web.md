@@ -2,7 +2,7 @@
 title: "How to Save the Internet"
 date: 2025-11-21T23:20:21+01:00
 draft: false
-tags: ["Web ebook","Dev",Web Docs with Astro","Google Code Wiki"]
+tags: ["Web ebook","Dev",Web Docs with Astro","Google Code Wiki","Strapi CMS"]
 description: 'Open Source Minimalist Websites.'
 url: 'open-source-minimalist-websites'
 ---
@@ -147,3 +147,222 @@ But the curated already digested content will go to `blog.jalcocertech.com`
 >  Nuxt Portfolio Template made with Nuxt UI and [Nuxt Content](https://github.com/JAlcocerT/Home-Lab/tree/main/nuxt-content). 
 
 4. https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal Now that I have covered gatsby?
+
+---
+
+## FAQ
+
+
+
+### Making Webs with AI
+
+* https://github.com/rapidpages/rapidpages
+
+> MIT | Generate React and Tailwind components using AI 
+
+### How to setup StrapiCMS?
+
+If you are looking from CMS, you can have a look to [this post](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites), where I [setup KeystaticCMS](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms)
+
+* <https://www.opensourcealternative.to/project/Strapi>
+    * <https://docs.strapi.io/dev-docs/installation/docker>
+
+### Strapi CMS x Astro
+
+Astro JS x Strapi
+
+https://www.youtube.com/watch?v=WI-_gVBoBBg
+https://github.com/PaulBratslavsky/pauls-strapi-crashcourse
+https://github.com/JAlcocerT/pauls-strapi-crashcourse
+
+
+https://github.com/strapi/LaunchPad -> https://launch-pad-roan.vercel.app/en
+
+> Official Strapi Demo application
+
+
+
+![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="Strapi | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+https://www.youtube.com/watch?v=Ud9obEHadLI
+
+* https://elest.io/open-source/strapi
+
+* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
+
+* https://hub.docker.com/r/strapi/strapi/tags
+
+* https://docs.strapi.io/cms/installation/docker
+* https://docs.strapi.io/cms/quick-start
+* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
+
+
+<!-- ### How to use turbostrapi
+
+STRAPI + NEXTJS MONOREPO STARTER
+
+* https://github.com/sawden/turbostrapi/blob/master/apps/backend/README.md
+* https://github.com/sawden/turbostrapi?ref=statichunt.com
+https://github.com/sawden/turbostrapi?ref=statichunt.com
+https://turbo.build/repo/docs/installing
+
+```sh
+yarn install
+``` -->
+
+<!-- Build a Blog with Next.js and a Headless CMS (Strapi)
+https://www.youtube.com/watch?v=NNWX2flw5mg -->
+
+
+<!-- 
+NEXTJS + Strapi
+https://www.youtube.com/watch?v=SlhZvwl9qtI&list=PL7Q0DQYATmvjXSuHfB8CY_n_oUeqZzauZ&index=9 -->
+
+<!-- ### Other F/OSS SSG's
+
+This addition suggests other Static Site Generators (SSGs) that readers might find interesting based on their enjoyment of the Next.js post. Let me know if you need any further adjustments!
+
+    HUGO: Lightning-fast speed.
+    Astro: Built-in support for server-side rendering (SSR).
+    Jekyll: Simplicity and ease of use, particularly for blogging.
+    Gatsby: Rich ecosystem of plugins and a vibrant community.
+
+If you have enjoyed the Next.js post, you might be interested to explore other SSGs like HUGO, Astro, Jekyll, and Gatsby. -->
+
+
+<!-- Cloudflare runners -->
+
+
+
+<!-- - **Gatsby**: Gatsby is a popular static site generator within the **React** ecosystem, leveraging React for building static sites and offering a rich plugin ecosystem.
+  - **Pros**:
+    - Ability to pull data from various sources, including CMSs and APIs.
+    - React-based, enabling component-based development and rich interactivity.
+    - Extensive plugin ecosystem for adding functionality and integrating with third-party services.
+  - **Cons**:
+    - Longer build times for large projects due to complex data fetching and processing.
+    - Steeper learning curve for developers unfamiliar with React.
+    - Requires a Node.js environment for development and building.
+
+- **Next.js**: Next.js is primarily known as a **React** framework for SSR and CSR, but it also offers SSG capabilities, providing flexibility for different project needs.
+  - **Pros**:
+    - Versatility to choose between SSR, CSR, or SSG based on project requirements.
+    - Seamless integration with React for building dynamic user interfaces.
+    - Hybrid capabilities for blending static and dynamic content in a single application.
+  - **Cons**:
+    - Complex configuration compared to simpler static site generators.
+    - Requires familiarity with React and Node.js for effective usage.
+    - Limited built-in features compared to dedicated static site generators like Hugo. -->
+
+<!-- 
+
+https://developers.cloudflare.com/pages/framework-guides/nextjs/
+
+<https://jamstack.org/generators/next/>
+
+<https://nextjs.org/>
+
+
+<https://vercel.com/templates/next.js>
+
+<https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/>
+<https://transitivebullsh.it/nextjs-notion-starter-kit>
+
+<https://transitivebullsh.it/>
+
+## With streamlit
+
+https://ui.shadcn.com/themes
+https://github.com/ObservedObserver/streamlit-shadcn-ui
+
+
+## Themes
+
+<https://vercel.com/templates>
+
+### My Favourite Themes
+
+* https://nextra.site/
+* https://github.com/shadcn-ui/taxonomy
+
+* SaaS
+    * https://github.com/nextacular/nextacular
+
+
+### nextjs-notion-starter-kit
+
+https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/
+
+
+Fork / clone this repo
+Change a few values in site.config.ts
+npm install
+3. `npm install` or npm install --legacy-peer-deps
+npm run deploy to deploy to vercel 💪
+npm run build
+npm run start
+
+
+
+---
+
+## FAQ
+
+    SSG (Static Site Generation):
+    Static Site Generation involves generating HTML pages at build time, typically using a site generator or build tool. The generated HTML pages contain all the necessary content and assets, and they are served to clients as-is without the need for server-side processing. This approach offers benefits such as fast loading times, security, and scalability. Popular static site generators include Gatsby, Next.js (with static site generation), Jekyll, and Hugo.
+
+    SSR (Server-Side Rendering):
+    Server-Side Rendering involves generating HTML pages dynamically on the server in response to each client request. With SSR, the server processes the request, renders the page with the necessary data, and sends the fully rendered HTML to the client's browser. SSR is commonly used in web applications built with frameworks like Next.js, Nuxt.js, and Angular Universal. SSR can offer benefits such as improved SEO, faster initial page loads, and better support for dynamic content.
+
+    ISR (Incremental Static Regeneration):
+    Incremental Static Regeneration is a hybrid approach that combines the benefits of static site generation and dynamic content updates. With ISR, pages are initially generated statically at build time, but they can also be updated dynamically in the background. When a user requests a page that has been updated since the last build, the server regenerates the page with fresh data and serves the updated version. ISR is a feature available in frameworks like Next.js, enabling developers to pre-render dynamic content while still benefiting from static site performance.
+
+In summary, SSG generates HTML pages at build time, SSR generates HTML pages dynamically on the server in response to requests, and ISR combines static site generation with dynamic content updates for improved performance and flexibility. Each approach has its strengths and use cases, and the choice depends on the specific requirements of the project. -->
+
+<!-- 
+
+https://www.youtube.com/watch?v=Sklc_fQBmcs
+
+
+Next.js in 100 Seconds // Plus Full Beginner's Tutorial
+Overview
+
+Welcome to our report on the video "Next.js in 100 Seconds // Plus Full Beginner's Tutorial" by Fireship. In this report, we'll delve into the world of Next.js, a React-based framework for building fast and scalable web applications. If you're new to Next.js or looking to improve your skills, this report is a must-read.
+What is Next.js?
+
+Next.js is a popular framework for building server-rendered, statically generated, and performance-optimized React applications. It allows developers to create fast, scalable, and SEO-friendly web apps with zero configuration. In traditional React apps, content is rendered on the client-side, which can lead to slow page loads and poor SEO. Next.js solves this problem by rendering content on the server, providing a better user experience and search engine optimization.
+Features of Next.js
+
+Next.js provides several features that make it an ideal choice for building modern web applications. Some of these features include:
+
+    Server-side rendering: Next.js allows you to render content on the server, providing a faster and more SEO-friendly experience.
+    Static site generation: Next.js can pre-render pages at build time, making it ideal for blogs and applications with infrequently changing data.
+    Incremental static regeneration: Next.js can also regenerate pages dynamically, allowing for flexibility in data updating.
+    API routes: Next.js provides a way to create server-only API routes, which can be useful for tasks that require server-side processing.
+
+Building a Next.js App
+
+To get started with Next.js, you can create a new project using the npx create-next-app command. This will set up a basic Next.js project with a pages directory, where you can define your application's routes.
+
+In the pages directory, you can create separate files for each route, which will export a default React component. Next.js will then use these components to render the application.
+Data Fetching in Next.js
+
+Next.js provides several strategies for fetching data, including:
+
+    getStaticProps: This function allows you to fetch data at build time and pre-render pages.
+    getServerSideProps: This function allows you to fetch data on each request and render pages dynamically.
+
+Conclusion
+
+In conclusion, Next.js is a powerful framework for building fast, scalable, and SEO-friendly web applications. With its features, such as server-side rendering, static site generation, and data fetching strategies, Next.js provides a robust set of tools for building modern web applications.
+Takeaways
+
+    Next.js is a React-based framework for building fast and scalable web applications.
+    Next.js provides server-side rendering, static site generation, and incremental static regeneration.
+    Next.js has built-in support for API routes and data fetching strategies.
+
+Report generated on: May 5, 2024, 11:05:57 AM -->
