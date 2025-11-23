@@ -336,11 +336,11 @@ People use the Resend API for some contact forms.
 
 Go to: https://resend.com/signup
 
+> The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.
+
 Once you have login: https://resend.com/emails
 
 ![Resend landing page](/blog_img/email/resend-ui.png)
-
-
 
 You can configure resend to work with your sub/domain by setting those DNS records.
 
@@ -451,7 +451,10 @@ This is for vscode: https://help.mailtrap.io/article/177-send-email-with-vs-code
   }
 }
 ```
-But if you use windsurf:
+
+
+{{% details title="But if you use windsurf, just consider... 🚀" closed="true" %}}
+
 
 ![Windsurf x MCP Tools](/blog_img/dev/IDEs/windsurf-mcp-chat.png)
 
@@ -500,6 +503,11 @@ Mailtrap reports the status as Success with a generated message ID, so it should
 Status summary: Email sent successfully with the requested category and content.
 ```
 
+{{% /details %}}
+
+
+All thanks to the `mailtrap/send-email`  MCP tool!
+
 ![Mailtrap sent email via windsurf agent flowing to inbox propely](/blog_img/email/mailtrap-working-mcp.png)
 
 
@@ -509,7 +517,10 @@ For now, MailTrap is for SENDING. They are working on https://mailtrap.io/inboun
 
 #### MailTrap SMTP x PocketBase
 
-If you have enjoyed the MailTrap easy of use via API above, lets give it a try to the **Mailtrap SMTP setup** to work with PocketBase:
+
+[Mailtrap](https://mailtrap.io/signin) can be used to send one-time codes or magic links for user verification purposes such as account creation or subscription confirmation. 
+
+Since Mailtrap provides SMTP email sending capabilities, you can configure PocketBase or any backend service to use Mailtrap's SMTP settings to send transactional emails including verification codes or magic links.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="The setup uses PocketBase to capture emails and allow you to read the e-book as a webpage or download the pdf | Docker Config 🐋 ↗" >}}
@@ -521,13 +532,16 @@ If you have enjoyed the MailTrap easy of use via API above, lets give it a try t
 
 ![alt text](/blog_img/email/mailtrap-smtp-setup.png)
 
+{{% details title="You can test Mailtrap smtp via curl as well 🚀" closed="true" %}}
+
+
 ```sh
 curl \
 --ssl-reqd \
 --url 'smtp://live.smtp.mailtrap.io:587' \
 --user "api:$MAILTRAP_API_TOKEN" \
 --mail-from hello@news.libreportfolio.fyi \
---mail-rcpt jesalctag@gmail.com \
+--mail-rcpt test@mail.com \
 --upload-file - <<EOF
 From: Magic Elves <hello@news.libreportfolio.fyi>
 To: Mailtrap Sandbox <jesalctag@gmail.com>
@@ -571,6 +585,8 @@ Content-Disposition: inline
 EOF
 ```
 
+{{% /details %}}
+
 Via SMTP with curl, they went to SPAM though
 
 ![alt text](/blog_img/email/mailtrap-smtp-spam.png)
@@ -607,14 +623,34 @@ It offers robust deliverability, pay-as-you-go pricing, and detailed monitoring 
 
 Its API and SMTP interfaces provide flexibility but might present a learning curve for less technical users.
 
-  
-## Email for Marketing
+
+---
+
+## Conclusions
+
+All these SMTP setups will help you with your social media, if you are into it.
+
+Hopefully you are aware now of the differences between: regular mails vs transactional emails vs marketing emails.
+
+> After testing these, I would order them: Mailtrap > ReSend > MailJet for transactional purposes. Tested all of them on the free plan, w/o CC.
+
+> > You can still keep your Mailerlite setup for newsletters/marketing and Proton/GMAIL for your regular mails.
+
+If you just wanted a quick/live way to talk , instead of sending mails...[just chat](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps)
+
+But if you are a marketer, you probably care more about those leads / cold emails outreach.
+
+The good thing was to get **Mailjet + ListMonk working**, so that transactional or [marketing emails](#email-for-marketing) will just work.
+
+You are free to also plug n8n, or feed ListMonk from leads from waiting lists or sales pipelines.
+
+### Email for Marketing
 
 I was writting [about marketing tools](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies) some time back.
 
 In the meantime, saw: https://github.com/aaPanel/BillionMail
 
-> agpl v3.0 |  BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and **free from monthly fees**.  
+> agpl v3.0 |  BillionMail gives you **open-source MailServer, NewsLetter, Email Marketing** — fully self-hosted, dev-friendly, and **free from monthly fees**.  
 
 We also have the good olds, like **ListMonk**
 
@@ -627,26 +663,6 @@ We also have the good olds, like **ListMonk**
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss" title="Marketing around OSS - Mautic" image="/blog_img/selfh/HomeLab/mautic/mautic-ui.png" subtitle="Mautic setup for a marketing agency" >}}
 {{< /cards >}}
-
----
-
-## Conclusions
-
-All these SMTP setups will help you with your social media, if you are into it.
-
-If you just wanted a quick way to chat...
-
-There are many [Interesting Chats](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps) to use :)
-
-But if you are a marketer, you probably care more about those leads / cold emails outreach.
-
-
-
-The good thing was to get **Mailjet + ListMonk working**, so that transactional or marketing emails will just work.
-
-
-You are free to also plug n8n, or feed ListMonk from leads from waiting lists or sales pipelines.
-
 
 ### Proton Mail
 
@@ -661,19 +677,6 @@ For Google this trick used to work for the same:
 ![GMAIL custom domain for google](/blog_img/email/dns-gmail.png)
 
 But since google domains migrated for squarespace, I stopped receiving emails from my domain.
-
-### PocketBase x MailTrap
-
-[Mailtrap](https://mailtrap.io/signin) can be used to send one-time codes or magic links for user verification purposes such as account creation or subscription confirmation. 
-
-Since Mailtrap provides SMTP email sending capabilities, you can configure PocketBase or any backend service to use Mailtrap's SMTP settings to send transactional emails including verification codes or magic links.
-
-This allows you to deliver emails securely and reliably during development and testing phases without sending real emails to users.
-
-Once your system is ready for production, you can switch from Mailtrap to a real SMTP provider if desired. 
-
-But for sending verification emails with OTPs or magic links in development or even production (if you choose), Mailtrap fully supports this use case.
-
 
 #### MailTrap x Marketing and Automation
 
