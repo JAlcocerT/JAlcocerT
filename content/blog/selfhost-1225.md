@@ -166,6 +166,10 @@ Its curious that even X ressited the AWS outage, but not the CF one.
 
 ![alt text](/blog_img/outro/x-cf-down.png)
 
+
+![Cloudflare outage due to...sql aparently](/blog_img/outro/cf-down.png)
+
+
 So that makes me think on the reliability of the wedding setup with R2.
 
 And im glad I tried the captcha via CapJS here.

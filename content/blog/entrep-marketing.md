@@ -206,10 +206,9 @@ How can a lead adquisition workflow look like?
 
 [app.apollo.io](https://www.apollo.io/sign-up) 1000 contactos 50 usd, pero con apify `console.apify` te conectas con su `apollo scrapper` free tier.
 
-> in that way we have 1k leads for 1.5 usd from apify only.
+> In that way we have 1k leads for ~1.5 usd from apify only.
 
-See the app `millionverifier` tp... verify emails
-
+```
 wedding planners - google one by one / scrapper de google maps por wedding planners
 serper google search api para buscar tb en google
 outscraper - para sacar por ej restaurantes tarragona
@@ -231,16 +230,17 @@ smartlead tb sp conectar a slack
 heyreach puede ser una opcion si no tienes el email y el flow de smartlead no funcionaria
 
 tb se puede conectar make a tu crm, como para poner contactos categorizados como interesados segun el webhook
+```
 
 > lead gen Jay, nick saraev (184 skool x 2600 members), kristian besser 1700 personas en slack de 92k pagando 4k
 manthan patel https://www.agentpass.ai/
 
 
-### Tools
+#### Tools
 
-https://github.com/JAlcocerT/Scrap_Tools as seen https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap
+See https://github.com/JAlcocerT/Scrap_Tools as seen https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap
 
-### GHL
+#### GHL
 
 * https://marketplace.gohighlevel.com/docs/ghl/contacts/create-contact
 
@@ -334,7 +334,7 @@ Have a look to...
 
 ![alt text](/blog_img/selfh/HomeLab/mautic/mautic-setup-admin.png)
 
-![alt text](/blog_img/selfh/HomeLab/mautic/mautic-ui.png)
+![Mautic Dashboard UI](/blog_img/selfh/HomeLab/mautic/mautic-ui.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Configs 🐋 ↗" >}}
@@ -364,12 +364,10 @@ Mautic enables businesses, agencies, and enterprises to automate their marketing
 
 {{% /details %}}
 
-
+Mautic is commonly integrated with CRM systems *like Odoo and Clay* to synchronize marketing and sales data.
 
 {{% details title="Mautic and...Odoo? 🚀" closed="true" %}}
 
-
-Yes, Mautic is commonly integrated with CRM systems like Odoo and Clay to synchronize marketing and sales data.
 
 **Mautic and Odoo Integration:**
 
@@ -400,7 +398,6 @@ In summary, integrating Mautic with CRMs like Odoo or Clay is a standard practic
 
 > We can do Campaign Forms, Newsletter submissions, Landing Pages, Prepare custom email skeletons 
 
-
 - Overall, GoHighLevel offers an all-in-one marketing-centric CRM for agencies and businesses needing ready-made automation, while open-source CRM and HRM solutions provide customization, ownership, and self-hosting but at the cost of more setup and technical complexity.
 
 Here is a comparison table of popular self-hosted open-source CRMs, including their pros and cons:
@@ -424,16 +421,15 @@ An ordered list from easiest to most complex when it comes to self-hosting the m
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/typebot" title="TypeBot | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-1. **Typbot**  
-   Typbot is designed specifically for ease-of-use, with clear self-hosting documentation, Docker containers, and minimal configuration needed. Even non-developers can set it up fairly quickly.
+1. **Typebot**  
+   Typebot is designed specifically for ease-of-use, with clear self-hosting documentation, Docker containers, and minimal configuration needed. Even non-developers can set it up fairly quickly.
 
 > See https://docs.typebot.io/self-hosting/deploy/docker and https://github.com/settings/developers for OAuth setup
 
 > > Typebot wont start without proper `encryption_secret` nor some [auth configured](https://docs.typebot.io/self-hosting/configuration#github-auth)
 
-`https://test.jalcocertech.com/`
-`https://test.jalcocertech.com/api/auth/callback/github`
 
+You need: `https://test.jalcocertech.com/` and `https://test.jalcocertech.com/api/auth/callback/github`
 
 And then you get your clientID and client secret for the config. 
 
@@ -524,14 +520,3 @@ So yes, you can use both platforms with OpenAI for natural language generation a
 
 7. Rasa
    Rasa is the most flexible and powerful for custom conversational AI, but demands Python coding, environment setup, and additional services for deployment (e.g., Nginx, caching, analytics). Best suited for those with developer and DevOps knowledge.[5]
-
-
-This order emphasizes user-friendliness, default self-hosting support, and the level of technical expertise generally required.[3][7][1][6][5]
-
-[1](https://docs.typebot.io/self-hosting/get-started)
-[2](https://github.com/davidbrandpro/typebot.io-Vercel)
-[3](https://github.com/sergor5/typebot-selfhost)
-[4](https://botpress.com/blog/open-source-chatbots)
-[5](https://www.chatbase.co/blog/open-source-chatbot-platforms)
-[6](https://www.voiceflow.com/blog/n8n-ai-chatbot-integration)
-[7](https://blog.n8n.io/how-to-make-ai-chatbot/)

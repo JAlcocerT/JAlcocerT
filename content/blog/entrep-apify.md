@@ -63,6 +63,11 @@ Cool infographics inspirations:
 
 ### A Sales Pipeline
 
+If you read the social media automation post with n8n, you know that there are [social media scrapping tools](https://jalcocert.github.io/JAlcocerT/social-media-automation/#scrapping-social-media).
+
+**APIFY** is one of those.
+
+And actually, [APIFY can do that](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#apify-can-do-that) and more than you imagine.
 
 https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Utils
 

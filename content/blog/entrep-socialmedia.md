@@ -14,15 +14,23 @@ Setup [PostIZ](#postiz) and forget about *loosing time* with social media posts.
 
 **Focus on creating.**
 
+Instead of the process of sharing across different platforms.
+
 **Intro**
 
 We can create a lot *supported* by AI.
+
+{{< tweet user="LibrePortfolio" id="1940181314587828581" >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion/blob/main/tests/plot_total_return_from_yfinance.py" title="Data In Motion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Matplotlib Animations with yfinance - Example Total Returns" >}}
+{{< /cards >}}
 
 But the more content gets created, the harder to get the attention of people who might be interested into such content.
 
 - [Shoutify](https://github.com/TechSquidTV/Shoutify)
 
-Apps like PostIZ, n8n or growthchief...
+Apps like [PostIZ](#postiz) or growthchief *optionally combined with n8n*...try to help to reach more audience.
 
 * https://github.com/growchief/growchief
 
@@ -100,7 +108,7 @@ Aware of the power of [MCP](https://jalcocert.github.io/JAlcocerT/ai-understandi
 [PostIZ also has **MCP**](https://postiz.jalcocertech.com/settings): Connect your MCP client to Postiz to schedule your posts faster!
 {{< /callout >}}
 
-You will get sth like:
+You will get sth like: *the server sent events path*
 
 ```txt
 https://postiz.jalcocertech.com/api/mcp/some_id_here/sse

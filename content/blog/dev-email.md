@@ -19,7 +19,7 @@ What you know is that cold email can get you Cash Flow.
 
 Specially when combined with a [proper *APIFY based* sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/#a-sales-pipeline) and automation tools [for marketers](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/).
 
-https://mxroute.com/
+
 
 SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better
 
@@ -52,7 +52,14 @@ But for something more custom...I have been lacking how actually email/SMTP work
 
 {{< youtube "Ksk42UzpO-I" >}}
 
-Before we get started, you might keep this close to you: https://temp-mail.org/
+Before we get started, you might keep this close to you: 
+
+https://temp-mail.org/
+
+https://mxroute.com/
+
+See the app `millionverifier` to... verify emails
+
 
 * https://github.com/4w4k3/KnockMail
 
@@ -175,27 +182,13 @@ Regarding ease of configuration among the competitors:
 | MailHog      | Very easy, open-source, self-hosted                        | Great for local dev/testing, less for production  |
 
 
-**Sendgrid** just block me few minutes after creating my account.
+{{< callout type="warning" >}}
+**Sendgrid** just block me few minutes after creating my account
+{{< /callout >}}
 
 Without even sending or trying any single feature.
 
 That was interesting :)
-
-
-For open-source or closer to open-source alternatives to Mailtrap, these stand out:
-
-- MailHog: A lightweight, open-source email testing tool with a web interface, great for catching and viewing emails in dev environments.
-- MailDev: Similar to MailHog, built with Node.js, easy to run locally for testing.
-- Papercut and MailCatcher: Other open-source SMTP servers and email testing tools, mostly used for development and testing phases.
-
-These open-source tools are typically easier to self-host and modify than proprietary solutions like Mailtrap but usually lack advanced monitoring or deliverability analytics.[4][5]
-
-In summary:
-- Amazon SES excels in scalability and cost for high-volume senders but requires technical setup.
-- Mailtrap is among the easiest to configure for developers focusing on testing.
-- MailHog and similar tools are the best open-source options for local email testing environments.
-
-This should help balance ease of use, open-source preference, and scalability needs based on the specific use case.
 
 
 ### Amazon SES
@@ -235,7 +228,33 @@ And also to send emails with your custom domain to whatever validated email we h
 
 I just had some authentication problems to make MailGun work with Listmonk.
 
-Be aware of selecting proper port and security settings.
+{{< callout type="info" >}}
+Probably because the confirmation email never reached my proton account for validation
+{{< /callout >}}
+
+
+{{< details title="Be aware of selecting proper port and security settings... 📌" closed="true" >}}
+
+Based on modern standards, the best choice depends on whether you are submitting mail from an email client/application (like Listmonk) to a mail server, or relaying mail between mail servers.
+
+Since you are running **Listmonk** and it needs to send emails out (submission) through an external SMTP provider (like Mailgun, SendGrid, or your own server), here are the recommended ports:
+
+🔑 Recommended SMTP Ports for Mail Submission
+
+| Port | Description & Use Case | Security | Recommendation |
+| :--- | :--- | :--- | :--- |
+| **587** | **The Default Secure Port (Recommended)**. This is the official and modern port for email **submission** from a client (like Listmonk) to a mail server. | Uses **STARTTLS** (opportunistic encryption) to secure the connection after initiating it. | **Use this one first.** It is the industry standard for secure email sending. |
+| **465** | The **Legacy Secure Port**. It was once the official SMTPS port but was deprecated and then repurposed. Some providers still support or even recommend it. | Uses **Implicit TLS/SSL** (encryption starts immediately upon connection). | Use this **only if Port 587 fails** or if your provider specifically requires it. |
+| **2525** | The **Alternate Port**. This port is not officially recognized but is often provided by email service providers (ESPs) as a fallback when standard ports are blocked by an ISP or hosting provider. | Supports **TLS** encryption, similar to Port 587. | Use this if both Port 587 and 465 are blocked by your network firewall. |
+
+🚫 Port to AVOID
+
+| Port | Use Case | Security |
+| :--- | :--- | :--- |
+| **25** | The **Legacy Standard Port**. This port is primarily for server-to-server **relay** (transferring mail between two different mail servers). | Often unsecured and is heavily targeted and blocked by residential ISPs and cloud providers to curb spam. |
+
+{{< /details >}}
+
 
 ### Mailjet
 
@@ -243,9 +262,9 @@ It has a free tier:https://www.mailjet.com/pricing/
 
 And once logged in, you go to: https://app.mailjet.com/integrations
 
-That's a great move! Mailjet uses your **API Key** and **Secret Key** as the username and password for its SMTP service.
+Mailjet uses your **API Key** and **Secret Key** as the username and password for its SMTP service.
 
----
+{{< details title="Configure Mailjet as SMPT server... 📌" closed="true" >}}
 
 1. 🔑 Find Your Mailjet SMTP Credentials
 
@@ -281,19 +300,16 @@ Once you have your credentials, use the following settings in the SMTP section o
 After updating the settings, click **Save** and test your connection in Listmonk!
 
 
+{{< /details >}}
 
 
 That is an excellent distinction to make, as Mailjet and MailerLite specialize in slightly different areas.
 
 The short answer is: **No, Mailjet and MailerLite are not direct equivalents.**
 
-They are both used for email, but their core focus and primary features differ significantly. This difference is key to understanding how they work with Listmonk.
+🎯 MailerLite vs. Mailjet
 
----
-
-## 🎯 MailerLite vs. Mailjet
-
-### 1. MailerLite (Closer to Listmonk's Purpose)
+1. MailerLite (Closer to Listmonk's Purpose)
 
 | Focus | **Email Marketing Platform (EMP)** |
 | :--- | :--- |
@@ -301,7 +317,7 @@ They are both used for email, but their core focus and primary features differ s
 | **Sending Method** | All sending is done via their internal platform and dedicated infrastructure. |
 | **Relevance to Listmonk** | MailerLite is feature-rich in areas where Listmonk is also strong (list management, content creation, segmentation). You would not typically use Listmonk *with* MailerLite, as they compete for the same function. |
 
-### 2. Mailjet (Closer to a Delivery Service)
+2. Mailjet (Closer to a Delivery Service)
 
 | Focus | **Email Service Provider (ESP) / SMTP Relay** |
 | :--- | :--- |
@@ -309,24 +325,22 @@ They are both used for email, but their core focus and primary features differ s
 | **Sending Method** | Designed to be integrated into other applications (like Listmonk, websites, e-commerce stores) via **SMTP** or **API**. |
 | **Relevance to Listmonk** | Mailjet is an **ideal partner** for Listmonk. Listmonk handles the campaign/list management, and Mailjet handles the actual high-volume sending and ensures high inbox placement. |
 
----
 
-## 📈 Mailjet with Listmonk: Marketing and Transactional
+📈 Mailjet with Listmonk: Marketing and Transactional
 
 The key benefit of using Mailjet is its ability to handle both types of email delivery via a single, reliable SMTP connection:
 
-### 1. Email Campaigns (Marketing)
+1. Email Campaigns (Marketing)
 
 * **How it Works:** Listmonk manages your subscribers, segments, and content. When you launch a newsletter, Listmonk sends the bulk emails through Mailjet's **SMTP Relay** (using the credentials you just set up).
 * **Verdict:** **Yes**, Mailjet reliably handles your Listmonk marketing campaigns.
 
-### 2. Transactional Emails
+2. Transactional Emails
 
 * **What it Is:** Emails triggered by user actions (e.g., password resets, order confirmations, subscription welcome emails from Listmonk).
 * **How it Works:** Since Listmonk uses Mailjet's SMTP service for *all* its outbound mail, any transactional emails Listmonk generates (like confirmation links) will also be routed through Mailjet.
 * **Verdict:** **Yes**, Mailjet is explicitly designed to be a reliable provider for transactional emails via SMTP, which benefits all of Listmonk's system emails.
 
----
 
 **In Summary:**
 
@@ -335,22 +349,21 @@ You can think of it this way:
 * **Listmonk** is your **operating system** for managing lists and campaigns.
 * **Mailjet** is your **high-performance engine** that ensures your emails (marketing and transactional) actually reach the inbox.
 
-You made a good choice by selecting a robust ESP like Mailjet to pair with Listmonk.
+You made a good choice by selecting a **robust ESP** like Mailjet to pair with Listmonk.
 
-Do you have any questions about verifying your sending domain with Mailjet (setting up DNS records like SPF and DKIM), which is the next crucial step for deliverability?
+Not only you can automate your way with Mailjet and N8N:
 
-https://app.mailjet.com/integrations/n8n
-https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/#templates-and-examples
+* https://app.mailjet.com/integrations/n8n
+* https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/#templates-and-examples
 
-https://app.mailjet.com/account/sender/validate-domain?domain=6484989182
-
-Validate the emails from where you will be sending: https://app.mailjet.com/account/sender
-
-And **Mailjet worked with Listmonk**. Even with Listmonk in `localhost:9077` without bein Cloudflared
+But also, **Mailjet worked with Listmonk**. Even with Listmonk in `localhost:9077` without bein Cloudflared
 
 Going to spam when sent to gmail...but worked.
 
-Even with the custom email from your domain.
+Even with the custom email from your domain!
+
+* https://app.mailjet.com/account/sender/validate-domain?domain=6484989182
+* Validate the emails from where you will be sending: https://app.mailjet.com/account/sender
 
 It all comes down to some `TXT` DNS records to be setup.
 
@@ -402,6 +415,12 @@ We also have the good olds, like **ListMonk**
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic SelfHosted Email Newsletter | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+
+https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss
+![Mautic Dashboard UI](/blog_img/selfh/HomeLab/mautic/mautic-ui.png)
+
+
+
 ---
 
 ## Conclusions
@@ -411,6 +430,10 @@ All these SMTP setups will help you with your social media, if you are into it.
 If you just wanted a quick way to chat...
 
 There are many [Interesting Chats](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps) to use :)
+
+But if you are a marketer, you probably care more about those leads / cold emails outreach.
+
+
 
 The good thing was to get **Mailjet + ListMonk working**, so that transactional or marketing emails will just work.
 
@@ -487,15 +510,34 @@ CSV just works!
 
 ### PostIZ vs GrowChief
 
-GrowChief and Postiz are both open-source tools aimed at social media management, but they serve somewhat different purposes and feature sets:
+GrowChief and Postiz are both open-source tools aimed at social media management.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/social-media-automation/" title="PostIZ Setup | Post" image="/blog_img/selfh/postiz/postiz-https-ui.png" subtitle="Social Media Automation with PostIZ" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postiz" title="Postiz | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/growchief" title="GrowChief | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Growchief is an open-source (and SelfHostable) social media automation tool (aka social scraper).
+
+![SelfHosted GrowChief](/blog_img/selfh/marketing/growchief-ui.png)
+
+It allows you to create a workflow (step-by-step) for interacting with different accounts on social media, such as sending a connection request, following up with a message, and so on. Perfect for API/n8n automations.
 
 * https://github.com/growchief/growchief
 
 > apg3.0 |  The Ultimate all-in social media automation (outreach) tool 🤖 
 
+> >  GrowChief: An alternative to: Phantom Buster, Expandi, Zopto, LinkedIn Helper, Meet Alfred, etc.
+
 - GrowChief is primarily a social media outreach automation tool focused on automating actions like sending connection requests, follow-ups, liking, and profile visits on platforms like X (formerly Twitter) and LinkedIn.
 
-It emphasizes human-like automation with stealth technology and proxies, making it well-suited for lead generation, engagement, and outreach workflows. It supports API triggers and teams, targeting agencies, startups, and solopreneurs who want to automate social interactions.
+It emphasizes human-like automation with stealth technology and proxies, making it well-suited for lead generation, engagement, and outreach workflows. 
+
+GrowChief **supports API triggers** and teams, targeting agencies, startups, and solopreneurs who want to automate social interactions.
 
 - Postiz, on the other hand, is an all-in-one social media scheduling and management platform with a strong focus on content creation, scheduling, team collaboration, and analytics. 
 
@@ -510,14 +552,43 @@ In summary:
 | Audience           | Agencies, startups, solopreneurs for outreach   | Agencies, businesses, marketing teams for scheduling/content management |
 | Open Source        | Yes                                              | Yes                                                     |
 
-So, while they are similar as open-source social media tools, GrowChief focuses on outreach and engagement automation, whereas Postiz offers a broader social media management and scheduling experience with strong AI-driven content creation features.[1][2][3][4]
+So, while they are similar as open-source social media tools, GrowChief focuses on outreach and engagement automation, whereas Postiz offers a broader social media management and scheduling experience with strong AI-driven content creation features.
+
+
+If you read the [sample.env](https://github.com/growchief/growchief/blob/main/.env.example), you might recognize:
+
+- Apollo leads
+OPENAI_API_KEY
+RESEND_API_KEY=""
+EMAIL_PROVIDER=""
+EMAIL_FROM_NAME=""
+EMAIL_FROM_ADDRESS=""
+NEWSLETTER_PROVIDER=""
+
+If it does not already, Growchief should sounds to you to a lead enrichment and/or sales pipeline companion.
+
+
 
 
 ### Selfhosting Email?
 
 The first question should be whether we should or not.
 
-But providing you want, there are few options:
+But providing you want, there are few options: *For open-source or closer to open-source alternatives to Mailtrap, these stand out*
+
+- MailHog: A lightweight, open-source email testing tool with a web interface, great for catching and viewing emails in dev environments.
+- MailDev: Similar to MailHog, built with Node.js, easy to run locally for testing.
+- Papercut and MailCatcher: Other open-source SMTP servers and email testing tools, mostly used for development and testing phases.
+
+These open-source tools are typically easier to self-host and modify than proprietary solutions like Mailtrap but usually lack advanced monitoring or deliverability analytics.[4][5]
+
+In summary:
+- Amazon SES excels in scalability and cost for high-volume senders but requires technical setup.
+- Mailtrap is among the easiest to configure for developers focusing on testing.
+- MailHog and similar tools are the best open-source options for local email testing environments.
+
+This should help balance ease of use, open-source preference, and scalability needs based on the specific use case.
+
 
 
 Probably not recommended for 99.999% of us.
