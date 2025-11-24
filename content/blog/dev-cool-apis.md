@@ -699,18 +699,38 @@ Lets get to it: https://elevenlabs.io/pricing
 
 As of the time of writig:It offers 10k credits/month for free.
 
- 10 minutes of Text to Speech
-5 minutes of Music
-250 seconds of Sound Effects
+* 10 minutes of Text to Speech
+* 5 minutes of Music
+* 250 seconds of Sound Effects
+
+![alt text](/blog_img/GenAI/elevenlabs/onboard-11labs-pricing.png)
 
 Eleven labs has one of the coolest onboarding experiences I have seen lately: https://elevenlabs.io/app/onboarding
 
+![alt text](/blog_img/GenAI/elevenlabs/onboard-11labs.png)
+
 Once completed, you can explore on the free tier, like: https://elevenlabs.io/app/speech-synthesis/text-to-speech
+
+![alt text](/blog_img/GenAI/elevenlabs/onboard-11labs2.png)
 
 See how crazy it sounds:
 
-<!-- {{< audio
-    src="/audio/sample.m4a"
+
+
+```
+Many people believe that successful negotiating hinges on reasoning and raw intellectual process. 
+
+Foundational texts of negotiation, such as Getting to Yes and Thinking, Fast and Slow, reinforce this impression. 
+```
+
+![alt text](/blog_img/GenAI/elevenlabs/11labs-download-tts.png)
+
+These 213 chars, took each one credit -> 9,787 credits remaining for the month.
+
+But here is the output:
+
+{{< audio
+    src="/audio/sample-t2s-11labs.mp3"
     type="audio/mp4"
     preload="auto"
     loop="true"
@@ -720,7 +740,7 @@ See how crazy it sounds:
     download="false"
     class="my-audio"
     title="Sample Generated Audio"
->}}{{< /audio >}} -->
+>}}{{< /audio >}}
 
 > Say thanks to this [vibecoded HUGO shortcode](https://github.com/JAlcocerT/JAlcocerT/tree/main/layouts) for audio btw
 
@@ -732,14 +752,17 @@ I could not avoid comparing the elevenlabs TTS to the one that Gemini offers
 
 * https://aistudio.google.com/generate-speech?model=gemini-2.5-pro-preview-tts
 
-They also provide the code to run the same via Python and your own API key.
+![alt text](/blog_img/GenAI/elevenlabs/google-aistudio-tts.png)
 
+They also provide the code to run the same via Python and your own API key.
 
 All powered by: https://pypi.org/project/google-genai/
 
 ```sh
 pip install google-genai
 ```
+
+![alt text](/blog_img/GenAI/elevenlabs/google-aistudio-playground.png)
 
 
 ### Other Tools
