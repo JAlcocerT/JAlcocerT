@@ -369,6 +369,47 @@ As seen on [this post section](https://jalcocert.github.io/JAlcocerT/javascript-
 
 * I recently talked [about NUXT SSG](https://jalcocert.github.io/JAlcocerT/trying-nuxt-themes/), focusing on this theme for motivation: https://github.com/HugoRCD/canvas
 
+So go to https://resend.com/api-keys
+
+And create your resend API key
+
+![alt text](/blog_img/dev/nuxt/resend-api.png)
+
+You can now test how it works:
+
+But it wont arrive if you dont tweak the domain from where the theme sents.
+
+See the reseng logs: https://resend.com/logs
+
+![alt text](/blog_img/dev/nuxt/resend-logs.png)
+
+```json
+{
+  "from": "HR Folio <contact@hrcd.fr>",
+  "to": ["contact@hrcd.fr"],
+  "subject": "Nouveau message de HR Folio",
+  "html": "\n      <p>Un nouveau message a été envoyé depuis le formulaire de contact de HR Folio.</p>\n      <p>Voici les détails du message :</p>\n      <ul>\n        <li>Nom : jesus alcocer</li>\n        <li>Email : test@mail.com</li>\n        <li>Téléphone : undefined</li>\n        <li>Sujet : vamo a hace negocio</li>\n        <li>Message : te parece bien?</li>\n      </ul>\n      "
+}
+```
+
+Once you've changed those from and to, for sth like `lead@news.beyondajourney.lol` and `anything@arkiod.resend.app` within the `send.ts` file
+
+
+Then the Resend API logs will have the wonderful status 200: https://resend.com/logs
+
+![alt text](/blog_img/dev/nuxt/resend-logs-ok.png)
+
+Resend will reach your inbox (but gmail doubts if its spam or not)
+
+![alt text](/blog_img/dev/nuxt/resend-api-working-to-gmail.png)
+
+Also, the contact can write any email address, even fake ones.
+
+{{< callout type="info" >}}
+With Resend, we can send emails, but also RECEIVE them!
+{{< /callout >}}
+
+![alt text](/blog_img/dev/nuxt/resend-received-mail.png)
 
 
 ### MailTrap
@@ -511,8 +552,10 @@ All thanks to the `mailtrap/send-email`  MCP tool!
 
 
 {{< callout type="info" >}}
-For now, MailTrap is for SENDING. They are working on https://mailtrap.io/inbound though
+For now, MailTrap is for SENDING. They are working on https://mailtrap.io/inbound though 
 {{< /callout >}}
+
+So I guess that not too long from now, Mailtrpa will allow for receiving email, as RESEND does currently.
 
 #### MailTrap SMTP x PocketBase
 
@@ -631,8 +674,9 @@ All these SMTP setups will help you with your social media, if you are into it.
 
 Hopefully you are aware now of the differences between: regular mails vs transactional emails vs marketing emails.
 
+Tested all of them on the free plan, w/o CC.
 
-> After testing these, I would order them: Mailtrap > ReSend > MailJet for transactional purposes. Tested all of them on the free plan, w/o CC.
+> After testing these, I would order them: Mailtrap > ReSend (It can receive emails as well)> MailJet for transactional purposes. 
 
 > > You can still keep your Mailerlite setup for newsletters/marketing and Proton/GMAIL for your regular mails.
 
@@ -642,10 +686,11 @@ But if you are a marketer, you probably care more about those leads / cold email
 
 The good thing was to get **Mailjet + ListMonk working**, so that transactional or [marketing emails](#email-for-marketing) will just work.
 
+![alt text](/blog_img/selfh/marketing/listmonk-templates.png)
 
-See the Python Listmonk scrips
+See the Python Listmonk scrips: `http://localhost:9077/admin/campaigns/templates`
 
-http://localhost:9077/admin/campaigns/templates
+![alt text](/blog_img/selfh/marketing/listonk-campaign-html.png)
 
 You are free to also plug n8n, or feed ListMonk from leads from waiting lists or sales pipelines.
 
@@ -664,11 +709,14 @@ Which we can quickly integrate withing a NEXTjs app https://github.com/mihairaul
 
 After a long fight, I realized I needed **a listmonk API user**
 
+![alt text](/blog_img/selfh/marketing/listmonk-create-api-user.png)
+
+Then, you will be able to query:
+
 ```sh
 curl -u 'api_user:ACCESS_TOKEN' \
   -s 'https://listmonk.jalcocertech.com/api/lists' | jq
 ```
-
 
 And that this is the right way to add new users to a certain ListMonk public list:
 
@@ -703,15 +751,24 @@ curl -u 'apiuser:ACCESS_TOKEN' \
 ```
 
 
+![Sample NextJS Web App to add users to a ListMonk public list](/blog_img/selfh/marketing/listmonk-nextjs-sample.png)
+
+Have added the sample app [here](https://github.com/JAlcocerT/Home-Lab/tree/main/listmonk/listmonk-subscribe)
+
+
 {{< callout type="warning" >}}
-The curl and NextJS ways of adding users to a Listmonk public list worked :)
+The curl and [the NextJS ways](https://github.com/JAlcocerT/Home-Lab/tree/main/listmonk/listmonk-subscribe) of adding users to a Listmonk public list worked :)
 {{< /callout >}}
+
+![alt text](/blog_img/selfh/marketing/listmonk-subs.png)
 
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/listmonk" title="Tools like ListMonk are Selfostable and allow for transactional emails with attachment! | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic SelfHosted Email Newsletter | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+![alt text](/blog_img/selfh/marketing/listmonk-campaign-sample.png)
 
 
 {{< cards >}}

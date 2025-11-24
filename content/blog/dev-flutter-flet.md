@@ -27,6 +27,8 @@ Couple years ago I tried to do some Flet Apps with chatGPT, but the knowledge wa
 
 How about now?
 
+Is it there enought to create a desktop app to control the DJI Tello dron?
+
 **Intro**
 
 * https://flet.dev/

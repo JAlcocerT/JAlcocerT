@@ -1,6 +1,6 @@
 ---
 title: "4-4stroke rivals: flat plane vs cross plane"
-date: 2021-08-15T23:20:21+01:00
+date: 2026-08-15T23:20:21+01:00
 draft: true
 tags: ["DA","Career"]
 description: ''

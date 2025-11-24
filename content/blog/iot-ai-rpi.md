@@ -73,7 +73,7 @@ Push to MongoDB. See the data properly.
 
 ### Pi Cool Stuff
 
-https://pabramsor.com/graphical-interface-for-raspberry-pi-gpio/
+* https://pabramsor.com/graphical-interface-for-raspberry-pi-gpio/
 
 ```sh
 git clone https://github.com/Bardo91/rpi_gpio_gui

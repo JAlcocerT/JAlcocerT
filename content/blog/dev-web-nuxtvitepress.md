@@ -52,6 +52,12 @@ npm -v    # Should show npm version - 10.8.2
 
 {{< /details >}}
 
+
+And the repo :)
+
+![alt text](/blog_img/dev/nuxt/nuxt-canvas.png)
+
+
 {{< dropdown title="Bun | Example with NUXT - HUGO Canvas and Resend ⏬" closed="true" >}}
 
 * Example - https://github.com/HugoRCD/canvas
@@ -89,7 +95,13 @@ The Canvas theme was so great to me, that i decided to fork it to understand it 
 
 What I liked:
 
+0. NuxtCMS integration
+
+![alt text](/blog_img/dev/nuxt/nuxt-cms-live-editing.png)
+
 1. The search+tag system working together
+
+![alt text](/blog_img/dev/nuxt/nuxt-search-tags.png)
 
 
 2. The docker compose support out of the box: *i just added the makefile*
@@ -185,6 +197,11 @@ For a typical blog where you update content by committing a new Markdown file, *
 Would you like help setting up your `nuxt.config.ts` file for optimal SSG deployment?
 
 {{% /details %}}
+
+
+5. Integration with Resend mail API to get leads
+
+![alt text](/blog_img/dev/nuxt/resend-nuxt-canvas.png)
 
 ## About Nuxt
 
