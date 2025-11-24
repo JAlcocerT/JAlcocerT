@@ -2,8 +2,8 @@
 title: "Interesting APIs 101 x ElevenLabs"
 date: 2025-10-22T09:20:21+01:00
 draft: false
-tags: ["APIfy","Firecrawl","Serp","Smithery MCP","Scrap","Hoppscotch vs httpie","Twitter vs Threads"]
-description: 'Get that info you need. From social media to Formula 1. And publish LibrePortfolio-X posts programatically '
+tags: ["LibrePortfolio-X","Firecrawl","Serp","Smithery MCP","Scrap","Hoppscotch vs httpie","Twitter vs Threads"]
+description: 'Get that info you need. From social media to Formula 1. Publish on twitter programatically.'
 url: 'interesting-apis'
 ---
 

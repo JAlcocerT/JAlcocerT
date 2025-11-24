@@ -18,7 +18,7 @@ I got started with IoT thanks to a [Pi SBC](https://jalcocert.github.io/JAlcocer
 After many many hours of tinkering and learning IoT, I've come to the conclusion that it's a great way to learn about hardware and software.
 
 {{< cards >}}
-  {{< card link="https://landing-page-book-astro-tailwind.vercel.app/static/(Sample)-14-Habits-of-Highly-Productive-Developers.pdf" title="Get an ebook with IoT Concepts and Projects" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to get started with IoT" >}}
+  {{< card link="https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/web-ebook.pdf" title="Get an ebook with IoT Concepts and Projects" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to get started with IoT" >}}
 {{< /cards >}}
 
 ## Inspirational Resources

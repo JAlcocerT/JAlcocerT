@@ -1,8 +1,8 @@
 ---
 title: "[AIoT] How to use LangChain to Chat with Sensor Data"
-date: 2025-11-30T21:20:21+01:00
+date: 2025-12-04T21:20:21+01:00
 draft: false
-tags: ["Dev","AI","IoT","DB2Rest"]
+tags: ["Dev","AI","IoT","DB2Rest","ekuiper"]
 description: 'Using LangChain with OpenAI API to get information about Temperature and Humidity of a DHT22 sensor'
 url: 'langchain-chat-with-sensor-data'
 ---
@@ -23,21 +23,11 @@ You can also try [PandasAI](https://pypi.org/project/pandasai/) and [Sketch](htt
 
 > Sketch is an AI code-writing assistant for pandas users that understands the context of your data, greatly improving the relevance of suggestions. Sketch is usable in seconds and doesn't require adding a plugin to your IDE.
 
-<!-- 
-https://www.quadratichq.com/
-
-> Source Open | Infinite spreadsheet with Python, SQL, and AI.
-
-https://github.com/quadratichq/quadratic/tree/main
-https://github.com/quadratichq/quadratic/issues/416
-docker build -t quadratic --platform=linux/amd64 .
-
- -->
-
-
 It all started with the RPi projects I published here about a [Pi working together with a **DHT22 sensor**.](https://jalcocert.github.io/RPi/posts/rpi-iot-dht11-influxdb/).
 
 Then, I learnt how to use [LangChain to chat with a DB](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#chat-with-a-db-with-langchain).
+
+> Particularly [the Chinook sample DB](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#database-setup).
 
 The next step is pretty much clear.
 
@@ -53,34 +43,15 @@ To be able to **chat with a DB where the DHT22 sensor data** (temp and humidity)
 
 0. Recommended - [Setup Containers](#setup-containers) for simpler dependency management
 
-
 1. Get the **DB Ready** - We will do it with a [MariaDB SQL Container](https://github.com/JAlcocerT/Docker/blob/main/Dev/DBs/MariaDB_docker-compose.yml), but you can use a [MYSQL container](https://github.com/JAlcocerT/Docker/blob/main/Dev/DBs/MySQL_docker-compose.yml) or with [MYSQL baremetal as in the initial example post](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#chat-with-a-db-with-langchain)
 
 
-{{< details title="MariaDB with Docker-Compose 📌" closed="true" >}}
 
 We just need a [MariaDB](https://github.com/JAlcocerT/Docker/blob/main/Dev/DBs/MariaDB_docker-compose.yml) or [MySQL](https://github.com/JAlcocerT/Docker/blob/main/Dev/DBs/MySQL_docker-compose.yml) **container deployed**
 
-```yml
-version: '3'
-
-services:
-  mariadb:
-    image: mariadb:10.5
-    container_name: mariadb-db
-    environment:
-      - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_DATABASE=chinook
-      - MYSQL_USER=myuser
-      - MYSQL_PASSWORD=mypassword
-    volumes:
-      - ./mariadb-data:/var/lib/mysql
-    ports:
-      - "3306:3306"
-```
-
-{{< /details >}}
-
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mariadb" title="MariaDB | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ```sh
 docker-compose up -d
@@ -202,9 +173,78 @@ Lets go with the **AI part**.
 {{< /details >}}
 
 
+---
+
 ## Conclusions
 
+When thinking about the Internet of the things
 
+I just cant help but think of the Raspberry Pi, that I got [some time back](https://jalcocert.github.io/JAlcocerT/blog/summary21/).
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/" title="Raspberry Pi Projects" image="/blog_img/hardware/sbcs-x13.jpg" subtitle="Jekyll site with Pi Projects and their related code" >}}
+{{< /cards >}}
+
+
+Then it was AI.
+
+And now AI on the edge - Edge AI? and... AI-IOT or...AIoT?!?
+
+For **IoT on Raspberry Pi** we have:
+
+- **MQTT** https://jalcocert.github.io/RPi/posts/rpi-mqtt/
+- **GCP IoT Core** vs [ThingsBoard](https://thingsboard.io/)
+  - [ThingsBoard on Open Source Alternative](https://www.opensourcealternative.to/project/ThingsBoard)
+- **Edge Computing**: Info collecting and processing closer to the source (IoT).
+
+If worked on few IoT projects with the Pi.
+
+See [more here](https://jalcocert.github.io/RPi/categories/iot-data-analytics/)
+
+Push to MongoDB. See the data properly.
+
+* https://github.com/anasjaber/mongo-explorer
+
+* Edge Computing - https://github.com/qijianpeng/awesome-edge-computing
+* Domotica para pobres - https://forocoches.com/foro/showthread.php?t=6655749
+
+* MicroPython - https://awesome-micropython.com/
+
+
+### IoT with DataBricks
+
+Databricks is one of those D&A Tools that you should know.
+
+We can do IoT projects with the Pi that push sensor data to Databricks.
+
+https://jalcocert.github.io/RPi/posts/rpi-iot-mongodatabricks/
+
+![Mongo to Databricks](/blog_img/dev/databricks-mongo.JPG)
+
+
+### Pi Cool Stuff
+
+I keep finding more and more cool things about the Raspberry Pis, like:
+
+* https://pabramsor.com/graphical-interface-for-raspberry-pi-gpio/
+
+```sh
+git clone https://github.com/Bardo91/rpi_gpio_gui
+#pip install PyQt5 RPi.GPIO
+#pip3 install PyQt5 RPi.GPIO
+
+python3 rpi_gpio_gui.py
+```
+
+#### Pi and leds
+
+**LEDs**
+
+* https://github.com/awawa-dev/HyperHDR
+
+* https://github.com/appleimperio/docker-hyperhdr
+
+> MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
 
 
 ---
@@ -223,15 +263,84 @@ python3 setup.py install --force-pi
 
 {{< /details >}}
 
-### Setup Containers
 
 
-* A Quick [Container setup guide](https://fossengineer.com/understanding-containers-for-selfhosting/)
-<!-- https://www.youtube.com/shorts/ox3IsWH-o7g -->
+### Running LLMs in SBCs
 
-* Or just get ready for SelfHosting:
+It should not be strange, we can do so by using tools like Ollama:
 
-{{< youtube "ox3IsWH-o7g" >}}
+<!-- https://www.youtube.com/watch?v=N0718RfpuWE -->
+
+{{< youtube "N0718RfpuWE" >}}
 
 
 * https://github.com/tensorchord/Awesome-LLMOps
+    * https://github.com/tensorchord/Awesome-LLMOps?tab=readme-ov-file#llmops
+
+
+* Open-source tools for prompt testing and experimentation, with support for both LLMs (e.g. OpenAI, LLaMA) and vector databases (e.g. Chroma, Weaviate, LanceDB).
+
+* https://github.com/hegelai/prompttools
+
+#### How to Enhance a Raspberry Pi for AI
+
+1.  Edge TPU on RPi - Coral Edge TPU (Tensor Processing Unit - an USB acccelerator )
+
+TPU (Tensor Processing Unit):
+
+* Focus: TPUs are specifically **designed for running Google's TensorFlow** machine learning framework. They are optimized for high-performance matrix multiplication, a fundamental operation in many deep learning algorithms.
+* Architecture: TPUs are custom-designed by Google with a focus on maximizing performance for TensorFlow workloads. They prioritize speed and efficiency for * specific tasks within the TensorFlow ecosystem.
+
+2. You will hear more and more about NPU's - **Neural Processing Units**
+
+While both are designed to **handle AI workloads**, they have distinct differences in their focus, architecture, and availability.
+
+NPUs are designed to mimic the structure and function of the human brain, excelling at tasks that involve large-scale parallel processing.
+
+They are particularly well-suited for **various AI applications**, including:
+
+- 🖼️ Image recognition
+- 💬 Natural language processing
+- 🗣️ Speech recognition
+
+
+NPUs typically utilize a manycore architecture with specialized instructions and data formats optimized for AI algorithms. 
+
+This allows them to handle complex neural networks efficiently.
+
+NPUs are often integrated into mobile processors from companies like Apple, Huawei, and Samsung. 
+
+You can also see them in SBCs like the OrangePi or new Pis.
+
+Stream Processing at the IoT Edge, or...**AIoT**?
+
+
+## IoT Tools
+
+Ekuiper works great when combined with [EMQx Broker](https://jalcocert.github.io/RPi/posts/rpi-mqtt/#install-mqtt-broker)
+
+### Setup Ekuiper
+
+You can get started with Ekuiper by following the [quick start guide](https://ekuiper.org/docs/en/latest/getting_started/quick_start_docker.html).
+
+* https://github.com/lf-edge/ekuiper
+
+> Apache v2 | Lightweight **data stream processing engine** for IoT edge
+
+Lets use the [Ekuiper Docker Image](https://hub.docker.com/r/lfedge/ekuiper)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ekuiper" title="Ekuiper | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+docker run -p 9081:9081 -d --name ekuiper -e MQTT_SOURCE__DEFAULT__SERVER=tcp://broker.emqx.io:1883 lfedge/ekuiper:latest
+```
+
+> Go to `http://localhost:9081/`
+
+
+You could also do AI/ML with Ekuiper
+
+* TF Lite - https://ekuiper.org/docs/en/latest/guide/ai/python_tensorflow_lite_tutorial.html
+    * https://www.tensorflow.org/lite/guide

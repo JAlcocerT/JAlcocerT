@@ -1,6 +1,6 @@
 ---
 title: "[PaaS Recap] Software for Servers..."
-date: 2025-11-26T01:20:21+01:00
+date: 2025-12-01T01:20:21+01:00
 draft: false
 tags: ["HomeLab","LocalStack vs DokPloy vs LocalStack vs Runtipi","Cosmos Server"]
 description: 'Selfhosted Apps that simplify my workflow'

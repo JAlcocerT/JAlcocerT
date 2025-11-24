@@ -14,10 +14,8 @@ Whatever you plan to **Selfhost**, there will be a moment that you will be looki
 3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) hardware
 
 {{< cards >}}
-  {{< card link="https://landing-page-book-astro-tailwind.vercel.app/static/(Sample)-14-Habits-of-Highly-Productive-Developers.pdf" title="Get an ebook to get started with Selfhosting" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to SelfHost confortable" >}}
+  {{< card link="https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/web-ebook.pdf" title="Get an ebook to get started with Selfhosting" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to SelfHost confortable" >}}
 {{< /cards >}}
-
-
 
 {{< callout type="info" >}}
 Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhosted

@@ -1,11 +1,22 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2025-11-29
+date: 2025-12-05
 draft: false
 tags: ["Tinkering","DB2Rest","TelemetryHarbor","IoT ebook","From obfuscaste towards 1toN eBooks"]
 description: 'IoT Meets AI. Using MQTT and AI Together.'
 url: 'just-iot'
 ---
+
+1. https://a1karting.pl/cennik/
+2. https://sklep.drive-position.pl/kategoria-produktu/quady-i-adv/
+
+<!-- 
+Expertise:
+    MQTT
+    CAN Bus
+    Sensors: ESP32…
+    https://esp32io.com/tutorials/esp32-gps
+-->
 
 IOT -> TASMOTA
 
@@ -80,7 +91,10 @@ To push data to Elasticsearch from Python, you can use the official Elasticsearc
 
 > For [Kibana container](https://hub.docker.com/_/kibana/tags?page=7) - See <https://github.com/jamesgarside/kibana-arm>
 
-<https://www.youtube.com/watch?v=x5A5S0hoyJ0&t=211s>
+<!-- <https://www.youtube.com/watch?v=x5A5S0hoyJ0&t=211s> -->
+
+{{< youtube "x5A5S0hoyJ0" >}}
+
 
 ```dockerfile
 FROM arm32v7/openjdk:11-jdk
@@ -506,6 +520,36 @@ If you are looking for a precise and versatile magnetometer sensor, the GY-273 i
 - **Marine:** Used in ships and boats to determine the heading of the vessel.
 - **Surveying:** Used to measure the magnetic field of the Earth.
 - **Geology:** Used to study the magnetic properties of rocks and minerals.
+
+### Protocols
+
+
+#### I2C
+
+I2C (Inter-Integrated Circuit), pronounced "I-squared-C", is a synchronous, multi-master, multi-slave, packet-switched, single-ended, serial communication bus invented by Philips Semiconductor (now NXP Semiconductors). 
+
+It is widely used for attaching lower-speed peripheral ICs to processors and microcontrollers in short-distance, intra-board communication.
+
+The main features of the I2C protocol include:
+
+Multi-Master and Multi-Slave: I2C supports multiple masters and multiple slaves communication. 
+
+This means more than one master can communicate with slaves on the bus, and a single master can communicate with multiple slaves.
+
+Two-Wire Communication: I2C uses only two bidirectional open-drain lines, Serial Data Line (SDA) and Serial Clock Line (SCL), pulled up with resistors. Typical voltages used are +5 V or +3.3 V although systems with other voltages are permitted.
+
+Address Frame: Every device hooked up to the I2C bus has a unique address. The master device sends this address to initiate communication with a particular slave device.
+
+Synchronous: Synchronization is achieved through the clock signal. The device that generates the clock signal is called the bus master, and devices that follow the clock signal are called slaves.
+
+Speed: Standard I2C devices operate up to 100Kbps. There are also faster modes supporting higher speeds: Fast mode (up to 400Kbps), Fast mode plus (up to 1Mbps), and High-speed mode (up to 3.4Mbps).
+
+Arbitration and Collision: As I2C supports multi-master systems, there may be cases where two masters initiate communication at the same time. I2C has in-built arbitration to handle such scenarios.
+
+Acknowledge Mechanism: After sending out 8 bits, the transmitting device releases the SDA line and waits for the receiver to pull the line low (ACK). If the receiving device leaves the line high (NAK), the transmitting device knows something went wrong.
+
+Applications of I2C include temperature, humidity and light sensors, digital potentiometers, digital compasses, expansion IOs, EEPROMs, ADC/DACs, clock/timers, as well as controlling other circuits or devices, such as OLED displays, among others. The I2C protocol's simplicity and flexibility have made it a popular choice among designers and engineers for short distance, intra-board communication.
+
 
 ### RPi x LCDs
 

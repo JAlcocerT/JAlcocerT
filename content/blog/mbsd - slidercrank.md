@@ -2,7 +2,7 @@
 title: "The Slider-Crank Mechanism"
 date: 2023-09-15T23:20:21+01:00
 draft: false
-tags: ["Python","My Projects","Slider-Crank"]
+tags: ["Python","My Projects","Slider-Crank","Mechanism","MBSD"]
 description: 'Understanding the insights and creating an interactive representation of a Slider-Crank mechanism with Python.'
 url: 'slider-crank-mechanism'
 ---
@@ -14,7 +14,7 @@ It powers... In this post we will understand the physics behind it.
 
 **The Slider and Crank Mechanism** is just so beautiful
 
-<https://demonstrations.wolfram.com/SliderAndCrankMechanism/>
+* See https://demonstrations.wolfram.com/SliderAndCrankMechanism/
 
 From car engines to industrial machinery, this simple yet ingenious device has revolutionized the way we convert rotational motion into linear motion and vice versa. 
 

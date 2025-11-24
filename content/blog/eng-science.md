@@ -1,6 +1,6 @@
 ---
 title: "Science is so Cool!"
-date: 2026-01-03T23:20:21+01:00
+date: 2025-12-21T23:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/jalcocert/streamlit-multichat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"

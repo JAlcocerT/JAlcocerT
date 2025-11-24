@@ -490,7 +490,7 @@ Chronograf allows you to quickly see the data that you have stored in InfluxDB s
 
 It is simple to use and includes templates and libraries to allow you to rapidly build dashboards with real-time visualizations of your data.
 
-2. Node-Red
+2. Node-Red: *is more for IoT, but it can be used for Data Analysis as well*
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/node-red" title="NodeRed | Config File 🐳 ↗"  >}}

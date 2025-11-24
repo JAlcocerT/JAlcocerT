@@ -17,6 +17,8 @@ https://docs.astro.build/en/tutorial/2-pages/3/ -->
 
 Ive had pening for a while to try Nuxt, and I think it is a great framework for building **[full-stack web applications](https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/#csr-vs-spa) and websites with Vue.js**.
 
+Nuxt Content CMS and its ambicious roadmap (a full MIT git based CMS) was a great surprise too: https://content.nuxt.com/docs/studio/roadmap
+
 
 **Intro**
 
@@ -95,11 +97,19 @@ The Canvas theme was so great to me, that i decided to fork it to understand it 
 
 What I liked:
 
+```sh
+#make help
+make install
+make dev
+```
+
+> See at `localhost:3000`
+
 0. NuxtCMS integration
 
 ![alt text](/blog_img/dev/nuxt/nuxt-cms-live-editing.png)
 
-1. The search+tag system working together
+1. The search+tag system working together: *and also during dev*
 
 ![alt text](/blog_img/dev/nuxt/nuxt-search-tags.png)
 
@@ -201,7 +211,7 @@ Would you like help setting up your `nuxt.config.ts` file for optimal SSG deploy
 
 5. Integration with Resend mail API to get leads
 
-![alt text](/blog_img/dev/nuxt/resend-nuxt-canvas.png)
+![Resend mail API working with NUXT Canvas Theme](/blog_img/dev/nuxt/resend-nuxt-canvas.png)
 
 ## About Nuxt
 

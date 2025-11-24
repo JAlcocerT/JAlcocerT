@@ -768,7 +768,7 @@ The curl and [the NextJS ways](https://github.com/JAlcocerT/Home-Lab/tree/main/l
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic SelfHosted Email Newsletter | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/selfh/marketing/listmonk-campaign-sample.png)
+![Example of a Listmonk email Campaign](/blog_img/selfh/marketing/listmonk-campaign-sample.png)
 
 
 {{< cards >}}

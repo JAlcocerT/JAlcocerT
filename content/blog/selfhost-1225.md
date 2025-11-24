@@ -1,8 +1,8 @@
 ---
 title: "SelfHosting is easy with PaaS"
-date: 2025-12-02T01:20:21+01:00
+date: 2025-12-10T01:20:21+01:00
 draft: false
-tags: ["HomeLab ebook","Hetzner VPS","Anti-Gravity","Excalidraw"]
+tags: ["HomeLab ebook","Hetzner VPS","Anti-Gravity","Excalidraw","1toN ebooks"]
 description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
@@ -157,6 +157,7 @@ https://askubuntu.com/questions/1139404/sony-noise-cancelling-headphones-wh-1000
 
 The **airpods pro** worked out of the box though...
 
+![Airpods connected to bluetooth to Linux](/blog_img/hardware/airpods-linux.png)
 
 Not only [AWS](https://health.aws.amazon.com/health/status) will have outages.
 

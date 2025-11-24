@@ -7,6 +7,16 @@ description: 'Testing the NoCode Tools'
 url: 'learning-new-nocode-tools'
 ---
 
+<!-- 
+https://www.quadratichq.com/
+
+> Source Open | Infinite spreadsheet with Python, SQL, and AI.
+
+https://github.com/quadratichq/quadratic/tree/main
+https://github.com/quadratichq/quadratic/issues/416
+docker build -t quadratic --platform=linux/amd64 .
+
+ -->
 
 **Tl;DR**
 
@@ -43,3 +53,18 @@ And they are **no code**.
 
 ## FAQ
 
+
+
+
+### Setup Containers
+
+
+* A Quick [Container setup guide](https://fossengineer.com/understanding-containers-for-selfhosting/)
+<!-- https://www.youtube.com/shorts/ox3IsWH-o7g -->
+
+* Or just get ready for SelfHosting:
+
+{{< youtube "ox3IsWH-o7g" >}}
+
+
+* https://github.com/tensorchord/Awesome-LLMOps

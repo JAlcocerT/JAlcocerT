@@ -16,7 +16,7 @@ And you bet, they are **cool and functional**.
 Plus, they can be deployed as a static web.
 
 {{< cards >}}
-  {{< card link="https://landing-page-book-astro-tailwind.vercel.app/static/(Sample)-14-Habits-of-Highly-Productive-Developers.pdf" title="Get an ebook to get started with Websites" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Stop being lazy and start building websites" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/listmonk/listmonk-api-py/Ebook-cover-SSGs.pdf" title="Get an ebook to get started with Websites" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Stop being lazy and start building websites" >}}
 {{< /cards >}}
 
 

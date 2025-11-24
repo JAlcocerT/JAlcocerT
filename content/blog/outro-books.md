@@ -1,11 +1,18 @@
 ---
 title: "Books"
-date: 2026-03-01T23:20:21+01:00
+date: 2026-01-01T23:20:21+01:00
 draft: false
-tags: ["Outro","Kindle"]
+tags: ["Outro","Kindle","1toN ebooks"]
 description: 'Reading better, writing more.'
 url: 'interesting-books'
 ---
+
+
+**Tl;DR**
+
+
+**Intro**
+
 
 * https://nav.al/read
 
@@ -22,3 +29,18 @@ When society embraces disruptive new scientific theories, philosopher Thomas Kuh
 Individuals that hold opposing viewpoints on reality encourage, criticize, and adjust one another's ideas, influencing economic and human behavior. Different narratives, like an epidemic, may infect and alter communities, according to Shiller. The validity of a narrative has no bearing on its "contagion rate." Viral tales capture attention, look cohesive, and fit readily into existing narratives.
 
 -->
+
+
+---
+
+## Conclusions
+
+If you do:
+
+```sh
+find . -type f -iname "*.pdf"
+```
+
+You will find interesting things on this repo.
+
+They were create with the learnings from [this post, bc code is everything](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#you-can-do-what-with-pdf).

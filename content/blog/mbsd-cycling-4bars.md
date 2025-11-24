@@ -1,12 +1,19 @@
 ---
 title: "The Mechanism behind Cyclying"
-date: 2026-08-15T23:20:21+01:00
+date: 2026-01-15T23:20:21+01:00
 draft: false
 tags: ["DA","Career","MatterJS"]
 description: 'Summarizing what we have learnt about BI.'
-summary: 'Consolidating the MUST know for your career as a Business Intelligence Analyst.'
-url: 'business-intelligence-data-analytics'
+url: 'cycling-and-the-4-bars-mechanism'
 ---
+
+https://jalcocert.github.io/JAlcocerT/slider-crank-mechanism/
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
 
 <!-- engine starting
 https://www.youtube.com/shorts/mzWr2ZGf7OU -->

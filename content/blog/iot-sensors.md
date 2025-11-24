@@ -1,20 +1,17 @@
 ---
 title: "[IoT] Sensors and Arduino"
-date: 2025-11-27
+date: 2025-12-05
 draft: false
-tags: ["Tinkering",Polanduino"","DHT","MLX"]
+tags: ["Tinkering","Polanduino","DHT","MLX","Robotics"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
 
 
-### Linux and Robotics?
+**Tl;DR**
 
-https://www.youtube.com/watch?v=-JVHvU3Oor8
 
 **Intro**
-
-
 
 Recently, arduino has been bought by QCOM.
 
@@ -35,7 +32,9 @@ The Arduino Integrated Development Environment (IDE) and associated libraries ar
 
 **RISC-V and Open-Source**
 
-RISC-V, an open instruction set architecture (ISA), is also fully open. It was designed to be a free and open standard, allowing anyone to develop compatible chips, tools, and implementations without licensing fees. This openness aims to promote innovation and democratize access to processor design, similar to Arduino’s ethos in hardware and firmware.[2]
+RISC-V, an open instruction set architecture (ISA), is also fully open. It was designed to be a free and open standard, allowing anyone to develop compatible chips, tools, and implementations without licensing fees. 
+
+This openness aims to promote innovation and democratize access to processor design, similar to Arduino’s ethos in hardware and firmware.[2]
 
 **Similarities and Differences**
 
@@ -86,11 +85,21 @@ https://www.youtube.com/watch?v=DPqiIzK97K0 -->
 ## Conclusion
 
 
-Interesting YT channels
+Interesting YT channels for IoT and sensors.
 
 Tom Stanton - https://www.youtube.com/watch?v=6gchoHrsCp4 ~DIY
 
-https://www.youtube.com/@homeassistant_facil/videos - https://www.youtube.com/@homeassistant_facil/videos
+Also these: https://www.youtube.com/@homeassistant_facil/videos - https://www.youtube.com/@homeassistant_facil/videos
+
+### Linux and Robotics?
+
+* https://github.com/ahundt/awesome-robotics
+
+<!-- https://www.youtube.com/watch?v=-JVHvU3Oor8 -->
+
+{{< youtube "-JVHvU3Oor8" >}}
+
+---
 
 ## FAQ
 
@@ -109,21 +118,33 @@ This sensor is produced by Melexis and can measure the temperature of an object 
 {{% details title="More about the MLX90614 " closed="true" %}}
 
 
-Working Principle: The sensor measures the infrared radiation emitted by an object to determine its temperature. All objects emit thermal radiation based on their temperature, and this radiation falls within the infrared spectrum. The sensor detects this radiation and converts it into an electrical signal that can be used to calculate the object's temperature.
+Working Principle: The sensor measures the infrared radiation emitted by an object to determine its temperature. All objects emit thermal radiation based on their temperature, and this radiation falls within the infrared spectrum. 
 
-Accuracy and Range: The MLX90614 GY-906 sensor can offer a relatively high level of accuracy for non-contact temperature measurements. It has a wide temperature measurement range, typically spanning from **-70°C to 380°C** (-94°F to 716°F), depending on the specific model and calibration.
+The sensor detects this radiation and converts it into an electrical signal that can be used to calculate the object's temperature.
 
-Two Sensors in One: The sensor actually contains two separate sensors within a single package: one to measure the temperature of the object being measured (object temperature) and another to measure the temperature of the sensor itself (ambient temperature). This dual-sensor setup helps improve accuracy, as it compensates for changes in the sensor's ambient temperature.
+Accuracy and Range: The MLX90614 GY-906 sensor can offer a relatively high level of accuracy for non-contact temperature measurements. 
+
+It has a wide temperature measurement range, typically spanning from **-70°C to 380°C** (-94°F to 716°F), depending on the specific model and calibration.
+
+Two Sensors in One: The sensor actually contains two separate sensors within a single package: one to measure the temperature of the object being measured (object temperature) and another to measure the temperature of the sensor itself (ambient temperature). 
+
+This dual-sensor setup helps improve accuracy, as it compensates for changes in the sensor's ambient temperature.
 
 
 {{% /details %}} 
 
 
 
-Communication Interface: The MLX90614 GY-906 sensor can communicate with microcontrollers or other devices using the **I2C (Inter-Integrated Circuit) communication protocol**. This makes it relatively easy to integrate the sensor into various projects and systems.
+Communication Interface: The MLX90614 GY-906 sensor can communicate with microcontrollers or other devices using the **I2C (Inter-Integrated Circuit) communication protocol**. 
+
+This makes it relatively easy to integrate the sensor into various projects and systems.
 
 
-It already has a built-in 3.3V voltage stabilizer and pull-up resistors of the I2c bus to be powered by 4.7 kΩ resistors. We also know that the ranges of measured temperatures are: -40°C…85°C for the ambient temperature and -40°C…380°C for the temperature of the tested object. The module has a measurement accuracy of 0.5°C for the measurement range To=0°C…60°C ( object temperature ), Ta=0°C…50°C ( surrounding temperature ) with a resolution of 0.2°C. The largest measurement error we will encounter is ±4°C, but for very high temperatures.
+It already has a built-in 3.3V voltage stabilizer and pull-up resistors of the I2c bus to be powered by 4.7 kΩ resistors. 
+
+We also know that the ranges of measured temperatures are: -40°C…85°C for the ambient temperature and -40°C…380°C for the temperature of the tested object. 
+
+The module has a measurement accuracy of 0.5°C for the measurement range To=0°C…60°C ( object temperature ), Ta=0°C…50°C ( surrounding temperature ) with a resolution of 0.2°C. The largest measurement error we will encounter is ±4°C, but for very high temperatures.
 
 {{% details title="MLX90614 Python, Influx and grafana " closed="true" %}}
 
@@ -131,7 +152,7 @@ It already has a built-in 3.3V voltage stabilizer and pull-up resistors of the I
 
 <https://www.youtube.com/watch?v=CftxT8k0jww&t=5s>
 
-<https://raw.githubusercontent.com/STJRush/handycode/master/ALT4%20Sensors%20Inputs%20Outputs/Raspberry%20PI%20Sensors/MLX90614%20Infrared%20Thermal%20Sensor/MLX90614_Therm_Sensor.py>
+* <https://raw.githubusercontent.com/STJRush/handycode/master/ALT4%20Sensors%20Inputs%20Outputs/Raspberry%20PI%20Sensors/MLX90614%20Infrared%20Thermal%20Sensor/MLX90614_Therm_Sensor.py>
 
 
 Vin to 3.3V - 
@@ -139,7 +160,7 @@ GND to gnd
 SCL to GPIO3 (SCL)
 SDA to GPIO2 (SDA)
 
-
+```sh
 sudo raspi-config
 interfacing options
 enable I2C
@@ -147,6 +168,7 @@ enable I2C
 reboot
 
 i2cdetect -y 1
+```
 
 you should see something different than -- in at least one of the buckets.
 
@@ -156,7 +178,6 @@ and also: adafruit-circuitpython-mlx90614 <https://pypi.org/project/adafruit-cir
 
 
 ```py
-
 # This is the code to run the MLX90614 Infrared Thermal Sensor
 # You'll need to import the package "Adafruit Blinka"
 # You'll need to import the package "adafruit-circuitpython-mlx90614/"
@@ -222,10 +243,13 @@ CMD ["python", "mlx.py"]
 ```
 
 
-When saved, just run: docker build -t mlx_sensor_app_influxdb .
+When saved, just run: 
+
+```sh
+docker build -t mlx_sensor_app_influxdb .
+```
 
 ```yml
-
 version: '3.8'
 
 services:
@@ -466,10 +490,7 @@ SELECT * FROM mlx_sensor #this is the measurement where we are pushing this data
 ```
 
 
-
-http://reisipi.duckdns.org 
-http://192.168.3.101:8086
-
+I tested this with DuckDNS: `http://reisipi.duckdns.org` pinting to `http://192.168.3.101:8086`
 
 
 **and using influxdb in the cloud**
@@ -533,6 +554,3 @@ Adding [nginx](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/)
 
 
 {{% /details %}} 
-
-
-

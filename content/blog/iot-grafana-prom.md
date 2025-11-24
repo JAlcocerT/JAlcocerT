@@ -1,8 +1,7 @@
 ---
-title: "Grafana Monitoring: prometheus"
-date: 2025-11-28T23:20:21+01:00
-draft: false
-tags: ["Docker","Self-Hosting","Iotawatt"]
+title: "Grafana Monitoring: Prometheus"
+date: 2025-12-05
+draft: ["Homelab","Docker","Self-Hosting","Iotawatt"]
 description: 'Grafana works for IoT Same as for monitoring'
 url: 'selfhosting-grafana'
 ---
@@ -10,14 +9,16 @@ url: 'selfhosting-grafana'
 
 **Tl;DR**
 
-https://github.com/boblemaire/IoTaWatt
+* https://github.com/boblemaire/IoTaWatt
 
 **Intro**
+
+
 <!-- GRAFANA + PROMEt
 Discover How to Create Grafana Dashboards Easily With Prometheus
 https://www.youtube.com/watch?v=JBEWpYy9QDE -->
 
-If you have ever worked with a DevOps team or as D&A with IoT devices like telecom, most likely than not you have used Grafana to monitor them.
+If you have ever worked with a [DevOps team](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/) or as D&A with IoT devices like [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), most likely than not you have used Grafana to monitor them.
 
 The thing is that people also do awsome things with Grafana within their homelabs.
 
@@ -37,15 +38,10 @@ https://github.com/DoTheEvo/selfhosted-apps-docker/tree/master/prometheus_grafan
 
 ## The Grafana Project
 
-https://grafana.com/
-https://github.com/grafana/grafana
-https://github.com/grafana/grafana?tab=AGPL-3.0-1-ov-file#readme
 
-* {{< newtab url="https://.github.io//" text="The  Official Site" >}}
-* {{< newtab url="https://github.com//" text="The  Source Code at Github" >}}
-    * License: {{< newtab url="https://github.com//?tab=AGPL-3.0-1-ov-file#readme" text="aGPL 3.0" >}} ❤️
+> The open and composable observability and data visualization platform.
 
-> The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.
+> > Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.
 
 
 
@@ -66,12 +62,12 @@ https://github.com/grafana/grafana?tab=AGPL-3.0-1-ov-file#readme
 
 "The TIG Stack: Telegraph InfluxDB and Grafana with Docker"
 
-# The TIG Stack
+### The TIG Stack
 
 
 Grafana + InfluxDB + NodeRed + Mosquitto (broker server) MQTT of the Sensors connected to ESP32
 
-## Bare metal Install
+### Bare metal Install
 
 Inspired by: <https://www.youtube.com/watch?v=ffg3_1AgtyA&list=LL&index=1&t=2087s>
 
@@ -116,6 +112,8 @@ mosquitto_sub -v - u mqtt_username -P mqtt_password -t "#"
 For now nothing is being published to the broker...
 
 ### InfluxDB
+
+
 <!-- 
 wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 apt-key is being phased out -->
@@ -128,6 +126,8 @@ docker run \
 
 <https://github.com/influxdata/influxdb/releases>
 
+
+```sh
 curl -s https://repos.influxdata.com/influxdata-archive_compat.key | gpg --import -
 
 wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
@@ -137,38 +137,18 @@ echo "deb https://repos.influxdata.com/debian $(lsb_release -cs) stable" | sudo 
 sudo apt update
 sudo apt-get install influxdb
 
-
-
 sudo systemctl unmask influxdb
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
 
 
-sudo systemctl status influxdb
+sudo systemctl status influxdb #this gets us the 1.6.7
+```
 
-this gets us the 1.6.7
 
 ## The technical Part
 
-<!-- ### Node Red
 
-Node-RED is a programming tool for wiring together hardware devices, APIs, and online services in new and interesting ways. It's built on Node.js, a server-side JavaScript platform, and offers a browser-based flow editor that makes it easy to wire together flows using the wide range of nodes in the palette.
-
-Flows can be then deployed to the runtime in a single click. JavaScript functions can be created within the editor using a rich text editor, and a built-in library allows you to save useful functions, templates or flows for re-use.
-
-Node-RED is particularly popular in IoT because of its easy-to-use visual interface and its support for multiple protocols, including MQTT.
-
-Here's why you might use Node-RED with Mosquitto (or another MQTT broker):
-
-Device Control: You can use Node-RED to control IoT devices. For instance, you could set up a flow that turns on a light when a particular message is published to a certain MQTT topic.
-
-Data Processing: Node-RED can process data from your devices. For instance, you could have a flow that listens for temperature data on an MQTT topic, calculates an average, and publishes the result back to another topic.
-
-Integration with Other Services: Node-RED can be a bridge between your devices and various web services. For instance, you could set up a flow that listens for an alert from a motion sensor on an MQTT topic, and sends a tweet or an email when motion is detected.
-
-Visual Programming: Node-RED's flow-based programming model is intuitive and flexible, which makes it a great tool for prototyping, learning, and building complex systems.
-
-While you can use Node-RED without MQTT (and vice versa), they work very well together for creating IoT solutions. MQTT provides a light-weight, efficient protocol for communicating between devices, and Node-RED provides an easy way to control devices, process data, and integrate with other systems. -->
 
 <!-- ### MQTT
 
@@ -232,30 +212,6 @@ In a typical IoT setup, you might use both: Mosquitto would handle receiving dat
 
 
 
-
-<!-- ### I2C
-
-I2C (Inter-Integrated Circuit), pronounced "I-squared-C", is a synchronous, multi-master, multi-slave, packet-switched, single-ended, serial communication bus invented by Philips Semiconductor (now NXP Semiconductors). It is widely used for attaching lower-speed peripheral ICs to processors and microcontrollers in short-distance, intra-board communication.
-
-The main features of the I2C protocol include:
-
-Multi-Master and Multi-Slave: I2C supports multiple masters and multiple slaves communication. This means more than one master can communicate with slaves on the bus, and a single master can communicate with multiple slaves.
-
-Two-Wire Communication: I2C uses only two bidirectional open-drain lines, Serial Data Line (SDA) and Serial Clock Line (SCL), pulled up with resistors. Typical voltages used are +5 V or +3.3 V although systems with other voltages are permitted.
-
-Address Frame: Every device hooked up to the I2C bus has a unique address. The master device sends this address to initiate communication with a particular slave device.
-
-Synchronous: Synchronization is achieved through the clock signal. The device that generates the clock signal is called the bus master, and devices that follow the clock signal are called slaves.
-
-Speed: Standard I2C devices operate up to 100Kbps. There are also faster modes supporting higher speeds: Fast mode (up to 400Kbps), Fast mode plus (up to 1Mbps), and High-speed mode (up to 3.4Mbps).
-
-Arbitration and Collision: As I2C supports multi-master systems, there may be cases where two masters initiate communication at the same time. I2C has in-built arbitration to handle such scenarios.
-
-Acknowledge Mechanism: After sending out 8 bits, the transmitting device releases the SDA line and waits for the receiver to pull the line low (ACK). If the receiving device leaves the line high (NAK), the transmitting device knows something went wrong.
-
-Applications of I2C include temperature, humidity and light sensors, digital potentiometers, digital compasses, expansion IOs, EEPROMs, ADC/DACs, clock/timers, as well as controlling other circuits or devices, such as OLED displays, among others. The I2C protocol's simplicity and flexibility have made it a popular choice among designers and engineers for short distance, intra-board communication. -->
-
-
 <!-- 
 ## Python and InfluxDB !!!!!!!!!!!!!!!!!!!!!
 
@@ -288,9 +244,9 @@ https://mqttx.app/downloads?os=docker
 https://registry.hub.docker.com/r/emqx/mqttx-web/tags
 
 
-
+```sh
 docker run -d --name mqttx-web -p 80:80 emqx/mqttx-web
-
+```
 
 only
 
@@ -448,21 +404,58 @@ volumes:
 
 Install influxdb from the pallete: Installing 'node-red-contrib-influxdb'
 
+```sh
 influx
 CREATE DATABASE sensor_data
 SHOW DATABASES
 USE sensor_data
 select * from sensor_data_table
+```
 
 <https://www.youtube.com/watch?v=_DO2wHI6JWQ&t=21s>
 <https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server>
 
 
+```json
 {
 "Temperature": msg.payload
 }
+```
 
 ---
 
+
 ## FAQ
 
+### About Node Red x MQTT
+
+
+Node-RED is a programming tool for wiring together hardware devices, APIs, and online services in new and interesting ways. 
+
+It's built on Node.js, a server-side JavaScript platform, and offers a browser-based flow editor that makes it easy to wire together flows using the wide range of nodes in the palette.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/node-red" title="NodeRed | Config File 🐳 ↗"  >}}
+{{< /cards >}}
+
+Flows can be then deployed to the runtime in a single click.
+
+JavaScript functions can be created within the editor using a rich text editor, and a built-in library allows you to save useful functions, templates or flows for re-use.
+
+Node-RED is particularly popular in IoT because of its easy-to-use visual interface and its support for multiple protocols, including MQTT.
+
+Here's why you might use Node-RED with Mosquitto (or another MQTT broker):
+
+Device Control: You can use Node-RED to control IoT devices. For instance, you could set up a flow that turns on a light when a particular message is published to a certain MQTT topic.
+
+Data Processing: Node-RED can process data from your devices. For instance, you could have a flow that listens for temperature data on an MQTT topic, calculates an average, and publishes the result back to another topic.
+
+Integration with Other Services: Node-RED can be a bridge between your devices and various web services. 
+
+For instance, you could set up a flow that listens for an alert from a motion sensor on an MQTT topic, and sends a tweet or an email when motion is detected.
+
+Visual Programming: Node-RED's flow-based programming model is intuitive and flexible, which makes it a great tool for prototyping, learning, and building complex systems.
+
+While you can use Node-RED without MQTT (and vice versa), they work very well together for creating IoT solutions. 
+
+MQTT provides a light-weight, efficient protocol for communicating between devices, and Node-RED provides an easy way to control devices, process data, and integrate with other systems.

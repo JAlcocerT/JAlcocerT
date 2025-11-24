@@ -2,7 +2,7 @@
 title: "[IoT] Setup RPi Pico W and ESP32 MicroControllers"
 date: 2025-08-16T14:20:21+01:00
 draft: false
-tags: ["Tinkering","Solar Panel","ESP32"]
+tags: ["Tinkering","Solar Panel","ESP32 vs PicoW"]
 description: What Ive learnt while using a ESP32 and a Raspberry Pi Pico W [Microcontrollers]
 url: 'microcontrollers-setup-101'
 ---
@@ -15,8 +15,6 @@ UpTime Kuma can also monitor MQTT
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
-
 
 ## Intro
 
@@ -451,8 +449,8 @@ services:
 
 Let's setup MosquiTTO and make sure that we understand **how Pub/Sub works** with a dummy example:
 
-<https://www.youtube.com/watch?v=ebsXSCKsHeQ&t=302s>
-<https://helloworld.co.in/article/mqtt-raspberry-pi-esp32>
+* <https://www.youtube.com/watch?v=ebsXSCKsHeQ&t=302s>
+* <https://helloworld.co.in/article/mqtt-raspberry-pi-esp32>
 
 ```sh
 sudo apt install -y mosquitto
@@ -729,6 +727,8 @@ void loop() {
 Another try **MQTT ESP32**: <https://www.youtube.com/watch?v=x5A5S0hoyJ0&t=211s>
 {{< /callout >}}
 
+---
+
 ## Conclusions
 
 ESP32's are so cool.
@@ -872,6 +872,6 @@ ESP32 GPIO pins in real-time with **AWS API Gateway WebSockets**
 
 If you are into websites...
 
-Be aware that the ESP32 could be your small webserver
+Be aware that the ESP32 could potentially be your **small webserver**
 
 * <https://www.youtube.com/watch?v=Ra3iWgOfveQ>
