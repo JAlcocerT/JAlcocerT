@@ -119,6 +119,7 @@ classDef class1 fill:red,color:blue,stroke:#FFD600;
 25. Maybe crypto? https://www.blockchain.com/explorer
 26. Maybe bonds? https://www.interactivebrokers.ie/portal/#/wlms/bond-scanner
 27. Geraldine Weiss method, *also known as the dividend-yield theory*
+28. Dividend calendar, like https://www.dividendstocks.com/tools/ex-dividend-stock-list/ or https://divvydiary.com/en/calendar
 
 **Sitio Web para Datos de Mercado:**
 

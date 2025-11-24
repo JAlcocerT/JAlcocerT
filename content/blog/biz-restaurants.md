@@ -2,7 +2,7 @@
 title: "Webs for Restaurants."
 date: 2026-02-19
 draft: false
-tags: ["SaaS","Just-Cook"]
+tags: ["SaaS","Just-Cook","Hotels"]
 description: "Astro Websites for Restaurants. Million dollar idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
@@ -148,6 +148,20 @@ A set of **sites themes** that will take a while to get outdated:
 3. Portfolio Links / Bento
 4. Photo Galleries / "Pretending Sites"
 5. [Wedding Sites](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) (and related [software for weddings](https://jalcocert.github.io/JAlcocerT/software-for-weddings/))
+
+### Hotels
+
+
+* https://qloapps.com/qloapps-installation-process/
+
+
+* https://www.chaport.com/powered-by-chaport
+* https://www.livechat.com/pricing/
+
+> https://peppe8o.com/qloapps-raspberry-pi/ this is a https://www.ezeefrontdesk.com/ alternative
+
+
+https://github.com/JAlcocerT/Home-Lab/tree/main/qloaps
 
 ---
 

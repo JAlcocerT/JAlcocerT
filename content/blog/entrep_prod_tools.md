@@ -2,7 +2,7 @@
 title: "Want to be an entrepreneur? Try these SelfH Product Tools"
 date: 2025-05-29
 draft: false
-tags: ["Entrepreneuring","Websites","Web Generator","PostHog","PMF","Product Analytics"]
+tags: ["Entrepreneuring","Web Generator","PostHog","PMF","Product Analytics"]
 description: 'Building Websites for others with CMS and landingPAD theme. The mission of Ghost Websites its just so great...'
 url: 'product-tools'
 ---
@@ -43,7 +43,9 @@ This was a response to the rise of media companies like Vox and BuzzFeed, whose 
 
 Ghost sought to empower creators and newsrooms to compete without being beholden to closed platforms like Facebook and Medium.
 
-Over the past 12 years, Ghost has consistently focused on building tools for web publishing, particularly helping creators build sustainable businesses through features like **paid subscriptions**. This focus has led to over **$100 million** earned by independent media businesses using Ghost.
+Over the past 12 years, Ghost has consistently focused on building tools for web publishing, particularly helping creators build sustainable businesses through features like **paid subscriptions**. 
+
+This focus has led to over **$100 million** earned by independent media businesses using Ghost.
 
 The author expresses pride in Ghost's achievements as a **small, independent non-profit** competing with large, VC-funded platforms.
 
@@ -283,18 +285,19 @@ Make sure you understand how to use funnels and [Sankey](https://apexcharts.com/
 
 Any Web or Webapp can potentially be Combined with PostHog/OpenReplay for Product Analytics
 
-1. [PostHog](https://posthog.com)
-2. OpenReplay
+1. [PostHog](#posthog)
+2. Many others like OpenReplay
 
 [![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
 
 
-
 #### PostHog
+
+Login via: https://posthog.com
 
 To see **how customers interact** with your product, you can try with their **hosted solution**: https://eu.posthog.com/
 
-Add this kind of snippet before the `</head>` of your website, as done [here](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/layouts/BaseLayout.astro?ref_type=heads#L31):
+Add this snippet code before the `</head>` of your website, as done [here](https://gitlab.com/fossengineer1/libreportfolio/-/blob/main/src/layouts/BaseLayout.astro?ref_type=heads#L31):
 
 ```html
     <script>

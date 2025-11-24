@@ -27,6 +27,8 @@ This time it is the turn of **Nuxt**
 
 * https://github.com/HugoRCD/canvas
 
+> Apache v2 | Portfolio template made with Nuxt 3, Nuxt Content v3, NuxtUI v3 and TailwindCSS v4 
+
 1. The first thing I noticed, it takes much more time to load compared to Astro or NextJS sites, and much more than HUGO.
 
 You just need **2 things**: NPM and NodeJS.
@@ -59,6 +61,7 @@ npm -v    # Should show npm version - 10.8.2
 > Really cool Portfolio template made with Nuxt 3, Nuxt Content and TailwindCSS
 
 ```sh
+git clone https://github.com/HugoRCD/canvas
 bun install
 bun dev #dev server
 bun generate #static proy
@@ -72,25 +75,35 @@ Now you can spin a server and make **ASTRO [Remote Development](https://jalcocer
 
 
 
-## Nuxt SSG
+## About Nuxt
 
-Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade **full-stack web applications and websites with Vue.js**.
+Nuxt is a free and **open-source framework** (not an SSG!) with an intuitive and extendable way to create type-safe, performant and production-grade **full-stack web applications and websites with Vue.js**.
 
 * https://github.com/nuxt/nuxt
   * https://nuxt.com/deploy
 
 > MIT | The Intuitive Vue Framework.
 
-### Nuxt Content CMS
+Nuxt and Next.js both offer full stack features but have differences reflecting their Vue and React bases, respectively.
 
-If you have been finding that connecting a CMS to a SSG is hard, Nuxt Content CMS is a great option.
+**Nuxt Full Stack Features**
 
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nuxt-content" title="Nuxt Content CMS | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
+- Nuxt (based on Vue) provides built-in server-side rendering (SSR), static site generation (SSG), automatic routing, and zero-config TypeScript support. It includes a server framework to create APIs, handle backend logic, and fetch data from databases within the same codebase.
+- It uses Vite as a bundler for fast development with hot module replacement and code splitting.
+- Nuxt emphasizes convention-over-configuration, providing a modular architecture with pre-built modules for authentication, PWA support, and SEO optimization, speeding up development.
+- The Nitro engine in Nuxt enables flexible deployment targets and backend functionality, supporting a full-stack experience seamlessly integrated with Vue syntax.
 
+| Feature                          | Nuxt (Vue)                           | Next.js (React)                      |
+|---------------------------------|------------------------------------|------------------------------------|
+| Base Framework                  | Vue.js                             | React                              |
+| SSR / SSG Support               | Built-in SSR & SSG                 | SSR, SSG, and advanced ISR          |
+| Backend/API Handling            | Built-in server framework (Nitro) | API routes for backend logic        |
+| Development Speed              | Convention-over-configuration      | More configuration, flexible       |
+| Performance                   | Fast with Vite bundler              | High performance with Turbopack (upcoming) |
+| Deployment Integration         | Supports various targets            | Optimal integration with Vercel     |
+| Ecosystem & Community           | Smaller but active Vue community   | Larger React ecosystem and tooling  |
 
-### About Nuxt
+Overall, Nuxt excels in developer velocity for Vue-based full stack apps with intuitive setup and modularity, while Next.js offers greater flexibility, advanced React features, and scalability for complex projects.
 
 Nuxt is an open-source, full-stack framework for building **web applications using Vue.js**.
 
@@ -98,7 +111,20 @@ It simplifies the development of complex applications by providing an opinionate
 
 > Nuxt is inspired by Next.js, a similar framework for React.
 
-> > I need to try NUXT sometime *,soon'*
+
+**Nuxt and SSG (Static Site Generators)**
+
+Nuxt is not just a static site generator, but it can act as one. 
+
+It offers several rendering modes, including static site generation (SSG), which puts it in a similar category to frameworks like Astro or Hugo, but with some key differences.
+
+**Nuxt's Rendering Modes**
+
+Nuxt provides a **versatile rendering system** that allows you to choose the best approach for your project:
+
+1.  **Single-Page Application (SPA):** The entire application is rendered by the browser after it loads the initial HTML, CSS, and JavaScript. This is the traditional way of building a Vue app, and it's great for highly interactive web apps.
+2.  **Server-Side Rendering (SSR):** The server renders the initial HTML for each page, which is then sent to the browser. This improves initial load performance and SEO. Once loaded, the page becomes a fully interactive SPA. Nuxt calls this "Universal" rendering.
+3.  **Static Site Generation (SSG):** Nuxt generates a static HTML, CSS, and JavaScript file for each page at build time. These files can be served from any static host or CDN. This provides the best performance and security and is ideal for content-heavy sites like blogs or documentation. 
 
 **Nuxt and JavaScript ☕️**
 
@@ -114,19 +140,18 @@ It uses JavaScript to handle almost every aspect of an application, from front-e
 * **Node.js and Nitro:** Nuxt's server-side capabilities are powered by a server engine called **Nitro**, which is built on Node.js. This allows Nuxt to run JavaScript code on the server, which is essential for features like Server-Side Rendering (SSR) and API routes.
 * **Tooling:** Nuxt integrates popular JavaScript build tools like **Vite** or **Webpack** to bundle and optimize your application's code for production.
 
-**Nuxt and SSG (Static Site Generators)**
 
-Nuxt is not just a static site generator, but it can act as one. 
 
-It offers several rendering modes, including static site generation (SSG), which puts it in a similar category to frameworks like Astro or Hugo, but with some key differences.
+### Nuxt Content CMS
 
-**Nuxt's Rendering Modes**
+If you have been finding that connecting a CMS to a SSG is hard, Nuxt Content CMS is a great option.
 
-Nuxt provides a **versatile rendering system** that allows you to choose the best approach for your project:
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nuxt-content" title="Nuxt Content CMS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
-1.  **Single-Page Application (SPA):** The entire application is rendered by the browser after it loads the initial HTML, CSS, and JavaScript. This is the traditional way of building a Vue app, and it's great for highly interactive web apps.
-2.  **Server-Side Rendering (SSR):** The server renders the initial HTML for each page, which is then sent to the browser. This improves initial load performance and SEO. Once loaded, the page becomes a fully interactive SPA. Nuxt calls this "Universal" rendering.
-3.  **Static Site Generation (SSG):** Nuxt generates a static HTML, CSS, and JavaScript file for each page at build time. These files can be served from any static host or CDN. This provides the best performance and security and is ideal for content-heavy sites like blogs or documentation. 
+
+
 
 #### **Nuxt vs. Astro and Hugo**
 

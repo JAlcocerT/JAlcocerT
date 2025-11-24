@@ -1,6 +1,6 @@
 ---
 title: "SMTP and e-mail stuff"
-date: 2025-11-23
+date: 2025-11-24
 draft: false
 tags: ["EMPs","MailTrap API","Amazon SES vs Resend vs MailJet","GrowChief vs ListMonk"]
 description: 'Email is hard. Social Media OutReach, is not.'
@@ -8,6 +8,16 @@ url: 'emails-101'
 ---
 
 **TL;DR**
+
+SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better.
+
+
+
+**Intro**
+
+I was happy enough with Google and Stripe integrated into cal.com
+
+![Cal x Stripe](/blog_img/email/cal-email-stripe.png)
 
 You probably need leads.
 
@@ -17,17 +27,6 @@ What you know is that cold email can get you Cash Flow.
 
 Specially when combined with a [proper *APIFY based* sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/#a-sales-pipeline) and automation tools [for marketers](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/).
 
-
-
-SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better
-
-Unfortunately, [This](https://github.com/umuterturk/email-verifier) does not work anymore: https://github.com/umuterturk/email-verifier
-
-**Intro**
-
-I was happy enough with Google and Stripe integrated into cal.com
-
-![Cal x Stripe](/blog_img/email/cal-email-stripe.png)
 
 So far I got proper *and high level* custom email integration via:
 
@@ -924,7 +923,10 @@ Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101e
 
 Does an email you logged into your new waiting/[ebook list with Pocketbase](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version) even exists?
 
-* https://github.com/4w4k3/KnockMail
+Unfortunately, [This](https://github.com/umuterturk/email-verifier) does not work anymore: https://github.com/umuterturk/email-verifier
+
+
+* But there is also: https://github.com/4w4k3/KnockMail
 
 KnockMail is a tool designed to **verify the existence of email addresses**. 
 
