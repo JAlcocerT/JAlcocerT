@@ -10,6 +10,15 @@ url: 'interesting-books'
 
 **Tl;DR**
 
+<!-- 
+#range
+#peak
+#ultra learning -->
+
+https://jalcocert.github.io/JAlcocerT/blog/da-bk-learning/
+
+https://jalcocert.github.io/JAlcocerT/negotiation-skills-data-analytics/
+
 
 **Intro**
 

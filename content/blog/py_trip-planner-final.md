@@ -56,7 +56,9 @@ The open landscapes ahead, and the rhythmic turning of the pedals beneath me. La
 
 Bikepacking, as they call it, is not just about the journey; it's about the stories you collect along the way.
 
-One such story was my tryst with the weather. Europe, with its unpredictable climate, threw at me sunny days, cloudy afternoons, and occasional rain showers.
+One such story was my tryst with the weather. 
+
+Europe, with its unpredictable climate, threw at me sunny days, cloudy afternoons, and occasional rain showers.
 
 While I mostly got lucky with the weather, there were moments when I wished I had a crystal ball to peek into the future. **And that's when this idea struck.**
 
@@ -64,9 +66,13 @@ It's not just an app; it's the culmination of a dream, **a dream born on the ope
 
 ### The Birth of the Python Trip Planner
 
-If I couldn't have a crystal ball, why not build the next best thing? An app that could tell me not just about the historical weather patterns but also give me a glimpse of the future. As I pedaled through the countryside, the blueprint of the Python Trip Planner started taking shape in my mind.
+If I couldn't have a crystal ball, why not build the next best thing? An app that could tell me not just about the historical weather patterns but also give me a glimpse of the future. 
 
-Fast forward to today, the app is a reality. With features like forecast weather data, historical weather patterns, and an intuitive UI, it's like having a weather oracle in our pocket.
+As I pedaled through the countryside, the blueprint of the Python Trip Planner started taking shape in my mind.
+
+Fast forward to today, the app is a reality.
+
+With features like forecast weather data, historical weather patterns, and an intuitive UI, it's like having a weather oracle in our pocket.
 
 <!-- ### The Baltics Beckon
 
@@ -102,7 +108,9 @@ Rain on Tuesday? Pack that raincoat. Sunny on Wednesday? Don't forget the sunscr
 
 ### Revamped UI
 
-The user interface is now more intuitive, user-friendly, and pleasing to the eyes. Planning your trip is not just efficient but also [a delightful experience](https://fossengineer.com/improving-ui-python-dash-apps/).
+The user interface is now more intuitive, user-friendly, and pleasing to the eyes. 
+
+Planning your trip is not just efficient but also [a delightful experience](https://fossengineer.com/improving-ui-python-dash-apps/).
 
 ![LangChain Jupyter NB](/blog_img/apps/TripPlanner/TripPlanner-UI.gif)
 
@@ -124,7 +132,11 @@ It all started with the basics. Python Dash, a framework that promises interacti
 
 ### Python Dash Meets Docker: The Docker Detour
 
-Then came Docker, the tool that promises to package an app and its environment into a neat little container. [Integrating Python Dash with Docker](https://fossengineer.com/dash-docker-gcr/) felt like learning a new dance. It's all about rhythm and coordination. And once the two were in sync, the app was not just functional but also portable.
+Then came Docker, the tool that promises to package an app and its environment into a neat little container.
+
+[Integrating Python Dash with Docker](https://fossengineer.com/dash-docker-gcr/) felt like learning a new dance. It's all about rhythm and coordination.
+
+And once the two were in sync, the app was not just functional but also portable.
 
 ### One Docker Image, Multiple Architectures: The Manifest Mystery
 
@@ -134,13 +146,21 @@ It was like trying to fit a square peg in a round hole, but with some tweaks and
 
 ### Deploying to Google Cloud Run: The Gamble
 
-With the app ready, it was time to showcase it to the world. Google Cloud Run seemed like the perfect stage. Deploying the Python Dash app on it felt like launching a rocket. But rockets are expensive, and so was the cloud. The costs started skyrocketing, and it was time for a rethink.
+With the app ready, it was time to showcase it to the world. Google Cloud Run seemed like the perfect stage.
+
+Deploying the Python Dash app on it felt like launching a rocket. 
+
+But rockets are expensive, and so was the cloud. The costs started skyrocketing, and it was time for a rethink.
 
 ### Self-hosting with Docker and Cloudflare Tunnel: The Homecoming
 
-Why rely on external platforms when you can be the master of your domain? The decision to self-host the Python Dash app at home was both daring and ingenious.
+Why rely on external platforms when you can be the master of your domain? 
 
-Docker ensured the app ran smoothly, and [Cloudflare Tunnel](https://fossengineer.com/selfhosting-python-dash-apps-with-docker/) was the guardian, safely exposing the app to the world. It was like building a castle and then drawing up the bridge to let the world in, securely.
+The decision to self-host the Python Dash app at home was both daring and ingenious.
+
+Docker ensured the app ran smoothly, and [Cloudflare Tunnel](https://fossengineer.com/selfhosting-python-dash-apps-with-docker/) was the guardian, safely exposing the app to the world. 
+
+It was like building a castle and then drawing up the bridge to let the world in, securely.
 
 
 <!-- 

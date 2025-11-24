@@ -1,8 +1,8 @@
 ---
-title: "Interesting APIs 101 x ElevenLabs"
+title: "Interesting APIs 101 | ElevenLabs vs AI Studio"
 date: 2025-10-22T09:20:21+01:00
 draft: false
-tags: ["LibrePortfolio-X","Firecrawl","Serp","Smithery MCP","Scrap","Hoppscotch vs httpie","Twitter vs Threads"]
+tags: ["LibrePortfolio-X","PipeDream vs Smithery MCP","Scrap","Hoppscotch vs httpie","Twitter vs Threads"]
 description: 'Get that info you need. From social media to Formula 1. Publish on twitter programatically.'
 url: 'interesting-apis'
 ---
@@ -10,7 +10,11 @@ url: 'interesting-apis'
 
 **Tl;DR**
 
-No matter if you are using APIs to BiP, to do some Jira tasks or to bring real life data to your SliDevJS PPT component.
+No matter if you are using APIs to BiP.
+
+To do some [Jira](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/) tasks or to bring [real time life data to your SliDevJS PPT](https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/#conclusions) component.
+
+99% of the times, there is an API behind of that!
 
 **Intro**
 
@@ -28,7 +32,19 @@ Like using it to push [new content/posts programatically to WP or Ghost](https:/
 
 ## Scrapping APIs
 
-1. **Octoparse** is a popular no-code web scraping tool designed to automate data extraction from websites. Here are the key facts and features
+
+
+There are several scrapping APIs outthere.
+
+The most used are: [Firecrawl > ScrapeGraph / Crawl4AI](https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scrapping the Web" image="/videos/job_offers.png" subtitle="Post where I tinkered with scrapping tools." >}}
+  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrapping Tools" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Using BS4, AI Scraps like Firecrawl..." >}}
+{{< /cards >}}
+
+
+1. **Octoparse** is a popular no-code web scraping tool designed to automate data extraction from websites. 
 
 {{< details title="About OctoParse... 📌" closed="true" >}}
 
@@ -122,7 +138,7 @@ ZenRows is best for **technically adept users** needing to scrape protected or d
 
 Exa is a powerful API and search engine for developers and AI platforms needing live, reliable access to web data—whether for agentic automation, research workflows, candidate sourcing, market intelligence, marketing analysis, or RAG pipelines.
 
-It’s frequently described as “Perplexity-as-a-service” for customizable, factual, and privacy-conscious web data access.
+> It’s frequently described as “Perplexity-as-a-service” for customizable, factual, and privacy-conscious web data access.
 
 
 ## AI APIs
@@ -137,6 +153,11 @@ Avoid LLM lock-in and the recurring subscription bills.
 * Anthropic - <https://console.anthropic.com/settings/keys>
 * Groq - <https://console.groq.com/keys>
 * For [Ollama](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/Ollama), you need [this setup](https://fossengineer.com/selfhosting-llms-ollama/)
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Ollama | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 Together with Streamlit!
 
@@ -243,14 +264,9 @@ Or simply a YT Summarizer:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/phidata-yt-groq" title="Selfhosted PhiData YT Summarizer - Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Selfhosted Ollama API - Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
-
-### Ollama API
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Selfhosted Ollama - Docker Configs 🐋 ↗" >}}
-{{< /cards >}}
 
 ### OpenAI API
 
@@ -277,7 +293,13 @@ This was one of the first data I used for a personal project.
 
 Im talking about the python trip planner, which uses the open meteo API to get historical weather data points.
 
-`https://api.open-meteo.com/v1/forecast?city=${city}&daily=temperature_2m_max&timezone=auto`
+See the open meteo endpoints: `https://api.open-meteo.com/v1/forecast?city=${city}&daily=temperature_2m_max&timezone=auto`
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/trip-planner-with-weather" title="Trip Planner with Weather" image="/blog_img/apps/TripPlanner/TripPlanner-UI.gif" subtitle="Trip Planner with Weather | Post " >}}
+{{< /cards >}}
+
 
 
 ### Financial Data
@@ -531,12 +553,23 @@ sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
 
 ### Other API Testing Tools
 
+These applications are all **API Clients** or **API Testing/Debugging tools**.
+
+All three apps (HTTPie Desktop, Reqable, and yaak) perform the core function of an API client, allowing users to send requests, view responses, and organize their API development workflow, directly competing with or replacing tools like Postman.
+
 1. https://github.com/httpie/desktop
 
 ```sh
 wget -P ~/Applications https://github.com/httpie/desktop/releases/download/v2025.2.0/HTTPie-2025.2.0.AppImage
 #httpie
 ```
+
+![alt text](/blog_img/iot/httpie.png)
+
+With httpie we can also query endpoints that are protected. *No matter if its basic user/pwd, APi Token or bearer!*
+
+
+![alt text](/blog_img/iot/httpie-auth.png)
 
 >  🚀 HTTPie Desktop — cross-platform API testing client for humans. Painlessly test REST, GraphQL, and HTTP APIs. 
 
@@ -550,9 +583,13 @@ One app is worth multiple apps: Advanced API Debugging Proxy and REST Client
 flatpak install flathub com.reqable.Reqable
 ```
 
+![alt text](/blog_img/iot/reqable.png)
+
 3. https://github.com/mountain-loop/yaak/
 
->  MIT | The most intuitive desktop API client. Organize and execute **REST, GraphQL, WebSockets, Server Sent Events, and gRPC** 🦬 
+>  MIT | The most intuitive **desktop API client**.
+
+> > Organize and execute **REST, GraphQL, WebSockets, Server Sent Events (SSE), and gRPC** 🦬 
 
 
 ---
@@ -567,7 +604,7 @@ The problem today is not to have options, but too many:
 
 - **Octoparse:** A no-code/low-code web scraping platform for visually extracting structured data from websites, ideal for non-programmers and small businesses.
 - **ZenRows:** A powerful API-based web scraper built for developers to extract data from dynamic, protected, or anti-bot websites at scale.
-- **Pipedream:** A developer-oriented cloud automation platform for building, integrating, and running event-driven workflows that connect APIs, apps, and custom code.
+- **Pipedream:** A developer-oriented [cloud automation platform](#pipedream) for building, integrating, and running event-driven workflows that connect APIs, apps, and custom code.
 - **Exa:** An advanced web search API and site crawler that powers AI and developer workflows with live, customizable, and accurate web data retrieval.
 
 
@@ -580,6 +617,9 @@ I know that some marketers are using...
 ### PipeDream
 
 **Pipedream** is a cloud-based automation and integration platform designed for developers and technical users.
+
+* https://pipedream.com/pricing - There is a free tier
+
 
 It allows you to create workflows that connect APIs, databases, cloud apps, and event sources with minimal infrastructure setup. 
 
@@ -605,6 +645,7 @@ Not a true no-code solution; best suited for technically comfortable users.
 
 **Smithery** (or Smithery.ai) is a developer-focused platform for **building, discovering, and managing MCP (Model Context Protocol) servers**—modular tools that extend the capabilities of AI assistants, agentic systems, and language models.
 
+
 > Extend your AI with 7572 skills built by the community
 
 - **MCP Registry:** Smithery acts as a central hub (sometimes called “Google for MCPs”) where developers can discover and share MCP-compliant AI tools—these are small servers or extensions that connect AI models to real-world data, services (like GitHub, Gmail), files, APIs, and much more.[1][2][3][4]
@@ -618,7 +659,9 @@ Not a true no-code solution; best suited for technically comfortable users.
 
 **Summary:**  
 
-Smithery is the “app store” or registry for agentic AI extensions, enabling powerful automation and integration between LLM-powered agents and real-world apps/services. It’s especially useful for developers creating advanced personal finance, coding, or infrastructure management systems with agentic or autonomous logic.
+Smithery is the “app store” or registry for agentic AI extensions, enabling powerful automation and integration between LLM-powered agents and real-world apps/services. 
+
+It’s especially useful for developers creating advanced personal finance, coding, or infrastructure management systems with agentic or autonomous logic.
 
 
 ### Audio APIs
@@ -630,7 +673,7 @@ If you like [Podcasts](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#a
 * https://www.gitpodcast.com/rybbit-io/rybbit
 
 
-https://jalcocert.github.io/JAlcocerT/local-ai-audio/
+We were recently tinkering with [AI and audio here](https://jalcocert.github.io/JAlcocerT/local-ai-audio/)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/audio-to-text-tools/" title="OpenAI TTS and Transcription Project" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter Post" >}}
@@ -638,9 +681,11 @@ https://jalcocert.github.io/JAlcocerT/local-ai-audio/
 {{< /cards >}}
 
 
-#### 11Labs x MCP
+#### 11Labs
 
-**ElevenLabs** already has its own MCP Server:
+11labs has really cool API endpoints.
+
+And **ElevenLabs** already has its own MCP Server:
 
 <!-- https://www.youtube.com/watch?v=uOneCuSj2tI -->
 
@@ -650,6 +695,17 @@ But I felt like trying elevenlabs and test how they can do audio was already ove
 
 So...
 
+Lets get to it: https://elevenlabs.io/pricing
+
+As of the time of writig:It offers 10k credits/month for free.
+
+ 10 minutes of Text to Speech
+5 minutes of Music
+250 seconds of Sound Effects
+
+Eleven labs has one of the coolest onboarding experiences I have seen lately: https://elevenlabs.io/app/onboarding
+
+Once completed, you can explore on the free tier, like: https://elevenlabs.io/app/speech-synthesis/text-to-speech
 
 See how crazy it sounds:
 
@@ -670,13 +726,21 @@ See how crazy it sounds:
 
 > > Sources from `./static/audio/`
 
+I could not avoid comparing the elevenlabs TTS to the one that Gemini offers
 
-### Python CLI Tools
+#### Gemini TTS via Google AI Studio
 
-* https://pypi.org/project/questionary/ - Create CLI utilities with python
-* https://docs.pytest.org/en/stable/
+* https://aistudio.google.com/generate-speech?model=gemini-2.5-pro-preview-tts
 
-## FAQ
+They also provide the code to run the same via Python and your own API key.
+
+
+All powered by: https://pypi.org/project/google-genai/
+
+```sh
+pip install google-genai
+```
+
 
 ### Other Tools
 
@@ -699,6 +763,8 @@ See how crazy it sounds:
 
 ### Creating TwitterOpenAIMatplotlib Bot
 
+
+How about creating some AI/Bot that publish content on twitter?
 
 ```sh
 git init

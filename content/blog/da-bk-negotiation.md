@@ -47,9 +47,14 @@ But here are some points to consider:
     * Let the others go first
     * Establish a range
 
-Many people believe that successful negotiating hinges on reasoning and raw intellectual process. Foundational texts of negotiation, such as Getting to Yes and Thinking, Fast and Slow, reinforce this impression. Voss claims that this approach is mistaken, because humans are, fundamentally, irrational.
+Many people believe that successful negotiating hinges on reasoning and raw intellectual process. 
+
+Foundational texts of negotiation, such as Getting to Yes and Thinking, Fast and Slow, reinforce this impression. 
+
+> Voss claims that this approach is mistaken, because humans are, fundamentally, irrational.
 
 Taking a different tack, Voss brands his style of negotiation “tactical empathy,” and explains that it calls for understanding your counterpart’s deeper motivations. 
+
 The trick is to make your opponents feel that they came up with your desired solution, giving them the illusion of control.
 
 *Don’t treat others the way you want to be treated; treat them the way they need to be treated.*

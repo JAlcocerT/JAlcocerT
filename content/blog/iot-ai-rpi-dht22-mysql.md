@@ -173,6 +173,14 @@ Lets go with the **AI part**.
 {{< /details >}}
 
 
+
+When you are done:
+
+```sh
+#sudo docker stop $(sudo docker ps -aq) && sudo docker rm $(sudo docker ps -aq)
+#docker system prune -a
+```
+
 ---
 
 ## Conclusions
@@ -263,7 +271,10 @@ python3 setup.py install --force-pi
 
 {{< /details >}}
 
+### Python CLI Tools
 
+* https://pypi.org/project/questionary/ - Create CLI utilities with python
+* https://docs.pytest.org/en/stable/
 
 ### Running LLMs in SBCs
 

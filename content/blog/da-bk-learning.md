@@ -2,19 +2,21 @@
 title: "Specialists vs Generalists - Range"
 date: 2021-10-23T23:20:21+01:00
 draft: false
-tags: ["Blog","Career","Outro"]
+tags: ["Blog","Career","Outro","T-shape"]
+description: "Ultra-learning - Are you a specialist or a generalist?"
 ---
 
-<!-- 
-#range
-#peak
-#ultra learning -->
+
 
 > Knowledge increasingly needs not merely to be durable, but also flexible – both sticky and capable of broad application - DAVID EPSTEIN
 
 
 Epstein reports that champion golfer Tiger Woods held his first golf club at the age of 18 months. Conversely, Roger Federer sampled various sports before settling on tennis in his teens. Both became world champions. 
-Both athletes, Epstein point outs, engaged in deliberative practice – following explicit instructions on the best methods known – to become standout stars. While early specialists have an advantage at the start of their careers, the author notes that late specialists typically find employment that better matches their skills and abilities. 
+
+
+Both athletes, Epstein point outs, engaged in deliberative practice – following explicit instructions on the best methods known – to become standout stars.
+
+While early specialists have an advantage at the start of their careers, the author notes that late specialists typically find employment that better matches their skills and abilities. 
 
 
 Wicked Domains 
@@ -39,7 +41,3 @@ Epstein cites how an evocative simple problem – for instance, discovering how 
 > **The most successful experts also belong to the wider world - DAVID EPSTEIN**
 
 Specialists stay in parallel trenches the author says, which means that they seldom learn what people in other trenches are doing or discovering. 
-
-
-## About T-Shape Skills
-

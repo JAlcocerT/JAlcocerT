@@ -1,10 +1,9 @@
 ---
 title: "Flat > Boxer"
 date: 2026-08-15T23:20:21+01:00
-draft: true
+draft: false
 tags: ["DA","Career"]
 description: ''
-summary: ''
 url: ''
 ---
 

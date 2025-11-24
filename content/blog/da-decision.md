@@ -4,6 +4,7 @@ date: 2020-10-02T23:20:21+01:00
 draft: false
 tags: ["Outro"]
 url: 'decision-making-data-analytics'
+description: "Decision Making for D&A"
 ---
 
 <!-- 

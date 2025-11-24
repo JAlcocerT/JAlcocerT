@@ -19,7 +19,13 @@ Just a quick mental model on [Series](#understanding-series) with Python.
 
 
 <!-- 
-In mathematics, a power law is a functional relationship between two quantities [1], where a relative change in one quantity results in a proportional relative change in the other quantity [2][3], independent of the initial size of those quantities. In other words, small changes in one variable result in large changes in another variable, and vice versa. This type of relationship is often observed in nature, such as in the size distribution of cities or the frequency of words in a language. The power law is also known as a scaling law or a Pareto distribution. -->
+In mathematics, a power law is a functional relationship between two quantities [1], where a relative change in one quantity results in a proportional relative change in the other quantity [2][3], independent of the initial size of those quantities. 
+
+In other words, small changes in one variable result in large changes in another variable, and vice versa. This type of relationship is often observed in nature, such as in the size distribution of cities or the frequency of words in a language. 
+
+The power law is also known as a scaling law or a Pareto distribution. 
+
+-->
 
 Some examples of power laws and how they affect our lives:
 

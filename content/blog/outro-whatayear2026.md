@@ -33,7 +33,7 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post
 
 2. I did not know that **creating an ebook** was that simple
 
-https://www.amazon.es/sendtokindle
+* https://www.amazon.es/sendtokindle
 
 > Create ebooks be like: upload .md + upload image done via canva = download pdf/epub thanks to pandoc
 

@@ -1,12 +1,12 @@
 ---
 title: "Understanding Calculus"
-date: 2026-10-12T23:20:21+01:00
+date: 2025-12-18T23:20:21+01:00
 draft: false
 description: 'Calculus 101'
 url: 'calculus-101'
 math: true
+tags: ["DSc","Bike_dynamic_simulator","Math"]
 ---
-
 
 
 
@@ -47,6 +47,10 @@ Well, I can think already about few examples:
 **The Jacobian**
 
 This was very useful to do computatial mechanics.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Bike_dynamic_simulator" title="Bicycle Dynamic Simulator Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Bicycle Dynamic Simulator Thesis" >}}
+{{< /cards >}}
 
 <!-- https://www.youtube.com/watch?v=wCZ1VEmVjVo
  -->
@@ -143,3 +147,6 @@ relate it with non lineality and caos theory -->
 
 
 ---
+
+## Conclusions
+

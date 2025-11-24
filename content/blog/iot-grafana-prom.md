@@ -9,7 +9,6 @@ url: 'selfhosting-grafana'
 
 **Tl;DR**
 
-* https://github.com/boblemaire/IoTaWatt
 
 **Intro**
 
@@ -26,6 +25,11 @@ See how to use [Iotawatt + Grafana](https://blog.networkprofile.org/power-monito
 
 
 ![Solar Panel](/blog_img/outro/solar-panel.jpg)
+
+
+* https://github.com/boblemaire/IoTaWatt
+
+> GPL 3/0 |  IoTaWatt Open WiFi Electric Energy Monitor
 
 
 https://github.com/superduper-io/superduper

@@ -2,7 +2,7 @@
 title: "Programatic Web Search"
 date: 2026-02-09
 draft: false
-tags: ["Dev","DuckDuckGo","SerpAPI","SerpBear","SimilarWeb"]
+tags: ["Dev","DuckDuckGo","SerpAPI vs SerpBear","SimilarWeb"]
 url: 'search-web-with-python'
 summary: 'How to use search the web programatically'
 ---
