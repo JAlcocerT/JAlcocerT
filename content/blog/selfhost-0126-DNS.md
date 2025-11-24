@@ -273,6 +273,13 @@ Why not doing [billing with OSS](https://fossengineer.com/open-source-invoice-cr
 
 > Open Source Metering and Usage Based Billing API ⭐️ Consumption tracking, Subscription management, Pricing iterations, Payment orchestration & Revenue analytics
 
+
+#### Business Cards
+
+* https://github.com/kyaustad/cardyo
+
+>  A simple URL based **digital business card creation** and sharing system 
+
 --- 
 
 

@@ -24,7 +24,6 @@ Almost the end of the year, time to **try out some new SSG**.
 
 This time it is the turn of **Nuxt**
 
-
 * https://github.com/HugoRCD/canvas
 
 > Apache v2 | Portfolio template made with Nuxt 3, Nuxt Content v3, NuxtUI v3 and TailwindCSS v4 
@@ -61,19 +60,131 @@ npm -v    # Should show npm version - 10.8.2
 > Really cool Portfolio template made with Nuxt 3, Nuxt Content and TailwindCSS
 
 ```sh
-git clone https://github.com/HugoRCD/canvas
-bun install
-bun dev #dev server
-bun generate #static proy
-bun start #prod server
+#git clone https://github.com/HugoRCD/canvas
+git clone https://github.com/JAlcocerT/canvas
+#bun install
+#bun dev #dev server
+#bun generate #static proy
+#bun start #prod server
+```
+
+
+You can spin a server and make **ASTRO [Remote Development](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker)** in it.
+
+Specially because the theme brings docker compose support:
+
+```sh
+sudo docker compose -f docker-compose.local.yml up -d
+#sudo docker compose -f docker-compose.local.yml down
 ```
 
 {{< /dropdown >}}
 
 
-Now you can spin a server and make **ASTRO [Remote Development](https://jalcocert.github.io/JAlcocerT/blog/dev-in-docker)** in it.
+The Canvas theme was so great to me, that i decided to fork it to understand it better:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/canvas" title="NEW repository - Canvas Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Testing NUXT and NUXT Content CMS for a blog" >}}
+{{< /cards >}}
+
+What I liked:
+
+1. The search+tag system working together
 
 
+2. The docker compose support out of the box: *i just added the makefile*
+
+```sh
+make docker-up
+```
+
+
+3. Static build and serving:
+
+```sh
+make generate
+#@npx serve .output/public
+#cd .output/public && python3 -m http.server 8080
+```
+
+only to realize that something is off...
+
+
+4. Cloudflare D1 Database x NUXT CMS?
+
+When using serverless platforms, it's important to note that Nuxt Content v3 relies *by default on SQLite* for content storage.
+
+Since these platforms do not support SQLite natively, we recommend connecting Canvas Portfolio to an external database such as:
+
+-  **PostgreSQL**
+-  **Turso**
+-  Cloudflare **D1**
+
+{{% details title="About CF D1 x Nuxt Content Git based CMS 🌍" closed="true" %}}
+
+Cloudflare D1 is a **managed, serverless SQL database** offered by Cloudflare. 
+
+It is built on the **SQLite** query engine, giving it familiar SQL semantics, but optimized to run on Cloudflare's global network, particularly alongside **Cloudflare Workers** and **Pages** projects. 
+
+The key features of D1 are:
+
+* **Serverless:** No infrastructure to manage, provision, or scale. It's usage-based pricing.
+* **Edge Deployment:** Designed to eventually store data closer to your users globally, resulting in lower latency for read operations (though currently, write operations are generally routed to a single primary location).
+* **SQLite Compatibility:** Uses a familiar SQL dialect, making it easy to integrate with existing ORMs and tooling.
+* **Built-in Features:** Includes disaster recovery, backups, and a "Time Travel" feature for point-in-time recovery.
+
+**🤝 Relationship to Nuxt Content**
+
+**Nuxt Content** is a module for Nuxt applications that turns files (like Markdown, YAML, or JSON) into a powerful, database-like API.
+
+By default, Nuxt Content reads these files directly from your repository and processes them at build time or during development. However, for a fully dynamic or large-scale application deployed on Cloudflare, **Cloudflare D1 provides an optional, persistence layer for that content.**
+
+The relationship works like this:
+
+1.  **Deployment Target:** Nuxt Content is designed to integrate with the **Cloudflare Pages** deployment preset.
+2.  **Database Integration:** The module automatically detects the Cloudflare Pages environment and configures itself to use a D1 database binding (typically named `DB`).
+3.  **Content Persistency:** Instead of reading files from the file system, the Nuxt Content module can use the D1 database to store and query your content. This makes your content dynamic and allows it to be updated or retrieved globally via the D1 database.
+4.  **Full-Stack DX (Developer Experience):** Tools like **NuxtHub** and specific Nuxt modules simplify the process, allowing you to easily connect your Nuxt 3 application's API routes (running on Cloudflare Workers) to D1 for content and data management.
+
+In essence, D1 transforms Nuxt Content from a module that works primarily with static files into a truly **full-stack, globally distributed CMS backend**.
+
+This video provides an overview of how to connect and use D1 within a Nuxt application: [Cloadflare D1 database in Nuxt](https://www.youtube.com/watch?v=sKBlwlyLxSo).
+
+That is absolutely correct!
+
+If your goal is to create a blog using **Nuxt Content** and deploy it statically, you can and should use **Static Site Generation (SSG)** mode.
+
+Yes, You Can Deploy Statically (SSG) 💯
+
+You can treat Nuxt Content exactly like you would treat Astro or any other static site generator (SSG).
+
+1.  **No D1 (or Database) Required:** If you are only using the files (Markdown, YAML, etc.) stored in your local repository's `content/` directory, you **do not need Cloudflare D1**, SQLite, or any other database.
+2.  **Build Time Rendering:** In SSG mode (often configured using `ssr: true` and a static adapter), Nuxt Content reads all your Markdown files during the build process (`npm run build`). It renders every page into a static HTML file.
+3.  **Deployment:** The resulting output folder (typically `.output/public` or `dist`) contains only HTML, CSS, and JavaScript. You can deploy this entire folder to any static hosting provider (Netlify, Vercel, Cloudflare Pages, GitHub Pages, etc.).
+
+**How Nuxt Content Works in SSG Mode**
+
+The `nuxt-content` module acts as a powerful parser and query engine *at build time*:
+
+| Component | SSG Mode Behavior |
+| :--- | :--- |
+| **Data Source** | Reads files directly from the local `content/` directory. |
+| **API** | The Content API (`/api/_content...`) is pre-rendered into static JSON files during the build. |
+| **Dynamic Features**| Any dynamic content is usually handled by client-side JavaScript fetching the pre-rendered JSON. |
+| **Persistence** | None required; the HTML and JSON are the "persistence." |
+
+**💡 When You *Would* Need D1**
+
+You would only need to consider Cloudflare D1 if:
+
+1.  You want a **true CMS backend** where you can update content **without redeploying** the entire site (i.e., you want to update content via an API/UI).
+2.  You have a large, highly dynamic site where querying content live is necessary, and you are deploying on the Cloudflare ecosystem (Workers/Pages).
+
+For a typical blog where you update content by committing a new Markdown file, **SSG is the simplest and fastest way to deploy.**
+
+Would you like help setting up your `nuxt.config.ts` file for optimal SSG deployment?
+
+{{% /details %}}
 
 ## About Nuxt
 
@@ -146,9 +257,18 @@ It uses JavaScript to handle almost every aspect of an application, from front-e
 
 If you have been finding that connecting a CMS to a SSG is hard, Nuxt Content CMS is a great option.
 
+* https://github.com/nuxt/content
+
+> MIT | The powerful Git-based CMS designed specifically for Nuxt developers.
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nuxt-content" title="Nuxt Content CMS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+
+{{< youtube "vgCPAtMwDxA" >}}
+<!-- 
+https://www.youtube.com/watch?v=vgCPAtMwDxA -->
 
 
 

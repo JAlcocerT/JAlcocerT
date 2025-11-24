@@ -63,10 +63,11 @@ There is also a very important one: https://trends.google.com/trends/
 
 ## Gatsby SSG
 
+I was following this gatsby course:
+
 {{< youtube "RaTpreA0v7Q" >}}
 
 <!-- 👉 <https://www.youtube.com/watch?v=RaTpreA0v7Q> -->
-
 
 > **React based** framework (open source JS, Meta). <https://github.com/gatsbyjs/gatsby>
 
@@ -366,8 +367,13 @@ See what [Mozilla thinks about them](https://developer.mozilla.org/en-US/docs/Le
 {{< /cards >}}
 
 
+---
 
-### How to monitor my Website Status?
+## FAQ
+
+We can find [broken links with Python](https://brianli.com/2021/06/how-to-find-broken-links-with-python/)
+
+**How to monitor my Website Status?**
 
 You can with tools like [UptimeKuma](https://fossengineer.com/selfhosting-uptime-Kuma-docker/) 
 
@@ -375,6 +381,31 @@ You can with tools like [UptimeKuma](https://fossengineer.com/selfhosting-uptime
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="UptimeKuma | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+**How to see if a web was changed**
+
+* https://docs.linuxserver.io/images/docker-changedetection.io/#user-group-identifiers Apache v2 ✅
+
+
+### Free stock photo sites
+
+If you need high‑quality, royalty‑free images, these sources offer excellent free collections (always double‑check the specific license for each image):
+
+- **Adobe Stock – Free Collection**  https://stock.adobe.com/free  
+- **StockSnap**  https://stocksnap.io/  
+
+- **Pexels**  https://www.pexels.com/  
+
+- **Burst by Shopify**  https://www.shopify.com/stock-photos  
+
+- **Freerange**  https://freerangestock.com/  
+
+- **Unsplash**  https://unsplash.com/  
+- **Kaboompics**  https://kaboompics.com/  
+- **Stockvault**  https://www.stockvault.net/  
+- **Wikimedia Commons**  https://commons.wikimedia.org/wiki/Main_Page  
+- **Pixabay**  https://pixabay.com/
+
 
 ### what it is a CDN?
 
@@ -428,35 +459,3 @@ They have a F/OSS Static Website where we can find the packages to use via CDNjs
   * https://github.com/jsdelivr/jsdelivr?tab=MIT-1-ov-file#readme
 
 >  A free, fast, and reliable Open Source CDN for npm, GitHub, Javascript, and ESM 
-
----
-
-## FAQ
-
-Despite we been able to find [broken links with Python](https://brianli.com/2021/06/how-to-find-broken-links-with-python/)
-
-
-### Free stock photo sites
-
-If you need high‑quality, royalty‑free images, these sources offer excellent free collections (always double‑check the specific license for each image):
-
-- **Adobe Stock – Free Collection**  https://stock.adobe.com/free  
-- **StockSnap**  https://stocksnap.io/  
-
-- **Pexels**  https://www.pexels.com/  
-
-- **Burst by Shopify**  https://www.shopify.com/stock-photos  
-
-- **Freerange**  https://freerangestock.com/  
-
-- **Unsplash**  https://unsplash.com/  
-- **Kaboompics**  https://kaboompics.com/  
-- **Stockvault**  https://www.stockvault.net/  
-- **Wikimedia Commons**  https://commons.wikimedia.org/wiki/Main_Page  
-- **Pixabay**  https://pixabay.com/
-
-
-
-## How to see if a web was changed
-
-https://docs.linuxserver.io/images/docker-changedetection.io/#user-group-identifiers Apache v2 ✅

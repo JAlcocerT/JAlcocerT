@@ -37,6 +37,12 @@ What are the users experiencing.
 * **Stated Preference (What they say):** Based on hypothetical questions. It captures what users *claim* they would choose.
 * **Revealed Preference (What they do):** Based on actual behavior. It captures true preferences through real-world actions and choices.
 
+La preferencia anunciada o preferencia declarada es un método para conocer las preferencias de los usuarios basado en lo que ellos dicen que elegirían en situaciones hipotéticas o que no han experimentado en la realidad. Es muy utilizada en economía para anticipar cómo los consumidores podrían reaccionar ante nuevas opciones que aún no existen en el mercado. Por ejemplo, se puede preguntar a una persona qué opciones preferiría en un producto nuevo o servicio que no ha probado.[1]
+
+Por otro lado, la preferencia revelada se basa en observar el comportamiento real de consumo del usuario, es decir, en las decisiones y elecciones efectivas que hace en la vida cotidiana. La teoría de la preferencia revelada sostiene que las preferencias de los consumidores se pueden deducir de sus hábitos de compra reales, ya que el hecho de elegir un bien sobre otro revela cuál prefieren realmente bajo las restricciones de su presupuesto. Esto implica que las preferencias se infieren a partir de las elecciones efectivas, no de declaraciones hipotéticas.[2]
+
+
+
 
 | Type | Definition | PostHog Tool to Use |
 | :--- | :--- | :--- |
@@ -65,24 +71,29 @@ How to build products that last?
 
 Product that people want to keep using and build a brand?
 
-https://www.rrweb.io/
-https://github.com/rrweb-io/rrweb
-https://github.com/rrweb-io/rrweb/blob/master/guide.md
+There are some product tools like `https://docs.uxwizz.com/` who follow the pay once own forever.
 
-https://docs.uxwizz.com/
+Or Matomo, which we know as open source web analytics tools, and has a premium hosted optopn with a plugin to do session recording.
 
-https://docs.sessionstack.com/docs/overview
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/matomo" title="Matomo | Docker Config 🐋 ↗" >}}
+  {{< card link="https://fossengineer.com/open-source-selfhostable-web-analytics-alternatives-ga/" title="Few Selfhosted OSS Web Analytics tools | Post ↗" >}}
+{{< /cards >}}
 
-Matomo - it has session recording in the on premise option, but is to be paid for that plugin
-
-
-
-[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
+Luckily, we have fully OSS options to do session recording:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/openreplay" title="OpenReplay | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/posthog" title="PostHog | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+* https://www.rrweb.io/
+  * https://github.com/rrweb-io/rrweb
+  * https://github.com/rrweb-io/rrweb/blob/master/guide.md
+
+> MIT | Record and replay the web 
+
+[![Star History Chart](https://api.star-history.com/svg?repos=posthog/posthog,usefathom/fathom,openreplay/openreplay,rrweb-io/rrweb&type=Date)](https://star-history.com/#posthog/posthog&usefathom/fathom&openreplay/openreplay&rrweb-io/rrweb&type=Date)
 
 
 ### OpenReplay
@@ -125,6 +136,10 @@ Then, you will need to add this kind of snippet before the `/head`:
 ---
 
 ## Conclusions
+
+Now you are ready to rock your career within startups.
+
+Bring to the table a discussion about how to measure SaaS performance with real insights, not assumptions of what part of the service the users are really enjoying and using.
 
 ### Astuto
 

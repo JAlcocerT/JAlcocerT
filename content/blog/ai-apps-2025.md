@@ -176,11 +176,3 @@ There were interesting tools: scrapegraph, firecrawl, crawl4ai...
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web" title="Tinkering with Scrapping Tools" image="/videos/job_offers.png" subtitle="Scrapped Job Offers Analytics" >}}
 {{< /cards >}}
-
-
-
-### Business Cards
-
-* https://github.com/kyaustad/cardyo
-
->  A simple URL based **digital business card creation** and sharing system 

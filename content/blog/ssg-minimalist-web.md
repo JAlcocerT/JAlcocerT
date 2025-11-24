@@ -153,6 +153,36 @@ But the curated already digested content will go to `blog.jalcocertech.com`
 ## FAQ
 
 
+**Intro**
+
+I get very happy when finding out about blog posts on reddit or on self.st newsletter that are **purely human driven**.
+
+> We can still feel that with themes like Paper mod
+
+
+### Minimalist Astro Blogs
+
+* https://github.com/FjellOverflow/nordlys
+
+
+
+### Minimalist HUGO 
+
+* https://www.vanwerkhoven.org/blog/2021/setting-up-hugo/
+* https://www.vanwerkhoven.org/blog/2019/speeding-up-an-nginx-webserver/
+* https://www.vanwerkhoven.org/blog/2021/responsive_images_in_hugo_theme/
+
+* https://github.com/janraasch/hugo-bearblog
+* https://github.com/janraasch/hugo-bearblog
+
+
+* https://github.com/theNewDynamic/awesome-hugo?tab=readme-ov-file
+
+### NextJS
+
+* https://github.com/edgarlr/magazine?ref=statichunt.com
+
+
 
 ### Making Webs with AI
 
@@ -232,10 +262,6 @@ This addition suggests other Static Site Generators (SSGs) that readers might fi
     Gatsby: Rich ecosystem of plugins and a vibrant community.
 
 If you have enjoyed the Next.js post, you might be interested to explore other SSGs like HUGO, Astro, Jekyll, and Gatsby. -->
-
-
-<!-- Cloudflare runners -->
-
 
 
 <!-- - **Gatsby**: Gatsby is a popular static site generator within the **React** ecosystem, leveraging React for building static sites and offering a rich plugin ecosystem.
