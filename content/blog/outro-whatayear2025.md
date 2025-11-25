@@ -794,6 +794,8 @@ From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael E
 
 14. People call now *moonlighting* to the classical side-hustles. Or so [it seems](https://engagedly.com/blog/moonlighting-and-how-to-deal-with-moonlighting-employees/).
 
+Just make sure you take care of your diet/stress levels.
+
 {{< details title="Examples of People Doing Cool Tech Stuff | Wifi Relay for Ventilation 📌" closed="true" >}}
 
 * https://blog.cavelab.dev/2021/11/wifi-relays-for-ventilation/

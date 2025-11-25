@@ -1,17 +1,18 @@
 ---
-title: "Mailtrap and PocketBase for email validation"
+title: "Mailtrap as PocketBase SMTP"
 date: 2025-11-25
 draft: false
 tags: ["MailTrap API","PocketBase","GoLang","Feature Flags"]
-description: 'Combining PB and Mailtrap for email validation. Optional FF for your SaaS'
-url: 'email-validation-pocketbase'
+description: 'Combining PB and Mailtrap for email verification. Optional FF for your SaaS'
+url: 'email-verification-pocketbase'
 ---
 
 
 **TL;DR**
 
+If someone verifies an email, means that its also valid.
 
-
+Lets do exactly that with Pocketbase BaaS and Mailtrap.
 
 
 **Intro**
@@ -120,6 +121,32 @@ And again, using mailtrap reached directly the inbox:
 ![alt text](/blog_img/email/pb-mailtrap/configuring-pb-smtp.png)
 
 ![alt text](/blog_img/email/pb-mailtrap/configuring-pb-smtp2.png)
+
+
+### Pocketbase x MailTrap - User mail Verification  
+
+Hit the `API preview` button on the top right: `http://192.168.1.12:8080/_/#/collections?collectionId=_pb_users_auth_&filter=&sort=-created`
+
+See how we got `request verification` and `confirm verification`.
+
+
+/api/collections/users/request-verification
+
+/api/collections/users/confirm-verification
+
+![alt text](/blog_img/email/pb-mailtrap/pb-api-verification.png)
+
+Even the `/api/collections/users/confirm-verification` is around!
+
+```js
+import PocketBase from 'pocketbase';
+
+const pb = new PocketBase('http://192.168.1.12:8080');
+
+...
+
+await pb.collection('users').requestPasswordReset('test@example.com');
+```
 
 
 ### MailTrap API
