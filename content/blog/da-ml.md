@@ -11,11 +11,6 @@ For some time I wanted to summarize the most important **ML concepts to work at 
 
 Even if you will not be performing Data Science tasks, this knowledge will be of great help when collaborating with them.
 
-<!-- # The ML Guide -->
-<!-- 
-https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.18371&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false -->
-
-
 ## The Bias-Variance Trade-Off
 
 Imagine you're tuning a musical instrument, like a guitar.
@@ -391,20 +386,4 @@ Podcasts
 
 * **This Week in ML & AI:** [https://open.spotify.com/show/2sp5EL7s7EqxttxwwoJ3i7](https://open.spotify.com/show/2sp5EL7s7EqxttxwwoJ3i7)
 * **Lex Fridman:** [https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL](https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL)
-* **Data Skeptic:** [[https://open.spotify.com/show/1B](https://www.google.com/search?q=https://open.spotify.com/show/1B)
-
-
-<!-- * My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) -->
-
-<!-- 
-Basic understanding of Supervised, Unsupervised and Reinforcement ML.
-Basic understanding of Location, Spread, Assymetry, Concentration, Dependence measures.
-Basic understanding of Hypothesis testing (confidence interval, Type 1 and Type 2 errors, Null hypothesis, significance level and p-value). 
-Basic understanding of Classification, Regression and Clustering tasks in ML. -->
-<!-- 
-Ability to list use cases for Hypothesis testing.
-Ability to list use cases for Classification, Clustering, Regression, their benefits, pros and cons.
-Ability to list use cases for Supervised and Unsupervised ML methods, compare them. -->
-
-<!-- 
-<https://youtu.be/OwZHNH8EfSU?t=14314> -->
+* **Data Skeptic:** [https://open.spotify.com/show/1B](https://www.google.com/search?q=https://open.spotify.com/show/1B)

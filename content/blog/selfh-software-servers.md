@@ -3,7 +3,7 @@ title: "[PaaS Recap] Software for Servers..."
 date: 2025-12-01T01:20:21+01:00
 draft: false
 tags: ["HomeLab","LocalStack vs DokPloy vs LocalStack vs Runtipi","Cosmos Server"]
-description: 'Selfhosted Apps that simplify my workflow'
+description: 'Selfhosted Apps that simplify my workflow. Get your MiniPC/NAS homelab ready quickly.'
 url: 'selfhosted-server-paas'
 ---
 
@@ -37,6 +37,13 @@ And if you are new to HomeLabs and/or Linux. These are some reasons for you to s
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted UmbrelOS - Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/cosmos-server" title="Selfhosted Cosmos Server - Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+<!-- ![jellyfin](/img/SelfHosting/Jellyfin/jellyfin-rockchip-mpp-hwa-codecs.png#center) -->
+
+![Jellyfin HWA Codecs](/blog_img/selfh/Jellyfin/jellyfin-rockchip-mpp.png)
+
+You can even run a Jellyfin Media server with a Opi SBC!
+
 
 Among which, [Dokploy](#dokploy) resonated a lot with me.
 

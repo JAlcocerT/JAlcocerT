@@ -264,8 +264,6 @@ Just that here we have the website and the ebook content driven on the same repo
 
 {{< details title="Ebook Obfuscator x PB | 101 Setup  📌" closed="true" >}}
 
-
-
 ![Using the users collection so that users can see/download the ebook](/blog_img/dev/PB/pb-ebooks.png)
 
 But as learnt here https://github.com/JAlcocerT/Docker/blob/main/Dev/BaaS/PB/create_collection.py

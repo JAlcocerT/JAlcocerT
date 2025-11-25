@@ -568,3 +568,21 @@ HOWTO Raspberry Pi + LCD 16x2 i2c
 
 
 https://github.com/the-raspberry-pi-guy/lcd
+
+
+
+https://www.youtube.com/watch?v=3XLjVChVgec
+
+HOWTO Raspberry Pi + LCD 16x2 i2c
+
+
+
+https://github.com/the-raspberry-pi-guy/lcd
+
+https://www.youtube.com/watch?v=3XLjVChVgec
+
+HOWTO Raspberry Pi + LCD 16x2 i2c
+
+
+
+https://github.com/the-raspberry-pi-guy/lcd

@@ -18,6 +18,8 @@ url: 'media-server-with-open-source'
 
 You can use all these tools [together with ...](#faq)
 
+Ok, you are here for the video media, lets get started with [Jellyfin](#je  )
+
 ### Jellyfin
 
 * https://github.com/jellyfin/jellyfin
@@ -77,8 +79,7 @@ Jellyfin Plugin to import directly from YT
 
 ## Conclusions
 
-
-Your MEDIA SERVER is hungry for tools like:
+Your **MEDIA SERVER** is hungry for tools like:
 
 * <https://docs.linuxserver.io/images/docker-emby/>
 
@@ -197,7 +198,7 @@ docker pull jellyfin/jellyfin:10.9.8 #example below
 cat /sys/kernel/debug/rkrga/load #see how the GPU is doing
 ```
 
-![jellyfin](/img/SelfHosting/Jellyfin/jellyfin-rockchip-mpp-hwa-enabledpng.png#center)
+![jellyfin](/blog_img/selfh/Jellyfin/jellyfin-rockchip-mpp-hwa-enabledpng.png#center)
 
 * Add full HWA pipeline for **Rockchip RK3588** platform allowing us to HW encoder (H264, HEVC) up to **1080p @ 480fps / 4k @ 120fps on RK3588**
 
@@ -206,7 +207,7 @@ cat /sys/kernel/debug/rkrga/load #see how the GPU is doing
 
 The term "4K" refers to the horizontal resolution, which is approximately ~4,000 pixels.
 
-![jellyfin rockchip orangepi](/img/SelfHosting/Jellyfin/jellyfin-rockchip-mpp.png#center)
+![jellyfin rockchip orangepi](/blog_img/selfh/Jellyfin/jellyfin-rockchip-mpp.png#center)
 
 Specifically, the standard resolution for 4K UHD is 3840 x 2160 pixels, which is exactly four times the pixel count of Full HD (1920 x 1080), resulting in sharper and more detailed images. 
 
@@ -228,14 +229,15 @@ Specifically, the standard resolution for 4K UHD is 3840 x 2160 pixels, which is
 
 * 1440p (2560 x **1440** pixels): Also known as QHD or Quad HD, this resolution is common in higher-end computer monitors and mobile devices, offering sharper images than 1080p.
 
-![jellyfin](/img/SelfHosting/Jellyfin/jellyfin-rockchip-mpp-hwa-codecs.png#center)
+![jellyfin](/blog_img/selfh/Jellyfin/jellyfin-rockchip-mpp-hwa-codecs.png#center)
 
-### Ebooks
+
+### Other Containers for a Media server
+
 
 * Calibre
 * https://gitlab.com/smoores/storyteller
-
-### Other Containers
+  * https://gitlab.com/storyteller-platform/storyteller
 
 * https://github.com/IgnisDa/ryot
 

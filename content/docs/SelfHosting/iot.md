@@ -65,25 +65,6 @@ LoRa technology has the potential to disrupt the status quo of communication tec
 The Ryder 998 can be used in a variety of applications, including IoT, emergency response, and extreme outdoor activities.
 The chip's low power consumption and versatility make it an attractive option for many industries. -->
 
-### LCD
-
-
-
-https://www.youtube.com/watch?v=3XLjVChVgec
-
-HOWTO Raspberry Pi + LCD 16x2 i2c
-
-
-
-https://github.com/the-raspberry-pi-guy/lcd
-
-https://www.youtube.com/watch?v=3XLjVChVgec
-
-HOWTO Raspberry Pi + LCD 16x2 i2c
-
-
-
-https://github.com/the-raspberry-pi-guy/lcd
 
 
 ## Pi

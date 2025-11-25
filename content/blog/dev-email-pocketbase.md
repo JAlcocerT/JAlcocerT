@@ -1,21 +1,66 @@
 ---
-title: "Feature Flags for your SaaS x Golang"
-date: 2025-11-27T15:20:21+01:00
+title: "Mailtrap and PocketBase for email validation"
+date: 2025-11-25
 draft: false
-tags: ["Dev","GoFeatureFlag vs PocketBase","GoLang"]
-description: 'FF with Go for your WebApps.'
-url: 'feature-flags'
+tags: ["MailTrap API","PocketBase","GoLang","Feature Flags"]
+description: 'Combining PB and Mailtrap for email validation. Optional FF for your SaaS'
+url: 'email-validation-pocketbase'
 ---
 
-{{< callout type="warning" >}}
-WIP
-{{< /callout >}}
 
-**TL;DR** 
+**TL;DR**
+
+
+
+
+
+**Intro**
+
+I was recently tinkering with email APIs and mailtrap got my attention as it was reaching inbox during my tests.
+
+Resend and mailjet also worked, but they were somehow flagged more frequently to spam.
+
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pocketbase/" title="PocketBase 101" image="/blog_img/dev/PB/selfh-pb.png" subtitle="Post where I Tinkered and SelfHosted PocketBase via Container" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/emails-101/#mailtrap" title="Scrapping Tools" image="/blog_img/email/mailtrap-sending-domain-integrations.png" subtitle="Tinkering with email APIs, MailTrap section..." >}}
+{{< /cards >}}
+
+Let's just get PocketBase working:
+
+
+```sh
+#git clone 
+
+```
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+## MailTrap API vs SMTP and code
+
+Its not a surprise, than we can do email with code: https://mailtrap.io/blog/python-send-email/
+
+
+
+## Conclusions
 
 This year I have to be impressed about the cool projects around Golang
 
-**Intro**
+
+This seems to be the  year for me to discover the **goodies of GO language**.
+
+> Generate your cute Go avatar: https://gopherize.me/
+
+
+Its not just HUGO.
+
+But Cadyy and **Traefik**. 
+
+[SFTP-GO](https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go) or the mighty POCKETBASE...
 
 The [Go language](#about-go-projects) surprised me with another cool project to make better SaaS: [GoFF](#go-feature-flag)
 
@@ -173,29 +218,6 @@ As Im not looking for sth very complex at the moment, i kept vibecoding and ask 
 Something like you signup, if you pay via stripe, you have it all.
 
 
-
-
----
-
-## Conclusions
-
-### About Go Projects
-
-This seems to be the  year for me to discover the **goodies of GO language**.
-
-> Generate your cute Go avatar: https://gopherize.me/
-
-
-Its not just HUGO.
-
-But Cadyy and **Traefik**. 
-
-[SFTP-GO](https://jalcocert.github.io/JAlcocerT/sync-file-tools/#sftp-go) or the mighty POCKETBASE...
-
-
-### Traefik
-
-### PocketBase
 
 
 

@@ -2,7 +2,7 @@
 title: "GUI's to use Stable Difussion Models"
 date: 2026-12-31T23:20:21+01:00
 draft: true
-tags: ["Blender","Gen-AI"]
+tags: ["Gen-AI"]
 description: ''
 url: ''
 ---
@@ -449,7 +449,6 @@ By default, it will be ready at `localhost:9000`, but you can also change it fro
 It runs on CPU out of the box - ~1min per image with SD1.5 and AMD Ryzen APU
 
 
-## How to use StableDifussion with GIMP/Blender?
 
 ---
 
@@ -619,19 +618,3 @@ By default, it will be ready at `localhost:9000`, but you can also change it fro
 
 It runs on CPU out of the box - ~1min per image with SD1.5 and AMD Ryzen APU
 
-
-## How to use StableDifussion with GIMP/Blender?
-
----
-
-## FAQ
-
-### LoRa
-
-.CSV Video
-
-
-
-### F/OSS Tools for Image
-
-https://github.com/motion-canvas/motion-canvas

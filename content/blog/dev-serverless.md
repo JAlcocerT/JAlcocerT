@@ -1,13 +1,11 @@
 ---
 title: "Just be Serverless"
-date: 2025-11-28T07:20:21+01:00
+date: 2025-12-01T07:20:21+01:00
 draft: false
 tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone","T3.Chat","Publii CMS","Cloudflare Workers"]
 url: 'serverless-101'
 description: 'Your WebApps, with Serverless Authentication and AI on the backend.'
 ---
-
-
 
 
 **Tl;DR**
@@ -35,7 +33,7 @@ A serverless way to authenticate your users: then allow them to do certain actio
 
 Why not applying these to a theme: *which kind of reminds me of t3.chat*: https://t3.chat
 
-![alt text](t3-chat-register-wall/blog_img/GenAI/t3.png)
+![T3 Chat UI](t3-chat-register-wall/blog_img/GenAI/t3.png)
 
 * https://www.astrothemes.dev/theme/anse-app-chatgpt-demo/
 * https://github.com/anse-app/chatgpt-demo

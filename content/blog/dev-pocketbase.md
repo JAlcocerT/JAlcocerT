@@ -181,7 +181,7 @@ cd ./Dev/BaaS/PB
 docker compose -f PB_docker-compose.yml up -d
 ```
 
-Check that its running: 
+Check that **PocketBase is running**: 
 
 ```sh
 curl -s http://localhost:8080/api/health || echo "PocketBase not accessible"
@@ -190,7 +190,7 @@ curl -s http://localhost:8080/api/health || echo "PocketBase not accessible"
 
 ![SelfHosting PocketBase via Containers ](/blog_img/dev/PB/selfh-pb.png)
 
-> You can use PB admin UI via the default: http://localhost:8080/_/
+> You can use PB admin UI via the default: `http://localhost:8080/_/`
 
 > > And log in as per your `.env` credentials if you provided any, or just created an account
 

@@ -2,7 +2,7 @@
 title: "Session Recording for Web Projects"
 date: 2025-11-23
 draft: false
-tags: ["OpenReplay vs PostHog","","Astuto","Product Tools"]
+tags: ["OpenReplay vs PostHog","Astuto","Product Tools","Forms Tools"]
 description: 'How are user enjoying your Saas?'
 url: 'how-to-record-web-sessions'
 ---
@@ -12,6 +12,8 @@ url: 'how-to-record-web-sessions'
 More than web analytics, see what the users are experiencing.
 
 Some [Product Tools](https://jalcocert.github.io/JAlcocerT/product-tools/) that we can selfhost.
+
+Compared to some [Forms/Surveys](#forms) and Waiting lists OSS options.
 
 **Intro**
 
@@ -146,6 +148,72 @@ Bring to the table a discussion about how to measure SaaS performance with real 
 If after all, you want to get a **mechanism to get feedback** from clients:
 
 * https://astuto.io/
-  * 
+  * Let users request feature and create a RoadMap accordingly
+
 
 > The open source tool to understand your customers and build a better product
+
+---
+
+## FAQ
+
+ F/OSS to Interact with Audience
+
+* https://github.com/ClaperCo/Claper
+  * https://claper.co/
+
+
+
+**Intro**
+
+This year *seems to be* the year of: uv, makefile and [pocketbase](https://jalcocert.github.io/JAlcocerT/pocketbase/).
+
+1. [Frombricks](#formbricks)
+2. [HeyForm](#heyform)
+3. [OhMyForm](#ohmyform)
+
+> Get more ideas at <https://medevel.com/open-source-survey-tools-2/>
+
+You can have also your own [DIY survey / forms](#diy-forms-with-pb) tool for your Saas by [using PB](#why-with-pocketbase).
+
+> PB + SSG is great to validate ideas. FAST!
+
+### Forms
+
+#### Formbricks
+
+Just use formbricks.
+
+Around one year ago I was making a post and [touched formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)
+
+* https://github.com/formbricks/formbricks
+
+#### heyform
+
+* https://github.com/heyform/heyform
+  * https://github.com/heyform/heyform?tab=AGPL-3.0-1-ov-file#readme
+  * https://heyform.net/
+  * https://hub.docker.com/r/heyform/community-edition/tags
+
+> HeyForm is an open-source form builder that allows anyone to create engaging conversational forms for surveys, questionnaires, quizzes, and polls. No coding skills required.
+
+
+#### ohmyform
+
+* https://github.com/ohmyform/ohmyform
+  * https://hub.docker.com/r/ohmyform/ohmyform
+
+  * https://ohmyform.com/docs/install/ 
+  https://ohmyform.com/
+
+### DIY Forms with PB
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+#### Why with PocketBase
+
+Just because I like to keep the tech stack as simple as possible.
+
+> And because Im lazy to maintain a lot of back-end code.

@@ -440,7 +440,7 @@ Once ready, you will see this:
 
 Mailtrap allows to send email programatically **via API** or SMTP: https://mailtrap.io/api-tokens 
 
-![alt text](/blog_img/email/mailtrap-sending-domain-integrations.png)
+![Mailtrap transactional vs bulk emails](/blog_img/email/mailtrap-sending-domain-integrations.png)
 
 
 Create your token and query that MAILTRAP API post endpoint of the host `send.api.mailtrap.io`
@@ -463,7 +463,7 @@ curl --location --request POST \
 # --header 'Content-Type: application/json' \
 # --data-raw '{"from":{"email":"hello@news.libreportfolio.fyi","name":"Mailtrap Test"},"to":[{"email":"test@mail.com"}],"subject":"You are awesome!","text":"Congrats for sending test email with Mailtrap!","category":"Integration Test"}'
 ```
-You will see that with MailTrap the email flow to your inbox and with the custom domain!
+You will see that with MailTrap the **email flows directly to your inbox** and with the custom domain!
 
 ![Mailtrap working programatically via API with custom domain to gmail](/blog_img/email/mailtrap-working-to-inbox.png)
 
@@ -521,7 +521,7 @@ Go to `Preferences` -> `Windsurf settings`
 }
 ```
 
-![alt text](/blog_img/dev/windsurf-mailtrap.png)
+![Mailtrap working via MCP with windsurf](/blog_img/dev/windsurf-mailtrap.png)
 
 
 ```
@@ -676,7 +676,7 @@ Hopefully you are aware now of the differences between: regular mails vs transac
 
 Tested all of them on the free plan, w/o CC.
 
-> After testing these, I would order them: Mailtrap > ReSend (It can receive emails as well)> MailJet for transactional purposes. 
+> After testing these, I would order them: Mailtrap > ReSend (It can receive emails as well) > MailJet for transactional purposes. 
 
 > > You can still keep your Mailerlite setup for newsletters/marketing and Proton/GMAIL for your regular mails.
 
@@ -827,7 +827,7 @@ If you have been *capturing leads*, say from [some simple waiting list](https://
 
 You can export them and import them into ListMonk.
 
-**CSV just works!**
+A **CSV just works** and its a future proof format.
 
 
 ### PostIZ vs GrowChief

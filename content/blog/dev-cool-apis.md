@@ -32,8 +32,6 @@ Like using it to push [new content/posts programatically to WP or Ghost](https:/
 
 ## Scrapping APIs
 
-
-
 There are several scrapping APIs outthere.
 
 The most used are: [Firecrawl > ScrapeGraph / Crawl4AI](https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap)
@@ -725,9 +723,11 @@ Foundational texts of negotiation, such as Getting to Yes and Thinking, Fast and
 
 ![alt text](/blog_img/GenAI/elevenlabs/11labs-download-tts.png)
 
-These 213 chars, took each one credit -> 9,787 credits remaining for the month.
+These 213 chars, took each one credit, with a total of 13s -> 9,787 credits remaining for the month.
 
-But here is the output:
+Following the proportions, the total should be enough for ~600s=10 min of TTS generated audio.
+
+But here is the **audio output**:
 
 {{< audio
     src="/audio/sample-t2s-11labs.mp3"

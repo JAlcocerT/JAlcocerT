@@ -40,6 +40,59 @@ Individuals that hold opposing viewpoints on reality encourage, criticize, and a
 -->
 
 
+
+### Business Ideas from my Kindle Notes
+
+This has been possible thanks to perplexity and notebookllm, together with a huge txt file of kindle notes I have.
+
+
+#### Sales
+
+It seems we are always selling in live.
+
+Just that we dont realize it.
+
+
+
+<!-- 
+### The Punch Line -->
+
+
+
+
+![Canva using neuromarketing on you](/blog_img/outro/canva-free-trial-neuromkt.png)
+
+<!-- 
+neuromarketing
+brainfluence
+the persuasion code -->
+
+## Story Tell
+
+<!-- 
+Data storytelling in analytics is important because it helps to uncover insights from data that might otherwise go unnoticed, and also helps to communicate those insights to others in a more engaging and memorable way. By presenting data in the form of a narrative, we can make the insights more relatable and understandable to a wider range of people. This is especially important in the world of business, where decisions need to be made based on data and insights, but not everyone may have the technical expertise to fully understand the underlying data.
+
+Furthermore, data storytelling has been shown to be more effective at communicating insights and influencing decisions than simply presenting data in a spreadsheet or chart. By providing context and meaning to the data, data storytelling can help decision-makers better understand the implications of the data and make more informed decisions based on those insights. Overall, data storytelling is a powerful tool that can help organizations unlock the full potential of their data and use it to drive better decision-making and business outcomes. -->
+
+<!-- 
+story telling with data
+ -->
+
+<!-- In your analytics career, 
+ -->
+
+<!-- Data interacts with narratives and systems in the following ways:
+
+* Data shapes a strategic narrative – Whether you’re segmenting customers or developing brand stories, data provides context to shape and share stories.
+* Data visualizations deliver the story – In formats such as data journalism, data-inspired social media campaigns and analyst reports, organizations use data visualizations to deliver powerful stories.
+* Data provides macro insights – Humans or AI interpret big-picture patterns in data to form an insight, which provides the basis for a story.
+* Data shapes processes – Using visually prepared data – via dashboards – systems emerge that enable the control of workflows, processes and states by detecting anomalies and monitoring systems. 
+
+-->
+
+
+
+
 ---
 
 ## Conclusions

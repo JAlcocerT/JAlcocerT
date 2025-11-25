@@ -370,7 +370,7 @@ sudo snap install brave
 
 {{< details title="Video Editing Software - Setup 📌" closed="true" >}}
 
-Lets get some [apps for content creation](https://jalcocert.github.io/Linux/docs/debian/content_creation/), together with dev tools: Blender, OpenShot, KDenlive...
+Lets get some [apps for content creation](https://jalcocert.github.io/Linux/docs/debian/content_creation/), together with dev tools: OpenShot, KDenlive...
 
 ```sh
 #!/bin/bash

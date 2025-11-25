@@ -1,5 +1,5 @@
 ---
-title: "BiP with APIFY"
+title: "BiP with APIFY - Sell shovels"
 date: 2025-10-18T06:20:21+01:00
 draft: false
 tags: ["Forum and Animations","Reddit vs FC","Coding for Entrepreneurs","RSS","Post Schedule"]
@@ -29,38 +29,6 @@ This year, I covered PostIZ for social media automation [here](https://jalcocert
 
 And as it is 2025, [postiz support MCP](https://jalcocert.github.io/JAlcocerT/social-media-automation/#positz-x-mcp).
 
-
-## Social Media Automation for Forums
-
-Some people seem to be everywhere.
-
-Actually, their agents are.
-
-That's why you can see them on [reddit](#reddit), [twitter/x](#twitter) or other [forums](#forocoches)...at once.
-
-
-### Reddit
-
-### Forocoches
-
-Imagine saving interesting posts and commenting automatically:
-
-1. [Abuelos holders](https://forocoches.com/foro/showthread.php?p=502309006#post502309006)
-2. [Carteras](https://forocoches.com/foro/showthread.php?t=10385036)
-
-Cool infographics inspirations:
-
-1. https://forocoches.com/foro/showthread.php?t=10455900&page=45
-2. https://forocoches.com/foro/showthread.php?t=10455900&page=37
-
-### Twitter
-
-{{< tweet user="LibrePortfolio" id="1940801205577699713" >}}
-
-
-## Conclusions
-
-
 ### A Sales Pipeline
 
 If you read the social media automation post with n8n, you know that there are [social media scrapping tools](https://jalcocert.github.io/JAlcocerT/social-media-automation/#scrapping-social-media).
@@ -78,6 +46,14 @@ https://www.chartjs.org/docs/latest/samples/information.html
 https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
 
 https://github.com/sgratzl/chartjs-chart-funnel
+
+
+
+---
+
+## Conclusions
+
+
 
 ### Content for Forums
 
@@ -118,12 +94,37 @@ With sth like [this ApexChart](https://apexcharts.com/javascript-chart-demos/mix
 ![NodeJS Web App + ApexChartJS](/blog_img/DA/apexchartjs-nodejs.png)
 
 
+### Social Media Automation for Forums
+
+Some people seem to be everywhere.
+
+Actually, their agents are.
+
+That's why you can see them on [reddit](#reddit), [twitter/x](#twitter) or other [forums](#forocoches)...at once.
 
 
-### Youtube Animations
+#### Reddit
+
+is it possible to get somehow whats trending on Reddit sub-forums?
+
+#### Forocoches
+
+Imagine saving interesting posts and commenting automatically:
+
+1. [Abuelos holders](https://forocoches.com/foro/showthread.php?p=502309006#post502309006)
+2. [Carteras](https://forocoches.com/foro/showthread.php?t=10385036)
+
+Cool infographics inspirations:
+
+1. https://forocoches.com/foro/showthread.php?t=10455900&page=45
+2. https://forocoches.com/foro/showthread.php?t=10455900&page=37
+
+#### Twitter
+
+If you know whats a hot topic, why not posting automatically about it on few social media platforms?
 
 
-
+{{< tweet user="LibrePortfolio" id="1940801205577699713" >}}
 
 
 ---
