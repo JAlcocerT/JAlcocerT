@@ -445,7 +445,9 @@ Mailtrap allows to send email programatically **via API** or SMTP: https://mailt
 
 Create your token and query that MAILTRAP API post endpoint of the host `send.api.mailtrap.io`
 
-![alt text](/blog_img/email/mailtrap-api-token.png)
+That's your mailtrap SMTP server address.
+
+![Creating the Mailtrap API Token](/blog_img/email/mailtrap-api-token.png)
 
 ```sh
 #source .env
@@ -562,7 +564,9 @@ So I guess that not too long from now, Mailtrpa will allow for receiving email, 
 
 [Mailtrap](https://mailtrap.io/signin) can be used to send one-time codes or magic links for user verification purposes such as account creation or subscription confirmation. 
 
-Since Mailtrap provides SMTP email sending capabilities, you can configure PocketBase or any backend service to use Mailtrap's SMTP settings to send transactional emails including verification codes or magic links.
+Since Mailtrap provides SMTP email sending capabilities...
+
+You can configure PocketBase or any backend service to use Mailtrap's SMTP settings to send transactional emails including verification codes or magic links.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="The setup uses PocketBase to capture emails and allow you to read the e-book as a webpage or download the pdf | Docker Config 🐋 ↗" >}}
@@ -635,16 +639,17 @@ Via SMTP with curl, they went to SPAM though
 
 Go to your PB instance settings: https://pocketbase.jalcocertech.com/_/#/settings/mail
 
+![Configuring Pocketbase to work with MailTrap SMTP](/blog_img/email/mailtrap-pb-mail-settings.png)
 
-![alt text](/blog_img/email/mailtrap-pb-mail-settings.png)
+![Sending a test email with PB after configuring SMTP with mailtrap](/blog_img/email/mailtrap-pb-mail-test.png)
 
-![alt text](/blog_img/email/mailtrap-pb-mail-test.png)
-
-The SMTP setup works as soon as we add our mailtrap API:*you can send one dummy email validation*
+**The Mailtrap SMTP x PB setup works** as soon as we added our mailtrap API: *you can send one dummy email validation*
 
 ![alt text](/blog_img/email/mailtrap-pb-mail-test-smtp.png)
 
 And realize that it points to `http://localhost:8090/_/#/auth/confirm-verification/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJfX3BiX3Rlc3RfY29sbGVjdGlvbl9pZF9fIiwiZW1haWwiOiJqZXNhbGN0YWdAZ21haWwuY29tIiwiZXhwIjoxNzY0NTAzNDIxLCJpZCI6Il9fcGJfdGVzdF9pZF9fIiwidHlwZSI6ImF1dGhSZWNvcmQifQ.ulHYpPcU1AFJyPKsS5k5xLHmUuEyrbilbzD5hS59cxM` instead of your PB custom domain...
+
+Fix it as per the `POCKETBASE_URL` environment variable!
 
 But it arrives to your inbox!
 

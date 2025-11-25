@@ -32,19 +32,93 @@ Let's just get PocketBase working:
 
 ```sh
 #git clone 
+cd pocketbase
+time docker build -t pocketbase:latest . #literally 5s on the x13
+#docker image ls pocketbase #and ~54mb
+
 
 ```
+
+Then we go to `http://192.168.1.12:8080/_/?installer#`
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 
-## MailTrap API vs SMTP and code
+```sh
+#df -h
+#docker system df #see how much docker artifacts are using
 
-Its not a surprise, than we can do email with code: https://mailtrap.io/blog/python-send-email/
+docker stop $(docker ps -a -q) #stop all
+#docker volume rm $(docker volume ls -q | grep -v '^portainer_data$') #rm all volumes but portainer
+
+#docker system df
+#docker image prune -a 
+#docker builder prune -a --force
+
+#docker system prune --all --volumes #just clean all...
+```
 
 
+## MailTrap API vs SMTP and the code
+
+Its not a surprise, than we can do email with code.
+
+And I tinkered superficially with PB and Mailtrap on the previous post:
+
+ https://jalcocert.github.io/JAlcocerT/emails-101/#mailtrap-smtp-x-pocketbase
+
+
+![Configuring Pocketbase to work with MailTrap SMTP](/blog_img/email/mailtrap-pb-mail-settings.png)
+
+But these deserved a separated section! 
+
+What we are doing is the **MailTrap SMTP** way: https://mailtrap.io/blog/smtp-send-email/
+
+what you should have done already:
+
+1. Register to [MailTrap and configured](https://jalcocert.github.io/JAlcocerT/emails-101/#mailtrap) a sub/custom domain: https://mailtrap.io/sending/domains
+
+I went with a dummy `news.libreportfolio.fyi`
+
+2. Go to https://mailtrap.io/api-tokens
+
+These are bearer tokens (not user/pwd neither API keys).
+
+So you could test that your mailtrap is working again:
+
+```sh
+#source .env
+
+curl --location --request POST \
+'https://send.api.mailtrap.io/api/send' \
+--header "Authorization: Bearer $MAILTRAP_API_TOKEN" \
+--header 'Content-Type: application/json' \
+--data-raw '{"from":{"email":"noreply@news.libreportfolio.fyi","name":"Mailtrap Test"},"to":[{"email":"jesalctag@gmail.com"}],"subject":"You are awesome!","text":"Congrats for sending a test email with Mailtrap!","category":"Integration Test"}'
+```
+
+3. Go to your PB instance: `http://192.168.1.12:8080/_/#/settings/mail`
+
+Add the following:
+
+* `send.api.mailtrap.io` and port 587
+* User `api` with pwd the bearer token you just got.
+
+Then save changes and try the `Send test email`
+
+This time I tried the password reset tempalte
+
+
+
+### MailTrap API
+
+* https://mailtrap.io/integrations?current_tab=API%20SDKs
+
+ https://mailtrap.io/blog/python-send-email/
+
+
+---
 
 ## Conclusions
 

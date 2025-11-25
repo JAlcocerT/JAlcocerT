@@ -1,9 +1,9 @@
 ---
-title: "Trying Nuxt & VitePress [and a SSG Recap]"
+title: "Trying Nuxt & VitePress"
 date: 2025-11-18
 draft: false
 tags: ["Dev","Nuxt","NUXT Content CMS","Nuxt Canvas Theme x Resend","adsense"]
-description: 'Testing NUXT & VitePress Themes. Looking back to the learnings with other SSGs like HUGO and Astro.'
+description: 'Testing NUXT & VitePress Themes. SSG Recap to the learnings of HUGO and Astro.'
 url: 'trying-nuxt-themes'
 ---
 
@@ -57,7 +57,7 @@ npm -v    # Should show npm version - 10.8.2
 
 And the repo :)
 
-![alt text](/blog_img/dev/nuxt/nuxt-canvas.png)
+![Nuxt Canvas Theme](/blog_img/dev/nuxt/nuxt-canvas.png)
 
 
 {{< dropdown title="Bun | Example with NUXT - HUGO Canvas and Resend ⏬" closed="true" >}}

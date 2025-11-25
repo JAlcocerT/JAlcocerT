@@ -98,7 +98,7 @@ See: https://elest.io/fully-managed-services/hosting-and-infrastructure
 
 ## Conclusions
 
-Its up to you:
+Its up to you: Homelab vs VPS
 
 1. Get a [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#energy-x300), get a ~15w avg at 0,25eur/kwh will cost you ~32eur/y (or 2,74 a month)
 

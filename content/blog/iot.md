@@ -357,6 +357,11 @@ xargs -0 awk '
 
 As of now I have 'just' planned ~33 posts for JAlcocerT for the rest of 2025/2026.
 
+```sh
+#git clone https://github.com/JAlcocerT/canvas
+
+```
+
 ## FAQ
 
 ### Languages
