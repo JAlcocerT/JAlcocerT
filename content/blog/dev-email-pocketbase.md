@@ -95,7 +95,7 @@ curl --location --request POST \
 'https://send.api.mailtrap.io/api/send' \
 --header "Authorization: Bearer $MAILTRAP_API_TOKEN" \
 --header 'Content-Type: application/json' \
---data-raw '{"from":{"email":"noreply@news.libreportfolio.fyi","name":"Mailtrap Test"},"to":[{"email":"jesalctag@gmail.com"}],"subject":"You are awesome!","text":"Congrats for sending a test email with Mailtrap!","category":"Integration Test"}'
+--data-raw '{"from":{"email":"noreply@news.libreportfolio.fyi","name":"Mailtrap Test"},"to":[{"email":"test@mail.com"}],"subject":"You are awesome!","text":"Congrats for sending a test email with Mailtrap!","category":"Integration Test"}'
 ```
 
 3. Go to your PB instance: `http://192.168.1.12:8080/_/#/settings/mail`
@@ -109,6 +109,17 @@ Then save changes and try the `Send test email`
 
 This time I tried the password reset tempalte
 
+The good thing about having the PB SMTP configured, is that you can also recover the pb superadmin pwd:
+
+![alt text](/blog_img/email/pb-mailtrap/pb-reset-pwd-working-smtp.png)
+
+And again, using mailtrap reached directly the inbox:
+
+![alt text](/blog_img/email/pb-mailtrap/pb-reset-mail.png)
+
+![alt text](/blog_img/email/pb-mailtrap/configuring-pb-smtp.png)
+
+![alt text](/blog_img/email/pb-mailtrap/configuring-pb-smtp2.png)
 
 
 ### MailTrap API

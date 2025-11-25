@@ -302,6 +302,8 @@ So you can harness all the power of containers, and avoid getting locked in into
 
 Here is the release of SteamOS: https://store.steampowered.com/steamos/ -> https://help.steampowered.com/en/faqs/view/65B4-2AA3-5F37-4227
 
+![download steam os](/blog_img/outro/steamos.png)
+
 You will save a file like `steamdeck-repair-20250521.10-3.7.7.img.bz2` of about ~3gb size.
 
 And they have launched a small console, that reminds me to the shape/form factor of my x300 (SFF).
