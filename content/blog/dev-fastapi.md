@@ -511,7 +511,6 @@ Hoppscotch is a strong contender and alternative to Postman, especially if you p
 Postman remains a very powerful and feature-rich tool, but Hoppscotch provides a compelling option for many developers.
 
 
-
 **It's available as a web application and a desktop app, supporting REST, GraphQL, WebSockets, and Server-Sent Events**. 
 
 It emphasizes ease of use and real-time collaboration through workspaces (though the collaboration features might have some non-fully-open-source aspects in their cloud offering).
@@ -535,7 +534,7 @@ sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
 
 3. **Bruno (usebruno/bruno on GitHub):** Bruno is a relatively new but promising open-source API client that aims to be a direct alternative to Postman. It focuses on a local-first approach, storing your collections directly in a file system (using a simple markup language called Bru) and emphasizing privacy. It supports REST and GraphQL and has a clean, developer-centric interface. It also plans to integrate with Git for collaboration.
 
-4. **HTTPie (httpie/httpie on GitHub):** This is a command-line HTTP client that is known for its user-friendly syntax. While it's a CLI tool and doesn't have a GUI like Postman, it's excellent for quick API testing and automation within scripts. It's fully open source and widely used. There's also a desktop app in development.
+4. **HTTPie:** This is a [command-line HTTP client](https://github.com/httpie/cli) that is known for its user-friendly syntax. While it's a CLI tool and doesn't have a GUI like Postman, it's excellent for quick API testing and automation within scripts. It's fully open source and widely used. There's also a [desktop app](https://github.com/httpie/desktop).
 
 5. **Restfox (flawiddsouza/Restfox on GitHub):** Restfox is a lightweight and fast open-source REST API client available as a desktop application for Windows, macOS, and Linux. It offers a clean interface, collections, history, and basic authentication.
 

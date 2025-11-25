@@ -524,13 +524,13 @@ If the [formula 1 data](#formula-1) was not enough:
 {{< /cards >}}
 
 
-2. 
-
 ## Checking APIs
 
 As we saw during the [**FastAPI** post, here](https://jalcocert.github.io/JAlcocerT/fast-api/#apis), there are few tools to check/test/interact with APIs.
 
 Among all of them, is worth to get to know how to use Hoppscoth.
+
+As an [alternative to PostMan](https://jalcocert.github.io/JAlcocerT/fast-api/#apis).
 
 ### How to use Hoppscotch
 
@@ -562,12 +562,12 @@ wget -P ~/Applications https://github.com/httpie/desktop/releases/download/v2025
 #httpie
 ```
 
-![alt text](/blog_img/iot/httpie.png)
+![httpie UI](/blog_img/iot/httpie.png)
 
 With httpie we can also query endpoints that are protected. *No matter if its basic user/pwd, APi Token or bearer!*
 
 
-![alt text](/blog_img/iot/httpie-auth.png)
+![httpie sending auth payload](/blog_img/iot/httpie-auth.png)
 
 >  🚀 HTTPie Desktop — cross-platform API testing client for humans. Painlessly test REST, GraphQL, and HTTP APIs. 
 
@@ -581,7 +581,7 @@ One app is worth multiple apps: Advanced API Debugging Proxy and REST Client
 flatpak install flathub com.reqable.Reqable
 ```
 
-![alt text](/blog_img/iot/reqable.png)
+![reqable UI](/blog_img/iot/reqable.png)
 
 3. https://github.com/mountain-loop/yaak/
 

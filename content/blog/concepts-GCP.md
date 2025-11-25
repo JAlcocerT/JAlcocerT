@@ -781,7 +781,7 @@ LookML (Looker Modeling Language) is a proprietary, domain-specific language use
 
 **What is LookML?**
 
-* **A Data Modeling Language:** LookML is a language used by data analysts and developers to define a semantic data model. This model describes the structure of a SQL database, including the relationships between tables, and the business logic for calculating metrics and dimensions.
+* **A Data Modeling Language:** LookML is a language used by data analysts and developers to **define a semantic data model**. This model describes the structure of a SQL database, including the relationships between tables, and the business logic for calculating metrics and dimensions.
 * **An Abstraction Layer:** LookML acts as an abstraction layer between a database and the end user. It simplifies the process of querying data by translating user-friendly commands in the Looker interface into complex SQL queries. This means that business users can explore and analyze data without needing to know or write any SQL themselves.
 * **Centralized Business Logic:** By defining business logic in LookML, data teams can ensure consistency and accuracy across all reports and dashboards. It provides a "single source of truth" for key performance indicators (KPIs) and business rules.
 * **Leverages Software Development Best Practices:** LookML is designed to be modular and reusable. It uses version control (typically Git) to manage changes, allowing multiple developers to work on the same project and ensuring a clear history of changes.

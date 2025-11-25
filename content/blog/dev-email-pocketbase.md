@@ -25,7 +25,7 @@ Resend and mailjet also worked, but they were somehow flagged more frequently to
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/pocketbase/" title="PocketBase 101" image="/blog_img/dev/PB/selfh-pb.png" subtitle="Post where I Tinkered and SelfHosted PocketBase via Container" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/emails-101/#mailtrap" title="Scrapping Tools" image="/blog_img/email/mailtrap-sending-domain-integrations.png" subtitle="Tinkering with email APIs, MailTrap section..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/emails-101/#mailtrap" title="Emails for Dev Post - MailTrap 101" image="/blog_img/email/mailtrap-sending-domain-integrations.png" subtitle="Tinkering with email APIs, MailTrap section..." >}}
 {{< /cards >}}
 
 Let's just get PocketBase working:
@@ -45,6 +45,12 @@ Then we go to `http://192.168.1.12:8080/_/?installer#`
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+You can review how PB auth works: https://pocketbase.io/docs/authentication/#api-keys
+
+Mind the distinction of PocketBase admins (aka. _superusers) vs regular users at the `users` collection - https://pocketbase.jalcocertech.com/_/#/collections?collectionId=_pb_users_auth_
+
+
 
 
 ```sh
@@ -147,6 +153,13 @@ const pb = new PocketBase('http://192.168.1.12:8080');
 
 await pb.collection('users').requestPasswordReset('test@example.com');
 ```
+
+
+<!-- ![httpie UI](/blog_img/iot/httpie.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/interesting-apis/#checking-apis" title="Interesting APIs Post" image="/blog_img/iot/httpie.png" subtitle="Section where I explain how to use API clients for testing endpoints" >}}
+{{< /cards >}}
 
 
 ### MailTrap API
