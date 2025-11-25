@@ -1016,7 +1016,7 @@ I discovered about **Peekaping**: https://github.com/0xfurai/peekaping/
 ![Peekaping Monitoring](/blog_img/Monitoring/peekaping.png)
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/peekaping" title="Peekaping  Homelab Monitoring | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/peekaping" title="Peekaping - Homelab Monitoring | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 Provides a very quick **monitoring + status pages** for your homelab: `http://192.168.1.2:8383/status/mora`

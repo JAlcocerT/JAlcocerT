@@ -561,7 +561,7 @@ We can now use **[Shiny](https://pypi.org/project/shiny/) with Python** to creat
 If you need a recap on R language, focused on flexdashboards:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/r-language-101/#flexdashboards" title="R Recap" image="tps://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/FlexDash-BoomBurst.png" subtitle="Creating FlexDashboards" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/r-language-101/#flexdashboards" title="R Recap" image="https://raw.githubusercontent.com/JAlcocerT/R_Stocks/main/Z_Sample_Data/FlexDash-BoomBurst.png" subtitle="Creating FlexDashboards" >}}
 {{< /cards >}}
 
 ---
@@ -596,11 +596,9 @@ IoT Project with [Metabase+MongoDB+DHT Sensor](https://jalcocert.github.io/RPi/p
 {{< /callout >}}
 
 
-### SelfHost These Tools with Docker
+### SelfHost These BI Tools with Docker
 
 <script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0.js"></script>
-
-
 
 
 Compare with Apache Superset - https://superset.apache.org/
@@ -611,7 +609,7 @@ You can use serverless version of it at - https://preset.io/
 
 ## Metabase Embedded Analytics
 
-https://www.metabase.com/product/embedded-analytics
+See https://www.metabase.com/product/embedded-analytics
 
 node.js
 ruby
@@ -628,11 +626,12 @@ python...
 
 #### Metabase with MariaDB
 
-https://www.metabase.com/data_sources/mariadb
-https://www.metabase.com/docs/latest/databases/connections/mariadb
+* https://www.metabase.com/data_sources/mariadb
+* https://www.metabase.com/docs/latest/databases/connections/mariadb
 
 {{< cards >}}
-  {{< card link="docker-compose.mariadb.yml" title="Metabase | Docker Config 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mariadb" title="MariaDB | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/metabase" title="Metabase | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 
@@ -789,15 +788,3 @@ These questions directly inform the key sections of a project charter:
 **These are not just good questions; they are *essential* questions for laying a strong foundation for a data product project.**
 
 Addressing them thoroughly during requirements gathering will significantly contribute to a well-defined and effective project charter, ultimately increasing the likelihood of project success.
-
----
-
-## FAQ
-
-### BI with AI?
-
-* https://github.com/microsoft/data-formulator
-
-> MIT | 🪄 Create rich visualizations with AI
-
-* You can also make Python scripts to write for you tedious and repetitive Grafana dashboards (like x400 pannel creation)

@@ -1,6 +1,6 @@
 ---
 title: "Be the D&A you want to be"
-date: 2025-11-25T00:20:21+01:00
+date: 2025-11-25T16:20:21+01:00
 draft: false
 tags: ["Career", "D&A Recap", "Analytics"]
 description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
@@ -9,6 +9,8 @@ url: 'excel-data-analytics-interviews'
 
 
 **Tl;DR**
+
+https://jalcocert.github.io/JAlcocerT/career/
 
 **Intro**
 
@@ -505,3 +507,16 @@ This is called a **Galaxy Schema** (because it looks like separate stars sharing
 So, in a full Enterprise Semantic Model, you will have **many dimension tables** (Date, Product, Customer, Geography, Employee, Vendor, etc.) and **several fact tables** (Sales, Returns, Inventory, Budget, Forecast, etc.), all interconnected.
 
 {{% /details %}}
+
+
+---
+
+## FAQ
+
+### BI with AI?
+
+* https://github.com/microsoft/data-formulator
+
+> MIT | 🪄 Create rich visualizations with AI
+
+* You can also make Python scripts to write for you tedious and repetitive Grafana dashboards (like x400 pannel creation)

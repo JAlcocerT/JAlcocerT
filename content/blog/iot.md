@@ -3,7 +3,7 @@ title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
 date: 2025-12-05
 draft: false
 tags: ["Tinkering","DB2Rest","TelemetryHarbor","IoT ebook","From obfuscaste towards 1toN eBooks"]
-description: 'IoT Meets AI. Using MQTT and AI Together.'
+description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'
 url: 'just-iot'
 ---
 
@@ -30,6 +30,8 @@ https://acurast.com/
 
 * https://telemetryharbor.com/?ref=selfh.st
 * https://docs.telemetryharbor.com/docs/Integrations/home-assistant/
+
+https://ko-fi.com/s/86175d7928
 
 **Intro**
 
@@ -361,6 +363,9 @@ As of now I have 'just' planned ~33 posts for JAlcocerT for the rest of 2025/202
 #git clone https://github.com/JAlcocerT/canvas
 
 ```
+
+
+---
 
 ## FAQ
 
