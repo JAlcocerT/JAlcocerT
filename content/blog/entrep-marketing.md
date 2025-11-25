@@ -320,9 +320,11 @@ Have a look to...
 
 - GoHighLevel (GHL) is an all-in-one, **hosted CRM platform** focusing on marketing automation, funnel building, and agency solutions, providing strong out-of-the-box marketing tools and automation.
 
-- Popular open-source CRM alternatives include **SuiteCRM, Odoo, and EspoCRM**. These offer more traditional CRM functions with flexibility and full self-hosting capability, requiring more technical setup and integration for marketing automation compared to GoHighLevel.
+- Popular open-source CRM alternatives include **[SuiteCRM](https://github.com/SuiteCRM/SuiteCRM), Odoo, and EspoCRM**. 
 
-> With Odoo you can even have your drag-n-drop website created in the same suite!
+> These offer more traditional CRM functions with flexibility and full self-hosting capability, requiring more technical setup and integration for marketing automation compared to GoHighLevel.
+
+> > With Odoo you can even have your drag-n-drop website created in the same suite!
 
 ![alt text](/blog_img/selfh/HomeLab/mautic/mautic-setup.png)
 
@@ -333,8 +335,8 @@ Have a look to...
 ![Mautic Dashboard UI](/blog_img/selfh/HomeLab/mautic/mautic-ui.png)
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Configs 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic - Marketing automation OSS | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo - ERP OSS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 - Marketing automation in open-source tools can be achieved through integration with platforms like **Mautic**, but usually with more configuration effort.

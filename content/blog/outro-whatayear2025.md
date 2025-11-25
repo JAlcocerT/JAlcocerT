@@ -306,7 +306,7 @@ Because Im still in D&A and trying to blend with AI powered development for my p
 
 1. [uv](https://jalcocert.github.io/JAlcocerT/fast-api/#proper-py-and-uv) package manager ❤️ Makefiles >>> Readme's & pip! 
 
-2. Pocketbase for BaaS, and a much better understanding of authentication/authorization.
+2. Pocketbase for BaaS, and a much better understanding of authentication (you are you!)/authorization(you are allowed to do that).
 
 {{< details title="Authentication Flows Working | Example PB vs FastAPI 📌" closed="true" >}}
 
@@ -1370,8 +1370,12 @@ Thanks to this sites, I get to know more cool apps:
 
 ## Conclusions
 
-There was even time to make **[Data Analytics](#da-tech-stack) recaps** and create (not that much ship) [***better* SaaS products**](#shipping-products).
+There was even time to make **Data Analytics recaps** and create (not that much ship) [***better* SaaS products**](#shipping-products).
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/making-soap-at-home/" title="I also got time to made soap at home couple times| Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews" title="And to improve my D&A Tech Stack and interviewing skills | Post ↗" >}}
+{{< /cards >}}
 
 ```mermaid
 pie title DB MTB Expenses
@@ -1386,53 +1390,6 @@ I havent measure these blog posts time creation.
 But it must have been sth like:
 
 ![Me Creating 150+ posts on my 2025 learnings](/img/kitten-cat.gif#center)
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/making-soap-at-home/" title="I also got time to made soap at home couple times| Post ↗" >}}
-{{< /cards >}}
-
-
-### D&A Tech Stack
-
-I needed to improve my data analytics stack.
-
-Because agents are coming for [*our* jobs](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/): `https://jobforagent.com/`. *The 1st job board for autonomous AI agents* 
-
-Normally withing D&A, you will have a rol to understand `the what` and figure our `the how` to get there.
-
-The closer you are to the product/leadership team, the closer you will/should see `the why`.
-
-And definitely, despite working with a laptop, **the D&A jobs are quite different to the pure development jobs.**
-
-> Why would have devs created ORMs to avoid writing SQL queries if not so?
-
-{{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/" title="Big Data Analytics| Post  ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="GCP for D&A | Post ↗" >}}
-{{< /cards >}}
-
-Well...
-
-Some creative people have figured out a way to build *(beautiful)* websites from SQL, just [like this](https://github.com/sqlpage/SQLPage/tree/main/examples/official-site)
-
-* https://github.com/sqlpage/SQLPage
-
-> MIT | Fast SQL-only data application builder. Automatically build a UI on top of SQL queries.
-
-> > In theory it can also be [selfhosted as per this guide](https://sql-page.com/your-first-sql-website/nginx.sql)
-
-https://youtube.com/shorts/crZalY8oxyw?si=ZEbnZ0UC4M347Fj0
-
-
-Its just... (OLAP ~ D&A) vs (OLTP ~ CRUD).
-
-> Didnt your head just exploted 🤯? Same tools, different way to use them
-
-When building Saas, you wear this kind of cap and go for the typical OLTP DB design for writes:
-
-{{< tweet user="levelsio" id="1963709732432248998" >}}
-
-When doing D&A, you go for the opposite, **quick read speeds**.
 
 
 ### For Next year...

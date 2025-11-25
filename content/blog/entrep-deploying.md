@@ -25,6 +25,16 @@ Thats one of the outcomes of *the [lean](https://jalcocert.github.io/JAlcocerT/l
 
 So when the code works on your machine: *how about sharing it with real users?*
 
+Plot twist: nobody cares about solutions that only you can use.
+
+So get ready to know how to use a [VPS as infrastructure](#vps) for your apps.
+
+I will just assume that:
+
+1. You have something to share or want to use a conteinerized app that other people created
+2. You know how to get a domain and configure DNS records
+3. You are ready to pay for a VPS - *Prepare ~5$/m for a basic VPS*
+
 ## VPS
 
 VPS, just a computer somewhere else in the world.
@@ -176,6 +186,8 @@ Email marketing on easy mode thanks to:
 
 ![ListMonk UI](/blog_img/selfh/marketing/listmonk.png)
 
+Configuring Listmonk is not any harded than getting Mautic up and running.
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/listmonk" title="Tools like ListMonk are Selfostable and allow for transactional emails with attachment! | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Config 🐋 ↗" >}}
@@ -187,7 +199,7 @@ Not really a problem.
 
 Before paying and getting vendor locked in, see:
 
-1. Odoo, ERPNext,...
+1. Odoo, ERPNext, SuiteCRM...
 2. https://elest.io/fully-managed-services/applications/crm-erp
 
 
@@ -196,12 +208,15 @@ Before paying and getting vendor locked in, see:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo HomeLab | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
 ---
 
 ## FAQ
 
 ### Hosting a Forum
+
+Got a big enough audience?
+
+Let them create content and discuss within a platform that you own.
 
 * https://elest.io/open-source/nodebb/resources
 
@@ -211,8 +226,7 @@ Before paying and getting vendor locked in, see:
 
 * https://github.com/LemmyNet/lemmy
 
-
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Communication/lemmy/docker-compose.yml" title="lemmy Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/lemmy" title="Lemmy HomeLab | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/lemmy" title="Lemmy Forum via your HomeLab | Docker Config 🐋 ↗" >}}
 {{< /cards >}}

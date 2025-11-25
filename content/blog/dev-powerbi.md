@@ -3,18 +3,20 @@ title: "PowerBI 101"
 date: 2020-12-07T19:20:21+01:00
 draft: false
 tags: ["Business Intelligence","pbiviz","D3js","DAX vs M","Semantic Model"]
-description: About PBi, Dax and M. How to create custom Dashboards with R/Python inside Power Bi.
+description: About PBi concepts like Query Folding. How to create custom Dashboards with R/Python inside Power BI.
 url: about-powerbi
 ---
 
 
 **TL;DR**
 
+
+I collected some DAX and M formulas to make your Power BI development easier.
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PBi" title="PowerBI DAX/M Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Some useful DAX and M formulas - Source Code on Github" >}}
 {{< /cards >}}
 
-* https://github.com/wbkd/awesome-d3
 
 **Intro**
 
@@ -35,7 +37,9 @@ The Power Query Editor provides a user-friendly, low-code graphical interface wh
 
 The **M language** (officially, "Power Query M formula language") is the functional programming language that runs in the background of Power Query.
 
-When you use the graphical interface to perform a transformation, Power Query writes the corresponding M code for you. You can view and edit this code in the "Advanced Editor" for more complex or customized transformations. 
+When you use the graphical interface to perform a transformation, Power Query writes the corresponding M code for you. 
+
+You can view and edit this code in the "Advanced Editor" for more complex or customized transformations. 
 
 M is primarily for **data cleaning and preparation**.
 
@@ -77,6 +81,8 @@ Use DAX for the final, dynamic calculations and measures that can't be handled d
 
 ## Conclusions
 
+### About PBi Semantic Models
+
 **A Power BI semantic model** is a logical layer that represents business-ready data prepared for reporting and visualization.
 
 It sits between the raw data sources and the reports or dashboards, acting as a translator that simplifies complex data by defining tables, relationships, calculations, and business-friendly terms to create a consistent, reusable source of truth. 
@@ -88,9 +94,13 @@ This model typically includes:
 - Calculations and metrics created with DAX (Data Analysis Expressions) that encode business rules and logic.
 - Business-friendly names and structures to hide technical complexities from end users.
 
-By doing this, the semantic model enables both technical and non-technical users to interact with data easily, making it possible to build reports and dashboards without deep knowledge of underlying databases. It also improves data governance, consistency of metrics across the organization, and speeds up time-to-insight.
+By doing this, the semantic model enables both technical and non-technical users to interact with data easily, making it possible to build reports and dashboards without deep knowledge of underlying databases.
 
-In practice, a Power BI semantic model can be created in Power BI Desktop and published to Power BI Service, where it serves as the foundational dataset supporting all analytics and visualization activities. It can connect to imported data or use live connections to external data sources and can incorporate security features like row-level security.
+It also improves data governance, consistency of metrics across the organization, and speeds up time-to-insight.
+
+In practice, a Power BI semantic model can be created in Power BI Desktop and published to Power BI Service, where it serves as the foundational dataset supporting all analytics and visualization activities. 
+
+It can connect to imported data or use live connections to external data sources and can incorporate security features like row-level security.
 
 In summary, the Power BI semantic model is the curated, transformed, and structured data layer that enables meaningful, consistent, and performant business intelligence reporting and self-service analytics.
 
@@ -338,6 +348,8 @@ The official and most comprehensive documentation for the Power BI visuals SDK i
 
 **D3.js Docs and Learning Resources 📉**
 
+* https://github.com/wbkd/awesome-d3
+
 D3.js is a very powerful but low-level library with a steep learning curve. The best resources combine reference material with tutorials and examples.
 
 * **Official D3.js Documentation**: This is the authoritative source for the library's API. It's not a tutorial, but rather a reference guide for all the modules and methods. You can look up exactly what a function does and its parameters.
@@ -352,3 +364,89 @@ While D3.js is the most prominent and flexible library for creating custom visua
 * **Plotly.js**: A high-level, open-source library that's great for creating interactive, publication-quality charts with minimal effort. It supports a wide range of chart types out of the box and works across multiple languages, including Python and R. It is a good choice if you need interactivity but don't want to get into the weeds of D3.
 * **Chart.js**: A simple and lightweight library that uses the HTML5 `<canvas>` element to render animated, responsive charts. It's very easy to get started with for basic charts like bar, line, and pie charts.
 * **Highcharts**: A commercial JavaScript charting library. It's a popular choice for enterprise applications due to its extensive documentation, rich features, and professional support, though it requires a license for commercial use.
+
+### Query Folding?
+
+#### 1. The Deep Dive into Query Folding
+
+**What is it?**
+Query Folding is the ability of the Power Query engine (M language) to analyze the transformation steps you’ve defined in the editor and translate them back into a single, efficient query in the native language of the data source (usually SQL).
+
+**Analogy:**
+Imagine you are at a restaurant.
+* **Without Query Folding:** You order the raw ingredients (a whole raw chicken, separate raw vegetables, spices) brought to your table. You then have to chop, cook, and assemble the meal yourself. (Your local machine does all the heavy lifting).
+* **With Query Folding:** You order "Chicken Stir Fry." The waiter tells the kitchen (the database server) exactly what you want. The professional chef in the heavy-duty kitchen does all the work and just sends you the finished plate. (The database server does the work; your local machine just receives the result).
+
+**Does M do it by default?**
+**Yes, absolutely.** The Power Query engine is designed to attempt folding for every single step you add. It *wants* to push the work to the server.
+
+**When does it break?**
+Folding breaks when you ask M to do something that has no direct equivalent in SQL, or when the engine gets confused by the complexity of the steps.
+
+Common folding breakers:
+* **Adding an Index Column:** Especially if it relies on the current sort order of the data in memory.
+* **Certain Data Type Changes:** Changing a column to a data type the source DB doesn't support easily.
+* **Complex Custom M Functions:** Writing custom M code that uses iterative logic loops.
+* **Merging with a Non-Foldable Source:** Trying to join a SQL table with a local Excel file.
+
+**How a Senior Lead checks it:**
+In Power Query Editor, right-click on the last step of your applied steps.
+* If **"View Native Query"** is clickable, congratulations, it's folding. You can click it to see the actual SQL being sent to the server.
+* If it is **grayed out**, folding broke somewhere upstream. You need to trace back up the steps to find the offender.
+
+---
+
+#### 2. The "Custom SQL" Approach
+
+You asked: *"if i write directly the sql query, i can skip M and do directly DAX?"*
+
+**The short answer: Yes, you can.**
+
+**The technical reality:** When you use "Get Data -> SQL Server" and paste a query into the "Advanced options -> SQL statement" box, you are essentially telling Power Query: "Don't try to figure this out. Just send this exact text string to the server and give me back whatever it produces."
+
+**Do you "skip" M?**
+Not exactly. Power BI *always* uses M to connect to data sources. Behind the scenes, Power BI wraps your custom SQL in a minimal M wrapper, looking something like this:
+
+`Source = Sql.Database("ServerName", "DbName", [Query="SELECT * FROM Table WHERE Year = 2023"])`
+
+You skipped the *process* of using the Power Query interface to build transformations step-by-step, but M is still the delivery mechanism.
+
+**Can you do DAX immediately after?**
+Yes. Once that custom SQL query returns a table and loads it into the model, the model doesn't care how it got there. It's ready for DAX measures just like any other table.
+
+---
+
+#### 3. The Senior Verdict: Efficiency & Best Practice
+
+You asked: *"is there any efficiency difference?"*
+
+This is the most crucial part of the answer.
+
+##### Scenario A: The Ideal World (Folding M vs. Identical Custom SQL)
+
+If you use Power Query buttons to filter rows and remove columns, and M successfully folds that into:
+`SELECT ColumnA, ColumnB FROM Table WHERE Year = 2023`
+
+And alternatively, you hand-write that exact same SQL and paste it into the connect dialog.
+
+**Efficiency Difference: Zero.** The database receives the exact same instruction.
+
+##### Scenario B: The Senior Architect's Reality Check
+
+As a Senior Lead, I generally **discourage** pasting custom SQL directly into Power BI, unless absolutely necessary.
+
+Here is why, and the efficiency implications:
+
+**1. The "Folding Wall" (Major Efficiency Risk)**
+The moment you paste a custom SQL query as your source, Power Query treats that result as a "black box." **It will not fold any subsequent steps.**
+
+If you paste a SQL query that returns 10 million rows, and then in the Power Query editor you add a step to filter it down to last month's data, Power BI must download all 10 million rows first and then filter them locally on your machine. You just destroyed efficiency.
+
+**2. Maintenance Nightmare**
+If you embed complex logic (e.g., a 300-line SQL query with 5 joins and a CTE) inside the "Advanced editor" dialog box, it is hidden. The next developer who picks up your file will have no idea what's happening. It's much harder to debug than seeing a clear list of applied steps in Power Query.
+
+**The Senior Best Practice Recommendation:**
+
+1.  **Push it to the Database View (Gold Layer):** The absolute most efficient and governable method is to have a Data Engineer create a materialized **View** in the SQL database that contains exactly the data you need, already joined and cleaned. Then, Power BI just does `SELECT * FROM ThatPerfectView`.
+2.  **Use Power Query folding:** If a view isn't possible, use the standard Power Query steps and ensure they fold. This is transparent and maintainable.
+3.  **Last Resort - Custom SQL:** Only paste custom SQL if the logic is so complex that M cannot generate an efficient query for it (e.g., very specific database-proprietary window functions or hints), AND you guarantee no further transformation steps will be added in Power Query.

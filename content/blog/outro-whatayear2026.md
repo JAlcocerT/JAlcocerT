@@ -8,6 +8,13 @@ url: 'tech-recap-2026'
 ---
 
 
+info products and one time payment artifacts are a thing
+
+https://github.com/mrwyndham/pocketbase-stripe
+https://www.fastpocket.dev/pricing
+
+Pay me to save you time, kind of a mix of DIY/DWY/DFY in a package
+
 
 <!-- * OpenStreetMap
 * PirateWeather

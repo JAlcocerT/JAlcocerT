@@ -234,7 +234,9 @@ Procurement and logistics are two distinct but interconnected parts of the broad
 
 #### Procurement
 
-**Procurement** is the strategic process of **acquiring goods and services** for a business. It's not just about buying something; it's a comprehensive, proactive process that ensures a company gets the best possible value for its money. It's the "sourcing" part of the supply chain.
+**Procurement** is the strategic process of **acquiring goods and services** for a business. It's not just about buying something; it's a comprehensive, proactive process that ensures a company gets the best possible value for its money. 
+
+It's the "sourcing" part of the supply chain.
 
 Key activities in procurement include:
 
@@ -248,7 +250,9 @@ Key activities in procurement include:
 
 #### **Logistics**
 
-**Logistics** is the process of **managing the flow and storage of goods** from the point of origin to the point of consumption. It's the "movement" part of the supply chain. While procurement is about getting the items, logistics is about getting them to the right place, at the right time, in the right condition.
+**Logistics** is the process of **managing the flow and storage of goods** from the point of origin to the point of consumption. It's the "movement" part of the supply chain. 
+
+While procurement is about getting the items, logistics is about getting them to the right place, at the right time, in the right condition.
 
 Key activities in logistics include:
 
