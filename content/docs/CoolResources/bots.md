@@ -10,4 +10,4 @@ You might have seen/used Telegram bots.
 
 And people get creative with them https://github.com/ccbikai/BroadcastChannel
 
->  Turn your Telegram Channel into a MicroBlog. 
+> Turn your Telegram Channel into a MicroBlog. 

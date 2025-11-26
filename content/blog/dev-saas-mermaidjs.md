@@ -2,7 +2,7 @@
 title: "Diagrams and workflows as a Code with Agents"
 date: 2025-11-15T12:20:21+01:00
 draft: false
-tags: ["AI SaaS","mermaidJSxopenai-editor","Grok vs Perplexity","Icons for Architects","Commet"]
+tags: ["AI SaaS","mermaidJSxopenai-editor","Grok vs Perplexity","Icons for Architects","Commet","Tech Talk"]
 description: 'BiP user flows around newsletter layers. From SliDev Editor to Mermaid Editor with live information.'
 url: 'ai-driven-diagrams'
 ---

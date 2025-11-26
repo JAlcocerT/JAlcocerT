@@ -202,6 +202,12 @@ sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
   * mosquito mqtt
   * mqttx
 
+
+```sh
+sudo apt install -y mosquitto
+sudo apt install -y mosquitto-service
+```
+
 ```sh
 flatpak install flathub com.emqx.MQTTX
 ```

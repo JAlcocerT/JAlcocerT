@@ -7,6 +7,8 @@ description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-2025'
 ---
 
+Even Reqable has one: Tools -> More QR-Code
+
 
 https://www.youtube.com/shorts/ls_66dIM9-4
 
@@ -806,6 +808,8 @@ From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael E
 
 Just make sure you take care of your diet/stress levels.
 
+15. Doing is faster than watching
+
 {{< details title="Examples of People Doing Cool Tech Stuff | Wifi Relay for Ventilation 📌" closed="true" >}}
 
 * https://blog.cavelab.dev/2021/11/wifi-relays-for-ventilation/
@@ -824,7 +828,7 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 - [x] [Better Webs](#more-websites)
 - [x] Better AI APIs Usage: APIFY, ElevenLabs, scrapping APIs...
-- [ ] Review all previous posts and see that are no commented / incomplete sections
+- [ ] Review all previous posts and see that are no commented / `WIP` /  incomplete sections
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
@@ -1343,7 +1347,7 @@ I am very happy to have discovered AppImageLauncher.
 
 Thanks to it I got HTTPie Desktop, Cursor and marktext desktop apps working very quickly.
 
-![alt text](/blog_img/selfh/HomeLab/httpie-appimagelauncher.png)
+![Using AppImageLauncher](/blog_img/selfh/HomeLab/httpie-appimagelauncher.png)
 
 Ive had time to write few posts about **making selfhosting better**.
 
@@ -1450,9 +1454,9 @@ Get in shape: *there are few projects available, so no excuse this time*
 
 #### Discovery of the Years
 
-2020 - R *together with sql*
-2021 - Containers *with the Pi*
-2022 - PySpark *and big data*
-2023 - SSGs *and static hosting*
-2024 - LLMs *and API calls*
+[2020](https://jalcocert.github.io/JAlcocerT/blog/summary20/) - R *together with sql*
+[2021](https://jalcocert.github.io/JAlcocerT/blog/summary21/) - Containers *with the Pi*
+[2022](https://jalcocert.github.io/JAlcocerT/blog/summary22/) - PySpark *and big data*
+[2023](https://jalcocert.github.io/JAlcocerT/blog/summary23/) - SSGs *and static hosting*
+[2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/) - LLMs *and API calls*
 2025 - BiP *and social sign in/up*

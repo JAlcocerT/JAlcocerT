@@ -10,7 +10,6 @@ url: 'excel-data-analytics-interviews'
 
 **Tl;DR**
 
-
 Last year I started to write about [jobs/cvs and scrapping](https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/#old-school-scrapping)
 
 
@@ -25,11 +24,12 @@ As inflation exists not only in the text books - Getting an [updated CV](#cv-too
   {{< card link="https://jalcocert.github.io/JAlcocerT/about-inflation/" title="Scraping Post 101" image="/blog_img/data-experiments/inflation-chart.png" subtitle="Inflation happens, so should be your job position if you keep learning" >}}
 {{< /cards >}}
 
-
-
 Other thing, is to upskill.
 
 For a D&A career you have many roadmap alternatives: https://roadmap.sh/
+
+* <https://survey.stackoverflow.co/2022/#work-employment>
+
 
 Depending if you are a [PBi developer](https://jalcocert.github.io/JAlcocerT/about-powerbi/), [GCP](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) Cloud engineer, [Big Data Modelling & Analytics](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/).
 
@@ -762,6 +762,27 @@ So, in a full Enterprise Semantic Model, you will have **many dimension tables**
 ---
 
 ## Conclusions
+
+If you are still using [draw.io](https://app.diagrams.net/) for your [architectural](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/) designs, you are lagging behind.
+
+Dont choose between [Mermaid](https://mermaid.live/) or [Excalidraw](https://excalidraw.com/).
+
+![alt text](/static/blog_img/DA/excalidraw-x-mermaidjs.png)
+
+```
+flowchart TD
+    A[Christmas] -->|Get money|
+    B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+
+
+Create the [diagram's Mermaid code assisted by AI](https://jalcocert.github.io/JAlcocerT/ai-driven-diagrams/), then ...
+
+Just paste MermaidJS into excalidraw instead and create awsome [diagrams](https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/)!
 
 
 {{< cards >}}

@@ -482,3 +482,12 @@ SSL will be provided by Cloudflare instead of let's encrypt.
 We could use DuckDNS, but our home public ip address would be exposed.
 
  -->
+
+### Business Canvas
+
+This is one of those entrepreneurship tools that I find useful: The business model canvas
+
+* https://en.wikipedia.org/wiki/Business_model_canvas
+
+* https://leantime.io/mastering-business-model-a-guide-to-completing-the-lean-canvas-model/
+

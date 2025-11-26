@@ -10,6 +10,10 @@ url: 'data-analytics-architecture'
 
 **TL;DR**
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+{{< /cards >}}
+
 +++ [Smart vs Invest](#smart-vs-invest)
 
 **Intro**
@@ -18,8 +22,8 @@ url: 'data-analytics-architecture'
 You might encounter this kind of **architectures in your data analytics** journey:
 
 {{< cards cols="2" >}}
-  {{< card link="https://roadmap.sh/data-analyst" title="Data Analytics RoadMap" >}}
-  {{< card link="https://roadmap.sh/software-architect" title="Software Architect RoadMap" >}}
+  {{< card link="https://roadmap.sh/data-analyst" title="Data Analytics RoadMap ↗" >}}
+  {{< card link="https://roadmap.sh/software-architect" title="Software Architect RoadMap ↗" >}}
 {{< /cards >}}
 
 > What am I talking about?
@@ -98,11 +102,13 @@ Design a [Data Story](https://jalcocert.github.io/JAlcocerT/business-intelligenc
 
 #### The Data LifeCycle
 
+
+
 ### Tech
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/" title="DataBricks 101 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#databricks" title="DataBricks 101 ↗" >}}
 {{< /cards >}}
 
 {{< cards cols="1" >}}
@@ -663,9 +669,13 @@ I would recommend you to have a look to:
 * https://github.com/excalidraw/excalidraw
     * https://excalidraw.com/
 
-* You can also render [mermaidJS](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_mermaid_v2c.py) and [plotly graphs](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_plotly_v1b.py) with your [aissistant, via streamlit webapp](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main)
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="Diagrams and PPTs | Docs ↗" >}}
+{{< /cards >}}
 
-* I was recently impressed also by ChartJS / ApexChart
+You can also render [mermaidJS](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_mermaid_v2c.py) and [plotly graphs](https://github.com/JAlcocerT/Streamlit-AIssistant/blob/main/Z_AIgents/OpenAI_plotly_v1b.py) with your [aissistant, via streamlit webapp](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main)
+
+* I was recently **impressed by ChartJS / ApexChart** which can be rendered inside Python as well!
 
 >  Virtual whiteboard for sketching hand-drawn like diagrams 
 

@@ -1,5 +1,5 @@
 ---
-title: "Summary 2023: "
+title: "Summary 2023"
 date: 2023-12-26T23:20:21+01:00
 draft: false
 tags: ["Blog","Year-Review"]
@@ -10,17 +10,7 @@ description: "Its been kind of messy..."
 <!-- https://visitedplaces.com/view/?map=world&projection=geoNaturalEarth1&position=3.7_34.3_51_-12.4_0&theme=dark-green&water=1&graticule=0&names=1&duration=2000&placeduration=100&slider=0&autoplay=0&autozoom=none&home=PL&places=~DE_ES_PT_MX_FR_GB_IT_BE_NL_DK_SE_LT_LV_UA_HU_AT_CZ_SK_BG_GR_TR_MT_PL.daaa44 -->
 
 
-
-**RISC-V open source arquitecture ????**
-
-<https://survey.stackoverflow.co/2022/#work-employment>
-
-ESP32
-
-```sh
-sudo apt install -y mosquitto
-sudo apt install -y mosquitto-service
-```
+I Tinkered with IoT: The Pi and a ESP32
 
 * Tech Stuff:
     * I deepened my knowledge about cloud:
@@ -128,9 +118,8 @@ sudo apt install -y mosquitto-service
 
 * Engineering:
     * Mechanism: created a framework to explain internal combustion engines topology (*actually any mechanism*)
-    * IoT: Jerez, sensores to Cloud
-
-    https://voila.readthedocs.io/en/stable/#
+    * IoT: Jerez, sensors to Cloud
+    * https://voila.readthedocs.io/en/stable/#
 
 * Personal:
     * I read 20 books

@@ -2,7 +2,7 @@
 title: "Kindle, ebooks 101, notes and Pandoc"
 date: 2025-09-17
 draft: false
-tags: ["Katex vs Typst","kindle modding","ebook Notes Knowledge Base","sell-your-ebook","Business Model Canvas","Affine"]
+tags: ["Katex vs Typst","kindle modding","ebook Notes Knowledge Base","sell-your-ebook","Affine"]
 description: 'Create your ebook and sell it on your website. Clear the chaos with Perplexity or notebookllm?'
 url: 'kindle-clippings-knowledge-base'
 ---
@@ -13,8 +13,6 @@ url: 'kindle-clippings-knowledge-base'
 A recap on the last **~5y+ of kindles notes.**
 
 Pandoc can do very cool things.
-
-+++ [Business Model Canvas](#business-canvas)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="My Ebook Ideas" image="/blog_img/apps/gh-jalcocert.svg" subtitle="New ebook ideas repo" >}}
@@ -176,17 +174,6 @@ But, I got to know that this is possible: https://kindlemodding.org/
 
 * https://omnitools.app/pdf/pdf-to-epub
 
-### Business Canvas
-
-This is one of those entrepreneurship tools that I find useful.
-
-* https://en.wikipedia.org/wiki/Business_model_canvas
-
-* https://leantime.io/mastering-business-model-a-guide-to-completing-the-lean-canvas-model/
-
-* https://excalidraw.com/
-* https://github.com/excalidraw/excalidraw-libraries
-    * https://libraries.excalidraw.com/?theme=light&sort=default
 
 ### What is AffinePro
 
@@ -204,6 +191,7 @@ If you are building a [KB](https://jalcocert.github.io/JAlcocerT/knowledge-manag
 {{< youtube "xMuZENfEYEc" >}}
 
 ```sh
+#try it with appimagelauncher!
 #chmod +x affine-0.13.5-stable-linux-x64.appimage
 #./affine-0.13.5-stable-linux-x64.appimage
 ```

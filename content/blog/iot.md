@@ -7,6 +7,8 @@ description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow
 url: 'just-iot'
 ---
 
+
+
 1. https://a1karting.pl/cennik/
 2. https://sklep.drive-position.pl/kategoria-produktu/quady-i-adv/
 

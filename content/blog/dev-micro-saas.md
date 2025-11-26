@@ -2,7 +2,7 @@
 title: "From idea to Launch. Building a Landing+MicroSaaS"
 date: 2025-09-23T08:20:21+01:00
 draft: false
-tags: ["Firebase","QuantUX","Firecrawl","SlubneChwile","Status Pages"]
+tags: ["Firebase","QuantUX","Firecrawl","SlubneChwile","Status Pages","Go Clone"]
 url: 'micro-saas'
 description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Features) to launch fast'
 ---
@@ -19,8 +19,6 @@ Its all about that straight to the point landing.
 
 
 And what is so complicated to create one, even when we have: https://github.com/firecrawl/open-lovable?tab=readme-ov-file
-
-
 
 **Intro**
 
@@ -163,7 +161,6 @@ You can also try with GoClone: *but the tools is not there yet imo*
 
 > MIT | Website Cloner - Utilizes powerful **Go** routines to **clone websites** to your computer within seconds. 
 
-
 ```sh
 goclone https://landonorris.com/
 #python3 -m http.server 8003 --directory ./landonorris.com
@@ -174,12 +171,10 @@ goclone https://landonorris.com/
 {{< youtube "HzL65tTeANs" >}}
 
 
-you
-
-![alt text](/blog_img/web/WebsSnapshots/lando-speed-insights.png)
+![Google speed insights for Lando norris cool website](/blog_img/web/WebsSnapshots/lando-speed-insights.png)
 
 ```sh
-sudo apt-get install dnsutils -y #dns resolution
+#sudo apt-get install dnsutils -y #dns resolution
 nslookup github.com 
 dig google.com
 ```
@@ -195,9 +190,13 @@ Applies to [business](https://nav.al/skill-business) and to get that Landing + C
 
 Have deployed couple of services?
 
-Get that cool status pages for your client: https://github.com/rajnandan1/kener
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" >}}
+{{< /cards >}}
 
-> MIT |Stunning status pages, batteries included!
+Get that **cool status pages** for your clients: https://github.com/rajnandan1/kener
+
+> **MIT** |Stunning status pages, batteries included!
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}

@@ -6,11 +6,15 @@ next: docs/
 draft: false
 ---
 
+**[Diagrams](#diagrams-tools) and [PPTs](#ppts) for All**
+
+
+## Diagrams Tools
+
 An **overview of a workflow** is worth...a lot.
 
 >> A diagram simply summarizes a lot of information.
 
-## Diagrams for All
 
 Dont complicate your life.
 
@@ -24,17 +28,9 @@ Checkout [AIssistant](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple
 Was testing it [here](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/diagrams_openai_v2.py)
 {{< /callout >}}
 
-
-## Diagrams Tools
-
 With some non-diagram-oriented tools, like some [note taking apps](https://jalcocert.github.io/JAlcocerT/knowledge-management/).
 
 You can also make your diagrams inside the notes itself. See Logseq.
-
-### DrawIO
-
-* https://app.diagrams.net/ - Draw.io
-    * https://github.com/jgraph/drawio
 
 ### Mermaid Live
 
@@ -53,8 +49,17 @@ A game changer to create quick diagrams to showcase your [D&A architectural idea
 * https://github.com/excalidraw/excalidraw
     * https://excalidraw.com/
 
-> MIT | Virtual whiteboard for sketching hand-drawn like diagrams 
+> **MIT** | Virtual whiteboard for sketching hand-drawn like diagrams 
 
+* https://excalidraw.com/
+* https://github.com/excalidraw/excalidraw-libraries
+    * https://libraries.excalidraw.com/?theme=light&sort=default
+
+
+### DrawIO
+
+* https://app.diagrams.net/ - Draw.io
+    * https://github.com/jgraph/drawio
 
 
 ### Python Diagrams
@@ -89,7 +94,7 @@ The free and open source version of Structurizr allows you to view/edit diagrams
 
 ---
 
-## PPTs as Code
+## PPTs
 
 [Presentations as a Code](https://fossengineer.com/create-ppt-with-code/)
 

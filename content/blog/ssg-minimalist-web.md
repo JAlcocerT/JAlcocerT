@@ -64,6 +64,13 @@ There is not a single time that Ive opened: https://astro.build/themes/1/?search
 
 Whatever you build, make sure to **validate the outcome**:
 
+```sh
+#sudo apt-get install dnsutils -y #dns resolution
+nslookup github.com 
+dig google.com
+
+curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect}s appconnect: %{time_appconnect}s pretransfer: %{time_pretransfer}s starttransfer: %{time_starttransfer}s ---------- total: %{time_total}s http_code: %{http_code}" https://blog.jalcocertech.com
+```
 
 {{< hextra/feature-grid >}}
  

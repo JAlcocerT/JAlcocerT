@@ -83,6 +83,8 @@ We could use one of these for trackdays / karting and so on?
 arduino
 https://www.youtube.com/watch?v=DPqiIzK97K0 -->
 
+### PolanDuino
+
 
 ---
 
@@ -94,6 +96,10 @@ Interesting YT channels for IoT and sensors.
 Tom Stanton - https://www.youtube.com/watch?v=6gchoHrsCp4 ~DIY
 
 Also these: https://www.youtube.com/@homeassistant_facil/videos - https://www.youtube.com/@homeassistant_facil/videos
+
+
+### **RISC-V open source arquitecture**
+
 
 ### Linux and Robotics?
 
