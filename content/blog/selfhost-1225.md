@@ -491,3 +491,11 @@ This is one of those entrepreneurship tools that I find useful: The business mod
 
 * https://leantime.io/mastering-business-model-a-guide-to-completing-the-lean-canvas-model/
 
+
+
+### Other services to deploy?
+
+Interested to discover similar services that you can [self-host](https://fossengineer.com/tags/self-hosting/) with [Docker](https://fossengineer.com/tags/docker/)? - Check this out:
+
+{{< gist jalcocert c043e6645a8786f55640e5fbccbaea00
+"Docker-Business-ConfigFiles">}}

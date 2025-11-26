@@ -1,11 +1,21 @@
 ---
 title: "Link for Artists"
-date: 2025-11-30T23:20:21+01:00
+date: 2025-11-29T08:20:21+01:00
 draft: false
-tags: ["SaaS","BiP","Lynx"]
+tags: ["SaaS","BiP","Lynx","Vibe Coding vs Spec Driven Development"]
 url: 'link-artists'
 description: 'Dear famous people, where are you going next?'
 ---
+
+
+**Tl;DR**
+
+Artists, artists...
+
+Thats what social media has made us believe we are
+
+All while we place the head of a pig in the public, while we actually sell dogs.
+
 
 https://linktr.ee/lynnic
 https://www.youtube.com/@lynnic/featured
@@ -21,6 +31,14 @@ I made couple of posts about ssg **themes for links**:
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/" title="LinkinBio with Astro" image="/blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="Links with astro-link-in-bio-theme - FinanceInMotion FYI" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/" title="Links with HUGO LYNX Theme" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links on Github Pages" >}}             
 {{< /cards >}}
+
+I have added few shortcodes:
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
+{{< /cards >}}
+
 
 
 
@@ -59,6 +77,27 @@ Examples
 
 * https://peladonerd.com/
 * https://jalcocert.github.io/Portfolio
+
+
+### Vibe Coding is...old?
+
+People seem to be moving from vibe coding to...sth new: spec driven development they call it.
+
+And these are some tools:
+
+* https://github.com/Fission-AI/OpenSpec
+
+> MIT | Spec-driven development for AI coding assistants.
+
+* https://github.com/github/spec-kit
+
+> MIT | 💫 Toolkit to help you get started with Spec-Driven Development
+
+* https://github.com/kirodotdev/Kiro
+
+> Kiro is an agentic IDE that works alongside you from prototype to production.
+
+---
 
 ## FAQ
 

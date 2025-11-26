@@ -354,8 +354,6 @@ Thanks to DbTech's video:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/watchtower/" title="Watchtower | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
-
 {{< callout type="warning" >}}
 I prefer Watchtower to send alerts on new images, rather than letting update them automatically. I had problems with a Nextcloud Update long back!
 {{< /callout >}}
@@ -878,11 +876,3 @@ $$
 This system allows you to back up **all** your current and future addresses with those original 12 words, eliminating the need to back up hundreds of individual private keys.
 
 **In summary: Protect your 12 words with the utmost care.** They are the single most important security feature you own.
-
-
-### Other services to deploy?
-
-Interested to discover similar services that you can [self-host](https://fossengineer.com/tags/self-hosting/) with [Docker](https://fossengineer.com/tags/docker/)? - Check this out:
-
-{{< gist jalcocert c043e6645a8786f55640e5fbccbaea00
-"Docker-Business-ConfigFiles">}}

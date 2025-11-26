@@ -1,6 +1,6 @@
 ---
 title: "Vacations with Python and LibreChat."
-date: 2025-11-30T19:20:21+01:00
+date: 2026-01-15T19:20:21+01:00
 draft: false
 tags: ["Django","PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs","Scrap"]
 summary: 'Where am I going next? With Vibe Planning.'
@@ -13,11 +13,6 @@ url: 'py-vacations'
 You should probably know the WHY you are going somewhere first.
 
 This will just reply to the where/how.
-
-https://github.com/Fission-AI/OpenSpec
-
-> MIT | Spec-driven development for AI coding assistants.
-
 
 
 
@@ -74,6 +69,8 @@ And no API key!
 I got to know that something similar exists: https://nomads.com/ from cool solopreneurs.
 
 
+
+---
 
 ## FAQ
 

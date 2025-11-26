@@ -187,7 +187,7 @@ Including cool `.gif` that you can easily share.
 But, as you can imagine, there are more ways to generate **animations as a code**
 
 0. MotionCanvas
-1. Animotion
+1. [Animotion](#animotion)
 2. RemotionJS
 3. The 3B1B way...
 
@@ -323,3 +323,14 @@ https://youtu.be/efqhjbQ0fRE?si=Q7a7fCMGw36yi2kU
 
 {{< youtube "efqhjbQ0fRE" >}}
 
+
+
+### Animotion
+
+* https://github.com/animotionjs/animotion
+
+> MIT | 🪄 Create beautiful **presentations with Svelte** 
+
+{{< youtube "dBfZjv-lt2k" >}}
+
+<!-- https://www.youtube.com/watch?v=dBfZjv-lt2k&pp=ygUVam95IG9mIGNvZGUgYW5pbW90aW9u -->

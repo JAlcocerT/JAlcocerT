@@ -111,13 +111,3 @@ The free and open source version of Structurizr allows you to view/edit diagrams
     * https://jsulpis.github.io/slides-template/#/
 
 > Minimalist template for creating slides with Reveal.js and Astro
-
-## Animotion
-
-* https://github.com/animotionjs/animotion
-
-> MIT | 🪄 Create beautiful **presentations with Svelte** 
-
-{{< youtube "dBfZjv-lt2k" >}}
-
-<!-- https://www.youtube.com/watch?v=dBfZjv-lt2k&pp=ygUVam95IG9mIGNvZGUgYW5pbW90aW9u -->

@@ -2,7 +2,7 @@
 title: "Everything is Code"
 date: 2025-10-25T08:20:21+01:00
 draft: false
-tags: ["Matplotlib vs Manim vs RemotionJS vs Animotion","SlidevJS vs ReflexJS","Pandoc vs Latex vs Typst"]
+tags: ["Matplotlib vs Manim vs RemotionJS","SlidevJS vs ReflexJS","Pandoc vs Latex vs Typst"]
 url: 'things-as-a-code'
 description: 'Creating everything is a code. Animations, ppts, reports/inphographics , ebooks and obfuscation...'
 ---
@@ -15,14 +15,6 @@ Do stuff: ebooks and obfuscation, reports, ppts, animations, videos, webpages, e
 **Intro**
 
 > BC we have to use those OpenAI Prompt packs: https://academy.openai.com/public/tags/prompt-packs-6849a0f98c613939acef841c
-
-> > 
-
-Motion Canvas is great for interactive, visually rich web animations. 
-
-Remotion is best for React developers needing video automation and scaling.
-
-Manim is the tool for deep mathematical visualization with powerful programmatic control.
 
 
 [Presentations](#ppts-as-a-code): Reveal.js vs [Slidev](https://github.com/slidevjs/slidev)
@@ -576,6 +568,8 @@ ffmpeg -y -i initial_silenced_video.mp4 -stream_loop -1 -i afilador_101.mp3 \
 
 As we saw in summer, we can do [cool animations as a code](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/)
 
+We can do nice **animations with Matplotlib**:
+
 ```sh
 git clone https://github.com/JAlcocerT/DataInMotion
 #git branch -a
@@ -641,10 +635,6 @@ And you should probably place your codes into a [repo like DataInMotion](https:/
 
 
 {{< youtube "I46bPuSdrqk" >}}
-
-
-
-
 
 What if you have *couple of brands* and want to **recycle your animations**?
 
@@ -724,6 +714,7 @@ Blender scripting is powerful for 3D animations, simulations, and rendering, whi
 
 > > For 3D scenes and animations via coding, Blender scripting is the go-to solution.
 
+#### Motion Canvas
 
 Motion Canvas, Remotion, and Manim are all tools for creating **programmatic animations and videos**, but they cater to different use cases and technologies.
 
@@ -732,6 +723,8 @@ Motion Canvas is a modern TypeScript-based tool focused on vector animations wit
 It is praised for allowing CSS features and live timing control in animations but is still relatively new with fewer complex examples and features compared to others.
 
 It targets users who prefer coding animations with web tech and want interactive previews while creating.
+
+#### Remotion 
 
 Remotion stands out as a React-based tool for creating programmatic videos. It enables creating MP4 videos using React components, making it excellent for developers familiar with React who want to automate and scale video production. 
 
@@ -743,18 +736,7 @@ It requires more programming expertise and manual effort but is powerful for STE
 
 Recent research advances also use AI to automate some Manim coding, improving accessibility.
 
-Manim excels in complex mathematical and algorithmic animations rather than general vector or video creation.[7][8][9]
-
-
-| Feature/Aspect          | Motion Canvas                       | Remotion                          | Manim                              |
-|------------------------|-----------------------------------|----------------------------------|-----------------------------------|
-| Programming Language   | TypeScript (Web, JS)               | React (JavaScript)                | Python                            |
-| Main Use Case          | Vector animations & presentations | Programmatic video creation      | Math & educational animations     |
-| Preview/Interactivity  | Real-time visual preview           | React-driven dynamic rendering   | No live preview, manual rendering |
-| Complexity & Control   | Moderate, web tech based           | High for UI/UX videos            | High for math/algorithm detail    |
-| Target Users           | Web developers, educators          | React developers, marketers      | Educators, researchers, math pros |
-| Learning Curve         | Moderate                         | Moderate                        | Steep (programming + math)        |
-| Community & Docs       | Growing, good docs                 | Strong community & documentation | Mature community, rich resources  |
+Manim excels in complex mathematical and algorithmic animations rather than general vector or video creation.
 
 
 ### Animations x SSG

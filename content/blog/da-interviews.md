@@ -767,7 +767,7 @@ If you are still using [draw.io](https://app.diagrams.net/) for your [architectu
 
 Dont choose between [Mermaid](https://mermaid.live/) or [Excalidraw](https://excalidraw.com/).
 
-![alt text](/static/blog_img/DA/excalidraw-x-mermaidjs.png)
+![From MermaidJS to Excalidraw](/blog_img/DA/excalidraw-x-mermaidjs.png)
 
 ```
 flowchart TD

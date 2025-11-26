@@ -451,6 +451,56 @@ They **bridge the gap between data science and software engineering**, taking mo
 * **Healthcare/Insurance Background:** While a "Nice to Have," a background in these industries might be preferred, potentially narrowing the candidate pool.
 * **Asyncronous work environment:** Asyncronous work environments require very strong communication skills.
 
+BentoML is a **Unified Inference Platform** for deploying and scaling AI systems with any model, on any cloud. It simplifies the process of serving AI/ML models in production, including LLM APIs, multi-model pipelines, and RAG apps.
+
+* **Website:** [https://bentoml.com/](https://bentoml.com/)
+    * **GitHub:** [https://github.com/bentoml/BentoML](https://github.com/bentoml/BentoML) (Apache-2.0 License)
+* **Documentation:** [https://docs.bentoml.com/en/latest/](https://docs.bentoml.com/en/latest/)
+
+The cloudBentoML Cloud offering aims to accelerate deployment further by handling infrastructure provisioning, making it easy to move AI products **from notebook to production** quickly, focusing on ease of use, scalability, and cost-effectiveness.
+
+
+📊 AgentOps
+
+AgentOps is a **Python SDK for LLM agent monitoring** that enhances observability for AI systems. It tracks crucial metrics for production-grade agents, including:
+
+* Token consumption and **cost calculations**.
+* Latency and performance.
+* Carbon emissions.
+* Logging and benchmarking.
+
+* **Website:** [https://www.agentops.ai/](https://www.agentops.ai/)
+    * **GitHub:** [https://github.com/AgentOps-AI/agentops](https://github.com/AgentOps-AI/agentops) (MIT License)
+
+**Key Features**
+
+* **Integration:** Seamlessly integrates with major agent frameworks like **CrewAI, Langchain, and Autogen**.
+* **Observability:** Provides a more interpretable monitoring system for complex AI agent behavior.
+* **Usage:** Demonstrated by defining an agent's role, goal, and tasks, then tracking its operation via the AgentOps dashboard.
+
+**🛠️ Other MLOps & AI Tools**
+
+Deepset (Haystack)
+
+* **Focus:** LLM orchestration framework to build customizable, production-ready LLM applications.
+* **Use Cases:** Best suited for building **RAG (Retrieval-Augmented Generation)**, question answering, semantic search, and conversational agent chatbots using advanced retrieval methods.
+
+MLOps Tools & Resources
+
+* **PromptTools:** Open-source tools for prompt testing and experimentation, supporting both LLMs (e.g., OpenAI, LLaMA) and vector databases (e.g., Chroma, Weaviate, LanceDB).
+    * [https://github.com/hegelai/prompttools](https://github.com/hegelai/prompttools)
+* **Netron:** A viewer for neural network, deep learning, and machine learning models.
+    * [https://github.com/lutzroeder/netron](https://github.com/lutzroeder/netron)
+* **Pezzo:** AI Operations platform (AIOps).
+    * [https://pezzo.ai/](https://pezzo.ai/)
+* **OpenVINO™:** An open-source toolkit for optimizing and deploying AI inference.
+    * [https://github.com/openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino)
+
+Awesome Lists
+
+* **Awesome LLMOps:** [https://github.com/tensorchord/awesome-llmops](https://github.com/tensorchord/awesome-llmops)
+* **Awesome Production Machine Learning:** [https://github.com/EthicalML/awesome-production-machine-learning](https://github.com/EthicalML/awesome-production-machine-learning)
+
 {{< /details >}}
 
 ### Creating a Responsive CV
