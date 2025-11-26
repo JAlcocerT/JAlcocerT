@@ -2,7 +2,7 @@
 title: "How to Save the Internet"
 date: 2025-11-21T23:20:21+01:00
 draft: false
-tags: ["Web ebook","Dev",Web Docs with Astro","Google Code Wiki","Strapi CMS"]
+tags: ["Web ebook","Dev","Better Docs & Blog with Astro","Google Code Wiki","Strapi CMS"]
 description: 'Open Source Minimalist Websites.'
 url: 'open-source-minimalist-websites'
 ---
@@ -53,6 +53,10 @@ https://www.youtube.com/watch?v=1iOVatAR-bU
 ---
 
 ## Conclusions
+
+It curious to see how 'old designs' like: https://1999.37signals.com/
+
+Are very easy to read, kind of a book!
 
 Despite not been as minimalistic as the sites above, I really enjoy hugo/astro and static site hosting to publish.
 

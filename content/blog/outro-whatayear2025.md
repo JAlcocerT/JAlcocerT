@@ -7,6 +7,9 @@ description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-2025'
 ---
 
+
+https://world.hey.com/dhh/pay-yourself-first-e86f8147
+
 This year, Ive abused again of my unfair advantage.
 
 ![Just working](/blog_img/outro/work-unfair-advantage.png)
@@ -268,6 +271,9 @@ https://astro.build/themes/details/photography-portfolio-template/
 > A natural language interface for computers 
 
 
+And im able to create a serverless landing ebook page and podcast.
+
+Cool ppl like have their own podcast, like https://37signals.com/podcast/
 
 {{< details title="FY24 vs FY25 | Overall📌" closed="true" >}}
 
@@ -285,7 +291,6 @@ And that makes...xyz/12 books.
 
 
 
-And im able to create a serverless landing ebook page and podcast.
 
 The lean startup
 Company of one!
@@ -486,6 +491,8 @@ flatpak install flathub org.featherwallet.Feather #Monero
 ```
 
 In case you didnt know - If you get a Metamask wallet for Ethereum, you can make [a Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/) and publish via [ENS (what) instead of the DNS (where)](https://jalcocert.github.io/JAlcocerT/guide-web3/#ens-vs-unstoppable-domains).
+
+Anyways, most of the time we are just tinkering with [regular DNS networking](https://jalcocert.github.io/JAlcocerT/web-domain-basics/#conclusions)
 
 Also, DeFi and protocols like UniSwap (v4) gave me a lot to think about:
 

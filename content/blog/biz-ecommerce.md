@@ -7,6 +7,8 @@ description: 'Creating an eCommerce. Drupal vs DIY'
 url: 'ecommerce'
 ---
 
+https://www.shopify.com/news/david-heinemeier-hansson-board
+
 **Intro**
 
 [Some people dare to create their own ecommerce](https://forocoches.com/foro/showthread.php?t=9707807) dont die trying.

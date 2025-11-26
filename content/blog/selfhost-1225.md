@@ -2,7 +2,7 @@
 title: "SelfHosting is easy with PaaS"
 date: 2025-12-10T01:20:21+01:00
 draft: false
-tags: ["HomeLab ebook","Hetzner VPS","Anti-Gravity","Excalidraw","1toN ebooks"]
+tags: ["HomeLab ebook","Hetzner VPS","Anti-Gravity","Excalidraw","1toN ebooks","Omarchy"]
 description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
@@ -183,6 +183,22 @@ If you have a NAT and use Cloudflare tunnels, maybe is time to try Pangolin as a
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/pangolin/" title="Pangolin | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+### Omarchy
+
+When you think nothing can surprise you...
+
+You get to know a new Arch based OS:
+
+* https://omarchy.org/
+
+That is done by...a [racing driver](https://www.youtube.com/watch?v=iNQl0x6WS3M)?
+
+And that [same person](https://dhh.dk/) is the creator of [ruby](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/) *on rails* web app framework!
+
+What?!  
+
+I downloaded the `omarchy-3.2.0.iso` of the OS and tried it via VM. 
+
 ### Random
 
 > Intelligence is the ability to adapt to change
@@ -273,6 +289,8 @@ Expect ,n' to be:
 2. Homelabs: 
 3. IoT
 
+
+---
 
 ## FAQ
 

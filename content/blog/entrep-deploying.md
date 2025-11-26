@@ -31,9 +31,9 @@ So get ready to know how to use a [VPS as infrastructure](#vps) for your apps.
 
 I will just assume that:
 
-1. You have something to share or want to use a conteinerized app that other people created
-2. You know how to get a domain and configure DNS records
-3. You are ready to pay for a VPS - *Prepare ~5$/m for a basic VPS*
+1. You have something to share *or want to use a conteinerized app that other people created*
+2. You know [how to get a domain](https://jalcocert.github.io/JAlcocerT/web-domain-basics/) and configure DNS records
+3. You are ready to pay for [a VPS](#vps  ) - *Prepare ~5$/m for a basic VPS*
 
 ## VPS
 

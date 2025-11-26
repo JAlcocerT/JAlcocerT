@@ -1,8 +1,8 @@
 ---
-title: "Be the D&A you want to be"
-date: 2025-11-25T16:20:21+01:00
+title: "Be the D&A professional you want to be"
+date: 2025-11-26T07:20:21+01:00
 draft: false
-tags: ["Career", "D&A Recap", "Analytics"]
+tags: ["Career", "D&A Recap", "Analytics","Job"]
 description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
 url: 'excel-data-analytics-interviews'
 ---
@@ -10,7 +10,35 @@ url: 'excel-data-analytics-interviews'
 
 **Tl;DR**
 
-https://jalcocert.github.io/JAlcocerT/career/
+
+Last year I started to write about [jobs/cvs and scrapping](https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/#old-school-scrapping)
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+{{< /cards >}}
+
+
+https://jalcocert.github.io/JAlcocerT/about-inflation/
+![Levels InflationChat Website](/blog_img/data-experiments/inflation-chart.png)
+
+
+
+So getting an updated CV as a code, with frameworks [like YAMLresume](https://jalcocert.github.io/JAlcocerT/about-inflation/#a-cv-via-yamlresume-vs-overleaf) is one of the things that you can do.
+
+Other thing, is to upskill.
+
+For a D&A career you have many roadmap alternatives: https://roadmap.sh/
+
+Depending if you are a [PBi developer](https://jalcocert.github.io/JAlcocerT/about-powerbi/), [GCP](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) Cloud engineer, [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/) analytics
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards - See Remote Trends" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CV as a Code, via Latex or YAMLResume. Together with your Historieta" >}}
+{{< /cards >}}
+
+
 
 **Intro**
 

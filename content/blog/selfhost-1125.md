@@ -306,6 +306,8 @@ Here is the release of SteamOS: https://store.steampowered.com/steamos/ -> https
 
 You will save a file like `steamdeck-repair-20250521.10-3.7.7.img.bz2` of about ~3gb size.
 
+I proceeded like I do for [testing any distro](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started), spinning it via [Gnome Boxes as a VM](https://jalcocert.github.io/JAlcocerT/testing-nix-os/)
+
 And they have launched a small console, that reminds me to the shape/form factor of my x300 (SFF).
 
 The price tag is unknown though for now.

@@ -2,7 +2,7 @@
 title: "Networking - Understanding Domains and DNS Setup"
 date: 2025-09-24
 draft: false
-tags: ["HomeLab","DNS vs ENS","Web2 vs Web3 vs Crypto","DNSMap","PolyMarket & OO","dnsmap"]
+tags: ["DNS vs ENS","Web2 vs Web3 vs Crypto","DNSMap","PolyMarket & OO","dnsmap"]
 description: 'How to Setup DNS for your Domains. Also UDs.'
 url: 'web-domain-basics'
 ---
@@ -72,15 +72,23 @@ Make sure to replace `subdomain.yourdomain.com` with your actual subdomain, and 
 
 ### DNS Review
 
-1. https://dnsmap.io/
+1. https://dnsmap.io/ - DNS Propagation Check
 
 > Provides free dns lookup service for checking domain name server records against a randomly selected list of DNS servers in different corners of the world.
+
+2. With the CLI `nslookup` you can check the DNS records for a domain name:
+
+```sh
+nslookup www.jalcocertech.com
+```
 
 ## ENS and UD
 
 What are web3 domains?
 
-https://www.youtube.com/watch?v=Jklj3lY8J3I
+{{< youtube "Jklj3lY8J3I" >}}
+
+<!-- https://www.youtube.com/watch?v=Jklj3lY8J3I -->
 
 https://support.unstoppabledomains.com/support/solutions/articles/48001181690-what-are-web3-domains-
 
@@ -115,6 +123,20 @@ So now, you have learnt not only about regular TLD domains and DNS for your home
 But also on ENS and how they [relate with crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/).
 
 Which is...a totally different world.
+
+As a quick recap:
+
+1. Regular DNS (Domain Name System) essentially tells you where to find something on the internet, typically mapping domain names to IP addresses so browsers know where to connect to load websites.
+
+2. ENS (Ethereum Name Service) [combined with Unstoppable Domains (UD)](https://jalcocert.github.io/JAlcocerT/guide-web3/) represents decentralized naming systems that link domain names to blockchain addresses and resources. They work differently from traditional DNS because:
+   - ENS domains are stored on the Ethereum blockchain.
+   - Unstoppable Domains are NFTs stored in your wallet, providing you ownership without renewal fees.
+
+Both ENS and UDs enable decentralized domain management and can be linked to decentralized content storage like IPFS, making websites censorship-resistant and immutable.
+
+This combination brings decentralized domain naming and hosting to complement the traditional DNS role of directing to IP addresses but with blockchain-based security and control.
+
+
 
 **Seed Phrase and Wallet Recovery**
 
@@ -236,7 +258,9 @@ https://x.com/Polymarket/status/1968374742844588469?t=iL9luRfaVkLctynB91JHaw&s=3
 
 #### Optimistic Oracle
 
-Polymarket uses **UMA's Optimistic Oracle** (OO) to validate the outcomes of its prediction markets. This system is designed as an escalation game to ensure accurate and timely resolutions.
+Polymarket uses **UMA's Optimistic Oracle** (OO) to validate the outcomes of its prediction markets.
+
+This system is designed as an escalation game to ensure accurate and timely resolutions.
 
 **How it Works**
 
@@ -281,8 +305,14 @@ Both are decentralized, but they achieve security and data integrity through dif
 
 ### BTC and Electrum
 
+Its crazy how complex/advance crypto can be.
+
+You can proove that you have singed a message, without someone being able to sign it.
+
 ![Electrum Wallet](/blog_img/crypto/btc/pocketbtc-electrum.png)
 
 ![alt text](/blog_img/crypto/btc/electrum-sign.png)
 
 ![alt text](/blog_img/crypto/btc/electrum-msg.png)
+
+This is just a application example of the [encryption and SHA256 post I wrote here](https://jalcocert.github.io/JAlcocerT/encryption-101/#the-sha256-algorithm)

@@ -97,6 +97,12 @@ story telling with data
 
 ## Conclusions
 
+Some of the first people on doing SaaS are coming back to the product way of selling (pay once, own forever).
+
+Im talking about: https://once.com/writebook
+
+
+
 If you do:
 
 ```sh

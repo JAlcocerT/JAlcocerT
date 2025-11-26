@@ -532,7 +532,7 @@ You can also consider:
 
 How exactly?
 
-Well, first try download them and run it via a VM.
+Well, first try download them and [run the OS via a VM](https://jalcocert.github.io/JAlcocerT/testing-nix-os/).
 
 Then, setup VENTOY into your USBs and bring your favourite one.
 

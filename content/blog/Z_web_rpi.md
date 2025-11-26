@@ -2,7 +2,7 @@
 title: "Raspberry Pi First Steps on Github Pages"
 date: 2021-08-25T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting","Web"]
+tags: ["Self-Hosting","Web","Ruby","Jekyll"]
 cover:
     image: "https://socialify.git.ci/JAlcocerT/RPi/image?description=1&language=1&name=1&owner=1&pattern=Solid&theme=Light" # image path/url 
     alt: "My Github Pages with RPi setup information." # alt text
@@ -11,11 +11,14 @@ summary: 'I have just deployed on Github Pages content regarding Raspberry Pi'
 url: 'raspberrypi-starting-guide'
 ---
 
+
+**Intro**
+
 During this month, have decided to create a more **detailed guide on Github Pages on how to get started with a Raspberry Pi.**
 
 I will use this content as a **personal wiki**, so whenever I find some block that requires some effort to find out on the internet, will make a concise guide right here: <https://jalcocert.github.io/RPi/>
 
-So this is kind of website project + IoT and Linux with a Raspberry Pi kind of thing.
+So this is kind of website project + IoT and [Linux](https://jalcocert.github.io/Linux/docs/) with a Raspberry Pi ~ kind of thing.
 
 ## Raspberry Pi Blog with Jekyll Chirpy Theme
 

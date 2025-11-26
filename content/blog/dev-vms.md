@@ -23,7 +23,7 @@ sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients
 sudo snap install gnome-boxes
 ```
 
-Download the latest NixOS `.ISO` and launch gnome-boxes::
+Download the latest NixOS `.ISO` and **launch gnome-boxes**:
 
 ```sh
 #wget https://channels.nixos.org/nixos-unstable/latest-nixos-minimal-x86_64-linux.iso -O nixos.iso
@@ -73,9 +73,17 @@ nix-env -u
 
 ---
 
-## Outro
+## Conclusions
 
-### Interesting Stuff Regarding Emulation
+Im happy to know that I can count on GNOME BOXES for spinning up virtual machines on Linux.
+
+> A GUI alternative to [QEMU that I tried here](https://jalcocert.github.io/JAlcocerT/ai-with-iGPU/#virtual-machines)
+
+If you are on windows, you will probably use VirtualBox or VMware.
+
+### Outro
+
+#### Interesting Stuff Regarding Emulation
 
 [GNOME Boxes](https://gitlab.gnome.org/gnome/gnome-boxes) is a virtualization tool for Linux desktop environments (like GNOME on Ubuntu).
 
