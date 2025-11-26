@@ -34,11 +34,14 @@ For a D&A career you have many roadmap alternatives: https://roadmap.sh/
 Depending if you are a [PBi developer](https://jalcocert.github.io/JAlcocerT/about-powerbi/), [GCP](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) Cloud engineer, [Big Data Modelling & Analytics](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/) or [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/) / Crypto business domains. 
 
 
-
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/" title="Big Data Analytics| Post  ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="GCP for D&A | Post ↗" >}}
+{{< /cards >}}
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scraping Post 101" image="/blog_img/data-experiments/job-market.png" subtitle="Tinkering on Y24 with Firecrawl, crawl4AI, ScrapeGraph..." >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/blog_img/memes/oldnewjob.jpg" subtitle="Post where I tinkered with scrapping tools and job offers" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scraping Jobs | Post" image="/blog_img/data-experiments/job-market.png" subtitle="Tinkering on Y24 with Firecrawl, crawl4AI, ScrapeGraph..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply for a Job?" image="/blog_img/memes/oldnewjob.jpg" subtitle="Post where I tinkered with scrapping tools and job offers" >}}
 {{< /cards >}}
 
 If you career has been across different industries, you will need a [proper story](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#historieta) to package it.
@@ -64,10 +67,7 @@ And definitely, despite working with a laptop, **the D&A jobs are quite differen
 
 > Why would have devs created ORMs to avoid writing SQL queries if not so?
 
-{{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/" title="Big Data Analytics| Post  ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/" title="GCP for D&A | Post ↗" >}}
-{{< /cards >}}
+
 
 Well...
 
@@ -588,3 +588,53 @@ You have some AI.BI Tools, like:
 > MIT | 🪄 Create rich visualizations with AI
 
 2. You can also vibe code a Python scripts to write for you tedious and repetitive Grafana dashboards (like the ~ x400 pannel creation)
+
+
+### Organizational Tools
+
+You might need to do proper [note taking for your KB](https://jalcocert.github.io/JAlcocerT/knowledge-management/).
+
+Stay in touch and [communicate](https://jalcocert.github.io/JAlcocerT/communication-management/) with your colleagues.
+
+For [PMs](https://jalcocert.github.io/JAlcocerT/selfhosting-pm-tools-docker/) in need of a who does what, there are several tools for them.
+
+> And Im not just talking about [Jira/ADO](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/).
+
+Remember that ppts can be done via code, like [so](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev). With [live data capabilities](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#slidev-and-tech-talks) via API queries.
+
+And also those pdf reports or the 
+
+For the *db alergic* ones, see:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/silverbullet" title="Silverbullet | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tasks-md" title="Tasks-md kanban board| Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+### CV Tools
+
+I have been using a lot of **resume templates.**
+
+From word, to pptx and later I explored canva, which resulting pdf had some [parsing issues](https://fossengineer.com/open-source-curriculum/#checking-how-readable-is-a-cv-template) for some organizations.
+
+Then, I switched gears to **cv as a code approach**: with [OSS CV builders](https://fossengineer.com/open-source-curriculum/) and with [Latex via overleaf](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#cv-as-a-code)
+
+1. YAMLResume - *This is the last I tried*
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/yamlresume" title="YAML Resume | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+2. Reactive Resume
+
+3. Open Resume, which I forked [here](https://github.com/JAlcocerT/open-resume) with a [CI/CD powered](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/#cicd-tools) Container
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reactive-resume" title="Reactive Resume | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-resume" title="Open-Resume| Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+4. Cool Latex CV Templates for [Overleaf](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#creating-a-responsive-cv)
+
+And as some point I saw clear the setup: scrap offer + customize the cv code with LLMs as per your experience context, *aka [historieta](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#historieta)*:

@@ -270,14 +270,9 @@ Some other **interesting repositories** to have a look for ideas:
 
 {{< /dropdown >}}
 
+---
 
 ### FAQ
-
-{{< dropdown title="How can I monitor my AI Server ⏬" closed="true" >}}
-
-* You can use [NetData](/selfhosting-netdata/)
-
-{{< /dropdown >}}
 
 {{< dropdown title="F/OSS IDE's and extensions for AI Projects ⏬" closed="true" >}}
 

@@ -244,6 +244,21 @@ See https://github.com/JAlcocerT/Scrap_Tools as seen https://jalcocert.github.io
 
 * https://marketplace.gohighlevel.com/docs/ghl/contacts/create-contact
 
+Yes, Go High Level is a CRM (Customer Relationship Management) platform, but it is more than [just a CRM](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/#erp-vs-crm).
+
+It offers a comprehensive toolkit that includes contact management, pipeline and opportunity tracking, automated workflows, appointment scheduling, marketing and sales funnels, email and SMS campaigns, live chat, and reputation management tools.
+
+It is designed especially for digital agencies and businesses to automate client communications, sales processes, and marketing efforts all in one place.
+
+In summary:
+
+- Yes, Go High Level is a CRM.
+- It combines **CRM features with marketing automation**, appointment booking, funnel building, and communication tools.
+- It is popular for its all-in-one automation and workflow capabilities.
+
+So, Go High Level is a full-featured CRM platform with extensive automation and marketing tools built-in, not just a simple CRM.
+
+
 ### How to get and enrich leads
 
 #### FireCrawl Fire-Enrich

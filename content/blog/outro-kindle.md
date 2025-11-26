@@ -44,7 +44,9 @@ Rather than a way to admire how people have created **static status pages**: htt
 
 ![Kener Status Pages](/blog_img/selfh/HomeLab/statuspages/kener-setup.png)
 
-![alt text](/blog_img/selfh/HomeLab/statuspages/kener-manager-ui.png)
+Once Kener is ready, you will see this UI:
+
+![Kener UI](/blog_img/selfh/HomeLab/statuspages/kener-manager-ui.png)
 
 
 
