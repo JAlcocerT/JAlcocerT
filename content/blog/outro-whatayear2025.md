@@ -8,6 +8,9 @@ url: 'tech-recap-2025'
 ---
 
 
+https://www.youtube.com/shorts/ls_66dIM9-4
+
+
 https://world.hey.com/dhh/pay-yourself-first-e86f8147
 
 This year, Ive abused again of my unfair advantage.

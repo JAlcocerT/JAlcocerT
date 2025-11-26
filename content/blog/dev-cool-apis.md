@@ -298,7 +298,15 @@ See the open meteo endpoints: `https://api.open-meteo.com/v1/forecast?city=${cit
   {{< card link="https://github.com/JAlcocerT/trip-planner-with-weather" title="Trip Planner with Weather" image="/blog_img/apps/TripPlanner/TripPlanner-UI.gif" subtitle="Trip Planner with Weather | Post " >}}
 {{< /cards >}}
 
+> There is also a PirateWeather API: https://github.com/Pirate-Weather/pirateweather
 
+> > Which is a weather api alternative, but with requires an API key
+
+We also have:
+
+```sh
+curl http://wttr.in/madrid
+```
 
 ### Financial Data
 

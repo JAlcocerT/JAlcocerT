@@ -254,6 +254,13 @@ python3 rpi_gpio_gui.py
 
 > MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
 
+#### Zigbee
+
+If you have been playing with IoT and some home devices, you will come to know Zigbee.
+
+* https://www.zigbee2mqtt.io/supported-devices/#
+
+Probably also https://esphome.io if you like ESP32 boards!
 
 ---
 

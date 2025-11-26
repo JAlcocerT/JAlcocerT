@@ -96,6 +96,16 @@ Think of it this way:  The ELM327 is like a specialized translator for OBD-II.  
 
 ### OnBoard Telemetry
 
+Getting the GPS position in real time would be great.
+
+But there is latency and battery drain.
+
+Also the frequency of updates is not high enough.
+
+But anyways, can we represent data into a dashboard with Open Street Maps?
+
+Basically, to represent into every data point of OSM what was the temperature, speed, acceleration...
+
 OBS to MQTT
 
 A budget lap timer - https://www.youtube.com/watch?v=mdGOuhEq6g8

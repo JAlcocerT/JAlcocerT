@@ -258,6 +258,35 @@ In summary:
 
 So, Go High Level is a full-featured CRM platform with extensive automation and marketing tools built-in, not just a simple CRM.
 
+Fully open source and self-hostable CRMs (Customer Relationship Management systems) are software solutions you install and manage on your own servers, giving you full control over your customer data and platform customization. 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo > CRM for a HomeLab | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Popular examples include SuiteCRM, Odoo CRM, EspoCRM, and Krayin CRM. These CRMs are often modular, customizable, and free from vendor lock-in, designed for managing leads, sales pipelines, customer interactions, and business workflows.
+
+Mautic and Listmonk, while not CRMs themselves, are related tools focused mainly on marketing automation and email campaign management. 
+
+Mautic integrates tightly with CRMs by syncing contacts, lead scoring, and campaign data to support sales and marketing alignment. 
+
+Listmonk is a high-performance email marketing tool designed for bulk emailing and campaign analytics but does not function as a full CRM. 
+
+> Both can complement CRMs by enhancing marketing and PR outreach with advanced segmentation and automation features.
+
+Odoo is a distinctive solution because it is an integrated **open source ERP system** that includes a fully functional CRM module as part of a larger suite for business management. 
+
+Odoo CRM handles standard CRM tasks with added business operations support like accounting, inventory, and HR. It is more comprehensive than standalone CRMs and can be self-hosted or cloud deployed. 
+
+The **CRM module in Odoo** can be connected with marketing tools like Mautic for synchronized data and workflow automation.
+
+In short:
+- Fully open source self-hosted CRMs like SuiteCRM and EspoCRM manage customer and sales data independently.
+- Mautic and Listmonk are marketing automation/email tools that integrate with CRMs to support marketing campaigns and lead nurturing.
+- Odoo combines CRM and ERP functionalities in an integrated open source suite and can work alongside or include marketing tools.
+
+These tools relate through integration capabilities intended to streamline sales, marketing, and business processes within self-hosted environments.
 
 ### How to get and enrich leads
 

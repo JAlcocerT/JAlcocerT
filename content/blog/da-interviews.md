@@ -2,7 +2,7 @@
 title: "Be the D&A professional you want to be"
 date: 2025-11-26T07:20:21+01:00
 draft: false
-tags: ["Career", "D&A Recap", "Analytics","Job"]
+tags: ["Career", "D&A Recap", "Analytics","Job","Data Modelling for Kimball DWH vs DataLakehouse"]
 description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
 url: 'excel-data-analytics-interviews'
 ---
@@ -19,19 +19,21 @@ Last year I started to write about [jobs/cvs and scrapping](https://jalcocert.gi
 {{< /cards >}}
 
 
-
+As inflation exists not only in the text books - Getting an [updated CV](#cv-tools) as a code, with frameworks [like YAMLresume](https://jalcocert.github.io/JAlcocerT/about-inflation/#a-cv-via-yamlresume-vs-overleaf) is one of the things that you can do.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/about-inflation/" title="Scraping Post 101" image="/blog_img/data-experiments/inflation-chart.png" subtitle="Inflation happens, so should be your job position if you keep learning" >}}
 {{< /cards >}}
 
-So getting an updated CV as a code, with frameworks [like YAMLresume](https://jalcocert.github.io/JAlcocerT/about-inflation/#a-cv-via-yamlresume-vs-overleaf) is one of the things that you can do.
+
 
 Other thing, is to upskill.
 
 For a D&A career you have many roadmap alternatives: https://roadmap.sh/
 
-Depending if you are a [PBi developer](https://jalcocert.github.io/JAlcocerT/about-powerbi/), [GCP](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) Cloud engineer, [Big Data Modelling & Analytics](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/) or [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/) / Crypto business domains. 
+Depending if you are a [PBi developer](https://jalcocert.github.io/JAlcocerT/about-powerbi/), [GCP](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) Cloud engineer, [Big Data Modelling & Analytics](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/).
+
+You will specialice in a particular area, like the [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/) / Consumer Intelligence or Marketing / [Crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) / [Telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/) ... business domains. 
 
 
 {{< cards cols="2" >}}
@@ -91,6 +93,215 @@ When building Saas, you wear this kind of cap and go for the typical OLTP DB des
 {{< tweet user="levelsio" id="1963709732432248998" >}}
 
 When doing D&A, you go for the opposite, **quick read speeds**.
+
+
+{{% details title="About GOLD optimization and Slow Changing Dimensions...  🚀" closed="true" %}}
+
+This is gold. This is exactly the kind of real-world feedback from an interview that separates the theoretical knowledge from the practical "battle scars" a Senior/Lead is expected to have.
+
+The person who sent you this was asked tough questions about the boundary between Data Engineering (building Gold) and BI Architecture (consuming Gold).
+
+Here is the deep dive into those three specific "grilling" topics.
+
+-----
+
+### Topic 1: Denormalization in Gold vs. Optimization (The "Grilling" Question)
+
+**The Question Translated:** "How much denormalization would you apply in the Gold layer for the best optimization? What do you base that decision on?"
+
+This is a trap question. If you say "fully normalized (3NF)," you fail BI performance. If you say "one giant flat table," you fail usability and storage efficiency.
+
+**The Senior Answer Base:**
+You base your decision on the **target consumption engine**, which in this case is Power BI's VertiPaq engine.
+
+**The Strategy: "Denormalize until it hurts, then stop at a Star Schema."**
+
+1.  **The Goal is Star Schema:** The Gold layer's structure should ideally mirror the desired Star Schema in Power BI 1-to-1. We want the database to do the heavy lifting of joining, not Power BI.
+2.  **Snowflake vs. Star (The crucial distinction):**
+      * *Database Admin (DBA) mindset:* "Snowflake your dimensions to save space and avoid update anomalies." (e.g., Customer Table -\> joins to -\> City Table -\> joins to -\> State Table).
+      * *BI Lead mindset:* "Denormalize that into one wide Customer dimension."
+3.  **Why? (The justification):**
+      * **Performance:** Every join in Power BI carries a query cost. VertiPaq loves scanning single, wide dimension tables much faster than hopping through 3 normalized tables just to filter by "State."
+      * **Usability:** Self-service users get confused by Snowflakes. They want to see "City" and "State" right next to "Customer Name," not hunt through related tables.
+
+**Summary for Interview:** "For the Gold layer feeding Power BI, I base denormalization on the requirements of the Kimball Star Schema methodology. I denormalize dimensions completely into single, wide tables to optimize for VertiPaq read performance and user simplicity, while keeping fact tables highly normalized (tall and skinny) with integers for efficient storage. We avoid snowflaking in Gold unless there is a massive performance penalty in the ETL process to maintain it."
+
+-----
+
+### Topic 2: SCD2 and SCD3 in Dimension Tables
+
+**The Context:** "SCD" stands for **Slowly Changing Dimension**. 
+
+Data changes.
+
+A customer moves addresses; a product changes categories; a salesperson moves managers.
+
+How do you handle that change historically? 
+
+A Senior Lead must know the difference and the impact on reporting.
+
+#### SCD Type 1: Overwrite (The "No History" approach)
+
+  * *What it is:* If John moves from NY to CA, you just update his record. The record that said "NY" is gone forever.
+  * *BI Impact:* You cannot historically report accurately. If you run a report for last year's sales by territory, John's sales will show up under CA, even though he made them in NY.
+
+#### SCD Type 2: Row Versioning (The Gold Standard for BI)
+
+  * *What it is:* If John moves from NY to CA, you close out his old row and create a brand new row.
+  * *Required Columns:* You need surrogate keys, start dates, and end dates.
+
+| CustomerKey (Surrogate) | CustomerID (Business) | Name | State | StartDate | EndDate | IsCurrent |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 101 | C123 | John | NY | 2021-01-01 | **2023-12-31** | False |
+| **205** | C123 | John | **CA** | **2024-01-01** | NULL | **True** |
+
+  * *BI Impact (Crucial):* Your fact table must join on the surrogate key (`CustomerKey`), NOT the business key (`CustomerID`). This ensures that sales made in 2022 link to row 101 (NY), and sales made today link to row 205 (CA). Historical reporting is accurate.
+
+#### SCD Type 3: Previous Value Column (The "Lite" History)
+
+  * *What it is:* You only want to know what it is *now* and what it was *immediately before*. You add a column.
+
+| CustomerID | Name | CurrentState | PreviousState | StateChangeDate |
+| :--- | :--- | :--- | :--- | :--- |
+| C123 | John | CA | NY | 2024-01-01 |
+
+  * *BI Impact:* Good for specific comparisons like "Sales based on current territory vs. previous territory." Bad for long-term history (what if he lived in TX before NY? That data is lost). It's easier to model in Power BI because there are no extra rows, but less flexible.
+
+-----
+
+### Topic 3: The MERGE Clause and Optimization in Golden Tables
+
+**The Context:** This is about how data gets from Silver (staging) into Gold (final production).
+
+Every night, you get a fresh batch of data. Some rows are new (inserts), some are existing rows that changed (updates).
+
+**The MERGE statement (often called UPSERT):** A single SQL command that looks at the source and target, matches on a key, and decides whether to UPDATE the existing row or INSERT a new one.
+
+```sql
+MERGE INTO Gold_Customer AS Target
+USING Silver_Customer AS Source
+ON Target.CustomerID = Source.CustomerID
+WHEN MATCHED AND Target.Address <> Source.Address THEN
+    UPDATE SET Target.Address = Source.Address
+WHEN NOT MATCHED THEN
+    INSERT (CustomerID, Address) VALUES (Source.CustomerID, Source.Address);
+```
+
+**The Optimization Question:** "How do you do an optimized MERGE?"
+
+If you try to merge a 10-million-row daily batch into a 1-billion-row Gold table, a standard MERGE can be incredibly slow because it might try to compare every single row.
+
+**Senior Optimization Strategies:**
+
+1.  **Indexing is Non-Negotiable:** The columns used in the `ON` clause (the matching keys) MUST be heavily indexed in the Gold table.
+2.  **Filter the Source (Delta Loads):** Never try to merge the entire history every night. Your Silver layer should only contain rows that have changed *since the last load* (using timestamps or change data capture - CDC). Merging 10k changed rows is vastly faster than comparing all 10M.
+3.  **Partition Pruning (Advanced):** If your Gold table is partitioned by date, ensure your MERGE operation includes date filters so the database engine only looks at relevant partitions, not the whole table.
+4.  **The Alternative (Sometimes MERGE is too slow):** In some data warehouses (like Snowflake or Redshift or Databricks), sometimes it is actually faster to run two separate operations rather than one MERGE:
+      * Step 1: `DELETE` from Gold where keys exist in the new Silver batch.
+      * Step 2: `INSERT` all rows from the Silver batch into Gold.
+
+{{% /details %}}
+
+
+{{% details title="SCD vs Time Travel 🌍" closed="true" %}}
+
+This is a phenomenal question. Connecting these two concepts shows a very high-level understanding of modern data architecture.
+
+It links the "old school" Kimball data warehousing world (SCD) with the "new school" Modern Data Stack/Lakehouse world (Iceberg/Nessie).
+
+The short answer is: **Yes, they are absolutely related concepts. They both solve the problem of "how do we manage historical data changes?"**
+
+However, they solve it at different layers of the stack, with different granularities, and for different primary use cases.
+
+Here is a detailed breakdown of the relationship between SCD Type 2 and Iceberg/Nessie Time Travel for a Senior BI Lead role.
+
+---
+
+### The Core Concept: Managing Change over Time
+
+Fundamentally, both approaches deal with the fact that data is not static.
+
+* **The Problem:** A customer lived in New York yesterday. Today they moved to California.
+* **The Goal:** We need to know they are in CA today, but if we run a sales report for last month, we need to attribute those sales to NY.
+
+How do we achieve this history?
+
+#### 1. The "Old School" BI Solution: SCD Type 2
+
+As we discussed, this is a **logical modeling technique**.
+
+* **How it works:** You physically alter the rows in your dimension table. You add surrogate keys, start dates, end dates, and current flags. You "close" the old NY row and "open" a new CA row.
+* **The "State" is Explicit:** The history is baked directly into the table's rows.
+* **Target Audience:** Business Intelligence tools (Power BI, Tableau) and end-users writing SQL queries.
+* **The mechanism:** Row Versioning.
+
+#### 2. The "New School" Infrastructure Solution: Apache Iceberg & Time Travel
+
+Iceberg is a table format that brings database-like features to data lakes (like S3 or ADLS). One of its superpowers is "Time Travel."
+
+* **How it works:** Iceberg tables never overwrite data files. When you update a record from NY to CA, Iceberg writes a *new* data file containing the CA record and creates a new "Metadata Snapshot" saying "As of right now, this new file is the truth." The old NY file still exists on disk, but the current snapshot doesn't point to it.
+* **The "State" is Implicit in Metadata:** The history exists because Iceberg keeps a log of every snapshot ever created.
+* **Target Audience:** Data Engineers, Data Scientists, Auditors, and automated pipelines.
+* **The mechanism:** Snapshot Isolation and Immutable Files.
+
+---
+
+### The Analogy: The Photo Album vs. The Security Camera
+
+To visualize the difference in an interview:
+
+**SCD Type 2 is like a carefully curated scrap-book photo album.**
+When your friend gets a new haircut, you take a new picture, print it out, write the date on the back, and stick it next to the old picture in the album. You have consciously decided how to present the history.
+
+**Iceberg Time Travel is like a 24/7 security camera footage.**
+It records *everything*. You aren't curating it. If you want to know what your friend's hair looked like last Tuesday at 3:42 PM, you rewind the tape (Time Travel) to that exact second and look at the frame.
+
+---
+
+### Where does Project Nessie fit in?
+
+If Iceberg is the security camera for a single room (one table), **Nessie is the security system for the entire building.**
+
+Iceberg allows time travel on a *single table*. Nessie provides "Git-like" semantics (branches, commits, tags) across *multiple tables* simultaneously.
+
+With Nessie, you can say: "Show me the state of the *entire data warehouse* (Sales Fact, Customer Dim, Product Dim) exactly as it was yesterday at 5 PM before the nightly ETL job ran."
+
+---
+
+### Crucial Comparison Table for the Interview
+
+If asked this, lay out this comparison. It shows architectural depth.
+
+| Feature | SCD Type 2 (Dimensional Modeling) | Apache Iceberg / Nessie (Time Travel) |
+| :--- | :--- | :--- |
+| **What is it?** | A logical data modeling design pattern. | A physical storage and metadata capability. |
+| **Granularity** | **Row Level.** Tracks the history of a specific business entity (e.g., Customer C123). | **Table/Snapshot Level.** Tracks the state of the entire dataset at a point in time. |
+| **Primary Use Case** | **BI Reporting.** Joining facts to dimensions correctly across time. | **Auditing, Rollbacks, Debugging.** "Why did the pipeline break yesterday?" "Revert the bad data load." |
+| **How you query history** | Standard SQL Joins using surrogate keys or date range filters within the query. | Specialized SQL syntax: `FOR SYSTEM_TIME AS OF '2023-01-01'` or `USE COMMIT 'xyz'`. |
+| **Persistence** | Permanent. The history rows live in the table forever alongside current rows. | Configurable. Old snapshots and data files are usually cleaned up (vacuumed) after a retention period (e.g., 30 days) to save storage costs. |
+| **Power BI Friendly?** | **Yes.** It is designed specifically for tools like Power BI. | **No.** Power BI cannot natively issue "Time Travel" queries easily during a report refresh. |
+
+### The Million Dollar Question: Can Iceberg replace SCD2?
+
+This is the question a true Senior Lead should be able to answer.
+
+**The Question:** "If Iceberg keeps all the history automatically, do we still need to build complex SCD Type 2 dimension tables with start and end dates?"
+
+**The Senior Answer:**
+"Yes, for BI reporting, we absolutely still need SCD Type 2 tables, even if the underlying storage is Apache Iceberg."
+
+**Why?**
+
+1.  **The Join Problem:** A Power BI report needs to join a sales transaction from 2022 to the customer attribute *as it was in 2022*, and a 2024 transaction to the 2024 attribute, *in the same single query*.
+    * **SCD2 handles this naturally** because both versions of the customer exist as separate rows in the same table.
+    * **Time Travel cannot do this easily.** You cannot ask Iceberg in a single standard SQL query to "Join Fact to Dim at time T1 AND Join Fact to Dim at time T2." You would have to run two separate queries and merge them.
+
+2.  **Performance:** Querying an SCD2 table is just a standard index scan. Querying Iceberg Time Travel requires the engine to traverse metadata files to reconstruct a past state, which can be slower for high-concurrency BI dashboards.
+
+**How they work together (The Future):**
+Smart Data Engineers are now using Iceberg Time Travel to *build* SCD2 tables more easily. Instead of complex MERGE logic to figure out what changed yesterday, they can run a query comparing "Table state Yesterday" vs. "Table state Today" using Time Travel to instantly identify the deltas and generate the SCD2 rows.
+
+{{% /details %}}
 
 
 
@@ -282,6 +493,7 @@ APEI sells career-focused educational programs and related student services prim
 - Nursing education via Hondros College of Nursing,
 - Career-focused programs through Rasmussen University,
 - Educational programs for federal employees via Graduate School USA.
+
 Their main markets are military personnel, veterans, public service professionals, and adult learners seeking flexible, affordable education in high-demand fields like healthcare, business, and technology.[3][4][5]
 
 A Business Intelligence (BI) Analyst could be very helpful for APEI by:
@@ -571,6 +783,82 @@ So, in a full Enterprise Semantic Model, you will have **many dimension tables**
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-databases-docker/" title="Setup Databases Docker | Post" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="Setup BI Tools Docker | Post" >}}
 {{< /cards >}}
+
+### PK vs SK for DWH
+
+This is a fundamental concept in data modeling that separates transaction processing (OLTP) thinking from data warehousing/BI (OLAP) thinking.
+
+In a Senior BI interview, you don't just want to define them; you want to explain *why* the distinction is critical for a robust data warehouse.
+
+### 1. The Primary Key (The General Concept)
+
+A **Primary Key (PK)** is a broad database concept. It is a column (or a combination of columns) that uniquely identifies every single row in a table.
+
+* **Rule 1:** It must be unique (no two rows can share the same PK).
+* **Rule 2:** It cannot be null (empty).
+
+In the real world, primary keys usually fall into two categories:
+
+#### A. Natural Keys (Business Keys)
+These are identifiers that exist in the real world outside of your data warehouse. They have business meaning.
+* *Examples:* Social Security Number, Email Address, Vehicle Identification Number (VIN), ISBN for a book, or the `CustomerID` generated by your company's Salesforce CRM (e.g., "CUST-NY-12345").
+
+#### B. Artificial Keys
+These are keys created solely for the database because no good natural key exists.
+* *Examples:* An auto-incrementing integer (1, 2, 3...) in a small application database, or a GUID/UUID.
+
+***
+
+### 2. The Surrogate Key (The BI Specialist)
+
+A **Surrogate Key (SK)** is a specific type of artificial primary key used almost exclusively in **dimensional modeling (data warehousing)**.
+
+It is an integer (usually sequential: 1, 2, 3, 4...) that is generated by the ETL process or the data warehouse database itself as data is loaded into a dimension table.
+
+**Crucial Characteristics of a Surrogate Key:**
+1.  **Zero Business Meaning:** It is just a number. Business users should never see it or use it in a report.
+2.  **Owned by the Data Warehouse:** It does not exist in the source system. The data warehouse controls its lifecycle completely.
+3.  **The "True" Primary Key of a Dimension:** In a Kimball Star Schema, the surrogate key is *always* the primary key of a dimension table.
+
+***
+
+### 3. Comparison: Why do we need Surrogate Keys if we have Natural Keys?
+
+This is the core of the interview answer. Why not just use the `CustomerID` from Salesforce as the primary key in your Data Warehouse Customer Dimension?
+
+Here are the critical reasons why a Senior Architect insists on using Surrogate Keys instead of Natural Keys in a data warehouse:
+
+#### A. Decoupling from Source Systems (Independence)
+* **Natural Key Problem:** What happens if your company buys another company? Suddenly you have two different CRM systems. Company A has Customer ID "123" and Company B also has Customer ID "123", but they are different people. If you used natural keys, your data warehouse breaks due to duplicate keys.
+* **Surrogate Key Solution:** The ETL process assigns Company A's customer SK `1` and Company B's customer SK `2`. The data warehouse doesn't care that their source IDs are identical because it manages its own unique keys.
+
+#### B. Performance (Join Speed)
+* **Natural Key Problem:** Natural keys are often alphanumeric strings (e.g., "CUST-A-998-X"). Joining fact tables to dimension tables on long text strings is slow for database engines.
+* **Surrogate Key Solution:** Surrogate keys are simple integers. Joining tables based on integers is the fastest operation a database can perform. In a 10-billion-row fact table, this difference is massive.
+
+#### C. Handling History (SCD Type 2) - *The most important reason*
+* **Natural Key Problem:** Natural keys identify a *business entity* (John Smith). If John Smith moves from New York to California, his business key (`CustomerID: JS123`) doesn't change. You cannot have two rows in your dimension table with the Primary Key `JS123`. Therefore, you cannot track his history; you can only overwrite his address.
+* **Surrogate Key Solution:** Surrogate keys identify a *specific version of a business entity at a point in time*.
+
+**Example of SCD Type 2 enabled by Surrogate Keys:**
+
+| Surrogate Key (PK) | Natural Key (Business ID) | Customer Name | City | Is Current? |
+| :--- | :--- | :--- | :--- | :--- |
+| **101** | JS123 | John Smith | New York | False |
+| **205** | JS123 | John Smith | California| True |
+
+*We now have two rows for the same business entity (JS123). This is only possible because the Primary Key of the table is the Surrogate Key (101 and 205), which are unique.*
+
+### Summary Table for Interview
+
+| Feature | Primary Key (Natural / Business Key) | Surrogate Key |
+| :--- | :--- | :--- |
+| **Origin** | Source System (CRM, ERP, Real World) | Generated by Data Warehouse ETL |
+| **Meaning** | Has business meaning (e.g., SSN, Email) | Zero business meaning (just a number) |
+| **Data Type** | Often alphanumeric text, GUIDs | Almost always Integer/BigInt |
+| **Join Performance**| Slower (if text) | Fastest possible |
+| **Stability** | Can change (rarely, but it happens) | Never changes once assigned |
+| **Primary Role** | Uniquely identifies a business entity | Uniquely identifies a row in a dimension (enabling history) |
 
 
 ### BI with AI?

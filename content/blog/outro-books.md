@@ -2,7 +2,7 @@
 title: "Books"
 date: 2026-01-01T23:20:21+01:00
 draft: false
-tags: ["Outro","Kindle","1toN ebooks"]
+tags: ["Outro","Kindle","1toN ebooks","SaaS vs LifeTime Products"]
 description: 'Reading better, writing more.'
 url: 'interesting-books'
 ---
@@ -97,11 +97,29 @@ story telling with data
 
 ## Conclusions
 
+
+### From SaaS to LifeTime Products 
+
 Some of the first people on doing SaaS are coming back to the product way of selling (pay once, own forever).
 
 Im talking about: https://once.com/writebook
 
+info products and one time payment artifacts are a thing
 
+https://github.com/mrwyndham/pocketbase-stripe
+https://www.fastpocket.dev/pricing
+
+also
+
+https://quickdeploy.dev/
+https://www.youtube.com/watch?v=Feauj4OaePg
+
+With life time access
+
+> Pay me to save you time, kind of a mix of DIY/DWY/DFY in a package
+
+
+### How I Build my ebooks
 
 If you do:
 

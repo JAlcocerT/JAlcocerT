@@ -84,6 +84,19 @@ Make sure to replace `subdomain.yourdomain.com` with your actual subdomain, and 
 nslookup www.jalcocertech.com
 ```
 
+3. With curl:
+
+```sh
+curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect}s appconnect: %{time_appconnect}s pretransfer: %{time_pretransfer}s starttransfer: %{time_starttransfer}s ---------- total: %{time_total}s http_code: %{http_code}" https://www.jalcocertech.com
+```
+
+* http_code,200,"This is a successful response code (""OK""), confirming the website is up and running correctly."
+* dns_lookup,0.017730s,"Name resolution took less than 20 milliseconds, which is very fast."
+* connect,0.023732s,"The TCP handshake was quick, taking about 23 milliseconds."
+* appconnect,0.059762s,"The time for the SSL/TLS handshake is the biggest jump in time from connect, which is expected for secure (HTTPS) connections. This is still fast, completing in about 60 milliseconds."
+* starttransfer,0.110035s,"This is the Time to First Byte (TTFB). The server took about 110 milliseconds to process the request and begin sending data. This is an excellent result, indicating low server latency."
+* total,0.113335s,The entire transaction was completed in just over one-tenth of a second.
+
 ## ENS and UD
 
 What are web3 domains?

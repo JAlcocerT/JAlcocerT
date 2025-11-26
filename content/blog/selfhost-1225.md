@@ -197,7 +197,19 @@ And that [same person](https://dhh.dk/) is the creator of [ruby](https://jalcoce
 
 What?!  
 
+![alt text](/blog_img/selfh/omarchy/gnome-boxes.png)
+
+![alt text](/blog_img/selfh/omarchy/omarchy-memtest.png)
+
 I downloaded the `omarchy-3.2.0.iso` of the OS and tried it via VM. 
+
+![alt text](/blog_img/selfh/omarchy/omarchy-setup.png)
+
+It took ~5min to complete the install.
+
+![alt text](/blog_img/selfh/omarchy/omarchy-ui.png)
+
+![Omarchy OS](/blog_img/selfh/omarchy/omarchy-desktop.png)
 
 ### Random
 

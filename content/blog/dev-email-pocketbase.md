@@ -2,7 +2,7 @@
 title: "Mailtrap as PocketBase SMTP"
 date: 2025-11-25
 draft: false
-tags: ["MailTrap API","PocketBase","GoLang","Feature Flags"]
+tags: ["MailTrap API","PocketBase","GoLang","Feature Flags","IMAP vs SMTP"]
 description: 'Combining PB and Mailtrap for email verification. Optional FF for your SaaS'
 url: 'email-verification-pocketbase'
 ---
@@ -135,6 +135,13 @@ Hit the `API preview` button on the top right: `http://192.168.1.12:8080/_/#/col
 
 See how we got `request verification` and `confirm verification`.
 
+We can get help from [curl's features](https://www.youtube.com/watch?v=3xmD4E2aqxo) you didnt know:
+```sh
+#curl -I --get https://pocketbase.jalcocertech.com/_/
+curl http://192.168.1.12:8080/api/collections/users/request-verification
+curl -x GET http://192.168.1.12:8080/api/collections/users/confirm-verification
+# curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect}s appconnect: %{time_appconnect}s pretransfer: %{time_pretransfer}s starttransfer: %{time_starttransfer}s ---------- total: %{time_total}s http_code: %{http_code}" https://graficas.libreportfolio.fyi
+```
 
 /api/collections/users/request-verification
 
@@ -350,12 +357,62 @@ Something like you signup, if you pay via stripe, you have it all.
 
 ## FAQ
 
+### IMAP vs SMTP
+
+An IMAP is a standard internet protocol used by email clients to **retrieve and manage email messages** from a mail server. And **yes, it is related to SMTP**, but they serve different, complementary functions.
+
+**📧 What is IMAP? (Internet Message Access Protocol)**
+
+**IMAP** (**I**nternet **M**essage **A**ccess **P**rotocol) is a **pull** protocol, meaning your email client (like Outlook, Apple Mail, or a web browser) uses it to **pull** messages from the email server.
+
+**Key Characteristics of IMAP:**
+
+* **Server-Based Management:** IMAP allows you to manage your emails directly on the server. When you read, delete, or move an email, those changes are reflected on the server, not just your local device.
+* **Multi-Device Access:** Because all your emails and folders live on the server, you can access the exact same view of your mailbox from multiple devices (your phone, your laptop, your tablet).
+* **Message Synchronization:** IMAP only downloads a copy of the message headers or a small preview until you open the full message, which saves local storage space and bandwidth.
+
+**🤝 IMAP and SMTP Relationship**
+
+IMAP and SMTP are two sides of the same coin in the email ecosystem:
+
+| Protocol | Function | Role | Analogy |
+| :--- | :--- | :--- | :--- |
+| **SMTP** | **Sending** (Push) | Used to **push** the email *from* your client *to* the outgoing mail server. | The **postman** who picks up your letter and delivers it to the post office. |
+| **IMAP** | **Receiving** (Pull) | Used to **pull** the email *from* the incoming mail server *to* your client. | The **mailbox** at your house where you retrieve your letter. |
+
+**How They Work Together:**
+
+1.  When you click **"Send"** in your email program, the message is sent using **SMTP** to the recipient's mail server.
+2.  When the recipient opens their email program, it uses **IMAP** (or POP3, an older alternative) to connect to their incoming mail server and **retrieve** the new message.
+
+In essence, **SMTP handles the delivery** of the mail, while **IMAP handles the retrieval and management** of the mail once it has arrived at the recipient's server.
+
+
+#### Dovecot 
+
+**Dovecot** is indeed one of the most popular, high-performance, and secure IMAP and POP3 servers available, and it is designed for **open-source** and **self-hosting**.
+
+* https://dovecot.org/
+
+> The Secure IMAP server - The World’s Leading Email Backend Platform
+
+Here's the breakdown:
+
+| Attribute | Status | Details |
+| :--- | :--- | :--- |
+| **Open Source** | **Yes** | The core Dovecot software is open-source, primarily licensed under the **MIT and LGPLv2** licenses. This means you can freely download, use, and modify the software. |
+| **Self-Hostable** | **Yes** | Dovecot's primary purpose is to be the **Mail Storage Server** component of a self-hosted email infrastructure. You install it on your own server (often alongside an SMTP server like Postfix or Exim) to manage user mailboxes. |
+| **Function** | **IMAP Server** | It is specifically the application that handles IMAP (and POP3) connections from email clients, allowing users to access and manage their mail on the server. |
+
+In fact, Dovecot is highly dominant in this space, reportedly having a global market share of over **75%** of all IMAP servers.
+
+If you are setting up your own mail server, Dovecot is the industry-standard choice for the **Mail Access** (IMAP/POP3) component.
+
+### Web Paradigms: SPA, MPA, CSR, SSR, SSG
 
 The primary difference between these two paradigms has to do with the way they model evaluation context.
 
 In server usage, the evaluation context changes frequently, as often as every evaluation, while in client-side usage, the evaluation context changes less frequently, often in response to user actions or UI events.
-
-### Web Paradigms: SPA, MPA, CSR, SSR, SSG
 
 **SPA (Single Page Application)**
 

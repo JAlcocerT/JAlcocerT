@@ -2,14 +2,14 @@
 title: "Interesting FMCG Concepts"
 date: 2020-12-30
 draft: false
-tags: ["Analytics","D&A","Career","SAP HANA","ERP vs CRM"]
+tags: ["Analytics","D&A","Career","SAP HANA","ERP vs CRM","Consumer Intelligence"]
 description: 'Interesting Logistic and Supply Chain. From Planning to Delivery.'
 url: 'fmcg-concepts-101'
 ---
 
-**TL;DR** Several years after taking a course of SCM from the KAIST, its time to put together some practical post about logistics.
+**TL;DR** 
 
-+++ [SAP](#what-about-sap)
+Several years after taking a course (MOOC) of SCM from the KAIST, its time to put together some practical post about logistics.
 
 **Intro**
 
@@ -17,6 +17,8 @@ Why is your logistic manager so obssesed with that Fill Rate to be as close to 1
 
 It's all about [lean](https://jalcocert.github.io/JAlcocerT/lean/) customer center pull approach and the very low margins and volume required for this kind of business to work.
 
++++ [SAP](#what-about-sap)
++++ [About Consumer Intelligence](#consumer-intelligence)
 
 ## FMCG
 
@@ -66,6 +68,58 @@ This is exactly what a time-series database is built for.
 When you **developed the databases** and **provided the recommendations** you become person who understood the raw, complex data and translated it into a user-friendly format (dashboards, KPIs) that the business users from FMCT clients could understand and act upon.
 
 > This is a classic example of a Business Analyst role: bridging the technical and business sides.
+
+
+---
+
+
+## Conclusions
+
+FMCG and [its concepts](#fmcg-concepts) can be applied across different industries - like [*life science* > pharma](#whats-the-difference-between-life-sciences-and-pharma).
+
+### About Consumer Intelligence
+
+Consumer Intelligence is the practice of using data and analytics to understand and predict consumer behavior and preferences. 
+
+It can be used to inform marketing and sales strategies, product development, and other business decisions.
+
+Consumer intelligence analytics is the practice of collecting, analyzing, and interpreting consumer data to generate actionable insights about customers’ behaviors, motivations, preferences, and needs.
+
+Businesses use these insights to improve customer experience, personalize marketing efforts, target the right audiences, and inform strategic decisions by understanding customers beyond basic demographics.
+
+**Key Concepts**
+
+- Consumer intelligence leverages data from transactions, online activity, surveys, market research, social media, and more to create deep customer profiles and predict behaviors.[5][2]
+- The analytics process typically involves quantitative methods (like statistical analysis) and qualitative inputs (such as reviews or survey responses) to deliver a holistic view.[7][5]
+- The ultimate goal is to guide decisions that improve product offerings, customer interactions, and business outcomes by accurately anticipating customer desires and market trends.[3][8]
+
+Areas of Application
+
+- Marketing campaign optimization and audience segmentation for targeted communication.[2][7]
+- Customer relationship management and identification of upsell/cross-sell opportunities.[4]
+- Churn prediction and enhancement of customer loyalty through improved service experiences.[9]
+- Product development informed by real-time insights into what motivates consumer choices.[8]
+
+Example Data Sources
+
+- Purchase history and website analytics
+- Social media activity and sentiment analysis
+- Feedback from focus groups, surveys, and case studies
+- Demographic and behavioral data[6][2]
+
+Consumer intelligence analytics helps businesses deepen customer relationships, increase conversion rates, and maintain competitiveness in dynamic markets by using data-driven knowledge to anticipate and meet evolving consumer needs.[8][2]
+
+Consumer intelligence analytics is closely related to marketing and FMCG (Fast-Moving Consumer Goods) sectors.
+
+In marketing, it is used to understand customer preferences, behaviors, and trends to tailor campaigns, personalize messaging, and improve targeting accuracy.
+
+This helps marketers maximize the effectiveness of their efforts and boost customer engagement and sales.
+
+In the FMCG industry, where products are purchased frequently and competition is intense, consumer intelligence analytics plays a crucial role in tracking consumer buying patterns, predicting demand, optimizing product assortments, and enhancing customer loyalty.
+
+Businesses in FMCG leverage these insights to make data-driven decisions about product development, pricing, distribution, and promotional strategies to stay competitive and meet customer expectations effectively.
+
+Overall, consumer intelligence analytics provides vital support for marketing strategies and operational decisions in FMCG by delivering a detailed understanding of consumer behavior and market dynamics.
 
 ---
 

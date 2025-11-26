@@ -122,10 +122,14 @@ wg show
 2. Verify the external IP of your `qBittorrent` traffic to confirm it uses the WireGuard tunnel:
    - Check your IP address via a tracker (e.g., [ipleak.net](https://ipleak.net)) or using the tracker settings in `qBittorrent`.
 
+Go inside your container and execute:
+
 ```sh
 #docker exec -it qbittorrent sh
 curl -sS https://ipinfo.io/json #the command to use
 #wget -qO- https://ipinfo.io/json
+#curl ifconfig.me
+#curl checkip.amazonaws.com
 
 #for windows you would use
 #powershell -Command "(Invoke-WebRequest -Uri https://ipinfo.io/json).Content"

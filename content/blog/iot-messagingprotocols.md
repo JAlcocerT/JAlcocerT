@@ -130,6 +130,8 @@ MQTT works as PUB/SUB - See a sample project with a Pi https://jalcocert.github.
 
 #### MQTT Use Case
 
+Lets say that you have [a car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/)...
+
 **Monitor a Car Battery Remotely using ESP8266**
 
 <!-- https://www.youtube.com/watch?v=VnGRFwDrLHo -->
@@ -171,6 +173,29 @@ It can manage complex workflows, ensure data consistency, and improve system rel
 
 #### Tools for MQTT
 
+Before jumping and installing tools, give it a try to **curl for MQTT**:
+
+```sh
+curl --output - "mqtt://test.mosquitto.org:1883/demo/hello" #GET (will be waiting for sth to be received)
+```
+
+And send a sample message: which will apear on the first terminal
+
+```sh
+curl -d "hi from curl" "mqtt://test.mosquitto.org:1883/demo/hello" #POST/publishes a sample msg
+```
+
+0. Test your MQTT projects with [Hoppscotch](https://hoppscotch.io/) or ekuiper
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/hoppscotch/" title="Hoppscotch | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+wget https://github.com/hoppscotch/releases/releases/latest/download/Hoppscotch_linux_x64.deb
+sudo apt install ./Hoppscotch_linux_x64.deb #https://hoppscotch.com/download
+```
+
 1.  ThingBoards https://github.com/thingsboard/thingsboard
 
 2. MQTTX
@@ -180,6 +205,7 @@ It can manage complex workflows, ensure data consistency, and improve system rel
 ```sh
 flatpak install flathub com.emqx.MQTTX
 ```
+
 ![MQTT Desktop](blog_img/iot/mqttx-desktop.png)
 
 3. MQTT Explorer
@@ -188,7 +214,7 @@ flatpak install flathub com.emqx.MQTTX
 
 ### Apache Kafka
 
-https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.kafka/
+* https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.kafka/
 
 **Apache Kafka** is a distributed event streaming platform that is used for building real-time data pipelines and streaming applications.
 
@@ -241,6 +267,18 @@ These tools will also be useful:
 
 If you want to get into electronics, see also: LibrePCB
 
+
+### Why the Difference between HTTP and MQTT
+
+The difference lies in the nature of the protocols 💡 :
+
+* **HTTP (Reqable, HTTPie):** This is a **request-response** protocol. A client sends a request (GET, POST) and the server sends a response.
+* **MQTT (Hoppscotch):** This is a **publish-subscribe** protocol. A client connects to a central broker and then either publishes messages to a topic or subscribes to a topic to receive messages pushed by the broker.
+  * **It requires a persistent connection**, which is fundamentally different from a standard HTTP transaction.
+
+Tools that aim to be **multi-protocol API platforms** (like Hoppscotch) have explicitly added the necessary architecture to handle the persistent, bidirectional messaging required by MQTT.
+
+
 ### MQTT x PicoW x DHT22
 
 For the Pi4 it was very simple to get the pin schematics:
@@ -270,7 +308,7 @@ As per [this video](https://www.youtube.com/watch?v=eNF3X3D0cH4)
 * Possitive (VCC) to VBUS from the PicoW 
 * Negative to ground (GND) of the PicoW 
 
-![alt text](/blog_img/iot/picoW/picow-dht22.png)
+![PicoW working with a DHT22](/blog_img/iot/picoW/picow-dht22.png)
 
 {{< callout type="info" >}}
 The [DHT11 is blue](https://jalcocert.github.io/RPi/posts/rpi-iot-dht11-influxdb/), and the [DHT22 is white](https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/)
@@ -310,13 +348,11 @@ And now you should be able to subscribe to:
 2. `pico/humidity/dht22`
 3. `pico/temperature/dht22`
 
-![alt text](/blog_img/iot/picoW/emqx-topics.png)
+![EMQX Showing the Topics available from the sensor data](/blog_img/iot/picoW/emqx-topics.png)
 
 {{< callout type="warning" >}}
 Remember to [update the `configurtion.yml` from HA](https://github.com/JAlcocerT/Home-Lab/blob/main/home-assistant/configuration.yaml), so that the MQTT integration will be able to listen to the new topic names 
 {{< /callout >}}
-
-
 
 {{< callout type="info" >}}
 Now im getting just +1C compared with the other reference temp sensor I have at home!
@@ -334,15 +370,7 @@ for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
 > I made the `video edit` very quick!
 
 
-### Outro
-
-#### Zigbee
-
-If you have been playing with IoT and some home devices, you will come to know Zigbee.
-
-* https://www.zigbee2mqtt.io/supported-devices/#
-
-Probably also https://esphome.io if you like ESP32 boards!
+---
 
 ## FAQ
 

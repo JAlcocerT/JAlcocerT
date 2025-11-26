@@ -152,6 +152,11 @@ Link analytics solutions, like Kutt: `https://kutt.it/`
 
 ![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
 
+You can always check what is the shortened link pointing with:
+
+```sh
+curl -sIL https://youtu.be/sGUjmyfof4Q?t=568  | grep location:
+```
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/sink" title="Sink works on cloudflare!| Config 🐋 ↗" >}}
@@ -305,6 +310,10 @@ Here is the release of SteamOS: https://store.steampowered.com/steamos/ -> https
 ![download steam os](/blog_img/outro/steamos.png)
 
 You will save a file like `steamdeck-repair-20250521.10-3.7.7.img.bz2` of about ~3gb size.
+
+```sh
+time bzip2 -d steamdeck-repair-20250521.10-3.7.7.img.bz2 ~2/3min
+```
 
 I proceeded like I do for [testing any distro](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started), spinning it via [Gnome Boxes as a VM](https://jalcocert.github.io/JAlcocerT/testing-nix-os/)
 

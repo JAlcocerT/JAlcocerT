@@ -7,20 +7,6 @@ description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
 
-
-info products and one time payment artifacts are a thing
-
-https://github.com/mrwyndham/pocketbase-stripe
-https://www.fastpocket.dev/pricing
-
-Pay me to save you time, kind of a mix of DIY/DWY/DFY in a package
-
-
-<!-- * OpenStreetMap
-* PirateWeather
-* HuggingFace
-* Anomally Detection -->
-
 Offers
 
 1. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code .mdx
