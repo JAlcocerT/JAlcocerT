@@ -2,7 +2,7 @@
 title: "Networking - Understanding Domains and DNS Setup"
 date: 2025-09-24
 draft: false
-tags: ["DNS vs ENS","Web2 vs Web3 vs Crypto","DNSMap","PolyMarket & OO","dnsmap"]
+tags: ["DNS vs ENS","Web2 vs Web3 vs Crypto","DNSMap","PolyMarket & OO"]
 description: 'How to Setup DNS for your Domains. Also UDs.'
 url: 'web-domain-basics'
 ---
@@ -12,6 +12,8 @@ url: 'web-domain-basics'
 More goodies for your homelab.
 
 +++ and [why and how](#faq) we can interact with SC's (Smart contracts) and [web3](https://jalcocert.github.io/JAlcocerT/guide-web3/) from regular web2 domains.
+
++++ Does this has sth to do with [crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/) at all?
 
 **Intro**
 
@@ -246,6 +248,12 @@ In summary, while Web3 domains enhance the decentralized web experience, interac
 ### PolyMarket
 
 The **SC seems** to be in Polygon: https://polygonscan.com/address/0x4d97dcd97ec945f40cf65f87097ace5ea0476045
+
+
+{{< callout type="warning" >}}
+Check your country regulations, as this kind of ~ **prediction market** might be regulated in your country!
+{{< /callout >}}
+
 
 <!-- 
 twitter

@@ -19,10 +19,11 @@ Last year I started to write about [jobs/cvs and scrapping](https://jalcocert.gi
 {{< /cards >}}
 
 
-https://jalcocert.github.io/JAlcocerT/about-inflation/
-![Levels InflationChat Website](/blog_img/data-experiments/inflation-chart.png)
 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/about-inflation/" title="Scraping Post 101" image="/blog_img/data-experiments/inflation-chart.png" subtitle="Inflation happens, so should be your job position if you keep learning" >}}
+{{< /cards >}}
 
 So getting an updated CV as a code, with frameworks [like YAMLresume](https://jalcocert.github.io/JAlcocerT/about-inflation/#a-cv-via-yamlresume-vs-overleaf) is one of the things that you can do.
 
@@ -30,15 +31,24 @@ Other thing, is to upskill.
 
 For a D&A career you have many roadmap alternatives: https://roadmap.sh/
 
-Depending if you are a [PBi developer](https://jalcocert.github.io/JAlcocerT/about-powerbi/), [GCP](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) Cloud engineer, [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/) analytics
+Depending if you are a [PBi developer](https://jalcocert.github.io/JAlcocerT/about-powerbi/), [GCP](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) Cloud engineer, [Big Data Modelling & Analytics](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/) or [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/) / Crypto business domains. 
+
+
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards - See Remote Trends" >}}
-  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CV as a Code, via Latex or YAMLResume. Together with your Historieta" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scraping Post 101" image="/blog_img/data-experiments/job-market.png" subtitle="Tinkering on Y24 with Firecrawl, crawl4AI, ScrapeGraph..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/blog_img/memes/oldnewjob.jpg" subtitle="Post where I tinkered with scrapping tools and job offers" >}}
 {{< /cards >}}
 
+If you career has been across different industries, you will need a [proper story](https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/#historieta) to package it.
 
+And with time, you better have that [historieta and your applications git controlled](#conclusions).
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Questions2HR.md" title="HR QQ 🐵 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex/blob/main/MyExperience/Questions2Managers.md" title="Manager QQ 🐵 ↗" >}}
+{{< /cards >}}
 
 **Intro**
 
@@ -539,12 +549,42 @@ So, in a full Enterprise Semantic Model, you will have **many dimension tables**
 
 ---
 
+## Conclusions
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards - See Remote Trends" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CV as a Code, via Latex or YAMLResume. Together with your Historieta" >}}
+{{< /cards >}}
+
+---
+
 ## FAQ
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/" title="Time Management Data Analytics | Post " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tools-to-improve-focus/" title="Tools to Improve Focus | Post" >}}
+
+{{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-databases-docker/" title="Setup Databases Docker | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="Setup BI Tools Docker | Post" >}}
+{{< /cards >}}
+
 
 ### BI with AI?
 
-* https://github.com/microsoft/data-formulator
+If you dont want to Vibe code your own PoC with Streamlit...
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/" title="Job Trends Repo" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PoC PyGWalker Rendered Map with locations" >}}
+{{< /cards >}}
+
+You have some AI.BI Tools, like:
+
+1. https://github.com/microsoft/data-formulator
 
 > MIT | 🪄 Create rich visualizations with AI
 
-* You can also make Python scripts to write for you tedious and repetitive Grafana dashboards (like x400 pannel creation)
+2. You can also vibe code a Python scripts to write for you tedious and repetitive Grafana dashboards (like the ~ x400 pannel creation)

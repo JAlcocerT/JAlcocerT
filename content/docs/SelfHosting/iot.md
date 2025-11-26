@@ -10,7 +10,7 @@ url: 'cool-iot'
 I got started with IoT thanks to a [Pi SBC](https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/) and made some public projects, which I documented [also publically, here](https://jalcocert.github.io/RPi/).
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/pi-vs-orange/" title="O"range Pi vs Raspberry Pi image="/blog_img/hardware/RPi4_2_vs4gb.jpg" subtitle="SBC for IoT - Comparison" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/pi-vs-orange/" title="Orange Pi vs Raspberry Pi" image="/blog_img/hardware/RPi4_2_vs4gb.jpg" subtitle="SBC for IoT - Comparison" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="You might get help of some visualizations and BI Tools" image="/blog_img/iot/grafana.png" subtitle="Like Grafana!" >}}  
 {{< /cards >}}
 
