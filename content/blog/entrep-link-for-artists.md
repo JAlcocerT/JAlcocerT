@@ -1,8 +1,8 @@
 ---
 title: "Links for Artists"
-date: 2025-11-27T10:20:21+01:00
+date: 2025-11-28T10:20:21+01:00
 draft: false
-tags: ["Web Analytics vs Link Analytics","BiP","Lynx","Vibe Coding vs Spec Driven Development"]
+tags: ["Web Analytics vs Link Analytics","BaaS with yaml","Vibe Coding vs Spec Driven Development"]
 url: 'link-artists'
 description: 'Dear famous people, where are you going next? About B2C and revealed preferences.'
 ---
@@ -17,8 +17,6 @@ Thats what social media has made us believe we are
 All while we place the head of a pig in the public, while we actually sell dogs.
 
 
-https://linktr.ee/lynnic
-https://www.youtube.com/@lynnic/featured
 
 <!-- 
 https://www.skool.com/@adriana-drozdowicz-4965 -->
@@ -53,6 +51,9 @@ I have added few shortcodes:
 {{< /cards >}}
 
 
+
+https://linktr.ee/lynnic
+https://www.youtube.com/@lynnic/featured
 
 
 https://indiepa.ge/charlieclark
@@ -183,6 +184,8 @@ Por otro lado, la preferencia revelada se basa en observar el comportamiento rea
 ### Vibe Coding is...old?
 
 People seem to be moving from vibe coding to...sth new: spec driven development they call it.
+
+![Spec Driven Development - Meme](/blog_img/GenAI/spec-driven.png)
 
 And these are some tools:
 

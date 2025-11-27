@@ -215,7 +215,9 @@ Would you like help setting up your `nuxt.config.ts` file for optimal SSG deploy
 
 ## About Nuxt
 
-Nuxt is a free and **open-source framework** (not an SSG!) with an intuitive and extendable way to create type-safe, performant and production-grade **full-stack web applications and websites with Vue.js**.
+Nuxt is a free and **open-source framework** (not an SSG!) 
+
+Wth an intuitive and extendable way to create type-safe, performant and production-grade **full-stack web applications and websites with Vue.js**.
 
 * https://github.com/nuxt/nuxt
   * https://nuxt.com/deploy

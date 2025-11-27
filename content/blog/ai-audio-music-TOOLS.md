@@ -41,6 +41,8 @@ If you need a NAS, you can check HexOS
 
 Not a post about Gonic nor Sonixd.
 
+Neither to talk about how I ended up collaborating on a troll song that got uploaded to Spotify.
+
 You have multiple options to create music with AI, including ready-to-use platforms and Python-based tools for custom projects.
 
 ### General AI Music Creation Options

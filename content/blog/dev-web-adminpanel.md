@@ -1,6 +1,6 @@
 ---
 title: "Admin Panels for Websites | Manifest vs PB"
-date: 2025-11-27
+date: 2025-11-9
 tags: ["SaaS","Authentication","Simple BackEnd"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
@@ -32,10 +32,6 @@ And suddendly, I have found an interesting solution (that its vibe-code friendly
 
 **On this post**: I want to compare how Manifest compares to Pocketbase as selfhosted BaaS solution and as **admin panel**
 
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/manifest" title="Manifest | Portable Backend as YAML | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
 
 ## Manifest
 
@@ -53,11 +49,13 @@ And suddendly, I have found an interesting solution (that its vibe-code friendly
 
 **Why manifest**
 
-Manifest is an Open Source, portable backend that fits into 1 YAML file. Easy for both humans and LLMs to generate and validate.
+Manifest is an Open Source, **portable backend** that fits into 1 YAML file. 
+
+Easy for both humans and LLMs to generate and validate.
 
 Host it on any server that can run NodeJS.
 
-Manifest comes with essential features like auth and custom logic, and a built-in admin panel.
+Manifest comes with **essential features** like auth and custom logic, and a built-in admin panel.
 
 Manifest fits great in those type of projects:
 
@@ -68,18 +66,14 @@ Manifest fits great in those type of projects:
 
 ### Manifest 101
 
-This sounds great for quick PoCs:
-
-* https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
-
-![Streamlit PyGWalker Rendered Map with locations](/blog_img/apps/streamlit/st_pygwalker_map.png)
+This sounds great for **quick PoCs**:
 
 {{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="Streamlit PoC Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PyGWalker Rendered Map with locations..." >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
 {{< /cards >}}
 
 But how to **get started with Manifest**?
-
 
 ```sh
 npx create-manifest@latest  --windsurf
@@ -102,13 +96,21 @@ Or as I did recently with **NextJS**
 
 ### Manifest vs PocketBase
 
-Ive discovered PB this year and its uses cases have been great so far.
+Ive [discovered PB this year](https://jalcocert.github.io/JAlcocerT/pocketbase/) and its uses cases have been great so far.
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/manifest" title="Manifest | Portable Backend as YAML | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 Including the providing [authentication for statically deployed SSGs via CF Workers](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/) and [SMTP email integration](https://jalcocert.github.io/JAlcocerT/email-verification-pocketbase/).
 
 ---
 
-## Other OSS Admin Panels
+## FAQ
+
+### Other OSS Admin Panels
 
 * https://github.com/ColorlibHQ/AdminLTE
 
@@ -116,37 +118,30 @@ Including the providing [authentication for statically deployed SSGs via CF Work
 
 * https://github.com/incluud/accessible-astro-dashboard
 
-> MIT | An Accessible Admin Dashboard Theme for Astro with a login page and a dashboard overview. Includes accessibility features such as landmarks, better focus-outline and skip-links navigation.
+> MIT | An Accessible **Admin Dashboard Theme for Astro** with a login page and a dashboard overview. Includes accessibility features such as landmarks, better focus-outline and skip-links navigation.
 
-
-### AdminJS
-
-* https://adminjs.co/
+* https://github.com/SoftwareBrothers/adminjs
+  * https://adminjs.co/
 
 > Open-Source Admin Panel for your Node.js Application
 
-* https://github.com/SoftwareBrothers/adminjs
-
-AdminJS is an admin panel for apps written in node.js
 
 * https://docs.adminjs.co/installation/getting-started
 * https://docs.adminjs.co/basics/authentication
 
-### Tailadmin
 
 * https://tailadmin.com/
 
-### Open Admin
+> MIT | Free and Open-source Tailwind CSS Dashboard Admin Template that comes with all essential dashboard UI components, pages and elements
+
 
 * https://open-admin.org/
-* https://github.com/open-admin-org/open-admin
+  * https://github.com/open-admin-org/open-admin
 
-### Flask Dahobards
+> MIT | open-admin forked from z-song/laravel-ladmin (PHP). Removing jquery, now based on Bootstrap5, vanilla JS 
 
-* https://appseed.us/admin-dashboards/open-source/
 * https://github.com/app-generator/flask-argon-dashboard
 
+* https://github.com/akveo/ngx-admin
 
-###  NGX Admin
-
-https://github.com/akveo/ngx-admin
+> Customizable admin dashboard template based on Angular 10+

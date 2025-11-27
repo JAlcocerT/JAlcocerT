@@ -60,13 +60,15 @@ I just went with FastAPI as per gemini and [this md doc](https://github.com/JAlc
 
 {{< /details >}}
 
-I just went forward with cursor and fastAPI:
+I just went forward with **cursor and fastAPI**: *to create the following audio centered web app*
 
 ![Fast API WebApp with audio recording capabilities](/blog_img/GenAI/audio/fastapi-audio-rec.png)
 
 And quickly made that simple UI, connected to OpenAI TTS/S2T capabilities.
 
 With such architecture, see [mermaid](https://mermaid.live/view#pako:eNqFVU1v2zgQ_SsEi96oJJLsyBGKAo6_4sSOnY0XBXa9WDASFROxSZWiGneDANt7DwsssIdeeukP3J_QERnJkgEjOhh-5HtvhjND6QlHMmY4xPeKpiu0OF8KBE-W39mFoZJCMxH_vsT_f__6T4XRL-xjzjKdLfEfVlI8XaD9mjGFupHmUuw2QWH_7Nl352Pj_O1vNKSZBogGIk4lF3vO50AbDRbo-N2dOn4_pVygMSSiEhqxBrEHxPnsFph5upY0dmgec2lUt_QTg7wjqWIu7huqfmmvyu3sOOFrJuiGGW1fPorCDnULu4Z2UGrXPNPOzsDoJrCGHrleoVtNdd481LDKVSsqskjxO9YMO2KCKaoZWrwQUt1wGJWxdbV_KPEDDhe7HPalu-CL24ZmXEXVma3voZh7wstSSFPuZKYgRtBbsegB9aRI-H0OIWF2Xh2dwRbaL-jazM-P_ypczFSzzFdAmaVMdMfow4pnaTGf87EdiZSxaOVo6SzYtlmYyU5lWZWooBYSu_xqokMozSzNTJ7_fjEQgbE9ZjPTKZDMlE7nPtIS1aaxwbuueP2CVm9-gzfb84N-_Wn71aDNgWZbULQRsS0MLRN7F-um8GIKzIrG8chwD97wLnKc9-i8Dnp1MKiDYR1c1MFl3bNnlqYWDA24suDCgIkFVwZcWzAxYGbBwIC5BX0DbiwY1cG4Duzv27dwfz-vi9eGwdGaZlmfJSgp34dQjXX4hvmJl8Qk00o-sPDNiRcEdyV0HnmsV6GXbvc84DK8yBM36bCzSu77p2cue03OysF_8UjAw608knaQuMFrHqaXpUHEWiyqDGjsttqHDGo20LGyGPXVc9IjfTIgQzIiF2RMLovj1glXZFIdob4-JddkRubk5mXQBCbwkeIxDrXKGcEbpja0gPipkC2xXrENjGwIf2OqHpZ4KZ5Bk1Lxm5SbUqZkfr_CYULXGaA8jeEF1-cUruqOAkdgqidzoXHYPu0YDxw-4S0OHTc4agWtwHV9t9PyvQB2P-PQ67SOOl4nCDwfqnVy5j4T_JeJenJ01mnD4qnX9vzgxPdOCWYx11JN7YfXfH-ffwKgkkvm)
+
+Now, there is nothing stopping you to record your voice, get the transcript, make TTS and upload it as a serverless Podcast:
 
 <!-- https://youtu.be/mDMGtMOx-Fk -->
 
@@ -109,7 +111,7 @@ Best for: User-friendly editing
 
 
 {{< callout type="info" >}}
-A wysiwyg markdown editor post is coming soon. ToastUI seems a great candidate!
+A wysiwyg markdown editor post is coming soon. **ToastUI** seems a great candidate!
 {{< /callout >}}
 
 Thanks to the implemented monaco editor, we can just quickly tweak the content of the transcript before saving the `.md`
@@ -118,7 +120,7 @@ Thanks to the implemented monaco editor, we can just quickly tweak the content o
 
 I wanted to combine finally FastAPI (BE) x SQLITE for simple user management x A cool Astro SSG Theme
 
-because...
+Because...
 
 How could I not try and astro theme...
 
@@ -134,7 +136,7 @@ After asking to Cursor to connect the astro theme with FastAPI and make login po
 
 ![FastAPI x signup integrated with astro](/blog_img/GenAI/audio/fastapi-astro-signup.png)
 
-This happened:
+This happened: *I combined the existing theme, with FastAPI and sqlite authentication for user management!*
 
 ```sh
 # Start both servers
@@ -164,7 +166,7 @@ Im still impressed on **sqlite greatness**!
   {{< card link="https://jalcocert.github.io/JAlcocerT/databases-101/#database-management--gui-tools" title="There are many Db Tools | Post ↗" >}}
 {{< /cards >}}
 
-And I got to try also [ChartDB](https://github.com/chartdb/chartdb) and [DBGate](https://github.com/dbgate/dbgate).
+And I got to try also [ChartDB](https://github.com/chartdb/chartdb) and [DBGate](https://github.com/dbgate/dbgate) towards that sqlite created:
 
 ```sh
 docker run -e OPENAI_API_KEY=<YOUR_OPEN_AI_KEY> -p 8080:80 ghcr.io/chartdb/chartdb:latest
@@ -279,7 +281,6 @@ Both `Otter.ai` and `Fireflies.ai` support recording audio on Android apps and p
 - Otter.ai Android app lets you record meetings, voice memos, and in-person conversations with real-time transcription. All recordings and transcripts automatically sync to Otter's cloud and can be accessed, searched, edited, and shared on Otter’s web app. Users can pause/resume recordings and rename conversations.
 
 It supports live transcription during recordings and exports in multiple formats like TXT, DOCX, and PDF.
-
 
 - Fireflies.ai Android app also records audio and meetings directly from mobile. Users can upload audio/video files from the app for transcription and AI meeting analysis. The transcripts, summaries, and audio files are fully accessible in the Fireflies web dashboard, with features like searching transcripts, creating soundbites, and interacting with their AI assistant AskFred from both mobile and web. 
 
