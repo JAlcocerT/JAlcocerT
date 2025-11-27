@@ -54,6 +54,35 @@ Uptime Kuma status pages example: `https://status.tromsite.com/status`
 ![Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
 
 
+
+See also how **Peekaping**
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#monitoring-for-homelab" title="Testing PeekaPing Status Pages" image="/blog_img/Monitoring/peekaping-status-pages-monitoring.png" subtitle="Monitoring services and embedding their status" >}}
+{{< /cards >}}
+
+
+![Peekaping Status Pages Example](/blog_img/Monitoring/peekaping-status-pages-monitoring.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/peekaping" title="Peekaping - Status Pages | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+```html
+<p>
+    <img src="https://your-peekaping-instance.com/api/v1/badge/api-monitor/status" alt="API Status" />
+</p>
+```
+
+As I have it running locally: `http://192.168.1.2:8383/monitors` these are rendered via `hugo server`
+
+Which can be embeded into your posts and websites via its API, like:
+
+```
+![My Local Service Status](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/status)
+```
+
 Another option, is **Kener**
 
 

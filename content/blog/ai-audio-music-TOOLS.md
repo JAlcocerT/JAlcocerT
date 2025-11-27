@@ -1,6 +1,6 @@
 ---
 title: "How to create music with AI Tools"
-date: 2025-11-13T23:20:21+01:00
+date: 2025-11-27T07:20:21+01:00
 draft: false
 tags: ["Docker","Gen-AI","SunoAI"]
 description: 'Tryign to Make music with AI'
@@ -15,6 +15,22 @@ Few years back I helped a friend to create a song and publish it to spotify.
 It was ton of fun.
 
 But can we now do music with AI?
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
+
+![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
+
+![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
+
+![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
+
+
+If you need a NAS, you can check HexOS
+
 
 **Intro**
 
@@ -147,7 +163,7 @@ How To Install Audiocraft Locally - Meta's FREE And Open AI Music Gen
 
 https://gist.github.com/mberman84/afd800f8d4a8764a22571c1a82187bad
 
-
+```sh
 arm64: apt install ffmpeg
 conda install -c pytorch -c conda-forge pytorch
 
@@ -155,7 +171,7 @@ conda install -c pytorch -c conda-forge pytorch
 https://www.gyan.dev/ffmpeg/builds/
 choco install ffmpeg
 ffmpeg –version
-
+```
 
 
 * {{< newtab url="/" text="The Site" >}}
@@ -190,8 +206,6 @@ You can try simply LLMs!
 ---
 
 ## FAQ
-
-
 
 ### Interesting Music Related Projects
 

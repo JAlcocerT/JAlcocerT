@@ -298,9 +298,9 @@ See the open meteo endpoints: `https://api.open-meteo.com/v1/forecast?city=${cit
   {{< card link="https://github.com/JAlcocerT/trip-planner-with-weather" title="Trip Planner with Weather" image="/blog_img/apps/TripPlanner/TripPlanner-UI.gif" subtitle="Trip Planner with Weather | Post " >}}
 {{< /cards >}}
 
-> There is also a PirateWeather API: https://github.com/Pirate-Weather/pirateweather
+> There is also a PirateWeather API: https://github.com/Pirate-Weather/pirateweather or https://opendata.aemet.es/centrodedescargas/inicio
 
-> > Which is a weather api alternative, but with requires an API key
+> > Which is a weather api alternative, but both require an API key
 
 We also have:
 
@@ -530,6 +530,10 @@ If the [formula 1 data](#formula-1) was not enough:
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+2. https://github.com/marcelscruz/public-apis or https://github.com/agustinusnathaniel/pub-apis
+
+>  MIT | A collaborative list of public APIs for developers - https://publicapis.dev/
 
 
 ## Checking APIs

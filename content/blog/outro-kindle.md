@@ -2,7 +2,7 @@
 title: "Kindle, ebooks 101, notes and Pandoc"
 date: 2025-09-17
 draft: false
-tags: ["Katex vs Typst","kindle modding","ebook Notes Knowledge Base","sell-your-ebook","Affine"]
+tags: ["Katex vs Typst","kindle modding","ebook Notes Knowledge Base","sell-your-ebook","Affine","kener"]
 description: 'Create your ebook and sell it on your website. Clear the chaos with Perplexity or notebookllm?'
 url: 'kindle-clippings-knowledge-base'
 ---
@@ -31,7 +31,9 @@ Just waiting for you to get and read them.
 
 So this is mostly a create + understand notes from kindle.
 
-Rather than a way to admire how people have created **static status pages**: https://open-slum.pages.dev/ nor [get things](https://annas-archive.org/). 
+Rather than a way to admire how other people have created things.
+
+Like these **static status pages**: https://open-slum.pages.dev/ nor [get things](https://annas-archive.org/). 
 
 > Uptime monitor / status pages in cloudflare pages
 

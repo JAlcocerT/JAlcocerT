@@ -2,7 +2,7 @@
 title: "SelfHosting done Easy with UmbrelOS - Nov 2025"
 date: 2025-11-14T01:20:21+01:00
 draft: false
-tags: ["Web Analytics vs Link Analytics","Adventures x GPX","HomeLab Setup"]
+tags: ["Analytics with onchain data sample","Adventures x GPX","HomeLab Setup"]
 description: 'Using OS on the browser. Measuring the More, better, new online performance.'
 url: 'selfhosted-apps-nov-2025'
 ---
@@ -10,6 +10,10 @@ url: 'selfhosted-apps-nov-2025'
 **TL;DR**
 
 Getting started with a HomeLab/Selfhosting can be easy, actually.
+
+With tools like UmbrelOS.
+
++++ [On Chain](#on-chain) data sample
 
 **Intro**
 
@@ -87,138 +91,6 @@ docker exec bitcoin_app_1 bitcoin-cli getblockchaininfo
 More on this, [later](#big-data-analytics-with-on-chain-data).
 
 > Yes, this is an D&A Adventure that I could not avoid mentioning :)
-
-### SelfHosted WebAnalytics
-
-Every time I read the selfh.st newsletter I find a new web analytics tool trying to replace Umami:
-
-* https://github.com/seuros/kaunta
-
-> Privacy-focused analytics engine written in Go
-
-* https://github.com/electerious/Ackee 
-
-But imo, Umami should be one of those **HomeLab essentials** tools to consider.
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="SelfHostable WebAnalytics Tools 🐋✅ ↗" >}}
-{{< /cards >}}
-
-<!-- ![Cookies Meme](/blog_img/web/COOKIES.jpg) -->
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#better-webanalytics" title="Better web Analytics from 0525" image="/blog_img/web/COOKIES.jpg" subtitle="Post views distribution" >}}
-{{< /cards >}}
-
-
-{{< cards >}}
-  {{< card link="https://github.com/Litlyx/litlyx" title="Litlyx Repo" image="/blog_img/web/weban/littlyx-weban.png" subtitle="How Litlyx web analytics looks" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/" title="Litlyx Post Views Distribution" image="/blog_img/web/weban/litlyx.png" subtitle="How could this not relate with Pareto?" >}}
-{{< /cards >}}
-
-> Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
-
-![Web Analytics with LunaLytics](/blog_img/selfh/HomeLab/weban-lunalytics.png)
-
-![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
-
-
-See also:
-
-1. https://github.com/abegehr/chickadee
-
- > Simple, privacy-focused web analytics you can self-host on Cloudflare. 
-
-2. https://github.com/benvinegar/counterscale
-
- > Scalable web analytics you run yourself on Cloudflare 
-
-3. Dashflare - https://github.com/jorgelbg/dashflare
-
->  🕵🏼‍♀️ Open Source and privacy-focused analytics solution. 📊 Advanced monitoring for your website behind Cloudflare 
-
-
-
-#### Link Analytics
-
-Some [selfhosted url shorteners](https://fossengineer.com/selfhosted-open-source-url-shorteners/) will bring you analytics and QR as well.
-
-See https://github.com/738/awesome-url-shortener?tab=readme-ov-file#self-hosting-opensource
-
-Link analytics solutions, like Kutt: `https://kutt.it/`
-
-![SelfHosting Kutt](/blog_img/selfh/links/kutt-selfh.png)
-
-![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
-
-You can always check what is the shortened link pointing with:
-
-```sh
-curl -sIL https://youtu.be/sGUjmyfof4Q?t=568  | grep location:
-```
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/sink" title="Sink works on cloudflare!| Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/yourls" title="Yourls | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-
-Many more will be coming, like https://github.com/alexcastrodev/shortener
-
-| Project    | Ease of Self-Hosting | Notes                                                                                                               |
-|-----------|-----------------------|---------------------------------------------------------------------------------------------------------------------|
-| Dub.co    | Moderate              | Powerful link management but primarily a commercial platform, open source backend exists, may require more setup.  |
-| Eastlake  | Easy                  | Cloudflare Worker-based, very lightweight, simple deployment via Cloudflare, good if you have Cloudflare experience. |
-| Kutt.it   | Moderate              | Open source Node.js app, requires Node environment but well documented, Docker images available.                   |
-| Lstu.fr   | Easy                  | Lightweight, written in OCaml, minimal dependencies, official instance available, simple setup.                    |
-| Polr      | Easy to Moderate      | PHP/MySQL based, lightweight and popular, easy to deploy on typical LAMP stacks or Docker.                         |
-| pygmy     | Moderate              | Python-based with analytics, moderate complexity but well structured for self-hosting.                             |
-| reduced.to| Moderate              | Open source with analytics, requires standard web stack, some setup needed.                                        |
-| san.aq    | Easy                  | Minimalistic API-based shortener, very simple tool for curl/HTTP API users.                                        |
-| shlink    | Moderate              | PHP-based with rich features, requires some setup, Docker deployments exist.                                       |
-| Sink      | Easy                  | Cloudflare-based like Eastlake, cloud-native simple deployment on Cloudflare platform.                             |
-| YOURLS    | Easy                  | Most popular self-hosted URL shortener, PHP/MySQL based, simple installation, highly documented.                   |
-
-For the **QR part**, you know that we have few solutions...
-
-1. https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py
-
-2. [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
-
-
-There are several open-source self-hostable link shortener tools you can consider, each with its unique features:
-
-1. **Shlink**: A PHP-based link shortener that supports generating unique short codes or custom slugs. It collects anonymized visit stats and geolocates visitors. It offers a REST API, CLI tools, and Docker support for easy deployment. It uses modern technologies like Mezzio and Symfony and is MIT licensed.[1][3]
-
-2. **Kutt**: A modern, free, and open-source URL shortener with features like custom domains, custom URLs, password protection, link expiration, private statistics, and an admin dashboard. It has a RESTful API and can be easily installed using Docker Compose.[5]
-
-3. **YOURLS**: A well-established PHP-based URL shortener with features such as bookmarklets, developer API, detailed stats including referrers and geo-location, and extensibility through dozens of plugins. It is free, open source, and easy to self-host.[10]
-
-4. **Shrink.io (shrtn.io)**: A lightweight, privacy-focused URL shortener using SQLite by default (so no database server is required) and deployable via Docker. It emphasizes ease of use, privacy, and developer-friendly features.[6]
-
-5. Other notable mentions from a curated list include Polr, Lstu, Blink, and goshorly—all open source with various programming languages and features.[4][8]
-
-These options provide scalable, customizable, and self-hostable link shortening solutions that you can deploy either via Docker or direct installation depending on your infrastructure and preferences.
-
-For ease and feature richness, Shlink, Kutt, and YOURLS are highly recommended starting points for a self-hosted URL shortener.
-
-Among the popular open-source self-hosted link shorteners mentioned, some do offer QR code capabilities either built-in or through extensions/plugins:
-
-1. **Shlink**: Provides built-in QR code generation for short URLs. When you create a short URL using Shlink, it can generate a corresponding QR code that you can share or embed. This is part of its feature set, making it convenient for print or mobile scanning use cases.[1][2]
-
-2. **Kutt**: While Kutt does not include native QR code generation in its core, there are third-party tools or browser extensions available that can generate QR codes for any URL, including Kutt short links. Some community forks or plugins might add this feature. Officially, out-of-the-box QR codes are not a core feature.[3]
-
-3. **YOURLS**: YOURLS does not include native QR code generation by default, but there are several plugins created by the community that add QR code functionality to YOURLS short URLs. This extensibility allows you to add QR generation if needed.[4]
-
-4. Other lesser-known tools like Blink or Polr may have QR features built-in or via plugins, but the top three mentioned mostly rely on either built-in Shlink support or plugins for YOURLS for QR capabilities.[5][6]
-
-To summarize, **Shlink** stands out as the self-hosted URL shortener with built-in QR code generation. 
-
-For YOURLS, you can enable QR codes through community-developed plugins, while Kutt typically requires external QR code tools. 
-
-This makes Shlink a strong candidate if QR code functionality is a priority alongside link shortening.
-
 
 ---
 
@@ -364,8 +236,57 @@ I prefer Watchtower to send alerts on new images, rather than letting update the
 * https://github.com/cloudflare/cloudflare-python
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="Cloudflare x Porkbun DNS API Py Scripts ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="CF x Porkbun DNS API Py Scripts ↗" >}}
 {{< /cards >}}
+
+Other **HomeLab Commands**:
+
+1. Whats taking that much space?
+
+```sh
+#sudo du -ahx / | sort -rh | head -n 50
+sudo du -ahx . | sort -rh | head -n 50 #from current folder and below
+```
+
+2. I want to clean old container stuff
+
+```sh
+#df -h
+#docker system df #see how much docker artifacts are using
+
+docker stop $(docker ps -a -q) #stop all
+#docker volume rm $(docker volume ls -q | grep -v '^portainer_data$') #rm all volumes but portainer
+
+#docker system df #similar to df -h but for container resources
+#docker image prune -a 
+#docker builder prune -a --force
+
+#docker system prune --all --volumes #just clean all...
+
+docker builder prune
+#docker system prune -a
+docker volume prune
+docker image prune -a
+```
+
+3. Stop all containers, but portainer:
+
+```sh
+#docker ps -a -q --filter 'name=!portainer'
+docker ps -q | grep -v portainer | xargs docker stop
+```
+
+4. How much resources are those containers cosuming?
+
+```sh
+docker-compose stats
+#sudo docker stats 7dfdfce97523
+#sudo docker stats nextcloud
+#docker stats typebot-builder typebot-viewer typebot-db
+
+docker stats $(docker ps --filter "name=typebot" --format "{{.Names}}")
+#docker stats -a
+```
 
 
 ### Big Data Analytics with On Chain Data

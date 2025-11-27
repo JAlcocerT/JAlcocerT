@@ -429,9 +429,9 @@ With Supported (tested) Subsonic API implementations: Subsonic, Airsonic-Advance
 
 You also have **substreamer** app on ios or android (as a client), they also have: https://hub.docker.com/r/ghenry22/substreamer
 
-> Just that its not OSS
+> Just that its not OSS!
 
-See also MeTube and Navidrome:
+See also MeTube and Navidrome: *Working together seamlessly*
 
 ![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
 

@@ -10,6 +10,13 @@ url: "webs-for-restaurants"
 https://github.com/hydra-billing/homs
 
 
+* **Menu websites at ~500 eur/year**
+  * http://cartalia.org/
+    * http://ukelele.cartalia.org/
+  * https://www.upmenu.com/pricing/
+* https://www.covermanager.com/en
+* https://www.mojstolik.pl/dla-restauracji
+
 <!-- 
 ### Useful Resources for a Better Website
 

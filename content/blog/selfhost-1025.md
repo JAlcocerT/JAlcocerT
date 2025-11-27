@@ -2,7 +2,7 @@
 title: "SelfHosting Updates - Oct 2025"
 date: 2025-10-19T01:20:21+01:00
 draft: false
-tags: ["SFTPGo x Syncthing","WebDav and Link Analytics","File Sync Tools","P2P Recap","XMRig Benchmark"]
+tags: ["SFTPGo x Syncthing x WebDav","File Sync Tools","P2P Recap","XMRig Benchmark"]
 description: 'Best tools for organizing homelab files.'
 url: 'selfhosted-apps-oct-2025'
 ---
@@ -976,20 +976,13 @@ fdupes -rS /mnt/data2tb #List duplicates with sizes:
 
 {{< tweet user="tom_doerr" id="1979894065400263086" >}}
 
-<!-- 
-https://x.com/tom_doerr/status/1979894065400263086?
-
-* https://libreselfhosted.com/project/fluxbb/
-* https://awesome-docker-compose.com/apps/photo-server/pigallery-2
-
- -->
 
 **Selfhosted resources:** *you should know already*
 
-great yt channels
+Great yt channels
 
-https://www.youtube.com/@AICodeKing/videos
-https://www.youtube.com/@easyselfhost/videos
+* https://www.youtube.com/@AICodeKing/videos
+* https://www.youtube.com/@easyselfhost/videos
 
 * https://awsmfoss.com/
 * https://awesome-devops.xyz/list/#web-servers
@@ -1013,19 +1006,22 @@ https://www.youtube.com/@easyselfhost/videos
 
 I discovered about **Peekaping**: https://github.com/0xfurai/peekaping/
 
+> **MIT** | Open Source Uptime Kuma Alternative
+
+> > Probably a must have for your VPS!
+
 ![Peekaping Monitoring](/blog_img/Monitoring/peekaping.png)
+
+After trying it via containers, could not resist to add it to the monitoring docs:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/peekaping" title="Peekaping - Homelab Monitoring | Docker Config 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" >}}
 {{< /cards >}}
 
 Provides a very quick **monitoring + status pages** for your homelab: `http://192.168.1.2:8383/status/mora`
 
 ![Peekaping Status Pages Example](/blog_img/Monitoring/peekaping-status-pages-monitoring.png)
-
-> **MIT** | Open Source Uptime Kuma Alternative
-
-> > Probably a must have for your VPS!
 
 With quickly integrations to your **website's posts**: https://docs.peekaping.com/badges
 
@@ -1040,11 +1036,13 @@ As I have it running locally: `http://192.168.1.2:8383/monitors` these are rende
 
 ![My Local Service Status](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/status)
 
+```
 Badge Type,Description,Markdown Code
 Uptime (30-day),Shows uptime percentage for the last 720 hours.,![Uptime (30d)](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/uptime/720)
 Average Ping,Displays the average response time over the last 24 hours (default).,![Avg Ping](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/ping)
 Certificate Expiry,Shows how many days until the SSL certificate expires (for HTTPS monitors).,![Cert Expiry](http://192.168.1.2:8383/api/v1/badge/04c91562-ba36-4ab2-872c-b4e6daf4067e/cert-exp)
 Latest Response,Shows the most recent response time measurement.,![Latest Response](http://192.168.1.2:8383/api/v1/badge/1e12dabc-e962-4cd7-b808-ee08c994ec53/response)
+```
 
 I think that it can be good to think how to integrate Peekaping with these notification services: `http://192.168.1.2:8383/notification-channels/new`
 
@@ -1053,9 +1051,9 @@ I think that it can be good to think how to integrate Peekaping with these notif
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ntfy/" title="Ntfy | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/Monitoring/peekaping-notifications.png)
+![Peekaping Notifications Alternatives like Gotify](/blog_img/Monitoring/peekaping-notifications.png)
 
-We also have the good old **Grafana, configured for Monitoring**:
+We also have the good old **Grafana** which can be configured for Monitoring:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#grafana" title="Grafana and NetData" image="/blog_img/iot/grafana.png" subtitle="Grafana x HOMELAB" >}}
@@ -1071,7 +1069,7 @@ Or, a quick monitoring dashboard with **NetData**: [SelfHost NetData with Docker
 {{< /cards >}}
 
 
-They remodel recently the dockerhub image: https://hub.docker.com/r/netdata/netdata/
+They remodel recently the **netdata dockerhub image**: https://hub.docker.com/r/netdata/netdata/
 
 ![Netdata Updated UI](/blog_img/selfh/HomeLab/netdata.png)
 

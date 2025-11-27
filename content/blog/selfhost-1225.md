@@ -34,7 +34,7 @@ sudo apt install antigravity
 
 A random server for ~4$/month is all you need.
 
-https://one.one.one.one/
+* https://one.one.one.one/
 
 
 **Intro**
@@ -52,6 +52,15 @@ Mind your attention, stop auto engage and keep the important things at life firs
 https://www.youtube.com/watch?v=ydG5EtQat_I -->
 
 gollama
+
+
+<!-- 
+https://x.com/tom_doerr/status/1979894065400263086?
+
+* https://libreselfhosted.com/project/fluxbb/
+* https://awesome-docker-compose.com/apps/photo-server/pigallery-2
+
+ -->
 
 
 
@@ -78,11 +87,13 @@ Once everyone is onboard, we can continue and end up with some cool [PBi](https:
 
 Venn diagrams for data modelling and architecture are also appreciated
 
-What's also great? that Excalidraw can interprete MermaidJS Syntax an render also the diagrams :)
+What's also great? 
+
+That Excalidraw can interprete MermaidJS Syntax an render also the diagrams :)
 
 Oh...and also excel tables are rendered into cool graphs.
 
-![alt text](/blog_img/selfh/HomeLab/excalidraw.png)
+![Excalidraw is fantastic](/blog_img/selfh/HomeLab/excalidraw.png)
 
 > Yea, thats this [DevOps diagram](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/)
 

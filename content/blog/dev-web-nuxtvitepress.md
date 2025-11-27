@@ -326,7 +326,7 @@ Allowing you to plug easily these kind of LLMs:
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
-Dont forget to validate the performance:
+Dont forget to validate the web performance:
 
 {{< hextra/feature-grid >}}
  

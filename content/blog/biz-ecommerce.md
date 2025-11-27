@@ -9,6 +9,10 @@ url: 'ecommerce'
 
 https://www.shopify.com/news/david-heinemeier-hansson-board
 
+* ecommerce - https://outficik.pl/
+
+https://polkabikes.pl/ 
+
 **Intro**
 
 [Some people dare to create their own ecommerce](https://forocoches.com/foro/showthread.php?t=9707807) dont die trying.
@@ -144,23 +148,8 @@ There are several notable open source self-hostable e-commerce platforms availab
 
 These platforms vary in technology stack (PHP, Node.js, Python/Django, .NET) and complexity, from user-friendly to developer-centric, allowing you to pick one that fits your technical expertise and business needs.[8][15][9][3][2]
 
-If you want a recommendation or details on any specific platform, just ask!
 
-[1](https://www.reddit.com/r/selfhosted/comments/v37lm3/best_selfhosted_platform_for_small_ecommerce_store/)
-[2](https://uideck.com/blog/self-hosted-ecommerce-solutions)
-[3](https://kinsta.com/blog/open-source-ecommerce/)
-[4](https://sylius.com)
-[5](https://underhost.com/blog/the-best-self-hosted-e-commerce-platforms-of-2025/)
-[6](https://www.reddit.com/r/selfhosted/comments/1lyosh6/looking_for_selfhosted_ecommerce_platform/)
-[7](https://contabo.com/blog/best-e-commerce-platforms-for-your-business/)
-[8](https://www.voxfor.com/12-best-free-open-source-ecommerce-solutions-to-launch-your-business-online-in-2025/)
-[9](https://www.shopify.com/blog/open-source-ecommerce)
-[10](https://bitbag.io/blog/ecommerce-platforms-open-source)
-[11](https://www.tigren.com/blog/self-hosted-hosted-ecommerce-platforms/)
-[12](https://www.youtube.com/watch?v=BQtMDI-Wv4w)
-[13](https://github.com/awesome-selfhosted/awesome-selfhosted)
-[14](https://golocad.com/blog/e-commerce-frameworks/)
-[15](https://vendure.io)
+
 
 Yes, exactly. With Medusa as your backend, you can use Astro static site generator to build your frontend storefront. Astro can pull product data dynamically from Medusa’s REST or GraphQL APIs.
 
@@ -263,11 +252,7 @@ https://www.instagram.com/outficik.secondhand/ -->
   * https://hormigasenlanube.com/
   * https://lyk-website.pl/brief/
 
-* More competitors
-  * Taplink
-  * bento.me
-  * https://getallmylinks.com/
-  * https://subscribepage.io/listy#
+
 
 
 
@@ -277,7 +262,6 @@ https://www.instagram.com/outficik.secondhand/ -->
 
 http://divephiphiisland.com/ -->
 
-<!-- * Proposed: bogusiabachata.pro -->
 <!-- 
 ecommerce
 https://polkabikes.pl/ -->
@@ -303,8 +287,6 @@ https://quadscadiz.com/
       * Interesting section with a table comparing services and faq (go below)
 
 * Gym Trainer - https://trenujswiadomie.pl/kokpit/
-
-* ecommerce - https://outficik.pl/
 
 
 -->
@@ -318,12 +300,7 @@ How I know it is a WP?
 
 See: `https://makemydream.pl/wp-login`
 
-* **Menu websites at ~500 eur/year**
-  * http://cartalia.org/
-    * http://ukelele.cartalia.org/
-  * https://www.upmenu.com/pricing/
-* https://www.covermanager.com/en
-* https://www.mojstolik.pl/dla-restauracji
+
 
 * Hosting Costs:
   * https://banahosting.com/web-hosting ~5eur/month
@@ -338,16 +315,13 @@ See: `https://makemydream.pl/wp-login`
   * https://hormigasenlanube.com/
   * https://lyk-website.pl/brief/
 
-* More competitors
-  * Taplink
-  * bento.me *A comercial bento link website, owned by linktree*
-  * https://getallmylinks.com/
-  * https://subscribepage.io/listy#
 
 
-<!-- * Proposed: bogusiabachata.pro -->
+
 <!-- 
-https://issyinformatica.es/ -->
+https://issyinformatica.es/
+
+-->
 
 <!-- More ppl to help - future CLIENTS
 
@@ -357,8 +331,6 @@ https://issyinformatica.es/ -->
 * Pablo Couto - https://www.buildingfuturecapital.com/
 
 https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
-
-Registry Expiry Date - 26 April 2025
 
 
 * Sofia - zofienkagram
@@ -370,7 +342,7 @@ Registry Expiry Date - 26 April 2025
 
 * Gym Trainer - https://trenujswiadomie.pl/kokpit/
 
-* ecommerce - https://outficik.pl/
+* Gym Trainer - https://trenujswiadomie.pl/kokpit/
 
 
 
@@ -381,12 +353,9 @@ Registry Expiry Date - 26 April 2025
 * Weddings...
 * bodas.net
 
-http://divephiphiisland.com/ -->
+http://divephiphiisland.com/ 
 
-<!-- * Proposed: bogusiabachata.pro -->
-<!-- 
-ecommerce
-https://polkabikes.pl/ -->
+-->
 
 <!-- More ppl to help - future CLIENTS
 
@@ -397,7 +366,6 @@ https://polkabikes.pl/ -->
 
 https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
 
-Registry Expiry Date - 26 April 2025
 
 https://quadscadiz.com/
 
@@ -408,27 +376,16 @@ https://quadscadiz.com/
     * Using the low tier without domain of https://www.portfoliobox.net/pricing (46$/y)
       * Interesting section with a table comparing services and faq (go below)
 
-* Gym Trainer - https://trenujswiadomie.pl/kokpit/
-
-* ecommerce - https://outficik.pl/
-
 
 ---
 
 ### Competitors
 
-* **Menu websites at ~500 eur/year**
-  * http://cartalia.org/
-    * http://ukelele.cartalia.org/
-  * https://www.upmenu.com/pricing/
-* https://www.covermanager.com/en
-* https://www.mojstolik.pl/dla-restauracji
-
 * Hosting Costs:
   * https://banahosting.com/web-hosting ~5eur/month
   * https://webtolearn.pl/cennik ~20eur/month
 
-* Customer management systems
+* Customer management systems - CMS
   * https://wakems.com/index.php
   * https://clubspeed.com/pricing/
 
@@ -437,8 +394,3 @@ https://quadscadiz.com/
   * https://hormigasenlanube.com/
   * https://lyk-website.pl/brief/
 
-* More competitors
-  * Taplink
-  * bento.me
-  * https://getallmylinks.com/
-  * https://subscribepage.io/listy#

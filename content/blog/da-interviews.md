@@ -763,6 +763,10 @@ So, in a full Enterprise Semantic Model, you will have **many dimension tables**
 
 ## Conclusions
 
+This kind of posts will probably become the start of a D&A ebook next year.
+
+In the meantime...
+
 If you are still using [draw.io](https://app.diagrams.net/) for your [architectural](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/) designs, you are lagging behind.
 
 Dont choose between [Mermaid](https://mermaid.live/) or [Excalidraw](https://excalidraw.com/).
@@ -783,6 +787,10 @@ flowchart TD
 Create the [diagram's Mermaid code assisted by AI](https://jalcocert.github.io/JAlcocerT/ai-driven-diagrams/), then ...
 
 Just paste MermaidJS into excalidraw instead and create awsome [diagrams](https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/)!
+
+The trick also works from excel tables
+
+![Excalidraw is fantastic](/blog_img/selfh/HomeLab/excalidraw.png)
 
 
 {{< cards >}}
