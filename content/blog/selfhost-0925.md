@@ -309,21 +309,6 @@ I have updated the `docker-compose.yml` and Dockerfiles at:
 {{< /cards >}}
 
 
-{{< details title="Astro Theme Selection | Blog 101 with PPTs 📌" closed="true" >}}
-
-```sh
-git clone https://github.com/monakit/monakit
-npm install
-npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
-```
-
-> This theme uses revealJS for the ppts, a candidate for an upcoming `blog.jalcocertech.com`
-
-You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/JAlcocerT/pro-agency-automation/#landing-chatbot-with-kb-knowledge) to these kind of sites.
-
-{{< /details >}}
-
-
 {{< details title="HUGO Theme | Blog 101 📌" closed="true" >}}
 
 ```sh
@@ -346,10 +331,9 @@ hugo version
 hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.106" --port=1313
 ```
 
-
 {{< /details >}}
 
-To put astro/hugo inside a container is as simple as:
+To put astro/hugo websites inside a container is as simple as:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ssg-hugo" title="HUGO SSG Selfhosted | Docker Config Setup 🐋 ↗"  >}}

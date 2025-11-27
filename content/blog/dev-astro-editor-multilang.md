@@ -21,7 +21,7 @@ I failed to understand properly i18n on [this *podcast* post](https://jalcocert.
 
 > I got a way with a cool [Astro Pod Theme Fork though](https://github.com/JAlcocerT/astropod)
 
-The
+I created a repo to edit astro via a NextJS web app with its own markdown editor:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/astro-editor" title="NEW - Astro Editor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Editing astro posts md via NextJS + ToastUI " >}}
@@ -165,7 +165,7 @@ I would say this is the Fuwari in Hugo :)
 
 ## Conclusions
 
-Got that ToastUI editor working powered by NextJS for astro sites!
+Got that ToastUI editor working powered by NextJS WebApp for astro sites!
 
 ---
 

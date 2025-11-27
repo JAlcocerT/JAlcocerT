@@ -1,10 +1,10 @@
 ---
 title: "Links for Artists"
-date: 2025-11-28T08:20:21+01:00
+date: 2025-11-27T10:20:21+01:00
 draft: false
 tags: ["Web Analytics vs Link Analytics","BiP","Lynx","Vibe Coding vs Spec Driven Development"]
 url: 'link-artists'
-description: 'Dear famous people, where are you going next?'
+description: 'Dear famous people, where are you going next? About B2C and revealed preferences.'
 ---
 
 
@@ -26,6 +26,11 @@ https://www.skool.com/@adriana-drozdowicz-4965 -->
 **Intro**
 
 If you are not a data professional, but a creative professional, like a music creator...
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/music-with-ai-tools//" title="Music with AI" image="/blog_img/GenAI/elevenlabs/11labs-download-tts.png" subtitle="DIY music? or with 11labs we can create music" >}}
+{{< /cards >}}
+
 
 You will need to let the world know about your work/brand and where to find it.
 
@@ -156,6 +161,25 @@ You will want to know how it performs:
 
 
 
+#### What we say vs what we do
+
+* **Stated Preference (What they say):** Based on hypothetical questions. It captures what users *claim* they would choose.
+* **Revealed Preference (What they do):** Based on actual behavior. It captures true preferences through real-world actions and choices.
+
+La preferencia anunciada o preferencia declarada es un método para conocer las preferencias de los usuarios basado en lo que ellos dicen que elegirían en situaciones hipotéticas o que no han experimentado en la realidad. Es muy utilizada en economía para anticipar cómo los consumidores podrían reaccionar ante nuevas opciones que aún no existen en el mercado. Por ejemplo, se puede preguntar a una persona qué opciones preferiría en un producto nuevo o servicio que no ha probado.[1]
+
+Por otro lado, la preferencia revelada se basa en observar el comportamiento real de consumo del usuario, es decir, en las decisiones y elecciones efectivas que hace en la vida cotidiana. La teoría de la preferencia revelada sostiene que las preferencias de los consumidores se pueden deducir de sus hábitos de compra reales, ya que el hecho de elegir un bien sobre otro revela cuál prefieren realmente bajo las restricciones de su presupuesto. Esto implica que las preferencias se infieren a partir de las elecciones efectivas, no de declaraciones hipotéticas.[2]
+
+
+
+
+| Type | Definition | PostHog Tool to Use |
+| :--- | :--- | :--- |
+| **Stated** | "I would use this feature." | **Surveys & Feedback:** Ask users directly what they want before building. |
+| **Revealed** | They actually clicked/paid. | **Analytics & Session Replay:** Track clicks, retention, and time spent to see if they actually use it. |
+| **The Goal** | **The Say/Do Gap** | Compare survey results against analytics to see if users are actually doing what they promised. |
+
+
 ### Vibe Coding is...old?
 
 People seem to be moving from vibe coding to...sth new: spec driven development they call it.
@@ -173,6 +197,21 @@ And these are some tools:
 * https://github.com/kirodotdev/Kiro
 
 > Kiro is an agentic IDE that works alongside you from prototype to production.
+
+#### About Web Development
+
+Not sure how much better spec driven dev is.
+
+But for sure that as of today you dont need to now [TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/), neither [JavaScript](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/) nor [CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/) to create and publish a good looking and simple static website.
+
+I recently tried [NuxtJS here](https://jalcocert.github.io/JAlcocerT/trying-nuxt-themes/).
+
+
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
+{{< /cards >}}
 
 ---
 

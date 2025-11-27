@@ -34,25 +34,7 @@ What are the users experiencing.
 > >  But there are some alternatives
 
 
-## What we say vs what we do
-
-* **Stated Preference (What they say):** Based on hypothetical questions. It captures what users *claim* they would choose.
-* **Revealed Preference (What they do):** Based on actual behavior. It captures true preferences through real-world actions and choices.
-
-La preferencia anunciada o preferencia declarada es un método para conocer las preferencias de los usuarios basado en lo que ellos dicen que elegirían en situaciones hipotéticas o que no han experimentado en la realidad. Es muy utilizada en economía para anticipar cómo los consumidores podrían reaccionar ante nuevas opciones que aún no existen en el mercado. Por ejemplo, se puede preguntar a una persona qué opciones preferiría en un producto nuevo o servicio que no ha probado.[1]
-
-Por otro lado, la preferencia revelada se basa en observar el comportamiento real de consumo del usuario, es decir, en las decisiones y elecciones efectivas que hace en la vida cotidiana. La teoría de la preferencia revelada sostiene que las preferencias de los consumidores se pueden deducir de sus hábitos de compra reales, ya que el hecho de elegir un bien sobre otro revela cuál prefieren realmente bajo las restricciones de su presupuesto. Esto implica que las preferencias se infieren a partir de las elecciones efectivas, no de declaraciones hipotéticas.[2]
-
-
-
-
-| Type | Definition | PostHog Tool to Use |
-| :--- | :--- | :--- |
-| **Stated** | "I would use this feature." | **Surveys & Feedback:** Ask users directly what they want before building. |
-| **Revealed** | They actually clicked/paid. | **Analytics & Session Replay:** Track clicks, retention, and time spent to see if they actually use it. |
-| **The Goal** | **The Say/Do Gap** | Compare survey results against analytics to see if users are actually doing what they promised. |
-
-This is what the client reveals that it wants:
+This is a client that reveals that it **actually wants**:
 
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 

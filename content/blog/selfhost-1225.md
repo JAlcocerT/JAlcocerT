@@ -54,6 +54,47 @@ https://www.youtube.com/watch?v=ydG5EtQat_I -->
 gollama
 
 
+## FAQ
+
+
+### What it is Gradio?
+
+ Build Machine Learning Applications Easily with Gradio in Python 
+<https://www.youtube.com/watch?v=3DGLznJorT8>
+
+https://github.com/NeuralNine/drawing-classifier
+
+https://busterbenson.com/
+
+
+<!-- ## FAQ
+
+### What is oobabooga?
+
+https://gist.github.com/mberman84/45545e48040ef6aafb6a1cb3442edb83
+
+
+
+<!-- #### More about RAGs
+
+https://www.youtube.com/watch?v=_cDRrSAKSnY
+https://mer.vin/2024/01/rag-with-chromadb-llama-index-ollama-csv/
+
+
+https://www.youtube.com/watch?v=71e6xfxrIRs - Understanding Gaussian Processes | Part 1 - What are Gaussian Processes? -->
+
+
+
+<!-- #### How to Select the Right Model?
+
+https://www.choosellm.com/ -->
+
+<!-- 
+https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms -->
+
+<!-- 
+https://www.youtube.com/watch?v=lBsv-ssPJpo -->
+
 <!-- 
 https://x.com/tom_doerr/status/1979894065400263086?
 

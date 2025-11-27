@@ -2,14 +2,16 @@
 title: "A podcast for all"
 date: 2025-12-01
 draft: false
-tags: ["Web","Astro","Entrep","RSS"]
+tags: ["Web","Astro","Entrep","RSS","Make-Podcast","Svelte"]
 description: 'Using astro and '
 url: 'make-podcast'
 ---
 
 **Tl;DR**
 
-Because astro SSG and CSR are so cool. Creating a DIY podcast platform.
+Because astro SSG and CSR are so cool. 
+
+Why not...Creating a DIY podcast platform.
 
 **Intro**
 
@@ -24,9 +26,30 @@ But only using third party tools.
 Lately Iv been tinkering with custom (vibecoded) flask apps to interact with SSGs
 
 * https://github.com/manuelernestog/astropod
-* https://github.com/JAlcocerT/astropod
+    * Which I Forked https://github.com/JAlcocerT/astropod and talked about [here](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/)
 
 > MIT |  Free and open source self-hosting serverless podcast solution 
+
+You are not forced to use [Astro and its components](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/) for your podcast.
+
+In fact there are OSS [podcasts Themes for Gatsby](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/#podcasts-in-gatsby)
+
+
+Even with [this kind](https://github.com/JAlcocerT/JAlcocerT/blob/main/layouts/shortcodes/audio.html) of HUGO shortcodes, you can bring audio to your posts.
+
+Similarly like https://ugeek.github.io/list.html does! 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG HUGO/Astro Components" >}}
+{{< /cards >}}
+
+## Creating a PODCAST Platform
+
+This platform would allow you to:
+
+- Host your podcast episodes
+- Manage your content through a web interface
+- Generate RSS feeds for distribution
 
 
 How about creating a: **make-podcast**?
@@ -80,3 +103,36 @@ Just in case you
 >  The RSS feed for websites missing it 
 
 > > If you are using astro to create websites, you can add an RSS Feed easily like so.
+
+
+### Svelte vs Other FE Frameworks
+
+Svelte's main competitors in 2025 are lightweight, performant frontend frameworks like SolidJS, Qwik, and Astro, which emphasize small bundles, fast runtime, and reactivity without virtual DOM overhead.
+
+| Framework | Core Strength | Bundle Size/Performance Edge | Use Cases [1][4] |
+|-----------|---------------|------------------------------|----------------------------|
+| SolidJS  | Fine-grained reactivity | Matches Svelte's speed, low memory | Interactive apps, dashboards |
+| Qwik     | Resumability, zero JS initial load | Smallest payloads (~1KB startup) | Performance-critical sites [1] |
+| Astro    | Islands architecture, multi-framework | Static-first, minimal client JS | Content sites, blogs [2] |
+| Preact   | React-compatible, tiny footprint | 3KB vs React's 100KB+ | React-like apps with less overhead |
+| Vue      | Progressive, intuitive DX | Balanced speed/ecosystem | SPAs, hybrid apps [4] |
+
+Full-stack metaframeworks like SvelteKit (Svelte's own) compete with Next.js (React) and Nuxt (Vue) for SSR/SSG apps. These align with modern web dev trends favoring efficiency over React/Angular's maturity.[2][5][1]
+
+[3](https://roadmap.sh/frontend/frameworks)
+[4](https://merge.rocks/blog/comparing-front-end-frameworks-for-startups-in-2025-svelte-vs-react-vs-vue)
+[5](https://tymonglobal.com/blogs/next-js-vs-sveltekit-vs-qwik-best-framework-in-2025/)
+[9](https://alyvro.com/blog/nuxt-vs-svelte-2025)
+
+Sí, Astro excels en SSG (Static Site Generation) con su arquitectura de islas, pero SvelteKit, SolidStart, Qwik y Preact también lo soportan nativamente a través de sus metaframeworks o configuraciones específicas.
+
+
+| Framework     | Soporte SSG                  | Configuración clave [fuente] |
+|---------------|------------------------------|------------------------------|
+| SvelteKit    | Prerender completo o por ruta | `export const prerender = true;` en páginas; `adapter-static` [4][5] |
+| SolidStart   | SSG con prerendering isomórfico | `server: { presets: 'static' }` en config [2][6] |
+| Qwik         | SSG nativo con resumability | Adapter estático genera HTML pre-renderizado [7][3] |
+| Preact       | SSG vía Vite/CLI prerender | `prerender: { enabled: true }` en Vite config [8][9] |
+
+Todos permiten hybrid modes (SSG + SSR/CSR), ideal para sitios estáticos con interactividad mínima, alineado con tus intereses en frameworks eficientes como Astro/Svelte.[10][11]
+

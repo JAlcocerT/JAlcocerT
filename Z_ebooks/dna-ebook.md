@@ -166,7 +166,7 @@ Project Nessie and Apache Iceberg are designed to work very well together, and N
 ```py
 df = spark.read 
     .format("delta")
-    .option("timestampAsOf", "2025-12-01") 
+    .option("timestampAsOf", "2025-12-29") 
     .load("/path/to/my/table") 
 ```
 

@@ -16,7 +16,9 @@ url: 'IT-concepts'
 
 They allow us to package applications completely.
 
-> To use what others created easily in your homelab or to package your projects for others to do the same
+> To use what others created easily in your homelab or to package your projects for others to do the same.
+
+> > They kind of relate to [virtualization](https://jalcocert.github.io/JAlcocerT/testing-nix-os/)
 
 Containers are Making the deploy process on other computers/servers kind of *copy and paste*.
 
@@ -24,9 +26,9 @@ Containers are Making the deploy process on other computers/servers kind of *cop
 
 We can say that CI/CD is a development paradigm...kind of.
 
-And building containers whenever we ship a new feature in the code is a part of it.
+And building containers whenever we ship a new feature in the code is a part of the [DevOPS philosophy](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/).
 
-The idea is that the final code for the app will be available for users packaged properly.
+The idea is that the final code for the app will be available for users packaged properly and w/o interruptions of the service.
 
 **Testing GH Actions Workflows locally**
 
@@ -34,15 +36,13 @@ The idea is that the final code for the app will be available for users packaged
 
 > Run your GitHub Actions locally 🚀
 
-## Coding on The Go
+## Git Concepts
 
 Make sure to follow [git best](https://jalcocert.github.io/JAlcocerT/git-recap/) practices:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/codespaces" title="Github CodeSpaces ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/" title="VSCode Through Docker | Configs 🐋 ↗" >}}
 {{< /cards >}}
-
 
 **Github Authentication**
 
@@ -83,7 +83,7 @@ For example, GitHub can use a webhook to notify a CI server like Jenkins to star
 
 ### What are API calls?
 
-An API call is like making a phone call to a specific service. 
+An [API call](https://jalcocert.github.io/JAlcocerT/interesting-apis/) is like making a phone call to a specific service. 
 
 You request the information or service you need, and the system responds back.
 

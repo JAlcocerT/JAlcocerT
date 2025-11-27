@@ -2,7 +2,7 @@
 title: "Using Linux in Android"
 date: 2024-12-02
 draft: false
-tags: ["Dev","Tablet","Termux vs Ubuntu Touch"]
+tags: ["Dev","Tablet","Termux vs Ubuntu Touch","Waydroid"]
 description: I always wanted to run Docker on Android - How to do it on a Samsung S6 Lite.
 url: setup-termux-android
 ---

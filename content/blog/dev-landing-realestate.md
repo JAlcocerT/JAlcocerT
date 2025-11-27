@@ -331,7 +331,7 @@ graph TD
     A --> E(Services - DFY $$$);
 ```
 
-Oh, and the blog will writings will be continued on 2026 into `blog.jalcocertech.com`
+Oh, and the blog will writings will be continued on >2026 into some branded `blog.jal....com`
 
 This will be kept as a full tinkering.
 

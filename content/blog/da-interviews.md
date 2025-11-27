@@ -909,7 +909,7 @@ You have some AI.BI Tools, like:
 
 ### Organizational Tools
 
-You might need to do proper [note taking for your KB](https://jalcocert.github.io/JAlcocerT/knowledge-management/).
+You might need to do proper [note taking for **your KB**](https://jalcocert.github.io/JAlcocerT/knowledge-management/).
 
 Stay in touch and [communicate](https://jalcocert.github.io/JAlcocerT/communication-management/) with your colleagues.
 

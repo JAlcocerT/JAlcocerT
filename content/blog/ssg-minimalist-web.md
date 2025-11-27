@@ -9,7 +9,7 @@ url: 'open-source-minimalist-websites'
 
 **Tl;DR**
 
-The minimalist web vs the independent web
+The minimalist web vs the independent web! 🌐✨
 
 **Intro**
 
@@ -58,7 +58,13 @@ It curious to see how 'old designs' like: https://1999.37signals.com/
 
 Are very easy to read, kind of a book!
 
-Despite not been as minimalistic as the sites above, I really enjoy hugo/astro and static site hosting to publish.
+Despite not been as minimalistic as the sites above:
+
+```sh
+du -sh . # Output: 1.5G!
+```
+
+I really enjoy hugo/astro and static site hosting to publish.
 
 There is not a single time that Ive opened: https://astro.build/themes/1/?search=&price%5B%5D=free and havent found sth interesting.
 
@@ -148,6 +154,20 @@ Im already looking for 2026.
 And in there i will keep tinkering on this medium.
 
 But the curated already digested content will go to `blog.jalcocertech.com`
+
+{{< details title="Astro Theme Selection | Blog 101 with PPTs 📌" closed="true" >}}
+
+```sh
+git clone https://github.com/monakit/monakit
+npm install
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+```
+
+> This theme uses revealJS for the ppts, a candidate for an upcoming `blog.jalcocertech.com`
+
+You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/JAlcocerT/pro-agency-automation/#landing-chatbot-with-kb-knowledge) to these kind of sites.
+
+{{< /details >}}
 
 1. https://github.com/ricocc/ricoui-portfolio
 

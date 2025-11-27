@@ -2,14 +2,16 @@
 title: "Using a VPS as VPN with Wireguard"
 date: 2024-12-01
 draft: false
-tags: ["Dev","WGeasy","MT3000 Router"]
+tags: ["HomeLab","WGeasy","MT3000 Router"]
 description: How to setup WG-easy in a VPS and use a Raspberry Pi as wireguard client. Bonus Wifi2eth.
 url: how-to-use-wg-easy-with-a-vps
 ---
 
 
 
-**TL;DR** Combine this quick wg setup with your [travel router](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/)
+**TL;DR**
+
+Combine this quick wg setup with your [travel router](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/)
 
 **Intro**
 

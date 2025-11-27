@@ -1113,6 +1113,10 @@ But we already covered similar tools:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+See how uptime Kuma status pages looks:
+
 ![Uptime Kuma Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
+
+Compared to Kener:
 
 ![Kener Status Pages](/blog_img/selfh/HomeLab/statuspages/kener-setup.png)

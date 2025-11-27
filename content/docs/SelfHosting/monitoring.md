@@ -62,7 +62,7 @@ See also how **Peekaping**
 {{< /cards >}}
 
 
-![Peekaping Status Pages Example](/blog_img/Monitoring/peekaping-status-pages-monitoring.png)
+![Peekaping Status Pages Login to UI](/blog_img/Monitoring/peekaping.png)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/peekaping" title="Peekaping - Status Pages | Docker Config 🐋 ↗" >}}

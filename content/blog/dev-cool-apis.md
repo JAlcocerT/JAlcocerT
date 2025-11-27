@@ -739,13 +739,13 @@ These 213 chars, took each one credit, with a total of 13s -> 9,787 credits rema
 
 Following the proportions, the total should be enough for ~600s=10 min of TTS generated audio.
 
-But here is the **audio output**:
+But [here](https://github.com/JAlcocerT/JAlcocerT/tree/main/static/audio) is the **audio output**: `./audio/sample-t2s-11labs.mp3`
 
 {{< audio
-    src="/audio/sample-t2s-11labs.mp3"
+    src="https://raw.githubusercontent.com/JAlcocerT/JAlcocerT/main/static/audio/sample-t2s-11labs.mp3"
     type="audio/mp4"
     preload="auto"
-    loop="true"
+    loop="false"
     autoplay="false"
     muted="false"
     caption="Sample Generated Audio"
@@ -754,17 +754,17 @@ But here is the **audio output**:
     title="Sample Generated Audio"
 >}}{{< /audio >}}
 
-> Say thanks to this [vibecoded HUGO shortcode](https://github.com/JAlcocerT/JAlcocerT/tree/main/layouts) for audio btw
+> Say thanks to this [vibecoded HUGO shortcode](https://github.com/JAlcocerT/JAlcocerT/blob/main/layouts/shortcodes/audio.html) for audio btw
 
-> > Sources from `./static/audio/`
+> > Sources from `./static/audio/` and you will change it to github raw to work outside `hugo server` locally
 
-I could not avoid comparing the elevenlabs TTS to the one that Gemini offers
+I could not avoid comparing the elevenlabs TTS to the one that [Gemini offers](#gemini-tts-via-google-ai-studio)
 
 #### Gemini TTS via Google AI Studio
 
 * https://aistudio.google.com/generate-speech?model=gemini-2.5-pro-preview-tts
 
-![alt text](/blog_img/GenAI/elevenlabs/google-aistudio-tts.png)
+![TTS via Google AIStudio](/blog_img/GenAI/elevenlabs/google-aistudio-tts.png)
 
 They also provide the code to run the same via Python and your own API key.
 

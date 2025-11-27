@@ -1,6 +1,6 @@
 ---
-title: "Admin Panels for Websites | Manifest vs "
-date: 2025-12-01
+title: "Admin Panels for Websites | Manifest vs PB"
+date: 2025-11-27
 tags: ["SaaS","Authentication","Simple BackEnd"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
@@ -29,6 +29,13 @@ https://x.com/SinaSinry/status/1951606811829604488?t=jRvoxV9sxOPDvFHh89HF5w&s=35
 > The ARR/MRR retention must be another topic, *I guess*
 
 And suddendly, I have found an interesting solution (that its vibe-code friendly!): [Manifest](#manifest)
+
+**On this post**: I want to compare how Manifest compares to Pocketbase as selfhosted BaaS solution and as **admin panel**
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/manifest" title="Manifest | Portable Backend as YAML | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ## Manifest
 
@@ -80,7 +87,7 @@ npx create-manifest@latest  --windsurf
 
 ### Manifest UseCases
 
-**Headless CMS**
+#### Headless CMS
 
 Via Flask, you can make a quick webapp to allow users to edit specific fields of your SSG Themes...
 
@@ -90,7 +97,18 @@ Or as I did recently with **NextJS**
 
 ---
 
-## Others
+## Conclusions
+
+
+### Manifest vs PocketBase
+
+Ive discovered PB this year and its uses cases have been great so far.
+
+Including the providing [authentication for statically deployed SSGs via CF Workers](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/) and [SMTP email integration](https://jalcocert.github.io/JAlcocerT/email-verification-pocketbase/).
+
+---
+
+## Other OSS Admin Panels
 
 * https://github.com/ColorlibHQ/AdminLTE
 
@@ -99,7 +117,6 @@ Or as I did recently with **NextJS**
 * https://github.com/incluud/accessible-astro-dashboard
 
 > MIT | An Accessible Admin Dashboard Theme for Astro with a login page and a dashboard overview. Includes accessibility features such as landmarks, better focus-outline and skip-links navigation.
-
 
 
 ### AdminJS
@@ -117,7 +134,7 @@ AdminJS is an admin panel for apps written in node.js
 
 ### Tailadmin
 
-8 https://tailadmin.com/
+* https://tailadmin.com/
 
 ### Open Admin
 
@@ -133,40 +150,3 @@ AdminJS is an admin panel for apps written in node.js
 ###  NGX Admin
 
 https://github.com/akveo/ngx-admin
-
-## Authentication
-
-* https://github.com/voidauth/voidauth
-
-> Agpl v3 | An Easy to Use and Self-Host Single Sign-On Provider 🐈‍⬛🔒
-
-### Authentication with Logto
-
-I have been tinkering with LogTo via:
-
-The 3 Bodies post and app.
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
-
-
----
-
-## Conclusions
-
-
----
-
-## FAQ
-
-Password Protected Static Routes with NGINX: 
-
-Dittofeed: Free Open Source Automated Communication Platform
-
-
-<!-- https://www.youtube.com/watch?v=ycs53MFoW4E -->
-
-{{< youtube "ycs53MFoW4E" >}}

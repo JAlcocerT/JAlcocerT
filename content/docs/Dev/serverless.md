@@ -1,11 +1,19 @@
 ---
+title: Serverless
+type: docs
+prev: /docs/video/
+next: docs/
+draft: false
+---
+
+<!-- ---
 title: "Just be Serverless"
 date: 2025-12-01T07:20:21+01:00
 draft: false
 tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone","T3.Chat","Publii CMS","Cloudflare Workers"]
 url: 'serverless-101'
 description: 'Your WebApps, with Serverless Authentication and AI on the backend.'
----
+--- -->
 
 
 **Tl;DR**
@@ -70,7 +78,7 @@ That is having a connection to a PB user collection: https://fast-payroll-theme.
 
 > Pocketbase has handling perpectly those signins/ups and the `https://fast-payroll-theme.pages.dev/secret` was protected
 
-![alt text](/blog_img/dev/FE/payroll-authenticated-via-pb.png)
+![Payroll Astro Static Theme with Authentication via Pocketbase](/blog_img/dev/FE/payroll-authenticated-via-pb.png)
 
 > > We saw the a cool message `You are authenticated. This is a protected page served by a Cloudflare Pages Function.`
 

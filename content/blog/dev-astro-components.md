@@ -309,6 +309,7 @@ FuseJS or Flexsearch, work even on dev env, but for pagefind you will have to bu
   {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
 {{< /cards >}}
 
+---
 
 ## FAQ
 
