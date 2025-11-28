@@ -24,7 +24,7 @@ Or they just see your content in between ads?
 
 **Intro**
 
-Apparently, there are many digital creators.
+Apparently, there are many *digital creators*.
 
 Its strange that people look at you asking if by having blog you meant instagram.
 
@@ -41,6 +41,46 @@ Its strange that people look at you asking if by having blog you meant instagram
 Some people use mailchimp, or
 
 But i just felt confortable enought with Mailerlite: https://www.mailerlite.com/pricing
+
+
+{{< details title="Setup MailerLite for your Websites with Custom Domain 📌" closed="true" >}}
+
+You will need to authenticate that you own the email and also the domain (with DNS).
+
+Go to your [mailerlite dashboard UI](https://dashboard.mailerlite.com)
+
+I am using Cloudflare for that domain, and the DNS were updated automatically via UI.
+
+There are some **CName and txt records** and they will be **DNS only**, not proxied.
+
+![MailerLite Custom Domain Setup](/blog_img/web/SaaS/mailerlite-domainsetup.png)
+
+**Create a new form** and you will get the JS to place before the `</head>` of your web.
+
+```js
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', 'some_acount_id');
+</script>
+<!-- End MailerLite Universal -->
+```
+
+> You can also get **MailerLite working with a button**, so that it opens as pop up:
+
+```html
+<a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'some_id_here', true)">Click here to show form</a>
+
+and use it with your components, for example
+<form id="simple-newsletter-form" class="input-container" method="post" action="javascript:void(0);" onsubmit="ml('show', 'some_id_here', true); return false;">
+    <input type="submit" value="Ready to Know?" class="ml-onclick-form" style="appearance: button; -webkit-appearance: button; cursor: pointer;">
+</form>
+```
+
+{{< /details >}}
 
 > Plus they have a cool CSR pricing page!
 
@@ -125,17 +165,24 @@ sudo rm -r .git
 
 Just in case that you were tired of the [**fantastic** Hugo Photo Gallery](https://github.com/nicokaiser/hugo-theme-gallery).
 
+I tried that with few [samples last year](http://localhost:1313/websites-themes-2024/):
+
+{{< cards >}}
+  {{< card link="https://cyclingthere.pages.dev" title="My Travel Adventures" image="/blog_img/web/WebsSnapshots/Web_CyclingThere.png" subtitle="I can write and also create interesting photo galleries about my travel experiences" >}}
+  {{< card link="https://whilecyclingthere.web.app/" image="/blog_img/web/whilecycling.png" title="Photo Gallery Blog" subtitle="Made with HUGO and Photo centered" >}}
+{{< /cards >}}
+
 I bring you few more:
 
-Yes, there are several GitHub repositories with photo gallery themes built for both Astro and Hugo frameworks.
+There are several GitHub repositories with photo gallery themes built for both Astro and Hugo frameworks.
 
 Astro photo gallery themes:
+
 - [jomaendle/astro-photo-gallery](https://github.com/jomaendle/astro-photo-gallery): A simple photo gallery using the Astro framework.
 - [erfianugrah/revista-3](https://github.com/erfianugrah/revista-3): A photography portfolio theme with a masonry layout, image optimization, and lightbox, built on Astro.
 - Astro official theme listings also include photography portfolio templates with responsive designs and gallery features.
 
 Hugo photo gallery themes:
-- [nicokaiser/hugo-theme-gallery](https://github.com/nicokaiser/hugo-theme-gallery): A simple, opinionated photo gallery theme for Hugo.
 - [thkukuk/hugo-photoswipe5-gallery](https://github.com/thkukuk/hugo-photoswipe5-gallery): A gallery theme with PhotoSwipe lightbox and configurable thumbnails.
 - [bep/gallerydeluxe](https://github.com/bep/gallerydeluxe): A fast and effective Hugo module for photo galleries, great for large image collections.
 - [nux-li/hugo-foto-theme](https://github.com/nux-li/hugo-foto-theme): A Hugo theme focused on creating photo galleries for photographers.
@@ -149,7 +196,6 @@ These projects provide responsive layouts, lightbox/carousel support, and variou
 [5](https://github.com/bep/gallerydeluxe)
 
 [6](https://github.com/nux-li/hugo-foto-theme) - Very nice Hugo theme for creating photo galleries based on images' [metadata](https://github.com/nux-li/hugo-foto-theme?tab=readme-ov-file#prerequisites). See https://matze.rocks/images/
-
 
 [7](https://github.com/topics/astro-themes)
 [8](https://astro.build/themes/2/)

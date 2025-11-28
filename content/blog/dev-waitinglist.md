@@ -3,7 +3,7 @@ title: "A Quick Waiting List for your SaaS"
 date: 2025-08-02
 draft: false
 tags: ["Entrepreneurship","PMF","Porkbun API","waiting-to-landing","Formbricks"]
-description: 'How much is an idea worth? With Astro SSG, Formbricks and Cloudflare API'
+description: 'How much is an idea worth? With Astro SSG, Formbricks and Cloudflare API. Waiting2Landing v1.'
 url: 'how-to-create-a-waiting-list'
 ---
 

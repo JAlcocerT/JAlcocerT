@@ -43,22 +43,16 @@ I made couple of posts about ssg **themes for links**:
   {{< card link="https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/" title="Links with HUGO LYNX Theme" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links on Github Pages" >}}             
 {{< /cards >}}
 
-I have added few shortcodes:
-
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
-{{< /cards >}}
 
 
 
-https://linktr.ee/lynnic
-https://www.youtube.com/@lynnic/featured
+* https://linktr.ee/lynnic
+* https://www.youtube.com/@lynnic/featured
 
 
-https://indiepa.ge/charlieclark
-https://github.com/charlieclark
-https://www.liinks.co/?ref=indiepage_leaderboard
+* https://indiepa.ge/charlieclark
+* https://github.com/charlieclark
+* https://www.liinks.co/?ref=indiepage_leaderboard
 
 Which is validated to have done 1M+ https://indiepa.ge/leaderboard as of the time of writing
 
@@ -68,9 +62,8 @@ Which is validated to have done 1M+ https://indiepa.ge/leaderboard as of the tim
 
 
 * https://www.liinks.co/i/plans
-
-https://www.youtube.com/watch?v=uqah6bDkSxs
-https://blog.liinks.co/link-in-bio-monetization-strategies-unlocking-new-revenue-streams-for-creators
+* https://www.youtube.com/watch?v=uqah6bDkSxs
+* https://blog.liinks.co/link-in-bio-monetization-strategies-unlocking-new-revenue-streams-for-creators
 
 
 But recently I found about:
@@ -149,7 +142,6 @@ curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect
 You will want to know how it performs:
 
 
-
 ### SaaS around Links
 
 * More competitors
@@ -167,21 +159,28 @@ Because...
 
 You have something more to show that social media apps...right?
 
+Here you have some ideas with projects that I have been publishing about before.
 
+Also, you can plug [Web Analytics](#web-analytics) or [Link Analytics](#link-analytics) to your links.
 
 #### Waiting List for Products
 
-Waiting2Landing
+I first built a Waiting2Landing: Two Astro Themes working together
+
+First the waiting list theme captures leads via formbricks, then, changing to an agency landing page:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/obfuscate" title="NEW Obfuscate Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Python + Obfuscate + Ebook WebPage" >}}
-  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="You are not alone if this reminds you to the possibilites of Waiting to Landing..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/" title="Astros WaitingToLanding" image="https://github.com/JAlcocerT/waiting-to-landing/blob/main/screens/demoLight.webp" subtitle="Source Code of Python + Obfuscate + Ebook WebPage" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Two Astro Themes + Formbricks to capture emails >}}
 {{< /cards >}}
 
+For now, this is a page with 1 ebook:
 
 {{< cards >}}
   {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
 {{< /cards >}}
+
+That should allow you to build DIY websites for your brand, as [I have been doing](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/#other-websites-ive-built)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/" title="The Waiting2Landing v2 PB Post" image="/blog_img/web/waitingtolanding/link-hub.png" subtitle="I tinkered here more with CSR and linkhub than actually building the waiting2landing v2 with PB instead of formbricks as per v1" >}}
@@ -193,12 +192,19 @@ Waiting2Landing
 
 #### eBooks Pages
 
-https://github.com/JAlcocerT/sell-your-ebook
+[Some People](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#how-people-send-ebooks) sell information via ebooks, why dont you do that?
+
+<!-- https://github.com/JAlcocerT/sell-your-ebook -->
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="NEW Sell your eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Astro SSG Theme (x) Stripe (x) N8N" >}}
 {{< /cards >}}
 
+Additionally to the base theme: https://github.com/candidosales/landing-page-book-astro-tailwind
+
+There are other cool ones like:
+
+* https://github.com/understanding-astro/understanding-astro-book
 
 {{< youtube "XEFpzEIEDFc" >}}
 
@@ -207,50 +213,99 @@ https://github.com/JAlcocerT/sell-your-ebook
 
 It all started [here](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#show-and-obfuscate) while testing how to create AI driven ebooks on [this repo: initially with RMD](https://github.com/JAlcocerT/ebooks).
 
-https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version
-
+<!-- 
 https://github.com/JAlcocerT/obfuscate
-
 ![Book publisher with FastAPI and Obfuscator looking cool](/blog_img/dev/fastapi/ebook-obfuscate-ui.png)
+ -->
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version" title="Creating and Publishing PDF eBooks" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="Download the ebook or read it via webpage when conditions are met" >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate/" title="Obfuscate web and ebook Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="ebooks creation as a code + fastapi obfuscation + modern web page" >}}
+{{< /cards >}}
+
+> Now I have my ,webook' published: https://diy.jalcocertech.com thanks to that repo
 
 #### Calendars
 
-<!-- https://studio.youtube.com/video/qFMN0oDeCFg/edit -->
-{{< youtube "qFMN0oDeCFg" >}}
+Something that looks really professional is to provide your availability.
 
+As you are a cool creator, you will have a lot of demand:
 
 {{< cards >}}
   {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
 {{< /cards >}}
 
-https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble
 
-You can also bring your MailerLite subscription link
+<!-- https://studio.youtube.com/video/qFMN0oDeCFg/edit -->
+{{< youtube "qFMN0oDeCFg" >}}
+
+I have added few shortcodes/components:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
+{{< /cards >}}
+
+So you can also embed your [whatsap bouble](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble)
+
+You can also bring your [MailerLite](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/) subscription link:
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#mailerlite" title="MailerLite Newsletter | Docs for Marketing ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Cal.com Calendar | Docs for Marketing ↗" >}}
+{{< /cards >}}
 
 
 #### Photo Galleries
 
 Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery).
 
+<!-- 
+![Real Estate Property Photo Gallery with Astro](/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png) -->
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-landing/" title="Real Esate Photo Gallery" image="/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png" subtitle="Applied the Astro photo Gallery component for the real estate landing" >}}
+{{< /cards >}}
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery" image="/blog_img/web/whilecycling.png" title="Photo Gallery Blog" subtitle="Made with HUGO and Photo centered" >}}
+{{< /cards >}}
 
 
 #### Podcasts
 
+By this time, you have a lot of audience: you are an artist!
 
+So having one of the links pointing to your podcast platform is very simple.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#podcast-website" title="Tech for Podcasts" image="https://private-user-images.githubusercontent.com/53962116/261033070-3106bf65-37f9-427f-9b50-72d7ae22752f.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQzMzEwMDEsIm5iZiI6MTc2NDMzMDcwMSwicGF0aCI6Ii81Mzk2MjExNi8yNjEwMzMwNzAtMzEwNmJmNjUtMzdmOS00MjdmLTliNTAtNzJkN2FlMjI3NTJmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTI4VDExNTE0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVjY2U5NmY0M2ZjZDY2ZDI1MTE4ZWZiNGE0ZmRlNzViZTFmYmFiNTY1Y2NmZWIwZjU1MjJiZjM2NDA0MmRmYzkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.gXHhHGwVn7eLHu8N8OhSZzhDlNSJN7W-iDUP0rmZzsE" subtitle="Creating a serverless Astro Podcast that can be selfhosted with containers" >}}
+  {{< card link="https://github.com/JAlcocerT/astropod" title="Astropod Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked and Tweaked Astro Podcast Theme that works on CF Pages" >}}
+{{< /cards >}}
+
+This is how to do it step by step:
+
+{{< youtube "mDMGtMOx-Fk" >}}
+
+
+> You can also use [Gatsby SSG for Podcasting](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/#podcasts-in-gatsby)!
+
+> > See how to bring audio via [Hugo components](https://github.com/JAlcocerT/JAlcocerT/tree/main/static/audio) as seen [here](http://localhost:1313/interesting-apis/#11labs)
 
 #### What we say vs what we do
 
 * **Stated Preference (What they say):** Based on hypothetical questions. It captures what users *claim* they would choose.
 * **Revealed Preference (What they do):** Based on actual behavior. It captures true preferences through real-world actions and choices.
 
-La preferencia anunciada o preferencia declarada es un método para conocer las preferencias de los usuarios basado en lo que ellos dicen que elegirían en situaciones hipotéticas o que no han experimentado en la realidad. Es muy utilizada en economía para anticipar cómo los consumidores podrían reaccionar ante nuevas opciones que aún no existen en el mercado. Por ejemplo, se puede preguntar a una persona qué opciones preferiría en un producto nuevo o servicio que no ha probado.[1]
+La preferencia anunciada o preferencia declarada es un método para conocer las preferencias de los usuarios basado en lo que ellos dicen que elegirían en situaciones hipotéticas o que no han experimentado en la realidad.
 
-Por otro lado, la preferencia revelada se basa en observar el comportamiento real de consumo del usuario, es decir, en las decisiones y elecciones efectivas que hace en la vida cotidiana. La teoría de la preferencia revelada sostiene que las preferencias de los consumidores se pueden deducir de sus hábitos de compra reales, ya que el hecho de elegir un bien sobre otro revela cuál prefieren realmente bajo las restricciones de su presupuesto. Esto implica que las preferencias se infieren a partir de las elecciones efectivas, no de declaraciones hipotéticas.[2]
+Es muy utilizada en economía para anticipar cómo los consumidores podrían reaccionar ante nuevas opciones que aún no existen en el mercado. Por ejemplo, se puede preguntar a una persona qué opciones preferiría en un producto nuevo o servicio que no ha probado.[1]
 
+Por otro lado, la preferencia revelada se basa en observar el comportamiento real de consumo del usuario, es decir, en las decisiones y elecciones efectivas que hace en la vida cotidiana.
 
+La teoría de la preferencia revelada sostiene que las preferencias de los consumidores se pueden deducir de sus hábitos de compra reales, ya que el hecho de elegir un bien sobre otro revela cuál prefieren realmente bajo las restricciones de su presupuesto.
 
+Esto implica que las preferencias se infieren a partir de las elecciones efectivas, no de declaraciones hipotéticas.[2]
 
 | Type | Definition | PostHog Tool to Use |
 | :--- | :--- | :--- |
@@ -288,8 +343,6 @@ But for sure that as of today you dont need to now [TS](https://jalcocert.github
 I recently tried [NuxtJS here](https://jalcocert.github.io/JAlcocerT/trying-nuxt-themes/).
 
 
-
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
 {{< /cards >}}
@@ -313,7 +366,11 @@ I recently tried [NuxtJS here](https://jalcocert.github.io/JAlcocerT/trying-nuxt
 
 ### SelfHosted WebAnalytics
 
-Every time I read the selfh.st newsletter I find a new web analytics tool trying to replace Umami:
+If the cloudflare web analytics is not enough for you:
+
+![CF Web Analytics](/blog_img/web/filebrowser-hugo/cloudflare-hugo-analytics.png)
+
+Every time I read the `selfh.st `newsletter I find a new web analytics tool trying to replace Umami.
 
 * https://github.com/seuros/kaunta
 
@@ -321,7 +378,9 @@ Every time I read the selfh.st newsletter I find a new web analytics tool trying
 
 * https://github.com/electerious/Ackee 
 
-But imo, Umami should be one of those **HomeLab essentials** tools to consider.
+**But imo, Umami** should be one of those **HomeLab essentials** tools to consider.
+
+![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami | Docker Config 🐋 ↗" >}}
@@ -340,11 +399,12 @@ But imo, Umami should be one of those **HomeLab essentials** tools to consider.
   {{< card link="https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/" title="Litlyx Post Views Distribution" image="/blog_img/web/weban/litlyx.png" subtitle="How could this not relate with Pareto?" >}}
 {{< /cards >}}
 
-> Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
+> Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. 
+
+> > Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
 
 ![Web Analytics with LunaLytics](/blog_img/selfh/HomeLab/weban-lunalytics.png)
 
-![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
 
 
 See also:

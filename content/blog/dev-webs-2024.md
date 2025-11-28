@@ -11,8 +11,8 @@ url: 'websites-themes-2024'
 It all started few years ago with my **own blogs**.
 
 {{< cards >}}
-  {{< card link="https://cyclingthere.com" title="My Travel Adventures" image="/blog_img/web/WebsSnapshots/Web_CyclingThere.png" subtitle="I can write and also create interesting photo galleries about my travel experiences" >}}
-  {{< card link="https://while.cyclingthere.com" image="/blog_img/web/whilecycling.png" title="Photo Gallery Blog" subtitle="Made with HUGO and Photo centered" >}}
+  {{< card link="https://cyclingthere.pages.dev" title="My Travel Adventures" image="/blog_img/web/WebsSnapshots/Web_CyclingThere.png" subtitle="I can write and also create interesting photo galleries about my travel experiences" >}}
+  {{< card link="https://whilecyclingthere.web.app/" image="/blog_img/web/whilecycling.png" title="Photo Gallery Blog" subtitle="Made with HUGO and Photo centered" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
@@ -34,7 +34,7 @@ Log into porkbun -> `NS` -> Change Authoritative Name Server to the ones provide
 
 ![CF Custom Domain 1](/blog_img/web/Cloudflare/CF-CustomDomain-DNSTransfer.png)
 
-![CF Custom Domain2 ](/blog_img/web/Cloudflare/CF-CustomDomain-DNSRecordsScan.png)
+![CF Custom Domain2](/blog_img/web/Cloudflare/CF-CustomDomain-DNSRecordsScan.png)
 
 ![CF Custom Domain 3](/blog_img/web/Cloudflare/CF-customdomain-sync.png)
 
@@ -198,9 +198,6 @@ Marketing tech capabilities including SEO settings, Google Analytics, Zapier, an
   * https://cocolounge.pl/
   * https://www.dotnpixel.pl/about.html
 
-### Themes To Try
-
-* https://github.com/oxygenna-themes/foxi-astro-theme/
 
 ### Scaling Ideas
 
@@ -304,7 +301,7 @@ services:
 For filebrowser quantum you will login with: `admin/admin` for the original one with 'admin/console logs'
 
 ```sh
-
+sudo docker filebrowser logs
 ```
 
 To make it more intuitive, you can create an user and put that their path is directly `./content` which maps to the place where HUGO Theme Gallery loads all the photos.
@@ -321,7 +318,7 @@ Provide access with
 
 And as you are logged in already, show the analytics for motivation :) 
 
-![alt text](/blog_img/web/filebrowser-hugo/cloudflare-hugo-analytics.png)
+![CF Web Analytics](/blog_img/web/filebrowser-hugo/cloudflare-hugo-analytics.png)
 
 Before pushing changes, I had to do provide this git CLI:
 

@@ -144,10 +144,6 @@ If after all, you want to get a **mechanism to get feedback** from clients:
 * https://github.com/ClaperCo/Claper
   * https://claper.co/
 
-
-
-**Intro**
-
 This year *seems to be* the year of: uv, makefile and [pocketbase](https://jalcocert.github.io/JAlcocerT/pocketbase/).
 
 1. [Frombricks](#formbricks)
@@ -158,13 +154,13 @@ This year *seems to be* the year of: uv, makefile and [pocketbase](https://jalco
 
 You can have also your own [DIY survey / forms](#diy-forms-with-pb) tool for your Saas by [using PB](#why-with-pocketbase).
 
-> PB + SSG is great to validate ideas. FAST!
-
 ### Forms
 
 #### Formbricks
 
 Just use formbricks.
+
+COnfigure it properly, and you can use formbricks to be a waiting2landing questionare while you are figuring out the PMF for your next microSaaS: https://github.com/JAlcocerT/waiting-to-landing
 
 Around one year ago I was making a post and [touched formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)
 
@@ -190,12 +186,20 @@ Around one year ago I was making a post and [touched formbricks](https://jalcoce
 
 ### DIY Forms with PB
 
+When Pocketbase has a SMTP configured, you can make it validate the emails is capturing:
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-#### Why with PocketBase
+**Why with PocketBase**
+
+Potentially: PB + SSG is great to validate ideas. 
+
+FAST!
 
 Just because I like to keep the tech stack as simple as possible.
 
 > And because Im lazy to maintain a lot of back-end code.
+
+Additionally, you wont have a limit on how many users can be on your list.

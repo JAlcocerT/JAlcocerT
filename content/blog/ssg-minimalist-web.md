@@ -155,9 +155,10 @@ And in there i will keep tinkering on this medium.
 
 But the curated already digested content will go to `blog.jalcocertech.com`
 
-{{< details title="Astro Theme Selection | Blog 101 with PPTs 📌" closed="true" >}}
+{{< details title="Astro Themes Selection | Blog 101 with PPTs 📌" closed="true" >}}
 
 ```sh
+#https://github.com/oxygenna-themes/foxi-astro-theme/
 git clone https://github.com/monakit/monakit
 npm install
 npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/

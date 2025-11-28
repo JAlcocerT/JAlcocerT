@@ -108,9 +108,11 @@ graph TD
     C --> D{People Can Book Tours};
 ```
 
-See how cool the embedded calendar can look:
+See how cool the embedded calendar can look: *powered by cal.com embedded*
 
 ![Booking tours with Cal](/blog_img/web/success10-ourika/ourika-cal.png)
+
+
 
 
 ---

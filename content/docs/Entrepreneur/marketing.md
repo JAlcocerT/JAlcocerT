@@ -23,11 +23,64 @@ Dittofeed: Free Open Source Automated Communication Platform
 
 {{< youtube "ycs53MFoW4E" >}}
 
-## Newsletters
+
+## Leads from PDFs
+
+Create the PDF as a code with your contact details -> print -> paste across the city.
+
+### QR Creation
+
+
+## Emails
+
+What a surprise, you need to master [emails and their SMTP](https://jalcocert.github.io/JAlcocerT/emails-101/).
+
+
+### Newsletters
 
 #### MailerLite
 
 https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#mailerlite-api
+
+
+{{< details title="Setup MailerLite with your Custom Domain 📌" closed="true" >}}
+
+You will need to authenticate that you own the email and also the domain (with DNS).
+
+Go to your [mailerlite dashboard UI](https://dashboard.mailerlite.com)
+
+I am using Cloudflare for that domain, and the DNS were updated automatically via UI.
+
+There are some **CName and txt records** and they will be **DNS only**, not proxied.
+
+![MailerLite Custom Domain Setup](/blog_img/web/SaaS/mailerlite-domainsetup.png)
+
+**Create a new form** and you will get the JS to place before the `</head>` of your web.
+
+```js
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', 'some_acount_id');
+</script>
+<!-- End MailerLite Universal -->
+```
+
+> You can also get **MailerLite working with a button**, so that it opens as pop up:
+
+```html
+<a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'some_id_here', true)">Click here to show form</a>
+
+and use it with your components, for example
+<form id="simple-newsletter-form" class="input-container" method="post" action="javascript:void(0);" onsubmit="ml('show', 'some_id_here', true); return false;">
+    <input type="submit" value="Ready to Know?" class="ml-onclick-form" style="appearance: button; -webkit-appearance: button; cursor: pointer;">
+</form>
+```
+
+{{< /details >}}
 
 #### RSS
 
@@ -72,15 +125,17 @@ curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCPPMA8ZEusAe5dVH6P
 #curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCPPMA8ZEusAe5dVH6PbjZFA" | grep -oP '(?<=<title>).*?(?=</title>)' | head -5
 ```
 
-### Emails
 
-### Calendar
+## Calendar
 
 Among [all the things that can be embedded](https://jalcocert.github.io/JAlcocerT/embed-that/) into a website, we have not only bots, but also cool calendars.
 
 {{< cards >}}
   {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
 {{< /cards >}}
+
+![Booking tours with Cal](/blog_img/web/success10-ourika/ourika-cal.png)
+
 
 ```mermaid
 graph TD

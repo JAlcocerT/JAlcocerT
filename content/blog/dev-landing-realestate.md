@@ -212,7 +212,7 @@ With:
 2. The gallery look and feel from the [previous version source code](https://github.com/JAlcocerT/real-estate-moi/tree/main/moirealestate-astro-theme) at `./real-estate-moi/ScrewFastMoiRealEstate`. Commented [here](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#real-estate), as I tried to combined [FlaskCMS](https://github.com/JAlcocerT/real-estate-moi/tree/main/moirealestate-flaskcms) x the Astro theme.
 
 
-![alt text](/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png)
+![Real Estate Property Photo Gallery with Astro](/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png)
 
 ```sh
 git clone https://github.com/JAlcocerT/real-estate-moi
@@ -391,6 +391,8 @@ Or some email subscriptions: which [MailerLite](#mailerlite) can do
 
 With the right knowledge, you can **use n8n to do all the automations** you need and avoid paying similar software or doing the work manually.
 
+Use n8n on your server with just 1min tutorial:
+
 {{< youtube "v-gCNTI5kzE" >}}
 
 Build n8n workflows: https://n8nworkflows.xyz/?price=free
@@ -413,7 +415,7 @@ That level of focus is what platforms like elestio achieve: https://elest.io/ope
 
 #### MailerLite
 
-If you have an audience and are interested to bring email subscriptions to your website, MailerLite is a good option.
+If you have an audience and are interested to bring email subscriptions to your website, [MailerLite](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/) is a good option.
 
 {{< details title="Setup MailerLite for premium real estate agencies 📌" closed="true" >}}
 

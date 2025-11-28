@@ -323,17 +323,6 @@ See what [Mozilla thinks about them](https://developer.mozilla.org/en-US/docs/Le
   
 #### Other Websites I've Built
 
-* IOTECH - https://github.com/themefisher/bigspring-light-astro
-    * https://iotechcrafts.com/blog/
-* IORACING - https://github.com/zankhq/astros
-    * https://ioracing-iotechcrafts.web.app/
-        * EX - https://astro.build/themes/details/launchui/
-        * https://iotechcrafts-ioracing.web.app/
-* IODOCTOR - https://github.com/mickasmt/astro-nomy
-
-* IOT - https://github.com/matt765/Tailcast
-    * https://iot.iotechcrafts.com/
-
 1. With an option to plug [adsense](https://adsense.google.com/adsense/) to each of this websites
 
 
@@ -362,9 +351,24 @@ See what [Mozilla thinks about them](https://developer.mozilla.org/en-US/docs/Le
   {{< card link="https://iotechcrafts.web.app/" title="Business Website" image="/blog_img/web/WebsSnapshots/Web_IoTechCrafts.png" subtitle="A Website for Agency - AI & IoT Consulting Services">}}   
   {{< card link="https://iotiotechcrafts.web.app/" title="IoT SaaS Site" image="/blog_img/web/WebsSnapshots/web_iotiotech.png" subtitle="One Pager with FAQ and Pricing" >}} 
   {{< card link="https://iodoctor.iotechcrafts.com/" title="Doctor Consultation" image="/blog_img/web/WebsSnapshots/Web_IoDoctor.png" subtitle="Landing for Scheduling Doctor Appointments" >}}           
-  {{< card link="https://iodoctor-iotechcrafts.web.app/" title="Web for Doctor Consultation" image="/blog_img/web/WebsSnapshots/web_iodoctors.png" subtitle="With Astro mdx blogs filtrable by tags and docs sections" >}}  
   {{< card link="https://ioracing-iotechcrafts.web.app/" title="IoT SaaS Site" image="/blog_img/web/WebsSnapshots/web_ioracing.png" subtitle="One Pager with FAQ, Pricing and MultiLang" >}}            
 {{< /cards >}}
+
+* For IOTECH I used https://github.com/themefisher/bigspring-light-astro
+
+* For IORACING - https://github.com/zankhq/astros and before https://github.com/creativetimofficial/astro-launch-ui
+
+* For IODOCTOR - https://github.com/mickasmt/astro-nomy
+
+* For IOT IOTECHCRAFTS - https://github.com/matt765/Tailcast
+  
+Also, business **landing pages** for [small creators](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/):
+
+{{< cards >}}
+  {{< card link="https://www.guideventuretour.com/" title="Business Website" image="/blog_img/web/WebsSnapshots/web_guideventuretour.png" subtitle="A Website for Agency - AI & IoT Consulting Services">}}   
+{{< /cards >}}
+
+<!-- ![Ourika Landing Page](/blog_img/web/success10-ourika/landing-ourika.png) -->
 
 
 ---
