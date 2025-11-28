@@ -70,7 +70,7 @@ const app = initializeApp(firebaseConfig);
 
 Just logging and follow: https://firebase.google.com/
 
-![alt text](/blog_img/web/Firebase/auth/fb-auth1-methods.png)
+![Choosing authentication method working together with firebase authentication](/blog_img/web/Firebase/auth/fb-auth1-methods.png)
 
 > You can even bring your own [OpenIDConnect](https://jalcocert.github.io/JAlcocerT/encryption-101/#oidc-vs-oauth) / SAML
 

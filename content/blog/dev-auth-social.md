@@ -212,7 +212,7 @@ for now, all users will see the very same editor
 
 {{% /details %}}
 
-![alt text](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-1.png)
+![Firebase Authentication in the Web App](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-1.png)
 
 ![alt text](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-2.png)
 

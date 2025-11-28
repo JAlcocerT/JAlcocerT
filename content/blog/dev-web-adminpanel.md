@@ -87,6 +87,7 @@ https://jalcocert.github.io/JAlcocerT/astro-i18/
 
 
 https://jalcocert.github.io/JAlcocerT/astro-journal-theme/
+![NextJS Reactmd editing astro sphere theme](/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png)
 
 
 

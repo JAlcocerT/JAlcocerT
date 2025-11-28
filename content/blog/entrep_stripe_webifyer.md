@@ -8,11 +8,12 @@ url: 'using-stripe-with-flask'
 ---
 
 
-**TL;DR** Business concepts to help you help others for money, *aka sell*
+**TL;DR** 
+
+Business concepts to help you help others for money, *aka sell*
 
 +++ [Selfhosted Invoicing software](#stripe-x-invoiceninja): InvoiceNinja (accepts btcpayserver), Invoicerr, serverless-invoices, BillaBear
 +++ [Formbricks](#adding-formbricks-to-flask) and [Umami](#adding-umami-web-analytics-to-flask) x Flask
-[a](#)
 +++ [Stripe API](#stripe) and Logto working with Flask
 
 **Intro**

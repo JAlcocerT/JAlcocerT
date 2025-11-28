@@ -393,6 +393,11 @@ Every time I read the `selfh.st `newsletter I find a new web analytics tool tryi
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="SelfHostable WebAnalytics Tools 🐋✅ ↗" >}}
 {{< /cards >}}
 
+https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#adding-umami-web-analytics-to-flask
+
+![Flask App with Umami Integration](/blog_img/entrepre/webify/flask-umami.png)
+
+
 <!-- ![Cookies Meme](/blog_img/web/COOKIES.jpg) -->
 
 {{< cards >}}

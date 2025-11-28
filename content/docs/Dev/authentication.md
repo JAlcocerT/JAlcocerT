@@ -52,9 +52,22 @@ The 3 Bodies post and app.
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
-
 ### Firebase Authentication
 
 This one is...serverless!
 
 So you dont care about the server, it just works.
+
+## Email Verification
+
+Use any of the following to not just [authenticate](#authentication), but verify emails:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe-x-logto" title="Logto working with Flask WebApp" image="/blog_img/entrepre/webify/webify-logto-login.png" subtitle="Using Logto and then Stripe for a website platform" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/email-verification-pocketbase/" title="PB x Mailtrap" image="/blog_img/email/pb-mailtrap/pb-reset-pwd-working-smtp.png" subtitle="Using PocketBase and Mailtrap for user email verification" >}}  
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/social-signin-101/#1-firebase-authentication-" title="Using Firebase Authentication" image="/blog_img/entrepre/public-build/slidev-editor/firebaseauth-1.png" subtitle="Together with the journal SSG" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebase-auth-101/" title="Understanding Firebase Auth" image="/blog_img/web/Firebase/auth/fb-auth1-methods.png" subtitle="Configuring Google Firebase auth" >}}
+{{< /cards >}}

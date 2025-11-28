@@ -35,6 +35,8 @@ Create the PDF as a code with your contact details -> print -> paste across the 
 
 What a surprise, you need to master [emails and their SMTP](https://jalcocert.github.io/JAlcocerT/emails-101/).
 
+if you are [building a sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/) and doing cold email, you will need to verify emails.
+
 
 ### Newsletters
 
@@ -144,3 +146,11 @@ graph TD
     A --> D(Consult via Cal.com - DWY $$);
     A --> E(Services - DFY $$$);
 ```
+
+
+### Integrate Stripe
+
+https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe
+
+![Stripe Apps Connection](/blog_img/entrepre/stripe/stripe-apps.png)
+

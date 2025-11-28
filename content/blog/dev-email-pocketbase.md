@@ -147,7 +147,7 @@ curl -x GET http://192.168.1.12:8080/api/collections/users/confirm-verification
 
 /api/collections/users/confirm-verification
 
-![alt text](/blog_img/email/pb-mailtrap/pb-api-verification.png)
+![Pocketbase API endpoint for Verification](/blog_img/email/pb-mailtrap/pb-api-verification.png)
 
 Even the `/api/collections/users/confirm-verification` is around!
 
@@ -179,6 +179,29 @@ await pb.collection('users').requestPasswordReset('test@example.com');
 ---
 
 ## Conclusions
+
+You can **also get emails verified** ( >>> validated) via **Logto** -> Stripe:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe-x-logto" title="Logto working with Flask WebApp" image="/blog_img/entrepre/webify/webify-logto-login.png" subtitle="Using Logto and then Stripe for a website platform" >}}
+{{< /cards >}}
+
+<!-- 
+![Logto Login Authentication wall](/blog_img/entrepre/webify/webify-logto-login.png) -->
+
+
+And with [**firebase** auth](https://jalcocert.github.io/JAlcocerT/firebase-auth-101/):
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/social-signin-101/#1-firebase-authentication-" title="Using Firebase Authentication" image="/blog_img/entrepre/public-build/slidev-editor/firebaseauth-1.png" subtitle="Together with the journal SSG" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebase-auth-101/" title="Understanding Firebase Auth" image="/blog_img/web/Firebase/auth/fb-auth1-methods.png" subtitle="Configuring Google Firebase auth" >}}
+{{< /cards >}}
+
+<!-- 
+![Firebase Authentication in the Web App](/blog_img/entrepre/public-build/slidev-editor/firebaseauth-1.png)
+![Choosing authentication method working together with firebase authentication](/blog_img/web/Firebase/auth/fb-auth1-methods.png) -->
+
+
 
 This year I have to be impressed about the cool projects around Golang
 

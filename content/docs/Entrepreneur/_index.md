@@ -21,6 +21,11 @@ You can also get help from [some product tools](https://jalcocert.github.io/JAlc
 
 ### Formbricks
 
+https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#adding-formbricks-to-flask
+
+![Formbricks Link Embed](/blog_img/entrepre/webify/formbricks-link-embed.png)
+
+
 
 ### PostHog
 
