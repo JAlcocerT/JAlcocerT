@@ -6,7 +6,7 @@ draft: false
 #     image: "https://socialify.git.ci/JAlcocerT/Py_Trip_Planner/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #     alt: "Trip Planner with AI" # alt text
 #     caption: "Trip Planner with AI" # display caption under cover
-tags: ["Gen-AI","Python","Dev","Windy vs Trip-Planner","DASH"]
+tags: ["Gen-AI","Python","Windy vs Trip-Planner","DASH","Cookies vs Session Storage","Data Race"]
 description: 'Use LangChain to chat with a Pandas DF. Compared with LlamaIndex Pandas Query Engine.'
 url: 'using-langchain-with-pandas-df'
 ---
@@ -14,9 +14,9 @@ url: 'using-langchain-with-pandas-df'
 
 **TL;DR**
 
-https://www.windy.com/-Rain-thunder-rain?rain,37.118,-4.995,7 is fantastic.
+`https://www.windy.com/-Rain-thunder-rain?rain,37.118,-4.995,7` is fantastic.
 
-And I wanted to make my weather app better: `https://tripplanner.casa.jalcocertech.com/`
+And I wanted to make my weather DASH web/app better.
 
 **Intro**
 
@@ -99,6 +99,9 @@ So lets make some tweaks and get trip planner V3 ready, this time with **AI Chat
 * https://dash.plotly.com/authentication
 
 
+To deploy, we can use NGINX: `https://tripplanner.casa.jalcocertech.com/`
+
+
 ---
 
 ## FAQ
@@ -121,17 +124,27 @@ Imagine you have a shared notebook that two people are trying to write on at the
 
 **Data Race Issue (The Problem):**
 
-Imagine one person is trying to write a number in the notebook, and at the exact same moment, the other person is trying to erase it. If they aren't careful and there's no rule about who goes first, the final number in the notebook could be anything – it might be the first person's number, the result of the erasure, or even something messy in between.
+Imagine one person is trying to write a number in the notebook, and at the exact same moment, the other person is trying to erase it.
 
-That messy situation where two people try to change the same thing at the same time without any coordination is like a **data race**. When computers do this with information in their memory, it can lead to the program getting confused and doing the wrong thing, crashing, or behaving strangely.
+If they aren't careful and there's no rule about who goes first, the final number in the notebook could be anything – it might be the first person's number, the result of the erasure, or even something messy in between.
+
+That messy situation where two people try to change the same thing at the same time without any coordination is like a **data race**.
+
+When computers do this with information in their memory, it can lead to the program getting confused and doing the wrong thing, crashing, or behaving strangely.
 
 **Think of it like a traffic jam at a single-lane bridge without traffic lights. Cars trying to go in both directions at once will cause chaos.**
 
 **Data Trace (A Way to See What's Happening):**
 
-Now, imagine you want to figure out why the notebook sometimes has the wrong number. You might decide to follow each person's pen and see exactly what they are writing and erasing, and when. You'd be making notes about who touched the notebook and what they did at each step.
+Now, imagine you want to figure out why the notebook sometimes has the wrong number. 
 
-That process of carefully watching and recording how the information (the numbers in the notebook) changes over time is like a **data trace**. It's a way to follow the data's journey to understand what's going on, especially when things go wrong.
+You might decide to follow each person's pen and see exactly what they are writing and erasing, and when. 
+
+You'd be making notes about who touched the notebook and what they did at each step.
+
+That process of carefully watching and recording how the information (the numbers in the notebook) changes over time is like a **data trace**. 
+
+It's a way to follow the data's journey to understand what's going on, especially when things go wrong.
 
 **Think of it like watching security camera footage to see who was near the notebook and what they did.**
 
@@ -144,7 +157,7 @@ So, a data race is the problem, and a data trace is a way to investigate what's 
 
 #### DASH Data Race
 
-Yes, **Dash applications can definitely be affected by data race issues**, especially in scenarios involving:
+**Dash applications can definitely be affected by data race issues**, especially in scenarios involving:
 
 1.  **Shared mutable state across callbacks:** If you have multiple callbacks in your Dash application that interact with and modify the same Python variables (that are not properly protected), you can run into data races. This is because Dash callbacks can execute concurrently in response to different user interactions.
 
@@ -198,7 +211,9 @@ if __name__ == '__main__':
     app.run_server(debug=True)
 ```
 
-In this simplified example, without any explicit locking, if both buttons are clicked very quickly and their callbacks execute concurrently, there's a potential data race on the `click_count` variable. The final displayed count might not accurately reflect the total number of clicks.
+In this simplified example, without any explicit locking, if both buttons are clicked very quickly and their callbacks execute concurrently, there's a potential data race on the `click_count` variable. 
+
+The final displayed count might not accurately reflect the total number of clicks.
 
 **How to Mitigate Data Races in Dash:**
 
@@ -207,7 +222,9 @@ In this simplified example, without any explicit locking, if both buttons are cl
 * **Consider message passing:** For communication between background processes and Dash callbacks, consider using message queues (like `redis` or `celery`) which can help manage state changes in a more controlled way.
 * **Be mindful of asynchronous operations:** If using `asyncio`, ensure proper synchronization using `asyncio.Lock` or other async primitives for shared mutable state.
 
-**In conclusion, while Dash itself provides a framework for building web applications, the underlying Python code within your callbacks and any external threads or processes you interact with can be susceptible to data race issues if shared mutable state is not managed carefully with proper synchronization mechanisms.** It's crucial to be aware of these potential problems, especially in more complex Dash applications with concurrent operations.
+**In conclusion, while Dash itself provides a framework for building web applications, the underlying Python code within your callbacks and any external threads or processes you interact with can be susceptible to data race issues if shared mutable state is not managed carefully with proper synchronization mechanisms.**
+
+It's crucial to be aware of these potential problems, especially in more complex Dash applications with concurrent operations.
 
 
 #### Cookies vs DASH Session Storage
@@ -237,7 +254,9 @@ Let's break down how this works in the context of Dash and the underlying web te
 
 **No, `dcc.Store` with `storage_type='session'` is NOT based on cookies.**
 
-- **Cookies:** Cookies are small text files that websites can store on a user's computer. They are sent back to the server with every subsequent request to the same domain. Cookies are primarily designed for server-side session management, tracking, and personalization. They have limitations in size and can impact performance due to being sent with every request.
+- **Cookies:** Cookies are small text files that websites can store on a user's computer. They are sent back to the server with every subsequent request to the same domain.
+
+Cookies are primarily designed for server-side session management, tracking, and personalization. They have limitations in size and can impact performance due to being sent with every request.
 
 - **Session Storage:** Session storage is a more modern browser API designed for client-side storage of data that is specific to the current session. It offers several advantages over cookies for this purpose:
     - **Larger Storage Capacity:** Session storage typically allows for more data to be stored compared to cookies.
@@ -279,5 +298,7 @@ pip3 install uv
 uv run main.py
 #uv run --python 3.9.21 main.py
 #uv run --with requests --python 3.9.21 main.py
-uv pip show dash
+uv add dash
+#uv sync
+#uv lock
 ```

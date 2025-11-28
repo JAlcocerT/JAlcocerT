@@ -55,6 +55,6 @@ https://roadmap.sh/frontend/frameworks
 
 * DJANGO (Python)
 * Streamlit (Python)
-* DASH (Python)
+* [DASH](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/) (Python)
 * Shiny - [R Language](https://jalcocert.github.io/JAlcocerT/r-language-101/)
 * [Laravel (PHP)](https://jalcocert.github.io/JAlcocerT/backend-alternatives/#laravel-101)

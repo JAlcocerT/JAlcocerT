@@ -1,6 +1,6 @@
 ---
 title: "Admin Panels for Websites | Manifest vs PB"
-date: 2025-11-9
+date: 2025-11-29
 tags: ["SaaS","Authentication","Simple BackEnd"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
@@ -15,18 +15,6 @@ Is it possible to have something better than Streamlit and Pocketbase for the qu
 
 Ive been exploring few authentications method lately.
 
-Some people claim that **ads + proper onboarding + paywall** is your source of revenue as a SaaS indie creator.
-
-{{< tweet user="SinaSinry" id="1951606811829604488" >}}
-
-And creating an admin panel is simple in theory.
-
-But in practice... *See this quick admin panel [fastapi sqlite based from the last audio post](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions)*
-
-<!-- 
-https://x.com/SinaSinry/status/1951606811829604488?t=jRvoxV9sxOPDvFHh89HF5w&s=35 -->
-
-> The ARR/MRR retention must be another topic, *I guess*
 
 And suddendly, I have found an interesting solution (that its vibe-code friendly!): [Manifest](#manifest)
 
@@ -73,6 +61,10 @@ This sounds great for **quick PoCs**:
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
 {{< /cards >}}
 
+https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/
+![NextJS Web App with Toast UI to edit SliDev markdown](/blog_img/DA/ppt/slidev-editor-nextjs-toastui.png)
+
+
 But how to **get started with Manifest**?
 
 ```sh
@@ -88,10 +80,37 @@ Via Flask, you can make a quick webapp to allow users to edit specific fields of
 Or as I did recently with **NextJS**
 
 
+https://jalcocert.github.io/JAlcocerT/astro-i18/
+
+![Toast UI working with NextJS](/blog_img/web/nextjs-astro-editor/toastui-nextjs-1.png)
+
+
+
+https://jalcocert.github.io/JAlcocerT/astro-journal-theme/
+
+
+
+https://github.com/JAlcocerT/sell-your-ebook/tree/main/config-editor
+
+![Flask CMS Editor for Ebook Landing JSON](/blog_img/entrepre/product/ebook-flask.png)
 
 ---
 
 ## Conclusions
+
+
+Some people claim that **ads + proper onboarding + paywall** is your source of revenue as a SaaS indie creator.
+
+{{< tweet user="SinaSinry" id="1951606811829604488" >}}
+
+And creating an admin panel is simple in theory.
+
+But in practice... *See this quick admin panel [fastapi sqlite based from the last audio post](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions)*
+
+<!-- 
+https://x.com/SinaSinry/status/1951606811829604488?t=jRvoxV9sxOPDvFHh89HF5w&s=35 -->
+
+> The ARR/MRR retention must be another topic, *I guess*
 
 
 ### Manifest vs PocketBase

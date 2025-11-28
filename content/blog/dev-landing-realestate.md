@@ -343,7 +343,7 @@ Including the dirty [ads](#ads).
 
 ### Outro
 
-Buying a house is a big decision.
+[Buying a house](https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/) is a big decision.
 
 Specially with these salaries and prices:~250k a flat vs 25k/y household income
 

@@ -3,7 +3,7 @@ title: "Lead Magnets around MailerLite API"
 date: 2025-09-21T16:20:21+01:00
 draft: false
 tags: ["Micro SaaS Essentials","MailerLite goodies","Subscribe2Podcast","Waiting2Landing"]
-description: 'BiP user flows around Landing + newsletter layers. With Interesting bcms and pages-cms'
+description: 'BiP user flows around Landing Pages + newsletter layers. With Interesting bcms and pages-cms'
 url: 'mailerlite-for-saas'
 ---
 

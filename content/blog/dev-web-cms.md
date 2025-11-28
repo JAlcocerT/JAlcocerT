@@ -210,10 +210,9 @@ You can setu your project just by following these steps (indicate where are your
 
 ![FrontMatter Setup](/blog_img/web/frontmatter/frontmatter-setup.png)
 
-Now, you will see that frontmatter recognizes all your posts
+Now, you will see that **frontmatter recognizes all your posts**:
 
-![alt text](/blog_img/web/frontmatter/frontmatter-project.png)
-
+![Frontmatter working with HUGO SSG](/blog_img/web/frontmatter/frontmatter-project.png)
 
 Frontmatter provides interesting **SEO recommendations**
 
@@ -247,7 +246,9 @@ Open your project in VS Code: Click the Front Matter icon in the sidebar (or pre
 
 * **GitCMS:** While its philosophy aligns, it's often more of a concept or framework, and specific implementations might vary in simplicity or maturity. You'd need to evaluate a particular GitCMS project.
 
-* **Ghost, Strapi, Directus, Payload CMS, KeystoneJS, Craft CMS, Drupal, WordPress, Umbraco, etc.:** These are typically more complex, requiring a dedicated backend server, database (MySQL, PostgreSQL, MongoDB, etc.), and often don't manage content as plain Markdown files directly in your SSG's source code by default. While they can act as "headless" CMSs for an SSG, they add a layer of complexity (and often a separate hosting requirement for the CMS backend) that moves away from "very simple, self-hostable" in the most direct sense.
+* **Ghost, Strapi, Directus, Payload CMS, KeystoneJS, Craft CMS, Drupal, WordPress, Umbraco, etc.:** These are typically more complex, requiring a dedicated backend server, database (MySQL, PostgreSQL, MongoDB, etc.), and often don't manage content as plain Markdown files directly in your SSG's source code by default. 
+
+While they can act as "headless" CMSs for an SSG, they add a layer of complexity (and often a separate hosting requirement for the CMS backend) that moves away from "very simple, self-hostable" in the most direct sense.
 
 **Recommendation for "Very Simple":**
 
@@ -260,14 +261,22 @@ For the absolute simplest, hands-on, direct Markdown file management with an SSG
 
 A **file-based CMS** is a content management system that stores its content in files on a server's file system, rather than in a traditional database. These files can be in various formats like Markdown, YAML, JSON, or even plain text.
 
-A **Git-based CMS** is a specific type of file-based CMS that leverages the Git version control system to manage and store content. In this system, the content files are stored in a Git repository. Content editors typically use a user-friendly interface provided by the CMS to make changes, and these changes are then committed to the Git repository. This offers benefits like version control, collaboration features, and the ability to easily roll back changes.
+A **Git-based CMS** is a specific type of file-based CMS that leverages the Git version control system to manage and store content.
+
+In this system, the content files are stored in a Git repository. 
+
+Content editors typically use a user-friendly interface provided by the CMS to make changes, and these changes are then committed to the Git repository.
+
+This offers benefits like version control, collaboration features, and the ability to easily roll back changes.
 
 **All Git-based CMS are a subset of file-based CMS.**
 
 * **Foundation in Files:** Git-based CMS inherently rely on storing content as files within a Git repository. This aligns with the fundamental characteristic of a file-based CMS.
 * **Git as a File Management Tool:** Git itself is a system designed to track changes to files. A Git-based CMS simply uses Git as its underlying mechanism for managing these content files.
 
-However, **not all file-based CMS are Git-based.** Many file-based CMS exist that manage files directly without using Git for version control. They might use other methods for backup or offer no built-in versioning capabilities at all.
+However, **not all file-based CMS are Git-based.** Many file-based CMS exist that manage files directly without using Git for version control.
+
+ They might use other methods for backup or offer no built-in versioning capabilities at all.
 
 **In summary:** Think of "file-based CMS" as the broader category. Within that category, "Git-based CMS" is a specific type that uses Git for its file management and version control.
 
@@ -316,7 +325,7 @@ This is one of the cool and simple headlessCMS out there.
 With an interesting free tier for 2 users
 {{< /callout >}}
 
-Tried it with: https://github.com/JAlcocerT/barebones-starter
+Tried it with the Theme and repo: https://github.com/JAlcocerT/barebones-starter
 
 #### TinaCMS + Astro
 
@@ -657,12 +666,3 @@ Do people *just* want some kind of [linktree alternative](https://jalcocert.gith
 There is just one way to know: **testing the market** 
 
 With something tangible ofc, at least a PMF via [formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)! 
-
----
-
-## FAQ
-
-
-### What are NginX Static Routes?
-
-Think about having: SSG -> CMS, like `/keystatic` for UI edits -> CI/CD Builds as per git changes -> exposed via NGINX with https with some kind of authentication.

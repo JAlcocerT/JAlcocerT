@@ -1,6 +1,6 @@
 ---
 title: "Links for Artists"
-date: 2025-11-28T10:20:21+01:00
+date: 2025-11-28T08:20:21+01:00
 draft: false
 tags: ["Web Analytics vs Link Analytics","BaaS with yaml","Vibe Coding vs Spec Driven Development"]
 url: 'link-artists'
@@ -159,6 +159,84 @@ You will want to know how it performs:
   * https://subscribepage.io/listy#
   * https://linke.ro/
   <!-- * Proposed: bogusiabachata.pro -->
+
+
+### What Links to show?
+
+Because...
+
+You have something more to show that social media apps...right?
+
+
+
+#### Waiting List for Products
+
+Waiting2Landing
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="NEW Obfuscate Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Python + Obfuscate + Ebook WebPage" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="You are not alone if this reminds you to the possibilites of Waiting to Landing..." >}}
+{{< /cards >}}
+
+
+{{< cards >}}
+  {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/" title="The Waiting2Landing v2 PB Post" image="/blog_img/web/waitingtolanding/link-hub.png" subtitle="I tinkered here more with CSR and linkhub than actually building the waiting2landing v2 with PB instead of formbricks as per v1" >}}
+  {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="NEW repository - Simple Waiting List" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + CapJS = Working Waiting list to CSV with no external APIs" >}}
+{{< /cards >}}
+
+![CapJS + NextJS Working](/blog_img/dev/nextjs/capjs-nextjs-pow.png)
+
+
+#### eBooks Pages
+
+https://github.com/JAlcocerT/sell-your-ebook
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="NEW Sell your eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Astro SSG Theme (x) Stripe (x) N8N" >}}
+{{< /cards >}}
+
+
+{{< youtube "XEFpzEIEDFc" >}}
+
+
+#### Obfuscated web/book pages
+
+It all started [here](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#show-and-obfuscate) while testing how to create AI driven ebooks on [this repo: initially with RMD](https://github.com/JAlcocerT/ebooks).
+
+https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version
+
+https://github.com/JAlcocerT/obfuscate
+
+![Book publisher with FastAPI and Obfuscator looking cool](/blog_img/dev/fastapi/ebook-obfuscate-ui.png)
+
+
+#### Calendars
+
+<!-- https://studio.youtube.com/video/qFMN0oDeCFg/edit -->
+{{< youtube "qFMN0oDeCFg" >}}
+
+
+{{< cards >}}
+  {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
+{{< /cards >}}
+
+https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble
+
+You can also bring your MailerLite subscription link
+
+
+#### Photo Galleries
+
+Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery).
+
+
+
+
+#### Podcasts
 
 
 

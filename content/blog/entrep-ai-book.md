@@ -131,7 +131,9 @@ I could not resist to create a *quick FlaskCMS* to edit the config.json...
 make quick-config 
 ```
 
-...this was literally one prompt with Cursor. A flask CMS JSON editor:
+...this was literally one prompt with Cursor.
+
+A flask CMS JSON editor: *works together with the landing-page-book-astro-tailwind Astro theme*
 
 ![Flask CMS Editor for Ebook Landing JSON](/blog_img/entrepre/product/ebook-flask.png)
 
@@ -146,7 +148,7 @@ make quick-prod
 docker network connect cloudflared_tunnel astro-prod #connect
 ```
 
-At this point, you have your ebook published via cf network, like: ebook.jalcocertech.com
+At this point, you have your ebook published via cf network, to sth like: `ebook.jalcocertech.com`
 
 ---
 
@@ -267,14 +269,13 @@ Use **bookdown** when:
 
 ## Conclusions
 
-This is it **for now.**
-
+This is it **for now** all I got to tinker with ebooks.
 
 <!-- https://youtu.be/XEFpzEIEDFc -->
 
 {{< youtube "XEFpzEIEDFc" >}}
 
-We've got a landing page to share ebooks.
+We've got a Astro statically deployable landing page to share ebooks!
 
 > Think of this as the first step to selfpublishing
 
@@ -295,23 +296,21 @@ You can see the chapters and all source code on the repo.
 
 Just need to place your mail to get it rendered: https://www.ohansemmanuel.com/books/understanding-astro
 
-> They Place the content and .md in public :)
+> They Place the content and `.md` in public :)
 
-Same as https://github.com/treeman/why_cryptocurrencies
+Same as https://github.com/treeman/why_cryptocurrencies does!
 
 ### How people send eBooks
 
 1. Via Stripe: `https://shop.acquisition.com/products/100m-money-models?utm_campaign=13261424-%24100M%20Money%20Models&utm_source=hs_email&utm_medium=email&utm_content=376228484&_hsmi=376228484`
 
-2. I guess via **stripe + SSR and obfuscation technique** that gets clear if your email is in the proper Stripe driven table of users who bought: `https://readmake.com/`
+2. I guess via **stripe + SSR and [obfuscation](#show-and-obfuscate) technique** that gets clear if your email is in the proper Stripe driven table of users who bought: `https://readmake.com/`
 
 * https://it-tools.tech/string-obfuscator
 * Stripe Payment Links: https://dashboard.stripe.com/payment-links + some automation like n8n to send the pdf/epub to the buying email
 * For the [obfuscation](#show-and-obfuscate), I imagine that there can be some BE check to the provided email and if you ever bought it, you can read the updated de-obfuscated version online anytime
 
 3. You can also sell ebooks via amazon or ko-fi.
-
-
 
 ---
 
@@ -385,7 +384,7 @@ git commit -m "Initial commit: Starting ebook md pdf and obfuscated web sample"
 
 #sudo apt install gh
 gh auth login
-gh repo create Just-Journal-via-SSG --private --source=. --remote=origin --push
+gh repo create sell-your-ebook --private --source=. --remote=origin --push
     
 #git init && git add . && git commit -m "Initial commit: Starting ebook md pdf and obfuscated web sample" && gh repo create ebook-obfuscate --private --source=. --remote=origin --push
 ```

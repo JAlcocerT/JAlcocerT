@@ -30,7 +30,9 @@ This time it is the turn of **Nuxt**
 
 > Apache v2 | Portfolio template made with Nuxt 3, Nuxt Content v3, NuxtUI v3 and TailwindCSS v4 
 
-1. The first thing I noticed, it takes much more time to load compared to Astro or NextJS sites, and much more than HUGO.
+The theme brings [multilanguage/i18N](https://jalcocert.github.io/JAlcocerT/astro-i18/) working out of the box!
+
+The first thing I noticed: it takes much more time to load compared to Astro or NextJS sites, and much more than HUGO.
 
 You just need **2 things**: NPM and NodeJS.
 

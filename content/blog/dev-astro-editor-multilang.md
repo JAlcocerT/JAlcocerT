@@ -88,11 +88,9 @@ Git Integration: A basic UI for committing changes, viewing the file's Git statu
 
 After using 3 of my 4 monkey fingers with cursor.
 
-I got this:
+I got to vibe code this markdown editor for the astro posts:
 
 ![Toast UI working with NextJS](/blog_img/web/nextjs-astro-editor/toastui-nextjs-1.png)
-
-
 
 ## Cool Blogging Themes
 
@@ -144,7 +142,7 @@ I got to know:
 
 ### Hugo Theme Stack
 
-I would say this is the Fuwari in Hugo :)
+I would say this is a Fuwari version within Hugo SSG :)
 
 * https://github.com/CaiJimmy/hugo-theme-stack-starter
     * https://demo.stack.jimmycai.com/
@@ -159,13 +157,13 @@ I would say this is the Fuwari in Hugo :)
 
 * https://github.com/artemkutsan/astro-citrus
 
-> MIT
+> MIT | Astro Citrus Theme
 
 ---
 
 ## Conclusions
 
-Got that ToastUI editor working powered by NextJS WebApp for astro sites!
+Got that **ToastUI markdown editor** working powered by **NextJS WebApp for astro** sites!
 
 ---
 

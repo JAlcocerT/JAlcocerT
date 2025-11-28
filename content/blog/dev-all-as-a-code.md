@@ -297,8 +297,7 @@ Because the making it look cool is just one prompt of Claude Haiku 4.5
 
 We want the root path `/` to show the ebook instead of the API info. 
 
-Perfect! Let me update the root endpoint to redirect to the book:
-
+Se we update the root endpoint to redirect to the book
 
 ✅ **Root path now shows the ebook**
 - `http://localhost:8001/` → Redirects to `/api/book`

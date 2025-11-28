@@ -207,6 +207,17 @@ If privacy, customizability, or avoiding subscription costs are priorities, Chat
 
 Chatwoot is primarily a **customer engagement** and communication platform, not a full-featured CRM (Customer Relationship Management) system. 
 
+
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/selfhosting-chatwoot/" title="ChatWoot | Post ↗" >}}
+{{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Chatwoot" title="ChatWoot HomeLab config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 It **centralizes conversations from channels** like web chat, email, and social media, helps manage tickets, stores customer contact details, provides analytics, and supports automation features like chatbots.
 
 You can say that its OSS [ZenDesk](https://www.zendesk.com/service/): *You ask something via email and the CS team will handle it*

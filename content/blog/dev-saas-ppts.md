@@ -12,6 +12,12 @@ url: 'ai-driven-presentations'
 
 SliDevJS is so cool and recently [vibe coded and made a tech talk about it](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk).
 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor" title="NEW SliDev Editor Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SliDev NextJS Editor with ToastUI" >}}
+{{< /cards >}}
+
+
 Whats also fantastic are [the themes](https://sli.dev/resources/theme-gallery) like: https://github.com/slidevjs/themes/tree/main/packages/theme-seriph
 
 
@@ -97,9 +103,11 @@ After [this post](https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-t
 
 ![alt text](/blog_img/DA/ppt/slidev-editor-signin-up.png)
 
-![alt text](/blog_img/DA/ppt/slidev-editor-nextjs-toastui.png)
+![NextJS Web App with Toast UI to edit SliDev markdown](/blog_img/DA/ppt/slidev-editor-nextjs-toastui.png)
 
-![alt text](/blog_img/DA/ppt/slidev-open-meteo-component.png)
+See how slidev pulls data from the weather API automatically:
+
+![OpenMeteo API real time date pulled and working with SliDevJS](/blog_img/DA/ppt/slidev-open-meteo-component.png)
 
 ![alt text](/blog_img/DA/ppt/slidev-editor-viewer.png)
 
@@ -112,9 +120,7 @@ Instead of a common one for all.
 
 ### Other PPT as a Code
 
-1. https://gitbrent.github.io/PptxGenJS/demos/ 
-2. 
-
+See https://gitbrent.github.io/PptxGenJS/demos/ 
 
 The most common and effective ways to create presentations "as code" (programmatically or using text-based formats) involve libraries and tools categorized by the language/format they use.
 
@@ -135,7 +141,9 @@ These tools use native language syntax to build the presentation object by objec
 
 2. Markdown/YAML Tools (Text-First)
 
-These tools allow you to write content in a simplified markup language (like Markdown) and then render or convert it into a presentation format. They prioritize content and speed over complex design.
+These tools allow you to write content in a simplified markup language (like Markdown) and then render or convert it into a presentation format. 
+
+They prioritize content and speed over complex design.
 
 | Tool | Format | Output/Target |
 | :--- | :--- | :--- |

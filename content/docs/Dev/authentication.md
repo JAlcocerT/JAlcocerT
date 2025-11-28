@@ -6,7 +6,9 @@ next: docs/
 draft: false
 ---
 
-Password Protected Static Routes with NGINX: 
+Password Protected Static Routes with NGINX:  NginX Static Routes?
+
+Think about having: SSG -> CMS, like `/keystatic` for UI edits -> CI/CD Builds as per git changes -> exposed via NGINX with https with some kind of authentication.
 
 
 Sometimes, you can get away with 'serverless' authentication: https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/
