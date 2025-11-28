@@ -1,6 +1,6 @@
 ---
 title: "Links for Artists"
-date: 2025-11-28T08:20:21+01:00
+date: 2025-11-28T09:20:21+01:00
 draft: false
 tags: ["Web Analytics vs Link Analytics","BaaS with yaml","Vibe Coding vs Spec Driven Development"]
 url: 'link-artists'

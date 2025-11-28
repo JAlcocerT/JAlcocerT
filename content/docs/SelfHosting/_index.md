@@ -10,8 +10,9 @@ sidebar:
 Whatever you plan to **Selfhost**, there will be a moment that you will be looking for:
 
 1. [HTTPs and SSL](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) Setup
-2. [Monitoring](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/)
-3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/) hardware
+2. [Monitoring](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/)
+3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/benchmarks/) hardware
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/web-ebook.pdf" title="Get an ebook to get started with Selfhosting" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to SelfHost confortable" >}}
@@ -84,6 +85,10 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 ```
 
 {{% /details %}}
+
+### HomeLab Commands
+
+
 
 ### What do I like to SelfHost?
 

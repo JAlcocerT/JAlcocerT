@@ -101,6 +101,23 @@ For phones and with FastAPI, I did not manage to get fb auth social sign in/up  
 * https://jalcocert.github.io/JAlcocerT/firebase-auth-101/
 * https://jalcocert.github.io/JAlcocerT/stonks/
 
+
+## Cloudflare Workers and Pages
+
+CF Pages is [one of my favourite ways](https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method) to deploy SSGs Websites.
+
+
+
+Similar to the [Google Cloud Run](https://jalcocert.github.io/JAlcocerT/dash-docker-gcr/), CFWorkers handle the compute part.
+
+## Cloudflare R2
+
+Looking for a storage solution for your serverless apps? 
+
+
+
+
+
 ---
 
 ## FAQ
@@ -168,7 +185,7 @@ This is why the Admin SDK is only meant to be used on your own servers, like a C
 
 Just in case your home electricity goes away more often than not.
 
-Instead of using selfhostable web analytics like Umami, you can try...
+Instead of using selfhostable web analytics like Umami, you can try... ????
 
 
 {{< cards cols="1" >}}
