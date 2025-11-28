@@ -26,7 +26,7 @@ https://www.skool.com/@adriana-drozdowicz-4965 -->
 If you are not a data professional, but a creative professional, like a music creator...
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/music-with-ai-tools//" title="Music with AI" image="/blog_img/GenAI/elevenlabs/11labs-download-tts.png" subtitle="DIY music? or with 11labs we can create music" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/" title="Creating Music with AI Post" image="/blog_img/GenAI/elevenlabs/11labs-download-tts.png" subtitle="DIY music? or with 11labs we can create music" >}}
 {{< /cards >}}
 
 
@@ -170,7 +170,7 @@ I first built a Waiting2Landing: Two Astro Themes working together
 First the waiting list theme captures leads via formbricks, then, changing to an agency landing page:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/" title="Astros WaitingToLanding" image="https://github.com/JAlcocerT/waiting-to-landing/blob/main/screens/demoLight.webp" subtitle="Source Code of Python + Obfuscate + Ebook WebPage" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/" title="Astros WaitingToLanding" image="https://raw.githubusercontent.com/JAlcocerT/waiting-to-landing/main/screens/demoLight.webp" subtitle="POST of Waiting2Landing with 2 Astro Themes" >}}
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Two Astro Themes + Formbricks to capture emails" >}}
 {{< /cards >}}
 
@@ -188,6 +188,13 @@ That should allow you to build DIY websites for your brand, as [I have been doin
 {{< /cards >}}
 
 ![CapJS + NextJS Working](/blog_img/dev/nextjs/capjs-nextjs-pow.png)
+
+#### Landing Page for your SaaS
+
+After the waiting list and checking PMF, comes building time.
+
+For which you should have [a cool Landing Page](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/).
+
 
 
 #### eBooks Pages
@@ -285,7 +292,7 @@ By this time, you have a lot of audience: you are an artist!
 So having one of the links pointing to your podcast platform is very simple.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#podcast-website" title="Tech for Podcasts" image="https://private-user-images.githubusercontent.com/53962116/261033070-3106bf65-37f9-427f-9b50-72d7ae22752f.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQzMzEwMDEsIm5iZiI6MTc2NDMzMDcwMSwicGF0aCI6Ii81Mzk2MjExNi8yNjEwMzMwNzAtMzEwNmJmNjUtMzdmOS00MjdmLTliNTAtNzJkN2FlMjI3NTJmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTI4VDExNTE0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVjY2U5NmY0M2ZjZDY2ZDI1MTE4ZWZiNGE0ZmRlNzViZTFmYmFiNTY1Y2NmZWIwZjU1MjJiZjM2NDA0MmRmYzkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.gXHhHGwVn7eLHu8N8OhSZzhDlNSJN7W-iDUP0rmZzsE" subtitle="Creating a serverless Astro Podcast that can be selfhosted with containers" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#podcast-website" title="Tech for Podcasts" image="/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png" subtitle="Creating a serverless Astro Podcast that can be selfhosted with containers" >}}
   {{< card link="https://github.com/JAlcocerT/astropod" title="Astropod Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked and Tweaked Astro Podcast Theme that works on CF Pages" >}}
 {{< /cards >}}
 

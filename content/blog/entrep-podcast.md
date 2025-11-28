@@ -1,6 +1,6 @@
 ---
 title: "A podcast for all"
-date: 2025-12-28T08:20:21+01:00
+date: 2025-11-28T08:20:21+01:00
 draft: false
 tags: ["Web","Astro","Entrep","RSS","Make-Podcast","Svelte"]
 description: 'Using astro and '

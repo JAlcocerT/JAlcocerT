@@ -106,6 +106,9 @@ If you are having a business, getting contact forms / feedback /qna from clients
 
 > Beautiful Open-Source Form Builder
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Entrepreneur | Docs ↗" >}}
+{{< /cards >}}
 
 A static site generator...that can be used to create documentation with Python?
 

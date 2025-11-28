@@ -66,6 +66,10 @@ The Ryder 998 can be used in a variety of applications, including IoT, emergency
 The chip's low power consumption and versatility make it an attractive option for many industries. -->
 
 
+## Home Assistant
+
+https://works-with.home-assistant.io/certified-products/
+
 
 ## Pi
 

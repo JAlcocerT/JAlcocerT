@@ -77,23 +77,25 @@ npx create-manifest@latest  --windsurf
 
 Via Flask, you can make a quick webapp to allow users to edit specific fields of your SSG Themes...
 
+https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/
+
+![Uploading real estate photos via Flask](/blog_img/web/moi-realestate/flask-cms-simpe-login.png)
+https://github.com/JAlcocerT/WebGenerAItor
+![Flask Web App as CMS](/blog_img/web/morita-flask/flask-cf-ui.png)
+
+https://github.com/JAlcocerT/WebifAI
+
 Or as I did recently with **NextJS**
 
-
-https://jalcocert.github.io/JAlcocerT/astro-i18/
-
-![Toast UI working with NextJS](/blog_img/web/nextjs-astro-editor/toastui-nextjs-1.png)
-
-
-
-https://jalcocert.github.io/JAlcocerT/astro-journal-theme/
-![NextJS Reactmd editing astro sphere theme](/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-i18/" title="Creating Music with AI Post" image="/blog_img/web/nextjs-astro-editor/toastui-nextjs-1.png" subtitle="Toast UI working with NextJS" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-journal-theme/" title="Creating Music with AI Post" image="/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png" subtitle="NextJS Reactmd editing astro sphere theme" >}} 
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook/tree/main/config-editor" title="Creating Music with AI Post" image="/blog_img/entrepre/product/ebook-flask.png" subtitle="Flask CMS Editor for Ebook Landing JSON" >}}
+{{< /cards >}}
 
 
 
-https://github.com/JAlcocerT/sell-your-ebook/tree/main/config-editor
 
-![Flask CMS Editor for Ebook Landing JSON](/blog_img/entrepre/product/ebook-flask.png)
 
 ---
 

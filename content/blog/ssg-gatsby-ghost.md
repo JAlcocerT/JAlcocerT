@@ -20,6 +20,9 @@ I got recently one of them, Gatsby, to work with GhostCMS.
 
 I was recently tinkering here with [Ghost and its API](https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/#programatic-ghost) for automatic post creation.
 
+Ghost is one of those [OSS Selfhostable CMS *aka no code website builder*](https://jalcocert.github.io/JAlcocerT/no-code-websites/) that allow to create very cool websites.
+
+Also, their hosted plan mission is great.
 
 ## About the Web
 

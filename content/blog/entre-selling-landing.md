@@ -67,11 +67,6 @@ On [this post](https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/) I
 Time to create:
 
 ```sh
-
-```
-
-
-```sh
 git init
 git branch -m main
 git config user.name
@@ -210,28 +205,8 @@ La comunidad de Reddit en r/SaaS, en general, coincide con los enfoques de la ch
 - **Contribución de la comunidad:** Algunos comentarios sugieren personalizar la cheatsheet, compartir ideas de mejora y usar el repositorio como un espacio para sumar prácticas eficaces.
 - **Cuidado con el “eco-chamber”:** Algunos advierten del riesgo de obtener feedback solo de la comunidad builder/tech (ejemplo: Twitter, IndieHackers, Reddit) y no del público objetivo real del producto, por lo que insisten en no perder el foco en los auténticos clientes.[2]
 
-En resumen, hay consenso sobre la utilidad de construir en público para tener feedback temprano, pero se recalca la importancia de hacerlo con propósito y orientar la validación hacia el público objetivo, no solo hacia otros emprendedores o comunidades tech. Esto agrega matices a la estrategia y refuerza lo aprendido en los recursos previos.
+En resumen, hay consenso sobre la utilidad de construir en público para tener feedback temprano, pero se recalca la importancia de hacerlo con propósito y orientar la validación hacia el público objetivo, no solo hacia otros emprendedores o comunidades tech.
 
-[1](https://www.reddit.com/r/SaaS/comments/n42n8r/the_build_in_public_cheatsheet_how_people_go_from/)
-[2](https://www.reddit.com/r/SaaS/comments/1l26yu8/dont_build_in_public_its_killing_your_startup_and/)
-[3](https://www.reddit.com/r/developersIndia/comments/1hsmd13/whats_the_build_in_public_scenes_i_am_posting_on_x/)
-[4](https://www.reddit.com/r/SaaS/comments/1levhf2/building_in_public_isnt_a_good_idea_heres_my/)
-[5](https://www.reddit.com/r/startups/comments/rs850b/how_do_i_actually_build_in_public/)
-[6](https://www.scribd.com/document/432955800/Top-Reddit-Threads-Cheat-Sheet)
-[7](https://www.reddit.com/r/indiehackers/comments/1hcrick/best_way_to_build_in_public/)
-[8](https://www.reddit.com/r/SideProject/comments/1gwi349/i_made_20k_in_2_months_by_building_in_public_on_x/)
-[9](https://www.reddit.com/r/Entrepreneur/comments/123c67j/any_tips_for_building_in_public/)
-[10](https://www.reddit.com/r/SaaS/comments/si9rqi/how_to_build_in_public/)
-[11](https://www.reddit.com/r/SideProject/comments/1mxdrgk/build_in_public_day_1365_from_0_to_100k/)
-[12](https://www.reddit.com/r/SaaS/comments/zzb5b2/thoughts_on_building_in_public_on_twitter/)
-[13](https://www.reddit.com/r/SaaS/comments/1fy9shs/whats_the_best_strategy_to_build_community_around/)
-[14](https://www.reddit.com/r/productivity/comments/1l53wli/i_summarized_top_reddit_selfhelp_posts_this_is/)
-[15](https://www.reddit.com/r/ChatGPT/comments/10cgdcz/a_listcheat_sheet_with_lots_and_lots_of_prompts/)
-[16](https://www.reddit.com/r/SaaS/comments/1f0z5bc/why_you_should_build_in_public_as_a_small_founder/)
-[17](https://www.reddit.com/r/SaaS/comments/1k06lue/build_in_public_what_are_you_working_on/)
-[18](https://www.reddit.com/r/SideProject/comments/1goijjv/thought_building_in_public_would_be_cool_until/)
-[19](https://www.reddit.com/r/SaaS/comments/1dndfj3/is_building_in_public_worth_the_hype/)
-[20](https://www.reddit.com/r/SideProject/comments/1gst45g/i_made_a_directory_of_people_who_build_in_public/)
 
 ### People are doing
 
@@ -311,9 +286,6 @@ I got to know a very **cool SaaS** on twitter:
 * https://tiiny.host/#pricing
 
 
-
-
-
 {{< cards cols="3" >}}
   {{< card link="https://pagespeed.web.dev/" title="PageSpeed Insights" >}}
   {{< card link="https://search.google.com/search-console/" title="Google Search Console" >}}
@@ -328,7 +300,7 @@ I got to know a very **cool SaaS** on twitter:
 
 ### Adding OpenGraph
 
-https://alexsinelnikov.blog/open-graph-protocol-improving-your-saas-visibility-on-social-networks?s=35
+* https://alexsinelnikov.blog/open-graph-protocol-improving-your-saas-visibility-on-social-networks?s=35
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Landing (and more) for Real Estate"
-date: 2025-11-16T08:20:21+01:00
+date: 2025-11-20T08:20:21+01:00
 draft: false
-tags: ["Web x CMS","Astro Payroll Theme","Strapi vs PayloadCMS","n8n","Scrapping","Obfuscate to simple-waiting-list"]
+tags: ["Web x CMS vs NUXT","n8n","Scrapping","Obfuscate","simple-waiting-list"]
 description: 'Landing page and components for real estate Galleries.'
 url: 'real-estate-landing'
 ---
@@ -190,18 +190,11 @@ make help
 
 ### New Theme
 
-Its a combination of:
+I could have proposed a combination of :
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/real-estate-moi/tree/main/moirealestate-astro-theme" title="Moi Real Estate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro x Flask as CMS" >}}
   {{< card link="https://github.com/JAlcocerT/payroll-workers-pb" title="Astro Payroll x PB SDK" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
-{{< /cards >}}
-
-With:
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/obfuscate" title="Obfuscate | DIY Website eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
-  {{< card link="https://github.com/JAlcocerT/obfuscate" title="NEW | Real Estate Landing WIP" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
 {{< /cards >}}
 
 
@@ -229,7 +222,33 @@ cd moirealestate-astro-theme
   {{< card link="https://github.com/JAlcocerT/cybernetik-realestate-moises/blob/main/astro-nomy/src/components/InstagramGallery.astro" title="Astro Component | Make a in-post Gallery, zoomable and that allows to move to next  ↗" >}}
 {{< /cards >}}
 
-I just followed this steps to initiate the repo programatically and push it with `gh`: <https://github.com/JAlcocerT/moi-realestate-pb>
+What this could have been:
+
+```sh
+#git clone --recurse-submodules https://github.com/JAlcocerT/moi-realestate-pb.git
+# or, after a normal clone:
+#git submodule update --init --recursive
+```
+
+
+Now here we have the old working screw fast with photo gallery: `./moi-realestate-pb/submodules/real-estate-moi/ScrewFastMoiRealEstate`
+
+You just need to run it and go to `http://localhost:4321/property/`
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/moi-realestate-pb" title="NEW - Real Estate Landing x PB SDK Gallery" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro + PB for Real Estate" >}}
+{{< /cards >}}
+
+
+But **instead**: *I vibe coded a [full stack nuxt web app](https://jalcocert.github.io/JAlcocerT/trying-nuxt-themes/) so that I can forget about CMS and just edit the content via the web app.*
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="Obfuscate | DIY Website eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro with login auth via Cloudflare Workers" >}}
+  {{< card link="https://github.com/JAlcocerT/real-estate-nuxt-moi" title="NEW | Real Estate NUXT" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Nuxt WebApp for Real Estate + Galleries + editable" >}}
+{{< /cards >}}
+
+I just followed this steps to initiate the repo programatically and push it with `gh`: <https://github.com/JAlcocerT/al-estate-nuxt-moi>
 
 ```sh
 git init
@@ -243,7 +262,7 @@ git commit -m "Initial commit"
 ```sh
 #sudo apt install gh
 gh auth login
-gh repo create moi-realestate-pb --private --source=. --remote=origin --push
+gh repo create real-estate-nuxt-moi --private --source=. --remote=origin --push
 ```
 
 I brought the repos as submodules 101, for the first time ever:
@@ -254,23 +273,48 @@ git submodule status
 git remote -v
 ```
 
-So to use this in the future
+So to use this real estate webapp in the future:  
 
 ```sh
-git clone --recurse-submodules https://github.com/JAlcocerT/moi-realestate-pb.git
-# or, after a normal clone:
-#git submodule update --init --recursive
+git clone
 ```
 
-Now here we have the old working screw fast with photo gallery: `./moi-realestate-pb/submodules/real-estate-moi/ScrewFastMoiRealEstate`
-
-You just need to run it and go to `http://localhost:4321/property/`
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/moi-realestate-pb" title="NEW - Real Estate Landing x PB SDK Gallery" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of Astro + PB for Real Estate" >}}
-{{< /cards >}}
-
 So...how is this going to **actually work**?
+
+#### Nuxt For Real Estate
+
+Because we need:
+
+1. A full stack web app modern lookingwith NUXT for a real estate agency: consisting of a landing page like `https://dm-real-estate.com/` with a faq included and a section where the properties are listed like `https://dmproperties.web.app/blog/` and each of them can be expanded to show the details of the property
+2. Inside the details of the property, there will be text description and a cool Gallery
+3. A Login System with unique hardcoded authentication
+4. Once logged in, the user can edit the content of the landing page, the faq and add/remove property and its details the properties
+5. Add the Makefile with a install dev and prod commands plus help so that i can run it
+6. Provide capabilities to have a favicon and a OG image when the root or blog are shared and a main photo of the property when one particular one is shared
+7. There should be routes for: / for /properties and for /access to provide access to /manage where the content can be edited
+
+> I took those and used Gemini for some refinement
+
+> > Then created a `brd.md` and told Antigravity to check for gaps, then create a `z-development-plan.md`
+
+Optional
+
+* Cloning sample content with scrapping + image download + openAI
+  CapJS to avoid bots included
+
+
+After the first iteration:
+
+![alt text](/blog_img/dev/nuxt-realestate/properties-webapp.png)
+
+
+```sh
+git clone
+#make help
+#make dev
+
+```
+
 
 ### Validate the Website
 
