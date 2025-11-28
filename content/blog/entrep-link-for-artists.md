@@ -171,7 +171,7 @@ First the waiting list theme captures leads via formbricks, then, changing to an
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/" title="Astros WaitingToLanding" image="https://github.com/JAlcocerT/waiting-to-landing/blob/main/screens/demoLight.webp" subtitle="Source Code of Python + Obfuscate + Ebook WebPage" >}}
-  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Two Astro Themes + Formbricks to capture emails >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Two Astro Themes + Formbricks to capture emails" >}}
 {{< /cards >}}
 
 For now, this is a page with 1 ebook:
@@ -193,6 +193,10 @@ That should allow you to build DIY websites for your brand, as [I have been doin
 #### eBooks Pages
 
 [Some People](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#how-people-send-ebooks) sell information via ebooks, why dont you do that?
+
+In case you didnt know, creating [an ebook as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-as-a-code) is not that hard:
+
+https://jalcocert.github.io/JAlcocerT/cool-ebooks/
 
 <!-- https://github.com/JAlcocerT/sell-your-ebook -->
 
@@ -223,7 +227,9 @@ https://github.com/JAlcocerT/obfuscate
   {{< card link="https://github.com/JAlcocerT/obfuscate/" title="Obfuscate web and ebook Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="ebooks creation as a code + fastapi obfuscation + modern web page" >}}
 {{< /cards >}}
 
-> Now I have my ,webook' published: https://diy.jalcocertech.com thanks to that repo
+> Now I have my ,webook' published: https://diy.jalcocertech.com thanks to that repo!
+
+> > Will soon be something more than one ebook :)
 
 #### Calendars
 

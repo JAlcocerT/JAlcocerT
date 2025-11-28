@@ -19,7 +19,29 @@ Sometimes, you can get away with 'serverless' authentication: https://jalcocert.
 
 > Agpl v3 | An Easy to Use and Self-Host Single Sign-On Provider 🐈‍⬛🔒
 
+### Streamlit Auth
+
+I started with [Streamlit Authenticator](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py).
+
+But then, discovered that there are more ways to do it: https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Auth_Ways
+
+Like using SQLITE: https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/Auth_sqlite
+
+Or Streamlit x Pocketbase as seen [here](https://jalcocert.github.io/JAlcocerT/stonks/#streamlit)
+
+![st authentication script connected to pocketbase users collection](/blog_img/entrepre/public-build/pystonks/st-auth-pocketbase.png)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_hardcoded_compose.py" title="St authenticator hardcoded on the compose | Script  ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_hardcoded_pb.py" title="St authenticator as per Pocketbase users collection info | Script ↗"  >}}
+{{< /cards >}}
+
+
 ### Authentication with Logto
+
+I used Logto for Python Web Apps, other than streamlit.
+
+And also for NextJS webapps.
 
 I have been tinkering with LogTo via:
 
@@ -31,3 +53,8 @@ The 3 Bodies post and app.
 {{< /cards >}}
 
 
+### Firebase Authentication
+
+This one is...serverless!
+
+So you dont care about the server, it just works.

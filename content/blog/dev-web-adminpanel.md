@@ -9,7 +9,7 @@ draft: false
 
 **Tl;DR**
 
-Is it possible to have something better than Streamlit and Pocketbase for the quickest data visualization and backend ever?
+Is it possible to have something better than Streamlit and Pocketbase for the quickest data visualization  / SaaS PoC and backend ever?
 
 **Intro**
 

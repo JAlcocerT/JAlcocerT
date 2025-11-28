@@ -29,6 +29,9 @@ Few months ago, I wrote about [different **PaaS** Tools](https://jalcocert.githu
 
 UmbrelOS, Cosmos Server, Coolify or Dokploy....
 
+![Dokploy PaaS deploying Streamlit Multichat Repository](/blog_img/selfh/PaaS/dokploy-monitoring-multichat.png)
+
+
 This feels like time for a recap.
 
 And if you are new to HomeLabs and/or Linux. These are some reasons for you to stay:

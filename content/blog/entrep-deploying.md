@@ -143,6 +143,9 @@ I was writting about PaaS earlier this year [here](https://jalcocert.github.io/J
 
 With particular attention to Dokploy, [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/).
 
+![Dokploy PaaS deploying Streamlit Multichat Repository](/blog_img/selfh/PaaS/dokploy-monitoring-multichat.png)
+
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/coolify" title="Coolify | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dokploy" title="Dokploy | Docker Config 🐋 ↗" >}}
