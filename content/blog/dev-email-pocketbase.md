@@ -180,7 +180,11 @@ await pb.collection('users').requestPasswordReset('test@example.com');
 
 ## Conclusions
 
-You can **also get emails verified** ( >>> validated) via **Logto** -> Stripe:
+After all of this, you should be able to use Pocketbase + MailTrap to get user email verification working for any SaaS you are going to be building.
+
+With that covered, [plugging Stripe](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#integrate-stripe) should not be an issue.
+
+You can **also get emails verified** ( > > > validated) via **Logto** -> Stripe:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe-x-logto" title="Logto working with Flask WebApp" image="/blog_img/entrepre/webify/webify-logto-login.png" subtitle="Using Logto and then Stripe for a website platform" >}}

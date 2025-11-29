@@ -18,6 +18,8 @@ If you are building, dont be scare of the http **status codes**: https://it-tool
 
 And see these [tools for internet monitoring](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#internet-monitoring-tools)
 
+You can also make a avg internet speed test when [downloading OSS OS via P2P](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry/) or when uploading your videos to youtube.
+
 You might see these kind of status pages around: https://status.perplexity.com/, see https://instatus.com/pricing
 
 Or even advanced ones like:

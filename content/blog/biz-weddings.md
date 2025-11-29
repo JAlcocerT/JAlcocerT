@@ -159,14 +159,8 @@ As seen on [this post](https://jalcocert.github.io/JAlcocerT/selfhosting-python-
 * Traefik
 
 {{< callout type="info" >}}
-**Cloudflare tunnels** is other of my go to options, yet you also have: [ngrok](https://www.reddit.com/r/selfhosted/comments/10n1h0p/cloudflare_tunnel_alternative/), [Pangolin](https://www.youtube.com/watch?v=a-a-Xk1hXBQ),...
+**Cloudflare tunnels** is other of my go to options, yet you also have few tunneling alternatives
 {{< /callout >}}
-
-
-
-
-
-
 
 
 {{< details title="NGINX Setup Details with Cloudflare 📌" closed="true" >}}

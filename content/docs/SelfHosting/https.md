@@ -133,7 +133,6 @@ Initially, it was all about [cloudflared](#cloudflare-tunnels), but lately you w
 
 1. Pangolin
 2. [Cloudflare Tunnels](#cloudflare-tunnels)
-3. [NetGoat](https://github.com/netgoat-xyz/netgoat)
 
 ### Cloudflare Tunnels
 

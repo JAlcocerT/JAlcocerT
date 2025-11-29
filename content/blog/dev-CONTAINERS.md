@@ -3,7 +3,7 @@ title: "Reasons why I love Containers. With Cloudflared and AI Apps."
 date: 2025-01-04
 draft: false
 tags: ["Dev","Docker 🐋 Podman"]
-description: 'Reasons to use containers: selfhosting with Cloudflare tunnels, App bunddle, dev environments, CI/CD...'
+description: 'Containers Recap: selfhosting via Cloudflare tunnels, App bunddle, dev environments, CI/CD...'
 url: 'why-i-love-containers'
 ---
 
@@ -398,7 +398,9 @@ How Argo CD works?
 
 {{< /details >}}
 
-### Using Containers
+---
+
+## FAQ
 
 {{< callout type="info" >}}
 Make sure to understand [docker volumes vs bind mounts](https://dev.to/aijeyomah/docker-volumes-vs-bind-mounts-choosing-the-right-storage-for-your-containers-3pb8)!

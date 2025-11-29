@@ -7,6 +7,8 @@ sidebar:
 
 [Boostrapping](https://jalcocert.github.io/JAlcocerT/whats-boostrap/) is not straight forward.
 
+For anyone who has [cycled](https://jalcocert.github.io/JAlcocerT/buying-bicycle-through-data-analytics/) 100km+, you know that half of the way are the last 10km of [the journey](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/).
+
 But these are some tools that make it easier:
 
 1. [Automation](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/):

@@ -11,7 +11,7 @@ url: 'make-podcast'
 
 Because astro SSG and CSR are so cool. 
 
-Why not...Creating a DIY podcast platform.
+Why not...Creating a DIY podcast platform?
 
 **Intro**
 
@@ -29,6 +29,8 @@ Lately Iv been tinkering with custom (vibecoded) flask apps to interact with SSG
     * Which I Forked https://github.com/JAlcocerT/astropod and talked about [here](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/)
 
 > MIT |  Free and open source self-hosting serverless podcast solution 
+
+{{< youtube "mDMGtMOx-Fk" >}}
 
 You are not forced to use [Astro and its components](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/) for your podcast.
 
@@ -117,12 +119,15 @@ Svelte's main competitors in 2025 are lightweight, performant frontend framework
 | Preact   | React-compatible, tiny footprint | 3KB vs React's 100KB+ | React-like apps with less overhead |
 | Vue      | Progressive, intuitive DX | Balanced speed/ecosystem | SPAs, hybrid apps [4] |
 
-Full-stack metaframeworks like SvelteKit (Svelte's own) compete with Next.js (React) and Nuxt (Vue) for SSR/SSG apps. These align with modern web dev trends favoring efficiency over React/Angular's maturity.[2][5][1]
+Full-stack metaframeworks like SvelteKit (Svelte's own) compete with Next.js (React) and Nuxt (Vue) for SSR/SSG apps. 
 
-[3](https://roadmap.sh/frontend/frameworks)
-[4](https://merge.rocks/blog/comparing-front-end-frameworks-for-startups-in-2025-svelte-vs-react-vs-vue)
-[5](https://tymonglobal.com/blogs/next-js-vs-sveltekit-vs-qwik-best-framework-in-2025/)
-[9](https://alyvro.com/blog/nuxt-vs-svelte-2025)
+These align with modern web dev trends favoring efficiency over React/Angular's maturity.
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" >}}
+{{< /cards >}}
+
 
 Sí, Astro excels en SSG (Static Site Generation) con su arquitectura de islas, pero SvelteKit, SolidStart, Qwik y Preact también lo soportan nativamente a través de sus metaframeworks o configuraciones específicas.
 
@@ -134,5 +139,4 @@ Sí, Astro excels en SSG (Static Site Generation) con su arquitectura de islas, 
 | Qwik         | SSG nativo con resumability | Adapter estático genera HTML pre-renderizado [7][3] |
 | Preact       | SSG vía Vite/CLI prerender | `prerender: { enabled: true }` en Vite config [8][9] |
 
-Todos permiten hybrid modes (SSG + SSR/CSR), ideal para sitios estáticos con interactividad mínima, alineado con tus intereses en frameworks eficientes como Astro/Svelte.[10][11]
-
+Todos permiten hybrid modes (SSG + SSR/CSR), ideal para sitios estáticos con interactividad mínima, alineado con tus intereses en frameworks eficientes como Astro/Svelte.

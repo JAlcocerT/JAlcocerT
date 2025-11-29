@@ -30,12 +30,14 @@ Create the PDF as a code with your contact details -> print -> paste across the 
 
 ### QR Creation
 
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
 
 ## Emails
 
 What a surprise, you need to master [emails and their SMTP](https://jalcocert.github.io/JAlcocerT/emails-101/).
 
-if you are [building a sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/) and doing cold email, you will need to verify emails.
+if you are [building a sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/) and doing cold email, you will need to [verify emails](https://jalcocert.github.io/JAlcocerT/email-verification-pocketbase/#conclusions).
 
 
 ### Newsletters
@@ -150,7 +152,10 @@ graph TD
 
 ### Integrate Stripe
 
-https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe" title="Using Stripe withing a Flask" image="/blog_img/entrepre/stripe/stripe-apps.png" subtitle="Stripe 101 withing a SaaS PoC" >}}
+{{< /cards >}}
 
-![Stripe Apps Connection](/blog_img/entrepre/stripe/stripe-apps.png)
-
+<!-- 
+![Stripe Apps Connection](/blog_img/entrepre/stripe/stripe-apps.png) 
+-->

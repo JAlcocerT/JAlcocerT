@@ -107,13 +107,18 @@ docker exec -it webcyclingthere /bin/bash #see what happens inside the container
 
 Dont forget about: `.gitignore`, `.dockerignore`
 
-### Containers for Python Apps
+### Containers for Python
 
-I enjoy creating Data Driven apps with python.
+I enjoy creating Data Driven apps within python.
 
 And I like to do them so that they work reliably and sistematically.
 
-Docker helps me with it.
+[Docker combined with Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/#containers-for-python-apps) helps me with it.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-streamlit" title="Streamlit | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-dash" title="Dash | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 {{< details title="Python Docker Compose 📌" closed="true" >}}
 ```yml

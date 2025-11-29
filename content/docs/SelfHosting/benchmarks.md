@@ -6,6 +6,8 @@ next: docs/arch/
 draft: false
 ---
 
+https://jalcocert.github.io/JAlcocerT/where-to-deploy/
+
 https://jalcocert.github.io/JAlcocerT/benchmarking-computers/
 
 https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/

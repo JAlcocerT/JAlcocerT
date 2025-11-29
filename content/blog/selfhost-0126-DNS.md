@@ -308,3 +308,38 @@ https://docs.linuxserver.io/images/docker-wireshark/
 ### Interesting Security Tools
 
 * 2fas - https://github.com/twofas/2fas-android
+
+### What do I like to bring to my HomeLab?
+
+HomeLab Essentials
+https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#what-do-i-like-to-selfhost
+
+
+
+1. Container UI's 🐳: [Portainer](https://github.com/JAlcocerT/Home-Lab/tree/main/portainer), Rancher, Dockge...
+
+2. Syncing 🐳: [Syncthing](https://github.com/JAlcocerT/Home-Lab/tree/main/syncthing)
+
+3. Tools 🐳: [IT-Tools](https://github.com/JAlcocerT/Home-Lab/tree/main/it-tools), CosmosServer, [OmniTools](https://github.com/JAlcocerT/Home-Lab/tree/main/omni-tools)
+
+4. [Webs 🐳](https://github.com/JAlcocerT/Docker/tree/main/Web/CMS): Wordpress, Ghost, LinkInBio selfhosted alternatives...
+
+> Wrote a post about the most popular CMS's [here](https://jalcocert.github.io/JAlcocerT/no-code-websites/) and about LinkStack [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)
+
+> > And Web Analytics like https://github.com/rybbit-io/rybbit
+
+5. Productivity Tools 🐳: Get [proper focus](https://jalcocert.github.io/JAlcocerT/tools-to-improve-focus/)
+
+6. [GenAI Tools 🐳](https://github.com/JAlcocerT/Docker/tree/main/AI_Gen) 
+
+7. [HTTPs Tools](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/): via proxies like NGINX, Traefik or tunneling solutions like Cloudflare Tunnels ...
+
+> I also enjoyed [DuckDNS](https://hub.docker.com/r/linuxserver/duckdns).
+
+8. PaaS Tools, like [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)
+
+9. [Photo Tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/)
+
+> The docker related files are [here 🐳](https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos)
+
+10. [SSGs](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro) combined with a headlessCMS and [selfhosted static server](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-static-hosting) 🐳 

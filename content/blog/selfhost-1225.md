@@ -2,7 +2,7 @@
 title: "SelfHosting is easy with PaaS"
 date: 2025-12-10T01:20:21+01:00
 draft: false
-tags: ["HomeLab ebook","Hetzner VPS","Anti-Gravity","Excalidraw","1toN ebooks","Omarchy"]
+tags: ["HomeLab ebook","Anti-Gravity","Excalidraw","1toN ebooks","Omarchy"]
 description: 'Selfhosting ebook.'
 url: 'selfhosted-apps-december-2025'
 ---
@@ -183,7 +183,10 @@ And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-hetzner-vps-setup" title="Hetzner VPS Setup | Script ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/where-to-deploy/" title="To Which VPS deploy | Post ↗" >}}
 {{< /cards >}}
+
+
 
 > [CX23](https://www.hetzner.com/cloud/) > CX22 in performance?
 
@@ -234,6 +237,21 @@ If you have a NAT and use Cloudflare tunnels, maybe is time to try Pangolin as a
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/pangolin/" title="Pangolin | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+
+
+[ngrok](https://www.reddit.com/r/selfhosted/comments/10n1h0p/cloudflare_tunnel_alternative/), [Pangolin](https://www.youtube.com/watch?v=a-a-Xk1hXBQ),...
+
+3. [NetGoat](https://github.com/netgoat-xyz/netgoat)
+
+
+See also zoraxy or Pangolin
+
+https://github.com/tobychui/zoraxy
+https://github.com/tobychui/zoraxy?tab=AGPL-3.0-1-ov-file#readme
+
+General purpose (reverse) proxy and forwarding tool for networking noobs. Now written in Go!
+
 
 ### Omarchy
 
@@ -485,15 +503,6 @@ https://www.privacytools.io/privacy-email
 -->
 
 1. Setup a Proxy with HTTPs
-
-
-See also zoraxy or Pangolin
-
-https://github.com/tobychui/zoraxy
-https://github.com/tobychui/zoraxy?tab=AGPL-3.0-1-ov-file#readme
-
-General purpose (reverse) proxy and forwarding tool for networking noobs. Now written in Go!
-
 
 2. Proper SSH Keys
 

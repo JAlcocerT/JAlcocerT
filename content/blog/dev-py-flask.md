@@ -3,7 +3,7 @@ title: "Web Apps with Flask and cool ChartJS"
 date: 2025-04-05T05:20:21+01:00
 draft: false
 tags: ["Dev","Python","WebSockets","ChartJS","Temperature","Three Bodies","Real Time"]
-description: 'Flask WebApps, IoT Sensors, ChartJS and Websockets. Deployed as container to ghcr.'
+description: 'Flask WebApps, IoT Sensors, ChartJS and Web sockets. Deployed as container to ghcr.'
 url: 'web-apps-with-flask'
 ---
 

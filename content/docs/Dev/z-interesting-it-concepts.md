@@ -20,7 +20,7 @@ They allow us to package applications completely.
 
 > > They kind of relate to [virtualization](https://jalcocert.github.io/JAlcocerT/testing-nix-os/)
 
-Containers are Making the deploy process on other computers/servers kind of *copy and paste*.
+[Containers](https://jalcocert.github.io/JAlcocerT/why-i-love-containers/) make the deploy process on other computers/homelabs/[servers](https://jalcocert.github.io/JAlcocerT/where-to-deploy/) kind of *copy and paste*.
 
 ## What it is CI/CD?
 
