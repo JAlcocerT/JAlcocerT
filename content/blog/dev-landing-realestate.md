@@ -300,20 +300,21 @@ Because we need:
 Optional
 
 * Cloning sample content with scrapping + image download + openAI
-  CapJS to avoid bots included
+* CapJS to avoid bots included
 
 
 After the first iteration:
 
-![alt text](/blog_img/dev/nuxt-realestate/properties-webapp.png)
+![Properties web app via Nuxt](/blog_img/dev/nuxt-realestate/properties-webapp.png)
 
 
 ```sh
-git clone
+git clone https://github.com/JAlcocerT/real-estate-nuxt-moi.git
 #make help
 #make dev
-
 ```
+
+
 
 
 ### Validate the Website
@@ -510,7 +511,11 @@ With the typical "I can design your website" printed with a cool logo.
 
 > Creating these and print them should not be a problem as you can master the power of [PDFs /reports / infographics](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#reports-as-a-code) and QR codes as a code.
 
-The prices? They were mentioned at ~1500$.
+> > This marketing strategy even has [a name: **guerrilla marketing**](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#flyers-are-pdfs)
+
+The prices?
+
+They were mentioned at ~1500$.
 
 With a waiting time from 3 days to 4 weeks: *I guess it depends on how their backlog / [sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/) goes*
 

@@ -104,6 +104,17 @@ Thanks to [Jims Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI) and Chrstia
 
 NGINX can be used together with Authelia, which provides potentially, an authentication layer.
 
+But more than that, NGINX Proxy Manager works well with sub.sub.domains:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-weddings/#conclusions" title="NPM sub sub domain working" image="/blog_img/selfh/nginx-cloudflare-filebrowser.png" subtitle="Learnings from setting https on the Wedding Project" >}}
+{{< /cards >}}
+
+
+while using cloudflare tunnels for the same, I got issues.
+
+> The sub/sub domain had it sense to test a dummy service offering within my main brand
+
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="NGINX Setup and HTTPs with DuckDNS" >}}
 {{< /cards >}}
@@ -135,7 +146,7 @@ Until I discovered [Cloudflared tunnels](https://fossengineer.com/selfhosting-cl
 And saw a practical [example to expose a selfhosted app with cf](https://fossengineer.com/selfhosting-timelite-with-docker/).
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/why-i-love-containers/" title="Why I love Containers | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/why-i-love-containers/" title="Containers Recap | Post ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/SelfH/Cloudflared" title="Cloudflared with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
@@ -147,8 +158,12 @@ Remember to use the `cloudflared_tunnel` network on the containers you want to e
 
 * https://one.dash.cloudflare.com
 
-![CF Tunnels](/blog_img/web/Cloudflare/cf-tunnel.png)
+<!-- ![CF Tunnels](/blog_img/web/Cloudflare/cf-tunnel.png) -->
+
+![CF Tunnels](/blog_img/selfh/https/cloudflared-tunnel2.png)
 
 ```sh
 docker network connect cloudflared_tunnel portainer #your_docker_container_to_expose  #network (tunnel) - service
 ```
+
+{{< youtube "k75PviBQeA0" >}}

@@ -9,9 +9,9 @@ sidebar:
 
 But these are some tools that make it easier:
 
-1. Automation:
-2. Bots:
-3. Marketing: 
+1. [Automation](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/):
+2. [Bots](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/):
+3. [Marketing](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/): 
 
 
 ## Product
@@ -21,12 +21,17 @@ You can also get help from [some product tools](https://jalcocert.github.io/JAlc
 
 ### Formbricks
 
-https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#adding-formbricks-to-flask
 
-![Formbricks Link Embed](/blog_img/entrepre/webify/formbricks-link-embed.png)
+<!-- ![Formbricks Link Embed](/blog_img/entrepre/webify/formbricks-link-embed.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#adding-formbricks-to-flask/" title="Embedding Formbricks" image="/blog_img/entrepre/webify/formbricks-link-embed.png" subtitle="Using Formbricks withing a Website | Post" >}}
+{{< /cards >}}
 
 
 
 ### PostHog
 
-Posthog is one of the tools you can use surveys, but also [session recording](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/) for your apps.
+Posthog is [one of the product tools](https://jalcocert.github.io/JAlcocerT/product-tools/) you can use surveys.
+
+Also to bring [session recording](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/) for your apps.

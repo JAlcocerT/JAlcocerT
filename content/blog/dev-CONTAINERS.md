@@ -7,6 +7,9 @@ description: 'Reasons to use containers: selfhosting with Cloudflare tunnels, Ap
 url: 'why-i-love-containers'
 ---
 
+
+**Intro**
+
 A Container and related tools recap post.
 
 <!-- https://fossengineer.com/understanding-containers-for-selfhosting/ -->
@@ -16,6 +19,8 @@ We will be combining [Docker](#container-tech-is-cool)+[Cloudflare Tunnels](#exp
 {{< /callout >}}
 
 Using [Containers to pack all Python dependencies](https://jalcocert.github.io/JAlcocerT/ai-projects-python-dependencies/#with-containers)
+
+
 
 ## Container Tech is Cool
 
@@ -335,6 +340,12 @@ curl your_selected_domain.com
 By following this guide, you can expose your services securely **without the need for port forwarding or exposing your home IP**.
 
 Cloudflare's Zero Trust Tunnel with Docker is a powerful solution to enhance both security and accessibility of your self-hosted applications.
+
+Plus, you get https out of the box!
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/" title="Https | Docs ↗" >}}
+{{< /cards >}}
 
 {{< callout type="info" >}}
 If you are using a Cloud/VPS, you dont need to PortForward and can get [HTTPs with NGINX](https://jalcocert.github.io/JAlcocerT/get-started-with-flask/#deploying-a-flask-app-like-a-pro)

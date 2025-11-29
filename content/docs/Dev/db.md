@@ -40,3 +40,8 @@ If you feel confortable with Jupyter notebooks, have a look to: https://github.c
 > See an example of a data story: https://ipyvizzu-story.vizzuhq.com/latest/examples/titanic/
 
 This is food for thought if you normally create presentations with SliDev!
+
+
+## Popular DataBases
+
+https://jalcocert.github.io/JAlcocerT/databases-101/

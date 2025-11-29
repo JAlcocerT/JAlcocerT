@@ -725,7 +725,9 @@ It targets users who prefer coding animations with web tech and want interactive
 
 #### Remotion 
 
-Remotion stands out as a React-based tool for creating programmatic videos. It enables creating MP4 videos using React components, making it excellent for developers familiar with React who want to automate and scale video production. 
+Remotion stands out as a React-based tool for creating programmatic videos.
+
+It enables creating MP4 videos using React components, making it excellent for developers familiar with React who want to automate and scale video production. 
 
 Remotion is well-regarded for strong documentation, ease of use, and a focus on collaborative and dynamic video creation, including applications like product videos and in-browser editing.
 
@@ -742,7 +744,7 @@ Manim excels in complex mathematical and algorithmic animations rather than gene
 
 This year I also was playing around with Astro components.
 
-And withing the datanova theme, I found out that they are doing a really cool animation (which is a SVG!)
+And withing the **datanova theme**, I found out that they are doing a really cool animation (which is a SVG!)
 
 ```sh
 npm install
@@ -773,6 +775,8 @@ exiftool -ee GX011032.MP4
 
 
 ### Webs are also code
+
+The fact that [some of them abstract the code](https://jalcocert.github.io/JAlcocerT/no-code-websites/) for us, does not mean that there is no code behind:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="Ghost with Docker 🐋 ↗" >}}

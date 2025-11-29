@@ -9,3 +9,5 @@ draft: false
 https://jalcocert.github.io/JAlcocerT/pro-agency-automation/
 
 n8n
+
+{{< youtube "v-gCNTI5kzE" >}}

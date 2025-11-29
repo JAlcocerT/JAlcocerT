@@ -1,6 +1,6 @@
 ---
 title: "Admin Panels for Websites | Manifest vs PB"
-date: 2025-11-29
+date: 2025-11-29T10:20:21+01:00
 tags: ["SaaS","Authentication","Simple BackEnd"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
@@ -13,12 +13,19 @@ Is it possible to have something better than Streamlit and Pocketbase for the qu
 
 **Intro**
 
-Ive been exploring few authentications method lately.
+Ive been exploring few authentications method earlier this year.
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
+{{< /cards >}}
 
-And suddendly, I have found an interesting solution (that its vibe-code friendly!): [Manifest](#manifest)
+And suddendly, I have found an interesting tool
 
-**On this post**: I want to compare how Manifest compares to Pocketbase as selfhosted BaaS solution and as **admin panel**
+That its also vibe-code friendly!: [Manifest](#manifest)
+
+**On this post**: 
+
+I want to compare how Manifest compares to Pocketbase as selfhosted BaaS solution and as **admin panel**
 
 
 ## Manifest
@@ -54,15 +61,18 @@ Manifest fits great in those type of projects:
 
 ### Manifest 101
 
-This sounds great for **quick PoCs**:
+This sounds great for **quick PoCs**: *let them be on Python Streamlit*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="Streamlit PoC Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PyGWalker Rendered Map with locations..." >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/
-![NextJS Web App with Toast UI to edit SliDev markdown](/blog_img/DA/ppt/slidev-editor-nextjs-toastui.png)
+*Or with NextJS*:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/" title="NextJS PoC Post" image="/blog_img/apps/nextjs/nextjs-toastui.png" subtitle="NextJS ToastUI Rendered Map with locations..." >}}
+{{< /cards >}}
 
 
 But how to **get started with Manifest**?
@@ -75,22 +85,51 @@ npx create-manifest@latest  --windsurf
 
 #### Headless CMS
 
-Via Flask, you can make a quick webapp to allow users to edit specific fields of your SSG Themes...
+Via Flask, you can make a [quick CMS for SSGs webapp](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/) to allow users to edit specific fields of lets say, your Astro Themes...
 
-https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/
 
 ![Uploading real estate photos via Flask](/blog_img/web/moi-realestate/flask-cms-simpe-login.png)
-https://github.com/JAlcocerT/WebGenerAItor
+
+With vibe coding, is easy to get lost into the leaves of a cool UI:
+
 ![Flask Web App as CMS](/blog_img/web/morita-flask/flask-cf-ui.png)
 
-https://github.com/JAlcocerT/WebifAI
+So these kind of projects that aimed to be the [custom CMS editors of a pool of astro/hugo ssgs](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/) and get paid...maybe 100$ are not worth *beside the learnings.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/WebGenerAItor" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
+{{< /cards >}}
+
+Because of that, I started to put together this kind of high level docs, based on my learnings:
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="Web CMSs| Docs ↗" >}}
+{{< /cards >}}
+
+That on the future, will be transformed into proper web/ook for a DIY proposal, else a PaaS proposal that brings any [WP/Ghost/no code website builder](https://jalcocert.github.io/JAlcocerT/no-code-websites/) to live.
+
+- The DIY + read is free - making things so easy than anyone + time spent can do it
+- The DIY + PaaS is paid for servers and stuff - people get to configure it
+
+{{< cards >}}
+  {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="This is the DWY - Accounting for my time opportunity cost" >}}
+  {{< card link="https://cal.com/jalcocertech/consulting" title="JAlcocerTech Custom Solutions" image="/blog_img/email/cal-email-stripe.png" subtitle="This DFY I have to refine it though" >}}
+{{< /cards >}}
+
+
+
+
+
+
+
 
 Or as I did recently with **NextJS**
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-i18/" title="Creating Music with AI Post" image="/blog_img/web/nextjs-astro-editor/toastui-nextjs-1.png" subtitle="Toast UI working with NextJS" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-journal-theme/" title="Creating Music with AI Post" image="/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png" subtitle="NextJS Reactmd editing astro sphere theme" >}} 
-  {{< card link="https://github.com/JAlcocerT/sell-your-ebook/tree/main/config-editor" title="Creating Music with AI Post" image="/blog_img/entrepre/product/ebook-flask.png" subtitle="Flask CMS Editor for Ebook Landing JSON" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-i18/" title="MultiLanguage with Astro POST" image="/blog_img/web/nextjs-astro-editor/toastui-nextjs-1.png" subtitle="Toast UI working with NextJS" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-journal-theme/" title="Journaling with Astro POST" image="/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png" subtitle="NextJS Reactmd editing astro sphere theme" >}} 
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook/tree/main/config-editor" title="Astro SSG to publish your PDF ebook" image="/blog_img/entrepre/product/ebook-flask.png" subtitle="Flask CMS Editor for Ebook Landing via JSON" >}}
 {{< /cards >}}
 
 
@@ -126,7 +165,13 @@ Ive [discovered PB this year](https://jalcocert.github.io/JAlcocerT/pocketbase/)
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Including the providing [authentication for statically deployed SSGs via CF Workers](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/) and [SMTP email integration](https://jalcocert.github.io/JAlcocerT/email-verification-pocketbase/).
+Including the providing [authentication for statically deployed SSGs via CF Workers](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/) with CSR
+
+And the [PB SMTP email integration](https://jalcocert.github.io/JAlcocerT/email-verification-pocketbase/).
+
+So the question is clear: *Which of these 2 is better to build SaaS PoCs?*
+
+
 
 ---
 

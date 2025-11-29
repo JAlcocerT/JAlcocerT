@@ -72,13 +72,16 @@ Make sure you setup the `BASE_URL` env variable [as per readme](https://github.c
 
 ## Making Deployments Easy
 
+After having tinkered with both, SBCs/Homelabs and with the Cloud.
+
+Once you are clear on the piece of software that you want to use, just decide where that code will be running"
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="With a Raspberry/SBC/MiniPC ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Or with a Server ↗" >}}
 {{< /cards >}}
 
-Once you are **connected** to the device/server:
+Typically, you can **connect** to the device/server via SSH:
 
 ```sh
 ssh someuser@192.168.0.232 #pi 2gb
@@ -86,15 +89,17 @@ ssh someuser@192.168.0.155 #pi 4gb
 # hetzner vps server
 ```
 
+And for this one, I will be using a Hetzner VPS
+
 1. Go to [Hetzner](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#hetzner) - https://www.hetzner.com/cloud/
 
 ![Hetzner VPS](/blog_img/selfh/hetzner.png)
 
 
-2. See your projects and select OS + Hardware- https://console.hetzner.cloud/projects
+2. See your projects and select OS + Hardware - https://console.hetzner.cloud/projects
 
 
-![Hetzner VPS](/blog_img/selfh/hetzner-sharedcpu.png)
+![Hetzner VPS - CX22 Features](/blog_img/selfh/hetzner-sharedcpu.png)
 
 3. Create SSH keys and give the public key to Hetzner
 
@@ -106,13 +111,13 @@ cat id_ed25519.pub #provide this
 * `/home/your_username/.ssh/id_rsa`: This is your **private key**. Keep this file secret! Never share it with anyone.
 * `/home/your_username/.ssh/id_rsa.pub`: This is your **public key**. You can share this file. You'll add the contents of this file to the authorized_keys file on the server you want to access.
 
-4. Create the VPS (you can tweak the name), then just login:
+4. Create the VPS (you can tweak the name), then just **login**:
 
 ```sh
 ssh cx22@88.198.ip.address
 ```
 
-5. Get ready for SelfHosting with Containers
+5. Get ready for [SelfHosting with Containers](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
 
 ```sh
 curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Selfhosting_101.sh
@@ -123,7 +128,7 @@ sudo ./Selfhosting_101.sh
 ```
 
 {{< callout type="info" >}}
-See the script I prepared [here](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
+See the script that spins docker/portainer/tailscale - [here](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)
 {{< /callout >}}
 
 6. Check that **Docker and Portainer** are ready:
@@ -374,7 +379,9 @@ Then you will be done in under a minute:
 
 ![CName and A Record DNS CLoudflare with NGINX](/blog_img/selfh/nginx-cloudflare-filebrowser.png)
 
-And...if you are looking for a Theme for a Wedding landing page, you can have a look to **Astro Theme Horizon**.
+And...
+
+if you are looking for a Theme for a Wedding landing page: you can have a look to **Astro Theme Horizon**.
 
 ---
 
@@ -390,6 +397,10 @@ Or the typical: *These have an API to play...*
 1. NameCheap
 2. Cloudflare Domains (but does not allow to buy via API)
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs 101 | Docs ↗" >}}
+{{< /cards >}}
+
 
 ### Alternatives to Weddingshare
 
@@ -401,7 +412,7 @@ You can also make [QR's with Python](https://jalcocert.github.io/JAlcocerT/softw
 
 But, it does NOT support `.HEIC` files.
 
-And having the https was a headache.
+And having the [https done right](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) was a headache.
 
 So I went with [**FileBrowser**](https://fossengineer.com/selfhosting-filebrowser-docker/)
 

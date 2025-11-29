@@ -21,11 +21,27 @@ So you've been around even [when ATI](https://jalcocert.github.io/JAlcocerT/fire
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/hardware/ati-hd5670.png" subtitle="Docker Configs for your server" >}}
 {{< /cards >}}
 
-You were using Linux when nobody was. And now apple ecosystem is so confortable that makes anything else scary?
+You were using Linux when nobody was.
+
+And now apple ecosystem is so confortable that makes anything else scary?
 
 Pleeeeeease...
 
 Few months ago, I wrote about [different **PaaS** Tools](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/)
+
+And more recently, I made a [VPS recap on where to deploy](https://jalcocert.github.io/JAlcocerT/where-to-deploy/#among-all-paas---what-to-choose) your SaaS/apps.
+
+Playing with other dev's apps baremetal, without containers is a no go and everytime I vibe code sth I dont consider it finished until it works within Make and a container.
+
+Next level goes if you are confortable with Selfhosting via container ymls within a HomeLab:
+
+<!-- ![Portainer setup](/blog_img/selfh/portainer.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="SelfHosting Docs" image="/blog_img/selfh/portainer.png" subtitle="Docs to setup a homelab" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for your server" >}}
+{{< /cards >}}
+
 
 UmbrelOS, Cosmos Server, Coolify or Dokploy....
 

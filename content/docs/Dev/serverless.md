@@ -20,6 +20,8 @@ description: 'Your WebApps, with Serverless Authentication and AI on the backend
 
 Just go serverless.
 
+
+But before that, understand: serverless it does not mean that there is not a server, it means that you dont care about it.
 +++ Using Logto JS SDK with CF Workers (?)
 +++ You can even get web analytics to work on Cloudflare Workers
 
@@ -116,7 +118,11 @@ Looking for a storage solution for your serverless apps?
 
 
 
+## DIY Serverless
 
+If you do care [about servers and SelfHosting](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/), you can use a serverless framework like [Serverless Framework](https://www.serverless.com/).
+
+Its even possible to build within [OSS FaaS with tools like OpenFunction](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/#server-less-functions---faas).
 
 ---
 

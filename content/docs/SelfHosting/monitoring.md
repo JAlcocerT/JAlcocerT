@@ -9,7 +9,12 @@ draft: false
 
 If you are just looking from the [devops tools angle](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/) or just need to see how your [ebook service](https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/) uptime is behaving - you will need some Monitoring.
 
-Dont be scare of the http **status codes**: https://it-tools.tech/http-status-codes
+If you are building, dont be scare of the http **status codes**: https://it-tools.tech/http-status-codes
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" >}}
+{{< /cards >}}
 
 And see these [tools for internet monitoring](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#internet-monitoring-tools)
 
@@ -53,8 +58,6 @@ Uptime Kuma status pages example: `https://status.tromsite.com/status`
 
 ![Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
 
-
-
 See also how **Peekaping**
 
 {{< cards >}}
@@ -62,7 +65,7 @@ See also how **Peekaping**
 {{< /cards >}}
 
 
-![Peekaping Status Pages Login to UI](/blog_img/Monitoring/peekaping.png)
+<!-- ![Peekaping Status Pages Login to UI](/blog_img/Monitoring/peekaping.png) -->
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/peekaping" title="Peekaping - Status Pages | Docker Config 🐋 ↗" >}}
@@ -90,12 +93,8 @@ Another option, is **Kener**
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![Kener Status Pages](/blog_img/selfh/HomeLab/statuspages/kener-setup.png)
 
-![Kener UI](/blog_img/selfh/HomeLab/statuspages/kener-manager-ui.png)
-
-
-Rather than a way to admire how people have created **static status pages**: https://open-slum.pages.dev/ nor [get things](https://annas-archive.org/). 
+Rather than a way to admire how people have created **static status pages**: https://open-slum.pages.dev/ nor [get...things](https://annas-archive.org/) online.
 
 > Uptime monitor / status pages in cloudflare pages
 
@@ -105,3 +104,15 @@ Or **[Tianji](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitori
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tianji" title="Tianji | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/" title="Using Kener Monitoring" image="/blog_img/selfh/HomeLab/statuspages/kener-setup.png" subtitle="Testing Kener Status Pages" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#tianji" title="Using Tianji" image="/blog_img/Monitoring/tianji-server-monit.png" subtitle="Testing Tianji Server Monitoring and WebAnalytics on a VPS" >}}
+{{< /cards >}}
+
+<!-- 
+![Kener Status Pages](/)
+![Kener UI](/blog_img/selfh/HomeLab/statuspages/kener-manager-ui.png) 
+![Tianji Server Monitoring](/) 
+-->

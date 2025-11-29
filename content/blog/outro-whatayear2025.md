@@ -966,8 +966,10 @@ But hey Ollama has now a Desktop UI mode as well!
 > Additionally, I participated in ***few* tech Talks**:
 
 1. Using LangChain to chat with a DB
-2. Real Estate RAG
+2. Real Estate RAG 
 3. Vibe Coding a WebApp to make SliDev PPTs BA friendly
+<!-- 
+https://www.linkedin.com/posts/exadel-people_aimeetup-knowledgesharing-engineeringcommunity-activity-7311382203731525632-FDJg -->
 
 And extracted cool video metadata (gps / geolocation) from GoPros:
 

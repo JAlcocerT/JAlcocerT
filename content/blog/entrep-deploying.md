@@ -1,8 +1,8 @@
 ---
-title: "Where to Deploy? PaaS are great VPS companions"
+title: "Where to Deploy? Get a VPS"
 date: 2025-09-10
 draft: false
-tags: ["VPS","PaaS for SaaS","Lean Startup","Elestio vs Hetzner vs DO","Goodies 4 Marketers"]
+tags: ["Infra","Lean Startup","Elestio vs Hetzner vs DO","Goodies 4 Marketers"]
 description: 'Resources to launch your stuff in front of your clients. From CRMs, ERPs to forums.'
 url: 'where-to-deploy'
 ---
@@ -21,9 +21,11 @@ If you are building software or want to use [projects that other built...](#faq)
 
 Have your client in the loop asap.
 
-Thats one of the outcomes of *the [lean](https://jalcocert.github.io/JAlcocerT/lean/) startup*
+> Yea, Thats one of the outcomes of *the [lean](https://jalcocert.github.io/JAlcocerT/lean/) startup*
 
 So when the code works on your machine: *how about sharing it with real users?*
+
+> Just...via [containers](https://jalcocert.github.io/JAlcocerT/why-i-love-containers/) please.
 
 Plot twist: nobody cares about solutions that only you can use.
 
@@ -33,7 +35,7 @@ I will just assume that:
 
 1. You have something to share *or want to use a conteinerized app that other people created*
 2. You know [how to get a domain](https://jalcocert.github.io/JAlcocerT/web-domain-basics/) and configure DNS records
-3. You are ready to pay for [a VPS](#vps  ) - *Prepare ~5$/m for a basic VPS*
+3. You are ready to pay for [a VPS](#vps) - *Prepare ~5$/m for a basic VPS*
 
 ## VPS
 
@@ -68,6 +70,11 @@ If you need big GPU power, isntead of just CPU, you can always try https://www.r
 
 > From ~4/m for 1vcpu
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Configuring a DO VPS as VPN Server" image="/blog_img/selfh/DO-Amsterdam.png" subtitle="Setting up wgeasy withing a DO Droplet" >}}
+{{< /cards >}}
+
+
 ### Hetzner
 
 * https://www.hetzner.com/cloud/
@@ -76,11 +83,15 @@ If you need big GPU power, isntead of just CPU, you can always try https://www.r
 
 > > Germany or Finland
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-weddings/#making-deployments-easy" title="Making Deployments Easy with hetzner" image="/blog_img/selfh/hetzner-sharedcpu.png" subtitle="Setting up Hetzner for the Wedding Setup in Feb this year" >}}
+{{< /cards >}}
+
 ### Linode
 
 * https://cloud-estimator.linode.com/s/
 
-![alt text](/blog_img/mini_pc/linode-vps.png)
+![Linode VPS](/blog_img/mini_pc/linode-vps.png)
 
 > The basic ones goes for around 60$/y for 1vcpu
 
@@ -196,11 +207,13 @@ Configuring Listmonk is not any harded than getting Mautic up and running.
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mautic" title="Mautic | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-You need a CRM? or even ERP?
+You need a CRM? 
+
+or even ERP?
 
 Not really a problem.
 
-Before paying and getting vendor locked in, see:
+Before paying and getting vendor locked into some of those private SaaS, see:
 
 1. Odoo, ERPNext, SuiteCRM...
 2. https://elest.io/fully-managed-services/applications/crm-erp
