@@ -71,7 +71,7 @@ xrandr --output HDMI-A-0 --rotate right
 
 {{% /details %}}
 
-Specially when [tinkering with VPNs](https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/), you will want to know:
+Specially when [tinkering with **VPNs**](https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/), you will want to know:
 
 {{% details title="Whats my Local IP? 🚀" closed="true" %}}
 

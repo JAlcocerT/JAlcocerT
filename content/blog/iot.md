@@ -357,6 +357,7 @@ xargs -0 awk '
     print "TOTAL:", count
   }
 '
+#find static/blog_img -type f | wc -l
 ```
 
 As of now I have 'just' planned ~33 posts for JAlcocerT for the rest of 2025/2026.

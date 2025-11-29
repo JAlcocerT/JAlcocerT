@@ -30,7 +30,7 @@ To build a BI Tools even more custom: *with certain UI look and feel, you can tr
 <!-- ![Flask WebApp for the x300](/blog_img/iot/flask/flask-x300-cpu.png) -->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Flask and Real Time Data" image="/blog_img/iot/flask/flask-x300-cpu.png" subtitle="Flask WebApp + WebSockets Real Time Temperature Connection working with the x300 >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Flask and Real Time Data" image="/blog_img/iot/flask/flask-x300-cpu.png" subtitle="Flask WebApp + WebSockets Real Time Temperature Connection working with the x300" >}}
 {{< /cards >}}
 
 You can potentially make embedable BI components that work on websites or just get the full power of web apps when designing these.

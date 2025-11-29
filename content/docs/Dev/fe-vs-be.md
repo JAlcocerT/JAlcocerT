@@ -38,6 +38,14 @@ https://roadmap.sh/frontend/frameworks
 * FastAPI
 * Flask
 
+Some Python frameworks, like Streamlit, bring an opinionated UI that works out of the box with minimal effort for PoCs:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-streamlit" title="Streamlit | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-dash" title="Dash | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ### JS Based
 
 * Node.js
