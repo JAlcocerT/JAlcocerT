@@ -242,11 +242,11 @@ Some notable open source options are:
 
 8. https://github.com/CosmosShadow/gptpdf
 
-> MIT |  Using GPT to parse PDF 
+> MIT | Using GPT to parse PDF 
 
 9. https://github.com/jsvine/pdfplumber
 
-> MIT |  Plumb a PDF for detailed information about each char, rectangle, line, et cetera — and easily extract text and tables. 
+> MIT | Plumb a PDF for detailed information about each char, rectangle, line, et cetera — and easily extract text and tables. 
 
 Plumb a PDF for detailed information about each text character, rectangle, and line. Plus: Table extraction and visual debugging.
 

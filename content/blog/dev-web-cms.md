@@ -7,6 +7,9 @@ tags: ["Web","CMS","Entrepreneur","FrontMatter CMS","KeyStaticCMS"]
 url: 'cms-for-static-websites'
 ---
 
+
+**Intro**
+
 Lately, I have added some [upgrades](https://jalcocert.github.io/JAlcocerT/no-code-ai-tools/#tg-bots) (via [telegram bot](https://github.com/JAlcocerT/EntreAgujayPunto/tree/main/TelegramBot)), so that whenever a customer sends new photos, they are synced to its photo centered repo.
 
 But..wouldnt it be nice to have a *native* solution?
@@ -73,9 +76,7 @@ As you can imagine, there are more than a few Content Management Systems (CMS) a
 
 And if you want more ideas to tinker with CMS...
 
-4. [Strapi](https://jamstack.org/headless-cms/strapi/)
-  - Supports **GraphQL** or **RESTful** API.
-
+4. [Strapi](https://jamstack.org/headless-cms/strapi/) - Supports **GraphQL** or **RESTful** API.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="Strapi | Docker Config 🐋 ↗" >}}

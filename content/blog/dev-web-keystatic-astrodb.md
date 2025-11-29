@@ -67,7 +67,7 @@ Use IT or lose it The AI Revolution for your business · It all start with a Mod
 
 2. The [Diagram.astro](https://github.com/JAlcocerT/DataNova/blob/main/src/components/common/Diagram.astro) component, which is a *static* visual diagram
 
-![alt text](/blog_img/web/astro/astro-datanova-animated-graph.png)
+![DataNova Theme](/blog_img/web/astro/astro-datanova-animated-graph.png)
 
 > THis looks so cool andfor sure drive conversions rate up!
 

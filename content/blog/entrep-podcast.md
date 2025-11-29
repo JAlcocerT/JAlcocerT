@@ -2,7 +2,7 @@
 title: "A podcast for all"
 date: 2025-11-28T08:20:21+01:00
 draft: false
-tags: ["Web","Astro","Entrep","RSS","Make-Podcast","SaaS Vibe Coding "]
+tags: ["Web","Astro","Entrep","RSS","Make-Podcast","SaaS Vibe Coding","FFMPeg Recording"]
 description: 'Using astro and '
 url: 'make-podcast'
 ---
@@ -54,10 +54,15 @@ This platform would allow you to:
 - Generate RSS feeds for distribution
 
 
-From the [latest vibe coding learnings](https://jalcocert.github.io/JAlcocerT/real-estate-landing/#nuxt-for-real-estate), I found that is better to keep it simple and with well known frameworks:
+From the [latest vibe coding learnings](https://jalcocert.github.io/JAlcocerT/real-estate-landing/#nuxt-for-real-estate):
+
+1. I found that is better to keep it simple and with well known frameworks
+2. Its great to chat with Gemini about your initial ideas -> Create [a z-BRD.md](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) and refine again with your coding agent
+3. create a `z-development-plan.md`
 
 ```
-
+* Built in auth based on `.env`
+* 
 ```
 
 How about creating a: **make-podcast**?
@@ -104,6 +109,18 @@ Youtube to Podcast: https://github.com/aizhimou/pigeon-pod?ref=selfh.st
 
 > > Any channel. Any playlist. All ears.
 
+**FFMPeg** is great and can also record your screen:
+
+```sh
+#ffmpeg -f x11grab -s 1920x1080 -i :0.0 -r 30 output.mkv
+```
+
+Or...just your audio for the Podcast.
+
+```sh
+
+```
+
 ### RSS Tools
 
 Just in case you
@@ -149,3 +166,24 @@ Sí, Astro excels en SSG (Static Site Generation) con su arquitectura de islas, 
 | Preact       | SSG vía Vite/CLI prerender | `prerender: { enabled: true }` en Vite config [8][9] |
 
 Todos permiten hybrid modes (SSG + SSR/CSR), ideal para sitios estáticos con interactividad mínima, alineado con tus intereses en frameworks eficientes como Astro/Svelte.
+
+### Wireframing and The Penpot Project
+
+Are you looking for a powerful and flexible design and prototyping tool that is **free and open-source**? 
+
+
+* https://github.com/Figma-Linux/figma-linux
+
+
+Penpot is a powerful and customizable design and prototyping tool that offers a wide range of features and benefits for users.
+
+```sh
+#https://flathub.org/apps/com.sudovanilla.penpot-desktop
+```
+
+It can also be configured via docker: https://github.com/jmlcas/penpot
+
+Penpot is a versatile and customizable design tool that allows you to create beautiful and interactive designs for web and mobile applications.
+
+
+* https://help.penpot.app/technical-guide/getting-started/#start-penpot

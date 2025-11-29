@@ -1,6 +1,6 @@
 ---
 title: "Understanding Algebra (again)"
-date: 2025-12-23T23:20:21+01:00
+date: 2025-12-26T23:20:21+01:00
 draft: false
 tags: ["DSc","Outro","Math"]
 description: 'It takes something more than multiplying blindly matrixes to get to known them.'

@@ -68,7 +68,7 @@ Which is validated to have done 1M+ https://indiepa.ge/leaderboard as of the tim
 
 But recently I found about:
 
-<!-- bachatafests -->
+
 
 
 * https://github.com/francosuarez-dev/artistree
@@ -92,12 +92,13 @@ More competitors on the **Saas Link Website domain**:
   * https://subscribepage.io/listy#
 
   
+I have been kind of trapped within SSGs to create cool websites as per a vibe coded version of what other real web devs have put together first.
 
+But for simple link/bento/landing pages...just goahead and vibe code it from scratch via NextJS 'with a modern UI'.
 
-You wont probably need [session recording](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/) for such sites.
+Then, you wont probably need [session recording](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/) for such sites.
 
-But after the mandatory **web validation**:
-
+But you will want to validate the **web performance**:
 
 ```sh
 #sudo apt-get install dnsutils -y #dns resolution
@@ -140,6 +141,13 @@ curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect
 
 You will want to know how it performs:
 
+https://radar.cloudflare.com/scan/d92c5e34-6baf-42ad-bea1-e5c7e74a88bf/summary
+
+![alt text](/blog_img/web/carbon-comparison.png)
+
+![alt text](/blog_img/web/cf-radar.png)
+
+
 
 ### SaaS around Links
 
@@ -155,6 +163,9 @@ You will want to know how it performs:
 #### OSS Links Web Profiles
 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio" title="LinkStack and LittleLink" image="/blog_img/web/web-linkstack.png" subtitle="Two Selfhosted Link Alternatives" >}}
+{{< /cards >}}
 
 
 ### What Links to show?
@@ -199,6 +210,22 @@ After the waiting list and checking PMF, comes building time.
 
 For which you should have [a cool Landing Page](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/).
 
+It does not have to be the Lando Norris Page, neither the genkinfy.
+
+But the aster you go from Idea to WaitingList/Landing *depending on your popularity* and to deployment into VPS, the higher changes to get Stripe notifications.
+
+* https://builtwith.com/theinstituteofskills.com/
+* https://www.similarweb.com/website/theinstituteofskills.com/#traffic
+* https://radar.cloudflare.com/scan?url=https://fossengineer.com/
+
+![Cloudflare Radar](/blog_img/web/cf-radar.png)
+
+> It detects the framework, the web analytics, the ads...
+
+A landing as companion for a link website does not have to be a multi-page one though:
+
+![DataNova Theme](/blog_img/web/astro/astro-datanova-animated-graph.png)
+https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/
 
 
 #### eBooks Pages

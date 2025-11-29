@@ -512,13 +512,13 @@ You can also consider:
 
 > You can have ubuntu without UI, if you plan to use your server's terminal only
 
-3. [Garuda](https://garudalinux.org/editions), if you want to say I use ARCH BTW. Mind the steep learning curve.
+3. [Garuda](https://garudalinux.org/editions), if you want to say I use ARCH BTW. Mind the steep learning curve. *It requires 2GB of RAM though.*
 
 How exactly?
 
 Well, first try download them and [run the OS via a VM](https://jalcocert.github.io/JAlcocerT/testing-nix-os/).
 
-Then, setup VENTOY into your USBs and bring your favourite one.
+Then, setup [VENTOY](https://github.com/ventoy/Ventoy) into your USBs and bring your favourite one.
 
 {{< youtube "hTw9DBEksx4" >}}
 

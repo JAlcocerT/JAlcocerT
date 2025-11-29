@@ -281,6 +281,32 @@ It took ~5min to complete the install.
 
 ![Omarchy OS](/blog_img/selfh/omarchy/omarchy-desktop.png)
 
+### Gaming and Linux
+
+I got to know about another OS for linux gaming: https://bazzite.gg/
+
+It seems that W11 is going all in with AI and at the same time gaming performance is going down the drain.
+
+I guess is not too late to [use a VM via Gnome Boxes](https://jalcocert.github.io/JAlcocerT/testing-nix-os/) to test [any OS](https://jalcocert.github.io/JAlcocerT/os-for-nas/)
+
+Virtualization made simple: https://flathub.org/apps/org.gnome.Boxes
+
+```sh
+flatpak install flathub org.gnome.Boxes
+```
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#thoughts-on-steamos-and-os-for-nas
+
+![download steam os](/blog_img/outro/steamos.png)
+
+For a general OS purposes, as of today I would:
+
+- Use [Lubuntu](https://ubuntu.com/lubuntu/releases/noble/release/) - As it requires just ~700mb of RAM
+- Try [ZorinOS](https://zorin.com/os/download) if you are a regular user with good enough hardware but cant run W11
+
+{{< youtube "hTw9DBEksx4" >}}
+
+
 ### Random
 
 > Intelligence is the ability to adapt to change
@@ -289,7 +315,9 @@ It took ~5min to complete the install.
 <!-- https://www.classcentral.com/ -->
 
 <!-- ## Spaced learning -->
-
+<!-- ultra learning 
+range - why generalist...
+-->
 
 <!-- <https://www.futuretools.io/>
 
@@ -303,11 +331,6 @@ It took ~5min to complete the install.
 
 <https://ugeek.github.io/blog/post/2023-04-06-listado-de-webs-de-ia-para-busquedas-desarrollo-y-productividad.html> -->
 
-<!-- ultra learning 
-range - why generalist...
--->
-
-<!-- [never forget](https://fossengineer.com/machine-learning-data-analytics/#the-bias-variance-trade-off) -->
 
 
 
@@ -327,24 +350,11 @@ You can also create knowledge for DifyAI:
 * text file
 * from website- cooming soon -->
 
-<!-- 
-## Create Posts as per Inputs
-
-
-
-* Festival_Name
-* Location
-* Date_Event
-* Discount_Link
- -->
-
 
 <!-- https://superlinked.com/vector-db-comparison -->
 <!-- https://github.com/superlinked/VectorHub -->
 
 
-<!-- A compute framework for turning complex data into vectors.
-https://github.com/superlinked/superlinked -->
 
 git clone https://github.com/atareao/self-hosted.git atareao
 
@@ -378,14 +388,6 @@ Expect ,n' to be:
 
 https://bobpony.com/downloads/
 
-Virtualization made simple
-
-* https://flathub.org/apps/org.gnome.Boxes
-
-```sh
-flatpak install flathub org.gnome.Boxes
-```
-
 
 ### How to run Windows Apps in Android
 
@@ -398,10 +400,10 @@ If what you are looking for is a way to run Windows Apps in new ways, you could 
 
 ### I simply Love Cal
 
-You can get started very quickly, create a meeting and embed it into your websites in few ways:
+You can get started very quickly, create a **cal.com meeting and embed it** into your websites in few ways:
 
 {{< youtube id="qFMN0oDeCFg" autoplay="false" >}}
-
+https://awweso.me/booking-and-scheduling/
 
 <!-- https://youtu.be/qFMN0oDeCFg -->
 
@@ -414,7 +416,7 @@ You can get started very quickly, create a meeting and embed it into your websit
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/cal/" title="Cal.com | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-https://awweso.me/booking-and-scheduling/
+
 
 ### CMS x Astro
 
@@ -424,72 +426,11 @@ Thats where [selfhosted tools](https://docs.vrite.io/self-hosting/configuration/
 
 >  Open-source developer content platform 
 
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/directus" title="DirectusCMS | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="StrapiCMS | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
+
 
 I also got inspired by tools listed: https://www.awesome-homelab.com/category/writing
 
 Particularly by https://www.awesome-homelab.com/item/novel-editor
-
-
-<!--
-* https://builtwith.com/theinstituteofskills.com/
-* https://www.similarweb.com/website/theinstituteofskills.com/#traffic
-* https://radar.cloudflare.com/scan?url=https://fossengineer.com/
--->
-
-#### Headless DirectusCMS Example
-
-* https://astro.build/themes/details/directus-cms-template/
-* https://github.com/directus-labs/starters/tree/main/cms/astro
-
-#### Headless StrapiCMS Example
-
-
-
-![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
-
-
-
-## The Penpot Project
-
-* https://github.com/Figma-Linux/figma-linux
-
-
-Penpot is a powerful and customizable design and prototyping tool that offers a wide range of features and benefits for users.
-
-In this blog post, we'll explore what Penpot is, how it works, and why you might want to consider using it for your own design and prototyping needs. 
-
-Are you looking for a powerful and flexible design and prototyping tool that is **free and open-source**? Look no further than Penpot. 
-
-```sh
-#https://flathub.org/apps/com.sudovanilla.penpot-desktop
-```
-
-It can also be configured via docker: https://github.com/jmlcas/penpot
-
-Penpot is a versatile and customizable design tool that allows you to create beautiful and interactive designs for web and mobile applications.
-
-With its intuitive interface and extensive customization options, Penpot is a great choice for anyone who wants to create stunning visual designs and prototypes. 
-
-* https://help.penpot.app/technical-guide/getting-started/#start-penpot
-
-
-{{< dropdown title="Pre-Requisites!! Just Get Docker 🐋" closed="true" >}}
-
-Important step and quite recommended for any SelfHosting Project - [Get Docker Installed](https://fossengineer.com/docker-first-steps-guide-for-data-analytics/)
-
-It will be one command, this one, if you are in Linux:
-
-```sh
-apt-get update && sudo apt-get upgrade && curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh && docker version
-```
-
-{{< /dropdown >}}
-
 
 ### Improving HomeLab Security
 
@@ -514,36 +455,6 @@ ssh-keygen -t rsa -b 4096 -C "somemail@domain.ch"
 ssh root@yourhetznerserverip
 ```
 
-<!-- ### Other Interesting Services to SelfHost
-
-* You can also check how to block adds for all home devices by [SelfHosting PiHole with Docker](https://fossengineer.com/selfhosting-PiHole-docker/) -->
-
-<!-- ### Check Similar Services
-
-Interested to discover similar services that you can [self-host](https://fossengineer.com/tags/self-hosting/) with [Docker](https://fossengineer.com/tags/docker/)? - Check this out:
-
-{{< gist jalcocert 302f787db6f6d75e978674e0e18d1185
-"Docker-Security-ConfigFiles">}} 
-
-# Traefik Proxy
-
-Traefik 3 and FREE Wildcard Certificates with Docker
-https://www.youtube.com/watch?v=n1vOfdz5Nm8
-https://technotim.live/posts/traefik-3-docker-certificates/
-
-
-We have already seen how to use PiHole and Cloudflare Tunnels.
-
-<https://www.youtube.com/watch?v=liV3c9m_OX8&t=723s>
-
-<https://www.youtube.com/watch?v=b83S_N1kkJM>
-
-SSL will be provided by Cloudflare instead of let's encrypt.
-
-We could use DuckDNS, but our home public ip address would be exposed.
-
- -->
-
 ### Business Canvas
 
 This is one of those entrepreneurship tools that I find useful: The business model canvas
@@ -560,3 +471,8 @@ Interested to discover similar services that you can [self-host](https://fosseng
 
 {{< gist jalcocert c043e6645a8786f55640e5fbccbaea00
 "Docker-Business-ConfigFiles">}}
+
+
+
+{{< gist jalcocert 302f787db6f6d75e978674e0e18d1185
+"Docker-Security-ConfigFiles">}} 

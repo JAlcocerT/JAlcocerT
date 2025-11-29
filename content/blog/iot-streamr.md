@@ -1,6 +1,6 @@
 ---
 title: "Streamr - The P2P PubSub Network for IoT"
-date: 2025-12-29
+date: 2025-11-30
 draft: false
 tags: ["Web3","IoT","MQTT","Acurast","Shodan"]
 description: 'Are decentralized data networks even possible?'
@@ -267,15 +267,19 @@ But in theory, you can also publish your website there as well
 
 ### Shodan
 
+Shodan is a specialized search engine that allows users to find Internet-connected devices. 
 
-<!-- shodan related to internet of the things
+Unlike traditional search engines that index websites and pages, Shodan collects information about network-connected devices such as servers, security cameras, routers, printers, and IoT (Internet of Things) devices.
 
-Shodan is a specialized search engine that allows users to find Internet-connected devices. Unlike traditional search engines that index websites and pages, Shodan collects information about network-connected devices such as servers, security cameras, routers, printers, and IoT (Internet of Things) devices1. Here are some key points about Shodan:
+Shodan is a search engine similar to Google. But while Google searches for websites, Shodan searches for devices that are connected to the internet.
 
-Search Engine for Internet-Connected Devices: Shodan is often referred to as the “world’s first search engine for Internet of Things (IoT) devices.” It provides a way to discover various types of servers, webcams, routers, and other devices connected to the Internet. -->
+Users can perform a search using the Shodan search engine based on an IP address, device name, city, and/or a variety of other technical categories. 
 
-<!-- SHODAN
 
-Search engine similar to Google
-What Is Shodan? Shodan is a search engine similar to Google. But while Google searches for websites, Shodan searches for devices that are connected to the internet. Users can perform a search using the Shodan search engine based on an IP address, device name, city, and/or a variety of other technical categories. 
--->
+### HoneyPot
+
+Who knows what this actually does, but it's interesting to know it exists...
+
+* https://github.com/thinkst/opencanary
+
+> MIT | Modular and decentralised honeypot

@@ -204,12 +204,6 @@ With [ZorinOS 18](https://zorin.com/os/download/) we can even get microsoft one 
 
 > > You can always try before you daily drive [via Virtual Machines with QEMU or GNOME Boxes](https://jalcocert.github.io/JAlcocerT/testing-nix-os/).
 
-### HoneyPot
-
-* https://github.com/thinkst/opencanary
-
-> MIT | Modular and decentralised honeypot
-
 ---
 
 ## FAQ
@@ -230,8 +224,10 @@ Thanks to DbTech's video:
 {{< /cards >}}
 
 {{< callout type="warning" >}}
-I prefer Watchtower to send alerts on new images, rather than letting update them automatically. I had problems with a Nextcloud Update long back!
+I prefer Watchtower to send alerts on new images, rather than letting update them automatically
 {{< /callout >}}
+
+> I had problems with a Nextcloud Update long back!
 
 ### Programmatic DNS updates
 

@@ -7,6 +7,7 @@ description: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+https://radar.cloudflare.com/dns
 
 **Tl;DR**
 
@@ -203,6 +204,10 @@ It is great for Docker: https://www.youtube.com/watch?v=tE9YjEV1T4E
 How to **test your ad-blocks** - https://d3ward.github.io/toolz/ -->>> https://d3ward.github.io/toolz/adblock.html
 
 
+* NetBird - wireguard based
+* Netmaker  - https://www.netmaker.io
+* Tailscale or headscale
+
 
 ### Business OSS Driven
 
@@ -288,8 +293,16 @@ Why not doing [billing with OSS](https://fossengineer.com/open-source-invoice-cr
 1. https://github.com/hagezi/dns-blocklists
 2. https://github.com/blacklanternsecurity/baddns
 
-### How can I Check my DNS?
+**Programmatic DNS updates**
 
+* https://developers.cloudflare.com/api/resources/dns/
+* https://github.com/cloudflare/cloudflare-python
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="CF x Porkbun DNS API Py Scripts ↗" >}}
+{{< /cards >}}
+
+### How can I Check my DNS?
 
 https://dnsprivacy.org/dns_privacy_daemon_-_stubby/
 
@@ -312,6 +325,7 @@ https://docs.linuxserver.io/images/docker-wireshark/
 ### What do I like to bring to my HomeLab?
 
 HomeLab Essentials
+
 https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#what-do-i-like-to-selfhost
 
 

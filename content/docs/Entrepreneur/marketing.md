@@ -130,6 +130,8 @@ curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCPPMA8ZEusAe5dVH6P
 ```
 
 
+
+
 ## Calendar
 
 Among [all the things that can be embedded](https://jalcocert.github.io/JAlcocerT/embed-that/) into a website, we have not only bots, but also cool calendars.
@@ -148,6 +150,13 @@ graph TD
     A --> D(Consult via Cal.com - DWY $$);
     A --> E(Services - DFY $$$);
 ```
+
+
+![Calcom Email x Stripe ](/blog_img/email/cal-email-stripe.png)
+
+<!-- ![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png) -->
+
+{{< youtube id="qFMN0oDeCFg" autoplay="false" >}}
 
 
 ### Integrate Stripe

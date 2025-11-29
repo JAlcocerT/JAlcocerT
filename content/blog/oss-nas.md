@@ -7,8 +7,6 @@ description: 'Testing Operative Systems for a NAS / MiniPCs. Improving a Homelab
 url: 'os-for-nas'
 ---
 
-
-
 **Intro**
 
 Ive been pretty much **comfortable with these OS's**:
@@ -64,7 +62,7 @@ But...Too many OS's?
 Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-Boots**
 {{< /callout >}}
 
-| Solution         | Fully Open Source | Notes                                             |
+| Solution         | Fully **Open Source** | Notes                                             |
 |------------------|-------------------|---------------------------------------------------|
 | TrueNAS CORE     | Yes               | Both TrueNAS CORE and SCALE are open source[1][2][7]   |
 | TrueNAS SCALE    | Yes               | Debian based, open source[2][7]          |
@@ -75,11 +73,13 @@ Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-
 | Openfiler        | Yes               | Linux based, open source[11][12][6]   |
 | Amahi            | Yes               | Fedora/Ubuntu based, open source[12][6]  |
 
-As I mentioned above, if you have used Linux before and are comfortable with spending 1h understanding how contaiers/docker will do the thing for you, Id just go for an Ubuntu flavor + Docker x (Nextcloud/Immich/UmbrelOS/PiHole/Jellyfin/whatever).
+As I mentioned above...
+
+If you have used Linux before and are comfortable with spending 1h understanding how contaiers/docker will do the thing for you, Id just go for: Ubuntu flavor + Docker x (Nextcloud/Immich/UmbrelOS/PiHole/Jellyfin/whatevercontainer).
 
 ### VPN
 
-Its not the first time we talk about VPNs around here.
+Its not the first time we talk **about VPNs** around here.
 
 If you will be building a NAS, you might need one of these.
 
@@ -101,13 +101,11 @@ ip addr show | grep inet6 | grep -v ::1
 
 > BSD-3
 
-An based on wireguard: <https://netbird.io/>
+And based on wireguard: <https://netbird.io/>
 
 <!-- <https://www.youtube.com/watch?v=_-vfSgqmOUI> -->
 
 {{< youtube "_-vfSgqmOUI" >}}
-
-
 
 Install a self-hosted VPN platform // Netbird with zitadel.
 
@@ -115,18 +113,19 @@ Install a self-hosted VPN platform // Netbird with zitadel.
 
 {{< youtube "_Fgwap-sl3A" >}}
 
-
-* Tailscale - wireguard based
-  * Headscale - for selfhosted server
-* NetBird - wireguard based
-* Netmaker  - https://www.netmaker.io
-
 #### Wireguard
 
 * https://blog.frehi.be/2022/06/11/setting-up-wireguard-vpn-with-ipv6/
 * https://www.reddit.com/r/WireGuard/comments/178uolr/guide_how_to_set_up_wireguard_with_ipv6_in_docker/
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wireguard" title="Wireguard | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wg-easy" title="WG Easy | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 #### Tailscale
+
+Tailscale is wireguard based and very simple to configure: *w/o port forwarding!*
 
 ```sh
 tailscale status
@@ -136,6 +135,8 @@ tailscale status
 
 #tailscale down
 ```
+
+> See Headscale - for selfhosted server
 
 
 ### Benchmarks
@@ -150,6 +151,8 @@ chmod +x Benchmark101.sh & ./Benchmark101.sh
 ```
 
 {{< /details >}}
+
+Consider also:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Homarr | Docker Config File 🐳 ↗"  >}}
@@ -177,8 +180,6 @@ Your server will *most likely* be in between.
 {{< callout type="info" >}}
 See my [general web docs](https://jalcocert.github.io/JAlcocerT/create-your-website/)
 {{< /callout >}}
-
-
 
 ### My Home Lab Setup
 

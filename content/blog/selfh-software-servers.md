@@ -2,7 +2,7 @@
 title: "[PaaS Recap] Software for Servers..."
 date: 2025-12-01T01:20:21+01:00
 draft: false
-tags: ["HomeLab","LocalStack vs DokPloy vs LocalStack vs Runtipi","Cosmos Server"]
+tags: ["HomeLab","LocalStack vs DokPloy","Cosmos Server"]
 description: 'Selfhosted Apps that simplify my workflow. Get your MiniPC/NAS homelab ready quickly.'
 url: 'selfhosted-server-paas'
 ---
@@ -29,7 +29,7 @@ Pleeeeeease...
 
 Few months ago, I wrote about [different **PaaS** Tools](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/)
 
-And more recently, I made a [VPS recap on where to deploy](https://jalcocert.github.io/JAlcocerT/where-to-deploy/#among-all-paas---what-to-choose) your SaaS/apps.
+And more recently, I made a [**VPS recap** on where to deploy](https://jalcocert.github.io/JAlcocerT/where-to-deploy/#among-all-paas---what-to-choose) your SaaS/apps.
 
 Playing with other dev's apps baremetal, without containers is a no go and everytime I vibe code sth I dont consider it finished until it works within Make and a container.
 
@@ -50,12 +50,9 @@ UmbrelOS, Cosmos Server, Coolify or Dokploy....
 
 This feels like time for a recap.
 
-And if you are new to HomeLabs and/or Linux. These are some reasons for you to stay:
+And if you are new to HomeLabs and/or Linux. 
 
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted UmbrelOS - Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/cosmos-server" title="Selfhosted Cosmos Server - Docker Config 🐋 ↗" >}}
-{{< /cards >}}
+These are some reasons for you to stay:
 
 <!-- ![jellyfin](/img/SelfHosting/Jellyfin/jellyfin-rockchip-mpp-hwa-codecs.png#center) -->
 
@@ -63,36 +60,34 @@ And if you are new to HomeLabs and/or Linux. These are some reasons for you to s
 
 You can even run a Jellyfin Media server with a Opi SBC!
 
-
-Among which, [Dokploy](#dokploy) resonated a lot with me.
+> And forget about mandatory cloud subscriptions to get a notepad running
 
 I want to make a recap of PaaS Tools available.
 
-Its beena while since I started [selfhosting with the Pi](https://jalcocert.github.io/RPi/tags/self-hosting/), so hopefully this will come handy to people getting started.
+Its been a while since I started [selfhosting with the Pi](https://jalcocert.github.io/RPi/tags/self-hosting/), so hopefully this will come handy to people getting started.
 
-Because is not just about creating, but [deploying](https://jalcocert.github.io/JAlcocerT/where-to-deploy/).
 
 ## PaaS Tools
+
+I was collecting the configurations for these tools before: 
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/PaaS" title="Selfhostable PaaS | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
+With this post, Ive made sure they are on the new repo and working:
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for your server" >}}
 {{< /cards >}}
 
+Today, we are going to see:
 
-Like the well known Coolify and Dokploy:
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/coolify" title="Coolify | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dokploy" title="Dokploy | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
-
-Today, we are going to see
+1. LocalStack
+2. RuntiPi
+3. UmbrelOS - Not a PaaS, but having a OS inside a docker container and just click to deploy apps is fantastic
+4. Coolify and Dokploy
+5. 
 
 ### LocalStack
 
@@ -126,20 +121,72 @@ It provides an **emulated environment of AWS services**, solving issues related 
 
 ### Runtipi
 
-
-> [Runtipi](https://runtipi.io/) is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps. ✨
-
 * https://github.com/runtipi/runtipi with AGPL-v3!
 
->  Runtipi is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps. ✨ 
+> [Runtipi](https://runtipi.io/) is a homeserver for everyone!
 
->> Got to know this one thanks to [awsomedockercompose](https://awesome-docker-compose.com)
+One command setup, one click installs for your favorites self-hosted apps. ✨
 
-### UmbrelOS
+> Got to know this one thanks to [awsomedockercompose](https://awesome-docker-compose.com)
+
+
+
+### DokPloy vs Coolify
+
+Like the well known Coolify and Dokploy:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/coolify" title="Coolify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dokploy" title="Dokploy | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+<!-- https://youtu.be/RoANBROvUeE?si=eoFnH_LBgEBj7j9q -->
+
+{{< youtube "RoANBROvUeE" >}}
+
+Posthog attack npm!
+
+Coolify is php vs Dokplot that is NextJS.
+
+#### Dokploy on a VPS
+
+
+I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
+
+Among which, [Dokploy](#dokploy) resonated a lot with me.
+
+
+#### Setting up Coolify on a Pi
+
+### OSS OS inside containers
+
+UmbrelOS
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrel" title="Selfhosted UmbrelOS - Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/cosmos-server" title="Selfhosted Cosmos Server - Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+#### Cosmos Server
+
+* https://github.com/azukaar/Cosmos-Server
+
+> Escape the cloud
+
+
+
+
+
+#### UmbrelOS
 
 Im still hyped with Umbrel os and their tons of Apps, available at one click via UI.
 
 If you need nextcloud or want to practice [D&A on crypto](https://apps.umbrel.com/app/bitcoin) - [btc node](https://forocoches.com/foro/showthread.php?t=8706177), you are covered: https://apps.umbrel.com/app/
+
+
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#selfhosted-adventures
+![Umbrel OS Apps with one click install](/blog_img/selfh/umbrel-os/umbrel-apps.png)
+
 
 ---
 
@@ -147,26 +194,33 @@ If you need nextcloud or want to practice [D&A on crypto](https://apps.umbrel.co
 
 There will be more and more tools coming to the PaaS Space.
 
+Because is not just about creating, but [deploying](https://jalcocert.github.io/JAlcocerT/where-to-deploy/) the applications so that they are available to the users.
+
+
 But as of today, [having a cloud at home](https://nielscautaerts.xyz/we-have-cloud-at-home.html) is not that hard.
 
-Like as I [read on reddit](https://www.reddit.com/r/selfhosted/comments/1ol1v34/nixopus_oneclick_app_hosting_on_your_own_server/): https://github.com/raghavyuva/nixopus
+Like as I [read on reddit](https://www.reddit.com/r/selfhosted/comments/1ol1v34/nixopus_oneclick_app_hosting_on_your_own_server/): 
+
+* https://github.com/raghavyuva/nixopus
 
 >  Open Source Alternative to vercel, heroku, netlify with simplified workflows 
 
-* https://pinokio.computer/
-https://github.com/pinokiocomputer/pinokio
-https://github.com/pinokiocomputer/pinokio?tab=MIT-1-ov-file#readme
-* 
-    * https://pinokio.computer/item?uri=https://github.com/cocktailpeanutlabs/comfyui
-
-https://docs.pinokio.computer/download/
+> > They are working towards a v1 as of now
 
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#Dokploy/dokploy&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)
 
 ### A Brand around PaaS and OSS Software
 
-Thinking about the DIY/DWY/DFY framework: I thought that a kind of advance DIY is when someone is able to select the software that they want, via UI and it gets deployed seemlessly.
+Thinking about the **DIY/DWY/DFY framework**: I thought that a kind of advance DIY is when someone is able to select the software that they want, via UI and it gets deployed seemlessly.
+
+```mermaid
+graph TD
+    A[www.jalcocertech.com] --> B(blog/YT 0$);
+    A --> C(DIY 0/$);
+    A --> D(Consult via Cal.com - DWY $$);
+    A --> E(Services - DFY $$$);
+```
 
 That's what PaaS are for.
 
@@ -174,9 +228,21 @@ The software...you can vibe coded it and prepare via containers. Or just use per
 
 And for cases like the weddings in the beginning of this year, it could get the job done and fast.
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/weddingshare" title="Selfhosted WeddingShare - Docker Config 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-weddings/" title="Wedding setup on a VPS | Post ↗" >}}
+{{< /cards >}}
+
+
 > That could be a thing going forward for `paas.jalcocertech.com`
 
 > > I guess I will need a linkprofile to avoid loosing my mind with all the options.
+
+Then some cool Landing should be placed at `consult.jalcocertech.com` with calcom+stripe
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Cal.com Calendar | Docs for Marketing ↗" >}}
+{{< /cards >}}
 
 ---
 
@@ -188,6 +254,7 @@ And for cases like the weddings in the beginning of this year, it could get the 
 
 
 Concerned about container backups?
+
 <!-- 
 mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
 
@@ -235,9 +302,14 @@ https://www.youtube.com/watch?v=zhK0sARGhYc
 
 ### What exactly do you need?
 
-* Time Management:
-    * Timelite
-    * [Pomatez](https://github.com/zidoro/pomatez) MIT
+Let's test these PaaS with some of the selfhostable WebApps I have tried at some point.
+
+#### Time Management via PaaS
+
+Time Management: because its all about [time](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) and [focus](https://jalcocert.github.io/JAlcocerT/tools-to-improve-focus/), specially if you are a [PM](https://jalcocert.github.io/JAlcocerT/selfhosting-pm-tools-docker/)
+
+* Timelite
+* [Pomatez](https://github.com/zidoro/pomatez) MIT
 
     <!-- There are several benefits of tracking the time of your tasks:
 
@@ -250,9 +322,11 @@ https://www.youtube.com/watch?v=zhK0sARGhYc
 * Increased Focus and Accountability: Tracking the time of your tasks can also increase your focus and accountability. When you know that you are tracking your time, you are more likely to stay focused on the task at hand and avoid distractions. Additionally, tracking your time can help you hold yourself accountable for meeting your goals and deadlines.
 
 * Data-Driven Insights: Tracking the time of your tasks can provide you with data-driven insights into your work habits and productivity. By analyzing this data, you can **identify patterns and trends in your work**, and make adjustments to improve your workflow. 
-    * For example, you may realize that you are most productive during certain times of day, or that you work best in short bursts with frequent breaks. -->
+    * For example, you may realize that you are most productive during certain times of day, or that you work best in short bursts with frequent breaks.
 
-* A [chat for your business](https://jalcocert.github.io/JAlcocerT/communication-management/)?
+#### Business Chat via PaaS
+
+A [chat for your business](https://jalcocert.github.io/JAlcocerT/communication-management/)?
 
 Look no further than Matrix: synapse / dendrite / conduit available as flavours of the same.
 

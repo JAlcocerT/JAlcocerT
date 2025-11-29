@@ -7,6 +7,14 @@ description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-2025'
 ---
 
+Install any Ai stuff, via UI:
+
+* https://pinokio.computer/
+  * https://github.com/pinokiocomputer/pinokio
+  * https://docs.pinokio.computer/download/
+
+> **MIT** |  AI Browser 
+
 
 Normally, API calls are stateless.
 

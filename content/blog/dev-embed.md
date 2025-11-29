@@ -254,6 +254,8 @@ However, while Chatwoot includes some CRM-like capabilities—such as managing a
 
 Or just... https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble
 
+![alt text](/blog_img/web/astro-whatsapp-bouble.png)
+
 ## Embedded Analytics
 
 Few months ago, I [read about Latitude](https://jalcocert.github.io/JAlcocerT/live-search-and-research-with-ai/#gaps-to-cover).

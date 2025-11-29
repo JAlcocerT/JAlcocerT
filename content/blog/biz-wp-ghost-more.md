@@ -256,12 +256,16 @@ If you'd like to have **a simple blogging platform**:
 To sell Webs to the *masses*, **you need a cool UI** for the users to manage their stuff and make it scalable.
 
 {{< callout type="info" >}}
-If you are looking for a [LinkTree Alternative, see LinkStack](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/)
+If you are looking for a [LinkTree Alternative, see **LinkStack**](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/)
 {{< /callout >}}
 
-See mine deployed: https://whois.jalcocertech.com/@me
+I also got mine deployed: `https://whois.jalcocertech.com/@me`
 
-![LinkStack Web UI](/blog_img/web/web-linkstack.png)
+{{< cards >}}
+  {{< card link="https://whois.jalcocertech.com/@me" title="LinkStack" image="/blog_img/web/web-linkstack.png" subtitle="My Social Link Website" >}}
+{{< /cards >}}
+
+<!-- ![LinkStack Web UI](/blog_img/web/web-linkstack.png) -->
 
 What's next?
 

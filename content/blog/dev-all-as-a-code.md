@@ -752,6 +752,10 @@ npm install
 npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 ```
 
+As seen while a changed [my main landing page](https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/):
+
+![DataNova Theme](/blog_img/web/astro/astro-datanova-animated-graph.png)
+
 
 ### Video Geolocation with FFMPEG
 

@@ -10,6 +10,10 @@ url: 'langchain-chat-with-sensor-data'
 
 **TL;DR**
 
+
+<!-- A compute framework for turning complex data into vectors.
+https://github.com/superlinked/superlinked -->
+
 **Intro**
 
 You can also try [PandasAI](https://pypi.org/project/pandasai/) and [Sketch](https://pypi.org/project/sketch/) with Python.
