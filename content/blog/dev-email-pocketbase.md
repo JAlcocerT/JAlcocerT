@@ -184,6 +184,11 @@ After all of this, you should be able to use Pocketbase + MailTrap to get user e
 
 With that covered, [plugging Stripe](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#integrate-stripe) should not be an issue.
 
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/#email-verification" title="Email Verification | Docs ↗" >}}
+{{< /cards >}}
+
 You can **also get emails verified** ( > > > validated) via **Logto** -> Stripe:
 
 {{< cards >}}

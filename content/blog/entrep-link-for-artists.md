@@ -80,11 +80,10 @@ But recently I found about:
 
 ## Conclusions
 
-
 Examples of Portfolio Links websites?
 
 * https://peladonerd.com/
-* https://jalcocert.github.io/Portfolio
+* https://jalcocert.github.io/Portfolio - Deployed statically via GH Pages completely free!
 
 More competitors on the **Saas Link Website domain**:
   * Taplink
@@ -151,6 +150,11 @@ You will want to know how it performs:
   * https://subscribepage.io/listy#
   * https://linke.ro/
   <!-- * Proposed: bogusiabachata.pro -->
+
+
+#### OSS Links Web Profiles
+
+
 
 
 ### What Links to show?

@@ -289,12 +289,11 @@ Not really, see how much im using a CX22: Portainer + NGINX + Wedding share **~5
 
 ---
 
-
 ## Conclusions
 
-Using cloudflared for a sub.sub.domain.com will be **problematic with the https/SSL**.
+Using cloudflared for a `sub.sub.domain.com` will be **problematic with the https/SSL**.
 
-So I restarted everything (with a CPX11, AMD x86).
+So I restarted everything (with a hetzner CPX11, AMD x86).
 
 ```sh
 curl -O https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Selfhosting_101.sh
@@ -304,7 +303,7 @@ chmod +x Selfhosting_101.sh
 sudo ./Selfhosting_101.sh
 ```
 
-This took ~42s.
+This preparation step took ~42s.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Software for trips far from home" >}}

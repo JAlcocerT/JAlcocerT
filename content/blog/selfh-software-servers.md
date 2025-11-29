@@ -164,18 +164,50 @@ https://docs.pinokio.computer/download/
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,zane-ops/zane-ops,rodyherrera/Quantum&,type=Date)](https://star-history.com/#Dokploy/dokploy&caprover/caprover&rodyherrera/Quantum&zane-ops/zane-ops&Date)
 
+### A Brand around PaaS and OSS Software
+
+Thinking about the DIY/DWY/DFY framework: I thought that a kind of advance DIY is when someone is able to select the software that they want, via UI and it gets deployed seemlessly.
+
+That's what PaaS are for.
+
+The software...you can vibe coded it and prepare via containers. Or just use permissive OSS only.
+
+And for cases like the weddings in the beginning of this year, it could get the job done and fast.
+
+> That could be a thing going forward for `paas.jalcocertech.com`
+
+> > I guess I will need a linkprofile to avoid loosing my mind with all the options.
+
 ---
 
 ## FAQ
 
+* https://www.youtube.com/@elestio/videos
 
-https://www.youtube.com/@elestio/videos
+* https://www.youtube.com/@webnestify
 
-https://www.youtube.com/@webnestify
 
-https://www.linode.com/marketplace/apps/linode/saltcorn/ <!-- Saltcorn: Open-source low-code platform for building web applications -->
+Concerned about container backups?
+<!-- 
+mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
 
-https://www.trydome.io/ <!-- Dome: Self-hosted application platform -->
+sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
+-->
+
+<!-- 
+https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
+
+https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
+<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
+
+https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
+<https://github.com/JAlcocerT/Docker/tree/main/Media> 
+-->
+
+
+* https://www.linode.com/marketplace/apps/linode/saltcorn/ <!-- Saltcorn: Open-source low-code platform for building web applications -->
+
+* https://www.trydome.io/ <!-- Dome: Self-hosted application platform -->
 
 
 https://www.youtube.com/watch?v=zhK0sARGhYc
@@ -198,8 +230,8 @@ https://www.youtube.com/watch?v=zhK0sARGhYc
 * https://autoize.ch/managed-open-source-apps/ <!-- Autoize: Managed hosting for open-source applications -->
 
 
-https://github.com/snipe/snipe-it <!-- Snipe-IT: Open-source asset management system -->
-https://www.youtube.com/watch?v=EsCh0gOrxqE
+* https://github.com/snipe/snipe-it <!-- Snipe-IT: Open-source asset management system -->
+* https://www.youtube.com/watch?v=EsCh0gOrxqE
 
 ### What exactly do you need?
 
@@ -220,29 +252,11 @@ https://www.youtube.com/watch?v=EsCh0gOrxqE
 * Data-Driven Insights: Tracking the time of your tasks can provide you with data-driven insights into your work habits and productivity. By analyzing this data, you can **identify patterns and trends in your work**, and make adjustments to improve your workflow. 
     * For example, you may realize that you are most productive during certain times of day, or that you work best in short bursts with frequent breaks. -->
 
-* A business chat? look no further than Matrix: synapse or dendrite or conduit available as flavours of the same
+* A [chat for your business](https://jalcocert.github.io/JAlcocerT/communication-management/)?
+
+Look no further than Matrix: synapse / dendrite / conduit available as flavours of the same.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-synapse" title="Matrix Server 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-conduit" title="Matrix Conduit Server 🐋 ↗" >}}
 {{< /cards >}}
-
-
-Concerned about container backups?
-<!-- 
-mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
-
-sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
--->
-
-<!-- 
-https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
-
-https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
-<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
-
-https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
-<https://github.com/JAlcocerT/Docker/tree/main/Media> 
--->
-
-

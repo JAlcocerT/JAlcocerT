@@ -2,7 +2,7 @@
 title: "A podcast for all"
 date: 2025-11-28T08:20:21+01:00
 draft: false
-tags: ["Web","Astro","Entrep","RSS","Make-Podcast","Svelte"]
+tags: ["Web","Astro","Entrep","RSS","Make-Podcast","SaaS Vibe Coding "]
 description: 'Using astro and '
 url: 'make-podcast'
 ---
@@ -54,6 +54,12 @@ This platform would allow you to:
 - Generate RSS feeds for distribution
 
 
+From the [latest vibe coding learnings](https://jalcocert.github.io/JAlcocerT/real-estate-landing/#nuxt-for-real-estate), I found that is better to keep it simple and with well known frameworks:
+
+```
+
+```
+
 How about creating a: **make-podcast**?
 
 
@@ -66,7 +72,10 @@ How about creating a: **make-podcast**?
 2. Bring the astropod theme
 
 
-3. Edit the `./src` content via the Flask Web App
+3. Edit the `./src` content via the Web App
+
+
+
 
 ---
 
