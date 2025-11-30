@@ -308,8 +308,6 @@ Interesting Search Engines to have a look:
 
 I got to know about these when playing around with the [AIssistant here](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/)
 
-{{< details title="Latitude (prompt engineering) and...latitude analytics 📌" closed="true" >}}
-
 * https://github.com/latitude-dev/latitude-llm
 
 **LatitudeLLM is an open-source prompt engineering platform** designed to streamline AI feature development.
@@ -377,7 +375,9 @@ It supports fetching articles by keywords, topics, and locations, making it vers
 
 From Perplexica to **OpenSearch GPT** [AI Search Engines!] - https://github.com/supermemoryai/opensearch-ai
 
-**OpenSearch GPT**, an open-source, AI-powered search engine that personalizes search results by learning from user interactions. It emphasizes key features like its **Mem Zero** memory system for remembering past interactions, its robust technological framework, and its versatility as a tool for writing assistance and data management. 
+**OpenSearch GPT**, an open-source, AI-powered search engine that personalizes search results by learning from user interactions. 
+
+It emphasizes key features like its **Mem Zero** memory system for remembering past interactions, its robust technological framework, and its versatility as a tool for writing assistance and data management. 
 
 OpenSearch GPT aims to enhance productivity and streamline workflows, offering transparency and flexibility as an alternative to proprietary search engines.
 

@@ -12,6 +12,10 @@ url: 'travel-router-gl-mt3000-review'
 ---
 
 
+**TL;DR**
+
+Testing the GL-MT3000 Travel Router with Wireguard and Tailscale VPN.
+
 **Intro**
 
 The last years I have been interested to improve my **networking knowledge**.
@@ -176,6 +180,7 @@ When you activate the option to use an exit node (like the one we have just conf
 Subnet routes are like "maps" that tell a network how to reach specific groups of devices (subnets).
 
 ---
+
  **Analogy: A Neighborhood Map**
 Imagine your home network is like a neighborhood with many houses (devices). Each street in the neighborhood represents a subnet (a group of devices sharing a common range of IP addresses).
 

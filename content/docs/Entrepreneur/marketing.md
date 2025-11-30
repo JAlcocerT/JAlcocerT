@@ -192,3 +192,8 @@ You can always [embed things](https://jalcocert.github.io/JAlcocerT/embed-that/)
 * {{< newtab url="https://github.com/frappe/erpnext" text="ERP Next" >}}
   * https://www.youtube.com/watch?v=X08dEN_rWyg
     <!-- https://github.com/jmlcas/erpnext -->
+
+
+## Ads
+
+![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)

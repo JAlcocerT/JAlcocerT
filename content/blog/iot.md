@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2025-12-05
+date: 2025-12-11
 draft: false
 tags: ["Tinkering","DB2Rest","TelemetryHarbor","IoT ebook","From obfuscaste towards 1toN eBooks"]
 description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'
@@ -349,7 +349,7 @@ xargs -0 awk '
   /^date:/ && !printed {
     gsub(/^date:[[:space:]]*/, "", $0)
     post_date = substr($0, 1, 10)
-    if (post_date > "2025-12-01") {
+    if (post_date > "2025-12-31") {
       print FILENAME ": " post_date
       printed=1
       count++

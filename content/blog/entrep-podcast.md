@@ -1,5 +1,5 @@
 ---
-title: "A podcast for all"
+title: "A Podcast for all with Anti-Gravity"
 date: 2025-11-28T08:20:21+01:00
 draft: false
 tags: ["Web","Astro","Entrep","RSS","Make-Podcast","SaaS Vibe Coding","FFMPeg Recording"]
@@ -12,6 +12,8 @@ url: 'make-podcast'
 Because astro SSG and CSR are so cool. 
 
 Why not...Creating a DIY podcast platform?
+
++++ Doing so via [Google's Antigravity IDE](#antigravity)
 
 **Intro**
 
@@ -55,7 +57,7 @@ This platform would allow you to:
 
 From the [latest vibe coding learnings](https://jalcocert.github.io/JAlcocerT/real-estate-landing/#nuxt-for-real-estate):
 
-1. I found that is better to keep it simple and with well known frameworks
+1. I found that is better to **keep it simple** and with well known frameworks
 2. Its great to chat with Gemini about your initial ideas -> Create [a z-BRD.md](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) and refine again with your coding agent
 3. create a `z-development-plan.md`
 
@@ -97,6 +99,20 @@ There are also selfhostable Podcasts:
 
 >  Castopod is an open-source hosting platform made for podcasters who want engage and interact with their audience. Synchronized read-only mirror of https://code.castopod.org/adaures/castopod 
 
+
+### Antigravity
+
+Google have been improving their stack.
+
+From the https://notebooklm.google/ to...a desktop IDE:
+
+
+
+* https://antigravity.google/
+  * https://antigravity.google/download/linux
+  * https://chromewebstore.google.com/detail/antigravity-browser-exten/eeijfnjmjelapkebgockoeaadonbchdd
+
+![Google AntiGravity IDE](/blog_img/dev/IDEs/antigravity.png)
 
 ---
 

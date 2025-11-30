@@ -2,21 +2,11 @@
 title: "SelfHosting is easy with PaaS"
 date: 2025-12-10T01:20:21+01:00
 draft: false
-tags: ["HomeLab ebook","Anti-Gravity","Excalidraw","1toN ebooks","Omarchy"]
-description: 'Selfhosting ebook.'
+tags: ["HomeLab ebook","Excalidraw","1toN ebooks","Omarchy OS"]
+description: 'Selfhosting with your HomeLab and PaaS.'
 url: 'selfhosted-apps-december-2025'
 ---
 
-
-Google have been improving their stack.
-
-From the https://notebooklm.google/ to...a desktop IDE:
-
-* https://antigravity.google/
-  * https://antigravity.google/download/linux
-  * https://chromewebstore.google.com/detail/antigravity-browser-exten/eeijfnjmjelapkebgockoeaadonbchdd
-
-![Google AntiGravity IDE](/blog_img/dev/IDEs/antigravity.png)
 
 ```sh
 sudo mkdir -p /etc/apt/keyrings
@@ -170,10 +160,8 @@ Direct, built-in support in major SSGs is less common, but you can usually achie
     2.  Use a **script or build step** (often involving the Excalidraw CLI) to convert the `.excalidraw` JSON into a static **SVG** or **PNG** file.
     3.  Embed the resulting SVG/PNG image in your Markdown note, which the SSG then publishes.
 
-Would you like me to find a specific tutorial or guide for integrating Excalidraw diagrams with an open-source SSG like Quartz or Hugo?
 
 ---
-
 
 ## Conclusion
 
@@ -253,7 +241,18 @@ https://github.com/tobychui/zoraxy?tab=AGPL-3.0-1-ov-file#readme
 General purpose (reverse) proxy and forwarding tool for networking noobs. Now written in Go!
 
 
+If you just made your HomeLab, consider any of these media tools: pairdrop or nextcloud
+
+![Pairdrop UI](/blog_img/selfh/media/pairdrop-ui.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/pairdrop/" title="Pairdrop | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/nextcloud/" title="Nextcloud | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ### Omarchy
+
+I was [testing OS's](https://jalcocert.github.io/JAlcocerT/os-for-nas/) some time back.
 
 When you think nothing can surprise you...
 
@@ -283,7 +282,7 @@ It took ~5min to complete the install.
 
 ### Gaming and Linux
 
-I got to know about another OS for linux gaming: https://bazzite.gg/
+I got to know about [another OS](https://jalcocert.github.io/JAlcocerT/os-for-nas/) for linux gaming: https://bazzite.gg/
 
 It seems that W11 is going all in with AI and at the same time gaming performance is going down the drain.
 
@@ -299,7 +298,7 @@ https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#thoughts-on-stea
 
 ![download steam os](/blog_img/outro/steamos.png)
 
-For a general OS purposes, as of today I would:
+For a **general OS purposes**, as of today I would:
 
 - Use [Lubuntu](https://ubuntu.com/lubuntu/releases/noble/release/) - As it requires just ~700mb of RAM
 - Try [ZorinOS](https://zorin.com/os/download) if you are a regular user with good enough hardware but cant run W11

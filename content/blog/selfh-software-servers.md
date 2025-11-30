@@ -1,6 +1,6 @@
 ---
 title: "[PaaS Recap] Software for Servers..."
-date: 2025-12-01T01:20:21+01:00
+date: 2025-12-07T01:20:21+01:00
 draft: false
 tags: ["HomeLab","LocalStack vs DokPloy","Cosmos Server"]
 description: 'Selfhosted Apps that simplify my workflow. Get your MiniPC/NAS homelab ready quickly.'
@@ -21,7 +21,7 @@ So you've been around even [when ATI](https://jalcocert.github.io/JAlcocerT/fire
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/hardware/ati-hd5670.png" subtitle="Docker Configs for your server" >}}
 {{< /cards >}}
 
-You were using Linux when nobody was.
+You were using [Linux OS's](https://jalcocert.github.io/JAlcocerT/os-for-nas/) when nobody was.
 
 And now apple ecosystem is so confortable that makes anything else scary?
 
@@ -47,16 +47,20 @@ UmbrelOS, Cosmos Server, Coolify or Dokploy....
 
 ![Dokploy PaaS deploying Streamlit Multichat Repository](/blog_img/selfh/PaaS/dokploy-monitoring-multichat.png)
 
+This feels like time for a PaaS recap.
 
-This feels like time for a recap.
+Or a PaaS 101 if you dont know what im talking about.
 
-And if you are new to HomeLabs and/or Linux. 
+If you are also new to HomeLabs and/or Linux. 
 
 These are some reasons for you to stay:
 
 <!-- ![jellyfin](/img/SelfHosting/Jellyfin/jellyfin-rockchip-mpp-hwa-codecs.png#center) -->
+<!-- ![Jellyfin HWA Codecs](/blog_img/selfh/Jellyfin/jellyfin-rockchip-mpp.png) -->
 
-![Jellyfin HWA Codecs](/blog_img/selfh/Jellyfin/jellyfin-rockchip-mpp.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/media-server-with-open-source/" title="Media Server with Jellyfin" image="/blog_img/selfh/Jellyfin/jellyfin-rockchip-mpp.png" subtitle="Media Tools for your HomeLab" >}}
+{{< /cards >}}
 
 You can even run a Jellyfin Media server with a Opi SBC!
 
@@ -98,7 +102,6 @@ It provides an **emulated environment of AWS services**, solving issues related 
 <!-- https://www.youtube.com/watch?v=ZpMXW_beUuA -->
 
 {{< youtube "ZpMXW_beUuA" >}}
-
 
 - **Purpose**: LocalStack emulates AWS API functionality.
 - **Problem Solved**: Allows local testing without involving AWS services directly.
@@ -150,13 +153,21 @@ Coolify is php vs Dokplot that is NextJS.
 
 #### Dokploy on a VPS
 
-
 I wrote about Dokploy [here](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#dokploy)
 
 Among which, [Dokploy](#dokploy) resonated a lot with me.
 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/where-to-deploy/" title="Where to Deploy" image="/blog_img/selfh/hetzner-sharedcpu.png" subtitle="A VPS Recap on Hetzner, DO to ship PoCs and more" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/benchmarking-computers/" title="About Benchmarking POST" image="/blog_img/hardware/ram-test.png" subtitle="CPU vs RAM vs Disk vs Internet" >}}
+{{< /cards >}}
+
+
 #### Setting up Coolify on a Pi
+
+![Raspberry Pi homeserver and temperature](/blog_img/hardware/pi-homeserver.jpg)
+
 
 ### OSS OS inside containers
 
@@ -173,7 +184,7 @@ UmbrelOS
 > Escape the cloud
 
 
-
+![Cosmos Server UI - App Market Place](/blog_img/selfh/PaaS/cosmos-ui-market.png)
 
 
 #### UmbrelOS

@@ -98,7 +98,6 @@ And for this one, I will be using a Hetzner VPS
 
 2. See your projects and select OS + Hardware - https://console.hetzner.cloud/projects
 
-
 ![Hetzner VPS - CX22 Features](/blog_img/selfh/hetzner-sharedcpu.png)
 
 3. Create SSH keys and give the public key to Hetzner

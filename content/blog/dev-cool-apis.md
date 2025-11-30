@@ -535,6 +535,8 @@ If the [formula 1 data](#formula-1) was not enough:
 
 >  MIT | A collaborative list of public APIs for developers - https://publicapis.dev/
 
+3. If you have a digital company in EE, also: https://apidocs.inforegister.ee/en
+
 
 ## Checking APIs
 

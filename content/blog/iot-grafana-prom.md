@@ -1,6 +1,6 @@
 ---
 title: "Grafana Monitoring: Prometheus"
-date: 2025-12-05
+date: 2025-12-09
 draft: ["Homelab","Docker","Self-Hosting","Iotawatt"]
 description: 'Grafana works for IoT Same as for monitoring'
 url: 'selfhosting-grafana'

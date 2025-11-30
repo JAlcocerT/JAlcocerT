@@ -6,15 +6,6 @@ next: docs/
 draft: false
 ---
 
-<!-- ---
-title: "Just be Serverless"
-date: 2025-12-01T07:20:21+01:00
-draft: false
-tags: ["SaaS","Firebase Auth","Logto JS SDK","ChatGPT Clone","T3.Chat","Publii CMS","Cloudflare Workers"]
-url: 'serverless-101'
-description: 'Your WebApps, with Serverless Authentication and AI on the backend.'
---- -->
-
 
 **Tl;DR**
 
@@ -28,6 +19,8 @@ But before that, understand: serverless it does not mean that there is not a ser
 
 
 **Intro**
+
+Your WebApps, with Serverless Authentication and AI on the backend
 
 Just recently, I wrote about [Firebase Auth](/JAlcocerT/firebase-auth-101) and the [LogTo JS SDK](https://jalcocert.github.io/JAlcocerT/social-signin-101/#4-logto-).
 

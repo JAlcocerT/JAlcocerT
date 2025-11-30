@@ -41,11 +41,11 @@ I will just assume that:
 
 VPS, just a computer somewhere else in the world.
 
-I started using GCP free tier to get started with cloud.
+I started using GCP free tier to get started [with Linux+cloud](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud).
 
 > Later, I got dissapointed with Oracle Cloud.
 
-And after testing some SBCs and MiniPCs at home...
+And after testing some SBCs and MiniPCs at home, plus [few OSs](https://jalcocert.github.io/JAlcocerT/os-for-nas/):
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
@@ -59,6 +59,15 @@ Any of these can help you serve your Apps to people, unless you want to do so fr
 1. [Digital Ocean](#do)
 2. [Hetzner](#hetzner)
 3. [Linode](#linode)
+
+<!-- 
+https://youtu.be/F-9KWQByeU0 
+-->
+
+{{< youtube "F-9KWQByeU0" >}}
+
+
+Below Ill leave some updates tricks to take into consideration when spinning up a VPS.
 
 If you need big GPU power, isntead of just CPU, you can always try https://www.runpod.io/gpu-instance/pricing and similar services.
 

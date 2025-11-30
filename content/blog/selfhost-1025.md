@@ -36,7 +36,6 @@ https://www.youtube.com/watch?v=PaPotS8GSpc
 
 {{< youtube "PaPotS8GSpc" >}}
 
-
 So lets make sure that we take care of our files.
 
 And I saw few projects lately to see files, like we saw [here](https://jalcocert.github.io/JAlcocerT/events-photo-galleries/):
@@ -53,11 +52,9 @@ And I saw few projects lately to see files, like we saw [here](https://jalcocert
 
 >  Sync-in Server · Secure, open-source platform for file storage, sharing, collaboration, and syncing. 
 
-
 3. Nextcloud or Immich: 
 
 Just in case that you got that interesting Standard Google offer 200 GB for ~40$/year or your [Google AI Pro with 2TB trial](https://support.google.com/pixelphone/answer/13529884?hl=en#zippy=%2Cpixel-pro-pixel-pro-xl-pixel-pro-fold) has just ended...
-
 
 ```sh
 docker exec -it <your-nextcloud-container-name> rm /var/www/html/config/config.php
@@ -116,7 +113,11 @@ flatpak install flathub org.localsend.localsend_app
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pairdrop" title="PairDrop | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-> PairDrop: Transfer Files Cross-Platform. No Setup, No Signup. 
+![Pairdrop UI](/blog_img/selfh/media/pairdrop-ui.png)
+
+> PairDrop: Transfer Files Cross-Platform. **No Setup, No Signup**. 
+
+> > Another open PWA to do similar job via WebRTC and WS was [Snapdrop](https://github.com/SnapDrop/snapdrop)
 
 6. Would SCP or FTP be faster instead?
 

@@ -11,7 +11,7 @@ url: 'emails-101'
 
 SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better.
 
-
+This post is a email 101 for me.
 
 **Intro**
 
@@ -55,6 +55,7 @@ Before we get started, you might keep this close to you:
 
 * https://temp-mail.org/
 * https://mxroute.com/
+* https://ethereal.email/
 * See the web/app `millionverifier` to... verify/validate emails. Like [Knockmail](#knockmail) tries.
 
 Same as [auth is hard](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#conclusions), until [its not](https://jalcocert.github.io/JAlcocerT/social-signin-101/).
@@ -675,7 +676,7 @@ Its API and SMTP interfaces provide flexibility but might present a learning cur
 
 ## Conclusions
 
-All these SMTP setups will help you with your social media, if you are into it.
+All these **SMTP setups** will help you with your social media, if you are a marketer into it.
 
 Hopefully you are aware now of the differences between: regular mails vs transactional emails vs marketing emails.
 
@@ -698,6 +699,14 @@ See the Python Listmonk scrips: `http://localhost:9077/admin/campaigns/templates
 ![alt text](/blog_img/selfh/marketing/listonk-campaign-html.png)
 
 You are free to also plug n8n, or feed ListMonk from leads from waiting lists or sales pipelines.
+
+### Django and Gmail
+
+How could I forget that is also possible to make gmail as SMTP for your apps.
+
+I havent tried it yet for now, but there is a great tutorial: https://codingforentrepreneurs.com/blog/sending-email-in-django-from-gmail
+
+And associated video on yt from cfe.
 
 ### Email for Marketing
 

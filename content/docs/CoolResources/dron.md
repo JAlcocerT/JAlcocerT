@@ -20,3 +20,7 @@ With drons we kind of combine it all: electronics, programming, physics and...fu
   * https://github.com/jyjblrd/Low-Cost-Mocap?tab=MIT-1-ov-file#readme
 
 > Low cost motion capture system for room scale tracking
+
+To tinker with Computer Vision, you could also use a Pi:
+
+![Pi4 and its camera](/blog_img/hardware/RPi4_2gb_cam.jpg)

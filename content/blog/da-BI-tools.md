@@ -834,5 +834,3 @@ Similar projects to Latitude include:
 
 - **Superset**: An open-source data visualization tool that allows users to create and share dashboards.
 - **Metabase**: Another open-source analytics platform that focuses on simple setup and user-friendly dashboards.
-
-{{< /details >}}

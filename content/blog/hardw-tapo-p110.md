@@ -174,7 +174,7 @@ You will need HACS Installed.
     * go to HACS -> Integrations -> 3 dots -> Custom Repositories
     * Then Add repository URL + Select Integration (Ollama conversation)
 
-![Desktop View](/img/ha-ollama-config.png){: width="772" height="489" }
+![Desktop View TBC WIP](/img/ha-ollama-config.png){: width="772" height="489" }
 
 Connect to the server where [Ollama is running](https://fossengineer.com/selfhosting-llms-ollama/).
 

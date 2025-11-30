@@ -314,8 +314,17 @@ git clone https://github.com/JAlcocerT/real-estate-nuxt-moi.git
 #make dev
 ```
 
+Which will also bring via the admin panel when we input a hardcoded password from the `.env`
 
+![alt text](/blog_img/dev/nuxt-realestate/admin-panel-properties.png)
 
+The funny thing is that...after a while thinking:
+
+1. The go to properties and associated WYSIWYG editor was not in place
+2. The site configuration via JSON was also not in place
+3. The site look and feel was decent though
+
+So...for further iterations, id just keep it with NextJS.
 
 ### Validate the Website
 

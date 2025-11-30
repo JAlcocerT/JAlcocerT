@@ -1,35 +1,11 @@
 ---
 title: "Streamr - The P2P Pub/Sub Network for IoT"
-date: 2025-11-30T09:20:21+01:00
+date: 2025-12-03T09:20:21+01:00
 draft: false
 tags: ["Web3","IoT","MQTT","Acurast","Shodan"]
 description: 'Are decentralized data networks even possible?'
 url: 'streamr-network'
 ---
-
-https://docs.streamr.network/streamr-network/smart-contracts
-
-
-https://docs.streamr.network/guides/become-an-operator/
-
-Streamr Network's primary use cases focus on decentralized real-time data streaming for Web3, IoT, and AI applications, replacing centralized brokers with P2P efficiency.[1][2]
-
-**Key Use Cases**
-
-- **IoT Data Streaming**: Connect sensors/devices for live telemetry (e.g., weather stations, smart cities) with end-to-end encryption and direct monetization via DATA tokens.[3]
-- **AI/ML Pipelines**: Feed real-time data to decentralized AI models or agents for inference/training, enabling DePIN (Decentralized Physical Infrastructure Networks).[4][1]
-- **Live Media/CDNs**: Broadcast events, video streams, or social feeds censorship-resistant, with low-latency global distribution.[2]
-- **DeFi & Web3 Apps**: Real-time oracle data for trading bots, NFT drops, or gaming (e.g., live leaderboards).[3]
-- **Data Marketplaces**: Producers sell streams directly to consumers (e.g., air quality data, stock feeds) with automated micropayments.[5]
-
-Ideal for high-throughput, trustless scenarios avoiding AWS Kinesis/MQTT centralization; scales to millions of events/second via operator nodes.[1][4]
-
-[1](https://streamr.network)
-[2](https://coinmarketcap.com/academy/article/a-deep-dive-into-streamr)
-[3](https://beincrypto.com/streamr-decentralised-network-data-sharing/)
-[4](https://streamr.network/network)
-[5](https://www.gate.com/learn/articles/what-is-streamr-all-you-need-to-know-about-data/2997)
-
 
 
 **Tl;DR**
@@ -75,13 +51,17 @@ Streamr Network is a decentralized, open-source peer-to-peer platform for real-t
 - **Blockchain Integration**: Works with Ethereum, Polygon, and Gnosis for identity, payments via DATA token, governance, and node incentives (staking rewards for operators).[4][1]
 - **Security & Monetization**: End-to-end encryption, cryptographic signing for data provenance, and direct data sales where producers earn DATA tokens automatically.[3][5]
 
+* https://docs.streamr.network/streamr-network/smart-contracts
+* https://docs.streamr.network/guides/become-an-operator/
+
+Streamr Network's primary use cases focus on decentralized real-time data streaming for Web3, IoT, and AI applications, replacing centralized brokers with P2P efficiency.
+
 ### Use Cases
 
 - Real-time data pipelines for DePIN, AI models, live CDNs, or IoT.
-- Avoids vendor lock-in of centralized brokers like AWS Kinesis.[1][3]
+- Avoids vendor lock-in of centralized brokers like AWS Kinesis.
 
 Anyone can run a node on standard hardware to relay data and earn rewards.
-
 
 To use the Streamr Network, you need:
 
@@ -94,7 +74,24 @@ To use the Streamr Network, you need:
 - Real-time event broadcasting for Web3 applications and Decentralized Physical Infrastructure Networks (DePIN).
 - Stream monetization by data producers selling data directly to consumers over a trustless network.
 - Replacing centralized pub-sub brokers (like AWS Kinesis) with a censorship-resistant, peer-to-peer alternative.[3][1][2]
-Yes, several published applications and projects actively use Streamr Network for real-time decentralized data streaming.[1][2]
+
+Yes, several published applications and projects actively use Streamr Network for real-time decentralized data streaming.
+
+**Key Use Cases**
+
+- **IoT Data Streaming**: Connect sensors/devices for live telemetry (e.g., weather stations, smart cities) with end-to-end encryption and direct monetization via DATA tokens.[3]
+- **AI/ML Pipelines**: Feed real-time data to decentralized AI models or agents for inference/training, enabling DePIN (Decentralized Physical Infrastructure Networks).[4][1]
+- **Live Media/CDNs**: Broadcast events, video streams, or social feeds censorship-resistant, with low-latency global distribution.[2]
+- **DeFi & Web3 Apps**: Real-time oracle data for trading bots, NFT drops, or gaming (e.g., live leaderboards).[3]
+- **Data Marketplaces**: Producers sell streams directly to consumers (e.g., air quality data, stock feeds) with automated micropayments.[5]
+
+Ideal for high-throughput, trustless scenarios avoiding AWS Kinesis/MQTT centralization; scales to millions of events/second via operator nodes.[1][4]
+
+[1](https://streamr.network)
+[2](https://coinmarketcap.com/academy/article/a-deep-dive-into-streamr)
+[3](https://beincrypto.com/streamr-decentralised-network-data-sharing/)
+[4](https://streamr.network/network)
+[5](https://www.gate.com/learn/articles/what-is-streamr-all-you-need-to-know-about-data/2997)
 
 ### Notable Examples
 
@@ -201,7 +198,7 @@ I didnt see any OSS project for it, so...im quite skeptical.
 
 Recently I tested a BTC node via UmbrelOS, which was a cool data experiment.
 
-https://hub.docker.com/r/streamr/node
+Using their container image at dockerhub: https://hub.docker.com/r/streamr/node
 
 ```sh
 docker run -d --restart always -p 32200:32200 -v ~/.streamrDocker:/home/streamr/.streamr --name streamr streamr/node
@@ -209,7 +206,9 @@ docker run -d --restart always -p 32200:32200 -v ~/.streamrDocker:/home/streamr/
 
 Yes, the Streamr Network provides official Docker container images for running Streamr nodes. You can find these images on Docker Hub under the "streamr" profile, such as the `streamr/node` and `streamr/broker-node` images which are regularly updated.[1][2][3]
 
-Using the Docker image simplifies setup by allowing you to pull and run the node container quickly on any system with Docker installed. You can also persist configuration and wallet data by mounting a local folder into the container. This setup is recommended for running a node to participate in the network and earn DATA tokens.[3][6]
+Using the Docker image simplifies setup by allowing you to pull and run the node container quickly on any system with Docker installed. You can also persist configuration and wallet data by mounting a local folder into the container.
+
+This setup is recommended for running a node to participate in the network and earn DATA tokens.[3][6]
 
 Example Docker command to run the streamr node:
 
@@ -250,14 +249,19 @@ In return for providing these essential network services, operators earn rewards
 
 [Web3](https://jalcocert.github.io/JAlcocerT/guide-web3/) is not the dark web.
 
-But in theory, you can also publish your website there as well
+But in theory, you could also publish your website there:
 
 <!-- https://www.youtube.com/watch?v=CurcakgurRE -->
 
-> Put your website on the Dark Web
+<!-- > Put your website on the Dark Web -->
 
 {{< youtube "CurcakgurRE" >}}
 
+I would still keep my regular static deployments to the web:
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method" title="Web Deployment methods | Docs ↗" >}}
+{{< /cards >}}
 
 ### Shodan
 
