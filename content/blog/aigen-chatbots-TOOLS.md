@@ -6,26 +6,12 @@ draft: false
 #     image: "https://socialify.git.ci/langflow-ai/langflow/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"    
 #     alt: "Using LangFlow to create ChatBots" # alt text
 #     caption: "AI ChatBots 101" # display caption under cover
-tags: ["Gen-AI","OSS for Business","Monitoring Tools","FlowiseAI","ChatWoot"]
+tags: ["Gen-AI","OSS for Business","Monitoring Tools","FlowiseAI vs ChatWoot"]
 description: 'LangFlow. AI chatbots with open source. A look to Typebot, BotPress...'
 url: 'free-open-source-chat-bots'
 ---
 
-<!-- 
-Alternatives to https://www.livechat.com/pricing/ ING uses it
- -->
-
- <!-- 
-`IODOCTOR` -->
-<!-- 
-Use cases
-🧱 Introduction
-🤖 Chatbots
-❓ Question Answering
-🔍 Semantic Search
-
-OPEN AI EmbEddings - https://www.youtube.com/watch?v=ySus5ZS0b94
- -->
+**Intro**
 
 Recently I have been exploring PandasAI to learn **how to create RAGs** over local data.
 
@@ -365,22 +351,99 @@ time make docker
 * Now you can have your Website Live chat - https://www.chatwoot.com/hc/user-guide/articles/1677580558-website-live-chat-settings-explained
   * https://www.chatwoot.com/hc/user-guide/articles/1677580558-website-live-chat-settings-explained#business-hours-tab
   * You will get a custom **JS script to embed in your website**
+<!-- 
+![ChatWoot](/img/SelfHosting/ChatBots/chatwoot_livechat.png#center) 
+-->
 
-![ChatWoot](/img/SelfHosting/ChatBots/chatwoot_livechat.png#center)
+![Chatwoot UI](/blog_img/entrepre/chatwoot_livechat.png)
 
-* You can also use it with Telegram:
+{{< details title="Setup Chatwoot with Docker 📌" closed="true" >}}
+
+* https://www.chatwoot.com/docs/self-hosted/deployment/docker
+* https://github.com/chatwoot/chatwoot
+
+
+```sh
+# Download the env file template
+wget -O .env https://raw.githubusercontent.com/chatwoot/chatwoot/develop/.env.example
+# Download the Docker compose template
+wget -O docker-compose.yaml https://raw.githubusercontent.com/chatwoot/chatwoot/develop/docker-compose.production.yaml
+```
+
+```yml
+version: '3'
+
+services:
+  base: &base
+    image: chatwoot/chatwoot:latest
+    env_file: .env ## Change this file for customized env variables
+    volumes:
+      - /data/storage:/app/storage
+
+  rails:
+    <<: *base
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - '127.0.0.1:3000:3000'
+    environment:
+      - NODE_ENV=production
+      - RAILS_ENV=production
+      - INSTALLATION_ENV=docker
+    entrypoint: docker/entrypoints/rails.sh
+    command: ['bundle', 'exec', 'rails', 's', '-p', '3000', '-b', '0.0.0.0']
+
+  sidekiq:
+    <<: *base
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - NODE_ENV=production
+      - RAILS_ENV=production
+      - INSTALLATION_ENV=docker
+    command: ['bundle', 'exec', 'sidekiq', '-C', 'config/sidekiq.yml']
+
+  postgres:
+    image: postgres:12
+    restart: always
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - /data/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=chatwoot
+      - POSTGRES_USER=postgres
+      # Please provide your own password.
+      - POSTGRES_PASSWORD=
+
+  redis:
+    image: redis:alpine
+    restart: always
+    command: ["sh", "-c", "redis-server --requirepass \"$REDIS_PASSWORD\""]
+    env_file: .env
+    volumes:
+      - /data/redis:/data
+    ports:
+      - '127.0.0.1:6379:6379'
+
+```
+
+{{< /details >}}
+
+
+* You can also use **Chatwoot with Telegram**:
 
 ```sh
 /newbot #you will name it
 ```
 
-and will get something like: random_number:random_string
+and will get something like: `random_number:random_string`
 
-* And there is Android App as well: https://play.google.com/store/apps/details?id=com.chatwoot.app&hl=es_419
+There is an Android App as well for Chatwoot: https://play.google.com/store/apps/details?id=com.chatwoot.app&hl=es_419
 
 ### FlowiseAI
-
-
 
 [FlowiseAI](/selfhosting-flowise-ai) Project Details - which it is Apache v2 Licensed ✅
 

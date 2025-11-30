@@ -2,12 +2,14 @@
 title: "Whats the right Messaging Protocol for me?"
 date: 2025-08-17T09:20:21+01:00
 draft: false
-tags: ["D&A","HomeLab","PicoW MQTT and a DHT22 Sensor","AMQ","BunkerM","Thonny"]
+tags: ["D&A","HomeLab","PicoW MQTT and a DHT22 Sensor","AMQ","BunkerM","Thonny","Pub/Sub"]
 description: 'MQTT vs RMQ vs Kafka. Messaging Tools for IoT Projects.'
 url: 'messaging-protocols'
 ---
 
-**TL;DR** Recap on messaging tools + using the [PicoW x MQTT x DHT22](#mqtt-x-picow-x-dht22)
+**TL;DR** 
+
+Recap on messaging tools + using the [PicoW x MQTT x DHT22](#mqtt-x-picow-x-dht22)
 
 Some of these are typical on [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), like [Kafka](#apache-kafka)
 
@@ -18,7 +20,6 @@ Others, on Healthcare, like [RMQ](#rabbitmq)
 You might have been playing around with your Pi, even tinkering with a [Pi+MQTT](https://jalcocert.github.io/RPi/posts/rpi-mqtt/)
 
 > Motivated by https://github.com/jiteshsaini/mqtt-demo
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/rpi-gps-superset/#apache-superset-setup" title="Superset Setup" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="IoT Pi Project with Superset" >}}
@@ -33,17 +34,11 @@ Or with your **PicoW**, like I was doing recently:
 
 Or maybe you are an [architect withing D&A](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/) and need some clarity on messaging protocols.
 
-As seen here:
+**What we will understand with this post**
 
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/#flask-and-websockets" title="Flask and WebSockets" >}}
-{{< /cards >}}
-
-
-
-1. MQTT
-2. Kafka
-3. RabitMQ
+1. [MQTT](#mqtt)
+2. [Kafka](#kafka)
+3. [RabitMQ](#rabbitmq)
 
 > See https://www.geeksforgeeks.org/kafka-vs-rabbitmq/
 
@@ -55,14 +50,19 @@ As seen here:
 | Use Cases             | Real-time apps (chat, gaming)     | IoT, telemetry, low-bandwidth apps  | Microservices, task queues         |
 | Latency               | Low latency                        | Generally low latency               | Higher latency due to routing      |
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Flask and Real Time Data" image="/blog_img/iot/flask/flask-x300-cpu.png" subtitle="Flask WebApp + WebSockets Real Time Temperature Connection working with the x300" >}}
+{{< /cards >}}
 
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-mqtt/" title="I was learning MQTT with a RPI here" icon="user" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-mqtt/" title="I was learning MQTT with a raspberry first" icon="user" >}}
 {{< /cards >}}
+
+And was recently writing about microcontrollers and collecting useful scripts for MQTT setups:
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/" title="MQTT with ESP32 and a Pico W" >}}
-  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MQTT" title="MQTT Source Files" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MQTT" title="MQTT Source Code Files for Home Projects" >}}
 {{< /cards >}}
 
 * WebSockets are best for real-time communication where low latency is crucial.
@@ -74,9 +74,9 @@ As seen here:
 
 **MQTT** (Message Queuing Telemetry Transport) is a lightweight, open-source messaging protocol designed for efficient communication in situations where network bandwidth and power are limited. 
 
-MQTT is a lightweight, publish-subscribe messaging protocol designed for constrained devices and low-bandwidth, high-latency or unreliable networks.
+MQTT is a lightweight, **publish-subscribe** messaging protocol designed for constrained devices and low-bandwidth, high-latency or unreliable networks.
 
-It provides a flexible and efficient mechanism for asynchronous, real-time communication between clients and servers.
+It provides a flexible and efficient mechanism for **asynchronous, real-time communication** between clients and servers.
 
 MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted reliably and efficiently.
 
@@ -85,36 +85,45 @@ MQTT is commonly used in IoT (Internet of Things) applications, telemetry system
 {{< details title="Rest API vs WS vs MQTT...? 📌" closed="true" >}}
 
 
-1. RESTful APIs are widely used for communication between clients and servers over HTTP.
+1. **RESTful APIs** are widely used for communication between clients and servers over **HTTP**.
+
 They are well-suited for request-response interactions and are easy to understand and implement.
+
 However, they may not be the best choice for real-time communication as they are based on the request-response model, which can introduce latency and overhead for real-time updates.
+
 REST APIs are suitable for scenarios where real-time updates are not critical or where the **frequency of updates is low**.
 
-2. WebSockets provide full-duplex communication channels over a single TCP connection, enabling real-time, bidirectional communication between clients and servers.
+2. **WebSockets** provide full-duplex communication channels over a single TCP connection, enabling **real-time, bidirectional communication** between clients and servers.
+
 They offer **low-latency**, high-performance communication and are well-suited for applications requiring real-time updates, such as chat applications, live dashboards, and multiplayer games.
+
 WebSockets can be more complex to implement compared to REST APIs, but they offer significant benefits for **real-time applications**, like live sensor temperature!
 
-3. MQTT (Message Queuing Telemetry Transport) is a lightweight, publish-subscribe messaging protocol designed for constrained devices and low-bandwidth, high-latency or unreliable networks.
-It provides a flexible and efficient mechanism for asynchronous, real-time communication between clients and servers.
+
+3. **MQTT (Message Queuing Telemetry Transport)** is a lightweight, **publish-subscribe messaging protocol** designed for constrained devices and low-bandwidth, high-latency or unreliable networks.
+
+It provides a flexible and efficient mechanism for **asynchronous, real-time communication** between clients and servers.
+
 MQTT is commonly used in IoT (Internet of Things) applications, telemetry systems, and messaging applications where real-time data streams need to be transmitted reliably and efficiently.
 
 {{< /details >}}
 
-> While MQTT can be used for real-time communication in various scenarios, it may not be as widely supported or as easy to integrate as REST APIs or WebSockets in certain contexts.
-
+MQTT works on a **publish-subscribe** model, where devices can **publish** messages to a **topic** and **subscribe** to topics to receive messages. 
 
 It's primarily used in IoT (Internet of Things) systems, where devices communicate over unreliable or low-bandwidth networks.
 
-MQTT works on a **publish-subscribe** model, where devices can **publish** messages to a **topic** and **subscribe** to topics to receive messages. 
-
 This decouples the sender from the receiver, making it ideal for scenarios where multiple devices need to communicate without needing direct knowledge of each other.
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-mqtt/" title="Use MQTT with a Pi" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/#flask-and-websockets" title="Or WebSockets with Flask" >}}
+{{< /cards >}}
 
-> You can use MQTT with a Pi: https://jalcocert.github.io/RPi/posts/rpi-mqtt/
 
 {{% details title="More about - MQTT 🌍" closed="true" %}}
 
 The key benefits of MQTT include:
+
 - **Low bandwidth usage**: It sends small payloads over the network, minimizing the amount of data transmitted.
 - **Reliability**: MQTT offers three levels of Quality of Service (QoS) for message delivery to suit different reliability needs.
 - **Asynchronous communication**: Devices can operate asynchronously, sending or receiving messages without waiting for responses, which reduces latency.
@@ -140,16 +149,13 @@ Lets say that you have [a car](https://jalcocert.github.io/JAlcocerT/buying-car-
 
 ### RabbitMQ
 
-* https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/
-
-**RabbitMQ** is an open-source message broker that facilitates communication between applications, services, or microservices in a distributed system.
+**RabbitMQ** is an open-source message broker that facilitates communication between applications, services, or **microservices** in a distributed system.
 
 It supports multiple messaging protocols, including **AMQP** (Advanced Message Queuing Protocol), which is the default protocol used by RabbitMQ for managing and routing messages.
 
 RabbitMQ operates on a **queue-based model**, where messages are placed in queues by producers and consumed by consumers.
 
-It ensures reliable delivery and helps decouple systems, allowing for asynchronous and scalable communication between different components.
-
+It ensures reliable delivery and helps decouple systems, allowing for **asynchronous** and scalable communication between different components.
 
 {{% details title="More about - RabbitMQ 🌍" closed="true" %}}
 
@@ -165,6 +171,13 @@ RabbitMQ is commonly used in systems that require guaranteed message delivery, s
 It can manage complex workflows, ensure data consistency, and improve system reliability.
 
 {{% /details %}}
+
+How popular is RMQ?
+
+Enough so that you find it on your D&A career.
+
+Also to have n8n integration: https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/
+
 
 {{< callout type="info" >}}
 **RabbitMQ Hint**: Use "exchanges" to efficiently route messages based on routing rules. For example, a "topic exchange" allows routing messages based on patterns, ideal for complex message filtering.
@@ -420,7 +433,9 @@ For simpler real-time updates and scenarios where some message loss is acceptabl
 
 ### Cloud for IoT
 
-1. <https://cloud.google.com/free>
+If you like to use cloud for your IoT projects, here are some options:
+
+1. Withing [GCP](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/), in theory part of the free tier, we have <https://cloud.google.com/free>
   
 See PUB/SUB <https://cloud.google.com/free/docs/free-cloud-features#pub-sub>
 

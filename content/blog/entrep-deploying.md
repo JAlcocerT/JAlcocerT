@@ -45,7 +45,14 @@ I started using GCP free tier to get started with cloud.
 
 > Later, I got dissapointed with Oracle Cloud.
 
-Then decided to try these VPS for fun and see how my linux skills got better.
+And after testing some SBCs and MiniPCs at home...
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
+{{< /cards >}}
+
+Then, decided to try these VPS for fun and see how my linux skills got better.
 
 Any of these can help you serve your Apps to people, unless you want to do so from your homelab!
 

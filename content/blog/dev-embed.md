@@ -207,14 +207,14 @@ If privacy, customizability, or avoiding subscription costs are priorities, Chat
 
 Chatwoot is primarily a **customer engagement** and communication platform, not a full-featured CRM (Customer Relationship Management) system. 
 
-
-{{< cards cols="2" >}}
-  {{< card link="https://fossengineer.com/selfhosting-chatwoot/" title="ChatWoot | Post ↗" >}}
-{{< /cards >}}
-
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Chats/Chatwoot" title="ChatWoot with Docker 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Chatwoot" title="ChatWoot HomeLab config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Chatwoot" title="ChatWoot HomeLab | Docker config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/free-open-source-chat-bots/#chatwoot" title="OSS Live Chat - Chatwoot" image="/blog_img/entrepre/chatwoot_livechat.png" subtitle="Tinkering with ChatWoot" >}}
 {{< /cards >}}
 
 
@@ -222,13 +222,11 @@ It **centralizes conversations from channels** like web chat, email, and social 
 
 You can say that its OSS [ZenDesk](https://www.zendesk.com/service/): *You ask something via email and the CS team will handle it*
 
-However, while Chatwoot includes some CRM-like capabilities—such as managing and viewing customer profiles, conversation history, and team collaboration—it does not offer the depth of sales pipeline management, deal tracking, or marketing automation found in specialized CRM software like Salesforce or HubSpot. 
+However, while Chatwoot includes **some CRM-like capabilities**—such as managing and viewing customer profiles, conversation history, and team collaboration—it does not offer the depth of sales pipeline management, deal tracking, or marketing automation found in specialized CRM software like Salesforce or HubSpot. 
 
 > Chatwoot can integrate with actual CRM systems to synchronize customer data for a more complete workflow.
 
 > > Like to Odoo or [GHL some marketers use](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#ghl)
-
-
 
 **Who is using chatwoot**?
 
@@ -237,6 +235,17 @@ However, while Chatwoot includes some CRM-like capabilities—such as managing a
 
 > This is a [Selfhosted](https://github.com/topics/self-hosted) & [OSS](https://docs.solidtime.io/self-hosting/intro) https://github.com/solidtime-io/solidtime with cool time tracking and invoicing features
 
+###$$ How to Embed ChatWoot into a Website
+
+If you already have your Wordpress / Ghost / SSG site ready, get the js script from your Chatwoot instance and include it in your website body.
+
+{{< dropdown title="Chatwoot + Astro 👈 " closed="true" >}}
+
+* <https://www.chatwoot.com/docs/product/channels/live-chat/create-website-channel>
+  * Then, copy the Configuration Messenger script (adapt the :3000 *or the one you chose* port, if needed)
+    * Find `base-layout.astro` - Include it before </body>
+
+{{< /dropdown >}}
 
 #### PaperCups
 
@@ -254,7 +263,16 @@ However, while Chatwoot includes some CRM-like capabilities—such as managing a
 
 Or just... https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble
 
-![alt text](/blog_img/web/astro-whatsapp-bouble.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docplanner-web-migration/" title="Embedded WA Bouble" image="/blog_img/web/astro-whatsapp-bouble.png" subtitle="Creating an Astro WA Bouble" >}}
+{{< /cards >}}
+
+WA, but also calcom bouble could be embeded:
+
+![Astro Theme + Boubles](/blog_img/web/astro/astro-wa-cal-bouble.png)
+
+{{< youtube id="qFMN0oDeCFg" autoplay="false" >}}
+
 
 ## Embedded Analytics
 
@@ -285,7 +303,11 @@ Here is why each point holds true:
 
 1. Core Functionality (No Forced API)
 
-**Graphic Walker is Client-Side and Data-Driven:** Graphic Walker (like many embeddable visualization tools) is a library that runs entirely on the user's browser (client-side). It takes a **dataset** as its primary input (typically a JSON array or CSV string passed as a prop). It doesn't inherently contain any logic that requires a dynamic API connection to function. If you give it static data, it will work statically.
+**Graphic Walker is Client-Side and Data-Driven:** Graphic Walker (like many embeddable visualization tools) is a library that runs entirely on the user's browser (client-side).
+
+It takes a **dataset** as its primary input (typically a JSON array or CSV string passed as a prop). It doesn't inherently contain any logic that requires a dynamic API connection to function.
+
+If you give it static data, it will work statically.
 
 2. Static Site Generation (Astro SSG)
 

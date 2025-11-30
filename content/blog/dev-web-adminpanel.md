@@ -71,7 +71,7 @@ This sounds great for **quick PoCs**: *let them be on Python Streamlit*
 *Or with NextJS*:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/" title="NextJS PoC Post" image="/blog_img/apps/nextjs/nextjs-toastui.png" subtitle="NextJS ToastUI Rendered Map with locations..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/" title="NextJS SliDev" image="/blog_img/DA/ppt/slidev-editor.png" subtitle="Tinkering with NextJS ToastUI and SliDev ppts..." >}}
 {{< /cards >}}
 
 
@@ -87,6 +87,10 @@ npx create-manifest@latest  --windsurf
 
 Via Flask, you can make a [quick CMS for SSGs webapp](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/) to allow users to edit specific fields of lets say, your Astro Themes...
 
+But after all that work to put a custom setup, your clients might come back with questions like `I dont understand what the upload image button is supossed to do`:
+
+
+https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#flaskcms-x-quick-auth
 
 ![Uploading real estate photos via Flask](/blog_img/web/moi-realestate/flask-cms-simpe-login.png)
 

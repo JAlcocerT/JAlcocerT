@@ -7,6 +7,9 @@ description: 'From DocPlanner to owning a responsive Website with Astro. The jor
 url: 'docplanner-web-migration'
 ---
 
+
+**Intro**
+
 Recently, I was talking with a friend and we found out about:
 
 Competitors / The initial site:
@@ -178,7 +181,9 @@ Other THemes for Doctors:
 2. https://github.com/mhyfritz/astro-landing-page
 3. https://github.com/withastro/astro/tree/main/examples/portfolio
 
-**The final result**: Withastro/astro the example portfolio theme was the selected one for this case!
+**The final result**:
+
+Withastro/astro the example portfolio theme was the selected one for this case!
 
 ```sh
 npm create astro@latest -- --template portfolio

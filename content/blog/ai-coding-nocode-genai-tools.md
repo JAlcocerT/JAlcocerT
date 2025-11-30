@@ -2,8 +2,8 @@
 title: "No Code Tools to use Gen AI"
 date: 2025-04-19T23:20:21+01:00
 draft: false
-tags: ["Gen-AI","Python","Dev","ChatBots","Telegram Bots","N8N Workflows"]
-description: 'Generative AI made simple with Low Code. Chatwoot, Flowise, n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
+tags: ["Gen-AI","ChatBots","Telegram Bots","N8N Workflows","Chatwoot vs Flowise"]
+description: 'Generative AI made simple with Low Code. n8n, LangFlow, Tg...embedded AI Powered Chat bots!'
 url: 'no-code-ai-tools'
 ---
 
@@ -36,7 +36,7 @@ The AI tech side might be perceived as chaotic...but you can keep it close to [a
 
 ### Flowise AI
 
-Flowise provides modular building blocks for you to build any agentic systems, from simple compositional workflows to autonomous agents
+Flowise provides modular building blocks for you to **build any agentic systems**, from simple compositional workflows to autonomous agents
 
 > Build AI Agents, Visually
 
@@ -170,8 +170,6 @@ Once you create a local account, access the UI:
 
 ![LangFuse UI](/blog_img/GenAI/langfuse-webui.png)
 
-
-
 ### Rivet AI
 
 * https://github.com/Ironclad/rivet
@@ -230,20 +228,19 @@ You could do something similar, but inside your web, with:
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8n Docker Config" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config  🐋 ↗" >}}
 {{< /cards >}} 
 
-
-
 #### ChatWoot
 
 1. [Chatwoot](https://fossengineer.com/selfhosting-chatwoot/)
 
-{{< youtube "1Q_MDOWaljk" >}}
 
-{{< callout type="info" >}}
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/free-open-source-chat-bots/#chatwoot" title="OSS Live Chat - Chatwoot" image="/blog_img/entrepre/chatwoot_livechat.png" subtitle="Tinkering with ChatWoot" >}}
+{{< /cards >}}
+
 You can selfhost Chatwoot!
-{{< /callout >}}
-
 
 {{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com/selfhosting-chatwoot/" title="ChatWoot | Post ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chatwoot" title="ChatWoot | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 

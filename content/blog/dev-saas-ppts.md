@@ -3,7 +3,7 @@ title: "[Micro SaaS] AI Driven PPTs"
 date: 2025-10-15T01:20:21+01:00
 draft: false
 tags: ["BiP","Agents","Codex CLI","NextJS SliDev-Editor","Tech Talk","Theme Seriph","Vue"]
-description: 'BiP a presentation generator for BAs.'
+description: 'BiP a presentation generator for BAs. With both Firebase Auth and Logto working.'
 url: 'ai-driven-presentations'
 ---
 
@@ -95,19 +95,29 @@ Can a CLi agent, like Codex, Gemini CLI or Claude Code help to create the skelet
 ## Conclusions
 
 
+https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/#ppts
+
 After [this post](https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-to-create-an-slidev-editor) where I started the SliDev Editor with NextJS just to learn how to implement [proper social auth with firebase our email verified via logto](https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-to-create-an-slidev-editor): 
 
 ![SliDevJS editor with NextJS and Logto/firebase working for auth](/blog_img/DA/ppt/slidev-editor.png)
 
+NextJS combined with Logto worked perfectly: *there is a logto branch in the repo for this, separated from the firebase one*.
+
 ![alt text](/blog_img/DA/ppt/slidev-logto.png)
+
+We get redirected to a custom subdomain for Logto Auth:
 
 ![alt text](/blog_img/DA/ppt/slidev-editor-signin-up.png)
 
+Once completed, we get access to the webapp, where can have a WYSIWYG markdown editor for the `slides.md`:
+
 ![NextJS Web App with Toast UI to edit SliDev markdown](/blog_img/DA/ppt/slidev-editor-nextjs-toastui.png)
 
-See how slidev pulls data from the weather API automatically:
+See how slidev pulls data from the weather API automatically: *this is the magic of SliDevJS working with APIs*.
 
 ![OpenMeteo API real time date pulled and working with SliDevJS](/blog_img/DA/ppt/slidev-open-meteo-component.png)
+
+And here we have the resulting SliDev PPT ready to be presented:
 
 ![alt text](/blog_img/DA/ppt/slidev-editor-viewer.png)
 

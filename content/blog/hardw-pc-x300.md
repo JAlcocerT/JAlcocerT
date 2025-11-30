@@ -269,8 +269,7 @@ Released on Jan 2021, with 7nm, its related GPU has 8 ROPs and 28 TMUs as per GP
 
 The [energy consumption](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/) is reasonable, at **~15w with Linux**, Windows goes ++66%:
 
-![alt text](/blog_img/hardware/energy/x300-linux-w11-energy.jpg)
-
+![Power consumption difference between Linux and Windows](/blog_img/hardware/energy/x300-linux-w11-energy.jpg)
 
 > Regarding the BIOS: it can support AMD Ryzen 5xxx APUS with the right version.
 

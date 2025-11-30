@@ -96,6 +96,7 @@ How to run [these tests/benchmarks](#faq)
 | Orange Pi 5 | ~3/5~W | 8W, 80°C | 5V 4A | **~$8** |
 | BMAX B4 | 9W | 18W & 64°C, fan | - | **~$14** |
 
+See what I captured with the [P110](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/):
 
 <!-- https://youtube.com/shorts/jRLMJlVYLRc?feature=share -->
 

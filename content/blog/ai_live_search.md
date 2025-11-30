@@ -81,6 +81,9 @@ What you need to have handy:
   {{< card link="https://github.com/JAlcocerT/local-deep-researcher" title="Local Deep Researcher Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Local Deep Researcher with langGraph - Source Code on Github" >}}
 {{< /cards >}}
 
+{{< youtube "1Q_MDOWaljk" >}}
+
+
 ### Local Deep Researcher
 
 Its all about the **magic of langgraph**.

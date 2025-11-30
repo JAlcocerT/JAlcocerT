@@ -28,14 +28,13 @@ Lately Iv been tinkering with custom (vibecoded) flask apps to interact with SSG
 * https://github.com/manuelernestog/astropod
     * Which I Forked https://github.com/JAlcocerT/astropod and talked about [here](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/)
 
-> MIT |  Free and open source self-hosting serverless podcast solution 
+> **MIT** | Free and open source self-hosting serverless podcast solution 
 
 {{< youtube "mDMGtMOx-Fk" >}}
 
 You are not forced to use [Astro and its components](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/) for your podcast.
 
 In fact there are OSS [podcasts Themes for Gatsby](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/#podcasts-in-gatsby)
-
 
 Even with [this kind](https://github.com/JAlcocerT/JAlcocerT/blob/main/layouts/shortcodes/audio.html) of HUGO shortcodes, you can bring audio to your posts.
 

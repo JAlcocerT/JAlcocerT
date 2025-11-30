@@ -7,21 +7,20 @@ description: What Ive learnt while using a ESP32 and a Raspberry Pi Pico W [Micr
 url: 'microcontrollers-setup-101'
 ---
 
-**TL;DR** Cool IoT Stuff that the ESP32 can do!
+**TL;DR**
 
+Cool IoT Stuff that the ESP32 can do!
 
-UpTime Kuma can also monitor MQTT
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-## Intro
+**Intro**
 
 Last year I bough a couple of **companions for my Raspberry Pi 4 2GB**:
 
 1. [ESP32](#the-esp32) - This post focuses mostly on ESP32 :)
 2. [Pi Pico W](#the-raspberry-pi-pico-w)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="Raspberry Pi and IoT 101" image="/blog_img/iot/pis-esp-mlx.jpg" subtitle="SBCs can do many other things!" >}}
+{{< /cards >}}
 
 And Recently, this new release got my attention:
 
@@ -57,7 +56,8 @@ They are great companions for SBC's like a RPi:
 
 
 <!-- I know this is supposed to be a RPi centered repo and web, but couldn't resist to add some small project that uses the ESP32. -->
-![alt text](../../static/blog_img/iot/pis-esp-mlx_proto.jpg)
+
+![alt text](/blog_img/iot/pis-esp-mlx_proto.jpg)
 
 {{< hextra/feature-grid >}}
  
@@ -409,7 +409,11 @@ https://github.com/neeraj95575/Temperature-sensor-connect-to-raspberry-pi-pico
 
 ## MQTT With MicroControllers
 
+UpTime Kuma can also monitor MQTT
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 {{% details title="Setup Eclipse Mosquitto and NodeRed 🚀" closed="true" %}}
 

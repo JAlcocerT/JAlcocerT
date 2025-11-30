@@ -23,7 +23,7 @@ This post is for you.
 
 How good is your PC?
 
-Do we really need something bigger, faster, newer?
+Do we really need something *bigger, faster, newer*?
 
 Lets see what we have:
 
@@ -100,14 +100,14 @@ Forget about 4k playback with the Pi 4's.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="Raspberry Pi and IoT 101" image="/blog_img/iot/pis-esp-mlx.jpg" subtitle="Single Board Computers can do many other things!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/media-server-with-open-source/#media-server-with-arm64" title="Raspberry Pi and IoT 101" image="/blog_img/selfh/Jellyfin/jellyfin-rockchip-mpp.png#center" subtitle="ARM64 x Jellyfin Media Server" >}}  
 {{< /cards >}}
 
-> Get a Pi if you want to do IoT Projects instead, they have great I/O for sensors.
+Get a Pi if you want to do IoT Projects instead, they have great I/O for sensors.
 
-But with x86 MiniPCs/old laptop you are good to go.
+With a x86 MiniPCs/old laptop you are good to go for video tasks.
 
-Also the Orange Pi 5 can handdle it (with proper configuration).
-
+Also, the [Orange Pi 5 and the RockChip](https://jalcocert.github.io/RPi/posts/pi-vs-orange/) can handdle Jellyfin video streaming (with proper configuration).
 
 ### Internet Benchmark
 
@@ -319,19 +319,27 @@ Due to the typical ~4W that consumes (together with the external SSD).
 
 The **x300** during ~idle, will do **~14w when using linux**, or...>25w when in windows 11:
 
-![alt text](/blog_img/hardware/energy/power-linux-w11-pi.jpg)
+![x300 idle linux vs w11 vs pi4](/blog_img/hardware/energy/power-linux-w11-pi.jpg)
 
 As per this [Tapo Smart Plug](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/)
 
 > Mr. Doors, pleaze...
 
+---
+
 ## Conclusions
+
+Now you have some more information to help you decide what to get.
+
+Balance between: space / consumption / power required...
+
+As of today, I'd say that 99% of the tasks we do with a PC could be done with one of those SFF PCs or with the x13.
+
+If you are spending >500$ into tech, ask yourself first what are you supposed to do with that first.
 
 {{< callout type="info" >}}
 To make the most out of your new homelab, check [the **SelfHosting docs**](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/)
 {{< /callout >}}
-
-
 
 {{< tabs items="x300,BMax B4" >}}
 

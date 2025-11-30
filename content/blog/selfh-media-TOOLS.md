@@ -203,7 +203,7 @@ cat /sys/kernel/debug/rkrga/load #see how the GPU is doing
 * Add full HWA pipeline for **Rockchip RK3588** platform allowing us to HW encoder (H264, HEVC) up to **1080p @ 480fps / 4k @ 120fps on RK3588**
 
 
-4K UHD, or Ultra High Definition, is a resolution standard in digital cinema and computing that offers significantly higher image definition than 1080p HD (High Definition). 
+**4K UHD, or Ultra High Definition**, is a resolution standard in digital cinema and computing that offers significantly higher image definition than 1080p HD (High Definition). 
 
 The term "4K" refers to the horizontal resolution, which is approximately ~4,000 pixels.
 

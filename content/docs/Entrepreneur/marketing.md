@@ -6,22 +6,7 @@ next: docs/
 draft: false
 ---
 
-https://docs.dittofeed.com/introduction
 
-https://github.com/dittofeed/dittofeed
-
-> MIT |  Open-source customer engagement. Automate transactional and marketing messages across email, SMS, mobile push, WhatsApp, Slack, and more 📨 
-
-Messaging Automation for All - Omni-channel marketing automation & transactional messaging. Embeddable, self-hostable, & infinitely flexible.
-
-https://docs.dittofeed.com/deployment/self-hosted/docker-compose
-
-Dittofeed: Free Open Source Automated Communication Platform
-
-
-<!-- https://www.youtube.com/watch?v=ycs53MFoW4E -->
-
-{{< youtube "ycs53MFoW4E" >}}
 
 
 ## Leads from PDFs
@@ -168,3 +153,42 @@ graph TD
 <!-- 
 ![Stripe Apps Connection](/blog_img/entrepre/stripe/stripe-apps.png) 
 -->
+
+## In Touch with Clients
+
+**Messaging Automation** for All - Omni-channel marketing automation & transactional messaging. Embeddable, self-hostable, & infinitely flexible.
+
+Dittofeed: Free Open Source Automated Communication Platform
+
+* https://github.com/dittofeed/dittofeed
+  * https://docs.dittofeed.com/introduction
+  
+> MIT |  Open-source customer engagement. Automate transactional and marketing messages across email, SMS, mobile push, WhatsApp, Slack, and more 📨 
+
+
+<!-- https://www.youtube.com/watch?v=ycs53MFoW4E -->
+
+{{< youtube "ycs53MFoW4E" >}}
+
+You can always [embed things](https://jalcocert.github.io/JAlcocerT/embed-that/) into your marketing websites:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/embed-that/#chatwoot" title="OSS Live Chat - Chatwoot" image="/blog_img/entrepre/chatwoot_livechat.png" subtitle="Tinkering with ChatWoot" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/embed-that/#whatsap-bouble" title="Embedded WA / Cal Bouble" image="/blog_img/web/astro-whatsapp-bouble.png" subtitle="Creating an Astro WA Bouble" >}}  
+{{< /cards >}}
+
+### CRM's
+
+{{< dropdown title="Some Open Sourced CRM's you can Self-Host 👈 " closed="true" >}}
+
+* {{< newtab url="https://github.com/salesagility/SuiteCRM" text="SuiteCRM" >}}
+* {{< newtab url="https://github.com/odoo/odoo" text="Odoo" >}}
+* {{< newtab url="https://github.com/espocrm/espocrm" text="ESPOCRM" >}}
+
+{{< /dropdown >}}
+
+### ERP's
+
+* {{< newtab url="https://github.com/frappe/erpnext" text="ERP Next" >}}
+  * https://www.youtube.com/watch?v=X08dEN_rWyg
+    <!-- https://github.com/jmlcas/erpnext -->

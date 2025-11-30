@@ -7,6 +7,26 @@ description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
 
+rag has 3 years, you get asked 5y experience
+
+
+<!-- 
+Alternatives to https://www.livechat.com/pricing/ ING uses it
+ -->
+
+ <!-- 
+`IODOCTOR` -->
+<!-- 
+Use cases
+🧱 Introduction
+🤖 Chatbots
+❓ Question Answering
+🔍 Semantic Search
+
+OPEN AI EmbEddings - https://www.youtube.com/watch?v=ySus5ZS0b94
+ -->
+
+
 Offers
 
 1. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code .mdx
