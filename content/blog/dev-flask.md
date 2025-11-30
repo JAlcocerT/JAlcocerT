@@ -744,14 +744,6 @@ I have been **testing Chainlit** and [OpenAIFunctions](https://github.com/JAlcoc
 
 ### More Dashboarding Tools
 
-* Metabase
-* Superset
-* Grafana
-
-* Shiny in Python
-  * <https://shiny.rstudio.com/py/gallery/>
-  * <https://shiny.rstudio.com/py/gallery/>
-  
 {{< callout type="info" >}}
 For now I just used [Shiny with R](https://jalcocert.github.io/JAlcocerT/R-Stocks/) as described in [this post](https://jalcocert.github.io/JAlcocerT/R-Stocks/)
 {{< /callout >}}

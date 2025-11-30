@@ -7,6 +7,67 @@ description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
 
+* with peertube
+* https://www.vidstack.io/
+    * https://github.com/vidstack/player
+
+* https://vimejs.com/
+    * https://github.com/vime-js
+
+
+* Carousel - Even with CSS Only as per [this video](https://www.youtube.com/watch?v=g03Yldh9Nkw) like [so](https://developer.chrome.com/blog/carousels-with-css) and [so](https://flackr.github.io/carousel/)
+
+* with react (v1) as per astro project: https://github.com/gio-del/Astro-Theme-Astroway
+* with embla - v2
+    * https://www.embla-carousel.com/
+    * https://github.com/davidjerleke/embla-carousel
+* with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
+
+* Photo galleries
+  * https://github.com/tvoma/cube-gallery
+  * https://github.com/jomaendle/astro-photo-gallery
+  * https://jankraus.net/2024/04/05/how-to-build-a-simple-photo-gallery-with-astro/
+
+pop up at time or location of page
+
+* Others: if traffic is directed here, ever
+    * booking maps - https://affiliates.support.booking.com/kb/s/article/Map-Widget-everything-you-need-to-know
+    * https://www.travelocity.com/Flights
+    * Search
+    * Booking/expedia widgets
+
+
+* Maps ✅
+    * https://github.com/roblabs/maps-withastro ✅
+        * Leaflet + OSM ✅
+        * MapLibre ✅ - https://github.com/roblabs/maps-withastro/blob/main/src/MapLibre.astro
+            * An open source **visual editor** for the '**MapLibre Style** Specification'  - https://github.com/maplibre/maputnik
+      * komoot embed OK
+
+* Adding interactive globe with the countries you have visited
+    * From [astro bento portfolio](https://github.com/IoTechCrafts/astro-bento-portfolio-ssg/blob/master/src/components/Globe.tsx) (d3 & solid-js library) ✅
+
+* ig embed ✅
+    * https://developers.facebook.com/docs/instagram/oembed
+    * https://about.instagram.com/blog/announcements/introducing-web-embedding-instagram-content-on-websites
+        * must be a public profile to be shared!
+
+https://ko-fi.com/jalcocertech
+
+<!-- 
+forget about this costs
+https://generatepress.com/pricing/
+https://www.mangomedia.pl/pl/portfolio.html
+
+
+ -->
+
+<!-- 
+https://github.com/cryptpad/cryptpad -->
+
+<!-- FIRST SUMMARY POST OF SGG'S
+THEN THIS ONE REFERENCES TO ALL OF THEM -> ALL SSG'S + FIREBASE + CLOUDFLARE + gh pAGES... -->
+
 rag has 3 years, you get asked 5y experience
 
 

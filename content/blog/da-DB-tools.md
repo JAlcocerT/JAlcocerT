@@ -261,7 +261,7 @@ Therefore, if your goal is to work with MongoDB in Python, using `pymongo` is th
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Pi 101" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Get Started with IoT Project" >}}
-  {{< card link="https://jalcocert.github.io/RPi/tags/mongodb/" title="MongoDB with a Pi ↗" image="https://jalcocert.github.io/RPi/img/metabase.png" subtitle="IoT Project" >}}
+  {{< card link="https://jalcocert.github.io/RPi/tags/mongodb/" title="MongoDB with a Pi ↗" image="https://jalcocert.github.io/RPi/img/metabase.png" subtitle="IoT Project with MongoDB and sensor data" >}}
 {{< /cards >}}
 
 

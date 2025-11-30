@@ -7,6 +7,13 @@ description: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+Wireguard Server
+<!-- Tailscale -->
+<https://jalcocert.github.io/RPi/projects/rpi_wifi_ethernet_bridge/>
+RPi DHCP Server
+
+url: 'selfhosting-PiHole-docker'
+
 https://radar.cloudflare.com/dns
 
 **Tl;DR**

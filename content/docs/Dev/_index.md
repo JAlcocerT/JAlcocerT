@@ -220,9 +220,14 @@ Make sure to master json and timestamps: *specially when working with [telecom d
 You dont need to wait to be on a project to get started. See these:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/iot/grafana.png" subtitle="For Data Analytics and SelfHosting - Redash, Superset, MetaBase, Grafana..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/iot/grafana.png" subtitle="For Data Analytics and SelfHosting - Redash, Superset, Grafana..." >}}
 {{< /cards >}}
 
+
+* Shiny in Python
+  * <https://shiny.rstudio.com/py/gallery/>
+  * <https://shiny.rstudio.com/py/gallery/>
+  
 
 ### DSc Tools
 

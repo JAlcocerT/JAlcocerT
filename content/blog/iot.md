@@ -339,6 +339,9 @@ With this post, I pretend to
 As I plan to write about less new things next year, but gain depth:
 
 ```sh
+#du -sh .
+#find ./content/blog -maxdepth 1 -type f -name "*.md" | wc -l #~339 posts and counting
+
 find content/blog -name '*.md' -print0 |
 xargs -0 awk '
   FNR==1 { post_date=""; printed=0 }

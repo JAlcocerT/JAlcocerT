@@ -36,7 +36,8 @@ Even if you got your solar panel setup:
 As per my [energy experiments](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/#consumption): expect idles of ~15W for a x300 / ~10W for a BMAX or a laptop / ~5W for a Pi
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tapo-p110-review" title="Tapo Smart Plug Post" image="/blog_img/hardware/energy/x300-linux-w11-energy.jpg" subtitle="Measuring x300 Linux vs W11 consumption via the P110" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/" title="Testing the Thinkpad X13" image="/blog_img/mini_pc/firebat-mounted.jpg" subtitle="~1kg x13 laptop review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tapo-p110-review" title="Tapo Smart Plug Post" image="/blog_img/hardware/energy/x300-linux-w11-energy.jpg" subtitle="Measuring x300 Linux 15w vs W11 25w consumption via the P110" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/" title="Testing the Thinkpad X13" image="/blog_img/mini_pc/firebat-mounted.jpg" subtitle="~1kg x13 laptop review - SSD Speed Section" >}}
 {{< /cards >}}
 
+The OS you choose will matter to the energy consumption, specially if there is AI/agentic stuff going on that you dont really need.

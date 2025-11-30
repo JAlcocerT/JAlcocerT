@@ -327,7 +327,7 @@ You could also think to bring some [APIs](#dbs-to-api) to this game.
 
 ### Metabase Embedded
 
-Metabase, Redash, and Apache Superset all have features similar to Latitude, but with some differences in focus and implementation:
+Metabase, Redash, and Apache Superset [BI Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/) can potentially be embeded:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/metabase" title="Metabase | Docker Config 🐋 ↗" >}}
@@ -385,7 +385,9 @@ For a static Astro site hosted on Cloudflare Pages, the typical approach is:
 
 This pattern enables interactive, data-driven components on a static JAMstack site with the analytics backend running separately and serving JSON data through APIs.
 
-In summary, all three tools support API-driven dynamic data fetching compatible with a static Astro site on Cloudflare Pages, enabling components to update data on visitor load using client-side API requests and optionally Cloudflare edge functions for proxying/auth.Yes, Metabase, Redash, and Superset all provide REST APIs that can be used to fetch updated data dynamically from a static Astro site deployed on Cloudflare Pages. 
+In summary, all three tools support API-driven dynamic data fetching compatible with a static Astro site on Cloudflare Pages, enabling components to update data on visitor load using client-side API requests and optionally Cloudflare edge functions for proxying/auth.
+
+Yes, Metabase, Redash, and Superset all provide REST APIs that can be used to fetch updated data dynamically from a static Astro site deployed on Cloudflare Pages. 
 
 The typical approach is to have your Astro frontend components (React, Svelte, or vanilla JS) make client-side API calls to these platforms' API endpoints to retrieve the latest query or dashboard data when visitors load the site.
 

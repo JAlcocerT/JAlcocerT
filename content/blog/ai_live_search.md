@@ -312,7 +312,7 @@ I got to know about these when playing around with the [AIssistant here](https:/
 
 * https://github.com/latitude-dev/latitude-llm
 
-**Latitude is an open-source prompt engineering platform** designed to streamline AI feature development.
+**LatitudeLLM is an open-source prompt engineering platform** designed to streamline AI feature development.
 
 It addresses the following problems:
 
@@ -342,47 +342,7 @@ It addresses the following problems:
   
 2. **Latitude Self-Hosted**: Open-source version for greater control and customization.
 
-
 In conclusion, Latitude simplifies the process of integrating AI into products while facilitating ongoing evaluation and improvement.
-
-**Similar Projects**: TBC
-
-* https://github.com/latitude-dev/latitude
-
-**Latitude** is an open-source framework created to simplify **embedded analytics** by providing a powerful **analytics layer between databases and end-users**. 
-
-It allows developers to integrate data analytics into applications efficiently without requiring deep expertise in database management or visualization.
-
-> Among other DBs, [latitude works with SQLite](https://docs-analytics.latitude.so/sources/sqlite)!
-
-Key Features:
-- **Database Connectivity**: Latitude can connect to a variety of databases and data warehouses, providing flexibility for different environments and data sources.
-- **Parameterized SQL Queries as API Endpoints**: It allows users to create parameterized SQL queries and expose them as API endpoints, making it easy to query data dynamically and integrate with other systems.
-- **Interactive Visualizations**: Latitude supports interactive data visualizations in front-end frameworks (such as React, Svelte, and Vue), or alternatively, it can display them within iframes for easy embedding in web pages.
-- **Caching for Performance**: The framework includes built-in caching, which optimizes query performance and reduces the load on databases by storing previously queried results.
-- **Security**: Latitude is SSL-ready and includes protections against SQL injection, ensuring secure communication between the client and the database.
-- **Community-driven**: The project encourages contributions from developers, fostering an active open-source community.
-
-Use Cases:
-- **Quick Dashboard Creation**: Developers can rapidly build dashboards and visualizations, allowing end-users to explore and interact with data without extensive custom development.
-- **Single-command Deployment**: Latitude can be deployed quickly with a single command, making it easier for developers to get up and running without complex configurations.
-- **Framework Integration**: Latitude integrates seamlessly with popular front-end frameworks like React, Svelte, and Vue, which are commonly used for building modern web applications.
-
-
-Current Status:
-- The project is **no longer maintained** as the focus has shifted to a new project, **Latitude LLM**, which likely focuses on new features or different capabilities.
-- Existing users can still use the codebase and license as-is, though no new updates are being released.
-
-Latitude simplifies the integration of embedded analytics for developers, allowing for easy creation and deployment of dashboards, visualizations, and queries.
-
-> Its simplicity and integration with modern front-end frameworks make it a valuable tool for building analytics-rich applications.
-
-Similar projects to Latitude include:
-- **Superset**: An open-source data visualization tool that allows users to create and share dashboards.
-- **Metabase**: Another open-source analytics platform that focuses on simple setup and user-friendly dashboards.
-
-{{< /details >}}
-
 
 There are ofc tools already waiting to be used...
 

@@ -71,6 +71,12 @@ If you need big GPU power, isntead of just CPU, you can always try https://www.r
 * vast.ai, 
 * Google Colab TPU...
 
+With the Cloud, you forget about power consumption at home:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tapo-p110-review/#adding-graphs-to-ha" title="Tapo P110 x Home Assistant" image="/blog_img/hardware/energy/tapo-p110-1.jpg" subtitle="P110 and x300 power monitoring" >}}
+{{< /cards >}}
+
 ### DO
 
 * https://www.digitalocean.com/pricing/droplets

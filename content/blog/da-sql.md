@@ -606,16 +606,11 @@ SHOW TABLES FROM catalog.schema
 SHOW FUNCTIONS like 'concat%'
 ```
 
-#### Trino Clients
+**Trino Clients**:* https://trino.io/ecosystem/client.html
 
-* https://trino.io/ecosystem/client.html
+Any of the well known tools:  Redash, Superset, Metabase, Grafana
 
-* Redash
-* Superset
-* Metabase
-* Grafana
-
-* Python or R... https://github.com/trinodb/trino-python-client
+Or via Python or R... https://github.com/trinodb/trino-python-client
 
 ### Other Interesting F/OSS DBMS's
 

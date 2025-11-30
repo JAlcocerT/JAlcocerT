@@ -1417,6 +1417,30 @@ Thanks to this sites, I get to know more cool apps:
 
 4. selfhst.st
 
+### New Tech Im using
+
+## Browsers
+
+librewolf vs zen
+chromium vs brave vs hellium
+Tor browser
+
+TightVNC
+Remote Ripple VNC Viewer
+
+**Extensions**
+
+* Kanban board with our bookmarks: <https://github.com/d3ward/b2ntp>
+    Again, awsome job of <https://d3ward.github.io/about.html>
+* ublock origin
+* bitwarden
+
+**Add-ons**
+
+* Privacy Badger
+* https everywhere
+* ublock origin
+
 
 ---
 

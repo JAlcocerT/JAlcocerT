@@ -6,6 +6,53 @@ next: docs/arch/
 draft: false
 ---
 
+<!-- 
+<https://itsfoss.com/open-source-android-apps/>
+
+Use android from linux with: waydroid
+
+Tablet like screen: https://github.com/H-M-H/Weylus
+
+https://xdaforums.com/t/app-1-6-1-tap-tap-double-tap-on-back-of-device-gesture-from-android-12-port.4140573/
+
+* F-DROID: <https://www.youtube.com/watch?v=MnNm-o0yfZw>
+
+1) Go to https://f-droid.org/en/
+2) download fdroid apk
+2) Allow install from unknow source (just one time)
+
+* Obtanium - https://f-droid.org/packages/dev.imranr.obtainium.fdroid/
+    * Install Android Apps directly from Source
+* Add the repo - https://apt.izzysoft.de/fdroid/
+
+https://f-droid.org/en/packages/org.breezyweather/
+
+    * <https://f-droid.org/packages/com.github.mobile/>
+    * <https://f-droid.org/en/packages/nodomain.freeyourgadget.gadgetbridge>
+    * screentime
+* Organic Maps: <https://www.opensourcealternative.to/project/Organic-Maps>
+    * <https://f-droid.org/en/packages/app.organicmaps/>
+* Photos
+    * Piwigo NG
+    * Photonix
+
+BTC MAP Android
+
+https://f-droid.org/en/packages/org.btcmap/
+https://f-droid.org/en/packages/eu.darken.capod/
+
+* FluffyChat
+* Element
+
+* Zettel Notes
+* Xournal++
+* Butterfly
+
+* Bitwarden
+* vaultwarden
+* Aegis
+    * <https://www.opensourcealternative.to/project/Aegis> -->
+
 ## For Android Users
 
 Android is based on Linux, but there are many great projects outside Google Store.
