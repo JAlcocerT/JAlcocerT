@@ -25,20 +25,16 @@ Ok, you are here for the video media, lets get started with [Jellyfin](#je  )
 * https://github.com/jellyfin/jellyfin
   * https://github.com/jellyfin/jellyfin?tab=GPL-2.0-1-ov-file#readme
 
-> The Free Software Media System
+> The Free Software **Media System**
 
 * https://jellyfin.org/docs/general/installation/container/
 
 * Official Image: https://hub.docker.com/r/jellyfin/jellyfin
 * LinuxServer Image: https://hub.docker.com/r/linuxserver/jellyfin
 
-<!-- https://gitlab.com/Linuxserver.io/docker-jellyfin/container_registry
-https://quay.io/repository/linuxserver.io/jellyfin
-https://hub.docker.com/r/linuxserver/jellyfin
-https://github.com/linuxserver/docker-jellyfin/pkgs/container/jellyfin -->
-
-* https://fleet.linuxserver.io/
-
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 {{< dropdown title="How to setup Jellyfin with Docker ⏬" closed="true" >}}
 

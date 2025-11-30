@@ -59,7 +59,7 @@ You can call Wireguard the VPN client for PROS and not for "Pacos".
 
 ##### Tailscale
 
-I really like the simplicity of tailscale (you just connect with google) and you get your laptops/smartphones to be connected in between.
+I really like the simplicity of **tailscale VPN** (you just connect with google) and you get your laptops/smartphones to be connected in between.
 
 **Without portforwarding** and complex configs.
 
@@ -425,7 +425,7 @@ If you are not aware of **Spliit** for sharing expenses with others: *its kind o
 
 * https://github.com/spliit-app/spliit
 
-> MIT | Spliit is a free and **open-source alternative to Splitwise**, aimed at simplifying expense sharing among friends and family.
+> **MIT** | Spliit is a free and **open-source alternative to Splitwise**, aimed at simplifying expense sharing among friends and family.
 
 
 {{< details title="Spliit | Travel expenses 📌" closed="true" >}}

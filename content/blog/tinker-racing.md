@@ -6,13 +6,13 @@ tags: ["Tinkering","OBD2","Accelerometer Data","RacheChrono"]
 description: OBD Data
 ---
 
+**Intro**
 
+Last year, I tinkered with [random APIs](https://jalcocert.github.io/JAlcocerT/interesting-apis/#random-apis): among which there was telemetry for [F1](https://jalcocert.github.io/JAlcocerT/interesting-apis/#formula-1)
 
-**Intro** If you are into [f1](http://localhost:1313/interesting-apis/#formula-1) / cars / trackdays or simply enjoy tinkering with IoT Data...
+If you are into [f1](https://jalcocert.github.io/JAlcocerT/interesting-apis/#formula-1) / cars / trackdays or simply enjoy tinkering with IoT Data...
 
 ![Karting Adventure](/blog_img/memes/Accidente_karting-min.gif)
-
-
 <!-- https://www.youtube.com/watch?v=LToBbKTHAkw -->
 
 {{< youtube "LToBbKTHAkw" >}}
@@ -44,7 +44,11 @@ This data can be very useful for diagnostics, performance monitoring, and even c
 
 It's a serial communication system that allows different electronic control units (ECUs) within the car to communicate with each other.  For example, the engine control unit (ECU), transmission control unit, anti-lock braking system (ABS), and airbag control unit can all communicate over the CAN bus.
 
-Think of CAN bus as the *nervous system* of the car, allowing different components to exchange information.  OBD-II typically uses CAN bus as its physical layer for communication.  So, when you access OBD-II data, you're usually doing so by reading data transmitted over the CAN bus.
+Think of CAN bus as the *nervous system* of the car, allowing different components to exchange information.  
+
+OBD-II typically uses CAN bus as its physical layer for communication. 
+
+So, when you access OBD-II data, you're usually doing so by reading data transmitted over the CAN bus.
 
 {{< /details >}}
 

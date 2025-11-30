@@ -115,6 +115,10 @@ In essence, Huly is designed as a comprehensive "everything app" for teams to ma
 
 You can also create PDFs with [stirling-pdf](https://fossengineer.com/selfhosting-stirling-pdf)
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="Diagrams and PPTs | Docs ↗" >}}
+{{< /cards >}}
+
 ### Creating Diagrams
 
 1. ExcaliDraw
@@ -186,12 +190,7 @@ Looking for a [**job change** because the market is bullish](https://jalcocert.g
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="NextCloud | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
-
----
-
-## FAQ
-
-### Other Related F/OSS Tools
+### Other Related PM F/OSS Tools
 
 * Vikunja
 * Taiga

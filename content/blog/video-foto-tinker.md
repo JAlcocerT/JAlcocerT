@@ -323,10 +323,12 @@ A friend told me recently to have a look to these to do **interesting youtube sh
 
 ### Text2Video
 
-So in 2024...it is text to video.
+So in 2024...it is text to image.
+
+Now is text to video
 
 * Mochi-1 - https://www.youtube.com/watch?v=WKyaGpiOjW4
-* AI Video generation with HeGyGe
+* AI Video generation with HeyGen
 
 InVideo - 
 

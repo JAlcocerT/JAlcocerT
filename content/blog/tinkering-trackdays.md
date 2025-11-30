@@ -9,9 +9,7 @@ url: 'tinkering-telemetry-trackdays'
 
 **TL;DR** 
 
-Cool geodata with a GoPro, an [e36](#bmw-e36-and-canbus) and [VK-162 sensor](#gps-rpi-iot-project---gps-data-vk-162-with-apache-superset)
-
-
+Cool **geodata with a GoPro**, an [e36](#bmw-e36-and-canbus) and [VK-162 sensor](#gps-rpi-iot-project---gps-data-vk-162-with-apache-superset)
 
 **Intro**
 
@@ -270,13 +268,14 @@ _DHT22 connection to a Raspberry Pi 4_
 
 * https://www.reddit.com/r/rccars/comments/15iukhz/made_my_own_lap_timer_that_reads_mylaps/
 
-### Software
-
-* https://github.com/GPSBabel/gpsbabel
-
 ---
 
 ## FAQ
+
+* https://github.com/GPSBabel/gpsbabel
+
+>  GPSBabel: convert, manipulate, and transfer data from GPS programs or GPS receivers. Open Source and supported on MacOS, Windows, Linux, and more. Pointy clicky GUI or a command line version... 
+
 
 ### Apache Supserset DS's and API
 

@@ -93,7 +93,9 @@ https://pacochan.net/es/links/
 
 ## FAQ
 
+https://github.com/flightlessmango/MangoHud
 
+> MIT |  A Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more. 
 
 * elamigos games
 * geforce now

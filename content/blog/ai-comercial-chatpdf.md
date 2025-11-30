@@ -44,7 +44,8 @@ The initial project is available in Github, but you can use [your own Gitea repo
 
 <!-- * chat with pdfs =>>> https://github.com/alejandro-ao/ask-multiple-pdfs ==>> https://github.com/JAlcocerT/ask-multiple-pdfs
 https://www.youtube.com/watch?v=dXxQ0LR-3Hg
-https://www.youtube.com/watch?v=e9hJZrT7HLw -->
+https://www.youtube.com/watch?v=e9hJZrT7HLw
+ -->
 
 ### Chat with PDF Streamlit
 

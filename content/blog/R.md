@@ -7,7 +7,9 @@ description: 'All I wish someone had told me about R when I started - Shiny, Fle
 url: 'r-language-101'
 ---
 
-**TL;DR** Get [R installed](#r-setup), an [IDE](#ide-setup) and [play](#features-i-love-in-r) with it
+**TL;DR** 
+
+Get [R installed](#r-setup), an [IDE](#ide-setup) and [play](#features-i-love-in-r) with it
 
 **Intro**
 
@@ -233,37 +235,6 @@ https://jalcocert.github.io/JAlcocerT/building-r-shiny-apps-container-image-with
 what happened in the end?
 
 That it worked and also, there are 3 ways on doing that (depending on the base image you choose).
-
-
-
----
-<!-- 
-https://github.com/RamiKrispin/shinylive
-https://www.dataquest.io/blog/install-package-r/ -->
-
-
-<!-- ### How can I contribute?
-
-The code is accesible from [my Github Repository of R/Stocks](https://github.com/JAlcocerT/R_Stocks "R Stocks Github {rel='nofollow'}")
-
-Please feel free to fork the repository and experiment with the code. -->
-
-<!-- fossengineer/rstocks_shiny:latest
- docker run --name stocksubuntu -p 3836:3838 --detach fossengineer/rstocks_rbase2:latest
-# you may need log out first `docker logout` ref. https://stackoverflow.com/a/53835882/248616 docker login
-
-docker tag firstimage YOUR_DOCKERHUB_NAME/firstimage
-
-docker push YOUR_DOCKERHUB_NAME/firstimage
-docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach py_trip_planner
-
-docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach fossengineer/trip_planner:arm64
-MANIFEST: to detect that is arm64 directly -> multi-image (?)
-https://hub.docker.com/r/fossengineer/trip_planner:arm64
-
-To label docker images
-To Private
- -->
 
 ---
 

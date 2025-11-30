@@ -41,3 +41,11 @@ As per my [energy experiments](https://jalcocert.github.io/JAlcocerT/benchmarkin
 {{< /cards >}}
 
 The OS you choose will matter to the energy consumption, specially if there is AI/agentic stuff going on that you dont really need.
+
+## Internet BenchMarks
+
+https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/
+
+![OpenSpeedTest](/blog_img/hardware/TPLink4G-OpenSpeedTest.png)
+
+![SpeedtestTracker](/blog_img/hardware/TPLink4G-SpeedTestTraker.png)

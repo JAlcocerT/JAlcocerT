@@ -16,27 +16,6 @@ It was ton of fun.
 
 But can we now do music with AI?
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/interesting-apis/#11labs" title="Tinkering with 11labs - Post ↗" image="/blog_img/GenAI/elevenlabs/11labs-download-tts.png" subtitle="ElevenLabs music creation via API" >}}
-{{< /cards >}}
-
-
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
-{{< /cards >}}
-
-![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
-
-![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
-
-![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
-
-
-If you need a NAS, you can check HexOS
-
-
 **Intro**
 
 Not a post about Gonic nor Sonixd.
@@ -46,10 +25,60 @@ Neither to talk about how I ended up collaborating on a troll song that got uplo
 You have multiple options to create music with AI, including ready-to-use platforms and Python-based tools for custom projects.
 
 ### General AI Music Creation Options
+
 - **Online AI Music Generators**: Platforms like Suno, AI Song Maker, MusicCreator AI, Soundraw, and Boomy let you create royalty-free music quickly by choosing styles, moods, and instruments. These require no coding and are ideal for instant music creation.
+
 - **Collaborative AI Platforms**: Some tools leverage crowd-sourced or evolving AI models to generate music that you can customize.
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/interesting-apis/#11labs" title="Tinkering with 11labs - Post ↗" image="/blog_img/GenAI/elevenlabs/11labs-download-tts.png" subtitle="ElevenLabs music creation via API" >}}
+{{< /cards >}}
+
+https://jalcocert.github.io/JAlcocerT/audio-recap/#the-speech-rater-stack
+![Fast API WebApp with audio recording capabilities](/blog_img/GenAI/audio/fastapi-audio-rec.png)
+
+https://jalcocert.github.io/JAlcocerT/interesting-apis/#audio-apis
+![alt text](/blog_img/GenAI/elevenlabs/onboard-11labs2.png)
+
+Some of the [AI audio tools](https://jalcocert.github.io/JAlcocerT/local-ai-audio/#tts) can be installed locally.
+
+I particularly enjoyed CoquiTTS
+https://jalcocert.github.io/JAlcocerT/local-ai-audio/#tts
+![Coqui TTS UI](/blog_img/GenAI/audio/coqui-tts.png)
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="NEW OpenAI TTS and Transcription Project 🐍" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Streamlit Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
+{{< /cards >}}
+
+https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater
+![Fast API x Astro Theme Connected Showing Admin Panel to record or TTS or S2T](/blog_img/GenAI/audio/fastapi-astro-signedin-dash.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
+
+Some people mention `https://lucida.to/`, but I prefer to have my own music server:
+
+![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
+
+![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
+
+https://jalcocert.github.io/JAlcocerT/media-server-with-open-source/#faq
+![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
+
+metube + jdownloader + qbit
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#youtube-fe
+
+
+
+
 ### Python-Based AI Music Creation Libraries and Frameworks
+
 - **Magenta**: Google’s open-source project provides powerful tools built on TensorFlow for music generation, including pre-trained models that create melodies, harmonies, and rhythms.
 - **music21**: A Python toolkit for musicology, analysis, and symbolic music processing, commonly used with AI models for data preparation and generation.
 - **pretty_midi**: Handles MIDI creation, manipulation, and conversion, useful for AI-generated MIDI data.

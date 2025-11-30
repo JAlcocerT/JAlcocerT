@@ -60,6 +60,7 @@ Any of these can help you serve your Apps to people, unless you want to do so fr
 2. [Hetzner](#hetzner)
 3. [Linode](#linode)
 
+
 <!-- 
 https://youtu.be/F-9KWQByeU0 
 -->
@@ -122,6 +123,20 @@ With the Cloud, you forget about power consumption at home:
 ---
 
 ##  Others
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://www.pikapods.com/" title="PikaPods ↗" >}}
+  {{< card link="https://fly.io/" title="Dev Focus Public Cloud ↗" >}}
+{{< /cards >}}
+
+For **AI workloads** you will be interested in some **cloud GPU**:
+
+{{< cards cols="3" >}}
+  {{< card link="https://www.vultr.com/pricing/#cloud-gpu" title="Vultr Cloud GPUs ↗" >}}
+  {{< card link="https://vast.ai/pricing" title="VastAI GPUs ↗" >}}
+  {{< card link="https://lambdalabs.com/" title="Lambdalabs GPUs ↗" >}}    
+{{< /cards >}}
 
 ### Elestio
 

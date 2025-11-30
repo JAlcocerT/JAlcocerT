@@ -7,6 +7,9 @@ description: SimpleCV and OpenCV + Scrypted & HA. Computer Vision with a PI maki
 url: 'raspberry-pi-camera-setup'
 ---
 
+**TL;DR**
+
+Tinkering with Computer vision and a raspberry Pi 4 with its camera.
 
 ## Raspberry Pi + Camera
 
@@ -218,25 +221,7 @@ python3 detect.py --model efficientdet_lite0.tflite
 2. PyTorch
 3. **Yolo (ultralytics)**
 
-<!-- https://www.youtube.com/watch?v=iOTWZI4RHA8&list=PLPK2l9Knytg7O_okVr-prI1KbZ8GJeMKz
-
-https://core-electronics.com.au/guides/object-identify-raspberry-pi/
-
-Object Identification & Animal Recognition With Raspberry Pi + OpenCV + Python
- -->
-
-
-
-
 It would work with `Yolo Models` - https://github.com/ultralytics/yolov5
-
-<!-- ```py
-
-``` -->
-
-
-<!-- 
-https://www.youtube.com/watch?v=pIUFXGxR_-Q -->
 
 ### MotionEyeOS
 

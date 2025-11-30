@@ -3,10 +3,10 @@ title: "Awsome Photo Galleries for your Blog"
 date: 2024-11-17
 draft: false
 tags: ["Web"]
-cover:
-    image: "https://socialify.git.ci/haltakov/simple-photo-gallery/image?description=1&language=1&name=1&pattern=Brick%20Wall&stargazers=1&theme=Auto" # image path/url 
-    alt: "Photo Galleries Made Simple" # alt text
-    caption: "Photo Galleries alternative to instagram" # display caption under cover
+# cover:
+#     image: "https://socialify.git.ci/haltakov/simple-photo-gallery/image?description=1&language=1&name=1&pattern=Brick%20Wall&stargazers=1&theme=Auto" # image path/url 
+#     alt: "Photo Galleries Made Simple" # alt text
+#     caption: "Photo Galleries alternative to instagram" # display caption under cover
 description: 'Open Source Photo Gallery'
 summary: 'How to create a better Photo Center Blog than Instagram with Open Source'
 url: 'open-source-photo-gallery'

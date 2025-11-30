@@ -15,6 +15,8 @@ Sometime ago, I was doing some benchmarks about **[Raspberry Pi vs Orange Pi](ht
 
 ![alt text](/blog_img/selfh/HomeLab/opi/orangepi5-disip.jpg)
 
+Mounting the passive+active cooling to the Opi:
+
 ![alt text](/blog_img/selfh/HomeLab/opi/opi5.jpg)
 
 Lately, I have been giving [a try to cloud providers](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#hetzner).
@@ -237,7 +239,6 @@ A comparison between the SBCs and Hetzner.
 
 You have other options for **hosting services**, in the cloud:
 
-
 {{< cards cols="1" >}}
   {{< card link="https://fly.io/" title="Dev Focus Public Cloud ↗" >}}
 {{< /cards >}}
@@ -254,9 +255,6 @@ For **AI workloads** you will be interested in some **cloud GPU**:
   {{< card link="https://vast.ai/pricing" title="VastAI GPUs ↗" >}}
   {{< card link="https://lambdalabs.com/" title="Lambdalabs GPUs ↗" >}}    
 {{< /cards >}}
-
-
-
 
 ---
 

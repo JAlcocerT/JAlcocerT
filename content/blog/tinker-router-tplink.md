@@ -12,7 +12,9 @@ url: 'tplink-archer-mr200-router-review'
 ---
 
 
-**TL;DR** How it is to live with 4g home internet only
+**TL;DR** 
+
+How it is to live with 4g home internet only
 
 **Intro**
 

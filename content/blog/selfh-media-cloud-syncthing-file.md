@@ -449,57 +449,12 @@ volumes:
 
 > Alternatively, you can use [AnonUpload](https://github.com/Supernova3339/anonupload/blob/main/docker-compose.yml)
 
-<!-- ### How to backup data?
-
-3-2-1
-
-### How does this solution replaces Google Photos?
-
-You can use it together with F/OSS photo services like:
-
-* https://fossengineer.com/selfhosting-Photoview-docker/
-* Piwigo
-* ... https://awweso.me/photo-and-video-galleries/ 
-
-
-immage
-https://www.youtube.com/watch?v=h_inF-ypMls
-
-https://www.opensourcealternative.to/project/Photprism
-
-Don't Let Apple & Google Harvest Your Photos, Use Immich to Self-Host Your Own Cloud!
-https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
-
-Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
-https://www.youtube.com/watch?v=sIpt4u03mXc
-
-
-https://opensource.com/alternatives/google-photos
--->
-
-<!-- ### Other F/OSS Backup solutions
-
-
-
-
-Kopia: An Automatic Backup Solution for Your Self-Hosted App Data or Documents
-https://www.youtube.com/watch?v=a6GfQy9wZfA
-
--->
-
-
-
-
-<!-- ### How to Reset user/pass in FileBrowser?
- -->
-
-<!-- ### How to Detect Duplicates files in the system
-
-https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka -->
 
 ### Understanding WebDAV
 
-WebDAV is a protocol that extends the capabilities of HTTP, transforming the web from a read-only medium into a read-write medium. It enables users to create, modify, and move documents on a web server, which is essential for collaborative work environments. Here are the key features and benefits of WebDAV:
+WebDAV is a protocol that extends the capabilities of HTTP, transforming the web from a read-only medium into a read-write medium. 
+
+It enables users to create, modify, and move documents on a web server, which is essential for collaborative work environments. Here are the key features and benefits of WebDAV:
 
 - **Editable Web Medium**: Unlike basic HTTP, which is designed for reading web pages, WebDAV allows for creating and modifying content directly on the web server.
 - **Supports Locking and Conflict Management**: WebDAV includes features like locking, which prevents conflicts when multiple users are editing the same document, making it ideal for collaborative applications.
@@ -519,23 +474,3 @@ https://jalcocert.github.io/RPi/posts/selfhosting-nextcloud/ -->
 4. **Caddy Server**: A modern, Go-based web server that features automatic HTTPS. It can be extended with plugins, including one that adds WebDAV functionality. Caddy simplifies web server management while providing robust support for WebDAV.
 
 These open-source WebDAV servers provide powerful options for organizations and individuals looking to facilitate collaborative work online with reliable versioning and document management systems.
-
-<!-- 
-OWL
-
-https://github.com/seemoo-lab/owl
-The Open Wireless Link (OWL) project, which investigates the Apple Wireless Direct Link (AWDL) protocol, is indeed an open-source initiative. However, it’s essential to clarify that OWL focuses on assessing security, privacy, and cross-platform compatibility for wireless applications rather than specifically sharing files.
-
-Here are some key points about OWL:
-
-AWDL Protocol:
-AWDL is a protocol used by Apple devices for ad hoc communication over Wi-Fi.
-It enables peer-to-peer connections without relying on external networks.
-AWDL is crucial for features like AirDrop, Continuity, and location tracking.
-Recent OWL Contributions:
-PrivateDrop: Researchers discovered privacy leaks in Apple’s AirDrop mutual authentication mechanism, allowing strangers to learn phone numbers and email addresses of AirDrop users.
-Who Can Find My Devices?: OWL revealed undisclosed components of Apple’s crowd-sourced Bluetooth location tracking system.
-OpenWifiPass: An open-source implementation of Apple’s Wi-Fi Password Sharing.
-Open Source Implementation:
-OWL provides an open implementation of the AWDL protocol for Linux and macOS. The code is available on GitHub.
-While OWL doesn’t directly focus on file sharing, its research and contributions can indirectly impact wireless communication and security. If you’re interested in exploring more about OWL, feel free to visit t -->
