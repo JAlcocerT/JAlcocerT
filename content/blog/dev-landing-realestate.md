@@ -134,13 +134,9 @@ When a user is added it will say "Thank you for your interest" and will redirect
 If a user email is already added, it will say we already have your email.
 ```
 
-Testing something new, I will use [CapJS to add a CAPTCHA](https://jalcocert.github.io/JAlcocerT/encryption-101/#pow-captcha) to the waiting list.
+Testing something new, I will use [**CapJS** to add a CAPTCHA](https://jalcocert.github.io/JAlcocerT/encryption-101/#pow-captcha) to the waiting list.
 
 Just to avoid some unnecesary *crap and trols* going into the simple waiting list.
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/capjs" title="CapJS | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
 
 Email wont be validated though.
 
@@ -187,6 +183,11 @@ make help
 ![CapJS + NextJS Working](/blog_img/dev/nextjs/capjs-nextjs-pow.png)
 
 {{< /details >}}
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/capjs" title="CapJS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### New Theme
 

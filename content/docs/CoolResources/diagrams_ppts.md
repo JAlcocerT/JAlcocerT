@@ -51,9 +51,14 @@ A game changer to create quick diagrams to showcase your [D&A architectural idea
 
 > **MIT** | Virtual whiteboard for sketching hand-drawn like diagrams 
 
-* https://excalidraw.com/
 * https://github.com/excalidraw/excalidraw-libraries
     * https://libraries.excalidraw.com/?theme=light&sort=default
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/#conclusions" title="Excalidraw for D&A" image="/blog_img/selfh/HomeLab/excalidraw.png" subtitle="Analytics with Mermaid x Excalidraw" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Utils" title="Streamlit PoC" image="/blog_img/dev/nextjs/nextjs-mermaidjs-wireframe.png" subtitle="Vibe Coding with Excalidraw Wireframe concept" >}}
+{{< /cards >}}
 
 
 ### DrawIO

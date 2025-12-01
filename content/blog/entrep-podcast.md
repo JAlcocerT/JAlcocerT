@@ -2,7 +2,7 @@
 title: "A Podcast for all with Anti-Gravity"
 date: 2025-11-28T08:20:21+01:00
 draft: false
-tags: ["Web","Astro","Entrep","RSS","Make-Podcast","SaaS Vibe Coding","FFMPeg Recording"]
+tags: ["Web","Better Auth","RSS","Make-Podcast","SaaS Vibe Coding","FFMPeg Recording"]
 description: 'Using astro and '
 url: 'make-podcast'
 ---
@@ -135,6 +135,16 @@ From the https://notebooklm.google/ to...a desktop IDE:
   * https://chromewebstore.google.com/detail/antigravity-browser-exten/eeijfnjmjelapkebgockoeaadonbchdd
 
 ![Google AntiGravity IDE](/blog_img/dev/IDEs/antigravity.png)
+
+### NextJS and Better Auth
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/#email-verification" title="Email Verification | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
 
 ---
 

@@ -132,10 +132,11 @@ There are many tools to do CI/CD, like Jenkins or [Github Actions](#github-cicd)
 {{< /cards >}}
 
 
-Github Actions CI/CD Examples
+Github Actions CI/CD Examples: *For python projects, but not only*
 
-* <https://github.com/JAlcocerT/Py_Trip_Planner>
-* <https://github.com/JAlcocerT/Slider-Crank> 
+* https://github.com/JAlcocerT/Py_Trip_Planner
+* https://github.com/JAlcocerT/Slider-Crank
+* Also working with HUGO SSG to build this website: https://github.com/JAlcocerT/JAlcocerT/actions
 
 ### Github CI/CD
 
