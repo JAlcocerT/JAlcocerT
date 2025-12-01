@@ -32,6 +32,19 @@ Lately Iv been tinkering with custom (vibecoded) flask apps to interact with SSG
 
 > **MIT** | Free and open source self-hosting serverless podcast solution 
 
+Additionally to be working perfectly with static deployment methods, the audios are also working:
+
+![Astro Podcast Theme UI](/blog_img/shipping/astro-podcast.png)
+
+See how simple is to setup:
+
+```sh
+#git clone https://github.com/JAlcocerT/astropod
+make prod #which spins the container
+#npm install
+#npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+```
+
 {{< youtube "mDMGtMOx-Fk" >}}
 
 You are not forced to use [Astro and its components](https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/) for your podcast.
@@ -98,6 +111,8 @@ There are also selfhostable Podcasts:
 1. https://github.com/ad-aures/castopod
 
 >  Castopod is an open-source hosting platform made for podcasters who want engage and interact with their audience. Synchronized read-only mirror of https://code.castopod.org/adaures/castopod 
+
+> > https://docs.castopod.org/main/en/getting-started/docker/
 
 
 ### Antigravity
@@ -187,10 +202,13 @@ Todos permiten hybrid modes (SSG + SSR/CSR), ideal para sitios estáticos con in
 Are you looking for a powerful and flexible design and prototyping tool that is **free and open-source**? 
 
 
-* https://github.com/Figma-Linux/figma-linux
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="I use Excalidraw for wireframes " image="/blog_img/DA/excalidraw-x-mermaidjs.png" subtitle="See Diagrams and PPTs Tools | Docs ↗" >}}
+{{< /cards >}}
 
+Additionally,you have: https://github.com/Figma-Linux/figma-linux
 
-Penpot is a powerful and customizable design and prototyping tool that offers a wide range of features and benefits for users.
+Also, penpot is a powerful and customizable design and prototyping tool that offers a wide range of features and benefits for users.
 
 ```sh
 #https://flathub.org/apps/com.sudovanilla.penpot-desktop

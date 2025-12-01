@@ -2,9 +2,9 @@
 title: "Inline 4 Engines: Understanding the most popular engine once and for all"
 date: 2026-01-15T23:20:21+01:00
 draft: false
-tags: ["Multi-Body"]
+tags: ["Multi-Body","BMW e86","Inline 4"]
 description: ''
-url: ''
+url: 'inline-4-engine-balance'
 ---
 
 
@@ -50,3 +50,16 @@ In conclusion, each engine type has its own strengths and weaknesses. The inline
 ## Primary Balance:
 
 ## Secondary Balance: Blame it to Archimedes
+
+
+---
+
+## FAQ
+
+### Cars for Track Days?
+
+[Some say](https://www.reddit.com/r/BMW/comments/1ez7ims/why_is_the_z4_e86_so_underrated/) that the BMW z4 e86 is underated.
+
+You have ~2007 units for ~10k$
+
+https://www.youtube.com/watch?v=5hRuWLrdV6k

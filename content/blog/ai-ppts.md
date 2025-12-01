@@ -225,7 +225,8 @@ Here are some of the most popular and feature-rich options:
 
 **Mockup and Prototyping Tools:**
 
-* **Penpot:**  This is a very strong contender and a direct competitor to Figma.  It's completely open source (using SVG as its native format), web-based, and designed for collaborative work.  It's definitely worth checking out.  Self-hosting is well-documented.
+* **Penpot:**  This is a very strong contender and a direct competitor to Figma.  It's completely open source (using SVG as its native format), web-based, and designed for collaborative work.  
+
 
 See their docs:
 
@@ -250,14 +251,6 @@ Many of the mockup and prototyping tools above also handle wireframing very well
 * **Draw.io (Diagrams.net):** While not specifically a mockup or wireframing tool, Draw.io is a very powerful open-source diagramming tool that can be adapted for wireframing.  It's self-hostable and has a wide range of features.
 * **Apache OpenOffice Draw/LibreOffice Draw:** These are desktop-based drawing programs that, like Pencil, can be used for wireframing.  You would need to manage collaboration separately.
 
-**Key Considerations When Choosing:**
-
-* **Collaboration:** How important is real-time collaboration? Penpot is excellent in this regard.
-* **Features:** Do you need advanced prototyping features, or are simple wireframes sufficient?
-* **Ease of Use:** How easy is the tool to learn and use? Excalidraw is very user-friendly for quick wireframing.
-* **Self-Hosting Complexity:** How easy is it to set up and maintain the self-hosted version?
-* **Community and Support:** Is there an active community and good documentation?
-
 **Recommendation:**
 
 For a modern, open-source, and self-hostable alternative to Figma, **Penpot** is the most promising option.  It's actively developed and has a strong focus on collaboration.
@@ -268,8 +261,6 @@ I'd recommend trying out Penpot and Excalidraw to see which one best fits your w
 
 
 {{< /details >}}
-
-
 
 {{< cards >}}
   {{< card link="https://fossengineer.com/selfhosting-excalidraw/" title="Setup Excalidraw" image="https://socialify.git.ci/excalidraw/excalidraw/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto" subtitle="With Docker" >}}

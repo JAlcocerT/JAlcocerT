@@ -31,9 +31,21 @@ You can also get help from [some product tools](https://jalcocert.github.io/JAlc
 {{< /cards >}}
 
 
+Formbricks can be integrated into your websites, [same as cal](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar):
+
+{{< youtube "LWt0pV2FMHs" >}}
+
+
 
 ### PostHog
 
 Posthog is [one of the product tools](https://jalcocert.github.io/JAlcocerT/product-tools/) you can use surveys.
 
 Also to bring [session recording](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/) for your apps.
+
+## Offers
+
+With a clear product defined, the package of that into an compeling offer is key.
+
+http://localhost:1313/docs/
+

@@ -771,7 +771,12 @@ If you are still using [draw.io](https://app.diagrams.net/) for your [architectu
 
 Dont choose between [Mermaid](https://mermaid.live/) or [Excalidraw](https://excalidraw.com/).
 
-![From MermaidJS to Excalidraw](/blog_img/DA/excalidraw-x-mermaidjs.png)
+<!-- 
+![From MermaidJS to Excalidraw](/blog_img/DA/excalidraw-x-mermaidjs.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="Diagrams and PPTs" image="/blog_img/DA/excalidraw-x-mermaidjs.png" subtitle="Diagrams and PPTs Tools | Docs ↗" >}}
+{{< /cards >}}
 
 ```
 flowchart TD

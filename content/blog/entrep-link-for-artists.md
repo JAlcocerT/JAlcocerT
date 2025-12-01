@@ -36,15 +36,18 @@ That might be the thought of someone still trying to sell to the B2C world.
 
 > As of today, im not sure if selling to 9-5 *,grey'* people is the best niche though
 
-I made couple of posts about ssg **themes for links**:
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/" title="LinkinBio with Astro" image="/blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="Links with astro-link-in-bio-theme - FinanceInMotion FYI" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/" title="Links with HUGO LYNX Theme" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links on Github Pages" >}}             
-{{< /cards >}}
 
 
+### SaaS around Links
 
+People are building SaaS around links:
+
+* Taplink
+* bento.me
+* https://getallmylinks.com/
+* https://subscribepage.io/listy#
+* https://linke.ro/
+<!-- * Proposed: bogusiabachata.pro -->
 
 * https://linktr.ee/lynnic
 * https://www.youtube.com/@lynnic/featured
@@ -66,14 +69,217 @@ Which is validated to have done 1M+ https://indiepa.ge/leaderboard as of the tim
 * https://blog.liinks.co/link-in-bio-monetization-strategies-unlocking-new-revenue-streams-for-creators
 
 
-But recently I found about:
+#### OSS Links Web Profiles
 
+I made couple of posts about ssg **themes for links**:
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/" title="LinkinBio with Astro" image="/blog_img/web/WebsSnapshots/financeinmotion-astrolinks.png" subtitle="Links with astro-link-in-bio-theme - FinanceInMotion FYI" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/" title="Links with HUGO LYNX Theme" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links on Github Pages" >}}             
+{{< /cards >}}
 
+And recently I found about:
 
 * https://github.com/francosuarez-dev/artistree
 
 > **MIT** | Link in Bio Page for Artists 🎶
+
+
+Which can be an interesting compaion for LittleLink, which allow to builds links websites wo/code:
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio" title="LinkStack and LittleLink" image="/blog_img/web/web-linkstack.png" subtitle="Two Selfhosted Link Alternatives" >}}
+{{< /cards >}}
+
+
+### What Links to show?
+
+Because...
+
+You have something more to show that social media apps...right?
+
+Here you have some ideas with projects that I have been publishing about before.
+
+Also, you can plug [Web Analytics](#web-analytics) or [Link Analytics](#link-analytics) to your links.
+
+#### Waiting List for Products
+
+I first built a Waiting2Landing: Two Astro Themes working together
+
+First the waiting list theme captures leads via formbricks, then, changing to an agency landing page:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/" title="Astros WaitingToLanding" image="https://raw.githubusercontent.com/JAlcocerT/waiting-to-landing/main/screens/demoLight.webp" subtitle="POST of Waiting2Landing with 2 Astro Themes" >}}
+  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Two Astro Themes + Formbricks to capture emails" >}}
+{{< /cards >}}
+
+
+That should allow you to build DIY websites for your brand, as [I have been doing](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/#other-websites-ive-built)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/" title="The Waiting2Landing v2 PB Post" image="/blog_img/web/waitingtolanding/link-hub.png" subtitle="I tinkered here more with CSR and linkhub than actually building the waiting2landing v2 with PB instead of formbricks as per v1" >}}
+  {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="NEW repository - Simple Waiting List" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + CapJS = Working Waiting list to CSV with no external APIs" >}}
+{{< /cards >}}
+
+![CapJS + NextJS Working](/blog_img/dev/nextjs/capjs-nextjs-pow.png)
+
+#### Landing Page for your SaaS
+
+After the waiting list and checking PMF, comes building time.
+
+For which you should have [a cool Landing Page](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/).
+
+It does not have to be the Lando Norris Page, neither the genkinfy.
+
+But the aster you go from Idea to WaitingList/Landing *depending on your popularity* and to deployment into VPS, the higher changes to get Stripe notifications.
+
+* https://builtwith.com/theinstituteofskills.com/
+* https://www.similarweb.com/website/theinstituteofskills.com/#traffic
+* https://radar.cloudflare.com/scan?url=https://fossengineer.com/
+
+![Cloudflare Radar](/blog_img/web/cf-radar.png)
+
+> It detects the framework, the web analytics, the ads...
+
+A landing as companion for a link website does not have to be a multi-page one though:
+
+![DataNova Theme](/blog_img/web/astro/astro-datanova-animated-graph.png)
+https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/
+
+
+#### eBooks Pages
+
+[Some People](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#how-people-send-ebooks) sell information via ebooks, why dont you do that?
+
+In case you didnt know, creating [an ebook as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-as-a-code) is not that hard:
+
+![Astro landing page book - Sell your ebook UI](/blog_img/shipping/astro-sell-your-ebook.png)
+
+{{< youtube "XEFpzEIEDFc" >}}
+
+
+<!-- https://github.com/JAlcocerT/sell-your-ebook -->
+
+
+<!-- For now, this is a page with 1 ebook:
+
+{{< cards >}}
+  {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
+{{< /cards >}} -->
+
+If you tinker with obfuscation, you can also publish a web/ook and allow to download the PDF as per certain conditions:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="Sell your eBook Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code. Astro SSG ebook Theme (x) Stripe (x) N8N" >}}
+  {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook x Website x Obfuscation" >}}
+{{< /cards >}}
+
+Additionally to the base theme: https://github.com/candidosales/landing-page-book-astro-tailwind
+
+That I was tinkering with on [this post](https://jalcocert.github.io/JAlcocerT/cool-ebooks/)
+
+There are other cool ones like:
+
+* https://github.com/understanding-astro/understanding-astro-book
+
+> The book content about astro is free available, but no license and no way to download the full pdf out of the box
+
+You need to provide your contact details to get it for free :)
+
+![alt text](/blog_img/shipping/astro-ebook-subscribe.png)
+
+#### Obfuscated web/book pages
+
+It all started [here](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#show-and-obfuscate) while testing how to create AI driven ebooks on [this repo: initially with RMD](https://github.com/JAlcocerT/ebooks).
+
+<!-- 
+https://github.com/JAlcocerT/obfuscate
+![Book publisher with FastAPI and Obfuscator looking cool](/blog_img/dev/fastapi/ebook-obfuscate-ui.png)
+ -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version" title="Creating and Publishing PDF eBooks" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="Download the ebook or read it via webpage when conditions are met" >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate/" title="Obfuscate web and ebook Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="ebooks creation as a code + fastapi obfuscation + modern web page" >}}
+{{< /cards >}}
+
+> Now I have my ,webook' published: https://diy.jalcocertech.com thanks to that repo!
+
+> > Will soon be something more than one ebook :)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+#### Calendars
+
+Something that looks really professional is to provide your availability.
+
+As you are a cool creator, you will have a lot of demand:
+
+{{< cards >}}
+  {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
+{{< /cards >}}
+
+If you ever had doubts how easy is to get cal embeded:
+
+<!-- https://studio.youtube.com/video/qFMN0oDeCFg/edit -->
+{{< youtube "qFMN0oDeCFg" >}}
+
+You can also bring your [MailerLite](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/) subscription link:
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#mailerlite" title="MailerLite Newsletter | Docs for Marketing ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Cal.com Calendar | Docs for Marketing ↗" >}}
+{{< /cards >}}
+
+
+#### Photo Galleries
+
+Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery).
+
+But Ive been playing around quite a lot to get proper ig like galleries for real estate and for bloggers to have a cool place to publish.
+
+<!-- 
+![Real Estate Property Photo Gallery with Astro](/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-landing/" title="Real Esate Photo Gallery" image="/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png" subtitle="Applied the Astro photo Gallery component for the real estate landing" >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery" image="/blog_img/web/whilecycling.png" title="Photo Gallery Blog" subtitle="Made with HUGO and Photo centered" >}}
+{{< /cards >}}
+
+
+
+I have added few shortcodes/components: *like [whatsap bouble](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble)*
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
+{{< /cards >}}
+
+#### Podcasts
+
+By this time, you have a lot of audience: you are an artist!
+
+So having one of the links pointing to your podcast platform is very simple.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#podcast-website" title="Tech for Podcasts" image="/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png" subtitle="Creating a serverless Astro Podcast that can be selfhosted with containers" >}}
+  {{< card link="https://github.com/JAlcocerT/astropod" title="Astropod Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked and Tweaked Astro Podcast Theme that works on CF Pages" >}}
+{{< /cards >}}
+
+This is how to use the astropod project step by step:
+
+{{< youtube "mDMGtMOx-Fk" >}}
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Setup Formbricks | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Setup Cal | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+> You can also use [Gatsby SSG for Podcasting](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/#podcasts-in-gatsby)!
+
+> > See how to bring audio via [Hugo components](https://github.com/JAlcocerT/JAlcocerT/tree/main/static/audio) as seen [here](http://localhost:1313/interesting-apis/#11labs)
 
 
 --- 
@@ -86,6 +292,7 @@ Examples of Portfolio Links websites?
 * https://jalcocert.github.io/Portfolio - Deployed statically via GH Pages completely free!
 
 More competitors on the **Saas Link Website domain**:
+
   * Taplink
   * bento.me *A comercial bento link website, owned by linktree*
   * https://getallmylinks.com/
@@ -139,223 +346,15 @@ curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect
 {{< /cards >}}
 
 
-You will want to know how it performs:
+You will want to know **how your Website performs**:
 
-https://radar.cloudflare.com/scan/d92c5e34-6baf-42ad-bea1-e5c7e74a88bf/summary
 
-![alt text](/blog_img/web/carbon-comparison.png)
+![Carbon Comparison of Websites](/blog_img/web/carbon-comparison.png)
 
-![alt text](/blog_img/web/cf-radar.png)
+* https://radar.cloudflare.com/scan/d92c5e34-6baf-42ad-bea1-e5c7e74a88bf/summary
 
 
-
-### SaaS around Links
-
-* More competitors
-  * Taplink
-  * bento.me
-  * https://getallmylinks.com/
-  * https://subscribepage.io/listy#
-  * https://linke.ro/
-  <!-- * Proposed: bogusiabachata.pro -->
-
-
-#### OSS Links Web Profiles
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio" title="LinkStack and LittleLink" image="/blog_img/web/web-linkstack.png" subtitle="Two Selfhosted Link Alternatives" >}}
-{{< /cards >}}
-
-
-### What Links to show?
-
-Because...
-
-You have something more to show that social media apps...right?
-
-Here you have some ideas with projects that I have been publishing about before.
-
-Also, you can plug [Web Analytics](#web-analytics) or [Link Analytics](#link-analytics) to your links.
-
-#### Waiting List for Products
-
-I first built a Waiting2Landing: Two Astro Themes working together
-
-First the waiting list theme captures leads via formbricks, then, changing to an agency landing page:
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/" title="Astros WaitingToLanding" image="https://raw.githubusercontent.com/JAlcocerT/waiting-to-landing/main/screens/demoLight.webp" subtitle="POST of Waiting2Landing with 2 Astro Themes" >}}
-  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Two Astro Themes + Formbricks to capture emails" >}}
-{{< /cards >}}
-
-For now, this is a page with 1 ebook:
-
-{{< cards >}}
-  {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
-{{< /cards >}}
-
-That should allow you to build DIY websites for your brand, as [I have been doing](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/#other-websites-ive-built)
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/" title="The Waiting2Landing v2 PB Post" image="/blog_img/web/waitingtolanding/link-hub.png" subtitle="I tinkered here more with CSR and linkhub than actually building the waiting2landing v2 with PB instead of formbricks as per v1" >}}
-  {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="NEW repository - Simple Waiting List" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + CapJS = Working Waiting list to CSV with no external APIs" >}}
-{{< /cards >}}
-
-![CapJS + NextJS Working](/blog_img/dev/nextjs/capjs-nextjs-pow.png)
-
-#### Landing Page for your SaaS
-
-After the waiting list and checking PMF, comes building time.
-
-For which you should have [a cool Landing Page](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/).
-
-It does not have to be the Lando Norris Page, neither the genkinfy.
-
-But the aster you go from Idea to WaitingList/Landing *depending on your popularity* and to deployment into VPS, the higher changes to get Stripe notifications.
-
-* https://builtwith.com/theinstituteofskills.com/
-* https://www.similarweb.com/website/theinstituteofskills.com/#traffic
-* https://radar.cloudflare.com/scan?url=https://fossengineer.com/
-
-![Cloudflare Radar](/blog_img/web/cf-radar.png)
-
-> It detects the framework, the web analytics, the ads...
-
-A landing as companion for a link website does not have to be a multi-page one though:
-
-![DataNova Theme](/blog_img/web/astro/astro-datanova-animated-graph.png)
-https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/
-
-
-#### eBooks Pages
-
-[Some People](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#how-people-send-ebooks) sell information via ebooks, why dont you do that?
-
-In case you didnt know, creating [an ebook as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-as-a-code) is not that hard:
-
-https://jalcocert.github.io/JAlcocerT/cool-ebooks/
-
-<!-- https://github.com/JAlcocerT/sell-your-ebook -->
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="NEW Sell your eBook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Astro SSG Theme (x) Stripe (x) N8N" >}}
-{{< /cards >}}
-
-Additionally to the base theme: https://github.com/candidosales/landing-page-book-astro-tailwind
-
-There are other cool ones like:
-
-* https://github.com/understanding-astro/understanding-astro-book
-
-{{< youtube "XEFpzEIEDFc" >}}
-
-
-#### Obfuscated web/book pages
-
-It all started [here](https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#show-and-obfuscate) while testing how to create AI driven ebooks on [this repo: initially with RMD](https://github.com/JAlcocerT/ebooks).
-
-<!-- 
-https://github.com/JAlcocerT/obfuscate
-![Book publisher with FastAPI and Obfuscator looking cool](/blog_img/dev/fastapi/ebook-obfuscate-ui.png)
- -->
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version" title="Creating and Publishing PDF eBooks" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="Download the ebook or read it via webpage when conditions are met" >}}
-  {{< card link="https://github.com/JAlcocerT/obfuscate/" title="Obfuscate web and ebook Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="ebooks creation as a code + fastapi obfuscation + modern web page" >}}
-{{< /cards >}}
-
-> Now I have my ,webook' published: https://diy.jalcocertech.com thanks to that repo!
-
-> > Will soon be something more than one ebook :)
-
-#### Calendars
-
-Something that looks really professional is to provide your availability.
-
-As you are a cool creator, you will have a lot of demand:
-
-{{< cards >}}
-  {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
-{{< /cards >}}
-
-
-<!-- https://studio.youtube.com/video/qFMN0oDeCFg/edit -->
-{{< youtube "qFMN0oDeCFg" >}}
-
-I have added few shortcodes/components:
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
-{{< /cards >}}
-
-So you can also embed your [whatsap bouble](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble)
-
-You can also bring your [MailerLite](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/) subscription link:
-
-{{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#mailerlite" title="MailerLite Newsletter | Docs for Marketing ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Cal.com Calendar | Docs for Marketing ↗" >}}
-{{< /cards >}}
-
-
-#### Photo Galleries
-
-Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery).
-
-<!-- 
-![Real Estate Property Photo Gallery with Astro](/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png) -->
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-landing/" title="Real Esate Photo Gallery" image="/blog_img/web/success3-realestate/astro-pb/property-gallery-screwfast.png" subtitle="Applied the Astro photo Gallery component for the real estate landing" >}}
-{{< /cards >}}
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery" image="/blog_img/web/whilecycling.png" title="Photo Gallery Blog" subtitle="Made with HUGO and Photo centered" >}}
-{{< /cards >}}
-
-
-#### Podcasts
-
-By this time, you have a lot of audience: you are an artist!
-
-So having one of the links pointing to your podcast platform is very simple.
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#podcast-website" title="Tech for Podcasts" image="/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png" subtitle="Creating a serverless Astro Podcast that can be selfhosted with containers" >}}
-  {{< card link="https://github.com/JAlcocerT/astropod" title="Astropod Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked and Tweaked Astro Podcast Theme that works on CF Pages" >}}
-{{< /cards >}}
-
-This is how to do it step by step:
-
-{{< youtube "mDMGtMOx-Fk" >}}
-
-
-> You can also use [Gatsby SSG for Podcasting](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/#podcasts-in-gatsby)!
-
-> > See how to bring audio via [Hugo components](https://github.com/JAlcocerT/JAlcocerT/tree/main/static/audio) as seen [here](http://localhost:1313/interesting-apis/#11labs)
-
-#### What we say vs what we do
-
-* **Stated Preference (What they say):** Based on hypothetical questions. It captures what users *claim* they would choose.
-* **Revealed Preference (What they do):** Based on actual behavior. It captures true preferences through real-world actions and choices.
-
-La preferencia anunciada o preferencia declarada es un método para conocer las preferencias de los usuarios basado en lo que ellos dicen que elegirían en situaciones hipotéticas o que no han experimentado en la realidad.
-
-Es muy utilizada en economía para anticipar cómo los consumidores podrían reaccionar ante nuevas opciones que aún no existen en el mercado. Por ejemplo, se puede preguntar a una persona qué opciones preferiría en un producto nuevo o servicio que no ha probado.[1]
-
-Por otro lado, la preferencia revelada se basa en observar el comportamiento real de consumo del usuario, es decir, en las decisiones y elecciones efectivas que hace en la vida cotidiana.
-
-La teoría de la preferencia revelada sostiene que las preferencias de los consumidores se pueden deducir de sus hábitos de compra reales, ya que el hecho de elegir un bien sobre otro revela cuál prefieren realmente bajo las restricciones de su presupuesto.
-
-Esto implica que las preferencias se infieren a partir de las elecciones efectivas, no de declaraciones hipotéticas.[2]
-
-| Type | Definition | PostHog Tool to Use |
-| :--- | :--- | :--- |
-| **Stated** | "I would use this feature." | **Surveys & Feedback:** Ask users directly what they want before building. |
-| **Revealed** | They actually clicked/paid. | **Analytics & Session Replay:** Track clicks, retention, and time spent to see if they actually use it. |
-| **The Goal** | **The Say/Do Gap** | Compare survey results against analytics to see if users are actually doing what they promised. |
+![Cloudflare Radar UI](/blog_img/web/cf-radar.png)
 
 
 ### Vibe Coding is...old?
@@ -386,6 +385,14 @@ But for sure that as of today you dont need to now [TS](https://jalcocert.github
 
 I recently tried [NuxtJS here](https://jalcocert.github.io/JAlcocerT/trying-nuxt-themes/).
 
+And its quite clear that you better go with most popular fwks to build your own.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Websites 101 | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+In case you need to, here are some useful components to provide inspiration to your agents:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
@@ -394,6 +401,28 @@ I recently tried [NuxtJS here](https://jalcocert.github.io/JAlcocerT/trying-nuxt
 ---
 
 ## FAQ
+
+### What we say vs what we do
+
+* **Stated Preference (What they say):** Based on hypothetical questions. It captures what users *claim* they would choose.
+* **Revealed Preference (What they do):** Based on actual behavior. It captures true preferences through real-world actions and choices.
+
+La preferencia anunciada o preferencia declarada es un método para conocer las preferencias de los usuarios basado en lo que ellos dicen que elegirían en situaciones hipotéticas o que no han experimentado en la realidad.
+
+Es muy utilizada en economía para anticipar cómo los consumidores podrían reaccionar ante nuevas opciones que aún no existen en el mercado. Por ejemplo, se puede preguntar a una persona qué opciones preferiría en un producto nuevo o servicio que no ha probado.[1]
+
+Por otro lado, la preferencia revelada se basa en observar el comportamiento real de consumo del usuario, es decir, en las decisiones y elecciones efectivas que hace en la vida cotidiana.
+
+La teoría de la preferencia revelada sostiene que las preferencias de los consumidores se pueden deducir de sus hábitos de compra reales, ya que el hecho de elegir un bien sobre otro revela cuál prefieren realmente bajo las restricciones de su presupuesto.
+
+Esto implica que las preferencias se infieren a partir de las elecciones efectivas, no de declaraciones hipotéticas.[2]
+
+| Type | Definition | PostHog Tool to Use |
+| :--- | :--- | :--- |
+| **Stated** | "I would use this feature." | **Surveys & Feedback:** Ask users directly what they want before building. |
+| **Revealed** | They actually clicked/paid. | **Analytics & Session Replay:** Track clicks, retention, and time spent to see if they actually use it. |
+| **The Goal** | **The Say/Do Gap** | Compare survey results against analytics to see if users are actually doing what they promised. |
+
 
 ### SelfHostable Links
 
@@ -406,6 +435,10 @@ I recently tried [NuxtJS here](https://jalcocert.github.io/JAlcocerT/trying-nuxt
 2. LinkStack. As seen [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio) and [here](https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/)
 
 ![LinkStack UI](/blog_img/web/web-linkstack.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/linkstack" title="LinkStack | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ### SelfHosted WebAnalytics
@@ -424,14 +457,14 @@ Every time I read the `selfh.st `newsletter I find a new web analytics tool tryi
 
 **But imo, Umami** should be one of those **HomeLab essentials** tools to consider.
 
-![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
+<!-- ![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png) -->
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="SelfHostable WebAnalytics Tools 🐋✅ ↗" >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#adding-umami-web-analytics-to-flask
+Because you can also [plug Umami to Flask web apps](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#adding-umami-web-analytics-to-flask):
 
 ![Flask App with Umami Integration](/blog_img/entrepre/webify/flask-umami.png)
 
@@ -484,7 +517,7 @@ Link analytics solutions, like Kutt: `https://kutt.it/`
 
 ![Kutt Links](/blog_img/selfh/links/kutt-link-creation.png)
 
-You can always check what is the shortened link pointing with:
+You can always check what is the shortened link pointing with: *yea, curl can do that!*
 
 ```sh
 curl -sIL https://youtu.be/sGUjmyfof4Q?t=568  | grep location:
@@ -494,6 +527,8 @@ curl -sIL https://youtu.be/sGUjmyfof4Q?t=568  | grep location:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/sink" title="Sink works on cloudflare!| Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/yourls" title="Yourls | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+> Configuring Sink Link shortener to work on cloudflare: https://fossengineer.com/sink-url-shortener-setup/
 
 
 Many more will be coming, like https://github.com/alexcastrodev/shortener
@@ -530,8 +565,6 @@ There are several open-source self-hostable link shortener tools you can conside
 4. **Shrink.io (shrtn.io)**: A lightweight, privacy-focused URL shortener using SQLite by default (so no database server is required) and deployable via Docker. It emphasizes ease of use, privacy, and developer-friendly features.[6]
 
 5. Other notable mentions from a curated list include Polr, Lstu, Blink, and goshorly—all open source with various programming languages and features.[4][8]
-
-These options provide scalable, customizable, and self-hostable link shortening solutions that you can deploy either via Docker or direct installation depending on your infrastructure and preferences.
 
 For ease and feature richness, Shlink, Kutt, and YOURLS are highly recommended starting points for a self-hosted URL shortener.
 

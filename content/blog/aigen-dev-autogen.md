@@ -36,7 +36,9 @@ AutoGen agents are customizable, conversable, and seamlessly allow human partici
 
 * https://github.com/microsoft/autogen
 
-**AutoGen Studio** is an AutoGen-powered AI app (user interface) to help you rapidly prototype AI agents, enhance them with skills, compose them into workflows and interact with them to accomplish tasks. It is built on top of the AutoGen framework, which is a toolkit for building AI agents.
+**AutoGen Studio** is an AutoGen-powered AI app (user interface) to help you rapidly prototype AI agents, enhance them with skills, compose them into workflows and interact with them to accomplish tasks.
+
+It is built on top of the AutoGen framework, which is a toolkit for building AI agents.
 
 * https://github.com/microsoft/autogen/tree/main/samples/apps/autogen-studio
 * https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/
