@@ -8,9 +8,9 @@ url: 'cool-ebooks'
 ---
 
 
-I was tinkering with ebooks creation [here](https://github.com/JAlcocerT/ebook-ideas/tree/master) and with a website to show them [here](https://github.com/JAlcocerT/sell-your-ebook).
+I was tinkering with **ebooks creation** [here](https://github.com/JAlcocerT/ebook-ideas/tree/master) and with a website to show them [here](https://github.com/JAlcocerT/sell-your-ebook).
 
-It was all about to [extract knowledge from Kinddle clippings](https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/) and I ended up creating instead.
+It was all about to [extract knowledge from Kinddle clippings](https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/) and I ended up creating some instead.
 
 ### PDFs
 
@@ -31,6 +31,20 @@ Rscript Z_ebooks/render.R \
   --cover Z_ebooks/sample-cover.png
 ```
 
+
+![Astro landing page book - Sell your ebook UI](/blog_img/shipping/astro-sell-your-ebook.png)
+
+![alt text](/blog_img/shipping/astro-ebook-subscribe.png)
+
+
+You can also **sign PDFS** with: https://github.com/docusealco/docuseal
+
+> agpl 3.0 | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ 
+
+
+
 ### Epubs
 
 Now, the epub files are closer to htmls than we might expect.
+
+And IMO they are trickier to create compared to PDFs.

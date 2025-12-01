@@ -396,6 +396,7 @@ The backend receives the request and verifies the credentials.
 If the credentials are valid, the server creates and sends a **JWT bearer token** to the client.
 
   * **PocketBase**: PocketBase automatically generates a **JWT bearer token** with the user's information and a default expiration time. It returns this token in the API response without any manual coding.
+
   * **FastAPI**: You must manually generate the JWT. Using a library like `python-jose`, your endpoint would:
       * Create a payload with the user's ID and an expiration time.
       * Sign the payload with a secret key using an algorithm like **HS256**.
@@ -612,6 +613,12 @@ For APIs exposed to external clients, OAuth is generally considered more secure 
 ## Entrepreneuring
 
 I feel (literally) like in the backstraight of a circuit after having couple of laps to recognize my breaking/aceleration points.
+
+{{< cards >}}
+  {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="This is the DWY - Accounting for my time opportunity cost" >}}
+  {{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This DFY I have to refine it though" >}}
+{{< /cards >}}
+
 
 And...
 

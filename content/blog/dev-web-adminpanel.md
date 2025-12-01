@@ -118,14 +118,8 @@ That on the future, will be transformed into proper web/ook for a DIY proposal, 
 
 {{< cards >}}
   {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="This is the DWY - Accounting for my time opportunity cost" >}}
-  {{< card link="https://cal.com/jalcocertech/consulting" title="JAlcocerTech Custom Solutions" image="/blog_img/email/cal-email-stripe.png" subtitle="This DFY I have to refine it though" >}}
+  {{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This DFY I have to refine it though" >}}
 {{< /cards >}}
-
-
-
-
-
-
 
 
 Or as I did recently with **NextJS**

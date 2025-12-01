@@ -248,7 +248,7 @@ git clone https://github.com/JAlcocerT/slidev-editor
 
 ### Architecture and Icons
 
-> https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
+If you are a [D&A Architect](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/), consider:
 
 * [Iconify](https://iconify.design/)
 * [Icon-sets](https://icon-sets.iconify.design/)

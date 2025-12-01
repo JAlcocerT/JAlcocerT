@@ -66,15 +66,21 @@ So you dont care about the server, it just works.
 
 ### Authentication via TinyAuth
 
-If you got https via Traefik in place
-
+If you got [https via Traefik](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/#traefik) in place, you can use TinyAuth.
 
 The Tinyauth (Authentication Proxy) project uses **cookie-based session management** built on top of **JSON Web Tokens (JWTs)**.
 
 Tinyauth uses the **cookie** as the transport mechanism to carry the **JWT**, which is the actual proof of the user's authenticated session.
 
-{{< details title="About 🍪 Tinyauth Authentication Mechanism 👇 📌" closed="true" >}}
+inyAuth is primarily a Forward Authentication Proxy. Its job is very narrow:
 
+Handle the login (using local users or an external OAuth/LDAP provider).
+
+Manage the user session (stored in its internal SQLite DB).
+
+Check if the user is authorized to access a path (using whitelists or OAuth group checks)
+
+{{< details title="About 🍪 Tinyauth Authentication Mechanism 👇 📌" closed="true" >}}
 
 1. **Authentication (The Login Process)**
 
@@ -128,17 +134,69 @@ The choice between a JWT (token-based) and a traditional session (server-side) s
 * **Choose JWT** if you are building a **stateless API**, a system with **many microservices**, or if **high performance and horizontal scalability** are your top priorities. Use short-lived tokens and refresh tokens to manage the revocation issue.
 * **Choose Traditional Sessions** if you are building a **monolithic application**, or if **real-time session revocation** (instant logout, immediate permission changes) and stronger security control are absolutely critical.
 
----
-
-
-
 {{< /details >}}
+
+This is a project with server sise session storage: https://github.com/JAlcocerT/make-podcast
+
+And this is one with http cookie: https://github.com/JAlcocerT/payroll-workers-pb
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Astro x Cloudflare Workers x PB" image="/blog_img/apps/gh-jalcocert.svg" subtitle="SSG + CF Workers + Pocketbase users collections via http cookie" >}}
+{{< /cards >}}
 
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tinyauth" title="TinyAuth | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+Yes, there is a way to use **TinyAuth** to whitelist specific emails for access.
+
+This functionality is central to how TinyAuth works when you are using an external identity provider (like Google or GitHub OAuth). However, **you do not directly interact with the SQLite database to manage this list.**
+
+-----
+
+## 📧 Whitelisting Emails in TinyAuth
+
+TinyAuth manages the email whitelist through its configuration, which can be defined using environment variables or a configuration file. The SQLite database is only used internally by TinyAuth for **session management** and storing the **local user database (if enabled)**, not for the whitelist itself.
+
+When a user attempts to log in via an external OAuth provider:
+
+1.  TinyAuth redirects the user to the provider (e.g., Google).
+2.  The provider authenticates the user and returns their profile information, including their **email address**.
+3.  TinyAuth checks this returned email address against its **internal whitelist**.
+4.  If the email matches an entry on the list, TinyAuth issues a session cookie (which is stored in its internal SQLite DB) and grants access. If it doesn't match, access is denied.
+
+1. Whitelisting via Environment Variables (Common Method)
+
+The simplest way to whitelist emails is by setting the `WHITELISTED_EMAILS` environment variable when running the TinyAuth container or service.
+
+  * You provide a comma-separated list of the exact emails that are allowed to access the protected application.
+
+> **Example:**
+>
+> ```bash
+> -e WHITELISTED_EMAILS="alice@example.com,bob@example.com"
+> ```
+
+2. Whitelisting via Configuration File
+
+If you have a very long list of emails, or you want to manage access using specific domains or groups, you can use a configuration file (`.yaml` or `.json`).
+
+The configuration file allows you to define a list of allowed **emails** and/or **domains**.
+
+> **Example (YAML config):**
+>
+> ```yaml
+> users:
+>   emails:
+>     - "admin@mycorp.com"
+>     - "manager@mycorp.com"
+>   domains:
+>     - "mycorp.com"  # Allows any user from this domain
+> ```
+
+
 
 ## Email Verification
 
