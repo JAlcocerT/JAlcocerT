@@ -2,7 +2,7 @@
 title: "SelfHosting Updates - May 2025"
 date: 2025-05-06T01:20:21+01:00
 draft: false
-tags: ["Dev","HomeLab"]
+tags: ["Dev","HomeLab","Vibe Coded Project Docs"]
 description: 'Selfhosted Apps that simplify my workflow as of May 2025: Termix, CheckMate, LibreChat'
 url: 'selfhosted-apps-may-2025'
 ---

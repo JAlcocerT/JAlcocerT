@@ -26,7 +26,6 @@ I am talking about [the Open-meteo project](https://open-meteo.com/ "Open Meteo 
 ## Using Open-Meteo: Weather Forecast in Python
 
 <!-- 
-
 <https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m> -->
 
 If you enjoy developing in Python like I do, you will be wondering how to use this API. *Let me show you how simple it is.*

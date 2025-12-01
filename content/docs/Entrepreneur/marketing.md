@@ -197,3 +197,12 @@ You can always [embed things](https://jalcocert.github.io/JAlcocerT/embed-that/)
 ## Ads
 
 ![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
+
+
+### Social Media
+
+Social media ~~is where you think [you have a blog](https://jalcocert.github.io/JAlcocerT/create-your-website/)~~ are big ad platforms:
+
+https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz
+
+![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)

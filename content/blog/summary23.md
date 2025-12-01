@@ -6,7 +6,6 @@ tags: ["Blog","Year-Review"]
 description: "Its been kind of messy..."
 ---
 
-
 <!-- https://visitedplaces.com/view/?map=world&projection=geoNaturalEarth1&position=3.7_34.3_51_-12.4_0&theme=dark-green&water=1&graticule=0&names=1&duration=2000&placeduration=100&slider=0&autoplay=0&autozoom=none&home=PL&places=~DE_ES_PT_MX_FR_GB_IT_BE_NL_DK_SE_LT_LV_UA_HU_AT_CZ_SK_BG_GR_TR_MT_PL.daaa44 -->
 
 

@@ -228,7 +228,8 @@ Thinking about the **DIY/DWY/DFY framework**: I thought that a kind of advance D
 ```mermaid
 graph TD
     A[www.jalcocertech.com] --> B(blog/YT 0$);
-    A --> C(DIY 0/$);
+    A --> C(DIY 0/$ + time);
+    A --> F(DIY & PaaS low $/year low time);
     A --> D(Consult via Cal.com - DWY $$);
     A --> E(Services - DFY $$$);
 ```
@@ -254,6 +255,17 @@ Then some cool Landing should be placed at `consult.jalcocertech.com` with calco
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Cal.com Calendar | Docs for Marketing ↗" >}}
 {{< /cards >}}
+
+Whatever I was doing before this year...
+
+Yea, with 'Webify' I intended to do all from scratch: from infra to web/services
+
+To...maybe get paid 100$/year? 
+
+No thanks! There is a better way:
+
+- OSS PaaS will do the infra - For 100$ you bring your own OSS app like /WP/Ghost and forget about servers
+
 
 ---
 

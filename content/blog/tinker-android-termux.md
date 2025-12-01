@@ -7,7 +7,6 @@ description: I always wanted to run Docker on Android - How to do it on a Samsun
 url: setup-termux-android
 ---
 
-
 **Intro**
 
 One of the parts I enjoy about Android is that it relates a lot with Linux.
@@ -36,15 +35,6 @@ Basically to have some additional 2FA device at home :)
 How to run [these tests](#faq)
 {{< /callout >}}
 
-
-{{< details title="OrangePi 5 with Latest Kernel 📌" closed="true" >}}
-
-{{< /details >}}
-
-{{< callout type="info" >}}
-adawwdwad
-{{< /callout >}}
-
 ---
 
 
@@ -54,14 +44,11 @@ https://github.com/sickcodes/dock-droid
 
 > Docker Android - Run QEMU Android in a Docker! X11 Forwarding! CI/CD for Android!
 
-
 ### Android 16 Linux Terminal
 
 <!-- https://www.youtube.com/shorts/V5DYPODOxo0 -->
 
 {{< youtube "V5DYPODOxo0" >}}
-
-
 
 ### How to use Android on PC
 

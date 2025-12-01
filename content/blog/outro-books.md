@@ -6,7 +6,13 @@ tags: ["Outro","Kindle","1toN ebooks","SaaS vs LifeTime Products"]
 description: 'Reading better, writing more.'
 url: 'interesting-books'
 ---
+<!-- 
+what every body is saying 
 
+the persuasion code
+influence: the psy of persuasion
+the persuasion code
+-->
 
 **Tl;DR**
 

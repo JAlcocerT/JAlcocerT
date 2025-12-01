@@ -8,7 +8,9 @@ summary: '.'
 url: 'selfhosting-frigate'
 ---
 
+**Tl;DR**
 
+If you like computer vision and homelabs, you will enjoy this one :)
 
 **Intro**
 

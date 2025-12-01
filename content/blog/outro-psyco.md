@@ -7,15 +7,10 @@ description: 'Building thepsychological awareness. Self-awareness, decision maki
 url: 'psychology-skills-data-analytics'
 ---
 
-<!-- 
-what every body is saying 
 
-the persuasion code
-influence: the psy of persuasion
-the persuasion code
--->
+**Tl;DR**
 
-# Building Self-Awareness 
+Building Self-Awareness 
 
 ## Understanding Basics
 
@@ -33,13 +28,6 @@ Cash flows discount
    * Seeing suceess as a process, not as an event
 
    * the trick: work as if your results only depend on your effort and skills. In the end of the road remember that luck (good or bad) had its contribution to the outcome
-
-<!-- A 
-
-    Options -> Things and not controlable
-    Choices -> Actions and are controlable
-
-    * a team member can deliver great results given the proper workload -->
 
 ## Biases
 
@@ -157,20 +145,7 @@ When estimating, remember that with a sounds estimation should be together with 
 
 Example: We can deliver the task X by time Y with 90% of security. Make sure to have listed down the reasons why in that 10% of the cases the delivery will be changed.
 
-
-<!-- ## BIAS and Noise
-
-<!-- 
-how this relates to ml -->
-
-<!-- ### The Prevalence of Noise
-
-Remember that correlation **does not** implies causality. --> -->
-
-<!-- 
-## Interacting with others
-
-59 seconds book -->
+---
 
 ## FAQ
 
@@ -194,14 +169,3 @@ Some examples:
 
 - What is beautiful is good
 - I see confidence in this person. It must be intelligent and competent.
-
-<!-- ### The shiny Object Syndrome -->
-
-<!-- ### The Dunning-Krugger Effect
-
-### Dilution Effect
-
-
-### What is Wishful Thinking?
-
-### Certainty Effect -->

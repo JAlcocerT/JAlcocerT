@@ -7,7 +7,17 @@ description: 'Selfhosting with your HomeLab and PaaS.'
 url: 'selfhosted-apps-december-2025'
 ---
 
+> If you need a NAS, you can check HexOS
 
+> > But as is paid, consider
+
+
+* https://fleet.linuxserver.io/
+
+<!-- https://gitlab.com/Linuxserver.io/docker-jellyfin/container_registry
+https://quay.io/repository/linuxserver.io/jellyfin
+https://hub.docker.com/r/linuxserver/jellyfin
+https://github.com/linuxserver/docker-jellyfin/pkgs/container/jellyfin -->
 ```sh
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg | \

@@ -38,8 +38,6 @@ What we will be using?
 2. MySQL Database
 3. OpenAI API as LLM!
 
-
-
 This post was created as a complement to this **tech talk**: https://wearecommunity.io/events/winter-data-meetup2025/talks/84337
 
 And you can see it in youtube:
@@ -113,12 +111,6 @@ pip install langchain #==0.3.18
 {{< callout type="info" >}}
 **Source Code** - RAG libraries to **[Chat over Data](https://github.com/JAlcocerT/Data-Chat)** 💻 
 {{< /callout >}}
-
-<!-- This post explores how to use **LangChain with Python** to chat with your database.
-
-{{< callout type="info" >}}
-The complete, working code is available in my [data-chat repository](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB).
-{{< /callout >}} -->
 
 There is first a SQL chain, to see if the LLM makes proper work building the queries:
 

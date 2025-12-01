@@ -195,7 +195,7 @@ GNOME Files → Connect to Server:
 sftp://<username>@192.168.1.2:2022 #sftp://jalcocert@192.168.1.2:2022
 ```
 
-![alt text](/blog_img/selfh/HomeLab/sftp-files-zorin.png)
+![Zorin UI with SFTP](/blog_img/selfh/HomeLab/sftp-files-zorin.png)
 
 If you want a WebDAV connection, you can use the Nextcloud setup seen last summer:
 

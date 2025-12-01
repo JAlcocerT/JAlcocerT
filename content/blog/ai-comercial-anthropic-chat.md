@@ -85,9 +85,6 @@ Its a good complement to the GROQ API for LLMs.
 
 * Groq - https://console.groq.com/keys
 
-### FAQ
-
-
 Thanks to Fireship and the video:
 
 {{< youtube "m_xoN8KlP3w" >}}

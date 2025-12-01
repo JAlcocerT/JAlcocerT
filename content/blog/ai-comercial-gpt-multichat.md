@@ -14,12 +14,7 @@ url: 'create-streamlit-chatgpt'
 <!-- * Using chatgpt with your own data: langchain + OPENAI API
 https://www.youtube.com/watch?v=9AXP7tCI9PI -->
 
-<!-- 
-* https://github.com/JAlcocerT/openai-chatbot
-* https://platform.openai.com/api-keys
 
-* https://platform.openai.com/docs/models/
-* https://platform.openai.com/docs/models/gpt-4o -->
 
 
 ## A MultiChat with Streamlit
@@ -427,24 +422,6 @@ And feel free to use any of these:
 | **Grok (Twitter)**             | -                                                                                              |
 | **Azure OpenAI**               | -                                                                                       |
 | **Amazon Bedrock**             | -                                                                                     |
-
-
-<!-- {{< dropdown title="Other Non Local Models for Projects ❎👇" closed="true" >}}
-
-* Groq - 
-    * https://console.groq.com/keys
-* Gemini (Google)
-  * https://ai.google.dev/gemini-api/docs
-* Mixtral - **Open Models**, you can use their API
-    * https://docs.mistral.ai/api/
-* Anthropic (Claude) - https://www.anthropic.com/api
-  * https://console.anthropic.com
-  * https://console.anthropic.com/settings/keys
-* Open AI - GPT APIs https://platform.openai.com/api-keys
-* Grok (Twitter)
-* Azure
-
-{{< /dropdown >}} -->
 
 Remember to link the **GHCR Package** with your repository Readme:
 

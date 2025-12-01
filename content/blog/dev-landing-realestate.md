@@ -403,6 +403,10 @@ Specially with these salaries and prices:~250k a flat vs 25k/y household income
 
 ![INE MAP Household income](/blog_img/web/moi-realestate/ine-realestate.png)
 
+But at least now you can decide in advance where to look:
+
+![alt text](/blog_img/web/moi-realestate/zonas-jerez.png)
+
 ![Paco Real Estate Example](/blog_img/web/moi-realestate/viviendaylocales-example.png)
 
 * https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/27213492/es/

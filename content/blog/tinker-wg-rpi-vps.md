@@ -7,8 +7,6 @@ description: How to setup WG-easy in a VPS and use a Raspberry Pi as wireguard c
 url: how-to-use-wg-easy-with-a-vps
 ---
 
-
-
 **TL;DR**
 
 Combine this quick wg setup with your [travel router](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/)

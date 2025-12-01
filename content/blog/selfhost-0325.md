@@ -7,6 +7,7 @@ description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homar
 url: 'selfhosted-apps-spring-2025'
 ---
 
+**Intro**
 
 It all started with a quick way to setup apps with Docker...
 

@@ -7,6 +7,100 @@ description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
 
+
+<!-- 
+https://github.com/RamiKrispin/shinylive
+https://www.dataquest.io/blog/install-package-r/ -->
+
+
+<!-- ### How can I contribute?
+
+The code is accesible from [my Github Repository of R/Stocks](https://github.com/JAlcocerT/R_Stocks "R Stocks Github {rel='nofollow'}")
+
+Please feel free to fork the repository and experiment with the code. -->
+
+<!-- fossengineer/rstocks_shiny:latest
+ docker run --name stocksubuntu -p 3836:3838 --detach fossengineer/rstocks_rbase2:latest
+# you may need log out first `docker logout` ref. https://stackoverflow.com/a/53835882/248616 docker login
+
+docker tag firstimage YOUR_DOCKERHUB_NAME/firstimage
+
+docker push YOUR_DOCKERHUB_NAME/firstimage
+docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach py_trip_planner
+
+docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach fossengineer/trip_planner:arm64
+MANIFEST: to detect that is arm64 directly -> multi-image (?)
+https://hub.docker.com/r/fossengineer/trip_planner:arm64
+
+To label docker images
+To Private
+ -->
+<!-- ### How to backup data?
+
+3-2-1
+
+### How does this solution replaces Google Photos?
+
+You can use it together with F/OSS photo services like:
+
+* https://fossengineer.com/selfhosting-Photoview-docker/
+* Piwigo
+* ... https://awweso.me/photo-and-video-galleries/ 
+
+
+immage
+https://www.youtube.com/watch?v=h_inF-ypMls
+
+https://www.opensourcealternative.to/project/Photprism
+
+Don't Let Apple & Google Harvest Your Photos, Use Immich to Self-Host Your Own Cloud!
+https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
+
+Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
+https://www.youtube.com/watch?v=sIpt4u03mXc
+
+https://opensource.com/alternatives/google-photos
+-->
+
+<!-- ### Other F/OSS Backup solutions
+Kopia: An Automatic Backup Solution for Your Self-Hosted App Data or Documents
+https://www.youtube.com/watch?v=a6GfQy9wZfA
+-->
+
+<!-- ### How to Detect Duplicates files in the system
+
+https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka -->
+<!-- A 
+
+    Options -> Things and not controlable
+    Choices -> Actions and are controlable
+
+    * a team member can deliver great results given the proper workload -->
+<!-- ## BIAS and Noise
+
+<!-- 
+how this relates to ml -->
+
+<!-- ### The Prevalence of Noise
+
+Remember that correlation **does not** implies causality. --> -->
+
+<!-- 
+## Interacting with others
+
+59 seconds book -->
+<!-- ### The shiny Object Syndrome -->
+
+<!-- ### The Dunning-Krugger Effect
+
+### Dilution Effect
+
+
+### What is Wishful Thinking?
+
+### Certainty Effect -->
+GEOSPATIAL DATA RECAP
+
 * with peertube
 * https://www.vidstack.io/
     * https://github.com/vidstack/player
@@ -69,7 +163,11 @@ https://github.com/cryptpad/cryptpad -->
 THEN THIS ONE REFERENCES TO ALL OF THEM -> ALL SSG'S + FIREBASE + CLOUDFLARE + gh pAGES... -->
 
 rag has 3 years, you get asked 5y experience
+<!-- This post explores how to use **LangChain with Python** to chat with your database.
 
+{{< callout type="info" >}}
+The complete, working code is available in my [data-chat repository](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB).
+{{< /callout >}} -->
 
 <!-- 
 Alternatives to https://www.livechat.com/pricing/ ING uses it
@@ -116,7 +214,9 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post
 2. About Posthog: Post an ebook page post on IG, then web session will be recorded and a yt video can be made out of that
 
 
-3. How to create a **waiting list** to test your ideas - Share on ig too.
+3. How to create a **waiting list** to test your ideas + ListMonk + SMTP - Share on ig too.
+
+https://github.com/berat/waitlist-landing-page?tab=readme-ov-file
 
 4. Status Pages for services: Kener / UptimeKuma. SLA matters
 
