@@ -98,11 +98,11 @@ With vibe coding, is easy to get lost into the leaves of a cool UI:
 
 ![Flask Web App as CMS](/blog_img/web/morita-flask/flask-cf-ui.png)
 
-So these kind of projects that aimed to be the [custom CMS editors of a pool of astro/hugo ssgs](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/) and get paid...maybe 100$ are not worth *beside the learnings.
+So these kind of projects that aimed to be the [custom CMS editors of a pool of astro/hugo ssgs](https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/) and get paid...maybe 100$ are not worth *beside the learnings*.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/WebGenerAItor" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
-  {{< card link="https://github.com/JAlcocerT/WebifAI" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
+  {{< card link="https://github.com/JAlcocerT/WebGenerAItor" title="WebGenerAItor Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Web Generator with Astro Themes..." >}}
+  {{< card link="https://github.com/JAlcocerT/WebifAI" title="WebifAI Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. WebifAI with Astro Themes..." >}}
 {{< /cards >}}
 
 Because of that, I started to put together this kind of high level docs, based on my learnings:

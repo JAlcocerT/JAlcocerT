@@ -265,7 +265,7 @@ So having one of the links pointing to your podcast platform is very simple.
 <!-- ![Astro Podcast Theme UI](/blog_img/shipping/astro-podcast.png) -->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/make-podcast/" title="Tech for Podcasts" image="/blog_img/shipping/astro-podcast.png" subtitle="Creating a serverless Astro Podcast that can be selfhosted with containers" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/make-podcast/" title="Tech for Podcasts" image="/blog_img/shipping/astro-podcast-2.png" subtitle="Creating a serverless Astro Podcast that can be selfhosted with containers" >}}
   {{< card link="https://github.com/JAlcocerT/astropod" title="Astropod Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked and Tweaked Astro Podcast Theme that works on CF Pages" >}}
 {{< /cards >}}
 

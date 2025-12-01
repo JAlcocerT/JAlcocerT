@@ -223,8 +223,10 @@ Wth an intuitive and extendable way to create type-safe, performant and producti
 
 * https://github.com/nuxt/nuxt
   * https://nuxt.com/deploy
+    * https://nuxt.com/templates
+    * https://nuxtjstemplates.com/
 
-> MIT | The Intuitive Vue Framework.
+> **MIT** | The Intuitive Vue Framework.
 
 Nuxt and Next.js both offer full stack features but have differences reflecting their Vue and React bases, respectively.
 

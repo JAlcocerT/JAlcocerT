@@ -7,7 +7,7 @@ description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
 
-
+BiP user flows around newsletter layers
 <!-- 
 https://github.com/RamiKrispin/shinylive
 https://www.dataquest.io/blog/install-package-r/ -->

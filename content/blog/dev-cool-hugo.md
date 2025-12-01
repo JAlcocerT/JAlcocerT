@@ -78,7 +78,7 @@ I saw some people doing **cool things with HUGO Themes**
 
 > “With Thulite, it’s super easy to build content-driven websites that are production-ready out of the box.”
 
-* https://github.com/HugoRCD/canvas - *This is a NUXT Theme, the creator name is HUGO though, but its a different framework*
+* https://github.com/HugoRCD/canvas - *The creator name is HUGO though, but its a different framework*
 
 
 ### Flask for HugoThemeGallery

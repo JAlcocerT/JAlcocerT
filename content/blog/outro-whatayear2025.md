@@ -1159,6 +1159,10 @@ From Streamlit PoCs, I mean streamlit financial MVP to Flask with ChartJS:
 {{< /cards >}}
 
 
+ChartJS and ApexCharts have been great revelations this year.
+
+![Streamlit Funnel Chart Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
+
 ![Flask WebApp vibe coded gradient](/blog_img/selfh/automation/flask-gradient-cms-v2.png)
 
 

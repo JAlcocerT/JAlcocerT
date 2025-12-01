@@ -3,7 +3,7 @@ title: "Diagrams and workflows as a Code with Agents"
 date: 2025-11-15T12:20:21+01:00
 draft: false
 tags: ["AI SaaS","mermaidJSxopenai-editor","Grok vs Perplexity","Icons for Architects","Commet","Tech Talk"]
-description: 'BiP user flows around newsletter layers. From SliDev Editor to Mermaid Editor with live information.'
+description: 'From SliDev Editor to Mermaid Editor with OpenAI and Excalidraw.'
 url: 'ai-driven-diagrams'
 ---
 
@@ -147,7 +147,7 @@ These APIs are paywalled!
 Anyways, we saw how to bring API data directly to our slides via SliDevJS as [seen here](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#slidev-and-tech-talks).
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#slidev-and-tech-talks" title="Data Chat Repository" image="/blog_img/entrepre/public-build/slidev-editor/slidev-component-yfinance.png" subtitle="SliDev + yFinance API connected" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#slidev-and-tech-talks" title="PPTs as a Code with SliDev" image="/blog_img/entrepre/public-build/slidev-editor/slidev-component-yfinance.png" subtitle="SliDev + yFinance API connected" >}}
   {{< card link="https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk-exadel/components" title="SliDev Editor Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SliDev Editor and Tech Talks ppts" >}}
 {{< /cards >}}
 
@@ -167,6 +167,8 @@ Few weeks ago I was tinkering with [grok API](https://jalcocert.github.io/JAlcoc
 And just this week I got...
 
 ### Perplexity API
+
+... Perplexity PRO access.
 
 It feels great to get life/search data from the internet.
 
@@ -243,43 +245,6 @@ git clone https://github.com/JAlcocerT/slidev-editor
 ---
 
 ## FAQ
-
-
-### How Scraping Relates to SSG, CSR, and SSR
-
-Web scraping and modern web rendering techniques like:
-
-Static Site Generation (SSG), Server-Side Rendering (SSR), and Client-Side Rendering (CSR) are fundamentally linked by how they present content.
-
-The rendering method a website uses directly impacts how easy or difficult it is to scrape.
-
-
-* **Static Site Generation (SSG)**: 📄 SSG creates and serves a fully-formed, static HTML file for each page at **build time**. The content is pre-rendered and doesn't change until the site is rebuilt.
-    * **Scraping:** This is the easiest type of site to scrape. A simple scraper can just send an HTTP request to the page and receive all the content in the initial HTML response. You don't need to worry about executing JavaScript.
-
-* **Server-Side Rendering (SSR)**: ⚙️ SSR generates the complete HTML page on the **server** for each user **request**. The server fetches data, compiles the page, and then sends the finished HTML to the browser.
-    * **Scraping:** Scraping an SSR site is also relatively easy. Like with SSG, the content is already present in the initial HTML response. The scraper simply needs to parse the received HTML to extract the data.
-
-* **Client-Side Rendering (CSR)**: 💻 CSR delivers a minimal HTML "shell" to the browser. The actual content is loaded and rendered dynamically on the **client-side** using **JavaScript**. This often involves a JavaScript framework like React or Angular making API calls to fetch data after the page has loaded.
-    * **Scraping:** This is the most difficult to scrape. A basic scraper that only fetches the initial HTML will get an empty or incomplete page without the content. To get the data, a scraper must be able to execute JavaScript and mimic a browser's behavior.
-
-
-#### Challenges of Scraping Dynamic Content
-
-It's much harder to scrape dynamic content, and your intuition is correct—it's because the scraper must act like a real user. 🕵️‍♀️
-
-With dynamic content (like that found on CSR websites), the data you want isn't in the initial HTML. It's loaded later by JavaScript. This means a standard scraper that just makes a simple HTTP request will fail to see the content.
-
-To overcome this, you need to use a **headless browser**. . A headless browser is a web browser without a graphical user interface (like Chrome or Firefox) that can be controlled programmatically. It can:
-
-1.  **Execute JavaScript:** It runs the JavaScript on the page, just like a real browser would, triggering the API calls that load the dynamic content.
-2.  **Wait for Content:** It can be programmed to wait until the content you're looking for appears on the page before trying to scrape it.
-3.  **Mimic User Behavior:** More advanced anti-bot systems will detect non-human behavior. Headless browsers can be configured to mimic human actions like random delays, scrolling, and mouse movements to avoid being blocked.
-
-So, while it is hard, it's not impossible. 
-
-The key is to use more sophisticated tools that can render the entire page and interact with it, rather than just downloading and parsing a static HTML file.
-
 
 ### Architecture and Icons
 

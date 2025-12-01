@@ -2,7 +2,7 @@
 title: "A Podcast for all with Anti-Gravity"
 date: 2025-11-28T08:20:21+01:00
 draft: false
-tags: ["Web","Better Auth","RSS","Make-Podcast","SaaS Vibe Coding","FFMPeg Recording"]
+tags: ["Web","Better Auth x MailTrap","email magic link","Make-Podcast","SaaS Vibe Coding","FFMPeg Recording"]
 description: 'Using astro and '
 url: 'make-podcast'
 ---
@@ -78,6 +78,7 @@ From the [latest vibe coding learnings](https://jalcocert.github.io/JAlcocerT/re
 1. I found that is better to **keep it simple** and with well known frameworks
 2. Its great to chat with Gemini about your initial ideas -> Create [a z-BRD.md](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) and refine again with your coding agent
 3. create a `z-development-plan.md`
+4. Consider the `ui-wireframe.png` as reference for the [UI layouts](#wireframing-and-the-penpot-project)
 
 ```
 * Built in auth based on `.env`
@@ -87,13 +88,70 @@ From the [latest vibe coding learnings](https://jalcocert.github.io/JAlcocerT/re
 How about creating a: **make-podcast**?
 
 
+{{< details title="Vibe Coding a Podcast Platform | 101 Setup  📌" closed="true" >}}
+
+Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
+
+```md
+Create a Podcast Web Platform based on nextjs with a cool and modern UI
+
+There will be a login button that directs to `/login` from which via better-auth and a sqlite with a unique username and password provided as per .env that is the one who can access the `/admin`
+
+Once we are logged in we can add into a folder `.mp3` with audios and a `podcast.json` with the podcast metadata, like its name, description, cover image, etc.
+
+This information is then showed in the main page `/` and the `/podcast-name` page.
+
+On the main page there will be a button to load more podcasts (by default it will just show 1, this has to be an environment variable to be tweaked)
+
+Include a `dockerfile` and `docker-compose.yml` that will control the title, description, open-graph image, favicon location and other global website variables via environment variables.
+
+Create also a makefile with the following commands:
+
+* `make help` - Show available commands
+* `make install` - Prepare the dependencies for local development
+* `make dev` - Run development server
+* `make container` - Build and Run in Docker container
+```
+
+Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined already with Gemini is clear enough.
+
+If it is clear define the `z-development-plan.md` and proceed with the development phases.
+
+```sh
+# git init
+# git branch -m main
+# git config user.name
+# git config --global user.name "JAlcocerT"
+# git config --global user.name
+# git add .
+# git commit -m "Initial commit: Starting simple make podcast platform"
+
+#sudo apt install gh
+gh auth login
+#gh repo create make-podcast --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: simple make podcast platform" && gh repo create make-podcast --private --source=. --remote=origin --push
+```
+
+{{< /details >}}
+
 1. Clone the repo
 
 ```sh
-
+git clone https://github.com/JAlcocerT/make-podcast.git && cd make-podcast
 ```
 
-2. Bring the astropod theme
+2. Bring the service up
+
+```sh
+make help
+# Available commands:
+#   make dev                - Run development server
+#   make container          - Run in Docker container
+#   make view-leads         - View all leads from leads.json
+#   make export-csv         - Export leads to CSV
+```
+
 
 
 3. Edit the `./src` content via the Web App
@@ -121,6 +179,18 @@ There are also **selfhostable Podcasts**:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/castopod" title="Astropod | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
+If you have a look to the config, there are several containers involved.
+
+I would keep it simple and use one of these if you want another UI
+
+* https://github.com/bcms/starters/tree/master/astro/podcast
+* https://github.com/shipshapecode/starpod
+  * Could not resist to fork this one
+
+> MIT | Create an amazing podcast website in 5 minutes 
+
+![StarPOD - Astro Podcast Theme awsome UI](/blog_img/shipping/astro-podcast-2.png)
+
 
 ### Antigravity
 
@@ -138,11 +208,32 @@ From the https://notebooklm.google/ to...a desktop IDE:
 
 ### NextJS and Better Auth
 
+This weekend I watched couple of videos about Authentication
+
+<!-- https://youtu.be/_OApmLmex14?si=dJ1mEw4lRdBbhZM8 -->
+{{< youtube "_OApmLmex14" >}}
+
+<!-- https://youtu.be/H2oQgiDmBjc?si=dfipUtrt347G3fht -->
+{{< youtube "H2oQgiDmBjc" >}}
+
+
+Im happy to have Logto and Firebase Auth working and with examples:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/#email-verification" title="Email Verification | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+But the Better Auth project looks like sth interesting to tinker with.
+
+* https://github.com/better-auth/better-auth
+  * https://www.better-auth.com/docs/plugins/magic-link - *Very interesting docs, with magic link support*
+  * https://www.better-auth.com/docs/plugins/stripe
+  * https://www.better-auth.com/docs/plugins/email-otp
+  * https://www.better-auth.com/docs/plugins/siwe - *even with ETH wallets*
+
+> **MIT** | The most comprehensive authentication framework for TypeScript
+
 
 [![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
 
