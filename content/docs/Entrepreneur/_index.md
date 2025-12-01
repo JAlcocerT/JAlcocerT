@@ -35,7 +35,7 @@ Formbricks can be integrated into your websites, [same as cal](https://jalcocert
 
 {{< youtube "LWt0pV2FMHs" >}}
 
-
+Formbricks wont validate the emails, but you can even [verify emails](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/#email-verification) before they flow into your sales pipelines.
 
 ### PostHog
 

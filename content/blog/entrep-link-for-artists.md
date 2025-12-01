@@ -258,16 +258,23 @@ I have added few shortcodes/components: *like [whatsap bouble](https://github.co
 
 #### Podcasts
 
-By this time, you have a lot of audience: you are an artist!
+By this time, you have a lot of audience: *you are an artist!*
 
 So having one of the links pointing to your podcast platform is very simple.
 
+<!-- ![Astro Podcast Theme UI](/blog_img/shipping/astro-podcast.png) -->
+
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#podcast-website" title="Tech for Podcasts" image="/blog_img/web/waitingtolanding/waitinglist-formbricks-prefilled.png" subtitle="Creating a serverless Astro Podcast that can be selfhosted with containers" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/make-podcast/" title="Tech for Podcasts" image="/blog_img/shipping/astro-podcast.png" subtitle="Creating a serverless Astro Podcast that can be selfhosted with containers" >}}
   {{< card link="https://github.com/JAlcocerT/astropod" title="Astropod Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked and Tweaked Astro Podcast Theme that works on CF Pages" >}}
 {{< /cards >}}
 
 This is how to use the astropod project step by step:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/fresh-rss" title="FreshRSS | Docker Config Setup 🐋 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/astropod" title="Astropod | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
 
 {{< youtube "mDMGtMOx-Fk" >}}
 

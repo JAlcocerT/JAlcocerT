@@ -15,17 +15,22 @@ Think about having: SSG -> CMS, like `/keystatic` for UI edits -> CI/CD Builds a
 
 ## Authentication
 
+There are several ways to achieve this.
+
+
 * https://github.com/voidauth/voidauth
 
 > Agpl v3 | An Easy to Use and Self-Host Single Sign-On Provider 🐈‍⬛🔒
 
 You can get away with [Traefik x TinyAuth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/) for web Apps and get that lovely [https](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/).
 
+Even [FastAPI with a simple sqlite DB](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater) can do the job: *with a simple user and password.*
+
 ### Streamlit Auth
 
 I started with [Streamlit Authenticator](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py).
 
-But then, discovered that there are more ways to do it: https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Auth_Ways
+But then, discovered that there are more ways to do authentication with streamlit: https://github.com/JAlcocerT/Streamlit-AIssistant/tree/main/Z_Auth_Ways
 
 Like using SQLITE: https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/Auth_sqlite
 
@@ -37,7 +42,6 @@ Or Streamlit x Pocketbase as seen [here](https://jalcocert.github.io/JAlcocerT/s
   {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_hardcoded_compose.py" title="St authenticator hardcoded on the compose | Script  ↗"  >}}
   {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_hardcoded_pb.py" title="St authenticator as per Pocketbase users collection info | Script ↗"  >}}
 {{< /cards >}}
-
 
 ### Authentication with Logto
 
@@ -59,6 +63,82 @@ The 3 Bodies post and app.
 This one is...serverless!
 
 So you dont care about the server, it just works.
+
+### Authentication via TinyAuth
+
+If you got https via Traefik in place
+
+
+The Tinyauth (Authentication Proxy) project uses **cookie-based session management** built on top of **JSON Web Tokens (JWTs)**.
+
+Tinyauth uses the **cookie** as the transport mechanism to carry the **JWT**, which is the actual proof of the user's authenticated session.
+
+{{< details title="About 🍪 Tinyauth Authentication Mechanism 👇 📌" closed="true" >}}
+
+
+1. **Authentication (The Login Process)**
+
+Tinyauth supports multiple ways to verify the user's identity:
+
+* **Local Credentials:** It checks a submitted username and password against credentials (stored as **Bcrypt hashes**) defined in **environment variables** (`USERS`) or a **users file** (`USERS_FILE`).
+* **OAuth/OIDC:** It acts as an OAuth client to delegate authentication to external providers like **Google**, **GitHub**, or any generic **OpenID Connect (OIDC)** server.
+* **LDAP:** It can connect to a central **LDAP** server to validate credentials.
+* **TOTP (Time-based One-Time Password):** It supports **Two-Factor Authentication (2FA)** using a TOTP secret.
+
+2. **Session Management (The Cookie)**
+
+After a successful login, Tinyauth generates a session that is primarily managed using two key technologies:
+
+* **JSON Web Token (JWT):** The core of the session is a JWT. This token contains the authenticated user's identity claims. Tinyauth is often described as **stateless** because it doesn't need to query a database to validate a session—it only needs the token and its secret key.
+
+* **Secure Cookie:** The generated JWT is then signed using a **secret key** (configured via the `SECRET` environment variable) and placed into a **secure cookie** on the user's browser.
+    * This cookie is set for the **parent domain** of the application being protected (e.g., if the app is at `app.example.com`, the cookie is set for `.example.com`). This allows the authentication to work across all subdomains.
+    * The protected application (via the reverse proxy, like Traefik or Nginx) checks for the presence and validity of this cookie/JWT on every request. If the cookie is valid, the request is passed through. If not, the user is redirected back to the Tinyauth login page. 
+
+{{< /details >}}
+
+
+{{< details title="JTW vs Server Side Session Storage  👇 📌" closed="true" >}}
+
+Yes, a **JSON Web Token (JWT)** is a type of **Bearer Token**.
+
+1. Is a JWT a Bearer Token?
+
+**Yes, a JWT is a type of bearer token.**
+
+* **Bearer Token:** The term "Bearer Token" describes *how* the token is used. It means that whoever *bears* (possesses) the token is granted access, like cash or a passport. The client sends it to the server, typically in the `Authorization: Bearer <token>` HTTP header.
+* **JWT:** The term "JWT" describes the **format** of the token. It's a structured, self-contained token that includes user information and claims within a JSON object, which is then cryptographically signed to prevent tampering. 
+
+Therefore, a JWT is a **specific, self-contained, and signed format** that is commonly used *as* a bearer token.
+
+---
+
+2. JWT vs. Server-Side Session Storage
+
+The choice between a JWT (token-based) and a traditional session (server-side) system is a classic trade-off between **Scalability** and **Revocability/Control**.
+
+| Feature | JWT (Stateless/Token-Based) | Traditional Session (Stateful/Server-Side) |
+| :--- | :--- | :--- |
+| **Scalability** | **Excellent.** The server does not store session data. Any server can validate the token independently. Ideal for microservices and distributed systems. | **Challenging.** Requires a centralized session store (e.g., Redis, database) to share state across multiple servers, adding complexity. |
+| **Revocation** | **Poor.** Once a token is issued, it's valid until it expires. Immediate revocation (like a forced logout or permission change) requires a separate **blacklist** lookup, which defeats the stateless benefit. | **Excellent.** To log a user out, the server simply deletes the session record from the database/store. Revocation is instantaneous. |
+| **Performance** | **Faster Validation.** The server only verifies the cryptographic signature, avoiding a database lookup for every request. | **Slower Validation.** Every request requires a database/cache lookup to find and validate the session ID. |
+| **Data Storage** | The **client** stores the data (in the token/cookie). This data is visible (though signed) to the client. | The **server** stores the data. The client only stores an opaque, random session ID. |
+
+
+* **Choose JWT** if you are building a **stateless API**, a system with **many microservices**, or if **high performance and horizontal scalability** are your top priorities. Use short-lived tokens and refresh tokens to manage the revocation issue.
+* **Choose Traditional Sessions** if you are building a **monolithic application**, or if **real-time session revocation** (instant logout, immediate permission changes) and stronger security control are absolutely critical.
+
+---
+
+
+
+{{< /details >}}
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tinyauth" title="TinyAuth | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ## Email Verification
 

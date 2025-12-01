@@ -25,7 +25,7 @@ But only using third party tools.
 
 > Wouldnt it be cool for the author to have its platform?
 
-Lately Iv been tinkering with custom (vibecoded) flask apps to interact with SSGs
+Lately Iv been tinkering with custom (vibecoded) flask apps to interact with SSGs: *this can be applied to [podcasts](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#podcast-website)*
 
 * https://github.com/manuelernestog/astropod
     * Which I Forked https://github.com/JAlcocerT/astropod and talked about [here](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/)
@@ -33,6 +33,11 @@ Lately Iv been tinkering with custom (vibecoded) flask apps to interact with SSG
 > **MIT** | Free and open source self-hosting serverless podcast solution 
 
 Additionally to be working perfectly with static deployment methods, the audios are also working:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/fresh-rss" title="FreshRSS | Docker Config Setup 🐋 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/astropod" title="Astropod | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
 
 ![Astro Podcast Theme UI](/blog_img/shipping/astro-podcast.png)
 
@@ -94,8 +99,6 @@ How about creating a: **make-podcast**?
 3. Edit the `./src` content via the Web App
 
 
-
-
 ---
 
 ## Conclusions
@@ -106,13 +109,17 @@ And also, every youtube channel has an associated RSS feed to notify you about n
 
 > YOu can leverage that to get that cool astro component showing on your website what was your last video uploaded :)
 
-There are also selfhostable Podcasts:
+There are also **selfhostable Podcasts**:
 
-1. https://github.com/ad-aures/castopod
+* https://github.com/ad-aures/castopod
 
 >  Castopod is an open-source hosting platform made for podcasters who want engage and interact with their audience. Synchronized read-only mirror of https://code.castopod.org/adaures/castopod 
 
 > > https://docs.castopod.org/main/en/getting-started/docker/
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/castopod" title="Astropod | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
 
 
 ### Antigravity

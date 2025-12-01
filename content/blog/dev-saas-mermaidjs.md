@@ -11,6 +11,8 @@ url: 'ai-driven-diagrams'
 
 I Got the [social signin working here, with the slidev-editor](https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions).
 
++++ Tech Talk about the [MermaidxOpenAI PoC](#tech-talk)
+
 Now its time to bring the **AI part** to the equation.
 
 > If you are [an architect](#architecture-and-icons), you will like this.
@@ -142,7 +144,14 @@ These APIs are paywalled!
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/neko-browser" title="Neko Browser | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Anyways, we saw how to bring API data directly to our slides via SliDevJS as seen here.
+Anyways, we saw how to bring API data directly to our slides via SliDevJS as [seen here](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#slidev-and-tech-talks).
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#slidev-and-tech-talks" title="Data Chat Repository" image="/blog_img/entrepre/public-build/slidev-editor/slidev-component-yfinance.png" subtitle="SliDev + yFinance API connected" >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk-exadel/components" title="SliDev Editor Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SliDev Editor and Tech Talks ppts" >}}
+{{< /cards >}}
+
+<!-- ![Slidev live data component from yfinance](/blog_img/entrepre/public-build/slidev-editor/slidev-component-yfinance.png) -->
 
 ### Grok API
 
@@ -196,8 +205,40 @@ I would say yes, for the learnings.
 
 For the financial motivations, just be aware of [Pareto](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) and that most tries will fail.
 
-The OpenAI LLM approach was good enough for this PoC and I did not end up plugging Codex CLI.
+The **OpenAI LLM approach was good enough for this PoC** and I did not end up plugging Codex CLI.
 
+You could also try LangChain Agents approach as per [this cfe video](https://www.youtube.com/watch?v=KC8HT0eWSGk)
+
+### Mermaid x Excalidraw
+
+
+Dont choose between [Mermaid](https://mermaid.live/) or [Excalidraw](https://excalidraw.com/).
+
+<!-- 
+![From MermaidJS to Excalidraw](/blog_img/DA/excalidraw-x-mermaidjs.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="Diagrams and PPTs" image="/blog_img/DA/excalidraw-x-mermaidjs.png" subtitle="Diagrams and PPTs Tools | Docs ↗" >}}
+{{< /cards >}}
+
+```
+flowchart TD
+    A[Christmas] -->|Get money|
+    B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+
+### Mermaid x Tech Talk
+
+Ive prepared a tech talk about this **mermaid x openAI** setup:
+
+```sh
+git clone https://github.com/JAlcocerT/slidev-editor
+
+```
 
 ---
 
