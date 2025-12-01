@@ -206,3 +206,8 @@ Social media ~~is where you think [you have a blog](https://jalcocert.github.io/
 https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz
 
 ![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
+
+
+## Leads
+
+

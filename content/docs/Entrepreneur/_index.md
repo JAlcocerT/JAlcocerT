@@ -46,6 +46,3 @@ Also to bring [session recording](https://jalcocert.github.io/JAlcocerT/how-to-r
 ## Offers
 
 With a clear product defined, the package of that into an compeling offer is key.
-
-http://localhost:1313/docs/
-
