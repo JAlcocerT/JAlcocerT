@@ -14,6 +14,13 @@ Because astro SSG and CSR are so cool.
 Why not...Creating a DIY podcast platform?
 
 +++ Doing so via [Google's Antigravity IDE](#antigravity)
++++ [FFMPEG goodies](#faq)
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/make-podcast" title="NEW Make Podcast" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for NextJS MUI Web App to Upload and Play Podcasts" >}}
+  {{< card link="https://github.com/JAlcocerT/starpod" title="FORKED StarPod" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Astro SSG that serves Podcasts in a cool UI/UX" >}}
+{{< /cards >}}
 
 **Intro**
 
@@ -207,8 +214,11 @@ I would keep it simple and use one of these if you want another UI
 ```sh
 git clone https://github.com/JAlcocerT/starpod
 #make help
-#make dev
+#make install && make dev
+#make container-dev
 ```
+
+
 
 ### Antigravity
 

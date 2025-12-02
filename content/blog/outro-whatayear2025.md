@@ -7,6 +7,8 @@ description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-2025'
 ---
 
+[Computer consultancy activities](https://ariregister.rik.ee/eng/company/16864984/iotechcrafts-O%C3%9C?lang=en)
+
 Install any Ai stuff, via UI:
 
 * https://pinokio.computer/

@@ -1,6 +1,6 @@
 ---
 title: "[PaaS Recap] Software for Servers..."
-date: 2025-12-07T01:20:21+01:00
+date: 2025-12-05T17:20:21+01:00
 draft: false
 tags: ["HomeLab","LocalStack vs DokPloy","Cosmos Server"]
 description: 'Selfhosted Apps that simplify my workflow. Get your MiniPC/NAS homelab ready quickly.'
@@ -147,9 +147,9 @@ Like the well known Coolify and Dokploy:
 
 {{< youtube "RoANBROvUeE" >}}
 
-Posthog attack npm!
+There was another attack to npm affecting Posthog!
 
-Coolify is php vs Dokplot that is NextJS.
+> Coolify is PHP based vs Dokploy that is NextJS.
 
 #### Dokploy on a VPS
 

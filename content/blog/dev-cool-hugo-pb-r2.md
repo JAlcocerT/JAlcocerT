@@ -145,7 +145,7 @@ In short, yes, Cloudflare R2 offers a beginner-friendly free tier plus a robust 
 
 Went to: https://dash.cloudflare.com/ and hit `R2 object storage`
 
-![alt text](/blog_img/web/agujapunto-r2-firebase/r2-101.png)
+![CF R2 Pricing](/blog_img/web/agujapunto-r2-firebase/r2-101.png)
 
 ![alt text](/blog_img/web/agujapunto-r2-firebase/cf-r2-1.png)
 

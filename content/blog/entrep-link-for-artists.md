@@ -81,12 +81,28 @@ I made couple of posts about ssg **themes for links**:
 And recently I found about:
 
 * https://github.com/francosuarez-dev/artistree
+  * Which I could not avoid to fork: https://github.com/JAlcocerT/artistree
+
+```md
+#and added my fav tool of the year
+Add a Makefile with bare metal install, dev and container-dev with also help
+```
+
+![Artistree Theme UI](https://raw.githubusercontent.com/JAlcocerT/artistree/main/public/new-preview.png)
 
 > **MIT** | Link in Bio Page for Artists 🎶
 
+```sh
+git clone https://github.com/JAlcocerT/artistree
+cd artistree
+make help
+#make install & make dev
+```
 
 Which can be an interesting compaion for LittleLink, which allow to builds links websites wo/code:
+
 {{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/artistree" title="FORKED - Artistree Theme" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Astro Kindof LinkTree for Artists" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio" title="LinkStack and LittleLink" image="/blog_img/web/web-linkstack.png" subtitle="Two Selfhosted Link Alternatives" >}}
 {{< /cards >}}
 
@@ -117,10 +133,14 @@ That should allow you to build DIY websites for your brand, as [I have been doin
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/waiting-list-pocketbase/" title="The Waiting2Landing v2 PB Post" image="/blog_img/web/waitingtolanding/link-hub.png" subtitle="I tinkered here more with CSR and linkhub than actually building the waiting2landing v2 with PB instead of formbricks as per v1" >}}
-  {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="NEW repository - Simple Waiting List" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + CapJS = Working Waiting list to CSV with no external APIs" >}}
+  {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="Simple Waiting List Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NextJS + CapJS = Working Waiting list to CSV with no external APIs" >}}
 {{< /cards >}}
 
-![CapJS + NextJS Working](/blog_img/dev/nextjs/capjs-nextjs-pow.png)
+I created this in the middle of the [last real estate updates post](https://jalcocert.github.io/JAlcocerT/real-estate-landing/#the-stack):
+
+![CapJS + NextJS Working as a Simple Waiting List](/blog_img/dev/nextjs/capjs-nextjs-pow.png)
+
+It's a clear example that, if you know what you are doing (at least vibe coding with the right fwk & instructions), you can get a: Cool UI/UX for Web, Admin Panel, with no external APIs, and a working waiting list to CSV for you to process later on.
 
 #### Landing Page for your SaaS
 
@@ -255,6 +275,15 @@ I have added few shortcodes/components: *like [whatsap bouble](https://github.co
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
 {{< /cards >}}
+
+Also, thanks to have tinkered with Nuxt (Vue) recently, got to know a very cool one: https://github.com/antfu/vue-starport
+
+https://jalcocert.github.io/JAlcocerT/open-source-photo-gallery/
+
+https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/
+
+![CF R2 Pricing](/blog_img/web/agujapunto-r2-firebase/r2-101.png)
+
 
 #### Podcasts
 
