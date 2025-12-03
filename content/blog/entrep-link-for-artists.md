@@ -189,12 +189,6 @@ Create a Landing Page based on NextJS with a cool and modern UI
 
 There will be a login button that directs to `/login` from which via better-auth and a sqlite with a unique username and password provided as per .env that is the one who can access the `/admin`
 
-Once we are logged in we can add into a folder `.mp3` with audios and a `podcast.json` with the podcast metadata, like its name, description, cover image, etc.
-
-This information is then showed in the main page `/` and the `/podcast-name` page.
-
-On the main page there will be a button to load more podcasts (by default it will just show 1, this has to be an environment variable to be tweaked)
-
 Include a `dockerfile` and `docker-compose.yml` that will control the title, description, open-graph image, favicon location and other global website variables via environment variables.
 
 Create also a makefile with the following commands:
@@ -233,12 +227,18 @@ git init && git add . && git commit -m "Initial commit: simple landing website" 
 
 Vibe coded it today, placed into [this previous post](https://jalcocert.github.io/JAlcocerT/micro-saas/) during my too optimistic period of 1 post a day earlier this year.
 
-
-https://jalcocert.github.io/JAlcocerT/micro-saas/#creating-a-quick-landing
+<!-- ![Make Landing - Simple UI via TailwindCSS](/blog_img/shipping/make-landing2.png) -->
 
 {{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/micro-saas/#creating-a-quick-landing" title="NEW - Make landing" image="/blog_img/shipping/make-landing2.png" subtitle="Landing Page x TailWind x VanillaJS x email to SQLITE" >}}
   {{< card link="https://github.com/JAlcocerT/make-landing" title="NEW - Make landing" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Modern Landing Page x NextJS x AuthJS x Waiting List to SQLITE x ..." >}}
 {{< /cards >}}
+
+
+For sth very quick and simple VanillaJS is enough, but if you really want to put a service behind, like users editing their own content etc...
+
+
+https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
 
 
 ```sh
@@ -249,6 +249,8 @@ make help
 ```
 
 > This is how easy is to go today beyond WP and Elementor!
+
+> > And is not a bad niche at all, as I havent seen any Selfhostable SaaS for this kind of service with hosted version for money
 
 
 ##### Status Pages
@@ -300,7 +302,7 @@ There are other cool ones like:
 
 You need to provide your contact details to get it for free :)
 
-![alt text](/blog_img/shipping/astro-ebook-subscribe.png)
+![Astro book Theme UI](/blog_img/shipping/astro-ebook-subscribe.png)
 
 #### Obfuscated web/book pages
 

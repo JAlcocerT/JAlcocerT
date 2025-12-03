@@ -6,6 +6,11 @@ next: docs/
 draft: false
 ---
 
+If you are a photographer or just like to go on adventures, chances are you have a camera and a smartphone.
+
+
+---
+
 The best open source background removal tool currently known is **withoutbg**, an open-source application that works locally on your device without uploading images to the cloud, ensuring privacy.
 
 It offers a Python package and an API and is available under the MIT license. 

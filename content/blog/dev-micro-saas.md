@@ -2,7 +2,7 @@
 title: "From idea to Launch. Building a Landing+MicroSaaS"
 date: 2025-09-23T08:20:21+01:00
 draft: false
-tags: ["Firebase","QuantUX","Firecrawl","Status Pages","Go Clone","Make Landing"]
+tags: ["Firebase","QuantUX","Firecrawl","Status Pages","Go Clone","Make-Landing"]
 url: 'micro-saas'
 description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Features) to launch fast'
 ---
@@ -68,14 +68,16 @@ And a landing webpage is actually what a lot of people outthere are looking for.
 
 
 
-{{< details title="Vibe Coding a Modern Landing Page x Shadcn x AuthJS | Setup  📌" closed="true" >}}
+{{< details title="Vibe Coding a Modern Landing Page x TailwindCSS x VanillaJS | Setup  📌" closed="true" >}}
 
 Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
 
 ```md
 Create a Landing Page based on NextJS with a cool and modern UI
-...
+...after talking with gemini, it directed me to go for vanillajs instead of a full fledged framework for now
 ```
+
+See the conversation here and the resulting z-brd.md file.
 
 ```sh
 #sudo apt install gh
@@ -83,14 +85,24 @@ gh auth login
 #gh repo create make-podcast --private --source=. --remote=origin --push
     
 git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create make-landing --private --source=. --remote=origin --push
+##du -sh .
 ```
+
+This is just a ~80mb repo!
 
 {{< /details >}}
 
+![Make Landing - Simple UI via TailwindCSS](/blog_img/shipping/make-landing2.png)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/make-landing" title="NEW - Make landing" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for a Modern Landing Page" >}}
 {{< /cards >}}
+
+
+```sh
+git clone https://github.com/JAlcocerT/make-landing.git
+#make help
+```
 
 #### OpenLovable
 
