@@ -484,7 +484,7 @@ Then, Try with:
 
 ### The Small Web
 
-A very interesting concept, for **minimalistic sites**:
+A very interesting concept, for **[minimalistic](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/) sites**:
 
 * https://erikjohannes.no/posts/20231122-places-to-discover-the-small-web/
 * https://1mb.club/

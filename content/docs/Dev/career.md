@@ -30,9 +30,9 @@ There are many **unknown unknowns** in a career.
 
 As someone said: *we can just trace the dots backwards*.
 
-For the ones that would like to share their experience, [creating and publishing an ebook](https://jalcocert.github.io/JAlcocerT/cool-ebooks/) is quite simple.
+For the ones that would like to share their experience, [creating and publishing an ebook](https://jalcocert.github.io/JAlcocerT/cool-ebooks/) is quite **simple**.
 
-So is preparing your CV and your interviews:
+So is preparing your **CV and your interviews**:
 
 
 {{< cards >}}

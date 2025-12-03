@@ -1,5 +1,5 @@
 ---
-title: "Websites - Astro "
+title: "Websites - Astro"
 draft: false
 url: 'create-your-website-astro-ssg'
 type: docs
@@ -13,8 +13,10 @@ Looking for creating cool and responsive web designs?
 
 **Astro** can get you there very quickly.
 
+New to SSGs and ASTRO?
+
 {{< callout type="info" >}}
-New to SSGs and ASTRO? See the [**101 Astro** Guide](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
+See the [**101 Astro** Guide](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
 {{< /callout >}}
 
 
@@ -58,6 +60,8 @@ Find astro themes at: https://astro.build/themes/
 
 * [Astrothemes.club](https://astrothemes.club/free-astro-themes)
 * https://statichunt.com/ or https://github.com/statichunt
+
+Links/Bento
 
 ### Photo Gallery Themes
 
@@ -164,19 +168,13 @@ This one has a blog which can be filtered per tags:
 
 ### Services
 
-#### Restaurants
+Restaurants
 
-1. https://github.com/moonbe77/fresh_bite
+Artists / Modelling
 
-> Unlicensed | Restaurant website template
+CV Themes
 
-2. https://github.com/unfolding-io/Astrorante?ref=astrothemes.club
-
-* Very interesting **video**, as soon as you enter
-* MultiLang (i18n)
-
-> AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, **Storyblok CMS**, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
-
+Links / Bento
 
 
 #### Weddings
@@ -187,33 +185,6 @@ This one has a blog which can be filtered per tags:
 {{< /cards >}}
 
 
-#### Modelling
-
-1. https://github.com/iamnyasha/minimma
-
-> MIT | Interesting and simple site
-
-
-### CV Themes
-
-If you are looking to impress with a new curriculum, why not doing it as a web?
-
-1. https://github.com/KonradSzwarc/devscard
-
-> MIT | A fully customizable template to create your online (and paper) resume without writing a single line of code.
-
-2. https://github.com/mmouzo/astro-cv-esquelete
-
-> MIT | A free, easy-to-use CV template with a clean design. Just fill in your details and you're ready to go!
-
-
-### Links / Bento
-
-1. https://github.com/DBozhinovski/astro-theme-ltree
-
-> An Astro theme that replicates Linktree _and_ Linkinbio rolled in one. Optional TinaCMS on top.
-
-### Presentations with Astro
 
 ### Product
 
@@ -236,20 +207,20 @@ If you are looking to impress with a new curriculum, why not doing it as a web?
 
 > 🌟 Build beautiful, accessible, high-performance documentation websites with Astro
 
-### Startup
-
-1. https://github.com/matt765/Tailcast?ref=statichunt.com
-
-> MIT
-
 
 ### Deploy Astro
+
+Select any of these [website deployment methods](https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method)
 
 <!-- ![alt text](/blog_img/web/astro-gitlab-cloudflarepages.png) -->
 
 {{< cards >}}
-  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="NGINX on VPS" image="/blog_img/web/astro-gitlab-cloudflarepages.png" subtitle="With Cloudflare" >}}
+  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="NGINX on VPS" image="/blog_img/selfh/hetzner-sharedcpu.png" subtitle="Free Static hosting vs VPS hosting" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#how-to-deploy-ssgs-link-in-bio/" title="Cloudflare x Gitlab" image="/blog_img/web/astro-gitlab-cloudflarepages.png" subtitle="Deploying Astro with CI/CD" >}}
+{{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG Static Hosting | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ---
@@ -334,7 +305,7 @@ I discovered the following in a [gh discussion](https://github.com/withastro/sta
 You can create a astro component: `DockerCompose.astro`
 
 
----js
+```js
 // DockerCompose.astro - Fetches and displays a docker-compose.yml file
 // Usage: <DockerCompose url="URL_TO_RAW_GITHUB_CONTENT" />
 
@@ -429,3 +400,4 @@ const dockerComposeContent = await response.text();
     }
   }
 </style>
+```

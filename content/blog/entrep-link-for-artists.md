@@ -80,6 +80,10 @@ I made couple of posts about ssg **themes for links**:
   {{< card link="https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/" title="Links with HUGO LYNX Theme" image="/blog_img/web/WebsSnapshots/Web_PortfolioLinks.png" subtitle="Collection of important Links on Github Pages" >}}             
 {{< /cards >}}
 
+A Theme that [brings TinyCMS support and that i tried](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/#tinacms) is: https://github.com/DBozhinovski/astro-theme-ltree
+
+> An Astro theme that replicates Linktree _and_ Linkinbio rolled in one. Optional TinaCMS on top.
+
 And recently I found about:
 
 * https://github.com/francosuarez-dev/artistree
@@ -165,13 +169,68 @@ A landing as companion for a link website does not have to be a multi-page one t
 
 ##### Vibe Coded Landing Pages
 
-https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#conclusions
+This time, I wanted something quick with **NextJS**, and to try[ from the UI/X side **shadcn/ui**](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#conclusions) and from the backend the **authJS** instead of the [last MUI + better auth x server](https://jalcocert.github.io/JAlcocerT/make-podcast/#auth-via-server-auth).
 
-This time, I wanted something quick with NextJS, and to try from the UI/X side shadcn/ui and from the backend the authJS.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs Be | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+So taking the last learnings from [here](https://jalcocert.github.io/JAlcocerT/make-podcast/#creating-a-podcast-platform), I prepared:
+
+
+{{< details title="Vibe Coding a Modern Landing Page x Shadcn x AuthJS | Setup  📌" closed="true" >}}
+
+Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
 
 ```md
+Create a Landing Page based on NextJS with a cool and modern UI
 
+There will be a login button that directs to `/login` from which via better-auth and a sqlite with a unique username and password provided as per .env that is the one who can access the `/admin`
+
+Once we are logged in we can add into a folder `.mp3` with audios and a `podcast.json` with the podcast metadata, like its name, description, cover image, etc.
+
+This information is then showed in the main page `/` and the `/podcast-name` page.
+
+On the main page there will be a button to load more podcasts (by default it will just show 1, this has to be an environment variable to be tweaked)
+
+Include a `dockerfile` and `docker-compose.yml` that will control the title, description, open-graph image, favicon location and other global website variables via environment variables.
+
+Create also a makefile with the following commands:
+
+* `make help` - Show available commands
+* `make install` - Prepare the dependencies for local development
+* `make dev` - Run development server
+* `make container` - Build and Run in Docker container
 ```
+
+> This time I was more specific than others on the [UI, with **MUI** ](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#material-ui---mui)
+
+> > Also, [MIU has now its llm.txt](https://mui.com/material-ui/llms.txt)
+
+Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined already with Gemini is clear enough.
+
+If it is clear define the `z-development-plan.md` and proceed with the development phases.
+
+```sh
+# git init
+# git branch -m main
+# git config user.name
+# git config --global user.name "JAlcocerT"
+# git config --global user.name
+# git add .
+# git commit -m "Initial commit: Starting simple make podcast platform"
+
+#sudo apt install gh
+gh auth login
+#gh repo create make-podcast --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create make-landing --private --source=. --remote=origin --push
+```
+
+{{< /details >}}
+
 
 
 ```sh
@@ -284,6 +343,12 @@ You can also bring your [MailerLite](https://jalcocert.github.io/JAlcocerT/maile
 
 Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery).
 
+I dont need to tell you why you need a photo centered link to your own photo gallery: *Im just here to tell you that you can*
+
+* https://github.com/iamnyasha/minimma
+
+> MIT | Interesting and simple Photo Centered Astro Theme
+
 But Ive been playing around quite a lot to get proper ig like galleries for real estate and for bloggers to have a cool place to publish.
 
 <!-- 
@@ -349,7 +414,11 @@ This is how to use the astropod project step by step:
 If you have a podcast, chances are that you are **doing public speaking** out there.
 
 
-https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="PPTs | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/about-inflation/#a-cv-via-yamlresume-vs-overleaf" title="CVs as a Code via YAML | Post ↗" >}}
+{{< /cards >}}
+
 
 ##### PPT References
 
@@ -391,20 +460,25 @@ Oh I wrote tech talks instead of just motivational speaches: *because you are an
 
 In case you are not, you could also plug as one of the links **your updated CV**:
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Setup Formbricks | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/yamlresume" title="YAML Resume | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-If you have been having a long experience, you should keep track of that
+If you have been having a long experience, you should [keep track of that](https://github.com/JAlcocerT/cv-laitex/tree/main/MyExperience)
 
-https://github.com/JAlcocerT/cv-laitex
 
 > Just remember that one thing are beautiful CVs and other [machine readable cvs](https://github.com/JAlcocerT/cv-laitex/tree/main/CV_Parsing)
+
+If you are looking to impress with a new curriculum, why not doing it as a **web CV**?
+
+1. https://github.com/KonradSzwarc/devscard
+
+> MIT | A fully customizable template to create your online (and paper) resume without writing a single line of code.
+
+2. https://github.com/mmouzo/astro-cv-esquelete
+
+> MIT | A free, easy-to-use CV template with a clean design. Just fill in your details and you're ready to go!
+
 
 --- 
 
@@ -469,9 +543,7 @@ curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect
   {{< card link="https://search.google.com/" title="How is your site SEO doing? Google Search ↗" >}}
 {{< /cards >}}
 
-
 You will want to know **how your Website performs**:
-
 
 ![Carbon Comparison of Websites](/blog_img/web/carbon-comparison.png)
 
@@ -488,6 +560,7 @@ You will want to know **how your Website performs**:
 
 ![Cloudflare Radar](/blog_img/web/cf-radar.png) -->
 
+> And maybe let others [place ads and get paid](https://jalcocert.github.io/JAlcocerT/trying-nuxt-themes/#adding-addsense)
 
 ### Vibe Coding is...old?
 

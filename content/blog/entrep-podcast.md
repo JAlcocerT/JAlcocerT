@@ -269,9 +269,11 @@ But the Better Auth project looks like sth interesting to tinker with.
 
 #### Auth via Server Auth
 
-https://www.better-auth.com/docs/adapters/sqlite
+* https://www.better-auth.com/docs/adapters/sqlite
 
-https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 🍪 HTTP Cookie vs. JWT: The Analogy
 

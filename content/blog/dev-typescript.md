@@ -171,6 +171,7 @@ choco install gh
 gh auth login
 ```
 
+---
 
 ## FAQ
 

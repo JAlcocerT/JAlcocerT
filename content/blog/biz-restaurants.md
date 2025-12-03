@@ -7,6 +7,19 @@ description: "Astro Websites for Restaurants. Million dollar idea in the Mediter
 url: "webs-for-restaurants"
 ---
 
+1. https://github.com/moonbe77/fresh_bite
+
+> Unlicensed | Restaurant website template
+
+2. https://github.com/unfolding-io/Astrorante?ref=astrothemes.club
+
+* Very interesting **video**, as soon as you enter
+* MultiLang (i18n)
+
+> AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, **Storyblok CMS**, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
+
+
+
 https://github.com/hydra-billing/homs
 
 

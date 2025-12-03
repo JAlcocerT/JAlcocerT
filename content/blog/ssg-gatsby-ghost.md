@@ -363,7 +363,7 @@ See what [Mozilla thinks about them](https://developer.mozilla.org/en-US/docs/Le
 
 * For IODOCTOR - https://github.com/mickasmt/astro-nomy
 
-* For IOT IOTECHCRAFTS - https://github.com/matt765/Tailcast
+* For IOT IOTECHCRAFTS - https://github.com/matt765/Tailcast - Also MIT Licensed
   
 Also, business **landing pages** for [small creators](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/):
 

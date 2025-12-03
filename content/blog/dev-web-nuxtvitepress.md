@@ -544,7 +544,6 @@ google.com, pub-123456789, DIRECT, abcd124fgthrk9876
   {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/#ab-with-adsense" title="AB Testing and adsense" image="/blog_img/outro/ads-experiments.png" subtitle="Experiments with Google adsense" >}}
 {{< /cards >}}
 
-
 You can plug google adsense not only to Nuxt, but to [any other website you build](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/#other-websites-ive-built).
 
 {{< details title="How to add `ads.txt` to a HUGO Website - Google Adsense 📌" closed="true" >}}

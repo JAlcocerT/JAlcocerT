@@ -9,17 +9,23 @@ sidebar:
 
 Why bother with HUGO SSG?
 
-Well, you just write markdown and when you get tired of a theme, you can just [change to another HUGO theme](https://fossengineer.com/changing-hugo-theme/) and keeping all your data as is, flat files.
+Well, you just write markdown and when you get tired of a theme, you can just [change to another HUGO theme](https://fossengineer.com/changing-hugo-theme/) and keeping all your data as is: **flat files**.
 
 Pretty awsome, ah?
 
-Well, I havent mentioned yet that *potentially*, you dont have to pay for [hosting these sites](https://fossengineer.com/alternatives-for-hosting-static-websites/).
+This means that you wont have to worry about [databases](https://jalcocert.github.io/JAlcocerT/databases/), their [hosting](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/) neither their backup.
+
+Well, I havent mentioned yet that *potentially*, you dont have to pay for [hosting these sites](#deploying-hugo-static-sites).
+
+New to SSGs and HUGO?
 
 {{< callout type="info" >}}
-New to SSGs and HUGO? See the [**101 HUGO** Guide](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)
+See the [**101 HUGO** Guide](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)
 {{< /callout >}}
 
 ## HUGO Themes
+
+This is the typical file structure of a HUGO Theme:
 
 {{< filetree/container >}}
   {{< filetree/folder name="content" >}}
@@ -74,9 +80,20 @@ You can clone this HUGO site and run it locally [with HUGO v0.117](https://jalco
 
 ### Deploying HUGO Static Sites
 
-{{< callout type="info" >}}
-You can do **host HUGO for free** with [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/)
-{{< /callout >}}
+Select any of these [website deployment methods](https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method)
+
+For example, you can do **host HUGO for free** with [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/)
+
+<!-- ![alt text](/blog_img/web/astro-gitlab-cloudflarepages.png) -->
+
+{{< cards >}}
+  {{< card link="https://fossengineer.com/alternatives-for-hosting-static-websites/" title="NGINX on VPS" image="/blog_img/selfh/hetzner-sharedcpu.png" subtitle="Free Static hosting vs VPS hosting" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#how-to-deploy-ssgs-link-in-bio/" title="Cloudflare x Gitlab" image="/blog_img/web/astro-gitlab-cloudflarepages.png" subtitle="Deploying Astro with CI/CD" >}}
+{{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG Static Hosting | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### HUGO with Github Pages & CICD
 
@@ -107,6 +124,8 @@ Shortcodes for HUGO are like components for Astro.
 
 They help us provide interesting funcitonality to our themes.
 
+So you create them once, and reuse forever.
+
 1. If you are using HUGO, embed your images with [this **shortcode**](https://raw.githubusercontent.com/gohugoio/hugo/master/tpl/tplimpl/embedded/templates/shortcodes/figure.html)
 
 2. You can also embed [GISTS with this shortcode](https://raw.githubusercontent.com/gohugoio/hugo/refs/heads/master/tpl/tplimpl/embedded/templates/shortcodes/gist.html)
@@ -115,8 +134,10 @@ They help us provide interesting funcitonality to our themes.
 
 Just use it like so in your markdown ,**example with the gist**:
 
-` {{< gist "username" "gistID" "filename.js" >}} `
-` {{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks - PayoutRatioEvolution.JPG">}} `
+```md
+{{< gist "username" "gistID" "filename.js" >}}
+{{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks - PayoutRatioEvolution.JPG">}}
+```
 
 * First parameter (jalcocert): This is the GitHub username or organization that owns the Gist.
 * Second parameter (879fecd6ae9bccaa0175d1c180a032cd): This is the unique Gist ID.
@@ -127,6 +148,8 @@ Just use it like so in your markdown ,**example with the gist**:
 4. Even bring mastodon info: https://magnus919.com/notes/embed-mastodon-shortcode/
 
 5. Pull info from `.yml` into your `.md` posts with [such shortcode](https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/#shortcode-to-parse-yml)
+
+6. Bring audio via ttps://github.com/JAlcocerT/JAlcocerT/blob/main/layouts/shortcodes/audio.html as seen [here](https://jalcocert.github.io/JAlcocerT/interesting-apis/#11labs)
 
 ### MermaidJS and ChartJS
 
