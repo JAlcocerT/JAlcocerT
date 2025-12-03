@@ -10,7 +10,7 @@ You might be a selfhoster looking for the perfect [DB for your homelab](https://
 
 A dev looking for that perfect framework and database to [bootstrap](https://jalcocert.github.io/JAlcocerT/whats-boostrap/) that idea.
 
-Or *,just'* in a D&A career.
+Or *,just'* databases for a D&A career.
 
 
 ## Tools for DBs

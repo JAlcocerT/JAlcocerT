@@ -104,7 +104,7 @@ Thanks to [Jims Garage](https://www.youtube.com/watch?v=CmUzMi5QLzI) and Chrstia
 
 NGINX can be used together with Authelia, which provides potentially, an authentication layer.
 
-But more than that, NGINX Proxy Manager works well with sub.sub.domains:
+But more than that, NGINX Proxy Manager **works well with sub.sub.domains**:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-weddings/#conclusions" title="NPM sub sub domain working" image="/blog_img/selfh/nginx-cloudflare-filebrowser.png" subtitle="Learnings from setting https on the Wedding Project" >}}
@@ -123,7 +123,7 @@ Example project working with NGINX Proxy Manager:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Security/Proxy/nginx_docker_compose.yaml" title="NginxPM Docker Config File 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/HomeLab/blob/main/nginx" title="NGINX HomeLab Setup | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/nginx" title="NGINX HomeLab Setup | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 

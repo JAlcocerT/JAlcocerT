@@ -90,6 +90,22 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 ### HomeLab Commands
 
 
+{{% details title="PRO SelfHosting and HomeLab CLI 🚀" closed="true" %}}
+
+
+```sh
+df -h
+#du -sh . #space under current folder
+```
+
+```sh
+htop
+#btop
+```
+
+{{% /details %}}
+
+
 
 ### What do I like to SelfHost?
 

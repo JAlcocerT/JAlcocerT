@@ -36,7 +36,13 @@ You can try with a **NetData** or a [custom Grafana dashboard](https://jalcocert
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/netdata" title="Net-Data Monitoring | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-![Netdata Updated UI](/blog_img/selfh/HomeLab/netdata.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#netdata-and-grafana" title="Netdata Monitoring" image="/blog_img/selfh/HomeLab/netdata.png" subtitle="OpenSpeedTest and a TPLink" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Testing a Travel Router" image="/blog_img/hardware/TPLink4G-SpeedTestTraker.png" subtitle="SpeedTest Tracker on a GL MT3000" >}}
+{{< /cards >}}
+<!-- 
+![Netdata Updated UI](/blog_img/selfh/HomeLab/netdata.png) -->
 
 Or just **with Beszel**:
 

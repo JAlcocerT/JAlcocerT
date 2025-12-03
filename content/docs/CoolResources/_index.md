@@ -93,4 +93,8 @@ These web-apps are cool and selfhostable:
 
 3. For PDF Conversion: https://stirling.com/app/
 
+You can also **sign PDFS** with: https://github.com/docusealco/docuseal
+
+> agpl 3.0 | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ 
+
 4. Diagrams with: https://excalidraw.com/ or drawio

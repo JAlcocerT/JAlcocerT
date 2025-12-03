@@ -31,17 +31,26 @@ Rscript Z_ebooks/render.R \
   --cover Z_ebooks/sample-cover.png
 ```
 
+<!-- ![Astro landing page book - Sell your ebook UI](/blog_img/shipping/astro-sell-your-ebook.png)
 
-![Astro landing page book - Sell your ebook UI](/blog_img/shipping/astro-sell-your-ebook.png)
+ -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#using-sell-your-ebook" title="Astro x eBook PDF Landing" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="Share your ebook with its own landing" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Create a web/ook WebApp" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="Show or Obfuscate your ebook content" >}}
+{{< /cards >}}
+
+You could think about using your books as lead magnets:
 
 ![alt text](/blog_img/shipping/astro-ebook-subscribe.png)
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
-You can also **sign PDFS** with: https://github.com/docusealco/docuseal
 
-> agpl 3.0 | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ 
-
-
+> Consider that there are [interesting tools](https://jalcocert.github.io/JAlcocerT/docs/coolresources/#interesting-webapps) to work with PDFs!
 
 ### Epubs
 
