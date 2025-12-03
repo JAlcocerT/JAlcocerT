@@ -2,7 +2,7 @@
 title: "A Podcast for all with Anti-Gravity"
 date: 2025-11-28T08:20:21+01:00
 draft: false
-tags: ["Web","Better-Auth x Server Auth","Make-Podcast","SaaS Vibe Coding","FFMPeg Recording"]
+tags: ["Web","Better-Auth x Server Auth","Make-Podcast","SaaS Vibe Coding","MUI","FFMPeg Recording"]
 description: 'Using astro and '
 url: 'make-podcast'
 ---
@@ -89,10 +89,10 @@ From the [latest vibe coding learnings](https://jalcocert.github.io/JAlcocerT/re
 
 ```
 * Built in auth based on `.env`
-* 
+* MUI...
 ```
 
-How about creating a: **make-podcast**?
+How about creating a: **make-podcast** via agents?
 
 
 {{< details title="Vibe Coding a Podcast Platform | 101 Setup  📌" closed="true" >}}
@@ -120,10 +120,10 @@ Create also a makefile with the following commands:
 * `make container` - Build and Run in Docker container
 ```
 
-> This time I was more specific than others on the [UI, with MUI ](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#material-ui---mui)
+> This time I was more specific than others on the [UI, with **MUI** ](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#material-ui---mui)
 
 
-> > Also, [MIU has now llm.txt](https://mui.com/material-ui/llms.txt)
+> > Also, [MIU has now its llm.txt](https://mui.com/material-ui/llms.txt)
 
 Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined already with Gemini is clear enough.
 
@@ -174,6 +174,8 @@ docker stop $(docker ps -a -q) #stop all
 docker system prune --all
 ```
 
+I had to mention the classic 'make it look even more modern' so that it wouldnt be too simple.
+
 
 ---
 
@@ -183,7 +185,7 @@ In case you didnt know, you can convert your youtube channel into a podcast.
 
 And also, every youtube channel has an associated RSS feed to notify you about new videos coming out.
 
-> YOu can leverage that to get that cool astro component showing on your website what was your last video uploaded :)
+> Yuu can leverage that to get that cool astro component showing on your website what was your last video uploaded :)
 
 There are also **selfhostable Podcasts**:
 

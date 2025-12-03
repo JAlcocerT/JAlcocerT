@@ -1,10 +1,10 @@
 ---
-title: "Links for Artists"
+title: "Links and Landings for Artists"
 date: 2025-11-30T08:20:21+01:00
 draft: false
 tags: ["Web Analytics vs Link Analytics","BaaS with yaml","Vibe Coding vs Spec Driven Development"]
 url: 'link-artists'
-description: 'Dear famous people, where are you going next? About B2C and revealed preferences.'
+description: 'Dear artists, where are you going next? About B2C and revealed preferences.'
 ---
 
 
@@ -35,6 +35,8 @@ You will need to let the world know about your work/brand and where to find it.
 That might be the thought of someone still trying to sell to the B2C world.
 
 > As of today, im not sure if selling to 9-5 *,grey'* people is the best niche though
+
+> > But hey, you got those likes and you are famous, keep reading :)
 
 
 
@@ -97,6 +99,7 @@ git clone https://github.com/JAlcocerT/artistree
 cd artistree
 make help
 #make install & make dev
+#make container-dev
 ```
 
 Which can be an interesting compaion for LittleLink, which allow to builds links websites wo/code:
@@ -152,18 +155,41 @@ It does not have to be the Lando Norris Page, neither the genkinfy.
 
 But the aster you go from Idea to WaitingList/Landing *depending on your popularity* and to deployment into VPS, the higher changes to get Stripe notifications.
 
-* https://builtwith.com/theinstituteofskills.com/
-* https://www.similarweb.com/website/theinstituteofskills.com/#traffic
-* https://radar.cloudflare.com/scan?url=https://fossengineer.com/
-
-![Cloudflare Radar](/blog_img/web/cf-radar.png)
-
 > It detects the framework, the web analytics, the ads...
 
 A landing as companion for a link website does not have to be a multi-page one though:
 
 ![DataNova Theme](/blog_img/web/astro/astro-datanova-animated-graph.png)
-https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/
+
+> I migrated my brand to that data centered landing (and more) theme on [this post](https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/)
+
+##### Vibe Coded Landing Pages
+
+https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#conclusions
+
+This time, I wanted something quick with NextJS, and to try from the UI/X side shadcn/ui and from the backend the authJS.
+
+```md
+
+```
+
+
+```sh
+git clone https://github.com/JAlcocerT/make-landing
+cd make-landing
+make help
+#make install && make dev
+```
+
+
+##### Status Pages
+
+If you have few SaaS within your offer: you will want to prove the uptime status of your services
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" >}}
+{{< /cards >}}
+
 
 
 #### eBooks Pages
@@ -318,6 +344,45 @@ This is how to use the astropod project step by step:
 > > See how to bring audio via [Hugo components](https://github.com/JAlcocerT/JAlcocerT/tree/main/static/audio) as seen [here](http://localhost:1313/interesting-apis/#11labs)
 
 
+#### Tech Talks
+
+If you have a podcast, chances are that you are doing public speaking out there.
+
+##### PPT References
+
+Who could have guess that you can do cool ppts as code:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/" title="Sample Tech Talk" image="/blog_img/DA/ppt/slidev-editor-viewer.png" subtitle="Using SliDev to create PPTs" >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor" title="SliDev Editor Repo" image="/blog_img/DA/ppt/slidev-editor.png" subtitle="NextJS ToastUI and SliDev ppts, with historical tech talks..." >}}
+{{< /cards >}}
+
+And have them referenced into a repo to keep the history
+
+While sharing the ppt as one of the links :)
+
+##### Last Video Uploaded
+
+Chances are also that you are recording the sessions and uploading them to youtube.
+
+Get the last youtube video of your channel like: *just take the ChannelID*
+
+{{< cards cols="1" >}}
+  {{< card link="https://youtube.com/@JAlcocerTech" title="My YT Tech Channel ↗" >}}
+{{< /cards >}}
+
+1. Go to youtube studio and you will get the YT channelID
+2. Then, use it into your link kindofwebsite via
+
+<!-- 
+https://studio.youtube.com/channel/UCPPMA8ZEusAe5dVH6PbjZFA/videos/ -->
+
+```sh
+curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCPPMA8ZEusAe5dVH6PbjZFA"
+#curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCPPMA8ZEusAe5dVH6PbjZFA" | grep -oP '(?<=<title>).*?(?=</title>)' | head -5
+```
+
+
 --- 
 
 ## Conclusions
@@ -391,6 +456,14 @@ You will want to know **how your Website performs**:
 
 
 ![Cloudflare Radar UI](/blog_img/web/cf-radar.png)
+
+
+* https://builtwith.com/theinstituteofskills.com/
+* https://www.similarweb.com/website/theinstituteofskills.com/#traffic
+<!-- 
+* https://radar.cloudflare.com/scan?url=https://fossengineer.com/
+
+![Cloudflare Radar](/blog_img/web/cf-radar.png) -->
 
 
 ### Vibe Coding is...old?

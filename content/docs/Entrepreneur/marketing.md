@@ -98,7 +98,7 @@ curl -s https://podcast.jalcocertech.com/rss.xml | head -10
 
 {{< youtube "mDMGtMOx-Fk" >}}
 
-Youtube is one of the sites providing RSS feeds for the channels:
+Youtube is one of the sites providing **RSS feeds for the channels**:
 
 So we can pull the last video of a channel like: *just take the ChannelID*
 

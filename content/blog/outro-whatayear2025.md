@@ -6,6 +6,8 @@ tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-2025'
 ---
+<!-- 
+https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
 
 [Computer consultancy activities](https://ariregister.rik.ee/eng/company/16864984/iotechcrafts-O%C3%9C?lang=en)
 
