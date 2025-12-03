@@ -2,21 +2,20 @@
 title: "From idea to Launch. Building a Landing+MicroSaaS"
 date: 2025-09-23T08:20:21+01:00
 draft: false
-tags: ["Firebase","QuantUX","Firecrawl","SlubneChwile","Status Pages","Go Clone"]
+tags: ["Firebase","QuantUX","Firecrawl","Status Pages","Go Clone","Make Landing"]
 url: 'micro-saas'
 description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Features) to launch fast'
 ---
 
 **Tl;DR**
 
-Its all about that straight to the point landing.
+Its all about that **straight to the point landing page**.
 
 > From this meeting/post: *No tiene q aer la mejor solucion tecnica, pero la q arregle el pain point.*
 
 +++ [status pages](#conclusions) *for any service you provide*
 
-> > lets just make the very clear landing that improves the status of  SlubneChwile
-
+> > Lets just make the very clear landing that could improve the status of SlubneChwile
 
 And what is so complicated to create one, even when we have: https://github.com/firecrawl/open-lovable?tab=readme-ov-file
 
@@ -40,9 +39,7 @@ I got the Micro SaaS concept into my mind, from the theme:
 
 Because there are others themes, like **Saasify** that I used as a PoC:
 
-Or
-
-* https://github.com/eavinti/astro-landing
+Or like:  https://github.com/eavinti/astro-landing
 
 
 **Cool SaaS SignUps/In**
@@ -68,6 +65,32 @@ Some examples I found:
 Having a starting point with an idea is great.
 
 And a landing webpage is actually what a lot of people outthere are looking for.
+
+
+
+{{< details title="Vibe Coding a Modern Landing Page x Shadcn x AuthJS | Setup  📌" closed="true" >}}
+
+Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
+
+```md
+Create a Landing Page based on NextJS with a cool and modern UI
+...
+```
+
+```sh
+#sudo apt install gh
+gh auth login
+#gh repo create make-podcast --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create make-landing --private --source=. --remote=origin --push
+```
+
+{{< /details >}}
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/make-landing" title="NEW - Make landing" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for a Modern Landing Page" >}}
+{{< /cards >}}
 
 #### OpenLovable
 

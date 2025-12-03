@@ -9,14 +9,13 @@ url: 'pro-agency-automation'
 
 **Tl;DR**
 
-If you dont have anything valuable to automate, maybe others do and need your help.
-
+If you dont have anything valuable to automate, maybe others do and need your help ($)
 
 **Intro** 
 
-Just recently I covered how to [build a quick product with auth + a landing](https://jalcocert.github.io/JAlcocerT/micro-saas/)
+Just recently I covered how to [build a quick product with **auth + landing**](https://jalcocert.github.io/JAlcocerT/micro-saas/)
 
-Also, couple of [marketers show me a cool workflow](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/)
+Also, couple of [**marketers** show me a cool workflow](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/)
 
 And I saw this insightful video:
 
@@ -72,19 +71,19 @@ The video emphasizes that the traditional service industry (growth, talent, oper
 
 These agencies combine domain expertise with AI and automation to streamline service delivery, increase margins, and serve more clients efficiently. 
 
-Examples include lead generation, recruiting, marketing, and creative services that utilize AI for prospecting, content creation, and process automation.[1]
+Examples include lead generation, recruiting, marketing, and creative services that utilize AI for prospecting, content creation, and process automation.
 
 ### Why Are They Profitable?
 
 Traditional agencies struggle with low margins (around 20-30%), scalability through hiring, and high competition. 
 
-AI agencies, by automating key processes, can handle more clients per manager, improve outcomes, reduce costs, and offer lower prices or outcome-based pricing models.[1]
+AI agencies, by automating key processes, can handle more clients per manager, improve outcomes, reduce costs, and offer lower prices or outcome-based pricing models.
 
 ### Examples & Success Metrics
 
 - Cold IQ, a lead generation AI agency, generated about $6 million in ARR with only 30-35 employees by heavily automating prospecting and outreach processes.
 - Rocket, a recruiting agency, uses AI to source and deliver better candidates faster.
-- Superside, a broad marketing agency, doubled ARR after implementing AI, and others like the AI SEO system reduce operational costs and increase margins.[1]
+- Superside, a broad marketing agency, doubled ARR after implementing AI, and others like the AI SEO system reduce operational costs and increase margins.
 
 ### Productization & Market Expansion
 Ben highlights the trend of transforming services into self-serve, productized solutions. Examples include Hoppy Copy (newsletter automation), POPAI (video script creation), and Opus Clips (video editing). The core idea is delivering outcomes, not just AI tools, with AI serving as an enabler for better, faster, and cheaper service delivery.[1]
@@ -94,18 +93,26 @@ Ben highlights the trend of transforming services into self-serve, productized s
 - The blue ocean: target underserved niches and small businesses, offering lower-priced, outcome-oriented services that were previously too expensive for traditional agencies.[1]
 
 ### How To Start & Monetize
-Ben recommends combining domain expertise with technical skills or partnering with AI-savvy engineers. Starting as a custom AI automation service targeting agencies or niche markets can build expertise while gradually productizing services into self-serve platforms. Monetization options include retainer-based, outcome-based, and product sales to agencies and end-users alike.[1]
+
+Ben recommends combining domain expertise with technical skills or partnering with AI-savvy engineers. 
+
+Starting as a custom AI automation service targeting agencies or niche markets can build expertise while gradually productizing services into self-serve platforms.
+
+Monetization options include retainer-based, outcome-based, and product sales to agencies and end-users alike.
 
 ### Final Advice
-He stresses the importance of automating key processes, building end-to-end AI systems, and focusing on delivering real business outcomes—like leads, revenue, or brand awareness—rather than just selling AI tools. Targeting smaller or underserved markets with lower prices is a strategic move enabled by automation, creating largely untapped demand.[1]
 
-***
+He stresses the importance of automating key processes, building end-to-end AI systems, and focusing on delivering real business outcomes—like leads, revenue, or brand awareness—rather than just selling AI tools. 
+
+Targeting smaller or underserved markets with lower prices is a strategic move enabled by automation, creating largely untapped demand.[1]
+
 
 This summary encapsulates how AI-powered service agencies are transforming what Ben describes as an "unsexy," low-margin market into highly scalable, profitable ventures leveraging automation and outcome-based strategies.
 
 Here is a breakdown of famous or notable companies operating in each of the three parts of the service industry as per the video, and in the AI automation agency and AI SaaS sectors mentioned:
 
 ### Growth Services (Digital Marketing, Lead Gen, etc.)
+
 - GrowthRocks (London, UK) — Growth hacking agency working with Volvo, FedEx
 - Rockboost (The Netherlands) — Growth hacking, clients include Cisco, Philips, Sony
 - Deviate Labs (Los Angeles, USA) — Consulting for growth marketing
@@ -113,6 +120,7 @@ Here is a breakdown of famous or notable companies operating in each of the thre
 - Voxturr (San Francisco, USA) — Growth backing for startups, SMBs, enterprises[1]
 
 ### Talent Services (Recruitment, Staffing)
+
 - Randstad (Netherlands) — One of the world's largest staffing companies
 - Robert Half — Recruitment specializing in finance, accounting, IT, law
 - ManpowerGroup — Large global workforce provider
@@ -120,6 +128,7 @@ Here is a breakdown of famous or notable companies operating in each of the thre
 - Adecco — Staffing solutions across various industries globally[2][3]
 
 ### Operational Services (Legal, Accounting, Support, Automation)
+
 - Honeywell International Inc. — Operational technology solutions
 - Siemens — Industrial and operational tech services
 - Rockwell Automation — Industrial automation and safety solutions
@@ -127,22 +136,29 @@ Here is a breakdown of famous or notable companies operating in each of the thre
 - Oracle, IBM — Provide operational consulting and tech[4]
 
 ### AI Automation Agencies
+
 - DevsData LLC — AI consulting, machine learning, data science services (NY, Warsaw)
 - AI Superior — AI consulting and automation development (Germany)
 - Automation House — No-code AI automation solutions
 - Integrated Solutions — AI-driven business transformation services[5][6]
 
 ### AI SaaS Companies
+
 - OpenAI — Developer of GPT models and AI SaaS applications
 - Google DeepMind — Advanced AI systems, including AlphaGo and AlphaFold
 - Anthropic — AI safety and SaaS platform with aligned LLMs
 - IBM Watson — AI enterprise software and analytics
 - Databricks — Data engineering and machine learning SaaS platform[7][8][9]
 
-This list reflects key recognizable players in each segment of the service industry and the AI-powered markets highlighted in the video context. Each category features firms focusing on transforming large traditional spaces with technology and AI.[6][9][1][2][4][5][7]
+This list reflects key recognizable players in each segment of the service industry and the AI-powered markets highlighted in the video context. Each category features firms focusing on transforming large traditional spaces with technology and AI.
 
 
 ## Practical Automation in a HomeLab
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/" title="Automation | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/" title="Entrepreneur | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 ### n8n
 
@@ -189,6 +205,10 @@ Once you are logged in to botpress, you can create your chatbots and logic via U
 ---
 
 ## Conclusions
+
+As always, a lot of information to digest.
+
+Do stuff!
 
 ### Use Cases
 

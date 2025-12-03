@@ -231,6 +231,14 @@ git init && git add . && git commit -m "Initial commit: simple landing website" 
 
 {{< /details >}}
 
+Vibe coded it today, placed into [this previous post](https://jalcocert.github.io/JAlcocerT/micro-saas/) during my too optimistic period of 1 post a day earlier this year.
+
+
+https://jalcocert.github.io/JAlcocerT/micro-saas/#creating-a-quick-landing
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/make-landing" title="NEW - Make landing" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Modern Landing Page x NextJS x AuthJS x Waiting List to SQLITE x ..." >}}
+{{< /cards >}}
 
 
 ```sh
@@ -239,6 +247,8 @@ cd make-landing
 make help
 #make install && make dev
 ```
+
+> This is how easy is to go today beyond WP and Elementor!
 
 
 ##### Status Pages
