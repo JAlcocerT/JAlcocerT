@@ -219,6 +219,8 @@ Select any of these [website deployment methods](https://jalcocert.github.io/JAl
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#how-to-deploy-ssgs-link-in-bio/" title="Cloudflare x Gitlab" image="/blog_img/web/astro-gitlab-cloudflarepages.png" subtitle="Deploying Astro with CI/CD" >}}
 {{< /cards >}}
 
+The container artifacts for Astro are very simple:
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG Static Hosting | Docker Config 🐋 ↗" >}}
 {{< /cards >}}

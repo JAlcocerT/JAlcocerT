@@ -24,3 +24,7 @@ With drons we kind of combine it all: electronics, programming, physics and...fu
 To tinker with Computer Vision, you could also use a Pi:
 
 ![Pi4 and its camera](/blog_img/hardware/RPi4_2gb_cam.jpg)
+
+https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/
+
+https://gitlab.com/fossengineer1/cv

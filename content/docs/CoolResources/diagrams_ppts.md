@@ -116,3 +116,6 @@ The free and open source version of Structurizr allows you to view/edit diagrams
     * https://jsulpis.github.io/slides-template/#/
 
 > Minimalist template for creating slides with Reveal.js and Astro
+
+* https://markmap.js.org/repl
+* MermaidJS

@@ -91,8 +91,10 @@ For example, you can do **host HUGO for free** with [Github Pages](https://jalco
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-link-in-bios/#how-to-deploy-ssgs-link-in-bio/" title="Cloudflare x Gitlab" image="/blog_img/web/astro-gitlab-cloudflarepages.png" subtitle="Deploying Astro with CI/CD" >}}
 {{< /cards >}}
 
+See how easy is to deploy HUGO sites inside containers:
+
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG Static Hosting | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-hugo/" title="HUGO SSG Static Hosting | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ### HUGO with Github Pages & CICD

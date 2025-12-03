@@ -355,7 +355,7 @@ Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/J
 
 I dont need to tell you why you need a photo centered link to your own photo gallery: *Im just here to tell you that you can*
 
-* https://github.com/iamnyasha/minimma
+* https://github.com/iamnyasha/minimma - Check this one if you are modelling :)
 
 > MIT | Interesting and simple Photo Centered Astro Theme
 

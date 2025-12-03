@@ -13,10 +13,10 @@ Just go serverless.
 
 
 But before that, understand: serverless it does not mean that there is not a server, it means that you dont care about it.
+
 +++ Using Logto JS SDK with CF Workers (?)
+
 +++ You can even get web analytics to work on Cloudflare Workers
-
-
 
 **Intro**
 
