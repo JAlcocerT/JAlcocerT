@@ -206,7 +206,9 @@ docker run -d --restart always -p 32200:32200 -v ~/.streamrDocker:/home/streamr/
 
 Yes, the Streamr Network provides official Docker container images for running Streamr nodes. You can find these images on Docker Hub under the "streamr" profile, such as the `streamr/node` and `streamr/broker-node` images which are regularly updated.[1][2][3]
 
-Using the Docker image simplifies setup by allowing you to pull and run the node container quickly on any system with Docker installed. You can also persist configuration and wallet data by mounting a local folder into the container.
+Using the Docker image simplifies setup by allowing you to pull and run the node container quickly on any system with Docker installed. 
+
+You can also persist configuration and wallet data by mounting a local folder into the container.
 
 This setup is recommended for running a node to participate in the network and earn DATA tokens.[3][6]
 
@@ -227,7 +229,9 @@ This makes running a Streamr node accessible on standard hardware without manual
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/streamr" title="Streamr | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-As a Streamr operator, you provide bandwidth and computing resources to relay real-time data streams across the decentralized peer-to-peer network. Your node forwards data between publishers and subscribers, ensuring reliable, low-latency delivery of live data.
+As a Streamr operator, you provide bandwidth and computing resources to relay real-time data streams across the decentralized peer-to-peer network.
+
+Your node forwards data between publishers and subscribers, ensuring reliable, low-latency delivery of live data.
 
 Specifically, operators:
 

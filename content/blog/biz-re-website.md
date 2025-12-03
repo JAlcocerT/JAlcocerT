@@ -718,7 +718,6 @@ npx wrangler pages deploy dist # normally will be dist, but whatever <BUILD_OUTP
       {{< card link="https://morita-web.pages.dev//" title="Mental Health Care Site" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="Because the brain is as important as the body" >}}
 {{< /cards >}}
 
-> With an option to plug [adsense](https://adsense.google.com/adsense/) to each of this websites
 
 **Photo centered blogs:**
 

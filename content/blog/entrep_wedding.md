@@ -916,7 +916,7 @@ People that are in such groups, are already *prefiltered* to like certain servic
 
 The other side of the coin.
 
-Same as you can paid cents when placing google adsense on your page...
+Same as you can paid cents when placing google ads on your page...
 
 There are people paying (surprise, *much more*) to place those ads.
 
@@ -1116,7 +1116,7 @@ In summary, Facebook Ads provide a powerful, self-service platform for reaching 
 
 Ive tried these...
 
-From from the other angle, with [adsense](https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/#ab-with-adsense)
+Just that the other angle, with [adsense](https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/#ab-with-adsense): *Letting people to pay google and google to pay me to place ads on a website with traffic.*
 
 {{< details title="Google Ads 101 📌" closed="true" >}}
 

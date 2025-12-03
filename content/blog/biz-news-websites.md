@@ -2,7 +2,7 @@
 title: "Features for a Professional Looking News Website"
 date: 2025-05-16
 draft: false
-tags: ["Web","Astro SSG","Beyond a Journey"]
+tags: ["Web","Astro SSG","Beyond a Journey","Astro News Theme"]
 description: "Creating a News focused Website with App Directory section. Beyond the basics."
 url: 'creating-web-directory-website'
 ---
@@ -301,9 +301,6 @@ But you can also see: Lunr.js, Typesense and [Meili](https://github.com/meilisea
 ### Outro
 
 #### Other Webs Ive Built
-
-1. With an option to plug [adsense](https://adsense.google.com/adsense/) to each of this websites
-
 
 {{< cards >}}
   {{< card link="https://cozyknittingclub.web.app/" title="Content Creator Blog" image="/blog_img/web/WebsSnapshots/Web_CKC.png" subtitle="For an instagramer who loves knitting" >}}

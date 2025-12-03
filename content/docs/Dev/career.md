@@ -28,12 +28,14 @@ Ability to list use cases for Supervised and Unsupervised ML methods, compare th
 
 There are many **unknown unknowns** in a career.
 
-As someone said, we can just trace the dots backwards.
+As someone said: *we can just trace the dots backwards*.
 
-For the ones that would like to share their experience, creating and publishing an ebook is quite simple.
+For the ones that would like to share their experience, [creating and publishing an ebook](https://jalcocert.github.io/JAlcocerT/cool-ebooks/) is quite simple.
+
+So is preparing your CV and your interviews:
 
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
-  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Latex CV with Open AI LLM" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CVs as a Code and Job History" >}}
 {{< /cards >}}

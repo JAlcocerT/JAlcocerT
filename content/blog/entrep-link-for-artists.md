@@ -2,7 +2,7 @@
 title: "Links and Landings for Artists"
 date: 2025-11-30T08:20:21+01:00
 draft: false
-tags: ["Web Analytics vs Link Analytics","BaaS with yaml","Vibe Coding vs Spec Driven Development"]
+tags: ["Web Analytics vs Link Analytics","Vibe Coding vs Spec Driven Development"]
 url: 'link-artists'
 description: 'Dear artists, where are you going next? About B2C and revealed preferences.'
 ---
@@ -346,7 +346,10 @@ This is how to use the astropod project step by step:
 
 #### Tech Talks
 
-If you have a podcast, chances are that you are doing public speaking out there.
+If you have a podcast, chances are that you are **doing public speaking** out there.
+
+
+https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/
 
 ##### PPT References
 
@@ -382,6 +385,26 @@ curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCPPMA8ZEusAe5dVH6P
 #curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCPPMA8ZEusAe5dVH6PbjZFA" | grep -oP '(?<=<title>).*?(?=</title>)' | head -5
 ```
 
+##### Your CV
+
+Oh I wrote tech talks instead of just motivational speaches: *because you are an artist.*
+
+In case you are not, you could also plug as one of the links **your updated CV**:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Setup Formbricks | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/yamlresume" title="YAML Resume | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+If you have been having a long experience, you should keep track of that
+
+https://github.com/JAlcocerT/cv-laitex
+
+> Just remember that one thing are beautiful CVs and other [machine readable cvs](https://github.com/JAlcocerT/cv-laitex/tree/main/CV_Parsing)
 
 --- 
 

@@ -228,8 +228,6 @@ See a project, [summarize its code/features](https://fossengineer.com/selfhostin
 
 > MIT | Best Plesk (The Ultimate Toolkit for WordPress Sites) alternative open source & free 
 
-<!-- https://adsense.google.com/adsense/u/0/pub-1816803660718163/payments -->
-
 
 ### A look to GitPodcast
 

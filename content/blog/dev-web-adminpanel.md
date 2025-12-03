@@ -1,7 +1,7 @@
 ---
 title: "Admin Panels for Websites | Manifest vs PB"
 date: 2025-11-29T10:20:21+01:00
-tags: ["SaaS","Authentication","Simple BackEnd"]
+tags: ["SaaS","Authentication","Simple BackEnd","BaaS with yaml"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
 draft: false

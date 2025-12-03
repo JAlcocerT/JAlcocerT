@@ -146,25 +146,3 @@ You can bring cool formulas to HUGo with Katex.
 [**HUGO**](https://fossengineer.com/web-guide-Hugo/) is great.
 
 The [HUGO **Setup**](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) was the first SSG that I could get working back in the days.
-
-{{< details title="How to add `ads.txt` to a HUGO Website 📌" closed="true" >}}
-
-1. **Create an `ads.txt` file** in your Hugo project’s `static` directory. The `static` folder in Hugo is where you put any files you want to be copied directly to the root of your build output.
-
-2. **Add your content** to the `ads.txt` file:
-
-```txt
-google.com, pub-123456, DIRECT, abcdef123456
-```
-
-3. **Build your Hugo site**:
-
-4. **Verify the output** by checking the `public` directory (Hugo's default output folder). You should find the `ads.txt` file in the root of `public`:
-
-5. **Deploy your site** as usual. The `ads.txt` file should now be available at `https://yourdomain.com/ads.txt`. 
-
-This method ensures that `ads.txt` is part of your site’s root directory in the final build output, as required by ad networks.
-
-![HUGO adsense txt](/blog_img/web/ads-txt-public-hugo.png)
-
-{{< /details >}}
