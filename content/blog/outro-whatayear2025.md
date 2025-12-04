@@ -6,6 +6,11 @@ tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-2025'
 ---
+
+CodexCLI for idea validation
+
+
+
 <!-- 
 https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
 

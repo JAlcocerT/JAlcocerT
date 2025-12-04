@@ -47,14 +47,19 @@ I took inspiration on the **MIT astro theme**:
 
 * https://github.com/unoforge/agency-landing-page-Astrojs
 
->  MIT | A simple agency landing page made with astrojs and tailwindcss 
+>  **MIT** | A simple agency landing page made with astrojs and tailwindcss 
 
+This is how good it looks:
+
+![MIT Astro Theme for waiting to landing](https://raw.githubusercontent.com/JAlcocerT/waiting-to-landing/main/screens/demoLight.webp)
+
+But I will be combining it with [Formbricks](#forms):
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="NEW Astro Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Forked and Tweaked Astro Theme for waiting2landing concept" >}}
 {{< /cards >}}
 
-Now, there are some changes added:
+Now, there are some changes added: *based on [env variables](https://github.com/JAlcocerT/waiting-to-landing/blob/main/docker-compose-portainer.yml#L19), it will be just a waiting, that gets transformed into a full landing*
 
 1. You can select as per the `.env` if you want a waiting list or the full features of the original theme (a landing page).
 2. Instead of a plain button to insert email, you can [integrate it with Formbricks](#forms) so that it collects the info from people interested
@@ -71,6 +76,8 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 npm run build
 ```
 
+And serve the static build:
+
 ```sh
 npm install -g serve #serve with npm
 
@@ -83,15 +90,31 @@ On the repository, you have how to run the site using **the Makefile** approach,
 
 ### Forms
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#newsletters" title="Newsletters | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#product" title="Product Tools | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 1. FormBricks
 
 Remember to **choose the link type** (not the app)
 
 You will need to provide the `survey_url` to have the pop up and also `question_id` (if you want to prefill some info)
 
+You can use formbricks pretty much everywhere:
+
+{{< youtube "LWt0pV2FMHs" >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks" title="Forms and Newsletters" image="/blog_img/entrepre/formbricks.png" subtitle="Getting familiar with formbricks and its Google Sheet integration" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#adding-formbricks-to-flask" title="NEW Astro Waiting to Landing Repo" image="/blog_img/entrepre/webify/formbricks-webapp-survey.png" subtitle="Add formbricks everywhere, like to Flask WebApps" >}}
+{{< /cards >}}
+
 2. ReactForms
 3. FormsMD
-4. Probably million other ways: BaaS, sqlite...?
+4. Probably million other ways: BaaS like PocketBase, sqlite...
+
+Just choose one of the options!
 
 {{< callout type="info" >}}
 If instead, you want to book a call CTA, you can try with `cal.com` instead
@@ -116,7 +139,7 @@ You can configure porkbun, so that the **default NS** will be cloudflare ones: `
 
 ![alt text](/blog_img/dev/porkbun/3-prkbun-balance.png)
 
-![alt text](/blog_img/dev/porkbun/4-porkbun-buy-ui.png)
+![Buying a domain via Porkbun UI](/blog_img/dev/porkbun/4-porkbun-buy-ui.png)
 
 Once bought, I updated the NS to be the CF ones:
 

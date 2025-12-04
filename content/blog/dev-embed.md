@@ -235,7 +235,7 @@ However, while Chatwoot includes **some CRM-like capabilities**—such as managi
 
 > This is a [Selfhosted](https://github.com/topics/self-hosted) & [OSS](https://docs.solidtime.io/self-hosting/intro) https://github.com/solidtime-io/solidtime with cool time tracking and invoicing features
 
-###$$ How to Embed ChatWoot into a Website
+### How to Embed ChatWoot into a Website
 
 If you already have your Wordpress / Ghost / SSG site ready, get the js script from your Chatwoot instance and include it in your website body.
 

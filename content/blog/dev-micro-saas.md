@@ -218,6 +218,11 @@ dig google.com
 
 ## Conclusions
 
+It seems to be easier than ever to create a simple microsaas/landing website.
+
+Maaybe not as cool as the lando one, but still great.
+
+This have made me thing about my relationship with the tools I use and the clients I serve.
 
 > **Doing** is faster than watching.
 

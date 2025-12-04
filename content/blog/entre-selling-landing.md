@@ -2,8 +2,8 @@
 title: "Website knowledge updates. Waiting / Landings with AI?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
-tags: ["just-ssg","Astro 101","Hugo 101","IG Gallery OSS","Landing Pages","BCMS vs PagesCMS","TiinyHost"]
-description: 'New ATH for my SSG knowledge. Landing 101 that convert. CodexCLI for idea validation.'
+tags: ["selfhosted-landing","Astro 101","Hugo 101","IG Gallery OSS","BCMS vs PagesCMS","TiinyHost"]
+description: 'New ATH for my SSG knowledge. Landing Pages 101 that convert via Astro SSR.'
 url: 'selling-with-a-landing-website'
 ---
 
@@ -14,15 +14,16 @@ Last year I made couple of 101 guides for [HUGO](https://jalcocert.github.io/JAl
 But it was time to put cool components like this [ig gallery](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/components/InstagramGalleryLocalFolder.astro) used [on this mdxhere](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/content/property/beachfront-paradise-instagram-gallery.mdx)
 
 +++ People shared on reddit their [favourite minimalistic sites](https://www.reddit.com/r/webdev/comments/1gh38fz/whats_your_favorite_very_minimal_personal_website/)
+
 +++ https://picsum.photos/ just in case you are tired of unsplash and just select what you want via https://picsum.photos/images
 
 **Intro**
 
 Wanna build a **sales pipeline**?
 
-A wau to capture leads?
+A way to capture leads?
 
-Start with a catchy landing first.
+Start with a **catchy landing first**.
 
 The [data, streamlit web apps](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker), pygwalker and [ApexCjarts Funnels](https://apexcharts.com/javascript-chart-demos/funnel-charts/) will come later.
 
@@ -54,6 +55,7 @@ Ok, ok, you have embraced the power of SSGs and aware of how many cool things ca
 And surprisingly, [Front End can do many cool things, *including authentication*](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#whats-forward-auth)
 
 {{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="NEW SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}
   {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
 {{< /cards >}}
 
@@ -226,7 +228,11 @@ Not to talk about the subscribe then see some info models:
 
 ### Plugins for Astro Landings
 
-Directus is fully self-hostable and commonly deployed using Docker containers. You can host it on your own servers or cloud infrastructure, providing control over your data, security, and updates. It requires a compatible environment like Docker and supports various SQL databases such as PostgreSQL, MySQL, SQLite, and more.[1][2]
+**Directus** is fully self-hostable and commonly deployed using Docker containers. 
+
+You can host it on your own servers or cloud infrastructure, providing control over your data, security, and updates. 
+
+It requires a compatible environment like Docker and supports various SQL databases such as PostgreSQL, MySQL, SQLite, and more.[1][2]
 
 > Design your data model, build powerful APIs, and manage content for anything from simple websites to complex applications.
 
@@ -302,6 +308,52 @@ I got to know a very **cool SaaS** on twitter:
 
 * https://alexsinelnikov.blog/open-graph-protocol-improving-your-saas-visibility-on-social-networks?s=35
 
+### Outro
+
+That's it from the technical side.
+
+But if you are thinking to help and build websites for 100$, for people who complain about 70$/y for a protonmail subscription...
+
+...while claiming to be living on easy mode and that [their car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/) pays on its own.
+
+You better run away and/or change your product.
+
+You could also get a [proper sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/) to get you qualified leads who actually can benefit from your help.
+
+There is a limit to your time.
+
+And you can record yourself to typical questions and setups:
+
+{{< youtube "uyXdHC95cU0" >}}
+
+{{< youtube "jO-PiZyVWe8" >}}
+
+Also, you can write docs for anyone to replicate:
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="Web CMSs | Docs ↗" >}}
+{{< /cards >}}
+
+But ultimately: If you have also started cheap while learning and now you got so good that the supply << demand
+
+Its time for stopping and **thinking whats next**. 
+
+```mermaid
+graph TD
+    A[www.jalcocertech.com] --> B(blog/docs/YT 0$);
+    A --> C(DIY 0/$);
+    A --> D(Consult via Cal.com - DWY $$);
+    A --> E(Services - DFY $$$);
+```
+
+The concept: *diy vs dwy vs dfy is one that im trying to shape into reality*
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 ---
 
 ## FAQ
@@ -368,6 +420,6 @@ To put astro/hugo inside a container is as simple as: *and you can also develop 
 
 ### Checks before web delivery
 
-The good thing about astro, is to plug that image optimization:
+The good thing about astro, is to plug that **image optimization** out of the box:
 
 ![Astro Image Optimization](/blog_img/web/astro-img-optim.png)

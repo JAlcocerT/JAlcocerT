@@ -160,11 +160,15 @@ SPA can be deployed statically, as seen on [this post section](https://jalcocert
 
 Here's the key distinction:
 
-* **Single-Page Application (SPA):** This is a type of web application that loads a single HTML page and dynamically updates the content as the user interacts with it. This means that a user can navigate between different "views" of the application without a full-page reload. The core idea is to provide a seamless, app-like experience by handling navigation and state changes on the client.
+* **Single-Page Application (SPA):** This is a type of web application that loads a single HTML page and dynamically updates the content as the user interacts with it. This means that a user can navigate between different "views" of the application without a full-page reload. 
+
+The core idea is to provide a seamless, app-like experience by handling navigation and state changes on the client.
 
 * **Client-Side Rendering (CSR):** This is a *rendering technique* where the browser downloads a minimal HTML file (often just a `<div>` and some scripts) and then uses JavaScript to build and render the rest of the page's content. All the heavy lifting of generating the HTML, CSS, and dynamic content happens in the user's browser.
 
-**The relationship is this:** The most common way to build an SPA is by using Client-Side Rendering. The JavaScript frameworks like React, Vue.js, and Angular were built around this model. The initial HTML is a blank slate, and the framework's JavaScript takes over to create the UI, fetch data from an API, and update the page without a full refresh.
+**The relationship is this:** The most common way to build an SPA is by using Client-Side Rendering. The JavaScript frameworks like React, Vue.js, and Angular were built around this model. 
+
+The initial HTML is a blank slate, and the framework's JavaScript takes over to create the UI, fetch data from an API, and update the page without a full refresh.
 
 **However, the "always" part of the question is where it gets interesting.**
 

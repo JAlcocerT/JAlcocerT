@@ -37,6 +37,11 @@ Formbricks can be integrated into your websites, [same as cal](https://jalcocert
 
 Formbricks wont validate the emails, but you can even [verify emails](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/#email-verification) before they flow into your sales pipelines.
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar/" title="Calendar | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/#email-verification" title="Email Verification | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 ### PostHog
 
 Posthog is [one of the product tools](https://jalcocert.github.io/JAlcocerT/product-tools/) you can use surveys.
@@ -46,3 +51,12 @@ Also to bring [session recording](https://jalcocert.github.io/JAlcocerT/how-to-r
 ## Offers
 
 With a clear product defined, the package of that into an compeling offer is key.
+
+
+```mermaid
+graph TD
+    A[www.jalcocertech.com] --> B(blog/YT 0$);
+    A --> C(DIY 0/$);
+    A --> D(Consult via Cal.com - DWY $$);
+    A --> E(Services - DFY $$$);
+```

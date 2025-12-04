@@ -39,6 +39,9 @@ If you are new and are just trying, you can get a `.fyi` or `.lol` TLD for few $
 * https://developer.godaddy.com/getstarted
 * Hostinger
 
+![Buying a domain via Porkbun UI](/blog_img/dev/porkbun/4-porkbun-buy-ui.png)
+
+
 
 <!-- * Where to get **Free SVGs for HUGO**:
   * https://www.svgrepo.com/svg/424489/adventure-journey-location

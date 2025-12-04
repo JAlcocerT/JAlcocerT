@@ -149,6 +149,7 @@ I created this in the middle of the [last real estate updates post](https://jalc
 
 It's a clear example that, if you know what you are doing (at least vibe coding with the right fwk & instructions), you can get a: Cool UI/UX for Web, Admin Panel, with no external APIs, and a working waiting list to CSV for you to process later on.
 
+
 #### Landing Page for your SaaS
 
 After the waiting list and checking PMF, comes building time.
@@ -166,6 +167,12 @@ A landing as companion for a link website does not have to be a multi-page one t
 ![DataNova Theme](/blog_img/web/astro/astro-datanova-animated-graph.png)
 
 > I migrated my brand to that data centered landing (and more) theme on [this post](https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/)
+
+
+https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
+
+
+
 
 ##### Vibe Coded Landing Pages
 
@@ -238,9 +245,6 @@ Vibe coded it today, placed into [this previous post](https://jalcocert.github.i
 For sth very quick and simple VanillaJS is enough, but if you really want to put a service behind, like users editing their own content etc...
 
 
-https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
-
-
 ```sh
 git clone https://github.com/JAlcocerT/make-landing
 cd make-landing
@@ -251,6 +255,14 @@ make help
 > This is how easy is to go today beyond WP and Elementor!
 
 > > And is not a bad niche at all, as I havent seen any Selfhostable SaaS for this kind of service with hosted version for money
+
+
+https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="NEW SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg" title="Astro SSR as Landing Page" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
+{{< /cards >}}
 
 
 ##### Status Pages

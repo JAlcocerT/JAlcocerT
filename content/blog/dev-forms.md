@@ -179,7 +179,7 @@ You can use FormBricks for **launching surveys or contact forms.**
 
 Go to the [FormBricks UI](https://formbricks.com/)
 
-![alt text](/blog_img/entrepre/formbricks.png)
+![Formbricks Web UI](/blog_img/entrepre/formbricks.png)
 
 <!-- 
 https://app.formbricks.com/environments/cm0vgwasu00061484bqmicsbm/surveys -->
