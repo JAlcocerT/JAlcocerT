@@ -537,6 +537,11 @@ If the [formula 1 data](#formula-1) was not enough:
 
 3. If you have a digital company in EE, also: https://apidocs.inforegister.ee/en
 
+4. https://github.com/hotheadhacker/no-as-a-service
+
+> No-as-a-Service (NaaS) is a simple API that returns a random rejection reason. Use it when you need a realistic excuse, a fun “no,” or want to simulate being turned down in style.
+
+
 
 ## Checking APIs
 

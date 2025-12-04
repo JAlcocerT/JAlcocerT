@@ -233,6 +233,11 @@ flowchart TD
     C -->|Three| F[fa:fa-car Car]
 ```
 
+<!-- https://www.youtube.com/watch?v=TulDVEC_vuQ -->
+
+{{< youtube "TulDVEC_vuQ" >}}
+
+
 ### Mermaid x Tech Talk
 
 Ive prepared a tech talk about this **mermaid x openAI** setup:
