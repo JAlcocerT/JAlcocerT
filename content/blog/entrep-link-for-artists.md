@@ -529,6 +529,12 @@ Then, you wont probably need [session recording](https://jalcocert.github.io/JAl
 
 But you will want to validate the **web performance**:
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well" title="Web Performance | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
 ```sh
 #sudo apt-get install dnsutils -y #dns resolution
 nslookup github.com 

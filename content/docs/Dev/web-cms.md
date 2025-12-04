@@ -86,6 +86,24 @@ Particularly ones that are OSS and that you can use freely within your HomeLab/V
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="Selfhosting | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+{{% details title="SelfHostable Websites with UI 🚀" closed="true" %}}
+
+1. [Wordpress](https://fossengineer.com/selfhosting-wordpress-docker/) or [Ghost](https://fossengineer.com/selfhosting-ghost-docker/)
+
+2. [Instant Land](https://instant-land.cybrarist.com/installation/portainer.html)
+
+> GPL3.o | Create, Copy, Modify landing pages for all your needs 
+
+3. [Writefreely](https://github.com/writefreely/writefreely) (but does not provide a docker container for a quick spin)
+
+> aGPL3 | A clean, Markdown-based publishing platform made for writers. Write together and build a community. Does NOT provide a clear container for SelfHost.
+
+4. **Other ways to get a personal blog**
+  * [btw](https://github.com/btw-so/btw)
+  * [Grav](https://fossengineer.com/selfhosting-grav-docker/)
+
+{{% /details %}}
+
 {{% details title="SelfHostable Minimalist CMSs 🚀" closed="true" %}}
 
 * https://github.com/DeepanshKhurana/ode

@@ -143,6 +143,12 @@ Sounds familiar?
 
 Following the updated initial [BiP Prompt for vibe coding](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success):
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs Be | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
 And after creating [this quick landing](https://jalcocert.github.io/JAlcocerT/micro-saas/#creating-a-quick-landing) (email oriented) and driven by .md and .json
 
 
@@ -317,9 +323,6 @@ DB2REST is designed to be easily installed and self-hosted, allowing quick setup
 
 DreamFactory can be self-hosted to build and manage REST APIs on your own infrastructure, offering full control over security and deployment.[9]
 
-Hasura offers a premium self-hosted enterprise package requiring a Kubernetes cluster and collaboration with their team for setup, aimed at customers with stringent compliance needs.[10]
-
-In summary:
 
 | Tool        | Self-Hostable   | Notes                                   |
 |-------------|-----------------|-----------------------------------------|
@@ -328,7 +331,6 @@ In summary:
 | NocoDB      | Yes             | Full control, customizable               |
 | DB2REST     | Yes             | Lightweight, easy install                |
 | DreamFactory| Yes             | Full control, enterprise-ready           |
-| Hasura      | Yes (Enterprise)| Requires K8s, premium support            |
 
 What can I do with Directus?
 
@@ -342,21 +344,6 @@ With Directus, you can easily:
     Configure event-driven webhooks and task automation
 
 
-All these popular alternatives to DbChart support self-hosting, with varying levels of deployment complexity and infrastructure requirements.[2][4][6][8][1][3][5][7][9][10]
-
-This should help you decide based on your preference for self-hosting and specific deployment needs.
-
-[1](https://sliplane.io/blog/self-hosting-directus-with-docker-on-ubuntu-server)
-[2](https://directus.io/docs/self-hosting/requirements)
-[3](https://baserow.io/user-docs/set-up-baserow)
-[4](https://baserow.io/blog/self-hosting-your-database)
-[5](https://nocodb.com/docs/product-docs/getting-started)
-[6](https://nocodb.com/docs/self-hosting)
-[7](https://dev.to/thadguidry/how-to-connect-and-query-multiple-databases-with-a-single-rest-api-2jml)
-[8](https://db2rest.com)
-[9](https://blog.dreamfactory.com/the-pros-and-cons-of-self-hosted-software-solutions)
-[10](https://hasura.io/docs/3.0/private-ddn/architecture/self-hosted/)
-
 ### Example TinyHost
 
 I got to know a very **cool SaaS** on twitter:
@@ -364,6 +351,8 @@ I got to know a very **cool SaaS** on twitter:
 
 * https://tiiny.host/#pricing
 
+
+Remember that you can always check how good a site is by:
 
 {{< cards cols="3" >}}
   {{< card link="https://pagespeed.web.dev/" title="PageSpeed Insights" >}}

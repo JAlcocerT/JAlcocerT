@@ -364,6 +364,37 @@ As seen in the [withastro/starlight Theme](https://github.com/IoTechCrafts/starl
 
 ### Is my website performing well?
 
+
+{{< hextra/feature-grid >}}
+ 
+{{< hextra/feature-card
+  title="Google Speed Test"
+  subtitle="Test the speed and performance with PageSpeed Insights."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://pagespeed.web.dev/"
+>}}
+
+{{< hextra/feature-card
+  title="Website Carbon"
+  subtitle="Website’s carbon footprint and environmental impact."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+  link="https://www.websitecarbon.com/"
+>}}
+
+{{< hextra/feature-card
+  title="Web-Check"
+  subtitle="Performance and uptime using Web-Check's analytics tool."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://web-check.xyz/"
+>}}
+
+{{< /hextra/feature-grid >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://trends.google.com/trends/" title="Whats Trendy on Google? ↗" >}}
+  {{< card link="https://search.google.com/" title="How is your site SEO doing? Google Search ↗" >}}
+{{< /cards >}}
+
 1. https://pagespeed.web.dev/
 
 See also https://search.google.com/search-console/
@@ -425,12 +456,6 @@ curl "https://www.bing.com/ping?sitemap=https://www.example.com/sitemap.xml"
 
 It's worth to **try few of them**.
 
-Not all the content is indexed in the same way across engines and you can miss valuable info.
-
-{{< callout type="info" >}}
-**Thanks to Ecosia** I could find how to add Web Analytics to the [Jekyll Chirpy Theme](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/)!
-{{< /callout >}}
-
 {{< /dropdown >}}
 
 3. https://www.websitecarbon.com/
@@ -469,21 +494,12 @@ Stopped checking at 2025-03-05 10:43:17+000 (3 minutes, 9 seconds)
 
 Does all of this **sounds too complex** for the first website?
 
-Then, Try with:
+Learn web development basics or go for that wordpress.
 
-1. [Wordpress](https://fossengineer.com/selfhosting-wordpress-docker/) or [Ghost](https://fossengineer.com/selfhosting-ghost-docker/)
-
-2. [Instant Land](https://instant-land.cybrarist.com/installation/portainer.html)
-
-> GPL3.o | Create, Copy, Modify landing pages for all your needs 
-
-3. [Writefreely](https://github.com/writefreely/writefreely) (but does not provide a docker container for a quick spin)
-
-> aGPL3 | A clean, Markdown-based publishing platform made for writers. Write together and build a community. Does NOT provide a clear container for SelfHost.
-
-4. **Other ways to get a personal blog**
-  * [btw](https://github.com/btw-so/btw)
-  * [Grav](https://fossengineer.com/selfhosting-grav-docker/)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well" title="Web Performance | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 ### The Small Web
 

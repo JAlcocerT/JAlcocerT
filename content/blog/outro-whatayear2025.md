@@ -9,7 +9,11 @@ url: 'tech-recap-2025'
 
 CodexCLI for idea validation
 
+Not all the content is indexed in the same way across engines and you can miss valuable info.
 
+{{< callout type="info" >}}
+**Thanks to Ecosia** I could find how to add Web Analytics to the [Jekyll Chirpy Theme](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/)!
+{{< /callout >}}
 
 <!-- 
 https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
