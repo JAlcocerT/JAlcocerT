@@ -19,7 +19,7 @@ Chances are that you are using AI/vibe coding techniques to build your next prod
 
 If you are by yourself, I recommend you to brainstorm with your LLMs about your ideas.
 
-
+The outcome should be a clear goals (like a [BRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/)) and execution plan for the agents to code for you.
 
 {{< details title="Vibe Coding a Modern Landing Page x Shadcn x AuthJS | Setup  📌" closed="true" >}}
 
@@ -27,8 +27,6 @@ Go to whatever LLM you are using and ask: `do you think that these requirements 
 
 ```md
 Create a Landing Page based on NextJS with a cool and modern UI
-
-There will be a login button that directs to `/login` from which via better-auth and a sqlite with a unique username and password provided as per .env that is the one who can access the `/admin`
 
 Include a `dockerfile` and `docker-compose.yml` that will control the title, description, open-graph image, favicon location and other global website variables via environment variables.
 
@@ -38,6 +36,10 @@ Create also a makefile with the following commands:
 * `make install` - Prepare the dependencies for local development
 * `make dev` - Run development server
 * `make container` - Build and Run in Docker container
+
+Create the z-development-plan.md with independent and testable phases that can be completed sequentially.
+
+When it is completed, create a z-walkthrough.md with the steps to deploy the application and what each part of the tech stack does on a high level to bring the features to life.
 ```
 
 > This time I was more specific than others on the [UI, with **MUI** ](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#material-ui---mui)

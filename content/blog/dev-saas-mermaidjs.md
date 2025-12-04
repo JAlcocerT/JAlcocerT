@@ -237,6 +237,9 @@ flowchart TD
 
 {{< youtube "TulDVEC_vuQ" >}}
 
+* https://github.com/excalidraw/excalidraw-libraries
+* https://libraries.excalidraw.com/?theme=light&sort=default
+
 
 ### Mermaid x Tech Talk
 

@@ -125,6 +125,9 @@ Among [all the things that can be embedded](https://jalcocert.github.io/JAlcocer
   {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
 {{< /cards >}}
 
+* https://cal.com/jalcocertech
+* https://app.cal.com/apps
+
 ![Booking tours with Cal](/blog_img/web/success10-ourika/ourika-cal.png)
 
 

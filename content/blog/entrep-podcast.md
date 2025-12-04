@@ -165,7 +165,6 @@ make container
 
 3. Edit the `./content` or upload podcasts via the `localhost:3000/admin` path of the UI
 
-
 4. When you are done: *do some container clean up*
 
 ```sh
@@ -176,7 +175,6 @@ docker system prune --all
 ```
 
 I had to mention the classic 'make it look even more modern' so that it wouldnt be too simple.
-
 
 ### Technical Stack and Design Requirements
 
@@ -191,8 +189,6 @@ The platform must offer a seamless, content-driven user interface and a flexible
 | **Styling/UI Library** | **MUI (Material-UI)** | Must be used for the "cool and modern UI." |
 | **Backend/Database** | SQLite | Used for storing the single administrator credentials. |
 | **Authentication** | `better-auth` (as specified) | Used for securing the `/admin` route. |
-
-
 
 ---
 

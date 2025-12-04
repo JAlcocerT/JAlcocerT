@@ -2,8 +2,8 @@
 title: "Website knowledge updates. Waiting / Landings with AI?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
-tags: ["Selfhosted-Landing","101 Astro & Hugo","IG Gallery OSS","BCMS vs PagesCMS","TiinyHost"]
-description: 'New ATH for my SSG knowledge. Landing Pages 101 that convert via Astro SSR.'
+tags: ["Selfhosted-Landing","101 Astro & Hugo","BCMS vs PagesCMS","TiinyHost"]
+description: 'New ATH for my SSG knowledge with IG Gallery OSS. Cconvert via Astro SSR and cal.com'
 url: 'selling-with-a-landing-website'
 ---
 
@@ -152,14 +152,12 @@ Following the updated initial [BiP Prompt for vibe coding](https://jalcocert.git
 And after creating [this quick landing](https://jalcocert.github.io/JAlcocerT/micro-saas/#creating-a-quick-landing) (email oriented) and driven by .md and .json
 
 
-{{< details title="Vibe Coding a Modern Landing Page x Shadcn x AuthJS | Setup  📌" closed="true" >}}
+{{< details title="Vibe Coding a Modern Landing Page x Calcom | Setup  📌" closed="true" >}}
 
 Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
 
 ```md
 Create a Landing Page based on NextJS with a cool and modern UI
-
-There will be a login button that directs to `/login` from which via better-auth and a sqlite with a unique username and password provided as per .env that is the one who can access the `/admin`
 
 Include a `dockerfile` and `docker-compose.yml` that will control the title, description, open-graph image, favicon location and other global website variables via environment variables.
 
@@ -409,12 +407,18 @@ graph TD
     A --> E(Services - DFY $$$);
 ```
 
+
 The concept: *diy vs dwy vs dfy is one that im trying to shape into reality*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+<!-- https://www.youtube.com/watch?v=spXH1kJ6q-Q -->
+
+{{< youtube "spXH1kJ6q-Q" >}}
+
 
 ---
 
