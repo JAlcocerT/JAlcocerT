@@ -40,3 +40,5 @@ And people get creative with them https://github.com/ccbikai/BroadcastChannel
 {{< /dropdown >}} -->
 
 ### N8N Bots
+
+{{< youtube "v-gCNTI5kzE" >}}

@@ -211,3 +211,5 @@ https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz
 ## Leads
 
 
+## Funnels
+

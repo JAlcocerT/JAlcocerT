@@ -3,8 +3,6 @@ title: Documentation
 next: about
 ---
 
-Welcome to the Docs!
-
 The day by day journey from the [blog section](https://jalcocert.github.io/JAlcocerT/blog/) might not be from everyone.
 
 So created these docs as a curated higher level version of the technologies Ive used.

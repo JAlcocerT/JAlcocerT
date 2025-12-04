@@ -21,10 +21,8 @@ With drons we kind of combine it all: electronics, programming, physics and...fu
 
 > Low cost motion capture system for room scale tracking
 
-To tinker with Computer Vision, you could also use a Pi:
+To tinker with Computer Vision, you could also use a Pi: *as I did [here](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/)*
 
 ![Pi4 and its camera](/blog_img/hardware/RPi4_2gb_cam.jpg)
 
-https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/
-
-https://gitlab.com/fossengineer1/cv
+> And there is a [repo where i tinkered with it](https://gitlab.com/fossengineer1/cv)

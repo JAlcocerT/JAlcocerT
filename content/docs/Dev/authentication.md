@@ -26,7 +26,9 @@ You can get away with [Traefik x TinyAuth](https://jalcocert.github.io/JAlcocerT
 
 Even [FastAPI with a simple sqlite DB](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater) can do the job: *with a simple user and password.*
 
-### Streamlit Auth
+### Simple Auth
+
+#### Streamlit Auth
 
 I started with [Streamlit Authenticator](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Streamlit_Pages/Auth_functions.py).
 
@@ -42,6 +44,12 @@ Or Streamlit x Pocketbase as seen [here](https://jalcocert.github.io/JAlcocerT/s
   {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_hardcoded_compose.py" title="St authenticator hardcoded on the compose | Script  ↗"  >}}
   {{< card link="https://github.com/JAlcocerT/py-stonks/blob/main/hardcoded-auth-streamlit/st_auth_hardcoded_pb.py" title="St authenticator as per Pocketbase users collection info | Script ↗"  >}}
 {{< /cards >}}
+
+#### FastAPI x Login x Astro
+
+
+https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater
+![FastAPI x signup integrated with astro](/blog_img/GenAI/audio/fastapi-astro-signup.png)
 
 ### Authentication with Logto
 

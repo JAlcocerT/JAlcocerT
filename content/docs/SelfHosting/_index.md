@@ -10,8 +10,8 @@ sidebar:
 Whatever you plan to **Selfhost**, there will be a moment that you will be looking for:
 
 1. [HTTPs and SSL](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/) Setup
-2. [Monitoring](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/)
-3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/benchmarks/) hardware
+2. [Monitoring](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/) Servers
+3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/benchmarks/) Hardware
 
 
 {{< cards >}}

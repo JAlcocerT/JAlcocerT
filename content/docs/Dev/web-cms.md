@@ -14,9 +14,27 @@ Most likely than not, you heard about these [*,no code required'* CMS's](#websit
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wordpress" title="WP with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
+The thing about frontmatter, is that you will still to enjoy writing in markdown.
+
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#frontmatter-cms" title="Get an ebook to get started with Selfhosting" image="/blog_img/web/frontmatter/frontmatter-project.png" subtitle="Learn the concepts and tools to SelfHost confortable" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#frontmatter-cms" title="Testing FrontmatterCMS" image="/blog_img/web/frontmatter/frontmatter-project.png" subtitle="Learn the concepts and tools to SelfHost confortable" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/knowledge-management/#what-it-is-wysiwyg" title="Flat Files KB" image="/blog_img/selfh/kb/silverbullet.png" subtitle="Tools like SilverBullet or LogSeq are flat file centered" >}}
 {{< /cards >}}
+
+If you end up liking .md, you will be able to use it for your website and skip those database setups (and maintainance)
+
+From there, you can either build your own editor on top of astro/hugo themes:
+
+![NextJS Reactmd editing astro sphere theme](/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png)
+
+Or use any of these [CMS combined with SSGs](#cool-cms)
+
+As last alternative, you can go check [these no code CMS's](#websites-without-coding)
+
+## Cool CMS
+
+<!-- ![alt text](/blog_img/selfh/kb/silverbullet.png) -->
+
 
 
 <!-- ![Frontmatter working with HUGO SSG](/blog_img/web/frontmatter/frontmatter-project.png) -->

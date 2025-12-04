@@ -17,6 +17,8 @@ Chances are that you are using AI/vibe coding techniques to build your next prod
 
 ### Initial Prompts for Success
 
+If you are by yourself, I recommend you to brainstorm with your LLMs about your ideas.
+
 
 
 {{< details title="Vibe Coding a Modern Landing Page x Shadcn x AuthJS | Setup  📌" closed="true" >}}
@@ -54,15 +56,35 @@ If it is clear define the `z-development-plan.md` and proceed with the developme
 # git config --global user.name
 # git add .
 # git commit -m "Initial commit: Starting simple make podcast platform"
+```
 
+```sh
 #sudo apt install gh
 gh auth login
 #gh repo create make-podcast --private --source=. --remote=origin --push
     
 git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create make-landing --private --source=. --remote=origin --push
+###du -sh .
+#docker stop $(docker ps -a -q) #stop all
+#docker system df
 ```
 
+**Technical Stack and Design Requirements**
+
+To develop a **modern, secure, and scalable web platform** for hosting and streaming a single-user podcast.
+
+The platform must offer a seamless, content-driven user interface and a flexible content management system supporting both web uploads and direct file system access.
+
 {{< /details >}}
+
+Before starting any project, you should have clarity on:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **Backend/Database** | | |
+| **Authentication** | | |
 
 
 https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#tc-and-privacy

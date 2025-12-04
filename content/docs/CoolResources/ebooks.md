@@ -7,6 +7,9 @@ summary: 'How to create your ebooks'
 url: 'cool-ebooks'
 ---
 
+For me, creating ebooks has been all about **knowledge consoldation** and to be able to help others without my active time investment.
+
+An [offer](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers) you cant refuse: *use your time to gain curated knowledge*.
 
 I was tinkering with **ebooks creation** [here](https://github.com/JAlcocerT/ebook-ideas/tree/master) and with a website to show them [here](https://github.com/JAlcocerT/sell-your-ebook).
 

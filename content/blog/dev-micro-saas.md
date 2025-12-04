@@ -88,7 +88,7 @@ git init && git add . && git commit -m "Initial commit: simple landing website" 
 ##du -sh .
 ```
 
-This is just a ~80mb repo!
+This is just a ~80mb repo!!
 
 {{< /details >}}
 
@@ -103,6 +103,15 @@ This is just a ~80mb repo!
 git clone https://github.com/JAlcocerT/make-landing.git
 #make help
 ```
+
+This is the project tech stacj using **Tailwind CSS, Vanilla JS, and SQLite**, which represents a static-site-generation approach with a custom Node.js backend:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | **None (Vanilla JavaScript / HTML5)** | **Decision:** Minimalist approach to maximize performance and avoid framework overhead. **Vanilla JS** is used solely for form handling, validation, and dynamic interactions (like the FAQ accordion and scroll animations). |
+| **Styling/UI Library** | **Tailwind CSS** | Used directly as a utility-first CSS framework for rapid and highly customized styling. No external component library is required, as the structure is built directly with Tailwind classes. |
+| **Backend/Database** | **Node.js (Express) + SQLite3** | **Decision:** Node.js/Express handles the server logic (serving files, routing), content injection (JSON/Markdown parsing), and the email capture API. **SQLite3** is used for simple, file-based persistence of email data. |
+| **Authentication** | **N/A (Not Applicable)** | **Decision:** Authentication is **not required** for a public-facing, email-capture-only landing page. The server only needs to expose a simple POST endpoint (`/api/subscribe`) and serve static content. |
 
 #### OpenLovable
 

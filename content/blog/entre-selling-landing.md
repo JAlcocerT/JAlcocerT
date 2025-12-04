@@ -2,7 +2,7 @@
 title: "Website knowledge updates. Waiting / Landings with AI?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
-tags: ["selfhosted-landing","Astro 101","Hugo 101","IG Gallery OSS","BCMS vs PagesCMS","TiinyHost"]
+tags: ["Selfhosted-Landing","101 Astro & Hugo","IG Gallery OSS","BCMS vs PagesCMS","TiinyHost"]
 description: 'New ATH for my SSG knowledge. Landing Pages 101 that convert via Astro SSR.'
 url: 'selling-with-a-landing-website'
 ---
@@ -11,7 +11,7 @@ url: 'selling-with-a-landing-website'
 
 Last year I made couple of 101 guides for [HUGO](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/) and [ASTRO](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/).
 
-But it was time to put cool components like this [ig gallery](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/components/InstagramGalleryLocalFolder.astro) used [on this mdxhere](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/content/property/beachfront-paradise-instagram-gallery.mdx)
+But it was time to put cool components like this [ig gallery](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/components/InstagramGalleryLocalFolder.astro) used [on this **mdx** here](https://github.com/JAlcocerT/real-estate-moi/blob/main/moirealestate-astro-theme/src/content/property/beachfront-paradise-instagram-gallery.mdx)
 
 +++ People shared on reddit their [favourite minimalistic sites](https://www.reddit.com/r/webdev/comments/1gh38fz/whats_your_favorite_very_minimal_personal_website/)
 
@@ -138,6 +138,79 @@ Sounds familiar?
   {{< card link="https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/" title="Payroll Theme with PB as auth" image="/blog_img/dev/FE/ssg-cfworkers-pocketbase.png" subtitle="SSG and CF Workers + Pocketbase | Post" >}}
   {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Payroll Theme with PB as auth" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code Astro Theme + CF Workers + PB users collections as Auth" >}}
 {{< /cards >}}
+
+## Vibe coding an Astro SSR Landing Page
+
+Following the updated initial [BiP Prompt for vibe coding](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success):
+
+And after creating [this quick landing](https://jalcocert.github.io/JAlcocerT/micro-saas/#creating-a-quick-landing) (email oriented) and driven by .md and .json
+
+
+{{< details title="Vibe Coding a Modern Landing Page x Shadcn x AuthJS | Setup  📌" closed="true" >}}
+
+Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
+
+```md
+Create a Landing Page based on NextJS with a cool and modern UI
+
+There will be a login button that directs to `/login` from which via better-auth and a sqlite with a unique username and password provided as per .env that is the one who can access the `/admin`
+
+Include a `dockerfile` and `docker-compose.yml` that will control the title, description, open-graph image, favicon location and other global website variables via environment variables.
+
+Create also a makefile with the following commands:
+
+* `make help` - Show available commands
+* `make install` - Prepare the dependencies for local development
+* `make dev` - Run development server
+* `make container` - Build and Run in Docker container
+```
+
+> This time I was more specific than others on the [UI, with **MUI** ](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#material-ui---mui)
+
+> > Also, [MIU has now its llm.txt](https://mui.com/material-ui/llms.txt)
+
+Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined already with Gemini is clear enough.
+
+If it is clear define the `z-development-plan.md` and proceed with the development phases.
+
+```sh
+# git init
+# git branch -m main
+# git config user.name
+# git config --global user.name "JAlcocerT"
+# git config --global user.name
+# git add .
+# git commit -m "Initial commit: Starting simple make podcast platform"
+```
+
+```sh
+#sudo apt install gh
+gh auth login
+#gh repo create selfhosted-landing --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create selfhosted-landing --private --source=. --remote=origin --push
+###du -sh .
+#docker stop $(docker ps -a -q) #stop all
+#docker system df
+```
+
+**Technical Stack and Design Requirements**
+
+To develop a **modern, secure, and scalable web platform** for hosting and streaming a single-user podcast.
+
+The platform must offer a seamless, content-driven user interface and a flexible content management system supporting both web uploads and direct file system access.
+
+{{< /details >}}
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="NEW SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}
+{{< /cards >}}
+
+```sh
+git clone https://github.com/JAlcocerT/selfhosted-landing.git
+#make help
+```
 
 
 ---

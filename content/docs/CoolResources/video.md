@@ -76,10 +76,6 @@ ffmpeg -i input.mov -c:v copy -c:a copy output.mp4
 For crazy people that like [trackdays](https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/), D&A [geospatial geeks](https://jalcocert.github.io/JAlcocerT/geospatial-data/) or somebody with a [gopro](https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction)
 
 
-
-https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction
-
-
 <!-- 
 ![GoPro Metadata Speed trackday](/blog_img/karting/gopro-gps-trackday-speed.png)
  -->
@@ -88,3 +84,5 @@ https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/" title="TrackDays and GoPro Telemetry " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="GPS Telemetry from a GoPro | Post" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro MetaData Magic 101 " image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 Firmware and comparison with GoPro" >}}
 {{< /cards >}}
+
+If you enjoy these kind of [geo/racing](https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction) analytics, ive placed particular docs for that:

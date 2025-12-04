@@ -7,6 +7,11 @@ draft: false
 ---
 
 
+You probably want to do this for fun.
+
+To generate automatic content for [social media](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#social-media), or even youtube videos like some of the cool science channels do.
+
+Whatever the reason, here is how you can.
 
 ---
 

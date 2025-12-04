@@ -2,7 +2,7 @@
 title: "Journal via Astro and markdown Editors"
 date: 2025-09-13T06:20:21+01:00
 draft: false
-tags: ["TOAST UI vs React md","WYSIWYG","Local Edits","NextJS","JustJournalviaSSG"]
+tags: ["TOAST UI vs React md","Makrdown Tools - WYSIWYG","Local Edits","NextJS","JustJournalviaSSG"]
 description: 'Do that SSG tweak once. Edit via UI, NextJS empowers your to journal via SSGs.'
 url: 'astro-journal-theme'
 ---
@@ -134,3 +134,11 @@ git commit -m "Initial commit: Starting journal via ssg"
 gh auth login
 gh repo create Just-Journal-via-SSG --private --source=. --remote=origin --push
 ```
+
+### Interesting Markdown Tools
+
+If you dont want to build you own tools around WYSIWYG, you can use others':
+
+* https://github.com/hotheadhacker/next-markdown
+
+> An online free tool to edit or preview markdown files created using nextjs & TypeScript 💕

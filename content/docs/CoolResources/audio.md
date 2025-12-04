@@ -30,7 +30,23 @@ With those, I created:
   {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
 {{< /cards >}}
 
+I have been [building](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/) TTS/S2T Web Apps:
+
+<!-- 
+![Fast API x Astro Theme Connected Showing Admin Panel to record or TTS or S2T](/) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater" title="FastAPI Speech Rater" image="/blog_img/GenAI/audio/fastapi-astro-signedin-dash.png" subtitle="Using OpenAI with fastAPI for audio" >}}
+{{< /cards >}}
+
 ## TTS
 
+You can do local TTS as I was doing [here](https://jalcocert.github.io/JAlcocerT/local-ai-audio/#tts)
+
+I was initially using transcription [here](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#obs--openai-whisper) to create the audio for my tech yt videos.
+
+That was based on OpenAI keys, see : https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openait2a.py
 
 ## S2T / Transcription
+
+See also: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py

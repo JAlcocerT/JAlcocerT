@@ -48,10 +48,7 @@ Then we go to `http://192.168.1.12:8080/_/?installer#`
 
 You can review how PB auth works: https://pocketbase.io/docs/authentication/#api-keys
 
-Mind the distinction of PocketBase admins (aka. _superusers) vs regular users at the `users` collection - https://pocketbase.jalcocertech.com/_/#/collections?collectionId=_pb_users_auth_
-
-
-
+Mind the distinction of PocketBase admins (aka. _superusers) vs regular users at the `users` collection - `https://pocketbase.jalcocertech.com/_/#/collections?collectionId=_pb_users_auth_`
 
 ```sh
 #df -h

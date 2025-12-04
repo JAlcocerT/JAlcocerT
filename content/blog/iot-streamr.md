@@ -13,7 +13,12 @@ url: 'streamr-network'
 
 **Intro**
 
-This year I have been consolidating some IoT/Sensor and MQTT knowledge on few posts:
+This year I have been consolidating some IoT/Sensor and MQTT knowledge on few posts.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/TTS_Coqui" title="CoquiTTS Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/TTS_Coqui" title="CoquiTTS Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 Then, a friend told me about:
 
@@ -116,28 +121,7 @@ With 2 publishers,3 nodes and ~100 msg/s
 - **Arkreen**: Environmental IoT project streaming sensor data (e.g., carbon tracking) through Streamr for decentralized analytics.[2]
 - **Ruuvi Integration**: Sensor hardware (temperature/humidity) streams data to Streamr for monetized real-world IoT marketplaces.[4]
 
-These demonstrate production use in DePIN, video, and IoT, with more in hackathons and partnerships like Helium for coverage.[5][6]
-
-[1](https://streamr.network)
-[2](https://polygon.technology/blog/how-real-time-data-infra-powers-depin-on-polygon-a-guide-by-streamr)
-[3](https://depinscan.io/news/2025-07-29/streamrtv-launches-as-streamr-shifts-focus-to-real-world-applications)
-[4](https://ruuvi.com/streamr/)
-[5](https://streamr.network/ecosystem)
-[6](https://depinhub.io/news/streamr-unveils-innovative-projects-at-learn-web3-hackathon-11426)
-[7](https://beincrypto.com/streamr-decentralised-network-data-sharing/)
-[8](https://www.binance.com/en/square/post/12464334514017)
-[9](https://www.youtube.com/watch?v=5qCu7s8iWhw)
-[10](https://streamr.network/network)
-[11](https://streamr.network/hub/projects)
-[12](https://getstream.io/blog/news-feeds-for-real-time-use-cases/)
-[13](https://www.youtube.com/c/Streamr)
-[14](https://yalantis.com/blog/real-time-data-streaming-use-cases/)
-[15](https://coinmarketcap.com/academy/article/a-deep-dive-into-streamr)
-[16](https://github.com/minima-global/streamr-minidapp-example)
-[17](https://x.com/Streamr)
-[18](https://atarca.eu/streamr-acknowledgement-token/)
-[19](https://www.instaclustr.com/education/real-time-streaming/real-time-data-streaming-4-use-cases-5-components-and-6-best-practices/)
-[20](https://www.youtube.com/watch?v=5PCSZAP1qrc)
+These demonstrate production use in DePIN, video, and IoT, with more in hackathons and partnerships like Helium for coverage.
 
 #### Streamlit + Streamr
 
@@ -163,14 +147,14 @@ However, Streamr distinguishes itself by being fully decentralized, blockchain-i
 
 MQTT is centralized and protocol-focused, whereas Streamr combines P2P networking, economic incentives, and cryptographic security in an open data marketplace.
 
-![MQTT Desktop](blog_img/iot/mqttx-desktop.png)
-https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt
+<!-- ![MQTT Desktop](blog_img/iot/mqttx-desktop.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt" title="MQTT and Messaging Protocols" image="/blog_img/iot/mqttx-desktop.png" subtitle="Tools for MQTT - MQTTx Desktop" >}}
+{{< /cards >}}
 
 In summary, Streamr offers a decentralized, blockchain-backed alternative to MQTT with native support for **token-based data monetization** and broader Web3 use cases.
 
-[1](https://beincrypto.com/streamr-decentralised-network-data-sharing/)
-[2](https://streamr.network)
-[3](https://coinmarketcap.com/academy/article/a-deep-dive-into-streamr)
 
 **Remember about** the  Pub Sub Network Architecture
 
@@ -204,7 +188,7 @@ Using their container image at dockerhub: https://hub.docker.com/r/streamr/node
 docker run -d --restart always -p 32200:32200 -v ~/.streamrDocker:/home/streamr/.streamr --name streamr streamr/node
 ```
 
-Yes, the Streamr Network provides official Docker container images for running Streamr nodes. You can find these images on Docker Hub under the "streamr" profile, such as the `streamr/node` and `streamr/broker-node` images which are regularly updated.[1][2][3]
+Yes, the Streamr Network provides official Docker container images for running Streamr nodes. You can find these images on Docker Hub under the "streamr" profile, such as the `streamr/node` and `streamr/broker-node` images which are regularly updated.
 
 Using the Docker image simplifies setup by allowing you to pull and run the node container quickly on any system with Docker installed. 
 

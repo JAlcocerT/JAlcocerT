@@ -14,6 +14,7 @@ Because astro SSG and CSR are so cool.
 Why not...Creating a DIY podcast platform?
 
 +++ Doing so via [Google's Antigravity IDE](#antigravity)
+
 +++ [FFMPEG goodies](#faq)
 
 
@@ -175,6 +176,22 @@ docker system prune --all
 ```
 
 I had to mention the classic 'make it look even more modern' so that it wouldnt be too simple.
+
+
+### Technical Stack and Design Requirements
+
+To develop a **modern, secure, and scalable web platform** for hosting and streaming a single-user podcast.
+
+The platform must offer a seamless, content-driven user interface and a flexible content management system supporting both web uploads and direct file system access.
+
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | Next.js (React) | Used for server-side rendering (SSR) and routing. |
+| **Styling/UI Library** | **MUI (Material-UI)** | Must be used for the "cool and modern UI." |
+| **Backend/Database** | SQLite | Used for storing the single administrator credentials. |
+| **Authentication** | `better-auth` (as specified) | Used for securing the `/admin` route. |
+
 
 
 ---
