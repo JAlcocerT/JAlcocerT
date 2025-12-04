@@ -240,6 +240,10 @@ I prefer Watchtower to send alerts on new images, rather than letting update the
 
 Other **HomeLab Commands**:
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#homelab-commands" title="HomeLab CLIs | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 1. Whats taking that much space?
 
 ```sh

@@ -16,11 +16,14 @@ Whatever you plan to **Selfhost**, there will be a moment that you will be looki
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/web-ebook.pdf" title="Get an ebook to get started with Selfhosting" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to SelfHost confortable" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Containerized Selfhosted Apps for your Server" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
 Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhosted
 {{< /callout >}}
+
+* https://github.com/hotheadhacker/awesome-selfhost-docker
 
 **General SelfHosted Resources**
 
@@ -89,9 +92,7 @@ ifconfig eth0 | grep "inet " | awk '{ print $2 }' #if ETH Connected - SEE THE LO
 
 ### HomeLab Commands
 
-
 {{% details title="PRO SelfHosting and HomeLab CLI 🚀" closed="true" %}}
-
 
 ```sh
 df -h
@@ -103,12 +104,67 @@ htop
 #btop
 ```
 
+
+1. Whats taking that much space?
+
+```sh
+#sudo du -ahx / | sort -rh | head -n 50
+sudo du -ahx . | sort -rh | head -n 50 #from current folder and below
+```
+
+2. I want to clean old container stuff
+
+```sh
+#df -h
+#docker system df #see how much docker artifacts are using
+
+docker stop $(docker ps -a -q) #stop all
+#docker volume rm $(docker volume ls -q | grep -v '^portainer_data$') #rm all volumes but portainer
+
+#docker system df #similar to df -h but for container resources
+#docker image prune -a 
+#docker builder prune -a --force
+
+#docker system prune --all --volumes #just clean all...
+
+docker builder prune
+#docker system prune -a
+docker volume prune
+docker image prune -a
+```
+
+3. Stop all containers, but portainer:
+
+```sh
+#docker ps -a -q --filter 'name=!portainer'
+docker ps -q | grep -v portainer | xargs docker stop
+```
+
+4. How much resources are those containers cosuming?
+
+```sh
+docker-compose stats
+#sudo docker stats 7dfdfce97523
+#sudo docker stats nextcloud
+#docker stats typebot-builder typebot-viewer typebot-db
+
+docker stats $(docker ps --filter "name=typebot" --format "{{.Names}}")
+#docker stats -a
+```
+
 {{% /details %}}
 
 
 
-### What do I like to SelfHost?
+### Inspiration for a HomeLab?
 
 Created a repository with clean compose files for anyone to try these services: https://github.com/JAlcocerT/Home-Lab/
 
 > See [this folder for stacks](https://github.com/JAlcocerT/Home-Lab/tree/main/z-homelab-setup/evolution) on what im Selfhosting at a certain month/year.
+
+
+{{% details title="SelfHosting Resources 🚀" closed="true" %}}
+
+
+{{% /details %}}
+

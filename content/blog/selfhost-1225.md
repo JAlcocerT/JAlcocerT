@@ -177,6 +177,13 @@ Direct, built-in support in major SSGs is less common, but you can usually achie
 
 Probably having a **VPS** as compute backup is not a bad idea.
 
+Neither is to review these selfhosting CLIs and monitoring tools.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#homelab-commands" title="HomeLab CLIs | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their game: https://docs.hetzner.com/
 
 {{< cards cols="1" >}}

@@ -331,11 +331,7 @@ https://docs.linuxserver.io/images/docker-wireshark/
 
 ### What do I like to bring to my HomeLab?
 
-HomeLab Essentials
-
-https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#what-do-i-like-to-selfhost
-
-
+HomeLab Essentials - https://jalcocert.github.io/JAlcocerT/docs/selfhosting/
 
 1. Container UI's 🐳: [Portainer](https://github.com/JAlcocerT/Home-Lab/tree/main/portainer), Rancher, Dockge...
 
