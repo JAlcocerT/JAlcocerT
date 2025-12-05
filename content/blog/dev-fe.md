@@ -2,7 +2,7 @@
 title: "FrontEnd 101. SPAs and ways to do Auth"
 date: 2025-08-23
 draft: false
-tags: ["OAuth/JWT/Bearer","Who vs What can do","PB SDK","SPAs Serverless-Invoices","RTK]
+tags: ["OAuth/JWT/Bearer","Who vs What can do","PB SDK","SPAs Serverless-Invoices","RTK"]
 description: 'A Better front-end and authentication. With SelfHosted OAUTH recap and Forward Auth.'
 url: 'front-end-and-auth'
 ---

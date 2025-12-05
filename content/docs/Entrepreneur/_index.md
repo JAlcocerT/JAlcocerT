@@ -79,7 +79,31 @@ Also to bring [session recording](https://jalcocert.github.io/JAlcocerT/how-to-r
 
 With a clear product defined, the package of that into an **compeling offer** is key.
 
-Info is...free. Implementation is not:
+
+
+Info is...free. Implementation is not: *justa matter of the value ladder, a trade-off between time/money invested*
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C;
+
+    %% --- Nodes ---
+    L1("Free Content<br/>(Blog/YT $0)"):::free
+    L2("DIY<br/>(Templates / Platform) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Services) $$$"):::high
+
+    %% --- Connections ---
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+```
+
+Your Agency [Pricing](#pricing) Model can be tricky.
 
 ```mermaid
 graph TD
@@ -99,6 +123,56 @@ It's all about how valuable your clients perceive their time is compared to how 
 
 You can frame this in a trol yet simple CSR bar to help them decide:
 
+https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page
 
+png
 
 > Mind the increased Chances of people who never helped others for free calling you evil :)
+
+
+### Pricing
+
+
+Get clarity on this (your mission!): Who are you helping vs who are you serving?
+
+```mermaid
+flowchart LR
+    %% --- Definition of Styles ---
+    %% Root: Dark and solid anchor
+    classDef root fill:#263238,color:#fff,stroke:none,font-weight:bold;
+    
+    %% Time Path: Teal (Fresh, Growth, Low Cost)
+    classDef time fill:#E0F7FA,stroke:#006064,stroke-width:2px,color:#006064;
+    
+    %% Money Path: Purple (Premium, High Value, Exclusive)
+    classDef money fill:#F3E5F5,stroke:#4A148C,stroke-width:2px,color:#4A148C;
+
+    %% --- The Diagram ---
+    Center((Resources & <br/>Targets)):::root
+
+    %% Left Path: Time Rich
+    subgraph TimeRich [Path A: I have Time]
+        direction TB
+        Blog[Free Education<br/>Blog/YT]:::time
+        DIY[Implementation<br/>DIY Templates]:::time
+        
+        Blog --> DIY
+    end
+
+    %% Right Path: Money Rich
+    subgraph MoneyRich [Path B: I have Money]
+        direction TB
+        DWY[Guidance<br/>Done With You]:::money
+        DFY[Execution<br/>Done For You]:::money
+
+        DWY --> DFY
+    end
+
+    %% --- Visual Styling for the Containers ---
+    style TimeRich fill:#ffffff,stroke:#006064,stroke-width:2px,stroke-dasharray: 5 5
+    style MoneyRich fill:#ffffff,stroke:#4A148C,stroke-width:2px,stroke-dasharray: 5 5
+
+    %% --- Routing ---
+    Center -- "Low Budget" --> Blog
+    Center -- "High Budget" --> DWY
+```

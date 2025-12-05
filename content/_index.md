@@ -58,9 +58,9 @@ These connections can lead to collaborations, mentorship, and friendships that e
 
   {{< hextra/feature-card
     title="How could I miss AI?"
-    subtitle="If this is what I do for free. Imagine what..."
+    subtitle="If this is what I do for free. Imagine..."
     style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
-    link="https://jalcocertech.com"
+    link="https://www.jalcocertech.com"
   >}}
 
     {{< hextra/feature-card

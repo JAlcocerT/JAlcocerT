@@ -8,7 +8,11 @@ draft: false
 
 https://roadmap.sh/frontend/frameworks
 
+How much Fe and Be you need to know?
 
+You can discover along the way: bc concepts like rtk / indexDB learnt from the theory can be abstract.
+
+Just keep in mind these as high level overview [while you build](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/).
 
 ## FrontEnd
 
