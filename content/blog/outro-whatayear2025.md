@@ -7,7 +7,13 @@ description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-2025'
 ---
 
-CodexCLI for idea validation
+Have you tried more tools than actually shipped projects?
+
+This year yes, but I have changed the tendency.
+
+I believe the ratio can be... ~100 posts with new tools : 10 gh repos with sample projects
+
+
 
 Not all the content is indexed in the same way across engines and you can miss valuable info.
 
@@ -569,7 +575,14 @@ If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlc
 
 8. Better git *patterns and branching strategies*. Bc the current (and only) reality is main.
 
-9. CLI Agents ftw. Codex CLI was huge. But I also tried claude and geminiCLI. Together with BAML bringing type safe LLM calls.
+9. CLI Agents ftw. Codex CLI was huge. 
+
+I also tried claude and geminiCLI.
+
+Together with BAML bringing type safe LLM calls.
+
+> CodexCLI for idea validation?
+
 
 10. Thanks to authentication I got to know the difference between: WHO someone is and what someone can DO 🤯
 

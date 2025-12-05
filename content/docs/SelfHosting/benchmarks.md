@@ -26,6 +26,9 @@ Others, you will just do the custom SFF PC build that you ever wanted to get:
   {{< card link="https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/" title="Testing the Thinkpad X13" image="/blog_img/hardware/Lenovo-x13-micron-ssd.png" subtitle="~1kg x13 laptop review" >}}
 {{< /cards >}}
 
+![alt text](/images/benchmarks/ssd-nvme-pcie.png)
+
+
 Also, [Power consumtion](https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/#power-consumption-and-temps) matters.
 
 Even if you got your a nice solar panel setup:

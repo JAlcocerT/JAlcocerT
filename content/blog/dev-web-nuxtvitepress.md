@@ -550,6 +550,8 @@ You can plug google adsense not only to Nuxt, but to [any other website you buil
 
 1. **Create an `ads.txt` file** in your Hugo project’s `static` directory. The `static` folder in Hugo is where you put any files you want to be copied directly to the root of your build output.
 
+![alt text](/blog_img/web/ads-txt-public-hugo.png)
+
 2. **Add your content** to the `ads.txt` file:
 
 ```txt

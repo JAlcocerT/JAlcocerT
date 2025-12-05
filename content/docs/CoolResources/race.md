@@ -16,3 +16,6 @@ But my goal was clear: to create a race analytics app.
 
 
 ## Racing Resources
+
+
+![IoRacing IoTechCrafts IoTrack](/blog_img/web/WebsSnapshots/web_ioracing.png)

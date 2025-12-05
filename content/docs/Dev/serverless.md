@@ -20,6 +20,13 @@ But before that, understand: serverless it does not mean that there is not a ser
 
 **Intro**
 
+Serverless is one of the IT Concepts that deserves a separated chapter here.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs Be | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 Your WebApps, with Serverless Authentication and AI on the backend
 
 Just recently, I wrote about [Firebase Auth](/JAlcocerT/firebase-auth-101) and the [LogTo JS SDK](https://jalcocert.github.io/JAlcocerT/social-signin-101/#4-logto-).
@@ -100,6 +107,9 @@ For phones and with FastAPI, I did not manage to get fb auth social sign in/up  
 ## Cloudflare
 
 
+![Cloudflare Wrangler CLI](/blog_img/web/Cloudflare/CF_WranglerCLI.png)
+
+
 
 ### Cloudflare Workers and Pages
 
@@ -112,6 +122,8 @@ Similar to the [Google Cloud Run](https://jalcocert.github.io/JAlcocerT/dash-doc
 ### Cloudflare R2
 
 Looking for a storage solution for your serverless apps? 
+
+![CF R2](/blog_img/web/agujapunto-r2-firebase/r2-101.png)
 
 
 For s3 compatible storage you have this R2, but for a serverless db you have cloudflare D1 or [NeonDB](#neon-db)

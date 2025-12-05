@@ -273,6 +273,8 @@ If you have few SaaS within your offer: you will want to prove the uptime status
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" >}}
 {{< /cards >}}
 
+![UpTime Kuma Monitoring](/blog_img/web/success3-realestate/uptime-realestate-demo.png)
+
 
 
 #### eBooks Pages
@@ -575,7 +577,16 @@ curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect
 
 You will want to know **how your Website performs**:
 
+![Website SiteMap for SEO discovery](/blog_img/web/sitemap-google.png)
+
+![alt text](/blog_img/web/success4-ira/ira_demo_astro_pagesspeed.png)
+
+![Ping vs Google Speed Search](/blog_img/web/success10-ourika/result-guideventour.png)
+
+
 ![Carbon Comparison of Websites](/blog_img/web/carbon-comparison.png)
+
+![alt text](/blog_img/web/success4-ira/ira_demo_carbon_aplus.png)
 
 * https://radar.cloudflare.com/scan/d92c5e34-6baf-42ad-bea1-e5c7e74a88bf/summary
 

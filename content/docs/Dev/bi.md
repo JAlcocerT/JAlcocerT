@@ -42,4 +42,10 @@ You can potentially make embedable BI components that work on websites or just g
 
 You could also use these skills if you are building funnels during your [entrepreneurial journey](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/):
 
-![Streamlit Funnel Chart Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
+<!-- 
+![Streamlit Funnel Chart Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png) 
+-->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#funnels" title="Marketing Docs" image="/blog_img/apps/streamlit/streamlit-plotly-funnel.png" subtitle="Funnels with Streamlit" >}}
+{{< /cards >}}

@@ -68,6 +68,12 @@ graph TD
     A --> E(Services - DFY $$$);
 ```
 
+Most people wont buy from you. 
+
+But they will judge you by the quality of your free give aways.
+
+How to sell? *Aka, convince that you can solve problems*
+
 It's all about how valuable your clients perceive their time is compared to how good your offer is to solve their problems.
 
 You can frame this in a trol yet simple CSR bar to help them decide:

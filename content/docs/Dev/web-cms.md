@@ -67,6 +67,8 @@ Headless DirectusCMS Example
 
 * https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
 
+![alt text](/blog_img/web/tinaCMS/tina-cloud-login.png)
+
 ---
 
 ## Websites without Coding
@@ -111,3 +113,8 @@ Particularly ones that are OSS and that you can use freely within your HomeLab/V
 > MIT |  A minimal, open-source, writing platform for writers who care about the craft 
 
 {{% /details %}}
+
+
+If you like to build, you can also create webapps that wraps HUGO/Astro/Any SSG:
+
+![alt text](/blog_img/web/WebsSnapshots/hugo-flask-build.png)

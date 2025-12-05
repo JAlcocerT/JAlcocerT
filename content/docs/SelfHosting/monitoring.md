@@ -113,7 +113,6 @@ Or **[Tianji](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitori
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tianji" title="Tianji | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/" title="Using Kener Monitoring" image="/blog_img/selfh/HomeLab/statuspages/kener-setup.png" subtitle="Testing Kener Status Pages" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#tianji" title="Using Tianji" image="/blog_img/Monitoring/tianji-server-monit.png" subtitle="Testing Tianji Server Monitoring and WebAnalytics on a VPS" >}}

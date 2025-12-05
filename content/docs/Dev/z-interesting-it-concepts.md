@@ -12,6 +12,11 @@ url: 'IT-concepts'
 2. How to [Code on the go](#coding-on-the-go)
 3. [More](#other-concepts): [Microservices](#what-are-microservices), [WebHooks](#what-are-web-hooks), [API Calls](#what-are-api-calls)...
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/IT-concepts/" title="IT Concepts | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs Be | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 ## Containers
 
 They allow us to package applications completely.

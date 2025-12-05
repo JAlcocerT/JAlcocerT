@@ -7,6 +7,8 @@ description: "Astro Websites for Restaurants. Million dollar idea in the Mediter
 url: "webs-for-restaurants"
 ---
 
+![alt text](/blog_img/web/restaurant-astro-speed.png)
+
 1. https://github.com/moonbe77/fresh_bite
 
 > Unlicensed | Restaurant website template

@@ -559,15 +559,15 @@ ffmpeg -y -i initial_silenced_video.mp4 -stream_loop -1 -i afilador_101.mp3 \
 
 {{< youtube "YanaJiC_cYk" >}}
 
-
-
-
 ### Animations as a Code
 
+Some time back I was [people doing great animations](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/):
+
+![Matplotlib GIF Animation of a mechanism](/blog_img/mechanics/fourbarlinkage.gif)
 
 As we saw in summer, we can do [cool animations as a code](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/)
 
-We can do nice **animations with Matplotlib**:
+Believe it or not, we can do so via **Matplotlib animations**:
 
 ```sh
 git clone https://github.com/JAlcocerT/DataInMotion

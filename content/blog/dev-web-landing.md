@@ -2,7 +2,7 @@
 title: "Creating a Landing Website with Astro"
 date: 2024-02-14
 draft: false
-tags: ["Dev","KeyStatic"]
+tags: ["Dev","KeyStatic","Embeded Cal","Ourika"]
 description: 'Creating Landing Web Pages with Astro SSG - Ourika. The last site without keystaticCMS or similar editors.'
 url: 'creating-landing-pages-astro'
 ---

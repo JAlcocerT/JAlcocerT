@@ -63,6 +63,16 @@ https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics
 https://jalcocert.github.io/JAlcocerT/business-skills-data-analytics/
 https://jalcocert.github.io/JAlcocerT/decision-making-data-analytics/
 
+This can concepts get messy, very fast.
+
+That's why I learnt to create ebooks and made one about **Data Analytics**
+
+![Astro landing page book - Sell your ebook UI](/blog_img/shipping/astro-sell-your-ebook.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/" title="e-books | Docs" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="Scrapping job boards" >}}
+  {{< card link="https://diy.jalcocertech.com" title="D&A e-book" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Start your D&A Career" >}}
+{{< /cards >}}
 
 
 | **Category** | Tools | Description |

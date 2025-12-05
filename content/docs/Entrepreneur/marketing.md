@@ -135,7 +135,7 @@ Among [all the things that can be embedded](https://jalcocert.github.io/JAlcocer
 * https://app.cal.com/apps
 
 ![Booking tours with Cal](/blog_img/web/success10-ourika/ourika-cal.png)
-
+https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#the-result
 
 ```mermaid
 graph TD
@@ -207,6 +207,10 @@ You can always [embed things](https://jalcocert.github.io/JAlcocerT/embed-that/)
 
 ![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known" title="Marketing  Example for Services" image="/blog_img/biz/leads/good-old-ad.png" subtitle="Guerrilla Marketing via PDFs!" >}}
+{{< /cards >}}
 
 ### Social Media
 
