@@ -371,7 +371,7 @@ Rscript Z_ebooks/render.R \
   --cover Z_ebooks/web-ebook-jalcocertech.png
 ```
 
-If you are aware about few git tricks, lets just get started:
+If you are aware about few [git tricks](https://jalcocert.github.io/JAlcocerT/git-recap/), lets just get started:
 
 ```sh
 git init

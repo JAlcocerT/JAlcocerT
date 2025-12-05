@@ -390,9 +390,8 @@ cd ./Z_DeployMe
 npm init slidev@latest
 ```
 
-https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
-
-https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#preparing-a-tech-talk-with-ai
+* https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
+* https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#preparing-a-tech-talk-with-ai
 
 
 > See the event [here](https://events.exadel.com/event/rag-powered-real-estate/)

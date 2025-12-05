@@ -4,7 +4,7 @@ date: 2025-02-20T23:20:21+01:00
 draft: false
 tags: ["Dev","Git 101","branch"]
 url: 'git-recap'
-description: 'Git and useful extensions while developing.'
+description: 'Git tricks and useful extensions while developing.'
 ---
 
 When I started to use Git, I could actually start see my progress and build upon my previous effort.

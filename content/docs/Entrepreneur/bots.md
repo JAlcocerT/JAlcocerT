@@ -6,39 +6,58 @@ next: docs/
 draft: false
 ---
 
-You might have seen/used Telegram bots.
+You might be here because have seen/used Telegram bots.
 
-And people get creative with them https://github.com/ccbikai/BroadcastChannel
+But dont get confused with chatbots vs automation: *despite tools like n8n being able to handle bots*
 
-> Turn your Telegram Channel into a MicroBlog. 
+
 
 
 ### Telegram Bots
 
-<!-- 
-* https://github.com/JAlcocerT/openai-chatbot
-* https://platform.openai.com/api-keys
+Some people get creative with telegram https://github.com/ccbikai/BroadcastChannel
 
-* https://platform.openai.com/docs/models/
-* https://platform.openai.com/docs/models/gpt-4o -->
+> Turn your Telegram Channel into a MicroBlog.
 
-<!-- {{< dropdown title="Other Non Local Models for Projects ❎👇" closed="true" >}}
+But we are here to build **custom tg bots**.
 
-* Groq - 
-    * https://console.groq.com/keys
-* Gemini (Google)
-  * https://ai.google.dev/gemini-api/docs
-* Mixtral - **Open Models**, you can use their API
-    * https://docs.mistral.ai/api/
-* Anthropic (Claude) - https://www.anthropic.com/api
-  * https://console.anthropic.com
-  * https://console.anthropic.com/settings/keys
-* Open AI - GPT APIs https://platform.openai.com/api-keys
-* Grok (Twitter)
-* Azure
+{{< details title="TG Bots -  101 Setup 📌" closed="true" >}}
 
-{{< /dropdown >}} -->
 
-### N8N Bots
+{{< /details >}}
 
-{{< youtube "v-gCNTI5kzE" >}}
+<!-- {{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#ai" title="AI | Docs ↗" icon="book-open" >}}
+{{< /cards >}} -->
+
+#### N8N Bots
+
+<!-- {{< youtube "v-gCNTI5kzE" >}} -->
+
+You can combine TG bots with Telegram.
+
+Having your AI APi Keys ready and your n8n setup first:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#ai" title="AI | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/#n8n" title="Automation | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+{{< details title="N8N TG Bots -  101 Setup 📌" closed="true" >}}
+
+
+{{< /details >}}
+
+
+### Custom Bots
+
+These days you will hear the term RAG.
+
+It can be applied for real estate agencies
+https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
+
+![alt text](/blog_img/biz/RE/RE-bot-ppt.jpeg)
+
+Also, to provide custom QnA for your landing Pages/SaaS
+
+https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot

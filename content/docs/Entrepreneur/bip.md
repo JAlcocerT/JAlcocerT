@@ -27,11 +27,30 @@ source .env
 #
 ```
 
-
 {{< /details >}}
 
 Chances are that you are using AI/vibe coding techniques to build your next product.
 
+
+<!-- 
+* https://github.com/JAlcocerT/openai-chatbot
+* https://platform.openai.com/api-keys
+
+* Groq - 
+    * https://console.groq.com/keys
+* Gemini (Google)
+  * https://ai.google.dev/gemini-api/docs
+* Mixtral - **Open Models**, you can use their API
+    * https://docs.mistral.ai/api/
+* Anthropic (Claude) - https://www.anthropic.com/api
+  * https://console.anthropic.com
+  * https://console.anthropic.com/settings/keys
+* Open AI - GPT APIs https://platform.openai.com/api-keys
+* Grok (Twitter)
+* Azure
+
+* https://platform.openai.com/docs/models/
+* https://platform.openai.com/docs/models/gpt-4o -->
 
 ### Initial Prompts for Success
 
@@ -132,7 +151,15 @@ Bringing leads towards your sales pipeline is one of the crucial steps to succee
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/#ssg-astro-waiting-list" title="NEW - Make landing" image="https://raw.githubusercontent.com/JAlcocerT/waiting-to-landing/main/screens/demoLight.webp" subtitle="Creating the Waiting2Landing Concept x Formbricks" >}}
 {{< /cards >}}
 
+Even your agentic IDE that you use to code your business, are using Stripe to bill you.
 
-Even your agentic IDE that you use to code your business, are using Stripe to bill you:
+This is all about the right answer to the right questions.
 
-![Stripe Subscriptions](/blog_img/entrepre/webify/stripe-windsurf-sample.png)
+And the best way to know if someone values what you do, is if they are willing to pay for it (and how much)
+
+<!-- ![Stripe Subscriptions](/blog_img/entrepre/webify/stripe-windsurf-sample.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#integrate-stripe" title="Stripe Docs" image="/blog_img/entrepre/webify/stripe-windsurf-sample.png" subtitle="Stripe Subscriptions and More" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe" title="Using Stripe withing a Flask" image="/blog_img/entrepre/stripe/stripe-apps.png" subtitle="Stripe 101 withing a SaaS PoC" >}}
+{{< /cards >}}

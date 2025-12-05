@@ -118,6 +118,15 @@ See https://github.com/JAlcocerT/Home-Lab/blob/main/ghost/API.md after you have 
 
 ---
 
+## Conclusions
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Websites 101 | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+---
+
 ## FAQ
 
 If you like to do programatic stuff but prefer that agents do the job for you, see Wordpress MCP Server: https://github.com/mcp-wp/mcp-server
@@ -310,7 +319,7 @@ REST API vs GraphQL: Key Differences
 
 CMS-Specific Differences
 
-| Feature                | Ghost                          | WordPress                     |
+| **Feature**                | Ghost                          | WordPress                     |
 |------------------------|--------------------------------|-------------------------------|
 | Native API Type        | REST (Content + Admin)         | REST (Core)                   |
 | GraphQL Support        | No (REST only)                | Yes (via WPGraphQL plugin)    |
@@ -321,23 +330,31 @@ CMS-Specific Differences
 
 
 Choose Ghost if:
+
 - You prefer a simpler, more focused content structure
 - Built-in image optimization is important
-- You're comfortable with REST APIs
+- You're comfortable with **REST** APIs
 - You want a more streamlined authoring experience
 
 Choose WordPress if:
+
 - You need maximum flexibility in content modeling
-- You prefer working with GraphQL
+- You prefer working with **GraphQL**
 - You have existing WordPress content
 - You need extensive plugin ecosystem
 
-> Both Ghost and WordPress can serve as effective headless CMS options for Gatsby. 
+> Both Ghost and WordPress can serve as an effective headless CMS options for SSGs like Gatsby. 
 
 > > Ghost offers a more streamlined experience with its focused feature set, while WordPress provides greater flexibility and an extensive plugin ecosystem.
 
 ### Codex CLI + HUGO
 
-If Codex can generate documentation for [QA Track](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/)... https://youtu.be/e_l6HJISIrs
+If Codex can generate documentation for [QA Track](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/)... 
+
+<!-- https://youtu.be/e_l6HJISIrs -->
+
+{{< youtube "e_l6HJISIrs" >}}
 
 It can definitely generate markdown posts summaries about it or any other project.
+
+Which can be consolidated into a .md post for your favourite SSG of choice

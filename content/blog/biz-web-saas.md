@@ -409,7 +409,6 @@ This is much more efficient than **polling**, where the client would have to rep
 1. The client sends a `POST` request to `/reports` with a `callbackUrl` in the payload. The server immediately returns a `202` status. 
 2. When the report is ready hours later, the server sends a `POST` request to the client's `callbackUrl` with the report data.
 
-***
 
 ### Hooks in REST APIs (Webhooks)
 

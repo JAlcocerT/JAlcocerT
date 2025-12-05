@@ -794,7 +794,7 @@ and then a second function, that will let us choose which columns we want to fil
 Add also a proper description when defining those functions
 ```
 
-Keep git tricks handy though:
+Keep [git tricks](https://jalcocert.github.io/JAlcocerT/git-recap/) handy though:
 
 ```sh
 git restore stock_chart_display.py

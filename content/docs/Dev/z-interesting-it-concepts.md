@@ -43,10 +43,17 @@ The idea is that the final code for the app will be available for users packaged
 
 ## Git Concepts
 
-Make sure to follow [git best](https://jalcocert.github.io/JAlcocerT/git-recap/) practices:
+Make sure to follow [**git** best](https://jalcocert.github.io/JAlcocerT/git-recap/) practices:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/codespaces" title="Github CodeSpaces ↗" >}}
+{{< /cards >}}
+
+Always, Specially if you are building with AI.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip//" title="BiP | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
 **Github Authentication**
@@ -61,6 +68,17 @@ gh auth login #you can use HTTPs
 ---
 
 ## Other Concepts
+
+<!-- ![Webhook site for testing](/blog_img/GenAI/n8n/formbricks/fb7.png) -->
+
+{{< cards >}}
+  {{< card link="[#conclusions](https://github.com/JAlcocerT/Streamlit-MultiChat)" title="Using AI via APIs UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="The multichat project" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/n8n-with-ai/#n8n-x-formbricks" title="Formbricks x N8N WebHook Sample" image="/blog_img/GenAI/n8n/formbricks/fb7.png" subtitle="Configuring FB to work with n8n via WHs" >}}
+{{< /cards >}}
+
+{{< callout type="info" >}}
+Test those `http request` nodes and their Get/Post/... has been https://webhook.site/
+{{< /callout >}}
 
 ### What are Web-Hooks?
 

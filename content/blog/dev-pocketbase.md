@@ -3,7 +3,7 @@ title: "SelfHosted PocketBase for your SaaS BackEnd"
 date: 2025-08-10
 draft: false
 tags: ["PocketBase 101","OSS Auth","Concurrency","Local & Session Storage","Sqlite","CRUD Monkey"]
-description: 'Things your learn outside the confort zone. PB 101, BaaS Storage and more for WebApps'
+description: 'Learning outside the confort zone RTK vs IndexedDB. PB 101, BaaS Storage and more for WebApps'
 url: 'pocketbase'
 ---
 
@@ -1095,13 +1095,58 @@ Under storage, you will see 2 options: *local and session storage*
 
 RTK Query acts as an **abstraction layer** over browser storage.
 
+Moving from `localStorage` (common for beginners) to **HttpOnly Cookies** with **RTK Query** is often the "Doing Better" phase of web development.
+
+**The Core Relationship: State vs. Storage**
+
+  * **RTK (Redux Toolkit):** Lives in the **Memory (RAM)**. It manages your "Now" state. It vanishes when you hit refresh.
+  * **Cookies:** Live in the **Browser Storage**. They persist across refreshes and are automatically sent to the server with every request.
+
+The most common intersection of RTK and Cookies is **Authentication**.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+1.  **RTK Query** manages the API calls and the "Is User Logged In?" state.
+2.  **Cookies** (specifically `HttpOnly` cookies) safely store the Session ID or JWT.
+
+The "magic" is that RTK Query doesn't actually need to *touch* the cookie. 
+
+You just tell RTK to "include credentials," and the browser handles the cookie transport automatically. 
+
+This is much safer than storing tokens in Redux or LocalStorage (which are vulnerable to XSS attacks)!
+
 ### IndexDB
 
 IndexedDB is the standard, low-level database API built into all modern web browsers.
 
 It's designed for **client-side storage** of large amounts of structured data, including files and blobs.
 
-Think of it as a NoSQL database that runs directly in the browser.
+Think of it as a **~NoSQL database** that runs directly in the browser.
+
+**IndexedDB** is the third player in this relationship, and it completely changes the game if you want to move to the "Newer" phase of web development (Offline-First or Progressive Web Apps).
+
+  * **Cookies:** The **Security Guard**. Handles *who you are* (Auth).
+  * **RTK:** The **Brain**. Handles *what is happening right now* (Application State).
+  * **IndexedDB:** The **Backpack**. Handles *what you need to keep for later* (Long-term, heavy-duty storage).
+
+RTK acts as the "Traffic Controller" between your API (secured by cookies) and your permanent storage (IndexedDB).
+
+You don't use IndexedDB. You rely on **RTK** for state and **Cookies** for auth.
+
+  * **Problem:** If the user refreshes the page, RTK is wiped clean. You have to fetch everything from the server again.
+  * **Experience:** Slower on bad internet. Blank screen while loading.
+
+
+You use **RTK + Cookies** but you might use `localStorage` to save small user preferences (like Dark Mode).
+
+  * **Problem:** `localStorage` is tiny (5MB) and synchronous (freezes the UI if you save too much). You can't store thousands of rows of data here.
+
+
+This is where **IndexedDB** enters. You use a library like `redux-persist` to automatically sync your RTK Store into IndexedDB.
+
 
 However, the native IndexedDB API is notoriously complex, verbose, and difficult to work with.
 

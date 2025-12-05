@@ -1,5 +1,5 @@
 ---
-title: "Website knowledge updates. Waiting / Landings with...AI?"
+title: "Website knowledge updates. Waiting / Landings with...AI Bots?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
 tags: ["Selfhosted-Landing","101 Astro & Hugo","BCMS vs PagesCMS","TiinyHost"]

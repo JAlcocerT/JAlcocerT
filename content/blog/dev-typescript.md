@@ -164,7 +164,7 @@ firebase init
 
 > > Yes, FREEEE hosting
 
-You might also need some git tricks:
+You might also need some [git tricks](https://jalcocert.github.io/JAlcocerT/git-recap/):
 
 ```sh
 choco install gh

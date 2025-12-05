@@ -1,8 +1,12 @@
-Created few pdf ebooks for expanding knowledge in few topics Ive found interesting. 
+
+
+---
+
+Created few **sample pdf ebooks** for expanding knowledge in few topics Ive found interesting while learning and creating [these docs](https://jalcocert.github.io/JAlcocerT/docs/).
 
 I have created them as per the [learnings of this repo](https://github.com/JAlcocerT/ebook-ideas/tree/master/x-rmd)
 
-This is happening thanks to the magic of [the R language](https://jalcocert.github.io/JAlcocerT/useful-r-stuff/): *Example of the D&A ebook*
+This is happening thanks to the magic of [the **R** language](https://jalcocert.github.io/JAlcocerT/useful-r-stuff/): *Example of the D&A ebook*
 
 ```sh
 # Rscript Z_ebooks/render.R --input Z_ebooks/content-test.md --output Z_ebooks/content-test.pdf --cover Z_ebooks/cover-selfhosting@300dpi.png

@@ -155,6 +155,12 @@ graph TD
 
 ### Integrate Stripe
 
+
+{{< details title="Stripe 101 Setup 📌" closed="true" >}}
+
+
+{{< /details >}}
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe" title="Using Stripe withing a Flask" image="/blog_img/entrepre/stripe/stripe-apps.png" subtitle="Stripe 101 withing a SaaS PoC" >}}
 {{< /cards >}}

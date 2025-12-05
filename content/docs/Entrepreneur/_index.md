@@ -7,10 +7,31 @@ sidebar:
 
 [Boostrapping](https://jalcocert.github.io/JAlcocerT/whats-boostrap/) is not straight forward.
 
-It's a journey of doing more, better, newer - all of the time surounded with unknowns.
+It's a journey of *doing more, better, newer* - all of the time surounded with unknowns.
 
 ```mermaid
+flowchart LR
+    %% Styles
+    classDef state fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+    classDef start fill:#43A047,stroke:#1B5E20,stroke-width:2px,color:white;
 
+    %% Nodes
+    Start((Start)):::start --> More
+    More(Doing MORE):::state
+    Better(Doing BETTER):::state
+    Newer(Doing NEWER):::state
+
+    %% Internal Feedback Loops (The Grind)
+    More -- "Scale Up" --> More
+    Better -- "Refine" --> Better
+    Newer -- "Test" --> Newer
+
+    %% The Progression Journey
+    More -- "Capacity Hit" --> Better
+    Better -- "Optimized" --> Newer
+    
+    %% The Upward Spiral
+    Newer -- "New Baseline" --> More
 ```
 
 For anyone who has [cycled](https://jalcocert.github.io/JAlcocerT/buying-bicycle-through-data-analytics/) 100km+, you know that half of the way are the last 10km of [the journey](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/).

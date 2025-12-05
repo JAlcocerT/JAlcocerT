@@ -2,7 +2,7 @@
 title: "FrontEnd 101. SPAs and ways to do Auth"
 date: 2025-08-23
 draft: false
-tags: ["OAuth/JWT/Bearer","Who vs What can do","PB SDK","SPAs Serverless-Invoices"]
+tags: ["OAuth/JWT/Bearer","Who vs What can do","PB SDK","SPAs Serverless-Invoices","RTK]
 description: 'A Better front-end and authentication. With SelfHosted OAUTH recap and Forward Auth.'
 url: 'front-end-and-auth'
 ---
@@ -50,7 +50,7 @@ graph TD
 A **FE guy recommended** me to look:
 
 * https://tanstack.com/query/latest - Powerful asynchronous state management, server-state utilities and data fetching
-* https://redux-toolkit.js.org/rtk-query/overview - RTK Query is an optional addon included in the Redux Toolkit package, and its functionality is built on top of the other APIs in Redux Toolkit.
+* https://redux-toolkit.js.org/rtk-query/overview - **RTK Query** is an optional addon included in the Redux Toolkit package, and its functionality is built on top of the other APIs in Redux Toolkit.
 
 ## FE Can do a lot
 

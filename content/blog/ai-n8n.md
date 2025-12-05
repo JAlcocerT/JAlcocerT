@@ -345,7 +345,9 @@ In contrast, other data storages are much more difficult to use:
 
 #### n8n: The Visual Workflow Builder 🎨
 
-n8n (which stands for "node-based, no-code, and open-source") uses a visual, node-based approach. You connect different "nodes" on a canvas to build a complete workflow, which is more similar to how a developer would think about a flow chart. 
+n8n (which stands for "node-based, no-code, and open-source") uses a visual, node-based approach. 
+
+You connect different "nodes" on a canvas to build a complete workflow, which is more similar to how a developer would think about a flow chart. 
 
 * **Key Strengths**:
     * **User-Friendly Interface**: The drag-and-drop visual builder makes it very easy to see and understand the entire workflow.
