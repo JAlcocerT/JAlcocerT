@@ -64,7 +64,7 @@ These connections can lead to collaborations, mentorship, and friendships that e
   >}}
 
     {{< hextra/feature-card
-    title="Who said Web3?"
+    title="Who said Web-3?"
     subtitle="Code is Law."
     style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
     link="https://jalcocert.github.io/web3/"

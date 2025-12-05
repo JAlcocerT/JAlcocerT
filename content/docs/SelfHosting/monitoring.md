@@ -28,6 +28,14 @@ Not only [AWS](https://health.aws.amazon.com/health/status) will have outages.
 
 But also [cloudflare](https://www.cloudflarestatus.com/)...and [Github](https://www.githubstatus.com/)
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#portmaster-and-https" title="PortMaster" image="/blog_img/selfh/https/portmaster-nc-https.png" subtitle="PortMaster vs HTTPs" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/homelab-security/#conclusions" title="Stacer" image="/blog_img/selfh/stacer-ui.png" subtitle="Using Stacer in a HomeLab" >}}
+{{< /cards >}}
+
+<!-- ![Portmaster](/blog_img/selfh/https/portmaster-nc-https.png) -->
+
+<!-- ![alt text](/blog_img/selfh/stacer-ui.png) -->
 
 You can try with a **NetData** or a [custom Grafana dashboard](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#netdata-and-grafana) for monitoring:
 
@@ -41,6 +49,7 @@ You can try with a **NetData** or a [custom Grafana dashboard](https://jalcocert
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#netdata-and-grafana" title="Netdata Monitoring" image="/blog_img/selfh/HomeLab/netdata.png" subtitle="OpenSpeedTest and a TPLink" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Testing a Travel Router" image="/blog_img/hardware/TPLink4G-SpeedTestTraker.png" subtitle="SpeedTest Tracker on a GL MT3000" >}}
 {{< /cards >}}
+
 <!-- 
 ![Netdata Updated UI](/blog_img/selfh/HomeLab/netdata.png) -->
 

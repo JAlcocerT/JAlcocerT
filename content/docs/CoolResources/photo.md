@@ -8,6 +8,12 @@ draft: false
 
 If you are a photographer or just like to [go on adventures](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), chances are you have a camera and a smartphone.
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#backups" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Hardware & Softw setup for traveling" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Tools" image="/blog_img/selfh/Photo/PiGallery-PhotoInfo.png" subtitle="PiGallery, PhotoView, Immich..." >}}
+{{< /cards >}}
+
+
 
 ---
 

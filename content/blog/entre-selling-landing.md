@@ -206,6 +206,10 @@ The platform must offer a seamless, content-driven user interface and a flexible
 
 {{< /details >}}
 
+After the vibe coding is completed, we go from this:
+
+![alt text](/blog_img/entrepre/selfh-landing/wireframe.png)
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="NEW SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}

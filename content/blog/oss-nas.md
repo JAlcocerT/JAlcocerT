@@ -419,7 +419,7 @@ If you are building software, check [Komodo](https://github.com/moghtech/komodo#
 
 2. https://github.com/safing/portmaster
 
-> 🏔 Love Freedom - ❌ Block Mass Surveillance
+> **GPL 3.0** | 🏔 Love Freedom - ❌ Block Mass Surveillance
 
 You can also have a look to: ModSecurity, Naxsi, Open AppSec, SafeLine,...
 
