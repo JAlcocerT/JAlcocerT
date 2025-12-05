@@ -46,6 +46,8 @@ A lot of what I have achieved, would not be possible w/o **proper attention**.
 sudo snap install pomatez
 ```
 
+> **MIT** | Stay Focused. Take a Break. 
+
 ### More Concentration Tools
 
 You can use many of this OSS tools for free, just with proper configuration:

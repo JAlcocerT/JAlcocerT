@@ -28,9 +28,9 @@ https://github.com/mifi/lossless-cut
 
 ## Video as a Code
 
-It's all about using: https://github.com/FFmpeg/FFmpeg
+It's all about using **FFMPEG**: https://github.com/FFmpeg/FFmpeg
 
-For Linux:
+For Linux: *I was doing some tricks*
 
 ```sh
 #sudo apt update && sudo apt install ffmpeg
@@ -47,6 +47,13 @@ You can also do same tricks for [Windows like so](https://github.com/JAlcocerT/Y
 Get-ChildItem -Filter "*.MP4" | ForEach-Object { "file '$($_.Name)'" } | Set-Content file_list.txt
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
 ```
+
+But this guy takes FFMPEG to the next level:
+
+<!-- https://www.youtube.com/watch?v=6uB65PdasQI -->
+
+{{< youtube "6uB65PdasQI" >}}
+
 
 ### Converting Video
 

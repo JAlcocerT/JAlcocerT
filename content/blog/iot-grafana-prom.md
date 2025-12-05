@@ -1,10 +1,16 @@
 ---
 title: "Grafana Monitoring: Prometheus"
-date: 2025-12-09
-draft: ["Homelab","Docker","Self-Hosting","Iotawatt"]
-description: 'Grafana works for IoT Same as for monitoring'
+date: 2026-01-09
+draft: ["Homelab","Docker","Self-Hosting","Iotawatt","Prometheus vs Graphite","Grafana vs TelemetryHarbour"]
+description: 'Grafana works for IoT Same as for Monitoring a HomeLab'
 url: 'selfhosting-grafana'
 ---
+
+* https://telemetryharbor.com/
+* https://docs.telemetryharbor.com/docs/Integrations/home-assistant/
+
+
+https://docs.telemetryharbor.com/docs/oss-self-hosted/
 
 
 **Tl;DR**

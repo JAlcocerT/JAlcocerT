@@ -152,11 +152,13 @@ It's a clear example that, if you know what you are doing (at least vibe coding 
 
 #### Landing Page for your SaaS
 
-After the waiting list and checking PMF, comes building time.
+After the waiting list and checking the PMF, comes building time.
 
 For which you should have [a cool Landing Page](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/).
 
 It does not have to be the Lando Norris Page, neither the genkinfy.
+
+You could make it look impressive (yet not so much responsive)
 
 But the aster you go from Idea to WaitingList/Landing *depending on your popularity* and to deployment into VPS, the higher changes to get Stripe notifications.
 

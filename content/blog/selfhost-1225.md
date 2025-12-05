@@ -1,11 +1,34 @@
 ---
 title: "SelfHosting is easy with PaaS"
-date: 2025-12-10T01:20:21+01:00
+date: 2025-12-08T01:20:21+01:00
 draft: false
 tags: ["HomeLab ebook","Excalidraw","1toN ebooks","Omarchy OS"]
 description: 'Selfhosting with your HomeLab and PaaS.'
 url: 'selfhosted-apps-december-2025'
 ---
+
+
+
+Concerned about container backups?
+
+<!-- 
+mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
+
+sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
+-->
+
+<!-- 
+https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
+
+https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
+<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
+
+https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
+<https://github.com/JAlcocerT/Docker/tree/main/Media> 
+-->
+
+There was another attack to npm affecting Posthog!
+
 
 > If you need a NAS, you can check HexOS
 

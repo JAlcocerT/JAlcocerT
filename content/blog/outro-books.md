@@ -14,6 +14,17 @@ influence: the psy of persuasion
 the persuasion code
 -->
 
+
+<!-- 
+referencia a persuasion escrito en jan 2022
+
+y aqui cositas de neuromarketing
+
+the buying brain....
+`brainfluence`
+
+ -->
+
 **Tl;DR**
 
 <!-- 

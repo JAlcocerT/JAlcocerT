@@ -133,7 +133,7 @@ png
 ### Pricing
 
 
-Get clarity on this (your mission!): Who are you helping vs who are you serving?
+Get clarity on this (*your mission!*): Who are you helping (vs) who are you serving?
 
 ```mermaid
 flowchart LR

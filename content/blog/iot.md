@@ -1,39 +1,20 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2025-12-11
+date: 2026-01-11
 draft: false
-tags: ["Tinkering","DB2Rest","TelemetryHarbor","IoT ebook","From obfuscaste towards 1toN eBooks"]
+tags: ["Tinkering","DB2Rest","Tech Talk","IoT ebook","From obfuscaste towards 1toN eBooks"]
 description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'
 url: 'just-iot'
 ---
-
-
-
-1. https://a1karting.pl/cennik/
-2. https://sklep.drive-position.pl/kategoria-produktu/quady-i-adv/
-
-<!-- 
-Expertise:
-    MQTT
-    CAN Bus
-    Sensors: ESP32…
-    https://esp32io.com/tutorials/esp32-gps
--->
-
-IOT -> TASMOTA
-
-https://siytek.com/what-is-tasmota-an-introduction-to-the-cloud-free-smart-home/
-
-https://acurast.com/
 
 **TL;DR:** Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
 
 +++ DB2Rest
 
-* https://telemetryharbor.com/?ref=selfh.st
-* https://docs.telemetryharbor.com/docs/Integrations/home-assistant/
 
 https://ko-fi.com/s/86175d7928
+
++++ Destiling knowledge to ebooks - IoT edition
 
 **Intro**
 
@@ -333,42 +314,29 @@ or 4.7k 10k resistor between data and 3.3v
 
 ## Conclusions
 
+Have you ever wanted to work in the IoT industry?
+
+After this post,you should be closer than before.
+
 With this post, I pretend to 
 
 
-As I plan to write about less new things next year, but gain depth:
+1. https://a1karting.pl/cennik/
+2. https://sklep.drive-position.pl/kategoria-produktu/quady-i-adv/
 
-```sh
-#du -sh .
-#find ./content/blog -maxdepth 1 -type f -name "*.md" | wc -l #~339 posts and counting
+<!-- 
+Expertise:
+    MQTT
+    CAN Bus
+    Sensors: ESP32…
+    https://esp32io.com/tutorials/esp32-gps
+-->
 
-find content/blog -name '*.md' -print0 |
-xargs -0 awk '
-  FNR==1 { post_date=""; printed=0 }
+IOT -> TASMOTA
 
-  /^date:/ && !printed {
-    gsub(/^date:[[:space:]]*/, "", $0)
-    post_date = substr($0, 1, 10)
-    if (post_date > "2025-12-31") {
-      print FILENAME ": " post_date
-      printed=1
-      count++
-    }
-  }
+https://siytek.com/what-is-tasmota-an-introduction-to-the-cloud-free-smart-home/
 
-  END {
-    print "TOTAL:", count
-  }
-'
-#find static/blog_img -type f | wc -l
-```
-
-As of now I have 'just' planned ~33 posts for JAlcocerT for the rest of 2025/2026.
-
-```sh
-#git clone https://github.com/JAlcocerT/canvas
-
-```
+https://acurast.com/
 
 
 ---

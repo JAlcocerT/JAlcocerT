@@ -17,7 +17,9 @@ They make it easy to deploy your software, and they handle the infrastructure fo
 
 ## PaaS What
 
-**Platform as a Service** (PaaS) is a cloud computing model that provides a platform for customers to develop, run, and manage applications without the complexity of building and maintaining the infrastructure typically associated with developing and launching an app.
+**Platform as a Service** (PaaS) is a cloud computing model that provides a platform for customers to develop, run, and manage applications.
+
+Without the complexity of building and maintaining the infrastructure typically associated with developing and launching an app.
 
 *   **Complete development and deployment environment:** PaaS provides a comprehensive suite of tools and services needed for the entire application lifecycle, from coding and testing to deployment and management.
 *   **Abstraction of infrastructure:** PaaS handles the underlying infrastructure, including servers, storage, and networking. This allows developers to focus solely on writing code and building their applications.
@@ -232,6 +234,10 @@ https://openfaas.com/
 ## Conclusions
 
 Definitely these SelfHosted PaaS are a cool way to **provide value** for people that does not want to go into the *complicated server world!*
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/PaaS" title="Selfhostable PaaS | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 This is a **great way to spin websites** for clients or just for fun.
 

@@ -67,7 +67,9 @@ In the next points I will be describing the packages that I chose to have those 
 
 ### Leaflet
 
-Leaflet is a lightweight, open-source JavaScript library for creating interactive maps on web pages. It is designed to be easy to use, flexible, and performant, making it a popular choice for developers who want to create map-based applications or visualizations without the complexity of more feature-rich mapping libraries like Google Maps or OpenLayers.
+Leaflet is a lightweight, open-source JavaScript library for creating interactive maps on web pages.
+
+It is designed to be easy to use, flexible, and performant, making it a popular choice for developers who want to create map-based applications or visualizations without the complexity of more feature-rich mapping libraries like Google Maps or OpenLayers.
 
 I have been experimenting with leaflet for a while already, and just thought to give it a try for this project as well.
 

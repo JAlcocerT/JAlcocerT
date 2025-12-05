@@ -1,8 +1,8 @@
 ---
-title: "[IoT] Sensors and Arduino"
-date: 2025-12-10
+title: "[IoT] Sensors x Home Assistant"
+date: 2026-01-10
 draft: false
-tags: ["Tinkering","Polanduino","DHT","MLX","Robotics"]
+tags: ["Tinkering","Polanduino x Arduino","DHT","MLX","Robotics"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---

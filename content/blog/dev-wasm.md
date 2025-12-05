@@ -252,36 +252,33 @@ Check out the live instance at `vert.sh`.
 
 >  The next-generation file converter. Open source, fully local* and free forever. 
 
->> VERT is built in Svelte and TypeScript.
+>> VERT is built in Svelte and [TypeScript](https://jalcocert.github.io/JAlcocerT/whats-typescript/).
 
 You can try vert at: https://vert.sh
 
-This can even convert video (but not in the browser) with FFMPEG and RUST: https://github.com/VERT-sh/VERT/blob/main/docs/VIDEO_CONVERSION.md
-
-
+This can even convert video *(but not in the browser)* with FFMPEG and RUST: https://github.com/VERT-sh/VERT/blob/main/docs/VIDEO_CONVERSION.md
 
 {{% details title="Why FFMPEG and RUST? 🚀" closed="true" %}}
 
-Running FFmpeg with Rust bindings offers advantages mainly in safety and application integration but does not replace the default way FFmpeg is run, which is as a native C/C++ binary or through its CLI.
+Running FFmpeg with Rust bindings offers advantages mainly in safety and application integration.
+
+But does not replace the default way FFmpeg is run, which is as a native C/C++ binary or through its CLI.
 
 - **FFmpeg, by default, is written in C/C++** and runs as a command-line application (CLI) or through its C API for direct integration in software projects.[1][2]
 - Most users interact with it via terminal commands, scripts, or through external programs that call the binary.[2]
 
 Advantages of Rust Integration
 
-- Rust bindings (or libraries like `rsmpeg` or `ez-ffmpeg`) allow developers to harness FFmpeg's power in Rust applications while leveraging Rust's robust memory safety and error handling.[3][4][5]
-- Using Rust wrappers can help prevent memory leaks and common security issues inherent to directly using FFmpeg's C API, making your multimedia processing code more secure and reliable.[4][5]
-- Rust abstractions can make multimedia tasks easier and more ergonomic compared to composing complex raw FFmpeg CLI commands, improving developer productivity and application stability.[5][3][4]
+- Rust bindings (or libraries like `rsmpeg` or `ez-ffmpeg`) allow developers to harness FFmpeg's power in Rust applications while leveraging Rust's robust memory safety and error handling.
+- Using Rust wrappers can help prevent memory leaks and common security issues inherent to directly using FFmpeg's C API, making your multimedia processing code more secure and reliable.
+- Rust abstractions can make multimedia tasks easier and more ergonomic compared to composing complex raw FFmpeg CLI commands, improving developer productivity and application stability.
 
 When to Use Which
 
 - For most end-users and scripting tasks, calling the regular FFmpeg binary is fastest and simplest.
-- For developers building complex or safety-critical applications, integrating FFmpeg with Rust provides extra benefits in safety, maintainability, and native performance, while preserving nearly all of FFmpeg's rich feature set.[3][4][5]
+- For developers building complex or safety-critical applications, integrating FFmpeg with Rust provides extra benefits in safety, maintainability, and native performance, while preserving nearly all of FFmpeg's rich feature set.
 
-In summary, FFmpeg runs by default as a C/C++ CLI tool, but using it in Rust brings safety, easier integration, and cleaner code for application development without losing core functionality.[4][5][3]
-
-
-[5](https://github.com/larksuite/rsmpeg)
+In summary, FFmpeg runs by default as a C/C++ CLI tool, but using it in Rust brings safety, easier integration, and cleaner code for application development without losing core functionality.
 
 {{% /details %}}
 

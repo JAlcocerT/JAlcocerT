@@ -1,11 +1,22 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-23
+date: 2025-12-25
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
-url: 'tech-recap-2025'
+url: 'tech-recap-and-more-2025'
 ---
+
+
+**Tl;DR**
+
+I dared to call [2024 crazy](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/).
+
+Then 2025 happened.
+
+
+900 min of LISTENING to a podcast makes you be the top...5%? really?
+
 
 Have you tried more tools than actually shipped projects?
 
@@ -117,15 +128,6 @@ https://juan.pl/en/
 
 https://www.albertina.at/en/
 
-<!-- 
-referencia a persuasion escrito en jan 2022
-
-y aqui cositas de neuromarketing
-
-the buying brain....
-`brainfluence`
-
- -->
 
  if you are building websites, get inspired:
 
@@ -885,6 +887,8 @@ Just make sure you take care of your diet/stress levels.
 
 {{< /details >}}
 
+16. helping versus serving - *and how pricing helps differenciate that*
+
 
 ## Processes
 
@@ -1506,6 +1510,13 @@ But it must have been sth like:
 
 
 ### For Next year...
+
+
+{{< details title="RoadMap | As of 1225 📌" closed="true" >}}
+
+
+
+{{< /details >}}
 
 #### Keep Doing
 

@@ -2,7 +2,7 @@
 title: "Whats an FPV?"
 date: 2026-12-31T23:20:21+01:00
 draft: true
-tags: ["Tinkering"]
+tags: ["Tinkering","Ardupilot vs "]
 description: Drone.
 url: 'fpv-programming'
 ---
@@ -116,14 +116,18 @@ There are other open-source flight controller firmware options besides Betafligh
 
 * **Quicksilver:**  A newer flight controller firmware written in Rust.  It's designed to be more efficient and safer than some of the older, C-based firmwares. It's gaining some traction but is still under development.
 
-It's worth noting that some of these are forks of Betaflight, meaning they share a common codebase but have diverged in their development and features.  Betaflight's large community and constant development make it a moving target, so some of the other options may have features or performance characteristics that are temporarily better, but Betaflight often catches up.
+It's worth noting that some of these are forks of Betaflight, meaning they share a common codebase but have diverged in their development and features. 
+
+Betaflight's large community and constant development make it a moving target, so some of the other options may have features or performance characteristics that are temporarily better, but Betaflight often catches up.
 
 
 ## Mark5 Dron
 
 **What is a Mark5 Drone?**
 
-A "Mark5" drone isn't a specific type of drone in the same way that, say, a "cinewhoop" is.  Instead, "Mark5" (or sometimes "MK5") usually refers to a specific *frame* design, often for FPV (First Person View) drones.
+A "Mark5" drone isn't a specific type of drone in the same way that, say, a "cinewhoop" is.  
+
+Instead, "Mark5" (or sometimes "MK5") usually refers to a specific *frame* design, often for FPV (First Person View) drones.
 
 It's a **popular frame style** known for its durability, performance, and often its aesthetic design.
 
@@ -155,9 +159,11 @@ It's not a complete, ready-to-fly drone itself, but rather a frame onto which yo
 
 https://youtube.com/shorts/btdBPai3ppU?si=yN8nHFoL9bB1BybA
 
+---
+
 ## Conclusions
 
-If you like mechanics, 3d printing and RC.
+If you like mechanics, 3d printing and RC: this could be a hobby for you.
 
 
 Have a look to:

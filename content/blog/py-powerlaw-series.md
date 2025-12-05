@@ -2,11 +2,13 @@
 title: "Power Laws: What?"
 date: 2025-12-19T23:20:21+01:00
 draft: false
-tags: ["Python","Math","Outro"]
+tags: ["Python x STEM","Math","Outro","Statistical Distributions"]
 description: "Explaining series and the relation with the power law"
 url: 'powerlaw-and-series-with-python'
 math: true
 ---
+
+
 
 
 **Tl;DR**
@@ -15,7 +17,15 @@ Just a quick mental model on [Series](#understanding-series) with Python.
 
 +++ Reflecting on [Pareto](#power-law--pareto) and [D&A](#power-law--data-analytics)
 
+
 **Intro**
+
+I saw this [fantastic video from Veritasium](https://youtu.be/HBluLfX2F_k?si=9UgTHcs4rrU-2WoG) about Power Laws.
+
+<!-- https://youtu.be/HBluLfX2F_k?si=9UgTHcs4rrU-2WoG -->
+
+{{< youtube "HBluLfX2F_k" >}}
+
 
 
 <!-- 
