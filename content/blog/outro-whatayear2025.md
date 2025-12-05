@@ -864,7 +864,7 @@ From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael E
 
 Just make sure you take care of your diet/stress levels.
 
-15. Doing is faster than watching
+15. Doing is faster than watching: *if you were doing certifications instead of building, im sure you can relate*
 
 {{< details title="Examples of People Doing Cool Tech Stuff | Wifi Relay for Ventilation 📌" closed="true" >}}
 

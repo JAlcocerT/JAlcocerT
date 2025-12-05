@@ -10,7 +10,9 @@ tags: ["HomeLab","LazyDocker","depends_on","Ansible","Github Actions","Uptime Ku
 
 **Tl;DR**
 
-YOu might come to this post bc of selfhosting and containers.
+You might come to this post bc of [selfhosting](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/) and containers.
+
+or bc you are a [system engineer](https://jalcocert.github.io/JAlcocerT/systems-engineering-and-infraestructure/).
 
 And stay when you realize how much you can do with proper devops setup in your homelab.
 

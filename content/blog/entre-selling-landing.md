@@ -1,5 +1,5 @@
 ---
-title: "Website knowledge updates. Waiting / Landings with AI?"
+title: "Website knowledge updates. Waiting / Landings with...AI?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
 tags: ["Selfhosted-Landing","101 Astro & Hugo","BCMS vs PagesCMS","TiinyHost"]
@@ -215,6 +215,33 @@ The platform must offer a seamless, content-driven user interface and a flexible
 git clone https://github.com/JAlcocerT/selfhosted-landing.git
 #make help
 ```
+
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **Backend/Database** | | |
+| **Authentication** | | |
+
+> I had to play with CSR again and trol a little bit!
+
+Additionally: I embeded a cal calendar
+
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Calendar | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Formbricks | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+### Adding a Simple ChatBot
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#ai" title="AI | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/" title="Bots | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 
 ---

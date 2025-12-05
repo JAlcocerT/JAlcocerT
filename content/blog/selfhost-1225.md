@@ -327,51 +327,6 @@ For a **general OS purposes**, as of today I would:
 
 > Intelligence is the ability to adapt to change
 
-
-<!-- https://www.classcentral.com/ -->
-
-<!-- ## Spaced learning -->
-<!-- ultra learning 
-range - why generalist...
--->
-
-<!-- <https://www.futuretools.io/>
-
-<https://github.com/SevaSk/ecoute>
-
-<https://github.com/beyondcode/writeout.ai>
-
-<https://github.com/Significant-Gravitas/Auto-GPT>
-<https://docs.agpt.co/setup/>>
-
-
-<https://ugeek.github.io/blog/post/2023-04-06-listado-de-webs-de-ia-para-busquedas-desarrollo-y-productividad.html> -->
-
-
-
-
-<!-- * Vast.AI / Tensordock.com / runpod.io -->
-
-
-<!-- 
-If you plan to use openAI:
-
-* Organization ID -> https://platform.openai.com/settings/organization/general
-* API Keys -> https://platform.openai.com/settings/profile?tab=api-keys
-* endpoint -> https://api.openai.com/ , yes without /v1/models
-
-You can also create knowledge for DifyAI:
-
-* From notion
-* text file
-* from website- cooming soon -->
-
-
-<!-- https://superlinked.com/vector-db-comparison -->
-<!-- https://github.com/superlinked/VectorHub -->
-
-
-
 git clone https://github.com/atareao/self-hosted.git atareao
 
 

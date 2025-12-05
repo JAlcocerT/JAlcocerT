@@ -49,6 +49,7 @@ docker run -d \
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/capjs" title="CapJS | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="NextJS x CapJS | Sample Project ↗" >}}
 {{< /cards >}}
 
 Cap is a lightweight, modern **open-source CAPTCHA alternative** designed using [SHA-256](#the-sha256-algorithm) proof-of-work

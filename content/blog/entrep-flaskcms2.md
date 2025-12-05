@@ -206,15 +206,15 @@ It was such a very simple statement, and how much truth there is inside of it :)
 
 With these 2 setups ends my custom/individual website creation. For good.
 
-> I will show the DIY way to anyone that can be interested, but it wont be a 
+> I will show the DIY way to anyone that can be interested, but it wont be a 121 time investment
+
+> > The 121 is what some people call consulting / DWY, isnt it?
 
 Time to scale with all the learnings: bring more clients, automatically and ones that actually see/can get value on a site.
 
 Because its not about the tech stack, but the solutions provided.
 
 **Simplicity always wins** and it seems that for now there wont be a flaskcms2.0.
-
-
 
 ### Lately I...
 
@@ -268,7 +268,6 @@ Temporal.io is an open-source platform that enables the creation of **durable an
 It acts as a workflow orchestration engine, allowing developers to write complex, long-running business processes as code in standard programming languages like Go, Java, Python, and TypeScript.
 
 {{< details title="More about temporal... 📌" closed="true" >}}
-
 
 The platform handles the complexities of state management, retries, and failure recovery, essentially allowing you to write your application logic as if system failures don't exist.
 

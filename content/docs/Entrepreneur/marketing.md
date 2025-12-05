@@ -121,6 +121,12 @@ curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCPPMA8ZEusAe5dVH6P
 
 Among [all the things that can be embedded](https://jalcocert.github.io/JAlcocerT/embed-that/) into a website, we have not only bots, but also cool calendars.
 
+
+{{< details title="Cal dot com API - Use cases 📌" closed="true" >}}
+
+
+{{< /details >}}
+
 {{< cards >}}
   {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
 {{< /cards >}}

@@ -10,7 +10,25 @@ For the ones who like to **B**uild **i**n **P**ublic.
 
 ## AI
 
-If you are one of those entrepreneurs who has managed to learn how to code:
+If you are one of those entrepreneurs who has managed to learn how to code.
+
+
+{{< details title="Interesting AI via APIs  📌" closed="true" >}}
+
+
+* Groq - https://console.groq.com/keys
+* OpenAI - https://platform.openai.com/account/api-keys
+* Anthropic - https://console.anthropic.com/api-keys
+
+
+```sh
+source .env
+#export OPENAI_API_KEY=sk-proj-...
+#
+```
+
+
+{{< /details >}}
 
 Chances are that you are using AI/vibe coding techniques to build your next product.
 
@@ -85,14 +103,15 @@ Before starting any project, you should have clarity on:
 | :--- | :--- | :--- |
 | **Frontend Framework** | | |
 | **Styling/UI Library** | | |
-| **Backend/Database** | | |
-| **Authentication** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
+<!-- 
+![Terms and Conditions / Privacy](/blog_img/entrepre/webify/flask-terms-privacy.png) -->
 
-https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#tc-and-privacy
-
-![Terms and Conditions / Privacy](/blog_img/entrepre/webify/flask-terms-privacy.png)
-
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#tc-and-privacy" title="SaaS CYA" image="/blog_img/entrepre/webify/flask-terms-privacy.png" subtitle="Sample T&C and Priv Policy" >}}
+{{< /cards >}}
 
 ## BiP Examples
 

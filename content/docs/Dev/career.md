@@ -45,11 +45,27 @@ So is preparing your **CV and your interviews**:
 
 For a career in D&A you will need to be familiar with certain tools.
 
+https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/
+
+https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/
+https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
+https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/
+
+https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/
+
+
 * [**Big Data** Tools](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/)
 * [**GCP** 101](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)
 
+https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/
+https://jalcocert.github.io/JAlcocerT/business-analytics-skills/
+https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics
+https://jalcocert.github.io/JAlcocerT/business-skills-data-analytics/
+https://jalcocert.github.io/JAlcocerT/decision-making-data-analytics/
 
-| Category | Tools | Description |
+
+
+| **Category** | Tools | Description |
 | :--- | :--- | :--- |
 | **Data Orchestration & Transformation** | **dbt**, **Dataform**, **Airflow** | These tools manage the "T" (Transformation) in ELT/ETL. They define, schedule, and execute data pipelines. Dataform is BigQuery-native, while dbt and Airflow are platform-agnostic. |
 | **Cloud Data Warehouses** | **BigQuery**, **Snowflake**, **Redshift**, **Azure Synapse Analytics** | These are highly scalable, serverless, or managed databases designed for analytical workloads over massive datasets. They are the destination for your data and the environment where your transformation tools run. |

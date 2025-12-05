@@ -2,7 +2,7 @@
 title: "SaaS around Stripe API"
 date: 2025-10-08T01:20:21+01:00
 draft: false
-tags: ["Micro SaaS Essentials","Stripe goodies","Clerk","Stripe 101"]
+tags: ["Micro SaaS Essentials","Stripe goodies","Stripe 101"]
 description: 'BiP user flows around authentication layers and stripe paywalls'
 url: 'stripe-for-saas'
 ---
@@ -11,26 +11,36 @@ url: 'stripe-for-saas'
 
 You can get me wrong: automate your payments and dont accept any other form that does not require your attention.
 
-From the quote / post / learnings: sell to the rich, they pay better.
-
-
-
 **Intro**
 
 Congratz, you are registered into the app!
 
-Now subscribe to get additional goodies :)
+Now subscribe (confirm you really like it!) to get additional goodies :)
 
-This is not exactly a stripe 101, as I have played with it before:
-
+This is not exactly a stripe 101, as I have played with it before.
 
 But just some kind of stripe recap, as there are multiple use cases:
 
 1. Use Stripe + Webhooks + Pocketbase collections as [mentioned here](https://jalcocert.github.io/JAlcocerT/pocketbase/#syncing-stripe-data-with-pocketbase)
+
 2. Stripe API + Streamlit to allow an user to login / see certain features
 
+If you are trying to serve others on your own, (with a clear time/resource constrain), you better sell to the people who get the most value from you.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip//" title="BiP | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+When you are targeting B2C and ,a lot of' transactions to be profitable, decoupling your time from the success of your SaaS/agency is a must, or you will be the main constrain of your business.
+
+From the quote / post / learnings: *[sell to the rich](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#conclusions), they pay better.*
+
+One of the aspects that can be done faster, are payments.
+
+Lets see the cooler Stripe features that you will need while building
 
 ## Why Stripe
+
 
 Bc you can configure your products, prices, payments etc via their UI.
 
@@ -52,7 +62,6 @@ I tried [stripe subscriptions linkshere](https://jalcocert.github.io/JAlcocerT/f
 Or even better, a recurring subscription to boosts that MRR:
 
 ![Stripe Subscriptions](/blog_img/entrepre/stripe/stripe101-subs.png)
-
 
 
 
@@ -81,7 +90,7 @@ Or to sell simple microSaaS services like: `https://poopup.co/`
 
 > > Example `https://fireflies.ai/pricing?billing=monthly` for audio
 
-2. Bring your singin flow into place
+2. Bring your **singin flow** into place
 
 > Modern signups look like: `https://www.mailerlite.com/signup` or `https://app.fireflies.ai/login`
 
@@ -95,4 +104,4 @@ RLS - row level security is very important!
 
 Make sure that one user can only edit records related to that particular user.
 
-Also **pwd's should be hashed** on the DBs, just in case the DB gets compromised.
+Also **pwd's should ALWAYS be [hashed](https://jalcocert.github.io/JAlcocerT/encryption-101/)** on the DBs, just in case the DB gets compromised...

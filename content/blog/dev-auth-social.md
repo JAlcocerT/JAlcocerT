@@ -712,16 +712,12 @@ PocketBase SDK Authentication
 
 > > So plugging the AI + custom theme, can be amazing for an Enterprise version!
 
-Comparison and Summary
-
-| Platform | Type | Best for... | Key Differentiator |
+| **Platform** | Type | Best for... | Key Differentiator |
 | :--- | :--- | :--- | :--- |
 | **Clerk** | AaaS | Modern web apps, startups, and developers who want a quick, easy, and aesthetically pleasing solution. | Best-in-class, pre-built UI components and a focus on developer experience. |
 | **Okta** | IAM | Large enterprises and organizations with complex security and identity management requirements. | The most comprehensive, enterprise-grade identity platform on the market. |
 | **Auth0** | AaaS/IAM | Developers building applications that need flexible and customizable authentication. | Powerful extensibility with "Actions" and a wide array of social connections. |
 | **Logto** | Open-source IAM | Teams that want a free, self-hostable, and transparent alternative to proprietary services. | Full control over your data and infrastructure with an active open-source community. |
-
-
 
 ---
 

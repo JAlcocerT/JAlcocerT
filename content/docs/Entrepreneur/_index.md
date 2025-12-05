@@ -74,5 +74,4 @@ You can frame this in a trol yet simple CSR bar to help them decide:
 
 
 
-
 > Mind the increased Chances of people who never helped others for free calling you evil :)
