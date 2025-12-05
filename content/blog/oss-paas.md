@@ -49,6 +49,7 @@ But today, we are going to see some options to **SelfHost some cool PaaS Softwar
 * https://github.com/caprover/caprover
     * https://caprover.com/
     * https://caprover.com/docs/get-started.html
+
 > Apache v2 | Scalable PaaS (automated Docker+nginx) - aka Heroku on Steroids
 
 ```sh
@@ -146,8 +147,7 @@ For complex applications, you can use Docker Compose based deployments or the on
 curl -fsSL https://cdn.coollabs.io/coolify/install.sh | sudo bash
 ```
 
-* https://www.reddit.com/r/selfhosted/comments/1dbmv4d/alternatives_to_vercel_coolify_dokploy_or_caprover/
-
+This [post](https://www.reddit.com/r/selfhosted/comments/1dbmv4d/alternatives_to_vercel_coolify_dokploy_or_caprover/) ok coolify vs coolify vs caprover was interesting.
 
 ### Dokku
 
@@ -155,7 +155,7 @@ curl -fsSL https://cdn.coollabs.io/coolify/install.sh | sudo bash
     * https://dokku.com/docs/getting-started/installation/
     * https://dokku.com/docs/getting-started/install/docker/
 
-> MIT | A docker-powered PaaS that helps you build and manage the lifecycle of applications
+> **MIT** | A docker-powered PaaS that helps you build and manage the lifecycle of applications
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/dokku" title="Dokku | HomeLab Docker Config 🐳 ↗"  >}}
@@ -189,9 +189,9 @@ dokku apps:create ruby-getting-started
     * https://quickstack.dev/
     * https://quickstack.dev/docs/intro
 
-> GPL v3 | Build, run and monitor your apps on any server from a single, easy-to-use UI.
+> **GPL v3** | Build, run and monitor your apps on any server from a single, easy-to-use UI.
 
-https://www.reddit.com/r/selfhosted/comments/1igktsv/alternative_to_caprover_and_coolify_quickstack/
+> > See https://www.reddit.com/r/selfhosted/comments/1igktsv/alternative_to_caprover_and_coolify_quickstack/
 
 
 ```sh
@@ -212,7 +212,7 @@ curl -sfL https://get.quickstack.dev/setup.sh | sh -
 * https://github.com/openfaas/faas
     * https://www.openfaas.com/
 
-> CE for boddy only | OpenFaaS - Serverless Functions Made Simple
+> CE for boddy only! | OpenFaaS - Serverless Functions Made Simple
 
 <!-- 
 Apache Kafka 
@@ -225,10 +225,19 @@ https://openfaas.com/
 
 * https://github.com/undernightcore/dockerizalo
 
-> The simplest deployment platform made for self-hosters.
+> **aGPL 3.0** | The simplest deployment platform made for self-hosters.
 
 ---
 
 ## Conclusions
 
 Definitely these SelfHosted PaaS are a cool way to **provide value** for people that does not want to go into the *complicated server world!*
+
+This is a **great way to spin websites** for clients or just for fun.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/" title="Automation | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/" title="Entrepreneur | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+And this is sth that I will be explore further.

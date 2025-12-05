@@ -88,6 +88,11 @@ Particularly ones that are OSS and that you can use freely within your HomeLab/V
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="Selfhosting | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#scaling-wordpress-and-ghost
+
+![Dokploy and Ghost Service](/blog_img/selfh/PaaS/dokploy-ghost.png)
+
+
 {{% details title="SelfHostable Websites with UI 🚀" closed="true" %}}
 
 1. [Wordpress](https://fossengineer.com/selfhosting-wordpress-docker/) or [Ghost](https://fossengineer.com/selfhosting-ghost-docker/)

@@ -1,5 +1,5 @@
 ---
-title: "[PaaS Recap] Software for Servers..."
+title: "[PaaS Recap] Software and Servers..."
 date: 2025-12-05T17:20:21+01:00
 draft: false
 tags: ["HomeLab","LocalStack vs DokPloy","Cosmos Server"]
@@ -13,12 +13,15 @@ Ive recently heard that buying a NAS seems to make things much easier/better/fas
 
 Time to prove that's not always true, especially with these [PaaS Tools](#paas-tools) available.
 
+> Consider this a PaaS 101 if you dont know what im talking about.
+
+
 **Intro**
 
 So you've been around even [when ATI](https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/#throwback-on-hardware) was still a thing.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/hardware/ati-hd5670.png" subtitle="Docker Configs for your server" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/#throwback-on-hardware" title="Hardware Throwback" image="/blog_img/hardware/ati-hd5670.png" subtitle="From a PIII to...MiniPCs" >}}
 {{< /cards >}}
 
 You were using [Linux OS's](https://jalcocert.github.io/JAlcocerT/os-for-nas/) when nobody was.
@@ -33,7 +36,7 @@ And more recently, I made a [**VPS recap** on where to deploy](https://jalcocert
 
 Playing with other dev's apps baremetal, without containers is a no go and everytime I vibe code sth I dont consider it finished until it works within Make and a container.
 
-Next level goes if you are confortable with Selfhosting via container ymls within a HomeLab:
+Next level goes if you are confortable with Selfhosting via container `ymls` within a HomeLab:
 
 <!-- ![Portainer setup](/blog_img/selfh/portainer.png) -->
 
@@ -42,14 +45,26 @@ Next level goes if you are confortable with Selfhosting via container ymls withi
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Configs for your server" >}}
 {{< /cards >}}
 
+And...last level: **The builder:**
 
-UmbrelOS, Cosmos Server, Coolify or Dokploy....
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/" title="Automation | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/" title="Entrepreneur | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+UmbrelOS, Cosmos Server or tools like Coolify, [Dokploy](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/)....and [many others](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/#paas-what) are great.
 
 ![Dokploy PaaS deploying Streamlit Multichat Repository](/blog_img/selfh/PaaS/dokploy-monitoring-multichat.png)
 
-This feels like time for a PaaS recap.
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/media-server-with-open-source/" title="Media Server with Jellyfin" image="/blog_img/selfh/PaaS/dokploy-monitoring-multichat.png" subtitle="Media Tools for your HomeLab" >}}
+{{< /cards >}}
 
-Or a PaaS 101 if you dont know what im talking about.
+
+This feels like time for a **PaaS recap**: focusing on how to deploy your SaaS/apps and/or create a platform for users to self-service from OSS projects.
+
+## Intro
 
 If you are also new to HomeLabs and/or Linux. 
 
@@ -89,9 +104,8 @@ Today, we are going to see:
 
 1. LocalStack
 2. RuntiPi
-3. UmbrelOS - Not a PaaS, but having a OS inside a docker container and just click to deploy apps is fantastic
+3. [UmbrelOS](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#selfhosted-adventures) - Not a PaaS, but having a OS inside a docker container and just click to deploy apps is fantastic
 4. Coolify and Dokploy
-5. 
 
 ### LocalStack
 

@@ -208,7 +208,7 @@ The platform must offer a seamless, content-driven user interface and a flexible
 
 After the vibe coding is completed, we go from this:
 
-![alt text](/blog_img/entrepre/selfh-landing/wireframe.png)
+![Excalidraw Wireframe for the UI](/blog_img/entrepre/selfh-landing/wireframe.png)
 
 
 {{< cards >}}

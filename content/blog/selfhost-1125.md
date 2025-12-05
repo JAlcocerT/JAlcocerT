@@ -49,6 +49,7 @@ And one of the many apps that you can use out of the box is **Wanderer**: *A gre
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wanderer" title="Selfhosted Wanderer - Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umbrelos" title="UmbrelOS - Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 You can go to `192.168.1.2:86` and enjoy very quick webapp hosting

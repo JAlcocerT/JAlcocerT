@@ -2,7 +2,7 @@
 title: "Services with SelfHosted PaaS - Netlify/Vercel alternatives"
 date: 2025-03-14T21:20:21+01:00
 draft: false
-tags: ["Dev","Webs","Entrepreneuring","Dokploy","SSG Deployment"]
+tags: ["Dev","Webs","Entrepreneuring","Dokploy x MultiChat","SSG Deployment"]
 description: 'Deploying with Dokploy. Make ideas scalable: Wordpress and Ghost with built in Traefik SSL.'
 url: 'selfhosted-paas'
 ---
@@ -12,7 +12,7 @@ url: 'selfhosted-paas'
 
 There are [few PaaS options](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/#paas-for-your-servers) to serve your websites/webapps.
 
-It just seems that [Dokploy](#dokploy) is getting very popular and catching up to [stablished solutions like Coolify](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/#paas-for-your-servers)
+It just seems that [**Dokploy**](#dokploy) is getting very popular and catching up to [stablished solutions *like Coolify*](https://jalcocert.github.io/JAlcocerT/deploying-software-with-paas-to-servers/#paas-for-your-servers)
 
 Lets check why.
 
@@ -67,6 +67,8 @@ You will authorize dokploy as Github App: https://github.com/apps/dokploy-jesalc
 https://www.youtube.com/watch?v=2Q4-EgYS0u4
  -->
 {{< youtube "2Q4-EgYS0u4" >}}
+
+#### Using Dokploy
 
 With Dokploy we can for example, **serve an Astro site, or any other containerized app**
 
@@ -125,6 +127,17 @@ This is a mode for orchestrating containers across multiple Docker hosts.
 ```sh
 #docker swarm leave --force #to leave
 ```
+---
+
+## Conclusions
+
+<!-- https://github.com/Dokploy/dokploy -->
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,coollabsio/coolify,dokku/dokku,Dokploy/dokploy,biersoeckli/QuickStack,openfaas/faas,undernightcore/dockerizalo&type=Date)](https://star-history.com/#caprover/caprover,coollabsio/coolify,dokku/dokku,Dokploy/dokploy,biersoeckli/QuickStack,openfaas/faas,undernightcore/dockerizalo)
+
+
+
+
 ---
 
 ## FAQ
