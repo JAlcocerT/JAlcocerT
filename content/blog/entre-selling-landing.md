@@ -210,6 +210,16 @@ After the vibe coding is completed, we go from this:
 
 ![Excalidraw Wireframe for the UI](/blog_img/entrepre/selfh-landing/wireframe.png)
 
+This very [simple state diagram](https://mermaid.js.org/syntax/stateDiagram.html) defines the 2 possible journeys:
+
+```mermaid
+stateDiagram-v2
+    state if_state <<choice>>
+    [*] --> IsPositive
+    IsPositive --> if_state
+    if_state --> False: if n < 0
+    if_state --> True : if n >= 0
+```
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="NEW SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}
@@ -451,6 +461,26 @@ The concept: *diy vs dwy vs dfy is one that im trying to shape into reality*
 {{< youtube "spXH1kJ6q-Q" >}}
 
 > Chapter 7 was great inspiration!
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C;
+
+    %% --- Nodes ---
+    L1("Free Content<br/>(Blog/YT $0)"):::free
+    L2("DIY<br/>(Templates / Platform) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Services) $$$"):::high
+
+    %% --- Connections ---
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+```
 
 
 ---

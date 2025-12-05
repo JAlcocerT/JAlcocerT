@@ -7,6 +7,9 @@ description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow
 url: 'just-iot'
 ---
 
+https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
+together with langchain RAG + db queries
+
 **TL;DR:** Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
 
 +++ DB2Rest

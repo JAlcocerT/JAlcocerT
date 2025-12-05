@@ -56,6 +56,24 @@ Always, Specially if you are building with AI.
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip//" title="BiP | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+Git is what help us to maintain a clear history of our code:
+
+```mermaid
+gitGraph:
+    commit "Ashish"
+    branch newbranch
+    checkout newbranch
+    commit id:"1111"
+    commit tag:"test"
+    checkout main
+    commit type: HIGHLIGHT
+    commit
+    merge newbranch
+    commit
+    branch b2
+    commit
+```
+
 **Github Authentication**
 
 ```sh

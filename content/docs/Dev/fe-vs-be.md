@@ -14,6 +14,30 @@ You can discover along the way: bc concepts like rtk / indexDB learnt from the t
 
 Just keep in mind these as high level overview [while you build](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/).
 
+
+
+A [mindmap](https://mermaid.js.org/syntax/mindmap.html) should help
+
+```mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+```
+
 ## FrontEnd
 
 ### CSS & HTML

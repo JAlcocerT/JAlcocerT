@@ -39,6 +39,11 @@ That might be the thought of someone still trying to sell to the B2C world.
 > > But hey, you got those likes and you are famous, keep reading :)
 
 
+```mermaid
+mindmap
+    id))Your Online Brand((
+```
+
 
 ### SaaS around Links
 

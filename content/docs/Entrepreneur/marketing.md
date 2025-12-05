@@ -229,6 +229,9 @@ https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz
 
 ## Leads
 
+https://github.com/JAlcocerT/leads-slubnechwile
+
+https://jalcocert.github.io/JAlcocerT/apify/
 
 ## Funnels
 

@@ -26,7 +26,14 @@ I saw this [fantastic video from Veritasium](https://youtu.be/HBluLfX2F_k?si=9Ug
 
 {{< youtube "HBluLfX2F_k" >}}
 
-
+```mermaid
+xychart
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+```
 
 <!-- 
 In mathematics, a power law is a functional relationship between two quantities [1], where a relative change in one quantity results in a proportional relative change in the other quantity [2][3], independent of the initial size of those quantities. 

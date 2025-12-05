@@ -211,6 +211,8 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post
 
 1. Embeded Chatbots for a business website - Real Estate example.
 
+2. Creating a Custom Real Estate Agency with RAG BoT
+
 2. I did not know that **creating an ebook** was that simple
 
 * https://www.amazon.es/sendtokindle

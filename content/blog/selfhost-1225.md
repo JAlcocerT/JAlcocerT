@@ -383,6 +383,17 @@ Expect ,n' to be:
 https://bobpony.com/downloads/
 
 
+* https://github.com/Abdenasser/neohtop
+
+> MIT |  💪🏻 Blazing-fast system monitoring for your desktop (built with Rust, Tauri & Svelte) 
+
+```sh
+#https://github.com/Abdenasser/neohtop/releases/download/v1.2.0/NeoHtop_1.2.0_x86_64.AppImage
+#neohtop
+```
+
+But as of now, It was not a smooth setup, so its not going to the monitoring docs.
+
 ### How to run Windows Apps in Android
 
 If what you are looking for is a way to run Windows Apps in new ways, you could also check:
