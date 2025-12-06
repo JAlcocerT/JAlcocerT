@@ -2,10 +2,87 @@
 title: "Data Analytics Concepts [Recap]"
 date: 2025-03-05
 draft: false
-tags: ["D&A","GXs","Pydantic"]
-description: "Data Management (Validation, Profiling, Modelling,...)"
+tags: ["D&A career","GXs","Pydantic"]
+description: "Data Management (Validation, Profiling, Modelling,...) within a Data LakeHouse."
 url: 'data-analytics-concepts'
 ---
+
+
+**Intro**
+
+
+For industries like healthcare, the data lineage is a must.
+
+Fortunately, tools like Apache Iceberg + Nessie can help you to create the proper architecture.
+
+You can also find tools like Great Expectations to validate your data.
+
+And finally, tools like Pydantic to validate your data within your Python code.
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef bronze fill:#EFEBE9,stroke:#8D6E63,stroke-width:2px,color:#3E2723;
+    classDef silver fill:#ECEFF1,stroke:#78909C,stroke-width:2px,color:#263238;
+    classDef gold fill:#FFFDE7,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef ai fill:#F3E5F5,stroke:#8E24AA,stroke-width:2px,stroke-dasharray: 5 5,color:#4A148C;
+    classDef source fill:#fff,stroke:#333,stroke-width:1px;
+
+    %% --- Sources ---
+    subgraph Sources [Data Sources]
+        direction TB
+        Logs[Logs / IoT]:::source
+        DB[Databases]:::source
+        APIs[External APIs]:::source
+    end
+
+    %% --- The Lakehouse (Medallion) ---
+    subgraph Lakehouse [The Data Lakehouse]
+        direction LR
+        
+        %% BRONZE: Raw
+        Bronze[("BRONZE<br/>(Raw Ingestion)<br/>As-is Dump")]:::bronze
+        
+        %% SILVER: Cleaned
+        Silver[("SILVER<br/>(Refined)<br/>Cleaned & Enriched")]:::silver
+        
+        %% GOLD: Aggregated
+        Gold[("GOLD<br/>(Curated)<br/>Business Aggregates")]:::gold
+    end
+
+    %% --- AI Integration ---
+    subgraph AI_Lab [AI & Machine Learning]
+        direction TB
+        Training(Model Training):::ai
+        Inference(AI Agents / RAG):::ai
+        Predictions(Predictions / Tags):::ai
+    end
+
+    %% --- Consumers ---
+    BI[BI Dashboards<br/>& Reports]:::source
+
+    %% --- The Flow ---
+    Sources --> Bronze
+    Bronze -- "ETL / Cleaning" --> Silver
+    Silver -- "Aggregation" --> Gold
+    Gold --> BI
+
+    %% --- Where AI Plugs In ---
+    
+    %% 1. Training happens on Silver (Granular but clean)
+    Silver -.->|"Feeds Data"| Training
+    
+    %% 2. Inference (Agents) read Gold (Context) or Silver (Features)
+    Gold -.->|"Context for RAG"| Inference
+    
+    %% 3. The Feedback Loop: Predictions go back into the Lake
+    Training --> Predictions
+    Inference --> Predictions
+    Predictions -.->|"Enrichment"| Silver
+    Predictions -.->|"New Insights"| Gold
+```
+
+
 
 ## Data Management Concepts
 
@@ -165,14 +242,91 @@ They are **complementary processes**.
 
 ### Data Modelling
 
+This deserves its own post...
+
 {{< callout type="info" >}}
 I made a project with a **Raspberry Pi with [Mongo & DataBricks CE](https://jalcocert.github.io/RPi/posts/rpi-iot-mongodatabricks/)**. [Data Modelling](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/#databricks) is always an important part!
 {{< /callout >}}
 
+---
 
-## BI Tools and DBs
+## Conclusions
 
-These tools work to bring proper data to Gold layer, where we tend to have reporting and BI tools:
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef bronze fill:#EFEBE9,stroke:#8D6E63,stroke-width:3px,color:#3E2723;
+    classDef silver fill:#ECEFF1,stroke:#78909C,stroke-width:3px,color:#263238;
+    classDef gold fill:#FFFDE7,stroke:#FBC02D,stroke-width:3px,color:#F57F17;
+    
+    %% Tool Styles
+    classDef storage fill:#cfd8dc,stroke:#37474F,stroke-width:2px,color:#37474F;
+    classDef format fill:#b2dfdb,stroke:#00695c,stroke-width:2px,color:#004D40;
+    classDef quality fill:#ffecb3,stroke:#ff6f00,stroke-width:2px,stroke-dasharray: 5 5,color:#BF360C;
+    classDef code fill:#e1bee7,stroke:#4a148c,stroke-width:1px,stroke-dasharray: 2 2,color:#4a148c;
+
+    %% ================= Physical Foundation =================
+    subgraph PhysicalLayer [The Physical Foundation]
+        S3[("S3 / Minio<br/>(Object Storage)")]:::storage
+    end
+
+    %% ================= Table Format & Catalog Layer =================
+    %% This layer sits conceptually *between* physical files and the logical layers
+    subgraph ManagementLayer [Table Management & Catalog]
+        Iceberg("Apache Iceberg<br/>(Table Format / ACID)"):::format
+        Nessie("Nessie<br/>(Data Git / Catalog)"):::format
+        Iceberg -.->|Managed by| Nessie
+        S3 --- Iceberg
+    end
+
+
+    %% ================= Logical Medallion Flow =================
+    subgraph Lakehouse [Logical Data Flow]
+        direction TB
+        
+        Source[Raw Data Sources]
+
+        %% --- Ingestion Pipeline ---
+        subgraph Ingest [ETL: Ingestion]
+            Pydantic1[("Pydantic<br/>(Schema define)")]:::code
+        end
+
+        %% --- Bronze Layer ---
+        Bronze[("BRONZE Layer<br/>(Raw Iceberg Tables)")]:::bronze
+
+        %% --- Processing Pipeline 1 ---
+        subgraph Process1 [ETL: Cleaning]
+            GX1[("Great Expectations<br/>(Quality Gate: Null checks, types)")]:::quality
+        end
+
+        %% --- Silver Layer ---
+        Silver[("SILVER Layer<br/>(Enriched Iceberg Tables)")]:::silver
+
+        %% --- Processing Pipeline 2 ---
+        subgraph Process2 [ETL: Aggregation]
+            GX2[("Great Expectations<br/>(Quality Gate: Business Rules)")]:::quality
+        end
+
+        %% --- Gold Layer ---
+        Gold[("GOLD Layer<br/>(Aggregated Iceberg Tables)")]:::gold
+        
+        %% --- The Connections ---
+        Source --> Pydantic1 --> Bronze
+        Bronze --> GX1 --> Silver
+        Silver --> GX2 --> Gold
+    end
+
+    %% Mapping Logical to Physical/Management
+    %% The logical layers ARE Iceberg tables sitting on S3
+    Bronze -.-> Iceberg
+    Silver -.-> Iceberg
+    Gold -.-> Iceberg
+```
+
+
+### BI Tools and DBs
+
+These tools work to bring proper data to Gold layer, where we tend to have **reporting and BI tools**:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/" title="The BI Tools" image="/blog_img/iot/grafana-datasources.png" subtitle="Dashboards For DAs and IoT Projects" >}}
@@ -202,7 +356,7 @@ You can get help from LLMs to query directly your databases:
 {{< /cards >}}
 
 
-## AI Assisted Analytics
+### AI Assisted Analytics
 
 1. Github Copilot
 

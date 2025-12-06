@@ -155,7 +155,7 @@ The video "How to Use AI to Find a $1M Idea [Reddit, Claude]" features Steph Fra
 
 - **Example Use Case:** They demonstrated this process using the co-parenting niche, uncovering multiple pain points and crafting business ideas such as conflict-focused platforms and child-centric transition tools, complete with landing page features, FAQs, and calls-to-action.
 
-### Additional Insights:
+Additional Insights
 
 - The process emphasizes using markdown formatting in prompts for optimal AI understanding.
 - Tips include building email waitlists using quizzes for pre-launch validation of interest.
@@ -173,7 +173,7 @@ This method leverages AI's ability to absorb vast amounts of qualitative data, i
 
 The video "Python Tutorial: Build an AI-assisted Reddit Scraping Pipeline" is a comprehensive course that teaches how to create an automated, resilient system in Python for extracting and analyzing Reddit posts around specific topics using AI and modern tools.
 
-### Key Highlights:
+Key Highlights:
 
 - **Purpose:** Build a data extraction and tracking platform to gather Reddit conversations on topics of interest (e.g., camping, AI news) for deeper understanding of real-world user discussions.
 

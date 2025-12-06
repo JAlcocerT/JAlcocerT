@@ -49,6 +49,8 @@ https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/
 
 https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/
 https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
+https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/
+
 https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/
 
 https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/
@@ -67,7 +69,7 @@ This can concepts get messy, very fast.
 
 That's why I learnt to create ebooks and made one about **Data Analytics**
 
-![Astro landing page book - Sell your ebook UI](/blog_img/shipping/astro-sell-your-ebook.png)
+<!-- ![Astro landing page book - Sell your ebook UI](/blog_img/shipping/astro-sell-your-ebook.png) -->
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/" title="e-books | Docs" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="Scrapping job boards" >}}
@@ -277,6 +279,80 @@ You dont need to wait to be on a project to get started. See these:
 * Shiny in Python
   * <https://shiny.rstudio.com/py/gallery/>
   * <https://shiny.rstudio.com/py/gallery/>
+
+
+### Cool D&A Architectures
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef bronze fill:#EFEBE9,stroke:#8D6E63,stroke-width:3px,color:#3E2723;
+    classDef silver fill:#ECEFF1,stroke:#78909C,stroke-width:3px,color:#263238;
+    classDef gold fill:#FFFDE7,stroke:#FBC02D,stroke-width:3px,color:#F57F17;
+    
+    %% Tool Styles
+    classDef storage fill:#cfd8dc,stroke:#37474F,stroke-width:2px,color:#37474F;
+    classDef format fill:#b2dfdb,stroke:#00695c,stroke-width:2px,color:#004D40;
+    classDef quality fill:#ffecb3,stroke:#ff6f00,stroke-width:2px,stroke-dasharray: 5 5,color:#BF360C;
+    classDef code fill:#e1bee7,stroke:#4a148c,stroke-width:1px,stroke-dasharray: 2 2,color:#4a148c;
+
+    %% ================= Physical Foundation =================
+    subgraph PhysicalLayer [The Physical Foundation]
+        S3[("S3 / Minio<br/>(Object Storage)")]:::storage
+    end
+
+    %% ================= Table Format & Catalog Layer =================
+    %% This layer sits conceptually *between* physical files and the logical layers
+    subgraph ManagementLayer [Table Management & Catalog]
+        Iceberg("Apache Iceberg<br/>(Table Format / ACID)"):::format
+        Nessie("Nessie<br/>(Data Git / Catalog)"):::format
+        Iceberg -.->|Managed by| Nessie
+        S3 --- Iceberg
+    end
+
+
+    %% ================= Logical Medallion Flow =================
+    subgraph Lakehouse [Logical Data Flow]
+        direction TB
+        
+        Source[Raw Data Sources]
+
+        %% --- Ingestion Pipeline ---
+        subgraph Ingest [ETL: Ingestion]
+            Pydantic1[("Pydantic<br/>(Schema define)")]:::code
+        end
+
+        %% --- Bronze Layer ---
+        Bronze[("BRONZE Layer<br/>(Raw Iceberg Tables)")]:::bronze
+
+        %% --- Processing Pipeline 1 ---
+        subgraph Process1 [ETL: Cleaning]
+            GX1[("Great Expectations<br/>(Quality Gate: Null checks, types)")]:::quality
+        end
+
+        %% --- Silver Layer ---
+        Silver[("SILVER Layer<br/>(Enriched Iceberg Tables)")]:::silver
+
+        %% --- Processing Pipeline 2 ---
+        subgraph Process2 [ETL: Aggregation]
+            GX2[("Great Expectations<br/>(Quality Gate: Business Rules)")]:::quality
+        end
+
+        %% --- Gold Layer ---
+        Gold[("GOLD Layer<br/>(Aggregated Iceberg Tables)")]:::gold
+        
+        %% --- The Connections ---
+        Source --> Pydantic1 --> Bronze
+        Bronze --> GX1 --> Silver
+        Silver --> GX2 --> Gold
+    end
+
+    %% Mapping Logical to Physical/Management
+    %% The logical layers ARE Iceberg tables sitting on S3
+    Bronze -.-> Iceberg
+    Silver -.-> Iceberg
+    Gold -.-> Iceberg
+```
   
 
 ### DSc Tools

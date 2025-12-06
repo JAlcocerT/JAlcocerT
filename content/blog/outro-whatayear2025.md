@@ -1036,6 +1036,8 @@ But hey Ollama has now a Desktop UI mode as well!
 
 > Has this be one year, for real?
 
+Anyways...my intention is to keep track of my tech talks within this slidev related repo from now on.
+
 <!-- 
 https://www.linkedin.com/posts/exadel-people_aimeetup-knowledgesharing-engineeringcommunity-activity-7311382203731525632-FDJg -->
 

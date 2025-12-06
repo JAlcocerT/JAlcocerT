@@ -15,7 +15,9 @@ Or *,just'* databases for a D&A career.
 
 ## Tools for DBs
 
-Before the tools, make sure to understand what are (and the use cases) of OLAP (D&A) vs OLTP (Dev).
+Whatever your goal is, these are some Databases you can use: https://jalcocert.github.io/JAlcocerT/databases-101/
+
+Even Before that and looking to the tools, make sure to understand what are (and the use cases) of **OLAP (D&A) vs OLTP (Dev)**.
 
 The structured vs object/JSON differenciation is also important...
 
@@ -24,7 +26,24 @@ The structured vs object/JSON differenciation is also important...
 > Agpl3.0 |  Database diagrams editor that allows you to visualize and design your DB with a single query. 
 
 
-## Other D&A Tools
+## OLAP and Databases
+
+I will focus this section on the D&A goal of databases, which is to **READ and analyze** huge amounts of data.
+
+
+### SQL Tricks for OLAP
+
+https://jalcocert.github.io/JAlcocerT/sql-data-analytics/
+
+But ultimately, make sure to keep these 5 strategies with you:
+
+1. 
+2. 
+3. 
+4. 
+5. 
+
+### Other D&A Tools
 
 * https://github.com/wix-incubator/quix
 * https://github.com/pinterest/querybook
@@ -41,7 +60,3 @@ If you feel confortable with Jupyter notebooks, have a look to: https://github.c
 
 This is food for thought if you normally create presentations with SliDev!
 
-
-## Popular DataBases
-
-https://jalcocert.github.io/JAlcocerT/databases-101/

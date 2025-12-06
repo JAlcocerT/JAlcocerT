@@ -19,6 +19,71 @@ Most popular within enterprises are: *all of these are paid products*
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Superset Example" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PyGWalker Rendered Map with locations..." >}}
 {{< /cards >}} -->
 
+Normally, these tools go plugged in the final stage of the data pipelines:
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef bronze fill:#EFEBE9,stroke:#8D6E63,stroke-width:2px,color:#3E2723;
+    classDef silver fill:#ECEFF1,stroke:#78909C,stroke-width:2px,color:#263238;
+    classDef gold fill:#FFFDE7,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef ai fill:#F3E5F5,stroke:#8E24AA,stroke-width:2px,stroke-dasharray: 5 5,color:#4A148C;
+    classDef source fill:#fff,stroke:#333,stroke-width:1px;
+
+    %% --- Sources ---
+    subgraph Sources [Data Sources]
+        direction TB
+        Logs[Logs / IoT]:::source
+        DB[Databases]:::source
+        APIs[External APIs]:::source
+    end
+
+    %% --- The Lakehouse (Medallion) ---
+    subgraph Lakehouse [The Data Lakehouse]
+        direction LR
+        
+        %% BRONZE: Raw
+        Bronze[("BRONZE<br/>(Raw Ingestion)<br/>As-is Dump")]:::bronze
+        
+        %% SILVER: Cleaned
+        Silver[("SILVER<br/>(Refined)<br/>Cleaned & Enriched")]:::silver
+        
+        %% GOLD: Aggregated
+        Gold[("GOLD<br/>(Curated)<br/>Business Aggregates")]:::gold
+    end
+
+    %% --- AI Integration ---
+    subgraph AI_Lab [AI & Machine Learning]
+        direction TB
+        Training(Model Training):::ai
+        Inference(AI Agents / RAG):::ai
+        Predictions(Predictions / Tags):::ai
+    end
+
+    %% --- Consumers ---
+    BI[BI Dashboards<br/>& Reports]:::source
+
+    %% --- The Flow ---
+    Sources --> Bronze
+    Bronze -- "ETL / Cleaning" --> Silver
+    Silver -- "Aggregation" --> Gold
+    Gold --> BI
+
+    %% --- Where AI Plugs In ---
+    
+    %% 1. Training happens on Silver (Granular but clean)
+    Silver -.->|"Feeds Data"| Training
+    
+    %% 2. Inference (Agents) read Gold (Context) or Silver (Features)
+    Gold -.->|"Context for RAG"| Inference
+    
+    %% 3. The Feedback Loop: Predictions go back into the Lake
+    Training --> Predictions
+    Inference --> Predictions
+    Predictions -.->|"Enrichment"| Silver
+    Predictions -.->|"New Insights"| Gold
+```
+
 Depending on your work environment, you could do fully [custom BI](#custom-bi-tools) proposals.
 
 ### Custom BI Tools
@@ -47,7 +112,15 @@ To build a BI Tools even more custom: *with certain UI look and feel, you can **
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#compared-with-real-estate" title="Custom Plots for Reporting" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="Sample YFinance based reporting" >}}
 {{< /cards >}}
 
-To create interactivity, we have the well known plotly, but also ApexCharts and ChartJS.
+To create interactivity, we have the well known plotly, but also **ApexCharts and ChartJS**.
+
+<!-- ![NodeJS Web App + ApexChartJS](/blog_img/DA/apexchartjs-nodejs.png) -->
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/node-js/chart-generator" title="Sample NodeJS x ApexChartJS Generator" image="/blog_img/DA/apexchartjs-nodejs.png" subtitle="Using NodeJS to generate ApexCharts" >}}
+{{< /cards >}}
+
+Both can be combined and create some [cool graphs within SSGs](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/#the-costs-of-a-car), like in HUGO components and also provide interactivity via CSR.
 
 You can potentially make embedable BI components that work on websites or just get the **full power of web apps** when designing these.
 
