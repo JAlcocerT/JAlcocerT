@@ -176,6 +176,20 @@ A landing as companion for a link website does not have to be a multi-page one t
 > I migrated my brand to that data centered landing (and more) theme on [this post](https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/)
 
 
+
+Because some landing + video look fantastic, just that they are not so performant: https://github.com/midudev/landing-tesla
+
+> Ejemplo de landing de Tesla con HTML, CSS, JavaScript, Astro y Tailwind
+> > With very interesting video sections!
+
+Haaad to fork this anyways: https://github.com/JAlcocerT/landing-tesla
+
+> See `./public/video.webm` to see the video in action!
+
+![Tesla Landing Screenshot](https://raw.githubusercontent.com/JAlcocerT/landing-tesla/main/web-local-run.png)
+
+
+
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
 
 
@@ -378,9 +392,14 @@ Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/J
 
 I dont need to tell you why you need a photo centered link to your own photo gallery: *Im just here to tell you that you can*
 
-* https://github.com/iamnyasha/minimma - Check this one if you are modelling :)
+0. https://github.com/iamnyasha/minimma - Check this one if you are modelling :)
 
-> MIT | Interesting and simple Photo Centered Astro Theme
+> **MIT** | Interesting and simple Photo Centered Astro Theme
+
+> > Could not avoid to fork - https://github.com/JAlcocerT/minimma as it reminded me to one Ghost Theme I used
+
+![Minimma Photo UI](https://raw.githubusercontent.com/JAlcocerT/minimma/master/minimma-photo-ui.png)
+
 
 But Ive been playing around quite a lot to get proper ig like galleries for real estate and for bloggers to have a cool place to publish.
 
@@ -393,6 +412,42 @@ But Ive been playing around quite a lot to get proper ig like galleries for real
 {{< /cards >}}
 
 
+1. https://github.com/obviyus/musee
+
+> GPL3.0 | Fast, responsive , self-hosted image gallery. Ships minimal JS to the client.
+
+{{< details title="What I like about Musee Astro Theme 📌" closed="true" >}}
+
+* Simplicity: place your folder under `/src/assets/images/original/` and you are good to go
+* Images are optimized to `.webp` at build time 
+    * They go from ~1.92GB to 508mb (~75% reduction)
+
+```bash
+#npm install
+npm install astro-purgecss@latest
+```
+
+2. Start development server
+
+```bash
+npm run dev
+#npm run build
+```
+
+{{< /details >}}
+
+<!-- {{< callout type="info" >}}
+There is another Astro theme called musee
+{{< /callout >}} -->
+
+
+2. https://github.com/AREA44/astro-multiverse
+
+> CC3.0 | One-page gallery design with a fully functional lightbox, designed by HTML5 UP
+
+{{< callout type="info" >}}
+See also HUGO Theme Gallery implemented [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/) and [here](https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/)
+{{< /callout >}}
 
 I have added few shortcodes/components: *like [whatsap bouble](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble)*
 
@@ -516,6 +571,46 @@ If you are looking to impress with a new curriculum, why not doing it as a **web
 --- 
 
 ## Conclusions
+
+This is also been a kind of...recap of websites too.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip//" title="BiP | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+Botom line is simple: *Start!*
+
+
+```mermaid
+flowchart TD
+    %% --- Styles Definition ---
+    classDef action fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+    classDef win fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef fail fill:#FFEBEE,stroke:#C62828,stroke-width:2px,color:#B71C1C;
+    classDef learn fill:#FFF9C4,stroke:#FBC02D,stroke-width:3px,color:#F57F17;
+
+    %% --- The Action Phase ---
+    Start((Start)) --> Do
+    Do(DO<br/>Build & Execute):::action --> Ship(SHIP<br/>Release to Real Users):::action
+    
+    %% --- The Moment of Truth ---
+    Ship --> Outcome{Outcome?}
+
+    %% --- Path A: WIN ---
+    Outcome -- "WIN" --> WinAction(Validate & Double Down):::win
+    
+    %% --- Path B: FAIL ---
+    Outcome -- "FAIL" --> FailAction(Post-Mortem & Analyze):::fail
+
+    %% --- The Convergence: LEARNING ---
+    WinAction --> Learn(LEARN<br/>Consolidate Insights):::learn
+    FailAction --> Learn
+
+    %% --- The Loop Back ---
+    Learn -- "Apply to next cycle" --> Do
+```
 
 Examples of Portfolio Links websites?
 

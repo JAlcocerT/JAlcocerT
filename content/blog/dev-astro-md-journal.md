@@ -56,6 +56,8 @@ Cursor decided to use the [react md](https://www.npmjs.com/package/react-markdow
 
 ## Conclusions
 
+After this one, I hope you have an alternative to `https://hashnode.com/products/blogs` or medium
+
 Its possible to do this.
 
 Spin the NextJS app, clone any astro theme.

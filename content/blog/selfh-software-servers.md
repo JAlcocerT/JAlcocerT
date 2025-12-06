@@ -259,9 +259,16 @@ graph TD
     A --> E(Services - DFY $$$);
 ```
 
-That's what PaaS are for.
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
-The software...you can vibe coded it and prepare via containers. Or just use permissive OSS only.
+That's what PaaS are for: *help you scale the software that you ship*
+
+Bc the software...you can vibe coded it, send it to git and prepare a bundle via containers. 
+
+Or just use permissive OSS only.
 
 And for cases like the weddings in the beginning of this year, it could get the job done and fast.
 

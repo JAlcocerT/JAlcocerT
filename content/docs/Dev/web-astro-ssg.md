@@ -61,46 +61,7 @@ Find astro themes at: https://astro.build/themes/
 * [Astrothemes.club](https://astrothemes.club/free-astro-themes)
 * https://statichunt.com/ or https://github.com/statichunt
 
-Links/Bento
 
-### Photo Gallery Themes
-
-1. https://github.com/obviyus/musee
-
-> GPL3.0 | Fast, responsive , self-hosted image gallery. Ships minimal JS to the client.
-
-{{< details title="What I like about Musee Astro Theme 📌" closed="true" >}}
-
-* Simplicity: place your folder under `/src/assets/images/original/` and you are good to go
-* Images are optimized to `.webp` at build time 
-    * They go from ~1.92GB to 508mb (~75% reduction)
-
-```bash
-#npm install
-npm install astro-purgecss@latest
-```
-
-2. Start development server
-
-```bash
-npm run dev
-#npm run build
-```
-
-{{< /details >}}
-
-<!-- {{< callout type="info" >}}
-There is another Astro theme called musee
-{{< /callout >}} -->
-
-
-2. https://github.com/AREA44/astro-multiverse
-
-> CC3.0 | One-page gallery design with a fully functional lightbox, designed by HTML5 UP
-
-{{< callout type="info" >}}
-See also HUGO Theme Gallery implemented [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/) and [here](https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/)
-{{< /callout >}}
 
 ### Blogs
 
@@ -168,13 +129,21 @@ This one has a blog which can be filtered per tags:
 
 ### Services
 
+https://github.com/JAlcocerT/landing-tesla/tree/main
+![Tesla Landing Screenshot](https://raw.githubusercontent.com/JAlcocerT/landing-tesla/main/web-local-run.png)
+
 Restaurants
 
-Artists / Modelling
+Artists / Modelling - https://jalcocert.github.io/JAlcocerT/link-artists/#photo-galleries
+
+![Minimma Photo UI](https://raw.githubusercontent.com/JAlcocerT/minimma/master/minimma-photo-ui.png)
+
 
 CV Themes
 
 Links / Bento
+
+https://jalcocert.github.io/JAlcocerT/link-artists/#oss-links-web-profiles
 
 
 #### Weddings
@@ -184,21 +153,9 @@ Links / Bento
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/" title="Applied for MotoVlog ↗" icon="book-open" >}}
 {{< /cards >}}
 
-
-
-### Product
-
-1. https://github.com/midudev/landing-tesla?ref=statichunt.com
-
-* With very interesting video sections!
-
-> Ejemplo de landing de Tesla con HTML, CSS, JavaScript, Astro y Tailwind
-
-
 ### Docs
 
-1. https://github.com/withastro/starlight?ref=statichunt.com
-
+1. https://github.com/withastro/starlight
 
 * Supports `.mdx` and i18n
 * Search built in (with PageFind)

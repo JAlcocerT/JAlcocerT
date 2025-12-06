@@ -79,9 +79,9 @@ Also to bring [session recording](https://jalcocert.github.io/JAlcocerT/how-to-r
 
 With a clear product defined, the package of that into an **compeling offer** is key.
 
+Info is...free. 
 
-
-Info is...free. Implementation is not: *justa matter of the value ladder, a trade-off between time/money invested*
+Implementation is not: *justa matter of the value ladder, a trade-off between time/money invested*
 
 ```mermaid
 flowchart LR
