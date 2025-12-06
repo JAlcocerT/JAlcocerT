@@ -17,6 +17,8 @@ Thats what social media has made us believe we are
 All while we place the head of a pig in the public, while we actually sell dogs.
 
 
++++ Having a look to the latest: https://astro.build/themes/4/?search=&price%5B%5D=free
+
 
 <!-- 
 https://www.skool.com/@adriana-drozdowicz-4965 -->
@@ -188,7 +190,11 @@ Haaad to fork this anyways: https://github.com/JAlcocerT/landing-tesla
 
 ![Tesla Landing Screenshot](https://raw.githubusercontent.com/JAlcocerT/landing-tesla/main/web-local-run.png)
 
+If you are confortable with animations on your landing, consider also:
 
+* https://github.com/iann-mathaiya/nikola-tesla
+
+> MIT | Which you guessed - I forked: https://github.com/JAlcocerT/nikola-tesla
 
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
 
@@ -363,6 +369,24 @@ https://github.com/JAlcocerT/obfuscate
 {{< /cards >}}
 
 
+##### Journals
+
+If instead of photo centered, you are a text focused kind of person.
+
+Something like ebooks that we talked, or a pure type centered link would be for you.
+
+For you to focus on just-journal kind of thing.
+
+* https://github.com/radishzzz/astro-theme-retypeset
+
+> MIT |  Revive the beauty of typography
+
+![Retype Theme](https://raw.githubusercontent.com/radishzzz/astro-theme-retypeset/master/assets/images/v1/retypeset-en-desktop.webp)
+
+> > For sure this can inspire you to build web/ooks kind of things and enables multilanguage :)
+
+
+
 #### Calendars
 
 Something that looks really professional is to provide your availability.
@@ -388,7 +412,6 @@ You can also bring your [MailerLite](https://jalcocert.github.io/JAlcocerT/maile
 
 #### Photo Galleries
 
-Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery).
 
 I dont need to tell you why you need a photo centered link to your own photo gallery: *Im just here to tell you that you can*
 
@@ -427,7 +450,7 @@ But Ive been playing around quite a lot to get proper ig like galleries for real
 npm install astro-purgecss@latest
 ```
 
-2. Start development server
+Start development server
 
 ```bash
 npm run dev
@@ -449,7 +472,15 @@ There is another Astro theme called musee
 See also HUGO Theme Gallery implemented [here](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/) and [here](https://jalcocert.github.io/JAlcocerT/creating-photo-centric-blog-with-hugo/)
 {{< /callout >}}
 
-I have added few shortcodes/components: *like [whatsap bouble](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble)*
+3. https://github.com/crnacura/PlayersClub
+
+>  Players Club is a free Astro template for showcasing music artists—an experimental proof of concept
+
+4. https://github.com/evadecker/astro-photo-grid
+
+Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery).
+
+I have **added few** shortcodes/components: *like [whatsap bouble](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble)*
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/just-ssg/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
@@ -457,12 +488,15 @@ I have added few shortcodes/components: *like [whatsap bouble](https://github.co
 
 Also, thanks to have tinkered with Nuxt (Vue) recently, got to know a very cool one: https://github.com/antfu/vue-starport
 
-https://jalcocert.github.io/JAlcocerT/open-source-photo-gallery/
 
-https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/open-source-photo-gallery/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="Just SSG" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Source Code for SSG Components" >}}
+{{< /cards >}}
 
-![CF R2 Pricing](/blog_img/web/agujapunto-r2-firebase/r2-101.png)
-
+<!-- 
+![CF R2 Pricing](/blog_img/web/agujapunto-r2-firebase/r2-101.png) 
+-->
 
 #### Podcasts
 
@@ -477,7 +511,7 @@ So having one of the links pointing to your podcast platform is very simple.
   {{< card link="https://github.com/JAlcocerT/astropod" title="Astropod Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked and Tweaked Astro Podcast Theme that works on CF Pages" >}}
 {{< /cards >}}
 
-This is how to use the astropod project step by step:
+This is how to use **the astropod project** step by step:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/fresh-rss" title="FreshRSS | Docker Config Setup 🐋 ↗"  >}}
@@ -486,6 +520,7 @@ This is how to use the astropod project step by step:
 
 {{< youtube "mDMGtMOx-Fk" >}}
 
+To these themes you can also add formbricks and or calendar for more interactivity:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Setup Formbricks | Docs ↗" icon="book-open" >}}

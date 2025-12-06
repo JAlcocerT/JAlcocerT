@@ -1,11 +1,14 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-25
+date: 2025-12-06
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-and-more-2025'
 ---
+
+<!-- date: 2025-12-25 -->
+
 
 
 **Tl;DR**
@@ -1509,6 +1512,7 @@ But it must have been sth like:
 ![Me Creating 150+ posts on my 2025 learnings](/img/kitten-cat.gif#center)
 
 
+
 ### For Next year...
 
 
@@ -1561,6 +1565,14 @@ Get in shape: *there are few projects available, so no excuse this time*
 2. https://github.com/Snouzy/workout-cool?
 
 > MIT |  🏋 Modern open-source fitness coaching platform. Create workout plans, track progress, and access a comprehensive exercise database. 
+
+### Outro / Random
+
+I cycled with 2 bikes at the same time.
+
+Also, I cycled with a MTB and 3 pizzas on my steering.
+
+Both for 5+ km
 
 #### Discovery of the Years
 

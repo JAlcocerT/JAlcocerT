@@ -19,7 +19,7 @@ url: 'IT-concepts'
 
 ## Containers
 
-They allow us to package applications completely.
+They allow us to **package applications** completely.
 
 > To use what others created easily in your homelab or to package your projects for others to do the same.
 
@@ -56,7 +56,7 @@ Always, Specially if you are building with AI.
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip//" title="BiP | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-Git is what help us to maintain a clear history of our code:
+Git is what help us to maintain a clear **history of our code**:
 
 ```mermaid
 gitGraph:

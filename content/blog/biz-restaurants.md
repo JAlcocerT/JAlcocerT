@@ -158,7 +158,11 @@ This required to make the website owners responsible of their content.
 > AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, Storyblok CMS, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
 
 
+* https://github.com/larry-xue/quiet-bar
 
+>  A beautiful, vintage/industrial-styled website template for bars, pubs, and restaurants. 
+
+> > From the creator of Sassify!
 ---
 
 ## Conclusions
@@ -207,3 +211,20 @@ Free Hosting Options with Free domain
   - **Firebase**: Host your Next.js SSG on Firebase for scalable hosting and integrated services like authentication, database, and analytics.
   - **Cloudflare Pages**: Deploy your Next.js SSG on Cloudflare Pages for fast and secure global distribution with built-in CDN and SSL/TLS encryption.
   - **GitHub Pages**: Easily host your Next.js SSG on GitHub Pages, perfect for static sites with seamless integration with your GitHub repository.
+
+---
+
+## FAQ
+
+### Web for Gyms?
+
+* https://github.com/sudeep2003/Astro-Gym-Fitness-Website
+
+### Web for Enterprises?
+
+
+https://github.com/rspisarski/titan-core
+
+### And for finance teams?
+
+https://github.com/bejamas/astro-storyblok-finance-starter

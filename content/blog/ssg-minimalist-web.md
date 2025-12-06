@@ -3,7 +3,7 @@ title: "How to Save the Internet"
 date: 2025-11-21T23:20:21+01:00
 draft: false
 tags: ["Web ebook","Dev","Better Docs & Blog with Astro","Google Code Wiki"]
-description: 'Open Source Minimalist Websites.'
+description: 'Open Source Minimalist Websites. Checking Lighthouse CI to optimize the web.'
 url: 'open-source-minimalist-websites'
 ---
 
@@ -190,6 +190,22 @@ You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/J
 
 ![Blogging via Astro News](/blog_img/web/beyond-journey-web.png)
 
+6. https://github.com/bakate/astro-theme-starter
+
+>  A modern and clean Astro theme for personal portfolios and bilingual (French/English) blogs. Built with TypeScript, Tailwind CSS, and MDX, focusing on performance and best practices. Ideal for developers and content creators 
+
+7. https://github.com/8366888C/Ryze
+
+> MIT |  A reader-friendly blog starter with accessibility, SEO and responsiveness out of the box. 
+
+> > This one gave me a presentL the concept of [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)
+
+8. If you liked [fuwari](https://github.com/JAlcocerT/j-models), you'd love this: https://github.com/Spr-Aachen/Twilight
+
+>  **MIT** | A git based CMS integrated static blog template 
+
+> > Uses [DecapCMS](https://github.com/decaporg/decap-cms) and I **forked** it https://github.com/JAlcocerT/Twilight
+
 ---
 
 ## FAQ
@@ -217,3 +233,10 @@ Probably not the best way to do very small websites unless you know what you are
 * https://github.com/rapidpages/rapidpages
 
 > MIT | Generate React and Tailwind components using AI 
+
+
+### Using lighthouse programatically
+
+Going to Google Lighthouse is one thing.
+
+But having it 

@@ -7,6 +7,8 @@ description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
 
+
+
 inspiring apps: all those pwa like that just...work
 
 https://bentopdf.com/index.html
