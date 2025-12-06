@@ -104,11 +104,15 @@ See how Ive done it: https://jalcocert.github.io/JAlcocerT/n8n-with-ai/#n8n-x-ma
 ![Configuring mailerlite webhooks for n8n](/blog_img/GenAI/n8n/mailerlite/1-webhook-events.png)
 
 
-## A Theme to Test this
+## A Theme to Test Mailerlite
 
-* https://github.com/bcms/starters
+Anything would work.
 
-> MIT |  👩‍💻 Build beautiful, accessible, high-performance websites with [BCMS](https://github.com/bcms/cms) 
+But I needed an excuse to try BCMS.
+
+* https://github.com/bcms/starters - There are few options here!
+
+> **MIT** |  👩‍💻 Build beautiful, accessible, high-performance websites with [BCMS](https://github.com/bcms/cms) 
 
 > >  ⭐️ BCMS is a **Headless CMS** for developers & their clients. Works nicely with Gatsby, Next.js & Nuxt. This is an open-source version for **self-hosting**. 
 
@@ -126,11 +130,30 @@ Using Headless CMS & Nuxt.js to Develop Fast Static Websites | Momcilo Popov | F
 {{< youtube "y2du9vQwZUw" >}}
 
 
+**lets try**:
 
+```sh
+
+
+```
 
 {{< callout type="info" >}}
-This is a very cool setup for a ~webifyer kind of idea, as [Pages CMS](https://github.com/pages-cms/pages-cms)
+This is a very cool setup for a ~webifyer kind of idea, same as [Pages CMS](https://github.com/pages-cms/pages-cms)
 {{< /callout >}}
+
+
+### is BCMS a thing?
+
+
+For [couple months](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#conclusions) I wanted to give a full try to BCMS.
+
+But I was just [getting started with BCMS](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#getting-started).
+
+The BCMS sample projects provide responsive layouts, lightbox/carousel support, and various customization options suitable for photograph was promising.
+
+https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
+
+#### BCMS vs PagesCMS
 
 
 ### Podcast

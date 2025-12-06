@@ -15,6 +15,7 @@ I get very happy when finding out about blog posts on reddit or on self.st newsl
 
 > We can still feel that with themes like Paper mod
 
+
 **Intro**
 
 Do we need that much bloat?
@@ -26,6 +27,10 @@ What we probably need is a **Minimalist Webs** where different opinions can coex
 I really enjoy finding blogs around that are not just a copy paste from the previous one.
 
 Specially if they bring a phogo gallery like [this one](https://brianli.com/photos/)
+
++++ Lighthouse CI and a DecapCMS cool example
+
+## Some Minimalistic Sites
 
 But some people take it one level higher and do webs veeery minimalistic.
 
@@ -204,7 +209,7 @@ You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/J
 
 >  **MIT** | A git based CMS integrated static blog template 
 
-> > Uses [DecapCMS](https://github.com/decaporg/decap-cms) and I **forked** it https://github.com/JAlcocerT/Twilight
+> > Uses [DecapCMS](https://github.com/decaporg/decap-cms) and I **forked** it https://github.com/JAlcocerT/Twilight to [tinker further with the CMS](#using-decap-cms)
 
 ---
 
@@ -239,4 +244,29 @@ Probably not the best way to do very small websites unless you know what you are
 
 Going to Google Lighthouse is one thing.
 
-But having it 
+But having it...programatically!
+
+### Using Decap-CMS
+
+https://decapcms.org/docs/install-decap-cms/
+
+
+### SSG SSR ISR
+
+SSG (Static Site Generation):
+Static Site Generation involves generating HTML pages at build time, typically using a site generator or build tool. The generated HTML pages contain all the necessary content and assets, and they are served to clients as-is without the need for server-side processing. This approach offers benefits such as fast loading times, security, and scalability. Popular static site generators include Gatsby, Next.js (with static site generation), Jekyll, and Hugo.
+
+SSR (Server-Side Rendering):
+Server-Side Rendering involves generating HTML pages dynamically on the server in response to each client request. With SSR, the server processes the request, renders the page with the necessary data, and sends the fully rendered HTML to the client's browser. SSR is commonly used in web applications built with frameworks like Next.js, Nuxt.js, and Angular Universal. SSR can offer benefits such as improved SEO, faster initial page loads, and better support for dynamic content.
+
+ISR (Incremental Static Regeneration):
+Incremental Static Regeneration is a hybrid approach that combines the benefits of static site generation and dynamic content updates. With ISR, pages are initially generated statically at build time, but they can also be updated dynamically in the background. When a user requests a page that has been updated since the last build, the server regenerates the page with fresh data and serves the updated version. ISR is a feature available in frameworks like Next.js, enabling developers to pre-render dynamic content while still benefiting from static site performance.
+
+In summary, SSG generates HTML pages at build time, SSR generates HTML pages dynamically on the server in response to requests, and ISR combines static site generation with dynamic content updates for improved performance and flexibility.
+
+Each approach has its strengths and use cases, and the choice depends on the specific requirements of the project. -->
+
+
+Next.js is a React-based framework for building fast and scalable web applications.
+Next.js provides server-side rendering, static site generation, and incremental static regeneration.
+Next.js has built-in support for API routes and data fetching strategies.

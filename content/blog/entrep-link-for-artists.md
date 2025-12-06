@@ -492,8 +492,8 @@ Also, thanks to have tinkered with Nuxt (Vue) recently, got to know a very cool 
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/open-source-photo-gallery/" title="Just SSG" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="Just SSG" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Source Code for SSG Components" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/open-source-photo-gallery/" title="Photo Galleries Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SSG Components" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="PB x R2 x HUGo" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Source Code for SSG Components" >}}
 {{< /cards >}}
 
 <!-- 
@@ -533,6 +533,9 @@ To these themes you can also add formbricks and or calendar for more interactivi
 
 > > See how to bring audio via [Hugo components](https://github.com/JAlcocerT/JAlcocerT/tree/main/static/audio) as seen [here](http://localhost:1313/interesting-apis/#11labs)
 
+#### Courses
+
+Like...Skool for artists?
 
 #### Tech Talks
 

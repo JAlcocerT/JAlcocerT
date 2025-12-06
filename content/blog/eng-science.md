@@ -6,8 +6,8 @@ draft: false
 #   image: "https://socialify.git.ci/jalcocert/streamlit-multichat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #   alt: "What about science?" # alt text
 #   caption: "Science Recap with LLMs" # display caption under cover
-tags: ["Tinkering","Atopile"]
-description: 'Science recap with LLMs'
+tags: ["Tinkering","Atopile","3 Bodies vs SliDer Crank"]
+description: 'A Science recap with LLMs'
 url: 'cool-science'
 ---
 
@@ -20,6 +20,8 @@ A post about...Simply science.
 <!-- https://youtu.be/FPvFHcQEEj0?si=-ZnOycL8qsgJ4xKN -->
 
 {{< youtube "FPvFHcQEEj0" >}}
+
+
 
 
 ## Electrical Engineering
@@ -77,6 +79,9 @@ Reactive power is crucial for efficient electricity transmission and distributio
 
 
 ## Mechanical Engineering
+
+https://github.com/JAlcocerT/ThreeBodies
+https://github.com/JAlcocerT/ThreeBodies/blob/main/Z_DeployMe/3bodes-flask.png
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/mechanical-engineering-cool-stuff/" title="Summarizer" image="/blog_img/GenAI/yt-summaries/yt-summaries-groq.png" subtitle="With Groq API" >}}

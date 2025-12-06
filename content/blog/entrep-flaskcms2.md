@@ -192,13 +192,15 @@ Same for the thought of doing a [Gitea API connection + n8n](https://jalcocert.g
 
 > The vibe coded gradient in the landing of these flask web apps is veeery nice
 
-
 ---
-
 
 ## Conclusions
 
-Its definitely hard to sale sth to people.
+Its definitely **hard to complete a sale** to people.
+
+Specially this kind of 121 custom projects. 
+
+Where too much customization and everything is possible because I know you.
 
 I believe in some podcast from A. Hormozi he says: *Sell to rich people, they pay more/better*
 

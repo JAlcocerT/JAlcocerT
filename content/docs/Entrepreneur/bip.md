@@ -35,7 +35,8 @@ Chances are that you are using AI/vibe coding techniques to build your next prod
 <!-- 
 * https://github.com/JAlcocerT/openai-chatbot
 * https://platform.openai.com/api-keys
-
+* https://platform.openai.com/docs/models
+    * https://platform.openai.com/chat/edit?models=o1
 * Groq - 
     * https://console.groq.com/keys
 * Gemini (Google)
@@ -163,3 +164,6 @@ And the best way to know if someone values what you do, is if they are willing t
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#integrate-stripe" title="Stripe Docs" image="/blog_img/entrepre/webify/stripe-windsurf-sample.png" subtitle="Stripe Subscriptions and More" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe" title="Using Stripe withing a Flask" image="/blog_img/entrepre/stripe/stripe-apps.png" subtitle="Stripe 101 withing a SaaS PoC" >}}
 {{< /cards >}}
+
+
+## SaaS KPIs

@@ -3,14 +3,12 @@ title: "BiP with APIFY - Sell shovels"
 date: 2025-10-18T06:20:21+01:00
 draft: false
 tags: ["Forum and Animations","Reddit vs FC","Coding for Entrepreneurs","RSS","Post Schedule"]
-description: 'Building in Public | The start of a sales pipeline 🤯'
+description: 'Building in Public | The start of a sales pipeline 🤯. Leads for SlubnyChwile - Part 1.'
 url: 'apify'
 ---
 
 
 **Tl;DR**
-
-WIP
 
 This is just amazing: https://apify.com/store/categories/lead-generation
 

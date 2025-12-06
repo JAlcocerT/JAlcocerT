@@ -278,10 +278,11 @@ Improve your lap times with RaceChrono
 
 If you start fresh on a VPS and have Docker and WordPress set up, bringing your WordPress theme into that environment involves a few steps:
 
-### Step 1: Prepare Your Docker WordPress Setup
+Step 1: Prepare Your Docker WordPress Setup
+
 Ensure your WordPress Docker container is running and accessible. Usually, you’ll have WordPress files mounted on a volume inside the container, often at `/var/www/html/wp-content/themes/`.
 
-### Step 2: Copy Your Theme to the VPS
+Step 2: Copy Your Theme to the VPS
 You can bring the theme files over to the VPS using:
 
 - **SCP or SFTP**: Upload your theme folder (which contains `style.css`, `functions.php`, and all necessary theme files) into the WordPress themes directory on the VPS.  
@@ -298,18 +299,22 @@ You can bring the theme files over to the VPS using:
 
 - **Docker Volume Mounting (for Development)**: When developing locally or on VPS, you can mount your local theme folder as a Docker volume in the container for live edits without copying each time.
 
-### Step 3: Activate the Theme in WordPress
+Step 3: Activate the Theme in WordPress
+
 Once your theme files are in the themes directory:
+
 1. Log in to your WordPress admin at `http://your-vps-ip/wp-admin`.
 2. Navigate to **Appearance → Themes**.
 3. Find your uploaded theme and click **Activate**.
 
-### Step 4: Optional—Upload Theme ZIP via Admin
+Step 4: Optional—Upload Theme ZIP via Admin
+
 As an alternative, through the WordPress Admin UI:
 - Go to **Appearance → Themes → Add New → Upload Theme**.
 - Upload a zip archive of your theme; WordPress will install and activate it.
 
-### Summary
+Summary
+
 | Method | Description | When to Use |
 |--------|-------------|-------------|
 | SCP/SFTP Copy | Manually copy theme files | Direct file control, VPS access |
@@ -319,9 +324,14 @@ As an alternative, through the WordPress Admin UI:
 
 This workflow lets you manage your themes conveniently on a fresh Docker WordPress VPS environment.
 
-Yes, there are many open-source WordPress themes freely available on GitHub. In fact, thousands of developers and organizations—including Automattic (the company behind WordPress.com)—host and maintain GPL-licensed WordPress themes there. These can be used, studied, modified, or forked for your own projects.
+Yes, there are many open-source WordPress themes freely available on GitHub. 
 
-### Examples of Popular Open-Source WordPress Themes on GitHub
+In fact, thousands of developers and organizations—including Automattic (the company behind WordPress.com)—host and maintain GPL-licensed WordPress themes there.
+
+These can be used, studied, modified, or forked for your own projects.
+
+**Examples of Popular Open-Source WordPress Themes on GitHub**
+
 Some of the most widely used and high-quality open-source WordPress themes include:
 
 - **[Roots / Sage](https://github.com/roots/sage)** — a Laravel Blade-based WordPress starter theme with Tailwind CSS and full block editor support; a favorite among professional developers (over 13k stars).[1]
@@ -333,7 +343,8 @@ Some of the most widely used and high-quality open-source WordPress themes inclu
 
 You can explore thousands more in the **GitHub “wordpress-theme” topic**, which currently includes over 4,000 public repositories across PHP, CSS, and JavaScript projects.[1]
 
-### Installing Themes from GitHub
+**Installing Themes from GitHub**
+
 You can manually download a theme ZIP file from GitHub and install it through **WordPress → Appearance → Themes → Upload Theme**.  
 Alternatively, use tools like **WP Pusher** or **GitHub Updater** to install and automatically update WordPress themes directly from public GitHub repositories.[5][9]
 
@@ -382,61 +393,20 @@ Airflow to start some job? -->
 
 ### Serverless
 
+Ive enjoyed using Cloudflare R2 for s3 compatible storage.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="R2 x PB" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Source Code for SSG Components" >}}
+{{< /cards >}}
+
 1. https://github.com/neondatabase/neon
 
 > Apache v2 |  Neon: Serverless Postgres. We separated storage and compute to offer autoscaling, code-like database branching, and scale to zero.
 
+2. Cloudflare D1
 
-### PaaS
 
-#https://www.youtube.com/watch?v=hl8ebudhqZU
-
-To build an e-commerce system around Coolify that can spin up WordPress or Ghost sites for users on demand, you would need several components working together to automate deployment, user management, and payments:
-
-Key Components Required
-
-1. **Coolify as Deployment Backend**  
-   Use Coolify’s API or CLI to automate deployment of WordPress or Ghost instances.
-   Coolify can deploy Dockerized or containerized apps from templates or Git repos: so the astro ebooks, linktree etc could also be deployed.
-
-2. **E-Commerce Platform / Storefront**  
-   - A web frontend where users can browse WordPress or Ghost site templates, choose options, and pay.
-   - Could be a custom React/Vue app or integration with existing e-commerce platforms like Shopify, WooCommerce, or headless commerce solutions.
-   - Supports payment gateways (Stripe, PayPal, etc.).
-
-3. **User & Site Management System**  
-   - Backend that manages user accounts and tracks purchased subscriptions or sites.
-   - Upon purchase, triggers creation of new WordPress/Ghost site deployment via Coolify API.
-   - Maintains credentials and site URLs for users.
-
-4. **Automation/orchestration Layer**  
-   - Service or serverless function listening for new orders.
-   - Interacts with Coolify API to spin up new containers with WordPress or Ghost.
-   - Configures environment variables (database credentials, admin user info) and DNS routing.
-
-5. **Database & Persistent Storage**  
-   - Since WordPress and Ghost require databases, you need persistent database instances (MySQL/MariaDB for WordPress, SQLite/MySQL or PostgreSQL for Ghost) managed either by Coolify or externally.
-   - Persistent volumes for user content.
-
-6. **Domain & SSL Management**  
-   - Automated DNS provisioning or user prompts to configure domains.
-   - Automated SSL certificate provisioning via Let’s Encrypt or similar integrated into Coolify or custom layer.
-
-7. **Scaling & Monitoring**  
-   - Infrastructure monitoring with alerts.
-   - User limits or scaling policies as site numbers grow.
-
-Integration Example Flow
-
-- User visits e-commerce site → selects WordPress/Ghost plan or template → pays → backend service calls Coolify API → deploys new instance with site setup → user receives site access info.
-
-- Coolify can handle container deployment and app lifecycle.
-- You need to build or integrate a payment-enabled storefront and user management system.
-- Automate deployment triggers via Coolify’s API.
-- Ensure persistent database and storage solutions.
-- Automate domain and SSL handling for user convenience.
-
-This architecture turns Coolify into a deployment engine behind a full multi-tenant hosted WordPress/Ghost e-commerce platform. It requires significant development beyond Coolify itself but is fully achievable with Coolify as the core deployment layer.[1][2]
-
-[1](https://coolify.io/docs/)
-[2](https://coolify.io/docs/get-started/contribute/service)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
+{{< /cards >}}

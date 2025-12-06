@@ -2,7 +2,7 @@
 title: "Creating an e-Commerce"
 date: 2026-12-23
 draft: true
-tags: ["SaaS","Drupal"]
+tags: ["SaaS","Drupal","Clustering"]
 description: 'Creating an eCommerce. Drupal vs DIY'
 url: 'ecommerce'
 ---
@@ -14,6 +14,12 @@ https://www.shopify.com/news/david-heinemeier-hansson-board
 https://polkabikes.pl/ 
 
 **Intro**
+
+If you have worked for a popular ecommerce in D&A, chances are that you were focusing on clustering users.
+
+PBi had a panel that could do the trick...to some extent.
+
+But doing sth custom is much cooler.
 
 [Some people dare to create their own ecommerce](https://forocoches.com/foro/showthread.php?t=9707807) dont die trying.
 

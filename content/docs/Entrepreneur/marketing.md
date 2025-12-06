@@ -163,6 +163,7 @@ graph TD
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe" title="Using Stripe withing a Flask" image="/blog_img/entrepre/stripe/stripe-apps.png" subtitle="Stripe 101 withing a SaaS PoC" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/" title="Cyrpto Too?" image="/blog_img/entrepre/stripe/stripe-apps.png" subtitle="Cal potentially accepts crypto payments too :O - Check your local regulations first!" >}}
 {{< /cards >}}
 
 <!-- 

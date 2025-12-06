@@ -41,7 +41,7 @@ But these are some tools that make getting returns from [what you build](https:/
 1. [Automation](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/):
 2. [Bots](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/):
 3. [Marketing](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/):
-
+4. [Product](#product) and [Offers](#offers)!  
 
 ## Product
 

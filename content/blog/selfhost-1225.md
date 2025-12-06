@@ -345,6 +345,9 @@ For a **general OS purposes**, as of today I would:
 
 {{< youtube "hTw9DBEksx4" >}}
 
+### Selfh 2025 Results
+
+https://selfh.st/survey/2025-results/
 
 ### Random
 

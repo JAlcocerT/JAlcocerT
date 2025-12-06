@@ -423,12 +423,14 @@ Let's break down each component:
 {{< /details >}}
 
 
-EPS takes the company's total profit (Net Income, adjusted for preferred dividends) and divides it by the number of common shares, giving you a **per-share measure of profitability**. It tells you how much of the company's net profit is allocated to each outstanding share of common stock.
+EPS takes the company's total profit (Net Income, adjusted for preferred dividends) and divides it by the number of common shares, giving you a **per-share measure of profitability**.
+
+It tells you how much of the company's net profit is allocated to each outstanding share of common stock.
 
 This makes EPS a very popular metric for investors because it normalizes a company's profit down to a per-share basis, making it easier to compare the profitability of companies with different numbers of shares outstanding.
 
 
-{{< details title="Payout Ratio 101 | NetIncome vs FCF  📌" closed="true" >}}
+{{< details title="Payout Ratio 101 | Based on NetIncome vs FCF  📌" closed="true" >}}
 
 Net Income and Free Cash Flow (FCF) are both crucial metrics for evaluating a company's financial health, but they tell different stories and are derived from different financial statements.
 

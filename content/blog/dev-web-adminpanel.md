@@ -1,7 +1,7 @@
 ---
 title: "Admin Panels for Websites | Manifest vs PB"
 date: 2025-11-29T10:20:21+01:00
-tags: ["SaaS","Authentication","Simple BackEnd","BaaS with yaml"]
+tags: ["SaaS","Authentication","Simple BackEnd","BaaS with yaml","User On boarding"]
 description: "Admin Panels and Manifest (Portable Backend as yaml file)"
 url: 'admin-panels-for-websites'
 draft: false
@@ -10,6 +10,8 @@ draft: false
 **Tl;DR**
 
 Is it possible to have something better than Streamlit and Pocketbase for the quickest data visualization  / SaaS PoC and backend ever?
+
++++ [Tour guide tools](#oss-user-on-boarding)
 
 **Intro**
 
@@ -210,3 +212,21 @@ So the question is clear: *Which of these 2 is better to build SaaS PoCs?*
 * https://github.com/akveo/ngx-admin
 
 > Customizable admin dashboard template based on Angular 10+
+
+### OSS User On Boarding
+
+1. https://github.com/sjmc11/tourguide-js
+
+> MIT | TourGuide is a Javascript library for creating **user tours and on-boarding** steps for your apps.
+
+2. https://github.com/enszrlu/NextStep/
+
+> MIT |Lightweight onboarding library for Next.js 
+
+| Library | Key Features | Framework Compatibility | License Note |
+| :--- | :--- | :--- | :--- |
+| **Shepherd.js** | Highly customizable for multi-step tours, uses Floating UI for positioning, and prioritizes accessibility. | Framework-agnostic (wrappers for React, Vue, etc.) | MIT/Custom (Free for non-commercial, paid for commercial lifetime license) |
+| **Driver.js** | Focuses on highlighting elements with an overlay/dimming feature to remove distractions. Very lightweight with zero dependencies. | Framework-agnostic (Vanilla JS) | MIT (Free for personal and commercial use) |
+| **Intro.js** | Simple, easy to use for creating step-by-step guides. Highly customizable tooltips. | Framework-agnostic | AGPL-3.0 (Free for open-source, personal, and non-commercial sites; commercial license required for commercial use) |
+| **React Joyride** | Specifically designed for **React** applications, offering smooth setup and interactive feature tours. | **React** | MIT (Free for personal and commercial use) |
+| **TourGuide JS** | Lightweight, simple, and framework-agnostic. Uses Floating UI and offers good customization. | Framework-agnostic (Vanilla JS, TypeScript support) | MIT (Free for personal and commercial use) |

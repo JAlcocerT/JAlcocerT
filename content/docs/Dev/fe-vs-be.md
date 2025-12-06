@@ -20,22 +20,36 @@ A [mindmap](https://mermaid.js.org/syntax/mindmap.html) should help
 
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+  root((Web App<br/>Ecosystem))
+    Rendering Strategies
+      CSR
+        (Client Side)
+        ::icon(fa fa-laptop)
+        Needs IndexedDB
+        Relies on RTK
+      SSR
+        (Server Side)
+        ::icon(fa fa-server)
+        Needs Cookies
+        Hydrates RTK
+    RTK State Manager
+      ::icon(fa fa-brain)
+      (Memory / RAM)
+      RTK Query
+        (Network Cache)
+      Syncs to IDB
+    Cookies
+      ::icon(fa fa-id-card)
+      (Auth & Transport)
+      HttpOnly
+      Secure
+      Vital for SSR
+    IndexedDB
+      ::icon(fa fa-database)
+      (Storage)
+      Offline Cache
+      Large Capacity
+      Persists RTK
 ```
 
 ## FrontEnd
@@ -54,13 +68,39 @@ mindmap
 * Svelte
     * https://www.sveltethemes.com/
 
+
+{{< details title="Svelte within Astro 📌" closed="true" >}}
+
+Svelte y Astro son tecnologías frontend que comparten la prioridad por la velocidad y eficiencia, pero no son exactamente alternativas directas, ya que tienen enfoques y casos de uso diferentes.
+
+Svelte es un framework que compila componentes a JavaScript muy optimizado en tiempo de construcción, lo que permite construir aplicaciones web interactivas, reactivas y complejas con alto rendimiento. 
+
+SvelteKit, el framework oficial de Svelte, añade funcionalidades completas para construir aplicaciones con routing, SSR (renderizado servidor) y otras características de apps modernas.
+
+Astro, en cambio, es un framework orientado a sitios web con contenido más estático y enfoque en rendimiento extremo.
+
+Utiliza una arquitectura llamada "Island Architecture" que prerenderiza la mayoría de la página en HTML estático entregando muy poco JavaScript al navegador. 
+
+Astro soporta usar componentes de múltiples frameworks como React, Vue o Svelte dentro de un mismo proyecto, priorizando la carga mínima de scripts.
+
+En resumen:
+- Svelte (con SvelteKit) es más adecuado para aplicaciones web interactivas y complejas.
+- Astro es ideal para sitios de contenido estático donde la optimización de carga y SEO es crítica.
+- Astro puede incluir componentes Svelte para partes interactivas, híbrido que aprovecha ambos.
+
+Por tanto, Svelte no es una alternativa directa a Astro; más bien, Astro puede usar Svelte como parte de su stack, y SvelteKit compite con marcos orientados a SPAs y aplicaciones completas, mientras que Astro destaca en sitios estáticos y multi-framework.
+
+
+{{< /details >}}
+
+
 ### SSGs
 
 * [VitePress and VuePress](https://jalcocert.github.io/JAlcocerT/trying-nuxt-themes/#andvitepress-ssg) (Vue)
-* Hugo
+* [Hugo](https://jalcocert.github.io/JAlcocerT/create-your-website-hugo-ssg/)
 * [Jekyll](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/#more-about-jekyll)
 * [Gatsby](https://jalcocert.github.io/JAlcocerT/gatsby-ghost-integration/) (React)
-* Astro
+* [Astro](https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/)
 
 
 ---

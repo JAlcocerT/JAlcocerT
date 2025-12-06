@@ -88,8 +88,7 @@ This year, Ive abused again of my unfair advantage.
 
 ![Just working](/blog_img/outro/work-unfair-advantage.png)
 
-<iframe src="https://visitedplaces.com/embed/?map=world&projection=geoNaturalEarth1&position=3.7_34.3_51_-12.4_0&theme=dark-green&water=1&graticule=0&names=1&duration=2000&placeduration=100&slider=0&autoplay=0&autozoom=none&autostep=0&home=PL&places=lie~DE_ES_PT_MX_FR_GB_IT_BE_NL_DK_SE_LT_LV_UA_HU_AT_CZ_SK_BG_GR_TR_MT_PL.daaa44_CH_NO_AL_EE_TH_LI" style="width: 100%; height: 600px;"></iframe>
-
+If I was pushing from the start of 2023, So ive done this year.
 
 
 Building a brand is not easy.
@@ -164,6 +163,7 @@ People seems to have bring it to the next trolling level: https://play.google.co
 > Apache v2 | **Static Site Generator** with Go backend and Svelte frontend 
 
 Build-Time Render Engine (aka Static Site Generator) with Go backend and Svelte frontend
+
 Ships with a fully integrated Git-CMS that you can host for cheap/free right with your static site
 
 Install [plenti](https://snapcraft.io/plenti):
@@ -175,19 +175,6 @@ snap install plenti
 As the author mentions: Plenti = Hugo + NetlifyCMS 
 <!-- https://www.youtube.com/watch?v=T4b55nfZiIw -->
 {{< youtube "T4b55nfZiIw" >}}
-
-Svelte y Astro son tecnologías frontend que comparten la prioridad por la velocidad y eficiencia, pero no son exactamente alternativas directas, ya que tienen enfoques y casos de uso diferentes.
-
-Svelte es un framework que compila componentes a JavaScript muy optimizado en tiempo de construcción, lo que permite construir aplicaciones web interactivas, reactivas y complejas con alto rendimiento. SvelteKit, el framework oficial de Svelte, añade funcionalidades completas para construir aplicaciones con routing, SSR (renderizado servidor) y otras características de apps modernas.
-
-Astro, en cambio, es un framework orientado a sitios web con contenido más estático y enfoque en rendimiento extremo. Utiliza una arquitectura llamada "Island Architecture" que prerenderiza la mayoría de la página en HTML estático entregando muy poco JavaScript al navegador. Astro soporta usar componentes de múltiples frameworks como React, Vue o Svelte dentro de un mismo proyecto, priorizando la carga mínima de scripts.
-
-En resumen:
-- Svelte (con SvelteKit) es más adecuado para aplicaciones web interactivas y complejas.
-- Astro es ideal para sitios de contenido estático donde la optimización de carga y SEO es crítica.
-- Astro puede incluir componentes Svelte para partes interactivas, híbrido que aprovecha ambos.
-
-Por tanto, Svelte no es una alternativa directa a Astro; más bien, Astro puede usar Svelte como parte de su stack, y SvelteKit compite con marcos orientados a SPAs y aplicaciones completas, mientras que Astro destaca en sitios estáticos y multi-framework.[1][2][5][6][7]
 
 <!-- 
 https://www.youtube.com/watch?v=Gr3KTOnsWEM&list=PLbWvcwWtuDm0tIrvD_xHvUXHBftbHDy5T 
@@ -531,11 +518,16 @@ Even with Cloudflare Tunnel, you might still want to use a Cloudflare Worker for
 
 {{< /details >}}
 
-4. I even got time to clean the IoT/MQTT with micro-controllers :)
+4. I even got time to clean the **IoT/MQTT** with micro-controllers :)
 
-![Home Assistant dashboard with temperature from MQTT](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png)
+<!-- ![Home Assistant dashboard with temperature from MQTT](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pico-w/#ha-x-mqtt" title="HA x MQTT x PicoW" image="/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png" subtitle="Testing a PicoW with Home Assistant" >}}
+{{< /cards >}}
 
 {{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-iot/" title="IoT | Docs ↗" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI" title="PicoW + Wifi Connection and other scripts 🐍 ↗" >}}
 {{< /cards >}}
 
@@ -643,13 +635,17 @@ For APIs exposed to external clients, OAuth is generally considered more secure 
 
 ## Entrepreneuring
 
-I feel (literally) like in the backstraight of a circuit after having couple of laps to recognize my breaking/aceleration points.
+I feel (literally) like in the **back straight of a circuit** after having couple of laps to recognize my breaking/aceleration points.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}  
+{{< /cards >}}
 
 {{< cards >}}
   {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="This is the DWY - Accounting for my time opportunity cost" >}}
   {{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This DFY I have to refine it though" >}}
 {{< /cards >}}
-
 
 And...
 
@@ -725,6 +721,8 @@ Thats why I thought and do alot around [this web platform for creators](#launchi
 
 This year, It's been more building than shipping.
 
+And I want to change that [next year](#for-next-year).
+
 If you are successful, you will need to know [how to use Stripe API](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe) and any form of invoicing customers:
 
 #### Launching Webifyer
@@ -740,22 +738,7 @@ And pretty affordable at ~60$/year.
 
 For retail/B2C, having a way to do proper user onboarding / user tours / user guides is key.
 
-I wa slucky to find:
-
-* https://github.com/sjmc11/tourguide-js
-
-> MIT | TourGuide is a Javascript library for creating user tours and on-boarding steps for your apps.
-
-* https://github.com/enszrlu/NextStep/
-
-> MIT |  Lightweight onboarding library for Next.js 
-
-Library,Key Features,Framework Compatibility,License Note
-Shepherd.js,"Highly customizable for multi-step tours, uses Floating UI for positioning, and prioritizes accessibility.","Framework-agnostic (wrappers for React, Vue, etc.)","MIT/Custom (Free for non-commercial, paid for commercial lifetime license)"
-Driver.js,Focuses on highlighting elements with an overlay/dimming feature to remove distractions. Very lightweight with zero dependencies.,Framework-agnostic (Vanilla JS),MIT (Free for personal and commercial use)
-Intro.js,"Simple, easy to use for creating step-by-step guides. Highly customizable tooltips.",Framework-agnostic,"AGPL-3.0 (Free for open-source, personal, and non-commercial sites; commercial license required for commercial use)"
-React Joyride,"Specifically designed for React applications, offering smooth setup and interactive feature tours.",React,MIT (Free for personal and commercial use)
-TourGuide JS,"Lightweight, simple, and framework-agnostic. Uses Floating UI and offers good customization.","Framework-agnostic (Vanilla JS, TypeScript support)",MIT (Free for personal and commercial use)
+I was lucky to find some [tools for Admin Panels](https://jalcocert.github.io/JAlcocerT/admin-panels-for-websites/) and others for user on boarding.
 
 One of the skills I enjoy learning more is about photography.
 
@@ -769,6 +752,12 @@ What is this all about?
 
 Web templates (SSG'ed) connected to CMS's.
 
+And been able to **create CTA's** and clear value proposition statements.
+
+Because, time is money.
+
+And you are loosing both without a proper website.
+
 Because Selfhosting Static Generated Sites, is not a secret anymore:
 
 {{< cards cols="1" >}}
@@ -777,17 +766,20 @@ Because Selfhosting Static Generated Sites, is not a secret anymore:
 {{< /cards >}}
 
 
-
-But, time is money.
-
-And you are loosing both without a proper website.
-
 #### Leads and Offers
 
 Linktree does things very well, yet cant compete with:
 
-1. Domain 1sty free with CC required (This is a potential CAC)
-2. abcd
+1. Domain 1st y free with CC required (This is a potential CAC)
+2. Name a Million more goodies that wont be good enough and still will lower your LTV
+
+But when you consider the resources required to make a linktree like so scalable, that is worth [to get paid...not so much....](https://jalcocert.github.io/JAlcocerT/stripe-for-saas/)
+
+You might rethink that.
+
+And maybe focusing on getting better clients - I mean, that would value more your active engagement on deliver to them value.
+
+Leaving the automatic mode for B2C, for which [stripe and software](https://jalcocert.github.io/JAlcocerT/stripe-for-saas/) is there to help decoupling your time.
 
 Some people have been contacting me via EE registry `https://ariregister.rik.ee/eng/company/`
 
@@ -795,13 +787,29 @@ Some people have been contacting me via EE registry `https://ariregister.rik.ee/
 
 > > They are getting kind of qualified leads (from users like me, who never actually subscribed...GDPR anyone?)
 
+Does that mean that...I ve part of someone else's [sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/)?
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 ## Interesting Concepts
 
 Concepts / ideas that I found during this year.
 
+0. Active income > Passive income *like the one you can get from [dividends](https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#dividend-data---dgi-vs-yield)*
+
+![Matplotlib Custom Graph for Dividend Trend Example](/blog_img/data-experiments/MCD_dividends_pct_12m.png)
+
+
 1. CYA (cover your ***) was always a thing. 
 
-But [BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level if you in PM/BA roles.
+But [**BRD**/PRD/FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) just takes it to the next level if you in PM/BA roles.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+{{< /cards >}}
 
 2. Its 2025 and now everyones says that it wants AI / [AI|BI](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/) / AIOps / whatever. When it really needs [good'old ML](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/)
 
@@ -823,7 +831,7 @@ Could [the aissistant](https://github.com/JAlcocerT/Streamlit-AIssistant/tree/ma
 
 Just not to *leave money on the table*?
 
-> A person cant solve all problems (even less at the same time).
+> A person cant solve all problems *(even less at the same time)*
 
 5. System > Goals
 
@@ -856,6 +864,10 @@ Kind of resonates with [process](#processes) > result.
 6. Guesstimates and [PostMortems](https://fernandocejas.com/blog/culture/2020-06-21-learn-out-of-mistakes-postmortems/)
 
 7. Business/SaaS KPIs: CAC, EBITDA, LTV, NRR, MRR/ARR...
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+{{< /cards >}}
 
 8. Mental **Obesity**. Which relates with bikeshedding and the [enless student syndrome](https://youtu.be/QFH-_exyNoo?si=yToM8KSBbT0V5xG3)
 
@@ -890,8 +902,11 @@ Just make sure you take care of your diet/stress levels.
 
 {{< /details >}}
 
-16. helping versus serving - *and how pricing helps differenciate that*
+16. Helping versus serving - *and how pricing helps differenciate that*
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#pricing" title="Pricing | Docs ↗" >}}
+{{< /cards >}}
 
 ## Processes
 
@@ -914,9 +929,12 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 I also tried [this](https://www.youtube.com/@UnfoldingData/shorts) and [this](https://www.youtube.com/@BeyondAJourney)
 
-> And as videos are just graphs places together, also this: *365+ data driven tweets*
+![100k views in a year](/blog_img/data-experiments/yt-1y.png)
+
+> And as videos are just graphs places together, also this: *100+ data driven tweets*
 
 {{< tweet user="LibrePortfolio" id="1980278163155333315" >}}
+
 <!-- https://x.com/LibrePortfolio/status/1980278163155333315 -->
 
 
@@ -984,11 +1002,9 @@ Like these ones: *or just use perplexity*
 
 It was a year of a lot of applied AI
 
-and understanding many concepts, like langflow, [langgraph](https://github.com/von-development/awesome-LangGraph)...
+and understanding many concepts, like langflow, [langgraph](https://github.com/von-development/awesome-LangGraph)..
 
 
-* https://platform.openai.com/docs/models
-    * https://platform.openai.com/chat/edit?models=o1
 
 The **CLI AI agents** have been a great part of this 2025:
 
@@ -1016,6 +1032,10 @@ But hey Ollama has now a Desktop UI mode as well!
 1. Using LangChain to chat with a DB
 2. Real Estate RAG 
 3. Vibe Coding a WebApp to make SliDev PPTs BA friendly
+4. A master class about MermaidJS x Excalidraw with...AI and...a NextJS App on top of it
+
+> Has this be one year, for real?
+
 <!-- 
 https://www.linkedin.com/posts/exadel-people_aimeetup-knowledgesharing-engineeringcommunity-activity-7311382203731525632-FDJg -->
 
@@ -1049,9 +1069,11 @@ I also got to know about: https://echarts.apache.org/en/index.html
 
 ### Travel
 
-Combining Tech and Travel to get the most out of them:
+Combining [Tech and Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/) to get the most out of them:
 
-* https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/
+<iframe src="https://visitedplaces.com/embed/?map=world&projection=geoNaturalEarth1&position=3.7_34.3_51_-12.4_0&theme=dark-green&water=1&graticule=0&names=1&duration=2000&placeduration=100&slider=0&autoplay=0&autozoom=none&autostep=0&home=PL&places=lie~DE_ES_PT_MX_FR_GB_IT_BE_NL_DK_SE_LT_LV_UA_HU_AT_CZ_SK_BG_GR_TR_MT_PL.daaa44_CH_NO_AL_EE_TH_LI" style="width: 100%; height: 600px;"></iframe>
+
+
 
 ### Note Taking
 
@@ -1061,7 +1083,7 @@ The time that you are writing notes / making your KB, you are not doing new thin
 
 Is note taking just bike-shedding?
 
-> I got to know about the concept during 2024
+> I got to know about the concept [during 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/)
 
 The power of notes. Without bikeshedding!
 
@@ -1265,12 +1287,6 @@ https://github.com/JAlcocerT/reflex-templates
 
 ![CAGR Reflex Sample](/blog_img/dev/pystocks/cagr-reflex.png)
 
-
-The FlaskCMs / NextJS CMS i tried to built were similar to these OSS for Selfhosted Blogs
-
-* https://github.com/ddoemonn/next-blog
-
-> **MIT** | self-hosted blog platform built with next.js 
 
 
 From all CMS that I tried on [this post](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#frontmatter-cms), just frontmatter kept the simplicity I wanted.
@@ -1505,6 +1521,14 @@ pie title DB MTB Expenses
          "Price" : 1100
 ```
 
+```mermaid
+pie title FY24 Weeks Breakdown
+         "Cycling" : 1
+         "Sleeping" : 17
+         "Working" : 17
+         "Languages" : 1
+```
+
 I havent measure these blog posts time creation.
 
 But it must have been sth like:
@@ -1515,6 +1539,7 @@ But it must have been sth like:
 
 ### For Next year...
 
+Enough new ideas to kill the good one? Create a roadmap
 
 {{< details title="RoadMap | As of 1225 📌" closed="true" >}}
 
@@ -1547,7 +1572,7 @@ But it must have been sth like:
 
 1. Opening more and more a shallow tech stack. *12/24 <<<150+ yearly posts on this blog should be more than enough*
 2. Keeping 50+ tabs on chrome. *Not watching content on the phone and commet for summaries should help*.
-
+3. For the hard to sell, it needs to be fully scalable or nothing - accounting for my opportunity cost. 
 
 #### Start Doing
 
@@ -1555,6 +1580,7 @@ But it must have been sth like:
 2. Share interesting animations as a code on reddit/twitter/whatever forums. Its not ycombinator, nor producthunt but its sth
 2. x30>x24 youtube tech videos, more elaborated, *probably without AI voice*
 3. Go all-in to find new clients
+4. Not scalable but clients want it? Sell w high gross margin to the ones who can benefit
 
 **Maybe's**
 

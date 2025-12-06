@@ -31,5 +31,5 @@ Despite working with a computer, your journey and tools will be different if you
 In both cases, you will be using Databases, just that from a different angle: *see OLTP vs OLAP*
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="BI Tools | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
 {{< /cards >}}

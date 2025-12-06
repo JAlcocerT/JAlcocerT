@@ -503,7 +503,13 @@ It is simple to use and includes templates and libraries to allow you to rapidly
 
 **For the Devs out there**
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/BI/#custom-bi-tools" title="BI | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 Or just vibe coders... :)
+
 
 #### Python DASH
 
@@ -514,8 +520,14 @@ Or just vibe coders... :)
 
 #### Python STREAMLIT
     
-* https://ploomber.io/blog/streamlit_exe/
+In theory you could get streamlit into an exe... https://ploomber.io/blog/streamlit_exe/
 
+But most importantly, you can build custom BI and PoCs with it:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="Streamlit PoC Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PyGWalker Rendered Map with locations..." >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoC" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github. Streamlit Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data..." >}}
+{{< /cards >}}
 
 1. Streamlit + AI
 
@@ -570,7 +582,6 @@ If you need a recap on R language, focused on flexdashboards:
 
 ### Metabase
 
-
 Get Metabase running locally with [docker-compose](https://github.com/JAlcocerT/Docker/tree/main/IoT/Metabase)
 
 {{< cards >}}
@@ -606,8 +617,6 @@ IoT Project with [Metabase+MongoDB+DHT Sensor](https://jalcocert.github.io/RPi/p
 Compare with Apache Superset - https://superset.apache.org/
 
 You can use serverless version of it at - https://preset.io/
-
-
 
 ## Metabase Embedded Analytics
 

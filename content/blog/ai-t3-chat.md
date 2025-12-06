@@ -4,7 +4,7 @@ date: 2025-11-30T08:20:21+01:00
 draft: false
 tags: ["Astro SSR","BCMS vs PagesCMS","Web Analytics vs Link Analytics"]
 url: 't3-like-chat'
-description: 'Integrating Astro Chat Themes to AI API Keys'
+description: 'Integrating Astro Chat Themes to AI API Keys versus T3.'
 ---
 
 **Tl;DR**
@@ -17,10 +17,15 @@ How hard is to do something similar on the surface?
 
 **Intro**
 
+The multichat or the Aissistant were cool.
 
+But streamlit does not allow for the kind of modern (and pixel tweak) chat interface we want.
 
+One that...could be a brand signature.
 
-##### T3 Chat like
+This is where I want to try **Astro on SSR mode**
+
+## A T3 Chat like interface
 
 create a makefile with the commands to run this astro site locally
 
@@ -47,6 +52,15 @@ How about the rating part now?
 Meaning: to somehow plug the AI/LLMs/Agents to do/check stuff
 
 
+### About Cool Chat UIs
+
+In theory, we can plug shadcn to streamlit...
+
+https://ui.shadcn.com/themes
+https://github.com/ObservedObserver/streamlit-shadcn-ui
+
+
+
 ### Static Pages and Edition
 
 Bringing to the SSGs finally some cool editor has given me several head-aches.
@@ -66,18 +80,6 @@ In theory, all those can be selfhostable.
 ## Conclusions
 
 
-### is BCMS a thing?
-
-
-For [couple months](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#conclusions) I wanted to give a full try to BCMS.
-
-But I was just [getting started with BCMS](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#getting-started).
-
-The BCMS sample projects provide responsive layouts, lightbox/carousel support, and various customization options suitable for photograph was promising.
-
-https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
-
-#### BCMS vs PagesCMS
 
 
 ---

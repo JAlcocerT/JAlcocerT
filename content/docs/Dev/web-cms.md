@@ -55,6 +55,88 @@ Headless StrapiCMS Example
 ![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
 
 
+How to setup StrapiCMS?
+
+If you are looking from CMS, you can have a look to [this post](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites), where I [setup KeystaticCMS](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#keystatic-cms)
+
+* <https://www.opensourcealternative.to/project/Strapi>
+    * <https://docs.strapi.io/dev-docs/installation/docker>
+
+
+Astro JS x Strapi
+
+https://www.youtube.com/watch?v=WI-_gVBoBBg
+https://github.com/PaulBratslavsky/pauls-strapi-crashcourse
+https://github.com/JAlcocerT/pauls-strapi-crashcourse
+
+
+https://github.com/strapi/LaunchPad -> https://launch-pad-roan.vercel.app/en
+
+> Official Strapi Demo application
+
+
+
+![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="Strapi | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+https://www.youtube.com/watch?v=Ud9obEHadLI
+
+* https://elest.io/open-source/strapi
+
+* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
+
+* https://hub.docker.com/r/strapi/strapi/tags
+
+* https://docs.strapi.io/cms/installation/docker
+* https://docs.strapi.io/cms/quick-start
+* https://strapi.io/blog/how-to-self-host-your-headless-cms-using-docker-compose
+
+
+<!-- ### How to use turbostrapi
+
+STRAPI + NEXTJS MONOREPO STARTER
+
+* https://github.com/sawden/turbostrapi/blob/master/apps/backend/README.md
+* https://github.com/sawden/turbostrapi?ref=statichunt.com
+https://github.com/sawden/turbostrapi?ref=statichunt.com
+https://turbo.build/repo/docs/installing
+
+```sh
+yarn install
+``` -->
+
+<!-- Build a Blog with Next.js and a Headless CMS (Strapi)
+https://www.youtube.com/watch?v=NNWX2flw5mg -->
+
+
+<!-- 
+NEXTJS + Strapi
+https://www.youtube.com/watch?v=SlhZvwl9qtI&list=PL7Q0DQYATmvjXSuHfB8CY_n_oUeqZzauZ&index=9 -->
+
+How to Deploy Strapi - Headless CMS
+
+
+<!-- https://jamstack.org/headless-cms/
+
+https://github.com/mooxl/astroad/tree/main
+ -->
+
+Headless CMS based on nodejs
+
+<https://www.youtube.com/watch?v=HsojvBVk6JQ>
+
+<https://www.youtube.com/watch?v=kJ4c9U5JStU>
+
+
+Consume the API from any client (React, Vue, Angular), mobile apps or even IoT devices, using REST or
+GraphQL.
+
+
+
 ### Directus
 
 Headless DirectusCMS Example

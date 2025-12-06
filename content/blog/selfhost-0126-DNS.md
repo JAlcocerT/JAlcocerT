@@ -1,14 +1,21 @@
 ---
-title: "Improving Privacy with Open Source DNS "
+title: "Improving a HomeLab Privacy with Open Source DNS "
 date: 2026-01-15T23:20:21+01:00
 draft: false
-tags: ["Docker","Self-Hosting","Pihole x UnboundDNS"]
+tags: ["Self-Hosting","Pihole x UnboundDNS","DNS as Distributed DB"]
 description: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+https://jalcocert.github.io/JAlcocerT/web-domain-basics/
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/listmonk/listmonk-api-py/Ebook-cover-SSGs.pdf" title="Get an ebook with all Data Analytics concepts you need" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to land a job in D&A" >}}
+{{< /cards >}}
+
 Wireguard Server
 <!-- Tailscale -->
+
 <https://jalcocert.github.io/RPi/projects/rpi_wifi_ethernet_bridge/>
 RPi DHCP Server
 
