@@ -1,6 +1,6 @@
 ---
 title: "Links and Landings for Artists"
-date: 2025-11-30T08:20:21+01:00
+date: 2025-12-01T08:20:21+01:00
 draft: false
 tags: ["Astro Webs","Vibe Coding vs Spec Driven Development"]
 url: 'link-artists'

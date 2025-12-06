@@ -2,7 +2,7 @@
 title: "How to Save the Internet"
 date: 2025-11-21T23:20:21+01:00
 draft: false
-tags: ["Web ebook","Dev","Better Docs & Blog with Astro","Google Code Wiki"]
+tags: ["Web ebook","Dev","Better Docs & Blog with Astro","Google Code Wiki","Twilight & DecapCMS"]
 description: 'Open Source Minimalist Websites. Checking Lighthouse CI to optimize the web.'
 url: 'open-source-minimalist-websites'
 ---

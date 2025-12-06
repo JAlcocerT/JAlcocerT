@@ -34,7 +34,7 @@ Why not applying these to a theme: *which kind of reminds me of t3.chat*: https:
 
 > MIT | Minimal web UI for ChatGPT.
 
-* https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot which is also MIT and https://template-astro-vercel-sdk-ai-chatbo.vercel.app/
+* https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot which is also **MIT** and https://template-astro-vercel-sdk-ai-chatbo.vercel.app/
 
 And on the recent [Audio with AI Post](https://jalcocert.github.io/JAlcocerT/audio-recap/), I was supposed to create a [Speech rater with FastAPI](https://github.com/JAlcocerT/py-speech-rater) that superseeds the [previous streamlit version](https://github.com/JAlcocerT/Streamlit-Speech).
 

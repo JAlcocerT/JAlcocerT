@@ -72,6 +72,10 @@ This one is...serverless!
 
 So you dont care about the server, it just works.
 
+### Authentication via Pocketbase
+
+https://pocketbase.io/docs/authentication/#api-keys
+
 ### Authentication via TinyAuth
 
 If you got [https via Traefik](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/#traefik) in place, you can use TinyAuth.
