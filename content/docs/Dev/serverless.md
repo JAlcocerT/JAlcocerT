@@ -11,7 +11,6 @@ draft: false
 
 Just go serverless.
 
-
 But before that, understand: serverless it does not mean that there is not a server, it means that you dont care about it.
 
 +++ Using Logto JS SDK with CF Workers (?)
@@ -41,39 +40,6 @@ What Im looking to put together now:
 
 A serverless way to authenticate your users: then allow them to do certain actions.
 
-Why not applying these to a theme: *which kind of reminds me of t3.chat*: https://t3.chat
-
-![T3 Chat UI](t3-chat-register-wall/blog_img/GenAI/t3.png)
-
-* https://www.astrothemes.dev/theme/anse-app-chatgpt-demo/
-* https://github.com/anse-app/chatgpt-demo
-
-> MIT | Minimal web UI for ChatGPT.
-
-* https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot which is also MIT and https://template-astro-vercel-sdk-ai-chatbo.vercel.app/
-
-And on the recent [Audio with AI Post](https://jalcocert.github.io/JAlcocerT/audio-recap/), I was supposed to create a [Speech rater with FastAPI](https://github.com/JAlcocerT/py-speech-rater) that superseeds the [previous streamlit version](https://github.com/JAlcocerT/Streamlit-Speech).
-
-But I got an improvement of [my yt audio workflow](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions) instead.
-
-The prep work was done anyways: SSG + FastAPI + Audio recording/storing/processing worked.
-
-How about the rating part now?
-
-Meaning: to somehow plug the AI/LLMs/Agents to do/check stuff
-
-### Static Pages and Edition
-
-Bringing to the SSGs finally some cool editor has given me several head-aches.
-
-Recently I discovered about **BCMS and pages-cms**, which I wanted to try [as per this post](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#podcast).
-
-Aaaand...https://github.com/GetPublii/Publii
-
-> GPL3.0 The most intuitive **Static Site CMS** designed for SEO-optimized and privacy-focused websites. 
-
-In theory, all those can be selfhostable.
-
 ## Auth withtin SSGs
 
 We saw on [this post](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#ssg-x-pb) how to deploy a purely static site into CF Pages: https://github.com/JAlcocerT/payroll-workers-pb?tab=readme-ov-file
@@ -86,7 +52,7 @@ That is having a connection to a PB user collection: https://fast-payroll-theme.
 
 > > We saw the a cool message `You are authenticated. This is a protected page served by a Cloudflare Pages Function.`
 
-If you would go to incognito - you were asked to login again
+If you would go to incognito - you were asked to login again :)
 
 ### LogtoJS SDK or Firebase x Astro
 

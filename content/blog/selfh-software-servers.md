@@ -1,6 +1,6 @@
 ---
 title: "[PaaS Recap] Software and Servers..."
-date: 2025-12-05T17:20:21+01:00
+date: 2025-12-07T17:20:21+01:00
 draft: false
 tags: ["HomeLab","Coolify vs DokPloy","Cosmos Server","PaaS x OSS Driven Business"]
 description: 'Selfhosted Apps that simplify my workflow. Get your MiniPC/NAS homelab ready quickly.'

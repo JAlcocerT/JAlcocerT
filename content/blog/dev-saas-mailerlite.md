@@ -189,26 +189,10 @@ Hugo photo gallery themes:
 
 These projects provide responsive layouts, lightbox/carousel support, and various customization options suitable for photography portfolios or general image galleries.
 
-[1](https://github.com/jomaendle/astro-photo-gallery)
-[2](https://github.com/erfianugrah/revista-3)
-[3](https://github.com/thkukuk/hugo-photoswipe5-gallery)
-[4](https://github.com/nicokaiser/hugo-theme-gallery)
-[5](https://github.com/bep/gallerydeluxe)
 
 [6](https://github.com/nux-li/hugo-foto-theme) - Very nice Hugo theme for creating photo galleries based on images' [metadata](https://github.com/nux-li/hugo-foto-theme?tab=readme-ov-file#prerequisites). See https://matze.rocks/images/
-
-[7](https://github.com/topics/astro-themes)
-[8](https://astro.build/themes/2/)
-[9](https://github.com/chrismwilliams/astro-theme-cactus)
-[10](https://dave.gv.ca/posts/hugo-photo-gallery/)
-[11](https://astro.build/themes/3?search=Portfolio)
-[12](https://github.com/trending/astro)
-[13](https://github.com/mfg92/hugo-shortcode-gallery)
-
 [15](https://github.com/pysunday/DesignPhotographyPortfolio) - This one is a great start for a *,instagram clone'* and is multilang
 
-[16](https://astro.build/themes/details/photography-portfolio-template/)
-[20](https://github.com/Sped0n/bridget)
 
 ---
 
