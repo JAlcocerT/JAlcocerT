@@ -53,9 +53,11 @@ Mind the distinction of PocketBase admins (aka. _superusers) vs regular users at
 ```sh
 #df -h
 #docker system df #see how much docker artifacts are using
+#docker system prune -a --volumes -f
 
 docker stop $(docker ps -a -q) #stop all
 #docker volume rm $(docker volume ls -q | grep -v '^portainer_data$') #rm all volumes but portainer
+#docker volume rm $(docker volume ls -q)
 
 #docker system df
 #docker image prune -a 

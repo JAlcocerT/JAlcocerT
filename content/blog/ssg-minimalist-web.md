@@ -207,6 +207,8 @@ You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/J
 
 8. If you liked [fuwari](https://github.com/JAlcocerT/j-models), you'd love this: https://github.com/Spr-Aachen/Twilight
 
+![Twilight Desktop Preview](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/docs/image/Desktop.jpg)
+
 >  **MIT** | A git based CMS integrated static blog template 
 
 > > Uses [DecapCMS](https://github.com/decaporg/decap-cms) and I **forked** it https://github.com/JAlcocerT/Twilight to [tinker further with the CMS](#using-decap-cms)

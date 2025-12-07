@@ -2,7 +2,7 @@
 title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
 date: 2026-01-06T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS","Tech Talk","BiP BoilerPlate","RAG","Real Estate","AI"]
+tags: ["NextJS SaaS","Tech Talk","BiP BoilerPlate","RAG","Real Estate","RoadMap26"]
 description: 'Building a custom RAG solution for real estate agencies using NEXTjs and AI'
 url: 'custom-re-rag'
 ---

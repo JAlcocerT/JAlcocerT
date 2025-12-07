@@ -2,7 +2,7 @@
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
 date: 2026-01-11
 draft: false
-tags: ["Tinkering","DB2Rest","Tech Talk","IoT ebook","From obfuscaste towards 1toN eBooks"]
+tags: ["DB2Rest","Tech Talk","IoT ebook","From obfuscaste towards 1toN eBooks","Roadmap26"]
 description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'
 url: 'just-iot'
 ---

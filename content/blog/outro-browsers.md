@@ -72,7 +72,7 @@ lynx duckduckgo.com
 
 ![Lynx CLI based web browser](/blog_img/selfh/Internet/lynx-browser.png)
 
-Lately I tried Zen browser: https://zen-browser.app/download/
+Lately I tried **Zen browser**: https://zen-browser.app/download/
 
 With `CTRL+ALT+C` it gets really compact!
 

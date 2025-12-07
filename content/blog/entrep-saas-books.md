@@ -1,11 +1,13 @@
 ---
 title: "Books"
-date: 2026-01-01T23:20:21+01:00
+date: 2026-01-03T23:20:21+01:00
 draft: false
-tags: ["Outro","Kindle","1toN ebooks","SaaS vs LifeTime Products"]
-description: 'Reading better, writing more.'
+tags: ["Outro","Kindle","1toN ebooks","SaaS vs LifeTime Products","RoadMap26"]
+description: 'Reading better, writing more. Making the learnings of years actionable.'
 url: 'interesting-books'
 ---
+
+
 <!-- 
 what every body is saying 
 

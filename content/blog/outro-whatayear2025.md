@@ -1574,8 +1574,14 @@ But it must have been sth like:
 
 Enough new ideas to kill the good one? Create a roadmap
 
-{{< details title="RoadMap | As of 1225 📌" closed="true" >}}
+{{< details title="RoadMap26 | As of 1225 📌" closed="true" >}}
 
+
+1. Weddings serverless + ads
+2. Real Estate Custom RAG and WebApp
+3. AIoT *end to end flow from solar panels to dashboarding & langchain*
+4. Custom Marketing analytics *from custom high signal content creation to funnels*
+5. Books *from D&A to web and concepts from kindle notes*
 
 
 {{< /details >}}
