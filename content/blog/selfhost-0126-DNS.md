@@ -7,6 +7,10 @@ description: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+```sh
+dig guideventuretour.com
+```
+
 https://jalcocert.github.io/JAlcocerT/web-domain-basics/
 
 {{< cards >}}

@@ -8,6 +8,8 @@ draft: false
 
 https://github.com/mifi/lossless-cut
 
+https://github.com/HandBrake/HandBrake - an OSS UI for Video compression (which does not use FFMPEG)
+
 1. https://github.com/OpenCut-app/OpenCut
 
 >  The open-source CapCut alternative

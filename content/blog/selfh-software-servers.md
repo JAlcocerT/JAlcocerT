@@ -107,7 +107,9 @@ Today, we are going to see:
 3. [UmbrelOS](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#selfhosted-adventures) - Not a PaaS, but having a OS inside a docker container and just click to deploy apps is fantastic
 4. Coolify and Dokploy
 
-### LocalStack
+### Others First
+
+#### LocalStack
 
 LocalStack is a tool designed for developers who want to test **AWS functionalities locally**. 
 
@@ -136,7 +138,7 @@ It provides an **emulated environment of AWS services**, solving issues related 
   - Requires understanding of feature coverage before use.
 
 
-### Runtipi
+#### Runtipi
 
 * https://github.com/runtipi/runtipi with AGPL-v3!
 
@@ -145,7 +147,6 @@ It provides an **emulated environment of AWS services**, solving issues related 
 One command setup, one click installs for your favorites self-hosted apps. ✨
 
 > Got to know this one thanks to [awsomedockercompose](https://awesome-docker-compose.com)
-
 
 
 ### DokPloy vs Coolify

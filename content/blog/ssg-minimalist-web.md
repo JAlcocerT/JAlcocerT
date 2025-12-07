@@ -331,8 +331,11 @@ make docker-dev
 #docker logs -f twilight-astro
 #docker-compose logs -f
 make docker-down
+#docker stop $(docker ps -a -q) #stop all
 
 #npm run build
+#docker system df
+#docker system prune
 ```
 
 Just go to `localhost:4321` and `localhost:4321/admin` to have Astro and Dev Mode and **DecapCMS to edit the files locally via a cool editor!**
@@ -346,7 +349,9 @@ Just go to `localhost:4321` and `localhost:4321/admin` to have Astro and Dev Mod
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-What's next from here?
+What's [next from here](https://github.com/JAlcocerT/Twilight/blob/main/z-next-steps.md)?
+
+How about not building my own CMS, neither editing content for people?
 
 ```mermaid
 graph TB
@@ -399,12 +404,21 @@ graph TB
 
 ### Twilight x SSG X Encryption
 
-Despite working on SSG mode, the twilight theme brings an interesting feature:
+Despite working on SSG mode, the twilight theme brings an interesting feature: [encryption via ssg](https://github.com/JAlcocerT/Twilight/blob/main/z-encrypted-posts.md).
 
 [![Astro SSG with Post Encryption](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/astro-ssg-encryption.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/astro-ssg-encryption.png)
 
 
-It can encrypt your posts as pre one pwd that you add on the frontmatter and is decrypted via CSR.
+It can encrypt your posts as pre one pwd that you add on the frontmatter and is **decrypted via CSR**.
+
+| **Technology** | Purpose | Where Used |
+|------------|---------|------------|
+| **CryptoJS (AES)** | Content encryption/decryption | Build time + Runtime |
+| **bcrypt.js** | Password hashing & verification | Build time + Runtime |
+| **marked.js** | Markdown rendering (client-side) | Runtime only |
+| **highlight.js** | Syntax highlighting | Runtime only |
+
+If you are wondering the differences between the [SSG and SSR](#ssg-ssr-isr) way of doing this:
 
 | Feature | SSG (Current) | SSR (Server-Side) |
 |---------|---------------|-------------------|

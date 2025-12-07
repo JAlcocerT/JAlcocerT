@@ -2,8 +2,8 @@
 title: "A Podcast for all with Anti-Gravity"
 date: 2025-11-28T08:20:21+01:00
 draft: false
-tags: ["Web","Better-Auth x Server Auth","Make-Podcast","SaaS Vibe Coding","MUI","FFMPeg Recording"]
-description: 'Using astro and '
+tags: ["Web","Better-Auth x Server Auth","Make-Podcast","SaaS Vibe Coding","MUI"]
+description: 'Using astro podcast themes x NextJS x Better Auth and FFMPEG for Recordings.'
 url: 'make-podcast'
 ---
 
@@ -80,6 +80,11 @@ This platform would allow you to:
 - Manage your content through a web interface
 - Generate RSS feeds for distribution
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 From the [latest vibe coding learnings](https://jalcocert.github.io/JAlcocerT/real-estate-landing/#nuxt-for-real-estate):
 
@@ -181,8 +186,7 @@ To develop a **modern, secure, and scalable web platform** for hosting and strea
 
 The platform must offer a seamless, content-driven user interface and a flexible content management system supporting both web uploads and direct file system access.
 
-
-| Requirement | Specification | Clarification / Decision |
+| Requirement | **Specification** | Clarification / Decision |
 | :--- | :--- | :--- |
 | **Frontend Framework** | Next.js (React) | Used for server-side rendering (SSR) and routing. |
 | **Styling/UI Library** | **MUI (Material-UI)** | Must be used for the "cool and modern UI." |
@@ -240,8 +244,6 @@ Google have been improving their stack.
 
 From the https://notebooklm.google/ to...a desktop IDE:
 
-
-
 * https://antigravity.google/
   * https://antigravity.google/download/linux
   * https://chromewebstore.google.com/detail/antigravity-browser-exten/eeijfnjmjelapkebgockoeaadonbchdd
@@ -255,9 +257,14 @@ This weekend I watched couple of videos about Authentication
 <!-- https://youtu.be/_OApmLmex14?si=dJ1mEw4lRdBbhZM8 -->
 {{< youtube "_OApmLmex14" >}}
 
+Ok, after listening to both, I wanted to give it a try to better auth for this sample project.
+
 <!-- https://youtu.be/H2oQgiDmBjc?si=dfipUtrt347G3fht -->
 {{< youtube "H2oQgiDmBjc" >}}
 
+And even more after seeing its growth:
+
+[![Star History Chart](https://api.star-history.com/svg?repos=better-auth/better-auth,nextauthjs/next-auth,logto-io/logto&type=Date)](https://star-history.com/better-auth/better-auth&nextauthjs/next-auth&logto-io/logto&Date)
 
 Im happy to have Logto and Firebase Auth working and with examples:
 
@@ -276,16 +283,50 @@ But the Better Auth project looks like sth interesting to tinker with.
 
 > **MIT** | The most comprehensive authentication framework for TypeScript
 
-
-[![Star History Chart](https://api.star-history.com/svg?repos=langchain-ai/langchain,deepset-ai/haystack,Sinaptik-AI/pandas-ai,pydantic/pydantic-ai&,type=Date)](https://star-history.com/langchain-ai/langchain&deepset-ai/haystack&Sinaptik-AI/pandas-ai&pydantic/pydantic-ai&Date)
-
 #### Auth via Server Auth
 
 * https://www.better-auth.com/docs/adapters/sqlite
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+
+```mermaid
+mindmap
+  root((Web App<br/>Ecosystem))
+    Rendering Strategies
+      CSR
+        (Client Side)
+        ::icon(fa fa-laptop)
+        Needs IndexedDB
+        Relies on RTK
+      SSR
+        (Server Side)
+        ::icon(fa fa-server)
+        Needs Cookies
+        Hydrates RTK
+    RTK State Manager
+      ::icon(fa fa-brain)
+      (Memory / RAM)
+      RTK Query
+        (Network Cache)
+      Syncs to IDB
+    Cookies
+      ::icon(fa fa-id-card)
+      (Auth & Transport)
+      HttpOnly
+      Secure
+      Vital for SSR
+    IndexedDB
+      ::icon(fa fa-database)
+      (Storage)
+      Offline Cache
+      Large Capacity
+      Persists RTK
+```
+
 
 🍪 HTTP Cookie vs. JWT: The Analogy
 
@@ -347,14 +388,43 @@ Youtube to Podcast: https://github.com/aizhimou/pigeon-pod?ref=selfh.st
 
 **FFMPeg** is great and can also record your screen:
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video Docs Section with consolidated info ↗" >}}
+{{< /cards >}}
+
 ```sh
 #ffmpeg -f x11grab -s 1920x1080 -i :0.0 -r 30 output.mkv
+#ffplay -f v4l2 -i /dev/video0 #start your camera
+#ffmpeg -f v4l2 -framerate 30 -video_size 1280x720 -i /dev/video0 -t 5 -c:v libx264 output.mp4 #record 5 seconds
 ```
 
-Or...just your audio for the Podcast.
+Or...just your **audio for the Podcast**.
 
 ```sh
+ffmpeg -f pulse -i default -t 10 -b:a 192k output.mp3
+```
 
+Both video and audio:
+
+```sh
+ffmpeg \
+  -f v4l2 -framerate 30 -video_size 1280x720 -i /dev/video0 \
+  -f pulse -i default \
+  -c:v libx264 -preset fast -c:a aac -b:a 192k \
+  -t 30 output.mp4
+```
+
+Or screen + webcam + audio:
+
+```sh
+ffmpeg \
+  -f x11grab -s 1920x1080 -r 30 -i :0.0+0,0 \
+  -f v4l2 -video_size 320x240 -i /dev/video0 \
+  -f pulse -i default \
+  -filter_complex "[1:v]scale=320:-1[webcam];[0:v][webcam]overlay=W-w-10:H-h-10[out]" \
+  -map "[out]" -map 2:a \
+  -c:v libx264 -preset fast -c:a aac -b:a 192k \
+  output.mp4
 ```
 
 <!-- https://www.youtube.com/watch?v=6uB65PdasQI&t=1s -->

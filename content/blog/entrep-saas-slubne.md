@@ -1,6 +1,6 @@
 ---
 title: "A SaaS with 100% Churn, yet LTV > CAC"
-date: 2026-01-06T23:20:21+01:00
+date: 2026-01-07T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","Nextacular","SlubneChwile","BiP BoilerPlate"]
 description: 'How to code a Saas with NEXTjs and directing traffic via ads'
@@ -13,6 +13,18 @@ url: 'code-your-saas'
 
 Supply - infinite, scalable via Serverless storage
 Demand - constrained, ad driven
+
+Online marketing and an online delivery
+
+MVP first - get those eyes going via ads.
+
+See what works and what not - PMF
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 
 **Intro**

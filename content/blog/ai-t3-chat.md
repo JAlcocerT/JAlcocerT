@@ -2,9 +2,9 @@
 title: "AI Chats with cool UIs are possible"
 date: 2025-11-30T08:20:21+01:00
 draft: false
-tags: ["Astro SSR","BCMS vs PagesCMS","Web Analytics vs Link Analytics"]
+tags: ["Astro SSR","Groq TPS","BCMS vs PagesCMS","Web Analytics vs Link Analytics"]
 url: 't3-like-chat'
-description: 'Integrating Astro Chat Themes to AI API Keys versus T3. Consolidating BiP with AI Agents.'
+description: 'Integrating Astro Chat Themes to AI API Keys versus T3. Consolidating BiP+Vibe Coding with AI Agents.'
 ---
 
 **Tl;DR**
@@ -15,14 +15,19 @@ How hard is to do something similar on the surface?
 
 +++
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 **Intro**
 
 The multichat or the Aissistant were cool.
 
 
 {{< cards >}}
-  {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
-  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multichat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Streamlit Multichat" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multichat" image="/blog_img/apps/ai-assistant.png" subtitle="Source Code for Streamlit Multichat" >}}
 {{< /cards >}}
 
 But streamlit does not allow for the kind of modern (and pixel tweak) chat interface we want.
@@ -30,6 +35,11 @@ But streamlit does not allow for the kind of modern (and pixel tweak) chat inter
 One that...could be a brand signature.
 
 This is where I want to try **Astro on SSR mode**
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 ## A T3 Chat like interface
 
@@ -47,6 +57,11 @@ Why not applying these to a theme: *which kind of reminds me of t3.chat*: https:
 
 * https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot which is also **MIT** and https://template-astro-vercel-sdk-ai-chatbo.vercel.app/
 
+```sh
+git clone https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot
+
+```
+
 And on the recent [Audio with AI Post](https://jalcocert.github.io/JAlcocerT/audio-recap/), I was supposed to create a [Speech rater with FastAPI](https://github.com/JAlcocerT/py-speech-rater) that superseeds the [previous streamlit version](https://github.com/JAlcocerT/Streamlit-Speech).
 
 But I got an improvement of [my yt audio workflow](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions) instead.
@@ -62,8 +77,10 @@ Meaning: to somehow plug the AI/LLMs/Agents to do/check stuff
 
 In theory, we can plug shadcn to streamlit...
 
-https://ui.shadcn.com/themes
-https://github.com/ObservedObserver/streamlit-shadcn-ui
+Some might say that its all [about CSS](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/).
+
+* https://ui.shadcn.com/themes
+  * https://github.com/ObservedObserver/streamlit-shadcn-ui
 
 
 

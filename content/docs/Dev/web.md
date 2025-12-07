@@ -22,6 +22,11 @@ Plus, they can be deployed as a static web.
 
 **Icons and fonts?**
 
+* https://github.com/pheralb/svgl
+  * https://svgl.app/directory/database
+
+> MIT | 🧩 A beautiful library with SVG logos. Built with Sveltekit & Tailwind CSS. 
+
 * https://github.com/akveo/eva-icons
 
 > MIT | A pack of more than 480 beautifully crafted Open Source icons. SVG, Sketch, Web Font and Animations support.
@@ -214,6 +219,20 @@ firebase deploy #you will get something like -> https://jalcocertech.web.app/
 2. You can also try with [Cloudflare **Workers and Pages**](https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/#faq) or [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/).
 
 Alternatively, you can use [Cloudflare wrangler CLI](https://fossengineer.com/hosting-with-cloudflare-pages/#cloudflare-pages-hosting-with-wrangler) to get your SSG hosted, also for free and a custom subdomain.
+
+
+```sh
+#npm run build
+npx wrangler pages project create #ourika
+#https://developers.cloudflare.com/pages/configuration/build-configuration/#framework-presets
+npx wrangler pages deploy dist # deploy ./dist
+
+
+#npx wrangler pages project list
+#npx wrangler pages deployment list
+
+#npx wrangler pages project delete your_project_name
+```
 
 {{< /details >}}
 
