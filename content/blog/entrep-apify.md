@@ -45,6 +45,9 @@ https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
 
 https://github.com/sgratzl/chartjs-chart-funnel
 
+https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#reflex-sample-apps
+https://reflex.dev/docs/library/graphing/charts/funnelchart/
+![alt text](/blog_img/apps/reflex/reflex-stocks-sample.png)
 
 
 ---

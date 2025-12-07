@@ -133,6 +133,16 @@ Also, you can plug [Web Analytics](#web-analytics) or [Link Analytics](#link-ana
 
 #### Waiting List for Products
 
+There are several ways to build one of these
+
+<!-- 
+![Reflex Newsletter Sample](/blog_img/apps/reflex/reflex-newsletter-sample.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Even with Reflex" image="/blog_img/apps/reflex/reflex-newsletter-sample.png" subtitle="Reflex forms for waiting list / newsletters" >}}
+{{< /cards >}}
+
+
 I first built a Waiting2Landing: Two Astro Themes working together
 
 First the waiting list theme captures leads via formbricks, then, changing to an agency landing page:
@@ -387,7 +397,8 @@ For you to focus on just-journal kind of thing.
 
 > > For sure this can inspire you to build web/ooks kind of things and enables multilanguage :)
 
-
+https://github.com/JAlcocerT/astro-theme-typography
+https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/
 
 #### Calendars
 
@@ -716,6 +727,18 @@ curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect
   {{< card link="https://trends.google.com/trends/" title="Whats Trendy on Google? ↗" >}}
   {{< card link="https://search.google.com/" title="How is your site SEO doing? Google Search ↗" >}}
 {{< /cards >}}
+
+```sh
+# docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://https://www.psikolognevinkeskin.com/
+
+podman run --rm -it ghcr.io/linkchecker/linkchecker:latest --verbose https://www.psikolognevinkeskin.com/ > linkchecker_psyc.txt
+```
+
+
+
+Btw, the **pages speed insights**, can be done via **API**: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
+
+![Checking Google Pages Speed Insights Via API](/blog_img/web/morita-flask/pagespeedinsightapi.png)
 
 You will want to know **how your Website performs**:
 

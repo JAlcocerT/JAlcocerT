@@ -490,7 +490,9 @@ reflex run --backend-port 8001 --frontend-port 3001
 
 > When running reflex, its exposed to home devices out of the box
 
-![Reflex PieChart](../../static/blog_img/apps/reflex/reflex-piechart.png)
+![Reflex PieChart](/blog_img/apps/reflex/reflex-piechart.png)
+
+#### Vibe Coded Reflex Real Estate App
 
 
 {{< details title="More | Real Estate Reflex, RBD and RFD 📌" closed="true" >}}
@@ -500,8 +502,6 @@ When creating vibe coded apps, [the BRD and FRD](https://jalcocert.github.io/JAl
 Like this one: https://github.com/JAlcocerT/real-estate-reflex/blob/main/brd-frd.md
 
 {{< /details >}}
-
-#### Vibe Coded Reflex Real Estate App
 
 {{< filetree/container >}}
   {{< filetree/folder name="real_estate" >}}
@@ -678,9 +678,11 @@ But placing reflex inside a container was not as simple as [with Streamlit](http
 
 ## Conclusions
 
-I find it easier to iterate with streamlit for MVPs, plus there is no waiting time for compiling.
+I find it **easier to iterate with streamlit for MVPs**, plus there is no waiting time for compiling.
 
 For [PoCs](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#conclusions), that makes it easier to loop through features.
+
+Plus the Ai agents are not getting lost with the way to build with a new framework.
 
 But definitely, Reflex apps can look really cool, **also on smartphones**!
 

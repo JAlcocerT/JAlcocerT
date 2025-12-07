@@ -46,7 +46,7 @@ You can think about this is a [kind of **BI/AI** part](https://jalcocert.github.
 
 {{< youtube "KXamTdJA-uc" >}}
 
-And it can give you content for interesting tech talks.
+And it can give you content for *interesting tech talks*.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
@@ -205,12 +205,11 @@ For the ones in loved with [Diagrams](https://jalcocert.github.io/JAlcocerT/docs
 
 Because there is too much information (and noise) out there:
 
-* https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/
-
-![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png)
+<!-- ![Groq Youtube Summaries](/blog_img/GenAI/yt-summaries/yt-summaries-groq.png) -->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="The YT Groq Summarizer Post" image="/blog_img/GenAI/yt-summaries/yt-summaries-groq_example.png" subtitle="But still there is some signal in between the noise" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/" title="The YT Groq Summarizer Post" image="/blog_img/GenAI/yt-summaries/yt-summaries-groq.png" subtitle="But still there is some signal in between the noise" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with a DB" image="/blog_img/GenAI/langchain-chinook-artiststable.png" subtitle="Using LangChain to chat with a databases content" >}}
 {{< /cards >}}
 
 <!-- 

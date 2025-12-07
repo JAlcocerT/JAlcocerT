@@ -213,6 +213,9 @@ You could also try LangChain Agents approach as per [this cfe video](https://www
 
 ### Mermaid x Excalidraw
 
+We might find some concepts that are hard to explain with words.
+
+But having these awsome OSS tools for quick diagraming or sketching, there are no excuses allowed :)
 
 Dont choose between [Mermaid](https://mermaid.live/) or [Excalidraw](https://excalidraw.com/).
 
@@ -232,6 +235,18 @@ flowchart TD
     C -->|Two| E[iPhone]
     C -->|Three| F[fa:fa-car Car]
 ```
+
+BTW, these diagrams look very well when combined with a proper [wiki/documentation](https://jalcocert.github.io/JAlcocerT/knowledge-management/) on how your dev/D&A project works.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/#conclusions" title="Excalidraw for D&A" image="/blog_img/selfh/HomeLab/excalidraw.png" subtitle="Analytics with Mermaid x Excalidraw" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/knowledge-management/#what-it-is-wysiwyg" title="Flat Files KB" image="/blog_img/selfh/kb/silverbullet.png" subtitle="Tools like SilverBullet or LogSeq are flat file centered" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Websites 101 | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 <!-- https://www.youtube.com/watch?v=TulDVEC_vuQ -->
 

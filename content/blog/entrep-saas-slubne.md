@@ -1,6 +1,6 @@
 ---
 title: "A SaaS with 100% Churn, yet LTV > CAC"
-date: 2025-01-06T23:20:21+01:00
+date: 2026-01-06T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","Nextacular","SlubneChwile","BiP BoilerPlate"]
 description: 'How to code a Saas with NEXTjs and directing traffic via ads'

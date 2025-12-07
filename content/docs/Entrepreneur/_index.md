@@ -51,6 +51,11 @@ You can also get help from [some product tools](https://jalcocert.github.io/JAlc
 ### Formbricks
 
 
+![How to set webhooks from formbricks](/blog_img/apps/reflex/formbrick-webhook.png)
+
+
+![Using Formbricks with GSheets](/blog_img/apps/reflex/gsheet-formbricks.png)
+
 <!-- ![Formbricks Link Embed](/blog_img/entrepre/webify/formbricks-link-embed.png) -->
 
 {{< cards >}}
@@ -131,6 +136,8 @@ png
 
 
 ### Pricing
+
+https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy
 
 
 Get clarity on this (*your mission!*): Who are you helping (vs) who are you serving?

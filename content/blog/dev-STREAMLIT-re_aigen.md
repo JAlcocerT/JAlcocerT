@@ -172,15 +172,15 @@ See the RAG with [LlamaIndex and Mem0](https://github.com/JAlcocerT/Data-Chat/tr
 
 <!-- https://youtu.be/cEfqonasQ0M -->
 
-Remember that it will require a delay with the embedding process and further retrieval after each question:
+Remember that it will require a delay with **the embedding process** and further retrieval after each question:
 
 {{< youtube "cEfqonasQ0M" >}}
-
 
 I have also been tinkering with a Web App framework alternative, Reflex:
 
 {{< cards cols="1" >}}
     {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/" title="Chat with Properties with Reflex ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
 You could be implementing similar RAG with any of these frameworks, like [LangChain](https://jalcocert.github.io/JAlcocerT/how-to-use-rags-with-python/#exploring-langchain):

@@ -4,7 +4,7 @@ date: 2025-11-30T08:20:21+01:00
 draft: false
 tags: ["Astro SSR","BCMS vs PagesCMS","Web Analytics vs Link Analytics"]
 url: 't3-like-chat'
-description: 'Integrating Astro Chat Themes to AI API Keys versus T3.'
+description: 'Integrating Astro Chat Themes to AI API Keys versus T3. Consolidating BiP with AI Agents.'
 ---
 
 **Tl;DR**
@@ -18,6 +18,12 @@ How hard is to do something similar on the surface?
 **Intro**
 
 The multichat or the Aissistant were cool.
+
+
+{{< cards >}}
+  {{< card link="#conclusions" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multichat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Streamlit Multichat" >}}
+{{< /cards >}}
 
 But streamlit does not allow for the kind of modern (and pixel tweak) chat interface we want.
 

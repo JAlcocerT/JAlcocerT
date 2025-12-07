@@ -43,6 +43,12 @@ I have been [building](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/b
 
 You can do local TTS as I was doing [here](https://jalcocert.github.io/JAlcocerT/local-ai-audio/#tts)
 
+![CoquiTTS for RealEstate](/blog_img/biz/RE/re-coquitts.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/TTS_Coqui/" title="Coqui TTS Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 I was initially using transcription [here](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#obs--openai-whisper) to create the audio for my tech yt videos.
 
 That was based on OpenAI keys, see : https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openait2a.py

@@ -1,4 +1,6 @@
 
+> [!IMPORTANT]
+> You can create your own pdf ebooks following [these docs](https://jalcocert.github.io/JAlcocerT/cool-ebooks/)
 
 ---
 

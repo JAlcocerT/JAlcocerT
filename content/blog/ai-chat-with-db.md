@@ -657,4 +657,6 @@ It's a more comprehensive tool than Huey (the DuckDB UI) and can be used with ma
 
 ### Other Tech Talks
 
+From last year :) 
+
 {{< youtube id="vukAQPCv7Tw" autoplay="false" >}}

@@ -135,7 +135,11 @@ In summary, the content heavily emphasizes Web3 domain ownership, decentralizati
 
 So now, you have learnt not only about regular TLD domains and DNS for your homelab.
 
-But also on ENS and how they [relate with crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/).
+But also about ENS and how they [relate with crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/).
+
+Remember the [good'old web3 post](https://jalcocert.github.io/JAlcocerT/guide-web3/): DNS is a **centralized** service and ENS is a **decentralized** service.
+
+DNS is all about WHERE and ENS~IPFS is about WHAT.
 
 Which is...a totally different world.
 

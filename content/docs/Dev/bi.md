@@ -131,6 +131,10 @@ You can potentially make embedable BI components that work on websites or just g
 
 You could also use these skills when **building funnels** during your [entrepreneurial journey](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/):
 
+https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#reflex-sample-apps
+https://reflex.dev/docs/library/graphing/charts/funnelchart/
+![alt text](/blog_img/apps/reflex/reflex-stocks-sample.png)
+
 <!-- 
 ![Streamlit Funnel Chart Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png) 
 -->

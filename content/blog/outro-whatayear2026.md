@@ -7,6 +7,7 @@ description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
 
+> CodexCLI for idea validation?
 
 
 inspiring apps: all those pwa like that just...work

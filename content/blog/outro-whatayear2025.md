@@ -88,7 +88,7 @@ This year, Ive abused again of my unfair advantage.
 
 ![Just working](/blog_img/outro/work-unfair-advantage.png)
 
-If I was pushing from the start of 2023, So ive done this year.
+If I was pushing from the [start of 2023](https://jalcocert.github.io/JAlcocerT/blog/summary22/), So ive done this year.
 
 
 Building a brand is not easy.
@@ -360,6 +360,10 @@ Company of one!
 
 Because Im still in D&A and trying to blend with AI powered development for my personal projects.
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Websites 101 | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 1. [uv](https://jalcocert.github.io/JAlcocerT/fast-api/#proper-py-and-uv) package manager ❤️ Makefiles >>> Readme's & pip! 
 
@@ -518,6 +522,11 @@ Even with Cloudflare Tunnel, you might still want to use a Cloudflare Worker for
 
 {{< /details >}}
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 4. I even got time to clean the **IoT/MQTT** with micro-controllers :)
 
 <!-- ![Home Assistant dashboard with temperature from MQTT](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png) -->
@@ -526,10 +535,18 @@ Even with Cloudflare Tunnel, you might still want to use a Cloudflare Worker for
   {{< card link="https://jalcocert.github.io/JAlcocerT/pico-w/#ha-x-mqtt" title="HA x MQTT x PicoW" image="/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png" subtitle="Testing a PicoW with Home Assistant" >}}
 {{< /cards >}}
 
+
+https://jalcocert.github.io/JAlcocerT/pico-w/#picow-to-emqx-server
+
+![EMQX UI - Watch random topic message](/blog_img/iot/picoW/emqx-subscribed.png)
+
 {{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-iot/" title="IoT | Docs ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI" title="PicoW + Wifi Connection and other scripts 🐍 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-iot/" title="IoT | Docs ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI" title="PicoW + Wifi Connection & + 🐍 ↗" >}}
 {{< /cards >}}
+
+{{< youtube "x4tzWt6-I7c" >}}
+
 
 5. And tinker a bit with [Crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai) and data via [stonks](https://jalcocert.github.io/JAlcocerT/stonks/) / [stocks with python](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/).
 
@@ -572,20 +589,21 @@ If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlc
 
 8. Better git *patterns and branching strategies*. Bc the current (and only) reality is main.
 
-9. CLI Agents ftw. Codex CLI was huge. 
+9. CLI Agents ftw. Codex CLI was huge.
 
 I also tried claude and geminiCLI.
 
-Together with BAML bringing type safe LLM calls.
+Together with [BAML](https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#baml) bringing type safe LLM calls.
 
-> CodexCLI for idea validation?
-
-
-10. Thanks to authentication I got to know the difference between: WHO someone is and what someone can DO 🤯
+10. Thanks to authentication I got to know the difference between: WHO someone is and WHAT someone can DO 🤯
 
 
-> Getting to work Traefik+Tiny Auth has been amazing, and social auth for SaaS is quick and great
+> Getting to work [Traefik+Tiny Auth](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#tinyauth) has been amazing, and social auth for SaaS is quick and great for SaaS!
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/" title="HTTPs | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 
 {{% details title="API vs JWT vs OAUTh 🚀" closed="true" %}}
@@ -623,14 +641,23 @@ For APIs exposed to external clients, OAuth is generally considered more secure 
 {{% /details %}}
 
 
-> Notice also (as per **ENS** and DNS), that **what something is** has nothing to do with where something is.
+Notice also that **WHAT something is** has nothing to do with WHERRE something is. *As [per **ENS** and DNS](https://jalcocert.github.io/JAlcocerT/web-domain-basics/#conclusions)*
 
-> > And BRD PRD FRD are the why what how
+And that [BRD PRD FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) are the WHY / what / how of a product you are building.
 
 11. From SliDevJS for ppts, to realize that pandoc, latex or Typst allow us to create pixel perfect ebooks, newsletters... 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks//" title="eBooks | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="Diagrams and PPTs | Docs ↗" icon="book-open" >}}  
+{{< /cards >}}
+
 12. Astro Themes never stop surprising me. Embed ppts inside of them, get n8n chatbots or cal/whatsap boubles...
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/" title="Astro 101 Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-hugo-ssg/" title="HUGO 101 Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 
 ## Entrepreneuring
@@ -766,6 +793,26 @@ Because Selfhosting Static Generated Sites, is not a secret anymore:
 {{< /cards >}}
 
 
+
+#### Better Social Media
+
+I improved the video workflow and tried superfially Postiz for sharing.
+
+Also with some AI help, I vibed coded a webapp to help me with the youtube tech scripts content and audio.
+
+And...well, some Flask automatic and high SNR content creation for twitter/X
+
+![Flask x Matplotlib Plots Webapp](/blog_img/data-experiments/flask-matplotlib-libreportfolio-lots.png)
+
+No post = no impressions.
+
+The difference between a week hitting hard and not doing it is to reach 24k vs 5k impressions.
+
+> Thats why some social media post automation is beneficial https://github.com/JAlcocerT/DataInMotion --> https://github.com/JAlcocerT/LibrePortfolio-X
+
+And in the beginning you will gain the most by replying to people with an audience built already.
+
+
 #### Leads and Offers
 
 Linktree does things very well, yet cant compete with:
@@ -776,6 +823,11 @@ Linktree does things very well, yet cant compete with:
 But when you consider the resources required to make a linktree like so scalable, that is worth [to get paid...not so much....](https://jalcocert.github.io/JAlcocerT/stripe-for-saas/)
 
 You might rethink that.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 And maybe focusing on getting better clients - I mean, that would value more your active engagement on deliver to them value.
 
@@ -789,10 +841,6 @@ Some people have been contacting me via EE registry `https://ariregister.rik.ee/
 
 Does that mean that...I ve part of someone else's [sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/)?
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
 
 ## Interesting Concepts
 
@@ -1422,25 +1470,6 @@ And having nice **hugo/astro directory pages** would be amazing.
 
 Sth like: https://github.com/masterkram/minted-directory-astro, where you can easily plug some kind of DB/Sheet/Github repo readme's with particular front matter and get a website going.
 
-
-#### Better Social Media
-
-I improved the video workflow and tried superfially Postiz for sharing.
-
-Also with some AI help, I vibed coded a webapp to help me with the youtube tech scripts content and audio.
-
-And...well, some Flask automatic and high SNR content creation for twitter/X
-
-![Flask x Matplotlib Plots Webapp](/blog_img/data-experiments/flask-matplotlib-libreportfolio-lots.png)
-
-No post = no impressions.
-
-The difference between a week hitting hard and not doing it is to reach 24k vs 5k impressions.
-
-> Thats why some social media post automation is beneficial https://github.com/JAlcocerT/DataInMotion --> https://github.com/JAlcocerT/LibrePortfolio-X
-
-And in the beginning you will gain the most by replying to people with an audience built already.
-
 ### Improving the HomeLab
 
 I am very happy to have discovered AppImageLauncher.
@@ -1464,6 +1493,8 @@ That one I want to keep the configurations minimalistic and very simple to repli
 * https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/
 
 Ive been taking **inspiration from**:
+
+https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#inspiration-for-a-homelab
 
 Thanks to this sites, I get to know more cool apps:
 
@@ -1605,8 +1636,13 @@ Both for 5+ km
 #### Discovery of the Years
 
 [2020](https://jalcocert.github.io/JAlcocerT/blog/summary20/) - R *together with sql*
+
 [2021](https://jalcocert.github.io/JAlcocerT/blog/summary21/) - Containers *with the Pi*
+
 [2022](https://jalcocert.github.io/JAlcocerT/blog/summary22/) - PySpark *and big data*
+
 [2023](https://jalcocert.github.io/JAlcocerT/blog/summary23/) - SSGs *and static hosting*
+
 [2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/) - LLMs *and API calls*
+
 2025 - BiP *and social sign in/up*

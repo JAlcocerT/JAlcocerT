@@ -101,12 +101,19 @@ The free and open source version of Structurizr allows you to view/edit diagrams
 
 ## PPTs
 
-[Presentations as a Code](https://fossengineer.com/create-ppt-with-code/)
+When considering [Presentations as a Code](https://fossengineer.com/create-ppt-with-code/), for me SliDevJS is the go to.
 
 1. [SliDev](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev)
 
 * They support Katex: https://sli.dev/custom/config-katex
-* And mermaid diagrams: https://sli.dev/custom/config-mermaid
+* And mermaidJS diagrams: https://sli.dev/custom/config-mermaid
+
+https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ppts-as-a-code
+![Slidev live data component from yfinance](/blog_img/entrepre/public-build/slidev-editor/slidev-component-yfinance.png)
+
+![Building in public a slideb editor plus tech talk](/blog_img/entrepre/public-build/slidev-editor/nextjs-slidev-editorlanding.png)
+
+
 
 2. [MARP and RemarkJS](https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#marp)
 
@@ -117,5 +124,4 @@ The free and open source version of Structurizr allows you to view/edit diagrams
 
 > Minimalist template for creating slides with Reveal.js and Astro
 
-* https://markmap.js.org/repl
-* MermaidJS
+4. https://markmap.js.org/repl

@@ -247,4 +247,4 @@ Create a WF with 3 jobs: build, test (Linkcheck here, informative), deploy. Like
 
 ### Whatsapp Bubble
 
-As simple as: https://api.whatsapp.com/send?phone=34123456789
+As simple as a link to whatever WA number: https://api.whatsapp.com/send?phone=34123456789

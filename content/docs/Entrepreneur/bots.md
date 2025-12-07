@@ -6,6 +6,12 @@ next: docs/
 draft: false
 ---
 
+Bots are one of those things that are easy to get started with, but can be complex to get right.
+
+And many clients will want one to be embeded into their sites.
+
+
+
 You might be here because have seen/used Telegram bots.
 
 But dont get confused with chatbots vs automation: *despite tools like n8n being able to handle bots*
@@ -47,6 +53,11 @@ Having your AI APi Keys ready and your n8n setup first:
 
 
 {{< /details >}}
+
+### Flowise AI
+
+![Flowise AI Example](/blog_img/GenAI/pdf-flowise.png)
+
 
 
 ### Custom Bots

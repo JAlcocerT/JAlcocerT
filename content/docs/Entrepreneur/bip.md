@@ -8,6 +8,84 @@ draft: false
 
 For the ones who like to **B**uild **i**n **P**ublic.
 
+Got a clear WHY, WHAT and how?
+
+| Document | **Core Question** | Focus | Responsibility |
+| :--- | :--- | :--- | :--- |
+| **BRD** (Business) | **WHY** are we doing this? | Business goals, ROI, market opportunity, and problem statements. | Entrepreneur / CEO / Stakeholders |
+| **PRD** (Product) | **WHAT** are we building? | Features, user experience, personas, and success metrics. | Product Manager / Founder |
+| **FRD** (Functional) | **HOW** will it work technically? | System behavior, logic, API calls, and technical specifications. | Tech Lead / Developers |
+
+[This will become a curated ebook](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/bip-ebook.md) at some point.
+
+Start building then!
+
+<!-- 
+there will be an ebook out of this - https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/bip-ebook.md -->
+
+<!-- hat [BRD PRD FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) are the WHY / what / how of a product you are building. -->
+
+
+```mermaid
+mindmap
+  root((SaaS Strategy))
+    BRD: Business Why
+      Strategy Layer
+      ::icon(fa fa-briefcase)
+      Market Pain Points
+      Revenue Goals
+      Competitor Edge
+      ROI Metrics
+    PRD: Product What
+      Tactical Layer
+      ::icon(fa fa-rocket)
+      User Personas
+      Core Features
+      User Stories
+      Success Metrics
+    FRD: Functional How
+      Execution Layer
+      ::icon(fa fa-code)
+      API Spec
+      Data Models
+      System Architecture
+      Error Handling
+    Indiehacker Fusion
+      Lean Layer
+      ::icon(fa fa-user)
+      Single Source of Truth
+      No-Go List
+      V1 DB Schemamindmap
+  root((SaaS Strategy))
+    BRD: Business Why
+      Strategy Layer
+      ::icon(fa fa-briefcase)
+      Market Pain Points
+      Revenue Goals
+      Competitor Edge
+      ROI Metrics
+    PRD: Product What
+      Tactical Layer
+      ::icon(fa fa-rocket)
+      User Personas
+      Core Features
+      User Stories
+      Success Metrics
+    FRD: Functional How
+      Execution Layer
+      ::icon(fa fa-code)
+      API Spec
+      Data Models
+      System Architecture
+      Error Handling
+    Indiehacker Fusion
+      Lean Layer
+      ::icon(fa fa-user)
+      Single Source of Truth
+      No-Go List
+      V1 DB Schema
+```
+
 ## AI
 
 If you are one of those entrepreneurs who has managed to learn how to code.
