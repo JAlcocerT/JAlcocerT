@@ -211,6 +211,53 @@ You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/J
 
 > > Uses [DecapCMS](https://github.com/decaporg/decap-cms) and I **forked** it https://github.com/JAlcocerT/Twilight to [tinker further with the CMS](#using-decap-cms)
 
+Thanks to this one, I managed to get a the **MIT** Decap-CMS working: https://github.com/JAlcocerT/decap-cms
+
+```mermaid
+graph TB
+    subgraph "Your Browser"
+        A[Blog Viewer<br/>localhost:4321]
+        B[Decap CMS Admin<br/>localhost:4321/admin]
+    end
+    
+    subgraph "Docker Compose Network"
+        subgraph "Astro Container :4321"
+            C[Astro Dev Server]
+            D[Static Assets]
+            E[CMS Admin UI]
+        end
+        
+        subgraph "Decap Proxy Container :8081"
+            F[Decap Server]
+            G[Git Operations]
+        end
+    end
+    
+    subgraph "Your Local Machine"
+        H[src/content/posts/*.md]
+        I[public/images/*]
+        J[.git/]
+    end
+    
+    A -->|HTTP Request| C
+    B -->|Load CMS UI| E
+    B -->|API Calls| F
+    F -->|Read/Write| H
+    F -->|Upload Images| I
+    F -->|Git Commits| J
+    C -->|Hot Reload| H
+    
+    style A fill:#e1f5ff
+    style B fill:#fff4e1
+    style C fill:#e8f5e9
+    style F fill:#f3e5f5
+    style H fill:#fff9c4
+    style I fill:#fff9c4
+    style J fill:#fff9c4
+```
+
+[See below](#using-decap-cms) some snapshots and whats next moving forward.
+
 ---
 
 ## FAQ
@@ -248,19 +295,157 @@ But having it...programatically!
 
 ### Using Decap-CMS
 
-https://decapcms.org/docs/install-decap-cms/
+You can install DecapCMS as per their docs: https://decapcms.org/docs/install-decap-cms/
+
+Or just cloning the twilight theme:
+
+```sh
+git clone https://github.com/JAlcocerT/Twilight.git
+#make help
+#lsof -i :4321 #kill -9 <PID> #lsof -i :8081 #kill -9 149769
+#kill -9 $(lsof -t -i :8081)
+##du -sh . #~1gb
+```
+
+| What | Where |
+|------|-------|
+| Blog posts | `src/content/posts/*.md` |
+| Uploaded images | `public/images/` |
+| CMS config | `public/admin/config.yml` |
+| Site config | `src/config.ts` |
+
+Do the baremetal one:
+
+```sh
+# Terminal 1
+make dev
+
+# Terminal 2
+npx decap-server
+```
+
+Or the container approach:
+
+```sh
+make docker-dev
+#docker logs -f twilight-astro
+#docker-compose logs -f
+make docker-down
+
+#npm run build
+```
+
+Just go to `localhost:4321` and `localhost:4321/admin` to have Astro and Dev Mode and **DecapCMS to edit the files locally via a cool editor!**
+
+[![Decap CMS Post Editor](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/decap-post-editor.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decap-post-editor.png)
 
 
-### SSG SSR ISR
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="CMS 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+What's next from here?
+
+```mermaid
+graph TB
+    subgraph "Public Internet"
+        User[Blog Visitors]
+        Editor[Content Editors]
+    end
+    
+    subgraph "VPS/Server with Docker"
+        Traefik[Traefik Reverse Proxy<br/>:80, :443]
+        TinyAuth[TinyAuth<br/>Authentication]
+        
+        subgraph "CMS Stack"
+            Astro[Astro Dev Server<br/>:4321]
+            DecapProxy[Decap CMS Proxy<br/>:8081]
+        end
+        
+        CronJob[Cron Job<br/>Every 30 min]
+    end
+    
+    subgraph "Git Repository"
+        GitHub[GitHub/GitLab<br/>Main Branch]
+    end
+    
+    subgraph "Cloudflare"
+        CFPages[Cloudflare Pages<br/>Static Site]
+        CustomDomain[yourdomain.com]
+    end
+    
+    User -->|HTTPS| CustomDomain
+    CustomDomain --> CFPages
+    
+    Editor -->|HTTPS| Traefik
+    Traefik -->|Auth Check| TinyAuth
+    TinyAuth -->|Authenticated| Astro
+    Astro --> DecapProxy
+    
+    DecapProxy -->|Edit Content| Astro
+    CronJob -->|Check Changes| DecapProxy
+    CronJob -->|Git Commit & Push| GitHub
+    
+    GitHub -->|Webhook/CI| CFPages
+    CFPages -->|Deploy| CustomDomain
+    
+    style Traefik fill:#00d4ff
+    style TinyAuth fill:#ff6b6b
+    style CFPages fill:#f39c12
+    style CustomDomain fill:#2ecc71
+```
+
+### Twilight x SSG X Encryption
+
+Despite working on SSG mode, the twilight theme brings an interesting feature:
+
+[![Astro SSG with Post Encryption](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/astro-ssg-encryption.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/astro-ssg-encryption.png)
+
+
+It can encrypt your posts as pre one pwd that you add on the frontmatter and is decrypted via CSR.
+
+| Feature | SSG (Current) | SSR (Server-Side) |
+|---------|---------------|-------------------|
+| **Hosting** | Static (CDN) | Requires server |
+| **Performance** | ⚡ Instant load | 🐢 Server processing |
+| **Cost** | 💰 Free/cheap | 💰💰 Server costs |
+| **Security** | Client-side | Server-side |
+| **Rate Limiting** | ❌ Not possible | ✅ Easy to implement |
+| **Audit Logs** | ❌ No logging | ✅ Full logging |
+| **Scalability** | ✅ Infinite (CDN) | 🔄 Depends on server |
+| **Password Changes** | ❌ Requires rebuild | ✅ Dynamic |
+
+#### SSG SSR ISR
+
+Remember, these are **rendering modes** of a web.
 
 SSG (Static Site Generation):
-Static Site Generation involves generating HTML pages at build time, typically using a site generator or build tool. The generated HTML pages contain all the necessary content and assets, and they are served to clients as-is without the need for server-side processing. This approach offers benefits such as fast loading times, security, and scalability. Popular static site generators include Gatsby, Next.js (with static site generation), Jekyll, and Hugo.
+
+Static Site Generation involves generating HTML pages at build time, typically using a site generator or build tool. 
+
+The generated HTML pages contain all the necessary content and assets, and they are served to clients as-is without the need for server-side processing. This approach offers benefits such as fast loading times, security, and scalability.
 
 SSR (Server-Side Rendering):
-Server-Side Rendering involves generating HTML pages dynamically on the server in response to each client request. With SSR, the server processes the request, renders the page with the necessary data, and sends the fully rendered HTML to the client's browser. SSR is commonly used in web applications built with frameworks like Next.js, Nuxt.js, and Angular Universal. SSR can offer benefits such as improved SEO, faster initial page loads, and better support for dynamic content.
+
+Server-Side Rendering involves generating HTML pages dynamically on the server in response to each client request.
+
+With SSR, the server processes the request, renders the page with the necessary data, and sends the fully rendered HTML to the client's browser. 
+
+SSR is commonly used in web applications built with frameworks like Next.js, Nuxt.js, and Angular Universal.
+
+SSR can offer benefits such as improved SEO, faster initial page loads, and better support for dynamic content.
 
 ISR (Incremental Static Regeneration):
-Incremental Static Regeneration is a hybrid approach that combines the benefits of static site generation and dynamic content updates. With ISR, pages are initially generated statically at build time, but they can also be updated dynamically in the background. When a user requests a page that has been updated since the last build, the server regenerates the page with fresh data and serves the updated version. ISR is a feature available in frameworks like Next.js, enabling developers to pre-render dynamic content while still benefiting from static site performance.
+
+Incremental Static Regeneration is a hybrid approach that combines the benefits of static site generation and dynamic content updates.
+
+With ISR, pages are initially generated statically at build time, but they can also be updated dynamically in the background. 
+
+When a user requests a page that has been updated since the last build, the server regenerates the page with fresh data and serves the updated version. 
+
+ISR is a feature available in frameworks like Next.js, enabling developers to pre-render dynamic content while still benefiting from static site performance.
 
 In summary, SSG generates HTML pages at build time, SSR generates HTML pages dynamically on the server in response to requests, and ISR combines static site generation with dynamic content updates for improved performance and flexibility.
 

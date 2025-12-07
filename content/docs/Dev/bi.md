@@ -96,7 +96,7 @@ For a PoC on BI Tools, go for Streamlit:
 {{< /cards >}}
 
 {{< callout type="info" >}}
-Putting together a project like [Streamlit_PoC](https://github.com/JAlcocerT/Streamlit_PoC) allows you to consolidate the Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data...in one place
+Putting together a project like [Streamlit_PoC](https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Utils) allows you to consolidate the Rendering Plotly, MermaidJS, QR, ChartJS, ApexCharts, PyGWalker with OSM geolocation data...in one place
 {{< /callout >}}
 
 

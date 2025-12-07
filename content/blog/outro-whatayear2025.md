@@ -337,17 +337,15 @@ Cool ppl like have their own podcast, like https://37signals.com/podcast/
 
 ![Use github copilot at least](/blog_img/GenAI/gh-copilot.png)
 
-Reading: *excuse alert, this is beeen a year mor of creating than consuming*
+Reading: *excuse alert, this is beeen a year more of creating than consuming*
 
 And that makes...xyz/12 books.
-
-
 
 
 The lean startup
 Company of one!
 
-
+Open question for reading moving forward: If learning is
 
 
 {{< /details >}}
@@ -1083,6 +1081,8 @@ But hey Ollama has now a Desktop UI mode as well!
 4. A master class about MermaidJS x Excalidraw with...AI and...a NextJS App on top of it
 
 > Has this be one year, for real?
+
+> > Knowing that a brand is influence + reach - *Why should I keep collaborating with Free tech talks that nobody watches instead of doing videos directly on my tech channel?*
 
 Anyways...my intention is to keep track of my tech talks within this slidev related repo from now on.
 

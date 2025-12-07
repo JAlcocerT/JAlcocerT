@@ -47,10 +47,69 @@ As last alternative, you can go check [these no code CMS's](#websites-without-co
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/strapi" title="StrapiCMS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+### Decap-CMS
+
+I just loved **working with DecapCMS** so far as [seen here](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms), thanks to the [twilight theme](https://github.com/JAlcocerT/Twilight)
+
+DecapCMS is **MIT** and I also forked it: https://github.com/decaporg/decap-cms
+
+
+```mermaid
+graph TB
+    subgraph "Public Internet"
+        User[Blog Visitors]
+        Editor[Content Editors]
+    end
+    
+    subgraph "VPS/Server with Docker"
+        Traefik[Traefik Reverse Proxy<br/>:80, :443]
+        TinyAuth[TinyAuth<br/>Authentication]
+        
+        subgraph "CMS Stack"
+            Astro[Astro Dev Server<br/>:4321]
+            DecapProxy[Decap CMS Proxy<br/>:8081]
+        end
+        
+        CronJob[Cron Job<br/>Every 30 min]
+    end
+    
+    subgraph "Git Repository"
+        GitHub[GitHub/GitLab<br/>Main Branch]
+    end
+    
+    subgraph "Cloudflare"
+        CFPages[Cloudflare Pages<br/>Static Site]
+        CustomDomain[yourdomain.com]
+    end
+    
+    User -->|HTTPS| CustomDomain
+    CustomDomain --> CFPages
+    
+    Editor -->|HTTPS| Traefik
+    Traefik -->|Auth Check| TinyAuth
+    TinyAuth -->|Authenticated| Astro
+    Astro --> DecapProxy
+    
+    DecapProxy -->|Edit Content| Astro
+    CronJob -->|Check Changes| DecapProxy
+    CronJob -->|Git Commit & Push| GitHub
+    
+    GitHub -->|Webhook/CI| CFPages
+    CFPages -->|Deploy| CustomDomain
+    
+    style Traefik fill:#00d4ff
+    style TinyAuth fill:#ff6b6b
+    style CFPages fill:#f39c12
+    style CustomDomain fill:#2ecc71
+```
+
+
+This architecture provides a **production-ready, secure, and automated** blogging platform that **separates content management from content delivery**, ensuring both security and performance! 🚀
+
+
 ### Strapi 
 
 Headless StrapiCMS Example
-
 
 ![Strapi UI](/blog_img/web/cms/strapi-admin-ui.png)
 
@@ -134,8 +193,6 @@ Headless CMS based on nodejs
 
 Consume the API from any client (React, Vue, Angular), mobile apps or even IoT devices, using REST or
 GraphQL.
-
-
 
 ### Directus
 

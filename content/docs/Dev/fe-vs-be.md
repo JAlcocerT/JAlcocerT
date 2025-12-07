@@ -60,6 +60,7 @@ mindmap
 * Bootstrap
 * Bulma
 * Material UI - https://mui.com/material-ui/getting-started/templates/
+* Shadcn - https://ui.shadcn.com/docs/components
 
 ### JS Based
 
