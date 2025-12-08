@@ -1,12 +1,34 @@
 ---
 title: "SelfHosting is easy with PaaS"
-date: 2025-12-08T01:20:21+01:00
+date: 2025-12-13T01:20:21+01:00
 draft: false
 tags: ["HomeLab ebook","Excalidraw","1toN ebooks","Omarchy OS"]
 description: 'Selfhosting with your HomeLab and PaaS.'
 url: 'selfhosted-apps-december-2025'
 ---
 
+**Tl;DR**
+
+A random server for ~4$/month is all you need.
+
+* https://one.one.one.one/
+
+
+**Intro**
+
+I tend to get inspired with this kind of [vm and containers that im running](https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/) posts.
+
+As I played with PaaS, wanted to proove how easy and quick is to set them into a VPS for ~4$/month.
+
+
+Mind your attention, stop auto engage and keep the important things at life first.
+
+{{< youtube id="ydG5EtQat_I" autoplay="false" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=ydG5EtQat_I -->
+
+gollama
 
 
 Concerned about container backups?
@@ -41,53 +63,7 @@ There was another attack to npm affecting Posthog!
 https://quay.io/repository/linuxserver.io/jellyfin
 https://hub.docker.com/r/linuxserver/jellyfin
 https://github.com/linuxserver/docker-jellyfin/pkgs/container/jellyfin -->
-```sh
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg | \
-  sudo gpg --dearmor -o /etc/apt/keyrings/antigravity-repo-key.gpg
-echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" | \
-  sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
 
-sudo apt update
-sudo apt install antigravity
-
-```
-
-**Tl;DR**
-
-A random server for ~4$/month is all you need.
-
-* https://one.one.one.one/
-
-
-**Intro**
-
-I tend to get inspired with this kind of [vm and containers that im running](https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/) posts.
-
-As I played with PaaS, wanted to proove how easy and quick is to set them into a VPS for ~4$/month.
-
-
-Mind your attention, stop auto engage and keep the important things at life first.
-
-{{< youtube id="ydG5EtQat_I" autoplay="false" >}}
-
-<!-- 
-https://www.youtube.com/watch?v=ydG5EtQat_I -->
-
-gollama
-
-
-## FAQ
-
-
-### What it is Gradio?
-
- Build Machine Learning Applications Easily with Gradio in Python 
-<https://www.youtube.com/watch?v=3DGLznJorT8>
-
-https://github.com/NeuralNine/drawing-classifier
-
-https://busterbenson.com/
 
 
 <!-- ## FAQ
@@ -96,9 +72,7 @@ https://busterbenson.com/
 
 https://gist.github.com/mberman84/45545e48040ef6aafb6a1cb3442edb83
 
-
-
-<!-- #### More about RAGs
+#### More about RAGs
 
 https://www.youtube.com/watch?v=_cDRrSAKSnY
 https://mer.vin/2024/01/rag-with-chromadb-llama-index-ollama-csv/
@@ -380,6 +354,17 @@ Expect ,n' to be:
 
 
 ---
+
+
+### What it is Gradio?
+
+ Build Machine Learning Applications Easily with Gradio in Python 
+<https://www.youtube.com/watch?v=3DGLznJorT8>
+
+https://github.com/NeuralNine/drawing-classifier
+
+https://busterbenson.com/
+
 
 ## FAQ
 

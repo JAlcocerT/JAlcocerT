@@ -3,7 +3,7 @@ title: "[PaaS Recap] Software and Servers..."
 date: 2025-12-07T17:20:21+01:00
 draft: false
 tags: ["HomeLab","Coolify vs DokPloy","Cosmos Server","PaaS x OSS Driven Business"]
-description: 'Selfhosted Apps that simplify my workflow. Get your MiniPC/NAS homelab ready quickly.'
+description: 'Scaling SaaS via PaaS for a better DIY. Selfhost via MiniPC/NAS/homelab/VPS.'
 url: 'selfhosted-server-paas'
 ---
 
@@ -244,12 +244,22 @@ Like as I [read on reddit](https://www.reddit.com/r/selfhosted/comments/1ol1v34/
 
 > > They are working towards a v1 as of now!
 
-
 [![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,coollabsio/coolify&type=Date)](https://star-history.com/#Dokploy/dokploy&caprover/caprover&coollabsio/coolify&Date)
 
 ### A Brand around PaaS and OSS Software
 
-Thinking about the **DIY/DWY/DFY framework**: I thought that a kind of advance DIY is when someone is able to select the software that they want, via UI and it gets deployed seemlessly.
+Thinking now about this and the **DIY/DWY/DFY framework**...
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+I thought that a kind of **~ advanced DIY** is when someone is able to select the software that they want, via UI and it gets deployed seemlessly.
+
+Also...the user should be empowered to make all the changes to the web on their own.
+
+> But whats the problem after [having Decap-CMS with a cool UI](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms) that makes file changes and is git compatible? :)
 
 ```mermaid
 graph TD
@@ -348,7 +358,9 @@ Integration Example Flow
 - Ensure persistent database and storage solutions.
 - Automate domain and SSL handling for user convenience.
 
-This architecture turns Coolify into a deployment engine behind a full multi-tenant hosted WordPress/Ghost e-commerce platform. It requires significant development beyond Coolify itself but is fully achievable with Coolify as the core deployment layer.[1][2]
+This architecture turns Coolify into a deployment engine behind a full multi-tenant hosted WordPress/Ghost e-commerce platform.
+
+It requires significant development beyond Coolify itself but is fully achievable with Coolify as the core deployment layer.[1][2]
 
 [1](https://coolify.io/docs/)
 [2](https://coolify.io/docs/get-started/contribute/service)

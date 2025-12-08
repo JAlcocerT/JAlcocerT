@@ -56,34 +56,6 @@ mindmap
       Single Source of Truth
       No-Go List
       V1 DB Schemamindmap
-  root((SaaS Strategy))
-    BRD: Business Why
-      Strategy Layer
-      ::icon(fa fa-briefcase)
-      Market Pain Points
-      Revenue Goals
-      Competitor Edge
-      ROI Metrics
-    PRD: Product What
-      Tactical Layer
-      ::icon(fa fa-rocket)
-      User Personas
-      Core Features
-      User Stories
-      Success Metrics
-    FRD: Functional How
-      Execution Layer
-      ::icon(fa fa-code)
-      API Spec
-      Data Models
-      System Architecture
-      Error Handling
-    Indiehacker Fusion
-      Lean Layer
-      ::icon(fa fa-user)
-      Single Source of Truth
-      No-Go List
-      V1 DB Schema
 ```
 
 ## AI

@@ -3,7 +3,7 @@ title: "Website knowledge updates. Waiting / Landings with...AI Bots?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
 tags: ["Selfhosted-Landing","101 Astro & Hugo","BCMS test vs TiinyHost"]
-description: 'New ATH for my SSG knowledge with IG Gallery OSS. Cconvert via Astro SSR and cal.com'
+description: 'New ATH for my SSG knowledge with IG Gallery OSS. Convert via Astro SSR and cal.com'
 url: 'selling-with-a-landing-website'
 ---
 
@@ -238,11 +238,13 @@ git clone https://github.com/JAlcocerT/selfhosted-landing.git
 | **Backend/Database** | | |
 | **Authentication** | | |
 
-> I had to play with CSR again and trol a little bit!
+> I had to play with CSR again *and trol a little bit*!
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs Be | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 Additionally: I embeded a cal calendar
-
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Calendar | Docs ↗" icon="book-open" >}}

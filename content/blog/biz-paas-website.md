@@ -2,11 +2,10 @@
 title: "Services with SelfHosted PaaS - Netlify/Vercel alternatives"
 date: 2025-03-14T21:20:21+01:00
 draft: false
-tags: ["Dev","Webs","Entrepreneuring","Dokploy x MultiChat","SSG Deployment"]
+tags: ["Scaling SaaS","Webs","Entrepreneuring","Dokploy x MultiChat","SSG Deployment"]
 description: 'Deploying with Dokploy. Make ideas scalable: Wordpress and Ghost with built in Traefik SSL.'
 url: 'selfhosted-paas'
 ---
-
 
 **Tl;DR**
 
@@ -135,6 +134,28 @@ This is a mode for orchestrating containers across multiple Docker hosts.
 
 ## Conclusions
 
+Its been great to try further Dokploy with custom domain to deploy the Streamlit-Multichat.
+
+Dokploy also allowed for custom domains and provides HTTPs from the get go.
+
+For some time Ive been looking for a way to leverage the way I can **deliver websites to others**.
+
+This is giving me some thoughts about [how to **scale** websites delivery](#scaling-via-paas).
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+Definitely SelfHosted PaaS solutions, like DokPloy, resonates with *[no code websites](https://jalcocert.github.io/JAlcocerT/no-code-websites/)*.
+
+I mean with Wordpress and Ghost!
+
+> And its so cool that Dokploy brings [https with Traefik working out of the box](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/#traefik)!
+
+
+Consider also that there are other PaaS available, like Coolify which is catching fast:
+
 <!-- https://github.com/Dokploy/dokploy -->
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Dokploy/dokploy,caprover/caprover,coollabsio/coolify,dokku/dokku,Dokploy/dokploy,biersoeckli/QuickStack,openfaas/faas,undernightcore/dockerizalo&type=Date)](https://star-history.com/#caprover/caprover,coollabsio/coolify,dokku/dokku,Dokploy/dokploy,biersoeckli/QuickStack,openfaas/faas,undernightcore/dockerizalo)
@@ -180,19 +201,9 @@ There are other **PaaS alternatives** like:
 
 > MIT | A self-hosted PaaS for your web services, web apps, databases and everything you need for your next startup.
 
---- 
+### Scaling via PaaS
 
-## Conclusions
-
-For some time Ive been looking for a way to leverage the way I can **deliver websites to others**.
-
-Definitely SelfHosted PaaS solutions, like DokPloy, resonates with *[no code websites](https://jalcocert.github.io/JAlcocerT/no-code-websites/)*.
-
-I mean with Wordpress and Ghost!
-
-> And its so cool that it bring [https with Traefik working out of the box](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/#traefik)!
-
-### Scaling Wordpress and Ghost
+#### Scaling Wordpress and Ghost
 
 Thanks to Dokploy, you can invite some user and give the possibility to spin Wordpress and/or Ghost services.
 
@@ -207,10 +218,11 @@ Thanks to Dokploy, you can invite some user and give the possibility to spin Wor
 > See the regular WP Docker deployment [here](https://github.com/JAlcocerT/Docker/blob/main/Web/CMS/Wordpress%20RPi%20Docker%20compose.yml) 🐳
 
 
-### Scaling SSG Deployment
+#### Scaling SSG Deployment
 
-The idea behind it's very simple: 
+The idea behind *seems to be* very simple: 
 
+0. Setup a VPS/Homelab with a PaaS like Dokply
 1. Put SSG Themes inside a docker container
 
 {{< cards cols="1" >}}
@@ -218,10 +230,10 @@ The idea behind it's very simple:
 {{< /cards >}}
 
 2. Let people choose which one they like (The Theme)
-3. Let them sign up and make the tweaks with a headless CMS UI
-4. When changes are done, build the SSG and push it to static hosting
-5. Get leads, scale it *if profitable*
-6. *Get rich (?)*
+3. Let them sign up and make the tweaks with a headless CMS UI (Flat File AND Git based)
+4. When changes are done, build the SSG and push it to static hosting with the domain configured
+5. Get leads, scale it *if profitable as per LTV >> CaC*
+6. *Get rich and find other ways to help (?)*
 
 > Sounds like a plan?
 
@@ -257,8 +269,6 @@ sudo apt install golang-go
 go version #Go is updated!
 #go version go1.18.1 linux/amd64
 ```
-
-
 
 And now, HUGO: https://github.com/gohugoio/hugo/releases/tag/v0.121.1
 

@@ -1583,6 +1583,7 @@ Enough new ideas to kill the good one? Create a roadmap
 4. Custom Marketing analytics *from custom high signal content creation to funnels*
 5. Books *from D&A to web and concepts from kindle notes*
 
+6. Prepare the DIY/DWY/DFY based on the ebooks and blog content ~ *Wiki efforts*
 
 {{< /details >}}
 
