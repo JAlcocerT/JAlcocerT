@@ -1,10 +1,10 @@
 ---
 title: "Creating an e-Commerce"
-date: 2026-12-23
-draft: true
-tags: ["SaaS","Drupal","Clustering"]
-description: 'Creating an eCommerce. Drupal vs DIY'
-url: 'ecommerce'
+date: 2026-10-01
+draft: false
+tags: ["SaaS","Drupal","User Clustering"]
+description: 'Creating an eCommerce. Drupal vs DFY custom solutions'
+url: 'how-about-an-ecommerce'
 ---
 
 https://www.shopify.com/news/david-heinemeier-hansson-board

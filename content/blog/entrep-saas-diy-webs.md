@@ -12,9 +12,20 @@ url: 'diy-webs-via-paas'
 
 Last year I completed all these pieces of the puzzle: [PaaS](https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/) + [DecapCMS x Astro](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms)
 
-Time to put those together with a quick WebApp/SaaS to free my time and enhance the output of people's DIY.
+Time to put those together with a quick WebApp/SaaS to free my time and **enhance the output of people's DIYs**.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 **Intro**
+
+How about improving CX for DIYs websites?
+
+The thing is: Does it needs to be a trade of between a Wordpress/Ghost/Wix or a code driven cool SSG?
+
+Cant we go ECO and green and have websites that respect the environment?
 
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
@@ -37,6 +48,72 @@ https://www.mangomedia.pl/pl/portfolio.html
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+
+
+## The journey to a CMS managed cool Website
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="CMS 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+{{% steps %}}
+
+### Discovering Github Pages
+
+### Discovering SSGs
+
+### Being amazed by Astro
+
+### Think I could tweak them
+
+### FrontMatterCMS was not enough
+
+### Try few CMS and fail
+
+### Build some flask/next webapps as CMS and fail
+
+### Tried Nuxt Content, was nice, BUT
+
+* Canvas Nuxt ContentCMS
+
+* https://github.com/bloggrify/bloggrify
+
+### DecapCMS finally did the trick
+
+{{% /steps %}}
+
+## The journey of the infra side
+
+{{% steps %}}
+
+### Played with Ubuntu
+
+### Got a Pi
+
+### Liked containers
+
+### Got a VPS
+
+### Liked Docker
+
+### Tried VPSs
+
+### Consolidated docker configs
+
+### Understood Proxies for HTTPs
+
+### Tried few PaaS Tools
+
+{{% /steps %}}
+
+
+## The journey of putting this together
+
+Fast forward to today: lets put a web/app with UI to bundle all this.
+
+###
 
 ---
 

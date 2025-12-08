@@ -264,6 +264,8 @@ Would you like to explore the specifics of **Directus Flows** or find out more a
 
 ## BCMS
 
+https://github.com/bcms/starters/tree/master/astro/e-commerce
+
 
 ### Key Features of BCMS:
 

@@ -1,12 +1,22 @@
 ---
 title: "Take a Break - Gaming with OSS"
-date: 2026-12-23T23:20:21+01:00
+date: 2027-12-23T23:20:21+01:00
 draft: true
 tags: ["Self-Hosting","Emulation","Nintendo","Yatch x EmulatorJS"]
 description: '.'
 summary: 'The , my new toy.'
 url: 'open-source-gaming'
 ---
+
+
+**Tl;DR**
+
+What about gaming?
+
+tags: ["Tinkering","Battle City NES",""]
+description: GPU passthrough
+
+**Intro**
 
 
 Rewriting My Game Engine based off GTA 3 Source Code
@@ -86,6 +96,40 @@ https://pacochan.net/es/links/
 * {{< newtab url="https://github.com//" text="The  Source Code at Github" >}}
     * License: {{< newtab url="https://github.com//?tab=AGPL-3.0-1-ov-file#readme" text="aGPL 3.0" >}} ❤️
 
+
+---
+
+## Conclusions
+
+
+People told me to have a look to **Chiaki**.
+
+And to thrones of liberty.
+
+Also to **Battle City**, the NES game.
+
+## Gaming with a Pi
+
+
+---
+
+## FAQ
+
+You can buy keys for games legally.
+
+As per some reddit users, via https://www.loaded.com/ (ex-cdkeys) or https://www.scdkey.com/
+
+Actually, you can even play on the cloud nowadays, with services like: https://play.geforcenow.com/mall/#/loginwall
+
+**How to install legally windows for gaming**
+
+You might need windows for some of your games.
+
+You can download Windows legally from microsoft, then activate it with a legal key.
+
+### Interesting Software for Gaming
+
+* https://github.com/flightlessmango/MangoHud
 
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: "Racing, IoT and Data"
-date: 2026-12-30
+date: 2027-12-30
 draft: true
-tags: ["Tinkering","OBD2","Accelerometer Data","RacheChrono"]
+tags: ["Tinkering","OBD2","Accelerometer Data","RacheChrono","Cars","Mechanics"]
 description: OBD Data
 ---
 

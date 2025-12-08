@@ -519,6 +519,14 @@ Also, thanks to have tinkered with Nuxt (Vue) recently, got to know a very cool 
   {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="PB x R2 x HUGo" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Source Code for SSG Components" >}}
 {{< /cards >}}
 
+5. If liked the Nuxt post, you might also consider:
+
+* https://github.com/Flosciante/nuxt-image-gallery
+
+> MIT |  This starter lets you get started with NuxtHub Blob in seconds. 
+
+* https://github.com/cesswhite/hato-minimal-template
+
 <!-- 
 ![CF R2 Pricing](/blog_img/web/agujapunto-r2-firebase/r2-101.png) 
 -->
@@ -630,6 +638,7 @@ If you are looking to impress with a new curriculum, why not doing it as a **web
 
 > MIT | A free, easy-to-use CV template with a clean design. Just fill in your details and you're ready to go!
 
+3. https://blog.jread.com/posts/code-your-cv-with-latex/
 
 --- 
 

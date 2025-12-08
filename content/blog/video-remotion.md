@@ -1,17 +1,22 @@
 ---
 title: "OSS-AI Generated Videos with Remotion"
-date: 2026-12-11T23:20:21+01:00
+date: 2027-12-11T23:20:21+01:00
 draft: true
 tags: ["Outro"]
-cover:
-    image: "https://socialify.git.ci/remotion-dev/remotion/image?description=1&language=1&name=1&pattern=Brick%20Wall&stargazers=1&theme=Auto" # image path/url 
-    alt: "Videos with Remotion" # alt text
-    caption: "Videos as a code with Remotion Framework" # display caption under cover
+# cover:
+#     image: "https://socialify.git.ci/remotion-dev/remotion/image?description=1&language=1&name=1&pattern=Brick%20Wall&stargazers=1&theme=Auto" # image path/url 
+#     alt: "Videos with Remotion" # alt text
+#     caption: "Videos as a code with Remotion Framework" # display caption under cover
 description: 'How to use Remotion to create videos'
-summary: 'From code to video with Remotion'
 url: 'video-creation-with-remotion'
 isPinned: false
 ---
+
+**Tl;DR**
+
+From code to video with Remotion
+
+**Intro**
 
 A video is just a function of **images over time**.
 

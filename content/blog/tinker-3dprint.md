@@ -1,6 +1,6 @@
 ---
 title: "Learning about 3D Printing"
-date: 2026-12-31
+date: 2027-12-31
 draft: true
 tags: ["Tinkering"]
 description: abcd

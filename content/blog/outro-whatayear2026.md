@@ -200,8 +200,6 @@ Ive enjoyed using Cloudflare R2 for s3 compatible storage.
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-
-
 ### Tech Talks
 
 <!-- Goals
@@ -211,3 +209,31 @@ Ive enjoyed using Cloudflare R2 for s3 compatible storage.
     From Streamlit to Chainlit / Gradio: https://pypi.org/project/gradio/
   • V3 of ML trainnings - To include MLFlow
 -->
+
+~33...
+
+```sh
+#du -sh .
+#find ./content/blog -maxdepth 1 -type f -name "*.md" | wc -l #posts count
+
+find content/blog -name '*.md' -print0 |
+xargs -0 awk '
+  FNR==1 { 
+    post_date=""; 
+    printed=0 
+  }
+
+  /^date:/ && !printed {
+    gsub(/^date:[[:space:]]*/, "", $0)
+    post_date = substr($0, 1, 10)
+    if (post_date >= "2026-01-01" && post_date <= "2026-12-31") {
+      print FILENAME ": " post_date
+      printed=1
+      count++
+    }
+  }
+
+  END {
+    print "TOTAL:", count+0
+  }'
+```

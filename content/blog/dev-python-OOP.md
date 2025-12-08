@@ -1,8 +1,8 @@
 ---
 title: "OOP 101 "
-date: 2026-12-31
-draft: true
-tags: ["Dev","Multi-Body","MBSD"]
+date: 2026-11-01
+draft: false
+tags: ["Dev","Mechanical Engineering","Multi-Body","MBSD"]
 description: 'Object Oriented Programming for Python users'
 url: 'object-oriented-programming-101'
 ---

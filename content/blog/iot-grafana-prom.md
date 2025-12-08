@@ -1,7 +1,7 @@
 ---
 title: "Grafana Monitoring: Prometheus"
-date: 2026-01-09
-draft: ["Homelab","Docker","Self-Hosting","Iotawatt","Prometheus vs Graphite","Grafana vs TelemetryHarbour"]
+date: 2026-10-09
+tags: ["Homelab","Docker","Self-Hosting","Iotawatt","Prometheus vs Graphite","Grafana vs TelemetryHarbour"]
 description: 'Grafana works for IoT Same as for Monitoring a HomeLab'
 url: 'selfhosting-grafana'
 ---
@@ -241,7 +241,6 @@ https://streamlit.io/gallery?category=llms
 ---
 title: "MQTTX and NodeRed with Docker"
 date: 2024-10-25T23:20:21+01:00
-draft: true
 tags: ["Docker","Self-Hosting"]
 description: ''
 summary: '.'    

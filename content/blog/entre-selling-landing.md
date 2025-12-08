@@ -2,7 +2,7 @@
 title: "Website knowledge updates. Waiting / Landings with...AI Bots?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
-tags: ["Selfhosted-Landing","101 Astro & Hugo","BCMS test vs TiinyHost"]
+tags: ["Selfhosted-Landing x DFY","101 Astro & Hugo","BCMS test vs TiinyHost"]
 description: 'New ATH for my SSG knowledge with IG Gallery OSS. Convert via Astro SSR and cal.com'
 url: 'selling-with-a-landing-website'
 ---
@@ -110,14 +110,13 @@ This can be used to get [a cool ig like gallery](https://github.com/JAlcocerT/ju
 />
 ```
 
-Place those youtube videos:
+Place those youtube videos like so: *just change the `src=https://www.youtube.com/embed/hj0MfciILEc` part*
 
 ```mdx
 <div style="display: flex; justify-content: center;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/hj0MfciILEc" title="Vistula near Kazimierz Dolny Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 ```
-
 
 ## Potential Themes for a Landing
 
