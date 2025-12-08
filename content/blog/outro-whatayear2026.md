@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-12-23
+date: 2026-01-01
 draft: false
 tags: ["Year-Review","FY26","Attention is all you need"]
 description: 'Looking back to the learnings of the year 2026.'
@@ -19,108 +19,17 @@ vert - https://jalcocert.github.io/JAlcocerT/wasm/
 pairdrop...
 
 BiP user flows around newsletter layers
+
+
+
 <!-- 
-https://github.com/RamiKrispin/shinylive
-https://www.dataquest.io/blog/install-package-r/ -->
-
-
-<!-- ### How can I contribute?
-
-The code is accesible from [my Github Repository of R/Stocks](https://github.com/JAlcocerT/R_Stocks "R Stocks Github {rel='nofollow'}")
-
-Please feel free to fork the repository and experiment with the code. -->
-
-<!-- fossengineer/rstocks_shiny:latest
- docker run --name stocksubuntu -p 3836:3838 --detach fossengineer/rstocks_rbase2:latest
-# you may need log out first `docker logout` ref. https://stackoverflow.com/a/53835882/248616 docker login
-
-docker tag firstimage YOUR_DOCKERHUB_NAME/firstimage
-
-docker push YOUR_DOCKERHUB_NAME/firstimage
-docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach py_trip_planner
-
-docker run --name py_trip_planner --network tunnel -p 8050:8050 --detach fossengineer/trip_planner:arm64
-MANIFEST: to detect that is arm64 directly -> multi-image (?)
-https://hub.docker.com/r/fossengineer/trip_planner:arm64
-
-To label docker images
-To Private
- -->
-<!-- ### How to backup data?
-
-3-2-1
-
-### How does this solution replaces Google Photos?
-
-You can use it together with F/OSS photo services like:
-
-* https://fossengineer.com/selfhosting-Photoview-docker/
-* Piwigo
-* ... https://awweso.me/photo-and-video-galleries/ 
-
-
-immage
-https://www.youtube.com/watch?v=h_inF-ypMls
-
-https://www.opensourcealternative.to/project/Photprism
-
-Don't Let Apple & Google Harvest Your Photos, Use Immich to Self-Host Your Own Cloud!
-https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
-
-Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
-https://www.youtube.com/watch?v=sIpt4u03mXc
-
-https://opensource.com/alternatives/google-photos
--->
-
-<!-- ### Other F/OSS Backup solutions
-Kopia: An Automatic Backup Solution for Your Self-Hosted App Data or Documents
-https://www.youtube.com/watch?v=a6GfQy9wZfA
--->
-
-<!-- ### How to Detect Duplicates files in the system
-
-https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka -->
-<!-- A 
-
     Options -> Things and not controlable
     Choices -> Actions and are controlable
 
-    * a team member can deliver great results given the proper workload -->
-<!-- ## BIAS and Noise
-
-<!-- 
-how this relates to ml -->
-
-<!-- ### The Prevalence of Noise
-
-Remember that correlation **does not** implies causality. --> -->
-
-<!-- 
-## Interacting with others
-
-59 seconds book -->
-<!-- ### The shiny Object Syndrome -->
-
-<!-- ### The Dunning-Krugger Effect
-
-### Dilution Effect
+   a team member can deliver great results given the proper workload -->
 
 
-### What is Wishful Thinking?
 
-### Certainty Effect -->
-GEOSPATIAL DATA RECAP
-
-* with peertube
-* https://www.vidstack.io/
-    * https://github.com/vidstack/player
-
-* https://vimejs.com/
-    * https://github.com/vime-js
-
-
-* Carousel - Even with CSS Only as per [this video](https://www.youtube.com/watch?v=g03Yldh9Nkw) like [so](https://developer.chrome.com/blog/carousels-with-css) and [so](https://flackr.github.io/carousel/)
 
 * with react (v1) as per astro project: https://github.com/gio-del/Astro-Theme-Astroway
 * with embla - v2
@@ -128,83 +37,24 @@ GEOSPATIAL DATA RECAP
     * https://github.com/davidjerleke/embla-carousel
 * with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
 
-* Photo galleries
-  * https://github.com/tvoma/cube-gallery
-  * https://github.com/jomaendle/astro-photo-gallery
-  * https://jankraus.net/2024/04/05/how-to-build-a-simple-photo-gallery-with-astro/
-
-pop up at time or location of page
-
-* Others: if traffic is directed here, ever
-    * booking maps - https://affiliates.support.booking.com/kb/s/article/Map-Widget-everything-you-need-to-know
-    * https://www.travelocity.com/Flights
-    * Search
-    * Booking/expedia widgets
 
 
-* Maps ✅
-    * https://github.com/roblabs/maps-withastro ✅
-        * Leaflet + OSM ✅
-        * MapLibre ✅ - https://github.com/roblabs/maps-withastro/blob/main/src/MapLibre.astro
-            * An open source **visual editor** for the '**MapLibre Style** Specification'  - https://github.com/maplibre/maputnik
-      * komoot embed OK
-
-* Adding interactive globe with the countries you have visited
-    * From [astro bento portfolio](https://github.com/IoTechCrafts/astro-bento-portfolio-ssg/blob/master/src/components/Globe.tsx) (d3 & solid-js library) ✅
-
-* ig embed ✅
-    * https://developers.facebook.com/docs/instagram/oembed
-    * https://about.instagram.com/blog/announcements/introducing-web-embedding-instagram-content-on-websites
-        * must be a public profile to be shared!
-
-https://ko-fi.com/jalcocertech
-
-<!-- 
-forget about this costs
-https://generatepress.com/pricing/
-https://www.mangomedia.pl/pl/portfolio.html
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 
- -->
-
-<!-- 
-https://github.com/cryptpad/cryptpad -->
-
-<!-- FIRST SUMMARY POST OF SGG'S
-THEN THIS ONE REFERENCES TO ALL OF THEM -> ALL SSG'S + FIREBASE + CLOUDFLARE + gh pAGES... -->
-
-rag has 3 years, you get asked 5y experience
-<!-- This post explores how to use **LangChain with Python** to chat with your database.
-
-{{< callout type="info" >}}
-The complete, working code is available in my [data-chat repository](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB).
-{{< /callout >}} -->
-
-<!-- 
-Alternatives to https://www.livechat.com/pricing/ ING uses it
- -->
-
- <!-- 
-`IODOCTOR` -->
-<!-- 
-Use cases
-🧱 Introduction
-🤖 Chatbots
-❓ Question Answering
-🔍 Semantic Search
-
-OPEN AI EmbEddings - https://www.youtube.com/watch?v=ySus5ZS0b94
- -->
+1. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code `.mdx`
 
 
-Offers
+### Curated Posts / Videos
 
-1. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code .mdx
+D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
-
-### Curated Posts / Video
-
-D&A Recap + OLTP Post (ERPs) and OLAP Post
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+{{< /cards >}}
 
 0. Creating D&A Reports with AI
 
@@ -212,11 +62,11 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post
 
 > > That's how ive done the ebook
 
-1. Embeded Chatbots for a business website - Real Estate example.
+0. Embeded Chatbots for a business website - Real Estate example.
 
-2. Creating a Custom Real Estate Agency with RAG BoT
+0. Creating a Custom Real Estate Agency with RAG BoT
 
-2. I did not know that **creating an ebook** was that simple
+0. I did not know that **creating an ebook** was that simple
 
 * https://www.amazon.es/sendtokindle
 
@@ -224,23 +74,34 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post
 
 > > Similar to ~tiiny.host
 
-2. About Posthog: Post an ebook page post on IG, then web session will be recorded and a yt video can be made out of that
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
 
+2. About Posthog: Post an ebook page post on IG, then web session will be recorded and a YT video can be made out of that
 
 3. How to create a **waiting list** to test your ideas + ListMonk + SMTP - Share on ig too.
 
-https://github.com/berat/waitlist-landing-page?tab=readme-ov-file
+* https://jalcocert.github.io/JAlcocerT/link-artists/#waiting-list-for-products
+
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
 
 4. Status Pages for services: Kener / UptimeKuma. SLA matters
 
-https://betterstack.com/status-page 
+* https://jalcocert.github.io/JAlcocerT/link-artists/#status-pages
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-5. Web Analytics: GDPR compliant
+5. Web Analytics x Link Analytics: *GDPR compliant*
+
+* https://jalcocert.github.io/JAlcocerT/t3-like-chat/#selfhosted-webanalytics
 
 6. Client adquisition data pipeline.
 
@@ -248,148 +109,75 @@ To be tested with *,artists,designers and wannabe's'* from social media.
 
 If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#scaling-ideas), is a potential candidate.
 
-7. Boiler plate for vibe coders: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
+> But if someone is not paying 10$/m to a company, guess how much is willing to pay you :)
+
+7. Boiler plate / blueprint for vibe coders: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 8. Proper CI/CD for streamlit. Hospital D&A: https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/2a2eb68132834b39ce8ff3e9e77e8d7d87e801b5
 
 > Latest features shipped properly: https://github.com/JAlcocerT/X-ray-imaging-analysis + youtube video
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/IT-concepts/" title="IT Concepts | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/useful-python-stuff/" title="Python | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 9. Authentication Post
 
 https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions
 https://jalcocert.github.io/JAlcocerT/social-signin-101/
 
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 10. Embeded Analytics con Graphic Walker
 
-https://github.com/Kanaries/graphic-walker
+* https://github.com/Kanaries/graphic-walker
 
-> Apache v2 |  An open source alternative to Tableau. **Embeddable visual analytic**
+> Apache v2 | An open source alternative to Tableau. **Embeddable visual analytic**
+
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
 
 ![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) 
 
-11. geolocation
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/BI/#custom-bi-tools" title="BI | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+11. Geolocation - GEOSPATIAL DATA RECAP
+
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/#geo-data" title="Geo | Docs ↗" >}}
+{{< /cards >}}
 
 https://racechrono.com/
 
 Improve your lap times with RaceChrono
 
-
-12. Tinker with php and wordpress?
-
-If you start fresh on a VPS and have Docker and WordPress set up, bringing your WordPress theme into that environment involves a few steps:
-
-Step 1: Prepare Your Docker WordPress Setup
-
-Ensure your WordPress Docker container is running and accessible. Usually, you’ll have WordPress files mounted on a volume inside the container, often at `/var/www/html/wp-content/themes/`.
-
-Step 2: Copy Your Theme to the VPS
-You can bring the theme files over to the VPS using:
-
-- **SCP or SFTP**: Upload your theme folder (which contains `style.css`, `functions.php`, and all necessary theme files) into the WordPress themes directory on the VPS.  
-  Example SCP command:
-  ```bash
-  scp -r /local/path/to/my-theme username@vps_ip:/path-to-docker-volume/wp-content/themes/
-  ```
-
-- **Git Clone**: If your theme is in a Git repository (e.g., GitHub), you can clone it directly inside the themes folder if you have access on the VPS:  
-  ```bash
-  cd /path-to-docker-volume/wp-content/themes/
-  git clone https://github.com/your_username/your-wordpress-theme.git
-  ```
-
-- **Docker Volume Mounting (for Development)**: When developing locally or on VPS, you can mount your local theme folder as a Docker volume in the container for live edits without copying each time.
-
-Step 3: Activate the Theme in WordPress
-
-Once your theme files are in the themes directory:
-
-1. Log in to your WordPress admin at `http://your-vps-ip/wp-admin`.
-2. Navigate to **Appearance → Themes**.
-3. Find your uploaded theme and click **Activate**.
-
-Step 4: Optional—Upload Theme ZIP via Admin
-
-As an alternative, through the WordPress Admin UI:
-- Go to **Appearance → Themes → Add New → Upload Theme**.
-- Upload a zip archive of your theme; WordPress will install and activate it.
-
-Summary
-
-| Method | Description | When to Use |
-|--------|-------------|-------------|
-| SCP/SFTP Copy | Manually copy theme files | Direct file control, VPS access |
-| Git Clone | Clone theme repo directly | Theme under Git version control |
-| Docker Volume Mount | Mount theme folder as volume | Development/live sync |
-| WordPress UI Upload | Upload via admin dashboard | Simple manual install |
-
-This workflow lets you manage your themes conveniently on a fresh Docker WordPress VPS environment.
-
-Yes, there are many open-source WordPress themes freely available on GitHub. 
-
-In fact, thousands of developers and organizations—including Automattic (the company behind WordPress.com)—host and maintain GPL-licensed WordPress themes there.
-
-These can be used, studied, modified, or forked for your own projects.
-
-**Examples of Popular Open-Source WordPress Themes on GitHub**
-
-Some of the most widely used and high-quality open-source WordPress themes include:
-
-- **[Roots / Sage](https://github.com/roots/sage)** — a Laravel Blade-based WordPress starter theme with Tailwind CSS and full block editor support; a favorite among professional developers (over 13k stars).[1]
-- **Automattic / themes** — a collection of official free themes built by the WordPress.com team, released under GPL-2.0.[2]
-- **WordPress / community-themes** — a repository of block-based themes demonstrating WordPress’s new Full Site Editing (FSE) capabilities, developed collaboratively by the community.[3]
-- **digitoimistodude / air-light** — a lightweight (<20 kB) starter theme optimized for developers, using HTML5 and minimal dependencies.[6]
-- **them.es** — open-source starter themes built with Bootstrap or Material Design that support full site editing, responsive design, localization, and build automation.[8]
-- **solstice23 / Argon** and **mirai-mamori / Sakurairo** — popular modern community-maintained designs supporting internationalization and colorful UI.[1]
-
-You can explore thousands more in the **GitHub “wordpress-theme” topic**, which currently includes over 4,000 public repositories across PHP, CSS, and JavaScript projects.[1]
-
-**Installing Themes from GitHub**
-
-You can manually download a theme ZIP file from GitHub and install it through **WordPress → Appearance → Themes → Upload Theme**.  
-Alternatively, use tools like **WP Pusher** or **GitHub Updater** to install and automatically update WordPress themes directly from public GitHub repositories.[5][9]
-
-All of these themes respect GPL open-source licensing, meaning you can modify or even resell them under your own distribution as long as you retain the same license.
-
-[1](https://github.com/topics/wordpress-theme)
-[2](https://github.com/Automattic/themes)
-[3](https://github.com/WordPress/community-themes)
-[4](https://github.com/topics/wordpress-starter-theme)
-[5](https://www.fastcomet.com/kb/install-wordpress-themes-and-plugins-from-github)
-[6](https://github.com/digitoimistodude/air-light)
-[7](https://sourceforge.net/directory/wordpress-themes/)
-[8](https://them.es)
-[9](https://www.wpbeginner.com/pl/beginners-guide/how-to-install-wordpress-plugins-and-themes-from-github/)
-[10](https://ltheme.com/wordpress-github-plugin/)
-
-<!-- 
-https://youtu.be/tQOxnCz2lwM?si=XTgvyi-qnm3ZKiAl
- -->
-
-{{< youtube "tQOxnCz2lwM" >}}
-
-
-<!-- 
-Observability Platform for LLMs
-  https://github.com/traceloop/openllmetry
-  https://github.com/langfuse/langfuse
-  
-  Epam Dial + prometheus + grafana
-  Or with LangSmith
-Also DataDog - https://docs.datadoghq.com/llm_observability/ -->
+The Go Pro GPS' Telemetry is great:
 
 
 
-<!-- Goals:
-  • AI Gen
-    LangChain
-    LocalModels: with Docker
-    From Streamlit to Chainlit / Gradio: https://pypi.org/project/gradio/
-    LLMOps: MLFlow, Airflow, VectorDBs… Onboarding Guide - GenAI-X Innovation Team - EPAM Knowledge Base
-      mlflow/mlflow: Open source platform for the machine learning lifecycle (github.com)
-    GPT4-Turbo
-  • V3 of ML trainnings - To include MLFlow
-Airflow to start some job? -->
 
 
 ### Serverless
@@ -397,17 +185,29 @@ Airflow to start some job? -->
 Ive enjoyed using Cloudflare R2 for s3 compatible storage.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="R2 x PB" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Source Code for SSG Components" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="CF R2 x PB" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Testing Cloudflare R2 | Post" >}}
 {{< /cards >}}
 
 1. https://github.com/neondatabase/neon
 
 > Apache v2 |  Neon: Serverless Postgres. We separated storage and compute to offer autoscaling, code-like database branching, and scale to zero.
 
-2. Cloudflare D1
+2. Cloudflare D1: *An interesting companion for CF R2*
 
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+
+
+### Tech Talks
+
+<!-- Goals
+  • AI Gen
+    LangChain
+    LocalModels: with Docker
+    From Streamlit to Chainlit / Gradio: https://pypi.org/project/gradio/
+  • V3 of ML trainnings - To include MLFlow
+-->

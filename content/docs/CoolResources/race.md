@@ -15,6 +15,12 @@ But my goal was clear: to create a race analytics app.
 ## Geo Data
 
 
+<!-- 
+https://youtu.be/tQOxnCz2lwM?si=XTgvyi-qnm3ZKiAl
+ -->
+
+{{< youtube "tQOxnCz2lwM" >}}
+
 ## Racing Resources
 
 

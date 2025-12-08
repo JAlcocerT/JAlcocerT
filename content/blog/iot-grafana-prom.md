@@ -469,3 +469,13 @@ Visual Programming: Node-RED's flow-based programming model is intuitive and fle
 While you can use Node-RED without MQTT (and vice versa), they work very well together for creating IoT solutions. 
 
 MQTT provides a light-weight, efficient protocol for communicating between devices, and Node-RED provides an easy way to control devices, process data, and integrate with other systems.
+
+### Observability Platform for LLMs
+
+
+  https://github.com/traceloop/openllmetry
+  https://github.com/langfuse/langfuse
+  
+  Or with LangSmith
+Also DataDog - https://docs.datadoghq.com/llm_observability/ 
+

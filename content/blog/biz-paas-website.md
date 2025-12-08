@@ -241,6 +241,17 @@ The awesome HUGO Theme Gallery: https://github.com/nicokaiser/hugo-theme-gallery
 
 > Which I have used for the [travel addict and costura](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/) photo blog
 
+
+```mermaid
+graph TD
+    A[www.jalcocertech.com] --> B(blog/YT 0$);
+    A --> C(DIY 0/$ + time);
+    A --> F(DIY & PaaS low $/year low time);
+    A --> D(Consult via Cal.com - DWY $$);
+    A --> E(Services - DFY $$$);
+```
+
+
 {{< details title="Photo Gallery with Hugo inside a Container 📌" closed="true" >}}
 
 ```sh

@@ -345,7 +345,6 @@ Just go to `localhost:4321` and `localhost:4321/admin` to have Astro and Dev Mod
 [![Decap CMS Post Editor](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/decap-post-editor.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decap-post-editor.png)
 
 
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="CMS 101 | Docs ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}

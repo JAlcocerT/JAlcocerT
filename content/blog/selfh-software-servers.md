@@ -2,7 +2,7 @@
 title: "[PaaS Recap] Software and Servers..."
 date: 2025-12-07T17:20:21+01:00
 draft: false
-tags: ["HomeLab","Coolify vs DokPloy","Cosmos Server","PaaS x OSS Driven Business"]
+tags: ["Scaling SaaS","Coolify vs DokPloy","Cosmos Server","PaaS x OSS Driven Business"]
 description: 'Scaling SaaS via PaaS for a better DIY. Selfhost via MiniPC/NAS/homelab/VPS.'
 url: 'selfhosted-server-paas'
 ---
@@ -250,17 +250,6 @@ Like as I [read on reddit](https://www.reddit.com/r/selfhosted/comments/1ol1v34/
 
 Thinking now about this and the **DIY/DWY/DFY framework**...
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-I thought that a kind of **~ advanced DIY** is when someone is able to select the software that they want, via UI and it gets deployed seemlessly.
-
-Also...the user should be empowered to make all the changes to the web on their own.
-
-> But whats the problem after [having Decap-CMS with a cool UI](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms) that makes file changes and is git compatible? :)
-
 ```mermaid
 graph TD
     A[www.jalcocertech.com] --> B(blog/YT 0$);
@@ -271,9 +260,45 @@ graph TD
 ```
 
 {{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+I thought that a kind of **~ advanced DIY** is when someone is able to select the software that they want, via UI and it gets deployed seemlessly.
+
+I had a draft over this idea when I [tinkered with Dokploy - Scaling SSG Deployment section](https://jalcocert.github.io/JAlcocerT/selfhosted-paas/#scaling-ssg-deployment)
+
+
+0. Setup a VPS and configure Dokploy
+1. Put SSG Themes x DecapCMS inside a docker container
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro/" title="Astro SSG | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Twilight" title="Astro SSG x DecapCMS | Twilight ↗" >}}
+{{< /cards >}}
+
+2. Let people come, see and choose which Theme they like (You need a WebApp with user on boarding for this - vibe code it)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+3. Once signed up and paid, make the tweaks to the theme via CMS UI only (Flat File AND Git based)
+4. This is abstracted - When changes are done, build the SSG and push it to static hosting with the domain configured
+
+**Very Important**...the user should be empowered to make all the changes to the web on their own.
+
+> But whats the problem after [having Decap-CMS with a cool UI](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms) that makes file changes and is git compatible? :)
+
+5. Get leads, scale it *if profitable as per LTV >> CaC*
+6. *Get ,richer' and find other ways to help people (?)*
+
+{{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
 
 That's what PaaS are for: *help you scale the software that you ship*
 
@@ -309,9 +334,7 @@ No thanks! There is a better way:
 
 - OSS PaaS will do the infra - For 100$ you bring your own OSS app like /WP/Ghost and forget about servers
 
-.........
-
-
+### Further Thoughts on PaaS as a better DIY
 
 https://www.youtube.com/watch?v=hl8ebudhqZU
 
@@ -421,7 +444,12 @@ https://www.youtube.com/watch?v=zhK0sARGhYc
 
 ### What exactly do you need?
 
-Let's test these PaaS with some of the selfhostable WebApps I have tried at some point.
+Let's test these PaaS with some of the **selfhostable WebApps** I have documented at some point at the HomeLab repo:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for HomeLab Containers Config" >}}
+{{< /cards >}}
+
 
 #### Time Management via PaaS
 
@@ -464,6 +492,16 @@ Look no further than Matrix: synapse / dendrite / conduit available as flavours 
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-synapse" title="Matrix Server 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/matrix-conduit" title="Matrix Conduit Server 🐋 ↗" >}}
 {{< /cards >}}
+
+#### OSS Office suite
+
+You could use Proton's docs and [sheets](https://proton.me/drive/sheets)
+
+Or just deploy something like this via PaaS to your VPS:
+
+* https://github.com/cryptpad/cryptpad
+
+> agpl 3.0 | CryptPad is a free, open-source, and privacy-focused alternative to Google Docs, Google Sheets, and Google Slides.
 
 #### OSS HelpDesk
 

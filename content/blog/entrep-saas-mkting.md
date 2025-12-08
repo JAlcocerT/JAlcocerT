@@ -3,9 +3,19 @@ title: "A SaaS for Marketing Agencies: From bots to leads"
 date: 2026-01-06T23:20:21+01:00
 draft: false
 tags: ["Custom Dashboards","Marketing Analytics","Agency Leads","RoadMap26"]
-description: 'Building a custom mkt solutions.'
+description: 'Building a custom mkt solutions to feed your sales pipeline.'
 url: 'custom-marketing-analytics'
 ---
+
+
+**Tl;DR**
+
+After [tinkering with APIFY](https://jalcocert.github.io/JAlcocerT/apify/), it was obvious I needed to built something.
+
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
 
 
 **Intro**
@@ -24,6 +34,11 @@ Spaces are limited
 > Who could have guessed
 
 > > And how could have I not used gemini to [understand the strategy better](#faq)
+
+
+##
+
+## PRO and automatic content
 
 ---
 

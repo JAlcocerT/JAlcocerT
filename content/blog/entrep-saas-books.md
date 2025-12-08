@@ -7,6 +7,29 @@ description: 'Reading better, writing more. Making the learnings of years action
 url: 'interesting-books'
 ---
 
+<!-- ## BIAS and Noise
+
+<!-- 
+how this relates to ml -->
+
+<!-- ### The Prevalence of Noise
+
+Remember that correlation **does not** implies causality. --> -->
+
+<!-- 
+## Interacting with others
+
+59 seconds book -->
+<!-- ### The shiny Object Syndrome -->
+
+<!-- ### The Dunning-Krugger Effect
+
+### Dilution Effect
+
+
+### What is Wishful Thinking?
+
+### Certainty Effect -->
 
 <!-- 
 what every body is saying 

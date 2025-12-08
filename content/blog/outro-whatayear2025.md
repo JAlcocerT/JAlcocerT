@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-09
+date: 2025-12-08
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
@@ -9,7 +9,10 @@ url: 'tech-recap-and-more-2025'
 
 <!-- date: 2025-12-25 -->
 
-
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
 
 **Tl;DR**
 
@@ -1572,18 +1575,20 @@ But it must have been sth like:
 
 ### For Next year...
 
-Enough new ideas to kill the good one? Create a roadmap
+Enough new ideas to kill the good one?
+
+Create a Roadmap!
 
 {{< details title="RoadMap26 | As of 1225 📌" closed="true" >}}
 
-
 1. Weddings serverless + ads
-2. Real Estate Custom RAG and WebApp
+2. Real Estate Custom RAG and WebApp via DecapCMS
 3. AIoT *end to end flow from solar panels to dashboarding & langchain*
 4. Custom Marketing analytics *from custom high signal content creation to funnels*
 5. Books *from D&A to web and concepts from kindle notes*
+6. Scaling PRO Webs creation via PaaS - A better DIY website with free (programmatic) audit
 
-6. Prepare the DIY/DWY/DFY based on the ebooks and blog content ~ *Wiki efforts*
+7. Prepare the DIY/DWY/DFY based on the ebooks and blog content ~ *Wiki efforts*
 
 {{< /details >}}
 
@@ -1592,7 +1597,7 @@ Enough new ideas to kill the good one? Create a roadmap
 1. Vibe Coding and BiP *using what I already know is enought to build a lot of projects*
 2. Sharing what I know with people around me. In person.
 3. Shipping more Serverless / CSR / Static
-4. Slowly getting better at action cam videos and ffmpeg / kdenlive. Just for fun.
+4. Slowly getting better at action cam videos and ffmpeg / kdenlive. *Just for fun.*
 
 5. Reading from time to time, people that inspires
 
@@ -1604,7 +1609,7 @@ Enough new ideas to kill the good one? Create a roadmap
 * <https://Selfhosted.show>
 * <https://selfh.st/>
 
-6. Keep writting, but less and more quality
+6. Keep writting, but less and MORE QUALITY (< 2/week AND <60/year )
 7. Get better at Writting ebooks
 
 

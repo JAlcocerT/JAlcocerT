@@ -188,6 +188,9 @@ Concepts / AI Tools that are **veeery trendy**, also as seen [here](https://jalc
 
 #### MLFlow
 
+
+MLflow/mlflow: Open source platform for the machine learning lifecycle
+
 LangChain, LLamaindex, OpenAI... can all be used together with MLFlow! https://mlflow.org/docs/latest/llms/
 
 What for?

@@ -162,15 +162,6 @@ Docker ensured the app ran smoothly, and [Cloudflare Tunnel](https://fossenginee
 
 It was like building a castle and then drawing up the bridge to let the world in, securely.
 
-
-<!-- 
-* How to develop a python dash app inside a running docker container
-    * Docker and Docker extension
-    * DevContainer extension
-    * Attach to running container -->
-<!-- 
-    https://github.com/RamiKrispin/vscode-python -->
-
 --- 
 
 ## FAQ

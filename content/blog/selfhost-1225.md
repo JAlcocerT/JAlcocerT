@@ -323,6 +323,9 @@ For a **general OS purposes**, as of today I would:
 
 https://selfh.st/survey/2025-results/
 
+Who could have guessed, that donations are low: https://ko-fi.com/jalcocertech
+
+
 ### Random
 
 > Intelligence is the ability to adapt to change

@@ -80,7 +80,7 @@ xargs -0 awk '
 
 As of now I have 'just' planned ~33 posts for JAlcocerT for the rest of 2025/2026.
 
-Have migrated some of them to what is going to be the center of a more...branded tinkering?
+Have migrated some of them [here](https://github.com/JAlcocerT/canvas/tree/main/content/en/articles) to what is going to be the center of a more...branded tinkering?
 
 ```sh
 #git clone https://github.com/JAlcocerT/canvas

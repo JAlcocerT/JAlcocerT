@@ -459,9 +459,9 @@ Just in case you
 
 ### Svelte vs Other FE Frameworks
 
-Svelte's main competitors in 2025 are lightweight, performant frontend frameworks like SolidJS, Qwik, and Astro, which emphasize small bundles, fast runtime, and reactivity without virtual DOM overhead.
+Svelte's main competitors in 2025 are lightweight, **performant frontend frameworks** like SolidJS, Qwik, and Astro, which emphasize small bundles, fast runtime, and reactivity without virtual DOM overhead.
 
-| Framework | Core Strength | Bundle Size/Performance Edge | Use Cases [1][4] |
+| **Framework** | Core Strength | Bundle Size/Performance Edge | Use Cases [1][4] |
 |-----------|---------------|------------------------------|----------------------------|
 | SolidJS  | Fine-grained reactivity | Matches Svelte's speed, low memory | Interactive apps, dashboards |
 | Qwik     | Resumability, zero JS initial load | Smallest payloads (~1KB startup) | Performance-critical sites [1] |

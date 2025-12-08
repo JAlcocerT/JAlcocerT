@@ -1,5 +1,5 @@
 ---
-title: "[Learning] Interesting NoCode Tools"
+title: "[Learning] Interesting Image & Backup Tools"
 date: 2026-02-08
 draft: false
 tags: ["Link Shortener","No Code DBs","BaseRow"]
@@ -37,8 +37,55 @@ I grasp the surface on the [No Code Ai Tools Post](https://jalcocert.github.io/J
 
 And they are **no code**.
 
-## No Code Data Tools
+## SelfHostable Image Tools
 
+<!-- ### How to backup data?
+
+3-2-1
+
+### How does this solution replaces Google Photos?
+
+You can use it together with F/OSS photo services like:
+
+* https://fossengineer.com/selfhosting-Photoview-docker/
+* Piwigo
+* ... https://awweso.me/photo-and-video-galleries/ 
+
+
+immage
+https://www.youtube.com/watch?v=h_inF-ypMls
+
+https://www.opensourcealternative.to/project/Photprism
+
+Don't Let Apple & Google Harvest Your Photos, Use Immich to Self-Host Your Own Cloud!
+https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
+
+Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
+https://www.youtube.com/watch?v=sIpt4u03mXc
+
+https://opensource.com/alternatives/google-photos
+-->
+
+
+
+<!-- ### Other F/OSS Backup solutions
+Kopia: An Automatic Backup Solution for Your Self-Hosted App Data or Documents
+https://www.youtube.com/watch?v=a6GfQy9wZfA
+-->
+
+<!-- ### How to Detect Duplicates files in the system
+
+https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka -->
+
+---
+
+## Conclusions
+
+
+
+### No Code Tools
+
+#### No Code Data Tools
 
 * https://github.com/glideapps/glide-data-grid
 

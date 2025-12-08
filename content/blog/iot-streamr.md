@@ -188,7 +188,9 @@ Using their container image at dockerhub: https://hub.docker.com/r/streamr/node
 docker run -d --restart always -p 32200:32200 -v ~/.streamrDocker:/home/streamr/.streamr --name streamr streamr/node
 ```
 
-Yes, the Streamr Network provides official Docker container images for running Streamr nodes. You can find these images on Docker Hub under the "streamr" profile, such as the `streamr/node` and `streamr/broker-node` images which are regularly updated.
+Yes, the Streamr Network provides official Docker container images for running Streamr nodes. 
+
+You can find these images on Docker Hub under the "streamr" profile, such as the `streamr/node` and `streamr/broker-node` images which are regularly updated.
 
 Using the Docker image simplifies setup by allowing you to pull and run the node container quickly on any system with Docker installed. 
 
@@ -204,9 +206,13 @@ docker run -d --restart always -p 32200:32200 -v ~/.streamrDocker:/home/streamr/
 
 This makes running a Streamr node accessible on standard hardware without manual installation beyond Docker.[6][3]
 
-**Streamr node rewards (for operators relaying data) are paid in DATA tokens, the network's native ERC-20 utility token on Polygon blockchain.** Operators stake DATA to join Sponsorships and earn proportional rewards based on uptime, bandwidth, and stream demand; delegators also stake DATA to operators for shared revenue.[1][2][3]
+**Streamr node rewards (for operators relaying data) are paid in DATA tokens, the network's native ERC-20 utility token on Polygon blockchain.**
 
-**Yes, view live nodes via the Streamr Network Explorer at streamr.network/network-explorer.** It shows active streams, nodes, connections, metrics, and a geo map; search by node address or filter historical data. Your node provides a direct Explorer link post-setup for monitoring.[4][5][6]
+Operators stake DATA to join Sponsorships and earn proportional rewards based on uptime, bandwidth, and stream demand; delegators also stake DATA to operators for shared revenue.[1][2][3]
+
+**Yes, view live nodes via the Streamr Network Explorer at streamr.network/network-explorer.**
+
+ It shows active streams, nodes, connections, metrics, and a geo map; search by node address or filter historical data. Your node provides a direct Explorer link post-setup for monitoring.[4][5][6]
 
 
 {{< cards cols="2" >}}

@@ -10,7 +10,7 @@ url: 'hugo-pocketbase-and-r2'
 
 **TL;DR**
 
-I got to know about Cloudflare R2 as object storage.
+I got to know about **Cloudflare R2 as object storage.**
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/nextjs-r2-demo" title="NEW Fork of a NextJS + R2 WebApp" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a webapp that pushes data to CF R2 via CF Workers" >}}
@@ -239,7 +239,6 @@ Among all the options—Cloudflare R2, AWS S3, MinIO, Wasabi, Backblaze B2, and 
 - **AWS S3** is best when advanced compliance, enterprise features, and integration into broader AWS services are necessary but is more expensive for egress-heavy workloads.
 - **MinIO** is good only if full control over infrastructure and costs is preferred and you can manage the operational complexity.
 
- Recommendation Summary:
 
 | Use Case                         | Recommended Storage Option          | Why                                                    |
 |---------------------------------|-----------------------------------|--------------------------------------------------------|
@@ -267,3 +266,28 @@ And photo galleries...are really **overpowered**.
 And along the way, I saw this astro free theme https://recipes-starter.thebcms.com/recipes/omelette
 
 > A cool Recipe page, that might resonate with this user!
+
+> > And it uses another CMS, called BCMS - sth to explore :)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="CMS 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+---
+
+## FAQ
+
+* Carousel - Even with CSS Only as per [this video](https://www.youtube.com/watch?v=g03Yldh9Nkw) like [so](https://developer.chrome.com/blog/carousels-with-css) and [so](https://flackr.github.io/carousel/)
+
+* Photo galleries
+  * https://github.com/tvoma/cube-gallery
+  * https://github.com/jomaendle/astro-photo-gallery
+  * https://jankraus.net/2024/04/05/how-to-build-a-simple-photo-gallery-with-astro/
+
+
+* IG embed is possible - I did so with cyclingthere ✅
+    * https://developers.facebook.com/docs/instagram/oembed
+    * https://about.instagram.com/blog/announcements/introducing-web-embedding-instagram-content-on-websites
+        * Just remember - must be a public IG profile to be shared in your posts!

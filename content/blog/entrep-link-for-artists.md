@@ -166,6 +166,7 @@ I created this in the middle of the [last real estate updates post](https://jalc
 
 It's a clear example that, if you know what you are doing (at least vibe coding with the right fwk & instructions), you can get a: Cool UI/UX for Web, Admin Panel, with no external APIs, and a working waiting list to CSV for you to process later on.
 
+> Other people are doing their's too: https://github.com/berat/waitlist-landing-page
 
 #### Landing Page for your SaaS
 
@@ -205,6 +206,15 @@ If you are confortable with animations on your landing, consider also:
 * https://github.com/iann-mathaiya/nikola-tesla
 
 > MIT | Which you guessed - I forked: https://github.com/JAlcocerT/nikola-tesla
+
+```sh
+#make help 
+```
+
+If you like videos on your site, you can always embed them from youtube.
+
+Or consider peertube or [vidstack](https://github.com/vidstack/player)
+
 
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
 
@@ -313,6 +323,8 @@ If you have few SaaS within your offer: you will want to prove the uptime status
 {{< /cards >}}
 
 ![UpTime Kuma Monitoring](/blog_img/web/success3-realestate/uptime-realestate-demo.png)
+
+See also https://betterstack.com/status-page 
 
 
 
@@ -820,7 +832,9 @@ In case you need to, here are some useful components to provide inspiration to y
 
 La preferencia anunciada o preferencia declarada es un método para conocer las preferencias de los usuarios basado en lo que ellos dicen que elegirían en situaciones hipotéticas o que no han experimentado en la realidad.
 
-Es muy utilizada en economía para anticipar cómo los consumidores podrían reaccionar ante nuevas opciones que aún no existen en el mercado. Por ejemplo, se puede preguntar a una persona qué opciones preferiría en un producto nuevo o servicio que no ha probado.[1]
+Es muy utilizada en economía para anticipar cómo los consumidores podrían reaccionar ante nuevas opciones que aún no existen en el mercado.
+
+Por ejemplo, se puede preguntar a una persona qué opciones preferiría en un producto nuevo o servicio que no ha probado.[1]
 
 Por otro lado, la preferencia revelada se basa en observar el comportamiento real de consumo del usuario, es decir, en las decisiones y elecciones efectivas que hace en la vida cotidiana.
 

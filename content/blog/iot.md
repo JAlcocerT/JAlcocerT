@@ -10,6 +10,8 @@ url: 'just-iot'
 https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
 together with langchain RAG + db queries
 
+
+
 **TL;DR:** Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
 
 +++ DB2Rest
@@ -45,6 +47,14 @@ I need more of:
 
 ![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png)
 
+
+## From IoT Data to LangChAIn
+
+This part explores how to use **LangChain with Python** to chat with your database.
+
+{{< callout type="info" >}}
+The complete, working code is available in my [data-chat repository](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB).
+{{< /callout >}}
 
 ## Hardware and Projects
 

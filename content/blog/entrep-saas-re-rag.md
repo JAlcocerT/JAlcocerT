@@ -47,6 +47,16 @@ It all started with the QnA of streamlit over property data on .md files.
 
 and the chat with a DB via LangChain.
 
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/" title="NEW - Real Estate BluePrint - Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Real Estate Web/App + RAG" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
 Then, Im talking about these series of RE related posts:
 
 
@@ -127,3 +137,29 @@ It has to be known frameworks.
 Using newer ones [like Reflex](https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#conclusions) or [Nuxt](https://jalcocert.github.io/JAlcocerT/real-estate-landing/#nuxt-for-real-estate) will cause your agents too much confussion.
 
 And a lot of time wasted for you
+
+
+---
+
+## FAQ
+
+### About RAG and BOTs
+
+RAG has 3 years, you get asked 5y experience if you are trying to land such jobs.
+
+
+
+<!-- 
+Alternatives to https://www.livechat.com/pricing/ ING uses it
+ -->
+
+ <!-- 
+`IODOCTOR` -->
+<!-- 
+Use cases
+🧱 Introduction
+🤖 Chatbots
+❓ Question Answering
+🔍 Semantic Search
+
+ -->
