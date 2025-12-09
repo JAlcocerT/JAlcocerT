@@ -309,7 +309,7 @@ make help
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="NEW SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}
+  {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}
   {{< card link="https://github.com/JAlcocerT/just-ssg" title="Astro SSR as Landing Page" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
 {{< /cards >}}
 
@@ -703,7 +703,7 @@ But for simple link/bento/landing pages...just goahead and vibe code it from scr
 
 Then, you wont probably need [session recording](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/) for such sites.
 
-But you will want to validate the **web performance**:
+But you will want to validate the **web performance**: *Now adding the lighthouse-CI as discovered [here](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-lighthouse-programatically)!*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well" title="Web Performance | Docs ↗" icon="book-open" >}}

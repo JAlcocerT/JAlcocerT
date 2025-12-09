@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-08
+date: 2025-12-10
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
@@ -1515,28 +1515,15 @@ Thanks to this sites, I get to know more cool apps:
 
 ### New Tech Im using
 
-## Browsers
+AI... ofc
 
-librewolf vs zen
-chromium vs brave vs hellium
-Tor browser
+Despite popularity has...decreased recently?
 
-TightVNC
-Remote Ripple VNC Viewer
+Im including here: **MCP**, which it was all hyped around spring and non used today due to high token consumption
 
-**Extensions**
+And...**BAML**, which was a very interesting setup.
 
-* Kanban board with our bookmarks: <https://github.com/d3ward/b2ntp>
-    Again, awsome job of <https://d3ward.github.io/about.html>
-* ublock origin
-* bitwarden
-
-**Add-ons**
-
-* Privacy Badger
-* https everywhere
-* ublock origin
-
+Perplexity and Gemini are my go to now, instead of ChatGPT.
 
 ---
 
@@ -1570,8 +1557,6 @@ I havent measure these blog posts time creation.
 But it must have been sth like:
 
 ![Me Creating 150+ posts on my 2025 learnings](/img/kitten-cat.gif#center)
-
-
 
 ### For Next year...
 
@@ -1609,7 +1594,8 @@ Create a Roadmap!
 * <https://Selfhosted.show>
 * <https://selfh.st/>
 
-6. Keep writting, but less and MORE QUALITY (< 2/week AND <60/year )
+6. Keep writting, but less and MORE QUALITY: < 2/week **AND <60/year**
+
 7. Get better at Writting ebooks
 
 

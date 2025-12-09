@@ -231,6 +231,15 @@ git clone https://github.com/JAlcocerT/demo-realtime-pollution #which i cloned
 
 > Great example:  Taipy Demo of a Realtime Dashboard of Air Pollution around a Factory 
 
+### What it is Gradio?
+
+ Build Machine Learning Applications Easily with Gradio in Python 
+<https://www.youtube.com/watch?v=3DGLznJorT8>
+
+https://github.com/NeuralNine/drawing-classifier
+
+https://busterbenson.com/
+
 * Gradio
     * https://www.gradio.app/guides/quickstart
     * https://pypi.org/project/gradio/

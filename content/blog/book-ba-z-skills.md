@@ -15,7 +15,9 @@ Excel at this **Business Analytics skills** and you will improve your team's wor
 
 ## Analytical Thinking and Problem Solving
 
-Analytical thinking and problem solving skills are required for business analysts to analyze problems and opportunities effectively, identify which changes may deliver the most value, and work with stakeholders to understand the impact of those changes.
+Analytical thinking and problem solving skills are required for business analysts to analyze problems and opportunities effectively.
+
+Also to identify which changes may deliver the most value, and work with stakeholders to understand the impact of those changes.
 
 Business analysts use analytical thinking by rapidly assimilating various types of information (for example: *diagrams, stakeholder concerns, customer feedback, schematics, user guides, and spreadsheets*), and identifying which are relevant. 
 

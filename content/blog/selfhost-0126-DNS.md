@@ -320,6 +320,27 @@ Why not doing [billing with OSS](https://fossengineer.com/open-source-invoice-cr
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="CF x Porkbun DNS API Py Scripts ↗" >}}
 {{< /cards >}}
 
+
+### Browsers
+
+1. Librewolf vs zen
+2. chromium vs brave vs hellium vs Tor browser
+
+TightVNC
+Remote Ripple VNC Viewer
+**Extensions**
+
+* Kanban board with our bookmarks: <https://github.com/d3ward/b2ntp>
+    Again, awsome job of <https://d3ward.github.io/about.html>
+* ublock origin
+* bitwarden
+
+**Add-ons**
+
+* Privacy Badger
+* https everywhere
+* ublock origin
+
 ### How can I Check my DNS?
 
 https://dnsprivacy.org/dns_privacy_daemon_-_stubby/

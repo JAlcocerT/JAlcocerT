@@ -114,7 +114,7 @@ The outcome should be a clear goals (like a [BRD](https://jalcocert.github.io/JA
 Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
 
 ```md
-Create a Landing Page based on NextJS with a cool and modern UI
+Create a sth sth sth like... a Landing Page based on NextJS with a cool and modern UI
 
 Include a `dockerfile` and `docker-compose.yml` that will control the title, description, open-graph image, favicon location and other global website variables via environment variables.
 
@@ -130,10 +130,6 @@ Create the z-development-plan.md with independent and testable phases that can b
 When it is completed, create a z-walkthrough.md with the steps to deploy the application and what each part of the tech stack does on a high level to bring the features to life.
 ```
 
-> This time I was more specific than others on the [UI, with **MUI** ](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#material-ui---mui)
-
-> > Also, [MIU has now its llm.txt](https://mui.com/material-ui/llms.txt)
-
 Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined already with Gemini is clear enough.
 
 If it is clear define the `z-development-plan.md` and proceed with the development phases.
@@ -145,15 +141,15 @@ If it is clear define the `z-development-plan.md` and proceed with the developme
 # git config --global user.name "JAlcocerT"
 # git config --global user.name
 # git add .
-# git commit -m "Initial commit: Starting simple make podcast platform"
+# git commit -m "Initial commit: Starting simple make xyz platform"
 ```
 
 ```sh
 #sudo apt install gh
 gh auth login
-#gh repo create make-podcast --private --source=. --remote=origin --push
+#gh repo create make-xyz --private --source=. --remote=origin --push
     
-git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create make-landing --private --source=. --remote=origin --push
+git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create make-xyz --private --source=. --remote=origin --push
 ###du -sh .
 #docker stop $(docker ps -a -q) #stop all
 #docker system df

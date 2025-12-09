@@ -39,6 +39,74 @@ And they are **no code**.
 
 ## SelfHostable Image Tools
 
+
+Mind your attention, stop auto engage and keep the important things at life first.
+
+{{< youtube id="ydG5EtQat_I" autoplay="false" >}}
+
+
+
+Concerned about container backups?
+
+<!-- 
+mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
+
+sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
+-->
+
+<!-- 
+https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
+
+https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
+<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
+
+https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
+<https://github.com/JAlcocerT/Docker/tree/main/Media> 
+-->
+
+
+<!-- https://gitlab.com/Linuxserver.io/docker-jellyfin/container_registry
+https://quay.io/repository/linuxserver.io/jellyfin
+https://hub.docker.com/r/linuxserver/jellyfin
+https://github.com/linuxserver/docker-jellyfin/pkgs/container/jellyfin -->
+
+
+
+<!-- ## FAQ
+
+### What is oobabooga?
+
+https://gist.github.com/mberman84/45545e48040ef6aafb6a1cb3442edb83
+
+#### More about RAGs
+
+https://www.youtube.com/watch?v=_cDRrSAKSnY
+https://mer.vin/2024/01/rag-with-chromadb-llama-index-ollama-csv/
+
+
+https://www.youtube.com/watch?v=71e6xfxrIRs - Understanding Gaussian Processes | Part 1 - What are Gaussian Processes? -->
+
+
+
+<!-- #### How to Select the Right Model?
+
+https://www.choosellm.com/ -->
+
+<!-- 
+https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms -->
+
+<!-- 
+https://www.youtube.com/watch?v=lBsv-ssPJpo -->
+
+<!-- 
+https://x.com/tom_doerr/status/1979894065400263086?
+
+* https://libreselfhosted.com/project/fluxbb/
+* https://awesome-docker-compose.com/apps/photo-server/pigallery-2
+
+ -->
+
+
 <!-- ### How to backup data?
 
 3-2-1

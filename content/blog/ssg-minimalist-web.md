@@ -3,7 +3,7 @@ title: "How to Save the Internet"
 date: 2025-11-21T23:20:21+01:00
 draft: false
 tags: ["Web ebook","Dev","Better Docs & Blog with Astro","Google Code Wiki","Twilight & DecapCMS"]
-description: 'Open Source Minimalist Websites. Checking Lighthouse CI to optimize the web.'
+description: 'Open Source Minimalist Websites. Discovered Lighthouse CI to optimize the web!'
 url: 'open-source-minimalist-websites'
 ---
 
@@ -205,6 +205,8 @@ You can add pretty quick an [n8n embedded chatbot](https://jalcocert.github.io/J
 
 > > This one gave me a presentL the concept of [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)
 
+I have added below a section to [tinker with lighthouse programmatically](#using-lighthouse-programatically) to apply it further.
+
 8. If you liked [fuwari](https://github.com/JAlcocerT/j-models), you'd love this: https://github.com/Spr-Aachen/Twilight
 
 ![Twilight Desktop Preview](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/docs/image/Desktop.jpg)
@@ -293,7 +295,26 @@ Probably not the best way to do very small websites unless you know what you are
 
 Going to Google Lighthouse is one thing.
 
-But having it...programatically!
+* https://github.com/GoogleChrome/lighthouse-ci
+
+> **Apache v2.0** | Automate running Lighthouse for every commit, viewing the changes, and preventing regressions 
+
+But having it...programatically...that so cool!
+
+The idea of this section is to pave the way to have a free website audit.
+
+And improve this section:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well" title="Web Checks | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+So lets get with it:
+
+```sh
+
+```
 
 ### Using Decap-CMS
 

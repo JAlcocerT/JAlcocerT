@@ -2,7 +2,7 @@
 title: "Understanding Algebra (again)"
 date: 2025-12-22T23:20:21+01:00
 draft: false
-tags: ["DSc","Outro","Math","STEM"]
+tags: ["DSc","Outro","Math","STEM","BCMS vs PagesCMS"]
 description: 'It takes something more than blindly multiplying matrixes to get to known them.'
 url: 'algebra-101'
 math: true
@@ -94,3 +94,21 @@ But before starting that, all the content that Ive created here has to go proper
 You can sneak peek at the ebooks Im cooking [here](https://github.com/JAlcocerT/JAlcocerT/tree/master/Z_ebooks)
 
 Lets see how that adventure goes!
+
+
+---
+
+## FAQ
+
+
+### Static Pages and Edition
+
+Bringing to the SSGs finally some cool editor has given me several head-aches.
+
+Recently I discovered about **BCMS and pages-cms**, which I wanted to try [as per this post](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#podcast).
+
+Aaaand...https://github.com/GetPublii/Publii
+
+> GPL3.0 The most intuitive **Static Site CMS** designed for SEO-optimized and privacy-focused websites. 
+
+In theory, all those can be selfhostable.

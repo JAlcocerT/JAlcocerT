@@ -168,10 +168,6 @@ Create also a makefile with the following commands:
 * `make container` - Build and Run in Docker container
 ```
 
-> This time I was more specific than others on the [UI, with **MUI** ](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/#material-ui---mui)
-
-> > Also, [MIU has now its llm.txt](https://mui.com/material-ui/llms.txt)
-
 Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined already with Gemini is clear enough.
 
 If it is clear define the `z-development-plan.md` and proceed with the development phases.

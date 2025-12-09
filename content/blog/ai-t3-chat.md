@@ -2,7 +2,7 @@
 title: "AI Chats with cool UIs are possible"
 date: 2025-11-30T08:20:21+01:00
 draft: false
-tags: ["Astro SSR","Groq TPS","BCMS vs PagesCMS","Web Analytics vs Link Analytics"]
+tags: ["Astro SSR","Groq TPS","Web Analytics vs Link Analytics"]
 url: 't3-like-chat'
 description: 'Integrating Astro Chat Themes to AI API Keys versus T3. Consolidating BiP+Vibe Coding with AI Agents.'
 ---
@@ -62,6 +62,8 @@ git clone https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot
 
 ```
 
+In this case, the vibe coding journey starts from this repository, so no need for the initial prompt.
+
 And on the recent [Audio with AI Post](https://jalcocert.github.io/JAlcocerT/audio-recap/), I was supposed to create a [Speech rater with FastAPI](https://github.com/JAlcocerT/py-speech-rater) that superseeds the [previous streamlit version](https://github.com/JAlcocerT/Streamlit-Speech).
 
 But I got an improvement of [my yt audio workflow](https://jalcocert.github.io/JAlcocerT/audio-recap/#conclusions) instead.
@@ -84,17 +86,6 @@ Some might say that its all [about CSS](https://jalcocert.github.io/JAlcocerT/bl
 
 
 
-### Static Pages and Edition
-
-Bringing to the SSGs finally some cool editor has given me several head-aches.
-
-Recently I discovered about **BCMS and pages-cms**, which I wanted to try [as per this post](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#podcast).
-
-Aaaand...https://github.com/GetPublii/Publii
-
-> GPL3.0 The most intuitive **Static Site CMS** designed for SEO-optimized and privacy-focused websites. 
-
-In theory, all those can be selfhostable.
 
 
 
@@ -102,6 +93,8 @@ In theory, all those can be selfhostable.
 
 ## Conclusions
 
+
+### About AI API Endpoints
 
 
 

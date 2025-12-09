@@ -35,8 +35,6 @@ As last alternative, you can go check [these no code CMS's](#websites-without-co
 
 <!-- ![alt text](/blog_img/selfh/kb/silverbullet.png) -->
 
-
-
 <!-- ![Frontmatter working with HUGO SSG](/blog_img/web/frontmatter/frontmatter-project.png) -->
 
 
@@ -105,6 +103,13 @@ graph TB
 
 
 This architecture provides a **production-ready, secure, and automated** blogging platform that **separates content management from content delivery**, ensuring both security and performance! 🚀
+
+
+### PageCMS
+
+Page-CMS is also an interesting option: https://github.com/pages-cms/pages-cms
+
+> MIT | The No-Hassle CMS for Static Sites Generators
 
 
 ### Strapi 

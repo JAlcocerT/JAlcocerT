@@ -1,9 +1,9 @@
 ---
-title: "A SaaS on Top of PaaS+SSG+CMS"
+title: "A SaaS on Top of PaaS x (SSG + CMS)"
 date: 2026-01-10T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS","BiP x DIY","VPS","DIY","RoadMap26"]
-description: 'Building a scalable way to provide performant websites.'
+tags: ["NextJS SaaS","BiP x DIY","VPS","DIY","RoadMap26","My Web Creation Journey"]
+description: 'Building a scalable way to provide performant websites. With Free Web Audits!'
 url: 'diy-webs-via-paas'
 ---
 
@@ -108,6 +108,27 @@ https://www.mangomedia.pl/pl/portfolio.html
 
 {{% /steps %}}
 
+
+## What the experience show me
+
+**a CMS x Astro, why?**
+
+From the experience: Dont do more than 3 websites to very close people if you they are not able to enable **self-service**.
+
+Thats where [selfhosted tools](https://docs.vrite.io/self-hosting/configuration/) like: https://github.com/vriteio/vrite are supposed to shine.
+
+>  Open-source developer content platform 
+
+I also got inspired by tools listed: https://www.awesome-homelab.com/category/writing
+
+Particularly by https://www.awesome-homelab.com/item/novel-editor
+
+> I would recommend you to consider DecapCMS or....
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="CMS 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 ## The journey of putting this together
 

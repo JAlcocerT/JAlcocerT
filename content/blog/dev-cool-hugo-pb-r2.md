@@ -274,7 +274,6 @@ And along the way, I saw this astro free theme https://recipes-starter.thebcms.c
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-
 ---
 
 ## FAQ

@@ -5,6 +5,14 @@ description: 'Career tools and recap. From self-learning to D&A '
 url: 'career'
 ---
 
+<!-- 
+deeper Power BI expertise, particularly in BI semantic model design and self-service analytics. 
+-->
+
+<!-- 
+MMM marketing analytics 
+-->
+
 
 <!-- * My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) -->
 
@@ -59,8 +67,19 @@ https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytic
 * [**Big Data** Tools](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/)
 * [**GCP** 101](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)
 
+
+
 https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/
 https://jalcocert.github.io/JAlcocerT/business-analytics-skills/
+
+
+https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/#why-these-are-important
+
+See this [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md) for Reference
+
+> Hey, if you are a SoloPreneur BiP, you can simplify all of this like so!
+
+
 https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics
 https://jalcocert.github.io/JAlcocerT/business-skills-data-analytics/
 https://jalcocert.github.io/JAlcocerT/decision-making-data-analytics/

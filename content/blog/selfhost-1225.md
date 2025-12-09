@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting is easy with PaaS"
-date: 2025-12-13T01:20:21+01:00
+date: 2025-12-12T19:20:21+01:00
 draft: false
 tags: ["HomeLab ebook","Excalidraw","1toN ebooks","Omarchy OS"]
 description: 'Selfhosting with your HomeLab and PaaS.'
@@ -14,97 +14,32 @@ A random server for ~4$/month is all you need.
 * https://one.one.one.one/
 
 
+There was another attack to npm affecting Posthog!
+
+And...one for REACT.
+
+Which is why i added this security faq for a refresh.
+
 **Intro**
 
 I tend to get inspired with this kind of [vm and containers that im running](https://blog.networkprofile.org/vms-and-containers-i-am-running-2023/) posts.
 
 As I played with PaaS, wanted to proove how easy and quick is to set them into a VPS for ~4$/month.
 
-
-Mind your attention, stop auto engage and keep the important things at life first.
-
-{{< youtube id="ydG5EtQat_I" autoplay="false" >}}
-
-<!-- 
-https://www.youtube.com/watch?v=ydG5EtQat_I -->
-
-gollama
-
-
-Concerned about container backups?
-
-<!-- 
-mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
-
-sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
--->
-
-<!-- 
-https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
-
-https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
-<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
-
-https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
-<https://github.com/JAlcocerT/Docker/tree/main/Media> 
--->
-
-There was another attack to npm affecting Posthog!
-
-
 > If you need a NAS, you can check HexOS
 
 > > But as is paid, consider
 
-
 * https://fleet.linuxserver.io/
-
-<!-- https://gitlab.com/Linuxserver.io/docker-jellyfin/container_registry
-https://quay.io/repository/linuxserver.io/jellyfin
-https://hub.docker.com/r/linuxserver/jellyfin
-https://github.com/linuxserver/docker-jellyfin/pkgs/container/jellyfin -->
-
-
-
-<!-- ## FAQ
-
-### What is oobabooga?
-
-https://gist.github.com/mberman84/45545e48040ef6aafb6a1cb3442edb83
-
-#### More about RAGs
-
-https://www.youtube.com/watch?v=_cDRrSAKSnY
-https://mer.vin/2024/01/rag-with-chromadb-llama-index-ollama-csv/
-
-
-https://www.youtube.com/watch?v=71e6xfxrIRs - Understanding Gaussian Processes | Part 1 - What are Gaussian Processes? -->
-
-
-
-<!-- #### How to Select the Right Model?
-
-https://www.choosellm.com/ -->
-
-<!-- 
-https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms -->
-
-<!-- 
-https://www.youtube.com/watch?v=lBsv-ssPJpo -->
-
-<!-- 
-https://x.com/tom_doerr/status/1979894065400263086?
-
-* https://libreselfhosted.com/project/fluxbb/
-* https://awesome-docker-compose.com/apps/photo-server/pigallery-2
-
- -->
-
-
 
 ## Excalidraw x Notes x SSGs
 
 Im a big fan of Excalidraw for D&A, specially architectural diagrams.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="Diagrams and PPTs | Docs ↗" >}}
+{{< /cards >}}
 
 For those times when you dont want to use MermaidKS, but just to make a quick drawing.
 
@@ -167,7 +102,6 @@ Direct, built-in support in major SSGs is less common, but you can usually achie
     2.  Use a **script or build step** (often involving the Excalidraw CLI) to convert the `.excalidraw` JSON into a static **SVG** or **PNG** file.
     3.  Embed the resulting SVG/PNG image in your Markdown note, which the SSG then publishes.
 
-
 ---
 
 ## Conclusion
@@ -188,8 +122,6 @@ And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their
   {{< card link="https://jalcocert.github.io/JAlcocerT/where-to-deploy/" title="To Which VPS deploy | Post ↗" >}}
 {{< /cards >}}
 
-
-
 > [CX23](https://www.hetzner.com/cloud/) > CX22 in performance?
 
 > > Pay only for the hours you use, if you have a server for less than a month. No minimum contract period required!
@@ -198,23 +130,29 @@ Keeping NS outside cloudflare and using the NGINX setup, instead of the Traefik 
 
 
 
-The **Sony- WF-1000XM3** and linux.
+### Random
 
-https://www.youtube.com/watch?v=m_Mr4bw8Pow
+2 years ago I put together couple of words with thoughts and snapshots that the world never got to see.
 
-* https://github.com/kavishdevar/librepods
+Now I have 3 ebooks ready to be consumed, while the world ends *one more time*
 
-> GPL 3.0 |  AirPods liberated from Apple's ecosystem. 
+https://x.com/shanaka86/status/1990231121976811961?s=20
 
-https://frantzroulet.com/blog/jekyll/update/2021/02/26/how_to_use_sony_wf-1000xm3_on_ubuntu_20.04_with_i3wm.html
 
-https://askubuntu.com/questions/1269083/ubuntu-20-04-bluetooth-true-wireless-headphones-not-working-work-in-previous-v
+I started another ebook: because everything has potential failures
 
-https://askubuntu.com/questions/1139404/sony-noise-cancelling-headphones-wh-1000xm2-3-and-bluetooth-initial-autoconnec
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web/book and also downlodable as PDFs" >}}
+{{< /cards >}}
 
-The **airpods pro** worked out of the box though...
+Expect ,n' to be:
 
-![Airpods connected to bluetooth to Linux](/blog_img/hardware/airpods-linux.png)
+1. Webpage creator: Because you can own your brand - DIY ofc
+2. Homelabs/Servers
+3. IoT
+
+#### Outages x Status x PlansB
+
 
 Not only [AWS](https://health.aws.amazon.com/health/status) will have outages.
 
@@ -254,6 +192,26 @@ https://github.com/tobychui/zoraxy?tab=AGPL-3.0-1-ov-file#readme
 
 General purpose (reverse) proxy and forwarding tool for networking noobs. Now written in Go!
 
+#### Airpods vs Sony
+
+The **Sony- WF-1000XM3** and linux.
+
+https://www.youtube.com/watch?v=m_Mr4bw8Pow
+
+* https://github.com/kavishdevar/librepods
+
+> GPL 3.0 |  AirPods liberated from Apple's ecosystem. 
+
+https://frantzroulet.com/blog/jekyll/update/2021/02/26/how_to_use_sony_wf-1000xm3_on_ubuntu_20.04_with_i3wm.html
+
+https://askubuntu.com/questions/1269083/ubuntu-20-04-bluetooth-true-wireless-headphones-not-working-work-in-previous-v
+
+https://askubuntu.com/questions/1139404/sony-noise-cancelling-headphones-wh-1000xm2-3-and-bluetooth-initial-autoconnec
+
+The **airpods pro** worked out of the box though...
+
+![Airpods connected to bluetooth to Linux](/blog_img/hardware/airpods-linux.png)
+
 
 If you just made your HomeLab, consider any of these media tools: pairdrop or nextcloud
 
@@ -268,6 +226,8 @@ If you just made your HomeLab, consider any of these media tools: pairdrop or ne
 
 I was [testing OS's](https://jalcocert.github.io/JAlcocerT/os-for-nas/) some time back.
 
+And SteamOS recently [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#thoughts-on-steamos-and-os-for-nas) :)
+
 When you think nothing can surprise you...
 
 You get to know a new Arch based OS:
@@ -280,7 +240,7 @@ And that [same person](https://dhh.dk/) is the creator of [ruby](https://jalcoce
 
 What?!  
 
-![alt text](/blog_img/selfh/omarchy/gnome-boxes.png)
+![GNOME Boxes to spin VMs](/blog_img/selfh/omarchy/gnome-boxes.png)
 
 ![alt text](/blog_img/selfh/omarchy/omarchy-memtest.png)
 
@@ -321,53 +281,21 @@ For a **general OS purposes**, as of today I would:
 
 ### Selfh 2025 Results
 
-https://selfh.st/survey/2025-results/
+People seem to be loving Immich and Nextcloud!
+
+* https://selfh.st/survey/2025-results/
 
 Who could have guessed, that donations are low: https://ko-fi.com/jalcocertech
 
-
-### Random
-
 > Intelligence is the ability to adapt to change
 
+If you enjoy my homelab repo, see also:
+```sh
+#git clone https://github.com/JAlcocerT/Home-Lab
 git clone https://github.com/atareao/self-hosted.git atareao
-
-
-**Tl;DR**
-
-2 years ago I put together couple of words with thoughts and snapshots that the world never got to see.
-
-Now I have 3 ebooks ready to be consumed, while the world ends *one more time*
-https://x.com/shanaka86/status/1990231121976811961?s=20
-
-
-**Intro**
-
-I started this ebook because everything has potential failures
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web ebook and also downlodable as PDFs" >}}
-{{< /cards >}}
-
-Expect ,n' to be:
-
-1. Webpage creator: Because you can own your brand
-2. Homelabs: 
-3. IoT
-
+```
 
 ---
-
-
-### What it is Gradio?
-
- Build Machine Learning Applications Easily with Gradio in Python 
-<https://www.youtube.com/watch?v=3DGLznJorT8>
-
-https://github.com/NeuralNine/drawing-classifier
-
-https://busterbenson.com/
-
 
 ## FAQ
 
@@ -414,21 +342,15 @@ https://awweso.me/booking-and-scheduling/
 
 
 
-### CMS x Astro
-
-From the experience: Dont do more than 3 websites to very close people if you they are not able to self-server.
-
-Thats where [selfhosted tools](https://docs.vrite.io/self-hosting/configuration/) like: https://github.com/vriteio/vrite are supposed to shine.
-
->  Open-source developer content platform 
-
-
-
-I also got inspired by tools listed: https://www.awesome-homelab.com/category/writing
-
-Particularly by https://www.awesome-homelab.com/item/novel-editor
-
 ### Improving HomeLab Security
+
+Whatever you are deploying, specially if you are managing your own VPS...
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/where-to-deploy/" title="Where to Deploy" image="/blog_img/selfh/hetzner-sharedcpu.png" subtitle="A VPS Recap on Hetzner, DO to ship PoCs and more" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/homelab-security/" title="About HomeLab Security | POST" image="/blog_img/hardware/ram-test.png" subtitle="BackUps x Privacy Apps x Private AI" >}}
+{{< /cards >}}
+
 
 <!-- 
 SECURITY TOOLS
@@ -451,15 +373,19 @@ ssh-keygen -t rsa -b 4096 -C "somemail@domain.ch"
 ssh root@yourhetznerserverip
 ```
 
+3. Create a non root user to run containers
+
+{{< callout type="warning" >}}
+This is a must for any VPS. It avoids attacks like the recent REACT Hack!
+{{< /callout >}}
+
 ### Business Canvas
 
-This is one of those entrepreneurship tools that I find useful: The business model canvas
+This is one of those entrepreneurship tools that I find useful: **The business model canvas**
 
 * https://en.wikipedia.org/wiki/Business_model_canvas
 
 * https://leantime.io/mastering-business-model-a-guide-to-completing-the-lean-canvas-model/
-
-
 
 ### Other services to deploy?
 
@@ -467,8 +393,6 @@ Interested to discover similar services that you can [self-host](https://fosseng
 
 {{< gist jalcocert c043e6645a8786f55640e5fbccbaea00
 "Docker-Business-ConfigFiles">}}
-
-
 
 {{< gist jalcocert 302f787db6f6d75e978674e0e18d1185
 "Docker-Security-ConfigFiles">}} 

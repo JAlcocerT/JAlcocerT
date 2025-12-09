@@ -1,9 +1,9 @@
 ---
 title: "[PaaS Recap] Software and Servers..."
-date: 2025-12-07T17:20:21+01:00
+date: 2025-12-08T16:20:21+01:00
 draft: false
 tags: ["Scaling SaaS","Coolify vs DokPloy","Cosmos Server","PaaS x OSS Driven Business"]
-description: 'Scaling SaaS via PaaS for a better DIY. Selfhost via MiniPC/NAS/homelab/VPS.'
+description: 'PaaS for a better DIY. Selfhost via MiniPC/NAS/homelab/VPS. My vibe coded WebApp Creation Journey Recap25'
 url: 'selfhosted-server-paas'
 ---
 
@@ -224,6 +224,56 @@ And with a https://github.com/azukaar/Cosmos-Server you can literally: ,*Escape 
 
 
 <!-- ![Umbrel OS Apps with one click install](/blog_img/selfh/umbrel-os/umbrel-apps.png) -->
+
+## Using PaaS to Host Vibe Coded WebApps
+
+This years is been all about using AI to create better Web/Apps.
+
+I still love Streamlit for D&A PoCs, but lets be real, there are other much more flexible fwks.
+
+This has been my journey with web apps up to today.
+
+And you can use any of their docker-compose.yml to host them via the covered PaaS!
+
+At the end, ill also leave some [other apps created and released as OSS](#what-exactly-do-you-need) which you might consider.
+
+
+{{% steps %}}
+
+### Tried RShiny After a DataCamp Course
+
+### Switched to Python and tried DASH
+
+This is how the trip planner was created, containerized and deployed to GCR, to be later moved to Cloudflare Tunnels.
+
+I also learnt to make container images via CLI, but also via CI/CD with GHA.
+
+### Got in love by Streamlit simplicity
+
+### Used Flask for quick webaps creeated by chatgpt on browser
+
+This look very ugly...
+
+But it got deployed with https :)
+
+### Live put me in a situation to use CodexCLI/Windsurf or fail
+
+### I failed, so started to build for me some WebApps
+
+
+### And I continued...
+
+### And continued
+
+### Until now
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+{{% /steps %}}
 
 
 ---
