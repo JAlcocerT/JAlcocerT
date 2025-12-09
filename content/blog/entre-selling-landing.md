@@ -2,7 +2,7 @@
 title: "Website knowledge updates. Waiting / Landings with...AI Bots?"
 date: 2025-10-17T10:20:21+01:00
 draft: false
-tags: ["Selfhosted-Landing x DFY","101 Astro & Hugo","BCMS test vs TiinyHost"]
+tags: ["Selfhosted-Landing x CAL DFY","101 Astro & Hugo","BCMS vs PagesCMS vs Payload CMS","SSG vs SSR"]
 description: 'New ATH for my SSG knowledge with IG Gallery OSS. Convert via Astro SSR and cal.com'
 url: 'selling-with-a-landing-website'
 ---
@@ -99,7 +99,27 @@ One more time, because I already gave a try to these from a [recent post](https:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pages-cms" title="Pages CMS Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-This can be used to get [a cool ig like gallery](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/ig-gallery-folder) without importing each file independently, just the folder where they are saved:
+Comparing these three highlights the split between the **Git-based** (Decap CMS, Pages CMS) and **API-based** (Payload CMS) approaches to content management.
+
+💻 CMS Comparison: Git-Based vs. API-Based
+
+| Feature | Decap CMS (Git-Based, Formerly Netlify CMS) | Pages CMS (Git-Based) | Payload CMS (API-Based, Headless) |
+| :--- | :--- | :--- | :--- |
+| **Architecture** | **Git-Based / Static UI** (Runs in browser) | **Git-Based / Hosted or Self-Hosted App** | **Headless / Database-Backed Server** (Node.js) |
+| **Content Storage** | Markdown, YAML, JSON **files** in Git repo. | Markdown, YAML, JSON **files** in Git repo. | **Database** (MongoDB, PostgreSQL, etc.). |
+| **Decoupling Style** | Content moves via **Git commit/pull**. Delivery relies on the build process. | Content moves via **Git commit/pull**. Delivery relies on the build process. | Content moves via **REST/GraphQL API**. Delivery is a runtime API call. |
+| **Container Setup (Self-Hosted)** | **Container 1 (CMS UI)**: Serves static assets for the Admin UI. **Container 2 (Auth)**: Must also deploy a separate Git Gateway/Auth server. | Similar to Decap: Requires a container to run the Pages CMS application/server, which handles the Git operations and Auth. | **Container 1 (CMS Server)**: Runs the entire Payload application (UI, Auth, API). **Container 2 (Database)**: Runs the persistent content database (e.g., PostgreSQL). |
+| **Best for** | Simple websites, small blogs, static generation (SSG) projects. | Teams prioritizing a quick, clean editor experience and simple deployments. | Complex data models, high content velocity, multi-channel delivery, true decoupling. |
+
+
+| CMS | Pros | Cons |
+| :--- | :--- | :--- |
+| **Decap CMS** | * **Lightweight:** The Admin UI is just a static React app. * **Low Overhead:** No separate database required. * **Git-Native:** Content fully version-controlled by Git. * **Astro Fit:** Extremely simple integration with Astro's file system routing. | * **Requires Auth Backend:** Self-hosting necessitates deploying a separate Git Gateway/OAuth container for security. * **Limited Scalability:** Not ideal for thousands of content items or frequent updates. * **Editor UX:** Less rich content editing features out-of-the-box compared to Payload. |
+| **Pages CMS** | * **User Experience (UX):** Generally praised for its modern, clean, and intuitive content editor interface. * **Open Source:** Full control if self-hosting. * **Fewer Moving Parts (Cloud):** Simple setup if using its hosted service. | * **Newer/Smaller Community:** Less established ecosystem and documentation than Decap or Payload. * **Similar Self-Host Complexity to Decap:** Still requires running an application/server (not just static files) to manage Git and Auth. |
+| **Payload CMS** | * **True Decoupling:** Content delivery is a clean API call. * **Developer Friendly:** TypeScript, auto-generated REST/GraphQL APIs. * **Rich Features:** Built-in Auth, file management, access control, versioning, and publishing workflows. * **Scalable:** Built on Node.js/Express and a proper database. | * **Higher Complexity:** Requires managing and containerizing a **database** (MongoDB/PostgreSQL). * **Overkill for Simple Sites:** More infrastructure and setup than a simple Astro landing page truly needs. * **Learning Curve:** Developers must learn Payload's schema-as-code configuration. |
+
+
+These can be used to get [a cool ig like gallery](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/ig-gallery-folder) without importing each file independently, just the folder where they are saved:
 
 ![IG Gallery astro and jsx for beyondajourney](/blog_img/web/udf/ig-gallery-beyondajourney.png)
 
@@ -187,7 +207,9 @@ If it is clear define the `z-development-plan.md` and proceed with the developme
 gh auth login
 #gh repo create selfhosted-landing --private --source=. --remote=origin --push
     
-git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create selfhosted-landing --private --source=. --remote=origin --push
+git init && git add . && git commit -m "Initial commit: simple landing website"
+gh repo create selfhosted-landing --private --source=. --remote=origin --push
+
 ###du -sh .
 #docker stop $(docker ps -a -q) #stop all
 #docker system df
@@ -201,6 +223,44 @@ The platform must offer a seamless, content-driven user interface and a flexible
 
 {{< /details >}}
 
+I chatted with gemini about SSR vs SSG one more time.
+
+```
+This is the right approach. Focusing on **Static Site Generation (SSG)** aligns perfectly with the goal of a fast, efficient, and simple landing page using Git-based content management (or manual JSON editing).
+
+Here is a draft of the **Business Requirements Document (BRD)** tailored for your Astro SSG project, emphasizing the required decoupling and containerized deployment.
+```
+
+Then, I asked to `Claude Sonnet 4.5`
+
+```
+see the z-brd.md, would you have any questions to before creating a z-development-plan.md with the phases to be completed
+```
+
+Then... I clarified:
+
+```
+the slider represents the $/h that people values their time
+
+min is 0, max is 600+
+
+the FAQ can have some sample placer holders
+
+the slider should just point with a cool arrow towards the calendar or to point to the faq section if its lower then 235
+
+make sure to provide favicon of image support for sharing and meta description, you can make your own images if possible
+
+makefile is also a must as per previous project wit baremetal vs container option, add also the lighthouse ci setup as another option
+
+i plan to deploy just local for now
+```
+
+And started:
+
+```
+lets proceed with the development, make sure that every phase works before jumping tothe next one
+```
+
 After the vibe coding is completed, we go from this:
 
 ![Excalidraw Wireframe for the UI](/blog_img/entrepre/selfh-landing/wireframe.png)
@@ -210,10 +270,11 @@ This very [simple state diagram](https://mermaid.js.org/syntax/stateDiagram.html
 ```mermaid
 stateDiagram-v2
     state if_state <<choice>>
-    [*] --> IsPositive
-    IsPositive --> if_state
-    if_state --> False: if n < 0
-    if_state --> True : if n >= 0
+    [*] --> ViewTheWeb
+    ViewTheWeb --> ReadHeaders
+    ReadHeaders --> if_state
+    if_state --> DIY: if n < 235
+    if_state --> BookCalCom : if n >= 235
 ```
 
 {{< cards >}}
@@ -223,7 +284,11 @@ stateDiagram-v2
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing.git
 #make help
+#make docker build && make docker-up
 ```
+
+> Going to `http://localhost:8080/`
+
 
 
 | Requirement | Specification | Clarification / Decision |
@@ -235,19 +300,89 @@ git clone https://github.com/JAlcocerT/selfhosted-landing.git
 
 > I had to play with CSR again *and trol a little bit*!
 
+Make sure to regulate the perceived supply/demand of your time: **configure cal properly**
+
+* https://cal.com/help/event-types/hideorganizersemail#hide-organizers-email
+* https://cal.com/help/event-types/limit-future-bookings
+
+
+And i tested lighthouse CI: *which creates a `assertion-results.json`*
+
+```sh
+make lighthouse
+```
+
+I made some change requests: *like this CR*
+
+```
+could we do so that instead of showing $/h value in the slider, we will show 3 options:
+
+Im learning, when it touches 0%
+A lot! when it goes >0 and <75% of the bar lenght
+Lambo Money: >=75%
+
+and the arrow should go on the right when we are on the A lot! to offer consulting
+
+And an arrow on the left that directs to the FAQ when we are on the other 2 cases
+
+the text and ranges should be easily configurable
+
+make the colors of the arrows match our current design and also provide detection of light/dark theme preference and possibility to change it
+```
+
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs Be | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-Additionally: I embeded a cal calendar
+Additionally: *I embeded a cal calendar, and also configured it better via its UI*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Calendar | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Formbricks | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef landing fill:#E3F2FD,stroke:#1976D2,stroke-width:3px,color:#0D47A1;
+    classDef steps fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#4A148C;
+    classDef slider fill:#FFF3E0,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef free fill:#E8F5E9,stroke:#388E3C,stroke-width:3px,color:#1B5E20;
+    classDef consult fill:#FFECB3,stroke:#FFA000,stroke-width:3px,color:#FF6F00;
+    classDef dfy fill:#FFCDD2,stroke:#D32F2F,stroke-width:3px,color:#B71C1C;
+
+    %% --- Nodes ---
+    START("🏠 Landing Page<br/>(Hero + Value Prop)"):::landing
+    STEPS("📋 Read Process<br/>(3-Step Guide)"):::steps
+    SLIDER("🎚️ Interactive Slider<br/>(Assess Time Value)"):::slider
+    
+    FREE("📚 FREE Path<br/>(DIY Guides)"):::free
+    CAL("📅 Consulting<br/>(Book Session)"):::consult
+    DFY("💎 Done For You<br/>(Premium Service)"):::dfy
+
+    %% --- Flow ---
+    START --> STEPS
+    STEPS --> SLIDER
+    
+    SLIDER -->|"0%<br/>I'm Learning"| FREE
+    SLIDER -->|"1-74%<br/>A lot!"| CAL
+    SLIDER -->|"75-100%<br/>Lambo Money"| DFY
+    
+    %% --- Outcomes ---
+    FREE -.->|"Explore FAQ"| END1["📖 Self-Learn"]
+    CAL -.->|"Book Time"| END2["🤝 Get Guidance"]
+    DFY -.->|"Check Resources"| END3["⚡ Fast Track"]
+```
+
 
 ### Adding a Simple ChatBot
+
+How could I not continue vibe coding....
+
+```md
+Create a simple chatbot for the landing page using OpenAI's API.
+```
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#ai" title="AI | Docs ↗" icon="book-open" >}}
@@ -351,7 +486,9 @@ It requires a compatible environment like Docker and supports various SQL databa
 
 > Design your data model, build powerful APIs, and manage content for anything from simple websites to complex applications.
 
-Baserow also offers a self-hosted version alongside their cloud option. The self-hosted deployment gives full control over infrastructure but requires installation and server maintenance, suitable for teams with IT resources.[3][4]
+Baserow also offers a self-hosted version alongside their cloud option.
+
+The self-hosted deployment gives full control over infrastructure but requires installation and server maintenance, suitable for teams with IT resources.[3][4]
 
 NocoDB supports both cloud and self-hosted variants as well. When self-hosted, you have complete control over your data and can customize and secure the deployment on your own infrastructure.[5][6]
 
@@ -549,3 +686,49 @@ To put astro/hugo inside a container is as simple as: *and you can also develop 
 The good thing about astro, is to plug that **image optimization** out of the box:
 
 ![Astro Image Optimization](/blog_img/web/astro-img-optim.png)
+
+
+### SSG vs SSR
+
+The reason I framed the content setup as **SSG-only** when relying on local JSON files is rooted in the architecture of **Git-based content** and the principle of **decoupling** for a **simple landing page**.
+
+1. The Nature of the Content (Landing Page)
+
+Your content is for a simple landing page with a slider and a Cal.com link.
+
+* **Content is Static:** The titles, descriptions, and slider items are generally edited and remain the same for every user, regardless of when they visit.
+* **Content Source:** The content is coming from local JSON files committed to your Git repository.
+
+In SSG, Astro reads those JSON files *once* during the build process and bakes the content into the static HTML files.
+
+2. Efficiency and Performance
+
+SSG is inherently faster, more efficient, and cheaper to host than SSR for static content.
+
+| SSG (Static Site Generation) | SSR (Server-Side Rendering) |
+| :--- | :--- |
+| **When HTML is Generated** | **At build time.** | **On every user request.** |
+| **Process** | Server reads JSON $\rightarrow$ Generates HTML. **DONE.** | Server receives request $\rightarrow$ Reads JSON $\rightarrow$ Generates HTML $\rightarrow$ Sends to user. (Repeated for every visit). |
+| **Performance** | **Blazing fast.** HTML is served instantly from a CDN. | Slower than SSG because it involves server computation on every request. |
+| **Cost & Scalability** | Very low cost, scales infinitely on a simple web server (like Nginx) or CDN. | Higher hosting cost due to persistent server runtime and higher server load. |
+
+**In short:** Since the JSON content doesn't change from request to request, running the logic on the server for *every single user* (SSR) is a waste of server resources when you can do it once during the build (SSG).
+
+3. The Coupling of Content and Code
+
+When you use the **Astro Content Collections API** to read local JSON files:
+
+* The content is sitting in the same folder structure as your code (`src/content`).
+* This content is fully available and type-checked **at build time**.
+
+While Astro *allows* you to read local files in an SSR context, the philosophy of Content Collections strongly aligns with pre-rendering. If you were truly decoupling with SSR, you would typically be fetching content from an external source (like Payload CMS's API) on every request, not reading local files.
+
+4. When SSR **Would** Be Necessary
+
+You would need to switch the Astro project to **SSR** if:
+
+1.  **Personalized Content:** You needed to show content based on user login, a cookie, or their location (e.g., "Welcome back, John!" or displaying user-specific details).
+2.  **Real-Time Data Fetching:** The slider data needed to be fetched from an external API (not your local JSON file) that updates every minute, and the site couldn't afford to wait for a rebuild.
+3.  **API Routes:** You wanted to host an API endpoint (e.g., `/api/submit-form`) directly within the Astro server container to handle form submissions or Cal.com webhook responses.
+
+**Conclusion:** Since your goal is a **simple landing page configurable via JSON**, **SSG** provides the maximum performance, efficiency, and cost savings while still achieving separation (via the Git/CI/CD pipeline) between the configuration data (JSON) and the delivery layer (Nginx serving static HTML).

@@ -127,6 +127,9 @@ Among [all the things that can be embedded](https://jalcocert.github.io/JAlcocer
 
 {{< /details >}}
 
+* https://cal.com/help/event-types/hideorganizersemail#hide-organizers-email
+* https://cal.com/help/event-types/limit-future-bookings
+
 {{< cards >}}
   {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
 {{< /cards >}}

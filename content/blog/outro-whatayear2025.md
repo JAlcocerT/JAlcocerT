@@ -1517,6 +1517,8 @@ Thanks to this sites, I get to know more cool apps:
 
 AI... ofc
 
+![AI Trend in Google Search late 2025](/blog_img/GenAI/ai-trend.png)
+
 Despite popularity has...decreased recently?
 
 Im including here: **MCP**, which it was all hyped around spring and non used today due to high token consumption

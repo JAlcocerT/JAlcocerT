@@ -26,6 +26,14 @@ See what works and what not - PMF
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+These kind of **micro-SaaS** are so so cool:
+
+* https://tiiny.host/
+
+> The simplest way to host & share your work online
+
+
+Why couldnt SLubnyChwile be one of those? :)
 
 **Intro**
 
