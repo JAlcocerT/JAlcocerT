@@ -9,11 +9,6 @@ url: 'web-cms-101'
 
 Most likely than not, you heard about these [*,no code required'* CMS's](#websites-without-coding): the mighty wordpress and Ghost and [their APIs](https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/#programatic-wp).
 
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="Ghost with Docker 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wordpress" title="WP with Docker 🐋 ↗" >}}
-{{< /cards >}}
-
 
 **If you are here because you like SSGs like Astro or HUGO...**
 
@@ -410,9 +405,14 @@ Im sure that you are wondering what [about wordpress or ghost](https://jalcocert
   {{< card link="https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio" title="LinkStack vs LittleLink" image="/blog_img/web/web-linkstack.png" subtitle="Two Selfhosted Link Alternatives" >}}
 {{< /cards >}}
 
-I will be adding here more drag and drop, **no code content management** systems.
+I will be adding here more drag and drop, [**no code content management** systems](https://jalcocert.github.io/JAlcocerT/no-code-websites/).
 
-Particularly ones that are OSS and that you can use freely within your HomeLab/VPS.
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="Ghost with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wordpress" title="WP with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+Particularly ones that are **OSS & Selfhostable**, so that you can use them freely and legally within your HomeLab/VPS.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="Selfhosting | Docs ↗" icon="book-open" >}}

@@ -7,6 +7,12 @@ description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-and-more-2025'
 ---
 
+AI is much better at code than it is to draf-n-drop.
+
+So if you know which tools to ask for, you get much better results.
+
+But hey, if you want to still spend a weekend to get a crappy looking wordpress - feel free to do so.
+
 <!-- date: 2025-12-25 -->
 
 {{< cards >}}
@@ -1582,6 +1588,53 @@ Create a Roadmap!
 7. Prepare the DIY/DWY/DFY based on the ebooks and blog content ~ *Wiki efforts*
 
 {{< /details >}}
+
+Build.
+
+But if you are one, doing ONLY what people wants is not optional.
+
+```mermaid
+graph TD
+    %% Strategy Phase
+    subgraph Strategy [1. STRATEGY: Founder/CEO]
+        A[Idea/Problem] --> B[BRD: Business Case]
+        B -->|Why?| C{Is it Profitable?}
+    end
+
+    %% Tactics Phase
+    subgraph Tactics [2. TACTICS: Product Manager]
+        C -- Yes --> D[PRD: Product Roadmap]
+        D -->|What?| E{Is it Usable?}
+    end
+
+    %% Execution Phase
+    subgraph Execution [3. EXECUTION: Engineering]
+        E -- Yes --> F[FRD: Technical Specs]
+        F -->|How?| G[Development/Code]
+    end
+
+    %% Solo-Dev Loop
+    subgraph SoloDev [Indiehacker Loop]
+        H[Strategy Lite] -.-> I[Tactics Lite] -.-> J[Execution Lite]
+        J -.-> G
+    end
+
+    %% Documentation Links
+    B -. Business Objective .-> D
+    D -. User Needs .-> F
+    F -. Logic .-> G
+```
+
+You have limited time resources, combined with low capital.
+
+Fortunately, you have tools to know what your clients want and double down in that direction.
+
+https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/
+
+![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+
+
+
 
 #### Keep Doing
 

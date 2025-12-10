@@ -561,9 +561,14 @@ ffmpeg -y -i initial_silenced_video.mp4 -stream_loop -1 -i afilador_101.mp3 \
 
 ### Animations as a Code
 
-Some time back I was [people doing great animations](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/):
+Some time back I was [people doing mechanism animations](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/):
 
 ![Matplotlib GIF Animation of a mechanism](/blog_img/mechanics/fourbarlinkage.gif)
+
+Inspired by:
+<!-- https://www.youtube.com/watch?v=usY-oBifcM4 -->
+
+{{< youtube "usY-oBifcM4" >}}
 
 As we saw in summer, we can do [cool animations as a code](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/)
 

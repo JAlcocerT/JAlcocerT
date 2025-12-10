@@ -7,7 +7,6 @@ description: 'Stripe 101. Selling Themes and editing capabilities for SSG powere
 url: 'using-stripe-with-flask'
 ---
 
-
 **TL;DR** 
 
 Business concepts to help you help others for money, *aka sell*
@@ -269,7 +268,7 @@ docker build -t webifai:latest .
 #   -v $(pwd)/payments.db:/app/payments.db \
 #   --network cloudflared_tunnel \
 #   --name webifai webifai:latest
-ping webify.jalcocertech.com
+ping webify.jalcocertech.com #https://webify.jalcocertech.com/
 ```
 
 See that you have **email validation with Logto** out of the box:

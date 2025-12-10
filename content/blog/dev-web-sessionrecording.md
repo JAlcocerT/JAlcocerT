@@ -34,11 +34,11 @@ What are the users experiencing.
 > >  But there are some alternatives
 
 
-This is a client that reveals that it **actually wants**:
+This is a client that reveals that it **actually wants**: *and with these tools, you will know this!*
 
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 
-We all need help, but how much help do we need?
+We all need help, but how much help do we need? And to do...what?
 
 ![Cal x Stripe](/blog_img/email/cal-email-stripe.png)
 
@@ -155,6 +155,11 @@ This year *seems to be* the year of: uv, makefile and [pocketbase](https://jalco
 You can have also your own [DIY survey / forms](#diy-forms-with-pb) tool for your Saas by [using PB](#why-with-pocketbase).
 
 ### Forms
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="FB | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#posthog" title="PostHog | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 #### Formbricks
 

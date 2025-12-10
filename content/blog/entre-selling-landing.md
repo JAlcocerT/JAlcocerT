@@ -596,7 +596,7 @@ The concept: *diy vs dwy vs dfy is one that im trying to shape into reality*
 
 {{< youtube "spXH1kJ6q-Q" >}}
 
-> Chapter 7 was great inspiration!
+> Chapter **7** was great inspiration!
 
 ```mermaid
 flowchart LR

@@ -2,7 +2,7 @@
 title: "A SaaS with 100% Churn, yet LTV > CAC"
 date: 2026-01-07T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS","Nextacular","SlubneChwile","BiP BoilerPlate","RoadMap26"]
+tags: ["Landing x NextJS SaaS","Nextacular","SlubneChwile","BiP BoilerPlate","RoadMap26"]
 description: 'How to code a Saas with NEXTjs and directing traffic via ads'
 url: 'code-your-saas'
 ---
@@ -28,12 +28,22 @@ See what works and what not - PMF
 
 These kind of **micro-SaaS** are so so cool:
 
-* https://tiiny.host/
+1. https://tiiny.host/
 
 > The simplest way to host & share your work online
 
+2. https://github.com/uselinked/website from https://uselinked.com/
 
-Why couldnt SLubnyChwile be one of those? :)
+3. https://supersaas.dev/ -  The Simple, Fast & Smart Nuxt 3 Fullstack Kit.
+
+> Starter kit / boilerplate landing with...a one time payment / Lifetime access.
+
+4. https://github.com/anthonylan/angie - I love those arrows and the look... https://github.com/JAlcocerT/angie
+
+> MIT |  Angie is a free, open-source portfolio template featuring a bold, brutalist design that helps you stand out and showcase your work with style. 
+
+Why couldnt SLubnyChwile be one of those cool UIs? :)
+
 
 **Intro**
 

@@ -215,8 +215,7 @@ You can always [embed things](https://jalcocert.github.io/JAlcocerT/embed-that/)
 
 ## Ads
 
-![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
-
+<!-- ![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png) -->
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known" title="Marketing  Example for Services" image="/blog_img/biz/leads/good-old-ad.png" subtitle="Guerrilla Marketing via PDFs!" >}}

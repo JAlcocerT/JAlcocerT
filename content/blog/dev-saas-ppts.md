@@ -94,18 +94,20 @@ Can a CLi agent, like Codex, Gemini CLI or Claude Code help to create the skelet
 
 ## Conclusions
 
-
-https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/#ppts
-
 After [this post](https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-to-create-an-slidev-editor) where I started the SliDev Editor with NextJS just to learn how to implement [proper social auth with firebase our email verified via logto](https://jalcocert.github.io/JAlcocerT/social-signin-101/#how-to-create-an-slidev-editor): 
 
 ![SliDevJS editor with NextJS and Logto/firebase working for auth](/blog_img/DA/ppt/slidev-editor.png)
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/#ppts" title="PPTs | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 NextJS combined with Logto worked perfectly: *there is a logto branch in the repo for this, separated from the firebase one*.
 
 ![alt text](/blog_img/DA/ppt/slidev-logto.png)
 
-We get redirected to a custom subdomain for Logto Auth:
+We get redirected to a **custom subdomain for Logto Auth**:
 
 ![alt text](/blog_img/DA/ppt/slidev-editor-signin-up.png)
 
@@ -174,15 +176,18 @@ While not strictly "code-as-PPT," these modern tools use code and data to genera
 
 This year iv done [few other tech talks](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#other-tech-talks).
 
-https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/
+* https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/
+* https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#the-ai-tech-stack
+* https://jalcocert.github.io/JAlcocerT/ai-assistant-streamlit/#dbchat-assistant
 
-https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#the-ai-tech-stack
+<!-- ![AIssistant](/blog_img/apps/ai-assistant-dbchat.png) -->
 
-https://jalcocert.github.io/JAlcocerT/ai-assistant-streamlit/#dbchat-assistant
-
-![AIssistant](/blog_img/apps/ai-assistant-dbchat.png)
-
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-assistant-streamlit/#dbchat-assistant" title="Chatting with a DB" image="/blog_img/apps/ai-assistant-dbchat.png" subtitle="Post about how to chat with a database!" >}}
+{{< /cards >}}
 
 {{< youtube "KXamTdJA-uc" >}}
+
+Including, how to run LLMs locally: *from Q1 2024!*
 
 {{< youtube id="vukAQPCv7Tw" autoplay="false" >}}

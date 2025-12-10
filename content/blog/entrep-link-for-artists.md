@@ -301,12 +301,37 @@ make help
 #make install && make dev
 ```
 
-> This is how easy is to go today beyond WP and Elementor!
+> This is how easy is to go today **beyond WP and Elementor**!
 
 > > And is not a bad niche at all, as I havent seen any Selfhostable SaaS for this kind of service with hosted version for money
 
 
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
+
+
+```sh
+git clone https://github.com/JAlcocerT/selfhosted-landing.git && cd selfhosted-landing
+make help
+#export PUBLIC_UMAMI_SCRIPT_URL= & export PUBLIC_UMAMI_WEBSITE_ID=
+#make docker-build && make docker-up
+#docker run -d -p 8044:80 --name selfhosted-landing selfhosted-landing:latest
+#docker network ls | grep cloudflared_tunnel
+docker network connect cloudflared_tunnel selfhosted-landing #connect
+##docker inspect selfhosted-landing --format '{{json .NetworkSettings.Networks}}' | jq
+```
+
+```yml
+    networks:
+      - cloudflared_tunnel #to expose it to the internet
+
+networks:
+  cloudflared_tunnel:
+    external: true # Mark the 'tunnel' network as external     
+```
+
+Finish your CF Tunnels setup via UI: `selfhosted-landing-prod:80`
+
+And you will get a companion of the existing `https://diy.jalcocertech.com/api/book`. Yeeea: its here: <https://consulting.jalcocertech.com/>
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}

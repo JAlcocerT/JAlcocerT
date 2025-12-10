@@ -262,12 +262,36 @@ Ive prepared a tech talk about this **mermaid x openAI** setup:
 
 ```sh
 git clone https://github.com/JAlcocerT/slidev-editor
-
+#git branch -a
+#git checkout -b logtojseauth main
+#git status --porcelain && echo "---" && git pull origin logtojseauth
+#git show --stat d21233214c504640056180db03c9c98edd06c1ae
 ```
+
+I also promised myself that this is the last i will do this year.
 
 ---
 
+
+
 ## FAQ
+
+**Others ppts ive worked on and how to run them**
+
+```sh
+git clone https://github.com/JAlcocerT/slidev-editor.git
+#cd slidev/slidev-ba-tech-talk-exadel
+#npm install
+#npm run dev
+```
+
+Remember that you need the `./public` folder to provide custom background assets!
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/#ppts" title="PPTs | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+> Last one from here, was [this ppt on...slidev ppts as a code](https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/)!
 
 ### Architecture and Icons
 

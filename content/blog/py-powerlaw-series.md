@@ -179,26 +179,8 @@ To make the most of these techniques, a data analyst should have:
 
 ### Other (RANDOM) Things Ive done recently
 
+Im getting more confortable with DecapCMS...
+
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="Web CMSs | Docs ↗" >}}
 {{< /cards >}}
-
-#### F/OSS CMS
-
-Directus: Directus is an open-source headless CMS that offers real-time data synchronization and versioning.
-
-It provides a database-agnostic API and a user-friendly admin interface. And it can also handdle authentication
-
-* https://github.com/directus/directus
-
-> Headless Data Platform
-
-Cockpit: Cockpit is a lightweight, self-hosted, and open-source CMS.
-
-It's designed for developers and offers an API-first approach with flexible content types and fields.
-
-* Strapi: As mentioned earlier, Strapi is a popular open-source headless CMS that allows you to create, manage, and expose content via RESTful APIs or GraphQL.
-
-ButterCMS: ButterCMS provides a headless content management system with a RESTful API. It's designed for developers and integrates easily with various tech stacks.
-
-Tipe: Tipe is an open-source headless CMS with a focus on simplicity and developer-friendliness. It offers a visual editor for content and GraphQL API support.

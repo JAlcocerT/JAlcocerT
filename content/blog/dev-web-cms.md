@@ -677,3 +677,24 @@ With something tangible ofc, at least a PMF via [formbricks](https://jalcocert.g
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="CMS 101 | Docs ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+
+#### F/OSS CMS
+
+1. Directus: Directus is an open-source headless CMS that offers real-time data synchronization and versioning.
+
+It provides a **database-agnostic API** and a user-friendly admin interface. And it can also handdle authentication
+
+* https://github.com/directus/directus
+
+> Headless Data Platform
+
+2. Cockpit: Cockpit is a lightweight, self-hosted, and open-source CMS.
+
+It's designed for developers and offers an API-first approach with flexible content types and fields.
+
+3. Strapi: As mentioned earlier, Strapi is a popular open-source headless CMS that allows you to create, manage, and expose content via RESTful APIs or GraphQL.
+
+4. ButterCMS: ButterCMS provides a headless content management system with a RESTful API. It's designed for developers and integrates easily with various tech stacks.
+
+5. Tipe: Tipe is an open-source headless CMS with a focus on simplicity and developer-friendliness. It offers a visual editor for content and GraphQL API support.

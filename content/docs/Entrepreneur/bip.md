@@ -125,14 +125,24 @@ Create also a makefile with the following commands:
 * `make dev` - Run development server
 * `make container` - Build and Run in Docker container
 
-Create the z-development-plan.md with independent and testable phases that can be completed sequentially.
+Create the `z-development-plan.md` with independent and testable phases that can be completed sequentially.
 
-When it is completed, create a z-walkthrough.md with the steps to deploy the application and what each part of the tech stack does on a high level to bring the features to life.
+When it is completed, create a `z-walkthrough.md` with the steps to deploy the application and what each part of the tech stack does on a high level to bring the features to life.
+
+Consider adding a **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
+
+Consider adding **Umami web analytics capabilities** to the WebApp when using the container, by adding the possibility to feed the PUBLIC_UMAMI_SCRIPT_URL and PUBLIC_UMAMI_WEBSITE_ID to be used via <script defer src="" data-website-id=""></script>
 ```
 
 Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined already with Gemini is clear enough.
 
 If it is clear define the `z-development-plan.md` and proceed with the development phases.
+
+As you will need to iterate across features, do it like a pro with change-requests:
+
+```md
+
+```
 
 ```sh
 # git init
@@ -171,6 +181,7 @@ Before starting any project, you should have clarity on:
 | **Styling/UI Library** | | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
 
 <!-- 
 ![Terms and Conditions / Privacy](/blog_img/entrepre/webify/flask-terms-privacy.png) -->

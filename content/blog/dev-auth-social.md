@@ -519,9 +519,9 @@ It was working perfectly, as you can see on the related source code:
 
 But I want to compare kneck to kneck with couple of new *auth architectures* ive been learning along the way.
 
-
-
 ![Logto Admin Panel](/blog_img/entrepre/public-build/slidev-editor/logto1-panel.png)
+
+So switch to the LogtoJS branch and let's get to it:
 
 ```sh
 git branch -a
@@ -530,10 +530,12 @@ git checkout -b logtojseauth main #git checkout -b <new-branch-name> main
 #git checkout main && git pull origin main
 ```
 
-```
+I was prompting the agents with sth like:
+
+```md
 and can we implement similar setup to the firebase authentication, but with LogtoJS?
 
-Add a z-logto-setup.md explaining what I need to do from logto web UI and also create the required env.sample
+Add a `z-logto-setup.md` explaining what I need to do from logto web UI and also create the required `env.sample`
 ```
 
 ```sh
@@ -553,7 +555,7 @@ NEXT_PUBLIC_LOGTO_APP_ID=your-app-id-here
 LOGTO_APP_SECRET=your-app-secret-here
 ```
 
-Remember about redirect URIs:
+Remember about setting up right **redirect URIs**:
 
 ```yml
 http://localhost:3000/callback
@@ -636,7 +638,7 @@ Because https://gamma.app/ does not have to be the only one doing nice stuff.
 
 Logto, Firebase Authentication, and PocketBase SDK implement authentication differently, with distinct approaches, features, and use cases. 
 
-Logto Authentication
+**Logto Authentication**
 
 - Logto is an open-source identity infrastructure focused on secure, standards-based authentication using OAuth 2.1 and OpenID Connect (OIDC).
 - It supports web, mobile, desktop, machine-to-machine (M2M) authentication, and third-party application integration as an Identity Provider (IdP).
@@ -673,7 +675,7 @@ Firebase Authentication
 - Pricing can rise steeply with scale and advanced features.
 - Less flexible in protocol customization, mainly focused on user auth.
 
-PocketBase SDK Authentication
+**PocketBase SDK Authentication**
 
 - PocketBase is an open-source backend framework with built-in lightweight authentication supporting password, OTP, OAuth2 providers, and multi-factor authentication.
 - Uses stateless JWT tokens sent with requests; no traditional server sessions.
@@ -694,7 +696,7 @@ PocketBase SDK Authentication
 - More suitable for small-medium projects or embedded auth in local backends.
 
 
-| Feature / Platform      | Logto                               | Firebase Authentication                        | PocketBase SDK                        |
+| **Feature / Platform**      | Logto                               | Firebase Authentication                        | PocketBase SDK                     |
 |------------------------|-----------------------------------|-----------------------------------------------|-------------------------------------|
 | Type                   | Open-source OIDC/OAuth provider   | Managed Backend Auth-as-a-Service             | Open-source backend with SDK        |
 | Authentication Methods | OAuth 2.1, OIDC, Social, SAML     | Email/Password, Phone, Social providers        | Password, OTP, OAuth2, MFA          |
@@ -727,7 +729,9 @@ In Logto (and generally in web development), the difference between a traditiona
 
 - Traditional web apps (also called multi-page apps or MPAs) render pages entirely on the server. Each user action like clicking a link or submitting a form causes the browser to request a new page from the server, which returns the full HTML for that page. This approach works well for simple apps with mainly read-only content and benefits from being SEO-friendly and able to function without JavaScript.
 
-- SPAs load a single HTML page initially and dynamically update the content within that page as users interact, without full page reloads. SPAs rely heavily on client-side JavaScript frameworks (like React or Vue) to fetch and render data on the fly, offering a smooth, app-like user experience that is highly interactive and fast. SPAs require JavaScript support and are more complex to develop and optimize, particularly for SEO.
+- SPAs load a single HTML page initially and dynamically update the content within that page as users interact, without full page reloads. SPAs rely heavily on client-side JavaScript frameworks (like React or Vue) to fetch and render data on the fly, offering a smooth, app-like user experience that is highly interactive and fast. 
+
+> SPAs require JavaScript support and are more complex to develop and optimize, particularly for SEO.
 
 Why it matters in Logto and general application scenarios:
 

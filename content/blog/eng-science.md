@@ -45,6 +45,10 @@ https://www.youtube.com/watch?v=1spW6vkpPMU
 Only for AC (not DC!)
 {{< /callout >}}
 
+{{< youtube "me6034BrwN8" >}}
+<!-- 
+https://www.youtube.com/watch?v=me6034BrwN8 -->
+
 {{< details title="More about Reactive Power 📌" closed="true" >}}
 
 Reactive power is crucial for efficient electricity transmission and distribution.
