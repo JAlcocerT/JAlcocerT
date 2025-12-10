@@ -1,6 +1,6 @@
 ---
 title: "Using Blender with AI"
-date: 2025-12-17
+date: 2026-12-17
 draft: false
 # cover:
 #     image: "https://socialify.git.ci/alejandro-ao/ask-multiple-pdfs/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"

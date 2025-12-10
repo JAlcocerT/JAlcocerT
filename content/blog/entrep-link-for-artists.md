@@ -505,6 +505,8 @@ See also HUGO Theme Gallery implemented [here](https://jalcocert.github.io/JAlco
 
 Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#photo-gallery).
 
+![IG Gallery astro and jsx for beyondajourney](/blog_img/web/udf/ig-gallery-beyondajourney.png)
+
 I have **added few** shortcodes/components: *like [whatsap bouble](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble)*
 
 {{< cards >}}

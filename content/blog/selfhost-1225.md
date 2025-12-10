@@ -1,18 +1,18 @@
 ---
 title: "SelfHosting is easy with PaaS"
-date: 2025-12-12T19:20:21+01:00
+date: 2025-12-17T19:20:21+01:00
 draft: false
 tags: ["HomeLab ebook","Excalidraw","1toN ebooks","Omarchy OS"]
 description: 'Selfhosting with your HomeLab and PaaS.'
 url: 'selfhosted-apps-december-2025'
 ---
 
+
 **Tl;DR**
 
 A random server for ~4$/month is all you need.
 
 * https://one.one.one.one/
-
 
 There was another attack to npm affecting Posthog!
 

@@ -555,11 +555,13 @@ You better run away and/or change your product.
 
 You could also get a [proper sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/) to get you qualified leads who actually can benefit from your help.
 
-There is a limit to your time.
+There is a limit to how much time you have.
 
 And you can record yourself to typical questions and setups:
 
 {{< youtube "uyXdHC95cU0" >}}
+
+Even twice:
 
 {{< youtube "jO-PiZyVWe8" >}}
 
@@ -570,7 +572,7 @@ Also, you can write docs for anyone to replicate:
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="Web CMSs | Docs ↗" >}}
 {{< /cards >}}
 
-But ultimately: If you have also started cheap while learning and now you got so good that the supply << demand
+**But ultimately**: If you have also started cheap while learning and now you got so good that the supply << demand
 
 Its time for stopping and **thinking whats next**. 
 

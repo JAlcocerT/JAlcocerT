@@ -2,11 +2,14 @@
 title: "Websites with SSG x CMS - The missing piece"
 date: 2025-05-18T22:20:21+01:00
 draft: false
-description: "UI/X for customizing SSGs. Keystatic and more"
+description: "UI/X for customizing SSGs. Considering Keystatic and other content management systems"
 tags: ["Web","CMS","Entrepreneur","FrontMatter CMS","KeyStaticCMS"]
 url: 'cms-for-static-websites'
 ---
 
+**Tl;DR**
+
+Putting together some CMS to hopefully enable edits to SSG via UI's.
 
 **Intro**
 
@@ -667,3 +670,10 @@ Do people *just* want some kind of [linktree alternative](https://jalcocert.gith
 There is just one way to know: **testing the market** 
 
 With something tangible ofc, at least a PMF via [formbricks](https://jalcocert.github.io/JAlcocerT/blog/dev-forms/#formbricks)! 
+
+### Docs about CMS
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="CMS 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}

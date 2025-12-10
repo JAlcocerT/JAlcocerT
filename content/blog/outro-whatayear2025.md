@@ -661,6 +661,10 @@ And that [BRD PRD FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data
 {{< /cards >}}
 
 
+13. The difference between helping and serving 🤯
+
+14. The difference between something CAN happen and WILL happen 🤯
+
 ## Entrepreneuring
 
 I feel (literally) like in the **back straight of a circuit** after having couple of laps to recognize my breaking/aceleration points.

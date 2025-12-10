@@ -7,29 +7,37 @@ next: docs/
 url: 'web-cms-101'
 ---
 
-Most likely than not, you heard about these [*,no code required'* CMS's](#websites-without-coding):
+Most likely than not, you heard about these [*,no code required'* CMS's](#websites-without-coding): the mighty wordpress and Ghost and [their APIs](https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/#programatic-wp).
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="Ghost with Docker 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wordpress" title="WP with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
-The thing about frontmatter, is that you will still to enjoy writing in markdown.
+
+**If you are here because you like SSGs like Astro or HUGO...**
+
+...and you dont like to have DBs, neither you mind to open a IDE, you have FrontMatterCMS.
+
+The thing about frontmatter: is that you will still to enjoy writing in markdown.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/#frontmatter-cms" title="Testing FrontmatterCMS" image="/blog_img/web/frontmatter/frontmatter-project.png" subtitle="Learn the concepts and tools to SelfHost confortable" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/knowledge-management/#what-it-is-wysiwyg" title="Flat Files KB" image="/blog_img/selfh/kb/silverbullet.png" subtitle="Tools like SilverBullet or LogSeq are flat file centered" >}}
 {{< /cards >}}
 
-If you end up liking .md, you will be able to use it for your website and skip those database setups (and maintainance)
+If you end up liking `.md`, you will be able to use it for your website and skip those database setups (and maintainance)
 
-From there, you can either build your own editor on top of astro/hugo themes:
+From there, you can:
+
+1. Either build your own editor on top of astro/hugo themes: *naaah...*
 
 ![NextJS Reactmd editing astro sphere theme](/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png)
 
-Or use any of these [CMS combined with SSGs](#cool-cms)
+2. Or use any of these [CMS combined with SSGs](#cool-cms) - *this makes a lovely stack and very efficient webs*
 
-As last alternative, you can go check [these no code CMS's](#websites-without-coding)
+3. As last alternative, you can go check [these no code CMS's](#websites-without-coding) - *we all have had a WP at some point*
+
 
 ## Cool CMS
 
@@ -37,6 +45,25 @@ As last alternative, you can go check [these no code CMS's](#websites-without-co
 
 <!-- ![Frontmatter working with HUGO SSG](/blog_img/web/frontmatter/frontmatter-project.png) -->
 
+This docs are focusing on DecapCMS because:
+
+* Its fully OSS and selfhostable
+* Integrates perfectly with Astro themes
+* Its Flat file (no DBs!) and GIT based - so you get full trazability AND you can use CI/CD
+* Plus you get cool decoupling between content edition and content presentation/delivery
+
+You can skip all the [tinkering across **several CMS**](https://jalcocert.github.io/JAlcocerT/cms-for-static-websites/) as I have been doing over time.
+
+Make sure to differenciate when you are **helping vs serving others**, if you are trying to build a business around website creation.
+
+Before serving others, make sure to get one of those CMSs going and included in your proposal, to avoid been the content manager of anyone for free.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+Having said that...lets go.
 
 **All Git-based CMS are a subset of file-based CMS.**
 
@@ -101,9 +128,66 @@ graph TB
     style CustomDomain fill:#2ecc71
 ```
 
+* https://decapcms.org/docs/github-backend/
+
+<!-- 
+https://gemini.google.com/app/e56f65561d33fd86?hl=pl -->
 
 This architecture provides a **production-ready, secure, and automated** blogging platform that **separates content management from content delivery**, ensuring both security and performance! 🚀
 
+That is the most important distinction when self-hosting Decap CMS! The choice between the **Direct GitHub Backend** and the **Git Gateway Backend** dictates your security, user management, and containerization complexity.
+
+Here is a breakdown of the two approaches, emphasizing why the **Git Gateway** is the superior choice for managing non-developer editors.
+
+---
+
+## 🆚 Direct GitHub Backend
+
+The Direct GitHub Backend relies on GitHub's native OAuth flow to authorize users.
+
+| Feature | Details |
+| :--- | :--- |
+| **Authentication** | Users log in directly with their **GitHub account**. |
+| **Authorization** | Users must have **Write/Push access** to the content repository. |
+| **Commit Authority** | The commit is made **in the name of the individual user** who logged in. |
+| **Self-Hosting Complexity** | **Moderate.** You need to create a **GitHub OAuth App** and deploy a small **OAuth Proxy Server** (Container 2) to handle the secure handshake (exchanging a temporary code for a token). |
+| **Pros** | **Simplicity of Git history:** You clearly see *which user* made *which commit* in the repository history. |
+| **Cons** | **Major Security/User Issue:** You are forced to grant *every editor* full developer-level **push access** to your main code repository, which is a major security risk and a barrier for non-technical users. |
+| **Best For** | Small teams where **all content editors are also developers** with existing Git permissions. |
+
+---
+
+## 🛡️ Git Gateway Backend (Recommended)
+
+The Git Gateway acts as an intermediary (a proxy service) between the Decap CMS UI and your Git repository. It is the necessary component for achieving proper **decoupling** of user roles.
+
+| Feature | Details |
+| :--- | :--- |
+| **Authentication** | Users log in via a separate identity service (e.g., email/password, a custom Auth provider, or a lightweight service like GoTrue). **They do not need a GitHub account.** |
+| **Authorization** | Users only need a valid account on your identity service. They **do not** need Write/Push access to the repository. |
+| **Commit Authority** | The Git Gateway server commits all changes using a single, long-lived **Personal Access Token (PAT)** belonging to a designated **bot or admin user**. |
+| **Self-Hosting Complexity** | **High.** You must deploy **two containers** for management: 1) the static Decap UI and 2) the **Git Gateway/Identity Service**. This service must manage user accounts and securely hold the admin PAT. |
+| **Pros** | **Superior Security:** You never give editors direct access to the repo. *The Gateway is the only entity that holds push permission.* **Better UX:** Editors use simple email/password login and don't need Git accounts. **Role Management:** You can assign specific roles (e.g., 'admin', 'editor') to limit access to certain content collections. |
+| **Cons** | **Complex Setup:** Requires managing an additional identity/authentication database/service alongside the Gateway container. **Commit History:** All content commits will be attributed to the single 'bot' user account used by the Gateway. |
+| **Best For** | Any professional setup where **editors are not developers**, such as your real estate application with non-technical staff. |
+
+---
+
+## 🛠️ The Self-Hosted Container Solution
+
+Given your requirement for external users to edit content without giving them GitHub access, you **must** use the **Git Gateway Backend**.
+
+The Git Gateway container acts as the bridge:
+
+1.  **Login:** The editor logs in to your Git Gateway container (e.g., using email/password).
+2.  **Token:** The Gateway verifies the user and issues a **JSON Web Token (JWT)** to the Decap CMS UI.
+3.  **Commit:** When the editor clicks "Save," the Decap UI sends the content and the JWT to the Gateway.
+4.  **Proxy:** The Gateway validates the JWT, takes the content, and commits it to GitHub using its own **admin PAT**.
+
+This separation ensures your **Astro SSG** site stays secure while providing a professional, easy-to-use content management experience.
+
+
+---
 
 ### PageCMS
 
