@@ -229,12 +229,34 @@ https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz
 
 ![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
 
+### GAds
+
+It's all about: https://ads.google.com/
+
+Google ads plays well with GA4.
+
+You could also use Umami + PostHog to track your ads.
+
+### FaceBook Ads
+
 
 ## Leads
 
-https://github.com/JAlcocerT/leads-slubnechwile
+It was not obvious to me to understand what a lead is:
 
-https://jalcocert.github.io/JAlcocerT/apify/
 
-## Funnels
+* https://github.com/JAlcocerT/leads-slubnechwile
+
+The first time a marketer told me [about APIFY](https://jalcocert.github.io/JAlcocerT/apify/), was quite obvious that this was not impossible.
+
+Take into consideration that experts advice to:
+
+1. Ads are better for mass conversion of lower ticket items
+2. Cold emails ~ Leads are better for higher ticket items
+
+### Funnels
+
+Once you get leads, you want to make sure you convert them into customers.
+
+With a funnel, you can visualize the process of converting leads into customers.
 

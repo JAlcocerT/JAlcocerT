@@ -50,6 +50,8 @@ You can also get help from [some product tools](https://jalcocert.github.io/JAlc
 
 ### Formbricks
 
+It's all about this fantastic Service: https://app.formbricks.com/auth/login
+
 
 ![How to set webhooks from formbricks](/blog_img/apps/reflex/formbrick-webhook.png)
 
@@ -72,6 +74,22 @@ Formbricks wont validate the emails, but you can even [verify emails](https://ja
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar/" title="Calendar | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/#email-verification" title="Email Verification | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+Designing **proper forms** is key to get the right data from your leads.
+
+{{% details title="TIPs to create better forms 🚀" closed="true" %}}
+
+```md
+
+```
+
+{{% /details %}}
+
+See couple examples using formbricks
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/selfhosted-landing/tree/master" title="DWY Consulting ↗" icon="github" >}}
 {{< /cards >}}
 
 ### PostHog

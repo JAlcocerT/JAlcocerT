@@ -174,6 +174,8 @@ When it is completed, create a `z-walkthrough.md` with the steps to deploy the a
 
 Consider adding a Terms of Service / **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
 
+Add also a faq section, that instead of been controlled via a json, lets have it controlled as per the frontmatter and content of separated markdown files inside the folder `faq`. The logic should read them in order as per their file name and show them in the right component of the UI.
+
 > When these change, consider sending an email to your existing clients!
 
 Consider adding **Umami web analytics capabilities** to the WebApp when using the container, by adding the possibility to feed the PUBLIC_UMAMI_SCRIPT_URL and PUBLIC_UMAMI_WEBSITE_ID to be used via <script defer src="" data-website-id=""></script>
@@ -227,6 +229,13 @@ Before starting any project, specially with AI agents, you should have clarity o
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Deployment** | | |
+| **Content Management** | | |
+| **Analytics** | | |
+| **Interactivity** | | |
+| **External Integrations** | | |
 
 <!-- 
 ![Terms and Conditions / Privacy](/blog_img/entrepre/webify/flask-terms-privacy.png) -->

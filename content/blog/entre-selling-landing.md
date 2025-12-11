@@ -290,15 +290,28 @@ git clone https://github.com/JAlcocerT/selfhosted-landing.git
 > Going to `http://localhost:8080/`
 
 
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | **Astro** | Using Astro v5 for Static Site Generation (SSG). Optimized for performance and content-heavy sites. |
+| **Styling/UI Library** | **Tailwind CSS** | Using Tailwind v4 via Vite plugin. Custom dark/light theme logic was removed in favor of a consistent dark theme. |
+| **Backend/Database** | **None (Static)** | Site is purely static HTML/JS/CSS. Content is managed via JSON/Markdown files in `src/content`. |
+| **Authentication** | **None** | No user login required. Public-facing landing page only. |
+
+Other Important Requirements
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **Backend/Database** | | |
-| **Authentication** | | |
+| **Deployment** | **Docker + Nginx** | Multi-stage Docker build serving static files via Nginx. Includes `docker-compose` for orchestration. |
+| **Content Management** | **Astro Content Collections** | Type-safe content management using Zod schemas for validation (JSON for data, Markdown for legal pages). |
+| **Analytics** | **Umami** | Privacy-focused analytics integrated via environment variables (`PUBLIC_UMAMI_SCRIPT_URL`, `PUBLIC_UMAMI_WEBSITE_ID`). |
+| **Interactivity** | **Vanilla JS** | Minimal client-side JS for the interactive Time/Value slider and mobile menu. |
+| **External Integrations** | **Cal.com & Formbricks** | Calendar booking and forms are handled via external service embeds/links to keep the stack simple. |
+
 
 > I had to play with CSR again *and trol a little bit*!
+
+> Together with x1 cal embeded and x3 Formbricks - Survey Type = Link Survey!
+
 
 Make sure to regulate the perceived supply/demand of your time: **configure cal properly**
 
@@ -381,8 +394,40 @@ flowchart LR
 How could I not continue vibe coding....
 
 ```md
-Create a simple chatbot for the landing page using OpenAI's API.
+Create a simple chatbot for the landing page using OpenAI's API as per the tech stack below as a additional change request. Lets reason first if it makes sense or if you would tweak anything to make it work with the current project setup.
+
+Lets also make sure that the python openai part system prompt can be tweaked easily as per a separated `.md` file.
+
+Define the python project backend part in a `chatbot-logic` folder, make proper testing and make sure that the full setup works with containers.
+
+The final docker-compose should have an additional on the astro part, that will control if the chat is available or not and also the openai API will be provided there, as well as on the `chatbot-logic/.env`
+
+The API will be `OPENAI_API_KEY`
 ```
+
+{{% details title="TIPs to create better forms 🚀" closed="true" %}}
+
+The decision to use a separate FastAPI container for the logic is a great architectural choice that makes the system robust and scalable.
+
+Here is the comprehensive tech stack table for the Astro + FastAPI QnA Chatbot addition, following your initial table format:
+
+| Requirement | Tech Stack Component | Rationale / Integration |
+| :--- | :--- | :--- |
+| **Frontend Framework** | **Astro** (with SSG) | Primary framework for fast, static content delivery, utilizing the Islands Architecture for interactivity. |
+| **Frontend Interactivity** | **Astro Island** (using React, Vue, or Svelte) | A framework component is needed to handle state (chat history) and client-side network calls (`fetch`). |
+| **Styling** | **Tailwind CSS** (or similar) | Used for building a clean, responsive Chat Interface UI (input, send button, chat bubbles) directly in the frontend component. |
+| **Backend API** | **FastAPI** (Python) | High-performance, asynchronous web framework for handling the core business logic (calling the LLM). |
+| **LLM Integration** | **OpenAI Python SDK** | Used within the FastAPI container to securely make API calls to the OpenAI `chat/completions` endpoint. |
+| **API Security** | **Environment Variables** (`OPENAI_API_KEY`) | Stored only in the FastAPI container's environment, **never** exposed to the Astro frontend. |
+| **Orchestration** | **Docker & `docker-compose`** | Manages the independent deployment, networking, and scaling of both the Astro (Nginx-served) and FastAPI containers. |
+| **Network & Routing** | **Nginx** (Reverse Proxy) | Serves static Astro files and acts as a reverse proxy to route specific API requests (e.g., `/api/chatbot`) to the internal FastAPI service. |
+| **Communication** | **HTTP POST Requests** (`fetch` in Frontend) | The Astro Island uses a client-side `fetch` POST request to send the user's question to the FastAPI endpoint. |
+| **Optional (Advanced)** | **LangChain/LlamaIndex** | n/a |
+
+
+{{% /details %}}
+
+This is the last CR-5 (feature addition) on top of [the initial dev plan](https://github.com/JAlcocerT/selfhosted-landing/blob/master/z-development-plan.md) that the repo will have :)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#ai" title="AI | Docs ↗" icon="book-open" >}}
