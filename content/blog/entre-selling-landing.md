@@ -389,6 +389,8 @@ Create a simple chatbot for the landing page using OpenAI's API.
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/" title="Bots | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+* https://logto.io/ai - Auth and identity for AI
+
 
 ---
 

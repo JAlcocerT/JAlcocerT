@@ -137,8 +137,7 @@ png
 
 ### Pricing
 
-https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy
-
+Believe it 100% or not - I think that stating that **value is subjective** is not a bad [starting point for a Pricing strategy](https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy).
 
 Get clarity on this (*your mission!*): Who are you helping (vs) who are you serving?
 
@@ -183,3 +182,4 @@ flowchart LR
     Center -- "Low Budget" --> Blog
     Center -- "High Budget" --> DWY
 ```
+

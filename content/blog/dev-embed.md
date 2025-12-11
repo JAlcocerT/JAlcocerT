@@ -395,7 +395,9 @@ You can use Cloudflare Pages Functions or Workers to proxy these API calls if ne
 
 This setup allows your static site to display real-time or near-real-time analytics data by fetching it dynamically on the client side, making these tools compatible with the JAMstack pattern and Cloudflare Pages deployments.
 
-Cloudflare Workers act as lightweight serverless functions running at the edge of Cloudflare’s global network. You might need them in your static Astro site on Cloudflare Pages when integrating with analytics tools like Metabase, Redash, or Superset APIs for several reasons:
+Cloudflare Workers act as lightweight serverless functions running at the edge of Cloudflare’s global network.
+
+You might need them in your static Astro site on Cloudflare Pages when integrating with analytics tools like Metabase, Redash, or Superset APIs for several reasons:
 
 1. **Handling CORS Restrictions:** Most APIs implement Cross-Origin Resource Sharing (CORS) policies that restrict frontend JavaScript from making direct calls to them from different domains. A Cloudflare Worker can proxy requests from your site to the API, adding the correct CORS headers to allow the browser to accept responses securely.
 

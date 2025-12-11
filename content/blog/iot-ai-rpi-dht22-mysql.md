@@ -1,6 +1,6 @@
 ---
 title: "[AIoT] How to use LangChain to Chat with Sensor Data"
-date: 2025-12-10T21:20:21+01:00
+date: 2026-10-08T21:20:21+01:00
 draft: false
 tags: ["Dev","AI","IoT","DB2Rest","ekuiper"]
 description: 'Using LangChain with OpenAI API to get information about Temperature and Humidity of a DHT22 sensor'
@@ -18,12 +18,15 @@ https://github.com/superlinked/superlinked -->
 
 You can also try [PandasAI](https://pypi.org/project/pandasai/) and [Sketch](https://pypi.org/project/sketch/) with Python.
 
-* https://pypi.org/project/sketch/
-* https://github.com/approximatelabs/sketch
 
-> MIT | AI code-writing assistant that understands data content. Sketch is usable in seconds and doesn't require adding a plugin to your IDE.
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/hardware/asrockx300-air-temp.jpg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
 
-![Graphic Walker UI](/blog_img/hardware/asrockx300-air-temp.jpg)
+<!-- 
+![Graphic Walker UI](/blog_img/hardware/asrockx300-air-temp.jpg) 
+-->
 
 > Sketch is an AI code-writing assistant for pandas users that understands the context of your data, greatly improving the relevance of suggestions. Sketch is usable in seconds and doesn't require adding a plugin to your IDE.
 
@@ -229,9 +232,13 @@ Databricks is one of those D&A Tools that you should know.
 
 We can do IoT projects with the Pi that push sensor data to Databricks.
 
-https://jalcocert.github.io/RPi/posts/rpi-iot-mongodatabricks/
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-mongodatabricks/" title="Data Chat Repository" image="/blog_img/dev/databricks-mongo.JPG" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
 
-![Mongo to Databricks](/blog_img/dev/databricks-mongo.JPG)
+<!-- 
+![Mongo to Databricks](/blog_img/dev/databricks-mongo.JPG) 
+-->
 
 
 ### Pi Cool Stuff

@@ -63,6 +63,39 @@ Are you also clearn on The "One Avatar, One Product, One Channel" strategy: *Do 
 | **One Product** | A single, core solution or offer you sell. | Ensures **Clarity of Offer** and positions you as the undisputed expert. |
 | **One Channel** | The single distribution platform (e.g., Facebook Ads, TikTok, Email) where you focus your marketing efforts. | Allows for **Mastery** of one platform, maximizing ROI and resource efficiency. |
 
+```mermaid
+graph TD
+    %% Section 1: The Core Elements and their Immediate Result
+    subgraph Core Strategy Elements
+        A[1. One Avatar] --> B{Deep Understanding};
+        C[2. One Product] --> D{Clarity of Offer};
+        E[3. One Channel] --> F{Channel Mastery};
+    end
+
+    %% Section 2: The Combined Strategic Benefits
+    subgraph Strategic Outcomes
+        B --> G(Targeted Messaging);
+        D --> H(Expert Positioning);
+        F --> I(Maximized ROI);
+    end
+
+    %% Section 3: The Ultimate Goal (Focus)
+    G & H & I --> J[Focus for Maximum Impact];
+
+    %% Section 4: The Final Business Result
+    J --> K((Rapid Growth & Profitability));
+
+    %% Styling (Optional but recommended for visual clarity)
+    style A fill:#A2D9CE,stroke:#333,stroke-width:2px
+    style C fill:#A2D9CE,stroke:#333,stroke-width:2px
+    style E fill:#A2D9CE,stroke:#333,stroke-width:2px
+    style B fill:#F7DC6F,stroke:#333
+    style D fill:#F7DC6F,stroke:#333
+    style F fill:#F7DC6F,stroke:#333
+    style J fill:#85C1E9,stroke:#333,stroke-width:3px
+    style K fill:#58D683,stroke:#333,stroke-width:4px
+```
+
 **Start building then!**
 
 
@@ -137,7 +170,9 @@ Create the `z-development-plan.md` with independent and testable phases that can
 
 When it is completed, create a `z-walkthrough.md` with the steps to deploy the application and what each part of the tech stack does on a high level to bring the features to life.
 
-Consider adding a **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
+Consider adding a Terms of Service / **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
+
+> When these change, consider sending an email to your existing clients!
 
 Consider adding **Umami web analytics capabilities** to the WebApp when using the container, by adding the possibility to feed the PUBLIC_UMAMI_SCRIPT_URL and PUBLIC_UMAMI_WEBSITE_ID to be used via <script defer src="" data-website-id=""></script>
 ```

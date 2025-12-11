@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
-date: 2026-01-11
+date: 2026-10-07
 draft: false
 tags: ["DB2Rest","Tech Talk","IoT ebook","From obfuscaste towards 1toN eBooks","Roadmap26"]
 description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'
@@ -12,10 +12,15 @@ together with langchain RAG + db queries
 
 
 
-**TL;DR:** Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
+**TL;DR:** 
+
+Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
+
+BTW, this is the last ebook of the DIY series that I will be publishing!
+
+`interesting-books`
 
 +++ DB2Rest
-
 
 https://ko-fi.com/s/86175d7928
 

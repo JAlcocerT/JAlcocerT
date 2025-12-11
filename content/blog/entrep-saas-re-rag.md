@@ -127,10 +127,22 @@ https://jalcocert.github.io/JAlcocerT/astro-web-setup/#real-estate-web---results
 {{< /cards >}}
 
 
+## Creating a Full Stack Real Estate SaaS
 
+IF you agree that **value is subjective** (*yea, not everyone agrees!*), then you will agree that [Price is also subjective](https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy).
 
+When you are building this kind of projects:
 
-## BoilerPlate 101
+1. Make sure that you are not doing: cost+margin.
+2. Or add a high enough ,active income' price tag, as this is one of those custom DFY solutions that you can't scale
+
+These projects are providing much more value than a one time fee.
+
+And if they dont - go find better clients who would get the real potential value out of it.
+
+Now...**lets get started** with this one.
+
+### BoilerPlate 101
 
 It has to be known frameworks.
 

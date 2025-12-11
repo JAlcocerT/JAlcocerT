@@ -422,7 +422,9 @@ A static site generator (like Hugo, Astro, or Next.js in static mode) pre-render
 
 2. Cloudflare Workers
 
-Cloudflare Workers act as a serverless function layer that runs on Cloudflare's global network. You'd use a Worker to act as a **middleware** or a "proxy" in front of your static site. The Worker would check for a user's login status before serving the content.
+Cloudflare Workers act as a serverless function layer that runs on Cloudflare's global network.
+
+You'd use a Worker to act as a **middleware** or a "proxy" in front of your static site. The Worker would check for a user's login status before serving the content.
 
 * When a user tries to access a protected page, the request first hits the Cloudflare Worker.
 * The Worker checks for a valid **authentication token**.

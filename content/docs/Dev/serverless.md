@@ -176,10 +176,9 @@ This is why the Admin SDK is only meant to be used on your own servers, like a C
 
 Just in case your home electricity goes away more often than not.
 
-Instead of using selfhostable web analytics like Umami, you can try... ????
-
+Instead of using selfhostable web analytics like Umami, you can try...
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="Specially, when those are SelfHostable WebAn 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Analytics" title="SelfHostable WebAnalytics 🐋 ↗" >}}
 {{< /cards >}}

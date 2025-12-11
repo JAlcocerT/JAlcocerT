@@ -8,6 +8,14 @@ url: 'real-estate-website'
 math: true
 ---
 
+**Tl;DR**
+
+More real estate building.
+
++++ and thinking about [value and **pricing theories**](#pricing-strategy).
+
+**Intro**
+
 <!--  
 https://github.com/JAlcocerT/cybernetik-realestate-moises 
 https://dm-realestate.web.app/
@@ -494,7 +502,7 @@ Setting the **pricing strategy for a generative AI application** that recommends
 
 1. Value-Based Pricing:
 
-* **Concept:** Price is determined by the perceived value the AI application offers to clients.
+* **Concept:** Price is determined by the **perceived value** the AI application offers to clients.
 
 This focuses on the outcomes and benefits users receive, such as finding the perfect property faster, making more informed decisions, and potentially increasing sales or client satisfaction for real estate professionals.
 
