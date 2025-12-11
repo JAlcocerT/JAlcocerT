@@ -95,3 +95,9 @@ For crazy people that like [trackdays](https://jalcocert.github.io/JAlcocerT/tin
 {{< /cards >}}
 
 If you enjoy these kind of [geo/racing](https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction) analytics, ive placed particular docs for that:
+
+## AI Generated Video
+
+
+<!-- 
+* https://ltx.studio/ -->

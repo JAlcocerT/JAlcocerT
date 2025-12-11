@@ -3,7 +3,7 @@ title: "Self-Awareness 101 or How to avoid fallacies"
 date: 2022-01-08T23:20:21+01:00
 draft: false
 tags: ["Outro"]
-description: 'Building thepsychological awareness. Self-awareness, decision making process and Open Source'
+description: 'Building the psychological awareness. Self-awareness, decision making process and Open Source'
 url: 'psychology-skills-data-analytics'
 ---
 
@@ -11,6 +11,10 @@ url: 'psychology-skills-data-analytics'
 **Tl;DR**
 
 Building Self-Awareness 
+
+**Intro**
+
+
 
 ## Understanding Basics
 
@@ -83,9 +87,9 @@ It can lead to:
 * Assume that your nervouesness is more visible than it really is
 
 
-# Conclusion Biases
+## Conclusion Biases
 
-## Confirmation Bias
+### Confirmation Bias
 
 The process loops:
 * Existing belief
@@ -97,7 +101,7 @@ The scientific method requires more mental effort:
 * Gather and analyze evidence
 * Test the hypothesis - Must be reproducible by others
 
-## Availability Heuristics:
+### Availability Heuristics:
 
 The tendency to estimate the probability of something based on how many examples come to mind.
 
@@ -105,7 +109,7 @@ The tendency to estimate the probability of something based on how many examples
 
 It's a mental shortcut that tries to save us time when we asses risk, but can lead to incorrect assumptions.
 
-## Desirability Bias
+### Desirability Bias
 
 **Be perceived well by the others**
 
@@ -144,6 +148,10 @@ The planning fallacy is a cognitive bias that describes people's tendency to und
 When estimating, remember that with a sounds estimation should be together with the probability of that event ocurring.
 
 Example: We can deliver the task X by time Y with 90% of security. Make sure to have listed down the reasons why in that 10% of the cases the delivery will be changed.
+
+---
+
+## Conclusions
 
 ---
 

@@ -29,6 +29,20 @@ BiP user flows around newsletter layers
    a team member can deliver great results given the proper workload -->
 
 
+<!-- <https://www.futuretools.io/>
+
+<https://github.com/SevaSk/ecoute>
+
+<https://github.com/beyondcode/writeout.ai>
+
+<https://github.com/Significant-Gravitas/Auto-GPT>
+<https://docs.agpt.co/setup/>>
+
+
+<https://ugeek.github.io/blog/post/2023-04-06-listado-de-webs-de-ia-para-busquedas-desarrollo-y-productividad.html> -->
+
+
+
 
 
 * with react (v1) as per astro project: https://github.com/gio-del/Astro-Theme-Astroway

@@ -59,9 +59,9 @@ menu:
       name: "About"
       pageRef: "/about"
       weight: 2
-    - identifier: Docker
+    - identifier: Consulting
       name: "Collaborations ↗"
-      url: "https://www.jalcocertech.com"
+      url: "https://consulting.jalcocertech.com"
       weight: 3      
     - identifier: RPi
       name: "Raspberry Pi Guide ↗"

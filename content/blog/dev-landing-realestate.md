@@ -51,7 +51,7 @@ But...to get one working is not that easy.
 
 {{< details title="Ebook Obfuscator on DIY Websites | 101 Setup  📌" closed="true" >}}
 
-As everything can be code, included an ebook...
+As [everything can be code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-as-a-code), including an ebook...
 
 ```sh
 #ssh
@@ -73,7 +73,7 @@ Probably driven by a 1 FastAPI : n ebooks model, with pocketbase and/or stipe in
   {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
 {{< /cards >}}
 
-Because in the end having a website is a matter of: 
+Because in the end, **having a website is a matter of**: 
 
 1. How much you really need it? - Aka, will you earn money>costs with it?
 2. Knowledge - Do you know how to make one? if now, can you learn how to do it quick?

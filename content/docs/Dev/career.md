@@ -420,6 +420,15 @@ You asked for a story that starts with "the user logs into the app."
 
 Remember, There wont be any good data science work if the **data modelling** part is not done right.
 
+And there wont be a good project foundation w/o that clear why/what/how, project charter and RACIs.
+
+AS it can also be w/o each team member getting clear contributions [each week](https://jalcocert.github.io/JAlcocerT/git-recap/#weekly-planning).
+
+Do so for two reasons:
+
+1. For you to build a sucess story when you are looking for a promo
+2. To share that blocked/helped needed/discovered/completed before the daily standup and safe a lot of time during a year to everyone
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/" title="ML 101 ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/machine-learning-the-roc-curve-in-detail/" title="ROC Post ↗" icon="user" >}}

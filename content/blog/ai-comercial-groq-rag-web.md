@@ -66,8 +66,14 @@ FAISS is great and open sourced with the {{< newtab url="https://github.com/face
 
 But that's not all regarding Vector Stores, there are other popular alternatives like: [ChromaDB](/selfhosting-chromadb-docker/), Qdrant, PineCone, ...
 
+* https://superlinked.com/vector-db-comparison
+* https://github.com/superlinked/VectorHub 
 
-Vector databases are specialized databases designed to handle vector data efficiently. They are essential for managing, indexing, and querying high-dimensional vectors, like embeddings, generated from text, images, or other types of data. Here's an in-depth exploration of vector databases and their relationship with embeddings:
+Vector databases are specialized databases designed to handle vector data efficiently. 
+
+They are essential for managing, indexing, and querying high-dimensional vectors, like embeddings, generated from text, images, or other types of data.
+
+Here's an in-depth exploration of vector databases and their relationship with embeddings:
 
 1. **Handling Embeddings**:
    - Embeddings are vector representations of data, and vector databases are engineered to handle these representations efficiently. They store, manage, and allow for the retrieval of embeddings, facilitating operations that would be difficult or inefficient in traditional databases.

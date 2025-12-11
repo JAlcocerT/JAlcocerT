@@ -136,7 +136,10 @@ For **AI workloads** you will be interested in some **cloud GPU**:
   {{< card link="https://www.vultr.com/pricing/#cloud-gpu" title="Vultr Cloud GPUs ↗" >}}
   {{< card link="https://vast.ai/pricing" title="VastAI GPUs ↗" >}}
   {{< card link="https://lambdalabs.com/" title="Lambdalabs GPUs ↗" >}}    
+  {{< card link="https://runpod.io/" title="RunPod ↗" >}}    
 {{< /cards >}}
+
+> Or others like `Tensordock.com` 
 
 ### Elestio
 

@@ -2,7 +2,7 @@
 title: "Bootstrap and concepts for SoloPreneurs"
 date: 2025-11-12
 draft: false
-tags: ["SoloPreneur","Indie SaaS","Kindle ebooks_ideas","Entrepre-AI","Shovels and Sales"]
+tags: ["SoloPreneur","Indie SaaS","Kindle x ebooks_ideas","Entrepre-AI","Shovels and Sales"]
 description: 'Resources to launch and GTM. NeuroMarketing for Founders, Offers...'
 url: 'whats-boostrap'
 ---
@@ -14,11 +14,11 @@ Collecting some interesting resources/concepts for entrepreneurs and *indie hack
 
 Do you have a supply or a demand problem?
 
-And im not talking about [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/).
+> And im not talking about [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/).
 
 +++ understanding [offer types](#offers-are-a-rabbit-hole)
 
-+++ and that [GTM is not quite same as marketing](#gtm-vs-marketing)
++++ and that [**GTM** is not quite same as marketing](#gtm-vs-marketing)
 
 +++ Should you [dig gold or sell shovels](#should-you-dig-gold-or-sell-shovels)?
 
@@ -150,11 +150,16 @@ Time to put something together, for when you are about to build in public, creat
 
 ## Conclusions
 
-You have now more than enough resources to share and get ideas to build.
+You have now **more than enough** resources to share and get ideas to build.
 
 Its easier than ever to build.
 
-But that doesnt mean that its easy.
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+But that doesnt mean that its easy w/o the right tools and knowledge.
 
 
 ### Too much info = ebooks_ideas
@@ -216,7 +221,9 @@ Everything is so logical when you read/hear, but...so many variables though when
 
 #### Continuity
 
-#### blaaa
+#### Many others...
+
+That does not make sense to write here.
 
 
 ### Entrepre-AI Quick Sping

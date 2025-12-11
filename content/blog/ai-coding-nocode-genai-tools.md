@@ -195,6 +195,18 @@ Once you create a local account, access the UI:
 
 > Is Dify the easiest way to build AI Applications?
 
+If you plan to use openAI:
+
+* Organization ID -> https://platform.openai.com/settings/organization/general
+* API Keys -> https://platform.openai.com/settings/profile?tab=api-keys
+* endpoint -> https://api.openai.com/ , yes without /v1/models
+
+You can also create knowledge for DifyAI:
+
+* From notion
+* text file
+* from websites... cooming soon
+
 ---
 
 ## Conclusion

@@ -2,10 +2,22 @@
 title: "Git & Development Tricks: Github, Gitlab and more"
 date: 2025-02-20T23:20:21+01:00
 draft: false
-tags: ["Dev","Git 101","branch"]
+tags: ["Dev","Git 101","branch","Weekly Planning x Career"]
 url: 'git-recap'
 description: 'Git tricks and useful extensions while developing.'
 ---
+
+
+**Tl;DR**
+
+About GIT and how to create a [weekly history](#weekly-planning) of actions/accomplishments while being in projects.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+{{< /cards >}}
+
+
+**Intro**
 
 When I started to use Git, I could actually start see my progress and build upon my previous effort.
 

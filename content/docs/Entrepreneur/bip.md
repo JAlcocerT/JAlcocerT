@@ -16,15 +16,12 @@ Got a clear WHY, WHAT and how?
 | **PRD** (Product) | **WHAT** are we building? | Features, user experience, personas, and success metrics. | Product Manager / Founder |
 | **FRD** (Functional) | **HOW** will it work technically? | System behavior, logic, API calls, and technical specifications. | Tech Lead / Developers |
 
-[This will become a curated ebook](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/bip-ebook.md) at some point.
-
-Start building then!
+Dont worry, [this will become a curated BiP ebook](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/bip-ebook.md) at some point.
 
 <!-- 
 there will be an ebook out of this - https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/bip-ebook.md -->
 
 <!-- hat [BRD PRD FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) are the WHY / what / how of a product you are building. -->
-
 
 ```mermaid
 mindmap
@@ -57,6 +54,17 @@ mindmap
       No-Go List
       V1 DB Schemamindmap
 ```
+
+Are you also clearn on The "One Avatar, One Product, One Channel" strategy: *Do you know who are you building it for?*
+
+| Element | Description | Core Logic/Benefit |
+| :--- | :--- | :--- |
+| **One Avatar** | A single, detailed profile of your ideal customer. | Achieves **Deep Understanding** for highly effective, targeted messaging. |
+| **One Product** | A single, core solution or offer you sell. | Ensures **Clarity of Offer** and positions you as the undisputed expert. |
+| **One Channel** | The single distribution platform (e.g., Facebook Ads, TikTok, Email) where you focus your marketing efforts. | Allows for **Mastery** of one platform, maximizing ROI and resource efficiency. |
+
+**Start building then!**
+
 
 ## AI
 
@@ -173,7 +181,7 @@ The platform must offer a seamless, content-driven user interface and a flexible
 
 {{< /details >}}
 
-Before starting any project, you should have clarity on:
+Before starting any project, specially with AI agents, you should have clarity on **the tech stack**:
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
