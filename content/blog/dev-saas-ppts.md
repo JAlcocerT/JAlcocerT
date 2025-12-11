@@ -86,8 +86,7 @@ class: text-center
 
 Can a CLi agent, like Codex, Gemini CLI or Claude Code help to create the skeleton of SliDevJS ppts?
 
-
-
+Yeppp, and you can do so from windsurf/cursor/whatever IDE.
 
 
 ---

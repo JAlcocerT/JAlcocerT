@@ -57,9 +57,11 @@ After having a custom learning journey and putting together this:
 
 {{% steps %}}
 
-### Consumed a lot of ebooks
+### Consumed a lot of books
 
-Ive used the kindle a lot, peaking at [2023 with 20+ read books](https://jalcocert.github.io/JAlcocerT/blog/summary23/).
+Ive used the kindle a lot.
+
+Peaking at [2023 with 20+ read books](https://jalcocert.github.io/JAlcocerT/blog/summary23/) in that year.
 
 
 ### Created a lot of notes

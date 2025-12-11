@@ -272,8 +272,6 @@ I also promised myself that this is the last i will do this year.
 
 ---
 
-
-
 ## FAQ
 
 **Others ppts ive worked on and how to run them**

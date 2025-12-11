@@ -1663,6 +1663,7 @@ https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/
 1. Opening more and more a shallow tech stack. *12/24 <<<150+ yearly posts on this blog should be more than enough*
 2. Keeping 50+ tabs on chrome. *Not watching content on the phone and commet for summaries should help*.
 3. For the hard to sell, it needs to be fully scalable or nothing - accounting for my opportunity cost. 
+4. Stop building w/o a focus strategy, like with **random avatars** - Like I did In the AIssistant example
 
 #### Start Doing
 

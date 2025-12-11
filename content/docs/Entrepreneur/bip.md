@@ -159,6 +159,8 @@ Create a sth sth sth like... a Landing Page based on NextJS with a cool and mode
 
 Include a `dockerfile` and `docker-compose.yml` that will control the title, description, open-graph image, favicon location and other global website variables via environment variables.
 
+Add also a docker-compose.portainer.yml to use assuming that the image has been built already.
+
 Create also a makefile with the following commands:
 
 * `make help` - Show available commands

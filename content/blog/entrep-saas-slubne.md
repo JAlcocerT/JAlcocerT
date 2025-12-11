@@ -44,6 +44,24 @@ These kind of **micro-SaaS** are so so cool:
 
 Why couldnt SLubnyChwile be one of those cool UIs? :)
 
+```mermaid
+sankey
+Landing Page,Sign Up,750
+Landing Page,Abandoned (Stage 1),250
+
+Sign Up,Sign In,600
+Sign Up,Abandoned (Stage 2),150
+
+Sign In,Immediate Purchase,350
+Sign In,Browsing,250
+
+Browsing,Delayed Purchase,100
+Browsing,Abandoned (Stage 3),150
+
+Immediate Purchase,Converted (Buyer),350
+Delayed Purchase,Converted (Buyer),100
+```
+
 
 **Intro**
 

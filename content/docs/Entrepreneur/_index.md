@@ -182,4 +182,3 @@ flowchart LR
     Center -- "Low Budget" --> Blog
     Center -- "High Budget" --> DWY
 ```
-
