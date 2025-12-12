@@ -159,7 +159,9 @@ And a lot of time wasted for you
 
 RAG has 3 years, you get asked 5y experience if you are trying to land such jobs.
 
+But the good thing, is that you can vibe coded a cool chatwidget, which replies as per FASTApi in the backend.
 
+I did a sample of those, without memory and much content withing [this CR of the selfhosted-landing](https://github.com/JAlcocerT/selfhosted-landing/blob/master/z-change-request-5.md).
 
 <!-- 
 Alternatives to https://www.livechat.com/pricing/ ING uses it

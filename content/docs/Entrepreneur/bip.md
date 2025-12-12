@@ -179,6 +179,8 @@ Add also a faq section, that instead of been controlled via a json, lets have it
 > When these change, consider sending an email to your existing clients!
 
 Consider adding **Umami web analytics capabilities** to the WebApp when using the container, by adding the possibility to feed the PUBLIC_UMAMI_SCRIPT_URL and PUBLIC_UMAMI_WEBSITE_ID to be used via <script defer src="" data-website-id=""></script>
+
+If you are using Python, design proper functions with docstrings, so that the codebase is understandable, scalable and self-documenting.
 ```
 
 Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined already with Gemini is clear enough.

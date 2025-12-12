@@ -249,7 +249,7 @@ It was not obvious to me to understand what a lead is:
 
 The first time a marketer told me [about APIFY](https://jalcocert.github.io/JAlcocerT/apify/), was quite obvious that this was not impossible.
 
-Take into consideration that experts advice to:
+Take into consideration that experts advice is to:
 
 1. Ads are better for mass conversion of lower ticket items
 2. Cold emails ~ Leads are better for higher ticket items

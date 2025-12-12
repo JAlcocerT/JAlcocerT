@@ -289,6 +289,7 @@ git clone https://github.com/JAlcocerT/selfhosted-landing.git
 
 > Going to `http://localhost:8080/`
 
+![alt text](/blog_img/entrepre/tiersofservice/dwi/selfhosted-landing-csr.png)
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
@@ -307,10 +308,16 @@ Other Important Requirements
 | **Interactivity** | **Vanilla JS** | Minimal client-side JS for the interactive Time/Value slider and mobile menu. |
 | **External Integrations** | **Cal.com & Formbricks** | Calendar booking and forms are handled via external service embeds/links to keep the stack simple. |
 
+![alt text](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-umami.png)
+
 
 > I had to play with CSR again *and trol a little bit*!
 
-> Together with x1 cal embeded and x3 Formbricks - Survey Type = Link Survey!
+> Together with x1 cal embeded and x3 Formbricks - **Survey Type = Link Survey**!
+
+![alt text](/blog_img/entrepre/tiersofservice/dwi/formbricks-survey-type.png)
+
+![alt text](/blog_img/entrepre/tiersofservice/dwi/fb-survey-alerts.png)
 
 
 Make sure to regulate the perceived supply/demand of your time: **configure cal properly**
@@ -427,7 +434,13 @@ Here is the comprehensive tech stack table for the Astro + FastAPI QnA Chatbot a
 
 {{% /details %}}
 
-This is the last CR-5 (feature addition) on top of [the initial dev plan](https://github.com/JAlcocerT/selfhosted-landing/blob/master/z-development-plan.md) that the repo will have :)
+```sh
+make stack-up
+```
+
+![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png)
+
+This is the [last CR-5](https://github.com/JAlcocerT/selfhosted-landing/blob/master/z-change-request-5.md) (feature addition) on top of [the initial dev plan](https://github.com/JAlcocerT/selfhosted-landing/blob/master/z-development-plan.md) that the repo will have :)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#ai" title="AI | Docs ↗" icon="book-open" >}}

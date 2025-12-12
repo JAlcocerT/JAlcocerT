@@ -27,7 +27,7 @@ So consider it a WIP until the year has ended - or AI took over civilization :)
   {{< card link="https://github.com/JAlcocerT/ title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate - Source Code on Github" >}}
 {{< /cards >}}
 
-The launch strategy: *aka, focus strategy*
+The **launch strategy**: *aka, focus strategy*
 
 | Element | Decision |
 | :--- | :--- |
@@ -35,7 +35,9 @@ The launch strategy: *aka, focus strategy*
 | **One Product** | |
 | **One Channel** | |
 
-The tech stack:
+The **Tier of Service**: DIY (1a - *leverages on my knowledge & experience, not in actual tools Ive built, neither my time*)
+
+The **tech stack**:
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
@@ -206,6 +208,10 @@ But if you want to build something - just learn what you need to accomplish it.
 This is why Im launching **my first lifetime product** - A boiler plate for creators to ship asap.
 
 Not going to lie: ive got inspired by `https://supersaas.dev/` and `https://shipfa.st/?ref=indiepage` and `https://readmake.com/`
+
+https://www.ohansemmanuel.com/books/understanding-astro
+
+https://understanding-astro-webook.vercel.app/
 
 
 

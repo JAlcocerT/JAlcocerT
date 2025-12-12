@@ -409,6 +409,10 @@ graph BT
     end
 ```
 
+Call it...value ladder, sales funnel or **Tier of Service**
+
+The point is: there is a trade-off!
+
 ### Option 2: The "Decision Matrix" (Best for comparisons)
 
 This version visually separates the "Self-Serve" options from the "Service" options, making it clear that they are two different paths based on what the user possesses more of (Time vs. Money).

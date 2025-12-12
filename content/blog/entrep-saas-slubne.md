@@ -62,10 +62,35 @@ Immediate Purchase,Converted (Buyer),350
 Delayed Purchase,Converted (Buyer),100
 ```
 
+The **launch strategy**: *aka, focus strategy*
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | |
+
+The **Tier of Service**: A DFY that I made [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt) and Ive transformed into DIY with the cool serverless tech stack below.
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+The **tech stack**:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
+
+
 
 **Intro**
 
-For green field AI vibe coding has been great, for brown field...not that much, despite the project docs with ai was interesting
+For green field AI vibe coding has been great, for brown field...not that much, despite the project docs with AI was interesting
 
 Thats why I want to put together some boilerplates that just get the work done.
 

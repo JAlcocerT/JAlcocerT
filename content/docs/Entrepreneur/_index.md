@@ -58,6 +58,10 @@ It's all about this fantastic Service: https://app.formbricks.com/auth/login
 
 ![Using Formbricks with GSheets](/blog_img/apps/reflex/gsheet-formbricks.png)
 
+![alt text](/blog_img/entrepre/tiersofservice/dwi/formbricks-survey-type.png)
+
+![alt text](/blog_img/entrepre/tiersofservice/dwi/fb-survey-alerts.png)
+
 <!-- ![Formbricks Link Embed](/blog_img/entrepre/webify/formbricks-link-embed.png) -->
 
 {{< cards >}}
@@ -80,16 +84,19 @@ Designing **proper forms** is key to get the right data from your leads.
 
 {{% details title="TIPs to create better forms 🚀" closed="true" %}}
 
+The good thing about designing your landing pages so that the full content is available in just one markdown.json file, is that is very easy to create forms or get feedback on them via agents.
+
 ```md
 
 ```
 
 {{% /details %}}
 
-See couple examples using formbricks
+See couple examples projects Ive built that are using formbricks
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/selfhosted-landing/tree/master" title="DWY Consulting ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY Webs ↗" icon="github" >}}
 {{< /cards >}}
 
 ### PostHog
@@ -98,6 +105,14 @@ Posthog is [one of the product tools](https://jalcocert.github.io/JAlcocerT/prod
 
 Also to bring [session recording](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/) for your apps.
 
+Thats a killer feature to bring to your PoCs, specially when you have a low marketing budget and are very interested to see how leads go through your funnel.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#leads/" title="marketing x Leads | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#ads" title="Marketing x Ads | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
 ## Offers
 
 With a clear product defined, the package of that into an **compeling offer** is key.
@@ -105,6 +120,8 @@ With a clear product defined, the package of that into an **compeling offer** is
 Info is...free. 
 
 Implementation is not: *justa matter of the value ladder, a trade-off between time/money invested*
+
+And building a proper offer is not all [about Pricing](#pricing).
 
 ```mermaid
 flowchart LR
@@ -136,22 +153,41 @@ graph TD
     A --> E(Services - DFY $$$);
 ```
 
-Most people wont buy from you. 
+Most people will NOT buy from you. 
 
-But they will judge you by the quality of your free give aways.
+But they will judge you by the quality of your free give aways - Like FREE content, templates, audits...
 
-How to sell? *Aka, convince that you can solve problems*
+Then...How to sell? 
+
+*Aka, convince that you can solve problems*
 
 It's all about how valuable your clients perceive their time is compared to how good your offer is to solve their problems.
 
-You can frame this in a trol yet simple CSR bar to help them decide:
+You can frame this in a trol yet simple CSR bar to help them decide: *how much is their time worth to them?*
 
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page
 
-png
+
+![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png)
 
 > Mind the increased Chances of people who never helped others for free calling you evil :)
 
+Also, some people will get problems understanding that this is a self-valuation of THEIR time.
+
+Not me putting a price to their time, neither me valueing their time.
+
+Additionally, people will just buy (VOLUNTARELY) if they perceive that by buying I can provide much more value than that.
+
+Anyways, people that dont pass that (simple - *do I have very high expectations?* ) bar will not buy anything from you 🔴
+
+> If you are a big trol or just want to make a small social experiment - you can add a Form free option to name the last time that xyz user have helped someone for free and the outcome of that so that they are considered for a 100% free consultation.
+
+You can direct them to your DIY FREE tier in the meantime to get inspired:
+
+{{< cards >}}
+  {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
+  {{< card link="https://ebooks.jalcocertech.com/" title="One Website Now eBooks" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Benefit for free from my distilled knowledge" >}}
+{{< /cards >}}
 
 ### Pricing
 
