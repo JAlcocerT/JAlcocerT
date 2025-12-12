@@ -7,6 +7,29 @@ description: 'Building a custom RAG solution for real estate agencies using NEXT
 url: 'custom-re-rag'
 ---
 
+The **launch strategy**: *aka, focus strategy*
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | |
+
+The **Tier of Service**: A DFY
+
+The **customer segmentation**: SMB
+
+The **tech stack**:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
+
+
 
 
 **Tl;DR**

@@ -258,6 +258,12 @@ There are [many CMS alternatives](https://jalcocert.github.io/JAlcocerT/cms-for-
 2. KeyStatic CMS - *As seen with Mizar landing Theme*
 3. TinaCMS
 4. DIY CMS :)
+5. Decap-CMS!
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="CMS 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 ---
 

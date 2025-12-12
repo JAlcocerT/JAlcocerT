@@ -24,12 +24,19 @@ In the end of last year I found this: *when looking for nextjs web apps on yt*
 
 https://lastcodebender.com/
 
-https://www.codebender.ai/#bottom
 
+An example of marketing?  https://www.codebender.ai/#bottom
+
+```md
 CONGRATULATIONS! YOU QUALIFY:
+
 You're a perfect fit for The Premium AI Agency System. The next step is to book your
 AI Business Assessment below.
 Spaces are limited
+
+```
+
+![alt text](/blog_img/entrepre/qualify.png)
 
 > Who could have guessed
 

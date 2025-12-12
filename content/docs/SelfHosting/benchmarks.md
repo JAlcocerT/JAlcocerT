@@ -26,6 +26,8 @@ Others, you will just do the custom SFF PC build that you ever wanted to get:
   {{< card link="https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/" title="Testing the Thinkpad X13" image="/blog_img/hardware/Lenovo-x13-micron-ssd.png" subtitle="~1kg x13 laptop review" >}}
 {{< /cards >}}
 
+You can also test the speed of your SSDs:
+
 ![alt text](/images/benchmarks/ssd-nvme-pcie.png)
 
 

@@ -131,9 +131,15 @@ You can potentially make embedable BI components that work on websites or just g
 
 You could also use these skills when **building funnels** during your [entrepreneurial journey](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/):
 
-https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#reflex-sample-apps
-https://reflex.dev/docs/library/graphing/charts/funnelchart/
-![alt text](/blog_img/apps/reflex/reflex-stocks-sample.png)
+> PS Reflex has very cool funnels: https://reflex.dev/docs/library/graphing/charts/funnelchart/
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+<!-- 
+![alt text](/blog_img/apps/reflex/reflex-stocks-sample.png) -->
 
 <!-- 
 ![Streamlit Funnel Chart Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png) 
@@ -141,4 +147,23 @@ https://reflex.dev/docs/library/graphing/charts/funnelchart/
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#funnels" title="Marketing Docs" image="/blog_img/apps/streamlit/streamlit-plotly-funnel.png" subtitle="Funnels with Streamlit" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#reflex-sample-apps" title="Marketing Docs" image="/blog_img/apps/reflex/reflex-stocks-sample.png" subtitle="Funnels with Streamlit" >}}
 {{< /cards >}}
+
+```mermaid
+sankey
+Landing Page,Sign Up,750
+Landing Page,Abandoned (Stage 1),250
+
+Sign Up,Sign In,600
+Sign Up,Abandoned (Stage 2),150
+
+Sign In,Immediate Purchase,350
+Sign In,Browsing,250
+
+Browsing,Delayed Purchase,100
+Browsing,Abandoned (Stage 3),150
+
+Immediate Purchase,Converted (Buyer),350
+Delayed Purchase,Converted (Buyer),100
+```

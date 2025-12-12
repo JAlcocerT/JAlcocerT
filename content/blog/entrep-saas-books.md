@@ -24,7 +24,7 @@ So consider it a WIP until the year has ended - or AI took over civilization :)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/" title="NEW 1-to-Nebooks" image=/blog_img/apps/gh-jalcocert.svg" subtitle="Putting together my thoughts and curated knowledge into N ebooks" >}}
-  {{< card link="https://github.com/JAlcocerT/ title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate - Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT" title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate - Source Code on Github" >}}
 {{< /cards >}}
 
 Thinking about this...ive been writing for a while (quite intensively last year) and this have become some kind of a habit and...a lead nurture in a way.
@@ -42,6 +42,8 @@ The **launch strategy**: *aka, focus strategy*
 | **One Channel** | |
 
 The **Tier of Service**: DIY (1a - *leverages on my knowledge & experience, not in actual tools Ive built, neither my time*)
+
+The **customer segmentation**: B2C
 
 The **tech stack**:
 

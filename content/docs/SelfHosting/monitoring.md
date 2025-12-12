@@ -73,7 +73,12 @@ Also, with **Uptime Kuma**, you can get quickly an uptime pages for your service
 
 Uptime Kuma status pages example: `https://status.tromsite.com/status`
 
-![Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/#monitoring" title="DevOps for Non DevOps x UpTime Kuma" image="/blog_img/selfh/HomeLab/uptimekuma-statuspages.png" subtitle="UpTime Kuma can monitor ping and http requests" >}}
+{{< /cards >}}
+
+<!-- 
+![Status Pages](/blog_img/selfh/HomeLab/uptimekuma-statuspages.png) -->
 
 See also how **Peekaping**
 

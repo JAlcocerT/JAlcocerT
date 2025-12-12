@@ -54,6 +54,12 @@ mindmap
 
 ## FrontEnd
 
+[CSS is all you need](https://jalcocert.github.io/JAlcocerT/blog/dev-web-code-css/) to get started and customize your website UI.
+
+Have a look to [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/) and/or [TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/) if you want to dig deeper into web/apps.
+
+Or, if you come from the D&A world, try with Python [Full Stack frameworks](#full-stack).
+
 ### CSS & HTML
 
 * TailwindCSS
@@ -145,9 +151,9 @@ Some Python frameworks, like Streamlit, bring an opinionated UI that works out o
 
 ---
 
+## About Web Scrapping
 
-
-### How Scraping Relates to SSG, CSR, and SSR
+How Scraping Relates to SSG, CSR, and SSR?
 
 Web scraping and modern web rendering techniques like:
 
@@ -166,7 +172,7 @@ The rendering method a website uses directly impacts how easy or difficult it is
     * **Scraping:** This is the most difficult to scrape. A basic scraper that only fetches the initial HTML will get an empty or incomplete page without the content. To get the data, a scraper must be able to execute JavaScript and mimic a browser's behavior.
 
 
-#### Challenges of Scraping Dynamic Content
+### Challenges of Scraping Dynamic Content
 
 It's much harder to scrape dynamic content, and your intuition is correct—it's because the scraper must act like a real user. 🕵️‍♀️
 

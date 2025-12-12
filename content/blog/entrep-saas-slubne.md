@@ -11,11 +11,6 @@ url: 'code-your-saas'
 
 **Tl;DR**
 
-Supply - infinite, scalable via Serverless storage
-Demand - constrained, ad driven
-
-Online marketing and an online delivery
-
 MVP first - get those eyes going via ads.
 
 See what works and what not - PMF
@@ -25,6 +20,15 @@ See what works and what not - PMF
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+
+Supply - infinite, scalable via Serverless storage
+Demand - constrained, ad driven
+
+![alt text](/blog_img/entrepre/bip-supply-demand.png)
+
+Online marketing and an online delivery
+
 
 These kind of **micro-SaaS** are so so cool:
 
@@ -71,6 +75,12 @@ The **launch strategy**: *aka, focus strategy*
 | **One Channel** | |
 
 The **Tier of Service**: A DFY that I made [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt) and Ive transformed into DIY with the cool serverless tech stack below.
+
+The **customer segmentation**: B2C
+
+
+The expected
+
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}

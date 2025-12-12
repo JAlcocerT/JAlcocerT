@@ -62,8 +62,13 @@ A game changer to create quick diagrams to showcase your [D&A architectural idea
 
 Look how cool **Excalidraw is for Wireframes**:
 
-![Excalidraw Wireframe for the UI](/blog_img/entrepre/selfh-landing/wireframe.png)
+<!-- 
+![Excalidraw Wireframe for the UI](/blog_img/entrepre/selfh-landing/wireframe.png) 
+-->
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/" title="Astro Landing CSR" image="/blog_img/entrepre/selfh-landing/wireframe.png" subtitle="Vibe Coding an Astro Landing Page for DWY Consulting" >}}
+{{< /cards >}}
 
 
 ### DrawIO

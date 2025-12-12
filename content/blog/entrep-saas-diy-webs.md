@@ -127,6 +127,12 @@ https://www.mangomedia.pl/pl/portfolio.html
 
 ### Tried few PaaS Tools
 
+### Tinkered with UptimeKuma
+
+### And with LightHouse CI
+
+
+
 {{% /steps %}}
 
 

@@ -64,10 +64,7 @@ Having your AI APi Keys ready and your n8n setup first:
 
 These days you will hear the term RAG.
 
-It can be applied for real estate agencies
-https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
-
-![alt text](/blog_img/biz/RE/RE-bot-ppt.jpeg)
+These can be applied in many business domains, like for real estate agencies
 
 Also, to provide custom QnA for your landing Pages/SaaS
 
@@ -79,8 +76,14 @@ From visuals, to the knowledge, the way it replies and who can use it.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Custom Bots for Landing Pages" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Using FastAPI + OpenAI x Astro to get a bot to work!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Custom Bots for RE" image="/blog_img/biz/RE/RE-bot-ppt.jpeg" subtitle="Using Streamlit to recommend properties as per md" >}}
 {{< /cards >}}
 
+<!-- 
+https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
+
+![alt text](/blog_img/biz/RE/RE-bot-ppt.jpeg) 
+-->
 
 <!-- 
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page

@@ -16,6 +16,8 @@ And [it begun](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="You might get help of some visualizations and BI Tools" image="/blog_img/iot/grafana.png" subtitle="Like Grafana!" >}}  
 {{< /cards >}}
 
+From IoT Data Analytics to Scripts for the PicoW:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/categories/iot-data-analytics/" title="RPi Related Blog" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="Jekyll Blog with posts about IoT" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW" title="RPi (PicoW Scripts) Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PicoW MicroController Scripts Python Scripts to tinker!" >}}

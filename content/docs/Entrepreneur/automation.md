@@ -14,11 +14,9 @@ Everything that can be automated, can be scaled.
 
 Wheter it makes sense or not it depends on your offer and who are you selling to.
 
-If you are scoping B2C, be prepared for a huge amount of automation/resources to make that the value flows properly to your clients.
+If you are scoping B2C, be prepared for a huge amount of automation/resources to make that the value flows properly to (and from) your clients.
 
-
-
-https://jalcocert.github.io/JAlcocerT/pro-agency-automation/
+* https://jalcocert.github.io/JAlcocerT/pro-agency-automation/
 
 That does not mean that you cant setup high value proposition (like bots) for your B2C.
 
@@ -29,9 +27,8 @@ That does not mean that you cant setup high value proposition (like bots) for yo
 
 Just that B2B clients will be more eager to pay for them
 
-
-
-
 ### N8N
+
+Just FYI, you can get n8n running on your server under 1 min:
 
 {{< youtube "v-gCNTI5kzE" >}}

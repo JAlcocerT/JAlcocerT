@@ -59,15 +59,15 @@ Need a full-fledge WebApp framework for R?
 
 Have a look to **Shiny**.
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for RStocks" >}}
-    {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="RStocks" image="https://github.com/JAlcocerT/R_Stocks/raw/main/Z_Sample_Data/DividendEvo.jpeg" subtitle="Creating and Deploying a ShinyAPP with R | Blog Post" >}}
-{{< /cards >}}
-
 And if you are looking for a Flexdashboard example (deployed to Github Pages), see:
 
 {{< cards >}}
+    {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="RStocks" image="https://github.com/JAlcocerT/R_Stocks/raw/main/Z_Sample_Data/DividendEvo.jpeg" subtitle="Creating and Deploying a ShinyAPP with R | Blog Post" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/R-Stocks/" title="The RStocks related FlexDashboard" image="/blog_img/data-experiments/Inflation_Mild.JPG" subtitle="Sample flexdashboard deployed to github pages - Retirement Facts" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/R_Stocks" title="R/Stocks Github Repo ↗" icon="github" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

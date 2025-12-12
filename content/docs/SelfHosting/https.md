@@ -6,7 +6,7 @@ next: docs/arch/
 draft: false
 ---
 
-How to get https for selfhosted apps on a homelab or VPS.
+How to **get https for selfhosted apps** on a homelab *or VPS*.
 
 First thing: get a domain!
 

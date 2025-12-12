@@ -166,7 +166,7 @@ graph TD
 
 You can enable so that before someone booking your time, they have to pay first:
 
-![Calcom Email x Stripe ](/blog_img/email/cal-email-stripe.png)
+<!-- ![Calcom Email x Stripe ](/blog_img/email/cal-email-stripe.png) -->
 
 This increase friction - so you need to find the sweet spot.
 

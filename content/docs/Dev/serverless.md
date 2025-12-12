@@ -74,6 +74,7 @@ For phones and with FastAPI, I did not manage to get fb auth social sign in/up  
 
 ## Cloudflare
 
+CF can do more fore you than [helping you with selfhosting and https](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/):
 
 ![Cloudflare Wrangler CLI](/blog_img/web/Cloudflare/CF_WranglerCLI.png)
 
