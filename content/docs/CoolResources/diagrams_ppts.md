@@ -60,6 +60,11 @@ A game changer to create quick diagrams to showcase your [D&A architectural idea
   {{< card link="https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Utils" title="Streamlit PoC" image="/blog_img/dev/nextjs/nextjs-mermaidjs-wireframe.png" subtitle="Vibe Coding with Excalidraw Wireframe concept" >}}
 {{< /cards >}}
 
+Look how cool **Excalidraw is for Wireframes**:
+
+![Excalidraw Wireframe for the UI](/blog_img/entrepre/selfh-landing/wireframe.png)
+
+
 
 ### DrawIO
 

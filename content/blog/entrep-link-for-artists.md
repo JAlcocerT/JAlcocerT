@@ -305,19 +305,20 @@ make help
 
 > > And is not a bad niche at all, as I havent seen any Selfhostable SaaS for this kind of service with hosted version for money
 
-
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/" title="Using Stripe withing a Flask" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Stripe 101 withing a SaaS PoC" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/" title="Creating a Landing with Antigravity" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Proper BiP BRD + Astro + FastAPI chatbot" >}}
 {{< /cards >}}
 
-
-![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png)
+<!-- 
+![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png) -->
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing.git && cd selfhosted-landing
 make help
+
 #export PUBLIC_UMAMI_SCRIPT_URL= & export PUBLIC_UMAMI_WEBSITE_ID=
 #make docker-build && make docker-up
+
 #docker run -d -p 8044:80 --name selfhosted-landing selfhosted-landing:latest
 #docker network ls | grep cloudflared_tunnel
 docker network connect cloudflared_tunnel selfhosted-landing #connect

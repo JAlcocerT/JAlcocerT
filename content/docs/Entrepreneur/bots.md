@@ -71,4 +71,19 @@ https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
 
 Also, to provide custom QnA for your landing Pages/SaaS
 
-https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot
+The good news?
+
+That If you are in good terms with front end tools like astro and dont mind coding some Python backend - you can get away and make your own custom chatbot.
+
+From visuals, to the knowledge, the way it replies and who can use it.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Custom Bots for Landing Pages" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Using FastAPI + OpenAI x Astro to get a bot to work!" >}}
+{{< /cards >}}
+
+
+<!-- 
+https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page
+
+
+![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png) -->

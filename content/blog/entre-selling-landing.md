@@ -395,6 +395,10 @@ flowchart LR
     DFY -.->|"Check Resources"| END3["⚡ Fast Track"]
 ```
 
+When people are leaving the page - they should get a clear picture on how you deliver value.
+
+![alt text](/blog_img/entrepre/tiersofservice/dwi/dwy-flow.png)
+
 
 ### Adding a Simple ChatBot
 
@@ -435,7 +439,7 @@ Here is the comprehensive tech stack table for the Astro + FastAPI QnA Chatbot a
 {{% /details %}}
 
 ```sh
-make stack-up
+make stack-up #This spins astro + the FastAPI backend for the chatbot QnA
 ```
 
 ![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png)
