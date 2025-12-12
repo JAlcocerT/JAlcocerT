@@ -192,7 +192,7 @@ You can direct them to your DIY FREE tier in the meantime to get inspired:
 
 {{< cards >}}
   {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
-  {{< card link="https://ebooks.jalcocertech.com/" title="One Website Now eBooks" image="/og_img/shipping/astro-sell-your-ebook.png" subtitle="JAlcocerTech DIY Series | Benefit for free from my distilled knowledge" >}}
+  {{< card link="https://ebooks.jalcocertech.com/" title="One Website Now eBooks" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="JAlcocerTech DIY Series | Benefit for free from my distilled knowledge" >}}
 {{< /cards >}}
 
 ### Pricing

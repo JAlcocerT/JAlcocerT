@@ -122,7 +122,16 @@ curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCPPMA8ZEusAe5dVH6P
 Among [all the things that can be embedded](https://jalcocert.github.io/JAlcocerT/embed-that/) into a website, we have not only bots, but also cool calendars.
 
 
-{{< details title="Cal dot com API - Use cases 📌" closed="true" >}}
+{{< details title="Cal dot com Embeded and API - Use cases 📌" closed="true" >}}
+
+1. Bring cool calendar widgets to your [landing pages](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page):
+
+![alt text](/blog_img/entrepre/tiersofservice/dwi/cal-embed.png)
+
+https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#the-result
+
+
+![Booking tours with Cal](/blog_img/web/success10-ourika/ourika-cal.png)
 
 
 {{< /details >}}
@@ -132,13 +141,11 @@ Among [all the things that can be embedded](https://jalcocert.github.io/JAlcocer
 
 {{< cards >}}
   {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Let's discuss your tech needs" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page" title="DWY - Landing Page" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting and Tiers of Service - Funnel" >}}
 {{< /cards >}}
 
 * https://cal.com/jalcocertech
 * https://app.cal.com/apps
-
-![Booking tours with Cal](/blog_img/web/success10-ourika/ourika-cal.png)
-https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#the-result
 
 ```mermaid
 graph TD
@@ -149,7 +156,6 @@ graph TD
 ```
 
 
-![Calcom Email x Stripe ](/blog_img/email/cal-email-stripe.png)
 
 <!-- ![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png) -->
 
@@ -158,6 +164,13 @@ graph TD
 
 ### Integrate Stripe
 
+You can enable so that before someone booking your time, they have to pay first:
+
+![Calcom Email x Stripe ](/blog_img/email/cal-email-stripe.png)
+
+This increase friction - so you need to find the sweet spot.
+
+> No friction will never be the perfect one for converting leads.
 
 {{< details title="Stripe 101 Setup 📌" closed="true" >}}
 
