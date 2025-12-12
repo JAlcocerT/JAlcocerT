@@ -418,9 +418,9 @@ The API will be `OPENAI_API_KEY`
 
 {{% details title="TIPs to create better forms 🚀" closed="true" %}}
 
-The decision to use a separate FastAPI container for the logic is a great architectural choice that makes the system robust and scalable.
+The decision to use a **separate FastAPI container** for the logic is a great **architectural choice** that makes the system robust and scalable.
 
-Here is the comprehensive tech stack table for the Astro + FastAPI QnA Chatbot addition, following your initial table format:
+This is the tech stack table for the **Astro UI + FastAPI QnA Chatbot addition**, following your initial table format:
 
 | Requirement | Tech Stack Component | Rationale / Integration |
 | :--- | :--- | :--- |

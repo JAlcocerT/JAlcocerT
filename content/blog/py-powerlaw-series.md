@@ -17,6 +17,10 @@ Just a quick mental model on [Series](#understanding-series) with Python.
 
 +++ Reflecting on [Pareto](#power-law--pareto) and [D&A](#power-law--data-analytics)
 
+But im sure you have met pareto when...
+
+trying to go from a meet expectations rating towards an outstanding.
+
 
 **Intro**
 

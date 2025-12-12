@@ -163,6 +163,32 @@ But the good thing, is that you can vibe coded a cool chatwidget, which replies 
 
 I did a sample of those, without memory and much content withing [this CR of the selfhosted-landing](https://github.com/JAlcocerT/selfhosted-landing/blob/master/z-change-request-5.md).
 
+
+Normally, API calls are stateless.
+
+* https://www.anthropic.com/news/prompt-caching
+
+
+A simple chatbot like this one wont have memory:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Custom Bots for Landing Pages" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Using FastAPI + OpenAI x Astro to get a bot to work!" >}}
+{{< /cards >}}
+
+But...you can get away with it in a very simple way.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/" title="Bots | Docs ↗" >}}
+{{< /cards >}}
+
+
+Specially if you have tinkered with bots in python before:
+
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
 <!-- 
 Alternatives to https://www.livechat.com/pricing/ ING uses it
  -->

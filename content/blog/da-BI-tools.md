@@ -746,7 +746,9 @@ A **project charter** is like that agreement for a project at work or school.
 * **What are the big limits or rules we need to follow?** (Like budget or deadlines)
 * **Who has the authority to say "yes, let's do this"?** (The person who approves the project)
 
-**Think of it as the project's "birth certificate" and "permission slip."** It makes sure everyone is on the same page from the very beginning and knows what the project is all about before a lot of time and effort is spent.
+**Think of it as the project's "birth certificate" and "permission slip."** 
+
+It makes sure everyone is on the same page from the very beginning and knows what the project is all about before a lot of time and effort is spent.
 
 1. Project purpose: Why is this project important, and what business need does it fulfill? 
 2. Project objectives: What do you want to achieve by the end of your project, and what metrics will you use to measure project success? 

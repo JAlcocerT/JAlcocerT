@@ -231,6 +231,8 @@ Before starting any project, specially with AI agents, you should have clarity o
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
+And if you need more:
+
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
 | **Deployment** | | |

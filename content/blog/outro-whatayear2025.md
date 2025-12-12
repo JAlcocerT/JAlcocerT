@@ -58,12 +58,14 @@ Install any Ai stuff, via UI:
 > **MIT** |  AI Browser 
 
 
-Normally, API calls are stateless.
-
-* https://www.anthropic.com/news/prompt-caching
-
 
 Even Reqable has one: Tools -> More QR-Code
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+
+Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-ba-tech-talk-mermaid-exadel/components/QRCode.vue) you can generate QRs!
+
 
 
 <!-- https://www.youtube.com/shorts/ls_66dIM9-4 -->

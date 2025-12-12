@@ -2,7 +2,7 @@
 title: "Diagrams and workflows as a Code with Agents"
 date: 2025-11-15T12:20:21+01:00
 draft: false
-tags: ["AI SaaS","mermaidJSxopenai-editor","Grok vs Perplexity","Icons for Architects","Commet","Tech Talk"]
+tags: ["AI SaaS","MermaidJS x openai-editor","Grok vs Perplexity","Icons for Architects","Commet","Tech Talk"]
 description: 'From SliDev Editor to Mermaid Editor with OpenAI and Excalidraw.'
 url: 'ai-driven-diagrams'
 ---
@@ -268,7 +268,15 @@ git clone https://github.com/JAlcocerT/slidev-editor
 #git show --stat d21233214c504640056180db03c9c98edd06c1ae
 ```
 
-I also promised myself that this is the last i will do this year.
+I also promised myself that **[this is](https://github.com/JAlcocerT/slidev-editor/tree/logtojseauth/slidev/slidev-ba-tech-talk-mermaid-exadel) the last presentation** that i will do this year.
+
+Consider adding such [SliDev VUE Components like this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-ba-tech-talk-mermaid-exadel/components/QRCode.vue) you can generate QRs!
+
+{{< youtube "KXamTdJA-uc" >}}
+
+Including, how to run LLMs locally: *from Q1 2024!*
+
+{{< youtube id="vukAQPCv7Tw" autoplay="false" >}}
 
 ---
 

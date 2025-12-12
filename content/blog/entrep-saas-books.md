@@ -27,6 +27,12 @@ So consider it a WIP until the year has ended - or AI took over civilization :)
   {{< card link="https://github.com/JAlcocerT/ title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate - Source Code on Github" >}}
 {{< /cards >}}
 
+Thinking about this...ive been writing for a while (quite intensively last year) and this have become some kind of a habit and...a lead nurture in a way.
+
+With this post (and year), my goal is to recap and distilled all this experience into 20/30 pages ebooks that anyone can benefit from.
+
+And yes, this is going to help shapping a lead magnet for my next product.
+
 The **launch strategy**: *aka, focus strategy*
 
 | Element | Decision |

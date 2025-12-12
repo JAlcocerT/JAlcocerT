@@ -393,12 +393,9 @@ npm init slidev@latest
 * https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev
 * https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/#preparing-a-tech-talk-with-ai
 
-
 > See the event [here](https://events.exadel.com/event/rag-powered-real-estate/)
 
-
-
-> And here it is the **result**: https://jalcocert.github.io/Data-Chat/
+> > And here it is the **result**: https://jalcocert.github.io/Data-Chat/
 
 ### Other Alternatives to RAG
 

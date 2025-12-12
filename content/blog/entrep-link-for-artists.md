@@ -613,6 +613,9 @@ If you have a podcast, chances are that you are **doing public speaking** out th
 {{< /cards >}}
 
 
+You can add QRs in the end of those thanks to a [SliDev VUE Components like this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-ba-tech-talk-mermaid-exadel/components/QRCode.vue)
+
+
 ##### PPT References
 
 Who could have guess that you can do cool ppts as code:
