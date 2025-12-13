@@ -381,10 +381,16 @@ And dont become those tech people that dont know anything about the business.
 
 > Plot twist, the business performing well is what pays you 🤯
 
-
 To write effective user stories for your **PRD**, you want to follow a standard industry format.
 
- This ensures that when you switch from "Manager" to "Developer," you know exactly what success looks like.
+This ensures that when you switch from "Manager" to "Developer," you know exactly what success looks like.
+
+**Acronyms for BAs:**
+
+1. Scope of Work - SoW
+2. BRD,PRD,FRD
+3. PoC, MVP
+4. SMART and INVEST
 
 ### The User Story Skeleton
 

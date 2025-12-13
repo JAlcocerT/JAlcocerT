@@ -8,6 +8,14 @@ url: 'selfhosted-apps-december-2025'
 ---
 
 
+Install any Ai stuff, via UI:
+
+* https://pinokio.computer/
+  * https://github.com/pinokiocomputer/pinokio
+  * https://docs.pinokio.computer/download/
+
+> **MIT** |  AI Browser 
+
 **Tl;DR**
 
 A random server for ~4$/month is all you need.

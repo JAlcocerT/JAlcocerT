@@ -272,6 +272,8 @@ I also promised myself that **[this is](https://github.com/JAlcocerT/slidev-edit
 
 Consider adding such [SliDev VUE Components like this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-ba-tech-talk-mermaid-exadel/components/QRCode.vue) you can generate QRs!
 
+Ive also done few other tech talks previously:
+
 {{< youtube "KXamTdJA-uc" >}}
 
 Including, how to run LLMs locally: *from Q1 2024!*

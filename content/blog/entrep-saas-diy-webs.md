@@ -169,6 +169,15 @@ Fast forward to today: lets put a web/app with UI to bundle all this.
 
 Remember, you can always do your [wordpress stuff](#still-want-a-wp).
 
+
+### Programmatic Free Audits for Websites
+
+
+Btw, the **pages speed insights**, can be done via **API**: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
+
+![Checking Google Pages Speed Insights Via API](/blog_img/web/morita-flask/pagespeedinsightapi.png)
+
+
 ---
 
 ## FAQ

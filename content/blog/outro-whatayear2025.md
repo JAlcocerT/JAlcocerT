@@ -45,13 +45,6 @@ https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktow
 
 [Computer consultancy activities](https://ariregister.rik.ee/eng/company/16864984/iotechcrafts-O%C3%9C?lang=en)
 
-Install any Ai stuff, via UI:
-
-* https://pinokio.computer/
-  * https://github.com/pinokiocomputer/pinokio
-  * https://docs.pinokio.computer/download/
-
-> **MIT** |  AI Browser 
 
 
 
@@ -773,10 +766,9 @@ Does that mean that...I ve part of someone else's [sales pipeline](https://jalco
 
 Concepts / ideas that I found during this year.
 
-0. Active income > Passive income *like the one you can get from [dividends](https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#dividend-data---dgi-vs-yield)*
+0. Active income > > > Passive income *like the one you can get from [dividends](https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#dividend-data---dgi-vs-yield)*
 
 ![Matplotlib Custom Graph for Dividend Trend Example](/blog_img/data-experiments/MCD_dividends_pct_12m.png)
-
 
 1. CYA (cover your ***) was always a thing. 
 
@@ -912,7 +904,11 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 I also tried [this](https://www.youtube.com/@UnfoldingData/shorts) and [this](https://www.youtube.com/@BeyondAJourney)
 
-![100k views in a year](/blog_img/data-experiments/yt-1y.png)
+{{< cards >}}
+  {{< card link="https://www.youtube.com/@BeyondAJourney" title="BaJ" image="/blog_img/data-experiments/yt-1y.png" subtitle="YT Channel Powered to play with videos" >}}
+{{< /cards >}}
+
+<!-- ![100k views in a year](/blog_img/data-experiments/yt-1y.png) -->
 
 > And as videos are just graphs places together, also this: *100+ data driven tweets*
 
@@ -955,9 +951,6 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 23. [Nextcloud and a Pi](https://youtu.be/x2eFFeRIyXg)
 24. Ventoy. [Linux Lite vs Garuda RAM consumption](https://youtu.be/hTw9DBEksx4)
 25. Bonus: [FreshRSS + AstroPod](https://youtu.be/mDMGtMOx-Fk)
-
-* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
-* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
 
 > I had to make sure to create **better thumbnails** to get some views
 
@@ -1010,7 +1003,7 @@ Some tools were CLI only, then released **desktop version**:
 
 But hey Ollama has now a Desktop UI mode as well!
 
-> Additionally, I participated in ***few* tech Talks**:
+> Additionally, I was a speaker in ***few* [tech Talks](http://localhost:1313/ai-driven-diagrams/#mermaid-x-tech-talk)**:
 
 1. Using LangChain to chat with a DB
 2. Real Estate RAG 
@@ -1028,11 +1021,9 @@ https://www.linkedin.com/posts/exadel-people_aimeetup-knowledgesharing-engineeri
 
 And extracted cool video metadata (gps / geolocation) from GoPros:
 
-https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-and-gopro-metadata
-
-
-![GoPro Metadata Speed trackday](/blog_img/karting/gopro-gps-trackday-speed.png)
-
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Race | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 #### Other Videos
 
@@ -1309,9 +1300,14 @@ I also had the chance to work on D&A Prototypes, where I chose Streamlit as the 
 
 That cool geomap was not included in the **S**cope **o**f **W**ork and a great surprise.
 
-It was ofc properly documented on a KB during the transition phase.
+It was ofc properly documented on [a KB](https://jalcocert.github.io/JAlcocerT/knowledge-management/) during the transition phase.
 
-> You could always use some static layout or wireframes before going to streamlit!
+> You could always use some [static layout or wireframe](https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/) before going to streamlit as PoC!
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/BI/#custom-bi-tools" title="BI | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 ##### AI Stuff
 
@@ -1363,6 +1359,13 @@ Rscript Z_ebooks/render.R \
   --output Z_ebooks/web-ebook.pdf \
   --cover Z_ebooks/sample-cover.png
 ```
+
+{{</* pdf "ebooks/web-ebook.pdf" */>}}
+
+<!-- 
+from static/ebooks/web-ebooks.pdf
+http://localhost:1313/ebooks/web-ebook.pdf
+-->
 
 Questions? 
 
@@ -1468,8 +1471,6 @@ And...**BAML**, which was a very interesting setup.
 
 Perplexity and Gemini are my go to now, instead of ChatGPT.
 
----
-
 ## Conclusions
 
 There was even time to make **Data Analytics recaps** and create (not that much ship) [***better* SaaS products**](#shipping-products).
@@ -1478,22 +1479,6 @@ There was even time to make **Data Analytics recaps** and create (not that much 
   {{< card link="https://jalcocert.github.io/JAlcocerT/making-soap-at-home/" title="I also got time to made soap at home couple times| Post ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews" title="And to improve my D&A Tech Stack and interviewing skills | Post ↗" >}}
 {{< /cards >}}
-
-```mermaid
-pie title DB MTB Expenses
-         "Addons" : 500
-         "Maintenance" : 1080
-         "Insurance" : 865
-         "Price" : 1100
-```
-
-```mermaid
-pie title FY24 Weeks Breakdown
-         "Cycling" : 1
-         "Sleeping" : 17
-         "Working" : 17
-         "Languages" : 1
-```
 
 I havent measure these blog posts time creation.
 
@@ -1521,6 +1506,8 @@ Create a Roadmap!
 {{< /details >}}
 
 Build.
+
+I will be Aiming for aggressively packaging knowledge into **high-leverage products and services**.
 
 But if you are one, doing ONLY what people wants is not optional.
 
@@ -1630,6 +1617,25 @@ I cycled with 2 bikes at the same time.
 Also, I cycled with a MTB and 3 pizzas on my steering.
 
 Both for 5+ km
+
+<!-- 
+```mermaid
+pie title DB MTB Expenses
+         "Addons" : 500
+         "Maintenance" : 1080
+         "Insurance" : 865
+         "Price" : 1100
+``` -->
+
+<!-- ~ 3600km and 17km/h -->
+
+```mermaid
+pie title FY25 Weeks Breakdown
+         "Cycling" : 2
+         "Sleeping" : 17
+         "Working" : 17
+         "Languages" : 1
+```
 
 Oh, and I climbed (again) to the top of a country.
 

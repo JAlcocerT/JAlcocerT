@@ -1,13 +1,14 @@
 ---
 title: "Improving a HomeLab Privacy with Open Source DNS "
-date: 2026-01-15T23:20:21+01:00
+date: 2026-01-20T23:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Pihole x UnboundDNS","DNS as Distributed DB"]
 description: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
-
+* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
+* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
 
 **Cloudflare alternatives?**
 
