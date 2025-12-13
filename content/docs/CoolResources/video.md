@@ -26,6 +26,34 @@ https://github.com/HandBrake/HandBrake - an OSS UI for Video compression (which 
 3. Others like: Shotcut
 
 
+
+<!-- https://www.youtube.com/shorts/ls_66dIM9-4 -->
+
+{{< youtube "ls_66dIM9-4" >}}
+
+
+Motion Canvas is great for interactive, visually rich web animations. 
+
+Remotion is best for React developers needing video automation and scaling.
+
+Manim is the tool for deep mathematical visualization with powerful programmatic control.
+
+
+| Feature/Aspect          | Motion Canvas                       | Remotion                          | Manim                              |
+|------------------------|-----------------------------------|----------------------------------|-----------------------------------|
+| Programming Language   | TypeScript (Web, JS)               | React (JavaScript)                | Python                            |
+| Main Use Case          | Vector animations & presentations | Programmatic video creation      | Math & educational animations     |
+| Preview/Interactivity  | Real-time visual preview           | React-driven dynamic rendering   | No live preview, manual rendering |
+| Complexity & Control   | Moderate, web tech based           | High for UI/UX videos            | High for math/algorithm detail    |
+| Target Users           | Web developers, educators          | React developers, marketers      | Educators, researchers, math pros |
+| Learning Curve         | Moderate                         | Moderate                        | Steep (programming + math)        |
+| Community & Docs       | Growing, good docs                 | Strong community & documentation | Mature community, rich resources  |
+
+
+{{< youtube "x4tzWt6-I7c" >}}
+
+
+
 ---
 
 ## Video as a Code

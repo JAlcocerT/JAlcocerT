@@ -1,17 +1,13 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-10
+date: 2025-12-13
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-and-more-2025'
 ---
 
-AI is much better at code than it is to draf-n-drop.
 
-So if you know which tools to ask for, you get much better results.
-
-But hey, if you want to still spend a weekend to get a crappy looking wordpress - feel free to do so.
 
 <!-- date: 2025-12-25 -->
 
@@ -68,33 +64,6 @@ Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/s
 
 
 
-<!-- https://www.youtube.com/shorts/ls_66dIM9-4 -->
-
-{{< youtube "ls_66dIM9-4" >}}
-
-
-Motion Canvas is great for interactive, visually rich web animations. 
-
-Remotion is best for React developers needing video automation and scaling.
-
-Manim is the tool for deep mathematical visualization with powerful programmatic control.
-
-
-| Feature/Aspect          | Motion Canvas                       | Remotion                          | Manim                              |
-|------------------------|-----------------------------------|----------------------------------|-----------------------------------|
-| Programming Language   | TypeScript (Web, JS)               | React (JavaScript)                | Python                            |
-| Main Use Case          | Vector animations & presentations | Programmatic video creation      | Math & educational animations     |
-| Preview/Interactivity  | Real-time visual preview           | React-driven dynamic rendering   | No live preview, manual rendering |
-| Complexity & Control   | Moderate, web tech based           | High for UI/UX videos            | High for math/algorithm detail    |
-| Target Users           | Web developers, educators          | React developers, marketers      | Educators, researchers, math pros |
-| Learning Curve         | Moderate                         | Moderate                        | Steep (programming + math)        |
-| Community & Docs       | Growing, good docs                 | Strong community & documentation | Mature community, rich resources  |
-
-
-
-
-https://world.hey.com/dhh/pay-yourself-first-e86f8147
-
 This year, Ive abused again of my unfair advantage.
 
 ![Just working](/blog_img/outro/work-unfair-advantage.png)
@@ -108,45 +77,75 @@ But I have a plan:
 
 ```mermaid
 graph TD
-    A[www.jalcocertech.com] --> B(blog/YT 0$);
-    A --> C(DIY 0/$);
-    A --> D(Consult via Cal.com - DWY $$);
+    A[JAlcocerTech - Tiers of service] --> B(blog/YT 0$);
+    A --> C(DIY ~ 0 to $);
+    A --> D(Consult + Cal + Forms - DWY $$);
     A --> E(Services - DFY $$$);
 ```
 
-I am really commited to make a world a better place.
+I am really commited to make the world a better place.
 
-So I am (and will) be spending time on making tech concepts more accesible.
+So I am (and will be) spending time on making tech concepts accesible to more: *before moving forward, understand [this](https://mermaid.live/edit#pako:eNp9lNtOGzEQhl9lsETVSiQNmxDCIiGRcygnEVpEu70wu5PE1a69tb2oKeHdO_aSA-WQm8Tx_L9nPs_4gcUqQRYymGqez-D0KpJAn-1t6OJESAQ7Q0iEsULGFvIZN2igAuPirhSk_A5TA78LZTGBidJg-ATtvLQxy7CIXTop7IZwilxLIafwAbrKfX_sjm7JsqtgZOFWFdpgOvkUsdLCfY5_RGxsubah2yfJZ2jjVEiJOmI_oVI5gjaFkE9INtVqdXxx1rsejs4HW7R_uDZq-9jOQ8T6XKRwDlZkaCL2uBHT8TGLc2VhqlQCKFUxnS2g_X_MYuC2e0_bXUrAl2Ypu47KcrQo7fp4lEkkV3BLGkEIl1rdi8RhGKO-FzESjn6Jg-D3iSdV_OkNmqRfqki0Sazri-g5KH0PZW3mbq8UPWfTK-tuFyJN6Kg4RmPAWKUFmgX0idnIouYW6eJGWU55I5y9BrDvjQbubMy4TOCI2iXP0zmBGYrpDK4wLyy3Qsn38dRDH1_5xtMCYVCIhEsP6GYF6EbY2XuEyGKlI9kmooFPc-jSvFkiWtqRfUdJU6RW-G7rKB7P6OdzYkPvMHpG5qqcmvMXZF4rsBHCVzoic9JxzGmWRCrsvJwI6oykiO3LytyIPIWnuAzbrGzk8zqhysrLXMVu2FJR10qlzws68cIvJBxJkwuNcEHjrw1YRZ1A8-deA6HhF2Ugcb711vUdJ4lw18tTh1Fi7BbGvw60JqaFKsyyiTI3JnLdOL0ny7KK4SHbYVMtEhZaXeAOy1Bn3C3Zg4uLGKWUUSuH9DPBCac7cyweSZZz-V2pbKnUblBZOOGpoVWRJ4S9KzhhzVb_aioEdYceGcvC3Vpjz7uw8IH9YWElqNWqwcF-0GrtNQ_qzUadtucsrO8F1WarttvabwatGq0ajzvsrz85qAb1VrO2W9tvNfeC2kEj2GFIcJQ-K99d__w-_gN0-KsS)*
 
-But the DWY/DFY model, means that I choose what's my focus.
+```mermaid
+ graph LR
+    %% Define the distinct phases - Subgraph labels quoted for safety
+    subgraph "Phase 1: Learning & Doing (DIY - Do It Yourself)"
+        A["Start: Young / Beginner"] --> B["DIY: Do...SOMETHING!"];
+        B --> C{"Fail N times"};
+        C --> |Not good enough| B;
+        C -->|Good Enough| D["Learnt / Competent"];
+    end
+
+    %% Phase 2: Providing Service (DFY - Done For You)
+    subgraph "Phase 2: Service DFY"
+        D --> E["DFY: Done For You - Service"];
+        E --> |Build success stories| F{"Iterate & Improve M times"};
+        F --> G["Demand > Supply / High Reputation"];
+    end
+
+    %% Phase 3: High-Value Guidance (DWY - Done With You)
+    subgraph "Phase 3: Guidance DWY"
+        G --> H["DWY: Done With You - Consulting / Coaching"];
+        H --> I{"Iterate & Refine NM times"};
+    end
+
+    %% Phase 4: Ultimate Scalability (DIY Product)
+    subgraph "Your Scalable Product"
+        I --> J["Build Scalable DIY Product / Tool"];
+        J --> K["Inspire Others to start their journey!"];
+    end
+
+    %% Additional Connections for Continuous Improvement
+    F --> E;
+    I --> H;
+```
+
+
+But the DWY/DFY model, means that **I choose what's my focus**.
+
+*Hey, wait but thats unfair i have rights over your tim....*
+
+Do you?
+
+Or have i earned the right to not give a fuck of what others opinions are about how I choose to spend my time?
+
+> The kind of rights from understanding loans, [stocks](https://jalcocert.github.io/JAlcocerT/py-stonks/), [crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/), having a high [active income](https://jalcocert.github.io/JAlcocerT/career/) AND having a very high saving rate *(yea, im saying no to 50%+++ of what I could spend...after taxes)*
+
+
+Anyways, not everything is lost!
 
 Have some great idea and want my time to execute it better/faster/higher quality?
 
-I can do so, but there is an opportunity cost :)
+I can do so, but there is an opportunity cost for me to switch and do...what I want to do and go do your thing :)
 
-The services is a matter of what to build.
-
-So to validate i built the simple waiting list concept that superseeds the waiting list v1 before ever going to prod.
-
-
-Waiting list to services
-Automation to services
-web spins to services, maybe via paas coolify/dokploy
-
-Helium or [zen](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#new-software)?
-
-review all `WIP` on previous posts
-
-https://juan.pl/en/
-
-https://www.albertina.at/en/
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A 101 Ive put together about building websites" >}}
+{{< /cards >}}
 
 
- if you are building websites, get inspired:
 
- 1. https://github.com/gridaco/grida
-
- > Apache v2 |  Grida — Ambitious 2D Graphics Editor for the Web 
 
  
 **Intro**
@@ -164,100 +163,12 @@ Fake it until you make it idea is great.
 People seems to have bring it to the next trolling level: https://play.google.com/store/apps/details?id=com.fiuymi.app
 
 
-
-### Other Static CMS
-
-### What are Static Site Generators?
-
-* https://github.com/plentico/plenti
-
-> Apache v2 | **Static Site Generator** with Go backend and Svelte frontend 
-
-Build-Time Render Engine (aka Static Site Generator) with Go backend and Svelte frontend
-
-Ships with a fully integrated Git-CMS that you can host for cheap/free right with your static site
-
-Install [plenti](https://snapcraft.io/plenti):
-
-```sh
-snap install plenti
-```
-
-As the author mentions: Plenti = Hugo + NetlifyCMS 
-<!-- https://www.youtube.com/watch?v=T4b55nfZiIw -->
-{{< youtube "T4b55nfZiIw" >}}
-
-<!-- 
-https://www.youtube.com/watch?v=Gr3KTOnsWEM&list=PLbWvcwWtuDm0tIrvD_xHvUXHBftbHDy5T 
--->
-
-{{< youtube "Gr3KTOnsWEM" >}}
-
-
-This is a very cool proposal for landing pages see https://plenti.co/themes !
-
-1. https://github.com/keystonejs/keystone
-
-* https://keystonejs.com/docs
-
-Keystone helps you build faster and scale further than any other CMS or App Framework. Describe your schema, and get a powerful GraphQL API & beautiful Management UI for your content and data.
-
-> MIT | The superpowered headless CMS for Node.js — built with GraphQL and React 
-
-### Building Webs with AI
-
-See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/leaderboard
-
-* https://github.com/atuinsh/atuin
-
-> MIT | ✨ Magical shell history
-
-
-
-**Cloudflare alternatives?**
-
-* https://github.com/rapiz1/rathole
-
-> A lightweight and high-performance reverse proxy for NAT traversal, written in Rust. An alternative to frp and ngrok.
-
-* https://noted.lol/cgnat-and-rathole/
-
-### SelfHosting Best Practices
-
-* https://www.reddit.com/r/selfhosted/comments/1beoi4l/best_practices_for_selfhosted_services/
-* https://www.reddit.com/r/homelab/wiki/index/
-
 ### What about NIX?
 
 Recently I heard about Flox and NIX...
 
 Are they the best alternative for a homelab OS?
 
-Backend was hard.
-
-In theory, it can be simplified with PB or with https://github.com/MotiaDev/motia
-
-> MIT | Multi-Language Backend Framework that unifies APIs, background jobs, workflows, and AI Agents into a single core primitive with built-in observability and state management.
-
-
-
-Serverless is the way.
-
-And CF workers and pages  use cases are so cool: https://github.com/4ev-link/4ev.link
-
-> If you want short custom urls, like url shortening to a custom slug
-
-Same, we can also have monitor running in gihub https://github.com/upptime/upptime
-
-> ⬆️ GitHub Actions uptime monitor & status page by @AnandChowdhary
-
-> > You could also try with uptime kuma or kener
-
-
-
-![Porsche design](/blog_img/outro/porsche.png)
-
-![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 
 
 * https://tailscale.com/kb/1282/docker
@@ -291,31 +202,8 @@ This year is been like a lot of [do](https://nav.al/do)
 
 It looks so long back when I used `you.com` to help me with work.
 
-And with no doubt, 2025 has been the year of agents. I mean...
+And with no doubt, 2025 has been the year of agents. I mean...yea, AI stuff
 
-Comercial ones like: `https://www.lindy.ai/pricing`
-
-* https://github.com/browser-use/browser-use
-
->  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
-
-See also:
-
-1. LangChain Web Scrapping
-
-2. Browserless
-
-* https://github.com/browserless/browserless
-
->  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
-
-summary: 'Crawl4AI is an open-source web crawler and scrapper tailored for LLMs and AI applications. It offers asynchronous crawling, data extraction, and various features for enhanced performance and scalability.'
-
-* https://github.com/saifyxpro/HeadlessX
-
-> MIT |  A lightweight, self-hosted headless browser automation platform. Designed as an alternative to Browserless, built for speed, privacy, and scalability. 
-
-https://www.youtube.com/watch?v=L2Ya9PYNns8
 
 
 {{< callout type="info" >}}
@@ -373,6 +261,8 @@ Because Im still in D&A and trying to blend with AI powered development for my p
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Websites 101 | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+Helium or [zen](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#new-software) as browsers?
 
 1. [uv](https://jalcocert.github.io/JAlcocerT/fast-api/#proper-py-and-uv) package manager ❤️ Makefiles >>> Readme's & pip! 
 
@@ -447,6 +337,30 @@ FastAPI gives you complete control and flexibility but requires you to build the
 {{< /details >}}
 
 > Its all about [encryption and SHA256](https://jalcocert.github.io/JAlcocerT/encryption-101/#bearer-vs-jwt) under the hood!
+
+Backend was hard.
+
+In theory, it can be simplified with tools like [PB](https://jalcocert.github.io/JAlcocerT/pocketbase/), [Manifests admin panels](https://jalcocert.github.io/JAlcocerT/admin-panels-for-websites/) or with https://github.com/MotiaDev/motia
+
+> MIT | Multi-Language Backend Framework that unifies APIs, background jobs, workflows, and AI Agents into a single core primitive with built-in observability and state management.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+Serverless is other of the ways you could build upon.
+
+But the important part...just build with some common sense.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless Docs" image="/blog_img/web/Cloudflare/CF_WranglerCLI.png" subtitle="Serverless x CF Wrangler| Docs" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/" title="Entrepreneuring Docs" image="/blog_img/memes/features-vs-needs.png" subtitle="Product, Offers and more" >}}
+{{< /cards >}}
+
+<!-- ![Cloudflare Wrangler CLI](/blog_img/web/Cloudflare/CF_WranglerCLI.png) 
+![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+-->
 
 {{< details title="And things can stay static | If you know about Cloudflare Workers 📌" closed="true" >}}
 
@@ -542,19 +456,17 @@ Even with Cloudflare Tunnel, you might still want to use a Cloudflare Worker for
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/pico-w/#ha-x-mqtt" title="HA x MQTT x PicoW" image="/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png" subtitle="Testing a PicoW with Home Assistant" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pico-w/#picow-to-emqx-server" title="PicoW x eMQX" image="/blog_img/iot/picoW/emqx-subscribed.png" subtitle="Testing a PicoW with MQTT" >}}
 {{< /cards >}}
 
+<!-- ![EMQX UI - Watch random topic message](/blog_img/iot/picoW/emqx-subscribed.png) -->
 
-https://jalcocert.github.io/JAlcocerT/pico-w/#picow-to-emqx-server
-
-![EMQX UI - Watch random topic message](/blog_img/iot/picoW/emqx-subscribed.png)
+Ive put together some IoT docs and the scripts I was using:
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-iot/" title="IoT | Docs ↗" icon="book-open" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI" title="PicoW + Wifi Connection & + 🐍 ↗" >}}
 {{< /cards >}}
-
-{{< youtube "x4tzWt6-I7c" >}}
 
 
 5. And tinker a bit with [Crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai) and data via [stonks](https://jalcocert.github.io/JAlcocerT/stonks/) / [stocks with python](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/).
@@ -600,7 +512,7 @@ If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlc
 
 9. CLI Agents ftw. Codex CLI was huge.
 
-I also tried claude and geminiCLI.
+I also tried claude and [geminiCLI](http://localhost:1313/ai-tools-for-cli/#gemini-cli).
 
 Together with [BAML](https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#baml) bringing type safe LLM calls.
 
@@ -765,7 +677,9 @@ And I want to change that [next year](#for-next-year).
 
 If you are successful, you will need to know [how to use Stripe API](https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe) and any form of invoicing customers:
 
-#### Launching Webifyer
+#### About Webifyer
+
+One of those micro SaaS with custom CMS that I was building back in summer.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/linkchecker/" title="LinkChecker | Docker Config 🐋 ↗" >}}
@@ -798,11 +712,11 @@ Because, time is money.
 
 And you are loosing both without a proper website.
 
-Because Selfhosting Static Generated Sites, is not a secret anymore:
+Because Selfhosting Static Generated Sites, is not a secret anymore for me and for [ricsanfre](https://github.com/ricsanfre/public-websites-docker)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro" title="Astro SSG | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/ricsanfre/public-websites-docker" title="MIT | Selfhosting personal static websites with Traefik, private web analytics (matomo) and Remark42 for comments. 🐋 ↗" >}}
+  {{< card link="/selfhosted-server-paas/" title="PaaS Post ↗" >}}
 {{< /cards >}}
 
 
@@ -904,7 +818,7 @@ Kind of resonates with [process](#processes) > result.
 
 > Systems *(designed for the worst days)* do not really on willpower / motivation
 
-5. Quotes
+5. Quotes (a)
 
 > Achievement comes from actions not aspirations
 
@@ -921,6 +835,14 @@ Kind of resonates with [process](#processes) > result.
 > Data will say everything if we torture it long Enough. ~ [ML](https://jalcocert.github.io/JAlcocerT/machine-learning-data-analytics/) and Overfitting
 
 > More important of the willingness to succeed is the willingness to prepare. ~ Do, do do, results *might* go later.
+
+> Follow your dream/passion - if they are hiring
+
+> A very cool *pay yourself first*, but not the money view, but the prorities and intellectual boxes - from [DHH](https://world.hey.com/dhh/pay-yourself-first-e86f8147)
+
+5. Questions w/o answer (b)
+
+
 
 6. Guesstimates and [PostMortems](https://fernandocejas.com/blog/culture/2020-06-21-learn-out-of-mistakes-postmortems/)
 
@@ -980,7 +902,7 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 
 - [x] [Better Webs](#more-websites)
 - [x] Better AI APIs Usage: APIFY, ElevenLabs, scrapping APIs...
-- [ ] Review all previous posts and see that are no commented / `WIP` /  incomplete sections
+- [x] Review all previous posts and see that are no commented / `WIP` /  incomplete sections
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/sql-data-analytics/" title="SQL for D&A ↗ " >}}
@@ -1134,7 +1056,7 @@ I also got to know about: https://echarts.apache.org/en/index.html
 
 ### Travel
 
-Combining [Tech and Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/) to get the most out of them:
+Combining [Tech and Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/) to get the most out of them: *I think that hould be around ~30 imaginary borders crossed so far*
 
 <iframe src="https://visitedplaces.com/embed/?map=world&projection=geoNaturalEarth1&position=3.7_34.3_51_-12.4_0&theme=dark-green&water=1&graticule=0&names=1&duration=2000&placeduration=100&slider=0&autoplay=0&autozoom=none&autostep=0&home=PL&places=lie~DE_ES_PT_MX_FR_GB_IT_BE_NL_DK_SE_LT_LV_UA_HU_AT_CZ_SK_BG_GR_TR_MT_PL.daaa44_CH_NO_AL_EE_TH_LI" style="width: 100%; height: 600px;"></iframe>
 
@@ -1144,13 +1066,15 @@ Combining [Tech and Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-tri
 
 Is note taking a waste of time?
 
-The time that you are writing notes / making your KB, you are not doing new things...
+The time that you are writing notes / making [your KB](https://jalcocert.github.io/JAlcocerT/knowledge-management/), you are not doing new things...
 
 Is note taking just bike-shedding?
 
 > I got to know about the concept [during 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/)
 
-The power of notes. Without bikeshedding!
+Embrace The power of notes.
+
+Without bikeshedding, but unloading your brain and sharing with others!
 
 
 #### Dev Smart not Hard
@@ -1217,9 +1141,10 @@ https://jalcocert.github.io/JAlcocerT/audio-recap/
   {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="Speech Rater Flask Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to rate your Speech - TTS and S2T transcription for youtube" >}}
 {{< /cards >}}
 
-> There are Similar python projects like https://github.com/denizsafak/abogen
-
-> > Abogen is a powerful text-to-speech conversion tool that makes it easy to turn ePub, PDF, text or markdown files into high-quality audio with matching subtitles in seconds. Use it for audiobooks, voiceovers for Instagram, YouTube, TikTok, or any project that needs natural-sounding text-to-speech, using Kokoro-82M.
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
 
 
 
@@ -1439,9 +1364,13 @@ Rscript Z_ebooks/render.R \
   --cover Z_ebooks/sample-cover.png
 ```
 
-Questions? [DWY consulting model](https://cal.com/jalcocertech/consulting)
+Questions? 
+
+There is a [DWY consulting model](https://consulting.jalcocertech.com), based on [cal](https://cal.com/jalcocertech/consulting)
 
 Lazy? [DFY model](https://www.jalcocertech.com/)
+
+
 
 **From:**
 
@@ -1636,6 +1565,14 @@ https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 
 
+The services is a matter of what to build.
+
+So to validate i built the simple waiting list concept that superseeds the waiting list v1 before ever going to prod.
+
+
+Waiting list to services
+Automation to services
+web spins to services, maybe via paas coolify/dokploy
 
 
 #### Keep Doing
@@ -1694,6 +1631,14 @@ Also, I cycled with a MTB and 3 pizzas on my steering.
 
 Both for 5+ km
 
+Oh, and I climbed (again) to the top of a country.
+
+<!-- https://youtu.be/xggBx1rD_r0 -->
+
+{{< youtube "xggBx1rD_r0" >}}
+
+
+
 #### Discovery of the Years
 
 [2020](https://jalcocert.github.io/JAlcocerT/blog/summary20/) - R *together with sql*
@@ -1707,3 +1652,12 @@ Both for 5+ km
 [2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/) - LLMs *and API calls*
 
 2025 - BiP *and social sign in/up*
+
+
+I know that this is like... 0+0=0
+
+But...how could we expect to be closer to excellent w/ot even trying?
+
+![Porsche design](/blog_img/outro/porsche.png)
+
+Enjoy.

@@ -174,6 +174,23 @@ Viral tales capture attention, look cohesive, and fit readily into existing narr
 
 ![Canva using neuromarketing on you](/blog_img/outro/canva-free-trial-neuromkt.png)
 
+## Building N ebooks for a web/ook
+
+### The DIY Web ebook
+
+AI is much better at code than it is to draf-n-drop.
+
+So if you know which tools to ask for, you get much better results.
+
+But hey, if you want to still spend a weekend to get a crappy looking wordpress - feel free to do so.
+
+
+### Servers
+
+
+### BiP
+
+See... `Z_ebooks/BiP-ebook.md`
 
 
 ---

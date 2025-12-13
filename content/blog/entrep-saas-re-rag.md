@@ -15,7 +15,7 @@ The **launch strategy**: *aka, focus strategy*
 | **One Product** | |
 | **One Channel** | |
 
-The **Tier of Service**: A DFY
+The **Tier of Service**: A clear, custom DFY
 
 The **customer segmentation**: SMB
 
@@ -212,6 +212,12 @@ Specially if you have tinkered with bots in python before:
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
+
+
+> There are Similar python projects like https://github.com/denizsafak/abogen
+
+> > Abogen is a powerful text-to-speech conversion tool that makes it easy to turn ePub, PDF, text or markdown files into high-quality audio with matching subtitles in seconds. Use it for audiobooks, voiceovers for Instagram, YouTube, TikTok, or any project that needs natural-sounding text-to-speech, using Kokoro-82M.
+
 <!-- 
 Alternatives to https://www.livechat.com/pricing/ ING uses it
  -->

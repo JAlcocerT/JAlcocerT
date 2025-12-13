@@ -168,7 +168,7 @@ There are another ways to control such devices (with Python): <https://github.co
 
 * <https://github.com/ej52/hass-ollama-conversation>
 
-You will need HACS Installed.
+You will need **HACS installed**.
 
 * Congrats, you can now:
     * go to HACS -> Integrations -> 3 dots -> Custom Repositories

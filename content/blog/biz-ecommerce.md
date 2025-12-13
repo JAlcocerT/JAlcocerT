@@ -7,7 +7,13 @@ description: 'Creating an eCommerce. Drupal vs DFY custom solutions'
 url: 'how-about-an-ecommerce'
 ---
 
+https://www.albertina.at/en/
+
+
 https://www.shopify.com/news/david-heinemeier-hansson-board
+
+https://juan.pl/en/
+
 
 * ecommerce - https://outficik.pl/
 

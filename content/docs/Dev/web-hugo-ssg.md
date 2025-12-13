@@ -17,13 +17,21 @@ This means that you wont have to worry about [databases](https://jalcocert.githu
 
 Well, I havent mentioned yet that *potentially*, you dont have to pay for [hosting these sites](#deploying-hugo-static-sites).
 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG - Github ↗" icon="github" >}}
+  {{< card link="https://books.jalcocertech.com" title="Create a DIY website with Astro" icon="tag" >}}
+{{< /cards >}}
+
+## HUGO Themes
+
+
 New to SSGs and HUGO?
 
 {{< callout type="info" >}}
 See the [**101 HUGO** Guide](https://jalcocert.github.io/JAlcocerT/using-hugo-as-website/)
 {{< /callout >}}
 
-## HUGO Themes
 
 This is the typical file structure of a HUGO Theme:
 

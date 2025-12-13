@@ -150,6 +150,9 @@ You could also use these skills when **building funnels** during your [entrepren
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#reflex-sample-apps" title="Marketing Docs" image="/blog_img/apps/reflex/reflex-stocks-sample.png" subtitle="Funnels with Streamlit" >}}
 {{< /cards >}}
 
+You can also create a quick [mermaidJS sankey of on boarding flows](https://mermaid.live/edit#pako:eNptksFuwjAMhl-l8mlIEUrSNqW5DbggbRIS2mXqJSOmVKMJCum2DvHuS4so07pTYvv__VmJz7C1GkFCYU7KvGNbmCdldGXKaK1KJJuqNNHLkWQp_VN5fAuRNaijh40PiYhNCO9UhbmZ-nNliKD0nhz5-ISwX76gX9U16kp5jNaN2-7VCUmc0nt97uznKQxy4w3xEg-qDZ0HG-vIQ3mEjgf0P8iFNR_ofKeeNy26yXWIEWOsC1QgULpKg_SuQQI1ulp1IZwLE0UF-D3WWIAMV4071Rx8Eb7gEmxHZV6trW9OZ5tyD3KnDgEFzVGHGZeVKp26S9BodAvbGA8y7TuAPMMXSDYT0zxhPE5FEieU8xmBFiSnfEpzNuOcJ3mWCn4h8N0z6VRkucjSlOWJEAmljEB4F2_d83VN-m25_ABw1bbl).
+
+<!-- 
 ```mermaid
 sankey
 Landing Page,Sign Up,750
@@ -166,4 +169,4 @@ Browsing,Abandoned (Stage 3),150
 
 Immediate Purchase,Converted (Buyer),350
 Delayed Purchase,Converted (Buyer),100
-```
+``` -->

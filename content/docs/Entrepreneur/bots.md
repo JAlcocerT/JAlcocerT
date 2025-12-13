@@ -79,6 +79,13 @@ From visuals, to the knowledge, the way it replies and who can use it.
   {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Custom Bots for RE" image="/blog_img/biz/RE/RE-bot-ppt.jpeg" subtitle="Using Streamlit to recommend properties as per md" >}}
 {{< /cards >}}
 
+Go from this: https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
+
+![alt text](/blog_img/biz/RE/re-ai-agent.png)
+
+To this: 
+
+
 <!-- 
 https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
 

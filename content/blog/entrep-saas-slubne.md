@@ -22,10 +22,10 @@ See what works and what not - PMF
 {{< /cards >}}
 
 
-Supply - infinite, scalable via Serverless storage
+Supply - ~ infinite (∞), scalable via Serverless storage
 Demand - constrained, ad driven
 
-![alt text](/blog_img/entrepre/bip-supply-demand.png)
+![Supply and Demand for a SaaS](/blog_img/entrepre/bip-supply-demand.png)
 
 Online marketing and an online delivery
 

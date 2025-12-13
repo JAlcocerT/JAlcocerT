@@ -421,6 +421,12 @@ How about checking your new website against few tools:
   {{< card link="https://search.google.com/" title="How is your site SEO doing? Google Search ↗" >}}
 {{< /cards >}}
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/linkchecker/" title="LinkChecker | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/webcheck/" title="WebCheck | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 1. https://pagespeed.web.dev/
 
 See also https://search.google.com/search-console/

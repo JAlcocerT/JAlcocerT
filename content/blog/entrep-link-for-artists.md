@@ -539,6 +539,8 @@ Last time I wrote about Photo Galleries was [here](https://jalcocert.github.io/J
 
 ![IG Gallery astro and jsx for beyondajourney](/blog_img/web/udf/ig-gallery-beyondajourney.png)
 
+And this was also cool: https://astro.build/themes/details/photography-portfolio-template/
+
 I have **added few** shortcodes/components: *like [whatsap bouble](https://github.com/JAlcocerT/just-ssg/tree/main/astro-ssg/whatsapp-bouble)*
 
 {{< cards >}}

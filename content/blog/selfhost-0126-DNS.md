@@ -7,6 +7,16 @@ description: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+
+
+**Cloudflare alternatives?**
+
+* https://github.com/rapiz1/rathole
+
+> A lightweight and high-performance reverse proxy for NAT traversal, written in Rust. An alternative to frp and ngrok.
+
+* https://noted.lol/cgnat-and-rathole/
+
 ```sh
 dig guideventuretour.com
 ```

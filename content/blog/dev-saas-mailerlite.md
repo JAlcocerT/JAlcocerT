@@ -117,7 +117,7 @@ But I needed an excuse to try BCMS.
 > >  ⭐️ BCMS is a **Headless CMS** for developers & their clients. Works nicely with Gatsby, Next.js & Nuxt. This is an open-source version for **self-hosting**. 
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bcms" title="BCMS WIP| Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bcms" title="BCMS | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 * https://thebcms.com/astro-cms
@@ -130,7 +130,7 @@ Using Headless CMS & Nuxt.js to Develop Fast Static Websites | Momcilo Popov | F
 {{< youtube "y2du9vQwZUw" >}}
 
 
-**lets try**:
+**lets try** that:
 
 ```sh
 

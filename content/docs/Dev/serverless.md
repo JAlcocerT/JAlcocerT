@@ -78,7 +78,17 @@ CF can do more fore you than [helping you with selfhosting and https](https://ja
 
 ![Cloudflare Wrangler CLI](/blog_img/web/Cloudflare/CF_WranglerCLI.png)
 
+See, CF workers and pages  us cases are so cool: https://github.com/4ev-link/4ev.link
 
+> If you want short custom urls, like url shortening to a custom slug
+
+> >  No servers to maintain, no cron jobs, no expiration dates.
+
+Same, we can also have monitor running in gihub https://github.com/upptime/upptime
+
+> ⬆️ GitHub Actions uptime monitor & status page by @AnandChowdhary
+
+> > You could also try with uptime kuma or kener
 
 ### Cloudflare Workers and Pages
 

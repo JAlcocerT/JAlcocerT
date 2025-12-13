@@ -299,6 +299,11 @@ If you enjoy my homelab repo, see also:
 git clone https://github.com/atareao/self-hosted.git atareao
 ```
 
+**SelfHosting Best Practices**
+
+* https://www.reddit.com/r/selfhosted/comments/1beoi4l/best_practices_for_selfhosted_services/
+* https://www.reddit.com/r/homelab/wiki/index/
+
 ---
 
 ## FAQ

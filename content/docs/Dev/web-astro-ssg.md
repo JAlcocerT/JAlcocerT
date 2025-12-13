@@ -13,14 +13,20 @@ Looking for creating cool and responsive web designs?
 
 **Astro** can get you there very quickly.
 
-New to SSGs and ASTRO?
+New to SSGs and ASTRO in particular?
+
+Get familiar with astro components:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG - Github ↗" icon="github" >}}
+  {{< card link="https://books.jalcocertech.com" title="Create a DIY website with Astro" icon="tag" >}}
+{{< /cards >}}
+
+## Astro CLIs
 
 {{< callout type="info" >}}
 See the [**101 Astro** Guide](https://jalcocert.github.io/JAlcocerT/using-astro-as-website/)
 {{< /callout >}}
-
-
-## Astro CLIs
 
 ```sh
 git clone #theme
@@ -129,29 +135,41 @@ This one has a blog which can be filtered per tags:
 
 ### Services
 
-https://github.com/JAlcocerT/landing-tesla/tree/main
-![Tesla Landing Screenshot](https://raw.githubusercontent.com/JAlcocerT/landing-tesla/main/web-local-run.png)
 
-Restaurants
+<!-- ![Tesla Landing Screenshot](https://raw.githubusercontent.com/JAlcocerT/landing-tesla/main/web-local-run.png) -->
 
-Artists / Modelling - https://jalcocert.github.io/JAlcocerT/link-artists/#photo-galleries
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/landing-tesla/tree/main" title="Landing Pages with Cool Video" image="https://raw.githubusercontent.com/JAlcocerT/landing-tesla/main/web-local-run.png" subtitle="Not so performing, but impressive landing page" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/link-artists/#photo-galleries" title="Photo Galleries x Artist /Modelling" image="https://raw.githubusercontent.com/JAlcocerT/minimma/master/minimma-photo-ui.png" subtitle="Not so performing, but impressive landing page" >}}
+{{< /cards >}}
 
-![Minimma Photo UI](https://raw.githubusercontent.com/JAlcocerT/minimma/master/minimma-photo-ui.png)
+
+<!-- 
+![Minimma Photo UI](https://raw.githubusercontent.com/JAlcocerT/minimma/master/minimma-photo-ui.png) 
+-->
 
 
-CV Themes
+CV Themes? Not a problem
 
-Links / Bento
+Links / Bento...also fine, [see](https://jalcocert.github.io/JAlcocerT/link-artists/#oss-links-web-profiles).
 
-https://jalcocert.github.io/JAlcocerT/link-artists/#oss-links-web-profiles
+Restaurants?
 
 
 #### Weddings
+
+I ,kind of' have tinkered around website and services related to weddings.
+
+You can ese such themes:
 
 {{< cards >}}
   <!-- {{< card link="blog" title="Blog" icon="book-open" >}} -->
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/" title="Applied for MotoVlog ↗" icon="book-open" >}}
 {{< /cards >}}
+
+Build sth for people close to you like this.
+
+And (maybe), scale it!
 
 ### Docs
 
@@ -264,6 +282,9 @@ I discovered the following in a [gh discussion](https://github.com/withastro/sta
 You can create a astro component: `DockerCompose.astro`
 
 
+{{< details title="Sample Astro component for data fetching 📌" closed="true" >}}
+
+
 ```js
 // DockerCompose.astro - Fetches and displays a docker-compose.yml file
 // Usage: <DockerCompose url="URL_TO_RAW_GITHUB_CONTENT" />
@@ -360,3 +381,5 @@ const dockerComposeContent = await response.text();
   }
 </style>
 ```
+
+{{< /details >}}

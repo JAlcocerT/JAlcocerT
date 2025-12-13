@@ -80,13 +80,12 @@ Nice to have:
 12. https://stockanalysis.com/stocks/pep/dividend/
 13. https://fullratio.com/stocks/nyse-ko/coca-cola 
 14. Buyback ratio (if historical, even better). They get announced, [people comment](https://x.com/StockMKTNewz/status/1960889386234778054)
-
-* 
+ 
 
 15. Volatility div growth and cagr / Yfinance eur usd?
 16. Treemap with market size like https://finviz.com/map.ashx
 
-```mermaid
+<!-- ```mermaid
 treemap-beta
 "Section 1"
     "Leaf 1.1": 12
@@ -98,7 +97,7 @@ treemap-beta
     "Leaf 2.3": 12
 
 classDef class1 fill:red,color:blue,stroke:#FFD600;
-```
+``` -->
 
 17. https://www.simplysafedividends.com/world-of-dividends/posts/41-2025-dividend-kings-list-all-54-ranked-analyzed a hidden blog to attract SEO
 18. https://www.tikr.com/

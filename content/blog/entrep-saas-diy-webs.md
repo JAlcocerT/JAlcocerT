@@ -173,6 +173,13 @@ Remember, you can always do your [wordpress stuff](#still-want-a-wp).
 
 ## FAQ
 
+
+If you are building websites, get inspired:
+
+ 1. https://github.com/gridaco/grida
+
+ > Apache v2 |  Grida — Ambitious 2D Graphics Editor for the Web 
+
 ### Interesting Features for any Web
 
 1. Pop up at time or location of page
@@ -291,3 +298,53 @@ All of these themes respect GPL open-source licensing, meaning you can modify or
 [8](https://them.es)
 [9](https://www.wpbeginner.com/pl/beginners-guide/how-to-install-wordpress-plugins-and-themes-from-github/)
 [10](https://ltheme.com/wordpress-github-plugin/)
+
+
+### Building Webs with AI
+
+See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/leaderboard
+
+* https://github.com/atuinsh/atuin
+
+> MIT | ✨ Magical shell history
+
+
+
+### Other Static CMS
+
+What are Static Site Generators?
+
+* https://github.com/plentico/plenti
+
+> Apache v2 | **Static Site Generator** with Go backend and Svelte frontend 
+
+Build-Time Render Engine (aka Static Site Generator) with Go backend and Svelte frontend
+
+Ships with a fully integrated Git-CMS that you can host for cheap/free right with your static site
+
+Install [plenti](https://snapcraft.io/plenti):
+
+```sh
+snap install plenti
+```
+
+As the author mentions: Plenti = Hugo + NetlifyCMS 
+<!-- https://www.youtube.com/watch?v=T4b55nfZiIw -->
+{{< youtube "T4b55nfZiIw" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=Gr3KTOnsWEM&list=PLbWvcwWtuDm0tIrvD_xHvUXHBftbHDy5T 
+-->
+
+{{< youtube "Gr3KTOnsWEM" >}}
+
+
+This is a very cool proposal for landing pages see https://plenti.co/themes !
+
+1. https://github.com/keystonejs/keystone
+
+* https://keystonejs.com/docs
+
+Keystone helps you build faster and scale further than any other CMS or App Framework. Describe your schema, and get a powerful GraphQL API & beautiful Management UI for your content and data.
+
+> MIT | The superpowered headless CMS for Node.js — built with GraphQL and React 

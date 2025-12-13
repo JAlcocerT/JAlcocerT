@@ -7,6 +7,30 @@ description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
 
+Comercial ones like: `https://www.lindy.ai/pricing`
+
+* https://github.com/browser-use/browser-use
+
+>  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
+
+See also:
+
+1. LangChain Web Scrapping
+
+2. Browserless
+
+* https://github.com/browserless/browserless
+
+>  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
+
+summary: 'Crawl4AI is an open-source web crawler and scrapper tailored for LLMs and AI applications. It offers asynchronous crawling, data extraction, and various features for enhanced performance and scalability.'
+
+* https://github.com/saifyxpro/HeadlessX
+
+> MIT |  A lightweight, self-hosted headless browser automation platform. Designed as an alternative to Browserless, built for speed, privacy, and scalability. 
+
+https://www.youtube.com/watch?v=L2Ya9PYNns8
+
 > CodexCLI for idea validation?
 
 

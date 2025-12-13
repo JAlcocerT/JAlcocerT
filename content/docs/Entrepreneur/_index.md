@@ -48,6 +48,10 @@ But these are some tools that make getting returns from [what you build](https:/
 You can also get help from [some product tools](https://jalcocert.github.io/JAlcocerT/product-tools/)
 
 
+A SaaS be like:
+
+![Supply and Demand for a SaaS](/blog_img/entrepre/bip-supply-demand.png)
+
 ### Formbricks
 
 It's all about this fantastic Service: https://app.formbricks.com/auth/login
