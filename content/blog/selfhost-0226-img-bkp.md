@@ -8,6 +8,7 @@ url: 'learning-new-nocode-tools'
 ---
 
 <!-- 
+
 https://www.quadratichq.com/
 
 > Source Open | Infinite spreadsheet with Python, SQL, and AI.
@@ -16,7 +17,10 @@ https://github.com/quadratichq/quadratic/tree/main
 https://github.com/quadratichq/quadratic/issues/416
 docker build -t quadratic --platform=linux/amd64 .
 
- -->
+-->
+
+Ente....
+
 
 **Tl;DR**
 

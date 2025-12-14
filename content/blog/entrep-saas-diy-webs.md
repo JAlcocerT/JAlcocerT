@@ -293,6 +293,7 @@ You can explore thousands more in the **GitHub “wordpress-theme” topic**, wh
 **Installing Themes from GitHub**
 
 You can manually download a theme ZIP file from GitHub and install it through **WordPress → Appearance → Themes → Upload Theme**.  
+
 Alternatively, use tools like **WP Pusher** or **GitHub Updater** to install and automatically update WordPress themes directly from public GitHub repositories.[5][9]
 
 All of these themes respect GPL open-source licensing, meaning you can modify or even resell them under your own distribution as long as you retain the same license.
@@ -317,6 +318,20 @@ See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/lead
 
 > MIT | ✨ Magical shell history
 
+#### How Ive improved my websites
+
+##### FOSS
+
+Fossengineer Docs and Theme Directory!
+
+WIP
+
+1. Keep HUGO as SSG
+2. Create Doc like section as companion to the blog
+3. Create theme directory that works as per the config added at the [homelab repo](https://github.com/JAlcocerT/Home-Lab/tree/main)
+
+
+##### BaJ
 
 
 ### Other Static CMS

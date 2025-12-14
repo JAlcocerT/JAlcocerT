@@ -43,9 +43,6 @@ This is where I want to try **Astro on SSR mode**
 
 ## A T3 Chat like interface
 
-
-
-
 Why not applying these to a theme: *which kind of reminds me of t3.chat*: https://t3.chat
 
 ![T3 Chat UI](t3-chat-register-wall/blog_img/GenAI/t3.png)
@@ -60,6 +57,14 @@ Why not applying these to a theme: *which kind of reminds me of t3.chat*: https:
 ```
 Create a makefile with the commands to run this astro site locally
 ```
+
+{{% details title="After cloning, you can tweak it with agents 🚀" closed="true" %}}
+
+```sh
+
+```
+
+{{% /details %}}
 
 ```sh
 #git clone https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot

@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-13
+date: 2025-12-14
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
@@ -1476,9 +1476,14 @@ Despite popularity has...decreased recently?
 
 Im including here: **MCP**, which it was all hyped around spring and non used today due to high token consumption
 
+* https://github.com/mcp-use/mcp-use
+* https://github.com/punkpeye/awesome-mcp-servers
+
 And...**BAML**, which was a very interesting setup.
 
 Perplexity and Gemini are my go to now, instead of ChatGPT.
+
+---
 
 ## Conclusions
 

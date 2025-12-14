@@ -50,6 +50,16 @@ Specially after the learnings of the [Obfuscator project](https://github.com/JAl
   {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web ebook and also downlodable as PDFs" >}}
 {{< /cards >}}
 
+
+{{% details title="Creating the N ebooks repo to consolidate Docs - web/ooks, success stories and slidev ptts 🚀" closed="true" %}}
+
+```sh
+
+```
+
+{{% /details %}}
+
+
 Expect ,n' to be:
 
 1. Webpage creator: Because you can own your brand
@@ -72,7 +82,7 @@ Im a big fan of Excalidraw for D&A, specially architectural diagrams.
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="Diagrams and PPTs | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="Diagrams & PPTs | Docs ↗" >}}
 {{< /cards >}}
 
 For those times when you dont want to use MermaidKS, but just to make a quick drawing.
@@ -81,7 +91,9 @@ For those times when you dont want to use MermaidKS, but just to make a quick dr
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/excalidraw" title="Selfhosted Excalidraw - Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-https://www.youtube.com/watch?v=P_Q6avJGoWI
+<!-- https://www.youtube.com/watch?v=P_Q6avJGoWI -->
+
+{{< youtube "P_Q6avJGoWI" >}}
 
 
 https://blog.excalidraw.com/
@@ -171,9 +183,11 @@ https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/
 
 ## Conclusion
 
-PortMaster...
+Ive added PortMaster install as a script in the HomeLab repo, [here](https://github.com/JAlcocerT/Home-Lab/blob/main/z-homelab-setup/portmaster-install.sh):
 
-Ente....
+```sh
+./portmaster-install.sh
+```
 
 Probably having a **VPS** as compute backup is not a bad idea.
 
@@ -265,7 +279,10 @@ General purpose (reverse) proxy and forwarding tool for networking noobs. Now wr
 
 The **Sony- WF-1000XM3** and linux.
 
-https://www.youtube.com/watch?v=m_Mr4bw8Pow
+<!-- https://www.youtube.com/watch?v=m_Mr4bw8Pow -->
+
+{{< youtube "m_Mr4bw8Pow" >}}
+
 
 * https://github.com/kavishdevar/librepods
 
