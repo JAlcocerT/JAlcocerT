@@ -79,8 +79,6 @@ These web-apps are cool and selfhostable:
 
 > > A self-hosted local image optimizer that runs in your browser.
 
-
-
 2. Various: 
 
 * https://it-tools.tech and https://omnitools.app/ 
@@ -97,4 +95,4 @@ You can also **sign PDFS** with: https://github.com/docusealco/docuseal
 
 > agpl 3.0 | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ 
 
-4. Diagrams with: https://excalidraw.com/ or drawio
+4. Diagrams with: https://excalidraw.com/

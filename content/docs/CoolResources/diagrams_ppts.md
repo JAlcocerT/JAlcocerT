@@ -135,3 +135,9 @@ https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ppts-as-a-code
 > Minimalist template for creating slides with Reveal.js and Astro
 
 4. https://markmap.js.org/repl
+
+### Icons for PPTs
+
+When you are creating slidev PPTs or mermaid diagrams, like for architectural purposes, [icons are very handy](https://jalcocert.github.io/JAlcocerT/ai-driven-diagrams/#architecture-and-icons).
+
+Have a look to https://github.com/lucide-icons/lucide or feather icons.

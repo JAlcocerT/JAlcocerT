@@ -1,6 +1,6 @@
 ---
 title: "SelfHosting is easy with PaaS"
-date: 2025-12-17T19:20:21+01:00
+date: 2025-12-13T19:20:21+01:00
 draft: false
 tags: ["HomeLab ebook","Excalidraw","1toN ebooks","Omarchy OS"]
 description: 'Selfhosting with your HomeLab and PaaS.'
@@ -110,6 +110,37 @@ Direct, built-in support in major SSGs is less common, but you can usually achie
     2.  Use a **script or build step** (often involving the Excalidraw CLI) to convert the `.excalidraw` JSON into a static **SVG** or **PNG** file.
     3.  Embed the resulting SVG/PNG image in your Markdown note, which the SSG then publishes.
 
+## Few Ways to run a Homelab
+
+1. With a nice OSS: *Ubuntu, Zorin OS, Linux Lite...*
+
+<!-- 
+![Umbrel OS Apps with one click install](/blog_img/selfh/umbrel-os/umbrel-apps.png) -->
+
+
+2. With whatever OS you have + containers like:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/" title="UmbrelOS x Homelab" image="/blog_img/selfh/umbrel-os/umbrel-apps.png" subtitle="Using UmbrelOS as Container to selfhost apps" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/cosmos-server" title="Cosmos Server x HomeLab" image="/blog_img/selfh/PaaS/cosmos-ui-market.png" subtitle="Docker config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+* https://github.com/crocofied/CoreControl
+* https://github.com/vitodeploy/vito
+
+
+> Free and Self-Hosted Server Management Tool 
+
+* The PaaS ones:
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/" title="DokPloy x VPS" image="/blog_img/selfh/umbrel-os/umbrel-apps.png" subtitle="Using UmbrelOS as Container to selfhost apps" >}}
+  {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="Coolify x Pi" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web/book and also downlodable as PDFs" >}}
+{{< /cards >}}
+
 ---
 
 ## Conclusion
@@ -140,18 +171,17 @@ And **[hetzner](https://accounts.hetzner.com/login)** has been leveling up their
 
 Keeping NS outside cloudflare and using the NGINX setup, instead of the Traefik one.
 
-
-
 ### Random
 
 2 years ago I put together couple of words with thoughts and snapshots that the world never got to see.
 
 Now I have 3 ebooks ready to be consumed, while the world ends *one more time*
 
-https://x.com/shanaka86/status/1990231121976811961?s=20
+<!-- https://x.com/shanaka86/status/1990231121976811961?s=20 -->
 
+{{< tweet user="shanaka86" id="1990231121976811961" >}}
 
-I started another ebook: because everything has potential failures
+I started another ebook about servers/infra/selfhosting: because everything has potential failures
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web/book and also downlodable as PDFs" >}}
@@ -162,6 +192,7 @@ Expect ,n' to be:
 1. Webpage creator: Because you can own your brand - DIY ofc
 2. Homelabs/Servers
 3. IoT
+4. More expertise as I learn :)
 
 #### Outages x Status x PlansB
 
@@ -172,7 +203,7 @@ But also [cloudflare](https://www.cloudflarestatus.com/)...and [Github](https://
 
 Its curious that even X ressited the AWS outage, but not the CF one.
 
-![alt text](/blog_img/outro/x-cf-down.png)
+![Cloudflare down affecting Twitter X](/blog_img/outro/x-cf-down.png)
 
 
 ![Cloudflare outage due to...sql aparently](/blog_img/outro/cf-down.png)
@@ -344,11 +375,17 @@ If what you are looking for is a way to run Windows Apps in new ways, you could 
 You can get started very quickly, create a **cal.com meeting and embed it** into your websites in few ways:
 
 {{< youtube id="qFMN0oDeCFg" autoplay="false" >}}
-https://awweso.me/booking-and-scheduling/
+
+* https://awweso.me/booking-and-scheduling/
 
 <!-- https://youtu.be/qFMN0oDeCFg -->
 
 ![Calcom Email x Stripe ](/blog_img/email/cal-email-stripe.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Calendar | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Formbricks | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 ![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png)
 
@@ -390,7 +427,7 @@ ssh-keygen -t rsa -b 4096 -C "somemail@domain.ch"
 ssh root@yourhetznerserverip
 ```
 
-3. Create a non root user to run containers
+3. Create a **non root user** to run containers
 
 {{< callout type="warning" >}}
 This is a must for any VPS. It avoids attacks like the recent REACT Hack!

@@ -53,6 +53,8 @@ So is preparing your **CV and your interviews**:
 
 For a career in D&A you will need to be familiar with certain tools.
 
+https://roadmap.sh/
+
 https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/
 
 https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/
@@ -611,3 +613,9 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 * **Mock interviews:** Practice your interview skills with a friend or mentor to get feedback and build confidence.
 
 {{< /details >}}
+
+## Outro
+
+Tired of being an ,IC', aka *individual contributor* or the politics around managerial roles?
+
+Find clients that need your expertise, build with your knowledge and help others on your own way.

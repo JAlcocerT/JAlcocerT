@@ -120,6 +120,8 @@ classDef class1 fill:red,color:blue,stroke:#FFD600;
 27. Geraldine Weiss method, *also known as the dividend-yield theory*
 28. Dividend calendar, like https://www.dividendstocks.com/tools/ex-dividend-stock-list/ or https://divvydiary.com/en/calendar
 
+29. When are the company earnings: https://earningshub.com/
+
 **Sitio Web para Datos de Mercado:**
 
 * markets.ft.com
@@ -226,6 +228,14 @@ Or just create a quick flask webapp so that anyone can download such cool plots:
 ![Flask web app DataInMotion Twitter](/blog_img/dev/pystocks/libreportfolio-plots-datainmotion.png)
 
 > If you have vibe coded properly, this is as simple as: data preparation scripts -> scripts for plots -> webapp
+
+### Interesting Books
+
+1. The little book of valuations
+2. The Millionaire Fast Line
+3. https://www.reddit.com/r/investing/wiki/readinglist/
+4. Boglehead guide
+5. A random walk down Wall Street
 
 ---
 

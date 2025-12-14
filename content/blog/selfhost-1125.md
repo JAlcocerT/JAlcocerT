@@ -43,6 +43,8 @@ I tried recently umbrelOS (the latest1.4), but inside a container:
 
 ![UmbrelOS UI](/blog_img/selfh/umbrel-os/umbrel-signup.png)
 
+Once you login, you are presented with a friendly panel to install apps:
+
 ![Umbrel OS Apps with one click install](/blog_img/selfh/umbrel-os/umbrel-apps.png)
 
 And one of the many apps that you can use out of the box is **Wanderer**: *A great addition for anyone who likes adventures and [GPX files](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/refs/heads/main/Data_My_Routes/PL-SK-HU.gpx)*

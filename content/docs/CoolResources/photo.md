@@ -48,6 +48,7 @@ sudo apt install dupeguru
   {{< card link="https://github.com/upscayl/upscayl" title="Upscayl to enhance images locally" >}}
 {{< /cards >}}
 
+5. Darktable, RawTherapee *as OSS alternatives to adobe lightroom*
 
 5. For background removal, try...
 

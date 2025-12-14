@@ -121,10 +121,9 @@ But the DWY/DFY model, means that **I choose what's my focus**.
 
 Do you?
 
-Or have i earned the right to not give a fuck of what others opinions are about how I choose to spend my time?
+Or have I earned the right to not give a fuck of what others opinions are about how I choose to spend my time?
 
-> The kind of rights from understanding loans, [stocks](https://jalcocert.github.io/JAlcocerT/py-stonks/), [crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/), having a high [active income](https://jalcocert.github.io/JAlcocerT/career/) AND having a very high saving rate *(yea, im saying no to 50%+++ of what I could spend...after taxes)*
-
+> The kind of rights you get from understanding [loans](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#french-amortization-101), the [costs of real estate](https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/), [stocks](https://jalcocert.github.io/JAlcocerT/py-stonks/), [crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/), having a high [active income](https://jalcocert.github.io/JAlcocerT/career/) AND having a very high saving rate *(yea, im saying no to 50%+++ of what I could spend...after taxes)*
 
 Anyways, not everything is lost!
 
@@ -578,6 +577,12 @@ And that [BRD PRD FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data
 
 14. The difference between something CAN happen and WILL happen 🤯
 
+15. Compras y esperas vs esperas y compras for stocks compared to wait 7 days for consumption
+
+16. About been unhappy but certain vs uncertain and happy
+
+> Risk aversion is a thing...
+
 ## Entrepreneuring
 
 I feel (literally) like in the **back straight of a circuit** after having couple of laps to recognize my breaking/aceleration points.
@@ -852,6 +857,8 @@ From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael E
 
 9. Time is the currency of life
 
+> And we pay with the currency we value the least
+
 10. Authenticity is how you behave when you have no risk of punishment
 
 11. Some *unrelated* blog & posts:
@@ -877,7 +884,7 @@ Just make sure you take care of your diet/stress levels.
 
 {{< /details >}}
 
-16. Helping versus serving - *and how pricing helps differenciate that*
+16. Helping versus serving - *and how Tiers of Service / [pricing](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#pricing) helps differenciate that*
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#pricing" title="Pricing | Docs ↗" >}}
@@ -1561,6 +1568,20 @@ Waiting list to services
 Automation to services
 web spins to services, maybe via paas coolify/dokploy
 
+
+
+{{< details title="To read...6 books 📌" closed="true" >}}
+
+As i want to focus more on doing than entertainment.
+
+1. Unscripted
+2. Hyper focus fro, Crhsi Bailey
+3. Gonzo Capitalism (?)
+
+
+{{< /details >}}
+
+And...to create N ebooks :)
 
 #### Keep Doing
 

@@ -421,3 +421,18 @@ In HuggingFace you will find really cool and Open AI Projects to try out:
 * <https://www.futuretools.io/?pricing-model=open-source>
 
 > But, be prepared to use your CC details!
+
+### Interesting Groq
+
+<!-- https://www.youtube.com/watch?v=Y3srmpL8klY -->
+
+{{< youtube "Y3srmpL8klY" >}}
+
+
+* https://github.com/jgravelle/MiniGroqqle
+
+> MiniGroqqle is a minimalist web search component that allows Python developers to easily integrate web search capabilities into their applications. With just a few lines of code, you can perform Google searches and retrieve structured results.
+
+* https://github.com/jgravelle/pocketgroq
+
+> PocketGroq is a powerful Python library that simplifies integration with the Groq API, offering advanced features for natural language processing, web scraping, and autonomous agent capabilities. Key Features Seamless integration with Groq API for text generation and completion Chain of Thought (CoT) reasoning for complex problem-solving and more.

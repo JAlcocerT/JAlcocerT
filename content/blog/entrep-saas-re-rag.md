@@ -232,3 +232,9 @@ Use cases
 🔍 Semantic Search
 
  -->
+
+### Who can be interested in such websites?
+
+As this is a great case study / success story, how about...letting others know about it?
+
+* `twojmetr2.pl`

@@ -63,16 +63,23 @@ https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater
 
 Some people mention `https://lucida.to/`, but I prefer to have my own music server:
 
+```sh
+#snap install spotify
+```
+
+Gonic is one of the options:
+
 ![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
+
+Navidrome is other OSS selfhostable music server:
 
 ![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
 
-https://jalcocert.github.io/JAlcocerT/media-server-with-open-source/#faq
+And they both get on pretty well with Metube: *specially if you are [building a media server](https://jalcocert.github.io/JAlcocerT/media-server-with-open-source/#faq)*
+
 ![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
 
-metube + jdownloader + qbit
-
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#youtube-fe
+You can add more services to the stack, like other [youtube front-ends](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#youtube-fe) and create a: metube + jdownloader + qbit
 
 
 

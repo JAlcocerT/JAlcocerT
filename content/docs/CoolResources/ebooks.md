@@ -15,6 +15,8 @@ I was tinkering with **ebooks creation** [here](https://github.com/JAlcocerT/ebo
 
 It was all about to [extract knowledge from Kinddle clippings](https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/) and I ended up creating some instead.
 
+## ebooks 101
+
 ### PDFs
 
 PDFs are strange files, actually.
@@ -60,3 +62,10 @@ You could think about using your books as lead magnets:
 Now, the epub files are closer to htmls than we might expect.
 
 And IMO they are trickier to create compared to PDFs.
+
+
+## Tools for Writters
+
+* https://github.com/languagetool-org/languagetool
+
+>  Style and Grammar Checker for 25+ Languages 
