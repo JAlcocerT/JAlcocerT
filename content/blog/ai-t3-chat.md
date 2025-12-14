@@ -43,7 +43,7 @@ This is where I want to try **Astro on SSR mode**
 
 ## A T3 Chat like interface
 
-create a makefile with the commands to run this astro site locally
+
 
 
 Why not applying these to a theme: *which kind of reminds me of t3.chat*: https://t3.chat
@@ -57,8 +57,12 @@ Why not applying these to a theme: *which kind of reminds me of t3.chat*: https:
 
 * https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot which is also **MIT** and https://template-astro-vercel-sdk-ai-chatbo.vercel.app/
 
+```
+Create a makefile with the commands to run this astro site locally
+```
+
 ```sh
-git clone https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot
+#git clone https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot
 
 ```
 
@@ -74,6 +78,8 @@ How about the rating part now?
 
 Meaning: to somehow plug the AI/LLMs/Agents to do/check stuff
 
+This required some back-and0-forth with antigravity. But I got to make it work.
+
 
 ### About Cool Chat UIs
 
@@ -84,8 +90,7 @@ Some might say that its all [about CSS](https://jalcocert.github.io/JAlcocerT/bl
 * https://ui.shadcn.com/themes
   * https://github.com/ObservedObserver/streamlit-shadcn-ui
 
-
-
+But if you are vibe coding, from my experience, specifying TailwindCSS is a very good go to.
 
 
 
@@ -93,15 +98,22 @@ Some might say that its all [about CSS](https://jalcocert.github.io/JAlcocerT/bl
 
 ## Conclusions
 
+Connecting cool static chat UIs to AI API keys is possible.
+
+Isnt it the beauty behind JAMStack?
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Creating a Landing with Antigravity" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Proper BiP BRD + Astro + FastAPI chatbot" >}}
+{{< /cards >}}
 
 ### About AI API Endpoints
 
-
+If you need very fast inference, consider groq: https://console.groq.com/keys
 
 ---
 
 ## FAQ
-
 
 ### SelfHostable Links
 

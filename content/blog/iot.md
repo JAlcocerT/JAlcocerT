@@ -26,31 +26,7 @@ https://ko-fi.com/s/86175d7928
 
 +++ Destiling knowledge to ebooks - IoT edition
 
-**Intro**
 
-I saw this post coming up next and inmediately thought that I should put an IoT related ebook after this.
-
-Specially after the learnings of the [Obfuscator project](https://github.com/JAlcocerT/obfuscate), where I merged the source code of serving an ebook via FastAPI to the one of rendering the PDF via R.
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web ebook and also downlodable as PDFs" >}}
-{{< /cards >}}
-
-Expect ,n' to be:
-
-1. Webpage creator: Because you can own your brand
-2. Homelabs: I started this ebook because everything has potential failures
-3. IoT: This is the one I want to put together as I write this post :)
-
-This time, adding bring more languages for the ebooks is on the table. Locale i18n!
-
-In the end of the day, its been alrady 150+ posts this year (totally unexpected).
-
-So a distilled version with less noise, less chaos and more ordered for others to get value from.
-
-I need more of:
-
-![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png)
 
 
 ## From IoT Data to LangChAIn

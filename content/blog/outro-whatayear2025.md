@@ -811,9 +811,11 @@ Which for me relates with: *More important than the willingness to win, is the w
 
 How would we reach our goals if we do nothing the move our current state closer to it? ah?
 
-Kind of resonates with [process](#processes) > result.
+Kind of resonates with [process](#processes) > > > result.
 
 > Systems *(designed for the worst days)* do not really on willpower / motivation
+
+6. Expect very low conversions: *from 1/1000 social media conversions, to 1/10 ,121 initial talks' on your funnels,...*
 
 5. Quotes (a)
 

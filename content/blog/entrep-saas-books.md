@@ -2,7 +2,7 @@
 title: "We/Books"
 date: 2026-01-02T23:20:21+01:00
 draft: false
-tags: ["Kindle","1toN ebooks","SaaS vs LifeTime Products","RoadMap26"]
+tags: ["Kindle","1toN ebooks x BiP BoilerPlate","SaaS vs LifeTime Products","RoadMap26"]
 description: 'Reading better, writing more. Making the learnings of years actionable and sharing via web/ooks'
 url: 'interesting-books'
 ---
@@ -23,9 +23,13 @@ This post is going to be avolving along 2026.
 So consider it a WIP until the year has ended - or AI took over civilization :)
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/" title="NEW 1-to-Nebooks" image=/blog_img/apps/gh-jalcocert.svg" subtitle="Putting together my thoughts and curated knowledge into N ebooks" >}}
-  {{< card link="https://github.com/JAlcocerT" title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate - Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/1toN-ebooks/" title="Kind of ~ NEW 1-to-Nebooks" image=/blog_img/apps/gh-jalcocert.svg" subtitle="Putting together my thoughts and curated knowledge into N ebooks" >}}
+  {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate for SaaS - Source Code on Github" >}}
 {{< /cards >}}
+
+> Its *Kind of new*, because I created the repo on [this post](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-december-2025), based on the 2025 path :)
+
+> > The content of the n ebooks will be modified across the year as I distill it from this blog/docs
 
 Thinking about this...ive been writing for a while (quite intensively last year) and this have become some kind of a habit and...a lead nurture in a way.
 
