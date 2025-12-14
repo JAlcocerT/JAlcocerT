@@ -129,9 +129,6 @@ Is just that...you have to...do it.
 
 Sucks, I know.
 
-
-
-
 ### Went HandsOn Obfuscation 
 
 I created the first draft of an ebook on *how to create your cool website via DIY* - `diy.jalcocertech.com`

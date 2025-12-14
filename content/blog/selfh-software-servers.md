@@ -572,6 +572,8 @@ With more and more vibe coding tools, you can even offer shift planners for...gy
 
 ##### Other OSS Tools for a Small Business
 
+SMBs need to manage assets, contracts, etc:
+
 * https://github.com/snipe/snipe-it
 
-Snipe-IT: Open-source asset management system
+> Snipe-IT: Open-source asset management system

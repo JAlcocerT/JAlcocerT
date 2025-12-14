@@ -1083,22 +1083,32 @@ Using AI to create more and better, in less time.
 
 The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/).
 
-With too many options: Repliit lovable [windsurf](https://windsurf.com/account/login) cursor bolt...
+With too many options: Repliit, lovable, [windsurf](https://windsurf.com/account/login), cursor, bolt...anti-gravity...
 
 Even with: https://github.com/settings/copilot/features
 
 > *El relato mata al dato* - Thats also true when looking for new project opportunities
 
 1. Discovering uv as [python package manager](https://nielscautaerts.xyz/python-dependency-management-is-a-dumpster-fire.html) and the power of makefile >>> readme.md code snippets was huge to me.
-2. Git power: one action -> one commit + one branch -> one feature + main is the current AND ONLY reality
+
+```sh
+#uv init
+make help #the 2 most powerful CLIs ive learnt this year
+```
+
+2. Git power: one action -> one commit + one branch -> one feature + main is the current AND ONLY reality of a project
 
 * See this for branching strategies: https://learn.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance?view=azure-devops
 
-3. No Nested if's, try -> Error exit with message
+3. No Nested if's in the logic, try -> Error exit with message is a much better approach
 
+4. I can call this section: my [**vibe coding journey of web/apps** up to this year](https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/#using-paas-to-host-vibe-coded-webapps)
+
+The good thing?
+
+That Im confortable with FastAPI/NextJS enough to get things going my way, when streamlit is not enough.
 
 ![SliDevJS editor with NextJS and Logto/firebase working for social authentication](/blog_img/DA/ppt/slidev-editor.png)
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slidev-editor" title="Slidev-Editor Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to SliDev Editor with Firebase Logto Auth via NextJS and ToastUI md editor" >}}

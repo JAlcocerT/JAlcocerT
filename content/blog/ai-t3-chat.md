@@ -2,7 +2,7 @@
 title: "AI Chats with cool UIs are possible"
 date: 2025-11-30T08:20:21+01:00
 draft: false
-tags: ["Astro SSR","Groq TPS","Web Analytics vs Link Analytics"]
+tags: ["Astro Hybrid Mode","Groq TPS","Web Analytics vs Link Analytics"]
 url: 't3-like-chat'
 description: 'Integrating Astro Chat Themes to AI API Keys versus T3. Consolidating BiP+Vibe Coding with AI Agents.'
 ---
@@ -13,8 +13,6 @@ Ive been following theo in YT for some time now, t3 chat is amazing.
 
 How hard is to do something similar on the surface?
 
-+++
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
@@ -22,8 +20,7 @@ How hard is to do something similar on the surface?
 
 **Intro**
 
-The multichat or the Aissistant were cool.
-
+The multichat or the Aissistant were... cool:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat UI" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="How the final multichat UI looks like" >}}
@@ -32,7 +29,7 @@ The multichat or the Aissistant were cool.
 
 But streamlit does not allow for the kind of modern (and pixel tweak) chat interface we want.
 
-One that...could be a brand signature.
+One that...could be a future brand signature.
 
 This is where I want to try **Astro on SSR mode**
 
@@ -61,14 +58,25 @@ Create a makefile with the commands to run this astro site locally
 {{% details title="After cloning, you can tweak it with agents 🚀" closed="true" %}}
 
 ```sh
+#rm -rf .git
 
+#git init && git add . && git commit -m "Initial commit: Starting astro hybrid OpenAI Chatbot" && gh repo create Astro-Vercel-SDK-AI-Chatbot --private --source=. --remote=origin --push
+
+make install && make dev #requires .env.local
 ```
 
 {{% /details %}}
 
 ```sh
 #git clone https://github.com/Marve10s/Astro-Vercel-SDK-AI-Chatbot
+git clone https://github.com/JAlcocerT/Astro-Vercel-SDK-AI-Chatbot
 
+make help
+
+make docker-build
+make docker-up
+#docker stop $(docker ps -a -q) #stop all
+#docker system prune -a --volumes -f
 ```
 
 In this case, the vibe coding journey starts from this repository, so no need for the initial prompt.
@@ -83,7 +91,38 @@ How about the rating part now?
 
 Meaning: to somehow plug the AI/LLMs/Agents to do/check stuff
 
-This required some back-and0-forth with antigravity. But I got to make it work.
+This required some back-and-forth with antigravity. 
+
+But I got to make it work:
+
+* Make async API calls to /api/chat
+* Stream responses token-by-token
+* Update the UI in real-time as tokens arrive
+* Enabled **Astro SSR mode** with output: 'server'
+* Added Node.js adapter for API route support
+
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend as Chatbot.tsx
+    participant API as /api/chat
+    participant SDK as Vercel AI SDK
+    participant OpenAI as OpenAI API
+
+    User->>Frontend: Sends Message
+    Frontend->>API: POST /api/chat (messages)
+    API->>SDK: streamText()
+    SDK->>OpenAI: Request Completion
+    OpenAI-->>SDK: Stream Chunks
+    SDK-->>API: Stream Text
+    API-->>Frontend: ReadableStream
+    
+    loop For each chunk
+        Frontend->>Frontend: TextDecoder.decode()
+        Frontend->>User: Update UI (Token by Token)
+    end
+```
 
 
 ### About Cool Chat UIs
@@ -95,8 +134,12 @@ Some might say that its all [about CSS](https://jalcocert.github.io/JAlcocerT/bl
 * https://ui.shadcn.com/themes
   * https://github.com/ObservedObserver/streamlit-shadcn-ui
 
-But if you are vibe coding, from my experience, specifying TailwindCSS is a very good go to.
+But if you are vibe coding, from my experience, specifying TailwindCSS is a good enough approach:
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Custom Bots for Landing Pages" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Using FastAPI + OpenAI x Astro to get a bot to work!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Custom Bots for RE" image="/blog_img/biz/RE/RE-bot-ppt.jpeg" subtitle="Using Streamlit to recommend properties as per md" >}}
+{{< /cards >}}
 
 
 ---
@@ -105,12 +148,25 @@ But if you are vibe coding, from my experience, specifying TailwindCSS is a very
 
 Connecting cool static chat UIs to AI API keys is possible.
 
-Isnt it the beauty behind JAMStack?
-
+Isnt it the beauty behind Hybrid Mode?
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Creating a Landing with Antigravity" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Proper BiP BRD + Astro + FastAPI chatbot" >}}
 {{< /cards >}}
+
+
+> [!NOTE]
+> **Architecture Update**: This is now a **Hybrid/SSR** application.
+> While the UI is React (client-side), the `/api/chat` route requires a Node.js server runtime to securely handle API keys and streaming. It is no longer a purely static site (Jamstack) in the strict sense, but retains the performance benefits of Astro.
+
+| Architecture | Description | Pros | Cons |
+|--------------|-------------|------|------|
+| **Jamstack** | **Static Files + APIs.** The entire site is pre-built as HTML/CSS/JS (Static) and served via CDN. Dynamic features use client-side APIs. | 🚀 Fastest performance<br>🛡️ Most secure<br>💰 Cheapest hosting | ❌ Can't hide API keys easily<br>❌ Long build times for large sites |
+| **SSR (Server-Side Rendering)** | **Dynamic Server.** Every page request is processed by a server (e.g., Node.js) which generates HTML on the fly. | ⚡ Dynamic content is instant<br>🔒 Secure server-side logic | 🐌 Slower than static<br>💸 Higher server costs |
+| **Hybrid (This Project)** | **Best of Both.** Most pages (Home, About) are **Static** (Jamstack) for speed. Specific routes (API, Admin) are **SSR** for dynamic features. | 🚀 Fast content pages<br>🔒 Secure API handling<br>⚖️ Balanced cost/performance | ⚙️ Slightly more complex deployment (needs proper adapter) |
+
+**Why we moved to Hybrid:**
+We needed to hide the `OPENAI_API_KEY`. In a pure Jamstack app, your React code runs in the user's browser, so any API key used there would be visible to them. By adding a generic Node.js API route (`/api/chat`), we create a secure "middleman" that holds the key and talks to OpenAI, while the frontend remains fast and static.
 
 ### About AI API Endpoints
 
