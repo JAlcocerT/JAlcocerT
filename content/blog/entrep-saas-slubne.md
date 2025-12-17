@@ -142,6 +142,95 @@ https://developers.cloudflare.com/pages/framework-guides/nextjs/
 
 
 
+## Getting Here
+
+This has been...a series of random steps.
+
+{{% steps %}}
+
+### Tinkered with Selfhosting
+
+### Discovered one for weddings
+
+
+I tested it...and it looked cool.
+
+All of this happened while travelling.
+
+Yea, I took the laptop.
+
+### DFY for a close one
+
+But they needed something simpler.
+
+So i made a filebrowser + custom QR setup.
+
+How could I not tinker with QR for the sake of it...
+
+
+{{% /steps %}}
+
+
+
+
+### Chatting with Gemini about this
+
+
+
+{{% details title="ADS + BANT 🚀" closed="true" %}}
+
+That is the ultimate, high-level business question.
+
+Your entire flow is strategically built to identify, filter, and cater to the four key elements of a qualified lead—**Budget, Authority, Need, and Timing (BANT)**—which is especially important when using paid advertising.
+
+Here is how the *Ślubne Chwile* flow addresses and converts leads based on BANT criteria:
+
+## 🎯 Matching the Flow to the BANT Sales Criteria
+
+### 1. **Need (The Problem Solver)**
+
+* **Definition:** Does the prospect have a legitimate problem that your service solves? (Losing guest photos/videos).
+* **Flow Mechanism:**
+    * **Landing Page:** The Hero Section and the Benefits Section (Section 2) are entirely dedicated to establishing need. The headlines explicitly state the problem ("Nie Strać Żadnej Uśmiechniętej Chwili") and offer the solution.
+    * **Free Test:** Allowing them to upload 5 photos and see the Admin Panel validates the need for collection and organization.
+* **Verdict:** **Need is established upon Landing Page conversion.** If they register, they confirm they have this problem.
+
+### 2. **Timing (The Time-Driven Nudge)**
+
+* **Definition:** When does the prospect need the solution? (Tied to the wedding date).
+* **Flow Mechanism:**
+    * **Registration:** **Collecting the Wedding Date** is the single most critical piece of BANT data. It allows you to schedule the rest of the sales process.
+    * **Email Nurturing:** Emails are scheduled to peak **3–4 months before the wedding**—the ideal time when couples are finalizing vendor lists and security details.
+    * **Paid Duration:** Tiers are based on post-wedding access (1, 3, or 12 months), making the time/urgency a central conversion factor.
+* **Verdict:** **Timing is acquired at registration (A4) and utilized throughout the sales cycle (Z2).**
+
+### 3. **Authority (The Decision Maker)**
+
+* **Definition:** Is this the person who can make the purchase decision? (The Bride and Groom).
+* **Flow Mechanism:**
+    * **Registration:** Requiring **both the Bride's and Groom's names** (A4) explicitly targets the decision-makers. The personalization is immediately linked to their names (e.g., `slubnechwile.pl/Anna-i-Jan`), confirming they have the authority to act.
+    * **Password Security:** The **"Set Guest Password"** feature (Z4) is a core control function that only the Authority would care about, forcing their attention to the paywall.
+* **Verdict:** **Authority is verified by the commitment to the customized link (A7).**
+
+### 4. **Budget (The Price/Value Match)**
+
+* **Definition:** Can the prospect afford your service, and do they agree with the value?
+* **Flow Mechanism:**
+    * **Tiered Pricing (E):** The three tiers address different budgets:
+        * **Bronze (149 PLN):** Caters to the lowest budget (anchor).
+        * **Silver (299 PLN):** Targets the average, high-profit budget (most popular).
+        * **Premium (699 PLN):** Targets the high-value, risk-averse budget (high AOV).
+    * **Feature Stacking:** The Silver and Premium features (**Live Preview, Pre-Wedding Memories, 12-Month Access**) are carefully stacked to provide disproportionately higher value than the simple price difference, forcing the customer to **choose based on value, not just cost.**
+* **Verdict:** **Budget is addressed at the point of conversion (Z5) after Need, Timing, and Authority have been established, making the pricing easier to accept.**
+
+
+{{% /details %}}
+
+
+---
+
+The entire *Ślubne Chwile* flow is designed as a **BANT qualification machine**. It uses free access to gather the necessary data (Need, Timing, Authority) before presenting the Budget, ensuring that by the time a couple sees the price, they are already highly qualified, emotionally invested, and ready to convert.
+
 ## Themes
 
 <https://vercel.com/templates>

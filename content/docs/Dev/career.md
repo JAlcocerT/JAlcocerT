@@ -45,7 +45,7 @@ So is preparing your **CV and your interviews**:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
-  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CVs as a Code and Job History" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CVs as a Code. Application Job History and Historieta" >}}
 {{< /cards >}}
 
 ---

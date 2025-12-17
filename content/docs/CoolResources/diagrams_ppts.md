@@ -134,6 +134,10 @@ https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ppts-as-a-code
 
 > Minimalist template for creating slides with Reveal.js and Astro
 
+* https://github.com/monakit/monakit
+
+>  An Astro theme featuring multi-format content including knowledge cards, articles, and slide presentations. 
+
 4. https://markmap.js.org/repl
 
 ### Icons for PPTs

@@ -258,7 +258,7 @@ Helium or [zen](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/
 
 1. [uv](https://jalcocert.github.io/JAlcocerT/fast-api/#proper-py-and-uv) package manager ❤️ Makefiles >>> Readme's & pip! 
 
-2. Pocketbase for BaaS, and a much better understanding of authentication (you are you!)/authorization(you are allowed to do that).
+2. Pocketbase for BaaS, and a much better understanding of authentication (you are you!) / authorization (you are allowed to do that *or not*).
 
 {{< details title="Authentication Flows Working | Example PB vs FastAPI 📌" closed="true" >}}
 
@@ -385,6 +385,36 @@ Cloudflare Tunnel creates a secure outbound connection from your home server to 
 This is the **best practice** for self-hosting applications.
 
 {{< /details >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb" title="Astro Payroll Theme + PB + CF Workers ↗" icon="github" >}}
+{{< /cards >}}
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor U as User (Browser)
+  participant L as Astro Page (/login)
+  participant F as API Route (/api/login)
+  participant PB as PocketBase
+  participant S as Protected Page (/secret)
+
+  U->>L: 1. Enter Credentials
+  L->>F: 2. POST (email, password)
+  F->>PB: 3. authWithPassword(email, pass)
+  PB-->>F: 4. AuthResponse (Token + Model)
+  Note over F: 5. Serialize PB AuthStore to Cookie
+  F-->>U: 6. Set-Cookie: pb_auth (HttpOnly)
+  
+  U->>S: 7. GET /secret (Cookie included)
+  Note over S: 8. Load PB AuthStore from Cookie
+  S->>PB: 9. authRefresh() / isValid?
+  PB-->>S: 10. Valid Token / New Token
+  S-->>U: 11. Render Protected HTML
+  
+  U->>F: 12. POST /api/logout
+  F-->>U: 13. Set-Cookie: pb_auth=;
+```
 
 3. Understanding that [with CSR we can](https://jalcocert.github.io/JAlcocerT/csr-and-js/) keep WebApps simple, yet providing interactivity via API where needed
 
