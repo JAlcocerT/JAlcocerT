@@ -33,6 +33,7 @@ The **tech stack**: *see how it has been done on [this section](https://jalcocer
 | **Styling/UI Library** | | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+| Others | Web Analytics / ads / Cal / Formbricks / ESP | Yes, via MailTrp |
 
 * TAM: *not calculated, if it helps someone, would be amazing*
 * LTV: *not calculated*
