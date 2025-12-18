@@ -147,7 +147,11 @@ And via OSS with Listmonk.
 
 From the email service providers tested [here](https://jalcocert.github.io/JAlcocerT/emails-101/)
 
-I decided to continue with Mailtrap API
+I decided to continue with Mailtrap API due to its nice deliverability.
+
+![Mailtrap as Pocketbase SMTP to verify emails](/blog_img/email/mailtrap-pocketbase-verify-email.png)
+
+Specially via the API (SMTP tends to go to spam).
 
 **Why it is considered the best:**
 
@@ -166,7 +170,7 @@ I decided to continue with Mailtrap API
 
 ### Created a DWY landing page
 
-With formbricks and cal.com
+With formbricks and cal.com support: `consulting.jalcocertech.com` done [here](https://github.com/JAlcocerT/selfhosted-landing).
 
 ![Cal x Stripe](/blog_img/email/cal-email-stripe.png)
 
@@ -177,16 +181,23 @@ Well, stripe emails are...,verified' behind a paywall :)
 
 ### Combined email capture with programmatic emails
 
-If you got unverified emails from formbricks or from sth like the `make-landing` project that saves them into a .db or .csv
+If you got unverified emails from formbricks or from sth like the `make-landing` project that saves them into a `.db` or `.csv`
 
-You can send a programmatic email to send them goodies.
+You can do [programmatic emails via ESP](https://github.com/JAlcocerT/make-landing/blob/master/mailetrap-esp.ipynb) to send them goodies: *info, attachments, verifications, etc.*
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/make-landing/blob/main/mailetrap-esp.ipynb)
+
 
 ### VibeCoded via BRDs
 
 Because if [a BRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) is supposed to make things clear for a dev team, it can do the same for agents.
 
+Adding features via **Change Requests** like [this one](https://github.com/JAlcocerT/selfhosted-landing/blob/master/z-change-request-5.md), have also been great.
+
 
 ### Now - Creating diy-landing-boilerplate
+
+Enough about past, last fast forward to now and create:
 
 ```sh
 git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" && gh repo diy-landing-boilerplate --private --source=. --remote=origin --push
@@ -211,13 +222,13 @@ git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" &
 
 You can think of it this way: Listmonk (the EMP) is your operating system for managing lists...
 
-Mailjet (the ESP/SMTP) is your high-performance engine that ensures your emails actually reach the inbox.
+Mailjet *(the ESP/SMTP)* is your high-performance engine that ensures your emails actually reach the inbox.
 
 And your landing page is what your potential clients see and get to know about you within 5 seconds.
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A 101 Ive put together about building websites" >}}
+  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
 
 
@@ -238,7 +249,7 @@ flowchart LR
     L2("DIY NEW<br/>(Boilerplate/Template) one time $"):::free
     L3("Done With You<br/>(Consulting) $$"):::free
     L4("Done For You<br/>(Services) $$$"):::low
-    L44("DIY (1b)<br/>Slubne) 0 to one time $"):::low
+    L44("DIY (1b)<br/>Slubne - 0 to one time $"):::low
 
     %% --- Connections ---
     L1 --> L2

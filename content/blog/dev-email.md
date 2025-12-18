@@ -579,8 +579,9 @@ You can configure PocketBase or any backend service to use Mailtrap's SMTP setti
 
 ![alt text](/blog_img/email/mailtrap-smtp-setup.png)
 
-{{% details title="You can test Mailtrap smtp via curl as well 🚀" closed="true" %}}
+{{% details title="You can test Mailtrap SMTP via curl as well 🚀" closed="true" %}}
 
+Not just via Mailtrap API, but applying a curl to the mailtrap SMTP server
 
 ```sh
 curl \
@@ -591,7 +592,7 @@ curl \
 --mail-rcpt test@mail.com \
 --upload-file - <<EOF
 From: Magic Elves <hello@news.libreportfolio.fyi>
-To: Mailtrap Sandbox <jesalctag@gmail.com>
+To: Mailtrap Sandbox <some@email.com>
 Subject: You are awesome!
 Content-Type: multipart/alternative; boundary="boundary-string"
 
@@ -634,7 +635,7 @@ EOF
 
 {{% /details %}}
 
-Via SMTP with curl, they went to SPAM though
+> Via SMTP with curl, they went to SPAM though
 
 ![alt text](/blog_img/email/mailtrap-smtp-spam.png)
 
@@ -652,7 +653,7 @@ And realize that it points to `http://localhost:8090/_/#/auth/confirm-verificati
 
 Fix it as per the `POCKETBASE_URL` environment variable!
 
-But it arrives to your inbox!
+But the email arrives to your inbox!
 
 ![Mailtrap as Pocketbase SMTP to verify emails](/blog_img/email/mailtrap-pocketbase-verify-email.png)
 

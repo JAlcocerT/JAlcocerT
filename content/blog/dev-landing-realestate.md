@@ -85,12 +85,11 @@ Because in the end, **having a website is a matter of**:
 
 ## The Stack
 
-After starting more than one year ago with [this repository](https://github.com/JAlcocerT/ScrewFastMoiRealEstate) and [post](https://jalcocert.github.io/JAlcocerT/astro-web-setup/) as a concept for real estate.
+After starting more than one year ago with [this repository](https://github.com/JAlcocerT/ScrewFastMoiRealEstate) and [post](https://jalcocert.github.io/JAlcocerT/astro-web-setup/) as a **concept for real estate**.
 
 The Stack: NEXTjs WebApp + 1 Welcome Page + Theme directory where the properties are stacked.
 
-And...the skill: knowing to vibe code.
-
+And...the skill: *knowing to vibe code*.
 
 In the mean time, there have been some ad-ins to the project that can also be interesting for builders and business owners.
 

@@ -73,8 +73,7 @@ Its not a surprise, than we can do email with code.
 
 And I tinkered superficially with PB and Mailtrap on the previous post:
 
- https://jalcocert.github.io/JAlcocerT/emails-101/#mailtrap-smtp-x-pocketbase
-
+* https://jalcocert.github.io/JAlcocerT/emails-101/#mailtrap-smtp-x-pocketbase
 
 ![Configuring Pocketbase to work with MailTrap SMTP](/blog_img/email/mailtrap-pb-mail-settings.png)
 
