@@ -29,7 +29,7 @@ The **tech stack**: *see how it has been done on [this section](https://jalcocer
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
-| **Frontend Framework** | | |
+| **Frontend Framework** | | Tab favicon and og must be available |
 | **Styling/UI Library** | | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
@@ -186,6 +186,25 @@ If you got unverified emails from formbricks or from sth like the `make-landing`
 You can do [programmatic emails via ESP](https://github.com/JAlcocerT/make-landing/blob/master/mailetrap-esp.ipynb) to send them goodies: *info, attachments, verifications, etc.*
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/make-landing/blob/main/mailetrap-esp.ipynb)
+
+The good thing about programmatic stuff, is that you can customize email html templates via antigravity.
+
+![alt text](/blog_img/dev/antigravity-ide.png)
+
+### Email html vs mjml Templates
+
+And...as asking qq's you get to know nice things: html, mjml and maizzle templates...
+
+```sh
+python3 send_email.py
+
+#npm install -g mjml
+#mjml --version
+
+python3 send_mjml_email.py #with mjml template
+```
+
+Those worked with my favicon: https://www.jalcocertech.com/favicon.ico
 
 
 ### VibeCoded via BRDs

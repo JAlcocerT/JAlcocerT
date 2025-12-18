@@ -95,7 +95,9 @@ The Canvas theme was so great to me, that i decided to fork it to understand it 
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/canvas" title="NEW repository - Canvas Fork" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Testing NUXT and NUXT Content CMS for a blog" >}}
+  {{< card link="https://github.com/JAlcocerT/real-estate-nuxt-moi" title="NEW repository - Real Estate Nuxt" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Testing NUXT3 for a real estate web app" >}}
 {{< /cards >}}
+
 
 What I liked:
 
