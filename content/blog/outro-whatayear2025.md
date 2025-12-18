@@ -56,8 +56,16 @@ Even Reqable has one: Tools -> More QR-Code
 Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-ba-tech-talk-mermaid-exadel/components/QRCode.vue) you can generate QRs!
 
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf" title="QR CSR | Python static server ↗" icon="github" >}}
+{{< /cards >}}
 
-This year, Ive abused again of my unfair advantage.
+
+![QR Code](https://raw.githubusercontent.com/JAlcocerT/Home-Lab/main/py-static/qr-pdf/qr-sample.png)
+
+https://github.com/JAlcocerT/Home-Lab/blob/main/py-static/qr-pdf/qr-sample.png
+
+This year, Ive abused again of my *unfair advantage*.
 
 ![Just working](/blog_img/outro/work-unfair-advantage.png)
 
@@ -1358,6 +1366,8 @@ It was ofc properly documented on [a KB](https://jalcocert.github.io/JAlcocerT/k
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+
+
 ##### AI Stuff
 
 https://aistudio.google.com/prompts/new_chat
@@ -1528,6 +1538,10 @@ Perplexity and Gemini are my go to now, instead of ChatGPT.
 ## Conclusions
 
 There was even time to make **Data Analytics recaps** and create (not that much ship) [***better* SaaS products**](#shipping-products).
+
+Imagine that after all of this, you do couple Tech interviews and someone from HR asks you what are your plans for self-development.
+
+Tell me its not laughable :)
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/making-soap-at-home/" title="I also got time to made soap at home couple times| Post ↗" >}}
