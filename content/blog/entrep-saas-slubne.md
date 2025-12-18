@@ -14,7 +14,7 @@ Type of offer: attraction ~~/ upsale / downsale / continuity~~
 
 **Tl;DR**
 
-MVP first - get those eyes going via ads.
+MVP first - get those eyes going via ads towards: https://slubnechwile.com/
 
 See what works and what not - PMF
 
@@ -25,7 +25,7 @@ See what works and what not - PMF
 {{< /cards >}}
 
 
-Supply - ~ infinite (∞), scalable via Serverless storage
+Supply - ~ infinite (∞), scalable via [Serverless storage](https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/#cloudflare-r2).
 Demand - constrained, ad driven
 
 ![Supply and Demand for a SaaS](/blog_img/entrepre/bip-supply-demand.png)

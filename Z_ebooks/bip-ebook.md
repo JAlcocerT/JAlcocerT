@@ -375,7 +375,9 @@ flowchart TD
 
 ---
 
-This concept is classic **"Value Ladder"** or **"Agency Pricing Model"** theory. The core dynamic here is an **inverse relationship**: as the financial cost goes up, the client's time/effort commitment should go down.
+This concept is classic **"Value Ladder"** or **"Agency Pricing Model"** theory.
+
+The core dynamic here is an **inverse relationship**: as the financial cost goes up, the client's time/effort commitment should go down.
 
 Here are two ways to improve the visualization: one focusing on the **progression (The Ladder)** and one focusing on the **trade-off (The Matrix)**.
 
@@ -527,14 +529,19 @@ flowchart LR
     L3 --> L4
 ```
 
-
 ---
 
-Building on the "Value Ladder" concept, here are actionable tips to refine your agency pricing model. The goal is to move away from "selling time" (which caps your income) to "selling value" (which creates scale).
+Building on the "Value Ladder" concept, here are actionable tips to refine your agency pricing model.
+
+The goal is to move away from "selling time" (which caps your income) to "selling value" (which creates scale).
 
 ### 1\. The "Goldilocks" Strategy (The Power of Three)
 
-Never send a proposal with just one price. If you give one price, the question is "Yes or No?" If you give three prices, the question changes to "Which one?"
+Never send a proposal with just one price. 
+
+If you give one price, the question is "Yes or No?" 
+
+If you give three prices, the question changes to "Which one?"
 
   * **Option 1 (The Decoy / Anchor):** A very high-priced "Do It All" package. Its primary job is to make Option 2 look reasonable.
   * **Option 2 (The Target):** The package you actually want to sell. It should feel like a "steal" compared to Option 1.

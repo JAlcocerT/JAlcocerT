@@ -194,7 +194,7 @@ You can also capture emails (unverified), but adding a CapJS check at least:
 
 ![Make Landing - Simple UI via TailwindCSS](/blog_img/shipping/make-landing2.png)
 
-Whatever landing you are building, make sure to consider: *Is there any way: formbricks / cal / email to bring interaction?*
+Whatever landing you are building, make sure to consider: *Is there any way: formbricks / cal / email to bring interaction / web analytics?*
 
 | Element | Purpose |
 | --- | --- |

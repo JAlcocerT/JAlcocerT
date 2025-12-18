@@ -1,29 +1,31 @@
 ---
-title: "A boilerplate to create your any landing."
+title: "A boilerplate to create landings."
 #date: 2026-01-01T23:20:21+01:00
 date: 2025-12-17T23:20:21+01:00
 draft: false
 tags: ["One Time Payment","Formbricks x Cal x email","DIY","RoadMap26"]
-description: 'A way to build landings realiably (and fast) with AI Agents and ESPs.'
+description: 'Showing how to build landings realiably (and fast) with AI Agents and ESPs.'
 url: 'diy-landing-boilerplate'
 ---
 
 
 **TL;DR**
 
-How to create a landing page that converts the non so lazy and **enables to create**?
+When thinking about **ways to decouple time and value delivery**...
+
+How to create a landing page that converts the non so lazy and enables to create via a **one time payment to adquire knowledge that is proven to work**?
 
 The **launch strategy**: *aka, focus strategy*
 
 | Element | Decision |
 | :--- | :--- |
-| **One Avatar** | |
+| **One Avatar** | Undicided people w/o a clear way how to proceed|
 | **One Product** | |
 | **One Channel** | |
 
 The **Tier of Service**: DIY (1a - *leverages on knowledge*)
 
-The **tech stack**:
+The **tech stack**: *see how it has been done on [this section](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#now---creating-diy-landing-boilerplate)*
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
@@ -32,7 +34,15 @@ The **tech stack**:
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
+* AM: *not calculated*
+* LTV: *not calculated*
+* CaC: ~0$ + the time cost of sharing on social media / forums from my time at this point
 
+So...if all of that is...undefined: whats **the goal**?
+
+To move away from "selling time" (which caps your income) to "selling value" (which creates scale).
+
+This might also be combined with the upcoming offer DIY x PaaS to enable people to have a wordpress going and the N ebooks / web/ook.
 
 
 
@@ -136,7 +146,22 @@ And via OSS with Listmonk.
 
 From the email service providers tested [here](https://jalcocert.github.io/JAlcocerT/emails-101/)
 
-I decided to continue with
+I decided to continue with Mailtrap API
+
+**Why it is considered the best:**
+
+* **Deliverability:** Unlike other services, the author noted that with Mailtrap, the **"email flows directly to your inbox"** using a custom domain, whereas others (like Mailjet or Mailgun) often ended up in the spam folder during testing.
+* **Ease of Use:** It is described as being **"among the easiest to configure for developers,"** especially for testing and sandboxing.
+* **Integration:** It offers a wide range of integrations, including a native **n8n node**, **Supabase**, and even an **MCP tool for VS Code**, allowing you to send emails directly from your code editor.
+* **Reliability with Backends:** The author successfully used it as the SMTP relay for **PocketBase**, confirming it works well for sending one-time codes and magic links.
+
+
+| Service | Author's Rank | Key Strength |
+| --- | --- | --- |
+| **Mailtrap** | **#1** | Best deliverability to inbox & developer-friendly testing. |
+| **Resend** | **#2** | Great API, Cloudflare integration, and can *receive* mail. |
+| **Mailjet** | **#3** | Ideal for high-volume marketing/transactional relay via Listmonk. |
+
 
 ### Created a DWY landing page
 
@@ -148,7 +173,16 @@ The only thing is that emails were not verfied, neither I was sending a thing to
 
 Well, stripe emails are...,verified' behind a paywall :)
 
+
+### Combined email capture with programmatic emails
+
+If you got unverified emails from formbricks or from sth like the `make-landing` project that saves them into a .db or .csv
+
+You can send a programmatic email to send them goodies.
+
 ### VibeCoded via BRDs
+
+Because if [a BRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) is supposed to make things clear for a dev team, it can do the same for agents.
 
 
 ### Now - Creating diy-landing-boilerplate
@@ -184,3 +218,31 @@ And your landing page is what your potential clients see and get to know about y
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
+
+
+### My Offer after DIY Landing
+
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C;
+
+    %% --- Nodes ---
+    L1("Free Content<br/>(Blog/YT $0)"):::free
+    L22("DIY<br/>(diy ebook $0) "):::free
+    L2("DIY NEW<br/>(Boilerplate/Template) one time $"):::free
+    L3("Done With You<br/>(Consulting) $$"):::free
+    L4("Done For You<br/>(Services) $$$"):::low
+    L44("DIY (1b)<br/>Slubne) 0 to one time $"):::low
+
+    %% --- Connections ---
+    L1 --> L2
+    L1 --> L22
+    L1 --> L44
+    L2 --> L3
+    L3 --> L4
+```
