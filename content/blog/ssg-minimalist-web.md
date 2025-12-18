@@ -301,7 +301,9 @@ Going to Google Lighthouse is one thing.
 
 But having it...programatically...that so cool!
 
-The idea of this section is to pave the way to have a free website audit.
+![lighthouse programmatic test](/blog_img/dev/web-test-lighthouse.png)
+
+The idea of this section is to pave the way to have a **free website audit**.
 
 And improve this section:
 
@@ -310,11 +312,7 @@ And improve this section:
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-So lets get with it:
-
-```sh
-
-```
+So lets get it done.
 
 ### Using Decap-CMS
 

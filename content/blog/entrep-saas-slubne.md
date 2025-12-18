@@ -1,6 +1,6 @@
 ---
 title: "A SaaS with 100% Churn, yet LTV > CAC"
-date: 2026-01-07T23:20:21+01:00
+date: 2026-01-01T23:20:21+01:00
 draft: false
 tags: ["Landing x NextJS SaaS","Nextacular","SlubneChwile","BiP BoilerPlate","RoadMap26"]
 description: 'How to code a Saas with NEXTjs and directing traffic via ads'
@@ -8,6 +8,9 @@ url: 'code-your-saas'
 ---
 
 
+Type of offer: attraction ~~/ upsale / downsale / continuity~~
+
+![alt text](/blog_img/dev/tiiny-host-attractionoffer.png)
 
 **Tl;DR**
 
@@ -167,15 +170,23 @@ So i made a filebrowser + custom QR setup.
 
 How could I not tinker with QR for the sake of it...
 
+### Tinkered with Serverless
+
+And i dont mean static deploy to cloudflare pages this time
+
+I mean about serverless s3 storage, via cf R2.
+
+Which i got familiar with on [this post](https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/).
+
+![alt text](/blog_img/dev/cf/r2.png)
+
+### 
+
 
 {{% /steps %}}
 
 
-
-
-### Chatting with Gemini about this
-
-
+### Chatting with Gemini about the offer
 
 {{% details title="ADS + BANT 🚀" closed="true" %}}
 

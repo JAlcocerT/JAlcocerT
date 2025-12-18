@@ -94,7 +94,7 @@ Same, we can also have monitor running in gihub https://github.com/upptime/uppti
 
 CF Pages is [one of my favourite ways](https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method) to deploy SSGs Websites.
 
-
+![alt text](/blog_img/dev/cf/cloudflare-pages-review.png)
 
 Similar to the [Google Cloud Run](https://jalcocert.github.io/JAlcocerT/dash-docker-gcr/), CFWorkers handle the compute part.
 
@@ -104,10 +104,16 @@ Looking for a storage solution for your serverless apps?
 
 ![CF R2](/blog_img/web/agujapunto-r2-firebase/r2-101.png)
 
-
 For s3 compatible storage you have this R2, but for a serverless db you have cloudflare D1 or [NeonDB](#neon-db)
 
 > D1 is Cloudflare's managed, serverless database with SQLite's SQL semantics, built-in disaster recovery, and Worker and HTTP API access.
+
+![alt text](/blog_img/dev/cf/r2.png)
+
+
+### Cloudflare D1
+
+![alt text](/blog_img/dev/cf/d1.png)
 
 
 ## Neon DB

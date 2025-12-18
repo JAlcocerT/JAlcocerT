@@ -1,5 +1,5 @@
 ---
-title: "A SaaS on Top of PaaS x (SSG + CMS)"
+title: "A SaaS on Top of PaaS x (SSG + CMS) x Show a Problem"
 date: 2026-01-10T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","BiP x DIY","VPS","DIY","RoadMap26","My Web Creation Journey"]
@@ -131,6 +131,7 @@ https://www.mangomedia.pl/pl/portfolio.html
 
 ### And with LightHouse CI
 
+![lighthouse programmatic test](/blog_img/dev/web-test-lighthouse.png)
 
 
 {{% /steps %}}

@@ -332,6 +332,8 @@ And i tested lighthouse CI: *which creates a `assertion-results.json`*
 make lighthouse
 ```
 
+![lighthouse programmatic test](/blog_img/dev/web-test-lighthouse.png)
+
 I made some change requests: *like this CR*
 
 ```

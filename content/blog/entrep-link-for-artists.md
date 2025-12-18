@@ -188,7 +188,20 @@ A landing as companion for a link website does not have to be a multi-page one t
 
 > I migrated my brand to that data centered landing (and more) theme on [this post](https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/)
 
+You can also capture emails (unverified), but adding a CapJS check at least:
 
+![CAPJS with NextJS Simple Waiting List](/blog_img/dev/nextjs/capjs-waitinglist.png)
+
+![Make Landing - Simple UI via TailwindCSS](/blog_img/shipping/make-landing2.png)
+
+Whatever landing you are building, make sure to consider: *Is there any way: formbricks / cal / email to bring interaction?*
+
+| Element | Purpose |
+| --- | --- |
+| **Clarity** | Can a stranger understand what you offer in 5 seconds? |
+| **Consistency** | Does the page match the ad or link that brought them there? |
+| **Speed** | Does the page load instantly? (Crucial for mobile users). |
+| **Singular Focus** | Is there only **one** goal for the page? (Remove navigation menus). |
 
 Because some landing + video look fantastic, just that they are not so performant: https://github.com/midudev/landing-tesla
 
@@ -216,12 +229,12 @@ If you like videos on your site, you can always embed them from youtube.
 Or consider peertube or [vidstack](https://github.com/vidstack/player)
 
 
-https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
+* https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/
 
 
 ##### SaaS like...a t3chat?
 
-t3-like-chat
+* https://jalcocert.github.io/JAlcocerT/t3-like-chat/#a-t3-chat-like-interface
 
 ##### Vibe Coded Landing Pages
 
@@ -748,6 +761,8 @@ But you will want to validate the **web performance**: *Now adding the lighthous
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/#is-my-website-performing-well" title="Web Performance | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+![lighthouse programmatic test](/blog_img/dev/web-test-lighthouse.png)
 
 
 ```sh

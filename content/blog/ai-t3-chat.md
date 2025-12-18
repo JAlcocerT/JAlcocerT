@@ -93,6 +93,8 @@ Meaning: to somehow plug the AI/LLMs/Agents to do/check stuff
 
 This required some back-and-forth with antigravity. 
 
+![alt text](/blog_img/dev/astro-chat-openai.png)
+
 But I got to make it work:
 
 * Make async API calls to /api/chat

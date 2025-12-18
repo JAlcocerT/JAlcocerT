@@ -202,6 +202,8 @@ There are few [alternatives to **host a static website**](https://fossengineer.c
 
 > In case that you would like to skip the hosting cost, you can look to `https://porkbun.com/products/webhosting/staticHosting`
 
+You can have your own static deployment into a web server or use any of these *serverless static deployment*.
+
 {{< details title="Free SSG Deployment - Firebase CLI, Cloudflare Wrangler CLI...📌" closed="true" >}}
 
 1. With **Firebase**, the Free Tier allows for up to 10GB for ppl to download your content.
@@ -248,6 +250,8 @@ You can get away with [front-end](https://jalcocert.github.io/JAlcocerT/front-en
 
 {{< youtube OaQO5gSpE4g >}}
 <!-- https://www.youtube.com/watch?v=OaQO5gSpE4g&pp=ygUXZnJlZWNvZGVjYW1wIGNzcyBjb3Vyc2U%3D -->
+
+
 
 
 ## Setup a Static CMS
@@ -420,6 +424,10 @@ How about checking your new website against few tools:
   {{< card link="https://trends.google.com/trends/" title="Whats Trendy on Google? ↗" >}}
   {{< card link="https://search.google.com/" title="How is your site SEO doing? Google Search ↗" >}}
 {{< /cards >}}
+
+![AI Trend in Google Search late 2025](/blog_img/GenAI/ai-trend.png)
+
+![alt text](/blog_img/dev/google-search.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/linkchecker/" title="LinkChecker | Docker Config 🐋 ↗" >}}

@@ -1098,8 +1098,6 @@ Combining [Tech and Travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-tri
 
 <iframe src="https://visitedplaces.com/embed/?map=world&projection=geoNaturalEarth1&position=3.7_34.3_51_-12.4_0&theme=dark-green&water=1&graticule=0&names=1&duration=2000&placeduration=100&slider=0&autoplay=0&autozoom=none&autostep=0&home=PL&places=lie~DE_ES_PT_MX_FR_GB_IT_BE_NL_DK_SE_LT_LV_UA_HU_AT_CZ_SK_BG_GR_TR_MT_PL.daaa44_CH_NO_AL_EE_TH_LI" style="width: 100%; height: 600px;"></iframe>
 
-
-
 ### Note Taking
 
 Is note taking a waste of time?
@@ -1122,6 +1120,8 @@ Using AI to create more and better, in less time.
 The so called, [vibe coding](https://jalcocert.github.io/JAlcocerT/vide-coding/).
 
 With too many options: Repliit, lovable, [windsurf](https://windsurf.com/account/login), cursor, bolt...anti-gravity...
+
+![alt text](/blog_img/dev/antigravity-ide.png)
 
 Even with: https://github.com/settings/copilot/features
 
@@ -1477,6 +1477,14 @@ And having nice **hugo/astro directory pages** would be amazing.
 Sth like: https://github.com/masterkram/minted-directory-astro, where you can easily plug some kind of DB/Sheet/Github repo readme's with particular front matter and get a website going.
 
 ### Improving the HomeLab
+
+There were some recents downtime status on popular services:
+
+![alt text](/blog_img/dev/github-status.png)
+
+Also, mandatory services :)
+
+![alt text](/blog_img/dev/apache-webserver.png)
 
 I am very happy to have discovered AppImageLauncher.
 
