@@ -23,7 +23,7 @@ The **launch strategy**: *aka, focus strategy*
 | :--- | :--- |
 | **One Avatar** | Undicided people w/o a clear way how to proceed|
 | **One Product** | Simple knowledge to vibe code effectively|
-| **One Channel** | |
+| **One Channel** | Forums like reddit|
 
 The **Tier of Service**: DIY (1a - *leverages on knowledge*)
 
@@ -35,7 +35,7 @@ The **tech stack**: *see how it has been done on [this section](https://jalcocer
 | **Styling/UI Library** | | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-| Others | Web Analytics / ads / Cal / Formbricks / ESP | Yes, via MailTrp |
+| Others | Web Analytics / ads / Cal / Formbricks / ESP | Yes, via MailTrap |
 
 * TAM: *not calculated, if it helps someone, would be amazing*
 * LTV: *not calculated*
@@ -46,8 +46,6 @@ So...if all of that is...undefined: whats **the goal**?
 To move away from "selling time" (which caps your income) to "selling value" (which creates scale).
 
 This might also be combined with [the upcoming offers](#my-offer-after-diy-landing) DIY x PaaS to enable people to have a wordpress going and the N ebooks / web/ook.
-
-
 
 
 **Intro**
@@ -537,14 +535,28 @@ Enough about past, last fast forward to now and create:
 git init && git add . && git commit -m "Initial commit: Starting DIY Web BoilerPlate" && gh repo diy-landing-boilerplate --private --source=. --remote=origin --push
 ```
 
+Together with **this BRD as scope**...after chatting with Gemini :)
+
 {{% /steps %}}
 
+
+```md
+see the brd on this repo, is the scope well defined enough? lets close the gaps first
+```
+
+And if this is not the first landing that you vibe code...you are very aware that the **content has to be controlled and versioned via markdown**!
+
+## The DIY Landing Project
+
+This is a landing...that sells...ways to do landings (?! yyyea...)
 
 {{% details title="Creating a DIY Landing BoilerPlate... 🚀" closed="true" %}}
 
 ```sh
 #git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" && gh repo create 1toN-ebooks --private --source=. --remote=origin --push
 ```
+
+
 
 {{% /details %}}
 
