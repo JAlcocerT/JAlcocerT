@@ -406,6 +406,8 @@ When people are leaving the page - they should get a clear picture on how you de
 
 How could I not continue vibe coding....
 
+A sample **FastAPI x OpenAI based chatbot**:
+
 ```md
 Create a simple chatbot for the landing page using OpenAI's API as per the tech stack below as a additional change request. Lets reason first if it makes sense or if you would tweak anything to make it work with the current project setup.
 
