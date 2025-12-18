@@ -162,7 +162,16 @@ Particularly by https://www.awesome-homelab.com/item/novel-editor
 
 Fast forward to today: lets put a web/app with UI to bundle all this.
 
-###
+### Creating a DIY x PaaS
+
+
+{{% details title="Creating a DIY PaaS for Launching Websites... 🚀" closed="true" %}}
+
+```sh
+git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" && gh repo create 1toN-ebooks --private --source=. --remote=origin --push
+```
+
+{{% /details %}}
 
 ---
 

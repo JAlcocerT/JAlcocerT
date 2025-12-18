@@ -55,7 +55,7 @@ The idea is to use this to consolidate Docs - web/ooks, success stories and slid
 {{% details title="Creating the N ebooks repo... 🚀" closed="true" %}}
 
 ```sh
-#git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" && gh repo create 1toN-ebooks --private --source=. --remote=origin --push
+git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" && gh repo create 1toN-ebooks --private --source=. --remote=origin --push
 ```
 
 {{% /details %}}

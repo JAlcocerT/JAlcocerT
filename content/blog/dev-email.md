@@ -2,8 +2,8 @@
 title: "SMTP and e-mail stuff"
 date: 2025-11-24
 draft: false
-tags: ["EMPs","MailTrap API","Amazon SES vs Resend vs MailJet","GrowChief vs ListMonk"]
-description: 'Email is hard. Social Media OutReach, is not.'
+tags: ["EMPs vs ESPs","MailTrap API","Amazon SES vs Resend vs MailJet","GrowChief vs ListMonk"]
+description: 'Email is hard. Social Media OutReach, is not via Email Service Providers.'
 url: 'emails-101'
 ---
 
@@ -11,7 +11,7 @@ url: 'emails-101'
 
 SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better.
 
-This post is a email 101 for me.
+This post is an email 101 for me to test few ESPs and learn how to use email APIs.
 
 **Intro**
 
@@ -680,9 +680,9 @@ All these **SMTP setups** will help you with your social media, if you are a mar
 
 Hopefully you are aware now of the differences between: regular mails vs transactional emails vs marketing emails.
 
-Tested all of them on the free plan, w/o CC.
+Tested all of them on the **free plan, w/o CC**.
 
-> After testing these, I would order them: Mailtrap > ReSend (It can receive emails as well) > MailJet for transactional purposes. 
+> After testing these, I would order the solutions: Mailtrap > ReSend *(which can receive emails as well)* > MailJet for transactional purposes.
 
 > > You can still keep your Mailerlite setup for newsletters/marketing and Proton/GMAIL for your regular mails.
 
