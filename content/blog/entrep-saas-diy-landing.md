@@ -758,6 +758,8 @@ How could I not...add the ChatBot funcionality.
 
 With custom knowledge base, unlike the previous FastAPI based one.
 
+https://github.com/JAlcocerT/selfhosted-landing
+
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot
 
 ![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png)
@@ -783,7 +785,8 @@ create a z-change-request-bot-llm.md with the plan first?
 
 ```sh
 #npm install openai
-
+npm run dev -- --host
+#make docker-up
 ```
 
 Plug the new component to the diy landing boilerplate `index.astro`:
@@ -795,6 +798,67 @@ Plug the new component to the diy landing boilerplate `index.astro`:
   model="gpt-4o-mini"
   systemPrompt="Your custom prompt here"
 />
+```
+
+![alt text](/blog_img/dev/diy-landing-bot.png)
+
+```mermaid
+graph TB
+    subgraph "User Interface"
+        A[User Types Question] --> B[ChatWidgetLLM.tsx]
+        B --> C{Send to API}
+    end
+    
+    subgraph "API Endpoint /api/chat"
+        C --> D[chat.ts]
+        D --> E[Parse Request]
+        E --> F[Load Configuration]
+        F --> G[Build Context]
+    end
+    
+    subgraph "Configuration Sources"
+        F --> H[src/lib/openai.ts]
+        H --> I[DEFAULT_CONFIG<br/>model: gpt-4o-mini<br/>maxTokens: 200<br/>temperature: 0.7]
+        H --> J[DEFAULT_SYSTEM_PROMPT<br/>Role & Guidelines]
+    end
+    
+    subgraph "Knowledge Sources"
+        G --> K[context-builder.ts]
+        K --> L[main.md]
+        K --> M[faqs.md]
+        L --> N[Extract:<br/>- Site info<br/>- Features<br/>- Process<br/>- Comparison]
+        M --> O[Extract:<br/>- FAQ Q&A pairs]
+        N --> P[Format Context]
+        O --> P
+    end
+    
+    subgraph "OpenAI API"
+        P --> Q[Build Messages Array]
+        Q --> R[System Prompt + Context]
+        Q --> S[Conversation History]
+        R --> T[OpenAI API Call]
+        S --> T
+        T --> U[Stream Response]
+    end
+    
+    subgraph "Response Flow"
+        U --> V[Readable Stream]
+        V --> W[Chunk by Chunk]
+        W --> X[Update UI in Real-time]
+        X --> B
+    end
+    
+    subgraph "Environment"
+        Y[.env file] --> Z[OPENAI_API_KEY]
+        Z --> D
+    end
+    
+    style A fill:#e1f5ff
+    style B fill:#fff3cd
+    style D fill:#d4edda
+    style K fill:#f8d7da
+    style T fill:#d1ecf1
+    style X fill:#e1f5ff
 ```
 
 
