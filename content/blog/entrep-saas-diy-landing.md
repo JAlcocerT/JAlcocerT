@@ -34,7 +34,7 @@ The **tech stack**: *see how it has been done on [this section](https://jalcocer
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
-* AM: *not calculated*
+* TAM: *not calculated, if it helps someone, would be amazing*
 * LTV: *not calculated*
 * CaC: ~0$ + the time cost of sharing on social media / forums from my time at this point
 
@@ -42,7 +42,7 @@ So...if all of that is...undefined: whats **the goal**?
 
 To move away from "selling time" (which caps your income) to "selling value" (which creates scale).
 
-This might also be combined with the upcoming offer DIY x PaaS to enable people to have a wordpress going and the N ebooks / web/ook.
+This might also be combined with [the upcoming offers](#my-offer-after-diy-landing) DIY x PaaS to enable people to have a wordpress going and the N ebooks / web/ook.
 
 
 
