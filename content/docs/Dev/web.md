@@ -238,8 +238,7 @@ npx wrangler pages deploy dist # deploy ./dist
 
 {{< /details >}}
 
-### Point the DNS of your domain
-
+### Configure your domain's DNS
 
 ![Silverbullet with cloudflare](/blog_img/selfh/kb/silverbullet-dns-cf.png)
 

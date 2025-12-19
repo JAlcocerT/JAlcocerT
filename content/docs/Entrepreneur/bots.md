@@ -10,8 +10,6 @@ Bots are one of those things that are easy to get started with, but can be compl
 
 And many clients will want one to be embeded into their sites.
 
-
-
 You might be here because have seen/used Telegram bots.
 
 But dont get confused with chatbots vs automation: *despite tools like n8n being able to handle bots*
@@ -122,18 +120,19 @@ If you have a company and are having a [KB based on flat files](https://jalcocer
 Like SilverBullet, Logseq, Flatnote or Raneto:
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/silverbullet" title="SilverBullet | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/silver-bullet" title="Silver Bullet | Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/raneto" title="Raneto | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ![SilverBullet UI](/blog_img/selfh/kb/silverbullet.png)
 
-Consider also WikiJS:
+Consider also WikiJS or OtterWiki:
 
 ![alt text](/blog_img/selfh/kb/wikijs.png)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wiki-js" title="WikiJS | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/otterwiki" title="OtterWiki | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 And plug your knowledge sources via RAG / vector DBs / embeddings:
@@ -142,3 +141,11 @@ And plug your knowledge sources via RAG / vector DBs / embeddings:
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
+
+These markdown based notes need somewhere to be hosted.
+
+Like a PaaS or a deployment on companies resources.
+
+What you get?
+
+*From team knowledge to internal chatbot knowledge. Avoid silos. Build internal transparency*

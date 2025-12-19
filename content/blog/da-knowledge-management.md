@@ -190,6 +190,8 @@ I know what you are looking for: **DATABASE-LESS KNOWLEDGE BASE**
 
 ![alt text](/blog_img/selfh/kb/wiki-setup.png)
 
+And then, just login to wikiJS:
+
 ![alt text](/blog_img/selfh/kb/wikijs.png)
 
 
@@ -214,6 +216,8 @@ See also:
 
 
 ### Quick SelfHosting Resources for Notes
+
+Some other places Ive been putting together notes config: 
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Notes" title="Note Tools | Docker Configs 🐋 ↗" >}}
@@ -297,7 +301,8 @@ These editors make editing Markdown more accessible by providing a live or in-pl
 - **Typora**: A minimal and polished Markdown editor offering seamless WYSIWYG editing—what you type is rendered instantly, with syntax fading away as formatting is applied.[3][8]
 
 - **APT method**:
-```
+
+```sh
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
 sudo add-apt-repository 'deb https://typora.io/linux ./'
 sudo apt update
@@ -305,7 +310,7 @@ sudo apt install typora
 ```
 - **Snap method** (if you prefer Snap packages):
 
-```
+```sh
 sudo snap install typora
 ```
 
@@ -386,8 +391,6 @@ In addition to the main desktop application, there is also **PicGo-Core**, which
 
 {{% /details %}}
 
-
-
 - **Haroopad**: Available on Windows, it supports advanced Markdown features and live preview with a WYSIWYG feel.[3]
 - **Texts**: An editor designed for distraction-free writing, offering WYSIWYG Markdown editing, export, and PDF capabilities.[3]
 - **KeenWrite**: Supports variable substitution, live preview, and Markdown WYSIWYG features (primarily Windows).[3]
@@ -408,8 +411,6 @@ Most of these editors allow working directly with plain Markdown files, making t
 [1](https://github.com/mundimark/awesome-markdown-editors)
 [10](https://github.com/JefMari/awesome-wysiwyg-editors)
 
-
-
 - **DEB package**:
   1. Download from https://www.zettlr.com/download
   2. Install via:
@@ -426,7 +427,8 @@ Most of these editors allow working directly with plain Markdown files, making t
 - **DEB package**:
   1. Download from https://pad.haroopress.com/user.html#downloads
   2. Install with:
-```
+
+```sh
 sudo dpkg -i ~/Downloads/haroopad-*.deb
 sudo apt-get install -f
 ```

@@ -152,12 +152,13 @@ And these are not only useful for mechanical engineering, but for **modelling he
 
 <!-- I will write a dedicated post about Chaos Theory in the future.  -->
 
+<!-- 
+py-chaoos.md 
+-->
 
 <!-- 
-py-chaoos.md -->
-
-<!-- 
-relate it with non lineality and caos theory -->
+relate it with non lineality and caos theory 
+-->
 
 
 
@@ -184,7 +185,7 @@ In the meantime: *you can also get your website going*
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A 101 Ive put together about building websites" >}}
+  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
 
 
@@ -193,8 +194,12 @@ In the meantime: *you can also get your website going*
   {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY Web eBook x Obfuscation ↗" icon="github" >}}
 {{< /cards >}}
 
-The good thing about helping others, is that you get new ideas.
+The good thing about helping others, is that you get new ideas:
 
 *From team knowledge to internal chatbot knowledge.*
 
 *Avoid silos. Build internal transparency and knowledge sharing.*
+
+> Placed together the idea draft at the [bot x KBs docs](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/#bots-x-knowledge-base) 
+
+> > If during next year ill get good enough at ads, this will definitely be sth to consider in the offering via PaaS

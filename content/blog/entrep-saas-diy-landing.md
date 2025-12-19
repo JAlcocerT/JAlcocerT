@@ -758,7 +758,7 @@ The full process took ~30 min:
 
 ### Typescript Custom ChatBot
 
-How could I not...add the ChatBot funcionality.
+How could I not...add the **ChatBot funcionality**.
 
 With custom knowledge base, unlike the previous simpler FastAPI based one.
 
@@ -793,7 +793,9 @@ npm run dev -- --host
 #make docker-up
 ```
 
-Plug the new component to the diy landing boilerplate `index.astro`:
+> Dont forget to configure the site url via `astro.config.mjs`!
+
+Plug any new component, like the chatbot x openAI one,  to the diy landing boilerplate `index.astro`:
 
 ```
 <ChatWidgetLLM 
@@ -881,8 +883,20 @@ When they can have a **DIY bot**: *with their knowledge sources and custom instr
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/" title="Automation | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+Where's the code responsible for the bots?
+
+In these 2 separated components, one with just UI, other with the Back-end logic:
+
+* https://github.com/JAlcocerT/diy-landing-boilerplate/blob/master/src/components/ChatWidget.tsx
+* https://github.com/JAlcocerT/diy-landing-boilerplate/blob/master/src/components/ChatWidgetLLM.tsx
+
 
 ### Custom Forms via Astro
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="FB | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#posthog" title="PostHog | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 
 {{< cards >}}
