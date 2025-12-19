@@ -54,10 +54,21 @@ Having your AI APi Keys ready and your n8n setup first:
 
 {{< /details >}}
 
-### Flowise AI
+### Other Bots
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/botpress" title="Botpress | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/typebot" title="TypeBot | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+#### Flowise AI
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/flowise-ai" title="Flowise | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ![Flowise AI Example](/blog_img/GenAI/pdf-flowise.png)
-
 
 
 ### Custom Bots
@@ -79,21 +90,28 @@ From visuals, to the knowledge, the way it replies and who can use it.
   {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Custom Bots for RE" image="/blog_img/biz/RE/RE-bot-ppt.jpeg" subtitle="Using Streamlit to recommend properties as per md" >}}
 {{< /cards >}}
 
-Go from this: https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
+Go from [this](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/):
 
-![alt text](/blog_img/biz/RE/re-ai-agent.png)
-
-To this: 
+![Streamlit ChatBot with RE knowledge base](/blog_img/biz/RE/re-ai-agent.png)
 
 
-<!-- 
-https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/
+<!--
 
-![alt text](/blog_img/biz/RE/RE-bot-ppt.jpeg) 
+![alt text](/blog_img/biz/RE/RE-bot-ppt.jpeg)  
+
 -->
 
+
+To this: *as seen [here](https://github.com/JAlcocerT/diy-landing-boilerplate/tree/master)*
+
+![Typescript x Astro x md knowledge x OpenAI ChatBot](/blog_img/dev/diy-landing-bot.png)
+
+
 <!-- 
+
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page
 
 
-![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png) -->
+![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png)
+
+-->

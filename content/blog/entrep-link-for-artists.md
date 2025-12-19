@@ -351,7 +351,9 @@ networks:
 
 Finish your CF Tunnels setup via UI: `selfhosted-landing-prod:80`
 
-And you will get a companion of the existing `https://diy.jalcocertech.com/api/book`. Yeeea: its here: <https://consulting.jalcocertech.com/>
+And you will get a companion of the existing `https://diy.jalcocertech.com/api/book`. 
+
+Yeeea: its here: <https://consulting.jalcocertech.com/>
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}

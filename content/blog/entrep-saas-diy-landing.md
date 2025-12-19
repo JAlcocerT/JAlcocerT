@@ -694,8 +694,7 @@ graph TD
     style Output fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```
 
-Content first architecture be like:
-
+**Content first architecture** be like:
 
 
 ```mermaid
@@ -725,6 +724,8 @@ This is a landing...that sells...ways to do landings (?! yyyea...)
 
 {{% /details %}}
 
+![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
+
 <!-- https://youtu.be/P6MQBU3YpmM -->
 
 {{< youtube "P6MQBU3YpmM" >}}
@@ -732,6 +733,9 @@ This is a landing...that sells...ways to do landings (?! yyyea...)
 <!-- 
 https://youtu.be/4xQVUw5YirE -->
 
+I said 5 min - i meant of you telling next next next to antigravity.
+
+The full process took ~30 min:
 
 {{< youtube "4xQVUw5YirE" >}}
 
@@ -756,11 +760,11 @@ https://youtu.be/4xQVUw5YirE -->
 
 How could I not...add the ChatBot funcionality.
 
-With custom knowledge base, unlike the previous FastAPI based one.
+With custom knowledge base, unlike the previous simpler FastAPI based one.
 
-https://github.com/JAlcocerT/selfhosted-landing
+* https://github.com/JAlcocerT/selfhosted-landing
 
-https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot
+* https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot
 
 ![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png)
 
@@ -800,7 +804,7 @@ Plug the new component to the diy landing boilerplate `index.astro`:
 />
 ```
 
-![alt text](/blog_img/dev/diy-landing-bot.png)
+![Typescript x Astro x md knowledge x OpenAI ChatBot](/blog_img/dev/diy-landing-bot.png)
 
 ```mermaid
 graph TB
@@ -861,6 +865,27 @@ graph TB
     style X fill:#e1f5ff
 ```
 
+After knowing that this is as simple as its gets...
+
+Why would a marketer or someone chasing automation bother with:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/botpress" title="Botpress | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/typebot" title="TypeBot | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+When they can have a **DIY bot**: *with their knowledge sources and custom instructions*
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/" title="Bots | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/" title="Automation | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+### Custom Forms via Astro
+
+
+
 
 ---
 
@@ -880,6 +905,7 @@ And your landing page is what your potential clients see and get to know about y
 
 ### My Offer after DIY Landing
 
+This diy landing based on astro components is enhancing my DIY and will be promoted towards the PaaS offering:
 
 ```mermaid
 flowchart LR
@@ -908,6 +934,7 @@ flowchart LR
 
 ### Tech Talk - Shipping Apps as a BA
 
+I cant believe more BAs / non technical users are not creating/shipping like crazy.
 
 ```sh
 git clone https://github.com/JAlcocerT/slidev-editor
@@ -945,7 +972,6 @@ It is important to distinguish these two:
 * **Click-Through:** "I'm interested enough to see what's next." (e.g., clicking a 'Learn More' button).
 * **Conversion:** "I have completed the goal." (e.g., actually submitting the email form or booking the calendar).
 
----
 
 ### Is your page a "Long Form Sales" page?
 
@@ -958,14 +984,10 @@ Yes, and here is why that is the right choice for a **DIY Boilerplate**:
 3. **The "Scroll" is the Filter:** In long-form sales, the further a user scrolls, the more "qualified" they become. If they reach the **Email Form** at the very bottom after reading everything, they are a much higher-quality lead than someone who just clicked a popup.
 
 
-### Summary Checklist for your "Click-Through" Strategy
-
 | Element | Optimization Goal |
 | --- | --- |
 | **Primary CTA Button** | Use a contrasting color (e.g., Bright Orange or Green) so it's the first thing the eye sees. |
 | **Button Copy** | Instead of "Submit," use action-oriented words like "Claim my Boilerplate" or "Start Building." |
 | **Micro-Copy** | Add a small note under the button like "No credit card required" to reduce the "fear" of clicking. |
-
-### Next Step for your V1
 
 Since you have the "long form" structure ready, the most important thing is to make sure your **Primary CTA** (the one in the Hero) and your **Final CTA** (the Email Form) stand out visually.
