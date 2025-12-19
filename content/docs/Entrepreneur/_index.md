@@ -67,6 +67,11 @@ It's all about this fantastic Service: https://app.formbricks.com/auth/login
 ![alt text](/blog_img/entrepre/tiersofservice/dwi/fb-survey-alerts.png)
 
 
+![alt text](/blog_img/web/formbricks-linksurvey.png)
+
+![Formbricks Inline Astro versus TSx Modal](/blog_img/web/formbricks-inline.png)
+
+
 {{< /details >}}
 
 <!-- ![Formbricks Link Embed](/blog_img/entrepre/webify/formbricks-link-embed.png) -->

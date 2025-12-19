@@ -893,16 +893,22 @@ In these 2 separated components, one with just UI, other with the Back-end logic
 
 ### Custom Forms via Astro
 
+Adding **formbricks** to our website is already known: *via survey links*
+
+![alt text](/blog_img/web/formbricks-linksurvey.png)
+
+This time I added an astro component with a modal to open the survey:
+
+* https://github.com/JAlcocerT/diy-landing-boilerplate/blob/master/src/components/SurveyModal.tsx
+
+* Or just [inline](https://github.com/JAlcocerT/diy-landing-boilerplate/blob/master/src/components/SurveyInline.astro)
+
+![Formbricks Inline Astro versus TSx Modal](/blog_img/web/formbricks-inline.png)
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="FB | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#posthog" title="PostHog | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Setup Formbricks | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Setup Cal | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
 
 
 ### Custom LogIns
@@ -962,6 +968,17 @@ I cant believe more BAs / non technical users are not creating/shipping like cra
 git clone https://github.com/JAlcocerT/slidev-editor
 #git branch -a
 #git checkout -b logtojseauth main
+```
+
+Mermaid...
+
+```mermaid
+xychart
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
 ```
 
 
