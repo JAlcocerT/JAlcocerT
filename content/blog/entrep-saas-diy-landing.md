@@ -885,6 +885,14 @@ When they can have a **DIY bot**: *with their knowledge sources and custom instr
 ### Custom Forms via Astro
 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#formbricks" title="Setup Formbricks | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#calendar" title="Setup Cal | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+### Custom LogIns
+
 
 
 ---

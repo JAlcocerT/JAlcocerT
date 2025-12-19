@@ -178,6 +178,7 @@ If you are looking for simplicity, have a look to the **flat file and local firs
 
 Flatnotes, Raneto, SilverBullet, and Logseq are the best picks if flat, human-readable Markdown files with no database lock-in are the priority.
 
+### About WikiJS
 
 I know what you are looking for: **DATABASE-LESS KNOWLEDGE BASE**
 

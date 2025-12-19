@@ -238,6 +238,11 @@ npx wrangler pages deploy dist # deploy ./dist
 
 {{< /details >}}
 
+### Point the DNS of your domain
+
+
+![Silverbullet with cloudflare](/blog_img/selfh/kb/silverbullet-dns-cf.png)
+
 ### Get Better at Webs
 
 You can get away with [front-end](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/) only, but to do cooler functionalities you will need some [back-end](https://jalcocert.github.io/JAlcocerT/backend-alternatives/) tricks.

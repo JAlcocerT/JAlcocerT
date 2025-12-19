@@ -17,8 +17,6 @@ You might be here because have seen/used Telegram bots.
 But dont get confused with chatbots vs automation: *despite tools like n8n being able to handle bots*
 
 
-
-
 ### Telegram Bots
 
 Some people get creative with telegram https://github.com/ccbikai/BroadcastChannel
@@ -49,7 +47,7 @@ Having your AI APi Keys ready and your n8n setup first:
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/#n8n" title="Automation | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-{{< details title="N8N TG Bots -  101 Setup 📌" closed="true" >}}
+{{< details title="N8N x Telegram Bots 📌" closed="true" >}}
 
 
 {{< /details >}}
@@ -85,15 +83,16 @@ That If you are in good terms with front end tools like astro and dont mind codi
 
 From visuals, to the knowledge, the way it replies and who can use it.
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Custom Bots for Landing Pages" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Using FastAPI + OpenAI x Astro to get a bot to work!" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Custom Bots for RE" image="/blog_img/biz/RE/RE-bot-ppt.jpeg" subtitle="Using Streamlit to recommend properties as per md" >}}
-{{< /cards >}}
-
 Go from [this](https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/):
 
-![Streamlit ChatBot with RE knowledge base](/blog_img/biz/RE/re-ai-agent.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Custom Bots for Landing Pages" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Using FastAPI + OpenAI x Astro to get a bot to work!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Custom Bots for RE" image="/blog_img/biz/RE/re-ai-agent.png" subtitle="Using Streamlit to recommend properties as per md" >}}
+{{< /cards >}}
 
+  <!-- {{< card link="https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/" title="Custom Bots for RE" image="/blog_img/biz/RE/RE-bot-ppt.jpeg" subtitle="Using Streamlit to recommend properties as per md" >}} -->
+
+<!-- ![Streamlit ChatBot with RE knowledge base](/blog_img/biz/RE/re-ai-agent.png) -->
 
 <!--
 
@@ -115,3 +114,31 @@ https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-codin
 ![Selfhosted Landing Page for DWY via Astro + FastAPI + OpenAI Chatbot](/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png)
 
 -->
+
+#### Bots x Knowledge Base
+
+If you have a company and are having a [KB based on flat files](https://jalcocert.github.io/JAlcocerT/knowledge-management/#knowledge-management-tools).
+
+Like SilverBullet, Logseq, Flatnote or Raneto:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/silverbullet" title="SilverBullet | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/raneto" title="Raneto | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![SilverBullet UI](/blog_img/selfh/kb/silverbullet.png)
+
+Consider also WikiJS:
+
+![alt text](/blog_img/selfh/kb/wikijs.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wiki-js" title="WikiJS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+And plug your knowledge sources via RAG / vector DBs / embeddings:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A 101 Ive put together about building websites" >}}
+{{< /cards >}}
