@@ -267,10 +267,10 @@ Once your theme files are in the themes directory:
 Step 4: Optional—Upload Theme ZIP via Admin
 
 As an alternative, through the WordPress Admin UI:
+
 - Go to **Appearance → Themes → Add New → Upload Theme**.
 - Upload a zip archive of your theme; WordPress will install and activate it.
 
-Summary
 
 | Method | Description | When to Use |
 |--------|-------------|-------------|

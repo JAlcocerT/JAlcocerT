@@ -103,6 +103,8 @@ Also these: https://www.youtube.com/@homeassistant_facil/videos - https://www.yo
 
 ### Linux and Robotics?
 
+https://www.youtube.com/shorts/28THuX3PS_8
+
 * https://github.com/ahundt/awesome-robotics
 
 <!-- https://www.youtube.com/watch?v=-JVHvU3Oor8 -->
