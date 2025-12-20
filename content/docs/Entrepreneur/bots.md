@@ -139,7 +139,7 @@ And plug your knowledge sources via RAG / vector DBs / embeddings:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A 101 Ive put together about building websites" >}}
+  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
 
 These markdown based notes need somewhere to be hosted.

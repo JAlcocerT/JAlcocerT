@@ -12,7 +12,7 @@ url: 'email-verification-pocketbase'
 
 If someone verifies an email, means that its also valid.
 
-Lets do exactly that with Pocketbase BaaS and Mailtrap.
+Lets do exactly that: with **Pocketbase BaaS and Mailtrap ESP**.
 
 
 **Intro**
@@ -20,8 +20,6 @@ Lets do exactly that with Pocketbase BaaS and Mailtrap.
 I was recently tinkering with email APIs and mailtrap got my attention as it was reaching inbox during my tests.
 
 Resend and mailjet also worked, but they were somehow flagged more frequently to spam.
-
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/pocketbase/" title="PocketBase 101" image="/blog_img/dev/PB/selfh-pb.png" subtitle="Post where I Tinkered and SelfHosted PocketBase via Container" >}}

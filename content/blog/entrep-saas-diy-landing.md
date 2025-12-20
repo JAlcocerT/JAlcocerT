@@ -502,7 +502,7 @@ You can do [programmatic emails via ESP](https://github.com/JAlcocerT/make-landi
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/make-landing/blob/main/mailetrap-esp.ipynb)
 
-The good thing about programmatic stuff, is that you can customize email html templates via antigravity.
+The good thing about programmatic stuff, is that you can customize **email html templates** [with scripts](https://github.com/JAlcocerT/make-landing/blob/master/send_email.py) via antigravity.
 
 ### Email html vs mjml Templates
 
@@ -789,7 +789,8 @@ create a z-change-request-bot-llm.md with the plan first?
 
 ```sh
 #npm install openai
-npm run dev -- --host
+npm run dev -- --host #make dev
+
 #make docker-up
 ```
 
@@ -910,8 +911,47 @@ This time I added an astro component with a modal to open the survey:
 {{< /cards >}}
 
 
+### Sending via Mailtrap
+
+As we did with [such scripts](https://github.com/JAlcocerT/make-landing/blob/master/send_email.py).
+
+But now with ts, you can have your **astro component that sends emails**:
+
+```sh
+npm install @mailtrap/api-client
+```
+
+* https://github.com/JAlcocerT/diy-landing-boilerplate/blob/master/src/components/EmailForm.astro
+
+```sh
+MAILTRAP_API_TOKEN=your-token
+MAILTRAP_SENDER_EMAIL=noreply@yourdomain.com #noreply@news.libreportfolio.fyi
+```
+
+There is a mermaid diagram of this on [the associated CR2](https://github.com/JAlcocerT/diy-landing-boilerplate/blob/master/cr2-mailtrap.md).
+
+![alt text](/blog_img/web/mailtrap-astro.png)
+
+Aaaand...the templates work brilliantly: *also with attachment!*
+
+![Sending via attachments Astro component and Mailtrap](/blog_img/web/mailtrap-template.png)
+
+> You could add https://capjs.js.org/guide/alternatives.html as I tested [here](https://github.com/JAlcocerT/simple-waiting-list)
+
+![CAPJS with NextJS Simple Waiting List](/blog_img/dev/nextjs/capjs-waitinglist.png)
+
+![CapJS + NextJS Working](/blog_img/dev/nextjs/capjs-nextjs-pow.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/capjs" title="CapJS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ### Custom LogIns
+
+This could be driven via FireBase Auth.
+
+But as this is supposed to be custom: *I have tinkered here with my pocketbase instance and have an additional component that shows content if someone has logged in* 
 
 
 
