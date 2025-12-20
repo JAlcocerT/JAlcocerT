@@ -3,7 +3,7 @@ title: "A boilerplate to create Landings for lead generation."
 #date: 2026-01-01T23:20:21+01:00
 date: 2025-12-17T23:20:21+01:00
 draft: false
-tags: ["One Time Payment","Formbricks x Cal x email x TS-ChatBot","DIY","RoadMap26 x Tech Talk"]
+tags: ["One Time Payment","Stripe x Formbricks x Cal x email x TS-ChatBot","DIY","RoadMap26 x Tech Talk"]
 description: 'Showing how to build landings realiably (and fast) with AI Agents and ESPs.'
 url: 'diy-landing-boilerplate'
 ---
@@ -40,6 +40,7 @@ The **tech stack**: *see how it has been done on [this section](https://jalcocer
 * TAM: *not calculated, if it helps someone, would be amazing*
 * LTV: *not calculated*
 * CaC: ~0$ + the time cost of sharing on social media / forums from my time at this point
+* Supply: unlimited, its an info product
 
 So...if all of that is...undefined: whats **the goal**?
 
@@ -1097,6 +1098,54 @@ POCKETBASE_URL=http://127.0.0.1:8090 #https://pocketbase.jalcocertech.com/ #with
 
 If you configured **Pocketbase Mail settings**, you can get emails verified as well.
 
+* https://pocketbase.jalcocertech.com/_/#/settings/mail
+* https://jalcocert.github.io/JAlcocerT/email-verification-pocketbase/
+* https://docs.stripe.com/products-prices/pricing-models
+
+![Pocketbase signup emai verification](/blog_img/web/pb-verify-mail.png)
+
+
+```
+{APP_URL}/_/#/auth/confirm-verification/{TOKEN}
+```
+
+```
+<p>Hello,</p>
+<p>Thank you for joining us at {APP_NAME}.</p>
+<p>Click on the button below to verify your email address.</p>
+<p>
+  <a class="btn" href="{ACTION_URL}" target="_blank" rel="noopener">Verify</a>
+</p>
+<p>
+  Thanks,<br/>
+  {APP_NAME} team
+</p>
+```
+
+### A Pricing Component with Stripe Info
+
+So...what else are we missing?
+
+How about making easy to configure the copy of your offer?
+
+And let you configure those magic numbers via stripe for each tier?
+
+As they will be separated products with a link, why not pulling such data dynamically?
+
+You modify in Stripe, and it flows to your site :)
+
+This would do a similar trick as configuring forms or cals via their SaaS.
+
+It scales pretty nicely.
+
+For now, all [main.md based pricing component](https://github.com/JAlcocerT/diy-landing-boilerplate/blob/master/src/components/Pricing.astro):
+
+![Astro Pricing compoent](/blog_img/web/diy-pricing.png)
+
+### Other Components
+
+* [ChangeLog](https://github.com/JAlcocerT/diy-landing-boilerplate/blob/master/src/pages/changelog.astro)
+* 
 
 ---
 

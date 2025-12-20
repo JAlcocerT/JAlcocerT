@@ -122,6 +122,8 @@ And again, using mailtrap reached directly the inbox:
 
 ![alt text](/blog_img/email/pb-mailtrap/configuring-pb-smtp.png)
 
+And then, just add:
+
 ![alt text](/blog_img/email/pb-mailtrap/configuring-pb-smtp2.png)
 
 
@@ -139,9 +141,9 @@ curl -x GET http://192.168.1.12:8080/api/collections/users/confirm-verification
 # curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect}s appconnect: %{time_appconnect}s pretransfer: %{time_pretransfer}s starttransfer: %{time_starttransfer}s ---------- total: %{time_total}s http_code: %{http_code}" https://graficas.libreportfolio.fyi
 ```
 
-/api/collections/users/request-verification
+* /api/collections/users/request-verification
 
-/api/collections/users/confirm-verification
+* /api/collections/users/confirm-verification
 
 ![Pocketbase API endpoint for Verification](/blog_img/email/pb-mailtrap/pb-api-verification.png)
 
@@ -151,8 +153,6 @@ Even the `/api/collections/users/confirm-verification` is around!
 import PocketBase from 'pocketbase';
 
 const pb = new PocketBase('http://192.168.1.12:8080');
-
-...
 
 await pb.collection('users').requestPasswordReset('test@example.com');
 ```
