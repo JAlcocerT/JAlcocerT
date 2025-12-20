@@ -7,7 +7,7 @@ description: 'Building a custom mkt solutions to feed your sales pipeline.'
 url: 'custom-marketing-analytics'
 ---
 
-https://kit.com/use-cases/marketers
+* https://kit.com/use-cases/marketers
 
 
 **Tl;DR**

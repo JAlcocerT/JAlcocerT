@@ -237,10 +237,11 @@ And you can use any of their docker-compose.yml to host them via the covered Paa
 
 At the end, ill also leave some [other apps created and released as OSS](#what-exactly-do-you-need) which you might consider.
 
-
 {{% steps %}}
 
 ### Tried RShiny After a DataCamp Course
+
+The output was...[RStocks](https://jalcocert.github.io/JAlcocerT/R-Stocks/)!
 
 ### Switched to Python and tried DASH
 

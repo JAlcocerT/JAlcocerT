@@ -181,6 +181,10 @@ I really **cant wait**:
 2. Hyundai heavy industries dfy subscription making possible a company to thrive
 3. Stocastic vs unpredictable effects
 4. How about a progressive tax ob beauty?
+5. Models that work, compared to others with interesting assumptions
+
+* https://en.wikipedia.org/wiki/Grigory_Feldman
+* https://en.wikipedia.org/wiki/Feldman%E2%80%93Mahalanobis_model#Assumptions
 
 In the meantime: *you can also get your website going*
 

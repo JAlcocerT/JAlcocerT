@@ -32,3 +32,12 @@ Just that B2B clients will be more eager to pay for them
 Just FYI, you can get n8n running on your server under 1 min:
 
 {{< youtube "v-gCNTI5kzE" >}}
+
+
+### Email Automation
+
+Consider looking at: https://github.com/Lissy93/email-comparison
+
+> 📬 A quick comparison of private and / or secure email providers
+
+But...email automation is more about ESP, like mailtrap, Resend, Mailjet or Amazon SES.

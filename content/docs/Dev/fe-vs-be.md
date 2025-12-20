@@ -6,7 +6,8 @@ next: docs/arch/
 draft: false
 ---
 
-https://roadmap.sh/frontend/frameworks
+* https://roadmap.sh/frontend/frameworks
+* https://framework-benchmarks.as93.net/
 
 How much Fe and Be you need to know?
 

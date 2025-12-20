@@ -504,14 +504,13 @@ It's worth to **try few of them**.
 
 3. https://www.websitecarbon.com/
 
-4. https://github.com/Lissy93/web-check
-    * https://web-check.xyz/
+4. https://github.com/Lissy93/web-check with deployed version: https://web-check.xyz/
 
 > MIT | 🕵️‍♂️ All-in-one OSINT tool for analysing any website
 
 5. See how a linkshortener works for your site
 
-6. Does the site have **[Broken Links](https://fossengineer.com/nextjs-ssg/#do-i-got-any-broken-links)?**
+6. Link Checker: Does the site have **[Broken Links](https://fossengineer.com/nextjs-ssg/#do-i-got-any-broken-links)?**
 
 ```sh
 #podman run --rm -it ghcr.io/linkchecker/linkchecker:latest --verbose https://jalcocert.github.io/JAlcocerT/ > linkchecker_output.txt

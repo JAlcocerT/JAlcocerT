@@ -36,6 +36,16 @@ Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhos
 
 ## FAQ
 
+For networking, consider: https://github.com/Lissy93/networking-toolbox
+
+> MIT | 🛜 100+ offline-first networking tools and utilities
+
+* https://networkingtoolbox.net/diagnostics/dns/query-performance
+
+See also: https://github.com/Lissy93/awesome-privacy
+
+> 🦄 A curated list of privacy & security-focused software and services
+
 
 {{% details title="How to mount external drives consistently? 🚀" closed="true" %}}
 
