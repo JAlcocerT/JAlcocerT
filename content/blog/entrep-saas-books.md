@@ -1,8 +1,9 @@
 ---
-title: "We/Books"
-date: 2026-01-02T23:20:21+01:00
+title: "We/Books BoilerPlate"
+# date: 2026-01-02T23:20:21+01:00
+date: 2025-12-20T23:20:21+01:00
 draft: false
-tags: ["Kindle","1toN ebooks x BiP BoilerPlate","SaaS vs LifeTime Products","RoadMap26"]
+tags: ["Kindle","1toN ebooks x BiP","SaaS vs LifeTime Products","DecapCMS","RoadMap26"]
 description: 'Reading better, writing more. Making the learnings of years actionable and sharing via web/ooks'
 url: 'interesting-books'
 ---
@@ -137,6 +138,18 @@ I created the first draft of an ebook on *how to create your cool website via DI
   {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
   {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY Web eBook x Obfuscation" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source code on GH. eBook x fastAPI x obfuscator x markdown source" >}}
 {{< /cards >}}
+
+But not only once. 
+
+Also with the DIY Landing Boilerplate!
+
+### Noted down couple of Themes
+
+### Now - Decap x Typography x N ebooks
+
+What if launcing ebooks was all about writing via DecapCMS?
+
+Because the landing part is so much clear.
 
 {{% /steps %}}
 

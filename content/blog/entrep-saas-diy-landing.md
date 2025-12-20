@@ -1146,11 +1146,23 @@ For now, all [main.md based pricing component](https://github.com/JAlcocerT/diy-
 
 * [ChangeLog](https://github.com/JAlcocerT/diy-landing-boilerplate/blob/master/src/pages/changelog.astro)
 
+* trusted by and logos
+
+* stats/metric section
+
+* yt video component and cloudflare r2 video component
+
+* before & after slider
+
+*  a sticky cta banner
+
+
 * e-book ~ page driven by markdown
 
 So that you can replicate such lead magnets https://mailchi.mp/8bf0b0f59967/crowdlending-para-novatos
 
 And get that better diy.jalc or real output from ebook-ideas.
+
 
 
 ---
