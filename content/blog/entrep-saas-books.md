@@ -243,8 +243,7 @@ Which is a much better tool to leverage than trying to build your own flask base
 <!-- ![TinyAuth UI with https](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png) -->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat
-  " title="Traefik x TinyAuth Setup" image="/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png" subtitle="TinyAUth as WebApp authentication middleware with the Firebat MiniPC" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat" title="Traefik x TinyAuth Setup" image="/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png" subtitle="TinyAUth as WebApp authentication middleware with the Firebat MiniPC" >}}
 {{< /cards >}}
 
 
@@ -330,7 +329,7 @@ flowchart LR
 ```
 
 ```sh
-git clone 
+git clone https://github.com/JAlcocerT/Portfolio
 
 ```
 

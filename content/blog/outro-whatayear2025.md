@@ -131,7 +131,7 @@ Do you?
 
 Or have I earned the right to not give a fuck of what others opinions are about how I choose to spend my time?
 
-> The kind of rights you get from understanding [loans](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#french-amortization-101), the [costs of real estate](https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/), [stocks](https://jalcocert.github.io/JAlcocerT/py-stonks/), [crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/), having a high [active income](https://jalcocert.github.io/JAlcocerT/career/) AND having a very high saving rate *(yea, im saying no to 50%+++ of what I could spend...after taxes)*
+> The kind of rights you get from understanding [loans](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#french-amortization-101), the [costs of real estate](https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/) *including the [painting](https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/#estimating-painting-costs-with-ai) one*, [stocks](https://jalcocert.github.io/JAlcocerT/py-stonks/), [crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/), having a high [active income](https://jalcocert.github.io/JAlcocerT/career/) AND having a very high saving rate *(yea, im saying no to 50%+++ of what I could spend...after taxes)*
 
 Anyways, not everything is lost!
 

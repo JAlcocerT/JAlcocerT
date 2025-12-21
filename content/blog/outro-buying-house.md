@@ -2,7 +2,7 @@
 title: "Buying a house being in Data Analytics"
 date: 2025-04-17T11:20:21+01:00
 draft: false
-tags: ["Outro","Real Estate Analytics","LIBOR"]
+tags: ["Outro","Real Estate Analytics","LIBOR","Paint Costs"]
 description: 'What to keep in mind - what not to do and the data behind...When buying a house. Plus AI painting cost estimation.'
 url: 'buying-house-data-analytics'
 ---
