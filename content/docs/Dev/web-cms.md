@@ -97,6 +97,8 @@ Its all a matter of understanding [decap's config.yml](https://github.com/JAlcoc
 > With the GH Oauth, you will receive an email *A third-party OAuth application has been added to your account*
 
 * https://decapcms.org/docs/github-backend/
+* https://www.npmjs.com/package/decap-server
+  * Previously https://www.npmjs.com/package/netlify-cms-proxy-server
 
 <!-- 
 https://gemini.google.com/app/e56f65561d33fd86?hl=pl -->

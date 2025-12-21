@@ -296,12 +296,12 @@ graph TB
     style CustomDomain fill:#2ecc71
 ```
 
-But ***now** I needed to rethink that with a **simpler architecture**:
+But **now** I needed to rethink that with a **simpler architecture**:
 
 * Editing via one subdomain and the Hugo Dev container, like: `https://portfolio.jalcocertech.com/admin`
 * Consuming via the CI/CD statically deployed artifacts: `https://jalcocert.github.io/Portfolio/`
   *  *This could be any other custom sub/domain or use cloudflare pages and workers if desired*
-  * Or...to trigger the build of the prod container to serve the assets
+  * Or...to trigger the build of the prod container to serve the assets your way :)
 
 ```mermaid
 flowchart LR
@@ -328,11 +328,95 @@ flowchart LR
     style Internet fill:#E3F2FD,stroke:#1976D2
 ```
 
-```sh
-git clone https://github.com/JAlcocerT/Portfolio
+Make sure to understand how to run [hugo x decapcms pure local OR local + Github OAuth](https://github.com/JAlcocerT/Portfolio/blob/main/z-decap-local-dev.md)
+
+1. Go to: https://github.com/settings/developers
+
+2. Click "New OAuth App"
+
+3. Fill in:
+   - **Application name**: `Portfolio CMS Local`
+   - **Homepage URL**: `http://localhost:1313` or `http://tailscaleip:1313` or `https://portfolio.jalcocertech.com`
+   - **Authorization callback URL**: `https://api.netlify.com/auth/done` or `http://100.86.82.103:1313/auth/callback` or `https://portfolio.jalcocertech.com/auth/callback`
+
+| Approach | Access | Security | GitHub OAuth | Setup |
+|----------|--------|----------|--------------|-------|
+| **Local only** | Single device | 🔒🔒🔒 Highest | ⚠️ Complex | ⭐ Easy |
+| **Tailscale** | Your devices | 🔒🔒 High | ✅ Works | ⭐⭐ Medium |
+| **Public (CF Tunnel)** | Anyone | 🔒 Medium | ✅ Works | ⭐⭐⭐⭐ Complex |
+
+> When local_backend: true, is local only and it requires the `npx decap-server`
+
+4. Click "Register application"
+
+5. Note your **Client ID** and generate a **Client Secret**
 
 ```
+GITHUB_CLIENT_ID=your_client_id_here
+GITHUB_CLIENT_SECRET=your_client_secret_here
+```
 
+Then, just:
+
+```sh
+#npm install -g netlify-cms-proxy-server #for localhost version
+
+#ssh jalcocert@jalcocert-x300-1
+git clone https://github.com/JAlcocerT/Portfolio && cd Portfolio
+#nano .env
+
+#make hugo-dev 
+hugo server --bind="0.0.0.0" --baseURL="http://localhost" --port=1313 #localhost:1313
+#make hugo-dev #http://100.86.82.103:1313/
+#hugo server --bind="0.0.0.0" --baseURL="http://100.86.82.103" --port=1313
+npx decap-server
+```
+
+Should get running the local or local+github oauth and automatic commits.
+
+But...how about using not netlify, but with newer decap-cms?
+
+As its newer, makes the setup more simple: *but again, its all about decap's `./static/admin/config.yml`
+
+```sh
+git clone https://github.com/JAlcocerT/EntreAgujayPunto && cd EntreAgujayPunto
+
+npm run dev:full #this runs hugo in dev and decapcms!
+
+#Alternatively, within 2 terminals
+# Terminal 1
+#hugo server --bind="0.0.0.0" --baseURL="http://localhost" --port=1313
+
+# Terminal 2
+#npm run cms
+```
+
+Doing this, revealed the theme needed to vibe code from scratch in Astro, following my BiP procedure.
+
+It all comes down to decap-cms dont recognizing nested media folders, which was the key of the hugo-theme-gallery used.
+
+So...time to create sth that is going to be working without nested media folder, but will assign properly which photo gets rendered where:
+
+
+{{< details title="DecapCMS x Vibe coded Photo Gallery x AgujayPunto... 📌" closed="true" >}}
+
+
+
+
+{{< /details >}}
+
+Or...put a simple web app with a `/portal` to upload photos as vibe coded here
+
+```sh
+make help
+
+#git clone https://github.com/JAlcocerT/EntreAgujayPunto.git #http://jalcocert-x300-1:8090/
+#npm install npm-run-all --save-dev
+#npm run dev:full #decapcms local + hugo local dev
+HUGO_BASEURL="http://jalcocert-x300-1" HUGO_PORT=1313 npm run dev:full
+
+docker compose up -d uploader
+```
 
 ### From SaaS to LifeTime Products 
 

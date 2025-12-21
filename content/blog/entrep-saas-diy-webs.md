@@ -2,7 +2,7 @@
 title: "A SaaS on Top of PaaS x (SSG + CMS) x Show a Problem"
 date: 2026-01-10T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS","BiP x DIY","VPS","DIY","RoadMap26","My Web Creation Journey"]
+tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey"]
 description: 'Building a scalable way to provide performant websites. With Free Web Audits!'
 url: 'diy-webs-via-paas'
 ---
@@ -103,9 +103,38 @@ https://www.mangomedia.pl/pl/portfolio.html
 
 ### DecapCMS finally did the trick
 
+With Twilight astro Theme first and the double terminal
+
+```sh
+
+```
+
+Then with Portfolio where it worked with local + github oauth with changes commited and going to Ci/CD automatically
+
+```sh
+
+```
+
+And to some extent, with EntreAgujayPunto (hugo theme gallery), where the container setup....
+
+```sh
+#git clone https://github.com/JAlcocerT/EntreAgujayPunto.git #http://jalcocert-x300-1:8090/
+npm install npm-run-all --save-dev
+#npm run dev:full #decapcms local + hugo local dev
+HUGO_BASEURL="http://jalcocert-x300-1" HUGO_PORT=1313 npm run dev:full
+
+#hugo server --bind="0.0.0.0" --baseURL="http://192.168.1.100" --port=1313
+#npm run cms
+make dev-all
+```
+
+The last round was very recently, on [this post](https://jalcocert.github.io/JAlcocerT/interesting-books/#decap-x-existing-astro-x-localhost).
+
 {{% /steps %}}
 
 ## The journey of the infra side
+
+Because not everything is code.
 
 {{% steps %}}
 

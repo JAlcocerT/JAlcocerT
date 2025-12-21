@@ -1046,6 +1046,8 @@ Some tools were CLI only, then released **desktop version**:
 
 ![Goose CLI UI](/blog_img/GenAI/goose-1.png)
 
+Plug any model to Goose:
+
 ![Goose Desktop - Plug a LLM and even provides transcription](/blog_img/GenAI/audio/goose-desktop.png)
 
 But hey Ollama has now a Desktop UI mode as well!
@@ -1162,8 +1164,7 @@ https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/
 {{< /cards >}}
 
 
-
-https://jalcocert.github.io/JAlcocerT/astro-journal-theme/
+I also enjoyed journaling via [astro](https://jalcocert.github.io/JAlcocerT/astro-journal-theme/) and WYSIWYG editors:
 
 ![NextJS Reactmd editing astro sphere theme](/blog_img/web/nextjs-admin/journal-nextjs-admin-reactmd.png)
 
@@ -1172,14 +1173,12 @@ https://jalcocert.github.io/JAlcocerT/astro-journal-theme/
 {{< /cards >}}
 
 
+Getting to work [firebase auth](https://jalcocert.github.io/JAlcocerT/firebase-auth-101/) and get social sign ins working was amazing:
 
-https://jalcocert.github.io/JAlcocerT/firebase-auth-101/
 ![Social SignInUp with Google inside a WebApp](/blog_img/web/Firebase/auth/fb-auth4-nextjs-socialsignin.png)
 
 
-
-https://jalcocert.github.io/JAlcocerT/audio-recap/
-
+There was time for [audio](https://jalcocert.github.io/JAlcocerT/audio-recap/):
 
 ![Fast API WebApp with audio recording capabilities](/blog_img/GenAI/audio/fastapi-audio-rec.png)
 
@@ -1197,6 +1196,9 @@ https://jalcocert.github.io/JAlcocerT/audio-recap/
 
 
 ![Flask UI Login as per PocketBase user collection](/blog_img/web/morita-flask/flask-login-pb.png)
+
+
+
 ![FlaskCMS for Mental health Astro portfolio theme working via CF tunnel](/blog_img/web/morita-flask/https-flask-cf.png)
 
 https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#flask-x-pocketbase
@@ -1216,9 +1218,7 @@ cd real-estate-moi
 make flaskcms-build
 docker inspect moirealestate-flaskcms --format '{{json .NetworkSettings.Networks}}' | jq
 ```
-
-
-https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/
+* https://jalcocert.github.io/JAlcocerT/cool-hugo-themes/
 
 ![Flask WebAPP as CMS x HUGO Theme Gallery](/blog_img/web/hugo-themegallery-flask.png)
 
@@ -1251,6 +1251,8 @@ From Streamlit PoCs, I mean streamlit financial MVP to Flask with ChartJS:
 
 ![Streamlit signin signup via pocketbase users collection](/blog_img/entrepre/public-build/pystonks/st-auth-pb-signup.png)
 
+*The MDD concept was pretty cool too*:
+
 ![Flask UI Sample cum returns and mdd graphs](/blog_img/entrepre/public-build/pystonks/CumReturns-MDD.png)
 
 {{< cards cols="2" >}}
@@ -1259,18 +1261,18 @@ From Streamlit PoCs, I mean streamlit financial MVP to Flask with ChartJS:
 {{< /cards >}}
 
 
-ChartJS and ApexCharts have been great revelations this year.
+**ChartJS and ApexCharts** have been great revelations this year.
 
 ![Streamlit Funnel Chart Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
+
+For custom BI, but also to tinker with webapps:
 
 ![Flask WebApp vibe coded gradient](/blog_img/selfh/automation/flask-gradient-cms-v2.png)
 
 
-https://jalcocert.github.io/JAlcocerT/playwright-101/
+Scrapping, browser automation and [playwright](https://jalcocert.github.io/JAlcocerT/playwright-101/) was also a thing:
 
 ![Job Market Trend | Matplotlib Job-Trends](/blog_img/data-experiments/matplotlib_job_offers_plot_06-08-2025.png)
-
-
 
 
 {{< cards >}}

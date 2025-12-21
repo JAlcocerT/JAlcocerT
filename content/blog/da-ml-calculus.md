@@ -86,7 +86,7 @@ http://localhost:1313/chaos-theory-and-the-double-pendulum-with-python/
 {{< youtube "GkB4vW16QHI" >}}
 
 
-## ODE - 
+## ODE - Ordinary Differential Equations
 
 Ordinary Differential Equations!
 
@@ -105,9 +105,7 @@ If you have a Google account, you can check these kind of snippets, as well as f
 
 A double pendulum is typically modeled using a system of **ordinary differential equations (ODEs)**, not partial differential equations (PDEs).
 
-* http://jakevdp.github.io/blog/2017/03/08/triple-pendulum-chaos/
-
-Here's why:
+* Special mention to KajeVDP that created this before LLMs: http://jakevdp.github.io/blog/2017/03/08/triple-pendulum-chaos/
 
 *   **Ordinary Differential Equations (ODEs):** ODEs describe how functions of *one* independent variable change. In the case of a double pendulum, the independent variable is *time*. The dependent variables are the angles of the two pendulum arms (θ₁ and θ₂).  We're looking at how these angles change *over time*.
 
