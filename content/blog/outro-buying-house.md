@@ -255,11 +255,23 @@ But you are missing all internal walls which make the rooms, say thats 100% more
 
 First estimation ~ 55+30*2 = 115m2, which for **2 layers** would be ~30kg
 
-{{< details title="Different kind of paints... 📌" closed="true" >}}
+After finishing a full flat, **these are my learnings of having painted**
+
+1. Depending on surface complexity + counting all the layers (2 and sometimes 3): 2-3 personhours/m2
+
+*2 person would do it in 1-/1.5h that same m2* 
+
+2. Count around ~1.5$/m2 - *Squared m2 of surface to be painted, which with a flat layout+math you can figure out*
+
+> This counts all layers of paint and with a current cost of ~10$/l.
+
 
 The world of home paints can be a bit overwhelming with different types and terminologies.
 
-### Synthetic Paints
+{{< details title="Different kind of paints... 📌" closed="true" >}}
+
+
+Synthetic Paints
 
 "Synthetic" is a broad term that essentially means the paint is made from artificially created materials, often derived from petrochemicals. Many modern paints fall under this category. 
 
@@ -281,7 +293,7 @@ Within synthetic paints, you'll find various binders (the substance that holds t
 * **Strong Odor:** Solvent-based synthetic paints can have a strong and lingering odor.
 * **Cleaning:** Often require solvents like mineral spirits for cleaning brushes and spills.
 
-### Acrylic Paints
+Acrylic Paints
 
 Acrylic paints are a type of synthetic paint where the binder is an acrylic resin. They are water-based.
 
@@ -329,8 +341,6 @@ For practical purposes in the home painting context, **latex paints are often co
 * **Can Swell Wood Grain:** Water-based nature can cause wood grain to swell if not properly sealed.
 * **Less Suitable for Exterior:** Generally not as durable as exterior-grade acrylic paints for outdoor use due to less resistance to weather elements.
 
-{{< /details >}}
-
 
 **In summary:**
 
@@ -343,6 +353,10 @@ For practical purposes in the home painting context, **latex paints are often co
 Oil-based synthetic paints are less common for general home use now due to VOCs and cleanup requirements but still have specific applications (e.g., durable finishes on trim or metal).
 
 When choosing paint, consider the surface you're painting, the desired finish (matte, satin, semi-gloss, gloss), the level of durability needed, and your preference regarding VOCs and ease of cleanup.
+
+{{< /details >}}
+
+
 
 
 ### Cool Stuff

@@ -223,12 +223,15 @@ I got to get working decap-cms with astro at [this post](https://jalcocert.githu
   {{< card link="https://github.com/JAlcocerT/Twilight" title="Twilight Astro x Decap Localhost ↗" icon="github" >}}
 {{< /cards >}}
 
-And this was the opened result:
+And this was the result of the local editor: *which is totally open sourced*
 
-[![Decap CMS Post Editor](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/decap-post-editor.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decap-post-editor.png)
+<!-- https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decapcms-local.png
+https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decap-post-editor.png -->
+
+[![Decap CMS Post Editor](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/decap-post-editor.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decapcms-local.png)
 
 
-
+Which is a much better tool to leverage than trying to build your own flask based cms https://github.com/JAlcocerT/hugo-theme-gallery-flasked
 
 
 ### DecapCMS x VPS

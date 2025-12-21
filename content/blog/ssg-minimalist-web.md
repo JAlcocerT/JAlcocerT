@@ -371,6 +371,9 @@ make docker-down
 
 Just go to `localhost:4321` and `localhost:4321/admin` to have Astro and Dev Mode and **DecapCMS to edit the files locally via a cool editor!**
 
+* https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decapcms-local.png
+
+
 [![Decap CMS Post Editor](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/decap-post-editor.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decap-post-editor.png)
 
 

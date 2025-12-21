@@ -284,10 +284,34 @@ However, **not all file-based CMS are Git-based.** Many file-based CMS exist tha
 
 **In summary:** Think of "file-based CMS" as the broader category. Within that category, "Git-based CMS" is a specific type that uses Git for its file management and version control.
 
-### decapCMS
+### DecapCMS
+
+Selfhostable, open source, Git-based CMS
+
+What else could be mentioned from a magnific piece of software.
+
+Fantastic level: I have forked the project https://github.com/JAlcocerT/decap-cms
+
+Tinkered first with it via Hugo Lynx portfolio repo
+
+ See the [101.md](https://github.com/JAlcocerT/Portfolio/blob/main/decapcms-101.md) and [DecapCMS x Github](https://github.com/JAlcocerT/Portfolio/blob/main/decapcms-github.md) which will require GH OAuth Setup
+
+Then, got DecapCMS working fully locally with this open example of the Astro Twilight repo.
+
+<!-- 
+https://github.com/JAlcocerT/Portfolio
+https://github.com/JAlcocerT/Twilight
+ -->
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Portfolio" title="Hugo Lynx Portfolio x Decap Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Twilight" title="Twilight Astro x Decap Localhost ↗" icon="github" >}}
+{{< /cards >}}
+
+
 
 {{< callout type="info" >}}
-I have been tinkering with [DecapCMS + HUGO Lynx Portfolio](https://github.com/JAlcocerT/Portfolio). See the [101.md](https://github.com/JAlcocerT/Portfolio/blob/main/decapcms-101.md) and [DecapCMS x Github](https://github.com/JAlcocerT/Portfolio/blob/main/decapcms-github.md) which will require GH OAuth Setup
+DecapCMS is a perfect option for a web PaaS with Themes that can be selected and edited, with all the power of SSG and git under the hood. 
 {{< /callout >}}
 
 
@@ -300,7 +324,7 @@ I have been tinkering with [DecapCMS + HUGO Lynx Portfolio](https://github.com/J
 
 * https://github.com/decaporg/decap-cms
 
-> MIT | A Git-based CMS for Static Site Generators | **netlifyCMS === decapCMS**
+> **MIT** | A Git-based CMS for Static Site Generators | **netlifyCMS === decapCMS**
 
 Create a Custom Blog with Astro & NetlifyCMS in MINUTES!
 
