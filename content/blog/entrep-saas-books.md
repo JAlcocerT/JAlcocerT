@@ -194,14 +194,52 @@ Viral tales capture attention, look cohesive, and fit readily into existing narr
 
 ## Building N ebooks for a web/ook
 
+For now, this is all going to be content from...surprise, surprise: this blog!
+
+I need to structure the offering though.
+
+Most likely, will be around: 1 free, give email for the rest, boilerplate x1 time paid and available at `boilerplate.jalcocertech.com`
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C;
+
+    %% --- Nodes ---
+    L1("Free Content<br/>(Blog/YT $0)"):::free
+    L2("DIY<br/>(Templates / Platform) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Services) $$$"):::high
+
+    %% --- Connections ---
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+```
+
 ### The DIY Web ebook
 
-AI is much better at code than it is to draf-n-drop.
+AI is much better at code than it is to drag-n-drop.
+
+We got proof of that from ppts and diagrams
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slidev-editor" title="SliDev Editor and PPTs ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Twilight" title="Twilight Astro x Decap Localhost ↗" icon="github" >}}
+{{< /cards >}}
 
 So if you know which tools to ask for, you get much better results.
 
-But hey, if you want to still spend a weekend to get a crappy looking wordpress - feel free to do so.
+But hey, if you want to still spend a weekend to get a *crappy looking* wordpress - feel free to do so.
 
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
+{{< /cards >}}
 
 ### Servers
 
