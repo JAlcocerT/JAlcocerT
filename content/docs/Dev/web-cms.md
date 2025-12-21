@@ -74,54 +74,27 @@ I just loved **working with DecapCMS** so far as [seen here](https://jalcocert.g
 DecapCMS is **MIT** and I also forked it: https://github.com/decaporg/decap-cms
 
 
-```mermaid
-graph TB
-    subgraph "Public Internet"
-        User[Blog Visitors]
-        Editor[Content Editors]
-    end
-    
-    subgraph "VPS/Server with Docker"
-        Traefik[Traefik Reverse Proxy<br/>:80, :443]
-        TinyAuth[TinyAuth<br/>Authentication]
-        
-        subgraph "CMS Stack"
-            Astro[Astro Dev Server<br/>:4321]
-            DecapProxy[Decap CMS Proxy<br/>:8081]
-        end
-        
-        CronJob[Cron Job<br/>Every 30 min]
-    end
-    
-    subgraph "Git Repository"
-        GitHub[GitHub/GitLab<br/>Main Branch]
-    end
-    
-    subgraph "Cloudflare"
-        CFPages[Cloudflare Pages<br/>Static Site]
-        CustomDomain[yourdomain.com]
-    end
-    
-    User -->|HTTPS| CustomDomain
-    CustomDomain --> CFPages
-    
-    Editor -->|HTTPS| Traefik
-    Traefik -->|Auth Check| TinyAuth
-    TinyAuth -->|Authenticated| Astro
-    Astro --> DecapProxy
-    
-    DecapProxy -->|Edit Content| Astro
-    CronJob -->|Check Changes| DecapProxy
-    CronJob -->|Git Commit & Push| GitHub
-    
-    GitHub -->|Webhook/CI| CFPages
-    CFPages -->|Deploy| CustomDomain
-    
-    style Traefik fill:#00d4ff
-    style TinyAuth fill:#ff6b6b
-    style CFPages fill:#f39c12
-    style CustomDomain fill:#2ecc71
-```
+Tinkered first with it via Hugo Lynx portfolio repo
+
+ See the [101.md](https://github.com/JAlcocerT/Portfolio/blob/main/decapcms-101.md) and [DecapCMS x Github](https://github.com/JAlcocerT/Portfolio/blob/main/decapcms-github.md) which will require GH OAuth Setup
+
+Then, got DecapCMS working fully locally with this open example of the Astro Twilight repo.
+
+<!-- 
+https://github.com/JAlcocerT/Portfolio
+https://github.com/JAlcocerT/Twilight
+ -->
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Portfolio" title="Hugo Lynx Portfolio x Decap Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Twilight" title="Twilight Astro x Decap Localhost ↗" icon="github" >}}
+{{< /cards >}}
+
+Then, again with Lynx, I got an understanding on decapCMS fully local vs DecapCMS still local, but with github OAuth to push changes right away to github.
+
+Its all a matter of understanding [decap's config.yml](https://github.com/JAlcocerT/Portfolio/blob/main/static/admin/config.yml#L10) and as explained [here](https://github.com/JAlcocerT/Portfolio/blob/main/z-decap-local-dev.md).
+
+> With the GH Oauth, you will receive an email *A third-party OAuth application has been added to your account*
 
 * https://decapcms.org/docs/github-backend/
 

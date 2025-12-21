@@ -257,14 +257,13 @@ First estimation ~ 55+30*2 = 115m2, which for **2 layers** would be ~30kg
 
 After finishing a full flat, **these are my learnings of having painted**
 
-1. Depending on surface complexity + counting all the layers (2 and sometimes 3): 2-3 personhours/m2
+1. Depending on surface complexity + counting all the layers (2 and sometimes 3): **~2-3 personhours/m2**
 
 *2 person would do it in 1-/1.5h that same m2* 
 
-2. Count around ~1.5$/m2 - *Squared m2 of surface to be painted, which with a flat layout+math you can figure out*
+2. Count material costs around **~1.5$/m2** - *Squared m2 of surface to be painted, which with a flat layout+math you can figure out*
 
-> This counts all layers of paint and with a current cost of ~10$/l.
-
+> This counts all layers of paint and with a current cost of **~10$/l**.
 
 The world of home paints can be a bit overwhelming with different types and terminologies.
 

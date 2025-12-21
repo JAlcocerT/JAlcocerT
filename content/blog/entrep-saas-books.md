@@ -3,8 +3,8 @@ title: "We/Books BoilerPlate"
 # date: 2026-01-02T23:20:21+01:00
 date: 2025-12-20T23:20:21+01:00
 draft: false
-tags: ["Kindle","1toN ebooks x BiP","SaaS vs LifeTime Products","DecapCMS","RoadMap26"]
-description: 'Reading better, writing more. Making the learnings of years actionable and sharing via web/ooks'
+tags: ["Info Products","1toN ebooks x BiP","SaaS vs LifeTime Products","DecapCMS","RoadMap26"]
+description: 'Reading better, writing more. Making Kindle learnings of years actionable and sharing via web/ooks'
 url: 'interesting-books'
 ---
 
@@ -236,6 +236,99 @@ Which is a much better tool to leverage than trying to build your own flask base
 
 ### DecapCMS x VPS
 
+**Initially**, I was thinking on this kind of setup, with some TinyAuth as middleware:
+
+<!-- ![TinyAuth UI with https](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat
+  " title="Traefik x TinyAuth Setup" image=/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png" subtitle="TinyAUth as WebApp authentication middleware with the Firebat MiniPC" >}}
+{{< /cards >}}
+
+
+```mermaid
+graph TB
+    subgraph "Public Internet"
+        User[Blog Visitors]
+        Editor[Content Editors]
+    end
+    
+    subgraph "VPS/Server with Docker"
+        Traefik[Traefik Reverse Proxy<br/>:80, :443]
+        TinyAuth[TinyAuth<br/>Authentication]
+        
+        subgraph "CMS Stack"
+            Astro[Astro Dev Server<br/>:4321]
+            DecapProxy[Decap CMS Proxy<br/>:8081]
+        end
+        
+        CronJob[Cron Job<br/>Every 30 min]
+    end
+    
+    subgraph "Git Repository"
+        GitHub[GitHub/GitLab<br/>Main Branch]
+    end
+    
+    subgraph "Cloudflare"
+        CFPages[Cloudflare Pages<br/>Static Site]
+        CustomDomain[yourdomain.com]
+    end
+    
+    User -->|HTTPS| CustomDomain
+    CustomDomain --> CFPages
+    
+    Editor -->|HTTPS| Traefik
+    Traefik -->|Auth Check| TinyAuth
+    TinyAuth -->|Authenticated| Astro
+    Astro --> DecapProxy
+    
+    DecapProxy -->|Edit Content| Astro
+    CronJob -->|Check Changes| DecapProxy
+    CronJob -->|Git Commit & Push| GitHub
+    
+    GitHub -->|Webhook/CI| CFPages
+    CFPages -->|Deploy| CustomDomain
+    
+    style Traefik fill:#00d4ff
+    style TinyAuth fill:#ff6b6b
+    style CFPages fill:#f39c12
+    style CustomDomain fill:#2ecc71
+```
+
+But ***now** I needed to rethink that with a **simpler architecture**:
+
+* Editing via one subdomain and the Hugo Dev container, like: `https://portfolio.jalcocertech.com/admin`
+* Consuming via the CI/CD statically deployed artifacts: `https://jalcocert.github.io/Portfolio/`
+  *  *This could be any other custom sub/domain or use cloudflare pages and workers if desired*
+  * Or...to trigger the build of the prod container to serve the assets
+
+
+
+```mermaid
+flowchart LR
+    subgraph Homelab["🏠 Your Homelab"]
+        Hugo["Hugo Server<br/>Port 1313"]
+        DecapCMS["Decap CMS<br/>/admin/"]
+        CF["Cloudflare Tunnel<br/>to Hugo Dev Container"]
+    end
+    
+    subgraph Internet["☁️ Internet"]
+        CFEdge["Cloudflare Edge"]
+        GitHub["GitHub Repo"]
+        GHPages["GitHub Pages<br/>Production Site"]
+    end
+    
+    Hugo --> DecapCMS
+    CF --> Hugo
+    CFEdge --> CF
+    User["👤 You"] --> CFEdge
+    DecapCMS --> GitHub
+    GitHub --> GHPages
+    
+    style Homelab fill:#E8F5E9,stroke:#2E7D32
+    style Internet fill:#E3F2FD,stroke:#1976D2
+```
+
 
 ### From SaaS to LifeTime Products 
 
@@ -281,6 +374,8 @@ https://understanding-astro-webook.vercel.app/
 
 
 Im **launching my boilerplate**: https://boilerplate.jalcocertech.com
+
+> It has the look and feel of my latest [diy landing boilerplate](https://github.com/JAlcocerT/diy-landing-boilerplate) for a reason :)
 
 
 
