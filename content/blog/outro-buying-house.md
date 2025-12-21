@@ -182,7 +182,7 @@ Those are **gross yields**, remember that there are many costs, amortizations,..
 
 Lets say that it cost **~65eur afor 15kg of paint.**
 
-With that one, you can paint ~100m2.
+With that one, you can paint ~100m2 *-in theory*.
 
 {{< details title="Price of the painting 📌" closed="true" >}}
 
@@ -253,12 +253,11 @@ But you are missing all internal walls which make the rooms, say thats 100% more
 
 {{< /details >}}
 
-> First estimation ~ 55+30*2 = 115m2, which for **2 layers** would be ~30kg
+First estimation ~ 55+30*2 = 115m2, which for **2 layers** would be ~30kg
 
 {{< details title="Different kind of paints... 📌" closed="true" >}}
 
-
-The world of home paints can be a bit overwhelming with different types and terminologies. Let's break down some common categories and their pros and cons:
+The world of home paints can be a bit overwhelming with different types and terminologies.
 
 ### Synthetic Paints
 
@@ -305,7 +304,11 @@ Acrylic paints are a type of synthetic paint where the binder is an acrylic resi
 
 ### Latex Paints
 
-"Latex" paint is a bit of a misnomer because most modern latex paints do not actually contain natural rubber latex. They are also water-based and use synthetic polymers like acrylic, vinyl acrylic, or a combination as binders. For practical purposes in the home painting context, **latex paints are often considered a subset of acrylic or vinyl-acrylic water-based paints.**
+"Latex" paint is a bit of a misnomer because most modern latex paints do not actually contain natural rubber latex.
+
+They are also water-based and use synthetic polymers like acrylic, vinyl acrylic, or a combination as binders. 
+
+For practical purposes in the home painting context, **latex paints are often considered a subset of acrylic or vinyl-acrylic water-based paints.**
 
 **Pros:**
 
@@ -335,7 +338,9 @@ Acrylic paints are a type of synthetic paint where the binder is an acrylic resi
 
 * For **high-moisture areas like bathrooms and kitchens**, or for **exterior projects**, **100% acrylic paints** are often preferred for their better durability, adhesion, and resistance to moisture and mildew.
 
-* **Synthetic paints** encompass a broad category, and understanding the specific binder (like acrylic) will give you a better idea of the paint's properties. Oil-based synthetic paints are less common for general home use now due to VOCs and cleanup requirements but still have specific applications (e.g., durable finishes on trim or metal).
+* **Synthetic paints** encompass a broad category, and understanding the specific binder (like acrylic) will give you a better idea of the paint's properties. 
+
+Oil-based synthetic paints are less common for general home use now due to VOCs and cleanup requirements but still have specific applications (e.g., durable finishes on trim or metal).
 
 When choosing paint, consider the surface you're painting, the desired finish (matte, satin, semi-gloss, gloss), the level of durability needed, and your preference regarding VOCs and ease of cleanup.
 

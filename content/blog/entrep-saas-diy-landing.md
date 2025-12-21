@@ -1154,8 +1154,9 @@ For now, all [main.md based pricing component](https://github.com/JAlcocerT/diy-
 
 * before & after slider
 
-*  a sticky cta banner
+*  a sticky cta banner or...a not so trol slider this time!
 
+![A Slider component for Pricing per use](/blog_img/web/landing-slider.png)
 
 * e-book ~ page driven by markdown
 

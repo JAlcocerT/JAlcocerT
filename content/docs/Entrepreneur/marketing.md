@@ -186,6 +186,12 @@ This increase friction - so you need to find the sweet spot.
 ![Stripe Apps Connection](/blog_img/entrepre/stripe/stripe-apps.png) 
 -->
 
+To integrate stripe properly, but not only technically, you need to have a look to [offers](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers) and their [pricing](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#pricing):
+
+* https://docs.stripe.com/products-prices/pricing-models
+
+
+
 ## In Touch with Clients
 
 **Messaging Automation** for All - Omni-channel marketing automation & transactional messaging. Embeddable, self-hostable, & infinitely flexible.

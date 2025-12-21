@@ -272,6 +272,8 @@ graph TB
 
 ### Minimalist HUGO 
 
+Hugo has a lot cool Themes:
+
 * https://www.vanwerkhoven.org/blog/2021/setting-up-hugo/
 * https://www.vanwerkhoven.org/blog/2019/speeding-up-an-nginx-webserver/
 * https://www.vanwerkhoven.org/blog/2021/responsive_images_in_hugo_theme/
@@ -279,8 +281,16 @@ graph TB
 * https://github.com/janraasch/hugo-bearblog
 * https://github.com/janraasch/hugo-bearblog
 
-
 * https://github.com/theNewDynamic/awesome-hugo?tab=readme-ov-file
+
+And I tinkered few months ago with one of my favourites, HUGO Lynx:
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Portfolio" title="My Hugo Lynx Portfolio ↗" icon="github" >}}
+{{< /cards >}}
+
+
 
 ### Making Webs with AI
 

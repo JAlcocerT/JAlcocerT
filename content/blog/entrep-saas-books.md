@@ -10,11 +10,13 @@ url: 'interesting-books'
 
 **Tl;DR**
 
-By the end of this year, I will have created a web/ook platform to share the learnings of years.
+By the end of this year, I will have created a **web/ook platform** to share the learnings along the years.
 
-As I dont expect people to have the patience to get value from these 300+ posts - Im destilling that into 20/30 pages ebooks.
+As I dont expect people to have the patience to get value by reading from these 300+ posts - Im destilling that into 20/30 pages ebooks.
 
 The aim is to enhance the DIY offer, *for people that are not ready for [the DWY one](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page)*.
+
++++ Special section for astro ~ typography themes + DecapCMS
 
 **Intro**
 
@@ -212,13 +214,33 @@ See... `Z_ebooks/BiP-ebook.md`
 ## Conclusions
 
 
+### Decap x Existing Astro x LocalHost
+
+I got to get working decap-cms with astro at [this post](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms):
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Portfolio" title="Hugo Lynx Portfolio x Decap Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Twilight" title="Twilight Astro x Decap Localhost ↗" icon="github" >}}
+{{< /cards >}}
+
+And this was the opened result:
+
+[![Decap CMS Post Editor](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/decap-post-editor.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decap-post-editor.png)
+
+
+
+
+
+### DecapCMS x VPS
+
+
 ### From SaaS to LifeTime Products 
 
 Some of the first people on doing SaaS are coming back to the product way of selling (pay once, own forever).
 
 Im talking about: https://once.com/writebook
 
-info products and one time payment artifacts are a thing
+Info products and one time payment artifacts are a thing today.
 
 https://github.com/mrwyndham/pocketbase-stripe
 https://www.fastpocket.dev/pricing
@@ -230,17 +252,19 @@ https://www.youtube.com/watch?v=Feauj4OaePg
 
 With life time access
 
-> Pay me to save you time, kind of a mix of DIY/DWY/DFY in a package
+Pay me to save you time, kind of a mix of ~DIY/DWY/DFY in a package
+
+> But leaning towards enhanced DIY with my expertise kind of thing
 
 #### Doing > Watching
 
-You might be tempted to fall into the learning trap.
+You might be tempted to fall into **the learning trap**.
 
 Learning, batches, small dopamine spikes and...no real output.
 
 To get those you can go to `https://www.classcentral.com/` or `datacamp` without a particular aim.
 
-And learning bc the sake of it its great.
+And learning bc the sake of it - its fantastic on its own.
 
 But if you want to build something - just learn what you need to accomplish it.
 
@@ -253,6 +277,7 @@ https://www.ohansemmanuel.com/books/understanding-astro
 https://understanding-astro-webook.vercel.app/
 
 
+Im **launching my boilerplate**: https://boilerplate.jalcocertech.com
 
 
 
@@ -270,12 +295,35 @@ https://jalcocert.github.io/JAlcocerT/negotiation-skills-data-analytics/
 
 https://jalcocert.github.io/JAlcocerT/psychology-skills-data-analytics/
 
+
+<!-- 
+#range
+#peak
+#ultra learning 
+https://jalcocert.github.io/JAlcocerT/blog/da-bk-learning/
+-->
+
+
+<!-- ## Spaced learning -->
+<!-- ultra learning 
+range - why generalist...
+-->
+
+This has been possible thanks to perplexity and notebookllm, together with a huge txt file of kindle notes I have:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="Sell your eBook ↗" icon="github" >}}
+{{< /cards >}}
+
+
+#### NeuroMarketing
+
+
 <!-- 
 neuromarketing
 brainfluence
 the persuasion code -->
-
-#### NeuroMarketing
 
 #### Story Telling
 
@@ -305,7 +353,6 @@ story telling with data
 
 ### Business Ideas from my Kindle Notes
 
-This has been possible thanks to perplexity and notebookllm, together with a huge txt file of kindle notes I have.
 
 
 #### Sales
@@ -364,18 +411,3 @@ the buying brain....
 
  -->
 
-
-<!-- 
-#range
-#peak
-#ultra learning 
-https://jalcocert.github.io/JAlcocerT/blog/da-bk-learning/
--->
-
-
-<!--  -->
-
-<!-- ## Spaced learning -->
-<!-- ultra learning 
-range - why generalist...
--->
