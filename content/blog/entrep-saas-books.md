@@ -72,6 +72,22 @@ After having a custom learning journey and putting together this:
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/" title="Diagrams and PPTs | Docs ↗" icon="book-open" >}}  
 {{< /cards >}}
 
+
+{{< cards >}}
+  {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY Web eBook x Obfuscation" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source code on GH. eBook x fastAPI x obfuscator x markdown source" >}}
+{{< /cards >}}
+
+https://jalcocert.github.io/JAlcocerT/whats-boostrap/#too-much-info--ebooks_ideas
+https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-as-a-code
+https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="Sell your eBook ↗" icon="github" >}}
+{{< /cards >}}
+
+
 {{% steps %}}
 
 ### Consumed a lot of books
@@ -107,15 +123,6 @@ Then, as docs: https://jalcocert.github.io/JAlcocerT/docs/
 
 Last year, I decided it was time to order everything, so tinker with ebook creation in few posts and repos.
 
-https://jalcocert.github.io/JAlcocerT/whats-boostrap/#too-much-info--ebooks_ideas
-https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-as-a-code
-https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="Sell your eBook ↗" icon="github" >}}
-{{< /cards >}}
-
 
 If you do on this repo:
 
@@ -135,11 +142,6 @@ Sucks, I know.
 ### Went HandsOn Obfuscation 
 
 I created the first draft of an ebook on *how to create your cool website via DIY* - `diy.jalcocertech.com`
-
-{{< cards >}}
-  {{< card link="https://diy.jalcocertech.com/" title="DIY Website eBook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="JAlcocerTech DIY Series | Ebook to create a Website for your brand" >}}
-  {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY Web eBook x Obfuscation" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source code on GH. eBook x fastAPI x obfuscator x markdown source" >}}
-{{< /cards >}}
 
 But not only once. 
 
@@ -242,7 +244,7 @@ Which is a much better tool to leverage than trying to build your own flask base
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat
-  " title="Traefik x TinyAuth Setup" image=/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png" subtitle="TinyAUth as WebApp authentication middleware with the Firebat MiniPC" >}}
+  " title="Traefik x TinyAuth Setup" image="/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png" subtitle="TinyAUth as WebApp authentication middleware with the Firebat MiniPC" >}}
 {{< /cards >}}
 
 
@@ -302,8 +304,6 @@ But ***now** I needed to rethink that with a **simpler architecture**:
   *  *This could be any other custom sub/domain or use cloudflare pages and workers if desired*
   * Or...to trigger the build of the prod container to serve the assets
 
-
-
 ```mermaid
 flowchart LR
     subgraph Homelab["🏠 Your Homelab"]
@@ -327,6 +327,11 @@ flowchart LR
     
     style Homelab fill:#E8F5E9,stroke:#2E7D32
     style Internet fill:#E3F2FD,stroke:#1976D2
+```
+
+```sh
+git clone 
+
 ```
 
 
