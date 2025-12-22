@@ -254,13 +254,41 @@ Use cases
 npm install openai
 ```
 
-And...this happened:
+And...this happened: *see detail diagram [here](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-chatbot-astro.md)*
 
 ```mermaid
-
+flowchart LR
+    A[👤 User<br/>Types Question] --> B[💬 Chat UI<br/>Chatbot.astro]
+    B --> C[🔌 API<br/>api/chat]
+    C --> D[📄 Property Data<br/>*.md files]
+    C --> E[⚙️ Config<br/>config.md]
+    C --> F[🤖 OpenAI<br/>GPT-4o-mini]
+    F --> G[💬 Response<br/>with Links]
+    G --> B
+    B --> H[🏠 User Clicks<br/>Property Link]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#10a37f,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#22c55e,stroke:#333,stroke-width:2px
+    style H fill:#f59e0b,stroke:#333,stroke-width:2px
 ```
 
+Isnt it cooler that the initial streamlit one?
 
+![alt text](/blog_img/biz/RE/vibe-coded-re-chatbot.png)
+
+Plus, you get the links after the QnA with the Chatbot.
+
+To boost Seo, I added a [dream calculator component](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/src/pages/mortgage-calculator.astro): that gets rendered at `/mortage-calculator`
+
+![Real Estate calculador de suenhos](/blog_img/biz/RE/vibecoded-calculator.png)
+
+How could i not deploy this with the x300 and cloudflare tunnels:
+
+```sh
+git clone 
+
+```
 
 ### Who can be interested in such websites?
 

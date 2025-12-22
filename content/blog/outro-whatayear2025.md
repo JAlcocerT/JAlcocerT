@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-21
+date: 2025-12-23
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'

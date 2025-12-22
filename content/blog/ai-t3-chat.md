@@ -76,6 +76,7 @@ make help
 make docker-build
 make docker-up
 #docker stop $(docker ps -a -q) #stop all
+#docker system df
 #docker system prune -a --volumes -f
 ```
 

@@ -6,6 +6,10 @@ tags: ["Tinkering","OBD2","Accelerometer Data","RacheChrono","Cars","Mechanics"]
 description: OBD Data
 ---
 
+**Tl;DR**
+
+I got to know about Race Chrono Pro that allows to do 
+
 **Intro**
 
 Last year, I tinkered with [random APIs](https://jalcocert.github.io/JAlcocerT/interesting-apis/#random-apis): among which there was telemetry for [F1](https://jalcocert.github.io/JAlcocerT/interesting-apis/#formula-1)
