@@ -227,6 +227,10 @@ mindmap
 ### Programmatic Free Audits for Websites
 
 
+Ive seen some good examples: https://www.beedigital.es/analisis-seo-gratuito/
+
+
+
 Btw, the **pages speed insights**, can be done via **API**: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
 
 ![Checking Google Pages Speed Insights Via API](/blog_img/web/morita-flask/pagespeedinsightapi.png)

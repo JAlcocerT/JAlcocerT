@@ -1,11 +1,41 @@
 ---
-title: "Webs for Restaurants."
+title: "Webs for Restaurants x Astro SSR."
 date: 2026-02-19
 draft: false
-tags: ["SaaS","Just-Cook","Hotels"]
-description: "Astro Websites for Restaurants. Million dollar idea in the Mediterranean."
+tags: ["SaaS","Just-Cook","Hotels","Roadmap26"]
+description: "Websites for Restaurants. Million dollar idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
+
+**TL;DR**
+
+
+**Intro**
+
+
+The **launch strategy**: *aka, focus strategy*
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | |
+
+The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
+
+The **tech stack**:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
+
+
+### Ideas Collected
+
 
 ![alt text](/blog_img/web/restaurant-astro-speed.png)
 
@@ -175,19 +205,6 @@ A set of **sites themes** that will take a while to get outdated:
 4. Photo Galleries / "Pretending Sites"
 5. [Wedding Sites](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) (and related [software for weddings](https://jalcocert.github.io/JAlcocerT/software-for-weddings/))
 
-### Hotels
-
-
-* https://qloapps.com/qloapps-installation-process/
-
-
-* https://www.chaport.com/powered-by-chaport
-* https://www.livechat.com/pricing/
-
-> https://peppe8o.com/qloapps-raspberry-pi/ this is a https://www.ezeefrontdesk.com/ alternative
-
-
-https://github.com/JAlcocerT/Home-Lab/tree/main/qloaps
 
 ---
 
@@ -203,6 +220,14 @@ https://github.com/JAlcocerT/Home-Lab/tree/main/qloaps
 
 ### Interesting Recipes
 
+How could I not offer something very special to entreagujaypunto:
+
+```sh
+
+```
+
+With
+
 
 
 ### Free Hosting and Free Domain
@@ -215,6 +240,20 @@ Free Hosting Options with Free domain
 ---
 
 ## FAQ
+
+### Software for Hotels
+
+* https://qloapps.com/qloapps-installation-process/
+
+
+* https://www.chaport.com/powered-by-chaport
+* https://www.livechat.com/pricing/
+
+> https://peppe8o.com/qloapps-raspberry-pi/ this is a https://www.ezeefrontdesk.com/ alternative
+
+
+https://github.com/JAlcocerT/Home-Lab/tree/main/qloaps
+
 
 ### Web for Gyms?
 

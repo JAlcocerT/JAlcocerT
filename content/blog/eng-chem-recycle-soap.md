@@ -78,8 +78,6 @@ $$
 NaOH(s) \xrightarrow{H_2O} Na^+(aq) + OH^-(aq) + \text{heat}
 $$
 
-
-
 {{< details title="More details about the chemistry behind Lye 📌" closed="true" >}}
 
 The chemical reaction of NaOH (sodium hydroxide) with water is a **dissolution process**.

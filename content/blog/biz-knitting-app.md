@@ -13,7 +13,7 @@ math: true
 
 I recently found about: https://freesewing.eu/ and the source code https://codeberg.org/freesewing/freesewing
 
-https://freesewing.dev/
+* https://freesewing.dev/
 
 
 {{< callout type="info" >}}
@@ -79,9 +79,10 @@ Im now using https://github.com/Litlyx/litlyx for the **web analytics** of this 
 
 > With no cookie monster involved!
 
+---
+
 ## FAQ
 
-https://github.com/aaronphaneuf/stitch_tracker?tab=readme-ov-file
+* https://github.com/aaronphaneuf/stitch_tracker?tab=readme-ov-file
 
 > Self hosted app for your knitting or crochet projects
-

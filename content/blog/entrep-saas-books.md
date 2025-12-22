@@ -449,7 +449,7 @@ It all comes down to decap-cms dont recognizing nested media folders, which was 
 So...time to I though about creating sth that is going to be working without nested media folder, but will assign properly which photo gets rendered where. Like: https://astro.build/themes/details/photography-portfolio-template/
 
 
-Or...put a simple web app with a `/portal` to upload photos as vibe coded here
+Or...put a simple web app with a `/portal` to upload photos as vibe coded here: mama.entreagujaypunto.com
 
 ```sh
 make help

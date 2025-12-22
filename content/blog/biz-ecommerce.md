@@ -2,10 +2,45 @@
 title: "Creating an e-Commerce"
 date: 2026-10-01
 draft: false
-tags: ["SaaS","Drupal","User Clustering"]
+tags: ["SaaS","Drupal","User Clustering","RoadMap26"]
 description: 'Creating an eCommerce. Drupal vs DFY custom solutions'
 url: 'how-about-an-ecommerce'
 ---
+
+**Tl;DR**
+
+
+**Intro**
+
+If you have worked for a popular ecommerce in D&A, chances are that you were focusing on clustering users.
+
+PBi had a panel that could do the trick...to some extent.
+
+But doing sth custom is much cooler.
+
+[Some people dare to create their own ecommerce](https://forocoches.com/foro/showthread.php?t=9707807) dont die trying.
+
+The **launch strategy**: *aka, focus strategy*
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | |
+
+The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
+
+The **tech stack**:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
+
+
 
 petiteknit.com
 
@@ -21,15 +56,8 @@ https://juan.pl/en/
 
 https://polkabikes.pl/ 
 
-**Intro**
 
-If you have worked for a popular ecommerce in D&A, chances are that you were focusing on clustering users.
 
-PBi had a panel that could do the trick...to some extent.
-
-But doing sth custom is much cooler.
-
-[Some people dare to create their own ecommerce](https://forocoches.com/foro/showthread.php?t=9707807) dont die trying.
 
 https://awweso.me/e-commerce/
 
@@ -290,8 +318,6 @@ https://polkabikes.pl/ -->
 https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
 
 Registry Expiry Date - 26 April 2025
-
-https://quadscadiz.com/
 
 * Sofia - zofienkagram
   * https://wnba.pl/ - another wordpress (good looking)
