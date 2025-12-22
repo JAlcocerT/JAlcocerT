@@ -1,6 +1,6 @@
 ---
 title: "Understanding Algebra (again)"
-date: 2025-12-22T23:20:21+01:00
+date: 2025-12-22T18:20:21+01:00
 draft: false
 tags: ["DSc","Outro","Math","STEM","BCMS vs PagesCMS"]
 description: 'It takes something more than blindly multiplying matrixes to get to known them.'
@@ -9,16 +9,15 @@ math: true
 ---
 
 
-
 **Tl;DR**
 
-Most likely you got bored in math classes, you will love this post though.
+Most likely you got bored in math classes, you will love this ALgebra post though.
 
 **Intro**
 
 Algebra was one of my favourite subjects in my first year of uni studies.
 
-> And blindly multiplying matrixes was the most painful and procrastinated task for me to do in high school.
+And blindly multiplying matrixes was the most painful and procrastinated task for me to do in high school.
 
 And its been a while since I have had the chance to do cool stuff with it.
 
@@ -87,7 +86,7 @@ Have migrated some of them [here](https://github.com/JAlcocerT/canvas/tree/main/
 
 ```
 
-Yes, i mean the blog.jalcocertech thing.
+Yes, i mean the `blog.jalcocertech` thing.
 
 But before starting that, all the content that Ive created here has to go properly to the `/docs` and from there to the `web/ooks` / ebooks or whatever name ill put in place.
 

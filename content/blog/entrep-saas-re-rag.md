@@ -1,9 +1,9 @@
 ---
 title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
-# date: 2026-01-03T23:20:21+01:00
-date: 2026-12-20T23:20:21+01:00
+# date: 2026-01-05T23:20:21+01:00
+date: 2025-12-20T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS x PayLoad CMS","DecapCMS x Astro","AI Tech Talk","RoadMap26"]
+tags: ["NextJS SaaS x PayLoad CMS vs DecapCMS","Cloudflare Access x Astro","AI Tech Talk","RoadMap26"]
 description: 'Building a custom BOT for real estate agencies. Using Git vs API CMS.'
 url: 'custom-re-rag'
 ---
@@ -202,7 +202,7 @@ But the good thing, is that you can vibe coded a cool chatwidget, which replies 
 I did a sample of those, without memory and much content withing [this CR of the selfhosted-landing](https://github.com/JAlcocerT/selfhosted-landing/blob/master/z-change-request-5.md).
 
 
-Normally, API calls are stateless.
+Normally, API calls are stateless:
 
 * https://www.anthropic.com/news/prompt-caching
 
@@ -247,6 +247,20 @@ Use cases
 🔍 Semantic Search
 
  -->
+
+ I went the custom route, with OpenAI and astro as UI:
+
+```sh
+npm install openai
+```
+
+And...this happened:
+
+```mermaid
+
+```
+
+
 
 ### Who can be interested in such websites?
 

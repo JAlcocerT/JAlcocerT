@@ -210,6 +210,7 @@ And that makes...xyz/12 books.
 
 
 The lean startup
+
 Company of one!
 
 Open question for reading moving forward: If learning is
@@ -847,6 +848,7 @@ Kind of resonates with [process](#processes) > > > result.
 
 5. Questions w/o answer (b)
 
+* How can be money: invested (providing interest), always available and risk free at the same time
 
 
 6. Guesstimates and [PostMortems](https://fernandocejas.com/blog/culture/2020-06-21-learn-out-of-mistakes-postmortems/)

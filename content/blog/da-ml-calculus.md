@@ -184,6 +184,24 @@ I really **cant wait**:
 * https://en.wikipedia.org/wiki/Grigory_Feldman
 * https://en.wikipedia.org/wiki/Feldman%E2%80%93Mahalanobis_model#Assumptions
 
+6. Doing real things...happen :) 
+
+https://www.youtube.com/shorts/sQ4SQQSr3vU
+
+https://www.youtube.com/shorts/MEKctNGZHdU
+
+https://www.youtube.com/shorts/b-lmkn_PObw
+
+https://www.youtube.com/shorts/UKYFDvyLA28
+
+<!-- 
+https://www.youtube.com/watch?v=upyUzShzIVo 
+-->
+
+{{< youtube "upyUzShzIVo" >}}
+
+
+
 In the meantime: *you can also get your website going*
 
 {{< cards >}}
