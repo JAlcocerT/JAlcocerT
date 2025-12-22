@@ -7,6 +7,28 @@ description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
 
+<!-- date: 2025-12-25 -->
+
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
+
+* https://github.com/leoneljdias/tempo
+
+> MIT |  Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
+
+software product development, digital platform engineering,
+
+https://nav.al/feedback
+
+
+
+https://free-for.dev/#/
+
+https://freestuff.dev/alternative/clerk/
+
+
 Comercial ones like: `https://www.lindy.ai/pricing`
 
 * https://github.com/browser-use/browser-use

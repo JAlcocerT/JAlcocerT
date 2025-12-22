@@ -1,13 +1,18 @@
 ---
 title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
-date: 2026-01-06T23:20:21+01:00
+# date: 2026-01-03T23:20:21+01:00
+date: 2026-12-20T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS x PayLoad CMS","Tech Talk","BiP BoilerPlate","RAG","Real Estate","RoadMap26"]
-description: 'Building a custom RAG solution for real estate agencies using NEXTjs, API CMS and AI.'
+tags: ["NextJS SaaS x PayLoad CMS","DecapCMS x Astro","AI Tech Talk","RoadMap26"]
+description: 'Building a custom BOT for real estate agencies. Using Git vs API CMS.'
 url: 'custom-re-rag'
 ---
 
-The **launch strategy**: *aka, focus strategy*
+**Tl;DR**
+
+What it should have been the Real Estate project.
+
+The **launch strategy**: *aka, focus strategy*:
 
 | Element | Decision |
 | :--- | :--- |
@@ -29,13 +34,8 @@ The **tech stack**:
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
 
-
-
-
-**Tl;DR**
-
-Supply - infinite, scalable via Serverless storage
-Demand - constrained, ad driven
+* Supply - DFY, finite *on demand basis*
+* Demand - constrained *targeted users via APIFY google maps scrapping + cold emails / social media reach*
 
 But it does not apply, as the goal of this is more closing a long chapter and making the final learnings with it.
 
@@ -43,6 +43,8 @@ But it does not apply, as the goal of this is more closing a long chapter and ma
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+As the why, what was very clear, its time to put together the final HOW:
 
 ```md
 # Project Name: [SaaS Name]
@@ -66,7 +68,7 @@ But it does not apply, as the goal of this is more closing a long chapter and ma
 
 **Intro**
 
-It all started with the QnA of streamlit over property data on .md files.
+It all started with the QnA of streamlit over property data on `.md` files.
 
 and the chat with a DB via LangChain.
 
@@ -81,7 +83,6 @@ and the chat with a DB via LangChain.
 {{< /cards >}}
 
 Then, Im talking about these series of RE related posts:
-
 
 * https://jalcocert.github.io/JAlcocerT/real-estate-landing/
 
@@ -165,13 +166,27 @@ And if they dont - go find better clients who would get the real potential value
 
 Now...**lets get started** with this one.
 
+
+
+{{< details title="Create a Web/Apps with editor and ChatBot for Real Estate 📌" closed="true" >}}
+
+```sh
+#git init && git add . && git commit -m "Initial commit: Starting astro real estate x OpenAI Chatbot" && gh repo create moi-realestate-pro-astro-bot --private --source=. --remote=origin --push
+```
+
+{{< /details >}}
+
+![Vibe Coded Real Estate Agency - Landing x Astro](/blog_img/biz/RE/re-agency-1.png)
+
 ### BoilerPlate 101
 
 It has to be known frameworks.
 
 Using newer ones [like Reflex](https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#conclusions) or [Nuxt](https://jalcocert.github.io/JAlcocerT/real-estate-landing/#nuxt-for-real-estate) will cause your agents too much confussion.
 
-And a lot of time wasted for you
+And a lot of time wasted for you.
+
+
 
 
 ---

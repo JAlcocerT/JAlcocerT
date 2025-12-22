@@ -159,9 +159,6 @@ Because the landing part is so much clear.
 
 
 
-
-
-
 **Intro**
 
 
@@ -199,6 +196,17 @@ For now, this is all going to be content from...surprise, surprise: this blog!
 I need to structure the offering though.
 
 Most likely, will be around: 1 free, give email for the rest, boilerplate x1 time paid and available at `boilerplate.jalcocertech.com`
+
+
+
+{{< details title="Create WebApps like a PRO with this boilerplate for Agents 📌" closed="true" >}}
+
+```sh
+#git init && git add . && git commit -m "Initial commit: Starting BoilerPlate" && gh repo create Astro-Vercel-SDK-AI-Chatbot --private --source=. --remote=origin --push
+```
+
+{{< /details >}}
+
 
 ```mermaid
 flowchart LR
@@ -252,6 +260,11 @@ See... `Z_ebooks/BiP-ebook.md`
 ---
 
 ## Conclusions
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/boilerplate" title="NEW - Astro Editor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Editing astro posts md via NextJS + ToastUI " >}}
+  {{< card link="https://github.com/JAlcocerT/" title="NEW - Astro Editor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Editing astro posts md via NextJS + ToastUI " >}}
+{{< /cards >}}
 
 
 ### Decap x Existing Astro x LocalHost
@@ -433,15 +446,8 @@ Doing this, revealed the theme needed to vibe code from scratch in Astro, follow
 
 It all comes down to decap-cms dont recognizing nested media folders, which was the key of the hugo-theme-gallery used.
 
-So...time to create sth that is going to be working without nested media folder, but will assign properly which photo gets rendered where:
+So...time to I though about creating sth that is going to be working without nested media folder, but will assign properly which photo gets rendered where. Like: https://astro.build/themes/details/photography-portfolio-template/
 
-
-{{< details title="DecapCMS x Vibe coded Photo Gallery x AgujayPunto... 📌" closed="true" >}}
-
-
-
-
-{{< /details >}}
 
 Or...put a simple web app with a `/portal` to upload photos as vibe coded here
 
@@ -494,9 +500,9 @@ This is why Im launching **my first lifetime product** - A boiler plate for crea
 
 Not going to lie: ive got inspired by `https://supersaas.dev/` and `https://shipfa.st/?ref=indiepage` and `https://readmake.com/`
 
-https://www.ohansemmanuel.com/books/understanding-astro
+* https://www.ohansemmanuel.com/books/understanding-astro
 
-https://understanding-astro-webook.vercel.app/
+* https://understanding-astro-webook.vercel.app/
 
 
 Im **launching my boilerplate**: https://boilerplate.jalcocertech.com

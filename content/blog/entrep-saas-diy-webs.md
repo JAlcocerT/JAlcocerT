@@ -208,6 +208,21 @@ git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" &
 
 Remember, you can always do your [wordpress stuff](#still-want-a-wp).
 
+```mermaid
+mindmap
+  root((PaaS))
+    Web Containers
+      WP
+      Ghost
+      LinkStack
+    SSG + CMS
+      HUGO
+      Astro
+    DIY Landing
+    Real Estate
+    ChatBots
+```
+
 
 ### Programmatic Free Audits for Websites
 
@@ -215,6 +230,8 @@ Remember, you can always do your [wordpress stuff](#still-want-a-wp).
 Btw, the **pages speed insights**, can be done via **API**: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
 
 ![Checking Google Pages Speed Insights Via API](/blog_img/web/morita-flask/pagespeedinsightapi.png)
+
+Must have also Lighthouse-CI:
 
 
 ---

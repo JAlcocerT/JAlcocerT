@@ -1,20 +1,12 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-14
+date: 2025-12-21
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
 url: 'tech-recap-and-more-2025'
 ---
 
-
-
-<!-- date: 2025-12-25 -->
-
-{{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-{{< /cards >}}
 
 **Tl;DR**
 
@@ -63,7 +55,7 @@ Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/s
 
 ![QR Code](https://raw.githubusercontent.com/JAlcocerT/Home-Lab/main/py-static/qr-pdf/qr-sample.png)
 
-https://github.com/JAlcocerT/Home-Lab/blob/main/py-static/qr-pdf/qr-sample.png
+<!-- https://github.com/JAlcocerT/Home-Lab/blob/main/py-static/qr-pdf/qr-sample.png -->
 
 This year, Ive abused again of my *unfair advantage*.
 
@@ -137,20 +129,16 @@ Anyways, not everything is lost!
 
 Have some great idea and want my time to execute it better/faster/higher quality?
 
-I can do so, but there is an opportunity cost for me to switch and do...what I want to do and go do your thing :)
+I can do so, but there is an opportunity cost for me to switch 
+
+and do...what I want to do and go do your thing :)
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
-
-
-
-
  
 **Intro**
-
-
 
 The question today is: **Can i use Logto JS SDK + SSG Themes + CF Workers** to get a blueprint/skeleton/template for my SaaS?
 
@@ -163,13 +151,11 @@ Fake it until you make it idea is great.
 People seems to have bring it to the next trolling level: https://play.google.com/store/apps/details?id=com.fiuymi.app
 
 
-### What about NIX?
+### What about OS?
 
 Recently I heard about Flox and NIX...
 
 Are they the best alternative for a homelab OS?
-
-
 
 * https://tailscale.com/kb/1282/docker
 
@@ -178,20 +164,6 @@ Perplexity browser with agents
 * https://notebooklm.google.com/
 
 > This made me summarize my *old me* from <2023 posts. And those are pretty nice notes for thought.
-
-* https://github.com/leoneljdias/tempo
-
-> MIT |  Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
-
-software product development, digital platform engineering,
-
-https://nav.al/feedback
-
-
-
-https://free-for.dev/#/
-
-https://freestuff.dev/alternative/clerk/
 
 
 **Intro**
@@ -211,10 +183,6 @@ After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with
 {{< /callout >}}
 
 * https://echarts.apache.org/en/index.html
-
-
-
-https://astro.build/themes/details/photography-portfolio-template/
 
 
 * https://github.com/OpenInterpreter/open-interpreter
@@ -1188,16 +1156,10 @@ There was time for [audio](https://jalcocert.github.io/JAlcocerT/audio-recap/):
   {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="Speech Rater Flask Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code to rate your Speech - TTS and S2T transcription for youtube" >}}
 {{< /cards >}}
 
-{{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-{{< /cards >}}
-
-
 
 ![Flask UI Login as per PocketBase user collection](/blog_img/web/morita-flask/flask-login-pb.png)
 
-
+I also delivered:
 
 ![FlaskCMS for Mental health Astro portfolio theme working via CF tunnel](/blog_img/web/morita-flask/https-flask-cf.png)
 
@@ -1623,9 +1585,7 @@ graph TD
 
 You have limited time resources, combined with low capital.
 
-Fortunately, you have tools to know what your clients want and double down in that direction.
-
-https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/
+Fortunately, you have [tools to know what your clients want](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/) and double down in that direction.
 
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 
