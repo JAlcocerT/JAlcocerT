@@ -240,6 +240,7 @@ Did this kind of project development is just much easier (x10) or did I get bett
 {{< /callout >}}
 
 
+
 ---
 
 ## FAQ
@@ -384,7 +385,20 @@ And by adding one [sample link](https://www.viviendasylocalesgranada.com/ficha/p
 
 ![FastAPI vibe coded scrapper that goes to the editor](/blog_img/biz/RE/vibecoded-scrap-casapaco.png)
 
-So now its easier than ever to add the next casa paco from 1970 *now is better not to build* that is going to be sold!
+I went again to the x300 and deployed the last changes:
+
+```sh
+git pull #withing the x300 cloned repo
+docker compose -f docker-compose.portainer.yml up -d #this spins the astro dev and the fastapi for the paco scrapper
+```
+
+Tried also with [this one](https://www.viviendasylocalesgranada.com/ficha/terraced-house/belicena/vial-de-la-vega/4348/27525161/en/)
+
+The editor it is as it is: *counting that i started the brd going for a decap git based cms, its not bad at all. Lesson learnt here as well, full vibe coded content editor that works via container and lets-fkng-go*.
+
+![Built in astro editor for new properties](/blog_img/biz/RE/vibecoded-astro-editor.png)
+
+Now its easier than ever to add the next casa paco from 1970 *now is better not to build* that is going to be sold!
 
 
 ### Who can be interested in such websites?
