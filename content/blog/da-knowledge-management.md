@@ -127,7 +127,9 @@ And you can create themes for Joplin: https://github.com/manuelernestog/joplin-m
 ### Other Self-Hostable Options
 
 * **Memos:** This is another popular self-hosted app. Like Joplin, it stores all its data in a database (e.g., SQLite, MySQL, or PostgreSQL). The front-end is a web app, and there are unofficial mobile clients, but the core data is in a database, not a flat file system.
+
 * **Trilium Notes:** This is a very powerful and feature-rich app that stores all data in a single SQLite file. This makes it easy to back up but doesn't follow the flat Markdown file model.
+
 * **FlatNotes:** This app is an interesting exception that follows the same philosophy as Logseq. It's a "database-less" web app that uses a flat folder of Markdown files for storage. It's designed for simplicity and portability.
 
 The Verdict

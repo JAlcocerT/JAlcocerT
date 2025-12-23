@@ -3,7 +3,7 @@ title: "Estimating house work and capturing leads"
 #date: 2026-01-04T23:20:21+01:00
 date: 2025-12-21T23:20:21+01:00
 draft: false
-tags: ["Lead testing","RoadMap26"]
+tags: ["Lead testing","Painting Home","RoadMap26"]
 description: 'Building a platform to match offer and demand for certain jobs.'
 url: 'paint-lead-generation'
 math: true
@@ -17,12 +17,14 @@ Does this mean that capturing leads for such offers can be profitable and help p
 
 **Intro**
 
-The kind of idea that happens when you try new things and [document the process](https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/#estimating-painting-costs-with-ai):
+[Buying a house](https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/) is one thing.
+
+But this is The kind of idea that happens when you try new things and [document the process](https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/#estimating-painting-costs-with-ai):
 
 * 3h / (person x m2) when indoors and all layers
 * At 10$/l - Painting cost ~ 1.5$/m2 counting 2/3 layers
 * Labour cost from 15$/h or 0 if you DIY :)
-* Dont know the internal walls m2? Say its ~x2 to the floor m2
+* Dont know the internal walls m2? Say its ~x2 to the floor m2 *and dont forget to add the ceiling on top if you go for it*
 
 $$
 \text{Total Cost} = \left( \text{Wall Area} \times \text{Time per m}^2 \times \text{Hourly Rate} \right) + \left( \text{Wall Area} \times \text{Cost per m}^2 \right)
@@ -71,6 +73,7 @@ The **tech stack**:
 | **Styling/UI Library** | | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
 
 
 

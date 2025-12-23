@@ -170,6 +170,15 @@ So i made a filebrowser + custom QR setup.
 
 How could I not tinker with QR for the sake of it...
 
+With Python:
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+And with node:
+
+![QR Code](https://raw.githubusercontent.com/JAlcocerT/Home-Lab/main/py-static/qr-pdf/qr-sample.png)
+
+
 ### Tinkered with Serverless
 
 And i dont mean static deploy to cloudflare pages this time

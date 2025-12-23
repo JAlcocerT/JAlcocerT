@@ -2,10 +2,13 @@
 title: "My Favourite ways to RAG"
 date: 2025-04-10T10:20:21+01:00
 draft: false
-tags: ["Dev","Python","LLMs","GenAI"]
+tags: ["Dev","Python","LLMs","GenAI","CSV vs PDF"]
 description: 'RAG Applications. From LangChain, LLamaIndex... to MLFlow observability container setup.'
 url: 'comparing-rag-and-use-cases'
 ---
+
+
+**Intro**
 
 If you are already familiar with Python:
 
@@ -41,7 +44,7 @@ We will also see some [*trendy* AI tools](#conclusions) that work with RAGs as w
 
 
 {{< callout type="info" >}}
-For now, the most popular RAG framework
+For now, the most popular RAG framework!
 {{< /callout >}}
 
 [![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
@@ -62,9 +65,7 @@ LangChain can also help us to *chat with website content*:
 
 #### With Persistent ChromaDB and MD
 
-
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
-
+You can build this around a Flask webapp:
 
 {{< filetree/container >}}
   {{< filetree/folder name="FlaskProject" >}}
@@ -81,7 +82,7 @@ LangChain can also help us to *chat with website content*:
 
 ### CSV and PDF
 
-Wherever office work you have, you will most certainly see 2 kind of files, spreadsheets (CSVs) and pdfs.
+Wherever office work you have, you will most certainly see 2 kind of files: **spreadsheets (CSVs) and pdfs**.
 
 Thanks to langchain, we can ask information contained in both kind of files:
 

@@ -1,10 +1,10 @@
 ---
 title: "Racing, IoT and Data"
 #date: 2026-03-22
-date: 2025-12-22T23:20:21+01:00
+date: 2025-12-23T09:20:21+01:00
 draft: false
 tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars","Mechanics"]
-description: 'From OBD2 Data to GoPro GPS'
+description: 'From OBD2 Data to GoPro GPS for trackdays'
 ---
 
 **Tl;DR**
@@ -128,6 +128,46 @@ But anyways, can we represent data into a dashboard with Open Street Maps?
 
 Basically, to represent into every data point of OSM what was the temperature, speed, acceleration...
 
+1. Data Collection first!
+2. Offline data visualization
+3. On board life telemetry - *Im aware that people with [bmw](https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#bmw-e36-and-canbus) have made this possible!*
+
+
+#### GoPros Telemetry Data
+
+Not the first time Im tinkering with [geospatial data](https://jalcocert.github.io/JAlcocerT/geospatial-data/) nor with [GoPro built in GPS](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#oa5pro-vs-goprohero9)
+
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro GPS Telemetry Magic" image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 versus GoPro data extraction" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-and-gopro-metadata" title="GoPro Metadata Speed trackday " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="Getting GPS info during while driving on circuits" >}}
+{{< /cards >}}
+
+```sh
+git clone https://github.com/JAlcocerT/Py_RouteTracker
+cd Z_GoPro
+```
+
+https://github.com/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds.ipynb
+
+https://github.com/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds_TrackDay.ipynb
+
+You can also open it with **Google Colab**: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds_TrackDay.ipynb)
+
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+
+[![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
+
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
+  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
+{{< /cards >}}
+
 OBS to MQTT
 
 A budget lap timer - https://www.youtube.com/watch?v=mdGOuhEq6g8
@@ -144,22 +184,13 @@ Lora GPS?
 https://www.youtube.com/watch?v=dQeNONerxEU
 https://www.youtube.com/watch?v=ibNzG1tMblE
 
-#### TorqueLite
+#### TorqueLite and TorquePro
+
+
 
 #### PhyPhox
 
 
-{{< cards cols="1" >}}
-  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
-  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
-{{< /cards >}}
-
-
-#### GoPros Telemetry Data
-
-```sh
-git clone https://github.com/JAlcocerT/Py_RouteTracker
-```
 
 
 {{< cards cols="1" >}}

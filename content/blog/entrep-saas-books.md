@@ -516,6 +516,15 @@ Im **launching my boilerplate**: https://boilerplate.jalcocertech.com
 
 ## FAQ
 
+
+> There are Similar python projects like https://github.com/denizsafak/abogen
+
+> > Abogen is a powerful text-to-speech conversion tool that makes it easy to turn ePub, PDF, text or markdown files into high-quality audio with matching subtitles in seconds. Use it for audiobooks, voiceovers for Instagram, YouTube, TikTok, or any project that needs natural-sounding text-to-speech, using Kokoro-82M.
+
+<!-- 
+Alternatives to https://www.livechat.com/pricing/ ING uses it
+ -->
+
 ### About some interesting books Ive read
 
 

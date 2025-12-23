@@ -3,7 +3,7 @@ title: "OOP 101 for Engineers"
 date: 2026-10-01
 draft: false
 tags: ["Dev","Mechanical Engineering","Multi-Body","MBSD"]
-description: 'Object Oriented Programming for Python users'
+description: 'Object Oriented Programming for Python users and do mechanism simulations.'
 url: 'object-oriented-programming-101'
 ---
 

@@ -360,7 +360,7 @@ When choosing paint, consider the surface you're painting, the desired finish (m
 
 ### Cool Stuff
 
-Some people are building their custom and modular houses.
+Some people are building their custom and **modular houses**.
 
 And there are others, which are shipping their concepts to others.
 

@@ -226,6 +226,9 @@ mindmap
 
 ### Programmatic Free Audits for Websites
 
+Give me your contact details and I will move the world.
+
+Or in this case: verify your email and select which if these audits you want to perform against your site for free (by default some will be selected).
 
 Ive seen some good examples: https://www.beedigital.es/analisis-seo-gratuito/
 
@@ -236,6 +239,11 @@ Btw, the **pages speed insights**, can be done via **API**: *see [this .md](http
 ![Checking Google Pages Speed Insights Via API](/blog_img/web/morita-flask/pagespeedinsightapi.png)
 
 Must have also Lighthouse-CI:
+
+
+Could it also be a check on exposed API endpoints?
+
+At least to have CORS and Rate limiting (?)
 
 
 ---

@@ -54,7 +54,7 @@ Phone apps like Komoot or even [PhyPhox can save the GPS records as GPX files](h
 
 * https://github.com/exiftool/exiftool/blob/master/fmt_files/gpx.fmt
 
-And GPX files can be converted to html with plotly+leaflet and brought to your HUGO site with iframe:
+And GPX files can be converted to html with **plotly+leaflet** and brought to your HUGO site with iframe:
 
 {{< rawhtml >}} 
 <iframe src="/videos/Output_map_PL-SK-HU.html"
@@ -102,7 +102,7 @@ People do this kind of **cool stuff**:
 
 ### Telemetry Overlay
 
-There is a possibility to use paid Programs to create these kind of videos:
+There is a possibility to use **paid Programs** to create these kind of videos:
 
 <!-- https://www.youtube.com/watch?v=3Y-lh6hbp14 -->
 <!-- https://www.youtube.com/watch?v=Oimk7-vG5pk -->

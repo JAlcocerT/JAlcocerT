@@ -8,7 +8,10 @@ description: 'Building a custom BOT platform to end with silos.'
 url: 'custom-bots-kb'
 ---
 
+
 **Tl;DR**
+
+What if having a **custom cool looking chatbot for your site** was a matter of copy-paste one snippet and configuring an UI the data sources?
 
 The **launch strategy**: *aka, focus strategy*:
 
@@ -18,7 +21,10 @@ The **launch strategy**: *aka, focus strategy*:
 | **One Product** | |
 | **One Channel** | |
 
-The **Tier of Service**: A clear, custom DFY
+The **Tier of Service**: 
+
+* Enhanced DIY when you claim the free tier where you bring your own key and data + using built in functions
+* DFY for custom logics like calling functions, calendar, forms...
 
 The **customer segmentation**: SMB
 
@@ -33,7 +39,9 @@ The **tech stack**:
 
 
 * Supply - DFY, finite *on demand basis*
-* Demand - constrained *targeted users via APIFY google maps scrapping + cold emails / social media reach*
+* Demand - constrained
+  * *Visitors of FossEngineer that are potential interested into OSS, but will be leaning more towards a DIY offer*
+  * *Targeted users via APIFY google maps scrapping + cold emails / social media reach*
 
 But it does not apply, as the goal of this is more closing a long chapter and making the final learnings with it.
 
@@ -103,7 +111,21 @@ And made tech talks around it.
 
 ### Used Ollama on my HomeLab
 
+With [this initial post](https://fossengineer.com/selfhosting-llms-ollama/)
 
+Later with [Open Web UI](https://fossengineer.com/ollama-open-webui-setup-with-docker/)
+
+Then with [Deepseek as local model](https://fossengineer.com/how-to-use-deepseek-locally-for-free/)
+
+All via containers
+
+### Used Embeddings with LangChain
+
+Chatted with PDF information via RAG and explored few frameworks like llamaindex and pandasAI.
+
+Also tinkered with RAG around CSVs.
+
+Probably the 2 most common files type in any office!
 
 ### Configured N8N on my VPS
 
@@ -135,6 +157,31 @@ The potential use case of having companies in house documentation + RAG based Qn
 
 ## Building the solution
 
+This has 2 sides:
+
+1. The Local AI Part:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Open Web UI | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Open Web UI  | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Something like a desktop app communicating with local llms running in house could be a thing. Like ~Goose.
+
+2. The Local wiki / SknowledBase / [KB](https://jalcocert.github.io/JAlcocerT/knowledge-management/#conclusions) / [selfhostable notes](https://fossengineer.com/selfhostable-note-taking-tools/) / info part:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/flatnotes" title="Flatnotes | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+Same questions apply: web only? desktop app required? mobile?
+
+3. How to treat huge amount of information: embeddings , vector DBs, RAG architectures
+
+
+
+---
 
 ## Conclusions
 
@@ -142,3 +189,5 @@ The potential use case of having companies in house documentation + RAG based Qn
 ---
 
 ## FAQ
+
+

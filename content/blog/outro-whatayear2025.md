@@ -66,7 +66,7 @@ If I was pushing from the [start of 2023](https://jalcocert.github.io/JAlcocerT/
 
 Building a brand is not easy.
 
-But I have a plan:
+But I have **a plan**: *starting with defining an offer and associated tiers of service*
 
 ```mermaid
 graph TD
@@ -849,7 +849,6 @@ Kind of resonates with [process](#processes) > > > result.
 5. Questions w/o answer (b)
 
 * How can be money: invested (providing interest), always available and risk free at the same time
-
 
 6. Guesstimates and [PostMortems](https://fernandocejas.com/blog/culture/2020-06-21-learn-out-of-mistakes-postmortems/)
 

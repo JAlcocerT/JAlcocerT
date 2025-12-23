@@ -3,8 +3,8 @@ title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
 # date: 2026-01-05T23:20:21+01:00
 date: 2025-12-20T23:20:21+01:00
 draft: false
-tags: ["Cloudflare Access x Astro","AI Tech Talk","RoadMap26"]
-description: 'Building a custom BOT for real estate agencies. Custom vs Git vs API CMS.'
+tags: ["Cloudflare Access x Astro Hybrid Rendering","AI Tech Talk","RoadMap26"]
+description: 'Building a custom BOT for real estate agencies. With CORS and Rate Limiting.'
 url: 'custom-re-rag'
 ---
 
@@ -24,20 +24,26 @@ The **Tier of Service**: A clear, custom DFY
 
 The **customer segmentation**: SMB
 
-The **tech stack**:
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
-
 * Supply - DFY, finite *on demand basis*
 * Demand - constrained *targeted users via APIFY google maps scrapping + cold emails / social media reach*
 
-But it does not apply, as the goal of this is more closing a long chapter and making the final learnings with it.
+But it does not apply, as the goal of this is more closing a long chapter and making the **final RE learnings** with it.
+
+The **tech stack**: *see more [below](#conclusions)*
+
+
+| Component | Technology | Details |
+|-----------|-----------|---------|
+| **Frontend Framework** | **Astro** | Modern web framework with hybrid SSR/SSG capabilities |
+| **Styling/UI** | **Vanilla CSS** | Custom CSS with CSS variables, no framework dependencies |
+| **Charts/Visualization** | **Chart.js** | Interactive pie & bar charts for mortgage calculator |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)** | **Astro API Routes** | Server-side endpoints for chat API (`/api/chat`) |
+| **Database** | **File-based** | Markdown files in `src/content/` (Git-versioned, no database needed) |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | **HTTP Basic Auth** | Simple username/password protection for `/edit` routes (bcrypt hashed) |
+
+> We will use Hybrid rendering (SSR for `/edit` & `/api` for the [bot](#about-rag-and-bots), SSG for public pages)
+
+> > The [dream calculator section](#dream-calculator-x-chartjs) uses SSG + CSR for the calculations to happen in browser
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
@@ -78,7 +84,7 @@ and the chat with a DB via LangChain.
 {{< /cards >}}
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/" title="NEW - Real Estate BluePrint - Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Real Estate Web/App + RAG" >}}
+  {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="NEW - Real Estate BluePrint - Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Real Estate Web/App + Bot/RAG + Editor + Calculator" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
@@ -167,7 +173,6 @@ And if they dont - go find better clients who would get the real potential value
 Now...**lets get started** with this one.
 
 
-
 {{< details title="Create a Web/Apps with editor and ChatBot for Real Estate 📌" closed="true" >}}
 
 ```sh
@@ -186,13 +191,43 @@ Using newer ones [like Reflex](https://jalcocert.github.io/JAlcocerT/tinkering-w
 
 And a lot of time wasted for you.
 
+---
 
 ## Conclusions
 
-Initially I thought about NextJS SaaS x PayLoad CMS vs DecapCMS
+Initially I thought about NextJS SaaS x PayLoad CMS vs DecapCMS.
 
-Then, i just...simplified via vibe coding
+Then, I just...**simplified via vibe coding** with a simple http basic auth instead of git based CMS like Decap, nor API ones like Directus or StrapiCMS.
 
+I deployed to my x300 as seen on [this section](#dream-calculator-x-chartjs).
+
+How It All Works Together:
+
+**Vite's Role:**
+- ⚡ Fast hot module replacement (HMR) - instant updates when you save files
+- 📦 Builds your code for production
+- 🌐 Handles the dev server (that's why you configure `server.allowedHosts` in Vite config)
+- 🎨 Bundles JavaScript, CSS, images, etc.
+
+**Architecture:**
+- ✅ **Astro** web app (framework) - Hybrid rendering (SSR for `/edit` & `/api`, SSG for public pages)
+- ✅ Powered by **Vite** (build tool) - Development server & production bundler
+- ✅ Running on **Node.js** (runtime) - Server-side JavaScript execution
+
+
+| Component | Technology | Details |
+|-----------|-----------|---------|
+| **Frontend Framework** | **Astro** | Modern web framework with hybrid SSR/SSG capabilities (like Next.js or Gatsby) |
+| **Build Tool** | **Vite** | Fast dev server with HMR (hot module replacement), handles bundling & optimization |
+| **Runtime** | **Node.js** | JavaScript runtime environment (v20) |
+| **Styling/UI** | **Vanilla CSS** | Custom CSS with CSS variables, no framework dependencies |
+| **Charts/Visualization** | **Chart.js** | Interactive pie & bar charts for mortgage calculator |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)** | **Astro API Routes** | Server-side endpoints for chat API (`/api/chat`) |
+| **Database** | **File-based** | Markdown files in `src/content/` (Git-versioned, no database needed) |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | **HTTP Basic Auth** | Simple username/password protection for `/edit` routes (bcrypt hashed) |
+| **AI/LLM** | **OpenAI API** | GPT-4 for chatbot with streaming responses |
+| **Containerization** | **Docker** | Multi-stage builds, dev & production compose files |
+| **Image Processing** | **Sharp** | Server-side image optimization |
 
 
 ---
@@ -208,24 +243,36 @@ But the good thing, is that you can vibe coded a cool chatwidget, which replies 
 I did a sample of those, without memory and much content withing [this CR of the selfhosted-landing](https://github.com/JAlcocerT/selfhosted-landing/blob/master/z-change-request-5.md).
 
 
-Normally, API calls are stateless:
+Normally, API calls are stateless: *they wont remember what was asked before, unless some trick will be done*
 
 * https://www.anthropic.com/news/prompt-caching
 
+[You will need security](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-api-security.md) around the `/api/chat` endpoint, at least **CORS and rate limiting**:
 
-A simple chatbot like this one wont have memory:
+Which I implemented as per [this CR](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-4-api-security.md)
+
+```sh
+#npm install rate-limiter-flexible
+#in 2 terminals do
+npm run dev
+./test-api-security.sh #see how only from CORS are allowed and 10requests/h/IP
+#Blocked request from unauthorized origin: https://evil-site.com
+#11:44:07 [200] POST /api/chat 1335ms
+#Rate limit exceeded for IP: 127.0.0.1
+```
+
+A simple chatbot like the ones I made here, wont have memory:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Custom Bots for Landing Pages" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Using FastAPI + OpenAI x Astro to get a bot to work!" >}}
 {{< /cards >}}
 
-But...you can get away with it in a very simple way.
+But...you can get away with conversation context/memory in a very simple way.
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/" title="Bots | Docs ↗" >}}
 {{< /cards >}}
-
 
 Specially if you have tinkered with bots in python before:
 
@@ -234,16 +281,7 @@ Specially if you have tinkered with bots in python before:
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
-
-> There are Similar python projects like https://github.com/denizsafak/abogen
-
-> > Abogen is a powerful text-to-speech conversion tool that makes it easy to turn ePub, PDF, text or markdown files into high-quality audio with matching subtitles in seconds. Use it for audiobooks, voiceovers for Instagram, YouTube, TikTok, or any project that needs natural-sounding text-to-speech, using Kokoro-82M.
-
-<!-- 
-Alternatives to https://www.livechat.com/pricing/ ING uses it
- -->
-
- I went the custom route, with OpenAI and astro as UI:
+I went the **custom bot route**, with OpenAI and astro component as UI:
 
 ```sh
 npm install openai
@@ -274,6 +312,8 @@ Isnt it cooler that the initial streamlit one?
 
 Plus, you get the links after the QnA with the Chatbot.
 
+### Dream Calculator x ChartJS
+
 To boost Seo, I added a [dream calculator component](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/src/pages/mortgage-calculator.astro): that gets rendered at `/mortage-calculator`
 
 ![Real Estate calculador de suenhos](/blog_img/biz/RE/vibecoded-calculator.png)
@@ -295,8 +335,13 @@ Configure the cf tunnels for `realestate-astro-dev:4321` to point to `new.dm-rea
 
 The editor could be more modern, yet it works and allow for local images or for images like [this from url](https://new.dm-real-estate.com/).
 
+
+### Scrapping
+
+
+
 ### Who can be interested in such websites?
 
-As this is a great case study / success story, how about...letting others know about it?
+As this Real Estate is a great case study / success story, how about...letting others know about it?
 
 * `twojmetr2.pl`
