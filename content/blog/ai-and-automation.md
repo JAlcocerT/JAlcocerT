@@ -349,7 +349,7 @@ You can use firecrawl hosted service, DIY or use elestio:
 
 ![alt text](/blog_img/selfh/automation/n8n-firecrawl-workflow.png)
 
-> Lets use this Example [page for re to scrap](https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/26643098/es/)
+> Lets use this Example [page for RE to scrap information](https://www.viviendasylocalesgranada.com/ficha/piso/granada/zaidin/4348/26643098/es/)
 
 What a better chance than this to start trying the `when chat message received` aka `chat trigger` node?
 

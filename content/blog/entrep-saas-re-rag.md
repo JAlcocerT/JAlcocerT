@@ -229,6 +229,16 @@ How It All Works Together:
 | **Containerization** | **Docker** | Multi-stage builds, dev & production compose files |
 | **Image Processing** | **Sharp** | Server-side image optimization |
 
+Its crazy that one year ago it took me...a weekend to put together the streamlit/flet equivalent to this.
+
+And now in 2/3h you get the cool website UI, its editor and the real estate french amortization logic working....with the chatbot and the scrapper.
+
+Again: CRAZY.
+
+{{< callout type="info" >}}
+Did this kind of project development is just much easier (x10) or did I get better?
+{{< /callout >}}
+
 
 ---
 
@@ -314,7 +324,11 @@ Plus, you get the links after the QnA with the Chatbot.
 
 ### Dream Calculator x ChartJS
 
-To boost Seo, I added a [dream calculator component](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/src/pages/mortgage-calculator.astro): that gets rendered at `/mortage-calculator`
+To boost Seo, I added a [**dream calculator** component](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/src/pages/mortgage-calculator.astro): that gets rendered at `/mortage-calculator`
+
+![Astro real estate CSR ChartJS](/blog_img/biz/RE/vibecoded-calc-chartjs.png)
+
+This is the full page look n feel:
 
 ![Real Estate calculador de suenhos](/blog_img/biz/RE/vibecoded-calculator.png)
 
@@ -338,6 +352,39 @@ The editor could be more modern, yet it works and allow for local images or for 
 
 ### Scrapping
 
+This comes from a long way.
+
+Initially i put together a separated [streamlit web app with the img parsing logic](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py) (and download option).
+
+I also tried with...the n8n route.
+
+Because its cool tech, its trendy and why not.
+
+But hey...can the custom solution solve this internally?
+
+Like, just give me the link you want to scrap and the img urls will be directly added to the new prop.
+
+No need to download anything!
+
+But now, the project is not using python at all.
+
+Chatting with Gemini, I got to know some JS alternatives to bs4.
+
+
+But i just migrated [from the streamlit](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py) to a [fastapi service](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/tree/master/scraper-service) to get the links as per [this cr](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-5-scraper-migration.md).
+
+```sh
+cd scraper-service
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+#docker compose up scraper-service -d
+```
+
+And by adding one [sample link](https://www.viviendasylocalesgranada.com/ficha/piso/granada/recogidas/4348/27509156/es/) I got populated all the images right away, so adding new properties is as simple as it gets:
+
+![FastAPI vibe coded scrapper that goes to the editor](/blog_img/biz/RE/vibecoded-scrap-casapaco.png)
+
+So now its easier than ever to add the next casa paco from 1970 *now is better not to build* that is going to be sold!
 
 
 ### Who can be interested in such websites?

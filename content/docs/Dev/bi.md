@@ -6,7 +6,7 @@ description: 'BI use cases and tools'
 url: 'BI'
 ---
 
-Within your D&A Career, you will find [several **OSS BI** Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/):
+Within your [D&A Career](https://jalcocert.github.io/JAlcocerT/career/), you will find several **BI** Tools:
 
 Most popular within enterprises are: *all of these are paid products*
 
@@ -14,12 +14,17 @@ Most popular within enterprises are: *all of these are paid products*
 2. [Looker](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#what-it-is-looker-modelling-language) 
 3. Tableau
 
+Sometimes, the [OSS BI Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/) will come into the picture:
+
+4. Grafana
+5. Others, like Metabase, Redash, Superset... 
+
 <!-- 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Superset Example" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PyGWalker Rendered Map with locations..." >}}
 {{< /cards >}} -->
 
-Normally, these tools go plugged in the final stage of the data pipelines:
+Normally, these tools go plugged in the **final stage of the data pipelines**: *aka gold*
 
 ```mermaid
 flowchart LR
@@ -88,7 +93,7 @@ Depending on your work environment, you could do fully [custom BI](#custom-bi-to
 
 ### Custom BI Tools
 
-For a PoC on BI Tools, go for Streamlit:
+For a PoC on BI Tools, just go for Streamlit: *data centered plus its speed of iterations around a good data model is unmatched*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="Streamlit PoC Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PyGWalker Rendered Map with locations..." >}}
@@ -119,6 +124,8 @@ To create interactivity, we have the well known plotly, but also **ApexCharts an
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/node-js/chart-generator" title="Sample NodeJS x ApexChartJS Generator" image="/blog_img/DA/apexchartjs-nodejs.png" subtitle="Using NodeJS to generate ApexCharts" >}}
 {{< /cards >}}
+
+![Astro real estate CSR ChartJS](/blog_img/biz/RE/vibecoded-calc-chartjs.png)
 
 Both can be combined and create some [cool graphs within SSGs](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/#the-costs-of-a-car), like in HUGO components and also provide interactivity via CSR.
 

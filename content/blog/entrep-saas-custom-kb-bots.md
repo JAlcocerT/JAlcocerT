@@ -3,8 +3,8 @@ title: "KB and Local Bots to end Silos for good"
 date: 2026-01-06T23:20:21+01:00
 #date: 2025-12-21T23:20:21+01:00
 draft: false
-tags: ["Custom Chatbots x Local AI","Tech Talk","RoadMap26"]
-description: 'Building a custom BOT platform to end with silos.'
+tags: ["Custom Chatbots x Local AI and KB","Tech Talk","RoadMap26"]
+description: 'Building a custom BOT platform to end with silos. HUGO FOSS rebuild.'
 url: 'custom-bots-kb'
 ---
 
@@ -127,6 +127,14 @@ Also tinkered with RAG around CSVs.
 
 Probably the 2 most common files type in any office!
 
+### LLM communicating with DBs
+
+Via langchain is also possible to talk with a database.
+
+This unlucks potential to have bots that are checking stocks in real time for their replies.
+
+Or the ETA if you have a table that bring such info!
+
 ### Configured N8N on my VPS
 
 And shared it with a couple marketers.
@@ -184,6 +192,17 @@ Same questions apply: web only? desktop app required? mobile?
 ---
 
 ## Conclusions
+
+
+### HUGO Vibe Coded Re-build
+
+To offer this via fossengineer, I can try:
+
+1. As is (later removing adsense)
+2. The local KB offer
+3. The webpage offer
+4. Finally remodel the webpage to avoid the shape of a blog, as is more a news/docs one - vibe coding ofc.
+
 
 
 ---

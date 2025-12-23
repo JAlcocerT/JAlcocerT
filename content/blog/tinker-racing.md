@@ -15,8 +15,11 @@ I got to know about Race Chrono Pro that allows to do
 
 {{< youtube "9vidTq12des" >}}
 
-Could not avoid thinking on the GoPro GPS Telemetry
+Could not avoid thinking on the GoPro GPS Telemetry again for those Racing addicts
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 **Intro**
 
