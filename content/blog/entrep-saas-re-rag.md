@@ -272,7 +272,7 @@ npm run dev
 #Rate limit exceeded for IP: 127.0.0.1
 ```
 
-A simple chatbot like the ones I made here, wont have memory:
+A simple chatbot like the ones I made previously, wont have memory: *particularly in the trol consulting landing with slider*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#adding-a-simple-chatbot" title="Custom Bots for Landing Pages" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Using FastAPI + OpenAI x Astro to get a bot to work!" >}}
@@ -292,7 +292,7 @@ Specially if you have tinkered with bots in python before:
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
-I went the **custom bot route**, with OpenAI and astro component as UI:
+I went the **custom bot route**, with OpenAI and astro component as UI: *this time no python involved*
 
 ```sh
 npm install openai
@@ -369,10 +369,31 @@ No need to download anything!
 
 But now, the project is not using python at all.
 
-Chatting with Gemini, I got to know some JS alternatives to bs4.
+Chatting with Gemini, I got to know some JS alternatives to bs4: *The "best" choice depends on whether the real estate site you are scraping is **Static** (the data is in the HTML) or **Dynamic** (the data loads via JavaScript after the page opens).*
+
+| Feature | Cheerio | Playwright | Crawlee |
+| --- | --- | --- | --- |
+| **Python Equivalent** | **BeautifulSoup** | **Selenium** | **Scrapy** |
+| **Speed** | ⚡ Extremely Fast | 🐢 Slower (Heavy) | 🚀 Balanced |
+| **JS Execution** | ❌ No | ✅ Yes | ✅ Yes (Optional) |
+| **Difficulty** | Easy | Moderate | Moderate/High |
+| **Use Case** | Simple data extraction | Complex interaction | Large scale crawling |
 
 
-But i just migrated [from the streamlit](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py) to a [fastapi service](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/tree/master/scraper-service) to get the links as per [this cr](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-5-scraper-migration.md).
+
+**Cheerio** is the industry standard and the closest direct equivalent to **BeautifulSoup**.
+
+* **Why it's great:** It is incredibly fast because it does not launch a browser; it only parses the raw text of the HTML. It uses **jQuery-style selectors** (`$('.price').text()`), which makes it very intuitive for JS developers.
+* **Best for:** Sites that load quickly and don't require you to click buttons or wait for "Spinners" to finish.
+
+If you want a professional-grade scraper that handles things like **automatic retries, proxy rotation, and anti-bot bypass** (which real estate sites often have), you should use **Crawlee**.
+
+* Crawlee It’s a framework built by the Apify team. It allows you to switch between a fast "Cheerio" mode and a "Playwright" browser mode with just one line of code. It's essentially "Scraping on Steroids."
+
+
+But i just migrated [from the streamlit](https://github.com/JAlcocerT/moi-realestate-pb/blob/master/ScrapPhotosWebApp/OpenAI_MigrateWebInfo_v4st.py) to a [**fastapi** service](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/tree/master/scraper-service) to get the links as per [this cr](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-5-scraper-migration.md).
+
+So...I kept my hands of python for this project, until this point :)
 
 ```sh
 cd scraper-service

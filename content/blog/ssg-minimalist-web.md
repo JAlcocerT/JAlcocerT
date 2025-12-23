@@ -437,10 +437,11 @@ graph TB
 
 ### Twilight x SSG X Encryption
 
-Despite working on SSG mode, the twilight theme brings an interesting feature: [encryption via ssg](https://github.com/JAlcocerT/Twilight/blob/main/z-encrypted-posts.md).
+Despite working on SSG mode, the **twilight theme** brings an interesting feature: [encryption via ssg](https://github.com/JAlcocerT/Twilight/blob/main/z-encrypted-posts.md).
 
 [![Astro SSG with Post Encryption](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/astro-ssg-encryption.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/astro-ssg-encryption.png)
 
+> This theme is definitely inspired on others like yukina or Fuwari astro!
 
 It can encrypt your posts as pre one pwd that you add on the frontmatter and is **decrypted via CSR**.
 
@@ -472,7 +473,9 @@ SSG (Static Site Generation):
 
 Static Site Generation involves generating HTML pages at build time, typically using a site generator or build tool. 
 
-The generated HTML pages contain all the necessary content and assets, and they are served to clients as-is without the need for server-side processing. This approach offers benefits such as fast loading times, security, and scalability.
+The generated HTML pages contain all the necessary content and assets, and they are served to clients as-is without the need for server-side processing. 
+
+This approach offers benefits such as fast loading times, security, and scalability.
 
 SSR (Server-Side Rendering):
 

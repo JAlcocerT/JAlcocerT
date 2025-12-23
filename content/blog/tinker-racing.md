@@ -15,7 +15,7 @@ I got to know about Race Chrono Pro that allows to do
 
 {{< youtube "9vidTq12des" >}}
 
-Could not avoid thinking on the GoPro GPS Telemetry again for those Racing addicts
+Could not avoid thinking on the GoPro GPS Telemetry *again* for those **Racing addicts** around!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
@@ -78,9 +78,9 @@ So, when you access OBD-II data, you're usually doing so by reading data transmi
 
 **The ELM327 Chip:**
 
-The ELM327 is a **popular microcontroller** chip that acts as a bridge between a computer (or other device) and the car's OBD-II port (and thus, the CAN bus).  It's a pre-programmed chip that handles the complex task of translating OBD-II requests into CAN bus messages and vice versa.
+The ELM327 is a **popular microcontroller** chip that acts as a bridge between a computer (or other device) and the car's OBD-II port (and thus, the CAN bus). 
 
-Here's why it's so famous:
+It's a pre-programmed chip that handles the complex task of translating OBD-II requests into CAN bus messages and vice versa.
 
 * **Ease of Use:**  The ELM327 simplifies OBD-II access significantly.  It provides a standardized command set that makes it relatively easy to read data from the car's systems. You don't need to deal with the low-level details of the CAN bus protocol directly.
 * **Cost-Effective:** ELM327-based devices are readily available and affordable.  This has led to a proliferation of OBD-II scanners and software.
@@ -147,6 +147,9 @@ Not the first time Im tinkering with [geospatial data](https://jalcocert.github.
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-and-gopro-metadata" title="GoPro Metadata Speed trackday " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="Getting GPS info during while driving on circuits" >}}
 {{< /cards >}}
 
+
+1. Clone this repo:
+
 ```sh
 git clone https://github.com/JAlcocerT/Py_RouteTracker
 cd Z_GoPro
@@ -164,18 +167,39 @@ You can also open it with **Google Colab**: [![Open in Google Colab](https://col
 
 [![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
 
+2. Get exiftool ready
 
+```sh
+#choco install exiftool -y
+#choco install python -y
+
+#extract the info
+exiftool -ee ./GX030411.MP4 > output-kartdec-1a.txt
+#exiftool -ee ./GX020410.MP4 > output-kart1.txt #here you will have all go pro data including the gps
+
+```
+
+3. Use Python to extract GPS info from the txt:
+
+Ive created a new ipynb with addititional *matplotlib based this time* graphs
+
+
+![alt text](/blog_img/data-experiments/kart/matplotlib-driver-comparison.png)
 
 {{< cards cols="1" >}}
   {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
   {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
 {{< /cards >}}
 
+
+### Others
+
 OBS to MQTT
 
 A budget lap timer - https://www.youtube.com/watch?v=mdGOuhEq6g8
 
-		ACELEROMETER BASED
+ACELEROMETER BASED:
+
 https://racechrono.com/article/faq/which-obd-ii-adapter-should-i-buy		
 
 GPS BASED		
