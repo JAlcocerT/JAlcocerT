@@ -1652,7 +1652,7 @@ And...to create N ebooks :)
 2. x30>x24 youtube tech videos, more elaborated, *probably without AI voice*
 3. Go all-in to find new clients
 4. Not scalable but clients want it? Sell w high gross margin to the ones who can benefit
-5. Collect case studies / success stories: Flask web app https on a server for SMB / 
+5. Collect **case studies** / success stories: Flask web app https on a server for SMB / real estate DFY w custom chatbot / hospital D&A CI/CD radiophysics / from zero to astro web hero for a mechanical engineer...and add them to the `consulting.jalcocer` and/or as article on the main www site.
 
 **Maybe's**
 

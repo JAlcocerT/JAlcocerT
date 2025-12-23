@@ -1,6 +1,6 @@
 ---
-title: "OOP 101 "
-date: 2026-11-01
+title: "OOP 101 for Engineers"
+date: 2026-10-01
 draft: false
 tags: ["Dev","Mechanical Engineering","Multi-Body","MBSD"]
 description: 'Object Oriented Programming for Python users'
@@ -10,6 +10,11 @@ url: 'object-oriented-programming-101'
 **Tl;DR**
 
 Long overdue topic: WTF is OOP?
+
+What I needed to get this going for good: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
+
+
+**Intro**
 
 
 https://mermaid.js.org/syntax/classDiagram.html

@@ -1,6 +1,6 @@
 ---
 title: "KB and Local Bots to end Silos for good"
-# date: 2026-01-06T23:20:21+01:00
+date: 2026-01-06T23:20:21+01:00
 #date: 2025-12-21T23:20:21+01:00
 draft: false
 tags: ["Custom Chatbots x Local AI","Tech Talk","RoadMap26"]
@@ -82,6 +82,12 @@ To make the solution trustless: selfhosted + local .md based + local LLM has to 
 
 
 ## The Process to build a ChatBot Platform
+
+Use cases:
+
+* 🤖 Chatbots
+* ❓ Question Answering
+* 🔍 Semantic Search
 
 {{% steps %}}
 

@@ -162,7 +162,7 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
 * https://jalcocert.github.io/JAlcocerT/t3-like-chat/#selfhosted-webanalytics
 
-6. Client adquisition data pipeline.
+6. Client adquisition data pipeline: *APIFY to rule them all*
 
 To be tested with *,artists,designers and wannabe's'* from social media.
 
@@ -177,7 +177,7 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-8. Proper CI/CD for streamlit. Hospital D&A: https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/2a2eb68132834b39ce8ff3e9e77e8d7d87e801b5
+8. Proper CI/CD for streamlit Web Apps. Success Story 1 + Hospital D&A: https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/2a2eb68132834b39ce8ff3e9e77e8d7d87e801b5
 
 > Latest features shipped properly: https://github.com/JAlcocerT/X-ray-imaging-analysis + youtube video
 

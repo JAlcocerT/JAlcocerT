@@ -1,16 +1,30 @@
 ---
 title: "Racing, IoT and Data"
-date: 2027-12-30
-draft: true
-tags: ["Tinkering","OBD2","Accelerometer Data","RacheChrono","Cars","Mechanics"]
-description: OBD Data
+#date: 2026-03-22
+date: 2025-12-22T23:20:21+01:00
+draft: false
+tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars","Mechanics"]
+description: 'From OBD2 Data to GoPro GPS'
 ---
 
 **Tl;DR**
 
 I got to know about Race Chrono Pro that allows to do 
 
+<!-- https://www.youtube.com/watch?v=9vidTq12des -->
+
+{{< youtube "9vidTq12des" >}}
+
+Could not avoid thinking on the GoPro GPS Telemetry
+
+
 **Intro**
+
+~~Karting~~ racing is expensive.
+
+If you want to make the most of it, tracking every lap gives you the possibility to know where to improve.
+
+This can potentially guide you on the [optimum gears](https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears) to be and potentially, on the [optimum path](https://github.com/JAlcocerT/Private/tree/main/Py_OptimumPath).
 
 Last year, I tinkered with [random APIs](https://jalcocert.github.io/JAlcocerT/interesting-apis/#random-apis): among which there was telemetry for [F1](https://jalcocert.github.io/JAlcocerT/interesting-apis/#formula-1)
 
@@ -142,6 +156,10 @@ https://www.youtube.com/watch?v=ibNzG1tMblE
 
 
 #### GoPros Telemetry Data
+
+```sh
+git clone https://github.com/JAlcocerT/Py_RouteTracker
+```
 
 
 {{< cards cols="1" >}}

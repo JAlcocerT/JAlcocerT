@@ -3,8 +3,8 @@ title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
 # date: 2026-01-05T23:20:21+01:00
 date: 2025-12-20T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS x PayLoad CMS vs DecapCMS","Cloudflare Access x Astro","AI Tech Talk","RoadMap26"]
-description: 'Building a custom BOT for real estate agencies. Using Git vs API CMS.'
+tags: ["Cloudflare Access x Astro","AI Tech Talk","RoadMap26"]
+description: 'Building a custom BOT for real estate agencies. Custom vs Git vs API CMS.'
 url: 'custom-re-rag'
 ---
 
@@ -187,6 +187,12 @@ Using newer ones [like Reflex](https://jalcocert.github.io/JAlcocerT/tinkering-w
 And a lot of time wasted for you.
 
 
+## Conclusions
+
+Initially I thought about NextJS SaaS x PayLoad CMS vs DecapCMS
+
+Then, i just...simplified via vibe coding
+
 
 
 ---
@@ -237,17 +243,6 @@ Specially if you have tinkered with bots in python before:
 Alternatives to https://www.livechat.com/pricing/ ING uses it
  -->
 
- <!-- 
-`IODOCTOR` -->
-<!-- 
-Use cases
-🧱 Introduction
-🤖 Chatbots
-❓ Question Answering
-🔍 Semantic Search
-
- -->
-
  I went the custom route, with OpenAI and astro as UI:
 
 ```sh
@@ -286,9 +281,19 @@ To boost Seo, I added a [dream calculator component](https://github.com/JAlcocer
 How could i not deploy this with the x300 and cloudflare tunnels:
 
 ```sh
-git clone 
-
+git clone https://github.com/JAlcocerT/moi-realestate-pro-astro-bot #http://jalcocert-x300-1:8090/
+nano .env
 ```
+
+Review that Vite `astro.config.mjs` allows the new url from where we are making requests:
+
+```sh
+make portainer-dev #docker compose -f docker-compose.portainer.yml up realestate-dev -d
+```
+
+Configure the cf tunnels for `realestate-astro-dev:4321` to point to `new.dm-realestate.com`
+
+The editor could be more modern, yet it works and allow for local images or for images like [this from url](https://new.dm-real-estate.com/).
 
 ### Who can be interested in such websites?
 
