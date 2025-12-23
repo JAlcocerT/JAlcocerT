@@ -179,6 +179,8 @@ exiftool -ee ./GX030411.MP4 > output-kartdec-1a.txt
 
 ```
 
+> Do this before joining the MP4's with ffmpeg or you will loose the acelerations and gps info!
+
 3. Use Python to extract GPS info from the txt:
 
 Ive created a new ipynb with addititional *matplotlib based this time* graphs

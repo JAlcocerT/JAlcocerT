@@ -2,7 +2,7 @@
 title: "A website for a Moto Blogger!"
 date: 2025-02-23T19:20:21+01:00
 draft: false
-tags: ["Dev","Chocolatey","SSG","FFMPEG"]
+tags: ["Dev","Chocolatey","SSG","FFMPEG Windows"]
 description: 'Creating a website for a moto blogger. Or how to make two websites during a morning.'
 url: 'web-for-moto-blogger'
 ---
