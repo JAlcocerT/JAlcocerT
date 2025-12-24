@@ -100,6 +100,37 @@ The **tech stack**:
 
 
 
+{{< details title="Choosing an UI tech stack 📌" closed="true" >}}
+
+* HUGO: Lightning-fast speed.
+* Astro: Built-in support for server-side rendering (SSR).
+* Jekyll: Simplicity and ease of use, particularly for blogging.
+* Gatsby: Rich ecosystem of plugins and a vibrant community.
+
+**Gatsby**: Gatsby is a popular static site generator within the **React** ecosystem, leveraging React for building static sites and offering a rich plugin ecosystem.
+
+- **Pros**:
+  - Ability to pull data from various sources, including CMSs and APIs.
+  - React-based, enabling component-based development and rich interactivity.
+  - Extensive plugin ecosystem for adding functionality and integrating with third-party services.
+- **Cons**:
+  - Longer build times for large projects due to complex data fetching and processing.
+  - Steeper learning curve for developers unfamiliar with React.
+  - Requires a Node.js environment for development and building.
+
+- **Next.js**: Next.js is primarily known as a **React** framework for SSR and CSR, but it also offers SSG capabilities, providing flexibility for different project needs.
+
+- **Pros**:
+  - Versatility to choose between SSR, CSR, or SSG based on project requirements.
+  - Seamless integration with React for building dynamic user interfaces.
+  - Hybrid capabilities for blending static and dynamic content in a single application.
+- **Cons**:
+  - Complex configuration compared to simpler static site generators.
+  - Requires familiarity with React and Node.js for effective usage.
+  - Limited built-in features compared to dedicated static site generators like Hugo.
+
+{{< /details >}}
+
 
 **Intro**
 
@@ -255,7 +286,9 @@ Here is how the *Ślubne Chwile* flow addresses and converts leads based on BANT
 
 ---
 
-The entire *Ślubne Chwile* flow is designed as a **BANT qualification machine**. It uses free access to gather the necessary data (Need, Timing, Authority) before presenting the Budget, ensuring that by the time a couple sees the price, they are already highly qualified, emotionally invested, and ready to convert.
+The entire *Ślubne Chwile* flow is designed as a **BANT qualification machine**.
+
+It uses free access to gather the necessary data (Need, Timing, Authority) before presenting the Budget, ensuring that by the time a couple sees the price, they are already highly qualified, emotionally invested, and ready to convert.
 
 ## Themes
 
@@ -271,38 +304,21 @@ https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/
 
 
 
- ### Other F/OSS SSG's
-
-This addition suggests other Static Site Generators (SSGs) that readers might find interesting based on their enjoyment of the Next.js post. Let me know if you need any further adjustments!
-
-    HUGO: Lightning-fast speed.
-    Astro: Built-in support for server-side rendering (SSR).
-    Jekyll: Simplicity and ease of use, particularly for blogging.
-    Gatsby: Rich ecosystem of plugins and a vibrant community.
-
-If you have enjoyed the Next.js post, you might be interested to explore other SSGs like HUGO, Astro, Jekyll, and Gatsby. -->
 
 
-<!-- - **Gatsby**: Gatsby is a popular static site generator within the **React** ecosystem, leveraging React for building static sites and offering a rich plugin ecosystem.
-  - **Pros**:
-    - Ability to pull data from various sources, including CMSs and APIs.
-    - React-based, enabling component-based development and rich interactivity.
-    - Extensive plugin ecosystem for adding functionality and integrating with third-party services.
-  - **Cons**:
-    - Longer build times for large projects due to complex data fetching and processing.
-    - Steeper learning curve for developers unfamiliar with React.
-    - Requires a Node.js environment for development and building.
 
-- **Next.js**: Next.js is primarily known as a **React** framework for SSR and CSR, but it also offers SSG capabilities, providing flexibility for different project needs.
-  - **Pros**:
-    - Versatility to choose between SSR, CSR, or SSG based on project requirements.
-    - Seamless integration with React for building dynamic user interfaces.
-    - Hybrid capabilities for blending static and dynamic content in a single application.
-  - **Cons**:
-    - Complex configuration compared to simpler static site generators.
-    - Requires familiarity with React and Node.js for effective usage.
-    - Limited built-in features compared to dedicated static site generators like Hugo. -->
+---
 
+## Conclusions
+
+
+### Setting Up Google ads
+
+This has been a thing:
+
+![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
+
+![alt text](/blog_img/biz/gads/campaing-goals.png)
 
 ---
 
@@ -315,6 +331,8 @@ The FlaskCMs / NextJS CMS i tried to built were similar to these OSS for Selfhos
 > **MIT** | self-hosted blog platform built with next.js 
 
 ### Adsense vs OpenAdServer
+
+If you want to do the oppositve: renting attention of your readers and get paid for it:
 
 * https://github.com/seanZhang414/openadserver
 

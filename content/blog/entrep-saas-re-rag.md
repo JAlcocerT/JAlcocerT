@@ -326,6 +326,8 @@ Plus, you get the links after the QnA with the Chatbot.
 
 To boost Seo, I added a [**dream calculator** component](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/src/pages/mortgage-calculator.astro): that gets rendered at `/mortage-calculator`
 
+![real estate calculator vibe coded](/blog_img/biz/RE/vibecoded-re-calc.png)
+
 ![Astro real estate CSR ChartJS](/blog_img/biz/RE/vibecoded-calc-chartjs.png)
 
 This is the full page look n feel:
@@ -414,7 +416,9 @@ docker compose -f docker-compose.portainer.yml up -d #this spins the astro dev a
 
 Tried also with [this one](https://www.viviendasylocalesgranada.com/ficha/terraced-house/belicena/vial-de-la-vega/4348/27525161/en/)
 
-The editor it is as it is: *counting that i started the brd going for a decap git based cms, its not bad at all. Lesson learnt here as well, full vibe coded content editor that works via container and lets-fkng-go*.
+The editor it is...as it is.
+
+*Counting that i started the brd going for a decap git based cms, its not bad at all. Lesson learnt here as well, full vibe coded content editor that works via container and lets-fkng-go*.
 
 ![Built in astro editor for new properties](/blog_img/biz/RE/vibecoded-astro-editor.png)
 
@@ -430,5 +434,6 @@ As this Real Estate is a great case study / success story, how about...letting o
 
 ### Next steps
 
-Cloudflare Access
-
+* Cloudflare Access
+* Http auth vs cookies
+* Crawlee x ApiFY

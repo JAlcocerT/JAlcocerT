@@ -38,76 +38,6 @@ If you are into [f1](https://jalcocert.github.io/JAlcocerT/interesting-apis/#for
 ![Karting Adventure](/blog_img/memes/Accidente_karting-min.gif)
 <!-- https://www.youtube.com/watch?v=LToBbKTHAkw -->
 
-{{< youtube "LToBbKTHAkw" >}}
-
-
----
-
-AndrOBD (Connect to your car's OBD system)
-
-https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/
-
-* https://github.com/offa/android-foss
-
-{{< details title="OBD...CANBUS...? 📌" closed="true" >}}
-
-**OBD-II (On-Board Diagnostics II):**
-
-OBD-II is a standardized system used in most cars since the mid-1990s.  Its primary purpose is to monitor the vehicle's emissions systems and report any faults.
-
-When a problem is detected (like a misfiring engine or a faulty sensor), a Diagnostic Trouble Code (DTC) is stored, and the "check engine" light (or similar warning light) is illuminated on the dashboard.
-
-OBD-II also provides access to a wealth of real-time data from the car's various sensors and systems, such as engine speed (RPM), vehicle speed, coolant temperature, and more.  
-
-This data can be very useful for diagnostics, performance monitoring, and even custom applications.
-
-**CAN Bus (Controller Area Network):**
-
-**CAN bus** is a robust and efficient communication protocol widely used in vehicles.
-
-It's a serial communication system that allows different electronic control units (ECUs) within the car to communicate with each other.  
-
-For example, the engine control unit (ECU), transmission control unit, anti-lock braking system (ABS), and airbag control unit can all communicate over the CAN bus.
-
-Think of CAN bus as the *nervous system* of the car, allowing different components to exchange information.  
-
-OBD-II typically uses CAN bus as its physical layer for communication. 
-
-So, when you access OBD-II data, you're usually doing so by reading data transmitted over the CAN bus.
-
-{{< /details >}}
-
-{{< details title="ELM327...ESP32? 📌" closed="true" >}}
-
-
-**The ELM327 Chip:**
-
-The ELM327 is a **popular microcontroller** chip that acts as a bridge between a computer (or other device) and the car's OBD-II port (and thus, the CAN bus). 
-
-It's a pre-programmed chip that handles the complex task of translating OBD-II requests into CAN bus messages and vice versa.
-
-* **Ease of Use:**  The ELM327 simplifies OBD-II access significantly.  It provides a standardized command set that makes it relatively easy to read data from the car's systems. You don't need to deal with the low-level details of the CAN bus protocol directly.
-* **Cost-Effective:** ELM327-based devices are readily available and affordable.  This has led to a proliferation of OBD-II scanners and software.
-* **Open Source and Community Support:**  There's a large community of developers who have created open-source tools and libraries for working with the ELM327.  This makes it easier to develop custom applications.
-
-**ELM327 vs. ESP32:**
-
-While both are microcontrollers, they serve different purposes in this context:
-
-* **ELM327:** Specifically designed for OBD-II communication. It has built-in firmware to handle the intricacies of OBD-II protocols and CAN bus.
-* **ESP32:** A general-purpose microcontroller with Wi-Fi and Bluetooth capabilities.  It can be used for a wide range of tasks.  To use an ESP32 for OBD-II communication, you would typically need to add a CAN bus transceiver chip (like the MCP2515) and write firmware to implement the OBD-II protocols.
-
-Think of it this way:  The ELM327 is like a specialized translator for OBD-II.  The ESP32 is a more general-purpose computer that *could* be used for OBD-II communication, but it requires more setup and programming.
-
-**In summary:**
-
-* OBD-II is the standardized diagnostic system.
-* CAN bus is the communication network used by OBD-II.
-* The ELM327 is a chip that makes it easy to interface with OBD-II over CAN bus.
-* The ELM327 is purpose-built for OBD-II, while the ESP32 is a general-purpose microcontroller that can be *used* for OBD-II with additional hardware and software.
-
-
-{{< /details >}}
 
 ## OnBoard Telemetry
 
@@ -137,6 +67,9 @@ Not the first time Im tinkering with [geospatial data](https://jalcocert.github.
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-and-gopro-metadata" title="GoPro Metadata Speed trackday " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="Getting GPS info during while driving on circuits" >}}
 {{< /cards >}}
 
+Can you do something if you dont have bought the [GoProTelemetryExtractor](https://goprotelemetryextractor.com/telemetry-overlay-gps-video-sensors) nor RaceChrono?
+
+Grab my drink and see.
 
 1. Clone this repo:
 
@@ -178,7 +111,7 @@ Ive created a new ipynb with addititional *matplotlib based this time* graphs
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="Matplotlib x YFinance" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Using Matplotlib to generat TimeSeries Styles Snapshots" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/blog_img/AIBI/fastapi-custom-matplotlib.png" title="Matplotlib x FastAPI" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Custom matplotlib x fastAPI x Graficas LibrePortfolio" >}}
+  {{< card link="mations as a Code" title="Matplotlib x Flask WebApp" image="/blog_img/AIBI/fastapi-custom-matplotlib.png" subtitle="Custom matplotlib x Graficas LibrePortfolio" >}}
 {{< /cards >}}
 
 <!-- ![Custom matplotlib x fastAPI x Graficas LibrePortfolio](/blog_img/AIBI/fastapi-custom-matplotlib.png) -->
@@ -221,6 +154,74 @@ https://www.youtube.com/watch?v=ibNzG1tMblE
 
 * https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/
 
+
+{{< youtube "LToBbKTHAkw" >}}
+
+AndrOBD (Connect to your car's OBD system)
+
+* https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/
+* https://github.com/offa/android-foss
+
+{{< details title="OBD...CANBUS...? 📌" closed="true" >}}
+
+**OBD-II (On-Board Diagnostics II):**
+
+OBD-II is a standardized system used in most cars since the mid-1990s.  Its primary purpose is to monitor the vehicle's emissions systems and report any faults.
+
+When a problem is detected (like a misfiring engine or a faulty sensor), a Diagnostic Trouble Code (DTC) is stored, and the "check engine" light (or similar warning light) is illuminated on the dashboard.
+
+OBD-II also provides access to a wealth of real-time data from the car's various sensors and systems, such as engine speed (RPM), vehicle speed, coolant temperature, and more.  
+
+This data can be very useful for diagnostics, performance monitoring, and even custom applications.
+
+**CAN Bus (Controller Area Network):**
+
+**CAN bus** is a robust and efficient communication protocol widely used in vehicles.
+
+It's a serial communication system that allows different electronic control units (ECUs) within the car to communicate with each other.  
+
+For example, the engine control unit (ECU), transmission control unit, anti-lock braking system (ABS), and airbag control unit can all communicate over the CAN bus.
+
+Think of CAN bus as the *nervous system* of the car, allowing different components to exchange information.  
+
+OBD-II typically uses CAN bus as its physical layer for communication. 
+
+So, when you access OBD-II data, you're usually doing so by reading data transmitted over the CAN bus.
+
+{{< /details >}}
+
+{{< details title="ELM327...ESP32? 📌" closed="true" >}}
+
+**The ELM327 Chip:**
+
+The ELM327 is a **popular microcontroller** chip that acts as a bridge between a computer (or other device) and the car's OBD-II port (and thus, the CAN bus).
+
+It's a pre-programmed chip that handles the complex task of translating OBD-II requests into CAN bus messages and vice versa.
+
+* **Ease of Use:**  The ELM327 simplifies OBD-II access significantly.  It provides a standardized command set that makes it relatively easy to read data from the car's systems. You don't need to deal with the low-level details of the CAN bus protocol directly.
+* **Cost-Effective:** ELM327-based devices are readily available and affordable.  This has led to a proliferation of OBD-II scanners and software.
+* **Open Source and Community Support:**  There's a large community of developers who have created open-source tools and libraries for working with the ELM327.  This makes it easier to develop custom applications.
+
+**ELM327 vs. ESP32:**
+
+While both are microcontrollers, they serve different purposes in this context:
+
+* **ELM327:** Specifically designed for OBD-II communication. It has built-in firmware to handle the intricacies of OBD-II protocols and CAN bus.
+* **ESP32:** A general-purpose microcontroller with Wi-Fi and Bluetooth capabilities.  It can be used for a wide range of tasks.  To use an ESP32 for OBD-II communication, you would typically need to add a CAN bus transceiver chip (like the MCP2515) and write firmware to implement the OBD-II protocols.
+
+Think of it this way:  The ELM327 is like a specialized translator for OBD-II.  The ESP32 is a more general-purpose computer that *could* be used for OBD-II communication, but it requires more setup and programming.
+
+**In summary:**
+
+* OBD-II is the standardized diagnostic system.
+* CAN bus is the communication network used by OBD-II.
+* The ELM327 is a chip that makes it easy to interface with OBD-II over CAN bus.
+* The ELM327 is purpose-built for OBD-II, while the ESP32 is a general-purpose microcontroller that can be *used* for OBD-II with additional hardware and software.
+
+
+{{< /details >}}
+
+
 #### TorqueLite and TorquePro
 
 
@@ -245,6 +246,7 @@ However, it requires some setup and the use of specialized tools.
 **1. Hardware Requirements:**
 
 * **CAN Interface:** You'll need a CAN interface device. This could be a USB-to-CAN adapter, a PCI card with CAN capabilities, or even a Raspberry Pi with a CAN shield.  There are many options available.  The key is that it needs to be compatible with Linux and have drivers available.
+
 * **Cables:** You'll need the appropriate cables to connect your CAN interface to the CAN bus of your target system (e.g., a car, industrial equipment, etc.).
 
 **2. Software Installation (using `apt`):**
@@ -350,15 +352,20 @@ https://www.youtube.com/watch?v=fKz4TSvme6Q
 
 ## Interesting Racing Software
 
-For bookings
+For bookings:
 
-https://www.aim-sportline.com/en/sw-fw-download.htm
-https://www.aim-sportline.com/docs/racestudio3/html/release/download-release.html
+* https://www.aim-sportline.com/en/sw-fw-download.htm
+* https://www.aim-sportline.com/docs/racestudio3/html/release/download-release.html
+
 https://www.youtube.com/watch?v=qhyeRS892uM
 
 ---
 
 ## Conclusions
+
+Improve your lap times with RaceChrono
+
+The Go Pro GPS' Telemetry is great.
 
 ### Outro
 

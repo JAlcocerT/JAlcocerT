@@ -2,7 +2,7 @@
 title: "Creating an e-Commerce"
 date: 2026-10-01
 draft: false
-tags: ["SaaS","Drupal","User Clustering","RoadMap26"]
+tags: ["SaaS","Drupal","User Clustering","RoadMap26","BlackFriday"]
 description: 'Creating an eCommerce. Drupal vs DFY custom solutions'
 url: 'how-about-an-ecommerce'
 ---
@@ -358,6 +358,12 @@ See: `https://makemydream.pl/wp-login`
 https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known
 
 ![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
+
+---
+
+## Conclusions
+
+![Blackfriday sample x20 price](/blog_img/memes/blackfriday-sample.png)
 
 <!-- 
 https://issyinformatica.es/

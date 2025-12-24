@@ -197,7 +197,10 @@ You could also keep it simple and just use existing tools like https://www.perpl
 ### From Data In Motion to PyStonks
 
 
+With matplotlib you can do such cool custom graphs: *they wont be interactive though*
+
 ![Survivorship bias with a dividend stock that broke its dividend increase track record](/blog_img/data-experiments/MMM_dividends_pct_12m.png)
+
 https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment
 
 https://plotly.com/python/horizontal-bar-charts/
@@ -216,14 +219,15 @@ uv run streamlit run streamlit_ath_viewer.py
 
 ![Plotly Bar Chart - TopWorst days for a Price](/blog_img/dev/pystocks/streamlit-datainmotion-topworst-days.png)
 
+Drafting quick graphs with streamlit around yfinance data:
 
-![Plotlt cool chart return per year and year end price](/blog_img/dev/pystocks/streamlit-plotly-barchart-linechart.png)
+![Plotly cool chart return per year and year end price](/blog_img/dev/pystocks/streamlit-plotly-barchart-linechart.png)
 
 The good thing with yfinance is that it also pulls crypto data, like `BTC-USD` or ETF like `IDUS.L`
 
 So if the topic is trendy...you can create that cool `Python analysis btc cycles - max to valley with matplotlib` and get your doubts solved.
 
-Or just create a quick flask webapp so that anyone can download such cool plots:
+Or just create a quick **flask webapp** so that anyone can download such cool plots: *graficas.libreportfolio.fyi*
 
 ![Flask web app DataInMotion Twitter](/blog_img/dev/pystocks/libreportfolio-plots-datainmotion.png)
 

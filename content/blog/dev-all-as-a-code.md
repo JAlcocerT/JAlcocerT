@@ -782,9 +782,7 @@ exiftool -ee GX011032.MP4
 
 ## Conclusions
 
-
-
-
+No excuses - just create.
 
 ### Webs are also code
 

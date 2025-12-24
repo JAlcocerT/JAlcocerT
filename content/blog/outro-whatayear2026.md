@@ -117,9 +117,9 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
 0. Embeded Chatbots for a business website x [Business Knowledge Base setup](https://jalcocert.github.io/JAlcocerT/custom-bots-kb/)!.
 
-0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/)
+0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/). Success Story 1.
 
-0. I did not know that **creating an ebook** was that simple
+0. I did not know that **creating an/N ebook/s** was that simple.
 
 * https://www.amazon.es/sendtokindle
 
@@ -135,6 +135,11 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
+
+1. Weddings and ads 101.
+
+![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
+
 
 2. About Posthog: Post an ebook page post on IG, then web session will be recorded and a YT video can be made out of that
 
@@ -180,8 +185,7 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
 
 9. Authentication Post: *flowing directly to BiP*
 
-https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions
-https://jalcocert.github.io/JAlcocerT/social-signin-101/
+Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions) is not only cool, but useful for your SaaS.
 
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
@@ -222,16 +226,26 @@ https://jalcocert.github.io/JAlcocerT/social-signin-101/
 {{< /cards >}}
 
 
-Improve your lap times with RaceChrono
-
-The Go Pro GPS' Telemetry is great:
-
-
 12. IoDoctor reloaded
 
 * with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
 can find out existing interfac
 
+13. Mechanisms reloaded. *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) back in place*
+
+https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code
+
+![Matplotlib GIF Animation of a mechanism](/blog_img/mechanics/fourbarlinkage.gif)
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/chaos-theory-and-the-double-pendulum-with-python/" title="Double Pendulum Repo" image="https://raw.githubusercontent.com/JAlcocerT/Py_Double_Pendulum/main/Z_Outro/DoublePendulum.gif" subtitle="Python Double Pendulum" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
+{{< /cards >}}
+
+14. Twitter / X powered by pystocks / stonks / libreportfolio.
+
+![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 
 ### Serverless
 

@@ -117,6 +117,10 @@ To build a BI Tools even more custom: *with certain UI look and feel, you can **
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#compared-with-real-estate" title="Custom Plots for Reporting" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="Sample YFinance based reporting" >}}
 {{< /cards >}}
 
+Or [for stonks](https://jalcocert.github.io/JAlcocerT/py-stonks/#from-data-in-motion-to-pystonks):
+
+![Flask web app DataInMotion Twitter](/blog_img/dev/pystocks/libreportfolio-plots-datainmotion.png)
+
 To create interactivity, we have the well known plotly, but also **ApexCharts and ChartJS**.
 
 <!-- ![NodeJS Web App + ApexChartJS](/blog_img/DA/apexchartjs-nodejs.png) -->
