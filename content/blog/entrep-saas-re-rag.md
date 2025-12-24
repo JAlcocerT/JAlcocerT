@@ -437,3 +437,14 @@ As this Real Estate is a great case study / success story, how about...letting o
 * Cloudflare Access
 * Http auth vs cookies
 * Crawlee x ApiFY
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#ai" title="AI | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/" title="Bots | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+See also:
+
+* https://github.com/nikolovlazar/frontend-horse-ui?ref=statichunt.com
+* web app ->> https://github.com/lazyfuhrer/Real-Estate-Web-App?tab=coc-ov-file#readme
+

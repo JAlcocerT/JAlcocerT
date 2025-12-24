@@ -1,7 +1,7 @@
 ---
 title: "Streamlit x GHCR x CI/CD"
-date: 2026-01-15T13:20:21+01:00
-#date: 2025-12-20T23:20:21+01:00
+#date: 2026-01-15T13:20:21+01:00
+date: 2025-12-20T23:20:21+01:00
 draft: false
 tags: ["Success Story 2","DWY Consulting"]
 description: 'Agile development for a hospital based on CI/CD.'
@@ -11,7 +11,9 @@ url: 'improving-healthcare-analytics'
 
 **Tl;DR**
 
+Not a post about IQVIA nor FMCG, nor D&A tech stack for healthcare analytics.
 
+But one to make the development operations more efficient.
 
 **Intro**
 
@@ -29,7 +31,7 @@ Even better if you do so around a well defined offer, so people know what to exp
   {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
 
-In this case, it has been a success story based on:
+In this case, it has been a success story based on **github actions x containers best practices**
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#actions-cicd-for-python-projects" title="SelfHosted Landing Repo" image="/blog_img/dev/re-actions-container-built.png" subtitle="Tier of Service" >}}

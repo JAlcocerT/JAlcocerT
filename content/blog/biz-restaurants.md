@@ -1,8 +1,9 @@
 ---
 title: "Webs for Restaurants x Astro SSR."
-date: 2026-02-19
+#date: 2026-01-08
+date: 2025-12-23T13:20:21+01:00
 draft: false
-tags: ["SaaS","Just-Cook","Hotels","Roadmap26"]
+tags: ["SaaS x MultiTenant","Just-Cook","Hotels","Roadmap26"]
 description: "Websites for Restaurants. Million dollar idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
@@ -51,28 +52,17 @@ The **tech stack**:
 > AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, **Storyblok CMS**, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
 
 
+* https://github.com/hydra-billing/homs
 
-https://github.com/hydra-billing/homs
+> Apache v2 |  Hydra Order Management System 
 
 
-* **Menu websites at ~500 eur/year**
-  * http://cartalia.org/
-    * http://ukelele.cartalia.org/
-  * https://www.upmenu.com/pricing/
-* https://www.covermanager.com/en
-* https://www.mojstolik.pl/dla-restauracji
 
 <!-- 
 ### Useful Resources for a Better Website
 
 * Adding the project details as a post image thanks to https://socialify.git.ci/vercel/next.js/image?language=1&name=1&theme=Auto
   * https://socialify.git.ci/
-
-### How to COnfigure Web analytics for NextJS
-
-Umami for NextJS Sites 
-Matomo
-https://www.goatcounter.com/
 
 Use fonts
 
@@ -84,22 +74,6 @@ Forms / Pop Ups
 
 -->
 
-<!-- ### How to notify Google about your site
-
-* To ping **Google's engine** to review your site's sitemap:
-
-```sh
-curl "https://www.google.com/ping?sitemap=https://www.example.com/sitemap.xml"
-```
-
-* Don't forget about **Bing Search** as well:
-
-```sh
-curl "https://www.bing.com/ping?sitemap=https://www.example.com/sitemap.xml"
-```  -->
-
-
-
 <!-- https://github.com/steven-tey/precedent -->
 <!-- https://github.com/shadcn-ui/taxonomy 
 https://tx.shadcn.com/
@@ -107,7 +81,7 @@ https://tx.shadcn.com/
 
 
 <!-- PUBLIC APIs!!!
-https://github.com/sozonome/pub-apis?ref=statichunt.com
+https://github.com/sozonome/pub-apis
 https://publicapis.sznm.dev/all
 also good to filter cards -->
 
@@ -118,49 +92,9 @@ https://github.com/hassonor/apps-play?ref=statichunt.com
 
 
 
-<!-- 
- Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
 
-https://github.com/scio-labs/inkathon?ref=statichunt.com -->
-
-<!-- 
- A responsive Proptech dashboard built with Nextjs, Tailwind, and Typescript 
-
- https://github.com/stephengade/veerage-dashboard?ref=statichunt.com -->
-
-
-
- <!-- ChatGPT Plugin starter template built with Next.js 13 App Router, Edge Functions, and Vercel 
-https://github.com/steven-tey/weathergpt?ref=statichunt.com#try-the-plugin -->
-
-<!-- 
-REAL STATE
-
-https://github.com/nikolovlazar/frontend-horse-ui?ref=statichunt.com
-web app ->> https://github.com/lazyfuhrer/Real-Estate-Web-App?tab=coc-ov-file#readme
-
-pwa
-https://github.com/kiri-art/stable-diffusion-react-nextjs-mui-pwa?ref=statichunt.com
-
-ecommerce
-https://github.com/riteshk-007/nextjs-store?ref=statichunt.com -->
-
-<!-- Scribbly is a web application (not SSG)!!!! that provides a platform for users to create and manage their digital journal
-https://github.com/subhamBharadwaz/scribbly -->
-
-> Apache v2 |  Hydra Order Management System 
 
 In the end, people like `portalmainfo.com` are creating such websites:
-
-https://elarboltapas.com/
-https://restaurantealbores.com/
-https://mojamabeach.com/
-
-https://gusti.pl/oV8S1gQ
-
-https://tandoorolsztyn.pl/
-https://github.com/jacoknapp/EternalVows
-
 
 https://astro.build/themes/details/tastyyy-restaurant-website/
 
@@ -185,14 +119,15 @@ This required to make the website owners responsible of their content.
 
 * https://github.com/unfolding-io/Astrorante
 
-> AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, Storyblok CMS, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
+> AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, **Storyblok CMS**, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
 
 
 * https://github.com/larry-xue/quiet-bar
 
 >  A beautiful, vintage/industrial-styled website template for bars, pubs, and restaurants. 
 
-> > From the creator of Sassify!
+> > From the creator of astro Sassify theme!
+
 ---
 
 ## Conclusions
@@ -208,6 +143,68 @@ A set of **sites themes** that will take a while to get outdated:
 
 ---
 
+
+### Interesting Recipes
+
+How could I not offer something very special to entreagujaypunto: *to capture all those recipes*
+
+```sh
+
+```
+
+With
+
+
+---
+
+## FAQ
+
+### Software for Hotels
+
+* https://qloapps.com/qloapps-installation-process/
+
+> QloApps is an open-source hotel booking & reservation software providing features that will help hoteliers to launch a user-friendly online hotel booking website. 
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qloaps" title="QLoaps Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+* https://www.chaport.com/powered-by-chaport
+* https://www.livechat.com/pricing/
+
+> https://peppe8o.com/qloapps-raspberry-pi/ this is a https://www.ezeefrontdesk.com/ alternative
+
+
+
+### Web for Gyms?
+
+* https://github.com/sudeep2003/Astro-Gym-Fitness-Website
+
+### Web for Enterprises?
+
+* https://github.com/sudeep2003/AstroFlow
+
+* https://github.com/rspisarski/titan-core
+
+### And for finance teams?
+
+* https://github.com/bejamas/astro-storyblok-finance-starter
+
+
+### Free Hosting and Free Domain
+
+Free Hosting Options with Free domain:
+
+- **Firebase**: Host your Next.js SSG on Firebase for scalable hosting and integrated services like authentication, database, and analytics.
+- **Cloudflare Pages**: Deploy your Next.js SSG on Cloudflare Pages for fast and secure global distribution with built-in CDN and SSL/TLS encryption.
+- **GitHub Pages**: Easily host your Next.js SSG on GitHub Pages, perfect for static sites with seamless integration with your GitHub repository.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 ### People are Building
 
 * **Menu websites at ~500 eur/year**
@@ -218,53 +215,11 @@ A set of **sites themes** that will take a while to get outdated:
 * https://www.covermanager.com/en
 * https://www.mojstolik.pl/dla-restauracji
 
-### Interesting Recipes
-
-How could I not offer something very special to entreagujaypunto:
-
-```sh
-
-```
-
-With
 
 
+* https://elarboltapas.com/
+* https://restaurantealbores.com/
+* https://mojamabeach.com/
 
-### Free Hosting and Free Domain
-
-Free Hosting Options with Free domain
-  - **Firebase**: Host your Next.js SSG on Firebase for scalable hosting and integrated services like authentication, database, and analytics.
-  - **Cloudflare Pages**: Deploy your Next.js SSG on Cloudflare Pages for fast and secure global distribution with built-in CDN and SSL/TLS encryption.
-  - **GitHub Pages**: Easily host your Next.js SSG on GitHub Pages, perfect for static sites with seamless integration with your GitHub repository.
-
----
-
-## FAQ
-
-### Software for Hotels
-
-* https://qloapps.com/qloapps-installation-process/
-
-
-* https://www.chaport.com/powered-by-chaport
-* https://www.livechat.com/pricing/
-
-> https://peppe8o.com/qloapps-raspberry-pi/ this is a https://www.ezeefrontdesk.com/ alternative
-
-
-https://github.com/JAlcocerT/Home-Lab/tree/main/qloaps
-
-
-### Web for Gyms?
-
-* https://github.com/sudeep2003/Astro-Gym-Fitness-Website
-
-### Web for Enterprises?
-
-https://github.com/sudeep2003/AstroFlow
-
-https://github.com/rspisarski/titan-core
-
-### And for finance teams?
-
-https://github.com/bejamas/astro-storyblok-finance-starter
+* https://gusti.pl/oV8S1gQ
+* https://tandoorolsztyn.pl/

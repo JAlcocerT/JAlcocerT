@@ -50,7 +50,7 @@ Specially after the learnings of the [Obfuscator project](https://github.com/JAl
   {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web ebook and also downlodable as PDFs" >}}
 {{< /cards >}}
 
-The idea is to use this to consolidate Docs - web/ooks, success stories and slidev ptts.
+The idea is to use this to consolidate Docs - web/ooks, case studies and slidev ptts.
 
 {{% details title="Creating the N ebooks repo... 🚀" closed="true" %}}
 

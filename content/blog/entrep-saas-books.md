@@ -650,3 +650,12 @@ the buying brain....
 
  -->
 
+### About Journaling
+
+I was tinkering around [markdown editors](https://jalcocert.github.io/JAlcocerT/astro-i18/#an-editor-for-astro-blog-posts) last year.
+
+And put together a [journaling recap for artists](https://jalcocert.github.io/JAlcocerT/link-artists/#journals).
+
+But wanted to cover in depth: https://github.com/subhamBharadwaz/scribbly
+
+> MIT |  Scribbly is a web application built with Next.js and Prisma that allows users to create and manage their digital journal. With a user-friendly interface powered by Radix UI and Shadcn/UI components, Scribbly makes journaling a breeze. It includes features such as customizable reminders, secure user authentication with Clerk, and a subscription plan 

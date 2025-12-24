@@ -389,7 +389,7 @@ Oh, and the blog will writings will be continued on >2026 into some branded `blo
 
 This will be kept as a full tinkering.
 
-On the blog will be more curated and on the official `www` site the success stories.
+On the blog will be more curated and on the official `www` site the show case stories.
 
 And bc as if we are out of sight, we are out of mind we have to [make our services known](#making-website-services-known) somehow.
 

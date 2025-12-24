@@ -186,12 +186,17 @@ This has been...a series of random steps.
 
 ### Discovered one for weddings
 
+I tested [wedding share](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#weddingshare-setup)...and it looked cool.
 
-I tested it...and it looked cool.
+All of this happened [while travelling](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/).
 
-All of this happened while travelling.
+Yea, I took the laptop :)
 
-Yea, I took the laptop.
+### Also Saw
+
+* https://github.com/jacoknapp/EternalVows
+
+> Lightweight wedding website that you host | Configurable via yaml!
 
 ### DFY for a close one
 

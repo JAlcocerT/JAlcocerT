@@ -136,6 +136,12 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
+0. Blogspot vs Wordpress Migrations and Free web Audits
+
+0. Restaurant SaaS: aka Multi tenant Astro Apps with protected routes
+
+
+
 1. Weddings and ads 101.
 
 ![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
@@ -268,6 +274,14 @@ Ive enjoyed using Cloudflare R2 for s3 compatible storage.
 {{< /cards >}}
 
 ### Tech Talks
+
+
+<!-- 
+ Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
+
+https://github.com/scio-labs/inkathon?ref=statichunt.com
+
+
 
 <!-- Goals
   • AI Gen

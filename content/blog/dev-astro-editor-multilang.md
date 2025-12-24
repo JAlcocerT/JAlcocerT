@@ -31,7 +31,9 @@ I created a repo to edit astro via a NextJS web app with its own markdown editor
 
 I know there are few ways to do markdown edits...
 
-But after [trying react markdown](https://jalcocert.github.io/JAlcocerT/astro-journal-theme/) and [toast ui with the typography theme](https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/), I stay with ToastUI:
+But after [trying react markdown](https://jalcocert.github.io/JAlcocerT/astro-journal-theme/) and [toast ui with the typography theme](https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/)...
+
+I'd stay with ToastUI:
 
 ![Gemini canva toastUI](/blog_img/web/nextjs-astro-editor/toastui-gemini.png)
 

@@ -442,7 +442,7 @@ https://github.com/JAlcocerT/obfuscate
 
 ##### Journals
 
-If instead of photo centered, you are a text focused kind of person.
+If instead of photo centered, you are a **text focused** kind of person.
 
 Something like ebooks that we talked, or a pure type centered link would be for you.
 
@@ -456,8 +456,12 @@ For you to focus on just-journal kind of thing.
 
 > > For sure this can inspire you to build web/ooks kind of things and enables multilanguage :)
 
-https://github.com/JAlcocerT/astro-theme-typography
-https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/
+* https://github.com/JAlcocerT/astro-theme-typography
+* https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/
+
+
+See also **[Scribbly](https://github.com/subhamBharadwaz/scribbly)**, a web application that provides a platform for users to create and manage their digital journal
+ 
 
 #### Calendars
 
@@ -804,6 +808,26 @@ curl -s -o /dev/null -w "dns_lookup: %{time_namelookup}s connect: %{time_connect
   {{< card link="https://trends.google.com/trends/" title="Whats Trendy on Google? ↗" >}}
   {{< card link="https://search.google.com/" title="How is your site SEO doing? Google Search ↗" >}}
 {{< /cards >}}
+
+How to Configure Web analytics?
+
+See Umami, Matomo or https://www.goatcounter.com/
+
+How to notify Google about your site changes?
+
+* To ping **Google's engine** to review your site's sitemap:
+
+```sh
+curl "https://www.google.com/ping?sitemap=https://www.example.com/sitemap.xml"
+```
+
+* Don't forget about **Bing Search** as well:
+
+```sh
+curl "https://www.bing.com/ping?sitemap=https://www.example.com/sitemap.xml"
+```
+
+Also, linkchecker can be integrated within your CI/CD pipeline or run manually: *see within this hugo [example](https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#hugo)*
 
 ```sh
 # docker run --rm -it -u $(id -u):$(id -g) ghcr.io/linkchecker/linkchecker:latest --verbose https://https://www.psikolognevinkeskin.com/

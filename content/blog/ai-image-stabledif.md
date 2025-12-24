@@ -7,6 +7,10 @@ description: "Using Stable Difussion with DreamBooth"
 url: 'stable-difussion-free-generation'
 ---
 
+pwa
+https://github.com/kiri-art/stable-diffusion-react-nextjs-mui-pwa
+
+
 Image Generation:  GUI's to use Stable Difussion Models
 
 * Foocus

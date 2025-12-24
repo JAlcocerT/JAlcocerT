@@ -103,19 +103,20 @@ https://www.mangomedia.pl/pl/portfolio.html
 
 ### DecapCMS finally did the trick
 
-With Twilight astro Theme first and the double terminal
+With the [Twilight](https://github.com/JAlcocerT/Twilight) astro Theme first and the double terminal working in local mode:
 
 ```sh
-
+npm run dev
+npx decap-server #in terminal 2
 ```
 
-Then with Portfolio where it worked with local + github oauth with changes commited and going to Ci/CD automatically
+Then with [Portfolio](https://github.com/JAlcocerT/Portfolio) where it worked with local + github oauth with changes commited and going to Ci/CD automatically
 
 ```sh
-
+make hugo-dev #hugo server --bind="0.0.0.0" --baseURL="http://localhost" --port=1313 #localhost:1313
 ```
 
-And to some extent, with EntreAgujayPunto (hugo theme gallery), where the container setup....
+And to some extent, with [EntreAgujayPunto](https://github.com/JAlcocerT/EntreAgujayPunto) (hugo theme gallery), where the container setup....
 
 ```sh
 #git clone https://github.com/JAlcocerT/EntreAgujayPunto.git #http://jalcocert-x300-1:8090/

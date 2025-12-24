@@ -1,8 +1,8 @@
 ---
-title: "Data Analytics Branding: The Ultimate Guide to Stand Out in a Data-Driven World"
+title: "Data Analytics Branding: Stand Out in a Data-Driven World"
 date: 2021-07-24T23:20:21+01:00
 draft: false
-tags: ["Outro","CTOR"]
+tags: ["Outro","CTOR KPI"]
 description: 'Building a strong data analytics brand with a targeted niche, compelling UVP, and strategic partnerships'
 url: 'selling-ideas-in-data-analytics'
 ---
@@ -150,7 +150,7 @@ Here are some powerful Call to Action examples when you want users to subscribe 
 
 ### What is CTOR?
 
-CTOR, or Click-to-Open Rate, is an email marketing metric that measures the effectiveness of an email campaign by comparing the number of unique clicks on the email's links to the number of unique opens. 
+**CTOR, or Click-to-Open Rate**, is an email marketing metric that measures the effectiveness of an email campaign by comparing the number of unique clicks on the email's links to the number of unique opens. 
 
 Essentially, it shows the proportion of recipients who opened the email and then clicked on a link within it. 
 

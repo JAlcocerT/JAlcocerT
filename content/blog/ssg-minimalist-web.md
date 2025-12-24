@@ -499,9 +499,8 @@ ISR is a feature available in frameworks like Next.js, enabling developers to pr
 
 In summary, SSG generates HTML pages at build time, SSR generates HTML pages dynamically on the server in response to requests, and ISR combines static site generation with dynamic content updates for improved performance and flexibility.
 
-Each approach has its strengths and use cases, and the choice depends on the specific requirements of the project. -->
+Each approach has its strengths and use cases, and the choice depends on the specific requirements of the project.
 
-
-Next.js is a React-based framework for building fast and scalable web applications.
-Next.js provides server-side rendering, static site generation, and incremental static regeneration.
-Next.js has built-in support for API routes and data fetching strategies.
+* Next.js is a React-based framework for building fast and scalable web applications.
+* Next.js provides server-side rendering, static site generation, and incremental static regeneration.
+* Next.js has built-in support for API routes and data fetching strategies.

@@ -24,6 +24,8 @@ Ive forked it to https://github.com/JAlcocerT/horizon (could not resist!)
 
 ### WeddingShare Setup
 
+Just spin up this service:
+
 * https://docs.wedding-share.org/
   * https://docs.wedding-share.org/docs/Setup/docker
   * https://hub.docker.com/r/cirx08/wedding_share
