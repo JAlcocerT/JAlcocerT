@@ -94,8 +94,6 @@ BiP user flows around newsletter layers
 * with embla - v2
     * https://www.embla-carousel.com/
     * https://github.com/davidjerleke/embla-carousel
-* with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
-
 
 
 {{< cards >}}
@@ -117,17 +115,17 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
 0. Creating D&A Reports with AI
 
-> Want a website? DIY your own with this free ebook when subscribed / DWY with consulting / contact for a DFY.
+0. Embeded Chatbots for a business website x [Business Knowledge Base setup](https://jalcocert.github.io/JAlcocerT/custom-bots-kb/)!.
 
-> > That's how ive done the ebook
-
-0. Embeded Chatbots for a business website - Real Estate example.
-
-0. Creating a Custom Real Estate Agency with RAG BoT
+0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/)
 
 0. I did not know that **creating an ebook** was that simple
 
 * https://www.amazon.es/sendtokindle
+
+> Want a website? DIY your own with this free ebook when subscribed / DWY with consulting / contact for a DFY.
+
+> > That's how ive done the ebook
 
 > Create ebooks be like: upload .md + upload image done via canva = download pdf/epub thanks to pandoc
 
@@ -177,16 +175,10 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-8. Proper CI/CD for streamlit Web Apps. Success Story 1 + Hospital D&A: https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/2a2eb68132834b39ce8ff3e9e77e8d7d87e801b5
+8. Proper CI/CD for streamlit Web Apps. [Success Story 2 + Hospital D&A](https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics).
 
-> Latest features shipped properly: https://github.com/JAlcocerT/X-ray-imaging-analysis + youtube video
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/IT-concepts/" title="IT Concepts | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/useful-python-stuff/" title="Python | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-9. Authentication Post
+9. Authentication Post: *flowing directly to BiP*
 
 https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions
 https://jalcocert.github.io/JAlcocerT/social-signin-101/
@@ -201,7 +193,7 @@ https://jalcocert.github.io/JAlcocerT/social-signin-101/
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-10. Embeded Analytics con Graphic Walker
+10. Embeded Analytics with Graphic Walker
 
 * https://github.com/Kanaries/graphic-walker
 
@@ -218,7 +210,7 @@ https://jalcocert.github.io/JAlcocerT/social-signin-101/
   {{< card link="https://jalcocert.github.io/JAlcocerT/BI/#custom-bi-tools" title="BI | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-11. Geolocation - GEOSPATIAL DATA RECAP
+11. Geolocation - GEOSPATIAL DATA RECAP [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/).
 
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
@@ -229,14 +221,16 @@ https://jalcocert.github.io/JAlcocerT/social-signin-101/
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/#geo-data" title="Geo | Docs ↗" >}}
 {{< /cards >}}
 
-https://racechrono.com/
 
 Improve your lap times with RaceChrono
 
 The Go Pro GPS' Telemetry is great:
 
 
+12. IoDoctor reloaded
 
+* with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
+can find out existing interfac
 
 
 ### Serverless

@@ -1,0 +1,141 @@
+---
+title: "Streamlit x GHCR x CI/CD"
+date: 2026-01-15T13:20:21+01:00
+#date: 2025-12-20T23:20:21+01:00
+draft: false
+tags: ["Success Story 2","DWY Consulting"]
+description: 'Agile development for a hospital based on CI/CD.'
+url: 'improving-healthcare-analytics'
+---
+
+
+**Tl;DR**
+
+
+
+**Intro**
+
+It all comes down to doing + sharing/helping.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/IT-concepts/" title="IT Concepts | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/useful-python-stuff/" title="Python | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+Even better if you do so around a well defined offer, so people know what to expect.
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
+{{< /cards >}}
+
+In this case, it has been a success story based on:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#actions-cicd-for-python-projects" title="SelfHosted Landing Repo" image="/blog_img/dev/re-actions-container-built.png" subtitle="Tier of Service" >}}
+{{< /cards >}}
+
+What we have done:
+
+1. Define the problem
+
+2. Solution proposal: container image versioning and automatic creation
+
+* Defining the workflow config: https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/2a2eb68132834b39ce8ff3e9e77e8d7d87e801b5
+
+* Making a manual test run towards v1.0: https://github.com/jlleongarcia/X-ray-imaging-analysis/actions/runs/20484822267/job/58865117916 which was before [like so](https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/5443b3149024814a901531319421f2254434f012)
+
+3. Enabling the public ghcr artifacts to public to share within other hospitals: https://github.com/jlleongarcia/X-ray-imaging-analysis/pkgs/container/x-ray-imaging-analysis
+
+
+Its also recommended to provide a docker-compose for users who want to build their own image: 
+
+```yml
+version: '3.8'
+
+services:
+  streamlit-app:
+    # Build context points to the current directory (where this file lives)
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: X-ray-imaging-analysis
+    restart: unless-stopped
+    ports:
+    - "8502:8502"
+    # Define the healthcheck to ensure the container is truly ready for the tunnel
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8502"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+```
+
+And one for the ones that just want to push a particular image version with certain features:
+
+```sh
+docker pull ghcr.io/jlleongarcia/x-ray-imaging-analysis:v1.0
+```
+
+```yml
+version: '3.8'
+
+services:
+  streamlit-app:
+    image: ghcr.io/jlleongarcia/x-ray-imaging-analysis:v1.0
+    container_name: x-ray-imaging-analysis
+    restart: unless-stopped
+    ports:
+    - "8502:8502"
+    # Define the healthcheck to ensure the container is truly ready for the tunnel
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8502"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+```
+
+```sh
+sudo docker stats x-ray-imaging-analysis
+```
+
+---
+
+## Conclusions
+
+Healthcare Analytics is a broad field, and it can be applied to many different areas of healthcare:
+
+```mermaid
+mindmap
+  root((Medical Physics))
+    Radiotherapy
+      Linac QA
+      Patient Treatment
+        3D CRT
+        IMRT
+        VMAT
+    Nuclear Medicine
+      Patient Treatment
+        Radiopharmaceuticals
+      Patient Diagnostic
+        Radiotracers
+        Machine QA
+    Diagnostic Radiology
+      Machine QA
+      Diagnose
+        Clinical Image Validation
+    Radiation Protection
+      Patient Treatment & Diagnose
+        ALARA criteria
+      Workers & Public Protection
+        Time
+        Distance
+        Shielding
+```
+
+---
+
+## FAQ
+
+
+> Latest features shipped properly: https://github.com/JAlcocerT/X-ray-imaging-analysis + youtube video

@@ -3,7 +3,7 @@ title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
 # date: 2026-01-05T23:20:21+01:00
 date: 2025-12-20T23:20:21+01:00
 draft: false
-tags: ["Cloudflare Access x Astro Hybrid Rendering","AI Tech Talk","RoadMap26"]
+tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story 1"]
 description: 'Building a custom BOT for real estate agencies. With CORS and Rate Limiting.'
 url: 'custom-re-rag'
 ---
@@ -30,7 +30,6 @@ The **customer segmentation**: SMB
 But it does not apply, as the goal of this is more closing a long chapter and making the **final RE learnings** with it.
 
 The **tech stack**: *see more [below](#conclusions)*
-
 
 | Component | Technology | Details |
 |-----------|-----------|---------|
@@ -421,9 +420,15 @@ The editor it is as it is: *counting that i started the brd going for a decap gi
 
 Now its easier than ever to add the next casa paco from 1970 *now is better not to build* that is going to be sold!
 
+And hey...much better looking than: `https://efasolution.al`
 
 ### Who can be interested in such websites?
 
 As this Real Estate is a great case study / success story, how about...letting others know about it?
 
 * `twojmetr2.pl`
+
+### Next steps
+
+Cloudflare Access
+

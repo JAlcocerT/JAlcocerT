@@ -4,7 +4,7 @@ title: "Racing, IoT and Data"
 date: 2025-12-23T09:20:21+01:00
 draft: false
 tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars","Mechanics"]
-description: 'From OBD2 Data to GoPro GPS for trackdays'
+description: 'From OBD2 Data to GoPro GPS x Matplotlib for your trackdays.'
 ---
 
 **Tl;DR**
@@ -14,6 +14,8 @@ I got to know about Race Chrono Pro that allows to do
 <!-- https://www.youtube.com/watch?v=9vidTq12des -->
 
 {{< youtube "9vidTq12des" >}}
+
+People are doing cool videos with [racechrono paid software](https://racechrono.com/).
 
 Could not avoid thinking on the GoPro GPS Telemetry *again* for those **Racing addicts** around!
 
@@ -63,7 +65,9 @@ This data can be very useful for diagnostics, performance monitoring, and even c
 
 **CAN bus** is a robust and efficient communication protocol widely used in vehicles.
 
-It's a serial communication system that allows different electronic control units (ECUs) within the car to communicate with each other.  For example, the engine control unit (ECU), transmission control unit, anti-lock braking system (ABS), and airbag control unit can all communicate over the CAN bus.
+It's a serial communication system that allows different electronic control units (ECUs) within the car to communicate with each other.  
+
+For example, the engine control unit (ECU), transmission control unit, anti-lock braking system (ABS), and airbag control unit can all communicate over the CAN bus.
 
 Think of CAN bus as the *nervous system* of the car, allowing different components to exchange information.  
 
@@ -105,21 +109,7 @@ Think of it this way:  The ELM327 is like a specialized translator for OBD-II.  
 
 {{< /details >}}
 
-
-### Android Apps
-
-1. Torque
-2. inCarDoc
-3. Car Scanner
-4. ScanMaster-ELM
-5. https://github.com/fr3ts0n/AndrOBD/
-
-> Android **OBD** diagnostics with any ELM327 adapter
-
-* https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/
-
-
-### OnBoard Telemetry
+## OnBoard Telemetry
 
 Getting the GPS position in real time would be great.
 
@@ -167,7 +157,7 @@ You can also open it with **Google Colab**: [![Open in Google Colab](https://col
 
 [![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
 
-2. Get exiftool ready
+2. Get exiftool ready: *this allow to extract the GPS info from the MP4*
 
 ```sh
 #choco install exiftool -y
@@ -176,17 +166,22 @@ You can also open it with **Google Colab**: [![Open in Google Colab](https://col
 #extract the info
 exiftool -ee ./GX030411.MP4 > output-kartdec-1a.txt
 #exiftool -ee ./GX020410.MP4 > output-kart1.txt #here you will have all go pro data including the gps
-
 ```
 
 > Do this before joining the MP4's with ffmpeg or you will loose the acelerations and gps info!
 
-3. Use Python to extract GPS info from the txt:
+3. Use Python to extract (and plot) GPS info from the txt:
 
 Ive created a new ipynb with addititional *matplotlib based this time* graphs
 
-
 ![alt text](/blog_img/data-experiments/kart/matplotlib-driver-comparison.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="Matplotlib x YFinance" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Using Matplotlib to generat TimeSeries Styles Snapshots" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog_img/AIBI/fastapi-custom-matplotlib.png" title="Matplotlib x FastAPI" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Custom matplotlib x fastAPI x Graficas LibrePortfolio" >}}
+{{< /cards >}}
+
+<!-- ![Custom matplotlib x fastAPI x Graficas LibrePortfolio](/blog_img/AIBI/fastapi-custom-matplotlib.png) -->
 
 {{< cards cols="1" >}}
   {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
@@ -213,6 +208,19 @@ Lora GPS?
 https://www.youtube.com/watch?v=dQeNONerxEU
 https://www.youtube.com/watch?v=ibNzG1tMblE
 
+
+### Android Apps
+
+1. Torque
+2. inCarDoc
+3. Car Scanner
+4. ScanMaster-ELM
+5. https://github.com/fr3ts0n/AndrOBD/
+
+> Android **OBD** diagnostics with any ELM327 adapter
+
+* https://f-droid.org/packages/com.fr3ts0n.ecu.gui.androbd/
+
 #### TorqueLite and TorquePro
 
 
@@ -230,8 +238,9 @@ https://www.youtube.com/watch?v=ibNzG1tMblE
 
 ### CANBUS with UBUNTU
 
+You can read and interact with a CAN bus using the Ubuntu command-line interface (CLI).
 
-Yes, you can read and interact with a CAN bus using the Ubuntu command-line interface (CLI).  However, it requires some setup and the use of specialized tools.  Here's a breakdown of how you can do it:
+However, it requires some setup and the use of specialized tools.
 
 **1. Hardware Requirements:**
 
@@ -253,39 +262,43 @@ This package provides command-line utilities for working with CAN buses.
 
 * **Bring Up the Interface:**  After connecting your CAN interface, you'll need to bring it up.  The exact command depends on your interface, but it's often something like this (replace `can0` with the actual interface name if different):
 
-   ```bash
-   sudo ip link set up can0 type can bitrate 500000  # Set bitrate (adjust as needed)
-   ```
+```bash
+sudo ip link set up can0 type can bitrate 500000  # Set bitrate (adjust as needed)
+```
 
-   The bitrate (500000 in this example) *must* match the bitrate of the CAN bus you're trying to connect to.  If you don't know the bitrate, you might need to experiment or consult documentation.  You can find out existing interface names and their status by running `ip a`.
+The bitrate (500000 in this example) *must* match the bitrate of the CAN bus you're trying to connect to. 
+
+If you don't know the bitrate, you might need to experiment or consult documentation. 
+   
+You can find out existing interface names and their status by running `ip a`.
 
 * **Verify Interface:** Check if the interface is up:
 
-   ```bash
-   ip a  # Look for the can0 (or your interface) and check its status. It should say "UP"
-   ```
+```bash
+ip a  # Look for the can0 (or your interface) and check its status. It should say "UP"
+```
 
 **4. Reading CAN Data:**
 
 * **`candump`:** This utility displays CAN messages in real-time:
 
-   ```bash
-   candump can0  # Listen on can0
-   candump can0 -c 10 # Listen on can0 for 10 messages
-   candump can0 -t a # Add timestamps to the messages
-   ```
+```bash
+candump can0  # Listen on can0
+candump can0 -c 10 # Listen on can0 for 10 messages
+candump can0 -t a # Add timestamps to the messages
+```
 
-   This will show you the CAN ID, data bytes, and other information for each message.
+This will show you the CAN ID, data bytes, and other information for each message.
 
 **5. Sending CAN Messages:**
 
 * **`cansend`:** This utility allows you to transmit CAN messages:
 
-   ```bash
-   cansend can0 123#0102030405060708  # Send message with ID 123 and data 01 02 03 04 05 06 07 08
-   ```
+```bash
+cansend can0 123#0102030405060708  # Send message with ID 123 and data 01 02 03 04 05 06 07 08
+```
 
-   Replace `123` with the CAN ID and the data bytes with the information you want to send.
+Replace `123` with the CAN ID and the data bytes with the information you want to send.
 
 5. https://github.com/Schildkroet/CANgaroo
 
@@ -312,9 +325,15 @@ This package provides command-line utilities for working with CAN buses.
 
 **Python Integration (Optional):**
 
-You can also use Python libraries like `python-can` to interact with CAN buses programmatically.  This gives you more flexibility for processing and analyzing CAN data.  You would still need to install the `can-utils` and configure the interface as described above.
+You can also use Python libraries like `python-can` to interact with CAN buses programmatically.  
 
-This information should get you started with reading and writing to a CAN bus using the Ubuntu CLI. Remember to consult the documentation for your specific CAN interface and the device you're communicating with.
+This gives you more flexibility for processing and analyzing CAN data.  
+
+You would still need to install the `can-utils` and configure the interface as described above.
+
+This information should get you started with reading and writing to a CAN bus using the Ubuntu CLI. 
+
+Remember to consult the documentation for your specific CAN interface and the device you're communicating with.
 
 #### CANBUS and Py
 
@@ -339,11 +358,13 @@ https://www.youtube.com/watch?v=qhyeRS892uM
 
 ---
 
-## Outro
+## Conclusions
+
+### Outro
 
 * https://upstash.com/
 
-Serverless Data Platform (redis, vector DBs....)
+> Serverless Data Platform (redis, vector DBs....)
 
 
 * https://github.com/DrewThomasson/sound-monitor

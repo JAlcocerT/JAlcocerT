@@ -279,6 +279,7 @@ But anyone is free to hit the endpoint and add a email to the collection.
 > > This comes down to the email/SMTP complexity that I have to investigate soon enough
 
 This has to be quick and easy: 
+
 ```sh
 #git clone
 #sudo lsof -i :8001 | grep LISTEN | awk '{print $2}' | xargs sudo kill -9
@@ -598,7 +599,7 @@ Do animation logic once, ship it everywhere:
 
 Not to mention the possibility to vibe code very quickly this [kind of aggregates within st](https://github.com/JAlcocerT/DataInMotion/blob/libreportfolio/streamlit_portfolio_aggregate.py).
 
-See how quickly you can iterate through your ideas:
+See how quickly you can iterate through your ideas: *from a streamlit quick poc*
 
 ```sh
 uv run streamlit run streamlit_portfolio_aggregate.py
@@ -620,6 +621,8 @@ docker compose build --no-cache
 Then just make the built webapp container public with portainer+cloudflare with `libreportfolio-flask:8501` to `https://graficas.libreportfolio.fyi/`
 
 Record and Share: *because [people share even gsheets](https://x.com/vecinoinversor_/status/1674359289886957568)*
+
+![Custom matplotlib x fastAPI x Graficas LibrePortfolio](/blog_img/AIBI/fastapi-custom-matplotlib.png)
 
 ```sh
 ffmpeg -y -i untitled.mp4 -stream_loop -1 -i ImmortaYT.mp3 \
@@ -668,7 +671,7 @@ https://youtu.be/dtjb2OhEQcU?si=sXeXvjrF50WfU_P4
 
 {{< youtube "dtjb2OhEQcU" >}}
 
-And this
+And this:
 
 <!-- https://www.youtube.com/watch?v=O6TjkLwUAtg -->
 

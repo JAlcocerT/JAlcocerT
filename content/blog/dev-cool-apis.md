@@ -14,7 +14,7 @@ No matter if you are using APIs to BiP.
 
 To do some [Jira](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai/) tasks or to bring [real time life data to your SliDevJS PPT](https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/#conclusions) component.
 
-99% of the times, there is an API behind of that!
+99% of the times, there is an API behind of what you do!
 
 **Intro**
 

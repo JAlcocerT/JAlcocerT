@@ -2,14 +2,20 @@
 title: "How Ive used Github Actions CI/CD"
 date: 2024-11-17
 draft: false
-tags: ["Dev"]
+tags: ["Dev","GHCR vs Dockerhub"]
 description: 'Use Github Actions CI/CD in your workflow. From Static Pages to Apps Container Creation.'
 url: 'github-actions-use-cases'
 ---
 
-If you are familiar with container technology, you might wonder if there is **a way for [containers to get built](https://fossengineer.com/building-docker-container-images/) by themselves**.
+**Tl;DR**
 
-Thats were CI/CD comes into play, and in particular **Github Actions**.
+Automatic container images based on GHA.
+
+**Intro**
+
+If you are familiar with container technology, you might wonder if there is **a way for [containers to get built](https://fossengineer.com/building-docker-container-images/) by ,themselves'**.
+
+Thats were CI/CD comes into play, and in particular: **Github Actions**.
 
 To setup GHA is as simple as adding the proper `.github/workflows/ci_cd_config.yml` file with the use case for you.
 
@@ -17,20 +23,20 @@ It can be helpful for [Python](#actions-cicd-for-python-projects) or [Web projec
 
 ## Actions CI/CD for Python Projects
 
-
-Personal access tokens (classic) function like ordinary OAuth access tokens.
+Personal access tokens (classic) functions like ordinary OAuth access tokens.
 
 They can be used instead of a password for Git over HTTPS, or can be used to authenticate to the API over Basic Authentication.
 
 {{< callout type="info" >}}
-Whenever you want GHA to act in your name, you will require to provide a API Key (Generated at your profile dev settings and added to the repository settings as secret)
+Whenever you want GHA to act in your name, you will require to provide a API Key (Generated at your **profile dev settings** and added to the repository settings as secret)
 {{< /callout >}}
 
 1. Prepare the repository secret:
 
 ![alt text](/blog_img/dev/re-actions-secret.png)
 
-2. You can get it from the github profile, developer settings, PAT:
+2. You can get it from the github profile, **developer settings, PAT**:
+
 ![alt text](/blog_img/dev/re-actions-pat.png)
 
 3. And place it as secret and variables:
@@ -140,20 +146,24 @@ When the workflow has finished, you will see:
 Sample repo[ - multichat](https://github.com/JAlcocerT/Streamlit-MultiChat) or [DataChat](https://github.com/JAlcocerT/Data-Chat)
 {{< /callout >}}
 
-You can pull the image anytime from the [container registry](https://github.com/JAlcocerT/Data-Chat/pkgs/container/data-chat):
+You can pull the image anytime from the [container registry](https://github.com/JAlcocerT/Data-Chat/pkgs/container/data-chat):*the place where you have pushed all the docker images*
 
 ```sh
-docker pull ghcr.io/jalcocert/data-chat:realestate
+docker pull ghcr.io/jalcocert/data-chat:realestate #example of data-chat repo
 ```
 
 ![alt text](/blog_img/dev/re-actions-container-repo.png)
 
-> And use it accordingly with your [docker-compose](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/docker-compose.yml)
+And use it accordingly with your [docker-compose](https://github.com/JAlcocerT/Data-Chat/blob/main/Z_DeployMe/docker-compose.yml) - Meaning, that you dont have to build the container image, if you dont want to!
 
-You can also push **containers to Dockerhub from GHA**:
+{{< callout type="info" >}}
+Remember about going to your github https://github.com/JAlcocerT?tab=packages and make the images public if you whish
+{{< /callout >}}
+
+You can also push **containers to Dockerhub from GHA**: *you just need to provide the DockerHub PAT instead of the GHCR one*
 
 
-{{< details title="Github Actions Build - Push to DockerHUB 📌" closed="true" >}}
+{{< details title="Github Actions Build - Push to DockerHUB | Example 📌" closed="true" >}}
 
 ```yml
 #https://github.com/JAlcocerT/Py_Trip_Planner/blob/main/.github/workflows/ci-cd-dockerhub.yml
