@@ -3,8 +3,8 @@ title: "Webs for Restaurants x Astro SSR."
 #date: 2026-01-08
 date: 2025-12-23T13:20:21+01:00
 draft: false
-tags: ["SaaS x MultiTenant","Just-Cook","Hotels","Roadmap26"]
-description: "Websites for Restaurants. Million dollar idea in the Mediterranean."
+tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26"]
+description: "MultiTenant Websites for Restaurants. Million dollar idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
 

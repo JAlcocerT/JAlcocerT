@@ -448,3 +448,17 @@ See also:
 * https://github.com/nikolovlazar/frontend-horse-ui?ref=statichunt.com
 * web app ->> https://github.com/lazyfuhrer/Real-Estate-Web-App?tab=coc-ov-file#readme
 
+
+Test the lighthouse metrics:
+
+```sh
+./lighthouse-audit.sh https://test.entreagujaypunto.com
+
+
+Category             Desktop         Mobile         
+────────────────────────────────────────────────────────────
+Performance          85/100 ⚠️   72/100 ⚠️  
+Accessibility        93/100 ✅      93/100 ✅     
+Best Practices       100/100 ✅     100/100 ✅    
+SEO                  92/100 ✅      92/100 ✅    
+```

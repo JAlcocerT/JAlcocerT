@@ -367,6 +367,10 @@ Improve your lap times with RaceChrono
 
 The Go Pro GPS' Telemetry is great.
 
+**Next steps**
+
+If anything, when doing sth related to racing + Data *will probably be* a Desktop App to embed the cool telemetry seen here!
+
 ### Outro
 
 * https://upstash.com/

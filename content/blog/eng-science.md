@@ -1,12 +1,12 @@
 ---
 title: "Science is so Cool!"
-date: 2026-12-21T23:20:21+01:00
+date: 2026-12-19T23:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/jalcocert/streamlit-multichat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
 #   alt: "What about science?" # alt text
 #   caption: "Science Recap with LLMs" # display caption under cover
-tags: ["Tinkering","Atopile","3 Bodies vs SliDer Crank"]
+tags: ["Heat Transfer vs Electrical Engineering","Atopile","3 Bodies vs SliDer Crank"]
 description: 'A Science recap with LLMs'
 url: 'cool-science'
 ---

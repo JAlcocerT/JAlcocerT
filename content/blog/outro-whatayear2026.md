@@ -251,6 +251,9 @@ https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code
 
 14. Twitter / X powered by pystocks / stonks / libreportfolio.
 
+
+The continuation of `http://x-api-tweet-creator:5000`, graficas...Data In Motion etc
+
 ![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 
 ### Serverless
