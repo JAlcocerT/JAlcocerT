@@ -449,7 +449,7 @@ It all comes down to decap-cms dont recognizing nested media folders, which was 
 So...time to I though about creating sth that is going to be working without nested media folder, but will assign properly which photo gets rendered where. Like: https://astro.build/themes/details/photography-portfolio-template/
 
 
-Or...put a simple web app with a `/portal` to upload photos as vibe coded here: mama.entreagujaypunto.com
+Or...put a simple web app with a `/portal` to upload photos as vibe coded here: `mama.entreagujaypunto.com`
 
 ```sh
 make help
@@ -458,9 +458,13 @@ make help
 #npm install npm-run-all --save-dev
 #npm run dev:full #decapcms local + hugo local dev
 HUGO_BASEURL="http://jalcocert-x300-1" HUGO_PORT=1313 npm run dev:full
+ 
+hugo server --bind="0.0.0.0" --baseURL="http://100.86.82.103" --port=1319
 
 docker compose up -d uploader
 ```
+
+> This setup was quickly superseeded by a NextJS ISR as described here.
 
 ### From SaaS to LifeTime Products 
 
