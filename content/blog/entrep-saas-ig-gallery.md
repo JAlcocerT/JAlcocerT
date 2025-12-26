@@ -1,9 +1,9 @@
 ---
-title: "ISR Gallery with admin"
+title: "Photo Gallery with...admin"
 #date: 2026-01-06T23:20:21+01:00
 date: 2025-12-25T08:20:21+01:00
 draft: false
-tags: ["NextJS","RoadMap26","imgproxy x bcrypt","Cloudflare R2","Web Audit 101"]
+tags: ["NextJS CMS versus Astro Payload","RoadMap26","imgproxy x bcrypt","Cloudflare R2","Web Audit 101"]
 description: 'BiP an NextJS Photo Gallery with built-in editor for the upcoming PaaS offering.'
 url: 'do-your-instagram'
 ---
@@ -109,26 +109,88 @@ gh repo create entreagujaypunto-next-gallery --private --source=. --remote=origi
 
 This was [the brd](https://github.com/JAlcocerT/entreagujaypunto-next-gallery/blob/master/z-brd.md), the [clarifications](https://github.com/JAlcocerT/entreagujaypunto-next-gallery/blob/master/z-clarifications.md) and the [development plan](https://github.com/JAlcocerT/entreagujaypunto-next-gallery/blob/master/z-development-plan.md).
 
-And...the final result as per the walkthrough.
+And...the **final result** as per the walkthrough:
 
 ```sh
-
+make up-portainer
 ```
 
 **Intro**
 
 
 
+
+
+---
+
 ## Conclusions
-
-
 
 Ive learnt a couple of things with this one:
 
+1. [ISR](#going-isr) caching issue - Changed homepage to dynamic rendering to prevent build-time pre-rendering errors
+2. [IMGProxy](#cloudinary-vs-imgproxy)
+3. [About gallery](#about-galleries) types
 
-1. ISR caching issue - Changed homepage to dynamic rendering to prevent build-time pre-rendering errors
-2. IMGProxy
-3. About gallery types
+4. After not been happy with the result, I decided to try **Astro + PayloadCMS**
+
+```sh
+#sudo apt install gh
+gh auth login
+gh repo create entreagujaypunto-astro-payload --private --source=. --remote=origin --push
+
+#git init && git add . && git commit -m "Initial commit: Starting Astro photo gallery entreagujaypunto v2b" && gh repo create entreagujaypunto-astro-payload --private --source=. --remote=origin --push
+make up-container #x3!!! #mongo payloadcms astro
+```
+
+```mermaid
+graph TB
+    subgraph "Development Environment (Homelab)"
+        Editor["👤 Content Editor<br/>(You)"]
+        PayloadUI["🎨 PayloadCMS Admin UI<br/>localhost:3000"]
+        PayloadAPI["⚙️ PayloadCMS API<br/>(Docker Container)"]
+        MongoDB["🗄️ MongoDB<br/>(Docker Container)"]
+        LocalImages["📁 Local Images<br/>/uploads"]
+    end
+
+    subgraph "Build Process"
+        AstroBuild["🚀 Astro Build<br/>(Static Site Generator)"]
+        FetchData["📡 Fetch from<br/>PayloadCMS API"]
+    end
+
+    subgraph "Production (Static Hosting)"
+        StaticSite["🌐 Static Site<br/>(Cloudflare Pages/<br/>Netlify/Vercel)"]
+        CDN["⚡ CDN<br/>(Global Edge)"]
+    end
+
+    subgraph "Future: Cloud Storage"
+        R2["☁️ Cloudflare R2<br/>(Object Storage)"]
+        R2CDN["⚡ R2 Public URL<br/>(CDN Delivery)"]
+    end
+
+    Editor -->|"Upload Images<br/>& Metadata"| PayloadUI
+    PayloadUI --> PayloadAPI
+    PayloadAPI --> MongoDB
+    PayloadAPI -->|"Store Images"| LocalImages
+    
+    FetchData -->|"GET /api/galleries"| PayloadAPI
+    PayloadAPI -->|"Return JSON<br/>+ Image Paths"| FetchData
+    FetchData --> AstroBuild
+    LocalImages -->|"Copy to public/"| AstroBuild
+    
+    AstroBuild -->|"Generate HTML<br/>+ Optimized Images"| StaticSite
+    StaticSite --> CDN
+    CDN -->|"Serve to Users"| Users["👥 Visitors"]
+
+    PayloadAPI -.->|"Future: Upload"| R2
+    R2 -.-> R2CDN
+    R2CDN -.->|"Future: Direct Serve"| Users
+
+    style PayloadAPI fill:#0ea5e9
+    style AstroBuild fill:#ff5d01
+    style R2 fill:#f6821f,stroke-dasharray: 5 5
+    style R2CDN fill:#f6821f,stroke-dasharray: 5 5
+```
+
 
 ### About the Tech Stack
 

@@ -18,9 +18,10 @@ I think Reflex (exPicone), should be in between Streamlit and Flask in terms of 
 * https://reflex.dev/templates/dashboard/
 * https://github.com/reflex-dev/reflex/releases
 * https://reflex.dev/templates/
-    * https://github.com/reflex-dev/templates
-    * Like this BA sample app: https://build.reflex.dev/gen/28194790-f5cc-4625-bd30-cf2693890e08/
-    * Or this process monitor: https://build.reflex.dev/gen/e6293a74-4a47-44a3-bc1e-8966863feb46/
+
+* https://github.com/reflex-dev/templates
+* Like this BA sample app: https://build.reflex.dev/gen/28194790-f5cc-4625-bd30-cf2693890e08/
+* Or this process monitor: https://build.reflex.dev/gen/e6293a74-4a47-44a3-bc1e-8966863feb46/
 
 
 

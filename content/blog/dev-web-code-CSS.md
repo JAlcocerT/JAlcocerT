@@ -2,7 +2,7 @@
 title: "CSS like a Pro with Tailwind, DaisyUI..."
 date: 2024-08-12T23:20:21+01:00
 draft: false
-tags: ["Dev","DaisyUI","TailWind"]
+tags: ["Dev","DaisyUI","TailWind","Chakra","MUI"]
 summary: "CSS Frameworks I find amazing to make nice UI/X for Websites"
 ---
 
@@ -448,7 +448,7 @@ These frameworks address specific niches or are primarily designed for use withi
       * *Description:* A **classless** framework focusing on minimalism and simplicity; styles are applied directly to plain HTML elements.
   * **Material UI (MUI)**
       * *Description:* A comprehensive **React component library** that implements Google’s Material Design.
-  * **Chakra UI**
+  * **[Chakra UI](https://github.com/chakra-ui/chakra-ui)**
       * *Description:* A customizable, accessible, and modular **component library for React**.
   * **Others (Classless CSS)**
       * `simplecss.org/`
