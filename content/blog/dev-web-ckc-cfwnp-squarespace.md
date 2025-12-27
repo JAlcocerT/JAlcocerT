@@ -7,7 +7,9 @@ description: 'From SquareSpace to Cloudflare.'
 url: 'squarespace-to-cloudflare-website'
 ---
 
-**Intro:** From Firebase and Google Domains to Web a with Cloudflare Pages
+**Intro:** 
+
+From Firebase and Google Domains to Web a with Cloudflare Pages
 
 Continue with the free option.
 

@@ -1,8 +1,8 @@
 ---
 title: "[AIoT] How to use LangChain to Chat with Sensor Data"
-date: 2026-10-08T21:20:21+01:00
+date: 2026-01-20T21:20:21+01:00
 draft: false
-tags: ["Dev","AI","IoT","DB2Rest","ekuiper"]
+tags: ["AI","IoT","DB2Rest","ekuiper","Tech Talk"]
 description: 'Using LangChain with OpenAI API to get information about Temperature and Humidity of a DHT22 sensor'
 url: 'langchain-chat-with-sensor-data'
 ---

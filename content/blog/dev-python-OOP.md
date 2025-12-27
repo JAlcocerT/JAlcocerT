@@ -13,11 +13,9 @@ Long overdue topic: WTF is OOP?
 
 What I needed to get this going for good: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
 
-
 **Intro**
 
-
-https://mermaid.js.org/syntax/classDiagram.html
+* https://mermaid.js.org/syntax/classDiagram.html
 
 ```mermaid
 ---
@@ -48,9 +46,11 @@ classDiagram
     }
 ```
 
-**Intro**
+I was doubting when to go all in with the topic:
 
-https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
+1. https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
+
+2. 
 
 {{< callout type="info" >}}
 And with an 

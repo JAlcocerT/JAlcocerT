@@ -7,6 +7,12 @@ summary: 'Creating a secure Landing Page WebSite with no https errors'
 url: 'transforming-and-securing-a-website'
 ---
 
+**TL;DR**
+
+One of my first ten.
+
+**Intro**
+
 * Initial website `http://englishwithira.pl/`
     * **No https** / SSL certificates 💥
     * ~500 ms response time

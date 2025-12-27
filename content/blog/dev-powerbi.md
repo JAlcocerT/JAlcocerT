@@ -45,7 +45,9 @@ M is primarily for **data cleaning and preparation**.
 
 > It's not a full-fledged programming language like Python, but rather a specialized query language for data mashup and transformation.
 
-### DAX (Data Analysis Expressions)
+### DAX 
+
+Those Data Analysis Expressions!
 
 **DAX** is a formula language used in Power BI for **data analysis and modeling**. 
 

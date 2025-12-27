@@ -39,6 +39,12 @@ https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-an
 
 ![GoPro Metadata Speed trackday](/blog_img/karting/gopro-gps-trackday-speed.png)
 
+https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/#gopros-telemetry-data
+
+
+![Driver lap comparison based on Matplotlib](/blog_img/data-experiments/kart/matplotlib-driver-comparison.png)
+
+
 
 <!-- 
 https://youtu.be/tQOxnCz2lwM?si=XTgvyi-qnm3ZKiAl

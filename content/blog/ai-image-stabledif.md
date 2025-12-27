@@ -1,8 +1,8 @@
 ---
 title: "Generating Images with AI - Stable Diffusion updates"
-date: 2027-11-01
-draft: true
-tags: ["AI"]
+date: 2026-11-01
+draft: false
+tags: ["Gen-AI"]
 description: "Using Stable Difussion with DreamBooth"
 url: 'stable-difussion-free-generation'
 ---

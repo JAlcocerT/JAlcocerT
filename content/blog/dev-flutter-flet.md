@@ -27,7 +27,16 @@ Couple years ago I tried to do some Flet Apps with chatGPT, but the knowledge wa
 
 How about now?
 
-Is it there enought to create a desktop app to control the DJI Tello dron?
+Is it there enought to create a desktop app to control the **DJI Tello dron**?
+
+GPS BASED		
+ublox m8n		
+HGLRC M100 Mini	How to Install and Setup a GPS on your FPV Drone (4K) - YouTube	HGLRC M100 Mini GPS module - a small, cheap and accurate GPS module for all your FPV builds - YouTube
+F9P?		
+Lora GPS?		
+
+https://www.youtube.com/watch?v=dQeNONerxEU
+https://www.youtube.com/watch?v=ibNzG1tMblE
 
 **Intro**
 

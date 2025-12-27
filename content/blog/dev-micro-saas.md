@@ -66,8 +66,6 @@ Having a starting point with an idea is great.
 
 And a landing webpage is actually what a lot of people outthere are looking for.
 
-
-
 {{< details title="Vibe Coding a Modern Landing Page x TailwindCSS x VanillaJS | Setup  📌" closed="true" >}}
 
 Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`

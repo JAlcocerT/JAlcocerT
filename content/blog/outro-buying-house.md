@@ -2,10 +2,14 @@
 title: "Buying a house being in Data Analytics"
 date: 2025-04-17T11:20:21+01:00
 draft: false
-tags: ["Outro","Real Estate Analytics","LIBOR","Paint Costs"]
-description: 'What to keep in mind - what not to do and the data behind...When buying a house. Plus AI painting cost estimation.'
+tags: ["Outro","Real Estate Analytics","LIBOR","Paint Costs","Gantt"]
+description: 'What to keep in mind - what not to do and the data behind...When buying a house.'
 url: 'buying-house-data-analytics'
 ---
+
+**TL;DR**
+
+
 
 **Intro**
 
@@ -24,14 +28,25 @@ Make sure you understand also monetary aggregates. While taking a credit, you wi
 
 ## Property Costs Analytics
 
-A **gantt chart** is worth a zillion words:
+A **gantt chart** is worth a zillion words: *more when buying a house*
 
 ```mermaid
-pie title Property Adquisition Expenses Breakdown
-         "Property" : 100
-         "Maintenance" : 10
-         "Insurance" : 1
-         "Registrations" : 2
+gantt
+    title A Gantt Diagram
+    dateFormat YYYY-MM-DD
+    section Section
+        A task          :a1, 2014-01-01, 30d
+        Another task    :after a1, 20d
+    section Another
+        Task in Another :2014-01-12, 12d
+        another task    :24d
+```
+
+```mermaid
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
 ```
 
 
@@ -93,15 +108,24 @@ This is due to a series of legal and market developments that have made this typ
 
 The Historical Context: The "Frankowicz" Problem
 
-The kind of operation you're describing was common in Poland between 2004 and 2008. At the time, Swiss franc mortgages were popular because the interest rates were significantly lower than those for PLN loans. However, the borrowers received their loan in PLN, while the loan's value and repayment schedule were tied to the CHF exchange rate. 
+The kind of operation you're describing was common in Poland between 2004 and 2008. 
 
-After the 2008 financial crisis, the Swiss franc appreciated dramatically against the Polish zloty. This caused the total debt and monthly installments for these borrowers to skyrocket, often to an amount far exceeding the value of their homes and what they had originally borrowed. These borrowers, known as "Frankowicze," have been in a protracted legal battle with Polish banks ever since.
+At the time, Swiss franc mortgages were popular because the interest rates were significantly lower than those for PLN loans.
 
-***
+However, the borrowers received their loan in PLN, while the loan's value and repayment schedule were tied to the CHF exchange rate. 
+
+After the 2008 financial crisis, the Swiss franc appreciated dramatically against the Polish zloty. 
+
+This caused the total debt and monthly installments for these borrowers to skyrocket, often to an amount far exceeding the value of their homes and what they had originally borrowed.
+
+These borrowers, known as "Frankowicze," have been in a protracted legal battle with Polish banks ever since.
+
 
 Current Legal and Market Situation
 
-Due to the massive legal and financial issues this has created, Polish banks are no longer offering these kinds of foreign currency-indexed mortgages. The Polish Financial Supervision Authority (KNF) has also implemented regulations that make offering such loans unfeasible.
+Due to the massive legal and financial issues this has created, Polish banks are no longer offering these kinds of foreign currency-indexed mortgages. 
+
+The Polish Financial Supervision Authority (KNF) has also implemented regulations that make offering such loans unfeasible.
 
 A new operation would be:
 
@@ -125,8 +149,6 @@ This created a standardized way to price various financial products, from mortga
 1. Market-Based and Standardized
 
 LIBOR was seen as the most accurate reflection of the prevailing cost of money for banks. By using it as a benchmark, a bank could offer a loan with an interest rate of, for example, "LIBOR + 3%." This meant the borrower's interest rate would automatically adjust in sync with the global financial market, making the loan transparent and fair for both the lender and the borrower. It was a standardized and efficient way to price loans, as everyone knew what the "base" rate was.
-
-***
 
 2. Risk Management
 

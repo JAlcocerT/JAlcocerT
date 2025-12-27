@@ -2,10 +2,16 @@
 title: "[Review] Tapo P110"
 date: 2022-11-03
 draft: false
-tags: ["HomeLab"]
+tags: ["HomeLab","Smart Home"]
 description: Checking my first Smart Plug Connecting it with Home Assistant [HA].
 url: tapo-p110-review
 ---
+
+**Tl;DR**
+
+Testing the Tapo P110 smart plug with Home Assistant.
+
+**Intro**
 
 The TapoP110 needs **2.4G Wifi** connection (5G wont be discoverable).
 

@@ -7,6 +7,13 @@ description: 'Testing tools for Photo Management and better backup techniques.'
 url: 'photo-management-tools'
 ---
 
+
+**Tl;DR**
+
+Tinkering with selfhosted photo galleries.
+
+**Intro**
+
 After **traveling and tinkering** for a while with Photos and videos with [the Pixel 8 Pro](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/)...
 
 

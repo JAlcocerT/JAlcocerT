@@ -8,6 +8,10 @@ url: 'streamlit-is-cool'
 ---
 
 
+**Intro**
+
+Streamlit x Real estate agents!
+
 ## Streamlit Calculator and GenAI RE Agent
 
 I was building a simple web app RE calculator with Streamlit to explore:

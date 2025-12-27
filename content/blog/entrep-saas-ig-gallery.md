@@ -1,7 +1,7 @@
 ---
 title: "Photo Gallery with...admin"
-#date: 2026-01-06T23:20:21+01:00
-date: 2025-12-25T08:20:21+01:00
+date: 2026-01-02T23:20:21+01:00
+#date: 2025-12-25T08:20:21+01:00
 draft: false
 tags: ["NextJS CMS versus Astro Payload","RoadMap26","imgproxy x bcrypt","Cloudflare R2","Web Audit 101"]
 description: 'BiP an NextJS Photo Gallery with built-in editor for the upcoming PaaS offering.'

@@ -105,7 +105,7 @@ exiftool -ee ./GX030411.MP4 > output-kartdec-1a.txt
 
 Ive created a new ipynb with addititional *matplotlib based this time* graphs
 
-![alt text](/blog_img/data-experiments/kart/matplotlib-driver-comparison.png)
+![Driver lap comparison based on Matplotlib](/blog_img/data-experiments/kart/matplotlib-driver-comparison.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="Matplotlib x YFinance" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Using Matplotlib to generat TimeSeries Styles Snapshots" >}}
@@ -120,14 +120,38 @@ Ive created a new ipynb with addititional *matplotlib based this time* graphs
 {{< /cards >}}
 
 
-**Along the way** I found:
+**Along the way** I found about: https://github.com/time4tea/gopro-dashboard-overlay
 
-* https://github.com/time4tea/gopro-dashboard-overlay
+[![shields.io Stars](https://img.shields.io/github/stars/time4tea/gopro-dashboard-overlay)](https://github.com/time4tea/gopro-dashboard-overlay/stargazers)
+
 
 > GPL 3.0 | Programs to process GoPro MP4 & Generic GPX/FIT files and create video dashboards & maps
 
+```sh
+#python -m venv venv
+#venv/bin/pip install gopro-overlay
+uv init
+uv add gopro-overlay  #https://github.com/time4tea/gopro-dashboard-overlay/tree/main
+#pacman -S ttf-roboto
+apt install truetype-roboto
+apt install fonts-roboto
+```
 
-[![shields.io Stars](https://img.shields.io/github/stars/time4tea/gopro-dashboard-overlay)](https://github.com/time4tea/gopro-dashboard-overlay/stargazers)
+```sh
+#venv/bin/gopro-dashboard.py --gpx ~/Downloads/Morning_Ride.gpx --privacy 52.000,-0.40000,0.50 ~/gopro/GH020073.MP4 GH020073-dashboard.MP4
+
+uv run gopro-dashboard.py /home/jalcocert/Desktop/Py_RouteTracker/Z_GoPro/GX020410.MP4 /home/jalcocert/Desktop/Py_RouteTracker/Z_GoPro/GX020410-dashboard.MP4
+```
+
+And it worked briliantly: *with rencoding required, so sit back*
+
+But how could i not follow the suck-suck less approach:
+
+<!-- https://youtu.be/jqzzkexAx2I -->
+
+{{< youtube "jqzzkexAx2I" >}}
+
+![suck vs gopro dashboard overlay python](/blog_img/data-experiments/kart-data.png)
 
 
 ### Others
@@ -140,14 +164,7 @@ ACELEROMETER BASED:
 
 https://racechrono.com/article/faq/which-obd-ii-adapter-should-i-buy		
 
-GPS BASED		
-ublox m8n		
-HGLRC M100 Mini	How to Install and Setup a GPS on your FPV Drone (4K) - YouTube	HGLRC M100 Mini GPS module - a small, cheap and accurate GPS module for all your FPV builds - YouTube
-F9P?		
-Lora GPS?		
 
-https://www.youtube.com/watch?v=dQeNONerxEU
-https://www.youtube.com/watch?v=ibNzG1tMblE
 
 
 ### Android Apps
@@ -231,6 +248,8 @@ Think of it this way:  The ELM327 is like a specialized translator for OBD-II.  
 
 
 #### TorqueLite and TorquePro
+
+You can buy (or not) the Pro one.
 
 
 
@@ -375,6 +394,10 @@ Improve your lap times with RaceChrono
 
 The Go Pro GPS' Telemetry is great.
 
+And now you can plot it with garmin virb or with any ot the seen custom ways.
+
+To share your videos without loosing metadata, use localsend, [snapdrop](https://github.com/SnapDrop/snapdrop) or **[pairdrop](https://github.com/schlagmichdoch/pairdrop)**
+
 **Next steps**
 
 If anything, when doing sth related to racing + Data *will probably be* a Desktop App to embed the cool telemetry seen here!
@@ -384,7 +407,6 @@ If anything, when doing sth related to racing + Data *will probably be* a Deskto
 * https://upstash.com/
 
 > Serverless Data Platform (redis, vector DBs....)
-
 
 * https://github.com/DrewThomasson/sound-monitor
 

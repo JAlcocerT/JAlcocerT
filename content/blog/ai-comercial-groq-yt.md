@@ -26,16 +26,6 @@ How to **avoid falling into click baits** with Generative AI.
 
 Use **Groq and Streamlit** to summarize youtube videos *so that you know if its worth your time*!
 
-<!-- 
-* How to chat with websites(Streamlit) =>>> https://github.com/alejandro-ao/chat-with-websites
-https://www.youtube.com/watch?v=bupx08ZgSFg
-
-* GPT4 Clone -  LangChain Memory Tutorial | Building a ChatGPT Clone in Python =>> https://github.com/alejandro-ao/chagpt-cli-python
-https://www.youtube.com/watch?v=Cwq91cj2Pnc
-
----
---- -->
-
 The API offered by 'Groq, Inc.' for their Language Processing Unit (LPU) hardware - AI hardware specifically designed to accelerate performance for natural language processing (NLP) tasks.
 
 Thanks to the **Groq LPU API** we have a programmatic way for developers to interact with the LPU and leverage its capabilities for their applications.
@@ -60,9 +50,6 @@ See my [Forked Repository **phiData**](https://github.com/JAlcocerT/phidata/tree
 {{< /callout >}}
 
 
-<!-- - You will need an **API key from Groq** to use the project - The models might be open, but you wont have full local control over them and send queries to a 3rd Party ❎
-  * {{< newtab url="https://console.groq.com/keys" text="Get the Groq API Keys" >}}
-  * But the LLMs that they run are open -->
 
 | **Information**                | **Details**                                                                                                     |
 |--------------------------------|------------------------------------------------------------------------------------------------------------------|

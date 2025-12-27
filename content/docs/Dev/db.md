@@ -25,6 +25,8 @@ The structured vs object/JSON differenciation is also important...
 
 > Agpl3.0 |  Database diagrams editor that allows you to visualize and design your DB with a single query. 
 
+2. DBCode
+
 
 ## OLAP and Databases
 
@@ -33,7 +35,7 @@ I will focus this section on the D&A goal of databases, which is to **READ and a
 
 ### SQL Tricks for OLAP
 
-https://jalcocert.github.io/JAlcocerT/sql-data-analytics/
+[SQL for D&A](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/) is awsome.
 
 But ultimately, make sure to keep these 5 strategies with you:
 

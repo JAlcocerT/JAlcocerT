@@ -3,9 +3,16 @@ title: "The Mechanism behind Cyclying"
 date: 2026-02-15T23:20:21+01:00
 draft: false
 tags: ["DA","Career","MatterJS"]
-description: 'Back.'
+description: 'Im Back.'
 url: 'cycling-and-the-4-bars-mechanism'
 ---
+
+
+**Tl;DR**
+
+
+**Intro**
+
 
 https://jalcocert.github.io/JAlcocerT/slider-crank-mechanism/
 

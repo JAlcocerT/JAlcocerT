@@ -7,7 +7,13 @@ summary: 'Migrating Wordpress to Cool Websites. Faster, Cleaner, Better SEO and 
 url: 'wordpress-migration-to-ssg'
 ---
 
+
+**TL;DR**
+
 I was talking with my father about websites the other day and...
+
+
+**Intro**
 
 I realized how much **more we can do with SSG's than with wordpress**.
 

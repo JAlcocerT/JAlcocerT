@@ -7,6 +7,9 @@ description: 'How to use SpaCy with Python as NER. Compared with LLMs and Detoxi
 url: 'nlp-tools'
 ---
 
+
+**Intro**
+
 The first time I got the chance to **use a Natural Language Processing model** was with [**detoxify**](https://pypi.org/project/detoxify/), which classifies comments with PyTorch and Transformers.
 
 Kind of **sentiment analysis tool**.

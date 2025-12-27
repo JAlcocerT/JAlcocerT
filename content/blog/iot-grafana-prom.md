@@ -1,19 +1,20 @@
 ---
 title: "Grafana Monitoring: Prometheus"
 date: 2026-10-09
+draft: false
 tags: ["Homelab","Docker","Self-Hosting","Iotawatt","Prometheus vs Graphite","Grafana vs TelemetryHarbour"]
 description: 'Grafana works for IoT Same as for Monitoring a HomeLab'
 url: 'selfhosting-grafana'
 ---
 
+
+**Tl;DR**
+
 * https://telemetryharbor.com/
 * https://docs.telemetryharbor.com/docs/Integrations/home-assistant/
 
 
-https://docs.telemetryharbor.com/docs/oss-self-hosted/
-
-
-**Tl;DR**
+* https://docs.telemetryharbor.com/docs/oss-self-hosted/
 
 
 **Intro**

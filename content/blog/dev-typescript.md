@@ -29,7 +29,7 @@ You can get to know the Docs of any **npm package** that uses typescript: <https
 
 ### TS x PB
 
-You could even use TypeScript with Pocketbase.
+You could even use **TypeScript with Pocketbase**.
 
 > And avoid writing Python code at all
 

@@ -7,7 +7,11 @@ description: 'Flask WebApps, IoT Sensors, ChartJS and Web sockets. Deployed as c
 url: 'web-apps-with-flask'
 ---
 
-For quite some time I wanted to give it a try to Flask (as an alternative to Streamlit) and Websockets.
+**Tl;DR**
+
+For quite some time I wanted to give it a try to Flask (as an alternative to Streamlit) and **Websockets**.
+
+**Intro**
 
 * https://github.com/pallets/flask/
   * https://pypi.org/project/Flask/
@@ -39,7 +43,7 @@ These are the main files and **structure of a Python Flask Project**:
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
-```py
+```sh
 python3 app.py
 ```
 

@@ -38,7 +38,7 @@ I discovered **[UV](https://github.com/astral-sh/uv) package manager** with a [D
 
 Could not resist to add it to [this project, as an example](https://github.com/JAlcocerT/Streamlit-MultiChat?tab=readme-ov-file#getting-started)
 
-Its based on RUST:
+Its based on RUST: *in case you care*
 
 ```sh
 curl -LsSf https://astral.sh/uv/0.7.7/install.sh | sh

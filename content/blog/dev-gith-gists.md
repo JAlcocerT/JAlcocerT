@@ -7,6 +7,9 @@ url: 'github-gists'
 summary: 'How to use Github and Github gist as free image hosting.'
 ---
 
+
+**Intro**
+
 In VSCode, the **source control graph** can guide you on whats going on.
 
 

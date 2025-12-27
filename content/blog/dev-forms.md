@@ -6,6 +6,13 @@ tags: ["Dev","Webs","Entrepreneuring","MailerLite Setup"]
 description: "Easy Forms/Newsletters for Websites: MailerLite, FormBricks and more"
 ---
 
+
+**Tl;DR**
+
+SSG + Forms = amazing!
+
+**Intro**
+
 To give some cool functionality to static websites, we can use **some tricks**.
 
 One of them is make it look cool with CSS:

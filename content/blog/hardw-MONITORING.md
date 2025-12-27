@@ -7,6 +7,9 @@ description: 'Container Server Monitoring with Beszel. Compared with Netdata, Gr
 url: 'how-to-setup-beszel-monitoring'
 ---
 
+
+**Intro**
+
 Recently I was setting a VPS to [software for weddings](https://jalcocert.github.io/JAlcocerT/software-for-weddings/).
 
 And i found this on reddit - https://www.reddit.com/r/selfhosted/comments/1eb4bi5/i_just_released_beszel_a_server_monitoring_hub/

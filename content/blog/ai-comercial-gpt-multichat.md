@@ -11,11 +11,9 @@ description: 'More than a ChatGPT Clone with Streamlit. Creating the Streamlit-M
 url: 'create-streamlit-chatgpt'
 ---
 
-<!-- * Using chatgpt with your own data: langchain + OPENAI API
-https://www.youtube.com/watch?v=9AXP7tCI9PI -->
+**TL;DR**
 
-
-
+Am i good enough at python web apps to create my own gpt clone?
 
 ## A MultiChat with Streamlit
 

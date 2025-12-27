@@ -6,9 +6,6 @@ next: docs/
 draft: false
 ---
 
-https://github.com/mifi/lossless-cut
-
-https://github.com/HandBrake/HandBrake - an OSS UI for Video compression (which does not use FFMPEG)
 
 1. https://github.com/OpenCut-app/OpenCut
 
@@ -52,6 +49,10 @@ Manim is the tool for deep mathematical visualization with powerful programmatic
 
 {{< youtube "x4tzWt6-I7c" >}}
 
+
+* https://github.com/mifi/lossless-cut
+
+* https://github.com/HandBrake/HandBrake - an OSS UI for Video compression (which does not use FFMPEG)
 
 
 ---

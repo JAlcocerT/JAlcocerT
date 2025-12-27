@@ -8,6 +8,8 @@ url: asrock-x300-home-server
 math: true
 ---
 
+**Intro**
+
 It is about **time to put everything together**.
 
 This year, I got this **compact ~2L box** as my new personal computer (probably server at some point).

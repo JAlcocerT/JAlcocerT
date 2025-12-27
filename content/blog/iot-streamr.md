@@ -10,6 +10,7 @@ url: 'streamr-network'
 
 **Tl;DR**
 
+Tinkering with Streamr, the decentralized compute network.
 
 **Intro**
 

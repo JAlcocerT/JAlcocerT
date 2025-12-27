@@ -7,6 +7,8 @@ summary: 'How to get started with Astro as SSG to create Webs. NPM & Node Setup.
 url: 'using-astro-as-website'
 ---
 
+**Intro**
+
 To use **ASTRO**, you just need **2 things**: NPM and NodeJS.
 
 * https://docs.npmjs.com/downloading-and-installing-node-js-and-npm

@@ -16,6 +16,7 @@ https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/
 
 
 **Crawl4AI** is an **open-source web crawler and scrapper** designed for large language models (LLMs) and AI applications.
+
 - The repository has received 14.7k stars and 1k forks so far
 - The project is licensed under the **Apache-2.0 license**.
 

@@ -159,7 +159,7 @@ message = client.messages.create(
 
 This is it.
 
-Now you have one more LLM to play with via API queries!
+Now you have **one more LLM to play with** via API queries!
 
 {{< callout type="info" >}}
 See [**Streamlit-Multichat** Source Code](https://github.com/JAlcocerT/Streamlit-MultiChat) 💻

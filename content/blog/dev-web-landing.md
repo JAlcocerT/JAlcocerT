@@ -7,6 +7,9 @@ description: 'Creating Landing Web Pages with Astro SSG - Ourika. The last site 
 url: 'creating-landing-pages-astro'
 ---
 
+
+**Intro**
+
 Few months ago I was doing a secure landing page as covered [here](https://jalcocert.github.io/JAlcocerT/transforming-and-securing-a-website/)
 
 Now, after doing [some travel](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), got the chance to help another person.

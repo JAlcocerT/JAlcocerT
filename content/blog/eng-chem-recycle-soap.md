@@ -2,11 +2,17 @@
 title: "Chemistry at home - Making soap while recycling"
 date: 2025-02-19
 draft: false
-tags: ["Outro"]
+tags: ["Outro","Katex"]
 description: 'Chem is open source! Learn how to make soap at home with lye, while avoiding waste.'
 url: 'making-soap-at-home'
 math: true
 ---
+
+**Tl;DR**
+
+Just making soap and testing Katex
+
+**Intro**
 
 Normally I like to write here about *code recipes*.
 

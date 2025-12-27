@@ -27,7 +27,11 @@ https://supabase.com/ -->
 
 ## Supabase: A Powerful Open-Source Firebase Alternative
 
-Supabase has emerged as a compelling open-source alternative to Google's Firebase, offering a comprehensive suite of tools for building web and mobile applications.  It aims to provide developers with a similar feature set to Firebase, but with the added benefits of open-source transparency, flexibility, and self-hosting options.  This post explores what you can do with Supabase and whether it's a true Firebase replacement.
+Supabase has emerged as a compelling open-source alternative to Google's Firebase, offering a comprehensive suite of tools for building web and mobile applications. 
+
+It aims to provide developers with a similar feature set to Firebase, but with the added benefits of open-source transparency, flexibility, and self-hosting options.
+
+This post explores what you can do with Supabase and whether it's a true Firebase replacement.
 
 ### What Can You Do with Supabase?
 

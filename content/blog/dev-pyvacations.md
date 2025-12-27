@@ -1,6 +1,6 @@
 ---
 title: "Vacations with Python and LibreChat."
-date: 2026-01-15T19:20:21+01:00
+date: 2026-09-15T19:20:21+01:00
 draft: false
 tags: ["Django","PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs","Scrap"]
 summary: 'Where am I going next? With Vibe Planning.'

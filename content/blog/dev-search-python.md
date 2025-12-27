@@ -1,6 +1,6 @@
 ---
 title: "Programatic Web Search"
-date: 2026-02-09
+date: 2026-10-09
 draft: false
 tags: ["Dev","DuckDuckGo","SerpAPI vs SerpBear","SimilarWeb"]
 url: 'search-web-with-python'

@@ -7,7 +7,11 @@ summary: 'Creating a responsive Astro site - Real Estate Oriented'
 url: 'astro-web-setup'
 ---
 
+**TL;DR**
+
 How to make a **cool website for Real Estate?**
+
+**Intro**
 
 **[Astro](https://jalcocert.github.io/JAlcocerT/create-your-website/) SSG** is the Answer.
 

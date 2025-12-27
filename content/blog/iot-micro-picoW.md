@@ -7,7 +7,9 @@ description: 'Using the Pico W [Microcontrollers] with Home Assistant.'
 url: 'pico-w'
 ---
 
-**TL;DR** We will get few IoT scripts working via [PicoW](#picow-and-micropython) + [MQTT](#picow-and-mqtt) + [HA](#ha-x-mqtt) 
+**TL;DR** 
+
+We will get few IoT scripts working via [PicoW](#picow-and-micropython) + [MQTT](#picow-and-mqtt) + [HA](#ha-x-mqtt) 
 
 **Intro**
 

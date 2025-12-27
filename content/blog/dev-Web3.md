@@ -7,10 +7,13 @@ description: 'Building your first Web 3 from scratch.'
 url: 'guide-web3'
 ---
 
+**TL;DR**
 
 *Everyone* talks about Web3. 
 
 I was wondering if I could use some knowledge that I got while creating static sites with HUGO and its actually pretty simple.
+
+**Intro**
 
 Along the way, got to understand the difference between:
 

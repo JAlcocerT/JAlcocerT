@@ -1,6 +1,6 @@
 ---
 title: "OSS-AI Generated Videos with Remotion"
-date: 2027-12-11T23:20:21+01:00
+date: 2026-12-11T23:20:21+01:00
 draft: true
 tags: ["Outro"]
 # cover:

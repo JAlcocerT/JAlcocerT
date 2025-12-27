@@ -7,6 +7,9 @@ description: 'More cool Streamlit WebApps'
 url: 'streamlit-apps'
 ---
 
+
+**intro**
+
 Streamlit is part of [Snowflake](https://www.snowflake.com/en/blog/snowflake-to-acquire-streamlit/).
 
 Which you might have heard on the [BigData](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/) context.

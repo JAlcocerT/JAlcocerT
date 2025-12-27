@@ -107,30 +107,6 @@ In summary, for quick music creation, use ready AI platforms; for deeper program
 [2](https://pyseek.com/2025/04/generate-music-using-python-deep-learning/)
 [3](https://github.com/ayeshabasit/AI-Music-Generator)
 
-<!-- 
-```
-conda create -n textgen python=3.10.9
-conda activate textgen
-install pytorch: pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
-git clone https://github.com/oobabooga/text-generation-webui
-cd text-generation-webui
-pip install -r requirements.txt
-python server.py
-# download model
-# refresh model list
-# load model
-# switch to chat mode
-```
-
-
-{{< youtube "lBsv-ssPJpo" >}}
-
-
-{{< youtube "OM2FyFxzeRM" >}}
-
-<!-- 
-https://www.youtube.com/watch?v=OM2FyFxzeRM -->
-
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/local-ai-audio" title="Local AI Audio 101 ↗ " >}}

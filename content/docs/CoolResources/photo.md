@@ -52,11 +52,10 @@ sudo apt install dupeguru
 
 5. For background removal, try...
 
+
 The best open source background removal tool currently known is **withoutbg**, an open-source application that works locally on your device without uploading images to the cloud, ensuring privacy.
 
 It offers a Python package and an API and is available under the MIT license. 
-
-This tool focuses on background removal for images, providing effective AI-powered extraction with the advantage of running totally offline for enhanced security.[1]
 
 Other notable open-source tools or models often mentioned include Python libraries such as **rembg** and AI models hosted on platforms like Hugging Face, but withoutbg stands out for local operation and ease of use.
 
@@ -75,8 +74,10 @@ In summary:
 | GIMP with plugin | GUI       | Manual and semi-automated removal | GPL         | Yes          |
 | remove.bg   | SaaS/Online   | High accuracy, easy to use       | Proprietary | No           |
 
-Withoutbg is the best if you want open-source, local, privacy-focused background removal.
+Withoutbg is the best if you want open-source, local, privacy-focused background removal
 
-https://github.com/danielgatis/rembg
+* https://github.com/withoutbg/withoutbg
+
+* https://github.com/danielgatis/rembg
 
 > MIT |  Rembg is a tool to remove images background 

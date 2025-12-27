@@ -176,6 +176,12 @@ volumes:
 
 ## Conclusions
 
+As easy as it gets.
+
+Get Ollama running with a local model
+
+Connect the containers via same network and enjoy!
+
 ### FAQ
 
 #### How to use Github Actions to Build my Streamlit Docker Image

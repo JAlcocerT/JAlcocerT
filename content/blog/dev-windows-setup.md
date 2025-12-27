@@ -7,6 +7,11 @@ summary: 'How to install and use Chocolatey with Windows to make any format C si
 url: 'how-to-use-chocolatey-windows'
 ---
 
+**Tl;DR**
+
+Making programmatic install on windows as if we are on Linux
+
+**Intro**
 
 For some time already, I have been improving my [guide on Linux](https://github.com/JAlcocerT/Linux).
 
