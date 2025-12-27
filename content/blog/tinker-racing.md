@@ -88,8 +88,6 @@ You can also open it with **Google Colab**: [![Open in Google Colab](https://col
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 
-[![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
-
 2. Get exiftool ready: *this allow to extract the GPS info from the MP4*
 
 ```sh
@@ -120,6 +118,16 @@ Ive created a new ipynb with addititional *matplotlib based this time* graphs
   {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
   {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
 {{< /cards >}}
+
+
+**Along the way** I found:
+
+* https://github.com/time4tea/gopro-dashboard-overlay
+
+> GPL 3.0 | Programs to process GoPro MP4 & Generic GPX/FIT files and create video dashboards & maps
+
+
+[![shields.io Stars](https://img.shields.io/github/stars/time4tea/gopro-dashboard-overlay)](https://github.com/time4tea/gopro-dashboard-overlay/stargazers)
 
 
 ### Others

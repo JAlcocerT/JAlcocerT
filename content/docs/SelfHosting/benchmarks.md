@@ -72,7 +72,7 @@ We can use these tools to benchmark our internet speed:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/speedtesttracker" title="SpeedTestTracker | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-You could also have a look to Monitor solutions:
+You could also have a look to [Monitor solutions for internet](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/#internet-monitoring):
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" >}}

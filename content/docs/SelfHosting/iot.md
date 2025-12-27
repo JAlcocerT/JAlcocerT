@@ -47,17 +47,14 @@ Plot your IoT Data with Grafana or any of these [BI Tools](https://jalcocert.git
 
 ## Sensors
 
-1. The DHT sensors are quite popular and very simple to get started.
+1. The DHT sensors are quite popular and very simple to get started:
 
 ![PicoW with DHT22](/blog_img/iot/picoW/picow-dht22.png)
 
-2. MLX
+2. MLX:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/" title="MLX90614 with a Pi" image="/blog_img/iot/sensor-mlx.jpg" subtitle="Infrared (Contactless) Temperature Sensor Project with a Raspberry" >}}
-{{< /cards >}}
-
-{{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/pico-w/#ha-x-mqtt" title="HA x MQTT x PicoW" image="/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png" subtitle="Testing a PicoW with Home Assistant" >}}
 {{< /cards >}}
 

@@ -174,7 +174,7 @@ curl -6 ifconfig.me #ipv6 info
 
 {{< cards cols="3" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-speed-test" title="OST | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/speedtest-tracker" title="Speedtest Tracker | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 

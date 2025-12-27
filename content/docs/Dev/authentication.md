@@ -221,7 +221,7 @@ Use any of the following to not just [authenticate](#authentication), but **veri
 
 Sometimes, you can get away with 'serverless' authentication: I mean, [PB works with FastAPI and Astro SSG](https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/)
 
-But for pure [serverless](https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/):
+But for pure [serverless](https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/): *google firebase authentication worked great for me*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/social-signin-101/#1-firebase-authentication-" title="Using Firebase Authentication" image="/blog_img/entrepre/public-build/slidev-editor/firebaseauth-1.png" subtitle="Together with the journal SSG" >}}

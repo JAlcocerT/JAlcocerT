@@ -20,8 +20,7 @@ The aim is to enhance the DIY offer, *for people that are not ready for [the DWY
 
 **Intro**
 
-
-This post is going to be avolving along 2026.
+This post is going to be evolving along 2026.
 
 So consider it a WIP until the year has ended - or AI took over civilization :)
 
@@ -64,6 +63,12 @@ The **tech stack**:
 
 
 ## The journey to create N books
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/" title="e-books | Docs" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="Scrapping job boards" >}}
+  {{< card link="https://diy.jalcocertech.com" title="D&A e-book" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Start your D&A Career" >}}
+{{< /cards >}}
 
 After having a custom learning journey and putting together this:
 

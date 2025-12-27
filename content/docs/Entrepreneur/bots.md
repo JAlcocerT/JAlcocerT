@@ -104,6 +104,10 @@ To this: *as seen [here](https://github.com/JAlcocerT/diy-landing-boilerplate/tr
 ![Typescript x Astro x md knowledge x OpenAI ChatBot](/blog_img/dev/diy-landing-bot.png)
 
 
+* https://jalcocert.github.io/JAlcocerT/custom-re-rag/#about-rag-and-bots
+
+![Vibe Coded QnA Real Estate ChatBot](/blog_img/biz/RE/vibe-coded-re-chatbot.png)
+
 <!-- 
 
 https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page
