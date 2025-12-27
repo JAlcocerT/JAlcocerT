@@ -16,7 +16,7 @@ If you are building, dont be scare of the http **status codes**: https://it-tool
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" >}}
 {{< /cards >}}
 
-And see these [tools for internet monitoring](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#internet-monitoring-tools)
+And see these [tools for **internet monitoring**](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitoring/#internet-monitoring-tools)
 
 You can also make a avg internet speed test when [downloading OSS OS via P2P](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry/) or when uploading your videos to youtube.
 
@@ -110,7 +110,6 @@ Which can be embeded into your posts and websites via its API, like:
 
 Another option, is **Kener**
 
-
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
@@ -137,3 +136,77 @@ Or **[Tianji](https://jalcocert.github.io/JAlcocerT/how-to-setup-beszel-monitori
 ![Kener UI](/blog_img/selfh/HomeLab/statuspages/kener-manager-ui.png) 
 ![Tianji Server Monitoring](/) 
 -->
+
+
+## Internet Monitoring
+
+Whether you [have a homelab](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/) or you are just tired of you ISP, you might need these.
+
+* https://www.speedtest.pl/
+* See also `speed.cloudflare.com`
+
+{{% details title="Testing Internet Connectivity" closed="true" %}}
+
+```sh
+ip addr show
+hostname -I
+
+#sudo apt-get install net-tools
+#ifconfig
+
+ping -c 4 192.168.3.1 #gateway
+ping 9.9.9.9 #quad9
+```
+
+```sh
+sudo apt-get install dnsutils -y #dns resolution
+nslookup github.com 
+dig google.com
+```
+
+```sh
+curl -sS https://ipinfo.io/json #the command to use
+curl -sS http://ip-api.com/json/ #provides info about country, ISP, ...
+curl -6 ifconfig.me #ipv6 info 
+```
+
+{{% /details %}}
+
+{{< cards cols="3" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-speed-test" title="OST | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+1. Open Speed Test: *OST*
+
+We can use [OpenSpeedTest](https://jalcocert.github.io/RPi/posts/self-internet-monit/#openspeedtest) together with Container and Portainer to deploy the docker compose.
+
+Just go to **OST UI** dashboard at: `localhost:6040`
+
+![OpenSpeedTest](/blog_img/hardware/TPLink4G-OpenSpeedTest.png)
+
+2. SpeedTest CLI:
+
+```sh
+sudo apt-get install speedtest-cli
+speedtest-cli #speedtest-cli --simple
+#npm install -g fast-cli
+```
+
+![Speed Test CLI connected via 4g](/blog_img/hardware/speedtest-cli-4g.png)
+
+3. Speed Test Tracker:
+
+I mentioned about **[SpeedTest-Tracker](https://github.com/alexjustesen/speedtest-tracker)**, which we can use to **test our internet connectivity**:
+
+```sh
+echo -n 'base64:'; openssl rand -base64 32; #generte API key
+```
+
+Now the **container image** is provided by lscr instead of GHCR:
+
+
+> Go to the UI at: `http://192.168.1.101:8089/` with [default creds](https://docs.speedtest-tracker.dev/security/authentication) `admin@example.com` and `password`
+
+![SpeedtestTracker](/blog_img/hardware/TPLink4G-SpeedTestTraker.png)

@@ -830,7 +830,6 @@ sudo apt-get install stress-ng
 sudo stress --cpu  8 --timeout 120
 ```
 
-
 {{% /details %}}
 
 
@@ -855,6 +854,8 @@ nslookup github.com
 dig google.com
 ```
 
+See also `speed.cloudflare.com` or as an alternative, via CLI:
+
 ```sh
 sudo apt-get install speedtest-cli
 speedtest-cli #speedtest-cli --simple
@@ -868,14 +869,11 @@ curl -6 ifconfig.me #ipv6 info
 
 {{% /details %}}
 
-
-
 ### How to use a RPi - Without a RPi
 
 [A raspberry Pi](https://jalcocert.github.io/RPi/) inside a container - https://github.com/ptrsr/pi-ci
 
 > A Raspberry **Pi emulator in a Docker image** that lets developers easily prepare and flash RPi configurations.
-
 
 ### How I Created the diagrams
 
@@ -889,9 +887,10 @@ Its crazy to see how much PCs have evolved in few decades.
 
 Categorizing the details about each PC and laptop by its specifications and timeline:
 
-### Desktop PCs
+**Desktop PCs**
 
-#### 1. Primer PC Casa
+1. Primer PC Casa
+
 - **Date Purchased**: November 2001
 - **CPU**: Intel Celeron Coppermine 958 MHz
 - **Motherboard**: Gigabyte GA-6VXC7-4x(p), Chipset VIA VT82C694x Apollo Pro B3A
@@ -904,7 +903,8 @@ Categorizing the details about each PC and laptop by its specifications and time
 
 ![alt text](/blog_img/hardware/ati-hd5670.png)
 
-#### 2. Mi Primer PC
+
+2. Mi Primer PC
 - **Date Purchased**: November 2005
 - **Update**: October 2009
 - **CPU**: AMD Athlon 64 3200+ (90nm)
@@ -914,7 +914,7 @@ Categorizing the details about each PC and laptop by its specifications and time
 - **Monitor**: LG1717s, 
 * Updated to: AMD Athlon 5600x2,gigabyte ga-ma770-ds3, 2x1GB DDR2 667mhz, NVIDIA Gigabyte 8600GT, gigabyte ga-ma770-ds3
 
-#### 3. Mi Segundo PC
+3. Mi Segundo PC
 - **Date Purchased**: May 2014
 - **CPU**: AMD Athlon 'x4' 750k (28nm)
 - **Motherboard**: gigabyte F2A55M-DS2   FM2 A55 micro atx
@@ -922,37 +922,38 @@ Categorizing the details about each PC and laptop by its specifications and time
 - **Graphics**: Nvidia Gigabyte 8600 GT
 - **Storage**: Adata SU800 512 GB - OS
 
-### Laptops
+**Laptops**
 
-#### 1. Portatil Corporation
+1. Portatil Corporation
 - **CPU**: Intel i5 8250U x4 (14nm)
 - **RAM**: 4 GB 1600 MHz DDR3
 - **Storage**: 512 GB HDD
 - **Graphics**: Intel HD Graphics 5500
 
-#### 2. Lenovo Ideapad 100
+2. Lenovo Ideapad 100
 - **Date Purchased**: July 2016
 - **CPU**: Intel i3 5005U x2 (14 nm)
 - **RAM**: 4 GB 1600 MHz DDR3
 - **Storage**: HD 250 GB
 
-#### 3. Dell Inspiron Mini 1018
+3. Dell Inspiron Mini 1018
 - **Date Purchased**: 2012
 - **CPU**: Intel Atom N455 1.67 GHz
 - **RAM**: 1 GB
 - **Storage**: 320 GB HDD
 
-#### 4. Portatil Peq Lenovo Blanco
+4. Portatil Peq Lenovo Blanco
 - **Date Purchased**: September 2019
 - **CPU**: Celeron N3060
 - **RAM**: 4 GB
 - **Storage**: 500 GB HDD
 
-#### Portatil US - HP ProBook 5420s
+Portatil US - HP ProBook 5420s
 - **CPU**: Intel Celeron x2 P4500 (32nm)
 - **RAM**: 3 GB DDR3
 
-#### Custom Build in Aerocool CS105BK Case
+Custom Build in Aerocool CS105BK Case:
+
 - **Case**: CAJA SEMITORRE AEROCOOL CS105BK
   - **Dimensions**: 187 x 361 x 355 mm
   - **GPU Clearance**: Up to 320 mm

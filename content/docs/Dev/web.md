@@ -211,11 +211,19 @@ You can have your own static deployment into a web server or use any of these *s
 > Per month, and at least at the time of writing. This might (or not) change.
 
 ```sh
+npm install firebase-tools
+npx firebase-tools --version
+
+npx firebase-tools login
+npx firebase-tools init
+
 #npm install -g firebase-tools
 #firebase login
 
 firebase init #configure files for firebase hosting / public directory is normall public for HUGO and dist for Astro/nodes
 firebase deploy #you will get something like -> https://jalcocertech.web.app/
+#firebase hosting:channel:list
+#firebase hosting:channel:delete <channelId>
 ```
 
 2. You can also try with [Cloudflare **Workers and Pages**](https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/#faq) or [Github Pages](https://jalcocert.github.io/JAlcocerT/how-to-use-github-pages/).

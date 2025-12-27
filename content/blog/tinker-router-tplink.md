@@ -135,7 +135,7 @@ More [Docker config files](https://github.com/JAlcocerT/Docker/tree/main/IoT/Int
 
 We can use [OpenSpeedTest](https://jalcocert.github.io/RPi/posts/self-internet-monit/#openspeedtest) together with Container and Portainer to deploy the docker compose.
 
-Just go to OST UI dashboard at: `localhost:6040`
+Just go to **OST UI** dashboard at: `localhost:6040`
 
 ![OpenSpeedTest](/blog_img/hardware/TPLink4G-OpenSpeedTest.png)
 

@@ -139,7 +139,9 @@ gh auth login
 gh repo create entreagujaypunto-astro-payload --private --source=. --remote=origin --push
 
 #git init && git add . && git commit -m "Initial commit: Starting Astro photo gallery entreagujaypunto v2b" && gh repo create entreagujaypunto-astro-payload --private --source=. --remote=origin --push
-make up-container #x3!!! #mongo payloadcms astro
+#make up-container #x3!!! #mongo payloadcms astro
+
+npx wrangler pages project create entreagujapunto #just astro ssg
 ```
 
 ```mermaid
