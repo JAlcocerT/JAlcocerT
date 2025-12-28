@@ -263,6 +263,8 @@ This will grant that whenever you push, the workers are doing the **right steps 
 
 ![CF WnP Settings with Astro ](/blog_img/web/Cloudflare/CF-Settings-Astro.png)
 
+And optionally, customize your deployment with a custom domain:
+
 ![alt text](/blog_img/web/Cloudflare/gitlab-cf-customdomain.png)
 
 {{% /steps %}}

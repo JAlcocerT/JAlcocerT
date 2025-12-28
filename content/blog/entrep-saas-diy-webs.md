@@ -1,9 +1,9 @@
 ---
-title: "A SaaS on Top of PaaS x (SSG + CMS) x Show a Problem"
-date: 2026-01-15T23:20:21+01:00
+title: "Attraction Web Offer x Show a Problem"
+date: 2026-01-10T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey"]
-description: 'Building a scalable way to provide performant websites. With Free Web Audits!'
+description: 'A scalable way to provide DIY websites. Now with Free Web Audits!'
 url: 'diy-webs-via-paas'
 ---
 
@@ -21,7 +21,7 @@ Time to put those together with a quick WebApp/SaaS to free my time and **enhanc
 
 **Intro**
 
-How about improving CX for DIYs websites?
+How about **improving CX** for DIYs websites?
 
 The thing is: Does it needs to be a trade of between a Wordpress/Ghost/Wix or a code driven cool SSG?
 
@@ -241,10 +241,20 @@ Btw, the **pages speed insights**, can be done via **API**: *see [this .md](http
 
 Must have also Lighthouse-CI:
 
-
 Could it also be a check on exposed API endpoints?
 
 At least to have CORS and Rate limiting (?)
+
+Whatever this is...I made it work into a secondary mission.
+
+A side side side project.
+
+I mean...the photo gallery v2 things i was tinkering during xmas *now winter holidays*
+
+It incorporated a programmatic 101 web audit.
+
+do-your-instagram
+POST!!!!!!!!!! and repossss
 
 
 ---

@@ -5,7 +5,7 @@ date: 2025-12-27T23:20:21+01:00
 draft: false
 tags: ["Info Products","1toN ebooks x BiP","SaaS vs LifeTime Products","RoadMap26"]
 description: 'Reading better, writing more. Making Kindle learnings of years actionable and sharing via web/ooks'
-url: 'interesting-books'
+url: 'interesting-books-and-diy-offer'
 ---
 
 **Tl;DR**
@@ -196,7 +196,7 @@ Is just that...you have to...do it.
 
 (Surprise)
 
-Sucks, I know.
+Sucks, *I know*.
 
 ### Went HandsOn Obfuscation 
 
@@ -263,6 +263,10 @@ And the result of this post: `ebooks.jalcocertech.com`
 ![web/ook platform v1](/blog_img/web/1ton-webook.png)
 
 is helping me a lot to define what me free tier / diy is.
+
+> And hey, is much better looking than the diy one (and simpler to maintain)
+
+> > No obfuscation though
 
 Most likely, will be around: 1 free, give email for the rest, boilerplate x1 time paid and available at `boilerplate.jalcocertech.com`
 

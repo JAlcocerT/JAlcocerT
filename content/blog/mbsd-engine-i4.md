@@ -2,23 +2,33 @@
 title: "Inline 4 Engines: Understanding the most popular engine once and for all"
 date: 2026-02-15T23:20:21+01:00
 draft: false
-tags: ["Multi-Body","BMW e86","Inline 4"]
+tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance"]
 description: ''
 url: 'inline-4-engine-balance'
 ---
 
 
+**TL;DR**
+
+Getting right the slider-crank mechanism (2D) via MBSD to later form a 3D ICE I4 Vibration Simulation
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 **Intro**
 
-volumetric efficiency:
-
-<https://www.youtube.com/watch?v=1eRsaOxxiUc>
 
 
-VE map - https://www.tactrix.com/index.php?option=com_content&view=category&layout=blog&id=36
+
+---
+
+## Conclusions
 
 
-## About Engine Balance
+
+### About Engine Balance
 
 <!-- 
 video insights
@@ -48,9 +58,11 @@ Cons: Most complex engine configuration, difficult to package due to its width, 
 In conclusion, each engine type has its own strengths and weaknesses. The inline six is simple and balanced but long, the V6 is compact but less balanced, the VR6 is a compact and simpler version of a V6 but not as simple as an inline six, and the flat/boxer six is perfectly balanced and light but complex and wide. -->
 
 
-## Primary Balance:
+#### Primary Balance
 
-## Secondary Balance: Blame it to Archimedes
+#### Secondary Balance
+
+Blame it to ~~the boogie~~ Archimedes.
 
 
 ---
@@ -61,6 +73,10 @@ In conclusion, each engine type has its own strengths and weaknesses. The inline
 
 [Some say](https://www.reddit.com/r/BMW/comments/1ez7ims/why_is_the_z4_e86_so_underrated/) that the BMW z4 e86 is underated.
 
-You have ~2007 units for ~10k$
+You have ~2007 units for ~10k$ as shown [here](https://www.youtube.com/watch?v=5hRuWLrdV6k)
 
-https://www.youtube.com/watch?v=5hRuWLrdV6k
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+Im well aware that some people do cool stuff on the tracks with their bmw (BMW e86).

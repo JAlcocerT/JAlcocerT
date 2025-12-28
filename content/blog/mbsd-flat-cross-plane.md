@@ -1,10 +1,10 @@
 ---
 title: "4-4stroke rivals: flat plane vs cross plane"
-date: 2026-02-15T23:20:21+01:00
+date: 2026-02-20T23:20:21+01:00
 draft: false
-tags: ["DA","Career"]
-description: ''
-url: ''
+tags: ["DA","MBSD"]
+description: 'Comparing flat plane and cross plane 4stroke engines before simulating a V8'
+url: 'flat-plane-vs-cross-plane'
 ---
 
 
