@@ -340,9 +340,7 @@ You can make a one prompt vibe coded report
 
 ![Stonks EDA Summary Report](/blog_img/entrepre/public-build/pystonks/eda-stonks.png)
 
->  *via `yfinance-104.ipynb`*
-
-https://github.com/JAlcocerT/py-stonks/blob/main/z-eda-yfinance/yfinance-104.ipynb
+>  *via [this](https://github.com/JAlcocerT/py-stonks/blob/main/z-eda-yfinance/yfinance-104.ipynb) `yfinance-104.ipynb`*
 
 I mean...a real report.
 
@@ -487,7 +485,9 @@ With very interesting templates: https://pdfme.com/templates and even template d
 2. Posters, ebooks, letter, reports...https://github.com/Kozea/WeasyPrint
 
 
- WeasyPrint is a smart solution helping web developers to create PDF documents. It’s free and open source software that can be easily plugged to your applications and websites and turns simple HTML pages into gorgeous: 
+WeasyPrint is a smart solution helping web developers to create PDF documents. 
+ 
+It’s free and open source software that can be easily plugged to your applications and websites and turns simple HTML pages into gorgeous: 
 
 See the examples and their source code: https://weasyprint.org/
 
@@ -496,7 +496,9 @@ See the examples and their source code: https://weasyprint.org/
 3. https://github.com/plutoprint/plutoprint
 
 
-PlutoPrint is a lightweight and easy-to-use Python library for generating high-quality PDFs and images directly from HTML or XML content. It is based on PlutoBook’s robust rendering engine and provides a simple API to convert your HTML into crisp PDF documents or vibrant image files. This makes it ideal for reports, invoices, or visual snapshots.
+PlutoPrint is a lightweight and easy-to-use Python library for generating high-quality PDFs and images directly from HTML or XML content. It is based on PlutoBook’s robust rendering engine and provides a simple API to convert your HTML into crisp PDF documents or vibrant image files.
+
+This makes it ideal for reports, invoices, or visual snapshots.
 
 > MIT |  A Python Library for Generating PDFs and Images from HTML, powered by PlutoBook 
 
@@ -550,13 +552,15 @@ done'
 ```
 
 
-You can always add music to your videos: https://www.youtube.com/audiolibrary?feature=blog
+You can always add music *legally* to your videos: https://www.youtube.com/audiolibrary?feature=blog
 
 ```sh
 ffmpeg -y -i initial_silenced_video.mp4 -stream_loop -1 -i afilador_101.mp3 \
   -c:v copy -c:a aac -shortest -map 0:v:0 -map 1:a:0 \
   ./resulting-video-with-audio.mp4
 ```
+
+This is how it can look:
 
 {{< youtube "YanaJiC_cYk" >}}
 
@@ -587,7 +591,7 @@ ffmpeg -y -i gld-btc.mp4 -stream_loop -1 -i afilador_101.mp3 \
   ./gld-btc-audio.mp4
 ```
 
-Do animation logic once, ship it everywhere:
+Do animation logic once, **ship it** everywhere: *n times*
 
 {{< tweet user="LibrePortfolio" id="1940181314587828581" >}}
 

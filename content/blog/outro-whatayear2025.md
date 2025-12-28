@@ -135,7 +135,7 @@ and do...what I want to do and go do your thing :)
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/apps/gh-jalcocert.svg" subtitle="A 101 Ive put together about building websites" >}}
+  {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
  
 **Intro**
@@ -1634,7 +1634,7 @@ And...to create N ebooks :)
 
 6. Keep writting, but less and MORE QUALITY: < 2/week **AND <60/year**
 
-7. Get better at Writting ebooks
+7. Get better at Writting (N) ebooks
 
 
 #### Stop Doing
@@ -1652,6 +1652,7 @@ And...to create N ebooks :)
 3. Go all-in to find new clients
 4. Not scalable but clients want it? Sell w high gross margin to the ones who can benefit
 5. Collect **case studies** / success stories: Flask web app https on a server for SMB / real estate DFY w custom chatbot / hospital D&A CI/CD radiophysics / from zero to astro web hero for a mechanical engineer...and add them to the `consulting.jalcocer` and/or as article on the main www site.
+6. Put together the captured knowledge on these posts into ebooks anyone can use for quick DIY
 
 **Maybe's**
 

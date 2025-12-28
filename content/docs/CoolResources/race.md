@@ -92,13 +92,16 @@ https://jalcocert.github.io/JAlcocerT/create-your-website/
 
 ### Optimum Gears
 
+* https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
+
 ### Optimum Path
 
+If you know a circuit's geometry, why not estimating the best path for a given kart to go for thos hot laps?
 
 ## Other Racing Resources
 
 
-If you like Mechanism...
+If you like Mechanisms and animations [as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code)
 
 https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
 

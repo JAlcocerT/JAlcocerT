@@ -278,7 +278,7 @@ stateDiagram-v2
 ```
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="NEW SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page" >}}
+  {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="NEW - SelfHosted Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making a modern Astro SSR Landing Page with trol slider" >}}
 {{< /cards >}}
 
 ```sh

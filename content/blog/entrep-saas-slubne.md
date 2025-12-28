@@ -19,6 +19,13 @@ MVP first - get those eyes going via ads towards: https://slubnechwile.com/
 See what works and what not - PMF
 
 
+People do their things:
+
+* https://libreweddingplanner.org/docs/Features/website_builder/
+* https://docs.wedding-share.org/
+
+I want to do mine
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}

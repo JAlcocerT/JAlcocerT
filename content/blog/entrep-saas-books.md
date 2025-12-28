@@ -49,11 +49,13 @@ I thought I would create it [here](https://jalcocert.github.io/JAlcocerT/selfhos
 git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" && gh repo create 1ton-ebooks --private --source=. --remote=origin --push
 ```
 
+> With this [brd](https://github.com/JAlcocerT/1ton-ebooks/blob/master/z-brd.md), these [clarifications](https://github.com/JAlcocerT/1ton-ebooks/blob/master/z-clarifications.md) and these [development plan](https://github.com/JAlcocerT/1ton-ebooks/blob/master/z-development-plan.md)
+
 Last year I tinkered around [tiers of services / offers](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers) and created:
 
 * https://diy.jalcocertech.com/ created here
 * https://consulting.jalcocertech.com created here with that *trol* slider
-* 
+
 
 And the ebooks are supposed to help me with the DIY one
 
@@ -62,7 +64,7 @@ And the ebooks are supposed to help me with the DIY one
 {{% /details %}}
 
 
-Expect ,n' to be:
+Expect ,n' to be: *these content driven ebooks from the repo*
 
 1. Webpage creator: Because you can own your brand. *You can [DIY](https://diy.jalcocertech.com/api/book) btw*
 2. Homelabs/Servers: I started this ebook because everything has potential failures
@@ -206,13 +208,17 @@ Also with the DIY Landing Boilerplate!
 
 ### Noted down couple of Themes
 
-### Now - Decap x Typography x N ebooks
+Like: https://github.com/JAlcocerT/astro-theme-typography?tab=readme-ov-file
 
-What if launcing ebooks was all about writing via DecapCMS?
+### Decap x Typography x N ebooks
+
+What if launching ebooks was all about writing via DecapCMS?
 
 Because the landing part is so much clear.
 
 But the CMS part has let me down in few occasions
+
+Lets [create sth](#building-n-ebooks-for-a-webook)
 
 {{% /steps %}}
 
@@ -251,6 +257,12 @@ Viral tales capture attention, look cohesive, and fit readily into existing narr
 For now, this is all going to be content from...surprise, surprise: this blog!
 
 I need to structure the offering though.
+
+And the result of this post: `ebooks.jalcocertech.com` 
+
+![web/ook platform v1](/blog_img/web/1ton-webook.png)
+
+is helping me a lot to define what me free tier / diy is.
 
 Most likely, will be around: 1 free, give email for the rest, boilerplate x1 time paid and available at `boilerplate.jalcocertech.com`
 
